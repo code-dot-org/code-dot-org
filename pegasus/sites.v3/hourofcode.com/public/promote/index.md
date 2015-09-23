@@ -37,6 +37,10 @@ nav: promote_nav
 [![image](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 [![image](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
+<a id="logo"></a>
+## Use the Hour of Code logo to spread the word
+[![image](/images/fit-200/hour-of-code-logo.png)](/images/images/hour-of-code-logo.png)
+
 <a id="stickers"></a>
 ## Print these stickers to give to your students (Stickers are 1" diameter, 63 per sheet)
 [![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)

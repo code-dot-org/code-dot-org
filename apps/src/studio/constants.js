@@ -198,8 +198,11 @@ exports.Emotions = {
 // scale the collision bounding box to make it so they need to overlap a touch:
 exports.FINISH_COLLIDE_DISTANCE_SCALING = 0.75;
 exports.SPRITE_COLLIDE_DISTANCE_SCALING = 0.9;
-exports.DEFAULT_SPRITE_SPEED = 5;
+
+exports.DEFAULT_SPRITE_SPEED = exports.SpriteSpeed.NORMAL;
 exports.DEFAULT_SPRITE_SIZE = 1;
+
+exports.DEFAULT_ITEM_SPEED = exports.SpriteSpeed.SLOW;
 
 /**
  * The types of squares in the maze, which is represented
@@ -210,7 +213,7 @@ exports.SquareType = {
   OPEN:         0,
   SPRITEFINISH: 1,
   NOT_USED_2:   2,
-  WALL:         4,
+  WALL:         4,  // random wall tile
   NOT_USED_8:   8,
   SPRITESTART:  16,
   ITEM_CLASS_0: 32, // Must stay in sync with SquareItemClassShift below
@@ -221,6 +224,10 @@ exports.SquareType = {
   ITEM_CLASS_5: 1024,
   ITEM_CLASS_6: 2048,
   ITEM_CLASS_7: 4096,
+  NOT_USED_8K:  8192,
+  NOT_USED_16K: 16384,
+  NOT_USED_32K: 32768
+  // Walls specifically retrieved from an 16x16 grid are stored in bits 16-23
 };
 
 exports.SquareItemClassMask =
@@ -240,6 +247,17 @@ exports.squareHasItemClass = function (itemClassIndex, squareValue) {
     (squareValue & exports.SquareItemClassMask) >>> exports.SquareItemClassShift;
   return Math.pow(2, itemClassIndex) & classesEnabled;
 };
+
+exports.WallCoordRowMask = 0x00F00000;
+exports.WallCoordColMask = 0x000F0000;
+
+exports.WallCoordsMask = exports.WallCoordRowMask | exports.WallCoordColMask;
+exports.WallCoordsShift = 16;
+exports.WallCoordColShift = exports.WallCoordsShift;
+exports.WallCoordRowShift = exports.WallCoordsShift + 4;
+exports.WallCoordMax = 16; // indicates a 16x16 grid, which requires 8 bits
+
+exports.WallAnyMask = exports.WallCoordsMask | exports.SquareType.WALL;
 
 exports.RANDOM_VALUE = 'random';
 exports.HIDDEN_VALUE = '"hidden"';
