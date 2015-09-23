@@ -13,10 +13,11 @@ class ClientState
 
   # Resets all client state (level progress, lines of code, videos seen, etc.)
   def reset
-    session[:lines] = nil
-    session[:progress] = nil
-    session[:callouts_seen] = nil
+    # Also reset unencrypted cookies in case we are in a rolled-back state.
+    session[:lines] = cookies[:lines] = nil
+    session[:progress] = cookies[:progress] = nil
     session[:videos_seen] = nil
+    session[:callouts_seen] = nil
   end
 
   # Returns the number of lines written in the current user session.
@@ -137,5 +138,18 @@ class ClientState
       cookies[:lines] = nil
     end
   end
-end  # class ClientState
 
+  # Migrates session state to unencrypted cookies.  This is currently used in tests only
+  # but will be enabled in the main code path in a future update.
+  def migrate_cookies_for_test
+    if session[:progress]
+      cookies.permanent[:progress] = JSON.generate(session[:progress])
+      session[:progress] = nil
+    end
+    if session[:lines]
+      cookies[:lines] = session[:lines].to_s
+      session[:lines] = nil
+    end
+  end
+
+end  # class ClientState
