@@ -39,9 +39,8 @@ class VolunteerEngineerSubmission
     @commitments ||= commitments_with_i18n_labels(
       'uncertain',
       'now_and_then',
-      'one_hr_per_week',
-      'three_hrs_per_week',
-      'five_hrs_per_week',
+      'monthly',
+      'weekly',
       'more',
     )
   end
