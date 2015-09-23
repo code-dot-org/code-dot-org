@@ -23,7 +23,7 @@ class ImageLibTest < ActiveSupport::TestCase
 
   end
 
-private
+  private
 
   def test_image_path(name)
     Rails.root.join("test/fixtures/#{name}")
