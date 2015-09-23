@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's edit this \"draw a shape\" function. It already has a \"length\" parameter. Now, let's edit the function to add a \"sides\" parameter. Remember the angle to turn for a given shape is 360 divided by the number of sides it has. Hint: The overall size of each shape is 200 pixels. Do you remember the equation to make shapes the same size when they have a different number of sides?",
+    "instructions": "Let's edit this \"draw a polygon\" function. It already has a \"length\" parameter. Now, let's add a \"sides\" parameter. Remember the angle to turn for a given shape is 360 divided by the number of sides it has. Hint: The perimeter of each shape is 200 pixels long. Do you remember the equation to make shapes the same size when they have a different number of sides?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -29,7 +29,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Let's edit this `draw a shape` function. It already has a `length` parameter. Now, let's edit the function to add a `sides` parameter. Remember the angle to turn for a given shape is 360 divided by the number of sides it has. \r\n\r\n*Hint: The overall size of each shape is 200 pixels. Do you remember the equation to make shapes the same size when they have a different number of sides?*\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Let's edit this `draw a polygon` function. It already has a `length` parameter. Now, let's add a `sides` parameter. Remember the angle to turn for a given shape is 360 divided by the number of sides it has. \r\n\r\n*Hint: The perimeter of each shape is 200 pixels. Do you remember the equation to make shapes the same size when they have a different number of sides?*\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
     "examples_required": "false",
     "never_autoplay_video": "false"
   }
@@ -58,7 +58,7 @@
               </value>
               <statement name="DO">
                 <block type="procedures_callnoreturn" inline="false">
-                  <mutation name="draw a shape">
+                  <mutation name="draw a polygon">
                     <arg name="length"/>
                   </mutation>
                   <value name="ARG0">
@@ -85,7 +85,7 @@
           <mutation>
             <arg name="length"/>
           </mutation>
-          <title name="NAME">draw a shape</title>
+          <title name="NAME">draw a polygon</title>
           <statement name="STACK">
             <block type="controls_repeat_ext" inline="true" uservisible="false">
               <value name="TIMES">
@@ -199,7 +199,7 @@
             <arg name="length"/>
             <arg name="sides"/>
           </mutation>
-          <title name="NAME">draw a shape</title>
+          <title name="NAME">draw a polygon</title>
           <statement name="STACK">
             <block type="controls_repeat_ext" inline="true">
               <value name="TIMES">
@@ -261,7 +261,7 @@
               </value>
               <statement name="DO">
                 <block type="procedures_callnoreturn" inline="false">
-                  <mutation name="draw a shape">
+                  <mutation name="draw a polygon">
                     <arg name="length"/>
                     <arg name="sides"/>
                   </mutation>
