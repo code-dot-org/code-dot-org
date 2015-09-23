@@ -524,6 +524,42 @@ exports.install = function(blockly, blockInstallOptions) {
         typeParam + ');\n';
   };
 
+  blockly.Blocks.studio_setItemSpeed = {
+    // Block for setting item speed
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+
+      this.appendDummyInput().appendTitle(msg.setItemSpeedSet());
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'CLASS');
+
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      dropdown.setValue(this.VALUES[2][1]); // default to slow
+      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setItemSpeedTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_setItemSpeed.VALUES =
+      [[msg.setSpriteSpeedRandom(), RANDOM_VALUE],
+       [msg.setSpriteSpeedVerySlow(), 'Studio.SpriteSpeed.VERY_SLOW'],
+       [msg.setSpriteSpeedSlow(), 'Studio.SpriteSpeed.SLOW'],
+       [msg.setSpriteSpeedNormal(), 'Studio.SpriteSpeed.NORMAL'],
+       [msg.setSpriteSpeedFast(), 'Studio.SpriteSpeed.FAST'],
+       [msg.setSpriteSpeedVeryFast(), 'Studio.SpriteSpeed.VERY_FAST']];
+
+  generator.studio_setItemSpeed = function () {
+    return generateSetterCode({
+      ctx: this,
+      extraParams: this.getTitleValue('CLASS'),
+      name: 'setItemSpeed'});
+  };
+
   blockly.Blocks.studio_throw = {
     // Block for throwing a projectile from a sprite.
     helpUrl: '',
