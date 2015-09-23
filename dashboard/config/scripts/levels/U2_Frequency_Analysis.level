@@ -1,0 +1,11 @@
+<FrequencyAnalysis>
+  <config><![CDATA[{
+  "created_at": "2015-09-22T22:27:41.176Z",
+  "level_num": "custom",
+  "user_id": 42,
+  "properties": {
+    "skip_dialog": true,
+    "href": "frequency/frequency.html"
+  }
+}]]></config>
+</FrequencyAnalysis>

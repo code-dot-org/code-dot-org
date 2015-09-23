@@ -31,9 +31,10 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 button("demo","Click Me!"); // Create a button "Click Me"
-</pre>
+```
 
 [/example]
 
@@ -45,7 +46,8 @@ ____________________________________________________
 A button is often used with a click event. The click event is where you write code to execute when the button is clicked.
 In this example, every time you click the button the turtle will move forward 10 pixels.
 
-<pre>
+
+```
 // Buttons
 button("move10", "Move Forward 10"); // Go 10 pixels when clicked
 
@@ -54,7 +56,7 @@ onEvent("move10", "click", function(event) {
   // Move forward 10 pixels
   moveForward(10);
 });
-</pre>
+```
 
 [/example]
 ____________________________________________________
@@ -65,7 +67,8 @@ ____________________________________________________
 **Interactive Turtle**
 In this example, we provide a more interactive turtle. Each time you click the button, the turtle either changes direction or moves the specified number of pixels.
 
-<pre>
+
+```
 // Display Label
 textLabel("moveAmountLabel", "How Much?", "moveAmount");
 // User-specified number of pixels to move
@@ -88,7 +91,7 @@ onEvent("turnRight", "click", function(event) {
   // Turn right 90 degrees
   turnRight(90);
 });
-</pre>
+```
 
 [/example]
 
@@ -97,9 +100,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 button(buttonId,text)
-</pre>
+```
 
 [/syntax]
 

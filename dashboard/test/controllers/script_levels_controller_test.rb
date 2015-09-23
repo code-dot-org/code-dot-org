@@ -380,7 +380,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_redirected_to hoc_chapter_path(chapter: 1)
 
-    assert client_state.levels_progress_is_empty_for_test
+    assert client_state.level_progress_is_empty_for_test
     assert !session['warden.user.user.key']
   end
 
@@ -405,7 +405,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :reset, script_id: 'laurel'
     assert_redirected_to "/s/laurel/stage/1/puzzle/1"
 
-    assert client_state.levels_progress_is_empty_for_test
+    assert client_state.level_progress_is_empty_for_test
     assert !session['warden.user.user.key']
   end
 

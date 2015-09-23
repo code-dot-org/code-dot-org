@@ -40,7 +40,7 @@ class ClientState
   # return [Integer]
   def level_progress(level_id)
     migrate_cookies
-    session_progress_hash.fetch(level_id.to_s, 0)
+    progress_hash.fetch(level_id.to_s, 0)
   end
 
   # Sets the progress for the given level_id for the current session.
@@ -48,15 +48,15 @@ class ClientState
   # @param [Integer] progress
   def set_level_progress(level_id, progress)
     migrate_cookies
-    progress_hash = session_progress_hash
+    progress_hash = progress_hash
     progress_hash[level_id.to_s] = progress_value
     cookies.permanent[:progress] = JSON.generate(progress_hash)
   end
 
   # Returns true if there has been no progress in completing levels for
   # the current session.
-  def levels_progress_is_empty_for_test
-    session_progress_hash.empty?
+  def level_progress_is_empty_for_test
+    progress_hash.empty?
   end
 
   # Adds 'script' to the set of scripts completed for the current session.
@@ -119,7 +119,7 @@ class ClientState
 
   private
 
-  def session_progress_hash
+  def progress_hash
     migrate_cookies
     progress_json = cookies[:progress]
     if progress_json

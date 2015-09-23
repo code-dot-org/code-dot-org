@@ -33,9 +33,10 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 arcLeft(90, 25);    // Move the turtle forward and to the left
-</pre>
+```
 
 [/example]
 
@@ -43,9 +44,10 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 arcLeft(360, 50)    // Make a full circle to the left
-</pre>
+```
 
 [/example]
 
@@ -53,10 +55,11 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 arcLeft(-45, 100)   // -45 degrees is also 315 degrees, so move forward by 315 degrees
 // TODO: is this a bug? we should be able to back up right?
-</pre>
+```
 
 [/example]
 
@@ -64,12 +67,13 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // Spiral into the center of a circle
 for (var radius = 100; radius>0; radius -= 5) { // Keep reducing the radius until we are at the center
   arcLeft(180, radius);                         // Move around half the circle before we do the next smaller arc
 }
-</pre>
+```
 
 [/example]
 
@@ -78,9 +82,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 arcLeft(angle, radius);
-</pre>
+```
 
 [/syntax]
 
