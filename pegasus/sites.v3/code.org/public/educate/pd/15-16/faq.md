@@ -70,11 +70,12 @@ Teachers will be paid their stipend at the completion of Phase 1: Online Introdu
 
 Payments will be made twice a month either directly to the teacher or to the district who will then make payments to teachers:
 
-•Cycle 1: 1st - 15th of each month (payments are deposited in accounts or mailed to the district within 10 business days)
+•Cycle 1: 1st - 15th of each month (payments are deposited in accounts or mailed to the district within 10 business days after the end of the cycle).
 
-•Cycle 2: 16th - last day of each month (payments are deposited in accounts or mailed to the district within 10 business days)
+•Cycle 2: 16th - last day of each month (payments are deposited in accounts or mailed to the district within 10 business days after the end of the cycle).
 
-If, for example, a teacher finishes Phase 1 on Wednesday, May 20, made on Monday, June 1st and paid by Monday, June 10th. 
+If, for example, a teacher finishes Phase 1 on Wednesday, May 20, the payment will be made by Monday, June 10th. 
+<br/>
 <br/>
 *Note: Code.org is not responsible for delays in payment from districts to teachers. If your district pays you directly, please contact your district finance department with any payment delay questions.*
 
