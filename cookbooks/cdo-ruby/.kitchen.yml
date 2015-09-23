@@ -10,15 +10,14 @@ provisioner:
 
 platforms:
   - name: ubuntu-14.04
-
+    run_list:
+      - recipe[apt]
 suites:
   - name: default
     run_list:
-      - recipe[apt]
       - recipe[cdo-ruby]
   - name: new
     run_list:
-      - recipe[apt]
       - recipe[cdo-ruby]
     attributes:
       cdo-ruby:
@@ -26,7 +25,6 @@ suites:
         bundler_version: '1.10.6'
   - name: upgrade
     run_list:
-      - recipe[apt]
       - recipe[cdo-ruby::2.0]
       - recipe[cdo-ruby]
     attributes:
