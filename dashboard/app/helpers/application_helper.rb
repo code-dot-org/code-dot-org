@@ -1,3 +1,4 @@
+require 'client_state'
 require 'nokogiri'
 require 'cdo/user_agent_parser'
 require 'cdo/graphics/certificate_image'
@@ -59,7 +60,7 @@ module ApplicationHelper
     end
   end
 
-  def level_info(user, script_level)
+  def level_info(user, script_level, user_levels)
     result = nil
     if user
       ul = user_levels[script_level.level_id]
@@ -184,4 +185,10 @@ module ApplicationHelper
     path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs
     asset_path(path)
   end
+
+  # Returns a client state object for the current session and cookies.
+  def client_state
+    @client_state ||= ClientState.new(session, cookies)
+  end
+
 end
