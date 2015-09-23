@@ -17,11 +17,16 @@
 #  index_user_levels_on_user_id_and_level_id_and_script_id  (user_id,level_id,script_id) UNIQUE
 #
 
-# Records a User's number of attempts and best completion result for specific Levels
+# Summary information about a User's Activity on a Level in a Script.
+# Includes number of attempts (attempts), best score and whether it was submitted (best_result)
 class UserLevel < ActiveRecord::Base
   belongs_to :user
   belongs_to :level
   belongs_to :script
+
+  def submitted?
+    Activity.submitted? best_result
+  end
 
   def best?
     Activity.best? best_result

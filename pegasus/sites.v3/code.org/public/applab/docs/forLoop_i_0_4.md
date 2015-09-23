@@ -23,11 +23,12 @@ ____________________________________________________
 [example]
 
 The **for loop** repeats statements like a **while loop** but adds an **initialization** and **final expression** step.
-<pre>
+
+```
 for (initialization; condition; final expression) {
     code to execute
 }
-</pre>
+```
 **initialization** is executed once, before anything else.
 
 **condition** is checked each iteration, to see if the loop should execute.
@@ -61,13 +62,14 @@ ____________________________________________________
 [example]
 
 The most common usage of a for-loop in javascript is simply to use it as a "repeat loop".  The loop below repeats the group of turtle moves 10 times.  You can change the 10 to any number.
-<pre>
+
+```
 penDown();
 for(var i=0; i<10; i++){
 	moveForward(25);
 	dot(5);
 }
-</pre>
+```
 
 [/example]
 ____________________________________________________
@@ -78,7 +80,8 @@ The following block of code declares a for loop that executes a block of code 5 
 Each iteration of the loop computes a random number and adds the value to the variable named `sum`.
 After the loop terminates, the average is computed and the result is printed to the console.
 
-<pre>
+
+```
 var count = 5;
 var sum = 0;
 for (var idx = 0; idx < count; idx++) {
@@ -88,7 +91,7 @@ for (var idx = 0; idx < count; idx++) {
 
 var average = sum / count; // computes the average of the five random numbers
 console.log(average); // prints the average to the console
-</pre>
+```
 
 [/example]
 ____________________________________________________
@@ -100,7 +103,8 @@ The for loop iterates through each index of the Array and sets the value at that
 to a random number between 0 and 100.
 After the loop terminates, the numbers are printed to the console.
 
-<pre>
+
+```
 var numbers = new Array(10);
 for (var j = 0; j < numbers.length; j++) {
     var value = randomNumber(0, 100); // compute a random number between 0 and 100
@@ -108,7 +112,7 @@ for (var j = 0; j < numbers.length; j++) {
 }
 
 console.log(numbers); // print the Array of numbers to the console.
-</pre>
+```
 
 [/example]
 
@@ -117,11 +121,12 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 for (initialization; condition; expression) {
   statement
 }
-</pre>
+```
 
 [/syntax]
 

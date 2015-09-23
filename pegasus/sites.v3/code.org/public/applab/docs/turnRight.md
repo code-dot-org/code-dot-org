@@ -33,9 +33,10 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 turnRight(90);    // Makes the turtle face left
-</pre>
+```
 
 [/example]
 
@@ -43,14 +44,15 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // Draw a Triangle
 moveForward(100);   // Move along the left edge
 turnRight(120);     // Turn to face the top right edge. Interior angle is 60, so turn 180 - 60
 moveForward(100);   // Move along the top right edge
 turnRight(120);     // Turn to face the bottom right edge
 moveForward(100);   // Move along the bottom right edge
-</pre>
+```
 
 [/example]
 
@@ -58,7 +60,8 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // Draw a 25 pointed star
 var points = 25;                        // Number of points to draw, must be odd
 var angle = 180.0 - (180.0 / points);   // We want to almost turn around every time, and do a complete 180 in our 25 steps
@@ -66,7 +69,7 @@ for (var i = 0; i < points; i++) {      // Loop through all the points
   moveForward(200);                     // Move forward
   turnRight(angle);                     // Turn almost all the way around
 }
-</pre>
+```
 
 [/example]
 
@@ -75,9 +78,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 turnRight(angle);
-</pre>
+```
 
 [/syntax]
 
