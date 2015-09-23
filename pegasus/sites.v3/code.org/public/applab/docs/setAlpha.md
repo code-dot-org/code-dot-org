@@ -37,8 +37,7 @@ ____________________________________________________
 
 **Change the alpha value of a single pixel to zero**
 
-
-```
+<pre>
 //Setup the canvas, draw a red rectangle, and capture the image data of the whole canvas
 createCanvas('canvas1', 320, 480);
 setFillColor('red');
@@ -54,7 +53,7 @@ putImageData(imageData, 0, 0); //Update the canvas with modified image data star
 
 //Print alpha value at x:50 y:50 from imageData to the console again. We will see 0 in the console.
 console.log(getAlpha(imageData, 50, 50));
-```
+</pre>
 
 [/example]
 
@@ -64,8 +63,7 @@ ____________________________________________________
 
 **Change the alpha value of a single pixel to half of its current value**
 
-
-```
+<pre>
 //Setup the canvas, draw a red rectangle, and capture the image data of the whole canvas
 createCanvas('canvas1', 320, 480);
 setFillColor('red');
@@ -78,7 +76,7 @@ var newAlpha = (getAlpha(imageData, 50, 50) / 2);
 //First modify the alpha value at x:50 y:50 in the image data using 'newAlpha' then update the canvas
 setAlpha(imageData, 50, 50, newAlpha);
 putImageData(imageData, 0, 0);
-```
+</pre>
 
 [/example]
 
@@ -90,8 +88,7 @@ ____________________________________________________
 
 In this more detailed example, we move through each pixel of the canvas and change the alpha value to zero in each. To do this, the function `removeAlpha(imageData)` is defined and called after a canvas element has been created with a rectangle drawn and image data captured.
 
-
-```
+<pre>
 //Define the removeAlpha function (which accepts image data to work on as variable 'thisImageData')
 function removeAlpha(thisImageData){
     for(var y=0; y < thisImageData.height; y++) { //Loop over each pixel in y axis
@@ -110,7 +107,7 @@ var imageData = getImageData(0, 0, 320, 480);
 
 //Then we will call our function to make the canvas transparent one pixel at a time
 removeAlpha(imageData);
-```
+</pre>
 
 [/example]
 
@@ -119,10 +116,9 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 setAlpha(imageData, x, y, alphaValue);
-```
+</pre>
 
 [/syntax]
 

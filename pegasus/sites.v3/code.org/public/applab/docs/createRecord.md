@@ -40,15 +40,14 @@ that is collecting data about people's favorite foods. From the app, we can add 
  for the 3 columns named "name", "age", and "food". When the record is created in the table,
  it is automatically given a unique id. Click 'View Data' in App Lab to see the stored data.
 
-
-```
+<pre>
 createRecord("Fav Foods", {name:'Sally', age: 15, food:"avocado"}, function(record) {
   console.log("I'm executed after the record is done being created");
   console.log("Record id: " + record.id + " created!");
 });
 
 console.log("I'm executed right after the line above while the record is being created!");
-```
+</pre>
 
 [/example]
 
@@ -61,8 +60,7 @@ ____________________________________________________
   grabbed using [getText()](/applab/docs/getText) and the values are used to create a record in the table.
   Click 'View Data' in App Lab to see the stored data.
 
-
-```
+<pre>
 //Set up the input boxes and submit button
 textInput("nameInput", "What is your name?");
 textInput("ageInput", "What is your age?");
@@ -80,7 +78,7 @@ onEvent("submitButton", "click", function() {
   });
 });
 
-```
+</pre>
 
 [/example]
 
@@ -89,12 +87,11 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 createRecord(tableName, record, function(record){
     //callback function code goes here
   });
-```
+</pre>
 
 [/syntax]
 

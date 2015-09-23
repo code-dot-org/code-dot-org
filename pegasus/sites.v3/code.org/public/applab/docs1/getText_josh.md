@@ -32,10 +32,9 @@ ____________________________________________________
 [example]
 
 
-
-```
+<pre>
 getText(button1);
-```
+</pre>
 
 [/example]
 
@@ -47,13 +46,12 @@ ____________________________________________________
 
 Pull the text from a specified button or radio button:
 
-
-```
+<pre>
 button("button12", "this here is a button");        // define a button
 textLabel("label9", "Here's a label");              // define a text label
 console.log(getText("button12"));                   // this will print "this here is a button"           
 console.log(getText("label9"));                     // this will print "Here's a label"
-```
+</pre>
 
 [/example]
 
@@ -65,8 +63,7 @@ ____________________________________________________
 
 Many websites have a registration page where users are asked to accept the terms of service by checking a checkbox.
 
-
-```
+<pre>
 checkbox("checkbox1", false);
 textLabel("label1", "I accept the terms of service");
 
@@ -82,7 +79,7 @@ onEvent("button1", "click", function(){                   // Whenever the "Regis
     write("You must accept the terms of service");
   }
 });
-```
+</pre>
 
 
 [/example]
@@ -93,10 +90,9 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 getText(id);
-```
+</pre>
 
 [/syntax]
 

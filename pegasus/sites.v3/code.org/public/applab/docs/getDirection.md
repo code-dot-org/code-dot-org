@@ -36,12 +36,11 @@ ____________________________________________________
 **Example 1**
 
 This example turns the turtle a pseudorandom number of degrees, and then displays the direction of the turtle to the screen.
-
-```
+<pre>
 turnRight(randomNumber(359));                     // turns the turtle a pseudorandom number of degrees
 textLabel("direction", getDirection(), "forId");  // creates a text label that displays the direction
                                                   // to the screen
-```
+</pre>
 
 [/example]
 
@@ -53,8 +52,7 @@ ____________________________________________________
 
 This example creates a button that the user can click to turn the turtle a pseudorandom number of degrees. The current direction the turtle is facing is displayed on the screen.
 
-
-```
+<pre>
 speed(50);                                                        // sets the speed to 50 so its easier to
                                                                   //    see the turtle turn
 textLabel("direction", "direction: " + getDirection(), "forId");  // creates a text label to display the
@@ -68,7 +66,7 @@ onEvent("random-direction", "click", function(event) {            // when the ra
   setText("direction", "direction: " + getDirection());           // updates the text label with the turtle's
                                                                   //    current direction
 });
-```
+</pre>
 
 
 [/example]
@@ -81,8 +79,7 @@ ____________________________________________________
 
 This example creates two buttons, one to turn the turtle left and one to turn the turtle left. It reports the current direction the turtle is facing on the screen.
 
-
-```
+<pre>
 textLabel("direction", "direction: " + getDirection(), "forId");  // creates a text label to display the
                                                                   //    turtle's current direction
 button("turn-left", "Turn Left");                                 // creates a turn left button
@@ -101,7 +98,7 @@ onEvent("turn-right", "click", function(event) {                   // when the t
   turnRight(1);
   setText("direction", "direction: " + getDirection());
 });
-```
+</pre>
 
 
 [/example]
@@ -111,10 +108,9 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 getDirection()
-```
+</pre>
 
 [/syntax]
 

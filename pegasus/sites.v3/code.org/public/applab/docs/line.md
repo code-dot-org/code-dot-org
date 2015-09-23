@@ -37,11 +37,10 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 createCanvas(); //Create a canvas on which to draw
 line(0, 0, 320, 480); //Draw a diagonal line from x:0 y:0 to x:320 y:480
-```
+</pre>
 
 [/example]
 
@@ -49,12 +48,11 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 createCanvas(); //Create a canvas on which to draw
 setStrokeColor("red"); //Change the active color for drawing lines and shapes
 line(0, 0, 320, 480); //Draw a diagonal line from x:0 y:0 to x:320 y:480
-```
+</pre>
 
 [/example]
 
@@ -64,11 +62,10 @@ ____________________________________________________
 
 This example shows how lines and shapes drawn outside the bounds of the canvas are not visible.
 
-
-```
+<pre>
 createCanvas("canvas", 50, 50); //Create a 50x50 pixel canvas on which to draw
 line(0, 0, 320, 480); //Draw a diagonal line beyond the bounds of the canvas
-```
+</pre>
 
 [/example]
 
@@ -78,8 +75,7 @@ ____________________________________________________
 
 This example draws two lines between the same two points, but the first has a larger stroke width than the second. It shows how the stroke width affects how the line is drawn.
 
-
-```
+<pre>
 createCanvas(); //Create a canvas on which to draw
 setStrokeColor("lightblue"); //Set the active color to light blue
 setStrokeWidth(20); //Set the thickness of lines to be drawn
@@ -87,7 +83,7 @@ line(0, 50, 320, 50); //Draw a thick blue horizontal line
 setStrokeColor("black"); //Set the active color to black
 setStrokeWidth(1); //Set the thickness of lines to be drawn
 line(0, 50, 320, 50); //Draw a thin black line on top of the blue line
-```
+</pre>
 
 [/example]
 
@@ -97,8 +93,7 @@ ____________________________________________________
 
 This example further demonstrates how stroke width affects lines. The ends of lines are rounded, so corners are also rounded.
 
-
-```
+<pre>
 createCanvas(); //Create a canvas on which to draw
 setStrokeColor("lightblue"); //Set the active color to light blue
 setStrokeWidth(20); //Set the thickness of lines to be drawn
@@ -108,7 +103,7 @@ setStrokeColor("black"); //Set the active color to black
 setStrokeWidth(1); //Set the thickness of lines to be drawn
 line(0, 50, 160, 50); //Draw a thin black line on top of the blue line
 line(160, 50, 160, 380); //Draw a thin black line from the end of the first
-```
+</pre>
 
 [/example]
 
@@ -117,10 +112,9 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 line(x1, y1, x2, y2)
-```
+</pre>
 
 [/syntax]
 
