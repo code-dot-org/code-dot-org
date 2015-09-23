@@ -1,7 +1,6 @@
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
-  include UsersHelper
 
   before_filter :prevent_caching
 
