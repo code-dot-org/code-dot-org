@@ -1388,3 +1388,28 @@ applabCommands.getUserId = function (opts) {
   }
   return Applab.user.applabUserId;
 };
+
+applabCommands.drawChart = function (opts) {
+  apiValidateType(opts, 'drawChart', 'chartId', opts.chartId, 'string');
+  apiValidateType(opts, 'drawChart', 'table', opts.tableName, 'string');
+  apiValidateType(opts, 'drawChart', 'chartType', opts.chartType, 'string');
+  apiValidateType(opts, 'drawChart', 'columns', opts.columns, 'array');
+  apiValidateType(opts, 'drawChart', 'callback', opts.callback, 'function', OPTIONAL);
+  apiValidateType(opts, 'drawChart', 'chartOptions', opts.chartOptions, 'object', OPTIONAL);
+
+  // Validate chart with given ID exists
+  apiValidateDomIdExistence(opts, 'drawChart', 'chartId', opts.chartId, true);
+
+
+  // Validate table with given name exists (later!)
+
+  // Validate given chartType is valid
+  var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
+  var errorString = 'Unsupported chartType "' + opts.chartType + '" in call to drawChart().';
+  outputError(errorString, ErrorLevel.WARNING, line);
+
+  // Validate known options (maybe?)
+
+  outputApplabConsole('drawChart()');
+  return true;
+};

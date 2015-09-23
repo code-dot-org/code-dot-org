@@ -530,3 +530,14 @@ exports.removeItem = function (array, index) {
                           {'array': array,
                            'index': index });
 };
+
+exports.drawChart = function (chartId, tableName, chartType, columns, callback, chartOptions) {
+  return Applab.executeCmd(null,
+                          'drawChart',
+                          {'chartId': chartId,
+                           'tableName': tableName,
+                           'chartType': chartType,
+                           'columns': columns,
+                           'callback': callback,
+                           'chartOptions': chartOptions });
+};
