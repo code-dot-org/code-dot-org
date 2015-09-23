@@ -36,13 +36,12 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 // Famous people
 var firstName = prompt("What's your famous person's first name?")
 var lastName = prompt("What's your famous person's last name?")
 console.log("Hi " + firstName + " " + lastName)
-```
+</pre>
 
 [/example]
 
@@ -51,10 +50,9 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 var x = prompt("Enter value")
-```
+</pre>
 
 [/syntax]
 
