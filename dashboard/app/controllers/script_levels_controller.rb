@@ -9,10 +9,13 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
 
-    # delete the client state if the user is not signed in
+    # delete the client state and other session state if the user is not signed in
     # and start them at the beginning of the script.
     # If the user is signed in, continue normally.
-    client_state.reset unless current_user
+    unless current_user
+      client_state.reset
+      reset_session
+    end
 
     redirect_to(build_script_level_path(@script.starting_level)) and return
   end
