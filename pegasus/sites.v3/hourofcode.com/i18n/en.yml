@@ -1,5 +1,6 @@
 'en':
   site_name: 'HOUR of CODE'
+  hour_of_code: 'Hour of Code'
   language: 'English'
   front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: 'Coming Soon'
