@@ -2409,7 +2409,10 @@ Studio.drawWallTile = function (svg, row, col, largeTile, wallTile) {
     srcCol = Math.floor(Math.random() * 4);
   }
 
-  var multiplySize;
+  // We might end up scaling this piece a little.  In that case, it's likely
+  // we'll also add an offset to its X/Y to keep it centered.
+  var multiplySize = 1;
+  var addOffset = 0;
 
   if (skin.enlargeWallTiles && 
       srcRow >= skin.enlargeWallTiles.minRow &&
@@ -2417,6 +2420,7 @@ Studio.drawWallTile = function (svg, row, col, largeTile, wallTile) {
       srcCol >= skin.enlargeWallTiles.minCol &&
       srcCol <= skin.enlargeWallTiles.maxCol) {
     multiplySize = 1.4;
+    addOffset = -0.2;
   } else if (largeTile) {
     multiplySize = 2;
   } else {
@@ -2433,8 +2437,8 @@ Studio.drawWallTile = function (svg, row, col, largeTile, wallTile) {
   var rect = document.createElementNS(SVG_NS, 'rect');
   rect.setAttribute('width', multiplySize * Studio.SQUARE_SIZE);
   rect.setAttribute('height', multiplySize * Studio.SQUARE_SIZE);
-  rect.setAttribute('x', col * Studio.SQUARE_SIZE);
-  rect.setAttribute('y', row * Studio.SQUARE_SIZE);
+  rect.setAttribute('x', col * Studio.SQUARE_SIZE + addOffset);
+  rect.setAttribute('y', row * Studio.SQUARE_SIZE + addOffset);
   clipPath.appendChild(rect);
   svg.appendChild(clipPath);
 
@@ -2444,8 +2448,8 @@ Studio.drawWallTile = function (svg, row, col, largeTile, wallTile) {
   tile.setAttribute('class', 'tile');
   tile.setAttribute('width', multiplySize * 8 * Studio.SQUARE_SIZE);
   tile.setAttribute('height', multiplySize * 8 * Studio.SQUARE_SIZE);
-  tile.setAttribute('x', col * Studio.SQUARE_SIZE - multiplySize * srcCol * Studio.SQUARE_SIZE);
-  tile.setAttribute('y', row * Studio.SQUARE_SIZE - multiplySize * srcRow * Studio.SQUARE_SIZE); 
+  tile.setAttribute('x', col * Studio.SQUARE_SIZE - multiplySize * srcCol * Studio.SQUARE_SIZE + addOffset);
+  tile.setAttribute('y', row * Studio.SQUARE_SIZE - multiplySize * srcRow * Studio.SQUARE_SIZE + addOffset); 
   tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', tiles);
   svg.appendChild(tile);
 
