@@ -85,7 +85,7 @@ var numberOfCircles = 10
 
 createCanvas("myCanvas", canvasWidth, canvasHeight)
 setStrokeColor(strokeColor)
-for(var i=0; i&lt;numberOfCircles; i++)
+for(var i=0; i<numberOfCircles; i++)
 {
   circle(centerX, centerY, radius + i*growthFactor)
 }

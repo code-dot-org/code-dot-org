@@ -49,7 +49,7 @@ Creates a simple ticker tape calculator.
 
 ```
 textInput("value","0");
-write("&lt;br>");
+write("<br>");
 button("plus","+");
 button("minus","-");
 button("clear","clear");
