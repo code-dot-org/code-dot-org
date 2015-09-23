@@ -16,16 +16,6 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal 11, client_state.lines
   end
 
-  def test_client_state_lines_down_migration
-    # Verify that cookies[:lines] is correctly down-migrated back to session[:lines].
-    cookies[:lines] = 37
-    session[:lines] = nil
-
-    assert_equal 37, client_state.lines
-    assert_nil cookies[:lines]
-    assert_equal 37, session[:lines]
-  end
-
   def test_client_state_level_progress
     assert client_state.levels_progress_is_empty_for_test
     assert_equal 0, client_state.level_progress(10)
@@ -36,9 +26,18 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal 20, client_state.level_progress(10)
   end
 
-  def test_client_state_level_progress_down_migration
+
+  def test_client_state_down_migration
+    # Verify that cookies[:lines] is correctly down-migrated back to session[:lines].
+    cookies.permanent[:lines] = '37'
+    session[:lines] = nil
+
+    assert_equal 37, client_state.lines
+    assert_equal 37, session[:lines]
+    assert_nil cookies[:lines]
+
     # Verify that cookies[:progress] is correctly down-migrated to session[:progress]
-    cookies[:progress] = {'1' => 100, '2' => 50}
+    cookies.permanent[:progress] = {'1' => 100, '2' => 50}.to_json
     session[:progress] = nil
     puts client_state.level_progress(1)
     puts "test_client_state_level_progress_down_migration: #{session[:progress]}"

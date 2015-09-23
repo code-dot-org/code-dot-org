@@ -9,10 +9,11 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
 
-    # delete the session if the user is not signed in
+    # delete the client state if the user is not signed in
     # and start them at the beginning of the script.
-    # If the user is signed in, continue normally
+    # If the user is signed in, continue normally.
     client_state.reset unless current_user
+
     redirect_to(build_script_level_path(@script.starting_level)) and return
   end
 
@@ -67,7 +68,7 @@ class ScriptLevelsController < ApplicationController
   def find_next_level_for_session(script)
     script.script_levels.detect do |sl|
       sl.valid_progression_level? &&
-          (session_level_progress(sl.level_id) < Activity::MINIMUM_PASS_RESULT)
+          (client_state.level_progress(sl.level_id) < Activity::MINIMUM_PASS_RESULT)
     end
   end
 
