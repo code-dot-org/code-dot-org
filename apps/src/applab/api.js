@@ -531,9 +531,9 @@ exports.removeItem = function (array, index) {
                            'index': index });
 };
 
-exports.drawChart = function (chartId, chartType, tableName, columns, options, callback) {
+exports.drawChartFromRecords = function (chartId, chartType, tableName, columns, options, callback) {
   return Applab.executeCmd(null,
-                          'drawChart',
+                          'drawChartFromRecords',
                           {'chartId': chartId,
                            'chartType': chartType,
                            'tableName': tableName,

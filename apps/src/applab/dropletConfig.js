@@ -90,7 +90,7 @@ module.exports.blocks = [
   {func: 'updateRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{id:1, name:'Bob'}", "function(record) {\n  \n}"] },
   {func: 'deleteRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{id:1}", "function() {\n  \n}"] },
   {func: 'getUserId', parent: api, category: 'Data', type: 'value' },
-  {func: 'drawChart', parent: api, category: 'Data',
+  {func: 'drawChartFromRecords', parent: api, category: 'Data',
     paletteParams: ['chartId', 'chartType', 'tableName', 'columns', 'options', 'callback'],
     params: ['"chartId"', '"bar"', '"mytable"', '["columnOne", "columnTwo"]', "{}", "function() {\n  \n}"],
     dropdown: { 0: function () { return Applab.getIdDropdown(".chart"); }, 1: ChartApi.getChartTypeDropdown } },

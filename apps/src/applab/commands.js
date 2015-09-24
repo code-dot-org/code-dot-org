@@ -2,6 +2,7 @@
 
 var studioApp = require('../StudioApp').singleton;
 var AppStorage = require('./appStorage');
+var ApplabError = require('./ApplabError');
 var apiTimeoutList = require('../timeoutList');
 var ChartApi = require('./ChartApi');
 var RGBColor = require('./rgbcolor.js');
@@ -1390,27 +1391,40 @@ applabCommands.getUserId = function (opts) {
   return Applab.user.applabUserId;
 };
 
-applabCommands.drawChart = function (opts) {
-  apiValidateType(opts, 'drawChart', 'chartId', opts.chartId, 'string');
-  apiValidateType(opts, 'drawChart', 'chartType', opts.chartType, 'string');
-  apiValidateType(opts, 'drawChart', 'tableName', opts.tableName, 'string');
-  apiValidateType(opts, 'drawChart', 'columns', opts.columns, 'array');
-  apiValidateType(opts, 'drawChart', 'options', opts.chartOptions, 'object', OPTIONAL);
-  apiValidateType(opts, 'drawChart', 'callback', opts.callback, 'function', OPTIONAL);
+applabCommands.drawChartFromRecords = function (opts) {
+  apiValidateType(opts, 'drawChartFromRecords', 'chartId', opts.chartId, 'string');
+  apiValidateType(opts, 'drawChartFromRecords', 'chartType', opts.chartType, 'string');
+  apiValidateType(opts, 'drawChartFromRecords', 'tableName', opts.tableName, 'string');
+  apiValidateType(opts, 'drawChartFromRecords', 'columns', opts.columns, 'array');
+  apiValidateType(opts, 'drawChartFromRecords', 'options', opts.options, 'object', OPTIONAL);
+  apiValidateType(opts, 'drawChartFromRecords', 'callback', opts.callback, 'function', OPTIONAL);
+
+  // I'm not sure why we do this...
+  opts.JSInterpreter = Applab.JSInterpreter;
 
   // Validate chart with given ID exists
-  apiValidateDomIdExistence(opts, 'drawChart', 'chartId', opts.chartId, true);
-
-  // Validate given chartType is valid (should this be inside ChartApi?
-  if (!ChartApi.supportsType(opts.chartType)) {
-    var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
-    var errorString = 'Unsupported chartType "' + opts.chartType + '" in call to drawChart().';
-    outputError(errorString, ErrorLevel.WARNING, line);
-  }
-
-  // Validate known options (maybe?)
+  apiValidateDomIdExistence(opts, 'drawChartFromRecords', 'chartId', opts.chartId, true);
 
   var chartApi = new ChartApi();
-  chartApi.drawChart(opts.chartId, opts.chartType, opts.tableName, opts.columns, function() {}, function () {});
-  return true;
+  chartApi.drawChartFromRecords(opts.chartId, opts.chartType, opts.tableName, opts.columns, opts.options)
+      .then(applabCommands.queueCallback.bind(this, Applab.JSInterpreter, opts.callback))
+      .catch(applabCommands.handleApplabError.bind(this, Applab.JSInterpreter));
+};
+
+applabCommands.queueCallback = function (jsInterpreter, callback) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (callback && jsInterpreter) {
+    jsInterpreter.queueEvent(callback);
+  }
+};
+
+applabCommands.handleApplabError = function (jsInterpreter, error) {
+  var errorString = error.message;
+  var errorLevel = ErrorLevel.ERROR;
+  var line = 1 + jsInterpreter.getNearestUserCodeLine();
+  if (error instanceof ApplabError) {
+    errorLevel = error.errorLevel;
+  }
+  outputError(errorString, errorLevel, line);
 };

@@ -19,8 +19,11 @@
 'use strict';
 /* global google */
 
-var ChartApi = module.exports = function () {
+var AppStorage = require('./appStorage');
+var ApplabError = require('./ApplabError');
+var Promise = require('es6-promise').Promise;
 
+var ChartApi = module.exports = function () {
 };
 
 /** @enum {string} */
@@ -108,25 +111,41 @@ function quote(str) {
  * @param {ChartType} chartType
  * @param {string} tableName
  * @param {string[]} columns
- * @param {function} onSuccess
- * @param {function} onError
+ * @param {Object} options
+ * @returns {Promise}
  */
-ChartApi.prototype.drawChart = function (chartId, chartType, tableName, columns) {
+ChartApi.prototype.drawChartFromRecords = function (chartId, chartType,
+    tableName, columns, options) {
   var targetElement = document.getElementById(chartId);
-  var options = {
-    chart: {
-      title: 'Company Performance',
-      subtitle: 'Sales, Expenses, and Profit: 2014-2017',
-    },
-    bars: 'horizontal' // Required for Material Bar Charts.
-  };
-  this.loadApiForType(chartType, function () {
-    this.buildDataTable(tableName, columns, function (data) {
-      var Chart = ChartApi.getConstructorForType(chartType);
-      var chart = new Chart(targetElement);
-      chart.draw(data, options);
-    }.bind(this));
-  }.bind(this));
+  if (!targetElement || 'div' !== targetElement.tagName.toLowerCase()) {
+    return Promise.reject(new ApplabError('Unable to render chart into element "' +
+        chartId + '".'));
+  }
+
+  if (!ChartApi.supportsType(chartType)) {
+    return Promise.reject(new ApplabError('Unsupported chart type "' +
+        chartType + '".'));
+  }
+
+  // Verify enough columns for chart type
+  var minimumColumnsForType = 2;
+  if (columns.length < minimumColumnsForType) {
+    return Promise.reject(new ApplabError('Not enough columns defined for chart type "' +
+        chartType + '"; expected at least ' + minimumColumnsForType + '.'));
+  }
+
+  // How to warn if more columns provided than needed for chart type?
+
+  return Promise.all([
+    loadApiForType(chartType),
+    fetchTableData(tableName)
+  ]).then(function (resultsArray) {
+    // Verify column names exist - warn if missing (chart still renders)
+    var dataTable = rawDataToDataTable(resultsArray[1], columns);
+    var Chart = ChartApi.getConstructorForType(chartType);
+    var chart = new Chart(targetElement);
+    chart.draw(dataTable, options);
+  });
 };
 
 /**
@@ -134,40 +153,55 @@ ChartApi.prototype.drawChart = function (chartId, chartType, tableName, columns)
  *
  * @param {ChartType} chartType - The requested chart type, which determines
  *        which packages we need to load.
- * @param {function} onLoad - called after loading required packages from the
- *        google.visualization library.
- * @throws {Error} if dependency loading fails.
+ * @returns {Promise}
  */
-ChartApi.prototype.loadApiForType = function (chartType, onLoad) {
-  try {
-    // Dynamically load the google.visualization library,
-    //   at the latest stable version (that's what '1' means)
-    //   plus any needed packages for the requested chart type
-    //   then call onLoad()
-    google.load('visualization', '1', {
-      packages: ChartApi.getDependenciesForType(chartType),
-      callback: onLoad
-    });
-    // google.load caches loaded packages internally, so we can call this
-    // on every drawChart request without incurring unnecessary load time.
-    //    https://developers.google.com/chart/interactive/docs
-    //           /library_loading_enhancements#advanced-library-loading
-  } catch (e) {
-    throw new Error('Unable to load Google Charts API; ' + e.message);
-  }
+var loadApiForType = function (chartType) {
+  return new Promise(function (resolve, reject) {
+    try {
+      // Dynamically load the google.visualization library,
+      //   at the latest stable version (that's what '1' means)
+      //   plus any needed packages for the requested chart type
+      //   then call onLoad()
+      google.load('visualization', '1', {
+        packages: ChartApi.getDependenciesForType(chartType),
+        callback: resolve
+      });
+      // google.load caches loaded packages internally, so we can call this
+      // on every drawChart request without incurring unnecessary load time.
+      //    https://developers.google.com/chart/interactive/docs
+      //           /library_loading_enhancements#advanced-library-loading
+    } catch (e) {
+      reject(new Error('Unable to load Google Charts API; ' + e.message));
+    }
+  });
 };
 
-ChartApi.prototype.buildDataTable = function (tableName, columns, onSuccess) {
-  // TODO: Actually retrieve data from data API!
-  // Validate table with given name exists (later!)
-  var data = new google.visualization.DataTable();
-  data.addColumn('string', 'Topping');
-  data.addColumn('number', 'Slices');
-  data.addColumn('number', 'Popularity');
-  data.addColumn('number', 'Value');
-  data.addRows([
-    ['Mushrooms', 3, 1, 1],
-    ['Onions', 1, 2, 3]
-  ]);
-  onSuccess(data);
+/**
+ * Get all data from the requested table.
+ * Wraps AppStorage.readRecords in an ES6 Promise interface.
+ * @param {string} tableName
+ * @returns {Promise}
+ */
+var fetchTableData = function (tableName) {
+  return new Promise(function (resolve, reject) {
+    AppStorage.readRecords(tableName, {}, resolve, function (errorMsg) {
+      reject(new Error(errorMsg));
+    });
+  });
+};
+
+/**
+ * Convert table data from the format returned by the AppStorage API to
+ * a google.visualization DataTable filtered to the requested columns.
+ * @param {Object[]} rawData
+ * @param {string[]} columns - must correspond to keys in rawData rows.
+ * @returns {google.visualization.DataTable}
+ */
+var rawDataToDataTable = function (rawData, columns) {
+  var dataArray = rawData.map(function (row) {
+    return columns.map(function (key) {
+      return row[key];
+    });
+  });
+  return google.visualization.arrayToDataTable([columns].concat(dataArray));
 };
