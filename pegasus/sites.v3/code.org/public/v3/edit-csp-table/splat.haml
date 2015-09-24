@@ -22,7 +22,7 @@ angular: recordsApp
     'recordsApp.services'
   ]).config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',
-                        {templateUrl: '/edit-csp-table/records',
+                        {templateUrl: '/v3/edit-csp-table/records',
                          controller: 'RecordsController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
@@ -114,7 +114,7 @@ angular: recordsApp
     $scope.deleteTable = function () {
       if (confirm("Are you sure you want to delete '" + $scope.tableName + "'?")) {
         var ts = new tablesService().$remove(function () {
-          window.location.href = "/edit-csp-app/#{channel_id}";
+          window.location.href = "/v3/edit-csp-app/#{channel_id}";
         });
         $scope.deletingTable = true;
       }
