@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to_events) %>
+layout: wide
+nav: how_to_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -48,13 +50,13 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## 式次第
 
-| 時刻               | 内容                                                                                                                                                  |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                |
+| 時刻               | 内容                                                                                                                                                |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>)                                                                |
 | 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>) |
-| 10:15 - 10:30 am | スペシャルゲストに、ゲストの背景や、テクノロジーやコンピューターサイエンスが日常生活にどのように重要な役割を果たしているか話をしてもらいます。                                                                             |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                            |
-| 10:40 - 11:00 am | 生徒にオフラインのアクティビティをデモしてもらいます。コンピューターサイエンスはコンピューターがなくても教えられることを見てもらいます。                                                                                |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                   |
+| 10:15 - 10:30 am | スペシャルゲストに、ゲストの背景や、テクノロジーやコンピューターサイエンスが日常生活にどのように重要な役割を果たしているか話をしてもらいます。                                                                           |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                          |
+| 10:40 - 11:00 am | 生徒にオフラインのアクティビティをデモしてもらいます。コンピューターサイエンスはコンピューターがなくても教えられることを見てもらいます。                                                                              |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                 |
 
 <%= view :signup_button %>

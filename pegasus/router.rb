@@ -14,6 +14,7 @@ require 'cgi'
 require 'json'
 require 'uri'
 require 'cdo/rack/upgrade_insecure_requests'
+require_relative 'helper_modules/dashboard'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -77,7 +78,7 @@ class Documents < Sinatra::Base
     set :redirect_extnames, ['.redirect','.moved','.found','.301','.302']
     set :template_extnames, ['.erb','.fetch','.haml','.html','.md','.txt']
     set :non_static_extnames, settings.not_found_extnames + settings.redirect_extnames + settings.template_extnames + settings.exclude_extnames
-    set :markdown, {autolink: true, tables: true, space_after_headers: true}
+    set :markdown, {autolink: true, tables: true, space_after_headers: true, fenced_code_blocks: true}
 
     if rack_env?(:production)
       Honeybadger.configure do |config|
@@ -152,8 +153,8 @@ class Documents < Sinatra::Base
   ['/private', '/private/*'].each do |uri|
     get_head_or_post uri do
       unless rack_env?(:development)
-        not_authorized! unless dashboard_user
-        forbidden! unless dashboard_user[:admin]
+        not_authorized! unless dashboard_user_helper
+        forbidden! unless dashboard_user_helper.admin?
       end
       pass
     end
@@ -202,6 +203,7 @@ class Documents < Sinatra::Base
     # Assume we are returning the same resolution as we're reading.
     retina_in = retina_out = basename[-3..-1] == '_2x'
 
+    path = nil
     if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
       path = resolve_image File.join(@language, dirname, basename)
     end
@@ -317,10 +319,33 @@ class Documents < Sinatra::Base
     document path
   end
 
-  helpers do
+  helpers(Dashboard) do
     def content_dir(*paths)
       File.join(settings.views, *paths)
     end
+
+    # Get the current dashboard user record
+    # @returns [Hash]
+    #
+    # TODO: Switch to using `dashboard_user_helper` everywhere and remove this
+    def dashboard_user
+      @dashboard_user ||= Dashboard::db[:users][id: dashboard_user_id]
+    end
+
+    # Get the current dashboard user wrapped in a helper
+    # @returns [Dashboard::User] or nil if not signed in
+    #
+    # TODO: When we are using this everywhere, rename to just `dashboard_user`
+    def dashboard_user_helper
+      @dashboard_user_helper ||= Dashboard::User.get(dashboard_user_id)
+    end
+
+    # Get the current dashboard user ID
+    # @returns [Integer]
+    def dashboard_user_id
+      request.user_id
+    end
+
 
     def document(path)
       content = IO.read(path)
@@ -354,6 +379,10 @@ class Documents < Sinatra::Base
         end
         raise e
       end
+    end
+
+    def preprocess_markdown(markdown_content)
+      markdown_content.gsub(/```/, "```\n")
     end
 
     def post_process_html_from_markdown(full_document)
@@ -458,6 +487,7 @@ class Documents < Sinatra::Base
         send_file(cache_file)
       when '.md', '.txt'
         preprocessed = erb body, locals: locals
+        preprocessed = preprocess_markdown preprocessed
         html = markdown preprocessed, locals: locals
         post_process_html_from_markdown html
       when '.redirect', '.moved', '.301'

@@ -40,7 +40,7 @@ module.exports = {
 
         // take advantage of the fact that we expose the filesystem via
         // localhost:8001
-        var assetUrl = 'http://localhost:8001/apps/static/flappy_promo.png';
+        var assetUrl = '//localhost:8001/apps/static/flappy_promo.png';
         var imageInput = $("#propertyRowContainer input").last()[0];
 
         ReactTestUtils.Simulate.change(imageInput, {
@@ -59,7 +59,7 @@ module.exports = {
 
           // add a completion on timeout since this is a freeplay level
           setTimeout(function () {
-            assert.equal(buttonElement.style.backgroundImage, 'url(' + assetUrl + ')');
+            assert.equal(buttonElement.style.backgroundImage, 'url(http:' + assetUrl + ')');
             assert.equal(buttonElement.style.width, '200px');
             assert.equal(buttonElement.style.height, '113px');
             assert.equal(buttonElement.style.backgroundSize, '200px 113px');
@@ -222,43 +222,7 @@ module.exports = {
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
-      },
-    },
-
-    {
-      description: "clear puzzle clears design mode",
-      editCode: true,
-      xml: 'button("my_button", "text");',
-      runBeforeClick: function (assert) {
-        testUtils.runOnAppTick(Applab, 2, function () {
-          // drag a button out
-          $("#designModeButton").click();
-          testUtils.dragToVisualization('BUTTON', 10, 10);
-          validatePropertyRow(0, 'id', 'button1', assert);
-
-          assert.equal($("#divApplab button").length, 1);
-
-          // Enter code mode
-          $("#codeModeButton").click();
-          assert.equal(/<button id="button1"/.test(Applab.levelHtml), true,
-            "levelHtml has added button");
-
-          // hit clear, and click through confirmation dialog
-          // TODO - disable temporarily
-          // $("#clear-puzzle-header").click();
-          // assert.equal($("#continue-button").is(':visible'), true);
-          // $("#continue-button").click();
-          //
-          // assert.equal(Applab.levelHtml, "", "levelHtml was cleared");
-          // assert.equal($("#divApplab button").length, 1, "button is not in play area");
-
-          Applab.onPuzzleComplete();
-        });
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      },
+      }
     }
   ]
 };

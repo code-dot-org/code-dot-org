@@ -20,13 +20,10 @@ nav: pd2_nav
 Milestone Complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)###
-#### In-person Workshop####
+
 
 Milestone Complete!
 
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -49,7 +46,13 @@ Breakfast and lunch will be served.
 
 **Location**
 
-TBD
+Boise State University<br/> 
+Student Union Building<br/>
+Room TBD <br/>
+1700 W. University Drive <br/>
+Boise, ID 83706
+
+<i>Check Back Later - More Information Coming Soon!</i>
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -78,13 +81,9 @@ More info coming soon!
 Milestone Complete!
 ### Phase 2: Blended Summer Study  (3 days in-person & ~8 hours online)###
 
-#### In-person Workshop####
 
 Milestone Complete!
 
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
@@ -103,7 +102,13 @@ Breakfast and lunch will be served.
 
 **Location**
 
-TBD
+Boise State University<br/> 
+Student Union Building<br/>
+Room TBD <br/>
+1700 W. University Drive <br/>
+Boise, ID 83706
+
+<i>Check Back Later - More Information Coming Soon!</i>
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -128,13 +133,11 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study  (3 days in-person & ~8 hours online) ###
 
-#### In-person Workshop####
+
 
 Milestone Complete!
 
-#### Online Study####
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
@@ -151,9 +154,27 @@ Semester 2: Saturday, March 12, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**Location**
+**Main Location - Boise**
+
+Boise State University <br/>
+Student Union Building<br/>
+Room TBD <br/>
+1700 W. University Drive <br/>
+Boise, ID 83706
+
+<i>Check Back Later - More Information Coming Soon!</i>
+
+**Satellite Location - Idaho Falls**
 
 TBD
+
+<i>Check Back Later - More Information Coming Soon!</i>
+
+**Satellite Location - North Idaho**
+
+TBD
+
+<i>Check Back Later - More Information Coming Soon!</i>
 
 **What to bring to Phase 3 bi-yearly sessions:**
 

@@ -33,7 +33,8 @@ ____________________________________________________
 
 The following block of code determines if it is currently the weekend.
 
-<pre>
+
+```
 var now = new Date(); // get the current date and time
 var dayOfWeek = now.getDay(); // get the current day of the week
 var isWeekend = false;
@@ -42,7 +43,7 @@ if (dayOfWeek === 0 || dayOfWeek === 6) {
 }
 
 console.log(isWeekend);
-</pre>
+```
 
 [/example]
 
@@ -51,9 +52,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 expression1 || expression2
-</pre>
+```
 
 [/syntax]
 

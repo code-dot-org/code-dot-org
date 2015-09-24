@@ -7,6 +7,7 @@
  newcap: true,
  nonew: true,
  shadow: false,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -14,6 +15,8 @@
  */
 /* global $ */
 'use strict';
+
+var NetSimApiError = require('./NetSimApiError');
 
 /**
  * @type {string}
@@ -101,8 +104,7 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, null);
+      callback(new NetSimApiError(request), null);
     });
   },
 
@@ -120,8 +122,7 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, null);
+      callback(new NetSimApiError(request), null);
     });
   },
 
@@ -152,8 +153,7 @@ var tableApi = {
     }).done(function(body, text) {
       callback(null, body);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, undefined);
+      callback(new NetSimApiError(request), undefined);
     });
   },
 
@@ -179,8 +179,7 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, true);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, false);
+      callback(new NetSimApiError(request), false);
     });
   },
 
@@ -198,8 +197,7 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, undefined);
+      callback(new NetSimApiError(request), undefined);
     });
   },
 
@@ -218,8 +216,7 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, false);
+      callback(new NetSimApiError(request), false);
     });
   }
 };

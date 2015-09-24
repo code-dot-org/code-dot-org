@@ -178,7 +178,6 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
   if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
     message = "Skipped <b>dashboard</b> UI tests for <b>#{test_run_string}</b> (changes detected)"
     HipChat.log message, color: 'yellow'
-    HipChat.developers message, color: 'yellow' if CDO.hip_chat_logging
     next
   end
 
@@ -295,7 +294,7 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
       message += " <a href='#{link}'>☁ html output</a>"
     end
 
-    message += "<br/><i>command line: #{arguments + first_time_arguments}</i>"
+    message += "<br/><i>command line: cucumber #{arguments + first_time_arguments}</i>"
     HipChat.log message, color: 'red'
     HipChat.developers message, color: 'red' if CDO.hip_chat_logging
   end

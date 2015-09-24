@@ -8,6 +8,7 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -122,6 +123,13 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   NetSimNode.call(this, shard, row);
 
   var levelConfig = NetSimGlobals.getLevelConfig();
+
+  /**
+   * This router's identifying number, which gets translated into its address.
+   * Should be unique among routers on the shard.
+   * @type {number}
+   */
+  this.routerNumber = row.routerNumber;
 
   /**
    * Unix timestamp (local) of router creation time.
@@ -316,7 +324,21 @@ NetSimRouterNode.inherits(NetSimNode);
  *        created entity, or null if entity creation failed.
  */
 NetSimRouterNode.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimRouterNode, shard, onComplete);
+  var nextRouterNumber = 1;
+  shard.nodeTable.readAll().forEach(function (node) {
+    if (NodeType.ROUTER === node.type && node.routerNumber >= nextRouterNumber) {
+      nextRouterNumber = node.routerNumber + 1;
+    }
+  });
+
+  var entity = new NetSimRouterNode(shard, { routerNumber: nextRouterNumber });
+  entity.getTable().create(entity.buildRow(), function (err, row) {
+    if (err) {
+      onComplete(err, null);
+      return;
+    }
+    onComplete(null, new NetSimRouterNode(shard, row));
+  });
 };
 
 /**
@@ -353,6 +375,7 @@ NetSimRouterNode.prototype.buildRow = function () {
   return utils.extend(
       NetSimRouterNode.superPrototype.buildRow.call(this),
       {
+        routerNumber: this.routerNumber,
         creationTime: this.creationTime,
         bandwidth: serializeNumber(this.bandwidth),
         memory: serializeNumber(this.memory),
@@ -370,6 +393,7 @@ NetSimRouterNode.prototype.buildRow = function () {
  * @private
  */
 NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
+  this.routerNumber = remoteRow.routerNumber;
   this.creationTime = remoteRow.creationTime;
   this.bandwidth = deserializeNumber(remoteRow.bandwidth);
   this.memory = deserializeNumber(remoteRow.memory);
@@ -622,9 +646,9 @@ NetSimRouterNode.prototype.getRouterNumber = function () {
   var addressFormatParts = getAddressFormatParts();
   if (addressFormatParts.length >= 2) {
     var assignableAddressValues = Math.pow(2, addressFormatParts.reverse()[1]);
-    return this.entityID % assignableAddressValues;
+    return this.routerNumber % assignableAddressValues;
   }
-  return this.entityID;
+  return this.routerNumber;
 };
 
 /**
@@ -979,6 +1003,8 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
 
       }.bind(this))
       .fail(function (err) {
+        logger.info("Rejected connection from " + otherNode.getDisplayName() +
+            ": " + err.message);
         rejectionReason = err;
       })
       .always(function () {

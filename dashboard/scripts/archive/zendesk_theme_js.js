@@ -1,4 +1,10 @@
 /**
+ * ALERT!!!
+ * If you make changes to this, please also update the file at:
+* https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/scripts/archive/zendesk_theme_js.js
+ */
+
+ /**
  * Backup of theme javascript included in the support.code.org ZenDesk template
  * customizations.
  *

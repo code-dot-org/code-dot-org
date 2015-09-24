@@ -29,9 +29,6 @@
       "callMyFunction": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "start_blocks": "function right(){\r\n  \r\n}",
     "is_k1": "false",

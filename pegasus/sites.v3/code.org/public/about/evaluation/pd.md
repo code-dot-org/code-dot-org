@@ -75,7 +75,7 @@ The main difference between the two groups being that our affiliate-trained teac
 
 *“I can usually judge a project by the amount of kids who start saying, ‘Do we have to do this today? Aren't we going to move on to something else?’ I have not heard that in all of the lessons that I’ve had that 4th and 5th grade is doing. I haven't had a single person say that."*
 
-[Full K-5 findings are available on Outlier's website.](http://outlier.uchicago.edu/evaluation_codeorg/ks-courses-implementation/)
+[Full K-5 findings are available on Outlier's website.](http://outlier.uchicago.edu/evaluation_codeorg/elementary-CSfund-interviews-questionnaires/)
 
 ---
 
@@ -142,6 +142,6 @@ Code.org offered professional development for high school teachers based on the 
 - Teachers new to CS felt limited by their own lack of CS content knowledge.
 - 1 in 5 teachers struggled with assessing student learning, and many teachers did not know what should be assessed and that evaluating students often felt subjective. "I would like more concrete means of assessment that don't depend on my perception of their participation." Teachers reported a desire for more assessment resources in the curriculum.
 
-Full ECS [interview](http://outlier.uchicago.edu/evaluation_codeorg/ecs-implementation-interviews/) and [questionnaire](http://outlier.uchicago.edu/evaluation_codeorg/ecs-implementation-questionnaire/) findings are available [on Outlier's website](http://outlier.uchicago.edu/evaluation_codeorg/).
+Full ECS [interview](http://outlier.uchicago.edu/evaluation_codeorg/highschool-exploringCS-interviews/) and [questionnaire](http://outlier.uchicago.edu/evaluation_codeorg/highschool-exploringCS-questionnaires/) findings are available [on Outlier's website](http://outlier.uchicago.edu/evaluation_codeorg/).
 
 [<button>Back to 2014-15 Summary](/about/evaluation/summary)<br /><br/>

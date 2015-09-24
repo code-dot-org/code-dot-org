@@ -21,13 +21,10 @@ Milestone Complete!
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)  ###
 
 
-**In-Person Workshop**
 
 Milestone Complete!
 
-**Online Study**
 
-<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
 
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
@@ -89,13 +86,10 @@ More info coming soon!
 Milestone Complete!
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)  ###
 
-**In-Person Workshop**
+
 
 Milestone Complete!
 
-**Online Study**
-
-<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
 
@@ -155,13 +149,11 @@ More info coming soon!
 
 Milestone Complete!
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
-**In-Person Workshop**
+
 
 Milestone Complete!
 
-**Online Study**
 
-<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
 Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Algebra. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
@@ -207,13 +199,11 @@ Water
 
 Milestone Complete!
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)  ###
-**In-Person Workshop**
+
 
 Milestone Complete!
 
-**Online Study**
 
-<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 

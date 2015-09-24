@@ -1,33 +1,34 @@
 - if current_user && current_user.admin?
   = render layout: 'shared/admin' do
-    #{@level.name}:
-    = link_to 'play', @level
-    - if can? :edit, @level
-      |
-      = link_to 'edit', edit_level_path(@level)
-      - if @level.is_a? Blockly
-        (
-        - if @level.is_a? Artist or @level.is_a? Calc or @level.is_a? Eval
-          = link_to 'solution', level_edit_blocks_path(@level, :solution_blocks)
-          |
-        = link_to 'toolbox', level_edit_blocks_path(@level, :toolbox_blocks)
-        |
-        = link_to 'start', level_edit_blocks_path(@level, :start_blocks)
-        |
-        = link_to 'required', level_edit_blocks_path(@level, :required_blocks)
-        |
-        = link_to 'pre-draw', level_edit_blocks_path(@level, :predraw_blocks)
-        )
-    - else
-      |
-      (Cannot edit)
-    |
-    = link_to "see callouts (#{@level.available_callouts(@script_level).count})", show_callouts: '1'
-    |
-    = link_to 'stats', level_stats_path(@level)
+    %strong= @level.name
+    %ul
+      %li= link_to level_path(@level), @level
+      %li= link_to "see callouts (#{@level.available_callouts(@script_level).count})", show_callouts: '1'
+      %li= link_to 'stats', level_stats_path(@level)
+      - if can? :edit, @level
+        %li
+          = link_to 'edit', edit_level_path(@level)
+          - if @level.is_a? Blockly
+            %ul
+              - if @level.is_a? Artist or @level.is_a? Calc or @level.is_a? Eval
+                %li= link_to 'solution', level_edit_blocks_path(@level, :solution_blocks)
+              %li= link_to 'toolbox', level_edit_blocks_path(@level, :toolbox_blocks)
+              %li= link_to 'start', level_edit_blocks_path(@level, :start_blocks)
+              %li= link_to 'required', level_edit_blocks_path(@level, :required_blocks)
+              %li= link_to 'pre-draw', level_edit_blocks_path(@level, :predraw_blocks)
+        %li= link_to 'delete', @level, method: :delete, data: { confirm: t('crud.confirm') }, style: 'color: red'
+        %li
+          = link_to 'clone', '', onclick: "$('#clone_#{@level.id}').toggle(); return false;"
+          %div{class: 'clone_level', id: "clone_#{@level.id}", style: 'display: none;'}
+            = form_tag level_clone_path(@level), method: :post, remote: true do
+              = label_tag 'New name:'
+              = text_field_tag :name, @level.name
+              = submit_tag 'Clone'
+      - else
+        %li (Cannot edit)
 
     %br/
-    This level is in the following scripts:
+    This level is in #{@level.script_levels.count} scripts:
     %ul
       - @level.script_levels.each do |script_level|
         %li
@@ -40,3 +41,9 @@
       %span.admin-abuse-score
       = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
     .project_admin
+:javascript
+  #{render partial: 'shared/ajax_submit', formats: [:js],  locals: {form_selector: '.clone_level'}}
+  $('.clone_level').on('ajax:beforeSend', function (e, xhr) {
+    var validation_error = $('#validation-error').detach();
+    $(e.target).parent().append(validation_error);
+  });

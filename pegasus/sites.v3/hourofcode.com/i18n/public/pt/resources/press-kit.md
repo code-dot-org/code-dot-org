@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
+title: <%= hoc_s(:title_press_kit) %>
+layout: wide
+nav: promote_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -35,7 +37,7 @@ Procure na Internet informações de contato de jornalistas. Se não conseguir e
 
 **3. Entre em contato com a mídia local**
 
-A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se interessar por este evento? Inclua as informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **See a [sample pitch to media](<%= resolve_url('/resources#sample-emails') %>):**
+A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se interessar por este evento? Inclua as informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **Veja um [exemplo de abordagem à mídia](<%= resolve_url('/resources#sample-emails') %>):**
 
 **4. Prepare-se para receber perguntas sobre o evento da sua escola. Veja os exemplos a seguir:**
 
@@ -55,7 +57,7 @@ Na China, todos os alunos estudam a ciência da computação para concluir o ens
 
 **Sobre a Code.org**
 
-A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também à minorias sociais, empoderando, por exemplo, mulheres e negros à participação nesta área. Sua visão é de que todos os alunos, de todas as escolas, devem ter a oportunidade de aprender a programar. Após seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código – que levou a ciência da computação a mais de 100 milhões de alunos – em parceria com 70 distritos de escolas públicas em todo o país para expandir os programas de ciência da computação. A Code.org é apoiada por doações filantrópicas de corporações, fundações e indivíduos generosos, incluindo Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network e outras. Para obter mais informações, visite: <<%= resolve_url('https://code.org') %>>.
+A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também à minorias sociais, empoderando, por exemplo, mulheres e negros à participação nesta área. Sua visão é de que todos os alunos, de todas as escolas, devem ter a oportunidade de aprender a programar. Após seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código – que levou a ciência da computação a mais de 100 milhões de alunos – em parceria com 70 distritos de escolas públicas em todo o país para expandir os programas de ciência da computação. A Code.org é apoiada por doações filantrópicas de corporações, fundações e indivíduos generosos, incluindo Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network e outras. Para obter mais informações, visite: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
 Encontre mais recursos e exemplos de e-mail [aqui](<%= resolve_url('/resources') %>).

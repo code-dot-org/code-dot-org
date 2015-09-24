@@ -46,7 +46,7 @@
     "disable_examples": "false",
     "free_play": "true",
     "app_width": "320",
-    "app_height": "450",
+    "app_height": "480",
     "slider_speed": "0.1",
     "start_blocks": "function turnAround(){\r\n  turnLeft();\r\n  turnLeft();\r\n  moveForward();\r\n}",
     "show_turtle_before_run": "true",

@@ -209,6 +209,13 @@ function loadHoc2015(skin, assetUrl) {
     'item_walk_item4'
   ];
 
+  skin.AutohandlerTouchItems = {
+    'item_walk_item1': 'whenTouchWalkItem1',
+    'item_walk_item2': 'whenTouchWalkItem2',
+    'item_walk_item3': 'whenTouchWalkItem3',
+    'item_walk_item4': 'whenTouchWalkItem4'
+  };
+
   skin.specialItemFrames = {
     'item_walk_item1': 12,
     'item_walk_item2': 12,
@@ -314,7 +321,8 @@ function loadHoc2015(skin, assetUrl) {
     [msg.setWallsRandom(), RANDOM_VALUE],
     [msg.setWallsBorder(), '"border"'],
     [msg.setWallsMaze(), '"maze"'],
-    [msg.setWallsMaze2(), '"maze2"']
+    [msg.setWallsMaze2(), '"maze2"'],
+    [msg.setWallsDefault(), '"default"']
     ];
 
   skin.backgroundChoices = [
@@ -593,6 +601,14 @@ exports.load = function(assetUrl, id) {
   skin.dropdownThumbnailWidth = 50;
   skin.dropdownThumbnailHeight = 50;
   skin.preloadAssets = true;
+
+  skin.activityChoices = [
+    [msg.setActivityRandom(), RANDOM_VALUE],
+    [msg.setActivityPatrol(), '"patrol"'],
+    [msg.setActivityChase(), '"chase"'],
+    [msg.setActivityFlee(), '"flee"'],
+    [msg.setActivityNone(), '"none"'],
+    ];
 
   // take care of items specific to skins
   switch (skin.id) {

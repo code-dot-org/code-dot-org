@@ -1,2 +1,3 @@
 #!/bin/sh
-ruby .git/hooks/lint.rb
+ruby tools/hooks/lint.rb &&
+  ruby tools/hooks/scary_changes.rb

@@ -7,7 +7,7 @@ angular: recordsApp
 -channel_id = request.splat_path_info[1..-1].split('/').first
 -table_name = request.splat_path_info[1..-1].split('/').last
 -api_base_url = "/v3/shared-tables/#{channel_id}/#{table_name}"
--not_authorized! unless owns_channel? channel_id
+-#not_authorized! unless owns_channel? channel_id
 
 %div{"ng-app" => "recordsApp", "ng-view" => ""}
 
@@ -79,8 +79,10 @@ angular: recordsApp
 
     $scope.genericError = function(result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
-    };
-
+    }
+    $scope.exportTable = function () {
+      window.location.href = '/v3/export-shared-tables/' + $scope.channelId + '/' + $scope.tableName;
+    }
     $scope.addColumn = function() {
       if ($scope.newColumnName == '') return;
       $scope.columns.push(makeColumn($scope.newColumnName));
@@ -139,12 +141,13 @@ angular: recordsApp
       }
     }
     $scope.renameColumn = function (column) {
-      new tablesService().$renameColumn({column_name: column.id, new_name: column.name});
-      for (var i= 0; i < $scope.records.length; i += 1) {
-        $scope.records[i][column.name] = $scope.records[i][column.id];
-        delete $scope.records[i][column.id];
+      if (column.id != column.name) {
+        new tablesService().$renameColumn({column_name: column.id, new_name: column.name});
+        for (var i= 0; i < $scope.records.length; i += 1) {
+          $scope.records[i][column.name] = $scope.records[i][column.id];
+          delete $scope.records[i][column.id];
+        }
       }
-
       column.id = column.name;
       column.editing = false;
     }
