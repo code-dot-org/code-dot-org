@@ -18,7 +18,7 @@ nav: how_to_nav
 
 4. **Promote on your district’s homepage.** Add one of these [banners](<%= resolve_url('/resources#banners') %>) to your district’s website to let visitors know about your participation. Link it to [Hour of Code](<%= resolve_url('/') %>). 
 
-5. **Host a district Hour of Code event.** See our [event how to guide](<%= resolve_url('/how-to/how-to-events') %>) for a sample run of show, media outreach kit and other supports. 
+5. **Host a district Hour of Code event.** See our [event how to guide](<%= resolve_url('/how-to/events') %>) for a sample run of show, media outreach kit and other supports. 
 
 6. **More [prizes](<%= resolve_url('/prizes') %>) for EVERY organizer.** Every participating educator will receive thank you gifts. And in each state, one participating school will win $10,000 in technology for their school! 
 
