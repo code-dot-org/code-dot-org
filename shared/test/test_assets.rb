@@ -157,12 +157,18 @@ class AssetsTest < Minitest::Test
   def test_asset_last_modified
     channel = create_channel(@channels)
 
-    start_time = Time.now
-    put @assets, channel, 'test.png', 'not a real image', 'image/png'
+    put @assets, channel, 'test.png', 'version 1', 'image/png'
 
-    get @assets, channel, 'test.png', '', 'HTTP_IF_MODIFIED_SINCE' => start_time.httpdate
-    assert @assets.last_response.successful?
-    get @assets, channel, 'test.png', '', 'HTTP_IF_MODIFIED_SINCE' => (start_time + 3600).httpdate
+    get @assets, channel, 'test.png'
+    v1_last_modified = @assets.last_response.headers['Last-Modified']
+
+    put @assets, channel, 'test.png', 'version 2', 'image/png'
+
+    get @assets, channel, 'test.png', '', 'HTTP_IF_MODIFIED_SINCE' => v1_last_modified
+    assert_equal 200, @assets.last_response.status
+    v2_last_modified = @assets.last_response.headers['Last-Modified']
+
+    get @assets, channel, 'test.png', '', 'HTTP_IF_MODIFIED_SINCE' => v2_last_modified
     assert_equal 304, @assets.last_response.status
   end
 
