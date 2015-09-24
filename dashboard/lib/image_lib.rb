@@ -1,5 +1,16 @@
+# Helper functions for manipulating images.
 module ImageLib
 
+  # Overlay a foreground and background image as described by params, where
+  # the background image is resized to 154x154 pixels and centered.
+  #
+  # @param [Hash] parameters
+  #   params[:background_blob] - A binary string for the background image.
+  #   params[:background_url]  - A local file path for the background image.
+  #   params[:foreground_blob] - A binary string for the foreground image.
+  #   params[:foreground_url]  - A local file path for the foreground image.
+  #
+  # @return [RMagick::ImageList]
   def self.overlay_image(params)
     if params[:background_url].nil?
       background = Magick::ImageList.new
