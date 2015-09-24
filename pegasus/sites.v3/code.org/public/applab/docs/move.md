@@ -33,9 +33,10 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 move(50, 50);	// Move the turtle down and to the right
-</pre>
+```
 
 [/example]
 
@@ -43,10 +44,11 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 turnRight(90);	// turn the turtle right
 move(50, 50);	// Still moves down and to the right
-</pre>
+```
 
 [/example]
 
@@ -54,14 +56,15 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // Draw a arrow pointing up from where the turtle is
 penDown();
 move(0, -100);
 move(-25, 50);
 move(50, 0);
 move(-25, -50);
-</pre>
+```
 
 [/example]
 
@@ -70,9 +73,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 move(x, y);
-</pre>
+```
 
 [/syntax]
 
