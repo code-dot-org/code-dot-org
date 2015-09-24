@@ -41,13 +41,13 @@
       .form-group
         .checkbox
           %label{style: "font-weight: bold"}
-            %input#hoc-prizes-qualifying-school{name: "qualifying_school_b", type: "checkbox", value: "1"}/
+            %input#hoc-prizes-qualifying-school{name: "qualifying_school_b", type: "checkbox", value: "1", required: true}/
             = hoc_s(:hardware_prizes_form_qualifying_school_label)
 
       .form-group
         .checkbox
           %label{style: "font-weight: bold"}
-            %input#hoc-prizes-title-I-school{name: "title_I_school_b", type: "checkbox", value: "1"}/
+            %input#hoc-prizes-title-I-school{name: "title_I_school_b", type: "checkbox", value: "1", required: false}/
             = hoc_s(:hardware_prizes_form_title_I_school_label)
           %p= hoc_s(:hardware_prizes_form_title_I_school_help_text)
 
