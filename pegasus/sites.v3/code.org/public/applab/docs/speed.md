@@ -38,11 +38,12 @@ ____________________________________________________
 
 **Example 1**
 
-<pre>
+
+```
 show();             // shows the turtle by making it visible at its current location
 speed(50);          // sets the speed to 50
 moveForward(100);   // moves the turtle forward 100 pixels
-</pre>
+```
 
 [/example]
 
@@ -54,7 +55,8 @@ ____________________________________________________
 
 This example illustrates the turtle moving at different speeds (10, 20, 30, 40, 50, 60, 70, 80, 90, 100) as it draws a square on the screen.
 
-<pre>
+
+```
 textLabel("speed", "speed: 10", "forId");   // creates a text label that displays the current speed
                                             //    of the turtle
 show();                                     // shows the turtle by making it visible at its current location
@@ -67,7 +69,7 @@ for (var i = 1; i <= 10; i++) {             // creates a for loop that will repe
     turnRight(90);                          // turns the turtle 90 degrees to the right
   }
 }
-</pre>
+```
 
 
 [/example]
@@ -77,9 +79,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 speed(value);
-</pre>
+```
 
 [/syntax]
 
