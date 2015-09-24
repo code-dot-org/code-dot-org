@@ -17,6 +17,8 @@
   header_menu_resources: 'Resources'
   header_menu_faq: 'FAQ'
   header_menu_prizes: 'Prizes'
+  header_menu_how_to: 'How-To'
+  header_menu_promote: 'Promote'
 
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
@@ -342,6 +344,11 @@
   resources_social: Social
   resources_country_resources: Country Specific Resources
   resources_stickers: Stickers
+  resources_how_to_guides: 'How-to guides'
+  resources_promote: 'Promote'
+  resources_nav_tutorials: 'Try the tutorials'
+  resources_nav_promote: 'Spread the word'
+  resources_nav_spread_word: 'How to get involved'
 
   resources_banner_promote_text: "Promote"
   resources_banner_promote_button: "Encourage others to sign up with brochures, inspirational posters and social media banners."
