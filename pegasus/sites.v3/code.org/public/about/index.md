@@ -57,7 +57,7 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 | Prep new CS teachers | We've prepared 15,000 new teachers to teach CS across grades K-12. Learn about our [professional development programs](/educate/professional-development).|
 | Change school district curriculum | We've partnered with [70+ of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a district partner](/educate/districts).|
 | Set up policies to support CS | Policy changed in [16 states](/action) including CA, NY, FL, IL, OH.|
-| Go global | Our courses are available in 30+ languages, used in all 180+ countries. |
+| Go global | Our courses are available in 40+ languages, used in all 180+ countries. |
 
 <br/>
 <br/>
@@ -68,9 +68,9 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 <br/>
 
 ## More information, history, and philosophy
-Code.org launched in 2013 as a bootstrapped project of co-founders Ali and Hadi Partovi. Our initial work was a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) that became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded to build a full organization supporting a a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few. 
+Code.org launched in 2013 as a bootstrapped project of co-founders Ali and Hadi Partovi. Our initial work was a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) that became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded to build a full organization supporting a a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
 
-To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. 
+To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes.
 
 Our work builds upon [decades of effort, by countless organizations and individuals](https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community.
 
@@ -117,7 +117,7 @@ Receive [quarterly updates from Code.org by email](http://eepurl.com/wL0XL), or 
 </script>
 <script type="IN/FollowCompany" data-id="3129360" data-counter="none"></script>
 <br/>
-<iframe  frameborder="0" border="0" scrolling="no" allowtransparency="true" height="25" width="116" src="http://platform.tumblr.com/v1/follow_button.html?button_type=2&tumblelog=codeorg&color_scheme=dark"></iframe>
+<iframe  frameborder="0" border="0" scrolling="no" allowtransparency="true" height="25" width="116" src="https://platform.tumblr.com/v1/follow_button.html?button_type=2&tumblelog=codeorg&color_scheme=dark"></iframe>
 <br/>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <div class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/u/0/113408212816493509628" data-rel="publisher"></div>
@@ -126,6 +126,6 @@ Receive [quarterly updates from Code.org by email](http://eepurl.com/wL0XL), or 
 
 
 <a href="http://www.guidestar.org/organizations/46-0858543/code-org.aspx" target="_blank">
-    <img src="http://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
+    <img src="https://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
 </a> [![image](/images/fit-100/privacy.jpg)](http://studentprivacypledge.org/)
 

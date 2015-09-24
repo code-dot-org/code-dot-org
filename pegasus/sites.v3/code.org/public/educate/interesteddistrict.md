@@ -12,4 +12,4 @@ social:
   "og:video:type": ""
 ---
 
-<script type="text/javascript" src="http://form.jotformpro.com/jsform/51276687185972"></script>
+<script type="text/javascript" src="https://secure.jotformpro.com/jsform/51276687185972"></script>

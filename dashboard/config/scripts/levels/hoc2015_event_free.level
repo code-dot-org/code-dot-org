@@ -11,24 +11,29 @@
     "textModeAtStart": true,
     "softButtons": "[\"leftButton\", \"rightButton\", \"downButton\", \"upButton\"]",
     "code_functions": {
-      "setCharacter": null,
-      "setBackground": null,
-      "setCharacterSpeed": null,
-      "setWalls": null,
-      "playSound": null,
-      "addItemsToScene": null,
-      "setItemActivity": null,
-      "changeScore": null,
+      "setCharacter": { "category": "Commands" },
+      "setBackground": { "category": "Commands" },
+      "setCharacterSpeed": { "category": "Commands" },
+      "setWalls": { "category": "Commands" },
+      "playSound": { "category": "Commands" },
+      "addItemsToScene": { "category": "Commands" },
+      "setItemActivity": { "category": "Commands" },
+      "setItemSpeed": { "category": "Commands" },
+      "changeScore": { "category": "Commands" },
 
-      "moveEast": null,
-      "moveWest": null,
-      "moveNorth": null,
-      "moveSouth": null,
-      "whenLeft": null,
-      "whenRight": null,
-      "whenUp": null,
-      "whenDown": null,
-      "whenTouchItem": null
+      "moveEast": { "category": "Commands" },
+      "moveWest": { "category": "Commands" },
+      "moveNorth": { "category": "Commands" },
+      "moveSouth": { "category": "Commands" },
+      "whenLeft": { "category": "Events" },
+      "whenRight": { "category": "Events" },
+      "whenUp": { "category": "Events" },
+      "whenDown": { "category": "Events" },
+      "whenTouchWalkItem1": { "category": "Events" },
+      "whenTouchWalkItem2": { "category": "Events" },
+      "whenTouchWalkItem3": { "category": "Events" },
+      "whenTouchWalkItem4": { "category": "Events" },
+      "whenTouchItem": { "category": "Events" }
     },
     "start_blocks": "function whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}",
 
@@ -37,11 +42,11 @@
     "block_moving_into_walls": true,
     "grid_aligned_movement": false,
     "item_grid_aligned_movement": true,
-    "remove_items_when_actor_collides": false,
+    "remove_items_when_actor_collides": true,
     "markerHeight": 50,
     "markerWidth": 50,
 
-    "maze": "[[256, 0, 0, 4, 0, 0, 0, 256], [0, 0, 4, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0,0, 0], [0, 0, 4, 0, 4, 0, 0, 0], [0, 0, 4, 0,16,256,0, 0], [0, 0, 4, 0, 0, 0, 0, 0], [0, 0, 4, 0, 0, 0, 0, 0], [256, 0, 0, 0, 4, 0, 0, 256]]",
+    "maze": "[[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]]",
 
     "failure_condition": "function () {\r\n}",
 
@@ -70,7 +75,6 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "timeout_failure_tick": "5000",
     "video_key": "infinity_playlab_intro"
   }
 }]]></config>

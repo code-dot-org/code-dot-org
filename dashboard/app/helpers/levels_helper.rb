@@ -2,6 +2,8 @@ require 'digest/sha1'
 
 module LevelsHelper
   include ApplicationHelper
+  include UsersHelper
+
   def build_script_level_path(script_level, params = {})
     if script_level.script.name == Script::HOC_NAME
       hoc_chapter_path(script_level.chapter, params)
@@ -82,32 +84,29 @@ module LevelsHelper
   def select_and_track_autoplay_video
     return if @level.try(:autoplay_blocked_by_level?)
 
-    seen_videos = session[:videos_seen] || Set.new
     autoplay_video = nil
 
     is_legacy_level = @script_level && @script_level.script.legacy_curriculum?
 
     if is_legacy_level
-      autoplay_video = @level.related_videos.find { |video| !seen_videos.include?(video.key) }
+      autoplay_video = @level.related_videos.find { |video| !client_state.video_seen?(video.key) }
     elsif @level.specified_autoplay_video
-      unless seen_videos.include?(@level.specified_autoplay_video.key)
+      unless client_state.video_seen?(@level.specified_autoplay_video.key)
         autoplay_video = @level.specified_autoplay_video
       end
     end
 
     return unless autoplay_video
 
-    seen_videos.add(autoplay_video.key)
-    session[:videos_seen] = seen_videos
+    client_state.add_video_seen(autoplay_video.key)
     autoplay_video.summarize unless params[:noautoplay]
   end
 
   def select_and_remember_callouts(always_show = false)
-    session[:callouts_seen] ||= Set.new
     # Filter if already seen (unless always_show)
     callouts_to_show = @level.available_callouts(@script_level).
-      reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }.
-      each { |c| session[:callouts_seen].add(c.localization_key) }
+      reject { |c| !always_show && client_state.callout_seen?(c.localization_key) }.
+      each { |c| client_state.add_callout_seen(c.localization_key) }
     # Localize
     callouts_to_show.map do |callout|
       callout_hash = callout.attributes
@@ -267,6 +266,11 @@ module LevelsHelper
         callback: @callback,
     }
     level_options[:lastAttempt] = @last_attempt
+
+    if current_user.nil? || current_user.teachers.empty?
+      # only students with teachers should be able to submit
+      level_options['submittable'] = false
+    end
 
     # Request-dependent option
     app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||

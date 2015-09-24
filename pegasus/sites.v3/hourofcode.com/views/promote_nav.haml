@@ -1,0 +1,33 @@
+%div.resources-navigation
+  %div.nav-header= hoc_s(:resources_promote)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/promote#onepager')}
+      = hoc_s(:resources_one_pager)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/promote#brochure')}
+      = hoc_s(:resources_brochure)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/promote#videos')}
+      = hoc_s(:resources_videos)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/promote#posters')}
+      = hoc_s(:resources_posters)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/promote#banners')}
+      = hoc_s(:resources_banners)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/promote#logo')}
+      = hoc_s(:resources_logo)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/promote#stickers')}
+      = hoc_s(:resources_stickers)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/promote#sample-emails')}
+      = hoc_s(:resources_emails)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/promote/stats')}
+      = hoc_s(:resources_stats)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/promote/press-kit')}
+      = hoc_s(:resources_press_kit)
+= view :resources_nav

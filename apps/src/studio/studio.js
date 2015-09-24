@@ -1171,6 +1171,21 @@ Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
 };
 
 /**
+ * Get a wall value (either a SquareType.WALL value or a specific row/col tile
+ * from a 16x16 grid shifted into bits 16-23).
+ *
+ * Should not be called with rows or cols that are out of bounds!
+ */
+
+Studio.getWallValue = function (row, col) {
+  if (Studio.walls) {
+    return skin[Studio.walls] ? (skin[Studio.walls][row][col] << constants.WallCoordsShift): 0;
+  } else {
+    return Studio.map[row][col] & constants.WallAnyMask;
+  }
+};
+
+/**
  * Test to see if a collidable will be touching a wall given particular X/Y
  * position coordinates (center)
  */
@@ -1198,8 +1213,7 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
     for (var row = Math.max(0, iYGrid - rowsOffset);
          row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
          row++) {
-      if ((Studio.map[row][col] & SquareType.WALL) || 
-          (Studio.walls !== null && skin[Studio.walls] && skin[Studio.walls][row][col])) {
+      if (Studio.getWallValue(row, col)) {
         if (overlappingTest(xCenter,
                             (col + 0.5) * Studio.SQUARE_SIZE,
                             Studio.SQUARE_SIZE / 2 + collidableWidth / 2,
@@ -1392,6 +1406,8 @@ Studio.init = function(config) {
 
   Studio.projectiles = [];
   Studio.items = [];
+  Studio.itemSpeed = {};
+  Studio.itemActivity = {};
   Studio.eventHandlers = [];
   Studio.perExecutionTimeouts = [];
   Studio.tickIntervalId = null;
@@ -1518,6 +1534,13 @@ Studio.init = function(config) {
   config.varsInGlobals = true;
   config.dropletConfig = dropletConfig;
   config.unusedConfig = [];
+  if (skin.AutohandlerTouchItems) {
+    for (var prop in skin.AutohandlerTouchItems) {
+      AUTO_HANDLER_MAP[skin.AutohandlerTouchItems[prop]] =
+          'whenSpriteCollided-' +
+          (Studio.protagonistSpriteIndex || 0) + '-' + prop;
+    }
+  }
   for (var handlerName in AUTO_HANDLER_MAP) {
     config.unusedConfig.push(handlerName);
   }
@@ -1666,6 +1689,8 @@ Studio.reset = function(first) {
     .setAttribute('visibility', 'hidden');
 
   // Reset configurable variables
+  Studio.background = null;
+  Studio.walls = null;
   Studio.setBackground({value: getDefaultBackgroundName()});
 
   // Reset currentCmdQueue and various counts:
@@ -1723,6 +1748,8 @@ Studio.reset = function(first) {
     }
   }
 
+  Studio.itemSpeed = {};
+  Studio.itemActivity = {};
   // Create Items that are specified on the map:
   Studio.createLevelItems(svg);
 
@@ -2371,9 +2398,23 @@ Studio.clearDebugRects = function() {
 };
 
 
-Studio.drawWallTile = function (svg, row, col) {
-  var srcRow = Math.floor(Math.random() * 4);
-  var srcCol = Math.floor(Math.random() * 4);
+Studio.drawWallTile = function (svg, wallVal, row, col) {
+  var srcRow, srcCol;
+  if (wallVal == SquareType.WALL) {
+    // use a random coordinate
+    // TODO (cpirich): these should probably be chosen once at level load time
+    // and we should allow the level/skin to set specific row/col max values
+    // to ensure that reasonable tiles are chosen at random
+    srcRow = Math.floor(Math.random() * constants.WallCoordMax);
+    // Since [0,0] is not a valid wall tile, ensure that we avoid column zero
+    // when row zero was chosen at random
+    srcCol = srcRow ?
+                Math.floor(Math.random() * constants.WallCoordMax) :
+                1 + Math.floor(Math.random() * (constants.WallCoordMax - 1));
+  } else {
+    srcRow = (wallVal & constants.WallCoordRowMask) >> constants.WallCoordRowShift;
+    srcCol = (wallVal & constants.WallCoordColMask) >> constants.WallCoordColShift;
+  }
 
   var tiles = Studio.background && skin[Studio.background].tiles ?
                 skin[Studio.background].tiles : skin.tiles;
@@ -2417,6 +2458,8 @@ Studio.createLevelItems = function (svg) {
             className: className,
             dir: Direction.NONE,
             image: skin[className],
+            speed: Studio.itemSpeed[className],
+            activity: Studio.itemActivity[className],
             loop: true,
             x: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col,
             y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row,
@@ -2439,10 +2482,9 @@ Studio.drawMapTiles = function () {
   var spriteLayer = document.getElementById('backgroundLayer');
   for (var row = 0; row < Studio.ROWS; row++) {
     for (var col = 0; col < Studio.COLS; col++) {
-      var mapVal = Studio.map[row][col];
-      if (mapVal & SquareType.WALL ||
-          (Studio.walls !== null && skin[Studio.walls] && skin[Studio.walls][row][col])) {
-        Studio.drawWallTile(spriteLayer, row, col);
+      var wallVal = Studio.getWallValue(row, col);
+      if (wallVal) {
+        Studio.drawWallTile(spriteLayer, wallVal, row, col);
       }
     }
   }
@@ -2814,6 +2856,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setItemActivity(cmd.opts);
       break;
+    case 'setItemSpeed':
+      studioApp.highlight(cmd.id);
+      Studio.setItemSpeed(cmd.opts);
+      break;
     case 'showDebugInfo':
       studioApp.highlight(cmd.id);
       Studio.showDebugInfo(cmd.opts);
@@ -2873,7 +2919,8 @@ Studio.addItemsToScene = function (opts) {
       loop: true,
       x: pos.x,
       y: pos.y,
-      activity: 'patrol',
+      speed: Studio.itemSpeed[opts.className],
+      activity: utils.valueOr(Studio.itemActivity[opts.className], "patrol"),
       width: 100,
       height: 100
     };
@@ -2904,12 +2951,24 @@ Studio.addItemsToScene = function (opts) {
 Studio.setItemActivity = function (opts) {
   if (opts.type === "patrol" || opts.type === "chase" ||
       opts.type === "flee" || opts.type === "none") {
+    // retain this activity type for items of this class created in the future:
+    Studio.itemActivity[opts.className] = opts.type;
     Studio.items.forEach(function (item) {
       if (item.className === opts.className) {
         item.setActivity(opts.type);
       }
     });
   }
+};
+
+Studio.setItemSpeed = function (opts) {
+  // retain this speed value for items of this class created in the future:
+  Studio.itemSpeed[opts.className] = opts.speed;
+  Studio.items.forEach(function (item) {
+    if (item.className === opts.className) {
+      item.speed = opts.speed;
+    }
+  });
 };
 
 Studio.showDebugInfo = function (opts) {
@@ -3046,6 +3105,11 @@ Studio.setWalls = function (opts) {
     return;
   }
 
+  // Treat 'default' as resetting to the level's map (Studio.walls = null)
+  if (opts.value === 'default') {
+    opts.value = null;
+  }
+
   if (opts.value === Studio.walls) {
     return;
   }
@@ -3056,8 +3120,6 @@ Studio.setWalls = function (opts) {
   $(".tile_clip").remove();
   $(".tile").remove();
   Studio.drawMapTiles();
-
-  sortDrawOrder();  
 };
 
 /**
