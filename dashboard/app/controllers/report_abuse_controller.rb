@@ -2,6 +2,8 @@ require 'json'
 require 'httparty'
 
 class ReportAbuseController < ApplicationController
+  AGE_CUSTOM_FIELD_ID = 24024923
+
   def report_abuse
     HTTParty.post('https://codeorg.zendesk.com/api/v2/tickets.json',
       headers: {"Content-Type" => "application/json", "Accept" => "application/json"},
@@ -18,6 +20,7 @@ class ReportAbuseController < ApplicationController
               "user detail:",
               "#{params[:abuse_detail]}"].join("\n")
           },
+          custom_fields: [ { id: AGE_CUSTOM_FIELD_ID, value: params[:age] }],
           tags: (params[:abuse_type] == 'infringement' ? ['report_abuse', 'infringement'] : ['report_abuse'])
         }
       }.to_json,

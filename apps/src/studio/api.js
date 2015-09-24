@@ -135,6 +135,13 @@ exports.setItemActivity = function(id, className, type) {
   });
 };
 
+exports.setItemSpeed = function(id, className, speed) {
+  Studio.queueCmd(id, 'setItemSpeed', {
+    'className': className,
+    'speed': speed
+  });
+};
+
 exports.showDebugInfo = function(value) {
   Studio.queueCmd(null, 'showDebugInfo', {
     'value': value

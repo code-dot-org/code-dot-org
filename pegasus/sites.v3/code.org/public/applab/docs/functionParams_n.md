@@ -39,7 +39,8 @@ ____________________________________________________
 
 In this example we show how you can make a function with a parameter that is used to control how far the turtle moves.
 
-<pre>
+
+```
 square(25);
 turnRight();
 square(50);
@@ -52,7 +53,7 @@ function square(sideLength){
 		turnLeft();
 	}
 }
-</pre>
+```
 
 [/example]
 
@@ -62,7 +63,8 @@ function square(sideLength){
 
 In this example we show how you can make a function with *two parameters* one for setting how much the turtle moves and the other for setting how many-sided shape you want to draw.  NOTICE: we have to do some
 
-<pre>
+
+```
 rectangle(75, 45);
 turnRight();
 rectangle(100, 50);
@@ -77,7 +79,7 @@ function rectangle(width, height){
 		turnLeft();
 	}
 }
-</pre>
+```
 
 [/example]
 
@@ -85,14 +87,15 @@ function rectangle(width, height){
 
 The following block of code declares and invokes a function named `computeCircleArea`. The function computes the area of a circle with the specified radius.
 
-<pre>
+
+```
 var area = computeCircleArea(10); // compute the area of a circle with the radius 10
 console.log(area);
 
 function computeCircleArea(radius) {
     return Math.PI * Math.pow(radius, 2);
 }
-</pre>
+```
 
 [/example]
 
@@ -102,7 +105,8 @@ ____________________________________________________
 
 The following block of code declares and invokes a function named `computeTriangleArea`. The function computes the area of a triangle with the specified base length and height.
 
-<pre>
+
+```
 // compute the area of a triangle with base 10 and height 5.
 var area = computeTriangleArea(10, 5);
 console.log(area);
@@ -111,7 +115,7 @@ console.log(area);
 function computeTriangleArea(base, height) {
     return height * base / 2;
 }
-</pre>
+```
 
 
 [/example]
@@ -121,11 +125,12 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 function functionName(param0, param1, ..., paramN) {
     // function body
 }
-</pre>
+```
 
 [/syntax]
 

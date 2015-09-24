@@ -13,3 +13,13 @@ def add_code_to_editor(code)
 
   @browser.execute_script(script)
 end
+
+And /^Applab HTML has a button$/ do
+  code = @browser.execute_script "return Applab.levelHtml"
+  /button/.match(code).nil?.should eq false
+end
+
+And /^Applab HTML has no button$/ do
+  code = @browser.execute_script "return Applab.levelHtml"
+  /button/.match(code).nil?.should eq true
+end

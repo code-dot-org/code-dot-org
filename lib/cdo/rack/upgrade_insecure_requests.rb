@@ -21,7 +21,12 @@ module Rack
           skip_if: lambda(&method(:not_ssl?)),
           xpath: %w(img script embed iframe).map{|x|"//#{x}[@src[starts-with(.,'http://')]]"}.join(' | ')
       ) do |nodes|
-        nodes.each{|node|process(node)}
+        nodes.each do |node|
+          # Output the urls we're rewriting so we can update them to https
+          # in our codebase.
+          puts "REWRITING: #{node}"
+          process(node)
+        end
       end
     end
 
