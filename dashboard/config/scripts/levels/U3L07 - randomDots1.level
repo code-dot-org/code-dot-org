@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-09-23T05:05:03.000Z",
+  "created_at": "2015-09-24T14:12:15.000Z",
   "level_num": "custom",
   "user_id": 106,
   "properties": {
@@ -127,9 +127,10 @@
       "return": null
     },
     "edit_code": true,
+    "encrypted_examples": "HWJgoeg/LliyinUlPQm1NpxdVv5LPaeJ7iLvIFQ2a2gFejC0uGb+ETyUHZl4\n6qev\n",
     "embed": "false",
-    "instructions": "Add 15 fish to the image by writing drawAllFishw with a loop. (Click to see full instructions)",
-    "markdown_instructions": "# Add Fish\r\n\r\nThe next high-level function you will write is `drawAllFish`. A version of `drawFish` with parameters has been provided for you to use.\r\n\r\n# Do This\r\n\r\n* **Read** the `drawFish` function to know how it works and what **parameters** it accepts.\r\n\r\n* **Add a loop** to `drawAllFish`\r\n\r\n* Inside your loop add code that **moves randomly** around the **top 360 pixels** of the image and draws **15 fish** of random size between **5 and 20** using `drawBubble`.\r\n\r\n* Once you have your loop working try calling `drawFish` with random values for its `red`, `green`, and `blue` parameters to get differently colored fish.\r\n\r\n![](https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35 PM.png)",
+    "instructions": "Increase the number of iterations to fully fill the screen with random dots. (Click to see full instructions)",
+    "markdown_instructions": "# Looping with random values\r\n\r\n<img src=\"https://images.code.org/520e45a90988b04bb0ff3baa184f080a-image-1443108426597.png\" style=\"width: 100px; float: right;\">\r\n\r\nIf you add some randomness to turtle behavior inside a loop, the program will run a little differently every time which can make for some cool effects. \r\n\r\nYou're about to see a program in which the turtle **moves to random location** each iteration of the loop, and **draws a randomly sized dot** that also has a **random color**.  We've also made the dot semi-transparent by setting the alpha value to 0.5 (50% transparency).\r\n\r\n# Do This\r\n\r\n**Figure out how many iterations** you need to consistently fill the screen entirely with dots so none of the background is showing.  It will be a little different every time so you'll need to experiment.\r\n\r\n**Compare what you found** with a neighbor to see how close your results are.  Then **move on**.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -146,7 +147,6 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "project_template_level_name": "U3L07 - underTheSeaLoopsTemplate",
     "free_play": "true",
     "app_width": "320",
     "app_height": "480",
@@ -156,11 +156,9 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
+    "submittable": "false",
     "hide_view_data_button": "true",
-    "encrypted_examples": [
-
-    ],
-    "submittable": "false"
+    "project_template_level_name": "U3L07 - randomDotsTemplate"
   }
 }]]></config>
   <blocks/>
