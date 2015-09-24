@@ -1,3 +1,5 @@
+/* global $ */
+
 var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
 var LETTERS = ALPHABET.split('');
 
@@ -47,6 +49,12 @@ $(document).ready(function () {
   });
 
   $("#mode-toggle button[value=encrypt]").click();
+  $("#speedSlider").slider({
+    max: 1000,
+    min: 0,
+    value: 500,
+    change: setTimerFromSlider
+  });
 });
 
 function renderVigenereTable () {
@@ -222,7 +230,7 @@ function encodeNextCharacter (){
 }
 
 function setTimerFromSlider () {
-  setTimer(1000 - $("#speedSlider").val());
+  setTimer(1000 - $("#speedSlider").slider("value"));
 }
 
 function clearTimer () {
