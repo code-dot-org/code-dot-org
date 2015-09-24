@@ -18,16 +18,24 @@ window.dashboard.ReportAbuseForm = (function (React) {
    */
   var AgeDropdown = React.createClass({
     propTypes: {
-      age: React.PropTypes.string
+      age: React.PropTypes.oneOfType([
+        React.PropTypes.string,
+        React.PropTypes.number
+      ])
     },
 
     render: function () {
       var style = $.extend({}, {width: DROPDOWN_WIDTH}, this.props.style);
 
+      var age = this.props.age;
+      if (typeof(age) === 'number') {
+        age = age.toString();
+      }
+
       var ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',
         '15', '16', '17', '18', '19', '20', '21+'];
 
-      if (this.props.age !== null && ages.indexOf(this.props.age) == -1) {
+      if (this.props.age !== null && ages.indexOf(age) === -1) {
         throw new Error('Invalid age: ' + this.props.age);
       }
 
@@ -48,7 +56,10 @@ window.dashboard.ReportAbuseForm = (function (React) {
       abuseUrl: React.PropTypes.string.isRequired,
       name: React.PropTypes.string,
       email: React.PropTypes.string,
-      age: React.PropTypes.string
+      age: React.PropTypes.oneOfType([
+        React.PropTypes.string,
+        React.PropTypes.number
+      ])
     },
 
     /**
