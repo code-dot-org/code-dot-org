@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-# -*- coding: undecided -*-
 #
 # BUILD_AND_MAIL_LOG is a terrible name. The MAIL_LOG part was split out into CRONJOB.
 #
@@ -38,13 +37,13 @@ def main()
     projects = ARGV.join(' ')
     if status == 0
       HipChat.log "<b>#{projects}</b> built.", color: 'green'
-      HipChat.log "Time: 🕗#{format_duration(Time.now.to_i - start_time)}", color: 'green'
+      HipChat.log "&#x1f550; #{format_duration(Time.now.to_i - start_time)}", color: 'green'
 
       HipChat.developers "<b>#{projects}</b> built.", color: 'green'
       HipChat.developers commit_url, color: 'gray', message_format: 'text'
     else
       HipChat.log "<b>#{projects}</b>  failed to build!", color: 'red'
-      HipChat.log "Time: 🕗#{format_duration(Time.now.to_i - start_time)}", color: 'red'
+      HipChat.log "&#x1f550; #{format_duration(Time.now.to_i - start_time)}", color: 'red'
       HipChat.log "/quote #{log}", color: 'gray', message_format: 'text'
 
       HipChat.developers "<b>#{projects}</b>  failed to build!", color: 'red', notify: 1
