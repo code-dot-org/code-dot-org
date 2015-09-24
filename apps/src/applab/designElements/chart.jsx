@@ -69,23 +69,23 @@ var ChartEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getClickEventCode: function() {
+  getDrawChartFromRecordsCode: function() {
     var id = this.props.element.id;
     var code =
-      'onEvent("' + id + '", "click", function(event) {\n' +
-      '  console.log("' + id + ' clicked!");\n' +
-      '});\n';
+      'drawChartFromRecords("' + id + '", "bar", "tableName", ' +
+      '["columnOne", "columnTwo"]);\n';
     return code;
   },
 
-  insertClick: function() {
-    this.props.onInsertEvent(this.getClickEventCode());
+  insertDrawChartFromRecords: function() {
+    this.props.onInsertEvent(this.getDrawChartFromRecordsCode());
   },
 
   render: function () {
     var element = this.props.element;
-    var clickName = 'Click';
-    var clickDesc = 'Triggered when the image is clicked with a mouse or tapped on a screen.';
+    var drawChartFromRecordsName = 'drawChartFromRecords';
+    var drawChartFromRecordsDesc =
+        "Draws the chart using App Lab's table data storage.";
 
     return (
       <div id='eventRowContainer'>
@@ -96,9 +96,9 @@ var ChartEvents = React.createClass({
           isIdRow={true}/>
         <EventHeaderRow/>
         <EventRow
-          name={clickName}
-          desc={clickDesc}
-          handleInsert={this.insertClick}/>
+          name={drawChartFromRecordsName}
+          desc={drawChartFromRecordsDesc}
+          handleInsert={this.insertDrawChartFromRecords}/>
       </div>
     );
   }
