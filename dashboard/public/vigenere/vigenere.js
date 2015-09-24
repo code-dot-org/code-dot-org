@@ -182,7 +182,7 @@ function encryptNextCharacter (skipAnimation) {
   var row = LETTERS.indexOf(keyChar);
   var col = LETTERS.indexOf(nextChar);
 
-  nextEncryptedChar = vigenereLetter(row, col);
+  var nextEncryptedChar = vigenereLetter(row, col);
   outputMessage += nextEncryptedChar;
 
   if (skipAnimation === false) {
