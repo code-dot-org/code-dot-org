@@ -33,10 +33,11 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 var y = Math.round(23.5); //Round 23.5 to an integer and store the value in variable y
 console.log(y); //Print the value of y to the debugging console, in this case "24"
-</pre>
+```
 
 [/example]
 
@@ -45,10 +46,11 @@ ____________________________________________________
 [example]
 
 This example shows how rounding a negative number is not symmetrical with rounding a positive number. The tie-breaking rule always rounds up, even when the number is negative.
-<pre>
+
+```
 var y = Math.round(-23.5); //Round -23.5 to an integer and store the value in variable y
 console.log(y); //Print the value of y to the debugging console, in this case "-23"
-</pre>
+```
 
 [/example]
 
@@ -57,7 +59,8 @@ ____________________________________________________
 [example]
 
 **Rounding variants.** In this more detailed example, we create a variant of the round function that always rounds down.
-<pre>
+
+```
 // Define the function
 function floor(n) {
   //Let a be an integer such that a <= n < a+1
@@ -69,7 +72,7 @@ function floor(n) {
 }
 var y = floor(-23.5); //Take the floor value of -23.5 and store it in variable y
 console.log(y); //Print the value of y to the debugging console, in this case "-24"
-</pre>
+```
 
 
 [/example]
@@ -79,9 +82,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 Math.round(x);
-</pre>
+```
 
 [/syntax]
 

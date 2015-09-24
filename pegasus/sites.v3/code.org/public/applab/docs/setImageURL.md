@@ -34,13 +34,14 @@ ____________________________________________________
 
 Use setImageURL to change the source of an existing image element
 
-<pre>
+
+```
 // add the Code.org logo to the screen from the url
 image("image", "http://code.org/images/logo.png");
 
 // change the image element from the Code.org logo to the dog character
 setImageURL("image", "http://studio.code.org/blockly/media/skins/applab/static_avatar.png");
-</pre>
+```
 
 [/example]
 
@@ -53,7 +54,8 @@ ____________________________________________________
 Click the button to change the character image on the screen from the dog to the bee and back again.
 Use seImageURL to change the character by simply changing the image element's url.
 
-<pre>
+
+```
 // use variables to store the ids for the image and button elements
 var imageId = "character";
 var buttonId = "changeButton";
@@ -87,7 +89,7 @@ onEvent(buttonId, "click", function(event) {
     setImageURL(imageId, dogImageURL);
   }
 });
-</pre>
+```
 
 [/example]
 
@@ -96,9 +98,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 setImageURL(id, url);
-</pre>
+```
 
 [/syntax]
 
