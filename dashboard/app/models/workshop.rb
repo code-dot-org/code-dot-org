@@ -37,6 +37,7 @@ class Workshop < ActiveRecord::Base
   has_many :workshop_cohorts, inverse_of: :workshop, dependent: :destroy
   has_many :cohorts, through: :workshop_cohorts
   has_many :districts, through: :cohorts
+  has_many :district_contacts, through: :districts, :source => :contact
   accepts_nested_attributes_for :workshop_cohorts, allow_destroy: true
 
   # A Workshop has at least one Facilitator(s)
@@ -68,17 +69,22 @@ class Workshop < ActiveRecord::Base
   def self.send_automated_emails
     [Workshop.workshops_in_2_weeks, Workshop.workshops_in_3_days, Workshop.workshops_ending_today].each do |workshop_list|
       workshop_list.each do |workshop|
-        teachers = Workshop.find(workshop[:id]).teachers
-        drop_ins = Workshop.find(workshop[:id]).unexpected_teachers
-        facilitators = Workshop.find(workshop[:id]).facilitators
-        [teachers, drop_ins, facilitators].each do |recipient_list|
+        teachers = workshop.teachers
+        drop_ins = workshop.unexpected_teachers
+        facilitators = workshop.facilitators
+        district_contacts = workshop.district_contacts
+        [teachers, drop_ins, facilitators, district_contacts].each do |recipient_list|
           recipient_list.each do |recipient|
-            if workshop.segments.first.start.to_date == Date.today
-              logger.debug("Sending exit survey info to #{recipient.email}")
-              OpsMailer.exit_survey_information(workshop, recipient).deliver_now
+            if EmailValidator::email_address?(recipient.email)
+              if workshop.segments.first.start.to_date == Date.today
+                logger.debug("Sending exit survey info to #{recipient.email}")
+                OpsMailer.exit_survey_information(workshop, recipient).deliver_now
+              else
+                logger.debug("Sending email reminder to #{recipient.email}")
+                OpsMailer.workshop_reminder(workshop, recipient).deliver_now
+              end
             else
-              logger.debug("Sending email reminder to #{recipient.email}")
-              OpsMailer.workshop_reminder(workshop, recipient).deliver_now
+              logger.debug("Cannot send email to #{recipient.email} because it is not a valid email address")
             end
           end
         end
