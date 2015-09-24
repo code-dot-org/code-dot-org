@@ -17,7 +17,7 @@ class LevelsController < ApplicationController
   # GET /levels
   # GET /levels.json
   def index
-    @levels = Level.order(:game_id)
+    @levels = Level.all
   end
 
   # GET /levels/1
