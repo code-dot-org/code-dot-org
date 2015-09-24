@@ -162,9 +162,34 @@ ChartApi.prototype.drawChartFromRecords = function (chartId, chartType,
     loadApiForType(chartType),
     fetchTableData(tableName)
   ]).then(function (resultsArray) {
-    // Verify column names exist in data - warn if missing (chart still renders)
-    var dataTable = rawDataToDataTable(resultsArray[1], columns);
+    var rawData = resultsArray[1];
+
     var Chart = ChartApi.getConstructorForType(chartType);
+
+    // Do some validation on data returned by query
+    if (rawData.length === 0) {
+      warnings.push(new Error('No rows returned for table "' + tableName + '".'));
+    } else {
+      columns.forEach(function (columnName) {
+        var existsInSomeRow = rawData.some(function (row) {
+          return row.hasOwnProperty(columnName);
+        });
+
+        if (!existsInSomeRow) {
+          warnings.push(new Error('Column "' + columnName +
+              '" not found in table "' + tableName + '".'));
+        }
+      });
+    }
+
+    // If possible, convert the options object for better compatability with new
+    // material design charts.
+    if ('function' === typeof Chart.convertOptions) {
+      options = Chart.convertOptions(options);
+    }
+
+    // Finally, render the chart
+    var dataTable = rawDataToDataTable(rawData, columns);
     var chart = new Chart(targetElement);
     chart.draw(dataTable, options);
 
