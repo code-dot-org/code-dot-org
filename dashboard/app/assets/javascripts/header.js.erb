@@ -26,8 +26,8 @@ if (!window.dashboard) {
 dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId) {
   stageData = stageData || {};
 
-  if (progressData == null) {
-    progressData = dashboard.header.getSummarizedProgressForAnonymousUser();
+  if (progressData === null) {
+    progressData = getSummarizedProgressForAnonymousUser();
   }
   levelProgress = progressData.levels || {};
 
@@ -417,13 +417,14 @@ dashboard.header.updateTimestamp = function () {
   }
 };
 
-dashboard.header.getSummarizedProgressForAnonymousUser = function() {
+function getSummarizedProgressForAnonymousUser () {
   var summarizedProgress = {};
   var levelProgress = {};
-  var cookie = document.cookie.split(';')
-
+  var cookie = document.cookie.split(';');
+  
   for(var i = 0; i < cookie.length; i++) {
-    var key = cookie[i].split('=')[0].trim().toLowerCase();
+    var pair = cookie[i].split('=');
+    var key = pair[0].trim();
 
     switch(key) {
       case 'progress':
@@ -445,7 +446,7 @@ dashboard.header.getSummarizedProgressForAnonymousUser = function() {
             }
 
             levelProgress[level] = {};
-            levelProgress[level]['status'] = individualLevelProgressDescription;
+            levelProgress[level].status = individualLevelProgressDescription;
           }
         }
 
