@@ -11,7 +11,7 @@ nav: how_to_nav
   twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# How to get involved:  
+# How to get involved  
 
 ## 1. Sign up to host an Hour of Code
 Anyone, anywhere can host an Hour of Code. [Sign up](<%= resolve_url('/') %>) to recieve updates and qualify for prizes.
