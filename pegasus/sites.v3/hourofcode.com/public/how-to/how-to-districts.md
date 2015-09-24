@@ -10,7 +10,7 @@ nav: how_to_nav
 
 ## Get every school participating, every student learning!
 
-1. **Recruit local schools.** Share [this email](<%= resolve_url('/resources#sample-emails') %>) and [teacher how to guide](<%= resolve_url('/resources/how-to') %>), or include a [short blurb](<%= resolve_url('/resources/stats') %>) in newsletters/district communications. 
+1. **Recruit local schools.** Share [this email](<%= resolve_url('/promote#sample-emails') %>) and [teacher how to guide](<%= resolve_url('/how-to') %>), or include a [short blurb](<%= resolve_url('/resources/stats') %>) in newsletters/district communications. 
 
 2. **Provide a sample logistics plan for schools.** Share this sample logistics plan with schools to give them ideas of how to organize whole school participation. It’s as easy as doing it in every math class, homeroom period, or rotating throughout the week through the computer lab. They can submit their own plan for a chance to win $10,000 in hardware at [http://hourofcode.com/prizes](<%= resolve_url('/prizes') %>).
 
@@ -18,7 +18,7 @@ nav: how_to_nav
 
 4. **Promote on your district’s homepage.** Add one of these [banners](<%= resolve_url('/resources#banners') %>) to your district’s website to let visitors know about your participation. Link it to [Hour of Code](<%= resolve_url('/') %>). 
 
-5. **Host a district Hour of Code event.** See our [event how to guide](<%= resolve_url('/resources/how-to-events') %>) for a sample run of show, media outreach kit and other supports. 
+5. **Host a district Hour of Code event.** See our [event how to guide](<%= resolve_url('/how-to/how-to-events') %>) for a sample run of show, media outreach kit and other supports. 
 
 6. **More [prizes](<%= resolve_url('/prizes') %>) for EVERY organizer.** Every participating educator will receive thank you gifts. And in each state, one participating school will win $10,000 in technology for their school! 
 

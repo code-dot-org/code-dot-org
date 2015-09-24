@@ -1,9 +1,8 @@
 ---
-title: <%= hoc_s(:title_resources) %>
+title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
+nav: how_to_nav
 ---
-
-# Hour of Code Resources
 
 <%
   facebook = {:u=>"http://#{request.host}/us"}
@@ -11,8 +10,6 @@ layout: wide
   twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
   twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
-
-<%= view :resources_banner %>
 
 # How to get involved:  
 
