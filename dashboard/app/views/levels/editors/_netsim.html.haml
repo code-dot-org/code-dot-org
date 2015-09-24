@@ -31,10 +31,12 @@
         to students.
     %tr
       %td= boolean_check_box f, :show_log_browser_button
-      %td= f.label :show_log_browser_button, 'Show "Log Browser" Button'
+      %td= f.label :show_log_browser_button, 'Show "Log Browser" Button in Lobby'
       %td
-        Whether the Log Browser (which exposes logs for all routers) will be
-        availble, both from the lobby and from the Router tab.
+        Whether the Log Browser is available from the lobby.
+        <br />Opening the browser from the lobby shows logs from all routers.
+        <br />Note: The button will <em>always</em> show up on the Router tab
+        (if present) regardless of this setting.
 
 
 %h3 Simulation Configuration

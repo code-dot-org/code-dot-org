@@ -70,6 +70,7 @@ def log_result(result)
   # The +scenario+ argument is optional, but
   # if you use it, you can inspect status with
   # the #failed?, #passed? and #exception methods.
+  return if ENV['TEST_LOCAL'] == 'true'
 
   url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{@sauce_session_id}"
   require 'httparty'

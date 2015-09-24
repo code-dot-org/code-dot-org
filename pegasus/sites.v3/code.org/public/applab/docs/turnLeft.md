@@ -33,9 +33,10 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 turnLeft(90);    // Makes the turtle face left
-</pre>
+```
 
 [/example]
 
@@ -43,9 +44,10 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 turnLeft(-90);   // Makes the turtle face right
-</pre>
+```
 
 [/example]
 
@@ -53,7 +55,8 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // Draw a square
 moveForward(100);   // Draw the right edge
 turnLeft(90);       // Turn to face along the top edge
@@ -62,7 +65,7 @@ turnLeft(90);       // Turn to face along the left edge
 moveForward(100);   // Draw the left edge
 turnLeft(90);       // Turn to face along the bottom edge
 moveForward(100);   // draw the bottom edge
-</pre>
+```
 
 [/example]
 
@@ -71,9 +74,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 turnLeft(angle);
-</pre>
+```
 
 [/syntax]
 

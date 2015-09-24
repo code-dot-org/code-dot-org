@@ -22,7 +22,7 @@ nav: about_nav
 
 **[Working at Code.org](#info)**
 
-## <a name="curric"href="#curric">CS Curriculum Writer (Seattle or Chicago, IL)</a>
+## <a name="curric"href="#curric">CS Curriculum Writer (Seattle or Chicago, IL preferred)</a>
 
 **Job Summary:**
 

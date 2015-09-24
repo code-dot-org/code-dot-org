@@ -91,6 +91,7 @@ level 'U3L07 - Starry Night Starter Code'
 level 'U3L08 - Enchantment Under the Sea'
 level 'U3L13 - Turtle move with button'
 level 'U3L16 - use images'
+level 'Applab test'
 
 stage 'Online PD'
 level 'PDK5 Intro C'
@@ -98,4 +99,3 @@ level 'PDK5 Foundations F'
 
 stage 'Markdown Details'
 level 'Test External Markdown'
-
