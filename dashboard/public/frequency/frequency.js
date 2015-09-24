@@ -1,3 +1,5 @@
+/* global $, d3, Dialog, confirm */
+
 var messages = {
   'Sample Message (easy)': "Srryvat zl jnl guebhtu gur qnexarff. Thvqrq ol n orngvat urneg. V pna'g gryy jurer gur wbhearl jvyy raq. Ohg V xabj jurer gb fgneg. Gurl gryy zr V'z gbb lbhat gb haqrefgnaq. Gurl fnl V'z pnhtug hc va n qernz. Jryy yvsr jvyy cnff zr ol vs V qba'g bcra hc zl rlrf. Jryy gung'f svar ol zr. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg. V gevrq pneelvat gur jrvtug bs gur jbeyq. Ohg V bayl unir gjb unaqf. Ubcr V trg gur punapr gb geniry gur jbeyq. Ohg V qba'g unir nal cynaf. Jvfu gung V pbhyq fgnl sberire guvf lbhat. Abg nsenvq gb pybfr zl rlrf. Yvsr'f n tnzr znqr sbe rirelbar. Naq ybir vf gur cevmr. Fb jnxr zr hc jura vg'f nyy bire Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa'g xabj V jnf ybfg. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg.",
   //'Sample Message (hard)': "Rh nrpzh jvvn txmgk czmh R'n musbh hs jmk Jbljzrlv jzv'j zvxv, ksb tml hmev mcmk R'n m zsh mrx umwwssl, R tsbwf ps hs jimtv Crhz hzv mrx, wrev R fsl'h tmxv umuk uk hzv cmk Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev m xssn crhzsbh m xsso Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev zmiirlvjj rj hzv hxbhz Uvtmbjv R'n zmiik Twmi mwslp ro ksb elsc czmh zmiirlvjj rj hs ksb Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev hzmh'j czmh ksb cmllm fs Zvxv tsnv umf lvcj hmwerlp hzrj mlf hzmh Kvmz, prav nv mww ksb psh, fsl'h zswf umte Kvmz, cvww R jzsbwf ixsumuwk cmxl ksb R'ww uv ybjh orlv Kvmz, ls soovljv hs ksb fsl'h cmjhv ksbx hrnv Zvxv'j czk Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev m xssn crhzsbh m xsso Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev zmiirlvjj rj hzv hxbhz Uvtmbjv R'n zmiik Twmi mwslp ro ksb elsc czmh zmiirlvjj rj hs ksb Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev hzmh'j czmh ksb cmllm fs Zmiik, uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl Wsav rj hss zmiik hs uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl R jmrf uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl Wsav rj hss zmiik hs uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl R jmrf Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev m xssn crhzsbh m xsso Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev zmiirlvjj rj hzv hxbhz Uvtmbjv R'n zmiik Twmi mwslp ro ksb elsc czmh zmiirlvjj rj hs ksb Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev hzmh'j czmh ksb cmllm fs"
@@ -486,28 +488,30 @@ BarGraph.prototype.handleSortChange = function (change_event) {
 };
 
 /**
- * Sorts both this.message_data and this.substitution_data by the given
- * funtction while preserving the mapping between them.
+ * Sorts this.message_data by the given funtction, then swaps elements
+ * in this.substitution_data to preserve the mapping between them.
  *
  * @param {function} sort_function
  */
 BarGraph.prototype.sortMessageData = function (sort_function) {
 
-  // cache the message -> substitution mapping
-  // Note that we don't use this.getSubstitutionMap here, as that
-  // ignores unlocked substitutions
-  var substMap = this.message_data.reduce(function (map, d, i) {
-    map[d.letter] = this.substitution_data[i];
-    return map;
-  }.bind(this), {});
+  // cache the substitutions
+  var substMap = this.getSubstitutionMap();
 
   // reorder the english data
   this.message_data = this.message_data.sort(sort_function);
 
-  // reorder users based on the preserved mapping
-  this.substitution_data = this.message_data.map(function (d) {
-    return substMap[d.letter];
-  });
+  // "reassign" the assigned substitutions by swapping them back into
+  // place.
+  Object.keys(substMap).forEach(function (letter) {
+    var i = this.message_data.map(function (d) {
+      return d.letter;
+    }).indexOf(letter);
+    var j = this.substitution_data.indexOf(substMap[letter]);
+
+    this.substitution_data[j] = this.substitution_data[i];
+    this.substitution_data[i] = substMap[letter];
+  }, this);
 
   this.reorder();
 };
