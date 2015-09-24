@@ -7,7 +7,7 @@ angular: recordsApp
 -channel_id = request.splat_path_info[1..-1].split('/').first
 -table_name = request.splat_path_info[1..-1].split('/').last
 -api_base_url = "/v3/shared-tables/#{channel_id}/#{table_name}"
--#not_authorized! unless owns_channel? channel_id
+-not_authorized! unless owns_channel? channel_id
 
 %div{"ng-app" => "recordsApp", "ng-view" => ""}
 
@@ -22,7 +22,7 @@ angular: recordsApp
     'recordsApp.services'
   ]).config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',
-                        {templateUrl: '/edit-csp-table/records',
+                        {templateUrl: '/v3/edit-csp-table/records',
                          controller: 'RecordsController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
@@ -114,7 +114,7 @@ angular: recordsApp
     $scope.deleteTable = function () {
       if (confirm("Are you sure you want to delete '" + $scope.tableName + "'?")) {
         var ts = new tablesService().$remove(function () {
-          window.location.href = "/edit-csp-app/#{channel_id}";
+          window.location.href = "/v3/edit-csp-app/#{channel_id}";
         });
         $scope.deletingTable = true;
       }
