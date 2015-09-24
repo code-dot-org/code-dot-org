@@ -382,8 +382,7 @@ class Documents < Sinatra::Base
     end
 
     def preprocess_markdown(markdown_content)
-      markdown_content.gsub!(/```/, "```\n")
-      markdown_content
+      markdown_content.gsub(/```/, "```\n")
     end
 
     def post_process_html_from_markdown(full_document)
