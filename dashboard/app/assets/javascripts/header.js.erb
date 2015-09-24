@@ -25,7 +25,10 @@ if (!window.dashboard) {
  */
 dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId) {
   stageData = stageData || {};
-  progressData = progressData || {};
+
+  if (progressData == null) {
+    progressData = dashboard.header.getSummarizedProgressForAnonymousUser();
+  }
   levelProgress = progressData.levels || {};
 
   $('.header_text').first().text(stageData.title);
@@ -413,3 +416,46 @@ dashboard.header.updateTimestamp = function () {
     $('.project_updated_at').text("Not saved"); // TODO i18n
   }
 };
+
+dashboard.header.getSummarizedProgressForAnonymousUser = function() {
+  var summarizedProgress = {};
+  var levelProgress = {};
+  var cookie = document.cookie.split(';')
+
+  for(var i = 0; i < cookie.length; i++) {
+    var key = cookie[i].split('=')[0].trim().toLowerCase();
+
+    switch(key) {
+      case 'progress':
+        var allLevelsProgress = JSON.parse(decodeURIComponent(pair[1]));
+        for(var level in allLevelsProgress) {
+          if (allLevelsProgress.hasOwnProperty(level)) {
+            var individualLevelProgressDescription = '';
+            var individualLevelProgress = allLevelsProgress[level];
+
+            //TODO: Find a way to use the constants defined somewhere
+            if (individualLevelProgress >= 1000) {
+              individualLevelProgressDescription = 'submitted';
+            } else if (individualLevelProgress >= 30) {
+              individualLevelProgressDescription = 'perfect';
+            } else if (individualLevelProgress >= 20) {
+              individualLevelProgressDescription = 'passed';
+            } else {
+              individualLevelProgressDescription = 'attempted';
+            }
+
+            levelProgress[level] = {};
+            levelProgress[level]['status'] = individualLevelProgressDescription;
+          }
+        }
+
+        summarizedProgress['levels'] = levelProgress;
+        break;
+      case 'lines':
+        summarizedProgress['lines'] = pair[1];
+        break;
+    }
+  }
+
+  return summarizedProgress;
+}
