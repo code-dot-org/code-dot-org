@@ -18,6 +18,8 @@ class ReportAbuseController < ApplicationController
               "user detail:",
               "#{params[:abuse_detail]}"].join("\n")
           },
+          #set our age custom field
+          custom_fields: [ { id: 24024923, value: params[:age] }],
           tags: (params[:abuse_type] == 'infringement' ? ['report_abuse', 'infringement'] : ['report_abuse'])
         }
       }.to_json,

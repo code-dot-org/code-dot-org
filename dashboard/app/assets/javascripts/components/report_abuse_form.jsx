@@ -27,20 +27,16 @@ window.dashboard.ReportAbuseForm = (function (React) {
     render: function () {
       var style = $.extend({}, {width: DROPDOWN_WIDTH}, this.props.style);
 
-      var age = this.props.age;
-      if (typeof(age) === 'number') {
-        age = age.toString();
-      }
-
+      var age = this.props.age && this.props.age.toString();
       var ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',
         '15', '16', '17', '18', '19', '20', '21+'];
 
       if (this.props.age !== null && ages.indexOf(age) === -1) {
-        throw new Error('Invalid age: ' + this.props.age);
+        throw new Error('Invalid age: ' + age);
       }
 
       return (
-        <select style={style} value={this.props.age}>{
+        <select name="age" style={style} value={age}>{
           ages.map(function (age) {
             return <option key={age} value={age}>{age}</option>;
           })
