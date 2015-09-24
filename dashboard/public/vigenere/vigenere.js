@@ -1,4 +1,5 @@
-/* global $ */
+/* global $, options */
+// options is appOptions, from the level parameters themselves
 
 var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
 var LETTERS = ALPHABET.split('');
@@ -42,6 +43,10 @@ $(document).ready(function () {
   vigenere_table = $("#vigenere-table");
 
   renderVigenereTable();
+
+  if (options.instructions) {
+    plaintext_input.val(options.instructions);
+  }
 
   cleanInput(plaintext_input);
   cleanInput(keyword_input);
