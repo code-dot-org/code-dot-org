@@ -21,7 +21,7 @@ angular: propertiesApp
     'propertiesApp.services'
   ]).config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',
-                        {templateUrl: '/edit-csp-properties/properties',
+                        {templateUrl: '/v3/edit-csp-properties/properties',
                          controller: 'PropertiesController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
