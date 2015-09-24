@@ -37,10 +37,10 @@ p.textarea {
 #keyword-display mark, .highlight.key {
   background-color: #59b9dc;
 }
-#plaintext-display mark, .highlight.plaintext {
+#input-display mark, .highlight.plaintext {
   background-color: #ffc459;
 }
-#ciphertext-display mark, .highlight.ciphertext {
+#output-display mark, .highlight.ciphertext {
   background-color: #d1d567;
 }
 
