@@ -249,7 +249,7 @@ module.exports = {
         testResult: TestResults.FREE_PLAY
       },
     },
-      
+
     {
       description: "exercise CHART element",
       editCode: true,
