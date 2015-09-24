@@ -20,7 +20,6 @@
 /* global google */
 
 var AppStorage = require('./appStorage');
-var ApplabError = require('./ApplabError');
 var Promise = require('es6-promise').Promise;
 
 var ChartApi = module.exports = function () {
@@ -58,6 +57,11 @@ ChartApi.getDependenciesForType = function (chartType) {
       chartType  + '".');
 };
 
+/**
+ * @param {ChartType} chartType
+ * @returns {function} A constructor function for the requested chart type.
+ * @throws {Error} if no dependencies are defined for the given chart type.
+ */
 ChartApi.getConstructorForType = function (chartType) {
   switch (chartType) {
     case ChartApi.ChartType.BAR:
@@ -112,39 +116,60 @@ function quote(str) {
  * @param {string} tableName
  * @param {string[]} columns
  * @param {Object} options
- * @returns {Promise}
+ * @returns {Promise} resolves to an array of warnings (hopefully empty) or
+ *          rejects with a single Error.
  */
 ChartApi.prototype.drawChartFromRecords = function (chartId, chartType,
     tableName, columns, options) {
+  var warnings = [];
+
+  // Ensure target element exists and is usable.
   var targetElement = document.getElementById(chartId);
   if (!targetElement || 'div' !== targetElement.tagName.toLowerCase()) {
-    return Promise.reject(new ApplabError('Unable to render chart into element "' +
+    return Promise.reject(new Error('Unable to render chart into element "' +
         chartId + '".'));
   }
 
+  // Ensure chart type is currently supported
   if (!ChartApi.supportsType(chartType)) {
-    return Promise.reject(new ApplabError('Unsupported chart type "' +
-        chartType + '".'));
+    return Promise.reject(new Error('Unsupported chart type "' + chartType + '".'));
   }
 
-  // Verify enough columns for chart type
+  // Ensure sufficient columns for chart type
   var minimumColumnsForType = 2;
   if (columns.length < minimumColumnsForType) {
-    return Promise.reject(new ApplabError('Not enough columns defined for chart type "' +
+    return Promise.reject(new Error('Not enough columns defined for chart type "' +
         chartType + '"; expected at least ' + minimumColumnsForType + '.'));
   }
 
-  // How to warn if more columns provided than needed for chart type?
+  // Warn if provided more columns than chart type can use
+  var maxColumnsForType = 2;
+  if (columns.length > maxColumnsForType) {
+    warnings.push(new Error('Provided ' + columns.length +
+        ' columns but chart type "' + chartType + '" can only use up to ' +
+        maxColumnsForType + '.'));
+  }
 
+  // Passed all the pre-command validation, let's get to work:
+  //   1. In parallel:
+  //     - Load required chart libraries.
+  //     - Fetch data from storage table.
+  //   2. Wait for both of the above tasks to complete.
+  //   3. Convert received data to the chart API format.
+  //   4. Render the chart.
+  // Note any exceptions thrown
   return Promise.all([
     loadApiForType(chartType),
     fetchTableData(tableName)
   ]).then(function (resultsArray) {
-    // Verify column names exist - warn if missing (chart still renders)
+    // Verify column names exist in data - warn if missing (chart still renders)
     var dataTable = rawDataToDataTable(resultsArray[1], columns);
     var Chart = ChartApi.getConstructorForType(chartType);
     var chart = new Chart(targetElement);
     chart.draw(dataTable, options);
+
+    // Pass any warnings back along with the resolved promise.
+    return Promise.resolve(warnings);
   });
 };
 
@@ -171,7 +196,7 @@ var loadApiForType = function (chartType) {
       //    https://developers.google.com/chart/interactive/docs
       //           /library_loading_enhancements#advanced-library-loading
     } catch (e) {
-      reject(new Error('Unable to load Google Charts API; ' + e.message));
+      reject(new Error('Unable to load Charts API.  Please try again later.'));
     }
   });
 };
