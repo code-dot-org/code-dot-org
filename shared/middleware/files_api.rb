@@ -72,7 +72,10 @@ class FilesApi < Sinatra::Base
     not_found if type.empty?
     content_type type
 
-    get_bucket_impl(endpoint).new.get(encrypted_channel_id, filename, request.GET['version']) || not_found
+    s3_object = get_bucket_impl(endpoint).new.get(encrypted_channel_id, filename, request.GET['version'])
+    not_found unless s3_object
+    last_modified s3_object.last_modified
+    s3_object.body
   end
 
   #
