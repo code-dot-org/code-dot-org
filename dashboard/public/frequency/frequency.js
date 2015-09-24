@@ -148,9 +148,9 @@ var BarGraph = function (options) {
 
   /** @type {D3.selection} */
   this.svg = this.container.append("svg").attr({
-      "width": this.getWidth() + this.margin.left + this.margin.right,
-      "height": this.getHeight()*2 + this.margin.top + this.margin.middle
-    });
+    "width": this.getWidth() + this.margin.left + this.margin.right,
+    "height": this.getHeight() * 2 + this.margin.top + this.margin.middle
+  });
 
   /** @type {D3.selection} */
   this.graph = this.svg.append("g")
@@ -241,7 +241,7 @@ BarGraph.prototype.getBottomBars = function (root) {
  * @returns {number} The height of the graph
  */
 BarGraph.prototype.getHeight = function () {
-  return (this.container.property("offsetHeight") - this.margin.top - this.margin.middle)/2;
+  return (this.container.property("offsetHeight") - this.margin.top - this.margin.middle) / 2;
 };
 
 /**
@@ -355,7 +355,7 @@ BarGraph.prototype.processSubstitutions = function () {
       substitution = letter;
     }
 
-    if (LETTERS.indexOf(letter.toUpperCase()) > -1 ) {
+    if (LETTERS.indexOf(letter.toUpperCase()) > -1) {
       if (substMap[letter.toUpperCase()]) {
         return "<span class=\"locked\">" + substitution + "</span>";
       } else {
@@ -452,7 +452,7 @@ BarGraph.prototype.reorder = function () {
     this.graph.selectAll(".dragletter")
       .sort(function (a, b) {
         return this.substitutionLetterScale(a.substitution.letter) -
-            this.substitutionLetterScale(b.substitution.letter);
+          this.substitutionLetterScale(b.substitution.letter);
       }.bind(this));
 
     /* note: no need to manually resort .x.axis, as the xAxis call does
@@ -571,7 +571,7 @@ BarGraph.prototype.createDragBehavior = function () {
     /* move the source */
     var source = this.graph.select("#substitutionletter-" + d.substitution.letter);
     var sourceHeight = source.node().getBBox().height;
-    source.attr("transform", "translate(" + d3.event.x + "," + (d3.event.y-sourceHeight) + ")");
+    source.attr("transform", "translate(" + d3.event.x + "," + (d3.event.y - sourceHeight) + ")");
 
     /* find the target */
     var xPos = d3.event.x;
@@ -589,7 +589,7 @@ BarGraph.prototype.createDragBehavior = function () {
     // 28 is how far down the "unlocked" letters are translated. If the
     // dragged letter is more than halfway into that range, consider
     // this to be a "lock" action. Otherwise, an "unlock"
-    var cutoff = 28 + sourceHeight/2;
+    var cutoff = 28 + sourceHeight / 2;
     if (d3.event.y > cutoff) {
 
       // unlock the carried letter
@@ -598,7 +598,7 @@ BarGraph.prototype.createDragBehavior = function () {
 
       letter_outline.attr({
         "visibility": "visible",
-        "transform": "translate(" + (this.messageLetterScale(this.substitution_data[i].letter) + 0.5) + "," + (this.getHeight()+54) + ")"
+        "transform": "translate(" + (this.messageLetterScale(this.substitution_data[i].letter) + 0.5) + "," + (this.getHeight() + 54) + ")"
       });
       bar_outline.attr("visibility", "hidden");
 
@@ -607,16 +607,20 @@ BarGraph.prototype.createDragBehavior = function () {
       // swap the carried letter and the target letter, and lock the
       // carried letter into place
       substitution_data_swapped = this.substitution_data.map(function (d, index, substitution_data) {
-        if (index == i) return substitution_data[j];
-        else if (index == j) return substitution_data[i];
-        else return d;
+        if (index == i) {
+          return substitution_data[j];
+        } else if (index == j) {
+          return substitution_data[i];
+        } else {
+          return d;
+        }
       });
 
       substitution_data_swapped[j].locked = true;
 
       letter_outline.attr({
         "visibility": "visible",
-        "transform": "translate(" + (this.substitutionLetterScale(this.substitution_data[j].letter) + 0.5) + "," + (this.getHeight()+26) + ")"
+        "transform": "translate(" + (this.substitutionLetterScale(this.substitution_data[j].letter) + 0.5) + "," + (this.getHeight() + 26) + ")"
       });
       bar_outline.attr({
         "visibility": "visible",
@@ -673,8 +677,8 @@ BarGraph.prototype.buildSVG = function () {
     }])
     .enter().append("g")
     .attr("class", "legend")
-    .attr("transform", function(d, i) {
-      var offset = (i * 20); 
+    .attr("transform", function (d, i) {
+      var offset = (i * 20);
       return "translate(0," + offset + ")";
     });
 
@@ -682,13 +686,17 @@ BarGraph.prototype.buildSVG = function () {
     .attr("x", this.getWidth() - 18)
     .attr("width", 18)
     .attr("height", 18)
-    .attr("class", function(d) { return d.id; });
+    .attr("class", function (d) {
+      return d.id;
+    });
 
   legend.append("text")
     .attr("x", this.getWidth() - 24)
     .attr("y", 9)
     .attr("dy", ".35em")
-    .text(function(d) { return d.label; });
+    .text(function (d) {
+      return d.label;
+    });
 
   this.graph.append("g")
     .attr({
@@ -814,7 +822,7 @@ BarGraph.prototype.buildSVG = function () {
     .enter().append("g")
     .attr("class", "letter")
     .attr("transform", function (d) {
-      return "translate(" + this.englishLetterScale(d.letter) + "," + (this.getHeight()+90) + ")";
+      return "translate(" + this.englishLetterScale(d.letter) + "," + (this.getHeight() + 90) + ")";
     }.bind(this));
 
   this.getBottomBars().selectAll("rect")
@@ -824,7 +832,7 @@ BarGraph.prototype.buildSVG = function () {
     .enter().append("rect")
     .attr("class", 'english')
     .attr("width", this.frequencyTopScale.rangeBand())
-    .attr("x",  this.frequencyTopScale(1));
+    .attr("x", this.frequencyTopScale(1));
 
   this.refreshDragBehavior();
 
@@ -834,7 +842,7 @@ BarGraph.prototype.buildSVG = function () {
  * Unlocks all substitutions
  */
 BarGraph.prototype.reset = function () {
-  this.substitution_data.forEach(function(d){
+  this.substitution_data.forEach(function (d) {
     d.locked = false;
   });
   this.reorder();
@@ -869,7 +877,7 @@ BarGraph.prototype.shift = function (shift_amount) {
 
   if (some_locked) {
     var every_sorted = this.substitution_data.every(function (d, i, a) {
-      var j = (i+1) % a.length;
+      var j = (i + 1) % a.length;
       var dist = Math.abs(LETTERS.indexOf(a[i].letter) - LETTERS.indexOf(a[j].letter));
       return d.locked && (dist == 1 || dist == 25);
     });
@@ -1017,10 +1025,9 @@ BarGraph.prototype.resizeTopBars = function (data) {
   this.getTopBars().data(data);
   this.getTopBars().selectAll("rect")
     .data(function (d) {
-      return [
-        d.message,
-        (d.substitution.locked) ? d.substitution : { frequency: 0 }
-      ];
+      return [d.message, (d.substitution.locked) ? d.substitution : {
+        frequency: 0
+      }];
     })
     .attr("height", function (d, i) {
       return this.getHeight() - this.yTopScale(d.frequency);
@@ -1038,9 +1045,13 @@ BarGraph.prototype.resizeBottomBars = function (data) {
       var letter = this.englishLetterScale.domain()[i];
 
       if (substMap[letter]) {
-        return [{frequency: 0}];
+        return [{
+          frequency: 0
+        }];
       } else {
-        return [{frequency: ENGLISH[letter]}];
+        return [{
+          frequency: ENGLISH[letter]
+        }];
       }
 
     }.bind(this))
@@ -1059,14 +1070,14 @@ $(document).ready(function () {
 
   var messageSelect = $("#messages");
 
-  function addMessageOption (id, text) {
+  function addMessageOption(id, text) {
     var option = document.createElement("option");
     option.value = id;
     option.text = (text) ? text.substring(0, 24) + " ..." : id;
     messageSelect.append(option);
   }
 
-  Object.keys(messages).forEach(function(id) {
+  Object.keys(messages).forEach(function (id) {
     addMessageOption(id);
   });
 
@@ -1087,7 +1098,7 @@ $(document).ready(function () {
     var dialog_div = $(dialog.div);
     dialog.show();
 
-    dialog_div.find('#continue-button').click(function() {
+    dialog_div.find('#continue-button').click(function () {
       var text = dialog_div.find("textarea").val();
       var id = Object.keys(messages).length + 1;
       messages[id] = text;
@@ -1100,8 +1111,7 @@ $(document).ready(function () {
 
   $("#shift-left").click(function () {
     var shiftAmt = parseInt($("#shiftAmt").val()) - 1;
-    shiftAmt = shiftAmt % 26;
-    if (shiftAmt < 0) shiftAmt += 26;
+    shiftAmt = (shiftAmt + 26) % 26;
     if (bg.shift(shiftAmt)) {
       $("#shiftAmt").val(shiftAmt);
     }
@@ -1109,8 +1119,7 @@ $(document).ready(function () {
 
   $("#shift-right").click(function () {
     var shiftAmt = parseInt($("#shiftAmt").val()) + 1;
-    shiftAmt = shiftAmt % 26;
-    if (shiftAmt < 0) shiftAmt += 26;
+    shiftAmt = (shiftAmt + 26) % 26;
     if (bg.shift(shiftAmt)) {
       $("#shiftAmt").val(shiftAmt);
     }
@@ -1128,7 +1137,7 @@ $(document).ready(function () {
   $("#sort-toggle button").click(bg.handleSortChange.bind(bg));
 
   // When we switch back to shift mode, force an alphabetic order
-  $("a[href=#shift]").click(function(){
+  $("a[href=#shift]").click(function () {
     $("#sort-toggle button[value=alphabetic]").trigger('click');
   });
 
