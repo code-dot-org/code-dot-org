@@ -74,10 +74,7 @@ class LevelSourceImage < ActiveRecord::Base
     LevelSourceImage.hashify_filename "#{Rails.env}/#{level_source.id}_framed.png"
   end
 
-  # TODO: make this url work for https
-  #  S3_URL = "http://cdo-art.s3-website-us-east-1.amazonaws.com/"
-  # below is for cloudfront
-  S3_URL = "http://d3p74s6bwmy6t9.cloudfront.net/"
+  S3_URL = "https://d3p74s6bwmy6t9.cloudfront.net/"
 
   def s3_url
     return "http://code.org/images/logo.png" if CDO.disable_s3_image_uploads

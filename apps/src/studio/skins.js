@@ -209,6 +209,13 @@ function loadHoc2015(skin, assetUrl) {
     'item_walk_item4'
   ];
 
+  skin.AutohandlerTouchItems = {
+    'item_walk_item1': 'whenTouchWalkItem1',
+    'item_walk_item2': 'whenTouchWalkItem2',
+    'item_walk_item3': 'whenTouchWalkItem3',
+    'item_walk_item4': 'whenTouchWalkItem4'
+  };
+
   skin.specialItemFrames = {
     'item_walk_item1': 12,
     'item_walk_item2': 12,

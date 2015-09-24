@@ -9,7 +9,7 @@
       <div id="controls">
         <form>
           <fieldset>
-            <legend>Cipher</legend>
+            <h4 class="legend">Cipher</h4>
 
             <label for="plaintext-input">Enter your text message (140 chars)</label>
             <textarea class="input-block-level" id="plaintext-input" rows=5 onblur="cleanInput(this)" onkeyup="setup();">IF_ONLY_THIS_MESSAGE_COULD_BE_A_SECRET</textarea>
@@ -33,7 +33,15 @@
           </fieldset>
 
           <fieldset>
-            <input type=range min=0 max=1000 value=500 id="speedSlider" onChange="setTimerFromSlider()">
+            <label for="speedSlider" style="margin-bottom: 10px">Encryption speed</label>
+
+            <div class="span2"><label>Slow</label></div>
+
+            <div class="span7">
+              <div id="speedSlider" style="width: 100%"></div>
+            </div>
+
+            <div class="span2 pull-right"><label>Fast</label></div>
           </fieldset>
 
         </form>
@@ -42,16 +50,16 @@
       <div id="inputs">
         <form>
           <fieldset>
-            <legend>Result</legend>
+            <h4 class="legend">Result</h4>
 
-              <label>Key</label>
+              <label for="keyword-display">Key</label>
               <p id="keyword-display" class="textarea">&nbsp;</p>
 
-              <label>Plaintext</label>
-              <p id="plaintext-display" class="textarea">&nbsp;</p>
+              <label for="input-display"></label>
+              <p id="input-display" class="textarea">&nbsp;</p>
 
-              <label>Ciphertext</label>
-              <p id="ciphertext-display" class="textarea">&nbsp;</p>
+              <label for="output-display"></label>
+              <p id="output-display" class="textarea">&nbsp;</p>
 
           </fieldset>
 
