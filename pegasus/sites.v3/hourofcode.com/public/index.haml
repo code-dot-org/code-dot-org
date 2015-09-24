@@ -1,7 +1,7 @@
 ---
 layout: wide_index
 theme: responsive
-title: "<%= hoc_s(:front_title) %>"
+title: "<%= hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('short')) %>"
 social:
   "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
   "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
@@ -49,23 +49,23 @@ social:
 
 - imageheight = 590
 
-#top{style: "position:relative; /*height: #{imageheight}px; */ width:100%; overflow:hidden"}
+#top{style: "position: relative; width: 100%; overflow: hidden;"}
 
-  #fullwidth0{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/fistbump.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 70% 20%"}
+  #fullwidth0{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/homepage_0.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 1; background-position: 70% 20%"}
 
-  #fullwidth1{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl2.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
+  #fullwidth1{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/homepage_1.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 50%"}
 
-  #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/malala.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 20%"}
+  #fullwidth2{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/homepage_2.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 20%"}
 
-  #fullwidth3{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
+  #fullwidth3{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/homepage_3.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 50%"}
 
-  #fullwidth4{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 30% 40%"}
+  #fullwidth4{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/homepage_4.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 10%;"}
 
-  #fullwidth5{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 40% 50%"}
+  #fullwidth5{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/homepage_5.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 30% 40%"}
 
-  #fullwidth{style: "/*position:absolute; left:0; top: 0; */width: 100%; /*height:#{imageheight}px*/"}
+  #fullwidth{style: "width: 100%;"}
 
-    .thegap{style: "height: 1px"}
+    .thegap{style: "height: 1px;"}
       &nbsp;
 
     = view :header
@@ -73,39 +73,39 @@ social:
     .container
       .row
         .col-sm-6.col-xs-12.col-md-7
-          #leftbox{style: "position:relative; margin-top:50px; padding-bottom:20px"}
-
-            #leftvideo{style: "width: 100%;"}
-              = view :index_video
-              %div{style:"clear:both"}
-            #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; width:100%"}
-              %h1.front-header-banner{style: "color:white; text-shadow: 0px 0px 4px rgba(31, 31, 31, 1); margin-top: 0px; margin-bottom:10px; padding:20px"}=hoc_s(:front_watch_regular_video)
-              %img{src: "/images/play-button.png", width: "60", onclick: "return startVideo();", style: "cursor: pointer"}
-        .col-sm-6.col-xs-12.col-md-5
-          #textbacking{style: "color:white; background-color:rgba(0, 178, 192, 0.5); margin-top:50px; padding: 20px; border-radius: 17px"}
-            %div.front-header-banner{style: "color:white; margin-top:0px"}
+          %div{style: "height: 380px;"}
+            #leftbox
+              #leftvideo{style: "width: 100%;"}
+                = view :index_video
+                %div{style: "clear: both;"}
+              #leftbutton.visible-xs
+                %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
+                %img{src: "/images/play-button.png", width: "60", onclick: "return startVideo();", style: "cursor: pointer;"}
+        .col-sm-6.col-xs-12.col-md-4
+          #textbacking
+            %div.front-header-banner{style: "color: white; margin-top: 0px;"}
               %h4
                 =hoc_s(:front_join_us_heading)
-              =hoc_s(:front_join_us_description_short)
+              %div.students-served
+                =hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
             %div.ctabuttongroup
               %div#signuptext.ctatext
-                %a#signupbutton.ctabuttonatag{onclick: "adjustScroll('hocsignupform')", target: "_blank"}
+                %a#signupbutton.ctabuttonatag{onclick: "adjustScroll('hocsignupform');", target: "_blank"}
                   %button.ctabutton
                     =hoc_s(:front_join_us_sign_up)
               %div#tryittext.ctatext
                 %a#tryitbutton.ctabuttonatag{href: resolve_url('https://code.org/learn')}
                   %button.ctabutton
                     =hoc_s(:front_join_us_try)
-
-
-            #remainder{style: "text-align:center; margin-top: 15px;"}
-              %a{onclick: "adjustScroll('faqs')", style: "color:white; cursor:pointer"}
-                =hoc_s(:front_what_is_hoc)
+            #remainder.hidden-xs{style: "text-align: center; margin-top: 15px;"}
+              %div.watch-video-small{onclick: "return startVideo();"}
+                =hoc_s(:front_watch_regular_video)
+                %img{src: "/images/play-button.png", width: "25", onclick: "return startVideo();", style: "cursor: pointer;"}
 
           %br/
           %br/
 
-      %div{style:"clear:both"}
+      %div{style: "clear: both;"}
 
 
 %br/
@@ -118,7 +118,7 @@ social:
   #description.row
     .col-xs-1
       &nbsp;
-    .col-xs-10{style: "text-align: center; font-size: 24px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
+    .col-xs-10{style: "text-align: center; font-size: 24px; line-height: 30px; font-weight: 500; color: rgb(26,172,186);"}
       =hoc_s(:front_intro_default)
 
   -# Map
@@ -137,13 +137,13 @@ social:
 
   .row
     .col-xs-6.col-sm-4
-      %img{src: "/images/fill-600x400/highlight-girls2.jpg", style: "width: 100%"}
+      %img{src: "/images/fill-600x400/highlight-girls2.jpg", style: "width: 100%;"}
 
     .col-xs-6.col-sm-4
-      %img{src: "/images/fill-600x400/highlight-nba.jpg", style: "width: 100%"}
+      %img{src: "/images/fill-600x400/highlight-nba.jpg", style: "width: 100%;"}
 
     .hidden-xs.col-sm-4
-      %img{src: "/images/fill-600x400/highlight-celebrate.jpg", style: "width: 100%"}
+      %img{src: "/images/fill-600x400/highlight-celebrate.jpg", style: "width: 100%;"}
 
   .gap{style: "height:30px"}
 
@@ -154,19 +154,19 @@ social:
       %img{src: "/images/fill-600x400/highlight-pair.jpg", style: "width: 100%;"}
 
     .col-xs-6.col-sm-8
-      %img{src: "/images/fill-800x543/highlight-selfie.jpg", style: "width: 100%"}
+      %img{src: localized_image("/images/fill-800x543/highlight-selfie.jpg"), style: "width: 100%;"}
 
   .gap{style: "height:30px"}
 
   .row
     .col-xs-6.col-sm-4
-      %img{src: "/images/fill-600x400/highlight-robot.jpg", style: "width: 100%"}
+      %img{src: "/images/fill-600x400/highlight-robot.jpg", style: "width: 100%;"}
 
     .hidden-xs.col-sm-4
-      %img{src: "/images/fill-600x400/highlight-girls.jpg", style: "width: 100%"}
+      %img{src: "/images/fill-600x400/highlight-girls.jpg", style: "width: 100%;"}
 
     .col-xs-6.col-sm-4
-      %img{src: "/images/fill-600x400/highlight-certificates.jpg", style: "width: 100%"}
+      %img{src: "/images/fill-600x400/highlight-certificates.jpg", style: "width: 100%;"}
 
 
   -# Stats
@@ -176,18 +176,18 @@ social:
       %div{style: 'text-align: center; margin: 3em 0;'}
         %h2=hoc_s(:stats_hoc_2013_heading)
 
-  .row#infotop{style: "font-weight: 500; font-size: 16px; color: rgb(26, 172, 186)"}
+  .row#infotop{style: "font-weight: 500; font-size: 16px; color: rgb(26, 172, 186);"}
     .col-xs-6.col-sm-4{style: "text-align:center;"}
       %p=hoc_s(:stats_i18n)
-      %img{src: "/images/stats-languages.jpg", style: "width: 100%"}
+      %img{src: "/images/stats-languages.jpg", style: "width: 100%;"}
 
     .col-xs-6.col-sm-4{style: "text-align:center"}
       %p=hoc_s(:stats_global)
-      %img{src: "/images/stats-map.jpg", style: "width: 100%"}
+      %img{src: "/images/stats-map.jpg", style: "width: 100%;"}
 
     .hidden-xs.col-sm-4{style: "text-align:center"}
       %p=hoc_s(:stats_girls_more)
-      %img{src: "/images/stats-info3.jpg", style: "width: 100%"}
+      %img{src: "/images/stats-info3.jpg", style: "width: 100%;"}
         %p{style:"color: #ea7717;"}=hoc_s(:stats_girls_million)
 
   %a#hocsignupform{name: 'signup'}
@@ -198,7 +198,7 @@ social:
         .col-md-6
           =view :signup_form
         .col-md-1
-        .col-md-5{:style=> 'padding: 20px;'}
+        .col-md-5
           =view :join_us_description
           =view :whats_next
 
@@ -244,7 +244,7 @@ social:
     if (videoStarted)
       return;
 
-    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/gAu6gfG8OJY?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
 
     $("#videodiv").fadeTo(1000, 1);
     $("#leftbutton").fadeTo(500, 0).remove();

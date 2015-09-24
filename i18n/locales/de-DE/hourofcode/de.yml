@@ -1,14 +1,14 @@
 de:
   site_name: HOUR of CODE
   language: Deutsch
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Demnächst
   campaign_date_start_short: 7. Dez.
   campaign_date_start_long: 7. Dezember
   campaign_date_short: 7.-13. Dez.
   campaign_date_full: 7.-13. Dezember
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'Hour of Code ist eine globale Bewegung, die mehrere Millionen Schüler und Schülerinnen in über 180 Ländern erreicht. Jeder kann, egal wo, eine Hour of Code Veranstaltung organisieren. Einstündige Tutorials sind dazu in über 30 Sprachen verfügbar. <strong>Es wird keine Erfahrung benötigt. Alter von 4 bis 104.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Sieh dir das neue Video an
   front_watch_regular_video: Video ansehen
   header_menu_resources: Ressourcen
@@ -154,10 +154,14 @@ de:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Wie man eine Hour of Code veranstaltet</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'> Eine Hour of Code fördern</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Jeder kann es lernen.
   get_started: Start
@@ -174,11 +178,14 @@ de:
   front_join_us_teacher: Sind Sie Lehrer oder Lehrerin?
   front_join_us_inspire: Inspirieren Sie Ihre Schüler mit
   front_join_us_inspire_link: eine Hour of Code im Klassenzimmer.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Sind Sie ein Elternteil?
   front_join_us_ask_link: Bitten Sie Ihre Schule
   front_join_us_ask: eine Hour of Code zu veranstalten.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Sie begeistern sich für Informatik?
   front_join_us_spread: Informieren Sie andere!
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: Oder veranstalten Sie selbst eine Hour of Code.
   front_join_us_how_to_run: Hier erfährst du, wie du eine Programmierstunde abhalten kannst
   front_join_us_help_promote: Lesen Sie hier, wie Sie die Hour of Code fördern
@@ -190,7 +197,8 @@ de:
   front_join_us_host: Seien Sie Gastgeber
   front_join_us_support: Unterstützen Sie es
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Dein Name
   signup_email_label: Deine E-Mail
   signup_organization_name_label: Name der Schule oder Organisation
@@ -270,13 +278,13 @@ de:
   hoc_faq_account_q: Müssen Schüler sich mit einem Konto anmelden?
   hoc_faq_account_a: "Nein. Absolut keine Anmeldung oder login ist für Schüler erforderlich um the Hour of Code auszuprobieren. Die meisten  <a href='http://code.org/learn/beyond'>follow-on courses</a> accounts sind um den Fortschritt zu Speichern."
   hoc_faq_frozen_q: Wo ist das Tutorial mit Anna und Elsa?
-  hoc_faq_frozen_a: "It is now published on <a href='http://%{codeorg_url}/learn'>the tutorials page</a>. We hope you enjoy it!"
+  hoc_faq_frozen_a: "It is now published on <a href='%{codeorg_url}/learn'>the tutorials page</a>. We hope you enjoy it!"
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://%{codeorg_url}/learn'>%{codeorg_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_scratch_q: Ich mache Scratch für die Hour of Code, aber was ist, wenn meine Schüler iPads statt Laptops haben?
-  hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='http://%{codeorg_url}/learn'>%{codeorg_url}/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
+  hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: Statistiken von Hour of Code 2013
   stats_growth: Es hat schneller 15 Millionen Nutzer erreicht, all alle Internet-Platformen je zuvor.
   stats_i18n: Students are learning in 40 languages
@@ -335,6 +343,7 @@ de:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Vielen Dank
   title_prizes: Preise
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Ressourcen
   title_signup_thanks: Danke, dass Du Dich als Veranstalter für eine Hour of Code angemeldet hast!
   title_tutorial_guidelines: Tutorial Guidelines

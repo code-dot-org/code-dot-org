@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to_events) %>
+layout: wide
+nav: how_to_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -50,8 +52,8 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 | Ώρα             | Δράσεις                                                                                                                                                                    |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00-10:05 π.μ | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                                       |
-| 10:05-10:15 π.μ | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)                        |
+| 10:00-10:05 π.μ | Open with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>)                                                                                         |
+| 10:05-10:15 π.μ | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)                          |
 | 10:15-10:30 π.μ | Ειδικοί προσκεκλημένοι για να μιλήσουν για τους υπόβαθρό τους και πώς η τεχνολογία και η επιστήμη των υπολογιστών διαδραματίζει σημαντικό ρόλο στην καθημερινότητά τους.   |
 | 10:30-10:40 π.μ | Οι μαθητές κάνουν μια επίδειξη της Ώρας του Κώδικα για το σχολείο. Διασκεδαστική παραλλαγή: βάλτε τους να διδάξουν τον Διευθυντή, έναν πολιτικό ή άλλους μαθητές.          |
 | 10:40-11:00 π.μ | Οι μαθητές κάνουν επίδειξη μιας δραστηριότητας χωρίς σύνδεση και δείχνουν πως μπορεί να γίνει εκμάθηση της επιστήμης των υπολογιστών χωρίς να χρησιμοποιηθούν υπολογιστές. |

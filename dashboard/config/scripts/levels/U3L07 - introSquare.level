@@ -17,7 +17,7 @@
     "encrypted_examples": "Y0KVjpIVnrHBZ9d3TIvgfPYUmwZSFOIEnty9hmHVWMPWh2EiXn41Jv/TWCui\nwcEE\n",
     "embed": "false",
     "instructions": "Use a loop to draw a square. (Click to see full instructions)",
-    "markdown_instructions": "# Getting started with loops\r\n\r\nA **loop** is a set of commands that a computer is instructed to run over and over, or \"loops\" through. \r\n\r\nYou can now create loops in App Lab using the `for` command which has been added to the toolbox. A `for` command is followed by curly braces `{ }` . Just like a function definition the commands that are placed within those curly braces are a part of the loop. There is a single opening in the `for` block that allows you to choose how many times in a row you'd like to repeat these commands. We call each repeat of the commands a single **iteration**.\r\n\r\n**Read the documentation: ** You'll want to read the documentation for this block, especially if you're curious about the rest of the syntax you'll see included `for(var i = 0; i < 4; i++)` . In time you will understand everything happening in that command, but for now it is fine to mentally treat it as a \"repeat\" block with a single opening to indicate the number of repetitions.\r\n\r\n**Draw a square: ** To make things simple start by drawing a single square using the `for` block. You should be able to do it much more efficiently than the 8 commands it would've required you to write previously.\r\n\r\n![](https://images.code.org/5dfab9a3df4dc0df8a858655933eb9ad-image-1442374182752.29.32 PM.png)",
+    "markdown_instructions": "# Getting started with loops\r\n\r\nA **loop** is a block of code that is repeated or \"looped through\" in a program. In this program you will find a loop created by using the `for` loop block.\r\n\r\nStart by experimenting with a loop similar to what you saw in the video.\r\n\r\n# Do This:\r\n* **Drag** out a `for` loop block\r\n* **Inside the loop:**\r\n\t* **Add** a call to `moveForward`\r\n    * **Add** a call `turnLeft` or `turnRight` (HINT: try turning by 137 degrees to start. You can change after that).\r\n![](https://images.code.org/4da4a0c8a10a3c9637df96507fece183-image-1443038466204.gif)\r\n\r\n* **Run** the program to see the loop in action\r\n* **Experiment**\r\n * change the number times the loop runs\r\n * Set the run speed as fast as it will go to see how fast loops can execute\r\n * How many times can it loop before you can no longer tell the difference in the image?\r\n \r\n**MOVE ON** once you feel like you have a decent grasp on just using a `for` loop: setting the number of times to repeat, running the program and setting the run speed.\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -42,7 +42,9 @@
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
-    "beginner_mode": "true"
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true"
   }
 }]]></config>
   <blocks/>

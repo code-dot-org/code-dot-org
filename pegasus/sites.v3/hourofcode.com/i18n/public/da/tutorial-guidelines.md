@@ -1,14 +1,15 @@
-* * *
+---
 
-title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
+title: <%= hoc_s(:title_tutorial_guidelines) %>
+layout: wide
 
-* * *
+---
 
 <%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
 Vi vil gerne tilbyde en masse motiverende muligheder, men det primære mål er at optimere oplevelsen for elever og lærere som er helt nye indenfor programmering. Brug venligst dette dokument som retningslinjer for udvikling af aktiviteter, som er målrettet brugere helt uden baggrund indenfor programmering og datalogi.
 
@@ -23,20 +24,13 @@ Vi vil gerne tilbyde en masse motiverende muligheder, men det primære mål er a
 
 ## Indhold:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
-    
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
-  * [How to submit (Due 10/15/2015)](#submit)  
-    
-  * [Suggestions for designing your activity](#design)  
-    
-  * [Trademark Guidelines](#tm)  
-    
-  * [Tracking Pixel](#pixel)  
-    
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
-    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [Sådan evalueres øvelser med henblik på optagelse](#inclusion)
+  * [How to submit (Due 10/15/2015)](#submit)
+  * [Forslag til hvordan du kan designe din aktivitet](#design)
+  * [Retningslinjer for varemærker](#tm)
+  * [Sporings Pixel](#pixel)
+  * [Promoting af dine tutorials, CSEdWeek og Hour of Code](#promote)
   * [En note til elever med handicap](#disabilities)
 
 <a id="guidelines"></a>
@@ -157,11 +151,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Vedlæg også anbefalet programmeringsviden inden for følgende kategorier: begynder, øvet eller avanceret. Hour of Codes hjemmeside vil fremhæve begynderaktiviteterne mest fremtrædende. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Tekniske krav: 
       * For mere præcist at kunne spore elevernes deltagelse, vil vi have tredjeparts tutorial-partnere til også at indbygge 1 pixel sporingsbilleder på den første og sidste side i deres Hour of Code tutorials. Placer et start pixel-billede på startsiden og et afslutnings pixel-billede på sidste side. Placer ikke pixel på mellemliggende sider). Se afsnittet Tracking Pixel nedenfor, for flere detaljer. 
-      * Efter afslutningen af aktiviteten skal brugerne ledes videre til [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> hvor de vil være i stand til at: 
+      * Efter afslutningen af aktiviteten skal brugerne ledes videre til [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
           * Dele på sociale medier, at de færdige Hour of Code
           * Modtage et certifikat, at de har gennemført Hour of Code
           * Se på leaderboards hvilke lande/byer der har de højeste deltager antal i Hour of Code aktiviteterne
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) as well. 
   * *(Valgfrit)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * For online aktiviteter (især smartphone/tablet-apps): 
           * Antallet af brugere

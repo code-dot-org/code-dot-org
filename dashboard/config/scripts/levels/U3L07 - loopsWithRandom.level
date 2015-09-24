@@ -1,0 +1,52 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-09-21T16:14:05.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveTo": null,
+      "dot": null,
+      "penUp": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_max": null,
+      "randomNumber_min_max": null,
+      "penRGB": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "FPu9o9XnmZhN1+WmmnLCgh0OvngedJ7odlNkmce+AhlD3Tzyw2FevC+trm95\nGPbd\n",
+    "embed": "false",
+    "instructions": "Increase the number of iterations to fill the screen with dots. (Click to see full instructions)",
+    "markdown_instructions": "# Loops with random values\r\n\r\nLoops allow us to write programs that repeat a set of commands. If we incorporate random values into our loops then our programs can do something a little differently with every **iteration**.\r\n\r\n**Increase ** the number of iterations in the loop in this program to fill the screen with random dots.\r\n\r\n**Experiment ** by changing the range of random values used in different portions of this program. How does it affect the image you create?\r\n\r\n![](https://images.code.org/7e10874c2790adf27a459c0c29e90ec1-image-1442852435006.20.25 AM.png)",
+    "start_blocks": "penUp();\r\nfor (var i = 0; i < 4; i++) {\r\n  moveTo(randomNumber(320),randomNumber(450));\r\n  dot(randomNumber(10,20));\r\n  penRGB(randomNumber(255),randomNumber(255),randomNumber(255));\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": "1.0",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "app_width": "320",
+    "app_height": "480",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "true",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

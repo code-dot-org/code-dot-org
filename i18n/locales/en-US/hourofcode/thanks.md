@@ -20,27 +20,34 @@ crwdns47133:0crwdne47133:0 <%= campaign_date('full') %>.
 
 crwdns47134:0crwdne47134:0
 
-## crwdns44093:0crwdne44093:0
+## crwdns48591:0crwdne48591:0
 
-crwdns47135:0crwdne47135:0
+crwdns48852:0crwdne48852:0   
+
+
+[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
+
+## crwdns48593:0crwdne48593:0
+
+crwdns48594:0crwdne48594:0
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## crwdns44095:0crwdne44095:0
+## crwdns48595:0crwdne48595:0
 
-crwdns47887:0crwdne47887:0
+crwdns48853:0crwdne48853:0
 
-## crwdns44097:0crwdne44097:0
+## crwdns48597:0crwdne48597:0
 
-crwdns47888:0crwdne47888:0
+crwdns48854:0crwdne48854:0
 
-## crwdns44099:0crwdne44099:0
+## crwdns48599:0crwdne48599:0
 
-crwdns47138:0crwdne47138:0
+crwdns48855:0crwdne48855:0 crwdns48601:0crwdne48601:0
 
-## crwdns44101:0crwdne44101:0
+## crwdns48602:0crwdne48602:0
 
-crwdns47889:0crwdne47889:0
+crwdns48856:0crwdne48856:0
 
 <%= view 'popup_window.js' %>
 

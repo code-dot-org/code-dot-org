@@ -44,10 +44,7 @@
     "hide_design_mode": "true",
     "beginner_mode": "false",
     "never_autoplay_video": "false",
-    "examples_required": "false",
-    "encrypted_examples": [
-
-    ]
+    "examples_required": "false"
   }
 }]]></config>
   <blocks/>

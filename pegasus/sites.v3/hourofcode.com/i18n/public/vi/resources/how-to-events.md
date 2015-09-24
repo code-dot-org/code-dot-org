@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to_events) %>
+layout: wide
+nav: how_to_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -50,8 +52,8 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 | Thời gian        | Hoạt động                                                                                                                                                |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                     |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)      |
+| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>)                                                                       |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)        |
 | 10:15 - 10:30 am | Khách mời đặc biệt nói về nền tảng của họ và làm thế nào mà khoa học công nghệ và máy tính đóng một vai trò quan trọng trong cuộc sống hàng ngày của họ. |
 | 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                                 |
 | 10:40 - 11:00 am | Sinh viên giới thiệu một hoạt động chưa được cắm phít và giới thiệu cách mà khoa học máy tính có thể được giảng dạy mà không sử dụng máy tính.           |

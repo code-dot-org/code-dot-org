@@ -20,7 +20,7 @@ Dile a tus amigos acerca de la #HourOfCode.
 
 [Envíe este email](http://<%= hostname %>/resources#email) a su director.
 
-## 3. Pregunta a tu empleador para estar involucrado
+## 3. Pregunta a tu empresa que se involucre
 
 [Envíe éste email](http://<%= hostname %>/resources#email) a su gerente, o Director General.
 

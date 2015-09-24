@@ -8,7 +8,7 @@ da:
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Bliv en del af den største læringsevent nogensinde, den 7.-13. december 2015
-  front_intro_default: 'Hour of Code er en global bevægelse som når ud til millioner af elever i 180+ lande. Alle, hvor som helst, kan organisere en Hour of Code begivenhed. En-times introduktioner findes på mere end 30 sprog. Ingen erfaring er nødvendig. <strong>Fra 4 til 104 år.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Se den nye video
   front_watch_regular_video: Watch the video
   header_menu_resources: Ressourcer
@@ -154,10 +154,14 @@ da:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Hvordan du kan arrangere en Hour of Code</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'> Frem Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Alle kan lære.
   get_started: Start
@@ -174,11 +178,14 @@ da:
   front_join_us_teacher: Er du underviser?
   front_join_us_inspire: Inspirér eleverne med
   front_join_us_inspire_link: Hour of Code i klassen.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Er du forælder?
   front_join_us_ask_link: Bed din lokale skole
   front_join_us_ask: om at arrangere Hour of Code.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Elsker du bare at programmere?
   front_join_us_spread: Spred budskabet.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: Eller arranger selv en Hour of Code.
   front_join_us_how_to_run: Sådan holder du selv Hour of Code
   front_join_us_help_promote: Hjælp med at fremme Hour of Code
@@ -190,7 +197,8 @@ da:
   front_join_us_host: Arranger selv
   front_join_us_support: Støt os
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Dit navn
   signup_email_label: Din email
   signup_organization_name_label: Navn på skole eller organisation
@@ -335,6 +343,7 @@ da:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Tak
   title_prizes: Præmier
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Ressourcer
   title_signup_thanks: Tak fordi du vil arrangere Hour of Code!
   title_tutorial_guidelines: Tutorial Guidelines

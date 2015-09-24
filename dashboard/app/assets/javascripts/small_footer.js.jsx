@@ -46,7 +46,9 @@ window.dashboard.footer = (function () {
         menuItems: React.PropTypes.arrayOf(
           React.PropTypes.shape({
             text: React.PropTypes.string.isRequired,
-            link: React.PropTypes.string.isRequired
+            link: React.PropTypes.string.isRequired,
+            copyright: React.PropTypes.bool,
+            newWindow: React.PropTypes.bool
           })
         ).isRequired,
         className: React.PropTypes.string
@@ -215,8 +217,9 @@ window.dashboard.footer = (function () {
           return (
             <li key={index} style={styles.listItem}>
             <a href={item.link}
-              ref={item.copyright ? "menuCopyright" : undefined}
-              onClick={item.copyright ? this.clickMenuCopyright : undefined}>
+                ref={item.copyright ? "menuCopyright" : undefined}
+                target={item.newWindow ? "_blank" : undefined}
+                onClick={item.copyright ? this.clickMenuCopyright : undefined}>
               {item.text}
             </a>
             </li>

@@ -236,7 +236,6 @@ div.droplet-palette-group-header-selected.orange {
 
 #codeTextbox.pin_bottom {
   border: 1px solid #ddd;
-  bottom: 156px;
 }
 
 html[dir='rtl'] #codeWorkspace {
@@ -262,14 +261,17 @@ html[dir='rtl'] #codeWorkspace {
   border-top: 1px solid #ddd;
 }
 
-// #codeWorkspace.readonly is used when we are displaying a workspace but it iss not editable (like someone else project)
-#codeWorkspace.readonly {
+// #codeWorkspace.readonly is used when we are displaying a workspace but it
+// is not editable (like someone else project), or when app is running
+#codeWorkspace.readonly, #codeWorkspace.dimmed {
   // special cases for:
   .blocklySvg, // blockly
   .droplet-main-scroller, // droplet block view
   .ace_scroller, { // droplet code view
     background-color: rgba(0, 0, 0, 0.1);
   }
+  // Note: We do something similar in our DesignModeBox React component's
+  // transparency layer. These two should be kept in sync as much as possible
 }
 
 .ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
@@ -902,8 +904,11 @@ $workspace-header-button-margin: ($workspace-headers-height -
 }
 
 
-.readonly #headers {
-  background-color: $charcoal;
+.readonly {
+  #headers,
+  #design-headers {
+    background-color: $charcoal;
+  }
 }
 
 #headers {

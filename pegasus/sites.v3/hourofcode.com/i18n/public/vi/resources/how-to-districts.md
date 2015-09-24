@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to_districts) %>
+layout: wide
+nav: how_to_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -14,7 +16,7 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
   2. Đề ra các kế hoạch khoa học mẫu cho trường học. Chia sẻ kế hoạch này nhằm hoàn thiện ý tưởng giúp trường tự tổ chức hoạt động. Sẽ rất dễ dàng nếu tổ chức hoạt động này trong các lớp học toán, phòng sinh hoạt chung hoặc sử dụng luân phiên phòng máy tính các ngày trong tuần. They can submit their own plan for a chance to win $10,000 in hardware at [http://hourofcode.com/prizes](<%= resolve_url('/prizes') %>).
 
-  3. Chia sẻ thông qua mạng xã hội. Đăng tải lên Facebook hoặc Twitter. Or share one of these inspirational [pictures and quotes](<%= resolve_url('/resources#social') %>) from world leaders, or [stats](<%= resolve_url('/resources/stats') %>)).
+  3. Chia sẻ thông qua mạng xã hội. Đăng tải lên Facebook hoặc Twitter. Or share one of these inspirational [pictures and quotes](<%= resolve_url('/resources#social') %>) from world leaders, or [stats](<%= resolve_url('/resources/stats') %>).
 
   4. **Promote on your district’s homepage.** Add one of these [banners](<%= resolve_url('/resources#banners') %>) to your district’s website to let visitors know about your participation. Link it to [Hour of Code](<%= resolve_url('/') %>).
 

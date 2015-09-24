@@ -1,14 +1,14 @@
 az:
   site_name: KOD SAATI
   language: Azərbaycan dili
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Tezliklə
   campaign_date_start_short: 7 dek.
   campaign_date_start_long: 7 dekabr
   campaign_date_short: Dec. 7-13
   campaign_date_full: 7-13 dekabr
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'Kod Saatı 180-dən çox ölkədən milyonlarla tələbənin iştirak etdiyi qlobal bir hərəkatdır. İstənilən yerdə, hər kəs Kod Saatı təşkil edə bilər. Bir saatlıq dərsliklər 30-dan çox dilə tərcümə edilib. Heç bir təcrübəyə ehtiyac yoxdur.  <strong>4 yaşından 104 yaşına qədər.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Yeni videoya baxın
   front_watch_regular_video: Videoya baxın
   header_menu_resources: Qaynaqlar
@@ -154,10 +154,14 @@ az:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Kod Saatını necə təşkil etməli</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Kod Saatını təbliğ edin</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Hər kəs öyrənə bilər.
   get_started: Start
@@ -174,11 +178,14 @@ az:
   front_join_us_teacher: Müəllimsiniz?
   front_join_us_inspire: Şagirdləri həvəsləndirin
   front_join_us_inspire_link: sinifdə bir Kod Saatı keçirməklə.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Valideynsiniz?
   front_join_us_ask_link: Məktəbinizdən xahiş edin ki,
   front_join_us_ask: Kod Saatı təşkil etsin.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Sadəcə informatikanı sevirsiniz?
   front_join_us_spread: Xəbərlərimizi yayın.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: Və ya özünüz Kod Saatı təşkil edin.
   front_join_us_how_to_run: Kod Saatını belə təşkil edin
   front_join_us_help_promote: Kod Saatını təbliğ etməyə kömək edin
@@ -190,7 +197,8 @@ az:
   front_join_us_host: Təşkil edin
   front_join_us_support: Dəstək verin
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Adınız
   signup_email_label: E-poçt ünvanınız
   signup_organization_name_label: Məktəb və ya təşkilatın adı
@@ -274,12 +282,12 @@ az:
   hoc_faq_frozen_q: Anna və Elza olan dərslik haradadır?
   hoc_faq_frozen_a: "O, indi <a href='http://code.org/learn'>Code.org/learn</a> ünvanında nəşr edilib. Ümid edirik ki, xoşunuza gəlir!"
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://%{codeorg_url}/learn'>%{codeorg_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?
   hoc_faq_scratch_a: |-
     "Scratch" planşetlərdə işləmir. Əgər şagirdlərinizin yaşı azdırsa, onda "iPad" proqram əlavəsi "ScratchJR"dan (oxumağı yeni öyrənənlər üçün) istifadə edə bilərlər. Əgər <a href='http://code.org/learn'>Code.org/learn</a> ünvanındakı dərsliklərə baxsanız, "iPad"də işləyən digər dərslikləri tapa bilərsiniz - "Code.org"dan, "Tynker", "Lightbot" və ya "CodeSpark" dan.
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: 2013-cü ildəki Kod Saatına aid statistika
   stats_growth: İstifadəçi sayını 15 milyona ən tez çatdıran.
   stats_i18n: Students are learning in 40 languages
@@ -338,6 +346,7 @@ az:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Çox sağ olun
   title_prizes: Hədiyyələr
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Qaynaqlar
   title_signup_thanks: '"Kod Saatı" təşkili üçün qeydiyyatınıza görə təşəkkür edirik!'
   title_tutorial_guidelines: Tutorial Guidelines

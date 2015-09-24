@@ -1,14 +1,14 @@
 ne:
   site_name: HOUR of CODE
   language: नेपाली
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: छिटै आउँदैछ
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'Hour of Code को एक विश्वव्यापि आन्दोलन 180 देशहरूको विद्यार्थीहरूको लाखौँ मानिसमा पुगिरहेको छ। कसैले पनि, कुनै पनि ठाउँमा एक Hour of Code समारोहको आयोजन गर्न सक्छ। Hour of Code को अभ्यासहरू 30 भन्दा धेरै भाषाहरूमा उपलब्ध छ। कुनै पनि अनुभवको आवश्यकता पर्दैन। <strong>4 देखि 104 को उमेर।</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: नयाँ भिडियो हेर्नुहोस्
   front_watch_regular_video: Watch the video
   header_menu_resources: स्रोतहरू
@@ -154,10 +154,14 @@ ne:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/resources/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/resources'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: जो कोहिले पनि सिक्न सक्छ।
   get_started: Start
@@ -174,11 +178,14 @@ ne:
   front_join_us_teacher: के तपाइँ शिक्षक हुनुहुन्छ?
   front_join_us_inspire: Inspire students with
   front_join_us_inspire_link: an Hour of Code in the classroom.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: के तपाइँ अभिभावक हुनुहुन्छ?
   front_join_us_ask_link: तपाइँको स्थानीय विद्यालयलाई सोध्नुहोस्
   front_join_us_ask: Hour of Cod मा स्वागत गर्न।
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: कम्प्युटर विज्ञानलाई मात्र माया गर्नुहुन्छ?
   front_join_us_spread: Spread the word.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: वा Hour of Cod को घटनालाई आफैँले मिलाउनुहोस्।
   front_join_us_how_to_run: यहाँ कसरी Hour of Cod लाई चलाउने
   front_join_us_help_promote: Hour of Cod प्रवर्द्धन गर्न मदत गर्नुहोस्
@@ -190,7 +197,8 @@ ne:
   front_join_us_host: यसलाई स्वागत गर्नुहोस्
   front_join_us_support: यसलाई समर्थन गर्नुहोस्
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: तपाइँको नाम
   signup_email_label: तपाइँको इमेल
   signup_organization_name_label: विद्यालय र संगठनको नाम
@@ -268,15 +276,15 @@ ne:
   hoc_faq_more_questions_q: Still have more questions?
   hoc_faq_more_questions_a: "Try finding an answer in our <a href='http://support.code.org'>support forum</a>."
   hoc_faq_account_q: Do students need to log on using an account?
-  hoc_faq_account_a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href='http://%{codeorg_url}/learn/beyond'>follow-on courses</a> require account creation to save student progress."
+  hoc_faq_account_a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href='%{codeorg_url}/learn/beyond'>follow-on courses</a> require account creation to save student progress."
   hoc_faq_frozen_q: Where is the tutorial with Anna and Elsa?
-  hoc_faq_frozen_a: "It is now published on <a href='http://%{codeorg_url}/learn'>the tutorials page</a>. We hope you enjoy it!"
+  hoc_faq_frozen_a: "It is now published on <a href='%{codeorg_url}/learn'>the tutorials page</a>. We hope you enjoy it!"
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://%{codeorg_url}/learn'>%{codeorg_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?
-  hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='http://%{codeorg_url}/learn'>%{codeorg_url}/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
+  hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: 2013 Hour of Code को स्थितिहरू
   stats_growth: यो 15 मिलियन प्रयोगकर्ताहरूमा पुग्ने सबै भन्दा छिटो तरिका थियो।
   stats_i18n: Students are learning in 40 languages
@@ -335,6 +343,7 @@ ne:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: धन्यवाद
   title_prizes: पुरस्कारहरू
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: स्रोतहरू
   title_signup_thanks: Hour of Code होस्ट गर्नुकोलागी sign up गर्नु भएकोमा धन्यवाद!
   title_tutorial_guidelines: Tutorial Guidelines

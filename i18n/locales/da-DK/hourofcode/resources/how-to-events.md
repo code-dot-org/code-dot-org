@@ -14,12 +14,12 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
   * Bestem sted, dato og tidspunkt
   * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/resources/press-kit') %) for help.
 
 ## 2) Under dit arrangement
 
-  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
+  * Kick off your event with one of our [inspirational videos](%= resolve_url('/resources#videos') %).
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/resources/stats') %).   
       
     
   * Andre event ideer: 
@@ -50,8 +50,8 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 | Tidspunkt   | Hændelse                                                                                                                                                  |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00-10:05 | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                      |
-| 10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)       |
+| 10:00-10:05 | Open with one of our [inspirational videos](%= resolve_url('/resources#videos') %)                                                                        |
+| 10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/resources/stats') %)         |
 | 10:15-10:30 | Særlige gæstetalere der fortæller om deres baggrund og hvordan teknologi og computer science spiller en vigtig rolle i deres hverdag.                     |
 | 10:30-10:40 | Elever demonstrerer Hour of Code for resten af skolen. Måske er det endnu sjovere hvis de instruerer skolelederen, en lokal politiker eller andre elever. |
 | 10:40-11:00 | Eleverne viser en unplugged aktivitet og hvordan man kan undervise i programmering uden brug af computere.                                                |

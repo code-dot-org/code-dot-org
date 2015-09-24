@@ -26,6 +26,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # Configure development only filters.
   if Rails.env.development?
     # Enable or disable the rack mini-profiler if the 'pp' query string parameter is set.
     # pp='disabled' will disable it; any other value will enable it.
@@ -36,9 +37,20 @@ class ApplicationController < ActionController::Base
         ENV['RACK_MINI_PROFILER'] = (pp == 'disabled') ? 'off' : 'on'
       end
     end
+
+    before_filter :configure_web_console
+    # Enable the Rails web console if params['dbg'] is set, or disable it
+    # if params['dbg'] is 'off'.
+    def configure_web_console
+      if params[:dbg]
+        cookies[:dbg] = (params[:dbg] != 'off') ? 'on' : nil
+      end
+      @use_web_console = cookies[:dbg]
+    end
   end
 
   def reset_session_endpoint
+    client_state.reset
     reset_session
     render text: "OK"
   end

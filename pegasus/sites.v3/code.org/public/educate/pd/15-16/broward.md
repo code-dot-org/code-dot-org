@@ -24,7 +24,7 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-Teachers from LAUSD will attend PD in Los Angeles and connect the to Spokane CSP workshop virtually. Please visit the [Los Angeles CSP page](/educate/pd/15-16/lausd) for the dates and details of your workshop.
+Teachers from LAUSD will attend PD in Los Angeles and connect to the Spokane CSP workshop virtually. Please visit the [Los Angeles CSP page](/educate/pd/15-16/lausd) for the dates and details of your workshop.
 
 Teachers from Charles County, Maryland will attend PD in Charles County and connect to the Broward CSP workshop virtually. Your workshop details can be found on the [Charles County CSP page](/educate/pd/15-16/charles).
 
@@ -51,7 +51,7 @@ Carl Desantis Building <br/>
 Room 1047<br/>
 Fort Lauderdale, FL 33314
 
-Free parking is available near the building with your [parking pass](/files/broward-9-26-parking-pass-nsu.pdf). You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
+Free parking is available near the building with your [parking pass](/files/broward-9-26-parking-pass-nsu.pdf). You can also find a campus map [here.](/files/nova-main-campus-map.pdf)
 
 
 **What to bring to Phase 3 quarterly sessions:**
@@ -153,7 +153,7 @@ Carl Desantis Building
 Room 1047<br/>
 Fort Lauderdale, FL 33314
 
-Free parking is available near the building with your [parking pass](/files/nsu-parking-pass-9-19-15.pdf).  You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
+Free parking is available near the building with your [parking pass](/files/broward-9-19-parking-pass-nsu.pdf). You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
 
 **What to bring to Phase 3 biyearly sessions:**
 
@@ -212,7 +212,7 @@ Carl Desantis Building<br/>
 Room 1048<br/>
 Fort Lauderdale, FL 33314
 
-Free parking is available near the building with your [parking pass](/files/nsu-parking-pass-9-19-15.pdf).  You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
+Free parking is available near the building with your [parking pass](/files/broward-9-19-parking-pass-nsu.pdf). You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
 
 
 **What to bring to Phase 3 quarterly sessions:**

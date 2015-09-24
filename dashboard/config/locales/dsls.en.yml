@@ -406,6 +406,19 @@ en:
       OPD-K5 Your Plan: {}
       OPD-Stage3Start: {}
       OnlinePDK5 Intro: {}
+      PDAlg 1-3 Circles: {}
+      PDAlg 1-3 Circles Practice: {}
+      PDAlg 13-16 Booleans: {}
+      PDAlg 13-16 Sam Extension: {}
+      PDAlg 13-16 Simple Sam: {}
+      PDAlg 17-20 Conditionals: {}
+      PDAlg 17-20 Luigi Extensions: {}
+      PDAlg 4-7 Big Game: {}
+      PDAlg 4-7 Contracts: {}
+      PDAlg 4-7 Variables: {}
+      PDAlg 8-12 Design Recipe: {}
+      PDAlg 8-12 Examples: {}
+      PDAlg 8-12 Rocket Height: {}
       PDAlg Attitude Survey:
         CS in Algebra Pre-attitude survey: CS in Algebra Pre-attitude survey
       PDAlg Big Game: {}
@@ -628,6 +641,9 @@ en:
         title: title
       U2 Encryption and Public Keys - Video:
         'The Internet: Encryption and Public Keys - Video': 'The Internet: Encryption and Public Keys - Video'
+        description here: description here
+      U2 HTTP and HTML - Video:
+        'The Internet: HTTP and HTML - Video': 'The Internet: HTTP and HTML - Video'
         description here: description here
       'U2 The Internet: Cybersecurity and Crime - Video':
         'The Internet: Cybersecurity and Crime - Video': 'The Internet: Cybersecurity and Crime - Video'
@@ -1572,6 +1588,16 @@ en:
         72 + 3 - 19 x 15: 72 + 3 - 19 x 15
         Converting Math to Code: Converting Math to Code
         Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!
+      PDAlg 4-7 Contracts Match:
+        A function can't have multiple items in the range: A function can't have multiple items in the range
+        Contracts Matching: Contracts Matching
+        Missing an item in the domain: Missing an item in the domain
+        Using example values instead of data types: Using example values instead of data types
+        Using variable names instead of data types: Using variable names instead of data types
+        'text: "word" 50 "red" -> "word"': 'text: "word" 50 "red" -> "word"'
+        'text: String Number -> Image': 'text: String Number -> Image'
+        'text: String Number String -> Image String': 'text: String Number String -> Image String'
+        'text: String Size Color -> Image': 'text: String Size Color -> Image'
       PDAlg DR Match 1:
         5 = 5 / .50: 5 = 5 / .50
         Examples need to use specific numbers: Examples need to use specific numbers

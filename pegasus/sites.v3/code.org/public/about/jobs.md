@@ -7,46 +7,57 @@ nav: about_nav
 
 **We are currently hiring for:**
 
-- [District Manager (Seattle, New York City)](#reg-PM)
+- [CS Curriculum Writer](#curric)
 - [Evaluation Manager](#Eval)
-- [Operations Coordinator](#opscoord)
+- [Operations Coordinator  (Events) ](#opscoord)
+- [Technical Product Manager](#techpm)
+
+**Internships at Code.org:**
+
+- [Education Team Intern](#edintern)
+
+**No current positions, but always accepting great resumes:**
+
 - [Software Engineer](#engineer)
 
 **[Working at Code.org](#info)**
 
+## <a name="curric"href="#curric">CS Curriculum Writer (Seattle or Chicago, IL preferred)</a>
 
-## <a name="reg-PM" href="#reg-PM">District Manager (Seattle, New York City)</a>
+**Job Summary:**
 
-**Job Summary:** 
+Code.org is looking for an experienced Curriculum Writer to work with and support the goals of Code.org’s Education team through the development of computer science curriculum. We are looking for someone to help develop curriculum as a full-time, long-term assignment (a one-to-two year term). 
 
-Code.org is recruiting for District Managers in New York City and Seattle to support Code.org’s Education team through the development, implementation, and maintenance of Code.org’s partnership model with school districts. This is a full-time, salaried position. 
+While each Education team member takes ownership of large parts of projects, we share work and tasks across projects to make sure all of our projects are aligned under the same philosophical model and contribute to a cohesive K-12 CS pathway.
 
-Responsibilities of the position include:
+Responsibilities of the position include: 
 
-- Recruiting school districts for potential Code.org educational partnerships 
-- Managing all partnership implementation activities with  district personnel
-- Marketing and supporting Code.org's program in the region
+- Working closely with the Education team to design, develop, write, and “go to market” with original curricular materials (lesson plans, formative/summative assessments, and videos).
+- Planning for evaluating the effectiveness of curriculum (from both student and teacher perspectives) and making programmatic improvements.
+- Collaborating with the Product team to develop curriculum-specific technology tools and using the tools to create tutorials and projects.
+- Ability to travel up to 10% of working time 
+
 
 **Skills and Qualifications:**
 
-- At least a Bachelor's degree, preferably in Education or Computer Science
-- Demonstrated ability to pitch the Code.org educational model to individuals across the full school district spectrum (superintendent to teacher) and close the agreement 
-- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes throughout the pitching and implementation life cycle
-- Advanced organization and problem solving skills
-- Understanding of and passion for equity in computer science and K-12 education
- 
-Additional desired strengths include:
+The ideal candidate has experience designing, developing, and writing computer science curriculum to standards; has strong leadership, writing and communications skills; is a tech-savvy self-starter who is able to multi-task and excel under pressure. 
 
-- Experience working with local school districts in a project implementation capacity
-- For New York District, established relationship or prior experience with the Department of Education   
-- Recent computer science teaching experience in a K-12 school setting
-- Strong existing connections to the computer science community 
+The candidate should also have: 
 
-Must be a self-starter, multi-tasker, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
+- Comprehensive knowledge of computer science (required) 
+- Prior curriculum writing experience / activity design (required)
+- a Bachelor’s degree or higher in Education or Computer Science (preferred)
+- Recent computer science or STEM teaching experience in high school field (preferred)
+- Experience using the Understanding by Design curriculum framework (preferred)  
+- Experience with physical computing devices (eg Arduino) or robotics (preferred)
+- Experience/familiarity with Exploring Computer Science curriculum/PD (preferred) 
+- Proficiency in working with Microsoft Office and Google Docs (required) 
 
-Ability and willingness to travel up to 25% of the time is required.
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+Please include lesson plan samples that are your original work, and highlight relevant experience designing, developing, or writing implement curricular materials. 
+
 
 ## <a name="Eval"href="#Eval">Evaluation Manager (Seattle,WA or Chicago,IL preferred)</a>
 
@@ -79,7 +90,7 @@ Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code
 
 **Job Summary:**
 
-Code.org is looking for an Operations Coordinator to join Code.org’s operations team. Our operations team is responsible for the success of Code.org professional development across the U.S. This is a full time, exempt position based in our Seattle office. Duties of this role include: 
+Code.org is looking for an Operations Coordinator to join Code.org’s operations team. Our operations team is responsible for the success of Code.org professional development events across the U.S. This is a full time, exempt position based in our Seattle office. Duties of this role include: 
 
 - Coordinating event logistics (dates, location, travel, accommodations, catering); acting as primary logistics point-of-contact
 - Drafting communications to stakeholders, responding to requests for information, distributing materials externally
@@ -100,8 +111,71 @@ The ideal candidate has the following qualifications:
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+## <a name="techpm"href="#techpm">Technical Product Manager (Seattle)</a>
 
-## <a name="engineer" href="#engineer">Software Engineer (Seattle, WA)</a>
+**Job Summary:**
+
+Code.org is recruiting for an experienced Product Manager who can help us identify and implement solutions that use crowd-sourcing to build a strong community of teachers, volunteers, students and donors. This is a full-time, salaried. 
+
+Responsibilities of the position include:
+
+- Defining the scope of these projects
+- Designing user experience and working with engineers, education experts and others at Code.org to implement them
+
+This person must be able to work in a fast paced environment with continuous release to customers.
+
+**Skills and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Bachelors degree in Computer Science
+- Minimum of 3 years of experience as a technical program manager or product manager building web-centric products/services
+- Experience in designing user experience for non-tech savvy customers
+- Strong technical background
+
+
+Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="edintern"href="#edintern">Education Team Intern (Seattle or Chicago, IL)</a>
+
+**Job Summary:**
+
+Code.org is looking for an intern to work with and support the goals of Code.org’s Education team through the development of computer science curriculum. This person will work with a variety of program leaders across multiple projects, simultaneously performing a wide range of tasks. We need someone who has quick turnaround, is responsive, and can effectively organize their priorities and task list.
+
+Responsibilities of the position include: 
+
+- Working closely with the Education team to design, develop, write, and “go to market” with original curricular materials:
+	- lesson plans
+    - formative/summative assessments
+    - videos
+    - answer keys
+    - project exemplars 
+- using in-house content management tools to structure resources
+
+
+**Skills and Qualifications:**
+
+The ideal candidate has experience in computer science and a background or passion for education; has strong writing and communications skills; is a tech-savvy self-starter who is able to multi-task and excel under pressure. 
+
+The intern candidate should: 
+
+- Have basic to comprehensive knowledge of computer science 
+- Have prior curriculum writing experience / activity design 
+- Be proficient in working with Microsoft Office and Google Docs  
+- Be working toward a Bachelor’s degree or higher in Education or Computer Science
+
+Additional preference for a candidate that: 
+
+- Has recent computer science or STEM teaching experience 
+- Has experience using the Understanding by Design curriculum framework  
+- Has experience/familiarity with the CS Principles Framework 
+- Experience/familiarity with Exploring Computer Science curriculum/PD 
+
+Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+Please include lesson plan samples that are your original work, and highlight relevant experience designing, developing, or writing implement curricular materials. 
+
+## <a name="engineer" href="#engineer">Software Engineer (Seattle)</a>
 
 **Job Summary:**
 
@@ -110,7 +184,7 @@ Code.org is building interactive tutorials for computer science courses starting
 **Skills and Qualifications:**
 
 - A Bachelor's degree or greater in Computer Science
-- Minimum of 3-5 years of experience as a software engineer working on Web sites or services
+- **Minimum** of 3-5 years of experience as a software engineer working on Web sites or services
 - Deep expertise in either JavaScript or Ruby preferred 
 - Experience with startup culture preferred 
 

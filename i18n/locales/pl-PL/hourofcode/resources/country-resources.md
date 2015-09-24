@@ -21,7 +21,7 @@ p>[**¿Por qué todos tienen que aprender a programar? Participá de la Hora del
 
 ## Użyj tych notatek do rekrutacji korporacji
 
-[<img width="500" height="300" src="<%= localized_file('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
+[<img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
 
 ## 1) Try the tutorials:
 

@@ -34,9 +34,18 @@ Still have questions? See below for answers to commonly asked questions or email
 
 **Who do I inform if I have a schedule conflict?**
 
-Please e-mail pd@code.org and your district contact if you have a conflict with an in-person PD date.
+Please email pd@code.org and your district contact if you have a conflict with an in-person PD date. Unfortunately, you can't make up the workshop. We recommend that you connect with a colleague to catch up on important concepts. You can do this locally or through your nation-wide forum of CS teachers. Visit your program's forum below: 
 
-The Code.org policy on teacher attendance can be found in your program welcome kit below.
+[Computer Science Principles](forum.code.org/c/csp)
+<br/>
+[Exploring Computer Science](forum.code.org/c/ecs)
+<br/>
+[Computer Science in Algebra](forum.code.org/c/cs-in-algebra)
+<br/>
+[Computer Science in Science](forum.code.org/c/cs-in-science)
+<br/>
+
+The Code.org attendance policy can be found in your program welcome kit below.
 
 [Computer Science Principles](code.org/welcome-csp)
 <br/>
@@ -61,11 +70,12 @@ Teachers will be paid their stipend at the completion of Phase 1: Online Introdu
 
 Payments will be made twice a month either directly to the teacher or to the district who will then make payments to teachers:
 
-•Cycle 1: 1st - 15th of each month (payments are pulled the 1st business day after the 15th and are deposited in accounts or sent to the district ~5 business days later)
+•Cycle 1: 1st - 15th of each month (payments are deposited in accounts or mailed to the district within 10 business days after the end of the cycle).
 
-•Cycle 2: 16th - last day of each month (payments are pulled the 1st business day after the end of the month and are deposited in accounts or sent to the district ~5 business days later)
+•Cycle 2: 16th - last day of each month (payments are deposited in accounts or mailed to the district within 10 business days after the end of the cycle).
 
-If, for example, a teacher finishes Phase 1 on Wednesday, May 20, the payment will be processed on Monday, June 1st and paid by Monday, June 8th. 
+If, for example, a teacher finishes Phase 1 on Wednesday, May 20, the payment will be made by Monday, June 10th. 
+<br/>
 <br/>
 *Note: Code.org is not responsible for delays in payment from districts to teachers. If your district pays you directly, please contact your district finance department with any payment delay questions.*
 
@@ -76,7 +86,7 @@ Teachers that are paid directly by their Districts can be found on [this list](h
 Teachers being paid directly by Code.org can select from the following payment options.
 <br/>
 <br/>
-**Direct deposit:** This is the fastest and easiest way to get paid. When registering through the [educator information form](https://code.org/educate/educatorinfo)* displayed at the end of phase 1 pd, teachers input the requested bank account information and their stipend will be placed directly into their bank account on the aforementioned day.
+**Direct deposit:** This is the fastest and easiest way to get paid. When registering through the [educator information form](https://code.org/educate/educatorinfo)* displayed at the end of phase 1 pd, teachers input the requested bank account information and their stipend will be placed directly into their bank account within 10 days of the close of the payment cycle.
 
 **You may receive a message saying that "you can only submit one entry for this form", if you feel like the information that you orignally entered was not correct then you can email [PD@code.org](PD@code.org) and we will be happy to assist you.* 
 

@@ -1,6 +1,6 @@
 * * *
 
-nga: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" tema: "Faleminderit që u regjistruat që të marrësh pjesë tek Ora e Kodimit!" litmus_tracking_id: "5g5lyi1a"
+nga: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" tema: "Faleminderit që u regjistruat që të merrni pjesë në Orën e Kodimit!" litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
@@ -8,9 +8,9 @@ nga: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&
 
 # Faleminderit që u regjistruat si organizator në Orën e Kodimit!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
+<% if @country == 'la' || @country == 'br' || @country == 'ar' %> Po i mundësoni studentëve të Amerikës Latine të mësojnë një Orë Kodim e cila mund t'ju ndryshojë *jetën *, gjatë Tetorit. 5-11. <% else %> Po i mundësoni studentëve të gjithë studentëve në mbarë botën të mësoni Orën e Kodimit e cila * mund të ndryshojë gjithë jetën e tyre*, gjatë Dhjetorit. 7-13. <% end %>
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+Ne do të jemi në kontakt rreth shpërblimeve, tutorialeve te rinj dhe përditësimet në vjeshtë. Pra, çfarë mund të bësh tani?
 
 ## 1. Përhap fjalën
 
@@ -18,19 +18,19 @@ Thuaji shokëve të tu për #HourOfCode.
 
 ## 2. Pyesni gjithë shkollën që të ofrojë një Orë Kodimi
 
-[Send this email](http://<%= hostname %>/resources#email) to your principal.
+[Dërgo këtë email](http://<%= hostname %>/resources#email) te drejtori juaj.
 
 ## 3. Pyesni punëdhënsin tuaj, që të arrish të përfshihesh
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Dërgo këtë email](http://<%= hostname %>/resources#email) te manaxheri juaj ose te CEO.
 
-## 4. Promote the Hour of Code in your community
+## 4. Promovoni Orën e Kodimit në komunitetin tuaj
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
+Rekruto një grup lokal — universiteti, klubi i futbollit, teatri. Ose organizo një "festë ne lagje" me Orën e Kodimit. [Dërgo këtë email](http://<%= hostname %>/resources#email).
 
 ## 5. Pyet një zyrtar të zgjedhur për të përkrahur Orën e Kodimit
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Dërgo këtë email](http://<%= hostname %>/resources#politicians) te kryetari i Bashkisë, këshilli i qytetit ose bordi i shkollës dhe i ftoni të vizitojnë shkollën tuaj.
 
 * * *
 

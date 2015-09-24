@@ -9,7 +9,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <%= view :signup_button %>
 
-# Promote the Hour of Code
+# Promova a Hora do Código
 
 ## Quer sediar uma Hora do Código? [Consulte o guia prático](<%= resolve_url('/resources/how-to') %>)
 
@@ -34,6 +34,12 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 [![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 [![image](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a id="stickers"></a>
+
+## Imprima esses adesivos para dar aos seus alunos (os adesivos têm 2,54 centímetros de diâmetro, são 63 por folha)
+
+[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 

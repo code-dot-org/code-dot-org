@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to_events) %>
+layout: wide
+nav: how_to_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -48,13 +50,13 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## 이벤트 일정
 
-| 시간               | 내용                                                                                                                                                  |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                |
+| 시간               | 내용                                                                                                                                                |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>)                                                                |
 | 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>) |
-| 10:15 - 10:30 am | 특별 초청 게스트가 자기소개를 하고, 그 사람의 일상생활에서 컴퓨터과학기술과 컴퓨터과학이 얼마나 중요한 역할을 하고 있는지에 대해서 이야기 한다.                                                                   |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                            |
-| 10:40 - 11:00 am | 학생들이 컴퓨터과학 언플러그드 활동을 시연하면서, 컴퓨터가 전혀 없이도 컴퓨터과학(정보과학)에 대해서 어떻게 배울 수 있게 되는지 보여주도록 한다.                                                                  |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                   |
+| 10:15 - 10:30 am | 특별 초청 게스트가 자기소개를 하고, 그 사람의 일상생활에서 컴퓨터과학기술과 컴퓨터과학이 얼마나 중요한 역할을 하고 있는지에 대해서 이야기 한다.                                                                 |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                          |
+| 10:40 - 11:00 am | 학생들이 컴퓨터과학 언플러그드 활동을 시연하면서, 컴퓨터가 전혀 없이도 컴퓨터과학(정보과학)에 대해서 어떻게 배울 수 있게 되는지 보여주도록 한다.                                                                |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                 |
 
 <%= view :signup_button %>

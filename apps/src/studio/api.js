@@ -128,17 +128,17 @@ exports.addItemsToScene = function(id, className, number) {
   });
 };
 
-exports.setItemAction = function(id, itemIndex, type) {
-  Studio.queueCmd(id, 'setItemAction', {
-    'itemIndex': itemIndex,
+exports.setItemActivity = function(id, className, type) {
+  Studio.queueCmd(id, 'setItemActivity', {
+    'className': className,
     'type': type
   });
 };
 
-exports.setItemActivity = function(id, itemIndex, type) {
-  Studio.queueCmd(id, 'setItemActivity', {
-    'itemIndex': itemIndex,
-    'type': type
+exports.setItemSpeed = function(id, className, speed) {
+  Studio.queueCmd(id, 'setItemSpeed', {
+    'className': className,
+    'speed': speed
   });
 };
 

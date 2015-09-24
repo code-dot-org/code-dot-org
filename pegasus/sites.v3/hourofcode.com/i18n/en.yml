@@ -1,7 +1,8 @@
 'en':
   site_name: 'HOUR of CODE'
+  hour_of_code: 'Hour of Code'
   language: 'English'
-  front_title: 'Join the largest learning event in history, Dec 7-13, 2015'
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: 'Coming Soon'
   campaign_date_start_short: "Dec. 7"
   campaign_date_start_long: "December 7"
@@ -16,6 +17,8 @@
   header_menu_resources: 'Resources'
   header_menu_faq: 'FAQ'
   header_menu_prizes: 'Prizes'
+  header_menu_how_to: 'How-To'
+  header_menu_promote: 'Promote'
 
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
@@ -197,6 +200,7 @@
   front_join_us_computer_science: 'Just love computer science?'
   front_join_us_spread: 'Spread the word.'
   front_join_us_spread_word: "Spread the word in your community"
+  front_join_us_spread_word_work: "Spread the word in your community or workplace"
   front_join_us_organize: 'Or organize an Hour of Code event yourself.'
   front_join_us_how_to_run: "Here's how to run an Hour of Code"
   front_join_us_help_promote: "Help promote the Hour of Code"
@@ -209,8 +213,9 @@
   front_join_us_support: "Support it"
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "For more information, please visit code.org"
+  front_join_us_n_students_served: "# students served"
 
-  signup_header: 'Organize an Hour of Code during campaign_date, and register it here.'
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: 'Your name'
   signup_email_label: 'Your email'
   signup_organization_name_label: 'School or organization name'
@@ -248,10 +253,10 @@
   map_search_search: 'Search'
   map_search_reset: 'Reset'
 
-  meta_tag_og_title: 'The Hour of Code is here'
-  meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.'
-  meta_tag_twitter_title: 'The Hour of Code is here'
-  meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.'
+  meta_tag_og_title: 'The Hour of Code is coming'
+  meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
+  meta_tag_twitter_title: 'The Hour of Code is coming'
+  meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
 
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
 
@@ -339,6 +344,11 @@
   resources_social: Social
   resources_country_resources: Country Specific Resources
   resources_stickers: Stickers
+  resources_how_to_guides: 'How-to guides'
+  resources_promote: 'Promote'
+  resources_nav_tutorials: 'Try the tutorials'
+  resources_nav_promote: 'Spread the word'
+  resources_nav_spread_word: 'How to get involved'
 
   resources_banner_promote_text: "Promote"
   resources_banner_promote_button: "Encourage others to sign up with brochures, inspirational posters and social media banners."
@@ -347,6 +357,7 @@
 
   handouts_onepager: Spread the word with this one page handout
   handouts_brochure: Give this brochure to teachers and schools
+  handouts_participationguide: Plan your Hour of Code with this participation guide
 
   videos_title: Show these videos to inspire students
   videos_what_most_schools_dont_teach: What Most Schools Don't Teach (5 min)
@@ -371,6 +382,7 @@
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Thank you
   title_prizes: Prizes
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Resources
   title_signup_thanks: Thanks for signing up to host an Hour of Code!
   title_tutorial_guidelines: Tutorial Guidelines

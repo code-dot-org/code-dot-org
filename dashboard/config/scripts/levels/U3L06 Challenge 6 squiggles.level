@@ -47,10 +47,7 @@
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
-    "beginner_mode": "false",
-    "encrypted_examples": [
-
-    ]
+    "beginner_mode": "false"
   }
 }]]></config>
   <blocks/>

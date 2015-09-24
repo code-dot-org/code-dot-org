@@ -35,6 +35,12 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 [![kép](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![kép](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![kép](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![kép](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![kép](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![kép](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
+<a id="stickers"></a>
+
+## Print these stickers to give to your students (Stickers are 1" diameter, 63 per sheet)
+
+[![kép](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+
 <a id="sample-emails"></a>
 
 ## Küldje el az alábbi e-maileket, a Hour of Code megismertetése érdekében

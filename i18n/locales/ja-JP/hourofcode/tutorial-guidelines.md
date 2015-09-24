@@ -8,7 +8,7 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 私たちは魅力的な選択を用意したいと思っていますが、一番の目的はコンピューター科学に馴染みのない、より多くの教員や学生の方々に経験をしてもらいたいという事です。 コーディングやコンピュータープログラミングやコンピューター科学の経験がない利用者に向けたあなたの活動を作るための手引きとしてこの文書を使ってください。
 
@@ -23,20 +23,13 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
 ## 目次:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
-    
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
-  * [How to submit (Due 10/15/2015)](#submit)  
-    
-  * [Suggestions for designing your activity](#design)  
-    
-  * [Trademark Guidelines](#tm)  
-    
-  * [Tracking Pixel](#pixel)  
-    
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
-    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [チュートリアルを含めるかどうかが評価される方法](#inclusion)
+  * [How to submit (Due 10/15/2015)](#submit)
+  * [あなたの活動を計画するための提案](#design)
+  * [商標についてのガイドライン](#tm)
+  * [トラッキング ピクセル](#pixel)
+  * [あなたのチュートリアル、CSEdWeek、Hour of Codeの宣伝](#promote)
   * [障害を持つ学生のための注意](#disabilities)
 
 <a id="guidelines"></a>
@@ -157,11 +150,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * 学年レベルの中には、推奨されるコンピューター科学の知識（初心者、中級、上級）も含めてください。 Hour of Code のウェブサイトは初心者向けの活動を最も目立つように強調表示します。 If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * 技術的要件: 
       * 参加をより正確に追跡するため、各サードパーティーのチュートリアルパートナーに、Hour of Code チュートリアルの最初と最後のページに 1 ピクセルのトラッキング画像を入れていただくようお願いしています。 最初のページには最初の画像を、最後のページには最後の画像を配置してください。 中間のページには配置しないでください）。 詳細については下記のトラッキングピクセルの節を参照してください。 
-      * あなたの活動を終えた時には、ユーザーは [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> にリダイレクトされるべきです。そこでユーザーは次のことができます: 
+      * あなたの活動を終えた時には、ユーザーは [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
           * Hour of Code を完了したことをソーシャルメディアで共有する
           * Hour of Code を完了した証明書を受け取る
           * Hour of Code 活動への参加率が最も高い国/都市についてのリーダーボードを見る
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
   * *（省略可能）* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * オンラインの活動（特にスマートフォン・タブレットのアプリ）について: 
           * ユーザー数
