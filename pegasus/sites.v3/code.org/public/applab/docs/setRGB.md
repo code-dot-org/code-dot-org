@@ -40,7 +40,8 @@ ____________________________________________________
 
 **Change the color values of a single pixel to zero**
 
-<pre>
+
+```
 //Setup the canvas, draw a red rectangle, and capture the image data of the whole canvas
 createCanvas('canvas1', 320, 480); //Make a canvas element with the name 'canvas1' and size 320x480 pixels
 setFillColor('red'); //Set the fill color of future drawn shapes
@@ -60,7 +61,7 @@ console.log(getRed(imageData, 50, 50));
 console.log(getGreen(imageData, 50, 50));
 //Print blue value at x:50 y:50 from imageData to the console. We will see 0 in the console.
 console.log(getBlue(imageData, 50, 50));
-</pre>
+```
 
 [/example]
 
@@ -70,7 +71,8 @@ ____________________________________________________
 
 **Change a single red pixel to purple**
 
-<pre>
+
+```
 //Setup the canvas, draw a red rectangle, and capture the image data of the whole canvas
 createCanvas('canvas1', 320, 480);
 setFillColor('red');
@@ -89,7 +91,7 @@ var newGreen = 0;
 //First modify the color values at x:50 y:50 in the image data then update the canvas
 setRGB(imageData, 50, 50, redValue, newGreen, newBlue);
 putImageData(imageData, 0, 0);
-</pre>
+```
 
 [/example]
 
@@ -101,7 +103,8 @@ ____________________________________________________
 
 In this more detailed example, we move through each pixel of the canvas and change the color values to zero in each. To do this, the function `removeColor(imageData)` is defined and called after a canvas element has been created with a rectangle drawn and image data captured.
 
-<pre>
+
+```
 //Define the removeColor function (which accepts image data to work on as variable 'thisImageData')
 function removeColor(thisImageData){
     for(var y=0; y < thisImageData.height; y++) { //Loop over each pixel in y axis
@@ -120,7 +123,7 @@ var imageData = getImageData(0, 0, 320, 480);
 
 //Then we will call our function to remove all color from the canvas one pixel at a time
 removeColor(imageData);
-</pre>
+```
 
 [/example]
 
@@ -129,9 +132,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 setRGB(imageData, x, y, red, green, blue, alpha);
-</pre>
+```
 
 [/syntax]
 
