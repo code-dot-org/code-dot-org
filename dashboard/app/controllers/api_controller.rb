@@ -64,6 +64,46 @@ class ApiController < ApplicationController
     render json: data
   end
 
+  def section_text_responses
+    load_section
+    load_script
+
+    data =  [
+      {
+        student: {
+          id: 1,
+          name: 'Student 1'
+        },
+        stage: 1,
+        puzzle: 5,
+        question: 'This is the question',
+        response: 'This is the response',
+      },
+      {
+        student: {
+          id: 2,
+          name: 'Student 2'
+        },
+        stage: 2,
+        puzzle: 5,
+        question: 'This is the question',
+        response: 'This is the response'
+      },
+      {
+        student: {
+          id: 2,
+          name: 'Student 2'
+        },
+        stage: 1,
+        puzzle: 6,
+        question: 'Another uestion',
+        response: 'This is the response'
+      }
+    ]
+
+    render json: data
+  end
+
   private
 
   def load_student

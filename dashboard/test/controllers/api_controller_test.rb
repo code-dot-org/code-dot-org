@@ -18,6 +18,29 @@ class ApiControllerTest < ActionController::TestCase
     @student_3.reload
   end
 
+  test "should get text_responses for section with default script" do
+    get :section_text_responses, section_id: @section.id
+    assert_response :success
+
+    assert_equal Script.twenty_hour_script, assigns(:script)
+  end
+
+  test "should get text_responses for section with section script" do
+    get :section_text_responses, section_id: @flappy_section.id
+    assert_response :success
+
+    assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
+  end
+
+  test "should get text_responses for section with specific script" do
+    script = Script.find_by_name('algebra')
+
+    get :section_text_responses, section_id: @section.id, script_id: script.id
+    assert_response :success
+
+    assert_equal script, assigns(:script)
+  end
+
   test "should get progress for section with default script" do
     get :section_progress, section_id: @section.id
     assert_response :success

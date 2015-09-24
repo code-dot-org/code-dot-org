@@ -107,7 +107,8 @@ angular: teacherDashboard
          addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
          progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
-         studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'}
+         studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'},
+         responses: {method:'GET', url:'/dashboardapi/section_text_responses/:id', isArray: true},
       });
     }]).config(['$httpProvider', function($httpProvider) {
       // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
@@ -561,47 +562,14 @@ angular: teacherDashboard
     $scope.sections = sectionsService.query();
     $scope.tab = 'responses';
 
-    //    $scope.responses = sectionsService.responses({id: $routeParams.id, script_id: scriptId});
-    $scope.responses = [
-      {
-        student: {
-          id: 1,
-          name: 'Student 1'
-        },
-        stage: 1,
-        puzzle: 5,
-        question: 'This is the question',
-        response: 'This is the response',
-      },
-      {
-        student: {
-          id: 2,
-          name: 'Student 2'
-        },
-        stage: 2,
-        puzzle: 5,
-        question: 'This is the question',
-        response: 'This is the response'
-      },
-      {
-        student: {
-          id: 2,
-          name: 'Student 2'
-        },
-        stage: 1,
-        puzzle: 6,
-        question: 'Another uestion',
-        response: 'This is the response'
-      }
-    ];
-
+    $scope.responses = sectionsService.responses({id: $routeParams.id});
     // error handling
     $scope.genericError = function(result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
     $scope.section.$promise.catch($scope.genericError);
     $scope.sections.$promise.catch($scope.genericError);
-    //    $scope.responses.$promise.catch($scope.genericError);
+    $scope.responses.$promise.catch($scope.genericError);
 
     // fill in the course dropdown with the section's default course
     $scope.section.$promise.then(
@@ -623,7 +591,7 @@ angular: teacherDashboard
     $scope.course_list = #{DashboardSection::VALID_COURSES.to_json};
 
     // wait until we have both the students and the student progress
-    $q.all([$scope.section.$promise]).then(function(){
+    $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function(){
       $scope.responsesLoaded = true;
     });
 
