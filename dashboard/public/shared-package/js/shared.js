@@ -669,7 +669,12 @@ var projects = module.exports = {
     // When owners edit a project, we don't want to hide it entirely. Instead,
     // we'll load the project and show them a small alert
     var pageAction = parsePath().action;
-    if (this.isOwner() && (pageAction === 'edit' || pageAction === 'view')) {
+
+    // NOTE: appOptions.isAdmin is not a security setting as it can be manipulated
+    // by the user. In this case that's okay, since all that does is allow them to
+    // view a project that was marked as abusive.
+    if ((this.isOwner() || appOptions.isAdmin) &&
+        (pageAction === 'edit' || pageAction === 'view')) {
       return false;
     }
 
@@ -710,7 +715,7 @@ var projects = module.exports = {
   },
 
   /**
-   * Updates the contents of the admin box for admins. We have no knolwedge
+   * Updates the contents of the admin box for admins. We have no knowledge
    * here whether we're an admin, and depend on dashboard getting this right.
    */
   showAdmin: function() {
