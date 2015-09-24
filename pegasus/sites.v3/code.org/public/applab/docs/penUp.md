@@ -36,11 +36,12 @@ ____________________________________________________
 
 **Example 1**
 
-<pre>
+
+```
 speed(20);          // sets the speed to 20, so its easier to see the turtle's movement
 penUp();            // stops the turtle from drawing a trail behind it as it moves
 moveForward(100);   // moves the turtle forward 100 pixels
-</pre>
+```
 
 [/example]
 
@@ -52,7 +53,8 @@ ____________________________________________________
 
 This example uses penUp and penDown to draw a dotted line.
 
-<pre>
+
+```
 speed(20);                    // sets the speed to 20, so its easier to see the turtle's movement
 penWidth(3);                  // sets the pen's thickness to 3 pixels
 penUp();                      // lifts the pen up so the turtle does not leave a trail behind it as it moves
@@ -65,7 +67,7 @@ for (var i = 0; i < 5; i++) { // repeats the code in this block 5 times
   moveForward(25);            // moves the turtle forward 25 pixels
 }
 
-</pre>
+```
 
 [/example]
 
@@ -77,7 +79,8 @@ ____________________________________________________
 
 This example uses penUp and penDown to draw a pair of eyes.
 
-<pre>
+
+```
 speed(20);          // sets the speed to 20, so its easier to see the turtle's movement
 hide();             // hides the turtle so it is no longer visible
 penDown();          // puts the pen down so the turtle leaves a trail behind it as it moves
@@ -91,7 +94,7 @@ arcRight(360, 25);  // draws the second eye, a circle with a 25 pixel diameter (
 penUp();            // lifts the pen up so the turtle does not leave a trail behind it as it moves
 move(25, 10);       // moves the turtle inside the circle (second eye)
 dot(10);            // draws a 10 pixel dot (second pupil)
-</pre>
+```
 
 
 [/example]
@@ -101,9 +104,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 penUp();
-</pre>
+```
 
 [/syntax]
 
