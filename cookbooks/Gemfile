@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+ruby '2.0.0'
+
+gem 'test-kitchen'
+gem 'kitchen-docker'
+# Use with solve 2.0 to remove gecode dependency (cf. berkshelf/solve#46)
+gem 'berkshelf', github: 'wjordan/berkshelf'

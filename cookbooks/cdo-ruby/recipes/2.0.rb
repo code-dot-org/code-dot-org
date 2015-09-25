@@ -1,7 +1,4 @@
-#
-# Cookbook Name:: cdo-ruby-2.0
-# Recipe:: default
-#
+# Installs Ruby 2.0 using the default Ubuntu 14.04 packages.
 
 include_recipe "build-essential"
 
@@ -32,7 +29,6 @@ end
 
 execute "update-system-gems" do
   command "gem update --system"
-  user "root"
   action :nothing
   notifies :run, "execute[pristine-gems]", :immediately
 end
@@ -43,17 +39,13 @@ execute "pristine-gems" do
   action :nothing
 end
 
-gem_package "bundler" do
-  action :upgrade
-  version '1.10.4'
+# Fix RubyGems bug that created ~/.gem with root permissions in the underlying user's home folder.
+require 'etc'
+user = Etc.getlogin
+home = Etc.getpwnam(user).dir
+directory "#{home}/.gem" do
+  owner user
+  group user
+  recursive true
+  only_if { File.directory?("#{home}/.gem") }
 end
-
-# These packages are used by Gems we install via Bundler later.
-apt_package 'libxslt1-dev'
-apt_package 'libssl-dev'
-apt_package 'zlib1g-dev'
-apt_package 'imagemagick'
-apt_package 'libmagickcore-dev'
-apt_package 'libmagickwand-dev'
-apt_package 'pdftk'
-apt_package 'enscript'
