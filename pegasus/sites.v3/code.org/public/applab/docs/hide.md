@@ -36,10 +36,11 @@ ____________________________________________________
 
 **Example 1**
 
-<pre>
+
+```
 hide();               // hides the turtle so it is no longer visible
 moveForward(100);     // moves the turtle forward 100 pixels
-</pre>
+```
 
 [/example]
 
@@ -51,7 +52,8 @@ ____________________________________________________
 
 This example creates two buttons that allow you to switch between showing and hiding the turtle.
 
-<pre>
+
+```
 button("hide-turtle", "hide");                      // creates a hide button
 button("show-turtle", "show");                      // creates a show button
 onEvent("hide-turtle", "click", function(event) {   // when the hide button is clicked the turtle will
@@ -62,7 +64,7 @@ onEvent("show-turtle", "click", function(event) {   // when the show button is c
                                                     //    be visible
   show();
 });
-</pre>
+```
 
 
 [/example]
@@ -72,9 +74,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 hide();
-</pre>
+```
 
 [/syntax]
 

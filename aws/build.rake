@@ -296,6 +296,8 @@ task :dashboard_unit_tests do
     # Unit tests mess with the database so stop the service before running them and
     # reset the database afterward.
     RakeUtils.stop_service CDO.dashboard_unicorn_name
+    HipChat.log "Resetting <b>dashboard</b> database..."
+    RakeUtils.rake 'db:schema:load'
     HipChat.log 'Running <b>dashboard</b> unit tests...'
     begin
       RakeUtils.rake 'test'
@@ -304,10 +306,6 @@ task :dashboard_unit_tests do
       HipChat.developers 'Unit tests for <b>dashboard</b> failed.', color: 'red', notify: 1
       raise
     end
-    HipChat.log "Resetting <b>dashboard</b> database..."
-    RakeUtils.rake 'db:schema:load'
-    HipChat.log "Reseeding <b>dashboard</b>..."
-    RakeUtils.rake 'seed:all'
     RakeUtils.start_service CDO.dashboard_unicorn_name
   end
 end
@@ -316,7 +314,7 @@ task :dashboard_browserstack_ui_tests do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '90', '--auto_retry', '--html'
+      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '110', '--auto_retry', '--html'
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         HipChat.log message
@@ -334,7 +332,8 @@ task :dashboard_eyes_ui_tests do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI visual tests...'
-      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7', '-d', 'test-studio.code.org', '--eyes', '--html', '--auto_retry', '-f', 'features/applab/appLabEyes.feature,features/contractEditor.feature,features/eyes.feature', '--parallel', '3'
+      eyes_features = `grep -lr '@eyes' features`.split("\n")
+      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7', '-d', 'test-studio.code.org', '--eyes', '--html', '-f', eyes_features.join(","), '--parallel', eyes_features.count.to_s
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
         HipChat.log message

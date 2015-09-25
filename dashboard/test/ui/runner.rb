@@ -294,7 +294,8 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
       message += " <a href='#{link}'>☁ html output</a>"
     end
 
-    message += "<br/><i>command line: #{arguments + first_time_arguments}</i>"
+    message += "<br/><i>command line: cucumber #{arguments + first_time_arguments}</i>"
+    message += "<br/><i>rerun: ./runner.rb -c #{browser_name} -f #{feature} --html</i>"
     HipChat.log message, color: 'red'
     HipChat.developers message, color: 'red' if CDO.hip_chat_logging
   end
