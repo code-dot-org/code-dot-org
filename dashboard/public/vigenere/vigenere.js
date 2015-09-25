@@ -44,10 +44,6 @@ $(document).ready(function () {
 
   renderVigenereTable();
 
-  if (options.instructions) {
-    plaintext_input.val(options.instructions);
-  }
-
   cleanInput(plaintext_input);
   cleanInput(keyword_input);
 
