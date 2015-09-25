@@ -143,9 +143,6 @@ Blockly.ScrollOnBlockDragHandler.prototype.panIfOverEdge = function (block,
     return;
   }
 
-  var viewportBox = this.blockSpace_.getViewportBox();
-  var blockBox = block.getBox();
-  var blockOverflows = Blockly.getBoxOverflow(viewportBox, blockBox);
   var mouseSvg = Blockly.mouseCoordinatesToSvg(
     mouseClientX, mouseClientY, this.blockSpace_.blockSpaceEditor.svg_);
   var mouseViewport = Blockly.svgCoordinatesToViewport(
@@ -153,6 +150,27 @@ Blockly.ScrollOnBlockDragHandler.prototype.panIfOverEdge = function (block,
   var mouseBlockSpace = Blockly.viewportCoordinateToBlockSpace(
     mouseViewport, this.blockSpace_);
 
+  var viewportBox = this.blockSpace_.getViewportBox();
+  var blockBox = block.getBox();
+
+  var FALLBACK_DRAG_RADIUS = 15;
+  // When dragged block is taller than the viewport, reduce the drag-bounds so
+  // we don't have infinite auto-scroll.
+  if (Blockly.isBoxTallerThan(blockBox, viewportBox)) {
+    // Center box around cursor with fallback radius
+    blockBox.top = Math.max(blockBox.top, mouseBlockSpace.y - FALLBACK_DRAG_RADIUS);
+    blockBox.bottom = Math.min(blockBox.bottom, mouseBlockSpace.y + FALLBACK_DRAG_RADIUS);
+  }
+
+  // Same rule, but horizontal
+  if (Blockly.isBoxWiderThan(blockBox, viewportBox)) {
+    // Center box around cursor with fallback radius
+    blockBox.left = Math.max(blockBox.left, mouseBlockSpace.x - FALLBACK_DRAG_RADIUS);
+    blockBox.right = Math.min(blockBox.right, mouseBlockSpace.x + FALLBACK_DRAG_RADIUS);
+  }
+
+  // Calculate how far out-of-bounds the dragged block/cursor is.
+  var blockOverflows = Blockly.getBoxOverflow(viewportBox, blockBox);
   var mouseOverflows = Blockly.getPointBoxOverflow(viewportBox,
     new goog.math.Coordinate(mouseBlockSpace.x, mouseBlockSpace.y));
 
