@@ -111,6 +111,7 @@ all_passed = true
 After do |scenario|
   all_passed = all_passed && scenario.passed?
   log_result all_passed
+  @browser.quit unless ENV['TEST_LOCAL']
 end
 
 at_exit do
