@@ -158,12 +158,12 @@ class AssetsTest < Minitest::Test
     channel = create_channel(@channels)
 
     put @assets, channel, 'test.png', 'version 1', 'image/png'
-
     get @assets, channel, 'test.png'
     v1_last_modified = @assets.last_response.headers['Last-Modified']
 
-    put @assets, channel, 'test.png', 'version 2', 'image/png'
+    sleep 1
 
+    put @assets, channel, 'test.png', 'version 2', 'image/png'
     get @assets, channel, 'test.png', '', 'HTTP_IF_MODIFIED_SINCE' => v1_last_modified
     assert_equal 200, @assets.last_response.status
     v2_last_modified = @assets.last_response.headers['Last-Modified']
