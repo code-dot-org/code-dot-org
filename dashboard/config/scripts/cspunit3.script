@@ -101,12 +101,15 @@ level 'U3L07 - seaGrass'
 level 'U3L07 - allSeaGrass'
 level 'U3L07 - sunBeams'
 level 'U3L07 - Free Play Loops and Random'
+assessment 'U3L07 - MC remove line of code loops'
 assessment 'U3L07 Free Response Reflection'
 
 
 #9
 stage 'Scene Design Part 1: Plan'
 level 'U3L09 Student Lesson Introduction'
+level 'U3L08 - individualCode'
+level 'U3L08 - digitalScene'
 assessment 'U3L09 Free Response Getting Started'
 assessment 'U3L09 Free Response Wrap Up'
 

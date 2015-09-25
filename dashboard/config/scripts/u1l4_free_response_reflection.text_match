@@ -10,3 +10,7 @@ A binary message was recorded as a wave as shown in the image below. Can you dec
 ![](https://images.code.org/c8ba0db14fabb778dc034ac4656259fa-image-1434429617999.png)
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+In order to decode this message into As and Bs, you need to know how often time is "ticking" on the x-axis of the graph. In more technical terms, you need to know the "bitrate" of the information being sent -- how frequently is a new bit being sent? For example, if the "clock" is ticking at one speed, this could be interpreted as ABBAABBB, but if the clock is ticking twice as fast then message could be interpreted as AABBBBAAAABBBBBB. So without that information, it's impossible to know what the message is. 
+MARKDOWN
