@@ -15,7 +15,6 @@ Feature: App Lab Scenarios
 
   @no_mobile
   Scenario: App Lab Share
-
     # Create an app with a "hello world" button (omitting closing paren for auto-correct).
     Then I press "show-code-header"
     And I wait to see Droplet text mode
@@ -40,7 +39,6 @@ Feature: App Lab Scenarios
 
   @no_mobile
   Scenario: App Lab Http Image
-
     # Create an app with an http image.
     Then I press "show-code-header"
     And I wait to see Droplet text mode
@@ -48,3 +46,15 @@ Feature: App Lab Scenarios
     And I press "runButton"
     And I wait until element "#divApplab > .screen > img#test123" is visible
     And element "#divApplab > .screen > img#test123" has attribute "src" equal to "//studio.code.org/media?u=http%3A%2F%2Fexample.com"
+
+  @no_mobile
+  Scenario: App Lab Clear Puzzle and Design Mode
+    # Create an app with a design mode button, then clear the puzzle
+    And I press "designModeButton"
+    And I drag block matching selector "[data-element-type='BUTTON']" to block matching selector "#visualization"
+    And I press "codeModeButton"
+    And Applab HTML has a button
+    And I press "clear-puzzle-header"
+    And element "#confirm-button" is visible
+    And I press "confirm-button"
+    And Applab HTML has no button
