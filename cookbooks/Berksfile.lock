@@ -1,11 +1,14 @@
 DEPENDENCIES
   apt (~> 2.3.8)
+  brightbox-ruby (~> 1.2.1)
   build-essential (~> 2.1.3)
   chef-client (~> 4.2.0)
   ntp (~> 1.8.6)
 
 GRAPH
   apt (2.3.10)
+  brightbox-ruby (1.2.1)
+    apt (>= 0.0.0)
   build-essential (2.1.3)
   chef-client (4.2.0)
     cron (>= 1.2.0)

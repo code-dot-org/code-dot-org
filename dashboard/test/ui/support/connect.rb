@@ -2,15 +2,22 @@ require 'selenium/webdriver'
 
 $browser_configs = JSON.load(open("browsers.json"))
 
-if ENV['TEST_LOCAL'] == 'true'
-  # This drives a local installation of ChromeDriver running on port 9515, instead of BrowserStack.
-  browser = Selenium::WebDriver.for :chrome, :url=>"http://127.0.0.1:9515"
+MAX_CONNECT_RETRIES = 3
 
+def create_local_browser
+  browser = Selenium::WebDriver.for :chrome, :url=>"http://127.0.0.1:9515"
   if ENV['MAXIMIZE_LOCAL'] == 'true'
     max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")
     browser.manage.window.resize_to(max_width, max_height)
   end
-else
+  browser
+end
+
+def local_browser
+  @local_browser ||= create_local_browser
+end
+
+def saucelabs_browser
   if CDO.saucelabs_username.blank?
     raise "Please define CDO.saucelabs_username"
   end
@@ -34,12 +41,20 @@ else
 
   puts "Capabilities: #{capabilities.inspect}"
 
+  browser = nil
   Time.now.to_i.tap do |start_time|
-    browser = Selenium::WebDriver.for(:remote,
-                                      url: url,
-                                      desired_capabilities: capabilities,
-                                      http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
-    puts "Got browser in #{Time.now.to_i - start_time}s"
+    retries = 0
+    begin
+      browser = Selenium::WebDriver.for(:remote,
+                                        url: url,
+                                        desired_capabilities: capabilities,
+                                        http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
+    rescue URI::InvalidURIError
+      raise if retries >= MAX_CONNECT_RETRIES
+      retres += 1
+      retry
+    end
+    puts "Got browser in #{Time.now.to_i - start_time}s with #{retries} retries"
   end
 
   puts "Browser: #{browser}"
@@ -49,11 +64,22 @@ else
     max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")
     browser.manage.window.resize_to(max_width, max_height)
   end
+
+  # let's allow much longer timeouts when searching for an element
+  browser.manage.timeouts.implicit_wait = 2.minutes
+  browser.send(:bridge).setScriptTimeout(1.minute * 1000)
+
+  browser
 end
 
-# let's allow much longer timeouts when searching for an element
-browser.manage.timeouts.implicit_wait = 2.minutes
-browser.send(:bridge).setScriptTimeout(1.minute * 1000)
+def browser
+  if ENV['TEST_LOCAL'] == 'true'
+    # This drives a local installation of ChromeDriver running on port 9515, instead of BrowserStack.
+    local_browser
+  else
+    saucelabs_browser
+  end
+end
 
 Before do
   @browser = browser
@@ -66,10 +92,7 @@ Before do
 end
 
 def log_result(result)
-  # Do something after each scenario.
-  # The +scenario+ argument is optional, but
-  # if you use it, you can inspect status with
-  # the #failed?, #passed? and #exception methods.
+  return if ENV['TEST_LOCAL'] == 'true'
 
   url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{@sauce_session_id}"
   require 'httparty'
@@ -79,6 +102,11 @@ def log_result(result)
 end
 
 all_passed = true
+
+# Do something after each scenario.
+# The +scenario+ argument is optional, but
+# if you use it, you can inspect status with
+# the #failed?, #passed? and #exception methods.
 
 After do |scenario|
   all_passed = all_passed && scenario.passed?

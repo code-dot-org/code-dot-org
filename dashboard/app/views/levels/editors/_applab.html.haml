@@ -5,11 +5,14 @@
 .field
   = f.label :app_width
   %p Integer representing the width of the app in pixel coordinates. Default is 320.
-  = f.number_field :app_width
+  = f.number_field :app_width, disabled: true
 .field
   = f.label :app_height
-  %p Integer representing the height of the app in pixel coordinates. Default is 480.
-  = f.number_field :app_height
+  %p
+    Integer representing the height of the app in pixel coordinates. Default is 480. Note:
+    this number includes 30 pixels of space reserved for the footer (i.e. if I make the
+    height 30, it will consist entirely of a footer).
+  = f.number_field :app_height, disabled: true
 .field
   = f.label :show_turtle_before_run, 'Show turtle before Run is pressed'
   = boolean_check_box f, :show_turtle_before_run
@@ -66,7 +69,7 @@
 
 .field
   = f.label 'Table Data'
-  You can copy the data array from the debug view of code.org/edit-csp-table/
+  You can copy the data array from the debug view of code.org/v3/edit-csp-table/
   %pre
     = preserve do
       :escaped
@@ -81,7 +84,7 @@
 
 .field
   = f.label 'Key-Value Data'
-  You can copy the data array from the debug view of code.org/edit-csp-properties/
+  You can copy the data array from the debug view of code.org/v3/edit-csp-properties/
   %pre
     = preserve do
       :escaped
