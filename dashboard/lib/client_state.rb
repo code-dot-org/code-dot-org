@@ -13,9 +13,8 @@ class ClientState
 
   # Resets all client state (level progress, lines of code, videos seen, etc.)
   def reset
-    # Also reset unencrypted cookies in case we are in a rolled-back state.
-    session[:lines] = cookies[:lines] = nil
-    session[:progress] = cookies[:progress] = nil
+    cookies[:lines] = nil
+    cookies[:progress] = nil
     session[:videos_seen] = nil
     session[:callouts_seen] = nil
   end
@@ -23,15 +22,15 @@ class ClientState
   # Returns the number of lines written in the current user session.
   # return [Integer]
   def lines
-    undo_cookie_migration_on_rollback
-    session[:lines] || 0
+    migrate_cookies
+    (cookies[:lines] || 0).to_i
   end
 
   # Add additional lines completed in the given session
   # @param [Integer] added_lines
   def add_lines(added_lines)
-    undo_cookie_migration_on_rollback
-    session[:lines] = lines + added_lines
+    migrate_cookies
+    cookies.permanent[:lines] = (lines + added_lines).to_s
   end
 
   # Returns the progress value for the given level_id, or 0 if there
@@ -39,23 +38,23 @@ class ClientState
   # @param [Integer] level_id
   # return [Integer]
   def level_progress(level_id)
-    undo_cookie_migration_on_rollback
-    (session[:progress] || {}).fetch(level_id.to_i, 0)
+    migrate_cookies
+    progress_hash.fetch(level_id.to_s, 0)
   end
 
   # Sets the progress for the given level_id for the current session.
   # @param [Integer] level_id
   # @param [Integer] progress
-  def set_level_progress(level_id, progress)
-    undo_cookie_migration_on_rollback
-    session[:progress] ||= {}
-    session[:progress][level_id.to_i] = progress
+  def set_level_progress(level_id, progress_value)
+    migrate_cookies
+    updated_progress = progress_hash.merge({level_id.to_s => progress_value})
+    cookies.permanent[:progress] = JSON.generate(updated_progress)
   end
 
   # Returns true if there has been no progress in completing levels for
   # the current session.
   def level_progress_is_empty_for_test
-    !session[:progress] || session[:progress].empty?
+    progress_hash.empty?
   end
 
   # Adds 'script' to the set of scripts completed for the current session.
@@ -118,30 +117,16 @@ class ClientState
 
   private
 
-  # Migrates cookies[:progress] back to session[:progress] in case we end up rolling
-  # back the release that does the forward migration. Except in that case, this code
-  # does nothing becaue we don't otherwise use cookies[:progress] and cookies[:lines].
-  def undo_cookie_migration_on_rollback
-    if cookies[:progress].present? && session[:progress].blank?
-      begin
-        progress = JSON.parse(cookies[:progress])
-        # Note that we need to turn string keys back into integers.
-        session[:progress] = progress.to_a.inject({}) { |r,s| r.merge({s[0].to_i => s[1]}) }
-        cookies.permanent[:progress] = nil
-      rescue JSON::ParserError
-        # The cookie was malformed, so migration is not possible.
-      end
-    end
-
-    if cookies[:lines].present? && session[:lines].blank?
-      session[:lines] = cookies[:lines].to_i
-      cookies[:lines] = nil
-    end
+  def progress_hash
+    migrate_cookies
+    progress = cookies[:progress]
+    progress ? JSON.parse(progress) : {}
+  rescue JSON::ParserError
+    return {}
   end
 
-  # Migrates session state to unencrypted cookies.  This is currently used in tests only
-  # but will be enabled in the main code path in a future update.
-  def migrate_cookies_for_test
+  # Migrates session state to unencrypted cookies.
+  def migrate_cookies
     if session[:progress]
       cookies.permanent[:progress] = JSON.generate(session[:progress])
       session[:progress] = nil

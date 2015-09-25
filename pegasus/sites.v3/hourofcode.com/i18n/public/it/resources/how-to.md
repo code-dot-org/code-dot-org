@@ -45,7 +45,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 **Show an inspirational video:**
 
   * Il video originale del sito Code.org, in collaborazione con Bill Gates, Mark Zuckerberg e la stella del basket americano Chris Bosh (Ci sono versioni da [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuti](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minuti](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * Il [video di lancio dell'Ora del Codice 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), o il < % if @country == 'uk' %> [video dell'Ora del Codice 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) < % aelse %> [video dell'Ora del Codice 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * Il [video di lancio dell'Ora del Codice 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), o il <% if @country == 'uk' %> [video dell'Ora del Codice 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [video dell'Ora del Codice 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [Il video del Presidente Obama che invita gli studenti ad imparare l'informatica](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
