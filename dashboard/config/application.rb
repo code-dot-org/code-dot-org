@@ -30,6 +30,7 @@ module Dashboard
     config.middleware.insert_after PropertiesApi, TablesApi
     config.middleware.insert_after TablesApi, SharedResources
     config.middleware.insert_after SharedResources, NetSimApi
+    puts "Done inserting middleware"
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
       config.middleware.insert_after SharedResources, PegasusSites
@@ -61,6 +62,7 @@ module Dashboard
     config.i18n.default_locale = 'en-us'
     locales = YAML.load_file("#{Rails.root}/config/locales.yml")
     LOCALES = Hash[locales.map {|k, v| [k.downcase, v.class == String ? v.downcase : v]}]
+    puts "Setting up locales"
     LOCALES.each do |locale, data|
       next unless data.is_a? Hash
       data.symbolize_keys!
@@ -71,6 +73,7 @@ module Dashboard
         config.i18n.fallbacks[locale] = data[:fallback]
       end
     end
+    puts "Done with locales"
 
     config.prize_providers = YAML.load_file("#{Rails.root}/config/prize_providers.yml")
 
