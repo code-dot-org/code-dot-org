@@ -589,6 +589,8 @@ Applab.init = function(config) {
 
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
+  skin.smallStaticAvatar = null;
+  skin.staticAvatar = null;
   level = config.level;
   copyrightStrings = config.copyrightStrings;
   Applab.user = {
@@ -1331,7 +1333,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + utils.getPegasusHost() + '/edit-csp-app/' + AppStorage.getChannelId(),
+    '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
 };
 

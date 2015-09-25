@@ -49,8 +49,12 @@ Breakfast and lunch will be served.
 <br/><br/>
 **Location**
 
-TBD
-<br/><br/>
+Loyola University - Water Tower Campus<br/> 
+Corboy Law Center<br/> 
+Room: TBD<br/>
+25 E Pearson St <br/>
+Chicago, IL 60611
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger
@@ -112,8 +116,11 @@ Breakfast and lunch will be served.
 <br/><br/>
 **Location**
 
-TBD
-<br/><br/>
+DePaul University<br/> 
+CDM Room 924<br/>
+243 S. Wabash Ave<br/> 
+Chicago, IL 60604
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger
