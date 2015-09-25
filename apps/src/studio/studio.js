@@ -873,20 +873,16 @@ Studio.onTick = function() {
 
   sortDrawOrder();
 
-  if (!Studio.succeeded && checkFinished()) {
-    Studio.succeeded = true;
-    Studio.succeededTime = new Date().getTime();
+  var currentTime = new Date().getTime();
+ 
+  if (!Studio.succeededTime && checkFinished()) {
+    Studio.succeededTime = currentTime;
   }
 
-  if (Studio.succeeded) {
-    if (level.delayCompletion) {
-      var currentTime = new Date().getTime();
-      if (currentTime > Studio.succeededTime + level.delayCompletion) {
-        Studio.onPuzzleComplete();
-      }
-    } else if (!spritesNeedMoreAnimationFrames) {
-      Studio.onPuzzleComplete();
-    }
+  if (Studio.succeededTime && 
+      !spritesNeedMoreAnimationFrames && 
+      (!level.delayCompletion || currentTime > Studio.succeededTime + level.delayCompletion)) {
+    Studio.onPuzzleComplete();
   }
 };
 
@@ -1198,11 +1194,13 @@ Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
 /**
  * Get a wall value (either a SquareType.WALL value or a specific row/col tile
  * from a 16x16 grid shifted into bits 16-23).
- *
- * Should not be called with rows or cols that are out of bounds!
  */
 
 Studio.getWallValue = function (row, col) {
+  if (row < 0 || row >= Studio.ROWS || col < 0 || col >= Studio.COLS) {
+    return 0;
+  }
+
   if (Studio.walls) {
     return skin[Studio.walls] ? (skin[Studio.walls][row][col] << constants.WallCoordsShift): 0;
   } else {
@@ -1505,6 +1503,10 @@ Studio.init = function(config) {
     studioApp.loadAudio(skin.retroSound, 'retro');
     studioApp.loadAudio(skin.slapSound, 'slap');
     studioApp.loadAudio(skin.hitSound, 'hit');
+    studioApp.loadAudio(skin.character1sound1, 'character1sound1');
+    studioApp.loadAudio(skin.character1sound2, 'character1sound2');
+    studioApp.loadAudio(skin.character1sound3, 'character1sound3');
+    studioApp.loadAudio(skin.character1sound4, 'character1sound4');
   };
 
   config.afterInject = function() {
@@ -1803,7 +1805,7 @@ Studio.reset = function(first) {
   Studio.levelRestarted = true;
 
   // Reset whether level has succeeded.
-  Studio.succeeded = false;
+  Studio.succeededTime = null;
 };
 
 /**
@@ -2425,8 +2427,8 @@ Studio.clearDebugRects = function() {
   $(".debugRect").remove();
 };
 
-Studio.drawWallTile = function (svg, wallVal, row, col, largeTile) {
-  var srcRow, srcCol;
+Studio.drawWallTile = function (svg, wallVal, row, col) {
+  var srcRow, srcCol, srcWallType = 0;
   if (wallVal == SquareType.WALL) {
     // use a random coordinate
     // TODO (cpirich): these should probably be chosen once at level load time
@@ -2441,6 +2443,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col, largeTile) {
   } else {
     srcRow = (wallVal & constants.WallCoordRowMask) >> constants.WallCoordRowShift;
     srcCol = (wallVal & constants.WallCoordColMask) >> constants.WallCoordColShift;
+    srcWallType = (wallVal & constants.WallTypeMask) >> constants.WallTypeShift;
   }
 
   // We might end up scaling this piece a little.  In that case, it's likely
@@ -2453,9 +2456,9 @@ Studio.drawWallTile = function (svg, wallVal, row, col, largeTile) {
       srcRow <= skin.enlargeWallTiles.maxRow &&
       srcCol >= skin.enlargeWallTiles.minCol &&
       srcCol <= skin.enlargeWallTiles.maxCol) {
-    multiplySize = 1.4;
-    addOffset = -0.2;
-  } else if (largeTile) {
+    multiplySize = 1.2;
+    addOffset = -0.1;
+  } else if (srcWallType === constants.WallType.DOUBLE_SIZE) {
     multiplySize = 2;
   } else {
     multiplySize = 1;
@@ -2523,22 +2526,6 @@ Studio.createLevelItems = function (svg) {
   }
 };
 
-Studio.isWallTile = function(row, col) {
-  if (row < 0 || row >= Studio.ROWS || col < 0 || col >= Studio.COLS) {
-    return false;
-  }
-
-  return (Studio.map[row][col] & SquareType.WALL || (Studio.walls !== null && skin[Studio.walls] && skin[Studio.walls][row][col]));
-};
-
-Studio.getWallTile = function(row, col) {
-  if (Studio.walls !== null) {
-    return skin[Studio.walls][row][col];
-  } else if (Studio.map[row][col] & SquareType.WALL) {
-    return 1;
-  }
-};
-
 Studio.drawMapTiles = function (svg) {
   var row, col;
 
@@ -2554,29 +2541,37 @@ Studio.drawMapTiles = function (svg) {
 
   for (row = 0; row < Studio.ROWS; row++) {
     for (col = 0; col < Studio.COLS; col++) {
-      if (Studio.isWallTile(row, col)) {
+      var wallVal = Studio.getWallValue(row, col);
+      if (wallVal) {
         // Skip if we've already drawn a large tile that covers this square.
         if (tilesDrawn[row][col]) {
           continue;
         }
 
+        var srcWallType = (wallVal & constants.WallTypeMask) >> constants.WallTypeShift;
+
+        if (srcWallType === constants.WallType.DOUBLE_SIZE) {
+          tilesDrawn[row][col] = true;
+          tilesDrawn[row][col+1] = true;
+          tilesDrawn[row+1][col] = true;
+          tilesDrawn[row+1][col+1] = true;          
+        }
+/*
         var largeTile = false;
 
         // If we can draw a large tile here, then do so, and make sure
         // we won't draw any more tiles where it extends over.
-        if (Studio.isWallTile(row, col+1) &&
-            Studio.isWallTile(row+1, col) &&
-            Studio.isWallTile(row+1, col+1)) {
+        if (Studio.getWallValue(row, col+1) &&
+            Studio.getWallValue(row+1, col) &&
+            Studio.getWallValue(row+1, col+1)) {
           largeTile = true;
           tilesDrawn[row][col] = true;
           tilesDrawn[row][col+1] = true;
           tilesDrawn[row+1][col] = true;
           tilesDrawn[row+1][col+1] = true;
         }
-
-        var wallVal = Studio.getWallValue(row, col);
-
-        Studio.drawWallTile(spriteLayer, wallVal, row, col, largeTile);
+*/
+        Studio.drawWallTile(spriteLayer, wallVal, row, col);
       }
     }
   }
@@ -2752,6 +2747,13 @@ Studio.displayScore = function() {
   score.setAttribute('visibility', 'visible');
 };
 
+/**
+ * Start showing an upwards-floating score at the location of sprite 0.
+ * The floatingScore level property should only be set to true if this
+ * is desired.
+ @param {number} changeValue The value that is displayed.
+ */
+
 Studio.displayFloatingScore = function(changeValue) {
   if (!level.floatingScore) {
     return;
@@ -2764,7 +2766,7 @@ Studio.displayFloatingScore = function(changeValue) {
   floatingScore.setAttribute('y', sprite.y + sprite.height/2);
   floatingScore.setAttribute('opacity', 1);
   floatingScore.setAttribute('visibility', 'visible');  
-}
+};
 
 Studio.updateFloatingScore = function() {
   if (!level.floatingScore) {
@@ -2772,15 +2774,15 @@ Studio.updateFloatingScore = function() {
   }
 
   var floatingScore = document.getElementById('floatingScore');
-  var y = floatingScore.getAttribute('y');
-  var opacity = floatingScore.getAttribute('opacity');
+  var y = parseInt(floatingScore.getAttribute('y'));
+  var opacity = parseFloat(floatingScore.getAttribute('opacity'));
   if (opacity > 0) {
-    opacity -= 0.025;
+    opacity += constants.floatingScoreChangeOpacity;
     floatingScore.setAttribute('opacity', opacity);
   }
-  y -= 2;
+  y += constants.floatingScoreChangeY;
   floatingScore.setAttribute('y', y);
-}
+};
 
 Studio.showCoordinates = function() {
   var sprite = Studio.sprite[Studio.protagonistSpriteIndex || 0];
@@ -3234,7 +3236,6 @@ Studio.setWalls = function (opts) {
   }
 
   if (opts.value === Studio.walls) {
-    Studio.fixSpriteLocation();
     return;
   }
 
@@ -3253,6 +3254,7 @@ Studio.setWalls = function (opts) {
 /**
  * A call to setWalls might place a wall on top of the sprite.  In that case,
  * find a new nearby location for the sprite that doesn't have a wall.
+ * Currently a work in progress with known issues.
  */
 Studio.fixSpriteLocation = function () {
   if (level.wallMapCollisions && level.blockMovingIntoWalls) {
@@ -3278,7 +3280,7 @@ Studio.fixSpriteLocation = function () {
 
       for (var row = minRow; row <= maxRow; row++) {
         for (var col = minCol; col <= maxCol; col++) {
-          if (! Studio.isWallTile(row, col)) {
+          if (! Studio.getWallValue(row, col)) {
             sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2;
             sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 - 4;
             sprite.dir = Direction.NONE;
@@ -3288,7 +3290,7 @@ Studio.fixSpriteLocation = function () {
         }
       }
     }
-  };
+  }
 };
 
 
