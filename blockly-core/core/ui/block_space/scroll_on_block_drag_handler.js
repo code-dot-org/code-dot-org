@@ -170,8 +170,8 @@ Blockly.ScrollOnBlockDragHandler.prototype.panIfOverEdge = function (block,
   // When dragged block is almost as tall as the viewport, use a small bounding
   // region around the cursor instead of the whole block bounding box to trigger
   // autoscrolling.
-  var blockHeight = blockBox.bottom - blockBox.top;
-  var viewportHeight = viewportBox.bottom - viewportBox.top;
+  var blockHeight = Blockly.getBoxHeight(blockBox);
+  var viewportHeight = Blockly.getBoxHeight(viewportBox);
   if (blockHeight > viewportHeight * OVERSIZE_BLOCK_THRESHOLD) {
     // Center box around cursor with fallback radius
     blockBox.top = Math.max(blockBox.top, mouseBlockSpace.y - FALLBACK_DRAG_MARGIN);
@@ -179,8 +179,8 @@ Blockly.ScrollOnBlockDragHandler.prototype.panIfOverEdge = function (block,
   }
 
   // Same rule, but horizontal
-  var blockWidth = blockBox.right - blockBox.left;
-  var viewportWidth = viewportBox.right - viewportBox.left;
+  var blockWidth = Blockly.getBoxWidth(blockBox);
+  var viewportWidth = Blockly.getBoxWidth(viewportBox);
   if (blockWidth > viewportWidth * OVERSIZE_BLOCK_THRESHOLD) {
     // Center box around cursor with fallback radius
     blockBox.left = Math.max(blockBox.left, mouseBlockSpace.x - FALLBACK_DRAG_MARGIN);
