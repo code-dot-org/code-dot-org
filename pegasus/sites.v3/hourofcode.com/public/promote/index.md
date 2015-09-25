@@ -39,7 +39,7 @@ nav: promote_nav
 
 <a id="logo"></a>
 ## Use the Hour of Code logo to spread the word
-[![image](/images/fit-200/hour-of-code-logo.png)](/images/hour-of-code-logo.png)
+[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](http://images.code.org/share/hour-of-code-logo.zip)
 
 <a id="stickers"></a>
 ## Print these stickers to give to your students
