@@ -2,9 +2,10 @@
 
 # Teacher Announcements
 
-August 24, 2015 &mdash; We are excited to announce that we have fixed a bug with auto-scrolling on Code Studio. We hope this improvement helps make the coding experience easier for you and your students.
+September 24, 2015 &mdash; Help make this year's [Hour of Code](http://hourofcode.com) even better for other educators. 
+Submit your creative lesson plans by October 15th.
 
-[Learn More >](http://teacherblog.code.org/post/127486457539/ever-since-we-launched-code-studio-almost-2-years)
+[Learn More >](http://teacherblog.code.org/post/129812672494/for-2015s-computer-science-education-week-the)
 <br/>
 [View all announcements >](http://teachcodeorg.tumblr.com/)
 
@@ -12,13 +13,14 @@ August 24, 2015 &mdash; We are excited to announce that we have fixed a bug with
 
 [video]
 
-![scrolling](/images//fit-175/scrolling-thumb.png "scrolling")
+![hoc](https://hourofcode.com/images/fit-250/banner3.jpg "hoc")
 
 [/video]
 
 
 
 <!---
+	![hoc](https://hourofcode.com/images/fit-250/banner3.jpg "hoc")
 
 [video]
 

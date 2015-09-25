@@ -10,11 +10,7 @@ title: Live Events for Teachers
 
 Code.org hosts regular, free virtual events for our community. Here are a few highlights from [our current schedule](http://www.eventbrite.com/o/codeorg-teacher-community-8317327577).
 
-### Q&A with Code.org Founder Hadi Partovi
-#### Wednesday, September 23, 2015 from 7:00 PM to 8:00 PM (CDT) 
-Join [Hadi Partovi](https://code.org/about/leadership/hadi_partovi), CEO and Founder of [Code.org](http://code.org) for a discussion of why every student should have the opportunity to shape the 21st-century.
-<br>
-[<button>Register Now</button>](http://www.eventbrite.com/e/americas-untapped-opportunity-tickets-17987288464)
+## Upcoming Events
 
 ### Increasing Access to CS Education: What Works, What Doesn't
 #### Wednesday, October 14, 2015 from 7:00 PM to 8:00 PM (CDT) 
@@ -34,10 +30,15 @@ In this interactive webinar, you'll get a sneak peak of all the new tutorials fo
 <br>
 [<button>Register Now</button>](http://www.eventbrite.com/e/sneak-peak-2015-hour-of-code-tutorials-tickets-17987437911)
 
-
 <a href="http://www.eventbrite.com/o/codeorg-teacher-community-8317327577" target="_blank"><img src="https://www.eventbrite.com/custombutton?eid=17789364468" alt="Eventbrite - Code.org Teacher Community" /></a>
 
-<br><br>
+## Past Events
+
+### Q&A with Code.org Founder Hadi Partovi
+#### Wednesday, September 23, 2015 from 7:00 PM to 8:00 PM (CDT) 
+Join [Hadi Partovi](https://code.org/about/leadership/hadi_partovi), CEO and Founder of [Code.org](http://code.org) for a discussion of why every student should have the opportunity to shape the 21st-century.
+<br>
+[<button>View Recording</button>](https://youtu.be/GBTWl5jxPb8)
 
 <br><br>
 
