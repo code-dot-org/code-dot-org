@@ -45,13 +45,16 @@
   color: #ff8b02;
 }
 .learn-hoc-banner {
-  background-color: #f8f8f8;
+  background-color: #ebe8f1;
   padding: 10px 20px;
   margin-top: 20px;
+  border-radius: 5px;
 }
 #hoc-sign-up {
   margin-top: 0px;
+  font-size: 18px;
 }
 #hoc-teacher-guide {
-  margin-top: 20px;
+  margin-top: 6px;
+  font-size: 14px;
 }
