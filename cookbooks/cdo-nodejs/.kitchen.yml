@@ -1,0 +1,20 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+  privileged: true
+
+provisioner:
+  name: chef_zero
+  data_path: test/shared
+  require_chef_omnibus: 11.18.12
+
+platforms:
+  - name: ubuntu-14.04
+    run_list:
+      - recipe[apt]
+
+suites:
+  - name: default
+    run_list:
+      - recipe[cdo-nodejs]
