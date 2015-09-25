@@ -114,7 +114,6 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal 20, client_state.level_progress(10)
   end
 
-
   # Make sure that we correctly access and back-migrate future
   # versions of the client state, as would happen if we roll back from a future
   # version.
@@ -166,6 +165,15 @@ class ApplicationHelperTest < ActionView::TestCase
     client_state.add_callout_seen 'callout'
     assert client_state.callout_seen? 'callout'
     assert_not client_state.callout_seen? 'callout2'
+  end
+
+  test 'client state with invalid cookie' do
+    cookies[:progress] = '&*%$% mangled #$#$$'
+    assert_equal 0, client_state.level_progress(10),
+                 'Invalid cookie should show no progress'
+    client_state.set_level_progress(10, 20)
+    assert_equal 20, client_state.level_progress(10),
+                 'Should be able to overwrite invalid cookie state'
   end
 
   private
