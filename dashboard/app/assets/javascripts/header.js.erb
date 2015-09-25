@@ -1,3 +1,5 @@
+//= require jquery.cookie
+
 /**
  * Dynamic header generation and event bindings for header actions.
  */
@@ -25,10 +27,11 @@ if (!window.dashboard) {
  */
 dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId) {
   stageData = stageData || {};
-
+  // Progress Data is only provided for signed in users. Otherwise, client gets progress data from cookie
   if (progressData === null) {
     progressData = getSummarizedProgressForAnonymousUser();
   }
+
   levelProgress = progressData.levels || {};
 
   $('.header_text').first().text(stageData.title);
@@ -420,43 +423,31 @@ dashboard.header.updateTimestamp = function () {
 function getSummarizedProgressForAnonymousUser () {
   var summarizedProgress = {};
   var levelProgress = {};
-  var cookie = document.cookie.split(';');
-  
-  for(var i = 0; i < cookie.length; i++) {
-    var pair = cookie[i].split('=');
-    var key = pair[0].trim();
 
-    switch(key) {
-      case 'progress':
-        var allLevelsProgress = JSON.parse(decodeURIComponent(pair[1]));
-        for(var level in allLevelsProgress) {
-          if (allLevelsProgress.hasOwnProperty(level)) {
-            var individualLevelProgressDescription = '';
-            var individualLevelProgress = allLevelsProgress[level];
+  summarizedProgress.lines = $.cookie('lines');
 
-            //TODO: Find a way to use the constants defined somewhere
-            if (individualLevelProgress >= 1000) {
-              individualLevelProgressDescription = 'submitted';
-            } else if (individualLevelProgress >= 30) {
-              individualLevelProgressDescription = 'perfect';
-            } else if (individualLevelProgress >= 20) {
-              individualLevelProgressDescription = 'passed';
-            } else {
-              individualLevelProgressDescription = 'attempted';
-            }
+  var allLevelsProgress = JSON.parse(decodeURIComponent($.cookie('progress')));
+  for(var level in allLevelsProgress) {
+    var individualLevelProgressDescription = '';
+    var individualLevelProgress = allLevelsProgress[level] || 0;
 
-            levelProgress[level] = {};
-            levelProgress[level].status = individualLevelProgressDescription;
-          }
-        }
-
-        summarizedProgress['levels'] = levelProgress;
-        break;
-      case 'lines':
-        summarizedProgress['lines'] = pair[1];
-        break;
+    if (individualLevelProgress >= 1000) {
+      individualLevelProgressDescription = 'submitted';
+    } else if (individualLevelProgress >= 30) {
+      individualLevelProgressDescription = 'perfect';
+    } else if (individualLevelProgress >= 20) {
+      individualLevelProgressDescription = 'passed';
+    } else if (individualLevelProgress > 0) {
+      individualLevelProgressDescription = 'attempted';
+    } else {
+        individualLevelProgressDescription = 'not attempted';
     }
+
+    levelProgress[level] = {};
+    levelProgress[level].status = individualLevelProgressDescription;
   }
+
+  summarizedProgress.levels = levelProgress;
 
   return summarizedProgress;
 }
