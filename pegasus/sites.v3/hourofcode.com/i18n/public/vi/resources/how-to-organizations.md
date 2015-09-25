@@ -39,7 +39,7 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * Video giới thiệu chính thức của Code.org, đặc biệt là Bill Gates, Mark Zuckerberg,Ngôi sao NBA, Chris Bosh (Độ dài lần lượt [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * [video khởi động Hour of Cord 2013 ](https://www.youtube.com/watch?v=FC5FbmsH4fw), hoặc các < % nếu @country == 'anh' %> [ video Hour of cord 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) < % khác %> [ video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) video Hour of Cord 2014 <% end %>
+  * [video khởi động Hour of Cord 2013 ](https://www.youtube.com/watch?v=FC5FbmsH4fw), hoặc các <% if @country == 'uk' %> [ video Hour of cord 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [ video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) video Hour of Cord 2014 <% end %>
   * [Tổng thống Obama kêu gọi tất cả học sinh nên học môn tin học](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**

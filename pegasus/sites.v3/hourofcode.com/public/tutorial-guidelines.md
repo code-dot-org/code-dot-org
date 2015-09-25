@@ -13,7 +13,7 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 <br />
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa).**
+**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
 
 
 **NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
@@ -116,7 +116,7 @@ Ultimately, the goal of the Hour of Code campaign is to broaden participation in
 
 <a id="submit"></a>
 ## How to submit (Due 10/15/2015)
-Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
+Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
 **What you’ll need:** 
 
