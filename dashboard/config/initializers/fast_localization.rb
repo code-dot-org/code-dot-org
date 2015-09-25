@@ -6,7 +6,11 @@ if Rails.env.development? && (!CDO.load_locales)
 end
 
 # Preload translations (before application fork, after i18n_railtie initializer)
-unless ENV['FAST_TESTS'] && Rails.env.test?
+# Skip if this is running a Rake task (e.g. rake db:setup or rake test)
+if  File.basename($0) == 'rake' || ENV['FAST_START']
+  Rails.logger.info 'Skipping translations preload'
+else
+  Rails.logger.info 'Preloading translations'
   Dashboard::Application.config.after_initialize do |_|
     I18n.backend.init_translations if I18n.backend.respond_to? :init_translations
     I18n.t 'hello'
