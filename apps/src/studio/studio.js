@@ -120,6 +120,9 @@ var AUTO_HANDLER_MAP = {
   whenTouchItem: 'whenSpriteCollided-' +
                   (Studio.protagonistSpriteIndex || 0) +
                   '-any_item',
+  whenTouchWall: 'whenSpriteCollided-' +
+                  (Studio.protagonistSpriteIndex || 0) +
+                  '-wall',
 };
 
 // Default Scalings
@@ -2166,6 +2169,13 @@ Studio.execute = function() {
                      'whenSpriteCollided-' +
                        (Studio.protagonistSpriteIndex || 0) +
                        '-any_item');
+    if (level.wallMapCollisions) {
+      registerHandlers(handlers,
+                       'studio_whenTouchWall',
+                       'whenSpriteCollided-' +
+                         (Studio.protagonistSpriteIndex || 0) +
+                         '-wall');
+    }
     registerHandlersWithSingleSpriteParam(handlers,
                                     'studio_whenSpriteClicked',
                                     'whenSpriteClicked',
@@ -3765,10 +3775,12 @@ Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   sprite.lastMove = Studio.tickCount;
   var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
+  var wallCollision = false;
   switch (opts.dir) {
     case Direction.NORTH:
       if (level.blockMovingIntoWalls &&
           Studio.willSpriteTouchWall(sprite, sprite.x, sprite.y - distance)) {
+        wallCollision = true;
         break;
       }
       sprite.y -= distance;
@@ -3780,6 +3792,7 @@ Studio.moveSingle = function (opts) {
     case Direction.EAST:
       if (level.blockMovingIntoWalls &&
           Studio.willSpriteTouchWall(sprite, sprite.x + distance, sprite.y)) {
+        wallCollision = true;
         break;
       }
       sprite.x += distance;
@@ -3791,6 +3804,7 @@ Studio.moveSingle = function (opts) {
     case Direction.SOUTH:
       if (level.blockMovingIntoWalls &&
           Studio.willSpriteTouchWall(sprite, sprite.x, sprite.y + distance)) {
+        wallCollision = true;
         break;
       }
       sprite.y += distance;
@@ -3802,6 +3816,7 @@ Studio.moveSingle = function (opts) {
     case Direction.WEST:
       if (level.blockMovingIntoWalls &&
           Studio.willSpriteTouchWall(sprite, sprite.x - distance, sprite.y)) {
+        wallCollision = true;
         break;
       }
       sprite.x -= distance;
@@ -3810,6 +3825,12 @@ Studio.moveSingle = function (opts) {
         sprite.x = leftBoundary;
       }
       break;
+  }
+  if (wallCollision) {
+    // We prevented the wall collision, but queue a wall collision event and
+    // immediately reset the collision state since we didn't actually overlap:
+    Studio.collideSpriteWith(opts.spriteIndex, 'wall');
+    sprite.endCollision('wall');
   }
   if (level.gridAlignedMovement) {
     Studio.yieldThisTick = true;

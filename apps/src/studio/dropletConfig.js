@@ -19,6 +19,7 @@ module.exports.blocks = [
   {func: 'whenRight', block: 'function whenRight() {}', expansion: 'function whenRight() {\n  __;\n}', category: '' },
   {func: 'whenUp', block: 'function whenUp() {}', expansion: 'function whenUp() {\n  __;\n}', category: '' },
   {func: 'whenDown', block: 'function whenDown() {}', expansion: 'function whenDown() {\n  __;\n}', category: '' },
+  {func: 'whenTouchWall', block: 'function whenTouchWall() {}', expansion: 'function whenTouchWall() {\n  __;\n}', category: '' },
   {func: 'whenTouchItem', block: 'function whenTouchItem() {}', expansion: 'function whenTouchItem() {\n  __;\n}', category: '' },
   {func: 'whenTouchWalkItem1', block: 'function whenTouchWalkItem1() {}', expansion: 'function whenTouchWalkItem1() {\n  __;\n}', category: '' },
   {func: 'whenTouchWalkItem2', block: 'function whenTouchWalkItem2() {}', expansion: 'function whenTouchWalkItem2() {\n  __;\n}', category: '' },
@@ -55,3 +56,5 @@ module.exports.categories = {
     'blocks': []
   },
 };
+
+module.exports.autocompleteFunctionsWithParens = true;
