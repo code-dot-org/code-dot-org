@@ -30,7 +30,7 @@
     "coordinate_grid_background": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "We've added one last function for you to use.\r\n<hr/>\r\n\r\n<h4>\r\nUse an `if` statement to program your game to call the `level_up` function if `player_points` is greater than a certain number.   \r\n</h4>\r\n<i>For example: `player_points` > 10</i>\r\n\r\n\r\n<hr/>\r\n<i>Play the game, and make it past level 4 to move to the next puzzle.</i>",
+    "markdown_instructions": "We've added one last function for you to use.\r\n<hr/>\r\n\r\n<h4>\r\nUse an `if` statement to program your game to call the `level_up` function only when `player_points` becomes greater than a certain number.<br/><br/>\r\n</h4>\r\n<i>For example: `player_points` > 10</i>\r\n\r\n\r\n<hr/>\r\n<i>Play the game, and make it past level 4 to move to the next puzzle.</i>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
