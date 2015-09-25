@@ -1,10 +1,13 @@
 # Uninstall Ruby 2.0.
 
-package %w(ruby2.0-dev ruby2.0 rake) do
-  action :purge
-  notifies :run, 'execute[apt-get autoremove]', :immediately
+%w(ruby2.0-dev ruby2.0 rake).each do |pkg|
+  apt_package pkg do
+    action :purge
+    notifies :run, 'execute[apt-get autoremove]', :immediately
+  end
 end
-ruby_resource = 'package[ruby2.0-dev, ruby2.0, rake]'
+
+ruby_resource = 'apt_package[ruby2.0]'
 
 # Clean up manually-installed symlinks.
 %w(ruby irb rdoc erb gem).each do |ruby_link|
