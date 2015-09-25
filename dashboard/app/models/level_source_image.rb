@@ -56,13 +56,12 @@ class LevelSourceImage < ActiveRecord::Base
     begin
       framed_image = ImageLib::overlay_image(:background_url => Rails.root.join(frame_image_filename),
                                              :foreground_blob => image).to_blob
-    rescue MiniMagick::Error # something wrong with the image
+    rescue MiniMagick::Invalid, MiniMagick::Error # something wrong with the image or runtime error.
       return false
     end
 
     upload_image(s3_framed_filename, framed_image)
   end
-
 
   def LevelSourceImage.hashify_filename(plain)
     [Digest::MD5.hexdigest(plain), plain].join('=')
