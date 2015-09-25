@@ -1427,16 +1427,17 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   var container = document.getElementById(options.containerId);
   this.hideSource = true;
   var workspaceDiv = document.getElementById('codeWorkspace');
-  if(!options.embed || options.level.skipInstructionsPopup) {
+  if (!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
   document.getElementById('visualizationResizeBar').style.display = 'none';
 
+  var runButton = document.getElementById('runButton');
+  var buttonRow = runButton.parentElement;
+
   // For share page on mobile, do not show this part.
   if ((!options.embed) && (!this.share || !dom.isMobile())) {
-    var runButton = document.getElementById('runButton');
-    var buttonRow = runButton.parentElement;
     var openWorkspace = document.createElement('button');
     openWorkspace.setAttribute('id', 'open-workspace');
     openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
@@ -1468,6 +1469,9 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     });
 
     buttonRow.appendChild(openWorkspace);
+  } else {
+    buttonRow.style.display = 'none';
+    document.body.style.backgroundColor = '#000';
   }
 };
 
