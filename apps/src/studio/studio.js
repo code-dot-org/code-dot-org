@@ -1503,10 +1503,6 @@ Studio.init = function(config) {
     studioApp.loadAudio(skin.retroSound, 'retro');
     studioApp.loadAudio(skin.slapSound, 'slap');
     studioApp.loadAudio(skin.hitSound, 'hit');
-    studioApp.loadAudio(skin.character1sound1, 'character1sound1');
-    studioApp.loadAudio(skin.character1sound2, 'character1sound2');
-    studioApp.loadAudio(skin.character1sound3, 'character1sound3');
-    studioApp.loadAudio(skin.character1sound4, 'character1sound4');
   };
 
   config.afterInject = function() {

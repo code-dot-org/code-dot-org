@@ -8,6 +8,7 @@
 var skinsBase = require('../skins');
 var msg = require('./locale');
 var constants = require('./constants');
+var studioApp = require('../StudioApp').singleton;
 
 var RANDOM_VALUE = constants.RANDOM_VALUE;
 var HIDDEN_VALUE = constants.HIDDEN_VALUE;
@@ -370,6 +371,11 @@ function loadHoc2015(skin, assetUrl) {
   skin.character1sound2 = [skin.assetUrl('character1sound2.mp3'), skin.assetUrl('wall.ogg')];
   skin.character1sound3 = [skin.assetUrl('character1sound3.mp3'), skin.assetUrl('wall.ogg')];
   skin.character1sound4 = [skin.assetUrl('character1sound4.mp3'), skin.assetUrl('wall.ogg')];
+
+  studioApp.loadAudio(skin.character1sound1, 'character1sound1');
+  studioApp.loadAudio(skin.character1sound2, 'character1sound2');
+  studioApp.loadAudio(skin.character1sound3, 'character1sound3');
+  studioApp.loadAudio(skin.character1sound4, 'character1sound4');
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   skin.wallChoices = [
