@@ -22,7 +22,18 @@
 var AppStorage = require('./appStorage');
 var Promise = require('es6-promise').Promise;
 
-var ChartApi = module.exports = function () {
+/**
+ * Api for requesting/generating charts in Applab, for now using the Google
+ * Charts API.
+ * @constructor
+ * @param {Document} [docContext] - default is 'document'
+ * @param [providingApi] - default is 'google'
+ * @param [appStorage] - default is AppStorage
+ */
+var ChartApi = module.exports = function (docContext, providingApi, appStorage) {
+  this.document_ = docContext || document;
+  this.api_ = providingApi || google;
+  this.appStorage_ = appStorage || AppStorage;
 };
 
 /** @enum {string} */
@@ -40,7 +51,7 @@ ChartApi.ChartType = {
  * @throws {Error} if no dependencies are defined for the given chart type.
  */
 ChartApi.getDependenciesForType = function (chartType) {
-  switch (chartType) {
+  switch (chartType.toLowerCase()) {
     case ChartApi.ChartType.BAR:
       // material design; use 'corechart' for standard
       return ['bar'];
@@ -62,19 +73,19 @@ ChartApi.getDependenciesForType = function (chartType) {
  * @returns {function} A constructor function for the requested chart type.
  * @throws {Error} if no dependencies are defined for the given chart type.
  */
-ChartApi.getConstructorForType = function (chartType) {
-  switch (chartType) {
+ChartApi.prototype.getConstructorForType = function (chartType) {
+  switch (chartType.toLowerCase()) {
     case ChartApi.ChartType.BAR:
       // material design; alt. google.visualization.BarChart
-      return google.charts.Bar;
+      return this.api_.charts.Bar;
     case ChartApi.ChartType.PIE:
-      return google.visualization.PieChart;
+      return this.api_.visualization.PieChart;
     case ChartApi.ChartType.LINE:
       // material design; alt. google.visualization.LineChart
-      return google.charts.Line;
+      return this.api_.charts.Line;
     case ChartApi.ChartType.SCATTER:
       // material design; alt. google.visualization.ScatterChart
-      return google.charts.Scatter;
+      return this.api_.charts.Scatter;
   }
   throw new Error('Constructor is not defined for chart type "' +
       chartType  + '".');
@@ -95,7 +106,7 @@ ChartApi.getChartTypes = function () {
  * @returns {boolean} TRUE if the given type is in the known list of chart types.
  */
 ChartApi.supportsType = function (chartType) {
-  return ChartApi.getChartTypes().indexOf(chartType) !== -1;
+  return ChartApi.getChartTypes().indexOf(chartType.toLowerCase()) !== -1;
 };
 
 /**
@@ -123,31 +134,35 @@ ChartApi.prototype.drawChartFromRecords = function (chartId, chartType,
     tableName, columns, options) {
   var warnings = [];
 
-  // Ensure target element exists and is usable.
-  var targetElement = document.getElementById(chartId);
-  if (!targetElement || 'div' !== targetElement.tagName.toLowerCase()) {
-    return Promise.reject(new Error('Unable to render chart into element "' +
-        chartId + '".'));
-  }
+  try {
+    // Ensure target element exists and is usable.
+    var targetElement = this.document_.getElementById(chartId);
+    if (!targetElement || 'div' !== targetElement.tagName.toLowerCase()) {
+      return Promise.reject(new Error('Unable to render chart into element "' +
+          chartId + '".'));
+    }
 
-  // Ensure chart type is currently supported
-  if (!ChartApi.supportsType(chartType)) {
-    return Promise.reject(new Error('Unsupported chart type "' + chartType + '".'));
-  }
+    // Ensure chart type is currently supported
+    if (!ChartApi.supportsType(chartType)) {
+      return Promise.reject(new Error('Unsupported chart type "' + chartType + '".'));
+    }
 
-  // Ensure sufficient columns for chart type
-  var minimumColumnsForType = 2;
-  if (columns.length < minimumColumnsForType) {
-    return Promise.reject(new Error('Not enough columns defined for chart type "' +
-        chartType + '"; expected at least ' + minimumColumnsForType + '.'));
-  }
+    // Ensure sufficient columns for chart type
+    var minimumColumnsForType = 2;
+    if (columns.length < minimumColumnsForType) {
+      return Promise.reject(new Error('Not enough columns defined for chart type "' +
+          chartType + '"; expected at least ' + minimumColumnsForType + '.'));
+    }
 
-  // Warn if provided more columns than chart type can use
-  var maxColumnsForType = 2;
-  if (columns.length > maxColumnsForType) {
-    warnings.push(new Error('Provided ' + columns.length +
-        ' columns but chart type "' + chartType + '" can only use up to ' +
-        maxColumnsForType + '.'));
+    // Warn if provided more columns than chart type can use
+    var maxColumnsForType = 2;
+    if (columns.length > maxColumnsForType) {
+      warnings.push(new Error('Provided ' + columns.length +
+          ' columns but chart type "' + chartType + '" can only use up to ' +
+          maxColumnsForType + '.'));
+    }
+  } catch (err) {
+    return Promise.reject(err);
   }
 
   // Passed all the pre-command validation, let's get to work:
@@ -159,12 +174,12 @@ ChartApi.prototype.drawChartFromRecords = function (chartId, chartType,
   //   4. Render the chart.
   // Note any exceptions thrown
   return Promise.all([
-    loadApiForType(chartType),
-    fetchTableData(tableName)
+    this.loadApiForType_(chartType),
+    this.fetchTableData_(tableName)
   ]).then(function (resultsArray) {
     var rawData = resultsArray[1];
 
-    var Chart = ChartApi.getConstructorForType(chartType);
+    var Chart = this.getConstructorForType(chartType);
 
     // Do some validation on data returned by query
     if (rawData.length === 0) {
@@ -189,13 +204,13 @@ ChartApi.prototype.drawChartFromRecords = function (chartId, chartType,
     }
 
     // Finally, render the chart
-    var dataTable = rawDataToDataTable(rawData, columns);
+    var dataTable = this.rawDataToDataTable_(rawData, columns);
     var chart = new Chart(targetElement);
     chart.draw(dataTable, options);
 
     // Pass any warnings back along with the resolved promise.
     return Promise.resolve(warnings);
-  });
+  }.bind(this));
 };
 
 /**
@@ -204,15 +219,16 @@ ChartApi.prototype.drawChartFromRecords = function (chartId, chartType,
  * @param {ChartType} chartType - The requested chart type, which determines
  *        which packages we need to load.
  * @returns {Promise}
+ * @private
  */
-var loadApiForType = function (chartType) {
+ChartApi.prototype.loadApiForType_ = function (chartType) {
   return new Promise(function (resolve, reject) {
     try {
       // Dynamically load the google.visualization library,
       //   at the latest stable version (that's what '1' means)
       //   plus any needed packages for the requested chart type
       //   then call onLoad()
-      google.load('visualization', '1', {
+      this.api_.load('visualization', '1', {
         packages: ChartApi.getDependenciesForType(chartType),
         callback: resolve
       });
@@ -223,7 +239,7 @@ var loadApiForType = function (chartType) {
     } catch (e) {
       reject(new Error('Unable to load Charts API.  Please try again later.'));
     }
-  });
+  }.bind(this));
 };
 
 /**
@@ -231,13 +247,14 @@ var loadApiForType = function (chartType) {
  * Wraps AppStorage.readRecords in an ES6 Promise interface.
  * @param {string} tableName
  * @returns {Promise}
+ * @private
  */
-var fetchTableData = function (tableName) {
+ChartApi.prototype.fetchTableData_ = function (tableName) {
   return new Promise(function (resolve, reject) {
-    AppStorage.readRecords(tableName, {}, resolve, function (errorMsg) {
+    this.appStorage_.readRecords(tableName, {}, resolve, function (errorMsg) {
       reject(new Error(errorMsg));
     });
-  });
+  }.bind(this));
 };
 
 /**
@@ -246,12 +263,13 @@ var fetchTableData = function (tableName) {
  * @param {Object[]} rawData
  * @param {string[]} columns - must correspond to keys in rawData rows.
  * @returns {google.visualization.DataTable}
+ * @private
  */
-var rawDataToDataTable = function (rawData, columns) {
+ChartApi.prototype.rawDataToDataTable_ = function (rawData, columns) {
   var dataArray = rawData.map(function (row) {
     return columns.map(function (key) {
       return row[key];
     });
   });
-  return google.visualization.arrayToDataTable([columns].concat(dataArray));
+  return this.api_.visualization.arrayToDataTable([columns].concat(dataArray));
 };
