@@ -20,6 +20,9 @@ end
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   @browser.navigate.to "#{url}"
+  steps %q{
+    Then I wait until element "#spinner" is not visible
+  }
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -49,6 +52,11 @@ end
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
   wait.until { @browser.execute_script("return $('#{selector}').is(':visible')") }
+end
+
+When /^I wait until element "([^"]*)" is not visible$/ do |selector|
+  wait = Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
+  wait.until { @browser.execute_script("return !$('#{selector}').is(':visible')") }
 end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
