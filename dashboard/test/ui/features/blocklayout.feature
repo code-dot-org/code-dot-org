@@ -7,10 +7,10 @@ Background:
 
 Scenario: Auto-placing malformed start blocks
   When I've initialized the workspace with an auto-positioned flappy puzzle with extra newlines
-  Then block "18" is at offset "70, 30"
-  And block "21" is at offset "70, 230"
+  Then block "18" is at offset "16, 16"
+  And block "21" is at offset "16, 216"
 
 Scenario: Auto-placing blocks
   When I've initialized the workspace with an auto-positioned flappy puzzle
-  Then block "18" is at offset "70, 30"
-  And block "21" is at offset "70, 230"
+  Then block "18" is at offset "16, 16"
+  And block "21" is at offset "16, 216"

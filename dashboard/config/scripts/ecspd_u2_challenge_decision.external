@@ -1,0 +1,14 @@
+name 'ECSPD U2 Challenge Decision'
+
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+## Forum for Unit 2 Challenge
+
+Below is the link for the Unit 2 Challenge. Once you have decided on the lesson you going to do for the challenge make a post to the forum. This is also the time to **find a partner** if you want one.
+
+### <strong><a href="http://forum.code.org/t/u2-challenge-decisions/2098"target="_blank"> U2 Challenge Decisions Forum</a></strong> 
+
+After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
