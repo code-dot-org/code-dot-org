@@ -4,17 +4,13 @@ $browser_configs = JSON.load(open("browsers.json"))
 
 MAX_CONNECT_RETRIES = 3
 
-def create_local_browser
+def local_browser
   browser = Selenium::WebDriver.for :chrome, :url=>"http://127.0.0.1:9515"
   if ENV['MAXIMIZE_LOCAL'] == 'true'
     max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")
     browser.manage.window.resize_to(max_width, max_height)
   end
   browser
-end
-
-def local_browser
-  @local_browser ||= create_local_browser
 end
 
 def saucelabs_browser
@@ -49,7 +45,7 @@ def saucelabs_browser
                                         url: url,
                                         desired_capabilities: capabilities,
                                         http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
-    rescue URI::InvalidURIError
+    rescue URI::InvalidURIError, Net::ReadTimeout
       raise if retries >= MAX_CONNECT_RETRIES
       retres += 1
       retry
@@ -82,7 +78,7 @@ def browser
 end
 
 Before do
-  @browser = browser
+  @browser ||= browser
   @browser.manage.delete_all_cookies
 
   unless ENV['TEST_LOCAL'] == 'true'
@@ -111,9 +107,8 @@ all_passed = true
 After do |scenario|
   all_passed = all_passed && scenario.passed?
   log_result all_passed
-  @browser.quit unless ENV['TEST_LOCAL']
 end
 
 at_exit do
-  browser.quit
+  @browser.quit
 end
