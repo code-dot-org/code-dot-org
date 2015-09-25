@@ -80,6 +80,7 @@ Scenario: Step Only - Reset while stepping
 
 Scenario: Step and Run - Stepping
   Given I am on "http://learn.code.org/s/step/puzzle/2"
+  And I wait to see "#runButton"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   And element "#stepButton" is visible
@@ -103,6 +104,7 @@ Scenario: Step and Run - Stepping
 
 Scenario: Step and Run - Running
   Given I am on "http://learn.code.org/s/step/puzzle/2"
+  And I wait to see "#runButton"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   And element "#stepButton" is visible
