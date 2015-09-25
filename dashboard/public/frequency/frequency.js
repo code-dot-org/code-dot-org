@@ -1063,7 +1063,7 @@ BarGraph.prototype.resizeBottomBars = function (data) {
 
 $(document).ready(function () {
   var bg = new BarGraph({
-    message: options.instructions,
+    message: "Hello, I'm some text!",
     text_output: $("#output"),
     chart_container: $("#d3chart")
   });
