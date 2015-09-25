@@ -461,6 +461,8 @@
   "whenSpriteCollidedWithTopEdge": "touches top edge",
   "whenTouchItem": "when item touched",
   "whenTouchItemTooltip": "Execute the actions below when the actor touches an item.",
+  "whenTouchWall": "when wall touched",
+  "whenTouchWallTooltip": "Execute the actions below when the actor touches a wall.",
   "whenUp": "when up arrow",
   "whenUpTooltip": "Execute the actions below when the up arrow key is pressed.",
   "yes": "Yes"
