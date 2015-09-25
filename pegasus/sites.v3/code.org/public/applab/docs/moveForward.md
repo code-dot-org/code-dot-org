@@ -31,9 +31,10 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 moveForward(); //Moves forward 25 pixels (default)
-</pre>
+```
 
 [/example]
 
@@ -41,9 +42,10 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 moveForward(200); //Moves the turtle north 200 pixels
-</pre>
+```
 
 [/example]
 
@@ -51,13 +53,14 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 /* Draw a 'L' */
 turnLeft(180); //Turtle starts facing North, so turn 180 degrees to face South
 moveForward(100); //Move the turtle 100 pixels in its current direction (South)
 turnLeft(90); //Turtle is facing South and rotates 90 degrees to its left. Turtle is now facing East.
 moveForward(50); //Moves the turtle 50 pixels in its current direction (East)
-</pre>
+```
 
 [/example]
 
@@ -66,9 +69,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 moveForward(pixels);
-</pre>
+```
 
 [/syntax]
 

@@ -33,9 +33,10 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 moveTo(50, 50);	// to the top left of the screen.
-</pre>
+```
 
 [/example]
 
@@ -43,7 +44,8 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // Move the turtle in a square
 penUp();            // Don't draw a diagonal
 moveTo(50, 50);     // Top left
@@ -52,7 +54,7 @@ moveTo(50, 270);    // Top right
 moveTo(270, 270);   // Bottom right
 moveTo(270, 50);    // Bottom left
 moveTo(50, 50);     // Back to top left
-</pre>
+```
 
 [/example]
 
@@ -60,7 +62,8 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // Draw a polygon
 var points = 8;     // We want an octagon
 var radius = 100;   // Polygon will be 200 pixels across
@@ -70,7 +73,7 @@ for (var i = 0; i < points + 1; i++) {      // Visit every point once, and let i
   var angle = ((i / points) * 2 * Math.PI); // 2 * Math.PI is 360deg
   moveTo(x + radius * Math.cos(angle), y + radius * Math.sin(angle));
 }
-</pre>
+```
 
 [/example]
 
@@ -79,9 +82,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 moveTo(x, y);
-</pre>
+```
 
 [/syntax]
 
