@@ -293,7 +293,7 @@ function populateCompleterApisFromConfigBlocks(opts, apis, configBlocks) {
             // insertMatch would normally do this automatically)
             if (editor.completer.completions.filterText) {
               var ranges = editor.selection.getAllRanges();
-              for (var i = 0, range; range = ranges[i]; i++) {
+              for (var i = 0, range; !!(range = ranges[i]); i++) {
                 range.start.column -= editor.completer.completions.filterText.length;
                 editor.session.remove(range);
               }
