@@ -48,7 +48,7 @@ else
       retres += 1
       retry
     end
-    puts "Got browser in #{Time.now.to_i - start_time}s"
+    puts "Got browser in #{Time.now.to_i - start_time}s with #{retries} retries"
   end
 
   puts "Browser: #{browser}"
