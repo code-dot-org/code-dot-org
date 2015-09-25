@@ -21,7 +21,7 @@ Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   @browser.navigate.to "#{url}"
   steps %q{
-    Then I wait until element "#spinner" is not visible
+    Then I wait until element ".loading" is not visible
   }
 end
 
