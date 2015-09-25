@@ -36,21 +36,6 @@
     .span12#rightside
       = render partial: 'shared/user_stats', locals: { user: current_user, width: '100%'}
 
-
-  -# Just some handy internal UI to show instruction text for all the levels in hoc2015.
-  - if current_user && current_user.admin? && rack_env == :development && @script.name == Script::HOC2015_NAME
-    %br/
-    %br/
-    - levels = Script.find_by_name(Script::HOC2015_NAME).stages.map{ |stage| stage.script_levels.map{ |sl| sl.level }}.flatten
-    - levels.each_with_index do |level, index|
-      .row
-        .span1
-          = index + 1
-        .span3
-          = level.name
-        .span8
-          = level.instructions
-
   %div{style: 'clear: both;'}
   %br/
   %br/
@@ -68,3 +53,17 @@
       %br/
 
     %br/
+
+- if current_user && current_user.admin?
+  -# Show all the levels, their names, and instructions in the admin box.
+  = render layout: 'shared/admin' do
+    - levels = Script.find_by_name(@script.name).stages.map{ |stage| stage.script_levels.map{ |sl| sl.level }}.flatten
+    - levels.each_with_index do |level, index|
+      .row
+        .span1
+          = index + 1
+        .span3
+          = level.name
+        .span8
+          = level.instructions
+            
