@@ -347,9 +347,12 @@ task :dashboard_eyes_ui_tests do
   end
 end
 
+# do the unit tests in parallel
+multitask unit_tests: [:pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests]
+
 # do the eyes and browserstack ui tests in parallel
 multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack_ui_tests]
 
-$websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
+$websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build, :unit_tests, :dashboard_ui_tests])
 
 task 'test-websites' => [$websites_test]
