@@ -6,8 +6,9 @@ if Rails.env.development? && (!CDO.load_locales)
 end
 
 # Preload translations (before application fork, after i18n_railtie initializer)
-unless ENV['FAST_TEST'] && Rails.env.test?
+unless ENV['FAST_TESTS'] && Rails.env.test?
   Dashboard::Application.config.after_initialize do |_|
+    puts 'Preloading translations'
     I18n.backend.init_translations if I18n.backend.respond_to? :init_translations
     I18n.t 'hello'
   end
