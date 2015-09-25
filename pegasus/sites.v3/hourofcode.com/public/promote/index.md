@@ -39,10 +39,13 @@ nav: promote_nav
 
 <a id="logo"></a>
 ## Use the Hour of Code logo to spread the word
-[![image](/images/fit-200/hour-of-code-logo.png)](/images/images/hour-of-code-logo.png)
+[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
+
+[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
 <a id="stickers"></a>
-## Print these stickers to give to your students (Stickers are 1" diameter, 63 per sheet)
+## Print these stickers to give to your students
+(Stickers are 1" diameter, 63 per sheet)<br />
 [![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>

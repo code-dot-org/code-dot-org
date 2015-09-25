@@ -29,8 +29,6 @@ social:
   twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-<%= view :signup_button %>
-
 # Thanks for signing up to host an Hour of Code!
 
 You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about prizes, new tutorials and other exciting updates. What can you do now?
@@ -42,7 +40,7 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2. Ask your whole school to offer an Hour of Code
-[Send this email](<%= resolve_url('/resources/promote#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. 
+[Send this email](<%= resolve_url('/resources/promote#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
 
 ## 3. Ask your employer to get involved
 [Send this email](<%= resolve_url('/resources/promote#sample-emails') %>) to your manager or company's CEO. 
@@ -56,4 +54,3 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 
 <%= view 'popup_window.js' %>
 
-<%= view :signup_button %>

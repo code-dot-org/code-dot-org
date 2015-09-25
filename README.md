@@ -4,7 +4,7 @@
 This document describes how to set up your workstation to develop for Code.org.
 
 ## Install OS-specific prerequisites
-You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in a VM). Setup for Windows is more complicated and relatively few developers use it. Start with the instructions for your platform in the subsections below, followed by the Common Setup section.   
+You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in a VM). Setup for Windows is more complicated and relatively few developers use it. Start with the instructions for your platform in the subsections below, followed by the Common Setup section.
 
 ### OS X Mavericks / Yosemite
 
@@ -115,7 +115,7 @@ You'll need to do this once:
 1. OS X:
   1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 1. `cd code-dot-org`
-1. To build apps/blocky-core, edit `locals.yml` to add: 
+1. To build apps/blocky-core, edit `locals.yml` to add:
   1. Add `build_apps: true`
   1. Add `build_blockly_core: true` (if you want to build blockly core -- not necessary if you only want to make changes to apps)
   1. Add `use_my_apps: true`
