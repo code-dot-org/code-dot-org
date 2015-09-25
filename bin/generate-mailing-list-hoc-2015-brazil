@@ -60,4 +60,4 @@ TEACHERS = {}.tap do |results|
 end
 puts "#{TEACHERS.count} teachers loaded."
 
-export_contacts_to_csv TEACHERS, "brazil-teachers.csv"
+export_contacts_to_csv TEACHERS, "hoc-2015-brazil.csv"
