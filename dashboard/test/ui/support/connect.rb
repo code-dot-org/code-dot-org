@@ -2,6 +2,8 @@ require 'selenium/webdriver'
 
 $browser_configs = JSON.load(open("browsers.json"))
 
+MAX_CONNECT_RETRIES = 3
+
 if ENV['TEST_LOCAL'] == 'true'
   # This drives a local installation of ChromeDriver running on port 9515, instead of BrowserStack.
   browser = Selenium::WebDriver.for :chrome, :url=>"http://127.0.0.1:9515"
@@ -35,11 +37,18 @@ else
   puts "Capabilities: #{capabilities.inspect}"
 
   Time.now.to_i.tap do |start_time|
-    browser = Selenium::WebDriver.for(:remote,
-                                      url: url,
-                                      desired_capabilities: capabilities,
-                                      http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
-    puts "Got browser in #{Time.now.to_i - start_time}s"
+    retries = 0
+    begin
+      browser = Selenium::WebDriver.for(:remote,
+                                        url: url,
+                                        desired_capabilities: capabilities,
+                                        http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
+    rescue URI::InvalidURIError
+      raise if retries >= MAX_CONNECT_RETRIES
+      retres += 1
+      retry
+    end
+    puts "Got browser in #{Time.now.to_i - start_time}s with #{retries} retries"
   end
 
   puts "Browser: #{browser}"
@@ -70,6 +79,7 @@ def log_result(result)
   # The +scenario+ argument is optional, but
   # if you use it, you can inspect status with
   # the #failed?, #passed? and #exception methods.
+  return if ENV['TEST_LOCAL'] == 'true'
 
   url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{@sauce_session_id}"
   require 'httparty'

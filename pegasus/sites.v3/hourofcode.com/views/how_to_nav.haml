@@ -1,0 +1,21 @@
+%div.resources-navigation
+  %div.nav-header= hoc_s(:resources_how_to_guides)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/how-to')}
+      = hoc_s(:how_to_nav_educators)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/how-to/afterschool')}
+      = hoc_s(:how_to_nav_afterschool_educators)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/how-to/organizations')}
+      = hoc_s(:how_to_nav_organizations)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/how-to/districts')}
+      = hoc_s(:how_to_nav_districts)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/how-to/events')}
+      = hoc_s(:how_to_nav_assemblies)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/how-to/public-officials')}
+      = hoc_s(:how_to_nav_public_officials)
+= view :resources_nav

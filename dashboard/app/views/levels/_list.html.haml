@@ -3,22 +3,18 @@
   %thead
     %tr
       %th{ width:100 } Levels
-      %th{ width:100 } Game
-      %th{ width:100 } URL
+      %th{ width:100 } Type
       %th{ width:300 }
   %tbody
     - @levels.each do |level|
       %tr
         %td= level.name
-        %td= level.game.name if level.game
-        %td= level.level_url if level.is_a? Blockly
+        %td= level.class.name
         %td
           = link_to t('crud.show'), level
-          - if can? :update, level
+          - if level.custom?
             = link_to t('crud.edit'), edit_level_path(level)
-          - if can? :destroy, level
             = link_to t('crud.destroy'), level, method: :delete, data: { confirm: t('crud.confirm') }
-          - if can? :create, Level
             = link_to 'Clone', '', onclick: "$('#clone_#{level.id}').toggle(); return false;"
             %div{class: 'clone_level', id: "clone_#{level.id}", style: 'display: none;'}
               = form_tag level_clone_path(level), method: :post, remote: true do
