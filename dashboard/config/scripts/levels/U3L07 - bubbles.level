@@ -127,11 +127,8 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
-    "markdown_instructions": "# Getting Started: Bubbles\r\n\r\nThe program you're about to see shows one way you could have broken down the \"Under the Sea\" scene. To help you understand the code, here's a quick summary of the levels of functions you will find.\r\n\r\n**High Level Function Calls** These read almost like a story of how you will draw the image. There's one function for every major component of the scene\r\n\r\n![](https://images.code.org/7a5c0d7899dca95604d9ce3f2aa0e74a-image-1443018594789.29.43 AM.png)\r\n\r\n**High Level Function Definitions:** These are **currently empty**. You will be writing them to draw many copies of each component in the scene by using **loops**.\r\n\r\n![](https://images.code.org/1782d088206fede56df1e93482d35faa-image-1443019051470.37.20 AM.png)\r\n\r\n**Low Level Functions:** These are already written for you. **Read them ** as you add components to your scene.\r\n\r\n![](https://images.code.org/bb081efc86641155eae5f4d363e3ccf4-image-1443019108814.38.22 AM.png)\r\n\r\n# Do This\r\n\r\nYou may have noticed that the bubbles in the image look very similar to the dots example we've done in this lesson. Add these to the scene.\r\n\r\n* **Read** the `drawBubble` function to know how it works\r\n\r\n* **Add a loop** to `drawAllBubbles`\r\n\r\n* Inside your loop add code that **moves randomly** around the image and draws **200 bubbles** of random size between **1 and 5** using `drawBubble`\r\n\r\n![](https://images.code.org/ffeec83d7bb838f87f46ec1638710440-image-1443019519379.44.49 AM.png)",
+    "markdown_instructions": "# Add Bubbles\r\n\r\nThe first high-level function you will write is `drawAllBubbles`. You may have noticed that the bubbles in the image look very similar to the dots example we've already drawn in this lesson. Now we'll use that skill to add to our image.\r\n\r\n# Do This\r\n\r\n* **Read** the `drawBubble` function to know how it works and what **parameters** it accepts.\r\n\r\n* **Add a loop** to `drawAllBubbles`\r\n\r\n* Inside your loop add code that **moves randomly** around the image and draws **200 bubbles** of random size between **1 and 5** using `drawBubble`\r\n\r\n![](https://images.code.org/ffeec83d7bb838f87f46ec1638710440-image-1443019519379.44.49 AM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -158,7 +155,12 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
-    "hide_view_data_button": "true"
+    "hide_view_data_button": "true",
+    "encrypted_examples": [
+
+    ],
+    "submittable": "false",
+    "instructions": "Add 200 bubbles to the image by writing drawAllBubbles with a loop. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>
