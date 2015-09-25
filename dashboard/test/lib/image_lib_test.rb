@@ -5,36 +5,44 @@ require 'test_helper'
 class ImageLibTest < ActiveSupport::TestCase
 
   def test_overlay_image
+    bg_url =  test_image_path('blank_sharing_drawing_anna.png')
     fg_blob = test_image('foreground_overlay.png').to_blob
-    bg_url = test_image_path('blank_sharing_drawing_anna.png')
-
     framed_image = ImageLib::overlay_image({
-        background_url: bg_url, foreground_blob: fg_blob})
+        background_url: bg_url,
+        foreground_blob: fg_blob})
 
     expected_image_name = 'expected_overlaid_image.png'
-    expected_image_path = test_image_path(expected_image_name)
     expected_image = test_image(expected_image_name)
 
-    date = Time.now.strftime("%Y-%m-%d-%H%M%S")
-    generated_image_path = "/tmp/generated_image_#{date}.png"
-
-    File.open(generated_image_path, 'w') do |file|
-      file.write(framed_image)
+    ok = images_match(framed_image, expected_image)
+    if not ok
+      tmp_path = '/tmp/frame_image.png'
+      framed_image.write(tmp_path)
+      puts "Actual image: #{tmp_path}"
+      puts "Expected image: #{test_image_path(expected_image_name)}."
+      assert false, "Overlaid image did not match expected value"
     end
+  end
 
-    diff = MiniMagick::Tool::Compare.new do |compare|
-      compare.metric('ae')
-      compare << expected_image_path
-      compare << generated_image_path
-    end
-
-    puts "Actual image: #{generated_image_path}"
-    puts "Expected image: #{expected_image_path}."
-
-    assert diff == 0, "Overlaid image did not match expected value"
+  # Make sure the images_match helper function is working correctly.
+  def test_images_match
+    assert images_match(test_image('foreground_overlay.png'),
+                        test_image('foreground_overlay_copy.png'))
+    refute images_match(test_image('foreground_overlay.png'),
+                        test_image('blank_sharing_drawing_anna.png'))
   end
 
   private
+
+  # Return true if image1 and image2 are identical
+  #
+  def images_match(image1, image2)
+    0 == MiniMagick::Tool::Compare.new do |compare|
+      compare.metric('ae')
+      compare << image1.path
+      compare << image2.path
+    end
+  end
 
   def test_image_path(name)
     Rails.root.join("test/fixtures/#{name}")
