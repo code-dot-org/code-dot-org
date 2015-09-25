@@ -72,7 +72,11 @@ class FilesApi < Sinatra::Base
     not_found if type.empty?
     content_type type
 
-    get_bucket_impl(endpoint).new.get(encrypted_channel_id, filename, request.GET['version']) || not_found
+    result = get_bucket_impl(endpoint).new.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
+    not_found if result[:status] == 'NOT_FOUND'
+    not_modified if result[:status] == 'NOT_MODIFIED'
+    last_modified result[:last_modified]
+    result[:body]
   end
 
   #

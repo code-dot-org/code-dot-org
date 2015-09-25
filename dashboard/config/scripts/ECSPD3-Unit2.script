@@ -66,16 +66,26 @@ level 'ECSPD Personal Problem Solving Strategies'
 
 stage 'Day 15-16 Sorting Algorithms'
 level 'ECSPD U2 D 15-16 Intro'
+level 'ECSPD U2L1516 Sorting Video'
 
 stage 'Day 17 Minimal Spanning Trees: Muddy City'
 level 'ECSPD U2 D 17 Intro'
-level 'ECSPD Personal Problem Solving Strategies'
 
 stage 'Day 18-21 Final Project'
 level 'ECSPD U2 D 18-21 Intro'
 
-stage 'Unit 2 Challenge Planning & Creation'
+stage 'Unit 2 Challenge Planning'
+
+stage 'Unit 2 Challenge Planning'
+level 'ECSPD What is the Challenge'
 level 'ECSPD Pick Challenge'
 level 'ECSPD U2 Challenges'
-level 'ECSPD U2 Challenge Plan'
+level 'ECSPD U2 Challenge Decision'
+
+
+stage 'Unit 2 Challenge Creation'
+level 'ECSPD Start Challenge'
+level 'ECSPD Challenge Reflection'
+level 'ECSPD 1 page template'
+level 'ECSPD Challenge Rubric'
 level 'ECSPD U2 Challenge Submission'
