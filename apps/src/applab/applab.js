@@ -589,6 +589,8 @@ Applab.init = function(config) {
 
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
+  skin.smallStaticAvatar = null;
+  skin.staticAvatar = null;
   level = config.level;
   copyrightStrings = config.copyrightStrings;
   Applab.user = {
