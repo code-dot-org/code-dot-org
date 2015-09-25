@@ -48,7 +48,6 @@ class ActiveSupport::TestCase
 
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
-    puts "Done setting up"
   end
 
   teardown do

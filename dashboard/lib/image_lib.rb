@@ -27,13 +27,13 @@ module ImageLib
     background.composite(foreground) {|c|
       c.gravity('Center')
       c.compose('Over')
-    }.to_blob
+    }
   end
 
   private
 
   def self.get_image(blob, path)
-    if blob.present?
+    if blob
       MiniMagick::Image.read(blob)
     else
       MiniMagick::Image.open(path)

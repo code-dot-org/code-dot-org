@@ -115,7 +115,7 @@ gem 'redcarpet', '~> 3.2.3'
 gem 'geocoder'
 
 gem 'rmagick'
-gem 'mini_magick'
+gem 'mini_magick', '~> 3.7'  # More recent versions have Ruby 2.0 incompatibilities.
 
 gem 'acts_as_list'
 
