@@ -19,7 +19,7 @@ Rails.application.reload_routes! if defined? Rails
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
-
+puts "Done reloading backend"
 Dashboard::Application.config.action_mailer.default_url_options = { host: CDO.canonical_hostname('studio.code.org'), protocol: 'https' }
 Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.default_url_options
 
@@ -34,6 +34,7 @@ class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
   setup do
+    puts "Setting up"
     # sponsor message calls PEGASUS_DB, stub it so we don't have to deal with this in test
     UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
@@ -47,6 +48,7 @@ class ActiveSupport::TestCase
 
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
+    puts "Done setting up"
   end
 
   teardown do
