@@ -116,7 +116,7 @@ class AssetsTest < Minitest::Test
     assert non_owner_assets.last_response.client_error?, 'Non-owner cannot write a file'
 
     delete(non_owner_assets, owner_channel_id, filename)
-    assert !non_owner_assets.last_response.successful?, 'Non-owner cannot delete a file'
+    refute non_owner_assets.last_response.successful?, 'Non-owner cannot delete a file'
 
     # other_channel_id isn't owned by either user of the assets API.
     other_channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
@@ -154,6 +154,24 @@ class AssetsTest < Minitest::Test
     end
   end
 
+  def test_asset_last_modified
+    channel = create_channel(@channels)
+
+    put @assets, channel, 'test.png', 'version 1', 'image/png'
+    get @assets, channel, 'test.png'
+    v1_last_modified = @assets.last_response.headers['Last-Modified']
+
+    sleep 1
+
+    put @assets, channel, 'test.png', 'version 2', 'image/png'
+    get @assets, channel, 'test.png', '', 'HTTP_IF_MODIFIED_SINCE' => v1_last_modified
+    assert_equal 200, @assets.last_response.status
+    v2_last_modified = @assets.last_response.headers['Last-Modified']
+
+    get @assets, channel, 'test.png', '', 'HTTP_IF_MODIFIED_SINCE' => v2_last_modified
+    assert_equal 304, @assets.last_response.status
+  end
+
   # Methods below this line are test utilities, not actual tests
   private
 
@@ -180,13 +198,13 @@ class AssetsTest < Minitest::Test
 
   def ensure_aws_credentials(channel_id)
     list(@assets, channel_id)
-    credentials_missing =
-        !@assets.last_response.successful? &&
-            @assets.last_response.body.index('Aws::Errors::MissingCredentialsError')
-    credentials_msg =
-        "Aws::Errors::MissingCredentialsError: if you are running these tests locally,\n"\
-          "follow these instructions to configure your AWS credentials and try again:\n"\
-          "http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html"
+    credentials_missing = !@assets.last_response.successful? &&
+      @assets.last_response.body.index('Aws::Errors::MissingCredentialsError')
+    credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
+      Aws::Errors::MissingCredentialsError: if you are running these tests locally,
+      follow these instructions to configure your AWS credentials and try again:
+      http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html
+    TEXT
     flunk credentials_msg if credentials_missing
   end
 
@@ -198,8 +216,8 @@ class AssetsTest < Minitest::Test
     assets.put("/v3/assets/#{channel_id}/#{filename}", body, 'CONTENT_TYPE' => content_type).body
   end
 
-  def get(assets, channel_id, filename)
-    assets.get "/v3/assets/#{channel_id}/#{filename}"
+  def get(assets, channel_id, filename, body = '', headers = {})
+    assets.get "/v3/assets/#{channel_id}/#{filename}", body, headers
     assets.last_response.body
   end
 
