@@ -1,0 +1,11 @@
+name 'ECSPD Start Challenge'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# READY, SET, GO! 
+
+## Complete the challenge and return here once you have completed all the steps on the <a href="https://docs.google.com/document/d/1VgUhntEEJhbcj1v_SW1BR6GOfrKsH8pnBcaOPPaVakc/edit?usp=sharing" target="_blank">Planning Guide</a>.
+<br>
+<br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
