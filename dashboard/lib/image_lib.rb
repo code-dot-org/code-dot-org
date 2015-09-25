@@ -15,9 +15,9 @@ module ImageLib
   # @return [String] The new image as a blob.
   #
   # @return MiniMagick::Image
+  # @throws MiniMagic::Invalid if the image is invalid.
   # @throws MiniMagic::Error if a minimagic error occurs.
-  # @throws ArgumentError if neither the _blob or _url parameter is provided
-  #         for the foreground and background.
+
   def self.overlay_image(params)
     background = get_image(params[:background_blob], params[:background_url])
     foreground = get_image(params[:foreground_blob], params[:foreground_url])
