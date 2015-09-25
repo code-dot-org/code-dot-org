@@ -2,6 +2,8 @@ require 'selenium/webdriver'
 
 $browser_configs = JSON.load(open("browsers.json"))
 
+MAX_CONNECT_RETRIES = 3
+
 if ENV['TEST_LOCAL'] == 'true'
   # This drives a local installation of ChromeDriver running on port 9515, instead of BrowserStack.
   browser = Selenium::WebDriver.for :chrome, :url=>"http://127.0.0.1:9515"
@@ -35,10 +37,17 @@ else
   puts "Capabilities: #{capabilities.inspect}"
 
   Time.now.to_i.tap do |start_time|
-    browser = Selenium::WebDriver.for(:remote,
-                                      url: url,
-                                      desired_capabilities: capabilities,
-                                      http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
+    retries = 0
+    begin
+      browser = Selenium::WebDriver.for(:remote,
+                                        url: url,
+                                        desired_capabilities: capabilities,
+                                        http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
+    rescue URI::InvalidURIError
+      raise if retries >= MAX_CONNECT_RETRIES
+      retres += 1
+      retry
+    end
     puts "Got browser in #{Time.now.to_i - start_time}s"
   end
 
