@@ -97,6 +97,20 @@ var BLOCK_START_DISTANCE = 0;
 var BLOCK_START_FAST_DISTANCE = 50;
 
 /**
+ * A block is considered 'oversized' on a given dimension if it takes up more
+ * than this percentage of the viewport size.
+ * @type {number}
+ */
+var OVERSIZE_BLOCK_THRESHOLD = 0.85;
+
+/**
+ * Drag 'margin' around cursor to use instead of block bounds when the dragged
+ * block is oversized. Given in block space units.
+ * @type {number}
+ */
+var FALLBACK_DRAG_MARGIN = 15;
+
+/**
  * Enables debug drawing of various block drag scrolling operations
  * @type {boolean}
  */
@@ -153,20 +167,24 @@ Blockly.ScrollOnBlockDragHandler.prototype.panIfOverEdge = function (block,
   var viewportBox = this.blockSpace_.getViewportBox();
   var blockBox = block.getBox();
 
-  var FALLBACK_DRAG_RADIUS = 15;
-  // When dragged block is taller than the viewport, reduce the drag-bounds so
-  // we don't have infinite auto-scroll.
-  if (Blockly.isBoxTallerThan(blockBox, viewportBox)) {
+  // When dragged block is almost as tall as the viewport, use a small bounding
+  // region around the cursor instead of the whole block bounding box to trigger
+  // autoscrolling.
+  var blockHeight = blockBox.bottom - blockBox.top;
+  var viewportHeight = viewportBox.bottom - viewportBox.top;
+  if (blockHeight > viewportHeight * OVERSIZE_BLOCK_THRESHOLD) {
     // Center box around cursor with fallback radius
-    blockBox.top = Math.max(blockBox.top, mouseBlockSpace.y - FALLBACK_DRAG_RADIUS);
-    blockBox.bottom = Math.min(blockBox.bottom, mouseBlockSpace.y + FALLBACK_DRAG_RADIUS);
+    blockBox.top = Math.max(blockBox.top, mouseBlockSpace.y - FALLBACK_DRAG_MARGIN);
+    blockBox.bottom = Math.min(blockBox.bottom, mouseBlockSpace.y + FALLBACK_DRAG_MARGIN);
   }
 
   // Same rule, but horizontal
-  if (Blockly.isBoxWiderThan(blockBox, viewportBox)) {
+  var blockWidth = blockBox.right - blockBox.left;
+  var viewportWidth = viewportBox.right - viewportBox.left;
+  if (blockWidth > viewportWidth * OVERSIZE_BLOCK_THRESHOLD) {
     // Center box around cursor with fallback radius
-    blockBox.left = Math.max(blockBox.left, mouseBlockSpace.x - FALLBACK_DRAG_RADIUS);
-    blockBox.right = Math.min(blockBox.right, mouseBlockSpace.x + FALLBACK_DRAG_RADIUS);
+    blockBox.left = Math.max(blockBox.left, mouseBlockSpace.x - FALLBACK_DRAG_MARGIN);
+    blockBox.right = Math.min(blockBox.right, mouseBlockSpace.x + FALLBACK_DRAG_MARGIN);
   }
 
   // Calculate how far out-of-bounds the dragged block/cursor is.
