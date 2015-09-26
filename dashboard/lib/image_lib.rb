@@ -16,27 +16,39 @@ module ImageLib
   #
   # @return MiniMagick::Image
   # @throws MiniMagic::Invalid if the image is invalid.
-  # @throws MiniMagic::Error if a minimagic error occurs.
+  # @throws MiniMagic::Error if a MiniMagic error occurs.
 
   def self.overlay_image(params)
-    background = get_image(params[:background_blob], params[:background_url])
-    foreground = get_image(params[:foreground_blob], params[:foreground_url])
-
+    background, bg_temp = get_image_and_file(params[:background_url],
+                                             params[:background_blob])
+    foreground, fg_temp = get_image_and_file(params[:foreground_url],
+                                             params[:foreground_blob])
     background.geometry('154x154+0+0')
-
-    background.composite(foreground) {|c|
+    background.composite(foreground) do |c|
       c.gravity('Center')
       c.compose('Over')
-    }
+    end
+  ensure
+    bg_temp.unlink if bg_temp
+    fg_temp.unlink if fg_temp
   end
 
   private
 
-  def self.get_image(blob, path)
-    if blob
-      MiniMagick::Image.read(blob)
+  # If path is provided, open it as a Minimagic Image and return [image, nil]
+  # Otherwise create a tempfile containing the blob, open it as an image and
+  # return [image, temp_file].
+  def self.get_image_and_file(path, blob)
+    if path
+      [MiniMagick::Image.open(path), nil]
     else
-      MiniMagick::Image.open(path)
+      # We have to write to a tempfile to work around a bug in Ruby 2.0 StringIO
+      # as called from MiniMagick::Image.read. This can be changed to Image.read
+      # when we update to Ruby 2.2.
+      temp_file = Tempfile.new(['blob_file', '.png'], :encoding => 'BINARY')
+      temp_file.write(blob)
+      temp_file.close
+      [MiniMagick::Image.new(temp_file.path), temp_file]
     end
   end
 
