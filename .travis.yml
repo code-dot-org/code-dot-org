@@ -12,6 +12,10 @@ gemfile: Gemfile
 
 bundler_args: --without development --deployment
 
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq imagemagick
+
 before_script:
   - cd dashboard
   - bundle exec rake -t db:create db:schema:load
