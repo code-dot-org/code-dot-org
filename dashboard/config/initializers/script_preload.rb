@@ -3,6 +3,6 @@
 # and Spring application preloader (Rails console, unit tests).
 
 # Skip if this is running a Rake task (e.g. rake db:setup)
-unless File.basename($0) == 'rake' || ENV['FAST_START']
+unless File.basename($0) == 'rake'
   Script.script_cache
 end
