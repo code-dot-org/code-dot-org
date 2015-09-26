@@ -42,7 +42,23 @@ class ImageLibTest < ActiveSupport::TestCase
   # Return true if image1 and image2 are identical as determined by
   # the ImageMagic compare tool.
   def images_equal?(image1, image2)
-    '0' == `compare -metric ae #{image1.path} #{image2.path} null: 2>&1`
+    result = capture_stderr do
+      MiniMagick::Tool::Compare.new do |c|
+        c.metric('ae')  # Absolute error metric
+        c << image1.path << image2.path << 'null:'
+      end
+    end
+    Rails.logger.info "Image comparison result=#{result}"
+    '0' == result
+  end
+
+  # Helper function to evaluate and return output to stderr.
+  def capture_stderr
+    $stderr = StringIO.new
+    yield
+    result = $stderr.string
+    $stderr = STDERR
+    result
   end
 
   def test_image_path(name)
