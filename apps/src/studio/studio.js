@@ -2566,21 +2566,7 @@ Studio.drawMapTiles = function (svg) {
           tilesDrawn[row+1][col] = true;
           tilesDrawn[row+1][col+1] = true;          
         }
-/*
-        var largeTile = false;
 
-        // If we can draw a large tile here, then do so, and make sure
-        // we won't draw any more tiles where it extends over.
-        if (Studio.getWallValue(row, col+1) &&
-            Studio.getWallValue(row+1, col) &&
-            Studio.getWallValue(row+1, col+1)) {
-          largeTile = true;
-          tilesDrawn[row][col] = true;
-          tilesDrawn[row][col+1] = true;
-          tilesDrawn[row+1][col] = true;
-          tilesDrawn[row+1][col+1] = true;
-        }
-*/
         Studio.drawWallTile(spriteLayer, wallVal, row, col);
       }
     }
