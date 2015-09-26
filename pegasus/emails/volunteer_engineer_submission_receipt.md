@@ -7,7 +7,7 @@ subject: Volunteer Submission Received
 
 Thank you for submitting your information to help local teachers during the Hour of Code. If necessary, you can make changes by clicking here: [<%= edit_link %>](<%= edit_link %>).
 
-Over the next several weeks, we'll be hosting video chats to update volunteers aobut the Hour of Code and what you can expect when you volunteer during Computer Science Education Week, December 7-13. We'll send you a follow up email shortly, to announce the schedule of video chats. So what can you do now?
+Over the next several weeks, we'll be hosting video chats to update volunteers about the Hour of Code and what you can expect when you volunteer during Computer Science Education Week, December 7-13. We'll send you a follow up email shortly, to announce the schedule of video chats. So what can you do now?
 
 ## 1. Recruit your co-workers to volunteer
 Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteer engineers, so ask them to [sign up as a volunteer](https://code.org/volunteer/engineer).
