@@ -254,7 +254,8 @@ exports.squareHasItemClass = function (itemClassIndex, squareValue) {
  */
 exports.WallType = {
   NORMAL_SIZE: 0,
-  DOUBLE_SIZE: 1
+  DOUBLE_SIZE: 1,
+  JUMBO_SIZE: 2
 };
 
 exports.WallTypeMask     = 0x0F000000;
