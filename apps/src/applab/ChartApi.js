@@ -92,6 +92,19 @@ ChartApi.prototype.getConstructorForType = function (chartType) {
 };
 
 /**
+ * @param {ChartType} chartType
+ * @returns {number} an upper limit on the number of columns a particular
+ *          chart type will support.
+ */
+ChartApi.getMaxColumnsForType = function (chartType) {
+  switch (chartType.toLowerCase()) {
+    case ChartApi.ChartType.PIE:
+      return 2;
+  }
+  return Infinity;
+};
+
+/**
  * Get an array of all the chart type strings.
  * @returns {string[]}
  */
@@ -155,7 +168,7 @@ ChartApi.prototype.drawChartFromRecords = function (chartId, chartType,
     }
 
     // Warn if provided more columns than chart type can use
-    var maxColumnsForType = 2;
+    var maxColumnsForType = ChartApi.getMaxColumnsForType(chartType);
     if (columns.length > maxColumnsForType) {
       warnings.push(new Error('Provided ' + columns.length +
           ' columns but chart type "' + chartType + '" can only use up to ' +
