@@ -36,15 +36,15 @@ module ImageLib
   private
 
   # If path is provided, open it as a Minimagic Image and return [image, nil]
-  # Otherwise create a tempfile containing the blob, open it as an image and
-  # return [image, temp_file].
+  # Otherwise create a temporary file containing the blob, open it as an image
+  # and return [image, temp_file].
   def self.get_image_and_file(path, blob)
     if path
       [MiniMagick::Image.open(path), nil]
     else
-      # We have to write to a tempfile to work around a bug in Ruby 2.0 StringIO
-      # as called from MiniMagick::Image.read. This can be changed to Image.read
-      # when we update to Ruby 2.2.
+      # We have to write to a tempfile to work around a bug in Ruby 2.0
+      # StringIO as called from MiniMagick::Image.read. This can be changed to
+      # Image.read when we update to Ruby 2.2.
       temp_file = Tempfile.new(['blob_file', '.png'], :encoding => 'BINARY')
       temp_file.write(blob)
       temp_file.close
