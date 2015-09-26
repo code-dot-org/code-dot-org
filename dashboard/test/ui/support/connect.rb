@@ -70,7 +70,7 @@ end
 
 def browser
   if ENV['TEST_LOCAL'] == 'true'
-    # This drives a local installation of ChromeDriver running on port 9515, instead of BrowserStack.
+    # This drives a local installation of ChromeDriver running on port 9515, instead of Saucelabs.
     local_browser
   else
     saucelabs_browser
@@ -110,5 +110,5 @@ After do |scenario|
 end
 
 at_exit do
-  @browser.quit
+  browser.quit
 end
