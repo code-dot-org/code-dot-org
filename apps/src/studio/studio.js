@@ -56,9 +56,6 @@ var TestResults = studioApp.TestResults;
 
 var SVG_NS = "http://www.w3.org/2000/svg";
 
-// uniqueId that increments by 1 each time an element is created
-var uniqueId = 0;
-
 // Whether we are showing debug information
 var showDebugInfo = false;
 
@@ -704,6 +701,14 @@ function sortDrawOrder() {
     itemsArray.push(sprite);
 
     Studio.drawDebugRect("spriteBottom", Studio.sprite[i].x, sprite.y, 4, 4);
+  }
+
+  // Add wall tiles.
+  for (i = 0; i < Studio.tiles.length; i++) {
+    var tile = {};
+    tile.element = document.getElementById('tile_' + i);
+    tile.y = Studio.tiles[i].bottomY;
+    itemsArray.push(tile);
   }
 
   itemsArray = _.sortBy(itemsArray, 'y');
@@ -1434,6 +1439,7 @@ Studio.init = function(config) {
   Studio.eventHandlers = [];
   Studio.perExecutionTimeouts = [];
   Studio.tickIntervalId = null;
+  Studio.tiles = [];
 
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -2478,7 +2484,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   }
 
   var clipPath = document.createElementNS(SVG_NS, 'clipPath');
-  var clipId = 'tile_clippath_' + uniqueId;
+  var clipId = 'tile_clippath_' + Studio.tiles.length;
   clipPath.setAttribute('id', clipId);
   clipPath.setAttribute('class', 'tile_clip');
   var rect = document.createElementNS(SVG_NS, 'rect');
@@ -2490,7 +2496,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   svg.appendChild(clipPath);
 
   var tile = document.createElementNS(SVG_NS, 'image');
-  var tileId = 'tile_' + (uniqueId++);
+  var tileId = 'tile_' + (Studio.tiles.length);
   tile.setAttribute('id', tileId);
   tile.setAttribute('class', 'tile');
   tile.setAttribute('width', numSrcCols * tileSize);
@@ -2501,6 +2507,10 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   svg.appendChild(tile);
 
   tile.setAttribute('clip-path', 'url(#' + clipId + ')');
+
+  var tileEntry = {};
+  tileEntry.bottomY = row * Studio.SQUARE_SIZE + addOffset + tileSize;
+  Studio.tiles.push(tileEntry);  
 };
 
 Studio.createLevelItems = function (svg) {
@@ -3214,6 +3224,7 @@ Studio.setBackground = function (opts) {
     if (level.wallMapCollisions) {
       $(".tile_clip").remove();
       $(".tile").remove();
+      Studio.tiles = [];
       Studio.drawMapTiles();
 
       sortDrawOrder();  
@@ -3240,6 +3251,7 @@ Studio.setWalls = function (opts) {
   // Draw the tiles (again) now that we know which background we're using.
   $(".tile_clip").remove();
   $(".tile").remove();
+  Studio.tiles = [];
   Studio.drawMapTiles();
 
   Studio.fixSpriteLocation();
