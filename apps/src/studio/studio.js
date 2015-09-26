@@ -2424,7 +2424,19 @@ Studio.clearDebugRects = function() {
 };
 
 Studio.drawWallTile = function (svg, wallVal, row, col) {
-  var srcRow, srcCol, srcWallType = 0;
+  var srcRow, srcCol;
+
+  // Defaults for regular tiles:
+  var tiles = skin.tiles;
+  var srcWallType = 0;
+  var tileSize = Studio.SQUARE_SIZE;
+  var addOffset = 0;  // Added to X & Y to offset drawn tile.
+  var numSrcRows = 8;
+  var numSrcCols = 8;
+
+  // We usually won't try jumbo size.
+  var jumboSize = false;
+
   if (wallVal == SquareType.WALL) {
     // use a random coordinate
     // TODO (cpirich): these should probably be chosen once at level load time
@@ -2437,39 +2449,41 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
                 Math.floor(Math.random() * constants.WallRandomCoordMax) :
                 1 + Math.floor(Math.random() * (constants.WallRandomCoordMax - 1));
   } else {
+    // This wall value has been explicitly set.  It encodes the row & col from
+    // the spritesheet of wall tile images.
     srcRow = (wallVal & constants.WallCoordRowMask) >> constants.WallCoordRowShift;
     srcCol = (wallVal & constants.WallCoordColMask) >> constants.WallCoordColShift;
     srcWallType = (wallVal & constants.WallTypeMask) >> constants.WallTypeShift;
+
+    if (srcWallType === constants.WallType.JUMBO_SIZE) {
+      // Jumbo tiles come from a separate sprite sheet which has oversize tiles
+      // which are drawn in an overlapping fashion, though centered on the
+      // regular tiles' centers.
+      jumboSize = true;
+      tileSize = skin[Studio.background].jumboTilesSize;
+      numSrcRows = skin[Studio.background].jumboTilesRows;
+      numSrcCols = skin[Studio.background].jumboTilesCols;
+    } else if (srcWallType === constants.WallType.DOUBLE_SIZE) {
+      // Double-size tiles are just a regular tile expanded to cover 2x2 tiles.
+      tileSize = 2 * Studio.SQUARE_SIZE;
+    }
   }
 
-  // We might end up scaling this piece a little.  In that case, it's likely
-  // we'll also add an offset to its X/Y to keep it centered.
-  var multiplySize = 1;
-  var addOffset = 0;
-
-  if (skin.enlargeWallTiles && 
-      srcRow >= skin.enlargeWallTiles.minRow &&
-      srcRow <= skin.enlargeWallTiles.maxRow &&
-      srcCol >= skin.enlargeWallTiles.minCol &&
-      srcCol <= skin.enlargeWallTiles.maxCol) {
-    multiplySize = 1.2;
-    addOffset = -0.1;
-  } else if (srcWallType === constants.WallType.DOUBLE_SIZE) {
-    multiplySize = 2;
-  } else {
-    multiplySize = 1;
+  // Attempt to load tiles that match the current background, if specified.
+  if (Studio.background && !jumboSize && skin[Studio.background].tiles) {
+    tiles = skin[Studio.background].tiles;
+  } else if (Studio.background && jumboSize && skin[Studio.background].jumboTiles) {
+    tiles = skin[Studio.background].jumboTiles;
+    addOffset = skin[Studio.background].jumboTilesAddOffset;
   }
-
-  var tiles = Studio.background && skin[Studio.background].tiles ?
-                skin[Studio.background].tiles : skin.tiles;
 
   var clipPath = document.createElementNS(SVG_NS, 'clipPath');
   var clipId = 'tile_clippath_' + uniqueId;
   clipPath.setAttribute('id', clipId);
   clipPath.setAttribute('class', 'tile_clip');
   var rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttribute('width', multiplySize * Studio.SQUARE_SIZE);
-  rect.setAttribute('height', multiplySize * Studio.SQUARE_SIZE);
+  rect.setAttribute('width', tileSize);
+  rect.setAttribute('height', tileSize);
   rect.setAttribute('x', col * Studio.SQUARE_SIZE + addOffset);
   rect.setAttribute('y', row * Studio.SQUARE_SIZE + addOffset);
   clipPath.appendChild(rect);
@@ -2479,10 +2493,10 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   var tileId = 'tile_' + (uniqueId++);
   tile.setAttribute('id', tileId);
   tile.setAttribute('class', 'tile');
-  tile.setAttribute('width', multiplySize * 8 * Studio.SQUARE_SIZE);
-  tile.setAttribute('height', multiplySize * 8 * Studio.SQUARE_SIZE);
-  tile.setAttribute('x', col * Studio.SQUARE_SIZE - multiplySize * srcCol * Studio.SQUARE_SIZE + addOffset);
-  tile.setAttribute('y', row * Studio.SQUARE_SIZE - multiplySize * srcRow * Studio.SQUARE_SIZE + addOffset); 
+  tile.setAttribute('width', numSrcCols * tileSize);
+  tile.setAttribute('height', numSrcRows * tileSize);
+  tile.setAttribute('x', col * Studio.SQUARE_SIZE - srcCol * tileSize + addOffset);
+  tile.setAttribute('y', row * Studio.SQUARE_SIZE - srcRow * tileSize + addOffset); 
   tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', tiles);
   svg.appendChild(tile);
 
