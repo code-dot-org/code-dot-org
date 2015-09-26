@@ -1435,14 +1435,14 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
   var runButton = document.getElementById('runButton');
   var buttonRow = runButton.parentElement;
+  var belowViz = document.getElementById('belowVisualization');
 
   // For share page on mobile, do not show this part.
-  if ((!options.embed) && (!this.share || !dom.isMobile())) {
+  if (!options.embed && !this.share) {
     var openWorkspace = document.createElement('button');
     openWorkspace.setAttribute('id', 'open-workspace');
     openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
 
-    var belowViz = document.getElementById('belowVisualization');
     belowViz.appendChild(this.feedback_.createSharingDiv({
       response: {
         level_source: window.location,
@@ -1471,7 +1471,11 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     buttonRow.appendChild(openWorkspace);
   } else {
     buttonRow.style.display = 'none';
-    document.body.style.backgroundColor = '#000';
+    belowViz.parentElement.style.margin = 'auto';
+    document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
+    if (dom.isMobile()) {
+      document.body.style.backgroundColor = '#000';
+    }
   }
 };
 
