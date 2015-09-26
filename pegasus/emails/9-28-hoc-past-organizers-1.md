@@ -1,9 +1,9 @@
 ---
-from: '"Hadi Partovi (Code.org)" <hadi_partovi@code.org>'
+from: 'Hadi Partovi <hadi_partovi@code.org>'
 subject: The Hour of Code 2015
 ---
 
-### The Hour of Code is coming, December 7-13, 2015
+### The Hour of Code is coming, December 7-13, 2015!
 
 Because of your students and your stories, the [Hour of Code movement](https://hourofcode.com/) keeps changing the world. Are you ready to do it again? We hope you’ll join us to make this year a turning point for computer science in our schools. 
 
@@ -11,7 +11,7 @@ Because of your students and your stories, the [Hour of Code movement](https://h
 
 <br/>
 <center>
-<a href="https://youtu.be/2DxWIxec6yo"><img src="https://code.org/images/fit-250/calling-teachers.png"/></a>
+<a href="https://youtu.be/2DxWIxec6yo"><img src="https://code.org/images/fit-300/calling-teachers.png"/></a>
 </center>
 <br/>
 
@@ -23,7 +23,6 @@ Together, we want to reach 100,000 Hour of Code events around the world in Decem
 ### Worldwide, in 40 languages
 
 Hour of Code tutorials are available in 40 languages. We need your help reaching schools where students or teachers don’t speak English. If you want to help translate new tutorials, [let us know](https://code.org/translate/).
-
 <% end %>
 
 ### Prizes for every organizer 
@@ -43,13 +42,11 @@ Founder, Code.org
 
 <% if organizer %>
 <small>You’re receiving this email because you signed up to host an <a href="https://hourofcode.com/">"Hour of Code</a> in the past. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101.</small> <br />
-
 <small><strong>Don't like these emails? [Unsubscribe here](<%= unsubscribe_link %>).</strong></small>
 
 <% else %>
 
 <small>You’re receiving this email because you created a teacher account on <a href="https://studio.code.org/">Code Studio</a>. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101.</small><br />
-
 <small><strong>Don't like these emails? [Unsubscribe here](<%= unsubscribe_link %>).</strong></small>
 
 <% end %>
