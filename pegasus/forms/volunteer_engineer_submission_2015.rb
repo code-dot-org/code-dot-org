@@ -5,7 +5,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     result = {}
 
     result[:name_s] = required stripped data[:name_s]
-    result[:company_s] = required stripped data[:company_s]
+    result[:company_s] = nil_if_empty stripped data[:company_s]
     result[:experience_s] = required data[:experience_s]
     result[:location_s] = required stripped data[:location_s]
     result[:location_flexibility_ss] = required data[:location_flexibility_ss]
