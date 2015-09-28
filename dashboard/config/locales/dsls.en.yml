@@ -97,6 +97,7 @@ en:
       CSP Student Plan - U1L5 - Sending Bits in the real world:
         CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan - U1L5 - Sending Bits in the real world
         description here: description here
+      CSP U4 - Basic Terms: {}
       CSPPD PD Phases:
         CSPPD PD Phases: CSPPD PD Phases
       CSPPD PD overview:
@@ -850,6 +851,7 @@ en:
         'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
       U3L34 Student Lesson Introduction:
         'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
+      U4 Inspirational Data Video: {}
       U4L01 Student Lesson Introduction:
         description here: description here
         title: title
@@ -2225,6 +2227,10 @@ en:
         Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
         There are two answers here that are correct.  Looks like you can choose either one and be right.: There are two answers here that are correct.  Looks like you can choose either one and be right.
         What is 2 + 2?: What is 2 + 2?
+      'CSP U4L04 Assessment 1 ':
+        Question: Question
+        right answer: right answer
+        wrong answer: wrong answer
       CSPPD2 pixel video 1:
         How many different light channels make up a single pixel on a standard monitor?: How many different light channels make up a single pixel on a standard monitor?
         four: four
@@ -3664,6 +3670,10 @@ en:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
+      'CSP U4L04 Assessment 2 ':
+        Enter answer here: Enter answer here
+        Enter prompt here: Enter prompt here
+        Enter title here: Enter title here
       CSPPD PD goals:
         Documenting Your PD Goals: Documenting Your PD Goals
       CSPPD course goals:
