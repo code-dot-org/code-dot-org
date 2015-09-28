@@ -5,26 +5,28 @@ class ReportAbuseController < ApplicationController
   AGE_CUSTOM_FIELD_ID = 24024923
 
   def report_abuse
-    HTTParty.post('https://codeorg.zendesk.com/api/v2/tickets.json',
-      headers: {"Content-Type" => "application/json", "Accept" => "application/json"},
-      body: {
-        ticket: {
-          requester: {
-            name: (params[:name] == '' ? params[:email] : params[:name]),
-            email: params[:email]
-          },
-          subject: 'Abuse Reported',
-          comment: {
-            body: ["URL: #{params[:abuse_url]}",
-              "abuse type: #{params[:abuse_type]}",
-              "user detail:",
-              "#{params[:abuse_detail]}"].join("\n")
-          },
-          custom_fields: [ { id: AGE_CUSTOM_FIELD_ID, value: params[:age] }],
-          tags: (params[:abuse_type] == 'infringement' ? ['report_abuse', 'infringement'] : ['report_abuse'])
-        }
-      }.to_json,
-      basic_auth: { username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token})
+    unless Rails.env.development?
+      HTTParty.post('https://codeorg.zendesk.com/api/v2/tickets.json',
+        headers: {"Content-Type" => "application/json", "Accept" => "application/json"},
+        body: {
+          ticket: {
+            requester: {
+              name: (params[:name] == '' ? params[:email] : params[:name]),
+              email: params[:email]
+            },
+            subject: 'Abuse Reported',
+            comment: {
+              body: ["URL: #{params[:abuse_url]}",
+                "abuse type: #{params[:abuse_type]}",
+                "user detail:",
+                "#{params[:abuse_detail]}"].join("\n")
+            },
+            custom_fields: [ { id: AGE_CUSTOM_FIELD_ID, value: params[:age] }],
+            tags: (params[:abuse_type] == 'infringement' ? ['report_abuse', 'infringement'] : ['report_abuse'])
+          }
+        }.to_json,
+        basic_auth: { username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token})
+    end
 
     unless params[:channel_id].blank?
       channels_path = "/v3/channels/#{params[:channel_id]}/abuse"

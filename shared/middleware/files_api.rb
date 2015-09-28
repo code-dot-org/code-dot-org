@@ -76,6 +76,10 @@ class FilesApi < Sinatra::Base
     not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
+
+    abuse_score = result[:metadata]['abuse_score'].to_i
+    not_found if abuse_score > 0 and !can_view_abusive_assets?(encrypted_channel_id)
+
     result[:body]
   end
 
@@ -93,8 +97,7 @@ class FilesApi < Sinatra::Base
     # header.
     body = request.body.read
 
-    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    not_authorized unless owner_id == storage_id('user')
+    not_authorized unless owns_channel?(encrypted_channel_id)
 
     too_large unless body.length < FilesApi::max_file_size
 
@@ -108,8 +111,12 @@ class FilesApi < Sinatra::Base
 
     buckets = get_bucket_impl(endpoint).new
     app_size = buckets.app_size(encrypted_channel_id)
+    abuse_score = request.GET['abuse_score']
+
+    not_authorized unless buckets.can_update_abuse_score?(encrypted_channel_id, filename, abuse_score)
+
     forbidden unless app_size + body.length < FilesApi::max_app_size
-    response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
+    response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'], abuse_score)
 
     content_type :json
     category = mime_type.split('/').first
@@ -130,6 +137,15 @@ class FilesApi < Sinatra::Base
     get_bucket_impl(endpoint).new.delete(encrypted_channel_id, filename)
     no_content
   end
+
+  # two scenarios
+  # (1) I have an abusive project and add an asset. New asset should inherit projects abuse score
+  # (2) Someone reports abuse on a project. All existing assets should inherit score
+  #     - Only admins should be able to decrease this score
+
+  # put %r{/v3/(assets|sources)/([^/]+)/abuse$} do |endpoint, encrypted_channel_id, filename|
+  #
+  # end
 
   #
   # GET /v3/sources/<channel-id>/<filename>/versions

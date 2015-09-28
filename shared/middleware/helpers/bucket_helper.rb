@@ -32,12 +32,17 @@ class BucketHelper
     key = s3_path owner_id, channel_id, filename
     begin
       s3_object = @s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
-      {status: 'FOUND', body: s3_object.body, last_modified: s3_object.last_modified}
+      {status: 'FOUND', body: s3_object.body, last_modified: s3_object.last_modified, metadata: s3_object.metadata}
     rescue Aws::S3::Errors::NotModified
       {status: 'NOT_MODIFIED'}
     rescue Aws::S3::Errors::NoSuchKey
       {status: 'NOT_FOUND'}
     end
+  end
+
+  def get_abuse_score(encrypted_channel_id, filename, version = nil)
+    response = get(encrypted_channel_id, filename, version)
+    response.nil? ? 0 : response[:metadata]['abuse_score'].to_i
   end
 
   def copy_files(src_channel, dest_channel)
@@ -58,11 +63,19 @@ class BucketHelper
     end
   end
 
-  def create_or_replace(encrypted_channel_id, filename, body, version = nil)
+  # Returns true if we are allowed to update the abuse score to the given value. Admins can update
+  # to any score, non-admins can only increase the score.
+  def can_update_abuse_score?(encrypted_channel_id, filename, abuse_score = nil, version = nil)
+    return true if admin? or abuse_score.nil?
+
+    get_abuse_score(encrypted_channel_id, filename, version) < abuse_score.to_i
+  end
+
+  def create_or_replace(encrypted_channel_id, filename, body, version = nil, abuse_score = 0)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
 
     key = s3_path owner_id, channel_id, filename
-    response = @s3.put_object(bucket: @bucket, key: key, body: body)
+    response = @s3.put_object(bucket: @bucket, key: key, body: body, metadata: { abuse_score: abuse_score.to_s})
 
     # Delete the old version, if doing an in-place replace
     @s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
