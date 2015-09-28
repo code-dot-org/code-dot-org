@@ -3284,9 +3284,13 @@ Studio.fixSpriteLocation = function () {
     if (Studio.willSpriteTouchWall(sprite, xPos, yPos)) {
 
       // Let's assume that one of the surrounding 8 squares is available.
+      // (Note: this is a major assumption predicated on level design.)
 
       var xCenter = xPos + sprite.width / 2;
       var yCenter = yPos + sprite.height / 2;
+
+      xCenter += skin.wallCollisionRectOffsetX + skin.wallCollisionRectWidth / 2;
+      yCenter += skin.wallCollisionRectOffsetY + skin.wallCollisionRectHeight / 2;
 
       var xGrid = Math.floor(xCenter / Studio.SQUARE_SIZE);
       var yGrid = Math.floor(yCenter / Studio.SQUARE_SIZE);
@@ -3299,8 +3303,11 @@ Studio.fixSpriteLocation = function () {
       for (var row = minRow; row <= maxRow; row++) {
         for (var col = minCol; col <= maxCol; col++) {
           if (! Studio.getWallValue(row, col)) {
-            sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2;
-            sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 - 4;
+
+            sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2
+              - skin.wallCollisionRectOffsetX;
+            sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 
+              - skin.wallCollisionRectOffsetY;
             sprite.dir = Direction.NONE;
 
             return;
