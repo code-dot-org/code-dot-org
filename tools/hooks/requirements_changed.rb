@@ -4,7 +4,8 @@ REQUIREMENTS = {
   "requirements.txt" => "pip install -r requirements.txt",
   "package.json" => "npm install",
   "bower.json" => "bower install",
-  "Gemfile" => "bundle install"
+  "Gemfile" => "bundle install",
+  "Berksfile" => "berks install"
 }
 
 def get_modified_files
