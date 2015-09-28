@@ -1,4 +1,5 @@
-/* global $ */
+/* global $, options */
+// options is appOptions, from the level parameters themselves
 
 var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
 var LETTERS = ALPHABET.split('');

@@ -51,4 +51,6 @@ Founder, Code.org
 
 <% end %>
 
+![](<%= tracking_pixel %>)
+
 
