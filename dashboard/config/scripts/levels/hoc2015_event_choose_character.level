@@ -31,6 +31,8 @@
     "remove_items_when_actor_collides": true,
     "markerHeight": 50,
     "markerWidth": 50,
+    "delayCompletion": 2000,
+    "floating_score": true,
 
     "maze": "[[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]]",
 
