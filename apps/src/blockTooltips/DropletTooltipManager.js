@@ -19,6 +19,7 @@ function DropletTooltipManager(appMsg) {
    * @type {Object.<String, Function>}
    */
   this.appMsg = appMsg || {};
+  this.tooltipsEnabled = true;
 
   /**
    * Map of block types to tooltip objects
@@ -78,6 +79,11 @@ DropletTooltipManager.prototype.hasDocFor = function (functionName) {
 };
 
 DropletTooltipManager.prototype.showDocFor = function (functionName) {
+  if (!this.tooltipsEnabled) {
+    return;
+  }
+
+  console.log("SHOWING TOOLTIP");
   $('.tooltipstered').tooltipster('hide');
   var dialog = new window.Dialog({
     body: $('<iframe>')
@@ -100,6 +106,16 @@ DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
   }
 
   return this.blockTypeToTooltip[functionName];
+};
+
+/**
+ * @param {boolean} enabled if tooltips should be enabled.
+ */
+DropletTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
+  this.tooltipsEnabled = !!enabled;
+  this.dropletAutocompletePopupTooltipManager_.setTooltipsEnabled(enabled);
+  this.dropletAutocompleteParameterTooltipManager_.setTooltipsEnabled(enabled);
+  this.dropletBlockTooltipManager_.setTooltipsEnabled(enabled);
 };
 
 module.exports = DropletTooltipManager;

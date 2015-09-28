@@ -134,3 +134,7 @@
     = f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
     :javascript
       codeMirror('solution_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+-if @level.game.uses_droplet?
+  .field
+    = f.label :droplet_tooltips_disabled, "Hide droplet documentation tooltips"
+    = boolean_check_box f, :droplet_tooltips_disabled
