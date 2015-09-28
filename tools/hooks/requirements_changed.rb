@@ -1,5 +1,7 @@
 REPO_DIR = File.expand_path('../../../', __FILE__)
 
+# Hash of several common requirements file patterns. Note that not all
+# of these are currently used, but are included for future-proofing.
 REQUIREMENTS = {
   "requirements.txt" => "pip install -r requirements.txt",
   "package.json" => "npm install",
@@ -28,7 +30,7 @@ if (!file_checkout?())
   modified_files.each do |file|
     basename = File.basename(file)
     if REQUIREMENTS.key?(basename)
-      puts "#{file} changed; you probably want to run #{REQUIREMENTS[basename]}"
+      puts "#{file} changed; you probably want to run #{REQUIREMENTS[basename]} or rake build"
     end
   end
 end
