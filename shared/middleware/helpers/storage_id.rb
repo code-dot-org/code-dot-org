@@ -116,3 +116,14 @@ def owns_channel?(encrypted_channel_id)
   owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
   owner_storage_id == storage_id('user')
 end
+
+def can_view_abusive_assets?(encrypted_channel_id)
+  return false unless current_user_id
+  return true if owns_channel?(encrypted_channel_id) or admin?
+
+  # teachers can see abusive assets of their students
+  owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+  owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+
+  teaches_student?(owner_user_id)
+end

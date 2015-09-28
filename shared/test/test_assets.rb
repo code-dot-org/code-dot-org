@@ -1,9 +1,11 @@
+require 'mocha/mini_test'
 require 'minitest/autorun'
 require 'rack/test'
 require File.expand_path '../../../deployment', __FILE__
 require File.expand_path '../../middleware/files_api', __FILE__
 require File.expand_path '../../middleware/channels_api', __FILE__
 require File.expand_path '../../middleware/helpers/asset_bucket', __FILE__
+require File.expand_path '../fixtures/fake_dashboard', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
@@ -12,6 +14,7 @@ class AssetsTest < Minitest::Test
   def setup
     init_apis
   end
+
 
   def test_assets
     channel_id = create_channel(@channels)
@@ -67,6 +70,145 @@ class AssetsTest < Minitest::Test
 
     delete_channel(@channels, channel_id)
   end
+
+  # abuse scenarios to test
+  # - Report abuse for project with existing assets. All assets get abuse score
+  # - Add asset to abusive project. New asset inherits projects abuse score
+  # - Reset abuse on a project. All existing assets abuse scores are reset
+  # - copy assets. new assets have no abuse score
+  # - Can view absusive asset as owner
+  # - Can view absusive asset as teacher
+  # - Can view abusive asset as admin
+  # - Can not view abusive asset as non-owner student (404)
+
+  def test_can_update_abuse_score
+    channel_id = create_channel(@channels)
+    asset_bucket = AssetBucket.new
+
+    # create an asset with an abuse score
+    put(@assets, channel_id, 'abuse10.jpg', 'stub-image-contents', 'image/jpeg')
+    put(@assets, channel_id, 'abuse10.jpg', 'stub-image-contents', 'image/jpeg', 'abuse_score=10')
+    result = asset_bucket.get(channel_id, 'abuse10.jpg')
+    assert_equal 10, result[:metadata]['abuse_score'].to_i
+
+    # non admin can only increase score
+    AssetBucket.any_instance.stubs(:admin?).returns(false)
+    assert_equal true, asset_bucket.can_update_abuse_score?(channel_id, 'abuse10.jpg')
+    assert_equal true, asset_bucket.can_update_abuse_score?(channel_id, 'abuse10.jpg', '20')
+    assert_equal false, asset_bucket.can_update_abuse_score?(channel_id, 'abuse10.jpg', '0')
+
+    # admin can decrease score
+    AssetBucket.any_instance.stubs(:admin?).returns(true)
+    assert_equal true, asset_bucket.can_update_abuse_score?(channel_id, 'abuse10.jpg', '0')
+
+    # can always set score of file that doesn't yet exist
+    assert_equal true, asset_bucket.can_update_abuse_score?(channel_id, 'nonexistent.jpg', '30')
+  end
+
+  # def test_set_abuse_score
+  #   channel_id = create_channel(@channels)
+  #   AssetBucket.any_instance.stubs(:admin?).returns(false)
+  #
+  #   # create an asset without an abuse score
+  #   put(@assets, channel_id, 'asset.jpg', 'stub-image-contents', 'image/jpeg')
+  #   response = AssetBucket.new.get(channel_id, 'asset.jpg')
+  #   assert_equal 0, response.metadata['abuse_score'].to_i
+  #
+  #   # increment score
+  #   put(@assets, channel_id, 'asset.jpg', 'stub-image-contents', 'image/jpeg', 'abuse_score=10')
+  #   response = AssetBucket.new.get(channel_id, 'asset.jpg')
+  #   assert_equal 10, response.metadata['abuse_score'].to_i
+  #
+  #   #  fail to decrement score
+  #   put(@assets, channel_id, 'asset.jpg', 'stub-image-contents', 'image/jpeg', 'abuse_score=10')
+  #   response = AssetBucket.new.get(channel_id, 'asset.jpg')
+  #   assert !@assets.last_response.successful?
+  #   assert_equal 10, response.metadata['abuse_score'].to_i
+  # end
+
+  def test_can_view_abusive_assets?
+    channel_id = create_channel(@channels)
+    fake_user_id = 1
+    put(@assets, channel_id, 'abusive_asset.jpg', 'stub-image-contents', 'image/jpeg')
+    # TODO - setting abuse_score on an asset at creation time doesnt seem to work (at least in tests). do we care?
+    put(@assets, channel_id, 'abusive_asset.jpg', 'stub-image-contents', 'image/jpeg', 'abuse_score=10')
+
+    stub(:current_user_id, fake_user_id) do
+
+      # owner can view
+      stub(:owns_channel?, true) do
+        assert_equal true, can_view_abusive_assets?(channel_id)
+      end
+
+      # admin can view
+      stub(:owns_channel?, false) do
+        stub(:admin?, true) do
+          assert_equal true, can_view_abusive_assets?(channel_id)
+        end
+      end
+
+      # student's teacher can view
+      stub(:owns_channel?, false) do
+        stub(:admin?, false) do
+          stub(:teaches_student?, true) do
+            assert_equal true, can_view_abusive_assets?(channel_id)
+          end
+        end
+      end
+
+      # non-teacher can't view
+      stub(:owns_channel?, false) do
+        stub(:admin?, false) do
+          stub(:teaches_student?, false) do
+            assert_equal false, can_view_abusive_assets?(channel_id)
+          end
+        end
+      end
+    end
+
+    # anonymous user can't view
+    stub(:current_user_id, nil) do
+      stub(:owns_channel?, false) do
+        stub(:admin?, false) do
+          stub(:teaches_student?, false) do
+            assert_equal false, can_view_abusive_assets?(channel_id)
+          end
+        end
+      end
+    end
+  end
+
+  # def test_get_abusive_asset
+  #   # TODO need a way to set request.user_id to an existing id
+  #   # AssetBucket.stubs(:current_user_id).returns(3)
+  #   # Sinatra::Request.any_instance.stubs(:user_id).returns(3)
+  #   # FilesApi.any_instance.stubs(:current_user_id).returns(3)
+  #
+  #   channel_id = create_channel(@channels)
+  #   put(@assets, channel_id, 'abusive_asset.jpg', 'stub-image-contents', 'image/jpeg', 'abuse_score=10')
+  #
+  #   # owner can get
+  #   owner_id, _ = storage_decrypt_channel_id(channel_id)
+  #   owner_user_id = user_storage_ids_table.where(id: owner_id).first[:user_id]
+  #
+  #   # admin can get
+  #   # AssetBucket.any_instance.stubs(:admin?).returns(true)
+  #   # get(@assets, channel_id, 'abusive_asset.jpg')
+  #   # assert @assets.last_response.successful?
+  #
+  #   # teacher can get
+  #   get(@assets, channel_id, 'abusive_asset.jpg')
+  #
+  #   # logged in others cannot get
+  #
+  #
+  #   # anonymous users can not get
+  #   AssetBucket.any_instance.stubs(:admin?).returns(false)
+  #   FilesApi.any_instance.stubs(:current_user_id).returns(nil)
+  #   get(@assets, channel_id, 'abusive_asset.jpg')
+  #   assert !@assets.last_response.successful?
+  #
+  # end
 
   def test_assets_copy_all
     src_channel_id = create_channel(@channels)
@@ -186,6 +328,13 @@ class AssetsTest < Minitest::Test
     @assets ||= Rack::Test::Session.new(assets_mock_session)
   end
 
+  # def fake_dashboard
+  #   FakeDashboard::use_fake_database
+  #   @student = Dashboard::User.get(FakeDashboard::STUDENT[:id])
+  #   @teacher = Dashboard::User.get(FakeDashboard::TEACHER[:id])
+  #   @admin = Dashboard::User.get(FakeDashboard::ADMIN[:id])
+  # end
+
   def create_channel(channels)
     channels.post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channels.last_response.location.split('/').last
@@ -212,8 +361,8 @@ class AssetsTest < Minitest::Test
     assets.get("/v3/assets/#{channel_id}").body
   end
 
-  def put(assets, channel_id, filename, body, content_type)
-    assets.put("/v3/assets/#{channel_id}/#{filename}", body, 'CONTENT_TYPE' => content_type).body
+  def put(assets, channel_id, filename, body, content_type, query_params = nil)
+    assets.put("/v3/assets/#{channel_id}/#{filename}?#{query_params}", body, 'CONTENT_TYPE' => content_type).body
   end
 
   def get(assets, channel_id, filename, body = '', headers = {})
