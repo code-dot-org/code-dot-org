@@ -923,8 +923,18 @@ Blockly.BlockSpace.prototype.scrollIntoView = function (block) {
   var boxOverflows = Blockly.getBoxOverflow(currentView, blockBox);
   Blockly.addToNonZeroSides(boxOverflows,
     Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN);
-  this.scrollToDelta(boxOverflows.right - boxOverflows.left,
-    boxOverflows.bottom - boxOverflows.top);
+
+  var isOversizedX = Blockly.isBoxWiderThan(blockBox, currentView);
+  var isOversizedY = Blockly.isBoxTallerThan(blockBox, currentView);
+  var isAlreadyInView = (isOversizedX || isOversizedY) ?
+      goog.math.Box.intersects(blockBox, currentView) : false;
+
+  // If block is bigger than viewport, only scroll if it's not in view at all.
+  var horizontalDelta = (isOversizedX && isAlreadyInView) ?
+      0 : boxOverflows.right - boxOverflows.left;
+  var verticalDelta = (isOversizedY && isAlreadyInView) ?
+      0 : boxOverflows.bottom - boxOverflows.top;
+  this.scrollToDelta(horizontalDelta, verticalDelta);
 };
 
 /**

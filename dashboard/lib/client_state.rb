@@ -119,19 +119,13 @@ class ClientState
 
   def progress_hash
     migrate_cookies
-    progress_json = cookies[:progress]
-    if progress_json
-      begin
-        return JSON.parse(progress_json)
-      rescue JSON::ParserError
-        # fall through to return the empty hash.
-      end
-    end
+    progress = cookies[:progress]
+    progress ? JSON.parse(progress) : {}
+  rescue JSON::ParserError
     return {}
   end
 
-  # Migrates session state to unencrypted cookies.  This is currently used in tests only
-  # but will be enabled in the main code path in a future update.
+  # Migrates session state to unencrypted cookies.
   def migrate_cookies
     if session[:progress]
       cookies.permanent[:progress] = JSON.generate(session[:progress])

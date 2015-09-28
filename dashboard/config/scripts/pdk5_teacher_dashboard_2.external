@@ -5,7 +5,7 @@ skip_dialogue true
 
 markdown <<MARKDOWN
 
-<img align="left" src="http://code.org/images/teacher-dashboard/student-accounts.png" height="200" width="250" hspace="20" vspace="20">
+<img align="left" src="https://code.org/images/teacher-dashboard/student-accounts.png" height="200" width="250" hspace="20" vspace="20">
 
 
 </br>
@@ -16,15 +16,15 @@ markdown <<MARKDOWN
 
 When you click the "Student Accounts and Progress" tile, you'll see a list of all of the sections you have. Below is an example of what a section looks like on this page. To create a new section, click "New Section"
 
-![image](http://code.org/images/teacher-dashboard/sections.png)
+![image](https://code.org/images/teacher-dashboard/sections.png)
 
 </br>
 
-To decide which log-in type to use for your sections, use the table below. In your teacher dashboard, this table is listed below all of your sections for reference. 
+To decide which log-in type to use for your sections, use the table below. In your teacher dashboard, this table is listed below all of your sections for reference.
 
 </br>
 
-![image](http://code.org/images/teacher-dashboard/login-type.png)
+![image](https://code.org/images/teacher-dashboard/login-type.png)
 
 </br>
 

@@ -6,7 +6,7 @@ subject: "Thanks for signing up for a chance to win the $10,000 Hardware Prize"
 
 # Thanks for signing up for a chance to win the $10,000 Hardware Prize
 
-We'll be reviewing your application and announcing the winners in December. So, what can you do now?
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology). We'll be reviewing your application and announcing the winners in December.
 
 ## 1. Spread the word
 Tell your friends about the #HourOfCode.

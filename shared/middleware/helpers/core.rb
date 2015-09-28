@@ -10,6 +10,10 @@ def no_content()
   halt(204, "No content\n")
 end
 
+def not_modified
+  halt(304, "Not Modified\n")
+end
+
 def bad_request()
   halt(400, "Bad Request\n")
 end
