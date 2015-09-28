@@ -83,7 +83,6 @@ DropletTooltipManager.prototype.showDocFor = function (functionName) {
     return;
   }
 
-  console.log("SHOWING TOOLTIP");
   $('.tooltipstered').tooltipster('hide');
   var dialog = new window.Dialog({
     body: $('<iframe>')
