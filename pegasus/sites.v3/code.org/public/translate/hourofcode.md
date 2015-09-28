@@ -24,7 +24,7 @@ Please complete translations for these projects in the above order of priority. 
 ## Where can I find context for translations?
 All of the markdown files are the same as the URL path. For example, you can find the context for resources.md at [hourofcode.com/resources](https://hourofcode.com/resources). Also, you can find anything in the resources tab, like the stats page, at: [hourofcode.com/resources/stats](https://hourofcode.com/resources/stats). The country resources page will only be visible for all non-US sites, i.e. [hourofcode.com/uk/resources/country-resources](https://hourofcode.com/uk/resources/country-resources).
 
-The files folder contains the text for the [one pager](https://hourofcode.com/files/hoc-one-pager.pdf), [brochure](https://hourofcode.com/files/schools-handout.pdf), and [posters](hourofcode.com/resources#posters).
+The files folder contains the text for the [one pager](https://hourofcode.com/files/hoc-one-pager.pdf), [brochure](https://hourofcode.com/files/schools-handout.pdf), and [posters](https://hourofcode.com/promote#posters).
 
 ## How to Use CrowdIn
 
