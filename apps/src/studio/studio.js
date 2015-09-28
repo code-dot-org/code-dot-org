@@ -3304,10 +3304,10 @@ Studio.fixSpriteLocation = function () {
         for (var col = minCol; col <= maxCol; col++) {
           if (! Studio.getWallValue(row, col)) {
 
-            sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2
-              - skin.wallCollisionRectOffsetX;
-            sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 
-              - skin.wallCollisionRectOffsetY;
+            sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2 - 
+              skin.wallCollisionRectOffsetX;
+            sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 -
+              skin.wallCollisionRectOffsetY;
             sprite.dir = Direction.NONE;
 
             return;
