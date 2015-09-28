@@ -29,6 +29,7 @@
       "whenRight": { "category": "Events" },
       "whenUp": { "category": "Events" },
       "whenDown": { "category": "Events" },
+      "whenTouchWall": { "category": "Events" },
       "whenTouchWalkItem1": { "category": "Events" },
       "whenTouchWalkItem2": { "category": "Events" },
       "whenTouchWalkItem3": { "category": "Events" },

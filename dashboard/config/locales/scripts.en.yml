@@ -1183,6 +1183,8 @@ en:
           'Day 17 Minimal Spanning Trees: Muddy City': 'Day 17 Minimal Spanning Trees: Muddy City'
           Day 18-21 Final Project: Day 18-21 Final Project
           Unit 2 Challenge Planning & Creation: Unit 2 Challenge Planning & Creation
+          Unit 2 Challenge Planning: Unit 2 Challenge Planning
+          Unit 2 Challenge Creation: Unit 2 Challenge Creation
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1298,3 +1300,5 @@ en:
           Teaching Support - Lessons 8-12: Teaching Support - Lessons 8-12
           Teaching Support - Lessons 13-16: Teaching Support - Lessons 13-16
           Teaching Support - Lessons 17-20: Teaching Support - Lessons 17-20
+          Getting Started: Getting Started
+          Close and Next Steps: Close and Next Steps
