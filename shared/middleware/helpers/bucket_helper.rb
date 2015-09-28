@@ -27,13 +27,16 @@ class BucketHelper
     end
   end
 
-  def get(encrypted_channel_id, filename, version = nil)
+  def get(encrypted_channel_id, filename, if_modified_since = nil, version = nil)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
     begin
-      @s3.get_object(bucket: @bucket, key: key, version_id: version).body
+      s3_object = @s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
+      {status: 'FOUND', body: s3_object.body, last_modified: s3_object.last_modified}
+    rescue Aws::S3::Errors::NotModified
+      {status: 'NOT_MODIFIED'}
     rescue Aws::S3::Errors::NoSuchKey
-      nil
+      {status: 'NOT_FOUND'}
     end
   end
 

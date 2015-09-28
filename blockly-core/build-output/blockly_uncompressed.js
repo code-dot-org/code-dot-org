@@ -5779,6 +5779,8 @@ var MOUSE_START_DISTANCE = 0;
 var MOUSE_START_FAST_DISTANCE = 35;
 var BLOCK_START_DISTANCE = 0;
 var BLOCK_START_FAST_DISTANCE = 50;
+var OVERSIZE_BLOCK_THRESHOLD = 0.85;
+var FALLBACK_DRAG_MARGIN = 15;
 Blockly.ScrollOnBlockDragHandler.DEBUG = false;
 Blockly.ScrollOnBlockDragHandler.prototype.panIfOverEdge = function(block, mouseClientX, mouseClientY) {
   if(!this.blockSpace_.currentlyScrollable()) {
@@ -5794,12 +5796,24 @@ Blockly.ScrollOnBlockDragHandler.prototype.panIfOverEdge = function(block, mouse
   if(SCROLLABLE_DIRECTIONS.length === 0) {
     return
   }
-  var viewportBox = this.blockSpace_.getViewportBox();
-  var blockBox = block.getBox();
-  var blockOverflows = Blockly.getBoxOverflow(viewportBox, blockBox);
   var mouseSvg = Blockly.mouseCoordinatesToSvg(mouseClientX, mouseClientY, this.blockSpace_.blockSpaceEditor.svg_);
   var mouseViewport = Blockly.svgCoordinatesToViewport(new goog.math.Coordinate(mouseSvg.x, mouseSvg.y), this.blockSpace_);
   var mouseBlockSpace = Blockly.viewportCoordinateToBlockSpace(mouseViewport, this.blockSpace_);
+  var viewportBox = this.blockSpace_.getViewportBox();
+  var blockBox = block.getBox();
+  var blockHeight = Blockly.getBoxHeight(blockBox);
+  var viewportHeight = Blockly.getBoxHeight(viewportBox);
+  if(blockHeight > viewportHeight * OVERSIZE_BLOCK_THRESHOLD) {
+    blockBox.top = Math.max(blockBox.top, mouseBlockSpace.y - FALLBACK_DRAG_MARGIN);
+    blockBox.bottom = Math.min(blockBox.bottom, mouseBlockSpace.y + FALLBACK_DRAG_MARGIN)
+  }
+  var blockWidth = Blockly.getBoxWidth(blockBox);
+  var viewportWidth = Blockly.getBoxWidth(viewportBox);
+  if(blockWidth > viewportWidth * OVERSIZE_BLOCK_THRESHOLD) {
+    blockBox.left = Math.max(blockBox.left, mouseBlockSpace.x - FALLBACK_DRAG_MARGIN);
+    blockBox.right = Math.min(blockBox.right, mouseBlockSpace.x + FALLBACK_DRAG_MARGIN)
+  }
+  var blockOverflows = Blockly.getBoxOverflow(viewportBox, blockBox);
   var mouseOverflows = Blockly.getPointBoxOverflow(viewportBox, new goog.math.Coordinate(mouseBlockSpace.x, mouseBlockSpace.y));
   if(Blockly.ScrollOnBlockDragHandler.DEBUG) {
     this.blockSpace_.drawDebugCircle("mouse circle", new goog.math.Coordinate(mouseBlockSpace.x, mouseBlockSpace.y), "orange");
@@ -6633,7 +6647,12 @@ Blockly.BlockSpace.prototype.scrollIntoView = function(block) {
   var currentView = this.getViewportBox();
   var boxOverflows = Blockly.getBoxOverflow(currentView, blockBox);
   Blockly.addToNonZeroSides(boxOverflows, Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN);
-  this.scrollToDelta(boxOverflows.right - boxOverflows.left, boxOverflows.bottom - boxOverflows.top)
+  var isOversizedX = Blockly.isBoxWiderThan(blockBox, currentView);
+  var isOversizedY = Blockly.isBoxTallerThan(blockBox, currentView);
+  var isAlreadyInView = isOversizedX || isOversizedY ? goog.math.Box.intersects(blockBox, currentView) : false;
+  var horizontalDelta = isOversizedX && isAlreadyInView ? 0 : boxOverflows.right - boxOverflows.left;
+  var verticalDelta = isOversizedY && isAlreadyInView ? 0 : boxOverflows.bottom - boxOverflows.top;
+  this.scrollToDelta(horizontalDelta, verticalDelta)
 };
 Blockly.BlockSpace.prototype.scrollDeltaWithAnySelectedBlock = function(scrollDx, scrollDy, mouseX, mouseY) {
   this.scrollWithAnySelectedBlock(this.getScrollOffsetX() + scrollDx, this.getScrollOffsetY() + scrollDy, mouseX, mouseY)
