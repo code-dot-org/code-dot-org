@@ -155,7 +155,7 @@ angular: recordsApp
       if (val == '') return undefined;
       if (val == 'true' || val === true) return true;
       if (val == 'false' || val === false ) return false;
-      if (!isNaN(val)) return parseInt(val);
+      if (!isNaN(val)) return parseFloat(val);
       return val;
     }
 

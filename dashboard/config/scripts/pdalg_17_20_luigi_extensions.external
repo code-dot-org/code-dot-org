@@ -10,7 +10,7 @@ Conditionals enable students to add a great deal more functionality to their pro
 
 #### Add a Coupon Code
 
-Many students are drawn to the coupon code challenge, and often their first step is to open up the `cost` function to start messing with the program. As we learned from Sam the Bat, small single purpose funcitions will simplify our programs. When attempting any of the extension activities encourage students to first ask themselves if the function(s) they have work like they should. If we have a working `cost` function we can use that within a _new_ coupon function. Logically this could work as follows:
+Many students are drawn to the coupon code challenge, and often their first step is to open up the `cost` function to start messing with the program. As we learned from Sam the Bat, small single purpose funcitions will simplify our programs. When attempting any of the extension activities, encourage students to first ask themselves if the function(s) they have work like they should. If we have a working `cost` function we can use that within a _new_ coupon function. Logically this could work as follows:
 
 - `coupon` function takes in a pizza topping and a coupon code
 - `coupon` calls the `cost` function to get the price of that pizza

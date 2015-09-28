@@ -17,6 +17,7 @@ content-type: text/ng-template
       }
     }
     td {
+      width: 200px;
       padding: 10px;
       border: 1px solid #ccc;
     }
@@ -60,7 +61,7 @@ content-type: text/ng-template
   #export-csv {
     color: white;
   }
-  #import-form {
+  form {
     display: inline;
   }
 %div
@@ -84,11 +85,12 @@ content-type: text/ng-template
 
     %div#add-actions
       %span
-        %span{"ng-show" => "addingColumn"}
+        %form{"ng-show" => "addingColumn"}
           %input{"ng-model" => "newColumnName", "placeholder" => "Column name"}
-          %button.btn.btn-primary{"ng-click" => "addColumn()"} Save
+          %button.btn.btn-primary{"ng-click" => "addColumn(); addingColumn = false"} Save
           %button.btn.btn-default{"ng-click" => "addingColumn = false"} Cancel
         %button.btn.btn-primary{"ng-click" => "addingColumn = true", "ng-hide" => "addingColumn"} Add column
+        %button.btn.btn-primary{"ng-click" => "newRecord.editing = true"} Add row
   %table.records
     %tr
       %th
@@ -115,6 +117,14 @@ content-type: text/ng-template
             %li
               %a.btn.btn-link{"ng-click" => "deleteColumn(column)"} Delete Column
       %th
+    %tr
+      %td
+      %td{"ng-repeat" => "column in columns"}
+        %span{"ng-show" => "newRecord.editing"}
+          %input{"ng-model" => "newRecord[column.id]", type: "text"}/
+      %td
+        %button.btn.btn-primary{"ng-click" => "saveNewRecord()", "ng-show" => "newRecord.editing"} Save
+        %button.btn.btn-danger{"ng-click" => "deleteNewRecord()", "ng-show" => "newRecord.editing"} Delete
     %tr{"ng-repeat" => "record in records | orderBy:order:reverse"}
       %td
         %span
@@ -128,13 +138,6 @@ content-type: text/ng-template
         %button.btn.btn-default{"ng-click" => "record.editing = true", "ng-hide" => "record.editing"} Edit
         %button.btn.btn-primary{"ng-click" => "saveRecord(record)", "ng-show" => "record.editing"} Save
         %button.btn.btn-danger{"ng-click" => "deleteRecord(record)"} Delete
-    %tr
-      %td
-      %td{"ng-repeat" => "column in columns"}
-        %span
-          %input{"ng-model" => "newRecord[column.id]", type: "text"}/
-      %td
-        %button.btn.btn-primary{"ng-click" => "saveNewRecord()"} Add row
 
   %div.level-buttons
     %button.btn.btn-danger{"ng-click" => "deleteTable()", "ng-hide" => "deletingTable"} Delete table

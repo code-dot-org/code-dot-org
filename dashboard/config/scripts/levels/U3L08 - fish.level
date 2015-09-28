@@ -155,7 +155,9 @@
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
-    "beginner_mode": "false"
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false"
   }
 }]]></config>
   <blocks/>

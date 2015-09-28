@@ -65,7 +65,7 @@
         %label.control-label{for: "hoc-prizes-plan-file"}= hoc_s(:hardware_prizes_form_plan_file_label)
         %div
           %p= hoc_s(:hardware_prizes_form_plan_file_description).sub(/#([^#]+)# \| #([^#]+)#/, '<a href="/files/HOC_Logistics_plan.pdf" target="_blank">\1</a> | <a href="/files/HOC_Logistics_plan.doc">\2</a>')
-          %input#hoc-prizes-plan-file.form-control{name:'logistics_plan', type:'file'}
+          %input#hoc-prizes-plan-file.form-control{name:'logistics_plan', type:'file', required: true}
 
       %input{name:'hoc_country_s', type:'hidden', value:@country}
       %input{name:'hoc_company_s', type:'hidden', value:@country}
