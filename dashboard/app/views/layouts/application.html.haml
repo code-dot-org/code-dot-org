@@ -19,8 +19,6 @@
       = tag 'meta', property: 'og:description', content: t('share.description')
     = render partial: 'layouts/analytics'
     = render partial: 'layouts/javascript_strings'
-    - # TODO: Only load jsapi when needed (in Applab)
-    %script{type: 'text/javascript', src: 'https://www.google.com/jsapi'}
   %body
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
