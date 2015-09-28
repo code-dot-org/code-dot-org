@@ -11,6 +11,7 @@
 
 var assert = require('./util/testUtils').assert;
 var ChartApi = require('@cdo/apps/applab/ChartApi');
+var GoogleChart = require('@cdo/apps/applab/GoogleChart');
 var Promise = require('es6-promise').Promise;
 
 var fakeDiv = document.createElement('div');
@@ -57,7 +58,48 @@ var fakeAppStorage = {
   }
 };
 
+describe("GoogleChart", function () {
+  it("extracts all columns from data", function () {
+    GoogleChart.lib = fakeGoogle;
+    var rawData = [
+      {'x': 12},
+      {'x': 10, 'y': 14},
+      {'z': 144}
+    ];
+    assert.deepEqual(GoogleChart.inferColumnsFromRawData(rawData), ['x', 'y', 'z']);
+  });
+});
+
 describe("ChartApi", function () {
+
+  beforeEach(function () {
+    GoogleChart.lib = fakeGoogle;
+  });
+
+  describe("ChartType enum", function () {
+    var ChartType = ChartApi.ChartType;
+
+    it("only contains supported types", function () {
+      Object.getOwnPropertyNames(ChartType).forEach(function (key) {
+        var typeName = ChartType[key];
+        assert.isTrue(ChartApi.supportsType(typeName), "Supports type '" +
+            typeName + "'.");
+      });
+    });
+
+    it("contains all supported types", function () {
+      var supportedTypes = Object.getOwnPropertyNames(ChartApi.TypeNameToType);
+      var enumTypeNames = Object.getOwnPropertyNames(ChartType).map(function (key) {
+        return ChartType[key];
+      });
+
+      supportedTypes.forEach(function (typeName) {
+        assert.isTrue(enumTypeNames.some(function (enumName) {
+          return enumName === typeName;
+        }), "Found supported type '" + typeName + "' in enum.");
+      });
+    });
+  });
 
   it("supports type BAR", function () {
     assert.isTrue(ChartApi.supportsType(ChartApi.ChartType.BAR));
@@ -100,7 +142,7 @@ describe("ChartApi", function () {
     var chartApi, result, rejection;
 
     beforeEach(function () {
-      chartApi = new ChartApi(fakeDocument, fakeGoogle, fakeAppStorage);
+      chartApi = new ChartApi(fakeDocument, fakeAppStorage);
       result = null;
       rejection = null;
     });
@@ -153,7 +195,7 @@ describe("ChartApi", function () {
           .then(ensureDone(testDone, function () {
             assert.equal(
                 rejection.message,
-                "undefined is not an object (evaluating 'columns.length')");
+                "Not enough columns for chart; expected at least 2.");
           }));
     });
 
@@ -163,7 +205,7 @@ describe("ChartApi", function () {
           .then(ensureDone(testDone, function () {
             assert.equal(
                 rejection.message,
-                'Not enough columns defined for chart type "pie"; expected at least 2.');
+                'Not enough columns for chart; expected at least 2.');
           }));
     });
 
@@ -173,7 +215,7 @@ describe("ChartApi", function () {
           .then(ensureDone(testDone, function () {
             assert.equal(
                 rejection.message,
-                'Not enough columns defined for chart type "pie"; expected at least 2.');
+                'Not enough columns for chart; expected at least 2.');
           }));
     });
 
