@@ -49,9 +49,9 @@
 
   .form-group
     %label.control-label{for: "volunteer-company"}= I18n.t(:volunteer_engineer_submission_field_company)
-    %span.form-required-field *
+    %span
     %div
-      %input#volunteer-company.form-control{name: "company_s", placeholder: I18n.t(:volunteer_engineer_submission_field_company_placeholder), type: "text", required: true, value: company_s}/
+      %input#volunteer-company.form-control{name: "company_s", placeholder: I18n.t(:volunteer_engineer_submission_field_company_placeholder), type: "text", required: false, value: company_s}/
 
   .form-group
     %label.control-label{for: "volunteer-experience"}= I18n.t(:volunteer_engineer_submission_field_experience_level)
