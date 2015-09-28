@@ -8,7 +8,7 @@ wrong 'D'
 wrong 'E'
 
 markdown <<MARKDOWN
-![](https://images.code.org/2d5c475328b50e7da1414b59e8c40aab-image-1433977200543.png)
+<img src = "https://images.code.org/2d5c475328b50e7da1414b59e8c40aab-image-1433977200543.png" width ="100%"/>
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
