@@ -1,9 +1,9 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-09-15T20:58:31.000Z",
+  "created_at": "2015-09-26T01:59:37.000Z",
   "level_num": "custom",
-  "user_id": 106,
+  "user_id": 155,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -127,10 +127,8 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": "GPXFnF+1wV0v9rwXPd0VYlBfXKUCc+LQo4fBvFOBPV05iBekTaW0yMm3cBn2\noDoi\n",
     "embed": "false",
-    "instructions": "Add a parameter to drawFish() that changes the size of the fish drawn. (Click to see full instructions)",
-    "markdown_instructions": "# Adding parameters to functions: drawSeaGrass()\r\n\r\nLet's update our `drawFish()` function to accept a parameter. Currently `drawFish()` can only draw a fish of size 30.\r\n\r\n**Add a parameter** to the function definition for `drawFish()` that allows you to control its size (Note: the pen width is important here). Make sure your parameter has a **descriptive and meaningful** name.\r\n\r\n**Update your function calls** to use your new version of `drawFish()` and change the size of the fish in your image.\r\n\r\n![](https://images.code.org/35f9a55244004dad62781f4ae0ce7eb2-image-1442608034411.26.55 PM.png)",
+    "start_blocks": "var obj = {}\r\nobj.name = 'baker';\r\nobj.age=35;",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -146,18 +144,19 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "project_template_level_name": "U3L08 - underTheSeaTemplate",
-    "app_width": "320",
-    "app_height": "480",
-    "free_play": "true",
-    "show_turtle_before_run": "true",
-    "autocomplete_palette_apis_only": "true",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
-    "hide_design_mode": "true",
+    "hide_design_mode": "false",
     "beginner_mode": "false",
     "submittable": "false",
-    "hide_view_data_button": "false"
+    "hide_view_data_button": "false",
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "Good news! we can also store objects in the easy way!\r\nStarting code is some kind of pre-composed object. And call to createRecord that shows using the javascript object as the the thing being stored.\r\nTest.\r\nInvestigate.\r\nAdd a field to the object and run again, see what’s there."
   }
 }]]></config>
   <blocks/>
