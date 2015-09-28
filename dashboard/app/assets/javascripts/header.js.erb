@@ -420,6 +420,10 @@ dashboard.header.updateTimestamp = function () {
   }
 };
 
+/**
+ * Get the user progress for an anonymous user from the client side cookie
+ * @return Object that is a representation of the user's individual level progress
+ */
 function getSummarizedProgressForAnonymousUser () {
   var summarizedProgress = {};
   var levelProgress = {};
@@ -428,23 +432,20 @@ function getSummarizedProgressForAnonymousUser () {
 
   var allLevelsProgress = JSON.parse(decodeURIComponent($.cookie('progress')));
   for(var level in allLevelsProgress) {
-    var individualLevelProgressDescription = '';
-    var individualLevelProgress = allLevelsProgress[level] || 0;
+    levelProgress[level] = {};
+    var individualLevelProgress = allLevelsProgress[level] || -1;
 
     if (individualLevelProgress >= 1000) {
-      individualLevelProgressDescription = 'submitted';
+      levelProgress[level].status = 'submitted';
     } else if (individualLevelProgress >= 30) {
-      individualLevelProgressDescription = 'perfect';
+      levelProgress[level].status = 'perfect';
     } else if (individualLevelProgress >= 20) {
-      individualLevelProgressDescription = 'passed';
+      levelProgress[level].status = 'passed';
     } else if (individualLevelProgress > 0) {
-      individualLevelProgressDescription = 'attempted';
+      levelProgress[level].status = 'attempted';
     } else {
-        individualLevelProgressDescription = 'not attempted';
+      levelProgress[level].status = 'not attempted';
     }
-
-    levelProgress[level] = {};
-    levelProgress[level].status = individualLevelProgressDescription;
   }
 
   summarizedProgress.levels = levelProgress;
