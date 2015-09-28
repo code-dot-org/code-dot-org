@@ -1,5 +1,5 @@
 /* global $, d3, Dialog, confirm, options */
-// options is appOptions, from the level parameters themselves
+// options is appOptions.level, from the level parameters themselves
 
 var messages = {
   'Sample Message (easy)': "Srryvat zl jnl guebhtu gur qnexarff. Thvqrq ol n orngvat urneg. V pna'g gryy jurer gur wbhearl jvyy raq. Ohg V xabj jurer gb fgneg. Gurl gryy zr V'z gbb lbhat gb haqrefgnaq. Gurl fnl V'z pnhtug hc va n qernz. Jryy yvsr jvyy cnff zr ol vs V qba'g bcra hc zl rlrf. Jryy gung'f svar ol zr. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg. V gevrq pneelvat gur jrvtug bs gur jbeyq. Ohg V bayl unir gjb unaqf. Ubcr V trg gur punapr gb geniry gur jbeyq. Ohg V qba'g unir nal cynaf. Jvfu gung V pbhyq fgnl sberire guvf lbhat. Abg nsenvq gb pybfr zl rlrf. Yvsr'f n tnzr znqr sbe rirelbar. Naq ybir vf gur cevmr. Fb jnxr zr hc jura vg'f nyy bire Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa'g xabj V jnf ybfg. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg.",
