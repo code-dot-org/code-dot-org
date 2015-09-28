@@ -1,4 +1,4 @@
-Feature: Hour of Code progress is saved on client side when puzzles are solved
+Feature: Hour of Code progress is saved on client side when puzzles are solved and shows up in the bubbles on the header
 
 Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appears as solved
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
@@ -29,6 +29,6 @@ Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as att
   Then I wait to see ".modal"
   And I close the dialog
   When element "#runButton" is visible
-  Then element ".header_middle a:first" has class "level_link attempted"gi
+  Then element ".header_middle a:first" has class "level_link attempted"
 
 
