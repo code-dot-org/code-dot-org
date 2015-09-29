@@ -76,9 +76,6 @@ var TestResults = studioApp.TestResults;
 
 var SVG_NS = "http://www.w3.org/2000/svg";
 
-// uniqueId that increments by 1 each time an element is created
-var uniqueId = 0;
-
 // Whether we are showing debug information
 var showDebugInfo = false;
 
@@ -394,6 +391,17 @@ var drawMap = function () {
   score.appendChild(document.createTextNode(''));
   score.setAttribute('visibility', 'hidden');
   svg.appendChild(score);
+
+  if (level.floatingScore) {
+    var floatingScore = document.createElementNS(SVG_NS, 'text');
+    floatingScore.setAttribute('id', 'floatingScore');
+    floatingScore.setAttribute('class', 'studio-floating-score');
+    floatingScore.setAttribute('x', Studio.MAZE_WIDTH / 2);
+    floatingScore.setAttribute('y', SCORE_TEXT_Y_POSITION);
+    floatingScore.appendChild(document.createTextNode(''));
+    floatingScore.setAttribute('visibility', 'hidden');
+    svg.appendChild(floatingScore);
+  }
 
   var titleScreenTitle = document.createElementNS(SVG_NS, 'text');
   titleScreenTitle.setAttribute('id', 'titleScreenTitle');
@@ -718,6 +726,14 @@ function sortDrawOrder() {
     Studio.drawDebugRect("spriteBottom", Studio.sprite[i].x, sprite.y, 4, 4);
   }
 
+  // Add wall tiles.
+  for (i = 0; i < Studio.tiles.length; i++) {
+    var tile = {};
+    tile.element = document.getElementById('tile_' + i);
+    tile.y = Studio.tiles[i].bottomY;
+    itemsArray.push(tile);
+  }
+
   itemsArray = _.sortBy(itemsArray, 'y');
 
   for (i = 0; i < itemsArray.length; ++i) {
@@ -881,9 +897,19 @@ Studio.onTick = function() {
     performItemOrProjectileMoves(Studio.items);
   }
 
+  Studio.updateFloatingScore();
+
   sortDrawOrder();
 
-  if (!spritesNeedMoreAnimationFrames && checkFinished()) {
+  var currentTime = new Date().getTime();
+ 
+  if (!Studio.succeededTime && checkFinished()) {
+    Studio.succeededTime = currentTime;
+  }
+
+  if (Studio.succeededTime && 
+      !spritesNeedMoreAnimationFrames && 
+      (!level.delayCompletion || currentTime > Studio.succeededTime + level.delayCompletion)) {
     Studio.onPuzzleComplete();
   }
 };
@@ -1196,11 +1222,13 @@ Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
 /**
  * Get a wall value (either a SquareType.WALL value or a specific row/col tile
  * from a 16x16 grid shifted into bits 16-23).
- *
- * Should not be called with rows or cols that are out of bounds!
  */
 
 Studio.getWallValue = function (row, col) {
+  if (row < 0 || row >= Studio.ROWS || col < 0 || col >= Studio.COLS) {
+    return 0;
+  }
+
   if (Studio.walls) {
     return skin[Studio.walls] ? (skin[Studio.walls][row][col] << constants.WallCoordsShift): 0;
   } else {
@@ -1434,6 +1462,7 @@ Studio.init = function(config) {
   Studio.eventHandlers = [];
   Studio.perExecutionTimeouts = [];
   Studio.tickIntervalId = null;
+  Studio.tiles = [];
 
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -1799,6 +1828,9 @@ Studio.reset = function(first) {
 
   // A little flag for script-based code to consume.
   Studio.levelRestarted = true;
+
+  // Reset whether level has succeeded.
+  Studio.succeededTime = null;
 };
 
 /**
@@ -2427,52 +2459,88 @@ Studio.clearDebugRects = function() {
   $(".debugRect").remove();
 };
 
-
 Studio.drawWallTile = function (svg, wallVal, row, col) {
   var srcRow, srcCol;
+
+  // Defaults for regular tiles:
+  var tiles = skin.tiles;
+  var srcWallType = 0;
+  var tileSize = Studio.SQUARE_SIZE;
+  var addOffset = 0;  // Added to X & Y to offset drawn tile.
+  var numSrcRows = 8;
+  var numSrcCols = 8;
+
+  // We usually won't try jumbo size.
+  var jumboSize = false;
+
   if (wallVal == SquareType.WALL) {
     // use a random coordinate
     // TODO (cpirich): these should probably be chosen once at level load time
     // and we should allow the level/skin to set specific row/col max values
     // to ensure that reasonable tiles are chosen at random
-    srcRow = Math.floor(Math.random() * constants.WallCoordMax);
+    srcRow = Math.floor(Math.random() * constants.WallRandomCoordMax);
     // Since [0,0] is not a valid wall tile, ensure that we avoid column zero
     // when row zero was chosen at random
     srcCol = srcRow ?
-                Math.floor(Math.random() * constants.WallCoordMax) :
-                1 + Math.floor(Math.random() * (constants.WallCoordMax - 1));
+                Math.floor(Math.random() * constants.WallRandomCoordMax) :
+                1 + Math.floor(Math.random() * (constants.WallRandomCoordMax - 1));
   } else {
+    // This wall value has been explicitly set.  It encodes the row & col from
+    // the spritesheet of wall tile images.
     srcRow = (wallVal & constants.WallCoordRowMask) >> constants.WallCoordRowShift;
     srcCol = (wallVal & constants.WallCoordColMask) >> constants.WallCoordColShift;
+    srcWallType = (wallVal & constants.WallTypeMask) >> constants.WallTypeShift;
+
+    if (srcWallType === constants.WallType.JUMBO_SIZE) {
+      // Jumbo tiles come from a separate sprite sheet which has oversize tiles
+      // which are drawn in an overlapping fashion, though centered on the
+      // regular tiles' centers.
+      jumboSize = true;
+      tileSize = skin[Studio.background].jumboTilesSize;
+      numSrcRows = skin[Studio.background].jumboTilesRows;
+      numSrcCols = skin[Studio.background].jumboTilesCols;
+    } else if (srcWallType === constants.WallType.DOUBLE_SIZE) {
+      // Double-size tiles are just a regular tile expanded to cover 2x2 tiles.
+      tileSize = 2 * Studio.SQUARE_SIZE;
+    }
   }
 
-  var tiles = Studio.background && skin[Studio.background].tiles ?
-                skin[Studio.background].tiles : skin.tiles;
+  // Attempt to load tiles that match the current background, if specified.
+  if (Studio.background && !jumboSize && skin[Studio.background].tiles) {
+    tiles = skin[Studio.background].tiles;
+  } else if (Studio.background && jumboSize && skin[Studio.background].jumboTiles) {
+    tiles = skin[Studio.background].jumboTiles;
+    addOffset = skin[Studio.background].jumboTilesAddOffset;
+  }
 
   var clipPath = document.createElementNS(SVG_NS, 'clipPath');
-  var clipId = 'tile_clippath_' + uniqueId;
+  var clipId = 'tile_clippath_' + Studio.tiles.length;
   clipPath.setAttribute('id', clipId);
   clipPath.setAttribute('class', 'tile_clip');
   var rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttribute('width', Studio.SQUARE_SIZE);
-  rect.setAttribute('height', Studio.SQUARE_SIZE);
-  rect.setAttribute('x', col * Studio.SQUARE_SIZE);
-  rect.setAttribute('y', row * Studio.SQUARE_SIZE);
+  rect.setAttribute('width', tileSize);
+  rect.setAttribute('height', tileSize);
+  rect.setAttribute('x', col * Studio.SQUARE_SIZE + addOffset);
+  rect.setAttribute('y', row * Studio.SQUARE_SIZE + addOffset);
   clipPath.appendChild(rect);
   svg.appendChild(clipPath);
 
   var tile = document.createElementNS(SVG_NS, 'image');
-  var tileId = 'tile_' + (uniqueId++);
+  var tileId = 'tile_' + (Studio.tiles.length);
   tile.setAttribute('id', tileId);
   tile.setAttribute('class', 'tile');
-  tile.setAttribute('width', 4 * Studio.SQUARE_SIZE);
-  tile.setAttribute('height', 4 * Studio.SQUARE_SIZE);
-  tile.setAttribute('x', (col-srcCol) * Studio.SQUARE_SIZE);
-  tile.setAttribute('y', (row-srcRow) * Studio.SQUARE_SIZE);
+  tile.setAttribute('width', numSrcCols * tileSize);
+  tile.setAttribute('height', numSrcRows * tileSize);
+  tile.setAttribute('x', col * Studio.SQUARE_SIZE - srcCol * tileSize + addOffset);
+  tile.setAttribute('y', row * Studio.SQUARE_SIZE - srcRow * tileSize + addOffset); 
   tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', tiles);
   svg.appendChild(tile);
 
   tile.setAttribute('clip-path', 'url(#' + clipId + ')');
+
+  var tileEntry = {};
+  tileEntry.bottomY = row * Studio.SQUARE_SIZE + addOffset + tileSize;
+  Studio.tiles.push(tileEntry);  
 };
 
 Studio.createLevelItems = function (svg) {
@@ -2508,12 +2576,37 @@ Studio.createLevelItems = function (svg) {
   }
 };
 
-Studio.drawMapTiles = function () {
+Studio.drawMapTiles = function (svg) {
+  var row, col;
+
+  var tilesDrawn = [];
+  for (row = 0; row < Studio.ROWS; row++) {
+    tilesDrawn[row] = [];
+    for (col = 0; col < Studio.COLS; col++) {
+      tilesDrawn[row][col] = false;
+    }
+  }
+
   var spriteLayer = document.getElementById('backgroundLayer');
-  for (var row = 0; row < Studio.ROWS; row++) {
-    for (var col = 0; col < Studio.COLS; col++) {
+
+  for (row = 0; row < Studio.ROWS; row++) {
+    for (col = 0; col < Studio.COLS; col++) {
       var wallVal = Studio.getWallValue(row, col);
       if (wallVal) {
+        // Skip if we've already drawn a large tile that covers this square.
+        if (tilesDrawn[row][col]) {
+          continue;
+        }
+
+        var srcWallType = (wallVal & constants.WallTypeMask) >> constants.WallTypeShift;
+
+        if (srcWallType === constants.WallType.DOUBLE_SIZE) {
+          tilesDrawn[row][col] = true;
+          tilesDrawn[row][col+1] = true;
+          tilesDrawn[row+1][col] = true;
+          tilesDrawn[row+1][col+1] = true;          
+        }
+
         Studio.drawWallTile(spriteLayer, wallVal, row, col);
       }
     }
@@ -2688,6 +2781,43 @@ Studio.displayScore = function() {
     });
   }
   score.setAttribute('visibility', 'visible');
+};
+
+/**
+ * Start showing an upwards-floating score at the location of sprite 0.
+ * The floatingScore level property should only be set to true if this
+ * is desired.
+ @param {number} changeValue The value that is displayed.
+ */
+
+Studio.displayFloatingScore = function(changeValue) {
+  if (!level.floatingScore) {
+    return;
+  }
+
+  var sprite = Studio.sprite[0];
+  var floatingScore = document.getElementById('floatingScore');
+  floatingScore.textContent = changeValue > 0 ? ("+" + changeValue) : changeValue;
+  floatingScore.setAttribute('x', sprite.x + sprite.width/2);
+  floatingScore.setAttribute('y', sprite.y + sprite.height/2);
+  floatingScore.setAttribute('opacity', 1);
+  floatingScore.setAttribute('visibility', 'visible');  
+};
+
+Studio.updateFloatingScore = function() {
+  if (!level.floatingScore) {
+    return;
+  }
+
+  var floatingScore = document.getElementById('floatingScore');
+  var y = parseInt(floatingScore.getAttribute('y'));
+  var opacity = parseFloat(floatingScore.getAttribute('opacity'));
+  if (opacity > 0) {
+    opacity += constants.floatingScoreChangeOpacity;
+    floatingScore.setAttribute('opacity', opacity);
+  }
+  y += constants.floatingScoreChangeY;
+  floatingScore.setAttribute('y', y);
 };
 
 Studio.showCoordinates = function() {
@@ -3104,6 +3234,7 @@ Studio.setSpriteSize = function (opts) {
 Studio.changeScore = function (opts) {
   Studio.playerScore += Number(opts.value);
   Studio.displayScore();
+  Studio.displayFloatingScore(opts.value);
 };
 
 Studio.setScoreText = function (opts) {
@@ -3123,6 +3254,7 @@ Studio.setBackground = function (opts) {
     if (level.wallMapCollisions) {
       $(".tile_clip").remove();
       $(".tile").remove();
+      Studio.tiles = [];
       Studio.drawMapTiles();
 
       sortDrawOrder();  
@@ -3146,11 +3278,66 @@ Studio.setWalls = function (opts) {
 
   Studio.walls = opts.value;
 
-  // Draw the tiles (again) that we know which background we're using.
+  // Draw the tiles (again) now that we know which background we're using.
   $(".tile_clip").remove();
   $(".tile").remove();
+  Studio.tiles = [];
   Studio.drawMapTiles();
+
+  Studio.fixSpriteLocation();
+
+  sortDrawOrder();
 };
+
+/**
+ * A call to setWalls might place a wall on top of the sprite.  In that case,
+ * find a new nearby location for the sprite that doesn't have a wall.
+ * Currently a work in progress with known issues.
+ */
+Studio.fixSpriteLocation = function () {
+  if (level.wallMapCollisions && level.blockMovingIntoWalls) {
+    var spriteIndex = 0;
+    var sprite = Studio.sprite[spriteIndex];
+    var xPos = getNextPosition(spriteIndex, false, false);
+    var yPos = getNextPosition(spriteIndex, true, false);
+
+    if (Studio.willSpriteTouchWall(sprite, xPos, yPos)) {
+
+      // Let's assume that one of the surrounding 8 squares is available.
+      // (Note: this is a major assumption predicated on level design.)
+
+      var xCenter = xPos + sprite.width / 2;
+      var yCenter = yPos + sprite.height / 2;
+
+      xCenter += skin.wallCollisionRectOffsetX + skin.wallCollisionRectWidth / 2;
+      yCenter += skin.wallCollisionRectOffsetY + skin.wallCollisionRectHeight / 2;
+
+      var xGrid = Math.floor(xCenter / Studio.SQUARE_SIZE);
+      var yGrid = Math.floor(yCenter / Studio.SQUARE_SIZE);
+
+      var minRow = Math.max(yGrid - 1, 0);
+      var maxRow = Math.min(yGrid + 1, Studio.ROWS - 1);
+      var minCol = Math.max(xGrid - 1, 0);
+      var maxCol = Math.min(xGrid + 1, Studio.COLS - 1);
+
+      for (var row = minRow; row <= maxRow; row++) {
+        for (var col = minCol; col <= maxCol; col++) {
+          if (! Studio.getWallValue(row, col)) {
+
+            sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2 - 
+              skin.wallCollisionRectOffsetX;
+            sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 -
+              skin.wallCollisionRectOffsetY;
+            sprite.dir = Direction.NONE;
+
+            return;
+          }
+        }
+      }
+    }
+  }
+};
+
 
 /**
  * Sets an actor to be a specific sprite, or alternatively to be hidden.
@@ -4471,6 +4658,7 @@ Projectile.prototype.moveToNextPosition = function () {
 var skinsBase = require('../skins');
 var msg = require('./locale');
 var constants = require('./constants');
+var studioApp = require('../StudioApp').singleton;
 
 var RANDOM_VALUE = constants.RANDOM_VALUE;
 var HIDDEN_VALUE = constants.HIDDEN_VALUE;
@@ -4708,7 +4896,7 @@ function loadHoc2015(skin, assetUrl) {
   skin.wallCollisionRectWidth  = 30;
   skin.wallCollisionRectHeight = 20;
 
-  // When movement is grid aligned, sprites coordinates are the top-left corner
+  // When movement is grid aligned, sprite coordinates are the top-left corner
   // of the sprite, and match the top-left corner of the grid square in question.
   // When we draw the sprites bigger, this means the sprite's "feet" will usually
   // be too far to the right and below that square.  These offsets are a chance
@@ -4751,32 +4939,108 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.background1 = {
     background: skin.assetUrl('background_background1.jpg'),
-    tiles: skin.assetUrl('tiles_background1.png')
+    tiles: skin.assetUrl('tiles_background1.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_background1.png'),
+    jumboTilesAddOffset: -5,
+    jumboTilesSize: 60,
+    jumboTilesRows: 4,
+    jumboTilesCols: 4
   };
   skin.background2 = {
     background: skin.assetUrl('background_background2.jpg'),
-    tiles: skin.assetUrl('tiles_background2.png')
+    tiles: skin.assetUrl('tiles_background2.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_background2.png'),
+    jumboTilesAddOffset: -5,
+    jumboTilesSize: 60,
+    jumboTilesRows: 4,
+    jumboTilesCols: 4
   };
   skin.background3 = {
     background: skin.assetUrl('background_background3.jpg'),
-    tiles: skin.assetUrl('tiles_background3.png')
+    tiles: skin.assetUrl('tiles_background3.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_background3.png'),
+    jumboTilesAddOffset: -5,
+    jumboTilesSize: 60,
+    jumboTilesRows: 4,
+    jumboTilesCols: 4
   };
 
-  skin.border = 
-    [[1, 1, 1, 1, 1, 1, 1, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], 
-     [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 1, 1, 1, 1, 1, 1, 1]];
-  skin.maze = 
-    [[1, 0, 0, 0, 0, 0, 0, 1], [0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0,0, 0], [0, 0, 1, 0, 1, 0, 0, 0],
-     [0, 0, 1, 0,0,0,0, 0], [0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0], [1, 0, 0, 0, 1, 0, 0, 1]];
-  skin.maze2 = 
-    [[0, 0, 0, 0, 0, 0, 0, 0], 
-     [0, 1, 1, 1, 0, 1, 1, 0], 
-     [0, 1, 0, 0, 0, 0, 1, 0], 
-     [0, 1, 0, 1, 1, 0, 1, 0],
-     [0, 1, 0, 1, 1, 0, 1, 0], 
-     [0, 1, 0, 0, 0, 0, 1, 0], 
-     [0, 1, 1, 1, 0, 1, 1, 0], 
-     [0, 0, 0, 0, 0, 0, 0, 0]];
+  // It's possible to enlarge the rendering of some wall tiles so that they
+  // overlap each other a little.  Define a bounding rectangle for the source
+  // tiles that get this treatment.
+
+  skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
+
+  skin.walls_blank = 
+    [[0,  0,  0,  0,  0,  0,  0,  0], 
+     [0,  0,  0,  0,  0,  0,  0,  0], 
+     [0,  0,  0,  0,  0,  0,  0,  0], 
+     [0,  0,  0,  0,  0,  0,  0,  0],  
+     [0,  0,  0,  0,  0,  0,  0,  0], 
+     [0,  0,  0,  0,  0,  0,  0,  0],   
+     [0,  0,  0,  0,  0,  0,  0,  0],  
+     [0,  0,  0,  0,  0,  0,  0,  0]];
+
+  skin.walls_circle = 
+    [[0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00], 
+     [0x00, 0x11, 0x02, 0x03,  0x00,  0x44, 0x45, 0x00], 
+     [0x00, 0x04, 0x00, 0x00,  0x00,  0x00, 0x03, 0x00], 
+     [0x00, 0x14, 0x00, 0x121, 0x121, 0x00, 0x05, 0x00],
+     [0x00, 0x02, 0x00, 0x121, 0x121, 0x00, 0x15, 0x00], 
+     [0x00, 0x03, 0x00, 0x00,  0x00,  0x00, 0x02, 0x00], 
+     [0x00, 0x24, 0x25, 0x02,  0x00,  0x34, 0x35, 0x00], 
+     [0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00]];
+
+  skin.walls_circle_alt = 
+    [[0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00], 
+     [0x00, 0x200, 0x213, 0x213, 0x00, 0x213, 0x201, 0x00], 
+     [0x00, 0x212, 0x00,  0x00,  0x00, 0x00,  0x212, 0x00], 
+     [0x00, 0x212, 0x00,  0x21,  0x21, 0x00,  0x212, 0x00],
+     [0x00, 0x212, 0x00,  0x21,  0x21, 0x00,  0x212, 0x00], 
+     [0x00, 0x212, 0x00,  0x00,  0x00, 0x00,  0x212, 0x00], 
+     [0x00, 0x202, 0x213, 0x213, 0x00, 0x213, 0x203, 0x00], 
+     [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00]];
+
+  skin.walls_horizontal = 
+    [[0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0, 0x02, 0x03, 0x04, 0x00, 0x24, 0x25, 0x00], 
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0, 0x10, 0x00, 0x34, 0x35, 0x20, 0x23, 0x00],
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0, 0x03, 0x02, 0x22, 0x20, 0x21, 0x00, 0x00], 
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]];
+
+  skin.walls_grid = 
+    [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x21, 0x00, 0x10, 0x00, 0x20, 0x00, 0x03], 
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x02, 0x00, 0x11, 0x00, 0x21, 0x00, 0x02],
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x03, 0x00, 0x20, 0x00, 0x22, 0x00, 0x11],
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x10, 0x00, 0x21, 0x00, 0x23, 0x00, 0x10]];
+
+  skin.walls_blobs = 
+    [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x03, 0x03, 0x00, 0x00, 0x00, 0x22, 0x00], 
+     [0x00, 0x03, 0x03, 0x00, 0x00, 0x10, 0x10, 0x00], 
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x10, 0x10, 0x00],  
+     [0x00, 0x00, 0x02, 0x02, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x00, 0x02, 0x02, 0x00, 0x00, 0x00, 0x23],   
+     [0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x21, 0x21],  
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x21, 0x21]];
+
+  // Sounds.
+  skin.character1sound1 = [skin.assetUrl('character1sound1.mp3'), skin.assetUrl('wall.ogg')];
+  skin.character1sound2 = [skin.assetUrl('character1sound2.mp3'), skin.assetUrl('wall.ogg')];
+  skin.character1sound3 = [skin.assetUrl('character1sound3.mp3'), skin.assetUrl('wall.ogg')];
+  skin.character1sound4 = [skin.assetUrl('character1sound4.mp3'), skin.assetUrl('wall.ogg')];
+
+  studioApp.loadAudio(skin.character1sound1, 'character1sound1');
+  studioApp.loadAudio(skin.character1sound2, 'character1sound2');
+  studioApp.loadAudio(skin.character1sound3, 'character1sound3');
+  studioApp.loadAudio(skin.character1sound4, 'character1sound4');
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   skin.wallChoices = [
@@ -5090,7 +5354,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":"/home/ubuntu/staging/apps/build/js/skins.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js"}],"/home/ubuntu/staging/apps/build/js/studio/levels.js":[function(require,module,exports){
+},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js"}],"/home/ubuntu/staging/apps/build/js/studio/levels.js":[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('./locale');
@@ -10018,53 +10282,61 @@ Collidable.prototype.update = function () {
 
     var bufferDistance = 60;
 
-    for (var candidateX = this.gridX - 1; candidateX <= this.gridX + 1; candidateX++) {
-      for (var candidateY = this.gridY - 1; candidateY <= this.gridY + 1; candidateY++) {
-        candidate = {gridX: candidateX, gridY: candidateY};
-        candidate.score = 0;
+    // The item can just go up/down/left/right.. no diagonals.
+    var candidateGridLocations = [ 
+      {row: -1, col: 0}, 
+      {row: +1, col: 0},
+      {row: 0, col: -1}, 
+      {row: 0, col: +1}];
 
-        if (this.activity === "patrol") {
+    for (var candidateIndex = 0; candidateIndex < candidateGridLocations.length; candidateIndex++) {
+      var candidateX = this.gridX + candidateGridLocations[candidateIndex].col;
+      var candidateY = this.gridY + candidateGridLocations[candidateIndex].row;
+
+      candidate = {gridX: candidateX, gridY: candidateY};
+      candidate.score = 0;
+
+      if (this.activity === "patrol") {
+        candidate.score ++;
+      } else if (this.activity === "chase") {
+        if (candidateY == this.gridY - 1 && spriteY < this.y - bufferDistance) {
+          candidate.score += 2;
+        } else if (candidateY == this.gridY + 1 && spriteY > this.y + bufferDistance) {
+          candidate.score += 2;
+        }
+        else {
+          candidate.score += 1;
+        }
+
+        if (candidateX == this.gridX - 1 && spriteX < this.x - bufferDistance) {
           candidate.score ++;
-        } else if (this.activity === "chase") {
-          if (candidateY == this.gridY - 1 && spriteY < this.y - bufferDistance) {
-            candidate.score += 2;
-          } else if (candidateY == this.gridY + 1 && spriteY > this.y + bufferDistance) {
-            candidate.score += 2;
-          }
-          else {
-            candidate.score += 1;
-          }
-
-          if (candidateX == this.gridX - 1 && spriteX < this.x - bufferDistance) {
-            candidate.score ++;
-          } else if (candidateX == this.gridX + 1 && spriteX > this.x + bufferDistance) {
-            candidate.score ++;
-          }
-        } else if (this.activity === "flee") {
-          candidate.score = 1;
-          if (candidateY == this.gridY - 1 && spriteY > this.y - bufferDistance) {
-            candidate.score ++;
-          } else if (candidateY == this.gridY + 1 && spriteY < this.y + bufferDistance) {
-            candidate.score ++;
-          }
-
-          if (candidateX == this.gridX - 1 && spriteX > this.x - bufferDistance) {
-            candidate.score ++;
-          } else if (candidateX == this.gridX + 1 && spriteX < this.x + bufferDistance) {
-            candidate.score ++;
-          }
+        } else if (candidateX == this.gridX + 1 && spriteX > this.x + bufferDistance) {
+          candidate.score ++;
+        }
+      } else if (this.activity === "flee") {
+        candidate.score = 1;
+        if (candidateY == this.gridY - 1 && spriteY > this.y - bufferDistance) {
+          candidate.score ++;
+        } else if (candidateY == this.gridY + 1 && spriteY < this.y + bufferDistance) {
+          candidate.score ++;
         }
 
-        if (candidate.score > 0) {
-          Studio.drawDebugRect(
-            "roamGridPossibleDest", 
-            candidateX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-            candidateY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-            Studio.SQUARE_SIZE, 
-            Studio.SQUARE_SIZE);
+        if (candidateX == this.gridX - 1 && spriteX > this.x - bufferDistance) {
+          candidate.score ++;
+        } else if (candidateX == this.gridX + 1 && spriteX < this.x + bufferDistance) {
+          candidate.score ++;
         }
-        candidates.push(candidate);
       }
+
+      if (candidate.score > 0) {
+        Studio.drawDebugRect(
+          "roamGridPossibleDest", 
+          candidateX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
+          candidateY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
+          Studio.SQUARE_SIZE, 
+          Studio.SQUARE_SIZE);
+      }
+      candidates.push(candidate);
     }
 
     // cull candidates that won't be possible
@@ -10358,7 +10630,7 @@ exports.SquareType = {
   NOT_USED_8K:  8192,
   NOT_USED_16K: 16384,
   NOT_USED_32K: 32768
-  // Walls specifically retrieved from an 16x16 grid are stored in bits 16-23
+  // Walls specifically retrieved from an 16x16 grid are stored in bits 16-27.
 };
 
 exports.SquareItemClassMask =
@@ -10379,16 +10651,34 @@ exports.squareHasItemClass = function (itemClassIndex, squareValue) {
   return Math.pow(2, itemClassIndex) & classesEnabled;
 };
 
+/**
+ * The types of walls in the maze.
+ * @enum {number}
+ */
+exports.WallType = {
+  NORMAL_SIZE: 0,
+  DOUBLE_SIZE: 1,
+  JUMBO_SIZE: 2
+};
+
+exports.WallTypeMask     = 0x0F000000;
 exports.WallCoordRowMask = 0x00F00000;
 exports.WallCoordColMask = 0x000F0000;
 
-exports.WallCoordsMask = exports.WallCoordRowMask | exports.WallCoordColMask;
+exports.WallCoordsMask = 
+  exports.WallTypeMask | exports.WallCoordRowMask | exports.WallCoordColMask;
 exports.WallCoordsShift = 16;
-exports.WallCoordColShift = exports.WallCoordsShift;
-exports.WallCoordRowShift = exports.WallCoordsShift + 4;
+exports.WallCoordColShift  = exports.WallCoordsShift;
+exports.WallCoordRowShift  = exports.WallCoordsShift + 4;
+exports.WallTypeShift      = exports.WallCoordsShift + 8;
 exports.WallCoordMax = 16; // indicates a 16x16 grid, which requires 8 bits
+exports.WallRandomCoordMax = 2; // how many rows/cols we randomly select tiles from
 
 exports.WallAnyMask = exports.WallCoordsMask | exports.SquareType.WALL;
+
+// Floating score: change opacity and Y coordinate by these values each tick.
+exports.floatingScoreChangeOpacity = -0.025;
+exports.floatingScoreChangeY = -1;
 
 exports.RANDOM_VALUE = 'random';
 exports.HIDDEN_VALUE = '"hidden"';

@@ -2402,11 +2402,46 @@ module.exports = {
 
 
 },{}],"/home/ubuntu/staging/apps/build/js/applab/dontMarshalApi.js":[function(require,module,exports){
+var errorHandler = require('./errorHandler');
+var outputApplabConsole = errorHandler.outputApplabConsole;
+var outputError = errorHandler.outputError;
+var ErrorLevel = errorHandler.ErrorLevel;
+
+var OPTIONAL = true;
+
+
+function outputWarning(errorString) {
+  var line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
+  outputError(errorString, ErrorLevel.WARNING, line);
+}
 
 // APIs designed specifically to run on interpreter data structures without marshalling
 // (valuable for performance or to support in/out parameters)
 //
 // dropletConfig for each of these APIs should be marked with dontMarshal:true
+
+
+function dmapiValidateType(funcName, varName, varValue, expectedType, opt) {
+  var properType;
+  if (typeof varValue !== 'undefined') {
+    if (expectedType === 'number') {
+      properType = (typeof varValue.data === 'number' ||
+                    (typeof varValue.data === 'string' && !isNaN(varValue.data)));
+    } else if (expectedType === 'array') {
+      properType = varValue.parent == window.Applab.JSInterpreter.interpreter.ARRAY;
+    } else {
+      properType = (typeof varValue.data === expectedType);
+    }
+  }
+  properType = properType ||
+              (opt === OPTIONAL &&
+               (varValue === window.Applab.JSInterpreter.interpreter.UNDEFINED ||
+                typeof varValue === 'undefined'));
+  if (!properType) {
+    outputWarning(funcName + "() " + varName + " parameter value (" +
+                    varValue + ") is not a " + expectedType + ".");
+  }
+}
 
 // Array functions
 
@@ -2420,6 +2455,9 @@ var getInt = function(obj, def) {
 };
 
 exports.insertItem = function (array, index, item) {
+  dmapiValidateType('insertItem', 'list', array, 'array');
+  dmapiValidateType('insertItem', 'index', index, 'number');
+
   index = getInt(index, 0);
   if (index < 0) {
     index = Math.max(array.length + index, 0);
@@ -2435,6 +2473,9 @@ exports.insertItem = function (array, index, item) {
 };
 
 exports.removeItem = function (array, index) {
+  dmapiValidateType('removeItem', 'list', array, 'array');
+  dmapiValidateType('removeItem', 'index', index, 'number');
+
   index = getInt(index, 0);
   if (index < 0) {
     index = Math.max(array.length + index, 0);
@@ -2446,10 +2487,17 @@ exports.removeItem = function (array, index) {
   if (index < array.length) {
     delete array.properties[array.length - 1];
     array.length -= 1;
+  } else {
+    // index is out of bounds (too large):
+    outputWarning("removeItem() index parameter value (" + index +
+                    ") is larger than the number of items in the list (" +
+                    array.length + ").");
   }
 };
 
 exports.appendItem = function (array, item) {
+  dmapiValidateType('appendItem', 'list', array, 'array');
+
   array.properties[array.length] = item;
   array.length++;
   return window.Applab.JSInterpreter.createPrimitive(array.length);
@@ -2520,7 +2568,7 @@ exports.setRGB = function (imageData, x, y, r, g, b, a) {
 };
 
 
-},{}],"/home/ubuntu/staging/apps/build/js/applab/designMode.js":[function(require,module,exports){
+},{"./errorHandler":"/home/ubuntu/staging/apps/build/js/applab/errorHandler.js"}],"/home/ubuntu/staging/apps/build/js/applab/designMode.js":[function(require,module,exports){
 /* global $, Applab, dashboard */
 
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently

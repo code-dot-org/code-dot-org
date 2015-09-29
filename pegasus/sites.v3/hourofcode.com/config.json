@@ -155,6 +155,9 @@
     "gcs": {
       "name": "Granville County Schools"
     },
+    "godaddy": {
+      "name": "Go Daddy"
+    },
     "greenupcountyschooldistrict": {
       "name": "Greenup County Schools"
     },
@@ -361,6 +364,9 @@
     },
     "wvsd208": {
       "name": "West Valley School District"
+    },
+    "yelp": {
+      "name": "Yelp"
     }
   }
 }
