@@ -52,7 +52,7 @@ puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
 TEACHERS = {}.tap do |results|
   (
   query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Brazil"') +
-  query_contacts(q: 'kind_s:"CSEdWeekEvent2013" && location_country_s:"Brazil"')
+  query_contacts(q: 'kind_s:"CSEdWeekEvent2013" && country_s:"br"')
   ).each do |i|
     email = i[:email].downcase.strip
     results[email] = i unless UNSUBSCRIBERS[email]
