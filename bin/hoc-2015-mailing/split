@@ -32,8 +32,10 @@ input_table = CSV.read(csv_path, headers: true)
 
 # shuffle and slice instead of sample because there's no sample!
 
-input_columns = input_table.headers
-input_rows = input_table.to_a[1..-1].shuffle # without the first header row
+input_rows = input_table.to_a
+input_columns = input_rows.shift # first row is the header
+
+input_rows.shuffle!
 
 # scale sample sizes to the input length
 sample_sizes = sample_sizes.map {|percent| (percent.to_f / 100 * input_rows.count).to_i}
