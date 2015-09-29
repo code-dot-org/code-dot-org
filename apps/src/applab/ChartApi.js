@@ -32,6 +32,13 @@ var GoogleChart = require('./GoogleChart');
 var ChartApi = module.exports = function (docContext, appStorage) {
   this.document_ = docContext || document;
   this.appStorage_ = appStorage || AppStorage;
+
+  /**
+   * List of all warnings generated while performing operations through this
+   * API instance.
+   * @type {Error[]}
+   */
+  this.warnings = [];
 };
 
 // When adding a new type, provide an entry in the string enum (for clean code)
@@ -83,12 +90,13 @@ function quote(str) {
 }
 
 /**
- *
- * @param chartId
- * @param chartType
- * @param chartData
- * @param options
- * @returns {Promise}
+ * Render a chart into an Applab chart element.
+ * @param {string} chartId - ID of the destination chart element.
+ * @param {ChartType} chartType - Desired chart type.
+ * @param {Object[]} chartData - Data to populate the chart.
+ * @param {Object} options - passed through to the API.
+ * @returns {Promise} which resolves when the chart has been rendered, or
+ *          rejects if there are any problems along the way.
  */
 ChartApi.prototype.drawChart = function (chartId, chartType, chartData, options) {
   try {
@@ -96,23 +104,25 @@ ChartApi.prototype.drawChart = function (chartId, chartType, chartData, options)
     chart.loadData(chartData).then(function () {
       return chart.drawChart(options);
     }).then(function () {
-      // Promise resolves to warnings.
-      // TODO: Change this so we populate a local property with warnings.
-      return chart.warnings;
-    });
+      this.mergeWarnings_(chart.warnings);
+    }.bind(this));
   } catch (e) {
     return Promise.reject(e);
   }
 };
 
 /**
- * @param {string} chartId
- * @param {ChartType} chartType
- * @param {string} tableName
- * @param {string[]} columns
- * @param {Object} options
- * @returns {Promise} resolves to an array of warnings (hopefully empty) or
- *          rejects with a single Error.
+ * Render a chart into an Applab chart element using data from an AppStorage
+ * API table.
+ * @param {string} chartId - ID of the destination chart element.
+ * @param {ChartType} chartType - Desired chart type.
+ * @param {string} tableName - AppStorage API table name to source data from
+ *                 for the chart.
+ * @param {string[]} columns - Columns to use from the table data for the chart,
+ *        in order (required order dependent on chart type).
+ * @param {Object} options - passed through to the API.
+ * @returns {Promise} resolves when the chart has been rendered, or rejects if
+ *          there are any problems along the way.
  */
 ChartApi.prototype.drawChartFromRecords = function (chartId, chartType,
     tableName, columns, options) {
@@ -126,11 +136,20 @@ ChartApi.prototype.drawChartFromRecords = function (chartId, chartType,
     }).then(function () {
       return chart.drawChart(options);
     }).then(function () {
-      return chart.warnings;
-    });
+      this.mergeWarnings_(chart.warnings);
+    }.bind(this));
   } catch (e) {
     return Promise.reject(e);
   }
+};
+
+/**
+ * Add warnings from an array to the ChartApi instance's warnings array.
+ * @param {Error[]} newWarnings
+ * @private
+ */
+ChartApi.prototype.mergeWarnings_ = function (newWarnings) {
+  Array.prototype.push.apply(this.warnings, newWarnings);
 };
 
 /**

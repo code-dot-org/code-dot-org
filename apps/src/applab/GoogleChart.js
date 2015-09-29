@@ -53,7 +53,11 @@ var GoogleChart = module.exports = function (targetDiv) {
   /** @private {google.visualization.DataTable} */
   this.dataTable_ = null;
 
-  /** @type {Error[]} */
+  /**
+   * List of all warnings logged while performing operations with this chart
+   * instance.
+   * @type {Error[]}
+   */
   this.warnings = [];
 };
 
@@ -159,7 +163,7 @@ GoogleChart.inferColumnsFromRawData = function (rawData) {
 };
 
 /**
- *
+ * Makes sure data looks okay, throws errors and logs warnings as appropriate.
  * @param {string[]} columns
  * @param {Object[]} data
  * @private
@@ -176,6 +180,14 @@ GoogleChart.prototype.verifyData_ = function (data, columns) {
   }
 
   // Warn on empty columns?
+  columns.forEach(function (colName) {
+    var exists = data.some(function (row) {
+      return row[colName] !== undefined;
+    });
+    if (!exists) {
+      this.warn('No data found for column "' + colName + '".');
+    }
+  }.bind(this));
 };
 
 /**

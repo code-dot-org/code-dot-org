@@ -33,6 +33,14 @@ var fakeDocument = {
 };
 
 /**
+ * Stub chart type for our fake google API.
+ * @constructor
+ */
+var NullChart = function () {};
+NullChart.convertOptions = function (x) { return x; };
+NullChart.prototype.draw = function () {};
+
+/**
  * Fake the google loader/visualization API for testing.
  * @type {{}}
  */
@@ -42,20 +50,22 @@ var fakeGoogle = {
       options.callback();
     }
   },
+  charts: {
+    Bar: NullChart,
+    Line: NullChart,
+    Scatter: NullChart
+  },
   visualization: {
     arrayToDataTable: function (array) { return array; },
-    PieChart: (function () {
-      var pieChart = function () {};
-      pieChart.prototype.draw = function () {};
-      return pieChart;
-    })()
+    PieChart: NullChart
   }
 };
 
-var fakeAppStorage = {
-  readRecords: function (table, filter, onSuccess) {
-    onSuccess([]);
-  }
+var FakeAppStorage = function () {
+  this.fakeRecords = [];
+};
+FakeAppStorage.prototype.readRecords = function (table, filter, onSuccess) {
+  onSuccess(this.fakeRecords);
 };
 
 describe("GoogleChart", function () {
@@ -71,13 +81,15 @@ describe("GoogleChart", function () {
 });
 
 describe("ChartApi", function () {
+  var ChartType = ChartApi.ChartType;
+  var fakeAppStorage;
 
   beforeEach(function () {
     GoogleChart.lib = fakeGoogle;
+    fakeAppStorage = new FakeAppStorage();
   });
 
   describe("ChartType enum", function () {
-    var ChartType = ChartApi.ChartType;
 
     it("only contains supported types", function () {
       Object.getOwnPropertyNames(ChartType).forEach(function (key) {
@@ -155,6 +167,30 @@ describe("ChartApi", function () {
       rejection = e;
     }
 
+    var assertWarns = function (chartApi, warningRegexp) {
+      assert.isNull(rejection);
+      var warningFound = chartApi.warnings.some(function (e) {
+        return warningRegexp.test(e.message);
+      });
+      assert(warningFound, 'Expected warning ' +
+          warningRegexp.toString() + "\n\Got warnings:\n" +
+          chartApi.warnings.map(function (e) {
+            return e.message;
+          }).join("\n"));
+    };
+
+    var assertNotWarns = function (chartApi, warningRegexp) {
+      assert.isNull(rejection);
+      var warningFound = chartApi.warnings.some(function (e) {
+        return warningRegexp.test(e.message);
+      });
+      assert(!warningFound, 'Expected no warning ' +
+          warningRegexp.toString() + "\n\Got warnings:\n" +
+          chartApi.warnings.map(function (e) {
+            return e.message;
+          }).join("\n"));
+    };
+
     it("returns a Promise", function () {
       assert.instanceOf(chartApi.drawChartFromRecords(), Promise);
     });
@@ -190,7 +226,7 @@ describe("ChartApi", function () {
     });
 
     it ("rejects if no columns array provided", function (testDone) {
-      chartApi.drawChartFromRecords('fakeDiv', 'pie', 'fakeTable')
+      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable')
           .then(onResolve, onReject)
           .then(ensureDone(testDone, function () {
             assert.equal(
@@ -200,7 +236,7 @@ describe("ChartApi", function () {
     });
 
     it ("rejects if zero columns provided", function (testDone) {
-      chartApi.drawChartFromRecords('fakeDiv', 'pie', 'fakeTable', [])
+      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable', [])
           .then(onResolve, onReject)
           .then(ensureDone(testDone, function () {
             assert.equal(
@@ -210,7 +246,7 @@ describe("ChartApi", function () {
     });
 
     it ("rejects if only one column provided", function (testDone) {
-      chartApi.drawChartFromRecords('fakeDiv', 'pie', 'fakeTable', ['column1'])
+      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable', ['column1'])
           .then(onResolve, onReject)
           .then(ensureDone(testDone, function () {
             assert.equal(
@@ -220,10 +256,91 @@ describe("ChartApi", function () {
     });
 
     it ("when fulfilled, makes API calls", function (testDone) {
-      chartApi.drawChartFromRecords('fakeDiv', 'pie', 'fakeTable', ['column1', 'column2'])
+      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable', ['column1', 'column2'])
           .then(onResolve, onReject)
           .then(ensureDone(testDone, function () {
             assert.isNull(rejection);
+          }));
+    });
+
+    it ("warns about empty dataset", function (testDone) {
+      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable',
+          ['column1', 'column2'])
+          .then(onResolve, onReject)
+          .then(ensureDone(testDone, function () {
+            assertWarns(chartApi, /No data\./);
+          }));
+    });
+
+    it ("does not warn about empty dataset when given data", function (testDone) {
+      fakeAppStorage.fakeRecords = [
+        { column1: 'Duke', column2: 'Earl' }
+      ];
+      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable',
+          ['column1', 'column2'])
+          .then(onResolve, onReject)
+          .then(ensureDone(testDone, function () {
+            assertNotWarns(chartApi, /No data\./);
+          }));
+    });
+
+    it ("warns about empty column", function (testDone) {
+      fakeAppStorage.fakeRecords = [
+        { column1: 'Duke' }
+      ];
+      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable',
+          ['column1', 'column2'])
+          .then(onResolve, onReject)
+          .then(ensureDone(testDone, function () {
+            assertWarns(chartApi, /No data found for column/);
+          }));
+    });
+
+    it ("does not warn about empty column if all columns have data", function (testDone) {
+      fakeAppStorage.fakeRecords = [
+        { column1: 'Duke', column2: 'Earl' }
+      ];
+      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable',
+          ['column1', 'column2'])
+          .then(onResolve, onReject)
+          .then(ensureDone(testDone, function () {
+            assertNotWarns(chartApi, /No data found for column/);
+          }));
+    });
+
+    it ("pie charts warn about three columns", function (testDone) {
+      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable',
+          ['column1', 'column2', 'column3'])
+          .then(onResolve, onReject)
+          .then(ensureDone(testDone, function () {
+            assertWarns(chartApi, /Too many columns/);
+          }));
+    });
+
+    it ("bar charts do not warn about three columns", function (testDone) {
+      chartApi.drawChartFromRecords('fakeDiv', ChartType.BAR, 'fakeTable',
+          ['column1', 'column2', 'column3'])
+          .then(onResolve, onReject)
+          .then(ensureDone(testDone, function () {
+            assertNotWarns(chartApi, /Too many columns/);
+          }));
+    });
+
+    it ("line charts do not warn about three columns", function (testDone) {
+      chartApi.drawChartFromRecords('fakeDiv', ChartType.LINE, 'fakeTable',
+          ['column1', 'column2', 'column3'])
+          .then(onResolve, onReject)
+          .then(ensureDone(testDone, function () {
+            assertNotWarns(chartApi, /Too many columns/);
+          }));
+    });
+
+    it ("scatter charts do not warn about three columns", function (testDone) {
+      chartApi.drawChartFromRecords('fakeDiv', ChartType.SCATTER, 'fakeTable',
+          ['column1', 'column2', 'column3'])
+          .then(onResolve, onReject)
+          .then(ensureDone(testDone, function () {
+            assertNotWarns(chartApi, /Too many columns/);
           }));
     });
   });
