@@ -79,8 +79,8 @@ all.merge! ORGANIZERS_2013
 
 TEACHERS = {}.tap do |results|
   query_contacts(q: 'kind_s:"user" && role_s:"teacher"') do |raw|
-    i['international'] = (i['create_ip_country_s'] && i['create_ip_country_s'].downcase != 'united states').to_s
-    i['organizer'] = 'false'
+    raw['international'] = (raw['create_ip_country_s'] && raw['create_ip_country_s'].downcase != 'united states').to_s
+    raw['organizer'] = 'false'
   end.each do |processed|
     email = processed[:email].downcase.strip
     results[email] = processed unless UNSUBSCRIBERS[email] || all[email] # don't override duplicates
