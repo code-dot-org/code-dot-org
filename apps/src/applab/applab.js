@@ -42,6 +42,7 @@ var assetsApi = require('../clientApi').assets;
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
 var DebugArea = require('./DebugArea');
+var VisualizationOverlay = require('./VisualizationOverlay.jsx');
 
 var applabConstants = require('./constants');
 
@@ -315,6 +316,9 @@ var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.footerlessAppHeight + "px";
+  var overlay = document.getElementById('visualizationOverlay');
+  overlay.style.width = Applab.appWidth + "px";
+  overlay.style.height = Applab.footerlessAppHeight + "px";
   if (Applab.levelHtml === '') {
     // On clear gives us a fresh start, including our default screen.
     designMode.loadDefaultScreen();
@@ -428,29 +432,6 @@ function moveDownDebugConsoleHistory(currentInput) {
     return Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex];
   }
   return currentInput;
-}
-
-function updateScreenCoordinates(e) {
-  var screenCoordinates = document.getElementById('screenCoordinates');
-  var visOffset = document.getElementById('visualization').getBoundingClientRect();
-  if (screenCoordinates && visOffset) {
-    var x = e.clientX - visOffset.left;
-    var y = e.clientY - visOffset.top;
-    //var scaling = 320 / visOffset.width;
-    screenCoordinates.style.visibility='visible'; 
-    screenCoordinates.style.left = x + 'px';
-    screenCoordinates.style.top = y + 'px';
-    //console.log(x + ', ' + y + '; ' + scaling);
-    //screenCoordinates.innerHTML = Math.round(x * scaling) + ', ' + Math.round(y * scaling);
-    screenCoordinates.innerHTML = x + ', ' + y;
-  }
-}
-
-function hideScreenCoordinates(e) {
-  var screenCoordinates = document.getElementById('screenCoordinates');
-  if (screenCoordinates) {
-    screenCoordinates.style.visibility='hidden';
-  }
 }
 
 function onDebugInputKeyDown(e) {
@@ -1017,10 +998,10 @@ Applab.reset = function(first) {
     applabTurtle.turtleSetVisibility(true);
   }
 
+  Applab.renderVisualizationOverlay();
+  window.addEventListener('resize', Applab.renderVisualizationOverlay);
+
   newDivApplab.addEventListener('click', designMode.onDivApplabClick);
- // newDivApplab.addEventListener('mouseover', showScreenCoordinates);
-  newDivApplab.addEventListener('mousemove', updateScreenCoordinates);
-  newDivApplab.addEventListener('mouseout', hideScreenCoordinates);
 
   // Reset goal successState:
   if (level.goal) {
@@ -1058,6 +1039,22 @@ Applab.reset = function(first) {
   Applab.Globals = {};
   Applab.executionError = null;
   Applab.JSInterpreter = null;
+};
+
+Applab.renderVisualizationOverlay = function() {
+  var visualizationOverlay = document.getElementById('visualizationOverlay');
+  if (!visualizationOverlay) {
+    return;
+  }
+
+  // Calculate current visualization scale to pass to the overlay component.
+  var unscaledWidth = visualizationOverlay.clientWidth;
+  var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
+
+  var props = {
+    scale: scaledWidth / unscaledWidth
+  };
+  React.render(React.createElement(VisualizationOverlay, props), visualizationOverlay);
 };
 
 /**
