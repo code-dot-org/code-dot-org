@@ -325,6 +325,8 @@ en:
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
+      Embedded Arduino Sketch Test:
+        Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
       Equity About: {}
       Equity CS: {}
       Equity Celebrate: {}
@@ -3304,6 +3306,22 @@ en:
         default value: default value
         random: random
         the old data is deleted: the old data is deleted
+      U4LXX Multiple Choice:
+        'Multiple Choice: <simple description here>': 'Multiple Choice: <simple description here>'
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4XX Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.
@@ -4208,6 +4226,10 @@ en:
         'Altering Images: Getting Started': 'Altering Images: Getting Started'
       U3L34 Free Response Getting Started:
         'Hidden Images: Getting Started': 'Hidden Images: Getting Started'
+      U4LXX Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4LXX Multiple Choice:
+        'Multiple Choice: <short description here>': 'Multiple Choice: <short description here>'
       text match test:
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4*7: (9-3)+4*7
