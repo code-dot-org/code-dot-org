@@ -4,11 +4,6 @@ language: ruby
 
 rvm: 2.0.0
 
-addons:
-  apt:
-    packages:
-      - imagemagick
-
 sudo: false
 
 cache: bundler
