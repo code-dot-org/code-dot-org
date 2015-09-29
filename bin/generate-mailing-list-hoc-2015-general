@@ -24,6 +24,7 @@ def query_contacts(params)
 
   [].tap do |results|
     SOLR.query(params.merge(rows: 10000)).each do |i|
+      p i
       i = yield(i) if block_given?
       results << {email: i['email_s'].downcase.strip, name: i['name_s']}.merge(i.slice(*fields)) if i
     end
@@ -51,9 +52,7 @@ puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
 all = {}
 
 ORGANIZERS_2014 = {}.tap do |results|
-  (
-  query_contacts(q: 'kind_s:"HocSignup2014"')
-  ).each do |i|
+  query_contacts(q: 'kind_s:"HocSignup2014"') do |i|
     email = i[:email].downcase.strip
     p i
     p i['location_country_s']
