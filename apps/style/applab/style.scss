@@ -238,18 +238,26 @@ div#visualizationResizeBar {
 
     .crosshair {
       line.cursor {
-        stroke: black;
+        stroke: #333;
         stroke-width: 2;
       }
 
       line.guide {
-        stroke: black;
+        stroke: #aaa;
         stroke-width: 1.8;
         stroke-dasharray: 6,5
       }
 
       text {
         text-anchor: middle;
+
+        &.outline {
+          stroke: white;
+          stroke-width: 10;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          fill: none;
+        }
       }
     }
   }
