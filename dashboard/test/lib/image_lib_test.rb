@@ -36,8 +36,11 @@ class ImageLibTest < ActiveSupport::TestCase
                          test_image('foreground_overlay.png')),
            'Image should match itself'
     refute images_equal?(test_image('foreground_overlay.png'),
+                         test_image('foreground_overlay_tweaked.png')),
+           'Images with same size but different pixels should not match'
+    refute images_equal?(test_image('foreground_overlay.png'),
                          test_image('blank_sharing_drawing_anna.png')),
-           'Different images should not match'
+           'Images with different sizes and pixels should not match'
   end
 
   private
@@ -46,13 +49,16 @@ class ImageLibTest < ActiveSupport::TestCase
   # the ImageMagic compare tool.
   def images_equal?(image1, image2)
     result = capture_stderr do
-      MiniMagick::Tool::Compare.new do |c|
-        c.metric('ae')  # Absolute error metric
+      MiniMagick::Tool::Compare.new(false) do |c|
+        # Use the absolute error metric, which outputs non-zero to stderr
+        # if images don't match.
+        c.metric('ae')
         c << image1.path << image2.path << 'null:'
       end
     end
-    puts "Image comparison result for #{image1.path} and #{image2.path} = '#{result}'"
-    '0' == result.gsub("\n", '')
+    result.strip!
+    puts "Image compare for #{image1.path} and #{image2.path}='#{result}'"
+    '0' == result
   end
 
   # Helper function to evaluate and return output to stderr.
