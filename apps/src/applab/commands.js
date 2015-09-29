@@ -1433,6 +1433,7 @@ applabCommands.drawChartFromRecords = function (opts) {
    *        without halting execution.
    */
   var onSuccess = function () {
+    stopLoadingSpinnerFor(opts.chartId);
     chartApi.warnings.forEach(function (warning) {
       outputError(warning.message, ErrorLevel.WARNING, currentLineNumber);
     });
@@ -1446,9 +1447,11 @@ applabCommands.drawChartFromRecords = function (opts) {
    * @param {Error} error - A rejected promise usually passes an error.
    */
   var onError = function (error) {
+    stopLoadingSpinnerFor(opts.chartId);
     outputError(error.message, ErrorLevel.ERROR, currentLineNumber);
   };
 
+  startLoadingSpinnerFor(opts.chartId);
   chartApi.drawChartFromRecords(
       opts.chartId,
       opts.chartType,
@@ -1457,6 +1460,38 @@ applabCommands.drawChartFromRecords = function (opts) {
       opts.options
   ).then(onSuccess, onError);
 };
+
+/**
+ * If the element is found, add the 'loading' class to it so that it
+ * displays the loading spinner.
+ * @param {string} elementId
+ */
+function startLoadingSpinnerFor(elementId) {
+  var element = document.getElementById(elementId);
+  if (!element) {
+    return;
+  }
+
+  // Add 'loading' class
+  element.className += ' loading';
+}
+
+/**
+ * If the element is found, make sure to remove the 'loading' class from it
+ * so that it hides the loading spinner.
+ * @param {string} elementId
+ */
+function stopLoadingSpinnerFor(elementId) {
+  var element = document.getElementById(elementId);
+  if (!element) {
+    return;
+  }
+
+  // Remove 'loading' class
+  element.className = element.className.split(/\s+/).filter(function (x) {
+    return !(/loading/i.test(x));
+  }).join(' ');
+}
 
 /**
  * Queue the given callback in the given interpreter IF the callback exists

@@ -50,6 +50,9 @@
     display: block;
     overflow: hidden;
 
+    .loading {
+      background: image-url("spinner-big.gif") no-repeat center center;
+    }
   }
 
   .design-mode-hidden {
