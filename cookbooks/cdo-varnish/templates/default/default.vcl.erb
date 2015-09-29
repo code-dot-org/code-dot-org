@@ -416,7 +416,11 @@ end
   }
 
   # Always cache the following file types for all users.
-  if( (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js)(\?[a-z0-9]+)?$") && (!(req.url ~ "^/api/")) && (req.request != "PUT") ) {
+  if (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js)(\?[a-z0-9]+)?$" &&
+      !(req.url ~ "^/api/") &&
+      req.request != "PUT" &&
+      req.request != "POST" &&
+      req.request != "DELETE") {
     unset req.http.Cookie;
   }
 
