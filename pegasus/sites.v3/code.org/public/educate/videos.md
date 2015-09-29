@@ -34,15 +34,16 @@ We are building a growing library of educational videos available for re-use by 
 
 <div style="float:left; padding:10px; width:49%">
 
-<%=view :display_video_thumbnail, id: "PACKETS", video_code: "AYdF7b3nMto", caption: "THE INTERNET: Packets, Routing and Reliability", play_button: 'center', download_path: "https://videos.code.org/2015/csp/concept_internet_packets_reliability.mp4" %>
+<%=view :display_video_thumbnail, id: "IP", video_code: "5o8CwafCxnU", caption: "THE INTERNET: IP Addresses and DNS ", play_button: 'center', download_path: "https://videos.code.org/2015/csp/concept_internet_ip_dns.mp4" %>
 
 </div>
 
 <div style="float:left; padding:10px; width:49%">
 
-<%=view :display_video_thumbnail, id: "IP", video_code: "5o8CwafCxnU", caption: "THE INTERNET: IP Addresses and DNS ", play_button: 'center', download_path: "https://videos.code.org/2015/csp/concept_internet_ip_dns.mp4" %>
+<%=view :display_video_thumbnail, id: "PACKETS", video_code: "AYdF7b3nMto", caption: "THE INTERNET: Packets, Routing and Reliability", play_button: 'center', download_path: "https://videos.code.org/2015/csp/concept_internet_packets_reliability.mp4" %>
 
 </div>
+
 
 <div style="float:left; padding:10px; width:49%">
 
