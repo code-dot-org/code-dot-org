@@ -48,7 +48,7 @@ class ImageLibTest < ActiveSupport::TestCase
         c << image1.path << image2.path << 'null:'
       end
     end
-    Rails.logger.info "Image comparison result=#{result}"
+    puts "Image comparison result for #{image1.path} and #{image2.path}=#{result}"
     '0' == result
   end
 
