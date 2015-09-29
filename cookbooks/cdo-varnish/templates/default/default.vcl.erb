@@ -27,7 +27,7 @@ import header;
   def rack_env?(env)
     env.to_s == node.chef_environment
   end
-  
+
   def session_cookie
     append_env '_learn_session'
   end
@@ -447,7 +447,7 @@ end
         req.url ~ "^/ops-dashboard" ||
         req.url ~ "^/poste"
       ) {
-      cookie.filter_except("<%=[session_cookie,deprecated_storage_cookie,storage_id_cookie].join(',')%>,language_,hour_of_code,NO_CACHE");
+      cookie.filter_except("<%=[session_cookie,deprecated_storage_cookie,storage_id_cookie].join(',')%>,language_,progress,lines,hour_of_code,NO_CACHE");
     } else {
       cookie.filter_except("NO_CACHE");
     }
