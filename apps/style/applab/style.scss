@@ -384,6 +384,9 @@ $debug-commands-column-width: 270px;
 }
 
 .debug-console {
+  &.full {
+    left: 0;
+  }
   left: $debug-commands-column-width;
   right: 0;
 }

@@ -65,7 +65,7 @@
   </div>
   <% } %>
   <% if (debugConsole) { %>
-  <div id="debug-console" class="debug-console">
+  <div id="debug-console" class="debug-console <%= debugButtons ? '' : 'full' %>">
     <div id="debug-output" class="debug-output"></div>
     <span class="debug-input-prompt">
       &gt;
