@@ -52,7 +52,7 @@ class ImageLibTest < ActiveSupport::TestCase
       end
     end
     puts "Image comparison result for #{image1.path} and #{image2.path} = '#{result}'"
-    '0' == result.strip
+    '0' == result.gsub("\n", '')
   end
 
   # Helper function to evaluate and return output to stderr.
