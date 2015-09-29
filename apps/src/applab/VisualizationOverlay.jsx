@@ -4,13 +4,23 @@ var CrosshairOverlay = require('./CrosshairOverlay.jsx');
 
 module.exports = React.createClass({
   propTypes: {
+    appWidth: React.PropTypes.number.isRequired,
+    appHeight: React.PropTypes.number.isRequired,
+    scale: React.PropTypes.number.isRequired
   },
 
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       mouseX: 0,
       mouseY: 0
     };
+  },
+
+  isMouseInVisualization: function () {
+    return (this.state.mouseX >= 0) &&
+        (this.state.mouseX <= this.props.appWidth) &&
+        (this.state.mouseY >= 0) &&
+        (this.state.mouseY <= this.props.appHeight);
   },
 
   onSvgMouseMove: function (e) {
@@ -29,9 +39,12 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    return <svg ref="svg_">
-      <CrosshairOverlay x={this.state.mouseX} y={this.state.mouseY} />
-    </svg>;
+    var overlayComponents = [];
+    if (this.isMouseInVisualization()) {
+      overlayComponents.push(<CrosshairOverlay x={this.state.mouseX} y={this.state.mouseY} />);
+    }
+
+    return <svg ref="svg_">{overlayComponents}</svg>;
   },
 
   componentDidMount: function() {

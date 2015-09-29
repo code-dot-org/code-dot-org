@@ -1052,6 +1052,8 @@ Applab.renderVisualizationOverlay = function() {
   var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
 
   var props = {
+    appWidth: Applab.appWidth,
+    appHeight: Applab.footerlessAppHeight,
     scale: scaledWidth / unscaledWidth
   };
   React.render(React.createElement(VisualizationOverlay, props), visualizationOverlay);
