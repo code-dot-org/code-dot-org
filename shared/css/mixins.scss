@@ -1,0 +1,10 @@
+// Useful mixins, especially for stuff that's browser-prefix heavy.
+// Could always use something like Prefixr for this instead...
+
+@mixin user-select($val) {
+  -webkit-user-select: $val;
+  -khtml-user-select: $val;
+  -moz-user-select: $val;
+  -ms-user-select: $val;
+  user-select: $val;
+}
