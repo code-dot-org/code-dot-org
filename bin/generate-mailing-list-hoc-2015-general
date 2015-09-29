@@ -52,7 +52,7 @@ all = {}
 
 ORGANIZERS_2014 = {}.tap do |results|
   query_contacts(q: 'kind_s:"HocSignup2014"') do |raw|
-    raw['international'] = (raw['location_country_s'] && raw['location_country_s'].to_s.downcase != 'united states').to_s
+    raw['international'] = (!!raw['location_country_s'] && raw['location_country_s'].to_s.downcase != 'united states').to_s
     raw['organizer'] = 'true'
     raw
   end.each do |processed|
@@ -66,7 +66,7 @@ all.merge! ORGANIZERS_2014
 
 ORGANIZERS_2013 = {}.tap do |results|
   query_contacts(q: 'kind_s:"CSEdWeekEvent2013"') do |raw|
-    raw['international'] = (raw['country_s'] && raw['country_s'].downcase != 'united states').to_s
+    raw['international'] = (!!raw['country_s'] && raw['country_s'].downcase != 'united states').to_s
     raw['organizer'] = 'true'
     raw
   end.each do |processed|
@@ -80,7 +80,7 @@ all.merge! ORGANIZERS_2013
 
 TEACHERS = {}.tap do |results|
   query_contacts(q: 'kind_s:"user" && role_s:"teacher"') do |raw|
-    raw['international'] = (raw['create_ip_country_s'] && raw['create_ip_country_s'].downcase != 'united states').to_s
+    raw['international'] = (!!raw['create_ip_country_s'] && raw['create_ip_country_s'].downcase != 'united states').to_s
     raw['organizer'] = 'false'
     raw
   end.each do |processed|
