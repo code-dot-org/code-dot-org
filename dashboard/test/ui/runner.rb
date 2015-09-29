@@ -204,7 +204,6 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
   ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
   ENV['TEST_RUN_NAME'] = test_run_string
-  ENV['TEST_RUN_NAME'] = test_run_string
 
   if $options.html
     html_output_filename = test_run_string + "_output.html"
