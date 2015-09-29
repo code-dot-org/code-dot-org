@@ -58,22 +58,10 @@ execute "bundle-install-dashboard" do
   user node[:current_user]
   group node[:current_user]
   action :nothing
-  notifies :run, "execute[#{node['cdo-apps']['local_mysql'] ? 'create-dashboard-db' : 'build-dashboard'}]", :immediately
+  notifies :run, "execute[#{node['cdo-apps']['local_mysql'] ? 'setup-or-migrate-dashboard-db' : 'build-dashboard'}]", :immediately
 end
 
-execute "create-dashboard-db" do
-  command "rake db:create"
-  cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
-  environment ({
-    'LC_ALL'=>nil,
-  })
-  user node[:current_user]
-  group node[:current_user]
-  action :nothing
-  notifies :run, 'execute[load-dashboard-schema]', :immediately
-end
-
-execute "load-dashboard-schema" do
+execute "setup-or-migrate-dashboard-db" do
   command "rake db:setup_or_migrate"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
   environment ({
