@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# remove duplicate emails from a csv. See below for usage
 require 'csv'
 require 'set'
 
