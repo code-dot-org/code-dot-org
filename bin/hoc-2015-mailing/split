@@ -37,7 +37,6 @@ input_rows = input_table.to_a[1..-1].shuffle # without the first header row
 
 # scale sample sizes to the input length
 sample_sizes = sample_sizes.map {|percent| (percent.to_f / 100 * input_rows.count).to_i}
-sample_slices = [0] + sample_sizes
 
 samples = sample_sizes.map do |sample_size|
   input_rows.slice!(0, sample_size)
