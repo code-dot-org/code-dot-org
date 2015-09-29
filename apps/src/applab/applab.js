@@ -777,6 +777,9 @@ Applab.init = function(config) {
     }
   }
 
+  window.addEventListener('resize', Applab.renderVisualizationOverlay);
+
+
   var finishButton = document.getElementById('finishButton');
   if (finishButton) {
     dom.addClickTouchEvent(finishButton, Applab.onPuzzleFinish);
@@ -999,7 +1002,6 @@ Applab.reset = function(first) {
   }
 
   Applab.renderVisualizationOverlay();
-  window.addEventListener('resize', Applab.renderVisualizationOverlay);
 
   newDivApplab.addEventListener('click', designMode.onDivApplabClick);
 
@@ -1041,11 +1043,21 @@ Applab.reset = function(first) {
   Applab.JSInterpreter = null;
 };
 
+/**
+ * Manually re-render React-driven visualization SVG overlay.
+ * Should call whenever its state/props would change.
+ * Maybe this can go away if we roll it under other React stuff.
+ */
 Applab.renderVisualizationOverlay = function() {
+  var divApplab = document.getElementById('divApplab');
   var visualizationOverlay = document.getElementById('visualizationOverlay');
-  if (!visualizationOverlay) {
+  if (!divApplab || !visualizationOverlay) {
     return;
   }
+
+  // Change cursor rule for divApplab - appropriate here because sometimes
+  // the overlay is sort of a 'virtual' cursor for us.
+  divApplab.style.cursor = Applab.isRunning() ? '' : 'none';
 
   // Calculate current visualization scale to pass to the overlay component.
   var unscaledWidth = visualizationOverlay.clientWidth;
@@ -1054,7 +1066,8 @@ Applab.renderVisualizationOverlay = function() {
   var props = {
     appWidth: Applab.appWidth,
     appHeight: Applab.footerlessAppHeight,
-    scale: scaledWidth / unscaledWidth
+    scale: scaledWidth / unscaledWidth,
+    isApplabRunning: Applab.isRunning()
   };
   React.render(React.createElement(VisualizationOverlay, props), visualizationOverlay);
 };
@@ -1129,6 +1142,9 @@ Applab.runButtonClick = function() {
   studioApp.reset(false);
   studioApp.attempts++;
   Applab.execute();
+
+  // Re-render overlay to update cursor rules.
+  Applab.renderVisualizationOverlay();
 
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');

@@ -6,7 +6,8 @@ module.exports = React.createClass({
   propTypes: {
     appWidth: React.PropTypes.number.isRequired,
     appHeight: React.PropTypes.number.isRequired,
-    scale: React.PropTypes.number.isRequired
+    scale: React.PropTypes.number.isRequired,
+    isApplabRunning: React.PropTypes.bool.isRequired
   },
 
   getInitialState: function () {
@@ -21,6 +22,10 @@ module.exports = React.createClass({
         (this.state.mouseX <= this.props.appWidth) &&
         (this.state.mouseY >= 0) &&
         (this.state.mouseY <= this.props.appHeight);
+  },
+
+  shouldShowCrosshair: function () {
+    return !this.props.isApplabRunning && this.isMouseInVisualization();
   },
 
   onSvgMouseMove: function (e) {
@@ -40,7 +45,7 @@ module.exports = React.createClass({
 
   render: function() {
     var overlayComponents = [];
-    if (this.isMouseInVisualization()) {
+    if (this.shouldShowCrosshair()) {
       overlayComponents.push(<CrosshairOverlay x={this.state.mouseX} y={this.state.mouseY} />);
     }
 
