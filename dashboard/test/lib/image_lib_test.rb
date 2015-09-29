@@ -30,11 +30,14 @@ class ImageLibTest < ActiveSupport::TestCase
   # Make sure the images_match helper function is working correctly.
   def test_images_match
     assert images_equal?(test_image('foreground_overlay.png'),
-                         test_image('foreground_overlay_copy.png'))
+                         test_image('foreground_overlay_copy.png')),
+           'Identical images should match'
     assert images_equal?(test_image('foreground_overlay.png'),
-                         test_image('foreground_overlay.png'))
+                         test_image('foreground_overlay.png')),
+           'Image should match itself'
     refute images_equal?(test_image('foreground_overlay.png'),
-                         test_image('blank_sharing_drawing_anna.png'))
+                         test_image('blank_sharing_drawing_anna.png')),
+           'Different images should not match'
   end
 
   private
@@ -48,8 +51,8 @@ class ImageLibTest < ActiveSupport::TestCase
         c << image1.path << image2.path << 'null:'
       end
     end
-    puts "Image comparison result for #{image1.path} and #{image2.path}=#{result}"
-    '0' == result
+    puts "Image comparison result for #{image1.path} and #{image2.path} = '#{result}'"
+    '0' == result.strip
   end
 
   # Helper function to evaluate and return output to stderr.
