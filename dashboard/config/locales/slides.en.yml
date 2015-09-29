@@ -521,27 +521,27 @@ en:
       3:
         image: 'notes/C1_moveitmoveit_unplugged_3.png'
         text: "A program is an algorithm that has been coded into something that can be run by a machine. Most of us think of a program as something that we write for a computer. Programs are really good for that but they're also helpful in other places. You can make your own game or even program a robot to do things for you."    
-    C1_my_online_neighbor:
+    C1_going_places_safely:
       1:
-        image: 'notes/C1_my_online_neighbor_1.png'
+        image: 'notes/C1_going_places_safely_1.png'
         text: "My name is Jeremiah. Hi! I am seven years old. I love playing on my mom's computer but I always get permission first. \"Mom, can I go on the computer? Sure honey!\""
       2:
-        image: 'notes/C1_my_online_neighbor_2.png'
+        image: 'notes/C1_going_places_safely_2.png'
         text: "I love my mom's computer because I can go on the internet. The internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
       3:
-        image: 'notes/C1_my_online_neighbor_3.png'
+        image: 'notes/C1_going_places_safely_3.png'
         text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
       4:
-        image: 'notes/C1_my_online_neighbor_4.png'
+        image: 'notes/C1_going_places_safely_4.png'
         text: "Sometimes on the internet I talk to peeople I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. \"Yummy, I wish the internet had smellorama!\" I can talk to different people on the internet, like my cousin but I only talk to people I know."
       5:
-        image: 'notes/C1_my_online_neighbor_5.png'
+        image: 'notes/C1_going_places_safely_5.png'
         text: "What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!"
       6:
-        image: 'notes/C1_my_online_neighbor_6.png'
+        image: 'notes/C1_going_places_safely_6.png'
         text: "The internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you."
       7:
-        image: 'notes/C1_my_online_neighbor_7.png'
+        image: 'notes/C1_going_places_safely_7.png'
         text: "Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to log on again to see where I can visit next."
     C1_pair_programming:
       1:
@@ -663,25 +663,25 @@ en:
       5:
         image: 'notes/C2_conditionals_with_cards_5.png'
         text: "Think about your favorite video game. Do you earn more points for some actions than you do for others? This occurs because the computer is using conditionals. It's the way a computer makes a decision. How about, if you hit the target, you earn ten points. Else, you lose three. When you know how conditionals work, you can create all kinds of exciting games."
-    C2_debugging_artist:
+    C2_artist_debugging:
       1:
-        image: 'notes/C2_debugging_artist_1.png'
+        image: 'notes/C2_artist_debugging_1.png'
         text: "Here we already have some blocks out in our work space. But there is something wrong."
       2:
-        image: 'notes/C2_debugging_artist_2.png'
+        image: 'notes/C2_artist_debugging_2.png'
         text: "Let's debug this code by slowing down the speed and watching it as it goes through each block step by step."
       3:
-        image: 'notes/C2_debugging_artist_3.png'
+        image: 'notes/C2_artist_debugging_3.png'
         text: "Oh, there's the problem! The cat's whiskers are 75 pixels long, not 25."
-    C2_debugging_bee:
+    C2_bee_debugging:
       1:
-        image: 'notes/C2_debugging_bee_1.png'
+        image: 'notes/C2_bee_debugging_1.png'
         text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
       2:
-        image: 'notes/C2_debugging_bee_2.png'
+        image: 'notes/C2_bee_debugging_2.png'
         text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
       3:
-        image: 'notes/C2_debugging_bee_3.png'
+        image: 'notes/C2_bee_debugging_3.png'
         text: "Looks like there's our problem! We need one more move forward block. The step button helps us debug our problem by identifying where the error is so we can fix it."
     C2_digital_footprint:
       1:
@@ -706,32 +706,32 @@ en:
       1:
         image: 'notes/C2_digital_footprint_v2_1.png'
         text: "Everytime you go online, you leave a footprint that can be searched, copied, shared, broadcast and is permanent. What kind of digital footprint are you leaving? What kind of digital footprint do you want to leave?"
-    C2_graph_paper_programming:
+    C2_graph_paper:
       1:
-        image: 'notes/C2_graph_paper_programming_1.png'
+        image: 'notes/C2_graph_paper_1.png'
         text: "This lesson is called \"Graph Paper Programming\" and it's all about algorithms. Today we're going to learn how to write programs that show each other how to recreate simple black and white images, using only hand drawn arrows."
       2:
-        image: 'notes/C2_graph_paper_programming_2.png'
+        image: 'notes/C2_graph_paper_2.png'
         text: "An algorithm is a list of instructions for completing a task. We'll follow this set of instructions to make the bowl. Algorithms are really helpful when you need someone else to understand how to do something."
       3:
-        image: 'notes/C2_graph_paper_programming_3.png'
+        image: 'notes/C2_graph_paper_3.png'
         text: "If you're writing an algorithm for a computer, you have to break it down to little tiny steps. So finish this row and go to the next, then the next one, and you'll be done."
       4:
-        image: 'notes/C2_graph_paper_programming_4.png'
+        image: 'notes/C2_graph_paper_4.png'
         text: "I use algorithms in my work. If I write down all of the steps I can recreate that same piece again, or I can teach someone else to do it. Put the glass in the kiln, fuse it together, follow the rest of the instructions to make the bowl. Algorithms give you a road map for getting something done."
-    C2_loops_artist:
+    C2_artist_loops:
       1:
-        image: 'notes/C2_loops_artist_1.png'
+        image: 'notes/C2_artist_loops_1.png'
         text: "Here we are going to use the repeat block to help us save steps when we are programming our artist. We already have some blocks out on our stage but they are just there to get us started."
       2:
-        image: 'notes/C2_loops_artist_2.png'
+        image: 'notes/C2_artist_loops_2.png'
         text: "To loop those blocks four times to draw the whole square, we just drag out the repeat block and put the moveforward and turn right blocks inside the repeat block. When we hit run, the artist will repeat those steps four times to complete the square."
-    C2_loops_bee:
+    C2_bee_loops:
       1:
-        image: 'notes/C2_loops_bee_1.png'
+        image: 'notes/C2_bee_loops_1.png'
         text: "A loop is a repetition of activity. Going into a hive to inspect, I look at a frame, and then I put it back. I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
       2:
-        image: 'notes/C2_loops_bee_2.png'
+        image: 'notes/C2_bee_loops_2.png'
         text: "This is the repeat block. Whatever you put inside the repeat block will repeat those actions the number of times that you tell it to. For example, in this level, rather than drag out move forward and get nectar three times, we're going to just drag them out once each and repeat the action three times. That made it easy!"
     C2_maze_intro:
       1:
