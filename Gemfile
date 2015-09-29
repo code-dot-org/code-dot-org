@@ -115,6 +115,7 @@ gem 'redcarpet', '~> 3.2.3'
 gem 'geocoder'
 
 gem 'rmagick'
+gem 'mini_magick'
 
 gem 'acts_as_list'
 
@@ -170,3 +171,5 @@ gem 'viddl-rb', group: [:development, :staging, :levelbuilder]
 gem 'net-ssh'
 gem 'net-scp'
 gem 'httparty'
+
+gem 'jquery-cookie-rails'
