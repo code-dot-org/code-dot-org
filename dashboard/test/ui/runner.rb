@@ -98,6 +98,11 @@ $suite_fail_count = 0
 $failures = []
 
 if $options.local
+  #Verify that chromedriver is actually running
+  unless `ps`.include?('chromedriver')
+    puts 'You cannot run with the --local flag unless you are running chromedriver. Please run it'
+    exit(1)
+  end
   $browsers = [{:browser => "local"}]
 end
 
@@ -198,6 +203,7 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
   ENV['TEST_LOCAL'] = $options.local ? "true" : "false"
   ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
+  ENV['TEST_RUN_NAME'] = test_run_string
   ENV['TEST_RUN_NAME'] = test_run_string
 
   if $options.html
