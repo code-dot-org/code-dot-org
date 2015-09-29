@@ -1421,6 +1421,8 @@ applabCommands.drawChartFromRecords = function (opts) {
 
   var currentLineNumber = getCurrentLineNumber(jsInterpreter);
 
+  var chartApi = new ChartApi();
+
   /**
    * What to do after drawing the chart succeeds/completes:
    *   1. Report any warnings, attributed to the current line.
@@ -1430,8 +1432,8 @@ applabCommands.drawChartFromRecords = function (opts) {
    *        drawChartFromRecords call, which we will report on after the fact
    *        without halting execution.
    */
-  var onSuccess = function (warnings) {
-    warnings.forEach(function (warning) {
+  var onSuccess = function () {
+    chartApi.warnings.forEach(function (warning) {
       outputError(warning.message, ErrorLevel.WARNING, currentLineNumber);
     });
     queueCallback(jsInterpreter, opts.callback);
@@ -1440,7 +1442,6 @@ applabCommands.drawChartFromRecords = function (opts) {
   /**
    * What to do if something goes wrong:
    *   1. Report the error.
-   *   TODO: Add an optional onError callback to this function?
    *
    * @param {Error} error - A rejected promise usually passes an error.
    */
@@ -1448,7 +1449,6 @@ applabCommands.drawChartFromRecords = function (opts) {
     outputError(error.message, ErrorLevel.ERROR, currentLineNumber);
   };
 
-  var chartApi = new ChartApi();
   chartApi.drawChartFromRecords(
       opts.chartId,
       opts.chartType,
