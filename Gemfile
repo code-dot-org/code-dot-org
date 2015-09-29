@@ -115,6 +115,7 @@ gem 'redcarpet', '~> 3.2.3'
 gem 'geocoder'
 
 gem 'rmagick'
+gem 'mini_magick'
 
 gem 'acts_as_list'
 
