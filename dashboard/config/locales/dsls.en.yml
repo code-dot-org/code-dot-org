@@ -3278,6 +3278,76 @@ en:
         'Arrays: Question 3': 'Arrays: Question 3'
         Cannot be determined: Cannot be determined
         There are 20 elements in an array. What is the index of the last element?: There are 20 elements in an array. What is the index of the last element?
+      U4L01 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L01 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L02 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L02 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L03 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L03 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L04 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L04 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L05 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L05 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
       U4L06 Assessment 1:
         Data about multiple items each with the same attributes should be kept in what format to enable searching and analysis.: Data about multiple items each with the same attributes should be kept in what format to enable searching and analysis.
         array: array
@@ -3298,12 +3368,278 @@ en:
         to identify the user of the app.: to identify the user of the app.
         to notify when the data has been stored.: to notify when the data has been stored.
         to secure the data.: to secure the data.
+      U4L06 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L06 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
       U4L06 Reflection Q 1:
         Question: Question
         blank: blank
         default value: default value
         random: random
         the old data is deleted: the old data is deleted
+      U4L07 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L07 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L08 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L08 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L09 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L09 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L10 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L10 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L11 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L11 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L12 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L12 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L13 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L13 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L14 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L14 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L15 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L15 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L16 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L16 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L17 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L17 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L18 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L18 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L19 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L19 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L20 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L20 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L21 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L21 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L22 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L22 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L23 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L23 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L24 Choose 2:
+        'Choose 2: simple description here': 'Choose 2: simple description here'
+        right1: right1
+        right2: right2
+        wrong1: wrong1
+        wrong3: wrong3
+        wrong4: wrong4
+      U4L24 Multiple Choice:
+        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
+        right: right
+        wrong1: wrong1
+        wrong2: wrong2
+        wrong3: wrong3
+        wrong4: wrong4
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.
@@ -4208,6 +4544,54 @@ en:
         'Altering Images: Getting Started': 'Altering Images: Getting Started'
       U3L34 Free Response Getting Started:
         'Hidden Images: Getting Started': 'Hidden Images: Getting Started'
+      U4L01 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L02 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L03 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L04 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L05 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L06 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L07 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L08 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L09 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L10 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L11 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L12 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L13 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L14 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L15 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L16 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L17 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L18 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L19 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L20 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L21 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L22 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L23 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
+      U4L24 Free Response:
+        'Free Response: Short description here': 'Free Response: Short description here'
       text match test:
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4*7: (9-3)+4*7
