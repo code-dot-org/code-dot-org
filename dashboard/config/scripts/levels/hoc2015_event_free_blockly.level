@@ -17,6 +17,7 @@
     "remove_items_when_actor_collides": true,
     "markerHeight": 50,
     "markerWidth": 50,
+    "delayCompletion": 2000,
 
     "maze": "[[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]]",
 
@@ -103,6 +104,7 @@
           <title name="VALUE">down</title>
         </block>
         <block type="studio_whenTouchItem"/>
+        <block type="studio_whenTouchWall"/>
         <block type="studio_addItems"/>
         <block type="studio_setItemActivity"/>
         <block type="studio_setItemSpeed"/>

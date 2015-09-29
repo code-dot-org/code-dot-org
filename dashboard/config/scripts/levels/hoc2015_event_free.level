@@ -29,6 +29,7 @@
       "whenRight": { "category": "Events" },
       "whenUp": { "category": "Events" },
       "whenDown": { "category": "Events" },
+      "whenTouchWall": { "category": "Events" },
       "whenTouchWalkItem1": { "category": "Events" },
       "whenTouchWalkItem2": { "category": "Events" },
       "whenTouchWalkItem3": { "category": "Events" },
@@ -45,6 +46,8 @@
     "remove_items_when_actor_collides": true,
     "markerHeight": 50,
     "markerWidth": 50,
+    "delayCompletion": 2000,
+    "floating_score": true,
 
     "maze": "[[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]]",
 
