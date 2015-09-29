@@ -281,9 +281,12 @@ function populateCompleterApisFromConfigBlocks(opts, apis, configBlocks) {
   for (var i = 0; i < configBlocks.length; i++) {
     var block = configBlocks[i];
     if (!block.noAutocomplete) {
+      // Use score value of 100 to ensure that our APIs are not replaced by
+      // other completers that are suggesting the same name
       var newApi = {
         name: 'api',
         value: block.func,
+        score: 100,
         meta: block.category
       };
       if (opts.autocompleteFunctionsWithParens) {
