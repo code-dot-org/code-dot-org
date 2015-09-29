@@ -110,5 +110,5 @@ After do |scenario|
 end
 
 at_exit do
-  browser.quit
+  @browser.quit
 end
