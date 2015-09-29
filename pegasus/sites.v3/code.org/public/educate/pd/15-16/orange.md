@@ -51,6 +51,7 @@ Room: Esplanade 108B<br/>
 200 Kalmus Dr<br/> 
 Costa Mesa, CA 92626
 
+For a campus map and parking information visit: code.org/files/OCDEmap.pdf
 
 **What to bring to Phase 3 quarterly sessions:**
 
