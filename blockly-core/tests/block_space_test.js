@@ -123,7 +123,7 @@ function test_blockSpaceAutoPositioning() {
     [16, 51], // third block goes after the first
     [99, 16], // fourth was absolutely positioned with x=
     [16, 199], // fifth was absolutely positioned with y=
-    [399, 499] // sixth was absolutely positioned wiht x= and y=
+    [399, 499] // sixth was absolutely positioned with x= and y=
   ];
 
   var blockXML = '<xml>' + blocks.join('') + '</xml>';
