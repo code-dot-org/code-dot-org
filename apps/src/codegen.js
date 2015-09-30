@@ -451,6 +451,26 @@ exports.isAceBreakpointRow = function (session, userCodeRow) {
   return Boolean(bps[userCodeRow]);
 };
 
+var lastHighlightMarkerId;
+
+/**
+ * Highlights lines in the ace editor. Always moves the previous highlight to
+ * the new location.
+ *
+ * If the row parameters are not supplied, just clear the last highlight.
+ */
+function highlightAceLines (aceEditor, startRow, endRow) {
+  var session = aceEditor.getSession();
+  if (lastHighlightMarkerId) {
+    session.removeMarker(lastHighlightMarkerId);
+    lastHighlightMarkerId = null;
+  }
+  if (typeof startRow !== 'undefined') {
+    lastHighlightMarkerId = aceEditor.getSession().highlightLines(startRow,
+        endRow, "ace_step").id;
+  }
+}
+
 /**
  * Selects code in droplet/ace editor.
  *
@@ -474,10 +494,24 @@ exports.selectEditorRowCol = function (editor, row, col) {
     // setting with the backwards parameter set to true - this prevents horizontal
     // scrolling to the right
     selection.setSelectionRange(range, true);
+    highlightAceLines(editor.aceEditor, row, row);
   }
 };
 
-function createSelection (selection, cumulativeLength, start, end) {
+/**
+ * Removes highlights and selection in droplet and ace editors.
+ */
+exports.clearDropletAceHighlighting = function (editor) {
+  if (editor.currentlyUsingBlocks) {
+    editor.clearLineMarks();
+  } else {
+    editor.aceEditor.getSelection().clearSelection();
+  }
+  highlightAceLines(editor.aceEditor);
+}
+
+function selectAndHighlightCode (aceEditor, cumulativeLength, start, end) {
+  var selection = aceEditor.getSelection();
   var range = selection.getRange();
 
   range.start.row = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
@@ -488,6 +522,7 @@ function createSelection (selection, cumulativeLength, start, end) {
   // calling with the backwards parameter set to true - this prevents horizontal
   // scrolling to the right while stepping through in the debugger
   selection.setSelectionRange(range, true);
+  highlightAceLines(aceEditor, range.start.row, range.end.row);
 }
 
 /**
@@ -524,23 +559,13 @@ exports.selectCurrentCode = function (interpreter,
         //editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
         editor.markLine(userCodeRow, style);
       } else {
-        var selection = editor.aceEditor.getSelection();
-        createSelection(selection, cumulativeLength, start, end);
+        selectAndHighlightCode(editor.aceEditor, cumulativeLength, start, end);
       }
     } else {
-      if (editor.currentlyUsingBlocks) {
-        editor.clearLineMarks();
-      } else {
-        var tempSelection = editor.aceEditor.getSelection();
-        tempSelection.clearSelection();
-      }
+      exports.clearDropletAceHighlighting(editor);
     }
   } else {
-    if (editor.currentlyUsingBlocks) {
-      editor.clearLineMarks();
-    } else {
-      editor.aceEditor.getSelection().clearSelection();
-    }
+    exports.clearDropletAceHighlighting(editor);
   }
   return userCodeRow;
 };

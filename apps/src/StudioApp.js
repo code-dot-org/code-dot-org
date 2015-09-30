@@ -15,6 +15,7 @@ var FeedbackUtils = require('./feedback');
 var React = require('react');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
+var codegen = require('./codegen');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -1094,7 +1095,11 @@ StudioApp.prototype.highlight = function(id, spotlight) {
 * Remove highlighting from all blocks
 */
 StudioApp.prototype.clearHighlighting = function () {
-  this.highlight(null);
+  if (this.isUsingBlockly()) {
+    this.highlight(null);
+  } else if (this.editCode && this.editor) {
+    codegen.clearDropletAceHighlighting(this.editor);
+  }
 };
 
 /**
