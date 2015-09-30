@@ -27,7 +27,7 @@ dashboard.clientState.reset = function() {
  * @returns {number}
  */
 dashboard.clientState.levelProgress = function(level) {
-  var progressMap = dashboard.clientState.progressFromCookie();
+  var progressMap = dashboard.clientState.allLevelsProgress();
   return progressMap[String(level)] || 0;
 };
 
@@ -37,18 +37,17 @@ dashboard.clientState.levelProgress = function(level) {
  * @returns {number}
  */
 dashboard.clientState.setLevelProgress = function(level, progress) {
-  var progressMap = dashboard.clientState.progressFromCookie();
+  var progressMap = dashboard.clientState.allLevelsProgress();
   progressMap[String(level)] = progress;
   $.cookie('progress', JSON.stringify(progressMap),
     {expires: dashboard.clientState.EXPIRY_DAYS});
 };
 
 /**
- * Returns the progress hash from (stringified) level id to progress value.
+ * Returns a map from (string) level id to progress value.
  * @return {Object<String, number>}
- * @private
  */
-dashboard.clientState.progressFromCookie = function() {
+dashboard.clientState.allLevelsProgress = function() {
   var progressJson = $.cookie('progress');
   try {
     return progressJson ? JSON.parse(progressJson) : {};
