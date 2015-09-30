@@ -1,3 +1,5 @@
+require 'active_support/core_ext/hash/indifferent_access'
+
 class ProjectsController < ApplicationController
   before_filter :authenticate_user!, except: [:show, :edit, :readonly, :redirect_legacy]
   before_action :set_level, only: [:show, :edit, :readonly, :remix]
@@ -25,7 +27,7 @@ class ProjectsController < ApplicationController
     eval: {
       name: 'Eval Free Play'
     }
-  }
+  }.with_indifferent_access
 
   def index
   end
@@ -60,7 +62,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    if STANDALONE_PROJECTS[params[:key].to_sym][:login_required]
+    if STANDALONE_PROJECTS[params[:key]][:login_required]
       authenticate_user!
     end
     return if redirect_applab_under_13(@level)
@@ -68,7 +70,7 @@ class ProjectsController < ApplicationController
   end
 
   def remix
-    if STANDALONE_PROJECTS[params[:key].to_sym][:login_required]
+    if STANDALONE_PROJECTS[params[:key]][:login_required]
       authenticate_user!
     end
     src_channel_id = params[:channel_id]
@@ -79,7 +81,7 @@ class ProjectsController < ApplicationController
   end
 
   def set_level
-    @level = Level.find_by_key STANDALONE_PROJECTS[params[:key].to_sym][:name]
+    @level = Level.find_by_key STANDALONE_PROJECTS[params[:key]][:name]
     @game = @level.game
   end
 end
