@@ -18,13 +18,7 @@ nav: pd2_nav
 Milestone Complete!
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-#### In-person Workshop####
-
 Milestone Complete!
-
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
 Teachers from Broward, Florida will attend PD in Broward. Please visit the [Broward CSP page](/educate/pd/15-16/broward)  for your workshop dates and details.
@@ -42,7 +36,7 @@ This workshop will be in Montgomery County, Maryland.
 Quarter 3: Saturday, February 27, 2016<br/>
 This workshop will be in New York.
 
-Quarter 4: TBA<br/>
+Quarter 4: Saturday, April 9, 2016<br/>
 This workshop will be in Montgomery County, Maryland.
 
 8:30am - 3:30pm
@@ -52,8 +46,11 @@ Breakfast and lunch will be served.
 
 **October 17th Location**
 
-TBD
-
+General Assembly<br/>
+10 E 21st St<br/>
+Level 3<br/>
+Concourse room<br/>
+New York, NY 10010
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -79,13 +76,7 @@ More info coming soon!
 
 Milestone Complete!
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
-#### In-person Workshop####
-
 Milestone Complete!
-
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -99,6 +90,10 @@ Quarter 2: Saturday, November 14, 2015
 Quarter 3: Saturday, February 6, 2016
 
 Quarter 4: Saturday, April 16, 2016
+
+8:30am - 3:30pm
+<br/>
+Breakfast and lunch will be served.
 
 **Location for October 3rd**<br/>
 <i><b>Group 1</i></b><br/>
@@ -139,15 +134,7 @@ More info coming soon!
 Milestone Complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
-
-#### In-person Workshop####
-
 Milestone Complete!
-
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
-
 ### Phase 2: Blended Learning Institute (2 days in-person) ###
 
 
@@ -170,9 +157,14 @@ Semester 2: Saturday, February 6, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**Location**
+**October 3rd Location**
 
-TBD
+Executive Conference Center<br/>
+8th Floor<br/>
+1601 Broadway<br/>
+New York, NY 10019<br/>
+
+The entrance to the building is on 48th street, to the left of the Hersey's Store in Times Square. For more details, [click here](http://www.amaconferencecenter.org/new-york-directions-maps.htm).
 
 **What to bring to Phase 3 bi-yearly sessions:**
 

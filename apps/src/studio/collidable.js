@@ -162,9 +162,10 @@ Collidable.prototype.update = function () {
   // Has the item reached its destination grid position?
   // (There is a small margin of error to allow for per-update movements greater
   // than a single pixel.)
+  var speed = utils.valueOr(this.speed, 0);
   if (this.destGridX !== undefined &&
-      (Math.abs(this.x - (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE)) < 3 &&
-       Math.abs(this.y - (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE)) < 3)) {
+      (Math.abs(this.x - (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE)) <= speed &&
+       Math.abs(this.y - (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE)) <= speed)) {
     this.gridX = this.destGridX;
     this.gridY = this.destGridY;
     reachedDestinationGridPosition = true;
@@ -185,53 +186,61 @@ Collidable.prototype.update = function () {
 
     var bufferDistance = 60;
 
-    for (var candidateX = this.gridX - 1; candidateX <= this.gridX + 1; candidateX++) {
-      for (var candidateY = this.gridY - 1; candidateY <= this.gridY + 1; candidateY++) {
-        candidate = {gridX: candidateX, gridY: candidateY};
-        candidate.score = 0;
+    // The item can just go up/down/left/right.. no diagonals.
+    var candidateGridLocations = [ 
+      {row: -1, col: 0}, 
+      {row: +1, col: 0},
+      {row: 0, col: -1}, 
+      {row: 0, col: +1}];
 
-        if (this.activity === "patrol") {
+    for (var candidateIndex = 0; candidateIndex < candidateGridLocations.length; candidateIndex++) {
+      var candidateX = this.gridX + candidateGridLocations[candidateIndex].col;
+      var candidateY = this.gridY + candidateGridLocations[candidateIndex].row;
+
+      candidate = {gridX: candidateX, gridY: candidateY};
+      candidate.score = 0;
+
+      if (this.activity === "patrol") {
+        candidate.score ++;
+      } else if (this.activity === "chase") {
+        if (candidateY == this.gridY - 1 && spriteY < this.y - bufferDistance) {
+          candidate.score += 2;
+        } else if (candidateY == this.gridY + 1 && spriteY > this.y + bufferDistance) {
+          candidate.score += 2;
+        }
+        else {
+          candidate.score += 1;
+        }
+
+        if (candidateX == this.gridX - 1 && spriteX < this.x - bufferDistance) {
           candidate.score ++;
-        } else if (this.activity === "chase") {
-          if (candidateY == this.gridY - 1 && spriteY < this.y - bufferDistance) {
-            candidate.score += 2;
-          } else if (candidateY == this.gridY + 1 && spriteY > this.y + bufferDistance) {
-            candidate.score += 2;
-          }
-          else {
-            candidate.score += 1;
-          }
-
-          if (candidateX == this.gridX - 1 && spriteX < this.x - bufferDistance) {
-            candidate.score ++;
-          } else if (candidateX == this.gridX + 1 && spriteX > this.x + bufferDistance) {
-            candidate.score ++;
-          }
-        } else if (this.activity === "flee") {
-          candidate.score = 1;
-          if (candidateY == this.gridY - 1 && spriteY > this.y - bufferDistance) {
-            candidate.score ++;
-          } else if (candidateY == this.gridY + 1 && spriteY < this.y + bufferDistance) {
-            candidate.score ++;
-          }
-
-          if (candidateX == this.gridX - 1 && spriteX > this.x - bufferDistance) {
-            candidate.score ++;
-          } else if (candidateX == this.gridX + 1 && spriteX < this.x + bufferDistance) {
-            candidate.score ++;
-          }
+        } else if (candidateX == this.gridX + 1 && spriteX > this.x + bufferDistance) {
+          candidate.score ++;
+        }
+      } else if (this.activity === "flee") {
+        candidate.score = 1;
+        if (candidateY == this.gridY - 1 && spriteY > this.y - bufferDistance) {
+          candidate.score ++;
+        } else if (candidateY == this.gridY + 1 && spriteY < this.y + bufferDistance) {
+          candidate.score ++;
         }
 
-        if (candidate.score > 0) {
-          Studio.drawDebugRect(
-            "roamGridPossibleDest", 
-            candidateX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-            candidateY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-            Studio.SQUARE_SIZE, 
-            Studio.SQUARE_SIZE);
+        if (candidateX == this.gridX - 1 && spriteX > this.x - bufferDistance) {
+          candidate.score ++;
+        } else if (candidateX == this.gridX + 1 && spriteX < this.x + bufferDistance) {
+          candidate.score ++;
         }
-        candidates.push(candidate);
       }
+
+      if (candidate.score > 0) {
+        Studio.drawDebugRect(
+          "roamGridPossibleDest", 
+          candidateX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
+          candidateY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
+          Studio.SQUARE_SIZE, 
+          Studio.SQUARE_SIZE);
+      }
+      candidates.push(candidate);
     }
 
     // cull candidates that won't be possible
@@ -239,11 +248,7 @@ Collidable.prototype.update = function () {
       var candidate = candidates[i];
       var atEdge = candidate.gridX < 0 || candidate.gridX >= Studio.COLS ||
                    candidate.gridY < 0 || candidate.gridY >= Studio.ROWS;
-      var hasWall = !atEdge && 
-                    ((Studio.map[candidate.gridY][candidate.gridX] & SquareType.WALL) ||
-                     (Studio.walls !== null && 
-                      Studio.getSkin()[Studio.walls] &&
-                      Studio.getSkin()[Studio.walls][candidate.gridY][candidate.gridX]));
+      var hasWall = !atEdge && Studio.getWallValue(candidate.gridY, candidate.gridX);
       if (atEdge || hasWall || candidate.score === 0) {
         candidates.splice(i, 1);
       }

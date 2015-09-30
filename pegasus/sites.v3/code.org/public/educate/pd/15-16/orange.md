@@ -21,13 +21,9 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-#### In-person Workshop####
 
 Milestone Complete!
 
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
 
@@ -55,6 +51,7 @@ Room: Esplanade 108B<br/>
 200 Kalmus Dr<br/> 
 Costa Mesa, CA 92626
 
+For a campus map and parking information visit: code.org/files/OCDEmap.pdf
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -84,13 +81,9 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-#### In-person Workshop####
 
 Milestone Complete!
 
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
@@ -135,13 +128,11 @@ Water
 Milestone complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
-#### In-person Workshop####
+
 
 Milestone Complete!
 
-#### Online Study####
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###

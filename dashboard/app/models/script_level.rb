@@ -34,10 +34,6 @@ class ScriptLevel < ActiveRecord::Base
     Script.get_from_cache(script_id)
   end
 
-  # this is a temporary (request-scope) variable set by User.rb#levels_from_script to find the UserLevel
-  # corresponding to this ScriptLevel for a specific user
-  attr_accessor :user_level
-
   def next_level
     i = script.script_levels.index(self)
     return nil if i.nil? || i == script.script_levels.length

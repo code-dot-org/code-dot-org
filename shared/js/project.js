@@ -63,6 +63,7 @@ var PathPart = {
  */
 var current;
 var currentSourceVersionId;
+var currentAbuseScore = 0;
 var isEditing = false;
 
 var projects = module.exports = {
@@ -99,26 +100,22 @@ var projects = module.exports = {
    * @returns {number}
    */
   getAbuseScore: function () {
-    return current ? current.abuseScore : 0;
+    return currentAbuseScore;
   },
 
   /**
    * Sets abuse score to zero, saves the project, and reloads the page
    */
   adminResetAbuseScore: function () {
-    // TODO (brent) - right now this is pretty low security. anyone could
-    // enter the javascript console and call this. eventually, we want some sort
-    // of protected API call we can make
-    if (this.getAbuseScore() === 0) {
+    var id = this.getCurrentId();
+    if (!id) {
       return;
     }
-    current.abuseScore = 0;
-    var sourceAndHtml = {
-      source: current.levelSource,
-      html: current.levelHtml
-    };
-    this.save(sourceAndHtml, function () {
-      location.reload();
+    channels.delete(id + '/abuse', function (err, result) {
+      if (err) {
+        throw err;
+      }
+      $('.admin-abuse-score').text(0);
     });
   },
 
@@ -144,7 +141,7 @@ var projects = module.exports = {
    *   exceed our threshold
    */
   exceedsAbuseThreshold: function () {
-    return !!(current && current.abuseScore && current.abuseScore >= ABUSE_THRESHOLD);
+    return currentAbuseScore >= ABUSE_THRESHOLD;
   },
 
   /**
@@ -161,7 +158,12 @@ var projects = module.exports = {
     // When owners edit a project, we don't want to hide it entirely. Instead,
     // we'll load the project and show them a small alert
     var pageAction = parsePath().action;
-    if (this.isOwner() && (pageAction === 'edit' || pageAction === 'view')) {
+
+    // NOTE: appOptions.isAdmin is not a security setting as it can be manipulated
+    // by the user. In this case that's okay, since all that does is allow them to
+    // view a project that was marked as abusive.
+    if ((this.isOwner() || appOptions.isAdmin) &&
+        (pageAction === 'edit' || pageAction === 'view')) {
       return false;
     }
 
@@ -202,7 +204,7 @@ var projects = module.exports = {
   },
 
   /**
-   * Updates the contents of the admin box for admins. We have no knolwedge
+   * Updates the contents of the admin box for admins. We have no knowledge
    * here whether we're an admin, and depend on dashboard getting this right.
    */
   showAdmin: function() {
@@ -317,6 +319,13 @@ var projects = module.exports = {
     return '/projects/' + projects.getCurrentApp();
   },
   /**
+   * Explicitly clear the HTML, circumventing safety measures which prevent it from
+   * being accidentally deleted.
+   */
+  clearHtml: function() {
+    current.levelHtml = '';
+  },
+  /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
    * @param {object?} sourceAndHtml Optional source to be provided, saving us another
@@ -342,6 +351,8 @@ var projects = module.exports = {
 
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
+    // TODO(dave): Remove this check and remove clearHtml() once all projects
+    // have versioning: https://www.pivotaltracker.com/story/show/103347498
     if (current.levelHtml && !sourceAndHtml.html) {
       throw new Error('Attempting to blow away existing levelHtml');
     }
@@ -518,7 +529,9 @@ var projects = module.exports = {
               if (current.isOwner && pathInfo.action === 'view') {
                 isEditing = true;
               }
-              deferred.resolve();
+              fetchAbuseScore(function () {
+                deferred.resolve();
+              });
             });
           }
         });
@@ -535,7 +548,9 @@ var projects = module.exports = {
         } else {
           fetchSource(data, function () {
             projects.showProjectLevelHeader();
-            deferred.resolve();
+            fetchAbuseScore(function () {
+              deferred.resolve();
+            });
           });
         }
       });
@@ -562,6 +577,18 @@ function fetchSource(data, callback) {
   } else {
     callback();
   }
+}
+
+function fetchAbuseScore(callback) {
+  channels.fetch(current.id + '/abuse', function (err, data) {
+    currentAbuseScore = (data && data.abuseScore) || currentAbuseScore;
+    callback();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else
+      throw err;
+    }
+  });
 }
 
 /**

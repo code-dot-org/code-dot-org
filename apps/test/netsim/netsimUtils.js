@@ -1,7 +1,16 @@
-var testUtils = require('../util/testUtils');
-var NetSimTestUtils = require('../util/netsimTestUtils');
-var assertEqual = testUtils.assertEqual;
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
+/* global describe, beforeEach, it */
 
+var assert = require('../util/testUtils').assert;
+var NetSimTestUtils = require('../util/netsimTestUtils');
 var NetSimUtils = require('@cdo/apps/netsim/NetSimUtils');
 
 describe("NetSimUtils", function () {
@@ -14,25 +23,25 @@ describe("NetSimUtils", function () {
     var serializeNumber = NetSimUtils.serializeNumber;
 
     it("turns Infinity into a string", function () {
-      assertEqual('Infinity', serializeNumber(Infinity));
+      assert.equal('Infinity', serializeNumber(Infinity));
     });
 
     it("turns -Infinity into a string", function () {
-      assertEqual('-Infinity', serializeNumber(-Infinity));
+      assert.equal('-Infinity', serializeNumber(-Infinity));
     });
 
     it("turns NaN into a string", function () {
-      assertEqual('NaN', serializeNumber(NaN));
+      assert.equal('NaN', serializeNumber(NaN));
     });
 
-    it ("turns undefined into a string", function () {
-      assertEqual('undefined', serializeNumber(undefined));
+    it("turns undefined into a string", function () {
+      assert.equal('undefined', serializeNumber(undefined));
     });
 
     it("leaves other values alone", function () {
-      assertEqual(42, serializeNumber(42));
-      assertEqual(Math.PI, serializeNumber(Math.PI));
-      assertEqual(null, serializeNumber(null));
+      assert.equal(42, serializeNumber(42));
+      assert.equal(Math.PI, serializeNumber(Math.PI));
+      assert.equal(null, serializeNumber(null));
     });
   });
 
@@ -40,25 +49,27 @@ describe("NetSimUtils", function () {
     var deserializeNumber = NetSimUtils.deserializeNumber;
 
     it("turns 'Infinity' into Infinity", function () {
-      assertEqual(Infinity, deserializeNumber('Infinity'));
+      assert.equal(Infinity, deserializeNumber('Infinity'));
     });
 
     it("turns '-Infinity' into -Infinity", function () {
-      assertEqual(-Infinity, deserializeNumber('-Infinity'));
+      assert.equal(-Infinity, deserializeNumber('-Infinity'));
     });
 
     it("turns 'NaN' into NaN", function () {
-      assertEqual(NaN, deserializeNumber('NaN'));
+      var result = deserializeNumber('NaN');
+      assert(isNaN(result));
+      assert(result !== result); // Unique to NaN
     });
 
     it("turns 'undefined' into undefined", function () {
-      assertEqual(undefined, deserializeNumber('undefined'));
+      assert.equal(undefined, deserializeNumber('undefined'));
     });
 
     it("leaves other values alone", function () {
-      assertEqual(42, deserializeNumber(42));
-      assertEqual(Math.PI, deserializeNumber(Math.PI));
-      assertEqual(null, deserializeNumber(null));
+      assert.equal(42, deserializeNumber(42));
+      assert.equal(Math.PI, deserializeNumber(Math.PI));
+      assert.equal(null, deserializeNumber(null));
     });
   });
 
@@ -67,24 +78,28 @@ describe("NetSimUtils", function () {
     var deserializeNumber = NetSimUtils.deserializeNumber;
     var roundTripTest = function (val) {
       var resultValue = deserializeNumber(JSON.parse(JSON.stringify(serializeNumber(val))));
-      assertEqual(val, resultValue);
+      assert.equal(val, resultValue);
     };
 
-    it ("preserves Infinities", function () {
+    it("preserves Infinities", function () {
       roundTripTest(Infinity);
       roundTripTest(-Infinity);
     });
 
-    it ("preserves NaN", function () {
-      roundTripTest(NaN);
+    it("preserves NaN", function () {
+      var originalValue = NaN;
+      var resultValue = deserializeNumber(
+          JSON.parse(JSON.stringify(serializeNumber(originalValue))));
+      assert(isNaN(resultValue));
+      assert(originalValue !== resultValue); // Unique to NaN
     });
 
-    it ("preserves numbers", function () {
+    it("preserves numbers", function () {
       roundTripTest(42);
       roundTripTest(Math.PI);
     });
 
-    it ("preserves empty values", function () {
+    it("preserves empty values", function () {
       roundTripTest(null);
       roundTripTest(undefined);
     });
@@ -93,39 +108,39 @@ describe("NetSimUtils", function () {
   describe("scrubHeaderSpecForBackwardsCompatibility", function () {
     var scrubHeaderSpecForBackwardsCompatibility = NetSimUtils.scrubHeaderSpecForBackwardsCompatibility;
 
-    it ("is a no-op for empty array", function () {
-      assertEqual([], scrubHeaderSpecForBackwardsCompatibility([]));
+    it("is a no-op for empty array", function () {
+      assert.deepEqual([], scrubHeaderSpecForBackwardsCompatibility([]));
     });
 
-    it ("is a no-op for new format", function () {
-      assertEqual(['toAddress'],
+    it("is a no-op for new format", function () {
+      assert.deepEqual(['toAddress'],
           scrubHeaderSpecForBackwardsCompatibility(
               ['toAddress']));
 
-      assertEqual(['toAddress', 'fromAddress'],
+      assert.deepEqual(['toAddress', 'fromAddress'],
           scrubHeaderSpecForBackwardsCompatibility(
               ['toAddress', 'fromAddress']));
 
-      assertEqual(['toAddress', 'fromAddress', 'packetCount', 'packetIndex'],
+      assert.deepEqual(['toAddress', 'fromAddress', 'packetCount', 'packetIndex'],
           scrubHeaderSpecForBackwardsCompatibility(
               ['toAddress', 'fromAddress', 'packetCount', 'packetIndex']));
     });
 
-    it ("converts old format to new format", function () {
-      assertEqual(['toAddress'],
+    it("converts old format to new format", function () {
+      assert.deepEqual(['toAddress'],
           scrubHeaderSpecForBackwardsCompatibility(
               [
                 {'key':'toAddress', 'bits':4}
               ]));
 
-      assertEqual(['toAddress', 'fromAddress'],
+      assert.deepEqual(['toAddress', 'fromAddress'],
           scrubHeaderSpecForBackwardsCompatibility(
               [
                 {'key':'toAddress', 'bits':4},
                 {'key':'fromAddress', 'bits':4}
               ]));
 
-      assertEqual(['toAddress', 'fromAddress', 'packetCount', 'packetIndex'],
+      assert.deepEqual(['toAddress', 'fromAddress', 'packetCount', 'packetIndex'],
           scrubHeaderSpecForBackwardsCompatibility(
               [
                 {'key':'toAddress', 'bits':4},

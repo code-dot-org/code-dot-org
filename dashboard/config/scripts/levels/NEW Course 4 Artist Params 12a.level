@@ -63,9 +63,9 @@
           <mutation>
             <arg name="length"/>
             <arg name="sides"/>
-            <description>draw a shape function block with length and sides parameters</description>
+            <description>draw a polygon function block with length and sides parameters</description>
           </mutation>
-          <title name="NAME">draw a shape</title>
+          <title name="NAME">draw a polygon</title>
           <statement name="STACK">
             <block type="controls_repeat_ext" inline="true" uservisible="false">
               <value name="TIMES">
@@ -145,6 +145,24 @@
           </block>
         </category>
         <category name="Loops">
+          <block type="controls_for_counter" inline="true">
+            <mutation counter="counter"/>
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+            <value name="BY">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+          </block>
           <block type="variables_get">
             <title name="VAR">counter</title>
           </block>
@@ -159,7 +177,7 @@
         </category>
         <category name="Functions" custom="PROCEDURE">
           <block type="procedures_callnoreturn" inline="false">
-            <mutation name="draw a shape">
+            <mutation name="draw a polygon">
               <arg name="length"/>
               <arg name="sides"/>
             </mutation>
@@ -168,9 +186,9 @@
             <mutation>
               <arg name="length"/>
               <arg name="sides"/>
-              <description>draw a shape function block with length and sides parameters</description>
+              <description>draw a polygon function block with length and sides parameters</description>
             </mutation>
-            <title name="NAME">draw a shape</title>
+            <title name="NAME">draw a polygon</title>
             <statement name="STACK">
               <block type="controls_repeat_ext" inline="true" uservisible="false">
                 <value name="TIMES">
@@ -240,7 +258,7 @@
               </value>
               <statement name="DO">
                 <block type="procedures_callnoreturn" inline="false">
-                  <mutation name="draw a shape">
+                  <mutation name="draw a polygon">
                     <arg name="length"/>
                     <arg name="sides"/>
                   </mutation>
@@ -263,9 +281,9 @@
           <mutation>
             <arg name="length"/>
             <arg name="sides"/>
-            <description>draw a shape with sides and length paramater</description>
+            <description>draw a polygon with sides and length paramater</description>
           </mutation>
-          <title name="NAME">draw a shape</title>
+          <title name="NAME">draw a polygon</title>
           <statement name="STACK">
             <block type="controls_repeat_ext" inline="true" uservisible="false">
               <value name="TIMES">

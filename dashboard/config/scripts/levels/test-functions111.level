@@ -6,7 +6,7 @@
   "user_id": 3,
   "properties": {
     "skin": "bee",
-    "step_mode": "0",
+    "step_mode": 1,
     "is_k1": "false",
     "start_direction": "0",
     "nectar_goal": "3",

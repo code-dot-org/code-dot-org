@@ -38,7 +38,9 @@ Breakfast and lunch will be served.
 931 N Highland Avenue<br/>
 Los Angeles, CA, 90038<br/>
 
-Free parking available in lot behind the building. Click [here](/images/9-dots-parking-map.png) for a map. 
+The parking entrance is in the alleyway between Highland Ave and Citrus Ave. See parking map [here](/images/9-dots-parking-map.png).
+
+If the lot is full, there is plenty of street parking around the block. 
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -61,13 +63,10 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-#### In-person Workshop####
 
 Milestone Complete!
 
-#### Online Study####
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i> 
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -88,9 +87,12 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**Location**
+**Octoboer 17th Location**
 
-TBD
+Alliance College-Ready Public Schools<br/>
+515 Columbia Ave<br/>
+Room TBD<vr/>
+Los Angeles, CA 90017<br/>
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -208,6 +210,56 @@ Snacks
 <br/>
 Water
 
+
+[**Back to the top**](#top)
+
+<a id="counselor-admin"></a>
+
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
+
+
+### Counselors##
+
+**Save the date**
+
+Monday, October 19, 2015 <br/>
+8:30am - 10:30am
+
+**Location**
+
+Los Angeles Unified School District<br/>
+333 So. Beaudry Avenue<br/>
+Room 204 - 2nd floor <br/>
+Los Angeles 90017<br/>
+
+**What to bring**
+
+Snacks
+<br/>
+Water
+
+### Administrators##
+
+**Save the date**
+
+Tuesday, October 20, 2015 <br/>
+8:30am - 10:30am
+
+**Location**
+
+Los Angeles Unified School District<br/>
+333 So. Beaudry Avenue<br/>
+Room 202 - 2nd floor <br/>
+Los Angeles 90017<br/>
+
+**What to bring**
+
+Snacks
+<br/>
+Water
 
 [**Back to the top**](#top)
 

@@ -42,10 +42,11 @@ ____________________________________________________
 
 **Example 1**
 
-<pre>
+
+```
 // add the Code.org logo to the screen from the url
 image("logo", "http://code.org/images/logo.png");
-</pre>
+```
 
 [/example]
 
@@ -57,7 +58,8 @@ ____________________________________________________
 
 Click the button to change the character image on the screen from the dog to the bee and back again.
 
-<pre>
+
+```
 // use variables to store the ids for the image and button elements
 var imageId = "character";
 var buttonId = "changeButton";
@@ -91,7 +93,7 @@ onEvent(buttonId, "click", function(event) {
     setImageURL(imageId, dogImageURL);
   }
 });
-</pre>
+```
 
 [/example]
 
@@ -100,9 +102,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 image(id, url);
-</pre>
+```
 
 [/syntax]
 
@@ -128,13 +131,14 @@ Returns boolean value true.
 
 ### Tips
 - Image URL requires the full http:// prefix.
-<pre>
+
+```
 // image displayed on screen
 image("logo", "http://code.org/images/logo.png");
 
 // image not displayed on screen
 image("logo", "code.org/images/logo.png");
-</pre>
+```
 
 [/tips]
 

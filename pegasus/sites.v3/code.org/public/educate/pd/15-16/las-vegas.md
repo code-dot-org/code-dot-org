@@ -38,14 +38,15 @@ Quarter 4: Saturday, April 2, 2016
 Breakfast and lunch will be served.
 
 
-**September 19th Location**
+**November 21st Location**
 
-IDLP Building<br/>
-Room 118<br/>
-3950 Pecos-McLeod Interconnect<br/>
-Las Vegas, NV 89121
+Innevation Center<br/>
+3rd Floor<br/>
+Collaboration Station<br/>
+6795 S Edmond St<br/>
+Las Vegas, NV 89118
 
-Free parking is located in front of the building.
+Free parking is located in front of the building. Please park in Visitor Parking.
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -63,7 +64,61 @@ Water
 
 More info coming soon!
 
+
+
 [**Back to the top**](#top)
+
+<a id="counselor-admin"></a>
+
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
+
+
+### Counselors##
+
+**Save the date**
+
+Tuesday, November 17, 2015 <br/>
+10:00am - 12:00pm
+
+**Location**
+
+Instructional Design and Professional Learning Division<br/>
+3950 S. Pecos-Mcleod<br/>
+Room 118<br/>
+Las Vegas, NV  89121
+
+**What to bring**
+
+Snacks
+<br/>
+Water
+
+### Administrators##
+
+**Save the date**
+
+Tuesday, November 17, 2015 <br/>
+7:00am - 9:00am
+
+**Location**
+
+Instructional Design and Professional Learning Division<br/>
+3950 S. Pecos-Mcleod<br/>
+Room 118<br/>
+Las Vegas, NV  89121
+
+**What to bring**
+
+Snacks
+<br/>
+Water
+
+[**Back to the top**](#top)
+
+
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

@@ -1,5 +1,5 @@
 name 'U3L06-API-multichoice'
-title 'What\'s an API?'
+title 'Multiple Choice: What is an API?'
 wrong 'Abstract Programming Inheritance'
 wrong 'Artificial Parameter Intelligence'
 right 'Application Program Interface'
@@ -21,5 +21,12 @@ Read the definitions provided below and then choose the best answer.
 
 
 
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Correct answer:
+
+Application Program Interface
 
 MARKDOWN

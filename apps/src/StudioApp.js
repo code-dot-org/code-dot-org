@@ -25,8 +25,8 @@ var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
 
-var BLOCK_X_COORDINATE = 70;
-var BLOCK_Y_COORDINATE = 30;
+var BLOCK_X_COORDINATE = 16;
+var BLOCK_Y_COORDINATE = 16;
 
 var ENGLISH_LOCALE = 'en_us';
 
@@ -1515,7 +1515,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     enableLiveAutocompletion: true
   });
 
-  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg);
+  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg, options.dropletConfig);
   this.dropletTooltipManager.registerBlocksFromList(
     dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 

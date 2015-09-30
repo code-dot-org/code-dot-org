@@ -4,13 +4,13 @@
 This document describes how to set up your workstation to develop for Code.org.
 
 ## Install OS-specific prerequisites
-You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in a VM). Setup for Windows is more complicated and relatively few developers use it. Start with the instructions for your platform in the subsections below, followed by the Common Setup section.   
+You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in a VM). Setup for Windows is more complicated and relatively few developers use it. Start with the instructions for your platform in the subsections below, followed by the Common Setup section.
 
 ### OS X Mavericks / Yosemite
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Run `sudo chown -R $(whoami):admin /usr/local/`. (Brew assumes it can write to subdirectories of /usr/local/, which not all installs of OSXallow. Running brew as root is discouraged.)
-1. `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick rbenv ruby-build coreutils`
+1. `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick rbenv ruby-build coreutils sqlite phantomjs`
   1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
 1. Set up MySQL
   1. Have launchd start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
@@ -28,7 +28,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `sudo apt-get install aptitude`
 1. `sudo aptitude update`
 1. `sudo aptitude upgrade`
-1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk ruby2.0 ruby2.0-dev`
+1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk ruby2.0 ruby2.0-dev libsqlite3-dev phantomjs`
   * **Hit enter and select default options for any configuration popups**
 1. Upgrade npm to 2.0. If `npm -v` says less than 2.0,
   * `sudo add-apt-repository ppa:chris-lea/node.js  `
@@ -115,7 +115,7 @@ You'll need to do this once:
 1. OS X:
   1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 1. `cd code-dot-org`
-1. To build apps/blocky-core, edit `locals.yml` to add: 
+1. To build apps/blocky-core, edit `locals.yml` to add:
   1. Add `build_apps: true`
   1. Add `build_blockly_core: true` (if you want to build blockly core -- not necessary if you only want to make changes to apps)
   1. Add `use_my_apps: true`

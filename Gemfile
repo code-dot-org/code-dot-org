@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.4'
@@ -11,7 +10,7 @@ gem 'responders', '~> 2.0'
 gem 'sinatra', '1.4.4', require: 'sinatra/base'
 gem 'rack-contrib', '~> 1.1'
 
-gem 'mysql2', '0.3.13'
+gem 'mysql2', '~> 0.3.13'
 gem 'seamless_database_pool'
 
 gem 'le', '~> 2.2'
@@ -47,6 +46,7 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'mocha', require: false
   gem "codeclimate-test-reporter", require: false
+  gem 'sqlite3'
   gem 'timecop'
 
   # for ui testing
@@ -101,7 +101,7 @@ gem 'haml'
 
 gem 'jquery-ui-rails', '~> 5.0.3'
 
-gem 'nokogiri', '1.6.1'
+gem 'nokogiri', '~> 1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
@@ -114,6 +114,7 @@ gem 'redcarpet', '~> 3.2.3'
 gem 'geocoder'
 
 gem 'rmagick'
+gem 'mini_magick'
 
 gem 'acts_as_list'
 
@@ -165,4 +166,9 @@ gem 'rack-ssl-enforcer', group: [:development, :staging, :test, :levelbuilder]
 gem 'pusher', '~> 0.14.5'
 
 gem 'viddl-rb', group: [:development, :staging, :levelbuilder]
-gem 'httparty', group: [:development, :staging, :test, :levelbuilder]
+
+gem 'net-ssh'
+gem 'net-scp'
+gem 'httparty'
+
+gem 'jquery-cookie-rails'

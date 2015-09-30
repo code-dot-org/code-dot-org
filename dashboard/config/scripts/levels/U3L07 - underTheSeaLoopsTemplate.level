@@ -1,0 +1,85 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-09-23T03:45:27.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "penRGB": {
+        "params": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "paletteParams": [
+          "r",
+          "g",
+          "b",
+          "a"
+        ]
+      },
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_max": null,
+      "randomNumber_min_max": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "app_width": "320",
+    "app_height": "480",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "hide_view_data_button": "true",
+    "start_blocks": "hide();\r\npenUp();\r\ndrawBackground();\r\ndrawAllSeaGrass();\r\ndrawAllSeaStars();\r\ndrawAllFish();\r\ndrawAllBubbles();\r\ndrawAllSunBeams();\r\n\r\nfunction drawAllSeaGrass(){\r\n  moveTo(randomNumber(320),450);\r\n  turnTo(0);\r\n  drawSeaGrass(randomNumber(5,20));\r\n}\r\n\r\nfunction drawAllSeaStars(){\r\n  moveTo(randomNumber(320), randomNumber(360,450));\r\n  drawSeaStar(randomNumber(10,30));  \r\n}\r\n\r\nfunction drawAllFish(){\r\n  moveTo(randomNumber(320),randomNumber(300));\r\n  drawFish(randomNumber(5,20),randomNumber(200,255),randomNumber(100,150),120);\r\n}\r\n\r\nfunction drawAllBubbles(){\r\n  moveTo(randomNumber(320),randomNumber(450));\r\n  drawBubble(randomNumber(1,5));\r\n}\r\n\r\nfunction drawAllSunBeams(){\r\n  moveTo(randomNumber(-50,320),0);\r\n  turnTo(randomNumber(165,175));\r\n  drawSunBeam(randomNumber(100,400));  \r\n}\r\n\r\nfunction drawBackground(){\r\n  penColor(\"DarkBlue\");\r\n  dot(1000);\r\n}\r\n\r\nfunction drawSeaStar(size){\r\n  penRGB(255,0,255);\r\n  penWidth(10);\r\n  penDown();\r\n  turnTo(0);\r\n  \r\n  moveForward(size);\r\n  turnRight(144);\r\n  moveForward(size);\r\n  turnRight(144);  \r\n  moveForward(size);\r\n  turnRight(144);\r\n  moveForward(size);\r\n  turnRight(144);\r\n  moveForward(size);\r\n  turnRight(144);\r\n  \r\n  penUp();\r\n}\r\n\r\nfunction drawSeaGrass(radius){\r\n  penRGB(0,randomNumber(100,200),0);\r\n  penWidth(3);\r\n  penDown();\r\n  arcLeft(30,radius);\r\n  for(var i = 0; i < 3; i++){\r\n    arcRight(60,radius);\r\n    arcLeft(60,radius);\r\n  }\r\n  penUp();\r\n}\r\n\r\nfunction drawFish(size, red, green, blue){\r\n  penRGB(red,green,blue);\r\n  penWidth(size);\r\n  penDown();\r\n  \r\n  dot(size);\r\n  turnTo(90);\r\n  moveForward(size);\r\n  \r\n  turnLeft(30);\r\n  moveForward(size);\r\n  turnRight(120);\r\n  moveForward(size);\r\n  turnRight(120);\r\n  moveForward(size);\r\n  turnRight(120);\r\n  \r\n  penUp();\r\n}\r\n\r\nfunction drawBubble(size){\r\n  penRGB(100,100,255,0.2);\r\n  dot(size);\r\n}\r\n\r\nfunction drawSunBeam(size){\r\n  penDown();\r\n  penWidth(randomNumber(1,15));\r\n  penRGB(255,255,255,0.1);\r\n  moveForward(size);\r\n  penUp();\r\n}\r\n",
+    "encrypted_examples": [
+
+    ],
+    "submittable": "false"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

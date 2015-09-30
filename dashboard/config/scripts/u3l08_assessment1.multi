@@ -1,6 +1,6 @@
 name 'U3L08 Assessment1'
 title 'Choose Two: Functions with Parameters'
-
+type 'multi2'
 question 'Select the two true statements about functions with parameters'
 wrong 'Parameters can only be used once within the body of a function.'
 right 'Functions with parameters can be used to prevent the creation of duplicated code.'
@@ -9,4 +9,11 @@ wrong 'Values do not need to be provided to a function with parameters in any pa
 
 markdown <<MARKDOWN
 
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Correct answers:
+
+Functions with parameters can be used to prevent the creation of duplicated code.
+
+Parameters help generalize the solution of a specific problem.
 MARKDOWN

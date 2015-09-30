@@ -10,7 +10,7 @@ CS Fundamentals Monthly Meetings take place on the third Tuesday of every month 
 
 |Monthly Meeting | Date & Time | Registration Link|
 |------------ | ------------- | ------------|
-|[September](https://www.eventbrite.com/e/k-5-monthly-meeting-september-tickets-17857398961) | September 15, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/k-5-monthly-meeting-september-tickets-17857398961)|
+|[September](https://www.eventbrite.com/e/k-5-monthly-meeting-september-tickets-17857398961) | September 15, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>View Recording</button>](https://youtu.be/ui7jFl_hZjU)|
 |[October](https://www.eventbrite.com/e/k-5-monthly-meeting-october-tickets-17857408991) | October 20, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/k-5-monthly-meeting-october-tickets-17857408991)|
 |[November](https://www.eventbrite.com/e/k-5-monthly-meeting-november-tickets-17857410997) | November 17, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/k-5-monthly-meeting-november-tickets-17857410997)|
 |[December](https://www.eventbrite.com/e/k-5-monthly-meeting-december-tickets-17857414006) | December 15, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/k-5-monthly-meeting-december-tickets-17857414006)|

@@ -1,4 +1,5 @@
 var utils = require('./utils');
+var _ = utils.getLodash();
 
 /**
  * @name DropletBlock
@@ -91,6 +92,7 @@ standardConfig.blocks = [
 
   // Variables
   {'func': 'declareAssign_x', 'block': 'var x = __;', 'category': 'Variables' },
+  {'func': 'declareNoAssign_x', 'block': 'var x;', 'category': 'Variables' },
   {'func': 'assign_x', 'block': 'x = __;', 'category': 'Variables' },
   {'func': 'declareAssign_x_array_1_4', 'block': 'var x = [1, 2, 3, 4];', 'category': 'Variables' },
   {'func': 'declareAssign_x_prompt', 'block': 'var x = prompt("Enter a value");', 'category': 'Variables' },
@@ -275,15 +277,43 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   return addedPalette;
 };
 
-function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
+function populateCompleterApisFromConfigBlocks(opts, apis, configBlocks) {
   for (var i = 0; i < configBlocks.length; i++) {
     var block = configBlocks[i];
     if (!block.noAutocomplete) {
-      apis.push({
+      // Use score value of 100 to ensure that our APIs are not replaced by
+      // other completers that are suggesting the same name
+      var newApi = {
         name: 'api',
         value: block.func,
+        score: 100,
         meta: block.category
-      });
+      };
+      if (opts.autocompleteFunctionsWithParens) {
+        newApi.completer = {
+          insertMatch: _.bind(function (editor) {
+            // Remove the filterText that was already typed (ace's built-in
+            // insertMatch would normally do this automatically)
+            if (editor.completer.completions.filterText) {
+              var ranges = editor.selection.getAllRanges();
+              for (var i = 0, range; !!(range = ranges[i]); i++) {
+                range.start.column -= editor.completer.completions.filterText.length;
+                editor.session.remove(range);
+              }
+            }
+            // Insert the function name plus parentheses and semicolon:
+            editor.execCommand("insertstring", this.func + '();');
+            if (this.params) {
+              // Move the selection back so parameters can be entered:
+              var curRange = editor.selection.getRange();
+              curRange.start.column -= 2;
+              curRange.end.column -= 2;
+              editor.selection.setSelectionRange(curRange);
+            }
+          }, block)
+        };
+      }
+      apis.push(newApi);
     }
   }
 }
@@ -291,19 +321,22 @@ function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
 /**
  * Generate an Ace editor completer for a set of APIs based on some level data.
  *
- * If functionFilter is non-null, use it to filter the dropletConfig APIs to
- * be set in autocomplete and create no other autocomplete entries
+ * If functionFilter is non-null, use it to filter the dropletConfig
+ * APIs to be set in autocomplete and create no other autocomplete entries
  */
 exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   var apis = [];
+  var opts = {};
+  // If autocompleteFunctionsWithParens is set, we will append "();" after functions
+  opts.autocompleteFunctionsWithParens = dropletConfig.autocompleteFunctionsWithParens;
 
   if (functionFilter) {
     var mergedBlocks = mergeFunctionsWithConfig(functionFilter, dropletConfig);
-    populateCompleterApisFromConfigBlocks(apis, mergedBlocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, mergedBlocks);
   } else {
-    populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
-    populateCompleterApisFromConfigBlocks(apis, exports.dropletBuiltinConfigBlocks);
-    populateCompleterApisFromConfigBlocks(apis, dropletConfig.blocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, exports.dropletGlobalConfigBlocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, exports.dropletBuiltinConfigBlocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, dropletConfig.blocks);
   }
 
   return {

@@ -155,8 +155,7 @@ div.droplet-palette-group-header-selected.orange {
   min-height: calc(50% - 16px) !important; }
 
 #codeTextbox.pin_bottom {
-  border: 1px solid #ddd;
-  bottom: 156px; }
+  border: 1px solid #ddd; }
 
 html[dir='rtl'] #codeWorkspace {
   right: 400px;
@@ -178,7 +177,7 @@ html[dir='rtl'] #codeWorkspace {
   border: none;
   border-top: 1px solid #ddd; }
 
-#codeWorkspace.readonly .blocklySvg, #codeWorkspace.readonly .droplet-main-scroller, #codeWorkspace.readonly .ace_scroller {
+#codeWorkspace.readonly .blocklySvg, #codeWorkspace.readonly .droplet-main-scroller, #codeWorkspace.readonly .ace_scroller, #codeWorkspace.dimmed .blocklySvg, #codeWorkspace.dimmed .droplet-main-scroller, #codeWorkspace.dimmed .ace_scroller {
   background-color: rgba(0, 0, 0, 0.1); }
 
 .ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
@@ -693,7 +692,8 @@ input[type="radio"] {
   -ms-user-select: none;
   user-select: none; }
 
-.readonly #headers {
+.readonly #headers,
+.readonly #design-headers {
   background-color: #5b6770; }
 
 #headers {

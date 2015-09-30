@@ -37,14 +37,15 @@ ____________________________________________________
 
 This example draws a square and then erases it, leaving the screen empty. The drawing is erased so fast that it cannot be seen.
 
-<pre>
+
+```
 // Create a canvas and draw a square in its center
 createCanvas();
 setStrokeWidth(10);
 rect(120, 200, 80, 80);
 // Clear the canvas right away
 clearCanvas();
-</pre>
+```
 
 [/example]
 
@@ -54,7 +55,8 @@ ____________________________________________________
 
 This example draws a square, then uses [`setTimeout()`](/applab/docs/setTimeout) to wait 3000 milliseconds (3 seconds) before clearing the canvas.
 
-<pre>
+
+```
 // Create a canvas and draw a square in its center
 createCanvas();
 setStrokeWidth(10);
@@ -63,7 +65,7 @@ rect(120, 200, 80, 80);
 setTimeout(function() {
     clearCanvas();
 }, 3000);
-</pre>
+```
 
 [/example]
 
@@ -73,14 +75,15 @@ ____________________________________________________
 
 This example uses [`onEvent()`](/applab/docs/onEvent) to draw a circle wherever the canvas is clicked. Each time the canvas is clicked, the canvas is cleared and a new circle is drawn. This ensures that only one circle is visible at a time.
 
-<pre>
+
+```
 textLabel("instruction", "Click on the screen below this text...");
 createCanvas("canvas");
 onEvent("canvas", "click", function(click) {
   clearCanvas(); // Erase anything that was drawn before the click
   circle(click.offsetX, click.offsetY, 20); // Draw a circle where the click occurred
 });
-</pre>
+```
 
 
 [/example]
@@ -90,9 +93,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 clearCanvas();
-</pre>
+```
 
 [/syntax]
 

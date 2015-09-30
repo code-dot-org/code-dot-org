@@ -21,7 +21,6 @@ $options.browser_version = nil
 $options.feature = nil
 $options.pegasus_domain = 'test.code.org'
 $options.dashboard_domain = 'test-studio.code.org'
-$options.tunnel = nil
 $options.local = nil
 $options.html = nil
 $options.maximize = nil
@@ -61,10 +60,7 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-r", "--real_mobile_browser", "Use real mobile browser, not emulator") do
     $options.realmobile = 'true'
   end
-  opts.on("-t", "--tunnel", "Tunnel to local machine") do
-    $options.tunnel = 'true'
-  end
-  opts.on("-l", "--local", "Use local webdriver, not BrowserStack") do
+  opts.on("-l", "--local", "Use local webdriver, not Saucelabs") do
     $options.local = 'true'
   end
   opts.on("-m", "--maximize", "Maximize local webdriver window on startup") do
@@ -102,6 +98,12 @@ $suite_fail_count = 0
 $failures = []
 
 if $options.local
+  #Verify that chromedriver is actually running
+  unless `ps`.include?('chromedriver')
+    puts "You cannot run with the --local flag unless you are running chromedriver. Automatically running
+chromedriver found at #{`which chromedriver`}"
+    system("chromedriver &")
+  end
   $browsers = [{:browser => "local"}]
 end
 
@@ -199,7 +201,6 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
   ENV['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
   ENV['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
   ENV['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
-  ENV['TEST_TUNNEL'] = $options.tunnel ? "true" : "false"
   ENV['TEST_LOCAL'] = $options.local ? "true" : "false"
   ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
@@ -294,7 +295,8 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
       message += " <a href='#{link}'>☁ html output</a>"
     end
 
-    message += "<br/><i>command line: #{arguments + first_time_arguments}</i>"
+    message += "<br/><i>command line: cucumber #{arguments + first_time_arguments}</i>"
+    message += "<br/><i>rerun: ./runner.rb -c #{browser_name} -f #{feature} --html</i>"
     HipChat.log message, color: 'red'
     HipChat.developers message, color: 'red' if CDO.hip_chat_logging
   end

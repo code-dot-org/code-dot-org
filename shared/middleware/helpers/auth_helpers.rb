@@ -20,7 +20,7 @@ end
 
 # @returns [Boolean] true if the current user is an admin.
 def admin?
-  !!current_user[:admin]
+  current_user && !!current_user[:admin]
 end
 
 # @param [Integer] section_id
