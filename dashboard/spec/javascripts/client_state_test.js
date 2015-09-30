@@ -30,3 +30,4 @@ describe("clientState#lines", function() {
     dashboard.clientState.lines().should.equal(62);
   });
 });
+
