@@ -33,6 +33,7 @@ var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
 var JSInterpreter = require('../JSInterpreter');
+var annotationList = require('../acemode/annotationList');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -2142,8 +2143,7 @@ function outputError(warning, level, lineNum) {
     console.log(text);
   }
   if (lineNum !== undefined) {
-    // TODO: connect this up
-    // annotationList.addRuntimeAnnotation(level, lineNum, warning);
+    annotationList.addRuntimeAnnotation(level, lineNum, warning);
   }
 }
 
@@ -2229,6 +2229,10 @@ Studio.execute = function() {
 
   if (level.editCode) {
     var codeWhenRun = studioApp.editor.getValue();
+    // Our ace worker also calls attachToSession, but it won't run on IE9:
+    var session = studioApp.editor.aceEditor.getSession();
+    annotationList.attachToSession(session, studioApp.editor);
+    annotationList.clearRuntimeAnnotations();
     Studio.JSInterpreter = new JSInterpreter({
       code: codeWhenRun,
       blocks: dropletConfig.blocks,
