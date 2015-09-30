@@ -20,8 +20,6 @@
 /* global Blockly, goog */
 
 // Ignore:
-// W084: Expected a conditional expression and instead saw an assignment
-/* jshint -W084 */
 // W069: ['{a}'] is better written in dot notation
 /* jshint -W069 */
 
@@ -372,7 +370,8 @@ Blockly.BlockSpace.prototype.addTopBlock = function(block) {
  */
 Blockly.BlockSpace.prototype.removeTopBlock = function(block) {
   var found = false;
-  for (var child, x = 0; child = this.topBlocks_[x]; x++) {
+  for (var child, x = 0; x < this.topBlocks_.length; x++) {
+    child = this.topBlocks_[x];
     if (child == block) {
       this.topBlocks_.splice(x, 1);
       found = true;
@@ -473,7 +472,8 @@ Blockly.BlockSpace.prototype.clear = function() {
  */
 Blockly.BlockSpace.prototype.render = function() {
   var renderList = this.getAllBlocks();
-  for (var x = 0, block; block = renderList[x]; x++) {
+  for (var x = 0, block; x < renderList.length; x++) {
+    block = renderList[x];
     if (!block.getChildren().length) {
       block.render();
     }
@@ -488,7 +488,8 @@ Blockly.BlockSpace.prototype.render = function() {
 Blockly.BlockSpace.prototype.getBlockById = function(id) {
   // If this O(n) function fails to scale well, maintain a hash table of IDs.
   var blocks = this.getAllBlocks();
-  for (var x = 0, block; block = blocks[x]; x++) {
+  for (var x = 0, block; x < blocks.length; x++) {
+    block = blocks[x];
     if (block.id == id) {
       return block;
     }
@@ -605,7 +606,8 @@ Blockly.BlockSpace.prototype.paste = function(clipboard) {
     do {
       collide = false;
       var allBlocks = this.getAllBlocks();
-      for (var x = 0, otherBlock; otherBlock = allBlocks[x]; x++) {
+      for (var x = 0, otherBlock; x < allBlocks.length; x++) {
+        otherBlock = allBlocks[x];
         var otherXY = otherBlock.getRelativeToSurfaceXY();
         if (Math.abs(blockX - otherXY.x) <= 1 &&
             Math.abs(blockY - otherXY.y) <= 1) {
@@ -709,7 +711,8 @@ Blockly.BlockSpace.prototype.isDeleteArea = function(mouseX, mouseY, startDragX)
   this.drawTrashZone(xy.x, dragStartXY.x);
 
   // Check against all delete areas
-  for (var i = 0, area; area = this.deleteAreas_[i]; i++) {
+  for (var i = 0, area; i < this.deleteAreas_.length; i++) {
+    area = this.deleteAreas_[i];
     if (area.contains(xy)) {
       return true;
     }
