@@ -12,13 +12,17 @@ We are building a growing library of educational videos available for re-use by 
 
 <div style="float:left; padding:10px; width:49%">
 
-<%=view :display_video_thumbnail, id: "PIXELS", video_code: "15aqFQQVBWU", caption: "Instagram founder explains PIXELS", play_button: 'center', download_path: "https://videos.code.org/2015/csp/concept_rgb.mp4" %>
+<% facebook = {:u=>'https://www.youtube.com/watch?t=66&v=15aqFQQVBWU'} %>
+<% twitter = {:url=>'https://www.youtube.com/watch?t=66&v=15aqFQQVBWU', :related=>'codeorg', :text=>'Instagram founder explains PIXELS @codeorg'} %>
+<%=view :display_video_thumbnail, id: "PIXELS", video_code: "15aqFQQVBWU", caption: "Instagram founder explains PIXELS", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "https://videos.code.org/2015/csp/concept_rgb.mp4"%>
 
 </div>
 
 <div style="float:left; padding:10px; width:49%">
 
-<%=view :display_video_thumbnail, id: "COMPRESSION", video_code: "By30SCp-Tsw", caption: "Aloe Blacc explains DIGITAL COMPRESSION", play_button: 'center' %>
+<% facebook = {:u=>'https://www.youtube.com/watch?v=By30SCp-Tsw'} %>
+<% twitter = {:url=>'https://www.youtube.com/watch?v=By30SCp-Tsw', :related=>'codeorg', :text=>'Aloe Blacc explains DIGITAL COMPRESSION @codeorg'} %>
+<%=view :display_video_thumbnail, id: "COMPRESSION", video_code: "By30SCp-Tsw", caption: "Aloe Blacc explains DIGITAL COMPRESSION", play_button: 'center', facebook: facebook, twitter: twitter %>
 
 </div>
 
