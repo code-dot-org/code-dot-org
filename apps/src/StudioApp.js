@@ -1438,17 +1438,16 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   var buttonRow = runButton.parentElement;
   var belowViz = document.getElementById('belowVisualization');
 
-  // For share page on mobile
-  if (options.embed || (this.share && (dom.isMobile() || options.app === 'applab'))) {
-    if (options.app === 'applab') {
-      buttonRow.style.display = 'none';
-      belowViz.parentElement.style.margin = 'auto';
-      document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
-      if (dom.isMobile()) {
-        document.body.style.backgroundColor = '#000';
-      }
+  // Chrome-less share page.
+  if (this.share && options.app === 'applab') {
+    buttonRow.style.display = 'none';
+    belowViz.parentElement.style.margin = 'auto';
+    document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
+    if (dom.isMobile()) {
+      document.body.style.backgroundColor = '#000';
     }
-  } else {
+  // For share page on mobile, do not show this part.
+  } else if (!options.embed && !(this.share && dom.isMobile())) {
     var openWorkspace = document.createElement('button');
     openWorkspace.setAttribute('id', 'open-workspace');
     openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
