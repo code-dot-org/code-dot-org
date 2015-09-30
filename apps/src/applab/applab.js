@@ -1624,7 +1624,7 @@ Applab.getIdDropdown = function (filterSelector) {
 };
 
 /**
- * Internal version of getIdDropdownFromDom_, which takes a documentRoot
+ * Internal helper for getIdDropdown, which takes a documentRoot
  * argument to remove its global dependency and make it testable.
  * @param {jQuery} documentRoot
  * @param {string} filterSelector
