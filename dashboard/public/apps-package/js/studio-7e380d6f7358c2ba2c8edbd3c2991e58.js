@@ -7007,6 +7007,8 @@ module.exports.categories = {
 
 module.exports.autocompleteFunctionsWithParens = true;
 
+module.exports.showParamDropdowns = true;
+
 
 },{"./apiJavascript.js":"/home/ubuntu/staging/apps/build/js/studio/apiJavascript.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js"}],"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs":[function(require,module,exports){
 module.exports= (function() {
