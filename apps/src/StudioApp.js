@@ -721,7 +721,13 @@ StudioApp.prototype.loadBlocks = function(blocksXml) {
 };
 
 /**
-* Spreading out the top blocks in workspace if it is not already set.
+* Applies the specified arrangement to top startBlocks. If any
+* individual blocks have x or y properties set in the XML, those values
+* take priority. If no arrangement for a particular block type is
+* specified, blocks are automatically positioned by Blockly.
+*
+* Note that, currently, only bounce and flappy use arrangements.
+*
 * @param {string} startBlocks String representation of start blocks xml.
 * @param {Object.<Object>} arrangement A map from block type to position.
 * @return {string} String representation of start blocks xml, including
@@ -729,15 +735,15 @@ StudioApp.prototype.loadBlocks = function(blocksXml) {
 */
 StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
 
-  var type, x, xmlChild;
+  var type, xmlChild;
 
   var xml = parseXmlElement(startBlocks);
 
   var xmlChildNodes = xml.childNodes || [];
   arrangement = arrangement || {};
 
-  for (x = 0; x < xmlChildNodes.length; x++) {
-    xmlChild = xmlChildNodes[x];
+  for (var i = 0; i < xmlChildNodes.length; i++) {
+    xmlChild = xmlChildNodes[i];
 
     // Only look at element nodes
     if (xmlChild.nodeType === 1) {
