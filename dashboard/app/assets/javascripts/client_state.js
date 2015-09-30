@@ -1,6 +1,13 @@
 //= require jquery
 //= require jquery.cookie
 
+/**
+ * Helper functions for accessing client state. This state is now stored
+ * in client side cookies but may eventually migrate to HTML5 web
+ * storage. It currently consists of level progress and the line count;
+ * in the future we will add support for videos seeen, callouts, and
+ * scripts accessed.
+ */
 (function (window, $) {
 
 if (!window.dashboard) {
@@ -67,7 +74,7 @@ dashboard.clientState.lines = function() {
 };
 
 /**
- * Addeds the number of completed lines.
+ * Adds the given number of completed lines.
  * @param {number} addedLines
  */
 dashboard.clientState.addLines = function(addedLines) {
