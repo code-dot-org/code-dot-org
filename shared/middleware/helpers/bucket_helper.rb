@@ -67,7 +67,6 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    # TODO - validate case where we replace with same score
     @s3.copy_object(bucket: @bucket, copy_source: "#{@bucket}/#{key}", key: key, metadata: { abuse_score: abuse_score.to_s}, metadata_directive: 'REPLACE')
   end
 
