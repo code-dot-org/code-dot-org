@@ -16,7 +16,7 @@ dashboard.clientState = {};
 dashboard.clientState.EXPIRY_DAYS = 365;
 
 dashboard.clientState.reset = function() {
-	$.removeCookie('progress');
+  $.removeCookie('progress');
   $.removeCookie('lines');
 };
 
@@ -49,7 +49,6 @@ dashboard.clientState.setLevelProgress = function(level, progress) {
  */
 dashboard.clientState.progressFromCookie = function() {
   var progressJson = $.cookie('progress');
-	console.log(progressJson);
   try {
     return progressJson ? JSON.parse(progressJson) : {};
   } catch(e) {
