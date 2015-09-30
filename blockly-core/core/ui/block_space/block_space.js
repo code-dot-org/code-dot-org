@@ -133,6 +133,20 @@ Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE = 'blockSpaceChange';
 Blockly.BlockSpace.SCAN_ANGLE = 3;
 
 /**
+ * Offset (in pixels) from top to use when automatically positioning new
+ * blocks. Currently is only used by Blockly.Xml.domToBlockSpace
+ * @type {number}
+ */
+Blockly.BlockSpace.AUTO_LAYOUT_PADDING_TOP = 16;
+
+/**
+ * Offset (in pixels) from left to use when automatically positioning
+ * new blocks. Currently is only used by Blockly.Xml.domToBlockSpace
+ * @type {number}
+ */
+Blockly.BlockSpace.AUTO_LAYOUT_PADDING_LEFT = 16;
+
+/**
  * Margin (in pixels) to over-scroll when auto-panning viewport after a block
  * is dragged out of view.
  * @type {number}
