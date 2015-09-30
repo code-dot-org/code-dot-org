@@ -105,26 +105,35 @@ class AssetsTest < Minitest::Test
     assert_equal true, asset_bucket.can_update_abuse_score?(channel_id, 'nonexistent.jpg', '30')
   end
 
-  # def test_set_abuse_score
-  #   channel_id = create_channel(@channels)
-  #   AssetBucket.any_instance.stubs(:admin?).returns(false)
-  #
-  #   # create an asset without an abuse score
-  #   put(@assets, channel_id, 'asset.jpg', 'stub-image-contents', 'image/jpeg')
-  #   response = AssetBucket.new.get(channel_id, 'asset.jpg')
-  #   assert_equal 0, response.metadata['abuse_score'].to_i
-  #
-  #   # increment score
-  #   put(@assets, channel_id, 'asset.jpg', 'stub-image-contents', 'image/jpeg', 'abuse_score=10')
-  #   response = AssetBucket.new.get(channel_id, 'asset.jpg')
-  #   assert_equal 10, response.metadata['abuse_score'].to_i
-  #
-  #   #  fail to decrement score
-  #   put(@assets, channel_id, 'asset.jpg', 'stub-image-contents', 'image/jpeg', 'abuse_score=10')
-  #   response = AssetBucket.new.get(channel_id, 'asset.jpg')
-  #   assert !@assets.last_response.successful?
-  #   assert_equal 10, response.metadata['abuse_score'].to_i
-  # end
+  def test_set_abuse_score
+    channel_id = create_channel(@channels)
+
+    # create a couple assets without an abuse score
+    put(@assets, channel_id, 'asset1.jpg', 'stub-image-contents', 'image/jpeg')
+    put(@assets, channel_id, 'asset2.jpg', 'stub-image-contents', 'image/jpeg')
+
+    result = AssetBucket.new.get(channel_id, 'asset1.jpg')
+    assert_equal 0, result[:metadata]['abuse_score'].to_i
+    result = AssetBucket.new.get(channel_id, 'asset2.jpg')
+    assert_equal 0, result[:metadata]['abuse_score'].to_i
+
+    # set abuse score
+    put_abuse(@assets, channel_id, 10)
+
+    result = AssetBucket.new.get(channel_id, 'asset1.jpg')
+    assert_equal 10, result[:metadata]['abuse_score'].to_i
+    assert_equal 'stub-image-contents', result[:body].string
+    result = AssetBucket.new.get(channel_id, 'asset2.jpg')
+    assert_equal 10, result[:metadata]['abuse_score'].to_i
+
+    # increment
+    put_abuse(@assets, channel_id, 20)
+
+    result = AssetBucket.new.get(channel_id, 'asset1.jpg')
+    assert_equal 20, result[:metadata]['abuse_score'].to_i
+    result = AssetBucket.new.get(channel_id, 'asset2.jpg')
+    assert_equal 20, result[:metadata]['abuse_score'].to_i
+  end
 
   def test_can_view_abusive_assets?
     channel_id = create_channel(@channels)
@@ -328,13 +337,6 @@ class AssetsTest < Minitest::Test
     @assets ||= Rack::Test::Session.new(assets_mock_session)
   end
 
-  # def fake_dashboard
-  #   FakeDashboard::use_fake_database
-  #   @student = Dashboard::User.get(FakeDashboard::STUDENT[:id])
-  #   @teacher = Dashboard::User.get(FakeDashboard::TEACHER[:id])
-  #   @admin = Dashboard::User.get(FakeDashboard::ADMIN[:id])
-  # end
-
   def create_channel(channels)
     channels.post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channels.last_response.location.split('/').last
@@ -363,6 +365,10 @@ class AssetsTest < Minitest::Test
 
   def put(assets, channel_id, filename, body, content_type, query_params = nil)
     assets.put("/v3/assets/#{channel_id}/#{filename}?#{query_params}", body, 'CONTENT_TYPE' => content_type).body
+  end
+
+  def put_abuse(assets, channel_id, abuse_score)
+    assets.put("/v3/assets/#{channel_id}?abuse_score=#{abuse_score}").body
   end
 
   def get(assets, channel_id, filename, body = '', headers = {})

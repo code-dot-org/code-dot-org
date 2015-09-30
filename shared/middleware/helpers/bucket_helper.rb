@@ -63,12 +63,12 @@ class BucketHelper
     end
   end
 
-  # Returns true if we are allowed to update the abuse score to the given value. Admins can update
-  # to any score, non-admins can only increase the score.
-  def can_update_abuse_score?(encrypted_channel_id, filename, abuse_score = nil, version = nil)
-    return true if admin? or abuse_score.nil?
+  def replace_abuse_score(encrypted_channel_id, filename, abuse_score)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, channel_id, filename
 
-    get_abuse_score(encrypted_channel_id, filename, version) < abuse_score.to_i
+    # TODO - validate case where we replace with same score
+    @s3.copy_object(bucket: @bucket, copy_source: "#{@bucket}/#{key}", key: key, metadata: { abuse_score: abuse_score.to_s}, metadata_directive: 'REPLACE')
   end
 
   def create_or_replace(encrypted_channel_id, filename, body, version = nil, abuse_score = 0)

@@ -146,7 +146,7 @@ var base = {
    */
   put: function(id, value, filename, callback) {
     $.ajax({
-      url: this.api_base_url + "/" + id + "/" + filename,
+      url: this.api_base_url + "/" + id + (filename ? "/" + filename : ""),
       type: "put",
       contentType: "application/json; charset=utf-8",
       data: value

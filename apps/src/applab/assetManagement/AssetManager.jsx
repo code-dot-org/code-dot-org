@@ -103,6 +103,8 @@ module.exports = React.createClass({
   },
 
   render: function () {
+    // TODO - should be a prop?
+    var isAbusiveProject = dashboard.project.exceedsAbuseThreshold();
     var uploadButton = (
       <div>
         <input
@@ -111,7 +113,7 @@ module.exports = React.createClass({
             accept={(this.props.typeFilter || '*') + '/*'}
             style={{display: 'none'}}
             onChange={this.upload} />
-        <button onClick={this.fileUploadClicked} className="share">
+          <button onClick={this.fileUploadClicked} className="share" disabled={isAbusiveProject}>
           <i className="fa fa-upload"></i>
           &nbsp;Upload File
         </button>
