@@ -41,6 +41,16 @@ class FilesApi < Sinatra::Base
     get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
   end
 
+  def can_view_abusive_assets?(encrypted_channel_id)
+    return true if owns_channel?(encrypted_channel_id) or admin?
+
+    # teachers can see abusive assets of their students
+    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+
+    teaches_student?(owner_user_id)
+  end
+
   helpers do
     %w(core.rb bucket_helper.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))

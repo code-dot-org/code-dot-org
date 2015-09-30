@@ -14,7 +14,6 @@ class AssetsTest < Minitest::Test
     @channels, @assets = init_apis
   end
 
-
   def test_assets
     channel_id = create_channel(@channels)
 
