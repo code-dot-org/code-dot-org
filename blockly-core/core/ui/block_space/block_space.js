@@ -17,6 +17,14 @@
  * limitations under the License.
  */
 
+/* global Blockly, goog */
+
+// Ignore:
+// W084: Expected a conditional expression and instead saw an assignment
+/* jshint -W084 */
+// W069: ['{a}'] is better written in dot notation
+/* jshint -W069 */
+
 /**
  * @fileoverview Object representing a block blockSpace.
  * @author fraser@google.com (Neil Fraser)
@@ -216,7 +224,7 @@ Blockly.BlockSpace.prototype.debugLogOnEvents = function() {
 Blockly.BlockSpace.prototype.findFunction = function(functionName) {
   return goog.array.find(this.getTopBlocks(), function(block) {
     return goog.array.contains(Blockly.Procedures.DEFINITION_BLOCK_TYPES, block.type) &&
-      Blockly.Names.equals(functionName, block.getTitleValue('NAME'))
+      Blockly.Names.equals(functionName, block.getTitleValue('NAME'));
   });
 };
 
@@ -500,7 +508,9 @@ Blockly.BlockSpace.prototype.traceOn = function(armed) {
   }
   if (armed) {
     this.traceWrapper_ = Blockly.bindEvent_(this.svgBlockCanvas_,
-        'blocklySelectChange', this, function() {this.traceOn_ = false});
+        'blocklySelectChange', this, function () {
+          this.traceOn_ = false;
+        });
   }
 };
 
@@ -591,8 +601,9 @@ Blockly.BlockSpace.prototype.paste = function(clipboard) {
       blockX = -blockX;
     }
     // Offset block until not clobbering another block.
+    var collide;
     do {
-      var collide = false;
+      collide = false;
       var allBlocks = this.getAllBlocks();
       for (var x = 0, otherBlock; otherBlock = allBlocks[x]; x++) {
         var otherXY = otherBlock.getRelativeToSurfaceXY();
@@ -677,7 +688,7 @@ Blockly.BlockSpace.prototype.isDeleteArea = function(mouseX, mouseY, startDragX)
   }
 
   var mouseXY = Blockly.mouseCoordinatesToSvg(
-    mouseX, mouseY, this.blockSpaceEditor.svg_)
+    mouseX, mouseY, this.blockSpaceEditor.svg_);
   var xy = new goog.math.Coordinate(mouseXY.x, mouseXY.y);
 
   var mouseDragStartXY = Blockly.mouseCoordinatesToSvg(
@@ -846,7 +857,7 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
   }
 
   // Fade in the trash can.
-  var trashcanDisplay = trashIntensity == 0 ? "none" : "block";
+  var trashcanDisplay = trashIntensity === 0 ? "none" : "block";
   trashcanElement.style["opacity"] = trashIntensity;
   trashcanElement.style["display"] = trashcanDisplay;
 };
