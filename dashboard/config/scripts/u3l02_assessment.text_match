@@ -1,11 +1,11 @@
 name 'U3L02 Assessment'
-title 'Free Response: What is efficiency in programming?'
+title 'What does efficiency mean in programming?'
 
 
 markdown <<MARKDOWN
 This lesson introduced the notion of "efficiency" in programming, and that it might mean different things at different times.  Think of an example *outside* of computer science in which you have heard the term “efficiency” and compare it to the ways we talked about efficiency in programming.  
 
-In what ways is the meaning of "efficiency" the same? In what ways is it different?
+In which ways is the meaning of "efficiency" the same? In which ways is it different?
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

@@ -227,7 +227,7 @@ exports.SquareType = {
   NOT_USED_8K:  8192,
   NOT_USED_16K: 16384,
   NOT_USED_32K: 32768
-  // Walls specifically retrieved from an 16x16 grid are stored in bits 16-27.
+  // Walls specifically retrieved from an 16x16 grid are stored in bits 16-23
 };
 
 exports.SquareItemClassMask =
@@ -248,34 +248,16 @@ exports.squareHasItemClass = function (itemClassIndex, squareValue) {
   return Math.pow(2, itemClassIndex) & classesEnabled;
 };
 
-/**
- * The types of walls in the maze.
- * @enum {number}
- */
-exports.WallType = {
-  NORMAL_SIZE: 0,
-  DOUBLE_SIZE: 1,
-  JUMBO_SIZE: 2
-};
-
-exports.WallTypeMask     = 0x0F000000;
 exports.WallCoordRowMask = 0x00F00000;
 exports.WallCoordColMask = 0x000F0000;
 
-exports.WallCoordsMask = 
-  exports.WallTypeMask | exports.WallCoordRowMask | exports.WallCoordColMask;
+exports.WallCoordsMask = exports.WallCoordRowMask | exports.WallCoordColMask;
 exports.WallCoordsShift = 16;
-exports.WallCoordColShift  = exports.WallCoordsShift;
-exports.WallCoordRowShift  = exports.WallCoordsShift + 4;
-exports.WallTypeShift      = exports.WallCoordsShift + 8;
+exports.WallCoordColShift = exports.WallCoordsShift;
+exports.WallCoordRowShift = exports.WallCoordsShift + 4;
 exports.WallCoordMax = 16; // indicates a 16x16 grid, which requires 8 bits
-exports.WallRandomCoordMax = 2; // how many rows/cols we randomly select tiles from
 
 exports.WallAnyMask = exports.WallCoordsMask | exports.SquareType.WALL;
-
-// Floating score: change opacity and Y coordinate by these values each tick.
-exports.floatingScoreChangeOpacity = -0.025;
-exports.floatingScoreChangeY = -1;
 
 exports.RANDOM_VALUE = 'random';
 exports.HIDDEN_VALUE = '"hidden"';

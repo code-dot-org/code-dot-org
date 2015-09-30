@@ -186,61 +186,53 @@ Collidable.prototype.update = function () {
 
     var bufferDistance = 60;
 
-    // The item can just go up/down/left/right.. no diagonals.
-    var candidateGridLocations = [ 
-      {row: -1, col: 0}, 
-      {row: +1, col: 0},
-      {row: 0, col: -1}, 
-      {row: 0, col: +1}];
+    for (var candidateX = this.gridX - 1; candidateX <= this.gridX + 1; candidateX++) {
+      for (var candidateY = this.gridY - 1; candidateY <= this.gridY + 1; candidateY++) {
+        candidate = {gridX: candidateX, gridY: candidateY};
+        candidate.score = 0;
 
-    for (var candidateIndex = 0; candidateIndex < candidateGridLocations.length; candidateIndex++) {
-      var candidateX = this.gridX + candidateGridLocations[candidateIndex].col;
-      var candidateY = this.gridY + candidateGridLocations[candidateIndex].row;
+        if (this.activity === "patrol") {
+          candidate.score ++;
+        } else if (this.activity === "chase") {
+          if (candidateY == this.gridY - 1 && spriteY < this.y - bufferDistance) {
+            candidate.score += 2;
+          } else if (candidateY == this.gridY + 1 && spriteY > this.y + bufferDistance) {
+            candidate.score += 2;
+          }
+          else {
+            candidate.score += 1;
+          }
 
-      candidate = {gridX: candidateX, gridY: candidateY};
-      candidate.score = 0;
+          if (candidateX == this.gridX - 1 && spriteX < this.x - bufferDistance) {
+            candidate.score ++;
+          } else if (candidateX == this.gridX + 1 && spriteX > this.x + bufferDistance) {
+            candidate.score ++;
+          }
+        } else if (this.activity === "flee") {
+          candidate.score = 1;
+          if (candidateY == this.gridY - 1 && spriteY > this.y - bufferDistance) {
+            candidate.score ++;
+          } else if (candidateY == this.gridY + 1 && spriteY < this.y + bufferDistance) {
+            candidate.score ++;
+          }
 
-      if (this.activity === "patrol") {
-        candidate.score ++;
-      } else if (this.activity === "chase") {
-        if (candidateY == this.gridY - 1 && spriteY < this.y - bufferDistance) {
-          candidate.score += 2;
-        } else if (candidateY == this.gridY + 1 && spriteY > this.y + bufferDistance) {
-          candidate.score += 2;
-        }
-        else {
-          candidate.score += 1;
-        }
-
-        if (candidateX == this.gridX - 1 && spriteX < this.x - bufferDistance) {
-          candidate.score ++;
-        } else if (candidateX == this.gridX + 1 && spriteX > this.x + bufferDistance) {
-          candidate.score ++;
-        }
-      } else if (this.activity === "flee") {
-        candidate.score = 1;
-        if (candidateY == this.gridY - 1 && spriteY > this.y - bufferDistance) {
-          candidate.score ++;
-        } else if (candidateY == this.gridY + 1 && spriteY < this.y + bufferDistance) {
-          candidate.score ++;
+          if (candidateX == this.gridX - 1 && spriteX > this.x - bufferDistance) {
+            candidate.score ++;
+          } else if (candidateX == this.gridX + 1 && spriteX < this.x + bufferDistance) {
+            candidate.score ++;
+          }
         }
 
-        if (candidateX == this.gridX - 1 && spriteX > this.x - bufferDistance) {
-          candidate.score ++;
-        } else if (candidateX == this.gridX + 1 && spriteX < this.x + bufferDistance) {
-          candidate.score ++;
+        if (candidate.score > 0) {
+          Studio.drawDebugRect(
+            "roamGridPossibleDest", 
+            candidateX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
+            candidateY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
+            Studio.SQUARE_SIZE, 
+            Studio.SQUARE_SIZE);
         }
+        candidates.push(candidate);
       }
-
-      if (candidate.score > 0) {
-        Studio.drawDebugRect(
-          "roamGridPossibleDest", 
-          candidateX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-          candidateY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-          Studio.SQUARE_SIZE, 
-          Studio.SQUARE_SIZE);
-      }
-      candidates.push(candidate);
     }
 
     // cull candidates that won't be possible

@@ -1,5 +1,3 @@
-//= require jquery.cookie
-
 /**
  * Dynamic header generation and event bindings for header actions.
  */
@@ -27,11 +25,7 @@ if (!window.dashboard) {
  */
 dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId) {
   stageData = stageData || {};
-  // Progress Data is only provided for signed in users. Otherwise, client gets progress data from cookie
-  if (progressData === null) {
-    progressData = getSummarizedProgressForAnonymousUser();
-  }
-
+  progressData = progressData || {};
   levelProgress = progressData.levels || {};
 
   $('.header_text').first().text(stageData.title);
@@ -419,36 +413,3 @@ dashboard.header.updateTimestamp = function () {
     $('.project_updated_at').text("Not saved"); // TODO i18n
   }
 };
-
-/**
- * Get the user progress for an anonymous user from the client side cookie
- * @return Object that is a representation of the user's individual level progress
- */
-function getSummarizedProgressForAnonymousUser () {
-  var summarizedProgress = {};
-  var levelProgress = {};
-
-  summarizedProgress.lines = $.cookie('lines');
-
-  var allLevelsProgress = JSON.parse(decodeURIComponent($.cookie('progress')));
-  for(var level in allLevelsProgress) {
-    levelProgress[level] = {};
-    var individualLevelProgress = allLevelsProgress[level] || -1;
-
-    if (individualLevelProgress >= 1000) {
-      levelProgress[level].status = 'submitted';
-    } else if (individualLevelProgress >= 30) {
-      levelProgress[level].status = 'perfect';
-    } else if (individualLevelProgress >= 20) {
-      levelProgress[level].status = 'passed';
-    } else if (individualLevelProgress > 0) {
-      levelProgress[level].status = 'attempted';
-    } else {
-      levelProgress[level].status = 'not attempted';
-    }
-  }
-
-  summarizedProgress.levels = levelProgress;
-
-  return summarizedProgress;
-}

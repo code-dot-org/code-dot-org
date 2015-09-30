@@ -6,7 +6,7 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your company
+# Bring the Hour of Code to your company
 
 ## 1) Try the tutorials:
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
