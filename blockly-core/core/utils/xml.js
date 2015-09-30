@@ -239,9 +239,12 @@ Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
   var metrics = blockSpace.getMetrics();
   var width = metrics ? metrics.viewWidth : 0;
 
+  var padding_top = Blockly.BlockSpace.AUTO_LAYOUT_PADDING_TOP;
+  var padding_left = Blockly.BlockSpace.AUTO_LAYOUT_PADDING_LEFT;
+
   var cursor = {
-    x: Blockly.RTL ? width - 16 : 16,
-    y: 16
+    x: Blockly.RTL ? width - padding_left : padding_left,
+    y: padding_top
   };
 
   var positionBlock = function(block) {
@@ -266,8 +269,8 @@ Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
       // block absolutely using those. Otherwise, position the block
       // relative to the other relative blocks.
       if (!isNaN(blockX) || !isNaN(blockY)) {
-        blockX = isNaN(blockX) ? 16 : blockX;
-        blockY = isNaN(blockY) ? 16 : blockY;
+        blockX = isNaN(blockX) ? padding_left : blockX;
+        blockY = isNaN(blockY) ? padding_top : blockY;
 
         blockX = Blockly.RTL ? width - blockX : blockX;
 
