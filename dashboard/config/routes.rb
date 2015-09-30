@@ -178,7 +178,6 @@ Dashboard::Application.routes.draw do
   get '/admin/stats', to: 'reports#admin_stats', as: 'admin_stats'
   get '/admin/progress', to: 'reports#admin_progress', as: 'admin_progress'
   get '/admin/concepts', to: 'reports#admin_concepts', as: 'admin_concepts'
-  get '/admin/gallery', to: 'reports#admin_gallery', as: 'admin_gallery'
   get '/admin/assume_identity', to: 'reports#assume_identity_form', as: 'assume_identity_form'
   post '/admin/assume_identity', to: 'reports#assume_identity', as: 'assume_identity'
   get '/admin/lookup_section', to: 'reports#lookup_section', as: 'lookup_section'
