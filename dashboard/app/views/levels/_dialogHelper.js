@@ -43,7 +43,7 @@ window.dashboard.dialog = (function () {
     var dialog = new Dialog({
       body: content,
       onHidden: dialogHidden,
-      autoResizeScrollableElement: appOptions.autoResizeScrollableElement
+      autoResizeScrollableElement: appOptions.dialog.autoResizeScrollableElement
     });
 
     // Clicking the okay button in the dialog box dismisses it, and calls the callback.
