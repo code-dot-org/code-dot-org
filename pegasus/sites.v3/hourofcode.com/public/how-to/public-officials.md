@@ -6,7 +6,7 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-## How to bring the Hour of Code to your entire community.
+## Bring the Hour of Code to your entire community.
 
 ### Get every school participating, every student learning!
 

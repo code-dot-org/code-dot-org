@@ -316,7 +316,7 @@ class Documents < Sinatra::Base
   not_found do
     status 404
     path = resolve_template('views', settings.template_extnames, '/404')
-    document(path).tap{dont_cache}
+    document path
   end
 
   helpers(Dashboard) do

@@ -90,7 +90,7 @@ class Game < ActiveRecord::Base
   end
 
   def self.frequency_analysis
-    @@game_frequency_analysis ||= find_by_name("FrequencyAnalysis")
+    @@game_frequency_analysis ||= find_by_name("Frequency Analysis")
   end
 
   def unplugged?
