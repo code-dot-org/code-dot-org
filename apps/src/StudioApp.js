@@ -1515,7 +1515,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     enableLiveAutocompletion: true
   });
 
-  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg, options.dropletConfig);
+  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg);
   this.dropletTooltipManager.registerBlocksFromList(
     dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 

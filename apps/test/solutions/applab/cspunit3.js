@@ -144,30 +144,13 @@ module.exports = {
 
           var pixels = getColoredPixels(imageData, 400, 400);
 
-          // Diagram of which pixels we expect to be colored.
-          //
-          //   x->   1           1 1
-          //  y    9 0           2 2
-          //  |    9 0           4 5
-          //  v
-          //     0 0 0 0 0   0 0 0 0 0
-          //  74 0 1 1 1 1...1 1 1 1 0
-          //  75 0 1 1 1 1...1 1 1 1 0
-          //  76 0 1 1 0 0   0 0 1 1 0
-          //     0 1 1 0 0   0 0 1 1 0
-          //       ...           ...
-          //     0 1 1 0 0   0 0 1 1 0
-          //  98 0 1 1 0 0   0 0 1 1 0
-          //  99 0 1 1 1 1...1 1 1 1 0
-          // 100 0 1 1 1 1...1 1 1 1 0
-          //     0 0 0 0 0   0 0 0 0 0
-          //
           var expectedPixels = [];
           var x, y;
-          for (y = 74; y <= 75; y++) {
-            for (x = 99; x <= 125; x++) {
-              expectedPixels.push([x, y]);
-            }
+          for (x = 100; x <= 124; x++) {
+            expectedPixels.push([x, 74]);
+          }
+          for (x = 99; x <= 125; x++) {
+            expectedPixels.push([x, 75]);
           }
           for (y = 76; y <= 98; y++) {
             expectedPixels.push([99, y]);
@@ -175,10 +158,11 @@ module.exports = {
             expectedPixels.push([124, y]);
             expectedPixels.push([125, y]);
           }
-          for (y = 99; y <= 100; y++) {
-            for (x = 99; x <= 125; x++) {
-              expectedPixels.push([x, y]);
-            }
+          for (x = 99; x <= 125; x++) {
+            expectedPixels.push([x, 99]);
+          }
+          for (x = 100; x <= 124; x++) {
+            expectedPixels.push([x, 100]);
           }
           assert.deepEqual(pixels, expectedPixels);
 

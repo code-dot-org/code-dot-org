@@ -1,5 +1,6 @@
 name 'U3L01 Assessment1'
-title 'Free Response: Interpreting Instructions'
+title 'Free Response'
+
 markdown <<MARKDOWN
 Consider the algorithm you designed for today’s activity. Identify two instances where there may be multiple ways to interpret your instructions and suggest improvements that could be made to improve their clarity.
 

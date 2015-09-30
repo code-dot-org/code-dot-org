@@ -52,8 +52,6 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 - List things that use code in everyday life.
 - See tips for getting girls interested in computer science <a href="<%= resolve_url('https://code.org/girls') %>">here</a>.
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
-
 **Want more teaching ideas?** 
 Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators. 
 
@@ -116,7 +114,6 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 <p style="clear:both">&nbsp;</p>
 
 ## Other Hour of Code resources for educators:
-- Use this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) to organize your Hour of Code.
 - Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
 - Attend our [Educator's Guide to the Hour of Code webinar](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
 - Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.

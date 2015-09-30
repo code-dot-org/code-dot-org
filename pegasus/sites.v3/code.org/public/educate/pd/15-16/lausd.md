@@ -213,56 +213,6 @@ Water
 
 [**Back to the top**](#top)
 
-<a id="counselor-admin"></a>
-
-
-## Counselors & Administrators
-
-Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
-
-
-### Counselors##
-
-**Save the date**
-
-Monday, October 19, 2015 <br/>
-8:30am - 10:30am
-
-**Location**
-
-Los Angeles Unified School District<br/>
-333 So. Beaudry Avenue<br/>
-Room 204 - 2nd floor <br/>
-Los Angeles 90017<br/>
-
-**What to bring**
-
-Snacks
-<br/>
-Water
-
-### Administrators##
-
-**Save the date**
-
-Tuesday, October 20, 2015 <br/>
-8:30am - 10:30am
-
-**Location**
-
-Los Angeles Unified School District<br/>
-333 So. Beaudry Avenue<br/>
-Room 202 - 2nd floor <br/>
-Los Angeles 90017<br/>
-
-**What to bring**
-
-Snacks
-<br/>
-Water
-
-[**Back to the top**](#top)
-
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.
 

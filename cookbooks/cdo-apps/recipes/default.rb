@@ -12,7 +12,6 @@ apt_package 'libmagickcore-dev'
 apt_package 'libmagickwand-dev'
 apt_package 'pdftk'
 apt_package 'enscript'
-apt_package 'libsqlite3-dev'
 
 include_recipe 'cdo-apps::dashboard'
 include_recipe 'cdo-apps::pegasus'

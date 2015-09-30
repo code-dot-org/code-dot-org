@@ -53,7 +53,7 @@ def saucelabs_browser
     puts "Got browser in #{Time.now.to_i - start_time}s with #{retries} retries"
   end
 
-  puts "Browser: #{browser.inspect}"
+  puts "Browser: #{browser}"
 
   # Maximize the window on desktop, as some tests require 1280px width.
   unless ENV['MOBILE']
@@ -68,7 +68,7 @@ def saucelabs_browser
   browser
 end
 
-def get_browser
+def browser
   if ENV['TEST_LOCAL'] == 'true'
     # This drives a local installation of ChromeDriver running on port 9515, instead of Saucelabs.
     local_browser
@@ -77,10 +77,8 @@ def get_browser
   end
 end
 
-browser = nil
-
 Before do
-  browser = @browser ||= get_browser
+  @browser ||= browser
   @browser.manage.delete_all_cookies
 
   unless ENV['TEST_LOCAL'] == 'true'
@@ -112,5 +110,5 @@ After do |scenario|
 end
 
 at_exit do
-  browser.quit unless browser.nil?
+  @browser.quit
 end

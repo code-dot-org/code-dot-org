@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.4'
@@ -114,7 +115,6 @@ gem 'redcarpet', '~> 3.2.3'
 gem 'geocoder'
 
 gem 'rmagick'
-gem 'mini_magick'
 
 gem 'acts_as_list'
 
@@ -170,5 +170,3 @@ gem 'viddl-rb', group: [:development, :staging, :levelbuilder]
 gem 'net-ssh'
 gem 'net-scp'
 gem 'httparty'
-
-gem 'jquery-cookie-rails'
