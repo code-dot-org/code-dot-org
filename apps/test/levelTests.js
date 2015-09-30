@@ -89,6 +89,7 @@ describe('Level tests', function() {
       // If this becomes insufficient, we might be able to require the project.js
       // file from shared here.
       project: {
+        clearHtml: function() {},
         getCurrentId: function () { return 'fake_id'; },
         exceedsAbuseThreshold: function () { return false; },
         isEditing: function () { return true; }
