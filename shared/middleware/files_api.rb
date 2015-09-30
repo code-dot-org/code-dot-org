@@ -35,11 +35,10 @@ class FilesApi < Sinatra::Base
     end
   end
 
-  # TODO - move to auth_helpers?
-  def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, abuse_score)
-    return true if admin? or abuse_score.nil?
+  def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
+    return true if admin? or new_score.nil?
 
-    get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) < abuse_score.to_i
+    get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) < new_score.to_i
   end
 
   helpers do
