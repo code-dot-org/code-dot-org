@@ -6,7 +6,7 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# Hour of Code event guide
+# How to organize an Hour of Code event
 
 Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event. 
 

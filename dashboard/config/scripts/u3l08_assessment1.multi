@@ -10,3 +10,10 @@ wrong 'Values do not need to be provided to a function with parameters in any pa
 markdown <<MARKDOWN
 
 MARKDOWN
+teacher_markdown <<MARKDOWN
+Correct answers:
+
+Functions with parameters can be used to prevent the creation of duplicated code.
+
+Parameters help generalize the solution of a specific problem.
+MARKDOWN
