@@ -40,9 +40,8 @@ class ReportAbuseController < ApplicationController
         'rack.input' => StringIO.new()
         )
 
-      abuse_score = JSON.parse(body[0])["abuseScore"]
+      abuse_score = JSON.parse(body[0])["abuse_score"]
 
-      # TODO - rationalize abuseScore vs abuse_score
       FilesApi.call(
         'REQUEST_METHOD' => 'PUT',
         'PATH_INFO' => assets_path,
