@@ -76,3 +76,18 @@ dashboard.clientState.addLines = function(addedLines) {
     {expires: dashboard.clientState.EXPIRY_DAYS});
 };
 })(window, $);
+
+dashboard.clientState.trackProgress = function(levelId, lines, testResult, passingScore, scriptId) {
+  var oldResult = dashboard.clientState.level_progress(levelId)
+  if (testResult > old_result) {
+    dashboard.clientState.setLevelProgress(levelId, testResult);
+  }
+
+  if (lines > 0 && testResult >= passingScore) {
+    dashboard.clientState.addLines(lines);
+  }
+
+  if (scriptId) {
+    dashboard.clientState.addScript(scriptId);
+  }
+}

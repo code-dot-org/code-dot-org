@@ -242,6 +242,7 @@ class Blockly < Level
                              cacheBust: level.class.cache_bust,
                              droplet: level.game.try(:uses_droplet?),
                              pretty: Rails.configuration.pretty_apps ? '' : '.min',
+
                          })
     end
     options[:level].freeze
