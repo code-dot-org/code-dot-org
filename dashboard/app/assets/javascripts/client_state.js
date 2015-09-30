@@ -76,4 +76,3 @@ dashboard.clientState.addLines = function(addedLines) {
   $.cookie('lines', String(newLines),
     {expires: dashboard.clientState.EXPIRY_DAYS});
 };
-
