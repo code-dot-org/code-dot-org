@@ -232,7 +232,8 @@ StudioApp.prototype.init = function(config) {
       level_source_id: config.level_source_id,
       phone_share_url: config.send_to_phone_url,
       sendToPhone: config.sendToPhone,
-      twitter: config.twitter
+      twitter: config.twitter,
+      app: config.app
     });
   }
 
@@ -1437,8 +1438,17 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   var buttonRow = runButton.parentElement;
   var belowViz = document.getElementById('belowVisualization');
 
-  // For share page on mobile, do not show this part.
-  if (!options.embed && !this.share) {
+  // For share page on mobile
+  if (options.embed || (this.share && (dom.isMobile() || options.app === 'applab'))) {
+    if (options.app === 'applab') {
+      buttonRow.style.display = 'none';
+      belowViz.parentElement.style.margin = 'auto';
+      document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
+      if (dom.isMobile()) {
+        document.body.style.backgroundColor = '#000';
+      }
+    }
+  } else {
     var openWorkspace = document.createElement('button');
     openWorkspace.setAttribute('id', 'open-workspace');
     openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
@@ -1469,13 +1479,6 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     });
 
     buttonRow.appendChild(openWorkspace);
-  } else {
-    buttonRow.style.display = 'none';
-    belowViz.parentElement.style.margin = 'auto';
-    document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
-    if (dom.isMobile()) {
-      document.body.style.backgroundColor = '#000';
-    }
   }
 };
 
