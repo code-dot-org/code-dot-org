@@ -101,6 +101,12 @@ class AssetsTest < Minitest::Test
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, first_asset)
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, second_asset)
 
+    # set to be the same
+    put_abuse(@assets, channel_id, 20)
+    assert @assets.last_response.successful?
+    assert_equal 20, asset_bucket.get_abuse_score(channel_id, first_asset)
+    assert_equal 20, asset_bucket.get_abuse_score(channel_id, second_asset)
+
     # non-admin can't decrement
     put_abuse(@assets, channel_id, 0)
     refute @assets.last_response.successful?
