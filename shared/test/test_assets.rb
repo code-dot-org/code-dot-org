@@ -11,7 +11,7 @@ ENV['RACK_ENV'] = 'test'
 class AssetsTest < Minitest::Test
 
   def setup
-    init_apis
+    @channels, @assets = init_apis
   end
 
 
@@ -70,112 +70,101 @@ class AssetsTest < Minitest::Test
     delete_channel(@channels, channel_id)
   end
 
-  # abuse scenarios to test
-  # - Report abuse for project with existing assets. All assets get abuse score
-  # - Add asset to abusive project. New asset inherits projects abuse score
-  # - Reset abuse on a project. All existing assets abuse scores are reset
-  # - copy assets. new assets have no abuse score
-  # - Can view absusive asset as owner
-  # - Can view absusive asset as teacher
-  # - Can view abusive asset as admin
-  # - Can not view abusive asset as non-owner student (404)
-
-
   def test_set_abuse_score
     channel_id = create_channel(@channels)
     asset_bucket = AssetBucket.new
 
-    # create a couple assets without an abuse score
-    put(@assets, channel_id, 'asset1.jpg', 'stub-image-contents', 'image/jpeg')
-    put(@assets, channel_id, 'asset2.jpg', 'stub-image-contents', 'image/jpeg')
+    first_asset = 'asset1.jpg'
+    second_asset = 'asset2.jpg'
 
-    result = get(@assets, channel_id, 'asset1.jpg')
+    # create a couple assets without an abuse score
+    put(@assets, channel_id, first_asset, 'stub-image-contents', 'image/jpeg')
+    put(@assets, channel_id, second_asset, 'stub-image-contents', 'image/jpeg')
+
+    result = get(@assets, channel_id, first_asset)
     assert_equal 'stub-image-contents', result
 
-    assert_equal 0, asset_bucket.get_abuse_score(channel_id, 'asset1.jpg')
-    assert_equal 0, asset_bucket.get_abuse_score(channel_id, 'asset2.jpg')
+    assert_equal 0, asset_bucket.get_abuse_score(channel_id, first_asset)
+    assert_equal 0, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # set abuse score
     put_abuse(@assets, channel_id, 10)
-    assert_equal 10, asset_bucket.get_abuse_score(channel_id, 'asset1.jpg')
-    assert_equal 10, asset_bucket.get_abuse_score(channel_id, 'asset2.jpg')
+    assert_equal 10, asset_bucket.get_abuse_score(channel_id, first_asset)
+    assert_equal 10, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # make sure we didnt blow away contents
-    result = get(@assets, channel_id, 'asset1.jpg')
+    result = get(@assets, channel_id, first_asset)
     assert_equal 'stub-image-contents', result
 
     # increment
     put_abuse(@assets, channel_id, 20)
-    assert_equal 20, asset_bucket.get_abuse_score(channel_id, 'asset1.jpg')
-    assert_equal 20, asset_bucket.get_abuse_score(channel_id, 'asset2.jpg')
+    assert_equal 20, asset_bucket.get_abuse_score(channel_id, first_asset)
+    assert_equal 20, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # non-admin can't decrement
     put_abuse(@assets, channel_id, 0)
     refute @assets.last_response.successful?
-    assert_equal 20, asset_bucket.get_abuse_score(channel_id, 'asset1.jpg')
-    assert_equal 20, asset_bucket.get_abuse_score(channel_id, 'asset2.jpg')
+    assert_equal 20, asset_bucket.get_abuse_score(channel_id, first_asset)
+    assert_equal 20, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # admin can decrement
     FilesApi.any_instance.stubs(:admin?).returns(true)
     put_abuse(@assets, channel_id, 0)
     assert @assets.last_response.successful?
-    assert_equal 0, asset_bucket.get_abuse_score(channel_id, 'asset1.jpg')
-    assert_equal 0, asset_bucket.get_abuse_score(channel_id, 'asset2.jpg')
+    assert_equal 0, asset_bucket.get_abuse_score(channel_id, first_asset)
+    assert_equal 0, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # make sure we didnt blow away contents
-    result = get(@assets, channel_id, 'asset1.jpg')
+    result = get(@assets, channel_id, first_asset)
     assert_equal 'stub-image-contents', result
+    FilesApi.any_instance.unstub(:admin?)
+
+    delete(@assets, channel_id, first_asset)
+    delete(@assets, channel_id, second_asset)
+    delete_channel(@channels, channel_id)
   end
 
-  def test_can_view_abusive_assets?
+  def test_viewing_abusive_assets
+    _, non_owner_assets = init_apis
     channel_id = create_channel(@channels)
-    fake_user_id = 1
-    put(@assets, channel_id, 'abusive_asset.jpg', 'stub-image-contents', 'image/jpeg')
+
+    asset_name = 'abusive_asset.jpg'
+
+    put(@assets, channel_id, asset_name, 'stub-image-contents', 'image/jpeg')
+
+    # owner can view
+    get(@assets, channel_id, asset_name)
+    assert @assets.last_response.successful?
+
+    # non-owner can view
+    get(non_owner_assets, channel_id, asset_name)
+    assert non_owner_assets.last_response.successful?
+
+    # set abuse
     put_abuse(@assets, channel_id, 10)
 
-    stub(:current_user_id, fake_user_id) do
+    # owner can view
+    get(@assets, channel_id, asset_name)
+    assert @assets.last_response.successful?
 
-      # owner can view
-      stub(:owns_channel?, true) do
-        assert_equal true, can_view_abusive_assets?(channel_id)
-      end
+    # non-owner cannot view
+    get(non_owner_assets, channel_id, asset_name)
+    refute non_owner_assets.last_response.successful?
 
-      # admin can view
-      stub(:owns_channel?, false) do
-        stub(:admin?, true) do
-          assert_equal true, can_view_abusive_assets?(channel_id)
-        end
-      end
+    # admin can view
+    FilesApi.any_instance.stubs(:admin?).returns(true)
+    get(@assets, channel_id, asset_name)
+    assert @assets.last_response.successful?
+    FilesApi.any_instance.unstub(:admin?)
 
-      # student's teacher can view
-      stub(:owns_channel?, false) do
-        stub(:admin?, false) do
-          stub(:teaches_student?, true) do
-            assert_equal true, can_view_abusive_assets?(channel_id)
-          end
-        end
-      end
+    # teacher can view
+    FilesApi.any_instance.stubs(:teaces_student?).returns(true)
+    get(@assets, channel_id, asset_name)
+    assert @assets.last_response.successful?
+    FilesApi.any_instance.unstub(:teaces_student?)
 
-      # non-teacher can't view
-      stub(:owns_channel?, false) do
-        stub(:admin?, false) do
-          stub(:teaches_student?, false) do
-            assert_equal false, can_view_abusive_assets?(channel_id)
-          end
-        end
-      end
-    end
-
-    # anonymous user can't view
-    stub(:current_user_id, nil) do
-      stub(:owns_channel?, false) do
-        stub(:admin?, false) do
-          stub(:teaches_student?, false) do
-            assert_equal false, can_view_abusive_assets?(channel_id)
-          end
-        end
-      end
-    end
+    delete(@assets, channel_id, asset_name)
+    delete_channel(@channels, channel_id)
   end
 
   def test_assets_copy_all
@@ -191,6 +180,8 @@ class AssetsTest < Minitest::Test
 
     put(@assets, src_channel_id, image_filename, image_body, 'image/jpeg')
     put(@assets, src_channel_id, sound_filename, sound_body, 'audio/mpeg')
+    put_abuse(@assets, src_channel_id, 10)
+
     copy_file_infos = JSON.parse(copy_all(src_channel_id, dest_channel_id))
     dest_file_infos = JSON.parse(list(@assets, dest_channel_id))
 
@@ -198,6 +189,10 @@ class AssetsTest < Minitest::Test
     assert_fileinfo_equal(expected_sound_info, copy_file_infos[1])
     assert_fileinfo_equal(expected_image_info, dest_file_infos[0])
     assert_fileinfo_equal(expected_sound_info, dest_file_infos[1])
+
+    # abuse score didn't carry over
+    assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, image_filename)
+    assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, sound_filename)
 
     delete(@assets, src_channel_id, image_filename)
     delete(@assets, src_channel_id, sound_filename)
@@ -210,7 +205,7 @@ class AssetsTest < Minitest::Test
   def test_assets_auth
     owner_channel_id = create_channel(@channels)
 
-    non_owner_assets = Rack::Test::Session.new(Rack::MockSession.new(FilesApi, "studio.code.org"))
+    _, non_owner_assets = init_apis
 
     filename = 'dog.jpg'
     body = 'stub-image-contents'
@@ -286,15 +281,16 @@ class AssetsTest < Minitest::Test
   private
 
   def init_apis
-    @channels ||= Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
+    channels ||= Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
 
     # Make sure the assets api has the same storage id cookie used by the channels api.
-    @channels.get '/v3/channels'
-    cookies = @channels.last_response.headers['Set-Cookie']
+    channels.get '/v3/channels'
+    cookies = channels.last_response.headers['Set-Cookie']
     assets_mock_session = Rack::MockSession.new(FilesApi, "studio.code.org")
     assets_mock_session.cookie_jar.merge(cookies)
-    @rms = assets_mock_session
-    @assets ||= Rack::Test::Session.new(assets_mock_session)
+    assets ||= Rack::Test::Session.new(assets_mock_session)
+
+    [channels, assets]
   end
 
   def create_channel(channels)

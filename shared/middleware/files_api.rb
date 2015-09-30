@@ -166,15 +166,6 @@ class FilesApi < Sinatra::Base
     no_content
   end
 
-  # two scenarios
-  # (1) I have an abusive project and add an asset. New asset should inherit projects abuse score
-  # (2) Someone reports abuse on a project. All existing assets should inherit score
-  #     - Only admins should be able to decrease this score
-
-  # put %r{/v3/(assets|sources)/([^/]+)/abuse$} do |endpoint, encrypted_channel_id, filename|
-  #
-  # end
-
   #
   # GET /v3/sources/<channel-id>/<filename>/versions
   #
