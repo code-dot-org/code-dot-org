@@ -226,6 +226,12 @@ div#visualizationResizeBar {
   }
 }
 
+#visualizationColumn.chromelessShare {
+  #designToggleRow, #gameButtons {
+    display: none;
+  }
+}
+
 #divApplab {
   overflow: hidden;
   outline: none;
