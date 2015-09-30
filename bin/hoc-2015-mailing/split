@@ -28,11 +28,10 @@ end
 csv_path = ARGV[0]
 sample_sizes = ARGV[1..-1].map(&:to_i)
 
-input_table = CSV.read(csv_path, headers: true)
+input_rows = CSV.read(csv_path)
 
 # shuffle and slice instead of sample because there's no sample!
 
-input_rows = input_table.to_a
 input_columns = input_rows.shift # first row is the header
 
 input_rows.shuffle!
