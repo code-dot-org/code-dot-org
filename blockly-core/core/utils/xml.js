@@ -44,7 +44,8 @@ Blockly.Xml.blockSpaceToDom = function(blockSpace) {
   var xml = Blockly.isMsie() ? document.createElementNS(null, 'xml') :
                                document.createElement("xml");
   var blocks = blockSpace.getTopBlocks(true);
-  for (var i = 0, block; block = blocks[i]; i++) {
+  for (var i = 0, block; i < blocks.length; i++) {
+    block = blocks[i];
     var element = Blockly.Xml.blockToDom(block);
     xml.appendChild(element);
   }
@@ -82,8 +83,10 @@ Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
       element.appendChild(container);
     }
   }
-  for (x = 0; input = block.inputList[x]; x++) {
-    for (y = 0; title = input.titleRow[y]; y++) {
+  for (x = 0; x < block.inputList.length; x++) {
+    input = block.inputList[x];
+    for (y = 0; y < input.titleRow.length; y++) {
+      title = input.titleRow[y];
       titleToDom(title);
     }
   }
@@ -99,7 +102,8 @@ Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
   }
 
   var setInlineAttribute = false;
-  for (i = 0; input = block.inputList[i]; i++) {
+  for (i = 0; i < block.inputList.length; i++) {
+    input = block.inputList[i];
     var empty = true;
     if (input.type == Blockly.DUMMY_INPUT) {
       continue;
@@ -258,7 +262,8 @@ Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
   // hidden, second pass positions the hidden
   var hiddenBlocks = [];
 
-  for (var i = 0; xmlChild = xml.childNodes[i]; i++) {
+  for (var i = 0; i < xml.childNodes.length; i++) {
+    xmlChild = xml.childNodes[i];
     if (xmlChild.nodeName.toLowerCase() === 'block') {
       block = Blockly.Xml.domToBlock(blockSpace, xmlChild);
 
@@ -337,7 +342,8 @@ Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {
   }
 
   var blockChild = null;
-  for (var x = 0, xmlChild; xmlChild = xmlBlock.childNodes[x]; x++) {
+  for (var x = 0, xmlChild; x < xmlBlock.childNodes.length; x++) {
+    xmlChild = xmlBlock.childNodes[x];
     if (xmlChild.nodeType == 3 && xmlChild.data.match(/^\s*$/)) {
       // Extra whitespace between tags does not concern us.
       continue;
@@ -346,8 +352,8 @@ Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {
 
     // Find the first 'real' grandchild node (that isn't whitespace).
     var firstRealGrandchild = null;
-    for (var y = 0, grandchildNode; grandchildNode = xmlChild.childNodes[y];
-         y++) {
+    for (var y = 0, grandchildNode; y < xmlChild.childNodes.length; y++) {
+      grandchildNode = xmlChild.childNodes[y];
       if (grandchildNode.nodeType != 3 || !grandchildNode.data.match(/^\s*$/)) {
         firstRealGrandchild = grandchildNode;
       }
@@ -443,7 +449,8 @@ Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {
  * @param {!Element} xmlBlock XML block element.
  */
 Blockly.Xml.deleteNext = function(xmlBlock) {
-  for (var x = 0, child; child = xmlBlock.childNodes[x]; x++) {
+  for (var x = 0, child; x < xmlBlock.childNodes.length; x++) {
+    child = xmlBlock.childNodes[x];
     if (child.nodeName.toLowerCase() == 'next') {
       xmlBlock.removeChild(child);
       break;
