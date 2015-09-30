@@ -30,13 +30,27 @@ class ReportAbuseController < ApplicationController
 
     unless params[:channel_id].blank?
       channels_path = "/v3/channels/#{params[:channel_id]}/abuse"
+      assets_path = "/v3/assets/#{params[:channel_id]}"
 
-      ChannelsApi.call(
+      _, _, body = ChannelsApi.call(
         'REQUEST_METHOD' => 'POST',
         'PATH_INFO' => channels_path,
         'REQUEST_PATH' => channels_path,
+        'HTTP_COOKIE' => request.env['HTTP_COOKIE'],
         'rack.input' => StringIO.new()
         )
+
+      abuse_score = JSON.parse(body[0])["abuseScore"]
+
+      # TODO - rationalize abuseScore vs abuse_score
+      FilesApi.call(
+        'REQUEST_METHOD' => 'PUT',
+        'PATH_INFO' => assets_path,
+        'REQUEST_PATH' => assets_path,
+        'QUERY_STRING' => "abuse_score=#{abuse_score}",
+        'HTTP_COOKIE' => request.env['HTTP_COOKIE'],
+        'rack.input' => StringIO.new()
+      )
     end
 
     redirect_to "https://support.code.org"
