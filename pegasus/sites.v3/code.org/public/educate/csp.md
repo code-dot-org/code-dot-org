@@ -56,7 +56,7 @@ We have forums for educators to discuss and trade ideas about CSP and talk about
 Several documents describe the overarching themes and direction of the course.
 
 - [One-pager](/files/programs/CSP_1-pager_final.pdf)
-- [Curriculum Syllabus and Overview](/files/CSPSyllabusJune2015.pdf) (rev. June. 2015)
+- [Curriculum Syllabus and Overview](/files/CSPSyllabusSept2015.pdf) (rev. Sept. 2015)
 - [Professional development overview](/files/CSPPDoverview.pdf)
 
 
