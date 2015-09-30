@@ -119,7 +119,6 @@ end
 
 # TODO - maybe rename? prob move to auth_helpers?
 def can_view_abusive_assets?(encrypted_channel_id)
-  return false unless current_user_id
   return true if owns_channel?(encrypted_channel_id) or admin?
 
   # teachers can see abusive assets of their students
