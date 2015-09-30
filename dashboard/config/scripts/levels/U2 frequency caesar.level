@@ -1,0 +1,14 @@
+<FrequencyAnalysis>
+  <config><![CDATA[{
+  "game_id": 47,
+  "created_at": "2015-09-30T01:11:12.479Z",
+  "level_num": "custom",
+  "user_id": 42,
+  "properties": {
+    "instructions": "Instructions",
+    "markdown_instructions": "# Break a Caesar cipher!\r\n\r\nThis tool lets you play with text and do substitution ciphers. It also shows you a frequency analysis of the input text. (We’ll look at that more in a later lesson.) You can use this to either encrypt a message or decrypt it.\r\n\r\n# Do this\r\n- Load the **Sample message (easy)** from the message dropdown. This will load a message that has been encrypted with a Caesar cipher.\r\n\r\n![](https://images.code.org/336a6a68cc34636df21fe5ad9f43992c-image-1443566879847.gif)\r\n\r\n- Using the buttons in the Caesar substitution tab, you can shift the alphabet forwards or backwards to try to unscramble the message.\r\n\r\n![](https://images.code.org/1783d62a944fd758cc19c5d0f73ec2c4-image-1443567014825.gif)\r\n\r\nSee how long it takes you to crack the cipher! Is this a good method of encrypting secret data?\r\n",
+    "skip_dialog": true,
+    "href": "frequency/frequency.html"
+  }
+}]]></config>
+</FrequencyAnalysis>
