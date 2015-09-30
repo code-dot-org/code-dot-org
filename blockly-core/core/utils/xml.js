@@ -19,10 +19,6 @@
 
 /* global Blockly, goog */
 
-// Ignore "Expected a conditional expression and instead saw an
-// assignment" warnings.
-/* jshint -W084 */
-
 /**
  * @fileoverview XML reader and writer.
  * @author fraser@google.com (Neil Fraser)
