@@ -227,7 +227,9 @@ namespace :install do
 
   task :hooks do
     files = [
-      'pre-commit'
+      'pre-commit',
+      'post-checkout',
+      'post-merge',
     ]
     git_path = ".git/hooks"
 

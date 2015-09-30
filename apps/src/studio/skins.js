@@ -8,6 +8,7 @@
 var skinsBase = require('../skins');
 var msg = require('./locale');
 var constants = require('./constants');
+var studioApp = require('../StudioApp').singleton;
 
 var RANDOM_VALUE = constants.RANDOM_VALUE;
 var HIDDEN_VALUE = constants.HIDDEN_VALUE;
@@ -245,7 +246,7 @@ function loadHoc2015(skin, assetUrl) {
   skin.wallCollisionRectWidth  = 30;
   skin.wallCollisionRectHeight = 20;
 
-  // When movement is grid aligned, sprites coordinates are the top-left corner
+  // When movement is grid aligned, sprite coordinates are the top-left corner
   // of the sprite, and match the top-left corner of the grid square in question.
   // When we draw the sprites bigger, this means the sprite's "feet" will usually
   // be too far to the right and below that square.  These offsets are a chance
@@ -288,32 +289,108 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.background1 = {
     background: skin.assetUrl('background_background1.jpg'),
-    tiles: skin.assetUrl('tiles_background1.png')
+    tiles: skin.assetUrl('tiles_background1.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_background1.png'),
+    jumboTilesAddOffset: -5,
+    jumboTilesSize: 60,
+    jumboTilesRows: 4,
+    jumboTilesCols: 4
   };
   skin.background2 = {
     background: skin.assetUrl('background_background2.jpg'),
-    tiles: skin.assetUrl('tiles_background2.png')
+    tiles: skin.assetUrl('tiles_background2.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_background2.png'),
+    jumboTilesAddOffset: -5,
+    jumboTilesSize: 60,
+    jumboTilesRows: 4,
+    jumboTilesCols: 4
   };
   skin.background3 = {
     background: skin.assetUrl('background_background3.jpg'),
-    tiles: skin.assetUrl('tiles_background3.png')
+    tiles: skin.assetUrl('tiles_background3.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_background3.png'),
+    jumboTilesAddOffset: -5,
+    jumboTilesSize: 60,
+    jumboTilesRows: 4,
+    jumboTilesCols: 4
   };
 
-  skin.border = 
-    [[1, 1, 1, 1, 1, 1, 1, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], 
-     [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 1, 1, 1, 1, 1, 1, 1]];
-  skin.maze = 
-    [[1, 0, 0, 0, 0, 0, 0, 1], [0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0,0, 0], [0, 0, 1, 0, 1, 0, 0, 0],
-     [0, 0, 1, 0,0,0,0, 0], [0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0], [1, 0, 0, 0, 1, 0, 0, 1]];
-  skin.maze2 = 
-    [[0, 0, 0, 0, 0, 0, 0, 0], 
-     [0, 1, 1, 1, 0, 1, 1, 0], 
-     [0, 1, 0, 0, 0, 0, 1, 0], 
-     [0, 1, 0, 1, 1, 0, 1, 0],
-     [0, 1, 0, 1, 1, 0, 1, 0], 
-     [0, 1, 0, 0, 0, 0, 1, 0], 
-     [0, 1, 1, 1, 0, 1, 1, 0], 
-     [0, 0, 0, 0, 0, 0, 0, 0]];
+  // It's possible to enlarge the rendering of some wall tiles so that they
+  // overlap each other a little.  Define a bounding rectangle for the source
+  // tiles that get this treatment.
+
+  skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
+
+  skin.walls_blank = 
+    [[0,  0,  0,  0,  0,  0,  0,  0], 
+     [0,  0,  0,  0,  0,  0,  0,  0], 
+     [0,  0,  0,  0,  0,  0,  0,  0], 
+     [0,  0,  0,  0,  0,  0,  0,  0],  
+     [0,  0,  0,  0,  0,  0,  0,  0], 
+     [0,  0,  0,  0,  0,  0,  0,  0],   
+     [0,  0,  0,  0,  0,  0,  0,  0],  
+     [0,  0,  0,  0,  0,  0,  0,  0]];
+
+  skin.walls_circle = 
+    [[0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00], 
+     [0x00, 0x11, 0x02, 0x03,  0x00,  0x44, 0x45, 0x00], 
+     [0x00, 0x04, 0x00, 0x00,  0x00,  0x00, 0x03, 0x00], 
+     [0x00, 0x14, 0x00, 0x121, 0x121, 0x00, 0x05, 0x00],
+     [0x00, 0x02, 0x00, 0x121, 0x121, 0x00, 0x15, 0x00], 
+     [0x00, 0x03, 0x00, 0x00,  0x00,  0x00, 0x02, 0x00], 
+     [0x00, 0x24, 0x25, 0x02,  0x00,  0x34, 0x35, 0x00], 
+     [0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00]];
+
+  skin.walls_circle_alt = 
+    [[0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00], 
+     [0x00, 0x200, 0x213, 0x213, 0x00, 0x213, 0x201, 0x00], 
+     [0x00, 0x212, 0x00,  0x00,  0x00, 0x00,  0x212, 0x00], 
+     [0x00, 0x212, 0x00,  0x21,  0x21, 0x00,  0x212, 0x00],
+     [0x00, 0x212, 0x00,  0x21,  0x21, 0x00,  0x212, 0x00], 
+     [0x00, 0x212, 0x00,  0x00,  0x00, 0x00,  0x212, 0x00], 
+     [0x00, 0x202, 0x213, 0x213, 0x00, 0x213, 0x203, 0x00], 
+     [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00]];
+
+  skin.walls_horizontal = 
+    [[0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0, 0x02, 0x03, 0x04, 0x00, 0x24, 0x25, 0x00], 
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0, 0x10, 0x00, 0x34, 0x35, 0x20, 0x23, 0x00],
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0, 0x03, 0x02, 0x22, 0x20, 0x21, 0x00, 0x00], 
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]];
+
+  skin.walls_grid = 
+    [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x21, 0x00, 0x10, 0x00, 0x20, 0x00, 0x03], 
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x02, 0x00, 0x11, 0x00, 0x21, 0x00, 0x02],
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x03, 0x00, 0x20, 0x00, 0x22, 0x00, 0x11],
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x10, 0x00, 0x21, 0x00, 0x23, 0x00, 0x10]];
+
+  skin.walls_blobs = 
+    [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x03, 0x03, 0x00, 0x00, 0x00, 0x22, 0x00], 
+     [0x00, 0x03, 0x03, 0x00, 0x00, 0x10, 0x10, 0x00], 
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x10, 0x10, 0x00],  
+     [0x00, 0x00, 0x02, 0x02, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x00, 0x02, 0x02, 0x00, 0x00, 0x00, 0x23],   
+     [0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x21, 0x21],  
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x21, 0x21]];
+
+  // Sounds.
+  skin.character1sound1 = [skin.assetUrl('character1sound1.mp3'), skin.assetUrl('wall.ogg')];
+  skin.character1sound2 = [skin.assetUrl('character1sound2.mp3'), skin.assetUrl('wall.ogg')];
+  skin.character1sound3 = [skin.assetUrl('character1sound3.mp3'), skin.assetUrl('wall.ogg')];
+  skin.character1sound4 = [skin.assetUrl('character1sound4.mp3'), skin.assetUrl('wall.ogg')];
+
+  studioApp.loadAudio(skin.character1sound1, 'character1sound1');
+  studioApp.loadAudio(skin.character1sound2, 'character1sound2');
+  studioApp.loadAudio(skin.character1sound3, 'character1sound3');
+  studioApp.loadAudio(skin.character1sound4, 'character1sound4');
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   skin.wallChoices = [
