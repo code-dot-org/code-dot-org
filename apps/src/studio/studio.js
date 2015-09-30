@@ -1715,6 +1715,8 @@ Studio.reset = function(first) {
   Studio.scoreText = null;
   document.getElementById('score')
     .setAttribute('visibility', 'hidden');
+  document.getElementById('floatingScore')
+    .setAttribute('visibility', 'hidden');
   document.getElementById('titleScreenTitle')
     .setAttribute('visibility', 'hidden');
   document.getElementById('titleScreenTextGroup')
