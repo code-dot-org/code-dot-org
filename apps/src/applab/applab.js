@@ -489,8 +489,13 @@ function handleExecutionError(err, lineNumber) {
     // this while executing (in which case, it would already have been selected)
     codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
   }
-  if (!lineNumber && Applab.JSInterpreter) {
-    lineNumber = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
+  if (Applab.JSInterpreter) {
+    // Select code that just executed:
+    Applab.JSInterpreter.selectCurrentCode();
+    // Grab line number if we don't have one already:
+    if (!lineNumber) {
+      lineNumber = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
+    }
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = err;
@@ -574,6 +579,7 @@ function extendHandleClearPuzzle() {
     AppStorage.populateTable(level.dataTables, true); // overwrite = true
     AppStorage.populateKeyValue(level.dataProperties, true); // overwrite = true
     studioApp.resetButtonClick();
+    annotationList.clearRuntimeAnnotations();
   };
 }
 

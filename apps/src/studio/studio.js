@@ -1428,6 +1428,15 @@ var arrangeStartBlocks = function (config) {
   }
 };
 
+function extendHandleClearPuzzle() {
+  var orig = studioApp.handleClearPuzzle.bind(studioApp);
+  studioApp.handleClearPuzzle = function (config) {
+    orig(config);
+    studioApp.resetButtonClick();
+    annotationList.clearRuntimeAnnotations();
+  };
+}
+
 /**
  * Initialize Blockly and the Studio app.  Called on page load.
  */
@@ -1435,6 +1444,7 @@ Studio.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
+  extendHandleClearPuzzle();
 
   Studio.projectiles = [];
   Studio.items = [];
@@ -2157,8 +2167,13 @@ function handleExecutionError(err, lineNumber) {
 
     codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
   }
-  if (!lineNumber && Studio.JSInterpreter) {
-    lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
+  if (Studio.JSInterpreter) {
+    // Select code that just executed:
+    Studio.JSInterpreter.selectCurrentCode();
+    // Grab line number if we don't have one already:
+    if (!lineNumber) {
+      lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
+    }
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Studio.executionError = err;
