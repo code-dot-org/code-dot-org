@@ -13,12 +13,17 @@ var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteP
  * Store for finding tooltips for blocks
  * @constructor
  */
-function DropletTooltipManager(appMsg) {
+function DropletTooltipManager(appMsg, dropletConfig) {
   /**
    * App-specific strings (to override common msg)
    * @type {Object.<String, Function>}
    */
   this.appMsg = appMsg || {};
+
+  /**
+   * Droplet config for this app
+   */
+  this.dropletConfig = dropletConfig || {};
 
   /**
    * Map of block types to tooltip objects
