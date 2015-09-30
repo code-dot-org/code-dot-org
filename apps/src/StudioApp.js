@@ -1436,8 +1436,12 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
   // Chrome-less share page.
   if (this.share && options.app === 'applab') {
-    document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
-    document.getElementById('visualizationColumn').className = 'wireframeShare';
+    if (dom.isMobile()) {
+      document.getElementById('visualizationColumn').className = 'chromelessShare';
+    } else {
+      document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
+      document.getElementById('visualizationColumn').className = 'wireframeShare';
+    }
     document.body.style.backgroundColor = '#202B34';
   // For share page on mobile, do not show this part.
   } else if (!options.embed && !(this.share && dom.isMobile())) {
