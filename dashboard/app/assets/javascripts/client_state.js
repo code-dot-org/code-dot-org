@@ -1,6 +1,7 @@
 //= require jquery
 //= require jquery.cookie
-//= require client_state
+
+(function (window, $) {
 
 if (!window.dashboard) {
   window.dashboard = {};
@@ -75,3 +76,4 @@ dashboard.clientState.addLines = function(addedLines) {
   $.cookie('lines', String(newLines),
     {expires: dashboard.clientState.EXPIRY_DAYS});
 };
+})(window, $);
