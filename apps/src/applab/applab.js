@@ -1200,9 +1200,10 @@ Applab.execute = function() {
   var codeWhenRun;
   if (level.editCode) {
     codeWhenRun = studioApp.editor.getValue();
-    // TODO: determine if this is needed (worker also calls attachToSession)
+    // Our ace worker also calls attachToSession, but it won't run on IE9:
     var session = studioApp.editor.aceEditor.getSession();
     annotationList.attachToSession(session, studioApp.editor);
+    annotationList.clearRuntimeAnnotations();
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Applab.Globals namespace)
