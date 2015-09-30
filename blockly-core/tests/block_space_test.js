@@ -16,6 +16,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/* global Blockly, goog, assertEquals, assert */
+
 'use strict';
 
 var SMALL_NUMBER_BLOCK  = '<xml>' +
@@ -84,9 +87,9 @@ function test_blockSpaceExpandsWithMarginAfterBlockDrop() {
 
   // drop block just at bottom
   var distanceFromBottom = 10;
-  numberBlock.moveTo(0, viewportHeight
-      - numberBlock.getHeightWidth().height
-      - distanceFromBottom);
+  numberBlock.moveTo(0, viewportHeight -
+      numberBlock.getHeightWidth().height -
+      distanceFromBottom);
 
   Blockly.mainBlockSpace.scrollbarPair.resize();
 
