@@ -171,7 +171,7 @@ University of Idaho - Idaho Falls<br/>
 TAB 320<br/>
 Idaho Falls, ID  83402
 
-Please refer to parking directions [here](http://www.uidaho.edu/boise/contact-locations/hoursmapsparking).
+Please refer to parking directions [here](http://www.uidaho.edu/idahofalls/aboutus/hoursmapsparking).
 
 **Satellite Location - North Idaho**
 
