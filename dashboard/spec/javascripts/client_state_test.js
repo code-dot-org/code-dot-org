@@ -6,14 +6,17 @@ describe("clientState#levelProgress", function() {
   });
 
   it("records level progress", function() {
-    dashboard.clientState.levelProgress(100).should.equal(0);
-    dashboard.clientState.setLevelProgress(100, 50);
-    dashboard.clientState.levelProgress(100).should.equal(50);
-    dashboard.clientState.levelProgress(200).should.equal(0);
-    dashboard.clientState.setLevelProgress(100, 100);
-    dashboard.clientState.setLevelProgress(200, 50);
-    dashboard.clientState.levelProgress(100).should.equal(100);
-    dashboard.clientState.levelProgress(200).should.equal(50);
+    var state = dashboard.clientState;
+    state.levelProgress(100).should.equal(0);
+    state.setLevelProgress(100, 50);
+    state.levelProgress(100).should.equal(50);
+    state.levelProgress(200).should.equal(0);
+    state.allLevelsProgress().should.eql({"100": 50})
+    state.setLevelProgress(100, 100);
+    state.setLevelProgress(200, 50);
+    state.levelProgress(100).should.equal(100);
+    state.levelProgress(200).should.equal(50);
+    state.allLevelsProgress().should.eql({"100": 100, "200": 50})
   });
 });
 
@@ -23,11 +26,12 @@ describe("clientState#lines", function() {
   });
 
   it("adds lines completed", function() {
-    dashboard.clientState.lines().should.equal(0);
-    dashboard.clientState.addLines(42);
-    dashboard.clientState.lines().should.equal(42);
-    dashboard.clientState.addLines(20);
-    dashboard.clientState.lines().should.equal(62);
+    var state = dashboard.clientState;
+    state.lines().should.equal(0);
+    state.addLines(42);
+    state.lines().should.equal(42);
+    state.addLines(20);
+    state.lines().should.equal(62);
   });
 });
 
