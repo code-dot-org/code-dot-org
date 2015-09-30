@@ -209,6 +209,23 @@ div#visualizationResizeBar {
 
 // ** END OF RULES THAT ARE MODIFIED AT RUNTIME IN adjustAppSizeStyles() **
 
+#visualizationColumn.wireframeShare {
+  background: url("#{$root}phone_wireframe.png") center center no-repeat;
+  max-width: none !important;
+  width: 363px;
+  height: 714px;
+  margin: auto;
+
+  #designToggleRow, #gameButtons {
+    display: none;
+  }
+
+  #visualization {
+    top: 116px;
+    left: 20px;
+  }
+}
+
 #divApplab {
   overflow: hidden;
   outline: none;
