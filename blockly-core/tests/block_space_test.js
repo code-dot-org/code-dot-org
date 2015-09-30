@@ -101,3 +101,35 @@ function test_blockSpaceExpandsWithMarginAfterBlockDrop() {
 
   goog.dom.removeNode(container);
 }
+
+function test_blockSpaceAutoPositioning() {
+  var container = Blockly.Test.initializeBlockSpaceEditor();
+
+  var blocks = [
+    '<block type="math_number"><title name="NUM">0</title></block>',
+    '<block type="math_number" uservisible="false"><title name="NUM">0</title></block>',
+    '<block type="math_number"><title name="NUM">0</title></block>',
+    '<block type="math_number" x="99"><title name="NUM">0</title></block>',
+    '<block type="math_number" y="199"><title name="NUM">0</title></block>',
+    '<block type="math_number" x="399" y="499"><title name="NUM">0</title></block>',
+  ];
+
+  var expected_positions = [
+    [16, 16], // first block goes at the top
+    [16, 86], // second block is hidden, so it goes below the others
+    [16, 51], // third block goes after the first
+    [99, 16], // fourth was absolutely positioned with x=
+    [16, 199], // fifth was absolutely positioned with y=
+    [399, 499] // sixth was absolutely positioned wiht x= and y=
+  ];
+
+  var blockXML = '<xml>' + blocks.join('') + '</xml>';
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, Blockly.Xml.textToDom(blockXML));
+  var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
+  
+  for (var i = 0; i < topBlocks.length; i++) {
+    var position = topBlocks[i].getRelativeToSurfaceXY();
+    assertEquals(expected_positions[i][0], position.x);
+    assertEquals(expected_positions[i][1], position.y);
+  }
+}
