@@ -19,21 +19,20 @@ var dom = require('../dom');
 var DropletAutocompleteParameterTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
   this.showParamDropdowns = dropletTooltipManager.dropletConfig.showParamDropdowns;
-  DEFAULT_TOOLTIP_CONFIG.position = this.showParamDropdowns ? 'top' : 'bottom';
-};
-
-var DEFAULT_TOOLTIP_CONFIG = {
-  interactive: true,
-  autoClose: false,
-  trigger: 'custom',
-  speed: 100,
-  maxWidth: 450,
-  contentAsHTML: true,
-  theme: 'droplet-block-tooltipster',
-  offsetY: 2,
-  restoration: 'none',
-  updateAnimation: false,
-  positionTracker: true
+  this.tooltipConfig = {
+    interactive: true,
+    autoClose: false,
+    trigger: 'custom',
+    speed: 100,
+    maxWidth: 450,
+    position: this.showParamDropdowns ? 'top' : 'bottom',
+    contentAsHTML: true,
+    theme: 'droplet-block-tooltipster',
+    offsetY: 2,
+    restoration: 'none',
+    updateAnimation: false,
+    positionTracker: true
+  };
 };
 
 /**
@@ -78,7 +77,7 @@ DropletAutocompleteParameterTooltipManager.prototype.onCursorMovement_ = functio
   }
 
   this.updateParameterTooltip_(editor, currentParameterInfo.funcName,
-     currentParameterInfo.currentParameterIndex);
+      currentParameterInfo.currentParameterIndex);
 };
 
 /**
@@ -164,7 +163,7 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
 DropletAutocompleteParameterTooltipManager.prototype.getCursorTooltip_ = function () {
   if (!this.cursorTooltip_) {
     this.cursorTooltip_ = $('.droplet-ace .ace_cursor');
-    this.cursorTooltip_.tooltipster(DEFAULT_TOOLTIP_CONFIG);
+    this.cursorTooltip_.tooltipster(this.tooltipConfig);
   }
   return this.cursorTooltip_;
 };
