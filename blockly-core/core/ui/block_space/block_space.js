@@ -19,10 +19,6 @@
 
 /* global Blockly, goog */
 
-// Ignore:
-// W069: ['{a}'] is better written in dot notation
-/* jshint -W069 */
-
 /**
  * @fileoverview Object representing a block blockSpace.
  * @author fraser@google.com (Neil Fraser)
@@ -850,19 +846,19 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
   var rgbString = "rgb(" + r + ", " + g + ", " + b + ")";
 
   // Fade towards the new backround color.
-  background.style["fill"] = rgbString;
+  background.style.fill = rgbString;
 
   // Fade out the blocks in the flyout area.
-  blockGroup.style["opacity"] = normalIntensity;
+  blockGroup.style.opacity = normalIntensity;
 
   if (blockGroupForeground) {
-    blockGroupForeground.style["opacity"] = normalIntensity;
+    blockGroupForeground.style.opacity = normalIntensity;
   }
 
   // Fade in the trash can.
   var trashcanDisplay = trashIntensity === 0 ? "none" : "block";
-  trashcanElement.style["opacity"] = trashIntensity;
-  trashcanElement.style["display"] = trashcanDisplay;
+  trashcanElement.style.opacity = trashIntensity;
+  trashcanElement.style.display = trashcanDisplay;
 };
 
 /**
