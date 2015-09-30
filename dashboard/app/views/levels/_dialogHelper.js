@@ -40,7 +40,11 @@ window.dashboard.dialog = (function () {
 
     // Use our prefabricated dialog content.
     var content = document.querySelector("#" + type + "-dialogcontent").cloneNode(true);
-    var dialog = new Dialog({ body: content, onHidden: dialogHidden });
+    var dialog = new Dialog({
+      body: content,
+      onHidden: dialogHidden,
+      autoResizeScrollableElement: appOptions.autoResizeScrollableElement
+    });
 
     // Clicking the okay button in the dialog box dismisses it, and calls the callback.
     $(content).find("#ok-button").click(function () {
