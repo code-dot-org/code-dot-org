@@ -50,8 +50,6 @@ class Studio < Grid
     slow_js_execution_factor
     marker_height
     marker_width
-    delay_completion
-    floating_score
   )
 
   def self.create_from_level_builder(params, level_params)

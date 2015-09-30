@@ -157,9 +157,6 @@ en:
       CSPPD2 tips for prep: {}
       CSPPD2 welcome:
         Getting Started > Welcome!: Getting Started > Welcome!
-      CSPPD3-u2 Welcome:
-        Welcome!: Welcome!
-      CSPPD3-u2 overivew: {}
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
@@ -328,8 +325,6 @@ en:
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
-      Embedded Arduino Sketch Test:
-        Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
       Equity About: {}
       Equity CS: {}
       Equity Celebrate: {}
@@ -3064,7 +3059,7 @@ en:
         Spread 1 slice with peanut butter: Spread 1 slice with peanut butter
         Why Programming? Question 2: Why Programming? Question 2
       U3L03 - multiselect - properties of functions:
-        Choose Two - True statements about functions: Choose Two - True statements about functions
+        Choose Two - Things about functions: Choose Two - Things about functions
         Chose the two (2) statements that are true about functions: Chose the two (2) statements that are true about functions
         Functions in programming are a named grouping of programming instructions.: Functions in programming are a named grouping of programming instructions.
         Functions in programming are useful mathematical tools for doing complex computations.: Functions in programming are useful mathematical tools for doing complex computations.
@@ -3075,7 +3070,7 @@ en:
         Functions cannot make calls to other functions written by the same programmer: Functions cannot make calls to other functions written by the same programmer
         Functions help break a problem into logical chunks: Functions help break a problem into logical chunks
         Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
-        Multiple Choice - False statements about functions: Multiple Choice - False statements about functions
+        Multiple Choice - Things about functions: Multiple Choice - Things about functions
         Once defined, a function can be called many times from different parts of a program: Once defined, a function can be called many times from different parts of a program
         Which of the following is NOT a true statement about functions?: Which of the following is NOT a true statement about functions?
       U3L04 Assessment2:
@@ -3087,25 +3082,26 @@ en:
         Which of the following statements about writing functions and Top Down Design is NOT true?: Which of the following statements about writing functions and Top Down Design is NOT true?
         Writing functions helps manage complexity in a program: Writing functions helps manage complexity in a program
       U3L06 Assessment2:
-        A collection of commands that can be used in a programming language.: A collection of commands that can be used in a programming language.
-        A named memory location.: A named memory location.
-        A way to give input to a function that controls how the function runs.: A way to give input to a function that controls how the function runs.
-        Another name for the purpose of a function.: Another name for the purpose of a function.
-        'Multiple Choice: What is a function parameter?': 'Multiple Choice: What is a function parameter?'
-        para-meter -- a measure of the distance between a function's conception and implementation.: para-meter -- a measure of the distance between a function's conception and implementation.
+        A way to give input to a function that controls how the function runs: A way to give input to a function that controls how the function runs
+        What's a function parameter: What's a function parameter
+        para-meter -- a measure of the distance between a function's conception and implementation: para-meter -- a measure of the distance between a function's conception and implementation
+        wrong choice 2: wrong choice 2
+        wrong choice 3: wrong choice 3
+        wrong choice 4: wrong choice 4
       U3L06-API-multichoice:
         Abstract Parameter Interface: Abstract Parameter Interface
         Abstract Programming Inheritance: Abstract Programming Inheritance
         Application Program Interface: Application Program Interface
         Applied Power Implementation: Applied Power Implementation
         Artificial Parameter Intelligence: Artificial Parameter Intelligence
-        'Multiple Choice: What is an API?': 'Multiple Choice: What is an API?'
+        What's an API?: What's an API?
       U3L07 - MC remove line of code loops:
         '1': '1'
         '14': '14'
         '5': '5'
         '6': '6'
         '7': '7'
+        Code Trace: Code Trace
         Which line of code should be removed to make the program do what it's supposed to?: Which line of code should be removed to make the program do what it's supposed to?
       U3L07 Assessment2:
         APIs and Parameters Question 3: APIs and Parameters Question 3
@@ -3282,76 +3278,6 @@ en:
         'Arrays: Question 3': 'Arrays: Question 3'
         Cannot be determined: Cannot be determined
         There are 20 elements in an array. What is the index of the last element?: There are 20 elements in an array. What is the index of the last element?
-      U4L01 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L01 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L02 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L02 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L03 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L03 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L04 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L04 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L05 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L05 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
       U4L06 Assessment 1:
         Data about multiple items each with the same attributes should be kept in what format to enable searching and analysis.: Data about multiple items each with the same attributes should be kept in what format to enable searching and analysis.
         array: array
@@ -3372,292 +3298,12 @@ en:
         to identify the user of the app.: to identify the user of the app.
         to notify when the data has been stored.: to notify when the data has been stored.
         to secure the data.: to secure the data.
-      U4L06 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L06 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
       U4L06 Reflection Q 1:
         Question: Question
         blank: blank
         default value: default value
         random: random
         the old data is deleted: the old data is deleted
-      U4L07 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L07 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L08 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L08 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L09 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L09 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L10 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L10 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L11 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L11 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L12 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L12 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L13 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L13 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L14 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L14 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L15 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L15 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L16 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L16 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L17 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L17 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L18 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L18 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L19 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L19 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L20 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L20 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L21 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L21 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L22 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L22 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L23 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L23 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L24 Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
-      U4L24 Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4LXX Multiple Choice:
-        'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
-        right: right
-        wrong1: wrong1
-        wrong2: wrong2
-        wrong3: wrong3
-        wrong4: wrong4
-      U4XX Choose 2:
-        'Choose 2: simple description here': 'Choose 2: simple description here'
-        right1: right1
-        right2: right2
-        wrong1: wrong1
-        wrong3: wrong3
-        wrong4: wrong4
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.
@@ -4098,8 +3744,6 @@ en:
         Classroom Strategies Journal: Classroom Strategies Journal
       ECSPD your goals:
         Documenting Your Goals: Documenting Your Goals
-      ECSU2 Challenge Submission:
-        U2 Challenge Submission URL: U2 Challenge Submission URL
       Glossary O:
         ? 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
         : 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
@@ -4389,19 +4033,19 @@ en:
       U2L9 Free Response Getting Started:
         'The Need for DNS: Getting Started': 'The Need for DNS: Getting Started'
       U3L01 Assessment1:
-        'Free Response: Interpreting Instructions': 'Free Response: Interpreting Instructions'
+        Free Response: Free Response
       U3L01 Assessment3:
-        'Free Response: Programming Language Features': 'Free Response: Programming Language Features'
+        Free Response: Free Response
       U3L01 Free Response Getting Started:
         Why Programming and Programming Languages?: Why Programming and Programming Languages?
       U3L01 Free Response Wrap Up:
         Why Programming? Wrap Up: Why Programming? Wrap Up
       U3L02 Assessment:
-        'Free Response: What is efficiency in programming?': 'Free Response: What is efficiency in programming?'
+        What does efficiency mean in programming?: What does efficiency mean in programming?
       U3L02 Free Response Getting Started:
-        'Free Response: Why limit to 4?': 'Free Response: Why limit to 4?'
+        'Programming with Simple Commands: Why limit to 4?': 'Programming with Simple Commands: Why limit to 4?'
       U3L02 Free Response Wrap Up:
-        'Reflection: Programming with Simple Commands': 'Reflection: Programming with Simple Commands'
+        'Programming with Simple Commands: Wrap Up': 'Programming with Simple Commands: Wrap Up'
       U3L03 Free Response Getting Started:
         'Creating Procedures Part 1: Getting Started': 'Creating Procedures Part 1: Getting Started'
       U3L03 Free Response Reflection:
@@ -4437,9 +4081,9 @@ en:
       U3L07 Free Response Getting Started:
         'Looping and Random Numbers: Getting Started': 'Looping and Random Numbers: Getting Started'
       U3L07 Free Response Reflection:
-        'Reflection: Looping and Random Numbers': 'Reflection: Looping and Random Numbers'
+        'Looping and Random Numbers: Reflection': 'Looping and Random Numbers: Reflection'
       U3L08 Assessment2:
-        'Free Response: Functions with Parameters': 'Free Response: Functions with Parameters'
+        'Functions with Parameters: Question 2': 'Functions with Parameters: Question 2'
       U3L08 Free Response Getting Started:
         'Functions with Parameters: Getting Started': 'Functions with Parameters: Getting Started'
       U3L08 Free Response Wrap Up:
@@ -4564,56 +4208,6 @@ en:
         'Altering Images: Getting Started': 'Altering Images: Getting Started'
       U3L34 Free Response Getting Started:
         'Hidden Images: Getting Started': 'Hidden Images: Getting Started'
-      U4L01 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L02 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L03 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L04 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L05 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L06 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L07 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L08 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L09 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L10 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L11 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L12 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L13 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L14 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L15 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L16 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L17 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L18 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L19 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L20 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L21 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L22 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L23 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L24 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4LXX Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
       text match test:
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4*7: (9-3)+4*7

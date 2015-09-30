@@ -830,13 +830,6 @@ var projects = module.exports = {
     return '/projects/' + projects.getCurrentApp();
   },
   /**
-   * Explicitly clear the HTML, circumventing safety measures which prevent it from
-   * being accidentally deleted.
-   */
-  clearHtml: function() {
-    current.levelHtml = '';
-  },
-  /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
    * @param {object?} sourceAndHtml Optional source to be provided, saving us another
@@ -862,8 +855,6 @@ var projects = module.exports = {
 
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
-    // TODO(dave): Remove this check and remove clearHtml() once all projects
-    // have versioning: https://www.pivotaltracker.com/story/show/103347498
     if (current.levelHtml && !sourceAndHtml.html) {
       throw new Error('Attempting to blow away existing levelHtml');
     }

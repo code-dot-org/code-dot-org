@@ -63,7 +63,7 @@
                       <title name="DIR">turnLeft</title>
                       <value name="VALUE">
                         <block type="math_arithmetic" inline="true">
-                          <title name="OP">DIVIDE</title>
+                          <title name="OP">ADD</title>
                           <value name="A">
                             <block type="math_number">
                               <title name="NUM">360</title>
@@ -83,6 +83,7 @@
             </block>
           </statement>
         </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

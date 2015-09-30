@@ -159,7 +159,3 @@ def company_count(company)
   end
   return company_count
 end
-
-def solr_country_code
-  return HOC_COUNTRIES[@country]['solr_country_code']
-end
