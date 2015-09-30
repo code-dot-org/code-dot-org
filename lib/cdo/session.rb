@@ -1,6 +1,7 @@
 # Environment-specific session cookie key constant.
 require_relative '../../deployment'
 class Session
-  KEY = "_learn_session#{"_#{rack_env}" unless rack_env?(:production)}"
-  STORAGE_ID = "storage_id#{"_#{rack_env}" unless rack_env?(:production)}"
+  env_suffix = rack_env?(:production) ? '' : "_#{rack_env}"
+  KEY = "_learn_session#{env_suffix}"
+  STORAGE_ID = "storage_id#{env_suffix}"
 end
