@@ -328,8 +328,8 @@ var projects = module.exports = {
    */
   save: function(sourceAndHtml, callback, forceNewVersion) {
 
-    // Can't save a project that is readonly.
-    if (appOptions.readonlyWorkspace) {
+    // Can't save a project if we're not the owner.
+    if (current && !current.isOwner) {
       return;
     }
 
