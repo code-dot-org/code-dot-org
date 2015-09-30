@@ -1,0 +1,15 @@
+%div.teacher-announce
+  %a.announce-heading-link{:href=>"http://teacherblog.code.org/"}
+    %div.announce-heading
+      =I18n.t(:dashboard_announcements)
+      %div.heading-view-all
+        =I18n.t(:dashboard_announce_view_all)
+        >>
+  %div.announce-content
+    %div.content-img-container
+      %img.content-img{:src=>"/images/fit-x108/kids4cropped_2x.jpg"}
+    %div.content-text
+      =I18n.t(:dashboard_announce_hoc)
+  %div.announce-learn-more
+    %a{:href=>"https://hourofcode.com"}
+      %button!= I18n.t(:learn_more)
