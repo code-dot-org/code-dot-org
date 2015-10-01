@@ -1,4 +1,4 @@
-//= require jquery.cookie
+//= require client_state
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -405,7 +405,7 @@ dashboard.header.showProjectHeader = function () {
   });
 
   $(document).on('click', '.project_list', function () {
-    location.href = '/projects'; <%# TODO: Can't call project_list_path because it's not in scope %>
+    location.href = '/projects';
   });
 };
 
@@ -428,9 +428,9 @@ function getSummarizedProgressForAnonymousUser () {
   var summarizedProgress = {};
   var levelProgress = {};
 
-  summarizedProgress.lines = $.cookie('lines');
+  summarizedProgress.lines = dashboard.clientState.lines();
 
-  var allLevelsProgress = JSON.parse(decodeURIComponent($.cookie('progress')));
+  var allLevelsProgress = dashboard.clientState.allLevelsProgress();
   for(var level in allLevelsProgress) {
     levelProgress[level] = {};
     var individualLevelProgress = allLevelsProgress[level] || -1;
