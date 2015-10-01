@@ -451,33 +451,42 @@ exports.isAceBreakpointRow = function (session, userCodeRow) {
   return Boolean(bps[userCodeRow]);
 };
 
-var lastHighlightMarkerId;
+var lastHighlightMarkerIds = {};
 
 /**
- * Highlights lines in the ace editor. Always moves the previous highlight to
- * the new location.
+ * Highlights lines in the ace editor. Always moves the previous highlight with
+ * the same class to the new location.
  *
  * If the row parameters are not supplied, just clear the last highlight.
+ *
+ * If no class is specified in this case, clear all highlights.
  */
-function highlightAceLines (aceEditor, startRow, endRow) {
+function highlightAceLines (aceEditor, clazz, startRow, endRow) {
   var session = aceEditor.getSession();
-  if (lastHighlightMarkerId) {
-    session.removeMarker(lastHighlightMarkerId);
-    lastHighlightMarkerId = null;
+  if (typeof clazz === 'undefined') {
+    for (var hlClass in lastHighlightMarkerIds) {
+      session.removeMarker(lastHighlightMarkerIds[hlClass]);
+    }
+    lastHighlightMarkerIds = {};
+    return;
+  }
+  if (lastHighlightMarkerIds[clazz]) {
+    session.removeMarker(lastHighlightMarkerIds[clazz]);
+    lastHighlightMarkerIds[clazz] = null;
   }
   if (typeof startRow !== 'undefined') {
-    lastHighlightMarkerId = aceEditor.getSession().highlightLines(startRow,
-        endRow, "ace_step").id;
+    lastHighlightMarkerIds[clazz] = aceEditor.getSession().highlightLines(
+        startRow, endRow, clazz).id;
   }
 }
 
 /**
- * Selects code in droplet/ace editor.
+ * Selects and highlights code in droplet/ace editor to indicate an error.
  *
  * This function simply highlights one spot, not a range. It is typically used
  * to highlight where an error has occurred.
  */
-exports.selectEditorRowCol = function (editor, row, col) {
+exports.selectEditorRowColError = function (editor, row, col) {
   if (editor.currentlyUsingBlocks) {
     var style = {color: '#FFFF22'};
     editor.clearLineMarks();
@@ -494,23 +503,23 @@ exports.selectEditorRowCol = function (editor, row, col) {
     // setting with the backwards parameter set to true - this prevents horizontal
     // scrolling to the right
     selection.setSelectionRange(range, true);
-    highlightAceLines(editor.aceEditor, row, row);
   }
+  highlightAceLines(editor.aceEditor, "ace_error", row, row);
 };
 
 /**
  * Removes highlights and selection in droplet and ace editors.
  */
-exports.clearDropletAceHighlighting = function (editor) {
+exports.clearDropletAceHighlighting = function (editor, highlightClass) {
   if (editor.currentlyUsingBlocks) {
     editor.clearLineMarks();
   } else {
     editor.aceEditor.getSelection().clearSelection();
   }
-  highlightAceLines(editor.aceEditor);
+  highlightAceLines(editor.aceEditor, highlightClass);
 }
 
-function selectAndHighlightCode (aceEditor, cumulativeLength, start, end) {
+function selectAndHighlightCode (aceEditor, cumulativeLength, start, end, highlightClass) {
   var selection = aceEditor.getSelection();
   var range = selection.getRange();
 
@@ -522,7 +531,8 @@ function selectAndHighlightCode (aceEditor, cumulativeLength, start, end) {
   // calling with the backwards parameter set to true - this prevents horizontal
   // scrolling to the right while stepping through in the debugger
   selection.setSelectionRange(range, true);
-  highlightAceLines(aceEditor, range.start.row, range.end.row);
+  highlightAceLines(aceEditor, highlightClass || "ace_step", range.start.row,
+      range.end.row);
 }
 
 /**
@@ -535,7 +545,8 @@ exports.selectCurrentCode = function (interpreter,
                                       cumulativeLength,
                                       userCodeStartOffset,
                                       userCodeLength,
-                                      editor) {
+                                      editor,
+                                      highlightClass) {
   var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
@@ -559,13 +570,14 @@ exports.selectCurrentCode = function (interpreter,
         //editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
         editor.markLine(userCodeRow, style);
       } else {
-        selectAndHighlightCode(editor.aceEditor, cumulativeLength, start, end);
+        selectAndHighlightCode(editor.aceEditor, cumulativeLength, start, end,
+            highlightClass);
       }
     } else {
-      exports.clearDropletAceHighlighting(editor);
+      exports.clearDropletAceHighlighting(editor, highlightClass || "ace_step");
     }
   } else {
-    exports.clearDropletAceHighlighting(editor);
+    exports.clearDropletAceHighlighting(editor, highlightClass || "ace_step");
   }
   return userCodeRow;
 };

@@ -487,11 +487,11 @@ function handleExecutionError(err, lineNumber) {
     lineNumber = err.loc.line;
     // Now select this location in the editor, since we know we didn't hit
     // this while executing (in which case, it would already have been selected)
-    codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
+    codegen.selectEditorRowColError(studioApp.editor, lineNumber - 1, err.loc.column);
   }
   if (Applab.JSInterpreter) {
     // Select code that just executed:
-    Applab.JSInterpreter.selectCurrentCode();
+    Applab.JSInterpreter.selectCurrentCode("ace_error");
     // Grab line number if we don't have one already:
     if (!lineNumber) {
       lineNumber = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
