@@ -1,6 +1,5 @@
 /* global $ */
 
-var React = require('react');
 var DesignToolboxElement = require('./DesignToolboxElement.jsx');
 var applabMsg = require('./locale');
 
