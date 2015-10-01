@@ -847,7 +847,7 @@ var projects = module.exports = {
   save: function(sourceAndHtml, callback, forceNewVersion) {
 
     // Can't save a project if we're not the owner.
-    if (current && !current.isOwner) {
+    if (current.isOwner === false) {
       return;
     }
 
