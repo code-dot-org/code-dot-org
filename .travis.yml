@@ -4,6 +4,9 @@ language: ruby
 
 rvm: 2.0.0
 
+node_js:
+  - "0.10.40"
+
 sudo: false
 
 cache: bundler
@@ -12,12 +15,22 @@ gemfile: Gemfile
 
 bundler_args: --without development --deployment
 
+install:
+  - cd apps
+  - npm install -g npm@'>=1.4.3'
+  - npm --version
+  - npm install
+  - cd ..
+
 before_script:
   - bundle exec rake -t lint:javascript
   - cd dashboard
   - bundle exec rake -t db:create db:schema:load
 
-script: bundle exec rake -t test
+script:
+  - bundle exec rake -t test
+  - cd ..
+  - bundle exec rake -t lint:javascript
 
 env:
   - DB=mysql
