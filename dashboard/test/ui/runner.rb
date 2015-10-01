@@ -98,6 +98,12 @@ $suite_fail_count = 0
 $failures = []
 
 if $options.local
+  #Verify that chromedriver is actually running
+  unless `ps`.include?('chromedriver')
+    puts "You cannot run with the --local flag unless you are running chromedriver. Automatically running
+chromedriver found at #{`which chromedriver`}"
+    system("chromedriver &")
+  end
   $browsers = [{:browser => "local"}]
 end
 

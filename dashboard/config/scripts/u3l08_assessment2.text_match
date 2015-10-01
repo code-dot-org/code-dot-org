@@ -1,8 +1,17 @@
 name 'U3L08 Assessment2'
-title 'Functions with Parameters: Question 2'
+title 'Free Response: Functions with Parameters'
 
 markdown <<MARKDOWN
 “Abstraction” is often used to focus on a general case and ignore a specific instance of a problem. 
 
 Given this meaning of the word, how are functions with parameters an example of abstraction?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary but should include these concepts:
+
+Parameters allow the creation of a generalized solution to a whole class of problems, rather than individually solving many specific problems. 
+
+The programmer can write the basic steps of a task into a function and leave the specfic implementation of the task to be based upon parameter values in the function call.
+
 MARKDOWN
