@@ -30,7 +30,7 @@ class ReportAbuseController < ApplicationController
 
     unless params[:channel_id].blank?
       channels_path = "/v3/channels/#{params[:channel_id]}/abuse"
-      assets_path = "/v3/assets/#{params[:channel_id]}"
+      assets_path = "/v3/assets/#{params[:channel_id]}/"
 
       _, _, body = ChannelsApi.call(
         'REQUEST_METHOD' => 'POST',
@@ -43,7 +43,7 @@ class ReportAbuseController < ApplicationController
       abuse_score = JSON.parse(body[0])["abuse_score"]
 
       FilesApi.call(
-        'REQUEST_METHOD' => 'PUT',
+        'REQUEST_METHOD' => 'PATCH',
         'PATH_INFO' => assets_path,
         'REQUEST_PATH' => assets_path,
         'QUERY_STRING' => "abuse_score=#{abuse_score}",

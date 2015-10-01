@@ -32,7 +32,7 @@ def owns_section?(section_id)
 end
 
 # @param [Integer] student_id
-# @returns [Boolean] true iff the current user is teaches the student of the given id
+# @returns [Boolean] true iff the current user is the teacher for the student of the given id
 def teaches_student?(student_id)
   return false unless student_id and current_user_id
   DASHBOARD_DB[:followers].where(user_id: current_user_id, student_user_id: student_id).any?

@@ -100,7 +100,7 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # PUT /v3/(assets|sources)/<channel-id>/<filename>?version=<version-id>&abuse_score=<abuse_score>
+  # PUT /v3/(assets|sources)/<channel-id>/<filename>?version=<version-id>
   #
   # Create or replace a file. Optionally overwrite a specific version.
   #
@@ -127,12 +127,9 @@ class FilesApi < Sinatra::Base
 
     buckets = get_bucket_impl(endpoint).new
     app_size = buckets.app_size(encrypted_channel_id)
-    abuse_score = request.GET['abuse_score']
-
-    not_authorized unless can_update_abuse_score?(endpoint, encrypted_channel_id, filename, abuse_score)
 
     forbidden unless app_size + body.length < FilesApi::max_app_size
-    response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'], abuse_score)
+    response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 
     content_type :json
     category = mime_type.split('/').first
@@ -140,11 +137,11 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # PUT /v3/(assets|sources)/<channel-id>?abuse_score=<abuse_score>
+  # PATCH /v3/(assets|sources)/<channel-id>?abuse_score=<abuse_score>
   #
   # Update all assets for the given channelId to have the provided abuse score
   #
-  put %r{/v3/(assets|sources)/([^/]+)$} do |endpoint, encrypted_channel_id|
+  patch %r{/v3/(assets|sources)/([^/]+)/$} do |endpoint, encrypted_channel_id|
     dont_cache
 
     abuse_score = request.GET['abuse_score']

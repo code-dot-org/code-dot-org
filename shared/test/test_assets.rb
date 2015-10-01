@@ -87,7 +87,7 @@ class AssetsTest < Minitest::Test
     assert_equal 0, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # set abuse score
-    put_abuse(@assets, channel_id, 10)
+    patch_abuse(@assets, channel_id, 10)
     assert_equal 10, asset_bucket.get_abuse_score(channel_id, first_asset)
     assert_equal 10, asset_bucket.get_abuse_score(channel_id, second_asset)
 
@@ -96,25 +96,25 @@ class AssetsTest < Minitest::Test
     assert_equal 'stub-image-contents', result
 
     # increment
-    put_abuse(@assets, channel_id, 20)
+    patch_abuse(@assets, channel_id, 20)
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, first_asset)
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # set to be the same
-    put_abuse(@assets, channel_id, 20)
+    patch_abuse(@assets, channel_id, 20)
     assert @assets.last_response.successful?
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, first_asset)
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # non-admin can't decrement
-    put_abuse(@assets, channel_id, 0)
+    patch_abuse(@assets, channel_id, 0)
     refute @assets.last_response.successful?
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, first_asset)
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # admin can decrement
     FilesApi.any_instance.stubs(:admin?).returns(true)
-    put_abuse(@assets, channel_id, 0)
+    patch_abuse(@assets, channel_id, 0)
     assert @assets.last_response.successful?
     assert_equal 0, asset_bucket.get_abuse_score(channel_id, first_asset)
     assert_equal 0, asset_bucket.get_abuse_score(channel_id, second_asset)
@@ -146,7 +146,7 @@ class AssetsTest < Minitest::Test
     assert non_owner_assets.last_response.successful?
 
     # set abuse
-    put_abuse(@assets, channel_id, 10)
+    patch_abuse(@assets, channel_id, 10)
 
     # owner can view
     get(@assets, channel_id, asset_name)
@@ -185,7 +185,7 @@ class AssetsTest < Minitest::Test
 
     put(@assets, src_channel_id, image_filename, image_body, 'image/jpeg')
     put(@assets, src_channel_id, sound_filename, sound_body, 'audio/mpeg')
-    put_abuse(@assets, src_channel_id, 10)
+    patch_abuse(@assets, src_channel_id, 10)
 
     copy_file_infos = JSON.parse(copy_all(src_channel_id, dest_channel_id))
     dest_file_infos = JSON.parse(list(@assets, dest_channel_id))
@@ -328,8 +328,8 @@ class AssetsTest < Minitest::Test
     assets.put("/v3/assets/#{channel_id}/#{filename}?#{query_params}", body, 'CONTENT_TYPE' => content_type).body
   end
 
-  def put_abuse(assets, channel_id, abuse_score)
-    assets.put("/v3/assets/#{channel_id}?abuse_score=#{abuse_score}").body
+  def patch_abuse(assets, channel_id, abuse_score)
+    assets.patch("/v3/assets/#{channel_id}/?abuse_score=#{abuse_score}").body
   end
 
   def get(assets, channel_id, filename, body = '', headers = {})
