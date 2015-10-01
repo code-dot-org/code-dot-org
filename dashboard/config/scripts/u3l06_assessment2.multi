@@ -1,10 +1,10 @@
 name 'U3L06 Assessment2'
-title 'What\'s a function parameter'
-wrong 'para-meter -- a measure of the distance between a function\’s conception and implementation'
-right 'A way to give input to a function that controls how the function runs'
-wrong 'wrong choice 2'
-wrong 'wrong choice 3'
-wrong 'wrong choice 4'
+title 'Multiple Choice: What is a function parameter?'
+wrong 'para-meter -- a measure of the distance between a function\’s conception and implementation.'
+right 'A way to give input to a function that controls how the function runs.'
+wrong 'A collection of commands that can be used in a programming language.'
+wrong 'Another name for the purpose of a function.'
+wrong 'A named memory location.'
 
 markdown <<MARKDOWN
 

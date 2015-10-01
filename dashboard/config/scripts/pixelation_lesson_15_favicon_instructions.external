@@ -6,12 +6,12 @@ skip_dialog 'true'
 
 markdown <<MARKDOWN
 # Project: Personal Favicon
-<img src = "/images/cspunit1/code-pixel.png" align=right width=50 hspace=20>
+<img src = "https://code.org/images/cspunit1/code-pixel.png" align=right width=50 hspace=20>
 A favicon is a small image, usually 16x16 pixels, that is typically shown in a web browser’s address bar next to the title of the page or web address for a particular site. It is typically a small version of a company logo or some other symbol for the site. A favicon for Code.org is shown to the right.
 
 Favicons are designed by artists and programmed into web pages by web designers. Below are some examples of favicons—you might recognize some!
 <div>
-<img src = "/images/cspunit1/faviconExamplesAndScreenCap.png" align=center width=90% hspace=20>
+<img src = "https://code.org/images/cspunit1/faviconExamplesAndScreenCap.png" align=center width=90% hspace=20>
 </div>
 <br>
 Do a google search for *Favicon* and see what comes up.
