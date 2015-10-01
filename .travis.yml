@@ -16,7 +16,7 @@ before_script:
   - cd dashboard
   - bundle exec rake -t db:create db:schema:load
 
-script: bundle exec rake -t test
+script: bundle exec rake -t test lint
 
 env:
   - DB=mysql
