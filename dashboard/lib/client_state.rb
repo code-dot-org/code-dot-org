@@ -62,36 +62,42 @@ class ClientState
   def add_script(script_id)
     s = scripts
     s << script_id.to_i unless s.include?(script_id)
-    cookies[:scripts] = JSON.generate(s)
+    session[:scripts] = s
   end
 
   # Returns an array of ids of the scripts completed in the current session.
   # Callers should not mutate the array.
   # @return [Array<Integer>]
   def scripts
-    parse_json(cookies[:scripts])
+    session[:scripts] || []
+  end
+
+  # Returns a read-only set of the videos seen in the current user session,
+  # for tests only.
+  # @return Set<String>
+  def videos_seen_for_test
+    session[:videos_seen] || Set.new
   end
 
   # Adds video_key to the set of videos seen in the current user session.
   # @param [String] video_key
   def add_video_seen(video_key)
-    v = videos_seen
-    v << video_key unless v.include?(video_key)
-    cookies[:videos_seen] = JSON.generate(v)
+    (session[:videos_seen] ||= Set.new).add(video_key)
   end
 
-  # Returns true if the given video has been seen.
+  # Adds video_key to the set of videos seen in the current user session.
   # @param [String] video_key
   # @return Boolean
   def video_seen?(video_key)
-    videos_seen.include?(video_key)
+    s = session[:videos_seen]
+    s && s.include?(video_key)
   end
 
   # Returns if at least one video has been seen in the current user session.
   # For testing only
   # @return Boolean
   def videos_seen_for_test?
-    videos_seen.length > 0
+    !session[:videos_seen].nil?
   end
 
   # Returns true if the video with the given key has been seen by the
@@ -99,38 +105,17 @@ class ClientState
   # @param [String] callout_key
   # @return Boolean
   def callout_seen?(callout_key)
-    callouts_seen.include?(callout_key)
+    c = session[:callouts_seen]
+    c && c.include?(callout_key)
   end
 
   # Adds callout_key to the set of callouts seen in the current user session.
   def add_callout_seen(callout_key)
-    c = callouts_seen
-    c << callout_key unless c.include?(callout_key)
-    cookies[:callouts_seen] = JSON.generate(c)
+    session[:callouts_seen] ||= Set.new
+    session[:callouts_seen].add(callout_key)
   end
 
   private
-
-  # Parse str as a json string, returning default if str is nil or malformed.
-  def parse_json(str, default = [])
-    str ? JSON.parse(str) : default
-  rescue JSON::JSONError
-    default
-  end
-
-  # Returns an array of all of the video keys that have been seen.
-  # return [Array<String>]
-  def videos_seen
-    migrate_cookies
-    parse_json(cookies[:videos_seen])
-  end
-
-  # Returns an array of all of the callout key that have been seen.
-  # return [Array<String>]
-  def callouts_seen
-    migrate_cookies
-    parse_json(cookies[:callouts_seen])
-  end
 
   def progress_hash
     migrate_cookies
@@ -149,14 +134,6 @@ class ClientState
     if session[:lines]
       cookies[:lines] = session[:lines].to_s
       session[:lines] = nil
-    end
-    if session[:videos_seen]
-      cookies.permanent[:videos_seen] = JSON.generate(session[:videos_seen].to_a)
-      session[:videos_seen] = nil
-    end
-    if session[:callouts_seen]
-      cookies.permanent[:callouts_seen] = JSON.generate(session[:callouts_seen].to_a)
-      session[:callouts_seen] = nil
     end
   end
 
