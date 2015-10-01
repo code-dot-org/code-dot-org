@@ -1,5 +1,3 @@
-require 'cdo/session'
-
 # Create a storage id without an associated user id and track it using a cookie.
 def create_storage_id_cookie
   storage_id = user_storage_ids_table.insert(user_id: nil)
@@ -69,7 +67,9 @@ def storage_id(endpoint)
 end
 
 def storage_id_cookie_name()
-  Session::STORAGE_ID
+  name = "storage_id"
+  name += "_#{rack_env}" unless rack_env?(:production)
+  name
 end
 
 def storage_id_for_user()
