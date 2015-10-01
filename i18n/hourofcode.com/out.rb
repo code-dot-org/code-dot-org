@@ -169,12 +169,12 @@ end
 # fix twitter tags
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/resources/index.md").each do |file|
   puts file
-  File.write(file, File.read(file).gsub(/\stwitter\[:hashtags]/, "\ntwitter\[:hashtags]"))
+  File.write(file, File.read(file).gsub(/\stwitter\[:hashtags\]/, "\ntwitter[:hashtags]"))
 end
 
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
   puts file
-  File.write(file, File.read(file).gsub(/\stwitter\[:hashtags]/, "\ntwitter\[:hashtags]"))
+  File.write(file, File.read(file).gsub(/\stwitter\[:hashtags\]/, "\ntwitter[:hashtags]"))
 end
 
 # fix social media metadata
