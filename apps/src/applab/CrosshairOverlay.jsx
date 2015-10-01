@@ -8,10 +8,8 @@ var COORDINATE_TEXT_Y_MARGIN = 20;
 
 module.exports = React.createClass({
   propTypes: {
-  },
-
-  getInitialState: function() {
-    return {};
+    x: React.PropTypes.number.isRequired,
+    y: React.PropTypes.number.isRequired,
   },
 
   getCoordinateText: function () {

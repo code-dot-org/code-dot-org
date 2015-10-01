@@ -17,6 +17,14 @@ module.exports = React.createClass({
     };
   },
 
+  componentDidMount: function() {
+    document.addEventListener('mousemove', this.onSvgMouseMove);
+  },
+
+  componentWillUnmount: function() {
+    document.removeEventListener('mousemove', this.onSvgMouseMove);
+  },
+
   isMouseInVisualization: function () {
     return (this.state.mouseX >= 0) &&
         (this.state.mouseX <= this.props.appWidth) &&
@@ -44,19 +52,11 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var overlayComponents = [];
+    var overlayComponent;
     if (this.shouldShowCrosshair()) {
-      overlayComponents.push(<CrosshairOverlay x={this.state.mouseX} y={this.state.mouseY} />);
+      overlayComponent = <CrosshairOverlay x={this.state.mouseX} y={this.state.mouseY} />;
     }
 
-    return <svg ref="svg_">{overlayComponents}</svg>;
-  },
-
-  componentDidMount: function() {
-    document.addEventListener('mousemove', this.onSvgMouseMove);
-  },
-
-  componentWillUnmount: function() {
-    document.removeEventListener('mousemove', this.onSvgMouseMove);
+    return <svg ref="svg_">{overlayComponent}</svg>;
   }
 });
