@@ -225,7 +225,8 @@ describe("ChartApi", function () {
           }));
     });
 
-    it ("rejects if no columns array provided", function (testDone) {
+    it ("rejects if no columns array provided and no columns found in data", function (testDone) {
+      fakeAppStorage.fakeRecords = [];
       chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable')
           .then(onResolve, onReject)
           .then(ensureDone(testDone, function () {
@@ -281,6 +282,18 @@ describe("ChartApi", function () {
           .then(onResolve, onReject)
           .then(ensureDone(testDone, function () {
             assertNotWarns(chartApi, /No data\./);
+          }));
+    });
+
+    it ("infers columns when given data but not columns", function (testDone) {
+      fakeAppStorage.fakeRecords = [
+        { column1: 'Duke', column2: 'Earl' }
+      ];
+      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable')
+          .then(onResolve, onReject)
+          .then(ensureDone(testDone, function () {
+            assert.equal(chartApi.warnings.length, 0);
+            assertNotWarns(chartApi, /Not enough columns\./);
           }));
     });
 
