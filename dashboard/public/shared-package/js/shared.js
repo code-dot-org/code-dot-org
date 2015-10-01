@@ -845,6 +845,12 @@ var projects = module.exports = {
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
   save: function(sourceAndHtml, callback, forceNewVersion) {
+
+    // Can't save a project if we're not the owner.
+    if (current && !current.isOwner) {
+      return;
+    }
+
     if (typeof arguments[0] === 'function' || !sourceAndHtml) {
       // If no source is provided, shift the arguments and ask for the source
       // ourselves.

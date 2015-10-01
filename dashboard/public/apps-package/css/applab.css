@@ -215,6 +215,22 @@ div#visualizationResizeBar {
     -ms-transform: scale(0.5);
     transform: scale(0.5); } }
 
+#visualizationColumn.wireframeShare {
+  background: url("/blockly/media/applab/phone_wireframe.png") center center no-repeat;
+  max-width: none !important;
+  width: 363px;
+  height: 714px;
+  margin: 20px auto; }
+  #visualizationColumn.wireframeShare #designToggleRow, #visualizationColumn.wireframeShare #gameButtons {
+    display: none; }
+  #visualizationColumn.wireframeShare #visualization {
+    top: 116px;
+    left: 21px;
+    border: 0; }
+
+#visualizationColumn.chromelessShare #designToggleRow, #visualizationColumn.chromelessShare #gameButtons {
+  display: none; }
+
 #divApplab {
   overflow: hidden;
   outline: none;
