@@ -157,7 +157,7 @@ end
 # fix metadata to be multiline
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
   puts file
-  metadata_pattern = /(\---[^---]*\---)/m
+  metadata_pattern = /(---.*?---)/m
   metadata_matches = File.read(file).match metadata_pattern
   if metadata_matches
     original_metadata = metadata_matches.captures.first
@@ -188,7 +188,7 @@ Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each 
 'twitter:description': '<%= hoc_s(:meta_tag_twitter_description) %>'\n'twitter:image:src': 'http://<%=request.host%>/images/code-video-thumbnail.jpg'
 'twitter:player': 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
 'twitter:player:width': 1920\n'twitter:player:height': 1080\n---"
-  File.write(file, File.read(file).gsub(/^---[^---].*---/m, social_media_metada))
+  File.write(file, File.read(file).gsub(/^---.*?---/m, social_media_metada))
 end
 
 # fix embedded ruby in markdown
