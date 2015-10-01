@@ -1,7 +1,7 @@
 # Various Ruby helper methods to generate Varnish VCL from the base configuration.
 
-# Basic regex matcher for the query part of a URL.
-QUERY_REGEX = "(\\?[a-z0-9]+)?$"
+# Basic regex matcher for the optional query part of a URL.
+QUERY_REGEX = "(\\?.*)?$"
 
 def path_to_regex(path)
   path = "^/#{path.sub(/^\//,'')}"
@@ -90,7 +90,28 @@ end
 
 # Returns the hostname-specific conditional expression for the app provided.
 def if_app(app, section)
-  app == 'dashboard' ?
-    ('if ('+req(section)+'.http.host ~ "(dashboard|studio).code.org$") {') :
-    '} else {'
+  app == 'dashboard' ? (req(section)+'.http.host ~ "(dashboard|studio).code.org$"') : nil
+end
+
+# Generate an "if(){} else if {} else {}" string from an array of items, conditional Proc, and a block.
+def if_else(items, conditional)
+  _buf = ''
+  items.each_with_index do |item, i|
+    condition = conditional.call(item)
+    _buf << "#{i != 0 ? 'else ' : ''}#{condition && "if (#{condition}) "} {\n"
+    _buf << yield(item).lines.map{|line| '  ' + line }.join << "\n"
+    _buf << "}\n"
+  end
+  _buf
+end
+
+# Generates the VCL string for each section: 'request', 'response', or 'proxy'.
+def setup_behavior(section)
+  if_else(%w(dashboard pegasus), lambda{|app|if_app(app,section)}) do |app|
+    config = node['cdo-varnish']['config'][app]
+    configs = config['behaviors'] + [config['default']]
+    if_else(configs, lambda{|b|b['path'] ? paths_to_regex(b['path'], section) : nil}) do |behavior|
+      process_behavior(behavior, app, section)
+    end
+  end
 end

@@ -1,22 +1,3 @@
-<%
-   # Generates the VCL string for each section: 'request', 'response', or 'proxy'.
-   def setup_behavior(section)
-     _buf = ''
-     %w(dashboard pegasus).map do |app|
-       config = node['cdo-varnish']['config'][app]
-%>
-  <%= if_app(app, section) %>
-    <% config['behaviors'].each_with_index do |behavior, i| %>
-    <%= i == 0 ? 'if' : '} else if'%> (<%= paths_to_regex(behavior['path'], section) %>) {
-      <%= process_behavior(behavior, app, section) %>
-    <% end %>
-    } else {
-      <%= process_behavior(config['default'], app, section) %>
-    }
-  <% end %>
-  }
-<% _buf end %>
-
 vcl 4.0;
 include "/etc/varnish/accept-language.vcl";
 import cookie;
