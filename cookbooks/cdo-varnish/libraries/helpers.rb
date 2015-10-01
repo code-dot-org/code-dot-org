@@ -22,12 +22,11 @@ end
 # Returns a regex-conditional string fragment based on the provided behavior.
 # if backend=true, call `bereq` instead of `req`.
 # if proxy=true, ignore extension-based behaviors (e.g., *.png).
-def paths_to_regex(behavior, backend=false, proxy=false)
+def paths_to_regex(path_config, backend=false, proxy=false)
   req = backend ? 'bereq' : 'req'
-  path_config = behavior['path']
   path_config = [path_config] unless path_config.is_a?(Array)
   extensions, paths = path_config.partition{ |path| path[0] == '*' }
-  elements = paths.map{|x|path_to_regex(x)}
+  elements = paths.map(&:path_to_regex)
   elements = extensions_to_regex(extensions.map{|x|x.sub(/^\*/,'')}) + elements unless proxy
   elements.empty? ? 'false' : elements.map{|el| "#{req}.url ~ \"#{el}\""}.join(' || ')
 end

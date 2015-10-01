@@ -8,9 +8,8 @@
        config = node['cdo-varnish']['config'][app]
 %>
   <%= if_app(app, backend) %>
-    if (false) {
-    <% config['behaviors'].each do |behavior| %>
-    } else if (<%= paths_to_regex(behavior, backend, proxy) %>) {
+    <% config['behaviors'].each_with_index do |behavior, i| %>
+    <%= i == 0 ? 'if' : '} else if'%> (<%= paths_to_regex(behavior['path'], backend, proxy) %>) {
       <%= (proxy ? process_proxy(behavior, app) : process_cookies(behavior, backend)) %>
     <% end %>
     } else {
