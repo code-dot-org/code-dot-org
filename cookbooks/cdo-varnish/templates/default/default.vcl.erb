@@ -449,7 +449,7 @@ end
         req.url ~ "^/ops-dashboard" ||
         req.url ~ "^/poste"
       ) {
-      cookie.filter_except("<%=[session_cookie,deprecated_storage_cookie,storage_id_cookie].join(',')%>,language_,progress,lines,scripts,videos_seen,callouts_seen,hour_of_code,NO_CACHE");
+      cookie.filter_except("<%=[session_cookie,deprecated_storage_cookie,storage_id_cookie].join(',')%>,language_,progress,lines,hour_of_code,NO_CACHE");
     } else {
       cookie.filter_except("NO_CACHE");
     }
