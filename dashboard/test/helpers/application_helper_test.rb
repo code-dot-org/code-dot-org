@@ -127,6 +127,19 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal 100, client_state.level_progress(1)
     assert_equal '{"1":100}', cookies[:progress]
     assert_nil session[:progress]
+
+    session[:videos_seen] = Set.new(['v1', 'v2'])
+    assert client_state.video_seen?('v1')
+    assert client_state.video_seen?('v2')
+    assert_equal_unordered ['v1','v2'], JSON.parse(cookies[:videos_seen])
+
+    session[:callouts_seen] = Set.new(['c1'])
+    assert client_state.callout_seen?('c1')
+    assert_equal_unordered ['c1'], JSON.parse(cookies[:callouts_seen])
+
+    session[:scripts] = [1, 2, 3]
+    assert_equal_unordered [1, 2, 3], client_state.scripts
+    assert_equal_unordered ['1', '2', '3'], JSON.parse(cookies[:videos_seen])
   end
 
   test 'client state scripts' do
