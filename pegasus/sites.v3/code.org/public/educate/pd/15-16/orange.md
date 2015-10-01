@@ -171,8 +171,56 @@ Snacks
 Water
 
 
+[**Back to the top**](#top)
 
 
+<a id="counselor-admin"></a>
+
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
+
+
+### Counselors##
+
+**Save the date**
+
+Wednesday, October 21st, 2015 <br/>
+12:00pm - 2:30pm
+
+**Location**
+
+Orange USD<br/> 
+1401 N. Handy Street<br/>
+Board Rooms 1 and 2 <br/>
+Orange, CA 92867 
+
+**What to bring**
+
+Snacks
+<br/>
+Water
+
+### Administrators##
+
+**Save the date**
+
+Wednesday, October 21st, 2015 <br/>
+3:00pm - 5:00pm
+
+**Location**
+
+Orange USD<br/> 
+1401 N. Handy Street<br/>
+Board Rooms 1 and 2 <br/>
+Orange, CA 92867 
+
+**What to bring**
+
+Snacks
+<br/>
+Water
 
 [**Back to the top**](#top)
 

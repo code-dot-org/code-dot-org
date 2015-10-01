@@ -1,6 +1,5 @@
-session_cookie_key = '_learn_session'
-session_cookie_key += "_#{Rails.env}" unless Rails.env.production?
+require 'cdo/session'
 Dashboard::Application.config.session_store :cookie_store,
-                                            key: session_cookie_key,
+                                            key: Session::KEY,
                                             secure: !Rails.env.development? || CDO.https_development,
                                             domain: :all
