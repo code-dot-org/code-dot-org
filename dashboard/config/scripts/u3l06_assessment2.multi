@@ -9,3 +9,8 @@ wrong 'A named memory location.'
 markdown <<MARKDOWN
 
 MARKDOWN
+teacher_markdown <<MARKDOWN
+Correct answer:
+
+A way to give input to a function that controls how the function runs.
+MARKDOWN
