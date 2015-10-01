@@ -4,3 +4,12 @@ markdown <<MARKDOWN
 Consider the algorithm you designed for today’s activity. Identify two instances where there may be multiple ways to interpret your instructions and suggest improvements that could be made to improve their clarity.
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary and may include these concepts:
+
+* Rotate - may mean vertical or horizontal and direction can be difficult to describe.
+* Snap, connect, or hook - it is hard to identifying which prongs to attach to which piece
+* Side - this can mean several things... there are 6 sides of each block
+
+MARKDOWN
