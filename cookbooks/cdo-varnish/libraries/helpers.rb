@@ -13,6 +13,11 @@ def path_to_regex(path)
   path
 end
 
+# Varnish uses 'bereq' in the 'response' section, 'req' otherwise.
+def req(section)
+  section == 'response' ? 'bereq' : 'req'
+end
+
 # Returns a regex-matcher string based on an array of filename extensions.
 def extensions_to_regex(exts)
   return [] if exts.empty?
@@ -20,33 +25,38 @@ def extensions_to_regex(exts)
 end
 
 # Returns a regex-conditional string fragment based on the provided behavior.
-# if backend=true, call `bereq` instead of `req`.
-# if proxy=true, ignore extension-based behaviors (e.g., *.png).
-def paths_to_regex(path_config, backend=false, proxy=false)
-  req = backend ? 'bereq' : 'req'
+# In the 'proxy' section, ignore extension-based behaviors (e.g., *.png).
+def paths_to_regex(path_config, section)
   path_config = [path_config] unless path_config.is_a?(Array)
   extensions, paths = path_config.partition{ |path| path[0] == '*' }
-  elements = paths.map(&:path_to_regex)
-  elements = extensions_to_regex(extensions.map{|x|x.sub(/^\*/,'')}) + elements unless proxy
-  elements.empty? ? 'false' : elements.map{|el| "#{req}.url ~ \"#{el}\""}.join(' || ')
+  elements = paths.map{|path| path_to_regex(path)}
+  elements = extensions_to_regex(extensions.map{|x|x.sub(/^\*/,'')}) + elements unless section == 'proxy'
+  elements.empty? ? 'false' : elements.map{|el| "#{req(section)}.url ~ \"#{el}\""}.join(' || ')
+end
+
+# Generates the logic string for the specified behavior.
+def process_behavior(behavior, app, section)
+  if section == 'proxy'
+    process_proxy(behavior['proxy'] || app)
+  else
+    process_cookies(behavior['cookies'], section)
+  end
 end
 
 # Returns the cookie-filter string for a given 'cookies' behavior.
-def process_cookies(behavior, backend=false)
-  if !backend
-    cookies = behavior['cookies']
+def process_cookies(cookies, section)
+  if section == 'request'
     cookies = ['NO_CACHE'] if cookies == 'none'
     "cookie.filter_except(\"#{cookies.join(',')}\");"
   else
-    behavior['cookies'] == 'none' ?
+    cookies == 'none' ?
       'unset beresp.http.set-cookie;' :
       ''
   end
 end
 
-# Returns the backend-redirect string for a given 'proxy' behavior.
-def process_proxy(behavior, default)
-  proxy = behavior['proxy'] || default
+# Returns the backend-redirect string for a given proxy.
+def process_proxy(proxy)
   "set req.backend_hint = #{proxy}.backend();"
 end
 
@@ -78,11 +88,9 @@ def rack_env?(env)
   env.to_s == node.chef_environment
 end
 
-# Returns the hostname-specific conditional expression depending for the app provided.
-# if backend=true, use `bereq.http.host` instead of `req.http.host`.
-def if_app(app, backend=false)
-  req = backend ? 'bereq' : 'req'
+# Returns the hostname-specific conditional expression for the app provided.
+def if_app(app, section)
   app == 'dashboard' ?
-    ('if ('+req+'.http.host ~ "(dashboard|studio).code.org$") {') :
+    ('if ('+req(section)+'.http.host ~ "(dashboard|studio).code.org$") {') :
     '} else {'
 end

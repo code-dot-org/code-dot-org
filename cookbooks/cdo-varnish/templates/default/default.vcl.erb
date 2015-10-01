@@ -1,19 +1,17 @@
 <%
    # Generates the VCL string for each section: 'request', 'response', or 'proxy'.
    def setup_behavior(section)
-     backend = section == 'response'
-     proxy = section == 'proxy'
      _buf = ''
      %w(dashboard pegasus).map do |app|
        config = node['cdo-varnish']['config'][app]
 %>
-  <%= if_app(app, backend) %>
+  <%= if_app(app, section) %>
     <% config['behaviors'].each_with_index do |behavior, i| %>
-    <%= i == 0 ? 'if' : '} else if'%> (<%= paths_to_regex(behavior['path'], backend, proxy) %>) {
-      <%= (proxy ? process_proxy(behavior, app) : process_cookies(behavior, backend)) %>
+    <%= i == 0 ? 'if' : '} else if'%> (<%= paths_to_regex(behavior['path'], section) %>) {
+      <%= process_behavior(behavior, app, section) %>
     <% end %>
     } else {
-      <%= (proxy ? process_proxy(config['default'], app) : process_cookies(config['default'], backend)) %>
+      <%= process_behavior(config['default'], app, section) %>
     }
   <% end %>
   }
