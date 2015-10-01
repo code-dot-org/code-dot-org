@@ -28,7 +28,14 @@ namespace :lint do
     RakeUtils.bundle_exec 'haml-lint dashboard pegasus'
   end
 
-  task all: [:ruby, :haml]
+  task :javascript do
+    Dir.chdir(apps_dir) do
+      # lint all js/jsx files in dashboardd/app/assets/javascript
+      RakeUtils.system 'grunt jshint:files --glob "../dashboard/app/assets/javascripts/**/*.js*(x)"'
+    end
+  end
+
+  task all: [:ruby, :haml, :javascript]
 end
 task lint: ['lint:all']
 
