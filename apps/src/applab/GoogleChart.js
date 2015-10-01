@@ -26,17 +26,10 @@ require('../utils');
  *
  * @example
  *   var chart = new PieChart(targetDiv);
- *   Promise.resolve(function () {
- *     return chart.loadDependencies();
- *   }).then(function () {
- *     return chart.loadData(data[, columns]);
- *   }).then(function () {
- *     return chart.drawChart([options]);
- *   });
+ *   chart.drawChart(data, columns[, options]);
  *
- * May optionally omit the loadDependencies() step; if so, it will automatically
- * occur as needed prior to another asynchronous step.  It's exposed here to
- * facilitate asynchronous loading.
+ * May optionally call loadDependencies() step to facilitiate parallel async
+ * loading with other resources.
  *
  * @param {Element} targetDiv
  * @constructor
@@ -82,51 +75,23 @@ GoogleChart.prototype.loadDependencies = function () {
 };
 
 /**
- * Validates and prepares the provided data to be displayed by the chart.
+ * Renders the chart into the target container using the specified options.
  *
- * Must be called prior to drawChart().  If loadDependencies() has not been
- * called before this method, dependencies will be loaded now.
- *
- * @param {Object[]} rawData - data to display in chart, formatted as an array
+ *  @param {Object[]} rawData - data to display in chart, formatted as an array
  *        of objects where each object represents a row, and the object keys
  *        are column names.
- * @param {string[]} [columnList] - Ordered list of column names to use as source
- *        data for the chart.  Column names must match keys in rawData.  If
- *        omitted, column names will be inferred from rawData.
- * @returns {Promise} that resolves when the chart data has been loaded and
- *          the chart is ready for drawChart().
- */
-GoogleChart.prototype.loadData = function (rawData, columnList) {
-  // If columnList is not provided, infer it from raw data
-  if (columnList === undefined) {
-    columnList = GoogleChart.inferColumnsFromRawData(rawData);
-  }
-
-  // Must load dependencies to construct a DataTable.
-  return this.loadDependencies().then(function () {
-    this.verifyData_(rawData, columnList);
-    this.dataTable_ = GoogleChart.dataTableFromRowsAndColumns(rawData, columnList);
-  }.bind(this));
-};
-
-/**
- * Renders the chart into the target container using the specified options.active
- *
- * Must be called after drawChart().
- *
+ * @param {string[]} columnList - Ordered list of column names to use as source
+ *        data for the chart.  Column names must match keys in rawData.
  * @param {Object} options - Plain options object that gets passed through to
  *        the Charts API.
  * @returns {Promise} that resolves when the chart has been rendered to the
  *          target container.
- * @throws {Error} if called before a valid data table has been loaded.
  */
-GoogleChart.prototype.drawChart = function (options) {
-  if (!this.dataTable_) {
-    throw new Error('Unable to draw chart: No data loaded.');
-  }
-
+GoogleChart.prototype.drawChart = function (rawData, columnList, options) {
   return this.loadDependencies().then(function () {
-    return this.render_(this.dataTable_, options);
+    this.verifyData_(rawData, columnList);
+    var dataTable = GoogleChart.dataTableFromRowsAndColumns(rawData, columnList);
+    return this.render_(dataTable, options);
   }.bind(this));
 };
 
@@ -145,21 +110,6 @@ GoogleChart.prototype.getDependencies = function () {
  */
 GoogleChart.prototype.warn = function (warningMessage) {
   this.warnings.push(new Error(warningMessage));
-};
-
-/**
- * @param {Object[]} rawData
- * @returns {string[]} column names found as keys in the row objects in the
- *          rawData, (hopefully) in the order they were defined in the row
- *          objects.
- */
-GoogleChart.inferColumnsFromRawData = function (rawData) {
-  return Object.getOwnPropertyNames(rawData.reduce(function (memo, row) {
-    Object.getOwnPropertyNames(row).forEach(function (key) {
-      memo[key] = true;
-    });
-    return memo;
-  }, {}));
 };
 
 /**
