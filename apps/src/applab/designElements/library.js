@@ -54,9 +54,9 @@ module.exports = {
   // Seems a little like we should always get the lowest available (as in step 3)
   // or always get the next (as in step 2)
   getUnusedElementId: function (prefix) {
-    var divApplab = $('#divApplab');
+    var designModeViz = $('#designModeViz');
     var i = nextElementIdMap[prefix] || 1;
-    while (divApplab.find("#" + prefix + i).length !== 0) {
+    while (designModeViz.find("#" + prefix + i).length !== 0) {
       i++;
     }
     nextElementIdMap[prefix] = i + 1;

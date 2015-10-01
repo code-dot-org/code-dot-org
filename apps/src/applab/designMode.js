@@ -13,7 +13,7 @@ var KeyCodes = require('../constants').KeyCodes;
 var designMode = module.exports;
 
 var currentlyEditedElement = null;
-var currentScreen = null;
+var currentScreenId = null;
 
 var GRID_SIZE = 5;
 
@@ -22,7 +22,7 @@ var GRID_SIZE = 5;
  * pane for editing the clicked element.
  * @param event
  */
-designMode.onDivApplabClick = function (event) {
+designMode.onDesignModeVizClick = function (event) {
   if (!Applab.isInDesignMode() ||
       $('#resetButton').is(':visible')) {
     return;
@@ -30,7 +30,7 @@ designMode.onDivApplabClick = function (event) {
   event.preventDefault();
 
   var element = event.target;
-  if (element.id === 'divApplab') {
+  if (element.id === 'designModeViz') {
     element = designMode.activeScreen();
   }
 
@@ -40,7 +40,7 @@ designMode.onDivApplabClick = function (event) {
     element = getInnerElement(element.parentNode);
   }
   // give the div focus so that we can listen for keyboard events
-  $("#divApplab").focus();
+  $("#designModeViz").focus();
   designMode.editElementProperties(element);
 };
 
@@ -48,7 +48,7 @@ designMode.onDivApplabClick = function (event) {
  * @returns {HTMLElement} The currently visible screen element.
  */
 designMode.activeScreen = function () {
-  return $('.screen').filter(function () {
+  return $('#designModeViz .screen').filter(function () {
     return this.style.display !== 'none';
   }).first()[0];
 };
@@ -66,7 +66,7 @@ designMode.createElement = function (elementType, left, top) {
   var parent;
   var isScreen = $(element).hasClass('screen');
   if (isScreen) {
-    parent = document.getElementById('divApplab');
+    parent = document.getElementById('designModeViz');
   } else {
     parent = designMode.activeScreen();
   }
@@ -307,7 +307,7 @@ designMode.onDeletePropertiesButton = function(element, event) {
   if (isScreen) {
     designMode.loadDefaultScreen();
   } else {
-    designMode.editElementProperties(document.getElementById(currentScreen));
+    designMode.editElementProperties(document.getElementById(currentScreenId));
   }
 };
 
@@ -369,17 +369,12 @@ designMode.onInsertEvent = function(code) {
 };
 
 designMode.serializeToLevelHtml = function () {
-  // TODO(dave): remove this check once design mode content is separated
-  // from divApplab: https://www.pivotaltracker.com/story/show/103544608
-  if (Applab.hideDesignMode) {
-    return;
-  }
-  var divApplab = $('#divApplab');
+  var designModeViz = $('#designModeViz');
   // Children are screens. Want to operate on grandchildren
-  var madeUndraggable = makeUndraggable(divApplab.children().children());
-  var serialization = new XMLSerializer().serializeToString(divApplab[0]);
+  var madeUndraggable = makeUndraggable(designModeViz.children().children());
+  var serialization = new XMLSerializer().serializeToString(designModeViz[0]);
   if (madeUndraggable) {
-    makeDraggable(divApplab.children().children());
+    makeDraggable(designModeViz.children().children());
   }
   Applab.levelHtml = serialization;
 };
@@ -389,6 +384,13 @@ designMode.serializeToLevelHtml = function () {
  * @param allowDragging {boolean}
  */
 designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
+  if (!rootEl) {
+    return;
+  }
+  while (rootEl.firstChild) {
+    rootEl.removeChild(rootEl.firstChild);
+  }
+
   if (!Applab.levelHtml) {
     return;
   }
@@ -409,15 +411,6 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
   });
 };
 
-function toggleDragging (enable) {
-  var grandChildren = $('#divApplab').children().children();
-  if (enable) {
-    makeDraggable(grandChildren);
-  } else {
-    makeUndraggable(grandChildren);
-  }
-}
-
 designMode.toggleDesignMode = function(enable) {
   var designWorkspace = document.getElementById('designWorkspace');
   if (!designWorkspace) {
@@ -433,10 +426,7 @@ designMode.toggleDesignMode = function(enable) {
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
 
-  $("#divApplab").toggleClass('divApplabDesignMode', enable);
-
-  toggleDragging(enable);
-  designMode.loadDefaultScreen();
+  Applab.toggleDivApplab(!enable);
 };
 
 /**
@@ -477,7 +467,7 @@ function makeDraggable (jqueryElements) {
         newHeight = snapToGridSize(newHeight, GRID_SIZE);
 
         // Bound at app edges
-        var container = $('#divApplab');
+        var container = $('#designModeViz');
         var maxWidth = container.outerWidth() - ui.position.left;
         var maxHeight = container.outerHeight() - ui.position.top;
         newWidth = Math.min(newWidth, maxWidth);
@@ -521,7 +511,7 @@ function makeDraggable (jqueryElements) {
         newTop = snapToGridSize(newTop, GRID_SIZE);
 
         // containment
-        var container = $('#divApplab');
+        var container = $('#designModeViz');
         var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
         var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
         newLeft = Math.min(newLeft, maxLeft);
@@ -572,7 +562,7 @@ function makeDraggable (jqueryElements) {
  * @returns {number}
  */
 function getVisualizationScale() {
-  var div = document.getElementById('divApplab');
+  var div = document.getElementById('designModeViz');
   return div.getBoundingClientRect().width / div.offsetWidth;
 }
 
@@ -623,12 +613,12 @@ designMode.configureDragAndDrop = function () {
     drop: function (event, ui) {
       var elementType = ui.draggable[0].getAttribute('data-element-type');
 
-      var div = document.getElementById('divApplab');
+      var div = document.getElementById('designModeViz');
       var xScale = div.getBoundingClientRect().width / div.offsetWidth;
       var yScale = div.getBoundingClientRect().height / div.offsetHeight;
 
-      var left = (ui.helper.offset().left - $('#divApplab').offset().left) / xScale;
-      var top = (ui.helper.offset().top - $('#divApplab').offset().top) / yScale;
+      var left = (ui.helper.offset().left - $('#designModeViz').offset().left) / xScale;
+      var top = (ui.helper.offset().top - $('#designModeViz').offset().top) / yScale;
 
       // snap top-left corner to nearest location in the grid
       left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
@@ -648,7 +638,7 @@ designMode.configureDesignToggleRow = function () {
     return;
   }
 
-  var firstScreen = $('.screen').first().attr('id');
+  var firstScreen = $('#designModeViz .screen').first().attr('id');
   designMode.changeScreen(firstScreen);
 };
 
@@ -658,7 +648,7 @@ designMode.configureDesignToggleRow = function () {
  */
 designMode.createScreen = function () {
   var newScreen = elementLibrary.createElement('SCREEN', 0, 0);
-  $("#divApplab").append(newScreen);
+  $("#designModeViz").append(newScreen);
 
   return newScreen.getAttribute('id');
 };
@@ -669,18 +659,15 @@ designMode.createScreen = function () {
  * change, and opens the element property editor for the new screen.
  */
 designMode.changeScreen = function (screenId) {
-  currentScreen = screenId;
+  currentScreenId = screenId;
   var screenIds = [];
-  $('.screen').each(function () {
+  $('#designModeViz .screen').each(function () {
     screenIds.push(this.id);
     $(this).toggle(this.id === screenId);
   });
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
-    var designModeClick = Applab.onDesignModeButton;
-    var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
-
     // View Data must simulate a run button click, to load the channel id.
     var viewDataClick = studioApp.runButtonClickWrapper.bind(
         studioApp, Applab.onViewData);
@@ -693,7 +680,7 @@ designMode.changeScreen = function (screenId) {
         startInDesignMode: Applab.startInDesignMode(),
         initialScreen: screenId,
         screens: screenIds,
-        onDesignModeButton: throttledDesignModeClick,
+        onDesignModeButton: Applab.onDesignModeButton,
         onCodeModeButton: Applab.onCodeModeButton,
         onViewDataButton: throttledViewDataClick,
         onScreenChange: designMode.changeScreen,
@@ -706,16 +693,20 @@ designMode.changeScreen = function (screenId) {
   designMode.editElementProperties(document.getElementById(screenId));
 };
 
+designMode.getCurrentScreenId = function() {
+  return currentScreenId;
+};
+
 /**
  * Load our default screen (ie. the first one in the DOM), creating a screen
  * if we have none.
  */
 designMode.loadDefaultScreen = function () {
   var defaultScreen;
-  if ($('.screen').length === 0) {
+  if ($('#designModeViz .screen').length === 0) {
     defaultScreen = designMode.createScreen();
   } else {
-    defaultScreen = $('.screen').first().attr('id');
+    defaultScreen = $('#designModeViz .screen').first().attr('id');
   }
   designMode.changeScreen(defaultScreen);
 };
@@ -765,7 +756,7 @@ designMode.addScreenIfNecessary = function(html) {
 };
 
 designMode.addKeyboardHandlers = function () {
-  $('#divApplab').keydown(function (event) {
+  $('#designModeViz').keydown(function (event) {
     if (!Applab.isInDesignMode() || Applab.isRunning()) {
       return;
     }
@@ -801,4 +792,8 @@ designMode.addKeyboardHandlers = function () {
     }
     designMode.onPropertyChange(currentlyEditedElement, property, newValue);
   });
+};
+
+designMode.resetIds = function() {
+  elementLibrary.resetIds();
 };

@@ -47,17 +47,16 @@ function assertPropertyRowExists(index, label, assert) {
 // We don't load our style sheets in mochaTests, so we instead depend
 // on checking classes.
 // An element will be set to opacity 0.3 if it has the class
-// design-mode-hidden and divApplab does not have the class
-// divApplabDesignMode
+// design-mode-hidden and divApplab is hidden
 var isFaded = function (selector) {
-  var element = $(selector);
-  return element.hasClass('design-mode-hidden') &&
-      $('#divApplab').hasClass('divApplabDesignMode');
+  var rootEl = $('#designModeViz');
+  var element = rootEl.find(selector);
+  return rootEl.is(':visible') && element.hasClass('design-mode-hidden');
 };
 var isHidden = function (selector) {
-  var element = $(selector);
-  return element.hasClass('design-mode-hidden') &&
-      !$('#divApplab').hasClass('divApplabDesignMode');
+  var rootEl = $('#divApplab');
+  var element = rootEl.find(selector);
+  return rootEl.is(':visible') && element.hasClass('design-mode-hidden');
 };
 
 module.exports = {
@@ -123,7 +122,8 @@ module.exports = {
         var shouldBeResizable = function () {
           var rootDiv, screen1, resizable, button;
 
-          rootDiv = $('#divApplab');
+          rootDiv = $('#designModeViz');
+          assert.equal(rootDiv.is(':visible'), true, 'designModeViz is visible');
           assert.equal(rootDiv.children().length, 1);
           screen1 = rootDiv.children().first();
           assert.equal(screen1.attr('id'), 'screen1');
@@ -146,6 +146,7 @@ module.exports = {
           var rootDiv, screen1, resizable, button;
 
           rootDiv = $('#divApplab');
+          assert.equal(rootDiv.is(':visible'), true, 'divApplab is visible');
           assert.equal(rootDiv.children().length, 1);
           screen1 = rootDiv.children().first();
           assert.equal(screen1.attr('id'), 'screen1');
@@ -261,8 +262,8 @@ module.exports = {
 
         // Add a chart
         testUtils.dragToVisualization('CHART', 0, 0);
-        var divApplab = $('#divApplab');
-        var newChart = divApplab.find('.chart');
+        var designModeViz = $('#designModeViz');
+        var newChart = designModeViz.find('.chart');
         assert.equal(newChart.length, 1);
 
         // Validate property rows and some default values
@@ -297,7 +298,7 @@ module.exports = {
         // Delete the chart
         var deleteButton = $('#designWorkspaceBody').find('button:contains(Delete)')[0];
         ReactTestUtils.Simulate.click(deleteButton);
-        assert.equal(divApplab.find('.chart').length, 0);
+        assert.equal(designModeViz.find('.chart').length, 0);
 
         Applab.onPuzzleComplete();
       },
