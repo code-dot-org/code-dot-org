@@ -232,7 +232,8 @@ StudioApp.prototype.init = function(config) {
       level_source_id: config.level_source_id,
       phone_share_url: config.send_to_phone_url,
       sendToPhone: config.sendToPhone,
-      twitter: config.twitter
+      twitter: config.twitter,
+      app: config.app
     });
   }
 
@@ -1427,14 +1428,23 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   var container = document.getElementById(options.containerId);
   this.hideSource = true;
   var workspaceDiv = document.getElementById('codeWorkspace');
-  if(!options.embed || options.level.skipInstructionsPopup) {
+  if (!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
   document.getElementById('visualizationResizeBar').style.display = 'none';
 
+  // Chrome-less share page.
+  if (this.share && options.app === 'applab') {
+    if (dom.isMobile()) {
+      document.getElementById('visualizationColumn').className = 'chromelessShare';
+    } else {
+      document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
+      document.getElementById('visualizationColumn').className = 'wireframeShare';
+    }
+    document.body.style.backgroundColor = '#202B34';
   // For share page on mobile, do not show this part.
-  if ((!options.embed) && (!this.share || !dom.isMobile())) {
+  } else if (!options.embed && !(this.share && dom.isMobile())) {
     var runButton = document.getElementById('runButton');
     var buttonRow = runButton.parentElement;
     var openWorkspace = document.createElement('button');
