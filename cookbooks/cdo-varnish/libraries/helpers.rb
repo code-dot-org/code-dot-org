@@ -4,13 +4,33 @@
 QUERY_REGEX = "(\\?.*)?$"
 
 def path_to_regex(path)
+  path = '/' + path unless path.start_with? '/'
   path = "^/#{path.sub(/^\//,'')}"
-  if path[-1] == '*'
-    path.slice!(-1)
-  else
-    path = path + QUERY_REGEX
-  end
+  path.slice!(-1) if path[-1] == '*'
   path
+end
+
+def normalize_paths(paths)
+  paths.each do |path|
+    raise ArgumentError("Invalid path: #{path}") unless valid_path?(path)
+    path.gsub!('^/','')
+  end
+end
+
+# The maximum length of a path pattern is 255 characters. The value can contain any of the following characters:
+# A-Z, a-z
+# Path patterns are case sensitive, so the path pattern /*.jpg doesn't apply to the file /LOGO.JPG.
+# 0-9
+# _ - . $ / ~ " ' @ : +
+#
+# Characters allowed in CloudFront path patterns, but disallowed by our configuration:
+# * (only allowed at the start or end of the path)
+# ? (No 1-character wildcards allowed)
+# &, passed and returned as &amp;
+def valid_path?(path)
+  return false if path.length > 255
+  return false unless path.match(/^(\*)?[a-zA-Z0-9_\-.$\/~"'@:+]*(\*)?$/)
+  true
 end
 
 # Varnish uses 'bereq' in the 'response' section, 'req' otherwise.
@@ -21,13 +41,14 @@ end
 # Returns a regex-matcher string based on an array of filename extensions.
 def extensions_to_regex(exts)
   return [] if exts.empty?
-  ["(?i)(#{exts.join('|').gsub('.','\.')})#{QUERY_REGEX}"]
+  ["(#{exts.join('|').gsub('.','\.')})#{QUERY_REGEX}"]
 end
 
 # Returns a regex-conditional string fragment based on the provided behavior.
 # In the 'proxy' section, ignore extension-based behaviors (e.g., *.png).
-def paths_to_regex(path_config, section)
+def paths_to_regex(path_config, section='request')
   path_config = [path_config] unless path_config.is_a?(Array)
+  path_config = normalize_paths(path_config)
   extensions, paths = path_config.partition{ |path| path[0] == '*' }
   elements = paths.map{|path| path_to_regex(path)}
   elements = extensions_to_regex(extensions.map{|x|x.sub(/^\*/,'')}) + elements unless section == 'proxy'
@@ -98,19 +119,26 @@ def if_else(items, conditional)
   _buf = ''
   items.each_with_index do |item, i|
     condition = conditional.call(item)
-    _buf << "#{i != 0 ? 'else ' : ''}#{condition && "if (#{condition}) "} {\n"
-    _buf << yield(item).lines.map{|line| '  ' + line }.join << "\n"
-    _buf << "}\n"
+    next if condition.to_s == 'false'
+    _buf[-1] = ' ' if i != 0
+    _buf << "#{i != 0 ? 'else ' : ''}#{condition && "if (#{condition}) "}{\n"
+    _buf << yield(item).lines.map{|line| '  ' + line }.join << "\n}\n"
   end
   _buf
 end
 
 # Generates the VCL string for each section: 'request', 'response', or 'proxy'.
 def setup_behavior(section)
-  if_else(%w(dashboard pegasus), lambda{|app|if_app(app,section)}) do |app|
+  app_condition = lambda do |app|
+    if_app(app, section)
+  end
+  if_else(%w(dashboard pegasus), app_condition) do |app|
     config = node['cdo-varnish']['config'][app]
     configs = config['behaviors'] + [config['default']]
-    if_else(configs, lambda{|b|b['path'] ? paths_to_regex(b['path'], section) : nil}) do |behavior|
+    path_condition = lambda do |behavior|
+      behavior['path'] ? paths_to_regex(behavior['path'], section) : nil
+    end
+    if_else(configs, path_condition) do |behavior|
       process_behavior(behavior, app, section)
     end
   end

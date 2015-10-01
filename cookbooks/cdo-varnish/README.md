@@ -14,6 +14,7 @@ Ubuntu 14.04
 Provides application-specific cache configuration used by Varnish and other
 HTTP cache layers.
 `pegasus` and `dashboard` keys each return a Hash in the following format:
+
 - `behaviors`: Array of behaviors, evaluated in top-to-bottom order:
   - `path`: [Path pattern](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesPathPattern)
     to match this behavior against.
