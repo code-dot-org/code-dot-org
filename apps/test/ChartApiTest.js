@@ -68,18 +68,6 @@ FakeAppStorage.prototype.readRecords = function (table, filter, onSuccess) {
   onSuccess(this.fakeRecords);
 };
 
-describe("GoogleChart", function () {
-  it("extracts all columns from data", function () {
-    GoogleChart.lib = fakeGoogle;
-    var rawData = [
-      {'x': 12},
-      {'x': 10, 'y': 14},
-      {'z': 144}
-    ];
-    assert.deepEqual(GoogleChart.inferColumnsFromRawData(rawData), ['x', 'y', 'z']);
-  });
-});
-
 describe("ChartApi", function () {
   var ChartType = ChartApi.ChartType;
   var fakeAppStorage;
@@ -159,13 +147,28 @@ describe("ChartApi", function () {
       rejection = null;
     });
 
-    function onResolve(r) {
-      result = r;
-    }
+    /**
+     * Stands in as a proxy for chartApi.drawChartFromRecords.
+     * Automatically captures success and failure cases and applies result
+     * values to local variables.
+     * @returns {Promise.<T>}
+     */
+    var testMethod = function () {
+      return chartApi.drawChartFromRecords.apply(chartApi, arguments)
+          .then(function (value) {
+            result = value;
+          }, function (error) {
+            rejection = error;
+          });
+    };
 
-    function onReject(e) {
-      rejection = e;
-    }
+    var assertRejects = function (rejectionRegexp) {
+      var rejectionFound = rejectionRegexp.test(rejection);
+      var receivedRejection = rejection ?
+          ("Got " + rejection.message) : "Did not reject.";
+      assert(rejectionFound, 'Expected rejection ' +
+          rejectionRegexp.toString() + "\n" + receivedRejection);
+    };
 
     var assertWarns = function (chartApi, warningRegexp) {
       assert.isNull(rejection);
@@ -192,169 +195,180 @@ describe("ChartApi", function () {
     };
 
     it("returns a Promise", function () {
-      assert.instanceOf(chartApi.drawChartFromRecords(), Promise);
+      assert.instanceOf(testMethod(), Promise);
     });
 
     it ("rejects if element is not found", function (testDone) {
-      chartApi.drawChartFromRecords('missingId')
-          .then(onResolve, onReject)
+      testMethod('missingId')
           .then(ensureDone(testDone, function () {
-            assert.equal(
-                rejection.message,
-                'Unable to render chart into element "missingId".');
+            assertRejects(/Unable to render chart into element "missingId"/);
           }));
     });
 
     it ("rejects if element is wrong type", function (testDone) {
-      chartApi.drawChartFromRecords('fakeImg')
-          .then(onResolve, onReject)
+      testMethod('fakeImg')
           .then(ensureDone(testDone, function () {
-            assert.equal(
-                rejection.message,
-                'Unable to render chart into element "fakeImg".');
+            assertRejects(/Unable to render chart into element "fakeImg"/);
           }));
     });
 
     it ("rejects if chart type is not supported", function (testDone) {
-      chartApi.drawChartFromRecords('fakeDiv', 'badType')
-          .then(onResolve, onReject)
+      testMethod('fakeDiv', 'badType')
           .then(ensureDone(testDone, function () {
-            assert.equal(
-                rejection.message,
-                'Unsupported chart type "badType".');
+            assertRejects(/Unsupported chart type "badType"/);
           }));
     });
 
     it ("rejects if no columns array provided and no columns found in data", function (testDone) {
       fakeAppStorage.fakeRecords = [];
-      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable')
-          .then(onResolve, onReject)
+      testMethod('fakeDiv', ChartType.PIE, 'fakeTable')
           .then(ensureDone(testDone, function () {
-            assert.equal(
-                rejection.message,
-                "Not enough columns for chart; expected at least 2.");
+            assertRejects(/No columns found in table "fakeTable". Charts require at least 2 columns/);
           }));
     });
 
-    it ("rejects if zero columns provided", function (testDone) {
-      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable', [])
-          .then(onResolve, onReject)
+    it ("rejects if no columns array provided and one column found in data", function (testDone) {
+      fakeAppStorage.fakeRecords = [{ id: 14 }];
+      testMethod('fakeDiv', ChartType.PIE, 'fakeTable')
           .then(ensureDone(testDone, function () {
-            assert.equal(
-                rejection.message,
-                'Not enough columns for chart; expected at least 2.');
+            assertRejects(/Only found 1 columns in table "fakeTable": "id". Charts require at least 2 columns/);
           }));
     });
 
-    it ("rejects if only one column provided", function (testDone) {
-      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable', ['column1'])
-          .then(onResolve, onReject)
+    it ("warns and infers columns if no columns array provided and two columns found in data", function (testDone) {
+      fakeAppStorage.fakeRecords = [{ id: 14, col1: 'xyzzy' }];
+      testMethod('fakeDiv', ChartType.PIE, 'fakeTable')
           .then(ensureDone(testDone, function () {
-            assert.equal(
-                rejection.message,
-                'Not enough columns for chart; expected at least 2.');
+            assertWarns(chartApi, /Not enough columns specified/);
+            assertWarns(chartApi, /Using columns "id" and "col1"/);
           }));
     });
 
-    it ("when fulfilled, makes API calls", function (testDone) {
-      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable', ['column1', 'column2'])
-          .then(onResolve, onReject)
+    it ("when inferring columns, prints list of all possible columns", function (testDone) {
+      fakeAppStorage.fakeRecords = [{ id: 14, col1: 'xyzzy', col2: 'xyzzy', col3: 'xyzzy' }];
+      testMethod('fakeDiv', ChartType.PIE, 'fakeTable')
           .then(ensureDone(testDone, function () {
-            assert.isNull(rejection);
+            assertWarns(chartApi, /Not enough columns specified/);
+            assertWarns(chartApi, /Using columns "id" and "col1"/);
+            assertWarns(chartApi, /Possible columns for table "fakeTable" are "id", "col1", "col2", "col3"/);
+          }));
+    });
+
+    it ("rejects if zero columns provided and less than two columns in data", function (testDone) {
+      fakeAppStorage.fakeRecords = [{ col1: 'xyzzy' }];
+      testMethod('fakeDiv', ChartType.PIE, 'fakeTable', [])
+          .then(ensureDone(testDone, function () {
+            assertRejects(/Only found 1 columns in table "fakeTable": "col1". Charts require at least 2 columns./);
+          }));
+    });
+
+    it ("infers/warns if zero columns provided and two or more columns in data", function (testDone) {
+      fakeAppStorage.fakeRecords = [{ col1: 'xyzzy', col2: 'gzip' }];
+      testMethod('fakeDiv', ChartType.PIE, 'fakeTable', [])
+          .then(ensureDone(testDone, function () {
+            assertWarns(chartApi, /Not enough columns specified/);
+            assertWarns(chartApi, /Using columns "col1" and "col2"/);
+            assertWarns(chartApi, /Possible columns for table "fakeTable" are "col1", "col2"/);
+          }));
+    });
+
+    it ("rejects if only one column provided and less than two columns in data", function (testDone) {
+      fakeAppStorage.fakeRecords = [{ col1: 'xyzzy' }];
+      testMethod('fakeDiv', ChartType.PIE, 'fakeTable', ['column1'])
+          .then(ensureDone(testDone, function () {
+            assertRejects(/Only found 1 columns in table "fakeTable": "col1". Charts require at least 2 columns./);
+          }));
+    });
+
+    it ("infers/warns if only one column provided and two or more columns in data", function (testDone) {
+      fakeAppStorage.fakeRecords = [{ col1: 'xyzzy', col2: 'gzip' }];
+      testMethod('fakeDiv', ChartType.PIE, 'fakeTable', ['column1'])
+          .then(ensureDone(testDone, function () {
+            assertWarns(chartApi, /Not enough columns specified/);
+            assertWarns(chartApi, /Using columns "col1" and "col2"/);
+            assertWarns(chartApi, /Possible columns for table "fakeTable" are "col1", "col2"/);
           }));
     });
 
     it ("warns about empty dataset", function (testDone) {
-      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable',
-          ['column1', 'column2'])
-          .then(onResolve, onReject)
+      testMethod('fakeDiv', ChartType.PIE, 'fakeTable', ['column1', 'column2'])
           .then(ensureDone(testDone, function () {
             assertWarns(chartApi, /No data\./);
           }));
     });
 
     it ("does not warn about empty dataset when given data", function (testDone) {
-      fakeAppStorage.fakeRecords = [
-        { column1: 'Duke', column2: 'Earl' }
-      ];
-      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable',
-          ['column1', 'column2'])
-          .then(onResolve, onReject)
+      fakeAppStorage.fakeRecords = [{column1: 'Duke', column2: 'Earl' }];
+      testMethod('fakeDiv', ChartType.PIE, 'fakeTable', ['column1', 'column2'])
           .then(ensureDone(testDone, function () {
             assertNotWarns(chartApi, /No data\./);
           }));
     });
 
-    it ("infers columns when given data but not columns", function (testDone) {
-      fakeAppStorage.fakeRecords = [
-        { column1: 'Duke', column2: 'Earl' }
-      ];
-      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable')
-          .then(onResolve, onReject)
-          .then(ensureDone(testDone, function () {
-            assert.equal(chartApi.warnings.length, 0);
-            assertNotWarns(chartApi, /Not enough columns\./);
-          }));
-    });
-
     it ("warns about empty column", function (testDone) {
-      fakeAppStorage.fakeRecords = [
-        { column1: 'Duke' }
-      ];
-      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable',
-          ['column1', 'column2'])
-          .then(onResolve, onReject)
+      fakeAppStorage.fakeRecords = [{column1: 'Duke' }];
+      testMethod('fakeDiv', ChartType.PIE, 'fakeTable', ['column1', 'column2'])
           .then(ensureDone(testDone, function () {
             assertWarns(chartApi, /No data found for column/);
           }));
     });
 
     it ("does not warn about empty column if all columns have data", function (testDone) {
-      fakeAppStorage.fakeRecords = [
-        { column1: 'Duke', column2: 'Earl' }
-      ];
-      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable',
-          ['column1', 'column2'])
-          .then(onResolve, onReject)
+      fakeAppStorage.fakeRecords = [{column1: 'Duke', column2: 'Earl' }];
+      testMethod('fakeDiv', ChartType.PIE, 'fakeTable', ['column1', 'column2'])
           .then(ensureDone(testDone, function () {
             assertNotWarns(chartApi, /No data found for column/);
           }));
     });
 
     it ("pie charts warn about three columns", function (testDone) {
-      chartApi.drawChartFromRecords('fakeDiv', ChartType.PIE, 'fakeTable',
-          ['column1', 'column2', 'column3'])
-          .then(onResolve, onReject)
+      testMethod('fakeDiv', ChartType.PIE, 'fakeTable', ['column1', 'column2', 'column3'])
           .then(ensureDone(testDone, function () {
             assertWarns(chartApi, /Too many columns/);
           }));
     });
 
     it ("bar charts do not warn about three columns", function (testDone) {
-      chartApi.drawChartFromRecords('fakeDiv', ChartType.BAR, 'fakeTable',
-          ['column1', 'column2', 'column3'])
-          .then(onResolve, onReject)
+      testMethod('fakeDiv', ChartType.BAR, 'fakeTable', ['column1', 'column2', 'column3'])
           .then(ensureDone(testDone, function () {
             assertNotWarns(chartApi, /Too many columns/);
           }));
     });
 
     it ("line charts do not warn about three columns", function (testDone) {
-      chartApi.drawChartFromRecords('fakeDiv', ChartType.LINE, 'fakeTable',
-          ['column1', 'column2', 'column3'])
-          .then(onResolve, onReject)
+      testMethod('fakeDiv', ChartType.LINE, 'fakeTable', ['column1', 'column2', 'column3'])
           .then(ensureDone(testDone, function () {
             assertNotWarns(chartApi, /Too many columns/);
           }));
     });
 
     it ("scatter charts do not warn about three columns", function (testDone) {
-      chartApi.drawChartFromRecords('fakeDiv', ChartType.SCATTER, 'fakeTable',
-          ['column1', 'column2', 'column3'])
-          .then(onResolve, onReject)
+      testMethod('fakeDiv', ChartType.SCATTER, 'fakeTable', ['column1', 'column2', 'column3'])
           .then(ensureDone(testDone, function () {
             assertNotWarns(chartApi, /Too many columns/);
           }));
+    });
+  });
+
+  describe("inferColumnsFromRawData", function () {
+    var inferColumnsFromRawData = ChartApi.inferColumnsFromRawData;
+
+    it("extracts all columns from data", function () {
+      var rawData = [
+        {'x': 12},
+        {'x': 10, 'y': 14},
+        {'z': 144}
+      ];
+      assert.deepEqual(inferColumnsFromRawData(rawData), ['x', 'y', 'z']);
+    });
+
+    it("adds columns in the order they are encountered", function () {
+      var rawData = [
+        {'z': 144},
+        {'y': 10, 'x': 14},
+        {'x': 12, 'z': 1492}
+      ];
+      assert.deepEqual(inferColumnsFromRawData(rawData), ['z', 'y', 'x']);
     });
   });
 
