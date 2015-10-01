@@ -30,9 +30,9 @@ def build_task(name, dependencies=[], params={})
       yield if block_given?
       touch path
     rescue => e
-      HipChat.log "<b>#{name}</b> FAILED!", color: 'red', notify: 1
-      HipChat.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'
-      raise $!, $!.message, []
+      HipChat.log "<b>#{name}</b> FAILED!", color:'red', notify:1
+      HipChat.log "/quote #{e}\n#{CDO.backtrace e}", message_format:'text'
+      raise
     end
   end
 
