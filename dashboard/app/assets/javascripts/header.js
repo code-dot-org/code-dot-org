@@ -405,7 +405,7 @@ dashboard.header.showProjectHeader = function () {
   });
 
   $(document).on('click', '.project_list', function () {
-    location.href = '/projects'; <%# TODO: Can't call project_list_path because it's not in scope %>
+    location.href = '/projects';
   });
 };
 
