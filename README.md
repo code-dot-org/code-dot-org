@@ -34,7 +34,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   * `sudo add-apt-repository ppa:chris-lea/node.js  `
   * `sudo apt-get update`
   * `sudo apt-get install nodejs`
-1. Either setup RBENV or configure your default ruby and gem version to 2.0
+1. Either setup RBENV or configure your default ruby and gem version to 2.0 or setup rvm
   1. Option A - RBENV: ([instructions](https://github.com/sstephenson/rbenv#installation))
     1. Install RBENV and ruby-build
     1. `rbenv install 2.0.0-p451`
@@ -44,6 +44,9 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. Ruby: `sudo ln -sf /usr/bin/ruby2.0 /usr/bin/ruby`
     1. Gem: `sudo ln -sf /usr/bin/gem2.0 /usr/bin/gem`
     1. <code>sudo chown $(whoami) /usr/bin/gem/</code>`
+  1. Option C - rvm. A few folks have had more luck with rvm vs rbenv on linux.
+    1. Install rvm from https://rvm.io/
+    1. `rvm install 2.0.0-p451`
 1. Install Node.js 0.12.4 and npm 2.10.1
   1. Option A - nodesource repository
     1. `curl -sL https://deb.nodesource.com/setup | sudo bash -`
