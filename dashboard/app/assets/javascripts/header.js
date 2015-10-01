@@ -1,4 +1,4 @@
-//= require jquery.cookie
+//= require client_state
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -428,9 +428,9 @@ function getSummarizedProgressForAnonymousUser () {
   var summarizedProgress = {};
   var levelProgress = {};
 
-  summarizedProgress.lines = $.cookie('lines');
+  summarizedProgress.lines = dashboard.clientState.lines();
 
-  var allLevelsProgress = JSON.parse(decodeURIComponent($.cookie('progress')));
+  var allLevelsProgress = dashboard.clientState.allLevelsProgress();
   for(var level in allLevelsProgress) {
     levelProgress[level] = {};
     var individualLevelProgress = allLevelsProgress[level] || -1;
