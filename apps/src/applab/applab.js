@@ -1636,8 +1636,12 @@ Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
   var elements = divApplabChildren.toArray().concat(
       divApplabChildren.children().toArray());
 
+  // Return all elements when no filter is given
+  if (filterSelector) {
+    elements = $(elements).filter(filterSelector).get();
+  }
+
   return elements
-      .filter(makeElementFilterFunction(filterSelector))
       .sort(function (elementA, elementB) {
         return elementA.id < elementB.id ? -1 : 1;
       })
@@ -1648,41 +1652,6 @@ Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
         };
       });
 };
-
-/**
- * @param {string} [selector] - A simple selector.  Can select by #elementId,
- *        .class-name, or TAGNAME.  If omitted, returned filter function will
- *        include everything.
- * @returns {function(Element)}
- */
-function makeElementFilterFunction(selector) {
-  var needle;
-  if (/^#/.test(selector)) {
-    // Test element ID
-    needle = selector.substr(1);
-    return function (element) {
-      return element.id === needle;
-    };
-  } else if (/^\./.test(selector)) {
-    // Test element class
-    // We wrap the class name in word boundaries to prevent partial-matches
-    // e.g.
-    needle = selector.substr(1);
-    return function (element) {
-      return element.className.split(/\s/).indexOf(needle) !== -1;
-    };
-  } else if ('string' === typeof(selector)) {
-    // Test element tagname
-    return function (element) {
-      return element.tagName.toUpperCase() === selector.toUpperCase();
-    };
-  }
-
-  // By default, include everything
-  return function () {
-    return true;
-  };
-}
 
 /**
  * @returns {HTMLElement} The first "screen" that isn't hidden.
