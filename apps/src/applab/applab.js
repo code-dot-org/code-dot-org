@@ -183,10 +183,10 @@ function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
 // case and scale downward from there. The visualization height will be set
 // to preserve the proper aspect ratio with respect to the current width.
 //
-// The divApplab coordinate space will be Applab.appWidth by Applab.appHeight.
+// The visualization coordinate space will be Applab.appWidth by Applab.appHeight.
 // The scale values are then adjusted such that the max-width case may result
-// in a scaled-up version of divApplab and the min-width case will typically
-// result in a scaled-down version of divApplab.
+// in a scaled-up version of the visualization area and the min-width case will
+// typically result in a scaled-down version of the visualization area.
 //
 // @returns {Array.<number>} Array of scale factors which will be used
 //     on the applab app area at the following screen widths, respectively:
@@ -292,7 +292,7 @@ function adjustAppSizeStyles(container) {
             } else if (childRules[k].selectorText === "div#visualization.responsive > *" ||
                        childRules[k].selectorText === "div.responsive#visualization > *") {
               // and set the scale factor for all children of the visualization
-              // (importantly, the divApplab element)
+              // (importantly, the divApplab and designModeViz elements)
               childRules[k].style.cssText = "-webkit-transform: scale(" + scale +
                   ");-ms-transform: scale(" + scale +
                   ");transform: scale(" + scale + ");";
@@ -315,6 +315,10 @@ var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.footerlessAppHeight + "px";
+  var designModeViz = document.getElementById('designModeViz');
+  designModeViz.style.width = Applab.appWidth + "px";
+  designModeViz.style.height = Applab.footerlessAppHeight + "px";
+
   if (Applab.levelHtml === '') {
     // On clear gives us a fresh start, including our default screen.
     designMode.loadDefaultScreen();
@@ -525,6 +529,8 @@ Applab.setLevelHtml = function (html) {
   } else {
     Applab.levelHtml = designMode.addScreenIfNecessary(html);
   }
+  var designModeViz = document.getElementById('designModeViz');
+  designMode.parseFromLevelHtml(designModeViz, true);
 };
 
 Applab.onTick = function() {
@@ -690,7 +696,9 @@ Applab.init = function(config) {
   };
 
   config.afterClearPuzzle = function() {
+    designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
+    designMode.loadDefaultScreen();
     AppStorage.populateTable(level.dataTables, true); // overwrite = true
     AppStorage.populateKeyValue(level.dataProperties, true); // overwrite = true
     studioApp.resetButtonClick();
@@ -725,15 +733,21 @@ Applab.init = function(config) {
   // should never be present on such levels, however some levels do
   // have levelHtml stored due to a previous bug. HTML set by levelbuilder
   // is stored in startHtml, not levelHtml.
-  // TODO(dave): remove this check once design mode content is separated
-  // from divApplab: https://www.pivotaltracker.com/story/show/103544608
   if (level.hideDesignMode) {
     level.levelHtml = '';
   }
+  // This call to setLevelHtml won't populate designModeViz because
+  // it hasn't been added to the DOM yet.
   Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
+
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
   studioApp.init(config);
+
+  // From this point on, designModeViz is the source of truth for the HTML contents.
+  // levelHtml should be lazily updated from designModeViz via serializeToLevelHtml.
+  var designModeViz = document.getElementById('designModeViz');
+  designMode.parseFromLevelHtml(designModeViz, true);
 
   var viz = document.getElementById('visualization');
   var vizCol = document.getElementById('visualizationColumn');
@@ -854,9 +868,13 @@ Applab.init = function(config) {
 
     designMode.configureDesignToggleRow();
 
+    designMode.loadDefaultScreen();
+
     designMode.toggleDesignMode(Applab.startInDesignMode());
 
     designMode.configureDragAndDrop();
+
+    designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
   }
 };
 
@@ -962,6 +980,16 @@ Applab.isRunning = function () {
   return $('#resetButton').is(':visible') || studioApp.share;
 };
 
+Applab.toggleDivApplab = function(isVisible) {
+  if (isVisible) {
+    $('#divApplab').show();
+    $('#designModeViz').hide();
+  } else {
+    $('#divApplab').hide();
+    $('#designModeViz').show();
+  }
+};
+
 /**
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
@@ -999,12 +1027,9 @@ Applab.reset = function(first) {
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
-  designMode.addKeyboardHandlers();
-
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
-  $("#divApplab").toggleClass('divApplabDesignMode', isDesigning);
-  designMode.parseFromLevelHtml(newDivApplab, isDesigning);
-  designMode.loadDefaultScreen();
+  Applab.toggleDivApplab(!isDesigning);
+  designMode.parseFromLevelHtml(newDivApplab, false);
   if (Applab.isInDesignMode()) {
     designMode.resetElementTray(isDesigning);
   }
@@ -1012,8 +1037,6 @@ Applab.reset = function(first) {
   if (level.showTurtleBeforeRun) {
     applabTurtle.turtleSetVisibility(true);
   }
-
-  newDivApplab.addEventListener('click', designMode.onDivApplabClick);
 
   // Reset goal successState:
   if (level.goal) {
@@ -1269,9 +1292,8 @@ Applab.execute = function() {
   }
 
   // Set focus on the default screen so key events can be handled
-  // right from the start without requiring the user to adjust focus:
-  var divApplab = document.getElementById('divApplab');
-  divApplab.firstChild.focus();
+  // right from the start without requiring the user to adjust focus.
+  Applab.loadDefaultScreen();
 
   Applab.running = true;
   $('#headers').addClass('dimmed');
@@ -1367,6 +1389,9 @@ Applab.onCodeModeButton = function() {
   utils.fireResizeEvent();
   if (!Applab.isRunning()) {
     Applab.serializeAndSave();
+    var divApplab = document.getElementById('divApplab');
+    designMode.parseFromLevelHtml(divApplab, false);
+    Applab.changeScreen(designMode.getCurrentScreenId());
   }
 };
 
@@ -1654,7 +1679,7 @@ Applab.getIdDropdown = function (filterSelector) {
  * @private
  */
 Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
-  var divApplabChildren = documentRoot.find('#divApplab').children();
+  var divApplabChildren = documentRoot.find('#designModeViz').children();
   var elements = divApplabChildren.toArray().concat(
       divApplabChildren.children().toArray());
 
@@ -1679,7 +1704,26 @@ Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
  * @returns {HTMLElement} The first "screen" that isn't hidden.
  */
 Applab.activeScreen = function () {
-  return $('.screen').filter(function () {
+  return $('#divApplab .screen').filter(function () {
     return this.style.display !== 'none';
   }).first()[0];
+};
+
+/**
+ * Changes the active screen by toggling all screens in divApplab to be non-visible,
+ * unless they match the provided screenId. Also focuses the screen.
+ */
+Applab.changeScreen = function(screenId) {
+  $('#divApplab .screen').each(function () {
+    $(this).toggle(this.id === screenId);
+    if ((this.id === screenId)) {
+      // Allow the active screen to receive keyboard events.
+      this.focus();
+    }
+  });
+};
+
+Applab.loadDefaultScreen = function() {
+  var defaultScreen = $('#divApplab .screen').first().attr('id');
+  Applab.changeScreen(defaultScreen);
 };
