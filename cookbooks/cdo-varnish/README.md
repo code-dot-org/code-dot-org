@@ -16,12 +16,15 @@ HTTP cache layers.
 `pegasus` and `dashboard` keys each return a Hash in the following format:
 
 - `behaviors`: Array of behaviors, evaluated in top-to-bottom order:
-  - `path`: [Path pattern](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesPathPattern)
-    to match this behavior against.
-    `*`-wildcards are allowed, either extension-wildcard `*.jpg` or
+  - `path`: Path string to match this behavior against.
+    A single `*`-wildcard is required, either an extension-wildcard `*.jpg` or
     path-wildcard `api/*`.
     - `path` can be a String or an Array. If it is an Array, a separate
       behavior will be generated for each element.
+    - Paths match the CloudFront [path pattern](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesPathPattern)
+      syntax, with additional restrictions:
+      - `?` and `&` characters are not allowed.
+      - Only a single `*` wildcard is allowed at the start or end of the path pattern.
   - `headers`: A whitelist array of HTTP header keys to pass to the origin and
     include in the cache key.
     To whitelist all headers for the path, pass `['*']`.
