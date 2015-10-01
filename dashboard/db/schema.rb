@@ -383,3 +383,158 @@ ActiveRecord::Schema.define(version: 20150804213021) do
   add_index "unexpected_teachers_workshops", ["unexpected_teacher_id"], name: "index_unexpected_teachers_workshops_on_unexpected_teacher_id", using: :btree
   add_index "unexpected_teachers_workshops", ["workshop_id"], name: "index_unexpected_teachers_workshops_on_workshop_id", using: :btree
 
+  create_table "user_levels", force: :cascade do |t|
+    t.integer  "user_id",         limit: 4,             null: false
+    t.integer  "level_id",        limit: 4,             null: false
+    t.integer  "attempts",        limit: 4, default: 0, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "best_result",     limit: 4
+    t.integer  "script_id",       limit: 4
+    t.integer  "level_source_id", limit: 4
+  end
+
+  add_index "user_levels", ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true, using: :btree
+
+  create_table "user_permissions", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4,   null: false
+    t.string   "permission", limit: 255, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_permissions", ["user_id", "permission"], name: "index_user_permissions_on_user_id_and_permission", unique: true, using: :btree
+
+  create_table "user_scripts", force: :cascade do |t|
+    t.integer  "user_id",          limit: 4, null: false
+    t.integer  "script_id",        limit: 4, null: false
+    t.datetime "started_at"
+    t.datetime "completed_at"
+    t.datetime "assigned_at"
+    t.datetime "last_progress_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_scripts", ["script_id"], name: "index_user_scripts_on_script_id", using: :btree
+  add_index "user_scripts", ["user_id", "script_id"], name: "index_user_scripts_on_user_id_and_script_id", unique: true, using: :btree
+
+  create_table "user_trophies", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4, null: false
+    t.integer  "trophy_id",  limit: 4, null: false
+    t.integer  "concept_id", limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_trophies", ["user_id", "trophy_id", "concept_id"], name: "index_user_trophies_on_user_id_and_trophy_id_and_concept_id", unique: true, using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                      limit: 255,   default: "",      null: false
+    t.string   "encrypted_password",         limit: 255,   default: ""
+    t.string   "reset_password_token",       limit: 255
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",              limit: 4,     default: 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip",         limit: 255
+    t.string   "last_sign_in_ip",            limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "username",                   limit: 255
+    t.string   "provider",                   limit: 255
+    t.string   "uid",                        limit: 255
+    t.boolean  "admin"
+    t.string   "gender",                     limit: 1
+    t.string   "name",                       limit: 255
+    t.string   "locale",                     limit: 10,    default: "en-US", null: false
+    t.date     "birthday"
+    t.string   "parent_email",               limit: 255
+    t.string   "user_type",                  limit: 16
+    t.string   "school",                     limit: 255
+    t.string   "full_address",               limit: 1024
+    t.integer  "total_lines",                limit: 4,     default: 0,       null: false
+    t.boolean  "prize_earned",                             default: false
+    t.integer  "prize_id",                   limit: 4
+    t.boolean  "teacher_prize_earned",                     default: false
+    t.integer  "teacher_prize_id",           limit: 4
+    t.boolean  "teacher_bonus_prize_earned",               default: false
+    t.integer  "teacher_bonus_prize_id",     limit: 4
+    t.string   "confirmation_token",         limit: 255
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email",          limit: 255
+    t.integer  "prize_teacher_id",           limit: 4
+    t.boolean  "hint_access"
+    t.integer  "secret_picture_id",          limit: 4
+    t.boolean  "active",                                   default: true,    null: false
+    t.string   "hashed_email",               limit: 255
+    t.datetime "deleted_at"
+    t.string   "secret_words",               limit: 255
+    t.text     "properties",                 limit: 65535
+    t.string   "invitation_token",           limit: 255
+    t.datetime "invitation_created_at"
+    t.datetime "invitation_sent_at"
+    t.datetime "invitation_accepted_at"
+    t.integer  "invitation_limit",           limit: 4
+    t.integer  "invited_by_id",              limit: 4
+    t.string   "invited_by_type",            limit: 255
+    t.integer  "invitations_count",          limit: 4,     default: 0
+  end
+
+  add_index "users", ["confirmation_token", "deleted_at"], name: "index_users_on_confirmation_token_and_deleted_at", unique: true, using: :btree
+  add_index "users", ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at", using: :btree
+  add_index "users", ["hashed_email", "deleted_at"], name: "index_users_on_hashed_email_and_deleted_at", using: :btree
+  add_index "users", ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
+  add_index "users", ["invitations_count"], name: "index_users_on_invitations_count", using: :btree
+  add_index "users", ["invited_by_id"], name: "index_users_on_invited_by_id", using: :btree
+  add_index "users", ["prize_id", "deleted_at"], name: "index_users_on_prize_id_and_deleted_at", unique: true, using: :btree
+  add_index "users", ["provider", "uid", "deleted_at"], name: "index_users_on_provider_and_uid_and_deleted_at", unique: true, using: :btree
+  add_index "users", ["reset_password_token", "deleted_at"], name: "index_users_on_reset_password_token_and_deleted_at", unique: true, using: :btree
+  add_index "users", ["teacher_bonus_prize_id", "deleted_at"], name: "index_users_on_teacher_bonus_prize_id_and_deleted_at", unique: true, using: :btree
+  add_index "users", ["teacher_prize_id", "deleted_at"], name: "index_users_on_teacher_prize_id_and_deleted_at", unique: true, using: :btree
+  add_index "users", ["unconfirmed_email", "deleted_at"], name: "index_users_on_unconfirmed_email_and_deleted_at", using: :btree
+  add_index "users", ["username", "deleted_at"], name: "index_users_on_username_and_deleted_at", unique: true, using: :btree
+
+  create_table "videos", force: :cascade do |t|
+    t.string   "key",          limit: 255
+    t.string   "youtube_code", limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "download",     limit: 255
+  end
+
+  create_table "workshop_attendance", force: :cascade do |t|
+    t.integer  "teacher_id", limit: 4,     null: false
+    t.integer  "segment_id", limit: 4,     null: false
+    t.string   "status",     limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "notes",      limit: 65535
+  end
+
+  add_index "workshop_attendance", ["segment_id"], name: "index_workshop_attendance_on_segment_id", using: :btree
+  add_index "workshop_attendance", ["teacher_id"], name: "index_workshop_attendance_on_teacher_id", using: :btree
+
+  create_table "workshop_cohorts", force: :cascade do |t|
+    t.integer  "workshop_id", limit: 4, null: false
+    t.integer  "cohort_id",   limit: 4, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "workshops", force: :cascade do |t|
+    t.string   "name",         limit: 255
+    t.string   "program_type", limit: 255, null: false
+    t.string   "location",     limit: 255
+    t.string   "instructions", limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "phase",        limit: 4
+  end
+
+  add_index "workshops", ["name"], name: "index_workshops_on_name", using: :btree
+  add_index "workshops", ["program_type"], name: "index_workshops_on_program_type", using: :btree
+
+end
