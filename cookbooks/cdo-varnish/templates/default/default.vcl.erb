@@ -64,10 +64,6 @@ sub vcl_recv
   <%
     # Alias the following domains to one of our primary ones.
     redirects = node['cdo-varnish']['redirects'].dup
-    unless node.chef_environment == 'production'
-      # Redirect e.g. [env].studio.code.org to [env]-studio.code.org
-      redirects.merge!(Hash[*%w(studio i18n al ar br italia ro eu uk za).map{|x|["#{node.chef_environment}.#{x}.code.org", "#{node.chef_environment}-#{x}.code.org"]}.flatten])
-    end
     redirects.each_pair do |domain,site|
   %>else if(req.http.Host == "<%= domain %>")
   {
