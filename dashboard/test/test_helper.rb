@@ -34,6 +34,7 @@ class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
   setup do
+    @start = Time.now.to_f
     # sponsor message calls PEGASUS_DB, stub it so we don't have to deal with this in test
     UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
@@ -52,6 +53,7 @@ class ActiveSupport::TestCase
   teardown do
     Dashboard::Application.config.action_controller.perform_caching = false
     set_env :test
+    puts "#{self} took #{ 1000 * (Time.now.to_f - @start)} |"
   end
 
   def set_env(env)
@@ -161,11 +163,14 @@ class ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
+    @start = Time.now.to_f
     ActionDispatch::Cookies::CookieJar.always_write_cookie = true
     request.env["devise.mapping"] = Devise.mappings[:user]
     request.env['cdo.locale'] = 'en-US'
   end
-
+  teardown do
+   # puts "#{self} took #{ 1000 * (Time.now.to_f - @start)} |"
+  end
   # override default html document to ask it to raise errors on invalid html
   def html_document
     @html_document ||= if @response.content_type === Mime::XML
@@ -274,7 +279,11 @@ end
 
 class ActionDispatch::IntegrationTest
   setup do
+    @start = Time.now.to_f
     https!
+  end
+  teardown do
+    puts "#{self} took #{ 1000 * (Time.now.to_f - @start)} |"
   end
 end
 
