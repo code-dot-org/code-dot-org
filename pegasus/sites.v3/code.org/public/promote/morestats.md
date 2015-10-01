@@ -36,7 +36,7 @@ We are interested in seeing what's happening in computer science education inter
 ## Outside resources
 
 - Landscape of K-12 Computer Science Education in the U.S., a Gallup [report](http://csedu.gallup.com/home.aspx) commissioned by Google
-
+- On average, a computer science degree from ANY university earns a [significantly higher](http://www.economist.com/news/united-states/21646220-it-depends-what-you-study-not-where) financial return on investment than an arts & humanities degree from even the best schools
 
 
 ## Master slide deck 
