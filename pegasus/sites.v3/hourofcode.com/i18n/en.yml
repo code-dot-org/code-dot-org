@@ -367,6 +367,7 @@
   resources_banner_howto_text: "How-to"
   resources_banner_howto_button: "Resources for educators, parents and districts to host an Hour of Code."
 
+  handouts_section: Share these handouts
   handouts_onepager: Spread the word with this one page handout
   handouts_brochure: Give this brochure to teachers and schools
   handouts_participationguide: Plan your Hour of Code with this participation guide
@@ -400,7 +401,7 @@
   title_tutorial_guidelines: Tutorial Guidelines
   title_whole_school: Whole School Participation
 
-  events_title: All Hour of Code Events
+  events_nav_title: Hour of Code Events
   events_nav_all: All Events
   events_nav_whole_schools: Whole Schools
   events_nav_special: Special Events

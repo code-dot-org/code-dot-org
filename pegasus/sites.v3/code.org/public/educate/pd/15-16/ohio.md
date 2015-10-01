@@ -186,6 +186,59 @@ Water
 
 [**Back to the top**](#top)
 
+
+
+<a id="counselor-admin"></a>
+
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
+
+
+### Counselors##
+
+**Save the date**
+
+Tuesday, November 10, 2015 <br/>
+11:00am - 3:00pm
+
+**Location**
+
+Charles County Public Schools Central Office<br/>
+Room 325<br/>
+5980 Radio Station Rd.<br/>
+La Plata MD 20646<br/>
+
+**What to bring**
+
+Snacks
+<br/>
+Water
+
+### Administrators##
+
+**Save the date**
+
+Tuesday, November 10, 2015 <br/>
+8:30am - 10:00am
+
+**Location**
+
+Microsoft Corporation<br/> 
+Scarlet Room<br/>
+8800 Lyra Drive, Suite 400<br/>
+Columbus, OH 43240
+
+**What to bring**
+
+Snacks
+<br/>
+Water
+
+[**Back to the top**](#top)
+
+
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.
 

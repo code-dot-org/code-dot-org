@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.4'
@@ -35,6 +34,9 @@ end
 group :development, :test do
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
+  gem 'konacha'  # Mocha + Chai JS testing in Rails
+  gem 'poltergeist'  # Headless JS tests.p
+
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'better_errors'
   gem 'binding_of_caller'
