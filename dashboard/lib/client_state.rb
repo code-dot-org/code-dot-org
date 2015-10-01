@@ -155,7 +155,7 @@ class ClientState
       cookies.permanent[:videos_seen] = JSON.generate(session[:videos_seen].to_a)
       session[:videos_seen] = nil
     end
-    if session[:videos_seen]
+    if session[:callouts_seen]
       cookies.permanent[:callouts_seen] = JSON.generate(session[:callouts_seen].to_a)
       session[:callouts_seen] = nil
     end
