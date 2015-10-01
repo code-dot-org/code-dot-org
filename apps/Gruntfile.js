@@ -2,6 +2,7 @@ var path = require('path');
 var crypto = require('crypto');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
+var glob = require('glob');
 
 var config = {};
 
@@ -523,8 +524,13 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('jshint:files', function () {
+    var files;
     if (grunt.option('files')) {
-      var files = grunt.option('files').split(",");
+      files = grunt.option('files').split(",");
+      grunt.config('jshint.some', files);
+    } else  if (grunt.option('glob')) {
+      files = glob.sync(grunt.option('glob'));
+      console.log('files: ' + files.join('\n'));
       grunt.config('jshint.some', files);
     }
     grunt.task.run('jshint:some');
