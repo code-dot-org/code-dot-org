@@ -1,5 +1,6 @@
 %div.resources-navigation
-  %div.nav-header= hoc_s(:resources_promote)
+  %a.nav-link{href: resolve_url('/promote')}
+    %div.nav-header= hoc_s(:resources_promote)
   %div.nav-item
     %a.nav-link{href: resolve_url('/promote')}
       = hoc_s(:resources_nav_spread_word)
