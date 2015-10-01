@@ -113,7 +113,6 @@ class ClientState
 
   # Parse str as a json string, returning default if str is nil or malformed.
   def parse_json(str, default = [])
-    return default if !str
     str ? JSON.parse(str) : default
   rescue JSON::JSONError
     default
