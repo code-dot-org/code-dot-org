@@ -30,7 +30,6 @@ Feature: App Lab Scenarios
     And I navigate to the share URL
 
     # Validate.
-    And I wait until element "#resetButton" is visible
     And I wait until element "#divApplab > .screen > button#hello" is visible
     And element "#divApplab > .screen > button#hello" contains text "world"
     And element "#codeModeButton" is hidden
