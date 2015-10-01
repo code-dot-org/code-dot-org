@@ -69,7 +69,7 @@ class ClientState
   # Callers should not mutate the array.
   # @return [Array<Integer>]
   def scripts
-    parse_json(cookies[:scripts], default = [])
+    parse_json(cookies[:scripts])
   end
 
   # Adds video_key to the set of videos seen in the current user session.
@@ -123,14 +123,14 @@ class ClientState
   # return [Array<String>]
   def videos_seen
     migrate_cookies
-    parse_json(cookies[:videos_seen], default = [])
+    parse_json(cookies[:videos_seen])
   end
 
   # Returns an array of all of the callout key that have been seen.
   # return [Array<String>]
   def callouts_seen
     migrate_cookies
-    parse_json(cookies[:callouts_seen], default = [])
+    parse_json(cookies[:callouts_seen])
   end
 
   def progress_hash
