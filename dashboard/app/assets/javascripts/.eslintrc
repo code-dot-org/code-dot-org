@@ -1,0 +1,18 @@
+{
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "rules": {
+    "curly": 2,
+    "no-undef": 2,
+    "semi": 2
+  },
+  "env": {
+    "node": 2,
+    "mocha": 2,
+    "browser": 2,
+  },
+  "globals": {
+    "$": true
+  }
+}

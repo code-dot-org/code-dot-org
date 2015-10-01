@@ -393,6 +393,7 @@ config.jshint = {
     browser: true,
     undef: true,
     globals: {
+      $: true,
       Blockly: true,
       //TODO: Eliminate the globals below here. Could at least warn about them
       // in their respective files

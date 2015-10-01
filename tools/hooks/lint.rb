@@ -9,7 +9,7 @@ def get_modified_files
 end
 
 def filter_grunt_jshint(modified_files)
-  modified_files.select { |f| f.end_with?(".js") }
+  modified_files.select { |f| f.end_with?(".js") || f.end_with?(".jsx") }
 end
 
 def filter_rubocop(modified_files)
