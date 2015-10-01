@@ -3,33 +3,44 @@
 # Basic regex matcher for the optional query part of a URL.
 QUERY_REGEX = "(\\?.*)?$"
 
-def path_to_regex(path)
-  path = '/' + path unless path.start_with? '/'
-  path = "^/#{path.sub(/^\//,'')}"
-  path.slice!(-1) if path[-1] == '*'
-  path
-end
-
+# Takes an array of path-patterns as input, validating and normalizing
+# them for use within a Varnish regular expression.
+# Returns an array of extension patterns and an array of path-prefixed patterns.
 def normalize_paths(paths)
-  paths.each do |path|
-    raise ArgumentError("Invalid path: #{path}") unless valid_path?(path)
-    path.gsub!('^/','')
+  paths.partition do |path|
+    # Strip leading slash
+    path.gsub!(/^\//,'')
+    is_extension = path[0] == '*'
+    if !valid_path?(path) ||
+      (is_extension && path.match('/'))
+      raise ArgumentError.new("Invalid path: #{path}")
+    end
+    # Strip leading/trailing wildcard
+    path.gsub!(/(^\*|\*$)/,'')
+    # Escape some special characters
+    path.gsub!(/[.+$"]/){|s| '\\' + s}
+    is_extension
   end
 end
 
-# The maximum length of a path pattern is 255 characters. The value can contain any of the following characters:
-# A-Z, a-z
-# Path patterns are case sensitive, so the path pattern /*.jpg doesn't apply to the file /LOGO.JPG.
+# The maximum length of a path pattern is 255 characters.
+# The value can contain any of the following characters:
+# A-Z, a-z (case sensitive, so the path pattern /*.jpg doesn't apply to the file /LOGO.JPG.)
 # 0-9
 # _ - . $ / ~ " ' @ : +
 #
-# Characters allowed in CloudFront path patterns, but disallowed by our configuration:
-# * (only allowed at the start or end of the path)
+# The following characters are allowed in CloudFront path patterns, but
+# are not allowed in our configuration format to reduce complexity:
+# * (exactly one wildcard required, either at the start or end of the path)
 # ? (No 1-character wildcards allowed)
 # &, passed and returned as &amp;
 def valid_path?(path)
+  # Maximum length
   return false if path.length > 255
-  return false unless path.match(/^(\*)?[a-zA-Z0-9_\-.$\/~"'@:+]*(\*)?$/)
+  # Valid characters allowed
+  char = /[A-Za-z0-9_\-.$\/~"'@:+]/
+  # Exactly one wildcard required at start or end
+  return false unless path.match /^(\*#{char}*|#{char}*\*)$/
   true
 end
 
@@ -41,15 +52,18 @@ end
 # Returns a regex-matcher string based on an array of filename extensions.
 def extensions_to_regex(exts)
   return [] if exts.empty?
-  ["(#{exts.join('|').gsub('.','\.')})#{QUERY_REGEX}"]
+  ["(#{exts.join '|'})#{QUERY_REGEX}"]
+end
+
+def path_to_regex(path)
+  '^/' + path
 end
 
 # Returns a regex-conditional string fragment based on the provided behavior.
 # In the 'proxy' section, ignore extension-based behaviors (e.g., *.png).
 def paths_to_regex(path_config, section='request')
   path_config = [path_config] unless path_config.is_a?(Array)
-  path_config = normalize_paths(path_config)
-  extensions, paths = path_config.partition{ |path| path[0] == '*' }
+  extensions, paths = normalize_paths(path_config)
   elements = paths.map{|path| path_to_regex(path)}
   elements = extensions_to_regex(extensions.map{|x|x.sub(/^\*/,'')}) + elements unless section == 'proxy'
   elements.empty? ? 'false' : elements.map{|el| "#{req(section)}.url ~ \"#{el}\""}.join(' || ')
@@ -79,34 +93,6 @@ end
 # Returns the backend-redirect string for a given proxy.
 def process_proxy(proxy)
   "set req.backend_hint = #{proxy}.backend();"
-end
-
-# Returns the canonical hostname based on the current Chef node's name/environment.
-# Keep in sync with CDO.canonical_hostname in deployment.rb.
-def canonical_hostname(domain)
-  return "console.#{domain}" if node.name == 'production-console'
-  return "daemon.#{domain}" if node.name == 'production-daemon'
-  return domain if rack_env?(:production)
-
-  # our HTTPS wildcard certificate only supports *.code.org
-  # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
-  sep = domain.include?('.code.org') ? '-' : '.'
-
-  # Handle some hard-coded exceptions
-  {
-    react: 'react',
-    translate: 'crowdin',
-    levelbuilder: 'levelbuilder-staging',
-    'levelbuilder-dev' => 'levelbuilder-development',
-  }.each do |subdomain, node_name|
-    return "#{subdomain}#{sep}#{domain}" if node.name == node_name
-  end
-
-  "#{node.chef_environment}#{sep}#{domain}"
-end
-
-def rack_env?(env)
-  env.to_s == node.chef_environment
 end
 
 # Returns the hostname-specific conditional expression for the app provided.
