@@ -17,8 +17,9 @@ class VarnishHelperTest < Minitest::Test
 
     path_regex = paths_to_regex(%w(path1/* path2/*))
     assert_equal 'req.url ~ "^/path1/" || req.url ~ "^/path2/"',  path_regex
+  end
 
-    # Test invalid path patterns:
+  def test_invalid_path_patterns
     [
       # Unsupported extension wildcards
       '/images/*.jpg',
@@ -37,6 +38,16 @@ class VarnishHelperTest < Minitest::Test
     ].map do |path|
       assert_raises(ArgumentError) { paths_to_regex path }
     end
+  end
+
+  def test_reuse_paths
+    reuse_path = '/api/*'
+    paths_to_regex reuse_path
+    paths_to_regex reuse_path
+
+    reuse_array = %w(/1* /2*)
+    paths_to_regex reuse_array
+    paths_to_regex reuse_array
   end
 
   def test_if_else

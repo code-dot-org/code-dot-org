@@ -7,7 +7,7 @@ QUERY_REGEX = "(\\?.*)?$"
 # them for use within a Varnish regular expression.
 # Returns an array of extension patterns and an array of path-prefixed patterns.
 def normalize_paths(paths)
-  paths.partition do |path|
+  paths.map(&:dup).partition do |path|
     # Strip leading slash
     path.gsub!(/^\//,'')
     is_extension = path[0] == '*'
@@ -65,7 +65,7 @@ def paths_to_regex(path_config, section='request')
   path_config = [path_config] unless path_config.is_a?(Array)
   extensions, paths = normalize_paths(path_config)
   elements = paths.map{|path| path_to_regex(path)}
-  elements = extensions_to_regex(extensions.map{|x|x.sub(/^\*/,'')}) + elements unless section == 'proxy'
+  elements = extensions_to_regex(extensions) + elements unless section == 'proxy'
   elements.empty? ? 'false' : elements.map{|el| "#{req(section)}.url ~ \"#{el}\""}.join(' || ')
 end
 
