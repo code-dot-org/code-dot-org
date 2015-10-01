@@ -78,11 +78,6 @@ def rack_env?(env)
   env.to_s == node.chef_environment
 end
 
-def append_env(name)
-  name += "_#{node.chef_environment}" unless rack_env?(:production)
-  name
-end
-
 # Returns the hostname-specific conditional expression depending for the app provided.
 # if backend=true, use `bereq.http.host` instead of `req.http.host`.
 def if_app(app, backend=false)
