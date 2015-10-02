@@ -473,13 +473,11 @@ function makeDraggable (jqueryElements) {
         // Wishing for a vector maths library...
 
         // Customize motion according to current visualization scale.
-        var div = document.getElementById('divApplab');
-        var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-        var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+        var scale = getVisualizationScale();
         var deltaWidth = ui.size.width - ui.originalSize.width;
         var deltaHeight = ui.size.height - ui.originalSize.height;
-        var newWidth = ui.originalSize.width + (deltaWidth / xScale);
-        var newHeight = ui.originalSize.height + (deltaHeight / yScale);
+        var newWidth = ui.originalSize.width + (deltaWidth / scale);
+        var newHeight = ui.originalSize.height + (deltaHeight / scale);
 
         // snap width/height to nearest grid increment
         newWidth -= (newWidth + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
@@ -521,13 +519,9 @@ function makeDraggable (jqueryElements) {
         // so adjust the position in various ways here.
 
         // dragging
-        var div = document.getElementById('divApplab');
-        var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-        var yScale = div.getBoundingClientRect().height / div.offsetHeight;
-        var changeLeft = ui.position.left - ui.originalPosition.left;
-        var newLeft  = (ui.originalPosition.left + changeLeft) / xScale;
-        var changeTop = ui.position.top - ui.originalPosition.top;
-        var newTop = (ui.originalPosition.top + changeTop) / yScale;
+        var scale = getVisualizationScale();
+        var newLeft  = ui.position.left / scale;
+        var newTop = ui.position.top / scale;
 
         // snap top-left corner to nearest location in the grid
         newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
@@ -578,6 +572,15 @@ function makeDraggable (jqueryElements) {
 
     elm.css('position', 'static');
   });
+}
+
+/**
+ * Calculate the current visualization scale factor, as screenWidth / domWidth.
+ * @returns {number}
+ */
+function getVisualizationScale() {
+  var div = document.getElementById('divApplab');
+  return div.getBoundingClientRect().width / div.offsetWidth;
 }
 
 /**
