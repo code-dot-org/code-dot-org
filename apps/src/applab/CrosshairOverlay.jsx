@@ -17,6 +17,8 @@ module.exports = React.createClass({
         ", y: " + Math.floor(this.props.y) + ")";
   },
 
+
+
   // Draw:
   //   Horizontal line from cursor to left edge.
   //   Vertical line from to cursor to top edge.
@@ -25,34 +27,60 @@ module.exports = React.createClass({
   //   Cursor
   //   Coordinate text
   render: function() {
-    return <g className="crosshair">
-      <line className="guide vertical"
+    var cursorStyle = {
+      stroke: '#333',
+      strokeWidth: 2
+    };
+
+    var guideStyle = {
+      stroke: '#aaa',
+      strokeWidth: 1.8,
+      strokeDasharray: 6.5
+    };
+
+    var textStyle = {
+      textAnchor: 'middle'
+    };
+
+    var textOutlineStyle = $.extend({}, textStyle, {
+      stroke: 'white',
+      strokeWidth: 10,
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round',
+      fill: 'none'
+    });
+
+    var coordinateText = this.getCoordinateText();
+
+    return <g>
+      <line style={guideStyle}
             x1={this.props.x}
             y1="0"
             x2={this.props.x}
             y2={this.props.y - (CROSSHAIR_RADIUS + CROSSHAIR_MARGIN)}/>
-      <line className="guide horizontal"
+      <line style={guideStyle}
             x1="0"
             y1={this.props.y}
             x2={this.props.x - (CROSSHAIR_RADIUS + CROSSHAIR_MARGIN)}
             y2={this.props.y}/>
-      <line className="cursor vertical"
+      <line style={cursorStyle}
             x1={this.props.x}
             y1={this.props.y - CROSSHAIR_RADIUS}
             x2={this.props.x}
             y2={this.props.y + CROSSHAIR_RADIUS}/>
-      <line className="cursor horizontal"
+      <line style={cursorStyle}
             x1={this.props.x - CROSSHAIR_RADIUS}
             y1={this.props.y}
             x2={this.props.x + CROSSHAIR_RADIUS}
             y2={this.props.y}/>
-      <text className="outline"
+      <text style={textOutlineStyle}
             x={this.props.x + COORDINATE_TEXT_X_MARGIN}
             y={this.props.y + COORDINATE_TEXT_Y_MARGIN}
-          >{this.getCoordinateText()}</text>
-      <text x={this.props.x + COORDINATE_TEXT_X_MARGIN}
+          >{coordinateText}</text>
+      <text style={textStyle}
+            x={this.props.x + COORDINATE_TEXT_X_MARGIN}
             y={this.props.y + COORDINATE_TEXT_Y_MARGIN}
-          >{this.getCoordinateText()}</text>
+          >{coordinateText}</text>
     </g>;
   }
 });
