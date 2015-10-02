@@ -1,18 +1,19 @@
 name 'ECSPD Unit 2 Intro'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Introduction to Unit 2
-## The Problem Solving unit
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-### Focus
-The focus of Unit 2 is problem solving. Students will learn about the problem solving process.  They will learn the 4 steps to the problem solving process. They will look at some fun problems and then some more classic computer science problems.
+## Introduction to Unit 2 > About this stage
 
-### Connection to Unit 1
-In Unit 1 the focus was on building a culture in your classroom where students feel that they are a valuable member of the group. In addition you begin to look at the basics of computers, what they are, how they work, and what are they used for. The classroom community you created will be very important as students try to step out of their comfort zone and work on tough problem solving questions.  In addition with the understand of the basics of a computer from Unit 1, students can continue to think about what problems computers can solve.
+In this stage, you will:
 
-### Connection to Unit 3
-In Unit 3 students will begin programming. Unit 2 will help keep students on an equal foot going into Unit 3.  Different students come in with different problem solving backgrounds. Problem solving is a huge part of programming, especially a students ability to perservere in the face of a very difficult problem.
+- Get a high-level overview of the ECS Unit 2: Problem Solving curriculum
 
+<br><br>
+> Review the content provided in the levels that follow. As you work your way through, remember to always click “Continue” at the bottom of each page in order to earn your green dot for each level.
+
+When you finish this stage, we’ll move on to Stage 3, which covers teaching strategies that are useful for Unit 2.
+<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

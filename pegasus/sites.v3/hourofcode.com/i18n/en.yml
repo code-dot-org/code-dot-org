@@ -55,6 +55,7 @@
   company_chelmsfordpublicschooldistrict: Chelmsford School District
   company_cheneysd: Cheney School District
   company_chesterfieldschools: Chesterfield County Public Schools
+  company_codebrooklyn: Code Brooklyn
   company_cps: Chicago Public Schools
   company_ccsd: Clark County School District
   company_cloverparkschooldistrict: Clover Park School District
@@ -79,6 +80,7 @@
   company_vadoe: Governor's School Programs
   company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
+  company_godaddy: Go Daddy
   company_greenupcountyschooldistrict: Greenup County Schools
   company_gwinnettcountypublicschools: Gwinnett County Public Schools
   company_HamptonCitySchools: Hampton City Schools
@@ -112,6 +114,7 @@
   company_oneclay: One Clay County School District
   company_ocps: Orange County Schools
   company_orangeusd: Orange Unified School District
+  company_pbsd: Palm Beach School District
   company_pvusd: Paradise Valley Unified School District
   company_PetersburgCityPublicSchools: Petersburg City Public Schools
   company_pylusd: Placentia-Yorba Linda Union School District
@@ -137,6 +140,7 @@
   company_wvsd208: West Valley School District
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
+  company_yelp: Yelp
 
   prizes_all: 'Prizes for every organizer'
   prizes_every_organizer: 'Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you'
@@ -166,6 +170,7 @@
   how_to_nav_districts: "For districts"
   how_to_nav_assemblies: "For school assemblies"
   how_to_nav_organizations: "For organizations"
+  how_to_nav_companies: "For companies"
   how_to_nav_afterschool_educators: "For after-school educators"
 
   prizes_nav_title: "Prizes"
@@ -382,6 +387,7 @@
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To 
   title_how_to_organizations: How to host an Hour of Code - Organizations
+  title_how_to_companies: How to host an Hour of Code - Companies
   title_how_to_officials: How-to guide for public officials
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials 
