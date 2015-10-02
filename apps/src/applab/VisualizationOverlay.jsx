@@ -57,6 +57,12 @@ module.exports = React.createClass({
       overlayComponent = <CrosshairOverlay x={this.state.mouseX} y={this.state.mouseY} />;
     }
 
-    return <svg ref="svg_">{overlayComponent}</svg>;
+    var svgStyle = {
+      width: '100%',
+      height: '100%',
+      pointerEvents: 'none'
+    };
+
+    return <svg ref="svg_" style={svgStyle}>{overlayComponent}</svg>;
   }
 });
