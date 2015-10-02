@@ -266,10 +266,8 @@ Monday, October 20, 2015 <br/>
 
 **Location**
 
-Charles County Public Schools Central Office<br/>
-Room 325<br/>
-5980 Radio Station Rd.<br/>
-La Plata MD 20646<br/>
+23 E Illinois St<br/>
+Chicago, IL 60611
 
 **What to bring**
 
@@ -282,14 +280,12 @@ Water
 **Save the date**
 
 Monday, October 20, 2015 <br/>
-8:00am - 10:00am
+8:00am - 10:45am
 
 **Location**
 
-Charles County Public Schools Central Office<br/>
-Room 325<br/>
-5980 Radio Station Rd.<br/>
-La Plata MD 20646<br/>
+23 E Illinois St<br/>
+Chicago, IL 60611
 
 **What to bring**
 

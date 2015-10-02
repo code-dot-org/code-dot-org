@@ -205,10 +205,12 @@ Tuesday, November 10, 2015 <br/>
 
 **Location**
 
-Charles County Public Schools Central Office<br/>
-Room 325<br/>
-5980 Radio Station Rd.<br/>
-La Plata MD 20646<br/>
+Microsoft Corporation<br/> 
+Scarlet Room<br/>
+8800 Lyra Drive, Suite 400<br/>
+Columbus, OH 43240
+
+Free parking is available in three lots surrounding the building.
 
 **What to bring**
 
@@ -229,6 +231,8 @@ Microsoft Corporation<br/>
 Scarlet Room<br/>
 8800 Lyra Drive, Suite 400<br/>
 Columbus, OH 43240
+
+Free parking is available in three lots surrounding the building.
 
 **What to bring**
 
