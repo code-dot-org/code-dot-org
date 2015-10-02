@@ -1,15 +1,19 @@
 name 'ECSPD Teaching Strategies Intro'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Teaching Strategies
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-### Overview
+## Teaching Strategies > About this stage
 
-#### Teaching Strategies
-In each part of the Phase 3 Online PD we will discuss a teaching strategy that is relevant to the content of that unit. These topics may be something you have seen before. If that is the case, your challenge is to come up with ideas of how best to implement it in these new lessons. If the practice is new to you, we encourage you to give it a try.
+In this stage, you will:
 
-#### Learning Strategies
-After we have looked at a new teaching strategy for the unit, you will get a chance to look at the learning strategies document. Don't feel you need to read it all at once. We will keep coming back to it each unit. The hope is that you find one new strategy to try each unit. 
+- Explore teaching strategies that support success delivering Unit 2 
+
+Review the content provided in the levels that follow. As you work your way through, remember to always click “Continue” at the bottom of each page in order to earn your green dot for each level.
+<br><br>
+
+When you finish this stage, we’ll move on to Stage 4, which provides an introduction to the Unit 2 Challenge.
+<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
