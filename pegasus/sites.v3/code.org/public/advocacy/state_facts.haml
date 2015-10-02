@@ -24,11 +24,11 @@ theme: pdf
 
 %div
   %center
-    %img{src: "/images/charts/computing_jobs.png"}
-    %img{src: "/images/charts/computing_degrees.png"}
+    %img{src: "/images/charts/computing_jobs.png", style: "width: 300px;"}
+    %img{src: "/images/charts/computing_degrees.png", style: "width: 300px;"}
     %h3 9 in 10 parents want their students to learn computer science, but only 1 in 4 schools teaches it.
-    %img{src: "/images/charts/learn_cs.png"}
-    %img{src: "/images/charts/schools_teach.png"}
+    %img{src: "/images/charts/learn_cs.png", style: "width: 300px;"}
+    %img{src: "/images/charts/schools_teach.png", style: "width: 300px;"}
 
 
 %div
@@ -55,7 +55,9 @@ theme: pdf
       schools with AP programs) offered the AP Computer Science course in 2013-2014. 
 
 %div
-  %h3 Stem Subject Exams in 2014 in New Jersey
+  %h3
+    Stem Subject Exams in 2014 in
+    %span= state_info[:state_code_s]
   =view :display_chart, id: "chart1", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1PWmXjxuN2oC-baFAe4UjL_d0s1Fu-2Vb30k7ymCxRFM/gviz/tq?gid=0&range=A1:C4&headers=1", width: 800, height: 480
 
 %div
@@ -72,9 +74,18 @@ theme: pdf
   %h2 Code.org Impact in [State Name]
   %ul
     %li Code.org has partnered with [Creskill Public Schools][school district partners/no school districts]. 
-    %li [2] Code.org affiliates offering professional development for elementary teachers in [New Jersey] have already trained  [320] elementary teachers.
-    %li Code.org has trained [x] middle school teachers and [x] high school teachers in [New Jersey] to teach computer science. 
-  %p About [4,966,000]  people in [New Jersey] have completed an Hour of Code! 
+    %li
+      [2] Code.org affiliates offering professional development for elementary teachers in
+      %span= state_info[:state_code_s]
+      have already trained  [320] elementary teachers.
+    %li
+      Code.org has trained [x] middle school teachers and [x] high school teachers in
+      %span= state_info[:state_code_s]
+      to teach computer science. 
+  %p 
+    About [4,966,000]  people in
+    %span= state_info[:state_code_s]
+    have completed an Hour of Code! 
 
 %center
   %h3 “Computer Science is a liberal art: it’s something that everybody should be exposed to and everyone should have a mastery of to some extent.” 
