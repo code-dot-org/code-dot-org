@@ -160,9 +160,7 @@ en:
       CSPPD3-u2 Welcome:
         Welcome!: Welcome!
       CSPPD3-u2 breakdown of u2 chunks: {}
-      CSPPD3-u2 chunk 1 concepts:
-        description here: description here
-        title: title
+      CSPPD3-u2 chunk 1 concepts: {}
       CSPPD3-u2 chunk 1 resources: {}
       CSPPD3-u2 overivew: {}
       CSPPD3-u2 plan: {}
@@ -2956,7 +2954,6 @@ en:
         '6': '6'
         '8': '8'
         '9': '9'
-        Router Table Assessment: Router Table Assessment
         'Router Table: Assessment': 'Router Table: Assessment'
       U2L09 Assessment1:
         ? A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
