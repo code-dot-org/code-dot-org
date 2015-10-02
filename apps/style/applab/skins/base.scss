@@ -16,8 +16,8 @@
   canvas {
     position: absolute;
     overflow: hidden;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: -1;
   }
 
@@ -45,6 +45,16 @@
     margin: 5px;
   }
 
+  .chart {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+
+    .loading {
+      background: image-url("spinner-big.gif") no-repeat center center;
+    }
+  }
+
   .design-mode-hidden {
     visibility: hidden;
   }
@@ -53,6 +63,10 @@
 #divApplab.divApplabDesignMode, .draggingParent {
 
   canvas {
+    background-color: #eee;
+  }
+
+  .chart {
     background-color: #eee;
   }
 

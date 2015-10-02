@@ -11,15 +11,55 @@ var ReactTestUtils = React.addons.TestUtils;
 // (nearish) future, we have a better approach and this code can be moved
 // without too much difficulty
 
-function validatePropertyRow(index, label, value, assert) {
+/**
+ * Assert that a property row with the given label exists at the given index,
+ * and that it has the given expected value.
+ *
+ * @param {number} index - Zero-based index for the property row to examine.
+ * @param {string} label - Expected label for the property row.
+ * @param {?} value - Expected value for the first element in the second column
+ *        of the property row, retrieved with $.val() and compared with ==,
+ *        so type coercion may occur.
+ * @param {Chai.Assert} assert
+ */
+function assertPropertyRowValue(index, label, value, assert) {
+  assertPropertyRowExists(index, label, assert);
+
+  // second col has an input with val screen 2
+  var propertyRow = $("#propertyRowContainer > div").eq(index);
+  assert.equal(propertyRow.children(1).children(0).val(), value);
+}
+
+/**
+ * Assert that a property row with the given label exists at the given index.
+ *
+ * @param {number} index - Zero-based index for the property row to examine.
+ * @param {string} label - Expected label for the property row.
+ * @param {Chai.Assert} assert
+ */
+function assertPropertyRowExists(index, label, assert) {
   var container = $("#propertyRowContainer")[0];
   assert(container, 'has design properties container');
 
   var propertyRow = $("#propertyRowContainer > div").eq(index);
   assert.equal(propertyRow.children(0).text(), label);
-  // second col has an input with val screen 2
-  assert.equal(propertyRow.children(1).children(0).val(), value);
 }
+
+// We don't load our style sheets in mochaTests, so we instead depend
+// on checking classes.
+// An element will be set to opacity 0.3 if it has the class
+// design-mode-hidden and divApplab does not have the class
+// divApplabDesignMode
+var isFaded = function (selector) {
+  var element = $(selector);
+  return element.hasClass('design-mode-hidden') &&
+      $('#divApplab').hasClass('divApplabDesignMode');
+};
+var isHidden = function (selector) {
+  var element = $(selector);
+  return element.hasClass('design-mode-hidden') &&
+      !$('#divApplab').hasClass('divApplabDesignMode');
+};
 
 module.exports = {
   app: "applab",
@@ -36,7 +76,7 @@ module.exports = {
 
         testUtils.dragToVisualization('BUTTON', 10, 10);
 
-        validatePropertyRow(0, 'id', 'button1', assert);
+        assertPropertyRowValue(0, 'id', 'button1', assert);
 
         // take advantage of the fact that we expose the filesystem via
         // localhost:8001
@@ -118,7 +158,7 @@ module.exports = {
 
         $("#designModeButton").click();
         testUtils.dragToVisualization('BUTTON', 10, 10);
-        validatePropertyRow(0, 'id', 'button1', assert);
+        assertPropertyRowValue(0, 'id', 'button1', assert);
         shouldBeResizable();
 
         $("#codeModeButton").click();
@@ -148,24 +188,9 @@ module.exports = {
       xml: '',
       runBeforeClick: function (assert) {
 
-        // We don't load our style sheets in mochaTests, so we instead ddepend
-        // on checking classes.
-        // An element will be set to opacity 0.3 if it has the class design-mode-hidden
-        // and divApplab does not have the class divApplabDesignMode
-        var isFaded = function (selector) {
-          var element = $(selector);
-          return element.hasClass('design-mode-hidden') &&
-            $('#divApplab').hasClass('divApplabDesignMode');
-        };
-        var isHidden = function (selector) {
-          var element = $(selector);
-          return element.hasClass('design-mode-hidden') &&
-            !$('#divApplab').hasClass('divApplabDesignMode');
-        };
-
         $("#designModeButton").click();
         testUtils.dragToVisualization('BUTTON', 10, 10);
-        validatePropertyRow(0, 'id', 'button1', assert);
+        assertPropertyRowValue(0, 'id', 'button1', assert);
         var toggleHidden = $('.custom-checkbox')[0];
 
         assert.equal(isFaded('#button1'), false);
@@ -218,6 +243,64 @@ module.exports = {
 
           Applab.onPuzzleComplete();
         });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "exercise CHART element",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        // Switch to design mode
+        var designModeButton = $('#designModeButton');
+        designModeButton.click();
+
+        // Add a chart
+        testUtils.dragToVisualization('CHART', 0, 0);
+        var divApplab = $('#divApplab');
+        var newChart = divApplab.find('.chart');
+        assert.equal(newChart.length, 1);
+
+        // Validate property rows and some default values
+        assertPropertyRowValue(0, 'id', 'chart1', assert);
+        assertPropertyRowValue(1, 'width (px)', 100, assert);
+        assertPropertyRowValue(2, 'height (px)', 100, assert);
+        assertPropertyRowExists(3, 'x position (px)', assert);
+        assertPropertyRowExists(4, 'y position (px)', assert);
+        assertPropertyRowExists(5, 'hidden', assert);
+        assertPropertyRowExists(6, 'depth', assert);
+
+        // Make sure it's draggable
+        var manipulator = newChart.parent();
+        assert.isTrue(manipulator.hasClass('ui-draggable'), 'chart is draggable');
+
+        // Make sure it's resizable
+        assert.isTrue(manipulator.hasClass('ui-resizable'), 'chart is resizable');
+
+        // Hide/show the chart
+        var toggleHidden = $('.custom-checkbox')[0];
+        assert.isFalse(isFaded('#chart1'));
+        assert.isFalse(isHidden('#chart1'));
+
+        ReactTestUtils.Simulate.click(toggleHidden);
+        assert.isTrue(isFaded('#chart1'));
+        assert.isFalse(isHidden('#chart1'));
+
+        ReactTestUtils.Simulate.click(toggleHidden);
+        assert.isFalse(isFaded('#chart1'));
+        assert.isFalse(isHidden('#chart1'));
+
+        // Delete the chart
+        var deleteButton = $('#designWorkspaceBody').find('button:contains(Delete)')[0];
+        ReactTestUtils.Simulate.click(deleteButton);
+        assert.equal(divApplab.find('.chart').length, 0);
+
+        Applab.onPuzzleComplete();
       },
       expected: {
         result: true,
