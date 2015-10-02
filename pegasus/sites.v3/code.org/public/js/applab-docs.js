@@ -1,4 +1,4 @@
-/*global $,CodeMirror*/
+/*global CodeMirror*/
 $(function() {
   $('pre').each(function() {
     var preElement = $(this);
