@@ -18,6 +18,11 @@ module.exports = React.createClass({
       strokeWidth: 2
     };
 
+    var cursorOutlineStyle = {
+      stroke: '#ddd',
+      strokeWidth: 4
+    };
+
     var guideStyle = {
       stroke: '#aaa',
       strokeWidth: 1.8,
@@ -38,6 +43,7 @@ module.exports = React.createClass({
 
     return {
       cursorStyle: cursorStyle,
+      cursorOutlineStyle: cursorOutlineStyle,
       guideStyle: guideStyle,
       textStyle: textStyle,
       textOutlineStyle: textOutlineStyle
@@ -68,6 +74,16 @@ module.exports = React.createClass({
             x1="0"
             y1={this.props.y}
             x2={this.props.x - (CROSSHAIR_RADIUS + CROSSHAIR_MARGIN)}
+            y2={this.props.y}/>
+      <line style={this.props.cursorOutlineStyle}
+            x1={this.props.x}
+            y1={this.props.y - CROSSHAIR_RADIUS - 1}
+            x2={this.props.x}
+            y2={this.props.y + CROSSHAIR_RADIUS + 1}/>
+      <line style={this.props.cursorOutlineStyle}
+            x1={this.props.x - CROSSHAIR_RADIUS - 1}
+            y1={this.props.y}
+            x2={this.props.x + CROSSHAIR_RADIUS + 1}
             y2={this.props.y}/>
       <line style={this.props.cursorStyle}
             x1={this.props.x}
