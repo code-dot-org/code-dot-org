@@ -5,8 +5,6 @@
  *
  */
 
- /* global $*/
-
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
@@ -1771,8 +1769,8 @@ Studio.reset = function(first) {
     finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x);
     finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y);
   }
-  
-  sortDrawOrder();  
+
+  sortDrawOrder();
 
   // A little flag for script-based code to consume.
   Studio.levelRestarted = true;
@@ -2737,7 +2735,7 @@ Studio.callCmd = function (cmd) {
     case 'setWalls':
       studioApp.highlight(cmd.id);
       Studio.setWalls(cmd.opts);
-      break;    
+      break;
     case 'setSprite':
       studioApp.highlight(cmd.id);
       Studio.setSprite(cmd.opts);
@@ -3095,7 +3093,7 @@ Studio.setBackground = function (opts) {
       $(".tile").remove();
       Studio.drawMapTiles();
 
-      sortDrawOrder();  
+      sortDrawOrder();
     }
   }
 };

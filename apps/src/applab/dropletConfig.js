@@ -1,5 +1,3 @@
-/* globals $ */
-
 var api = require('./api');
 var dontMarshalApi = require('./dontMarshalApi');
 var consoleApi = require('./consoleApi');

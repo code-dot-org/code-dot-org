@@ -395,6 +395,7 @@ config.jshint = {
     undef: true,
     globals: {
       $: true,
+      jQuery: true,
       Blockly: true,
       //TODO: Eliminate the globals below here. Could at least warn about them
       // in their respective files
