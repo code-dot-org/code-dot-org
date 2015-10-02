@@ -14,8 +14,8 @@
   #divApplab canvas, .draggingParent canvas {
     position: absolute;
     overflow: hidden;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: -1; }
   #divApplab img, .draggingParent img {
     opacity: 1.0; }
@@ -31,10 +31,19 @@
     box-sizing: border-box;
     line-height: 1.2em;
     margin: 5px; }
+  #divApplab .chart, .draggingParent .chart {
+    position: absolute;
+    display: block;
+    overflow: hidden; }
+    #divApplab .chart .loading, .draggingParent .chart .loading {
+      background: image-url("spinner-big.gif") no-repeat center center; }
   #divApplab .design-mode-hidden, .draggingParent .design-mode-hidden {
     visibility: hidden; }
 
 #divApplab.divApplabDesignMode canvas, .draggingParent canvas {
+  background-color: #eee; }
+
+#divApplab.divApplabDesignMode .chart, .draggingParent .chart {
   background-color: #eee; }
 
 #divApplab.divApplabDesignMode .design-mode-hidden, .draggingParent .design-mode-hidden {
@@ -70,7 +79,7 @@
   #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern [contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent [contenteditable=true] {
     outline: 0; }
 
-#divApplab.appModern.divApplabDesignMode img[src=''], #divApplab.appModern.divApplabDesignMode canvas, .draggingParent img[src=''], .draggingParent canvas {
+#divApplab.appModern.divApplabDesignMode img[src=''], #divApplab.appModern.divApplabDesignMode canvas, #divApplab.appModern.divApplabDesignMode .chart, .draggingParent img[src=''], .draggingParent canvas, .draggingParent .chart {
   border: 5px solid #fff;
   outline: 1px solid #bdc3c7;
   outline-offset: -1px; }
@@ -80,6 +89,9 @@
 
 #divApplab.appModern.divApplabDesignMode canvas, .draggingParent canvas {
   background: #bdc3c7 url("/blockly/media/applab/placeholder_canvas.png") center center no-repeat; }
+
+#divApplab.appModern.divApplabDesignMode .chart, .draggingParent .chart {
+  background: #bdc3c7 url("/blockly/media/applab/placeholder_chart.png") center center no-repeat; }
 
 div#visualization {
   height: 400px;

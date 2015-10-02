@@ -1,4 +1,3 @@
-var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
