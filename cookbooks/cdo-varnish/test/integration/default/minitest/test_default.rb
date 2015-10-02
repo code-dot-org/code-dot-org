@@ -164,6 +164,14 @@ describe 'http' do
     assert_miss response
     assert_equal text_fr, last_line(response)
     assert_hit proxy_request url, fr
+
+    # Fallback to English on weird Accept-Language headers
+    ['f', ('x' * 50), '*n-gb'].each do |lang|
+      lang_hash = {'Accept-Language' => lang}
+      response = proxy_request url, lang_hash
+      assert_hit response
+      assert_equal text_en, last_line(response)
+    end
   end
 
   it 'Strips all request/response cookies from static-asset URLs' do
