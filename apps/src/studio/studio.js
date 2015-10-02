@@ -342,6 +342,13 @@ var drawMap = function () {
     }
   }
 
+  var numFrames = 1;
+  if (level.goalOverride && 
+      level.goalOverride.goalAnimation && 
+      level.goalOverride.animationFrames) {
+    numFrames = 16;
+  }
+
   if (Studio.spriteGoals_) {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
       // Add finish markers.
@@ -354,11 +361,16 @@ var drawMap = function () {
       finishClipPath.appendChild(finishClipRect);
       svg.appendChild(finishClipPath);
 
+      var width = numFrames * 
+        ((level.goalOverride && level.goalOverride.imageWidth) || Studio.MARKER_WIDTH);
+
+      var height = 
+        (level.goalOverride && level.goalOverride.imageHeight) || Studio.MARKER_WIDTH;
+
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
-      spriteFinishMarker.setAttribute('height', Studio.MARKER_HEIGHT);
-      spriteFinishMarker.setAttribute('width', (level.goalOverride &&
-        level.goalOverride.imageWidth) || Studio.MARKER_WIDTH);
+      spriteFinishMarker.setAttribute('height', width);
+      spriteFinishMarker.setAttribute('width', height);
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
       svg.appendChild(spriteFinishMarker);
     }
@@ -863,6 +875,9 @@ Studio.onTick = function() {
 
     // Display sprite:
     Studio.displaySprite(i, isWalking);
+
+    // Animate goals
+    Studio.animateGoals();
 
     var sprite = Studio.sprite[i];
     if (level.gridAlignedMovement &&
@@ -1449,6 +1464,9 @@ Studio.init = function(config) {
   skin = config.skin;
   level = config.level;
 
+
+  Studio.goalFrameUpto = 0;
+
   // In our Algebra course, we want to gray out undeletable blocks. I'm not sure
   // whether or not that's desired in our other courses.
   var isAlgebraLevel = !!level.useContractEditor;
@@ -1790,7 +1808,7 @@ Studio.reset = function(first) {
   // Create Items that are specified on the map:
   Studio.createLevelItems(svg);
 
-  var goalAsset = skin.goal;
+  var goalAsset = (level.animatedGoal && skin.animatedGoal) ? skin.animatedGoal : skin.goal;
   if (level.goalOverride && level.goalOverride.goal) {
     goalAsset = skin[level.goalOverride.goal];
   }
@@ -1809,7 +1827,7 @@ Studio.reset = function(first) {
     finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y);
   }
   
-  sortDrawOrder();  
+  sortDrawOrder();
 
   // A little flag for script-based code to consume.
   Studio.levelRestarted = true;
@@ -2769,6 +2787,30 @@ Studio.displayScore = function() {
     });
   }
   score.setAttribute('visibility', 'visible');
+};
+
+Studio.animateGoals = function() {
+  if (!(level.goalOverride && level.goalOverride.goalAnimation)) {
+    return;
+  }
+
+  var numFrames = level.goalOverride.goalAnimationFrames;
+  var frameWidth = level.goalOverride.goalAnimationFrames.imageWidth;
+
+  for (i = 0; i < Studio.spriteGoals_.length; i++) {
+    var goal = Studio.spriteGoals_[i];
+    if (!goal.finished) {
+
+      var goalSprite = document.getElementById('spriteFinish' + i);
+      var goalClipRect = document.getElementById('finishClipRect' + i);
+
+      var baseX = parseInt(goalClipRect.getAttribute('x'), 10);
+
+      goalSprite.setAttribute('x', baseX - Studio.goalFrameUpto * frameWidth);
+    }
+  }
+  
+  Studio.goalFrameUpto = (Studio.goalFrameUpto + 1) % numFrames;
 };
 
 /**
