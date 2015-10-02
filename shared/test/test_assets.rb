@@ -324,8 +324,8 @@ class AssetsTest < Minitest::Test
     assets.get("/v3/assets/#{channel_id}").body
   end
 
-  def put(assets, channel_id, filename, body, content_type, query_params = nil)
-    assets.put("/v3/assets/#{channel_id}/#{filename}?#{query_params}", body, 'CONTENT_TYPE' => content_type).body
+  def put(assets, channel_id, filename, body, content_type)
+    assets.put("/v3/assets/#{channel_id}/#{filename}", body, 'CONTENT_TYPE' => content_type).body
   end
 
   def patch_abuse(assets, channel_id, abuse_score)

@@ -115,7 +115,7 @@ var projects = module.exports = {
       if (err) {
         throw err;
       }
-      assets.patch(id +'/?abuse_score=0', null, function (err, result) {
+      assets.patchAll(id, 'abuse_score=0', null, function (err, result) {
         if (err) {
           throw err;
         }

@@ -146,7 +146,7 @@ var base = {
    */
   put: function(id, value, filename, callback) {
     $.ajax({
-      url: this.api_base_url + "/" + id + (filename ? "/" + filename : ""),
+      url: this.api_base_url + "/" + id + "/" + filename,
       type: "put",
       contentType: "application/json; charset=utf-8",
       data: value
@@ -159,15 +159,16 @@ var base = {
   },
 
   /**
-   * Modify some of the contents of an asset or source file.
+   * Modify the contents of a collection
    * @param {number} id - The collection identifier.
+   * @param {String} queryParams - Any query parameters
    * @param {String} value - The request body
    * @param {NodeStyleCallback} callback - Expected result is the new collection
    *        object.
    */
-  patch: function(id, value, callback) {
+  patchAll: function(id, queryParams, value, callback) {
     $.ajax({
-      url: this.api_base_url + "/" + id,
+      url: this.api_base_url + "/" + id + "/?" + queryParams,
       type: "patch",
       contentType: "application/json; charset=utf-8",
       data: value
