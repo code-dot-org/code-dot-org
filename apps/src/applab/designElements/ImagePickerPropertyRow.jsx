@@ -1,4 +1,3 @@
-var React = require('react');
 var showAssetManager = require('../assetManagement/show.js');
 var rowStyle = require('./rowStyle');
 
