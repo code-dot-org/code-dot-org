@@ -1,4 +1,4 @@
-/* global dashboard, appOptions, $, trackEvent */
+/* global dashboard, appOptions, trackEvent */
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -334,6 +334,12 @@ var projects = module.exports = {
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
   save: function(sourceAndHtml, callback, forceNewVersion) {
+
+    // Can't save a project if we're not the owner.
+    if (current && current.isOwner === false) {
+      return;
+    }
+
     if (typeof arguments[0] === 'function' || !sourceAndHtml) {
       // If no source is provided, shift the arguments and ask for the source
       // ourselves.

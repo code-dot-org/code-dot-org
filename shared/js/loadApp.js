@@ -1,4 +1,4 @@
-/* global dashboard, appOptions, $ */
+/* global dashboard, appOptions */
 
 var renderAbusive = require('./renderAbusive');
 

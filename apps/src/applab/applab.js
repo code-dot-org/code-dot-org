@@ -4,7 +4,7 @@
  * Copyright 2014-2015 Code.org
  *
  */
-/* global $, Dialog */
+/* global Dialog */
 /* global dashboard */
 
 'use strict';

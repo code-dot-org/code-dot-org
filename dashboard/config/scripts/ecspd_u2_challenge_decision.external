@@ -2,9 +2,12 @@ name 'ECSPD U2 Challenge Decision'
 
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## Forum for Unit 2 Challenge
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-Below is the link for the Unit 2 Challenge. Once you have decided on the lesson you going to do for the challenge make a post to the forum. This is also the time to **find a partner** if you want one.
+## Unit 2 Challenge > Committing and finding a buddy
+<br><br>
+Now that you know which lesson you’re going to use for your challenge, head over to the forums and claim it! You can also buddy up with someone else who is also working on that lesson, and complete the challenge together.
+
 
 ### <strong><a href="http://forum.code.org/t/u2-challenge-decisions/2098"target="_blank"> U2 Challenge Decisions Forum</a></strong> 
 

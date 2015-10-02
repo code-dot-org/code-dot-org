@@ -741,6 +741,10 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
     blockGroup = flyout.blockSpace_.svgGroup_;
     trashcan = flyout.trashcan;
     trashcanElement = trashcan.svgGroup_;
+
+    if (this.blockSpaceEditor.hideTrashRect_) {
+      blockGroupForeground = this.blockSpaceEditor.flyout_.svgGroup_;
+    }
   }
 
   var toolbarWidth = background.getBoundingClientRect().width;
