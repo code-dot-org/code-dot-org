@@ -111,7 +111,7 @@ module.exports = React.createClass({
             accept={(this.props.typeFilter || '*') + '/*'}
             style={{display: 'none'}}
             onChange={this.upload} />
-        <button onClick={this.fileUploadClicked} className="share">
+        <button onClick={this.fileUploadClicked} className="share" id="upload-asset">
           <i className="fa fa-upload"></i>
           &nbsp;Upload File
         </button>
