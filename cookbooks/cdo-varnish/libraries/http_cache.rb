@@ -19,7 +19,7 @@ class HttpCache
 # This hash provides extra application-specific configuration for whitelisting specific request headers and
 # cookies based on the request path.
   def self.config(session_key, storage_id)
-    all_cookies = [
+    whitelisted_cookies = [
       'hour_of_code',
       'language_',
       'progress',
@@ -33,7 +33,7 @@ class HttpCache
           {
             path: 'api/hour/*',
             headers: ALL_HEADERS,
-            cookies: all_cookies
+            cookies: whitelisted_cookies
           },
           STATIC_ASSETS,
           # Dashboard-based API paths in Pegasus are session-specific, whitelist all session cookies and language headers.
@@ -54,13 +54,13 @@ class HttpCache
               poste*
             ),
             headers: ALL_HEADERS,
-            cookies: all_cookies
+            cookies: whitelisted_cookies
           },
           {
             path: 'dashboardapi/*',
             proxy: 'dashboard',
             headers: ALL_HEADERS,
-            cookies: all_cookies
+            cookies: whitelisted_cookies
           }
         ],
         # Default Pegasus paths are cached but language-specific, whitelist only language cookies/headers.
@@ -74,25 +74,25 @@ class HttpCache
           {
             path: 'v3/assets/*',
             headers: ALL_HEADERS,
-            cookies: all_cookies
+            cookies: whitelisted_cookies
           },
           {
             path: 'api/*',
             headers: ALL_HEADERS,
-            cookies: all_cookies
+            cookies: whitelisted_cookies
           },
           STATIC_ASSETS,
           {
             path: 'v2/*',
             proxy: 'pegasus',
             headers: ALL_HEADERS,
-            cookies: all_cookies
+            cookies: whitelisted_cookies
           }
         ],
         # Default Dashboard paths are session-specific, whitelist all session cookies and language headers.
         default: {
           headers: ALL_HEADERS,
-          cookies: all_cookies
+          cookies: whitelisted_cookies
         }
       }
     }
