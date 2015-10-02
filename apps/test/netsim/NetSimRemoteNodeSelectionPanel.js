@@ -8,7 +8,7 @@
  eqeqeq: true
  */
 'use strict';
-/* global $, describe, beforeEach, it */
+/* global describe, beforeEach, it */
 
 var assert = require('../util/testUtils').assert;
 var NetSimTestUtils = require('../util/netsimTestUtils');

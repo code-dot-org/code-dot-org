@@ -1,7 +1,6 @@
 /**
  * @file Helper API object that wraps asynchronous calls to our data APIs.
  */
-/* global $ */
 
 /**
  * Standard callback form for asynchronous operations, popularized by Node.
