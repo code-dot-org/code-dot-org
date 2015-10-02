@@ -159,7 +159,15 @@ en:
         Getting Started > Welcome!: Getting Started > Welcome!
       CSPPD3-u2 Welcome:
         Welcome!: Welcome!
+      CSPPD3-u2 breakdown of u2 chunks: {}
+      CSPPD3-u2 chunk 1 concepts:
+        description here: description here
+        title: title
+      CSPPD3-u2 chunk 1 resources: {}
       CSPPD3-u2 overivew: {}
+      CSPPD3-u2 plan: {}
+      CSPPD3-u2 tips for prep: {}
+      CSPPD3-u2 unit 2 overview: {}
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
@@ -292,9 +300,31 @@ en:
       ECSPD U4 D 5-6 Intro: {}
       ECSPD U4 D 7-8 Intro: {}
       ECSPD U4 D 9 Intro: {}
+      ECSPD Unit 2 Break: {}
+      ECSPD Unit 2 Challenge Preview: {}
+      ECSPD Unit 2 Cornrow Forum: {}
+      ECSPD Unit 2 Dani: {}
+      ECSPD Unit 2 Growth: {}
       ECSPD Unit 2 Intro: {}
       ECSPD Unit 2 Lesson Overview: {}
       ECSPD Unit 2 Outline: {}
+      ECSPD Unit 2 Pick2: {}
+      ECSPD Unit 2 Stage10: {}
+      ECSPD Unit 2 Stage11:
+        description here: description here
+        title: title
+      ECSPD Unit 2 Stage12: {}
+      ECSPD Unit 2 Stage13:
+        description here: description here
+        title: title
+      ECSPD Unit 2 Stage4Review: {}
+      ECSPD Unit 2 Stage5: {}
+      ECSPD Unit 2 Stage6:
+        description here: description here
+        title: title
+      ECSPD Unit 2 Stage7: {}
+      ECSPD Unit 2 Stage8: {}
+      ECSPD Unit 2 Stage9: {}
       ECSPD Unit2 Connections: {}
       ECSPD What Is Problem Solving: {}
       ECSPD What is the Challenge: {}
@@ -2927,6 +2957,7 @@ en:
         '8': '8'
         '9': '9'
         Router Table Assessment: Router Table Assessment
+        'Router Table: Assessment': 'Router Table: Assessment'
       U2L09 Assessment1:
         ? A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
         : A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
