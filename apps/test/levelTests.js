@@ -12,6 +12,7 @@
 var path = require('path');
 var assert = require('chai').assert;
 var $ = require('jquery');
+var React = require('react');
 var sinon = require('sinon');
 require('jquery-ui');
 
@@ -81,6 +82,7 @@ describe('Level tests', function() {
 
     window.jQuery = $;
     window.$ = $;
+    window.React = React;
     window.dashboard = $.extend(window.dashboard, {
       i18n: {
         t: function (selector) { return selector; }

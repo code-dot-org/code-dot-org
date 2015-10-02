@@ -1,7 +1,6 @@
 /* global Dialog */
 // TODO (josh) - don't pass `Dialog` into `createModalDialog`.
 
-var React = require('react');
 var AssetManager = require('./AssetManager.jsx');
 var studioApp = require('../../StudioApp').singleton;
 
