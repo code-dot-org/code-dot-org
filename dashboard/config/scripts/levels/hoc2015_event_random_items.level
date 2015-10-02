@@ -11,12 +11,17 @@
     "textModeAtStart": true,
     "softButtons": "[\"leftButton\", \"rightButton\", \"downButton\", \"upButton\"]",
     "code_functions": {
+      "setSpriteSpeed": null,
+
+      "changeScore": null,
+      "whenTouchItem": null,
+      "setItemActivity": null,
+      "setItemSpeed": null,
+      "addItemsToScene": null,
       "setCharacter": null,
       "setBackground": null,
+      "setWalls": null,
       "playSound": null,
-      "addItemsToScene": null,
-      "setItemActivity": null,
-      "changeScore": null,
       "moveEast": null,
       "moveWest": null,
       "moveNorth": null,
@@ -24,8 +29,7 @@
       "whenLeft": null,
       "whenRight": null,
       "whenUp": null,
-      "whenDown": null,
-      "whenTouchItem": null
+      "whenDown": null
     },
     "start_blocks": "addItemsToScene('item_walk_item3', 3);\nfunction whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}\nfunction whenTouchItem() {\n  changeScore(1);\n  \n}",
 
@@ -46,7 +50,7 @@
     "failure_condition": "function () {\r\n}",
 
     "embed": "false",
-    "instructions": "We can change settings at any point. Change the items to a new random movement every time you catch one.",
+    "instructions": "\"Surprising things can happen in this world.\"<br/><br/>We can change character behavior at any time. Change the characters to a new random movement every time you touch one.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

@@ -11,7 +11,10 @@
     "softButtons": "[\"leftButton\", \"rightButton\", \"downButton\", \"upButton\"]",
     "code_functions": {
       "setCharacter": null,
+      "setBackground": null,
+      "setWalls": null,
       "playSound": null,
+
       "moveEast": null,
       "moveWest": null,
       "moveNorth": null,
@@ -40,7 +43,7 @@
     "failure_condition": "function () {\r\n}",
 
     "embed": "false",
-    "instructions": "Customize your game by choosing your character. Let’s switch back to block mode. To set a value, just click the drop down on the block.",
+    "instructions": "\"I will now choose who to direct, and where they do it.\"<br/><br/>Customize your game by choosing the bot and the background.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
