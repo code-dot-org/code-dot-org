@@ -1232,6 +1232,8 @@ en:
           'Day 20-23 Scratch: Timing Game': 'Day 20-23 Scratch: Timing Game'
           'Day 24 Scratch: Games': 'Day 24 Scratch: Games'
           Day 25-30 Final Project: Day 25-30 Final Project
+          Unit 4 Challenge Planning: Unit 4 Challenge Planning
+          Unit 4 Challenge Creation: Unit 4 Challenge Creation
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1304,3 +1306,8 @@ en:
           Teaching Support - Lessons 17-20: Teaching Support - Lessons 17-20
           Getting Started: Getting Started
           Close and Next Steps: Close and Next Steps
+        CSPPD3-Unit2:
+          title: 'Computer Science Principles: Unit 2 PD'
+          description_short: Online Exploration of CSP Unit 2
+          description: Online Exploration of CSP Unit 2
+          Welcome!: Welcome!

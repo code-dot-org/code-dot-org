@@ -108,6 +108,7 @@ var defaultAppWidth = 400;
 var defaultAppHeight = 400;
 
 function loadLevel() {
+  Applab.hideDesignMode = level.hideDesignMode;
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};
@@ -516,7 +517,14 @@ Applab.getHtml = function () {
 };
 
 Applab.setLevelHtml = function (html) {
-  Applab.levelHtml = designMode.addScreenIfNecessary(html);
+  if (html === '') {
+    if (window.dashboard) {
+      dashboard.project.clearHtml();
+    }
+    Applab.levelHtml = '';
+  } else {
+    Applab.levelHtml = designMode.addScreenIfNecessary(html);
+  }
 };
 
 Applab.onTick = function() {
@@ -717,6 +725,15 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
+  // Ignore the user's levelHtml for levels without design mode. levelHtml
+  // should never be present on such levels, however some levels do
+  // have levelHtml stored due to a previous bug. HTML set by levelbuilder
+  // is stored in startHtml, not levelHtml.
+  // TODO(dave): remove this check once design mode content is separated
+  // from divApplab: https://www.pivotaltracker.com/story/show/103544608
+  if (level.hideDesignMode) {
+    level.levelHtml = '';
+  }
   Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
@@ -1224,9 +1241,10 @@ Applab.execute = function() {
   var codeWhenRun;
   if (level.editCode) {
     codeWhenRun = studioApp.editor.getValue();
-    // TODO: determine if this is needed (worker also calls attachToSession)
+    // Our ace worker also calls attachToSession, but it won't run on IE9:
     var session = studioApp.editor.aceEditor.getSession();
     annotationList.attachToSession(session, studioApp.editor);
+    annotationList.clearRuntimeAnnotations();
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Applab.Globals namespace)
