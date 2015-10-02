@@ -71,21 +71,22 @@ if (a == true) {
 STR
   end
 
-  def test_setup_behavior
-    behavior = {
-      dashboard: {
-        behaviors: [],
-        default: {cookies: 'all'}
-      },
-      pegasus: {
-        behaviors: [{
-            path: 'api/*',
-            cookies: 'all'
-          }],
-        default: {cookies: 'none'}
-      }
+  BEHAVIOR = {
+    dashboard: {
+      behaviors: [],
+      default: {cookies: 'all'}
+    },
+    pegasus: {
+      behaviors: [{
+          path: 'api/*',
+          cookies: 'all'
+        }],
+      default: {cookies: 'none'}
     }
-    output = setup_behavior(behavior)
+  }
+
+  def test_setup_behavior
+    output = setup_behavior BEHAVIOR
     assert_equal <<STR.strip, output
 if (req.http.host ~ "(dashboard|studio).code.org$") {
   # Allow all request cookies.
@@ -97,7 +98,7 @@ if (req.http.host ~ "(dashboard|studio).code.org$") {
   }
 }
 STR
-    output = setup_behavior(behavior, 'response')
+    output = setup_behavior BEHAVIOR, 'response'
     assert_equal <<STR.strip, output
 if (bereq.http.host ~ "(dashboard|studio).code.org$") {
   # Allow set-cookie responses.
@@ -109,5 +110,21 @@ if (bereq.http.host ~ "(dashboard|studio).code.org$") {
   }
 }
 STR
+  end
+
+  def ruby_behavior(config, path)
+    behavior_for_path(config[:behaviors] + [config[:default]], path)
+  end
+
+  def test_ruby_behavior
+    dashboard = BEHAVIOR[:dashboard]
+    pegasus = BEHAVIOR[:pegasus]
+    assert_equal 'all', ruby_behavior(dashboard, '/api/')[:cookies]
+    assert_equal 'all', ruby_behavior(pegasus, '/api/')[:cookies]
+    assert_equal 'none', ruby_behavior(pegasus, '/')[:cookies]
+
+    assert_equal 'api/*', ruby_behavior(pegasus, '/api/1')[:path]
+    assert_nil ruby_behavior(pegasus, 'api/1')[:path]
+    assert_nil ruby_behavior(pegasus, '/test/api/1')[:path]
   end
 end

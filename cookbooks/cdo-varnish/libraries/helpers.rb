@@ -7,6 +7,7 @@ QUERY_REGEX = "(\\?.*)?$"
 # them for use within a Varnish regular expression.
 # Returns an array of extension patterns and an array of path-prefixed patterns.
 def normalize_paths(paths)
+  paths = [paths] unless paths.is_a?(Array)
   paths.map(&:dup).partition do |path|
     # Strip leading slash
     path.gsub!(/^\//,'')
@@ -62,12 +63,24 @@ end
 # Returns a regex-conditional string fragment based on the provided behavior.
 # In the 'proxy' section, ignore extension-based behaviors (e.g., *.png).
 def paths_to_regex(path_config, section='request')
-  path_config = [path_config] unless path_config.is_a?(Array)
   extensions, paths = normalize_paths(path_config)
   elements = paths.map{|path| path_to_regex(path)}
   elements = extensions_to_regex(extensions) + elements unless section == 'proxy'
   elements.empty? ? 'false' : elements.map{|el| "#{req(section)}.url ~ \"#{el}\""}.join(' || ')
 end
+
+# Evaluate the provided path against the provided config, returning the first matched behavior.
+def behavior_for_path(behaviors, path)
+  behaviors.detect do |behavior|
+    paths = behavior[:path]
+    next true unless paths
+    extensions, paths = normalize_paths(paths)
+    next true if extensions.any? && path.match(extensions_to_regex(extensions).first)
+    next true if paths.any?{|p| path.match path_to_regex(p) }
+    false
+  end
+end
+
 
 # Generates the logic string for the specified behavior.
 def process_behavior(behavior, app, section)
