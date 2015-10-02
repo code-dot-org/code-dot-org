@@ -4,4 +4,17 @@ description 'Online Exploration of CSP Unit 2'
 description_short 'Online Exploration of CSP Unit 2'
 login_required 'true'
 
-stage 'Welcome!'
+stage 'Getting Started'
+level 'CSPPD3-u2 Welcome'
+level 'CSPPD3-u2 overivew'
+level 'CSPPD3-u2 tips for prep'
+level 'CSPPD3-u2 plan'
+
+stage 'Unit 2 Overview' 
+
+
+stage 'Challenge Overview'
+
+stage 'Complete the Challenge' 
+
+stage 'Share out and Submit' 
