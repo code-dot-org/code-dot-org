@@ -1,5 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/* global $, WebKitMutationObserver */
+/* global WebKitMutationObserver */
 
 /**
  * Workaround for Chrome 34 SVG bug #349701
@@ -94,7 +94,6 @@ function wrapExistingClipPaths() {
 /**
  * @file Helper API object that wraps asynchronous calls to our data APIs.
  */
-/* global $ */
 
 /**
  * Standard callback form for asynchronous operations, popularized by Node.
@@ -267,7 +266,7 @@ module.exports = {
 
 },{}],3:[function(require,module,exports){
 // TODO (brent) - way too many globals
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
+/* global script_path, Dialog, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
@@ -432,7 +431,7 @@ window.apps = {
 };
 
 },{"./chrome34Fix":1,"./loadApp":4,"./project":5,"./timing":7}],4:[function(require,module,exports){
-/* global dashboard, appOptions, $ */
+/* global dashboard, appOptions */
 
 var renderAbusive = require('./renderAbusive');
 
@@ -462,6 +461,24 @@ function loadSource(name, cacheBust) {
   };
 }
 
+/**
+ * Returns a function which returns a $.Deferred instance. When executed, the
+ * function loads the given app script.
+ * @param sourceUrl The URL of the CDN script resource to load.
+ * @returns {Function}
+ */
+function loadExternalSource(sourceUrl, cacheBust) {
+  return function () {
+    var deferred = new $.Deferred();
+    document.body.appendChild($('<script>', {
+      src: sourceUrl
+    }).on('load', function () {
+      deferred.resolve();
+    })[0]);
+    return deferred;
+  };
+}
+
 // Loads the given app stylesheet.
 function loadStyle(name) {
   $('body').append($('<link>', {
@@ -484,7 +501,8 @@ module.exports = function (callback) {
         .then(loadSource('ace/mode-javascript'))
         .then(loadSource('ace/ext-language_tools'))
         .then(loadSource('droplet/droplet-full'))
-        .then(loadSource('tooltipster/jquery.tooltipster'));
+        .then(loadSource('tooltipster/jquery.tooltipster'))
+        .then(loadExternalSource('https://www.google.com/jsapi'));
   } else {
     promise = promise.then(loadSource('blockly'))
         .then(loadSource('marked/marked'))
@@ -509,7 +527,7 @@ module.exports = function (callback) {
 };
 
 },{"./renderAbusive":6}],5:[function(require,module,exports){
-/* global dashboard, appOptions, $, trackEvent */
+/* global dashboard, appOptions, trackEvent */
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;

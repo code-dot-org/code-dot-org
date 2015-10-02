@@ -44,7 +44,6 @@ exports.load = function (assetUrl, id) {
  maxstatements: 200
 */
 /* global -Blockly */
-/* global $ */
 /* global sendReport */
 /* global confirm */
 'use strict';
@@ -1741,7 +1740,6 @@ return buf.join('');
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var utils = require('../utils');
@@ -4192,7 +4190,6 @@ return buf.join('');
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var buildMarkup = require('./NetSimTabsComponent.html.ejs');
@@ -4518,7 +4515,6 @@ return buf.join('');
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
@@ -4627,7 +4623,6 @@ return buf.join('');
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var NetSimTable = require('./NetSimTable');
@@ -5039,7 +5034,6 @@ PubSubChannel.PusherChannel.prototype.unsubscribe = function (eventName) {
  maxparams: 4,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var _ = require('../utils').getLodash();
@@ -5623,7 +5617,6 @@ NetSimTable.prototype.onPubSubEvent_ = function () {
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var utils = require('../utils');
@@ -6230,7 +6223,6 @@ return buf.join('');
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var markup = require('./NetSimRouterTab.html.ejs');
@@ -6437,7 +6429,6 @@ return buf.join('');
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var markup = require('./NetSimRouterStatsTable.html.ejs');
@@ -6779,7 +6770,6 @@ return buf.join('');
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var i18n = require('./locale');
@@ -7416,7 +7406,6 @@ NetSimPacketSizeControl.prototype.valueToShortLabel = function (val) {
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
@@ -7592,15 +7581,15 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   /** @type {string} */
   this.toAddress = initialConfig.toAddress ||
       DataConverters.binaryToAddressString('0', level.addressFormat);
-  
+
   /** @type {string} */
   this.fromAddress = initialConfig.fromAddress ||
       DataConverters.binaryToAddressString('0', level.addressFormat);
-  
+
   /** @type {number} */
   this.packetIndex = initialConfig.packetIndex !== undefined ?
       initialConfig.packetIndex : 1;
-  
+
   /** @type {number} */
   this.packetCount = initialConfig.packetCount !== undefined ?
       initialConfig.packetCount : 1;
@@ -7740,7 +7729,7 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.ui_ = {};
-  
+
   this.render();
 };
 
@@ -8740,7 +8729,6 @@ return buf.join('');
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var markup = require('./NetSimMyDeviceTab.html.ejs');
@@ -9044,7 +9032,6 @@ return buf.join('');
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var markup = require('./NetSimMetronome.html.ejs');
@@ -9315,7 +9302,6 @@ NetSimMemoryControl.prototype.valueToLabel = function (val) {
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var utils = require('../utils');
@@ -10697,7 +10683,6 @@ NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function (onCompl
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var utils = require('../utils');
@@ -11302,7 +11287,6 @@ NetSimLobby.prototype.getShareLink = function () {
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var utils = require('../utils');
@@ -11513,7 +11497,6 @@ return buf.join('');
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var utils = require('../utils');
@@ -18065,7 +18048,6 @@ Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var markup = require('./NetSimDnsTab.html.ejs');
@@ -18192,7 +18174,6 @@ NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var markup = require('./NetSimDnsTable.html.ejs');
@@ -18334,7 +18315,6 @@ return buf.join('');
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var markup = require('./NetSimDnsModeControl.html.ejs');
@@ -18456,7 +18436,6 @@ return buf.join('');
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var markup = require('./NetSimDnsManualControl.html.ejs');
@@ -19298,7 +19277,6 @@ NetSimBitRateControl.prototype.valueToLabel = function (val) {
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
@@ -19548,7 +19526,6 @@ NetSimBitLogPanel.prototype.onMinimizerClick_ = function () {
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var utils = require('../utils');
@@ -19774,7 +19751,6 @@ return buf.join('');
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var markup = require('./NetSimEncodingControl.html.ejs');
@@ -20055,7 +20031,6 @@ NetSimBandwidthControl.prototype.valueToLabel = function (val) {
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var utils = require('../utils');
@@ -20577,7 +20552,6 @@ return buf.join('');
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var NetSimApiError = require('./NetSimApiError');
@@ -20894,7 +20868,6 @@ NetSimApiError.ValidationError = {
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 /* global setTimeout */
 'use strict';
 
@@ -21664,7 +21637,6 @@ exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var utils = require('../utils');
@@ -43572,7 +43544,6 @@ exports.PacketUIColumnType = {
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 /**
@@ -43723,7 +43694,6 @@ DashboardUser.prototype.ownsSection = function (sectionID) {
  maxparams: 4,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 /**
@@ -43854,8 +43824,6 @@ exports.isArray = function (arg) {
 exports.isArrayOfStrings = function (arg) {
   return Array.isArray(arg) && arg.every(exports.isString);
 };
-
-
 
 
 },{}],"/home/ubuntu/staging/apps/build/js/RunLoop.js":[function(require,module,exports){

@@ -5712,7 +5712,7 @@ function installWhenRun(blockly, skin, isK1) {
 }
 
 },{"./locale":"/home/ubuntu/staging/apps/build/js/locale.js"}],"/home/ubuntu/staging/apps/build/js/StudioApp.js":[function(require,module,exports){
-/* global Blockly, ace:true, $, droplet, marked, digestManifest, dashboard */
+/* global Blockly, ace:true, droplet, marked, digestManifest, dashboard */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
@@ -29269,7 +29269,7 @@ function clientApi(endpoint) {
 }
 
 },{}],"/home/ubuntu/staging/apps/build/js/feedback.js":[function(require,module,exports){
-/* global trackEvent, $, jQuery */
+/* global trackEvent */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
@@ -31219,8 +31219,6 @@ exports.functionalCallXml = function (name, argList, inputContents) {
 };
 
 },{"./xml":"/home/ubuntu/staging/apps/build/js/xml.js"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletTooltipManager.js":[function(require,module,exports){
-/* global $ */
-
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
 var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
@@ -31331,8 +31329,6 @@ DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
 module.exports = DropletTooltipManager;
 
 },{"./DropletAutocompleteParameterTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompleteParameterTooltipManager.js","./DropletAutocompletePopupTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompletePopupTooltipManager.js","./DropletBlockTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletBlockTooltipManager.js","./DropletFunctionTooltip":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletFunctionTooltip.js"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletBlockTooltipManager.js":[function(require,module,exports){
-/* global $ */
-
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
 var dom = require('../dom');
@@ -31586,8 +31582,6 @@ module.exports = DropletFunctionTooltip;
 module.exports = window.blockly.common_locale;
 
 },{}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompletePopupTooltipManager.js":[function(require,module,exports){
-/* global $ */
-
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
 var dom = require('../dom');
 
@@ -31754,8 +31748,6 @@ return buf.join('');
   }
 }());
 },{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompleteParameterTooltipManager.js":[function(require,module,exports){
-/* global $ */
-
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
 var tooltipUtils = require('./tooltipUtils.js');
 var dom = require('../dom');
