@@ -1,3 +1,5 @@
+/* globals appOptions */
+
 // Pre-fill text area with previous response content
 $('textarea.response').val(appOptions.level.lastAttempt);
 

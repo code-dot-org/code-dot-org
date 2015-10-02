@@ -18,19 +18,19 @@ Beritahu temanmu mengenai #HourOfCode.
 
 ## 2. Tawarkan pada seluruh isi sekolah anda untuk mengikuti Hour of Code
 
-[Kirim email ini](http://<%= hostname %>/resources#email) kepada Kepala Sekolah Anda.
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## 3. Tanyakanlah kepada bos anda untuk terlibat
 
-[Kirim emai inil](http://<%= hostname %>/resources#email) kepada atasan Anda atau, Pemimpin Perusahaan.
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## 4. Promosikan Jam Kode di komunitas Anda
 
-Ajak kelompok masayarakat — Pramuka, kelompok pengajian/gereja, unit mahasiswa, pensiunan atau serikat pekerja. Atau selenggarakan "hajatan" Jam Kode untuk masyarakat di lingkunganmu. [Kirim email ini](http://<%= hostname %>/resources#email).
+Ajak kelompok masayarakat — Pramuka, kelompok pengajian/gereja, unit mahasiswa, pensiunan atau serikat pekerja. Atau selenggarakan "hajatan" Jam Kode untuk masyarakat di lingkunganmu. [Send this email](https://<%= hostname %>/resources#email).
 
 ## 5. Tanyakan seorang pejabat terpilih setempat untuk mendukung Hour of Code
 
-[Kirim email ini](http://<%= hostname %>/resources#politicians) ke pimpinan daerah Anda, Dewan Kota, atau Dewan Pendidikan dan undang mereka untuk mengunjungi sekolah Anda.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 

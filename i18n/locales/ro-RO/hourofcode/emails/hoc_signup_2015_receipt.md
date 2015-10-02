@@ -8,9 +8,9 @@ de la: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x
 
 # Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
+<% if @country == 'la' || @country == 'br' || @country == 'ar' %> Tu faci posibila pentru studenţii din America Latină studierea unei Ora de Programare ce poate *schimba tot restul vieţii lor*, în octombrie. 5-11. < % altceva %> tu face posibil pentru studenţi din întreaga lume studiul unei Ore de Programare, care le poate *schimba tot restul vieţii *, în decembrie. 7-13. <% end %>
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+Vom adauga in curand premii, noi Tutoriale şi alte actualizări interesante din toamna aceasta. Deci, ce puteţi face acum?
 
 ## 1. Răspândește vestea
 
@@ -18,19 +18,19 @@ Spune prietenilor tai despre #HourOfCode.
 
 ## 2. Solicită întregii şcoli sa susțină o Oră de Programare
 
-[Send this email](http://<%= hostname %>/resources#email) to your principal.
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## 3. Solicită angajatorului tău să se implice
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
-## 4. Promote the Hour of Code in your community
+## 4. Promoveaza Hour of Code în comunitatea ta
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
+Recruteaza un grup local- un club mixt baieti/fete, Biserica, Universitatea, veteranii sau sindicatul. Sau gazduieste Ora de Programare in cadrul unei petreceri pentru cartierul dumneavoastră. [Send this email](https://<%= hostname %>/resources#email).
 
 ## 5. Solicită unui oficial, ales local, sprijinul pentru organizarea Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 
