@@ -72,6 +72,11 @@ class HttpCache
       dashboard: {
         behaviors: [
           {
+            path: 'v3/assets/*',
+            headers: ALL_HEADERS,
+            cookies: all_cookies
+          },
+          {
             path: 'api/*',
             headers: ALL_HEADERS,
             cookies: all_cookies
