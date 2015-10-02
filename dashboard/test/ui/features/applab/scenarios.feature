@@ -66,3 +66,8 @@ Feature: App Lab Scenarios
     And I wait until element "#upload-asset" is visible
     And I upload the file named "artist_image_1.png"
     And I wait until element ".assetRow td:contains(artist_image_1.png)" is visible
+
+    # Delete asset
+    Then I press the first ".btn-danger" element
+    And I press the first ".btn-danger" element
+    And I wait until element "#manage-asset-status" contains text "successfully deleted!"
