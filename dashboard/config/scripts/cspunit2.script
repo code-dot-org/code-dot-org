@@ -73,10 +73,13 @@ assessment 'U2L07 Assessment5'
 # 8
 stage 'Algorithms Detour - How Routers Learn'
 level 'U2L8 Student Lesson Introduction'
+
+assessment 'U2L08 Free Response 3'
+assessment 'U2L08 Free Response 1'
+assessment 'U2L08 Free Response 2'
 assessment 'U2L08 Assessment 0'
 assessment 'U2L08 Assessment 1'
-assessment 'U2L08 Free Response 1'
-assessment 'U2L08 Free Response 3'
+
 
 # 9
 stage 'The Need for DNS'
@@ -111,7 +114,7 @@ level 'U2L12 Student Lesson Introduction'
 # 13
 stage 'Tell Me a Secret - Encrypting Text'
 level 'U2L13 Student Lesson Introduction'
-level 'Frequency Analysis'
+level 'U2 frequency caesar'
 assessment 'U2L13 Free Response Getting Started'
 assessment 'U2L13 Assessment1'
 assessment 'U2L13 Assessment3'
@@ -121,8 +124,8 @@ assessment 'U2L13 Free Response Wrap Up'
 # 14
 stage 'Cracking the Code'
 level 'U2L14 Student Lesson Introduction'
-level 'Frequency Analysis'
-level 'U2 Vigenere'
+level 'U2 frequency random sub'
+level 'U2 vigenere cipher'
 assessment 'U2L14 Free Response Getting Started'
 assessment 'U2L14 Assessment'
 assessment 'U2L14 Free Response Wrap Up'
