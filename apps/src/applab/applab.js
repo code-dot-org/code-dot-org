@@ -1636,27 +1636,41 @@ Applab.getAssetDropdown = function (typeFilter) {
 /**
  * Return droplet dropdown options representing a list of ids currently present
  * in the DOM, optionally limiting the result to a certain HTML element tagName.
- * @param {string} [tagFilter] Optional HTML element tagName to filter for.
+ * @param {string} [filterSelector] Optional selector to filter for.
  * @returns {Array}
  */
-Applab.getIdDropdown = function (tagFilter) {
-  var elements = $('#divApplab').children().toArray().concat(
-      $('#divApplab').children().children().toArray());
+Applab.getIdDropdown = function (filterSelector) {
+  return Applab.getIdDropdownFromDom_($(document), filterSelector);
+};
 
-  var filteredIds = [];
-  elements.forEach(function (element) {
-    if (!tagFilter || element.tagName.toUpperCase() === tagFilter.toUpperCase()) {
-      filteredIds.push(element.id);
-    }
-  });
-  filteredIds.sort();
+/**
+ * Internal helper for getIdDropdown, which takes a documentRoot
+ * argument to remove its global dependency and make it testable.
+ * @param {jQuery} documentRoot
+ * @param {string} filterSelector
+ * @returns {Array}
+ * @private
+ */
+Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
+  var divApplabChildren = documentRoot.find('#divApplab').children();
+  var elements = divApplabChildren.toArray().concat(
+      divApplabChildren.children().toArray());
 
-  return filteredIds.map(function(id) {
-    return {
-      text: quote(id),
-      display: quote(id)
-    };
-  });
+  // Return all elements when no filter is given
+  if (filterSelector) {
+    elements = $(elements).filter(filterSelector).get();
+  }
+
+  return elements
+      .sort(function (elementA, elementB) {
+        return elementA.id < elementB.id ? -1 : 1;
+      })
+      .map(function (element) {
+        return {
+          text: quote(element.id),
+          display: quote(element.id)
+        };
+      });
 };
 
 /**
