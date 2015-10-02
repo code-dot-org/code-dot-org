@@ -10,6 +10,16 @@ module.exports = React.createClass({
     isApplabRunning: React.PropTypes.bool.isRequired
   },
 
+  getDefaultProps: function () {
+    return {
+      svgStyle: {
+        width: '100%',
+        height: '100%',
+        pointerEvents: 'none'
+      }
+    };
+  },
+
   getInitialState: function () {
     return {
       mouseX: 0,
@@ -57,12 +67,6 @@ module.exports = React.createClass({
       overlayComponent = <CrosshairOverlay x={this.state.mouseX} y={this.state.mouseY} />;
     }
 
-    var svgStyle = {
-      width: '100%',
-      height: '100%',
-      pointerEvents: 'none'
-    };
-
-    return <svg ref="svg_" style={svgStyle}>{overlayComponent}</svg>;
+    return <svg ref="svg_" style={this.props.svgStyle}>{overlayComponent}</svg>;
   }
 });
