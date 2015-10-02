@@ -10,6 +10,9 @@ var errorMessages = {
   unknown: 'An unknown error occurred.'
 };
 
+var errorUploadDisabled = "This project has been reported for abusive content, " +
+  "so uploading new assets is disabled.";
+
 function getErrorMessage(status) {
   return errorMessages[status] || errorMessages.unknown;
 }
@@ -20,13 +23,14 @@ function getErrorMessage(status) {
 module.exports = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
-    typeFilter: React.PropTypes.string
+    typeFilter: React.PropTypes.string,
+    uploadsEnabled: React.PropTypes.bool.isRequired
   },
 
   getInitialState: function () {
     return {
       assets: null,
-      statusMessage: ''
+      statusMessage: this.props.uploadsEnabled ? '' : errorUploadDisabled
     };
   },
 
@@ -110,7 +114,10 @@ module.exports = React.createClass({
             accept={(this.props.typeFilter || '*') + '/*'}
             style={{display: 'none'}}
             onChange={this.upload} />
-        <button onClick={this.fileUploadClicked} className="share">
+        <button
+            onClick={this.fileUploadClicked}
+            className="share"
+            disabled={!this.props.uploadsEnabled}>
           <i className="fa fa-upload"></i>
           &nbsp;Upload File
         </button>
