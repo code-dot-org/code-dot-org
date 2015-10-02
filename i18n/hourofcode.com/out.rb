@@ -125,7 +125,9 @@ languages.each_pair do |name, codes|
       FileUtils.mkdir_p(language_folder)
       FileUtils.mkdir_p(language_folder + "/files")
       FileUtils.mkdir_p(language_folder + "/images")
-      FileUtils.mkdir_p(language_folder + "/resources")
+      FileUtils.mkdir_p(language_folder + "/how-to")
+      FileUtils.mkdir_p(language_folder + "/promote")
+      FileUtils.mkdir_p(language_folder + "/prizes")
     end
 
     i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/*.md"]
@@ -133,9 +135,19 @@ languages.each_pair do |name, codes|
       FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/#{File.basename(file)}")
     end
 
-    i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/resources/*.md"]
+    i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/how-to/*.md"]
     i18n_dir.each do |file|
-      FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/resources/#{File.basename(file)}")
+      FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/how-to/#{File.basename(file)}")
+    end
+
+    i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/promote/*.md"]
+    i18n_dir.each do |file|
+      FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/promote/#{File.basename(file)}")
+    end
+
+    i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/prizes/*.md"]
+    i18n_dir.each do |file|
+      FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/prizes/#{File.basename(file)}")
     end
   end
 end
@@ -167,7 +179,7 @@ Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |f
 end
 
 # fix twitter tags
-Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/resources/index.md").each do |file|
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/promote/index.md").each do |file|
   puts file
   File.write(file, File.read(file).gsub(/\stwitter\[:hashtags\]/, "\ntwitter[:hashtags]"))
 end
