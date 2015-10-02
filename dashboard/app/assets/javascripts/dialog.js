@@ -1,3 +1,5 @@
+/* globals debounce */
+
 /**
  * Adjust the maximum size of the popup's inner scroll area so that the whole popup
  * will fit within the browser viewport.
@@ -65,7 +67,7 @@ function Dialog(options) {
     var modalHeader = $('<div/>').addClass('modal-header')
         .append(header);
     if (close) {
-      modalHeader.append(closeLink)
+      modalHeader.append(closeLink);
     }
     this.div.append(modalHeader);
   } else if (close) {
@@ -215,7 +217,7 @@ Dialog.prototype.processHideOptions = function(options) {
   this.div.find("#x-close").animate({opacity: 0}, decorationFadeTime);
   this.div.find(".dialog-title").animate({opacity: 0}, decorationFadeTime);
   this.div.find(".aniGif").animate({opacity: 0}, decorationFadeTime);
-  this.div.find(".modal-content p").animate({"font-size": "13px"}, totalFadeTime)
+  this.div.find(".modal-content p").animate({"font-size": "13px"}, totalFadeTime);
   this.div.find(".markdown-instructions-container").animate({opacity: 0}, fastFadeTime);
 
   // Slide the instruction box from its current position to its destination.
@@ -225,4 +227,3 @@ Dialog.prototype.processHideOptions = function(options) {
   });
 
 };
-

@@ -1,6 +1,5 @@
 /* global $ */
 
-var React = require('react');
 var DesignToolbox = require('./DesignToolbox.jsx');
 var DesignProperties = require('./designProperties.jsx');
 

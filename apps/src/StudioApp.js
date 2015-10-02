@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, $, droplet, marked, digestManifest, dashboard */
+/* global Blockly, ace:true, droplet, marked, digestManifest, dashboard */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
@@ -12,7 +12,6 @@ var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
-var React = require('react');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
 
@@ -34,23 +33,6 @@ var ENGLISH_LOCALE = 'en_us';
  * Treat mobile devices with screen.width less than the value below as phones.
  */
 var MAX_PHONE_WIDTH = 500;
-
-/**
- * HACK Alert. We're currently using two different copies of React - one in
- * dashboard, and another in apps. This can get us into trouble in that the
- * first element each of them serialize will have a reactid of .0. We get around
- * this for now by pre-creating/serializing100 elements (i.e. reserving those
- * ids for dashboard to use)
- * A better long term approach would be to either get dashboard and apps to
- * share a copy of React, or to have dashboard prerender its components (calling
- * renderToString using a server-copy of react results in random reactids)
- */
-(function reserveDashboardReactIds() {
-  var element = React.createElement("div");
-  for (var i = 0; i < 100; i++) {
-    React.renderToString(element);
-  }
-})();
 
 var StudioApp = function () {
   this.feedback_ = new FeedbackUtils(this);
@@ -232,7 +214,8 @@ StudioApp.prototype.init = function(config) {
       level_source_id: config.level_source_id,
       phone_share_url: config.send_to_phone_url,
       sendToPhone: config.sendToPhone,
-      twitter: config.twitter
+      twitter: config.twitter,
+      app: config.app
     });
   }
 
@@ -1427,14 +1410,23 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   var container = document.getElementById(options.containerId);
   this.hideSource = true;
   var workspaceDiv = document.getElementById('codeWorkspace');
-  if(!options.embed || options.level.skipInstructionsPopup) {
+  if (!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
   document.getElementById('visualizationResizeBar').style.display = 'none';
 
+  // Chrome-less share page.
+  if (this.share && options.app === 'applab') {
+    if (dom.isMobile()) {
+      document.getElementById('visualizationColumn').className = 'chromelessShare';
+    } else {
+      document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
+      document.getElementById('visualizationColumn').className = 'wireframeShare';
+    }
+    document.body.style.backgroundColor = '#202B34';
   // For share page on mobile, do not show this part.
-  if ((!options.embed) && (!this.share || !dom.isMobile())) {
+  } else if (!options.embed && !(this.share && dom.isMobile())) {
     var runButton = document.getElementById('runButton');
     var buttonRow = runButton.parentElement;
     var openWorkspace = document.createElement('button');

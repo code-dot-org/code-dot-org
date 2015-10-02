@@ -2,14 +2,21 @@ name 'ECSPD Find Learning Strategy'
 
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## Find a new learning strategy
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-Take a few minutes to look through the learning strategies document(link below). This is a collection of learning strategies that Code.org put together. As you look through the document try to find a strategy you haven't tried before and commit to trying that during a lesson in this unit. In the next stage you will get to to add this new strategy to your Classroom Strategies list. 
+## Teaching Strategies > Let’s Review
+<br><br>
+In this stage, we reviewed two teaching strategies that will help you deliver Unit 2:
 
-### <strong><a href="https://drive.google.com/open?id=1VsjE_cQqh3kcpCOasLDtamio9dd9IkH38aJFzfsVxjE" target="_blank">Learning Strategies Doc >></a></strong>
+- Encouraging a growth mindset
+- Teaching problem solving
 
-</br>
-After looking at the document, return here and click "Continue" below to move on to the next stage. 
+These teaching strategies are just a few of the many available to you as an ECS teacher. If you like, you can review our learning strategies document to find other strategies that might help you with Unit 2.
+<br><br>
+<a href="https://drive.google.com/open?id=1VsjE_cQqh3kcpCOasLDtamio9dd9IkH38aJFzfsVxjE"><button>Learning Strategies Doc >></button></a>
+<br><br>
+After looking at the document, return here and click "Continue" below to move on to the next level, where you will be asked to add a new strategy or two to the Classroom Strategies list you started earlier this year.
+<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
