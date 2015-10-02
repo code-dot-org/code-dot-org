@@ -8,7 +8,6 @@
 /* global dashboard */
 
 'use strict';
-var React = require('react');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var applabMsg = require('./locale');
