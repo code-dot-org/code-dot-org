@@ -480,8 +480,8 @@ function makeDraggable (jqueryElements) {
         var newHeight = ui.originalSize.height + (deltaHeight / scale);
 
         // snap width/height to nearest grid increment
-        newWidth -= (newWidth + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-        newHeight -= (newHeight + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+        newWidth = snapToGridSize(newWidth, GRID_SIZE);
+        newHeight = snapToGridSize(newHeight, GRID_SIZE);
 
         // Bound at app edges
         var container = $('#divApplab');
@@ -524,8 +524,8 @@ function makeDraggable (jqueryElements) {
         var newTop = ui.position.top / scale;
 
         // snap top-left corner to nearest location in the grid
-        newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-        newTop -= (newTop + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+        newLeft = snapToGridSize(newLeft, GRID_SIZE);
+        newTop = snapToGridSize(newTop, GRID_SIZE);
 
         // containment
         var container = $('#divApplab');
@@ -582,6 +582,18 @@ function getVisualizationScale() {
   var div = document.getElementById('divApplab');
   return div.getBoundingClientRect().width / div.offsetWidth;
 }
+
+/**
+ * Given a coordinate on either axis and a grid size, returns a coordinate
+ * near the given coordinate that snaps to the given grid size.
+ * @param {number} coordinate
+ * @param {number} gridSize
+ * @returns {number}
+ */
+var snapToGridSize = function (coordinate, gridSize) {
+  var halfGrid = gridSize / 2;
+  return coordinate - ((coordinate + halfGrid) % gridSize - halfGrid);
+};
 
 /**
  * Inverse of `makeDraggable`.
