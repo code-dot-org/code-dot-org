@@ -355,7 +355,7 @@ node['cdo-apps']['i18n']['languages'].to_hash.keys.each do |language|
 end
 %>
 
-  if (req.http.host == "<%= canonical_hostname('learn.code.org') %>" ||
+  if (req.http.host ~ "(dashboard|studio).code.org$" ||
       req.http.host == "<%= canonical_hostname('studio.code.org') %>" ||
       req.http.host == "code-dot-org.cartoonnetworkarabic.com")
   {
@@ -433,7 +433,7 @@ end
     } else if (req.url ~ "^/auth") {
       cookie.filter_except("cdo-private,hour_of_code,NO_CACHE");
     } else if (
-        req.http.host == "<%= canonical_hostname('learn.code.org') %>" ||
+        req.http.host ~ "(dashboard|studio).code.org$" ||
         req.http.host == "<%= canonical_hostname('studio.code.org') %>" ||
         req.url ~ "^/dashboardapi/" ||
         req.url ~ "^/v2/" ||
