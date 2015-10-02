@@ -6,3 +6,18 @@ markdown <<MARKDOWN
 In your own words explain at least one reason why programming languages have functions.  Include an example of something you did in this lesson that demonstrates the reason you describe.
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary, but should include these concepts:
+
+* Enables programmers to write code in larger, more logical chunks.
+* Enable programmers to focus on what something does rather than how it does it.
+* Streamlines code into shorter, but more readable (understandable) sequences.
+* Enables programmers to reuse code segments.
+
+Examples may include:
+
+* Combining the turns and moves to go the opposite direction with the turnAround function.
+* Combining turns and moves to create the drawRectangle function.
+* Combining turns and moves to create drawSide, drawSteps, and drawDiamond functions.
+MARKDOWN

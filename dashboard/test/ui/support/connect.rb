@@ -1,11 +1,13 @@
 require 'selenium/webdriver'
+require 'cgi'
+require 'httparty'
 
 $browser_configs = JSON.load(open("browsers.json"))
 
 MAX_CONNECT_RETRIES = 3
 
 def local_browser
-  browser = Selenium::WebDriver.for :chrome, :url=>"http://127.0.0.1:9515"
+  browser = Selenium::WebDriver.for :chrome, url: "http://127.0.0.1:9515"
   if ENV['MAXIMIZE_LOCAL'] == 'true'
     max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")
     browser.manage.window.resize_to(max_width, max_height)
@@ -35,7 +37,7 @@ def saucelabs_browser
   capabilities[:name] = ENV['TEST_RUN_NAME']
   capabilities[:build] = ENV['BUILD']
 
-  puts "Capabilities: #{capabilities.inspect}"
+  puts "DEBUG: Capabilities: #{CGI::escapeHTML capabilities.inspect}"
 
   browser = nil
   Time.now.to_i.tap do |start_time|
@@ -50,10 +52,10 @@ def saucelabs_browser
       retries += 1
       retry
     end
-    puts "Got browser in #{Time.now.to_i - start_time}s with #{retries} retries"
+    puts "DEBUG: Got browser in #{Time.now.to_i - start_time}s with #{retries} retries"
   end
 
-  puts "Browser: #{browser}"
+  puts "DEBUG: Browser: #{CGI::escapeHTML browser.inspect}"
 
   # Maximize the window on desktop, as some tests require 1280px width.
   unless ENV['MOBILE']
@@ -68,7 +70,7 @@ def saucelabs_browser
   browser
 end
 
-def browser
+def get_browser
   if ENV['TEST_LOCAL'] == 'true'
     # This drives a local installation of ChromeDriver running on port 9515, instead of Saucelabs.
     local_browser
@@ -77,21 +79,26 @@ def browser
   end
 end
 
+browser = nil
+
 Before do
-  @browser ||= browser
+  browser ||= get_browser
+  @browser = browser
   @browser.manage.delete_all_cookies
 
   unless ENV['TEST_LOCAL'] == 'true'
-    @sauce_session_id = @browser.send(:bridge).capabilities["webdriver.remote.sessionid"]
-    puts 'visual log on sauce labs: https://saucelabs.com/tests/' + @sauce_session_id
+    unless @sauce_session_id
+      @sauce_session_id = @browser.send(:bridge).capabilities["webdriver.remote.sessionid"]
+      visual_log_url = 'https://saucelabs.com/tests/' + @sauce_session_id
+      puts "visual log on sauce labs: <a href='#{visual_log_url}'>#{visual_log_url}</a>"
+    end
   end
 end
 
 def log_result(result)
-  return if ENV['TEST_LOCAL'] == 'true'
+  return if ENV['TEST_LOCAL'] == 'true' || @sauce_session_id
 
   url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{@sauce_session_id}"
-  require 'httparty'
   HTTParty.put(url,
                body: {"passed" => result}.to_json,
                headers: {'Content-Type' => 'application/json'})
@@ -110,5 +117,5 @@ After do |scenario|
 end
 
 at_exit do
-  @browser.quit
+  browser.quit unless browser.nil?
 end

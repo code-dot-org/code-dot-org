@@ -58,3 +58,5 @@ module.exports.categories = {
 };
 
 module.exports.autocompleteFunctionsWithParens = true;
+
+module.exports.showParamDropdowns = true;
