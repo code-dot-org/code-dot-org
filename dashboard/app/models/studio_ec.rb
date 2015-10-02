@@ -21,7 +21,7 @@
 #
 
 class StudioEC < Studio
-  before_save :update_palette, :update_goalOverride
+  before_save :update_palette, :update_goal_override
 
   serialized_attrs %w(
     autocomplete_palette_apis_only
