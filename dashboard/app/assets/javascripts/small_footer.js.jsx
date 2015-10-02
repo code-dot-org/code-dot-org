@@ -1,4 +1,4 @@
-/* $ */
+/*jshint scripturl:true*/
 
 // This code might better live in shared eventually. doing that would
 // require adding JSX transpiling to shared, and the ability to output multiple

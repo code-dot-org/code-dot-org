@@ -31,7 +31,7 @@ namespace :lint do
   task :javascript do
     Dir.chdir(apps_dir) do
       # lint all js/jsx files in dashboardd/app/assets/javascript
-      # RakeUtils.system 'grunt jshint:files --glob "../dashboard/app/**/*.js*(x)"'
+      RakeUtils.system 'grunt jshint:files --glob "../dashboard/app/**/*.js*(x)"'
       # also do our standard apps lint
       RakeUtils.system 'grunt jshint'
     end
