@@ -1,6 +1,8 @@
 name 'ECSPD Unit 2 Lesson Overview'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
 <style>
 tr.finished td:first-child:before {
     color: #ffa400;
@@ -23,11 +25,12 @@ tr:last-child {
 }
 </style>
 
-## Unit 2 Lessons
+## Introduction to Unit 2 > Prioritizing Lessons
 
-During the in-person workshop, you spent time planning and experiencing lessons from Unit 2. Here we're going to spend time looking over those lessons that weren't explored during the workshop and consider the resources and materials that will be helpful in planning and delivering Unit 2. 
+Please review this high-level summary in the lessons in Unit 2. If you like, you can make a list in your ECS journal of the lessons you are excited to teach, those you have concerns about, and those you plan to skip. This list will come in handy later as you review the stages and levels that follow.
 
-For review, see the Unit 2 outline below. The starred sections indicate the lessons that were covered in PD. You can see that there are 4 chunks of Unit 2 that were not yet covered. We'll explore all of the lessons from Unit 2 in the following levels, but we'll pay special attention to those that weren't covered in PD.
+> Note: The starred sections in this outline indicate the lessons that were covered in your in-person PD. You can see that there are 4 chunks of Unit 2 that were not yet covered. We'll explore all of the lessons from Unit 2 in the following levels, but we'll pay special attention to those that weren't covered in PD. 
+
 <br/><br/>
 <table cellpadding="5">
 <tbody>

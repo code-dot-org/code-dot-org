@@ -1,5 +1,7 @@
 //= require ./abuse_error
 
+/* global React */
+
 window.dashboard = window.dashboard || {};
 
 /**
@@ -65,7 +67,7 @@ window.dashboard.AbuseExclamation = (function (React) {
       var finalLink, finalLinkText;
       if (this.props.isOwner) {
         finalLink = 'edit';
-        finalLinkText = this.props.i18n.edit_project
+        finalLinkText = this.props.i18n.edit_project;
       } else {
         finalLink = 'https:/studio.code.org';
         finalLinkText = this.props.i18n.go_to_code_studio;

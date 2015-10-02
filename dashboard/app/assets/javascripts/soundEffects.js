@@ -1,3 +1,5 @@
+/* global AudioContext */
+
 /**
  * Interface for a sound registry and playback mechanism
  * @interface AudioPlayer
@@ -157,7 +159,11 @@ Sound.prototype.play = function (options) {
   if (this.reusableBuffer) {
     this.playableBuffer = this.newPlayableBufferSource(this.reusableBuffer, options);
     // Play sound, supporting older versions of the Web Audio API which used noteOn(Off).
-    this.playableBuffer.start ? this.playableBuffer.start(0) : this.playableBuffer.noteOn(0);
+    if (this.playableBuffer.start) {
+      this.playableBuffer.start(0);
+    } else {
+      this.playableBuffer.noteOn(0);
+    }
     return;
   }
 
@@ -247,7 +253,9 @@ Sound.prototype.getPlayableFile = function () {
     if (this.config.hasOwnProperty('wav') && audioTest.canPlayType('audio/wav')) {
       return this.config.wav;
     }
-  } catch(e) {};
+  } catch(e) {
+
+  }
 
   return false;
 };

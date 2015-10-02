@@ -1,5 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/* global $, WebKitMutationObserver */
+/* global WebKitMutationObserver */
 
 /**
  * Workaround for Chrome 34 SVG bug #349701
@@ -94,7 +94,6 @@ function wrapExistingClipPaths() {
 /**
  * @file Helper API object that wraps asynchronous calls to our data APIs.
  */
-/* global $ */
 
 /**
  * Standard callback form for asynchronous operations, popularized by Node.
@@ -267,7 +266,7 @@ module.exports = {
 
 },{}],3:[function(require,module,exports){
 // TODO (brent) - way too many globals
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
+/* global script_path, Dialog, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
@@ -432,7 +431,7 @@ window.apps = {
 };
 
 },{"./chrome34Fix":1,"./loadApp":4,"./project":5,"./timing":7}],4:[function(require,module,exports){
-/* global dashboard, appOptions, $ */
+/* global dashboard, appOptions */
 
 var renderAbusive = require('./renderAbusive');
 
@@ -509,7 +508,7 @@ module.exports = function (callback) {
 };
 
 },{"./renderAbusive":6}],5:[function(require,module,exports){
-/* global dashboard, appOptions, $, trackEvent */
+/* global dashboard, appOptions, trackEvent */
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -845,6 +844,12 @@ var projects = module.exports = {
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
   save: function(sourceAndHtml, callback, forceNewVersion) {
+
+    // Can't save a project if we're not the owner.
+    if (current && current.isOwner === false) {
+      return;
+    }
+
     if (typeof arguments[0] === 'function' || !sourceAndHtml) {
       // If no source is provided, shift the arguments and ask for the source
       // ourselves.

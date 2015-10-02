@@ -5712,7 +5712,7 @@ function installWhenRun(blockly, skin, isK1) {
 }
 
 },{"./locale":"/home/ubuntu/staging/apps/build/js/locale.js"}],"/home/ubuntu/staging/apps/build/js/StudioApp.js":[function(require,module,exports){
-/* global Blockly, ace:true, $, droplet, marked, digestManifest, dashboard */
+/* global Blockly, ace:true, droplet, marked, digestManifest, dashboard */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
@@ -5946,7 +5946,8 @@ StudioApp.prototype.init = function(config) {
       level_source_id: config.level_source_id,
       phone_share_url: config.send_to_phone_url,
       sendToPhone: config.sendToPhone,
-      twitter: config.twitter
+      twitter: config.twitter,
+      app: config.app
     });
   }
 
@@ -7141,14 +7142,23 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   var container = document.getElementById(options.containerId);
   this.hideSource = true;
   var workspaceDiv = document.getElementById('codeWorkspace');
-  if(!options.embed || options.level.skipInstructionsPopup) {
+  if (!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
   document.getElementById('visualizationResizeBar').style.display = 'none';
 
+  // Chrome-less share page.
+  if (this.share && options.app === 'applab') {
+    if (dom.isMobile()) {
+      document.getElementById('visualizationColumn').className = 'chromelessShare';
+    } else {
+      document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
+      document.getElementById('visualizationColumn').className = 'wireframeShare';
+    }
+    document.body.style.backgroundColor = '#202B34';
   // For share page on mobile, do not show this part.
-  if ((!options.embed) && (!this.share || !dom.isMobile())) {
+  } else if (!options.embed && !(this.share && dom.isMobile())) {
     var runButton = document.getElementById('runButton');
     var buttonRow = runButton.parentElement;
     var openWorkspace = document.createElement('button');
@@ -29259,7 +29269,7 @@ function clientApi(endpoint) {
 }
 
 },{}],"/home/ubuntu/staging/apps/build/js/feedback.js":[function(require,module,exports){
-/* global trackEvent, $, jQuery */
+/* global trackEvent */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
@@ -31209,8 +31219,6 @@ exports.functionalCallXml = function (name, argList, inputContents) {
 };
 
 },{"./xml":"/home/ubuntu/staging/apps/build/js/xml.js"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletTooltipManager.js":[function(require,module,exports){
-/* global $ */
-
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
 var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
@@ -31321,8 +31329,6 @@ DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
 module.exports = DropletTooltipManager;
 
 },{"./DropletAutocompleteParameterTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompleteParameterTooltipManager.js","./DropletAutocompletePopupTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompletePopupTooltipManager.js","./DropletBlockTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletBlockTooltipManager.js","./DropletFunctionTooltip":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletFunctionTooltip.js"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletBlockTooltipManager.js":[function(require,module,exports){
-/* global $ */
-
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
 var dom = require('../dom');
@@ -31576,8 +31582,6 @@ module.exports = DropletFunctionTooltip;
 module.exports = window.blockly.common_locale;
 
 },{}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompletePopupTooltipManager.js":[function(require,module,exports){
-/* global $ */
-
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
 var dom = require('../dom');
 
@@ -31744,8 +31748,6 @@ return buf.join('');
   }
 }());
 },{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompleteParameterTooltipManager.js":[function(require,module,exports){
-/* global $ */
-
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
 var tooltipUtils = require('./tooltipUtils.js');
 var dom = require('../dom');

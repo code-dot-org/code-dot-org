@@ -47,7 +47,12 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
-    "instructions": "Use drawSquare() to recreate the image of both squares, this time using parameters. (Click to see full instructions)"
+    "instructions": "Use drawSquare() to recreate the image of both squares, this time using parameters. (Click to see full instructions)",
+    "encrypted_examples": [
+
+    ],
+    "submittable": "false",
+    "hide_view_data_button": "true"
   }
 }]]></config>
   <blocks/>
