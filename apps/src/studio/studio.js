@@ -2797,7 +2797,7 @@ Studio.animateGoals = function() {
   var numFrames = level.goalOverride.goalAnimationFrames;
   var frameWidth = level.goalOverride.goalAnimationFrames.imageWidth;
 
-  for (i = 0; i < Studio.spriteGoals_.length; i++) {
+  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
     var goal = Studio.spriteGoals_[i];
     if (!goal.finished) {
 
