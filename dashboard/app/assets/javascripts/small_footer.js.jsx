@@ -23,7 +23,7 @@ window.dashboard.footer = (function () {
       render: function () {
         return <p dangerouslySetInnerHTML={{
             __html: decodeURIComponent(this.props.text)
-        }}/>
+        }}/>;
       }
     });
 
@@ -92,7 +92,7 @@ window.dashboard.footer = (function () {
           // Create a window during which we can't show again, so that clicking
           // on copyright doesnt immediately hide/reshow
           setTimeout(function () {
-            this.setState({ menuState: MenuState.MINIMIZED })
+            this.setState({ menuState: MenuState.MINIMIZED });
           }.bind(this), 200);
         }.bind(this));
       },
