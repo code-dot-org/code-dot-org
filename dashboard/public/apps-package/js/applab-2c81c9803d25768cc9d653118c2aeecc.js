@@ -29260,7 +29260,7 @@ module.exports = PropertyRow;
 
 
 },{"../assetManagement/show.js":"/home/ubuntu/staging/apps/build/js/applab/assetManagement/show.js","./rowStyle":"/home/ubuntu/staging/apps/build/js/applab/designElements/rowStyle.js"}],"/home/ubuntu/staging/apps/build/js/applab/assetManagement/show.js":[function(require,module,exports){
-/* global Dialog */
+/* global Dialog, dashboard */
 // TODO (josh) - don't pass `Dialog` into `createModalDialog`.
 
 var AssetManager = require('./AssetManager.jsx');
@@ -29282,7 +29282,8 @@ var showAssetManager = function(assetChosen, typeFilter) {
     id: 'manageAssetsModal'
   });
   React.render(React.createElement(AssetManager, {
-    typeFilter : typeFilter,
+    typeFilter: typeFilter,
+    uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
     assetChosen: showChoseImageButton ? function (fileWithPath) {
       dialog.hide();
       assetChosen(fileWithPath);
@@ -29313,6 +29314,9 @@ var errorMessages = {
   unknown: 'An unknown error occurred.'
 };
 
+var errorUploadDisabled = "This project has been reported for abusive content, " +
+  "so uploading new assets is disabled.";
+
 function getErrorMessage(status) {
   return errorMessages[status] || errorMessages.unknown;
 }
@@ -29323,13 +29327,14 @@ function getErrorMessage(status) {
 module.exports = React.createClass({displayName: "exports",
   propTypes: {
     assetChosen: React.PropTypes.func,
-    typeFilter: React.PropTypes.string
+    typeFilter: React.PropTypes.string,
+    uploadsEnabled: React.PropTypes.bool.isRequired
   },
 
   getInitialState: function () {
     return {
       assets: null,
-      statusMessage: ''
+      statusMessage: this.props.uploadsEnabled ? '' : errorUploadDisabled
     };
   },
 
@@ -29413,7 +29418,10 @@ module.exports = React.createClass({displayName: "exports",
             accept: (this.props.typeFilter || '*') + '/*', 
             style: {display: 'none'}, 
             onChange: this.upload}), 
-        React.createElement("button", {onClick: this.fileUploadClicked, className: "share"}, 
+        React.createElement("button", {
+            onClick: this.fileUploadClicked, 
+            className: "share", 
+            disabled: !this.props.uploadsEnabled}, 
           React.createElement("i", {className: "fa fa-upload"}), 
           " Upload File"
         ), 
