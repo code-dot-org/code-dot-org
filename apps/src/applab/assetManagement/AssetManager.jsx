@@ -1,4 +1,3 @@
-var React = require('react');
 var assetsApi = require('../../clientApi').assets;
 var AssetRow = require('./AssetRow.jsx');
 var assetListStore = require('./assetListStore');

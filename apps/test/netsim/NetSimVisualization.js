@@ -7,7 +7,7 @@
  eqeqeq: true
  */
 'use strict';
-/* global $, describe, beforeEach, it */
+/* globaldescribe, beforeEach, it */
 
 var testUtils = require('../util/testUtils');
 var NetSimTestUtils = require('../util/netsimTestUtils');

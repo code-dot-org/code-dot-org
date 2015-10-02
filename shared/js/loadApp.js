@@ -1,4 +1,4 @@
-/* global dashboard, appOptions, $ */
+/* global dashboard, appOptions */
 
 var renderAbusive = require('./renderAbusive');
 
@@ -28,6 +28,24 @@ function loadSource(name, cacheBust) {
   };
 }
 
+/**
+ * Returns a function which returns a $.Deferred instance. When executed, the
+ * function loads the given app script.
+ * @param sourceUrl The URL of the CDN script resource to load.
+ * @returns {Function}
+ */
+function loadExternalSource(sourceUrl, cacheBust) {
+  return function () {
+    var deferred = new $.Deferred();
+    document.body.appendChild($('<script>', {
+      src: sourceUrl
+    }).on('load', function () {
+      deferred.resolve();
+    })[0]);
+    return deferred;
+  };
+}
+
 // Loads the given app stylesheet.
 function loadStyle(name) {
   $('body').append($('<link>', {
@@ -50,7 +68,8 @@ module.exports = function (callback) {
         .then(loadSource('ace/mode-javascript'))
         .then(loadSource('ace/ext-language_tools'))
         .then(loadSource('droplet/droplet-full'))
-        .then(loadSource('tooltipster/jquery.tooltipster'));
+        .then(loadSource('tooltipster/jquery.tooltipster'))
+        .then(loadExternalSource('https://www.google.com/jsapi'));
   } else {
     promise = promise.then(loadSource('blockly'))
         .then(loadSource('marked/marked'))
