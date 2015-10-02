@@ -99,13 +99,14 @@ end
 ###
 
 ### PROXIES
-<%= setup_behavior 'proxy' %>
+<%= config = node['cdo-varnish']['config']
+    setup_behavior config, 'proxy' %>
 ###
 
 ### REQUEST COOKIE FILTER
 # Only apply cookie filter to cached HTTP methods.
 if(req.method == "GET" || req.method == "HEAD") {
-<%= setup_behavior 'request' %>
+<%= setup_behavior config, 'request' %>
   if (req.http.Cookie) {
     set req.http.Cookie = cookie.get_string();
     if (req.http.Cookie == "") {
@@ -124,7 +125,7 @@ sub vcl_backend_response {
 ### RESPONSE COOKIE FILTER
 # Only apply cookie filter to cached HTTP methods.
 if(bereq.method == "GET" || bereq.method == "HEAD") {
-<%= setup_behavior 'response' %>
+<%= setup_behavior config, 'response' %>
 }
 ###
 

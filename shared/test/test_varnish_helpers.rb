@@ -60,13 +60,53 @@ class VarnishHelperTest < Minitest::Test
       "#{x} == true"
     end
     output = if_else(items, condition){|x|x}
-    assert_equal <<STR, output
+    assert_equal <<STR.strip, output
 if (a == true) {
   a
 } else if (c == true) {
   c
 } else {
   d
+}
+STR
+  end
+
+  def test_setup_behavior
+    behavior = {
+      dashboard: {
+        behaviors: [],
+        default: {cookies: 'all'}
+      },
+      pegasus: {
+        behaviors: [{
+            path: 'api/*',
+            cookies: 'all'
+          }],
+        default: {cookies: 'none'}
+      }
+    }
+    output = setup_behavior(behavior)
+    assert_equal <<STR.strip, output
+if (req.http.host ~ "(dashboard|studio).code.org$") {
+  # Allow all request cookies.
+} else {
+  if (req.url ~ "^/api/") {
+    # Allow all request cookies.
+  } else {
+    cookie.filter_except("NO_CACHE");
+  }
+}
+STR
+    output = setup_behavior(behavior, 'response')
+    assert_equal <<STR.strip, output
+if (bereq.http.host ~ "(dashboard|studio).code.org$") {
+  # Allow set-cookie responses.
+} else {
+  if (bereq.url ~ "^/api/") {
+    # Allow set-cookie responses.
+  } else {
+    unset beresp.http.set-cookie;
+  }
 }
 STR
   end

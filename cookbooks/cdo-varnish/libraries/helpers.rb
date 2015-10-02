@@ -72,21 +72,22 @@ end
 # Generates the logic string for the specified behavior.
 def process_behavior(behavior, app, section)
   if section == 'proxy'
-    process_proxy(behavior['proxy'] || app)
+    process_proxy(behavior[:proxy] || app)
   else
-    process_cookies(behavior['cookies'], section)
+    process_cookies(behavior[:cookies], section)
   end
 end
 
 # Returns the cookie-filter string for a given 'cookies' behavior.
 def process_cookies(cookies, section)
   if section == 'request'
+    return '# Allow all request cookies.' if cookies == 'all'
     cookies = ['NO_CACHE'] if cookies == 'none'
     "cookie.filter_except(\"#{cookies.join(',')}\");"
   else
     cookies == 'none' ?
       'unset beresp.http.set-cookie;' :
-      ''
+      '# Allow set-cookie responses.'
   end
 end
 
@@ -97,32 +98,35 @@ end
 
 # Returns the hostname-specific conditional expression for the app provided.
 def if_app(app, section)
-  app == 'dashboard' ? (req(section)+'.http.host ~ "(dashboard|studio).code.org$"') : nil
+  app == :dashboard ? (req(section)+'.http.host ~ "(dashboard|studio).code.org$"') : nil
 end
 
 # Generate an "if(){} else if {} else {}" string from an array of items, conditional Proc, and a block.
 def if_else(items, conditional)
   _buf = ''
+  if items.one? && conditional.call(items.first).nil?
+    return yield(items.first)
+  end
   items.each_with_index do |item, i|
     condition = conditional.call(item)
     next if condition.to_s == 'false'
-    _buf[-1] = ' ' if i != 0
     _buf << "#{i != 0 ? 'else ' : ''}#{condition && "if (#{condition}) "}{\n"
-    _buf << yield(item).lines.map{|line| '  ' + line }.join << "\n}\n"
+    _buf << yield(item).lines.map{|line| '  ' + line }.join << "\n} "
   end
+  _buf.slice!(-1)
   _buf
 end
 
 # Generates the VCL string for each section: 'request', 'response', or 'proxy'.
-def setup_behavior(section)
+def setup_behavior(config, section='request')
   app_condition = lambda do |app|
     if_app(app, section)
   end
-  if_else(%w(dashboard pegasus), app_condition) do |app|
-    config = node['cdo-varnish']['config'][app]
-    configs = config['behaviors'] + [config['default']]
+  if_else([:dashboard, :pegasus], app_condition) do |app|
+    app_config = config[app]
+    configs = app_config[:behaviors] + [app_config[:default]]
     path_condition = lambda do |behavior|
-      behavior['path'] ? paths_to_regex(behavior['path'], section) : nil
+      behavior[:path] ? paths_to_regex(behavior[:path], section) : nil
     end
     if_else(configs, path_condition) do |behavior|
       process_behavior(behavior, app, section)
