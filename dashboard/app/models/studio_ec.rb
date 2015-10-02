@@ -35,7 +35,7 @@ class StudioEC < Studio
         level_num: 'custom',
         properties: {
           code_functions: JSON.parse(palette),
-          goal_override: JSON.parse(goalOverride),
+          goal_override: JSON.parse(goal_override),
           edit_code: true
         }
     ))
@@ -65,13 +65,13 @@ class StudioEC < Studio
     JSON
   end
 
-  def update_goalOverride
+  def update_goal_override
     if self.goal_override.present? && self.goal_override.is_a?(String)
       self.goal_override = JSON.parse(self.goal_override)
     end
   end
 
-  def self.goalOverride
+  def self.goal_override
     <<-JSON.strip_heredoc.chomp
       {
         "goalAnimation": null
