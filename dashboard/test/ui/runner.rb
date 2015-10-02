@@ -162,8 +162,8 @@ end
 require File.expand_path('../../../config/environment.rb', __FILE__)
 
 if Rails.env.development?
-  $options.pegasus_db_access = true if $options.pegasus_domain =~ /localhost/
-  $options.dashboard_db_access = true if $options.dashboard_domain =~ /localhost/
+  $options.pegasus_db_access = true if $options.pegasus_domain =~ /(localhost|ngrok)/
+  $options.dashboard_db_access = true if $options.dashboard_domain =~ /(localhost|ngrok)/
 elsif Rails.env.test?
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /test/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
