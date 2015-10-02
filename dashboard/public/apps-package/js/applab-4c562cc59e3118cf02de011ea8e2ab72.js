@@ -317,7 +317,7 @@ levels.full_sandbox =  {
  * Copyright 2014-2015 Code.org
  *
  */
-/* global $, Dialog */
+/* global Dialog */
 /* global dashboard */
 
 'use strict';
@@ -2023,8 +2023,6 @@ return buf.join('');
   }
 }());
 },{"../locale":"/home/ubuntu/staging/apps/build/js/locale.js","./locale":"/home/ubuntu/staging/apps/build/js/applab/locale.js","ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/applab/dropletConfig.js":[function(require,module,exports){
-/* globals $ */
-
 var api = require('./api');
 var dontMarshalApi = require('./dontMarshalApi');
 var consoleApi = require('./consoleApi');
@@ -2587,7 +2585,7 @@ exports.setRGB = function (imageData, x, y, r, g, b, a) {
 
 
 },{"./errorHandler":"/home/ubuntu/staging/apps/build/js/applab/errorHandler.js"}],"/home/ubuntu/staging/apps/build/js/applab/designMode.js":[function(require,module,exports){
-/* global $, Applab, dashboard */
+/* global Applab, dashboard */
 
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
@@ -3514,8 +3512,6 @@ applabTurtle.turtleSetVisibility = function (visible) {
 
 
 },{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","./commands":"/home/ubuntu/staging/apps/build/js/applab/commands.js"}],"/home/ubuntu/staging/apps/build/js/applab/commands.js":[function(require,module,exports){
-/* global $ */
-
 var studioApp = require('../StudioApp').singleton;
 var AppStorage = require('./appStorage');
 var apiTimeoutList = require('../timeoutList');
@@ -7643,8 +7639,6 @@ module.exports = React.createClass({displayName: "exports",
 
 
 },{"./designElements/library":"/home/ubuntu/staging/apps/build/js/applab/designElements/library.js","react":"/home/ubuntu/staging/apps/node_modules/react/react.js"}],"/home/ubuntu/staging/apps/build/js/applab/designElements/library.js":[function(require,module,exports){
-/* global $ */
-
 var utils = require('../../utils');
 var _ = utils.getLodash();
 
@@ -10794,7 +10788,6 @@ module.exports.description = {
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 
 var applabMsg = require('./locale');
 var dom = require('../dom');
