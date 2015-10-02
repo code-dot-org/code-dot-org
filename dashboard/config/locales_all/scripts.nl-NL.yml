@@ -1,0 +1,1421 @@
+"nl":
+  data:
+    script:
+      name:
+        test:
+          'Jigsaw: Learn to drag and drop': 'Puzzel: Leer hoe je kan knippen en plakken'
+          The Maze: Het Doolhof
+          Multi: meerdere
+          Match: Overeenkomst
+          Math Image: Wiskundige afbeelding
+          title: Test Cursus
+          description: Een interne test cursus.
+          description_short: Een interne test cursus.
+        course1:
+          'Jigsaw: Learn to drag and drop': 'Puzzel: Leer hoe je kan knippen en plakken'
+          'Maze: Sequence': 'Doolhof: Nummering'
+          'Maze: Debugging': 'Doolhof: foutopsporing'
+          'Artist 1: Intro': 'Kunstenaar 1: Intro'
+          Artists 2: Kunstenaars 2
+          Spelling Bee: Spellingswedstrijd
+          Spelling Bee not blockly: Spelwedstrijd niet blockly
+          'Bee 1: Intro': 'Bij 1: Intro'
+          'Maze 2: Loops': 'Doolhof 2: Loops'
+          'Bee 2: Loops': 'Bij 2: Loops'
+          Multi & Match: Multi & Match
+          K-1 Flappy: K-1 Flappy
+          Flappy non blockly: Flappy niet blockly
+          title: Cursus 1
+          Artist 2: Kunstenaar 2
+          Happy Maps: Vrolijke Routes
+          Move it, Move it: Beweeg, Beweeg
+          'Real-life Algorithms: Plant a Seed': 'Algoritmen in het echte leven: Plant
+            een zaadje'
+          Building a Foundation: Een Basis Bouwen
+          Getting Loopy: Mooie linten
+          The Big Event: De grote gebeurtenis
+          Going Places Safely: Veilig Reizen
+          description: Cursus 1 is ontwikkeld om voor vroege lezers het mogelijk te
+            maken om computerprogramma's te maken die ze helpen met het omgaan met
+            anderen, met het ontwikkelen van probleemoplossende vaardigheden en vol
+            te houden in moeilijke taken. Aan het eind van de cursus maakt de student
+            een zelfgemaakte spel of verhaal die ze kunnen delen. aanbevolen voor
+            groep 1 - groep 3.
+          'Bee: Sequence': 'Bij: volgorde'
+          'Artist: Sequence': 'Kunstenaar: volgorde'
+          'Artist: Shapes': 'kunstenaar: Vormen'
+          'Maze: Loops': 'Doolhof: lussen'
+          'Bee: Loops': 'Bij: lussen'
+          'Studio: Create a Story': 'Speel Lab: Maak een Verhaal'
+          'Artist: Loops': 'Kustenaar: lussen'
+          description_audience: Leeftijden 4 + (pre lezers)
+          description_short: Cursus 1 is bedoeld voor jonge lezers.
+        course2:
+          The Maze: Het Doolhof
+          Suzi: Suzi
+          The Artist: De Artiest
+          Artist Debugging: Kunstenaar foutopsporing
+          Bounce: Stuiter
+          'Studio: Create a Story': 'Speel Lab: Maak een Verhaal'
+          Artist Loops: Kustenaar lussen
+          Bee Conditionals: Bij voorwaardelijke instructies
+          Flappy: Flappy
+          title: Cursus 2
+          Bee Loops: Bij lussen
+          Artist Functions: Kunstenaar functies
+          The Artist Debugging: De kunstenaar foutopsporing
+          Bee Debugging: Bij foutopsporing
+          Bee Functions: Bij functies
+          Maze Loops: Doolhof lussen
+          Graph Paper Programming: Programmeren op Ruitjespapier
+          'Real-life Algorithms: Paper Planes': 'Real-life Algoritmes: Papieren Vliegtuigjes'
+          Getting Loopy: Mooie linten
+          Relay programming: Estafette Programmeren
+          Conditionals: Voorwaardelijke instructies
+          Binary Bracelets: Binaire armbanden
+          The Big Event: De grote gebeurtenis
+          Your Digital Footprint: Je Digitale Voetafdruk
+          description: Les 2 is ontwikkeld voor studenten die kunnen lezen en geen
+            eerdere programeerervaring hebben. In deze les maken studenten programma's
+            om problemen op te lossen en ontwikkelen ze interactieve spellen en verhalen
+            die ze kunnen delen. Aanbevolen voor graad 2-5.
+          'Maze: Sequence': 'Doolhof: Nummering'
+          'Artist: Sequence': 'Kunstenaar: volgorde'
+          'Maze: Loops': 'Doolhof: lussen'
+          'Artist: Loops': 'Kustenaar: lussen'
+          'Bee: Loops': 'Bij: lussen'
+          'Bee: Debugging': 'Bij: Foutopsporing'
+          'Artist: Debugging': 'Kunstenaar: foutopsporing'
+          'Bee: Conditionals': 'Bij: voorwaardelijke instructies'
+          'Artist: Sequence2': 'Kunstenaar: volgorde2'
+          'Maze: Sequence2': 'Doolhof: Volgorde2'
+          'Artist: Nested Loops': 'Kunstenaar: geneste lussen'
+          description_audience: Leeftijden 6 + (kunnen lezen vereist)
+          description_short: Cursus 2 is bedoeld voor leerlingen die kunnen lezen.
+        course3:
+          The Maze: Het Doolhof
+          'Studio: Create a Story': 'Speel Lab: Maak een Verhaal'
+          The Artist: De Artiest
+          title: Cursus 3
+          Artist Functions: Kunstenaar functies
+          Artist For Loops: Kunstenaar wanneer lussen
+          Artist Nested Loops: Kunstenaar geneste lussen
+          Bee Conditionals: Bij voorwaardelijke instructies
+          Bee Nested Loops: Bij geneste lussen
+          Bee Debuggin: Bij foutopsporing
+          Bee Debugging: Bij foutopsporing
+          Bee Functions: Bij functies
+          Artist Functions with Params: Kunstenaar functies met parameters
+          Bounce: Stuiter
+          Maze Conditionals: Doolhof voorwaardelijke instructies
+          Artist Functions with Parameters: Kunstenaar functies met parameters
+          Computational Thinking: Rekenend Denken
+          Functional Suncatchers: Functionele Zonnevangers
+          Songwriting Parameters: Songwriting Parameters
+          Dice Race: Dobbelstenen Race
+          Internet: Internet
+          Crowdsourcing: Crowdsourcing
+          Digital Citizenship: Digitale Burgerschap
+          Farmer - While Loops: Boer - Zolang-lussen
+          description: Cursus 3 is ontwikkeld voor leerlingen die cursus 2 hebben
+            gevolgd. Leerlingen zullen dieper ingaan op de programmeeronderwerpen
+            die zijn geïntroduceerd in de vorige cursussen om flexibelere oplossingen
+            voor complexere problemen te vinden. Aan het eind van deze cursus maken
+            studenten interactieve verhalen en spellen, die ze met iedereen kunnen
+            delen.
+          'Studio: Create a Game': Speel Lab - Maak een Spel
+          Maze: Doolhof
+          Artist: Kunstenaar
+          'Artist: Functions': 'Kunstenaar: Functies'
+          'Bee: Functions': 'Bij: functies'
+          'Bee: Conditionals': 'Bij: voorwaardelijke instructies'
+          'Maze: Conditionals': 'Doolhof: voorwaardelijke instructies'
+          'Artist: Nested Loops': 'Kunstenaar: geneste lussen'
+          'Farmer: While Loops': 'Boer: Zolang-lussen'
+          'Bee: Nested Loops': 'Bij: geneste lussen'
+          'Bee: Debugging': 'Bij: Foutopsporing'
+          Maze2: Doolhof2
+          Artist2: Kunstenaar2
+          'Artist: Functions2': 'Kunstenaar: Functies2'
+          'Bee: Functions2': 'Bij: Functies2'
+          'Bee: Conditionals2': 'Bij: voorwaardelijke instructies2'
+          'Maze: Conditionals2': 'Doolhof: voorwaardelijke instructies2'
+          'Artist: Nested Loops2': 'Kunstenaar: geneste lussen2'
+          'Farmer: While Loops2': 'Boer: Zolang-lussen2'
+          'Bee: Nested Loops2': 'Bij: geneste lussen2'
+          'Bee: Debugging2': 'Bij: Foutopsporing2'
+          'Artist: Patterns': 'Kunstenaar: Patronen'
+          Songwriting: Songwriting
+          description_audience: Leeftijden 8 + (na cursus 2)
+          description_short: Cursus 3 is een vervolg op cursus 2.
+        playlab:
+          title: Speel Lab
+          description: Maak een verhaal of een spel met Speel Lab!
+          Play Lab: Speel Lab
+          description_short: Maak een verhaal of een spel met Speel Lab!
+        artist:
+          title: Kunstenaar
+          description: Teken coole plaatjes en ontwerpen met de Kunstenaar!
+          Artist: Kunstenaar
+          description_short: Teken coole plaatjes en ontwerpen met de Kunstenaar!
+        hourofcode:
+          Maze: Doolhof
+          title: Een Uur Code
+          description: Probeer de grondbeginselen van de informatica met figuren uit
+            angry Birds, Plant vs. Zombies en Scrat van Ice Age!
+          description_short: Probeer de grondbeginselen van de informatica met veel
+            leuke figuren!
+        frozen:
+          title: Code met Anna en Elsa
+          description: laten we code gebruiken om Anna en Elsa te helpen bij het ontdekken
+            van de magie en schoonheid van ijs. Je zal leren sneeuwvlokken en patronen
+            te maken terwijl je schaatst en een een mooi winterlandschap maken dat
+            je kan delen met je vrienden!
+          Artist: Kunstenaar
+          description_short: Ga met Anna en Elsa mee op hun speurtocht naar de magie
+            en schoonheid van ijs door middel van programma-code.
+        course4:
+          description_short: Leerlingen die les 4 starten moeten eerst lessen 2 en
+            3 doorlopen hebben.
+          description: Les 4 is ontwikkeld voor leerlingen die lessen 2 en 3 hebben
+            gevolgd. Leerlingen zullen dieper ingaan op de programmeeronderwerpen
+            die zijn geïntroduceerd in de vorige cursussen om flexibelere oplossingen
+            voor complexere problemen te vinden. Aan het eind van deze cursus maken
+            studenten interactieve verhalen en spellen, die ze met iedereen kunnen
+            delen.
+          'Artist: Variables': 'Artiest: variabelen'
+          'Bee: For Loops': 'Bij : For-lussen'
+          title: Les 4
+          'Algorithms: Tangrams': 'Algoritmen: Tangrams'
+          Variables: Variabelen
+          'Play Lab: Variables': 'Speel Lab: variabelen'
+          'Play Lab: Functions with Parameters': 'Speel Lab: Functies met Parameters'
+          'Bee: Functions with Parameters': 'Bij: Functies met Parameters'
+          'Artist: For Loops': 'Artiest: For-lussen'
+          'Play Lab: For Loops': 'Speel Lab: For-lussen'
+          'Artist: Functions': 'Kunstenaar: Functies'
+          'Unplugged: Tangrams': 'Unplugged: Tangrams'
+          Artist: Kunstenaar
+          Bee: Bee
+          'Unplugged: Envelope Variables': 'Unplugged: Envelop variabelen'
+          'Unplugged: Madlibs': Unplugged:Madlibs
+          'Unplugged: For Loop Fun': 'Unplugged: Voor-Lus plezier'
+          'Unplugged: Songwriting with Parameters': 'Unplugged: Liedjes schrijven
+            met Parameters'
+          'Artist: Functions with Parameters': 'Artiest: Functies met Parameters'
+          'Unplugged: Binary': 'Unplugged: binair'
+          Bee Binary: Bee Binary
+          Farmer Binary: Boer Binary
+          Maze and Bee: Maze en Bee
+          Artist Binary: Kunstenaar Binary
+          description_audience: Leeftijden 10 + (na cursus 3)
+        Course4pre:
+          title: Vereisten voor cursus 4
+          description_short: Een korte samenvatting van concepten voor leerlingen
+            die cursus 2 en 3 niet hebben afgewerkt.
+          description: Een korte samenvatting van concepten voor leerlingen die cursus
+            2 en 3 niet hebben afgewerkt.
+          Course 4 Prerequisite: Vereisten voor cursus 4
+          'Maze: Sequence': 'Doolhof: Nummering'
+          'Artist: Sequence': 'Kunstenaar: volgorde'
+          'Artist: Loops': 'Kustenaar: lussen'
+          'Bee: Conditionals': 'Bij: voorwaardelijke instructies'
+          'Artist: Nested Loops': 'Kunstenaar: geneste lussen'
+          'Farmer: While Loops': 'Boer: Zolang-lussen'
+          'Bee: Nested Loops': 'Bij: geneste lussen'
+          'Artist: Functions': 'Kunstenaar: Functies'
+          'Bee: Debugging': 'Bij: Foutopsporing'
+        usability:
+          Intro: Introductie
+          Variables and For Loops: Variabelen en For-lussen
+          Functions and Functions with Parameters: Functies en functies met Parameters
+          title: Gebruiksvriendelijkheid testen
+          description_short: ''
+          description: Een selectie van cursus 4 puzzels voor gebruiksvriendelijkheidstesten.
+          Variables: Variabelen
+          For Loops: For-lussen
+          Binary: Binaire
+        potus:
+          title: speciale
+          description_short: speciale
+          description: speciale
+          Special: Speciale
+        special:
+          title: speciale
+          description_short: speciale
+          description: speciale
+          Special: Speciale
+          Binary: Binaire
+        algebra:
+          title: Informatica in Algebra
+          description: Leer functioneel programmeren door Algebra
+          description_short: Leer functioneel programmeren door Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video-Games
+            en Coordinaat Vliegtuigen'
+          'Calc: Evaluation Blocks': 'Calc: Evaluatie blokken'
+          'Eval: Strings and Images': Tekenreeksen en afbeeldingen
+          'Unplugged: Contracts': 'Unplugged: Contracten'
+          'Eval: Writing Contracts': 'Eval: Schrijven van contracten'
+          'Calc: Defining Variables': 'Calc: Variabelen definiëren'
+          'Play Lab: Defining Variables (Big Game)': 'Speel Lab: Variabelen definiëren
+            (Groot Spel)'
+          'Eval: Defining Functions': Samengestelde functies
+          'Unplugged: The Design Recipe': 'Unplugged: Het ontwerp recept'
+          'Play Lab: Defining Functions': Hoogte van de raket
+          'Eval: Functions': 'Eval: functies'
+          'Play Lab: Animation (Big Game)': 'Speel Lab: Animatie (Groot Spel)'
+          'Unplugged: Booleans': 'Unplugged: Booleans'
+          'Eval: Boolean Operators': Booleaanse operatoren
+          'Play Lab: Booleans': Sam de Vleermuis
+          'Play Lab: Boolean (Big Game)': 'Speel Lab: Booleans (Groot Spel)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
+            en stuksgewijze functies'
+          'Eval: Conditionals': Voorwaardelijke instructies
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Botsingdetectie
+            en de afstand formule'
+          'Play Lab: Collision Detection (Big Game)': 'Speel Lab: Botsingdetectie
+            (Groot Spel)'
+        infinity:
+          title: Speel Lab
+          description_short: Gebruik Play Lab om een verhaal of spel te maken met
+            Disney Infinity figuren in de hoofdrol.
+          description: Gebruik Play Lab om een verhaal of spel te maken met Disney
+            Infinity figuren in de hoofdrol.
+          Play Lab: Speel Lab
+          Infinity: Oneindig
+        algebrademo:
+          title: Algebra Demo
+          description_short: Een handvol puzzels om de programmeertaal en omgeving
+            te tonen die gebruikt is in Code.org CS in Algebra
+          description: Een handvol puzzels om de programmeertaal en omgeving te tonen
+            die gebruikt is in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: evaluatie blokken
+          Making Pictures: Foto's maken
+          Defining Variables: Variabelen definiëren
+          Defining Simple Functions: Eenvoudige functies definiëren
+          The Design Recipe: Het ontwerp Recept
+        K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
+          Introduction to PD: Inleiding tot PD
+          Blockly Basics: Blockly Basis
+          Writing computer programs: Computerprogramma's schrijven
+          Navigating the teacher dashboard: Navigeren in het dashboard van de leraar
+          Unplugged lessons: Offline lessen
+          Classroom Culture: Sfeer in de klas
+          Ways to go beyond Courses 1, 2, and 3: Manieren om verder te gaan na cursussen
+            1, 2 en 3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Volgende stappen
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Programming Concepts: Programming Concepts
+          Reflection: Reflection
+          'Programming Concept: Loops': 'Programming Concept: Loops'
+          'Programming Concept: Conditionals': 'Programming Concept: Conditionals'
+          'Programming Concept: Functions': 'Programming Concept: Functions'
+          'Programming Concept: Events': 'Programming Concept: Events'
+        netsim:
+          title: Internet Simulator
+          description_short: Leer hoe het internet werkt
+          description: Leer hoe het internet werkt
+          Internet Simulator: Internet Simulator
+          Unit 1: Eenheid 1
+          Unit 2: Eenheid 2
+          Sending Bits: Bits Versturen
+          Routing and DNS: Routering en DNS
+          'Unit 1: Sending Bits': 'Deel 1: Bits verzenden'
+          'Unit 2: Routing and DNS': 'Deel 2: Routering en DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+          Overview and Setup Instructions: Overview and Setup Instructions
+          'Peer to Peer: Sending Bits on a Shared Wire': 'Peer to Peer: Sending Bits
+            on a Shared Wire'
+          'Peer to Peer: Sending Numbers': 'Peer to Peer: Sending Numbers'
+          'Peer to Peer: Sending Ascii': 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: Peer to Peer - Sending Bits
+            on a Shared Wire
+          Peer to Peer - Sending Numbers: Peer to Peer - Sending Numbers
+          Peer to Peer - Sending Ascii: Peer to Peer - Sending Ascii
+        pixelation:
+          title: Pixelachtig
+          description: Maak afbeeldingen met bits en bytes.
+          description_short: Maak afbeeldingen met bits en bytes.
+          Pixelation: Pixelachtig
+          Black & White Pixelation Widget: Black & White Pixelation Widget
+          Color Pixelation Widget: Color Pixelation Widget
+          Black & White Pixelation Tutorial: Black & White Pixelation Tutorial
+          Black & White Pixelation Freeplay: Black & White Pixelation Freeplay
+          Color Pixelation Tutorial: Color Pixelation Tutorial
+          Color Pixelation Examples: Color Pixelation Examples
+          Color Pixelation Freeplay: Color Pixelation Freeplay
+        20-hour:
+          title: 20-uur Intro cursus
+          description_audience: Leeftijden 10 + (na cursus 3)
+          description: Deze cursus van 20 uur introduceert basisbegrippen voor informatica
+            en programmeren. De cursus is bedoeld voor basisschool-klassen, maar is
+            voor alle leeftijden leuk om te leren.
+          description_short: Deze 20 uur durende cursus behandeld de informatica en
+            de programmeerconcepten in de cursussen 2-4.
+          Introduction to Computer Science: Inleiding Informatica
+          The Maze: Het Doolhof
+          Computational Thinking: Rekenend Denken
+          Graph Paper Programming: Programmeren op Ruitjespapier
+          The Artist: De Artiest
+          Algorithms: Algoritmen
+          The Artist 2: De Artiest 2
+          Functions: Functies
+          The Farmer: De Boer
+          Conditionals: Voorwaardelijke instructies
+          The Artist 3: De Artiest 3
+          Song Writing: Liedjes Schrijven
+          The Farmer 2: De Boer 2
+          Abstraction: Abstractie
+          The Artist 4: De Artiest 4
+          Relay Programming: Estafette Programmeren
+          The Farmer 3: De Boer 3
+          The Internet: Het Internet
+          The Artist 5: De Artiest 5
+          Wrap-up: Einde
+        edit-code:
+          title: Bewerk de code
+          description: Bewerk de code
+          description_short: Bewerk de code
+          The Maze: Het Doolhof
+          Applab: Applab
+          The Artist: De Artiest
+          Play Lab: Speel Lab
+          Play Lab 2015: Speel Lab 2015
+        events:
+          title: Gebeurtenissen
+          description: Gebeurtenissen
+          description_short: Gebeurtenissen
+          Bounce: Stuiter
+          Studio: Studio
+          Calc: Bereken
+          Eval: Evalueer
+        flappy:
+          title: Flappy Code
+          description: Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer
+            onze Flappy Code opdracht!
+          description_short: Schrijf je eigen Flappy spel in minder dan 10 minuten!
+          Flappy Code: Flappy Code
+        jigsaw:
+          title: Legpuzzel
+          description: probeer onze legpuzzelcursus
+          description_short: probeer onze legpuzzelcursus
+          Jigsaw: Legpuzzel
+        step:
+          title: Stap
+          description: stapcursus
+          description_short: stapcursus
+          Step: Stap
+        Hour of Code:
+          title: Uur van Code 2013
+          description: Probeer de basis van de informatica met figuren van Angry Birds
+            an Plants vs Zombies!
+          description_short: Probeer de grondbeginselen van de informatica met veel
+            leuke figuren!
+          Hour of Code 2013: Uur van Code 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Daag jezelf uit!
+          description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
+          Puzzles: Puzzels
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Daag jezelf uit!
+          description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
+          Puzzles: Puzzels
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Daag jezelf uit!
+          description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
+          Puzzles: Puzzels
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Daag jezelf uit!
+          description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
+          Puzzles: Puzzels
+        Tutorial - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Daag jezelf uit!
+          description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
+          Puzzles: Puzzels
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Daag jezelf uit!
+          description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
+          Puzzles: Puzzels
+        course4pre:
+          title: Vereisten voor cursus 4
+          description_short: Een korte samenvatting van concepten voor leerlingen
+            die cursus 2 en 3 niet hebben afgewerkt.
+          description: Een korte samenvatting van concepten voor leerlingen die cursus
+            2 en 3 niet hebben afgewerkt.
+          Course 4 Prerequisite: Vereisten voor cursus 4
+          'Maze: Sequence': 'Doolhof: Nummering'
+          'Artist: Sequence': 'Kunstenaar: volgorde'
+          'Artist: Loops': 'Kustenaar: lussen'
+          'Bee: Conditionals': 'Bij: voorwaardelijke instructies'
+          'Artist: Nested Loops': 'Kunstenaar: geneste lussen'
+          'Farmer: While Loops': 'Boer: Zolang-lussen'
+          'Bee: Nested Loops': 'Bij: geneste lussen'
+          'Artist: Functions': 'Kunstenaar: Functies'
+          'Bee: Debugging': 'Bij: Foutopsporing'
+        cspunit1:
+          title: CSP Unit 1
+          description_short: Make Black and White Images with the pixelation tool
+          description: CSP Unit 1 Stages
+          Lesson14: Les14
+          Lesson 14: Les 14
+          Lesson 14 v2: Les 14 v2
+          Lesson 15: Les 15
+          Lesson 8: Les 8
+          Lesson 5: Les 5
+          Lesson 3: Les 3
+          Lesson 4: Les 4
+          Lesson 6: Les 6
+          Lesson 2: Les 2
+          Lesson 7: Les 7
+          Lesson 1: Les 1
+          Innovation: Innovatie
+          Sending Binary Messages: Binaire berichten verzenden
+          Sending More Complex Messages: Complexere berichten verzenden
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Bits verzenden in de Echte Wereld
+          Number Systems: Systemen voor getalnotatie
+          Binary Numbers: Binaire getallen
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Text Compression
+          'Assessment: Encoding Complex Information': 'Assessment: Encoding Complex
+            Information'
+          Encoding B&W Images: Encoding B&W Images
+          Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
+          'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages
+            with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video-Games
+            en Coordinaat Vliegtuigen'
+          'Calc: Evaluation Blocks': 'Calc: Evaluatie blokken'
+          'Eval: Strings and Images': 'Eval: Tekenreeksen en afbeeldingen'
+          'Unplugged: Contracts': 'Unplugged: Functies ontwerpen'
+          'Eval: Writing Contracts': 'Samenvatting: Functies ontwerpen'
+          'Calc: Defining Variables': 'Calc: Variabelen definiëren'
+          'Play Lab: Defining Variables (Big Game)': 'Speel Lab: Variabelen definiëren
+            (Groot Spel)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Unplugged: Het ontwerp recept'
+          'Play Lab: Defining Functions': 'Play Lab: Functies definiëren'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Speel Lab: Animatie (Groot Spel)'
+          'Unplugged: Booleans': 'Unplugged: Booleans'
+          'Eval: Boolean Operators': 'Eval: Booleaanse operatoren'
+          'Play Lab: Booleans': 'Speel Lab: Booleans'
+          'Play Lab: Boolean (Big Game)': 'Speel Lab: Booleans (Groot Spel)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
+            en stuksgewijze functies'
+          'Eval: Conditionals': 'Eval: Conditionals'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Botsingdetectie
+            en de afstand formule'
+          'Play Lab: Collision Detection (Big Game)': 'Speel Lab: Botsingdetectie
+            (Groot Spel)'
+          Evaluation Blocks: evaluatie blokken
+          Strings and Images: Tekenreeksen en afbeeldingen
+          Contracts: Ontwerpen
+          Your Game - Defining Variables: Your Game - Defining Variables
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: Het ontwerp Recept
+          Your Game - Animation: Jouw spel - Animatie
+          Booleans: Booleans
+          Sam the Bat: Sam de Vleermuis
+          Your Game - Booleans: Jouw spel - Booleans
+          Conditionals and Piecewise Functions: Conditionele en stuksgewijze functies
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Introduction to PD: Inleiding tot PD
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in
+            Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
+          Evaluation Blocks: evaluatie blokken
+          Strings and Images: Tekenreeksen en afbeeldingen
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: Jouw spel - Animatie
+          Booleans: Booleans
+          Sam the Bat: Sam de Vleermuis
+          Your Game - Booleans: Jouw spel - Booleans
+          Luigi's Pizza: Luigi's Pizza
+          'Play Lab: Collision Detection (Big Game)': 'Speel Lab: Botsingdetectie
+            (Groot Spel)'
+          Your Game - Player Movement: Your Game - Player Movement
+          Your Game - Collision Detection: Jouw spel - Botsingsdetectie
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          description_short: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: nieuw niveau
+          Introduction to PD: Inleiding tot PD
+          title: Computer Science Principles PD
+          description: 'Phase 1: Online Introduction for CSP'
+          description_short: 'Phase 1: Online Introduction for CSP'
+          What is CSP?: What is CSP?
+          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          Impact of Computer Science: Impact of Computer Science
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          description: Lesson samples for csp
+          Lesson 14: Les 14
+          Lesson 15: Les 15
+        ECSPD:
+          Introduction to PD: Inleiding tot PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+          title: Exploring Computer Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Impact of Computer Science: Impact of Computer Science
+        sciencePD:
+          Introduction to PD: Inleiding tot PD
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Pre-Workshop Online Component: Pre-Workshop Online Component
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
+            Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          What to Expect: What to Expect
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
+            Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational
+            Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        rbo-reference:
+          reference: reference
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
+        Test Wednesday:
+          PDK5 Intro: PDK5 Intro
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
+        cspunit3:
+          title: CSP Unit 3 - Programming
+          description_short: Programming
+          description: Programming in Javascript and AppLap
+          Getting to know AppLab: Getting to know AppLab
+          Functions: Functies
+          Using Simple Commands: Using Simple Commands
+          Creating Procedures - Part 1: Creating Procedures - Part 1
+          Layers of Abstraction and Programming Efficiency: Layers of Abstraction
+            and Programming Efficiency
+          APIs and Function Parameters: APIs and Function Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          Creating functions with Parameters: Creating functions with Parameters
+          Scene Design Part 1 - Plan: Scene Design Part 1 - Plan
+          Scene Design Part 2 - Code: Scene Design Part 2 - Code
+          Scene Design Part 3 - Reflect: Scene Design Part 3 - Reflect
+          Unplugged Events Activity -  Mission Unsortable: Unplugged Events Activity
+            -  Mission Unsortable
+          Buttons on the Screen: Buttons on the Screen
+          Unfortunate Events: Unfortunate Events
+          On Beyond Buttons: On Beyond Buttons
+          Cookie Clicker 1.0 DEPRECIATED: Cookie Clicker 1.0 DEPRECIATED
+          Controlling Memory and Program Flow: Controlling Memory and Program Flow
+          Variable Basics DEPRECIATED: Variable Basics DEPRECIATED
+          Clicker v.1 -  Variable Basics: Clicker v.1 -  Variable Basics
+          Conditional Basics: Conditional Basics
+          More Variables (2 days): More Variables (2 days)
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and
+            Clicker Completion
+          Natural Language Processing and Chat Bots: Natural Language Processing and
+            Chat Bots
+          Chained Conditionals: Chained Conditionals
+          Compound Conditionals: Compound Conditionals
+          Strings and Substrings: Strings and Substrings
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          The Need For Programming Languages: The Need For Programming Languages
+          Creating Procedures - Part 2: Creating Procedures - Part 2
+          Sarah testing project backed levels: Sarah testing project backed levels
+          Cookie Clicker: Cookie Clicker
+          Clicker Variable Basics: Clicker Variable Basics
+          Events Unplugged: Events Unplugged
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Improving the Clicker Game: Improving the Clicker Game
+          Chatbot Challenge: Chatbot Challenge
+          'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
+          'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
+          'Scene Design Part 3: Reflect': 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant
+            Challenge
+          Digital Assistant Challenge: Digital Assistant Challenge
+        algebraPD3:
+          title: Phase 3 PD
+          description: Teach Algebra through block-based Functional Programming
+          description_short: Teach Algebra through block-based Functional Programming
+          Introduction to the new Computer Science in Algebra: Introduction to the
+            new Computer Science in Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: evaluatie blokken
+          The Big Game: The Big Game
+          Strings and Images: Tekenreeksen en afbeeldingen
+          The Design Recipe: Het ontwerp Recept
+          Next Steps: Volgende stappen
+        sciPD complex adaptive 2:
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Inleiding tot PD
+          Pre-Workshop Online Component: Pre-Workshop Online Component
+        sciPD complex adaptive forum:
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Inleiding tot PD
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
+            Systems
+        Glenallan Career Day Demo:
+          new stage: nieuw niveau
+          title: Glenallan Career Day Demo
+          description_short: Let's make some puzzles!
+          description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
+          Puzzles: Puzzels
+        ECSPD-NexTech:
+          Introduction to PD: Inleiding tot PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: nextech_logo.png
+          title: Exploring Computer Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Impact of Computer Science: Impact of Computer Science
+        ECSPD-iZone:
+          Introduction to PD: Inleiding tot PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: izone_logo.png
+          title: Exploring Computer Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Impact of Computer Science: Impact of Computer Science
+        algebraPD-NexTech:
+          title: Computer Science in Algebra PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Inleiding tot PD
+          Evaluation Blocks: evaluatie blokken
+          logo_image: nextech_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in
+            Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        algebraPD-iZone:
+          title: Computer Science in Algebra PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Inleiding tot PD
+          Evaluation Blocks: evaluatie blokken
+          logo_image: izone_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in
+            Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        sciencePD-NexTech:
+          Introduction to PD: Inleiding tot PD
+          logo_image: nextech_logo.png
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
+            Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
+            Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational
+            Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        sciencePD-iZone:
+          Introduction to PD: Inleiding tot PD
+          logo_image: izone_logo.png
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
+            Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
+            Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational
+            Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        ui_tests:
+          title: UI Tests
+          description: Script for test. Careful, don't change level ordering.
+          description_short: Script for test. Careful, don't change level ordering.
+          All the Tests: All the Tests
+          Free Response: Free Response
+          Multi: meerdere
+          Big Game: Big Game
+          new stage: nieuw niveau
+        sciencePD2:
+          title: Computer Science in Science PD
+          description: 'Fase 2 Online: Gemengde zomer studie'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
+          Phase 2 Summer Workshop: Phase 2 Summer Workshop
+          Welcome: Welcome
+          Resources: Resources
+          Discussion Forums: Discussion Forums
+          Discussion Forum: Discussion Forum
+          Evaluation: Evaluation
+          Implementation Planning: Implementation Planning
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+        sciencePD3:
+          title: Computer Science in Science PD
+          description: Phase 3 Professional Development
+          description_short: Phase 3 Professional Development
+          new stage: nieuw niveau
+          Welcome: Welcome
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+          Discussion Forums: Discussion Forums
+        Testing:
+          Testing: Testing
+          title: Testing
+          description: Testing
+          description_short: Testing
+        cspunit2:
+          title: CSP Unit 2 - The Internet
+          description_short: Het Internet
+          description: |
+            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
+            structure and design of the internet and the implications of those design decisions including
+            the reliability of network communication, the security of data, and personal privacy. Topics
+            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
+            concerns.
+          Beyond Sending Bits: Beyond Sending Bits
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Addresses: Routers and Addresses
+          Classroom Internet: Classroom Internet
+          Algorithms in Networking: Algorithms in Networking
+          The Need for Packets: The Need for Packets
+          Packets in the Real World: Packets in the Real World
+          The Need for DNS: The Need for DNS
+          DNS Simulation: DNS-simulatie
+          How HTTP Works: De werking van HTTP
+          IP and DNS in the Real World: IP- en DNS-in de echte wereld
+          The Internet: Het Internet
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
+            Tree
+          Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
+          Algorithms Detour - How Routers Learn: Algorithms Detour - How Routers Learn
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: Algorithms Detour - Hard Problems
+            TSP
+          One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real
+            World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
+          The Internet is for Everyone: The Internet is for Everyone
+          How Routers Learn: How Routers Learn
+          HTTP and Abstraction on the Internet: HTTP and Abstraction on the Internet
+          Global Impacts of the Internet: Global Impacts of the Internet
+          The Need for Encryption: The Need for Encryption
+          Keys and Passwords: Keys and Passwords
+          Public Key Encryption: Public Key Encryption
+        algebraPD2a:
+          title: Computer Science in Algebra PD
+          description: 'Fase 2 Online: Gemengde zomer studie'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
+          Evaluation Blocks: evaluatie blokken
+          Strings and Images: Tekenreeksen en afbeeldingen
+          Defining Variables: Variabelen definiëren
+          Big Game - Variables: Big Game - Variables
+          'Play Lab: Defining Functions': 'Play Lab: Functies definiëren'
+          The Design Recipe: Het ontwerp Recept
+          Big Game - Animation: Big Game - Animation
+          Booleans: Booleans
+          Sam the Bat: Sam de Vleermuis
+          Big Game - Booleans: Big Game - Booleans
+          Luigi's Pizza: Luigi's Pizza
+          Big Game - Player Movement: Big Game - Player Movement
+          Big GAme - Collision Detection: Big GAme - Collision Detection
+          Rocket-Height: Rocket-Height
+          Big Game - Collision Detection: Big Game - Collision Detection
+          Free Play: Gratis spelen
+        allthethings:
+          Jigsaw: Legpuzzel
+          Maze: Doolhof
+          Artist: Kunstenaar
+          Bee: Bee
+          PlayLab: PlayLab
+          Farmer: Farmer
+          Flappy: Flappy
+          Bounce: Stuiter
+          Multi: meerdere
+          Match: Overeenkomst
+          TextMatch: TextMatch
+          CSinA: CSinA
+          Netsim: Netsim
+          applab: applab
+          online pd?: online pd?
+          AppLab: AppLab
+          Online PD: Online PD
+          title: Alle dingen!
+          description: Alle de level types voor UI testing
+          description_short: Alle de level types voor UI testing
+          Odometer: Kilometerteller
+          Vigenere: Vigenere
+          Frequency: Frequency
+          Text Compression: Text Compression
+          Pixelation: Pixelachtig
+          Multi2: Multi2
+          Markdown Details: Markdown Details
+        algebraPD2b:
+          title: Computer Science in Algebra PD
+          description: 'Fase 2 Online: Gemengde zomer studie'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: evaluatie blokken
+          Strings and Images: Tekenreeksen en afbeeldingen
+          Writing Contracts: Writing Contracts
+          Defining Variables: Variabelen definiëren
+          Defining Functions: Functies definiëren
+          Rocket-Height: Rocket-Height
+          Booleans: Booleans
+          'Eval: Conditionals': 'Eval: Conditionals'
+          Next Steps: Volgende stappen
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internet Simulator
+          App Lab: App Lab
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Welkom!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
+          Welcome!: Welkom!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internet Simulator
+          App Lab: App Lab
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        K5-OnlinePD:
+          title: Teaching Computer Science Fundamentals
+          description: Learn how to teach computer science using Code.org's Computer
+            Science Fundamentals with this free, self-paced online course.
+          description_short: Learn how to teach computer science using Code.org's
+            Computer Science Fundamentals with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Next Steps: Volgende stappen
+          Looking Ahead: Looking Ahead
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: 'Fase 2 Online: Gemengde zomer studie'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
+          Welcome!: Welkom!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Einde
+          Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
+          Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
+          Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
+            Web 2.0
+          Unit 1, Days 8-9. Impact of Computers and Communication: Unit 1, Days 8-9.
+            Impact of Computers and Communication
+          Unit 1, Day 10. Telling a Story with Data: Unit 1, Day 10. Telling a Story
+            with Data
+          Unit 1, Day 11-14. Data Modeling and Design: Unit 1, Day 11-14. Data Modeling
+            and Design
+          Unit 1, Day 15-16. Computer Programs and Following Directions: Unit 1, Day
+            15-16. Computer Programs and Following Directions
+          Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
+          'Unit 1, Days 1-2: What Is a Computer?': 'Unit 1, Days 1-2: What Is a Computer?'
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 5-7 Searching and Web 2.0: Unit 1, Days 5-7 Searching and Web
+            2.0
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          description_short: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
+        hoc2015:
+          title: Uur van Code 2015
+          description_short: Gebruik Speel Lab om een verhaal of spel te maken.
+          description: Gebruik Speel Lab om een verhaal of spel te maken.
+          Hour of Code: Een Uur Code
+          Hour of Code 2015: Uur van Code 2015
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: 'Fase 2 Online: Gemengde zomer studie'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: evaluatie blokken
+          Strings and Images: Tekenreeksen en afbeeldingen
+          Writing Contracts: Writing Contracts
+          Defining Variables: Variabelen definiëren
+          Defining Functions: Functies definiëren
+          Rocket-Height: Rocket-Height
+          Booleans: Booleans
+          'Eval: Conditionals': 'Eval: Conditionals'
+          Next Steps: Volgende stappen
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: Welkom!
+          The Design Recipe: Het ontwerp Recept
+          Teaching with Puzzles: Teaching with Puzzles
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
+          description: 'Fase 2 Online: Gemengde zomer studie'
+          Welcome!: Welkom!
+          Wrap-Up: Terugblik
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+        equity-pd:
+          title: Leading a Discussion on Equity
+          description_short: How to lead a discussion on equity in a Code.org PD
+          description: How to lead a discussion on equity in a Code.org PD
+          Necessary Background: Necessary Background
+          Code.org Equity PD: Code.org Equity PD
+        science-PD2:
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
+          description: 'Fase 2 Online: Gemengde zomer studie'
+          Welcome!: Welkom!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Terugblik
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free,
+            self-paced online course.
+          description: Develop strategies for creating equity in your classroom with
+            this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Volgende stappen
+        sciencePD2b-iZone:
+          Welcome!: Welkom!
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
+          description: 'Fase 2 Online: Gemengde zomer studie'
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Terugblik
+        ECSPD2-iZone:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
+          description: 'Fase 2 Online: Gemengde zomer studie'
+          Welcome!: Welkom!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Einde
+        ECSPD2-NexTech:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
+          description: 'Fase 2 Online: Gemengde zomer studie'
+          Welcome!: Welkom!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Einde
+        CSPPD2:
+          title: 'Computer Science Principles PD: Blended Summer Study'
+          description_short: 'Blended Summer Study: 8 hour online'
+          description: 8-hour online PD that builds on the 5-day in-person experience
+            and helps teachers prepare for the beginning of the semester
+          Getting Started: Getting Started
+          Welcome to the Course!: Welcome to the Course!
+          'Lesson Chunk 1: Sending Binary Messages': 'Lesson Chunk 1: Sending Binary
+            Messages'
+          'Lesson Chunk 2: Encoding and Sending Numbers': 'Lesson Chunk 2: Encoding
+            and Sending Numbers'
+          'Lesson Chunk 3: Encoding and Sending Text': 'Lesson Chunk 3: Encoding and
+            Sending Text'
+          Lesson Chunk 1- Sending Binary Messages: Lesson Chunk 1- Sending Binary
+            Messages
+          Lesson Chunk 2- Encoding and Sending Numbers: Lesson Chunk 2- Encoding and
+            Sending Numbers
+          Lesson Chunk 3- Encoding and Sending Text: Lesson Chunk 3- Encoding and
+            Sending Text
+          Lesson Chunk 4- Compressing and Storing Information: Lesson Chunk 4- Compressing
+            and Storing Information
+          Practice PT: Practice PT
+          Ramping Up: Ramping Up
+          Wrap Up and Next Steps: Wrap Up and Next Steps
+        odometer:
+          title: Odometer Widget
+          description_short: Odometer widget
+          description: Use the Odometer widget to control odometers with various number
+            bases. Binary, Decimal and Hexadecimal are the most common number systems
+            to see in computer science.
+          Odometer Widget: Odometer Widget
+        asUnplugged:
+          title: Afterschool Unplugged
+          description_short: Short unplugged course designed for informal learning
+          description: Afterschool Unplugged is designed to teach computational thinking
+            and computer science ideas through offline games and crafts. Created with
+            informal classrooms in mind, these lessons are fantastic on their own,
+            or in combination with Afterschool 1 . This course focuses on learning
+            through entertainment. Recommended for grades K-8.
+          description_audience: Ages 6-13
+          Happy Maps: Vrolijke Routes
+          Move it, Move it: Beweeg, Beweeg
+          'Real-life Algorithms: Plant a Seed': 'Algoritmen in het echte leven: Plant
+            een zaadje'
+          Graph Paper Programming: Programmeren op Ruitjespapier
+          Building a Foundation: Een Basis Bouwen
+          Getting Loopy: Mooie linten
+          The Big Event: De grote gebeurtenis
+          Binary Bracelets: Binaire armbanden
+          Songwriting: Songwriting
+        afterschool1:
+          title: Afterschool 1
+          description_short: Short course designed for informal learning
+          description: Afterschool 1 is designed to for informal classrooms where
+            students vary in age and assessment is not required. This course focuses
+            on learning through entertainment, with varying options for implementation,
+            all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended
+            for grades 3-8.
+          description_audience: Ages 7-13
+        vigenere:
+          title: Vigenere Cipher Widget
+          description_short: Vigenere Cipher Widget
+          description: Use the Vigenere Cipher Widget to explore encrypting and decrypting
+            messages using a Vigenere Cipher
+          Vigenere: Vigenere
+        frequency:
+          title: Frequency Analysis Widget
+          description_short: Frequency Analysis Widget
+          description: Use the Frequency Analysis Widget to analyze letter frequencies
+            in an input text compared to expected frequencies for standard English.
+            Use that comparison to explore cracking Shift and Substitution Ciphers.
+          Frequency Analysis: Frequency Analysis
+        algebraPD3a:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra blended online school year study
+          description: CS in Algebra blended online school year study
+          Updates - Tweaks and Polish: Updates - Tweaks and Polish
+          Updates - The Big Game and Projects: Updates - The Big Game and Projects
+          Updates - The Design Recipe: Updates - The Design Recipe
+          Lesson Prep: Lesson Prep
+        sciencePD3_pre1:
+          title: Computer Science in Science PD Phase 3 Before 1st In-Person
+          description_short: Phase 3 Blended Summer Study Pre 1
+          description: Phase 3 Blended Summer Study (Segment One)
+          Welcome Back!: Welcome Back!
+          The TLO: The TLO
+          Prep With Your Modules: Prep With Your Modules
+        frequency_analysis:
+          title: Frequency Analysis Widget
+          description_short: Frequency Analysis Widget
+          description: Use the Frequency Analysis Widget to analyze letter frequencies
+            in an input text compared to expected frequencies for standard English.
+            Use that comparison to explore cracking Shift and Substitution Ciphers.
+          Frequency Analysis: Frequency Analysis
+        ECSPD3-Unit2:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: Welkom!
+          Teaching Strategies: Teaching Strategies
+          Unit 2 Overview: Unit 2 Overview
+          Problem Solving: Problem Solving
+          Introduction to the Unit 2 Challenge: Introduction to the Unit 2 Challenge
+          Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community
+            Problems with Data
+          'Day 3 Intro To Problem Solving: Candy Bar Activity': 'Day 3 Intro To Problem
+            Solving: Candy Bar Activity'
+          'Day 4-6 Strategies in Problem Solving: Handshake Activity': 'Day 4-6 Strategies
+            in Problem Solving: Handshake Activity'
+          'Day 7-9 Problem Solving: Cornrow Curves': 'Day 7-9 Problem Solving: Cornrow
+            Curves'
+          Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
+          'Day 13-14 Linear and Binary Search: Tower Building Activity': 'Day 13-14
+            Linear and Binary Search: Tower Building Activity'
+          Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
+          'Day 17 Minimal Spanning Trees: Muddy City': 'Day 17 Minimal Spanning Trees:
+            Muddy City'
+          Day 18-21 Final Project: Day 18-21 Final Project
+          Unit 2 Challenge Planning & Creation: Unit 2 Challenge Planning & Creation
+        ECSPD3-Unit3:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: Welkom!
+          Teaching Strategies: Teaching Strategies
+          Unit 3 Overview: Unit 3 Overview
+          Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
+          Unit 3 Challenge Planning & Creation: Unit 3 Challenge Planning & Creation
+          Day 1-2 Online Experiences: Day 1-2 Online Experiences
+          Day 3-4 HTML- Paragraph and Header Tags: Day 3-4 HTML- Paragraph and Header
+            Tags
+          Day 5 HTML - Strong and EM Tags: Day 5 HTML - Strong and EM Tags
+          Day 6-7 HTML -Images: Day 6-7 HTML -Images
+          Day 8-10 Introduction to CSS: Day 8-10 Introduction to CSS
+          Day 11-13 Separating HTML and CSS: Day 11-13 Separating HTML and CSS
+          'Day 14 HTML: Links': 'Day 14 HTML: Links'
+          'Day 15-16 HTML and CSS: Tables, Lists,  Menus': 'Day 15-16 HTML and CSS:
+            Tables, Lists,  Menus'
+          'Day 17-19 HTML and CSS: Create own webpage': 'Day 17-19 HTML and CSS: Create
+            own webpage'
+          'Day 20-21 HTML and CSS: Adding Enhancements to Site': 'Day 20-21 HTML and
+            CSS: Adding Enhancements to Site'
+          Day 22-25 Final Project: Day 22-25 Final Project
+          'Day 15-16 HTML and CSS: Tables, Lists, Menus': 'Day 15-16 HTML and CSS:
+            Tables, Lists, Menus'
+        ECSPD3-Unit4:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: Welkom!
+          Teaching Strategies: Teaching Strategies
+          Unit 4 Overview: Unit 4 Overview
+          Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
+          Unit 4 Challenge Planning & Creation: Unit 4 Challenge Planning & Creation
+          'Day 1 Scratch: Intro': 'Day 1 Scratch: Intro'
+          'Day 2-3 Scratch: Name Project': 'Day 2-3 Scratch: Name Project'
+          'Day 4 Scratch: Creating Dialogue': 'Day 4 Scratch: Creating Dialogue'
+          'Day 5-6 Scratch: Moving Sprites': 'Day 5-6 Scratch: Moving Sprites'
+          'Day 7-8 Scratch: Event Driven Programming': 'Day 7-8 Scratch: Event Driven
+            Programming'
+          Day 9 Broadcasting Role Play: Day 9 Broadcasting Role Play
+          'Day 10-13 Scratch: Broadcasting': 'Day 10-13 Scratch: Broadcasting'
+          'Day 14 Scratch: Variables': 'Day 14 Scratch: Variables'
+          'Day 15 Scratch: Conditionals': 'Day 15 Scratch: Conditionals'
+          'Day 16-17 Scratch: AND OR and Randomness': 'Day 16-17 Scratch: AND OR and
+            Randomness'
+          'Day 18 Scratch: Rock Paper Scissors': 'Day 18 Scratch: Rock Paper Scissors'
+          'Day 19 Scratch: Timer': 'Day 19 Scratch: Timer'
+          'Day 20-23 Scratch: Timing Game': 'Day 20-23 Scratch: Timing Game'
+          'Day 24 Scratch: Games': 'Day 24 Scratch: Games'
+          Day 25-30 Final Project: Day 25-30 Final Project
+        ECSPD3-Unit5:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: Welkom!
+          Teaching Strategies: Teaching Strategies
+          Unit 5 Overview: Unit 5 Overview
+          Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
+          Unit 5 Challenge Planning & Creation: Unit 5 Challenge Planning & Creation
+        ECSPD3-Unit6:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: Welkom!
+          Teaching Strategies: Teaching Strategies
+          Unit 6 Overview: Unit 6 Overview
+          Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
+          Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
+        cspunit4draft:
+          title: CS Principles Unit 4 - Data
+          description_short: Data
+          description: |
+            Collect, analyze, and extract knowledge from data by programming and
+            building apps. Process data imported from other sources and also pull
+            data from live data APIs.
+          Data is the Secret Ingredient: Data is the Secret Ingredient
+          Finding Data: Finding Data
+          Building Apps Using Structured Data: Building Apps Using Structured Data
+          'Data App Part 1: Brainstorm': 'Data App Part 1: Brainstorm'
+          APIs and Access to Large Data Sets: APIs and Access to Large Data Sets
+          Structuring Data with JSON: Structuring Data with JSON
+          'Data App Part 2: Data Design': 'Data App Part 2: Data Design'
+          'Data App Part 3: Code': 'Data App Part 3: Code'
+          Identifying People with Data: Identifying People with Data
+          Collecting Personal Information: Collecting Personal Information
+          Privacy Policy: Privacybeleid
+          'Debate: Privacy vs. Utility': 'Debate: Privacy vs. Utility'
+          'Data App Part 4: App Permissions': 'Data App Part 4: App Permissions'
+          'Data App Part 5: Clean Data': 'Data App Part 5: Clean Data'
+          Reading Data: Reading Data
+          Sorting: Sorting
+          Searching: Searching
+          'Data App Part 6: Sort and Search': 'Data App Part 6: Sort and Search'
+          'Data App Part 7: Read Data': 'Data App Part 7: Read Data'
+          What Data Can Tell Us: What Data Can Tell Us
+          Interpreting Data from Different Perspectives: Interpreting Data from Different
+            Perspectives
+          Visualizations in the Real World: Visualizations in the Real World
+          'Data App Part 8: Visualize Data': 'Data App Part 8: Visualize Data'
+          'Data App Part 9: Reflect': 'Data App Part 9: Reflect'
+          'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'

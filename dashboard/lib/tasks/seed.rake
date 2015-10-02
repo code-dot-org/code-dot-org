@@ -264,7 +264,7 @@ namespace :seed do
     Script.script_cache_to_cache
   end
 
-  task test: [:cached, :script_cache_to_cache]
+  task test: [:cached]
   task cached: :environment do
     `mysql -uroot dashboard_test < lib/dashboard_test.sql`
   end

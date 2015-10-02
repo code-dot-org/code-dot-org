@@ -56,4 +56,5 @@ Dashboard::Application.configure do
   # Explicitly set legacy test-order behavior in Rails 4.2
   # See http://guides.rubyonrails.org/upgrading_ruby_on_rails.html#ordering-of-test-cases
   config.active_support.test_order = :sorted
+  config.i18n.load_path = Dir[Rails.root.join('config', 'locales_test', '*.{rb,yml}').to_s]
 end

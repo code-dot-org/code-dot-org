@@ -1,0 +1,744 @@
+"vi":
+  errors:
+    messages:
+      not_saved: 'Hãy sửa các lỗi sau đây:'
+      too_young: Nội dung này có giới hạn độ tuổi và không có sẵn cho học sinh nhỏ
+        tuổi
+  activerecord:
+    errors:
+      messages:
+        blank: là bắt buộc
+    attributes:
+      user:
+        name: Tên hiển thị
+        email: Địa chỉ email
+        username: tài khoản
+        password: mật khẩu
+        password_confirmation: Xác nhận mật khẩu
+        current_password: Mật khẩu hiện tại
+        locale: Ngôn ngữ
+        age: Tuổi
+        gender: Giới tính
+        edit_header: Chỉnh sửa thông tin tài khoản
+        error:
+          future: không thể trong tương lai
+  hello: Xin chào thế giới
+  welcome_back: Chào mừng bạn trở lại, %{name}
+  submit: Chấp nhận
+  add_teacher_form:
+    code:
+      label: 'Thêm một giáo viên:'
+      placeholder: Phần mã (ABCDEF)
+    submit: Thêm giáo viên
+  add_hint_form:
+    placeholder: Hãy nhập gợi ý của bạn ở đây
+    submit: Thêm gợi ý
+  appname: Code.org
+  stage: giai đoạn
+  stage_number: Giai đoạn %{number}
+  puzzle: Câu đố
+  trophies: những danh hiệu
+  courses: Các khóa học
+  of: của
+  more: Thêm nữa
+  less: ít hơn
+  beta: Phiên bản beta
+  try_hoc: 'Thử Hour of Code, bấm vào đây >> '
+  try_k8intro: Hãy thử khóa học K-8 Khoa Học Máy Tính Căn Bản (15-25 hours)
+  k8intro: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15-25 giờ)
+  already_started: 'Đã bắt đầu rồi à? Tiếp tục ở đây >> '
+  demos: 'Admin: Tất cả các bản demo'
+  continue: Tiếp tục
+  prize: giải thưởng
+  more_info: Thông tin thêm
+  auth:
+    sign_in_with: Đăng nhập bằng %{provider}
+    signed_in: Đăng nhập!
+    signed_out: Bạn đã đăng xuất khỏi <a href="%{url}"> Code.org</a>.
+    sign_out_of: Bạn sử dụng %{provider} để đăng nhập. <a href="%{url}"> Click vào
+      đây</a> để đăng xuất khỏi %{provider}.
+    already_signedup: Đã đăng ký?
+    notyet_signedup: Chưa tham gia?
+    google_oauth2: Tài khoản Google
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Tài khoản Microsoft
+    forgot_password: Quên mật khẩu?
+    need_confirmation: Không nhận được hướng dẫn xác nhận?
+    need_unlock: Chưa nhận hướng dẫn mở khóa?
+  signup_form:
+    student_count: '%{count} sinh viên đã đăng ký.'
+    teacher_count: '%{count} giáo viên đã đăng ký.'
+    overview_student: Đăng ký cho một tài khoản để theo dõi tiến độ của bạn. Email
+      của bạn chủ yếu được sử dụng để cho phép bạn đăng nhập vào và phục hồi mật khẩu.
+      Để biết thêm chi tiết, xem <a href="http://code.org/privacy">Chính sách bảo
+      mật</a> của chúng tôi .
+    overview_teacher: Dạy môn khoa học máy tính trong lớp học của bạn bằng cách đăng
+      ký một tài khoản. <p/> Bạn sẽ có thể thêm học sinh của bạn và theo dõi sự tiến
+      bộ của họ.
+    no_signup_message: Bạn có thể dùng mã <a target="_blank" href="http://learn.code.org">
+      để duyệt các màn và các câu đố khác nhau</a>,nhưng bạn cần đăng ký để lưu lại
+      tiến trình của bạn.
+    teacher_educator_guide: Hãy xem chỉ dẫn
+    teacher_pitch: Giáo viên đăng ký Code.org
+    teacher_title: Giáo viên đăng ký
+    student_pitch: Sinh viên đăng ký Code.org
+    student_title: Sinh viên đăng ký
+    school_name: Tên trường (tùy chọn)
+    school_address: Địa chỉ trường (không bắt buộc)
+    address_placeholder: địa chỉ, thành phố, tỉnh, mã bưu điện
+    gender: Giới tính (không bắt buộc)
+    birthday: Ngày sinh (tùy chọn)
+    age: Tuổi
+    user_type: Bạn là học viên hay Giáo viên?
+    submit: Đăng ký
+    teacher: Bạn có phải là giáo viên?
+    valid_username: Đã tồn tại!
+    invalid_username: Tên người dùng phải nhiều hơn 5 ký tự
+    taken_username: Tên người dùng đã được sử dụng
+    valid_password: Mật khẩu hợp lệ!
+    invalid_password: Mật khẩu phải có ít nhất 6 ký tự
+    mismatch_password: Hai mật khẩu bạn nhập không khớp
+    student_terms: Tôi đồng ý bị ràng buộc bởi <a href='http://code.org/tos'> điều
+      khoản Dịch vụ</a> Code.org . Nếu tôi dưới 13 tuổi, tôi xác nhận bằng cách gửi
+      biểu mẫu này rằng cha mẹ tôi hay người giám hộ hợp pháp của tôi cho phép sử
+      dụng các dịch vụ Code.org. <br/>Cho người dùng dưới 13, địa chỉ email không
+      được lưu trữ trong biểu mẫu mà cho phép chúng tôi liên hệ với họ.
+    teacher_terms: Tôi đồng ý bị ràng buộc bởi <a href='http://code.org/tos'> điều
+      khoản Dịch vụ</a> Code.org.
+    additional_information: Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng
+      ký cho bạn.
+  signin_form:
+    title: Đã có một tài khoản? Đăng nhập
+    login: Email hoặc tên người dùng
+    password: Mật khẩu
+    remember: ghi nhớ tôi
+    submit: Đăng nhập
+  signin:
+    try_heading: Bạn muốn thử lập trình mà không cần đăng ký?
+    try_hoc: Hãy thử Giờ Lập trình
+    try_20hours: 20 tiếng để xem bài giới thiệu về khoa học máy tính của chúng tôi
+  signinsection:
+    welcome: Chào mừng đến với %{section_name}
+    name: Chọn tên của bạn
+    picture: Bây giờ tìm hình ảnh bí mật của bạn
+    words: Bây giờ nhập từ bí mật của bạn
+    login: Đăng nhập
+  password:
+    reset_form:
+      title: Quên mật khẩu?
+      email: Địa chỉ Email
+      submit: Hướng dẫn đặt lại mật khẩu
+    change_form:
+      title: Thay đổi mật khẩu
+      new_password: Mật khẩu mới
+      confirm_password: Xác nhận mật khẩu mới
+      submit: Thay đổi mật khẩu
+  welcome_email:
+    subject: Tham gia lớp học của tôi ( trên Code.org)
+    body: |
+      Nhấp vào liên kết dưới đây để đăng nhập cho các hướng dẫn về khoa học máy tíng trên Code.org (với tôi như là giáo viên của bạn""): % {liên kết} Các hướng dẫn vui vẻ, trực quan hấp dẫn, và dạy các khái niệm cơ bản của khoa học máy tính bằng cách sử dụng từng kinh nghiệm đơn giản giống như hứơng dẫn chơi trò chơi. Tìm hiểu để mã lập trình từ Bill Gates, Mark Zuckerberg, Angry Birds, và nhà máy vs. zombie! :-) % (tên)
+  follower:
+    invite_sent: Gửi lời mời
+    added_teacher: '% (tên) được thêm như giáo viên của bạn'
+    registered: Bạn đã đăng kí cho mục %{section_name}.
+    error:
+      signed_in: Xin vui lòng đăng xuất trước khi tiếp tục
+      username_not_found: Tên người sử dụng % {username} không tìm thấy
+      username_in_use: '% {tên người sử dụng} đã được chọn, xin vui lòng chọn một
+        tên khác'
+      no_teacher: Không thể tìm thấy bất cứ ai đã đăng nhập bằng '% {teacher_email_or_code}'.
+        Xin vui lòng yêu cầu họ đăng nhập ở đây và sau đó thử thêm chúng một lần nữa
+      section_not_found: Không thể tìm thấy một phần với mã '%{section_code}'.
+      blank_code: Vui lòng nhập một phần mã
+      cant_join_own_section: Xin lỗi, bạn không thể tham gia phần riêng của bạn.
+    mail:
+      invite_student:
+        subject: Tham gia một lớp học với %{teacher_name} tại Code.org!
+      student_disassociated:
+        subject: 'Thông báo từ Code.org: %{student_name} không còn trong danh sách
+          là học viên của bạn.'
+      teacher_disassociated:
+        subject: 'Thông báo từ Code.org: %{teacher_name} không còn trong danh sách
+          giáo viên của bạn.'
+  reports:
+    error:
+      access_denied: Bạn không có quyền truy cập vào tình trạng pháp nhân của người
+        này
+  redeem_prizes:
+    title: 'Mua lại giải thưởng: %{name}'
+    provider: 'Nhà cung cấp:'
+    code: 'Mã:'
+    redeem_header: 'Để mua lại:'
+    donorschoose_register: Đăng ký với tư cách là một giáo viên trên DonorsChoose.org
+    donorschoose_project: Đăng một chương trình
+    donorschoose_how_to: Làm thế nào để sử dụng mã
+    success: Giải thưởng của bạn đã mua lại thành công, xem mã dưới đây.
+    error: Giải thưởng của bạn có thể không thu hồi được, xin vui lòng thử lại.
+    error_us_only: Giải thưởng chỉ được trao cho người sử dụng ở Mỹ.
+    error_not_earned: Bạn chưa có danh hiệu này.
+    error_already_redeemed: Phần thưởng của bạn đã được quy đổi.
+    no_prizes_available: Rất xin lỗi, nhưng hiện tại chúng tôi không có phần thưởng
+      nào có sẵn.
+    teacher_info_required: 'Phần thưởng dành cho giáo viên cần có tên trường thông
+      tin địa chỉ:'
+    teacher_email_required: 'Giải thưởng giáo viên yêu cầu một địa chỉ thư điện tử
+      đã được xác nhận:'
+    confirm:
+      title: Xin vui lòng xác nhận
+      'no': Không
+      'yes': Có
+      msg: Bạn có chắc bạn muốn yêu cầu bồi thường giải thưởng %{prize_name}?
+      msg_student: 'Lưu ý: Bạn chỉ có thể chọn một loại giải thưởng.'
+      msg_publicschool: Xin vui lòng xác nhận rằng bạn là một giáo viên trường công
+        lập Hoa Kỳ.
+      msg_visit_website: Truy cập trang web
+    providers:
+      apple_itunes: $10 iTunes Gift Card
+      donors_choose: DonorsChoose.org $750 credit
+      donors_choose_bonus: DonorsChoose.org $250 credit
+      dropbox: 10Gb dung lượng Dropbox
+      valve: Portal 2 (PC or Mac game download)
+      ea_bejeweled: Bejeweled 3 (PC game download)
+      ea_fifa: FIFA Soccer 13 (PC game download)
+      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
+      ea_pvz: Plants vs. Zombies (PC game download)
+      skype: $10 Skype credit
+    msg:
+      choose: 'Choose a prize:'
+      choose_teacher: 'Click on the logo below to claim your prize:'
+      earned: Bạn đã đạt được một giải thưởng! (Chỉ dành cho các Sinh viên ở Hoa Kỳ)
+      not_earned_title: Hoàn thành hướng dẫn, kiếm được thưởng (chỉ dành cho sinh
+        viên Hoa Kỳ)
+      not_earned: 'Tìm hiểu tất cả những khái niệm của khoa học máy tính, thu thập
+        tất cả %{num_trophies} danh hiệu, và kiếm được những phần thưởng thực. Bạn
+        có thể lựa chọn giữa 10GB dung lượng miễn phí của Dropbox, $10 tín dụng của
+        Skype và tải nhiều trò chơi hoàn toàn miễn phí. Lưu ý: Khoản đề nghị trên
+        chỉ áp dụng với những học viên Hoa Kì, và chỉ tồn tại khi nguồn cung vẫn còn.'
+      teacher:
+        earned: Với số học viên là 15 hoặc nhiều hơn thu thập đủ  %{num_trophies}
+          danh hiệu, Bạn sẽ được nhận 1 phần thưởng cho giáo viên! (Chỉ dành cho giáo
+          viên Hoa Kỳ)
+        not_earned_title: Dạy cho các lớp học, kiếm được lên đến $1,000 trong <a target="_blank"
+          href="http://DonorsChoose.org"> DonorsChoose.org</a> (chỉ dành cho giáo
+          viên Hoa Kỳ)
+        not_earned: Như một phần thưởng cho những giáo viên dạy lập trình lần đầu
+          tiên, bạn có thể nhận được tối đa $1,000 trong khoản tín dụng  <a href="http://DonorsChoose.org">DonorsChoose.org</a>
+          từ việc hướng dẫn một lớp học thông qua khóa học K-8 cơ bản. Để đạt đủ điều
+          kiện, bạn cần hướng dẫn thành công một lớp học K-8 cơ bản với ít nhất 15
+          học sinh, với tất cả 15 học sinh (hoặc nhiều hơn) hoàn thành tất cả bài
+          học và đạt được tất cả  %{num_trophies} danh hiệu. Nếu 7 học sinh hoặc nhiều
+          hơn đạt được tất cả danh hiệu, mà các học sinh này là nữ, phần thưởng của
+          bạn là $1,000 trong   khoản tín dụng <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>.
+          Nếu không, phần thưởng của bạn là $750 trong khoản tín dụng  <a target="_blank"
+          href="http://DonorsChoose.org">DonorsChoose.org</a>. Khoản tín dụng  <a
+          target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> chỉ
+          có thể sử dụng bởi giáo viên ở các trường công lập tại Mỹ.
+        bonus:
+          not_earned_title: Bạn có cở hội kiếm được 250$ tại <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+            credits (Chỉ giáo viên Hoa Kì)
+          earned: 7 hoặc nhiều hơn sinh viên/học sinh đã thu thập được tất cả các
+            danh hiệu %{num_trophies} là sinh viên/học sinh nữ. Bạn đã thắng được
+            một phần tiền thưởng! (Chỉ dành cho giáo viên tại Hoa Kỳ)
+          not_earned: Nếu ít nhất 7 học sinh của bạn đạt được tất cả  %{num_trophies}
+            các danh hiệu, mà các học sinh này là nữ, phần thưởng của bạn là $250
+            trong khoản tín dụng <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+            credits. Khoản tính dụng  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+            chỉ có thể sử dụng bởi giáo viên ở các trường công lập tại Mỹ.
+  crud:
+    new_model: Mới %{model}
+    show: HIẻn thị
+    edit: Chỉnh sửa
+    edit_model: Chỉnh sửa %{model}
+    update: Cập nhật
+    destroy: Xóa
+    back: Quay lại
+    confirm: Bạn chắc chứ?
+    created: '%{model} đã được tạo thành công.'
+    updated: '%{model} đã được tạo thành công.'
+    destroyed: '%{model} đã được xóa thành công.'
+    access_denied: Bạn không được quyền truy cập vào %{model} này.
+  nav:
+    header:
+      finished_hoc: Tôi đã hoàn thành giờ mã của tôi
+      sign_in_to_save: Đăng nhập để lưu lại những tiến bộ của bạn
+      free_play:
+        playlab: Tạo một ứng dụng
+        artist: Vẽ một cái gì đó
+        calculate: Calculate Something
+    user:
+      classroom: Trang chủ giáo viên
+      district_dashboard: khu vực điều khiển
+      label: Chào %{username}
+      stats: TIến trình của bạn
+      settings: Tài khoản của bạn
+      prizes: Giải thưởng
+      logout: Đăng xuất
+      signin: Đăng nhập
+      signup: Đăng ký
+      already_registered: Bạn đã đăng ký?
+    popup:
+      progress_for_user: sự tiến bộ của %{name}
+      progress: Qua trình của bạn
+      lines: 'Tổng số dòng mã: %{lines}'
+      close: ĐÓNG
+      mastery: Khái niệm
+      puzzle_map: Màn
+      prizes: Thu thập tất cả  %{total_trophies} cúp và giành giải thưởng!
+      prize_earned: Tất cả %{total_trophies} danh hiệu thu thập được. Bạn đã chiến
+        thắng được phần thưởng này!
+      prize_us_only: (Chỉ sinh viên Hoa Kỳ)
+      prizes_link: Thông tin thêm
+  teacher:
+    title:
+      one: 'Giáo viên của bạn:'
+      other: 'Giáo viên của bạn:'
+    remove: (thay đổi giáo viên)
+    confirm:
+      remove: Bạn có chắc bạn muốn loại bỏ giáo viên này không?
+    tools: Công cụ dành cho giáo viên
+    followers:
+      section: 'Mục:'
+      stages: '(Các) Quá trình để hiển thị:'
+      show_past: 'Hiển thị hoạt động của sinh viên (%{bullet_html}) trong quá khứ:'
+      levels_key: Cấp độ khóa
+      perfect: Hoàn thành, hoàn hảo
+      completed: Hoàn thành, nhưng bằng cách sử dụng quá nhiều khối
+      tried: Đã cố gắng, nhưng chưa hoàn thành
+      not_tried: Chưa thử
+      activity: Cho thấy hoạt động của sinh viên trong %{plural} %{hours} cuối
+      no_section: Không có phần được chỉ định
+      trophies: những danh hiệu
+    students:
+      name: Tên
+      username: tài khoản
+      password: mật khẩu
+      manage: Quản lý học sinh
+      dashboard: Đi đến bảng điều khiển của giáo viên
+      add: Thêm học sinh
+      remove: loại bỏ sinh viên
+      confirm_remove: Bạn có chắc muốn loại bỏ sinh viên/học sinh này?
+      help_reassign: Để chia lớp của bạn thành nhiều nhóm, lựa chọn các học viên để
+        phân công thành nhóm mới.
+      help_register: Thay vì dành nhiều thời gian cá nhân của bạn vào việc nhập dữ
+        liệu của sinh viên/học sinh, bạn có thể thiết lập lớp học của bạn một cách
+        nhanh chóng bằng cách yêu cầu sinh viên/học sinh của bạn đăng ký. Các sinh
+        viên/học sinh cần chọn tên và mật khẩu, nhưng họ KHÔNG CẦN phải cung cấp địa
+        chỉ email. Nếu sinh viên/học sinh của bạn quên mật khẩu của họ, bạn có thể
+        tạo lại mật khẩu cho sinh viên/học sinh đó.
+      register: Yêu cầu học sinh của bạn tự đăng ký
+      vist: Yêu cầu sinh viên/học sinh của bạn truy cập vào
+      section_code: 'và nhập mã lớp học của họ:'
+      first_please: Trước tiên, xin vui lòng %{add_section}
+      for: Đối với
+      enter: 'nhập:'
+    sections:
+      add: Thêm phần
+      manage: Quản lý các học phần
+      section: Học phần
+      students: học viên
+      section_code: Mã của học phần
+      add_section_code: Thêm học viên Vào Học Phần
+      secret: Loại bí mật
+      grade: Điểm số
+      course: Khóa học
+      rename: đổi tên
+      edit: chỉnh sửa
+      delete: xóa
+      confirm_delete: Bạn có chắc bạn muốn xóa phần này không?
+      email: Gửi trong email
+    rollup: Bảng tiến trình
+    activity: Hoạt động gần đây của lớp
+    user_not_found: Không thể tìm thấy giáo viên hoặc sinh viên này
+    cant_remove_student_no_email: '%{student_name} không thể được gỡ bỏ khỏi danh
+      sách sinh viên của bạn vì %{student_name} chưa đăng ký với một địa chỉ email'
+    cant_remove_teacher_no_email: '%{teacher_name} không thể được gỡ bỏ khỏi danh
+      sách giáo viên của bạn vì bạn chưa đăng ký địa chỉ email'
+    student_teacher_disassociated: '%{teacher_name} đã được thay thế như là môt giáo
+      viên cho %{student_name}'
+    panel:
+      answer_viewer: Xem câu trả lời
+      student: học sinh
+      viewing_solution: Xem đáp án
+      try_it_yourself: Hãy thử làm bài tập này
+      section: Học phần
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
+  user:
+    email_confirm_needed: 'Địa chỉ email chưa được xác nhận:'
+    email_confirm_needed_required: 'Địa chỉ email của bạn %{email} chưa được xác nhận:'
+    email_confirm_wrong_email: (Địa chỉ email sai?)
+    email_resend_confirm: Gửi lại hướng dẫn xác nhận
+    new_password_hint: (để trống nếu bạn không muốn thay đổi nó)
+    current_password_hint: (chúng tôi cần mật khẩu của bạn để xác nhận thay đổi)
+    delete: Xóa tài khoản của bạn
+    delete_text: Nhấp vào nút bên dưới sẽ xóa tài khoản của bạn.
+    delete_text_teacher_note: 'Xin lưu ý: xóa tài khoản của bạn sẽ không xóa tài khoản
+      học viên của bạn.'
+    delete_confirm: Bạn có chắc rằng bạn muốn xóa tài khoản của bạn không?
+  user_level:
+    completed: Đã hoàn thành
+    tried: thử lại
+  user_stats:
+    recent_activity: Hoạt động gần đây
+    show_more: Hiển thị thêm
+    classroom_activity: Hoạt động không dùng máy
+  home:
+    title: TIến trình của bạn
+    description: Code Studio là nơi có các khóa học trực tuyến được tạo bởi Code.org
+    lines_of_code: '%{lines_count} DÒNG MÃ ĐƯỢC VIẾT BỞI HỌC SINH/SINH VIÊN'
+    lines_of_code_linebreak: '%{lines_count} dòng mã <br/> được viết bởi %{students_count}
+      hàng triêu học viên'
+    all_courses: Tổng quan về các khóa học 1, 2 và 3
+    lesson_plans: Giáo án
+    signin_message: Đã đăng ký? %{link}
+    student_reg_link: Sinh viên đăng ký
+    teacher_reg_link: Giáo viên đăng ký
+    signin_directions: Sử dụng một tài khoản để theo dõi tiến độ. <br/> Giáo viên,
+      theo dõi toàn bộ lớp học của bạn.
+    teacher_dashboard: Xem bảng điều khiển sự tiến bộ
+    teacher_student_count_one: Bạn có %{count} học sinh.
+    teacher_student_count: Bạn có %{count} sinh viên.
+    teacher_averages: Bình quân, học sinh của bạn đạt được %{trophy_average} trong
+      tổng số %{trophy_max} danh hiệu "Thành Thạo Khái Niệm".
+    teacher_print_certificates: In giấy chứng nhận cho học sinh hoàn thành khóa học
+      này
+    teacher_read_blog: Đọc về tin tức và cập nhật của chúng tôi tại tài liệu blog
+      giáo dục của chúng tôi
+    classroom: Lớp học của bạn
+    student_progress: Tiến độ học tập của bạn
+    student_stats: Bạn đã kiếm được %{trophy_count} trong số %{trophy_max} huy hiệu
+      "Làm Chủ Khái Niệm".
+    student_left_off: 'Nơi bạn rời đi:'
+    student_finished: Bạn đã hoàn thành tất cả hướng dẫn, chọn một lớp học khác %{online_link}
+      hoặc tại một %{local_school_link}
+    local_school: trường học ở địa phương
+    online: trực tuyến
+    see_details: Xem chi tiết
+    view_course: Xem khóa học
+    prize_info: 'Giải thưởng cho sự tham gia (chỉ dành cho giáo viên trường công lập
+      tại Hoa Kỳ): lên đến $1,000 trong lớp học phần thưởng.'
+    tryfirst: 'Hoặc, bạn có thể thử nó trước, và đăng ký sau:'
+    trynow: Thử ngay bây giờ
+    add_hint_help: Xin vui lòng giúp chúng tôi thêm gợi ý thông minh cho các lớp học
+      của Code.org
+    20hour_overview: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính
+      và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên nó
+      khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
+    test_videos_help: Kiểm tra video player mới tại trường của bạn
+    try_beta_courses: Tính năng mới! Hãy thử nghiệm các khóa học phiên bản beta cho
+      học sinh lớp 5
+    use_as_teacher: Sử dụng trang web này với tư cách là giáo viên
+    heading_hoc2014: <h2> Giờ Lập Trình</h2><h1>Mọi lứa tuổi</h1>
+    heading_elementary: <h2>các khóa học 20 giờ cho</h2> <h1>Người nhập môn (mọi lứa
+      tuổi)</h1>
+    heading_apps: <h2>Thú vị cho</h2><h1>Tất cả mọi người</h1>
+    heading_legacy: <h2>Khóa học cơ bản của chúng tôi</h2><h1>Mọi lứa tuổi</h1>
+    your_gallery: Bộ sưu tập
+    no_primary_course: Hãy thử một khóa học ở Code Studio
+    choose_next_course: Thử một khóa Xưởng Mã bằng cách chọn một khóa bên dưới
+    print_certificate: In giấy chứng nhận
+  share:
+    title: Học về Xưởng Code
+    description: Ai cũng có thẻ học khoa học máy tính. Làm trò chơi, ứng dụng và nghệ
+      thuật với mã lệnh.
+  gender:
+    male: Nam
+    female: Nữ
+    none: Tùy chọn không muốn trả lời
+  user_type:
+    student: học sinh
+    teacher: Giáo viên
+  footer:
+    thank_you: Chúng tôi cảm ơn<a href="https://code.org/about/donors"> các nhà tài
+      trợ</a>, <a href="https://code.org/about/partners">các đối tác</a>, <a href="https://code.org/about/team">các
+      thành viên trong nhóm mở rộng của chúng tôi</a>, các <a href="https://code.org/about/advisors">chuyên
+      gia video và giáo dục</a> của chúng tôi vì sự hỗ trợ của các bạn trong việc
+      tạo nên Xưởng Mã.
+    help_from_html: Các kỹ sư từ Google, Microsoft, Facebook và Twitter đã giúp tạo
+      ra hướng dẫn này.
+    help_from_html_old: Các kỹ sư từ Google, Microsoft, Facebook và Twitter đã giúp
+      tạo ra các tài liệu này.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      Bản quyền đã được bảo hộ.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. Bản quyền đã được bảo hộ.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    powered_by_aws: Được tài trợ bởi Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, biểu tượng CODE và
+      Giờ Lập Trình &reg; là nhãn hiệu của Code.org.'
+    copyright: Bản quyền
+    more: Nhiều hơn
+    feedback: Cung cấp thông tin phản hồi
+    translate: Giúp chúng tôi dịch sang ngôn ngữ của bạn
+    support: Hỗ trợ
+    support_url: http://support.code.org
+    tos_short: Các điều khoản của Code.org
+    tos: Các điều khoản của Code.org
+    privacy: Chính sách riêng tư
+    secure: Phiên bản an toàn
+  reference_area:
+    title: Cần trợ giúp?
+    subtitle: Xem các video và gợi ý
+    teacher: Xem giải pháp
+    auth_error: Bạn không có quyền xem các giải pháp.
+    submit: Cập nhật vị trí nghệ sĩ
+    direction: Bắt đầu định hướng (tính bằng độ)
+  video:
+    tab: Video
+    notes: Không xem được video? Hãy xem ghi chú.
+    notes_coming_soon: Ghi chú cho video này sẽ được cập nhật sớm.
+    autoplay_option: Tự phát video
+    download: Tải video xuống
+  compatability:
+    working:
+      header: Chúng tôi đang làm việc để hỗ trợ cho trình duyệt của bạn.
+      message: Code.org sử dụng công nghệ web hiện đại. Điều này làm cho việc sử dụng
+        trang web diễn ra nhanh hơn. Trình duyệt của bạn không hỗ trợ tất cả các tính
+        năng cần thiết, và bạn có thể gặp vấn đề trong khi sử dụng phần này của trang
+        web. Xin vui lòng giúp chúng tôi bằng cách <a href='%{report_issue_url}'>
+        báo cáo bất kỳ vấn đề nào bạn tìm thấy</a>. Bạn cũng có thể <a href='%{supported_browsers_url}'>
+        nâng cấp trình duyệt của bạn lên một phiên bản được hỗ trợ</a>.
+      hide_this_warning: Ẩn cảnh báo này
+    upgrade:
+      header: Hãy nâng cấp trình duyệt của bạn.
+      message: Code.org sử dụng công nghệ web hiện đại. Điều này làm cho việc sử dụng
+        trang web nhanh hơn. Thật không may, trình duyệt của bạn không hỗ trợ tất
+        cả các tính năng cần thiết để chạy phần này của trang web. <br/> <br/> Cài
+        đặt một trong các trình duyệt được hỗ trợ bởi chúng tôi để tiếp tục. Bạn có
+        thể <a href='#'> thử xem trang</a>, nhưng có thể khó tránh khỏi việc các chức
+        năng bị hỏng.
+      button: Cho tôi xem danh sách các trình duyệt được hỗ trợ
+  slow_loading: Điều này mất nhiều thời gian hơn bình thường...
+  try_reloading: Hãy thử tải lại trang
+  next_stage: Hoàn thành! Tiếp tục màn tiếp theo
+  download_pdf: Mở bài học
+  lesson_plan: Giáo Án
+  view_lesson_plan: Xem Giáo Án
+  pdf_download: Tải phiên bản PDF
+  download_coming_soon: Tải về các hoạt động sắp diễn ra.
+  video_coming_soon: Video sắp tới!
+  share_code:
+    title: Nhấp vào 'Chạy' để xem chương trình của tôi trực tiếp
+    bounce_og_title: Hãy xem thử trò chơi Bounce của tôi
+    flappy_og_title: Hãy kiểm tra Game Flappy của tôi
+    studio_og_title: Hãy xem thử lab tạo ứng dụng trò chơi của tôi
+    check_out_what_i_made: Hãy xem thử ứng dụng tôi vừa tạo
+    og_description: Tôi đã viết mã của mình với Code.org
+    phone_number_not_allowed: Chỗ ở này có vẻ như chứa một số điện thoại. Hãy thử
+      thay đổi đoạn văn bản.
+    address_not_allowed: Chỗ ở này có vẻ như chứa một địa chỉ ở trong đó. Hãy thử
+      thay đổi đoạn văn bản.
+    email_not_allowed: Chỗ ở này có vẻ như chứa một email trong đó. Hãy thử thay đổi
+      đoạn văn bản.
+    profanity_not_allowed: Chỗ ở này có vẻ như chứa ngôn từ thô tục.  Hãy thử thay
+      đổi đoạn văn bản.
+  builder:
+    created: Tạo một kịch bản mới.
+    destroyed: Phá hủy một kịch bản.
+    manage: Xây dựng các cấp độ
+    view: Xem
+    back: Quay lại kịch bản
+    success: Bạn đã chỉnh sửa các khối thành công.
+    level:
+      create: Tạo ra mức độ mới
+      current: Mức hiện tại
+      unused: Không sử dụng cấp độ
+  upsell:
+    hoc:
+      title: Giờ của mã
+      body: Hãy thử những lớp khoa học máy tính că bản. Hàng triệu người đã thử học
+        các khóa này.
+    flappy:
+      title: Lập trình Flappy
+      body: Muốn viết trò chơi của riêng bạn trong vòng chưa đầy 10 phút? Hãy thử
+        lớp học lập trình Flappy của chúng tôi!
+    20-hour:
+      title: Khóa học cấp tốc
+      body: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính và các
+        khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên nó khá
+        thú vị để tìm hiểu ở tất cả các lứa tuổi.
+      body_short: Học những căn bản về khoa học máy tính với phiên bản cấp tốc của
+        các lớp 2-4.
+    hoc2014:
+      try_new_tutorial: Hãy thử lớp học Giờ Lập trình phiên bản beta của chúng tôi
+      try_frozen: Họa sĩ vẽ Anna và Elsa, từ bộ phim Frozen
+    gallery:
+      title: Bộ sưu tập
+      body: Xem một bộ sưu tập các ứng dụng và họa sĩ thiết kế hình ảnh được tạo bởi
+        người dùng của chúng tôi
+    frozen:
+      title: Bộ phim Frozen
+    infinity:
+      title: Phòng thí nghiệm Vui Chơi Bất Tận
+      body: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện hay trò chơi với
+        các nhân vật Disney Infinity nổi tiếng.
+  gallery:
+    students_drew_these_with_code: Các học sinh/sinh viên đã vẽ chúng bằng cách lập
+      trình!
+    students_made_these_with_code: Các học sinh/sinh viên đã tạo ra chúng bằng cách
+      lập trình!
+    picture_count: Trong <b>%{days}</b> ngày vừa qua, các học sinh/sinh viên đã vẽ
+      <b>%{count}</b> bức ảnh bằng cách tự viết các chương trình máy tính. Click vào
+      những bức ảnh này để xem mỗi chương trình.
+    activity_count: Trong <b>%{days}</b> ngày vừa qua, học sinh đã thực hiện <b>%{count}</b>
+      các ứng dụng và hình ảnh bằng cách tự viết các chương trình máy tính. Nhấp vào
+      hình ảnh và ảnh chụp màn hình để xem mỗi chương trình trong hành động.
+    want_to_make_your_own: Bạn muốn tự tạo chương trình này?
+    more: Nhiều &rarr;
+    caption_by_name_age: bởi  %{name}, %{age} tuổi
+    caption_time_ago: '%{time_ago} trước'
+    header: Bộ sưu tập
+    header_playlab: Phòng trò chơi
+    header_artist: Nghệ sĩ
+  landing:
+    prerelease: Khóa học này là <span class='betatext'> phiên bản beta</span>.  Điều
+      này có nghĩa là nó không phải là phiên bản cuối cùng của khóa học, và có thể
+      sửa đổi từ việc thu nhận thông tin phản hồi và thực hiện các cải tiến.
+    prerelease_hoc2014: Lớp học này là  <span class='betatext'>phiên bản beta</span>.
+      Nó có thể được sửa đổi từ việc thu nhận thông tin phản hồi và thực hiện các
+      cải tiến.
+    feedback: Gửi ý kiến phản hồi
+    report_bug: Báo cáo lỗi
+    support: Nhận trợ giúp
+    support_url: //support.code.org
+  multi:
+    wrong_title: Câu trả lời không chính xác
+    wrong_body: Câu trả lời mà bạn đã nhập không chính xác.  Xin vui lòng thử lại!
+    correct_title: Chính xác
+    correct_body: Đó là câu trả lời chính xác.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  match:
+    wrong_title: Cách giải chưa chính xác
+    wrong_body: Cách giải bạn đã nhập chưa chính xác. Xin vui lòng thử lại!
+    correct_title: Chính xác
+    correct_body: Đó là câu trả lời chính xác.
+  contract_match:
+    wrong_title: Câu trả lời không chính xác
+    badname: Hợp đồng của bạn có tên sai.
+    badname_case: Chức năng tên tùy thuộc vào chữ in hoa hay thường. Hãy thử thay
+      đổi kiểu in hoa/thường cho tên trên hợp đồng của bạn.
+    badrange: Hợp đồng của bạn có khoản sai.
+    baddomainsize: Hợp đồng của bạn không có số lượng khoản mục phù hợp trong tên
+      miền.
+    baddomainname: Một hoặc nhiều mục tên miền của bạn chứa tên sai.
+    baddomaintype: Một hoặc nhiều của các tên miền bạn chứa loại không chính xác,
+      hoặc chúng nằm không đúng thứ tự.
+  text_match:
+    placeholder: Nhập câu trả lời của bạn ở đây
+    open_response_title: Xin cảm ơn
+    open_response_body: Cảm ơn câu trả lời của bạn!
+  dialog:
+    ok: Đồng ý
+    startover_title: Bạn có chắc bạn muốn bắt đầu lại?
+    startover_body: Cái này sẽ cài lại bảng đố về trạng thái bắt đầu và xóa hết dữ
+      liệu bạn đã thêm hoặc thay đổi.
+    startover_ok: Bắt đầu lại
+    startover_cancel: Huỷ
+  time:
+    hour: 1 giờ
+    day: ngày
+    week: tuần
+  data:
+    script:
+      name:
+        20-hour:
+          title: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15 đến 25
+            giờ)
+          description: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính
+            và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên
+            nó khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
+        Hour of Code:
+          title: Giờ Lập trình 2013
+          description: ''
+        edit-code:
+          title: Hiệu chỉnh mã
+          description: ''
+        events:
+          title: Các sự kiện
+          description: ''
+        builder:
+          title: Xây dựng
+          description: ''
+        flappy:
+          title: Lập trình Flappy
+          description: Muốn viết trò chơi của riêng bạn trong vòng chưa đầy 10 phút?
+            Hãy thử lớp học lập trình Flappy của chúng tôi!
+        jigsaw:
+          title: Ghép hình
+          description: ''
+        step:
+          title: Bước/ từng bước thực hiện
+          description: ''
+        sample_level_builder:
+          title: Máy tạo Trình độ Mẫu
+          description: ''
+  age_interstitial:
+    age: Tuổi của bạn
+    header: Cập nhật thông tin tài khoản
+    message: Chúng tôi đang trong quá trình thu thập thêm kinh nghiệm để bảo vệ quyền
+      riêng tư cho ban mạnh hơn nữa. Để làm được điều đó, chúng tôi cần người dùng
+      nhập tuổi của họ vào đây <br/> Như mọi khi, code.org sẽ không thê, bán hoặc
+      chia sẻ thông tìn này với bất kì bên thứ 3 nào.
+    sign_out: Nếu bạn không muốn cung cấp tuổi của mình, bạn có thể đăng nhập vào
+      <a href="%{url}">sign out</a>
+  zendesk_too_young_message: Rất tiếc, người dùng trẻ em không thể đăng nhập vào trang
+    web hỗ trợ của chúng tôi, ban có thể duyệt<a href="http://support.code.org">support.code.org</a>
+    mà không cần đăng nhập cùng hay yêu cầu phụ huynh hoặc giáo viên của ban liên
+    hệ với chúng tôi .
+  progress:
+    not_started: chưa bắt đầu
+    in_progress: trong tiến trình
+    completed_too_many_blocks: hoàn thành, quá nhiều mảnh gép
+    completed_perfect: hoàn thành, hoàn hảo
+    furthest_level_attempted: đã cố gắng ở mức độ cao nhất
+    assessment: đánh giá
+  studio:
+    courses_working_on: Các khóa học bạn đang tiến hành
+    completed_courses: Hoàn thành khóa học
+    all_courses: Tất cả các khóa học
+  project:
+    projects: chương trình
+    create: Tạo ra chương trình
+    create_a_project: 'Tạo một chương trình mới:'
+    new: Tạo mới
+    rename: Đổi tên
+    save: Lưu
+    delete: Xóa
+    exit: Trở về khóa học
+    my_projects: chương trình của tôi
+    share: Chia sẻ
+    share_title: Chia sẻ chương trình của tôi
+    share_copy_link: 'Sao chép liên kết:'
+    close: Đóng
+    more: Nhiều hơn
+    name: Tên
+    updated: Đã cập nhật
+    project_type: loại chương trình
+    help_text: Nhấp vào liên kết bên dưới để tạo một chương trình Play Lap (trò chơi
+      thí nghiệm) hoặc Artist (đồ họa) <strong>Make an App</strong> hoặc <strong>Draw
+      Something</strong> below to make a new Play Lab or Artist project!<br/> Bạn
+      có thể trở lại và làm việc với các dự án của mình bất cứ lúc nào
+    need_help: Cần trợ giúp ban đầu?
+    really_delete: Xóa?
+    delete_yes: Đồng ý
+    delete_no: Không
+    saved: Đã lưu
+    not_saved: Không lưu
+    cancel: Huỷ
+    delete_confirm_title: Bạn có chắc bạn muốn xóa bỏ chương trình này?
+    delete_confirm_text: Xóa chương trình của bạn sẽ vĩnh viễn loại bỏ nó từ danh
+      sách chương trình của bạn. Bất cừ ai đã được bạn chia sẽ sẽ không còn nhìn thấy
+      chương trình của bạn.
+    view_all: Xem chương trình của tôi
+    remix: đảo lại
+    click_to_remix: Nhấp vào 'Remix' để xáo trộn phiên bản của bạn!
+    edit_project: Edit Project
+    abuse:
+      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
+        of Service</a> and cannot be shared with others.
+      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
+        us.</a>
+      go_to_code_studio: Go to Code Studio

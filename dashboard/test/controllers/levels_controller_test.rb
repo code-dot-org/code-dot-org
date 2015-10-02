@@ -14,7 +14,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should get index" do
-    get :index, game_id: @level.game
+    get :index, game_id: @level.game, limit: 10
     assert_response :success
     assert_not_nil assigns(:levels)
   end

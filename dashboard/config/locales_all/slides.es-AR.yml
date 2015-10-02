@@ -1,0 +1,592 @@
+"es-AR":
+  slides:
+    maze_intro:
+      1:
+        image: notes/hoc1_1.jpg
+        text: ¡Bienvenido a tu primera hora de código! Vamos a sumergirnos bien en
+          tu primera experiencia de programación.
+      2:
+        image: notes/hoc1_2.jpg
+        text: Usaremos Blockly, un lenguaje de programación visual donde puedes arrastrar
+          y soltar bloques para escribir código.
+      3:
+        image: notes/hoc1_3.jpg
+        text: La mayoría del código se escribe a mano, en cambio Blockly es visual.
+          Cada bloque corresponde a una línea de código "real".
+      4:
+        image: notes/hoc1_4.jpg
+        text: Aprenderás los fundamentos de la informática, los conceptos que se utilizan
+          en cualquier lugar, desde hacer aplicaciones hasta controlar el Mars rover.
+      5:
+        image: notes/hoc1_5.jpg
+        text: Un programa es un conjunto de instrucciones que tu ordenador sigue.
+      6:
+        image: notes/hoc1_6.jpg
+        text: El objetivo de tu primer programa es guiar un Angry Bird a través de
+          un laberinto para golpear al cerdo verde.
+      7:
+        image: notes/hoc1_7.jpg
+        text: El lado izquierdo es el laberinto donde se ejecuta tu programa. Las
+          instrucciones para cada rompecabezas están debajo del laberinto.
+      8:
+        image: notes/hoc1_8.jpg
+        text: La barra de herramientas del medio contiene los comandos para el Angry
+          Bird. Puedes usarlos para construir tu código.
+      9:
+        image: notes/hoc1_9.jpg
+        text: A la derecha está tu área de trabajo donde podrás arrastrar los bloques
+          del cuadro de herramientas para construir tu programa. Para eliminar un
+          bloque, arrástralo a la papelera que se encuentra en la esquina.
+      10:
+        image: notes/hoc1_10.jpg
+        text: Cada bloque es una instrucción. Si arrastras el bloque "avanzar" a tu
+          espacio de trabajo y oprimes el botón "Ejecutar Programa", el pájaro se
+          mueve una casilla en el laberinto.
+      11:
+        image: notes/hoc1_11.jpg
+        text: Para hacer más de una acción, puedes arrastrar muchos bloques en tu
+          espacio de trabajo y adjuntarlos juntos. El pájaro hará las acciones de
+          arriba hacia abajo.
+      12:
+        image: notes/hoc1_12.jpg
+        text: Si ejecutas un programa y quieres arreglarlo e intentar de nuevo, presiona
+          el botón "Reiniciar".
+      13:
+        image: notes/hoc1_13.jpg
+        text: ¡Vamos por esos cerdos!
+    artist_intro:
+      1:
+        image: notes/stage5_1.jpg
+        text: Hola, me llamo JR! Cada equipo de coches de carrera necesita programadores
+          de computadoras para ganar. Ellos analizan datos del coche para hacerlo
+          más rápido.
+      2:
+        image: notes/stage5_2.jpg
+        text: En estos rompecabezas, serás un artista que dibuja una línea detrás
+          de ellos dondequiera que vayan.
+      3:
+        image: notes/stage5_3.jpg
+        text: Este bloque dice "avanzar 100 pixeles". Los pixeles son pequeños puntos
+          en tu pantalla.
+      4:
+        image: notes/stage5_4.jpg
+        text: Este bloque dice "girar a la derecha 90 grados". Esto girará a tu artista
+          la misma cantidad como los bloques "girar" en los rompecabezas laberinto.
+      5:
+        image: notes/stage5_5.jpg
+        text: Haga clic en la flecha en cualquiera de estos bloques para cambiar la
+          cantidad que el artista se mueve hacia adelante o gira. Juega para familiarizarte
+          con estos nuevos bloques.
+    farmer_intro:
+      1:
+        image: notes/stage9_1.jpg
+        text: Hola, soy Paola! En estos rompecabezas, tu eres una granjera que tiene
+          que aplanar completamente su campo para iniciar la siembra de cultivos.
+      2:
+        image: notes/stage9_2.jpg
+        text: Tienes que ayudarla a quitar todos los montones de tierra y rellenar
+          todos los huecos.
+      3:
+        image: notes/stage9_3.jpg
+        text: Los nuevos bloques eliminan una palada llena de tierra de un montón
+          y rellanan  con una palada de tierra un hueco.
+      4:
+        image: notes/stage9_4.jpg
+        text: Los montones y los huecos son de diferente tamaño así que tienes que
+          decir al granjero cuantas palas debe usar.
+    flappy_intro:
+      1:
+        image: notes/flappy01.jpg
+        text: Hola, ¡Soy Katie! Una de las cosas más excitantes de la computación
+          es que un programa de ordenador puede ser interactivo.
+      2:
+        image: notes/flappy02.jpg
+        text: Siempre que alguien hace click, pulsa o teclea en un ordenador o teléfono
+          genera un EVENTO, y hay un código que decide qué ejecutar cuando ocurre
+          un EVENTO.
+      3:
+        image: notes/flappy03.jpg
+        text: 'Por ejemplo, tienes un CONTROLADOR DE EVENTOS que dice "cuando se hace
+          clic en el ratón, reproduce un sonido" '
+      4:
+        image: notes/flappy04.jpg
+        text: ¿Has oído del juego FlappyBird? Mediante el uso de controladores de
+          eventos, vamos a aprender a programar nuestra propia versión personalizada
+          de FlappyBird!
+      5:
+        image: notes/flappy05.jpg
+        text: El código que escribirás consiste de arrastrar y soltar bloques que
+          representan los comandos de la computadora. Sin que puedas verlo, cada uno
+          de estos bloques está representado por código real.
+      6:
+        image: notes/flappy06.jpg
+        text: 'Si echas un vistazo en el espacio de trabajo, hay algunos bloques verdes
+          que son rellenados por ti - son "los controladores de eventos" '
+      7:
+        image: notes/flappy07.jpg
+        text: Si deseas que el pájaro ALETEE cuando haces CLIC en el ratón, puedes
+          hacerlo uniendo el bloque "ALETEAR" al manejador de eventos adecuado, y
+          ahora en tu juego cada vez que haces clic en el ratón, el pájaro aleteará.
+      8:
+        image: notes/flappy08.jpg
+        text: En cada puzzle de esta actividad te presentamos nuevos tipos de eventos
+          como bloques verdes en el espacio de trabajo, tu puedes decidir los bloques
+          apropiados para agregar en respuesta a esos eventos.
+      9:
+        image: notes/flappy09.jpg
+        text: Cuando ves un menú desplegable como este, significa que puedes cambiar
+          los ajustes - como qué sonido usar cuando flappy caiga al suelo.
+      10:
+        image: notes/flappy10.jpg
+        text: En el puzzle final serás capaz de crear tu propio juego y compartirlo
+          con tus amigos. ¡Que te diviertas!
+    loop_times:
+      1:
+        image: notes/hoc2_1.jpg
+        text: Hola, soy Mark! Aprendamos acerca de las iteraciones. Usando iteraciones
+          puedes decirle a una computadora que repita una y otra vez cualquier conjunto
+          de acciones, miles o incluso millones de veces.
+      2:
+        image: notes/hoc2_2.jpg
+        text: En este puzzle, queremos que el pájaro se mueva hacia adelante 5 espacios
+          para llegar al cerdo.
+      3:
+        image: notes/hoc2_3.jpg
+        text: Podemos usar el nuevo bloque "repetir" para ayudarnos.
+      4:
+        image: notes/hoc2_4.jpg
+        text: En lugar arrastrar 5 bloques "avanzar"...
+      5:
+        image: notes/hoc2_5.jpg
+        text: Podemos poner el bloque "avanzar" dentro del bloque "repetir" y escribir
+          un número en el bloque para decirle cuántas veces repetirlo.
+      6:
+        image: notes/hoc2_6.jpg
+        text: 'Y esto es importante: puedes poner más de un comando dentro de un bloque
+          "repetir".'
+      7:
+        image: notes/hoc2_7.jpg
+        text: ¡Disfruta usando tu nuevo bloque "repetir"!
+    loop_until:
+      1:
+        image: notes/hoc3_1.jpg
+        text: Hola, soy Chris. Antes de unirme a los Miami Heat, fui a Georgia Tech
+          a estudiar Ciencias de la Computación. Vamos a probar nuestro nuevo bloque,
+          el bloque "repetir hasta".
+      2:
+        image: notes/hoc3_2.jpg
+        text: ¿Qué sucedería si no supiéramos cuanto debería moverse el pájaro para
+          llegar al cerdo?
+      3:
+        image: notes/hoc3_3.jpg
+        text: Si ponemos un bloque "avanzar" dentro del bloque "repetir hasta" , el
+          pájaro avanzará HASTA que alcance al cerdo (o choque con una pared).
+      4:
+        image: notes/hoc3_4.jpg
+        text: Y esto es importante; así como antes, podemos poner múltiples bloques
+          dentro del bloque "repetir hasta" y todo ello se repetirá.
+    if:
+      1:
+        image: notes/hoc4_1.jpg
+        text: '¡Hola, soy Bill! Aprendamos un nuevo concepto fundamental: las declaraciones
+          "si". A través de ellas las computadoras toman decisiones.'
+      2:
+        image: notes/hoc4_2.jpg
+        text: Tu mismo usas declaraciones "sí", "If", diariamente.  Antes de salir
+          afuera cada mañana, dices "sí", "IF", lloviera afuera, yo me pondría una
+          chubasquero.
+      3:
+        image: notes/hoc4_3.jpg
+        text: Podemos decirle al zombie que compruebe si hay un camino a la izquierda,
+          y si encuentra un camino a la izquierda, podemos hacerlo girar en esa dirección.
+      4:
+        image: notes/hoc4_4.jpg
+        text: Para escribir el código para esto, vamos a sacar nuestro bloque "si"
+          y colocaremos un bloque "gira a la izquierda" en su interior.
+      5:
+        image: notes/hoc4_5.jpg
+        text: Ahora, si ponemos un bloque "avanzar" encima de este, y un bloque "repetir"
+          alrededor de todo, cada vez que el zombie se mueva, el comprobará si hay
+          un camino a la izquierda y girará. El comando "repetir" es crítico, para
+          comprobar si tiene que girar en cada paso.
+      6:
+        image: notes/hoc4_6.jpg
+        text: Las declaraciones "si" son muy importantes en las ciencias de la computación.
+          Uno de los primeros programas que escribí era un juego de tic-tac-toe, y
+          había una declaración "Si" que decía que si la otra persona está a punto
+          de ganar, bloquea el lugar que le permite ganar.
+      7:
+        image: notes/hoc4_7.jpg
+        text: ¡Diviértete cuando uses el bloque "if" (si)!
+    if_else:
+      1:
+        image: notes/hoc5_1.jpg
+        text: Hola, mi nombre es Saloni. Yo uso la informática para ayudar a resolver
+          problemas en salud y medicina. Vamos a aprender acerca del bloque "si sino".
+          Se parece al bloque "si", pero tiene una parte extra al final que dice "sino".
+      2:
+        image: notes/hoc5_2.jpg
+        text: Si pongo el bloque "avanzar" en el lugar donde dice "hacer" y un bloque
+          "girar a la izquierda" donde dice "sino" el zombie va a elegir entre dos
+          opciones. Si hay un camino adelante, el zombie va a avanzar, y SINO (si
+          no hay un camino adelante), el zombie va a girar hacia la izquierda.
+      3:
+        image: notes/hoc5_3.jpg
+        text: Al igual que el bloque "si", podemos poner el bloque "si sino" dentro
+          de un bloque "repetir" para que el zombie siga moviéndose y el bloque "si
+          sino" seguirá comprobando si hay espacio para girar.
+      4:
+        image: notes/hoc5_4.jpg
+        text: ¡Ahora llevemos a esos zombies a donde pertenecen!
+    if_else_scrat:
+      1:
+        image: notes/saloni_ifelse_scrat1.jpg
+        text: Una instrucción si-sino es una decisión entre dos cosas. Vamos a ver
+          cómo podemos utilizar una instrucción si-sino con nuestro amigo Scrat la
+          ardilla.
+      2:
+        image: notes/saloni_ifelse_scrat2.jpg
+        text: Este bloque se ve igual que el bloque "si", pero hay una pieza extra
+          en la parte inferior que dice "sino". Si ponemos un bloque "avanzar" donde
+          dice "hacer" y un bloque "girar a la izquierda" donde dice "sino", eso significa
+          que la ardilla Scrat avanzará si hay un camino delante. Si no hay un camino
+          a seguir, Scrat girará a la izquierda.
+      3:
+        image: notes/saloni_ifelse_scrat3.jpg
+        text: Es tomar una decisión y hacer una de las dos acciones en base a esa
+          decisión. Y al igual que los bloques "si", puedes poner bloques "si-sino"
+          dentro de bloques "repetir".
+      4:
+        image: notes/saloni_ifelse_scrat4.jpg
+        text: ¡Ahora vamos a ayudar a la ardilla Scrat a conseguir esa bellota!
+    function:
+      1:
+        image: notes/stage13_1.jpg
+        text: '!Hola! soy Brina, una ingeniera de Instagram. Una función es un conjunto
+          de líneas de código que quieres usar una y otra vez, así que en vez de escribir
+          ese código cada vez, puedes usar solo un bloque.'
+      2:
+        image: notes/stage13_2.jpg
+        text: Vamos a aprender cómo definir funciones. Las definiciones de funciones
+          tienen una estrella en la esquina. El nombre de la función está escrito
+          en la línea superior.
+      3:
+        image: notes/stage13_3.jpg
+        text: Los bloques que se encuentran dentro de la definición nos dicen qué
+          hace. Así que esta definición de función se llama "rellena 5" y está formada
+          por un bloque "repetir" y un bloque "rellenar".
+      4:
+        image: notes/stage13_4.jpg
+        text: La definición se encuentra en el espacio de trabajo, pero nuestro agricultor
+          no ejecutará la función hasta que arrastremos el bloque "llenar 5" desde
+          la categoría de funciones.
+      5:
+        image: notes/stage13_5.jpg
+        text: '¡Volvamos a hacer divertidas las funciones! '
+    loop_while:
+      1:
+        image: notes/stage9_5.jpg
+        text: '¡Hola! soy Makinde. Vamos a aprender acerca del bloque "mientras". '
+      2:
+        image: notes/stage9_6.jpg
+        text: El "bloque mientras que (While)" hará todo lo que pones en su interior
+          mientras la declaración en la parte superior es verdadera.
+      3:
+        image: notes/stage9_7.jpg
+        text: Por ejemplo, si la granjera está sobre un montón, continuará eliminando
+          una palada llena mientras(WHILE) quede tierra debajo de ella.
+    loop_for:
+      1:
+        image: notes/stage11_1.jpg
+        text: '!Hola! soy Trina y trabajo para Pixar. He trabajado en un montón de
+          películas incluyendo Shrek.'
+      2:
+        image: notes/stage11_2.jpg
+        text: Esta es nuestra nueva iteración "contador". Realizará acciones una y
+          otra ves y puedes hacer que las acciones cambien un poco cada vez.
+      3:
+        image: notes/stage11_3.jpg
+        text: En este ejemplo, nuestra iteración "contador" dice "cuenta con un contador
+          de 50 a 90 de 10 en 10" y dentro de ella tenemos un bloque "dibuja un cuadrado".
+          Arrastra el bloque "contador" desde la sección "Variables" al sitio "longitud".
+      4:
+        image: notes/stage11_4.jpg
+        text: Esto significa que nuestro artista dibujará un cuadrado que tiene lados
+          de 50 píxeles de longitud, luego agregará 10 para dibujar un cuadrado con
+          lados de 60 píxeles de longitud, Después continuará agregando 10 para dibujar
+          cuadrados hasta que alcance 90. Así que tendremos cuadrados de 50, 60, 70,
+          80 y 90.
+    parameters:
+      1:
+        image: notes/stage15_1.jpg
+        text: ¡Hola! soy Janete y soy ingeniera en Zynga.
+      2:
+        image: notes/stage15_2.jpg
+        text: ¿Qué pasa si queremos dibujar un montón de triángulos y sus lados tienen
+          que ser de longitudes diferentes?
+      3:
+        image: notes/stage15_3.jpg
+        text: Podemos escribir a mano ese código o podemos usar una función con parámetros.
+      4:
+        image: notes/stage15_4.jpg
+        text: Para hacer esto, haz clic en la estrella azul sobre la definición de
+          la función "dibuja un triángulo". Después arrastra "nombre de entrada" en
+          el bloque "entrada".
+      5:
+        image: notes/stage15_5.jpg
+        text: Después si escribes "longitud" en el lugar que dice "x" y presionas
+          "Enter" crearás una entrada longitud para tu función.
+      6:
+        image: notes/stage15_6.jpg
+        text: Después haz clic en la estrella. Ahora, haz clic en la categoría de
+          las variables y arrastrar el bloque "longitud" dentro del bloque "avanzar"
+          de la definición de tu función. Y arrastra hacia afuera el antiguo bloque
+          número.
+      7:
+        image: notes/stage15_7.jpg
+        text: Para usar tu función con parámetros, haz clic en la categoría funciones
+          y arrastra tu función "dibuja un triángulo con longitud".
+      8:
+        image: notes/stage15_8.jpg
+        text: Ahora puedes usar el bloque matemáticas para introducir diferentes números
+          para dibujar triángulos de diferente tamaño.
+    hoc_wrapup:
+      1:
+        image: notes/hoc6_1.jpg
+        text: ¡Felicidades! Con el último puzzle resuelto, acabas de escribir código
+          que puede decir a cualquier robot cómo encontrar su camino a través de un
+          laberinto sin ramificación o túnel de cualquier longitud, no importa si
+          es un zombie, un pájaro, un rover de Marte o incluso un coche sin conductor.
+      2:
+        image: notes/hoc6_2.jpg
+        text: Los conceptos básicos que utilizaste son el corazón de cualquier programa
+          o aplicación que encuentres.  Aprendimos acerca de iteraciones, las declaraciones
+          "repetir hasta", las declaraciones "si" y las "si sí no".
+      3:
+        image: notes/hoc6_3.jpg
+        text: Si te gustó tu primera hora del código, visita code.org para continuar
+          tu educación en Ciencias de la Computación. Una vez que completes nuestro
+          curso de 20 horas, habrás dominado los fundamentos de la programación y
+          podrás empezar a aprender cómo escribir aplicaciones para teléfonos, instrucciones
+          para robots, juegos, o lo que quieras.
+      4:
+        image: notes/hoc6_4.jpg
+        text: 'La tecnología está cambiando todo lo que hacemos y no importa si eres
+          joven o viejo: la programación es divertida, es creativa, y cualquier persona
+          puede aprenderla!'
+    20_wrapup:
+      1:
+        image: notes/bird.png
+        text: ¡Mostrar notas estará disponible pronto!
+    frozen_intro:
+      1:
+        image: notes/frozen1_1.jpg
+        text: Hola, mi nombre es Lindsey. Modelo, actúo y escribo mis propias aplicaciones.
+          Vamos a usar código para unirnos a Ana y Elsa en la exploración de la magia
+          y la belleza del hielo.
+      2:
+        image: notes/frozen1_2.jpg
+        text: Vas a crear copos de nieve y patrones, mientras patinas sobre hielo
+          realizas un paisaje invernal que luego puedes compartir con tus amigos.
+      3:
+        image: notes/frozen1_3.jpg
+        text: En la próxima hora, vas a aprender lo básico para poder programar. La
+          programación tradicional es generalmente en texto escrito, pero usaremos
+          Blockly, que utiliza bloques visuales que puedes arrastrar y soltar para
+          escribir programas. De esta forma incluso aprenden las bases los estudiantes
+          universitarios. Pero en realidad, todavía estás generando código.
+      4:
+        image: notes/frozen1_4.jpg
+        text: Un programa es un conjunto de instrucciones que le dice una computadora
+          qué hacer. Vamos a construir un código o un programa que ayudará a Elsa
+          a crear una línea simple. Más tarde utilizaremos esto para crear patrones
+          más complejos.
+      5:
+        image: notes/frozen1_5.jpg
+        text: La pantalla se divide en tres partes principales. A la izquierda, está
+          la superficie de hielo donde se ejecutará tu programa. Las instrucciones
+          para cada nivel se escriben justo debajo de la superficie.
+      6:
+        image: notes/frozen1_6.jpg
+        text: Esta zona media es la caja de herramientas, y cada uno de estos bloques
+          es una acción que pueden hacer Elsa y Anna.
+      7:
+        image: notes/frozen1_7.jpg
+        text: El espacio en blanco a la derecha se conoce como "área de trabajo",
+          y es ahí dónde crearemos nuestro programa. Para poder movernos alrededor
+          de la superficie de hielo necesitarás utilizar el bloque de "Mover hacia
+          adelante".
+      8:
+        image: notes/frozen1_8.jpg
+        text: 'Aquí, el bloque de "Moverse hacia adelante" dice: "Moverse hacia adelante
+          100 pixeles". Cuando oprimimos el botón "Ejecutar/Run". ¿Qué ocurre? Elsa
+          se mueve hacia adelante una cierta distancia en la pantalla. ¡De hecho se
+          mueve 100 pixeles! Los pixeles son básicamente cuadros muy pequeños que
+          se encuentran en la pantalla de la computadora.'
+      9:
+        image: notes/frozen1_9.jpg
+        text: El otro bloque que tenemos en este rompecabezas dice "girar a la derecha
+          de 90 grados". Y cuando usamos este bloque "girar a la derecha", hace girar
+          a Elsa una cierta cantidad de grados. Puedes probar cuánto quieres hacer
+          girar a Elsa. El ángulo se mide desde el camino delante de Elsa. Entonces,
+          esto es un giro de 90 grados. Y esto es un giro de 120 grados.
+      10:
+        image: notes/frozen1_10.jpg
+        text: Recuerda, puedes cambiar el número de píxeles y grados haciendo clic
+          en las flechas junto a ellos.
+    frozen_loops:
+      1:
+        image: notes/frozen2_1.jpg
+        text: ¡Hola, soy Paola! Las computadoras son muy buenas repitiendo acciones.
+          Puedes contar hasta 10, 20 o 100. Pero una computadora puede contar hasta
+          1 mil millones o 1 billón. No se aburrirá y sólo le costará unos pocos segundos.
+          Ya sea contando, o dibujando, o haciendo cualquier otra cosa -- las computadoras
+          pueden repetir acciones cientos o incluso miles de millones de veces.
+      2:
+        image: notes/frozen2_2.jpg
+        text: En programación, esto se llama bucle. Un bucle es la forma en la que
+          repites una y otra vez tu código. Para el siguiente desafío, tu objetivo
+          es ayudar a Anna a crear un cuadrado con el bloque "repetir".
+      3:
+        image: notes/frozen2_3.jpg
+        text: Cualquier bloque de código que pones dentro del bloque "repetir" se
+          repetirá en secuencia, tantas veces como quieras.
+      4:
+        image: notes/frozen2_4.jpg
+        text: Para dibujar un cuadrado, puedes utilizar el bloque de "mover hacia
+          adelante" y "girar a la derecha" 4 veces. Pero la forma más fácil es decirle
+          a la computadora "mover hacia adelante" y "girar a la derecha 90 grados"
+          una sola vez y luego repetir este par de acciones 4 veces. Para hacer eso,
+          tienes que poner el bloque "mover hacia adelante" y el bloque "girar a la
+          derecha" dentro de un bloque "repetir".
+      5:
+        image: notes/frozen2_5.jpg
+        text: Recuerda que puedes cambiar el número del bloque "repetir" por cualquier
+          otro, y va a repetir lo que está dentro del bloque cuantas veces le hayas
+          indicado.
+    frozen_functions:
+      1:
+        image: notes/frozen3_1.jpg
+        text: Hola, soy Chris Bosh. Soy un jugador de baloncesto profesional, y programé
+          en la Universidad.
+      2:
+        image: notes/frozen3_2.jpg
+        text: Uno de los conceptos más importantes en Ciencias de la computación trata
+          sobre cómo definir nuevos comandos. La mayoría de lenguajes de programación
+          tienen solamente cerca de 100 palabras o comandos. Y en realidad, el arte
+          y la magia está en definir tus propias nuevas palabras utilizando estos
+          bloques de construcción.
+      3:
+        image: notes/frozen3_3.jpg
+        text: Una vez que has enseñado una computadora cómo realizar una acción una
+          vez, con esta secuencia de comandos, puedes ponerle un nombre para que la
+          acción sea fácil de repetir más adelante. Definir tu propio comando y darle
+          un nombre, se conoce como definir una función.
+      4:
+        image: notes/frozen3_4.jpg
+        text: Hola, soy Jess. Al programar con bloques, utilizarías funciones cuando
+          hay un conjunto de acciones que te gustaría hacer muchas veces. Por ejemplo,
+          has escrito código para crear un cuadrado.
+      5:
+        image: notes/frozen3_5.jpg
+        text: 'Puedes definir esto como una función llamada "crear un cuadrado" '
+      6:
+        image: notes/frozen3_6.jpg
+        text: Ahora tienes un nuevo bloque que puedes utilizar varias veces para crear
+          múltiples cuadrados.
+      7:
+        image: notes/frozen3_7.jpg
+        text: Un montón de figuras sencillas pueden utilizarse para crear patrones
+          más complejos. En el siguiente desafío, el código que has escrito recientemente
+          para hacer un círculo está disponible como una nueva función que puede hacer
+          círculos de diferentes tamaños. ¿Lo puedes usar para ayudar a Elsa crear
+          patrones intrincados y hermosos en la nieve?
+    C3_playlab_create_game:
+      1:
+        image: notes/playlab_1.png
+        text: Hasta ahora has hecho una animación o una historia que hace exactamente
+          lo mismo cada vez que ejecutas el programa. Ahora puedes hacer un juego
+          interactivo con el que de verdad puedes jugar.
+      2:
+        image: notes/playlab_2.png
+        text: Están el bloque "cuando flecha" y el bloque "mover actor". Puedes poner
+          estos bloques juntos  para mover a los actores con las teclas de flecha.
+      3:
+        image: notes/playlab_3.png
+        text: Y hay algunos bloques que hacen cosas cuando los actores chocan o les
+          haces clic. ¡Échales un vistazo y diviértete!
+    playlab_intro:
+      1:
+        image: notes/playlab_intro_1.png
+        text: Vamos a crear juegos usando Play Lab. Los buenos juegos tienen una historia
+          y cada historia tiene actores. Aprenderemos cómo hacer que nuestros actores
+          sean como brujas, alienígenas, y animales que hablan, se mueven e interactúan
+          con los demás. Al final de este tutorial, puedes crear un juego desde cero
+          y compartirlo con tus amigos.
+      2:
+        image: notes/playlab_intro_2.png
+        text: La pantalla se divide en tres partes principales. A la izquierda es
+          el espacio de juego donde se ejecutará el programa. Las instrucciones para
+          cada nivel están escritas abajo.
+      3:
+        image: notes/playlab_intro_3.png
+        text: La zona media es la caja de herramientas, y cada uno de estos bloques
+          es un fragmento de código. El espacio en blanco a la derecha se llama el
+          espacio de trabajo y es donde construiremos nuestro programa.
+      4:
+        image: notes/playlab_intro_4.png
+        text: Para empezar, necesitarás unir tus bloques al bloque naranja llamado
+          "cuando se ejecuta". Puedes unir múltiples bloques arrastrándolos hacia
+          fuera hasta que veas la línea amarilla, y luego encajarán todos a la vez.
+      5:
+        image: notes/playlab_intro_5.png
+        text: En este primer rompecabezas, el actor es un pingüino y haremos que diga
+          "¡Hola!" arrastrando el bloque "decir", uniéndolo al bloque "cuando se ejecuta"
+          y escribiendo dentro "Hola". También podemos hacer que el pingüino se mueva
+          mediante los bloques mover a la derecha y mover a la izquierda. Una vez
+          que tienes puestos tus bloques, presiona el botón ejecutar para ver lo que
+          has programado.
+      6:
+        image: notes/playlab_intro_6.png
+        text: Comienza, y al final podrás crear tu propio juego con toda clase de
+          jugadores, que pueden interactuar, volverse felices o tristes, aumentar
+          la puntuación, o lanzar bolas de fuego, o incluso desaparecer unos a otros.
+          Es cuestión de ti y del juego que quieres hacer.
+    playlab_events:
+      1:
+        image: notes/playlab_events_1.png
+        text: Ahora vamos a aprender acerca de algo que todos los programadores de
+          juegos usan todos los días. Se llaman eventos. Un evento indica a tu programa
+          que atienda cuando algo ocurra. Cuando eso sucede, se realiza una acción.
+      2:
+        image: notes/playlab_events_2.png
+        text: Algunos ejemplos de eventos son esperar a un clic en el ratón, un botón
+          de flecha o pulsar en la pantalla.
+      3:
+        image: notes/playlab_events_3.png
+        text: Aquí vamos a hacer que el robot espacial salude a los terrícolas cuando
+          un jugador haga clic en él. Utilizaremos el bloque "cuando hace clic en"
+          y únele el bloque "decir". Cuando el jugador hace clic en el robot espacial,
+          todo lo que esté unido al bloque de evento "cuando hace clic en" se ejecutará.
+          ¿Qué dice tu alienígena?
+      4:
+        image: notes/playlab_events_4.png
+        text: También hay bloques "cuando tecla de flecha". Si se unen con los bloques
+          "mover", puedes empezar a mover tus actores para arriba, abajo, izquierda
+          o derecha. Paso a paso, tu juego se está volviendo más interactivo.
+    playlab_repeat_forever:
+      1:
+        image: notes/playlab_repeat_forever_1.png
+        text: Este es el bloque "repetir para siempre". Todo lo que haya dentro de
+          este bloque se repetirá para siempre en el juego.
+      2:
+        image: notes/playlab_repeat_forever_2.png
+        text: Si queremos que un actor haga algo en varias ocasiones, sin que el jugador
+          tenga que hacer nada, pondremos esos bloques dentro del bloque "repetir
+          para siempre".
+      3:
+        image: notes/playlab_repeat_forever_3.png
+        text: En el siguiente rompecabezas, nuestro objetivo es ayudar a que el asistente
+          patrulle continuamente los límites del reino, a izquierda y derecha. Aprender
+          cómo funciona el comando repetir, te ahorrará mucho tiempo después cuando
+          construyas tu propio juego.

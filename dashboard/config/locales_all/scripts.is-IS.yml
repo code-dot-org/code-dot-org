@@ -1,0 +1,1418 @@
+"is":
+  data:
+    script:
+      name:
+        test:
+          'Jigsaw: Learn to drag and drop': 'Púsl: Læra að draga og sleppa'
+          The Maze: Völundarhúsið
+          Multi: Val
+          Match: Tengja
+          Math Image: Stærðfræðimynd
+          title: Tilraunanámskeið
+          description: Bara innanhúss tilraunanámskeið.
+          description_short: Bara innanhúss tilraunanámskeið.
+        course1:
+          'Jigsaw: Learn to drag and drop': 'Púsl: Læra að draga og sleppa'
+          'Maze: Sequence': 'Völundarhús: Röð'
+          'Maze: Debugging': 'Völundarhús: Villuleit'
+          'Artist 1: Intro': 'Listamaður 1: Kynning'
+          Artists 2: Listamenn 2
+          Spelling Bee: Stafsetning
+          Spelling Bee not blockly: Stafsetning án blockly
+          'Bee 1: Intro': 'Býfluga 1: Kynning'
+          'Maze 2: Loops': 'Völundarhús 2: Lykkjur'
+          'Bee 2: Loops': 'Býfluga 2: Lykkjur'
+          Multi & Match: Val og tenging
+          K-1 Flappy: Flappy 5-6 ára (K-1)
+          Flappy non blockly: Flappy án blockly
+          title: Námskeið 1
+          Artist 2: Listamaður 2
+          Happy Maps: Krúttleg kort
+          Move it, Move it: Hreyfa sig, hreyfa sig
+          'Real-life Algorithms: Plant a Seed': 'Algrím úr raunheimi: Sá fræi'
+          Building a Foundation: Að byggja grunn
+          Getting Loopy: Lykkjulæti
+          The Big Event: Stórviðburður
+          Going Places Safely: Ferðast í öryggi
+          description: Byrjaðu með Námskeið 1 fyrir byrjendur í lestri. Nemendur búa
+            til tölvuforrit sem munu hjálpa þeim að læra að vinna með öðrum, þróa
+            hæfni til að leysa verkefni og gefast ekki upp þó verkefni séu erfið.
+            Við lok námskeiðsins búa nemendur til sinn eiginn sérhannaða leik eða
+            sögu sem þeir geta svo deilt. Er stílað inn á aldurshópinn 5 - 6 ára (K-1).
+          'Bee: Sequence': 'Býfluga: Röð'
+          'Artist: Sequence': 'Listamaður: Röð'
+          'Artist: Shapes': 'Listamaður: Form'
+          'Maze: Loops': 'Völundarhús: Lykkjur'
+          'Bee: Loops': 'Býfluga: Lykkjur'
+          'Studio: Create a Story': 'Leikjasmiðja: Búa til sögu'
+          'Artist: Loops': 'Listamaður: Lykkjur'
+          description_audience: Fyrir 4-6 ára
+          description_short: Byrja með Námskeið 1 fyrir byrjendur í lestri.
+        course2:
+          The Maze: Völundarhúsið
+          Suzi: Súsí
+          The Artist: Listamaðurinn
+          Artist Debugging: Villuleit listamanns
+          Bounce: Skopp
+          'Studio: Create a Story': 'Leikjasmiðjan: Búa til sögu'
+          Artist Loops: Lykkjur listamanns
+          Bee Conditionals: Skilyrði býflugu
+          Flappy: Flappy
+          title: Námskeið 2
+          Bee Loops: Lykkjur býflugu
+          Artist Functions: Föll listamanns
+          The Artist Debugging: Villuleit listamannsins
+          Bee Debugging: Villuleit býflugu
+          Bee Functions: Föll býflugu
+          Maze Loops: Lykkjur völundarhúss
+          Graph Paper Programming: Forritun rúðublaða
+          'Real-life Algorithms: Paper Planes': 'Algrím úr raunheimi: Pappírsskutlur'
+          Getting Loopy: Lykkjulæti
+          Relay programming: Boðhlaupsforritun
+          Conditionals: Skilyrði
+          Binary Bracelets: Stafræn armbönd
+          The Big Event: Stórviðburður
+          Your Digital Footprint: Stafræna fótsporið þitt
+          description: Byrja með Námskeið 2 fyrir nemendur sem geta lesið og hafa
+            enga reynslu af forritun. Á þessu námskeiði munu nemendur búa til forrit
+            til að leysa verkefni og þróa gagnvirka leiki eða sögur sem þeir geta
+            deilt. Mælt með fyrir 2. - 5. bekk.
+          'Maze: Sequence': 'Völundarhús: Röð'
+          'Artist: Sequence': 'Listamaður: Röð'
+          'Maze: Loops': 'Völundarhús: Lykkjur'
+          'Artist: Loops': 'Listamaður: Lykkjur'
+          'Bee: Loops': 'Býfluga: Lykkjur'
+          'Bee: Debugging': 'Býfluga: Villuleit'
+          'Artist: Debugging': 'Listamaður: Villuleit'
+          'Bee: Conditionals': 'Býfluga: Skilyrði'
+          'Artist: Sequence2': 'Listamaður: Röð2'
+          'Maze: Sequence2': 'Völundarhús: Röð2'
+          'Artist: Nested Loops': 'Listamaður: Innri lykkjur'
+          description_audience: Fyrir 6-18 ára
+          description_short: Byrja með Námskeið 2 fyrir læsa nemendur.
+        course3:
+          The Maze: Völundarhúsið
+          'Studio: Create a Story': 'Leikjasmiðja: Búa til sögu'
+          The Artist: Listamaðurinn
+          title: Námskeið 3
+          Artist Functions: Föll listamanns
+          Artist For Loops: Listamaður - frá/til lykkjur
+          Artist Nested Loops: Listamaður - innri lykkjur
+          Bee Conditionals: Býfluga - skilyrði
+          Bee Nested Loops: Býfluga - innri lykkjur
+          Bee Debuggin: Býfluga - villuleit
+          Bee Debugging: Býfluga - villuleit
+          Bee Functions: Föll býflugu
+          Artist Functions with Params: Listamaður - föll með stikum
+          Bounce: Skopp
+          Maze Conditionals: Skilyrði völundarhúss
+          Artist Functions with Parameters: Listamaður - föll með stikum
+          Computational Thinking: Tölvunarmiðuð hugsun
+          Functional Suncatchers: Sólarskraut með föllum
+          Songwriting Parameters: Lagasmíð - stikar
+          Dice Race: Teningakapp
+          Internet: Internet
+          Crowdsourcing: Hópvistun
+          Digital Citizenship: Stafrænn borgari
+          Farmer - While Loops: Bóndi - meðan lykkjur
+          description: Námskeið 3 er ætlað nemendum sem hafa lokið Námskeiði 2. Nemendur
+            munu kafa dýpra í efni sem var kynnt á fyrri forritunarnámskeiðum til
+            að geta beitt sveigjanlegri lausnum á flóknari verkefni. Í lok þessa námskeiðs
+            búa nemendur til gagnvirkar sögur og leiki sem þeir geta svo deilt með
+            öðrum. Mælt með fyrir 4. - 5. bekk.
+          'Studio: Create a Game': 'Leikjasmiðja: Búa til leik'
+          Maze: Völundarhús
+          Artist: Listamaður
+          'Artist: Functions': 'Listamaður: Föll'
+          'Bee: Functions': 'Býfluga: Föll'
+          'Bee: Conditionals': 'Býfluga: Skilyrði'
+          'Maze: Conditionals': 'Völundarhús: Skilyrði'
+          'Artist: Nested Loops': 'Listamaður: Innri lykkjur'
+          'Farmer: While Loops': 'Bóndi: Meðan lykkjur'
+          'Bee: Nested Loops': 'Býfluga: Innri lykkjur'
+          'Bee: Debugging': 'Býfluga: Villuleit'
+          Maze2: Völundarhús2
+          Artist2: Listamaður2
+          'Artist: Functions2': 'Listamaður: Föll2'
+          'Bee: Functions2': 'Býfluga: Föll2'
+          'Bee: Conditionals2': 'Býfluga: Skilyrði2'
+          'Maze: Conditionals2': 'Völundarhús: Skilyrði2'
+          'Artist: Nested Loops2': 'Listamaður: Innri lykkjur2'
+          'Farmer: While Loops2': 'Bóndi: Meðan lykkjur2'
+          'Bee: Nested Loops2': 'Býfluga: Innri lykkjur'
+          'Bee: Debugging2': 'Býfluga: Villuleit2'
+          'Artist: Patterns': 'Listamaður: Mynstur'
+          Songwriting: Lagasmíð
+          description_audience: Fyrir 8-18 ára
+          description_short: Námskeið 3 er eftirfari Námskeiðs 2.
+        playlab:
+          title: Leikjasmiðja
+          description: Búðu til sögu eða leik með Leikjasmiðju!
+          Play Lab: Leikjasmiðja
+          description_short: Búðu til sögu eða leik með Leikjasmiðju!
+        artist:
+          title: Listamaður
+          description: Teiknaðu flottar myndir og mynstur með listamanninum!
+          Artist: Listamaður
+          description_short: Teiknaðu flottar myndir og mynstur með listamanninum!
+        hourofcode:
+          Maze: Völundarhús
+          title: Klukkustund kóðunar
+          description: Prófaðu undirstöðuatriði í tölvunarfræði með persónum úr Angry
+            Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
+          description_short: Prófaðu grunnatriði í tölvufræði með mörgum skemmtilegum
+            fígúrum!
+        frozen:
+          title: Kóðaðu með Önnu og Elsu
+          description: Notum kóða til að fylgja Önnu og Elsu þegar þær kanna töfra
+            og fegurð íssins. Þú munt búa til snjókorn og mynstur með því að láta
+            þær skauta um ísinn og svo getur þú búið til eigin vetrarveröld til að
+            deila með vinum!
+          Artist: Listamaður
+          description_short: Notum kóða til að fylgja Önnu og Elsu er þær kanna töfra
+            og fegurð íss.
+        course4:
+          description_short: Nemendur sem taka Námskeið 4 ættu að hafa lokið námskeiðum
+            2 og 3 áður.
+          description: Námskeið 4 er ætlað nemendum sem hafa lokið námskeiðum 2 og
+            3. Nemendur munu kafa dýpra í efni sem var kynnt á fyrri forritunarnámskeiðum
+            til að geta beitt sveigjanlegum lausnum á flóknari verkefni. Í lok þessa
+            námskeiðs búa nemendur til gagnvirkar sögur og leiki sem þeir geta svo
+            deilt með öðrum. Mælt með fyrir 4. - 8. bekk.
+          'Artist: Variables': 'Listamaður: Breytur'
+          'Bee: For Loops': 'Býfluga: Frá lykkjur'
+          title: Námskeið 4
+          'Algorithms: Tangrams': 'Algrím: Tangram'
+          Variables: Breytur
+          'Play Lab: Variables': 'Leikjasmiðjan: Breytur'
+          'Play Lab: Functions with Parameters': 'Leikjasmiðjan: Föll með stikum'
+          'Bee: Functions with Parameters': 'Býfluga: Föll með stikum'
+          'Artist: For Loops': 'Listamaður: Frá lykkjur'
+          'Play Lab: For Loops': 'Leikjasmiðjan: Frá lykkjur'
+          'Artist: Functions': 'Listamaður: Föll'
+          'Unplugged: Tangrams': 'Verkefni án tölvu: Tangram'
+          Artist: Listamaður
+          Bee: Býfluga
+          'Unplugged: Envelope Variables': 'Verkefni án tölvu: Umslagabreytur'
+          'Unplugged: Madlibs': 'Verkefni án tölvu: Fyllt í eyður'
+          'Unplugged: For Loop Fun': 'Verkefni án tölvu: Fyndnar frá lykkjur'
+          'Unplugged: Songwriting with Parameters': 'Verkefni án tölvu: Lagasmíð með
+            stikum'
+          'Artist: Functions with Parameters': 'Listamaður: Föll með stikum'
+          'Unplugged: Binary': 'Verkefni án tölvu: Tvíundir'
+          Bee Binary: 'Býfluga: Tvíundir'
+          Farmer Binary: 'Bóndinn: Tvíundir'
+          Maze and Bee: Völundarhús og býfluga
+          Artist Binary: 'Listamaður: Tvíundir'
+          description_audience: Fyrir 10-18 ára
+        Course4pre:
+          title: Forkröfur Námskeiðs 4
+          description_short: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki
+            farið á Námskeið 2 og 3.
+          description: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki farið
+            á Námskeið 2 og 3.
+          Course 4 Prerequisite: Forkröfur Námskeiðs 4
+          'Maze: Sequence': 'Völundarhús: Röð'
+          'Artist: Sequence': 'Listamaður: Röð'
+          'Artist: Loops': 'Listamaður: Lykkjur'
+          'Bee: Conditionals': 'Býfluga: Skilyrði'
+          'Artist: Nested Loops': 'Listamaður: Innri lykkjur'
+          'Farmer: While Loops': 'Bóndi: Meðan lykkjur'
+          'Bee: Nested Loops': 'Býfluga: Innri lykkjur'
+          'Artist: Functions': 'Listamaður: Föll'
+          'Bee: Debugging': 'Býfluga: Villuleit'
+        usability:
+          Intro: Kynning
+          Variables and For Loops: Breytur og frá lykkjur
+          Functions and Functions with Parameters: Föll og föll með stikum
+          title: Notkunarprófun
+          description_short: ''
+          description: Valdir áfangar úr Námskeiði 4 til notkunarprófunar.
+          Variables: Breytur
+          For Loops: Frá lykkjur
+          Binary: Tvíundir
+        potus:
+          title: sérstakt
+          description_short: sérstakt
+          description: sérstakt
+          Special: Sérstakt
+        special:
+          title: sérstakt
+          description_short: sérstakt
+          description: sérstakt
+          Special: Sérstakt
+          Binary: Tvíundir
+        algebra:
+          title: Tölvunarfræði í algebru
+          description: Læra fallmiðaða forritun í gegnum algebru
+          description_short: Læra fallmiðaða forritun í gegnum algebru
+          'Unplugged: Video Games and Coordinate Planes': 'Verkefni án tölvu: Tölvuleikir
+            og hnitakerfi'
+          'Calc: Evaluation Blocks': Matskubbar og reikningsformúlur
+          'Eval: Strings and Images': Strengir og myndir
+          'Unplugged: Contracts': 'Án tölvu: Samningar, gildamengi og svið'
+          'Eval: Writing Contracts': Ritun samninga
+          'Calc: Defining Variables': Skilgreining breytna og innsetning
+          'Play Lab: Defining Variables (Big Game)': Stórleikur - Breytur
+          'Eval: Defining Functions': Samsett föll
+          'Unplugged: The Design Recipe': 'Verkefni án tölvu: Hönnunaruppskriftin'
+          'Play Lab: Defining Functions': Hæð eldflaugar
+          'Eval: Functions': Orðaþrautir leystar með hönnunaruppskriftinni
+          'Play Lab: Animation (Big Game)': Stórleikur - Hreyfimyndir
+          'Unplugged: Booleans': 'Án tölvu: Boole gildi og rökvísi'
+          'Eval: Boolean Operators': Boole virkjar
+          'Play Lab: Booleans': Leðurblakan Sammi
+          'Play Lab: Boolean (Big Game)': Stórleikur - Boole gildi
+          'Unplugged: Conditionals and Piecewise Functions': 'Verkefni án tölvu: Skilyrði
+            og Piecewise föll'
+          'Eval: Conditionals': Skilyrði
+          'Unplugged: Collision Detection and the Distance Formula': 'Án tölvu: Skynjun
+            árekstra og regla Pýþagórasar'
+          'Play Lab: Collision Detection (Big Game)': Stórleikur - Skynjun árekstra
+        infinity:
+          title: Disney Infinity leikjasmiðja
+          description_short: Nota Leikjasmiðjuna til að búa til sögu eða leik með
+            Disney Infinity persónum.
+          description: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney
+            Infinity persónum.
+          Play Lab: Leikjasmiðja
+          Infinity: Óendanleiki
+        algebrademo:
+          title: Dæmi með Algebru
+          description_short: Nokkrar þrautir til að sýna umhverfið og forritunarmálið
+            sem Code.org notar í Tölvunarfræði í Algebru
+          description: Nokkrar þrautir til að sýna umhverfið og forritunarmálið sem
+            Code.org notar í Tölvunarfræði í Algebru
+          Algebra Demo: Dæmi með Algebru
+          Evaluation Blocks: Matskubbar
+          Making Pictures: Gerð mynda
+          Defining Variables: Skilgreining breytna
+          Defining Simple Functions: Skilgreining einfaldra falla
+          The Design Recipe: Hönnunaruppskriftin
+        K5PD:
+          title: Fagmenntun kennara 5 - 11 ára (K-5)
+          description: Fagmenntun kennara fyrir 5 - 11 ára námskeið
+          description_short: Fagmenntun kennara fyrir 5 - 11 ára námskeið
+          Introduction to PD: Kynning á PD
+          Blockly Basics: Blockly grunnur
+          Writing computer programs: Skrifa tölvuforrit
+          Navigating the teacher dashboard: Ferðast um stjórnborð kennara
+          Unplugged lessons: Verkefni án tölvu
+          Classroom Culture: Bekkjarmenning
+          Ways to go beyond Courses 1, 2, and 3: Valkostir eftir námskeið 1, 2 og
+            3
+          K-5 Courses: 5 - 11 ára (K-5) námskeið
+          Writing computer programs in Blockly: Ritun tölvuforrita með Blockly
+          Teacher Dashboard: Stjórnborð kennara
+          Personal Reflection: Persónulegar hugleiðingar
+          Next Steps: Næstu skref
+          Computer Science Pedagogy: Kennsluhættir í tölvunarfræði
+          Programming Concepts: Forritunarhugtök
+          Reflection: Reflection
+          'Programming Concept: Loops': 'Programming Concept: Loops'
+          'Programming Concept: Conditionals': 'Programming Concept: Conditionals'
+          'Programming Concept: Functions': 'Programming Concept: Functions'
+          'Programming Concept: Events': 'Programming Concept: Events'
+        netsim:
+          title: Internet hermir
+          description_short: ''
+          description: ''
+          Internet Simulator: Internet hermir
+          Unit 1: 1. eining
+          Unit 2: 2. eining
+          Sending Bits: Sending bita
+          Routing and DNS: Beinun og DNS
+          'Unit 1: Sending Bits': 'Kafli 1: Sending bita'
+          'Unit 2: Routing and DNS': 'Kafli 2: Beinun og DNS'
+          Internet Simulator Templates: Sniðmát Internet-hermis
+          Overview and Setup Instructions: Overview and Setup Instructions
+          'Peer to Peer: Sending Bits on a Shared Wire': 'Peer to Peer: Sending Bits
+            on a Shared Wire'
+          'Peer to Peer: Sending Numbers': 'Peer to Peer: Sending Numbers'
+          'Peer to Peer: Sending Ascii': 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: Peer to Peer - Sending Bits
+            on a Shared Wire
+          Peer to Peer - Sending Numbers: Peer to Peer - Sending Numbers
+          Peer to Peer - Sending Ascii: Peer to Peer - Sending Ascii
+        pixelation:
+          title: Dílamynstur
+          description: Búa til myndir með bitum og bætum.
+          description_short: Búa til myndir með bitum og bætum.
+          Pixelation: Dílamynstur
+          Black & White Pixelation Widget: Black & White Pixelation Widget
+          Color Pixelation Widget: Color Pixelation Widget
+          Black & White Pixelation Tutorial: Black & White Pixelation Tutorial
+          Black & White Pixelation Freeplay: Black & White Pixelation Freeplay
+          Color Pixelation Tutorial: Color Pixelation Tutorial
+          Color Pixelation Examples: Color Pixelation Examples
+          Color Pixelation Freeplay: Color Pixelation Freeplay
+        20-hour:
+          title: Kynning á tölvunarfræði, hraðnámskeið
+          description_audience: Fyrir 10-18 ára
+          description: Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði
+            og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi
+            13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.
+          description_short: Þetta 20 tíma námskeið fer í þau kjarnahugtök tölvunarfræði
+            og forritunar sem kynnt eru á námskeiðum 2-4.
+          Introduction to Computer Science: Kynning á tölvunarfræði
+          The Maze: Völundarhúsið
+          Computational Thinking: Tölvunarmiðuð hugsun
+          Graph Paper Programming: Forritun rúðublaða
+          The Artist: Listamaðurinn
+          Algorithms: Algrím
+          The Artist 2: Listamaðurinn 2
+          Functions: Föll
+          The Farmer: Bóndinn
+          Conditionals: Skilyrði
+          The Artist 3: Listamaðurinn 3
+          Song Writing: Lagasmíð
+          The Farmer 2: Bóndinn 2
+          Abstraction: Greining kjarna
+          The Artist 4: Listamaðurinn 4
+          Relay Programming: Boðhlaupsforritun
+          The Farmer 3: Bóndinn 3
+          The Internet: Internetið
+          The Artist 5: Listamaðurinn 5
+          Wrap-up: Samantekt
+        edit-code:
+          title: Breyta kóða
+          description: Breyta kóða
+          description_short: Breyta kóða
+          The Maze: Völundarhúsið
+          Applab: App-smiðjan
+          The Artist: Listamaðurinn
+          Play Lab: Leikjasmiðja
+          Play Lab 2015: Leikjasmiðjan 2015
+        events:
+          title: Atvik
+          description: Atvik
+          description_short: Atvik
+          Bounce: Skopp
+          Studio: Stúdíó
+          Calc: Reikningur
+          Eval: Mat
+        flappy:
+          title: Flappy kóði
+          description: Viltu skrifa þinn eigin leik á minna en 10 mínútum? Prófaðu
+            kennsluna með Flappy kóða!
+          description_short: Skrifaðu þinn eigin Flappy leik á innan við 10 mínútum!
+          Flappy Code: Flappy kóði
+        jigsaw:
+          title: Púsl
+          description: Prófaðu Jigsaw kennsluefnið okkar
+          description_short: Prófaðu Jigsaw kennsluefnið okkar
+          Jigsaw: Púsl
+        step:
+          title: Þrep
+          description: Kennsla í skrefum
+          description_short: Kennsla í skrefum
+          Step: Þrep
+        Hour of Code:
+          title: Klukkustund kóðunar 2013
+          description: Prófaðu undirstöðuatriði tölvunarfræði með leikverum úr Angry
+            Birds og Plants vs. Zombies!
+          description_short: Prófaðu grunnatriði í tölvufræði með mörgum skemmtilegum
+            fígúrum!
+          Hour of Code 2013: Klukkustund kóðunar 2013
+        Code Studio Puzzle Challenge:
+          title: Áskorun - Þraut í kóðastúdíói
+          description_short: Taktu áskorun!
+          description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
+          Puzzles: Þrautir
+        CodeStudioPuzzleChallenge:
+          title: Áskorun - Þraut í kóðastúdíói
+          description_short: Taktu áskorun!
+          description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
+          Puzzles: Þrautir
+        Test - Code Studio Puzzle Challenge:
+          title: Prófa - Þrautaáskorun í kóðastúdíói
+          description_short: Taktu áskorun!
+          description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
+          Puzzles: Þrautir
+        How to do the Code Studio Puzzle Challenge:
+          title: Prófa - Þrautaáskorun í kóðastúdíói
+          description_short: Taktu áskorun!
+          description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
+          Puzzles: Þrautir
+        Tutorial - Code Studio Puzzle Challenge:
+          title: Leiðsögn - Þrautaáskorun í kóðastúdíói
+          description_short: Taktu áskorun!
+          description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
+          Puzzles: Þrautir
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: Leiðsögn - Þrautaáskorun í kóðastúdíói
+          description_short: Taktu áskorun!
+          description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
+          Puzzles: Þrautir
+        course4pre:
+          title: Forkröfur Námskeiðs 4
+          description_short: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki
+            farið á Námskeið 2 og 3.
+          description: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki farið
+            á Námskeið 2 og 3.
+          Course 4 Prerequisite: Forkröfur Námskeiðs 4
+          'Maze: Sequence': 'Völundarhús: Röð'
+          'Artist: Sequence': 'Listamaður: Röð'
+          'Artist: Loops': 'Listamaður: Lykkjur'
+          'Bee: Conditionals': 'Býfluga: Skilyrði'
+          'Artist: Nested Loops': 'Listamaður: Innri lykkjur'
+          'Farmer: While Loops': 'Bóndi: Meðan lykkjur'
+          'Bee: Nested Loops': 'Býfluga: Innri lykkjur'
+          'Artist: Functions': 'Listamaður: Föll'
+          'Bee: Debugging': 'Býfluga: Villuleit'
+        cspunit1:
+          title: CSP Kafli1 - Stafrænar upplýsingar
+          description_short: Kanna hvernig stafrænar upplýsingar eru settar fram og
+            fluttar
+          description: Þessi kafli kannar þær tæknilegu áskoranir og spurningar sem
+            koma upp út frá þörfinni fyrir að setja stafrænar upplýsingar fram í tölvum
+            og flytja þær milli manna og tölvutækja.
+          Lesson14: Kennslustund14
+          Lesson 14: Kennslustund 14
+          Lesson 14 v2: Kennslustund 14 útg. 2
+          Lesson 15: Kennslustund 15
+          Lesson 8: Kennslustund 8
+          Lesson 5: Kennslustund 5
+          Lesson 3: Kennslustund 3
+          Lesson 4: Kennslustund 4
+          Lesson 6: Kennslustund 6
+          Lesson 2: Kennslustund 2
+          Lesson 7: Kennslustund 7
+          Lesson 1: Kennslustund 1
+          Innovation: Nýbreytni
+          Sending Binary Messages: Sending stafrænna skilaboða
+          Sending More Complex Messages: Sending flóknari skilaboða
+          Bit Sending Widget: Bitasendigræja
+          Sending Bits in the Real World: Sending bita í raunheimi
+          Number Systems: Talnakerfi
+          Binary Numbers: Tvíundartölur
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Þjöppun texta
+          'Assessment: Encoding Complex Information': 'Assessment: Encoding Complex
+            Information'
+          Encoding B&W Images: Encoding B&W Images
+          Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
+          'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages
+            with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
+        algebraPD:
+          title: Tölvunarfræði í algebru - fagmenntun
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
+          'Unplugged: Video Games and Coordinate Planes': 'Verkefni án tölvu: Tölvuleikir
+            og hnitakerfi'
+          'Calc: Evaluation Blocks': 'Reikningur: Matskubbar'
+          'Eval: Strings and Images': 'Greining: Strengir og myndir'
+          'Unplugged: Contracts': 'Verkefni án tölvu: Samningar'
+          'Eval: Writing Contracts': 'Greining: Ritun samninga'
+          'Calc: Defining Variables': 'Reiknir: Skilgreining breytna'
+          'Play Lab: Defining Variables (Big Game)': 'Leikjasmiðjan: Skilgreina breytur
+            (Stórleikur)'
+          'Eval: Defining Functions': 'Mat: Skilgreining falla'
+          'Unplugged: The Design Recipe': 'Verkefni án tölvu: Hönnunaruppskriftin'
+          'Play Lab: Defining Functions': 'Leikjasmiðjan: Skilgreining á föllum'
+          'Eval: Functions': 'Mat: Föll'
+          'Play Lab: Animation (Big Game)': 'Leikjasmiðjan: Hreyfing (Stórleikur)'
+          'Unplugged: Booleans': 'Verkefni án tölvu: Boolean gildi'
+          'Eval: Boolean Operators': 'Greining: Boolean virkjar'
+          'Play Lab: Booleans': 'Leikjasmiðjan: Boolean gildi'
+          'Play Lab: Boolean (Big Game)': 'Leikjasmiðjan: Boolean gildi (Stórleikur)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Verkefni án tölvu: Skilyrði
+            og Piecewise föll'
+          'Eval: Conditionals': 'Greining: Skilyrði'
+          'Unplugged: Collision Detection and the Distance Formula': 'Verkefni án
+            tölvu: Skynjun árekstra og fjarlægðarformúlan'
+          'Play Lab: Collision Detection (Big Game)': 'Leikjasmiðjan: Skynjun árekstra
+            (Stórleikur)'
+          Evaluation Blocks: Matskubbar
+          Strings and Images: Strengir og myndir
+          Contracts: Samningar
+          Your Game - Defining Variables: Leikur þinn - Skilgreining falla
+          Simple Function Definition: Skilgreining á einföldum föllum
+          The Design Recipe: Hönnunaruppskriftin
+          Your Game - Animation: Leikur þinn - hreyfing
+          Booleans: Boolean gildi
+          Sam the Bat: Leðurblakan Sammi
+          Your Game - Booleans: Leikur þinn - Boole gildi
+          Conditionals and Piecewise Functions: Skilyrði og Piecewise föll
+          Rocket-Height: Hæð-flaugar
+          Design Recipe Practice: Hönnunaruppskrift æfð
+          Introduction to PD: Kynning á PD
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Kennsluhættir í tölvunarfræði
+          Teacher Dashboard: Stjórnborð kennara
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in
+            Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        algPDmiami:
+          title: Tölvunarfræði í algebru - fagmenntun
+          description: Kenna algebru með fallmiðaðri forritun
+          description_short: Kenna algebru með fallmiðaðri forritun
+          Evaluation Blocks: Matskubbar
+          Strings and Images: Strengir og myndir
+          Rocket-Height: Hæð-flaugar
+          Design Recipe Practice: Hönnunaruppskrift æfð
+          Your Game - Animation: Leikur þinn - hreyfing
+          Booleans: Boolean gildi
+          Sam the Bat: Leðurblakan Sammi
+          Your Game - Booleans: Leikur þinn - Boole gildi
+          Luigi's Pizza: Pítsustaður Luigi
+          'Play Lab: Collision Detection (Big Game)': 'Leikjasmiðjan: Skynjun árekstra
+            (Stórleikur)'
+          Your Game - Player Movement: Leikur þinn - hreyfing leikmanna
+          Your Game - Collision Detection: Leikur þinn - skynjun árekstra
+        text-compression:
+          title: Þjöppun texta
+          description: Þjappa texta með því að greina endurtekin mynstur.
+          description_short: Þjappa texta með því að greina endurtekin mynstur.
+          Text Compression: Þjöppun texta
+        CSPPD:
+          new stage: nýr áfangi
+          Introduction to PD: Kynning á PD
+          title: Grundvöllur Tölvunarfræði (GT)- fagmenntun
+          description: '1. áfangi: Netkynning á Grundvelli Tölvunarfræði (GT)'
+          description_short: '1. áfangi: Netkynning á Grundvelli Tölvunarfræði (GT)'
+          What is CSP?: Hvað er átt við með Grundvelli Tölvunarfræði (GT)?
+          Exploring CSP Instructional Materials: Könnun á kennsluefni fyrir Grundvöll
+            Tölvunarfræði (GT)
+          Impact of Computer Science: Impact of Computer Science
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+        CSPLessonSamples:
+          title: Sýnishorn GT kennslustunda
+          description_short: Sýnishorn kennslustunda fyrir GT
+          description: Sýnishorn kennslustunda fyrir GT
+          Lesson 14: Kennslustund 14
+          Lesson 15: Kennslustund 15
+        ECSPD:
+          Introduction to PD: Kynning á PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+          title: Exploring Computer Science PD
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
+          Impact of Computer Science: Impact of Computer Science
+        sciencePD:
+          Introduction to PD: Kynning á PD
+          title: Computer Science in Science PD
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
+          Pre-Workshop Online Component: Pre-Workshop Online Component
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
+            Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          What to Expect: What to Expect
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
+            Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational
+            Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        rbo-reference:
+          reference: reference
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
+        Test Wednesday:
+          PDK5 Intro: PDK5 Intro
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
+        cspunit3:
+          title: CSP Unit 3 - Programming
+          description_short: Programming
+          description: Programming in Javascript and AppLap
+          Getting to know AppLab: Getting to know AppLab
+          Functions: Föll
+          Using Simple Commands: Using Simple Commands
+          Creating Procedures - Part 1: Creating Procedures - Part 1
+          Layers of Abstraction and Programming Efficiency: Layers of Abstraction
+            and Programming Efficiency
+          APIs and Function Parameters: APIs and Function Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          Creating functions with Parameters: Creating functions with Parameters
+          Scene Design Part 1 - Plan: Scene Design Part 1 - Plan
+          Scene Design Part 2 - Code: Scene Design Part 2 - Code
+          Scene Design Part 3 - Reflect: Scene Design Part 3 - Reflect
+          Unplugged Events Activity -  Mission Unsortable: Unplugged Events Activity
+            -  Mission Unsortable
+          Buttons on the Screen: Buttons on the Screen
+          Unfortunate Events: Unfortunate Events
+          On Beyond Buttons: On Beyond Buttons
+          Cookie Clicker 1.0 DEPRECIATED: Cookie Clicker 1.0 DEPRECIATED
+          Controlling Memory and Program Flow: Controlling Memory and Program Flow
+          Variable Basics DEPRECIATED: Variable Basics DEPRECIATED
+          Clicker v.1 -  Variable Basics: Clicker v.1 -  Variable Basics
+          Conditional Basics: Conditional Basics
+          More Variables (2 days): More Variables (2 days)
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and
+            Clicker Completion
+          Natural Language Processing and Chat Bots: Natural Language Processing and
+            Chat Bots
+          Chained Conditionals: Chained Conditionals
+          Compound Conditionals: Compound Conditionals
+          Strings and Substrings: Strings and Substrings
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          The Need For Programming Languages: The Need For Programming Languages
+          Creating Procedures - Part 2: Creating Procedures - Part 2
+          Sarah testing project backed levels: Sarah testing project backed levels
+          Cookie Clicker: Cookie Clicker
+          Clicker Variable Basics: Clicker Variable Basics
+          Events Unplugged: Events Unplugged
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Improving the Clicker Game: Improving the Clicker Game
+          Chatbot Challenge: Chatbot Challenge
+          'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
+          'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
+          'Scene Design Part 3: Reflect': 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant
+            Challenge
+          Digital Assistant Challenge: Digital Assistant Challenge
+        algebraPD3:
+          title: Phase 3 PD
+          description: Teach Algebra through block-based Functional Programming
+          description_short: Teach Algebra through block-based Functional Programming
+          Introduction to the new Computer Science in Algebra: Introduction to the
+            new Computer Science in Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Kennsluhættir í tölvunarfræði
+          Teacher Dashboard: Stjórnborð kennara
+          Evaluation Blocks: Matskubbar
+          The Big Game: The Big Game
+          Strings and Images: Strengir og myndir
+          The Design Recipe: Hönnunaruppskriftin
+          Next Steps: Næstu skref
+        sciPD complex adaptive 2:
+          title: Computer Science in Science PD
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
+          Introduction to PD: Kynning á PD
+          Pre-Workshop Online Component: Pre-Workshop Online Component
+        sciPD complex adaptive forum:
+          title: Computer Science in Science PD
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
+          Introduction to PD: Kynning á PD
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
+            Systems
+        Glenallan Career Day Demo:
+          new stage: nýr áfangi
+          title: Glenallan Career Day Demo
+          description_short: Let's make some puzzles!
+          description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
+          Puzzles: Þrautir
+        ECSPD-NexTech:
+          Introduction to PD: Kynning á PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: nextech_logo.png
+          title: Exploring Computer Science PD
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
+          Impact of Computer Science: Impact of Computer Science
+        ECSPD-iZone:
+          Introduction to PD: Kynning á PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: izone_logo.png
+          title: Exploring Computer Science PD
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
+          Impact of Computer Science: Impact of Computer Science
+        algebraPD-NexTech:
+          title: Tölvunarfræði í algebru - fagmenntun
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
+          Introduction to PD: Kynning á PD
+          Evaluation Blocks: Matskubbar
+          logo_image: nextech_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Kennsluhættir í tölvunarfræði
+          Teacher Dashboard: Stjórnborð kennara
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in
+            Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        algebraPD-iZone:
+          title: Tölvunarfræði í algebru - fagmenntun
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
+          Introduction to PD: Kynning á PD
+          Evaluation Blocks: Matskubbar
+          logo_image: izone_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Kennsluhættir í tölvunarfræði
+          Teacher Dashboard: Stjórnborð kennara
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in
+            Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        sciencePD-NexTech:
+          Introduction to PD: Kynning á PD
+          logo_image: nextech_logo.png
+          title: Computer Science in Science PD
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
+            Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
+            Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational
+            Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        sciencePD-iZone:
+          Introduction to PD: Kynning á PD
+          logo_image: izone_logo.png
+          title: Computer Science in Science PD
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
+            Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
+            Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational
+            Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        ui_tests:
+          title: UI Tests
+          description: Script for test. Careful, don't change level ordering.
+          description_short: Script for test. Careful, don't change level ordering.
+          All the Tests: All the Tests
+          Free Response: Free Response
+          Multi: Val
+          Big Game: Big Game
+          new stage: nýr áfangi
+        sciencePD2:
+          title: Computer Science in Science PD
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
+          Phase 2 Summer Workshop: Phase 2 Summer Workshop
+          Welcome: Welcome
+          Resources: Resources
+          Discussion Forums: Discussion Forums
+          Discussion Forum: Discussion Forum
+          Evaluation: Evaluation
+          Implementation Planning: Implementation Planning
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+        sciencePD3:
+          title: Computer Science in Science PD
+          description: Phase 3 Professional Development
+          description_short: Phase 3 Professional Development
+          new stage: nýr áfangi
+          Welcome: Welcome
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+          Discussion Forums: Discussion Forums
+        Testing:
+          Testing: Testing
+          title: Testing
+          description: Testing
+          description_short: Testing
+        cspunit2:
+          title: CSP Unit 2 - The Internet
+          description_short: Internetið
+          description: |
+            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
+            structure and design of the internet and the implications of those design decisions including
+            the reliability of network communication, the security of data, and personal privacy. Topics
+            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
+            concerns.
+          Beyond Sending Bits: Beyond Sending Bits
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Addresses: Routers and Addresses
+          Classroom Internet: Classroom Internet
+          Algorithms in Networking: Algorithms in Networking
+          The Need for Packets: The Need for Packets
+          Packets in the Real World: Packets in the Real World
+          The Need for DNS: The Need for DNS
+          DNS Simulation: DNS Simulation
+          How HTTP Works: How HTTP Works
+          IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: Internetið
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
+            Tree
+          Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
+          Algorithms Detour - How Routers Learn: Algorithms Detour - How Routers Learn
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: Algorithms Detour - Hard Problems
+            TSP
+          One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real
+            World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
+          The Internet is for Everyone: The Internet is for Everyone
+          How Routers Learn: How Routers Learn
+          HTTP and Abstraction on the Internet: HTTP and Abstraction on the Internet
+          Global Impacts of the Internet: Global Impacts of the Internet
+          The Need for Encryption: The Need for Encryption
+          Keys and Passwords: Keys and Passwords
+          Public Key Encryption: Public Key Encryption
+        algebraPD2a:
+          title: Tölvunarfræði í algebru - fagmenntun
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
+          Evaluation Blocks: Matskubbar
+          Strings and Images: Strengir og myndir
+          Defining Variables: Skilgreining breytna
+          Big Game - Variables: Big Game - Variables
+          'Play Lab: Defining Functions': 'Leikjasmiðjan: Skilgreining á föllum'
+          The Design Recipe: Hönnunaruppskriftin
+          Big Game - Animation: Big Game - Animation
+          Booleans: Boolean gildi
+          Sam the Bat: Leðurblakan Sammi
+          Big Game - Booleans: Big Game - Booleans
+          Luigi's Pizza: Pítsustaður Luigi
+          Big Game - Player Movement: Big Game - Player Movement
+          Big GAme - Collision Detection: Big GAme - Collision Detection
+          Rocket-Height: Hæð-flaugar
+          Big Game - Collision Detection: Big Game - Collision Detection
+          Free Play: Frjáls æfing
+        allthethings:
+          Jigsaw: Púsl
+          Maze: Völundarhús
+          Artist: Listamaður
+          Bee: Býfluga
+          PlayLab: PlayLab
+          Farmer: Farmer
+          Flappy: Flappy
+          Bounce: Skopp
+          Multi: Val
+          Match: Tengja
+          TextMatch: TextMatch
+          CSinA: CSinA
+          Netsim: Netsim
+          applab: applab
+          online pd?: online pd?
+          AppLab: App-smiðjan
+          Online PD: Fagmenntun á netinu
+          title: All þetta!
+          description: Öll stig fyrir prófun á notendaviðmóti (UI)
+          description_short: Öll stig fyrir prófun á notendaviðmóti (UI)
+          Odometer: Vegmælir
+          Vigenere: Vigenere
+          Frequency: Frequency
+          Text Compression: Þjöppun texta
+          Pixelation: Dílamynstur
+          Multi2: Multi2
+          Markdown Details: Markdown Details
+        algebraPD2b:
+          title: Tölvunarfræði í algebru - fagmenntun
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Kennsluhættir í tölvunarfræði
+          Teacher Dashboard: Stjórnborð kennara
+          Evaluation Blocks: Matskubbar
+          Strings and Images: Strengir og myndir
+          Writing Contracts: Ritun samninga
+          Defining Variables: Skilgreining breytna
+          Defining Functions: Skilgreining falla
+          Rocket-Height: Hæð-flaugar
+          Booleans: Boolean gildi
+          'Eval: Conditionals': 'Greining: Skilyrði'
+          Next Steps: Næstu skref
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internet hermir
+          App Lab: Appsmiðja
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Velkomin!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
+          Welcome!: Velkomin!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internet hermir
+          App Lab: Appsmiðja
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        K5-OnlinePD:
+          title: Teaching Computer Science Fundamentals
+          description: Learn how to teach computer science using Code.org's Computer
+            Science Fundamentals with this free, self-paced online course.
+          description_short: Learn how to teach computer science using Code.org's
+            Computer Science Fundamentals with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Next Steps: Næstu skref
+          Looking Ahead: Looking Ahead
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
+          Welcome!: Velkomin!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Samantekt
+          Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
+          Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
+          Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
+            Web 2.0
+          Unit 1, Days 8-9. Impact of Computers and Communication: Unit 1, Days 8-9.
+            Impact of Computers and Communication
+          Unit 1, Day 10. Telling a Story with Data: Unit 1, Day 10. Telling a Story
+            with Data
+          Unit 1, Day 11-14. Data Modeling and Design: Unit 1, Day 11-14. Data Modeling
+            and Design
+          Unit 1, Day 15-16. Computer Programs and Following Directions: Unit 1, Day
+            15-16. Computer Programs and Following Directions
+          Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
+          'Unit 1, Days 1-2: What Is a Computer?': 'Unit 1, Days 1-2: What Is a Computer?'
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 5-7 Searching and Web 2.0: Unit 1, Days 5-7 Searching and Web
+            2.0
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          description_short: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
+        hoc2015:
+          title: Klukkustund kóðunar 2015
+          description_short: Notaðu Leikjasmiðjuna til að búa til sögu eða leik.
+          description: Notaðu Leikjasmiðjuna til að búa til sögu eða leik.
+          Hour of Code: Klukkustund kóðunar
+          Hour of Code 2015: Klukkustund kóðunar 2015
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Kennsluhættir í tölvunarfræði
+          Teacher Dashboard: Stjórnborð kennara
+          Evaluation Blocks: Matskubbar
+          Strings and Images: Strengir og myndir
+          Writing Contracts: Ritun samninga
+          Defining Variables: Skilgreining breytna
+          Defining Functions: Skilgreining falla
+          Rocket-Height: Hæð-flaugar
+          Booleans: Boolean gildi
+          'Eval: Conditionals': 'Greining: Skilyrði'
+          Next Steps: Næstu skref
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: Velkomin!
+          The Design Recipe: Hönnunaruppskriftin
+          Teaching with Puzzles: Teaching with Puzzles
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: '2. áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
+          Welcome!: Velkomin!
+          Wrap-Up: Samantekt
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+        equity-pd:
+          title: Leading a Discussion on Equity
+          description_short: How to lead a discussion on equity in a Code.org PD
+          description: How to lead a discussion on equity in a Code.org PD
+          Necessary Background: Necessary Background
+          Code.org Equity PD: Code.org Equity PD
+        science-PD2:
+          title: Computer Science in Science PD Phase 2b
+          description_short: '2. áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
+          Welcome!: Velkomin!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Samantekt
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free,
+            self-paced online course.
+          description: Develop strategies for creating equity in your classroom with
+            this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Næstu skref
+        sciencePD2b-iZone:
+          Welcome!: Velkomin!
+          title: Computer Science in Science PD Phase 2b
+          description_short: '2. áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Samantekt
+        ECSPD2-iZone:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
+          Welcome!: Velkomin!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Samantekt
+        ECSPD2-NexTech:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
+          Welcome!: Velkomin!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Samantekt
+        CSPPD2:
+          title: 'Computer Science Principles PD: Blended Summer Study'
+          description_short: 'Blended Summer Study: 8 hour online'
+          description: 8-hour online PD that builds on the 5-day in-person experience
+            and helps teachers prepare for the beginning of the semester
+          Getting Started: Getting Started
+          Welcome to the Course!: Welcome to the Course!
+          'Lesson Chunk 1: Sending Binary Messages': 'Lesson Chunk 1: Sending Binary
+            Messages'
+          'Lesson Chunk 2: Encoding and Sending Numbers': 'Lesson Chunk 2: Encoding
+            and Sending Numbers'
+          'Lesson Chunk 3: Encoding and Sending Text': 'Lesson Chunk 3: Encoding and
+            Sending Text'
+          Lesson Chunk 1- Sending Binary Messages: Lesson Chunk 1- Sending Binary
+            Messages
+          Lesson Chunk 2- Encoding and Sending Numbers: Lesson Chunk 2- Encoding and
+            Sending Numbers
+          Lesson Chunk 3- Encoding and Sending Text: Lesson Chunk 3- Encoding and
+            Sending Text
+          Lesson Chunk 4- Compressing and Storing Information: Lesson Chunk 4- Compressing
+            and Storing Information
+          Practice PT: Practice PT
+          Ramping Up: Ramping Up
+          Wrap Up and Next Steps: Wrap Up and Next Steps
+        odometer:
+          title: Odometer Widget
+          description_short: Odometer widget
+          description: Use the Odometer widget to control odometers with various number
+            bases. Binary, Decimal and Hexadecimal are the most common number systems
+            to see in computer science.
+          Odometer Widget: Odometer Widget
+        asUnplugged:
+          title: Afterschool Unplugged
+          description_short: Short unplugged course designed for informal learning
+          description: Afterschool Unplugged is designed to teach computational thinking
+            and computer science ideas through offline games and crafts. Created with
+            informal classrooms in mind, these lessons are fantastic on their own,
+            or in combination with Afterschool 1 . This course focuses on learning
+            through entertainment. Recommended for grades K-8.
+          description_audience: Ages 6-13
+          Happy Maps: Krúttleg kort
+          Move it, Move it: Hreyfa sig, hreyfa sig
+          'Real-life Algorithms: Plant a Seed': 'Algrím úr raunheimi: Sá fræi'
+          Graph Paper Programming: Forritun rúðublaða
+          Building a Foundation: Að byggja grunn
+          Getting Loopy: Lykkjulæti
+          The Big Event: Stórviðburður
+          Binary Bracelets: Stafræn armbönd
+          Songwriting: Lagasmíð
+        afterschool1:
+          title: Afterschool 1
+          description_short: Short course designed for informal learning
+          description: Afterschool 1 is designed to for informal classrooms where
+            students vary in age and assessment is not required. This course focuses
+            on learning through entertainment, with varying options for implementation,
+            all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended
+            for grades 3-8.
+          description_audience: Ages 7-13
+        vigenere:
+          title: Vigenere Cipher Widget
+          description_short: Vigenere Cipher Widget
+          description: Use the Vigenere Cipher Widget to explore encrypting and decrypting
+            messages using a Vigenere Cipher
+          Vigenere: Vigenere
+        frequency:
+          title: Frequency Analysis Widget
+          description_short: Frequency Analysis Widget
+          description: Use the Frequency Analysis Widget to analyze letter frequencies
+            in an input text compared to expected frequencies for standard English.
+            Use that comparison to explore cracking Shift and Substitution Ciphers.
+          Frequency Analysis: Frequency Analysis
+        algebraPD3a:
+          title: Tölvunarfræði í algebru - fagmenntun
+          description_short: CS in Algebra blended online school year study
+          description: CS in Algebra blended online school year study
+          Updates - Tweaks and Polish: Updates - Tweaks and Polish
+          Updates - The Big Game and Projects: Updates - The Big Game and Projects
+          Updates - The Design Recipe: Updates - The Design Recipe
+          Lesson Prep: Lesson Prep
+        sciencePD3_pre1:
+          title: Computer Science in Science PD Phase 3 Before 1st In-Person
+          description_short: Phase 3 Blended Summer Study Pre 1
+          description: Phase 3 Blended Summer Study (Segment One)
+          Welcome Back!: Welcome Back!
+          The TLO: The TLO
+          Prep With Your Modules: Prep With Your Modules
+        frequency_analysis:
+          title: Frequency Analysis Widget
+          description_short: Frequency Analysis Widget
+          description: Use the Frequency Analysis Widget to analyze letter frequencies
+            in an input text compared to expected frequencies for standard English.
+            Use that comparison to explore cracking Shift and Substitution Ciphers.
+          Frequency Analysis: Frequency Analysis
+        ECSPD3-Unit2:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: Velkomin!
+          Teaching Strategies: Teaching Strategies
+          Unit 2 Overview: Unit 2 Overview
+          Problem Solving: Problem Solving
+          Introduction to the Unit 2 Challenge: Introduction to the Unit 2 Challenge
+          Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community
+            Problems with Data
+          'Day 3 Intro To Problem Solving: Candy Bar Activity': 'Day 3 Intro To Problem
+            Solving: Candy Bar Activity'
+          'Day 4-6 Strategies in Problem Solving: Handshake Activity': 'Day 4-6 Strategies
+            in Problem Solving: Handshake Activity'
+          'Day 7-9 Problem Solving: Cornrow Curves': 'Day 7-9 Problem Solving: Cornrow
+            Curves'
+          Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
+          'Day 13-14 Linear and Binary Search: Tower Building Activity': 'Day 13-14
+            Linear and Binary Search: Tower Building Activity'
+          Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
+          'Day 17 Minimal Spanning Trees: Muddy City': 'Day 17 Minimal Spanning Trees:
+            Muddy City'
+          Day 18-21 Final Project: Day 18-21 Final Project
+          Unit 2 Challenge Planning & Creation: Unit 2 Challenge Planning & Creation
+        ECSPD3-Unit3:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: Velkomin!
+          Teaching Strategies: Teaching Strategies
+          Unit 3 Overview: Unit 3 Overview
+          Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
+          Unit 3 Challenge Planning & Creation: Unit 3 Challenge Planning & Creation
+          Day 1-2 Online Experiences: Day 1-2 Online Experiences
+          Day 3-4 HTML- Paragraph and Header Tags: Day 3-4 HTML- Paragraph and Header
+            Tags
+          Day 5 HTML - Strong and EM Tags: Day 5 HTML - Strong and EM Tags
+          Day 6-7 HTML -Images: Day 6-7 HTML -Images
+          Day 8-10 Introduction to CSS: Day 8-10 Introduction to CSS
+          Day 11-13 Separating HTML and CSS: Day 11-13 Separating HTML and CSS
+          'Day 14 HTML: Links': 'Day 14 HTML: Links'
+          'Day 15-16 HTML and CSS: Tables, Lists,  Menus': 'Day 15-16 HTML and CSS:
+            Tables, Lists,  Menus'
+          'Day 17-19 HTML and CSS: Create own webpage': 'Day 17-19 HTML and CSS: Create
+            own webpage'
+          'Day 20-21 HTML and CSS: Adding Enhancements to Site': 'Day 20-21 HTML and
+            CSS: Adding Enhancements to Site'
+          Day 22-25 Final Project: Day 22-25 Final Project
+          'Day 15-16 HTML and CSS: Tables, Lists, Menus': 'Day 15-16 HTML and CSS:
+            Tables, Lists, Menus'
+        ECSPD3-Unit4:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: Velkomin!
+          Teaching Strategies: Teaching Strategies
+          Unit 4 Overview: Unit 4 Overview
+          Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
+          Unit 4 Challenge Planning & Creation: Unit 4 Challenge Planning & Creation
+          'Day 1 Scratch: Intro': 'Day 1 Scratch: Intro'
+          'Day 2-3 Scratch: Name Project': 'Day 2-3 Scratch: Name Project'
+          'Day 4 Scratch: Creating Dialogue': 'Day 4 Scratch: Creating Dialogue'
+          'Day 5-6 Scratch: Moving Sprites': 'Day 5-6 Scratch: Moving Sprites'
+          'Day 7-8 Scratch: Event Driven Programming': 'Day 7-8 Scratch: Event Driven
+            Programming'
+          Day 9 Broadcasting Role Play: Day 9 Broadcasting Role Play
+          'Day 10-13 Scratch: Broadcasting': 'Day 10-13 Scratch: Broadcasting'
+          'Day 14 Scratch: Variables': 'Day 14 Scratch: Variables'
+          'Day 15 Scratch: Conditionals': 'Day 15 Scratch: Conditionals'
+          'Day 16-17 Scratch: AND OR and Randomness': 'Day 16-17 Scratch: AND OR and
+            Randomness'
+          'Day 18 Scratch: Rock Paper Scissors': 'Day 18 Scratch: Rock Paper Scissors'
+          'Day 19 Scratch: Timer': 'Day 19 Scratch: Timer'
+          'Day 20-23 Scratch: Timing Game': 'Day 20-23 Scratch: Timing Game'
+          'Day 24 Scratch: Games': 'Day 24 Scratch: Games'
+          Day 25-30 Final Project: Day 25-30 Final Project
+        ECSPD3-Unit5:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: Velkomin!
+          Teaching Strategies: Teaching Strategies
+          Unit 5 Overview: Unit 5 Overview
+          Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
+          Unit 5 Challenge Planning & Creation: Unit 5 Challenge Planning & Creation
+        ECSPD3-Unit6:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: Velkomin!
+          Teaching Strategies: Teaching Strategies
+          Unit 6 Overview: Unit 6 Overview
+          Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
+          Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
+        cspunit4draft:
+          title: CS Principles Unit 4 - Data
+          description_short: Data
+          description: |
+            Collect, analyze, and extract knowledge from data by programming and
+            building apps. Process data imported from other sources and also pull
+            data from live data APIs.
+          Data is the Secret Ingredient: Data is the Secret Ingredient
+          Finding Data: Finding Data
+          Building Apps Using Structured Data: Building Apps Using Structured Data
+          'Data App Part 1: Brainstorm': 'Data App Part 1: Brainstorm'
+          APIs and Access to Large Data Sets: APIs and Access to Large Data Sets
+          Structuring Data with JSON: Structuring Data with JSON
+          'Data App Part 2: Data Design': 'Data App Part 2: Data Design'
+          'Data App Part 3: Code': 'Data App Part 3: Code'
+          Identifying People with Data: Identifying People with Data
+          Collecting Personal Information: Collecting Personal Information
+          Privacy Policy: Persónuvernd
+          'Debate: Privacy vs. Utility': 'Debate: Privacy vs. Utility'
+          'Data App Part 4: App Permissions': 'Data App Part 4: App Permissions'
+          'Data App Part 5: Clean Data': 'Data App Part 5: Clean Data'
+          Reading Data: Reading Data
+          Sorting: Sorting
+          Searching: Searching
+          'Data App Part 6: Sort and Search': 'Data App Part 6: Sort and Search'
+          'Data App Part 7: Read Data': 'Data App Part 7: Read Data'
+          What Data Can Tell Us: What Data Can Tell Us
+          Interpreting Data from Different Perspectives: Interpreting Data from Different
+            Perspectives
+          Visualizations in the Real World: Visualizations in the Real World
+          'Data App Part 8: Visualize Data': 'Data App Part 8: Visualize Data'
+          'Data App Part 9: Reflect': 'Data App Part 9: Reflect'
+          'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'

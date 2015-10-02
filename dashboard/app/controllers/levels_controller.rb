@@ -17,7 +17,12 @@ class LevelsController < ApplicationController
   # GET /levels
   # GET /levels.json
   def index
-    @levels = Level.all
+    limit = params[:limit]
+    if limit
+      @levels = Level.limit(limit.to_i)
+    else
+      @levels = Level.all
+    end
   end
 
   # GET /levels/1
