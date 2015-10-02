@@ -13,29 +13,46 @@ theme: pdf
 
 - state_words = 'New Jersey'
 - state = 'NJ'
+- state_info = DB[:cdo_state_promote].where(state_code_s: 'NJ').first
+= state_info.to_json
 %h1
   Support K-12 Computer Science Education in 
-  %span= state_words
+  %span= state_info[:state_code_s]
 
 %div Computer science drives job growth and innovation throughout our economy and society. Computing occupations make up two-thirds of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. 75 percent of U.S. schools don’t even offer computer science and only 8% of STEM graduates study it. We need to improve access for all students, including groups who have traditionally been underrepresented.
 %br
 
 %div
-  %h3 Chart 1 US Wide
-  = view :display_chart, id: "chart2", type: "PieChart", query_url: "https://docs.google.com/spreadsheets/d/1PWmXjxuN2oC-baFAe4UjL_d0s1Fu-2Vb30k7ymCxRFM/gviz/tq?gid=0&range=A1:C4&headers=1", width: 800, height: 480
-  %h3 Chart 2 US Wide
-  = view :display_chart, id: "chart3", type: "PieChart", query_url: "https://docs.google.com/spreadsheets/d/1PWmXjxuN2oC-baFAe4UjL_d0s1Fu-2Vb30k7ymCxRFM/gviz/tq?gid=0&range=A1:C4&headers=1", width: 800, height: 480
+  %center
+    %img{src: "/images/charts/computing_jobs.png"}
+    %img{src: "/images/charts/computing_degrees.png"}
+    %h3 9 in 10 parents want their students to learn computer science, but only 1 in 4 schools teaches it.
+    %img{src: "/images/charts/learn_cs.png"}
+    %img{src: "/images/charts/schools_teach.png"}
+
 
 %div
-  9 in 10 parents want their students to learn computer science, but only 1 in 4 schools teaches it.
-  %br
-  %h2 Computer science in [New Jersey]
+  %h2
+    Computer science in 
+    %span= state_info[:state_code_s]
   %ul
-    %li 23,663 open computing jobs (4.6 times the average demand rate in NJ). 
-    %li The average salary for a computing occupation in NJ is $97,957, which is significantly higher than the average salary in the state ($53,983). 
+    %li
+      %span= state_info[:cs_jobs_i]
+      open computing jobs (4.6 times the average demand rate in 
+      %span= state_info[:state_code_s]
+      ). 
+    %li
+      The average salary for a computing occupation in
+      %span= state_info[:state_code_s]
+      is $97,957, which is significantly higher than the average salary in the state ($53,983). 
     %li 1,535 computer science graduates in 2015; only 23% were female.
     %li 1,986 high school students took the AP Computer Science exam in 2014; only 20% were female; only 143 were Hispanic; only 65 were black.
-    %li Only 139 schools in NJ (29% of NJ schools with AP programs) offered the AP Computer Science course in 2013-2014. 
+    %li
+      Only 139 schools in 
+      %span= state_info[:state_code_s]
+      (29% of
+      %span= state_info[:state_code_s]
+      schools with AP programs) offered the AP Computer Science course in 2013-2014. 
 
 %div
   %h3 Stem Subject Exams in 2014 in New Jersey
@@ -46,7 +63,10 @@ theme: pdf
   %ol
     %li Call on your school to expand computer science offerings at every grade level.
     %li Ask your local school district to allow computer science courses to satisfy a core math or science requirement.
-    %li Visit [www.code.org/promote/nj] to learn more about supporting computer science in your state.
+    %li
+      Visit [www.code.org/promote/
+      %span= state_info[:state_code_s]
+      ] to learn more about supporting computer science in your state.
 
 %div
   %h2 Code.org Impact in [State Name]
