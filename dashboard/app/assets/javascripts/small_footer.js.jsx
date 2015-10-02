@@ -179,7 +179,7 @@ window.dashboard.footer = (function () {
               }}/>
               <small>
                 {this.renderCopyright()}
-                <a className="more-link" href="#"
+                <a className="more-link" href="javascript:void(0)"
                   onClick={this.clickBaseMenu}>
                   {this.props.baseMoreMenuString + ' '}
                   <i className={caretIcon}/>
