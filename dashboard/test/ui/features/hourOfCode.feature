@@ -17,6 +17,7 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
   Then element ".header_middle a:first" has class "level_link perfect"
 
 Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as attempted
+  Given I am on "http://studio.code.org/hoc/reset"
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I rotate to landscape
   Then I wait to see a dialog titled "Puzzle 1 of 20"
