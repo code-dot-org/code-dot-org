@@ -34,7 +34,9 @@ class VarnishHelperTest < Minitest::Test
       # Wildcard at both ends
       '*images*',
       # Maximum path length
-      ('a' * 260) + '/*'
+      ('a' * 260) + '/*',
+      '[]/*',
+      '()/*',
     ].map do |path|
       assert_raises(ArgumentError) { paths_to_regex path }
     end
