@@ -40,7 +40,7 @@ var sendReport = function(report) {
     data: queryString,
     dataType: 'json',
     beforeSend: function(xhr) {
-      xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))
+      xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
     },
     success: function (response) {
       if (thisAjax !== lastAjaxRequest) {
@@ -52,7 +52,7 @@ var sendReport = function(report) {
       if (thisAjax !== lastAjaxRequest) {
         return;
       }
-      report['error'] = xhr.responseText;
+      report.error = xhr.responseText;
       reportComplete(report, getFallbackResponse(report));
     }
   });
@@ -79,10 +79,10 @@ function getFallbackResponse(report) {
 function reportComplete(report, response) {
   lastAjaxRequest = null;
   if (response) {
-    lastServerResponse.report_error = report['error'];
-    lastServerResponse.nextRedirect = response['redirect'];
-    lastServerResponse.previousLevelRedirect = response['previous_level'];
-    lastServerResponse.videoInfo = response['video_info'];
+    lastServerResponse.report_error = report.error;
+    lastServerResponse.nextRedirect = response.redirect;
+    lastServerResponse.previousLevelRedirect = response.previous_level;
+    lastServerResponse.videoInfo = response.video_info;
   }
   if (report.onComplete) {
     report.onComplete(response);

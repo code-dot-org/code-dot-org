@@ -363,6 +363,8 @@
       section: Secció
       example: Exemple de solució
       example_with_number: Exemple de solució %{solution_number}
+      submitted_on: Submitted on %{date}
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: 'L''adreça de correu electrònic no ha estat confirmada:'
     email_confirm_needed_required: 'La seva adreça de correu electrònic %{email} no
@@ -475,6 +477,7 @@
     tos: Condicions d'ús
     privacy: Política de Privacitat
     secure: Versió segura
+    report_abuse: Report Abuse
   reference_area:
     title: Necessites ajuda?
     subtitle: Mira aquests vídeos i consells
@@ -731,3 +734,26 @@
       contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
         us.</a>
       go_to_code_studio: Go to Code Studio
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying,
+          harassment, or an instance of copyright infringement for content you own
+          while using apps built on Code Studio, please fill out the form below. We
+          will take your report very seriously, investigate accordingly, and take
+          appropriate action.
+        validation:
+          email: Please provide an email address
+          age: Please specify an age
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
+          harassment: Threats, cyberbullying, harassement
+          offensive: Offensive content
+          infringement: Copyright Infringement
+          other: Altres
+        detail: Please provide as much detail as possible regarding the content you
+          are reporting.
+        acknowledge: By submitting this information, you acknowledge it will be handled
+          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
+          and the %{link_start_tos}Terms of Service%{link_end}

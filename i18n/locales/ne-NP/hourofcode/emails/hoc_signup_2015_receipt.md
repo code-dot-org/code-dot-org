@@ -18,19 +18,19 @@ We'll be in touch about prizes, new tutorials and other exciting updates in the 
 
 ## २. तपाईको स्कूललाई Hour of Code को प्रस्ताब राखन भन्नुहोश
 
-[ यो ईमेललाई](http://<%= hostname %>/resources #email) तपाइँको प्रधानाध्यापकमा पठाउनुहोस्।
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## ३. तपाईको कम्पनीलाई संलग्न हुन भन्नुहोश
 
-[ यो ईमेललाई](http://<%= hostname %>/resources #email) तपाइँको सिईओमा पठाउनुहोस्।
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## 4. आफ्नो समुदायमा Hour of Code लाई बढावा दिनुहोस्
 
-एक स्थानीय समूह — केटा/केटी, स्काउट क्लब, चर्च, विश्वविद्यालय, अनुभविहरूको समूह वा श्रमिकको यूनियनको भर्ना गर्नुहोस्। वा तपाइँको छिमेकीको लागि Hour of Code "ब्लक पार्टी" लाई होस्ट गर्नुहोस्। [यो ईमेल पठाउनुहोस्](http://<%= hostname %>/resources#email).
+एक स्थानीय समूह — केटा/केटी, स्काउट क्लब, चर्च, विश्वविद्यालय, अनुभविहरूको समूह वा श्रमिकको यूनियनको भर्ना गर्नुहोस्। वा तपाइँको छिमेकीको लागि Hour of Code "ब्लक पार्टी" लाई होस्ट गर्नुहोस्। [Send this email](https://<%= hostname %>/resources#email).
 
 ## ५. Hour of Code समर्थनगर्नुकोलागी स्थानीय निर्वाचित आधिकारिकको सहयोग मग्नुहोश
 
-[ यो ईमेललाई ](http://<%= hostname %>/resources #politicians) तपाइँको मेयर, नगर परिषद्, वा स्कूल बोर्डमा पठाउनुहोस् र तिनिहरूलाई तपाइँको स्कूल भ्रमण गर्न आमन्त्रण गर्नुहोस्।
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 

@@ -1,5 +1,4 @@
 require File.expand_path('../../../../config/environment.rb', __FILE__)
-require 'cdo/session'
 
 DEFAULT_WAIT_TIMEOUT = 2.minutes
 
@@ -348,7 +347,7 @@ end
 
 def log_in_as(user)
   params = {
-    name: Session::KEY,
+    name: "_learn_session_#{Rails.env}",
     value: encrypted_cookie(user)
   }
   params[:secure] = true if @browser.current_url.start_with? 'https://'
