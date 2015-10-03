@@ -11,12 +11,16 @@
     "textModeAtStart": true,
     "softButtons": "[\"leftButton\", \"rightButton\", \"downButton\", \"upButton\"]",
     "code_functions": {
+      "changeScore": null,
+
+      "whenTouchItem": null,
+      "setItemActivity": null,
+      "setItemSpeed": null,
+      "addItemsToScene": null,
       "setCharacter": null,
       "setBackground": null,
+      "setWalls": null,
       "playSound": null,
-      "addItemsToScene": null,
-      "setItemActivity": null,
-      "changeScore": null,
       "moveEast": null,
       "moveWest": null,
       "moveNorth": null,
@@ -24,8 +28,7 @@
       "whenLeft": null,
       "whenRight": null,
       "whenUp": null,
-      "whenDown": null,
-      "whenTouchItem": null
+      "whenDown": null
     },
     "start_blocks": "addItemsToScene('item_walk_item3', 3);\nfunction whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}\nfunction whenTouchItem() {\n  \n}",
 
@@ -46,7 +49,7 @@
     "failure_condition": "function () {\r\n}",
 
     "embed": "false",
-    "instructions": "Let’s add points. Give yourself some points when you touch an item. Can you score 10 points?",
+    "instructions": "\"Somebody should be rewarded for reaching those characters.\"<br/><br/>Let’s add points. Give yourself some points when you touch an item. Can you score 10 points?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

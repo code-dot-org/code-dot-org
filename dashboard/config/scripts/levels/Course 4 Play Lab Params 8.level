@@ -311,6 +311,10 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">any_actor</title>
+        </block>
         <block type="studio_setSpritePosition">
           <title name="SPRITE">0</title>
           <title name="VALUE">7</title>

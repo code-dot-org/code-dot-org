@@ -35,8 +35,24 @@ class FilesApi < Sinatra::Base
     end
   end
 
+  def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
+    return true if admin? or new_score.nil?
+
+    get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
+  end
+
+  def can_view_abusive_assets?(encrypted_channel_id)
+    return true if owns_channel?(encrypted_channel_id) or admin?
+
+    # teachers can see abusive assets of their students
+    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+
+    teaches_student?(owner_user_id)
+  end
+
   helpers do
-    %w(core.rb bucket_helper.rb asset_bucket.rb source_bucket.rb storage_id.rb).each do |file|
+    %w(core.rb bucket_helper.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
   end
@@ -76,6 +92,10 @@ class FilesApi < Sinatra::Base
     not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
+
+    abuse_score = result[:metadata]['abuse_score'].to_i
+    not_found if abuse_score > 0 and !can_view_abusive_assets?(encrypted_channel_id)
+
     result[:body]
   end
 
@@ -93,8 +113,7 @@ class FilesApi < Sinatra::Base
     # header.
     body = request.body.read
 
-    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    not_authorized unless owner_id == storage_id('user')
+    not_authorized unless owns_channel?(encrypted_channel_id)
 
     too_large unless body.length < FilesApi::max_file_size
 
@@ -108,12 +127,35 @@ class FilesApi < Sinatra::Base
 
     buckets = get_bucket_impl(endpoint).new
     app_size = buckets.app_size(encrypted_channel_id)
+
     forbidden unless app_size + body.length < FilesApi::max_app_size
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 
     content_type :json
     category = mime_type.split('/').first
     {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
+  end
+
+  #
+  # PATCH /v3/(assets|sources)/<channel-id>?abuse_score=<abuse_score>
+  #
+  # Update all assets for the given channelId to have the provided abuse score
+  #
+  patch %r{/v3/(assets|sources)/([^/]+)/$} do |endpoint, encrypted_channel_id|
+    dont_cache
+
+    abuse_score = request.GET['abuse_score']
+    not_modified if abuse_score.nil?
+
+    buckets = get_bucket_impl(endpoint).new
+
+    buckets.list(encrypted_channel_id).each do |file|
+      not_authorized unless can_update_abuse_score?(endpoint, encrypted_channel_id, file[:filename], abuse_score)
+      buckets.replace_abuse_score(encrypted_channel_id, file[:filename], abuse_score)
+    end
+
+    content_type :json
+    {abuse_score: abuse_score}.to_json
   end
 
   #
