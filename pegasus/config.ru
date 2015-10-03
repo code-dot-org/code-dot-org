@@ -13,6 +13,9 @@ use Rack::SslEnforcer,
 require 'varnish_environment'
 use VarnishEnvironment
 
+use Rack::WhitelistCookies,
+  HttpCache.config(Session::KEY, Session::STORAGE_ID)[:dashboard]
+
 require 'files_api'
 use FilesApi
 

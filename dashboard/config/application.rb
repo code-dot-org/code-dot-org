@@ -12,6 +12,9 @@ require 'properties_api'
 require 'tables_api'
 require 'shared_resources'
 require 'net_sim_api'
+require 'cdo/rack/whitelist_cookies'
+require 'cdo/session'
+require '../../../cookbooks/cdo-varnish/libraries/http_cache'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
@@ -23,6 +26,8 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
 
+    config.middleware.insert_before ActionDispatch::Cookies, Rack::WhitelistCookies,
+      HttpCache.config(Session::KEY, Session::STORAGE_ID)[:dashboard]
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
     config.middleware.insert_after VarnishEnvironment, FilesApi
     config.middleware.insert_after FilesApi, ChannelsApi
