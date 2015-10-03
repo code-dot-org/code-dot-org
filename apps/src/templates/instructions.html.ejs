@@ -4,7 +4,7 @@
 <% if (locals.renderedMarkdown) { -%>
 <div class='instructions-markdown'><%- locals.renderedMarkdown %></div>
 <% } else if (locals.instructions) { -%>
-  <p><%= locals.instructions %></p>
+  <p><%- locals.instructions %></p>
 <% } -%>
 <% if (locals.aniGifURL) { -%>
   <img class="aniGif example-image" src='<%= locals.aniGifURL %>'/>

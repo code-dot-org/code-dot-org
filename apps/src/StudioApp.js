@@ -329,7 +329,7 @@ StudioApp.prototype.init = function(config) {
 
   var promptDiv = document.getElementById('prompt');
   if (config.level.instructions) {
-    dom.setText(promptDiv, config.level.instructions);
+    promptDiv.innerHTML = config.level.instructions;
   }
 
   if (config.level.instructions || config.level.aniGifURL) {
