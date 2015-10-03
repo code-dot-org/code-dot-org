@@ -53,7 +53,6 @@ module AWS
         distribution = cloudfront.list_distributions.distribution_list.items.detect do |i|
           i.aliases.items.include?(CDO.method("#{app}_hostname").call)
         end
-        id = nil
         if distribution
           id = distribution.id
           distribution_config = cloudfront.get_distribution_config(id: id)
