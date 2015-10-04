@@ -207,21 +207,27 @@ function loadHoc2015(skin, assetUrl) {
     'item_walk_item1',
     'item_walk_item2',
     'item_walk_item3',
-    'item_walk_item4'
+    'item_walk_item4',
+    'item_walk_item5',
+    'item_walk_item6'
   ];
 
   skin.AutohandlerTouchItems = {
     'item_walk_item1': 'whenTouchWalkItem1',
     'item_walk_item2': 'whenTouchWalkItem2',
     'item_walk_item3': 'whenTouchWalkItem3',
-    'item_walk_item4': 'whenTouchWalkItem4'
+    'item_walk_item4': 'whenTouchWalkItem4',
+    'item_walk_item5': 'whenTouchWalkItem5',
+    'item_walk_item6': 'whenTouchWalkItem6'
   };
 
   skin.specialItemFrames = {
     'item_walk_item1': 12,
     'item_walk_item2': 12,
     'item_walk_item3': 15,
-    'item_walk_item4': 12
+    'item_walk_item4': 8,
+    'item_walk_item5': 12,
+    'item_walk_item6': 1
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -304,7 +310,8 @@ function loadHoc2015(skin, assetUrl) {
   skin.item_walk_item2 = skin.assetUrl('walk_item2.png');
   skin.item_walk_item3 = skin.assetUrl('walk_item3.png');
   skin.item_walk_item4 = skin.assetUrl('walk_item4.png');
-
+  skin.item_walk_item5 = skin.assetUrl('walk_item5.png');
+  skin.item_walk_item6 = skin.assetUrl('walk_item6.png');
 
   skin.background1 = {
     background: skin.assetUrl('background_background1.jpg'),
@@ -448,6 +455,8 @@ function loadHoc2015(skin, assetUrl) {
     [msg.itemItem2(), '"item_walk_item2"'],
     [msg.itemItem3(), '"item_walk_item3"'],
     [msg.itemItem4(), '"item_walk_item4"'],
+    [msg.itemItem5(), '"item_walk_item5"'],
+    [msg.itemItem6(), '"item_walk_item6"'],
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
