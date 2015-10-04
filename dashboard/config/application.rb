@@ -14,7 +14,7 @@ require 'shared_resources'
 require 'net_sim_api'
 require 'cdo/rack/whitelist_cookies'
 require 'cdo/session'
-require '../../../cookbooks/cdo-varnish/libraries/http_cache'
+require '../cookbooks/cdo-varnish/libraries/http_cache'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
@@ -37,7 +37,7 @@ module Dashboard
     config.middleware.insert_after SharedResources, NetSimApi
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
-      config.middleware.insert_after SharedResources, PegasusSites
+      config.middleware.insert_after VarnishEnvironment, PegasusSites
     end
 
     require 'cdo/rack/upgrade_insecure_requests'
