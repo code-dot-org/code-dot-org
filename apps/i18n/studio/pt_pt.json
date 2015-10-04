@@ -36,7 +36,7 @@
   "defaultSayText": "digita aqui",
   "dropletBlock_addItemsToScene_description": "Add new items to the scene.",
   "dropletBlock_addItemsToScene_param0": "type",
-  "dropletBlock_addItemsToScene_param0_description": "The type of items to be added.",
+  "dropletBlock_addItemsToScene_param0_description": "The type of items to be added ('item_walk_item1', 'item_walk_item2', 'item_walk_item3', or ''item_walk_item4'.",
   "dropletBlock_addItemsToScene_param1": "count",
   "dropletBlock_addItemsToScene_param1_description": "The number of items to add.",
   "dropletBlock_changeScore_description": "Adicionar ou remover um ponto à pontuação.",
@@ -54,7 +54,7 @@
   "dropletBlock_setBackground_param0_description": "The name of the background image.",
   "dropletBlock_setItemActivity_description": "Set the activity mode for an item.",
   "dropletBlock_setItemActivity_param0": "index",
-  "dropletBlock_setItemActivity_param0_description": "The index (starting at 0) indicating which item's activity should change.",
+  "dropletBlock_setItemActivity_param0_description": "The type of items to be changed ('item_walk_item1', 'item_walk_item2', 'item_walk_item3', or ''item_walk_item4'.",
   "dropletBlock_setItemActivity_param1": "activity",
   "dropletBlock_setItemActivity_param1_description": "The name of the activity mode ('chaseGrid', 'roamGrid', or 'fleeGrid').",
   "dropletBlock_setItemSpeed_description": "Sets the speed for a set of items.",
@@ -465,5 +465,9 @@
   "whenTouchWallTooltip": "Execute the actions below when the actor touches a wall.",
   "whenUp": "quando clicar seta para cima",
   "whenUpTooltip": "Executar as seguintes ações quando clicar na seta para cima.",
-  "yes": "Sim"
+  "yes": "Sim",
+  "dropletBlock_whenTouchWalkItem5_description": "This function executes when the character touches items with type 'item_walk_item5'.",
+  "dropletBlock_whenTouchWalkItem6_description": "This function executes when the character touches items with type 'item_walk_item6'.",
+  "itemItem5": "Item5",
+  "itemItem6": "Item6"
 }
