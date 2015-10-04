@@ -1,3 +1,7 @@
+# Script for deploying an new Amazon EC2 frontend instance.
+# For details usage instructions, please see:
+# http://wiki.code.org/display/PROD/How+to+add+a+new+Frontend+server
+
 require 'aws-sdk'
 require_relative '../deployment'
 require 'net/ssh'
@@ -39,14 +43,21 @@ def execute_ssh_on_channel(ssh, command, exit_error_string)
 end
 
 options = {}
-username = Etc.getlogin
 
 OptionParser.new do |opts|
   opts.on('-e', '--environment ENVIRONMENT', 'Environment to add frontend to') do |env|
     options['environment'] = env
   end
 
+  opts.on('-n', '--name NAME', 'Name for newly added frontend instance') do |name|
+    options['name'] = name
+  end
+
   opts.on('-h', '--help', 'Print this') { puts options; exit }
+
+  opts.on('-u', '--username-override USERNAME', 'Username to log into gateway with') do |username|
+    options['username'] = username
+  end
 end.parse!
 
 unless ['production'].include?(options['environment'])
@@ -54,6 +65,10 @@ unless ['production'].include?(options['environment'])
 end
 
 raise OptionParser::MissingArgument, 'Environment is required' if options['environment'].nil?
+
+username = options['username'] || Etc.getlogin
+
+puts "Logging into gateway with username #{username}"
 
 Net::SSH.start('gateway.code.org', username) do |ssh|
   puts ssh.exec!('echo "Verifying connection to gateway"')
@@ -77,7 +92,8 @@ determined_instance_zone, instance_count = instance_distribution.min_by{|_, v| v
 
 puts "Using underscaled instance zone #{determined_instance_zone}"
 
-instance_name = "frontend-#{determined_instance_zone[-1, 1] + (instance_count + 1).to_s}"
+instance_name = options['name'] ||
+                "frontend-#{determined_instance_zone[-1, 1] + (instance_count + 1).to_s}"
 
 puts "Naming instance #{instance_name}, verifying that the name is okay"
 
@@ -203,3 +219,6 @@ Net::SSH.start('gateway.code.org', username) do |ssh|
 
   ssh.exec!("rm /tmp/*#{file_suffix}*")
 end
+
+puts "To deploy new chef instance, run on gateway:"
+puts "knife bootstrap #{private_dns_name} -x ubuntu --sudo -E production -N #{instance_name} -r role[front-end]"
