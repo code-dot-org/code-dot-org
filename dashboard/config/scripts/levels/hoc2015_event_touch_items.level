@@ -48,7 +48,7 @@
     "failure_condition": "function () {\r\n}",
 
     "embed": "false",
-    "instructions": "\"Now it's time to catch some characters.\"<br/><br/>Use setItemActivity to make the items move around, and whenTouchItem to do something when you touch them. Then, capture them!",
+    "instructions": "\"Touch a character to make new characters appaer.\"<br/><br/>Use setItemActivity to make the items move around, and whenTouchItem to do something when you touch them. Then, capture them!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
