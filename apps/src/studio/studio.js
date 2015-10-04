@@ -340,23 +340,42 @@ var drawMap = function () {
     }
   }
 
+  var numFrames = 1;
+  if (level.goalOverride && 
+      level.goalOverride.goalAnimation && 
+      skin.animatedGoalFrames) {
+    numFrames = skin.animatedGoalFrames;
+  }
+
   if (Studio.spriteGoals_) {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
       // Add finish markers.
+
+      var width =
+        ((level.goalOverride && level.goalOverride.imageWidth) || Studio.MARKER_WIDTH);
+
+      var height = 
+        (level.goalOverride && level.goalOverride.imageHeight) || Studio.MARKER_HEIGHT;
+
       var finishClipPath = document.createElementNS(SVG_NS, 'clipPath');
       finishClipPath.setAttribute('id', 'finishClipPath' + i);
       var finishClipRect = document.createElementNS(SVG_NS, 'rect');
       finishClipRect.setAttribute('id', 'finishClipRect' + i);
-      finishClipRect.setAttribute('width', Studio.MARKER_WIDTH);
-      finishClipRect.setAttribute('height', Studio.MARKER_HEIGHT);
+      finishClipRect.setAttribute('width', width);
+      finishClipRect.setAttribute('height', height);
       finishClipPath.appendChild(finishClipRect);
       svg.appendChild(finishClipPath);
 
+      width = numFrames * 
+        ((level.goalOverride && level.goalOverride.imageWidth) || Studio.MARKER_WIDTH);
+
+      height = 
+        (level.goalOverride && level.goalOverride.imageHeight) || Studio.MARKER_HEIGHT;
+
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
-      spriteFinishMarker.setAttribute('height', Studio.MARKER_HEIGHT);
-      spriteFinishMarker.setAttribute('width', (level.goalOverride &&
-        level.goalOverride.imageWidth) || Studio.MARKER_WIDTH);
+      spriteFinishMarker.setAttribute('width', width);
+      spriteFinishMarker.setAttribute('height', height);
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
       svg.appendChild(spriteFinishMarker);
     }
@@ -713,6 +732,17 @@ function sortDrawOrder() {
     itemsArray.push(tile);
   }
 
+  // Add goals.
+  for (i = 0; i < Studio.spriteGoals_.length; i++) {
+    var goal = {};
+    goal.element = document.getElementById('spriteFinish' + i);
+    var goalHeight = skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
+    goal.y = Studio.spriteGoals_[i].y + goalHeight;
+    itemsArray.push(goal);
+  }
+
+  // Now sort everything by y.
+
   itemsArray = _.sortBy(itemsArray, 'y');
 
   for (i = 0; i < itemsArray.length; ++i) {
@@ -861,6 +891,9 @@ Studio.onTick = function() {
 
     // Display sprite:
     Studio.displaySprite(i, isWalking);
+
+    // Animate goals
+    Studio.animateGoals();
 
     var sprite = Studio.sprite[i];
     if (level.gridAlignedMovement &&
@@ -1789,22 +1822,25 @@ Studio.reset = function(first) {
   Studio.createLevelItems(svg);
 
   var goalAsset = skin.goal;
-  if (level.goalOverride && level.goalOverride.goal) {
-    goalAsset = skin[level.goalOverride.goal];
+  if (level.goalOverride && level.goalOverride.goalAnimation) {
+    goalAsset = skin[level.goalOverride.goalAnimation];
   }
+
   for (i = 0; i < Studio.spriteGoals_.length; i++) {
     // Mark each finish as incomplete.
     Studio.spriteGoals_[i].finished = false;
 
     // Move the finish icons into position.
+    var offsetX = skin.goalRenderOffsetX || 0;
+    var offsetY = skin.goalRenderOffsetY || 0;
     var spriteFinishIcon = document.getElementById('spriteFinish' + i);
-    spriteFinishIcon.setAttribute('x', Studio.spriteGoals_[i].x);
-    spriteFinishIcon.setAttribute('y', Studio.spriteGoals_[i].y);
+    spriteFinishIcon.setAttribute('x', Studio.spriteGoals_[i].x + offsetX);
+    spriteFinishIcon.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
     spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
       'xlink:href', goalAsset);
     var finishClipRect = document.getElementById('finishClipRect' + i);
-    finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x);
-    finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y);
+    finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x + offsetX);
+    finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
   }
 
   sortDrawOrder();
@@ -2767,6 +2803,33 @@ Studio.displayScore = function() {
     });
   }
   score.setAttribute('visibility', 'visible');
+};
+
+Studio.animateGoals = function() {
+  if (!(level.goalOverride && level.goalOverride.goalAnimation)) {
+    return;
+  }
+
+  var currentTime = new Date();
+  var elapsed = currentTime - Studio.startTime;
+
+  var numFrames = skin.animatedGoalFrames;
+  var frameDuration = skin.timePerGoalAnimationFrame;
+  var frameWidth = level.goalOverride.imageWidth;
+
+  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
+    var goal = Studio.spriteGoals_[i];
+    if (!goal.finished) {
+
+      var goalSprite = document.getElementById('spriteFinish' + i);
+      var goalClipRect = document.getElementById('finishClipRect' + i);
+
+      var baseX = parseInt(goalClipRect.getAttribute('x'), 10);
+      var frame = Math.floor(elapsed / frameDuration) % numFrames;
+  
+      goalSprite.setAttribute('x', baseX - frame * frameWidth);
+    }
+  }
 };
 
 /**
@@ -4084,17 +4147,25 @@ Studio.timedOut = function() {
  * Tests whether the sprite is currently at the goal sprite.
  */
 function spriteAtGoal(sprite, goal) {
+  var goalWidth = skin.goalCollisionRectWidth || Studio.MARKER_WIDTH;
+  var goalHeight = skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
+
   var finishCollisionDistance = function (yAxis) {
     var dim1 = yAxis ? sprite.height : sprite.width;
-    var dim2 = yAxis ? Studio.MARKER_HEIGHT : Studio.MARKER_WIDTH;
+    var dim2 = yAxis ? goalHeight : goalWidth;
+
     return constants.FINISH_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
   };
 
-  var xSpriteCenter = sprite.x + sprite.width / 2;
-  var ySpriteCenter = sprite.y + sprite.height / 2;
+  var xSpriteCenter = sprite.x + (skin.itemCollisionRectWidth || sprite.width) / 2;
+  var ySpriteCenter = sprite.y + (skin.itemCollisionRectHeight || sprite.height) / 2;
 
-  var xFinCenter = goal.x + Studio.MARKER_WIDTH / 2;
-  var yFinCenter = goal.y + Studio.MARKER_HEIGHT / 2;
+  var xFinCenter = goal.x + goalWidth / 2;
+  var yFinCenter = goal.y + goalHeight / 2;
+
+  Studio.drawDebugRect("goalCollisionSprite", xSpriteCenter, ySpriteCenter, sprite.width, sprite.height);
+  Studio.drawDebugRect("goalCollisionGoal", xFinCenter, yFinCenter, goalWidth, goalHeight);
+
   return collisionTest(xSpriteCenter,
     xFinCenter,
     finishCollisionDistance(false),
