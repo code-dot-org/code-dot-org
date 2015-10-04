@@ -1,18 +1,20 @@
 # Rack middleware that whitelists cookies based on path-based cache behaviors.
 # Behaviors are defined in http cache config.
-require '../../../cookbooks/cdo-varnish/libraries/helpers'
+require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
+require 'active_support/core_ext/hash/slice'
 
 module Rack
   class WhitelistCookies
     attr_reader :config
 
-    def initialize(app, options = {})
+    def initialize(app, config)
       @app = app
-      @config = options[:config]
+      @config = config
     end
 
     def call(env)
-      path     = Rack::Request.new(env).path
+      request = Rack::Request.new(env)
+      path     = request.path
       behavior = behavior_for_path((config[:behaviors] + [config[:default]]), path)
       cookies = behavior[:cookies]
       # Pass all cookies
@@ -22,15 +24,17 @@ module Rack
       if cookies == 'none'
         env.delete 'HTTP_COOKIE'
         status, headers, body = @app.call(env)
-        headers.delete'Set-Cookie'
+        headers.delete 'Set-Cookie'
         return [status, headers, body]
       end
 
-      # Strip all cookies not in whitelist
-      env.delete('HTTP_COOKIE') if included
-
+      # Strip all request cookies not in whitelist
+      request_cookies = request.cookies
+      request_cookies.slice!(*cookies)
+      cookie_str = request_cookies.map{|k,v|"#{k}=#{v}"}.join('; ')
+      env['HTTP_COOKIE'] = cookie_str
+      env['rack.request.cookie_string'] = cookie_str
       status, headers, body = @app.call(env)
-      headers.delete('Set-Cookie') if included
 
       [status, headers, body]
     end
