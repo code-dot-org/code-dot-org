@@ -1,4 +1,4 @@
-/* global dashboard, appOptions, $, trackEvent */
+/* global dashboard, appOptions, trackEvent */
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -115,7 +115,12 @@ var projects = module.exports = {
       if (err) {
         throw err;
       }
-      $('.admin-abuse-score').text(0);
+      assets.patchAll(id, 'abuse_score=0', null, function (err, result) {
+        if (err) {
+          throw err;
+        }
+        $('.admin-abuse-score').text(0);
+      });
     });
   },
 
@@ -336,7 +341,7 @@ var projects = module.exports = {
   save: function(sourceAndHtml, callback, forceNewVersion) {
 
     // Can't save a project if we're not the owner.
-    if (current && !current.isOwner) {
+    if (current && current.isOwner === false) {
       return;
     }
 
@@ -587,7 +592,7 @@ function fetchSource(data, callback) {
 
 function fetchAbuseScore(callback) {
   channels.fetch(current.id + '/abuse', function (err, data) {
-    currentAbuseScore = (data && data.abuseScore) || currentAbuseScore;
+    currentAbuseScore = (data && data.abuse_score) || currentAbuseScore;
     callback();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't

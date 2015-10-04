@@ -39,7 +39,7 @@ saucelabs_authkey: 'xxxxxx-xxxx-xxxx-xxx-xxxxxxxxx'
 
 ````
 
-You can find the values for these settings in your saucelabs [account settings](https://saucelabs.com/beta/user-settings).
+You can find the values for these settings in your saucelabs account.  It says "welcome, [username]" up top, and the access key is at the bottom of the grey box on the left.
 
 #### Saucelabs tunnel
 

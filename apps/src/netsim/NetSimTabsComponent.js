@@ -16,7 +16,6 @@
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var buildMarkup = require('./NetSimTabsComponent.html.ejs');

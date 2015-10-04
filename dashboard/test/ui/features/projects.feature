@@ -38,9 +38,10 @@ Scenario: Applab Flow
 
   # now we're at /projects/applab/channel_id
   Then I navigate to the share URL
-  And I wait to see "#open-workspace"
+  And I wait to see "#footerDiv"
   And element "#codeWorkspace" is hidden
-  Then I click selector "#open-workspace"
+  And I press the first "#footerDiv .more-link" element
+  And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How It Works']"
 
   # We'll originally go to /view, then get pushStated to /edit
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "pushState"
@@ -49,9 +50,10 @@ Scenario: Applab Flow
 
   Then I am on "http://studio.code.org/users/sign_out"
   And I navigate to the last shared URL
-  And I wait to see "#open-workspace"
+  And I wait to see "#footerDiv"
   And element "#codeWorkspace" is hidden
-  Then I click selector "#open-workspace"
+  And I press the first "#footerDiv .more-link" element
+  And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How It Works']"
 
   # Don't actually get redirect this time (stay on /view)
   And I get redirected to "/projects/applab/([^\/]*?)/view" via "nothing"
