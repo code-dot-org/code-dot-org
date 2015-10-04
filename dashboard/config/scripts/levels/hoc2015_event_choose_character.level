@@ -43,7 +43,7 @@
     "failure_condition": "function () {\r\n}",
 
     "embed": "false",
-    "instructions": "\"I will now choose who to direct, and where they do it.\"<br/><br/>Customize your game by choosing the bot and the background.",
+    "instructions": "\"Bot1 or Bot2, I need one of you to venture into either environment1, environment2, or environment3.\"<br/><br/>Customize your game by choosing the bot and the background.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

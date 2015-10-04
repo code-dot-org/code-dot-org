@@ -50,7 +50,7 @@
     "failure_condition": "function () {\r\n}",
 
     "embed": "false",
-    "instructions": "\"Surprising things can happen in this world.\"<br/><br/>We can change character behavior at any time. Change the characters to a new random movement every time you touch one.",
+    "instructions": "\"Change your speed when you touch a character.\"<br/><br/>You can change character behavior at any time. Change the characters to a new random movement every time you touch one.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

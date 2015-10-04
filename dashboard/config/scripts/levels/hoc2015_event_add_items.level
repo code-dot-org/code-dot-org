@@ -44,7 +44,7 @@
     "failure_condition": "function () {\r\n}",
 
     "embed": "false",
-    "instructions": "\"It looks like there are other characters arriving.\"<br/><br/>Use the addItemsToScene command to add new characters to the game.",
+    "instructions": "\"Bot1, look at those other characters standing around you.\"<br/><br/>Use the addItemsToScene command to add new characters to the game.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
