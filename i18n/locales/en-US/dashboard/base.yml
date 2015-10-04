@@ -302,6 +302,8 @@ en:
       section: crwdns39080:0crwdne39080:0
       example: crwdns45368:0crwdne45368:0
       example_with_number: 'crwdns45369:0%{solution_number}crwdne45369:0'
+      submitted_on: 'crwdns49667:0%{date}crwdne49667:0'
+      unsubmit: crwdns49668:0crwdne49668:0
   user:
     email_confirm_needed: crwdns4342:0crwdne4342:0
     email_confirm_needed_required: 'crwdns33866:0%{email}crwdne33866:0'
@@ -390,6 +392,7 @@ en:
     tos: crwdns5338:0crwdne5338:0
     privacy: crwdns3901:0crwdne3901:0
     secure: crwdns5339:0crwdne5339:0
+    report_abuse: crwdns49669:0crwdne49669:0
   reference_area:
     title: crwdns2625:0crwdne2625:0
     subtitle: crwdns3090:0crwdne3090:0
@@ -601,3 +604,19 @@ en:
       tos: crwdns48359:0crwdne48359:0
       contact_us: crwdns48360:0crwdne48360:0
       go_to_code_studio: crwdns48361:0crwdne48361:0
+      report_abuse_form:
+        intro: crwdns49670:0crwdne49670:0
+        validation:
+          email: crwdns49671:0crwdne49671:0
+          age: crwdns49672:0crwdne49672:0
+          abuse_type: crwdns49673:0crwdne49673:0
+          abuse_detail: crwdns49674:0crwdne49674:0
+        abusive_url: crwdns49675:0crwdne49675:0
+        abuse_type:
+          question: 'crwdns49676:0%{link_start}crwdnd49676:0%{link_end}crwdne49676:0'
+          harassment: crwdns49677:0crwdne49677:0
+          offensive: crwdns49678:0crwdne49678:0
+          infringement: crwdns49679:0crwdne49679:0
+          other: crwdns49680:0crwdne49680:0
+        detail: crwdns49681:0crwdne49681:0
+        acknowledge: 'crwdns49682:0%{link_start_privacy}crwdnd49682:0%{link_end}crwdnd49682:0%{link_start_tos}crwdnd49682:0%{link_end}crwdne49682:0'

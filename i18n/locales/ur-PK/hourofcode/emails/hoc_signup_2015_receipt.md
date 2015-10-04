@@ -18,19 +18,19 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 ## 2. آپنے پورے اسکول کو ایک گھنٹے کے کوڈ کی پیشکش دیں۔
 
-[بھیجئے یہ ای میل](http://<%= hostname %>/resources#email) اپنے پرنسپل کو۔
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## 3. اپنے ایمپلائر کو ملوث/شامل ہونے کے لئے پوچھیں/کہے۔
 
-[بھیجئے یہ ای میل](http://<%= hostname %>/resources#email) اپنے مینیجر، یا سی۔ای۔او۔ کو۔
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## ٤۔ اپنی کمیونٹی میں" آور آف کوڈ" کو فروغ دیں
 
-ایک مقامی گروپ کو بھرتی کریں، جیسے کے لڑکے یا لڑکیوں کے سکاؤٹس کلب، چرچ، یونیورسٹی، سابق فوجیوں کے گروپ یا مزدور یونین. یا اپنے پڑوس کے لئے آور آف کوڈ "بلاک پارٹی" کی میزبانی کریں۔ [یہ ای میل بھیجئے](http://<%= hostname %>/resources#email).
+ایک مقامی گروپ کو بھرتی کریں، جیسے کے لڑکے یا لڑکیوں کے سکاؤٹس کلب، چرچ، یونیورسٹی، سابق فوجیوں کے گروپ یا مزدور یونین. یا اپنے پڑوس کے لئے آور آف کوڈ "بلاک پارٹی" کی میزبانی کریں۔ [Send this email](https://<%= hostname %>/resources#email).
 
 ## 5. کوڈ کی گھڑی کی حمایت کرنے کے لئے ایک مقامی منتخب اہلکار سے کہیں/پوچھیں۔
 
-[یہ ای میل بھیجئے](http://<%= hostname %>/resources#politicians)اپنے شہر کے ناظم، سٹی کونسل، یا اسکول بورڈ کو اور انھیں اپنے اسکول کا دورہ کرنے کے لئے مدعو کریں۔
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 

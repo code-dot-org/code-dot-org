@@ -560,3 +560,763 @@
           valtakunnan rajoja, vasemmalle ja oikealle jatkuvasti. Oppiessasi miten
           toista -komennot toimivat, tulet säästämään huomattavasti aikaasi  kun myöhemmin
           rakennat omaa peliäsi.
+    C1_artist_intro:
+      1:
+        image: notes/C1_artist_intro_1.png
+        text: These are your draw blocks. Use the correct one to move the artist where
+          he needs to go to fill in the grey lines.
+      2:
+        image: notes/C1_artist_intro_2.png
+        text: These are jump blocks. When you use these, your artist moves but doesn't
+          draw, so use these to jump to the next grey line.
+    C1_bee_level_intro:
+      1:
+        image: notes/C1_bee_level_intro_1.png
+        text: Aren't bees super cool? In this next set of puzzles, your goal is to
+          help the bee get to the flowers and get nectar from the flowers and fly
+          over to the honeycomb to make honey. You'll need to use the "get nectar"
+          and the "make honey" blocks for this exercise.
+      2:
+        image: notes/C1_bee_level_intro_2.png
+        text: 'Every flower has a different number of nectars: 1, 2, 3, or more. We
+          know how much nectar is in the red flowers, by the little number in the
+          corner. So be sure to get all the nectar from the flower before you move
+          forward. Also, every honeycomb can only hold so much honey: 1, 2, 3, or
+          more. So be sure to make as much honey as the honeycomb can hold.'
+      3:
+        image: notes/C1_bee_level_intro_3.png
+        text: If you're able to get all the nectar and make all the honey, you succeed
+          and go to the next level. Otherwise, you need to try this puzzle again.
+          Play around a while and see what it feels like to "bee" a programmer!
+    C1_bee_loops:
+      1:
+        image: notes/C1_bee_loops_1.png
+        text: A loop is a repetition of activity. So going into a hive to inspect,
+          I look at a frame and then I put it back, so I repeat that same activity
+          multiple times. It's looping around, doing the same activity multiple times.
+      2:
+        image: notes/C1_bee_loops_2.png
+        text: In this level, we want the bee to collect three nectars from the flower.
+          Instead of using three "get nectar" blocks, you're going to use the repeat
+          block to get nectar three times. Hit "Run" and see if you got it right.
+          Nice!
+    C1_bigevent_unplugged:
+      1:
+        image: notes/C1_bigevent_unplugged_1.png
+        text: This lesson is called the big event. It's all about how we can control
+          our programs and actually change the way a program runs on the fly using
+          events, like the push of a button or the click of a mouse.
+      2:
+        image: notes/C1_bigevent_unplugged_2.png
+        text: For this lesson, you'll be controlled with a paper remote control. It's
+          just like a real-live video game.
+      3:
+        image: notes/C1_bigevent_unplugged_3.png
+        text: An event is an action  that causes something to happen. It's like when
+          you click the button on a mouse and a webpage loads. That's an event. When
+          you touch your screen on a tablet to scroll, that's an event also. Events
+          are a great way of letting the user direct your program whenever they need
+          or want to.
+      4:
+        image: notes/C1_bigevent_unplugged_4.png
+        text: Things happen that we all respond to. We feel hungry and we go to the
+          fridge. We hear the mailman come and he puts our mail in the mailbox  and
+          then we go get our mail. Those are just like the events of pushing a button
+          or moving a joystick. They are something that happens that triggers us to
+          do something.
+      5:
+        image: notes/C1_bigevent_unplugged_5.png
+        text: In video games, there's an event called "Update" and it happens 30 or
+          60 times a second. For videogame programmers that's almost more important
+          as an event than the buttons or the joystick.
+      6:
+        image: notes/C1_bigevent_unplugged_6.png
+        text: The main event we're watching for is that "Update" tick happening. And
+          then we check the joystick in the tick. So we say, "Oh, has somebody pushed
+          the button this frame? Yes or no?" Without events, the player couldn't move,
+          you couldn't jump, you wouldn't be able to control what's going on. The
+          videogame wouldn't be able to animate anything.
+    C1_building_foundation:
+      1:
+        image: notes/C1_building_foundation_1.jpg
+        text: In sand sculpture you've got to know that failure is part of the program.
+          But if you're persist, it's just going to get nothing but better and more
+          exciting for you.Persistence is the name of the game. Stay with it, you'll
+          love it.
+      2:
+        image: notes/C1_building_foundation_2.jpg
+        text: This lesson is called building a foundation. In this lesson, we'll work
+          on a task that is meant to be really difficult. You will figure out how
+          to make a structure at least as tall as one of these cups and it's got to
+          be strong enough to hold the weight of a book.
+      3:
+        image: notes/C1_building_foundation_3.jpg
+        text: There might be times that our creation doesn't work out. There might
+          be times that we get frusrated and want to give up. There might be a lot
+          of those moments. But if we keep on trying, give it our best shot over and
+          over again, then we're sure to get it before long.
+      4:
+        image: notes/C1_building_foundation_4.jpg
+        text: Persistence is all about hanging in there when you really want to give
+          up. If you want to create something new and different, there's going to
+          be a lot of failures along the way.
+      5:
+        image: notes/C1_building_foundation_5.jpg
+        text: The trick to persistence is choosing to keep on going and learn from
+          your failures instead of quitting because you're frustrated. Frustration
+          actually just means there's something wonderful around the corner. So don't
+          quit before you get to it. Wooo!
+    C1_getting_loopy:
+      1:
+        image: notes/C1_getting_loopy_1.png
+        text: Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work,
+          there is something we use in both dances and in programming lightsuits.
+          And that is loops! Loops are repeating an action over and over.
+      2:
+        image: notes/C1_getting_loopy_2.png
+        text: When you repeat something multiple times, like my actions to keep the
+          hula hoop spinning, I'm performing a loop of that action. This is a loop.
+          This is a loop. And this is a loop.
+      3:
+        image: notes/C1_getting_loopy_3.png
+        text: Today we're going to have a dance party. We'll act out loops with a
+          new dance. The Iteration. We're going to learn about loops using a dance.
+          You will learn a couple of easy steps and repeat them over and over to complete
+          the dance.
+      4:
+        image: notes/C1_getting_loopy_4.png
+        text: Here are the steps you need to learn. Clap your hands. Put your hands
+          behind your head. Put your hands on your waist. Lift your left hand up.
+          Lift your right hand up. Pretty simple, right? You will discover that you
+          can shorten the directions by putting some dance steps in loops.
+      5:
+        image: notes/C1_getting_loopy_5.png
+        text: We actually do use loops in our dancing. The dancers are wearing computers,
+          all in the same network. I might loop the lights through to the same dancers
+          over and over again. In the loop I might have an iteration where I'll say
+          you want to go loop through these six dancers over and over again and then
+          within the loop you want to increase the speed of the light. And that's
+          all created through loops. Loops are important in computer science because
+          they make our work shorter and easier.
+    C1_happy_maps_unplugged:
+      1:
+        image: notes/C1_happy_maps_unplugged_1.png
+        text: This lesson is called Happy Maps. Today we're gonna help our furry little
+          friend Flurb get to her fruit.
+      2:
+        image: notes/C1_happy_maps_unplugged_2.png
+        text: Make your Flurb go to your fruit. To do this you'll need to figure out
+          which way the Flurb needs to go and direct her with arrows. In order for
+          the Flurb to get to the apple, what direction does the Flurb have to go?
+          Line to make it go up.
+      3:
+        image: notes/C1_happy_maps_unplugged_3.png
+        text: To get it there you circle the direction that it has to go.
+      4:
+        image: notes/C1_happy_maps_unplugged_4.png
+        text: Create your algorithm by gluing arrows next to the map that you're trying
+          to solve. The second one it's the same but it's going down.
+      5:
+        image: notes/C1_happy_maps_unplugged_5.png
+        text: It's like programming with paper. And that's it!
+    C1_maze_debugging:
+      1:
+        image: notes/C1_maze_debugging_1.png
+        text: Debugging is finding and fixing problems. There are lots of ways to
+          debug problems. One of the easiest is to move step by step until where you
+          find where something goes wrong. Here I'm trying to do a back handspring
+          on the beam but I keep falling off.
+      2:
+        image: notes/C1_maze_debugging_2.png
+        text: I walked through each part step by step and realized where my mistake
+          was. I wasn't putting my hands on the beam correctly. So I tried another
+          back handspring on the beam with my new hand position and I got it. I was
+          really glad I debugged my back handspring.
+      3:
+        image: notes/C1_maze_debugging_3.png
+        text: To learn about debugging, we start with a set of blocks already on the
+          stage. You'll notice that these blocks won't get you to the goal. We need
+          to debug the solution and fix it. What went wrong? You'll notice that you
+          needed to keep going west one more block.
+      4:
+        image: notes/C1_maze_debugging_4.png
+        text: Let's fix this by adding another west block and hitting run to see if
+          you got it right. Yay, you got it!
+    C1_maze_intro_sequencing:
+      1:
+        image: notes/C1_maze_intro_sequencing_1.png
+        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle
+          and see what directions it needs to take.
+      2:
+        image: notes/C1_maze_intro_sequencing_2.png
+        text: You need to drag the blocks over from the toolbox to the workspace.
+          Make sure it's under the "when run" block and when you think you've got
+          the right solution, then you can click "Run" and watch the bird go to the
+          pig.
+    C1_maze_loops:
+      1:
+        image: notes/C1_maze_loops_1.png
+        text: One that computers are really good at is repeating commands. As a person,
+          you'd get really bored if you had to do the same thing lots and lots of
+          times in a row. But a computer can do the same thing millions or even billions
+          of times and not get bored and be able to carry that out really well.
+      2:
+        image: notes/C1_maze_loops_2.png
+        text: For example, if I wanted to wish everyone on Facebook a happy birthday
+          by sending them an email, it might take me more than century to actually
+          write out all those emails to everyone. But with just a few lines of code,
+          I can have a system send an email to everyone on Facebook wishing them a
+          happy birthday.
+      3:
+        image: notes/C1_maze_loops_3.png
+        text: To get the bird to the pig in this level... rather than drag three North
+          blocks on to the workspace, you will use the "repeat" block. Drag the "repeat"
+          block on to the workspace and enter the number 3. Then drag the "move North"
+          block into the "repeat" block and hit "Run" to see if you got it right.
+          Congratulations, you got it!
+    C1_moveitmoveit_unplugged:
+      1:
+        image: notes/C1_moveitmoveit_unplugged_1.png
+        text: This lesson is called move it, move it. Together we're going to write
+          a program to get our friends from the starting with the compass rose to
+          the smiley face goal.
+      2:
+        image: notes/C1_moveitmoveit_unplugged_2.png
+        text: But the smiley is face down and only one person knows how to get there.
+          Let's get this program started.
+      3:
+        image: notes/C1_moveitmoveit_unplugged_3.png
+        text: A program is an algorithm that has been coded into something that can
+          be run by a machine. Most of us think of a program as something that we
+          write for a computer. Programs are really good for that but they're also
+          helpful in other places. You can make your own game or even program a robot
+          to do things for you.
+    C1_going_places_safely:
+      1:
+        image: notes/C1_going_places_safely_1.png
+        text: My name is Jeremiah. Hi! I am seven years old. I love playing on my
+          mom's computer but I always get permission first. "Mom, can I go on the
+          computer? Sure honey!"
+      2:
+        image: notes/C1_going_places_safely_2.png
+        text: I love my mom's computer because I can go on the internet. The internet
+          is kind of like your neighborhood. You can visit cool places, you can talk
+          to family and friends and you can learn lots of new things.
+      3:
+        image: notes/C1_going_places_safely_3.png
+        text: Yesterday, I visited a zoo that's near my house. I saw a baby zebra.
+          I took her picture and changed the color of her stripes, then added a hat
+          and added it to my collection of wacky animals. Awesome! Later, I went to
+          a place far far away. I visited Kenya. That's a country in Africa. Lots
+          of zebras live there.
+      4:
+        image: notes/C1_going_places_safely_4.png
+        text: Sometimes on the internet I talk to peeople I know, like my grandma
+          who lives in another state. Hi grandma! She's making me cookies that she'll
+          send me for my birthday. "Yummy, I wish the internet had smellorama!" I
+          can talk to different people on the internet, like my cousin but I only
+          talk to people I know.
+      5:
+        image: notes/C1_going_places_safely_5.png
+        text: What I like most on the interent is that I get to play fun games. Score!
+          I also like to draw and create new things and share it with my friends.
+          Cool! Sometimes I visit websites where I learn new things but I always stick
+          to websites that are just right for me. Wow, dinosaurs!
+      6:
+        image: notes/C1_going_places_safely_6.png
+        text: 'The internet is a super fun place. But just like when you cross a street
+          in your neighborhood, you also have to be careful when you go online. Here
+          are three rules to remember. Rule number 1: Always ask your parents first.
+          Rule number 2: Only talk to people you know. Rule number 3: Stick to places
+          that are just right for you.'
+      7:
+        image: notes/C1_going_places_safely_7.png
+        text: Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to
+          log on again to see where I can visit next.
+    C1_pair_programming:
+      1:
+        image: notes/C1_pair_programming_1.png
+        text: Today we're going to learn about Pair Programming. In pair programming
+          you work as a team. Why should two people use one computer? Because two
+          heads are better than one. In pair programming you and your partner are
+          going to sit down together at one computer and you are both going to work
+          on the same project.
+      2:
+        image: notes/C1_pair_programming_2.png
+        text: In pair programming, one person is the driver and the other person is
+          the navigator, just like driving a car. The driver sits at the computer
+          and is the one using the keyboard and mouse or touchscreen and controlling
+          the main actions of the computer. The other person is the navigator. The
+          navigator helps the driver by answering the driver's questions and pointing
+          out potential problems or mistakes.
+      3:
+        image: notes/C1_pair_programming_3.png
+        text: Communication is key to successful pair programming. No insults, be
+          respectful, don't be a bossy navigator, because nobody likes a backseat
+          driver. You and your partner should always be talking. The driver can explain
+          what she or he is doing. And the navigator can help suggest what to do next.
+      4:
+        image: notes/C1_pair_programming_4.png
+        text: The navigator should be thinking about the big picture and the driver
+          focuses on the details. Both roles are important. Pair programming is all
+          about working together as a team.
+    C1_planting_seed:
+      1:
+        image: notes/C1_planting_seed_1.png
+        text: This lesson is called planting a seed and it's going to help us understand
+          algorithms. Algorithms are specific instructions that explain the order
+          in which to do something. Even everyday things like eating breakfast or
+          brushing your teeth are algorithms that require small steps to get a job
+          done.
+      2:
+        image: notes/C1_planting_seed_2.png
+        text: Computers can be really smart but they can only understand you if you
+          tell them exactly what you want step by step. The great thing about algorithms
+          is that if you follow the instructions in order, you can do something that
+          you didn't know how to do ahead of time. It's like following a recipe.
+      3:
+        image: notes/C1_planting_seed_3.png
+        text: Today we're going to plant our own seeds using an algorithm. Create
+          your own algorithm by cutting apart the pictures. Select the pictures that
+          show steps in planting a seed and arrange those pictures in the correct
+          order.
+      4:
+        image: notes/C1_planting_seed_4.png
+        text: Now, it's time for you to see if your algorithm works. Follow the steps
+          in the algorithm very carefully. Are they in the correct order? Did you
+          succeed in planting a seed by following the algorithm? It's like programming
+          with pictures!
+      5:
+        image: notes/C1_planting_seed_5.png
+        text: When we want to make chocolate, there are many big steps to that process
+          and each of those big steps has a set of smaller steps and there are different
+          recipes or algorithms depending on how we want the chocolate to taste. Each
+          step is important, even the small ones, so that without one step, the rest
+          of them cannot be completed. Creating algorithms that others can understand
+          is really important. That's why each step has to be written down so that
+          no matter who does it, the result is the same.
+    C1_playlab_storytelling:
+      1:
+        image: notes/C1_playlab_storytelling_1.png
+        text: Time to get creative and use your coding skills to tell a story. Your
+          story will have actors and you will be able to make these actors talk and
+          interact with each other. Start thinking of what kind of story you want
+          to tell.
+      2:
+        image: notes/C1_playlab_storytelling_2.png
+        text: The cat's always been afraid of the dog and what if the cat figures
+          out that the dog is trying to be nice? The "when run" block starts everything.
+          The "move" block will move your character and the "say" block will make
+          your character say whatever you type.
+      3:
+        image: notes/C1_playlab_storytelling_3.png
+        text: This is the "when actors collide" block which you can link up to the
+          other blocks.
+      4:
+        image: notes/C1_playlab_storytelling_4.png
+        text: I was making the dog come over and say "Hi" but then the cat got scared
+          so it ran away. "Ahh" If there was more time, it would have been a happy
+          ending. The end!
+    C1_spelling_bee_intro:
+      1:
+        image: notes/C1_spelling_bee_intro_1.png
+        text: This is the spelling bee level. Use the puzzle pieces to move the bee.
+          As it moves, it will collect letters to spell words.
+      2:
+        image: notes/C1_spelling_bee_intro_2.png
+        text: See if you can spell the word they give you in the box below the stage.
+          But bee careful! Moving the wrong direction will add letters you don't want.
+    C1_zuck_repeat_loop:
+      1:
+        image: notes/C1_zuck_repeat_loop_1.png
+        text: One that computers are really good at is repeating commands. As a person,
+          you'd get really bored if you had to do the same thing lots and lots of
+          times in a row. But a computer can do the same thing millions or even billions
+          of times and not get bored and be able to carry that out really well.
+      2:
+        image: notes/C1_zuck_repeat_loop_2.png
+        text: For example, if I wanted to wish everyone on Facebook a happy birthday
+          by sending them an email, it might take me more than century to actually
+          write out all those emails to everyone. But with just a few lines of code,
+          I can have a system send an email to everyone on Facebook wishing them a
+          happy birthday.
+      3:
+        image: notes/C1_zuck_repeat_loop_3.png
+        text: In this example, your goal is going to be to move the bird to get the
+          pig. Now, we're going to be able to use the repeat block in order to be
+          able to do this very easily. You can either do this by giving the computer
+          a move forward command five times in order to advance the bird one step
+          each time to the pig or you can just tell the computer to move forward once,
+          and then tell it to repeat that five times and it'll do the same thing.
+      4:
+        image: notes/C1_zuck_repeat_loop_4.png
+        text: In order to do this, you drag your move forward command and then you
+          put it inside the repeat block. And you can click on it and tell it how
+          many times you  to repeat the block to tell it how many steps you want it
+          to take forward.
+      5:
+        image: notes/C1_zuck_repeat_loop_5.png
+        text: One more thing is you can put as many commands as you want inside the
+          repeat block. So in this example, you're telling it to move forward and
+          turn left, which it'll do five times. Have fun!
+    C2_artist_intro:
+      1:
+        image: notes/C2_artist_intro_1.png
+        text: You wouldn't even qualify for the race if you don't have people who
+          are proficient in computer science because of how much data the cars collect
+          and the necessity to be able to have people that can write programs to figure
+          out how you continue to figure out how to build performance.
+      2:
+        image: notes/C2_artist_intro_2.png
+        text: In these puzzles, you'll be an artist that uses a pencil to draw different
+          shapes. Wherever your artist goes, it will draw a line behind you.
+      3:
+        image: notes/C2_artist_intro_3.png
+        text: To move around the canvas, you'll use the move forward block. Here the
+          move forward block says move forward by 100 pixels. When we hit run, what
+          happens? The artist moves forward a certain amount and that amount is 100
+          pixels. Pixels are basically very tiny squares on your computer screen.
+      4:
+        image: notes/C2_artist_intro_4.png
+        text: The other block we have in this puzzle says turn right by 90 degrees.
+          And when we drag that out that makes our artist turn a certain amount. So
+          you can play around with how far you want the artist to turn. This is a
+          90 degree turn.
+      5:
+        image: notes/C2_artist_intro_5.png
+        text: And this is a 120 degree turn. And remember, you can change these values
+          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
+          drawing with your artist!
+    C2_bee_conditionals:
+      1:
+        image: notes/C2_bee_conditionals_1.png
+        text: This is the conditional block. It says IF there is nectar or honey that
+          is less than, equal to or greater than a number, THEN do something.
+      2:
+        image: notes/C2_bee_conditionals_2.png
+        text: This is useful when we don't know how much nectar or honey to get, as
+          we see here with this question mark.
+      3:
+        image: notes/C2_bee_conditionals_3.png
+        text: In this example, we're going to say IF the purple flower has nectar
+          greater than 0, get nectar. That will tell our bee to keep getting nectar
+          as long as it's there. Ta-dah!
+    C2_binary_bracelets:
+      1:
+        image: notes/C2_binary_bracelets_1.png
+        text: This is the binary bracelets lesson. We are going to code our initials
+          on a bracelet we can wear and show all our friends!
+      2:
+        image: notes/C2_binary_bracelets_2.png
+        text: Binary is a way of representing information using only two options.
+          Sometimes people think of this as only 1s and 0s. But you can represent
+          binary with combinations of on or off, up and down, in and out or really
+          any set of opposites.
+      3:
+        image: notes/C2_binary_bracelets_3.png
+        text: Hi, I'm Orion and I program robots here at Play-im. All computer and
+          robot brains at their most fundamental level are little electronic gates.
+          When the gate is open, electricity can flow through and when it's closed,
+          electricity can't.
+      4:
+        image: notes/C2_binary_bracelets_4.png
+        text: An example of binary on the robot is the robot's eyes. The robot's eyes
+          are LEDs and those are lights that are either on or off. It's a binary system,
+          one or the other. We can use the lights to represent binary numbers. If
+          we have a set of robots, we can say that the first robot is the 1s place
+          and the second robot is the 2s place, the third robot is the 4s place and
+          so on. That's how you represent a binary number. The robots will do it with
+          their binary eyes and count it out for you.
+    C2_conditionals_with_cards:
+      1:
+        image: notes/C2_conditionals_with_cards_1.png
+        text: This lesson is called conditionals with cards. Every day you make decisions
+          based on what you see and hear.
+      2:
+        image: notes/C2_conditionals_with_cards_2.png
+        text: I want to walk to the park but first I have to decide whether I should
+          bring an umbrella or not. So I look out the window. If it's cloudy, I'm
+          going to take my umbrella. Else, I'll take some sunglasses. I think I'd
+          better take the umbrella. What I see and hear determines what I take to
+          the park.
+      3:
+        image: notes/C2_conditionals_with_cards_3.png
+        text: Conditionals are used in games too. Today we're going to practice using
+          conditionals with a card game. In this game, the card that I draw determines
+          what my friends are going to do. If I draw a seven, everyone claps. Else,
+          everyone says "awww." Let's try it! "Awww" "cheers"
+      4:
+        image: notes/C2_conditionals_with_cards_4.png
+        text: I bet you can make up games that are even more fun with conditionals.
+          Give it a try! Conditionals are what make computers seem smart. A computer
+          program that includes conditionals can react to the user and change its
+          course of action.
+      5:
+        image: notes/C2_conditionals_with_cards_5.png
+        text: Think about your favorite video game. Do you earn more points for some
+          actions than you do for others? This occurs because the computer is using
+          conditionals. It's the way a computer makes a decision. How about, if you
+          hit the target, you earn ten points. Else, you lose three. When you know
+          how conditionals work, you can create all kinds of exciting games.
+    C2_artist_debugging:
+      1:
+        image: notes/C2_artist_debugging_1.png
+        text: Here we already have some blocks out in our work space. But there is
+          something wrong.
+      2:
+        image: notes/C2_artist_debugging_2.png
+        text: Let's debug this code by slowing down the speed and watching it as it
+          goes through each block step by step.
+      3:
+        image: notes/C2_artist_debugging_3.png
+        text: Oh, there's the problem! The cat's whiskers are 75 pixels long, not
+          25.
+    C2_bee_debugging:
+      1:
+        image: notes/C2_bee_debugging_1.png
+        text: Have you ever heard of debugging a program? This is the way you figure
+          out what's not working. When you debug code, you identify and remove errors.
+      2:
+        image: notes/C2_bee_debugging_2.png
+        text: Here we're given a few blocks already in our workplace. We're going
+          to use the step button to walk through the blocks, step by step, to see
+          if this is the right solution and where we may need to fix it.
+      3:
+        image: notes/C2_bee_debugging_3.png
+        text: Looks like there's our problem! We need one more move forward block.
+          The step button helps us debug our problem by identifying where the error
+          is so we can fix it.
+    C2_digital_footprint:
+      1:
+        image: notes/C2_digital_footprint_1.png
+        text: On your head you hold your hat and your smarts will tell you where you're
+          at and to think about the zoo, and to nod hello to you and you! Use your
+          head when you're online to keep what's yours inside your mind and to know
+          how to be safe, how to give your life some private space! From your head
+          down to your toes, pause, think about it. From your feet up to your nose,
+          pause and think online!
+      2:
+        image: notes/C2_digital_footprint_2.png
+        text: Use your heart to grow and grow, and to give yourself a healthy glow,
+          and to make a valentine, tell someone that you'll be mine! Use your heart
+          when you're online, feel what's right and always kind, and show your friends
+          respect, to be fair and nice on the internet. From your head down to your
+          toes, pause, think about it. From your feet up to your nose, pause and think
+          online!
+      3:
+        image: notes/C2_digital_footprint_3.png
+        text: Use your arms to hug your pet, to keep your clothes from getting wet,
+          and to wear your favorite sleeves and to help you fly and make believe.
+          Use your arms when you're online, to take break and balance time and leave
+          your tech behind and to find yourself a tree to climb. From your head down
+          to your toes, pause, think about it. From your feet up to your nose, pause
+          and think online!
+      4:
+        image: notes/C2_digital_footprint_4.png
+        text: Use your gut to store your food, and to listen to its growling mood,
+          to make a belly flop, and to feel the gas in soda pop. Use your gut when
+          you're online, to know to watch for certain signs, and to let it guide the
+          way and tell you when it's not ok. From your head down to your toes, pause,
+          think about it. From your feet up to your nose, pause and think online!
+      5:
+        image: notes/C2_digital_footprint_5.png
+        text: So think with your head, and feel with your heart, balance with your
+          arms, listen to your gut, online. Use your legs to run and kick, and to
+          jump and bounce on a pogo stick, and to dance around the block, and to skip
+          along in your smelly socks. Use your legs when you're online, to stand up
+          to bullies who cross the line, and remember to stand tall, be nice to creatures
+          great and small.
+      6:
+        image: notes/C2_digital_footprint_6.png
+        text: From your head down to your toes, pause, think about it. From your feet
+          up to your nose, pause and think online! So think with your head, and feel
+          with your heart, balance with your arms, listen to your gut, stand up with
+          your legs. From your head down to your toes, pause, think about it. From
+          your feet up to your nose, pause and think online!
+    C2_digital_footprint_v2:
+      1:
+        image: notes/C2_digital_footprint_v2_1.png
+        text: Everytime you go online, you leave a footprint that can be searched,
+          copied, shared, broadcast and is permanent. What kind of digital footprint
+          are you leaving? What kind of digital footprint do you want to leave?
+    C2_graph_paper:
+      1:
+        image: notes/C2_graph_paper_1.png
+        text: This lesson is called "Graph Paper Programming" and it's all about algorithms.
+          Today we're going to learn how to write programs that show each other how
+          to recreate simple black and white images, using only hand drawn arrows.
+      2:
+        image: notes/C2_graph_paper_2.png
+        text: An algorithm is a list of instructions for completing a task. We'll
+          follow this set of instructions to make the bowl. Algorithms are really
+          helpful when you need someone else to understand how to do something.
+      3:
+        image: notes/C2_graph_paper_3.png
+        text: If you're writing an algorithm for a computer, you have to break it
+          down to little tiny steps. So finish this row and go to the next, then the
+          next one, and you'll be done.
+      4:
+        image: notes/C2_graph_paper_4.png
+        text: I use algorithms in my work. If I write down all of the steps I can
+          recreate that same piece again, or I can teach someone else to do it. Put
+          the glass in the kiln, fuse it together, follow the rest of the instructions
+          to make the bowl. Algorithms give you a road map for getting something done.
+    C2_artist_loops:
+      1:
+        image: notes/C2_artist_loops_1.png
+        text: Here we are going to use the repeat block to help us save steps when
+          we are programming our artist. We already have some blocks out on our stage
+          but they are just there to get us started.
+      2:
+        image: notes/C2_artist_loops_2.png
+        text: To loop those blocks four times to draw the whole square, we just drag
+          out the repeat block and put the moveforward and turn right blocks inside
+          the repeat block. When we hit run, the artist will repeat those steps four
+          times to complete the square.
+    C2_bee_loops:
+      1:
+        image: notes/C2_bee_loops_1.png
+        text: A loop is a repetition of activity. Going into a hive to inspect, I
+          look at a frame, and then I put it back. I repeat that same activity multiple
+          times. It's looping around, doing the same activity multiple times.
+      2:
+        image: notes/C2_bee_loops_2.png
+        text: This is the repeat block. Whatever you put inside the repeat block will
+          repeat those actions the number of times that you tell it to. For example,
+          in this level, rather than drag out move forward and get nectar three times,
+          we're going to just drag them out once each and repeat the action three
+          times. That made it easy!
+    C2_maze_intro:
+      1:
+        image: notes/C2_maze_intro_1.png
+        text: Usually programming is all in text but we'll use Blockly which uses
+          visual blocks that you drag and drop to write programs. Under the hood,
+          you're still creating code. To start off, we're going to build code for
+          a program that will help this Angry Bird move through a maze to get to the
+          evil pigs that stole its eggs.
+      2:
+        image: notes/C2_maze_intro_2.png
+        text: Blockly is split into three main parts. On the left is the bird's maze,
+          where your program will run. The instructions for each level are written
+          below the maze. This middle area is the toolbox and each of these blocks
+          is a command that the bird can understand. The white space on the right
+          is called the workspace and this is where we'll build our program.
+      3:
+        image: notes/C2_maze_intro_3.png
+        text: If I drag the move block to our work space and press "Run", what happens?
+          The bird moves forward one box on the grid. And what if I want the bird
+          to do something after it moves forward one box? I can add another block
+          to our program.
+      4:
+        image: notes/C2_maze_intro_4.png
+        text: I'm going to choose the "turn right" block and I'll drag it under my
+          move block until the yellow arrow appears. Then I'll drop it and the two
+          blocks will snap together. When I press "Run" again,  the bird will perform
+          the commands that are stacked from top to bottom on our work space.
+      5:
+        image: notes/C2_maze_intro_5.png
+        text: If you ever want to delete a block, just remove it from the stack and
+          drag it to the trash can. After you've hit run, you can always hit the reset
+          button to get the bird back to the start. Now let's get those pigs!
+    C2_paper_airplanes:
+      1:
+        image: notes/C2_paper_airplanes_1.png
+        text: This lesson is called Real Life Algorithms. Algorithms describe things
+          that people do everyday. Cookie recipes and directions for building a birdhouse
+          are both everyday algorithms.
+      2:
+        image: notes/C2_paper_airplanes_2.png
+        text: Today we're gonna make, create, and test an algorithm for a paper airplane.
+          But first, we need to break this big project into easy to follow small steps.
+          For making a paper airplane, we need to decide what steps to take and in
+          what order to take them.
+      3:
+        image: notes/C2_paper_airplanes_3.png
+        text: You'll create your algorithm by first cutting apart the pictures. Next,
+          you'll select the 6 pictures that show the steps needed to make a paper
+          airplane and arrange those pictures in the correct order. After you have
+          everything in order, you will trade algorithms with another student team
+          to test out the algorithm to see if the algorithm works. A well designed
+          algorithm is super important to making the best paper airplane.
+      4:
+        image: notes/C2_paper_airplanes_4.png
+        text: When we want to make chocolate, there are many big steps to that process.
+          And each of those big steps has its own set of smaller steps. And there
+          are different recipes, or algorithms, depending on how we want the chocolate
+          to taste. Each step is important, even the small ones. So without one step,
+          the rest of them cannot be completed. Creating algorithms that others can
+          understand is really important. That's why each step has to be written down,
+          so no matter who does it, the result is the same.
+    C2_playlab_createastory:
+      1:
+        image: notes/C2_playlab_createastory_1.png
+        text: Tähän mennessä olemme tehneet animaation tai tarinan, joka tekee samat
+          asiat joka kerta suoritettaessa. Nyt voit tehdä oman vuorovaikutteisen pelin,
+          jota voi oikeasti pelata.
+      2:
+        image: notes/C2_playlab_createastory_2.png
+        text: There are some new blocks to try out. There's the "when arrow" block
+          and the "move actor" block. You can put these blocks together to move the
+          actors around with the arrow keys. And there are some blocks that do stuff
+          when actors collide or are clicked. Check them out and have fun!
+    C2_relay_programming:
+      1:
+        image: notes/C2_relay_programming_1.png
+        text: Today we're going to do relay programming. It's all about programming
+          under pressure and debugging the mistakes that sometimes happen when you
+          work really quickly or in teams. We'll use graph paper programming to simulate
+          coding, and use relay races to simulate having a deadline.
+      2:
+        image: notes/C2_relay_programming_2.png
+        text: In relay programming, teams will be racing to finish a graph paper program.
+          You have to check your teammate's work, or debug it, fix it if there's a
+          mistake, add your arrow, and run back and tag your teammate.
+      3:
+        image: notes/C2_relay_programming_3.png
+        text: Programmers use debugging a lot to find and fix problems in their algorithms
+          or code. There are lots of ways to debug problems. One of the easiest is
+          to move step by step until you find where something goes wrong, then fix
+          it.
+      4:
+        image: notes/C2_relay_programming_4.png
+        text: Here, I'm trying to do a back handspring, but I keep falling off. I
+          walk through each part, step by step, and realize where my mistake was.
+          My coach showed me I wasn't putting my hands on the beam correctly. So I
+          tried another back handspring on the beam with my new hand position, and
+          I stuck it! I was really glad I debugged my back  handspring. We figured
+          it out! Debugging is finding and fixing problems. Nice, good job!
+    C2_zuck_repeat_loop:
+      1:
+        image: notes/C2_zuck_repeat_loop_1.png
+        text: One thing that computers are really good at is repeating commands. As
+          a person, you'd get really bored if you had to do the same thing lots of
+          times in a row. But a computer can do the same thing millions or even billions
+          of times, and not get bored and be able to carry that out really well.
+      2:
+        image: notes/C2_zuck_repeat_loop_2.png
+        text: So for example if I wanted to wish everyone on Facebook a happy birthday
+          by sending them an email, it might take me more than a century to actually
+          write out all of those emails to everyone. But with just a few lines of
+          code, I can have a system send an email to everyone on Facebook wishing
+          them a happy birthday. So that's what loops are, and why they're valuable,
+          and something that computers can do very well.
+      3:
+        image: notes/C2_zuck_repeat_loop_3.png
+        text: In this example your goal is going to be to move the bird to get the
+          pig.  Now we're gonna be able to use the "repeat" block in order to be able
+          to do this very easily. You can either do this by giving the computer a
+          "move forward" command five times in order to advance the bird one step
+          each time to the pig.
+      4:
+        image: notes/C2_zuck_repeat_loop_4.png
+        text: Or you can just tell the computer to "move forward" once, and then tell
+          it to "repeat" that 5 times, and it will do the same thing. So in order
+          to do this you drag your "move forward" command, and then you put it inside
+          the "repeat" block.And you can click on it and tell it how many times you
+          want to repeat the block to tell it how many steps you want it to take forward.
+      5:
+        image: notes/C2_zuck_repeat_loop_5.png
+        text: Now one more thing is you can put as many commands as you want inside
+          the "repeat" block. So in this example you're telling it to move forward
+          and turn left, which it will do five times. All right good job and have
+          fun!

@@ -1,5 +1,3 @@
-/* global $ */
-
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
 var tooltipUtils = require('./tooltipUtils.js');
 var dom = require('../dom');

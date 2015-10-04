@@ -2,7 +2,7 @@ el:
   errors:
     messages:
       not_saved: 'Παρακαλώ διορθώστε τα ακόλουθα σφάλματα:'
-      too_young: This content has age restrictions in place and is not available for younger students
+      too_young: Αυτό το περιεχόμενο έχει ηλικιακούς περιορισμούς σε ισχύ και δεν είναι διαθέσιμο για τους νεότερους μαθητές
   activerecord:
     errors:
       messages:
@@ -308,8 +308,10 @@ el:
       viewing_solution: Προβολή λύσης
       try_it_yourself: Δοκίμασέ το μόνος σου
       section: Ενότητα
-      example: Example Solution
-      example_with_number: 'Example Solution %{solution_number}'
+      example: Παράδειγμα λύσης
+      example_with_number: 'Παράδειγμα λύσης %{solution_number}'
+      submitted_on: 'Submitted on %{date}'
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: 'Η διεύθυνση email δεν έχει επιβεβαιωθεί:'
     email_confirm_needed_required: 'Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου %{email}  δεν έχει επιβεβαιωθεί:'
@@ -330,9 +332,9 @@ el:
     classroom_activity: Αποσυνδεδεμένη Δραστηριότητα
   home:
     title: Στούντιο Κώδικα
-    description: Code Studio is home to online courses created by Code.org
+    description: Το Code Studio φιλοξενεί τα online μαθήματα που δημιουργήθηκαν από το Code.org
     lines_of_code: '%{lines_count} ΓΡΑΜΜΕΣ ΚΩΔΙΚΑ ΓΡΑΜΜΕΝΕΣ ΑΠΟ ΜΑΘΗΤΕΣ'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} ΓΡΑΜΜΈΣ ΚΩΔΙΚΑ<br/> ΓΡΆΦΤΗΚΑΝ ΑΠΟ%{students_count} ΕΚΑΤΟΜΜΎΡΙΑ ΜΑΘΗΤΕΣ'
     all_courses: Επισκόπηση των μαθημάτων 1, 2 και 3
     lesson_plans: Σχέδια μαθήματος
     signin_message: 'Ήδη εγγεγραμμένος; %{link}'
@@ -353,7 +355,7 @@ el:
     local_school: τοπικό σχολείο
     online: σε σύνδεση
     see_details: Δείτε λεπτομέρειες
-    view_course: View Course
+    view_course: Προβολή μαθημάτων
     prize_info: 'Έπαθλα για συμμετέχοντες (μόνο για δασκάλους σε αμερικάνικα δημόσια σχολεία): Μέχρι $1.000 σε έπαθλα για τάξεις.'
     tryfirst: 'Ή μπορείτε να κάνετε πρώτα μία δοκιμή και να εγγραφείτε αργότερα:'
     trynow: Δοκιμάστε τώρα
@@ -368,11 +370,11 @@ el:
     heading_legacy: '<h2>Το γενικό μάθημα για </h2><h1>όλες τις ηλικίες</h1>'
     your_gallery: Συλλογή φωτογραφιών
     no_primary_course: Δοκιμάστε μία σειρά μαθημάτων στο Στούντιο Κώδικα
-    choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    choose_next_course: Δοκιμάστε μια σειρά μαθημάτων Code Studio επιλέγοντας ένα παρακάτω
+    print_certificate: Εκτύπωση πιστοποιητικού
   share:
     title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with code.
+    description: Καθένας μπορεί να μάθει την επιστήμη των υπολογιστών. Κάντε παιχνίδια, εφαρμογές και τέχνη με τη χρήση κώδικα.
   gender:
     male: Αγόρι
     female: Κορίτσι
@@ -383,7 +385,7 @@ el:
   footer:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: Μηχανικοί από τη Google, Microsoft, Facebook και Twitter βοήθησαν να δημιουργήσουμε αυτό το σεμινάριο.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
+    help_from_html_old: Μηχανικών από το Google, Microsoft, Facebook και Twitter βοήθησε στη δημιουργία αυτών των εκπαιδεευτικών υλικών.
     art_from_html: 'Angry Birds ™ & © 2009-2013 Rovio Entertainment Ltd. Με την επιφύλαξη παντός δικαιώματος.<br/> Plants vs. Zombies ™ & © 2013 Electronic Arts&trade; S.A. Με την επιφύλαξη παντός δικαιώματος.'
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Με την υποστήριξη των Amazon Web Services
@@ -394,10 +396,11 @@ el:
     translate: Βοηθήστε μας να μεταφράσουμε στη γλώσσα σας
     support: Υποστήριξη
     support_url: http://support.code.org/
-    tos_short: Terms
+    tos_short: Όροι
     tos: Όροι
     privacy: Πολιτική Aπορρήτου
     secure: Ασφαλής έκδοση
+    report_abuse: Report Abuse
   reference_area:
     title: Χρειάζεσε βοήθεια;
     subtitle: Δες αυτά τα βίντεο και τις υποδείξεις
@@ -519,7 +522,7 @@ el:
   dialog:
     ok: OΚ
     startover_title: Είστε βέβαιος ότι θέλετε να ξεκινήσετε από την αρχή;
-    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_body: Αυτό θα επαναφέρει το παζλ στην αρχική του κατάσταση και θα διαγράψει όλα τα δεδομένα που προσθέσατε ή αλλάξατε.
     startover_ok: Ξεκινήστε από την αρχή
     startover_cancel: Άκυρο
   time:
@@ -606,6 +609,22 @@ el:
     click_to_remix: "Κάνε κλικ στο 'Μιξάρισμα' για να ξεκινήσεις τη δική σου έκδοση!"
     edit_project: Edit Project
     abuse:
-      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      tos: "Το έργο αυτό έχει αναφερθεί για την παραβίαση των όρων παροχής υπηρεσιών του Code.org <a href='http://code.org/tos'></a> και δεν μπορεί να μοιραστεί με άλλους."
       contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
-      go_to_code_studio: Go to Code Studio
+      go_to_code_studio: Πηγαίνετε στο Code Studio
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        validation:
+          email: Please provide an email address
+          age: Please specify an age
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
+          harassment: Threats, cyberbullying, harassement
+          offensive: Offensive content
+          infringement: Copyright Infringement
+          other: Άλλα
+        detail: Please provide as much detail as possible regarding the content you are reporting.
+        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'

@@ -30,7 +30,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-# Major Partners and Corporate Supporters
+# 主要なパートナーおよび協賛企業
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
