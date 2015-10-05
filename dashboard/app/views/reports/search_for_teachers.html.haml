@@ -1,0 +1,27 @@
+- content_for(:head) do
+  = stylesheet_link_tag    'jquery.handsontable.full', media: 'all'
+  = javascript_include_tag 'jquery.handsontable.full'
+%h1 Search for Teachers
+
+%h3
+  Address Filter
+  %input#filter
+%br/
+#teacherTable
+
+:javascript
+  var baseFilter = '#{ params[:filter]}';
+  var data = eval(#{ data.try(:to_json)});
+  $(function() {
+    var filter = $('#filter');
+    filter.change(function() {
+      updateUrl();
+    });
+  });
+  $("#teacherTable").handsontable({
+    data: data,
+    colHeaders: #{ headers.try(:to_json)},
+  });
+
+%br/
+%br/
