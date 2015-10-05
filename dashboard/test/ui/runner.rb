@@ -283,12 +283,19 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
     end
   end
 
-  if succeeded
-    HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{format_duration(test_duration)})"
+  parsed_output = output_stdout.match(/^(?<scenarios>\d+) scenarios?( \((?<info>.*?)\))?/)
+  scenario_count = parsed_output[:scenarios].to_i
+  scenario_info = parsed_output[:info]
+  scenario_info = ", #{scenario_info}" unless scenario_info.blank?
+
+  if scenario_count == 0
+    HipChat.log "<b>dashboard</b> UI tests skipped with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
+  elsif succeeded
+    HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
   else
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     HipChat.log "<pre>#{output_stderr}</pre>"
-    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)})"
+    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
 
     if $options.html
       link = "https://test-studio.code.org/ui_test/" + html_output_filename
@@ -300,8 +307,15 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
     HipChat.log message, color: 'red'
     HipChat.developers message, color: 'red' if CDO.hip_chat_logging
   end
-  result_string = succeeded ? "succeeded".green : "failed".red
-  print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)})\n"
+  result_string =
+    if scenario_count == 0
+      'skipped'.blue
+    elsif succeeded
+      'succeeded'.green
+    else
+      'failed'.red
+    end
+  print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)}#{scenario_info})\n"
 
   [succeeded, message]
 end.each do |succeeded, message|
