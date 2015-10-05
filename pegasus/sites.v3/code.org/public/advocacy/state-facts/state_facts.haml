@@ -13,8 +13,6 @@ theme: pdf
 
 - state_info = DB[:cdo_state_promote].where(state_code_s: 'FL').first
 
-= request.path_info.to_json
-
 %h1
   Support K-12 Computer Science Education in 
   = state_info[:state_name_s]
