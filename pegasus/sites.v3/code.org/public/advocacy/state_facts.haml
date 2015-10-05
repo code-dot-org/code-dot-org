@@ -14,7 +14,7 @@ theme: pdf
 - state_words = 'New Jersey'
 - state = 'NJ'
 - state_info = DB[:cdo_state_promote].where(state_code_s: 'FL').first
-= state_info.to_json
+//= state_info.to_json
 %h1
   Support K-12 Computer Science Education in 
   = state_info[:state_name_s]
@@ -80,7 +80,8 @@ theme: pdf
   %h3
     Stem Subject Exams in 2014 in
     = state_info[:state_code_s]
-  =view :display_chart, id: "chart1", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1PWmXjxuN2oC-baFAe4UjL_d0s1Fu-2Vb30k7ymCxRFM/gviz/tq?gid=0&range=A1:C4&headers=1", width: 800, height: 480
+    Chart will go here.
+  //=view :display_chart, id: "chart1", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1PWmXjxuN2oC-baFAe4UjL_d0s1Fu-2Vb30k7ymCxRFM/gviz/tq?gid=0&range=A1:C4&headers=1", width: 800, height: 480
 
 %div
   %h2 What can you do to improve K-12 CS education? 
@@ -137,7 +138,7 @@ theme: pdf
   %div
 
     %div
-    - if state_info[:cs_counts_t] == 'Yes'
+    - if state_info[:cs_standards_s] == 'Yes'
       %div
         [*]
         = state_info[:state_name_s]
@@ -149,7 +150,7 @@ theme: pdf
         does not have rigorous computer science standards. Computer science has often been confused with broader technology education in schools. States should adopt discrete standards for computer science focused on both the creation and use of software and computing technologies at all levels of K-12 education. The Computer Science Teachers Association has model K-12 CS standards.  
 
     %div
-    - if state_info[:cs_counts_t] == 'Yes'
+    - if state_info[:pd_funding_s] == 'Yes'
       %div
         [*]
         = state_info[:state_name_s]
@@ -161,7 +162,7 @@ theme: pdf
         does not provide funding for rigorous computer science professional development and course support. States should provide professional development resources by creating matching fund opportunities to bring computer science to school districts.
 
     %div
-    - if state_info[:cs_standards_s] == 'Yes'
+    - if state_info[:cs_teacher_cert_s] == 'Yes'
       %div
         [*]
         = state_info[:state_name_s]
@@ -173,7 +174,7 @@ theme: pdf
         does not have clear certification pathways for computer science teachers. The expansion of K-12 computer science education is hampered by the lack of qualified computer science teachers. We can grow their ranks by creating clear, navigable, and rewarding professional paths for computer science teachers. 
 
     %div
-    - if state_info[:cs_standards_s] == 'Yes'
+    - if state_info[:pre_service_s] == 'Yes'
       %div
         [*]
         = state_info[:state_name_s]
@@ -185,7 +186,7 @@ theme: pdf
         has no incentives for institutions of higher education to offer computer science to pre-service teachers. The computer science teacher shortage can be addressed by exposing more pre-service teachers to computer science during their required coursework or by creating specific pathways for computer science teachers. 
 
     %div
-    - if state_info[:cs_standards_s] == 'Yes'
+    - if state_info[:state_position_s] == 'Yes'
       %div
         [*]
         = state_info[:state_name_s]
@@ -197,7 +198,7 @@ theme: pdf
         does not have dedicated computer science positions in state and local education authorities. Creating a statewide computer science leadership position within the state education authority will oversee state-level implementation of computer science education  initiatives. Similar positions at the local level could support districts’ expansion of course offerings and professional development. 
 
     %div
-    - if state_info[:cs_counts_t] == 'Yes'
+    - if state_info[:require_hs_s] == 'Yes'
       %div
         [*]
         = state_info[:state_name_s]
@@ -209,7 +210,7 @@ theme: pdf
         does not require that all secondary schools offer computer science. States should adopt policies that require schools to offer a computer science course based on rigorous standards, with appropriate implementation timelines and allowing for remote and/or in-person courses. 
 
     %div
-    - if state_info[:cs_teacher_cert_s] == 'Yes'
+    - if state_info[:cs_counts_t] == 'Yes'
       %div
         [*]
         = state_info[:state_name_s]
@@ -221,7 +222,7 @@ theme: pdf
         does not allow computer science to count for a core mathematics or science graduation requirement. States that count computer science as a core graduation requirement see 50% more enrollment in their AP Computer Science courses and increased participation from underrepresented minorities. 
 
     %div
-    - if state_info[:cs_teacher_cert_s] == 'Yes'
+    - if state_info[:higher_ed_entrance_s] == 'Yes'
       %div
         [*]
         = state_info[:state_name_s]
