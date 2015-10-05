@@ -76,6 +76,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.movable_ = true;
   this.editable_ = true;
   this.userVisible_ = true;
+  this.nextConnectionDisabled_ = false;
   this.collapsed_ = false;
   this.dragging_ = false;
   // Used to hide function blocks when not in modal workspace. This property
@@ -1494,6 +1495,13 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
   }
 };
 
+Blockly.Block.prototype.setNextConnectionDisabled = function(disabled) {
+  this.nextConnectionDisabled_ = disabled;
+  if (this.nextConnectionDisabled_ === true) {
+    this.setNextStatement(false);
+  }
+};
+
 /**
  * @returns {boolean} whether this block is selected and mid-drag
  */
@@ -1796,7 +1804,7 @@ Blockly.Block.prototype.setNextStatement = function(hasNext, opt_check) {
     this.nextConnection.dispose();
     this.nextConnection = null;
   }
-  if (hasNext) {
+  if (hasNext && !this.nextConnectionDisabled_) {
     if (opt_check === undefined) {
       opt_check = null;
     }
