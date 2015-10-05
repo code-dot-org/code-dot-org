@@ -14,10 +14,10 @@ theme: pdf
 - state_words = 'New Jersey'
 - state = 'NJ'
 - state_info = DB[:cdo_state_promote].where(state_code_s: 'NJ').first
-= state_info.to_json
+//= state_info.to_json
 %h1
   Support K-12 Computer Science Education in 
-  %span= state_info[:state_code_s]
+  = state_info[:state_code_s]
 
 %div Computer science drives job growth and innovation throughout our economy and society. Computing occupations make up two-thirds of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. 75 percent of U.S. schools don’t even offer computer science and only 8% of STEM graduates study it. We need to improve access for all students, including groups who have traditionally been underrepresented.
 %br
@@ -34,57 +34,96 @@ theme: pdf
 %div
   %h2
     Computer science in 
-    %span= state_info[:state_code_s]
+    = state_info[:state_code_s]
   %ul
     %li
-      %span= state_info[:cs_jobs_i]
-      open computing jobs (4.6 times the average demand rate in 
-      %span= state_info[:state_code_s]
+      = state_info[:cs_jobs_i]
+      open computing jobs (
+      = state_info[:growth_vs_average_f]
+      times the average demand rate in 
+      = state_info[:state_code_s]
       ). 
     %li
       The average salary for a computing occupation in
-      %span= state_info[:state_code_s]
-      is $97,957, which is significantly higher than the average salary in the state ($53,983). 
-    %li 1,535 computer science graduates in 2015; only 23% were female.
-    %li 1,986 high school students took the AP Computer Science exam in 2014; only 20% were female; only 143 were Hispanic; only 65 were black.
+      = state_info[:state_code_s]
+      is $
+      = state_info[:avg_sal_computing_i]
+      , which is significantly higher than the average salary in the state ($
+      = state_info[:avg_sal_all_i]
+      ). 
     %li
-      Only 139 schools in 
-      %span= state_info[:state_code_s]
-      (29% of
-      %span= state_info[:state_code_s]
+      = state_info[:cs_graduates_i]
+      computer science graduates in 2015; only
+      = state_info[:percent_female_cs_grad_i]
+      \% were female.
+    %li
+      = state_info[:ap_cs_exams_i]
+      high school students took the AP Computer Science exam in 2014; only
+      = state_info[:percent_ap_female_i]
+      \% were female; only
+      = state_info[:ap_hispanic_i]
+      were Hispanic; only
+      = state_info[:ap_black_i]
+      were black.
+    %li
+      Only
+      = state_info[:schools_ap_cs_i]
+      schools in 
+      = state_info[:state_code_s]
+      (
+      = state_info[:percent_schools_ap_cs_i]
+      \% of
+      = state_info[:state_code_s]
       schools with AP programs) offered the AP Computer Science course in 2013-2014. 
 
 %div
   %h3
     Stem Subject Exams in 2014 in
-    %span= state_info[:state_code_s]
+    = state_info[:state_code_s]
   =view :display_chart, id: "chart1", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1PWmXjxuN2oC-baFAe4UjL_d0s1Fu-2Vb30k7ymCxRFM/gviz/tq?gid=0&range=A1:C4&headers=1", width: 800, height: 480
 
 %div
   %h2 What can you do to improve K-12 CS education? 
   %ol
-    %li Call on your school to expand computer science offerings at every grade level.
+    %li
+      %a{href: "https://code.org/promote/letter"}
+        Call
+      on your school to expand computer science offerings at every grade level.
     %li Ask your local school district to allow computer science courses to satisfy a core math or science requirement.
     %li
-      Visit [www.code.org/promote/
-      %span= state_info[:state_code_s]
-      ] to learn more about supporting computer science in your state.
+      Visit
+      %a{href: state_info[:website_url_s]}= state_info[:website_url_s]
+      to learn more about supporting computer science in your state.
 
 %div
-  %h2 Code.org Impact in [State Name]
+  %h2
+    Code.org Impact in
+    = state_info[:state_code_s]
   %ul
-    %li Code.org has partnered with [Creskill Public Schools][school district partners/no school districts]. 
     %li
-      [2] Code.org affiliates offering professional development for elementary teachers in
-      %span= state_info[:state_code_s]
-      have already trained  [320] elementary teachers.
+      Code.org has partnered with
+      = state_info[:school_district_partners_s] 
+      \.
     %li
-      Code.org has trained [x] middle school teachers and [x] high school teachers in
-      %span= state_info[:state_code_s]
+      = state_info[:num_affiliates_i]
+      Code.org affiliates offering professional development for elementary teachers in
+      = state_info[:state_code_s]
+      have already trained
+      = state_info[:num_elementary_trained_i]
+      elementary teachers.
+    %li
+      Code.org has trained
+      = state_info[:num_ms_trained_i]
+      middle school teachers and
+      = state_info[:num_hs_trained_i]
+      high school teachers in
+      = state_info[:state_code_s]
       to teach computer science. 
   %p 
-    About [4,966,000]  people in
-    %span= state_info[:state_code_s]
+    About
+    = state_info[:num_hoc_i]
+    people in
+    = state_info[:state_code_s]
     have completed an Hour of Code! 
 
 %center
@@ -96,8 +135,10 @@ theme: pdf
     %h2 What can your state do to improve computer science education?
     Here are 8 key policies that help to provide all students with access to computer science.
   %ol
-    %li [state name] has established rigorous K-12 computer science standards.
-    %li [state name] does not have rigorous computer science standards. Computer science has often been confused with broader technology education in schools. States should adopt discrete standards for computer science focused on both the creation and use of software and computing technologies at all levels of K-12 education. The Computer Science Teachers Association has model K-12 CS standards.  
+    - if state_info[:cs_counts_t]
+      %li [state name] has established rigorous K-12 computer science standards.
+    - else
+      %li [state name] does not have rigorous computer science standards. Computer science has often been confused with broader technology education in schools. States should adopt discrete standards for computer science focused on both the creation and use of software and computing technologies at all levels of K-12 education. The Computer Science Teachers Association has model K-12 CS standards.  
 
     %li [state name] has allocated funding for rigorous computer science professional development and course support.
     %li [state name] does not provide funding for rigorous computer science professional development and course support. States should provide professional development resources by creating matching fund opportunities to bring computer science to school districts.
@@ -120,11 +161,20 @@ theme: pdf
     %li [state name] allows computer science to count as a mathematics or science admission requirement at institutions of higher education. 
     %li [state name] does not allow computer science to count as a mathematics or science admission requirement at institutions of higher education.  Admission policies that do not include rigorous computer science courses as meeting the mathematics or science entrance requirements discourage students from taking such courses in secondary education. State leaders can work with institutions of higher education to ensure credit and articulation policies align with secondary school graduation requirements.
 
-  %p Read more about these 8 policy ideas.
+  %p
+    %a{href: "https://code.org/files/Making_CS_Fundamental.pdf"} Read more
+    about these 8 policy ideas.
 
 %div
   %h3 Follow us! 
-  %p Join our efforts to give every student in every school the opportunity to learn computer science. Learn more at code.org, or follow us on Facebook and Twitter.
+  %p
+    Join our efforts to give every student in every school the opportunity to learn computer science. Learn more at
+    %a{href: "https://code.org"} code.org
+    , or follow us on
+    %a{href: "https://www.facebook.com/Code.org"} Facebook
+    and
+    %a{href: "https://twitter.com/codeorg"} Twitter
+    \.
   %p Code.org, a public 501c3 nonprofit, also organizes Computer Science Education Week (CSEdWeek), which is the awareness-building activity of the computer science education community. Code.org’s corporate sponsors include Microsoft, Google, Infosys, Amazon, Disney, Facebook, Salesforce, Expedia, Juniper Networks, Workday, Bestbuy, JP Morgan Chase, and Symantec. A list of all supporters can be found at code.org/about/donors.
   %p Data is from the Conference Board, the Bureau of Labor Statistics, the College Board, the National Science Foundation, the National Center for Education Statistics, and the Gallup research study Searching for Computer Science: Access and Barriers in K-12 Education. 
 
