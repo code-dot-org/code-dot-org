@@ -424,7 +424,8 @@ Blockly.Block.prototype.dispose = function(healStack, animate) {
     icons[x].dispose();
   }
   // Dispose of all inputs and their titles.
-  for (var x = 0, input; input = this.inputList[x]; x++) {
+  for (var x = 0, input; x < this.inputList.length; x++) {
+    input = this.inputList[x];
     input.dispose();
   }
   this.inputList = [];
@@ -693,7 +694,8 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
     // Build a list of bubbles that need to be moved and where they started.
     this.draggedBubbles_ = [];
     var descendants = this.getDescendants();
-    for (var x = 0, descendant; descendant = descendants[x]; x++) {
+    for (var x = 0, descendant; x < descendants.length; x++) {
+      descendant = descendants[x];
       var icons = descendant.getIcons();
       for (var y = 0; y < icons.length; y++) {
         var data = icons[y].getIconLocation();
@@ -939,7 +941,8 @@ Blockly.Block.prototype.getConnections_ = function(all) {
       myConnections.push(this.previousConnection);
     }
     if (all || !this.collapsed_) {
-      for (var x = 0, input; input = this.inputList[x]; x++) {
+      for (var x = 0, input; x < this.inputList.length; x++) {
+        input = this.inputList[x];
         if (input.connection) {
           myConnections.push(input.connection);
         }
@@ -1315,7 +1318,8 @@ Blockly.Block.prototype.setParent = function(newParent) {
   if (this.parentBlock_) {
     // Remove this block from the old parent's child list.
     var children = this.parentBlock_.childBlocks_;
-    for (var child, x = 0; child = children[x]; x++) {
+    for (var child, x = 0; x < children.length; x++) {
+      child = children[x];
       if (child == this) {
         children.splice(x, 1);
         break;
@@ -1368,7 +1372,8 @@ Blockly.Block.prototype.setParent = function(newParent) {
  */
 Blockly.Block.prototype.getDescendants = function() {
   var blocks = [this];
-  for (var child, x = 0; child = this.childBlocks_[x]; x++) {
+  for (var child, x = 0; x < this.childBlocks_.length; x++) {
+    child = this.childBlocks_[x];
     blocks = blocks.concat(child.getDescendants());
   }
   return blocks;
@@ -1449,8 +1454,10 @@ Blockly.Block.prototype.isEditable = function() {
  */
 Blockly.Block.prototype.setEditable = function(editable) {
   this.editable_ = editable;
-  for (var x = 0, input; input = this.inputList[x]; x++) {
-    for (var y = 0, title; title = input.titleRow[y]; y++) {
+  for (var x = 0, input; x < this.inputList.length; x++) {
+    input = this.inputList[x];
+    for (var y = 0, title; y < input.titleRow.length; y++) {
+      title = input.titleRow[y];
       title.updateEditable();
     }
   }
@@ -1610,8 +1617,10 @@ Blockly.Block.prototype.setColour = function(colourHue) {
   }
   if (this.rendered) {
     // Bump every dropdown to change its colour.
-    for (var x = 0, input; input = this.inputList[x]; x++) {
-      for (var y = 0, title; title = input.titleRow[y]; y++) {
+    for (var x = 0, input; x < this.inputList.length; x++) {
+      input = this.inputList[x];
+      for (var y = 0, title; y < input.titleRow.length; y++) {
+        title = input.titleRow[y];
         title.setText(null);
       }
     }
@@ -1666,8 +1675,10 @@ Blockly.Block.prototype.setHSV = function(
   }
   if (this.rendered) {
     // Bump every dropdown to change its colour.
-    for (var x = 0, input; input = this.inputList[x]; x++) {
-      for (var y = 0, title; title = input.titleRow[y]; y++) {
+    for (var x = 0, input; x < this.inputList.length; x++) {
+      input = this.inputList[x];
+      for (var y = 0, title; y < input.titleRow.length; y++) {
+        title = input.titleRow[y];
         title.setText(null);
       }
     }
@@ -1682,8 +1693,10 @@ Blockly.Block.prototype.setHSV = function(
  * @private
  */
 Blockly.Block.prototype.getTitle_ = function(name) {
-  for (var x = 0, input; input = this.inputList[x]; x++) {
-    for (var y = 0, title; title = input.titleRow[y]; y++) {
+  for (var x = 0, input; x < this.inputList.length; x++) {
+    input = this.inputList[x];
+    for (var y = 0, title; y < input.titleRow.length; y++) {
+      title = input.titleRow[y];
       if (title.name === name) {
         return title;
       }
@@ -1694,8 +1707,10 @@ Blockly.Block.prototype.getTitle_ = function(name) {
 
 Blockly.Block.prototype.getTitles = function() {
   var titles = [];
-  for (var x = 0, input; input = this.inputList[x]; x++) {
-    for (var y = 0, title; title = input.titleRow[y]; y++) {
+  for (var x = 0, input; x < this.inputList.length; x++) {
+    input = this.inputList[x];
+    for (var y = 0, title; y < input.titleRow.length; y++) {
+      title = input.titleRow[y];
       titles.push(title);
     }
   }
@@ -1947,7 +1962,8 @@ Blockly.Block.prototype.setCollapsed = function(collapsed) {
   this.collapsed_ = collapsed;
   var renderList = [];
   // Show/hide the inputs.
-  for (var x = 0, input; input = this.inputList[x]; x++) {
+  for (var x = 0, input; x < this.inputList.length; x++) {
+    input = this.inputList[x];
     renderList = renderList.concat(input.setVisible(!collapsed));
   }
 
@@ -1968,7 +1984,8 @@ Blockly.Block.prototype.setCollapsed = function(collapsed) {
     renderList[0] = this;
   }
   if (this.rendered) {
-    for (var x = 0, block; block = renderList[x]; x++) {
+    for (var x = 0, block; x < renderList.length; x++) {
+      block = renderList[x];
       block.render();
     }
     this.bumpNeighbours_();
@@ -1982,8 +1999,10 @@ Blockly.Block.prototype.setCollapsed = function(collapsed) {
  */
 Blockly.Block.prototype.toString = function(opt_maxLength) {
   var text = [];
-  for (var x = 0, input; input = this.inputList[x]; x++) {
-    for (var y = 0, title; title = input.titleRow[y]; y++) {
+  for (var x = 0, input; x < this.inputList.length; x++) {
+    input = this.inputList[x];
+    for (var y = 0, title; y < input.titleRow.length; y++) {
+      title = input.titleRow[y];
       text.push(title.getText());
     }
     if (input.connection) {
@@ -2133,7 +2152,8 @@ Blockly.Block.prototype.moveInputBefore = function(name, refName) {
   // Find both inputs.
   var inputIndex = -1;
   var refIndex = -1;
-  for (var x = 0, input; input = this.inputList[x]; x++) {
+  for (var x = 0, input; x < this.inputList.length; x++) {
+    input = this.inputList[x];
     if (input.name == name) {
       inputIndex = x;
       if (refIndex != -1) {
@@ -2174,7 +2194,8 @@ Blockly.Block.prototype.moveInputBefore = function(name, refName) {
  *     opt_quiet is not true.
  */
 Blockly.Block.prototype.removeInput = function(name, opt_quiet) {
-  for (var x = 0, input; input = this.inputList[x]; x++) {
+  for (var x = 0, input; x < this.inputList.length; x++) {
+    input = this.inputList[x];
     if (input.name == name) {
       if (input.connection && input.connection.targetConnection) {
         // Disconnect any attached block.
@@ -2201,7 +2222,8 @@ Blockly.Block.prototype.removeInput = function(name, opt_quiet) {
  * @return {Blockly.Input|null} The input object, or null of the input does not exist.
  */
 Blockly.Block.prototype.getInput = function(name) {
-  for (var x = 0, input; input = this.inputList[x]; x++) {
+  for (var x = 0, input; x < this.inputList.length; x++) {
+    input = this.inputList[x];
     if (input.name == name) {
       return input;
     }
