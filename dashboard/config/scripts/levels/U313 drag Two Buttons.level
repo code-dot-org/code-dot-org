@@ -1,0 +1,80 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-05T14:52:11.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "button": null,
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "getX": null,
+      "getY": null,
+      "getDirection": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_max": null,
+      "randomNumber_min_max": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "# Buttons and Unique Ids\r\nYou may have noticed that the button command has two paramaters: `button(id, text)`.  The 'text' is the text that actually shows up on the button display.  \r\n\r\n**The ids of elements are important!** The id of an element is what your other code uses to refer to it.  In this case, the id is used connect a button on the screen to its `onEvent` block. Each element must have a **unique id.**\r\n\r\nIn fact, if you try to run a program that has two buttons with same id you will get a warning message in the console.\r\n\r\n<img src=\"http://staging.code.org/images/cspunit3/U3L13 - Two Buttons Same Id Warning.gif\" style=\"border: solid 1px black\">\r\n\r\nNotice that when you add a `button` from the toolbox it inserts some default values for the id and text parameters. You will have to change these for programs that have more than one button\r\n\r\n# Do this\r\n* Drag two buttons into the workspace\r\n* Run the program with the default values to see the warning message in the console\r\n* Change the ids of the buttons to make them unique, and re-run the program to make sure you don't get the error\r\n",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true"
+  }
+}]]></config>
+  <blocks/>
+</Applab>
