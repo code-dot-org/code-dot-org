@@ -13,7 +13,6 @@
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var markup = require('./NetSimMetronome.html.ejs');

@@ -1,5 +1,4 @@
 /* global $ */
-var React = require('react');
 var rowStyle = require('./rowStyle');
 
 var colorPicker = require('../colpick');

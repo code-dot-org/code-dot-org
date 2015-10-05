@@ -17,7 +17,6 @@
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var utils = require('../utils');

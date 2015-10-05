@@ -38,7 +38,7 @@
     "failure_condition": "function () {\r\n}",
 
     "embed": "false",
-    "instructions": "Now the items are all over the screen. Can you make your character walk in any direction so he can collect all the items?",
+    "instructions": "\"Bot1, visit each of the four goals.\"<br/><br/>Make the bot walk in all directions so that he can reach the four goals.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

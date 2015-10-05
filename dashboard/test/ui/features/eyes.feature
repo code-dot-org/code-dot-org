@@ -159,15 +159,15 @@ Scenario Outline: Simple blockly level page view
   And I see no difference for "closed dialog"
   And I close my eyes
 Examples:
-  | url                                                                | test_name                 |
-  | http://learn.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true   | first maze level          |
-  | http://learn.code.org/s/course2/stage/7/puzzle/2?noautoplay=true   | artist level              |
-  | http://learn.code.org/s/playlab/stage/1/puzzle/10?noautoplay=true  | playlab level             |
-  | http://learn.code.org/s/course1/stage/3/puzzle/5?noautoplay=true   | jigsaw level              |
-  | http://learn.code.org/s/course1/stage/18/puzzle/10?noautoplay=true | course1 artist level      |
-  | http://learn.code.org/s/algebra/stage/20/puzzle/2?noautoplay=true  | auto open function editor |
-  | http://learn.code.org/s/algebra/stage/10/puzzle/6?noautoplay=true  | auto open contract editor |
-  | http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true   | auto open variable editor |
+  | url                                                                   | test_name                 |
+  | http://learn.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true      | first maze level          |
+  | http://learn.code.org/s/course2/stage/7/puzzle/2?noautoplay=true      | artist level              |
+  | http://learn.code.org/s/playlab/stage/1/puzzle/10?noautoplay=true     | playlab level             |
+  | http://learn.code.org/s/course1/stage/3/puzzle/5?noautoplay=true      | jigsaw level              |
+  | http://learn.code.org/s/course1/stage/18/puzzle/10?noautoplay=true    | course1 artist level      |
+  | http://learn.code.org/s/allthethings/stage/3/puzzle/6?noautoplay=true | auto open function editor |
+  | http://learn.code.org/s/algebra/stage/10/puzzle/6?noautoplay=true     | auto open contract editor |
+  | http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true      | auto open variable editor |
 
 @dashboard_db_access
 Scenario Outline: Simple page view without instructions dialog

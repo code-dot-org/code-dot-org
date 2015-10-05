@@ -11,3 +11,11 @@ Summarize your experiences with this first App Lab lesson by answering the follo
 
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary and may include these concepts:
+
+* Students may be surprised by how creative they could be with so few commands and the complexity of the designs they were able to create.
+* They may have been frustrated because they had to repeat some commands so many times or that they wanted more power to do cool things more quickly. 
+* They may have wanted a right turn command, commands to take more than one step at a time, or commands to create simple shapes such as squares.
+MARKDOWN

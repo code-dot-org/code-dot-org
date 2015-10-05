@@ -16,7 +16,7 @@ Rádi bychom nabídli různé zajímavé možnosti, ale naším hlavním cílem 
   
 
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa).**
+**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
 
 **NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
 
@@ -35,7 +35,7 @@ Rádi bychom nabídli různé zajímavé možnosti, ale naším hlavním cílem 
 
 <a id="guidelines"></a>
 
-## New for 2015: two formats of activites: self-guided or *lesson-plan*
+## New for 2015: two formats of activities: self-guided or *lesson-plan*
 
 Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
 
@@ -116,7 +116,7 @@ Koneckonců, cílem kampaně Hodina kódu je širší zapojení žáků a učite
 
 ## How to submit (Due 10/15/2015)
 
-Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
+Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
 **Co budete potřebovat:**
 
