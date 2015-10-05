@@ -3094,7 +3094,9 @@ Studio.addItemsToScene = function (opts) {
   ];
 
   // Create stationary, grid-aligned items when level.gridAlignedMovement,
-  // otherwise, create randomly placed items travelling in a random direction
+  // otherwise, create randomly placed items travelling in a random direction.
+  // Assumes that sprite[0] is in use, and avoids placing the item too close
+  // to that sprite.
 
   var generateRandomItemPosition = function () {
     // TODO (cpirich): check for edge collisions? (currently avoided by placing
@@ -3141,7 +3143,10 @@ Studio.addItemsToScene = function (opts) {
       // of randomly retrying random numbers
 
       var numTries = 0;
-      while (Studio.willCollidableTouchWall(item, item.x, item.y)) {
+      while (Studio.willCollidableTouchWall(item, item.x, item.y) ||
+             Studio.getDistance(Studio.sprite[0].x + Studio.sprite[0].width/2,
+                                Studio.sprite[0].y + Studio.sprite[0].height/2,
+                                item.x, item.y) < 100) {
         var newPos = generateRandomItemPosition();
         item.x = newPos.x;
         item.y = newPos.y;
@@ -3156,6 +3161,12 @@ Studio.addItemsToScene = function (opts) {
     Studio.items.push(item);
   }
 };
+
+
+Studio.getDistance = function(x1, y1, x2, y2) {
+  return Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2));
+}
+
 
 Studio.setItemActivity = function (opts) {
   if (opts.type === "patrol" || opts.type === "chase" ||
