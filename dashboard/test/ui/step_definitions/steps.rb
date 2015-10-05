@@ -467,6 +467,7 @@ end
 # Place files in dashboard/test/fixtures
 Then /^I upload the file named "(.*?)"$/ do |filename|
   filename = File.expand_path(filename, '../fixtures')
+  @browser.execute_script('$("input[type=file]").show()')
   element = @browser.find_element :css, 'input[type=file]'
   element.send_keys filename
 end
