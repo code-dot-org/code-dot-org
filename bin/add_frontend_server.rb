@@ -39,7 +39,6 @@ def execute_ssh_on_channel(ssh, command, exit_error_string)
 end
 
 options = {}
-username = Etc.getlogin
 
 OptionParser.new do |opts|
   opts.on('-e', '--environment ENVIRONMENT', 'Environment to add frontend to') do |env|
@@ -47,6 +46,10 @@ OptionParser.new do |opts|
   end
 
   opts.on('-h', '--help', 'Print this') { puts options; exit }
+
+  opts.on('-u', '--username-override USERNAME', 'Username to log into gateway with') do |username|
+    options['username'] = username
+  end
 end.parse!
 
 unless ['production'].include?(options['environment'])
@@ -54,6 +57,10 @@ unless ['production'].include?(options['environment'])
 end
 
 raise OptionParser::MissingArgument, 'Environment is required' if options['environment'].nil?
+
+username = options['username'] || Etc.getlogin
+
+puts "Logging into gateway with username #{username}"
 
 Net::SSH.start('gateway.code.org', username) do |ssh|
   puts ssh.exec!('echo "Verifying connection to gateway"')
