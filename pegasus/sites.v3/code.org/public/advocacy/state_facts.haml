@@ -14,7 +14,6 @@ theme: pdf
 - state_words = 'New Jersey'
 - state = 'NJ'
 - state_info = DB[:cdo_state_promote].where(state_code_s: 'FL').first
-//= state_info.to_json
 %h1
   Support K-12 Computer Science Education in 
   = state_info[:state_name_s]
@@ -81,7 +80,6 @@ theme: pdf
     Stem Subject Exams in 2014 in
     = state_info[:state_code_s]
     Chart will go here.
-  //=view :display_chart, id: "chart1", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1PWmXjxuN2oC-baFAe4UjL_d0s1Fu-2Vb30k7ymCxRFM/gviz/tq?gid=0&range=A1:C4&headers=1", width: 800, height: 480
 
 %div
   %h2 What can you do to improve K-12 CS education? 
