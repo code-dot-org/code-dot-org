@@ -11,7 +11,11 @@ theme: pdf
 %>
 ---
 
-- state_info = DB[:cdo_state_promote].where(state_code_s: 'FL').first
+- splat = request.splat_path_info[1..-1].split("/")
+- state = splat.last
+- state_param = state.upcase
+- state_info = DB[:cdo_state_promote].where(state_code_s: state_param).first
+
 %h1
   Support K-12 Computer Science Education in 
   = state_info[:state_name_s]
