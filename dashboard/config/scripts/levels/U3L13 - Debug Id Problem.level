@@ -75,10 +75,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "encrypted_examples": [
-
-    ],
-    "markdown_instructions": "# Choosing good IDs\r\n\r\n**Good IDs** are **meaningful and descriptive**, just like good names for functions. **IDs are also case-sensitive** which means you'll likely want to develop a pattern for how you capitalize your IDs. The examples you'll see here all use a style called **camelcase**. Camelcase combines long names into a single word that begins in lowercase and uses an uppercase letter to indicate where a new word used to start.\r\n\r\n**Camelcase examples**:\r\n\r\n* \"upload button\" becomes `uploadButton`\r\n* \"move turtle to center of screen button\" becomes `moveTurtleToCenterOfScreenButton`\r\n\r\n# Do This\r\n\r\n**Improve ** the `button` by choosing a **descriptive and meaningful** ID\r\n\r\n**Change ** the event handler so that it correctly references the button by its new ID\r\n\r\n**Run ** the program to make sure it works",
+    "markdown_instructions": "# Choosing good IDs\r\n\r\n**Good IDs** are **meaningful and descriptive**, just like good names for functions. \r\n\r\n**IDs are also case-sensitive** which means you'll likely want to develop a pattern for how you capitalize your IDs. The examples you'll see here all use a style called **camelcase**. Camelcase combines long names into a single word that begins in lowercase and uses an uppercase letter to indicate where a new word used to start.\r\n\r\n**Camelcase examples**:\r\n\r\n* \"upload button\" becomes `uploadButton`\r\n* \"move turtle to center of screen button\" becomes `moveTurtleToCenterOfScreenButton`\r\n\r\n# Do This\r\n\r\n**Improve ** the `button` by choosing a **descriptive and meaningful** ID\r\n\r\n**Change ** the event handler so that it correctly references the button by its new ID\r\n\r\n**Run ** the program to make sure it works",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "show_turtle_before_run": "false",
@@ -88,7 +85,10 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "submittable": "false",
-    "hide_view_data_button": "true"
+    "hide_view_data_button": "true",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>

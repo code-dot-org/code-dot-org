@@ -16,7 +16,7 @@ Feature: App Lab Scenarios
   @no_mobile
   Scenario: App Lab Share
     # Create an app with a "hello world" button (omitting closing paren for auto-correct).
-    Then I press "show-code-header"
+    When I press "show-code-header"
     And I wait to see Droplet text mode
     And I press keys "button('hello', 'world" for element ".ace_text-input"
     And I press "runButton"
@@ -39,7 +39,7 @@ Feature: App Lab Scenarios
   @no_mobile
   Scenario: App Lab Http Image
     # Create an app with an http image.
-    Then I press "show-code-header"
+    When I press "show-code-header"
     And I wait to see Droplet text mode
     And I press keys "image('test123', 'http://example.com')" for element ".ace_text-input"
     And I press "runButton"
@@ -49,7 +49,7 @@ Feature: App Lab Scenarios
   @no_mobile
   Scenario: App Lab Clear Puzzle and Design Mode
     # Create an app with a design mode button, then clear the puzzle
-    And I press "designModeButton"
+    When I press "designModeButton"
     And I drag block matching selector "[data-element-type='BUTTON']" to block matching selector "#visualization"
     And I press "codeModeButton"
     And Applab HTML has a button
@@ -57,3 +57,18 @@ Feature: App Lab Scenarios
     And element "#confirm-button" is visible
     And I press "confirm-button"
     And Applab HTML has no button
+
+  @no_mobile
+  @no_safari
+  Scenario: Upload Image Asset
+    When I press "designModeButton"
+    And I press "manage-assets-button"
+    And I wait to see a dialog titled "Manage Assets"
+    And I wait until element "#upload-asset" is visible
+    And I upload the file named "artist_image_1.png"
+    And I wait until element ".assetRow td:contains(artist_image_1.png)" is visible
+
+    # Delete asset
+    Then I press the first ".btn-danger" element
+    And I press the first ".btn-danger" element
+    And I wait until element "#manage-asset-status" contains text "successfully deleted!"
