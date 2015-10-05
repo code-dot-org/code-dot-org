@@ -1428,15 +1428,6 @@ var arrangeStartBlocks = function (config) {
   }
 };
 
-function extendHandleClearPuzzle() {
-  var orig = studioApp.handleClearPuzzle.bind(studioApp);
-  studioApp.handleClearPuzzle = function (config) {
-    orig(config);
-    studioApp.resetButtonClick();
-    annotationList.clearRuntimeAnnotations();
-  };
-}
-
 /**
  * Initialize Blockly and the Studio app.  Called on page load.
  */
@@ -1444,7 +1435,6 @@ Studio.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
-  extendHandleClearPuzzle();
 
   Studio.projectiles = [];
   Studio.items = [];
@@ -1556,6 +1546,11 @@ Studio.init = function(config) {
     }
 
     drawMap();
+  };
+
+  config.afterClearPuzzle = function() {
+    studioApp.resetButtonClick();
+    annotationList.clearRuntimeAnnotations();
   };
 
   if (studioApp.isUsingBlockly() && config.level.edit_blocks != 'toolbox_blocks') {

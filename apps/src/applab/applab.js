@@ -571,18 +571,6 @@ Applab.initReadonly = function(config) {
   studioApp.initReadonly(config);
 };
 
-function extendHandleClearPuzzle() {
-  var orig = studioApp.handleClearPuzzle.bind(studioApp);
-  studioApp.handleClearPuzzle = function (config) {
-    orig(config);
-    Applab.setLevelHtml(config.level.startHtml || '');
-    AppStorage.populateTable(level.dataTables, true); // overwrite = true
-    AppStorage.populateKeyValue(level.dataProperties, true); // overwrite = true
-    studioApp.resetButtonClick();
-    annotationList.clearRuntimeAnnotations();
-  };
-}
-
 /**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
@@ -590,7 +578,6 @@ Applab.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
-  extendHandleClearPuzzle();
 
   // Pre-populate asset list
   if (window.dashboard && dashboard.project.getCurrentId()) {
@@ -701,6 +688,14 @@ Applab.init = function(config) {
       // automatically run in share mode:
       window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
     }
+  };
+
+  config.afterClearPuzzle = function() {
+    Applab.setLevelHtml(config.level.startHtml || '');
+    AppStorage.populateTable(level.dataTables, true); // overwrite = true
+    AppStorage.populateKeyValue(level.dataProperties, true); // overwrite = true
+    studioApp.resetButtonClick();
+    annotationList.clearRuntimeAnnotations();
   };
 
   // arrangeStartBlocks(config);
