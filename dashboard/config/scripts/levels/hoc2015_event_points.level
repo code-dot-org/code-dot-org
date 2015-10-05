@@ -49,7 +49,7 @@
     "failure_condition": "function () {\r\n}",
 
     "embed": "false",
-    "instructions": "\"Somebody should be rewarded for reaching those characters.\"<br/><br/>Let’s add points. Give yourself some points when you touch an item. Can you score 10 points?",
+    "instructions": "\"Get a reward for touching characters.\"<br/><br/>Let’s add points. Give yourself some points when you touch an item. Can you score at least 100 points?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

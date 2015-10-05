@@ -1,5 +1,6 @@
 el:
   site_name: Ώρα του Κώδικα
+  hour_of_code: Hour of Code
   language: Ελληνικά
   front_title: Λάβετε μέρος στην μεγαλύτερη στην ιστορία εκδήλωση για την μάθηση, 7-13 Δεκεμβρίου, 2015
   coming_soon: Προσεχώς
@@ -14,6 +15,8 @@ el:
   header_menu_resources: Πόροι
   header_menu_faq: Συχνές Ερωτήσεις
   header_menu_prizes: Βραβεία
+  header_menu_how_to: How-To
+  header_menu_promote: Promote
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_bgca: Λέσχη Αγοριών και Κοριτσιών της Αμερικής
@@ -49,6 +52,7 @@ el:
   company_chelmsfordpublicschooldistrict: Chelmsford School District
   company_cheneysd: Cheney School District
   company_chesterfieldschools: Chesterfield County Public Schools
+  company_codebrooklyn: Code Brooklyn
   company_cps: Δημόσια Σχολεία του Σικάγο
   company_ccsd: Clark County School District
   company_cloverparkschooldistrict: Clover Park School District
@@ -72,6 +76,7 @@ el:
   company_vadoe: "Governor's School Programs"
   company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
+  company_godaddy: Go Daddy
   company_greenupcountyschooldistrict: Greenup County Schools
   company_gwinnettcountypublicschools: Gwinnett County Public Schools
   company_HamptonCitySchools: Hampton City Schools
@@ -105,6 +110,7 @@ el:
   company_oneclay: One Clay County School District
   company_ocps: Orange County Schools
   company_orangeusd: Orange Unified School District
+  company_pbsd: Palm Beach School District
   company_pvusd: Paradise Valley Unified School District
   company_PetersburgCityPublicSchools: Petersburg City Public Schools
   company_pylusd: Placentia-Yorba Linda Union School District
@@ -130,6 +136,7 @@ el:
   company_wvsd208: West Valley School District
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
+  company_yelp: Yelp
   prizes_all: Βραβεία για κάθε διοργανωτή
   prizes_every_organizer: Κάθε διοργανωτής μιας Ώρας Κώδικα θα λάβει μονάδες για το Dropbox ή το Skype ως ένα ευχαριστώ
   prizes_technology: 'Ένα δημόσιο σχολείο, σε κάθε πολιτεία των ΗΠΑ (& Washington DC) θα κερδίσει προϊόντα τεχνολογίας αξίας $10.000'
@@ -155,11 +162,16 @@ el:
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
   how_to_nav_organizations: For organizations
+  how_to_nav_afterschool_educators: For after-school educators
+  prizes_nav_title: Βραβεία
+  prizes_nav_home: All prizes
+  prizes_nav_hardware: Hardware prize signup
   whats_next_header: Τι υπάρχει στη συνέχεια;
   whats_next_description: "Θα σας στείλουμε υλικό και χρήσιμες συμβουλές για την εκδήλωσή σας. Νέοι οδηγοί για το 2015 έρχονται σύντομα για οποιονδήποτε φυλλομετρητή, για smartphone - ακόμη οδηγοί χωρίς υπολογιστή! <a href='http://code.org/learn'>Δοκιμάστε τους υπάρχοντες οδηγούς </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Πώς να διοργανώσετε μια Ώρα του κώδικα</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'> Προωθήστε την Ώρα του κώδικα</a>"
   whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Δοκιμάστε μία</h1><h2>Ώρα του Κώδικα</h2><h3># την δοκίμασαν</h3>'
@@ -186,6 +198,7 @@ el:
   front_join_us_computer_science: Αγαπάς απλά την επιστήμη των υπολογιστών;
   front_join_us_spread: Διάδωσέ το.
   front_join_us_spread_word: Spread the word in your community
+  front_join_us_spread_word_work: Spread the word in your community or workplace
   front_join_us_organize: Η οργάνωσε εσύ μια εκδήλωση για την Ώρα του Κώδικα.
   front_join_us_how_to_run: Ορίστε κάποιες οδηγίες για το πώς να «τρέξεις» μια Ώρα του Κώδικα
   front_join_us_help_promote: Βοήθησε στην προώθηση της Ώρας του Κώδικα
@@ -198,6 +211,7 @@ el:
   front_join_us_support: Υποστήριξέ το
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: For more information, please visit code.org
+  front_join_us_n_students_served: '# students served'
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Το όνομά σας
   signup_email_label: Το email σας
@@ -248,8 +262,12 @@ el:
   hardware_prizes_form_school_type_option_middle_school: Γυμνάσιο
   hardware_prizes_form_school_type_option_high_school: Γυμνάσιο
   hardware_prizes_form_qualifying_school_label: 'Αυτό είναι ένα Κ-12  δημόσιο σχολείο των ΗΠΑ'
+  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
+  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
   hardware_prizes_form_number_students_label: Αριθμός μαθητών που συμμετέχουν
   hardware_prizes_form_number_students_placeholder: Αριθμός των μαθητών
+  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
+  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
   hardware_prizes_form_plan_file_label: 'Ανεβάσετε το σχέδιο διαχείρισης της  Ώρας του Κώδικα'
   hardware_prizes_form_plan_file_description: 'Υποβάλετε ένα απλό πρόγραμμα για το πώς σκοπεύετε να οργανώσετε  κάθε μαθητή να κάνει την Ώρα του Κώδικα στο σχολείο σας. Δείτε ένα δείγμα σχέδιου: #PDF # | #Word #'
   hardware_prizes_form_submit_label: Υποβολή
@@ -316,12 +334,19 @@ el:
   resources_social: Κοινωνικά Δίκτυα
   resources_country_resources: Πόροι ανά Χώρα
   resources_stickers: Stickers
+  resources_how_to_guides: How-to guides
+  resources_promote: Promote
+  resources_nav_tutorials: Δοκιμάστε τα μαθήματα
+  resources_nav_promote: Spread the word
+  resources_nav_spread_word: How to get involved
   resources_banner_promote_text: Promote
   resources_banner_promote_button: Encourage others to sign up with brochures, inspirational posters and social media banners.
   resources_banner_howto_text: How-to
   resources_banner_howto_button: Resources for educators, parents and districts to host an Hour of Code.
+  handouts_section: Share these handouts
   handouts_onepager: Spread the word with this one page handout
   handouts_brochure: Give this brochure to teachers and schools
+  handouts_participationguide: Plan your Hour of Code with this participation guide
   videos_title: 'Δείξε αυτά τα video για να εμπνεύσεις τους  μαθητές'
   videos_what_most_schools_dont_teach: "What Most Schools Don't Teach (5 min)"
   videos_hoc_2014: 'Hour of Code is Here - Anybody Can Learn'
@@ -348,7 +373,7 @@ el:
   title_signup_thanks: Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
   title_tutorial_guidelines: Tutorial Guidelines
   title_whole_school: Whole School Participation
-  events_title: Όλες οι εκδηλώσεις της Ώρας του Κώδικα
+  events_nav_title: Hour of Code Events
   events_nav_all: Όλες οι εκδηλώσεις
   events_nav_whole_schools: Ολόκληρα σχολεία
   events_nav_special: Ειδικές εκδηλώσεις

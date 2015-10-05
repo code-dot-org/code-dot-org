@@ -18,19 +18,19 @@ We'll be in touch about prizes, new tutorials and other exciting updates in the 
 
 ## 2. Запропонуйте взяти участь у Годині коду всій школі
 
-[Send this email](http://<%= hostname %>/resources#email) to your principal.
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## 3. Попросіть про участь свою адміністрацію
 
-[Надішліть цей лист](http://<%= hostname %>/resources#email) керівнику Вашої організації.
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## 4. Розкажіть у своїй спільноті про Годину Програмування
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Надішліть цей лист](http://<%= hostname %>/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://<%= hostname %>/resources#email).
 
 ## 5. Зверніться до місцевих депутатів по підтримку Години коду
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 
