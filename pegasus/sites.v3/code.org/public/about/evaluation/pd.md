@@ -8,7 +8,7 @@ nav: about_nav
 ## What do teachers take away from Code.org professional development?
 <img src="/images/pd-2014-15.png" width="100%"/>
 
-From June 2014 through June 2015, over 11,000 teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models: 
+From June 2014 through June 2015, over 11,000* teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models: 
 
 - a day-long, face-to-face workshop delivered to K-5 teachers via our [Affiliate Program](/educate/k5-affiliates) or via our [District Partnership Program](/educate/k5-district-partnership)
 - a multi-phase, year-long blended PD experience delivered to Middle and High School teachers via our [District Partnership Program](/educate/districts)
@@ -30,6 +30,7 @@ Through our professional development efforts, we are helping a large, diverse au
 
 <br/>
 <br/>
+* *Note: In the 2014-15 teacher cohort, we trained approximately 10,000 teachers. We trained an additional 1,000 teachers for the 2015-16 school year.*
 
 ---
 
