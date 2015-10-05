@@ -355,6 +355,8 @@ def log_in_as(user)
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
       ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
     params[:domain] = '.code.org' # top level domain cookie
+  else
+    params[:domain] = '.ngrok.com'
   end
 
   @browser.manage.delete_all_cookies
@@ -460,4 +462,13 @@ end
 
 Then /^there is no horizontal scrollbar$/ do
   @browser.execute_script('return document.documentElement.scrollWidth <= document.documentElement.clientWidth').should eq true
+end
+
+# Place files in dashboard/test/fixtures
+# Note: Safari webdriver does not support file uploads (https://code.google.com/p/selenium/issues/detail?id=4220)
+Then /^I upload the file named "(.*?)"$/ do |filename|
+  filename = File.expand_path(filename, '../fixtures')
+  @browser.execute_script('$("input[type=file]").show()')
+  element = @browser.find_element :css, 'input[type=file]'
+  element.send_keys filename
 end

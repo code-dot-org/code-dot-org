@@ -162,8 +162,8 @@ end
 require File.expand_path('../../../config/environment.rb', __FILE__)
 
 if Rails.env.development?
-  $options.pegasus_db_access = true if $options.pegasus_domain =~ /localhost/
-  $options.dashboard_db_access = true if $options.dashboard_domain =~ /localhost/
+  $options.pegasus_db_access = true if $options.pegasus_domain =~ /(localhost|ngrok)/
+  $options.dashboard_db_access = true if $options.dashboard_domain =~ /(localhost|ngrok)/
 elsif Rails.env.test?
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /test/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
@@ -219,6 +219,7 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
   arguments += " -t ~@no_ie" if browser['browserName'] == 'Internet Explorer'
   arguments += " -t ~@no_ie9" if browser['browserName'] == 'Internet Explorer' && browser['version'] == '9.0'
   arguments += " -t ~@chrome" if browser['browserName'] != 'chrome' && !$options.local
+  arguments += " -t ~@no_safari" if browser['browserName'] == 'Safari'
   arguments += " -t ~@skip"
   arguments += " -t ~@webpurify" unless CDO.webpurify_key
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access
