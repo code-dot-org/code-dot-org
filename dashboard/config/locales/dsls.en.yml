@@ -2308,17 +2308,9 @@ en:
         I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
         My understanding of these lessons has not changed: My understanding of these lessons has not changed
       CSPPD3-u2 unit overview checkin:
-        ' I already know some of this content': ' I already know some of this content'
-        I already know most of this content already: I already know most of this content already
-        I do not already know this content: I do not already know this content
         I feel like I could teach this right now: I feel like I could teach this right now
         I feel like I need to do A LOT of review of lessons, content, etc before I teach this: I feel like I need to do A LOT of review of lessons, content, etc before I teach this
         I feel like I need to do SOME review of lessons, content, etc before I teach this: I feel like I need to do SOME review of lessons, content, etc before I teach this
-        Question: Question
-        description here: description here
-        right answer: right answer
-        title: title
-        wrong answer: wrong answer
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
@@ -4114,9 +4106,7 @@ en:
         Classroom Strategies Journal: Classroom Strategies Journal
       CSPPD2 PT activity: {}
       CSPPD2 share protocol: {}
-      CSPPD3-u2 pick a challenge:
-        Enter prompt here: Enter prompt here
-        Enter title here: Enter title here
+      CSPPD3-u2 pick a challenge: {}
       CSPPD3-u2 submit forum link: {}
       ECSPD Fence post Q1: {}
       ECSPD Handshake Q1: {}
@@ -4172,8 +4162,7 @@ en:
         Classroom Strategies Journal: Classroom Strategies Journal
       ECSPD your goals:
         Documenting Your Goals: Documenting Your Goals
-      ECSU2 Challenge Submission:
-        U2 Challenge Submission URL: U2 Challenge Submission URL
+      ECSU2 Challenge Submission: {}
       Glossary O:
         ? 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
         : 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
