@@ -1,6 +1,5 @@
 /* global $ */
 
-var React = require('react');
 var msg = require('../locale');
 var applabMsg = require('./locale');
 

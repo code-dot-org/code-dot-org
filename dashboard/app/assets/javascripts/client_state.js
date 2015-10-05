@@ -1,6 +1,8 @@
 //= require jquery
 //= require jquery.cookie
 
+/* global dashboard */
+
 /**
  * Helper functions for accessing client state. This state is now stored
  * in client side cookies but may eventually migrate to HTML5 web
