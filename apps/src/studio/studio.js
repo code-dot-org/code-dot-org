@@ -3143,10 +3143,11 @@ Studio.addItemsToScene = function (opts) {
       // of randomly retrying random numbers
 
       var numTries = 0;
+      var minDistanceFromSprite = 100;
       while (Studio.willCollidableTouchWall(item, item.x, item.y) ||
              Studio.getDistance(Studio.sprite[0].x + Studio.sprite[0].width/2,
                                 Studio.sprite[0].y + Studio.sprite[0].height/2,
-                                item.x, item.y) < 100) {
+                                item.x, item.y) < minDistanceFromSprite) {
         var newPos = generateRandomItemPosition();
         item.x = newPos.x;
         item.y = newPos.y;
