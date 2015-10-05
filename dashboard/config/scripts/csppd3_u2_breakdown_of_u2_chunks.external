@@ -4,7 +4,7 @@ markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 ### Unit 2 Overview > Breaking Down into Lessons Chunks
 <br/>
-<img src="https://images.code.org/08b54f17533c82b88eefaf74b114315f-image-1443798803586.44.24 PM.png" width="450" style="float:right; margin-left:30px">
+<img src="https://images.code.org/abfe5350deb45714b2ca888c0d073dba-image-1443815602080.26.07 PM.png" width="450" style="float:right; margin-left:30px">
 <br>
 #### What’s in Unit 2?
 
@@ -17,4 +17,5 @@ In the first chunk, we build an understanding of how the Internet actually funct
 In the second chunk, we start to look at how we can secure the information that we’re sending across this system that we’ve just built. Students consider models of encryption ranging from simple ciphers that have been used for thousands of years all the way to the public-key cryptography common on the Internet today. 
 <br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN
