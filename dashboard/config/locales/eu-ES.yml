@@ -69,16 +69,18 @@
   signup_form:
     student_count: '%{count} ikasleek izena eman dute.'
     teacher_count: '%{count} irakasleek izena eman dute.'
-    overview_student: Sign up for an account to track your progress. Your email is
-      primarily used to allow you to log in and for password recovery. For more information,
-      see our <a href="http://code.org/privacy">Privacy Policy</a>.
-    overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to add your students and track their progress.
+    overview_student: Zure aurrerapena jarraitzeko eman ezazu izena kontu batean.
+      Zure email helbidea batez ere saioa hasteko eta pasahitza berreskuratzeko erabiltzen
+      da. Informazio gehiago lortzeko, ikusi gure <a href="http://code.org/privacy">Pribatutasun
+      Araua</a>.
+    overview_teacher: Irakatsi itzazu konputazio zientziak zure ikasgelan kontu batean
+      izena emanda. <p/>Zure ikasleak gehitu eta beraien aurrerapena jarraitu ahal
+      izango duzu.
     no_signup_message: <a target="_blank" href="http://learn.code.org">en eszenatoki
       eta puzleak bilatu ditzakezu</a>, baina izen eman beharko duzu zure aurrerapenak
       gordetzeko.
     teacher_educator_guide: Ikusi hezitzailearen gida
-    teacher_pitch: Teacher sign up for Code.org
+    teacher_pitch: Irakasleen sarbidea Code.org-rako
     teacher_title: Irakasle bezala sartu
     student_pitch: Ikasle bezala sartu Code.org-n
     student_title: Ikasle bezala sartu
@@ -118,27 +120,27 @@
   signinsection:
     welcome: Ongi etorri %{section_name}-ra
     name: Aukeratu zure izena
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    picture: Orain bilatu ezazu zure irudi sekretua
+    words: Orain sartu itzazu zure hitz sekretuak
     login: Sign in
   password:
     reset_form:
       title: Pasahitza ahaztu duzu?
       email: Email helbidea
-      submit: Send me reset password instructions
+      submit: Bidali iezazkidazue pasahitza berrezartzeko instrukzioak
     change_form:
       title: Aldatu zure pasahitza
       new_password: Pasahitz berria
       confirm_password: Baieztatu pasahitz berria
       submit: Aldatu pasahitza
   welcome_email:
-    subject: Join my class (on Code.org)
+    subject: Nire klasean parte hartu (Code.org-n)
     body: |
-      Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
+      Klikatu ezazu azpiko estekan Code.org-ko konputazio zientzietako tutorialetan izena emateko (ni zure "irakaslea" izanda):
 
       %{link}
 
-      The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
+      Tutorialak dibertigarriak eta bisualki erakargarriak dira, eta jolas-antzeko esperientzia sinple eta gidatu batez konputazio zientzien kontzeptu basikoak irakasten dituzte. Ikasi ezazu programatzen Bill Gates, Mark Zuckerberg, Angry Birds eta Plants vs. Zombies-en eskutik! :-)
 
       %{name}
   follower:
@@ -152,12 +154,13 @@
         beste bat'
       no_teacher: Could not find anyone signed in with '%{teacher_email_or_code}'.
         Please ask them to sign up here and then try adding them again
-      section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Please enter a section code
-      cant_join_own_section: Sorry, you can't join your own section.
+      section_not_found: Ez da aurkitu '%{section_code}' kodea duen sailik.
+      blank_code: Mesedez sar ezazu sailerako kode bat
+      cant_join_own_section: Barkatu baina ezin duzu parte hartu zuk sortutako sail
+        batean.
     mail:
       invite_student:
-        subject: Join a class with %{teacher_name} at Code.org!
+        subject: Har ezazu parte klase batean %{teacher_name}-rekin Code.org-n!
       student_disassociated:
         subject: 'Code.org abisua: %{student_name} dagoeneko ez da zure ikaslea.'
       teacher_disassociated:
@@ -354,6 +357,8 @@
       section: Section
       example: Example Solution
       example_with_number: Example Solution %{solution_number}
+      submitted_on: Submitted on %{date}
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -464,6 +469,7 @@
     tos: Terms
     privacy: Privacy Policy
     secure: Secure Version
+    report_abuse: Report Abuse
   reference_area:
     title: Need help?
     subtitle: See these videos and hints
@@ -715,3 +721,26 @@
       contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
         us.</a>
       go_to_code_studio: Go to Code Studio
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying,
+          harassment, or an instance of copyright infringement for content you own
+          while using apps built on Code Studio, please fill out the form below. We
+          will take your report very seriously, investigate accordingly, and take
+          appropriate action.
+        validation:
+          email: Please provide an email address
+          age: Please specify an age
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
+          harassment: Threats, cyberbullying, harassement
+          offensive: Offensive content
+          infringement: Copyright Infringement
+          other: Beste bat
+        detail: Please provide as much detail as possible regarding the content you
+          are reporting.
+        acknowledge: By submitting this information, you acknowledge it will be handled
+          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
+          and the %{link_start_tos}Terms of Service%{link_end}

@@ -591,17 +591,18 @@ en:
         Line 5: crwdns40664:0crwdne40664:0
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: crwdns40665:0crwdne40665:0
       K-1 Artist 1 Multi 1:
-        /script_assets/k_1_images/artist_images/E|S.png: crwdns40710:0crwdne40710:0
-        /script_assets/k_1_images/artist_images/E|S|S.png: crwdns40711:0crwdne40711:0
-        /script_assets/k_1_images/artist_images/S|E|E.png: crwdns40712:0crwdne40712:0
-        /script_assets/k_1_images/artist_images/W|S|S.png: crwdns40713:0crwdne40713:0
+        /script_assets/k_1_images/artist_images/E-S-S.png: crwdns49684:0crwdne49684:0
+        /script_assets/k_1_images/artist_images/E-S.png: crwdns49685:0crwdne49685:0
+        /script_assets/k_1_images/artist_images/S-E-E.png: crwdns49686:0crwdne49686:0
+        /script_assets/k_1_images/artist_images/W-S-S.png: crwdns49687:0crwdne49687:0
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: crwdns40714:0crwdne40714:0
         Multiple Choice: crwdns40715:0crwdne40715:0
         Which blocks solve this puzzle?: crwdns40716:0crwdne40716:0
       K-1 Artist 1 Multi 2:
-        /script_assets/k_1_images/artist_images/E|S|W|N.png: crwdns40717:0crwdne40717:0
-        /script_assets/k_1_images/artist_images/N|E|S|W.png: crwdns40718:0crwdne40718:0
-        /script_assets/k_1_images/artist_images/N|W|S|E.png: crwdns40719:0crwdne40719:0
+        /script_assets/k_1_images/artist_images/E-S-W-N.png: crwdns49688:0crwdne49688:0
+        /script_assets/k_1_images/artist_images/N-E-S-W.png: crwdns49689:0crwdne49689:0
+        /script_assets/k_1_images/artist_images/N-S-E-W.png: crwdns49690:0crwdne49690:0
+        /script_assets/k_1_images/artist_images/N-W-S-E.png: crwdns49691:0crwdne49691:0
         /script_assets/k_1_images/artist_images/square.png, 500: crwdns40720:0crwdne40720:0
         Multiple Choice: crwdns40721:0crwdne40721:0
         Which blocks draw the square?: crwdns40722:0crwdne40722:0

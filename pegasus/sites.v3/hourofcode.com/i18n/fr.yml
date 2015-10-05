@@ -1,5 +1,6 @@
 fr:
   site_name: HEURE de CODE
+  hour_of_code: Hour of Code
   language: Français
   front_title: "Rejoignez le plus grand cours en ligne de l'Histoire, du 8 au 13 décembre 2015"
   coming_soon: Prochainement
@@ -16,6 +17,8 @@ fr:
   header_menu_resources: Ressources
   header_menu_faq: Foire aux questions
   header_menu_prizes: Prix
+  header_menu_how_to: How-To
+  header_menu_promote: Promouvoir
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_bgca: Boys and Girls Club of America
@@ -51,6 +54,7 @@ fr:
   company_chelmsfordpublicschooldistrict: Chelmsford School District
   company_cheneysd: Cheney School District
   company_chesterfieldschools: Chesterfield County Public Schools
+  company_codebrooklyn: Code Brooklyn
   company_cps: Chicago Public Schools
   company_ccsd: Clark County School District
   company_cloverparkschooldistrict: Clover Park School District
@@ -74,6 +78,7 @@ fr:
   company_vadoe: "Governor's School Programs"
   company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
+  company_godaddy: Go Daddy
   company_greenupcountyschooldistrict: Greenup County Schools
   company_gwinnettcountypublicschools: Gwinnett County Public Schools
   company_HamptonCitySchools: Hampton City Schools
@@ -107,6 +112,7 @@ fr:
   company_oneclay: One Clay County School District
   company_ocps: Orange County Schools
   company_orangeusd: Orange Unified School District
+  company_pbsd: Palm Beach School District
   company_pvusd: Paradise Valley Unified School District
   company_PetersburgCityPublicSchools: Petersburg City Public Schools
   company_pylusd: Placentia-Yorba Linda Union School District
@@ -132,6 +138,7 @@ fr:
   company_wvsd208: West Valley School District
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
+  company_yelp: Yelp
   prizes_all: Prix pour chaque organisateur
   prizes_every_organizer: "Chaque organisateur d'une heure de Code recevra un crédit Dropbox ou Skype pour le remercier"
   prizes_technology: Une école public des États Unis gagnera pour 10 000 $ de technologie
@@ -157,11 +164,16 @@ fr:
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
   how_to_nav_organizations: For organizations
+  how_to_nav_afterschool_educators: For after-school educators
+  prizes_nav_title: Prix
+  prizes_nav_home: All prizes
+  prizes_nav_hardware: Hardware prize signup
   whats_next_header: Ensuite ?
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Comment piloter une Heure de Code</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promouvoir l'Heure de Code</a>"
   whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Essayez les tutoriels
   n_have_learned_an_hoc: '<h1>Essayer une</h1><h2>Heure de Code</h2><h3># servie</h3>'
@@ -188,6 +200,7 @@ fr:
   front_join_us_computer_science: "Vous aimez juste l'informatique?"
   front_join_us_spread: Faites passer le mot.
   front_join_us_spread_word: Passez le message à votre entourage
+  front_join_us_spread_word_work: Spread the word in your community or workplace
   front_join_us_organize: Ou un événement une Heure de Code vous même.
   front_join_us_how_to_run: Voici comment ce déroule une Heure de Code
   front_join_us_help_promote: Aider à faire connaître une Heure de Code
@@ -200,6 +213,7 @@ fr:
   front_join_us_support: Soutenez le
   front_join_us_more_info: "Pour plus d'informations, veuillez visiter <a href='https://code.org'> code.org</a>."
   front_join_us_code_info: "Pour plus d'informations, veuillez visiter code.org"
+  front_join_us_n_students_served: '# students served'
   signup_header: Organiser un évènement un heure de Code durant la campaigne_date et inscrivez-le ici.
   signup_name_label: Votre Nom
   signup_email_label: Votre e-mail
@@ -250,8 +264,12 @@ fr:
   hardware_prizes_form_school_type_option_middle_school: Collège
   hardware_prizes_form_school_type_option_high_school: Lycée
   hardware_prizes_form_qualifying_school_label: École maternelle
+  hardware_prizes_form_title_I_school_label: This school qualifies for Title I funding
+  hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
   hardware_prizes_form_number_students_label: Nombre d’élèves participants
   hardware_prizes_form_number_students_placeholder: Nombre d’élèves
+  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
+  hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
   hardware_prizes_form_plan_file_label: "Télécharger votre plan logistique d'une Heure de Code"
   hardware_prizes_form_plan_file_description: "Soumettre un calendrier simple de la façon dont vous prévoyez d'organiser tous les étudiants de faire l'heure de Code à votre école. Voir un exemple de plan : #PDF # | #Word #"
   hardware_prizes_form_submit_label: Envoyez
@@ -321,12 +339,19 @@ fr:
   resources_social: Réseaux sociaux
   resources_country_resources: Country Specific Resources
   resources_stickers: Autocollants
+  resources_how_to_guides: How-to guides
+  resources_promote: Promouvoir
+  resources_nav_tutorials: Essayez les tutoriels
+  resources_nav_promote: Spread the word
+  resources_nav_spread_word: How to get involved
   resources_banner_promote_text: Promouvoir
   resources_banner_promote_button: Encourage others to sign up with brochures, inspirational posters and social media banners.
   resources_banner_howto_text: How-to
   resources_banner_howto_button: Resources for educators, parents and districts to host an Hour of Code.
+  handouts_section: Share these handouts
   handouts_onepager: Spread the word with this one page handout
   handouts_brochure: Give this brochure to teachers and schools
+  handouts_participationguide: Plan your Hour of Code with this participation guide
   videos_title: Montrer ces vidéos pour inspirer les élèves
   videos_what_most_schools_dont_teach: "What Most Schools Don't Teach (5 min)"
   videos_hoc_2014: 'Hour of Code is Here - Anybody Can Learn'
@@ -353,7 +378,7 @@ fr:
   title_signup_thanks: Merci de vous être inscrit pour organiser une Heure de Code!
   title_tutorial_guidelines: Tutorial Guidelines
   title_whole_school: Whole School Participation
-  events_title: "Tous les événements d'Une Heure de Code"
+  events_nav_title: Hour of Code Events
   events_nav_all: Tous les évenements
   events_nav_whole_schools: Toutes les écoles
   events_nav_special: Événements spéciaux

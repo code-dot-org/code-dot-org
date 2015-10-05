@@ -18,19 +18,19 @@ Spune prietenilor tai despre #HourOfCode.
 
 ## 2. Solicită întregii şcoli sa susțină o Oră de Programare
 
-[Trimite acest email](http://<%= hostname %>/resources#email) directiunii scolii.
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## 3. Solicită angajatorului tău să se implice
 
-[Trimite acest email](http://<%= hostname %>/resources#email) manager-ului tau, sau directorului general.
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## 4. Promoveaza Hour of Code in comunitatea ta
 
-Cluburi, biserici, universitati, grup de veterani sau reintalniri - Recruteaza un grup local. Sau poti organiza o petrecere Hour of Code pentru cartierul tau. [Trimite acest email](http://<%= hostname %>/resources#email).
+Cluburi, biserici, universitati, grup de veterani sau reintalniri - Recruteaza un grup local. Sau poti organiza o petrecere Hour of Code pentru cartierul tau. [Send this email](https://<%= hostname %>/resources#email).
 
 ## 5. Solicită unui oficial, ales local, sprijinul pentru organizarea Hour of Code
 
-[Trimite acest email](http://<%= hostname %>/resources#politicians) primarului, consilierilor orasului sau inspectoratului si invita-i sa vada scoala ta.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 

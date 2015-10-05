@@ -55,6 +55,19 @@ frameDirTableWalking[Dir.SOUTHWEST]  = 7;
 
 exports.frameDirTableWalking = frameDirTableWalking;
 
+var frameDirTableWalkingWithIdle = {};
+frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
+frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
+frameDirTableWalkingWithIdle[Dir.SOUTHEAST]  = 1;
+frameDirTableWalkingWithIdle[Dir.EAST]       = 2;
+frameDirTableWalkingWithIdle[Dir.NORTHEAST]  = 3;
+frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
+frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 5;
+frameDirTableWalkingWithIdle[Dir.WEST]       = 6;
+frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 7;
+
+exports.frameDirTableWalkingWithIdle = frameDirTableWalkingWithIdle;
+
 /**
  * Given a direction, returns the unit vector for it.
  */
