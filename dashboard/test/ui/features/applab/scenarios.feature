@@ -59,6 +59,7 @@ Feature: App Lab Scenarios
     And Applab HTML has no button
 
   @no_mobile
+  @no_safari
   Scenario: Upload Image Asset
     When I press "designModeButton"
     And I press "manage-assets-button"
