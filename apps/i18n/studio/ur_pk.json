@@ -469,5 +469,11 @@
   "dropletBlock_whenTouchWalkItem5_description": "This function executes when the character touches items with type 'item_walk_item5'.",
   "dropletBlock_whenTouchWalkItem6_description": "This function executes when the character touches items with type 'item_walk_item6'.",
   "itemItem5": "Item5",
-  "itemItem6": "Item6"
+  "itemItem6": "Item6",
+  "setWallsBlank": "set blank walls",
+  "setWallsCircle": "set circle walls",
+  "setWallsCircle2": "set circle2 walls",
+  "setWallsHorizontal": "set horizontal walls",
+  "setWallsGrid": "set grid walls",
+  "setWallsBlobs": "set blobs walls"
 }
