@@ -4,7 +4,7 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 2 Day 18-21: 
 
-First, let's explore the lesson in the curriculum. To begin, find your ECS your curriculum and open to page 97.
+First, let's explore the lesson in the curriculum. To begin, find your ECS Version 5 curriculum and open to page 97.
 
 <a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=97" target="_blank">Access a Digital Copy of the Lesson >></a>
 
@@ -16,7 +16,7 @@ First, let's explore the lesson in the curriculum. To begin, find your ECS your 
 
 #### Common Difficulties
 
-The last lesson was about a graph problem as well. However the minimal spanning tree is different than this problem often referred to as the Traveling Salesman Problem. Students will need to look carefully for those differences as they go through the problem solving process.
+The last lesson was about a graph problem as well. However the Minimal Spanning Tree is different than this problem often referred to as the Hamiltonian Path Problem (similar to the Traveling Salesman Problem). Students will need to look carefully for those differences as they go through the problem solving process.  The biggests difference if that you not just creating a tree between the set of nodes but a path that touches every node once. 
 
 ### All Resources for This Lesson
 

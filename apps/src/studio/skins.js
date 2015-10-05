@@ -207,25 +207,50 @@ function loadHoc2015(skin, assetUrl) {
     'item_walk_item1',
     'item_walk_item2',
     'item_walk_item3',
-    'item_walk_item4'
+    'item_walk_item4',
+    'item_walk_item5',
+    'item_walk_item6'
   ];
 
   skin.AutohandlerTouchItems = {
     'item_walk_item1': 'whenTouchWalkItem1',
     'item_walk_item2': 'whenTouchWalkItem2',
     'item_walk_item3': 'whenTouchWalkItem3',
-    'item_walk_item4': 'whenTouchWalkItem4'
+    'item_walk_item4': 'whenTouchWalkItem4',
+    'item_walk_item5': 'whenTouchWalkItem5',
+    'item_walk_item6': 'whenTouchWalkItem6'
   };
 
   skin.specialItemFrames = {
     'item_walk_item1': 12,
     'item_walk_item2': 12,
     'item_walk_item3': 15,
-    'item_walk_item4': 12
+    'item_walk_item4': 8,
+    'item_walk_item5': 12,
+    'item_walk_item6': 1
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
   skin.explosionFrames = 17;
+
+  // Spritesheet for animated goal.
+  skin.animatedGoal = skin.assetUrl('goal_idle.png');
+
+  // How many frames in the animated goal spritesheet.
+  skin.animatedGoalFrames = 16;
+
+  // How long to show each frame of the optional goal animation.
+  skin.timePerGoalAnimationFrame = 100;
+
+  // For a smaller collision region on a goal.
+  skin.goalCollisionRectWidth = 50;
+  skin.goalCollisionRectHeight = 50;
+
+  // Draw a goal an an offset to its usual location, useful for oversize goal
+  // images, such as a person standing taller than a single grid square whose
+  // feet should still be planted in that grid square.
+  skin.goalRenderOffsetX = -25;
+  skin.goalRenderOffsetY = -45;
 
   // Dimensions of a rectangle in collidable center from which projectiles begin.
   skin.projectileSpriteWidth  = 70;
@@ -262,11 +287,11 @@ function loadHoc2015(skin, assetUrl) {
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 1,
+        normal: name == 'character1' ? 14 : 16,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: name == 'character1' ? 1 : 8
+        walk: name == 'character1' ? 14 : 8
       },
       timePerFrame: 100
     };
@@ -285,7 +310,8 @@ function loadHoc2015(skin, assetUrl) {
   skin.item_walk_item2 = skin.assetUrl('walk_item2.png');
   skin.item_walk_item3 = skin.assetUrl('walk_item3.png');
   skin.item_walk_item4 = skin.assetUrl('walk_item4.png');
-
+  skin.item_walk_item5 = skin.assetUrl('walk_item5.png');
+  skin.item_walk_item6 = skin.assetUrl('walk_item6.png');
 
   skin.background1 = {
     background: skin.assetUrl('background_background1.jpg'),
@@ -321,7 +347,7 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
 
-  skin.walls_blank = 
+  skin.blank = 
     [[0,  0,  0,  0,  0,  0,  0,  0], 
      [0,  0,  0,  0,  0,  0,  0,  0], 
      [0,  0,  0,  0,  0,  0,  0,  0], 
@@ -331,7 +357,7 @@ function loadHoc2015(skin, assetUrl) {
      [0,  0,  0,  0,  0,  0,  0,  0],  
      [0,  0,  0,  0,  0,  0,  0,  0]];
 
-  skin.walls_circle = 
+  skin.circle = 
     [[0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00], 
      [0x00, 0x11, 0x02, 0x03,  0x00,  0x44, 0x45, 0x00], 
      [0x00, 0x04, 0x00, 0x00,  0x00,  0x00, 0x03, 0x00], 
@@ -341,7 +367,7 @@ function loadHoc2015(skin, assetUrl) {
      [0x00, 0x24, 0x25, 0x02,  0x00,  0x34, 0x35, 0x00], 
      [0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00]];
 
-  skin.walls_circle_alt = 
+  skin.circle2 = 
     [[0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00], 
      [0x00, 0x200, 0x213, 0x213, 0x00, 0x213, 0x201, 0x00], 
      [0x00, 0x212, 0x00,  0x00,  0x00, 0x00,  0x212, 0x00], 
@@ -351,7 +377,7 @@ function loadHoc2015(skin, assetUrl) {
      [0x00, 0x202, 0x213, 0x213, 0x00, 0x213, 0x203, 0x00], 
      [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00]];
 
-  skin.walls_horizontal = 
+  skin.horizontal = 
     [[0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
      [0, 0x02, 0x03, 0x04, 0x00, 0x24, 0x25, 0x00], 
      [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
@@ -361,7 +387,7 @@ function loadHoc2015(skin, assetUrl) {
      [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
      [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]];
 
-  skin.walls_grid = 
+  skin.grid = 
     [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
      [0x00, 0x21, 0x00, 0x10, 0x00, 0x20, 0x00, 0x03], 
      [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
@@ -371,15 +397,15 @@ function loadHoc2015(skin, assetUrl) {
      [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
      [0x00, 0x10, 0x00, 0x21, 0x00, 0x23, 0x00, 0x10]];
 
-  skin.walls_blobs = 
-    [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
-     [0x00, 0x03, 0x03, 0x00, 0x00, 0x00, 0x22, 0x00], 
-     [0x00, 0x03, 0x03, 0x00, 0x00, 0x10, 0x10, 0x00], 
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x10, 0x10, 0x00],  
-     [0x00, 0x00, 0x02, 0x02, 0x00, 0x00, 0x00, 0x00], 
-     [0x00, 0x00, 0x02, 0x02, 0x00, 0x00, 0x00, 0x23],   
-     [0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x21, 0x21],  
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x21, 0x21]];
+  skin.blobs = 
+    [[0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00], 
+     [0x00, 0x103, 0x103, 0x00,  0x00, 0x00,  0x22,  0x00], 
+     [0x00, 0x103, 0x103, 0x00,  0x00, 0x110, 0x110, 0x00], 
+     [0x00, 0x00,  0x00,  0x00,  0x00, 0x110, 0x110, 0x00],  
+     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x00], 
+     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x23],   
+     [0x00, 0x00,  0x03,  0x00,  0x00, 0x00,  0x121, 0x121],  
+     [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x121, 0x121]];
 
   // Sounds.
   skin.character1sound1 = [skin.assetUrl('character1sound1.mp3'), skin.assetUrl('wall.ogg')];
@@ -394,12 +420,13 @@ function loadHoc2015(skin, assetUrl) {
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   skin.wallChoices = [
-    [msg.setWallsHidden(), HIDDEN_VALUE],
     [msg.setWallsRandom(), RANDOM_VALUE],
-    [msg.setWallsBorder(), '"border"'],
-    [msg.setWallsMaze(), '"maze"'],
-    [msg.setWallsMaze2(), '"maze2"'],
-    [msg.setWallsDefault(), '"default"']
+    [msg.setWallsBlank(), '"blank"'],
+    [msg.setWallsCircle(), '"circle"'],
+    [msg.setWallsCircle2(), '"circle2"'],
+    [msg.setWallsHorizontal(), '"horizontal"'],
+    [msg.setWallsGrid(), '"grid"'],
+    [msg.setWallsBlobs(), '"blobs"']
     ];
 
   skin.backgroundChoices = [
@@ -429,6 +456,8 @@ function loadHoc2015(skin, assetUrl) {
     [msg.itemItem2(), '"item_walk_item2"'],
     [msg.itemItem3(), '"item_walk_item3"'],
     [msg.itemItem4(), '"item_walk_item4"'],
+    [msg.itemItem5(), '"item_walk_item5"'],
+    [msg.itemItem6(), '"item_walk_item6"'],
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
