@@ -1,4 +1,4 @@
-/* global codeMirror, marked */
+/* global codeMirror, marked, dashboard */
 
 /**
  * Initializes a live preview markdown editor that spits its contents out into

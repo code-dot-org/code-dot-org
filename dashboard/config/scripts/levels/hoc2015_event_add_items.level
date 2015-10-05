@@ -10,10 +10,12 @@
     "background": "background2",
     "softButtons": "[\"leftButton\", \"rightButton\", \"downButton\", \"upButton\"]",
     "code_functions": {
+      "addItemsToScene": null,
+
       "setCharacter": null,
       "setBackground": null,
+      "setWalls": null,
       "playSound": null,
-      "addItemsToScene": null,
       "moveEast": null,
       "moveWest": null,
       "moveNorth": null,
@@ -42,7 +44,7 @@
     "failure_condition": "function () {\r\n}",
 
     "embed": "false",
-    "instructions": "Now you create the game. Use the addItemsToScene command to choose how many items are in the game.",
+    "instructions": "\"Bot1, look at those other characters standing around you.\"<br/><br/>Use the addItemsToScene command to add new characters to the game.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

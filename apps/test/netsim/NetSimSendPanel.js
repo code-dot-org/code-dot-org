@@ -1,5 +1,5 @@
 /** @file Tests for NetSimLogPanel */
-/* global $, describe, beforeEach, it */
+/* globaldescribe, beforeEach, it */
 var testUtils = require('../util/testUtils');
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var assert = testUtils.assert;

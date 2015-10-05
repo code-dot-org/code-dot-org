@@ -9,7 +9,6 @@
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 
 var applabMsg = require('./locale');
 var dom = require('../dom');

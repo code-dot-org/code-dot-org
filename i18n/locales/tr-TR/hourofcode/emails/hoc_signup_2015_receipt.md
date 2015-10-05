@@ -18,19 +18,19 @@ Arkadaşlarınıza #KodlamaSaati 'ni anlatın.
 
 ## 2. Tüm okulun bir Kodlama Saati talep etmesini sağlayın
 
-[Bu e-postayı](http://<%= hostname %>/resources#email) müdürünüze gönderin.
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## 3. İşvereninizin de katılmasını rica edin
 
-[Bu e-postayı](http://<%= hostname %>/resources#email) müdürünüze veya CEO'nuza gönderin.
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## 4. Kodlama Saati'ni çevrenize tanıtın
 
-Yerel bir grupla iletişime geçin - öğrenci kulüpleri, dernekler ve bu çeşit diğer organizasyonlara ulaşabilirsiniz. Veya, mahallenizde bir "Kodlama Saati Partisi" düzenleyebilirsiniz. [Bu e-postayı göndererek başlayın](http://<%= hostname %>/resources#email).
+Yerel bir grupla iletişime geçin - öğrenci kulüpleri, dernekler ve bu çeşit diğer organizasyonlara ulaşabilirsiniz. Veya, mahallenizde bir "Kodlama Saati Partisi" düzenleyebilirsiniz. [Send this email](https://<%= hostname %>/resources#email).
 
 ## 5. Yerel yönetim idarelerinden Kodlama Saatini desteklemelerini rica edin
 
-[Bu e-postayı](http://<%= hostname %>/resources#politicians) belediye başkanınıza, belediye meclisinize veya okul yönetimlerine gönderebilir, onları etkinliğinize davet edebilirsiniz.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 

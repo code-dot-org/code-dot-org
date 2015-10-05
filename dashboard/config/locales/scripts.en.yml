@@ -835,6 +835,8 @@ en:
           The Need for Encryption: The Need for Encryption
           Keys and Passwords: Keys and Passwords
           Public Key Encryption: Public Key Encryption
+          Practice PT - The Internet and Society: Practice PT - The Internet and Society
+          Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1167,9 +1169,9 @@ en:
           description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
           Frequency Analysis: Frequency Analysis
         ECSPD3-Unit2:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description_short: Academic Year Development
-          description: Academic Year Development
+          title: 'Exploring Computer Science: Unit 2'
+          description_short: Unit 2 of the Exploring Computer Science curriculum
+          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the version 5 Exploring Computer Science curriculum.
           Welcome!: Welcome!
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
@@ -1187,6 +1189,11 @@ en:
           Unit 2 Challenge Planning & Creation: Unit 2 Challenge Planning & Creation
           Unit 2 Challenge Planning: Unit 2 Challenge Planning
           Unit 2 Challenge Creation: Unit 2 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1285,9 +1292,9 @@ en:
           'Data App Part 9: Reflect': 'Data App Part 9: Reflect'
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
         ScienceP3OLPT2:
-          title: Computer Science in Science PD Phase 2b
-          description_short: Phase 2 Online Blended Summer Study
-          description: Phase 2 Online Blended Summer Study
+          title: Computer Science in Science PD Phase 3b
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
           Welcome!: Welcome!
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
@@ -1311,3 +1318,8 @@ en:
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
           Welcome!: Welcome!
+          Getting Started: Getting Started
+          Unit 2 Overview: Unit 2 Overview
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit

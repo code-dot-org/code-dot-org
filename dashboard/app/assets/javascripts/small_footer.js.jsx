@@ -1,4 +1,4 @@
-/* $ */
+/*jshint scripturl:true*/
 
 // This code might better live in shared eventually. doing that would
 // require adding JSX transpiling to shared, and the ability to output multiple
@@ -23,7 +23,7 @@ window.dashboard.footer = (function () {
       render: function () {
         return <p dangerouslySetInnerHTML={{
             __html: decodeURIComponent(this.props.text)
-        }}/>
+        }}/>;
       }
     });
 
@@ -92,7 +92,7 @@ window.dashboard.footer = (function () {
           // Create a window during which we can't show again, so that clicking
           // on copyright doesnt immediately hide/reshow
           setTimeout(function () {
-            this.setState({ menuState: MenuState.MINIMIZED })
+            this.setState({ menuState: MenuState.MINIMIZED });
           }.bind(this), 200);
         }.bind(this));
       },
@@ -179,7 +179,7 @@ window.dashboard.footer = (function () {
               }}/>
               <small>
                 {this.renderCopyright()}
-                <a className="more-link" href="#"
+                <a className="more-link" href="javascript:void(0)"
                   onClick={this.clickBaseMenu}>
                   {this.props.baseMoreMenuString + ' '}
                   <i className={caretIcon}/>
