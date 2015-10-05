@@ -56,6 +56,20 @@ SQL
     render 'usage', formats: [:html]
   end
 
+  def search_for_teachers
+    authorize! :read, :reports
+    filter = params[:filter]
+    fields = ['name', 'email']
+    teachers = User.find_by_sql(<<SQL)
+SELECT u.name, u.email 
+FROM users AS u
+WHERE u.user_type = 'teacher'
+  AND u.id NOT IN (SELECT teacher_id FROM workshop_attendance)
+  AND u.full_address LIKE '%#{filter}%'
+SQL
+    render locals: {headers: fields, data: teachers}
+  end
+
   def admin_stats
     authorize! :read, :reports
 
