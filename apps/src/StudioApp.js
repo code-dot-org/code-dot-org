@@ -499,6 +499,9 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     }
     this.editor.setValue(resetValue);
   }
+  if (config.afterClearPuzzle) {
+    config.afterClearPuzzle();
+  }
 };
 
 /**
@@ -1098,7 +1101,8 @@ StudioApp.prototype.clearHighlighting = function () {
   if (this.isUsingBlockly()) {
     this.highlight(null);
   } else if (this.editCode && this.editor) {
-    codegen.clearDropletAceHighlighting(this.editor);
+    // Clear everything (step highlighting, errors, etc.)
+    codegen.clearDropletAceHighlighting(this.editor, true);
   }
 };
 

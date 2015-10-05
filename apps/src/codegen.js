@@ -454,29 +454,32 @@ exports.isAceBreakpointRow = function (session, userCodeRow) {
 var lastHighlightMarkerIds = {};
 
 /**
+ * Clears all highlights that we have added in the ace editor.
+ */
+function clearAllHighlightedAceLines (aceEditor) {
+  var session = aceEditor.getSession();
+  for (var hlClass in lastHighlightMarkerIds) {
+    session.removeMarker(lastHighlightMarkerIds[hlClass]);
+  }
+  lastHighlightMarkerIds = {};
+}
+
+/**
  * Highlights lines in the ace editor. Always moves the previous highlight with
  * the same class to the new location.
  *
  * If the row parameters are not supplied, just clear the last highlight.
- *
- * If no class is specified in this case, clear all highlights.
  */
-function highlightAceLines (aceEditor, clazz, startRow, endRow) {
+function highlightAceLines (aceEditor, className, startRow, endRow) {
   var session = aceEditor.getSession();
-  if (typeof clazz === 'undefined') {
-    for (var hlClass in lastHighlightMarkerIds) {
-      session.removeMarker(lastHighlightMarkerIds[hlClass]);
-    }
-    lastHighlightMarkerIds = {};
-    return;
-  }
-  if (lastHighlightMarkerIds[clazz]) {
-    session.removeMarker(lastHighlightMarkerIds[clazz]);
-    lastHighlightMarkerIds[clazz] = null;
+  className = className || 'ace_step';
+  if (lastHighlightMarkerIds[className]) {
+    session.removeMarker(lastHighlightMarkerIds[className]);
+    lastHighlightMarkerIds[className] = null;
   }
   if (typeof startRow !== 'undefined') {
-    lastHighlightMarkerIds[clazz] = aceEditor.getSession().highlightLines(
-        startRow, endRow, clazz).id;
+    lastHighlightMarkerIds[className] = aceEditor.getSession().highlightLines(
+        startRow, endRow, className).id;
   }
 }
 
@@ -508,16 +511,26 @@ exports.selectEditorRowColError = function (editor, row, col) {
 };
 
 /**
- * Removes highlights and selection in droplet and ace editors.
+ * Removes highlights (for the default ace_step class) and selection in
+ * droplet and ace editors.
+ *
+ * @param {boolean} allClasses When set to true, remove all classes of
+ * highlights (including ace_step, ace_error, and anything else)
  */
-exports.clearDropletAceHighlighting = function (editor, highlightClass) {
+exports.clearDropletAceHighlighting = function (editor, allClasses) {
   if (editor.currentlyUsingBlocks) {
     editor.clearLineMarks();
   } else {
     editor.aceEditor.getSelection().clearSelection();
   }
-  highlightAceLines(editor.aceEditor, highlightClass);
-}
+  if (allClasses) {
+    clearAllHighlightedAceLines(editor.aceEditor);
+  } else {
+    // when calling without a class or rows, highlightAceLines() will clear
+    // everything highlighted with the default highlight class
+    highlightAceLines(editor.aceEditor);
+  }
+};
 
 function selectAndHighlightCode (aceEditor, cumulativeLength, start, end, highlightClass) {
   var selection = aceEditor.getSelection();
@@ -540,6 +553,8 @@ function selectAndHighlightCode (aceEditor, cumulativeLength, start, end, highli
  *
  * Returns the row (line) of code highlighted. If nothing is highlighted
  * because it is outside of the userCode area, the return value is -1
+ *
+ * @param {string} highlightClass CSS class to use when highlighting in ACE
  */
 exports.selectCurrentCode = function (interpreter,
                                       cumulativeLength,
@@ -574,10 +589,10 @@ exports.selectCurrentCode = function (interpreter,
             highlightClass);
       }
     } else {
-      exports.clearDropletAceHighlighting(editor, highlightClass || "ace_step");
+      exports.clearDropletAceHighlighting(editor);
     }
   } else {
-    exports.clearDropletAceHighlighting(editor, highlightClass || "ace_step");
+    exports.clearDropletAceHighlighting(editor);
   }
   return userCodeRow;
 };
