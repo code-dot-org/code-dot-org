@@ -13,8 +13,13 @@ use Rack::SslEnforcer,
 require 'varnish_environment'
 use VarnishEnvironment
 
-use Rack::WhitelistCookies,
-  HttpCache.config(Session::KEY, Session::STORAGE_ID)[:pegasus]
+if rack_env?(:development)
+  require 'cdo/rack/whitelist_cookies'
+  require 'cdo/session'
+  require '../cookbooks/cdo-varnish/libraries/http_cache'
+  use Rack::WhitelistCookies,
+    HttpCache.config(Session::KEY, Session::STORAGE_ID)[:pegasus]
+end
 
 require 'files_api'
 use FilesApi
