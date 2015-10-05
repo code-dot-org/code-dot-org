@@ -44,7 +44,7 @@
     "failure_condition": "function () {\r\n}",
 
     "embed": "false",
-    "instructions": "\"We've made it.  Now it's time to have some fun.\"<br/><br/>Use all of the blocks to make your own game.",
+    "instructions": "\"Congratulations.  Now it's time to have some fun.\"<br/><br/>Use all of the blocks to make your own game.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
