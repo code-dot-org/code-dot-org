@@ -38,7 +38,7 @@
     "pin_workspace_to_bottom": "true",
     
     "embed": "false",
-    "instructions": "\"Steer the bot to reach the two goals.\"<br/><br/>Drag the move commands into the correct events.  Then, steer the bot to reach the goals.",
+    "instructions": "\"Bot1, visit the two goals.\"<br/><br/>Drag the move commands into the correct events.  Then, steer the bot to reach the goals.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

@@ -47,7 +47,7 @@
     "failure_condition": "function () {\r\n}",
 
     "embed": "false",
-    "instructions": "\"Now these new characters are starting to do more.\"<br/><br/>Add some characters, and set their behavior and speed.",
+    "instructions": "\"Bot1, look at those characters.  Are they chasing you or running away?\"<br/><br/>Add some characters, and set their behavior and speed.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
