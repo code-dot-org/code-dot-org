@@ -9,57 +9,24 @@
     "skin": "hoc2015",
     "background": "background3",
     "code_functions": {
-      // Play Lab
+      "setSpriteSpeed": null,
+      "changeScore": null,
+      "whenTouchItem": null,
+      "setItemActivity": null,
+      "setItemSpeed": null,
+      "addItemsToScene": null,
       "setCharacter": null,
       "setBackground": null,
-      "move": null,
+      "setWalls": null,
       "playSound": null,
-      "changeScore": null,
-      "setCharacterSpeed": null,
-      "throwProjectile": null,
-      "onEvent": null,
-
-      // Control
-      "forLoop_i_0_4": null,
-      "ifBlock": null,
-      "ifElseBlock": null,
-      "whileBlock": null,
-
-      // Math
-      "addOperator": null,
-      "subtractOperator": null,
-      "multiplyOperator": null,
-      "divideOperator": null,
-      "equalityOperator": null,
-      "inequalityOperator": null,
-      "greaterThanOperator": null,
-      "lessThanOperator": null,
-      "andOperator": null,
-      "orOperator": null,
-      "notOperator": null,
-      "randomNumber_max": null,
-      "randomNumber_min_max": null,
-      "mathRound": null,
-      "mathAbs": null,
-      "mathMax": null,
-      "mathMin": null,
-
-      // Variables
-      "declareAssign_x": null,
-      "assign_x": null,
-      "declareAssign_x_array_1_4": null,
-      "declareAssign_x_prompt": null,
-
-      // Functions
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null,
-
       "moveEast": null,
       "moveWest": null,
       "moveNorth": null,
-      "moveSouth": null
+      "moveSouth": null,
+      "whenLeft": null,
+      "whenRight": null,
+      "whenUp": null,
+      "whenDown": null
     },
 
     "sort_draw_order": true,
@@ -77,7 +44,7 @@
     "failure_condition": "function () {\r\n}",
 
     "embed": "false",
-    "instructions": "Make something.",
+    "instructions": "\"Congratulations.  Now it's time to have some fun.\"<br/><br/>Use all of the blocks to make your own game.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

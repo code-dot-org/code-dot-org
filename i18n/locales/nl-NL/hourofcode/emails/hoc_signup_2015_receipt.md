@@ -18,19 +18,19 @@ Vertel je vrienden over het Uur Code, #HourOfCode.
 
 ## 2. Vraag je hele school een Uur Code aan te bieden
 
-[Send this email](http://<%= hostname %>/resources#email) to your principal.
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## 3. Vraag je werkgever betrokken te raken
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## 4. Promote the Hour of Code in your community
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://<%= hostname %>/resources#email).
 
 ## Vraag een politicus het Uur Code te ondersteunen
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 

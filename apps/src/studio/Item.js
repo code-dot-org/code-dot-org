@@ -21,9 +21,6 @@ var Item = function (options) {
 
   this.currentFrame_ = 0;
   this.animator_ = window.setInterval(function () {
-    if (this.dir === Direction.NONE) {
-      return;
-    }
     if (this.loop || this.currentFrame_ + 1 < this.frames) {
       this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
     }
@@ -39,7 +36,7 @@ module.exports = Item;
  * Returns the frame of the spritesheet for the current walking direction.
  */
 Item.prototype.getDirectionFrame = function() {
-  return constants.frameDirTableWalking[this.dir];
+  return constants.frameDirTableWalkingWithIdle[this.dir];
 };
 
 /**
@@ -55,7 +52,7 @@ Item.__resetIds = function () {
 Item.prototype.createElement = function (parentElement) {
   var nextId = (uniqueId++);
 
-  var numFacingAngles = 8;
+  var numFacingAngles = 9;
 
   // create our clipping path/rect
   this.clipPath = document.createElementNS(SVG_NS, 'clipPath');

@@ -14,7 +14,7 @@ nav: about_nav
 
 **Internships at Code.org:**
 
-- [Education Team Intern](#edintern)
+- [Education Team Intern/Part-Time Contractor](#edintern)
 
 **No current positions, but always accepting great resumes:**
 
@@ -136,11 +136,11 @@ The ideal candidate has the following qualifications:
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="edintern"href="#edintern">Education Team Intern (Seattle or Chicago, IL)</a>
+## <a name="edintern"href="#edinterncontractor">Education Team Intern/Part-Time Contractor (Seattle or Chicago, IL)</a>
 
 **Job Summary:**
 
-Code.org is looking for an intern to work with and support the goals of Code.org’s Education team through the development of computer science curriculum. This person will work with a variety of program leaders across multiple projects, simultaneously performing a wide range of tasks. We need someone who has quick turnaround, is responsive, and can effectively organize their priorities and task list.
+Code.org is looking for an intern/part-time contractor to work with and support the goals of Code.org’s Education team through the development of computer science curriculum. This person will work with a variety of program leaders across multiple projects, simultaneously performing a wide range of tasks. We need someone who has quick turnaround, is responsive, and can effectively organize their priorities and task list.
 
 Responsibilities of the position include: 
 
@@ -157,12 +157,12 @@ Responsibilities of the position include:
 
 The ideal candidate has experience in computer science and a background or passion for education; has strong writing and communications skills; is a tech-savvy self-starter who is able to multi-task and excel under pressure. 
 
-The intern candidate should: 
+The candidate should: 
 
 - Have basic to comprehensive knowledge of computer science 
 - Have prior curriculum writing experience / activity design 
 - Be proficient in working with Microsoft Office and Google Docs  
-- Be working toward a Bachelor’s degree or higher in Education or Computer Science
+- Be working toward or have obtained a Bachelor’s degree or higher in Education or Computer Science
 
 Additional preference for a candidate that: 
 
