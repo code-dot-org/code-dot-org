@@ -159,13 +159,9 @@ sub vcl_deliver {
 
 # Handle redirects
 sub vcl_synth {
-  if(resp.status == 750) {
-    set resp.http.Location = resp.reason;
-    set resp.status = 302;
-    return(deliver);
-  }
-
   if(resp.status == 751) {
+    # We use this special error status 751 to force redirects with 301 (permanent) redirects
+    # To use this, call the following from anywhere in vcl_recv: return (synth(720, "http://host/new.html"));
     set resp.http.Location = resp.reason;
     set resp.status = 301;
     return(deliver);
