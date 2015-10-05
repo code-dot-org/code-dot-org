@@ -220,5 +220,5 @@ Net::SSH.start('gateway.code.org', username) do |ssh|
   ssh.exec!("rm /tmp/*#{file_suffix}*")
 end
 
-puts "To deploy new chef instance, run on gateway:"
-puts "knife bootstrap #{private_dns_name} -x ubuntu --sudo -E production -N #{instance_name} -r role[front-end]"
+puts "To deploy new chef instance, run the following:"
+puts "ssh gateway -t knife bootstrap #{private_dns_name} -x ubuntu --sudo -E production -N #{instance_name} -r role[front-end]"
