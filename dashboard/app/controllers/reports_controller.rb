@@ -61,7 +61,7 @@ SQL
     filter = params[:filter]
     fields = ['name', 'email']
     teachers = User.find_by_sql(<<SQL)
-SELECT u.name, u.email 
+SELECT u.name, u.email
 FROM users AS u
 WHERE u.user_type = 'teacher'
   AND u.id NOT IN (SELECT teacher_id FROM workshop_attendance)
