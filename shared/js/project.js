@@ -115,7 +115,12 @@ var projects = module.exports = {
       if (err) {
         throw err;
       }
-      $('.admin-abuse-score').text(0);
+      assets.patchAll(id, 'abuse_score=0', null, function (err, result) {
+        if (err) {
+          throw err;
+        }
+        $('.admin-abuse-score').text(0);
+      });
     });
   },
 
@@ -587,7 +592,7 @@ function fetchSource(data, callback) {
 
 function fetchAbuseScore(callback) {
   channels.fetch(current.id + '/abuse', function (err, data) {
-    currentAbuseScore = (data && data.abuseScore) || currentAbuseScore;
+    currentAbuseScore = (data && data.abuse_score) || currentAbuseScore;
     callback();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't

@@ -18,19 +18,19 @@
 
 ## 2. Попитайте във вашето училище, дали се предлага участие в Часът на кодирането
 
-[Изпратете този имейл](http://<%= hostname %>resources#email) на вашия кмет.
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## Предложете на вашия работодател да се включи в инициативата
 
-<a href = "http://<%= hostname %> /resources #email">Изпратете този имейл</a> на вашия ръководител или изпълнителен директор.
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## 4. Промотиране на часът на кода във вашата общност
 
-Наемете локална група — скаути клуб, църква, университет, ветерани от група или синдикат. Или станете домакин часът на кода "block party" за вашия квартал. .</p> 
+Наемете локална група — скаути клуб, църква, университет, ветерани от група или синдикат. Или станете домакин часът на кода "block party" за вашия квартал. [Send this email](https://<%= hostname %>/resources#email).
 
 ## 5 Предложете на Общинската Администрация да подкрепи програмата "Един Час Програмиране"
 
-<a href = "http:// < %= hostname%> /resources #politicians" > Изпратете този имейл</a> на вашия кмет, общински съвет или училищното настоятелство и ги поканете да посетят Вашето училище.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 

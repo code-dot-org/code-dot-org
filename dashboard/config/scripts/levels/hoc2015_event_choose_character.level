@@ -11,7 +11,10 @@
     "softButtons": "[\"leftButton\", \"rightButton\", \"downButton\", \"upButton\"]",
     "code_functions": {
       "setCharacter": null,
+      "setBackground": null,
+      "setWalls": null,
       "playSound": null,
+
       "moveEast": null,
       "moveWest": null,
       "moveNorth": null,
@@ -40,7 +43,7 @@
     "failure_condition": "function () {\r\n}",
 
     "embed": "false",
-    "instructions": "Customize your game by choosing your character. Let’s switch back to block mode. To set a value, just click the drop down on the block.",
+    "instructions": "\"Bot1 or Bot2, I need one of you to venture into environment1, environment2, or environment3.\"<br/><br/>Customize your game by choosing the bot and the background.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

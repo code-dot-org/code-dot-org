@@ -8,7 +8,7 @@
 
 # サービス利用規約
 
-Last Revised: December 5, 2014
+最終改訂日: 2014 年 12 月 5 日
 
 Code.orgは501(c)(3)に基づく非営利団体です(“Code.org”)。 我々の使命はコンピューターサイエンスを学ぶ機会を全ての生徒に提供することです。 その一環として、Code.orgは<http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>などのウェブサイトで、各種情報、テキスト、カリキュラム、ビデオ、グラフィック、写真、API、電子メールによるお知らせ、そのた関連する資料、製品、サービス(“**サービス**”)などを運営します。その中には、<http://studio.code.org> でのチュートリアルプラットフォーム (“**Code Studio**”)も含まれます。
 
@@ -22,19 +22,19 @@ Code.orgは501(c)(3)に基づく非営利団体です(“Code.org”)。 我々�
 
 いくつかのサービスは、利用規約 (“**追加情報**”) のルール、ガイドラインに準じます。そのようなサービスを利用した際には追加条項に同意したものとみなします。 利用規約と追加条項に不整合な箇所がある場合、利用規約が追加条項より優先すると明示的に示されない限り、追加条項が優先されるものとします。
 
-### Children Under Age 13
+### 13 歳未満の子供
 
 Code.orgの[個人情報保護方針](http://code.org/privacy)に明記されているように、13歳未満の子供からの個人情報は極力収集しないようにしています。 もしあなたが13歳未満の場合、Code.orgでアカウントを作る前に保護者や法的保護者の許可を得ることを強くお勧めします。 Code.orgは、チュートリアルや教育関連のサービスを通して、学区の代表、学校、先生、管理者、カウンセラー、他の教育関係の方 (“**教育者**”) が生徒とつながることを許可しています。 あなたが教育者の場合、サービス用に生徒用のアカウントを作成するかもしれません。
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Your Account
+### あなたのアカウント
 
 サービスを利用するためにアカウントを作成した場合、パスワードやアカウントの安全を保つのはあなたの責任となります。 教師によってアカウントを割り当てられた場合、その教師はアカウントへアクセスしたり、そのアカウントを無効にしたりすることができます。
 
 Code.orgはFacebook Connect やGoogle (“**認証サービス**”)などのソーシャルネットワークサービスを介してアカウントを登録することを許可しています。 他の認証サービスを使ってサービスへ登録することは、認証サービスから取得したあなたのアカウント情報にCode.orgがアクセスすること、また、認証サービスの利用規約に同意したことになります。 認証サービスとのインタラクションについてはあなたが全責任を負うものとします。
 
-### Privacy
+### プライバシー
 
 あなたのプライバシーは私たちにとって重要です。 Code.orgの[個人情報保護方針](http://code.org/privacy)では、私たちがあなたの個人情報をどのように扱うか、どのように利用規約から参照されているかについて説明がなされています。 Code.orgの個人情報の開示、使用、収拾については、個人情報保護方針を注意深くお読みください。
 
