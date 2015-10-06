@@ -25,6 +25,9 @@ var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
 
+var BLOCK_X_COORDINATE = 16;
+var BLOCK_Y_COORDINATE = 16;
+
 var ENGLISH_LOCALE = 'en_us';
 
 /**
@@ -67,6 +70,8 @@ var StudioApp = function () {
    * @type {?DropletTooltipManager}
    */
   this.dropletTooltipManager = null;
+
+  this.blockYCoordinateInterval = 200;
 
   // @type {string} for all of these
   this.icon = undefined;
@@ -324,8 +329,13 @@ StudioApp.prototype.init = function(config) {
   }
 
   var promptDiv = document.getElementById('prompt');
+  var prompt2Div = document.getElementById('prompt2');
   if (config.level.instructions) {
     dom.setText(promptDiv, config.level.instructions);
+  }
+  if (config.level.instructions2) {
+    dom.setText(prompt2Div, config.level.instructions2);
+    $(prompt2Div).show();
   }
 
   if (config.level.instructions || config.level.aniGifURL) {
@@ -708,41 +718,66 @@ StudioApp.prototype.loadBlocks = function(blocksXml) {
 };
 
 /**
-* Applies the specified arrangement to top startBlocks. If any
-* individual blocks have x or y properties set in the XML, those values
-* take priority. If no arrangement for a particular block type is
-* specified, blocks are automatically positioned by Blockly.
-*
-* Note that, currently, only bounce and flappy use arrangements.
-*
+* Spreading out the top blocks in workspace if it is not already set.
 * @param {string} startBlocks String representation of start blocks xml.
 * @param {Object.<Object>} arrangement A map from block type to position.
 * @return {string} String representation of start blocks xml, including
 *    block position.
 */
 StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
-
-  var type, xmlChild;
-
+  var type, arrangeX, arrangeY;
   var xml = parseXmlElement(startBlocks);
-
-  var xmlChildNodes = xml.childNodes || [];
-  arrangement = arrangement || {};
-
-  for (var i = 0; i < xmlChildNodes.length; i++) {
-    xmlChild = xmlChildNodes[i];
+  var xmlChildNodes = this.sortBlocksByVisibility(xml.childNodes);
+  var numberOfPlacedBlocks = 0;
+  for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
+    xmlChild = xmlChildNodes[x];
 
     // Only look at element nodes
     if (xmlChild.nodeType === 1) {
       // look to see if we have a predefined arrangement for this type
       type = xmlChild.getAttribute('type');
-      if (arrangement[type]) {
-        xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangement[type].x);
-        xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangement[type].y);
-      }
+      arrangeX = arrangement && arrangement[type] ? arrangement[type].x : null;
+      arrangeY = arrangement && arrangement[type] ? arrangement[type].y : null;
+
+      xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangeX ||
+        BLOCK_X_COORDINATE);
+      xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangeY ||
+        BLOCK_Y_COORDINATE +
+      this.blockYCoordinateInterval * numberOfPlacedBlocks);
+      numberOfPlacedBlocks += 1;
     }
   }
   return Blockly.Xml.domToText(xml);
+};
+
+/**
+* Sorts the array of xml blocks, moving visible blocks to the front.
+* @param {Array.<Element>} xmlBlocks An array of xml blocks.
+* @return {Array.<Element>} A sorted array of xml blocks, with all
+*     visible blocks preceding all hidden blocks.
+*/
+StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
+  var userVisible;
+  var currentlyHidden = false;
+  var visibleXmlBlocks = [];
+  var hiddenXmlBlocks = [];
+  for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
+    xmlBlock = xmlBlocks[x];
+    if (xmlBlock.getAttribute) {
+      userVisible = xmlBlock.getAttribute('uservisible');
+      var type = xmlBlock.getAttribute('type');
+      currentlyHidden = type &&
+        Blockly.Blocks[type].shouldHideIfInMainBlockSpace &&
+        Blockly.Blocks[type].shouldHideIfInMainBlockSpace();
+    }
+
+    if (currentlyHidden || userVisible === 'false') {
+      hiddenXmlBlocks.push(xmlBlock);
+    } else {
+      visibleXmlBlocks.push(xmlBlock);
+    }
+  }
+  return visibleXmlBlocks.concat(hiddenXmlBlocks);
 };
 
 StudioApp.prototype.createModalDialog = function(options) {
@@ -774,6 +809,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
     puzzleTitle: puzzleTitle,
     instructions: level.instructions,
+    instructions2: level.instructions2,
     renderedMarkdown: renderedMarkdown,
     aniGifURL: level.aniGifURL
   });
