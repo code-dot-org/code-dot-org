@@ -299,11 +299,11 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
       link = "https://test-studio.code.org/ui_test/" + html_output_filename
       message += " <a href='#{link}'>☁ html output</a>"
     end
+    short_message = message
 
-    message += "<br/><i>command line: cucumber #{arguments + first_time_arguments}</i>"
     message += "<br/><i>rerun: ./runner.rb -c #{browser_name} -f #{feature} --html</i>"
     HipChat.log message, color: 'red'
-    HipChat.developers message, color: 'red' if CDO.hip_chat_logging
+    HipChat.developers short_message, color: 'red' if CDO.hip_chat_logging
   end
   result_string = succeeded ? "succeeded".green : "failed".red
   print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)})\n"

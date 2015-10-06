@@ -62,3 +62,59 @@ function test_clickIntoEditableUnmovableBlock() {
 
   goog.dom.removeNode(containerDiv);
 }
+
+function test_setBlockNextConnectionDisabled() {
+  var containerDiv = Blockly.Test.initializeBlockSpaceEditor();
+
+  var blockSpace = Blockly.mainBlockSpace;
+  var single_block_next_connection_default = ''+
+      '<xml>' +
+        '<block type="math_change">' +
+          '<title name="VAR">i</title>' +
+        '</block>' +
+      '</xml>';
+
+  Blockly.Xml.domToBlockSpace(blockSpace, Blockly.Xml.textToDom(
+      single_block_next_connection_default));
+
+  var block = blockSpace.getTopBlocks()[0];
+
+  assert(block instanceof Blockly.Block);
+  assertNotNull(block.nextConnection);
+  assert(block.nextConnection instanceof Blockly.Connection);
+  assert(block.nextConnectionDisabled_ === false);
+
+  var single_block_next_connection_enabled = ''+
+      '<xml>' +
+      '  <block type="math_change" next_connection_disabled="false">' +
+      '    <title name="VAR">j</title>' +
+      '  </block>' +
+      '</xml>';
+
+  Blockly.Xml.domToBlockSpace(blockSpace, Blockly.Xml.textToDom(
+      single_block_next_connection_enabled));
+
+  block = blockSpace.getTopBlocks()[1];
+
+  assert(block instanceof Blockly.Block);
+  assertNotNull(block.nextConnection);
+  assert(block.nextConnection instanceof Blockly.Connection);
+  assert(block.nextConnectionDisabled_ === false);
+
+  var single_block_next_connection_disabled = ''+
+      '<xml>' +
+      '  <block type="math_change" next_connection_disabled="true">' +
+      '    <title name="VAR">k</title>' +
+      '  </block>' +
+      '</xml>';
+
+  Blockly.Xml.domToBlockSpace(blockSpace, Blockly.Xml.textToDom(
+      single_block_next_connection_disabled));
+
+  block = blockSpace.getTopBlocks()[2];
+
+  assert(block instanceof Blockly.Block);
+  assert(block.nextConnectionDisabled_ === true);
+  assertNull(block.nextConnection);
+
+}

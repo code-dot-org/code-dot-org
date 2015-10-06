@@ -381,6 +381,14 @@ Given(/^I am a student$/) do
   log_in_as(@student)
 end
 
+Given(/^I sign in as a student$/) do
+  steps %q{
+    Given I am on "http://learn.code.org/"
+    And I am a student
+    And I am on "http://learn.code.org/users/sign_in"
+  }
+end
+
 And(/^I ctrl-([^"]*)$/) do |key|
   # Note: Safari webdriver does not support actions API
   @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
@@ -402,6 +410,13 @@ And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
       end
     end
   end
+end
+
+And(/^I press keys "([^"]*)" for element "([^"]*)" when it appears$/) do |key, selector|
+  steps %Q{
+    And I wait until element "#{selector}" is visible
+    And I press keys "#{key}" for element "#{selector}"
+  }
 end
 
 def make_symbol_if_colon(key)
@@ -465,8 +480,17 @@ end
 # Place files in dashboard/test/fixtures
 # Note: Safari webdriver does not support file uploads (https://code.google.com/p/selenium/issues/detail?id=4220)
 Then /^I upload the file named "(.*?)"$/ do |filename|
+  # Needed for remote (Sauce Labs) uploads
+  @browser.file_detector = lambda do |args|
+    str = args.first.to_s
+    str if File.exist? str
+  end
+
   filename = File.expand_path(filename, '../fixtures')
   @browser.execute_script('$("input[type=file]").show()')
   element = @browser.find_element :css, 'input[type=file]'
   element.send_keys filename
+  @browser.execute_script('$("input[type=file]").hide()')
+
+  @browser.file_detector = nil
 end
