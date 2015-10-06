@@ -106,30 +106,6 @@ social:
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
       = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/#{download_filename}"
 
-  -if locale_ro?
-    %br
-    %br
-    %h1{:style=>'text-align: center;'}
-      Esti din Romania? Te rugam sa vizitezi
-      %a{:href=>'http://ro.code.org'}
-        ro.code.org
-
-  -if locale_br?
-    %br
-    %br
-    %h1{:style=>'text-align: center;'}
-      Voce está no Brasil? Por favor, visite
-      %a{:href=>'http://br.code.org'}
-        br.code.org
-
-  -if locale_it?
-    %br
-    %br
-    %h1{:style=>'text-align: center;'}
-      Sei in Italia? Visita per favore 
-      %a{:href=>'http://italia.code.org'}
-        italia.code.org
-
   -if request.site != 'csedweek.org'
     #header-social-links.desktop-feature{style: "margin: 15px 0 0 0; float: right;"}
       %a{:href=>"http://facebook.com/Code.org", :title=>'Facebook', :target=>"_blank", :style=>"text-decoration:none"}
