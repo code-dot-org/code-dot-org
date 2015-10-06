@@ -102,6 +102,9 @@ var stepSpeed;
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
 
+Studio.BLOCK_X_COORDINATE = 20;
+Studio.BLOCK_Y_COORDINATE = 20;
+
 var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 
 var AUTO_HANDLER_MAP = {
@@ -1413,6 +1416,50 @@ Studio.initReadonly = function(config) {
 };
 
 /**
+ * Arrange the start blocks to spread them out in the workspace.
+ * This uses unique logic for studio - spread event blocks vertically even
+ * over the total height of the workspace.
+ */
+var arrangeStartBlocks = function (config) {
+  var xml = parseXmlElement(config.level.startBlocks);
+  var numUnplacedElementNodes = 0;
+  // sort the blocks by visibility
+  var xmlChildNodes = studioApp.sortBlocksByVisibility(xml.childNodes);
+  // do a first pass to count the nodes
+  for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
+    xmlChild = xmlChildNodes[x];
+
+    // Only look at element nodes without a y coordinate:
+    if (xmlChild.nodeType === 1 && !xmlChild.getAttribute('y')) {
+      numUnplacedElementNodes++;
+    }
+  }
+  // do a second pass to place the nodes
+  if (numUnplacedElementNodes) {
+    var numberOfPlacedBlocks = 0;
+    var totalHeightAvail =
+        (config.level.minWorkspaceHeight || 800) - Studio.BLOCK_Y_COORDINATE;
+    var yCoordInterval = totalHeightAvail / numUnplacedElementNodes;
+    for (x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
+      xmlChild = xmlChildNodes[x];
+
+      // Only look at element nodes without a y coordinate:
+      if (xmlChild.nodeType === 1 && !xmlChild.getAttribute('y')) {
+        xmlChild.setAttribute(
+            'x',
+            xmlChild.getAttribute('x') || Studio.BLOCK_X_COORDINATE);
+        xmlChild.setAttribute(
+            'y',
+            Studio.BLOCK_Y_COORDINATE + yCoordInterval * numberOfPlacedBlocks);
+        numberOfPlacedBlocks += 1;
+      }
+    }
+    // replace the startBlocks since we changed the attributes in the xml dom:
+    config.level.startBlocks = Blockly.Xml.domToText(xml);
+  }
+};
+
+/**
  * Initialize Blockly and the Studio app.  Called on page load.
  */
 Studio.init = function(config) {
@@ -1531,6 +1578,10 @@ Studio.init = function(config) {
 
     drawMap();
   };
+
+  if (studioApp.isUsingBlockly() && config.level.edit_blocks != 'toolbox_blocks') {
+    arrangeStartBlocks(config);
+  }
 
   config.twitter = twitterOptions;
 
