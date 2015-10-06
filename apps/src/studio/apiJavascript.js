@@ -100,20 +100,20 @@ exports.move = function(spriteIndex, dir) {
   });
 };
 
-exports.moveEast = function() {
-  Studio.queueCmd(null, 'moveEast');
+exports.moveRight = function() {
+  Studio.queueCmd(null, 'moveRight');
 };
 
-exports.moveWest = function() {
-  Studio.queueCmd(null, 'moveWest');
+exports.moveLeft = function() {
+  Studio.queueCmd(null, 'moveLeft');
 };
 
-exports.moveNorth = function() {
-  Studio.queueCmd(null, 'moveNorth');
+exports.moveUp = function() {
+  Studio.queueCmd(null, 'moveUp');
 };
 
-exports.moveSouth = function() {
-  Studio.queueCmd(null, 'moveSouth');
+exports.moveDown = function() {
+  Studio.queueCmd(null, 'moveDown');
 };
 
 exports.changeScore = function(value) {
