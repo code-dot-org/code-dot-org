@@ -11,7 +11,7 @@ crwdns49186:0crwdne49186:0
   * crwdns49189:0crwdne49189:0 <%= campaign_date('short') %>.
   * crwdns49190:0crwdne49190:0
 
-## crwdns49191:0crwdne49191:0 <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## crwdns49191:0crwdne49191:0 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## crwdns49192:0crwdne49192:0
 
 crwdns49193:0crwdne49193:0 crwdns49194:0crwdne49194:0
@@ -41,7 +41,7 @@ crwdns49199:0crwdne49199:0
 **crwdns49208:0crwdne49208:0**
 
   * crwdns49209:0crwdne49209:0
-  * crwdns49210:0crwdne49210:0 <% end %>
+  * crwdns50219:0crwdne50219:0 <% end %>
   * [crwdns49211:0crwdne49211:0](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * crwdns49212:0crwdne49212:0.
 

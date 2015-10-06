@@ -162,6 +162,7 @@ ka:
   how_to_nav_districts: რაიონებისთვის
   how_to_nav_assemblies: სასკოლო შეკრებებისთვის
   how_to_nav_organizations: ორგანიზატორებისთვის
+  how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
   prizes_nav_title: პრიზები
   prizes_nav_home: All prizes
@@ -211,7 +212,7 @@ ka:
   front_join_us_support: დაუჭირეთ მხარი
   front_join_us_more_info: "მეტი ინფორმაციისთვის, გთხოვთ ეწვიოთ <a href='https://code.org'>code.org</a>-ს."
   front_join_us_code_info: მეტი ინფორმაციისთვის, გთხოვთ ეწვიოთ code.org-ს
-  front_join_us_n_students_served: '# students served'
+  front_join_us_n_students_served: '# served'
   signup_header: 'დაგეგმეთ კოდის ერთი საათი მოცემულ ვადებში: %{campaign_date} და დაარეგისტრირეთ ის აქ.'
   signup_name_label: თქვენი სახელი
   signup_email_label: თქვენი ელ.ფოსტა
@@ -356,6 +357,7 @@ ka:
   title_how_to_districts: როგორ მოვაწყოთ კოდის ერთი საათი უბანში
   title_how_to_events: 'კოდის ერთი საათის ორგანიზება - ინსტრუქციები'
   title_how_to_organizations: 'როგორ მოვაწყოთ კოდის ერთი საათი - ორგანიზაციებს'
+  title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: სახელმძღვანელო საჯარო პირებისთვის
   title_how_to: ინსტრუქციები
   title_press_release: კოდის ერთი საათის პრეს-რელიზი
