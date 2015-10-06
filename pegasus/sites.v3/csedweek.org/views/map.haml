@@ -1,9 +1,10 @@
+%link{rel: "stylesheet", type: "text/css", href: "/css/map.css"}
 -total_count = DB[:forms].where(kind:'HocSignup2015').count
-.mapheader{:style => "position: relative;"}
-  %a{:href=> "https://hourofcode.com/events", :style=>"float: left"}
+.mapheader
+  %a.float-left{:href=> "https://hourofcode.com/events"}
     %h2= I18n.t(:map_header).gsub('#', format_integer_with_commas(total_count))
   %a{:href=> "https://hourofcode.com/#join"}
-    %button{:class=>"signup-button", :style=>"margin: 10px 0 0 20px;"}
+    %button.signup-button
       = I18n.t(:signup_your_event)
 
 -# Commenting out search box for now
@@ -21,7 +22,7 @@
 
 .row
   .col-xs-10.col-sm-12
-    #gmap{style: 'width: 100%'}
+    #gmap.full-width
 
 :javascript
   var gmap;
