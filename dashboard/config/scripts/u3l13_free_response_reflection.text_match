@@ -2,9 +2,10 @@ name 'U3L13 Free Response Reflection'
 title 'Buttons on the Screen Wrap Up'
 
 markdown <<MARKDOWN
-List 3 components that are required for an event-driven program to carry out the user’s intentions?
+Elements in your app are required to have **unique IDs**. Given what you now know about how event handlers work, why is it important for the IDs of page elements to be unique?
 
-Describe how you employed each in the turtle-driving program.
+MARKDOWN
 
-
+teacher_markdown <<MARKDOWN
+Event handlers are attached to page elements based on their ID. If multiple elements have the same ID then an event handler will not be able to tell which page element it is supposed to be listening to.
 MARKDOWN
