@@ -1077,7 +1077,7 @@ Applab.renderVisualizationOverlay = function() {
   divApplab.style.cursor = Applab.isRunning() ? '' : 'none';
 
   // Calculate current visualization scale to pass to the overlay component.
-  var unscaledWidth = visualizationOverlay.clientWidth;
+  var unscaledWidth = visualizationOverlay.offsetWidth;
   var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
 
   var props = {
