@@ -42,6 +42,21 @@ Feature: App Lab Scenarios
     When I select the "Option B" option in dropdown "testDropdown"
     Then element "#testDropdown" has value "Option B"
 
+  Scenario: Can change a radio button value in shared app
+    Given I switch to text mode
+    And I press keys "radioButton('radio1', false, 'testGroup');" for element ".ace_text-input"
+    And I press keys "radioButton('radio2', false, 'testGroup');" for element ".ace_text-input"
+    When I navigate to the shared version of my project
+    And I wait until element ".screen > #radio2" is visible
+    Then element "#radio1" is not checked
+    And element "#radio2" is not checked
+    When I press "radio1"
+    Then element "#radio1" is checked
+    And element "#radio2" is not checked
+    When I press "radio2"
+    Then element "#radio1" is not checked
+    And element "#radio2" is checked
+
   Scenario: Can type in text input on share page
     Given I switch to design mode
     And I drag a TEXT_INPUT into the app
