@@ -5728,6 +5728,7 @@ var url = require('url');
 var FeedbackUtils = require('./feedback');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
+var codegen = require('./codegen');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -6199,6 +6200,9 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
       resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
     }
     this.editor.setValue(resetValue);
+  }
+  if (config.afterClearPuzzle) {
+    config.afterClearPuzzle();
   }
 };
 
@@ -6797,7 +6801,12 @@ StudioApp.prototype.highlight = function(id, spotlight) {
 * Remove highlighting from all blocks
 */
 StudioApp.prototype.clearHighlighting = function () {
-  this.highlight(null);
+  if (this.isUsingBlockly()) {
+    this.highlight(null);
+  } else if (this.editCode && this.editor) {
+    // Clear everything (step highlighting, errors, etc.)
+    codegen.clearDropletAceHighlighting(this.editor, true);
+  }
 };
 
 /**
@@ -7766,7 +7775,7 @@ StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
   });
 };
 
-},{"./ResizeSensor":"/home/ubuntu/staging/apps/build/js/ResizeSensor.js","./acemode/mode-javascript_codeorg":"/home/ubuntu/staging/apps/build/js/acemode/mode-javascript_codeorg.js","./blockTooltips/DropletTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletTooltipManager.js","./block_utils":"/home/ubuntu/staging/apps/build/js/block_utils.js","./constants.js":"/home/ubuntu/staging/apps/build/js/constants.js","./dom":"/home/ubuntu/staging/apps/build/js/dom.js","./dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","./feedback":"/home/ubuntu/staging/apps/build/js/feedback.js","./locale":"/home/ubuntu/staging/apps/build/js/locale.js","./templates/VersionHistory.jsx":"/home/ubuntu/staging/apps/build/js/templates/VersionHistory.jsx","./templates/alert.jsx":"/home/ubuntu/staging/apps/build/js/templates/alert.jsx","./templates/builder.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/builder.html.ejs","./templates/buttons.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/buttons.html.ejs","./templates/instructions.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/instructions.html.ejs","./templates/learn.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/learn.html.ejs","./templates/makeYourOwn.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/makeYourOwn.html.ejs","./utils":"/home/ubuntu/staging/apps/build/js/utils.js","./xml":"/home/ubuntu/staging/apps/build/js/xml.js","url":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/url/url.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/url/url.js":[function(require,module,exports){
+},{"./ResizeSensor":"/home/ubuntu/staging/apps/build/js/ResizeSensor.js","./acemode/mode-javascript_codeorg":"/home/ubuntu/staging/apps/build/js/acemode/mode-javascript_codeorg.js","./blockTooltips/DropletTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletTooltipManager.js","./block_utils":"/home/ubuntu/staging/apps/build/js/block_utils.js","./codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","./constants.js":"/home/ubuntu/staging/apps/build/js/constants.js","./dom":"/home/ubuntu/staging/apps/build/js/dom.js","./dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","./feedback":"/home/ubuntu/staging/apps/build/js/feedback.js","./locale":"/home/ubuntu/staging/apps/build/js/locale.js","./templates/VersionHistory.jsx":"/home/ubuntu/staging/apps/build/js/templates/VersionHistory.jsx","./templates/alert.jsx":"/home/ubuntu/staging/apps/build/js/templates/alert.jsx","./templates/builder.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/builder.html.ejs","./templates/buttons.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/buttons.html.ejs","./templates/instructions.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/instructions.html.ejs","./templates/learn.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/learn.html.ejs","./templates/makeYourOwn.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/makeYourOwn.html.ejs","./utils":"/home/ubuntu/staging/apps/build/js/utils.js","./xml":"/home/ubuntu/staging/apps/build/js/xml.js","url":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/url/url.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/url/url.js":[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14168,12 +14177,13 @@ JSInterpreter.prototype.createPrimitive = function (data) {
  * Returns the row (line) of code highlighted. If nothing is highlighted
  * because it is outside of the userCode area, the return value is -1
  */
-JSInterpreter.prototype.selectCurrentCode = function () {
+JSInterpreter.prototype.selectCurrentCode = function (highlightClass) {
   return codegen.selectCurrentCode(this.interpreter,
                                    this.codeInfo.cumulativeLength,
                                    this.codeInfo.userCodeStartOffset,
                                    this.codeInfo.userCodeLength,
-                                   this.studioApp.editor);
+                                   this.studioApp.editor,
+                                   highlightClass);
 };
 
 /**
@@ -14696,13 +14706,45 @@ exports.isAceBreakpointRow = function (session, userCodeRow) {
   return Boolean(bps[userCodeRow]);
 };
 
+var lastHighlightMarkerIds = {};
+
 /**
- * Selects code in droplet/ace editor.
+ * Clears all highlights that we have added in the ace editor.
+ */
+function clearAllHighlightedAceLines (aceEditor) {
+  var session = aceEditor.getSession();
+  for (var hlClass in lastHighlightMarkerIds) {
+    session.removeMarker(lastHighlightMarkerIds[hlClass]);
+  }
+  lastHighlightMarkerIds = {};
+}
+
+/**
+ * Highlights lines in the ace editor. Always moves the previous highlight with
+ * the same class to the new location.
+ *
+ * If the row parameters are not supplied, just clear the last highlight.
+ */
+function highlightAceLines (aceEditor, className, startRow, endRow) {
+  var session = aceEditor.getSession();
+  className = className || 'ace_step';
+  if (lastHighlightMarkerIds[className]) {
+    session.removeMarker(lastHighlightMarkerIds[className]);
+    lastHighlightMarkerIds[className] = null;
+  }
+  if (typeof startRow !== 'undefined') {
+    lastHighlightMarkerIds[className] = aceEditor.getSession().highlightLines(
+        startRow, endRow, className).id;
+  }
+}
+
+/**
+ * Selects and highlights code in droplet/ace editor to indicate an error.
  *
  * This function simply highlights one spot, not a range. It is typically used
  * to highlight where an error has occurred.
  */
-exports.selectEditorRowCol = function (editor, row, col) {
+exports.selectEditorRowColError = function (editor, row, col) {
   if (editor.currentlyUsingBlocks) {
     var style = {color: '#FFFF22'};
     editor.clearLineMarks();
@@ -14720,9 +14762,33 @@ exports.selectEditorRowCol = function (editor, row, col) {
     // scrolling to the right
     selection.setSelectionRange(range, true);
   }
+  highlightAceLines(editor.aceEditor, "ace_error", row, row);
 };
 
-function createSelection (selection, cumulativeLength, start, end) {
+/**
+ * Removes highlights (for the default ace_step class) and selection in
+ * droplet and ace editors.
+ *
+ * @param {boolean} allClasses When set to true, remove all classes of
+ * highlights (including ace_step, ace_error, and anything else)
+ */
+exports.clearDropletAceHighlighting = function (editor, allClasses) {
+  if (editor.currentlyUsingBlocks) {
+    editor.clearLineMarks();
+  } else {
+    editor.aceEditor.getSelection().clearSelection();
+  }
+  if (allClasses) {
+    clearAllHighlightedAceLines(editor.aceEditor);
+  } else {
+    // when calling without a class or rows, highlightAceLines() will clear
+    // everything highlighted with the default highlight class
+    highlightAceLines(editor.aceEditor);
+  }
+};
+
+function selectAndHighlightCode (aceEditor, cumulativeLength, start, end, highlightClass) {
+  var selection = aceEditor.getSelection();
   var range = selection.getRange();
 
   range.start.row = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
@@ -14733,6 +14799,8 @@ function createSelection (selection, cumulativeLength, start, end) {
   // calling with the backwards parameter set to true - this prevents horizontal
   // scrolling to the right while stepping through in the debugger
   selection.setSelectionRange(range, true);
+  highlightAceLines(aceEditor, highlightClass || "ace_step", range.start.row,
+      range.end.row);
 }
 
 /**
@@ -14740,12 +14808,15 @@ function createSelection (selection, cumulativeLength, start, end) {
  *
  * Returns the row (line) of code highlighted. If nothing is highlighted
  * because it is outside of the userCode area, the return value is -1
+ *
+ * @param {string} highlightClass CSS class to use when highlighting in ACE
  */
 exports.selectCurrentCode = function (interpreter,
                                       cumulativeLength,
                                       userCodeStartOffset,
                                       userCodeLength,
-                                      editor) {
+                                      editor,
+                                      highlightClass) {
   var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
@@ -14769,23 +14840,14 @@ exports.selectCurrentCode = function (interpreter,
         //editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
         editor.markLine(userCodeRow, style);
       } else {
-        var selection = editor.aceEditor.getSelection();
-        createSelection(selection, cumulativeLength, start, end);
+        selectAndHighlightCode(editor.aceEditor, cumulativeLength, start, end,
+            highlightClass);
       }
     } else {
-      if (editor.currentlyUsingBlocks) {
-        editor.clearLineMarks();
-      } else {
-        var tempSelection = editor.aceEditor.getSelection();
-        tempSelection.clearSelection();
-      }
+      exports.clearDropletAceHighlighting(editor);
     }
   } else {
-    if (editor.currentlyUsingBlocks) {
-      editor.clearLineMarks();
-    } else {
-      editor.aceEditor.getSelection().clearSelection();
-    }
+    exports.clearDropletAceHighlighting(editor);
   }
   return userCodeRow;
 };

@@ -26,7 +26,7 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 
 [Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](%= resolve_url('/prizes/hardware-signup') %) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
 
-## 3. Ask your employer to get involved
+## Fråga om din arbetsgivare vill engagera sig
 
 [Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your manager or company's CEO.
 

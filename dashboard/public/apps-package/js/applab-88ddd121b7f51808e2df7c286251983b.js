@@ -800,10 +800,15 @@ function handleExecutionError(err, lineNumber) {
     lineNumber = err.loc.line;
     // Now select this location in the editor, since we know we didn't hit
     // this while executing (in which case, it would already have been selected)
-    codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
+    codegen.selectEditorRowColError(studioApp.editor, lineNumber - 1, err.loc.column);
   }
-  if (!lineNumber && Applab.JSInterpreter) {
-    lineNumber = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
+  if (Applab.JSInterpreter) {
+    // Select code that just executed:
+    Applab.JSInterpreter.selectCurrentCode("ace_error");
+    // Grab line number if we don't have one already:
+    if (!lineNumber) {
+      lineNumber = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
+    }
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = err;
@@ -879,17 +884,6 @@ Applab.initReadonly = function(config) {
   studioApp.initReadonly(config);
 };
 
-function extendHandleClearPuzzle() {
-  var orig = studioApp.handleClearPuzzle.bind(studioApp);
-  studioApp.handleClearPuzzle = function (config) {
-    orig(config);
-    Applab.setLevelHtml(config.level.startHtml || '');
-    AppStorage.populateTable(level.dataTables, true); // overwrite = true
-    AppStorage.populateKeyValue(level.dataProperties, true); // overwrite = true
-    studioApp.resetButtonClick();
-  };
-}
-
 /**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
@@ -897,7 +891,6 @@ Applab.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
-  extendHandleClearPuzzle();
 
   // Pre-populate asset list
   if (window.dashboard && dashboard.project.getCurrentId()) {
@@ -1008,6 +1001,14 @@ Applab.init = function(config) {
       // automatically run in share mode:
       window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
     }
+  };
+
+  config.afterClearPuzzle = function() {
+    Applab.setLevelHtml(config.level.startHtml || '');
+    AppStorage.populateTable(level.dataTables, true); // overwrite = true
+    AppStorage.populateKeyValue(level.dataProperties, true); // overwrite = true
+    studioApp.resetButtonClick();
+    annotationList.clearRuntimeAnnotations();
   };
 
   // arrangeStartBlocks(config);
@@ -1269,7 +1270,10 @@ Applab.clearEventHandlersKillTickLoop = function() {
 };
 
 Applab.isRunning = function () {
-  return $('#resetButton').is(':visible');
+  // We are _always_ running in share mode.
+  // TODO: (bbuchanan) Needs a better condition. Tracked in bug:
+  //      https://www.pivotaltracker.com/story/show/105022102
+  return $('#resetButton').is(':visible') || studioApp.share;
 };
 
 /**
