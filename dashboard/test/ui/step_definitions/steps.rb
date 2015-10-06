@@ -465,8 +465,17 @@ end
 # Place files in dashboard/test/fixtures
 # Note: Safari webdriver does not support file uploads (https://code.google.com/p/selenium/issues/detail?id=4220)
 Then /^I upload the file named "(.*?)"$/ do |filename|
+  # Needed for remote (Sauce Labs) uploads
+  @browser.file_detector = lambda do |args|
+    str = args.first.to_s
+    str if File.exist? str
+  end
+
   filename = File.expand_path(filename, '../fixtures')
   @browser.execute_script('$("input[type=file]").show()')
   element = @browser.find_element :css, 'input[type=file]'
   element.send_keys filename
+  @browser.execute_script('$("input[type=file]").hide()')
+
+  @browser.file_detector = nil
 end
