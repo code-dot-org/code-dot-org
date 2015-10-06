@@ -381,10 +381,10 @@ Given(/^I am a student$/) do
   log_in_as(@student)
 end
 
-Given(/^I sign in as a student$/) do
-  steps %q{
+Given(/^I sign in as a (student|teacher)$/) do |user_type|
+  steps %Q{
     Given I am on "http://learn.code.org/"
-    And I am a student
+    And I am a #{user_type}
     And I am on "http://learn.code.org/users/sign_in"
   }
 end
