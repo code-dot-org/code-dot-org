@@ -55,6 +55,7 @@ frameDirTableWalking[Dir.SOUTHWEST]  = 7;
 
 exports.frameDirTableWalking = frameDirTableWalking;
 
+
 // Normal for preview
 var frameDirTableWalkingWithIdle = {};
 frameDirTableWalkingWithIdle[Dir.NONE]       = 8;

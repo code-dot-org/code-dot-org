@@ -1,5 +1,7 @@
 var Collidable = require('./collidable');
-var Direction = require('./constants').Direction;
+var constants = require('./constants');
+var Direction = constants.Direction;
+var NextTurn = constants.NextTurn;
 var constants = require('./constants');
 
 var SVG_NS = "http://www.w3.org/2000/svg";
@@ -18,6 +20,7 @@ var Item = function (options) {
   this.height = options.height || 50;
   this.width = options.width || 50;
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
+  this.displayDir = Direction.SOUTH;
 
   this.currentFrame_ = 0;
   this.animator_ = window.setInterval(function () {
@@ -36,7 +39,18 @@ module.exports = Item;
  * Returns the frame of the spritesheet for the current walking direction.
  */
 Item.prototype.getDirectionFrame = function() {
-  return constants.frameDirTableWalkingWithIdle[this.dir];
+
+  // Every other frame, if we aren't yet rendering in the correct direction,
+  // assign a new displayDir from state table; only one turn at a time.
+
+  if (this.dir !== this.displayDir) {
+
+    if (Studio.tickCount && (0 === Studio.tickCount % 2)) {
+      this.displayDir = NextTurn[this.displayDir][this.dir];
+    }
+  }
+
+  return constants.frameDirTableWalkingWithIdle[this.displayDir];
 };
 
 /**
