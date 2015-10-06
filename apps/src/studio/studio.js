@@ -3146,7 +3146,8 @@ Studio.addItemsToScene = function (opts) {
       speed: Studio.itemSpeed[opts.className],
       activity: utils.valueOr(Studio.itemActivity[opts.className], "patrol"),
       width: 100,
-      height: 100
+      height: 100,
+      renderScale: skin.specialItemScale[opts.className] || 1
     };
 
     var item = new Item(itemOptions);
