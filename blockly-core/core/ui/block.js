@@ -1809,7 +1809,7 @@ Blockly.Block.prototype.setNextStatement = function(hasNext, opt_check) {
     this.nextConnection.dispose();
     this.nextConnection = null;
   }
-  if (hasNext && !this.nextConnectionDisabled_) {
+  if (hasNext) {
     if (opt_check === undefined) {
       opt_check = null;
     }
