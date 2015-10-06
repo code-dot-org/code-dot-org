@@ -47,6 +47,10 @@ def saucelabs_browser
                                         url: url,
                                         desired_capabilities: capabilities,
                                         http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
+      # browser.file_detector = lambda do |args|
+      #   str = args.first.to_s
+      #   str if File.exist? str
+      # end
     rescue URI::InvalidURIError, Net::ReadTimeout
       raise if retries >= MAX_CONNECT_RETRIES
       retries += 1

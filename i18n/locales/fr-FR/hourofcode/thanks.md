@@ -16,7 +16,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about prizes, new tutorials and other exciting updates. What can you do now?
 
-## 1. En parler
+## 1. Parlez-en autour de vous
 
 You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 

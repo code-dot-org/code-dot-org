@@ -230,14 +230,14 @@ div#visualizationResizeBar {
 #visualizationColumn.wireframeShare {
   background: url("/blockly/media/applab/phone_wireframe.png") center center no-repeat;
   max-width: none !important;
-  width: 363px;
-  height: 714px;
+  width: 352px;
+  height: 612px;
   margin: 20px auto; }
   #visualizationColumn.wireframeShare #designToggleRow, #visualizationColumn.wireframeShare #gameButtons {
     display: none; }
   #visualizationColumn.wireframeShare #visualization {
-    top: 116px;
-    left: 21px;
+    top: 68px;
+    left: 16px;
     border: 0; }
 
 #visualizationColumn.chromelessShare #designToggleRow, #visualizationColumn.chromelessShare #gameButtons {
