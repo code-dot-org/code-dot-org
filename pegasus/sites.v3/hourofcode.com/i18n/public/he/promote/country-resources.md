@@ -17,17 +17,30 @@ nav: promote_nav
 
 p>[**De ce toti ar trebui sa invete sa programeze? Participa la Ora de Programare in Romania (5 min)**](https://www.youtube.com/watch?v=HrBh2165KjE)
 
+  
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6Wpb-WyQ)
+
+<% elsif @country == 'ca' %>
+
+## סרטוני וידיאו <iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
+
 <% elsif @country == 'uk' %>
 
 # Ghidul pentru Organizatii
 
-## Utilizati acest ghid pentru a recruta corporatii
+## Use this handout to recruit corporations
 
 [<img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
 
 ## 1) Incercati tutorialele:
 
-Vom avea la dispozitie o varietate noua de tutoriale distractive, create de catre o varietate de parteneri. Noile tutoriale vor veni sa darame vechea campanie Hour of Code <%= campaign_date('full') %>.
+We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
 **Toate tutorialele Hour of Code:**
 

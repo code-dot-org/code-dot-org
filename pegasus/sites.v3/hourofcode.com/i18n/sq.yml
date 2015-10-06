@@ -162,6 +162,7 @@ sq:
   how_to_nav_districts: Për qarqe
   how_to_nav_assemblies: Për asambletë e shkollave
   how_to_nav_organizations: Për organizatat
+  how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
   prizes_nav_title: Shpërblime
   prizes_nav_home: All prizes
@@ -211,7 +212,7 @@ sq:
   front_join_us_support: Përkrahe
   front_join_us_more_info: "Për më shumë informata. luteni të vizitoni faqen <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: Për më shumë informacione, ju lutem vizitoni code.org
-  front_join_us_n_students_served: '# students served'
+  front_join_us_n_students_served: '# served'
   signup_header: 'Organizoni një Orë Kodim gjatë %{campaign_date}, dhe regjistroni këtu.'
   signup_name_label: Emri juaj
   signup_email_label: Emaili juaj
@@ -356,6 +357,7 @@ sq:
   title_how_to_districts: Ora e Kodimit Metoda për Shpërndarje
   title_how_to_events: Eventi i Orës së Kodimit, Metoda
   title_how_to_organizations: 'Si të behemi nikoqir të Orës së Kodimit- Organizatat'
+  title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: Udhëzuesit për zyrtarët publikë
   title_how_to: Si të Drejtojmë
   title_press_release: Deklarata për Shtyp e Orës së Kodimit për zyrtarët e zgjedhur

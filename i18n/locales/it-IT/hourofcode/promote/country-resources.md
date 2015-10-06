@@ -15,6 +15,19 @@ title: <%= hoc_s(:title_country_resources) %> layout: wide nav: promote_nav
 
 p>[**Perché tutti dovrebbero imparare a programmare? Participa all'Ora del Codice in Argentina(5 min)**](https://www.youtube.com/watch?v=HrBh2165KjE)
 
+  
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6Wpb-WyQ)
+
+<% elsif @country == 'ca' %>
+
+## Video <iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
