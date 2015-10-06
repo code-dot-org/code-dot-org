@@ -39,29 +39,33 @@ theme: pdf
   %ul
     %li
       = state_info[:cs_jobs_i]
-      open computing jobs (
-      = state_info[:growth_vs_average_f]
+      open computing jobs
+      = precede "(" do
+        = state_info[:growth_vs_average_f]
       times the average demand rate in 
-      = state_info[:state_code_s]
-      ). 
+      = succeed ")." do
+        = state_info[:state_name_s]
     %li
       The average salary for a computing occupation in
       = state_info[:state_code_s]
-      is $
-      = state_info[:avg_sal_computing_i]
-      , which is significantly higher than the average salary in the state ($
-      = state_info[:avg_sal_all_i]
-      ). 
+      is
+      = surround "$", "," do
+        = state_info[:avg_sal_computing_i]
+      which is significantly higher than the average salary in the state 
+      = surround "($", ")." do
+        = state_info[:avg_sal_all_i]
     %li
       = state_info[:cs_graduates_i]
       computer science graduates in 2015; only
-      = state_info[:percent_female_cs_grad_i]
-      \% were female.
+      = succeed "%" do
+        = state_info[:percent_female_cs_grad_i]
+      were female.
     %li
       = state_info[:ap_cs_exams_i]
       high school students took the AP Computer Science exam in 2014; only
-      = state_info[:percent_ap_female_i]
-      \% were female; only
+      = succeed "%" do
+        = state_info[:percent_ap_female_i]
+      were female; only
       = state_info[:ap_hispanic_i]
       were Hispanic; only
       = state_info[:ap_black_i]
@@ -71,9 +75,8 @@ theme: pdf
       = state_info[:schools_ap_cs_i]
       schools in 
       = state_info[:state_code_s]
-      (
-      = state_info[:percent_schools_ap_cs_i]
-      \% of
+      = surround "(", "% of" do
+        = state_info[:percent_schools_ap_cs_i]
       = state_info[:state_code_s]
       schools with AP programs) offered the AP Computer Science course in 2013-2014.
       - if state_param != 'ND'
@@ -99,8 +102,8 @@ theme: pdf
   %ul
     %li
       Code.org has partnered with
-      = state_info[:school_district_partners_t] 
-      \.
+      = succeed '.' do
+        = state_info[:school_district_partners_t]
     %li
       = state_info[:num_affiliates_i]
       Code.org affiliates offering professional development for elementary teachers in
