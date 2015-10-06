@@ -19,7 +19,8 @@ Provides application-specific cache configuration used by Varnish and other
 HTTP cache layers.
 `pegasus` and `dashboard` keys each return a Hash in the following format:
 
-- `behaviors`: Array of behaviors, evaluated in top-to-bottom order:
+- `behaviors`: Array of behaviors. For a given HTTP request, `behaviors` is searched in-order
+  until the first matching `path` is found. If no `path` matches the request, the `default` behavior is used.
   - `path`: Path string to match this behavior against.
     A single `*`-wildcard is required, either an extension-wildcard `*.jpg` or
     path-wildcard `api/*`.
