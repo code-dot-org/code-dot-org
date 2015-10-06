@@ -1579,6 +1579,11 @@ Studio.init = function(config) {
     drawMap();
   };
 
+  config.afterClearPuzzle = function() {
+    studioApp.resetButtonClick();
+    annotationList.clearRuntimeAnnotations();
+  };
+
   if (studioApp.isUsingBlockly() && config.level.edit_blocks != 'toolbox_blocks') {
     arrangeStartBlocks(config);
   }
@@ -2202,10 +2207,15 @@ function handleExecutionError(err, lineNumber) {
     // Now select this location in the editor, since we know we didn't hit
     // this while executing (in which case, it would already have been selected)
 
-    codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
+    codegen.selectEditorRowColError(studioApp.editor, lineNumber - 1, err.loc.column);
   }
-  if (!lineNumber && Studio.JSInterpreter) {
-    lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
+  if (Studio.JSInterpreter) {
+    // Select code that just executed:
+    Studio.JSInterpreter.selectCurrentCode("ace_error");
+    // Grab line number if we don't have one already:
+    if (!lineNumber) {
+      lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
+    }
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Studio.executionError = err;
