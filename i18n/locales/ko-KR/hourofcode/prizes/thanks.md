@@ -22,7 +22,7 @@ Your whole school is now entered to win a class-set of laptops (or $10,000 for o
 
 [Send this email](%= resolve_url('/resources#email') %) to your manager, or the CEO.
 
-## 4. Promote the Hour of Code in your community
+## 4. 여러분의 동료들과 Hour of Code를 함께 해 보세요.
 
 Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](%= resolve_url('/resources#email') %).
 

@@ -39,7 +39,7 @@ Obtendrá una mejor experiencia de la Hora de Código con computadores conectado
 
   * Test tutorials on the devices you plan to use. Make sure they work properly on browsers with sound and video.
   * If the tutorial you choose works best with sound you may want to consider providing headphones.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Have participants partner with each other. Además se dan cuenta que en las ciencias computacionales se puede ser sociable y trabajar en equipo.
+  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Have participants partner with each other. Además se dan cuenta de que la informática es una actividad social y colaborativa.
   * Or try the [unplugged / offline tutorials](%= resolve_url('https://code.org/learn') %). These require no computers and is a great way to get participants up and moving. 
 
 ![](/images/fit-350/group_ipad.jpg)
