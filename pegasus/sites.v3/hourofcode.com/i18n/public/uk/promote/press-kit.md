@@ -27,7 +27,7 @@ nav: promote_nav
   * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
   * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Організовуйте групові діяльності (наприклад, безмашинні вправи), та демонструйте результати роботи учнів.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote#videos') %>) to inspire.
+  * Покажіть [відео Години коду](<%= resolve_url('/') %>) або одне із [цих](<%= resolve_url('/promote#videos') %>) для натхнення.
 
 **2. З'ясуйте, які журналісти висвітлюють місцеві освітні події.**
 
