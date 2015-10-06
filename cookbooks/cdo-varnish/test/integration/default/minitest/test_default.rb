@@ -147,7 +147,7 @@ describe 'http' do
     assert_equal "https://#{LOCALHOST}/https", /Location: ([^\s]+)/.match(response)[1]
   end
 
-  it 'separately caches responses that vary on X-Varnish-Accept-Language' do
+  it 'Normalizes Accept-Language' do
     url = '/cache3'
     text_en = 'Hello World!'
     text_fr = 'Bonjour le Monde!'
@@ -157,15 +157,21 @@ describe 'http' do
     response = proxy_request url, en
     assert_miss response
     assert_equal text_en, last_line(response)
+
+    # Ensure that Vary response header is de-normalized
+    assert_nil /X-Varnish-Accept-Language/.match(response)
+    refute_nil /Accept-Language/.match(response)
     assert_hit proxy_request url, en
 
+    # Ensure properly-normalized Accept-Language request header
     fr = {'Accept-Language' => 'fr'}
+    fr_2 = {'Accept-Language' => 'da, x-random;q=0.8, fr;q=0.7'}
     response = proxy_request url, fr
     assert_miss response
     assert_equal text_fr, last_line(response)
-    assert_hit proxy_request url, fr
+    assert_hit proxy_request url, fr_2
 
-    # Fallback to English on weird Accept-Language headers
+    # Fallback to English on weird Accept-Language request headers
     ['f', ('x' * 50), '*n-gb'].each do |lang|
       lang_hash = {'Accept-Language' => lang}
       response = proxy_request url, lang_hash

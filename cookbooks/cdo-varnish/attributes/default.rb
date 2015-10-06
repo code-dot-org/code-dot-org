@@ -27,5 +27,8 @@ default['cdo-varnish'] = {
     'csedweek.net'        => 'csedweek.org',
     'cseducationweek.com' => 'csedweek.org',
     'cseducationweek.org' => 'csedweek.org',
+  },
+  cookie_headers: {
+    language_: 'X-Varnish-Accept-Language'
   }
 }

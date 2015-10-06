@@ -3,15 +3,14 @@
 # See cdo-varnish/README.md for more information on the configuration format.
 class HttpCache
   STATIC_ASSETS = {
-    # For static-asset extensions, don't forward any cookies or headers.
+    # For static-asset extensions, don't forward any cookies or additional headers.
     path: %w(cur pdf png gif jpeg jpg ico mp3 swf css js).map{|ext| "*.#{ext}"},
     headers: [],
     cookies: 'none'
   }
 
-# Host header is needed for Varnish to delegate to pegasus/dashboard depending on the host.
-# Accept-Language header is needed to cache language-specific pages.
-  ALL_HEADERS = %w(Host Accept-Language)
+# Language header and cookie are needed to separately cache language-specific pages.
+  LANGUAGE_HEADER = %w(Accept-Language)
   LANGUAGE_COOKIE = %w(language_)
 
 # HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
@@ -32,11 +31,11 @@ class HttpCache
         behaviors: [
           {
             path: 'api/hour/*',
-            headers: ALL_HEADERS,
+            headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
           STATIC_ASSETS,
-          # Dashboard-based API paths in Pegasus are session-specific, whitelist all session cookies and language headers.
+          # Dashboard-based API paths in Pegasus are session-specific, whitelist all session cookies and language header.
           {
             path: %w(
               v2/*
@@ -53,19 +52,19 @@ class HttpCache
               ops-dashboard*
               poste*
             ),
-            headers: ALL_HEADERS,
+            headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
           {
             path: 'dashboardapi/*',
             proxy: 'dashboard',
-            headers: ALL_HEADERS,
+            headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           }
         ],
-        # Default Pegasus paths are cached but language-specific, whitelist only language cookies/headers.
+        # Default Pegasus paths are cached but language-specific, whitelist only language cookie/header.
         default: {
-          headers: ALL_HEADERS,
+          headers: LANGUAGE_HEADER,
           cookies: LANGUAGE_COOKIE
         }
       },
@@ -73,25 +72,25 @@ class HttpCache
         behaviors: [
           {
             path: 'v3/assets/*',
-            headers: ALL_HEADERS,
+            headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
           {
             path: 'api/*',
-            headers: ALL_HEADERS,
+            headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
           STATIC_ASSETS,
           {
             path: 'v2/*',
             proxy: 'pegasus',
-            headers: ALL_HEADERS,
+            headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           }
         ],
-        # Default Dashboard paths are session-specific, whitelist all session cookies and language headers.
+        # Default Dashboard paths are session-specific, whitelist all session cookies and language header.
         default: {
-          headers: ALL_HEADERS,
+          headers: LANGUAGE_HEADER,
           cookies: whitelisted_cookies
         }
       }

@@ -77,25 +77,20 @@ sub vcl_recv
   }
 ###
 
-  cookie.parse(req.http.Cookie);
-
-### Accept-Language HEADER
-
+  # Normalize Accept-Language header into X-Varnish-Accept-Language for better cache hit rates.
+  # To vary content based on the language, set Vary: X-Varnish-Accept-Language in application code.
   C{
       vcl_rewrite_accept_language(ctx);
   }C
 
-  /*
-  ** Convert language cookie into X-Varnish-Accept-Language header
-  */
-<%
-i = 0
-node['cdo-apps']['i18n']['languages'].to_hash.keys.each do |language|
-  js = (i += 1) != 1 ? '  else ' : '  '
-  js.concat("if(req.http.Cookie ~ \"language_=#{language}\") {\n    set req.http.X-Varnish-Accept-Language = \"#{language}\";\n  }\n")
-%><%= js %><%
-end
-%>
+### EXTRACT COOKIE HEADERS
+  cookie.parse(req.http.Cookie);
+<% node['cdo-varnish']['cookie_headers'].to_hash.each do |cookie, header| %>
+  if(cookie.isset("<%= cookie %>")) {
+    set req.http.<%= header %> = cookie.get("<%= cookie %>");
+    cookie.delete("<%= cookie %>");
+  }
+<%end%>
 ###
 
 ### PROXIES
@@ -118,7 +113,7 @@ if(req.method == "GET" || req.method == "HEAD") {
   # Pass-through to builtin.
 }
 
-# Handle the HTTP request coming from our backend
+# Handle the HTTP response coming from our backend
 # beresp == Back-end response from the web server.
 sub vcl_backend_response {
 
@@ -145,6 +140,10 @@ if(bereq.method == "GET" || bereq.method == "HEAD") {
 }
 
 sub vcl_deliver {
+  # De-normalize Vary: X-Varnish-Accept-Language response header.
+  if (resp.http.Vary) {
+    set resp.http.Vary = regsub(resp.http.Vary, "X-Varnish-Accept-Language", "Accept-Language");
+  }
   # Set a header to track a cache HIT/MISS.
   if (obj.hits > 0) {
     set resp.http.X-Varnish-Cache = "HIT";

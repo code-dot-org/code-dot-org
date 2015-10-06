@@ -9,6 +9,10 @@ Ubuntu 14.04
 - `libvmod-cookie`
 - `libvmod-header`
 
+## Attributes
+`node['cdo-varnish']['cookie_headers']`: Map of [cookie key] => [HTTP header] extractions.
+Varnish will extract the listed cookies into custom HTTP request headers before forwarding to the origin.
+
 ## `HttpCache#config`
 
 Provides application-specific cache configuration used by Varnish and other
@@ -25,20 +29,24 @@ HTTP cache layers.
       syntax, with additional restrictions:
       - `?` and `&` characters are not allowed.
       - Only a single `*` wildcard is allowed at the start or end of the path pattern.
-  - `headers`: A whitelist array of HTTP header keys to pass to the origin and
-    include in the cache key.
-    To whitelist all headers for the path, pass `['*']`.
-    To strip all headers for the path, pass `[]`.
+  - `headers` (CloudFront-only): Cache objects based on additional HTTP request headers.
+    To include all headers (which disables caching entirely for the path), pass `['*']`.
+    To include no additional request headers in the cache key, pass `[]`.
+    - Note: Objects are already cached based on the `Host` header by default.
+    - Note: `headers` is currently only used by CloudFront, while Varnish
+      caches objects based on the `Vary` HTTP response header.
   - `cookies`: A whitelist array of HTTP cookie keys to pass to the origin and
     include in the cache key.
     To whitelist all cookies for the path, pass `'all'`.
     To strip all cookies for the path, pass `'none'`.
-  - `proxy`: If specified, proxy all requests matching this path to the
+  - `proxy` (Varnish-only): If specified, proxy all requests matching this path to the
     specified origin. (Currently either `'dashboard'` or `'pegasus'`)
-    - Note: CloudFront does not support path-rewriting, so e.g., a GET request
+    - Note: paths are not rewritten, so e.g., a GET request
       to `server1.code.org/here/abc` configured with the behavior
       `{path: 'here/*' proxy: 'dashboard' }` will proxy its request to
       `server1-studio.code.org/here/abc`.
+    - Note: `proxy` is not yet implemented in CloudFront.
+      (Proxies will still work correctly when passed through to Varnish.)
 - `default`: Default behavior if no other path patterns are matched.
   Uses the same syntax as `behaviors` except `path` is not required.
 

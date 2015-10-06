@@ -162,6 +162,8 @@ module AWS
     # Syntax reference: http://docs.aws.amazon.com/sdkforruby/api/Aws/CloudFront/Types/CacheBehavior.html
     # `behavior_config` contains `headers` and `cookies` whitelists.
     def self.cache_behavior(behavior_config, path=nil)
+      # Always explicitly include Host header in CloudFront's cache key, to match Varnish defaults.
+      headers = behavior_config[:headers] + ['Host']
       behavior = {# required
         target_origin_id: 'cdo', # required
         forwarded_values: {# required
@@ -181,8 +183,8 @@ module AWS
               }
             end,
           headers: {
-            quantity: behavior_config[:headers].length, # required
-            items: behavior_config[:headers].empty? ? nil : behavior_config[:headers],
+            quantity: headers.length, # required
+            items: headers.empty? ? nil : headers,
           },
         },
         trusted_signers: {# required
