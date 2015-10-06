@@ -20,7 +20,7 @@ var Item = function (options) {
   this.height = options.height || 50;
   this.width = options.width || 50;
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
-  this.renderScale = options.renderScale || 1
+  this.renderScale = options.renderScale || 1;
   this.displayDir = Direction.SOUTH;
 
   this.currentFrame_ = 0;
