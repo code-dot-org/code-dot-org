@@ -26,7 +26,8 @@ Feature: App Lab Scenarios
 
   Scenario: Can click a button in shared app
     Given I switch to text mode
-    And I press keys "button('testButton1', 'Click me'); onEvent('testButton1', 'click', function() { setText('testButton1', 'Clicked'); });" for element ".ace_text-input"
+    And I press keys "button('testButton1', 'Click me');" for element ".ace_text-input"
+    And I press keys "onEvent('testButton1', 'click', function() { setText('testButton1', 'Clicked'); });" for element ".ace_text-input"
     When I navigate to the shared version of my project
     And I wait until element "#divApplab > .screen > button#testButton1" is visible
     Then element "#testButton1" contains text "Click me"
@@ -46,16 +47,37 @@ Feature: App Lab Scenarios
     Given I switch to text mode
     And I press keys "radioButton('radio1', false, 'testGroup');" for element ".ace_text-input"
     And I press keys "radioButton('radio2', false, 'testGroup');" for element ".ace_text-input"
+
     When I navigate to the shared version of my project
     And I wait until element ".screen > #radio2" is visible
     Then element "#radio1" is not checked
     And element "#radio2" is not checked
+
     When I press "radio1"
     Then element "#radio1" is checked
     And element "#radio2" is not checked
+
     When I press "radio2"
     Then element "#radio1" is not checked
     And element "#radio2" is checked
+
+  Scenario: Can change a checkbox value in shared app
+    Given I switch to text mode
+    And I press keys "checkbox('checkbox1', false, 'testGroup');" for element ".ace_text-input"
+    And I press keys "checkbox('checkbox2', false, 'testGroup');" for element ".ace_text-input"
+
+    When I navigate to the shared version of my project
+    And I wait until element ".screen > #checkbox2" is visible
+    Then element "#checkbox1" is not checked
+    And element "#checkbox2" is not checked
+
+    When I press "checkbox1"
+    Then element "#checkbox1" is checked
+    And element "#checkbox2" is not checked
+
+    When I press "checkbox2"
+    Then element "#checkbox1" is checked
+    And element "#checkbox2" is checked
 
   Scenario: Can type in text input on share page
     Given I switch to design mode
