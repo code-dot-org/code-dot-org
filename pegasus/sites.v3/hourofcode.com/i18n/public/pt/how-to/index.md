@@ -43,7 +43,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 **Mostre um vídeo inspirador:**
 
   * O vídeo original de lançamento da Code.org, com a participação de Bill Gates, Mark Zuckerberg e o astro da NBA, Chris Bosh (há versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * O [vídeo de lançamento da Hora do Código de 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou o <% if @country == 'uk' %> [vídeo da Hora do Código de 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [vídeo da Hora do Código de 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [O vídeo do presidente Obama convidando todos os alunos a aprender ciência da computação](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Encontre outros vídeos inspiradores [aqui](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -53,7 +53,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
   * Em uma atividade com a turma toda, monte uma lista com as coisas que usam a programação na vida cotidiana.
   * Veja algumas dicas para deixar as meninas interessadas em ciência da computação [aqui](<%= resolve_url('https://code.org/girls') %>).
 
-**Precisa de mais orientação?** Baixe esse [modelo de plano de aula](/files/EducatorHourofCodeLessonPlanOutline.docx).
+**Precisa de mais orientação?** Baixe este [modelo de plano de aula](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
 **Quer mais idéias de ensino?** Confira as [melhores práticas](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) de educadores experientes.
 
@@ -120,7 +120,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 
 ## Outros recursos da Hora do Código para educadores:
 
-  * Use esse[modelo de plano de aula](/files/EducatorHourofCodeLessonPlanOutline.docx) para organizar a Hora do Código.
+  * Use este[modelo de plano de aula](/files/EducatorHourofCodeLessonPlanOutline.docx) para organizar a Hora do Código.
   * Confira as [melhores práticas](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) dos professores que já trabalharam na Hora do Código. 
   * Participe do nosso webinar [Guia da Hora do Código para Educadores](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
   * Visite o [Fórum da Hora do Código para Professores](http://forum.code.org/c/plc/hour-of-code) para conseguir conselhos, ideias e apoio de outros educadores. <% if @country == 'us' %>
