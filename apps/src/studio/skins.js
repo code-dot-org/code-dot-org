@@ -190,7 +190,7 @@ function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
   skin.defaultBackground = 'background3';
-  skin.defaultWalls = 'maze2';
+  skin.defaultWalls = 'blank';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
