@@ -38,7 +38,7 @@ theme: pdf
     = state_info[:state_name_s]
   %ul
     %li
-      = state_info[:cs_jobs_i]
+      = format_integer_with_commas(state_info[:cs_jobs_i])
       open computing jobs
       = precede "(" do
         = state_info[:growth_vs_average_f]
@@ -50,29 +50,29 @@ theme: pdf
       = state_info[:state_code_s]
       is
       = surround "$", "," do
-        = state_info[:avg_sal_computing_i]
+        = format_integer_with_commas(state_info[:avg_sal_computing_i])
       which is significantly higher than the average salary in the state 
       = surround "($", ")." do
-        = state_info[:avg_sal_all_i]
+        = format_integer_with_commas(state_info[:avg_sal_all_i])
     %li
-      = state_info[:cs_graduates_i]
+      = format_integer_with_commas(state_info[:cs_graduates_i])
       computer science graduates in 2015; only
       = succeed "%" do
         = state_info[:percent_female_cs_grad_i]
       were female.
     %li
-      = state_info[:ap_cs_exams_i]
+      = format_integer_with_commas(state_info[:ap_cs_exams_i])
       high school students took the AP Computer Science exam in 2014; only
       = succeed "%" do
         = state_info[:percent_ap_female_i]
       were female; only
-      = state_info[:ap_hispanic_i]
+      = format_integer_with_commas(state_info[:ap_hispanic_i])
       were Hispanic; only
-      = state_info[:ap_black_i]
+      = format_integer_with_commas(state_info[:ap_black_i])
       were black.
     %li
       Only
-      = state_info[:schools_ap_cs_i]
+      = format_integer_with_commas(state_info[:schools_ap_cs_i])
       schools in 
       = state_info[:state_code_s]
       = surround "(", "% of" do
@@ -105,26 +105,30 @@ theme: pdf
       = succeed '.' do
         = state_info[:school_district_partners_t]
     %li
-      = state_info[:num_affiliates_i]
+      = format_integer_with_commas(state_info[:num_affiliates_i])
       Code.org affiliates offering professional development for elementary teachers in
       = state_info[:state_name_s]
       have already trained
-      = state_info[:num_elementary_trained_i]
+      = format_integer_with_commas(state_info[:num_elementary_trained_i])
       elementary teachers.
     %li
       Code.org has trained
-      = state_info[:num_ms_trained_i]
+      = format_integer_with_commas(state_info[:num_ms_trained_i])
       middle school teachers and
-      = state_info[:num_hs_trained_i]
+      = format_integer_with_commas(state_info[:num_hs_trained_i])
       high school teachers in
       = state_info[:state_name_s]
       to teach computer science. 
   %p 
     About
-    = state_info[:num_hoc_i]
+    = format_integer_with_commas(state_info[:num_hoc_i])
     people in
     = state_info[:state_name_s]
     have completed an Hour of Code! 
+
+%center
+  %h3 “Computer Science is a liberal art: it’s something that everybody should be exposed to and everyone should have a mastery of to some extent.” 
+  %p —Steve Jobs
 
 %div
   %p
@@ -231,10 +235,6 @@ theme: pdf
   %p
     %a{href: "https://code.org/files/Making_CS_Fundamental.pdf"} Read more
     about these 8 policy ideas.
-
-%center
-  %h3 “Computer Science is a liberal art: it’s something that everybody should be exposed to and everyone should have a mastery of to some extent.” 
-  %p —Steve Jobs
 
 %div
   %h3 Follow us! 
