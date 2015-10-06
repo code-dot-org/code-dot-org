@@ -14,6 +14,7 @@ var url = require('url');
 var FeedbackUtils = require('./feedback');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
+var codegen = require('./codegen');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -485,6 +486,9 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
       resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
     }
     this.editor.setValue(resetValue);
+  }
+  if (config.afterClearPuzzle) {
+    config.afterClearPuzzle();
   }
 };
 
@@ -1083,7 +1087,12 @@ StudioApp.prototype.highlight = function(id, spotlight) {
 * Remove highlighting from all blocks
 */
 StudioApp.prototype.clearHighlighting = function () {
-  this.highlight(null);
+  if (this.isUsingBlockly()) {
+    this.highlight(null);
+  } else if (this.editCode && this.editor) {
+    // Clear everything (step highlighting, errors, etc.)
+    codegen.clearDropletAceHighlighting(this.editor, true);
+  }
 };
 
 /**
