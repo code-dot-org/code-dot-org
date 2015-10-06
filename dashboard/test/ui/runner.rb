@@ -172,6 +172,8 @@ end
 features = $options.feature || Dir.glob('features/**/*.feature')
 browser_features = $browsers.product features
 
+HipChat.log "Starting #{browser_features.count} <b>dashboard</b> UI tests in #{$options.parallel_limit} threads</b>..."
+
 Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |browser, feature|
   feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
   browser_name = browser['name'] || 'UnknownBrowser'
@@ -193,7 +195,8 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
     next
   end
 
-  HipChat.log "Testing <b>dashboard</b> UI with <b>#{test_run_string}</b>..."
+# don't log individual tests because we hit HipChat rate limits
+#  HipChat.log "Testing <b>dashboard</b> UI with <b>#{test_run_string}</b>..."
   print "Starting UI tests for #{test_run_string}\n"
 
   ENV['BROWSER_CONFIG'] = browser_name
@@ -285,7 +288,8 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
   end
 
   if succeeded
-    HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{format_duration(test_duration)})"
+# don't log individual successes because we hit HipChat rate limits
+#    HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{format_duration(test_duration)})"
   else
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     HipChat.log "<pre>#{output_stderr}</pre>"
@@ -295,11 +299,11 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
       link = "https://test-studio.code.org/ui_test/" + html_output_filename
       message += " <a href='#{link}'>☁ html output</a>"
     end
+    short_message = message
 
-    message += "<br/><i>command line: cucumber #{arguments + first_time_arguments}</i>"
     message += "<br/><i>rerun: ./runner.rb -c #{browser_name} -f #{feature} --html</i>"
     HipChat.log message, color: 'red'
-    HipChat.developers message, color: 'red' if CDO.hip_chat_logging
+    HipChat.developers short_message, color: 'red' if CDO.hip_chat_logging
   end
   result_string = succeeded ? "succeeded".green : "failed".red
   print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)})\n"

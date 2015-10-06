@@ -11,7 +11,7 @@ nav: promote_nav
 
 # Насърчаване на Часът на кода
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Домакинли сте на часът на кода? <a href = "< % = resolve_url('/how-to') % >" > Вижте помощното ръководство</a>
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -37,17 +37,17 @@ nav: promote_nav
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Използвайте логото на часът на кода за разпространение на събитието
 
 [![изображение](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Изтегли версии с висока резолюция](http://images.code.org/share/hour-of-code-logo.zip)
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## Разпечатайте тези стикери и ги раздайте на учениците си
 
-(Stickers are 1" diameter, 63 per sheet)  
+(Стикерите са 1' в диаметър, 63 на лист)  
 [![изображение](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>

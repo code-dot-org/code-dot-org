@@ -14,6 +14,16 @@ nav: promote_nav
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/watch?v=HrBh2165KjE"><strong>¿Por qué todos tienen que aprender a programar? Participá de la Hora del Código en Argentina (5 min)</strong></a>
 
+<br/>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/watch?v=vq6Wpb-WyQ"><strong>La Hora del Código en Chile (2 min)</strong></a>
+
+<% elsif @country == 'ca' %>
+
+## Videos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/watch?v=k3cg1e27zQM"><strong>Join Nova Scotia for the Hour of Code (3 min)</strong></a>
+
 <% elsif @country ==  'uk' %>
 
 # How-to Guide for Organizations
