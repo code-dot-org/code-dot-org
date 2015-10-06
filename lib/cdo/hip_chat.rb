@@ -102,7 +102,7 @@ class HipChat
                                              }))
   end
 
-  # Wait the current HiptChat request to succeeed (possibly including retries).
+  # Wait the current HipChat request to succeeed (possibly including retries).
   def self.await_retries_for_test
     @@current_retry_thread_for_test.join if @@current_retry_thread_for_test
   end
