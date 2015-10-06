@@ -277,7 +277,7 @@ Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
 
         block.moveBy(blockX, blockY);
       } else {
-        if (block.isUserVisible()) {
+        if (block.isVisible()) {
           positionBlock(block);
         } else {
           hiddenBlocks.push(block);
