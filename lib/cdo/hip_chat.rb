@@ -16,8 +16,8 @@ class HipChat
   # The total time spent waiting in exponential backoff retries.
   @@total_backoff_for_test = 0.0
 
-  # Used to track the exponential backoff thread for tests.
-  @@last_thread_for_test = nil
+  # Used to track the most recent exponential backoff thread for tests.
+  @@current_retry_thread_for_test = nil
 
   # Maximum times to retry on test failure
   MAX_RETRIES = 3
@@ -31,17 +31,11 @@ class HipChat
   end
 
   def self.message(room, message, options={})
-    unless CDO.hip_chat_logging
-      # Output to standard log if HipChat isn't configured
-      CDO.log.info("#{room}: #{message}")
-      return
-    end
     post_to_hipchat(room, message, options)
 
     channel = "\##{Slack::CHANNEL_MAP[room.to_sym] || room}"
     Slack.message slackify(message.to_s), channel: channel, username: @@name, color: options[:color]
   end
-
 
   def self.notify(room, message, options={})
     message(room, message, options.merge(notify: true))
@@ -55,20 +49,28 @@ class HipChat
     message.gsub(/<\/?b>/, '*').gsub(/<\/?pre>/, '```').gsub(/<a href=['"]([^'"]+)['"]>/, '<\1|').gsub(/<\/a>/, '>')
   end
 
-  # Post message to hipchat with exponential backoff, retrying at most
-  # `max_retries` times.
+  # If CDO.hip_chat_logging is true, post message to hipchat with
+  # exponential backoff, retrying at most `max_retries` times.
+  # Otherwise log to CDO.log.
+  #
   # Implementation notes: The synchronous post with exponential
   # backoff is done on a newly spawned thread to avoid blocking the
   # main Ruby thread.  This is OK for current usage because we log to
   # Hipchat infrequently.
   def self.post_to_hipchat(room, message, options={})
+    unless CDO.hip_chat_logging
+      # Output to standard log if HipChat isn't configured
+      CDO.log.info("#{room}: #{message}")
+      return
+    end
+
     # Make the initial request synchronously.
     succeeded = post_hipchat_form(room, message, options).is_a?(Net::HTTPSuccess)
     return if succeeded
 
     # If that failed, back off exponentially and retry, working
     # on a thread to avoid stalling the main thread.
-    @@last_thread_for_test = Thread.new do
+    @@current_retry_thread_for_test = Thread.new do
       backoff = @@backoff
       retries = 1
       while !succeeded and retries <= MAX_RETRIES
@@ -99,8 +101,9 @@ class HipChat
                                              }))
   end
 
+  # Wait the current HiptChat request to succeeed (possibly including retries).
   def self.await_retries_for_test
-    @@last_thread_for_test.join if @@last_thread_for_test
+    @@current_retry_thread_for_test.join if @@current_retry_thread_for_test
   end
 
   # Returns the number of HipChat POST retries, for testing only.
