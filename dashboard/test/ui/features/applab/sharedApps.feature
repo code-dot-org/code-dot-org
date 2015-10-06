@@ -33,6 +33,15 @@ Feature: App Lab Scenarios
     When I press "testButton1"
     Then element "#testButton1" contains text "Clicked"
 
+  Scenario: Can change a dropdown value in shared app
+    Given I switch to text mode
+    And I press keys "dropdown('testDropdown', 'Option A', 'Option B', 'Option C');" for element ".ace_text-input"
+    When I navigate to the shared version of my project
+    And I wait until element ".screen > #testDropdown" is visible
+    Then element "#testDropdown" has value "Option A"
+    When I select the "Option B" option in dropdown "testDropdown"
+    Then element "#testDropdown" has value "Option B"
+
   Scenario: Can type in text input on share page
     Given I switch to design mode
     And I drag a TEXT_INPUT into the app
