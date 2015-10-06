@@ -58,7 +58,6 @@ Feature: App Lab Scenarios
     And I press "confirm-button"
     And Applab HTML has no button
 
-  @skip
   @no_mobile
   @no_safari
   Scenario: Upload Image Asset
