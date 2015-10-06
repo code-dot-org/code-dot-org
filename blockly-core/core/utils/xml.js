@@ -279,6 +279,10 @@ Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {
   if (editable) {
     block.setEditable(editable === 'true');
   }
+  var next_connection_disabled = xmlBlock.getAttribute('next_connection_disabled');
+  if (next_connection_disabled) {
+    block.setNextConnectionDisabled(next_connection_disabled === 'true');
+  }
   var userVisible = xmlBlock.getAttribute('uservisible');
   if (userVisible) {
     block.setUserVisible(userVisible === 'true');
