@@ -7,7 +7,7 @@ class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
   before_filter :authenticate_user!, except: [:show, :embed_blocks, :embed_level]
-  before_filter :can_modify?, except: [:show, :index, :embed_blocks, :embed_level]
+  before_filter :require_levelbuilder_mode, except: [:show, :index, :embed_blocks, :embed_level]
   skip_before_filter :verify_params_before_cancan_loads_model, only: [:create, :update_blocks]
   load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_blocks, :embed_level]
   check_authorization
@@ -206,12 +206,6 @@ class LevelsController < ApplicationController
   end
 
   private
-
-  def can_modify?
-    unless Rails.env.levelbuilder? || Rails.env.development?
-      raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
-    end
-  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_level

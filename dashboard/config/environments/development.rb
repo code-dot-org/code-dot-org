@@ -62,4 +62,7 @@ Dashboard::Application.configure do
 
   # see stack traces around sql queries in the log
   # ActiveRecordQueryTrace.enabled = true
+
+  # act like a levelbuilder. Set to true if you want to be able to create levels or test levelbuilder functionality
+  config.levelbuilder_mode = false
 end
