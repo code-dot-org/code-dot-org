@@ -47,7 +47,7 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 
 [Recruit a local group](<%= resolve_url('/resources/promote#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/resources/promote') %>) for your own event.
 
-## 5. 지역 의원 등에게 Hour of Code 를 지원해달라고 요청하세요.
+## 5. 지역 의원들에게 Hour of Code 를 지원해달라고 요청하세요.
 
 [Send this email](<%= resolve_url('/resources/promote#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
 
