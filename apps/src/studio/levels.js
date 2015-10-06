@@ -1573,7 +1573,7 @@ levels.hoc2015_2 = {
 
 levels.js_hoc2015_move_right = {
   "editCode": true,
-  "background": "background3",
+  "background": "background1",
   "codeFunctions": {
     "moveEast": null,
     "moveWest": null,
@@ -1603,8 +1603,7 @@ levels.js_hoc2015_move_right = {
 
 levels.js_hoc2015_move_two_items = {
   "editCode": true,
-  "skin": "hoc2015",
-  "background": "background3",
+  "background": "background1",
   "codeFunctions": {
     "moveEast": null,
     "moveWest": null,
@@ -1624,12 +1623,17 @@ levels.js_hoc2015_move_two_items = {
   "delayCompletion": 2000,
   "floating_score": true,
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 0, 0, 0, 4,0, 0], [0, 4, 0, 4, 0, 4, 0, 0], [0, 4, 1, 16, 0, 4, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "instructions": "We need the items. Help me get them all!"
+  "instructions": "We need the items. Help me get them all!",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  }
 };
 
 levels.js_hoc2015_move_item_destination = {
   "editCode": true,
-  "background": "background3",
+  "background": "background1",
   "codeFunctions": {
     "moveEast": null,
     "moveWest": null,
@@ -1650,11 +1654,16 @@ levels.js_hoc2015_move_item_destination = {
   "floatingScore": true,
   "map": [[0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 4, 4, 4, 4, 0, 0], [0, 4,  4, 4, 4, 4, 4, 0], [0, 4,  0, 4, 4,256, 4, 0], [0, 4,1,16, 0, 0, 4, 0], [0, 4, 4, 4,  4, 4, 4, 0], [0, 0, 0, 0,  0, 0, 0, 0], [0, 0, 0, 0,  0, 0, 0, 0]],
   "instructions": "I see another item behind that obstacle. Can you bring it back to the destination?",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  }
 };
 
 levels.js_hoc2015_move_item_destination_2 = {
  "editCode": true,
-  "background": "background3",
+  "background": "background2",
   "textModeAtStart": true,
   "codeFunctions": {
     "moveEast": null,
@@ -1681,8 +1690,7 @@ levels.js_hoc2015_move_item_destination_2 = {
 
 levels.js_hoc2015_move_item_destination_3 = {
   "editCode": true,
-  "skin": "hoc2015",
-  "background": "background3",
+  "background": "background2",
   "textModeAtStart": true,
   "codeFunctions": {
     "moveEast": null,
@@ -1710,7 +1718,6 @@ levels.js_hoc2015_move_item_destination_3 = {
 
 levels.js_hoc2015_move_cross = {
   "editCode": true,
-  "skin": "hoc2015",
   "background": "background2",
   "textModeAtStart": true,
   "codeFunctions": {
@@ -1741,7 +1748,8 @@ levels.js_hoc2015_move_cross = {
 
 levels.js_hoc2015_event_two_items = {
   "editCode": true,
-  "background": "background2",
+  "background": "background1",
+  "walls": "blank",
   "softButtons": ["downButton", "upButton"],
   "codeFunctions": {
     "moveNorth": null,
@@ -1763,14 +1771,19 @@ levels.js_hoc2015_event_two_items = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
   "pinWorkspaceToBottom": "true",
   "embed": "false",
-  "instructions": "\"Steer the bot to reach the two goals.\"",
-  "instructions2": "Drag the move commands into the correct events.  Then, steer the bot to reach the goals.",
+  "instructions": "\"Bot1, I need you to get a critical message to the goals.\"",
+  "instructions2": "Use functions to make Bot1 move when you hit the arrow keys.",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  },
 };
 
 levels.js_hoc2015_event_four_items = {
   "editCode": true,
-  "skin": "hoc2015",
-  "background": "background2",
+  "background": "background1",
+  "walls": "blobs",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "moveEast": null,
@@ -1798,8 +1811,13 @@ levels.js_hoc2015_event_four_items = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 16, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
 
   "embed": "false",
-  "instructions": "\"Steer the bot to reach the four goals.\"",
-  "instructions2": "Make the bot walk in all directions so that he can reach the four goals.",
+  "instructions": "\"Get to all the goals as quickly as you can.\"",
+  "instructions2": "Move in all directions.",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  }
 };
 
 
@@ -1807,7 +1825,8 @@ levels.js_hoc2015_event_choose_character =
 {
   "avatarList": ["character1"],
   "editCode": true,
-  "background": "background2",
+  "background": "background1",
+  "walls": "blank",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "setCharacter": null,
@@ -1840,15 +1859,16 @@ levels.js_hoc2015_event_choose_character =
 
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
 
-  "instructions": "\"I will now choose who to direct, and where they do it.\"",
-  "instructions2": "Customize your game by choosing the bot and the background.",
+  "instructions": "\"Time to visit another planet.\"",
+  "instructions2": "Use the setBackgound(); command to change the background and change your bot to Bot2.",
 };
 
 
 levels.js_hoc2015_event_add_items = {
   "editCode": true,
-  "skin": "hoc2015",
+  "protagonistSpriteIndex": 0,
   "background": "background2",
+  "walls": "horizontal",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "addItemsToScene": null,
@@ -1881,15 +1901,16 @@ levels.js_hoc2015_event_add_items = {
 
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
-  "instructions": "\"It looks like there are other characters arriving.\"",
-  "instructions2": "Use the addItemsToScene command to add new characters to the game.", 
+  "instructions": "\"I’m seeing signs of increased activity on this planet.\"",
+  "instructions2": "Let’s do the same thing in text mode. Type, \"addItem(\"Character1\");\" at the top of your program to add a Character1. Can you add another Character? Then get them all.", 
 };
 
 
 levels.js_hoc2015_event_item_behavior = {
   "editCode": true,
-  "skin": "hoc2015",
-  "background": "background1",
+  "protagonistSpriteIndex": 0,
+  "background": "background2",
+  "walls": "blobs",
   "textModeAtStart": true,
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
@@ -1924,13 +1945,15 @@ levels.js_hoc2015_event_item_behavior = {
   "floatingFcore": true,
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
-  "instructions": "\"Now these new characters are starting to do more.\"",
-  "instructions2": "Add some characters, and set their behavior and speed.",
+  "instructions": "\"It’s up to you Bot2.\"",
+  "instructions2": "Make the Creature2s flee by using \"setToFlee\" and then get them all."
 };
 
 levels.js_hoc2015_event_touch_items = {
   "editCode": true,
-  "background": "background1",
+  "protagonistSpriteIndex": 0,
+  "background": "background2",
+  "walls": "circle",
   "textModeAtStart": true,
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
@@ -1968,14 +1991,14 @@ levels.js_hoc2015_event_touch_items = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
 
   "embed": "false",
-  "instructions": "\"Now it's time to catch some characters.\"",
-  "instructions2": "Use setItemActivity to make the items move around, and whenTouchItem to do something when you touch them. Then, capture them!",
+  "instructions": "\"Be careful, they might be behind you.\"",
+  "instructions2": "Every time you get a character, add a new random character to the scene.",
 };
 
 levels.js_hoc2015_event_points = {
   "editCode": true,
-  "skin": "hoc2015",
-  "background": "background1",
+  "background": "background3",
+  "walls": "horizontal",
   "textModeAtStart": true,
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
@@ -2014,14 +2037,14 @@ levels.js_hoc2015_event_points = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
 
   "embed": "false",
-  "instructions": "\"Somebody should be rewarded for reaching those characters.\"",
-  "instructions2": "Let’s add points. Give yourself some points when you touch an item. Can you score 10 points?",
+  "instructions": "\"I’m counting on you, Bot1!\"",
+  "instructions2": "Change your score when you touch a character. Can you reach 100 points?",
 };
 
 levels.js_hoc2015_event_random_items = {
   "editCode": true,
-  "skin": "hoc2015",
-  "background": "background1",
+  "background": "background3",
+  "walls": "blobs",
   "textModeAtStart": true,
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
@@ -2060,14 +2083,14 @@ levels.js_hoc2015_event_random_items = {
   
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
-  "instructions": "\"Surprising things can happen in this world.\"",
-  "instructions2": "We can change character behavior at any time. Change the characters to a new random movement every time you touch one.",
+  "instructions": "\"Quick! They’re moving faster!\"",
+  "instructions2": "Ready to move faster? Increase your speed when you touch a Character3 and slow down when you hit a Character4.",
 };
 
 levels.js_hoc2015_event_free = {
   "editCode": true,
-  "skin": "hoc2015",
   "background": "background1",
+  "walls": "circle",
   "textModeAtStart": true,
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
@@ -2111,7 +2134,7 @@ levels.js_hoc2015_event_free = {
 
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
-  "instructions": "Now you can make and share anything you like.",
+  "instructions": "\"You’re on your own now Bot1.\"",
 };
 
 
