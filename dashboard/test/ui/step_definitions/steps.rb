@@ -214,6 +214,10 @@ Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expec
   element_contains_text(selector, expectedText)
 end
 
+Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expectedValue|
+  element_value_is(selector, expectedValue)
+end
+
 Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expectedText|
   element_has_attribute(selector, attribute, replace_hostname(expectedText))
 end
