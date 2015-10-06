@@ -1,7 +1,7 @@
 /* global dashboard, appOptions, trackEvent */
 
 // Attempt to save projects every 30 seconds
-var AUTOSAVE_INTERVAL = 30 * 1000;
+var AUTOSAVE_INTERVAL = 8 * 1000;
 
 var ABUSE_THRESHOLD = 10;
 
