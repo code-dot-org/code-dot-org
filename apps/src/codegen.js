@@ -451,13 +451,45 @@ exports.isAceBreakpointRow = function (session, userCodeRow) {
   return Boolean(bps[userCodeRow]);
 };
 
+var lastHighlightMarkerIds = {};
+
 /**
- * Selects code in droplet/ace editor.
+ * Clears all highlights that we have added in the ace editor.
+ */
+function clearAllHighlightedAceLines (aceEditor) {
+  var session = aceEditor.getSession();
+  for (var hlClass in lastHighlightMarkerIds) {
+    session.removeMarker(lastHighlightMarkerIds[hlClass]);
+  }
+  lastHighlightMarkerIds = {};
+}
+
+/**
+ * Highlights lines in the ace editor. Always moves the previous highlight with
+ * the same class to the new location.
+ *
+ * If the row parameters are not supplied, just clear the last highlight.
+ */
+function highlightAceLines (aceEditor, className, startRow, endRow) {
+  var session = aceEditor.getSession();
+  className = className || 'ace_step';
+  if (lastHighlightMarkerIds[className]) {
+    session.removeMarker(lastHighlightMarkerIds[className]);
+    lastHighlightMarkerIds[className] = null;
+  }
+  if (typeof startRow !== 'undefined') {
+    lastHighlightMarkerIds[className] = aceEditor.getSession().highlightLines(
+        startRow, endRow, className).id;
+  }
+}
+
+/**
+ * Selects and highlights code in droplet/ace editor to indicate an error.
  *
  * This function simply highlights one spot, not a range. It is typically used
  * to highlight where an error has occurred.
  */
-exports.selectEditorRowCol = function (editor, row, col) {
+exports.selectEditorRowColError = function (editor, row, col) {
   if (editor.currentlyUsingBlocks) {
     var style = {color: '#FFFF22'};
     editor.clearLineMarks();
@@ -475,9 +507,33 @@ exports.selectEditorRowCol = function (editor, row, col) {
     // scrolling to the right
     selection.setSelectionRange(range, true);
   }
+  highlightAceLines(editor.aceEditor, "ace_error", row, row);
 };
 
-function createSelection (selection, cumulativeLength, start, end) {
+/**
+ * Removes highlights (for the default ace_step class) and selection in
+ * droplet and ace editors.
+ *
+ * @param {boolean} allClasses When set to true, remove all classes of
+ * highlights (including ace_step, ace_error, and anything else)
+ */
+exports.clearDropletAceHighlighting = function (editor, allClasses) {
+  if (editor.currentlyUsingBlocks) {
+    editor.clearLineMarks();
+  } else {
+    editor.aceEditor.getSelection().clearSelection();
+  }
+  if (allClasses) {
+    clearAllHighlightedAceLines(editor.aceEditor);
+  } else {
+    // when calling without a class or rows, highlightAceLines() will clear
+    // everything highlighted with the default highlight class
+    highlightAceLines(editor.aceEditor);
+  }
+};
+
+function selectAndHighlightCode (aceEditor, cumulativeLength, start, end, highlightClass) {
+  var selection = aceEditor.getSelection();
   var range = selection.getRange();
 
   range.start.row = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
@@ -488,6 +544,8 @@ function createSelection (selection, cumulativeLength, start, end) {
   // calling with the backwards parameter set to true - this prevents horizontal
   // scrolling to the right while stepping through in the debugger
   selection.setSelectionRange(range, true);
+  highlightAceLines(aceEditor, highlightClass || "ace_step", range.start.row,
+      range.end.row);
 }
 
 /**
@@ -495,12 +553,15 @@ function createSelection (selection, cumulativeLength, start, end) {
  *
  * Returns the row (line) of code highlighted. If nothing is highlighted
  * because it is outside of the userCode area, the return value is -1
+ *
+ * @param {string} highlightClass CSS class to use when highlighting in ACE
  */
 exports.selectCurrentCode = function (interpreter,
                                       cumulativeLength,
                                       userCodeStartOffset,
                                       userCodeLength,
-                                      editor) {
+                                      editor,
+                                      highlightClass) {
   var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
@@ -524,23 +585,14 @@ exports.selectCurrentCode = function (interpreter,
         //editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
         editor.markLine(userCodeRow, style);
       } else {
-        var selection = editor.aceEditor.getSelection();
-        createSelection(selection, cumulativeLength, start, end);
+        selectAndHighlightCode(editor.aceEditor, cumulativeLength, start, end,
+            highlightClass);
       }
     } else {
-      if (editor.currentlyUsingBlocks) {
-        editor.clearLineMarks();
-      } else {
-        var tempSelection = editor.aceEditor.getSelection();
-        tempSelection.clearSelection();
-      }
+      exports.clearDropletAceHighlighting(editor);
     }
   } else {
-    if (editor.currentlyUsingBlocks) {
-      editor.clearLineMarks();
-    } else {
-      editor.aceEditor.getSelection().clearSelection();
-    }
+    exports.clearDropletAceHighlighting(editor);
   }
   return userCodeRow;
 };
