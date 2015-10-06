@@ -15,6 +15,8 @@ class HipchatTest < Minitest::Test
     CDO.log.level = 5  # Log only fatal exceptions to avoid test spew.
     HipChat.reset_test_statistics
     HipChat.set_backoff_for_test(BACKOFF)
+    CDO.hip_chat_logging = true
+
   end
 
   # Verify correct behavior in the simple success case.
