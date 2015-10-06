@@ -8,7 +8,7 @@ title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# How to get involved
+# Як взяти участь
 
 ## 1. Sign up to host an Hour of Code
 
@@ -17,7 +17,7 @@ Anyone, anywhere can host an Hour of Code. [Sign up](%= resolve_url('/') %) to r
 
 [<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
 
-## 2. Spread the word
+## 2. Поширюйте інформацію
 
 Tell your friends about the **#HourOfCode**!
 
