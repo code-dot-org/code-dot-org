@@ -426,13 +426,6 @@ And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   end
 end
 
-And(/^I press keys "([^"]*)" for element "([^"]*)" when it appears$/) do |key, selector|
-  steps %Q{
-    And I wait until element "#{selector}" is visible
-    And I press keys "#{key}" for element "#{selector}"
-  }
-end
-
 def make_symbol_if_colon(key)
   # Available symbol keys:
   # https://code.google.com/p/selenium/source/browse/rb/lib/selenium/webdriver/common/keys.rb?name=selenium-2.26.0
