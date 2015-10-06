@@ -30,7 +30,15 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-# 主要なパートナーおよび協賛企業
+<% if @country == 'ca' %>
+
+# Canada Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
+
+<% end %>
+
+# Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 

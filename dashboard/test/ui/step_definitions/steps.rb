@@ -355,8 +355,6 @@ def log_in_as(user)
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
       ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
     params[:domain] = '.code.org' # top level domain cookie
-  else
-    params[:domain] = '.ngrok.com'
   end
 
   @browser.manage.delete_all_cookies
