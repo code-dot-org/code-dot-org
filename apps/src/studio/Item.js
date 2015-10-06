@@ -44,11 +44,11 @@ Item.prototype.getDirectionFrame = function() {
   // Every other frame, if we aren't yet rendering in the correct direction,
   // assign a new displayDir from state table; only one turn at a time.
 
-  if (this.dir !== this.displayDir) {
+  if (this.dir !== this.displayDir && this.displayDir !== undefined) {
     if (Studio.tickCount && (0 === Studio.tickCount % 2)) {
       this.displayDir = NextTurn[this.displayDir][this.dir];
     }
-  }
+}
 
   return constants.frameDirTableWalkingWithIdle[this.displayDir];
 };
