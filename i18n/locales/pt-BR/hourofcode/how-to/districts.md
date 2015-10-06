@@ -10,7 +10,7 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
 ## Faça com que todas as escolas participem e todos os alunos possam aprender!
 
-  1. **Recrute escolas locais.** Compartilhe [ este e-mail ](%= resolve_url('/promote#sample-emails') %) e o [Guia para professores](%= resolve_url('/how-to') %), ou inclua uma [pequena propaganda](<%= resolve_url('/resources/stats') %>) em boletins informativos/materiais de comunicação da região.
+  1. **Recrute escolas locais.** Compartilhe [ este e-mail ](%= resolve_url('/promote#sample-emails') %) e o [Guia para professores](%= resolve_url('/how-to') %), ou inclua uma [pequena propaganda](%= resolve_url('/resources/stats') %) em boletins informativos/materiais de comunicação da região.
 
   2. **Forneça um modelo de plano de logística para as escolas.** Compartilhe esse modelo de plano de logística com as escolas para lhes dar ideias de como organizar a participação de toda a escola. É possível fazer essa atividade nas aulas de matemática, no horário dos plantões de dúvida, ou alterando as turmas no laboratório de computação ao longo da semana. Eles podem apresentar seu próprio plano e concorrer a US$10.000 em hardware em [ http://hourofcode.com/prizes](%= resolve_url('/prizes/hardware-signup') %).
 
