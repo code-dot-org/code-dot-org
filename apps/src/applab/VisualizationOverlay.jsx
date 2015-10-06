@@ -13,8 +13,6 @@ module.exports = React.createClass({
   getDefaultProps: function () {
     return {
       svgStyle: {
-        width: '100%',
-        height: '100%',
         pointerEvents: 'none'
       }
     };
@@ -22,13 +20,18 @@ module.exports = React.createClass({
 
   getInitialState: function () {
     return {
-      mouseX: 0,
-      mouseY: 0
+      mouseX: -1,
+      mouseY: -1
     };
   },
 
   componentDidMount: function() {
+    this.recalculateTransformAtScale(this.props.scale);
     document.addEventListener('mousemove', this.onSvgMouseMove);
+  },
+
+  componentWillReceiveProps: function (nextProps) {
+    this.recalculateTransformAtScale(nextProps.scale);
   },
 
   componentWillUnmount: function() {
@@ -48,12 +51,15 @@ module.exports = React.createClass({
 
   onSvgMouseMove: function (e) {
     var svg = React.findDOMNode(this.refs.svg_);
-    var screenToSvg = svg.getScreenCTM().inverse();
-    var unscale = svg.createSVGMatrix().scale(1 / this.props.scale);
+    if (!svg) {
+      return;
+    }
+
+    // TODO: Make one point object and reuse it
     var pt = svg.createSVGPoint();
     pt.x = e.clientX;
     pt.y = e.clientY;
-    pt = pt.matrixTransform(screenToSvg).matrixTransform(unscale);
+    pt = pt.matrixTransform(this.screenSpaceToAppSpaceTransform);
 
     this.setState({
       mouseX: pt.x,
@@ -67,6 +73,20 @@ module.exports = React.createClass({
       overlayComponent = <CrosshairOverlay x={this.state.mouseX} y={this.state.mouseY} />;
     }
 
-    return <svg ref="svg_" style={this.props.svgStyle}>{overlayComponent}</svg>;
+    var viewBox = "0 0 " + this.props.appWidth + " " + this.props.appHeight;
+
+    return <svg ref="svg_"
+                width={this.props.appWidth} height={this.props.appHeight}
+                viewBox={viewBox}
+                style={this.props.svgStyle}>{overlayComponent}</svg>;
+  },
+
+  recalculateTransformAtScale: function (scale) {
+    var svg = React.findDOMNode(this.refs.svg_);
+    var svgRect = svg.getBoundingClientRect();
+    var newTransform = svg.createSVGMatrix()
+        .scale(1 / scale)
+        .translate(-svgRect.left, -svgRect.top);
+    this.screenSpaceToAppSpaceTransform = newTransform;
   }
 });
