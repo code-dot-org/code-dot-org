@@ -5,7 +5,8 @@ require 'cdo/slack'
 
 class HipChat
   # Initial backoff in seconds for Hipchat retries.
-  @@backoff = 1.0
+  # Immutable except for test.
+  @@initial_backoff = 1.0
 
   @@auth_token = CDO.hipchat_secret
   @@name = CDO.name[0..14]
@@ -71,7 +72,7 @@ class HipChat
     # If that failed, back off exponentially and retry, working
     # on a thread to avoid stalling the main thread.
     @@current_retry_thread_for_test = Thread.new do
-      backoff = @@backoff
+      backoff = @@initial_backoff
       retries = 1
       while !succeeded and retries <= MAX_RETRIES
         @@total_backoff_for_test += backoff
@@ -125,7 +126,7 @@ class HipChat
 
   # Set the initial exponential backoff interval, for testing only.
   def self.set_backoff_for_test(backoff)
-    @@backoff = backoff
+    @@initial_backoff = backoff
   end
 
 end
