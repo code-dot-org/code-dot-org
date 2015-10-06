@@ -2,8 +2,8 @@ var msg = require('./locale');
 var api = require('./apiJavascript.js');
 
 module.exports.blocks = [
-  {func: 'setCharacter', parent: api, category: '', params: ['"character1"'], dropdown: { 0: [ '"character1"', '"character2"' ] } },
-  {func: 'setCharacterSpeed', parent: api, category: '', params: ["8"], dropdown: { 0: [ "2", "3", "5", "8", "12" ] } },
+  {func: 'setBot', parent: api, category: '', params: ['"bot1"'], dropdown: { 0: [ '"bot1"', '"bot2"' ] } },
+  {func: 'setBotSpeed', parent: api, category: '', params: ["8"], dropdown: { 0: [ "2", "3", "5", "8", "12" ] } },
   {func: 'setBackground', parent: api, category: '', params: ['"background3"'], dropdown: { 0: [ '"background1"', '"background2"', '"background3"' ] } },
   {func: 'setWalls', parent: api, category: '', params: ['"blank"'], dropdown: { 0: [ '"blank"', '"circle"', '"circle2"', '"horizontal"', '"grid"', '"blobs"'] } },
   {func: 'moveRight', parent: api, category: '', },
@@ -27,7 +27,7 @@ module.exports.blocks = [
   {func: 'whenTouchWalkItem4', block: 'function whenTouchWalkItem4() {}', expansion: 'function whenTouchWalkItem4() {\n  __;\n}', category: '' },
 
   // Functions hidden from autocomplete - not used in hoc2015:
-  {func: 'setSprite', parent: api, category: '', params: ['0', '"character1"'], dropdown: { 1: [ '"character1"', '"character2"' ] } },
+  {func: 'setSprite', parent: api, category: '', params: ['0', '"bot1"'], dropdown: { 1: [ '"bot1"', '"bot2"' ] } },
   {func: 'setSpritePosition', parent: api, category: '', params: ["0", "7"], 'noAutocomplete': true },
   {func: 'setSpriteSpeed', parent: api, category: '', params: ["0", "8"], 'noAutocomplete': true },
   {func: 'setSpriteEmotion', parent: api, category: '', params: ["0", "1"], 'noAutocomplete': true },
