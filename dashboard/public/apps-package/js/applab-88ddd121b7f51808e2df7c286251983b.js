@@ -1270,7 +1270,10 @@ Applab.clearEventHandlersKillTickLoop = function() {
 };
 
 Applab.isRunning = function () {
-  return $('#resetButton').is(':visible');
+  // We are _always_ running in share mode.
+  // TODO: (bbuchanan) Needs a better condition. Tracked in bug:
+  //      https://www.pivotaltracker.com/story/show/105022102
+  return $('#resetButton').is(':visible') || studioApp.share;
 };
 
 /**
