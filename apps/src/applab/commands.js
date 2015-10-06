@@ -683,6 +683,8 @@ applabCommands.textInput = function (opts) {
   newInput.value = opts.text;
   newInput.id = opts.elementId;
   newInput.style.position = 'relative';
+  newInput.style.height = '30px';
+  newInput.style.width = '200px';
 
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };
