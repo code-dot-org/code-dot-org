@@ -24,6 +24,15 @@ Feature: App Lab Scenarios
     And element "#designModeButton" is hidden
     And element "#viewDataButton" is hidden
 
+  Scenario: Can click a button in shared app
+    Given I switch to text mode
+    And I press keys "button('testButton1', 'Click me'); onEvent('testButton1', 'click', function() { setText('testButton1', 'Clicked'); });" for element ".ace_text-input"
+    When I navigate to the shared version of my project
+    And I wait until element "#divApplab > .screen > button#testButton1" is visible
+    Then element "#testButton1" contains text "Click me"
+    When I press "testButton1"
+    Then element "#testButton1" contains text "Clicked"
+
   Scenario: Can type in textarea on share page
     Given I switch to design mode
     And I drag a TEXT_AREA into the app
