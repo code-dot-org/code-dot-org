@@ -212,8 +212,8 @@ div#visualizationResizeBar {
 #visualizationColumn.wireframeShare {
   background: url("#{$root}phone_wireframe.png") center center no-repeat;
   max-width: none !important;
-  width: 363px;
-  height: 631px;
+  width: 352px;
+  height: 612px;
   margin: 20px auto;
 
   #designToggleRow, #gameButtons {
@@ -221,8 +221,8 @@ div#visualizationResizeBar {
   }
 
   #visualization {
-    top: 78px;
-    left: 21px;
+    top: 68px;
+    left: 16px;
     border: 0;
   }
 }
