@@ -76,6 +76,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.movable_ = true;
   this.editable_ = true;
   this.userVisible_ = true;
+  this.nextConnectionDisabled_ = false;
   this.collapsed_ = false;
   this.dragging_ = false;
   // Used to hide function blocks when not in modal workspace. This property
@@ -1491,6 +1492,18 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
   if (opt_renderAfterVisible && userVisible && this.childBlocks_.length === 0) {
     // At leaf node blocks, renders up through the root
     this.svg_ && this.render();
+  }
+};
+
+/**
+ * Set whether this block should allow for succeeding connections.
+ * Called by Xml.domToBlock, primarily used as a passthrough to
+ * setNextStatement to disable any existing connections.
+ */
+Blockly.Block.prototype.setNextConnectionDisabled = function(disabled) {
+  this.nextConnectionDisabled_ = disabled;
+  if (this.nextConnectionDisabled_ === true) {
+    this.setNextStatement(false);
   }
 };
 
