@@ -20,6 +20,7 @@ var Item = function (options) {
   this.height = options.height || 50;
   this.width = options.width || 50;
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
+  this.renderScale = options.renderScale || 1
   this.displayDir = Direction.SOUTH;
 
   this.currentFrame_ = 0;
@@ -44,7 +45,6 @@ Item.prototype.getDirectionFrame = function() {
   // assign a new displayDir from state table; only one turn at a time.
 
   if (this.dir !== this.displayDir) {
-
     if (Studio.tickCount && (0 === Studio.tickCount % 2)) {
       this.displayDir = NextTurn[this.displayDir][this.dir];
     }
@@ -73,8 +73,8 @@ Item.prototype.createElement = function (parentElement) {
   var clipId = 'item_clippath_' + nextId;
   this.clipPath.setAttribute('id', clipId);
   var rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttribute('width', this.width);
-  rect.setAttribute('height', this.height);
+  rect.setAttribute('width', this.width * this.renderScale);
+  rect.setAttribute('height', this.height * this.renderScale);
   this.clipPath.appendChild(rect);
 
   parentElement.appendChild(this.clipPath);
@@ -83,8 +83,8 @@ Item.prototype.createElement = function (parentElement) {
   this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
     this.image);
   this.element.setAttribute('id', itemId);
-  this.element.setAttribute('height', this.height * this.frames);
-  this.element.setAttribute('width', this.width * numFacingAngles);
+  this.element.setAttribute('height', this.height * this.frames * this.renderScale);
+  this.element.setAttribute('width', this.width * numFacingAngles * this.renderScale);
   parentElement.appendChild(this.element);
 
   this.element.setAttribute('clip-path', 'url(#' + clipId + ')');
@@ -121,13 +121,12 @@ Item.prototype.display = function () {
   };
 
   var directionFrame = this.getDirectionFrame();
-
-  this.element.setAttribute('x', topLeft.x - this.width * directionFrame);
-  this.element.setAttribute('y', topLeft.y - this.height * this.currentFrame_);
+  this.element.setAttribute('x', topLeft.x - this.width * (directionFrame * this.renderScale + (this.renderScale-1)/2));
+  this.element.setAttribute('y', topLeft.y - this.height * (this.currentFrame_ * this.renderScale + (this.renderScale-1)));
 
   var clipRect = this.clipPath.childNodes[0];
-  clipRect.setAttribute('x', topLeft.x);
-  clipRect.setAttribute('y', topLeft.y);
+  clipRect.setAttribute('x', topLeft.x - this.width * (this.renderScale-1)/2);
+  clipRect.setAttribute('y', topLeft.y - this.height * (this.renderScale-1));
 };
 
 Item.prototype.getNextPosition = function () {

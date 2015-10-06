@@ -230,6 +230,15 @@ function loadHoc2015(skin, assetUrl) {
     'item_walk_item6': 1
   };
 
+  skin.specialItemScale = {
+    'item_walk_item1': 1,
+    'item_walk_item2': 1,
+    'item_walk_item3': 2,
+    'item_walk_item4': 2,
+    'item_walk_item5': 1.2,
+    'item_walk_item6': 0.6
+  };
+
   skin.explosion = skin.assetUrl('vanish.png');
   skin.explosionFrames = 17;
 
