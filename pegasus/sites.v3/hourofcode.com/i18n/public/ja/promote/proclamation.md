@@ -8,28 +8,28 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### 以下はコンピューターサイエンス週間の支援のための論説例です。州議員、国会議員の方々に利用してもらうことを意図しています。
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] - CSEdWeek（コンピュータサイエンス教育週間）が注目しているのはコンピュータサイエンスが果たす重要な役割です。それは、コンピュータサイエンスが私たちの社会を変えること、そしてどのようにコンピュータサイエンスがイノベーションを可能にし、経済的な機会を作り出すことができるかどうかです。
 
 [HOUSE OR SENATE RESOLUTION ###]
 
 [DATE]
 
-Whereas computing technology is an integral part of culture and is transforming how people interact with each other and the world around them;
+コンピュータ技術は文化において重要になり、そしてまた人々がお互いに対話する方法を変えつつあります。
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+コンピュータサイエンスは産業を変え、商業の新しい市場を作り出し、全ての科学分野における革新を後押しし、そしてすでに確立された経済分野の生産性を高めます。
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+コンピュータサイエンスは私たちの経済における情報技術を支えており、アメリカの経済生産高へ多大なる貢献をしています。
 
-Whereas the field of computer science is a foundational science for the digital age;
+コンピュータサイエンスの分野は、新しい時代の科学における基礎になります。
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+情報技術は、イノベーションの開発や研究を通して景気回復を助ける重要な役割をしています。
 
-Whereas the outlook for computer science jobs is bright with one in every two STEM jobs in the country in computing occupations;
+コンピュータサイエンスに関係する仕事の将来性はとても明るいです。 この国の科学・技術・エンジニアリング・数学に関する仕事の 2つに1つはコンピュータに関する仕事です。
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+学生に高レベルのコンピュータサイエンスの活動に参加するチャンスを提供する事はまた、学生にとってクリティカルシンキングのスキルを手にいれる豊富な機会なのです。そしてそのスキルは生活を通して使う事ができるでしょう。
 
 Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
