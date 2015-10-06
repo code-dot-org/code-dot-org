@@ -4,7 +4,7 @@ title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
 
 * * *
 
-<% फेसबुक = {:u=>"http://#{request.host}/us"}
+<% facebook = {:u=>"http://#{request.host}/us"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).लाई समावेश गर्नुहुन्छ? '#HourOfCode' %>
 
