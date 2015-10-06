@@ -328,8 +328,13 @@ StudioApp.prototype.init = function(config) {
   }
 
   var promptDiv = document.getElementById('prompt');
+  var prompt2Div = document.getElementById('prompt2');
   if (config.level.instructions) {
     dom.setText(promptDiv, config.level.instructions);
+  }
+  if (config.level.instructions2) {
+    dom.setText(prompt2Div, config.level.instructions2);
+    $(prompt2Div).show();
   }
 
   if (config.level.instructions || config.level.aniGifURL) {
@@ -800,6 +805,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
     puzzleTitle: puzzleTitle,
     instructions: level.instructions,
+    instructions2: level.instructions2,
     renderedMarkdown: renderedMarkdown,
     aniGifURL: level.aniGifURL
   });

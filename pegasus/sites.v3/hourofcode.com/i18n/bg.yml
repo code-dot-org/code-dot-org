@@ -162,6 +162,7 @@ bg:
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
   how_to_nav_organizations: For organizations
+  how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
   prizes_nav_title: Награди
   prizes_nav_home: All prizes
@@ -211,7 +212,7 @@ bg:
   front_join_us_support: Подкрепете го
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: For more information, please visit code.org
-  front_join_us_n_students_served: '# students served'
+  front_join_us_n_students_served: '# served'
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Вашето име
   signup_email_label: Вашият имейл
@@ -357,6 +358,7 @@ bg:
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: '"Как да" Пътеводител за държавни служители'
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials

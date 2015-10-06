@@ -20,7 +20,7 @@ social:
 'twitter:player:height': 1080
 ---
 
-<% facebook = {:u=>"http://#{request.host}/al"}
+<% facebook = {:u=>"http://#{request.host}/us"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
 twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#OraEKodimit' %>

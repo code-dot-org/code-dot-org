@@ -461,3 +461,12 @@ end
 Then /^there is no horizontal scrollbar$/ do
   @browser.execute_script('return document.documentElement.scrollWidth <= document.documentElement.clientWidth').should eq true
 end
+
+# Place files in dashboard/test/fixtures
+# Note: Safari webdriver does not support file uploads (https://code.google.com/p/selenium/issues/detail?id=4220)
+Then /^I upload the file named "(.*?)"$/ do |filename|
+  filename = File.expand_path(filename, '../fixtures')
+  @browser.execute_script('$("input[type=file]").show()')
+  element = @browser.find_element :css, 'input[type=file]'
+  element.send_keys filename
+end

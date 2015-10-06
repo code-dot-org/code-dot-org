@@ -1714,6 +1714,10 @@ function getDefaultBackgroundName() {
           (level.background || skin.defaultBackground);
 }
 
+function getDefaultWallsName() {
+  return level.walls || skin.defaultWalls;
+}
+
 /**
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
@@ -1820,6 +1824,15 @@ Studio.reset = function(first) {
   Studio.itemActivity = {};
   // Create Items that are specified on the map:
   Studio.createLevelItems(svg);
+
+  // Now that sprites are in place, we can set up walls, which might move
+  // sprites around.
+  Studio.setWalls({value: getDefaultWallsName()});
+
+  // Setting up walls might have moved the sprites, so draw them once more.
+  for (i = 0; i < Studio.spriteCount; i++) {
+    Studio.displaySprite(i);
+  }
 
   var goalAsset = skin.goal;
   if (level.goalOverride && level.goalOverride.goalAnimation) {
@@ -3133,7 +3146,8 @@ Studio.addItemsToScene = function (opts) {
       speed: Studio.itemSpeed[opts.className],
       activity: utils.valueOr(Studio.itemActivity[opts.className], "patrol"),
       width: 100,
-      height: 100
+      height: 100,
+      renderScale: skin.specialItemScale[opts.className] || 1
     };
 
     var item = new Item(itemOptions);
@@ -3357,7 +3371,13 @@ Studio.setWalls = function (opts) {
  */
 Studio.fixSpriteLocation = function () {
   if (level.wallMapCollisions && level.blockMovingIntoWalls) {
+
     var spriteIndex = 0;
+
+    if (Studio.sprite.length <= spriteIndex) {
+      return;
+    }
+
     var sprite = Studio.sprite[spriteIndex];
     var xPos = getNextPosition(spriteIndex, false, false);
     var yPos = getNextPosition(spriteIndex, true, false);
