@@ -99,9 +99,7 @@ namespace :seed do
 
   # Generate the database entry from the custom levels json file
   task custom_levels: :environment do
-    if !Rails.env.levelbuilder? || ENV["FORCE_CUSTOM_LEVELS"]
-      LevelLoader.load_custom_levels
-    end
+    LevelLoader.load_custom_levels
   end
 
   task callouts: :environment do

@@ -240,6 +240,6 @@ class Level < ActiveRecord::Base
   private
 
   def write_to_file?
-    custom? && !is_a?(DSLDefined) && Rails.env.levelbuilder? && !ENV['FORCE_CUSTOM_LEVELS']
+    custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
   end
 end
