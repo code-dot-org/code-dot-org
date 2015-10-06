@@ -1566,3 +1566,552 @@ levels.hoc2015_2 = {
     "moveSouth": null,
   },
 };
+
+
+/* ******* Hour of Code 2015 ********/
+
+
+levels.js_hoc2015_move_right = {
+  "editCode": true,
+  "background": "background3",
+  "codeFunctions": {
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null
+  },
+  "startBlocks": "moveEast();",
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": true,
+  "itemGridAlignedMovement": true,
+  "slowJsExecutionFactor": 10,
+  "removeItemsWhenActorCollides": true,
+  "markerHeight": 50,
+  "markerWidth": 50,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 16, 0, 1, 4,0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "instructions": "Help me program the character to get the item and bring it to the destination. Stack a couple moveEast(); commands and then hit Run to make him go.",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  },
+};
+
+levels.js_hoc2015_move_two_items = {
+  "editCode": true,
+  "skin": "hoc2015",
+  "background": "background3",
+  "codeFunctions": {
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null
+  },
+  //"startBlocks": "moveEast();\nmoveNorth();",
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": true,
+  "itemGridAlignedMovement": true,
+  "slowJsExecutionFactor": 10,
+  "removeItemsWhenActorCollides": true,
+  "markerHeight": 50,
+  "markerWidth": 50,
+  "delayCompletion": 2000,
+  "floating_score": true,
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 0, 0, 0, 4,0, 0], [0, 4, 0, 4, 0, 4, 0, 0], [0, 4, 1, 16, 0, 4, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "instructions": "We need the items. Help me get them all!"
+};
+
+levels.js_hoc2015_move_item_destination = {
+  "editCode": true,
+  "background": "background3",
+  "codeFunctions": {
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null
+  },
+  "startBlocks": "moveEast();\nmoveEast();",
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": true,
+  "itemGridAlignedMovement": true,
+  "slowJsExecutionFactor": 10,
+  "removeItemsWhenActorCollides": true,
+  "markerHeight": 50,
+  "markerWidth": 50,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 4, 4, 4, 4, 0, 0], [0, 4,  4, 4, 4, 4, 4, 0], [0, 4,  0, 4, 4,256, 4, 0], [0, 4,1,16, 0, 0, 4, 0], [0, 4, 4, 4,  4, 4, 4, 0], [0, 0, 0, 0,  0, 0, 0, 0], [0, 0, 0, 0,  0, 0, 0, 0]],
+  "instructions": "I see another item behind that obstacle. Can you bring it back to the destination?",
+};
+
+levels.js_hoc2015_move_item_destination_2 = {
+ "editCode": true,
+  "background": "background3",
+  "textModeAtStart": true,
+  "codeFunctions": {
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null
+  },
+  "startBlocks": "moveSouth();",
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": true,
+  "itemGridAlignedMovement": true,
+  "slowJsExecutionFactor": 10,
+  "removeItemsWhenActorCollides": true,
+  "markerHeight": 50,
+  "markerWidth": 50,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 0, 0,  4, 0, 0], [0, 4,  4, 4, 4,  0, 4, 0], [0, 4,  4,16, 0,  0, 4, 0], [0, 4,  0, 0, 4,  4, 4, 0], [0, 4,  1, 256, 0,  4, 4, 0], [0, 4,  4, 0, 4,  0, 0, 0], [0, 0,  4, 4, 4,  0, 0, 0]],
+  "embed": "false",
+  "instructions": "Drag the code blocks into the workspace to help the character reach the destination.",
+};
+
+levels.js_hoc2015_move_item_destination_3 = {
+  "editCode": true,
+  "skin": "hoc2015",
+  "background": "background3",
+  "textModeAtStart": true,
+  "codeFunctions": {
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null
+  },
+  "startBlocks": "moveEast();",
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": true,
+  "itemGridAlignedMovement": true,
+  "slowJsExecutionFactor": 10,
+  "removeItemsWhenActorCollides": true,
+  "markerHeight": 50,
+  "markerWidth": 50,
+  "delayCompletion": 2000,
+  "floating_score": true,  
+  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  4, 4, 4,  4, 4, 0], [0, 0, 4,  0, 0, 1,  4, 0], [0, 0,  4,0, 256,  4, 4, 0], [0, 4,  0, 16, 0,  0, 4, 0], [0, 4, 4, 4, 4,  0, 4, 0], [0, 0,  0, 0, 4,  4, 4, 0], [0, 0,  0, 0, 0, 0, 0, 0]],
+  "embed": "false",
+  "instructions": "Try typing the commands to get the item to our destination. Don’t forget to end with ();",
+};
+
+
+levels.js_hoc2015_move_cross = {
+  "editCode": true,
+  "skin": "hoc2015",
+  "background": "background2",
+  "textModeAtStart": true,
+  "codeFunctions": {
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null
+  },
+  "startBlocks": "moveNorth();",
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": true,
+  "itemGridAlignedMovement": true,
+  "slowJsExecutionFactor": 10,
+  "removeItemsWhenActorCollides": true,
+  "markerHeight": 50,
+  "markerWidth": 50,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 4, 0, 0, 0, 0], [0, 0, 4,  1, 4, 0, 0, 0], [0, 4, 256, 0, 256, 4, 0, 0], [0, 0,  4, 16, 4,  0, 0, 0], [0, 0, 0, 4, 0, 0, 0, 0], [0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "embed": "false",
+  "instructions": "Type or drag the blocks to get both items to the destination.",
+};
+
+
+/* ** level 7 ** */
+
+levels.js_hoc2015_event_two_items = {
+  "editCode": true,
+  "background": "background2",
+  "softButtons": ["downButton", "upButton"],
+  "codeFunctions": {
+    "moveNorth": null,
+    "moveSouth": null,
+    "whenUp": null,
+    "whenDown": null
+  },
+  //"startBlocks": "function whenUp() {\n  __;\n}\nfunction whenDown() {\n  __;\n}",
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": false,
+  "itemGridAlignedMovement": false,
+  "removeItemsWhenActorCollides": true,
+  "markerHeight": 50,
+  "markerWidth": 50,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
+  "pinWorkspaceToBottom": "true",
+  "embed": "false",
+  "instructions": "\"Steer the bot to reach the two goals.\"",
+  "instructions2": "Drag the move commands into the correct events.  Then, steer the bot to reach the goals.",
+};
+
+levels.js_hoc2015_event_four_items = {
+  "editCode": true,
+  "skin": "hoc2015",
+  "background": "background2",
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null,
+    "whenLeft": null,
+    "whenRight": null,
+    "whenUp": null,
+    "whenDown": null
+  },
+  "startBlocks": "function whenLeft() {\n  __;\n}\nfunction whenRight() {\n  __;\n}\nfunction whenUp() {\n  __;\n}\nfunction whenDown() {\n  __;\n}",
+
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": false,
+  "itemGridAlignedMovement": false,
+  "removeItemsWhenActorCollides": true,
+  "markerHeight": 50,
+  "markerWidth": 50,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 16, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
+
+  "embed": "false",
+  "instructions": "\"Steer the bot to reach the four goals.\"",
+  "instructions2": "Make the bot walk in all directions so that he can reach the four goals.",
+};
+
+
+levels.js_hoc2015_event_choose_character =
+{
+  "avatarList": ["character1"],
+  "editCode": true,
+  "background": "background2",
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "setCharacter": null,
+    "setBackground": null,
+    "setWalls": null,
+    "playSound": null,
+
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null,
+    "whenLeft": null,
+    "whenRight": null,
+    "whenUp": null,
+    "whenDown": null
+  },
+  "startBlocks": "function whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}",
+
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": false,
+  "itemGridAlignedMovement": true,
+  "removeItemsWhenActorCollides": true,
+  "markerHeight": 50,
+  "markerWidth": 50,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "edgeCollisions": "true",
+
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+
+  "instructions": "\"I will now choose who to direct, and where they do it.\"",
+  "instructions2": "Customize your game by choosing the bot and the background.",
+};
+
+
+levels.js_hoc2015_event_add_items = {
+  "editCode": true,
+  "skin": "hoc2015",
+  "background": "background2",
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "addItemsToScene": null,
+
+    "setCharacter": null,
+    "setBackground": null,
+    "setWalls": null,
+    "playSound": null,
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null,
+    "whenLeft": null,
+    "whenRight": null,
+    "whenUp": null,
+    "whenDown": null
+  },
+  "startBlocks": "function whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}",
+
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": false,
+  "itemGridAlignedMovement": true,
+  "removeItemsWhenActorCollides": true,
+  "markerHeight": 50,
+  "markerWidth": 50,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "embed": "false",
+  "instructions": "\"It looks like there are other characters arriving.\"",
+  "instructions2": "Use the addItemsToScene command to add new characters to the game.", 
+};
+
+
+levels.js_hoc2015_event_item_behavior = {
+  "editCode": true,
+  "skin": "hoc2015",
+  "background": "background1",
+  "textModeAtStart": true,
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "setItemActivity": null,
+    "setItemSpeed": null,
+
+    "addItemsToScene": null,
+    "setCharacter": null,
+    "setBackground": null,
+    "setWalls": null,
+    "playSound": null,
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null,
+    "whenLeft": null,
+    "whenRight": null,
+    "whenUp": null,
+    "whenDown": null
+  },
+  "startBlocks": "addItemsToScene('item_walk_item2', 1);\n\nfunction whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}",
+
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": false,
+  "itemGridAlignedMovement": true,
+  "removeItemsWhenActorCollides": true,
+  "markerHeight": 50,
+  "markerWidth": 50,
+  "delayCompletion": 2000,
+  "floatingFcore": true,
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "embed": "false",
+  "instructions": "\"Now these new characters are starting to do more.\"",
+  "instructions2": "Add some characters, and set their behavior and speed.",
+};
+
+levels.js_hoc2015_event_touch_items = {
+  "editCode": true,
+  "background": "background1",
+  "textModeAtStart": true,
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "whenTouchItem": null,
+
+    "setItemActivity": null,
+    "setItemSpeed": null,
+    "addItemsToScene": null,
+    "setCharacter": null,
+    "setBackground": null,
+    "setWalls": null,
+    "playSound": null,
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null,
+    "whenLeft": null,
+    "whenRight": null,
+    "whenUp": null,
+    "whenDown": null
+  },
+  "startBlocks": "addItemsToScene('item_walk_item4', 3);\n\nfunction whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}",
+
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": false,
+  "itemGridAlignedMovement": true,
+  "removeItemsWhenActorCollides": true,
+  "markerHeight": 50,
+  "markerWidth": 50,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+
+  "embed": "false",
+  "instructions": "\"Now it's time to catch some characters.\"",
+  "instructions2": "Use setItemActivity to make the items move around, and whenTouchItem to do something when you touch them. Then, capture them!",
+};
+
+levels.js_hoc2015_event_points = {
+  "editCode": true,
+  "skin": "hoc2015",
+  "background": "background1",
+  "textModeAtStart": true,
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "changeScore": null,
+
+    "whenTouchItem": null,
+    "setItemActivity": null,
+    "setItemSpeed": null,
+    "addItemsToScene": null,
+    "setCharacter": null,
+    "setBackground": null,
+    "setWalls": null,
+    "playSound": null,
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null,
+    "whenLeft": null,
+    "whenRight": null,
+    "whenUp": null,
+    "whenDown": null
+  },
+  "startBlocks": "addItemsToScene('item_walk_item3', 3);\nfunction whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}\nfunction whenTouchItem() {\n  \n}",
+
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": false,
+  "itemGridAlignedMovement": true,
+  "removeItemsWhenActorCollides": true,
+  "markerHeight": 50,
+  "markerWidth": 50,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+
+  "embed": "false",
+  "instructions": "\"Somebody should be rewarded for reaching those characters.\"",
+  "instructions2": "Let’s add points. Give yourself some points when you touch an item. Can you score 10 points?",
+};
+
+levels.js_hoc2015_event_random_items = {
+  "editCode": true,
+  "skin": "hoc2015",
+  "background": "background1",
+  "textModeAtStart": true,
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "setSpriteSpeed": null,
+
+    "changeScore": null,
+    "whenTouchItem": null,
+    "setItemActivity": null,
+    "setItemSpeed": null,
+    "addItemsToScene": null,
+    "setCharacter": null,
+    "setBackground": null,
+    "setWalls": null,
+    "playSound": null,
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null,
+    "whenLeft": null,
+    "whenRight": null,
+    "whenUp": null,
+    "whenDown": null
+  },
+  "startBlocks": "addItemsToScene('item_walk_item3', 3);\nfunction whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}\nfunction whenTouchItem() {\n  changeScore(1);\n  \n}",
+
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": false,
+  "itemGridAlignedMovement": true,
+  "removeItemsWhenActorCollides": true,
+  "markerHeight": 50,
+  "markerWidth": 50,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "embed": "false",
+  "instructions": "\"Surprising things can happen in this world.\"",
+  "instructions2": "We can change character behavior at any time. Change the characters to a new random movement every time you touch one.",
+};
+
+levels.js_hoc2015_event_free = {
+  "editCode": true,
+  "skin": "hoc2015",
+  "background": "background1",
+  "textModeAtStart": true,
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "setCharacter": { "category": "Commands" },
+    "setBackground": { "category": "Commands" },
+    "setCharacterSpeed": { "category": "Commands" },
+    "setWalls": { "category": "Commands" },
+    "playSound": { "category": "Commands" },
+    "addItemsToScene": { "category": "Commands" },
+    "setItemActivity": { "category": "Commands" },
+    "setItemSpeed": { "category": "Commands" },
+    "changeScore": { "category": "Commands" },
+
+    "moveEast": { "category": "Commands" },
+    "moveWest": { "category": "Commands" },
+    "moveNorth": { "category": "Commands" },
+    "moveSouth": { "category": "Commands" },
+    "whenLeft": { "category": "Events" },
+    "whenRight": { "category": "Events" },
+    "whenUp": { "category": "Events" },
+    "whenDown": { "category": "Events" },
+    "whenTouchWall": { "category": "Events" },
+    "whenTouchWalkItem1": { "category": "Events" },
+    "whenTouchWalkItem2": { "category": "Events" },
+    "whenTouchWalkItem3": { "category": "Events" },
+    "whenTouchWalkItem4": { "category": "Events" },
+    "whenTouchItem": { "category": "Events" }
+  },
+  "startBlocks": "function whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}",
+
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": false,
+  "itemGridAlignedMovement": true,
+  "removeItemsWhenActorCollides": true,
+  "markerHeight": 50,
+  "markerWidth": 50,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "embed": "false",
+  "instructions": "Now you can make and share anything you like.",
+};
+
+
