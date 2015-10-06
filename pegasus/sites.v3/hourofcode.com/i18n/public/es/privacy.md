@@ -1,6 +1,6 @@
 ---
 
-titulo: Política de Privacidad
+title: Política de Privacidad
 
 ---
 
