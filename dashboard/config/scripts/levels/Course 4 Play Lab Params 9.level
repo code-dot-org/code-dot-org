@@ -42,7 +42,7 @@
     "timeout_after_when_run": "false",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "maze_data": null
+    "min_workspace_height": "1500"
   }
 }]]></config>
   <blocks>
@@ -57,6 +57,34 @@
                   <title name="NUM">0</title>
                 </block>
               </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">anything</title>
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="score_points"/>
+              <next>
+                <block type="studio_playSound">
+                  <title name="SOUND">losepoint</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">anything</title>
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="score_points"/>
+              <next>
+                <block type="studio_playSound">
+                  <title name="SOUND">winpoint2</title>
+                </block>
+              </next>
             </block>
           </next>
         </block>
@@ -86,24 +114,6 @@
             </block>
           </statement>
         </block>
-        <block type="studio_whenSpriteCollided">
-          <title name="SPRITE1">0</title>
-          <title name="SPRITE2">anything</title>
-          <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="score_points"/>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenSpriteCollided">
-          <title name="SPRITE1">1</title>
-          <title name="SPRITE2">anything</title>
-          <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="score_points"/>
-            </block>
-          </next>
-        </block>
         <block type="studio_whenArrow" uservisible="false">
           <title name="VALUE">up</title>
           <next>
@@ -125,10 +135,15 @@
         <block type="studio_whenArrow" uservisible="false">
           <title name="VALUE">right</title>
           <next>
-            <block type="studio_throw" uservisible="false">
-              <title name="SPRITE">0</title>
-              <title name="VALUE">"purple_hearts"</title>
-              <title name="DIR">2</title>
+            <block type="studio_playSound" uservisible="false">
+              <title name="SOUND">wood</title>
+              <next>
+                <block type="studio_throw" uservisible="false">
+                  <title name="SPRITE">0</title>
+                  <title name="VALUE">"purple_hearts"</title>
+                  <title name="DIR">2</title>
+                </block>
+              </next>
             </block>
           </next>
         </block>
@@ -176,24 +191,6 @@
         </block>
         <block type="studio_repeatForever" uservisible="false">
           <statement name="DO">
-            <block type="studio_throw" uservisible="false">
-              <title name="SPRITE">1</title>
-              <title name="VALUE">"yellow_hearts"</title>
-              <title name="DIR">8</title>
-              <next>
-                <block type="studio_waitParams" inline="true" uservisible="false">
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="studio_repeatForever" uservisible="false">
-          <statement name="DO">
             <block type="studio_setScoreText" inline="true" uservisible="false">
               <value name="TEXT">
                 <block type="variables_get" uservisible="false">
@@ -207,7 +204,7 @@
           <next>
             <block type="studio_waitParams" inline="true" uservisible="false">
               <value name="VALUE">
-                <block type="math_number">
+                <block type="math_number" uservisible="false">
                   <title name="NUM">0.25</title>
                 </block>
               </value>
@@ -230,6 +227,29 @@
               </next>
             </block>
           </next>
+        </block>
+        <block type="studio_repeatForever" uservisible="false">
+          <statement name="DO">
+            <block type="studio_playSound" uservisible="false">
+              <title name="SOUND">slap</title>
+              <next>
+                <block type="studio_throw" uservisible="false">
+                  <title name="SPRITE">1</title>
+                  <title name="VALUE">"yellow_hearts"</title>
+                  <title name="DIR">8</title>
+                  <next>
+                    <block type="studio_waitParams" inline="true" uservisible="false">
+                      <value name="VALUE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">1</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
         </block>
       </xml>
     </start_blocks>
