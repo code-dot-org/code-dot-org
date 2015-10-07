@@ -2,19 +2,18 @@ dependencies:
   cache_directories:
     - "apps/node_modules"
   override:
-    - sudo apt-get install libicu-dev # Required for phantomjs 2.0
+    - sudo apt-get install libicu-dev
     - npm install:
-      pwd:
-        apps
+        pwd:
+            apps
     - bash build_with_core.sh:
-      pwd:
-        apps
+        pwd:
+            apps
 database:
-  override: # required or Circle tries to run rake db:create
+    override:
     - echo "NO DB"
 test:
-  override:
-    - grunt test:
-      pwd:
-        apps
-
+    override:
+        - grunt test:
+            pwd:
+                apps
