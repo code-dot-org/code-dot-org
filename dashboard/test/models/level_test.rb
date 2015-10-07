@@ -292,6 +292,24 @@ EOS
     update_maze
   end
 
+  def create_maze
+    maze = create(:maze)
+    assert maze
+  end
+
+  test 'creating maze level creates it in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).once
+
+    create_maze
+  end
+
+  test 'creating maze level does not write file in non levelbuilder mode' do
+    File.expects(:write).never
+
+    create_maze
+  end
+
   test 'delete removed level properties on import' do
     level = Level.create(name: 'test delete properties', instructions: 'test', type: 'Studio', embed: true)
 
