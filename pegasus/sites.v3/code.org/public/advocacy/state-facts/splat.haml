@@ -12,6 +12,8 @@ theme: pdf
 %>
 ---
 
+// Generates custom state fact sheets based on the data in cdo-state-promote Google Sheet.
+
 - splat = request.splat_path_info[1..-1].split("/")
 - state = splat.last
 - state_param = state.upcase
@@ -187,7 +189,7 @@ theme: pdf
 
   %center
     %h3 “Computer Science is a liberal art: it’s something that everybody should be exposed to and everyone should have a mastery of to some extent.” 
-    %p —Steve Jobs
+    %p — Steve Jobs
 
   %div
     %p
@@ -307,7 +309,7 @@ theme: pdf
       = succeed "." do
         %a{href: "https://twitter.com/codeorg"} Twitter
     %div
-      %img{src: "/images/logo_2x.png", style: "width: 100px; float: left; padding-right: 10px; padding-bottom: 20px;"}
+      %img{src: "/images/logo_2x.png", style: "width: 100px; float: left; padding-right: 20px; padding-bottom: 20px;"}
       %p Code.org, a public 501c3 nonprofit, also organizes Computer Science Education Week (CSEdWeek), which is the awareness-building activity of the computer science education community. Code.org’s corporate sponsors include Microsoft, Google, Infosys, Amazon, Disney, Facebook, Salesforce, Expedia, Juniper Networks, Workday, Bestbuy, JP Morgan Chase, and Symantec. A list of all supporters can be found at code.org/about/donors.
     %p{style: "clear: both;"} Data is from the Conference Board, the Bureau of Labor Statistics, the College Board, the National Science Foundation, the National Center for Education Statistics, and the Gallup research study Searching for Computer Science: Access and Barriers in K-12 Education. 
 
