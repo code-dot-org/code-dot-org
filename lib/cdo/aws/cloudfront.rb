@@ -87,12 +87,10 @@ module AWS
       config = HTTP_CACHE[app]
       cloudfront = CONFIG[app]
       behaviors = config[:behaviors].map do |behavior|
-        if behavior[:path].is_a? Array
-          behavior[:path].map do |path|
-            cache_behavior behavior, path
-          end
-        else
-          cache_behavior behavior, behavior[:path]
+        paths = behavior[:path]
+        paths = [paths] unless paths.is_a? Array
+        paths.map do |path|
+          cache_behavior behavior, path
         end
       end.flatten
 
