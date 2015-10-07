@@ -3,9 +3,12 @@ module.exports.rgb2hex = function (rgb) {
   if (rgb === '') {
     return rgb;
   }
-  rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+  var parsed = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+  if (parsed === null) {
+    return rgb;
+  }
   function hex(x) {
     return ("0" + parseInt(x).toString(16)).slice(-2);
   }
-  return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+  return "#" + hex(parsed[1]) + hex(parsed[2]) + hex(parsed[3]);
 };

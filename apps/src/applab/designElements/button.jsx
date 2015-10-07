@@ -136,7 +136,7 @@ module.exports = {
     element.appendChild(document.createTextNode('Button'));
     element.style.padding = '0px';
     element.style.margin = '0px';
-    element.style.height = '40px';
+    element.style.height = '30px';
     element.style.width = '80px';
     element.style.fontSize = '14px';
     element.style.color = '#fff';

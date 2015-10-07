@@ -29,17 +29,17 @@ exports.setSpriteSpeed = function (spriteIndex, value) {
   });
 };
 
-// setCharacter and setCharacterSpeed are wrappers to setSprite and
+// setBot and setBotSpeed are wrappers to setSprite and
 // setSpriteSpeed that always pass 0 for the spriteIndex (used by hoc2015)
 
-exports.setCharacter = function (value) {
+exports.setBot = function (value) {
   Studio.queueCmd(null, 'setSprite', {
     'spriteIndex': 0,
     'value': value
   });
 };
 
-exports.setCharacterSpeed = function (value) {
+exports.setBotSpeed = function (value) {
   Studio.queueCmd(null, 'setSpriteSpeed', {
     'spriteIndex': 0,
     'value': value
@@ -100,20 +100,20 @@ exports.move = function(spriteIndex, dir) {
   });
 };
 
-exports.moveEast = function() {
-  Studio.queueCmd(null, 'moveEast');
+exports.moveRight = function() {
+  Studio.queueCmd(null, 'moveRight');
 };
 
-exports.moveWest = function() {
-  Studio.queueCmd(null, 'moveWest');
+exports.moveLeft = function() {
+  Studio.queueCmd(null, 'moveLeft');
 };
 
-exports.moveNorth = function() {
-  Studio.queueCmd(null, 'moveNorth');
+exports.moveUp = function() {
+  Studio.queueCmd(null, 'moveUp');
 };
 
-exports.moveSouth = function() {
-  Studio.queueCmd(null, 'moveSouth');
+exports.moveDown = function() {
+  Studio.queueCmd(null, 'moveDown');
 };
 
 exports.changeScore = function(value) {
