@@ -2919,6 +2919,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setSpriteSpeed(cmd.opts);
       break;
+    case 'setBotSpeed':
+      studioApp.highlight(cmd.id);
+      Studio.setBotSpeed(cmd.opts);
+      break;
     case 'setSpriteSize':
       studioApp.highlight(cmd.id);
       Studio.setSpriteSize(cmd.opts);
@@ -3229,8 +3233,23 @@ Studio.setSpriteEmotion = function (opts) {
 };
 
 Studio.setSpriteSpeed = function (opts) {
-  var speed = Math.min(Math.max(opts.value, 2), 12);
+  var speed = Math.min(Math.max(opts.value, constants.SpriteSpeed.SLOW),
+      constants.SpriteSpeed.VERY_FAST);
   Studio.sprite[opts.spriteIndex].speed = speed;
+};
+
+var BOT_SPEEDS = {
+  slow: constants.SpriteSpeed.SLOW,
+  normal: constants.SpriteSpeed.NORMAL,
+  fast: constants.SpriteSpeed.VERY_FAST
+};
+
+Studio.setBotSpeed = function (opts) {
+  var speedVal = BOT_SPEEDS[opts.value];
+  if (speedVal) {
+    opts.value = speedVal;
+    Studio.setSpriteSpeed(opts);
+  }
 };
 
 Studio.setSpriteSize = function (opts) {
