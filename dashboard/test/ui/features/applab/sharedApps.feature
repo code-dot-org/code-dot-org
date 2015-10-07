@@ -24,6 +24,8 @@ Feature: App Lab Scenarios
     And element "#designModeButton" is hidden
     And element "#viewDataButton" is hidden
 
+  # bbuchanan: Working to fix this test in Safari
+  @no_safari
   Scenario: Can type in textarea on share page
     Given I switch to design mode
     And I drag a textarea into the app
