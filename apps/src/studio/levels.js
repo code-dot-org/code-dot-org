@@ -1573,7 +1573,7 @@ levels.hoc2015_2 = {
 
 levels.js_hoc2015_move_right = {
   "editCode": true,
-  "background": "background1",
+  "background": "forest",
   "codeFunctions": {
     "moveRight": null,
     "moveLeft": null,
@@ -1603,7 +1603,7 @@ levels.js_hoc2015_move_right = {
 
 levels.js_hoc2015_move_two_items = {
   "editCode": true,
-  "background": "background1",
+  "background": "forest",
   "codeFunctions": {
     "moveRight": null,
     "moveLeft": null,
@@ -1633,7 +1633,7 @@ levels.js_hoc2015_move_two_items = {
 
 levels.js_hoc2015_move_item_destination = {
   "editCode": true,
-  "background": "background1",
+  "background": "forest",
   "codeFunctions": {
     "moveRight": null,
     "moveLeft": null,
@@ -1663,7 +1663,7 @@ levels.js_hoc2015_move_item_destination = {
 
 levels.js_hoc2015_move_item_destination_2 = {
  "editCode": true,
-  "background": "background2",
+  "background": "snow",
   "textModeAtStart": true,
   "codeFunctions": {
     "moveRight": null,
@@ -1690,7 +1690,7 @@ levels.js_hoc2015_move_item_destination_2 = {
 
 levels.js_hoc2015_move_item_destination_3 = {
   "editCode": true,
-  "background": "background2",
+  "background": "snow",
   "textModeAtStart": true,
   "codeFunctions": {
     "moveRight": null,
@@ -1718,7 +1718,7 @@ levels.js_hoc2015_move_item_destination_3 = {
 
 levels.js_hoc2015_move_cross = {
   "editCode": true,
-  "background": "background2",
+  "background": "snow",
   "textModeAtStart": true,
   "codeFunctions": {
     "moveRight": null,
@@ -1748,7 +1748,7 @@ levels.js_hoc2015_move_cross = {
 
 levels.js_hoc2015_event_two_items = {
   "editCode": true,
-  "background": "background1",
+  "background": "forest",
   "wallMap": "blank",
   "softButtons": ["downButton", "upButton"],
   "codeFunctions": {
@@ -1783,7 +1783,7 @@ levels.js_hoc2015_event_two_items = {
 levels.js_hoc2015_event_four_items = {
   "editCode": true,
   "textModeAtStart": true,
-  "background": "background1",
+  "background": "forest",
   "wallMap": "blobs",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
@@ -1826,7 +1826,7 @@ levels.js_hoc2015_event_choose_character =
 {
   "avatarList": ["bot1"],
   "editCode": true,
-  "background": "background1",
+  "background": "forest",
   "wallMap": "blank",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
@@ -1861,7 +1861,7 @@ levels.js_hoc2015_event_choose_character =
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
 
   "instructions": "\"Time to visit another planet.\"",
-  "instructions2": "Use the setBackgound(); command to change the background and change your bot to Bot2.",
+  "instructions2": "Use the setBackground(); command to change the background and change your bot to Bot2.",
 };
 
 
@@ -1869,7 +1869,7 @@ levels.js_hoc2015_event_add_items = {
   "editCode": true,
   "textModeAtStart": true,
   "protagonistSpriteIndex": 0,
-  "background": "background2",
+  "background": "snow",
   "wallMap": "horizontal",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
@@ -1911,7 +1911,7 @@ levels.js_hoc2015_event_add_items = {
 levels.js_hoc2015_event_item_behavior = {
   "editCode": true,
   "protagonistSpriteIndex": 0,
-  "background": "background2",
+  "background": "snow",
   "wallMap": "blobs",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
@@ -1937,7 +1937,7 @@ levels.js_hoc2015_event_item_behavior = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addCharacter('item_walk_item2', 1);\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": "addCharacter('pig');\naddCharacter('pig');\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1952,14 +1952,14 @@ levels.js_hoc2015_event_item_behavior = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"It’s up to you Bot2.\"",
-  "instructions2": "Make the Creature2s flee by using \"setToFlee\" and then get them all."
+  "instructions2": "Make the pigs flee by using \"setToFlee\" and then get them all."
 };
 
 levels.js_hoc2015_event_touch_items = {
   "editCode": true,
   "textModeAtStart": true,
   "protagonistSpriteIndex": 0,
-  "background": "background2",
+  "background": "snow",
   "wallMap": "circle",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
@@ -1986,7 +1986,7 @@ levels.js_hoc2015_event_touch_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addCharacter('item_walk_item4', 3);\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": "addCharacter('pig');\naddCharacter('bird');\naddCharacter('spider');\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2009,7 +2009,7 @@ levels.js_hoc2015_event_touch_items = {
 levels.js_hoc2015_event_points = {
   "editCode": true,
   "textModeAtStart": true,
-  "background": "background3",
+  "background": "ship",
   "wallMap": "horizontal",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
@@ -2037,7 +2037,7 @@ levels.js_hoc2015_event_points = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addCharacter('item_walk_item3', 3);\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchCharacter() {\n  \n}",
+  "startBlocks": "addCharacter('man');\naddCharacter('pilot');\naddCharacter('roo');\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchCharacter() {\n  \n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2060,11 +2060,11 @@ levels.js_hoc2015_event_points = {
 levels.js_hoc2015_event_random_items = {
   "editCode": true,
   "textModeAtStart": true,
-  "background": "background3",
+  "background": "ship",
   "wallMap": "blobs",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
-    "setSpriteSpeed": null,
+    "setBotSpeed": null,
 
     "changeScore": null,
     "whenTouchCharacter": null,
@@ -2089,7 +2089,7 @@ levels.js_hoc2015_event_random_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addCharacter('item_walk_item3', 3);\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchCharacter() {\n  changeScore(1);\n  \n}",
+  "startBlocks": "addCharacter('pig');\naddCharacter('mouse');\naddCharacter('spider');\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchCharacter() {\n  changeScore(1);\n  \n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2111,7 +2111,8 @@ levels.js_hoc2015_event_random_items = {
 levels.js_hoc2015_event_free = {
   "editCode": true,
   "textModeAtStart": true,
-  "background": "background1",
+  "freePlay": true,
+  "background": "forest",
   "wallMap": "blank",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
@@ -2139,12 +2140,13 @@ levels.js_hoc2015_event_free = {
     "whenUp": { "category": "Events" },
     "whenDown": { "category": "Events" },
     "whenTouchObstacle": { "category": "Events" },
-    "whenTouchWalkItem1": { "category": "Events" },
-    "whenTouchWalkItem2": { "category": "Events" },
-    "whenTouchWalkItem3": { "category": "Events" },
-    "whenTouchWalkItem4": { "category": "Events" },
-    "whenTouchWalkItem5": { "category": "Events" },
-    "whenTouchWalkItem6": { "category": "Events" },
+    "whenTouchMan": { "category": "Events" },
+    "whenTouchPilot": { "category": "Events" },
+    "whenTouchPig": { "category": "Events" },
+    "whenTouchBird": { "category": "Events" },
+    "whenTouchMouse": { "category": "Events" },
+    "whenTouchRoo": { "category": "Events" },
+    "whenTouchSpider": { "category": "Events" },
     "whenTouchCharacter": { "category": "Events" }
   },
   "startBlocks": "function whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
