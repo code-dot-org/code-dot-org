@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-10-07T15:53:49.224Z",
+  "created_at": "2015-10-07T15:53:49.000Z",
   "level_num": "custom",
   "user_id": 13,
   "properties": {
@@ -54,7 +54,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Use the image command to replace the text label in your program with an image. (Click to see full instructions)",
+    "instructions": "Replace the image in your application with one of your own. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -74,7 +74,7 @@
     "autocomplete_palette_apis_only": "true",
     "app_width": "320",
     "app_height": "480",
-    "markdown_instructions": "# New Elements and Events: Images\r\n\r\nImages are a great way to make applications more visually pleasing and interactive. You can now add images to your application using the `image` command. For now just practice adding the element (with the default image of a ball) to your app and don't worry about choosing images for yourself. We'll do that in the very next exercise!\r\n\r\n# Do This\r\n\r\n**Read the documentation** for `image`\r\n\r\n**Modify** the program so that the page element is now an image (of a ball) which moves randomly around the screen when clicked.\r\n\r\n**Note:** If you reuse your text label's ID you'll only need to change a single line of code to make your program work. Once you have your program working choose a descriptive and meaningful ID for your image and make the appropriate changes in the event handler.",
+    "markdown_instructions": "# New Elements and Events: Choosing Images\r\n\r\n**Adding Images You Find Online**: The second parameter of the `image` command allows you to select a different image for your application by providing its URL. You can add images you find online by finding their URLs and pasting them into your `image` command.\r\n\r\n**Adding Images from Your Computer:** It is also possible to add images saved on your computer. Click the word \"Choose\" below the arrow in the `image` block. \r\n\r\n![](https://images.code.org/e726e56fd3e4c7cd4a0d58cba731a855-image-1444240440116.53.49 PM.png)\r\n\r\nYou'll be taken to a \"Choose Assets\" screen which will allow you to select an image to upload to your app.\r\n\r\n![](https://images.code.org/4e33ebc4011b5eb6590f573ada3ed1da-image-1444241056243.04.04 PM.png)\r\n\r\n# Do This\r\n\r\n**Change your image** to one you've found online or from your own computer",
     "never_autoplay_video": "false",
     "slider_speed": "1",
     "examples_required": "false",
@@ -83,7 +83,10 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "submittable": "false",
-    "hide_view_data_button": "true"
+    "hide_view_data_button": "true",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>
