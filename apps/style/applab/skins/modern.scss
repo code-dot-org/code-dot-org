@@ -44,6 +44,14 @@
   button, select, input, [contenteditable=true] {
     outline: 0;
   }
+
+  img[src=''] {
+    display: none;
+  }
+
+  .screen {
+    outline: 0;
+  }
 }
 
 #divApplab.appModern.divApplabDesignMode, .draggingParent {
@@ -55,6 +63,7 @@
   }
 
   img[src=''] {
+    display: block;
     background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat;
   }
 
