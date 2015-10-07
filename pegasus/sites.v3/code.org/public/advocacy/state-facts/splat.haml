@@ -14,8 +14,6 @@ theme: pdf
 
 // Generates custom state fact sheets based on the data in cdo-state-promote Google Sheet.
 
-%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/state-facts.css'}
-
 - splat = request.splat_path_info[1..-1].split("/")
 - state = splat.last
 - state_param = state.upcase
