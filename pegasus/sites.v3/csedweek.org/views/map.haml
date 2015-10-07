@@ -2,10 +2,10 @@
 -total_count = DB[:forms].where(kind:'HocSignup2015').count
 .mapheader
   %a.float-left{:href=> "https://hourofcode.com/events"}
-    %h2= I18n.t(:map_header).gsub('#', format_integer_with_commas(total_count))
+    %h2= I18n.t(:csedweek_map_header).gsub('#', format_integer_with_commas(total_count))
   %a{:href=> "https://hourofcode.com/#join"}
     %button.signup-button
-      = I18n.t(:signup_your_event)
+      = I18n.t(:csedweek_map_signup)
 
 -# Commenting out search box for now
 -#.row
@@ -14,11 +14,11 @@
       .col-xs-4
         .form-group
           %div
-            %input#geocomplete.form-control{name: "geocomplete", placeholder: I18n.t(:map_search_placeholder), type: "text"}/
+            %input#geocomplete.form-control{name: "geocomplete", placeholder: I18n.t(:csedweek_map_search_placeholder), type: "text"}/
       .col-xs-8
         .form-group
-          %button#btn-submit.btn.btn-default{type: "submit"}= I18n.t(:map_search_search)
-          %button#btn-reset.btn.btn-link{type: "reset"}= I18n.t(:map_search_reset)
+          %button#btn-submit.btn.btn-default{type: "submit"}= I18n.t(:csedweek_map_search_search)
+          %button#btn-reset.btn.btn-link{type: "reset"}= I18n.t(:csedweek_map_search_reset)
 
 .row
   .col-xs-10.col-sm-12
