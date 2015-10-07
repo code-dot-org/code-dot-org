@@ -119,6 +119,11 @@ When /^I press the SVG text "([^"]*)"$/ do |name|
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
 end
 
+When /^I select the "([^"]*)" option in dropdown "([^"]*)"$/ do |option_text, element_id|
+  select = Selenium::WebDriver::Support::Select.new(@browser.find_element(:id, element_id))
+  select.select_by(:text, option_text)
+end
+
 When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   name_selector = ".blocklyTreeLabel:contains(#{name})"
   # seems we usually have two of these item, and want the second if the function
@@ -212,6 +217,15 @@ end
 
 Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
   element_contains_text(selector, expectedText)
+end
+
+Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expectedValue|
+  element_value_is(selector, expectedValue)
+end
+
+Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
+  value = @browser.execute_script("return $(\"#{selector}\").is(':checked');")
+  value.should eq negation.nil?
 end
 
 Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expectedText|
@@ -381,10 +395,10 @@ Given(/^I am a student$/) do
   log_in_as(@student)
 end
 
-Given(/^I sign in as a student$/) do
-  steps %q{
+Given(/^I sign in as a (student|teacher)$/) do |user_type|
+  steps %Q{
     Given I am on "http://learn.code.org/"
-    And I am a student
+    And I am a #{user_type}
     And I am on "http://learn.code.org/users/sign_in"
   }
 end
@@ -410,13 +424,6 @@ And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
       end
     end
   end
-end
-
-And(/^I press keys "([^"]*)" for element "([^"]*)" when it appears$/) do |key, selector|
-  steps %Q{
-    And I wait until element "#{selector}" is visible
-    And I press keys "#{key}" for element "#{selector}"
-  }
 end
 
 def make_symbol_if_colon(key)
