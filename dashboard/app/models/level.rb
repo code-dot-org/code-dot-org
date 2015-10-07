@@ -139,7 +139,7 @@ class Level < ActiveRecord::Base
   end
 
   def write_custom_level_file
-    if write_to_file?
+    if changed? && write_to_file?
       file_path = LevelLoader.level_file_path(name)
       File.write(file_path, self.to_xml)
       file_path
