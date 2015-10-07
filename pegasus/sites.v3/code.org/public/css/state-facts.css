@@ -1,0 +1,48 @@
+.intro-text {
+  width: 500px;
+  float: left;
+}
+
+.image-set-one {
+  float: left;
+  padding-left: 5px;
+}
+
+.image-set-two {
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 40px;
+}
+
+.chart {
+  width: 200px;
+}
+
+.call-out {
+  clear: both;
+  padding-top: 30px;
+}
+
+.clear-both {
+ clear: both;
+}
+
+.logo {
+  width: 100px;
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.chart-text-group {
+  padding: 30px 0px 30px 0px;
+}
+
+.improve-edu {
+  float: left;
+  width: 500px;
+}
+
+.improve-edu-h2 {
+  margin-top: 0px;
+}

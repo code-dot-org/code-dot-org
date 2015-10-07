@@ -189,8 +189,8 @@ function loadInfinity(skin, assetUrl) {
 function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
-  skin.defaultBackground = 'background3';
-  skin.defaultWalls = 'maze2';
+  skin.defaultBackground = 'forest';
+  skin.defaultWallMap = 'blank';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
@@ -204,30 +204,43 @@ function loadHoc2015(skin, assetUrl) {
 
   // TODO: proper item class names
   skin.ItemClassNames = [
-    'item_walk_item1',
-    'item_walk_item2',
-    'item_walk_item3',
-    'item_walk_item4',
-    'item_walk_item5',
-    'item_walk_item6'
+    'man',
+    'pilot',
+    'pig',
+    'bird',
+    'mouse',
+    'roo',
+    'spider'
   ];
 
   skin.AutohandlerTouchItems = {
-    'item_walk_item1': 'whenTouchWalkItem1',
-    'item_walk_item2': 'whenTouchWalkItem2',
-    'item_walk_item3': 'whenTouchWalkItem3',
-    'item_walk_item4': 'whenTouchWalkItem4',
-    'item_walk_item5': 'whenTouchWalkItem5',
-    'item_walk_item6': 'whenTouchWalkItem6'
+    'man': 'whenTouchMan',
+    'pilot': 'whenTouchPilot',
+    'pig': 'whenTouchPig',
+    'bird': 'whenTouchBird',
+    'mouse': 'whenTouchMouse',
+    'roo': 'whenTouchRoo',
+    'spider': 'whenTouchSpider'
   };
 
   skin.specialItemFrames = {
-    'item_walk_item1': 12,
-    'item_walk_item2': 12,
-    'item_walk_item3': 15,
-    'item_walk_item4': 8,
-    'item_walk_item5': 12,
-    'item_walk_item6': 1
+    'man': 12,
+    'pilot': 12,
+    'pig': 15,
+    'bird': 8,
+    'mouse': 12,
+    'roo': 1,
+    'spider': 1
+  };
+
+  skin.specialItemScale = {
+    'man': 1,
+    'pilot': 1,
+    'pig': 2,
+    'bird': 2,
+    'mouse': 1.2,
+    'roo': 0.6,
+    'spider': 0.6
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -280,18 +293,18 @@ function loadHoc2015(skin, assetUrl) {
   skin.gridSpriteRenderOffsetX = -30;
   skin.gridSpriteRenderOffsetY = -40;
 
-  skin.avatarList = ['character1', 'character2'];
+  skin.avatarList = ['bot1', 'bot2'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: name == 'character1' ? 14 : 16,
+        normal: name == 'bot1' ? 14 : 16,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: name == 'character1' ? 14 : 8
+        walk: name == 'bot1' ? 14 : 8
       },
       timePerFrame: 100
     };
@@ -306,14 +319,15 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   // TODO: Create actual item choices
-  skin.item_walk_item1 = skin.assetUrl('walk_item1.png');
-  skin.item_walk_item2 = skin.assetUrl('walk_item2.png');
-  skin.item_walk_item3 = skin.assetUrl('walk_item3.png');
-  skin.item_walk_item4 = skin.assetUrl('walk_item4.png');
-  skin.item_walk_item5 = skin.assetUrl('walk_item5.png');
-  skin.item_walk_item6 = skin.assetUrl('walk_item6.png');
+  skin.man = skin.assetUrl('walk_item1.png');
+  skin.pilot = skin.assetUrl('walk_item2.png');
+  skin.pig = skin.assetUrl('walk_item3.png');
+  skin.bird = skin.assetUrl('walk_item4.png');
+  skin.mouse = skin.assetUrl('walk_item5.png');
+  skin.roo = skin.assetUrl('walk_item6.png');
+  skin.spider = skin.assetUrl('walk_item7.png');
 
-  skin.background1 = {
+  skin.forest = {
     background: skin.assetUrl('background_background1.jpg'),
     tiles: skin.assetUrl('tiles_background1.png'),
     jumboTiles: skin.assetUrl('jumbotiles_background1.png'),
@@ -322,7 +336,7 @@ function loadHoc2015(skin, assetUrl) {
     jumboTilesRows: 4,
     jumboTilesCols: 4
   };
-  skin.background2 = {
+  skin.snow = {
     background: skin.assetUrl('background_background2.jpg'),
     tiles: skin.assetUrl('tiles_background2.png'),
     jumboTiles: skin.assetUrl('jumbotiles_background2.png'),
@@ -331,7 +345,7 @@ function loadHoc2015(skin, assetUrl) {
     jumboTilesRows: 4,
     jumboTilesCols: 4
   };
-  skin.background3 = {
+  skin.ship = {
     background: skin.assetUrl('background_background3.jpg'),
     tiles: skin.assetUrl('tiles_background3.png'),
     jumboTiles: skin.assetUrl('jumbotiles_background3.png'),
@@ -408,56 +422,66 @@ function loadHoc2015(skin, assetUrl) {
      [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x121, 0x121]];
 
   // Sounds.
-  skin.character1sound1 = [skin.assetUrl('character1sound1.mp3'), skin.assetUrl('wall.ogg')];
-  skin.character1sound2 = [skin.assetUrl('character1sound2.mp3'), skin.assetUrl('wall.ogg')];
-  skin.character1sound3 = [skin.assetUrl('character1sound3.mp3'), skin.assetUrl('wall.ogg')];
-  skin.character1sound4 = [skin.assetUrl('character1sound4.mp3'), skin.assetUrl('wall.ogg')];
+  var sounds = [
+    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
+    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
+    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
+    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
+    'alert1', 'alert2', 'alert3', 'alert4',
+    'applause',
+    'start', 'win', 'failure', 'flag'
+  ];
 
-  studioApp.loadAudio(skin.character1sound1, 'character1sound1');
-  studioApp.loadAudio(skin.character1sound2, 'character1sound2');
-  studioApp.loadAudio(skin.character1sound3, 'character1sound3');
-  studioApp.loadAudio(skin.character1sound4, 'character1sound4');
+  // Override the default loadAudio function with this one.
+  skin.loadAudio = function() {
+    for (var s = 0; s < sounds.length; s++) {
+      var sound = sounds[s];
+      skin[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl('wall.ogg')];
+      studioApp.loadAudio(skin[sound], sound);
+    }
+  };
 
   // These are used by blocks.js to customize our dropdown blocks across skins
-  skin.wallChoices = [
-    [msg.setWallsRandom(), RANDOM_VALUE],
-    [msg.setWallsBlank(), '"blank"'],
-    [msg.setWallsCircle(), '"circle"'],
-    [msg.setWallsCircle2(), '"circle2"'],
-    [msg.setWallsHorizontal(), '"horizontal"'],
-    [msg.setWallsGrid(), '"grid"'],
-    [msg.setWallsBlobs(), '"blobs"']
+  skin.mapChoices = [
+    [msg.setMapRandom(), RANDOM_VALUE],
+    [msg.setMapBlank(), '"blank"'],
+    [msg.setMapCircle(), '"circle"'],
+    [msg.setMapCircle2(), '"circle2"'],
+    [msg.setMapHorizontal(), '"horizontal"'],
+    [msg.setMapGrid(), '"grid"'],
+    [msg.setMapBlobs(), '"blobs"']
     ];
 
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    [msg.setBackgroundBackground1(), '"background1"'],
-    [msg.setBackgroundBackground2(), '"background2"'],
-    [msg.setBackgroundBackground3(), '"background3"']
+    [msg.setBackgroundForest(), '"forest"'],
+    [msg.setBackgroundSnow(), '"snow"'],
+    [msg.setBackgroundShip(), '"ship"']
     ];
 
   skin.backgroundChoicesK1 = [
-    [skin.background1.background, '"background1"'],
-    [skin.background2.background, '"background2"'],
-    [skin.background3.background, '"background3"'],
+    [skin.forest.background, '"forest"'],
+    [skin.snow.background, '"snow"'],
+    [skin.ship.background, '"ship"'],
     [skin.randomPurpleIcon, RANDOM_VALUE],
     ];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
     [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteCharacter1(), '"character1"'],
-    [msg.setSpriteCharacter2(), '"character2"']];
+    [msg.setSpriteBot1(), '"bot1"'],
+    [msg.setSpriteBot2(), '"bot2"']];
 
   skin.projectileChoices = [];
 
   skin.itemChoices = [
-    [msg.itemItem1(), '"item_walk_item1"'],
-    [msg.itemItem2(), '"item_walk_item2"'],
-    [msg.itemItem3(), '"item_walk_item3"'],
-    [msg.itemItem4(), '"item_walk_item4"'],
-    [msg.itemItem5(), '"item_walk_item5"'],
-    [msg.itemItem6(), '"item_walk_item6"'],
+    [msg.itemMan(), '"man"'],
+    [msg.itemPilot(), '"pilot"'],
+    [msg.itemPig(), '"pig"'],
+    [msg.itemBird(), '"bird"'],
+    [msg.itemMouse(), '"mouse"'],
+    [msg.itemRoo(), '"roo"'],
+    [msg.itemSpider(), '"spider"'],
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
@@ -700,6 +724,26 @@ exports.load = function(assetUrl, id) {
   skin.hitSound = [skin.assetUrl('2_wall_bounce.mp3'),
                    skin.assetUrl('2_wall_bounce.ogg')];
 
+  // This function might be overloaded by a skin.
+  skin.loadAudio = function() {
+    studioApp.loadAudio(skin.winSound, 'win');
+    studioApp.loadAudio(skin.startSound, 'start');
+    studioApp.loadAudio(skin.failureSound, 'failure');
+    studioApp.loadAudio(skin.rubberSound, 'rubber');
+    studioApp.loadAudio(skin.crunchSound, 'crunch');
+    studioApp.loadAudio(skin.flagSound, 'flag');
+    studioApp.loadAudio(skin.winPointSound, 'winpoint');
+    studioApp.loadAudio(skin.winPoint2Sound, 'winpoint2');
+    studioApp.loadAudio(skin.losePointSound, 'losepoint');
+    studioApp.loadAudio(skin.losePoint2Sound, 'losepoint2');
+    studioApp.loadAudio(skin.goal1Sound, 'goal1');
+    studioApp.loadAudio(skin.goal2Sound, 'goal2');
+    studioApp.loadAudio(skin.woodSound, 'wood');
+    studioApp.loadAudio(skin.retroSound, 'retro');
+    studioApp.loadAudio(skin.slapSound, 'slap');
+    studioApp.loadAudio(skin.hitSound, 'hit');
+  };
+
   // Settings
   skin.background = skin.assetUrl('background.png');
   skin.spriteHeight = 100;
@@ -710,7 +754,7 @@ exports.load = function(assetUrl, id) {
 
   skin.activityChoices = [
     [msg.setActivityRandom(), RANDOM_VALUE],
-    [msg.setActivityPatrol(), '"patrol"'],
+    [msg.setActivityRoam(), '"roam"'],
     [msg.setActivityChase(), '"chase"'],
     [msg.setActivityFlee(), '"flee"'],
     [msg.setActivityNone(), '"none"'],

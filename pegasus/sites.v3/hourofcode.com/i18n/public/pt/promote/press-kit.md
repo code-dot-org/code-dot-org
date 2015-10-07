@@ -24,10 +24,10 @@ nav: promote_nav
 **1. Planeje seu evento**
 
   * Planeje a abertura da Hora do Código.
-  * Envie [uma carta](<%= resolve_url('/promote#sample-emails') %>) para os pais dos alunos e peça para eles ajudarem na divulgação.
-  * Envie [uma carta](<%= resolve_url('/promote#sample-emails') %>) convidando seu prefeito, deputado, governador ou empresário influente para participar e falar com seus alunos.
+  * Envie [uma carta](<%= resolve_url('/promote/resources#sample-emails') %>) para os pais dos alunos e peça para eles ajudarem na divulgação.
+  * Envie [uma carta](<%= resolve_url('/promote/resources#sample-emails') %>) convidando seu prefeito, deputado, governador ou empresário influente para participar e falar com seus alunos.
   * Organize atividades em grupo (por exemplo, uma demonstração de atividade de programação "offline") ou mostre atividades criadas e conduzidas pelos alunos.
-  * Mostre o [vídeo da Hora do Código](<%= resolve_url('/') %>) da Code.org ou um [destes vídeos](<%= resolve_url('/promote#videos') %>) como forma de incentivo.
+  * Mostre o [vídeo da Hora do Código](<%= resolve_url('/') %>) da Code.org ou um [destes vídeos](<%= resolve_url('/promote/resources#videos') %>) como forma de incentivo.
 
 **2. Identifique jornalistas específicos da região que cubram eventos locais ou sobre educação.**
 
@@ -37,7 +37,7 @@ Procure na Internet informações de contato de jornalistas. Se não conseguir e
 
 **3. Entre em contato com a mídia local**
 
-A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se interessar por este evento? Inclua as informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **Veja um [exemplo de abordagem à mídia](<%= resolve_url('/promote#sample-emails') %>):**
+A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se interessar por este evento? Inclua as informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **Veja um [exemplo de abordagem à mídia](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Prepare-se para receber perguntas sobre o evento da sua escola. Veja os exemplos a seguir:**
 

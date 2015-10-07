@@ -110,12 +110,12 @@ var AUTO_HANDLER_MAP = {
   whenUp: 'when-up',
   whenLeft: 'when-left',
   whenRight: 'when-right',
-  whenTouchItem: 'whenSpriteCollided-' +
-                  (Studio.protagonistSpriteIndex || 0) +
-                  '-any_item',
-  whenTouchWall: 'whenSpriteCollided-' +
-                  (Studio.protagonistSpriteIndex || 0) +
-                  '-wall',
+  whenTouchCharacter: 'whenSpriteCollided-' +
+      (Studio.protagonistSpriteIndex || 0) +
+      '-any_item',
+  whenTouchObstacle: 'whenSpriteCollided-' +
+      (Studio.protagonistSpriteIndex || 0) +
+      '-wall',
 };
 
 // Default Scalings
@@ -163,7 +163,7 @@ var twitterOptions = {
 function loadLevel() {
   // Load maps.
   Studio.map = level.map;
-  Studio.walls = null;
+  Studio.wallMap = null;
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.slowJsExecutionFactor = level.slowJsExecutionFactor || 1;
   Studio.ticksBeforeFaceSouth = Studio.slowJsExecutionFactor +
@@ -1238,8 +1238,8 @@ Studio.getWallValue = function (row, col) {
     return 0;
   }
 
-  if (Studio.walls) {
-    return skin[Studio.walls] ? (skin[Studio.walls][row][col] << constants.WallCoordsShift): 0;
+  if (Studio.wallMap) {
+    return skin[Studio.wallMap] ? (skin[Studio.wallMap][row][col] << constants.WallCoordsShift): 0;
   } else {
     return Studio.map[row][col] & constants.WallAnyMask;
   }
@@ -1480,24 +1480,7 @@ Studio.init = function(config) {
     }
   });
 
-  config.loadAudio = function() {
-    studioApp.loadAudio(skin.winSound, 'win');
-    studioApp.loadAudio(skin.startSound, 'start');
-    studioApp.loadAudio(skin.failureSound, 'failure');
-    studioApp.loadAudio(skin.rubberSound, 'rubber');
-    studioApp.loadAudio(skin.crunchSound, 'crunch');
-    studioApp.loadAudio(skin.flagSound, 'flag');
-    studioApp.loadAudio(skin.winPointSound, 'winpoint');
-    studioApp.loadAudio(skin.winPoint2Sound, 'winpoint2');
-    studioApp.loadAudio(skin.losePointSound, 'losepoint');
-    studioApp.loadAudio(skin.losePoint2Sound, 'losepoint2');
-    studioApp.loadAudio(skin.goal1Sound, 'goal1');
-    studioApp.loadAudio(skin.goal2Sound, 'goal2');
-    studioApp.loadAudio(skin.woodSound, 'wood');
-    studioApp.loadAudio(skin.retroSound, 'retro');
-    studioApp.loadAudio(skin.slapSound, 'slap');
-    studioApp.loadAudio(skin.hitSound, 'hit');
-  };
+  config.loadAudio = skin.loadAudio;
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1530,6 +1513,11 @@ Studio.init = function(config) {
     }
 
     drawMap();
+  };
+
+  config.afterClearPuzzle = function() {
+    studioApp.resetButtonClick();
+    annotationList.clearRuntimeAnnotations();
   };
 
   config.twitter = twitterOptions;
@@ -1663,6 +1651,10 @@ function getDefaultBackgroundName() {
           (level.background || skin.defaultBackground);
 }
 
+function getDefaultMapName() {
+  return level.wallMap || skin.defaultWallMap;
+}
+
 /**
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
@@ -1707,7 +1699,7 @@ Studio.reset = function(first) {
 
   // Reset configurable variables
   Studio.background = null;
-  Studio.walls = null;
+  Studio.wallMap = null;
   Studio.setBackground({value: getDefaultBackgroundName()});
 
   // Reset currentCmdQueue and various counts:
@@ -1769,6 +1761,15 @@ Studio.reset = function(first) {
   Studio.itemActivity = {};
   // Create Items that are specified on the map:
   Studio.createLevelItems(svg);
+
+  // Now that sprites are in place, we can set up a map, which might move
+  // sprites around.
+  Studio.setMap({value: getDefaultMapName()});
+
+  // Setting up walls might have moved the sprites, so draw them once more.
+  for (i = 0; i < Studio.spriteCount; i++) {
+    Studio.displaySprite(i);
+  }
 
   var goalAsset = skin.goal;
   if (level.goalOverride && level.goalOverride.goalAnimation) {
@@ -2138,10 +2139,15 @@ function handleExecutionError(err, lineNumber) {
     // Now select this location in the editor, since we know we didn't hit
     // this while executing (in which case, it would already have been selected)
 
-    codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
+    codegen.selectEditorRowColError(studioApp.editor, lineNumber - 1, err.loc.column);
   }
-  if (!lineNumber && Studio.JSInterpreter) {
-    lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
+  if (Studio.JSInterpreter) {
+    // Select code that just executed:
+    Studio.JSInterpreter.selectCurrentCode("ace_error");
+    // Grab line number if we don't have one already:
+    if (!lineNumber) {
+      lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
+    }
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Studio.executionError = err;
@@ -2892,9 +2898,9 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setBackground(cmd.opts);
       break;
-    case 'setWalls':
+    case 'setMap':
       studioApp.highlight(cmd.id);
-      Studio.setWalls(cmd.opts);
+      Studio.setMap(cmd.opts);
       break;
     case 'setSprite':
       studioApp.highlight(cmd.id);
@@ -2912,6 +2918,10 @@ Studio.callCmd = function (cmd) {
     case 'setSpriteSpeed':
       studioApp.highlight(cmd.id);
       Studio.setSpriteSpeed(cmd.opts);
+      break;
+    case 'setBotSpeed':
+      studioApp.highlight(cmd.id);
+      Studio.setBotSpeed(cmd.opts);
       break;
     case 'setSpriteSize':
       studioApp.highlight(cmd.id);
@@ -2939,28 +2949,28 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.moveSingle(cmd.opts);
       break;
-    case 'moveEast':
+    case 'moveRight':
       studioApp.highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
           dir: Direction.EAST,
       });
       break;
-    case 'moveWest':
+    case 'moveLeft':
       studioApp.highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
           dir: Direction.WEST,
       });
       break;
-    case 'moveNorth':
+    case 'moveUp':
       studioApp.highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
           dir: Direction.NORTH,
       });
       break;
-    case 'moveSouth':
+    case 'moveDown':
       studioApp.highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
@@ -3006,9 +3016,9 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.vanishActor(cmd.opts);
       break;
-    case 'addItemsToScene':
+    case 'addItem':
       studioApp.highlight(cmd.id);
-      Studio.addItemsToScene(cmd.opts);
+      Studio.addItem(cmd.opts);
       break;
     case 'setItemActivity':
       studioApp.highlight(cmd.id);
@@ -3030,7 +3040,7 @@ Studio.callCmd = function (cmd) {
   return true;
 };
 
-Studio.addItemsToScene = function (opts) {
+Studio.addItem = function (opts) {
   var directions = [
     Direction.NORTH,
     Direction.EAST,
@@ -3067,49 +3077,48 @@ Studio.addItemsToScene = function (opts) {
     return pos;
   };
 
-  for (var i = 0; i < opts.number; i++) {
-    var direction = level.itemGridAlignedMovement ? Direction.NONE :
-                      directions[Math.floor(Math.random() * directions.length)];
-    var pos = generateRandomItemPosition();
-    var itemOptions = {
-      frames: getFrameCount(opts.className, skin.specialItemFrames, skin.itemFrames),
-      className: opts.className,
-      dir: direction,
-      image: skin[opts.className],
-      loop: true,
-      x: pos.x,
-      y: pos.y,
-      speed: Studio.itemSpeed[opts.className],
-      activity: utils.valueOr(Studio.itemActivity[opts.className], "patrol"),
-      width: 100,
-      height: 100
-    };
+  var direction = level.itemGridAlignedMovement ? Direction.NONE :
+                    directions[Math.floor(Math.random() * directions.length)];
+  var pos = generateRandomItemPosition();
+  var itemOptions = {
+    frames: getFrameCount(opts.className, skin.specialItemFrames, skin.itemFrames),
+    className: opts.className,
+    dir: direction,
+    image: skin[opts.className],
+    loop: true,
+    x: pos.x,
+    y: pos.y,
+    speed: Studio.itemSpeed[opts.className],
+    activity: utils.valueOr(Studio.itemActivity[opts.className], "roam"),
+    width: 100,
+    height: 100,
+    renderScale: skin.specialItemScale[opts.className] || 1
+  };
 
-    var item = new Item(itemOptions);
+  var item = new Item(itemOptions);
 
-    if (level.blockMovingIntoWalls) {
-      // TODO (cpirich): just move within the map looking for open spaces instead
-      // of randomly retrying random numbers
+  if (level.blockMovingIntoWalls) {
+    // TODO (cpirich): just move within the map looking for open spaces instead
+    // of randomly retrying random numbers
 
-      var numTries = 0;
-      var minDistanceFromSprite = 100;
-      while (Studio.willCollidableTouchWall(item, item.x, item.y) ||
-             Studio.getDistance(Studio.sprite[0].x + Studio.sprite[0].width/2,
-                                Studio.sprite[0].y + Studio.sprite[0].height/2,
-                                item.x, item.y) < minDistanceFromSprite) {
-        var newPos = generateRandomItemPosition();
-        item.x = newPos.x;
-        item.y = newPos.y;
-        numTries++;
-        if (numTries > 100) {
-          break;
-        }
+    var numTries = 0;
+    var minDistanceFromSprite = 100;
+    while (Studio.willCollidableTouchWall(item, item.x, item.y) ||
+           Studio.getDistance(Studio.sprite[0].x + Studio.sprite[0].width/2,
+                              Studio.sprite[0].y + Studio.sprite[0].height/2,
+                              item.x, item.y) < minDistanceFromSprite) {
+      var newPos = generateRandomItemPosition();
+      item.x = newPos.x;
+      item.y = newPos.y;
+      numTries++;
+      if (numTries > 100) {
+        break;
       }
     }
-
-    item.createElement(document.getElementById('spriteLayer'));
-    Studio.items.push(item);
   }
+
+  item.createElement(document.getElementById('spriteLayer'));
+  Studio.items.push(item);
 };
 
 
@@ -3119,7 +3128,7 @@ Studio.getDistance = function(x1, y1, x2, y2) {
 
 
 Studio.setItemActivity = function (opts) {
-  if (opts.type === "patrol" || opts.type === "chase" ||
+  if (opts.type === "roam" || opts.type === "chase" ||
       opts.type === "flee" || opts.type === "none") {
     // retain this activity type for items of this class created in the future:
     Studio.itemActivity[opts.className] = opts.type;
@@ -3224,8 +3233,23 @@ Studio.setSpriteEmotion = function (opts) {
 };
 
 Studio.setSpriteSpeed = function (opts) {
-  var speed = Math.min(Math.max(opts.value, 2), 12);
+  var speed = Math.min(Math.max(opts.value, constants.SpriteSpeed.SLOW),
+      constants.SpriteSpeed.VERY_FAST);
   Studio.sprite[opts.spriteIndex].speed = speed;
+};
+
+var BOT_SPEEDS = {
+  slow: constants.SpriteSpeed.SLOW,
+  normal: constants.SpriteSpeed.NORMAL,
+  fast: constants.SpriteSpeed.VERY_FAST
+};
+
+Studio.setBotSpeed = function (opts) {
+  var speedVal = BOT_SPEEDS[opts.value];
+  if (speedVal) {
+    opts.value = speedVal;
+    Studio.setSpriteSpeed(opts);
+  }
 };
 
 Studio.setSpriteSize = function (opts) {
@@ -3272,21 +3296,21 @@ Studio.setBackground = function (opts) {
   }
 };
 
-Studio.setWalls = function (opts) {
+Studio.setMap = function (opts) {
   if (!level.wallMapCollisions) {
     return;
   }
 
-  // Treat 'default' as resetting to the level's map (Studio.walls = null)
+  // Treat 'default' as resetting to the level's map (Studio.wallMap = null)
   if (opts.value === 'default') {
     opts.value = null;
   }
 
-  if (opts.value === Studio.walls) {
+  if (opts.value === Studio.wallMap) {
     return;
   }
 
-  Studio.walls = opts.value;
+  Studio.wallMap = opts.value;
 
   // Draw the tiles (again) now that we know which background we're using.
   $(".tile_clip").remove();
@@ -3300,13 +3324,19 @@ Studio.setWalls = function (opts) {
 };
 
 /**
- * A call to setWalls might place a wall on top of the sprite.  In that case,
+ * A call to setMap might place a wall on top of the sprite.  In that case,
  * find a new nearby location for the sprite that doesn't have a wall.
  * Currently a work in progress with known issues.
  */
 Studio.fixSpriteLocation = function () {
   if (level.wallMapCollisions && level.blockMovingIntoWalls) {
+
     var spriteIndex = 0;
+
+    if (Studio.sprite.length <= spriteIndex) {
+      return;
+    }
+
     var sprite = Studio.sprite[spriteIndex];
     var xPos = getNextPosition(spriteIndex, false, false);
     var yPos = getNextPosition(spriteIndex, true, false);

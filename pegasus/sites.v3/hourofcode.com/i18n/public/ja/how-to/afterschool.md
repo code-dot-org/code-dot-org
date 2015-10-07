@@ -15,7 +15,7 @@ nav: how_to_nav
   * 以下の期間に[Hour of Code](<%= resolve_url('/') %>)のイベントを開催するために、登録を行う: <%= campaign_date('short') %>.
   * Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
 
-## 2) 以下の、ビデオを視聴する <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) 以下の、ビデオを視聴する <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) チュートリアルを選択する:
 
 We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. *新しいチュートリアルは、<%= campaign_date('full') %>までに順次公開されます。*[まずは、現在公開されているチュートリアルを試してみましょう。](<%= resolve_url("https://code.org/learn") %>)
@@ -40,12 +40,12 @@ Hour of Codeは、インターネットに接続されたコンピュータで�
 
 ## 5) Inspire participants to start your Hour of Code
 
-**Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.**
+Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
 **以下の映像を見せることも非常に効果的です:**
 
   * オリジナルのCode.orgはビル・ゲイツ、マーク・ザッカーバーグ、NBAスターのクリス・ボッシュが出演されているビデオをリリースしています。 (それらは [1 分](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 分](https://www.youtube.com/watch?v=nKIu9yen5nc), そして[9分](https://www.youtube.com/watch?v=dU1xS07N-FA) バージョンがあります。)
-  * Hour of Codeでも、 [2013バージョン](https://www.youtube.com/watch?v=FC5FbmsH4fw), もしくは <% if @country == 'uk' %> [2014年バージョン](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [2014年バージョン](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q)のビデオをリリースしています。 <% end %>
+  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [アメリカのオバマ大統領が生徒たちにコンピュータサイエンスを学ぶよう呼びかけてる映像もあります。](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * その他の映像は[こちら](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -95,7 +95,7 @@ Hour of Codeは、インターネットに接続されたコンピュータで�
 ## 7) 祝う
 
   * [認定書](<%= resolve_url('https://code.org/certificates') %>)を印刷して、配布しましょう。
-  * [Print "I did an Hour of Code!"](<%= resolve_url('/resources/promote#stickers') %>) stickers.
+  * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
   * Hour of Codeのイベントの様子を撮影した写真や映像をソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグを使って、 @codeorgに連絡をすれば、あなたの取り組みをハイライトすることができます！
 
 [col-33]

@@ -24,10 +24,10 @@ nav: promote_nav
 **lập kế hoạch cho sự kiện**
 
   * Lên kế hoạch tuần tự để khởi động Hour of Code.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Tổ chức các hoạt động của nhóm (như là tổ chức một hoạt động hỏi đáp về lập trình), hoặc hướng dẫn sinh viên tự tổ chức các hoạt động.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote#videos') %>) to inspire.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **Xác định các TRANG THÔNG TIN ĐỊA PHƯƠNG CỤ thể về giáo dục và các hoạt động tại địa phương**
 
@@ -37,7 +37,7 @@ Tìm kiếm thông tin trên mạng để liên lạc với họ. Nếu bạn kh
 
 **3. liên hệ TRANG TIN TỨC địa phương**
 
-Cách tốt nhất để liên hệ là bằng email. Email nên ngắn gọn và truyền đạt được thông điệp : tại sao những người khác quan tâm tới sự kiện này? Nhớ kèm theo thông tin liên lạc ( gồm số điện thoại di động) cho những người sẽ đến sự kiện. **See a [sample pitch to media](<%= resolve_url('/promote#sample-emails') %>):**
+Cách tốt nhất để liên hệ là bằng email. Email nên ngắn gọn và truyền đạt được thông điệp : tại sao những người khác quan tâm tới sự kiện này? Nhớ kèm theo thông tin liên lạc ( gồm số điện thoại di động) cho những người sẽ đến sự kiện. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Chuẩn bị những câu hỏi cho sự kiện tại trường bạn. Dưới đây là 1 số ví dụ : **
 

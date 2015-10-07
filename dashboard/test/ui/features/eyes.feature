@@ -91,6 +91,21 @@ Scenario:
   And I see no difference for "level load"
   And I close my eyes
 
+Scenario:
+  When I open my eyes to test "maze"
+  Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
+  And I rotate to landscape
+  And I wait to see "#x-close"
+  And I press "x-close"
+  # Let close animation finish
+  And I wait for 2 seconds
+  And I wait to see "#runButton"
+  And I press "runButton"
+  And I wait to see ".congrats"
+  And element ".congrats" is visible
+  And I see no difference for "maze feedback with blocks"
+  And I close my eyes
+
 @dashboard_db_access
 Scenario:
   Given I am on "http://learn.code.org/"

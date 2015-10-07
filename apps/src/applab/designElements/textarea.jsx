@@ -134,7 +134,7 @@ module.exports = {
     element.style.height = '100px';
     element.style.fontSize = '14px';
     element.style.color = '#000000';
-    element.style.backgroundColor = '';
+    element.style.backgroundColor = '#ffffff';
 
     this.onDeserialize(element);
 

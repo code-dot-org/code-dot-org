@@ -23,11 +23,11 @@
           = f.check_box :remember_me, { style: 'margin: 0;'}
           = t('signin_form.remember')
       %p
-        &nbsp;    
+        &nbsp;
       = f.submit t('signin_form.submit'), class: "btn btn-primary btn-large"
 
     %br/
-    
+
     %h3= t('signin.try_heading')
     .tryfirst
       = render partial: 'shared/course_wide_block', locals: { id: Script::HOC_NAME, showState: false }
@@ -46,7 +46,7 @@
 %br/
 %br/
 %br/
-  
+
 :javascript
   $( "#user_login" ).placeholder();
 

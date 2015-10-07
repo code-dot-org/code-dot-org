@@ -24,10 +24,10 @@ nav: promote_nav
 **1. Планирайте вашето събитие**
 
   * План и програма на събитието.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Организирайте групови дейности (като демонстриране на "unplugged" уроците без компютър), или покажете създадени от учениците дейности и ги оставете сами да ги представят.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote#videos') %>) to inspire.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Свържете се с местни репортери, които проявяват интерес към събития, свързани с образованието.**
 
@@ -37,7 +37,7 @@ nav: promote_nav
 
 **3. Свържете се с местните медии**
 
-Най-добрият начин да се свържите е по електронната поща. Писмото трябва да бъде кратко и съдържащо най-важното: Защо трябва хората да са заинтересувани от това събитие? Включете информация за контакт (включително тeлефонен номер) за тези, които ще бъдат на мястото по време на събитието. **See a [sample pitch to media](<%= resolve_url('/promote#sample-emails') %>):**
+Най-добрият начин да се свържите е по електронната поща. Писмото трябва да бъде кратко и съдържащо най-важното: Защо трябва хората да са заинтересувани от това събитие? Включете информация за контакт (включително тeлефонен номер) за тези, които ще бъдат на мястото по време на събитието. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Подгответе въпроси за вашето училищно събитие. Ето някои примери:**
 
@@ -60,6 +60,6 @@ nav: promote_nav
 Code.org® е обществено движение с нестопанска цел, посветено на разширяване изучаването на компютърните науки и увеличаване броят на заетите жени и социално слабите ученици в програмирането. Неговата визия е, че всеки ученик във всяко училище трябва да има възможност да изучава компютърно програмиране. След като Code.org стартира кампанията пре 2013г.,до сега в нея са взели участие повече от 100 милиона ученици - организацията си парнира с 70 училищни дистрикта за разширяване изучаването на компютурните науки. Code.org се поддържа от благотворителни дарения от предприятия, фондации и щедри хора, включително Microsoft, Infosys фондация, САЩ, Фондация Балмър, Omidyar Network и др. За повече информация, моля посетете: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
-Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+Намерете повече ресурси и пробни имейли [ тук](<%= resolve_url('/promote') %>).
 
 <%= view :signup_button %>
