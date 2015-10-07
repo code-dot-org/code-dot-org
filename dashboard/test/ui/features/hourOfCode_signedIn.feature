@@ -4,6 +4,7 @@ Feature: Hour of Code tests for users that are signed in
 
 Background:
   Given I am on "http://studio.code.org/"
+  And I forget who I am
   And I am a student
   Then I reload the page
 
