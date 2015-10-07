@@ -23,6 +23,8 @@
     display: inline-block; }
   #divApplab div, .draggingParent div {
     overflow: hidden; }
+  #divApplab div[contenteditable=true], .draggingParent div[contenteditable=true] {
+    overflow: auto; }
   #divApplab button, .draggingParent button {
     padding: 7px 12px;
     margin: 2px;
@@ -78,6 +80,10 @@
       background: url("/blockly/media/applab/dropdown.png") no-repeat center right, url("/blockly/media/applab/brighter.png"); }
   #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern [contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent [contenteditable=true] {
     outline: 0; }
+  #divApplab.appModern img[src=''], .draggingParent img[src=''] {
+    display: none; }
+  #divApplab.appModern .screen, .draggingParent .screen {
+    outline: 0; }
 
 #divApplab.appModern.divApplabDesignMode img[src=''], #divApplab.appModern.divApplabDesignMode canvas, #divApplab.appModern.divApplabDesignMode .chart, .draggingParent img[src=''], .draggingParent canvas, .draggingParent .chart {
   border: 5px solid #fff;
@@ -85,6 +91,7 @@
   outline-offset: -1px; }
 
 #divApplab.appModern.divApplabDesignMode img[src=''], .draggingParent img[src=''] {
+  display: block;
   background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat; }
 
 #divApplab.appModern.divApplabDesignMode canvas, .draggingParent canvas {
@@ -230,14 +237,14 @@ div#visualizationResizeBar {
 #visualizationColumn.wireframeShare {
   background: url("/blockly/media/applab/phone_wireframe.png") center center no-repeat;
   max-width: none !important;
-  width: 363px;
-  height: 714px;
+  width: 352px;
+  height: 612px;
   margin: 20px auto; }
   #visualizationColumn.wireframeShare #designToggleRow, #visualizationColumn.wireframeShare #gameButtons {
     display: none; }
   #visualizationColumn.wireframeShare #visualization {
-    top: 116px;
-    left: 21px;
+    top: 68px;
+    left: 16px;
     border: 0; }
 
 #visualizationColumn.chromelessShare #designToggleRow, #visualizationColumn.chromelessShare #gameButtons {

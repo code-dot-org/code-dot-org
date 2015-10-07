@@ -80,5 +80,6 @@
   "whileTooltip": "Повторювати вказані дії поки не досягнуто кінцевої точки.",
   "word": "Знайти слово",
   "yes": "Так",
-  "youSpelled": "Ви написали"
+  "youSpelled": "Ви написали",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

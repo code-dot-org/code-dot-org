@@ -6028,7 +6028,7 @@ Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
         blockX = Blockly.RTL ? width - blockX : blockX;
         block.moveBy(blockX, blockY)
       }else {
-        if(block.isUserVisible()) {
+        if(block.isVisible()) {
           positionBlock(block)
         }else {
           hiddenBlocks.push(block)
@@ -6067,6 +6067,10 @@ Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {
   var editable = xmlBlock.getAttribute("editable");
   if(editable) {
     block.setEditable(editable === "true")
+  }
+  var next_connection_disabled = xmlBlock.getAttribute("next_connection_disabled");
+  if(next_connection_disabled) {
+    block.setNextConnectionDisabled(next_connection_disabled === "true")
   }
   var userVisible = xmlBlock.getAttribute("uservisible");
   if(userVisible) {
@@ -14731,6 +14735,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.movable_ = true;
   this.editable_ = true;
   this.userVisible_ = true;
+  this.nextConnectionDisabled_ = false;
   this.collapsed_ = false;
   this.dragging_ = false;
   this.currentlyHidden_ = false;
@@ -15536,6 +15541,12 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
   });
   if(opt_renderAfterVisible && (userVisible && this.childBlocks_.length === 0)) {
     this.svg_ && this.render()
+  }
+};
+Blockly.Block.prototype.setNextConnectionDisabled = function(disabled) {
+  this.nextConnectionDisabled_ = disabled;
+  if(this.nextConnectionDisabled_ === true) {
+    this.setNextStatement(false)
   }
 };
 Blockly.Block.prototype.isCurrentlyBeingDragged = function() {

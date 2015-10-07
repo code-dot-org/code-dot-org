@@ -80,5 +80,6 @@
   "whileTooltip": "Powtarzaj wymienione czynności, aż do osiągnięcia punktu końcowego.",
   "word": "Znajdź słowa",
   "yes": "Tak",
-  "youSpelled": "Przeliterowałeś"
+  "youSpelled": "Przeliterowałeś",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

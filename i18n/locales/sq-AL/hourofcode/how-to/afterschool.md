@@ -13,7 +13,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
   * Regjistrohu për të organizuar një [Orë Kodimi](%= resolve_url('/') %) gjatë <%= campaign_date('short') %>.
   * Promote your [Hour of Code](%= resolve_url('/promote') %) and encourage others to host.
 
-## 2) Ndiqni këtë video udhëzuese <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Ndiqni këtë video udhëzuese <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Zgjidh një tutorial:
 
 We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. *Tutoriale të reja po vinë në Orën e Kodimit përpara <%= campaign_date('full') %>.* [ Provo tutorialin e tanishëm ](%= resolve_url("https://code.org/learn") %)
@@ -38,12 +38,12 @@ Eksperienca më e mirë e Orës së Kodimit do të ishte me kompjutera të lidhu
 
 ## 5) Inspiro pjesëmarrësit për të filluar Orën e Kodimit
 
-**Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.**
+Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
 **Trego një video inspiruese:**
 
   * Video origjinale e lancimit të Code.org, ku paraqiten Bill Gates, Mark Zuckerberg, dhe ylli i NBA Chris Bosh (Ka versione [1 minutëshe](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutëshe](https://www.youtube.com/watch?v=nKIu9yen5nc), dhe [9 minutëshe](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * [Videoja e lançimit të Orës së Kodimit 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), apo <% if @country == 'uk' %> [Video e Orës së Kodimit 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Videoja e Orës së Kodimit 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) ♪ <% end %>
+  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Presidenti i SHBA-së Obama duke i bërë thirrje të gjithë studentëve të mësojnë shkencat kompjuterike](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Gjej më shumë video inspiruese [këtu](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -93,7 +93,7 @@ Eksperienca më e mirë e Orës së Kodimit do të ishte me kompjutera të lidhu
 ## 7) Festo
 
   * [Printo certifikatat](%= resolve_url('https://code.org/certificates') %) për studentët e tu.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/resources/promote#stickers') %) stickers.
+  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
   * Shpërnda fotot dhe videot e Orës tuaj të Kodit në mediat sociale. Përdorimi #HourOfCode dhe @codeorg kështu që ne mund të nxjerrim në pah suksesin tuaj!
 
 [col-33]

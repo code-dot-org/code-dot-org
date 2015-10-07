@@ -80,5 +80,6 @@
   "whileTooltip": "Repete as ações seguintes até a condição de terminação ser alcançada.",
   "word": "Encontra a palavra",
   "yes": "Sim",
-  "youSpelled": "Tu escreveste"
+  "youSpelled": "Tu escreveste",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

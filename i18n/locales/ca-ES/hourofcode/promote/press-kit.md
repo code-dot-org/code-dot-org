@@ -22,10 +22,10 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 **1. Planifica el teu esdeveniment**
 
   * Planifica una reunió per donar inici a l'Hora de Codi.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organitza activitats en grup (com una demostració d'una activitat de programació "fora de línia"), o llueix activitats creades i dirigides pels estudiants.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote#videos') %) to inspire.
+  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. identifica periodistes locals que cobreixen l'educació o esdeveniments locals.**
 
@@ -35,7 +35,7 @@ Mirar en línia per trobar informació de contacte de periodistes. Si no la pots
 
 **3. Contacta amb els mitjans de comunicació locals**
 
-La millor manera d'arribar és per correu electrònic. Ha de ser curt i comunicatiu: per què s'haurien d'interessar altres persones per aquest esdeveniment? Inclou informació de contacte (incloent-hi un número de telèfon) per qui serà el lloc a l'esdeveniment. **See a [sample pitch to media](%= resolve_url('/promote#sample-emails') %):**
+La millor manera d'arribar és per correu electrònic. Ha de ser curt i comunicatiu: per què s'haurien d'interessar altres persones per aquest esdeveniment? Inclou informació de contacte (incloent-hi un número de telèfon) per qui serà el lloc a l'esdeveniment. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %):**
 
 **4. Preparat per respondre preguntes sobre el teu esdeveniment de l'escola. Aquests són alguns exemples:**
 

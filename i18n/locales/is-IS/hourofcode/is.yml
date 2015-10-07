@@ -162,15 +162,16 @@ is:
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
   how_to_nav_organizations: For organizations
+  how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
   prizes_nav_title: Verðlaun
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Hvernig á að halda Klukkustund kóðunar</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Kynntu Klukkustund kóðunar</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
@@ -211,7 +212,7 @@ is:
   front_join_us_support: Veittu stuðning
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: For more information, please visit code.org
-  front_join_us_n_students_served: '# students served'
+  front_join_us_n_students_served: '# served'
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Nafn þitt
   signup_email_label: Netfang þitt
@@ -241,6 +242,7 @@ is:
   map_header: '# Klukkustundir kóðunar um allan heim'
   see_all_events: Sjá alla atburði
   map_header_company: '# af skipuleggjendum fyrirtækja'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Leita að Klukkustundum kóðunar
   map_search_search: Leit
   map_search_reset: Endurstilla
@@ -280,15 +282,15 @@ is:
   hoc_faq_why_cs_q: Hvers vegna tölvunarfræði?
   hoc_faq_why_cs_a: "<i>Öllum</i> nemendum ætti að vera gefið tækifæri til að læra tölvunarfræði. Það hjálpar til að þroska færni í að leysa vandamál, rökvísi og sköpun. Með því að byrja snemma fá nemendur grunn til að ná árangri í störfum 21. aldarinnar. Meiri tölfræði má finna á <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Hvernig tek ég þátt í Klukkustund kóðunar?
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Hver stendur að baki Klukkustund kóðunar?
   hoc_faq_behind_hoc_a: "Klukkustund kóðunar er skipulögð af <a href='http://code.org'>Code.org</a>, sem eru almenn óháð samtök sem hafa það að markmiði að auka þátttöku í tölvunarfræði með því að gera hana aðgengilega í fleiri skólum, og að auka þátttöku kvenna og minnihlutahópa. Fordæmalaust <a href='http://code.org/about/partners'>samstarf hefur tekist</a> milli aðila hefur tekist til að styðja við Klukkustund kóðunar. Þar má nefna Microsoft, Apple, Amazon, ungmennafélög og skólayfirvöld."
   hoc_faq_host_q: Ég veit ekkert um forritun. Get ég samt skipulagt viðburð?
-  hoc_faq_host_a: "Að sjálfsögðu. Verkefni í Klukkustund kóðunar eru sjálfstýrð. Allt sem þú þarft að gera er að <a href='http://code.org/learn'>prófa núverandi kennsluefni okkar</a>, velja efnið sem þú vilt nota og velja stundina &mdash; við munum sjá um afganginn. Við erum líka með valkosti fyrir alla aldurs- og reynsluhópa, frá leikskólastigi og upp úr. Byrjaðu skipulagninguna á að lesa <a href='target-resources-how-to'>leiðarvísinn okkar</a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Þarf ég tölvu fyrir hvern þátttakanda?
   hoc_faq_need_computers_a: "Nei. Við erum með kennsluefni fyrir Klukkustund kóðunar sem virkar á tölvum, snjallsímum og spjaldtölvum og jafnvel án tölvu! Þú getur tekið þátt sama hvar þú ert með því tæki sem þú hefur.<p><i>Hér eru nokkrir valkostir:</i><br><ul><li><b>Vinna með félaga</b>Rannsóknir sýna að nemendur læra best að <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>forrita með félaga</a> þar sem tveir nemendur deila tölvu og vinna saman. Hvettu nemendur þína til að gera það.<li><b>Nota skjávarpa.</b>Með skjávarpa og internet-tengdri tölvu getur heill hópur hjálpast að með Klukkustund kóðunar. Horft á myndskeiðin saman og skipst á að leysa þrautir eða svara spurningum.<li><b>Vinna án tölvu.</b>Við erum með verkefni sem gera ekki ráð fyrir tölvu.</ul>"
   hoc_faq_international_q: 'Ég er í landinu <country>. Hvernig er alþjóðlegri þátttöku háttað?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Hvernig get ég búið til kennsluefni fyrir Klukkustund kóðunar?
   hoc_faq_tutorial_a: "Ef þú hefur áhuga á að gerast samstarfsaðili í gerð kennsluefnis, þá mælum við með að þú kynnir þér <a href='target-tutorial-guidelines'>leiðarvísa okkar og leiðbeiningar</a>. Við mundum vilja hýsa fjölmörg áhugaverð viðfangsefni, en meginmarkmiðið er að hámarka upplifunina fyrir nemendur og kennara sem hafa ekki fyrri reynslu af tölvunarfræði."
   hoc_faq_more_questions_q: Er einhverjum spurningum ósvarað?
@@ -356,6 +358,7 @@ is:
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: Leiðarvísir fyrir opinbera aðila
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials

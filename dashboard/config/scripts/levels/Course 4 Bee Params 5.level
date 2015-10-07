@@ -6,18 +6,18 @@
   "user_id": 1,
   "properties": {
     "skin": "bee",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,1,0],[0,0,0,1,0,0,1,0],[0,2,1,1,1,1,1,0],[0,0,0,0,1,0,1,0],[0,0,0,0,1,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,5,0,0,5,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,5,0,5,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,2,0,0,0,0],[0,1,1,1,0,0,0,0],[0,0,0,1,1,1,0,0],[0,1,1,1,0,0,0,0],[0,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,5,0,0,0,0,0,0],[0,0,0,0,0,5,0,0],[0,5,0,0,0,0,0,0],[0,0,0,0,0,5,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "disable_param_editing": "false",
     "disable_variable_editing": "true",
-    "start_direction": "1",
-    "step_mode": 1,
+    "start_direction": "2",
+    "step_mode": "1",
     "nectar_goal": "20",
     "flower_type": "redWithNectar",
-    "ideal": "37",
+    "ideal": "31",
     "instructions": "Let's start from scratch - can you create a new function called \"get 5 nectar\" with a direction parameter?",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
@@ -28,7 +28,10 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "fast_get_nectar_animation": "true"
   }
 }]]></config>
   <blocks>
@@ -93,7 +96,7 @@
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE"/>
-        <category name="Variables" custom="VARIABLE">
+        <category name="Variables ">
           <block type="variables_get">
             <title name="VAR">left</title>
           </block>

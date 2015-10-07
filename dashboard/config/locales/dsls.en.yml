@@ -470,6 +470,7 @@ en:
       OPD-K5 Your Plan: {}
       OPD-Stage3Start: {}
       OnlinePDK5 Intro: {}
+      PD check your progress: {}
       PDAlg 1-3 Circles: {}
       PDAlg 1-3 Circles Practice: {}
       PDAlg 13-16 Booleans: {}
@@ -777,6 +778,7 @@ en:
         title: title
       U2L9 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
+      U3- L12 -Design Mode SFLP: {}
       U3L01 Student Lesson Introduction:
         Why Programming and Programming Languages?: Why Programming and Programming Languages?
       U3L02 Student Lesson Introduction:
@@ -803,6 +805,9 @@ en:
       U3L12 - Student Introduction 1:
         Events Unplugged: Events Unplugged
       U3L13 - Explanation of Ids:
+        description here: description here
+        title: title
+      U3L13 - Make a Prediction Explanation:
         description here: description here
         title: title
       U3L13 Add Button Instrucitons:
@@ -3195,6 +3200,27 @@ en:
         penUp();: penUp();
         square();: square();
         turnLeft(90); }: turnLeft(90); }
+      U3L13 - Making Predications MC:
+        ? "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As you are learning to program you will encounter more and more new features of a language and be naturally curious about how things work.  Research has shown that when you encounter a new piece of code or new situation, you learn faster by simply making a prediction about what will happen before you run the program for the first time.  \n</p><p>Making a prediction forces you to study the code and use your intuitions based on what you already know. Even experienced programmers might disagree about what a piece of code would do!  So making a prediction is not like some sort of test about how smart you are.  <strong>By making a prediction first, when you run the code you learn so much more whether you were right, wrong or somewhere in between.  You construct a stronger mental model for how code works than if you just ran the program to see what happened.</strong></p>\n<p>  So let's try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\" align=right>Here is a piece of code with two buttons and two event handlers.  Notice that both buttons still have the default IDs of \"id\". You will need to fix this because we know it causes a warning message.  But it turns out the program can still run and it does do <i>something.</i></p>\n<p><strong>What do you think will happen with this code is run?</strong></p>"
+        : "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As you are learning to program you will encounter more and more new features of a language and be naturally curious about how things work.  Research has shown that when you encounter a new piece of code or new situation, you learn faster by simply making a prediction about what will happen before you run the program for the first time.  \n</p><p>Making a prediction forces you to study the code and use your intuitions based on what you already know. Even experienced programmers might disagree about what a piece of code would do!  So making a prediction is not like some sort of test about how smart you are.  <strong>By making a prediction first, when you run the code you learn so much more whether you were right, wrong or somewhere in between.  You construct a stronger mental model for how code works than if you just ran the program to see what happened.</strong></p>\n<p>  So let's try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\" align=right>Here is a piece of code with two buttons and two event handlers.  Notice that both buttons still have the default IDs of \"id\". You will need to fix this because we know it causes a warning message.  But it turns out the program can still run and it does do <i>something.</i></p>\n<p><strong>What do you think will happen with this code is run?</strong></p>"
+        Make a prediction: Make a prediction
+        When the "forward" button is clicked The turtle will only move forward: When the "forward" button is clicked The turtle will only move forward
+        'When the "forward" button is clicked: The turtle will only turnLeft forward': 'When the "forward" button is clicked: The turtle will only turnLeft forward'
+        'When the "forward" button is clicked: nothing will happen': 'When the "forward" button is clicked: nothing will happen'
+        'When the "left" button is clicked: The turtle will move forward and turn left': 'When the "left" button is clicked: The turtle will move forward and turn left'
+        'When the "left" button is clicked: The turtle will only move forward': 'When the "left" button is clicked: The turtle will only move forward'
+        'When the "left" button is clicked: The turtle will only turnLeft forward': 'When the "left" button is clicked: The turtle will only turnLeft forward'
+        'When the "left" button is clicked: nothing will happen': 'When the "left" button is clicked: nothing will happen'
+        'When the forward button is clicked: The turtle will move forward and turn left': 'When the forward button is clicked: The turtle will move forward and turn left'
+        description here: description here
+      U3L13 debugging Multi:
+        A program that does not generate any error messages will run as intended: A program that does not generate any error messages will run as intended
+        Debugging is the process of locating and correcting errors in a program: Debugging is the process of locating and correcting errors in a program
+        Error messages help programmers identify problems in their code: Error messages help programmers identify problems in their code
+        It is common for programs to contain errors the first time they are written: It is common for programs to contain errors the first time they are written
+        Multiple Choice - Debugging and Error Messages: Multiple Choice - Debugging and Error Messages
+        Not all errors in a program will generate an error message: Not all errors in a program will generate an error message
+        Which of the following statements about debugging and program errors is FALSE?: Which of the following statements about debugging and program errors is FALSE?
       U3L14 - MC Duplicate Ids:
         A warning message will appear for the second button that that id is already in use: A warning message will appear for the second button that that id is already in use
         Buttons and Ids: Buttons and Ids

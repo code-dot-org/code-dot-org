@@ -15,6 +15,19 @@ title: <%= hoc_s(:title_country_resources) %> layout: wide nav: promote_nav
 
 p>[**¿Por qué todos tienen que aprender a programar? Participá de la Hora del Código en Argentina (5 min)**](https://www.youtube.com/watch?v=HrBh2165KjE)
 
+  
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6Wpb-WyQ)
+
+<% elsif @country == 'ca' %>
+
+## Vídeos <iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -53,7 +66,7 @@ Muestran a los estudiantes un video inspiracional para dar comienzo a la Hora de
 
   * El vídeo original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
-  * [El llamado del presidente Obama a que todos los estudiantes aprendan Ciencias de la Computación](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * [El presidente Obama anima a todos los estudiantes a aprender Ciencias de la Computación](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Emociona a los estudiantes - Dales una introducción corta**
 

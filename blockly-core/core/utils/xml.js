@@ -277,7 +277,7 @@ Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
 
         block.moveBy(blockX, blockY);
       } else {
-        if (block.isUserVisible()) {
+        if (block.isVisible()) {
           positionBlock(block);
         } else {
           hiddenBlocks.push(block);
@@ -327,6 +327,10 @@ Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {
   var editable = xmlBlock.getAttribute('editable');
   if (editable) {
     block.setEditable(editable === 'true');
+  }
+  var next_connection_disabled = xmlBlock.getAttribute('next_connection_disabled');
+  if (next_connection_disabled) {
+    block.setNextConnectionDisabled(next_connection_disabled === 'true');
   }
   var userVisible = xmlBlock.getAttribute('uservisible');
   if (userVisible) {
