@@ -24,17 +24,15 @@ theme: pdf
     Support K-12 Computer Science Education in 
     = state_info[:state_name_s]
 
-  %div Computer science drives job growth and innovation throughout our economy and society. Computing occupations make up two-thirds of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. 75 percent of U.S. schools don’t even offer computer science and only 8% of STEM graduates study it. We need to improve access for all students, including groups who have traditionally been underrepresented.
-  %br
+  %div{style: "width: 500px; float: left;"} Computer science drives job growth and innovation throughout our economy and society. Computing occupations make up two-thirds of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. 75 percent of U.S. schools don’t even offer computer science and only 8% of STEM graduates study it. We need to improve access for all students, including groups who have traditionally been underrepresented.
 
-  %div
+  %div{style: "float: left; padding-left: 5px;"}
+    %img{src: "/images/charts/computing_jobs.png", style: "width: 200px;"}
+    %img{src: "/images/charts/computing_degrees.png", style: "width: 200px;"}
+
+  %div{style: "clear: both; padding-top: 30px;"}
     %center
-      %img{src: "/images/charts/computing_jobs.png", style: "width: 200px;"}
-      %img{src: "/images/charts/computing_degrees.png", style: "width: 200px;"}
-      %h3 9 in 10 parents want their students to learn computer science, but only 1 in 4 schools teaches it.
-      %img{src: "/images/charts/learn_cs.png", style: "width: 200px;"}
-      %img{src: "/images/charts/schools_teach.png", style: "width: 200px;"}
-
+      %h3 9 in 10 parents want their students to learn computer science, but only 1 in 4 schools teach it.
 
   %div
     %h2
@@ -118,20 +116,25 @@ theme: pdf
         - if state_param != 'ND'
           There are fewer AP exams taken in computer science than in any other STEM subject area.
 
-  %div
-    %h2 What can you do to improve K-12 CS education? 
-    %ol
-      %li
-        %a{href: "https://code.org/promote/letter"}
-          Call
-        on your school to expand computer science offerings at every grade level.
-      %li Ask your local school district to allow computer science courses to satisfy a core math or science requirement.
-      %li
-        Visit
-        %a{href: state_info[:website_url_s]}= state_info[:website_url_s]
-        to learn more about supporting computer science in your state.
+  %div{style: "padding: 30px 0px 30px 0px;"}
+    %div{style: "float: left; padding-right: 20px; padding-bottom: 40px;"}
+      %img{src: "/images/charts/learn_cs.png", style: "width: 200px;"}
+      %img{src: "/images/charts/schools_teach.png", style: "width: 200px;"}
 
-  %div
+    %div{style: "float: left; width: 500px;"}
+      %h2{style: "margin-top: 0px;"} What can you do to improve K-12 CS education? 
+      %ol
+        %li
+          %a{href: "https://code.org/promote/letter"}
+            Call
+          on your school to expand computer science offerings at every grade level.
+        %li Ask your local school district to allow computer science courses to satisfy a core math or science requirement.
+        %li
+          Visit
+          %a{href: state_info[:website_url_s]}= state_info[:website_url_s]
+          to learn more about supporting computer science in your state.
+
+  %div{style: "clear: both;"}
     %h2
       Code.org Impact in
       = state_info[:state_name_s]
