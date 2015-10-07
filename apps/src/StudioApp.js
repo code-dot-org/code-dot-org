@@ -1,5 +1,19 @@
 /* global Blockly, ace:true, droplet, marked, digestManifest, dashboard */
 
+/**
+ * For the most part, we depend on dashboard providing us with React as a global.
+ * However, there is at least one context in which this won't be true - when we
+ * show feedback blocks in their own iframe. In that case, load React from
+ * our module.
+ * This approach has a couple of drawbacks
+ * (1) ability for dashboard React and apps React versions to get out of sync
+ * (2) if we end up in other cases where React isn't provided to us as a global
+ *     we probably won't notice, which may not be intended behavior
+ */
+if (!window.React) {
+  window.React = require('react');
+}
+
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
@@ -14,6 +28,7 @@ var url = require('url');
 var FeedbackUtils = require('./feedback');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
+var codegen = require('./codegen');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -485,6 +500,9 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
       resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
     }
     this.editor.setValue(resetValue);
+  }
+  if (config.afterClearPuzzle) {
+    config.afterClearPuzzle();
   }
 };
 
@@ -1083,7 +1101,12 @@ StudioApp.prototype.highlight = function(id, spotlight) {
 * Remove highlighting from all blocks
 */
 StudioApp.prototype.clearHighlighting = function () {
-  this.highlight(null);
+  if (this.isUsingBlockly()) {
+    this.highlight(null);
+  } else if (this.editCode && this.editor) {
+    // Clear everything (step highlighting, errors, etc.)
+    codegen.clearDropletAceHighlighting(this.editor, true);
+  }
 };
 
 /**

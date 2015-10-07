@@ -80,5 +80,6 @@
   "whileTooltip": "உள்ளடக்கப்பட்ட செயல்களை மீண்டும் செய், புள்ளியை அடையும் வரை.",
   "word": "சொல்லை கண்டறி",
   "yes": "ஆம்",
-  "youSpelled": "நீங்கள் உச்சரித்து"
+  "youSpelled": "நீங்கள் உச்சரித்து",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }
