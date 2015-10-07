@@ -169,9 +169,9 @@ hu:
   prizes_nav_hardware: Hardware prize signup
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Hogyan vezess le egy Kódolás Órája eseményt</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Népszerűsítsd a Kódolás Óráját</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
@@ -242,6 +242,7 @@ hu:
   map_header: '# Kódolás Órája esemény szerte a nagyvilágban'
   see_all_events: See all events
   map_header_company: '# cégek szervezésében'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Kódolás órája események keresése
   map_search_search: Keresés
   map_search_reset: Visszaállít
@@ -285,15 +286,15 @@ hu:
   hoc_faq_why_cs_q: Miért számítástechnika?
   hoc_faq_why_cs_a: "<i>Minden</i> diáknak meg kellene kapnia a lehetőséget, hogy számítástechnikát tanuljon. Segít a problémamegoldó képesség, a logika és a kreativitás fejlesztésében. A korai kezdéssel a diákok olyan tudáshoz jutnak, ami bármilyen 21. századi karrierpályán biztosítja a siker alapjait. További statisztikák a <a href='http://code.org'>Code.org</a> oldalon."
   hoc_faq_how_participate_q: Hogyan vehetek részt a Kódolás Órája eseményen?
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Ki áll a Kódolás Órája mögött?
   hoc_faq_behind_hoc_a: "A Kódolás Órája szervezője a <a href='http://code.org'>Code.org</a>, egy nyilvános (501c3) non-profit szervezet. A Code.org célja, hogy a számítástechnikát több iskolában elérhetővé téve segítsen a használatának terjedésében, miközben növeli a nők és az alulreprezentált kisebbségek részvételét. A Kódolás Órája projekt támogatására egy <a href='http://code.org/about/partners'>példanélküli együttműködés</a> alakult ki olyan résztvevőkkel, mint a Microsoft, az Apple, az Amazon, a Boys and Girls Clubs of America és a College Board."
   hoc_faq_host_q: Nem tudok semmit a kódolásról. Így is szervezhetek eseményt?
-  hoc_faq_host_a: "Természetesen. A Kódolás Órája tevékenységek önállóan is végezhetők. Mindössze annyi teendőd van, hogy <a href='http://code.org/learn'>kipróbálja az aktuális oktatóanyagokat</a>, kiválasztod a neked tetsző anyagot és kijelölöd az időpontot &mdash; minden mást mi intézünk. Óvodától felfelé minden korra és tudásszintre van megrelelő anyagunk. Kezdj hozzá a tervezésnek az <a href='target-resources-how-to'>útmutató</a> elolvasásával."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Minden résztvevőnek szüksége lesz számítógépre?
   hoc_faq_need_computers_a: "Nem. Az oktatóanyagok között van olyan, ami számítógépen, telefonon vagy táblagépen működik, de akad olyan is, amihez egyáltalán nincs szükség számítógépre. Csatlakozhatsz bárhonnan bármilyen eszközzel.<p><i>Íme néhány opció:</i><br><ul><li><b>Dolgozzatok párokban.</b>Kutatások azt mutatják, hogy a diákok úgy tanulnak a legjobban, ha <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>párokban programoznak</a>, megosztják a számítógépet és együtt dolgoznak.<li><b>Használj kivetítőt</b> Ha van egy projektorod, amire egy internetre kötött számítógép képét ki tudod vetíteni, akkor a Kódolás Óráját egy egész csoport is együtt tudja csinálni. Nézzétek megy együtt a videókat és felváltva próbálják meg a gyerekek megoldani a problémákat vagy megválaszolni a kérdéseket.<li><b>Tedd el a gépet</b> Olyan anyagokat is kínálunk, amelyekhez egyáltalán nincs szükség számítógépre.</ul>"
   hoc_faq_international_q: 'Lakhelyem <country>. Hogyan vehetek részt nemzetközileg?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Hogyan készítsek Kódolás Órája oktatóanyagot?
   hoc_faq_tutorial_a: "Ha szeretnél partner lenni az oktatóanyagok kialakításában, akkor <a href='target-tutorial-guidelines'>nézd meg az útmutatóinkat</a>. Szeretnénk egy sor vonzó lehetőséget kínálni, de az elsődleges cél, hogy a számítástechnikával most ismerkedő diákok és tanárok számára optimalizáljuk a rendszert."
   hoc_faq_more_questions_q: További kérdéseid vannak?

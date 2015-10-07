@@ -93,7 +93,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 ## 7) Festo
 
   * [Printo certifikatat](%= resolve_url('https://code.org/certificates') %) për studentët e tu.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/resources/promote#stickers') %) stickers.
+  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
   * Shpërnda fotot dhe videot e Orës tuaj të Kodit në mediat sociale. Përdorimi #HourOfCode dhe @codeorg kështu që ne mund të nxjerrim në pah suksesin tuaj!
 
 [col-33]

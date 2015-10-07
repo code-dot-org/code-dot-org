@@ -9,7 +9,7 @@ crwdns49186:0crwdne49186:0
 ## crwdns49188:0crwdne49188:0
 
   * crwdns49189:0crwdne49189:0 <%= campaign_date('short') %>.
-  * crwdns49190:0crwdne49190:0
+  * crwdns50259:0crwdne50259:0
 
 ## crwdns49191:0crwdne49191:0 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## crwdns49192:0crwdne49192:0
@@ -91,7 +91,7 @@ crwdns49232:0[/col-33]crwdne49232:0
 ## crwdns49233:0crwdne49233:0
 
   * crwdns49234:0crwdne49234:0
-  * crwdns49235:0crwdne49235:0
+  * crwdns50260:0crwdne50260:0
   * crwdns49236:0crwdne49236:0
 
 crwdns49237:0[col-33]crwdne49237:0

@@ -16,18 +16,18 @@ Your whole school is now entered to win a class-set of laptops (or $10,000 for o
 
 ## 2. სთხოვეთ მთელ თქვენს სკოლას კოდის საათის ჩატარება
 
-[Send this email](%= resolve_url('/resources#email') %) to your principal.
+[Send this email](%= resolve_url('/promote/resources#email') %) to your principal.
 
 ## 3. მიმართეთ თქვენს დამსაქმებელს რომ იმონაწილეოს
 
-[Send this email](%= resolve_url('/resources#email') %) to your manager, or the CEO.
+[Send this email](%= resolve_url('/promote/resources#email') %) to your manager, or the CEO.
 
 ## 4. გაუკეთეთ რეკლამა კოდის საათს თქვენს საზოგადოებაში
 
-ჩარტეთ ადგილობრივი ჯგუფი - ბიჭების/გოგოების სკაუტების კლუბი, ეკლესია, უნივერსიტეტი, ვეტერანთა ან სამუშაო გაერთიანება. ან ჩაატარეთ კოდის საათის "ბლოკის წვეულება" თქვენს მიდამოში. [Send this email](%= resolve_url('/resources#email') %).
+ჩარტეთ ადგილობრივი ჯგუფი - ბიჭების/გოგოების სკაუტების კლუბი, ეკლესია, უნივერსიტეტი, ვეტერანთა ან სამუშაო გაერთიანება. ან ჩაატარეთ კოდის საათის "ბლოკის წვეულება" თქვენს მიდამოში. [Send this email](%= resolve_url('/promote/resources#email') %).
 
 ## 5. მიმართეთ თქვენს ადგილობრივ ოფიციალური თანამდებობის პირს, მხარი დაუჭიროს კოდის საათს
 
-[Send this email](%= resolve_url('/resources#politicians') %) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](%= resolve_url('/promote/resources#politicians') %) to your mayor, city council, or school board and invite them to visit your school.
 
 <%= view :signup_button %>

@@ -16,12 +16,12 @@ Sedie um evento da Hora do Código durante a Semana da Educação em Ciência da
 
   * Defina um local, data e hora
   * Envie [uma carta](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) para convidar o prefeito de sua cidade, um deputado, governador ou um empresário influente para falar no evento.
-  * Convide a imprensa, isto é, a rádio ou TV local, jornal, blogueiro, etc. Consulte nosso [kit para a imprensa](<%= resolve_url('/resources/press-kit') %>) para ter mais informações.
+  * Convide a imprensa, isto é, a rádio ou TV local, jornal, blogueiro, etc. Consulte nosso [kit para a imprensa](<%= resolve_url('/promote/press-kit') %>) para ter mais informações.
 
 ## 2) Durante seu evento
 
-  * Comece seu evento com um de nossos [vídeos inspiradores](<%= resolve_url('/promote#videos') %>).
-  * Faça uma introdução falando sobre a importância da ciência da computação, usando estes [infográficos e estatísticas](<%= resolve_url('/resources/stats') %>).   
+  * Comece seu evento com um de nossos [vídeos inspiradores](<%= resolve_url('/promote/resources#videos') %>).
+  * Faça uma introdução falando sobre a importância da ciência da computação, usando estes [infográficos e estatísticas](<%= resolve_url('/promote/stats') %>).   
       
     
   * Outras ideias para o evento: 
@@ -52,8 +52,8 @@ Sedie um evento da Hora do Código durante a Semana da Educação em Ciência da
 
 | Hora          | Ação                                                                                                                                                           |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10h00 - 10h05 | Comece com um de nossos [vídeos inspiradores](<%= resolve_url('/promote#videos') %>)                                                                             |
-| 10h05 - 10h15 | Faça uma introdução falando sobre a importância da ciência da computação. Use estes [infográficos e estatísticas](<%= resolve_url('/resources/stats') %>)      |
+| 10h00 - 10h05 | Comece com um de nossos [vídeos inspiradores](<%= resolve_url('/promote/resources#videos') %>)                                                                   |
+| 10h05 - 10h15 | Faça uma introdução falando sobre a importância da ciência da computação. Use estes [infográficos e estatísticas](<%= resolve_url('/promote/stats') %>)        |
 | 10h15 - 10h30 | Um convidado especial falará sobre sua experiência e sobre como a tecnologia e a ciência da computação desempenham um importante papel em sua vida cotidiana.  |
 | 10h30 - 10h40 | Os alunos farão uma demonstração da Hora do Código para a escola. Inversão de papéis: eles deverão ensinar o diretor, representante político ou outros alunos. |
 | 10h40 - 11h00 | Os alunos farão a demonstração de uma atividade offline para mostrar como a ciência da computação pode ser ensinada sem o uso de computadores.                 |

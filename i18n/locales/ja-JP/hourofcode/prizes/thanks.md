@@ -16,18 +16,18 @@ Your whole school is now entered to win a class-set of laptops (or $10,000 for o
 
 ## 2. Hour of Codeを主催するよう学校と交渉しましょう。
 
-[Send this email](%= resolve_url('/resources#email') %) to your principal.
+[Send this email](%= resolve_url('/promote/resources#email') %) to your principal.
 
 ## 3. 雇用主にも参加するよう聞いてみてください。
 
-[Send this email](%= resolve_url('/resources#email') %) to your manager, or the CEO.
+[Send this email](%= resolve_url('/promote/resources#email') %) to your manager, or the CEO.
 
 ## 4. Promote the Hour of Code in your community
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. もしくは、周囲に住む人と一緒にHour of Code"パーティ"をしてみても面白いでしょう。 [Send this email](%= resolve_url('/resources#email') %).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. もしくは、周囲に住む人と一緒にHour of Code"パーティ"をしてみても面白いでしょう。 [Send this email](%= resolve_url('/promote/resources#email') %).
 
 ## 5. 地元選出の議員にもHour of Codeのサポートをお願いしましょう
 
-[Send this email](%= resolve_url('/resources#politicians') %) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](%= resolve_url('/promote/resources#politicians') %) to your mayor, city council, or school board and invite them to visit your school.
 
 <%= view :signup_button %>
