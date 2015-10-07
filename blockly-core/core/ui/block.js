@@ -1550,11 +1550,13 @@ Blockly.Block.prototype.isVisible = function () {
   var visibleThroughParent = !this.parentBlock_ || this.parentBlock_.isVisible();
   var visible = visibleThroughParent && !this.isCurrentlyHidden_();
 
-  if (!Blockly.editBlocks) {
-    visible = visible && this.isUserVisible();
+  if (Blockly.editBlocks) {
+    // If we're in edit mode, we're not a "user", so we don't care if
+    // the block isUserVisible or not.
+    return visible;
   }
 
-  return visible;
+  return visible && this.isUserVisible();
 };
 
 /**
