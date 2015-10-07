@@ -289,18 +289,18 @@ function loadHoc2015(skin, assetUrl) {
   skin.gridSpriteRenderOffsetX = -30;
   skin.gridSpriteRenderOffsetY = -40;
 
-  skin.avatarList = ['character1', 'character2'];
+  skin.avatarList = ['bot1', 'bot2'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: name == 'character1' ? 14 : 16,
+        normal: name == 'bot1' ? 14 : 16,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: name == 'character1' ? 14 : 8
+        walk: name == 'bot1' ? 14 : 8
       },
       timePerFrame: 100
     };
@@ -464,8 +464,8 @@ function loadHoc2015(skin, assetUrl) {
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
     [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteCharacter1(), '"character1"'],
-    [msg.setSpriteCharacter2(), '"character2"']];
+    [msg.setSpriteBot1(), '"bot1"'],
+    [msg.setSpriteBot2(), '"bot2"']];
 
   skin.projectileChoices = [];
 

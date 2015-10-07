@@ -80,5 +80,6 @@
   "whileTooltip": "Ponavlja umetnute akcije dok se ne dosegne zadani cilj.",
   "word": "Pronađi riječ",
   "yes": "Da",
-  "youSpelled": "Napisano je"
+  "youSpelled": "Napisano je",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }
