@@ -84,6 +84,7 @@ sub vcl_recv
   }C
 
 ### EXTRACT COOKIE HEADERS
+if(req.http.Cookie) {
   cookie.parse(req.http.Cookie);
 <% node['cdo-varnish']['cookie_headers'].to_hash.each do |cookie, header| %>
   if(cookie.isset("<%= cookie %>")) {
@@ -91,6 +92,7 @@ sub vcl_recv
     cookie.delete("<%= cookie %>");
   }
 <%end%>
+}
 ###
 
 ### PROXIES
@@ -99,10 +101,10 @@ sub vcl_recv
 ###
 
 ### REQUEST COOKIE FILTER
-# Only apply cookie filter to cached HTTP methods.
-if(req.method == "GET" || req.method == "HEAD") {
-<%= setup_behavior config, 'request' %>
-  if (req.http.Cookie) {
+if (req.http.Cookie) {
+  # Only apply cookie filter to cached HTTP methods.
+  if(req.method == "GET" || req.method == "HEAD") {
+  <%= setup_behavior config, 'request' %>
     set req.http.Cookie = cookie.get_string();
     if (req.http.Cookie == "") {
       unset req.http.Cookie;
