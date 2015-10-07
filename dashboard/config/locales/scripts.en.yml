@@ -640,6 +640,11 @@ en:
           Creating Functions: Creating Functions
           Functions and Top-Down Design: Functions and Top-Down Design
           Design a Digital Scene: Design a Digital Scene
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Introducing Design Mode: Introducing Design Mode
+          Clicker Game: Clicker Game
+          Getting User Input: Getting User Input
+          Variables: Variables
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
