@@ -1573,12 +1573,9 @@ var preloadImage = function(url) {
 };
 
 var preloadBackgroundImages = function() {
-  // TODO (cpirich): preload for non-blockly
-  if (studioApp.isUsingBlockly()) {
-    var imageChoices = skin.backgroundChoicesK1;
-    for (var i = 0; i < imageChoices.length; i++) {
-      preloadImage(imageChoices[i][0]);
-    }
+  var imageChoices = skin.backgroundChoicesK1;
+  for (var i = 0; i < imageChoices.length; i++) {
+    preloadImage(imageChoices[i][0]);
   }
 };
 
@@ -3277,6 +3274,17 @@ Studio.setScoreText = function (opts) {
 };
 
 Studio.setBackground = function (opts) {
+  if (opts.value === constants.RANDOM_VALUE) {
+    // NOTE: never select the last item from backgroundChoicesK1, since it is
+    // presumed to be the "random" item for blockly
+    // NOTE: the [1] index in the array contains the name parameter with an
+    // additional set of quotes
+    var quotedBackground = skin.backgroundChoicesK1[
+        Math.floor(Math.random() * (skin.backgroundChoicesK1.length - 1))][1];
+    // Remove the outer quotes:
+    opts.value = quotedBackground.replace(/^"(.*)"$/, '$1');
+  }
+
   if (opts.value !== Studio.background) {
     Studio.background = opts.value;
 
@@ -3387,6 +3395,11 @@ Studio.fixSpriteLocation = function () {
 Studio.setSprite = function (opts) {
   var spriteIndex = opts.spriteIndex;
   var sprite = Studio.sprite[spriteIndex];
+
+  if (opts.value === constants.RANDOM_VALUE) {
+    opts.value = skin.avatarList[Math.floor(Math.random() * skin.avatarList.length)];
+  }
+
   var spriteValue = opts.value;
 
   var spriteIcon = document.getElementById('sprite' + spriteIndex);
