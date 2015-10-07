@@ -434,7 +434,7 @@ function loadHoc2015(skin, assetUrl) {
       skin[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl('wall.ogg')];
       studioApp.loadAudio(skin[sound], sound);
     }
-  }
+  };
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   skin.wallChoices = [
