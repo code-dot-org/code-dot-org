@@ -20,7 +20,7 @@ Organizar el evento "Hora de Código" durante la Semana de la Educación de Cien
 
 ## 2) Durante tu evento.
 
-  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote#videos') %>).
+  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
   * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/promote/stats') %>).   
       
     
@@ -52,7 +52,7 @@ Organizar el evento "Hora de Código" durante la Semana de la Educación de Cien
 
 | Hora             | Acción                                                                                                                                                                                 |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote#videos') %>)                                                                                                       |
+| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>)                                                                                             |
 | 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>)                                        |
 | 10:15 - 10:30 am | Un invitado especial habla acerca de su historia y cómo la tecnología y las ciencias de computación juegan un papel importante en sus quehaceres diarios.                              |
 | 10:30 - 10:40 am | Los estudiantes hacen una demostración de la Hora de Código para la escuela. Como actividad divertida, haz que los estudiantes le enseñen al director, político o a otros estudiantes. |
