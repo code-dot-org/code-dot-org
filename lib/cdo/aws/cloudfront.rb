@@ -129,6 +129,8 @@ module AWS
           hash[:items] = error_codes.map do |error|
             {
               error_code: error,
+              response_code: '',
+              response_page_path: '',
               error_caching_min_ttl: 0
             }
           end
