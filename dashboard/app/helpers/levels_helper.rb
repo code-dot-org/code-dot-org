@@ -272,6 +272,11 @@ module LevelsHelper
       level_options['submittable'] = false
     end
 
+    if app_options[:share]
+      app_options[:droplet] = false
+      level_options["editCode"] = false
+    end
+
     # Request-dependent option
     app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
@@ -288,7 +293,6 @@ module LevelsHelper
         :trademark => URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
       }
     end
-
     app_options
   end
 
