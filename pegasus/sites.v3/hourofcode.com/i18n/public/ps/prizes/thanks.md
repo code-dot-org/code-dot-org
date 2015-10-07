@@ -32,18 +32,18 @@ Your whole school is now entered to win a class-set of laptops (or $10,000 for o
 
 ## ۲. له ټول ښوونځي مو وغواړئ، چې د کوډ ساعت ترتيب کړي
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your principal.
+[Send this email](<%= resolve_url('/promote/resources#email') %>) to your principal.
 
 ## 3. Ask your employer to get involved
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your manager, or the CEO.
+[Send this email](<%= resolve_url('/promote/resources#email') %>) to your manager, or the CEO.
 
 ## 4. Promote the Hour of Code in your community
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](<%= resolve_url('/resources#email') %>).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](<%= resolve_url('/promote/resources#email') %>).
 
 ## 5. Ask a local elected official to support the Hour of Code
 
-[Send this email](<%= resolve_url('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](<%= resolve_url('/promote/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
 
 <%= view :signup_button %>

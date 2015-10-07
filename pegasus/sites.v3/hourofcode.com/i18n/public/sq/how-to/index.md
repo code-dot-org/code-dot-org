@@ -11,7 +11,7 @@ nav: how_to_nav
 ## 1) Regjistrohu
 
   * Regjistrohu për të organizuar një [Orë Kodimi](<%= resolve_url('/') %>) gjatë <%= campaign_date('short') %>.
-  * Promovoni [Orën tuaj të Kodimit](<%= resolve_url('/resources') %>) dhe inkurajoni të tjerët për ta organizuar.
+  * Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
 
 ## 2) Ndiqni këtë video udhëzuese <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Zgjidh një tutorial:
@@ -93,7 +93,7 @@ Eksperienca më e mirë e Orës së Kodimit do të ishte me kompjutera të lidhu
 ## 7) Festo
 
   * [Printo certifikatat](<%= resolve_url('https://code.org/certificates') %>) për studentët e tu.
-  * [Printo ngjitëset "Unë bëra Orën e Kodimit!"](<%= resolve_url('/resources/promote#stickers') %>) për studentët e tu.
+  * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
   * Shpërnda fotot dhe videot e Orës tuaj të Kodit në mediat sociale. Përdorimi #HourOfCode dhe @codeorg kështu që ne mund të nxjerrim në pah suksesin tuaj!
 
 [col-33]
