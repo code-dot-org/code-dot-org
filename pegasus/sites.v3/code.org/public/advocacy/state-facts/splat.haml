@@ -27,11 +27,11 @@ theme: pdf
 
   %div
     %center
-      %img{src: "/images/charts/computing_jobs.png", style: "width: 300px;"}
-      %img{src: "/images/charts/computing_degrees.png", style: "width: 300px;"}
+      %img{src: "/images/charts/computing_jobs.png", style: "width: 200px;"}
+      %img{src: "/images/charts/computing_degrees.png", style: "width: 200px;"}
       %h3 9 in 10 parents want their students to learn computer science, but only 1 in 4 schools teaches it.
-      %img{src: "/images/charts/learn_cs.png", style: "width: 300px;"}
-      %img{src: "/images/charts/schools_teach.png", style: "width: 300px;"}
+      %img{src: "/images/charts/learn_cs.png", style: "width: 200px;"}
+      %img{src: "/images/charts/schools_teach.png", style: "width: 200px;"}
 
 
   %div
@@ -58,29 +58,61 @@ theme: pdf
           = format_integer_with_commas(state_info[:avg_sal_all_i])
       %li
         = format_integer_with_commas(state_info[:cs_graduates_i])
-        computer science graduates in 2015; only
-        = succeed "%" do
-          = state_info[:percent_female_cs_grad_i]
+        - if state_info[:cs_graduates_i] == 1
+          computer science graduate in 2015;
+        - else 
+          computer science graduates in 2015;
+        - if state_info[:percent_female_cs_grad_i] == 0
+          none
+        - else 
+          only
+          = succeed "%" do
+            = state_info[:percent_female_cs_grad_i]
         were female.
       %li
-        = format_integer_with_commas(state_info[:ap_cs_exams_i])
-        high school students took the AP Computer Science exam in 2014; only
-        = succeed "%" do
-          = state_info[:percent_ap_female_i]
-        were female; only
-        = format_integer_with_commas(state_info[:ap_hispanic_i])
-        were Hispanic; only
-        = format_integer_with_commas(state_info[:ap_black_i])
-        were black.
+        - if state_info[:ap_cs_exams_i] == 0
+          = format_integer_with_commas(state_info[:ap_cs_exams_i])
+          high school students took the AP Computer Science exam in 2014.
+        - else
+          = format_integer_with_commas(state_info[:ap_cs_exams_i])
+          high school students took the AP Computer Science exam in 2014;
+          - if state_info[:percent_ap_female_i] != 0
+            only
+            = succeed "%" do
+              = state_info[:percent_ap_female_i]
+          - else 
+            none
+          were female;
+          - if state_info[:ap_hispanic_i] != 0
+            only
+            = format_integer_with_commas(state_info[:ap_hispanic_i])
+          - else 
+            none
+          were Hispanic;
+          - if state_info[:ap_black_i] != 0
+            only
+            = format_integer_with_commas(state_info[:ap_black_i])
+          - else 
+            none
+          were black.
       %li
-        Only
-        = format_integer_with_commas(state_info[:schools_ap_cs_i])
-        schools in 
-        = state_info[:state_code_s]
-        = surround "(", "% of" do
-          = state_info[:percent_schools_ap_cs_i]
-        = state_info[:state_code_s]
-        schools with AP programs) offered the AP Computer Science course in 2013-2014.
+        - if state_info[:schools_ap_cs_i] != 0
+          Only
+          = format_integer_with_commas(state_info[:schools_ap_cs_i])
+          - if state_info[:schools_ap_cs_i] == 1
+            school
+          - else
+            schools
+          in 
+          = state_info[:state_code_s]
+          = surround "(", "% of" do
+            = state_info[:percent_schools_ap_cs_i]
+          = state_info[:state_code_s]
+          schools with AP programs) offered the AP Computer Science course in 2013-2014.
+        - else
+          No schools in 
+          = state_info[:state_code_s]
+          offered the AP Computer Science course in 2013-2014.
         - if state_param != 'ND'
           There are fewer AP exams taken in computer science than in any other STEM subject area.
 
@@ -107,18 +139,43 @@ theme: pdf
         = succeed '.' do
           = state_info[:school_district_partners_t]
       %li
-        = format_integer_with_commas(state_info[:num_affiliates_i])
-        Code.org affiliates offering professional development for elementary teachers in
-        = state_info[:state_name_s]
-        have already trained
-        = format_integer_with_commas(state_info[:num_elementary_trained_i])
-        elementary teachers.
+        - if state_info[:num_affiliates_i] == 0
+          There are no Code.org affiliates in the state to offer professional development for elementary teachers.
+        - else
+          - if state_info[:num_elementary_trained_i] == 0
+            [num_affiliates_i] Code.org affiliates offers professional development for elementary teachers in [State name]
+          - else
+            = format_integer_with_commas(state_info[:num_affiliates_i])
+            Code.org
+            - if state_info[:num_affiliates_i] == 1
+              affiliate
+            - else 
+              affiliates
+            offering professional development for elementary teachers in
+            = state_info[:state_name_s]
+            have already trained
+            = format_integer_with_commas(state_info[:num_elementary_trained_i])
+            elementary
+            - if state_info[:num_elementary_trained_i] == 1 
+              teacher.
+            - else
+              teachers.
       %li
         Code.org has trained
         = format_integer_with_commas(state_info[:num_ms_trained_i])
-        middle school teachers and
+        middle school
+        - if state_info[:num_ms_trained_i] == 1
+          teacher
+        - else
+          teachers
+        and
         = format_integer_with_commas(state_info[:num_hs_trained_i])
-        high school teachers in
+        high school
+        - if state_info[:num_hs_trained_i] == 1
+          teacher
+        - else
+          teachers
+        in
         = state_info[:state_name_s]
         to teach computer science. 
     %p 
@@ -136,7 +193,7 @@ theme: pdf
     %p
       %h2 What can your state do to improve computer science education?
       Here are 8 key policies that help to provide all students with access to computer science.
-    %div
+    %div.policies
 
       %div.policy-item
         - if state_info[:cs_standards_s] == 'Yes'
@@ -249,6 +306,8 @@ theme: pdf
       and
       = succeed "." do
         %a{href: "https://twitter.com/codeorg"} Twitter
-    %p Code.org, a public 501c3 nonprofit, also organizes Computer Science Education Week (CSEdWeek), which is the awareness-building activity of the computer science education community. Code.org’s corporate sponsors include Microsoft, Google, Infosys, Amazon, Disney, Facebook, Salesforce, Expedia, Juniper Networks, Workday, Bestbuy, JP Morgan Chase, and Symantec. A list of all supporters can be found at code.org/about/donors.
-    %p Data is from the Conference Board, the Bureau of Labor Statistics, the College Board, the National Science Foundation, the National Center for Education Statistics, and the Gallup research study Searching for Computer Science: Access and Barriers in K-12 Education. 
+    %div
+      %img{src: "/images/logo_2x.png", style: "width: 100px; float: left; padding-right: 10px; padding-bottom: 20px;"}
+      %p Code.org, a public 501c3 nonprofit, also organizes Computer Science Education Week (CSEdWeek), which is the awareness-building activity of the computer science education community. Code.org’s corporate sponsors include Microsoft, Google, Infosys, Amazon, Disney, Facebook, Salesforce, Expedia, Juniper Networks, Workday, Bestbuy, JP Morgan Chase, and Symantec. A list of all supporters can be found at code.org/about/donors.
+    %p{style: "clear: both;"} Data is from the Conference Board, the Bureau of Labor Statistics, the College Board, the National Science Foundation, the National Center for Education Statistics, and the Gallup research study Searching for Computer Science: Access and Barriers in K-12 Education. 
 
