@@ -14,8 +14,8 @@ exports.setBackground = function (id, value) {
   Studio.queueCmd(id, 'setBackground', {'value': value});
 };
 
-exports.setWalls = function (id, value) {
-  Studio.queueCmd(id, 'setWalls', {'value': value});
+exports.setMap = function (id, value) {
+  Studio.queueCmd(id, 'setMap', {'value': value});
 };
 
 exports.setSprite = function (id, spriteIndex, value) {
@@ -131,6 +131,13 @@ exports.setItemActivity = function(id, className, type) {
   Studio.queueCmd(id, 'setItemActivity', {
     'className': className,
     'type': type
+  });
+};
+
+exports.setItemSpeed = function(id, className, speed) {
+  Studio.queueCmd(id, 'setItemSpeed', {
+    'className': className,
+    'speed': speed
   });
 };
 

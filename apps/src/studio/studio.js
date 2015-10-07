@@ -113,12 +113,12 @@ var AUTO_HANDLER_MAP = {
   whenUp: 'when-up',
   whenLeft: 'when-left',
   whenRight: 'when-right',
-  whenTouchItem: 'whenSpriteCollided-' +
-                  (Studio.protagonistSpriteIndex || 0) +
-                  '-any_item',
-  whenTouchWall: 'whenSpriteCollided-' +
-                  (Studio.protagonistSpriteIndex || 0) +
-                  '-wall',
+  whenTouchCharacter: 'whenSpriteCollided-' +
+      (Studio.protagonistSpriteIndex || 0) +
+      '-any_item',
+  whenTouchObstacle: 'whenSpriteCollided-' +
+      (Studio.protagonistSpriteIndex || 0) +
+      '-wall',
 };
 
 // Default Scalings
@@ -166,7 +166,7 @@ var twitterOptions = {
 function loadLevel() {
   // Load maps.
   Studio.map = level.map;
-  Studio.walls = null;
+  Studio.wallMap = null;
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.slowJsExecutionFactor = level.slowJsExecutionFactor || 1;
   Studio.ticksBeforeFaceSouth = Studio.slowJsExecutionFactor +
@@ -1241,8 +1241,8 @@ Studio.getWallValue = function (row, col) {
     return 0;
   }
 
-  if (Studio.walls) {
-    return skin[Studio.walls] ? (skin[Studio.walls][row][col] << constants.WallCoordsShift): 0;
+  if (Studio.wallMap) {
+    return skin[Studio.wallMap] ? (skin[Studio.wallMap][row][col] << constants.WallCoordsShift): 0;
   } else {
     return Studio.map[row][col] & constants.WallAnyMask;
   }
@@ -1719,8 +1719,8 @@ function getDefaultBackgroundName() {
           (level.background || skin.defaultBackground);
 }
 
-function getDefaultWallsName() {
-  return level.walls || skin.defaultWalls;
+function getDefaultMapName() {
+  return level.wallMap || skin.defaultWallMap;
 }
 
 /**
@@ -1767,7 +1767,7 @@ Studio.reset = function(first) {
 
   // Reset configurable variables
   Studio.background = null;
-  Studio.walls = null;
+  Studio.wallMap = null;
   Studio.setBackground({value: getDefaultBackgroundName()});
 
   // Reset currentCmdQueue and various counts:
@@ -1830,9 +1830,9 @@ Studio.reset = function(first) {
   // Create Items that are specified on the map:
   Studio.createLevelItems(svg);
 
-  // Now that sprites are in place, we can set up walls, which might move
+  // Now that sprites are in place, we can set up a map, which might move
   // sprites around.
-  Studio.setWalls({value: getDefaultWallsName()});
+  Studio.setMap({value: getDefaultMapName()});
 
   // Setting up walls might have moved the sprites, so draw them once more.
   for (i = 0; i < Studio.spriteCount; i++) {
@@ -2966,9 +2966,9 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setBackground(cmd.opts);
       break;
-    case 'setWalls':
+    case 'setMap':
       studioApp.highlight(cmd.id);
-      Studio.setWalls(cmd.opts);
+      Studio.setMap(cmd.opts);
       break;
     case 'setSprite':
       studioApp.highlight(cmd.id);
@@ -3153,7 +3153,7 @@ Studio.addItem = function (opts) {
     x: pos.x,
     y: pos.y,
     speed: Studio.itemSpeed[opts.className],
-    activity: utils.valueOr(Studio.itemActivity[opts.className], "patrol"),
+    activity: utils.valueOr(Studio.itemActivity[opts.className], "roam"),
     width: 100,
     height: 100,
     renderScale: skin.specialItemScale[opts.className] || 1
@@ -3192,7 +3192,7 @@ Studio.getDistance = function(x1, y1, x2, y2) {
 
 
 Studio.setItemActivity = function (opts) {
-  if (opts.type === "patrol" || opts.type === "chase" ||
+  if (opts.type === "roam" || opts.type === "chase" ||
       opts.type === "flee" || opts.type === "none") {
     // retain this activity type for items of this class created in the future:
     Studio.itemActivity[opts.className] = opts.type;
@@ -3345,21 +3345,21 @@ Studio.setBackground = function (opts) {
   }
 };
 
-Studio.setWalls = function (opts) {
+Studio.setMap = function (opts) {
   if (!level.wallMapCollisions) {
     return;
   }
 
-  // Treat 'default' as resetting to the level's map (Studio.walls = null)
+  // Treat 'default' as resetting to the level's map (Studio.wallMap = null)
   if (opts.value === 'default') {
     opts.value = null;
   }
 
-  if (opts.value === Studio.walls) {
+  if (opts.value === Studio.wallMap) {
     return;
   }
 
-  Studio.walls = opts.value;
+  Studio.wallMap = opts.value;
 
   // Draw the tiles (again) now that we know which background we're using.
   $(".tile_clip").remove();
@@ -3373,7 +3373,7 @@ Studio.setWalls = function (opts) {
 };
 
 /**
- * A call to setWalls might place a wall on top of the sprite.  In that case,
+ * A call to setMap might place a wall on top of the sprite.  In that case,
  * find a new nearby location for the sprite that doesn't have a wall.
  * Currently a work in progress with known issues.
  */

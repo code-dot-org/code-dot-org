@@ -6,8 +6,8 @@ exports.setBackground = function (value) {
   Studio.queueCmd(null, 'setBackground', {'value': value});
 };
 
-exports.setWalls = function (value) {
-  Studio.queueCmd(null, 'setWalls', {'value': value});
+exports.setMap = function (value) {
+  Studio.queueCmd(null, 'setMap', {'value': value});
 };
 
 exports.setSprite = function (spriteIndex, value) {
@@ -128,10 +128,31 @@ exports.addCharacter = function(className) {
   });
 };
 
-exports.setItemActivity = function(className, type) {
+exports.setToChase = function(className) {
   Studio.queueCmd(null, 'setItemActivity', {
     'className': className,
-    'type': type
+    'type': 'chase'
+  });
+};
+
+exports.setToFlee = function(className) {
+  Studio.queueCmd(null, 'setItemActivity', {
+    'className': className,
+    'type': 'flee'
+  });
+};
+
+exports.setToRoam = function(className) {
+  Studio.queueCmd(null, 'setItemActivity', {
+    'className': className,
+    'type': 'roam'
+  });
+};
+
+exports.setToStop = function(className) {
+  Studio.queueCmd(null, 'setItemActivity', {
+    'className': className,
+    'type': 'none'
   });
 };
 
