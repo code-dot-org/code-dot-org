@@ -143,6 +143,8 @@ function loadInfinity(skin, assetUrl) {
     [msg.setBackgroundSnowy(), '"snowy"'],
     ];
 
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
     [skin.leafy.background, '"leafy"'],
     [skin.grassy.background, '"grassy"'],
@@ -174,6 +176,8 @@ function loadInfinity(skin, assetUrl) {
     [msg.projectileRandom(), RANDOM_VALUE]];
 
   // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
     [msg.itemHiro(), '"item_hiro"'],
     [msg.itemAnna(), '"item_anna"'],
@@ -442,6 +446,8 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   // These are used by blocks.js to customize our dropdown blocks across skins
+  // NOTE: map names must have double quotes inside single quotes
+  // NOTE: first item must be RANDOM_VALUE
   skin.mapChoices = [
     [msg.setMapRandom(), RANDOM_VALUE],
     [msg.setMapBlank(), '"blank"'],
@@ -459,6 +465,8 @@ function loadHoc2015(skin, assetUrl) {
     [msg.setBackgroundShip(), '"ship"']
     ];
 
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
     [skin.forest.background, '"forest"'],
     [skin.snow.background, '"snow"'],
@@ -474,6 +482,8 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.projectileChoices = [];
 
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
     [msg.itemMan(), '"man"'],
     [msg.itemPilot(), '"pilot"'],
@@ -580,6 +590,8 @@ function loadStudio(skin, assetUrl) {
     [msg.setBackgroundTennis(), '"tennis"'],
     [msg.setBackgroundWinter(), '"winter"']];
 
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
     [skin.cave.background, '"cave"'],
     [skin.night.background, '"night"'],
@@ -638,6 +650,8 @@ function loadStudio(skin, assetUrl) {
     [msg.projectileRandom(), RANDOM_VALUE]];
 
   // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
     [msg.itemBlueFireball(), '"item_blue_fireball"'],
     [msg.itemPurpleFireball(), '"item_purple_fireball"'],

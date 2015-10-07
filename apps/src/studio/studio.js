@@ -1573,12 +1573,9 @@ var preloadImage = function(url) {
 };
 
 var preloadBackgroundImages = function() {
-  // TODO (cpirich): preload for non-blockly
-  if (studioApp.isUsingBlockly()) {
-    var imageChoices = skin.backgroundChoicesK1;
-    for (var i = 0; i < imageChoices.length; i++) {
-      preloadImage(imageChoices[i][0]);
-    }
+  var imageChoices = skin.backgroundChoicesK1;
+  for (var i = 0; i < imageChoices.length; i++) {
+    preloadImage(imageChoices[i][0]);
   }
 };
 
@@ -3041,6 +3038,11 @@ Studio.callCmd = function (cmd) {
 };
 
 Studio.addItem = function (opts) {
+  if (opts.className === constants.RANDOM_VALUE) {
+    opts.className =
+        skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
+  }
+
   var directions = [
     Direction.NORTH,
     Direction.EAST,
@@ -3128,6 +3130,11 @@ Studio.getDistance = function(x1, y1, x2, y2) {
 
 
 Studio.setItemActivity = function (opts) {
+  if (opts.className === constants.RANDOM_VALUE) {
+    opts.className =
+        skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
+  }
+
   if (opts.type === "roam" || opts.type === "chase" ||
       opts.type === "flee" || opts.type === "none") {
     // retain this activity type for items of this class created in the future:
@@ -3141,6 +3148,11 @@ Studio.setItemActivity = function (opts) {
 };
 
 Studio.setItemSpeed = function (opts) {
+  if (opts.className === constants.RANDOM_VALUE) {
+    opts.className =
+        skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
+  }
+
   // retain this speed value for items of this class created in the future:
   Studio.itemSpeed[opts.className] = opts.speed;
   Studio.items.forEach(function (item) {
@@ -3245,6 +3257,10 @@ var BOT_SPEEDS = {
 };
 
 Studio.setBotSpeed = function (opts) {
+  if (opts.value === constants.RANDOM_VALUE) {
+    opts.value = utils.randomKey(BOT_SPEEDS);
+  }
+
   var speedVal = BOT_SPEEDS[opts.value];
   if (speedVal) {
     opts.value = speedVal;
@@ -3277,6 +3293,17 @@ Studio.setScoreText = function (opts) {
 };
 
 Studio.setBackground = function (opts) {
+  if (opts.value === constants.RANDOM_VALUE) {
+    // NOTE: never select the last item from backgroundChoicesK1, since it is
+    // presumed to be the "random" item for blockly
+    // NOTE: the [1] index in the array contains the name parameter with an
+    // additional set of quotes
+    var quotedBackground = skin.backgroundChoicesK1[
+        Math.floor(Math.random() * (skin.backgroundChoicesK1.length - 1))][1];
+    // Remove the outer quotes:
+    opts.value = quotedBackground.replace(/^"(.*)"$/, '$1');
+  }
+
   if (opts.value !== Studio.background) {
     Studio.background = opts.value;
 
@@ -3297,6 +3324,17 @@ Studio.setBackground = function (opts) {
 };
 
 Studio.setMap = function (opts) {
+  if (opts.value === constants.RANDOM_VALUE) {
+    // NOTE: never select the first item from mapChoices, since it is
+    // presumed to be the "random" item for blockly
+    // NOTE: the [1] index in the array contains the name parameter with an
+    // additional set of quotes
+    var quotedMap = skin.mapChoices[
+        Math.floor(1 + Math.random() * (skin.mapChoices.length - 1))][1];
+    // Remove the outer quotes:
+    opts.value = quotedMap.replace(/^"(.*)"$/, '$1');
+  }
+
   if (!level.wallMapCollisions) {
     return;
   }
@@ -3387,6 +3425,11 @@ Studio.fixSpriteLocation = function () {
 Studio.setSprite = function (opts) {
   var spriteIndex = opts.spriteIndex;
   var sprite = Studio.sprite[spriteIndex];
+
+  if (opts.value === constants.RANDOM_VALUE) {
+    opts.value = skin.avatarList[Math.floor(Math.random() * skin.avatarList.length)];
+  }
+
   var spriteValue = opts.value;
 
   var spriteIcon = document.getElementById('sprite' + spriteIndex);
