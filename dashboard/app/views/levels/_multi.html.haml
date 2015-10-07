@@ -188,7 +188,7 @@
     }
   });
 
-  function getResult() 
+  function getResult()
   {
     var answer;
     var errorType = null;
@@ -215,10 +215,10 @@
   }
 
   $('.submitButton').click(function() {
-    // If the solution only takes one answer, and it's wrong, and it's not 
+    // If the solution only takes one answer, and it's wrong, and it's not
     // already crossed out, then mark it as answered wrong.
-    if (numAnswers == 1 && 
-        crossedAnswers.indexOf(lastSelectionIndex) == -1 && 
+    if (numAnswers == 1 &&
+        crossedAnswers.indexOf(lastSelectionIndex) == -1 &&
         ! validateAnswers())
     {
       $("#checked_" + lastSelectionIndex).hide();

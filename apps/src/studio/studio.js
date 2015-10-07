@@ -102,9 +102,6 @@ var stepSpeed;
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
 
-Studio.BLOCK_X_COORDINATE = 20;
-Studio.BLOCK_Y_COORDINATE = 20;
-
 var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 
 var AUTO_HANDLER_MAP = {
@@ -1416,50 +1413,6 @@ Studio.initReadonly = function(config) {
 };
 
 /**
- * Arrange the start blocks to spread them out in the workspace.
- * This uses unique logic for studio - spread event blocks vertically even
- * over the total height of the workspace.
- */
-var arrangeStartBlocks = function (config) {
-  var xml = parseXmlElement(config.level.startBlocks);
-  var numUnplacedElementNodes = 0;
-  // sort the blocks by visibility
-  var xmlChildNodes = studioApp.sortBlocksByVisibility(xml.childNodes);
-  // do a first pass to count the nodes
-  for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
-    xmlChild = xmlChildNodes[x];
-
-    // Only look at element nodes without a y coordinate:
-    if (xmlChild.nodeType === 1 && !xmlChild.getAttribute('y')) {
-      numUnplacedElementNodes++;
-    }
-  }
-  // do a second pass to place the nodes
-  if (numUnplacedElementNodes) {
-    var numberOfPlacedBlocks = 0;
-    var totalHeightAvail =
-        (config.level.minWorkspaceHeight || 800) - Studio.BLOCK_Y_COORDINATE;
-    var yCoordInterval = totalHeightAvail / numUnplacedElementNodes;
-    for (x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
-      xmlChild = xmlChildNodes[x];
-
-      // Only look at element nodes without a y coordinate:
-      if (xmlChild.nodeType === 1 && !xmlChild.getAttribute('y')) {
-        xmlChild.setAttribute(
-            'x',
-            xmlChild.getAttribute('x') || Studio.BLOCK_X_COORDINATE);
-        xmlChild.setAttribute(
-            'y',
-            Studio.BLOCK_Y_COORDINATE + yCoordInterval * numberOfPlacedBlocks);
-        numberOfPlacedBlocks += 1;
-      }
-    }
-    // replace the startBlocks since we changed the attributes in the xml dom:
-    config.level.startBlocks = Blockly.Xml.domToText(xml);
-  }
-};
-
-/**
  * Initialize Blockly and the Studio app.  Called on page load.
  */
 Studio.init = function(config) {
@@ -1527,24 +1480,7 @@ Studio.init = function(config) {
     }
   });
 
-  config.loadAudio = function() {
-    studioApp.loadAudio(skin.winSound, 'win');
-    studioApp.loadAudio(skin.startSound, 'start');
-    studioApp.loadAudio(skin.failureSound, 'failure');
-    studioApp.loadAudio(skin.rubberSound, 'rubber');
-    studioApp.loadAudio(skin.crunchSound, 'crunch');
-    studioApp.loadAudio(skin.flagSound, 'flag');
-    studioApp.loadAudio(skin.winPointSound, 'winpoint');
-    studioApp.loadAudio(skin.winPoint2Sound, 'winpoint2');
-    studioApp.loadAudio(skin.losePointSound, 'losepoint');
-    studioApp.loadAudio(skin.losePoint2Sound, 'losepoint2');
-    studioApp.loadAudio(skin.goal1Sound, 'goal1');
-    studioApp.loadAudio(skin.goal2Sound, 'goal2');
-    studioApp.loadAudio(skin.woodSound, 'wood');
-    studioApp.loadAudio(skin.retroSound, 'retro');
-    studioApp.loadAudio(skin.slapSound, 'slap');
-    studioApp.loadAudio(skin.hitSound, 'hit');
-  };
+  config.loadAudio = skin.loadAudio;
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1579,9 +1515,10 @@ Studio.init = function(config) {
     drawMap();
   };
 
-  if (studioApp.isUsingBlockly() && config.level.edit_blocks != 'toolbox_blocks') {
-    arrangeStartBlocks(config);
-  }
+  config.afterClearPuzzle = function() {
+    studioApp.resetButtonClick();
+    annotationList.clearRuntimeAnnotations();
+  };
 
   config.twitter = twitterOptions;
 
@@ -2202,10 +2139,15 @@ function handleExecutionError(err, lineNumber) {
     // Now select this location in the editor, since we know we didn't hit
     // this while executing (in which case, it would already have been selected)
 
-    codegen.selectEditorRowCol(studioApp.editor, lineNumber - 1, err.loc.column);
+    codegen.selectEditorRowColError(studioApp.editor, lineNumber - 1, err.loc.column);
   }
-  if (!lineNumber && Studio.JSInterpreter) {
-    lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
+  if (Studio.JSInterpreter) {
+    // Select code that just executed:
+    Studio.JSInterpreter.selectCurrentCode("ace_error");
+    // Grab line number if we don't have one already:
+    if (!lineNumber) {
+      lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
+    }
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Studio.executionError = err;
@@ -3003,28 +2945,28 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.moveSingle(cmd.opts);
       break;
-    case 'moveEast':
+    case 'moveRight':
       studioApp.highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
           dir: Direction.EAST,
       });
       break;
-    case 'moveWest':
+    case 'moveLeft':
       studioApp.highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
           dir: Direction.WEST,
       });
       break;
-    case 'moveNorth':
+    case 'moveUp':
       studioApp.highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
           dir: Direction.NORTH,
       });
       break;
-    case 'moveSouth':
+    case 'moveDown':
       studioApp.highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
