@@ -111,7 +111,7 @@
         <block type="studio_setSprite"/>
         <block type="studio_setSpriteSpeed"/>
         <block type="studio_setBackground"/>
-        <block type="studio_setWalls"/>
+        <block type="studio_setMap"/>
         <block type="studio_playSound"/>
         <block type="studio_changeScore"/>
         <block type="studio_move">

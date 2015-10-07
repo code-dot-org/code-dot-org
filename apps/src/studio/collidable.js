@@ -133,6 +133,7 @@ Collidable.prototype.setActivity = function(type) {
 Collidable.prototype.update = function () {
 
   if (this.activity === 'none') {
+    this.dir = Direction.NONE;
     return;
   }
   
@@ -200,7 +201,7 @@ Collidable.prototype.update = function () {
       candidate = {gridX: candidateX, gridY: candidateY};
       candidate.score = 0;
 
-      if (this.activity === "patrol") {
+      if (this.activity === "roam") {
         candidate.score ++;
       } else if (this.activity === "chase") {
         if (candidateY == this.gridY - 1 && spriteY < this.y - bufferDistance) {

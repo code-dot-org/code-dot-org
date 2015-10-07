@@ -1405,53 +1405,27 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   /**
-   * setWalls
+   * setMap
    */
-  blockly.Blocks.studio_setWalls = {
+  blockly.Blocks.studio_setMap = {
     helpUrl: '',
     init: function() {
       this.setHSV(312, 0.32, 0.62);
-      this.VALUES = skin.wallChoices;
+      this.VALUES = skin.mapChoices;
 
-      var dropdown = new blockly.FieldDropdown(skin.wallChoices);
+      var dropdown = new blockly.FieldDropdown(skin.mapChoices);
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
-      dropdown.setValue('"' + skin.defaultWalls + '"');
+      dropdown.setValue('"' + skin.defaultWallMap + '"');
       
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-      this.setTooltip(msg.setWallsTooltip());
+      this.setTooltip(msg.setMapTooltip());
     }
   };
 
-  blockly.Blocks.studio_setWallsParam = {
-    helpUrl: '',
-    init: function() {
-      this.setHSV(312, 0.32, 0.62);
-      this.VALUES = skin.wallChoices;
-
-      this.appendDummyInput()
-        .appendTitle(msg.setWalls());
-      this.appendValueInput('VALUE');
-
-      this.setInputsInline(true);
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-      this.setTooltip(msg.setWallsTooltip());
-    }
-  };
-
-  generator.studio_setWalls = function() {
-    return generateSetterCode({ctx: this, name: 'setWalls'});
-  };
-  generator.studio_setWallsParam = function () {
-    var wallValue = blockly.JavaScript.valueToCode(this, 'VALUE',
-      Blockly.JavaScript.ORDER_NONE);
-
-    return generateSetterCode({
-      value: wallValue,
-      ctx: this,
-      name: 'setWalls'});
+  generator.studio_setMap = function() {
+    return generateSetterCode({ctx: this, name: 'setMap'});
   };
 
   /**

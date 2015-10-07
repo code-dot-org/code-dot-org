@@ -190,7 +190,7 @@ function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
   skin.defaultBackground = 'background3';
-  skin.defaultWalls = 'blank';
+  skin.defaultWallMap = 'blank';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
@@ -428,14 +428,14 @@ function loadHoc2015(skin, assetUrl) {
   studioApp.loadAudio(skin.character1sound4, 'character1sound4');
 
   // These are used by blocks.js to customize our dropdown blocks across skins
-  skin.wallChoices = [
-    [msg.setWallsRandom(), RANDOM_VALUE],
-    [msg.setWallsBlank(), '"blank"'],
-    [msg.setWallsCircle(), '"circle"'],
-    [msg.setWallsCircle2(), '"circle2"'],
-    [msg.setWallsHorizontal(), '"horizontal"'],
-    [msg.setWallsGrid(), '"grid"'],
-    [msg.setWallsBlobs(), '"blobs"']
+  skin.mapChoices = [
+    [msg.setMapRandom(), RANDOM_VALUE],
+    [msg.setMapBlank(), '"blank"'],
+    [msg.setMapCircle(), '"circle"'],
+    [msg.setMapCircle2(), '"circle2"'],
+    [msg.setMapHorizontal(), '"horizontal"'],
+    [msg.setMapGrid(), '"grid"'],
+    [msg.setMapBlobs(), '"blobs"']
     ];
 
   skin.backgroundChoices = [
@@ -719,7 +719,7 @@ exports.load = function(assetUrl, id) {
 
   skin.activityChoices = [
     [msg.setActivityRandom(), RANDOM_VALUE],
-    [msg.setActivityPatrol(), '"patrol"'],
+    [msg.setActivityRoam(), '"roam"'],
     [msg.setActivityChase(), '"chase"'],
     [msg.setActivityFlee(), '"flee"'],
     [msg.setActivityNone(), '"none"'],
