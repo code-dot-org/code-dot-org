@@ -1599,6 +1599,24 @@ levels.js_hoc2015_move_right = {
     "imageWidth": 100,
     "imageHeight": 100
   },
+  "callout_json": [
+    {
+      "element_id": ".droplet-main-canvas",
+      "qtip_config": {
+        "content" : {
+          "text": msg.calloutPlaceCommandsHere(),
+        },
+        "position": {
+          "my": "top left",
+          "at": "top left",
+          "adjust": {
+            "x": 10,
+            "y": 20
+          }
+        }
+      }
+    }
+  ],
 };
 
 levels.js_hoc2015_move_two_items = {
@@ -1778,6 +1796,24 @@ levels.js_hoc2015_event_two_items = {
     "imageWidth": 100,
     "imageHeight": 100
   },
+  "callout_json": [
+    {
+      "element_id": ".droplet-main-canvas",
+      "qtip_config": {
+        "content" : {
+          "text": msg.calloutPlaceCommandsHere(),
+        },
+        "position": {
+          "my": "top left",
+          "at": "top left",
+          "adjust": {
+            "x": 10,
+            "y": 20
+          }
+        }
+      }
+    }
+  ],
 };
 
 levels.js_hoc2015_event_four_items = {
@@ -1796,7 +1832,7 @@ levels.js_hoc2015_event_four_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "function whenLeft() {\n  __;\n}\nfunction whenRight() {\n  __;\n}\nfunction whenUp() {\n  __;\n}\nfunction whenDown() {\n  __;\n}",
+  "startBlocks": "function whenLeft() {\n  \n}\nfunction whenRight() {\n  \n}\nfunction whenUp() {\n  \n}\nfunction whenDown() {\n  \n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1818,7 +1854,25 @@ levels.js_hoc2015_event_four_items = {
     "goalAnimation": "animatedGoal",
     "imageWidth": 100,
     "imageHeight": 100
-  }
+  },
+  "callout_json": [
+    {
+      "element_id": ".ace_scroller",
+      "qtip_config": {
+        "content" : {
+          "text": msg.calloutTypeCommandsHere(),
+        },
+        "position": {
+          "my": "center right",
+          "at": "top left",
+          "adjust": {
+            "x": 25,
+            "y": 25
+          }
+        }
+      }
+    }
+  ],
 };
 
 
