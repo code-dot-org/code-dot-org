@@ -80,5 +80,6 @@
   "whileTooltip": "Repetă acţiunile cuprinse până când punctul final este atins.",
   "word": "Găsește cuvântul",
   "yes": "Da",
-  "youSpelled": "Ai scris"
+  "youSpelled": "Ai scris",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

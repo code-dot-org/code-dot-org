@@ -1,0 +1,46 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-07T15:41:08.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+    },
+    "edit_code": true,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions": "Using the Design Mode Events tab add in code that when the button is clicked causes something to print in the console. (Click to see detail instructions).",
+    "markdown_instructions": "On the last level you put your button on the screen using Design Mode. However if you tried clicking it nothing happened! \r\n\r\nYour work from the last level has been brought over to this level. \r\n\r\n1. Try clicking the button to see if it works\r\n1. Head into design mode.\r\n1. Next to the Properties tab this is a Events tab. Click the Events tab.\r\n1. You will notice Click as the event you have used with buttons before. \r\n1. Below that is *Insert and Show in Code* button. Click that.\r\n1. Run your program and see what happens now!\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U3 - Design Mode 1",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

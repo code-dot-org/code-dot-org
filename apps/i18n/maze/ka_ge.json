@@ -80,5 +80,6 @@
   "whileTooltip": "გაიმეორეთ ჩაკეტილი მოქმედება უკანასკნელ წერტილზე მისვლამდე.",
   "word": "იპოვეთ სიტყვა",
   "yes": "დიახ",
-  "youSpelled": "თქვენ შეიყვანეთ"
+  "youSpelled": "თქვენ შეიყვანეთ",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

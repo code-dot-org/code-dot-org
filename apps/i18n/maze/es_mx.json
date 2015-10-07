@@ -80,5 +80,6 @@
   "whileTooltip": "Repetir las acciones dentro del bloque hasta alcanzar el punto final.",
   "word": "Encuentra la palabra",
   "yes": "Sí",
-  "youSpelled": "Escribiste"
+  "youSpelled": "Escribiste",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

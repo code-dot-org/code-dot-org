@@ -80,5 +80,6 @@
   "whileTooltip": "Gjenta disse handlingene inntil målet er nådd.",
   "word": "Finn ordet",
   "yes": "Ja",
-  "youSpelled": "Du stavet"
+  "youSpelled": "Du stavet",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

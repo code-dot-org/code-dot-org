@@ -80,5 +80,6 @@
   "whileTooltip": "Toista sisällä oleva toiminto kunnes saavutetaan loppupiste.",
   "word": "Etsi sana",
   "yes": "Kyllä",
-  "youSpelled": "Kirjoitit"
+  "youSpelled": "Kirjoitit",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

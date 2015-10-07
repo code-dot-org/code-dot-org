@@ -80,5 +80,6 @@
   "whileTooltip": "Ismételd a közbülső műveleteket a végpont eléréséig.",
   "word": "Ezt a szót keresd",
   "yes": "Igen",
-  "youSpelled": "Amit találtál"
+  "youSpelled": "Amit találtál",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

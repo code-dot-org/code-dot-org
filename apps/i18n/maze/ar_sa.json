@@ -80,5 +80,6 @@
   "whileTooltip": "تكرار الإجراءات المغلقة حتى الوصول إلى نقطة النهاية.",
   "word": "ابحث عن الكلمة",
   "yes": "نعم",
-  "youSpelled": "قمت بكتابة"
+  "youSpelled": "قمت بكتابة",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }
