@@ -242,6 +242,7 @@ gb:
   map_header: '# Hour of Code events around the world'
   see_all_events: See all events
   map_header_company: '# by company organizers'
+  map_header_country: '# in the %{country}'
   map_search_placeholder: Search for Hour of Code events
   map_search_search: Search
   map_search_reset: Reset

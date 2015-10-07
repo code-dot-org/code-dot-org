@@ -80,5 +80,6 @@
   "whileTooltip": "Понови акције у загради док се не постигне последњи поен.",
   "word": "Find the word",
   "yes": "Да",
-  "youSpelled": "You spelled"
+  "youSpelled": "You spelled",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

@@ -80,5 +80,6 @@
   "whileTooltip": "Atārtot slegtās darbības kamēr finiša punkts ir sasniegts.",
   "word": "Atrodi vārdu",
   "yes": "Jā",
-  "youSpelled": "Jūs uzrakstījāt"
+  "youSpelled": "Jūs uzrakstījāt",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

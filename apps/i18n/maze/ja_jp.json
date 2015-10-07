@@ -80,5 +80,6 @@
   "whileTooltip": "終点に到着するまで、とりかこんだアクションを繰り返してください。",
   "word": "単語を見つけます",
   "yes": "はい",
-  "youSpelled": "あなたのスペル"
+  "youSpelled": "あなたのスペル",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

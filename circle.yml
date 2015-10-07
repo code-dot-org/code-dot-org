@@ -1,0 +1,19 @@
+dependencies:
+  cache_directories:
+    - "apps/node_modules"
+  override:
+    - sudo apt-get install libicu-dev
+    - npm install:
+        pwd:
+            apps
+    - bash build_with_core.sh:
+        pwd:
+            apps
+database:
+    override:
+    - echo "NO DB"
+test:
+    override:
+        - grunt test:
+            pwd:
+                apps

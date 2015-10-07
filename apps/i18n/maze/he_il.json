@@ -80,5 +80,6 @@
   "whileTooltip": "חזור על שורת הפעולות עד שתגיע לנקודת הסיום.",
   "word": "מצא את המילה",
   "yes": "כן",
-  "youSpelled": "אייתת"
+  "youSpelled": "אייתת",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }
