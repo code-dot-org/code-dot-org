@@ -8,7 +8,7 @@ module MysqlConsoleHelper
                "--host=#{db.host}",
                "--database=#{db.path[1..-1]}",
               ]
-    command << "--execute=\"#{q}\"" unless args.empty?
+    command << "--execute=\"#{args}\"" unless args.empty?
     command << "--password=#{db.password}" unless db.password.nil?
 
     system(command.join(' '))
