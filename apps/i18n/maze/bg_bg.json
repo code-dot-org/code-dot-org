@@ -80,5 +80,6 @@
   "whileTooltip": "Повтори поставените в блока действия, докато целта не бъде достигната.",
   "word": "Намерете думата",
   "yes": "Да",
-  "youSpelled": "ти образува думи"
+  "youSpelled": "ти образува думи",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }
