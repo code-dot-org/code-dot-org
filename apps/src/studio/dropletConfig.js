@@ -10,7 +10,15 @@ module.exports.blocks = [
   {func: 'moveLeft', parent: api, category: '', },
   {func: 'moveUp', parent: api, category: '', },
   {func: 'moveDown', parent: api, category: '', },
-  {func: 'playSound', parent: api, category: '', params: ['"slap"'], dropdown: { 0: [ '"hit"', '"wood"', '"retro"', '"slap"', '"rubber"', '"crunch"', '"winpoint"', '"winpoint2"', '"losepoint"', '"losepoint2"', '"goal1"', '"goal2"' ] } },
+  {func: 'playSound', parent: api, category: '', params: ['"character1sound1"'], 
+    dropdown: { 0: [ 
+      '"character1sound1"', '"character1sound2"', '"character1sound3"', '"character1sound4"',
+      '"character2sound1"', '"character2sound2"', '"character2sound3"', '"character2sound4"',
+      '"item1sound1"', '"item1sound2"', '"item1sound3"', '"item1sound4"',
+      '"item3sound1"', '"item3sound2"', '"item3sound3"', '"item3sound4"',
+      '"alert1"', '"alert2"', '"alert3"', '"alert4"',
+      '"applause"' 
+      ] } },
   {func: 'changeScore', parent: api, category: '', params: ["1"] },
   {func: 'addItemsToScene', parent: api, category: '', params: ['"item_walk_item4"', "5"], dropdown: { 0: [ '"item_walk_item1"', '"item_walk_item2"', '"item_walk_item3"', '"item_walk_item4"', '"item_walk_item5"', '"item_walk_item6"' ] } },
   {func: 'setItemActivity', parent: api, category: '', params: ['"item_walk_item4"', '"chase"'], dropdown: { 0: [ '"item_walk_item1"', '"item_walk_item2"', '"item_walk_item3"', '"item_walk_item4"', '"item_walk_item5"', '"item_walk_item6"' ], 1: [ '"chase"', '"flee"', '"patrol"', '"none"' ] } },
