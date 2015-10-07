@@ -2,7 +2,7 @@
   - role_class = current_user.user_type
   - script = current_user.primary_script
   - if script
-    - script_level = current_user.next_unpassed_progression_level(script)  
+    - script_level = current_user.next_unpassed_progression_level(script)
 
   #contents
     #welcome{class: role_class}
@@ -29,5 +29,5 @@
           #suggestcourse.smalltext= t('home.choose_next_course')
         - else
           #suggestcourse.smalltext= link_to t('home.no_primary_course'), root_url
-      
+
   #clearboth{ style: 'clear:both;' }
