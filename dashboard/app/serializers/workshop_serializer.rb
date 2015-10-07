@@ -9,7 +9,7 @@
 #  instructions :string(255)
 #  created_at   :datetime
 #  updated_at   :datetime
-#  phase        :text(65535)
+#  phase        :integer
 #
 # Indexes
 #

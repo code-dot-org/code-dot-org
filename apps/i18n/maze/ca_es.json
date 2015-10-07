@@ -80,5 +80,6 @@
   "whileTooltip": "Repetiu les accions tancades fins que s'arribi al punt final.",
   "word": "Troba la paraula",
   "yes": "Sí",
-  "youSpelled": "Has escrit"
+  "youSpelled": "Has escrit",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

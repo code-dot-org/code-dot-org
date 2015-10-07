@@ -80,5 +80,6 @@
   "whileTooltip": "Ulangi aksi sampai tujuan tercapai.",
   "word": "Cari kata",
   "yes": "Ya",
-  "youSpelled": "Anda mengejanya"
+  "youSpelled": "Anda mengejanya",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }
