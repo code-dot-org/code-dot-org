@@ -32,7 +32,7 @@ We are building a growing library of educational videos available for re-use by 
 
 <div style="float:left; padding:10px; width:49%">
 
-<%=view :display_video_thumbnail, id: "WIRES", video_code: "ZhEf7e4kopM", caption: "THE INTERNET: Wires, Cables, & Wifi", play_button: 'center', download_path: "https://videos.code.org/2015/csp/concept_internet_wires_cables_wifi.mp4" %>
+<%=view :display_video_thumbnail, id: "WIRES", video_code: "ZhEf7e4kopM", caption: "THE INTERNET: Wires, Cables, & Wifi", play_button: 'center', download_path: "videos.code.org/2015/csp/concept_internet_wires_cables_wifi.mp4" %>
 
 </div>
 

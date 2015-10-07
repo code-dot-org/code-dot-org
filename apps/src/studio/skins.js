@@ -417,15 +417,24 @@ function loadHoc2015(skin, assetUrl) {
      [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x121, 0x121]];
 
   // Sounds.
-  skin.character1sound1 = [skin.assetUrl('character1sound1.mp3'), skin.assetUrl('wall.ogg')];
-  skin.character1sound2 = [skin.assetUrl('character1sound2.mp3'), skin.assetUrl('wall.ogg')];
-  skin.character1sound3 = [skin.assetUrl('character1sound3.mp3'), skin.assetUrl('wall.ogg')];
-  skin.character1sound4 = [skin.assetUrl('character1sound4.mp3'), skin.assetUrl('wall.ogg')];
+  var sounds = [
+    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
+    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
+    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
+    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
+    'alert1', 'alert2', 'alert3', 'alert4',
+    'applause',
+    'start', 'win', 'failure', 'flag'
+  ];
 
-  studioApp.loadAudio(skin.character1sound1, 'character1sound1');
-  studioApp.loadAudio(skin.character1sound2, 'character1sound2');
-  studioApp.loadAudio(skin.character1sound3, 'character1sound3');
-  studioApp.loadAudio(skin.character1sound4, 'character1sound4');
+  // Override the default loadAudio function with this one.
+  skin.loadAudio = function() {
+    for (var s = 0; s < sounds.length; s++) {
+      var sound = sounds[s];
+      skin[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl('wall.ogg')];
+      studioApp.loadAudio(skin[sound], sound);
+    }
+  };
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   skin.mapChoices = [
@@ -708,6 +717,26 @@ exports.load = function(assetUrl, id) {
                     skin.assetUrl('1_wall_bounce.ogg')];
   skin.hitSound = [skin.assetUrl('2_wall_bounce.mp3'),
                    skin.assetUrl('2_wall_bounce.ogg')];
+
+  // This function might be overloaded by a skin.
+  skin.loadAudio = function() {
+    studioApp.loadAudio(skin.winSound, 'win');
+    studioApp.loadAudio(skin.startSound, 'start');
+    studioApp.loadAudio(skin.failureSound, 'failure');
+    studioApp.loadAudio(skin.rubberSound, 'rubber');
+    studioApp.loadAudio(skin.crunchSound, 'crunch');
+    studioApp.loadAudio(skin.flagSound, 'flag');
+    studioApp.loadAudio(skin.winPointSound, 'winpoint');
+    studioApp.loadAudio(skin.winPoint2Sound, 'winpoint2');
+    studioApp.loadAudio(skin.losePointSound, 'losepoint');
+    studioApp.loadAudio(skin.losePoint2Sound, 'losepoint2');
+    studioApp.loadAudio(skin.goal1Sound, 'goal1');
+    studioApp.loadAudio(skin.goal2Sound, 'goal2');
+    studioApp.loadAudio(skin.woodSound, 'wood');
+    studioApp.loadAudio(skin.retroSound, 'retro');
+    studioApp.loadAudio(skin.slapSound, 'slap');
+    studioApp.loadAudio(skin.hitSound, 'hit');
+  };
 
   // Settings
   skin.background = skin.assetUrl('background.png');

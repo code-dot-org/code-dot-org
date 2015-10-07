@@ -1782,6 +1782,7 @@ levels.js_hoc2015_event_two_items = {
 
 levels.js_hoc2015_event_four_items = {
   "editCode": true,
+  "textModeAtStart": true,
   "background": "background1",
   "wallMap": "blobs",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
@@ -1866,6 +1867,7 @@ levels.js_hoc2015_event_choose_character =
 
 levels.js_hoc2015_event_add_items = {
   "editCode": true,
+  "textModeAtStart": true,
   "protagonistSpriteIndex": 0,
   "background": "background2",
   "wallMap": "horizontal",
@@ -1911,7 +1913,6 @@ levels.js_hoc2015_event_item_behavior = {
   "protagonistSpriteIndex": 0,
   "background": "background2",
   "wallMap": "blobs",
-  "textModeAtStart": true,
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "setToChase": null,
@@ -1956,10 +1957,10 @@ levels.js_hoc2015_event_item_behavior = {
 
 levels.js_hoc2015_event_touch_items = {
   "editCode": true,
+  "textModeAtStart": true,
   "protagonistSpriteIndex": 0,
   "background": "background2",
   "wallMap": "circle",
-  "textModeAtStart": true,
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "whenTouchCharacter": null,
@@ -2007,9 +2008,9 @@ levels.js_hoc2015_event_touch_items = {
 
 levels.js_hoc2015_event_points = {
   "editCode": true,
+  "textModeAtStart": true,
   "background": "background3",
   "wallMap": "horizontal",
-  "textModeAtStart": true,
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "changeScore": null,
@@ -2058,9 +2059,9 @@ levels.js_hoc2015_event_points = {
 
 levels.js_hoc2015_event_random_items = {
   "editCode": true,
+  "textModeAtStart": true,
   "background": "background3",
   "wallMap": "blobs",
-  "textModeAtStart": true,
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "setSpriteSpeed": null,
@@ -2109,9 +2110,9 @@ levels.js_hoc2015_event_random_items = {
 
 levels.js_hoc2015_event_free = {
   "editCode": true,
+  "textModeAtStart": true,
   "background": "background1",
   "wallMap": "blank",
-  "textModeAtStart": true,
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "setBot": { "category": "Commands" },
