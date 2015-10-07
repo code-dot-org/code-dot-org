@@ -80,5 +80,6 @@
   "whileTooltip": "Bukaerako puntua eskuratu arte barruko ekintzak errepikatu.",
   "word": "Bilatu hitza",
   "yes": "Bai",
-  "youSpelled": "Idatzi duzu"
+  "youSpelled": "Idatzi duzu",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

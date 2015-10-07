@@ -80,5 +80,6 @@
   "whileTooltip": "Pakartok sujungtus veiksmus, kol bus pasiektas finišas.",
   "word": "Surast žodį",
   "yes": "Taip",
-  "youSpelled": "Tu įvedei"
+  "youSpelled": "Tu įvedei",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

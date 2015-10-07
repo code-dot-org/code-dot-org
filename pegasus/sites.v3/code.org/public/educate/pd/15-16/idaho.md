@@ -47,12 +47,12 @@ Breakfast and lunch will be served.
 **Location**
 
 Boise State University<br/> 
-Student Union Building<br/>
-Room TBD <br/>
-1700 W. University Drive <br/>
+Micron Engineering Center <br/>
+Room 307 (3rd floor) <br/>
+1020 S. Manitou Ave. <br/>
 Boise, ID 83706
 
-<i>Check Back Later - More Information Coming Soon!</i>
+The building location has changed so please carefully look at the following BSU map: [code.org/files/bsu-parking.pdf](http://code.org/files/bsu-parking.pdf). The MEC building is circled in red. All of the blue highlights indicate free street parking on Saturdays.
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -103,12 +103,12 @@ Breakfast and lunch will be served.
 **Location**
 
 Boise State University<br/> 
-Student Union Building<br/>
-Room TBD <br/>
-1700 W. University Drive <br/>
+Micron Engineering Center <br/>
+Room 307 (3rd floor) <br/>
+1020 S. Manitou Ave. <br/>
 Boise, ID 83706
 
-<i>Check Back Later - More Information Coming Soon!</i>
+The building location has changed so please carefully look at the following BSU map: [code.org/files/bsu-parking.pdf](http://code.org/files/bsu-parking.pdf). The MEC building is circled in red. All of the blue highlights indicate free street parking on Saturdays.
 
 **What to bring to Phase 3 bi-yearly sessions:**
 

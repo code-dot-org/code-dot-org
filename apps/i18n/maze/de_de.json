@@ -80,5 +80,6 @@
   "whileTooltip": "Wiederhole die umschlossenen Aktionen bis der Endpunkt erreicht ist.",
   "word": "Finde das Wort",
   "yes": "Ja",
-  "youSpelled": "Du hast geschrieben"
+  "youSpelled": "Du hast geschrieben",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

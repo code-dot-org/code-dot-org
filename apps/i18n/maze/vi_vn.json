@@ -80,5 +80,6 @@
   "whileTooltip": "Lặp lại các hành động trong câu lệnh cho đến khi có kết quả.",
   "word": "Tìm các từ",
   "yes": "Đồng ý",
-  "youSpelled": "Bạn hãy đánh vần"
+  "youSpelled": "Bạn hãy đánh vần",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

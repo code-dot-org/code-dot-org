@@ -1,5 +1,19 @@
 /* global Blockly, ace:true, droplet, marked, digestManifest, dashboard */
 
+/**
+ * For the most part, we depend on dashboard providing us with React as a global.
+ * However, there is at least one context in which this won't be true - when we
+ * show feedback blocks in their own iframe. In that case, load React from
+ * our module.
+ * This approach has a couple of drawbacks
+ * (1) ability for dashboard React and apps React versions to get out of sync
+ * (2) if we end up in other cases where React isn't provided to us as a global
+ *     we probably won't notice, which may not be intended behavior
+ */
+if (!window.React) {
+  window.React = require('react');
+}
+
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
@@ -14,6 +28,7 @@ var url = require('url');
 var FeedbackUtils = require('./feedback');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
+var codegen = require('./codegen');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -23,9 +38,6 @@ var MOBILE_SHARE_WIDTH_PADDING = 50;
 var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
-
-var BLOCK_X_COORDINATE = 16;
-var BLOCK_Y_COORDINATE = 16;
 
 var ENGLISH_LOCALE = 'en_us';
 
@@ -69,8 +81,6 @@ var StudioApp = function () {
    * @type {?DropletTooltipManager}
    */
   this.dropletTooltipManager = null;
-
-  this.blockYCoordinateInterval = 200;
 
   // @type {string} for all of these
   this.icon = undefined;
@@ -486,6 +496,9 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     }
     this.editor.setValue(resetValue);
   }
+  if (config.afterClearPuzzle) {
+    config.afterClearPuzzle();
+  }
 };
 
 /**
@@ -714,66 +727,41 @@ StudioApp.prototype.loadBlocks = function(blocksXml) {
 };
 
 /**
-* Spreading out the top blocks in workspace if it is not already set.
+* Applies the specified arrangement to top startBlocks. If any
+* individual blocks have x or y properties set in the XML, those values
+* take priority. If no arrangement for a particular block type is
+* specified, blocks are automatically positioned by Blockly.
+*
+* Note that, currently, only bounce and flappy use arrangements.
+*
 * @param {string} startBlocks String representation of start blocks xml.
 * @param {Object.<Object>} arrangement A map from block type to position.
 * @return {string} String representation of start blocks xml, including
 *    block position.
 */
 StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
-  var type, arrangeX, arrangeY;
+
+  var type, xmlChild;
+
   var xml = parseXmlElement(startBlocks);
-  var xmlChildNodes = this.sortBlocksByVisibility(xml.childNodes);
-  var numberOfPlacedBlocks = 0;
-  for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
-    xmlChild = xmlChildNodes[x];
+
+  var xmlChildNodes = xml.childNodes || [];
+  arrangement = arrangement || {};
+
+  for (var i = 0; i < xmlChildNodes.length; i++) {
+    xmlChild = xmlChildNodes[i];
 
     // Only look at element nodes
     if (xmlChild.nodeType === 1) {
       // look to see if we have a predefined arrangement for this type
       type = xmlChild.getAttribute('type');
-      arrangeX = arrangement && arrangement[type] ? arrangement[type].x : null;
-      arrangeY = arrangement && arrangement[type] ? arrangement[type].y : null;
-
-      xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangeX ||
-        BLOCK_X_COORDINATE);
-      xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangeY ||
-        BLOCK_Y_COORDINATE +
-      this.blockYCoordinateInterval * numberOfPlacedBlocks);
-      numberOfPlacedBlocks += 1;
+      if (arrangement[type]) {
+        xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangement[type].x);
+        xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangement[type].y);
+      }
     }
   }
   return Blockly.Xml.domToText(xml);
-};
-
-/**
-* Sorts the array of xml blocks, moving visible blocks to the front.
-* @param {Array.<Element>} xmlBlocks An array of xml blocks.
-* @return {Array.<Element>} A sorted array of xml blocks, with all
-*     visible blocks preceding all hidden blocks.
-*/
-StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
-  var userVisible;
-  var currentlyHidden = false;
-  var visibleXmlBlocks = [];
-  var hiddenXmlBlocks = [];
-  for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
-    xmlBlock = xmlBlocks[x];
-    if (xmlBlock.getAttribute) {
-      userVisible = xmlBlock.getAttribute('uservisible');
-      var type = xmlBlock.getAttribute('type');
-      currentlyHidden = type &&
-        Blockly.Blocks[type].shouldHideIfInMainBlockSpace &&
-        Blockly.Blocks[type].shouldHideIfInMainBlockSpace();
-    }
-
-    if (currentlyHidden || userVisible === 'false') {
-      hiddenXmlBlocks.push(xmlBlock);
-    } else {
-      visibleXmlBlocks.push(xmlBlock);
-    }
-  }
-  return visibleXmlBlocks.concat(hiddenXmlBlocks);
 };
 
 StudioApp.prototype.createModalDialog = function(options) {
@@ -1083,7 +1071,12 @@ StudioApp.prototype.highlight = function(id, spotlight) {
 * Remove highlighting from all blocks
 */
 StudioApp.prototype.clearHighlighting = function () {
-  this.highlight(null);
+  if (this.isUsingBlockly()) {
+    this.highlight(null);
+  } else if (this.editCode && this.editor) {
+    // Clear everything (step highlighting, errors, etc.)
+    codegen.clearDropletAceHighlighting(this.editor, true);
+  }
 };
 
 /**

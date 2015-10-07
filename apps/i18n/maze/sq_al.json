@@ -80,5 +80,6 @@
   "whileTooltip": "Përsërit veprimet e brendshme derisa të arrihet pika e mbarimit.",
   "word": "Gjej fjalën",
   "yes": "Po",
-  "youSpelled": "Ti gërmëzove"
+  "youSpelled": "Ti gërmëzove",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

@@ -91,7 +91,7 @@ Breakfast and lunch will be served.
 
 Alliance College-Ready Public Schools<br/>
 515 Columbia Ave<br/>
-Room TBD<vr/>
+Room TBD<br/>
 Los Angeles, CA 90017<br/>
 
 **What to bring to Phase 3 quarterly sessions:**
