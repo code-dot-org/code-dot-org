@@ -143,6 +143,8 @@ function loadInfinity(skin, assetUrl) {
     [msg.setBackgroundSnowy(), '"snowy"'],
     ];
 
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
     [skin.leafy.background, '"leafy"'],
     [skin.grassy.background, '"grassy"'],
@@ -459,6 +461,8 @@ function loadHoc2015(skin, assetUrl) {
     [msg.setBackgroundShip(), '"ship"']
     ];
 
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
     [skin.forest.background, '"forest"'],
     [skin.snow.background, '"snow"'],
@@ -580,6 +584,8 @@ function loadStudio(skin, assetUrl) {
     [msg.setBackgroundTennis(), '"tennis"'],
     [msg.setBackgroundWinter(), '"winter"']];
 
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
     [skin.cave.background, '"cave"'],
     [skin.night.background, '"night"'],

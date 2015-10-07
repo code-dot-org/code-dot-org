@@ -2,9 +2,9 @@ var msg = require('./locale');
 var api = require('./apiJavascript.js');
 
 module.exports.blocks = [
-  {func: 'setBot', parent: api, category: '', params: ['"bot1"'], dropdown: { 0: [ '"bot1"', '"bot2"' ] } },
+  {func: 'setBot', parent: api, category: '', params: ['"bot1"'], dropdown: { 0: [ '"random"', '"bot1"', '"bot2"' ] } },
   {func: 'setBotSpeed', parent: api, category: '', params: ['"fast"'], dropdown: { 0: [ '"slow"', '"normal"', '"fast"' ] } },
-  {func: 'setBackground', parent: api, category: '', params: ['"snow"'], dropdown: { 0: [ '"forest"', '"snow"', '"ship"' ] } },
+  {func: 'setBackground', parent: api, category: '', params: ['"snow"'], dropdown: { 0: [ '"random"', '"forest"', '"snow"', '"ship"' ] } },
   {func: 'setMap', parent: api, category: '', params: ['"blank"'], dropdown: { 0: [ '"blank"', '"circle"', '"circle2"', '"horizontal"', '"grid"', '"blobs"'] } },
   {func: 'moveRight', parent: api, category: '', },
   {func: 'moveLeft', parent: api, category: '', },
@@ -43,7 +43,7 @@ module.exports.blocks = [
   {func: 'whenTouchSpider', block: 'function whenTouchSpider() {}', expansion: 'function whenTouchSpider() {\n  __;\n}', category: '' },
 
   // Functions hidden from autocomplete - not used in hoc2015:
-  {func: 'setSprite', parent: api, category: '', params: ['0', '"bot1"'], dropdown: { 1: [ '"bot1"', '"bot2"' ] } },
+  {func: 'setSprite', parent: api, category: '', params: ['0', '"bot1"'], dropdown: { 1: [ '"random"', '"bot1"', '"bot2"' ] } },
   {func: 'setSpritePosition', parent: api, category: '', params: ["0", "7"], 'noAutocomplete': true },
   {func: 'setSpriteSpeed', parent: api, category: '', params: ["0", "8"], 'noAutocomplete': true },
   {func: 'setSpriteEmotion', parent: api, category: '', params: ["0", "1"], 'noAutocomplete': true },
