@@ -189,6 +189,8 @@ applabCommands.button = function (opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
+  newButton.style.color = '#fff';
+  newButton.style.backgroundColor = '#1abc9c';
 
   return Boolean(newButton.appendChild(textNode) &&
     Applab.activeScreen().appendChild(newButton));
@@ -753,6 +755,8 @@ applabCommands.dropdown = function (opts) {
   }
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
+  newSelect.style.color = '#fff';
+  newSelect.style.backgroundColor = '#1abc9c';
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
