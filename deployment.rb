@@ -71,7 +71,7 @@ def load_configuration()
     'poste_secret'                => 'not a real secret',
     'proxy'                       => false, # If true, generated URLs will not include explicit port numbers in development
     'rack_env'                    => rack_env,
-    'rack_envs'                   => [:development, :production, :adhoc, :staging, :test, :levelbuilder],
+    'rack_envs'                   => [:development, :production, :adhoc, :staging, :test, :levelbuilder, :integration],
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,

@@ -1,30 +1,25 @@
-# Chef test suite for cdo-varnish cookbook.
+# Chef test suite for CloudFront distribution behavior.
 
 # Chef node attributes as constants
 DASHBOARD_PORT = 8080
 PEGASUS_PORT = 8081
 VARNISH_PORT = 80
 LOCALHOST = 'localhost'
+VARNISH_URL = "#{LOCALHOST}:#{VARNISH_PORT}"
 ENVIRONMENT = 'integration'
+CLOUDFRONT_URL = "https://#{ENVIRONMENT}-studio.code.org"
 
-# Setup the mock-server and cache
+# Setup the mock-server and ngrok
 puts 'setup'
-PID = spawn('cd ~; java -jar mock.jar --verbose')
-`service varnish restart`
-# Don't start tests until both wiremock and varnish are live.
-mock_started, varnish_started = false, false
-until [mock_started,varnish_started].all?
+NGROK_PID = spawn('/usr/local/ngrok/ngrok start cdo --config=/home/kitchen/.ngrok2/ngrok.yml --log=stdout')
+PID = spawn('cd ~; java -jar mock.jar')
+# Don't start tests until wiremock is live.
+mock_started = false
+until mock_started
   `sleep 1`
-  unless mock_started
-    puts 'testing mock'
-    `curl -s -i #{LOCALHOST}:#{DASHBOARD_PORT}/start`
-    mock_started = $?.exitstatus == 0
-  end
-  unless varnish_started
-    puts 'testing varnish'
-    `curl -s -i #{LOCALHOST}:#{VARNISH_PORT}/start`
-    varnish_started = $?.exitstatus == 0
-  end
+  puts 'testing mock'
+  `curl -s -i #{LOCALHOST}:#{DASHBOARD_PORT}/start`
+  mock_started = $?.exitstatus == 0
 end
 puts 'setup finished'
 
@@ -32,6 +27,8 @@ at_exit do
   puts 'teardown'
   `curl -s -X POST #{LOCALHOST}:#{DASHBOARD_PORT}/__admin/shutdown`
   Process.wait PID
+  `kill -INT #{NGROK_PID}`
+  Process.wait NGROK_PID
   puts 'teardown finished'
 end
 
@@ -71,7 +68,8 @@ def mock_url(url, body, request_headers={}, response_headers={}, method='GET')
     status: 200,
     body: body,
     headers: {
-      "Content-Type" => "text/plain"
+      'Cache-Control' => 'public, max-age=10',
+      'Content-Type' => 'text/plain'
     }.merge(response_headers)
   }
 }.to_json
@@ -89,9 +87,9 @@ def request(url, headers={}, cookies={})
 end
 
 def proxy_request(url, headers={}, cookies={}, method='GET')
-  headers.merge!(host: "#{ENVIRONMENT}-studio.code.org")
+  headers.merge!(host: 'cdo.ngrok.io')
   headers.merge!('X-Forwarded-Proto' => 'https')
-  _request("#{LOCALHOST}:#{VARNISH_PORT}#{url}", headers, cookies, method)
+  _request("#{CLOUDFRONT_URL}#{url}", headers, cookies, method)
 end
 
 def code(response)
@@ -102,7 +100,7 @@ def assert_ok(response)
   assert_equal 200, code(response)
 end
 def assert_cache(response, hit)
-  assert_equal hit ? 'HIT' : 'MISS', /X-Varnish-Cache: (\w+)/.match(response)[1]
+  assert_equal hit ? 'Hit' : 'Miss', /X-Cache: (\w+) from cloudfront/.match(response)[1]
 end
 def assert_miss(response)
   assert_cache response, false
@@ -115,9 +113,15 @@ def last_line(response)
   response.lines.to_a.last.strip
 end
 
+require 'securerandom'
+def get_url(prefix='x', suffix='')
+  id = SecureRandom.uuid
+  '/' + prefix.to_s + '/' + id + '/' + suffix.to_s
+end
+
 describe 'http' do
   it 'handles a simple request' do
-    url = '/cache1'
+    url = get_url 1
     text = 'Hello World!'
     mock_url(url, text)
     response = request url
@@ -126,7 +130,7 @@ describe 'http' do
   end
 
   it 'caches a simple request' do
-    url = '/cache2'
+    url = get_url 2
     text = 'Hello World 2!'
     mock_url(url, text)
 
@@ -149,7 +153,7 @@ describe 'http' do
   end
 
   it 'Normalizes Accept-Language' do
-    url = '/cache3'
+    url = get_url 3
     text_en = 'Hello World!'
     text_fr = 'Bonjour le Monde!'
     mock_url(url, text_en, {'X-Varnish-Accept-Language' => 'en'}, {vary: 'X-Varnish-Accept-Language'})
@@ -164,25 +168,26 @@ describe 'http' do
     refute_nil /Accept-Language/.match(response)
     assert_hit proxy_request url, en
 
-    # Ensure properly-normalized Accept-Language request header
+    # Ensure that language is separately cached
     fr = {'Accept-Language' => 'fr'}
-    fr_2 = {'Accept-Language' => 'da, x-random;q=0.8, fr;q=0.7'}
     response = proxy_request url, fr
     assert_miss response
     assert_equal text_fr, last_line(response)
-    assert_hit proxy_request url, fr_2
+    assert_hit proxy_request url, fr
 
+    # Language-header normalization not implemented in CloudFront.
+    # fr_2 = {'Accept-Language' => 'da, x-random;q=0.8, fr;q=0.7'}
     # Fallback to English on weird Accept-Language request headers
-    ['f', ('x' * 50), '*n-gb'].each do |lang|
-      lang_hash = {'Accept-Language' => lang}
-      response = proxy_request url, lang_hash
-      assert_hit response
-      assert_equal text_en, last_line(response)
-    end
+    # ['f', ('x' * 50), '*n-gb'].each do |lang|
+    #   lang_hash = {'Accept-Language' => lang}
+    #   response = proxy_request url, lang_hash
+    #   assert_hit response
+    #   assert_equal text_en, last_line(response)
+    # end
   end
 
   it 'Strips all request/response cookies from static-asset URLs' do
-    url = '/cache4.png'
+    url = get_url 4, 'image.png'
     text = 'Hello World!'
     text_cookie = 'Hello Cookie!'
     mock_url(url, text, {}, {'Set-Cookie' => 'cookie_key=cookie_value; path=/'})
@@ -207,7 +212,7 @@ describe 'http' do
   end
 
   it 'Allows whitelisted request cookie to affect cache behavior' do
-    url = '/cache5'
+    url = get_url 5
     cookie = "_learn_session_#{ENVIRONMENT}"
     text = 'Hello World!'
     text_cookie = 'Hello Cookie 123!'
@@ -228,7 +233,7 @@ describe 'http' do
   end
 
   it 'Strips non-whitelisted request cookies' do
-    url = '/cache6'
+    url = get_url 6
     cookie = 'random_cookie'
     text = 'Hello World!'
     text_cookie = 'Hello Cookie!'
@@ -247,10 +252,10 @@ describe 'http' do
   end
 
   it 'Strips non-whitelisted response cookies' do
-    # TODO: not implemented in Varnish config
-    skip 'Not implemented in Varnish'
+    # TODO: not implemented in CloudFront
+    skip 'Not implemented in CloudFront'
 
-    url = '/cache7'
+    url = get_url 7
     cookie = 'random_cookie'
     text = 'Hello World!'
     mock_url(url, text, {}, {'Set-Cookie' => "#{cookie}=abc; path=/"})
@@ -267,7 +272,10 @@ describe 'http' do
   end
 
   it 'Does not strip cookies from uncached PUT or POST asset requests' do
-    url = '/cache8.png'
+    # Varnish only; not supported by CloudFront
+    skip 'Not implemented in CloudFront'
+
+    url = get_url 8, 'image.png'
     cookie = 'random_cookie'
     text = 'Hello World!'
     text_cookie = 'Hello Cookie!'
@@ -281,7 +289,6 @@ describe 'http' do
     # PUT/POST
     %w(POST PUT).each do |method|
       # PUT/POST response should NOT have cookie stripped
-      puts "Testing #{method}"
       response = proxy_request url, {}, {"#{cookie}" => '123'}, method
       assert_equal text_cookie, last_line(response)
       assert_miss response
@@ -292,7 +299,7 @@ describe 'http' do
   end
 
   it 'Does not strip cookies from assets in higher-priority whitelisted path' do
-    url = '/api/cache9.png'
+    url = get_url 'api', 'image.png'
     cookie = 'hour_of_code' # whitelisted for this path
     text = 'Hello World!'
     text_cookie = 'Hello Cookie!'

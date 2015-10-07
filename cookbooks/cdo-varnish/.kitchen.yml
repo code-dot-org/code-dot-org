@@ -7,6 +7,10 @@ driver:
 provisioner:
   name: chef_zero
   require_chef_omnibus: 11.18.12
+  environments_path: test/environments
+  client_rb:
+    node_name: test_varnish
+    environment: integration
 
 platforms:
   - name: ubuntu-14.04
@@ -18,6 +22,22 @@ suites:
     run_list:
       - recipe[varnish_test]
     attributes:
+      cdo-apps:
+        dashboard:
+          port: 8080
+        pegasus:
+          port: 8081
+        i18n:
+          languages:
+            en: English
+            fr: French
+  - name: cloudfront
+    run_list:
+      - recipe[varnish_test]
+      - recipe[varnish_test::ngrok]
+    attributes:
+      varnish_test:
+        authtoken: <%= ENV['NGROK_TOKEN'] %>
       cdo-apps:
         dashboard:
           port: 8080
