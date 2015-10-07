@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-05-08T19:25:09.000Z",
+  "created_at": "2015-10-07T13:27:05.000Z",
   "level_num": "custom",
   "user_id": 13,
   "properties": {
@@ -16,12 +16,6 @@
         ]
       },
       "setPosition": null,
-      "textLabel": {
-        "params": [
-          "\"id\"",
-          "\"text\""
-        ]
-      },
       "moveForward": null,
       "moveBackward": null,
       "move": null,
@@ -32,13 +26,24 @@
       "turnTo": null,
       "arcRight": null,
       "arcLeft": null,
-      "getX": null,
-      "getY": null,
-      "getDirection": null,
       "penUp": null,
       "penDown": null,
       "penWidth": null,
       "penColor": null,
+      "penRGB": {
+        "params": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "paletteParams": [
+          "r",
+          "g",
+          "b",
+          "a"
+        ]
+      },
       "show": null,
       "hide": null,
       "speed": null,
@@ -48,12 +53,11 @@
       "functionParams_none": null,
       "functionParams_n": null,
       "callMyFunction": null,
-      "callMyFunction_n": null,
-      "return": null
+      "callMyFunction_n": null
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Use the textLabel command to replace the button in your program with a text label. (Click to see full instructions)",
+    "instructions": "Move the buttons to the bottom of the screen. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -68,15 +72,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "start_blocks": "button(\"moveBtn\", \"move me\");\r\nonEvent(\"moveBtn\", \"mouseover\", function(){\r\n  setPosition(\"moveBtn\",randomNumber(320), randomNumber(480), 100, 100);\r\n});\r\n",
-    "show_turtle_before_run": "false",
+    "start_blocks": "button(\"forwardButton\", \"Go Forth!\");\r\nbutton(\"leftButton\", \"Turn Left!\");\r\nonEvent(\"forwardButton\", \"click\", function(){\r\n  moveForward(25);\r\n});\r\nonEvent(\"leftButton\", \"click\", function(){\r\n  turnLeft(90);\r\n});",
+    "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "app_width": "320",
-    "app_height": "480",
-    "encrypted_examples": [
-
-    ],
-    "markdown_instructions": "# New Elements and Events: Text Labels\r\n\r\nYou may have noticed a new block in the UI controls called `textLabel`. A text label is just a transparent rectangle that can contain text. It won't animate like a button does when it's clicked, but you can still move / resize it like you would a button using `setPosition`, and event handlers can be attached to it using its ID.\r\n\r\n# Do This\r\n\r\n**Read the documentation** for `textLabel`\r\n\r\n**Modify** the program so that your button is now a text label. It should move randomly around the screen when clicked, just like before. Add any text you like to the label.\r\n\r\n**Note:** If you reuse your button's ID you'll only need to change a single line of code to make your program work. Once you have your program working **choose a descriptive and meaningful ID** for your text label and make the appropriate changes in the event handler.",
+    "encrypted_examples": "NJ/aKD93DfFkgTUMoJVrjR8CqREzKB1QSqz9d0kFnoU1FGBmaRZSLT+n7723\nyGau\n",
+    "markdown_instructions": "# Moving Buttons Around\r\n\r\nSo far the position of your buttons has been decided for you. To build more intuitive user interfaces you'll want to set the position and size of buttons yourself.\r\n\r\n`setPosition` can be used to set the location and size of page elements. It has been added to the toolbox and can be found within the UI controls.\r\n\r\n# Do This\r\n\r\n**Read the documentation** for `setPosition` to learn how to use this command. \r\n\r\n**Starter code** has been provided which creates two buttons and event handlers.\r\n\r\n**Use** `setPosition` to move the two buttons to the bottom of the screen, as shown in the image below. \r\n\r\n**Remember** the grid system begins at the top left corner and moves down and to the right.\r\n\r\n![](https://images.code.org/61eaf22a7db35acb5b5cb8872c54d5f7-image-1444226075634.54.12 AM.png)",
     "never_autoplay_video": "false",
     "slider_speed": "1",
     "examples_required": "false",

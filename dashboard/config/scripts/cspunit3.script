@@ -101,13 +101,14 @@ level 'U3L08 - digitalScene'
 
 ######
 
+#9
 stage 'Events Unplugged’
 level 'U3L12 - Student Introduction 1'
 
-stage 'Buttons on the Screen'
+# 10
+stage 'Event-Driven Programming and Debugging'
 level 'U3L13 Student Lesson Introduction'
 level 'U3L13 - Turtle move with button'
-level 'U3L13 - Explanation of Ids'
 level 'U313 drag Two Buttons'
 level 'U3L13 eventsDetails'
 level 'U313 Two Buttons with Ids'
@@ -116,47 +117,44 @@ level 'U3L13 - Debugging 1'
 level 'U3L13 - Debugging 2'
 level 'U3L13 - Debugging 3'
 level 'U3L13 - Turtle Driver Project'
+assessment 'U3L13 debugging Multi'
 assessment 'U3L13 Free Response Reflection'
-assessment 'U3L13 Assessment Matching'
-
-stage 'Unfortunate Events'
-level 'U3L14 - Student Intro Page'
-level 'U3L14 - Unfortunate Events Free Play'
-assessment 'U3L14 - Matching Events to Description'
 assessment 'U3L14 - MC order of button and onEvent'
 assessment 'U3L14 - MC Duplicate Ids'
-assessment 'U3L14 - Journal Favorite Event'
 
+# 11
 stage 'Beyond Buttons Toward Apps'
 level 'U3L16 Student Lesson Introduction'
-level 'U3L16 Free Response Getting Started'
+level 'U3L16 - introSetPosition'
 level 'U3L16 - setupMoveToRandom'
 level 'U3L16 - setPosition to move button'
 level 'U3L16 - text labels'
 level 'U3L16 - use images'
+assessment 'U3L16 Assessment Free Response'
+assessment 'U3L16 Free Response Wrap Up'
+assessment 'U3L14 - Matching Events to Description'
+assessment 'U3L14 - Journal Favorite Event'
+
+# 12
+stage 'Introducing Design Mode'
+level 'U3- L12 -Design Mode SFLP'
+level 'U3 - Design Mode 1'
+level 'U3-Design Mode-ID and Event Handler'
+
+# 13
+stage 'Clicker Game'
+level 'U1L1 Student Lesson Introduction'
+level 'U3L16 - quick double click'
+
+# 14
+stage 'Getting User Input'
+level 'U1L1 Student Lesson Introduction'
 level 'U3L16 - textInput getText write'
 level 'U3L16 - hideAndShowPractice'
 level 'U3L16 - challenge say hi app'
-level 'U3L16 - quick double click'
-assessment 'U3L16 Assessment Free Response'
-assessment 'U3L16 Free Response Wrap Up'
 
-stage 'Cookie Clicker'
-level 'U1L1 Student Lesson Introduction'
-
-stage 'Improving the Clicker Game'
-level 'U3L18 Student Lesson Introduction'
-level 'U3L18 Controlling Memory and Program Flow'
-level 'U3L18 Controlling Memory and Program Flow 2'
-level 'U3L18 Controlling Memory and Program Flow 3'
-level 'U3L18 Controlling Memory and Program Flow 4'
-level 'U3L18 Controlling Memory and Program Flow 5'
-assessment 'U3L18 Free Response Wrap Up'
-
-stage 'Variable Basics DEPRECIATED'
-level 'U1L1 Student Lesson Introduction'
-
-stage 'Clicker Variable Basics'
+# 15
+stage 'Variables'
 level 'U3L19 Student Lesson Intro'
 level 'U3L19 - Target Clicker App'
 level 'U3L19 - Intro to variables’
@@ -193,6 +191,17 @@ level 'U3L19 - done with variables finally'
 level 'U3L19 - improve your clicker game'
 assessment 'U3L19 - final prompt'
 
+# We think this stage_lesson goes away-Keeping for posterity
+stage 'Improving the Clicker Game'
+level 'U3L18 Student Lesson Introduction'
+level 'U3L18 Controlling Memory and Program Flow'
+level 'U3L18 Controlling Memory and Program Flow 2'
+level 'U3L18 Controlling Memory and Program Flow 3'
+level 'U3L18 Controlling Memory and Program Flow 4'
+level 'U3L18 Controlling Memory and Program Flow 5'
+assessment 'U3L18 Free Response Wrap Up'
+
+# 16
 stage 'Conditional Basics'
 level 'U3L20 Student Lesson Introduction'
 assessment 'U3L20 Free Response Getting Started'
@@ -207,6 +216,7 @@ level 'U3L20 Assessment8'
 level 'U3L20 Assessment9'
 assessment 'U3L20 Free Response Wrap Up' 
 
+# 17 Arithmetic?
 stage 'More Variables (2 days)'
 level 'U3L21 Student Lesson Introduction'
 assessment 'U3L21 Assessment 1'
@@ -340,3 +350,8 @@ stage 'Layers of Abstraction and Programming Efficiency'
 stage 'Scene Design Part 1: Plan'
 stage 'Scene Design Part 2: Code'
 stage 'Scene Design Part 3: Reflect'
+stage 'Buttons on the Screen'
+stage 'Unfortunate Events'
+stage 'Cookie Clicker'
+stage 'Variable Basics DEPRECIATED'
+stage 'Clicker Variable Basics'
