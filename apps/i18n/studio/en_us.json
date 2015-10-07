@@ -16,6 +16,8 @@
   "backgroundSpace": "space",
   "backgroundTennis": "tennis",
   "backgroundWinter": "winter",
+  "calloutPlaceCommandsHere": "Place commands here",
+  "calloutTypeCommandsHere": "Type your commands here",
   "catActions": "Actions",
   "catControl": "Loops",
   "catEvents": "Events",
