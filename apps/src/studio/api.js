@@ -121,10 +121,9 @@ exports.changeScore = function(id, value) {
   Studio.queueCmd(id, 'changeScore', {'value': value});
 };
 
-exports.addItemsToScene = function(id, className, number) {
-  Studio.queueCmd(id, 'addItemsToScene', {
-    'className': className,
-    'number': number
+exports.addCharacter = function(id, className) {
+  Studio.queueCmd(id, 'addItem', {
+    'className': className
   });
 };
 
@@ -135,10 +134,24 @@ exports.setItemActivity = function(id, className, type) {
   });
 };
 
-exports.setItemSpeed = function(id, className, speed) {
+exports.moveFast = function(id, className) {
   Studio.queueCmd(id, 'setItemSpeed', {
     'className': className,
-    'speed': speed
+    'speed': constants.SpriteSpeed.FAST
+  });
+};
+
+exports.moveNormal = function(id, className) {
+  Studio.queueCmd(id, 'setItemSpeed', {
+    'className': className,
+    'speed': constants.SpriteSpeed.SLOW
+  });
+};
+
+exports.moveSlow = function(id, className) {
+  Studio.queueCmd(id, 'setItemSpeed', {
+    'className': className,
+    'speed': constants.SpriteSpeed.VERY_SLOW
   });
 };
 
