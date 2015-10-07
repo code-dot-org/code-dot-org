@@ -20,7 +20,7 @@ Sedie um evento da Hora do Código durante a Semana da Educação em Ciência da
 
 ## 2) Durante seu evento
 
-  * Comece seu evento com um de nossos [vídeos inspiradores](<%= resolve_url('/promote#videos') %>).
+  * Comece seu evento com um de nossos [vídeos inspiradores](<%= resolve_url('/promote/resources#videos') %>).
   * Faça uma introdução falando sobre a importância da ciência da computação, usando estes [infográficos e estatísticas](<%= resolve_url('/promote/stats') %>).   
       
     
@@ -52,7 +52,7 @@ Sedie um evento da Hora do Código durante a Semana da Educação em Ciência da
 
 | Hora          | Ação                                                                                                                                                           |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10h00 - 10h05 | Comece com um de nossos [vídeos inspiradores](<%= resolve_url('/promote#videos') %>)                                                                             |
+| 10h00 - 10h05 | Comece com um de nossos [vídeos inspiradores](<%= resolve_url('/promote/resources#videos') %>)                                                                   |
 | 10h05 - 10h15 | Faça uma introdução falando sobre a importância da ciência da computação. Use estes [infográficos e estatísticas](<%= resolve_url('/promote/stats') %>)        |
 | 10h15 - 10h30 | Um convidado especial falará sobre sua experiência e sobre como a tecnologia e a ciência da computação desempenham um importante papel em sua vida cotidiana.  |
 | 10h30 - 10h40 | Os alunos farão uma demonstração da Hora do Código para a escola. Inversão de papéis: eles deverão ensinar o diretor, representante político ou outros alunos. |

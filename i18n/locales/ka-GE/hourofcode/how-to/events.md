@@ -18,7 +18,7 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 ## 2) ღონისძიების დროს
 
-  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote#videos') %).
+  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
   * Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/promote/stats') %).   
       
     
@@ -50,7 +50,7 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 | დრო           | რა ხდება                                                                                                                                             |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 | Open with one of our [inspirational videos](%= resolve_url('/promote#videos') %)                                                                     |
+| 10:00 - 10:05 | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %)                                                           |
 | 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %)      |
 | 10:15 - 10:30 | სპეციალურად მოწვეული სტუმარი ყვება თავის გამოცდილებაზე და იმაზე, თუ რა ადგილი უკავია ტექნოლოგიასა და ინფორმატიკას ყოველდღიურ ცხოვრებაში.             |
 | 10:30 - 10:40 | მოსწავლეები ატარებენ კოდის ერთი საათის პრეზენტაციას. მინიშნება: მათ შეუძლიათ ასწავლონ პროგრამირება სკოლის დირექტორს, პოლიტიკოსს ან სხვა მოსწავლეებს. |

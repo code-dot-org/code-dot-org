@@ -18,7 +18,7 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## 2) Durante l'evento
 
-  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote#videos') %).
+  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
   * Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/promote/stats') %).   
       
     
@@ -50,7 +50,7 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 | Ora              | Evento                                                                                                                                                                                               |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote#videos') %)                                                                                                                     |
+| 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %)                                                                                                           |
 | 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %)                                                      |
 | 10:15 - 10:30 am | Intervento degli ospiti che racconteranno le loro esperienze e come tecnologia e informatica abbiano un ruolo nella vita quotidiana.                                                                 |
 | 10:30 - 10:40 am | Gli studenti terranno una dimostrazione di Ora del Codice al resto della scuola. Cambio di parti: lasciate che siano loro ad insegnare al dirigente, ai rappresentanti politici o agli altri alunni. |

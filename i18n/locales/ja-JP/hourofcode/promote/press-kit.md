@@ -22,10 +22,10 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 **1. イベントを計画しましょう**
 
   * Hour of Code を始める集まりを計画しましょう。
-  * [手紙](%= resolve_url('/promote#sample-emails') %)を保護者様に送り、彼らに取り組みを広めてもらえるように頼みましょう。
-  * 市長や議員、影響力のあるビジネスリーダーをイベントに招待し、話してもらえるように[手紙](%= resolve_url('/promote#sample-emails') %) を送りましょう。
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * （「電源のいらない」プログラミング活動の実演のような）グループ活動を準備したり、学生が作り主役となる活動を引き立たせたりしましょう。
-  * Code.org のページにある [Hour of Code のビデオ](%= resolve_url('/') %) を見せるか、 [こちら](%= resolve_url('/promote#videos') %)に沿って周囲の参加を促しましょう。
+  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. 教育または地元のイベントを担当する地元の報道記者を探しましょう**
 
@@ -35,7 +35,7 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 **3. 地元のメディアに連絡する**
 
-一番の方法はメールです。 メールでは「なぜこのイベントが重要なのか？」をわかりやすく手短に説明してください。 連絡先には、このイベントを現場でサポートする人の情報(携帯電話の番号を含む)を含めます。 **[この](%= resolve_url('/promote#sample-emails') %)紹介例を役に立ててください。**
+一番の方法はメールです。 メールでは「なぜこのイベントが重要なのか？」をわかりやすく手短に説明してください。 連絡先には、このイベントを現場でサポートする人の情報(携帯電話の番号を含む)を含めます。 **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %):**
 
 **4. 学校のイベントへの質問に対して準備しましょう。例えば:**
 

@@ -22,10 +22,10 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 **1. तपाइँको घटनाको योजना बनाउनुहोस्**
 
   * Hour of Code को सुरु गर्न सभाको योजना बनाउनुहोस्।
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * समूहको गतिविधिहरूलाई ('अनप्लग्ड' प्रोग्रामिङ्को गतिविधिको प्रदर्शन जस्तै) आयोजना गर्नुहोस्, वा विद्यार्थी-बनाइयो र नेतृत्व गर्ने गतिविधिहरू बन्द देखियो।
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote#videos') %) to inspire.
+  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. शिक्षा वा स्थानीय घटनाहरूलाई कवर गर्ने विशिष्ट स्थानीय रिपोर्टरहरूको पहिचान गर्नुहोस्।**
 
@@ -35,7 +35,7 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 **3. स्थानीय मिडियालाई सम्पर्क गर्नुहोस्**
 
-भेट्टाउने सजिलो तरिका भनेको इमेल हो। यो छोटो र सञ्चार हुने हुनुपर्छ: किन अन्य मानिसले यो घटनाको बारेमा मतलब गर्दछ? घटनाको साइटमा हुनेको लागि (सेलफोन नम्बर सहित) सम्पर्क जानकारीको समावेश छ। **See a [sample pitch to media](%= resolve_url('/promote#sample-emails') %):**
+भेट्टाउने सजिलो तरिका भनेको इमेल हो। यो छोटो र सञ्चार हुने हुनुपर्छ: किन अन्य मानिसले यो घटनाको बारेमा मतलब गर्दछ? घटनाको साइटमा हुनेको लागि (सेलफोन नम्बर सहित) सम्पर्क जानकारीको समावेश छ। **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %):**
 
 **4. तपाइँखो विद्यालयको घटनाको बारेमा भर्ने प्रश्नहरू तयार छन्। यहाँ केहि उदाहरणहरू छन्:**
 

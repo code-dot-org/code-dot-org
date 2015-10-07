@@ -20,7 +20,7 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## 2) Durant l'esdeveniment
 
-  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote#videos') %>).
+  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
   * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/promote/stats') %>).   
       
     
@@ -52,7 +52,7 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 | Hora             | Acció                                                                                                                                           |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote#videos') %>)                                                                |
+| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>)                                                      |
 | 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>) |
 | 10:15 - 10:30 am | Xerrades de convidats per parlar dels seus antecedents i com la tecnologia i la informàtica té un paper important en la seva vida quotidiana.   |
 | 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |

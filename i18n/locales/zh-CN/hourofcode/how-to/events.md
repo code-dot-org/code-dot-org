@@ -18,7 +18,7 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## 2) 活动期间
 
-  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote#videos') %).
+  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
   * Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/promote/stats') %).   
       
     
@@ -50,7 +50,7 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 | 时间               | 活动                                                                                                                                              |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote#videos') %)                                                                |
+| 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %)                                                      |
 | 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %) |
 | 10:15 - 10:30 am | 特邀嘉宾谈谈他们的背景以及科技和计算机科学如何在他们的日常生活中起到重要作用。                                                                                                         |
 | 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |

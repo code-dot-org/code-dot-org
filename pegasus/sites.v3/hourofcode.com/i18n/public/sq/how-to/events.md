@@ -20,7 +20,7 @@ Organizo eventin Ora e Kodimit gjatë Javës Edukative të Shkencave Kompjuterik
 
 ## 2) Gjatë eventit tënd
 
-  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote#videos') %>).
+  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
   * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/promote/stats') %>).   
       
     
@@ -52,7 +52,7 @@ Organizo eventin Ora e Kodimit gjatë Javës Edukative të Shkencave Kompjuterik
 
 | Koha                   | Veprimet                                                                                                                                                      |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 paradite | Open with one of our [inspirational videos](<%= resolve_url('/promote#videos') %>)                                                                              |
+| 10:00 - 10:05 paradite | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>)                                                                    |
 | 10:05 - 10:15 paradite | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>)               |
 | 10:15 - 10:30 paradite | Të ftuar special që do flasin për njohuritë e tyre dhe se si teknologjia dhe shkencat kompjuterike luajnë një rol të rëndësishëm në çdo ditë të jetë së tyre. |
 | 10:30 - 10:40 paradite | Studentët bëjnë një demonstrim të Orës së Kodimit për shkollën. Argëtim- kanë mësuar drejtorin, politikan ose studentë të tjerë.                              |

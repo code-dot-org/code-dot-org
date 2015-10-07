@@ -18,7 +18,7 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## 2) Κατά τη διάρκεια της εκδήλωσης
 
-  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote#videos') %).
+  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
   * Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/promote/stats') %).   
       
     
@@ -50,7 +50,7 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 | Ώρα             | Δράσεις                                                                                                                                                                    |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00-10:05 π.μ | Open with one of our [inspirational videos](%= resolve_url('/promote#videos') %)                                                                                           |
+| 10:00-10:05 π.μ | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %)                                                                                 |
 | 10:05-10:15 π.μ | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %)                            |
 | 10:15-10:30 π.μ | Ειδικοί προσκεκλημένοι για να μιλήσουν για τους υπόβαθρό τους και πώς η τεχνολογία και η επιστήμη των υπολογιστών διαδραματίζει σημαντικό ρόλο στην καθημερινότητά τους.   |
 | 10:30-10:40 π.μ | Οι μαθητές κάνουν μια επίδειξη της Ώρας του Κώδικα για το σχολείο. Διασκεδαστική παραλλαγή: βάλτε τους να διδάξουν τον Διευθυντή, έναν πολιτικό ή άλλους μαθητές.          |
