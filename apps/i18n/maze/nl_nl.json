@@ -80,5 +80,6 @@
   "whileTooltip": "Herhaal de acties totdat je de finish hebt bereikt.",
   "word": "Zoek het woord",
   "yes": "Ja",
-  "youSpelled": "Jij spelde"
+  "youSpelled": "Jij spelde",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

@@ -80,5 +80,6 @@
   "whileTooltip": "اقدامات محصور را تا زمانیکه به نقطه آخر برسی تکرار کن.",
   "word": "کلمه را پیدا کنید",
   "yes": "بله",
-  "youSpelled": "اسپل کنید"
+  "youSpelled": "اسپل کنید",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

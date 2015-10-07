@@ -26,6 +26,7 @@ exports.install = function(blockly, blockInstallOptions) {
   var generator = blockly.Generator.get('JavaScript');
   blockly.JavaScript = generator;
 
+  addIfOnlyFlower(blockly, generator);
   addIfFlowerHive(blockly, generator);
   addIfElseFlowerHive(blockly, generator);
 
@@ -68,6 +69,37 @@ exports.install = function(blockly, blockInstallOptions) {
   });
 };
 
+/**
+ * Are we at a flower
+ */
+function addIfOnlyFlower(blockly, generator) {
+  blockly.Blocks.bee_ifOnlyFlower = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(196, 1.0, 0.79);
+      this.appendDummyInput()
+          .appendTitle(msg.ifCode());
+      this.appendDummyInput()
+          .appendTitle(msg.atFlower());
+      this.setInputsInline(true);
+      this.appendStatementInput('DO')
+          .appendTitle(msg.doCode());
+      this.setTooltip(msg.ifOnlyFlowerTooltip());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  // EXAMPLE:
+  // if (Maze.atFlower()) { code }
+  generator.bee_ifOnlyFlower = function() {
+    // Generate JavaScript for 'if' conditional if we're at a flower
+    var argument = 'Maze.atFlower' + '(\'block_id_' + this.id + '\')';
+    var branch = generator.statementToCode(this, 'DO');
+    var code = 'if (' + argument + ') {\n' + branch + '}\n';
+    return code;
+  };
+}
 
 /**
  * Are we at a flower or a hive

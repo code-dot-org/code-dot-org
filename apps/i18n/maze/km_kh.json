@@ -80,5 +80,6 @@
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
   "word": "ស្វែងរក​ពាក្យ",
   "yes": "យល់ព្រម",
-  "youSpelled": "អ្នក​បាន​ប្រកប"
+  "youSpelled": "អ្នក​បាន​ប្រកប",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

@@ -80,5 +80,6 @@
   "whileTooltip": "Hasarlanmış əmrləri son nöqtəyə çatana qədər təkrarla.",
   "word": "Find the word",
   "yes": "Bəli",
-  "youSpelled": "You spelled"
+  "youSpelled": "You spelled",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }
