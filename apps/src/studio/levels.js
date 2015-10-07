@@ -2143,6 +2143,8 @@ levels.js_hoc2015_event_free = {
     "whenTouchWalkItem2": { "category": "Events" },
     "whenTouchWalkItem3": { "category": "Events" },
     "whenTouchWalkItem4": { "category": "Events" },
+    "whenTouchWalkItem5": { "category": "Events" },
+    "whenTouchWalkItem6": { "category": "Events" },
     "whenTouchCharacter": { "category": "Events" }
   },
   "startBlocks": "function whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",

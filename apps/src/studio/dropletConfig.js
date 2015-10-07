@@ -38,6 +38,8 @@ module.exports.blocks = [
   {func: 'whenTouchWalkItem2', block: 'function whenTouchWalkItem2() {}', expansion: 'function whenTouchWalkItem2() {\n  __;\n}', category: '' },
   {func: 'whenTouchWalkItem3', block: 'function whenTouchWalkItem3() {}', expansion: 'function whenTouchWalkItem3() {\n  __;\n}', category: '' },
   {func: 'whenTouchWalkItem4', block: 'function whenTouchWalkItem4() {}', expansion: 'function whenTouchWalkItem4() {\n  __;\n}', category: '' },
+  {func: 'whenTouchWalkItem5', block: 'function whenTouchWalkItem5() {}', expansion: 'function whenTouchWalkItem5() {\n  __;\n}', category: '' },
+  {func: 'whenTouchWalkItem6', block: 'function whenTouchWalkItem6() {}', expansion: 'function whenTouchWalkItem6() {\n  __;\n}', category: '' },
 
   // Functions hidden from autocomplete - not used in hoc2015:
   {func: 'setSprite', parent: api, category: '', params: ['0', '"bot1"'], dropdown: { 1: [ '"bot1"', '"bot2"' ] } },
