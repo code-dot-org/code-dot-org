@@ -169,9 +169,9 @@ id:
   prizes_nav_hardware: Daftar hadiah Hardware
   whats_next_header: Apa berikutnya?
   whats_next_description: "Kami akan mengirimkan materi-materi dan tip yang berguna untuk acaramu. Tutorial 2015 yang baru akan hadir untuk semua browser, smarthphone - bahkan untuk tanpa komputer! <a href = 'http://code.org/learn'>Coba tutorial saat ini</a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Cara menjalankan Hour of Code</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Promosikan Hour of Code</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'> bagaimana cara mempromosikan Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>Bagaimana cara mempromosikan Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Coba tutorial</a>"
   whats_next_try_button: Coba tutorial
@@ -242,6 +242,7 @@ id:
   map_header: '# Kegiatan Hour of Code diseluruh dunia'
   see_all_events: Lihat semua acara
   map_header_company: '# oleh perusahaan penyelenggara'
+  map_header_country: '# di %{country}'
   map_search_placeholder: Carilah acara Hour of Code
   map_search_search: Cari
   map_search_reset: Atur ulang
@@ -281,18 +282,18 @@ id:
   hoc_faq_why_cs_q: Mengapa ilmu komputer?
   hoc_faq_why_cs_a: "<i>Setiap</i> pelajar harus mendapatkan kesempatan untuk mempelajari ilmu komputer. Hal ini membantu untuk menumbuhkan kemampuan pemecahan masalah, logika dan kreativitas. Dengan dimulai sejak dini, pelajar-pelajar akan memiliki fondasi untuk sukses dalam karir pada abad 21 ini. Lihat mengenai statistiknya pada <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Bagaimana saya berpartisipasi dalam Hour of Code?
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Mulai perencanaan disini</a> dengan mereview panduan kami. Anda dapat mengadakan event Hour of Code di sekolah Anda atau di komunitas Anda&mdash; seperti misalnya klub ekstrakurikuler, nirlaba atau di pekerjaan. atau, cobalah sendiri saat %{campaign_date} datang."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Siapa di balik dari Hour of Code?
   hoc_faq_behind_hoc_a: "Hour of Code diorganisir dan diselenggarakan oleh <a href='http://code.org'>Code.org</a>, sebuah oraganisasi 501c3 non-profit yang berdedikasi untu memperluas partisipan dari ilmu komputer dengan membuatnya tersedia di berbagai sekolah, meningkatkan partisipan perempuan dan berbagai kalangan pelajar lainnya. Sebuah <a href='http://code.org/about/partners'>partisipasi dari mitra yang belum pernah berkoalisi</a> telah bersatu untuk mendukung Hour of Code, &mdash; termasuk didalamnya Microsoft, Apple, Amazon, Boys dan Girls Clubs of America dan universitas."
   hoc_faq_host_q: Saya tidak mengerti mengenai koding. Dapatkah saya menyelenggarakan acara ini?
-  hoc_faq_host_a: "Tentu saja. Aktivitas Hour of Code adalah aktivitas mandiri. Semua yang perlu Anda lakukan adalah <a href='http:/code.org/learn'>mencoba tutorial kami</a>, pilih yang Anda suka dan tentukan jamnya &mdash; kami akan urus sisanya. Kami juga memiliki pilihan untuk setiap umur dan tingkat pengalaman, dari TK dan seterusnya. Mulailah rencanakan kegiatan Anda dengan membaca <a href='target-resources-how-to'>panduan</a> kami."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Apakah saya perlu menyediakan komputer untuk setiap partisipan?
   hoc_faq_need_computers_a: |
     Tidak. Kami memiliki tutorial Hour of Code yang dapat berjalan di PC, Ponsel Pintar, Tablet, dan beberapa tidak membutuhkan komputer sama sekali! Anda dapat bergabung dimanapun anda berada, siapapun berada dengan anda. <p><i>Berikut beberapa pilihan:</i> <br><ul><li><b>Bekerja dalam berpasangan.</b> Penelitian menunjukkan bahwa pelajar belajar dengan sangat baik dengan <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pemrograman berpasangan</a>, saling berbagi komputer dan bekerja sama. Doronglah pelajar anda untuk bekerja sama.
     <li><b>Gunakkanlah layar proyektor.</b> Jika anda memiliki proyektor dan layarnya untuk digunakan untuk komputer tekoneksi internet, maka kelompok anda dapat melaksanakan Hour of Code bersama. Tonton sebagian dari video-video dan ambil giliran untuk memecahkan masalah atau menjawab pertanyaan.
     <li><b>Laksanakan tanpa online.</b> Kami juga menyediakan tutorial yang tidak membutuhkan komputer sama sekali.</ul>
   hoc_faq_international_q: 'Saya tinggal di <country>. Bagaimana cara untuk berpartisipasi internasional?'
-  hoc_faq_international_a: "Siapa saja dapat mengadakan kegiatan Hour of Code, dimana saja didunia. Tahun lalu, pelajar dari seluruh dunia bergabung bersama-sama untuk Hour of Code. Temukan informasi lebih lanjut <a href='/promote'>disini</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Bagaimana saya dapat membuat tutorial Hour of Code?
   hoc_faq_tutorial_a: "Jika anda tertarik menjadi mitra tutorial kami, <a href='/tutorial-guidelines'>silahkan lihat panduan dan instruksi kami</a>. Kami ingin menghelat berbagai pilihan yang menarik, namun tujuan utama kami adalah mengoptimalkan pengalaman untuk pelajar dan guru yang awam akan ilmu komputer."
   hoc_faq_more_questions_q: Masih ada pertanyaan?

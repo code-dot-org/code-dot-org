@@ -169,9 +169,9 @@ sr:
   prizes_nav_hardware: Hardware prize signup
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Како да водите Hour of Code</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Промовишите Hour of Code</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
@@ -242,6 +242,7 @@ sr:
   map_header: '# Hour of Code догађаји широм света'
   see_all_events: See all events
   map_header_company: '# организовано од стране фирме'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Претражи Hour of Code окупљања
   map_search_search: Тражи
   map_search_reset: Поново покрени
@@ -281,15 +282,15 @@ sr:
   hoc_faq_why_cs_q: Зашто рачунарске науке?
   hoc_faq_why_cs_a: "<i>Сваки</i> ученик би требао имати прилику да научи информатику. То негује вештине решавања проблема, логике и креативности. Ако почну рано, ученици ће имати темељ за успешну каријеру у 21-ом веку. Погледајте додатне статистике на <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Како могу учествовати у Hour of Code?
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Ко стоји иза Hour of Code?
   hoc_faq_behind_hoc_a: "Hour of Code је организован од стране <a href='http://code.org'>Code.org</a>, јавне 501c3 непрофитне организације посвећене ширењу информатике тако што омогућава доступност у све више школа и повећано учешће жена и деце припадника мањина. <a href='http://code.org/about/partners'>Јединствени скуп партнера</a> се окупио у подршци Hour of Code-а &mdash; укључијући Microsoft, Apple, Amazon, Boys and Girls Clubs of America и College Board."
   hoc_faq_host_q: Не знам ништа о програмиранју. Да ли ипак могу бити домаћин догађаја?
-  hoc_faq_host_a: "Наравно. Hour of Code ативности имају упутства. Све што треба да урадите је да <a href='http://code.org/learn'>пробате наш актуелни водич</a>, одаберете лекцију коју желите и сат свог времена &mdash; ми ћемо се побринути за остало. Такође имамо опцију са сваку старосну доб и ниво искуства, од вртића па навише. Почните планирати свој догађај читајући <a href='target-resources-how-to'>како водити</a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Да ли ми је потребан рачунар за сваког полазника?
   hoc_faq_need_computers_a: "Не. Ми имамо упутства за Hour of Code која раде на рачунарима, паметним телефонима, таблетима, као и нека за која уопште нису потребни рачунари! Можете се прикључити где год били, са било чиме што имате.<p><i>Ево неколико могућности: </i><br><ul><li><b>Радите у паровима.</b>Истраживања полазују да ученици најбоље уче <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>програмирањем у паровима</a>, дељењен рачунара и заједничким радом. Охрабрите своје ученике да деле. <li><b>Користите пројектор.</b> Ако имате платно, пројектор и рачунар повезан на интернет, цела група може учити заједно. Погледајте видео снимке заједно и наизменично решавајте задатке или одговарајте на питања. <li><b>Учите без електронике.</b>Нудимо упутсва за која нису потребни рачунари.</ul>"
   hoc_faq_international_q: 'Ја сам у <country>. Како учествовати на међународном нивоу?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Како да направим Hour of Code упутство?
   hoc_faq_tutorial_a: "Ако сте заинтересовани да постанете партнер у изради упутстава,<a href='target-tutorial-guidelines'>погледајте наше смернице и упутства</a>. Желимо омогућити разне опције, али примарни циљ је прилагодити искуство за ученике и учитеље којима је информатика непозната."
   hoc_faq_more_questions_q: И даље имате још питања?

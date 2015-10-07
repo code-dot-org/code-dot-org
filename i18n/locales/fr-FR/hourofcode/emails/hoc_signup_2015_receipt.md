@@ -26,7 +26,7 @@ Parlez de #HourOfCode à vos amis.
 
 ## 4. Faites la promotion d'une Heure de Code dans votre communauté
 
-Constituez un groupe - dans votre église ou votre université, à la maison de retraite d'à côté ou votre association de quartier. Ou hébergez une petite fête de quartier Une Heure de Code pour vos voisins. [Send this email](https://<%= hostname %>/resources#email).
+Constituez un groupe - dans votre église ou votre université, à la maison de retraite d'à côté ou votre association de quartier. Ou hébergez une petite fête de quartier Une Heure de Code pour vos voisins. [Envoyer ce mail](https://<%= hostname %>/resources#email).
 
 ## 5. Demandez à un élu local de soutenir l'initiative Une Heure de Code
 

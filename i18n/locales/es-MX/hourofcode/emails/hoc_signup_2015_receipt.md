@@ -6,7 +6,7 @@ De: "Hadi Partovi (Code.org) Gracias por registrarse para patrocinar la Hora de 
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# ¡Gracias por inscribirte para ser anfitrión de una Hora de Programación!
+# ¡Gracias por inscribirte para ser anfitrión de una Hora de Código!
 
 <% if @country == 'la' || @country == 'br' || @country == 'ar' %> Usted hace posible que estudiantes a lo largo de Latinoamérica aprendan una Hora de Código que puede cambiar el resto de sus vidas durante octubre. 5 al 11. <% else %> Usted hace posible que estudiantes alrededor del mundo aprendan una Hora de Código que puede *cambiar el resto de sus vidas*, durante diciembre. Xpath: /p[3]. 7 al 13. <% end %>
 

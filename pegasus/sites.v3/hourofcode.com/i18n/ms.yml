@@ -169,9 +169,9 @@ ms:
   prizes_nav_hardware: Hardware prize signup
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Bagaimana untuk memulakan 1 Jam Pengaturacaraan</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Mempromosikan 1 Jam Pengaturacaraan</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
@@ -242,6 +242,7 @@ ms:
   map_header: 'Acara # Hour of Code di seluruh dunia'
   see_all_events: See all events
   map_header_company: '# oleh syarikat penganjur'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Search for Hour of Code events
   map_search_search: Search
   map_search_reset: Reset
@@ -281,11 +282,11 @@ ms:
   hoc_faq_why_cs_q: Mengapa sains komputer?
   hoc_faq_why_cs_a: "<i>Setiap</i> pelajar harus mempunyai peluang untuk belajar sains komputer. Ia membantu memupuk kemahiran  penyelesaian masalah, logik dan kreativiti. Dengan memulakan lebih awal, pelajar akan mempunyai asas untuk berjaya dalam mana-mana laluan kerjaya abad ke-21. Lihat lebih banyak statistik di <a href='http://code.org'> Code.org</a>."
   hoc_faq_how_participate_q: Bagaimana saya boleh menyertai Hour of Code?
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: 'Siapa di belakang  Hour of Code?'
   hoc_faq_behind_hoc_a: "Hour of Code dianjurkan oleh <a href='http://code.org'> Code.org</a>, badan bukan bertujuan keuntungan awam 501 c 3 khusus untuk memperluaskan penyertaan dalam Sains Komputer dengan membolehkannya didapati di lebih banyak sekolah, dan meningkatkan penyertaan wanita dan pelajar dari kelompok minori. Satu <a href='http://code.org/about/partners'> gabungan rakan kongsi yang belum pernah berlaku sebelum ini</a> juga telah datang bersama untuk menyokong Hour of Code &mdash; termasuk Microsoft, Apple, Amazon, Boys and Girls Clubs of America dan Lembaga Pentadbir Kolej."
   hoc_faq_host_q: Saya tidak mengetahui apa-apa berkenaan menulis kod. Adakah saya masih boleh menjadi hos kepada acara ini?
-  hoc_faq_host_a: "Semestinya. Aktiviti Hour of Code adalah berdasarkan bimbingan kendiri. Apa yang anda perlu lakukan adalah <a href='http://code.org/learn'> mencuba tutorial semasa kami</a>, pilih tutorial anda dan lapangkan masa satu jam &mdash; kami menguruskan hal yang lain. Kami juga mempunyai pilihan untuk setiap peringkat usia dan tahap pengalaman, dari tadika dan ke atas. Mulakan rancangan untuk acara anda dengan membaca <a href='target-resources-how-to'> panduan cara </a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Adakah saya perlu menyediakan komputer kepada setiap peserta?
   hoc_faq_need_computers_a: "Tidak semestinya. Kami menyediakan tutorial Hour of Code yang boleh dijalankan di PC, telefon pintar, tablet malah sebahagiannya tidak memerlukan komputer pun! Anda boleh ikut serta walau di mana sahaja anda berada, dengan apa sahaja yang anda miliki. <p><i>Berikut adalah beberapa pilihan:</i> <br><ul><li><b>kerja berpasangan.</b> Kajian menunjukkan pelajar akan belajar dengan lebih abik bila <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> membuat pengaturcaraan berpasangan</a>, berkongsi komputer dan bekerja bersama. Galakkan pelajar anda untuk bergandingan. <li><b>Gunakan skrin unjuran.</b> Jika anda mempunyai projektor dan skrin  yang dihubungkan kepada komputer yang mempunyai akses ke internet, seluruh Kumpulan anda boleh melakukan aktiviti Hour of Code bersama-sama. Tonton bahagian video bersama-sama dan ambil giliran untuk menyelesaikan teka-teki atau menjawab soalan. <li><b>Laksanakan tanpa talian internet.</b> Kami menawarkan tutorial yang tidak memerlukan komputer sama sekali </ul>"
   hoc_faq_international_q: 'Saya dari negara <country>. Bagaimana untuk saya turut serta di peringkat antarabangsa?'
