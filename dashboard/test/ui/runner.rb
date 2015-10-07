@@ -295,7 +295,7 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
     scenario_info = ", #{scenario_info}" unless scenario_info.blank?
   end
 
-  if !parsed_output.nil? && scenario_count == 0
+  if !parsed_output.nil? && scenario_count == 0 && succeeded
     HipChat.log "<b>dashboard</b> UI tests skipped with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
   elsif succeeded
     # Don't log individual successes because we hit HipChat rate limits
