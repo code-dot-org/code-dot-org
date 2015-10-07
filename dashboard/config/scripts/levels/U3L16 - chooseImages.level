@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-05-08T19:25:09.000Z",
+  "created_at": "2015-10-07T15:53:49.000Z",
   "level_num": "custom",
   "user_id": 13,
   "properties": {
@@ -22,6 +22,7 @@
           "\"text\""
         ]
       },
+      "image": null,
       "moveForward": null,
       "moveBackward": null,
       "move": null,
@@ -53,7 +54,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Use the textLabel command to replace the button in your program with a text label. (Click to see full instructions)",
+    "instructions": "Replace the image in your application with one of your own. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -73,10 +74,7 @@
     "autocomplete_palette_apis_only": "true",
     "app_width": "320",
     "app_height": "480",
-    "encrypted_examples": [
-
-    ],
-    "markdown_instructions": "# New Elements and Events: Text Labels\r\n\r\nYou may have noticed a new block in the UI controls called `textLabel`. A text label is just a transparent rectangle that can contain text. It won't animate like a button does when it's clicked, but you can still move / resize it like you would a button using `setPosition`, and event handlers can be attached to it using its ID.\r\n\r\n# Do This\r\n\r\n**Read the documentation** for `textLabel`\r\n\r\n**Modify** the program so that your button is now a text label. It should move randomly around the screen when clicked, just like before. Add any text you like to the label.\r\n\r\n**Note:** If you reuse your button's ID you'll only need to change a single line of code to make your program work. Once you have your program working **choose a descriptive and meaningful ID** for your text label and make the appropriate changes in the event handler.",
+    "markdown_instructions": "# New Elements and Events: Choosing Images\r\n\r\n**Adding Images You Find Online**: The second parameter of the `image` command allows you to select a different image for your application by providing its URL. You can add images you find online by finding their URLs and pasting them into your `image` command.\r\n\r\n**Adding Images from Your Computer:** It is also possible to add images saved on your computer. Click the word \"Choose\" below the arrow in the `image` block. \r\n\r\n![](https://images.code.org/e726e56fd3e4c7cd4a0d58cba731a855-image-1444240440116.53.49 PM.png)\r\n\r\nYou'll be taken to a \"Choose Assets\" screen which will allow you to select an image to upload to your app.\r\n\r\n![](https://images.code.org/4e33ebc4011b5eb6590f573ada3ed1da-image-1444241056243.04.04 PM.png)\r\n\r\n# Do This\r\n\r\n**Change your image** to one you've found online or from your own computer",
     "never_autoplay_video": "false",
     "slider_speed": "1",
     "examples_required": "false",
@@ -85,7 +83,10 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "submittable": "false",
-    "hide_view_data_button": "true"
+    "hide_view_data_button": "true",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>

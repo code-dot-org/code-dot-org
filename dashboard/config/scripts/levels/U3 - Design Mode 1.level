@@ -1,0 +1,45 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-07T15:03:06.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+    },
+    "edit_code": true,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions": "Add a button to your screen using design mode. Change the style to look like the picture (click for instructions).",
+    "markdown_instructions": "You now have Design Mode!  \r\n\r\nDesign Mode will allow you to easily add UI elements to our projects and style them the way you want!\r\n\r\nYou are going to start off by adding a button.\r\n\r\n1. Click on the Design button that now appears above your app window on the left.\r\n1. Find the button and click to drag out a button. \r\n1. Check out all the style elements on the right under Properties. \r\n1. Get your button to look like the one pictured. You will have the opportunity to add more style to it later.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false"
+  }
+}]]></config>
+  <blocks/>
+</Applab>
