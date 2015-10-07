@@ -3080,9 +3080,9 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.vanishActor(cmd.opts);
       break;
-    case 'addItemsToScene':
+    case 'addItem':
       studioApp.highlight(cmd.id);
-      Studio.addItemsToScene(cmd.opts);
+      Studio.addItem(cmd.opts);
       break;
     case 'setItemActivity':
       studioApp.highlight(cmd.id);
@@ -3104,7 +3104,7 @@ Studio.callCmd = function (cmd) {
   return true;
 };
 
-Studio.addItemsToScene = function (opts) {
+Studio.addItem = function (opts) {
   var directions = [
     Direction.NORTH,
     Direction.EAST,
@@ -3141,50 +3141,48 @@ Studio.addItemsToScene = function (opts) {
     return pos;
   };
 
-  for (var i = 0; i < opts.number; i++) {
-    var direction = level.itemGridAlignedMovement ? Direction.NONE :
-                      directions[Math.floor(Math.random() * directions.length)];
-    var pos = generateRandomItemPosition();
-    var itemOptions = {
-      frames: getFrameCount(opts.className, skin.specialItemFrames, skin.itemFrames),
-      className: opts.className,
-      dir: direction,
-      image: skin[opts.className],
-      loop: true,
-      x: pos.x,
-      y: pos.y,
-      speed: Studio.itemSpeed[opts.className],
-      activity: utils.valueOr(Studio.itemActivity[opts.className], "patrol"),
-      width: 100,
-      height: 100,
-      renderScale: skin.specialItemScale[opts.className] || 1
-    };
+  var direction = level.itemGridAlignedMovement ? Direction.NONE :
+                    directions[Math.floor(Math.random() * directions.length)];
+  var pos = generateRandomItemPosition();
+  var itemOptions = {
+    frames: getFrameCount(opts.className, skin.specialItemFrames, skin.itemFrames),
+    className: opts.className,
+    dir: direction,
+    image: skin[opts.className],
+    loop: true,
+    x: pos.x,
+    y: pos.y,
+    speed: Studio.itemSpeed[opts.className],
+    activity: utils.valueOr(Studio.itemActivity[opts.className], "patrol"),
+    width: 100,
+    height: 100,
+    renderScale: skin.specialItemScale[opts.className] || 1
+  };
 
-    var item = new Item(itemOptions);
+  var item = new Item(itemOptions);
 
-    if (level.blockMovingIntoWalls) {
-      // TODO (cpirich): just move within the map looking for open spaces instead
-      // of randomly retrying random numbers
+  if (level.blockMovingIntoWalls) {
+    // TODO (cpirich): just move within the map looking for open spaces instead
+    // of randomly retrying random numbers
 
-      var numTries = 0;
-      var minDistanceFromSprite = 100;
-      while (Studio.willCollidableTouchWall(item, item.x, item.y) ||
-             Studio.getDistance(Studio.sprite[0].x + Studio.sprite[0].width/2,
-                                Studio.sprite[0].y + Studio.sprite[0].height/2,
-                                item.x, item.y) < minDistanceFromSprite) {
-        var newPos = generateRandomItemPosition();
-        item.x = newPos.x;
-        item.y = newPos.y;
-        numTries++;
-        if (numTries > 100) {
-          break;
-        }
+    var numTries = 0;
+    var minDistanceFromSprite = 100;
+    while (Studio.willCollidableTouchWall(item, item.x, item.y) ||
+           Studio.getDistance(Studio.sprite[0].x + Studio.sprite[0].width/2,
+                              Studio.sprite[0].y + Studio.sprite[0].height/2,
+                              item.x, item.y) < minDistanceFromSprite) {
+      var newPos = generateRandomItemPosition();
+      item.x = newPos.x;
+      item.y = newPos.y;
+      numTries++;
+      if (numTries > 100) {
+        break;
       }
     }
-
-    item.createElement(document.getElementById('spriteLayer'));
-    Studio.items.push(item);
   }
+
+  item.createElement(document.getElementById('spriteLayer'));
+  Studio.items.push(item);
 };
 
 

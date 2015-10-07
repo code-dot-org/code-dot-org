@@ -105,7 +105,7 @@
         </block>
         <block type="studio_whenTouchItem"/>
         <block type="studio_whenTouchWall"/>
-        <block type="studio_addItems"/>
+        <block type="studio_addCharacter"/>
         <block type="studio_setItemActivity"/>
         <block type="studio_setItemSpeed"/>
         <block type="studio_setSprite"/>

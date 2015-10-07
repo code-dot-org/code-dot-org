@@ -1,3 +1,5 @@
+var constants = require('./constants');
+
 // API definitions for functions exposed for JavaScript (droplet/ace) levels:
 
 exports.setBackground = function (value) {
@@ -120,10 +122,9 @@ exports.changeScore = function(value) {
   Studio.queueCmd(null, 'changeScore', {'value': value});
 };
 
-exports.addItemsToScene = function(className, number) {
-  Studio.queueCmd(null, 'addItemsToScene', {
-    'className': className,
-    'number': number
+exports.addCharacter = function(className) {
+  Studio.queueCmd(null, 'addItem', {
+    'className': className
   });
 };
 
@@ -134,10 +135,24 @@ exports.setItemActivity = function(className, type) {
   });
 };
 
-exports.setItemSpeed = function(className, speed) {
+exports.moveFast = function(className, speed) {
   Studio.queueCmd(null, 'setItemSpeed', {
     'className': className,
-    'speed': speed
+    'speed': constants.SpriteSpeed.FAST
+  });
+};
+
+exports.moveNormal = function(className, speed) {
+  Studio.queueCmd(null, 'setItemSpeed', {
+    'className': className,
+    'speed': constants.SpriteSpeed.SLOW
+  });
+};
+
+exports.moveSlow = function(className, speed) {
+  Studio.queueCmd(null, 'setItemSpeed', {
+    'className': className,
+    'speed': constants.SpriteSpeed.VERY_SLOW
   });
 };
 

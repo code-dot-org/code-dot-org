@@ -1339,7 +1339,7 @@ levels.full_sandbox =  {
                         <value name="TEXT"><block type="text"></block> \
                         </value></block>' +
                         blockOfType('studio_setSpritePosition') +
-                        blockOfType('studio_addItems') +
+                        blockOfType('studio_addCharacter') +
                         blockOfType('studio_throw') +
                         blockOfType('studio_makeProjectile') +
                         blockOfType('studio_setSpriteSpeed') +
@@ -1871,7 +1871,7 @@ levels.js_hoc2015_event_add_items = {
   "walls": "horizontal",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
-    "addItemsToScene": null,
+    "addCharacter": null,
 
     "setBot": null,
     "setBackground": null,
@@ -1902,7 +1902,7 @@ levels.js_hoc2015_event_add_items = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"I’m seeing signs of increased activity on this planet.\"",
-  "instructions2": "Let’s do the same thing in text mode. Type, \"addItem(\"Character1\");\" at the top of your program to add a Character1. Can you add another Character? Then get them all.", 
+  "instructions2": "Let’s do the same thing in text mode. Type, \"addCharacter(\"Character1\");\" at the top of your program to add a Character1. Can you add another Character? Then get them all.",
 };
 
 
@@ -1915,9 +1915,11 @@ levels.js_hoc2015_event_item_behavior = {
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "setItemActivity": null,
-    "setItemSpeed": null,
+    "moveSlow": null,
+    "moveNormal": null,
+    "moveFast": null,
 
-    "addItemsToScene": null,
+    "addCharacter": null,
     "setBot": null,
     "setBackground": null,
     "setWalls": null,
@@ -1931,7 +1933,7 @@ levels.js_hoc2015_event_item_behavior = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addItemsToScene('item_walk_item2', 1);\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": "addCharacter('item_walk_item2', 1);\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1960,8 +1962,10 @@ levels.js_hoc2015_event_touch_items = {
     "whenTouchItem": null,
 
     "setItemActivity": null,
-    "setItemSpeed": null,
-    "addItemsToScene": null,
+    "moveSlow": null,
+    "moveNormal": null,
+    "moveFast": null,
+    "addCharacter": null,
     "setBot": null,
     "setBackground": null,
     "setWalls": null,
@@ -1975,7 +1979,7 @@ levels.js_hoc2015_event_touch_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addItemsToScene('item_walk_item4', 3);\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": "addCharacter('item_walk_item4', 3);\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2006,8 +2010,10 @@ levels.js_hoc2015_event_points = {
 
     "whenTouchItem": null,
     "setItemActivity": null,
-    "setItemSpeed": null,
-    "addItemsToScene": null,
+    "moveSlow": null,
+    "moveNormal": null,
+    "moveFast": null,
+    "addCharacter": null,
     "setBot": null,
     "setBackground": null,
     "setWalls": null,
@@ -2021,7 +2027,7 @@ levels.js_hoc2015_event_points = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addItemsToScene('item_walk_item3', 3);\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchItem() {\n  \n}",
+  "startBlocks": "addCharacter('item_walk_item3', 3);\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchItem() {\n  \n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2053,8 +2059,10 @@ levels.js_hoc2015_event_random_items = {
     "changeScore": null,
     "whenTouchItem": null,
     "setItemActivity": null,
-    "setItemSpeed": null,
-    "addItemsToScene": null,
+    "moveSlow": null,
+    "moveNormal": null,
+    "moveFast": null,
+    "addCharacter": null,
     "setBot": null,
     "setBackground": null,
     "setWalls": null,
@@ -2068,7 +2076,7 @@ levels.js_hoc2015_event_random_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addItemsToScene('item_walk_item3', 3);\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchItem() {\n  changeScore(1);\n  \n}",
+  "startBlocks": "addCharacter('item_walk_item3', 3);\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchItem() {\n  changeScore(1);\n  \n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2099,9 +2107,11 @@ levels.js_hoc2015_event_free = {
     "setBotSpeed": { "category": "Commands" },
     "setWalls": { "category": "Commands" },
     "playSound": { "category": "Commands" },
-    "addItemsToScene": { "category": "Commands" },
+    "addCharacter": { "category": "Commands" },
     "setItemActivity": { "category": "Commands" },
-    "setItemSpeed": { "category": "Commands" },
+    "moveSlow": { "category": "Commands" },
+    "moveNormal": { "category": "Commands" },
+    "moveFast": { "category": "Commands" },
     "changeScore": { "category": "Commands" },
 
     "moveRight": { "category": "Commands" },
