@@ -1,11 +1,13 @@
+var constants = require('./constants');
+
 // API definitions for functions exposed for JavaScript (droplet/ace) levels:
 
 exports.setBackground = function (value) {
   Studio.queueCmd(null, 'setBackground', {'value': value});
 };
 
-exports.setWalls = function (value) {
-  Studio.queueCmd(null, 'setWalls', {'value': value});
+exports.setMap = function (value) {
+  Studio.queueCmd(null, 'setMap', {'value': value});
 };
 
 exports.setSprite = function (spriteIndex, value) {
@@ -120,24 +122,58 @@ exports.changeScore = function(value) {
   Studio.queueCmd(null, 'changeScore', {'value': value});
 };
 
-exports.addItemsToScene = function(className, number) {
-  Studio.queueCmd(null, 'addItemsToScene', {
-    'className': className,
-    'number': number
+exports.addCharacter = function(className) {
+  Studio.queueCmd(null, 'addItem', {
+    'className': className
   });
 };
 
-exports.setItemActivity = function(className, type) {
+exports.setToChase = function(className) {
   Studio.queueCmd(null, 'setItemActivity', {
     'className': className,
-    'type': type
+    'type': 'chase'
   });
 };
 
-exports.setItemSpeed = function(className, speed) {
+exports.setToFlee = function(className) {
+  Studio.queueCmd(null, 'setItemActivity', {
+    'className': className,
+    'type': 'flee'
+  });
+};
+
+exports.setToRoam = function(className) {
+  Studio.queueCmd(null, 'setItemActivity', {
+    'className': className,
+    'type': 'roam'
+  });
+};
+
+exports.setToStop = function(className) {
+  Studio.queueCmd(null, 'setItemActivity', {
+    'className': className,
+    'type': 'none'
+  });
+};
+
+exports.moveFast = function(className, speed) {
   Studio.queueCmd(null, 'setItemSpeed', {
     'className': className,
-    'speed': speed
+    'speed': constants.SpriteSpeed.FAST
+  });
+};
+
+exports.moveNormal = function(className, speed) {
+  Studio.queueCmd(null, 'setItemSpeed', {
+    'className': className,
+    'speed': constants.SpriteSpeed.SLOW
+  });
+};
+
+exports.moveSlow = function(className, speed) {
+  Studio.queueCmd(null, 'setItemSpeed', {
+    'className': className,
+    'speed': constants.SpriteSpeed.VERY_SLOW
   });
 };
 
