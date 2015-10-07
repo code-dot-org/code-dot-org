@@ -291,7 +291,7 @@ cn:
   hoc_faq_need_computers_q: 我需要为所有的学生准备计算机吗？
   hoc_faq_need_computers_a: "不需要。我们的教程可以在电脑、智能手机、平板电脑上运行，也可以完全不用电脑来完成！无论你在哪里，有什么设备，都可以参加编程一小时的活动。<p><i>这里有一些参考选项：</i> <br> <ul> <li><b>结对学习</b> 研究表明，学生在共享一台电脑并且共同工作的<a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>结对编程</a>中学习效果最好，应当鼓励学生们结对互助。<li><b>使用投影设备</b>使用投影设备和连接互联网的电脑，通过一起观看视频，轮流解决谜题和回答问题，全体学员可以一起参加编程一小时活动。<li><b>不插电活动</b>我们提供完全不需要电脑的编程一小时活动教程。</ul>"
   hoc_faq_international_q: '我在<country>。我如何加入国际化的活动？'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: 我怎样才能编写编程一小时的教程？
   hoc_faq_tutorial_a: "如果你有兴趣成为教程的合作伙伴，<a href='targetHOC'> 请参阅我们的指南和介绍</a>。我们需要各种引人入胜的项目，但主要目标是为那些不熟悉计算机科学的学生和教师提供更优化的体验。"
   hoc_faq_more_questions_q: 还有更多的问题吗？

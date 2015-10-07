@@ -291,7 +291,7 @@ ko:
   hoc_faq_need_computers_q: 참여하는 사람들을 위해 컴퓨터들을 준비해야 하나요?
   hoc_faq_need_computers_a: "아니요. 컴퓨터가 없이도 스마트폰, 태블릿PC 등 등에서도 모두 튜토리얼을 해 볼 수 있습니다. 언제 어디서든지, 가지고 있는 것 만으로도 이벤트가 가능합니다. <p><i>몇 개의 옵션이 있습니다.:</i> <br> <ul> <li><b>두명이 한 팀으로 활동하기</b> 학생들은 페어 프로그래밍(<a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pair programming</a>)이라는 방법으로 컴퓨터를 같이 사용하고 문제들을 함께 해결하면서 가장 잘 배울 수 있다고 알려져 있습니다. 둘이 같이 협력하도록 해보세요.  <li><b>프로젝트 화면 사용하기</b> 인터넷에 연결된 컴퓨터와 프로젝터와 스크린이 있다면, Hour of Code 를 모두 함께 해볼 수 있습니다. 화면을 보면서 함께 퍼즐과 문제를 해결할 수 있습니다.<li><b>언플로그드 활동 하기</b> 컴퓨터가 전혀 없이도 할 수 있는 많은 언플러그드 활동이 있습니다.</ul>"
   hoc_faq_international_q: '저는 <country>에 살고 있습니다. 어떻게하면 저도 국제적으로 함께 참여할 수 있을까요?'
-  hoc_faq_international_a: "세계 어디서나 누구든지 Hour of Code 이벤트를 조직할 수 있습니다. 작년에 전 세계적으로 학생들이 Hour of Code에 참여했습니다. 더 많은 정보를 <a href='/resources'>여기서</a> 확인하세요."
+  hoc_faq_international_a: "세계 어디서나 누구든지 Hour of Code 이벤트를 조직할 수 있습니다. 작년에 전 세계적으로 학생들이 Hour of Code에 참여했습니다. 더 많은 정보를 <a href='/promote'>여기서</a> 확인하세요."
   hoc_faq_tutorial_q: Hour of Code 튜토리얼을 어떻게 만들 수 있나요?
   hoc_faq_tutorial_a: "튜토리얼을 만드는 것에 관심이 있으시다면, <a href='targetHOC'>가이드라인과 방법</a>을 살펴보세요. 어떤 형태로든 다양한 방법으로 함께 하기를 원하고 있습니다. 가장 중요한 목표는 컴퓨터과학(정보과학)을 모르는 학생들과 선생님들에게 가장 효과적으로 경험을 제공하는데 있습니다."
   hoc_faq_more_questions_q: 더 궁금하신 것이 있으신가요?

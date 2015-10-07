@@ -290,7 +290,7 @@ sl:
   hoc_faq_need_computers_q: Potrebujem računalnike za vsakega sodelujočega?
   hoc_faq_need_computers_a: "Ne. Imamo tečaje, ki delujejo na računalnikih, pametnih telefonih, tablet, in nekatere, ki ne sploh zahtevajo računalnika! Pridružite se lahko, kjerkoli že ste, s čimerkoli. <p><i>Tukaj je nekaj možnosti:</i> <br><ul><li><b>Delo v parih.</b> Raziskave kažejo, da se učenci učijo najbolje z <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> programiranjem v parih</a>, pri čemer delijo računalnik. Spodbudite učence, da sodelujejo. <li><b>Uporabite načrtovani zaslon.</b> Če imate projektor, lahko celotna skupina sodeluje in rešuje skupaj. Oglejte si video in se izmenjujte pri reševanju ugank ali odgovore na vprašanja. <li><b>Brez povezave.</b> Nudimo tudi vaje, ki ne zahtevajo računalnika. </ul>"
   hoc_faq_international_q: 'Sem v <country>. Kako lahko mednarodno sodelujem?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Kako lahko uro naredim vodič?
   hoc_faq_tutorial_a: "Če ste zainteresirani, lahko postati partner za vodiče, <a href='target-tutorial-guidelines'> oglejte si naše smernice in navodila</a>. Radi bi gostili čim večje število, vendar glavni cilj je cim boljša izkušnja za vse, ki so novi v računalništvu."
   hoc_faq_more_questions_q: Imate dodatna vprašanja?
