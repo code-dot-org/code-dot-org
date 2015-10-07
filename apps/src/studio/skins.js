@@ -189,7 +189,7 @@ function loadInfinity(skin, assetUrl) {
 function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
-  skin.defaultBackground = 'background3';
+  skin.defaultBackground = 'forest';
   skin.defaultWallMap = 'blank';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
@@ -204,39 +204,43 @@ function loadHoc2015(skin, assetUrl) {
 
   // TODO: proper item class names
   skin.ItemClassNames = [
-    'item_walk_item1',
-    'item_walk_item2',
-    'item_walk_item3',
-    'item_walk_item4',
-    'item_walk_item5',
-    'item_walk_item6'
+    'man',
+    'pilot',
+    'pig',
+    'bird',
+    'mouse',
+    'roo',
+    'spider'
   ];
 
   skin.AutohandlerTouchItems = {
-    'item_walk_item1': 'whenTouchWalkItem1',
-    'item_walk_item2': 'whenTouchWalkItem2',
-    'item_walk_item3': 'whenTouchWalkItem3',
-    'item_walk_item4': 'whenTouchWalkItem4',
-    'item_walk_item5': 'whenTouchWalkItem5',
-    'item_walk_item6': 'whenTouchWalkItem6'
+    'man': 'whenTouchMan',
+    'pilot': 'whenTouchPilot',
+    'pig': 'whenTouchPig',
+    'bird': 'whenTouchBird',
+    'mouse': 'whenTouchMouse',
+    'roo': 'whenTouchRoo',
+    'spider': 'whenTouchSpider'
   };
 
   skin.specialItemFrames = {
-    'item_walk_item1': 12,
-    'item_walk_item2': 12,
-    'item_walk_item3': 15,
-    'item_walk_item4': 8,
-    'item_walk_item5': 12,
-    'item_walk_item6': 1
+    'man': 12,
+    'pilot': 12,
+    'pig': 15,
+    'bird': 8,
+    'mouse': 12,
+    'roo': 1,
+    'spider': 1
   };
 
   skin.specialItemScale = {
-    'item_walk_item1': 1,
-    'item_walk_item2': 1,
-    'item_walk_item3': 2,
-    'item_walk_item4': 2,
-    'item_walk_item5': 1.2,
-    'item_walk_item6': 0.6
+    'man': 1,
+    'pilot': 1,
+    'pig': 2,
+    'bird': 2,
+    'mouse': 1.2,
+    'roo': 0.6,
+    'spider': 0.6
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -315,14 +319,15 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   // TODO: Create actual item choices
-  skin.item_walk_item1 = skin.assetUrl('walk_item1.png');
-  skin.item_walk_item2 = skin.assetUrl('walk_item2.png');
-  skin.item_walk_item3 = skin.assetUrl('walk_item3.png');
-  skin.item_walk_item4 = skin.assetUrl('walk_item4.png');
-  skin.item_walk_item5 = skin.assetUrl('walk_item5.png');
-  skin.item_walk_item6 = skin.assetUrl('walk_item6.png');
+  skin.man = skin.assetUrl('walk_item1.png');
+  skin.pilot = skin.assetUrl('walk_item2.png');
+  skin.pig = skin.assetUrl('walk_item3.png');
+  skin.bird = skin.assetUrl('walk_item4.png');
+  skin.mouse = skin.assetUrl('walk_item5.png');
+  skin.roo = skin.assetUrl('walk_item6.png');
+  skin.spider = skin.assetUrl('walk_item7.png');
 
-  skin.background1 = {
+  skin.forest = {
     background: skin.assetUrl('background_background1.jpg'),
     tiles: skin.assetUrl('tiles_background1.png'),
     jumboTiles: skin.assetUrl('jumbotiles_background1.png'),
@@ -331,7 +336,7 @@ function loadHoc2015(skin, assetUrl) {
     jumboTilesRows: 4,
     jumboTilesCols: 4
   };
-  skin.background2 = {
+  skin.snow = {
     background: skin.assetUrl('background_background2.jpg'),
     tiles: skin.assetUrl('tiles_background2.png'),
     jumboTiles: skin.assetUrl('jumbotiles_background2.png'),
@@ -340,7 +345,7 @@ function loadHoc2015(skin, assetUrl) {
     jumboTilesRows: 4,
     jumboTilesCols: 4
   };
-  skin.background3 = {
+  skin.ship = {
     background: skin.assetUrl('background_background3.jpg'),
     tiles: skin.assetUrl('tiles_background3.png'),
     jumboTiles: skin.assetUrl('jumbotiles_background3.png'),
@@ -449,15 +454,15 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    [msg.setBackgroundBackground1(), '"background1"'],
-    [msg.setBackgroundBackground2(), '"background2"'],
-    [msg.setBackgroundBackground3(), '"background3"']
+    [msg.setBackgroundForest(), '"forest"'],
+    [msg.setBackgroundSnow(), '"snow"'],
+    [msg.setBackgroundShip(), '"ship"']
     ];
 
   skin.backgroundChoicesK1 = [
-    [skin.background1.background, '"background1"'],
-    [skin.background2.background, '"background2"'],
-    [skin.background3.background, '"background3"'],
+    [skin.forest.background, '"forest"'],
+    [skin.snow.background, '"snow"'],
+    [skin.ship.background, '"ship"'],
     [skin.randomPurpleIcon, RANDOM_VALUE],
     ];
 
@@ -470,12 +475,13 @@ function loadHoc2015(skin, assetUrl) {
   skin.projectileChoices = [];
 
   skin.itemChoices = [
-    [msg.itemItem1(), '"item_walk_item1"'],
-    [msg.itemItem2(), '"item_walk_item2"'],
-    [msg.itemItem3(), '"item_walk_item3"'],
-    [msg.itemItem4(), '"item_walk_item4"'],
-    [msg.itemItem5(), '"item_walk_item5"'],
-    [msg.itemItem6(), '"item_walk_item6"'],
+    [msg.itemMan(), '"man"'],
+    [msg.itemPilot(), '"pilot"'],
+    [msg.itemPig(), '"pig"'],
+    [msg.itemBird(), '"bird"'],
+    [msg.itemMouse(), '"mouse"'],
+    [msg.itemRoo(), '"roo"'],
+    [msg.itemSpider(), '"spider"'],
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
