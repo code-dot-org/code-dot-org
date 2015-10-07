@@ -22,18 +22,17 @@ end
 def pdf_conversions_for_state_pages(state_codes)
   [].tap do |state_conversion_infos|
     state_codes.each do |state_code|
-      file_path_without_makepdf_extension = sites_v3_dir('code.org/public/advocacy/state-facts/') + state_code
-      file_path_without_extension = file_path_without_makepdf_extension
+      file_path_without_extension = sites_v3_dir('code.org/public/advocacy/state-facts/') + state_code
       url_path_from_public_without_extension = file_path_without_extension.match(/public(.*)/)[1]
       url_path = url_path_from_public_without_extension + '?pdf_version=true'
-      state_conversion_infos << PDFConversionInfo.new(url_path, [file_path_without_makepdf_extension], file_path_without_extension + '.pdf')
+      state_conversion_infos << PDFConversionInfo.new(url_path, [file_path_without_extension], file_path_without_extension + '.pdf')
     end
   end
 end
 
 base_url = ENV['base_url']
 
-def generate_pdf_files(base_url, pdf_conversion_info, fetchfile_for_pdf)
+def generate_pdf_file(base_url, pdf_conversion_info, fetchfile_for_pdf)
   url = "#{base_url}#{pdf_conversion_info.url_path}"
 
   PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose: true)
@@ -49,7 +48,7 @@ all_outfiles = [].tap do |all_outfiles|
     fetchfile_for_pdf = "#{pdf_conversion_info.output_pdf_path}.fetch"
 
     file fetchfile_for_pdf => pdf_conversion_info.src_files do
-      generate_pdf_files(base_url, pdf_conversion_info, fetchfile_for_pdf)
+      generate_pdf_file(base_url, pdf_conversion_info, fetchfile_for_pdf)
     end
 
     all_outfiles << fetchfile_for_pdf
@@ -65,7 +64,7 @@ all_outfiles = [].tap do |all_outfiles|
       fetchfile_for_pdf = "#{pdf_info.output_pdf_path}.fetch"
 
       file fetchfile_for_pdf do
-        generate_pdf_files(base_url, pdf_info, fetchfile_for_pdf)
+        generate_pdf_file(base_url, pdf_info, fetchfile_for_pdf)
       end
 
       all_outfiles << fetchfile_for_pdf
