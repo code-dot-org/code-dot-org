@@ -16,12 +16,12 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
   * स्थान , तिथि र मिति तय गर्नुहोस 
   * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
 
 ## २) तपाई कार्यक्रमको समयमा 
 
   * Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/promote/stats') %>).   
       
     
   * Other event ideas: 
@@ -50,13 +50,13 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## समय र कार्यक्रम
 
-| समय              | कार्य                                                                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| १०:00-१०:०५      | Open with one of our [inspirational videos](<%= resolve_url('/promote#videos') %>)                                                                  |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>) |
-| 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.             |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                          |
-| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                               |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                 |
+| समय              | कार्य                                                                                                                                           |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| १०:00-१०:०५      | Open with one of our [inspirational videos](<%= resolve_url('/promote#videos') %>)                                                                |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>) |
+| 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.           |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
+| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                             |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
 
 <%= view :signup_button %>
