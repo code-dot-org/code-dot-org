@@ -80,5 +80,6 @@
   "whileTooltip": "Ponavljaj vključena dejanja, dokler ne dosežeš zaključne točke.",
   "word": "Poišči besedo",
   "yes": "Da",
-  "youSpelled": "Ti si črkoval"
+  "youSpelled": "Ti si črkoval",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions."
 }

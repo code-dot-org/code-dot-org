@@ -1,6 +1,6 @@
 .row
   .span9
-    %h3!= t 'auth.signed_out', url: code_org_root_path 
+    %h3!= t 'auth.signed_out', url: code_org_root_path
 .row
   .span9
     - if params[:provider] && external_oauth_sign_out_url(params[:provider])
