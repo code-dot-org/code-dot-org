@@ -9,7 +9,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 1) Регистрирай се
 
   * Регистрирай се за да домакин на[ Часа на кода](%= resolve_url('/') %) по време на <%= campaign_date('short') %>.
-  * Рекламирай своя [ Час на кода](%= resolve_url('/resources') %) и насърчи другите да се включат.
+  * Promote your [Hour of Code](%= resolve_url('/promote') %) and encourage others to host.
 
 ## 1) Гледай видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Избери урок:
@@ -91,7 +91,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 7) Празник
 
   * [ Отпечатайте сертификати](%= resolve_url('https://code.org/certificates') %) за вашите ученици.
-  * [ Отечатайте "Направих Часът на кода!"](%= resolve_url('/resources/promote#stickers') %) стикери за вашите ученици.
+  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
   * Споделете снимки и видео на събитието си в социалните медии. Използвайте #HourOfCode и @codeorg,, така ще можем да научим за Вашия успех!
 
 [col-33]

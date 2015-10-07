@@ -93,7 +93,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 ## 7) Празник
 
   * [ Отпечатайте сертификати](%= resolve_url('https://code.org/certificates') %) за вашите ученици.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/resources/promote#stickers') %) stickers.
+  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
   * Споделете снимки и видео на събитието си в социалните медии. Използвайте #HourOfCode и @codeorg,, така ще можем да научим за Вашия успех!
 
 [col-33]
