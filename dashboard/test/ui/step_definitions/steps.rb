@@ -357,8 +357,12 @@ def log_in_as(user)
     params[:domain] = '.code.org' # top level domain cookie
   end
 
+  puts "Setting cookie: #{CGI::escapeHTML params.inspect}"
+
   @browser.manage.delete_all_cookies
   @browser.manage.add_cookie params
+
+  debug_cookies(@browser.manage.all_cookies)
 end
 
 Given(/^I am a teacher$/) do
@@ -387,6 +391,10 @@ Given(/^I sign in as a student$/) do
     And I am a student
     And I am on "http://learn.code.org/users/sign_in"
   }
+end
+
+When(/^I debug cookies$/) do
+  debug_cookies(@browser.manage.all_cookies)
 end
 
 And(/^I ctrl-([^"]*)$/) do |key|

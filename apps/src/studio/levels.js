@@ -1520,7 +1520,7 @@ levels.hoc2015_1 = {
     [4, 4, 4, 4, 4, 4, 4, 4],
     [4, 4, 4, 4, 4, 4, 4, 4]
   ],
-  'avatarList': [ 'character1' ],
+  'avatarList': [ 'bot1' ],
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
@@ -1549,7 +1549,7 @@ levels.hoc2015_2 = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
-  'avatarList': [ 'character1' ],
+  'avatarList': [ 'bot1' ],
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -1782,6 +1782,7 @@ levels.js_hoc2015_event_two_items = {
 
 levels.js_hoc2015_event_four_items = {
   "editCode": true,
+  "textModeAtStart": true,
   "background": "background1",
   "walls": "blobs",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
@@ -1823,13 +1824,13 @@ levels.js_hoc2015_event_four_items = {
 
 levels.js_hoc2015_event_choose_character =
 {
-  "avatarList": ["character1"],
+  "avatarList": ["bot1"],
   "editCode": true,
   "background": "background1",
   "walls": "blank",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
-    "setCharacter": null,
+    "setBot": null,
     "setBackground": null,
     "setWalls": null,
     "playSound": null,
@@ -1866,6 +1867,7 @@ levels.js_hoc2015_event_choose_character =
 
 levels.js_hoc2015_event_add_items = {
   "editCode": true,
+  "textModeAtStart": true,
   "protagonistSpriteIndex": 0,
   "background": "background2",
   "walls": "horizontal",
@@ -1873,7 +1875,7 @@ levels.js_hoc2015_event_add_items = {
   "codeFunctions": {
     "addItemsToScene": null,
 
-    "setCharacter": null,
+    "setBot": null,
     "setBackground": null,
     "setWalls": null,
     "playSound": null,
@@ -1911,14 +1913,13 @@ levels.js_hoc2015_event_item_behavior = {
   "protagonistSpriteIndex": 0,
   "background": "background2",
   "walls": "blobs",
-  "textModeAtStart": true,
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "setItemActivity": null,
     "setItemSpeed": null,
 
     "addItemsToScene": null,
-    "setCharacter": null,
+    "setBot": null,
     "setBackground": null,
     "setWalls": null,
     "playSound": null,
@@ -1951,10 +1952,10 @@ levels.js_hoc2015_event_item_behavior = {
 
 levels.js_hoc2015_event_touch_items = {
   "editCode": true,
+  "textModeAtStart": true,
   "protagonistSpriteIndex": 0,
   "background": "background2",
   "walls": "circle",
-  "textModeAtStart": true,
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "whenTouchItem": null,
@@ -1962,7 +1963,7 @@ levels.js_hoc2015_event_touch_items = {
     "setItemActivity": null,
     "setItemSpeed": null,
     "addItemsToScene": null,
-    "setCharacter": null,
+    "setBot": null,
     "setBackground": null,
     "setWalls": null,
     "playSound": null,
@@ -1997,9 +1998,9 @@ levels.js_hoc2015_event_touch_items = {
 
 levels.js_hoc2015_event_points = {
   "editCode": true,
+  "textModeAtStart": true,
   "background": "background3",
   "walls": "horizontal",
-  "textModeAtStart": true,
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "changeScore": null,
@@ -2008,7 +2009,7 @@ levels.js_hoc2015_event_points = {
     "setItemActivity": null,
     "setItemSpeed": null,
     "addItemsToScene": null,
-    "setCharacter": null,
+    "setBot": null,
     "setBackground": null,
     "setWalls": null,
     "playSound": null,
@@ -2043,9 +2044,9 @@ levels.js_hoc2015_event_points = {
 
 levels.js_hoc2015_event_random_items = {
   "editCode": true,
+  "textModeAtStart": true,
   "background": "background3",
   "walls": "blobs",
-  "textModeAtStart": true,
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "setSpriteSpeed": null,
@@ -2055,7 +2056,7 @@ levels.js_hoc2015_event_random_items = {
     "setItemActivity": null,
     "setItemSpeed": null,
     "addItemsToScene": null,
-    "setCharacter": null,
+    "setBot": null,
     "setBackground": null,
     "setWalls": null,
     "playSound": null,
@@ -2089,14 +2090,14 @@ levels.js_hoc2015_event_random_items = {
 
 levels.js_hoc2015_event_free = {
   "editCode": true,
+  "textModeAtStart": true,
   "background": "background1",
   "walls": "blank",
-  "textModeAtStart": true,
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
-    "setCharacter": { "category": "Commands" },
+    "setBot": { "category": "Commands" },
     "setBackground": { "category": "Commands" },
-    "setCharacterSpeed": { "category": "Commands" },
+    "setBotSpeed": { "category": "Commands" },
     "setWalls": { "category": "Commands" },
     "playSound": { "category": "Commands" },
     "addItemsToScene": { "category": "Commands" },
