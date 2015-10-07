@@ -123,9 +123,17 @@ module AWS
           quantity: behaviors.length, # required
           items: behaviors.empty? ? nil : behaviors,
         },
-        custom_error_responses: {
-          quantity: 0 # required
-        },
+        custom_error_responses: {}.tap do |hash|
+          # List from: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html#HTTPStatusCodes-cached-errors
+          error_codes = [400, 403, 404, 405, 414, 500, 501, 502, 503, 504]
+          hash[:items] = error_codes.map do |error|
+            {
+              error_code: error,
+              error_caching_min_ttl: 0
+            }
+          end
+          hash[:quantity] = error_codes.length
+        end,
         comment: '', # required
         logging: {
           enabled: !!cloudfront[:log], # required
