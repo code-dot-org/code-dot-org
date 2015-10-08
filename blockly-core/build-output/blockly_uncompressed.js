@@ -19744,7 +19744,9 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
     if(this.flyout_) {
       this.flyout_.setEnabled(enabled)
     }else {
-      this.toolbox.enabled = enabled
+      if(this.toolbox) {
+        this.toolbox.enabled = enabled
+      }
     }
   };
   svg.appendChild(Blockly.Tooltip.createDom());
