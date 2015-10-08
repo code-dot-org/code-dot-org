@@ -1861,7 +1861,7 @@ levels.js_hoc2015_event_choose_character =
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
 
   "instructions": "\"Time to visit another planet.\"",
-  "instructions2": "Use the setBackground(); command to change the background and change your bot to Bot2.",
+  "instructions2": "Use the setBackground command to change the background and the setBot command to change your bot to Bot2.",
 };
 
 
@@ -1951,7 +1951,7 @@ levels.js_hoc2015_event_item_behavior = {
   "floatingFcore": true,
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
-  "instructions": "\"It’s up to you Bot2.\"",
+  "instructions": "\"It’s up to you, Bot2.\"",
   "instructions2": "Make the pigs flee by using \"setToFlee\" and then get them all."
 };
 
@@ -2002,7 +2002,7 @@ levels.js_hoc2015_event_touch_items = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
 
   "embed": "false",
-  "instructions": "\"Be careful, they might be behind you.\"",
+  "instructions": "\"Be careful, they might be behind you!\"",
   "instructions2": "Every time you get a character, add a new random character to the scene.",
 };
 
@@ -2164,7 +2164,7 @@ levels.js_hoc2015_event_free = {
 
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
-  "instructions": "\"You’re on your own now Bot1.\"",
+  "instructions": "\"You’re on your own now, Bot1.\"",
 };
 
 
