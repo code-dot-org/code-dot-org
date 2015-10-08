@@ -41,16 +41,33 @@ dashboard.clientState.levelProgress = function(level) {
 };
 
 /**
+ * Tracks the users progress after they click run
+ * @param {boolean} result - Whether the user's solution is successful
+ * @param {number} lines - Number of lines of code user wrote in this solution
+ * @param {number} testResult - Indicates pass, fail, perfect
+ * @param {number} scriptLevelId - Which level this is for
+ */
+dashboard.clientState.trackProgress = function(result, lines, testResult, scriptLevelId) {
+  if (result) {
+    addLines(lines);
+  }
+
+  if (testResult > dashboard.clientState.levelProgress(scriptLevelId)) {
+    setLevelProgress(scriptLevelId, testResult);
+  }
+};
+
+/**
  * Sets the progress attained for the given level in the cookie
  * @param {number} level The id of the level
  * @returns {number}
  */
-dashboard.clientState.setLevelProgress = function(level, progress) {
+function setLevelProgress(level, progress) {
   var progressMap = dashboard.clientState.allLevelsProgress();
   progressMap[String(level)] = progress;
   $.cookie('progress', JSON.stringify(progressMap),
     {expires: dashboard.clientState.EXPIRY_DAYS});
-};
+}
 
 /**
  * Returns a map from (string) level id to progress value.
@@ -79,9 +96,9 @@ dashboard.clientState.lines = function() {
  * Adds the given number of completed lines.
  * @param {number} addedLines
  */
-dashboard.clientState.addLines = function(addedLines) {
+function addLines(addedLines) {
   var newLines = dashboard.clientState.lines() + addedLines;
   $.cookie('lines', String(newLines),
     {expires: dashboard.clientState.EXPIRY_DAYS});
-};
+}
 })(window, $);
