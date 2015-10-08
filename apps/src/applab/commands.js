@@ -791,7 +791,7 @@ applabCommands.getText = function (opts) {
     } else if (element.tagName === 'IMG') {
       return String(element.alt);
     } else {
-      return element.innerText;
+      return element.textContent;
     }
   }
   return false;
