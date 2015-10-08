@@ -17,26 +17,25 @@ module Rack
       path     = request.path
       behavior = behavior_for_path((config[:behaviors] + [config[:default]]), path)
       cookies = behavior[:cookies]
-      # Pass all cookies
-      return @app.call(env) if cookies == 'all'
-
-      # Strip all cookies
-      if cookies == 'none'
-        env.delete 'HTTP_COOKIE'
-        status, headers, body = @app.call(env)
-        headers.delete 'Set-Cookie'
-        return [status, headers, body]
+      case cookies
+        when 'all'
+          # Pass all cookies
+          @app.call(env)
+        when 'none'
+          # Strip all cookies
+          env.delete 'HTTP_COOKIE'
+          status, headers, body = @app.call(env)
+          headers.delete 'Set-Cookie'
+          [status, headers, body]
+        else
+          # Strip all request cookies not in whitelist
+          request_cookies = request.cookies
+          request_cookies.slice!(*cookies)
+          cookie_str = request_cookies.map{|k,v|"#{k}=#{v}"}.join('; ')
+          env['HTTP_COOKIE'] = cookie_str
+          env['rack.request.cookie_string'] = cookie_str
+          @app.call(env)
       end
-
-      # Strip all request cookies not in whitelist
-      request_cookies = request.cookies
-      request_cookies.slice!(*cookies)
-      cookie_str = request_cookies.map{|k,v|"#{k}=#{v}"}.join('; ')
-      env['HTTP_COOKIE'] = cookie_str
-      env['rack.request.cookie_string'] = cookie_str
-      status, headers, body = @app.call(env)
-
-      [status, headers, body]
     end
   end
 end
