@@ -1006,7 +1006,6 @@ Applab.reset = function(first) {
   designMode.parseFromLevelHtml(newDivApplab, isDesigning);
   designMode.loadDefaultScreen();
   if (Applab.isInDesignMode()) {
-    designMode.clearProperties();
     designMode.resetElementTray(isDesigning);
   }
 
