@@ -246,6 +246,9 @@ class AssetsTest < Minitest::Test
         assert @assets.last_response.client_error?, "Error when file is larger than max file size."
 
         puts put(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
+        if not @assets.last_response.successful?
+          puts "SMALL_FILE BUCKET: #{list(@assets, channel_id)}"
+        end
         assert @assets.last_response.successful?, "First small file upload is successful."
 
         put(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
