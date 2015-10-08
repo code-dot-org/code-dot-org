@@ -27,6 +27,11 @@ cs-CZ:
   hoc2014_everyone: Kdokoli
   hoc2014_support: 'Podpořte ji &#x25BE;'
   hoc2014_whatishoc: Co to je Hodina kódu?
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Obnovit
   cded_sign_up: Registrace
   cded_try_it: Zkuste to
   twentyhours_trynow: Vyzkoušej hned
@@ -140,61 +145,84 @@ cs-CZ:
   homepage_hero_text_malala: |
     „Vyzývám děvčata každé země, aby se naučila jednu Hodinu kódu“ 
     Malala, držitelka Nobely ceny míru
-  homepage_hero_text_susan: '"Můžete-li změnit technologie, můžete změnit svět." Susan, CEO z YouTube'
+  homepage_hero_text_susan: |
+    &ldquo;umíte-li změnit technologie,
+    umíte změnit svět.&rdquo;
+    Susan, CEO of YouTube
   homepage_hero_text_fistbump: '"Se svým telefonem si pouze nehraj - programuj ho" prezident Barack Obama'
-  homepage_hero_text_sheryl: '"Naše děti &mdash; včetně dívek &mdash; potřebují příležitost učit se informatiku." Sheryl, COO z Facebooku'
-  homepage_hero_text_satya: '"Informatika může odemknout nejlepší příležitosti na světě." Lucie, CEO společnosti Microsoft'
-  homepage_hero_text_bosh: '"Když programuješ, můžeš si vybrat průběh svého života." Chris Bosh'
+  homepage_hero_text_sheryl: |
+    &ldquo;Naše děti &mdash; včetně dívek &mdash;
+    potřebují dostat příležitost učit se informatiku.&rdquo;
+    Sheryl, COO z Facebooku
+  homepage_hero_text_satya: |
+    &ldquo;Informatika je schopná otevřít ty nejlepší příležitosti ve světě.&rdquo;
+    Satya, CEO Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;Když programuješ, můžeš si vybrat a zvolit směr svého života.&rdquo;
+    Chris Bosh
   homepage_hero_text_student1: '"Tyto dovednosti změnily moji budoucnost. Nemluvě o tom, že je to prostě zábava." Luna, sedmá třída'
-  homepage_hero_text_student2: '"Nikdy, nikdy jsem neviděl své děti tak nadšené z učení." Michael, učitel'
-  homepage_hero_text_student3: '"O informatice nemůžete vědět, jestli se vám líbí nebo ne, dokud si ji nevyzkoušíte." Jackson, 6. třída'
-  homepage_hero_text_student4: '"V programování dokážeš udělat, cokoliv tvoje mysl chce." Maya, 2. třída'
-  homepage_hero_text_student5: '"Informatika není pro někoho jiného. Je pro tebe, tady, teď." Geraldo, učitel'
-  homepage_hero_text_teacher1: '"Programování rozvíjí tvořivost, inspiraci a inovaci &mdash; všechno toto je v každé kariéře zásadní." Floresa, učitel'
-  homepage_hero_text_teacher2: '"Tento program zaujal 100 % mých žáků tak, že se zapojili a zúčastnili se." Adam, učitel'
-  homepage_hero_text_stat_loc: '#loc řádků programu napsaných žáky'
-  homepage_hero_text_stat_students: '#student_count studentských účtů na Studiu kódu'
-  homepage_hero_text_stat_served: 'Hodina kódu: #served si vyzkoušelo'
+  homepage_hero_text_student2: |
+    &ldquo;Nikdy před tím jsem neviděl děti tak nadšené z učení.&rdquo;
+    Michael, učitel
+  homepage_hero_text_student3: |
+    &ldquo;Informatika je oblast, o které nevíte, zda ji máte nebo nemáte rádi, dokud si ji nevyzkoušíte it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;Cokoliv co tvůj rozum chce, můžeš naprogramovat.&rdquo; 
+    Maya, 2. třída
+  homepage_hero_text_student5: |
+    &ldquo;Informatika není pro někoho jiného. Je zde pro tebe a hned.&rdquo; 
+    Geraldo, učitel
+  homepage_hero_text_teacher1: |
+    &ldquo;Programování podněcuje kreativitu, inspiraci a inovaci &mdash; 
+    všechno toto je nezbytné pro jakoukoliv kariéru.&rdquo;
+    Floresa, učitel
+  homepage_hero_text_teacher2: |
+    &ldquo;Tento program zaujal 100% mých studentů tak, že zapojili a zúčastnili.&rdquo;
+    Adam, učitel
+  homepage_hero_text_stat_loc: 2.5 milionů dívek se zapsalo na výuku v Code Studiu
+  homepage_hero_text_stat_students: '#student_count studentských účtů v Code Studiu'
+  homepage_hero_text_stat_served: 'Hour of Code: #served si vyzkoušelo'
   homepage_slot_text_hoc: Hodina kódu
-  homepage_slot_text_frozen: Frozen, s Annou a Elsou
+  homepage_slot_text_frozen: Zmrazené s Annou a Elsa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: Všechny naše kurzy
+  homepage_slot_text_studio: Všechny naše výukové programy
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Obchod
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_codevideo: Shlédni Video
-  homepage_action_text_teachervideo: Shlédni Video
-  homepage_action_text_learn: Start výuky
-  homepage_action_text_signpetition: Podepiš petici
+  homepage_action_text_codevideo: Podívejte se na video
+  homepage_action_text_teachervideo: Podívejte se na video
+  homepage_action_text_learn: Zahájení výuky
+  homepage_action_text_signpetition: Podepište petici
   homepage_signpetition_dropdown: 'Souhlasím &#x25BE;'
-  homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_main: Code.org a College Board tvoří alianci pro zvýšení rozmanitosti v informatice.
+  homepage_diversity_pledge: Zajistěte rozmanitost
+  homepage_banner_text_main: Code.org a College Board vytváří alianci, aby se zlepšila rozmanitost v informatice.
   homepage_banner_text_link: Zjisti více
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Další informace
   homepage_slot_text_title_hoc: Hodina kódu
   homepage_slot_text_blurb_hoc: Každý se to může naučit. Začni dnes
   homepage_slot_text_link_hoc: Vyzkoušej Hodinu Programování
-  homepage_slot_text_link_host: Hostit Hodinu kódu
+  homepage_slot_text_link_host: Uspořádejte Hodinu kódu
   homepage_slot_text_link_hocserved: '# si vyzkoušelo'
   homepage_slot_text_title_students: Studenti
-  homepage_slot_text_blurb_students: Prohlédni si všechny naše kurzy
-  homepage_slot_text_link_codestudio: Vyzkoušej Studio kódu
-  homepage_slot_text_link_local: Najdi místní třídu
+  homepage_slot_text_blurb_students: Prohlédnětesi všechny naše výukové programy
+  homepage_slot_text_link_codestudio: Vyzkoušejte Code studio
+  homepage_slot_text_link_local: Najděte si třídu v místě
   homepage_slot_text_link_othercourses: Další on-line kurzy
   homepage_slot_text_title_educators: Pedagogové
-  homepage_slot_text_blurb_educators: Uč své žáky
+  homepage_slot_text_blurb_educators: Učte žáky
   homepage_slot_text_link_k5: Kurzy pro 1. stupeň ZŠ
-  homepage_slot_text_link_fullcurriculum: Prohlédni si naše kurikulum
+  homepage_slot_text_link_fullcurriculum: Prohlédněte si naše kurikulum
   homepage_slot_text_link_pd: Profesní rozvoj
-  homepage_slot_text_title_advocates: Zastánci
-  homepage_slot_text_blurb_advocates: Podpoř naši práci
-  homepage_slot_text_link_stats: Shlédni statistiky
-  homepage_slot_text_link_buy: Zapoj se
-  homepage_slot_text_link_donate: Přispěj
-  homepage_header_codestudio: 'Studio kódu -  žákovská díla'
+  homepage_slot_text_title_advocates: Propagátoři
+  homepage_slot_text_blurb_advocates: Podpořte rozmanitost ve výpočetní technice
+  homepage_slot_text_link_stats: Viz statistiky
+  homepage_slot_text_link_buy: Zapojte se
+  homepage_slot_text_link_donate: Přispějte
+  homepage_header_codestudio: Studentská tvorba v Code studiu
   homepage_header_donors: Code.org děkuje svým příznivcům
-  homepage_donors_seall: Zobraz vše
+  homepage_donors_seall: Podívejte se na všechny
   homepage_donors_donate: Přispějte
   contact_form_topic_student: Jsem student
   contact_form_topic_parent: Jsem rodič
@@ -293,8 +321,8 @@ cs-CZ:
   dashboard_landing_office_hours: Zeptej se osobně! Navštivte naše měsíční video úřední hodiny.
   dashboard_landing_print_certificates: Vytisknout certifikáty pro studenty, kteří dokončili tento kurz
   dashboard_landing_educator_blog: Přečti si o novinkách a aktualizacích našich materiálů na našem blogu Educator
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
-  dashboard_landing_video_player: Test our new video player at your school
+  dashboard_landing_smart_hints: Prosím, pomozte nám s přidáním chytrých tipů na Code.org výukové programy
+  dashboard_landing_video_player: Vyzkoušejte náš nový video přehrávač ve vaší škole
   dashboard_landing_progress_title: Hlavní postup ve třídě
   dashboard_landing_progress_biggest: To je postup pro váš největší oddíl.
   dashboard_landing_view_progress: 'Zobrazit průběh pro %{biggest_section}'
@@ -350,7 +378,7 @@ cs-CZ:
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: Nová sekce
   dashboard_sections_jumbotron_instruction: Vytvoř nové oddíly a přidejte do nich studenty. Sekce pomáhají organizovat studenty do menších skupin, můžete sledovat jejich postup a spravovat jejich účty.
-  dashboard_sections_table_section: Section
+  dashboard_sections_table_section: Sekce
   dashboard_sections_table_secret: Způsob přihlášení
   dashboard_sections_table_grade: Stupeň
   dashboard_sections_table_course: Kurz
