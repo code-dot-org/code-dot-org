@@ -13,5 +13,6 @@ directory("#{home}/.ngrok2") { user user }
 
 template "#{home}/.ngrok2/ngrok.yml" do
   source 'ngrok.yml.erb'
+  sensitive true # Contains ngrok auth token
   user user
 end
