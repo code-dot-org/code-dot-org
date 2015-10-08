@@ -10,6 +10,12 @@ class SourcesTest < Minitest::Test
 
   def setup
     init_apis
+    @orig_sources_s3_directory = CDO.sources_s3_directory
+    CDO.sources_s3_directory = CDO.sources_s3_directory + "/#{Time.now.to_f}"
+  end
+
+  def teardown
+    CDO.sources_s3_directory = @orig_sources_s3_directory
   end
 
   def test_source_versions
