@@ -13803,7 +13803,7 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
   function checkConnection_(yIndex) {
     var connection = db[yIndex];
     var targetSourceBlock = connection.sourceBlock_;
-    if(!Blockly.editBlocks && !targetSourceBlock.isVisible()) {
+    if(!targetSourceBlock.isVisible()) {
       return true
     }
     if(connection.type === Blockly.OUTPUT_VALUE || (connection.type === Blockly.FUNCTIONAL_OUTPUT || connection.type === Blockly.PREVIOUS_STATEMENT)) {
@@ -15566,7 +15566,11 @@ Blockly.Block.prototype.setCurrentlyHidden = function(hidden) {
 };
 Blockly.Block.prototype.isVisible = function() {
   var visibleThroughParent = !this.parentBlock_ || this.parentBlock_.isVisible();
-  return visibleThroughParent && (this.isUserVisible() && !this.isCurrentlyHidden_())
+  var visible = visibleThroughParent && !this.isCurrentlyHidden_();
+  if(Blockly.editBlocks) {
+    return visible
+  }
+  return visible && this.isUserVisible()
 };
 Blockly.Block.prototype.setHelpUrl = function(url) {
   this.helpUrl = url
