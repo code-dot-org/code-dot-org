@@ -1,3 +1,5 @@
+/* global dashboard, appOptions */
+
 var lastAjaxRequest;
 var lastServerResponse = {};
 
@@ -32,6 +34,8 @@ var sendReport = function(report) {
     }
   }
   var queryString = queryItems.join('&');
+
+  dashboard.clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.level.scriptLevelId);
 
   var thisAjax = jQuery.ajax({
     type: 'POST',
