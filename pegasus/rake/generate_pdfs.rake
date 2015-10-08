@@ -20,13 +20,11 @@ def pdf_conversions_for_files(file_pattern, url_extension)
 end
 
 def pdf_conversions_for_state_pages(state_codes)
-  [].tap do |state_conversion_infos|
-    state_codes.each do |state_code|
-      file_path_without_extension = sites_v3_dir('code.org/public/advocacy/state-facts/') + state_code
-      url_path_from_public_without_extension = file_path_without_extension.match(/public(.*)/)[1]
-      url_path = url_path_from_public_without_extension + '?pdf_version=true'
-      state_conversion_infos << PDFConversionInfo.new(url_path, [file_path_without_extension], file_path_without_extension + '.pdf')
-    end
+  state_codes.map do |state_code|
+    file_path_without_extension = sites_v3_dir('code.org/public/advocacy/state-facts/') + state_code
+    url_path_from_public_without_extension = file_path_without_extension.match(/public(.*)/)[1]
+    url_path = url_path_from_public_without_extension + '?pdf_version=true'
+    PDFConversionInfo.new(url_path, [file_path_without_extension], file_path_without_extension + '.pdf')
   end
 end
 
