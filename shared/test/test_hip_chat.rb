@@ -10,11 +10,20 @@ class HipchatTest < Minitest::Test
   BACKOFF = 0.1
 
   def setup
+    @orig_log_level = CDO.log.level
+    @orig_hip_chat_logging = CDO.hip_chat_logging
+
     CDO.hip_chat_logging = true
     CDO.log.level = Logger::Severity::ERROR  # Log only fatal exceptions to avoid test spew.
+
     HipChat.reset_test_statistics
     HipChat.set_backoff_for_test(BACKOFF)
     FakeWeb.last_request = nil
+  end
+
+  def teardown
+    CDO.log.level = @orig_log_level
+    CDO.hip_chat_logging = @orig_hip_chat_logging
   end
 
   # Verify correct behavior in the simple success case.
