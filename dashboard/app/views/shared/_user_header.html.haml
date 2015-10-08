@@ -34,6 +34,5 @@
     e.stopPropagation(); // Clicks inside the popup shouldn't close it
   });
   $('.user_options a:last').click(function (e) {
-    console.log('signing out');
     dashboard.clientState.reset();
   });
