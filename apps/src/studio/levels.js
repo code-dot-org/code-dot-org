@@ -1339,7 +1339,7 @@ levels.full_sandbox =  {
                         <value name="TEXT"><block type="text"></block> \
                         </value></block>' +
                         blockOfType('studio_setSpritePosition') +
-                        blockOfType('studio_addItems') +
+                        blockOfType('studio_addCharacter') +
                         blockOfType('studio_throw') +
                         blockOfType('studio_makeProjectile') +
                         blockOfType('studio_setSpriteSpeed') +
@@ -1573,7 +1573,7 @@ levels.hoc2015_2 = {
 
 levels.js_hoc2015_move_right = {
   "editCode": true,
-  "background": "background1",
+  "background": "forest",
   "codeFunctions": {
     "moveRight": null,
     "moveLeft": null,
@@ -1603,7 +1603,7 @@ levels.js_hoc2015_move_right = {
 
 levels.js_hoc2015_move_two_items = {
   "editCode": true,
-  "background": "background1",
+  "background": "forest",
   "codeFunctions": {
     "moveRight": null,
     "moveLeft": null,
@@ -1633,7 +1633,7 @@ levels.js_hoc2015_move_two_items = {
 
 levels.js_hoc2015_move_item_destination = {
   "editCode": true,
-  "background": "background1",
+  "background": "forest",
   "codeFunctions": {
     "moveRight": null,
     "moveLeft": null,
@@ -1663,7 +1663,7 @@ levels.js_hoc2015_move_item_destination = {
 
 levels.js_hoc2015_move_item_destination_2 = {
  "editCode": true,
-  "background": "background2",
+  "background": "snow",
   "textModeAtStart": true,
   "codeFunctions": {
     "moveRight": null,
@@ -1690,7 +1690,7 @@ levels.js_hoc2015_move_item_destination_2 = {
 
 levels.js_hoc2015_move_item_destination_3 = {
   "editCode": true,
-  "background": "background2",
+  "background": "snow",
   "textModeAtStart": true,
   "codeFunctions": {
     "moveRight": null,
@@ -1718,7 +1718,7 @@ levels.js_hoc2015_move_item_destination_3 = {
 
 levels.js_hoc2015_move_cross = {
   "editCode": true,
-  "background": "background2",
+  "background": "snow",
   "textModeAtStart": true,
   "codeFunctions": {
     "moveRight": null,
@@ -1748,16 +1748,16 @@ levels.js_hoc2015_move_cross = {
 
 levels.js_hoc2015_event_two_items = {
   "editCode": true,
-  "background": "background1",
-  "walls": "blank",
-  "softButtons": ["downButton", "upButton"],
+  "background": "forest",
+  "wallMap": "blank",
+  "softButtons": ["leftButton", "rightButton"],
   "codeFunctions": {
     "moveRight": null,
     "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+    "whenLeft": null,
+    "whenRight": null
   },
-  "startBlocks": "",
+  "startBlocks": "function whenLeft() {\n  \n}\nfunction whenRight() {\n  \n}",
   "sortDrawOrder": true,
   "wallMapCollisions": true,
   "blockMovingIntoWalls": true,
@@ -1768,7 +1768,7 @@ levels.js_hoc2015_event_two_items = {
   "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 16, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "pinWorkspaceToBottom": "true",
   "embed": "false",
   "instructions": "\"Bot1, I need you to get a critical message to the goals.\"",
@@ -1783,8 +1783,8 @@ levels.js_hoc2015_event_two_items = {
 levels.js_hoc2015_event_four_items = {
   "editCode": true,
   "textModeAtStart": true,
-  "background": "background1",
-  "walls": "blobs",
+  "background": "forest",
+  "wallMap": "blobs",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "moveRight": null,
@@ -1796,7 +1796,7 @@ levels.js_hoc2015_event_four_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "function whenLeft() {\n  __;\n}\nfunction whenRight() {\n  __;\n}\nfunction whenUp() {\n  __;\n}\nfunction whenDown() {\n  __;\n}",
+  "startBlocks": "function whenLeft() {\n  \n}\nfunction whenRight() {\n  \n}\nfunction whenUp() {\n  \n}\nfunction whenDown() {\n  \n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1826,13 +1826,13 @@ levels.js_hoc2015_event_choose_character =
 {
   "avatarList": ["bot1"],
   "editCode": true,
-  "background": "background1",
-  "walls": "blank",
+  "background": "forest",
+  "wallMap": "blank",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "setBot": null,
     "setBackground": null,
-    "setWalls": null,
+    "setMap": null,
     "playSound": null,
 
     "moveRight": null,
@@ -1844,7 +1844,7 @@ levels.js_hoc2015_event_choose_character =
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "function whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": "setBackground(\"forest\");\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1861,23 +1861,22 @@ levels.js_hoc2015_event_choose_character =
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
 
   "instructions": "\"Time to visit another planet.\"",
-  "instructions2": "Use the setBackgound(); command to change the background and change your bot to Bot2.",
+  "instructions2": "Use the setBackground(); command to change the background and change your bot to Bot2.",
 };
 
 
 levels.js_hoc2015_event_add_items = {
   "editCode": true,
   "textModeAtStart": true,
-  "protagonistSpriteIndex": 0,
-  "background": "background2",
-  "walls": "horizontal",
+  "background": "snow",
+  "wallMap": "horizontal",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
-    "addItemsToScene": null,
+    "addCharacter": null,
 
     "setBot": null,
     "setBackground": null,
-    "setWalls": null,
+    "setMap": null,
     "playSound": null,
     "moveRight": null,
     "moveLeft": null,
@@ -1888,7 +1887,7 @@ levels.js_hoc2015_event_add_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "function whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": "setBackground(\"snow\");\nsetMap(\"horizontal\");\nsetBot(\"bot2\");\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1904,24 +1903,28 @@ levels.js_hoc2015_event_add_items = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"I’m seeing signs of increased activity on this planet.\"",
-  "instructions2": "Let’s do the same thing in text mode. Type, \"addItem(\"Character1\");\" at the top of your program to add a Character1. Can you add another Character? Then get them all.", 
+  "instructions2": "Let’s do the same thing in text mode. Type, \"addCharacter(\"Character1\");\" at the top of your program to add a Character1. Can you add another Character? Then get them all.",
 };
 
 
 levels.js_hoc2015_event_item_behavior = {
   "editCode": true,
-  "protagonistSpriteIndex": 0,
-  "background": "background2",
-  "walls": "blobs",
+  "background": "snow",
+  "wallMap": "blobs",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
-    "setItemActivity": null,
-    "setItemSpeed": null,
+    "setToChase": null,
+    "setToFlee": null,
+    "setToRoam": null,
+    "setToStop": null,
+    "moveSlow": null,
+    "moveNormal": null,
+    "moveFast": null,
 
-    "addItemsToScene": null,
+    "addCharacter": null,
     "setBot": null,
     "setBackground": null,
-    "setWalls": null,
+    "setMap": null,
     "playSound": null,
     "moveRight": null,
     "moveLeft": null,
@@ -1932,7 +1935,7 @@ levels.js_hoc2015_event_item_behavior = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addItemsToScene('item_walk_item2', 1);\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": "setBackground(\"snow\");\nsetMap(\"blobs\");\nsetBot(\"bot2\");\naddCharacter('roo');\naddCharacter('roo');\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1947,25 +1950,29 @@ levels.js_hoc2015_event_item_behavior = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"It’s up to you Bot2.\"",
-  "instructions2": "Make the Creature2s flee by using \"setToFlee\" and then get them all."
+  "instructions2": "Make the pigs flee by using \"setToFlee\" and then get them all."
 };
 
 levels.js_hoc2015_event_touch_items = {
   "editCode": true,
   "textModeAtStart": true,
-  "protagonistSpriteIndex": 0,
-  "background": "background2",
-  "walls": "circle",
+  "background": "snow",
+  "wallMap": "circle",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
-    "whenTouchItem": null,
+    "whenTouchCharacter": null,
 
-    "setItemActivity": null,
-    "setItemSpeed": null,
-    "addItemsToScene": null,
+    "setToChase": null,
+    "setToFlee": null,
+    "setToRoam": null,
+    "setToStop": null,
+    "moveSlow": null,
+    "moveNormal": null,
+    "moveFast": null,
+    "addCharacter": null,
     "setBot": null,
     "setBackground": null,
-    "setWalls": null,
+    "setMap": null,
     "playSound": null,
     "moveRight": null,
     "moveLeft": null,
@@ -1976,7 +1983,7 @@ levels.js_hoc2015_event_touch_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addItemsToScene('item_walk_item4', 3);\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": "setBackground(\"snow\");\nsetMap(\"circle\");\nsetBot(\"bot2\");\naddCharacter('roo');\naddCharacter('roo');\naddCharacter('roo');\nfunction whenTouchCharacter() {\n  \n}\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1999,19 +2006,24 @@ levels.js_hoc2015_event_touch_items = {
 levels.js_hoc2015_event_points = {
   "editCode": true,
   "textModeAtStart": true,
-  "background": "background3",
-  "walls": "horizontal",
+  "background": "ship",
+  "wallMap": "horizontal",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "changeScore": null,
 
-    "whenTouchItem": null,
-    "setItemActivity": null,
-    "setItemSpeed": null,
-    "addItemsToScene": null,
+    "whenTouchCharacter": null,
+    "setToChase": null,
+    "setToFlee": null,
+    "setToRoam": null,
+    "setToStop": null,
+    "moveSlow": null,
+    "moveNormal": null,
+    "moveFast": null,
+    "addCharacter": null,
     "setBot": null,
     "setBackground": null,
-    "setWalls": null,
+    "setMap": null,
     "playSound": null,
     "moveRight": null,
     "moveLeft": null,
@@ -2022,7 +2034,7 @@ levels.js_hoc2015_event_points = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addItemsToScene('item_walk_item3', 3);\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchItem() {\n  \n}",
+  "startBlocks": "setBackground(\"ship\");\nsetMap(\"horizontal\");\nsetBot(\"bot1\");\naddCharacter('bird');\naddCharacter('bird');\naddCharacter('bird');\nfunction whenTouchCharacter() {\n  addCharacter(\"random\"\n);\n}\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchCharacter() {\n  \n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2045,20 +2057,25 @@ levels.js_hoc2015_event_points = {
 levels.js_hoc2015_event_random_items = {
   "editCode": true,
   "textModeAtStart": true,
-  "background": "background3",
-  "walls": "blobs",
+  "background": "ship",
+  "wallMap": "blobs",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
-    "setSpriteSpeed": null,
+    "setBotSpeed": null,
 
     "changeScore": null,
-    "whenTouchItem": null,
-    "setItemActivity": null,
-    "setItemSpeed": null,
-    "addItemsToScene": null,
+    "whenTouchCharacter": null,
+    "setToChase": null,
+    "setToFlee": null,
+    "setToRoam": null,
+    "setToStop": null,
+    "moveSlow": null,
+    "moveNormal": null,
+    "moveFast": null,
+    "addCharacter": null,
     "setBot": null,
     "setBackground": null,
-    "setWalls": null,
+    "setMap": null,
     "playSound": null,
     "moveRight": null,
     "moveLeft": null,
@@ -2069,7 +2086,7 @@ levels.js_hoc2015_event_random_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addItemsToScene('item_walk_item3', 3);\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchItem() {\n  changeScore(1);\n  \n}",
+  "startBlocks": "setBackground(\"ship\");\nsetMap(\"blobs\");\nsetBot(\"bot1\");\naddCharacter('spider');\naddCharacter('spider');\naddCharacter('mouse');\naddCharacter('mouse');\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchCharacter() {\n  changeScore(1);\n  \n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2091,18 +2108,24 @@ levels.js_hoc2015_event_random_items = {
 levels.js_hoc2015_event_free = {
   "editCode": true,
   "textModeAtStart": true,
-  "background": "background1",
-  "walls": "blank",
+  "freePlay": true,
+  "background": "forest",
+  "wallMap": "blank",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "setBot": { "category": "Commands" },
     "setBackground": { "category": "Commands" },
     "setBotSpeed": { "category": "Commands" },
-    "setWalls": { "category": "Commands" },
+    "setMap": { "category": "Commands" },
     "playSound": { "category": "Commands" },
-    "addItemsToScene": { "category": "Commands" },
-    "setItemActivity": { "category": "Commands" },
-    "setItemSpeed": { "category": "Commands" },
+    "addCharacter": { "category": "Commands" },
+    "setToChase": { "category": "Commands" },
+    "setToFlee": { "category": "Commands" },
+    "setToRoam": { "category": "Commands" },
+    "setToStop": { "category": "Commands" },
+    "moveSlow": { "category": "Commands" },
+    "moveNormal": { "category": "Commands" },
+    "moveFast": { "category": "Commands" },
     "changeScore": { "category": "Commands" },
 
     "moveRight": { "category": "Commands" },
@@ -2113,14 +2136,17 @@ levels.js_hoc2015_event_free = {
     "whenRight": { "category": "Events" },
     "whenUp": { "category": "Events" },
     "whenDown": { "category": "Events" },
-    "whenTouchWall": { "category": "Events" },
-    "whenTouchWalkItem1": { "category": "Events" },
-    "whenTouchWalkItem2": { "category": "Events" },
-    "whenTouchWalkItem3": { "category": "Events" },
-    "whenTouchWalkItem4": { "category": "Events" },
-    "whenTouchItem": { "category": "Events" }
+    "whenTouchObstacle": { "category": "Events" },
+    "whenTouchMan": { "category": "Events" },
+    "whenTouchPilot": { "category": "Events" },
+    "whenTouchPig": { "category": "Events" },
+    "whenTouchBird": { "category": "Events" },
+    "whenTouchMouse": { "category": "Events" },
+    "whenTouchRoo": { "category": "Events" },
+    "whenTouchSpider": { "category": "Events" },
+    "whenTouchCharacter": { "category": "Events" }
   },
-  "startBlocks": "function whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": "setBackground(\"forest\");\nsetMap(\"circle\");\nsetBot(\"bot1\");\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
