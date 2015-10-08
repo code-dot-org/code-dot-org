@@ -13,7 +13,7 @@ Functions are a way of naming chunks of code that you can call (execute) as many
 
 # Lesson
 
-* Write functions with names that describe what the function does in solving the problem.
+* Write functions with names that describe what each function does in solving the problem.
 * Write a program that uses more than one function and more than one level of abstraction.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
