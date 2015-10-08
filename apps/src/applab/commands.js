@@ -809,7 +809,7 @@ applabCommands.setText = function (opts) {
     } else if (element.tagName === 'IMG') {
       element.alt = opts.text;
     } else {
-      element.innerText = opts.text;
+      element.textContent = opts.text;
     }
     return true;
   }
