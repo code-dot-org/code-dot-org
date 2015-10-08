@@ -206,14 +206,6 @@ function loadHoc2015(skin, assetUrl) {
   skin.specialProjectileFrames = {
   };
 
-  skin.pig = skin.assetUrl('walk_item1.png');
-  skin.man = skin.assetUrl('walk_item2.png');
-  skin.roo = skin.assetUrl('walk_item3.png');
-  skin.bird = skin.assetUrl('walk_item4.png');
-  skin.spider = skin.assetUrl('walk_item5.png');
-  skin.mouse = skin.assetUrl('walk_item6.png');
-  skin.pilot = skin.assetUrl('walk_item7.png');
-
   // TODO: proper item class names
   skin.ItemClassNames = [
     'pig',
