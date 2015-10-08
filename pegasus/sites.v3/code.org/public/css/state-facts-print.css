@@ -1,12 +1,12 @@
 .state-fact-sheet {
-  padding: 50px;
+  padding-top: 10px;
   max-width: 970px;
 }
 
 body {
   font-family: 'Gotham 4r', sans-serif;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 12px;
+  line-height: 18px;
   font-weight: normal;
   color: dimgray;
 }
@@ -50,5 +50,13 @@ a {
 }
 
 .policy-item {
-  padding: 10px;
+  padding: 10px 10px 12px 10px;
+}
+
+.no-margin-bottom {
+  margin-bottom: 5px;
+}
+
+.larger {
+  font-size: 14px;
 }
