@@ -27,6 +27,11 @@ hu-HU:
   hoc2014_everyone: Mindenki
   hoc2014_support: 'Támogasd &#x25BE;'
   hoc2014_whatishoc: Mi az a Kódolás Órája?
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Visszaállítás
   cded_sign_up: Regisztrálás
   cded_try_it: Próbáld ki
   twentyhours_trynow: Próbálja ki most

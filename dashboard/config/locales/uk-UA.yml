@@ -354,8 +354,8 @@
       section: Група
       example: Приклад рішення
       example_with_number: Приклад рішення %{solution_number}
-      submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
+      submitted_on: Надіслано %{date}
+      unsubmit: Відкликати
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
     email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'
@@ -469,7 +469,7 @@
     tos: Умови надання послуг
     privacy: Політика конфіденційності
     secure: Безпечна версія
-    report_abuse: Report Abuse
+    report_abuse: Повідомити про порушення
   reference_area:
     title: Потрібна допомога?
     subtitle: Переглянути ці відео та підказки
@@ -719,25 +719,25 @@
         з нами.</a>
       go_to_code_studio: Перейти до Студії коду
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: Якщо Ви стикнулися з образливим вмістом, погрозами, залякуваннями,
+          домаганнями або порушенням авторських прав стосовно Ваших матеріалів у Студії
+          коду, будь ласка, заповніть наведену нижче форму. Ми докладно розглядаємо
+          кожну скаргу і вживаємо відповідних заходів.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Будь ласка, вкажіть адресу електронної пошти
+          age: Будь ласка, вкажіть вік
+          abuse_type: Будь ласка, вкажіть, як цей вміст порушує умови надання послуг
+          abuse_detail: Будь ласка, надайте подробиці, що стосуються вмісту, на який
+            Ви скаржитесь
+        abusive_url: URL-адреса вмісту, на який скаржитесь
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: Як цей вміст порушує %{link_start}Умови надання послуг%{link_end}?
+          harassment: Погрози, залякування, образи
+          offensive: Образливий вміст
+          infringement: Порушення авторських прав
           other: Інше
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
-        acknowledge: By submitting this information, you acknowledge it will be handled
-          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+        detail: Будь ласка, опишіть якомога докладніше свою скаргу стосовно вмісту,
+          про який повідомляєте.
+        acknowledge: Надсилаючи цю інформацію, ви підтверджуєте, що він буде оброблятися
+          відповідно до умов %{link_start_privacy}Політики конфіденційності%{link_end}
+          та %{link_start_tos}Умов надання послуг%{link_end}

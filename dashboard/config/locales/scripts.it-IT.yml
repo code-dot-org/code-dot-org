@@ -410,14 +410,16 @@
           Eval: Eval
         flappy:
           title: Flappy
-          description: Vuoi creare il tuo gioco in meno di 10 minuti? Prova il corso
-            sul Codice di "Flappy"!
+          description: Vuoi creare la tua versione del gioco "Flappy" in meno di 10
+            minuti? Prova questo corso!
           description_short: Scrivi il tuo gioco Flappy in meno di 10 minuti!
           Flappy Code: Flappy
         jigsaw:
           title: Puzzle
-          description: Prova il nostro tutorial di Jigsaw
-          description_short: Prova il nostro tutorial di Jigsaw
+          description: Esercitazione introduttiva per imparare come "trascinare e
+            rilasciare" (drag and drop)
+          description_short: Esercitazione introduttiva per imparare come "trascinare
+            e rilasciare" (drag and drop)
           Jigsaw: Puzzle
         step:
           title: Fai un passo
@@ -426,8 +428,8 @@
           Step: Fai un passo
         Hour of Code:
           title: L'Ora del Codice 2013
-          description: Prova i fondamenti di informatica con i personaggi di Angry
-            Birds e di Plant vs. Zombi!
+          description: Prova i fondamenti dell'informatica con i personaggi di Angry
+            Birds e di Plants vs. Zombies!
           description_short: Prova i fondamenti dell'informatica insieme a tanti personaggi
             divertenti!
           Hour of Code 2013: L'Ora del Codice 2013
@@ -710,6 +712,11 @@
           Creating Functions: Creazione di funzioni
           Functions and Top-Down Design: Functions and Top-Down Design
           Design a Digital Scene: Design a Digital Scene
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Introducing Design Mode: Introducing Design Mode
+          Clicker Game: Clicker Game
+          Getting User Input: Getting User Input
+          Variables: Variabili
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -919,6 +926,8 @@
           The Need for Encryption: The Need for Encryption
           Keys and Passwords: Keys and Passwords
           Public Key Encryption: Public Key Encryption
+          Practice PT - The Internet and Society: Practice PT - The Internet and Society
+          Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
@@ -1089,10 +1098,8 @@
           Equity PD: Equity PD
         hoc2015:
           title: L'Ora del Codice 2015
-          description_short: Utilizza il laboratorio Play Lab per creare una storia
-            o un gioco.
-          description: Utilizza il laboratorio Play Lab per creare una storia o un
-            gioco.
+          description_short: Utilizza il Laboratorio per creare una storia o un gioco.
+          description: Utilizza il Laboratorio per creare una storia o un gioco.
           Hour of Code: L'Ora del Codice
           Hour of Code 2015: L'Ora del Codice 2015
         algebraPD2:
