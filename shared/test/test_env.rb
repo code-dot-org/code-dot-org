@@ -5,11 +5,11 @@ require_relative '../../lib/cdo/env'
 
 class ENVTest < Minitest::Test
 
-  def test_redact_sensitive_values
+  def test_with_sensitive_values_redacted
     ENV['SAFE'] = 'safe value'
     ENV['AWS_SECRET_KEY'] = 'this should be obfuscated'
 
-    redacted = ENV.redact_sensitive_values
+    redacted = ENV.with_sensitive_values_redacted
 
     assert redacted.has_key? 'SAFE'
     assert_equal 'safe value', redacted['SAFE']

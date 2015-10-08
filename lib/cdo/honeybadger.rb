@@ -3,7 +3,6 @@ require_relative 'env'
 
 # Honeybadger extensions for command error logging
 module Honeybadger
-  class << self
 
   # notify_command_error - log an error from an executed command to honeybadger.
   #   Attempts to parse the underlying exception from stderr,
@@ -13,7 +12,7 @@ module Honeybadger
   # status - exitstatus from the command (non-zero for failure)
   # stdout - captured stdout from the command
   # stderr - captured stderr from the command
-  def notify_command_error(command, status, stdout, stderr)
+  def self.notify_command_error(command, status, stdout, stderr)
     return if stderr.to_s.empty? && status == 0
 
     error_message, backtrace = parse_exception_dump stderr
@@ -27,7 +26,7 @@ module Honeybadger
         backtrace: backtrace,
         context: {
             stdout: stdout,
-            environment_variables: ENV.redact_sensitive_values
+            environment_variables: ENV.with_sensitive_values_redacted
         }
     }
 
@@ -37,7 +36,7 @@ module Honeybadger
   # parse_exception_from_stderr - attempts to parse an exception message and stacktrace from a stderr capture
   #
   # Returns [error_message, backtrace]
-  def parse_exception_dump(error)
+  def self.parse_exception_dump(error)
     return if error.to_s.empty?
 
     # Unhandled Ruby exceptions are dumped to STDERR in the following format:
@@ -57,5 +56,4 @@ module Honeybadger
     [error_message, error_lines]
   end
 
-  end
 end
