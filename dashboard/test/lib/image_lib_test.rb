@@ -21,9 +21,10 @@ class ImageLibTest < ActiveSupport::TestCase
       tmp_path = '/tmp/framed_image.png'
       framed_image.write(tmp_path)
 
-      puts "Actual image: #{tmp_path}"
-      puts "Expected image: #{test_image_path(expected_image_name)}."
-      assert false, "Overlaid image did not match expected value"
+      message = ["Overlaid image did not match expected value",
+                  "Actual image: #{tmp_path}",
+                  "Expected image: #{test_image_path(expected_image_name)}."].join("\n")
+      assert false, message
     end
   end
 
@@ -57,7 +58,6 @@ class ImageLibTest < ActiveSupport::TestCase
       end
     end
     result.strip!
-    puts "Image compare for #{image1.path} and #{image2.path}='#{result}'"
     '0' == result
   end
 
