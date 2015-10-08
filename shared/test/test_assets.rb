@@ -12,6 +12,12 @@ class AssetsTest < Minitest::Test
 
   def setup
     @channels, @assets = init_apis
+    @orig_assets_s3_dir = CDO.assets_s3_directory
+    CDO.assets_s3_directory = @orig_assets_s3_dir + "/#{Time.now.to_f}"
+  end
+
+  def teardown
+    CDO.assets_s3_directory = @orig_assets_s3_dir
   end
 
   def test_assets
