@@ -1599,7 +1599,7 @@ levels.js_hoc2015_move_right = {
     "imageWidth": 100,
     "imageHeight": 100
   },
-  "callout_json": [
+  "callouts": [
     {
       "element_id": ".droplet-main-canvas",
       "qtip_config": {
@@ -1796,12 +1796,16 @@ levels.js_hoc2015_event_two_items = {
     "imageWidth": 100,
     "imageHeight": 100
   },
-  "callout_json": [
+  "callouts": [
     {
       "element_id": ".droplet-main-canvas",
+      "hide_target_selector": ".droplet-drag-cover",
       "qtip_config": {
-        "content" : {
+        "content": {
           "text": msg.calloutPlaceCommandsHere(),
+        },
+        "hide": {
+          "event": "mouseup touchend",
         },
         "position": {
           "my": "top left",
@@ -1855,7 +1859,7 @@ levels.js_hoc2015_event_four_items = {
     "imageWidth": 100,
     "imageHeight": 100
   },
-  "callout_json": [
+  "callouts": [
     {
       "element_id": ".ace_scroller",
       "qtip_config": {
@@ -1898,7 +1902,7 @@ levels.js_hoc2015_event_choose_character =
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "function whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": "\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1916,6 +1920,28 @@ levels.js_hoc2015_event_choose_character =
 
   "instructions": "\"Time to visit another planet.\"",
   "instructions2": "Use the setBackground(); command to change the background and change your bot to Bot2.",
+  "callouts": [
+    {
+      "element_id": ".droplet-main-canvas",
+      "hide_target_selector": ".droplet-drag-cover",
+      "qtip_config": {
+        "content": {
+          "text": msg.calloutPlaceCommandsAtTop(),
+        },
+        "hide": {
+          "event": "mouseup touchend",
+        },
+        "position": {
+          "my": "top left",
+          "at": "top left",
+          "adjust": {
+            "x": 10,
+            "y": 20
+          }
+        }
+      }
+    }
+  ],
 };
 
 
@@ -2006,7 +2032,25 @@ levels.js_hoc2015_event_item_behavior = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"It’s up to you Bot2.\"",
-  "instructions2": "Make the pigs flee by using \"setToFlee\" and then get them all."
+  "instructions2": "Make the pigs flee by using \"setToFlee\" and then get them all.",
+  "callouts": [
+    {
+      "element_id": "#droplet_palette_block_setToFlee",
+      "qtip_config": {
+        "content": {
+          "text": msg.calloutCharactersMove(),
+        },
+        "position": {
+          "my": "center left",
+          "at": "center right",
+          "adjust": {
+            "x": 15,
+            "y": 0
+          }
+        }
+      }
+    }
+  ],
 };
 
 levels.js_hoc2015_event_touch_items = {
