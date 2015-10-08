@@ -77,6 +77,10 @@
       var config = $.extend(true, {}, defaultConfig, customConfig);
       config.style.classes = config.style.classes.concat(" cdo-qtips");
 
+      if (callout.hide_target_selector) {
+        config.hide.target = $(callout.hide_target_selector);
+      }
+
       // Reverse callouts in RTL mode
       if ($('html[dir=rtl]').length) {
         config.position.my = reverseCallout(config.position.my);
