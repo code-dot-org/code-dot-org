@@ -13,8 +13,12 @@ def filter_grunt_jshint(modified_files)
 end
 
 def filter_rubocop(modified_files)
-  modified_files.select { |f| f.end_with?(".rb") } +
-    modified_files.select { |f| File.open(f).first.match(/#!.*ruby/) }
+  modified_rb_files = modified_files.select { |f| f.end_with?(".rb") }
+  modified_ruby_scripts = modified_files.select do |f|
+    first_line = File.open(f).first
+    first_line.ascii_only? && first_line.match(/#!.*ruby/)
+  end
+  modified_ruby_scripts + modified_rb_files
 end
 
 def filter_haml(modified_files)

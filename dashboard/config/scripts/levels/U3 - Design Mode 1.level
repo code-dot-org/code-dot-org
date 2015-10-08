@@ -9,12 +9,10 @@
     "code_functions": {
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
+    "encrypted_examples": "FwAFQH+MEbYxq4/EjyaM5XE9qRNxcBYqiMKgxiIAuKLVE2zWEo/Nc7wKvHQx\n2fVF\n",
     "embed": "false",
     "instructions": "Add a button to your screen using design mode. Change the style to look like the picture (click for instructions).",
-    "markdown_instructions": "You now have Design Mode!  \r\n\r\nDesign Mode will allow you to easily add UI elements to our projects and style them the way you want!\r\n\r\nYou are going to start off by adding a button.\r\n\r\n1. Click on the Design button that now appears above your app window on the left.\r\n1. Find the button and click to drag out a button. \r\n1. Check out all the style elements on the right under Properties. \r\n1. Get your button to look like the one pictured. You will have the opportunity to add more style to it later.",
+    "markdown_instructions": "# Design Mode\r\n\r\n<img src=\"https://images.code.org/ec23eb303d31fcd8274fac6c2c0f7b9a-image-1444330773327.32.34 AM.png\" style=\"width: 150px; float: right\">\r\n\r\nYou now have Design Mode!  Check out the new button at the top of your App window. Design Mode will allow you to easily add UI elements to your projects and style them the way you want!\r\n\r\n**GOAL:** Add a large red button to your app using Design Mode.\r\n\r\n# Do This\r\n\r\n* **Switch to Design Mode** the switch appears above your app window on the left.\r\n\r\n* **Find <img src=\"https://images.code.org/278f146396c80c97d0b5d73f24d48aec-image-1444335461720.png\"> in the Design Toolbox** and drag out a button and resize it. \r\n\r\n* **Change the button text** to say \"Click Me\"\r\n\r\n* **Set the color for the button** to be red.\r\n\r\n<img src=\"https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif\" style=\"width: 500px; float: middle\">\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

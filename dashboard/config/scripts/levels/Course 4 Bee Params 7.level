@@ -31,26 +31,27 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
-    "step_speed": "1"
+    "step_speed": "1",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" deletable="false" movable="false" uservisible="false" y="0">
           <next>
-            <block type="variables_set" inline="false" deletable="false" movable="false">
+            <block type="variables_set" inline="false" uservisible="false">
               <title name="VAR">left</title>
               <value name="VALUE">
-                <block type="math_number" deletable="false" movable="false" editable="false">
+                <block type="math_number" uservisible="false">
                   <title name="NUM">0</title>
                 </block>
               </value>
               <next>
-                <block type="variables_set" inline="false" deletable="false" movable="false">
+                <block type="variables_set" inline="false" uservisible="false">
                   <title name="VAR">right</title>
                   <value name="VALUE">
-                    <block type="math_number" deletable="false" movable="false" editable="false">
+                    <block type="math_number" uservisible="false">
                       <title name="NUM">1</title>
                     </block>
                   </value>
@@ -59,6 +60,8 @@
             </block>
           </next>
         </block>
+        <block type="when_run" deletable="false" movable="false">
+  </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="direction"/>

@@ -36,6 +36,11 @@
   hoc2014_everyone: Todos
   hoc2014_support: Apóyalo &#x25BE;
   hoc2014_whatishoc: Qué es la Hora de Programación?
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Reiniciar
   cded_sign_up: Registrarse
   cded_try_it: Pruébalo
   twentyhours_trynow: Probar ahora

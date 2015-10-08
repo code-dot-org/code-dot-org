@@ -31,6 +31,11 @@
   hoc2014_everyone: 全員
   hoc2014_support: サポートする &#x25BE;
   hoc2014_whatishoc: Hour of Codeとは何でしょうか？
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: リセット
   cded_sign_up: 入会
   cded_try_it: 挑戦してみる
   twentyhours_trynow: 今すぐ試す
