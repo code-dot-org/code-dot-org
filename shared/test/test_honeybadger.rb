@@ -41,13 +41,13 @@ class HoneybadgerTest < Minitest::Test
         }
     }
 
-    ENV.expects(:redact_sensitive_values).returns({})
+    ENV.expects(:with_sensitive_values_redacted).returns({})
     Honeybadger.expects(:notify).with(expected_opts).once
     Honeybadger.notify_command_error COMMAND, 1, 'captured stdout', ERROR
   end
 
   def test_no_error
-    ENV.expects(:redact_sensitive_values).never
+    ENV.expects(:with_sensitive_values_redacted).never
     Honeybadger.expects(:notify).never
 
     Honeybadger.notify_command_error COMMAND, 0, 'captured stdout', ''
@@ -66,7 +66,7 @@ class HoneybadgerTest < Minitest::Test
         }
     }
 
-    ENV.expects(:redact_sensitive_values).returns({})
+    ENV.expects(:with_sensitive_values_redacted).returns({})
     Honeybadger.expects(:notify).with(expected_opts).once
     Honeybadger.notify_command_error 'ls', 1, '', error
   end
