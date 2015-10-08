@@ -32,11 +32,11 @@
         video: Unplug2
       Unplug3:
         title: Programare pe Hârtie Milimetrică
-        desc: Programându-se unii pe alții să deseneze imagini, elevii vor începe
-          să înțeleagă ce este în realitate programarea. Cursul va începe cu elevii
-          dându-și instrucțiuni unii altora pentru a colora pătrate pe o foaie milimetrică
-          într-un efort de a reproduce o imagine existentă. Dacă este timp, lecția
-          se va încheia cu imagini pe care elevii le vor crea ei înșiși.
+        desc: 'Programându-și unii altora ce imagini să deseneze, elevii vor începe
+          să înțeleagă ce este în realitate programarea. Ora va începe astfel: elevii
+          se vor învăța unii pe alții să deseneze pătrate pe o foaie grafică, încercând
+          să reproducă o anumită imagine. Dacă este timp, lecția poate încheia cu
+          imagini pe care chiar elevii le-au creat.'
         pdfs:
         - unplug3
         video: Unplug3

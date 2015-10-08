@@ -1750,14 +1750,14 @@ levels.js_hoc2015_event_two_items = {
   "editCode": true,
   "background": "forest",
   "wallMap": "blank",
-  "softButtons": ["downButton", "upButton"],
+  "softButtons": ["leftButton", "rightButton"],
   "codeFunctions": {
     "moveRight": null,
     "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+    "whenLeft": null,
+    "whenRight": null
   },
-  "startBlocks": "",
+  "startBlocks": "function whenLeft() {\n  \n}\nfunction whenRight() {\n  \n}",
   "sortDrawOrder": true,
   "wallMapCollisions": true,
   "blockMovingIntoWalls": true,
@@ -1768,7 +1768,7 @@ levels.js_hoc2015_event_two_items = {
   "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 16, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "pinWorkspaceToBottom": "true",
   "embed": "false",
   "instructions": "\"Bot1, I need you to get a critical message to the goals.\"",
@@ -1796,7 +1796,7 @@ levels.js_hoc2015_event_four_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "function whenLeft() {\n  __;\n}\nfunction whenRight() {\n  __;\n}\nfunction whenUp() {\n  __;\n}\nfunction whenDown() {\n  __;\n}",
+  "startBlocks": "function whenLeft() {\n  \n}\nfunction whenRight() {\n  \n}\nfunction whenUp() {\n  \n}\nfunction whenDown() {\n  \n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1844,7 +1844,7 @@ levels.js_hoc2015_event_choose_character =
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "function whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": "setBackground(\"forest\");\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1868,7 +1868,6 @@ levels.js_hoc2015_event_choose_character =
 levels.js_hoc2015_event_add_items = {
   "editCode": true,
   "textModeAtStart": true,
-  "protagonistSpriteIndex": 0,
   "background": "snow",
   "wallMap": "horizontal",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
@@ -1888,7 +1887,7 @@ levels.js_hoc2015_event_add_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "function whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": "setBackground(\"snow\");\nsetMap(\"horizontal\");\nsetBot(\"bot2\");\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1910,7 +1909,6 @@ levels.js_hoc2015_event_add_items = {
 
 levels.js_hoc2015_event_item_behavior = {
   "editCode": true,
-  "protagonistSpriteIndex": 0,
   "background": "snow",
   "wallMap": "blobs",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
@@ -1937,7 +1935,7 @@ levels.js_hoc2015_event_item_behavior = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addCharacter('pig');\naddCharacter('pig');\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": "setBackground(\"snow\");\nsetMap(\"blobs\");\nsetBot(\"bot2\");\naddCharacter('roo');\naddCharacter('roo');\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1958,7 +1956,6 @@ levels.js_hoc2015_event_item_behavior = {
 levels.js_hoc2015_event_touch_items = {
   "editCode": true,
   "textModeAtStart": true,
-  "protagonistSpriteIndex": 0,
   "background": "snow",
   "wallMap": "circle",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
@@ -1986,7 +1983,7 @@ levels.js_hoc2015_event_touch_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addCharacter('pig');\naddCharacter('bird');\naddCharacter('spider');\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": "setBackground(\"snow\");\nsetMap(\"circle\");\nsetBot(\"bot2\");\naddCharacter('roo');\naddCharacter('roo');\naddCharacter('roo');\nfunction whenTouchCharacter() {\n  \n}\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2037,7 +2034,7 @@ levels.js_hoc2015_event_points = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addCharacter('man');\naddCharacter('pilot');\naddCharacter('roo');\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchCharacter() {\n  \n}",
+  "startBlocks": "setBackground(\"ship\");\nsetMap(\"horizontal\");\nsetBot(\"bot1\");\naddCharacter('bird');\naddCharacter('bird');\naddCharacter('bird');\nfunction whenTouchCharacter() {\n  addCharacter(\"random\"\n);\n}\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchCharacter() {\n  \n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2089,7 +2086,7 @@ levels.js_hoc2015_event_random_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "addCharacter('pig');\naddCharacter('mouse');\naddCharacter('spider');\n\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchCharacter() {\n  changeScore(1);\n  \n}",
+  "startBlocks": "setBackground(\"ship\");\nsetMap(\"blobs\");\nsetBot(\"bot1\");\naddCharacter('spider');\naddCharacter('spider');\naddCharacter('mouse');\naddCharacter('mouse');\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchCharacter() {\n  changeScore(1);\n  \n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2149,7 +2146,7 @@ levels.js_hoc2015_event_free = {
     "whenTouchSpider": { "category": "Events" },
     "whenTouchCharacter": { "category": "Events" }
   },
-  "startBlocks": "function whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": "setBackground(\"forest\");\nsetMap(\"circle\");\nsetBot(\"bot1\");\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,

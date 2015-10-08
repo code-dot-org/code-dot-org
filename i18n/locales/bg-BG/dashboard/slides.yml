@@ -388,40 +388,37 @@ bg:
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: These are your draw blocks. Use the correct one to move the artist where he needs to go to fill in the grey lines.
+        text: Това са блокове за чертане. Използвайте правилните, за да преместите художника, където нужно, за да потъмни сивите линии.
       2:
         image: notes/C1_artist_intro_2.png
-        text: "These are jump blocks. When you use these, your artist moves but doesn't draw, so use these to jump to the next grey line."
+        text: Това са блокове за скачане. Когато ги използвате, Вашият художник се премества, но без да рисува. Използвайте ги, за преминаване към следващата сива линия.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: |-
-          Aren't bees super cool? In this next set of puzzles, your goal is to help the bee get to the flowers and get nectar from the flowers and fly over to the honeycomb to make honey. You'll need to use the "get nectar" and the "make honey" blocks for this exercise.
+        text: 'Не са ли пчелите супер готини? В този набор от пъзели, целта Ви е да помогнете на пчелата да стигне до цветята и да получи нектар от тях, а след това да отлети до кошера и да направи мед. Трябва да използвате "вземи нектар" и "прави мед" блокове за това упражнение.'
       2:
         image: notes/C1_bee_level_intro_2.png
-        text: 'Every flower has a different number of nectars: 1, 2, 3, or more. We know how much nectar is in the red flowers, by the little number in the corner. So be sure to get all the nectar from the flower before you move forward. Also, every honeycomb can only hold so much honey: 1, 2, 3, or more. So be sure to make as much honey as the honeycomb can hold.'
+        text: 'Всяко цвете има различен брой нектар: 1, 2, 3 или повече. Ние знаем колко е нектара в червените цветя, изписан под тях. Така че не забравяйте да вземете всичкия нектар от цветето, преди да продължите напред. Също така, всяка пита може да поеме само: 1, 2, 3 или повече мед. Не забравяйте да направите толкова мед, колкото медената пита може да побере.'
       3:
         image: notes/C1_bee_level_intro_3.png
-        text: |-
-          If you're able to get all the nectar and make all the honey, you succeed and go to the next level. Otherwise, you need to try this puzzle again. Play around a while and see what it feels like to "bee" a programmer!
+        text: 'Ако сте в състояние да получите всичкия нектар и направите всичкия мед, ще успеете да преминете към следващото ниво. В противен случай трябва да опитате този пъзел отново. Играйте известно време и вижте какво е чувството да си "пчела" програмист!'
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
-        text: "A loop is a repetition of activity. So going into a hive to inspect, I look at a frame and then I put it back, so I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
+        text: Цикълът е повторение на дейността. Така, когато трябва да свърша нещо, поглеждам рамката и това, което е сложено вътре, така аз ще го повтарям няколко пъти. Направете няколко цикъла, които извършват дейност няколко пъти.
       2:
         image: notes/C1_bee_loops_2.png
-        text: |-
-          In this level, we want the bee to collect three nectars from the flower. Instead of using three "get nectar" blocks, you're going to use the repeat block to get nectar three times. Hit "Run" and see if you got it right. Nice!
+        text: 'В това ниво ние искаме пчелата да събере три нектара от цветето. Вместо да използвате три "вземи нектар" блокове, използвайте блок за повторение, за да получите нектар три пъти. Натиснете "Старт" и вижте дали нещата ще се получат. Хубаво!'
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
-        text: "This lesson is called the big event. It's all about how we can control our programs and actually change the way a program runs on the fly using events, like the push of a button or the click of a mouse."
+        text: Този урок се нарича голямото събитие. Тук става въпрос за това, как можем да контролираме нашите програми и всъщност променя начина, по който програмата се изпълнява с помощта на събития, като натискане на бутон или клик на мишката.
       2:
         image: notes/C1_bigevent_unplugged_2.png
-        text: "For this lesson, you'll be controlled with a paper remote control. It's just like a real-live video game."
+        text: За този урок, Вие ще бъдете контролирани с хартиено дистанционно управление. Това е точно като жива видео игра.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: "An event is an action  that causes something to happen. It's like when you click the button on a mouse and a webpage loads. That's an event. When you touch your screen on a tablet to scroll, that's an event also. Events are a great way of letting the user direct your program whenever they need or want to."
+        text: Събитие е действие, което предизвиква нещо да се случи. Това е като, когато щракнете върху бутона на мишката и уеб страницата се зарежда. Това е събитие. Когато докоснете екрана на таблета, за да превъртите, това е събитие, също. Събитията са чудесен начин потребителя директно да си взаимодейства с Вашата програма всеки път.
       4:
         image: notes/C1_bigevent_unplugged_4.png
         text: 'Things happen that we all respond to. We feel hungry and we go to the fridge. We hear the mailman come and he puts our mail in the mailbox  and then we go get our mail. Those are just like the events of pushing a button or moving a joystick. They are something that happens that triggers us to do something.'
@@ -436,7 +433,7 @@ bg:
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: "In sand sculpture you've got to know that failure is part of the program. But if you're persist, it's just going to get nothing but better and more exciting for you.Persistence is the name of the game. Stay with it, you'll love it."
+        text: "In sand sculpture you've got to know that failure is part of the program. But if you persist, it's just going to get nothing but better and more exciting for you. Persistence is the name of the game. Stay with it, you'll love it."
       2:
         image: notes/C1_building_foundation_2.jpg
         text: "This lesson is called building a foundation. In this lesson, we'll work on a task that is meant to be really difficult. You will figure out how to make a structure at least as tall as one of these cups and it's got to be strong enough to hold the weight of a book."
@@ -529,20 +526,20 @@ bg:
           My name is Jeremiah. Hi! I am seven years old. I love playing on my mom's computer but I always get permission first. "Mom, can I go on the computer? Sure honey!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the internet. The internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
       3:
         image: notes/C1_going_places_safely_3.png
         text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
       4:
         image: notes/C1_going_places_safely_4.png
         text: |-
-          Sometimes on the internet I talk to peeople I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. "Yummy, I wish the internet had smellorama!" I can talk to different people on the internet, like my cousin but I only talk to people I know.
+          Sometimes on the Internet I talk to people I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. "Yummy, I wish the Internet had smellorama!" I can talk to different people on the Internet, like my cousin but I only talk to people I know.
       5:
         image: notes/C1_going_places_safely_5.png
         text: What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
+        text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
       7:
         image: notes/C1_going_places_safely_7.png
         text: "Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to log on again to see where I can visit next."
@@ -694,7 +691,7 @@ bg:
         text: "On your head you hold your hat and your smarts will tell you where you're at and to think about the zoo, and to nod hello to you and you! Use your head when you're online to keep what's yours inside your mind and to know how to be safe, how to give your life some private space! From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
       2:
         image: notes/C2_digital_footprint_2.png
-        text: "Use your heart to grow and grow, and to give yourself a healthy glow, and to make a valentine, tell someone that you'll be mine! Use your heart when you're online, feel what's right and always kind, and show your friends respect, to be fair and nice on the internet. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: "Use your heart to grow and grow, and to give yourself a healthy glow, and to make a valentine, tell someone that you'll be mine! Use your heart when you're online, feel what's right and always kind, and show your friends respect, to be fair and nice on the Internet. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
       3:
         image: notes/C2_digital_footprint_3.png
         text: "Use your arms to hug your pet, to keep your clothes from getting wet, and to wear your favorite sleeves and to help you fly and make believe. Use your arms when you're online, to take break and balance time and leave your tech behind and to find yourself a tree to climb. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"

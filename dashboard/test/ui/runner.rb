@@ -75,7 +75,7 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-a", "--auto_retry", "Retry tests that fail once") do
     $options.auto_retry = true
   end
-  opts.on("-p", "--parallel ParallelLimit", String, "Maximum number of browsers to run in parallel (default is 1)") do |p|
+  opts.on("-n", "--parallel ParallelLimit", String, "Maximum number of browsers to run in parallel (default is 1)") do |p|
     $options.parallel_limit = p.to_i
   end
   opts.on("-V", "--verbose", "Verbose") do

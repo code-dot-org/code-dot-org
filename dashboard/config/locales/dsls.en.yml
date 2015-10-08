@@ -3132,8 +3132,8 @@ en:
         Why Programming? Question 2: Why Programming? Question 2
       U3L03 - multiselect - properties of functions:
         Choose Two - True statements about functions: Choose Two - True statements about functions
-        Chose the two (2) statements that are true about functions: Chose the two (2) statements that are true about functions
-        Functions in programming are a named grouping of programming instructions.: Functions in programming are a named grouping of programming instructions.
+        Choose the two (2) statements that are true about functions: Choose the two (2) statements that are true about functions
+        Functions in programming are named groupings of programming instructions.: Functions in programming are named groupings of programming instructions.
         Functions in programming are useful mathematical tools for doing complex computations.: Functions in programming are useful mathematical tools for doing complex computations.
         Meaningful function names help <em>computers</em> better understand programs.: Meaningful function names help <em>computers</em> better understand programs.
         Meaningful function names help <em>people</em> better understand programs.: Meaningful function names help <em>people</em> better understand programs.
@@ -3146,12 +3146,12 @@ en:
         Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
         Which of the following is NOT a true statement about functions?: Which of the following is NOT a true statement about functions?
       U3L04 Assessment2:
-        'Multiple Choice: Functions and Top Down Design': 'Multiple Choice: Functions and Top Down Design'
-        Top Down Design assists in identifying the layers of functions that will be used to solve a programming problem.: Top Down Design assists in identifying the layers of functions that will be used to solve a programming problem.
-        Top Down Design leads to programs which feature multiple layers of abstraction.: Top Down Design leads to programs which feature multiple layers of abstraction.
-        Top Down Design relies upon identifying sub-problems of a larger problem.: Top Down Design relies upon identifying sub-problems of a larger problem.
-        Two programmers solving the same problem using Top Down Design should arrive at identical programs.: Two programmers solving the same problem using Top Down Design should arrive at identical programs.
-        Which of the following statements about writing functions and Top Down Design is NOT true?: Which of the following statements about writing functions and Top Down Design is NOT true?
+        'Multiple Choice: Functions and Top-Down Design': 'Multiple Choice: Functions and Top-Down Design'
+        Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.: Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.
+        Top-Down Design leads to programs which feature multiple layers of abstraction.: Top-Down Design leads to programs which feature multiple layers of abstraction.
+        Top-Down Design relies upon identifying sub-problems of a larger problem.: Top-Down Design relies upon identifying sub-problems of a larger problem.
+        Two programmers solving the same problem using Top-Down Design should arrive at identical programs.: Two programmers solving the same problem using Top-Down Design should arrive at identical programs.
+        Which of the following statements about writing functions and Top-Down Design is NOT true?: Which of the following statements about writing functions and Top-Down Design is NOT true?
         Writing functions helps manage complexity in a program.: Writing functions helps manage complexity in a program.
       U3L06 Assessment2:
         A collection of commands that can be used in a programming language.: A collection of commands that can be used in a programming language.
