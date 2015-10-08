@@ -176,11 +176,17 @@ function test_isVisible() {
   block.setUserVisible(false);
   assert(block.isVisible() === false);
 
-  // change Blockly to edit mode, and it becomes visible again
+  // cache the original editBlocks state, change Blockly to edit mode,
+  // and it becomes visible again
+  var original_editBlocks_state = Blockly.editBlocks;
   Blockly.editBlocks = 'start_blocks';
   assert(block.isVisible() === true);
 
   // while still in edit mode, hide it, and it becomes invisible
   block.setCurrentlyHidden(true);
   assert(block.isVisible() === false);
+
+  // finally, restore the editBlocks state to avoid polluting future
+  // tests
+  Blockly.editBlocks = original_editBlocks_state;
 }
