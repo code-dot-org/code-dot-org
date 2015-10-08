@@ -6,6 +6,7 @@ module.exports = {
   skinId: "studio",
   levelFile: "levels",
   levelId: "k1_6",
+  timeout: 15000,
   tests: [
     {
       description: "Show and hide sprite",
