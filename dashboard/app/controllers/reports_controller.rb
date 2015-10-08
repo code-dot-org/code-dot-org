@@ -58,8 +58,8 @@ SQL
 
   def search_for_teachers
     authorize! :read, :reports
-    addressFilter = params[:addressFilter]
-    emailFilter = params[:emailFilter]
+    address_filter = params[:addressFilter]
+    email_filter = params[:emailFilter]
     fields = ['id', 'name', 'email', 'num_students']
     teachers = User.find_by_sql(<<SQL)
 SELECT
@@ -68,8 +68,8 @@ FROM (
   SELECT id, name, email
   FROM users
   WHERE user_type = 'teacher'
-    AND email LIKE '%#{emailFilter}%'
-    AND full_address LIKE '%#{addressFilter}%'
+    AND email LIKE '%#{email_filter}%'
+    AND full_address LIKE '%#{address_filter}%'
 ) AS u
 LEFT JOIN (
   SELECT user_id, student_user_id
