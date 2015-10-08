@@ -45,14 +45,7 @@ Item.prototype.getDirectionFrame = function() {
   // assign a new displayDir from state table; only one turn at a time.
 
   if (this.dir !== this.displayDir && this.displayDir !== undefined) {
-    // Special case: if the item has now stopped, just switch to idle
-    // immediately.  (It would be nice if we gradually turned, but this is
-    // a fairly rare case.)
-    if (this.dir == Direction.NONE) {
-      this.displayDir = Direction.NONE;
-    }
-    // Otherwise gradually turn the item towards the new direction.
-    else if (Studio.tickCount && (0 === Studio.tickCount % 2)) {
+    if (Studio.tickCount && (0 === Studio.tickCount % 2)) {
       this.displayDir = NextTurn[this.displayDir][this.dir];
     }
 }
