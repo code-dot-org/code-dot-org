@@ -181,7 +181,7 @@ module ApplicationHelper
     certificate_image_url(name: user.name, course: script_name)
   end
 
-  def minifiable_shared_path(path)
+  def minifiable_asset_path(path)
     path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs
     asset_path(path)
   end
