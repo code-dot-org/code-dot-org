@@ -155,9 +155,6 @@ class ScriptLevelsController < ApplicationController
     level_view_options(
       script_level_id: @script_level.level_id
     )
-    view_options(
-        script_level_id: @script_level.level_id
-    )
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {
