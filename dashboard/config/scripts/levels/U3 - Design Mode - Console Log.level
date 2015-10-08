@@ -1,0 +1,90 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-08T18:33:36.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "button": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "setPosition": null,
+      "textLabel": {
+        "params": [
+          "\"id\"",
+          "\"text\""
+        ]
+      },
+      "image": null,
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "getX": null,
+      "getY": null,
+      "getDirection": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_max": null,
+      "randomNumber_min_max": null,
+      "console.log": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null
+    },
+    "edit_code": true,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "markdown_instructions": "# Console Log\r\n\r\nIn the last level we say `console.log()` for the first time. You may have noticed that it prints out text in the Debug Console below the code you have written.\r\n\r\n<img src=\"https://images.code.org/1768e4ffe00084c78b1218836cbc7a84-image-1444333119269.36.34 PM.png\" style=\"width: 350px; float: right; border: solid 1px black\">\r\n\r\nThe Debug Console is an important part of programming. The Debug Console allows a programmer to get messages while a program is running which a user can not see. Programmer often use it for debugging programs. It allows you to check when different areas of the code are reached. \r\n\r\n<img src=\"https://images.code.org/dbbe9305bf0248de1257496063daf412-image-1444333116018.36.50 PM.png\" style=\"width: 150px; float: right; border: solid 1px black\">\r\n\r\nYou will now notice that now have a new tab in the Toolbox. It is the purple Variables tab. This new tab is where you can find the `console.log()` block. \r\n\r\n# Do This\r\n\r\n**Starter code** We have started you off with three buttons on the screen each with an event handler. \r\n\r\n**Add a `console.log()` for each button** to keep track of when each button is pressed. \r\n\r\n![]()\r\n\r\n![]()",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "instructions": "Add a consolelog for each button."
+  }
+}]]></config>
+  <blocks/>
+</Applab>

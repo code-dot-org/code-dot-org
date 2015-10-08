@@ -29,6 +29,11 @@ ca-ES:
   hoc2014_everyone: Tothom
   hoc2014_support: 'Doneu-li suport &#x25BE;'
   hoc2014_whatishoc: "Què és l'Hora del Codi?"
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Reiniciar
   cded_sign_up: "Inscriure's"
   cded_try_it: Proveu-ho
   twentyhours_trynow: Intenteu-ho ara

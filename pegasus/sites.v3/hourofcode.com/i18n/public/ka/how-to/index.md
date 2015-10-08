@@ -11,7 +11,7 @@ nav: how_to_nav
 ## 1) დარეგისტრირდით
 
   * დარეგისტრირდით [კოდის ერთი საათის](<%= resolve_url('/') %>) ჩასატარებლად <%= campaign_date('short') %>.
-  * გაუკეთეთ რეკლამა თქვენს [კოდის ერთ საათს](<%= resolve_url('/resources') %>) და წაახალისეთ სხვებიც ღონისძიების ჩასატარებლად.
+  * Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
 
 ## 2) უყურეთ ამ "როგორ უნდა" ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) აირჩიეთ ტუტორიალი:
@@ -93,7 +93,7 @@ nav: how_to_nav
 ## 7) აღნიშნეთ
 
   * [დაბეჭდეთ სერთიფიკატები](<%= resolve_url('https://code.org/certificates') %>) თქვენი მოსწავლეებისთვის.
-  * [დაბეჭდეთ "მე გავაკეთე კოდის ერთი საათი!"](<%= resolve_url('/resources/promote#stickers') %>) სტიკერები თქვენი მოსწავლეებისთვის.
+  * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
   * გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
 
 [col-33]

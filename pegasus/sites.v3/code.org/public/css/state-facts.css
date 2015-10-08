@@ -1,54 +1,55 @@
-.state-fact-sheet {
-  padding: 50px;
-  max-width: 970px;
+.intro-text {
+  width: 55%;
+  float: left;
 }
 
-body {
-  font-family: 'Gotham 4r', sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: normal;
-  color: dimgray;
+.chart{
+  float: left;
+  width: 40%;
+  padding: 0px 15px 10px 15px;
 }
 
-h1 {
-  color: #7665a0;
-  font-size: 32px;
-  font-family: 'Gotham 7r', sans-serif;
-  font-weight: bold;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  line-height: 1.2em;
+.image-set-two {
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 40px;
 }
 
-h2 {
-  color: #00adbc;
-  font-size: 22px;
-  font-family: 'Gotham 5r', sans-serif;
-  margin-top: 45px;
-  margin-bottom: 25px;
-  line-height: 1.2em;
+.call-out {
+  clear: both;
+  padding: 30px 60px 0px 60px;
 }
 
-h3 {
-  color: #5b6770;
-  font-size: 18px;
-  font-family: 'Gotham 4r', sans-serif;
-  margin-top: 25px;
-  margin-bottom: 12px;
-  line-height: 1.2em;
+.clear-both {
+ clear: both;
 }
 
-a {
-  color: #7665a0;
-  text-decoration: none;
-  font-family: 'Gotham 7r', sans-serif;
-  font-weight: bold;
+.logo {
+  width: 80px;
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
-.policies {
+.chart-text-group {
+  padding: 30px 0px 30px 0px;
 }
 
-.policy-item {
-  padding: 10px;
+.sources {
+  padding-top: 30px;
+  font-size: 10px;
+}
+
+.improve-edu {
+  float: left;
+  width: 55%;
+}
+
+.improve-edu-h2 {
+  margin-top: 0px;
+}
+
+.quote-center {
+  text-align: center;
+  margin: 0px 70px;
 }

@@ -27,6 +27,11 @@ el-GR:
   hoc2014_everyone: Όλοι
   hoc2014_support: 'Υποστηρίξτε την &#x25BE;'
   hoc2014_whatishoc: 'Τι είναι η  Ώρα του Κώδικα;'
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Επαναφορά
   cded_sign_up: Εγγραφή
   cded_try_it: Δοκιμάστε το
   twentyhours_trynow: Δοκιμάστε τώρα
@@ -46,7 +51,7 @@ el-GR:
   thank_you_: Ευχαριστούμε!
   congratulations: Συγχαρητήρια!
   congratulations_on_completing_hoc: 'Συγχαρητήρια για τη συμπλήρωση του "Μια ώρα κώδικα"'
-  course_name_accelerated: Accelerated Course
+  course_name_accelerated: Επιταχυνόμενη πορεία μάθησης
   course_name_course1: Μάθημα 1
   course_name_course2: Μάθημα 2
   course_name_course3: Μάθημα 3

@@ -393,22 +393,20 @@ uk:
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: These are your draw blocks. Use the correct one to move the artist where he needs to go to fill in the grey lines.
+        text: Ось твої блоки для малювання. Скористайся одним з них, щоб перемістити художника у потрібне для заповнення сірих ліній місце.
       2:
         image: notes/C1_artist_intro_2.png
-        text: "These are jump blocks. When you use these, your artist moves but doesn't draw, so use these to jump to the next grey line."
+        text: Ось блоки стрибання. При використанні них, художник буде рухатися, але не малювати, тож використовуй їх для перескакування до наступної сірої лінії.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: |-
-          Aren't bees super cool? In this next set of puzzles, your goal is to help the bee get to the flowers and get nectar from the flowers and fly over to the honeycomb to make honey. You'll need to use the "get nectar" and the "make honey" blocks for this exercise.
+        text: 'Хіба ж бджоли не супер-круті? У наступному наборі задачок твоєю метою є допомогти бджілці дістатись до квітів та зібрати нектар, а тоді полетіти до стільника і зробити мед. Для виконання вправи тобі знадобляться блоки "отримати нектар" і "зробити мед".'
       2:
         image: notes/C1_bee_level_intro_2.png
-        text: 'Every flower has a different number of nectars: 1, 2, 3, or more. We know how much nectar is in the red flowers, by the little number in the corner. So be sure to get all the nectar from the flower before you move forward. Also, every honeycomb can only hold so much honey: 1, 2, 3, or more. So be sure to make as much honey as the honeycomb can hold.'
+        text: 'Кожна квітка має різну кількість нектарів: 1, 2, 3 або більше. Ми знаємо, скільки нектару в червоній квітці - це число в кутку. Так що постарайся отримати весь нектар з квітки, перш ніж рухатися далі. Крім того, кожен стільник може утримувати певну кількість меду: 1, 2, 3 або більше. Тому намагайся зробити якомога більше меду, наскільки може вмістити стільник.'
       3:
         image: notes/C1_bee_level_intro_3.png
-        text: |-
-          If you're able to get all the nectar and make all the honey, you succeed and go to the next level. Otherwise, you need to try this puzzle again. Play around a while and see what it feels like to "bee" a programmer!
+        text: 'Якщо зможеш зібрати весь нектар і зробити весь мед, то перейдеш до наступного рівня. У протилежному випадку, доведеться виконувати завдання знову. Пограйся трохи і побачиш, як це - бути бджілкою-програмістом!'
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
@@ -441,7 +439,7 @@ uk:
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: "In sand sculpture you've got to know that failure is part of the program. But if you're persist, it's just going to get nothing but better and more exciting for you.Persistence is the name of the game. Stay with it, you'll love it."
+        text: "In sand sculpture you've got to know that failure is part of the program. But if you persist, it's just going to get nothing but better and more exciting for you. Persistence is the name of the game. Stay with it, you'll love it."
       2:
         image: notes/C1_building_foundation_2.jpg
         text: "This lesson is called building a foundation. In this lesson, we'll work on a task that is meant to be really difficult. You will figure out how to make a structure at least as tall as one of these cups and it's got to be strong enough to hold the weight of a book."
@@ -534,20 +532,20 @@ uk:
           My name is Jeremiah. Hi! I am seven years old. I love playing on my mom's computer but I always get permission first. "Mom, can I go on the computer? Sure honey!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the internet. The internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
       3:
         image: notes/C1_going_places_safely_3.png
         text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
       4:
         image: notes/C1_going_places_safely_4.png
         text: |-
-          Sometimes on the internet I talk to peeople I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. "Yummy, I wish the internet had smellorama!" I can talk to different people on the internet, like my cousin but I only talk to people I know.
+          Sometimes on the Internet I talk to people I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. "Yummy, I wish the Internet had smellorama!" I can talk to different people on the Internet, like my cousin but I only talk to people I know.
       5:
         image: notes/C1_going_places_safely_5.png
         text: What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
+        text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
       7:
         image: notes/C1_going_places_safely_7.png
         text: "Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to log on again to see where I can visit next."
@@ -699,7 +697,7 @@ uk:
         text: "On your head you hold your hat and your smarts will tell you where you're at and to think about the zoo, and to nod hello to you and you! Use your head when you're online to keep what's yours inside your mind and to know how to be safe, how to give your life some private space! From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
       2:
         image: notes/C2_digital_footprint_2.png
-        text: "Use your heart to grow and grow, and to give yourself a healthy glow, and to make a valentine, tell someone that you'll be mine! Use your heart when you're online, feel what's right and always kind, and show your friends respect, to be fair and nice on the internet. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: "Use your heart to grow and grow, and to give yourself a healthy glow, and to make a valentine, tell someone that you'll be mine! Use your heart when you're online, feel what's right and always kind, and show your friends respect, to be fair and nice on the Internet. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
       3:
         image: notes/C2_digital_footprint_3.png
         text: "Use your arms to hug your pet, to keep your clothes from getting wet, and to wear your favorite sleeves and to help you fly and make believe. Use your arms when you're online, to take break and balance time and leave your tech behind and to find yourself a tree to climb. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"

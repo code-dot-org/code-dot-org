@@ -24,10 +24,10 @@ nav: promote_nav
 **1. Planlegg Kodetimen din**
 
   * Planlegg ei samling for å markere starten på Kodetimen.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organisere gruppeaktivitetar (som ein demonstrasjon av en "unplugged" programmeringsaktivitet), eller vis fram aktivitetar som elevane sjølve står for.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote#videos') %>) to inspire.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Finn journalister i nærområdet som skriv om skule og aktivitetar i nærmiljøet.**
 
@@ -37,7 +37,7 @@ Søk på nettet etter kontaktinformasjon til journalistar. Dersom du ikkje finn 
 
 **3. Ta kontakt med lokale medier**
 
-Den beste måten å nå ut på er gjennom epost. Skriv kort og kommuniser kvifor folk skulle bry seg om akkurat dette arrangementet? Ta med kontaktinformasjon (inkludert mobilnummer) til den som skal være på plass under arrangementet. **See a [sample pitch to media](<%= resolve_url('/promote#sample-emails') %>):**
+Den beste måten å nå ut på er gjennom epost. Skriv kort og kommuniser kvifor folk skulle bry seg om akkurat dette arrangementet? Ta med kontaktinformasjon (inkludert mobilnummer) til den som skal være på plass under arrangementet. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Ver budd på å svare på spørsmål om arrangementet på skulen din. Her er nokre eksempel:**
 

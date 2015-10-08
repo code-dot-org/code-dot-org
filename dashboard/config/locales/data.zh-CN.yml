@@ -553,7 +553,7 @@
         add_and_drag_parameter: 在这里填写参数的名称，点击添加，然后将它拖动到函数定义中
         fill_in_actor: 在??? 处填写数字，使每个演员 (1、 2 和 3) 一致
         repeat: 在循环中放入模块来重复执行命令
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
+        if_bee_nectar: 使用"if"代码块来决定蜜蜂是否应该得到花蜜
         if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
           and makes honey if it's not a flower
         repeat_full_circle: 输入僵尸至少需要移动多少次才能完成一个完整的循环

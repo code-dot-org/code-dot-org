@@ -31,6 +31,7 @@
   "ifTooltip":"Si hay un camino en la dirección especificada, hacer algunas acciones.",
   "ifelseTooltip":"Si hay un camino en la dirección especificada, hacer el primer bloque de acciones. De lo contrario, hacer el segundo bloque de acciones.",
   "ifFlowerTooltip":"si hay alguna flor\/panal en la dirección especificada, entonces haz algunas acciones.",
+  "ifOnlyFlowerTooltip":"If there is a flower in the specified direction, then do some actions.",
   "ifelseFlowerTooltip":"si hay una flor\/panal en la dirección especificada, entonces haz el primer bloque de acciones. Si no, haz el segundo bloque de acciones.",
   "insufficientHoney":"Estás usando todos los bloques correctos, pero necesitas hacer la cantidad correcta de miel.",
   "insufficientNectar":"Estás usando todos los bloques correctos, pero necesitas recolectar la cantidad correcta de néctar.",

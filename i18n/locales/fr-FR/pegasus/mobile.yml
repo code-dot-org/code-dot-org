@@ -29,6 +29,11 @@ fr-FR:
   hoc2014_everyone: Tout le monde
   hoc2014_support: Soutenez-la ▾
   hoc2014_whatishoc: "Qu'est-ce que l'Heure de Code ?"
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Réinitialiser
   cded_sign_up: S’inscrire
   cded_try_it: Participez
   twentyhours_trynow: Essaie maintenant

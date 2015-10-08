@@ -71,11 +71,10 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "start_blocks": "button(\"moveBtn\", \"Move It Move It!\");\r\nonEvent(\"moveBtn\", \"click\", function(){\r\n  moveTo(randomNumber(320), randomNumber(480));\r\n});\r\n",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "encrypted_examples": "6dccbu4XDgsKwxtTGb8vO7XtATuCqkNkIK1+EVRGmf6yUcucrJUgUNmZPS4U\nzHDe\n",
-    "markdown_instructions": "# New Elements and Events: Moving the Button\r\n\r\nWe've been using buttons to move the turtle, but now we are going to use `setPosition` to change the location of the button whenever it is clicked.\r\n\r\n# Do This\r\n\r\n**Modify** your event handler so that **it no longer moves the turtle** and instead uses `setPosition` to **move the button to a random location on the page**\r\n\r\n**Feel free** to randomly change the size of your button too, or just leave it the same size every time.",
+    "markdown_instructions": "# New Elements and Events: Moving the Button\r\n\r\nWe've been using buttons to move the turtle, but now we are going to use `setPosition` to change the location of the button whenever it is clicked.\r\n\r\n# Do This\r\n\r\n**Modify** your event handler so that **it no longer moves the turtle** and instead uses `setPosition` to **move the button to a random location on the page**\r\n\r\n![](https://images.code.org/4e17b077bd8fbdd43f960d26bb3d252d-image-1444335766972.gif)",
     "never_autoplay_video": "false",
     "slider_speed": "1",
     "examples_required": "false",
@@ -84,7 +83,8 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "submittable": "false",
-    "hide_view_data_button": "true"
+    "hide_view_data_button": "true",
+    "project_template_level_name": "U3L16 - projectTemplate"
   }
 }]]></config>
   <blocks/>

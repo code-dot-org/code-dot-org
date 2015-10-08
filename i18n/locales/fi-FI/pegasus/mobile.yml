@@ -27,6 +27,11 @@ fi-FI:
   hoc2014_everyone: Kaikki
   hoc2014_support: 'Tue &#x25BE;'
   hoc2014_whatishoc: Mikä on koodaustunti?
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Alusta
   cded_sign_up: Luo käyttäjätunnus
   cded_try_it: Kokeile
   twentyhours_trynow: Kokeile nyt

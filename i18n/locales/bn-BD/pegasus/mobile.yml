@@ -27,6 +27,11 @@ bn-BD:
   hoc2014_everyone: সবাই
   hoc2014_support: 'এটা সমর্থন করুন &#x25BE;'
   hoc2014_whatishoc: Hour of Code কি?
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: পুনরায় সেট করুন
   cded_sign_up: সাইন আপ
   cded_try_it: এটা চেষ্টা করুন।
   twentyhours_trynow: এখন চেষ্টা করুন
