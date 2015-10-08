@@ -24,10 +24,10 @@ nav: promote_nav
 **1. Planifier votre évènement**
 
   * Planifiez une réunion pour le coup d'envoi d'Une Heure de Code.
-  * Envoyez [une lettre](<%= resolve_url('/promote#sample-emails') %>) aux parents. Demandez leur de passer le mot.
-  * Envoyez [ une lettre](<%= hoc_uri('/resources/#sample-emails') %>) invitant votre maire, votre député, vos élus locaux ou personnalités publiques influentes à assister à votre évènement et à prendre la parole devant vos élèves.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organisez des activités de groupe (comme la démonstration d'une activité de programmation « non connectée » par exemple), ou montrez les créations d'étudiants lors d'autres activités.
-  * Montrer la [vidéo Une Heure de Code](<%= resolve_url('/') %>), réalisée par Code.org ou [l'un de ces contenus](<%= resolve_url('/promote#videos') %>) pour inspirer.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Identifier des journalistes locaux spécialisés qui couvrent l'éducation ou les évènements de votre région.**
 
@@ -37,7 +37,7 @@ Cherchez sur Internet afin de trouver les coordonnées des journalistes que vous
 
 **3. Contactez les médias locaux**
 
-Le meilleur moyen d'établir un contact est souvent par email. Le message doit être concis et complet. Il doit répondre à la question : pourquoi les autres devraient-ils s'intéresser à cet évènement ? Inclure les coordonnées (y compris un numéro de téléphone portable) de l'organisateur qui sera présent lors de l'évènement. **Voici [un exemple de pitch ou une "accroche" à destination des médias](<%= resolve_url('/promote#sample-emails') %>) :**
+Le meilleur moyen d'établir un contact est souvent par email. Le message doit être concis et complet. Il doit répondre à la question : pourquoi les autres devraient-ils s'intéresser à cet évènement ? Inclure les coordonnées (y compris un numéro de téléphone portable) de l'organisateur qui sera présent lors de l'évènement. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **Préparez bien les réponses aux questions sur l'évènement que le média pourrait vous poser. Quelques exemples sont disponibles ici:**
 
