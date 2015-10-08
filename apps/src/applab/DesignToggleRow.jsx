@@ -103,6 +103,7 @@ module.exports = React.createClass({
 
     var showDataButtonStyle = $.extend(
       {
+        float: 'right',
         textAlign: 'left',
         maxWidth: '100%',
         whiteSpace: 'nowrap',
@@ -170,7 +171,7 @@ module.exports = React.createClass({
                 {msg.designMode()}
               </button>
             </td>
-            <td style={{textAlight: 'right', maxWidth: 0}}>
+            <td style={{maxWidth: 0}}>
               {selectDropdown}
               {showDataButton}
             </td>
