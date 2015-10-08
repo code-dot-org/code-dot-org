@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-05-08T18:24:31.000Z",
+  "created_at": "2015-10-07T18:34:04.000Z",
   "level_num": "custom",
   "user_id": 13,
   "properties": {
@@ -56,7 +56,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Introducing the setPosition command!  Replace the moveTo in the button-click event handler to use setPosition to move the button itself to a random location when it's clicked.",
+    "instructions": "Experiment with different event types and select the one that you think is best. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -71,10 +71,10 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "show_turtle_before_run": "false",
+    "start_blocks": "button(\"id\", \"move me\");\r\nonEvent(\"id\", \"click\", function(){\r\n  moveForward(25);\r\n});\r\n",
+    "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "encrypted_examples": "6dccbu4XDgsKwxtTGb8vO7XtATuCqkNkIK1+EVRGmf6yUcucrJUgUNmZPS4U\nzHDe\n",
-    "markdown_instructions": "# New Elements and Events: Moving the Button\r\n\r\nWe've been using buttons to move the turtle, but now we are going to use `setPosition` to change the location of the button whenever it is clicked.\r\n\r\n# Do This\r\n\r\n**Modify** your event handler so that **it no longer moves the turtle** and instead uses `setPosition` to **move the button to a random location on the page**",
+    "markdown_instructions": "# New Elements and Events: New Event Types\r\n\r\n**A Quick Aside:** So the step you just completed is actually a pretty big deal for two reasons. \r\n\r\n* You now can create **event handlers that affect the elements they are attached to**. This is how you can make your elements react to your user. \r\n* You just wrote your first program **does not include the turtle**! Moving forward we're going to focus much more on programming apps, but we'll keep the turtle library around in case you want to use it.\r\n\r\n**New Events**: You may have noticed that the `onEvent` block has a little arrow where you select your event **type**. Clicking this arrow allows you to select from many different event types besides \"click\". You can read about what they do in the documentation, or just experiment to see what they do.\r\n\r\n![](https://images.code.org/9f013bd84577eb2498061757e18a72f4-image-1444322870272.46.06 AM.png)\r\n\r\n# Do This\r\n\r\n**Experiment** with **each of the different types of mouse events** by selecting from the list. You can also read about them in the documentation.\r\n\r\n**Choose** the mouse event type you like most before moving on\r\n\r\n**Note:** The events that involve the mouse will be the easiest to use now. Read about the ones that involve keys but they may not work as easily with buttons as with different page elements we'll see later.\r\n\r\n",
     "never_autoplay_video": "false",
     "slider_speed": "1",
     "examples_required": "false",
@@ -84,6 +84,9 @@
     "beginner_mode": "true",
     "submittable": "false",
     "hide_view_data_button": "true",
+    "encrypted_examples": [
+
+    ],
     "project_template_level_name": "U3L16 - projectTemplate"
   }
 }]]></config>

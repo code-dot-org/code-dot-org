@@ -1,0 +1,48 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-07T21:41:31.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": null,
+      "setPosition": null,
+      "randomNumber_max": null,
+      "randomNumber_min_max": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "3uHFs2HnO+A9yFuJHCjBvwMrD/HfimMbhRet7b/ZwWerFMdWnaP9/oBzHgan\nHtBv\n",
+    "embed": "false",
+    "markdown_instructions": "In the last level you set up the the image to move on the button click. \r\n\r\nIn this level we are going to remove the button and make the image respond to mouse motion. \r\n\r\nGo into design mode for the button and delete the button. In order to delete the button you have to go into the button properties and find the red delete button at the bottom.\r\n\r\nNext go to the Image Events Tab in Design Mode. We want to make the image move when the mouse is pressed down. There are two ways to do this. We can pull out an onEvent block from Code mode or insert it using the Insert Code under Click in the Events tab. Either way you will have to choose the mousedown option from the drop down list.\r\n\r\nReminder: The ID is what connects the onEvent block to the UI element. Make sure you make the IDs match.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U3 - Design Mode 1",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "instructions": "Delete the button and make the image move to a random location when you click on it. (click to see detailed instructions)"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

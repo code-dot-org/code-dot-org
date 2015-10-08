@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-10-07T18:15:07.000Z",
+  "created_at": "2015-10-07T19:55:06.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -127,10 +127,10 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": "HGPdR2c47xYncuWr3I5Kw3Y1l364l/E6qAYCddJoL2DSb84rJ5ezp3yCQd5T\n2q1q\n",
+    "encrypted_examples": "Tf6udvcQvYYrPZ25LKlkaPa1fjErCWdOBjActKNtQFf2J5GKbZPz0OO8uP1O\nk/nQ\n",
     "embed": "false",
-    "instructions": "Make a 2 screen app with black screen and a white screen.",
-    "markdown_instructions": "Up until now our apps have only been able to have one view that we would have to change completely to display different things. With Design Mode we can make multiple screens and switch between them!\r\n\r\nYou are going to make a 2 screen app with black screen and a white screen. \r\n\r\nGo into design mode and find the Screen element and drag it out. It make look like nothing happened. However check out the drop down menu at the top right of the app window. You now have two options!\r\n\r\nOpen Screen1 and change its ID to White\r\nOpen Screen2 and change its ID to Black\r\n\r\nTo open a screen pick it from the drop down menu. If you don't see the properties for the screen click on a blank area of the app window.\r\n\r\nOnce you have that make the Black screen have a black background. This is one of the property options for screens.\r\n\r\nRun the app. What do you notice?",
+    "instructions": "Recreate the game from the last lesson with an extra welcome screen for the user to start on. (Click for detailed instructions)",
+    "markdown_instructions": "You now have all the things you need to be able to create a new and improved version of the game you made last lesson.\r\n\r\nRecreate the game of last lesson using Design Mode. In addition add a welcome screen with a button that allows the user to decide when to start the game. The game should be played on a second screen.\r\n\r\nAs always feel free to look back at your code from last time to help you out. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
