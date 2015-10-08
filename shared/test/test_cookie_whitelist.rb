@@ -8,6 +8,8 @@ ENV['RACK_ENV'] = 'test'
 class CookieWhitelistTest < Minitest::Test
   include Rack::Test::Methods
 
+  ESCAPED_KEY = '1;2&3=4%'
+  ESCAPED_VALUE = '3;4&5=6%'
   COOKIE_CONFIG = {
     behaviors: [
       {
@@ -17,6 +19,10 @@ class CookieWhitelistTest < Minitest::Test
       {
         path: 'some/*',
         cookies: %w(one two)
+      },
+      {
+        path: 'weird/*',
+        cookies: %w(one two) << ESCAPED_KEY
       }
     ],
     default: {cookies: 'none'}
@@ -29,6 +35,7 @@ class CookieWhitelistTest < Minitest::Test
   def app
     cookie_grabber = lambda do |env|
       @request_cookies = Rack::Request.new(env).cookies
+      @request_env = env
       [200, {'Content-Type' => 'text/plain'}, ['OK']]
     end
     Rack::Builder.app do
@@ -42,20 +49,30 @@ class CookieWhitelistTest < Minitest::Test
     session.set_cookie('one=1')
     session.set_cookie('two=2')
     session.set_cookie('three=3')
+    session.set_cookie(Rack::Utils.escape(ESCAPED_KEY) + '=' + Rack::Utils.escape(ESCAPED_VALUE))
   end
 
   def test_whitelisted_cookies
     get '/some/'
+    assert_nil @request_env['HTTP_COOKIE'].match(/three/)
     assert_equal @request_cookies, {'one' => '1', 'two' => '2'}
   end
 
   def test_no_cookies
     get '/none'
+    assert_nil @request_env['HTTP_COOKIE']
     assert_equal @request_cookies, {}
   end
 
   def test_all_cookies
     get '/all/'
-    assert_equal @request_cookies, {'one' => '1', 'two' => '2', 'three' => '3'}
+    refute_nil @request_env['HTTP_COOKIE'].match(/three/)
+    assert_equal @request_cookies, {'one' => '1', 'two' => '2', 'three' => '3', ESCAPED_KEY => ESCAPED_VALUE}
+  end
+
+  def test_whitelist_escaped_cookie
+    get '/weird/'
+    assert_nil @request_env['HTTP_COOKIE'].match(/three/)
+    assert_equal @request_cookies, {'one' => '1', 'two' => '2', ESCAPED_KEY => ESCAPED_VALUE}
   end
 end

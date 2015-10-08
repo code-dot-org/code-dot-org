@@ -31,9 +31,10 @@ module Rack
           # Strip all request cookies not in whitelist
           request_cookies = request.cookies
           request_cookies.slice!(*cookies)
-          cookie_str = request_cookies.map{|k,v|"#{k}=#{v}"}.join('; ')
+          cookie_str = request_cookies.map do |key, value|
+            Rack::Utils.escape(key) + '=' + Rack::Utils.escape(value)
+          end.join('; ')
           env['HTTP_COOKIE'] = cookie_str
-          env['rack.request.cookie_string'] = cookie_str
           @app.call(env)
       end
     end
