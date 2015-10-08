@@ -169,9 +169,9 @@ az:
   prizes_nav_hardware: Hardware prize signup
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Kod Saatını necə təşkil etməli</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Kod Saatını təbliğ edin</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
@@ -242,6 +242,7 @@ az:
   map_header: 'Bütün dünyada # Kod Saatı tədbiri'
   see_all_events: Bütün tədbirləri nəzərdən keçirin
   map_header_company: '# şirkətlər tərəfindən'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Search for Hour of Code events
   map_search_search: Axtarış
   map_search_reset: Reset
@@ -281,17 +282,17 @@ az:
   hoc_faq_why_cs_q: Nəyə görə informatika?
   hoc_faq_why_cs_a: "<i>21-ci əsrdə hər bir tələbənin </i> informatikaya yiyələnmək üçün imkanı olmalıdır. İnformatikanın əsaslarını bilmək kreativliyi və problem həll etmək bacarığını inkişaf etdirir.  21-ci əsrdə hər hansı sahədə karyera uğuruna nail olmaq üçün, erkən yaşdan  başlamaq lazımdır. Daha ətraflı: <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Kod Saatında necə iştirak edə bilərəm?
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Kod Saatının arxasında kim durur?
   hoc_faq_behind_hoc_a: |
     Kod Saatı "Code.org" tərəfindən təşkil edilir, <a href='http://code.org'>Code.org</a> informatika təhsilinin əhatə dairəsinin genişləndirilməsi, bu sahədə az təmsil olunan qadınlar və rəngli tələbələrin iştirak sayının artırılmasına xidmət edən ictimai qeyri-kommersiya təşkilatıdır.
     "Microsoft", "Apple", "Amazon", "Boys and Girls Clubs of America" və "the College Board" &mdash; kimi <a href='http://code.org/about/partners'> təşkilatlar</a>bir araya gəldilər və Kod Saatına təstək vermək üçün misilsiz bir birlik yaratdılar.
   hoc_faq_host_q: Mən kodlaşdırma haqqında heç nə bilmirəm. Mən də tədbir təşkil edə bilərəmmi?
-  hoc_faq_host_a: "Əlbəttə. Kod Saatı tədbirlərini müstəqil planlaşdıra bilərsiniz. Sizə lazım olan <a href='http://code.org/learn'>bizim çalışmaları </a>nəzərdən keçirmək, istədiyiniz birini seçmək, və saatı seçməkdir &mdash; qalan hər şeyi biz təmin edirik. Bizdə hər yaş səviyyəsi və təcrübə dərəcəsi üçün imkan var, uşaq bağçasından başlayaraq hər kəs məşğul ola bilər.  <a href='target-resources-how-to'>İştirakçı bələdçisi</a> ilə tanış olun və öz tədbirinizi planlaşdırmağa başlayın."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Hər bir iştirakçı üçün kompüter lazımdırmı?
   hoc_faq_need_computers_a: "Xeyir. Bizdə kompüterdə, smartfonda, planşetdə işləyən çalışmalar var, bəzi çalışmalar üçün isə heç kompüterə gərək də yoxdur! Siz olduğunuz yerdə, istənilən şərtlə tədbirə qoşula bilərsiniz. <p><i>Bəzi imkanları təqdim edirik:</i> <br> <ul> <li><b>Cüt-cüt işləyin.</b> Tədqiqatlar göstərir ki, şagirdlər <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>yoldaşlı işləyəndə </a>, kompüteri bölüşəndə, birlikdə çalışanda daha yaxşı nəticə əldə edirlər. Şagirdlərinizi birlikdə işləməyə həvəsləndirin. <li><b>Proyektordan istifadə edin.</b> Əgər sizə proyektor və lövhə, internetə qoşulmuş kompüter varsa, bütün sinif Kod Saatında birlikdə çalışa bilər. Videolara birlikdə baxın, pazzılları birlikdə qurun, suallara birlikdə cavab axtarın. <li><b>Avadanlıqsız da işləmək olar.</b> Bizim elə çalışmalar təqdim edirik ki, onların heç kompüterə ehtiyacı yoxdur. </ul>"
   hoc_faq_international_q: '<country> indi olduğum ölkədir. Buradan necə iştirak edim?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Mən Kod Saatı üçün çalışmanı necə hazırlaya bilərəm?
   hoc_faq_tutorial_a: "Əgər siz çalışmaların hazırlanması üçün bizimlə əməkdaşlıq etməkdə maraqlısınızsa, <a href='target-tutorial-guidelines'>  ünvanında yerləşən bələdçi və təlimatlarla tanış olun</a>. Biz müxtəlif çür çalışmaları toplamaq istəyirik, amma əsas məqsədimiz bu təcrübəni informatika sahəsində yeni olan müəllim və şagirdlər üçün ən uyğun hala gətirməkdir."
   hoc_faq_more_questions_q: Hələ də suallarınız var?

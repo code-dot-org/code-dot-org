@@ -102,9 +102,6 @@ var stepSpeed;
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
 
-Studio.BLOCK_X_COORDINATE = 20;
-Studio.BLOCK_Y_COORDINATE = 20;
-
 var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 
 var AUTO_HANDLER_MAP = {
@@ -113,12 +110,12 @@ var AUTO_HANDLER_MAP = {
   whenUp: 'when-up',
   whenLeft: 'when-left',
   whenRight: 'when-right',
-  whenTouchItem: 'whenSpriteCollided-' +
-                  (Studio.protagonistSpriteIndex || 0) +
-                  '-any_item',
-  whenTouchWall: 'whenSpriteCollided-' +
-                  (Studio.protagonistSpriteIndex || 0) +
-                  '-wall',
+  whenTouchCharacter: 'whenSpriteCollided-' +
+      (Studio.protagonistSpriteIndex || 0) +
+      '-any_item',
+  whenTouchObstacle: 'whenSpriteCollided-' +
+      (Studio.protagonistSpriteIndex || 0) +
+      '-wall',
 };
 
 // Default Scalings
@@ -166,7 +163,8 @@ var twitterOptions = {
 function loadLevel() {
   // Load maps.
   Studio.map = level.map;
-  Studio.walls = null;
+  Studio.wallMap = null;  // The map name actually being used.
+  Studio.wallMapRequested = null; // The map name requested by the caller.
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.slowJsExecutionFactor = level.slowJsExecutionFactor || 1;
   Studio.ticksBeforeFaceSouth = Studio.slowJsExecutionFactor +
@@ -1241,8 +1239,8 @@ Studio.getWallValue = function (row, col) {
     return 0;
   }
 
-  if (Studio.walls) {
-    return skin[Studio.walls] ? (skin[Studio.walls][row][col] << constants.WallCoordsShift): 0;
+  if (Studio.wallMap) {
+    return skin[Studio.wallMap] ? (skin[Studio.wallMap][row][col] << constants.WallCoordsShift): 0;
   } else {
     return Studio.map[row][col] & constants.WallAnyMask;
   }
@@ -1416,50 +1414,6 @@ Studio.initReadonly = function(config) {
 };
 
 /**
- * Arrange the start blocks to spread them out in the workspace.
- * This uses unique logic for studio - spread event blocks vertically even
- * over the total height of the workspace.
- */
-var arrangeStartBlocks = function (config) {
-  var xml = parseXmlElement(config.level.startBlocks);
-  var numUnplacedElementNodes = 0;
-  // sort the blocks by visibility
-  var xmlChildNodes = studioApp.sortBlocksByVisibility(xml.childNodes);
-  // do a first pass to count the nodes
-  for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
-    xmlChild = xmlChildNodes[x];
-
-    // Only look at element nodes without a y coordinate:
-    if (xmlChild.nodeType === 1 && !xmlChild.getAttribute('y')) {
-      numUnplacedElementNodes++;
-    }
-  }
-  // do a second pass to place the nodes
-  if (numUnplacedElementNodes) {
-    var numberOfPlacedBlocks = 0;
-    var totalHeightAvail =
-        (config.level.minWorkspaceHeight || 800) - Studio.BLOCK_Y_COORDINATE;
-    var yCoordInterval = totalHeightAvail / numUnplacedElementNodes;
-    for (x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
-      xmlChild = xmlChildNodes[x];
-
-      // Only look at element nodes without a y coordinate:
-      if (xmlChild.nodeType === 1 && !xmlChild.getAttribute('y')) {
-        xmlChild.setAttribute(
-            'x',
-            xmlChild.getAttribute('x') || Studio.BLOCK_X_COORDINATE);
-        xmlChild.setAttribute(
-            'y',
-            Studio.BLOCK_Y_COORDINATE + yCoordInterval * numberOfPlacedBlocks);
-        numberOfPlacedBlocks += 1;
-      }
-    }
-    // replace the startBlocks since we changed the attributes in the xml dom:
-    config.level.startBlocks = Blockly.Xml.domToText(xml);
-  }
-};
-
-/**
  * Initialize Blockly and the Studio app.  Called on page load.
  */
 Studio.init = function(config) {
@@ -1527,24 +1481,7 @@ Studio.init = function(config) {
     }
   });
 
-  config.loadAudio = function() {
-    studioApp.loadAudio(skin.winSound, 'win');
-    studioApp.loadAudio(skin.startSound, 'start');
-    studioApp.loadAudio(skin.failureSound, 'failure');
-    studioApp.loadAudio(skin.rubberSound, 'rubber');
-    studioApp.loadAudio(skin.crunchSound, 'crunch');
-    studioApp.loadAudio(skin.flagSound, 'flag');
-    studioApp.loadAudio(skin.winPointSound, 'winpoint');
-    studioApp.loadAudio(skin.winPoint2Sound, 'winpoint2');
-    studioApp.loadAudio(skin.losePointSound, 'losepoint');
-    studioApp.loadAudio(skin.losePoint2Sound, 'losepoint2');
-    studioApp.loadAudio(skin.goal1Sound, 'goal1');
-    studioApp.loadAudio(skin.goal2Sound, 'goal2');
-    studioApp.loadAudio(skin.woodSound, 'wood');
-    studioApp.loadAudio(skin.retroSound, 'retro');
-    studioApp.loadAudio(skin.slapSound, 'slap');
-    studioApp.loadAudio(skin.hitSound, 'hit');
-  };
+  config.loadAudio = skin.loadAudio;
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1583,10 +1520,6 @@ Studio.init = function(config) {
     studioApp.resetButtonClick();
     annotationList.clearRuntimeAnnotations();
   };
-
-  if (studioApp.isUsingBlockly() && config.level.edit_blocks != 'toolbox_blocks') {
-    arrangeStartBlocks(config);
-  }
 
   config.twitter = twitterOptions;
 
@@ -1641,12 +1574,9 @@ var preloadImage = function(url) {
 };
 
 var preloadBackgroundImages = function() {
-  // TODO (cpirich): preload for non-blockly
-  if (studioApp.isUsingBlockly()) {
-    var imageChoices = skin.backgroundChoicesK1;
-    for (var i = 0; i < imageChoices.length; i++) {
-      preloadImage(imageChoices[i][0]);
-    }
+  var imageChoices = skin.backgroundChoicesK1;
+  for (var i = 0; i < imageChoices.length; i++) {
+    preloadImage(imageChoices[i][0]);
   }
 };
 
@@ -1719,8 +1649,8 @@ function getDefaultBackgroundName() {
           (level.background || skin.defaultBackground);
 }
 
-function getDefaultWallsName() {
-  return level.walls || skin.defaultWalls;
+function getDefaultMapName() {
+  return level.wallMap || skin.defaultWallMap;
 }
 
 /**
@@ -1767,7 +1697,8 @@ Studio.reset = function(first) {
 
   // Reset configurable variables
   Studio.background = null;
-  Studio.walls = null;
+  Studio.wallMap = null;
+  Studio.wallMapRequested = null;
   Studio.setBackground({value: getDefaultBackgroundName()});
 
   // Reset currentCmdQueue and various counts:
@@ -1830,9 +1761,9 @@ Studio.reset = function(first) {
   // Create Items that are specified on the map:
   Studio.createLevelItems(svg);
 
-  // Now that sprites are in place, we can set up walls, which might move
+  // Now that sprites are in place, we can set up a map, which might move
   // sprites around.
-  Studio.setWalls({value: getDefaultWallsName()});
+  Studio.setMap({value: getDefaultMapName()});
 
   // Setting up walls might have moved the sprites, so draw them once more.
   for (i = 0; i < Studio.spriteCount; i++) {
@@ -2966,9 +2897,9 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setBackground(cmd.opts);
       break;
-    case 'setWalls':
+    case 'setMap':
       studioApp.highlight(cmd.id);
-      Studio.setWalls(cmd.opts);
+      Studio.setMap(cmd.opts);
       break;
     case 'setSprite':
       studioApp.highlight(cmd.id);
@@ -2986,6 +2917,10 @@ Studio.callCmd = function (cmd) {
     case 'setSpriteSpeed':
       studioApp.highlight(cmd.id);
       Studio.setSpriteSpeed(cmd.opts);
+      break;
+    case 'setBotSpeed':
+      studioApp.highlight(cmd.id);
+      Studio.setBotSpeed(cmd.opts);
       break;
     case 'setSpriteSize':
       studioApp.highlight(cmd.id);
@@ -3013,28 +2948,28 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.moveSingle(cmd.opts);
       break;
-    case 'moveEast':
+    case 'moveRight':
       studioApp.highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
           dir: Direction.EAST,
       });
       break;
-    case 'moveWest':
+    case 'moveLeft':
       studioApp.highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
           dir: Direction.WEST,
       });
       break;
-    case 'moveNorth':
+    case 'moveUp':
       studioApp.highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
           dir: Direction.NORTH,
       });
       break;
-    case 'moveSouth':
+    case 'moveDown':
       studioApp.highlight(cmd.id);
       Studio.moveSingle({
           spriteIndex: Studio.protagonistSpriteIndex || 0,
@@ -3080,9 +3015,9 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.vanishActor(cmd.opts);
       break;
-    case 'addItemsToScene':
+    case 'addItem':
       studioApp.highlight(cmd.id);
-      Studio.addItemsToScene(cmd.opts);
+      Studio.addItem(cmd.opts);
       break;
     case 'setItemActivity':
       studioApp.highlight(cmd.id);
@@ -3104,7 +3039,12 @@ Studio.callCmd = function (cmd) {
   return true;
 };
 
-Studio.addItemsToScene = function (opts) {
+Studio.addItem = function (opts) {
+  if (opts.className === constants.RANDOM_VALUE) {
+    opts.className =
+        skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
+  }
+
   var directions = [
     Direction.NORTH,
     Direction.EAST,
@@ -3141,50 +3081,48 @@ Studio.addItemsToScene = function (opts) {
     return pos;
   };
 
-  for (var i = 0; i < opts.number; i++) {
-    var direction = level.itemGridAlignedMovement ? Direction.NONE :
-                      directions[Math.floor(Math.random() * directions.length)];
-    var pos = generateRandomItemPosition();
-    var itemOptions = {
-      frames: getFrameCount(opts.className, skin.specialItemFrames, skin.itemFrames),
-      className: opts.className,
-      dir: direction,
-      image: skin[opts.className],
-      loop: true,
-      x: pos.x,
-      y: pos.y,
-      speed: Studio.itemSpeed[opts.className],
-      activity: utils.valueOr(Studio.itemActivity[opts.className], "patrol"),
-      width: 100,
-      height: 100,
-      renderScale: skin.specialItemScale[opts.className] || 1
-    };
+  var direction = level.itemGridAlignedMovement ? Direction.NONE :
+                    directions[Math.floor(Math.random() * directions.length)];
+  var pos = generateRandomItemPosition();
+  var itemOptions = {
+    frames: getFrameCount(opts.className, skin.specialItemFrames, skin.itemFrames),
+    className: opts.className,
+    dir: direction,
+    image: skin[opts.className],
+    loop: true,
+    x: pos.x,
+    y: pos.y,
+    speed: Studio.itemSpeed[opts.className],
+    activity: utils.valueOr(Studio.itemActivity[opts.className], "roam"),
+    width: 100,
+    height: 100,
+    renderScale: skin.specialItemScale[opts.className] || 1
+  };
 
-    var item = new Item(itemOptions);
+  var item = new Item(itemOptions);
 
-    if (level.blockMovingIntoWalls) {
-      // TODO (cpirich): just move within the map looking for open spaces instead
-      // of randomly retrying random numbers
+  if (level.blockMovingIntoWalls) {
+    // TODO (cpirich): just move within the map looking for open spaces instead
+    // of randomly retrying random numbers
 
-      var numTries = 0;
-      var minDistanceFromSprite = 100;
-      while (Studio.willCollidableTouchWall(item, item.x, item.y) ||
-             Studio.getDistance(Studio.sprite[0].x + Studio.sprite[0].width/2,
-                                Studio.sprite[0].y + Studio.sprite[0].height/2,
-                                item.x, item.y) < minDistanceFromSprite) {
-        var newPos = generateRandomItemPosition();
-        item.x = newPos.x;
-        item.y = newPos.y;
-        numTries++;
-        if (numTries > 100) {
-          break;
-        }
+    var numTries = 0;
+    var minDistanceFromSprite = 100;
+    while (Studio.willCollidableTouchWall(item, item.x, item.y) ||
+           Studio.getDistance(Studio.sprite[0].x + Studio.sprite[0].width/2,
+                              Studio.sprite[0].y + Studio.sprite[0].height/2,
+                              item.x, item.y) < minDistanceFromSprite) {
+      var newPos = generateRandomItemPosition();
+      item.x = newPos.x;
+      item.y = newPos.y;
+      numTries++;
+      if (numTries > 100) {
+        break;
       }
     }
-
-    item.createElement(document.getElementById('spriteLayer'));
-    Studio.items.push(item);
   }
+
+  item.createElement(document.getElementById('spriteLayer'));
+  Studio.items.push(item);
 };
 
 
@@ -3194,7 +3132,12 @@ Studio.getDistance = function(x1, y1, x2, y2) {
 
 
 Studio.setItemActivity = function (opts) {
-  if (opts.type === "patrol" || opts.type === "chase" ||
+  if (opts.className === constants.RANDOM_VALUE) {
+    opts.className =
+        skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
+  }
+
+  if (opts.type === "roam" || opts.type === "chase" ||
       opts.type === "flee" || opts.type === "none") {
     // retain this activity type for items of this class created in the future:
     Studio.itemActivity[opts.className] = opts.type;
@@ -3207,6 +3150,11 @@ Studio.setItemActivity = function (opts) {
 };
 
 Studio.setItemSpeed = function (opts) {
+  if (opts.className === constants.RANDOM_VALUE) {
+    opts.className =
+        skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
+  }
+
   // retain this speed value for items of this class created in the future:
   Studio.itemSpeed[opts.className] = opts.speed;
   Studio.items.forEach(function (item) {
@@ -3299,8 +3247,27 @@ Studio.setSpriteEmotion = function (opts) {
 };
 
 Studio.setSpriteSpeed = function (opts) {
-  var speed = Math.min(Math.max(opts.value, 2), 12);
+  var speed = Math.min(Math.max(opts.value, constants.SpriteSpeed.SLOW),
+      constants.SpriteSpeed.VERY_FAST);
   Studio.sprite[opts.spriteIndex].speed = speed;
+};
+
+var BOT_SPEEDS = {
+  slow: constants.SpriteSpeed.SLOW,
+  normal: constants.SpriteSpeed.NORMAL,
+  fast: constants.SpriteSpeed.VERY_FAST
+};
+
+Studio.setBotSpeed = function (opts) {
+  if (opts.value === constants.RANDOM_VALUE) {
+    opts.value = utils.randomKey(BOT_SPEEDS);
+  }
+
+  var speedVal = BOT_SPEEDS[opts.value];
+  if (speedVal) {
+    opts.value = speedVal;
+    Studio.setSpriteSpeed(opts);
+  }
 };
 
 Studio.setSpriteSize = function (opts) {
@@ -3328,6 +3295,17 @@ Studio.setScoreText = function (opts) {
 };
 
 Studio.setBackground = function (opts) {
+  if (opts.value === constants.RANDOM_VALUE) {
+    // NOTE: never select the last item from backgroundChoicesK1, since it is
+    // presumed to be the "random" item for blockly
+    // NOTE: the [1] index in the array contains the name parameter with an
+    // additional set of quotes
+    var quotedBackground = skin.backgroundChoicesK1[
+        Math.floor(Math.random() * (skin.backgroundChoicesK1.length - 1))][1];
+    // Remove the outer quotes:
+    opts.value = quotedBackground.replace(/^"(.*)"$/, '$1');
+  }
+
   if (opts.value !== Studio.background) {
     Studio.background = opts.value;
 
@@ -3340,28 +3318,57 @@ Studio.setBackground = function (opts) {
       $(".tile_clip").remove();
       $(".tile").remove();
       Studio.tiles = [];
-      Studio.drawMapTiles();
 
-      sortDrawOrder();
+      // Changing background can cause a change in the map used internally,
+      // since we might use a different map to suit this background, so set
+      // the map again.
+      Studio.setMap({value: Studio.wallMapRequested}, true);
     }
   }
 };
 
-Studio.setWalls = function (opts) {
+/**
+ * Set the wall map.
+ * @param {string} opts.value - The name of the wall map.
+ * @param {boolean} forceLoad - Force loading the map, even if it's already set.
+ */
+Studio.setMap = function (opts, forceLoad) {
+  if (opts.value === constants.RANDOM_VALUE) {
+    // NOTE: never select the first item from mapChoices, since it is
+    // presumed to be the "random" item for blockly
+    // NOTE: the [1] index in the array contains the name parameter with an
+    // additional set of quotes
+    var quotedMap = skin.mapChoices[
+        Math.floor(1 + Math.random() * (skin.mapChoices.length - 1))][1];
+    // Remove the outer quotes:
+    opts.value = quotedMap.replace(/^"(.*)"$/, '$1');
+  }
+
   if (!level.wallMapCollisions) {
     return;
   }
+ 
+  var useMap;
 
-  // Treat 'default' as resetting to the level's map (Studio.walls = null)
   if (opts.value === 'default') {
-    opts.value = null;
+    // Treat 'default' as resetting to the level's map (Studio.wallMap = null)
+    useMap = null;
+  } else if (skin.getMap) {
+    // Give the skin a chance to adjust the map name depending upon the
+    // background name.
+    useMap = skin.getMap(Studio.background, opts.value);
   }
 
-  if (opts.value === Studio.walls) {
+  if (!forceLoad && useMap === Studio.wallMap) {
     return;
   }
 
-  Studio.walls = opts.value;
+  // Use the actual map for collisions, rendering, etc.
+  Studio.wallMap = useMap;
+
+  // Remember the requested name so that we can reuse it next time the
+  // background is changed.
+  Studio.wallMapRequested = opts.value;
 
   // Draw the tiles (again) now that we know which background we're using.
   $(".tile_clip").remove();
@@ -3375,7 +3382,7 @@ Studio.setWalls = function (opts) {
 };
 
 /**
- * A call to setWalls might place a wall on top of the sprite.  In that case,
+ * A call to setMap might place a wall on top of the sprite.  In that case,
  * find a new nearby location for the sprite that doesn't have a wall.
  * Currently a work in progress with known issues.
  */
@@ -3438,6 +3445,11 @@ Studio.fixSpriteLocation = function () {
 Studio.setSprite = function (opts) {
   var spriteIndex = opts.spriteIndex;
   var sprite = Studio.sprite[spriteIndex];
+
+  if (opts.value === constants.RANDOM_VALUE) {
+    opts.value = skin.avatarList[Math.floor(Math.random() * skin.avatarList.length)];
+  }
+
   var spriteValue = opts.value;
 
   var spriteIcon = document.getElementById('sprite' + spriteIndex);

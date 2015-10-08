@@ -19,6 +19,9 @@
   -else
     -containerClass = "container_nonresponsive"
 
+  - if header['state-facts']
+    %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/state-facts.css'}
+
   %div{:class=>containerClass}
 
     -if header['theme'] == 'responsive'

@@ -1,7 +1,7 @@
 ne-NP:
   hello: Hello world
   select_language: Nepali
-  en: Computer Science
+  en: 'कम्पुटर विज्ञान '
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
@@ -27,6 +27,11 @@ ne-NP:
   hoc2014_everyone: Everyone
   hoc2014_support: 'Support it &#x25BE;'
   hoc2014_whatishoc: What is the Hour of Code?
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Reset
   cded_sign_up: Sign up
   cded_try_it: Try it
   twentyhours_trynow: Try now

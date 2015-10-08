@@ -1,0 +1,19 @@
+name 'U3- L12 -Design Mode SFLP'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+## Unit 3: Lesson 12 - Introducing Design Mode
+
+# Background
+
+In the last lesson we created a simple game where where your mouse touches an image it runs away to another part of the screen. You had to set that up entirely through code. Now you have Design Mode. Design Mode is an easy way to add design elements and style them using a simple interface.  In this lesson we will learn the basics of design mode and recreate the game from last lesson with the addition of multiple screens.
+
+
+# Lesson
+* Adding a button and code for the button using design mode
+* Adding an image and code related to the image using design mode
+* Creating multiple screens and switching between them
+* Recreate your game from last lesson with welcome screen
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

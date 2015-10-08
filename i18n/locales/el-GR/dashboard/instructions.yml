@@ -115,87 +115,31 @@ el:
       2-3 Bee Conditionals 8_instruction: Αυτό το πεδίο έχει κόκκινα και μοβ λουλούδια. Τα κόκκινα λουλούδια έχουν ένα γνωστό ποσό νέκταρ, αλλά τα μωβ λουλούδια δεν έχουν γνωστή ποσότητα νέκταρ. Συλλέξτε όλο το νέκταρ.
       2-3 Bee Conditionals 9_instruction: Συλλέξτε όλο το νέκταρ από κάθε λουλούδι.
       2-3 Bee Conditionals Assessment 1_instruction: 'Αξιολόγηση: Συλλέξτε όλο το νέκταρ. Προσέξτε να μην συλλέξετε νέκταρ από ένα μωβ λουλούδι, αν δεν έχει.'
-      2-3 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 10_instruction: |
-        These blocks are really bugging me. Fix
-        the error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 2_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 3_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 4_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 5_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.  You can
-        now use run and step.
-      2-3 Bee Debugging 6_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 7_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 8_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 9_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging Assessment 1_instruction: |
-        Assessment:  These blocks are
-        really bugging me. Fix the error(s) to collect all of the nectar and make
-        all of the honey.
-      2-3 Bee Functions 1_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 2 nectar" function to collect the nectar from each
-        flower.
-      2-3 Bee Functions 10_instruction: |
-        Purple flowers may have either 1 or 0 nectar.  Create
-        a function that collects nectar only from purple flowers that have nectar.
-      2-3 Bee Functions 2_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 5" function to get 5 nectars at a time. Make sure to
-        use a loop to get an ideal block count, too.
+      2-3 Bee Debugging 1_instruction: Αυτά τα τμήματα πραγματικά με ενοχλούν. Επιδιορθώσετε τα σφάλματα για να συλλέξετε όλα το νέκταρ που κάνει το μέλι.
+      2-3 Bee Debugging 10_instruction: Αυτά τα τμήματα πραγματικά με ενοχλούν. Επιδιορθώσετε τα σφάλματα για να συλλέξετε όλα το νέκταρ που κάνει το μέλι.
+      2-3 Bee Debugging 2_instruction: Αυτά τα τμήματα πραγματικά με ενοχλούν. Επιδιορθώσετε τα σφάλματα για να συλλέξετε όλα το νέκταρ που κάνει το μέλι.
+      2-3 Bee Debugging 3_instruction: Αυτά τα τμήματα πραγματικά με ενοχλούν. Επιδιορθώσετε τα σφάλματα για να συλλέξετε όλα το νέκταρ που κάνει το μέλι.
+      2-3 Bee Debugging 4_instruction: Αυτά τα τμήματα πραγματικά με ενοχλούν. Επιδιορθώσετε τα σφάλματα για να συλλέξετε όλα το νέκταρ που κάνει το μέλι.
+      2-3 Bee Debugging 5_instruction: Αυτά τα τμήματα πραγματικά με ενοχλούν. Επιδιορθώσετε τα σφάλματα για να συλλέξετε όλα το νέκταρ που κάνει το μέλι.
+      2-3 Bee Debugging 6_instruction: Αυτά τα τμήματα πραγματικά με ενοχλούν. Επιδιορθώσετε τα σφάλματα για να συλλέξετε όλα το νέκταρ που κάνει το μέλι.
+      2-3 Bee Debugging 7_instruction: Αυτά τα τμήματα πραγματικά με ενοχλούν. Επιδιορθώσετε τα σφάλματα για να συλλέξετε όλα το νέκταρ που κάνει το μέλι.
+      2-3 Bee Debugging 8_instruction: Αυτά τα τμήματα πραγματικά με ενοχλούν. Επιδιορθώσετε τα σφάλματα για να συλλέξετε όλα το νέκταρ που κάνει το μέλι.
+      2-3 Bee Debugging 9_instruction: Αυτά τα τμήματα πραγματικά με ενοχλούν. Επιδιορθώσετε τα σφάλματα για να συλλέξετε όλα το νέκταρ που κάνει το μέλι.
+      2-3 Bee Debugging Assessment 1_instruction: 'Αξιολόγηση: Αυτά τα τμήματα πραγματικά με ενοχλούν. Επιδιορθώσετε τα σφάλματα για να συλλέξετε όλα το νέκταρ που κάνει το μέλι.'
+      2-3 Bee Functions 1_instruction: 'Λειτουργίες είναι τμήματα κώδικα που εκτελεί μια εργασία. Χρησιμοποιήστε τη λειτουργία "Λήψη 2 νέκταρ" να συλλέγουν το νέκταρ από κάθε λουλούδι.'
+      2-3 Bee Functions 10_instruction: 'Πορφυρά λουλούδια μπορεί να έχει είτε 1 ή 0 νέκταρ.  Δημιουργήστε μια συνάρτηση που συλλέγει νέκταρ μόνο από τα πορφυρά λουλούδια που έχουν νέκταρ.'
+      2-3 Bee Functions 2_instruction: 'Λειτουργίες είναι τμήματα κώδικα που εκτελεί μια εργασία. Χρησιμοποιήστε τη συνάρτηση "Πάρτε 5", για να πάρει 5 νέκταρος κάθε φορά. Σιγουρευτείτε για να χρησιμοποιήσετε βρόγχο για να πάρετε μια ιδανική μπλοκ count, πάρα πολύ.'
       2-3 Bee Functions 3_instruction: Συλλέξτε όλο το νέκταρ από κάθε λουλούδι.
-      2-3 Bee Functions 4_instruction: |
-        The "move and get nectar" function turns
-        the bee, collects nectar, and then returns the bee to where it started. Use
-        the function to collect all of the nectar.
-      2-3 Bee Functions 5_instruction: |
-        There is now more nectar at the flowers.
-        Edit the given function so that it collects 4 nectars and use it to collect
-        all of the nectar from the flowers.
-      2-3 Bee Functions 6_instruction: |
-        Now use the same function to collect nectar
-        from the three flowers.
-      2-3 Bee Functions 7_instruction: |
-        The flowers are now further away. Edit the
-        given function and use it to collect all of the nectar from the flowers.
-      2-3 Bee Functions 8_instruction: |
-        Create your own function that gets 7 nectar,
-        moves forward, and makes 7 honey. Use the function to collect nectar at each
-        flower and make honey at each honeycomb.
-      2-3 Bee Functions 9_instruction: |
-        Create your own function that goes down a
-        path, gets nectar, makes honey, and then returns the bee to the top of the
-        path.
-      2-3 Bee Functions Assessment 1_instruction: |
-        Assessment: Use the function given
-        to collect nectar from each flower.
-      2-3 Bee Functions Assessment 2_instruction: |
-        Assessment: Create a function
-        to make 3 honey at a time.
-      2-3 Bee Loops 1_instruction: |
-        Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers. 
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
+      2-3 Bee Functions 4_instruction: 'Η Συνάρτηση "να κυκλοφορούν και να πάρει το νέκταρ" γυρνά τη μέλισσα συλλέγει νέκταρ και στη συνέχεια επιστρέφει η μέλισσα όπου ξεκίνησαν. Χρησιμοποιήστε τη συνάρτηση για να συγκεντρώσει όλα από το νέκταρ.'
+      2-3 Bee Functions 5_instruction: Υπάρχει τώρα περισσότερο νέκταρ στα λουλούδια. Επεξεργαστείτε τη συγκεκριμένη λειτουργία, ώστε να συλλέγει 4 νέκταρ και να το χρησιμοποιήσετε για να εισπράξει όλα το νέκταρ από τα λουλούδια.
+      2-3 Bee Functions 6_instruction: Τώρα, χρησιμοποιήστε την ίδια λειτουργία να συλλέγουν το νέκταρ από τα τρία λουλούδια.
+      2-3 Bee Functions 7_instruction: Τα λουλούδια είναι τώρα πιο μακριά. Επεξεργαστείτε τη συγκεκριμένη λειτουργία και χρησιμοποιήσετε το για να μαζέψετε όλο το νέκταρ από τα λουλούδια.
+      2-3 Bee Functions 8_instruction: Δημιουργήστε το δικό σας συνάρτηση που παίρνει 7 νέκταρ, κινείται προς τα εμπρός, και κάνει 7 μέλια. Χρησιμοποιήστε τη συνάρτηση για να συλλέξετε το νέκταρ στο κάθε λουλούδι και να κάνει το μέλι σε κάθε κηρήθρα.
+      2-3 Bee Functions 9_instruction: Δημιουργήστε το δικό σας συνάρτηση που κατεβαίνει μια διαδρομή παίρνει νέκταρ, κάνει το μέλι και στη συνέχεια επιστρέφει η μέλισσα στην κορυφή της διαδρομής.
+      2-3 Bee Functions Assessment 1_instruction: 'Αξιολόγηση: Χρησιμοποιήστε τη συνάρτηση που δίνεται να συλλέγει νέκταρ από κάθε λουλούδι.'
+      2-3 Bee Functions Assessment 2_instruction: 'Αξιολόγηση: Δημιουργήσετε μια συνάρτηση να κάνει 3 μέλια κάθε φορά.'
+      2-3 Bee Loops 1_instruction: 'Κάθε λουλούδι περιέχει μια μονάδα νέκταρ. Συλλέγει νέκταρ από κάθε ένα από τα λουλούδια. '
+      2-3 Bee Loops 10_instruction: 'Μπορείτε να χρησιμοποιήσετε "μια στιγμή" βρόχο στο εσωτερικό άλλων δύο βρόχων για τη συλλογή όλων των νέκταρ;'
       2-3 Bee Loops 11_instruction: |
         Use while loops to collect all of the nectar
         from the flowers in this field.
@@ -541,6 +485,10 @@ el:
       4-5 Artist Patterns Free Play_instruction: |
         Free play - try your hand at making
         a pattern of your own!
+      4-5 Bee Conditionals - FC Test_instruction: |
+        The bee only wants nectar right
+        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
+        it is hiding a flower. If it is, then you can gather nectar.
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
@@ -555,7 +503,7 @@ el:
         at flowers.
       4-5 Bee Conditionals 2_instruction: |
         The bee only wants nectar right now. Not
-        all objects are flowers, so check to see if the object under the cloud is
+        all objects are flowers, so check underneath EVERY CLOUD to see if it is hiding
         a flower. If it is, then you can gather nectar.
       4-5 Bee Conditionals 3_instruction: |
         Now the bee just wants to make honey.
@@ -778,6 +726,9 @@ el:
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AllTheThings Applab - Turtle move with button_instruction: |
+        Add a button that
+        moves the turtle when clicked.  (Click to see full instructions)
       App Lab test_instruction: δοκιμή
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -1641,13 +1592,17 @@ el:
         If the "direction" parameter equals 0 I should turn left, if it's 1 I should
         turn right.
       Course 4 Bee Params 3_instruction: |
-        Now there are flowers on both sides! I've
-        added a parameter called "direction" to the function. Use the "left" and
-        "right" variables to control direction. Fill in the rest of the function
-        definition and then click "Save and Close."
+        Now there are flowers on both sides! We've
+        added variables called "left" and "right" for you to use, and added a
+        parameter called "direction" to "get 3 nectar". Edit "get 3 nectar"
+        so that the bee turns the correct direction when the variables "left" or
+        "right" are passed into the function.  
       Course 4 Bee Params 4 (copy 1)_instruction: |
         Try using your new function to
         collect all of the flowers. Remember, 0 = left and 1 = right.
+      Course 4 Bee Params 4 - Two WhenRun_instruction: |
+        Try using your new function
+        to collect all of the flowers. Remember to use the left and right variables.
       Course 4 Bee Params 4 backup_instruction: |
         Wouldn't it be nice if we could
         collect all of these nectars with the a single function? Try adding a new
@@ -1655,7 +1610,7 @@ el:
         to collect. You'll probably want to rename the function too!
       Course 4 Bee Params 4_instruction: |
         Try using your new function to collect
-        all of the flowers. Remember to use the left and right variables.
+        nectar from all of the flowers. Remember to use the left and right variables.
       Course 4 Bee Params 5_instruction: 'Ας ξεκινήσουμε από το μηδέν - μπορείς να δημιουργήσεις μια νέα λειτουργία που ονομάζεται "Πάρτε 5 νέκταρ" με μια παράμετρο κατεύθυνσης;'
       Course 4 Bee Params 6 (copy 1)_instruction: |
         Try using your new function to
@@ -1688,9 +1643,9 @@ el:
         too! How could you update your function to either get nectar or make honey.
       Course 4 Bee Params 8_instruction: |
         Challenge: Now there's honey to deal with
-        too! Rewrite your function to take in both the number of honey units and the
-        number of nectar units.  How would you use those numbers to decide what you
-        should do?
+        too! Rewrite your function to use both the number of honey units and the number
+        of nectar units.  How would you use those numbers to decide what you should
+        do?
       Course 4 Bee Params Ex_instruction: |
         Try using your new function to collect
         all of this nectar.
@@ -1748,8 +1703,8 @@ el:
       Course 4 Play Lab Params 3_instruction: |
         We have added another parameter to
         the jump function so that we can use it with other actors. Each actor is represented
-        by a number, starting from one. Edit the "jump" function so that the definition
-        includes the "actor" parameter. 
+        by a number, starting from one. Edit the "jump" function so that it uses
+        the "actor" parameter to make the correct character jump. 
       Course 4 Play Lab Params 4_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.
@@ -2123,90 +2078,6 @@ el:
       frozen square loop 3x_instruction: Ας δημιουργήσουμε τρία τετράγωνα, στρίβωντας μετά από κάθε τετράγωνο. Να είσαι βέβαιος να γυρίσεις από 120 μοίρες πριν από κάθε νέο τετράγωνο.
       frozen square loop_instruction: 'Γεια σου, είμαι η Άννα της Arendelle! Ας κάνουμε ένα τετράγωνο με το μπλοκ «Επανάληψη», το οποίο χρησιμοποιεί λιγότερα μπλοκ. Πόσες φορές (?) θα πρέπει το μπλοκ "Επανάληψη" να βάλει τα μπλοκ κάνει ένα τετράγωνο;'
       frozen square snowflake_instruction: 'Μπορείς να δημιουργήσεις μια νιφάδα χιονιού χρησιμοποιώντας το μπλοκ «Επανάληψη», για να κάνεις ένα τετράγωνο 10 φορές, και το μπλοκ "Στροφή" για να περιστρέψεις 36 μοίρες το κάθε τετράγωνο;'
-      hoc2015_event_add_items_instruction: |
-        "It looks like there are other characters
-        arriving."<br/><br/>Use the addItemsToScene command to add new characters
-        to the game.
-      hoc2015_event_choose_character_instruction: |
-        "I will now choose who to direct,
-        and where they do it."<br/><br/>Customize your game by choosing the bot and
-        the background.
-      hoc2015_event_four_items_instruction: |
-        "Steer the bot to reach the four goals."<br/><br/>Make
-        the bot walk in all directions so that he can reach the four goals.
-      hoc2015_event_free_instruction: Now you can make and share anything you like.
-      hoc2015_event_free_blockly_instruction: |
-        Now you can make and share anything
-        you like.
-      hoc2015_event_item_behavior_instruction: |
-        "Now these new characters are starting
-        to do more."<br/><br/>Add some characters, and set their behavior and speed.
-      hoc2015_event_points_instruction: |
-        "Somebody should be rewarded for reaching
-        those characters."<br/><br/>Let’s add points. Give yourself some points when
-        you touch an item. Can you score 10 points?
-      hoc2015_event_random_items_instruction: |
-        "Surprising things can happen in
-        this world."<br/><br/>We can change character behavior at any time. Change
-        the characters to a new random movement every time you touch one.
-      hoc2015_event_touch_items_instruction: |
-        "Now it's time to catch some characters."<br/><br/>Use
-        setItemActivity to make the items move around, and whenTouchItem to do something
-        when you touch them. Then, capture them!
-      hoc2015_event_two_items_instruction: |
-        "Steer the bot to reach the two goals."<br/><br/>Drag
-        the move commands into the correct events.  Then, steer the bot to reach the
-        goals.
-      hoc2015_event_two_items_blockly_instruction: |
-        Drag the move commands into the
-        whenUp and whenDown functions.  Then, click the arrows to move the character
-        to get the items.
-      hoc2015_free_instruction: |
-        "We've made it.  Now it's time to have some fun."<br/><br/>Use
-        all of the blocks to make your own game.
-      hoc2015_intro_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
-      hoc2015_maze_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
-      hoc2015_move_cross_instruction: |
-        Type or drag the blocks to get both items
-        to the destination.
-      hoc2015_move_down_instruction: |
-        Hiro is "actor 1".  Use the Move block to
-        move Hiro right to touch Baymax.
-      hoc2015_move_item_destination_instruction: |
-        I see another item behind that
-        obstacle. Can you bring it back to the destination?
-      hoc2015_move_item_destination_2_instruction: |
-        Drag the code blocks into the
-        workspace to help the character reach the destination.
-      hoc2015_move_item_destination_3_instruction: |
-        Try typing the commands to get
-        the item to our destination. Don’t forget to end with ();
-      hoc2015_move_right_instruction: |
-        Help me program the character to get the item
-        and bring it to the destination. Stack a couple moveEast(); commands and then
-        hit Run to make him go.
-      hoc2015_move_right_blockly_instruction: |
-        Help me program the character to get
-        the item and bring it to the destination. Stack a couple of "move right"
-        blocks and then hit Run to make him go.
-      hoc2015_move_twice_instruction: We need the items. Help me get them all!
-      hoc2015_move_two_items_instruction: We need the items. Help me get them all!
-      hoc2015_move_two_items_blockly_instruction: |
-        We need the items. Help me get
-        them all!
-      hoc2015_random_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
-      hoc2015_sandbox_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
-      hoc2015_square_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
       Infinity_catch_instruction: 'Μπορείς να κάνεις την Έλσα ("ηθοποιός 2)  να φτάσει την Άννα χρησιμοποιώντας τα βελάκια;'
       Infinity_finale_instruction: Δημιουργήστε κάτι που σας αρέσει και μοιραστείτε το!
       Infinity_move_collide_instruction: |
@@ -2985,6 +2856,10 @@ el:
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      Ryan - 4-5 Bee Conditionals 2_instruction: |
+        The bee only wants nectar right
+        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
+        it is hiding a flower. If it is, then you can gather nectar.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
         This butterfly is named Sam, and
@@ -3156,13 +3031,45 @@ el:
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
         to be dropped.
+      U3 - Design Mode - Multi Screens 2_instruction: |
+        Make a 2 screen app which
+        can switch back and forth between a black screen and a white screen using
+        buttons.
+      U3 - Design Mode - Multi Screens_instruction: |
+        Make a 2 screen app with black
+        screen and a white screen.
+      U3 - Design Mode - Other Events_instruction: |
+        Delete the button and make the
+        image move to a random location when you click on it. (click to see detailed
+        instructions)
+      U3 - Design Mode -Recreate Beyond Buttons_instruction: |
+        Recreate the game from
+        the last lesson with an extra welcome screen for the user to start on. (Click
+        for detailed instructions)
+      U3 - Design Mode 1_instruction: |
+        Add a button to your screen using design mode.
+        Change the style to look like the picture (click for instructions).
+      U3-Design Mode-ID and Event Handler_instruction: |
+        Using the Design Mode Events
+        tab add in code that when the button is clicked causes something to print
+        in the console. (Click to see detail instructions).
+      U3-Design Mode-ID_instruction: |
+        Using the Design Mode Events change the button
+        ID and update the code to match. (Click to see detail instructions).
+      U3-Design Mode-Image_instruction: |
+        Add an image to your app which moves to
+        a random position whenever the button is clicked. (Click to see detailed instructions).
+      U313 drag Two Buttons_instruction: |
+        Run a program with two buttons that have
+        the same id to see the warning message in the console. Change the ids to make
+        the program run without getting a warning message.
+      U313 eventsDetails_instruction: |
+        Run a program with two buttons that have the
+        same id to see the warning message in the console. Change the ids to make
+        the program run without getting a warning message.
       U313 Two Buttons with Ids_instruction: |
-        Now you try it! We've given you some
-        starting code with two buttons and two event handlers on the screen, but we've
-        just left the default Ids of "id".  You need to change the ids to connect
-        the right event handler to the right button. (Interestingly, the incorrect
-        program does work, but exhibits some bizarre behavior.  We'll discuss this
-        more in the next lesson.  Make the buttons work correctly for now).
+        Predict what will happen. Once you've
+        made a prediction, run the code to see what happens. (Click to see full instructions)
       U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto see full instructions)"
       U3L03 - draw step_instruction: |
         Write the drawStep function. (Click to see
@@ -3195,7 +3102,7 @@ el:
         three steps and moves the turtle to prepare for the next side (Click to see
         full instructions)
       U3L04 - 3 by 3 with functions_instruction: |
-        Make the 3 by 3 square as efficiently
+        Make the 3x3 square as efficiently
         as you can. (Click to see full instructions)
       U3L04 - snowflake_instruction: |
         Create the design by breaking it down into
@@ -3369,28 +3276,38 @@ el:
         button.
       U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\r\n\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
       U3L13 - Debug Id Problem_instruction: |
-        This program has problem!  Can you figure
-        it out?  Run the program and see if you can figure out from the error messages
-        in the console what the issue is.  There is not much code, so you might be
-        able to figure it out just by reading carefully.  Make a change that will
-        make the program work as expected.
+        Improve the button by choosing a descriptive
+        and meaningful ID. (Click to see full instructions)
+      U3L13 - Debugging 1_instruction: |
+        Debug the program by verifying your IDs are
+        being referenced properly. (Click to see full instructions)
+      U3L13 - Debugging 2_instruction: |
+        Debug the program by properly ordering your
+        button commands and event handlers. (Click to see full instructions)
+      U3L13 - Debugging 3_instruction: |
+        Debug the program by fixing the logical error
+        within the program. (Click to see full instructions)
       U3L13 - Turtle Driver Project_instruction: |
-        Challenge: Create a “turtle driver”
-        with at least three buttons on the screen to move the turtle forward, and
-        turn the turtle right and left. You can copy/paste code from a previous level
-        if you like but it will help build your coding muscles if you create this
-        small program from scratch.  If you have time, try adding additional buttons!  You
-        can also have fun changing the parameters on the turtle functions, using colors,
-        etc.
+        Create a "turtle driver" that
+        includes buttons to move the turtle forward and turn it left and right. (Click
+        to see full instructions)
       U3L13 - Turtle move with button_instruction: |
-        Drag a button out onto the screen
-        and set its text to "Go forth!".  Add an event handler for the button, that
-        makes the turtle move forward.  Run the program to make sure it works. 
+        Add a button that moves the turtle
+        when clicked.  (Click to see full instructions)
+      U3L13 eventsDetails_instruction: |
+        Add an event handler to the button to move
+        the turtle forward. (Click to see full instructions)
       U3L14 - Unfortunate Events Free Play_instruction: |
         Follow the "Unfortunate
         Events" Worksheet and enter your code here to experiment.  We've pre-loaded
         the code you need to start.
       U3L16 - challenge say hi app_instruction: "In this challenge we give you starter\ncode that lays all the elements out on the screen.  Here’s what you need to\ndo:\r\nAdd event handler to textInput with the event type ‘input’ that shows\nthe “Say hi” button when that event occurs.\r\nAdd event handler to button\nso that on click, it writes a hello message to the screen and hides the textInput\nand button."
+      U3L16 - chaserApp_instruction: |
+        Create your own "Chaser App". (Click to see
+        full instructions)
+      U3L16 - chooseImages_instruction: |
+        Replace the image in your application with
+        one of your own. (Click to see full instructions)
       U3L16 - hideAndShow_instruction: |
         Introducing textInput, getText and write.  First
         run the starter code several times.  Try to change what's written to the
@@ -3418,6 +3335,15 @@ el:
         connecting an event handler to it.  We've started you out with code similar
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
+      U3L16 - introSetPosition_instruction: |
+        Move the buttons to the bottom of the
+        screen. (Click to see full instructions)
+      U3L16 - newEventTypes_instruction: |
+        Experiment with different event types and
+        select the one that you think is best. (Click to see full instructions)
+      U3L16 - projectTemplate_instruction: |
+        Create your own "Chaser App". (Click
+        to see full instructions)
       U3L16 - quick double click_instruction: |
         Mini-Project.  The Quick Double-Click
         game.  In this simple game an object (an image) moves around, or pops up randomly
@@ -3432,28 +3358,20 @@ el:
         to move the button itself to a random location when it's clicked.
       U3L16 - setPositionMoveButton_instruction: Use setPositon to moveButton
       U3L16 - setupMoveToRandom_instruction: |
-        We'll be building upon some simple
-        starting code throughout this lesson.  Your first task: use moveTo and randomNumber
-        to get the turtle to move to a random location with each button click.  We've
-        given you starting code for our common setup: a button that moves the turtle
-        when clicked.  You should modify this code.  
+        Modify the code so that the turtle
+        moves to a random screen location when the button is clicked. (Click to see
+        full instructions)
       U3L16 - text labels_instruction: |
-        Introducing textLabels.  First try replacing
-        your button with a textLabel.  Will the text respond to events just like the
-        button?  Try connecting an event handler to it.  We've started you out with
-        code similar to the result of the last level, you can copy your code from
-        that level into here if you prefer. 
+        Use the textLabel command to replace the
+        button in your program with a text label. (Click to see full instructions)
       U3L16 - textInput getText write_instruction: |
         Introducing textInput, getText
         and write.  First run the starter code several times.  Try to change what's
         written to the screen when the button is clicked. Then use getText to write
         to the screen what the user entered in the text box.
       U3L16 - use images_instruction: |
-        Introducing Images.  Try replacing the textLabel
-        with an image..  Will the image respond to events just like the button?  Try
-        connecting an event handler to it.  We've started you out with code similar
-        to the result of the last level, you can copy your code from that level into
-        here if you prefer.
+        Use the image command to replace the text
+        label in your program with an image. (Click to see full instructions)
       U3L19 - Clicker Game Freeplay Area_instruction: |
         Use this App Lab area to improve
         your clicker game.  You should start by copy/pasting the code from your old

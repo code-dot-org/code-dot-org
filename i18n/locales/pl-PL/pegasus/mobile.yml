@@ -27,6 +27,11 @@ pl-PL:
   hoc2014_everyone: Wszyscy
   hoc2014_support: 'Udziel wsparcia &#x25BE;'
   hoc2014_whatishoc: Czym jest Godzina Kodowania?
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Zresetuj
   cded_sign_up: Zarejestruj się
   cded_try_it: Wypróbuj
   twentyhours_trynow: Spróbuj teraz

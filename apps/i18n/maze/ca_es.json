@@ -31,6 +31,7 @@
   "ifTooltip": "Si hi ha un camí en la direcció especificada, fer algunes accions.",
   "ifelseTooltip": "Si hi ha un camí en la direcció específicada, fer el primer bloc d'accions. En cas contrari, fer el segon bloc d'accions.",
   "ifFlowerTooltip": "Si hi ha una flor/rusc en la direcció concreta, llavors fes algunes accions.",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions.",
   "ifelseFlowerTooltip": "Si hi ha una flor/rusc en la direcció concreta, llavors féu el primer bloc d'accions. En cas contrari, fer el segon bloc d'accions.",
   "insufficientHoney": "Utilitzeu tots els blocs correctament, però cal fer la quantitat exacte de mel.",
   "insufficientNectar": "Estàs utilitzant correctament tots els blocs, però necessites recollir la quantitat exacte de nèctar.",
