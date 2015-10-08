@@ -93,7 +93,7 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 ## 7) Comemore
 
   * [Imprima certificados](<%= resolve_url('https://code.org/certificates') %>) para seus alunos.
-  * Imprima adesivos com a mensagem ["Eu participei da Hora do Código!"](%= resolve_url('/resources/promote#stickers') %).
+  * Imprima adesivos com a mensagem ["Eu participei da Hora do Código!"](%= resolve_url('/promote/resources#stickers') %)
   * Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso, também!
 
 [col-33]

@@ -16,18 +16,18 @@ Fala aos teus amigos sobre o #HourOfCode.
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Send this email](%= resolve_url('/resources#email') %) to your principal.
+[Send this email](%= resolve_url('/promote/resources#email') %) to your principal.
 
 ## 3. Ask your employer to get involved
 
-[Send this email](%= resolve_url('/resources#email') %) to your manager, or the CEO.
+[Send this email](%= resolve_url('/promote/resources#email') %) to your manager, or the CEO.
 
 ## 4. Promove a Hora do Código junto da tua comunidade
 
-Mobiliza um grupo local — clube de rapazes/raparigas, igreja, universidade, grupo de veteranos ou sindicato. Ou organiza uma festa local sobre a Hora do Código para a tua vizinhança. [Send this email](%= resolve_url('/resources#email') %).
+Mobiliza um grupo local — clube de rapazes/raparigas, igreja, universidade, grupo de veteranos ou sindicato. Ou organiza uma festa local sobre a Hora do Código para a tua vizinhança. [Send this email](%= resolve_url('/promote/resources#email') %).
 
 ## Solicita ao seu Presidente da Freguesia para apoiar a Hora de Código
 
-[Send this email](%= resolve_url('/resources#politicians') %) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](%= resolve_url('/promote/resources#politicians') %) to your mayor, city council, or school board and invite them to visit your school.
 
 <%= view :signup_button %>

@@ -141,6 +141,17 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 };
 
 /**
+ * Return a random key name from an object.
+ *
+ * Slightly modified from: http://stackoverflow.com/a/15106541
+ */
+
+exports.randomKey = function (obj) {
+  var keys = Object.keys(obj);
+  return keys[keys.length * Math.random() << 0];
+};
+
+/**
  * Generate a random identifier in a format matching the RFC-4122 specification.
  *
  * Taken from

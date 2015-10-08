@@ -9,7 +9,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 1) Sign up
 
   * Sign up to host an [Hour of Code](%= resolve_url('/') %) during <%= campaign_date('short') %>.
-  * Promote your [Hour of Code](%= resolve_url('/resources') %) and encourage others to host.
+  * Promote your [Hour of Code](%= resolve_url('/promote') %) and encourage others to host.
 
 ## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Choose a tutorial:
@@ -91,7 +91,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 ## 7) Celebrate
 
   * [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/resources/promote#stickers') %) stickers for your students.
+  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
   * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]

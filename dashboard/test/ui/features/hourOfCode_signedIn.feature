@@ -10,6 +10,7 @@ Background:
 Scenario:
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   Then I wait to see a dialog titled "Puzzle 1 of 20"
+  And I debug cookies
   And I close the dialog
   Then I wait until element "#runButton" is visible
   And I drag block "1" to block "5"
@@ -26,6 +27,7 @@ Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as att
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I rotate to landscape
   Then I wait to see a dialog titled "Puzzle 1 of 20"
+  And I debug cookies
   And I close the dialog
   Then I wait until element "#runButton" is visible
   And I press "runButton"
