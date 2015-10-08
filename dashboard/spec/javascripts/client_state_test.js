@@ -76,5 +76,16 @@ describe("clientState#trackProgress", function() {
     state.levelProgress(1).should.equal(100);
     state.lines().should.equal(10);
   });
+
+  it("handles malformed cookies", function () {
+    var state = dashboard.clientState;
+
+    $.cookie('progress', '', 365);
+    state.levelProgress(1).should.equal(0);
+
+    $.cookie('progress', '{\'malformed_json\':true', 365);
+    state.levelProgress(1).should.equal(0);
+
+  });
 });
 

@@ -30,7 +30,7 @@ dashboard.clientState.EXPIRY_DAYS = 365;
  * @type {number}
  * @private
  */
-dashboard.clientState.MAX_LINES_TO_SAVE = 1000;
+var MAX_LINES_TO_SAVE = 1000;
 
 
 dashboard.clientState.reset = function() {
@@ -105,9 +105,7 @@ dashboard.clientState.lines = function() {
  * @param {number} addedLines
  */
 function addLines(addedLines) {
-
-  var newLines = Math.min(dashboard.clientState.lines() + Math.max(addedLines, 0),
-      dashboard.clientState.MAX_LINES_TO_SAVE);
+  var newLines = Math.min(dashboard.clientState.lines() + Math.max(addedLines, 0), MAX_LINES_TO_SAVE);
 
   $.cookie('lines', String(newLines),
     {expires: dashboard.clientState.EXPIRY_DAYS});
