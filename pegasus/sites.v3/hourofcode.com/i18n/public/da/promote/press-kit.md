@@ -24,10 +24,10 @@ nav: promote_nav
 **1. Planlæg din begivenhed**
 
   * Planlæg et fælles kick off arrangement for Hour of Code.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organisere gruppeaktiviteter (som for eksempel en demonstration af en "unplugged" programmeringsaktivitet), eller vis elevaktiviteterne.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote#videos') %>) to inspire.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Find lokale journalister der dækker uddannelse eller lokale begivenheder.**
 
@@ -37,7 +37,7 @@ Kig på Internettet for at finde journalisternes kontaktoplysninger. Hvis du ikk
 
 **3. Kontakt lokale medier**
 
-Den bedste måde at nå ud er via e-mail. Det skal være kort og fortælle: Hvorfor skal andre mennesker interessere sig for denne begivenhed? Husk også at sende dine kontaktoplysninger (herunder mobil nummer) for den person der vil være på stedet under arrangementet. **See a [sample pitch to media](<%= resolve_url('/promote#sample-emails') %>):**
+Den bedste måde at nå ud er via e-mail. Det skal være kort og fortælle: Hvorfor skal andre mennesker interessere sig for denne begivenhed? Husk også at sende dine kontaktoplysninger (herunder mobil nummer) for den person der vil være på stedet under arrangementet. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Forberedelse til forskellige spørgsmål om din skoles aktiviteter. Her er nogle eksempler:**
 

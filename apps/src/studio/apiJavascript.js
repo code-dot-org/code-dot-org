@@ -42,7 +42,7 @@ exports.setBot = function (value) {
 };
 
 exports.setBotSpeed = function (value) {
-  Studio.queueCmd(null, 'setSpriteSpeed', {
+  Studio.queueCmd(null, 'setBotSpeed', {
     'spriteIndex': 0,
     'value': value
   });

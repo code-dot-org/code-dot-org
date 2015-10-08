@@ -23,6 +23,8 @@
     display: inline-block; }
   #divApplab div, .draggingParent div {
     overflow: hidden; }
+  #divApplab div[contenteditable=true], .draggingParent div[contenteditable=true] {
+    overflow: auto; }
   #divApplab button, .draggingParent button {
     padding: 7px 12px;
     margin: 2px;

@@ -24,7 +24,7 @@ L'attribution des prix s'avère limitée aux classes d'élémentaires et seconda
 
 ## Ensemble d'ordinateurs portables pour une classe (ou 10 000$ pour d'autres technologies):
 
-Prix limité aux écoles publiques américaines. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Une école par états américains recevra un ensemble d'ordinateurs portables. Code.org will select and notify winners via email by December 1, 2015.
+Prix limité aux écoles publiques américaines. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Une école par états américains recevra un ensemble d'ordinateurs portables. Code.org sélectionnera et contactera les gagnants par courriel jusqu'au 1er décembre 2014.
 
 Aux fins de clarification, prenez note qu'il ne s'agit pas d'un jeu-concours ou d'un concours impliquant la chance pure.
 
