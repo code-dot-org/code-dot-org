@@ -428,8 +428,6 @@ And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
         element.send_keys :shift, 9
       elsif k == ')'
         element.send_keys :shift, 0
-      # elsif k == "\n"
-      #   element.send_keys :return
       else
         element.send_keys k
       end
