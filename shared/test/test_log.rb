@@ -6,11 +6,14 @@ ENV['RACK_ENV'] = 'test'
 
 class LogTest < Minitest::Test
   def setup
+    @old_level = CDO.log.level
     @old_log = CDO.log
+    CDO.log.level = Logger::Severity::INFO
   end
 
   def teardown
     CDO.log = @old_log
+    CDO.log.level = @old_level
   end
 
   def test_default_log
