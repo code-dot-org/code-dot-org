@@ -189,7 +189,7 @@ class AssetsTest < Minitest::Test
 
     copy_file_infos = JSON.parse(copy_all(src_channel_id, dest_channel_id))
     dest_file_infos = JSON.parse(list(@assets, dest_channel_id))
-
+    puts dest_file_infos
     assert_fileinfo_equal(expected_image_info, copy_file_infos[0])
     assert_fileinfo_equal(expected_sound_info, copy_file_infos[1])
     assert_fileinfo_equal(expected_image_info, dest_file_infos[0])
@@ -245,7 +245,7 @@ class AssetsTest < Minitest::Test
         put(@assets, channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
         assert @assets.last_response.client_error?, "Error when file is larger than max file size."
 
-        put(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
+        puts put(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
         assert @assets.last_response.successful?, "First small file upload is successful."
 
         put(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
@@ -300,7 +300,9 @@ class AssetsTest < Minitest::Test
 
   def create_channel(channels)
     channels.post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channels.last_response.location.split('/').last
+    channel_id = channels.last_response.location.split('/').last
+    puts "CHANNEL_ID #{channel_id}"
+    channel_id
   end
 
   def delete_channel(channels, channel_id)
