@@ -3,21 +3,58 @@
   = javascript_include_tag 'jquery.handsontable.full'
 %h1 Search for Teachers
 
-%h3
-  Address Filter
-  %input#filter
+%table
+  %tr
+    %td
+      Email Filter
+    %td
+      %input#emailFilter
+  %tr
+    %td
+      Address Filter
+    %td
+      %input#addressFilter
+
 %br/
+
+%center
+  %a#search
+    %button Search
+
+%br/
+
 #teacherTable
 
 :javascript
-  var baseFilter = '#{ params[:filter]}';
+  var basePage = '#{ search_for_teachers_path }';
+  var baseAddressFilter = '#{ params[:addressFilter]}';
+  var baseEmailFilter = '#{ params[:emailFilter]}';
   var data = eval(#{ data.try(:to_json)});
   $(function() {
-    var filter = $('#filter');
-    filter.change(function() {
-      updateUrl();
+    var addressFilter = $('#addressFilter');
+    var emailFilter = $('#emailFilter');
+    addressFilter.val(baseAddressFilter);
+    emailFilter.val(baseEmailFilter);
+    addressFilter.change(function() {
+      updateHref();
+    });
+    emailFilter.change(function() {
+      updateHref();
     });
   });
+  function updateHref() {
+    var href = basePage;
+    var addressFilter = $('#addressFilter');
+    if (addressFilter.val()) {
+      href = href + '/addressFilter/' + addressFilter.val();
+    }
+    var emailFilter = $('#emailFilter');
+    if (emailFilter.val()) {
+      href = href + '/emailFilter/' + emailFilter.val();
+    }
+    $('#search').attr('href', href);
+    $('#search').show();
+  }
   $("#teacherTable").handsontable({
     data: data,
     colHeaders: #{ headers.try(:to_json)},
