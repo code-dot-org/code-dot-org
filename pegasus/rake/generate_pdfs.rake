@@ -55,21 +55,20 @@ all_outfiles = [].tap do |all_outfiles|
   end
 
   # Generate pdf for each state using code.org/public/advocacy/state-facts/splat.haml
-  [].tap do |states|
-    DB[:cdo_state_promote].each do |state_row|
-      states << state_row[:state_code_s]
-    end
-
-    pdf_conversions_for_state_pages(states).each do |pdf_info|
-      fetchfile_for_pdf = "#{pdf_info.output_pdf_path}.fetch"
-
-      file fetchfile_for_pdf do
-        generate_pdf_file(base_url, pdf_info, fetchfile_for_pdf)
-      end
-
-      all_outfiles << fetchfile_for_pdf
-    end
+  states = []
+  DB[:cdo_state_promote].each do |state_row|
+    states << state_row[:state_code_s]
   end
+  pdf_conversions_for_state_pages(states).each do |pdf_info|
+    fetchfile_for_pdf = "#{pdf_info.output_pdf_path}.fetch"
+
+    file fetchfile_for_pdf => [sites_v3_dir('code.org/public/advocacy/state-facts/splat.haml'), pegasus_dir('/data/cdo-state-promote.csv')] do
+      generate_pdf_file(base_url, pdf_info, fetchfile_for_pdf)
+    end
+
+    all_outfiles << fetchfile_for_pdf
+  end
+
 end
 
 task :default => all_outfiles
