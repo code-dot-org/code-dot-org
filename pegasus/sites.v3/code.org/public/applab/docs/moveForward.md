@@ -5,10 +5,9 @@ embedded_layout: simple_embedded
 
 [name]
 
-## moveForward(pixels)
+## moveForward(*pixels*)
 
 [/name]
-
 
 [category]
 
@@ -24,6 +23,12 @@ Moves the turtle forward a given number of pixels in its current direction.
 
 [/short_description]
 
+There are three ways to move the turtle in a straight line:
+
+- specify the number of pixels to move the turtle in the direction it is facing (moveForward(pixels) or moveBackward(pixels)).
+- specify a number of pixels in the x and y direction to move the turtle, irregardless of direction that the turtle is facing (move(x,y)).
+- specify an x and y pixel location on the screen to move the turtle to, irregardless of direction that the turtle is facing (moveTo(x,y)).
+
 [/description]
 
 ### Examples
@@ -31,20 +36,9 @@ ____________________________________________________
 
 [example]
 
-
 ```
-moveForward(); //Moves forward 25 pixels (default)
-```
-
-[/example]
-
-____________________________________________________
-
-[example]
-
-
-```
-moveForward(200); //Moves the turtle north 200 pixels
+// Moves forward 25 pixels (default)
+moveForward(); 
 ```
 
 [/example]
@@ -53,18 +47,21 @@ ____________________________________________________
 
 [example]
 
+**Example: Draw a Popsicle** Specify how many pixels the turtle should move in the direction it is facing with a positive number parameter, or use a negative number parameter to move backwards. [Watch it run!](https://images.code.org/ae9e0d573ff39549f4f9e0dd35e3e38d-image-1444261315399.gif)
 
 ```
-/* Draw a 'L' */
-turnLeft(180); //Turtle starts facing North, so turn 180 degrees to face South
-moveForward(100); //Move the turtle 100 pixels in its current direction (South)
-turnLeft(90); //Turtle is facing South and rotates 90 degrees to its left. Turtle is now facing East.
-moveForward(50); //Moves the turtle 50 pixels in its current direction (East)
+// Specify how many pixels the turtle should move in the direction it is facing with a positive number parameter
+// or use a negative number parameter to move backwards.
+speed(20);
+penColor("yellow");
+penWidth(40);
+moveForward(100);
+penWidth(5);
+penColor("brown");
+moveForward(-200);
 ```
 
 [/example]
-
-____________________________________________________
 
 [syntax]
 
@@ -89,14 +86,14 @@ moveForward(pixels);
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+No return value. Moves turtle only.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- Use [penUp()](/applab/docs/penUp) before calling `moveForward()`  to stop the turtle from drawing a line behind it as it moves
+- Use [penUp()](/applab/docs/penUp) before calling moveForward() to stop the turtle from drawing a line behind it as it moves
 
 [/tips]
 

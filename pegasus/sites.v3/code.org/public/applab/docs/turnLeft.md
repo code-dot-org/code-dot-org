@@ -5,10 +5,9 @@ embedded_layout: simple_embedded
 
 [name]
 
-## turnLeft(angle)
+## turnLeft(*angle*)
 
 [/name]
-
 
 [category]
 
@@ -20,11 +19,15 @@ Category: Turtle
 
 [short_description]
 
-Changes the turtle's direction to the left by the specified angle in degrees.
+The turtle rotates left in place by the specified angle in degrees from the current turtle direction. The turtle's (x,y) position remains the same.
 
 [/short_description]
 
-The turtle's position remains the same. The direction is turned left by angle degrees.
+There are three different ways to rotate the turtle in place
+
+- turnRight(angle) - The turtle rotates right in place by the specified angle in degrees from the current turtle direction.
+- turnLeft(angle) - The turtle rotates left in place by the specified angle in degrees from the current turtle direction.
+- turnTo(angle) - The turtle rotates in place to a specific angle. 0 is up, 90 is right, 180 is down, and 270 is left.
 
 [/description]
 
@@ -33,20 +36,9 @@ ____________________________________________________
 
 [example]
 
-
 ```
-turnLeft(90);    // Makes the turtle face left
-```
-
-[/example]
-
-____________________________________________________
-
-[example]
-
-
-```
-turnLeft(-90);   // Makes the turtle face right
+// Rotate the turtle to the left 90 degrees (the default angle) from the current direction.
+turnLeft();  
 ```
 
 [/example]
@@ -55,28 +47,31 @@ ____________________________________________________
 
 [example]
 
+**Example: House** Draw a house with left turns only. [Watch it run!](https://images.code.org/4afefb9917316e867fac7402801e1200-image-1444297810014.gif)
 
 ```
-// Draw a square
-moveForward(100);   // Draw the right edge
-turnLeft(90);       // Turn to face along the top edge
-moveForward(100);   // Draw the top edge
-turnLeft(90);       // Turn to face along the left edge
-moveForward(100);   // Draw the left edge
-turnLeft(90);       // Turn to face along the bottom edge
-moveForward(100);   // draw the bottom edge
+// Draw a house with left turns only.
+speed(20);
+turnLeft(45);
+moveForward(50);
+turnLeft(90);
+moveForward(50);
+turnLeft(45);
+moveForward(75);
+turnLeft(-270); // same as turnLeft(90);
+moveForward(70);
+turnLeft(90);
+moveForward(75);
 ```
 
 [/example]
-
-____________________________________________________
 
 [syntax]
 
 ### Syntax
 
 ```
-turnLeft(angle);
+turnLeft(angle)
 ```
 
 [/syntax]
@@ -87,21 +82,23 @@ turnLeft(angle);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| angle | number | Yes | The angle to turn left.  |
+| angle | number | No | The angle to rotate left (90 degrees is default).  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+No return value. Rotates turtle only.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- You can specify a negative angle to turn left, which makes the turtle turn right instead.
+
+- You can specify a negative angle to rotate left, which makes the turtle turn right instead.
+
 [/tips]
 
 [bug]
