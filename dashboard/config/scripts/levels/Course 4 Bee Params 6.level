@@ -14,7 +14,7 @@
     "disable_param_editing": "false",
     "disable_variable_editing": "true",
     "start_direction": "1",
-    "step_mode": 1,
+    "step_mode": "1",
     "nectar_goal": "13",
     "flower_type": "redWithNectar",
     "ideal": "46",
@@ -22,14 +22,18 @@
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "open_function_definition": "get 5 nectar",
-    "markdown_instructions": "Wouldn't it be nice if we could collect all of these nectars with the a single function? \r\n\r\n<br/>\r\nTry adding a new parameter to your function called `nectars units` to control the amount of nectar to collect. You'll probably want to rename the function too!",
+    "markdown_instructions": "Wouldn't it be nice if we could collect all of these nectars with the a single function? \r\n\r\n<br/>\r\nTry adding a new parameter to your function called `nectar units` to control the amount of nectar to collect. You'll probably want to rename the function too!",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "maze_data": null,
+    "fast_get_nectar_animation": "false"
   }
 }]]></config>
   <blocks>

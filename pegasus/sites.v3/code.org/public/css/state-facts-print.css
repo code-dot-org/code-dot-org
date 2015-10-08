@@ -1,0 +1,62 @@
+.state-fact-sheet {
+  padding-top: 10px;
+  max-width: 970px;
+}
+
+body {
+  font-family: 'Gotham 4r', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+  color: dimgray;
+}
+
+h1 {
+  color: #7665a0;
+  font-size: 32px;
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  line-height: 1.2em;
+}
+
+h2 {
+  color: #00adbc;
+  font-size: 22px;
+  font-family: 'Gotham 5r', sans-serif;
+  margin-top: 45px;
+  margin-bottom: 25px;
+  line-height: 1.2em;
+}
+
+h3 {
+  color: #5b6770;
+  font-size: 18px;
+  font-family: 'Gotham 4r', sans-serif;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  line-height: 1.2em;
+}
+
+a {
+  color: #7665a0;
+  text-decoration: none;
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: bold;
+}
+
+.policies {
+}
+
+.policy-item {
+  padding: 10px 10px 12px 10px;
+}
+
+.no-margin-bottom {
+  margin-bottom: 5px;
+}
+
+.larger {
+  font-size: 14px;
+}

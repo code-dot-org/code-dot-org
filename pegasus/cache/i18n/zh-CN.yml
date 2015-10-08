@@ -30,6 +30,11 @@
   hoc2014_everyone: 每个人
   hoc2014_support: 支持它 &#x25BE;
   hoc2014_whatishoc: 什么是编程一小时？
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: 重置
   cded_sign_up: 登陆
   cded_try_it: 体验一下
   twentyhours_trynow: 现在就试试

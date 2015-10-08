@@ -24,10 +24,10 @@ nav: promote_nav
 **1. Progetta l'evento**
 
   * Organizza una assemblea per promuovere l'Ora del Codice.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organizza attività di gruppo (come una dimostrazione oppure un'attività di programmazione offline), oppure organizza un'esibizione di attività svolte od organizzate dagli studenti.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote#videos') %>) to inspire.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Individua i giornalisti locali più impegnati sul fronte dell'educazione e degli eventi locali.**
 
@@ -37,7 +37,7 @@ Cerca online i contatti dei giornalisti. Se non riesci a trovarlo, chiamare il g
 
 **3. Contatta i media locali**
 
-Spesso il miglior modo di entrare in contatto con i media è l'email. Scrivi una mail breve in cui venga messo in risalto perché le altre persone dovrebbero interessarsi all'evento. Includi tutte le informazioni perché sia possibile contattore chi sarà presente allo svolgimento dell'evento (compreso un numero di cellulare). **See a [sample pitch to media](<%= resolve_url('/promote#sample-emails') %>):**
+Spesso il miglior modo di entrare in contatto con i media è l'email. Scrivi una mail breve in cui venga messo in risalto perché le altre persone dovrebbero interessarsi all'evento. Includi tutte le informazioni perché sia possibile contattore chi sarà presente allo svolgimento dell'evento (compreso un numero di cellulare). **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Preparati a rispondere a domande giornalistiche sull'evento della tua scuola. Eccone alcuni esempi:**
 

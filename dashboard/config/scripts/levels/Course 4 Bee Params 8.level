@@ -14,14 +14,13 @@
     "disable_param_editing": "false",
     "disable_variable_editing": "true",
     "start_direction": "3",
-    "step_mode": 1,
+    "step_mode": "1",
     "nectar_goal": "5",
     "flower_type": "redWithNectar",
-    "ideal": "49",
-    "instructions": "Challenge: Now there's honey to deal with too! Rewrite your function to take in both the number of honey units and the number of nectar units.  How would you use those numbers to decide what you should do?",
+    "ideal": "48",
+    "instructions": "Challenge: Now there's honey to deal with too! Rewrite your function to use both the number of honey units and the number of nectar units.  How would you use those numbers to decide what you should do?",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "open_function_definition": "get nectar make honey",
     "honey_goal": "5",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -29,7 +28,11 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "maze_data": null,
+    "fast_get_nectar_animation": "false"
   }
 }]]></config>
   <blocks>

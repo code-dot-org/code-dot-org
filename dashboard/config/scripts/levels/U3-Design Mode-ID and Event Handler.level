@@ -1,0 +1,44 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-07T15:41:08.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+    },
+    "edit_code": true,
+    "encrypted_examples": "rekFzZUJd6xk+soKqRLxkkGXuqBxi0o1wHmJkDYN354EDO2i915c95r96j1r\ne3cr\n",
+    "embed": "false",
+    "instructions": "Using the Design Mode Events tab add in code that when the button is clicked causes something to print in the console. (Click to see detail instructions).",
+    "markdown_instructions": "# Activate Your Button\r\nOn the last level you put your button on the screen using Design Mode. However if you tried clicking it nothing happened! So let's make it a working button. Your work from the last level has been brought over to this level.  \r\n\r\n**Goal:** Add code using Design Mode to make the button respond to a click.\r\n\r\n<img src=\"https://images.code.org/283a91dc3e09266831dfdc1cef27b21c-image-1444315963130.gif\" style=\"width: 350px; float: right\">\r\n\r\n# Do This\r\n\r\nGo to Design Mode and **find the Events tab** which is next to the Properties tab.\r\n\r\nUnder Click find the blue *Insert and Show in Code* button. Click that to add the code for your button.\r\n\r\nTest out your button to see what happens. \r\n\r\n**Note:** the results of the button press should appear in the Debug Console. We will discuss this on the next level.\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U3 - Design Mode 1",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

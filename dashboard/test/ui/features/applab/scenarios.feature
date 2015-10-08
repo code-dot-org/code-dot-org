@@ -17,9 +17,9 @@ Feature: App Lab Scenarios
 
   Scenario: App Lab Clear Puzzle and Design Mode
     # Create an app with a design mode button, then clear the puzzle
-    When I press "designModeButton"
-    And I drag block matching selector "[data-element-type='BUTTON']" to block matching selector "#visualization"
-    And I press "codeModeButton"
+    Given I switch to design mode
+    And I drag a BUTTON into the app
+    And I switch to code mode
     And Applab HTML has a button
     And I press "clear-puzzle-header"
     And element "#confirm-button" is visible
