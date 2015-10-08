@@ -71,13 +71,10 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "start_blocks": "button(\"id\", \"move me\");\r\nonEvent(\"id\", \"click\", function(){\r\n  moveForward(25);\r\n});\r\n",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "encrypted_examples": [
-
-    ],
-    "markdown_instructions": "# New Elements and Events: Random Movement\r\n\r\nOver the next several exerises we will be exploring several new user interface elements and event types. Your code will be pulled forward as you progress through the exercises.\r\n\r\n# Do This\r\n\r\n**Starter Code:** To begin you have been provided a single button and event handler which moves the turtle forward.\r\n\r\n**Modify** the program so that when the button is clicked the turtle moves to a random location on the screen.\r\n\r\n**Change the ID** of the button to something descriptive and meaningful.\r\n\r\n**Note:** Recall the screen is **320 by 450 pixels**. You'll likely want to use `moveTo` and `randomNumber`\r\n",
+    "encrypted_examples": "TLS1kSO4BI93rs8DfCwBsiIrUHxJz5bazOxC18TZSaAzhvpRR4UaIav00y1M\nVhiG\n",
+    "markdown_instructions": "# New Elements and Events: Random Movement\r\n\r\nOver the next several exerises we will be exploring several new user interface elements and event types. Your code will be pulled forward as you progress through the exercises.\r\n\r\n# Do This\r\n\r\n**Starter Code:** To begin you have been provided a single button and event handler which moves the turtle forward.\r\n\r\n**Modify** the program so that when the button is clicked the turtle moves to a random location on the screen.\r\n\r\n**Change the ID** of the button to something descriptive and meaningful.\r\n\r\n**Note:** Recall the screen is **320 by 450 pixels**. You'll likely want to use `moveTo` and `randomNumber`\r\n\r\n![](https://images.code.org/a4172e43b6707a3170e4eaf54a2a7b1d-image-1444335577799.gif)",
     "never_autoplay_video": "false",
     "slider_speed": "1",
     "examples_required": "false",
@@ -86,7 +83,8 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "submittable": "false",
-    "hide_view_data_button": "true"
+    "hide_view_data_button": "true",
+    "project_template_level_name": "U3L16 - projectTemplate"
   }
 }]]></config>
   <blocks/>

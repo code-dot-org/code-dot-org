@@ -163,7 +163,8 @@ var twitterOptions = {
 function loadLevel() {
   // Load maps.
   Studio.map = level.map;
-  Studio.wallMap = null;
+  Studio.wallMap = null;  // The map name actually being used.
+  Studio.wallMapRequested = null; // The map name requested by the caller.
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.slowJsExecutionFactor = level.slowJsExecutionFactor || 1;
   Studio.ticksBeforeFaceSouth = Studio.slowJsExecutionFactor +
@@ -1697,6 +1698,7 @@ Studio.reset = function(first) {
   // Reset configurable variables
   Studio.background = null;
   Studio.wallMap = null;
+  Studio.wallMapRequested = null;
   Studio.setBackground({value: getDefaultBackgroundName()});
 
   // Reset currentCmdQueue and various counts:
@@ -3316,14 +3318,21 @@ Studio.setBackground = function (opts) {
       $(".tile_clip").remove();
       $(".tile").remove();
       Studio.tiles = [];
-      Studio.drawMapTiles();
 
-      sortDrawOrder();
+      // Changing background can cause a change in the map used internally,
+      // since we might use a different map to suit this background, so set
+      // the map again.
+      Studio.setMap({value: Studio.wallMapRequested}, true);
     }
   }
 };
 
-Studio.setMap = function (opts) {
+/**
+ * Set the wall map.
+ * @param {string} opts.value - The name of the wall map.
+ * @param {boolean} forceLoad - Force loading the map, even if it's already set.
+ */
+Studio.setMap = function (opts, forceLoad) {
   if (opts.value === constants.RANDOM_VALUE) {
     // NOTE: never select the first item from mapChoices, since it is
     // presumed to be the "random" item for blockly
@@ -3338,17 +3347,28 @@ Studio.setMap = function (opts) {
   if (!level.wallMapCollisions) {
     return;
   }
+ 
+  var useMap;
 
-  // Treat 'default' as resetting to the level's map (Studio.wallMap = null)
   if (opts.value === 'default') {
-    opts.value = null;
+    // Treat 'default' as resetting to the level's map (Studio.wallMap = null)
+    useMap = null;
+  } else if (skin.getMap) {
+    // Give the skin a chance to adjust the map name depending upon the
+    // background name.
+    useMap = skin.getMap(Studio.background, opts.value);
   }
 
-  if (opts.value === Studio.wallMap) {
+  if (!forceLoad && useMap === Studio.wallMap) {
     return;
   }
 
-  Studio.wallMap = opts.value;
+  // Use the actual map for collisions, rendering, etc.
+  Studio.wallMap = useMap;
+
+  // Remember the requested name so that we can reuse it next time the
+  // background is changed.
+  Studio.wallMapRequested = opts.value;
 
   // Draw the tiles (again) now that we know which background we're using.
   $(".tile_clip").remove();

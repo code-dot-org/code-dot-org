@@ -68,6 +68,9 @@ Share these inspiring stories about students and teachers who are changing the f
 <a id="posters"></a>
 ## 3. Put up these posters:
 
+[![image](/images/fit-260/malala.png)](/files/malala-poster.pdf)
+[![image](/images/fit-260/obama-new.png)](/files/obama-poster-new.pdf)
+[![image](/images/fit-260/sheryl-sandberg.png)](/files/sheryl-poster.pdf)
 [![image](/images/fit-260/mark-poster.png)](/files/mark-poster.pdf)
 [![image](/images/fit-260/marissa-mayer.png)](/files/marissa-mayer-poster.pdf)
 [![image](/images/fit-260/chris-poster.png)](/files/chris-poster.pdf)
