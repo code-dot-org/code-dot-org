@@ -42,6 +42,13 @@ When /^I switch to design mode$/ do
   }
 end
 
+When /^I switch to code mode$/ do
+  steps %q{
+    When I press "codeModeButton"
+    And I wait to see Applab code mode
+  }
+end
+
 When /^I switch to text mode$/ do
   steps %q{
     When I press "show-code-header"
@@ -54,10 +61,16 @@ And /^I wait to see Applab design mode$/ do
   wait.until { @browser.execute_script("return $('#designWorkspace').css('display') == 'block';") }
 end
 
-# Will generalize soon - bbuchanan
-When /^I drag a textarea into the app$/ do
-  drag_script = %q{
-    var element = $("[data-element-type='TEXT_AREA']");
+And /^I wait to see Applab code mode$/ do
+  wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+  wait.until { @browser.execute_script("return $('#codeWorkspaceWrapper').css('display') == 'block';") }
+end
+
+# Step for dragging an Applab design mode element into the applab visualization.
+# Use with element type strings from ElementType (library.js)
+When /^I drag a (\w+) into the app$/ do |element_type|
+  drag_script = %Q{
+    var element = $("[data-element-type='#{element_type}']");
     var screenOffset = element.offset();
     var mousedown = $.Event("mousedown", {
       which: 1,
@@ -65,12 +78,12 @@ When /^I drag a textarea into the app$/ do
       pageY: screenOffset.top
     });
     var drag = $.Event("mousemove", {
-      pageX: $("#visualization").offset().left + 10,
-      pageY: $("#visualization").offset().top + 10
+      pageX: $("#visualization").offset().left,
+      pageY: $("#visualization").offset().top
     });
     var mouseup = $.Event('mouseup', {
-      pageX: $("#visualization").offset().left + 10,
-      pageY: $("#visualization").offset().top + 10
+      pageX: $("#visualization").offset().left,
+      pageY: $("#visualization").offset().top
     });
     element.trigger(mousedown);
     $(document).trigger(drag);

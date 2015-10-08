@@ -24,10 +24,10 @@ nav: promote_nav
 **1. Plan je evenement**
 
   * Plan een bijeenkomst om het Uur Code af te trappen.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organiseer groepsactiviteiten (zoals een demonstratie van een 'unplugged'-programmeeractiviteit), of laat door deelnemers gemaakte en geleide activiteiten zien.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote#videos') %>) to inspire.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Vind journalisten die onderwijs- of lokale evenementen verslaan.**
 
@@ -37,7 +37,7 @@ Kijk online of je contactinformatie kan vinden voor journalisten. Kun je deze ni
 
 **3. Neem contact op met lokale media**
 
-De beste manier om contact op te nemen is per mail. Deze moet kort zijn en overbrengen waarom dit evenement voor anderen interessant is? Voorzie contactinformatie (een GSM-nummer) voor wie er naar de eventlocatie komt. **See a [sample pitch to media](<%= resolve_url('/promote#sample-emails') %>):**
+De beste manier om contact op te nemen is per mail. Deze moet kort zijn en overbrengen waarom dit evenement voor anderen interessant is? Voorzie contactinformatie (een GSM-nummer) voor wie er naar de eventlocatie komt. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Bereid je voor om vragen te beantwoorden over je evenement. Voorbeelden:**
 

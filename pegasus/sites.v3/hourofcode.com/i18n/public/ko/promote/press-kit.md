@@ -24,10 +24,10 @@ nav: promote_nav
 **1. 이벤트를 계획하세요.**
 
   * Hour of Code를 시작하기 위한 단계적 절차들을 계획하세요.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * 모둠 활동(언플러그드 프로그래밍 활동과 같은...)을 조직하거나, 학생들이 만들어낸 것들을 발표하고, 여러 가지 활동들을 이끌어내세요.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote#videos') %>) to inspire.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. 해당 지역 전문 리포터 등을 찾아 교육분야나 지역 이벤트에 관한 글을 써달라고 요청하세요.**
 
@@ -37,7 +37,7 @@ nav: promote_nav
 
 **3. 지역 방송 매체에 연락하세요.**
 
-가장 쉽게는 이메일로 연락을 취할 수 있습니다. 내용은 짧으면서도 소통할 수 있어야 합니다. : 왜 다른 사람들이 이 이벤트 행사에 관심을 가져야 하는가? 이벤트를 위해 사이트에 방문하는 사람들을 위해서 연락처(휴대폰 번호 포함) 정보를 포함시켜 주세요. **See a [sample pitch to media](<%= resolve_url('/promote#sample-emails') %>):**
+가장 쉽게는 이메일로 연락을 취할 수 있습니다. 내용은 짧으면서도 소통할 수 있어야 합니다. : 왜 다른 사람들이 이 이벤트 행사에 관심을 가져야 하는가? 이벤트를 위해 사이트에 방문하는 사람들을 위해서 연락처(휴대폰 번호 포함) 정보를 포함시켜 주세요. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. 여러분의 학교 이벤트와 관련한 질문들에 대한 재치있는 답변들을 생각해 두세요. 예시 질문들은 다음과 같습니다.:**
 

@@ -12,7 +12,7 @@ nav: how_to_nav
 
 **Há muitas maneiras de as empresas participarem da Hora do Código e ajudarem a expandir o ensino da ciência da computação. Considere:**
 
-  * Pedir ao seu CEO para enviar um e-mail para toda a empresa enfatizando a importância da ciência da computação e incentivando os funcionários a divulgar. [Veja este e-mail](<%= resolve_url('/resources/promote#sample-emails') %>).
+  * Pedir ao seu CEO para enviar um e-mail para toda a empresa enfatizando a importância da ciência da computação e incentivando os funcionários a divulgar. [Veja este e-mail](<%= resolve_url('/promote/resources#sample-emails') %>)..
   * Organizar um Happy Hour da Hora do Código com seus colegas de trabalho para experimentar os [tutoriais](<%= resolve_url('https://code.org/learn') %>).
   * Convidar uma turma de alunos ou de outros parceiros sem fins lucrativos para realizar uma Hora do Código no escritório da empresa.
 
@@ -21,7 +21,7 @@ nav: how_to_nav
 ## 1) Cadastre-se
 
   * Registre sua [Hora do Código](<%= resolve_url('/') %>) durante o evento em <%= campaign_date('short') %>.
-  * Promova seu evento da [Hora do Código](<%= resolve_url('/resources') %>) e incentive outras pessoas a organizarem eventos também.
+  * Promova seu evento da [Hora do Código](<%= resolve_url('/promote') %>) e incentive outras pessoas a organizarem eventos também.
 
 ## 2) Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Escolha um tutorial:
@@ -96,7 +96,7 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 ## 7) Comemore
 
   * [Imprima certificados](<%= resolve_url('https://code.org/certificates') %>) para os participantes.
-  * Imprima adesivos com a mensagem ["Eu participei da Hora do Código!"](<%= resolve_url('/resources/promote#stickers') %>).
+  * Imprima adesivos com a mensagem ["Eu participei da Hora do Código!"](<%= resolve_url('/promote/resources#stickers') %>)
   * Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso, também!
 
 [col-33]
