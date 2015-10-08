@@ -11,13 +11,65 @@
     = t(:slow_loading)
     %br
     %a{href: 'javascript: location.reload();'}= t(:try_reloading)
-  - if @level.game == Game.netsim
+
+-# Now define the dependencies for the level we are loading.
+-# These will be written at the end of the body tag so that we render as much
+-#   of the page as possible before running scripts, but so that browsers can
+-#   intelligently optimize downloading resources.
+- computed_app_options = app_options
+- apps_path = computed_app_options[:baseUrl]
+- app_name = computed_app_options[:app]
+- is_droplet = computed_app_options[:droplet]
+- is_netsim = @level.game == Game.netsim
+- is_blockly = !is_droplet && !is_netsim
+- content_for :body_scripts do
+
+  -# Common style dependencies
+  %link{href: asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
+  %link{href: asset_path("css/#{app_name}.css"), rel: 'stylesheet', type: 'text/css'}
+
+  -# Droplet style dependencies
+  - if computed_app_options[:droplet]
+    %link{href: asset_path('css/droplet/droplet.min.css'), rel: 'stylesheet', type: 'text/css'}
+    %link{href: asset_path('css/tooltipster/tooltipster.min.css'), rel: 'stylesheet', type: 'text/css'}
+    %link{href: asset_path('css/colpick.css'), rel: 'stylesheet', type: 'text/css'}
+
+  -# Droplet script dependencies
+  - if is_droplet
+    %script{src: asset_path('js/jsinterpreter/acorn_interpreter.js')}
+    %script{src: "#{apps_path}js/ace/ace.js"}
+    %script{src: "#{apps_path}js/ace/mode-javascript.js"}
+    %script{src: "#{apps_path}js/ace/ext-language_tools.js"}
+    %script{src: asset_path('js/droplet/droplet-full.js')}
+    %script{src: asset_path('js/tooltipster/jquery.tooltipster.js')}
+
+  -# Blockly script dependencies
+  - if is_blockly
+    %script{src: asset_path('js/blockly.js')}
+    %script{src: asset_path("js/#{js_locale}/blockly_locale.js")}
+
+  -# Common script dependencies
+  %script{src: asset_path('js/marked/marked.js')}
+  %script{src: minifiable_asset_path('shared.js')}
+  %script{src: minifiable_asset_path('js/common.js')}
+  %script{src: asset_path("js/#{js_locale}/common_locale.js")}
+  %script{src: asset_path("js/#{js_locale}/#{app_name}_locale.js")}
+  %script{src: minifiable_asset_path("js/#{app_name}.js")}
+
+  -# NetSim external script dependencies
+  - if is_netsim
     %script{src: 'https://js.pusher.com/2.2/pusher.min.js'}
-  %script{src: minifiable_shared_path('shared.js')}
+
+  -# Droplet external script dependencies
+  - if is_droplet
+    %script{src: 'https://www.google.com/jsapi'}
+
+  -# Small inline script to kick off app initialization once all dependencies
+  -# have been loaded.
   :javascript
     //<![CDATA[
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
-    var appOptions = #{app_options.to_json};
+    var appOptions = #{computed_app_options.to_json};
     appOptions.locale = '#{js_locale}';
     apps.setupApp(appOptions);
     apps.load(apps.init);
