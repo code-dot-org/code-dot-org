@@ -24,10 +24,10 @@ nav: promote_nav
 **1. Сплануйте свій захід**
 
   * Сплануйте збори для початку Години коду.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Організовуйте групові діяльності (наприклад, безмашинні вправи), та демонструйте результати роботи учнів.
-  * Покажіть [відео Години коду](<%= resolve_url('/') %>) або одне із [цих](<%= resolve_url('/promote#videos') %>) для натхнення.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. З'ясуйте, які журналісти висвітлюють місцеві освітні події.**
 
@@ -37,7 +37,7 @@ nav: promote_nav
 
 **3. Зверніться до місцевих ЗМІ**
 
-Найкраще передати інформацію електронною поштою. Вона має бути короткою та інформативною: чому людям важливо зацікавитись цим заходом? Включіть контактну інформацію (з номером мобільного) особи, яка буде присутня на заході. **See a [sample pitch to media](<%= resolve_url('/promote#sample-emails') %>):**
+Найкраще передати інформацію електронною поштою. Вона має бути короткою та інформативною: чому людям важливо зацікавитись цим заходом? Включіть контактну інформацію (з номером мобільного) особи, яка буде присутня на заході. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Підготуйте кілька запитань та коротких відповідей про свій захід. Наприклад:**
 

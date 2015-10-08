@@ -1542,12 +1542,21 @@ Blockly.Block.prototype.setCurrentlyHidden = function (hidden) {
  * CurrentlyHidden is a non-persistent property used to hide certain blocks
  * (like function definitions/examples) that should only be visible when using
  * the modal function editor.
- * This method calculates whether this block is currently visible
+ * This method calculates whether this block is currently visible based
+ * on our current block-editing state (Blockly.editBlocks)
  * @returns true if both visibility conditions are met.
  */
 Blockly.Block.prototype.isVisible = function () {
   var visibleThroughParent = !this.parentBlock_ || this.parentBlock_.isVisible();
-  return visibleThroughParent && this.isUserVisible() && !this.isCurrentlyHidden_();
+  var visible = visibleThroughParent && !this.isCurrentlyHidden_();
+
+  if (Blockly.editBlocks) {
+    // If we're in edit mode, we're not a "user", so we don't care if
+    // the block isUserVisible or not.
+    return visible;
+  }
+
+  return visible && this.isUserVisible();
 };
 
 /**

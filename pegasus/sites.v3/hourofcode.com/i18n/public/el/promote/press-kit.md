@@ -24,10 +24,10 @@ nav: promote_nav
 **1. Σχεδίασε την εκδήλωσή σου**
 
   * Σχεδίασε μια συγκέντρωση για να ξεκινήσεις την Ώρα του Κώδικα.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Οργάνωσε ομαδικές δραστηριότητες (όπως μια προγραμματιστική δραστηριότητα χωρίς τη χρήση υπολογιστή), ή πρόβαλλε δραστηριότητες που οργάνωσαν και υλοποιούν οι μαθητές σου.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote#videos') %>) to inspire.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Βρεις ποιοι τοπικοί δημοσιογράφοι καλύπτουν τα εκπαιδευτικά και τις τοπικές εκδηλώσεις.**
 
@@ -37,7 +37,7 @@ nav: promote_nav
 
 **3. Επικοινώνησε με τα τοπικά μέσα ενημέρωσης**
 
-Ο καλύτερος τρόπος για να προσεγγίσεις τα ΜΜΕ είναι το e-mail. Θα πρέπει να είναι σύντομο και να περιγράφει γλαφυρά: γιατί πρέπει ο κόσμος να μάθει για αυτή την εκδήλωση; Να συμπεριλάβεις πληροφορίες επικοινωνίας (και αριθμό κινητού τηλεφώνου) για όσους θα είναι στην εκδήλωση. **See a [sample pitch to media](<%= resolve_url('/promote#sample-emails') %>):**
+Ο καλύτερος τρόπος για να προσεγγίσεις τα ΜΜΕ είναι το e-mail. Θα πρέπει να είναι σύντομο και να περιγράφει γλαφυρά: γιατί πρέπει ο κόσμος να μάθει για αυτή την εκδήλωση; Να συμπεριλάβεις πληροφορίες επικοινωνίας (και αριθμό κινητού τηλεφώνου) για όσους θα είναι στην εκδήλωση. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Προετοιμάσου για να απαντήσεις σε ερωτήσεις για την σχολική εκδήλωσή σου. Ακολουθούν μερικά παραδείγματα:**
 

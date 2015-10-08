@@ -95,7 +95,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 ## 7) Celebrate
 
   * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
-  * [Print "I did an Hour of Code!"](<%= resolve_url('/resources/promote#stickers') %>) stickers.
+  * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
   * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]

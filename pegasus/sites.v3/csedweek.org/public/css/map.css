@@ -10,6 +10,10 @@
   .signup-button {
     margin: 0 0 10px 0;
   }
+
+  #hocmap {
+    margin-left: 20px;
+  }
 }
 
 .float-left {
