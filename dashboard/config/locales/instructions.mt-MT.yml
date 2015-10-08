@@ -700,6 +700,10 @@
       4-5 Artist Patterns Free Play_instruction: |
         Free play - try your hand at making
         a pattern of your own!
+      4-5 Bee Conditionals - FC Test_instruction: |
+        The bee only wants nectar right
+        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
+        it is hiding a flower. If it is, then you can gather nectar.
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
@@ -714,7 +718,7 @@
         at flowers.
       4-5 Bee Conditionals 2_instruction: |
         The bee only wants nectar right now. Not
-        all objects are flowers, so check to see if the object under the cloud is
+        all objects are flowers, so check underneath EVERY CLOUD to see if it is hiding
         a flower. If it is, then you can gather nectar.
       4-5 Bee Conditionals 3_instruction: |
         Now the bee just wants to make honey.
@@ -934,6 +938,9 @@
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AllTheThings Applab - Turtle move with button_instruction: |
+        Add a button that
+        moves the turtle when clicked.  (Click to see full instructions)
       App Lab test_instruction: prova
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -1834,14 +1841,17 @@
         on either side. I've added a parameter called "direction" to the function.
         If the "direction" parameter equals 0 I should turn left, if it's 1 I should
         turn right.
-      Course 4 Bee Params 3_instruction: |
-        Now there are flowers on both sides! I've
-        added a parameter called "direction" to the function. Use the "left" and
-        "right" variables to control direction. Fill in the rest of the function
-        definition and then click "Save and Close."
+      Course 4 Bee Params 3_instruction: "Now there are flowers on both sides! We've\nadded
+        variables called \"left\" and \"right\" for you to use, and added a\nparameter
+        called \"direction\" to \"get 3 nectar\". Edit \"get 3 nectar\"\nso that the
+        bee turns the correct direction when the variables \"left\" or\n\"right\"
+        are passed into the function.  \n"
       Course 4 Bee Params 4 (copy 1)_instruction: |
         Try using your new function to
         collect all of the flowers. Remember, 0 = left and 1 = right.
+      Course 4 Bee Params 4 - Two WhenRun_instruction: |
+        Try using your new function
+        to collect all of the flowers. Remember to use the left and right variables.
       Course 4 Bee Params 4 backup_instruction: |
         Wouldn't it be nice if we could
         collect all of these nectars with the a single function? Try adding a new
@@ -1849,7 +1859,7 @@
         to collect. You'll probably want to rename the function too!
       Course 4 Bee Params 4_instruction: |
         Try using your new function to collect
-        all of the flowers. Remember to use the left and right variables.
+        nectar from all of the flowers. Remember to use the left and right variables.
       Course 4 Bee Params 5_instruction: Ejja nibdew mill-bidu - tista toħloq funzjoni
         ġdid imsejjħa "Ikseb nettaru 5" b'parametru direzzjonali?
       Course 4 Bee Params 6 (copy 1)_instruction: |
@@ -1883,9 +1893,9 @@
         too! How could you update your function to either get nectar or make honey.
       Course 4 Bee Params 8_instruction: |
         Challenge: Now there's honey to deal with
-        too! Rewrite your function to take in both the number of honey units and the
-        number of nectar units.  How would you use those numbers to decide what you
-        should do?
+        too! Rewrite your function to use both the number of honey units and the number
+        of nectar units.  How would you use those numbers to decide what you should
+        do?
       Course 4 Bee Params Ex_instruction: |
         Try using your new function to collect
         all of this nectar.
@@ -1952,8 +1962,8 @@
         it uses the \"height\" parameter."
       Course 4 Play Lab Params 3_instruction: "We have added another parameter to\nthe
         jump function so that we can use it with other actors. Each actor is represented\nby
-        a number, starting from one. Edit the \"jump\" function so that the definition\nincludes
-        the \"actor\" parameter. \n"
+        a number, starting from one. Edit the \"jump\" function so that it uses\nthe
+        \"actor\" parameter to make the correct character jump. \n"
       Course 4 Play Lab Params 4_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.
@@ -2412,90 +2422,6 @@
       frozen square snowflake_instruction: Tistgha tohloq snowflake billi tuza il
         Blokka "Irrepeti" / "Repeat" bix taghmel kaxxa 10 darbiet, u il Blokka "Dawwar"
         / "Turn" biex idawwar kull kaxxa 36 grad?
-      hoc2015_event_add_items_instruction: |
-        "It looks like there are other characters
-        arriving."<br/><br/>Use the addItemsToScene command to add new characters
-        to the game.
-      hoc2015_event_choose_character_instruction: |
-        "I will now choose who to direct,
-        and where they do it."<br/><br/>Customize your game by choosing the bot and
-        the background.
-      hoc2015_event_four_items_instruction: |
-        "Steer the bot to reach the four goals."<br/><br/>Make
-        the bot walk in all directions so that he can reach the four goals.
-      hoc2015_event_free_instruction: Now you can make and share anything you like.
-      hoc2015_event_free_blockly_instruction: |
-        Now you can make and share anything
-        you like.
-      hoc2015_event_item_behavior_instruction: |
-        "Now these new characters are starting
-        to do more."<br/><br/>Add some characters, and set their behavior and speed.
-      hoc2015_event_points_instruction: |
-        "Somebody should be rewarded for reaching
-        those characters."<br/><br/>Let’s add points. Give yourself some points when
-        you touch an item. Can you score 10 points?
-      hoc2015_event_random_items_instruction: |
-        "Surprising things can happen in
-        this world."<br/><br/>We can change character behavior at any time. Change
-        the characters to a new random movement every time you touch one.
-      hoc2015_event_touch_items_instruction: |
-        "Now it's time to catch some characters."<br/><br/>Use
-        setItemActivity to make the items move around, and whenTouchItem to do something
-        when you touch them. Then, capture them!
-      hoc2015_event_two_items_instruction: |
-        "Steer the bot to reach the two goals."<br/><br/>Drag
-        the move commands into the correct events.  Then, steer the bot to reach the
-        goals.
-      hoc2015_event_two_items_blockly_instruction: |
-        Drag the move commands into the
-        whenUp and whenDown functions.  Then, click the arrows to move the character
-        to get the items.
-      hoc2015_free_instruction: |
-        "We've made it.  Now it's time to have some fun."<br/><br/>Use
-        all of the blocks to make your own game.
-      hoc2015_intro_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
-      hoc2015_maze_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
-      hoc2015_move_cross_instruction: |
-        Type or drag the blocks to get both items
-        to the destination.
-      hoc2015_move_down_instruction: |
-        Hiro is "actor 1".  Use the Move block to
-        move Hiro right to touch Baymax.
-      hoc2015_move_item_destination_instruction: |
-        I see another item behind that
-        obstacle. Can you bring it back to the destination?
-      hoc2015_move_item_destination_2_instruction: |
-        Drag the code blocks into the
-        workspace to help the character reach the destination.
-      hoc2015_move_item_destination_3_instruction: |
-        Try typing the commands to get
-        the item to our destination. Don’t forget to end with ();
-      hoc2015_move_right_instruction: |
-        Help me program the character to get the item
-        and bring it to the destination. Stack a couple moveEast(); commands and then
-        hit Run to make him go.
-      hoc2015_move_right_blockly_instruction: |
-        Help me program the character to get
-        the item and bring it to the destination. Stack a couple of "move right"
-        blocks and then hit Run to make him go.
-      hoc2015_move_twice_instruction: We need the items. Help me get them all!
-      hoc2015_move_two_items_instruction: We need the items. Help me get them all!
-      hoc2015_move_two_items_blockly_instruction: |
-        We need the items. Help me get
-        them all!
-      hoc2015_random_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
-      hoc2015_sandbox_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
-      hoc2015_square_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
       Infinity_catch_instruction: Tistgha iggieghel il-Elsa ("attur 2") tilhaq il-Anna
         billi tuza l'Arrow Keys (Keys bil-vlegeg)?
       Infinity_finale_instruction: Ohloq kull ma jogbok u qassamha!
@@ -3298,6 +3224,10 @@
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      Ryan - 4-5 Bee Conditionals 2_instruction: |
+        The bee only wants nectar right
+        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
+        it is hiding a flower. If it is, then you can gather nectar.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse
         an \"if\" statement to program your game to call the \"level_up\"\nfunction
         only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample:
@@ -3490,13 +3420,45 @@
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
         to be dropped.
+      U3 - Design Mode - Multi Screens 2_instruction: |
+        Make a 2 screen app which
+        can switch back and forth between a black screen and a white screen using
+        buttons.
+      U3 - Design Mode - Multi Screens_instruction: |
+        Make a 2 screen app with black
+        screen and a white screen.
+      U3 - Design Mode - Other Events_instruction: |
+        Delete the button and make the
+        image move to a random location when you click on it. (click to see detailed
+        instructions)
+      U3 - Design Mode -Recreate Beyond Buttons_instruction: |
+        Recreate the game from
+        the last lesson with an extra welcome screen for the user to start on. (Click
+        for detailed instructions)
+      U3 - Design Mode 1_instruction: |
+        Add a button to your screen using design mode.
+        Change the style to look like the picture (click for instructions).
+      U3-Design Mode-ID and Event Handler_instruction: |
+        Using the Design Mode Events
+        tab add in code that when the button is clicked causes something to print
+        in the console. (Click to see detail instructions).
+      U3-Design Mode-ID_instruction: |
+        Using the Design Mode Events change the button
+        ID and update the code to match. (Click to see detail instructions).
+      U3-Design Mode-Image_instruction: |
+        Add an image to your app which moves to
+        a random position whenever the button is clicked. (Click to see detailed instructions).
+      U313 drag Two Buttons_instruction: |
+        Run a program with two buttons that have
+        the same id to see the warning message in the console. Change the ids to make
+        the program run without getting a warning message.
+      U313 eventsDetails_instruction: |
+        Run a program with two buttons that have the
+        same id to see the warning message in the console. Change the ids to make
+        the program run without getting a warning message.
       U313 Two Buttons with Ids_instruction: |
-        Now you try it! We've given you some
-        starting code with two buttons and two event handlers on the screen, but we've
-        just left the default Ids of "id".  You need to change the ids to connect
-        the right event handler to the right button. (Interestingly, the incorrect
-        program does work, but exhibits some bizarre behavior.  We'll discuss this
-        more in the next lesson.  Make the buttons work correctly for now).
+        Predict what will happen. Once you've
+        made a prediction, run the code to see what happens. (Click to see full instructions)
       U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto
         see full instructions)"
       U3L03 - draw step_instruction: |
@@ -3530,7 +3492,7 @@
         three steps and moves the turtle to prepare for the next side (Click to see
         full instructions)
       U3L04 - 3 by 3 with functions_instruction: |
-        Make the 3 by 3 square as efficiently
+        Make the 3x3 square as efficiently
         as you can. (Click to see full instructions)
       U3L04 - snowflake_instruction: |
         Create the design by breaking it down into
@@ -3708,22 +3670,27 @@
         (tricky) syntax error and logical error.  Find them, fix them, and make\nthe
         program work as expected."
       U3L13 - Debug Id Problem_instruction: |
-        This program has problem!  Can you figure
-        it out?  Run the program and see if you can figure out from the error messages
-        in the console what the issue is.  There is not much code, so you might be
-        able to figure it out just by reading carefully.  Make a change that will
-        make the program work as expected.
+        Improve the button by choosing a descriptive
+        and meaningful ID. (Click to see full instructions)
+      U3L13 - Debugging 1_instruction: |
+        Debug the program by verifying your IDs are
+        being referenced properly. (Click to see full instructions)
+      U3L13 - Debugging 2_instruction: |
+        Debug the program by properly ordering your
+        button commands and event handlers. (Click to see full instructions)
+      U3L13 - Debugging 3_instruction: |
+        Debug the program by fixing the logical error
+        within the program. (Click to see full instructions)
       U3L13 - Turtle Driver Project_instruction: |
-        Challenge: Create a “turtle driver”
-        with at least three buttons on the screen to move the turtle forward, and
-        turn the turtle right and left. You can copy/paste code from a previous level
-        if you like but it will help build your coding muscles if you create this
-        small program from scratch.  If you have time, try adding additional buttons!  You
-        can also have fun changing the parameters on the turtle functions, using colors,
-        etc.
-      U3L13 - Turtle move with button_instruction: "Drag a button out onto the screen\nand
-        set its text to \"Go forth!\".  Add an event handler for the button, that\nmakes
-        the turtle move forward.  Run the program to make sure it works. \n"
+        Create a "turtle driver" that
+        includes buttons to move the turtle forward and turn it left and right. (Click
+        to see full instructions)
+      U3L13 - Turtle move with button_instruction: |
+        Add a button that moves the turtle
+        when clicked.  (Click to see full instructions)
+      U3L13 eventsDetails_instruction: |
+        Add an event handler to the button to move
+        the turtle forward. (Click to see full instructions)
       U3L14 - Unfortunate Events Free Play_instruction: |
         Follow the "Unfortunate
         Events" Worksheet and enter your code here to experiment.  We've pre-loaded
@@ -3734,6 +3701,12 @@
         hi” button when that event occurs.\r\nAdd event handler to button\nso that
         on click, it writes a hello message to the screen and hides the textInput\nand
         button."
+      U3L16 - chaserApp_instruction: |
+        Create your own "Chaser App". (Click to see
+        full instructions)
+      U3L16 - chooseImages_instruction: |
+        Replace the image in your application with
+        one of your own. (Click to see full instructions)
       U3L16 - hideAndShow_instruction: |
         Introducing textInput, getText and write.  First
         run the starter code several times.  Try to change what's written to the
@@ -3759,6 +3732,15 @@
         an event handler to it.  We've started you out with code similar\nto the result
         of the last level, you can copy your code from that level into\nhere if you
         prefer. \n"
+      U3L16 - introSetPosition_instruction: |
+        Move the buttons to the bottom of the
+        screen. (Click to see full instructions)
+      U3L16 - newEventTypes_instruction: |
+        Experiment with different event types and
+        select the one that you think is best. (Click to see full instructions)
+      U3L16 - projectTemplate_instruction: |
+        Create your own "Chaser App". (Click
+        to see full instructions)
       U3L16 - quick double click_instruction: |
         Mini-Project.  The Quick Double-Click
         game.  In this simple game an object (an image) moves around, or pops up randomly
@@ -3772,27 +3754,21 @@
         command!  Replace the moveTo in the button-click event handler to use setPosition
         to move the button itself to a random location when it's clicked.
       U3L16 - setPositionMoveButton_instruction: Use setPositon to moveButton
-      U3L16 - setupMoveToRandom_instruction: "We'll be building upon some simple\nstarting
-        code throughout this lesson.  Your first task: use moveTo and randomNumber\nto
-        get the turtle to move to a random location with each button click.  We've\ngiven
-        you starting code for our common setup: a button that moves the turtle\nwhen
-        clicked.  You should modify this code.  \n"
-      U3L16 - text labels_instruction: "Introducing textLabels.  First try replacing\nyour
-        button with a textLabel.  Will the text respond to events just like the\nbutton?
-        \ Try connecting an event handler to it.  We've started you out with\ncode
-        similar to the result of the last level, you can copy your code from\nthat
-        level into here if you prefer. \n"
+      U3L16 - setupMoveToRandom_instruction: |
+        Modify the code so that the turtle
+        moves to a random screen location when the button is clicked. (Click to see
+        full instructions)
+      U3L16 - text labels_instruction: |
+        Use the textLabel command to replace the
+        button in your program with a text label. (Click to see full instructions)
       U3L16 - textInput getText write_instruction: |
         Introducing textInput, getText
         and write.  First run the starter code several times.  Try to change what's
         written to the screen when the button is clicked. Then use getText to write
         to the screen what the user entered in the text box.
       U3L16 - use images_instruction: |
-        Introducing Images.  Try replacing the textLabel
-        with an image..  Will the image respond to events just like the button?  Try
-        connecting an event handler to it.  We've started you out with code similar
-        to the result of the last level, you can copy your code from that level into
-        here if you prefer.
+        Use the image command to replace the text
+        label in your program with an image. (Click to see full instructions)
       U3L19 - Clicker Game Freeplay Area_instruction: |
         Use this App Lab area to improve
         your clicker game.  You should start by copy/pasting the code from your old

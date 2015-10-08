@@ -27,6 +27,11 @@ da-DK:
   hoc2014_everyone: Alle
   hoc2014_support: 'Støt &#x25BE;'
   hoc2014_whatishoc: 'Hvad er "Hour of Code"?'
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Nulstil
   cded_sign_up: Tilmeld
   cded_try_it: Prøv det
   twentyhours_trynow: Prøv nu
