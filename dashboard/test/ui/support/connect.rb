@@ -79,12 +79,17 @@ def get_browser
   end
 end
 
+
 browser = nil
 
 Before do
+  puts "DEBUG: browser == #{CGI::escapeHTML browser.inspect} @browser == #{CGI::escapeHTML @browser.inspect}"
+
   browser ||= get_browser
   @browser = browser
   @browser.manage.delete_all_cookies
+
+  debug_cookies(@browser.manage.all_cookies) if @browser
 
   unless ENV['TEST_LOCAL'] == 'true'
     unless @sauce_session_id

@@ -9,7 +9,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 1) 登録
 
   * 以下の期間に[Hour of Code](%= resolve_url('/') %)のイベントを開催するために、登録を行う: <%= campaign_date('short') %>.
-  * 登録したイベントを宣伝するだけでなく、より多くの人に[Hour of Code](%= resolve_url('/resources') %)のイベントを開催してもらう。
+  * Promote your [Hour of Code](%= resolve_url('/promote') %) and encourage others to host.
 
 ## 2) 以下の、ビデオを視聴する <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) チュートリアルを選択する:
@@ -91,7 +91,7 @@ Hour of Codeは、インターネットに接続されたコンピュータで�
 ## 7) 祝う
 
   * [認定書](%= resolve_url('https://code.org/certificates') %)を印刷して、配布しましょう。
-  * [ステッカー](%= resolve_url('/resources/promote#stickers') %)を印刷して、配布しましょう。
+  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
   * Hour of Codeのイベントの様子を撮影した写真や映像をソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグを使って、 @codeorgに連絡をすれば、あなたの取り組みをハイライトすることができます！
 
 [col-33]

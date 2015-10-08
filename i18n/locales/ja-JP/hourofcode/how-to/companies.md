@@ -10,7 +10,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 **There are many ways companies can participate in the Hour of Code and help expand participation in computer science. Consider:**
 
-  * Asking your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](%= resolve_url('/resources/promote#sample-emails') %).
+  * Asking your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](%= resolve_url('/promote/resources#sample-emails') %).
   * Hosting an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('https://code.org/learn') %).
   * Inviting a local classroom of students or other non profits you partner with to do an Hour of Code at your company’s office.
 
@@ -19,7 +19,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 ## 1) 登録
 
   * Register your [Hour of Code](%= resolve_url('/') %) during <%= campaign_date('short') %> event.
-  * Promote your [Hour of Code](%= resolve_url('/resources') %) event and encourage others to host.
+  * Promote your [Hour of Code](%= resolve_url('/promote') %) event and encourage others to host.
 
 ## 2) 以下の、ビデオを視聴する <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) チュートリアルを選択する:
@@ -94,7 +94,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 ## 7) 祝う
 
   * [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/resources/promote#stickers') %) stickers.
+  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
   * Hour of Codeのイベントの様子を撮影した写真や映像をソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグを使って、 @codeorgに連絡をすれば、あなたの取り組みをハイライトすることができます！
 
 [col-33]

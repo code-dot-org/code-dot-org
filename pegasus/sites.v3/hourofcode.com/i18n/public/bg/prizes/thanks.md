@@ -32,18 +32,18 @@ Your whole school is now entered to win a class-set of laptops (or $10,000 for o
 
 ## 2. Попитайте във вашето училище, дали се предлага участие в Часът на кодирането
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your principal.
+[Send this email](<%= resolve_url('/promote/resources#email') %>) to your principal.
 
 ## Предложете на вашия работодател да се включи в инициативата
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your manager, or the CEO.
+[Send this email](<%= resolve_url('/promote/resources#email') %>) to your manager, or the CEO.
 
 ## 4. Промотиране на часът на кода във вашата общност
 
-Наемете локална група — скаути клуб, църква, университет, ветерани от група или синдикат. Или станете домакин часът на кода "block party" за вашия квартал. [Send this email](<%= resolve_url('/resources#email') %>).
+Наемете локална група — скаути клуб, църква, университет, ветерани от група или синдикат. Или станете домакин часът на кода "block party" за вашия квартал. [Send this email](<%= resolve_url('/promote/resources#email') %>).
 
 ## 5 Предложете на Общинската Администрация да подкрепи програмата "Един Час Програмиране"
 
-[Send this email](<%= resolve_url('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](<%= resolve_url('/promote/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
 
 <%= view :signup_button %>
