@@ -25,6 +25,14 @@ dashboard.clientState = {};
  */
 dashboard.clientState.EXPIRY_DAYS = 365;
 
+/**
+ * Maximum number of lines of code that can be stored in the cookie
+ * @type {number}
+ * @private
+ */
+dashboard.clientState.MAX_LINES_TO_SAVE = 1000;
+
+
 dashboard.clientState.reset = function() {
   $.removeCookie('progress');
   $.removeCookie('lines');
@@ -97,7 +105,10 @@ dashboard.clientState.lines = function() {
  * @param {number} addedLines
  */
 function addLines(addedLines) {
-  var newLines = dashboard.clientState.lines() + addedLines;
+
+  var newLines = Math.min(dashboard.clientState.lines() + Math.max(addedLines, 0),
+      dashboard.clientState.MAX_LINES_TO_SAVE);
+
   $.cookie('lines', String(newLines),
     {expires: dashboard.clientState.EXPIRY_DAYS});
 }

@@ -51,5 +51,30 @@ describe("clientState#trackProgress", function() {
     state.levelProgress(2).should.equal(3);
     state.lines().should.equal(0);
   });
+
+  it("records level progress truncates line count at a certain level", function () {
+    var state = dashboard.clientState;
+    state.trackProgress(true, 999, 20, 1);
+    state.levelProgress(1).should.equal(20);
+    state.lines().should.equal(999);
+
+    state.trackProgress(true, 5, 100, 2);
+    state.levelProgress(2).should.equal(100);
+    state.lines().should.equal(1000);
+
+    state.trackProgress(true, 1, 100, 1);
+    state.lines().should.equal(1000);
+  });
+
+  it("records level progress does not allow negative line counts", function () {
+    var state = dashboard.clientState;
+    state.trackProgress(true, 10, 100, 1);
+    state.levelProgress(1).should.equal(100);
+    state.lines().should.equal(10);
+
+    state.trackProgress(true, -10, 100, 1);
+    state.levelProgress(1).should.equal(100);
+    state.lines().should.equal(10);
+  });
 });
 
