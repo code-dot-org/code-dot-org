@@ -311,7 +311,7 @@ it:
       section: Classe
       example: Esempio di soluzione
       example_with_number: 'Esempio di soluzione %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
+      submitted_on: 'Inserito il %{date}'
       unsubmit: Unsubmit
   user:
     email_confirm_needed: "L'indirizzo di posta elettronica non è stato confermato:"
@@ -404,7 +404,7 @@ it:
     tos: "Termini d'uso del servizio"
     privacy: Informativa sulla privacy
     secure: Versione sicura
-    report_abuse: Report Abuse
+    report_abuse: Segnala un abuso
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
@@ -464,7 +464,7 @@ it:
       body: "Impara i concetti base dell'informatica. Milioni di persone l'hanno già fatto."
     flappy:
       title: Flappy
-      body: 'Vuoi creare il tuo gioco in meno di 10 minuti? Prova il corso sul Codice di "Flappy"!'
+      body: 'Vuoi creare la tua versione del gioco "Flappy" in meno di 10 minuti? Prova questo corso!'
     20-hour:
       title: Corso rapido
       body: "Questo corso rapido in 20 lezioni introduce in modo sintetico i concetti fondamentali dell'informatica e della programmazione. Il corso è pensato per l'uso nelle scuole a partire dai 10 anni, ma è divertente per imparare un po' di informatica a qualunque età. Guarda i corsi 2-4 se vuoi sperimentare in modo più approfondito."
@@ -478,7 +478,7 @@ it:
     frozen:
       title: Frozen
     infinity:
-      title: "Il Laboratorio dell'Infinito"
+      title: Disney Infinity
       body: Crea una storia o inventa un gioco con i personaggi di Disney Infinity come protagonisti!
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
@@ -554,7 +554,7 @@ it:
           description: ""
         flappy:
           title: Flappy
-          description: 'Vuoi creare il tuo gioco in meno di 10 minuti? Prova il corso sul Codice di "Flappy"!'
+          description: 'Vuoi creare la tua versione del gioco "Flappy" in meno di 10 minuti? Prova questo corso!'
         jigsaw:
           title: Puzzle
           description: ""
@@ -620,16 +620,16 @@ it:
       report_abuse_form:
         intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
+          email: Si prega di fornire un indirizzo email
+          age: "Si prega di specificare un'età"
           abuse_type: Please answer how this content violates the Terms of Service
           abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+        abusive_url: URL del contenuto da segnalare
         abuse_type:
           question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
           harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          offensive: Contenuti offensivi
+          infringement: Violazione del copyright
           other: Altro
         detail: Please provide as much detail as possible regarding the content you are reporting.
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'

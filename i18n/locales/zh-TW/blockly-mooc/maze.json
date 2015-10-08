@@ -31,6 +31,7 @@
   "ifTooltip":"如果在指定的方向有路的話，就執行某些指定動作。",
   "ifelseTooltip":"如果在指定的方向有路的話，就執行第一個程式積木的動作，否則就執行第二個程式積木的動作。",
   "ifFlowerTooltip":"如果指定的方向有花或蜂巢，則作出一些行動。",
+  "ifOnlyFlowerTooltip":"If there is a flower in the specified direction, then do some actions.",
   "ifelseFlowerTooltip":"如果在指定方向有花朵或蜂窩，則做第一個積木的工作，否則，做第二積木的工作。\n。",
   "insufficientHoney":"你所使用的積木都正確，但是你需要收集正確數量的蜂蜜。",
   "insufficientNectar":"你所使用的積木都正確，但是你需要收集正確數量的花蜜。",

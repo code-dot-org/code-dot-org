@@ -27,6 +27,11 @@ ru-RU:
   hoc2014_everyone: Все
   hoc2014_support: 'Поддержите его &#x25BE;'
   hoc2014_whatishoc: Что такое Час Кода?
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Сбросить
   cded_sign_up: Зарегистрироваться
   cded_try_it: Попробуйте его
   twentyhours_trynow: Попробуйте сейчас

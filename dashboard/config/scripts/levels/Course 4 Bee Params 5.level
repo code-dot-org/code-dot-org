@@ -38,7 +38,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false" y="-5">
+        <block type="when_run" deletable="false" movable="false" uservisible="false" y="0">
           <next>
             <block type="variables_set" inline="false">
               <title name="VAR">left</title>
