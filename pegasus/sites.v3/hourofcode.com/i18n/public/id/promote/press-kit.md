@@ -24,10 +24,10 @@ nav: promote_nav
 **1. Rencanakan acara anda**
 
   * Rencanakan pertemuan awal Hour of Code anda.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Selengarakan aktivitas kelompok(seperti melakukan aktivitas tanpa perangkat keras). atau pamerkan apa yang dibuat pelajar dan aktivitasnya.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote#videos') %>) to inspire.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Indentifikasi secara spesifik wartawan lokal yang akan meliput pendidikan atau kegiatan lokal.**
 
@@ -37,7 +37,7 @@ Lihat secara online untuk menemukan info kontak reporter. Jika anda tidak menemu
 
 **3. Hubungi media lokal**
 
-Cara terbaik untuk menghubunginya yaitu melalui email. Itu haruslah pendek dan berkomunikasi: mengapa orang lain harus peduli akan kegiatan ini? Sertakan kontak informasi anda (termasuk nomor ponsel anda) kepada siapa yang akan hadir saat kegiatan. **See a [sample pitch to media](<%= resolve_url('/promote#sample-emails') %>):**
+Cara terbaik untuk menghubunginya yaitu melalui email. Itu haruslah pendek dan berkomunikasi: mengapa orang lain harus peduli akan kegiatan ini? Sertakan kontak informasi anda (termasuk nomor ponsel anda) kepada siapa yang akan hadir saat kegiatan. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Persiapkan bagian pertanyaan mengenai kegiatan sekolah anda. Berikut contohnya:**
 

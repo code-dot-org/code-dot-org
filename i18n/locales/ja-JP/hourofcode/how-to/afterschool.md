@@ -93,7 +93,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 ## 7) 祝う
 
   * [認定書](%= resolve_url('https://code.org/certificates') %)を印刷して、配布しましょう。
-  * [Print "I did an Hour of Code!"](%= resolve_url('/resources/promote#stickers') %) stickers.
+  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
   * Hour of Codeのイベントの様子を撮影した写真や映像をソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグを使って、 @codeorgに連絡をすれば、あなたの取り組みをハイライトすることができます！
 
 [col-33]

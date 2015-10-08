@@ -6,46 +6,46 @@ title: <%= hoc_s(:title_prizes_faq) %> layout: wide nav: prizes_nav
 
 <%= view :signup_button %>
 
-# Prix - FAQs
+# Prix - Foire aux Questions
 
-## Does your whole school have to enter to win the $10,000 in hardware?
+## L'ensemble de votre école doit-elle participer pour remporter la somme de 10 000 $ en matériel ?
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](%= resolve_url('/prizes/hardware-signup') %).
+Oui. Toute votre école doit participer pour être éligible au tirage, mais une seule inscription et formulaire de demande de prix de matériel suffisent [ici](%= resolve_url('/prizes/hardware-signup') %).
 
-## Does your whole school have to enter to win a the tech chat?
+## L'ensemble de votre école doit-elle participer pour remporter un tech chat (prix vidéo)?
 
-Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
+Toute salle de classe (école publique ou privée) est admissible pour ce prix. Il ne nécessite pas l'inscription de toute l'école.
 
-## Can non-public schools win the video chat prize?
+## Les écoles privées peuvent-elles gagner le prix vidéo?
 
-Yes! Private and independent schools are eligible along with public schools to win the video chat prizes.
+Oui ! Les écoles privées et indépendantes sont admissibles ainsi que les écoles publiques pour gagner le prix de vidéo chat.
 
-## Can non-US schools win the video chat prize?
+## Les écoles non américaines peuvent-elles gagner le prix de vidéo chat ?
 
-No, unfortunately, because of logistics we are unable to offer the video chat prize to schools outside of the U.S. and Canada.
+Malheureusement non, pour des raisons logistiques nous sommes incapables d'offrir ce prix aux écoles en dehors des États-Unis et du Canada.
 
-## Why is the $10,000 hardware prize only available to public schools?
+## Pourquoi le prix de matériel de 10 000 $ est-il réservé aux écoles publiques ?
 
-We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
+Nous serions ravis d'aider de la même façon les enseignants dans les écoles publiques et privées, mais pour l'instant, nous sommes dépendants de considérations logistiques. Nous avons un partenariat avec [DonorsChoose.org](http://donorschoose.org) pour administrer les prix et celui n'inclut que les écoles publiques américaines. Selon DonorsChoose.org, l'organisation accède à des données cohérentes et précises uniquement pour les écoles publiques.
 
-## Je ne suis pas aux États-Unis. Suis-je eligible pour les prix ?
+## Je ne suis pas aux États-Unis. Suis-je éligible pour les prix ?
 
-Due to a small full-time staff, Code.org is unable to handle the logistics of administering international prizes. Because of this people outside the US are unable to qualify for prizes.
+En raison d'une très petite équipe à temps plein, Code.org est incapable de gérer la logistique de l'administration des prix à l'international. Pour cette raison, les participants en dehors des États-Unis ne sont pas qualifiés pour ce prix.
 
-## When is the deadline to apply for the hardware prize?
+## Quelle est la date limite pour postuler au prix de matériel ?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) by November 16, 2015. Une école par états américains recevra un ensemble d'ordinateurs portables. Code.org will select and notify winners via email by December 1, 2015.
+Pour être admissible, l'ensemble de votre école doit s'inscrire à Une Heure de Code et remplir le a href="%= resolve_url('/prizes/hardware-signup') %">formulaire de demande de matériel</a> jusqu'au 16 novembre 2015. Une école par états américains recevra un ensemble d'ordinateurs portables. Code.org sélectionnera et contactera les gagnants par courriel jusqu'au 1er décembre 2014.
 
-## When is the deadline to be eligible to win a tech chat?
+## Quelle est la date limite pour être admissible à gagner un vidéo chat ?
 
-To qualify, you must register your classroom for the Hour of Code by November 2, 2015. Classrooms will win a video chat with a celebrity. Code.org will select and notify winners via email by December 1, 2015.
+Pour être admissible, vous devez inscrire votre classe à Une Heure de Code jusqu'au 2 novembre 2015. Des classes gagneront un vidéo chat avec une célébrité. Code.org sélectionnera et contactera les gagnants par courriel jusqu'au 1er décembre 2014.
 
-## When will I be notified if my school or classroom wins a prize?
+## Quand serai-je informé si mon école ou la classe gagne ?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
+Pour être admissible, l'ensemble de votre école doit s'inscrire à Une Heure de Code et remplir le a href="%= resolve_url('/prizes/hardware-signup') %">formulaire de demande de matériel</a> jusqu'au 16 novembre 2015. Code.org sélectionnera et contactera les gagnants par courriel jusqu'au 1er décembre 2014.
 
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
+## Si l'ensemble de mon école ne peut participer à Une Heure de Code au cours de la semaine de l'apprentissage des sciences informatiques (7-13 décembre), puis-je toujours bénéficier de ce prix ?
 
-Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 16th.
+Oui, il suffit de présenter un plan qui décrit comment l'ensemble de votre école participera sur une durée raisonnable et vous inscrire à Une Heure de Code jusqu'au 16 novembre.
 
 <%= view :signup_button %>

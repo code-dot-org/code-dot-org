@@ -32,12 +32,13 @@ module.exports = {
         '</xml>',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        testUtils.runOnStudioTick(30, function () {
           Studio.onPuzzleComplete();
-        }, 2000);
+        });
       },
       customValidator: function (assert) {
-        assert(document.getElementById('sprite0').getAttribute('visibility') === 'hidden');
+        assert(document.getElementById('sprite0').getAttribute('visibility') === 'hidden',
+          'sprite is hidden');
         return true;
       },
       expected: {

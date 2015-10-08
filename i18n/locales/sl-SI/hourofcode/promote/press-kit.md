@@ -22,10 +22,10 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 **Naredite načrt za svoj dogodek**
 
   * Razčlenite svoj načrt Ure za kodo.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organizirajte skupinske dejavnosti (lahko predstavite "nepovezane" programsko dejavnosti), ali pokažite, kaj so učenci ustvarili.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote#videos') %) to inspire.
+  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. Poiščite novinarje, ki pokrivajo izobraževanje ali lokalne dogodke v vašem kraju.**
 
@@ -35,7 +35,7 @@ Na spletu poiščite kontaktne podatke novinarja. Če jih ne najdete, pokličite
 
 **Kontaktirajte lokalne medije**
 
-Poskusite priti v stik preko elektronske pošte. Sporočilo mora biti kratko in sporočati: Zakaj bi drugim ljudem bilo mar za ta dogodek? Naj vsebuje kontaktne podatke (tudi številko mobilnega telefona) tistega, ki bo prisoten na dogodku. **See a [sample pitch to media](%= resolve_url('/promote#sample-emails') %):**
+Poskusite priti v stik preko elektronske pošte. Sporočilo mora biti kratko in sporočati: Zakaj bi drugim ljudem bilo mar za ta dogodek? Naj vsebuje kontaktne podatke (tudi številko mobilnega telefona) tistega, ki bo prisoten na dogodku. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %):**
 
 **Pripravite vprašanja o svojem šolskem dogodku. Tukaj je nekaj primerov:**
 

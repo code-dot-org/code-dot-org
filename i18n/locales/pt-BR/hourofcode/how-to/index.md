@@ -9,7 +9,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 1) Cadastre-se
 
   * Cadastre-se para sediar uma [Hora do Código](%= resolve_url('/') %) durante <%= campaign_date('short') %>.
-  * Promova seu evento da [Hora do Código](%= resolve_url('/resources') %) e incentive outras pessoas a organizarem eventos também.
+  * Promova seu evento da [Hora do Código](%= resolve_url('/promote') %) e incentive outras pessoas a organizarem eventos também.
 
 ## 2) Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Escolha um tutorial:
@@ -91,7 +91,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 ## 7) Comemore
 
   * [Imprima certificados](<%= resolve_url('https://code.org/certificates') %>) para seus alunos.
-  * Imprima adesivos com a mensagem ["Eu participei da Hora do Código!"](%= resolve_url('/resources/promote#stickers') %) para seus alunos.
+  * Imprima adesivos com a mensagem ["Eu participei da Hora do Código!"](%= resolve_url('/promote/resources#stickers') %) para seus alunos.
   * Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso, também!
 
 [col-33]

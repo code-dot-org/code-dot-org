@@ -9,6 +9,9 @@ Dashboard::Application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  # Always reload static js and css.
+  config.static_cache_control = 'must-revalidate, max-age=0'
+
   # Show full error reports
   config.consider_all_requests_local       = true
 
