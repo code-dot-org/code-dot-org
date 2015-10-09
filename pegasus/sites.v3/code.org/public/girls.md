@@ -31,11 +31,12 @@ Click on these role models below to learn about their computer science stories:
 Computer science is about making a difference in the world, creating new things, and helping others. It’ll help you succeed, whether you want to be a doctor, a lawyer, a journalist, or even the next President.
 
 
-### For more ideas, check out these helpful links from NCWIT:
+### For more ideas, check out these helpful links:
 - [10 ways to recruit girls to CS](https://www.ncwit.org/resources/top-10-ways-recruiting-high-school-women-your-computing-classes/top-10-ways-recruiting)
 - [Outreach guide for Latinas](http://www.ncwit.org/latinas-information-technology)
 - [Outreach guide for computer science](http://www.ncwit.org/resources/outreach-box-discovering-it)
 - [Fact sheet for participation by women](http://www.ncwit.org/infographic/3435)
+- [Vidcode: Online learning platform targeted to teenage girls](http://www.vidcode.io/)
 
 <a id="notes"></a>
 *Our recommendations summarize learnings from interviews with and written materials from CS educators, psychology researchers, as well as material from [NCWIT](http://www.ncwit.org/), [DotDiva](http://www.dotdiva.org/), Google, and other organizations dedicated to growing participation of women in technology. 
