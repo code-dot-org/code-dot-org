@@ -194,7 +194,6 @@ function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
   skin.defaultBackground = 'forest';
-  skin.defaultWallMap = 'blank';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 

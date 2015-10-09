@@ -2447,9 +2447,6 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   var numSrcRows = 8;
   var numSrcCols = 8;
 
-  var tileClass;
-  var tileClipClass;
-
   // We usually won't try jumbo size.
   var jumboSize = false;
 
@@ -2464,9 +2461,6 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
     srcCol = srcRow ?
                 Math.floor(Math.random() * constants.WallRandomCoordMax) :
                 1 + Math.floor(Math.random() * (constants.WallRandomCoordMax - 1));
-
-    tileClass = "randomTile";
-    tileClipClass = "randomTileClip";
   } else {
     // This wall value has been explicitly set.  It encodes the row & col from
     // the spritesheet of wall tile images.
@@ -2486,9 +2480,6 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
       // Double-size tiles are just a regular tile expanded to cover 2x2 tiles.
       tileSize = 2 * Studio.SQUARE_SIZE;
     }
-
-    tileClass = "specificTile";
-    tileClipClass = "specificTileClip";
   }
 
   // Attempt to load tiles that match the current background, if specified.
@@ -2502,7 +2493,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   var clipPath = document.createElementNS(SVG_NS, 'clipPath');
   var clipId = 'tile_clippath_' + Studio.tiles.length;
   clipPath.setAttribute('id', clipId);
-  clipPath.setAttribute('class', tileClipClass);
+  clipPath.setAttribute('class', "tile");
   var rect = document.createElementNS(SVG_NS, 'rect');
   rect.setAttribute('width', tileSize);
   rect.setAttribute('height', tileSize);
@@ -2514,7 +2505,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   var tile = document.createElementNS(SVG_NS, 'image');
   var tileId = 'tile_' + (Studio.tiles.length);
   tile.setAttribute('id', tileId);
-  tile.setAttribute('class', tileClass);
+  tile.setAttribute('class', "tileClip");
   tile.setAttribute('width', numSrcCols * tileSize);
   tile.setAttribute('height', numSrcRows * tileSize);
   tile.setAttribute('x', col * Studio.SQUARE_SIZE - srcCol * tileSize + addOffset);
@@ -3313,6 +3304,7 @@ Studio.setScoreText = function (opts) {
 };
 
 Studio.setBackground = function (opts) {
+
   if (opts.value === constants.RANDOM_VALUE) {
     // NOTE: never select the last item from backgroundChoicesK1, since it is
     // presumed to be the "random" item for blockly
@@ -3333,14 +3325,12 @@ Studio.setBackground = function (opts) {
 
     // Draw the tiles (again) now that we know which background we're using.
     if (level.wallMapCollisions) {
-      $(".specificTileClip").remove();
-      $(".specificTile").remove();
-      Studio.tiles = [];
-
       // Changing background can cause a change in the map used internally,
       // since we might use a different map to suit this background, so set
       // the map again.
-      Studio.setMap({value: Studio.wallMapRequested}, true);
+      if (Studio.wallMapRequested) {
+        Studio.setMap({value: Studio.wallMapRequested, forceRedraw: true});
+      }
     }
   }
 };
@@ -3348,9 +3338,14 @@ Studio.setBackground = function (opts) {
 /**
  * Set the wall map.
  * @param {string} opts.value - The name of the wall map.
- * @param {boolean} forceLoad - Force loading the map, even if it's already set.
+ * @param {boolean} opts.forceRedraw - Force drawing map, even if it's already set.
  */
 Studio.setMap = function (opts, forceLoad) {
+
+  if (!opts.value) {
+    return;
+  }
+
   if (opts.value === constants.RANDOM_VALUE) {
     // NOTE: never select the first item from mapChoices, since it is
     // presumed to be the "random" item for blockly
@@ -3377,7 +3372,7 @@ Studio.setMap = function (opts, forceLoad) {
     useMap = skin.getMap(Studio.background, opts.value);
   }
 
-  if (!forceLoad && useMap === Studio.wallMap) {
+  if (!opts.forceRedraw && useMap === Studio.wallMap) {
     return;
   }
 
@@ -3389,8 +3384,8 @@ Studio.setMap = function (opts, forceLoad) {
   Studio.wallMapRequested = opts.value;
 
   // Draw the tiles (again) now that we know which background we're using.
-  $(".specificTileClip").remove();
-  $(".specificTile").remove();
+  $(".tileClip").remove();
+  $(".tile").remove();
   Studio.tiles = [];
   Studio.drawMapTiles();
 
