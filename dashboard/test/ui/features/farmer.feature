@@ -5,7 +5,6 @@ Background:
   And I rotate to landscape
   Then I wait to see a dialog titled "Puzzle 1 of 11"
   And element ".modal-content p:nth-child(2)" has text "Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting. Move me to the pile of dirt and use the \"remove\" block to remove it."
-  And I see "#x-close"
   And I close the dialog
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
