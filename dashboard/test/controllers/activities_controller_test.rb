@@ -218,34 +218,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 1000, Activity.last.lines
   end
 
-  test "anonymous milestone does not allow unreasonably high lines of code" do
-    sign_out(@user)
-
-    expect_controller_logs_milestone_regexp(/9999999/)
-
-    @controller.expects :slog
-
-    assert_creates(LevelSource) do
-      assert_does_not_create(Activity, UserLevel) do
-        post :milestone, @milestone_params.merge(user_id: 0, lines: 9999999)
-      end
-    end
-
-    # record activity in session
-    assert_equal 100, client_state.level_progress(@script_level.level_id)
-
-    # don't count it in session either
-    assert_equal 1000, client_state.lines
-
-    # pretend it succeeded
-    assert_response :success
-
-    expected_response = build_expected_response(
-        total_lines: 1000, # No change
-        level_source: "http://test.host/c/#{assigns(:level_source).id}")
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-  end
-
   test "logged in milestone with messed up email" do
     # use update_attribute to bypass validations
     @user.update_attribute(:email, '')
@@ -628,69 +600,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
   end
 
-  test "anonymous milestone starting with empty session saves progress in section" do
-    sign_out @user
-
-    # do all the logging
-    @controller.expects :log_milestone
-    @controller.expects :slog
-
-    @controller.expects(:trophy_check).never # no trophy if not logged in
-
-    assert_creates(LevelSource) do
-      assert_does_not_create(Activity, UserLevel) do
-        post :milestone, @milestone_params.merge(user_id: 0)
-      end
-    end
-
-    # record activity in session
-    assert_equal 100, client_state.level_progress(@script_level.level_id)
-
-    # record the total lines of code in session
-    assert_equal 20, client_state.lines
-
-    assert_response :success
-
-    expected_response = build_expected_response(
-        total_lines: 20,
-        level_source: "http://test.host/c/#{assigns(:level_source).id}")
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-  end
-
-  test "anonymous milestone with existing session adds progress in session" do
-    sign_out @user
-
-    # set up existing session
-    client_state.set_level_progress(@script_level_prev.level_id, 50)
-    client_state.add_lines(10)
-
-    # do all the logging
-    @controller.expects :log_milestone
-    @controller.expects :slog
-
-    @controller.expects(:trophy_check).never # no trophy if not logged in
-
-    assert_creates(LevelSource) do
-      assert_does_not_create(Activity, UserLevel) do
-        post :milestone, @milestone_params.merge(user_id: 0)
-      end
-    end
-
-    # record activity in session
-    assert_equal 50, client_state.level_progress(@script_level_prev.level_id)
-    assert_equal 100, client_state.level_progress(@script_level.level_id)
-
-    # record the total lines of code in session
-    assert_equal 30, client_state.lines
-
-    assert_response :success
-
-    expected_response = build_expected_response(
-        total_lines: 30,
-        level_source: "http://test.host/c/#{assigns(:level_source).id}")
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-  end
-
   test "anonymous milestone not passing" do
     sign_out @user
 
@@ -713,42 +622,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
-  end
-
-  test "anonymous milestone with image saves image but does not save to gallery" do
-    sign_out @user
-
-    # set up existing session
-    client_state.set_level_progress(@script_level_prev.level_id, 50)
-    client_state.add_lines(10)
-
-    # do all the logging
-    @controller.expects :log_milestone
-    @controller.expects :slog
-
-    @controller.expects(:trophy_check).never # no trophy if not logged in
-
-    expect_s3_upload
-
-    assert_creates(LevelSource, LevelSourceImage) do
-      assert_does_not_create(Activity, UserLevel, GalleryActivity) do
-        post :milestone, @milestone_params.merge(user_id: 0, :save_to_gallery => 'true', image: Base64.encode64(@good_image))
-      end
-    end
-
-    # record activity in session
-    assert_equal 50, client_state.level_progress(@script_level_prev.level_id)
-    assert_equal 100, client_state.level_progress(@script_level.level_id)
-
-    # record the total lines of code in session
-    assert_equal 30, client_state.lines
-
-    assert_response :success
-
-    expected_response = build_expected_response(
-        total_lines: 30,
-        level_source: "http://test.host/c/#{assigns(:level_source).id}")
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
   test "does not save image when s3 upload fails" do
@@ -886,9 +759,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal true, new_level
     assert_equal false, new_level
 
-    sign_out @user
-    assert_equal true, new_level
-    assert_equal false, new_level
+    #No tests for anonymous users since that is all tracked client side
   end
 
   test 'trophy_check only on script with trophies' do
