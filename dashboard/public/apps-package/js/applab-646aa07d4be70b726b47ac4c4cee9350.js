@@ -1320,7 +1320,6 @@ Applab.reset = function(first) {
   designMode.parseFromLevelHtml(newDivApplab, isDesigning);
   designMode.loadDefaultScreen();
   if (Applab.isInDesignMode()) {
-    designMode.clearProperties();
     designMode.resetElementTray(isDesigning);
   }
 
@@ -2620,6 +2619,7 @@ var KeyCodes = require('../constants').KeyCodes;
 var designMode = module.exports;
 
 var currentlyEditedElement = null;
+var currentScreen = null;
 
 var GRID_SIZE = 5;
 
@@ -2694,13 +2694,6 @@ designMode.editElementProperties = function(element) {
   }
   currentlyEditedElement = element;
   designMode.renderDesignWorkspace(element);
-};
-
-/**
- * Clear the Properties pane of applab's design mode.
- */
-designMode.clearProperties = function () {
-  designMode.editElementProperties(null);
 };
 
 /**
@@ -2919,9 +2912,9 @@ designMode.onDeletePropertiesButton = function(element, event) {
 
   if (isScreen) {
     designMode.loadDefaultScreen();
+  } else {
+    designMode.editElementProperties(document.getElementById(currentScreen));
   }
-
-  designMode.clearProperties();
 };
 
 designMode.onDepthChange = function (element, depthDirection) {
@@ -3282,6 +3275,7 @@ designMode.createScreen = function () {
  * change, and opens the element property editor for the new screen.
  */
 designMode.changeScreen = function (screenId) {
+  currentScreen = screenId;
   var screenIds = [];
   $('.screen').each(function () {
     screenIds.push(this.id);
@@ -6751,7 +6745,7 @@ module.exports = React.createClass({displayName: "exports",
     var dropdownStyle = {
       display: 'inline-block',
       verticalAlign: 'top',
-      width: 130,
+      width: '100%',
       height: 28,
       marginBottom: 6,
       borderColor: '#949ca2'
@@ -6789,7 +6783,14 @@ module.exports = React.createClass({displayName: "exports",
     };
 
     var showDataButtonStyle = $.extend(
-      {},
+      {
+        float: 'right',
+        textAlign: 'left',
+        maxWidth: '100%',
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis'
+      },
       buttonStyle,
       inactive,
       this.props.hideViewDataButton ? hidden : null
@@ -6828,28 +6829,35 @@ module.exports = React.createClass({displayName: "exports",
     }
 
     return (
-      React.createElement("div", {className: this.props.hideToggle ? 'rightalign-contents' : 'justify-contents'}, 
-        React.createElement("button", {
-            id: "codeModeButton", 
-            style: $.extend({}, codeButtonStyle,
-                this.state.mode === Mode.CODE ? active : inactive,
-                this.props.hideToggle ? hidden : null), 
-            className: "no-outline", 
-            onClick: this.handleSetMode.bind(this, Mode.CODE)}, 
-          msg.codeMode()
-        ), 
-        React.createElement("button", {
-            id: "designModeButton", 
-            style: $.extend({}, designButtonStyle,
-                this.state.mode === Mode.DESIGN ? active : inactive,
-                this.props.hideToggle ? hidden : null), 
-            className: "no-outline", 
-            onClick: this.handleSetMode.bind(this, Mode.DESIGN)}, 
-          msg.designMode()
-        ), 
-        ' ', /* Needed for "text-align: justify;" to work. */ 
-        selectDropdown, 
-        showDataButton
+      React.createElement("table", {style: {width: '100%'}}, 
+        React.createElement("tbody", null, 
+          React.createElement("tr", null, 
+            React.createElement("td", {style: {width: '120px'}}, 
+              React.createElement("button", {
+                  id: "codeModeButton", 
+                  style: $.extend({}, codeButtonStyle,
+                      this.state.mode === Mode.CODE ? active : inactive,
+                      this.props.hideToggle ? hidden : null), 
+                  className: "no-outline", 
+                  onClick: this.handleSetMode.bind(this, Mode.CODE)}, 
+                msg.codeMode()
+              ), 
+              React.createElement("button", {
+                  id: "designModeButton", 
+                  style: $.extend({}, designButtonStyle,
+                      this.state.mode === Mode.DESIGN ? active : inactive,
+                      this.props.hideToggle ? hidden : null), 
+                  className: "no-outline", 
+                  onClick: this.handleSetMode.bind(this, Mode.DESIGN)}, 
+                msg.designMode()
+              )
+            ), 
+            React.createElement("td", {style: {maxWidth: 0}}, 
+              selectDropdown, 
+              showDataButton
+            )
+          )
+        )
       )
     );
   }
