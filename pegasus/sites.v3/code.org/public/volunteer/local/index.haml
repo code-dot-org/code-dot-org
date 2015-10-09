@@ -1,0 +1,65 @@
+---
+title: "Find a local volunteer for the Hour of Code"
+theme: responsive
+---
+-forbidden! unless dashboard_user[:admin]
+-search_location ||= nil
+-experience_s ||= nil
+-location_flexibility_ss ||= nil
+
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
+%script{type: "text/javascript", src: "/js/maplace.min.js"}
+%script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
+%script{type: "text/javascript", src: "/js/jquery.colorbox-min.js"}
+%script{type: "text/javascript", src: "/js/jquery.sticky.js"}
+%script{type: "text/javascript", src: "/js/volunteer-local.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+%link{rel: "stylesheet", type: "text/css", href: "/css/colorbox.css"}/
+%link{rel: "stylesheet", type: "text/css", href: "/css/volunteer-local.css"}/
+
+/[if lt IE 9]
+  %script{src: "/js/es5-shim.min.js"}
+
+%h1 Find a local volunteer for the Hour of Code
+
+%p
+  Enter your address to find a local volunteer. If there aren't any local volunteers available, search for volunteers in other cities who can participate remotely through a video conference. Or you can try finding a
+  %a{href: "https://education.skype.com/computerscience"} Skype guest speaker.
+
+%form#volunteer-search-form{role: "form", onsubmit: "event.preventDefault();"}
+  .form-section.row
+    .form-group.col-xs-6
+      %div
+        %input#location.form-control.input-lg{name: "location", placeholder: "Search my location", type: "text", value: search_location}/
+    .form-group.submit-btn
+      %button#btn-submit.btn.btn-default.input-lg{type: "submit"} Search
+  #volunteer-search-facets.form-section.row.display-none
+    %h3.col-xs-12.top-margin Narrow your search
+    .form-group.col-xs-8
+      %label.control-label.small{for: "location-flexibility"} How a volunteer can help
+      %div
+        %select#location-flexibility.form-control{name: "location_flexibility_ss[]", type: "select", multiple: true}
+          %option{selected: location_flexibility_ss.nil_or_empty?, value: ""}
+          -VolunteerEngineerSubmission2015.locations.each do |key, value|
+            %option{value: key, selected: (location_flexibility_ss||[]).include?(key.to_s)}= value
+    .form-group.col-xs-4
+      %label.control-label.small{for: "experience-level"} Experience level
+      %div
+        %select#experience-level.form-control{name: "experience_s", type: "select"}
+          %option{selected: experience_s.nil_or_empty?, value: ""}
+          -VolunteerEngineerSubmission2015.experiences.each do |key, value|
+            %option{value: key, selected: (experience_s||[]).include?(key.to_s)}= value
+
+#volunteer-search-results.row.display-none.top-margin
+  #volunteer-search-controls.col-xs-5
+    #controls
+  #volunteer-search-map.col-xs-7
+    #gmap
+.row
+  #volunteer-search-error.col-xs-12.display-none.top-margin
+
+#location-details.display-none
