@@ -34,20 +34,6 @@ Lint/UnusedBlockArgument:
 Lint/UnusedMethodArgument:
   Enabled: false
 
-# Offense count: 342
-Metrics/AbcSize:
-  Max: 330
-
-# Offense count: 3325
-# Configuration parameters: AllowURI, URISchemes.
-Metrics/LineLength:
-  Max: 801
-
-# Offense count: 3
-# Configuration parameters: CountComments.
-Metrics/ModuleLength:
-  Max: 321
-
 # Offense count: 2
 # Cop supports --auto-correct.
 Performance/Count:
