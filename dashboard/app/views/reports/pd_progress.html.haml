@@ -12,9 +12,7 @@
       data: data,
       colHeaders: headers,
       cells: function(row, col, prop) {
-        if(col == 12 || col == 19 || col == 26 || col == 34 || col == 37 ||
-           col == 45 || col == 52 || col == 59 || col == 63 || col == 73 ||
-           col == 77 || col == 81 || col == 82) {
+        if([12, 19, 26, 34, 37, 45, 52, 59, 63, 73, 77, 81, 82].index(col) != -1) {
           return cellProperties = {format: '0.00'};
         }
         return {};
