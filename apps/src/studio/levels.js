@@ -1651,7 +1651,7 @@ levels.js_hoc2015_move_two_items = {
 
 levels.js_hoc2015_move_item_destination = {
   "editCode": true,
-  "background": "forest",
+  "background": "snow",
   "codeFunctions": {
     "moveRight": null,
     "moveLeft": null,
@@ -1670,7 +1670,7 @@ levels.js_hoc2015_move_item_destination = {
   "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 4, 4, 4, 4, 0, 0], [0, 4,  4, 4, 4, 4, 4, 0], [0, 4,  0, 4, 4,256, 4, 0], [0, 4,1,16, 0, 0, 4, 0], [0, 4, 4, 4,  4, 4, 4, 0], [0, 0, 0, 0,  0, 0, 0, 0], [0, 0, 0, 0,  0, 0, 0, 0]],
+  "map": [[0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 4, 4, 4, 4, 0, 0], [0, 4,  4, 4, 4, 4, 4, 0], [0, 4,  0, 4, 4,1, 4, 0], [0, 4,1,16, 0, 0, 4, 0], [0, 4, 4, 4,  4, 4, 4, 0], [0, 0, 0, 0,  0, 0, 0, 0], [0, 0, 0, 0,  0, 0, 0, 0]],
   "instructions": "I see another item behind that obstacle. Can you bring it back to the destination?",
   "goalOverride": {
     "goalAnimation": "animatedGoal",
@@ -1701,14 +1701,19 @@ levels.js_hoc2015_move_item_destination_2 = {
   "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 0, 0,  4, 0, 0], [0, 4,  4, 4, 4,  0, 4, 0], [0, 4,  4,16, 0,  0, 4, 0], [0, 4,  0, 0, 4,  4, 4, 0], [0, 4,  1, 256, 0,  4, 4, 0], [0, 4,  4, 0, 4,  0, 0, 0], [0, 0,  4, 4, 4,  0, 0, 0]],
+  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 0, 0,  4, 0, 0], [0, 4,  4, 4, 4,  0, 4, 0], [0, 4,  4,16, 0,  0, 4, 0], [0, 4,  0, 0, 4,  4, 4, 0], [0, 4,  1, 1, 0,  4, 4, 0], [0, 4,  4, 0, 4,  0, 0, 0], [0, 0,  4, 4, 4,  0, 0, 0]],
   "embed": "false",
   "instructions": "Drag the code blocks into the workspace to help the character reach the destination.",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  }
 };
 
 levels.js_hoc2015_move_item_destination_3 = {
   "editCode": true,
-  "background": "snow",
+  "background": "ship",
   "textModeAtStart": true,
   "codeFunctions": {
     "moveRight": null,
@@ -1728,15 +1733,20 @@ levels.js_hoc2015_move_item_destination_3 = {
   "markerWidth": 50,
   "delayCompletion": 2000,
   "floating_score": true,  
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  4, 4, 4,  4, 4, 0], [0, 0, 4,  0, 0, 1,  4, 0], [0, 0,  4,0, 256,  4, 4, 0], [0, 4,  0, 16, 0,  0, 4, 0], [0, 4, 4, 4, 4,  0, 4, 0], [0, 0,  0, 0, 4,  4, 4, 0], [0, 0,  0, 0, 0, 0, 0, 0]],
+  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  4, 4, 4,  4, 4, 0], [0, 0, 4,  0, 0, 1,  4, 0], [0, 0,  4,0, 1,  4, 4, 0], [0, 4,  0, 16, 0,  0, 4, 0], [0, 4, 4, 4, 4,  0, 4, 0], [0, 0,  0, 0, 4,  4, 4, 0], [0, 0,  0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "Try typing the commands to get the item to our destination. Don’t forget to end with ();",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  }
 };
 
 
 levels.js_hoc2015_move_cross = {
   "editCode": true,
-  "background": "snow",
+  "background": "ship",
   "textModeAtStart": true,
   "codeFunctions": {
     "moveRight": null,
@@ -1756,9 +1766,14 @@ levels.js_hoc2015_move_cross = {
   "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 4, 0, 0, 0, 0], [0, 0, 4,  1, 4, 0, 0, 0], [0, 4, 256, 0, 256, 4, 0, 0], [0, 0,  4, 16, 4,  0, 0, 0], [0, 0, 0, 4, 0, 0, 0, 0], [0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 4, 0, 0, 0, 0], [0, 0, 4,  1, 4, 0, 0, 0], [0, 4, 1, 0, 1, 4, 0, 0], [0, 0,  4, 16, 4,  0, 0, 0], [0, 0, 0, 4, 0, 0, 0, 0], [0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "Type or drag the blocks to get both items to the destination.",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  }
 };
 
 
@@ -1768,14 +1783,20 @@ levels.js_hoc2015_event_two_items = {
   "editCode": true,
   "background": "forest",
   "wallMap": "blank",
-  "softButtons": ["leftButton", "rightButton"],
+  "softButtons": ["downButton", "upButton"],
   "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "whenLeft": null,
-    "whenRight": null
+    "moveUp": null,
+    "moveDown": null,
+    "whenUp": null,
+    "whenDown": null
   },
-  "startBlocks": "function whenLeft() {\n  \n}\nfunction whenRight() {\n  \n}",
+  "startBlocks": [
+    "function whenUp() {", 
+    "  ",
+    "}",
+    "function whenDown() {",
+    "  ",
+    "}"].join("\n"),
   "sortDrawOrder": true,
   "wallMapCollisions": true,
   "blockMovingIntoWalls": true,
@@ -1786,11 +1807,11 @@ levels.js_hoc2015_event_two_items = {
   "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 16, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
   "pinWorkspaceToBottom": "true",
   "embed": "false",
-  "instructions": "\"Bot1, I need you to get a critical message to the goals.\"",
-  "instructions2": "Use functions to make Bot1 move when you hit the arrow keys.",
+  "instructions": "\"BOT1, I need you to get a critical message to the GOALs.\"",
+  "instructions2": "Make BOT1 move when you hit the arrow keys.",
   "goalOverride": {
     "goalAnimation": "animatedGoal",
     "imageWidth": 100,
@@ -1836,7 +1857,19 @@ levels.js_hoc2015_event_four_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "function whenLeft() {\n  \n}\nfunction whenRight() {\n  \n}\nfunction whenUp() {\n  \n}\nfunction whenDown() {\n  \n}",
+  "startBlocks": [
+    "function whenLeft() {",
+    "  ",
+    "}",
+    "function whenRight() {",
+    "  ",
+    "}",
+    "function whenUp() {",
+    "  ",
+    "}",
+    "function whenDown() {",
+    "  ",
+    "}"].join("\n"),
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1852,7 +1885,7 @@ levels.js_hoc2015_event_four_items = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 16, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
 
   "embed": "false",
-  "instructions": "\"Get to all the goals as quickly as you can.\"",
+  "instructions": "\"Get to all the GOALs as quickly as you can.\"",
   "instructions2": "Move in all directions.",
   "goalOverride": {
     "goalAnimation": "animatedGoal",
@@ -1903,7 +1936,20 @@ levels.js_hoc2015_event_choose_character =
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "setBackground(\"forest\");\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": [
+    "setBackground(\"forest\");",
+    "function whenLeft() {",
+    "  moveLeft();",
+    "}",
+    "function whenRight() {",
+    "  moveRight();",
+    "}",
+    "function whenUp() {",
+    "  moveUp();",
+    "}",
+    "function whenDown() {",
+    "  moveDown();",
+    "}"].join("\n"),
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1920,7 +1966,7 @@ levels.js_hoc2015_event_choose_character =
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
 
   "instructions": "\"Time to visit another planet.\"",
-  "instructions2": "Use the setBackground(); command to change the background and change your bot to Bot2.",
+  "instructions2": "Use the dropdown to change the background.  Now find a command to change your BOT.",
   "callouts": [
     {
       "element_id": ".droplet-main-canvas",
@@ -1968,7 +2014,22 @@ levels.js_hoc2015_event_add_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "setBackground(\"snow\");\nsetMap(\"horizontal\");\nsetBot(\"bot2\");\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": [
+    "setBackground(\"snow\");",
+    "setMap(\"horizontal\");",
+    "setBot(\"bot2\");",
+    "function whenLeft() {",
+    "  moveLeft();",
+    "}",
+    "function whenRight() {",
+    "  moveRight();",
+    "}",
+    "function whenUp() {",
+    "  moveUp();",
+    "}",
+    "function whenDown() {",
+    "  moveDown();",
+    "}"].join("\n"),
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -1984,7 +2045,7 @@ levels.js_hoc2015_event_add_items = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"I’m seeing signs of increased activity on this planet.\"",
-  "instructions2": "Let’s do the same thing in text mode. Type, \"addCharacter(\"Character1\");\" at the top of your program to add a Character1. Can you add another Character? Then get them all.",
+  "instructions2": "Use the addCharacter(); command a couple times to add BIRDs at the start of your program.  Then, go get them.",
 };
 
 
@@ -2016,7 +2077,24 @@ levels.js_hoc2015_event_item_behavior = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "setBackground(\"snow\");\nsetMap(\"blobs\");\nsetBot(\"bot2\");\naddCharacter('roo');\naddCharacter('roo');\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": [
+    "setBackground(\"snow\");",
+    "setMap(\"blobs\");",
+    "setBot(\"bot2\");",
+    "addCharacter('roo');",
+    "addCharacter('roo');",
+    "function whenLeft() {",
+    "  moveLeft();",
+    "}",
+    "function whenRight() {",
+    "  moveRight();",
+    "}",
+    "function whenUp() {",
+    "  moveUp();",
+    "}",
+    "function whenDown() {",
+    "  moveDown();",
+    "}"].join("\n"),
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2030,8 +2108,8 @@ levels.js_hoc2015_event_item_behavior = {
   "floatingFcore": true,
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
-  "instructions": "\"It’s up to you Bot2.\"",
-  "instructions2": "Make the pigs flee by using \"setToFlee\" and then get them all.",
+  "instructions": "\"It’s up to you, BOT2.\"",
+  "instructions2": "Make the ROOs flee from BOT2.",
   "callouts": [
     {
       "element_id": "#droplet_palette_block_setToFlee",
@@ -2059,7 +2137,7 @@ levels.js_hoc2015_event_touch_items = {
   "wallMap": "circle",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
-    "whenTouchCharacter": null,
+    "whenTouchRoo": null,
 
     "setToChase": null,
     "setToFlee": null,
@@ -2082,7 +2160,28 @@ levels.js_hoc2015_event_touch_items = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "setBackground(\"snow\");\nsetMap(\"circle\");\nsetBot(\"bot2\");\naddCharacter('roo');\naddCharacter('roo');\naddCharacter('roo');\nfunction whenTouchCharacter() {\n  \n}\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": [
+    "setBackground(\"snow\");",
+    "setMap(\"circle\");",
+    "setBot(\"bot2\");",
+    "addCharacter('roo');",
+    "addCharacter('roo');",
+    "addCharacter('roo');",
+    "function whenTouchRoo() {",
+    "  ",
+    "}",
+    "function whenLeft() {",
+    "  moveLeft();",
+    "}",
+    "function whenRight() {",
+    "  moveRight();",
+    "}",
+    "function whenUp() {",
+    "  moveUp();",
+    "}",
+    "function whenDown() {",
+    "  moveDown();",
+    "}"].join("\n"),
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2098,8 +2197,8 @@ levels.js_hoc2015_event_touch_items = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
 
   "embed": "false",
-  "instructions": "\"Be careful, they might be behind you.\"",
-  "instructions2": "Every time you get a character, add a new random character to the scene.",
+  "instructions": "\"Be careful, they might be behind you!\"",
+  "instructions2": "Every time you get a ROO, add one MOUSE and one SPIDER to the world.",
   "callouts": [
     {
       "element_id": ".ace_gutter-cell:nth-of-type(8)",
@@ -2149,7 +2248,32 @@ levels.js_hoc2015_event_points = {
     "whenUp": null,
     "whenDown": null
   },
-  "startBlocks": "setBackground(\"ship\");\nsetMap(\"horizontal\");\nsetBot(\"bot1\");\naddCharacter('bird');\naddCharacter('bird');\naddCharacter('bird');\nfunction whenTouchCharacter() {\n  addCharacter(\"random\"\n);\n}\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchCharacter() {\n  \n}",
+  "startBlocks": [
+    "setBackground(\"ship\");",
+    "setMap(\"horizontal\");",
+    "setBot(\"bot1\");",
+    "addCharacter('bird');",
+    "addCharacter('bird');",
+    "addCharacter('bird');",
+    "function whenTouchCharacter() {",
+    "  addCharacter(\"random\"",
+    ");",
+    "}",
+    "function whenLeft() {",
+    "  moveLeft();",
+    "}",
+    "function whenRight() {",
+    "  moveRight();",
+    "}",
+    "function whenUp() {",
+    "  moveUp();",
+    "}",
+    "function whenDown() {",
+    "  moveDown();",
+    "}",
+    "function whenTouchCharacter() {",
+    "  ",
+    "}"].join("\n"),
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2165,7 +2289,7 @@ levels.js_hoc2015_event_points = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
 
   "embed": "false",
-  "instructions": "\"I’m counting on you, Bot1!\"",
+  "instructions": "\"I’m counting on you, BOT1!\"",
   "instructions2": "Change your score when you touch a character. Can you reach 100 points?",
 };
 
@@ -2194,14 +2318,38 @@ levels.js_hoc2015_event_random_items = {
     "moveLeft": { "category": "Commands" },
     "moveUp": { "category": "Commands" },
     "moveDown": { "category": "Commands" },
-
     "whenLeft": { "category": "Events" },
     "whenRight": { "category": "Events" },
     "whenUp": { "category": "Events" },
     "whenDown": { "category": "Events" },
-    "whenTouchCharacter": { "category": "Events" }
+    "whenTouchCharacter": { "category": "Events" },
+    "whenTouchMouse": { "category": "Events"},
+    "whenTouchSpider": { "category": "Events" }
   },
-  "startBlocks": "setBackground(\"ship\");\nsetMap(\"blobs\");\nsetBot(\"bot1\");\naddCharacter('spider');\naddCharacter('spider');\naddCharacter('mouse');\naddCharacter('mouse');\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchCharacter() {\n  changeScore(1);\n  \n}",
+  "startBlocks": [
+    "setBackground(\"ship\");",
+    "setMap(\"blobs\");",
+    "setBot(\"bot1\");",
+    "addCharacter('spider');",
+    "addCharacter('spider');",
+    "addCharacter('mouse');",
+    "addCharacter('mouse');",
+    "function whenLeft() {",
+    "  moveLeft();",
+    "}",
+    "function whenRight() {",
+    "  moveRight();",
+    "}",
+    "function whenUp() {",
+    "  moveUp();",
+    "}",
+    "function whenDown() {",
+    "  moveDown();",
+    "}",
+    "function whenTouchCharacter() {",
+    "  changeScore(1);",
+    "  ",
+    "}"].join("\n"),
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2217,7 +2365,7 @@ levels.js_hoc2015_event_random_items = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"Quick! They’re moving faster!\"",
-  "instructions2": "Ready to move faster? Increase your speed when you touch a Character3 and slow down when you hit a Character4.",
+  "instructions2": "Ready to move faster? Increase your speed when you touch a MOUSE and slow down when you hit a SPIDER.",
   "callouts": [
     {
       "element_id": ".droplet-palette-group-header.green",
@@ -2275,7 +2423,22 @@ levels.js_hoc2015_event_free = {
     "whenTouchSpider": { "category": "Events" },
     "whenTouchCharacter": { "category": "Events" }
   },
-  "startBlocks": "setBackground(\"forest\");\nsetMap(\"circle\");\nsetBot(\"bot1\");\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}",
+  "startBlocks": [
+    "setBackground(\"forest\");",
+    "setMap(\"circle\");",
+    "setBot(\"bot1\");",
+    "function whenLeft() {",
+    "  moveLeft();",
+    "}",
+    "function whenRight() {",
+    "  moveRight();",
+    "}",
+    "function whenUp() {",
+    "  moveUp();",
+    "}",
+    "function whenDown() {",
+    "  moveDown();",
+    "}"].join("\n"),
 
   "sortDrawOrder": true,
   "wallMapCollisions": true,
@@ -2290,7 +2453,7 @@ levels.js_hoc2015_event_free = {
 
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
-  "instructions": "\"You’re on your own now Bot1.\"",
+  "instructions": "\"You’re on your own now, BOT1.\"",
   "callouts": [
     {
       "element_id": ".droplet-palette-canvas",
@@ -2310,5 +2473,3 @@ levels.js_hoc2015_event_free = {
     }
   ],
 };
-
-
