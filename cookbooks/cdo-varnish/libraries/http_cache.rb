@@ -4,7 +4,7 @@
 class HttpCache
   STATIC_ASSETS = {
     # For static-asset extensions, don't forward any cookies or additional headers.
-    path: %w(cur pdf png gif jpeg jpg ico mp3 swf css js).map{|ext| "*.#{ext}"},
+    path: %w(cur pdf png gif jpeg jpg ico mp3 swf css js).map{|ext| "/*.#{ext}"},
     headers: [],
     cookies: 'none'
   }
@@ -30,7 +30,7 @@ class HttpCache
       pegasus: {
         behaviors: [
           {
-            path: 'api/hour/*',
+            path: '/api/hour/*',
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
@@ -38,25 +38,25 @@ class HttpCache
           # Dashboard-based API paths in Pegasus are session-specific, whitelist all session cookies and language header.
           {
             path: %w(
-              v2/*
-              v3/*
-              private*
+              /v2/*
+              /v3/*
+              /private*
             ) +
             # Todo: Collapse these paths into /private to simplify Pegasus caching config
             %w(
-              create-company-profile*
-              edit-company-profile*
-              teacher-dashboard*
-              manage-professional-development-workshops*
-              professional-development-workshop-surveys*
-              ops-dashboard*
-              poste*
+              /create-company-profile*
+              /edit-company-profile*
+              /teacher-dashboard*
+              /manage-professional-development-workshops*
+              /professional-development-workshop-surveys*
+              /ops-dashboard*
+              /poste*
             ),
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
           {
-            path: 'dashboardapi/*',
+            path: '/dashboardapi/*',
             proxy: 'dashboard',
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
@@ -71,18 +71,18 @@ class HttpCache
       dashboard: {
         behaviors: [
           {
-            path: 'v3/assets/*',
+            path: '/v3/assets/*',
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
           {
-            path: 'api/*',
+            path: '/api/*',
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
           STATIC_ASSETS,
           {
-            path: 'v2/*',
+            path: '/v2/*',
             proxy: 'pegasus',
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies

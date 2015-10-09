@@ -5,17 +5,15 @@ require_relative '../../cookbooks/cdo-varnish/libraries/helpers'
 class VarnishHelperTest < Minitest::Test
 
   def test_paths_to_regex
-    ext_regex = paths_to_regex('*.jpg')
+    ext_regex = paths_to_regex('/*.jpg')
     assert_equal 'req.url ~ "(\.jpg)(\?.*)?$"', ext_regex
 
-    assert_equal ext_regex, paths_to_regex(['*.jpg'])
-    # extension-wildcard with leading slash allowed
-    assert_equal ext_regex, paths_to_regex('/*.jpg')
+    assert_equal ext_regex, paths_to_regex(['/*.jpg'])
 
-    exts_regex = paths_to_regex(%w(*.jpg *.png))
+    exts_regex = paths_to_regex(%w(/*.jpg /*.png))
     assert_equal 'req.url ~ "(\.jpg|\.png)(\?.*)?$"', exts_regex
 
-    path_regex = paths_to_regex(%w(path1/* path2/*))
+    path_regex = paths_to_regex(%w(/path1/* /path2/*))
     assert_equal 'req.url ~ "^/path1/" || req.url ~ "^/path2/"',  path_regex
   end
 
@@ -33,10 +31,11 @@ class VarnishHelperTest < Minitest::Test
       '*/images',
       # Wildcard at both ends
       '*images*',
+      '/*images*',
       # Maximum path length
-      ('a' * 260) + '/*',
-      '[]/*',
-      '()/*',
+      '/' + ('a' * 260) + '/*',
+      '/[]/*',
+      '/()/*',
     ].map do |path|
       assert_raises(ArgumentError) { paths_to_regex path }
     end
@@ -80,7 +79,7 @@ STR
     },
     pegasus: {
       behaviors: [{
-          path: 'api/*',
+          path: '/api/*',
           cookies: 'all'
         }],
       default: {cookies: 'none'}
@@ -125,7 +124,7 @@ STR
     assert_equal 'all', ruby_behavior(pegasus, '/api/')[:cookies]
     assert_equal 'none', ruby_behavior(pegasus, '/')[:cookies]
 
-    assert_equal 'api/*', ruby_behavior(pegasus, '/api/1')[:path]
+    assert_equal '/api/*', ruby_behavior(pegasus, '/api/1')[:path]
     assert_nil ruby_behavior(pegasus, 'api/1')[:path]
     assert_nil ruby_behavior(pegasus, '/test/api/1')[:path]
   end

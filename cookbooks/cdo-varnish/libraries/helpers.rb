@@ -10,6 +10,9 @@ def normalize_paths(paths)
   paths = [paths] unless paths.is_a?(Array)
   paths.map(&:dup).partition do |path|
     # Strip leading slash
+    if path[0] != '/'
+      raise ArgumentError.new("Invalid path: #{path}")
+    end
     path.gsub!(/^\//,'')
     is_extension = path[0] == '*'
     if !valid_path?(path) ||
@@ -22,6 +25,13 @@ def normalize_paths(paths)
     path.gsub!(/[.+$"]/){|s| '\\' + s}
     is_extension
   end
+end
+
+# Ensures paths are valid, but don't return any processed results.
+# Used by the CloudFront layer to avoid duplicating path-validation logic.
+def validate_paths(paths)
+  normalize_paths paths
+  nil
 end
 
 # The maximum length of a path pattern is 255 characters.

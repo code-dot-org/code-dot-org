@@ -3,6 +3,7 @@ require 'digest'
 require 'aws-sdk'
 require 'cdo/session'
 require_relative '../../../cookbooks/cdo-varnish/libraries/http_cache'
+require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
 
 # Manages application-specific configuration and deployment of AWS CloudFront distributions.
 module AWS
@@ -98,6 +99,7 @@ module AWS
       behaviors = config[:behaviors].map do |behavior|
         paths = behavior[:path]
         paths = [paths] unless paths.is_a? Array
+        validate_paths paths
         paths.map do |path|
           cache_behavior behavior, path
         end

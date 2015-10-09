@@ -22,8 +22,8 @@ HTTP cache layers.
 - `behaviors`: Array of behaviors. For a given HTTP request, `behaviors` is searched in-order
   until the first matching `path` is found. If no `path` matches the request, the `default` behavior is used.
   - `path`: Path string to match this behavior against.
-    A single `*`-wildcard is required, either an extension-wildcard `*.jpg` or
-    path-wildcard `api/*`.
+    A single `*`-wildcard is required, either an extension-wildcard `/*.jpg` or
+    path-wildcard `/api/*`.
     - `path` can be a String or an Array. If it is an Array, a separate
       behavior will be generated for each element.
     - Paths match the CloudFront [path pattern](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesPathPattern)
@@ -44,7 +44,7 @@ HTTP cache layers.
     specified origin. (Currently either `'dashboard'` or `'pegasus'`)
     - Note: paths are not rewritten, so e.g., a GET request
       to `server1.code.org/here/abc` configured with the behavior
-      `{path: 'here/*' proxy: 'dashboard' }` will proxy its request to
+      `{path: '/here/*' proxy: 'dashboard' }` will proxy its request to
       `server1-studio.code.org/here/abc`.
     - Note: `proxy` is not yet implemented in CloudFront.
       (Proxies will still work correctly when passed through to Varnish.)
