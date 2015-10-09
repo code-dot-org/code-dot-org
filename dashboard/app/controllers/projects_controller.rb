@@ -44,6 +44,7 @@ class ProjectsController < ApplicationController
   def show
     sharing = params[:share] == true
     readonly = params[:readonly] == true
+
     level_view_options(
         hide_source: sharing,
         share: sharing,
