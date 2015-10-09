@@ -10,14 +10,11 @@
 # WARNING (email notification, HipChat yellow message): The process exited with a non-0 exit code
 #   or returned output.
 #
-# ERRROR (not currently differentiated): A non-0 exit code could be elevated to mean error and
+# ERROR (not currently differentiated): A non-0 exit code could be elevated to mean error and
 #   result in a red HipChat message and/or channel notification.
 #
 # FUTURE THOUGHTS: It may make sense to deliver WARNING and ERROR cases to HoneyBadger.io in
 #   addition to (or instead of) HipChat.
-#
-# PROPER LOCATION: This script should move to `/bin`. It's presence in `/aws` is an artifact of
-#   the time prior to using Chef.
 #
 # CRONJOBs are defined the crontab: `chef/cookbooks/cdo-apps/templates/default/crontab.erb`.
 #
@@ -25,6 +22,8 @@
 require 'mail'
 require_relative '../deployment.rb'
 require 'cdo/hip_chat'
+require 'cdo/honeybadger'
+require 'open3'
 
 #
 # email_notify - deliver an email notification if appropriate. the method requires sendmail to
@@ -56,14 +55,15 @@ def email_notify(command, status, content, recipient)
 end
 
 #
-# hipchat_notify - deliver a notification to this environment's log channel.
+# honeybadger_notify - log an error to honeybadger.
 #
-def hipchat_notify(command, status, content, recipient)
-  return if content.empty? && status == 0
-  return if recipient == 'dev+build@code.org' && status == 0
+def honeybadger_notify command, exitstatus, stdout, stderr
+  Honeybadger.configure do |config|
+    config.api_key = CDO.dashboard_honeybadger_api_key
+    config.environment_name = ENV['RACK_ENV']
+  end
 
-  message = "/quote #{command} returned (#{status}):\n#{content}".strip
-  HipChat.log message, color: 'yellow', message_format: 'text'
+  Honeybadger.notify_command_error command, exitstatus, stdout, stderr
 end
 
 #
@@ -72,10 +72,12 @@ end
 #
 def main()
   command = ARGV[0]
-  result = `#{command} 2>&1`.strip # `2>&1` capture both STDOUT and STDERR into result
-  status = $?.exitstatus
-  hipchat_notify command, status, result, ARGV[1]
-  email_notify command, status, result, ARGV[1]
+  stdout, stderr, status = Open3.capture3(command)
+  result = stdout + stderr
+  exitstatus = status.exitstatus
+
+  honeybadger_notify command, exitstatus, stdout, stderr
+  email_notify command, exitstatus, result, ARGV[1]
 end
 
 main()
