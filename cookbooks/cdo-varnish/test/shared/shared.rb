@@ -99,7 +99,9 @@ def local_request(url, headers={}, cookies={})
   _request("#{LOCALHOST}:#{DASHBOARD_PORT}#{url}", headers, cookies)
 end
 
-# Send an HTTP request through the proxy cache.
+# Send an HTTP request through the current proxy-cache configuration.
+# The proxy-cache configuration is CloudFront+Varnish when $cloudfront=true,
+# and Varnish-only when $cloudfront=false.
 def proxy_request(url, headers={}, cookies={}, method='GET')
   headers.merge!(host: $cloudfront ? 'cdo.ngrok.io' : "#{ENVIRONMENT}-studio.code.org")
   headers.merge!('X-Forwarded-Proto' => 'https')
