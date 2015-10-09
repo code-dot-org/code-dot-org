@@ -29,7 +29,7 @@
   var basePage = '#{ search_for_teachers_path }';
   var baseAddressFilter = '#{ params[:addressFilter]}';
   var baseEmailFilter = '#{ params[:emailFilter]}';
-  var data = eval(#{ data.try(:to_json)});
+  var data = #{ data.try(:to_json)};
   $(function() {
     var addressFilter = $('#addressFilter');
     var emailFilter = $('#emailFilter');
@@ -57,7 +57,6 @@
   }
   $("#teacherTable").handsontable({
     data: data,
-    colHeaders: #{ headers.try(:to_json)},
   });
 
 %br/

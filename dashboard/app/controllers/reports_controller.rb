@@ -58,10 +58,10 @@ SQL
 
   def search_for_teachers
     authorize! :read, :reports
-    address_filter = params[:addressFilter]
-    email_filter = params[:emailFilter]
     fields = ['id', 'name', 'email', 'num_students']
-    teachers = User.find_by_sql(<<SQL)
+    email_filter = params[:emailFilter]
+    address_filter = params[:addressFilter]
+    query = <<-SQL
 SELECT
   u.id, u.name, u.email, COUNT(f.student_user_id) AS num_students
 FROM (
@@ -78,7 +78,7 @@ LEFT JOIN (
 ON u.id = f.user_id
 GROUP BY u.id, u.name, u.email
 SQL
-
+    teachers = User.find_by_sql(query)
     render locals: {headers: fields, data: teachers}
   end
 
