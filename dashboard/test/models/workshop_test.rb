@@ -21,7 +21,7 @@ class WorkshopTest < ActiveSupport::TestCase
     @old_workshop = create_workshop [[Time.now.utc - 10.days, Time.now.utc - 9.days]]
     @tomorrow_workshop = create_workshop [[Time.now.utc + 1.days, Time.now.utc + 1.days + 1.hour]]
 
-    now = Date.today
+    now = Time.zone.today
     today_start = Time.new(now.year, now.month, now.mday, 9, 0, 0, 0)
     today_end = Time.new(now.year, now.month, now.mday, 17, 0, 0, 0)
 
