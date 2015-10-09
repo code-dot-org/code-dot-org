@@ -1009,6 +1009,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
   // explicitly
   if (!utils.browserSupportsCssMedia()) {
     visualization.style.height = newVizHeightString;
+    visualization.style.width = newVizWidthString;
   }
   var scale = (newVizWidth / this.nativeVizWidth);
 
