@@ -476,5 +476,12 @@
   "whenTouchWallTooltip": "Execute as ações abaixo quando o personagem tocar em uma parede.",
   "whenUp": "quando a seta para cima estiver pressionada",
   "whenUpTooltip": "Execute as ações abaixo quando a tecla com a seta para cima estiver pressionada.",
-  "yes": "Sim"
+  "yes": "Sim",
+  "calloutPlaceCommandsHere": "Place commands here",
+  "calloutPlaceCommandsAtTop": "Place commands to set up your game at the top",
+  "calloutTypeCommandsHere": "Type your commands here",
+  "calloutCharactersMove": "These new commands let you control how the characters move",
+  "calloutPutCommandsTouchCharacter": "Put a command here to have it happen when you touch a character",
+  "calloutClickCategory": "Click a category header to see commands in each category",
+  "calloutTryOutNewCommands": "Try out all the new commands you’ve unlocked"
 }
