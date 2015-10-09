@@ -174,7 +174,7 @@ browser_features = $browsers.product features
 
 HipChat.log "Starting #{browser_features.count} <b>dashboard</b> UI tests in #{$options.parallel_limit} threads</b>..."
 
-Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |browser, feature|
+Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
   feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
   browser_name = browser['name'] || 'UnknownBrowser'
   test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
