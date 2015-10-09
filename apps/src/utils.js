@@ -297,3 +297,22 @@ exports.getPegasusHost = function() {
       }
   }
 };
+
+/**
+ * IE9 throws an exception when trying to access the media field of a stylesheet
+ */
+exports.browserSupportsCssMedia = function () {
+  var styleSheets = document.styleSheets;
+  for (var i = 0; i < styleSheets.length; i++) {
+    var rules = styleSheets[i].cssRules || styleSheets[i].rules;
+    try {
+      if (rules.length > 0) {
+        // see if we can access media
+        var media = rules[0].media;
+      }
+    } catch (e) {
+      return false;
+    }
+  }
+  return true;
+};

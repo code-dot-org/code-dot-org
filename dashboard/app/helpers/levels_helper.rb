@@ -301,6 +301,7 @@ module LevelsHelper
     embed
     share
     hide_source
+    script_level_id
   )
   # Sets custom level options to be used by the view layer. The option hash is frozen once read.
   def level_view_options(opts = nil)
