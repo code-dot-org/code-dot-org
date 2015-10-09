@@ -327,6 +327,83 @@ module.exports = {
     },
 
     {
+      description: "running from design mode switches to default screen",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        // enter design mode
+        $("#designModeButton").click();
+
+        // add a screen
+        testUtils.dragToVisualization('SCREEN', 10, 10);
+        validatePropertyRow(0, 'id', 'screen2', assert);
+        assert.equal($('#designModeViz').is(':visible'), true, 'designModeViz is visible');
+        assert.equal($('#designModeViz #screen1')[0].style.display === 'none', true, 'screen 1 hidden');
+        assert.equal($('#designModeViz #screen2')[0].style.display === 'none', false, 'screen 2 visible');
+
+        // should be on screen 1 after run button click
+        $("#runButton").click();
+        assert.equal($('#divApplab').is(':visible'), true, 'divApplab is visible');
+        assert.equal($('#divApplab #screen1')[0].style.display === 'none', false, 'screen 1 visible');
+        assert.equal($('#divApplab #screen2')[0].style.display === 'none', true, 'screen 2 hidden');
+
+        // design toggle row still shows design mode
+        var orange = 'rgb(255, 160, 0)';
+        var white = 'rgb(255, 255, 255)';
+        assert.equal(orange, $("#designModeButton").css('background-color'),
+          'expected Design button (active) to have orange background.');
+        assert.equal(white, $("#codeModeButton").css('background-color'),
+          'expected Code button (inactive) to have white background.');
+
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "switching to code mode while running in design mode doesn't change screen",
+      editCode: true,
+      xml: 'setScreen("screen2");',
+      runBeforeClick: function (assert) {
+        // enter design mode
+        $("#designModeButton").click();
+
+        // add a screen
+        testUtils.dragToVisualization('SCREEN', 10, 10);
+        validatePropertyRow(0, 'id', 'screen2', assert);
+        assert.equal($('#designModeViz').is(':visible'), true, 'designModeViz is visible');
+        assert.equal($('#designModeViz #screen1')[0].style.display === 'none', true, 'screen 1 hidden');
+        assert.equal($('#designModeViz #screen2')[0].style.display === 'none', false, 'screen 2 visible');
+
+        testUtils.runOnAppTick(Applab, 2, function () {
+          // should be on screen 2 after run
+          assert.equal($('#divApplab').is(':visible'), true, 'divApplab is visible');
+          assert.equal($('#divApplab #screen1')[0].style.display === 'none', true, 'screen 1 hidden after run');
+          assert.equal($('#divApplab #screen2')[0].style.display === 'none', false, 'screen 2 visible after run');
+
+          // return to code mode, screen 2 still visible
+          $("#codeModeButton").click();
+          assert.equal($('#divApplab').is(':visible'), true, 'divApplab is visible');
+          assert.equal($('#divApplab #screen1')[0].style.display === 'none', true, 'screen 1 hidden after code mode');
+          assert.equal($('#divApplab #screen2')[0].style.display === 'none', false, 'screen 2 visible after code mode');
+
+          // add a completion on timeout since this is a freeplay level
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
       description: "add/remove an element to a screen",
       editCode: true,
       xml: "",
