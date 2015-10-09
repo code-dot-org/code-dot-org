@@ -36,9 +36,8 @@ class OpsMailer < ActionMailer::Base
 
     subject = "Important: Your #{@workshop.phase_long_name} workshop is coming up in
        #{(@workshop.segments.first.start.to_date - Date.today).to_i} days"
-    if @workshop.phase_info && @workshop.phase_info[:prerequisite_phase]
-      @prerequisite_phase = ActivityConstants::PHASES[@workshop.phase_info[:prerequisite_phase]]
-      subject += ". Complete #{@prerequisite_phase[:long_name]}"
+    if @workshop.prerequisite_phase
+      subject += ". Complete #{@workshop.prerequisite_phase[:long_name]}"
     end
 
     mail content_type: 'text/html', subject: subject, to: @recipient.email, from: 'pd@code.org'
