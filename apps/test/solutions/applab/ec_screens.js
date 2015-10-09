@@ -20,12 +20,6 @@ function validatePropertyRow(index, label, value, assert) {
   assert.equal(propertyRow.children(1).children(0).val(), value);
 }
 
-function validateEmptyDesignProperties(assert) {
-  var designProperties = document.getElementById('design-properties');
-  assert.equal(designProperties.children.length, 1);
-  assert.equal(designProperties.children[0].tagName, 'P');
-}
-
 module.exports = {
   app: "applab",
   skinId: "applab",
@@ -68,9 +62,9 @@ module.exports = {
         assert.equal($(screenSelector).val(), 'screen1');
         assert.equal($('#designWorkspace').is(':visible'), true);
 
-        // initially no property row container
-        assert.equal($("#propertyRowContainer").length, 0,
-            'expected no design property row container');
+        // initial property row container should be the default screen
+        assert.equal($("#propertyRowContainer input:eq(0)").val(), 'screen1',
+            'expected default screen property row container');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
@@ -158,7 +152,8 @@ module.exports = {
 
         ReactTestUtils.Simulate.click($("#design-properties button").eq(-1)[0]);
 
-        validateEmptyDesignProperties(assert);
+        assert.equal($("#propertyRowContainer input:eq(0)").val(), 'screen1',
+            'expected default screen property row container');
         assert.equal($("#divApplab").children().length, 1, 'has one screen divs');
         assert.equal($(screenSelector).val(), 'screen1');
 
