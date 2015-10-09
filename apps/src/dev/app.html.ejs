@@ -15,6 +15,7 @@
 <% if ((app === "maze" && options.levelId.indexOf('3_') === 0) ||
        (app === "applab" && options.levelId.indexOf('ec_') === 0) ||
        (app === "studio" && options.levelId.indexOf('ec_') === 0) ||
+       (app === "studio" && options.levelId.indexOf('js_') === 0) ||
        (app === "turtle" && options.levelId.indexOf('ec_') === 0) ||
        (app === "netsim")) { -%>
   <% if (options.debugInterpreter) { -%>
@@ -40,6 +41,7 @@
   <script type="text/javascript" src="../js/blockly.js"></script>
   <script type="text/javascript" src="../js/<%= options.locale %>/blockly_locale.js"></script>
 <% } -%>
+  <script src="https://fb.me/react-0.13.3.js"></script>
   <script type="text/javascript" src="../js/common.js"></script>
   <script type="text/javascript" src="../js/<%= options.locale %>/common_locale.js"></script>
   <script type="text/javascript" src="../js/<%= options.locale %>/<%= app %>_locale.js"></script>

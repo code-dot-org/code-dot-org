@@ -1,13 +1,17 @@
 name 'U3L14 - Matching Events to Description'
-title 'Event triggers'
-description 'Match the event type name with the description of what triggers it.'
-question 'Triggers constantly while moving over a button.'
+question 'Triggers whenever the mouses moves'
 answer 'mousemove'
 question 'Triggers once, the instant mouse hovers over the button'
 answer 'mouseover'
-question 'Triggers when mouse button is clicked once'
+question 'Triggers when mouse the button is clicked once'
 answer 'click'
 question 'Triggers when mouse button is released'
 answer 'mouseup'
 question 'Triggers when mouse button is pressed'
 answer 'mousedown'
+
+markdown <<MARKDOWN
+# Mouse Events
+
+Match the mouse events you just used with their descriptions. Feel free to go back if you need to check on some.
+MARKDOWN

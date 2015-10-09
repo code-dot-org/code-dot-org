@@ -1,5 +1,4 @@
 /* global $ */
-var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
@@ -139,7 +138,7 @@ module.exports = {
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
     element.textContent = 'text';
-    element.style.color = '#000000';
+    element.style.color = '#333333';
     element.style.backgroundColor = '';
 
     this.resizeToFitText(element);

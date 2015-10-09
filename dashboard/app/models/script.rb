@@ -41,6 +41,7 @@ class Script < ActiveRecord::Base
   TWENTY_FOURTEEN_NAME = 'events'
   JIGSAW_NAME = 'jigsaw'
   HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
+  HOC2015_NAME = 'hoc2015' # name of the 2015 hour of code script
   FROZEN_NAME = 'frozen'
   PLAYLAB_NAME = 'playlab'
   INFINITY_NAME = 'infinity'

@@ -1,0 +1,94 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-07T15:53:49.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "button": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "setPosition": null,
+      "textLabel": {
+        "params": [
+          "\"id\"",
+          "\"text\""
+        ]
+      },
+      "image": null,
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "getX": null,
+      "getY": null,
+      "getDirection": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_max": null,
+      "randomNumber_min_max": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Replace the image in your application with one of your own. (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "start_blocks": "button(\"moveBtn\", \"move me\");\r\nonEvent(\"moveBtn\", \"mouseover\", function(){\r\n  setPosition(\"moveBtn\",randomNumber(320), randomNumber(480), 100, 100);\r\n});\r\n",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "app_width": "320",
+    "app_height": "480",
+    "markdown_instructions": "# New Elements and Events: Choosing Images\r\n\r\n**Adding Images You Find Online**: The second parameter of the `image` command allows you to select a different image for your application by providing its URL. Read the documentation for tips on how to find an image's URL.\r\n\r\n**Adding Images from Your Computer:** It is also possible to add images saved on your computer. Click the word \"Choose\" below the arrow in the `image` block. \r\n\r\n![](https://images.code.org/e726e56fd3e4c7cd4a0d58cba731a855-image-1444240440116.53.49 PM.png)\r\n\r\nYou'll be taken to a \"Choose Assets\" screen which will allow you to select an image to upload to your app.\r\n\r\n![](https://images.code.org/4e33ebc4011b5eb6590f573ada3ed1da-image-1444241056243.04.04 PM.png)\r\n\r\n# Do This\r\n\r\n* **Check the documentation** for tips on selecting your own image using the `image` command.\r\n\r\n* **Change your image** to one you've found online or from your own computer",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "U3L16 - projectTemplate"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

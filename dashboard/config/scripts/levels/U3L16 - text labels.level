@@ -53,7 +53,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Introducing textLabels.  First try replacing your button with a textLabel.  Will the text respond to events just like the button?  Try connecting an event handler to it.  We've started you out with code similar to the result of the last level, you can copy your code from that level into here if you prefer. ",
+    "instructions": "Use the textLabel command to replace the button in your program with a text label. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -70,9 +70,21 @@
     "free_play": "true",
     "start_blocks": "button(\"moveBtn\", \"move me\");\r\nonEvent(\"moveBtn\", \"mouseover\", function(){\r\n  setPosition(\"moveBtn\",randomNumber(320), randomNumber(480), 100, 100);\r\n});\r\n",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false",
+    "autocomplete_palette_apis_only": "true",
     "app_width": "320",
-    "app_height": "480"
+    "app_height": "480",
+    "encrypted_examples": "N93ByHEA/qVWdZ8GyOwa23pARoHUKD4ZieDbS131VBxClWGQzQRC7DXm1HzY\n/8M8\n",
+    "markdown_instructions": "# New Elements and Events: Text Labels\r\n\r\nThe UI controls toolbox contains an element called `textLabel`. A text label is what it sounds like: plain text that you can put in your app. Even though it's plain text you can still move / resize it like you would a button using `setPosition`, and you can attach event handlers to it as well.\r\n\r\n# Do This\r\n\r\n* **Read the documentation** for `textLabel`<img src=\"https://images.code.org/fe2ce5f335fd124dc3052270ca0af31f-image-1444336014658.gif\" style=\"float: right\">\r\n\r\n* **Modify** the program so that your button is now a text label. Just as before, it should move randomly around the screen when clicked. You can make the text whatever you like.\r\n\r\n* **Tip:** If you reuse your button's ID you'll only need to change a single line of code to make your program work. Once you have your program working **choose a descriptive and meaningful ID** for your text label and make the appropriate changes in the event handler.\r\n\r\n<br>\r\n<br>\r\n<br>",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "project_template_level_name": "U3L16 - projectTemplate"
   }
 }]]></config>
   <blocks/>

@@ -1,7 +1,7 @@
 %p
   Dear #{@recipient.ops_first_name},
 %p
-  We’re looking forward to seeing you at your #{@workshop.phase_info[:long_name]} workshop on #{@workshop.segments.first.start.strftime("%A, %B %d")}! Together with your peers and facilitators, you’ll gain the support and resources you need to make a difference at your school.
+  We’re looking forward to seeing you at your #{@workshop.phase_long_name} workshop on #{@workshop.segments.first.start.strftime("%A, %B %d")}! Together with your peers and facilitators, you’ll gain the support and resources you need to make a difference at your school.
 %p
   As part of your commitment to this program, you are expected to participate in this workshop. If you have any conflicts with these dates, please email
   %a{href:'mailto:pd@code.org'}
@@ -34,24 +34,23 @@
 %h3
   What to bring
 - if @workshop.phase == 2
-  -if @workshop.program_type.to_i == 3
+  - if @workshop.program_type.to_i == 3
     %p
       Laptop (optional), water bottle, and snacks
-  -else
+  - else
     %p
       Laptop and charger, water bottle, and snacks
-- elsif @workshop.phase >= 4 && @workshop.phase <= 8
-  -if @workshop.program_type.to_i == 3
+- elsif @workshop.phase && (@workshop.phase >= 4 && @workshop.phase <= 8)
+  - if @workshop.program_type.to_i == 3
     %p
       Curriculum guide, green journal, laptop and charger, water bottle, and snacks
-  -else
+  - else
     %p
       Curriculum guide, laptop and charger, water bottle, and snacks
--if @workshop.instructions.to_s != ''
-  %h3
-    Notes
-  %p
-    #{@workshop.instructions}
+
+- if @workshop.instructions.to_s != ''
+  %h3 Notes
+  %p= @workshop.instructions
 %p
   See you soon,
   %br

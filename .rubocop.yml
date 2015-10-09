@@ -25,3 +25,12 @@ Style/DotPosition:
 
 Style/ExtraSpacing:
   Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false

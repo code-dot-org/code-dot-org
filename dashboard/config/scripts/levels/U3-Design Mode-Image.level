@@ -1,0 +1,91 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-07T17:54:33.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Recreate the 'chaser-game' from the last lesson.  (Click to see detailed instructions).",
+    "markdown_instructions": "# Adding Images\r\n\r\nYou've now added a working button through Design Mode! Nice work! We are now going to look at a different type of UI element we can add through Design Mode: Images.  \r\n\r\n**Goal:** Recreate the 'chaser-game' from the last lesson. \r\n\r\n# Do This\r\n\r\n* Swith to Design Mode and **delete the button**. To find delete: go to the button Properties, scroll to bottom, hit delete. **Note:** You may have to click on the button to get its Properties to show up.\r\n\r\n* Switch to Design Mode and **add an Image element**. No picture will appear yet. You need to pick one. \r\n\r\n* **Add a picture by uploading or using a URL.** To upload a picture: In Properties Tab, **find picture property and click on choose**. The Assets Manager will pop up. Click 'Upload File' and choose your file. **Note:** You can always see all your assets by clicking the gear at the top right of the Design Mode Toolbox. \r\n\r\n* **Insert an event handler** for the image.\r\n\r\n* In Code Mode, **change the event type to 'mouseover'**.\r\n\r\n* Test it out. You should have just recreated the 'chaser-game'! Easier than last time right?",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "U3 - Design Mode 1",
+    "code_functions": {
+      "button": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "setPosition": null,
+      "textLabel": {
+        "params": [
+          "\"id\"",
+          "\"text\""
+        ]
+      },
+      "image": null,
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "getX": null,
+      "getY": null,
+      "getDirection": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_max": null,
+      "randomNumber_min_max": null,
+      "console.log": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null
+    }
+  }
+}]]></config>
+  <blocks/>
+</Applab>

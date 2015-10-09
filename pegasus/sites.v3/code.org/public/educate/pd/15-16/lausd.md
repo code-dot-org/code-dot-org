@@ -10,6 +10,7 @@ nav: pd2_nav
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
+- [I'm attending Counselor-Administrator PD](#counselor-admin)
 
 <a id="csp"></a>
 ## Computer Science Principles
@@ -91,7 +92,7 @@ Breakfast and lunch will be served.
 
 Alliance College-Ready Public Schools<br/>
 515 Columbia Ave<br/>
-Room TBD<vr/>
+Room TBD<br/>
 Los Angeles, CA 90017<br/>
 
 **What to bring to Phase 3 quarterly sessions:**
@@ -209,6 +210,46 @@ Curriculum guide
 Snacks
 <br/>
 Water
+
+
+[**Back to the top**](#top)
+
+<a id="counselor-admin"></a>
+
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
+
+
+### Counselors##
+
+**Save the date**
+
+Monday, October 19, 2015 <br/>
+8:30am - 10:30am
+
+**Location**
+
+Los Angeles Unified School District<br/>
+333 So. Beaudry Avenue<br/>
+Room 204 - 2nd floor <br/>
+Los Angeles 90017<br/>
+
+
+### Administrators##
+
+**Save the date**
+
+Tuesday, October 20, 2015 <br/>
+8:30am - 10:30am
+
+**Location**
+
+Los Angeles Unified School District<br/>
+333 So. Beaudry Avenue<br/>
+Room 202 - 2nd floor <br/>
+Los Angeles 90017<br/>
 
 
 [**Back to the top**](#top)

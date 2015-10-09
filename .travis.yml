@@ -2,7 +2,7 @@ git:
   depth: 10
 language: ruby
 
-rvm: 2.0.0
+rvm: 2.2.3
 
 sudo: false
 
