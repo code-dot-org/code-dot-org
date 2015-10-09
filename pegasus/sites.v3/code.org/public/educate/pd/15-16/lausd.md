@@ -10,6 +10,7 @@ nav: pd2_nav
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
+- [I'm attending Counselor-Administrator PD](#counselor-admin)
 
 <a id="csp"></a>
 ## Computer Science Principles
@@ -235,11 +236,6 @@ Los Angeles Unified School District<br/>
 Room 204 - 2nd floor <br/>
 Los Angeles 90017<br/>
 
-**What to bring**
-
-Snacks
-<br/>
-Water
 
 ### Administrators##
 
@@ -255,11 +251,6 @@ Los Angeles Unified School District<br/>
 Room 202 - 2nd floor <br/>
 Los Angeles 90017<br/>
 
-**What to bring**
-
-Snacks
-<br/>
-Water
 
 [**Back to the top**](#top)
 
