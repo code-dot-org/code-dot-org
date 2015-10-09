@@ -176,9 +176,9 @@ class AssetsTest < Minitest::Test
     src_channel_id = create_channel(@channels)
     dest_channel_id = create_channel(@channels)
 
-    image_filename = 'dog.jpg'
+    image_filename = URI.encode 'çat.jpg'
     image_body = 'stub-image-contents'
-    expected_image_info = {'filename' =>  image_filename, 'category' =>  'image', 'size' =>  image_body.length}
+    expected_image_info = {'filename' =>  'çat.jpg', 'category' =>  'image', 'size' =>  image_body.length}
     sound_filename = 'woof.mp3'
     sound_body = 'stub-sound-contents'
     expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
