@@ -26,10 +26,10 @@ Note: CloudFront distribution will take 15-20 minutes to fully deploy.
 
 Once CloudFront is deployed, converge the `cloudfront` test suite, providing the `NGROK_TOKEN` through the environment:
 ```
-NGROK_TOKEN=[token] chef exec kitchen converge cloudfront
+NGROK_TOKEN=[token] bundle exec kitchen converge cloudfront
 ```
 
-Finaally, run `chef exec kitchen verify` to run the tests.
+Finaally, run `bundle exec kitchen verify` to run the tests.
 
 You can update the integration tests and re-run `verify` without updating the CloudFront distribution.
 If you update the `HttpCache` config, you will need to run `update_cloudfront` again to pick up the changes.

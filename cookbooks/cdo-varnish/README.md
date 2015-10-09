@@ -56,8 +56,8 @@ The integration tests run using [Test Kitchen](http://kitchen.ci/).
 See `test/cookbooks/varnish_test/README.md` for more details.
 
 To test the cookbook, first make sure Docker is installed and running locally,
-then run:
-- `chef exec kitchen create` to create the machine image
-- `chef exec kitchen converge` to install Chef and converge the cookbook in the
+run `bundle install` to install `test-kitchen` and dependencies, then run:
+- `bundle exec kitchen create` to create the machine image
+- `bundle exec kitchen converge` to install Chef and converge the cookbook in the
   platform environment
-- `chef exec kitchen verify` to run the integration test suite
+- `bundle exec kitchen verify` to run the integration test suite

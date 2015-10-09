@@ -1,4 +1,6 @@
 ---
+transport:
+  name: ssh_tgz
 driver:
   name: docker
   use_sudo: false
