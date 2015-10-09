@@ -2,19 +2,19 @@ name 'U3L07 Free Response Reflection'
 title 'Reflection: Looping and Random Numbers'
 
 markdown <<MARKDOWN
-When breaking a problem down you often encounter elements that you want to use repeatedly in your code. Sometimes it's appropriate to write a new function, other times it's appropriate to write a loop.  
+When breaking a problem down you often encounter elements that you want to use repeatedly in your code. Sometimes it's appropriate to write a new function; at other times it's appropriate to write a loop.  
 
-There is no hard and fast rule as to which is better, but what do you think?  What kinds of circumstances would lead you to writing a function versus using a loop?
+There is no hard-and-fast rule as to which is better, but what do you think?  What kinds of circumstances would lead you to writing a function versus using a loop?
 
 
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
 Answers will vary, but should include these concepts:
-When breaking down a problem we use functions to group logical chunks of our solution. We break down problems into pieces but some pieces may need to be used multiple times.
+When breaking down a problem we use functions to group logical chunks of our solution. We break down problems into pieces, but some pieces may need to be used multiple times.
 
 Sometimes a function in our solution to a programming problem will need to be used multiple times in a row. In these instances, we should use a loop to repeatedly call that function.
 
-Keeping functions at the center of our thinking, helps us because event-driven programming basically leads to a 'event->function' structure to most programs.
+Keeping functions at the center of our thinking helps us because event-driven programming basically leads to a "event->function" structure in most programs.
 
 MARKDOWN
