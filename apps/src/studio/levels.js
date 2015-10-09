@@ -1765,18 +1765,18 @@ levels.js_hoc2015_event_two_items = {
   "editCode": true,
   "background": "forest",
   "wallMap": "blank",
-  "softButtons": ["leftButton", "rightButton"],
+  "softButtons": ["downButton", "upButton"],
   "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "whenLeft": null,
-    "whenRight": null
+    "moveUp": null,
+    "moveDown": null,
+    "whenUp": null,
+    "whenDown": null
   },
   "startBlocks": [
-    "function whenLeft() {", 
+    "function whenUp() {", 
     "  ",
     "}",
-    "function whenRight() {",
+    "function whenDown() {",
     "  ",
     "}"].join("\n"),
   "sortDrawOrder": true,
@@ -1789,7 +1789,7 @@ levels.js_hoc2015_event_two_items = {
   "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 16, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
   "pinWorkspaceToBottom": "true",
   "embed": "false",
   "instructions": "\"Bot1, I need you to get a critical message to the goals.\"",
@@ -1964,7 +1964,7 @@ levels.js_hoc2015_event_add_items = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"I’m seeing signs of increased activity on this planet.\"",
-  "instructions2": "Let’s do the same thing in text mode. Type, \"addCharacter(\"Character1\");\" at the top of your program to add a Character1. Can you add another Character? Then get them all.",
+  "instructions2": "Let’s do the same thing in text mode. Type, \"addCharacter(\"pig\");\" at the top of your program to add a Character1.  Then add a second one.  Then get them both.",
 };
 
 
@@ -2186,6 +2186,8 @@ levels.js_hoc2015_event_random_items = {
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "setBotSpeed": null,
+    "whenTouchMouse": null,
+    "whenTouchSpider": null,
 
     "changeScore": null,
     "whenTouchCharacter": null,
