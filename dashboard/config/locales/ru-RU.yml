@@ -345,8 +345,10 @@
       viewing_solution: Просмотр решения
       try_it_yourself: Попробуйте сами
       section: Раздел
-      example: Example Solution
-      example_with_number: Example Solution %{solution_number}
+      example: Пример решения
+      example_with_number: Пример решения %{solution_number}
+      submitted_on: Отправлено %{date}
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
     email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был
@@ -460,6 +462,7 @@
     tos: Условия использования
     privacy: Правила конфиденциальности
     secure: Защищенная версия
+    report_abuse: Сообщить о нарушении
   reference_area:
     title: Нужна помощь?
     subtitle: Смотрите эти видео и подсказки
@@ -708,10 +711,33 @@
     view_all: Посмотреть Мои проекты
     remix: Ремикс
     click_to_remix: Нажмите «Ремикс», чтобы воспроизвести вашу собственную версию!
-    edit_project: Edit Project
+    edit_project: Редактировать проект
     abuse:
       tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
         of Service</a> and cannot be shared with others.
       contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
         us.</a>
-      go_to_code_studio: Go to Code Studio
+      go_to_code_studio: Перейти в студию кода
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying,
+          harassment, or an instance of copyright infringement for content you own
+          while using apps built on Code Studio, please fill out the form below. We
+          will take your report very seriously, investigate accordingly, and take
+          appropriate action.
+        validation:
+          email: Пожалуйста предоставьте адрес электронной почты
+          age: Пожалуйста, укажите возраст
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
+          harassment: Threats, cyberbullying, harassement
+          offensive: Оскорбительное содержание
+          infringement: Нарушение авторских прав
+          other: Другое
+        detail: Пожалуйста укажите как можно больше подробностей относительно содержания,
+          которое вы сообщаете.
+        acknowledge: Отправляя эту информацию, вы признаёте, что она будет обрабатываться
+          в соответствии с %{link_start_privacy}Правилами конфиденциальности%{link_end}
+          и %{link_start_tos}Условиями использования%{link_end}

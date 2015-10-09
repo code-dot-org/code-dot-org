@@ -1,12 +1,18 @@
 name 'ECSPD What is the Challenge'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# What is the Challenge? 
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-We are now going to start preparing for the Challenge, the focus of Phase 3 Online PD. Please read the document below which overviews the Challenge.
+## Unit 2 Challenge Preview > How do challenges work?
+<br><br>
+Please review this document, which summarizes what Dani told you in the last video about challenges. You can refer to this document anytime as a reminder of what’s required for this assessment.
+
+<br>
 
 **To make a copy in Google Docs:**
 File > Make Copy
+
+<br>
 
 <object src="https://docs.google.com/document/d/15dwdDBF-nya-wQjRq4zxsr0u4p5PEvf-jFnu2OuepmQ/edit?usp=sharing" width="100%" height="700">
     <embed src="https://docs.google.com/document/d/15dwdDBF-nya-wQjRq4zxsr0u4p5PEvf-jFnu2OuepmQ/edit?usp=sharing"  width="100%" height="700">

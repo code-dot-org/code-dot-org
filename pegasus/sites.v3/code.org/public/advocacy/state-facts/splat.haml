@@ -1,0 +1,344 @@
+---
+title: State advocacy sheet
+chart: true
+state-facts: true
+<%
+  if request.params["pdf_version"]
+%>
+layout: page_print
+theme: pdf
+<%
+  end
+%>
+---
+
+// Generates custom state fact sheets based on the data in cdo-state-promote Google Sheet.
+
+- splat = request.splat_path_info[1..-1].split("/")
+- state = splat.last
+- state_param = state.upcase
+- state_info = DB[:cdo_state_promote].where(state_code_s: state_param).first
+
+.state-fact-sheet
+  %h1
+    Support K-12 Computer Science Education in 
+    = state_info[:state_name_s]
+
+  .intro
+    .intro-text 
+      Computer science drives job growth and innovation throughout our economy and society. Computing occupations make up two-thirds of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. 
+      %br
+      %br
+      75 percent of U.S. schools don’t even offer computer science and only 8% of STEM graduates study it. We need to improve access for all students, including groups who have traditionally been underrepresented.
+
+    %img.chart{src: "/images/charts/jobs_degrees.png"}
+
+  .call-out
+    %center
+      %h3 9 in 10 parents want their students to learn computer science, but only 1 in 4 schools teach it.
+
+  %div
+    %h2
+      Computer science in 
+      = state_info[:state_name_s]
+    %ul
+      %li
+        = state_info[:state_name_s]
+        currently has
+        = format_integer_with_commas(state_info[:cs_jobs_i])
+        open computing jobs
+        = precede "(" do
+          = state_info[:growth_vs_average_f]
+        times the average demand rate in 
+        = succeed ")." do
+          = state_info[:state_name_s]
+      %li
+        The average salary for a computing occupation in
+        = state_info[:state_code_s]
+        is
+        = surround "$", "," do
+          = format_integer_with_commas(state_info[:avg_sal_computing_i])
+        which is significantly higher than the average salary in the state 
+        = surround "($", ")." do
+          = format_integer_with_commas(state_info[:avg_sal_all_i])
+      %li
+        = state_info[:state_name_s]
+        had only
+        = format_integer_with_commas(state_info[:cs_graduates_i])
+        - if state_info[:cs_graduates_i] == 1
+          computer science graduate in 2015;
+        - else 
+          computer science graduates in 2015;
+        - if state_info[:percent_female_cs_grad_i] == 0
+          none
+        - else 
+          only
+          = succeed "%" do
+            = state_info[:percent_female_cs_grad_i]
+        were female.
+      %li
+        - if state_info[:ap_cs_exams_i] == 0
+          = format_integer_with_commas(state_info[:ap_cs_exams_i])
+          high school students in 
+          = state_info[:state_name_s]
+          took the AP Computer Science exam in 2014.
+        - else
+          Only
+          = format_integer_with_commas(state_info[:ap_cs_exams_i])
+          high school students in 
+          = state_info[:state_name_s]
+          took the AP Computer Science exam in 2014;
+          - if state_info[:percent_ap_female_i] != 0
+            only
+            = succeed "%" do
+              = state_info[:percent_ap_female_i]
+          - else 
+            none
+          were female;
+          - if state_info[:ap_hispanic_i] != 0
+            only
+            = format_integer_with_commas(state_info[:ap_hispanic_i])
+          - else 
+            none
+          were Hispanic;
+          - if state_info[:ap_black_i] != 0
+            only
+            = format_integer_with_commas(state_info[:ap_black_i])
+          - else 
+            none
+          were black.
+      %li
+        - if state_info[:schools_ap_cs_i] != 0
+          Only
+          = format_integer_with_commas(state_info[:schools_ap_cs_i])
+          - if state_info[:schools_ap_cs_i] == 1
+            school
+          - else
+            schools
+          in 
+          = state_info[:state_code_s]
+          = surround "(", "% of" do
+            = state_info[:percent_schools_ap_cs_i]
+          = state_info[:state_code_s]
+          schools with AP programs) offered the AP Computer Science course in 2013-2014.
+        - else
+          No schools in 
+          = state_info[:state_code_s]
+          offered the AP Computer Science course in 2013-2014.
+        - if state_param != 'ND'
+          There are fewer AP exams taken in computer science than in any other STEM subject area.
+
+  .chart-text-group
+    %img.chart{src: "/images/charts/learn_teach.png"}
+
+    .improve-edu
+      %h2.improve-edu-h2 What can you do to improve K-12 CS education? 
+      %ol
+        %li
+          %a{href: "https://code.org/promote/letter"}
+            Call
+          on your school to expand computer science offerings at every grade level.
+        %li Ask your local school district to allow computer science courses to satisfy a core math or science requirement.
+        %li
+          Visit
+          %a{href: state_info[:website_url_s]}= state_info[:website_url_s]
+          to learn more about supporting computer science in your state.
+
+  %div.clear-both
+    %h2.no-margin-bottom
+      Code.org's Impact in
+      = state_info[:state_name_s]
+    %p.larger
+      About
+      = format_integer_with_commas(state_info[:num_hoc_i])
+      people in
+      = state_info[:state_name_s]
+      have completed an Hour of Code!
+    %ul
+      - if state_info[:school_district_partners_t] != 'no school districts in the state'
+        %li
+          Code.org has partnered with
+          = succeed '.' do
+            = state_info[:school_district_partners_t]
+      - if state_info[:num_affiliates_i] + state_info[:num_elementary_trained_i] != 0
+        %li
+          - if state_info[:num_affiliates_i] == 0
+            There are no Code.org affiliates in the state to offer professional development for elementary teachers.
+          - else
+            - if state_info[:num_elementary_trained_i] == 0
+              = state_info[:num_affiliates_i]
+              Code.org affiliates offer professional development for elementary teachers in
+              = state_info[:state_name_s]
+            - else
+              = format_integer_with_commas(state_info[:num_affiliates_i])
+              Code.org
+              - if state_info[:num_affiliates_i] == 1
+                affiliate
+              - else 
+                affiliates
+              offering professional development for elementary teachers in
+              = state_info[:state_name_s]
+              have already trained
+              %b
+                = format_integer_with_commas(state_info[:num_elementary_trained_i])
+                elementary
+                - if state_info[:num_elementary_trained_i] == 1 
+                  teacher.
+                - else
+                  teachers.
+      - if state_info[:num_ms_trained_i] + state_info[:num_hs_trained_i] != 0
+        %li
+          Code.org has trained
+          %b
+            = format_integer_with_commas(state_info[:num_ms_trained_i])
+            middle school
+            - if state_info[:num_ms_trained_i] == 1
+              teacher
+            - else
+              teachers
+          and
+          %b
+            = format_integer_with_commas(state_info[:num_hs_trained_i])
+            high school
+            - if state_info[:num_hs_trained_i] == 1
+              teacher
+            - else
+              teachers
+          in
+          = state_info[:state_name_s]
+          to teach computer science.  
+
+  .quote-center
+    %h3 “Computer Science is a liberal art: it’s something that everybody should be exposed to and everyone should have a mastery of to some extent.” 
+    %p — Steve Jobs
+
+  %div
+    %p
+      %h2 What can your state do to improve computer science education?
+      Here are 8 key policies that help to provide all students with access to computer science.
+    %div.policies
+
+      %div.policy-item
+        - if state_info[:cs_standards_s] == 'Yes'
+          %div
+            %i.fa.fa-check
+            = state_info[:state_name_s]
+            has established rigorous K-12 computer science standards.
+        - else
+          %div
+            %i.fa.fa-times
+            = state_info[:state_name_s]
+            %b does not
+            have rigorous computer science standards. Computer science has often been confused with broader technology education in schools. States should adopt discrete standards for computer science focused on both the creation and use of software and computing technologies at all levels of K-12 education. The Computer Science Teachers Association has model K-12 CS standards.  
+
+      %div.policy-item
+        - if state_info[:pd_funding_s] == 'Yes'
+          %div
+            %i.fa.fa-check
+            = state_info[:state_name_s]
+            has allocated funding for rigorous computer science professional development and course support.
+        - else
+          %div
+            %i.fa.fa-times
+            = state_info[:state_name_s]
+            %b does not
+            provide funding for rigorous computer science professional development and course support. States should provide professional development resources by creating matching fund opportunities to bring computer science to school districts.
+
+      %div.policy-item
+        - if state_info[:cs_teacher_cert_s] == 'Yes'
+          %div
+            %i.fa.fa-check
+            = state_info[:state_name_s]
+            has clear certification pathways for computer science teachers. 
+        - else
+          %div
+            %i.fa.fa-times
+            = state_info[:state_name_s]
+            %b does not
+            have clear certification pathways for computer science teachers. The expansion of K-12 computer science education is hampered by the lack of qualified computer science teachers. We can grow their ranks by creating clear, navigable, and rewarding professional paths for computer science teachers. 
+
+      %div.policy-item
+        - if state_info[:pre_service_s] == 'Yes'
+          %div
+            %i.fa.fa-check
+            = state_info[:state_name_s]
+            has established incentives at institutions of higher education to offer computer science to pre-service teachers.
+        - else
+          %div
+            %i.fa.fa-times
+            = state_info[:state_name_s]
+            %b has no
+            incentives for institutions of higher education to offer computer science to pre-service teachers. The computer science teacher shortage can be addressed by exposing more pre-service teachers to computer science during their required coursework or by creating specific pathways for computer science teachers. 
+
+      %div.policy-item
+        - if state_info[:state_position_s] == 'Yes'
+          %div
+            %i.fa.fa-check
+            = state_info[:state_name_s]
+            has dedicated computer science positions in state and local education authorities. 
+        - else
+          %div
+            %i.fa.fa-times
+            = state_info[:state_name_s]
+            %b does not
+            have dedicated computer science positions in state and local education authorities. Creating a statewide computer science leadership position within the state education authority will oversee state-level implementation of computer science education  initiatives. Similar positions at the local level could support districts’ expansion of course offerings and professional development. 
+
+      %div.policy-item
+        - if state_info[:require_hs_s] == 'Yes'
+          %div
+            %i.fa.fa-check
+            = state_info[:state_name_s]
+            requires that all secondary schools offer computer science. 
+        - else
+          %div
+            %i.fa.fa-times
+            = state_info[:state_name_s]
+            %b does not
+            require that all secondary schools offer computer science. States should adopt policies that require schools to offer a computer science course based on rigorous standards, with appropriate implementation timelines and allowing for remote and/or in-person courses. 
+
+      %div.policy-item
+        - if state_info[:cs_counts_t] == 'Yes'
+          %div
+            %i.fa.fa-check
+            = state_info[:state_name_s]
+            allows computer science to count for a core mathematics or science graduation requirement. 
+        - else
+          %div
+            %i.fa.fa-times
+            = state_info[:state_name_s]
+            %b does not
+            allow computer science to count for a core mathematics or science graduation requirement. States that count computer science as a core graduation requirement see 50% more enrollment in their AP Computer Science courses and increased participation from underrepresented minorities. 
+
+      .policy-item
+        - if state_info[:higher_ed_entrance_s] == 'Yes'
+          %div
+            %i.fa.fa-check
+            = state_info[:state_name_s]
+            allows computer science to count as a mathematics or science admission requirement at institutions of higher education. 
+        - else
+          %div
+            %i.fa.fa-times
+            = state_info[:state_name_s]
+            %b does not
+            allow computer science to count as a mathematics or science admission requirement at institutions of higher education.  Admission policies that do not include rigorous computer science courses as meeting the mathematics or science entrance requirements discourage students from taking such courses in secondary education. State leaders can work with institutions of higher education to ensure credit and articulation policies align with secondary school graduation requirements.
+
+    %p
+      %a{href: "https://code.org/files/Making_CS_Fundamental.pdf"} Read more
+      about these 8 policy ideas.
+
+  %div
+    %h3 Follow us! 
+    %p
+      Join our efforts to give every student in every school the opportunity to learn computer science. Learn more at
+      = succeed "," do
+        %a{href: "https://code.org"} code.org
+      or follow us on
+      %a{href: "https://www.facebook.com/Code.org"} Facebook
+      and
+      = succeed "." do
+        %a{href: "https://twitter.com/codeorg"} Twitter
+    %div
+      %img.logo{src: "/images/logo_2x.png"}
+      %p Launched in 2013, Code.org® is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
+    %p.clear-both.sources Data is from the Conference Board, the Bureau of Labor Statistics, the College Board, the National Science Foundation, the National Center for Education Statistics, and the Gallup research study Searching for Computer Science: Access and Barriers in K-12 Education. 
+

@@ -35,7 +35,7 @@ ____________________________________________________
 
 
 ```
-turnRight(90);    // Makes the turtle face left
+turnRight(90);    // Makes the turtle face right
 ```
 
 [/example]

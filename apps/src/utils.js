@@ -141,6 +141,17 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 };
 
 /**
+ * Return a random key name from an object.
+ *
+ * Slightly modified from: http://stackoverflow.com/a/15106541
+ */
+
+exports.randomKey = function (obj) {
+  var keys = Object.keys(obj);
+  return keys[keys.length * Math.random() << 0];
+};
+
+/**
  * Generate a random identifier in a format matching the RFC-4122 specification.
  *
  * Taken from
@@ -285,4 +296,23 @@ exports.getPegasusHost = function() {
           return null;
       }
   }
+};
+
+/**
+ * IE9 throws an exception when trying to access the media field of a stylesheet
+ */
+exports.browserSupportsCssMedia = function () {
+  var styleSheets = document.styleSheets;
+  for (var i = 0; i < styleSheets.length; i++) {
+    var rules = styleSheets[i].cssRules || styleSheets[i].rules;
+    try {
+      if (rules.length > 0) {
+        // see if we can access media
+        var media = rules[0].media;
+      }
+    } catch (e) {
+      return false;
+    }
+  }
+  return true;
 };

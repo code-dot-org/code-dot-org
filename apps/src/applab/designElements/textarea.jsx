@@ -1,5 +1,4 @@
 /* global $ */
-var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
@@ -135,7 +134,7 @@ module.exports = {
     element.style.height = '100px';
     element.style.fontSize = '14px';
     element.style.color = '#000000';
-    element.style.backgroundColor = '';
+    element.style.backgroundColor = '#ffffff';
 
     this.onDeserialize(element);
 

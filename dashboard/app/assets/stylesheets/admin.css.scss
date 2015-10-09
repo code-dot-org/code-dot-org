@@ -15,14 +15,13 @@
     font-family: $gotham-extra-bold; font-weight: normal;
     margin: 0 0 5px 0;
   }
-  opacity: 0.75;
+  opacity: 0.98;
   color: black;
 
   /* don't take over the whole window*/
   max-height: 50%;
-  max-width: 25%;
   /* only display scrollbars when needed */
   overflow: auto;
   /* admin box appears in front of the rest of the level */
-  z-index: 200;
+  z-index: 400;
 }

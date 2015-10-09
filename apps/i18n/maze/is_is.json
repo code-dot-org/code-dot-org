@@ -31,6 +31,7 @@
   "ifTooltip": "Ef það er slóð í þessa stefnu þá á að gera eitthvað.",
   "ifelseTooltip": "Ef það er slóð í þessa stefnu þá á að gera fyrstu kubbastæðuna. Annars á að gera stæðu númer tvö.",
   "ifFlowerTooltip": "Ef það er blóm/býkúpa í hina tilteknu átt, þá skal gera einhverjar aðgerðir.",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions.",
   "ifelseFlowerTooltip": "Ef það er blóm/býkúpa í hina tilteknu átt, þá skal gera fyrstu aðgerðastæðuna. Annars skal gera hina aðgerðastæðuna.",
   "insufficientHoney": "Þú ert að nota alla réttu kubbana, en þú þarft að búa til rétt magn hunangs.",
   "insufficientNectar": "Þú ert að nota alla réttu kubbana, en þú þarft að safna réttu magni af blómasafa.",

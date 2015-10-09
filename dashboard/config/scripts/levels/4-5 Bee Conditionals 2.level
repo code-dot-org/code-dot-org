@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "bee",
-    "instructions": "The bee only wants nectar right now. Remember, not all objects are flowers, so check to gather nectar only at flowers.",
+    "instructions": "The bee only wants nectar right now. Not all objects are flowers, so check underneath EVERY CLOUD to see if it is hiding a flower. If it is, then you can gather nectar.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -16,7 +16,23 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,0,0,0],[0,0,0,0,\"FC\",0,0,0],[0,0,0,0,\"FC\",0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,-98,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "8"
+    "ideal": "8",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null,
+    "fast_get_nectar_animation": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"4_5_Bee_Conditionals_2_1\",\r\n  \"callout_text\": \"Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.\",\r\n  \"element_id\": \"#atFlower\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": -10,\r\n     \"y\": 7\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
   }
 }]]></config>
   <blocks>
@@ -31,11 +47,11 @@
         </block>
         <block type="maze_nectar"/>
         <block type="maze_honey"/>
+        <block type="bee_ifFlower" id="Flower">
+          <title name="LOC">atFlower</title>
+        </block>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
-        </block>
-        <block type="bee_ifFlower">
-          <title name="LOC">atFlower</title>
         </block>
       </xml>
     </toolbox_blocks>

@@ -10,7 +10,7 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 <% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+우리는 꾸준히 노력해서 이번 가을에 새로운 튜토리얼과 흥미로운 업데이트를 준비하고 있습니다. 그리고 여러분이 우리를 도와 할 수 있는 것은 무엇일까요?
 
 ## 1. 널리 알려주세요.
 
@@ -18,19 +18,19 @@ We'll be in touch about prizes, new tutorials and other exciting updates in the 
 
 ## 2. 여러분의 모든 학교에 Hour of Code 이벤트 행사를 열어달라고 요청하세요.
 
-[Send this email](http://<%= hostname %>/resources#email) to your principal.
+여러분의 교장 선생님에게 [이메일](https://<%= hostname %>/resources#email)을 보내보세요.
 
 ## 3. 여러분의 직장 상사에게 함께 참여하도록 요청해 보세요.
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO.
+여러분의 직상 상사 또는 사장님에게 [이메일](https://<%= hostname %>/resources#email)을 보내보세요.
 
-## 4. Promote the Hour of Code in your community
+## 4. 여러분의 동료들과 Hour of Code를 함께 해 보세요.
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://<%= hostname %>/resources#email).
 
-## 5. 지역 의원 등에게 Hour of Code 를 지원해달라고 요청하세요.
+## 5. 지역 의원들에게 Hour of Code 를 지원해달라고 요청하세요.
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+여러분의 시장, 시의원, 교육의원을 여러분의 학교에 초대하고, 그들이 여러분의 학교에 방문할 수 있도록 [이메일](https://<%= hostname %>/resources#politicians) 을 보내보세요.
 
 * * *
 

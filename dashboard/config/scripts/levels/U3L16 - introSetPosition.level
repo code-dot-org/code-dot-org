@@ -1,0 +1,92 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-07T13:27:05.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "button": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "setPosition": null,
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "penRGB": {
+        "params": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "paletteParams": [
+          "r",
+          "g",
+          "b",
+          "a"
+        ]
+      },
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_max": null,
+      "randomNumber_min_max": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Move the buttons to the bottom of the screen. (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "start_blocks": "button(\"forwardButton\", \"Go Forward!\");\r\nbutton(\"leftButton\", \"Turn Left!\");\r\nonEvent(\"forwardButton\", \"click\", function(){\r\n  moveForward(25);\r\n});\r\nonEvent(\"leftButton\", \"click\", function(){\r\n  turnLeft(90);\r\n});",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "encrypted_examples": "NJ/aKD93DfFkgTUMoJVrjR8CqREzKB1QSqz9d0kFnoU1FGBmaRZSLT+n7723\nyGau\n",
+    "markdown_instructions": "# Moving Buttons Around\r\n\r\nSo far the position of your buttons has been decided for you. To build more intuitive user interfaces you'll want to set the position and size of buttons yourself.\r\n\r\n`setPosition` can be used to set the location and size of screen elements. It has been added to the toolbox and can be found within the UI controls.\r\n\r\n![](https://images.code.org/f2489429e23367725e8b102c4b418970-image-1444419543619.gif)\r\n\r\n# Do This\r\n\r\n**Read the documentation** for `setPosition` to learn how to use this command. Make sure you understand **all 4 parameters**.\r\n\r\n**Starter code** has been provided which creates two buttons and event handlers.\r\n\r\n**Use** `setPosition` to move the two buttons to the bottom of the screen, as shown in the image below. \r\n\r\n**Remember** the grid system begins at the top left corner and moves down and to the right. The screen is **320 by 450 pixels**.\r\n\r\n![](https://images.code.org/3a834b8a4313e31a453525a69acda1f4-image-1444335250982.png)",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

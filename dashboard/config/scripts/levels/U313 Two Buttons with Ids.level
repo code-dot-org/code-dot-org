@@ -32,6 +32,20 @@
       "penDown": null,
       "penWidth": null,
       "penColor": null,
+      "penRGB": {
+        "params": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "paletteParams": [
+          "r",
+          "g",
+          "b",
+          "a"
+        ]
+      },
       "show": null,
       "hide": null,
       "speed": null,
@@ -41,13 +55,12 @@
       "functionParams_none": null,
       "functionParams_n": null,
       "callMyFunction": null,
-      "callMyFunction_n": null,
-      "return": null
+      "callMyFunction_n": null
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Now you try it! We've given you some starting code with two buttons and two event handlers on the screen, but we've just left the default Ids of \"id\".  You need to change the ids to connect the right event handler to the right button. (Interestingly, the incorrect program does work, but exhibits some bizarre behavior.  We'll discuss this more in the next lesson.  Make the buttons work correctly for now).",
-    "start_blocks": "button(\"id\", \"Forward\");\r\nbutton(\"id\", \"Left\");\r\nonEvent(\"id\", \"click\", function(){\r\n  moveForward(25);\r\n});\r\nonEvent(\"id\", \"click\", function(){\r\n  turnLeft(90);\r\n});\r\n",
+    "instructions": "Predict what will happen. Once you've made a prediction, run the code to see what happens. (Click to see full instructions)",
+    "start_blocks": "button(\"fwd\", \"Forward\");\r\nonEvent(\"fwd\", \"click\", function(){\r\n  moveForward();\r\n});\r\nonEvent(\"fwd\", \"click\", function(){\r\n  turnLeft();\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -61,7 +74,22 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "true"
+    "free_play": "true",
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "# Make a prediction - Learning to Code Better, Faster\r\nResearch has shown that when you encounter a new piece of code you learn faster by simply **making a prediction about what will happen before you run the program**. It's not actually important if your prediction is correct, but the act of predicting allows you to construct a stronger mental model for how code works and then test your understanding when you run the code.\r\n\r\nGood programmers do this all the time. **They don't expect their code is correct the first time they write it.** Instead they get in the habit of running their code, checking their assumptions, and making changes as needed. Programming isn't a fixed set of steps. It's a creative and continuous cycle of writing, testing, and improving code.\r\n\r\n# Predict - Observe - Reflect\r\n<img src=\"https://images.code.org/5fc24f3f3e1ceae4bb196f1005d9e866-image-1444083405061.png\" align=right>This program creates a button and **two event handlers** which listen for a click on that button. \r\n\r\n**Predict:** What will happen when the \"Forward\" button is clicked? Force yourself to make a prediction about what the turtle will do! **\"I don't know\" is not a prediction**. Think about the options and talk about it with a classmate: Will it..\r\n* move forward?\r\n* turn left?\r\n* do nothing?\r\n* move forward *and* turn left?\r\n* cause an error?\r\n* something else? \r\n\r\n**Observe:** Once you've made a prediction, close these instrucitons and **run the program** to observe what happens.\r\n\r\n**Reflect:** Was your prediction correct? If not what about your mental model might need to change? Talk about it with a classmate and experiment with the code to make sure you understand what is happening.\r\n",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "examples_required": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true"
   }
 }]]></config>
   <blocks/>

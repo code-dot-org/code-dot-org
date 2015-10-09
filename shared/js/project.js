@@ -1,4 +1,4 @@
-/* global dashboard, appOptions, $, trackEvent */
+/* global dashboard, appOptions, trackEvent */
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -115,7 +115,12 @@ var projects = module.exports = {
       if (err) {
         throw err;
       }
-      $('.admin-abuse-score').text(0);
+      assets.patchAll(id, 'abuse_score=0', null, function (err, result) {
+        if (err) {
+          throw err;
+        }
+        $('.admin-abuse-score').text(0);
+      });
     });
   },
 
@@ -319,6 +324,13 @@ var projects = module.exports = {
     return '/projects/' + projects.getCurrentApp();
   },
   /**
+   * Explicitly clear the HTML, circumventing safety measures which prevent it from
+   * being accidentally deleted.
+   */
+  clearHtml: function() {
+    current.levelHtml = '';
+  },
+  /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
    * @param {object?} sourceAndHtml Optional source to be provided, saving us another
@@ -327,6 +339,12 @@ var projects = module.exports = {
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
   save: function(sourceAndHtml, callback, forceNewVersion) {
+
+    // Can't save a project if we're not the owner.
+    if (current && current.isOwner === false) {
+      return;
+    }
+
     if (typeof arguments[0] === 'function' || !sourceAndHtml) {
       // If no source is provided, shift the arguments and ask for the source
       // ourselves.
@@ -344,6 +362,8 @@ var projects = module.exports = {
 
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
+    // TODO(dave): Remove this check and remove clearHtml() once all projects
+    // have versioning: https://www.pivotaltracker.com/story/show/103347498
     if (current.levelHtml && !sourceAndHtml.html) {
       throw new Error('Attempting to blow away existing levelHtml');
     }
@@ -572,7 +592,7 @@ function fetchSource(data, callback) {
 
 function fetchAbuseScore(callback) {
   channels.fetch(current.id + '/abuse', function (err, data) {
-    currentAbuseScore = (data && data.abuseScore) || currentAbuseScore;
+    currentAbuseScore = (data && data.abuse_score) || currentAbuseScore;
     callback();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't

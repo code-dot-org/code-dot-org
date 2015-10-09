@@ -31,6 +31,7 @@
   "ifTooltip": "如果在指定的方向有路，执行一些操作。",
   "ifelseTooltip": "如果在指定的方向有路，执行第一部分的操作。否则，执行第二部分的操作。",
   "ifFlowerTooltip": "如果在指定的方向有花或蜂巢，执行一些操作",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions.",
   "ifelseFlowerTooltip": "如果在指定的方向有花或蜂巢，执行第一部分的操作。否则，执行第二部分的操作。",
   "insufficientHoney": "你正确地使用了所有的块，但是你需要得到正确数量的蜂蜜。",
   "insufficientNectar": "你正确地使用了所有的块，但是你需要收集正确数量的花蜜。",

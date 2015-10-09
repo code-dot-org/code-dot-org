@@ -15,7 +15,7 @@ Nos gustaría ofrecer una amplia variedad de opciones atractivas, pero el objeti
   
 
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa).**
+**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
 
 **NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
 
@@ -34,7 +34,7 @@ Nos gustaría ofrecer una amplia variedad de opciones atractivas, pero el objeti
 
 <a id="guidelines"></a>
 
-## New for 2015: two formats of activites: self-guided or *lesson-plan*
+## New for 2015: two formats of activities: self-guided or *lesson-plan*
 
 Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
 
@@ -74,9 +74,9 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 Un comité de educadores en Ciencias de la Computación evaluarán las propuestas con base en medidas cualitativas y cuantitativas, incluyendo resultados de encuestas hechas a un grupo más amplio de educadores.
 
-**Los tutoriales aparecerán en posiciones más altas si:**
+**Los tutoriales aparecerán en las posiciones más altas si:**
 
-  * Alta calidad
+  * alta calidad
   * designed for beginners - among students AND teachers
   * están diseñadas para actividad de 1 hora aproximádamente
   * no requieren de registro
@@ -85,11 +85,11 @@ Un comité de educadores en Ciencias de la Computación evaluarán las propuesta
   * funcionan en diversas plataformas de sistemas operativos, incluso en tabletas y móviles
   * funcionan en múltiples idiomas
   * promueven aprendizaje en todos los grupos demográficos (especialmente los grupos marginados)
-  * no se centran solamente en diseño web HTML+CSS - (nuestra meta es la ciencia computacional, no sólo codificación en HTML)
+  * no se centran solamente en diseño web HTML+CSS - (nuestra meta es las Ciencias de la Computación, no sólo codificación en HTML)
 
 **Los tutoriales aparecerán más abajo si son:**
 
-  * tienen baja calidad
+  * baja calidad
   * tienen un nivel más avanzado de enseñanza (no para principiantes)
   * tienen un soporte limitado de plataformas de sistemas operativos - para plataformas basadas en Web se debe tratar de soportar todo lo siguiente: IE9+, y la ultima versión de Chrome, Firefox y Safari
   * funcionan sólo en inglés
@@ -99,8 +99,8 @@ Un comité de educadores en Ciencias de la Computación evaluarán las propuesta
 **Los tutoriales NO serán listados si:**
 
   * no estan diseñados para ser actividades de aproximadamente una hora
-  * requieren de registro 
-  * requieren de pago
+  * requieren registro 
+  * requieren pago
   * require installation (other than mobile apps)
   * se centran solamente en diseño web HTML+CSS
   * se envían después de la fecha límite, o con información incompleta (vea más abajo)
@@ -115,7 +115,7 @@ La principal meta de la campaña de la Hora de Programación es ampliar la parti
 
 ## How to submit (Due 10/15/2015)
 
-Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
+Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
 **Necesitarás:**
 
