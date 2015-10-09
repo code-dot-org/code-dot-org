@@ -190,13 +190,13 @@ class AssetsTest < Minitest::Test
     copy_file_infos = JSON.parse(copy_all(src_channel_id, dest_channel_id))
     dest_file_infos = JSON.parse(list(@assets, dest_channel_id))
 
-    assert_fileinfo_equal(expected_image_info, copy_file_infos[0])
-    assert_fileinfo_equal(expected_sound_info, copy_file_infos[1])
-    assert_fileinfo_equal(expected_image_info, dest_file_infos[0])
-    assert_fileinfo_equal(expected_sound_info, dest_file_infos[1])
+    assert_fileinfo_equal(expected_image_info, copy_file_infos[1])
+    assert_fileinfo_equal(expected_sound_info, copy_file_infos[0])
+    assert_fileinfo_equal(expected_image_info, dest_file_infos[1])
+    assert_fileinfo_equal(expected_sound_info, dest_file_infos[0])
 
     # abuse score didn't carry over
-    assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, image_filename)
+    assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, 'çat.jpg')
     assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, sound_filename)
 
     delete(@assets, src_channel_id, image_filename)
