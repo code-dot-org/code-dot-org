@@ -32,7 +32,7 @@ def cronjob(params)
   action = params[:do].to_s
 
   notify = params[:notify].to_s
-  action = "#{bin_dir('cronjob')} #{action.shellescape} #{notify}".strip
+  action = "BUNDLE_GEMFILE=#{deploy_dir('Gemfile')} bundle exec #{bin_dir('cronjob')} #{action.shellescape} #{notify}".strip
 
   $crontab << "#{time} #{action}"
 end

@@ -118,12 +118,13 @@ Breakfast and lunch will be served.
 
 [Talaris Conference Center](http://www.talarisconferencecenter.com/)
 <br />
-Lodge Room
+Lodge Conference Room
 <br />
 4000 NE 41st Street
 <br />
 Seattle, WA 98105
 <br />
+
 
 Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000 and let them know you are attending the Code.org's CS in Algebra event. Go [here](http://www.talarisconferencecenter.com/maps-directions.php) for a map and directions.
 
@@ -194,6 +195,37 @@ Water
 
 
 [**Back to the top**](#top)
+
+<a id="counselor-admin"></a>
+
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
+
+
+### Counselors##
+
+**Save the date**
+
+Thursday, November 5th, 2015 <br/>
+8:00am - 10:00am
+
+**Location**
+
+TBD 
+
+
+### Administrators##
+
+**Save the date**
+
+Thursday, November 5th, 2015  <br/>
+11:00am - 3:00pm
+
+**Location**
+
+TBD
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.
