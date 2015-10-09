@@ -20,22 +20,23 @@ end
 
 base_url = ENV['base_url']
 
-all_outfiles = [].tap do |all_outfiles|
-  pdf_conversions_for_files(sites_v3_dir('code.org/**/[^_]*.makepdf'), '').each do |pdf_conversion_info|
-    fetchfile_for_pdf = "#{pdf_conversion_info.output_pdf_path}.fetch"
+task :generate_pdfs do
+  puts "WHATUP?"
+  all_outfiles = [].tap do |all_outfiles|
+    pdf_conversions_for_files(sites_v3_dir('code.org/**/[^_]*.makepdf'), '').each do |pdf_conversion_info|
+      fetchfile_for_pdf = "#{pdf_conversion_info.output_pdf_path}.fetch"
 
-    file fetchfile_for_pdf => pdf_conversion_info.src_files do
-      url = "#{base_url}#{pdf_conversion_info.url_path}"
+      file fetchfile_for_pdf => pdf_conversion_info.src_files do
+        url = "#{base_url}#{pdf_conversion_info.url_path}"
 
-      PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose: true)
+        PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose: true)
 
-      fetchable_url = RakeUtils.replace_file_with_s3_backed_fetch_file(pdf_conversion_info.output_pdf_path, fetchfile_for_pdf, bucket: 'cdo-fetch')
+        fetchable_url = RakeUtils.replace_file_with_s3_backed_fetch_file(pdf_conversion_info.output_pdf_path, fetchfile_for_pdf, bucket: 'cdo-fetch')
 
-      HipChat.log "Created <b>#{pdf_conversion_info.output_pdf_path}</b> and moved to <a href='#{fetchable_url}'>#{fetchable_url}</a></b>."
+        HipChat.log "Created <b>#{pdf_conversion_info.output_pdf_path}</b> and moved to <a href='#{fetchable_url}'>#{fetchable_url}</a></b>."
+      end
+
+      all_outfiles << fetchfile_for_pdf
     end
-
-    all_outfiles << fetchfile_for_pdf
   end
 end
-
-task :default => all_outfiles
