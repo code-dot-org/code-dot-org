@@ -128,7 +128,7 @@ class WorkshopTest < ActiveSupport::TestCase
     #   1 => {id: 1, short_name: 'Phase 1', long_name: 'Phase 1: Online Introduction'},
     #   2 => {id: 2, short_name: 'Phase 2', long_name: 'Phase 2: Blended Summer Study', prerequisite_phase: 1},
 
-    assert_equal 'Phase 1: Online Introdution', create(:workshop, phase: 1).phase_long_name
+    assert_equal 'Phase 1: Online Introduction', create(:workshop, phase: 1).phase_long_name
     assert_equal 'Phase 2: Blended Summer Study', create(:workshop, phase: 2).phase_long_name
 
     assert_equal nil, create(:workshop, phase: "????").phase_long_name
