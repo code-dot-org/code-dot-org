@@ -319,12 +319,6 @@ var drawDiv = function () {
   designModeViz.style.width = Applab.appWidth + "px";
   designModeViz.style.height = Applab.footerlessAppHeight + "px";
 
-  if (Applab.levelHtml === '') {
-    // On clear gives us a fresh start, including our default screen.
-    designMode.loadDefaultScreen();
-    designMode.serializeToLevelHtml();
-  }
-
   if (studioApp.share) {
     renderFooterInSharedGame();
   }
@@ -514,23 +508,31 @@ Applab.getCode = function () {
 Applab.getHtml = function () {
   // This method is called on autosave. If we're about to autosave, let's update
   // levelHtml to include our current state.
-  if (Applab.isInDesignMode() && !Applab.isRunning() || Applab.levelHtml === '') {
+  if ($('#designModeViz').is(':visible')) {
     designMode.serializeToLevelHtml();
   }
   return Applab.levelHtml;
 };
 
+/**
+ * Sets Applab.levelHtml as well as #designModeViz contents.
+ * designModeViz is the source of truth for the app's HTML.
+ * levelHtml can be lazily updated from designModeViz via serializeToLevelHtml.
+ * @param html
+ */
 Applab.setLevelHtml = function (html) {
   if (html === '') {
-    if (window.dashboard) {
-      dashboard.project.clearHtml();
-    }
     Applab.levelHtml = '';
   } else {
     Applab.levelHtml = designMode.addScreenIfNecessary(html);
   }
   var designModeViz = document.getElementById('designModeViz');
   designMode.parseFromLevelHtml(designModeViz, true);
+
+  // Make sure at least one screen exists, and that the first
+  // screen is visible.
+  designMode.loadDefaultScreen();
+  designMode.serializeToLevelHtml();
 };
 
 Applab.onTick = function() {
@@ -672,6 +674,17 @@ Applab.init = function(config) {
     }
     drawDiv();
 
+    // Ignore the user's levelHtml for levels without design mode. levelHtml
+    // should never be present on such levels, however some levels do
+    // have levelHtml stored due to a previous bug. HTML set by levelbuilder
+    // is stored in startHtml, not levelHtml.
+    if (config.level.hideDesignMode) {
+      config.level.levelHtml = '';
+    }
+
+    // #designModeViz doesn't exist until after drawDiv() is called.
+    Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
+
     studioApp.alertIfAbusiveProject('#codeWorkspace');
   };
 
@@ -698,7 +711,6 @@ Applab.init = function(config) {
   config.afterClearPuzzle = function() {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    designMode.loadDefaultScreen();
     AppStorage.populateTable(level.dataTables, true); // overwrite = true
     AppStorage.populateKeyValue(level.dataProperties, true); // overwrite = true
     studioApp.resetButtonClick();
@@ -729,25 +741,9 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
-  // Ignore the user's levelHtml for levels without design mode. levelHtml
-  // should never be present on such levels, however some levels do
-  // have levelHtml stored due to a previous bug. HTML set by levelbuilder
-  // is stored in startHtml, not levelHtml.
-  if (level.hideDesignMode) {
-    level.levelHtml = '';
-  }
-  // This call to setLevelHtml won't populate designModeViz because
-  // it hasn't been added to the DOM yet.
-  Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
-
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
   studioApp.init(config);
-
-  // From this point on, designModeViz is the source of truth for the HTML contents.
-  // levelHtml should be lazily updated from designModeViz via serializeToLevelHtml.
-  var designModeViz = document.getElementById('designModeViz');
-  designMode.parseFromLevelHtml(designModeViz, true);
 
   var viz = document.getElementById('visualization');
   var vizCol = document.getElementById('visualizationColumn');
@@ -868,12 +864,11 @@ Applab.init = function(config) {
 
     designMode.configureDesignToggleRow();
 
-    designMode.loadDefaultScreen();
-
     designMode.toggleDesignMode(Applab.startInDesignMode());
 
     designMode.configureDragAndDrop();
 
+    var designModeViz = document.getElementById('designModeViz');
     designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
   }
 };
@@ -1392,6 +1387,8 @@ Applab.onCodeModeButton = function() {
     var divApplab = document.getElementById('divApplab');
     designMode.parseFromLevelHtml(divApplab, false);
     Applab.changeScreen(designMode.getCurrentScreenId());
+  } else {
+    Applab.activeScreen().focus();
   }
 };
 
