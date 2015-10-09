@@ -9816,7 +9816,7 @@ module.exports = React.createClass({displayName: "exports",
 
       assetList = (
         React.createElement("div", null, 
-          React.createElement("div", {style: {maxHeight: '330px', overflowX: 'scroll', margin: '1em 0'}}, 
+          React.createElement("div", {style: {maxHeight: '330px', overflowY: 'scroll', margin: '1em 0', paddingRight: '15px'}}, 
             React.createElement("table", {style: {width: '100%'}}, 
               React.createElement("tbody", null, 
                 rows
