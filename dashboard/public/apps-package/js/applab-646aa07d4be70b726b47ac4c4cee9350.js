@@ -1320,7 +1320,6 @@ Applab.reset = function(first) {
   designMode.parseFromLevelHtml(newDivApplab, isDesigning);
   designMode.loadDefaultScreen();
   if (Applab.isInDesignMode()) {
-    designMode.clearProperties();
     designMode.resetElementTray(isDesigning);
   }
 
@@ -2620,6 +2619,7 @@ var KeyCodes = require('../constants').KeyCodes;
 var designMode = module.exports;
 
 var currentlyEditedElement = null;
+var currentScreen = null;
 
 var GRID_SIZE = 5;
 
@@ -2694,13 +2694,6 @@ designMode.editElementProperties = function(element) {
   }
   currentlyEditedElement = element;
   designMode.renderDesignWorkspace(element);
-};
-
-/**
- * Clear the Properties pane of applab's design mode.
- */
-designMode.clearProperties = function () {
-  designMode.editElementProperties(null);
 };
 
 /**
@@ -2919,9 +2912,9 @@ designMode.onDeletePropertiesButton = function(element, event) {
 
   if (isScreen) {
     designMode.loadDefaultScreen();
+  } else {
+    designMode.editElementProperties(document.getElementById(currentScreen));
   }
-
-  designMode.clearProperties();
 };
 
 designMode.onDepthChange = function (element, depthDirection) {
@@ -3282,6 +3275,7 @@ designMode.createScreen = function () {
  * change, and opens the element property editor for the new screen.
  */
 designMode.changeScreen = function (screenId) {
+  currentScreen = screenId;
   var screenIds = [];
   $('.screen').each(function () {
     screenIds.push(this.id);
