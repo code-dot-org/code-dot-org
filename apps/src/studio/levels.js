@@ -1652,6 +1652,7 @@ levels.js_hoc2015_move_two_items = {
 levels.js_hoc2015_move_item_destination = {
   "editCode": true,
   "background": "snow",
+  "textModeAtStart": true,
   "codeFunctions": {
     "moveRight": null,
     "moveLeft": null,
