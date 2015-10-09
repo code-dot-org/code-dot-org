@@ -42,6 +42,7 @@ var assetsApi = require('../clientApi').assets;
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
 var DebugArea = require('./DebugArea');
+var ShareWarnings = require('../templates/ShareWarnings.jsx');
 
 var applabConstants = require('./constants');
 
@@ -326,6 +327,26 @@ var drawDiv = function () {
 
   if (studioApp.share) {
     renderFooterInSharedGame();
+
+    // TODO - can i move btnselector out
+    studioApp.showDialogWithReactComponent(ShareWarnings, {
+      signedIn: true,
+      storesData: true
+    }, '#foo');
+
+    // var dialog;
+    // var div = document.createElement('div');
+    // React.render(React.createElement(ShareWarnings, {
+    //   signedIn: true,
+    //   storesData: true,
+    //   onClose: function () {
+    //     console.log('close');
+    //     if (dialog) {
+    //       dialog.hide();
+    //     }
+    //   }
+    // }), div);
+    // dialog = studioApp.showDivInDialog(div);
   }
 };
 
