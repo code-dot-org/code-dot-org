@@ -1792,8 +1792,8 @@ levels.js_hoc2015_event_two_items = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
   "pinWorkspaceToBottom": "true",
   "embed": "false",
-  "instructions": "\"Bot1, I need you to get a critical message to the goals.\"",
-  "instructions2": "Use functions to make Bot1 move when you hit the arrow keys.",
+  "instructions": "\"BOT1, I need you to get a critical message to the GOALs.\"",
+  "instructions2": "Make BOT1 move when you hit the arrow keys.",
   "goalOverride": {
     "goalAnimation": "animatedGoal",
     "imageWidth": 100,
@@ -1845,7 +1845,7 @@ levels.js_hoc2015_event_four_items = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 16, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
 
   "embed": "false",
-  "instructions": "\"Get to all the goals as quickly as you can.\"",
+  "instructions": "\"Get to all the GOALs as quickly as you can.\"",
   "instructions2": "Move in all directions.",
   "goalOverride": {
     "goalAnimation": "animatedGoal",
@@ -1907,7 +1907,7 @@ levels.js_hoc2015_event_choose_character =
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
 
   "instructions": "\"Time to visit another planet.\"",
-  "instructions2": "Use the setBackground command to change the background and the setBot command to change your bot to Bot2.",
+  "instructions2": "Use the dropdown to change the background.  Now find a command to change your BOT.",
 };
 
 
@@ -1964,7 +1964,7 @@ levels.js_hoc2015_event_add_items = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"I’m seeing signs of increased activity on this planet.\"",
-  "instructions2": "Let’s do the same thing in text mode. Type, \"addCharacter(\"pig\");\" at the top of your program to add a Character1.  Then add a second one.  Then get them both.",
+  "instructions2": "Use the addCharacter(); command a couple times to add ROOs at the start of your program.  Then, go get them.",
 };
 
 
@@ -2027,8 +2027,8 @@ levels.js_hoc2015_event_item_behavior = {
   "floatingFcore": true,
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
-  "instructions": "\"It’s up to you, Bot2.\"",
-  "instructions2": "Make the pigs flee by using \"setToFlee\" and then get them all."
+  "instructions": "\"It’s up to you, BOT2.\"",
+  "instructions2": "Make the ROOs flee from BOT2."
 };
 
 levels.js_hoc2015_event_touch_items = {
@@ -2099,7 +2099,7 @@ levels.js_hoc2015_event_touch_items = {
 
   "embed": "false",
   "instructions": "\"Be careful, they might be behind you!\"",
-  "instructions2": "Every time you get a character, add a new random character to the scene.",
+  "instructions2": "Every time you get a ROO, add one MOUSE and one SPIDER to the world.",
 };
 
 levels.js_hoc2015_event_points = {
@@ -2174,7 +2174,7 @@ levels.js_hoc2015_event_points = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
 
   "embed": "false",
-  "instructions": "\"I’m counting on you, Bot1!\"",
+  "instructions": "\"I’m counting on you, BOT1!\"",
   "instructions2": "Change your score when you touch a character. Can you reach 100 points?",
 };
 
@@ -2251,7 +2251,7 @@ levels.js_hoc2015_event_random_items = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"Quick! They’re moving faster!\"",
-  "instructions2": "Ready to move faster? Increase your speed when you touch a Character3 and slow down when you hit a Character4.",
+  "instructions2": "Ready to move faster? Increase your speed when you touch a MOUSE and slow down when you hit a SPIDER.",
 };
 
 levels.js_hoc2015_event_free = {
@@ -2325,7 +2325,7 @@ levels.js_hoc2015_event_free = {
 
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
-  "instructions": "\"You’re on your own now, Bot1.\"",
+  "instructions": "\"You’re on your own now, BOT1.\"",
 };
 
 
