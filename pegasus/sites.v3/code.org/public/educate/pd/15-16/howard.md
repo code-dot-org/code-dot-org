@@ -43,7 +43,7 @@ Breakfast and lunch will be served.
 **Location**
 
 Applications and Research Laboratory (ARL)<br/>
-Room A8<br/>
+Room B37<br/>
 10920 Clarksville Pike<br/>
 Ellicott City, MD 21042<br/><br/>
 

@@ -24,9 +24,9 @@ Scenario:
   Then element ".header_middle a:first" has class "level_link perfect"
 
 Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as attempted
-  Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
+  Given I am on "http://studio.code.org/hoc/5?noautoplay=true"
   And I rotate to landscape
-  Then I wait to see a dialog titled "Puzzle 1 of 20"
+  Then I wait to see a dialog titled "Puzzle 5 of 20"
   And I debug cookies
   And I close the dialog
   Then I wait until element "#runButton" is visible
@@ -37,5 +37,5 @@ Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as att
   Then I wait to see ".modal"
   And I close the dialog
   When element "#runButton" is visible
-  Then element ".header_middle a:first" has class "level_link attempted"
+  Then element ".progress_container div:nth-child(5) a" has class "level_link attempted"
 

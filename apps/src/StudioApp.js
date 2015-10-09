@@ -958,27 +958,36 @@ function applyTransformScaleToChildren(element, scale) {
 *  classes that would typically adjust width and scale.
 */
 StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
-  var codeWorkspace = document.getElementById('codeWorkspace');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
-  var visualization = document.getElementById('visualization');
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  var visualizationEditor = document.getElementById('visualizationEditor');
 
   var rect = visualizationResizeBar.getBoundingClientRect();
   var offset;
   var newVizWidth;
   if (this.isRtl()) {
     offset = window.innerWidth -
-             (window.pageXOffset + rect.left + (rect.width / 2)) -
-             parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
+      (window.pageXOffset + rect.left + (rect.width / 2)) -
+      parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
     newVizWidth = (window.innerWidth - event.pageX) - offset;
   } else {
     offset = window.pageXOffset + rect.left + (rect.width / 2) -
-             parseInt(window.getComputedStyle(visualizationResizeBar).left, 10);
+      parseInt(window.getComputedStyle(visualizationResizeBar).left, 10);
     newVizWidth = event.pageX - offset;
   }
-  newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
-                         Math.min(MAX_VISUALIZATION_WIDTH, newVizWidth));
+  this.resizeVisualization(newVizWidth);
+};
+
+/**
+ * Resize the visualization to the given width
+ */
+StudioApp.prototype.resizeVisualization = function (width) {
+  var codeWorkspace = document.getElementById('codeWorkspace');
+  var visualization = document.getElementById('visualization');
+  var visualizationResizeBar = document.getElementById('visualizationResizeBar');
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualizationEditor = document.getElementById('visualizationEditor');
+
+  var newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
+                         Math.min(MAX_VISUALIZATION_WIDTH, width));
   var newVizWidthString = newVizWidth + 'px';
   var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
@@ -995,8 +1004,16 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   visualizationColumn.style.maxWidth = (newVizWidth + vizSideBorderWidth) + 'px';
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
-  applyTransformScaleToChildren(visualization,
-      'scale(' + (newVizWidth / this.nativeVizWidth) + ')');
+
+  // We don't get the benefits of our responsive styling, so set height
+  // explicitly
+  if (!utils.browserSupportsCssMedia()) {
+    visualization.style.height = newVizHeightString;
+    visualization.style.width = newVizWidthString;
+  }
+  var scale = (newVizWidth / this.nativeVizWidth);
+
+  applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
   if (visualizationEditor) {
     visualizationEditor.style.marginLeft = newVizWidthString;
   }

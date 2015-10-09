@@ -174,7 +174,7 @@ browser_features = $browsers.product features
 
 HipChat.log "Starting #{browser_features.count} <b>dashboard</b> UI tests in #{$options.parallel_limit} threads</b>..."
 
-Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |browser, feature|
+Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
   feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
   browser_name = browser['name'] || 'UnknownBrowser'
   test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
@@ -195,8 +195,8 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
     next
   end
 
-# don't log individual tests because we hit HipChat rate limits
-#  HipChat.log "Testing <b>dashboard</b> UI with <b>#{test_run_string}</b>..."
+  # Don't log individual tests because we hit HipChat rate limits
+  # HipChat.log "Testing <b>dashboard</b> UI with <b>#{test_run_string}</b>..."
   print "Starting UI tests for #{test_run_string}\n"
 
   ENV['BROWSER_CONFIG'] = browser_name
@@ -287,13 +287,23 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
     end
   end
 
-  if succeeded
-# don't log individual successes because we hit HipChat rate limits
-#    HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{format_duration(test_duration)})"
+  parsed_output = output_stdout.match(/^(?<scenarios>\d+) scenarios?( \((?<info>.*?)\))?/)
+  scenario_count = nil
+  unless parsed_output.nil?
+    scenario_count = parsed_output[:scenarios].to_i
+    scenario_info = parsed_output[:info]
+    scenario_info = ", #{scenario_info}" unless scenario_info.blank?
+  end
+
+  if !parsed_output.nil? && scenario_count == 0 && succeeded
+    HipChat.log "<b>dashboard</b> UI tests skipped with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
+  elsif succeeded
+    # Don't log individual successes because we hit HipChat rate limits
+    # HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
   else
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     HipChat.log "<pre>#{output_stderr}</pre>"
-    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)})"
+    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
 
     if $options.html
       link = "https://test-studio.code.org/ui_test/" + html_output_filename
@@ -305,8 +315,15 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
     HipChat.log message, color: 'red'
     HipChat.developers short_message, color: 'red' if CDO.hip_chat_logging
   end
-  result_string = succeeded ? "succeeded".green : "failed".red
-  print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)})\n"
+  result_string =
+    if scenario_count == 0
+      'skipped'.blue
+    elsif succeeded
+      'succeeded'.green
+    else
+      'failed'.red
+    end
+  print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)}#{scenario_info})\n"
 
   [succeeded, message]
 end.each do |succeeded, message|
