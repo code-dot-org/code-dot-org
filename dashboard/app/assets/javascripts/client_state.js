@@ -32,10 +32,11 @@ dashboard.clientState.EXPIRY_DAYS = 365;
  */
 var MAX_LINES_TO_SAVE = 1000;
 
+var COOKIE_OPTIONS = {expires: dashboard.clientState.EXPIRY_DAYS, path: '/'};
 
 dashboard.clientState.reset = function() {
-  $.removeCookie('progress');
-  $.removeCookie('lines');
+  $.removeCookie('progress', {path: '/'});
+  $.removeCookie('lines', {path: '/'});
 };
 
 /**
@@ -73,8 +74,7 @@ dashboard.clientState.trackProgress = function(result, lines, testResult, script
 function setLevelProgress(level, progress) {
   var progressMap = dashboard.clientState.allLevelsProgress();
   progressMap[String(level)] = progress;
-  $.cookie('progress', JSON.stringify(progressMap),
-    {expires: dashboard.clientState.EXPIRY_DAYS});
+  $.cookie('progress', JSON.stringify(progressMap), COOKIE_OPTIONS);
 }
 
 /**
@@ -107,7 +107,6 @@ dashboard.clientState.lines = function() {
 function addLines(addedLines) {
   var newLines = Math.min(dashboard.clientState.lines() + Math.max(addedLines, 0), MAX_LINES_TO_SAVE);
 
-  $.cookie('lines', String(newLines),
-    {expires: dashboard.clientState.EXPIRY_DAYS});
+  $.cookie('lines', String(newLines), COOKIE_OPTIONS);
 }
 })(window, $);
