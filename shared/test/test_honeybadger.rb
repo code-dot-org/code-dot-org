@@ -7,6 +7,10 @@ require_relative '../../lib/cdo/honeybadger'
 
 class HoneybadgerTest < Minitest::Test
 
+  def teardown
+    ENV.unstub(:with_sensitive_values_redacted)
+  end
+
   COMMAND = '/home/ubuntu/staging/bin/deliver_poste_messages'
 
   ERROR =
