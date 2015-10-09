@@ -21,7 +21,6 @@ end
 base_url = ENV['base_url']
 
 task :generate_pdfs do
-  puts "WHATUP?"
   all_outfiles = [].tap do |all_outfiles|
     pdf_conversions_for_files(sites_v3_dir('code.org/**/[^_]*.makepdf'), '').each do |pdf_conversion_info|
       fetchfile_for_pdf = "#{pdf_conversion_info.output_pdf_path}.fetch"
