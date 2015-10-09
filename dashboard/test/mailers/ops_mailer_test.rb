@@ -124,5 +124,4 @@ class OpsMailerTest < ActionMailer::TestCase
     @workshop.segments << create(:segment, workshop_id: @workshop.id, start: start_date + 2.day + 9.hour, end: DateTime.now + 2.day + 10.hour)
     @workshop
   end
-
 end
