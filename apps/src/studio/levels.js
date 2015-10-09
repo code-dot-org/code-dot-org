@@ -1633,7 +1633,7 @@ levels.js_hoc2015_move_two_items = {
 
 levels.js_hoc2015_move_item_destination = {
   "editCode": true,
-  "background": "forest",
+  "background": "snow",
   "codeFunctions": {
     "moveRight": null,
     "moveLeft": null,
@@ -1652,7 +1652,7 @@ levels.js_hoc2015_move_item_destination = {
   "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 4, 4, 4, 4, 0, 0], [0, 4,  4, 4, 4, 4, 4, 0], [0, 4,  0, 4, 4,256, 4, 0], [0, 4,1,16, 0, 0, 4, 0], [0, 4, 4, 4,  4, 4, 4, 0], [0, 0, 0, 0,  0, 0, 0, 0], [0, 0, 0, 0,  0, 0, 0, 0]],
+  "map": [[0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 4, 4, 4, 4, 0, 0], [0, 4,  4, 4, 4, 4, 4, 0], [0, 4,  0, 4, 4,1, 4, 0], [0, 4,1,16, 0, 0, 4, 0], [0, 4, 4, 4,  4, 4, 4, 0], [0, 0, 0, 0,  0, 0, 0, 0], [0, 0, 0, 0,  0, 0, 0, 0]],
   "instructions": "I see another item behind that obstacle. Can you bring it back to the destination?",
   "goalOverride": {
     "goalAnimation": "animatedGoal",
@@ -1683,14 +1683,19 @@ levels.js_hoc2015_move_item_destination_2 = {
   "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 0, 0,  4, 0, 0], [0, 4,  4, 4, 4,  0, 4, 0], [0, 4,  4,16, 0,  0, 4, 0], [0, 4,  0, 0, 4,  4, 4, 0], [0, 4,  1, 256, 0,  4, 4, 0], [0, 4,  4, 0, 4,  0, 0, 0], [0, 0,  4, 4, 4,  0, 0, 0]],
+  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 0, 0,  4, 0, 0], [0, 4,  4, 4, 4,  0, 4, 0], [0, 4,  4,16, 0,  0, 4, 0], [0, 4,  0, 0, 4,  4, 4, 0], [0, 4,  1, 1, 0,  4, 4, 0], [0, 4,  4, 0, 4,  0, 0, 0], [0, 0,  4, 4, 4,  0, 0, 0]],
   "embed": "false",
   "instructions": "Drag the code blocks into the workspace to help the character reach the destination.",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  }
 };
 
 levels.js_hoc2015_move_item_destination_3 = {
   "editCode": true,
-  "background": "snow",
+  "background": "ship",
   "textModeAtStart": true,
   "codeFunctions": {
     "moveRight": null,
@@ -1710,15 +1715,20 @@ levels.js_hoc2015_move_item_destination_3 = {
   "markerWidth": 50,
   "delayCompletion": 2000,
   "floating_score": true,  
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  4, 4, 4,  4, 4, 0], [0, 0, 4,  0, 0, 1,  4, 0], [0, 0,  4,0, 256,  4, 4, 0], [0, 4,  0, 16, 0,  0, 4, 0], [0, 4, 4, 4, 4,  0, 4, 0], [0, 0,  0, 0, 4,  4, 4, 0], [0, 0,  0, 0, 0, 0, 0, 0]],
+  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  4, 4, 4,  4, 4, 0], [0, 0, 4,  0, 0, 1,  4, 0], [0, 0,  4,0, 1,  4, 4, 0], [0, 4,  0, 16, 0,  0, 4, 0], [0, 4, 4, 4, 4,  0, 4, 0], [0, 0,  0, 0, 4,  4, 4, 0], [0, 0,  0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "Try typing the commands to get the item to our destination. Don’t forget to end with ();",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  }
 };
 
 
 levels.js_hoc2015_move_cross = {
   "editCode": true,
-  "background": "snow",
+  "background": "ship",
   "textModeAtStart": true,
   "codeFunctions": {
     "moveRight": null,
@@ -1738,9 +1748,14 @@ levels.js_hoc2015_move_cross = {
   "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 4, 0, 0, 0, 0], [0, 0, 4,  1, 4, 0, 0, 0], [0, 4, 256, 0, 256, 4, 0, 0], [0, 0,  4, 16, 4,  0, 0, 0], [0, 0, 0, 4, 0, 0, 0, 0], [0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 4, 0, 0, 0, 0], [0, 0, 4,  1, 4, 0, 0, 0], [0, 4, 1, 0, 1, 4, 0, 0], [0, 0,  4, 16, 4,  0, 0, 0], [0, 0, 0, 4, 0, 0, 0, 0], [0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "Type or drag the blocks to get both items to the destination.",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  }
 };
 
 
