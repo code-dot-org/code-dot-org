@@ -1599,6 +1599,24 @@ levels.js_hoc2015_move_right = {
     "imageWidth": 100,
     "imageHeight": 100
   },
+  "callouts": [
+    {
+      "element_id": ".droplet-main-canvas",
+      "qtip_config": {
+        "content" : {
+          "text": msg.calloutPlaceCommandsHere(),
+        },
+        "position": {
+          "my": "top left",
+          "at": "top left",
+          "adjust": {
+            "x": 10,
+            "y": 20
+          }
+        }
+      }
+    }
+  ],
 };
 
 levels.js_hoc2015_move_two_items = {
@@ -1778,6 +1796,28 @@ levels.js_hoc2015_event_two_items = {
     "imageWidth": 100,
     "imageHeight": 100
   },
+  "callouts": [
+    {
+      "element_id": ".droplet-main-canvas",
+      "hide_target_selector": ".droplet-drag-cover",
+      "qtip_config": {
+        "content": {
+          "text": msg.calloutPlaceCommandsHere(),
+        },
+        "hide": {
+          "event": "mouseup touchend",
+        },
+        "position": {
+          "my": "top left",
+          "at": "top left",
+          "adjust": {
+            "x": 10,
+            "y": 20
+          }
+        }
+      }
+    }
+  ],
 };
 
 levels.js_hoc2015_event_four_items = {
@@ -1818,7 +1858,26 @@ levels.js_hoc2015_event_four_items = {
     "goalAnimation": "animatedGoal",
     "imageWidth": 100,
     "imageHeight": 100
-  }
+  },
+  "callouts": [
+    {
+      "element_id": ".ace_scroller",
+      "qtip_config": {
+        "content" : {
+          "text": msg.calloutTypeCommandsHere(),
+        },
+        "event": "click mousedown touchstart mouseup touchend",
+        "position": {
+          "my": "center right",
+          "at": "top left",
+          "adjust": {
+            "x": 25,
+            "y": 25
+          }
+        }
+      }
+    }
+  ],
 };
 
 
@@ -1862,6 +1921,28 @@ levels.js_hoc2015_event_choose_character =
 
   "instructions": "\"Time to visit another planet.\"",
   "instructions2": "Use the setBackground(); command to change the background and change your bot to Bot2.",
+  "callouts": [
+    {
+      "element_id": ".droplet-main-canvas",
+      "hide_target_selector": ".droplet-drag-cover",
+      "qtip_config": {
+        "content": {
+          "text": msg.calloutPlaceCommandsAtTop(),
+        },
+        "hide": {
+          "event": "mouseup touchend",
+        },
+        "position": {
+          "my": "top left",
+          "at": "top left",
+          "adjust": {
+            "x": 10,
+            "y": 20
+          }
+        }
+      }
+    }
+  ],
 };
 
 
@@ -1950,7 +2031,25 @@ levels.js_hoc2015_event_item_behavior = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"It’s up to you Bot2.\"",
-  "instructions2": "Make the pigs flee by using \"setToFlee\" and then get them all."
+  "instructions2": "Make the pigs flee by using \"setToFlee\" and then get them all.",
+  "callouts": [
+    {
+      "element_id": "#droplet_palette_block_setToFlee",
+      "qtip_config": {
+        "content": {
+          "text": msg.calloutCharactersMove(),
+        },
+        "position": {
+          "my": "center left",
+          "at": "center right",
+          "adjust": {
+            "x": 15,
+            "y": 0
+          }
+        }
+      }
+    }
+  ],
 };
 
 levels.js_hoc2015_event_touch_items = {
@@ -2001,6 +2100,22 @@ levels.js_hoc2015_event_touch_items = {
   "embed": "false",
   "instructions": "\"Be careful, they might be behind you.\"",
   "instructions2": "Every time you get a character, add a new random character to the scene.",
+  "callouts": [
+    {
+      "element_id": ".ace_gutter-cell:nth-of-type(8)",
+      "hide_target_selector": ".ace_scroller",
+      "qtip_config": {
+        "content" : {
+          "text": msg.calloutPutCommandsTouchCharacter(),
+        },
+        "event": "click mousedown touchstart mouseup touchend",
+        "position": {
+          "my": "center right",
+          "at": "center right",
+        }
+      }
+    }
+  ],
 };
 
 levels.js_hoc2015_event_points = {
@@ -2061,30 +2176,30 @@ levels.js_hoc2015_event_random_items = {
   "wallMap": "blobs",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
-    "setBotSpeed": null,
+    "setBot": { "category": "Commands" },
+    "setBackground": { "category": "Commands" },
+    "setBotSpeed": { "category": "Commands" },
+    "setMap": { "category": "Commands" },
+    "playSound": { "category": "Commands" },
+    "addCharacter": { "category": "Commands" },
+    "setToChase": { "category": "Commands" },
+    "setToFlee": { "category": "Commands" },
+    "setToRoam": { "category": "Commands" },
+    "setToStop": { "category": "Commands" },
+    "moveSlow": { "category": "Commands" },
+    "moveNormal": { "category": "Commands" },
+    "moveFast": { "category": "Commands" },
+    "changeScore": { "category": "Commands" },
+    "moveRight": { "category": "Commands" },
+    "moveLeft": { "category": "Commands" },
+    "moveUp": { "category": "Commands" },
+    "moveDown": { "category": "Commands" },
 
-    "changeScore": null,
-    "whenTouchCharacter": null,
-    "setToChase": null,
-    "setToFlee": null,
-    "setToRoam": null,
-    "setToStop": null,
-    "moveSlow": null,
-    "moveNormal": null,
-    "moveFast": null,
-    "addCharacter": null,
-    "setBot": null,
-    "setBackground": null,
-    "setMap": null,
-    "playSound": null,
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+    "whenLeft": { "category": "Events" },
+    "whenRight": { "category": "Events" },
+    "whenUp": { "category": "Events" },
+    "whenDown": { "category": "Events" },
+    "whenTouchCharacter": { "category": "Events" }
   },
   "startBlocks": "setBackground(\"ship\");\nsetMap(\"blobs\");\nsetBot(\"bot1\");\naddCharacter('spider');\naddCharacter('spider');\naddCharacter('mouse');\naddCharacter('mouse');\nfunction whenLeft() {\n  moveLeft();\n}\nfunction whenRight() {\n  moveRight();\n}\nfunction whenUp() {\n  moveUp();\n}\nfunction whenDown() {\n  moveDown();\n}\nfunction whenTouchCharacter() {\n  changeScore(1);\n  \n}",
 
@@ -2103,6 +2218,20 @@ levels.js_hoc2015_event_random_items = {
   "embed": "false",
   "instructions": "\"Quick! They’re moving faster!\"",
   "instructions2": "Ready to move faster? Increase your speed when you touch a Character3 and slow down when you hit a Character4.",
+  "callouts": [
+    {
+      "element_id": ".droplet-palette-group-header.green",
+      "qtip_config": {
+        "content" : {
+          "text": msg.calloutClickCategory(),
+        },
+        "position": {
+          "my": "top center",
+          "at": "bottom center",
+        }
+      }
+    }
+  ],
 };
 
 levels.js_hoc2015_event_free = {
@@ -2162,6 +2291,24 @@ levels.js_hoc2015_event_free = {
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"You’re on your own now Bot1.\"",
+  "callouts": [
+    {
+      "element_id": ".droplet-palette-canvas",
+      "qtip_config": {
+        "content": {
+          "text": msg.calloutTryOutNewCommands(),
+        },
+        "position": {
+          "my": "center left",
+          "at": "center right",
+          "adjust": {
+            "x": -20,
+            "y": 0
+          }
+        }
+      }
+    }
+  ],
 };
 
 
