@@ -67,4 +67,5 @@ task :generate_pdfs do
       all_outfiles << fetchfile_for_pdf
     end
   end
+  all_outfiles
 end
