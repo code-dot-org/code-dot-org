@@ -39,6 +39,15 @@ module AWS
       }
     }
 
+    # Integration environment has a slightly different setup
+    if ENV['RACK_ENV'] == 'integration'
+      CONFIG[:pegasus][:aliases] << 'cdo-pegasus.ngrok.io'
+      CONFIG[:pegasus][:origin] = 'cdo-pegasus.ngrok.io'
+      CONFIG[:dashboard][:aliases] << 'cdo.ngrok.io'
+      CONFIG[:dashboard][:origin] = 'cdo.ngrok.io'
+      puts "CONFIG: #{CONFIG}"
+    end
+
     # Creates or updates the CloudFront distribution based on the current configuration.
     # Calls to this method should be idempotent, however CloudFront distribution updates can take ~15 minutes to finish.
     #
