@@ -479,6 +479,44 @@ StudioApp.prototype.init = function(config) {
   }
 };
 
+/**
+ * Shows a Dialog with the given React component as the body. Extends props
+ * with a custom onClose which allows us to access the (not-yet-created) dialog
+ */
+StudioApp.prototype.showDialogWithReactComponent = function (componentClass,
+    props, defaultBtnSelector) {
+  var dialog;
+  var div = document.createElement('div');
+  var propsWithClose = $.extend({}, props, {
+    onClose: function () {
+      if (dialog) {
+        dialog.hide();
+      }
+    }
+  });
+  // render component into our div
+  React.render(React.createElement(componentClass, propsWithClose), div);
+
+  dialog = this.feedback_.createModalDialog({
+    Dialog: this.Dialog,
+    contentDiv: div,
+    icon: null,
+    defaultBtnSelector: defaultBtnSelector
+  });
+  dialog.show();
+}
+
+// StudioApp.prototype.showDivInDialog = function (contentDiv) {
+//   var dialog = this.feedback_.createModalDialog({
+//     Dialog: this.Dialog,
+//     contentDiv: contentDiv,
+//     icon: null,
+//     defaultBtnSelector: '#foo'
+//   });
+//   dialog.show();
+//   return dialog;
+// };
+
 StudioApp.prototype.handleClearPuzzle = function (config) {
   if (this.isUsingBlockly()) {
     if (Blockly.functionEditor) {
