@@ -24,8 +24,7 @@ Scenario: Winning the first level
   And there's 1 dirt at (4, 4)
   Then I press "runButton"
   And element "#resetButton" is visible
-  Then I see ".congrats"
-  And element ".congrats" is visible
+  Then I wait until element ".congrats" is visible
   And element ".congrats" has text "Congratulations! You completed Puzzle 1."
   And there's 0 dirt at (4, 4)
   And I press "continue-button"
@@ -37,8 +36,7 @@ Scenario: Losing the first level
   When I drag block "1" to block "6"
   And I press "runButton"
   And element "#resetButton" is visible
-  Then I see ".congrats"
-  And element ".congrats" is visible
+  Then I wait until element ".congrats" is visible
   And element ".congrats" has text "Try one or more of the blocks below to solve this puzzle."
   Then I see "#feedbackBlocks"
   And there's an image "farmer/failure_avatar.png"
