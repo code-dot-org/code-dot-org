@@ -7,6 +7,7 @@ class ENVTest < Minitest::Test
 
   def test_with_sensitive_values_redacted
     ENV['SAFE'] = 'safe value'
+    orig_key = ENV['AWS_SECRET_KEY']
     ENV['AWS_SECRET_KEY'] = 'this should be obfuscated'
 
     redacted = ENV.with_sensitive_values_redacted
@@ -16,5 +17,7 @@ class ENVTest < Minitest::Test
 
     assert redacted.has_key? 'AWS_SECRET_KEY'
     assert_equal '(HIDDEN)', redacted['AWS_SECRET_KEY']
+
+    ENV['AWS_SECRET_KEY'] = orig_key
   end
 end
