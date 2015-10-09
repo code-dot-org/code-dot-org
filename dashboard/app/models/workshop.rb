@@ -17,6 +17,8 @@
 #  index_workshops_on_program_type  (program_type)
 #
 
+require 'cdo/activity_constants'
+
 class Workshop < ActiveRecord::Base
   PROGRAM_TYPES = %w(1 2 3 4 5 6)
 
@@ -63,8 +65,13 @@ class Workshop < ActiveRecord::Base
   end
 
   def phase_long_name
-    return '' if phase_info.nil?
+    return nil unless phase_info
     phase_info[:long_name]
+  end
+
+  def prerequisite_phase
+    return nil unless phase_info
+    ActivityConstants::PHASES[phase_info[:prerequisite_phase]]
   end
 
   def automated_email_recipients

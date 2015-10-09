@@ -121,4 +121,32 @@ class WorkshopTest < ActiveSupport::TestCase
     assert_equal 1, subjects.grep(/Important: Your workshop is coming up in 3 days/).count
     assert_equal 2, subjects.grep(/Feedback requested for your Code.org PD workshop/).count
   end
+
+  test "phase long name" do
+    # from ActivityConstants
+    #  PHASES = {
+    #   1 => {id: 1, short_name: 'Phase 1', long_name: 'Phase 1: Online Introduction'},
+    #   2 => {id: 2, short_name: 'Phase 2', long_name: 'Phase 2: Blended Summer Study', prerequisite_phase: 1},
+
+    assert_equal 'Phase 1: Online Introdution', create(:workshop, phase: 1).phase_long_name
+    assert_equal 'Phase 2: Blended Summer Study', create(:workshop, phase: 2).phase_long_name
+
+    assert_equal nil, create(:workshop, phase: "????").phase_long_name
+    assert_equal nil, create(:workshop, phase: nil).phase_long_name
+  end
+
+  test "prerequisite phase" do
+    # from ActivityConstants
+    #  PHASES = {
+    #   1 => {id: 1, short_name: 'Phase 1', long_name: 'Phase 1: Online Introduction'},
+    #   2 => {id: 2, short_name: 'Phase 2', long_name: 'Phase 2: Blended Summer Study', prerequisite_phase: 1},
+
+    assert_equal nil, create(:workshop, phase: 1).prerequisite_phase
+    phase1 = {id: 1, short_name: 'Phase 1', long_name: 'Phase 1: Online Introduction'}
+    assert_equal phase1, create(:workshop, phase: 2).prerequisite_phase
+    assert_equal nil, create(:workshop, phase: 3).prerequisite_phase
+
+    assert_equal nil, create(:workshop, phase: "????").prerequisite_phase
+    assert_equal nil, create(:workshop, phase: nil).prerequisite_phase
+  end
 end
