@@ -45,8 +45,9 @@ theme: pdf
       %li
         = state_info[:state_name_s]
         currently has
-        = format_integer_with_commas(state_info[:cs_jobs_i])
-        open computing jobs
+        %b
+          = format_integer_with_commas(state_info[:cs_jobs_i])
+          open computing jobs
         = precede "(" do
           = state_info[:growth_vs_average_f]
         times the average demand rate in 
@@ -56,36 +57,42 @@ theme: pdf
         The average salary for a computing occupation in
         = state_info[:state_code_s]
         is
-        = surround "$", "," do
-          = format_integer_with_commas(state_info[:avg_sal_computing_i])
+        %b
+          = surround "$", "," do
+            = format_integer_with_commas(state_info[:avg_sal_computing_i])
         which is significantly higher than the average salary in the state 
         = surround "($", ")." do
           = format_integer_with_commas(state_info[:avg_sal_all_i])
       %li
         = state_info[:state_name_s]
         had only
-        = format_integer_with_commas(state_info[:cs_graduates_i])
-        - if state_info[:cs_graduates_i] == 1
-          computer science graduate in 2015;
-        - else 
-          computer science graduates in 2015;
+        %b
+          = format_integer_with_commas(state_info[:cs_graduates_i])
+          - if state_info[:cs_graduates_i] == 1
+            computer science graduate
+          - else 
+            computer science graduates
+        in 2015;
         - if state_info[:percent_female_cs_grad_i] == 0
-          none
+          %b none
         - else 
           only
           = succeed "%" do
-            = state_info[:percent_female_cs_grad_i]
+            %b= state_info[:percent_female_cs_grad_i]
         were female.
       %li
         - if state_info[:ap_cs_exams_i] == 0
-          = format_integer_with_commas(state_info[:ap_cs_exams_i])
-          high school students in 
+          %b 
+            = format_integer_with_commas(state_info[:ap_cs_exams_i])
+            high school students
+          in 
           = state_info[:state_name_s]
           took the AP Computer Science exam in 2014.
         - else
           Only
-          = format_integer_with_commas(state_info[:ap_cs_exams_i])
-          high school students in 
+          %b 
+            = format_integer_with_commas(state_info[:ap_cs_exams_i])
+            high school students in 
           = state_info[:state_name_s]
           took the AP Computer Science exam in 2014;
           - if state_info[:percent_ap_female_i] != 0
@@ -110,11 +117,12 @@ theme: pdf
       %li
         - if state_info[:schools_ap_cs_i] != 0
           Only
-          = format_integer_with_commas(state_info[:schools_ap_cs_i])
-          - if state_info[:schools_ap_cs_i] == 1
-            school
-          - else
-            schools
+          %b
+            = format_integer_with_commas(state_info[:schools_ap_cs_i])
+            - if state_info[:schools_ap_cs_i] == 1
+              school
+            - else
+              schools
           in 
           = state_info[:state_code_s]
           = surround "(", "% of" do
@@ -134,10 +142,7 @@ theme: pdf
     .improve-edu
       %h2.improve-edu-h2 What can you do to improve K-12 CS education? 
       %ol
-        %li
-          %a{href: "https://code.org/promote/letter"}
-            Call
-          on your school to expand computer science offerings at every grade level.
+        %li Call on your school to expand computer science offerings at every grade level.
         %li Ask your local school district to allow computer science courses to satisfy a core math or science requirement.
         %li
           Visit
@@ -323,8 +328,9 @@ theme: pdf
             allow computer science to count as a mathematics or science admission requirement at institutions of higher education.  Admission policies that do not include rigorous computer science courses as meeting the mathematics or science entrance requirements discourage students from taking such courses in secondary education. State leaders can work with institutions of higher education to ensure credit and articulation policies align with secondary school graduation requirements.
 
     %p
-      %a{href: "https://code.org/files/Making_CS_Fundamental.pdf"} Read more
-      about these 8 policy ideas.
+      Read more about these 8 policy ideas at
+      = succeed "." do
+        %a{href: "https://code.org/files/Making_CS_Fundamental.pdf"} https://code.org/files/Making_CS_Fundamental.pdf
 
   %div
     %h3 Follow us! 
