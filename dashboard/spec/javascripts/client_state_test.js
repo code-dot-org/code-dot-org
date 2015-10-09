@@ -88,3 +88,4 @@ describe("clientState#trackProgress", function() {
 
   });
 });
+
