@@ -672,7 +672,7 @@ Applab.init = function(config) {
 
     studioApp.alertIfAbusiveProject('#codeWorkspace');
 
-    // IE9 doesnt support the way we handle responsiveness. Instead, expclitily
+    // IE9 doesnt support the way we handle responsiveness. Instead, explicitly
     // resize our visualization (user can still resize with grippy)
     if (!utils.browserSupportsCssMedia()) {
       studioApp.resizeVisualization(300);
