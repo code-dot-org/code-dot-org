@@ -72,6 +72,8 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = f
       }.bind(this)
     });
 
+    // Store the title/funcName as a block id so we can attach callouts later:
+    $(blockHoverDiv).attr('id', 'droplet_palette_block_' + funcName);
     $(blockHoverDiv).tooltipster(configuration);
   }.bind(this));
 };

@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Using the Design Mode Events change the button ID and update the code to match. (Click to see detail instructions).",
-    "markdown_instructions": "# IDs Are Still Important\r\n\r\nOn the last level you made your button do something in response to the click. When you saw UI elements before there was a lot of focus on the button ID. You had to set up the button with an ID and have a event handler for it. Now Design Mode takes care of the set up of the button for you. You'll notice there is no code for the set up of the button, but the button is still there. \r\n\r\n<img src=\"https://images.code.org/786c038c1816ec2681891c8a32cf44ee-image-1444333709404.48.07 PM.png\" style=\"width: 250px; float: right\">\r\n\r\nSo how does the code know which button it is connected to? The ID is still the connection. The ID is now set in Design Mode under the Properties of Events Tab. \r\n\r\n\r\n\r\n# Do This\r\n\r\nTry updating the ID name and then update the code to match. \r\n<img src=\"https://images.code.org/43e3536af5af3ff17b0972a1c6c2a300-image-1444333589342.gif\" style=\"width: 350px; float: right\">\r\n\r\n**Switch to Design Mode** and **edit the ID** to be more descriptive. You can edit it from either the Properties tab or the Events tab.\r\n\r\n**Switch to Code Mode** and check out the **dropdown ID menu**. Your new ID should be in the dropdown list!\r\n\r\n**Test it out** to make sure it works.",
+    "markdown_instructions": "# Baker note: we might not need this level, or the message about IDs being important might be able to shift to another level (stays here for now...pending).\r\n\r\n# IDs Are Still Important\r\n\r\n\r\n# Do This\r\n\r\nTry updating the ID name and then update the code to match. \r\n\r\n**Switch to Design Mode** and **edit the ID** to be more descriptive. You can edit it from either the Properties tab or the Events tab.\r\n\r\n**Switch to Code Mode** and check out the **dropdown ID menu**. Your new ID should be in the dropdown list!\r\n\r\n**Test it out** to make sure it works.\r\n<img src=\"https://images.code.org/43e3536af5af3ff17b0972a1c6c2a300-image-1444333589342.gif\" style=\"width: 500px;\">\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -34,8 +34,55 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "submittable": "false",
-    "hide_view_data_button": "false",
-    "encrypted_examples": "DOjySjstNJeU2I9feBquLafYEvCBD9ZY4zDgbZDDWjQGP3XXQT6rwrnPsNga\nnD+j\n"
+    "hide_view_data_button": "true",
+    "encrypted_examples": "DOjySjstNJeU2I9feBquLafYEvCBD9ZY4zDgbZDDWjQGP3XXQT6rwrnPsNga\nnD+j\n",
+    "code_functions": {
+      "button": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "setPosition": null,
+      "textLabel": {
+        "params": [
+          "\"id\"",
+          "\"text\""
+        ]
+      },
+      "image": null,
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "getX": null,
+      "getY": null,
+      "getDirection": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_max": null,
+      "randomNumber_min_max": null,
+      "console.log": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null
+    }
   }
 }]]></config>
   <blocks/>

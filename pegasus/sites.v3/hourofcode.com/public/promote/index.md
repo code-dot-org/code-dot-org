@@ -14,7 +14,7 @@ nav: promote_nav
 # How to get involved  
 
 ## 1. Sign up to host an Hour of Code
-Anyone, anywhere can host an Hour of Code. [Sign up](<%= resolve_url('/') %>) to recieve updates and qualify for prizes.
+Anyone, anywhere can host an Hour of Code. [Sign up](<%= resolve_url('/') %>) to receive updates and qualify for prizes.
 <br/>
 
 <a href="<%= resolve_url('/') %>"><button><%= hoc_s(:signup_your_event) %></button></a>

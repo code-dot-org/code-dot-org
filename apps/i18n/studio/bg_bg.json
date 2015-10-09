@@ -476,5 +476,12 @@
   "whenTouchWallTooltip": "Изпълни действията по-долу, когато Актьорът докосва стена.",
   "whenUp": "когато стрелка нагоре",
   "whenUpTooltip": "Изпълнява действията по-долу когато е натисната стрелка нагоре.",
-  "yes": "Да"
+  "yes": "Да",
+  "calloutPlaceCommandsHere": "Place commands here",
+  "calloutPlaceCommandsAtTop": "Place commands to set up your game at the top",
+  "calloutTypeCommandsHere": "Type your commands here",
+  "calloutCharactersMove": "These new commands let you control how the characters move",
+  "calloutPutCommandsTouchCharacter": "Put a command here to have it happen when you touch a character",
+  "calloutClickCategory": "Click a category header to see commands in each category",
+  "calloutTryOutNewCommands": "Try out all the new commands you’ve unlocked"
 }
