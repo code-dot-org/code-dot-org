@@ -1429,6 +1429,7 @@ Studio.init = function(config) {
   Studio.perExecutionTimeouts = [];
   Studio.tickIntervalId = null;
   Studio.tiles = [];
+  Studio.tilesDrawn = false;
 
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -2446,6 +2447,9 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   var numSrcRows = 8;
   var numSrcCols = 8;
 
+  var tileClass;
+  var tileClipClass;
+
   // We usually won't try jumbo size.
   var jumboSize = false;
 
@@ -2460,6 +2464,9 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
     srcCol = srcRow ?
                 Math.floor(Math.random() * constants.WallRandomCoordMax) :
                 1 + Math.floor(Math.random() * (constants.WallRandomCoordMax - 1));
+
+    tileClass = "randomTile";
+    tileClipClass = "randomTileClip";
   } else {
     // This wall value has been explicitly set.  It encodes the row & col from
     // the spritesheet of wall tile images.
@@ -2479,6 +2486,9 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
       // Double-size tiles are just a regular tile expanded to cover 2x2 tiles.
       tileSize = 2 * Studio.SQUARE_SIZE;
     }
+
+    tileClass = "specificTile";
+    tileClipClass = "specificTileClip";
   }
 
   // Attempt to load tiles that match the current background, if specified.
@@ -2492,7 +2502,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   var clipPath = document.createElementNS(SVG_NS, 'clipPath');
   var clipId = 'tile_clippath_' + Studio.tiles.length;
   clipPath.setAttribute('id', clipId);
-  clipPath.setAttribute('class', 'tile_clip');
+  clipPath.setAttribute('class', tileClipClass);
   var rect = document.createElementNS(SVG_NS, 'rect');
   rect.setAttribute('width', tileSize);
   rect.setAttribute('height', tileSize);
@@ -2504,7 +2514,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   var tile = document.createElementNS(SVG_NS, 'image');
   var tileId = 'tile_' + (Studio.tiles.length);
   tile.setAttribute('id', tileId);
-  tile.setAttribute('class', 'tile');
+  tile.setAttribute('class', tileClass);
   tile.setAttribute('width', numSrcCols * tileSize);
   tile.setAttribute('height', numSrcRows * tileSize);
   tile.setAttribute('x', col * Studio.SQUARE_SIZE - srcCol * tileSize + addOffset);
@@ -2553,6 +2563,14 @@ Studio.createLevelItems = function (svg) {
 };
 
 Studio.drawMapTiles = function (svg) {
+
+  // If we're just using the level's own map, then draw it only once.
+  if (!Studio.wallMap && Studio.tilesDrawn) {
+    return;
+  }
+
+  Studio.tilesDrawn = true;
+
   var row, col;
 
   var tilesDrawn = [];
@@ -3315,8 +3333,8 @@ Studio.setBackground = function (opts) {
 
     // Draw the tiles (again) now that we know which background we're using.
     if (level.wallMapCollisions) {
-      $(".tile_clip").remove();
-      $(".tile").remove();
+      $(".specificTileClip").remove();
+      $(".specificTile").remove();
       Studio.tiles = [];
 
       // Changing background can cause a change in the map used internally,
@@ -3371,8 +3389,8 @@ Studio.setMap = function (opts, forceLoad) {
   Studio.wallMapRequested = opts.value;
 
   // Draw the tiles (again) now that we know which background we're using.
-  $(".tile_clip").remove();
-  $(".tile").remove();
+  $(".specificTileClip").remove();
+  $(".specificTile").remove();
   Studio.tiles = [];
   Studio.drawMapTiles();
 
