@@ -368,5 +368,6 @@ describe 'http proxy cache' do
 
 end
 
-MiniTest::Unit.new.run
+output = MiniTest::Unit.new.run
 teardown
+exit output

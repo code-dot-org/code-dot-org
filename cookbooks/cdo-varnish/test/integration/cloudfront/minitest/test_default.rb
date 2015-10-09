@@ -1,2 +1,2 @@
 $cloudfront = true
-require_relative '../../../kitchen/data/shared'
+require_relative './shared'
