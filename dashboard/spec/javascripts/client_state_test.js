@@ -10,6 +10,7 @@ describe("clientState#trackProgress", function() {
 
   it("records level progress and line counts when level is completed", function() {
     var state = dashboard.clientState;
+    console.log("Cookie " + document.cookie);
     state.levelProgress(1).should.equal(0);
     state.levelProgress(2).should.equal(0);
     state.lines().should.equal(0);
@@ -80,10 +81,10 @@ describe("clientState#trackProgress", function() {
   it("handles malformed cookies", function () {
     var state = dashboard.clientState;
 
-    $.cookie('progress', '', 365);
+    $.cookie('progress', '', {expires: 365, path: '/'});
     state.levelProgress(1).should.equal(0);
 
-    $.cookie('progress', '{\'malformed_json\':true', 365);
+    $.cookie('progress', '{\'malformed_json\':true', {expires: 365, path: '/'});
     state.levelProgress(1).should.equal(0);
 
   });
