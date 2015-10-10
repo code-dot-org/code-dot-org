@@ -682,7 +682,8 @@ Applab.init = function(config) {
       config.level.levelHtml = '';
     }
 
-    // #designModeViz doesn't exist until after drawDiv() is called.
+    // Set designModeViz contents after it is created in configureDom()
+    // and sized in drawDiv().
     Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
 
     studioApp.alertIfAbusiveProject('#codeWorkspace');
@@ -975,6 +976,10 @@ Applab.isRunning = function () {
   return $('#resetButton').is(':visible') || studioApp.share;
 };
 
+/**
+ * Toggle whether divApplab or designModeViz is visible.
+ * @param isVisible whether divApplab should be visible.
+ */
 Applab.toggleDivApplab = function(isVisible) {
   if (isVisible) {
     $('#divApplab').show();
