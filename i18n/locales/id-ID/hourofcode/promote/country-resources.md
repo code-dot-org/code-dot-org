@@ -49,15 +49,15 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 ## 2) Rencanakan perangkat yang keras yang anda butuhkan - komputer hanyalah opsional
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
+Pengalaman terbaik dari Hour of Code adalah jika tersedia komputer-komputer yang terkoneksi dengan internet. Tetapi Anda tidak membutuhkan komputer untuk tiap anak, dan Hour of Code tetap dapat dilakukan tanpa komputer sama sekali.
 
   * **Tes tutorial pada perangkat atau komputer pelajar.** Pastikan itu bekerja dengan baik (dengan suara dan gambar).
   * **Tinjau ulang halaman keberhasilan menyelesaikan tutorial** untuk melihat apa yang pelajar akan lihat ketika menyelesaikannya. 
-  * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **Sediakan headphone untuk kelas anda**, atau minta pelajar untuk membawanya sendiri jika tutorial bekerja dengan baik jika disertai suaranya.
 
 ## 3) Rencanakan kedepan berdasarkan teknologi yang anda punya
 
-  * **Tidak memiliki perangkat yang cukup?** Gunakan [pemrograman berpasangan](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
+  * **Tidak memiliki perangkat yang cukup?** Gunakan [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Ketika peserta berpasangan, mereka saling membantu dan mengandalkan guru lebih sedikit.
   * **Mempunyai bandwidth kecil?** Rencanakan untuk menunjukan video di depan kelas, supaya setiap pelajar tidak mengunduh video mereka sendiri. Atau cobalah tutorial offline atau tanpa komputer.
 
 ## 4) Inspirasikan pelajar - tunjukan mereka video

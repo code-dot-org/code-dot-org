@@ -1,6 +1,6 @@
 * * *
 
-Naslov: pravilnik o zaštiti privatnosti
+title: pravilnik o zaštiti privatnosti
 
 * * *
 
