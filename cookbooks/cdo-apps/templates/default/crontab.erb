@@ -43,7 +43,7 @@ end
 
 if node['cdo-apps']['daemon']
   unless node.chef_environment == 'production'
-    cronjob at:'@reboot', do:"#{deploy_dir('bin','solr-server')} 2>&1 > #{pegasus_dir('log','solr.log')}"
+    cronjob at:'@reboot', do:"#{deploy_dir('bin','solr-server')} > #{pegasus_dir('log','solr.log')} 2>&1"
   end
 
   if node.chef_environment == 'staging' && node.name == 'staging'
@@ -67,7 +67,7 @@ if node['cdo-apps']['daemon']
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'process_forms')
   cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'analyze_hoc_activity')
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'deliver_poste_messages')
-  cronjob at:'*/1 * * * *', do:"#{deploy_dir('bin', 'geocode_hoc_activity')} 2>&1 > /dev/null"
+  cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'geocode_hoc_activity')
   cronjob at:'@daily', do:deploy_dir('bin', 'cron', 'ops_data_pull')
 end
 
