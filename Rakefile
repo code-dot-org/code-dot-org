@@ -284,7 +284,7 @@ namespace :install do
   end
 
   task :dashboard do
-    if rack_env?(:development) && !CDO.chef_managed
+    if (rack_env?(:development) && !CDO.chef_managed) || rack_env?(:adhoc)
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
         puts CDO.dashboard_db_writer
@@ -295,7 +295,7 @@ namespace :install do
   end
 
   task :pegasus do
-    if rack_env?(:development) && !CDO.chef_managed
+    if (rack_env?(:development) && !CDO.chef_managed) || rack_env?(:adhoc)
       Dir.chdir(pegasus_dir) do
         RakeUtils.bundle_install
         create_database CDO.pegasus_db_writer
