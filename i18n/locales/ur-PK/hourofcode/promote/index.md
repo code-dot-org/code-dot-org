@@ -12,7 +12,7 @@ title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
 
 ## 1. Sign up to host an Hour of Code
 
-Anyone, anywhere can host an Hour of Code. [Sign up](%= resolve_url('/') %) to recieve updates and qualify for prizes.   
+Anyone, anywhere can host an Hour of Code. [Sign up](%= resolve_url('/') %) to receive updates and qualify for prizes.   
 
 
 [<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
