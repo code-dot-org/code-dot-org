@@ -4,6 +4,7 @@ inherit_from:
 
 AllCops:
   Exclude:
+    - '.git/**/*'
     - 'apps/**/*'
     - 'dashboard/scripts/**/*'
   RunRailsCops: true
