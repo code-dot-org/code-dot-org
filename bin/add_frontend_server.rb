@@ -60,8 +60,8 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-unless ['production'].include?(options['environment'])
-  throw 'Environments other than production are currently unsupported'
+unless ['production', 'adhoc'].include?(options['environment'])
+  throw 'Environments other than production and adhoc are currently unsupported'
 end
 
 raise OptionParser::MissingArgument, 'Environment is required' if options['environment'].nil?
