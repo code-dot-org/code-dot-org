@@ -23,7 +23,7 @@ Scenario:
   When element "#runButton" is visible
   Then element ".header_middle a:first" has class "level_link perfect"
 
-cenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as attempted
+Scenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as attempted
   Given I am on "http://studio.code.org/hoc/6?noautoplay=true"
   And I rotate to landscape
   Then I wait to see a dialog titled "Puzzle 6 of 20"
