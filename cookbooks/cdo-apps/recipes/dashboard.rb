@@ -55,6 +55,9 @@ end
 execute "install-dashboard" do
   command "bundle exec rake install:dashboard"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
+  environment ({
+    'LC_ALL' => 'en_US.UTF-8', 'RAILS_ENV' => "#{node.chef_environment}"
+  })
   user node[:current_user]
   group node[:current_user]
   action :nothing
@@ -65,7 +68,7 @@ execute "create-dashboard-db" do
   command "rake db:setup_or_migrate"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
   environment ({
-    'LC_ALL' => nil, 'RAILS_ENV' => "#{node.chef_environment}"
+    'LC_ALL' => 'en_US.UTF-8', 'RAILS_ENV' => "#{node.chef_environment}"
   })
   user node[:current_user]
   group node[:current_user]
@@ -77,7 +80,7 @@ execute "build-dashboard" do
   command "rake build:dashboard"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
   environment ({
-    'LC_ALL' => nil, 'RAILS_ENV' => "#{node.chef_environment}"
+    'LC_ALL' => 'en_US.UTF-8', 'RAILS_ENV' => "#{node.chef_environment}"
   })
   user node[:current_user]
   group node[:current_user]

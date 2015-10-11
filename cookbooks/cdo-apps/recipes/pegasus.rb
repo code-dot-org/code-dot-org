@@ -41,6 +41,9 @@ end
 execute "install-pegasus" do
   command "bundle exec rake install:pegasus"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
+  environment ({
+    'LC_ALL' => 'en_US.UTF-8'
+  })
   user node[:current_user]
   group node[:current_user]
   action :nothing
@@ -51,7 +54,7 @@ execute "build-pegasus" do
   command "rake build:pegasus"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
   environment ({
-    'LC_ALL'=>nil,
+    'LC_ALL' => 'en_US.UTF-8'
   })
   user node[:current_user]
   group node[:current_user]
