@@ -39,7 +39,7 @@ template "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/config/n
 end
 
 execute "install-pegasus" do
-  command "rake install:pegasus"
+  command "bundle exec rake install:pegasus"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
   user node[:current_user]
   group node[:current_user]
