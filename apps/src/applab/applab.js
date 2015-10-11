@@ -1693,7 +1693,7 @@ Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
 
   return elements
       .sort(function (elementA, elementB) {
-        return elementUtils.getId(element) < elementUtils.getId(element) ? -1 : 1;
+        return elementUtils.getId(elementA) < elementUtils.getId(elementB) ? -1 : 1;
       })
       .map(function (element) {
         return {

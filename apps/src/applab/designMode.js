@@ -110,10 +110,24 @@ var appendPx = function (inp) {
 };
 
 /**
- * Handle a change from our properties table. After handling properties
- * generically, give elementLibrary a chance to do any element specific changes.
+ * Handle a change from our properties table.
+ * @param element {Element}
+ * @param name {string}
+ * @param value {string}
  */
 designMode.onPropertyChange = function(element, name, value) {
+  designMode.updateProperty(element, name, value);
+  designMode.editElementProperties(element);
+};
+
+/**
+ * After handling properties generically, give elementLibrary a chance
+ * to do any element specific changes.
+ * @param element
+ * @param name
+ * @param value
+ */
+designMode.updateProperty = function(element, name, value) {
   var handled = true;
   switch (name) {
     case 'id':
@@ -294,8 +308,6 @@ designMode.onPropertyChange = function(element, name, value) {
   if (!handled) {
     throw "unknown property name " + name;
   }
-
-  designMode.editElementProperties(element);
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {
@@ -428,10 +440,10 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   }
 
   children.each(function () {
-    elementLibrary.onDeserialize(this, designMode.onPropertyChange.bind(this));
+    elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
   });
   children.children().each(function() {
-    elementLibrary.onDeserialize(this, designMode.onPropertyChange.bind(this));
+    elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
   });
 };
 
@@ -538,8 +550,8 @@ function makeDraggable (jqueryElements) {
           widthProperty = 'width';
           heightProperty = 'height';
         }
-        designMode.onPropertyChange(element, widthProperty, element.style.width);
-        designMode.onPropertyChange(element, heightProperty, element.style.height);
+        designMode.updateProperty(element, widthProperty, element.style.width);
+        designMode.updateProperty(element, heightProperty, element.style.height);
       }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
