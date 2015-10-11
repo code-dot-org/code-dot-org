@@ -144,6 +144,17 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
   }
 }
 
+function apiValidateElementIdTagAndType(funcName, id, tagName, type, friendlyName) {
+  var divApplab = document.getElementById('divApplab');
+  var element = document.getElementById(id);
+  if (!(divApplab.contains(element)) ||
+      !((element.tagName === tagName) && (element.type === type))) {
+      var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
+      var errorString = funcName + "() id must refer to a " + friendlyName + " element.";
+      outputError(errorString, ErrorLevel.WARNING, line);
+  }
+}
+
 // (brent) We may in the future also provide a second option that allows you to
 // reset the state of the screen to it's original (design mode) state.
 applabCommands.setScreen = function (opts) {
@@ -822,6 +833,19 @@ applabCommands.setText = function (opts) {
   return false;
 };
 
+applabCommands.getValue = function (opts) {
+  apiValidateDomIdExistence(opts, 'getValue', 'id', opts.elementId, true);
+  apiValidateElementIdTagAndType('getValue', opts.elementId, 'INPUT', 'range', 'slider');
+  return parseInt(applabCommands.getText(opts), 10);
+};
+
+applabCommands.setValue = function (opts) {
+  apiValidateDomIdExistence(opts, 'setValue', 'id', opts.elementId, true);
+  apiValidateElementIdTagAndType('setValue', opts.elementId, 'INPUT', 'range', 'slider');
+  apiValidateType(opts, 'setValue', 'value', opts.text, 'number');
+  return applabCommands.setText(opts);
+};
+
 applabCommands.getChecked = function (opts) {
   var divApplab = document.getElementById('divApplab');
   apiValidateDomIdExistence(opts, 'getChecked', 'id', opts.elementId, true);
@@ -1185,7 +1209,17 @@ applabCommands.onEvent = function (opts) {
         domElement.addEventListener(
             opts.eventName,
             applabCommands.onEventFired.bind(this, opts));
-        break;
+        // To allow INPUT type="range" (Slider) events to work on downlevel browsers, we need to
+        // register a 'change' listener whenever an 'input' listner is requested.  Downlevel
+        // browsers typically only sent 'change' events.
+        if (opts.eventName === 'input' &&
+            domElement.tagName.toUpperCase() === 'INPUT' &&
+            domElement.type === 'range') {
+          domElement.addEventListener(
+              'change',
+              applabCommands.onEventFired.bind(this, opts));
+        }
+       break;
       default:
         return false;
     }

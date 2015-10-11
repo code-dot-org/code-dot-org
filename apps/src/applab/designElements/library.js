@@ -23,7 +23,8 @@ var ElementType = {
   IMAGE: 'IMAGE',
   CANVAS: 'CANVAS',
   SCREEN: 'SCREEN',
-  CHART: 'CHART'
+  CHART: 'CHART',
+  SLIDER: 'SLIDER'
 };
 
 var elements = {};
@@ -38,6 +39,7 @@ elements[ElementType.IMAGE] = require('./image.jsx');
 elements[ElementType.CANVAS] = require('./canvas.jsx');
 elements[ElementType.SCREEN] = require('./screen.jsx');
 elements[ElementType.CHART] = require('./chart.jsx');
+elements[ElementType.SLIDER] = require('./slider.jsx');
 
 module.exports = {
   ElementType: ElementType,
@@ -140,6 +142,8 @@ module.exports = {
             return ElementType.CHECKBOX;
           case 'radio':
             return ElementType.RADIO_BUTTON;
+          case 'range':
+            return ElementType.SLIDER;
           default:
             return ElementType.TEXT_INPUT;
         }
