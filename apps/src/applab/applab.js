@@ -37,6 +37,7 @@ var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
 var StepType = JSInterpreter.StepType;
 var elementLibrary = require('./designElements/library');
+var elementUtils = require('./designElements/elementUtils');
 var assetsApi = require('../clientApi').assets;
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
@@ -527,7 +528,7 @@ Applab.setLevelHtml = function (html) {
     Applab.levelHtml = designMode.addScreenIfNecessary(html);
   }
   var designModeViz = document.getElementById('designModeViz');
-  designMode.parseFromLevelHtml(designModeViz, true);
+  designMode.parseFromLevelHtml(designModeViz, true, applabConstants.DESIGN_ELEMENT_ID_PREFIX);
 
   // Make sure at least one screen exists, and that the first
   // screen is visible.
@@ -1681,9 +1682,9 @@ Applab.getIdDropdown = function (filterSelector) {
  * @private
  */
 Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
-  var divApplabChildren = documentRoot.find('#designModeViz').children();
-  var elements = divApplabChildren.toArray().concat(
-      divApplabChildren.children().toArray());
+  var designModeVizChildren = documentRoot.find('#designModeViz').children();
+  var elements = designModeVizChildren.toArray().concat(
+      designModeVizChildren.children().toArray());
 
   // Return all elements when no filter is given
   if (filterSelector) {
@@ -1692,12 +1693,12 @@ Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
 
   return elements
       .sort(function (elementA, elementB) {
-        return elementA.id < elementB.id ? -1 : 1;
+        return elementUtils.getId(element) < elementUtils.getId(element) ? -1 : 1;
       })
       .map(function (element) {
         return {
-          text: quote(element.id),
-          display: quote(element.id)
+          text: quote(elementUtils.getId(element)),
+          display: quote(elementUtils.getId(element))
         };
       });
 };

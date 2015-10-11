@@ -6,6 +6,7 @@ var DesignWorkspace = require('./DesignWorkspace.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
 var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
+var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
 var _ = require('../utils').getLodash();
 var KeyCodes = require('../constants').KeyCodes;
@@ -116,7 +117,7 @@ designMode.onPropertyChange = function(element, name, value) {
   var handled = true;
   switch (name) {
     case 'id':
-      element.id = value;
+      elementUtils.setId(element, value);
       if (elementLibrary.getElementType(element) ===
           elementLibrary.ElementType.SCREEN) {
         // rerender design toggle, which has a dropdown of screen ids
@@ -307,7 +308,7 @@ designMode.onDeletePropertiesButton = function(element, event) {
   if (isScreen) {
     designMode.loadDefaultScreen();
   } else {
-    designMode.editElementProperties(document.getElementById(currentScreenId));
+    designMode.editElementProperties(elementUtils.getElementById(currentScreenId));
   }
 };
 
@@ -368,11 +369,23 @@ designMode.onInsertEvent = function(code) {
   $('#codeModeButton').click(); // TODO(dave): reactify / extract toggle state
 };
 
+/**/
 designMode.serializeToLevelHtml = function () {
   var designModeViz = $('#designModeViz');
   // Children are screens. Want to operate on grandchildren
   var madeUndraggable = makeUndraggable(designModeViz.children().children());
-  var serialization = new XMLSerializer().serializeToString(designModeViz[0]);
+
+  // Make a copy so that we don't affect designModeViz contents as we
+  // remove prefixes from the element ids.
+  var designModeVizClone = designModeViz.clone();
+  designModeVizClone.children().each(function() {
+    removeElementIdPrefix(this);
+  });
+  designModeVizClone.children().children().each(function() {
+    removeElementIdPrefix(this);
+  });
+
+  var serialization = new XMLSerializer().serializeToString(designModeVizClone[0]);
   if (madeUndraggable) {
     makeDraggable(designModeViz.children().children());
   }
@@ -380,10 +393,14 @@ designMode.serializeToLevelHtml = function () {
 };
 
 /**
- * @param rootEl {Element}
- * @param allowDragging {boolean}
+ * Replace the contents of rootEl with the children of the DOM node obtained by
+ * parsing Applab.levelHtml (the root node in the levelHtml is ignored).
+ * @param rootEl {Element} Element whose children should be replaced.
+ * @param allowDragging {boolean} Whether to make elements resizable and draggable.
+ * @param prefix {string} Optional prefix to attach to element ids of children and
+ *     grandchildren after parsing. Defaults to ''.
  */
-designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
+designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   if (!rootEl) {
     return;
   }
@@ -397,19 +414,48 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
   var levelDom = $.parseHTML(Applab.levelHtml);
   var children = $(levelDom).children();
 
-  children.appendTo(rootEl);
+  children.each(function () {
+    addElementIdPrefix(this, prefix);
+  });
+  children.children().each(function() {
+    addElementIdPrefix(this, prefix);
+  });
+
+    children.appendTo(rootEl);
   if (allowDragging) {
     // children are screens. make grandchildren draggable
     makeDraggable(children.children());
   }
 
   children.each(function () {
-    elementLibrary.onDeserialize($(this)[0], designMode.onPropertyChange.bind(this));
+    elementLibrary.onDeserialize(this, designMode.onPropertyChange.bind(this));
   });
   children.children().each(function() {
-    elementLibrary.onDeserialize($(this)[0], designMode.onPropertyChange.bind(this));
+    elementLibrary.onDeserialize(this, designMode.onPropertyChange.bind(this));
   });
 };
+
+/**
+ * Adds the prefix to the element's id.
+ * @param element {Element}
+ * @param prefix {string} Optional prefix to add. Defaults to ''.
+ * @returns {Element}
+ */
+function addElementIdPrefix(element, prefix) {
+  // Specify an empty prefix explicitly, so that helper functions do
+  // not implicitly use DESIGN_ELEMENT_ID_PREFIX.
+  prefix = prefix === undefined ? '' : prefix;
+  elementUtils.setId(element, element.getAttribute('id'), prefix);
+}
+
+/**
+ * Removes the DESIGN_ELEMENT_ID_PREFIX from the element's id.
+ * @param element {Element}
+ * @returns {Element}
+ */
+function removeElementIdPrefix(element) {
+  element.setAttribute('id', elementUtils.getId(element));
+}
 
 designMode.toggleDesignMode = function(enable) {
   var designWorkspace = document.getElementById('designWorkspace');
@@ -626,7 +672,7 @@ designMode.configureDragAndDrop = function () {
 
       var element = designMode.createElement(elementType, left, top);
       if (elementType === elementLibrary.ElementType.SCREEN) {
-        designMode.changeScreen(element.id);
+        designMode.changeScreen(elementUtils.getId(element));
       }
     }
   });
@@ -638,7 +684,7 @@ designMode.configureDesignToggleRow = function () {
     return;
   }
 
-  var firstScreen = $('#designModeViz .screen').first().attr('id');
+  var firstScreen = elementUtils.getId($('#designModeViz .screen')[0]);
   designMode.changeScreen(firstScreen);
 };
 
@@ -650,7 +696,7 @@ designMode.createScreen = function () {
   var newScreen = elementLibrary.createElement('SCREEN', 0, 0);
   $("#designModeViz").append(newScreen);
 
-  return newScreen.getAttribute('id');
+  return elementUtils.getId(newScreen);
 };
 
 /**
@@ -662,8 +708,8 @@ designMode.changeScreen = function (screenId) {
   currentScreenId = screenId;
   var screenIds = [];
   $('#designModeViz .screen').each(function () {
-    screenIds.push(this.id);
-    $(this).toggle(this.id === screenId);
+    screenIds.push(elementUtils.getId(this));
+    $(this).toggle(elementUtils.getId(this) === screenId);
   });
 
   var designToggleRow = document.getElementById('designToggleRow');
@@ -690,7 +736,7 @@ designMode.changeScreen = function (screenId) {
     );
   }
 
-  designMode.editElementProperties(document.getElementById(screenId));
+  designMode.editElementProperties(elementUtils.getElementById(screenId));
 };
 
 designMode.getCurrentScreenId = function() {
@@ -706,7 +752,7 @@ designMode.loadDefaultScreen = function () {
   if ($('#designModeViz .screen').length === 0) {
     defaultScreen = designMode.createScreen();
   } else {
-    defaultScreen = $('#designModeViz .screen').first().attr('id');
+    defaultScreen = elementUtils.getId($('#designModeViz .screen')[0]);
   }
   designMode.changeScreen(defaultScreen);
 };

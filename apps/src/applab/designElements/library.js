@@ -1,5 +1,6 @@
 var utils = require('../../utils');
 var _ = utils.getLodash();
+var elementUtils = require('./elementUtils');
 
 /**
  * A map from prefix to the next numerical suffix to try to
@@ -88,7 +89,7 @@ module.exports = {
 
     // Stuff that's common across all elements
     if (!withoutId) {
-      element.id = this.getUnusedElementId(elementType.toLowerCase());
+      elementUtils.setId(element, this.getUnusedElementId(elementType.toLowerCase()));
     }
 
     if (elementType !== ElementType.SCREEN) {
