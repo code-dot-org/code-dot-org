@@ -53,7 +53,7 @@ link "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/sha
 end
 
 execute "install-dashboard" do
-  command "sudo rake install:dashboard"
+  command "bundle exec rake install:dashboard"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
   user node[:current_user]
   group node[:current_user]
