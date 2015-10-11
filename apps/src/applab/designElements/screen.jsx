@@ -122,10 +122,10 @@ module.exports = {
 
     return element;
   },
-  onDeserialize: function (element, onPropertyChange) {
+  onDeserialize: function (element, updateProperty) {
     var url = element.getAttribute('data-canonical-image-url');
     if (url) {
-      onPropertyChange(element, 'screen-image', url);
+      updateProperty(element, 'screen-image', url);
     }
     // Properly position existing screens, so that canvases appear correctly.
     element.style.position = 'absolute';

@@ -144,10 +144,10 @@ module.exports = {
 
     return element;
   },
-  onDeserialize: function (element, onPropertyChange) {
+  onDeserialize: function (element, updateProperty) {
     var url = element.getAttribute('data-canonical-image-url');
     if (url) {
-      onPropertyChange(element, 'image', url);
+      updateProperty(element, 'image', url);
     }
   }
 };

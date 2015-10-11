@@ -153,10 +153,10 @@ module.exports = {
    * Code to be called after deserializing element, allowing us to attach any
    * necessary event handlers.
    */
-  onDeserialize: function (element, onPropertyChange) {
+  onDeserialize: function (element, updateProperty) {
     var elementType = this.getElementType(element);
     if (elements[elementType] && elements[elementType].onDeserialize) {
-      elements[elementType].onDeserialize(element, onPropertyChange);
+      elements[elementType].onDeserialize(element, updateProperty);
     }
   },
 

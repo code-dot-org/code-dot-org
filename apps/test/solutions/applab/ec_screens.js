@@ -36,7 +36,7 @@ module.exports = {
         assert(designModeViz);
         assert.equal(designModeViz.children.length, 1);
         var screen1 = designModeViz.children[0];
-        assert.equal(screen1.id, 'screen1');
+        assert.equal(screen1.id, 'design_screen1');
         assert.equal(screen1.tagName, 'DIV');
 
         // The design button is visible, and there's no dropdown
@@ -101,11 +101,11 @@ module.exports = {
         testUtils.dragToVisualization('BUTTON', 10, 10);
 
         validatePropertyRow(0, 'id', 'button1', assert);
-        var buttonElement = $('#designModeViz #button1')[0];
+        var buttonElement = $('#design_button1')[0];
         var buttonParent = buttonElement.parentNode;
         assert($(buttonParent).hasClass('ui-draggable'));
         assert($(buttonParent).hasClass('ui-resizable'));
-        assert.equal(buttonParent.parentNode.getAttribute('id'), 'screen2');
+        assert.equal(buttonParent.parentNode.getAttribute('id'), 'design_screen2');
 
         // Change to screen1 using dropdown
         ReactTestUtils.Simulate.change(document.getElementById('screenSelector'),
@@ -162,7 +162,7 @@ module.exports = {
 
         // click on screen 1 (use jquery instead of React since screen1 is not
         // a react component)
-        $("#designModeViz #screen1").click();
+        $("#design_screen1").click();
         validatePropertyRow(0, 'id', 'screen1', assert);
 
         // One button, and it isn't delete
@@ -173,7 +173,7 @@ module.exports = {
         var inputId = $('#design-properties input').first();
         ReactTestUtils.Simulate.change(inputId[0],
           { target: { value: 'renamed_screen' } });
-        assert(document.getElementById('renamed_screen'));
+        assert(document.getElementById('design_renamed_screen'));
 
         // Still can't delete
         assert.equal($("#design-properties button").length, 1);
@@ -294,8 +294,8 @@ module.exports = {
         testUtils.dragToVisualization('SCREEN', 10, 10);
         validatePropertyRow(0, 'id', 'screen2', assert);
         assert.equal($('#designModeViz').is(':visible'), true, 'designModeViz is visible');
-        assert.equal($('#designModeViz #screen1')[0].style.display === 'none', true, 'screen 1 hidden');
-        assert.equal($('#designModeViz #screen2')[0].style.display === 'none', false, 'screen 2 visible');
+        assert.equal($('#design_screen1')[0].style.display === 'none', true, 'screen 1 hidden');
+        assert.equal($('#design_screen2')[0].style.display === 'none', false, 'screen 2 visible');
 
         // return to code mode
         $("#codeModeButton").click();
@@ -338,8 +338,8 @@ module.exports = {
         testUtils.dragToVisualization('SCREEN', 10, 10);
         validatePropertyRow(0, 'id', 'screen2', assert);
         assert.equal($('#designModeViz').is(':visible'), true, 'designModeViz is visible');
-        assert.equal($('#designModeViz #screen1')[0].style.display === 'none', true, 'screen 1 hidden');
-        assert.equal($('#designModeViz #screen2')[0].style.display === 'none', false, 'screen 2 visible');
+        assert.equal($('#design_screen1')[0].style.display === 'none', true, 'screen 1 hidden');
+        assert.equal($('#design_screen2')[0].style.display === 'none', false, 'screen 2 visible');
 
         // should be on screen 1 after run button click
         $("#runButton").click();
@@ -378,8 +378,8 @@ module.exports = {
         testUtils.dragToVisualization('SCREEN', 10, 10);
         validatePropertyRow(0, 'id', 'screen2', assert);
         assert.equal($('#designModeViz').is(':visible'), true, 'designModeViz is visible');
-        assert.equal($('#designModeViz #screen1')[0].style.display === 'none', true, 'screen 1 hidden');
-        assert.equal($('#designModeViz #screen2')[0].style.display === 'none', false, 'screen 2 visible');
+        assert.equal($('#design_screen1')[0].style.display === 'none', true, 'screen 1 hidden');
+        assert.equal($('#design_screen2')[0].style.display === 'none', false, 'screen 2 visible');
 
         testUtils.runOnAppTick(Applab, 2, function () {
           // should be on screen 2 after run
@@ -414,10 +414,10 @@ module.exports = {
 
         testUtils.dragToVisualization('BUTTON', 10, 10);
 
-        var button = $('#designModeViz #button1')[0];
+        var button = $('#design_button1')[0];
         assert(button);
 
-        var screenElement = $('#designModeViz #screen1')[0];
+        var screenElement = $('#design_screen1')[0];
 
         assert.equal(screenElement.children.length, 1);
 
@@ -453,7 +453,7 @@ module.exports = {
         // enter design mode
         var designModeButton = document.getElementById('designModeButton');
 
-        $("#designModeViz #screen1").click();
+        $("#design_screen1").click();
 
         validatePropertyRow(0, 'id', 'screen1', assert);
 
@@ -466,7 +466,7 @@ module.exports = {
           target: { value: assetUrl }
         });
 
-        var screenElement = document.getElementById('screen1');
+        var screenElement = document.getElementById('design_screen1');
         assert.equal(screenElement.style.backgroundImage, 'url(http:' + assetUrl + ')');
 
         assert.equal(screenElement.style.backgroundSize, '320px 450px', 'image stretched');
