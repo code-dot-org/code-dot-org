@@ -13,7 +13,7 @@ template "/etc/init.d/dashboard" do
     user: node[:current_user],
     env: node.chef_environment,
   })
-  notifies :run, 'execute[bundle-install-dashboard]', :immediately
+  notifies :run, 'execute[install-dashboard]', :immediately
 end
 
 template "/etc/logrotate.d/dashboard" do
@@ -52,9 +52,9 @@ link "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/sha
   group node[:current_user]
 end
 
-execute "bundle-install-dashboard" do
-  command "sudo bundle install"
-  cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
+execute "install-dashboard" do
+  command "sudo rake install:dashboard"
+  cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
   user node[:current_user]
   group node[:current_user]
   action :nothing
@@ -65,7 +65,7 @@ execute "create-dashboard-db" do
   command "rake db:setup_or_migrate"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
   environment ({
-    'LC_ALL'=>nil,
+    'LC_ALL' => nil, 'RAILS_ENV' => "#{node.chef_environment}"
   })
   user node[:current_user]
   group node[:current_user]
@@ -77,7 +77,7 @@ execute "build-dashboard" do
   command "rake build:dashboard"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
   environment ({
-    'LC_ALL'=>nil,
+    'LC_ALL' => nil, 'RAILS_ENV' => "#{node.chef_environment}"
   })
   user node[:current_user]
   group node[:current_user]
