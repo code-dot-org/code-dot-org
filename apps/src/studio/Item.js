@@ -110,7 +110,7 @@ Item.prototype.removeElement = function () {
     this.animator_ = null;
   }
 
-  Studio.removedItemCount ++;
+  Studio.trackedBehavior.removedItemCount++;
 };
 
 /**
