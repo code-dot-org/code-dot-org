@@ -235,8 +235,6 @@ Net::SSH.start('gateway.code.org', username) do |ssh|
   execute_ssh_on_channel(ssh,
                          "knife environment from file /tmp/new_knife_config#{file_suffix}.json",
                          "Unable to update environment #{environment}")
-  puts 'Done executing! Cleaning up!'
-
   ssh.exec!("rm /tmp/*#{file_suffix}*")
 end
 
