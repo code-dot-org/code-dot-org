@@ -1,6 +1,6 @@
 * * *
 
-tittel: Personvern
+title: Personvern
 
 * * *
 
