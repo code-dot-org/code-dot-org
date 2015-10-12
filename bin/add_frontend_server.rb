@@ -225,9 +225,6 @@ Net::SSH.start('gateway.code.org', username) do |ssh|
   ssh.exec!("rm /tmp/*#{file_suffix}*")
 end
 
-puts ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0]
-puts "Private dns name: #{private_dns_name}"
-
 case options['environment']
 when 'production'
   cmd =  "ssh gateway -t knife bootstrap #{private_dns_name} -x ubuntu --sudo -E production -N #{instance_name} -r role[front-end]"
