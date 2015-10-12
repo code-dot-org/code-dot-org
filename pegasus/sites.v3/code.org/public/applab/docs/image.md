@@ -29,7 +29,18 @@ To use an image in an app in App Lab you have two options:
 In most browsers you can simply **right-click (ctrl+click on a Mac)** on an image and you'll see a menu with a few option. One will be to copy the URL of the image.  You could also choose to view the image in its own window and just copy the URL from there.
 
 #### 2. Upload your own image to App Lab
-You can upload images from your computer to App Lab as well.  
+You can upload images from your computer to App Lab as well.  If you have saved an image to your computer and you know how to navigate to it on your file system uploading an image is easy.
+
+* Click the pulldown arrow in the image URL field and then click "Choose..."![](https://images.code.org/e726e56fd3e4c7cd4a0d58cba731a855-image-1444240440116.53.49%20PM.png)
+
+
+* Then click the "Upload File" button the in the window.
+![](https://images.code.org/4e33ebc4011b5eb6590f573ada3ed1da-image-1444241056243.04.04%20PM.png)
+
+* Then choose the file from your computer by navigating to it
+
+* Once its uploaded click "Choose" next to it.  This will insert the name of the file into the URL field.  Because you have uploaded it, it doesn't need to be an HTTP reference.
+
 
 [/short_description]
 
