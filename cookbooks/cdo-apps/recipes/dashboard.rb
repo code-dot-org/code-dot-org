@@ -62,18 +62,6 @@ execute "bundle-install-dashboard" do
 end
 
 execute "create-dashboard-db" do
-  command "rake db:create"
-  cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
-  environment ({
-    'LC_ALL'=>nil,
-  })
-  user node[:current_user]
-  group node[:current_user]
-  action :nothing
-  notifies :run, 'execute[load-dashboard-schema]', :immediately
-end
-
-execute "load-dashboard-schema" do
   command "rake db:setup_or_migrate"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
   environment ({
