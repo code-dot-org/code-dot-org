@@ -1,4 +1,5 @@
 var constants = require('../constants');
+var utils = require('../../utils');
 
 // Taken from http://stackoverflow.com/a/3627747/2506748
 module.exports.rgb2hex = function (rgb) {
@@ -21,17 +22,13 @@ module.exports.rgb2hex = function (rgb) {
  * @param prefix {string} Optional. Defaults to DESIGN_ELEMENT_ID_PREFIX.
  * @returns {string} The element id with prefix stripped, or null if it had no id.
  */
-module.exports.getId = function (element, prefix) {
+var getId = module.exports.getId = function (element, prefix) {
   var elementId = element.getAttribute('id');
   if (elementId === null) {
     return null;
   }
-  prefix = prefix === undefined ? constants.DESIGN_ELEMENT_ID_PREFIX : prefix;
-  // TODO(dave): disable checkId in production?
+  prefix = utils.valueOr(prefix, constants.DESIGN_ELEMENT_ID_PREFIX);
   checkId(element, prefix);
-  if (elementId.indexOf(prefix) !== 0) {
-    return elementId;
-  }
   return elementId.substr(prefix.length);
 };
 
@@ -41,11 +38,11 @@ module.exports.getId = function (element, prefix) {
  * @param value (string)
  * @param prefix {string} Optional. Defaults to DESIGN_ELEMENT_ID_PREFIX.
  */
-module.exports.setId = function (element, value, prefix) {
+var setId = module.exports.setId = function (element, value, prefix) {
   if (value === null) {
     return;
   }
-  prefix = prefix === undefined ? constants.DESIGN_ELEMENT_ID_PREFIX : prefix;
+  prefix = utils.valueOr(prefix, constants.DESIGN_ELEMENT_ID_PREFIX);
   element.setAttribute('id', prefix + value);
 };
 
@@ -54,11 +51,11 @@ module.exports.setId = function (element, value, prefix) {
  * @param element {Element}
  * @param prefix {string}
  */
-var checkId = function(element, prefix) {
-  if (element.id.indexOf(prefix) !== 0) {
+function checkId(element, prefix) {
+  if (element.id.substr(0, prefix.length) !== prefix) {
     throw new Error('element.id "' + element.id + '" does not start with prefix "' + prefix + '".');
   }
-};
+}
 
 /**
  * Add the prefix to the elementId and returns the element with that id.
@@ -66,7 +63,27 @@ var checkId = function(element, prefix) {
  * @param prefix {string} Optional. Defaults to DESIGN_ELEMENT_ID_PREFIX.
  * @returns {Element}
  */
-module.exports.getElementById = function(elementId, prefix) {
+module.exports.getPrefixedElementById = function(elementId, prefix) {
   prefix = prefix === undefined ? constants.DESIGN_ELEMENT_ID_PREFIX : prefix;
   return document.getElementById(prefix + elementId);
+};
+
+/**
+ * Adds the prefix to the element's id.
+ * @param element {Element}
+ * @param prefix {string} Optional prefix to add. Defaults to ''.
+ * @returns {Element}
+ */
+module.exports.addIdPrefix = function (element, prefix) {
+  prefix = utils.valueOr(prefix, '');
+  setId(element, element.getAttribute('id'), prefix);
+};
+
+/**
+ * Removes the DESIGN_ELEMENT_ID_PREFIX from the element's id.
+ * @param element {Element}
+ * @returns {Element}
+ */
+module.exports.removeIdPrefix = function (element) {
+  element.setAttribute('id', getId(element));
 };
