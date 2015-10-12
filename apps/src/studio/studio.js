@@ -909,6 +909,8 @@ Studio.onTick = function() {
 
   Studio.updateFloatingScore();
 
+  Studio.drawTimeoutRect();
+
   sortDrawOrder();
 
   var currentTime = new Date().getTime();
@@ -2426,6 +2428,54 @@ Studio.drawDebugRect = function(className, x, y, width, height) {
   background.setAttribute('stroke-width', 1);
   group.appendChild(background);
   svg.appendChild(group);
+};
+
+/**
+ * Draw a timeout rectangle across the bottom of the play area.
+ * It doesn't appear until halfway through the level, and briefly fades in 
+ * when first appearing.
+ */
+
+Studio.drawTimeoutRect = function() {
+  if (!level.showTimeoutRect || Studio.timeoutFailureTick === Infinity) {
+    return;
+  }
+
+  $(".timeoutRect").remove();
+
+  // The fraction of the entire level duration that we start and end the
+  // fade-in.
+  var startFadeInAt = 0.5;
+  var endFadeInAt = 0.4;
+
+  var timeRemaining = Studio.timeoutFailureTick - Studio.tickCount;
+  var currentFraction = timeRemaining / Studio.timeoutFailureTick;
+
+  if (currentFraction <= startFadeInAt) {
+
+    var opacity = currentFraction < endFadeInAt ? 1 : 
+      1 - (currentFraction - endFadeInAt) / (startFadeInAt - endFadeInAt);
+
+    var width = timeRemaining * Studio.MAZE_WIDTH / (Studio.timeoutFailureTick * startFadeInAt);
+    var height = 6;
+
+    if (width > 0) {
+      var svg = document.getElementById('svgStudio');
+      var group = document.createElementNS(SVG_NS, 'g');
+      group.setAttribute('class', "timeoutRect");
+      var background = document.createElementNS(SVG_NS, 'rect');
+      background.setAttribute('opacity', opacity);
+      background.setAttribute('width', width);
+      background.setAttribute('height', height);
+      background.setAttribute('x', 0);
+      background.setAttribute('y', Studio.MAZE_HEIGHT - height);
+      background.setAttribute('fill', 'rgba(255, 255, 255, 0.5)');
+      //background.setAttribute('stroke', '#000000');
+      //background.setAttribute('stroke-width', 0);
+      group.appendChild(background);
+      svg.appendChild(group);
+    }
+  }
 };
 
 /**
