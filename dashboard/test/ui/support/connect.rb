@@ -101,7 +101,7 @@ Before do
 end
 
 def log_result(result)
-  return if ENV['TEST_LOCAL'] == 'true' || @sauce_session_id
+  return if ENV['TEST_LOCAL'] == 'true' || @sauce_session_id.nil?
 
   url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{@sauce_session_id}"
   HTTParty.put(url,
