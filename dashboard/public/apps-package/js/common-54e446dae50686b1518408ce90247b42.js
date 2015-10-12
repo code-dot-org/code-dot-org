@@ -31975,15 +31975,15 @@ exports.addReadyListener = function(callback) {
 };
 
 exports.getText = function(node) {
-  return node.innerText || node.textContent;
+  return node.textContent || node.innerText;
 };
 
 exports.setText = function(node, string) {
-  if (node.innerText) {
-    node.innerText = string;
-  } else {
-    node.textContent = string;
-  }
+  // innerText is not supported in Firefox
+  // textContent is not supported in IE8
+  // See: http://caniuse.com/#feat=textcontent
+  //      http://caniuse.com/#feat=innertext
+  node.innerText = node.textContent = string;
 };
 
 exports.getTouchEventName = function(eventName) {

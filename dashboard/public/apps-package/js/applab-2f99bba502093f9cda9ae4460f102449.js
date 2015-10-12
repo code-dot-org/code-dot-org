@@ -4378,7 +4378,7 @@ applabCommands.getText = function (opts) {
     } else if (element.tagName === 'IMG') {
       return String(element.alt);
     } else {
-      return element.innerText;
+      return element.textContent;
     }
   }
   return false;
@@ -13106,11 +13106,11 @@ var ChangeEventHandler = module.exports = function (element, callback) {
 };
 
 ChangeEventHandler.prototype.onFocus = function () {
-  this.initialValue_ = this.element_.innerText;
+  this.initialValue_ = this.element_.textContent;
 };
 
 ChangeEventHandler.prototype.onBlur = function () {
-  if (this.element_.innerText !== this.initialValue_) {
+  if (this.element_.textContent !== this.initialValue_) {
     this.callback_();
   }
 };
