@@ -1,6 +1,6 @@
 ---
 
-Titel: Privacy Policy
+title: Privacy Policy
 
 ---
 

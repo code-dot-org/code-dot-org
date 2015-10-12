@@ -1,6 +1,6 @@
 * * *
 
-Titolo: informativa sulla privacy
+title: informativa sulla privacy
 
 * * *
 
