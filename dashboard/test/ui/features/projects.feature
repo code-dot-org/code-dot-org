@@ -14,6 +14,7 @@ Scenario: Save Artist Project
   Then I click selector ".project_share"
   And I wait to see "#x-close"
   And I navigate to the share URL
+  And I wait until element "#visualization" is visible
   Then element "#draw-color" is a child of element "#when_run"
 
 # dashboard_db_access for sign in
