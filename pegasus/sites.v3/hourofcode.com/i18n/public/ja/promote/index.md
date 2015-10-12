@@ -15,7 +15,7 @@ twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '
 
 ## 1. Hour of Codeのイベントを開催
 
-誰でも、どこでもHour of Codeのイベントは開催できます。[登録](<%= resolve_url('/') %>)して、最新の情報を入手しましょう。   
+Anyone, anywhere can host an Hour of Code. [Sign up](<%= resolve_url('/') %>) to receive updates and qualify for prizes.   
 
 
 [<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
