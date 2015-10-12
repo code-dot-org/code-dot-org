@@ -98,7 +98,7 @@ module LevelsHelper
 
     return unless autoplay_video
 
-    client_state.add_video_seen(autoplay_video.key)
+    #client_state.add_video_seen(autoplay_video.key)
     autoplay_video.summarize unless params[:noautoplay]
   end
 
