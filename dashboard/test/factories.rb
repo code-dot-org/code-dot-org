@@ -250,7 +250,7 @@ FactoryGirl.define do
   end
 
   factory :workshop do
-    name 'My Workshop'
+    sequence(:name) { |n| "My Workshop #{n}" }
     program_type '1'
     location 'Somewhere, USA'
     instructions 'Test workshop instructions.'

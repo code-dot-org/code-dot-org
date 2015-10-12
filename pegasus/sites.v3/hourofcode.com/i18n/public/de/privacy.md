@@ -1,6 +1,6 @@
 ---
 
-Titel: Datenschutzerklärung
+title: Datenschutzerklärung
 
 ---
 
