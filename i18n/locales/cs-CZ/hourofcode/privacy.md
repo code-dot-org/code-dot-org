@@ -1,6 +1,6 @@
 * * *
 
-nadpis: Ochrana osobních údajů
+title: Ochrana osobních údajů
 
 * * *
 
