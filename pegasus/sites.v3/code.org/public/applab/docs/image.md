@@ -21,15 +21,15 @@ Category: UI Controls
 
 Displays the image from the provided URL on the screen.
 
-### How to find the URL of an image on the web
-To use an image in an app in App Lab the image must already exist somewhere on the web with a unique web address (or URL).  This gives you two options:
+To use an image in an app in App Lab you have two options:
 
-#### 1. Use an image that already exists on the web
-In most browsers you can simply **right-click (ctrl+click on a Mac)** on the image and there will be several options for you to copy the URL or even view it in a new window from which you can copy the URL.  So you might search for an image with Google image search, or Bing images.  Any image you find there, you can use this technique with.
+#### 1. Find the URL of an image on the web
+<img src="https://images.code.org/547f76e741252ca45201e8c70bf0075d-image-1444494509352.png" style="float:right; width: 200px">
 
-#### 2. Upload an image to a site that will give it an address
-You can upload images to websites or even image hosting services such as tumblr, imgur, or img42.  If you have a personal photo or image that you would like to use, upload it to one of those sites and get the URL from there.
+In most browsers you can simply **right-click (ctrl+click on a Mac)** on an image and you'll see a menu with a few option. One will be to copy the URL of the image.  You could also choose to view the image in its own window and just copy the URL from there.
 
+#### 2. Upload your own image to App Lab
+You can upload images from your computer to App Lab as well.  
 
 [/short_description]
 
