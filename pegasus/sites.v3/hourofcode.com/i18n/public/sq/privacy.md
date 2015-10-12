@@ -1,6 +1,6 @@
 ---
 
-titulli: Politika e Privatësisë
+title: Politika e Privatësisë
 
 ---
 

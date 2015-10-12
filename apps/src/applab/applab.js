@@ -223,6 +223,10 @@ function adjustAppSizeStyles(container) {
         (vizAppHeight - defaultAppHeight) * defaultScaleFactors[z];
   }
 
+  if (!utils.browserSupportsCssMedia()) {
+    return;
+  }
+
   var ss = document.styleSheets;
   for (var i = 0; i < ss.length; i++) {
     if (ss[i].href && (ss[i].href.indexOf('applab.css') !== -1)) {
@@ -667,6 +671,12 @@ Applab.init = function(config) {
     drawDiv();
 
     studioApp.alertIfAbusiveProject('#codeWorkspace');
+
+    // IE9 doesnt support the way we handle responsiveness. Instead, explicitly
+    // resize our visualization (user can still resize with grippy)
+    if (!utils.browserSupportsCssMedia()) {
+      studioApp.resizeVisualization(300);
+    }
   };
 
   config.afterEditorReady = function() {
@@ -1006,7 +1016,6 @@ Applab.reset = function(first) {
   designMode.parseFromLevelHtml(newDivApplab, isDesigning);
   designMode.loadDefaultScreen();
   if (Applab.isInDesignMode()) {
-    designMode.clearProperties();
     designMode.resetElementTray(isDesigning);
   }
 

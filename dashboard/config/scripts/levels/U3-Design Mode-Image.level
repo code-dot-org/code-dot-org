@@ -8,8 +8,8 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "instructions": "Add an image to your app which moves to a random position whenever the button is clicked. (Click to see detailed instructions).",
-    "markdown_instructions": "You've now added a working button through Design Mode! Nice work!\r\n\r\nWe are now going to look at a different type of UI element we can add through Design Mode: Images.\r\n\r\n1. Drag out an image UI element in Design Mode.\r\n1. In the Properties Tab find the picture setting and click on choose.\r\n1. Add the Code.org logo image.\r\n1. Make the button click move the image to a random location. Refer back to your work in the last lesson if you need a refresher on how to do this. Remember even in Design Mode IDs are important. \r\n\r\nThis is the same assets upload you saw in the last lesson. We are just accessing it from inside Design Mode. \r\n\r\nYou should use an asset already uploaded for you to save time. Don't later on you will get to pick all the design elements.\r\n\r\n",
+    "instructions": "Recreate the 'chaser-game' from the last lesson.  (Click to see detailed instructions).",
+    "markdown_instructions": "# Adding Images\r\n\r\nYou've now added a working button through Design Mode! Nice work! We are now going to look at a different type of UI element we can add through Design Mode: Images.  \r\n\r\n**Goal:** Recreate the 'chaser-game' from the last lesson. \r\n\r\n# Do This\r\n\r\n* Swith to Design Mode and **delete the button**. To find delete: go to the button Properties, scroll to bottom, hit delete. **Note:** You may have to click on the button to get its Properties to show up.\r\n\r\n* Switch to Design Mode and **add an Image element**. No picture will appear yet. You need to pick one. \r\n\r\n* **Add a picture by uploading or using a URL.** To upload a picture: In Properties Tab, **find picture property and click on choose**. The Assets Manager will pop up. Click 'Upload File' and choose your file. **Note:** You can always see all your assets by clicking the gear at the top right of the Design Mode Toolbox. \r\n\r\n* **Insert an event handler** for the image.\r\n\r\n* In Code Mode, **change the event type to 'mouseover'**.\r\n\r\n* Test it out. You should have just recreated the 'chaser-game'! Easier than last time right?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -33,13 +33,57 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "submittable": "false",
-    "hide_view_data_button": "false",
-    "encrypted_examples": "lkUTVJkyxzZQeksMvB4eYThxNE+BnUc0yQazzUuUJtXelns0XHyLGimFvdxj\nTTQj\n",
+    "hide_view_data_button": "true",
+    "encrypted_examples": [
+
+    ],
     "project_template_level_name": "U3 - Design Mode 1",
     "code_functions": {
+      "button": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
       "setPosition": null,
+      "textLabel": {
+        "params": [
+          "\"id\"",
+          "\"text\""
+        ]
+      },
+      "image": null,
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "getX": null,
+      "getY": null,
+      "getDirection": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
       "randomNumber_max": null,
-      "randomNumber_min_max": null
+      "randomNumber_min_max": null,
+      "console.log": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null
     }
   }
 }]]></config>
