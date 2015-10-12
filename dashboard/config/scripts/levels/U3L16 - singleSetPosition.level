@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-10-07T15:53:49.000Z",
+  "created_at": "2015-10-12T14:52:33.000Z",
   "level_num": "custom",
   "user_id": 13,
   "properties": {
@@ -16,13 +16,6 @@
         ]
       },
       "setPosition": null,
-      "textLabel": {
-        "params": [
-          "\"id\"",
-          "\"text\""
-        ]
-      },
-      "image": null,
       "moveForward": null,
       "moveBackward": null,
       "move": null,
@@ -33,13 +26,24 @@
       "turnTo": null,
       "arcRight": null,
       "arcLeft": null,
-      "getX": null,
-      "getY": null,
-      "getDirection": null,
       "penUp": null,
       "penDown": null,
       "penWidth": null,
       "penColor": null,
+      "penRGB": {
+        "params": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "paletteParams": [
+          "r",
+          "g",
+          "b",
+          "a"
+        ]
+      },
       "show": null,
       "hide": null,
       "speed": null,
@@ -49,12 +53,11 @@
       "functionParams_none": null,
       "functionParams_n": null,
       "callMyFunction": null,
-      "callMyFunction_n": null,
-      "return": null
+      "callMyFunction_n": null
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Replace the image in your application with one of your own. (Click to see full instructions)",
+    "instructions": "Move the button to the middle of the screen. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -69,12 +72,13 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "start_blocks": "button(\"moveBtn\", \"move me\");\r\nonEvent(\"moveBtn\", \"mouseover\", function(){\r\n  setPosition(\"moveBtn\",randomNumber(320), randomNumber(480), 100, 100);\r\n});\r\n",
-    "show_turtle_before_run": "false",
+    "start_blocks": "button(\"theBigButton\", \"Don't Press It!\");",
+    "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "app_width": "320",
-    "app_height": "480",
-    "markdown_instructions": "# Choosing Your Own Images\r\n\r\nThe second parameter of the `image` command allows you to set the image to be displayed.  There are two ways to do this:\r\n1. Provide the URL of an image on the web \r\n2. Upload an image from your computer (by clicking \"choose...\")\r\n\r\n![](https://images.code.org/e726e56fd3e4c7cd4a0d58cba731a855-image-1444240440116.53.49 PM.png)\r\n\r\n\r\n# Do This\r\n\r\n* **Read the documentation for `image`** for tips on how to find an image's URL and how to upload.\r\n* **Change the image** to one you've found online or from your own computer\r\n\r\n**NOTE:** many images are bigger than the screen of your app, so it's likely you'll need to add a `setPosition` command to get it on the screen sized the way you want.",
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "# Moving Buttons\r\n\r\nAn important component of designing intuitive and visually appealing user interfaces is the location of the elements on the screen. Using the `setPosition` command (now added to the Toolbox) you can move and set the size of user interface elements.\r\n\r\n![](https://images.code.org/c3e42223cbcb096f992d758973d09f63-image-1444664597665.42.48 AM.png)\r\n\r\n# Do This\r\n\r\n* **Read the documentation** for `setPosition`\r\n* **Starter code** has been provided which creates a single button\r\n* **Move the button to the middle of the screen** using `setPosition`, as in the image below.\r\n* **Remember** in an app screen 0,0 is the top left corner and you specify a location by how many pixels from the left and how many down from the top of the screen it is.  The screen is **320 by 450 pixels**.\r\n\r\n![](https://images.code.org/62840468826ce153d3d0d80bca303827-image-1444662614963.10.05 AM.png)",
     "never_autoplay_video": "false",
     "slider_speed": "1",
     "examples_required": "false",
@@ -83,11 +87,7 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "submittable": "false",
-    "hide_view_data_button": "true",
-    "encrypted_examples": [
-
-    ],
-    "project_template_level_name": "U3L16 - projectTemplate"
+    "hide_view_data_button": "true"
   }
 }]]></config>
   <blocks/>
