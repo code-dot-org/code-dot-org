@@ -206,7 +206,7 @@ public_dns_name = instance_info.public_dns_name
 
 puts
 puts "Created instance #{instance_id} with name #{instance_name} "
-puts "Private dns name: #{private_dns_name}, "
+puts "Private dns name: #{private_dns_name}"
 puts "Public dns name: #{public_dns_name}"
 puts
 puts 'Writing new configuration file'
@@ -241,7 +241,8 @@ Net::SSH.start('gateway.code.org', username) do |ssh|
 end
 
 cmd = "ssh gateway -t knife bootstrap #{private_dns_name} -x ubuntu --sudo -E #{environment} -N #{instance_name} -r role[#{role}]"
-puts "Bootstrapping #{environment} frontend: '#{cmd}'"
+puts "Bootstrapping #{environment} frontend, please be patient. This takes ~15 minutes."
+puts  "#{cmd}"
 `#{cmd}`
 
 puts '--------------------------------------------------------'
