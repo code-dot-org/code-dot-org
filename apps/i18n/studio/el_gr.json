@@ -476,5 +476,12 @@
   "whenTouchWallTooltip": "Εκτελεί τις δράσεις παρακάτω όταν ο ηθοποιός αγγίζει ένα τοίχο.",
   "whenUp": "όταν πατηθεί το επάνω βέλος",
   "whenUpTooltip": "Εκτέλεσε τις παρακάτω ενέργειες όταν πατηθεί το πλήκτρο πάνω βέλος.",
-  "yes": "Ναι"
+  "yes": "Ναι",
+  "calloutPlaceCommandsHere": "Place commands here",
+  "calloutPlaceCommandsAtTop": "Place commands to set up your game at the top",
+  "calloutTypeCommandsHere": "Type your commands here",
+  "calloutCharactersMove": "These new commands let you control how the characters move",
+  "calloutPutCommandsTouchCharacter": "Put a command here to have it happen when you touch a character",
+  "calloutClickCategory": "Click a category header to see commands in each category",
+  "calloutTryOutNewCommands": "Try out all the new commands you’ve unlocked"
 }

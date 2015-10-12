@@ -131,11 +131,6 @@ Collidable.prototype.setActivity = function(type) {
  * options.
  */
 Collidable.prototype.update = function () {
-
-  if (this.activity === 'none') {
-    this.dir = Direction.NONE;
-    return;
-  }
   
   // Do we have an active location in grid coords?  If not, determine it.
   if (this.gridX === undefined) {
@@ -176,6 +171,13 @@ Collidable.prototype.update = function () {
   // Or have we already reached our prior destination location in grid coords?
   // If not, determine it.
   if (this.destGridX === undefined || reachedDestinationGridPosition) {
+
+    if (this.activity === 'none') {
+      this.dir = Direction.NONE;
+      this.destGridX = undefined;
+      this.destGridY = undefined;
+      return;
+    }
 
     var sprite = Studio.sprite[0];
 

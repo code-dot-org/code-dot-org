@@ -7,9 +7,9 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
-# Promote the Hour of Code
+# Promouvoir Une Heure du Code
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Organiser Une heure du Code ? <a
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
