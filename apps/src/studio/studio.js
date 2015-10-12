@@ -1710,10 +1710,12 @@ Studio.reset = function(first) {
   Studio.playSoundCount = 0;
 
   // More things used to validate level completion.
-  Studio.removedItemCount = 0;
-  Studio.setActivityRecord = null;
-  Studio.hasSetBot = false;
-  Studio.hasAddedItem = false;
+  Studio.trackedBehavior = {
+    removedItemCount: 0,
+    setActivityRecord: null,
+    hasSetBot: false,
+    hasAddedItem: false
+  };
 
   // Reset goal successState:
   if (level.goal) {
@@ -2919,7 +2921,7 @@ Studio.callCmd = function (cmd) {
     case 'setSprite':
       studioApp.highlight(cmd.id);
       Studio.setSprite(cmd.opts);
-      Studio.hasSetSprite = true;
+      Studio.trackedBehavior.hasSetSprite = true;
       break;
     case 'saySprite':
       if (!cmd.opts.started) {
@@ -2937,7 +2939,7 @@ Studio.callCmd = function (cmd) {
     case 'setBotSpeed':
       studioApp.highlight(cmd.id);
       Studio.setBotSpeed(cmd.opts);
-      Studio.hasSetBotSpeed = true;
+      Studio.trackedBehavior.hasSetBotSpeed = true;
       break;
     case 'setSpriteSize':
       studioApp.highlight(cmd.id);
@@ -2954,7 +2956,7 @@ Studio.callCmd = function (cmd) {
     case 'playSound':
       studioApp.highlight(cmd.id);
       studioApp.playAudio(cmd.opts.soundName, { volume: 1.0 });
-      Studio.playSoundCount++;
+      Studio.trackedBehavior.playSoundCount++;
       break;
     case 'showTitleScreen':
       if (!cmd.opts.started) {
@@ -3035,7 +3037,7 @@ Studio.callCmd = function (cmd) {
     case 'addItem':
       studioApp.highlight(cmd.id);
       Studio.addItem(cmd.opts);
-      Studio.hasAddedItem = true;
+      Studio.trackedBehavior.hasAddedItem = true;
       break;
     case 'setItemActivity':
       studioApp.highlight(cmd.id);
@@ -3166,15 +3168,15 @@ Studio.setItemActivity = function (opts) {
         // For verifying success, record this combination of activity type and
         // item type.
 
-        if (!Studio.setActivityRecord) {
-          Studio.setActivityRecord = [];
+        if (!Studio.trackedBehavior.setActivityRecord) {
+          Studio.trackedBehavior.setActivityRecord = [];
         }
 
-        if (!Studio.setActivityRecord[opts.className]) {
-          Studio.setActivityRecord[opts.className] = [];
+        if (!Studio.trackedBehavior.setActivityRecord[opts.className]) {
+          Studio.trackedBehavior.setActivityRecord[opts.className] = [];
         }
 
-        Studio.setActivityRecord[opts.className][opts.type] = true;
+        Studio.trackedBehavior.setActivityRecord[opts.className][opts.type] = true;
       }
     });
   }
@@ -4329,42 +4331,52 @@ Studio.allGoalsVisited = function() {
   return finishedGoals === Studio.spriteGoals_.length;
 };
 
+/**
+ * A level can provide zero or more requiredForSuccess criteria which are
+ * special cases that a level requires for success.  This function evaluates
+ * the state of these criteria.
+ * @returns {Object} outcome
+ * @returns {boolean} outcome.exists Whether the level even has any of these criteria.
+ * @returns {boolean} outcome.achieved false if any of the criteria was required but not met.
+ * @returns {string} outcome.message A custom message for the first of the failing criteria.
+ */
 Studio.checkRequiredForSuccess = function() {
 
-  if (! level.requiredForSuccess) {
-    return { achieved: false, message: null };
+  if (!level.requiredForSuccess) {
+    return { exists: false, achieved: false, message: null };
   }
 
   var required = level.requiredForSuccess;
+  var tracked = Studio.trackedBehavior;
 
-  if (required.setSprite && !Studio.hasSetSprite) {
-    return { achieved: false, message: studioMsg.failedHasSetSprite() };
+  if (required.setSprite && !tracked.hasSetSprite) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasSetSprite() };
   }
 
-  if (required.setBotSpeed && !Studio.hasSetBotSpeed) {
-    return { achieved: false, message: studioMsg.failedHasSetBotSpeed() };
+  if (required.setBotSpeed && !tracked.hasSetBotSpeed) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasSetBotSpeed() };
   }
 
   if (required.touchAllItems && Studio.items.length > 0) {
-    return { achieved: false, message: studioMsg.failedTouchAllItems() };
+    return { exists: true, achieved: false, message: studioMsg.failedTouchAllItems() };
   }
 
   if (required.scoreMinimum && Studio.playerScore < required.scoreMinimum) {
-    return { achieved: false, message: studioMsg.failedScoreMinimum() };
+    return { exists: true, achieved: false, message: studioMsg.failedScoreMinimum() };
   }
 
-  if (required.removedItemCount && Studio.removedItemCount < required.removedItemCount) {
-    return { achieved: false, message: studioMsg.failedRemovedItemCount() };
+  if (required.removedItemCount && tracked.removedItemCount < required.removedItemCount) {
+    return { exists: true, achieved: false, message: studioMsg.failedRemovedItemCount() };
   }
 
   if (required.setActivity &&
-      !(Studio.setActivityRecord && 
-        Studio.setActivityRecord[required.setActivity.itemType] &&
-        Studio.setActivityRecord[required.setActivity.itemType][required.setActivity.activityType])) {
-    return { achieved: false, message: studioMsg.failedSetActivity() };
+      !(tracked.setActivityRecord && 
+        tracked.setActivityRecord[required.setActivity.itemType] &&
+        tracked.setActivityRecord[required.setActivity.itemType][required.setActivity.activityType])) {
+    return { exists: true, achieved: false, message: studioMsg.failedSetActivity() };
   }
 
-  return { achieved: true, message: null };
+  return { exists: true, achieved: true, message: null };
 };
 
 
@@ -4372,7 +4384,6 @@ var checkFinished = function () {
 
   var hasGoals = Studio.spriteGoals_.length !== 0;
   var achievedGoals = Studio.allGoalsVisited();
-  var hasRequiredForSuccess = level.requiredForSuccess ? true : false;
   var requiredForSuccess = Studio.checkRequiredForSuccess();
   var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
   var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
@@ -4393,7 +4404,7 @@ var checkFinished = function () {
     return true;
   }
 
-  if (hasRequiredForSuccess) {
+  if (requiredForSuccess.exists) {
     if (requiredForSuccess.achieved) {
       Studio.message = null;
       Studio.result = ResultType.SUCCESS;
