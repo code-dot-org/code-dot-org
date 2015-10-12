@@ -33,7 +33,7 @@ Conte aos seus amigos sobre a **#HoraDoCodigo**!
 
 ## 5. Promova a Hora do Código em sua comunidade
 
-[Recrute um grupo da região](%= resolve_url('/promote/resources#sample-emails') %)— clube de escoteiros, igreja, universidade, grupo de veteranos, sindicato, ou mesmo alguns amigos. Você não precisa estar na escola para aprender novas habilidades. Use estes [cartazes, banners, adesivos, vídeos e muito mais](%= resolve_url('/promote/resources') %) em seu próprio evento.
+[Reúna um grupo local](%= resolve_url('/promote/resources#sample-emails') %)— clube de escoteiros, igreja, universidade, grupo de veteranos, sindicato, ou até mesmo alguns amigos. Você não precisa estar na escola para aprender novas habilidades. Use estes [cartazes, banners, adesivos, vídeos e muito mais](%= resolve_url('/promote/resources') %) em seu próprio evento.
 
 ## 6. Peça a um representante político para apoiar a Hora do Código
 

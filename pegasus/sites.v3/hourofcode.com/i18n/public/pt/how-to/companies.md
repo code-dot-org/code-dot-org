@@ -15,6 +15,7 @@ nav: how_to_nav
   * Pedir ao seu CEO para enviar um e-mail para toda a empresa enfatizando a importância da ciência da computação e incentivando os funcionários a divulgar. [Veja este e-mail](<%= resolve_url('/promote/resources#sample-emails') %>)..
   * Organizar um Happy Hour da Hora do Código com seus colegas de trabalho para experimentar os [tutoriais](<%= resolve_url('https://code.org/learn') %>).
   * Convidar uma turma de alunos ou de outros parceiros sem fins lucrativos para realizar uma Hora do Código no escritório da empresa.
+  * Encouraging **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
 
 ## Como sediar um evento da Hora do Código
 
@@ -22,6 +23,7 @@ nav: how_to_nav
 
   * Registre sua [Hora do Código](<%= resolve_url('/') %>) durante o evento em <%= campaign_date('short') %>.
   * Promova seu evento da [Hora do Código](<%= resolve_url('/promote') %>) e incentive outras pessoas a organizarem eventos também.
+  * Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
 
 ## 2) Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Escolha um tutorial:

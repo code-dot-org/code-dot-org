@@ -12,7 +12,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 1. Daftar untuk mengadakan Hour of Code
 
-Siapaun, dimanapun dapat mengadakan Hour of Code. [Daftar](%= resolve_url('/') %) untuk mendapatkan update dan memenuhi syarat untuk hadiah.   
+Anyone, anywhere can host an Hour of Code. [Sign up](%= resolve_url('/') %) to receive updates and qualify for prizes.   
 
 
 [<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
