@@ -1709,6 +1709,12 @@ Studio.reset = function(first) {
   Studio.sayComplete = 0;
   Studio.playSoundCount = 0;
 
+  // More things used to validate level completion.
+  Studio.removedItemCount = 0;
+  Studio.setActivityRecord = null;
+  Studio.hasSetBot = false;
+  Studio.hasAddedItem = false;
+
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -2913,6 +2919,7 @@ Studio.callCmd = function (cmd) {
     case 'setSprite':
       studioApp.highlight(cmd.id);
       Studio.setSprite(cmd.opts);
+      Studio.hasSetSprite = true;
       break;
     case 'saySprite':
       if (!cmd.opts.started) {
@@ -2930,6 +2937,7 @@ Studio.callCmd = function (cmd) {
     case 'setBotSpeed':
       studioApp.highlight(cmd.id);
       Studio.setBotSpeed(cmd.opts);
+      Studio.hasSetBotSpeed = true;
       break;
     case 'setSpriteSize':
       studioApp.highlight(cmd.id);
@@ -3027,6 +3035,7 @@ Studio.callCmd = function (cmd) {
     case 'addItem':
       studioApp.highlight(cmd.id);
       Studio.addItem(cmd.opts);
+      Studio.hasAddedItem = true;
       break;
     case 'setItemActivity':
       studioApp.highlight(cmd.id);
@@ -3153,6 +3162,19 @@ Studio.setItemActivity = function (opts) {
     Studio.items.forEach(function (item) {
       if (item.className === opts.className) {
         item.setActivity(opts.type);
+
+        // For verifying success, record this combination of activity type and
+        // item type.
+
+        if (!Studio.setActivityRecord) {
+          Studio.setActivityRecord = [];
+        }
+
+        if (!Studio.setActivityRecord[opts.className]) {
+          Studio.setActivityRecord[opts.className] = [];
+        }
+
+        Studio.setActivityRecord[opts.className][opts.type] = true;
       }
     });
   }
@@ -4307,10 +4329,51 @@ Studio.allGoalsVisited = function() {
   return finishedGoals === Studio.spriteGoals_.length;
 };
 
+Studio.checkRequiredForSuccess = function() {
+
+  if (! level.requiredForSuccess) {
+    return { achieved: false, message: null };
+  }
+
+  var required = level.requiredForSuccess;
+
+  if (required.setSprite && !Studio.hasSetSprite) {
+    return { achieved: false, message: studioMsg.failedHasSetSprite() };
+  }
+
+  if (required.setBotSpeed && !Studio.hasSetBotSpeed) {
+    return { achieved: false, message: studioMsg.failedHasSetBotSpeed() };
+  }
+
+  if (required.touchAllItems && Studio.items.length > 0) {
+    return { achieved: false, message: studioMsg.failedTouchAllItems() };
+  }
+
+  if (required.scoreMinimum && Studio.playerScore < required.scoreMinimum) {
+    return { achieved: false, message: studioMsg.failedScoreMinimum() };
+  }
+
+  if (required.removedItemCount && Studio.removedItemCount < required.removedItemCount) {
+    return { achieved: false, message: studioMsg.failedRemovedItemCount() };
+  }
+
+  if (required.setActivity &&
+      !(Studio.setActivityRecord && 
+        Studio.setActivityRecord[required.setActivity.itemType] &&
+        Studio.setActivityRecord[required.setActivity.itemType][required.setActivity.activityType])) {
+    return { achieved: false, message: studioMsg.failedSetActivity() };
+  }
+
+  return { achieved: true, message: null };
+}
+
+
 var checkFinished = function () {
 
   var hasGoals = Studio.spriteGoals_.length !== 0;
   var achievedGoals = Studio.allGoalsVisited();
+  var hasRequiredForSuccess = level.requiredForSuccess ? true : false;
+  var requiredForSuccess = Studio.checkRequiredForSuccess();
   var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
   var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
   var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
@@ -4329,6 +4392,18 @@ var checkFinished = function () {
     Studio.result = ResultType.SUCCESS;
     return true;
   }
+
+  if (hasRequiredForSuccess) {
+    if (requiredForSuccess.achieved) {
+      Studio.message = null;
+      Studio.result = ResultType.SUCCESS;
+      return true;
+    } else {
+      // Not meeting these is not reason for immediate failure in itself, but they do
+      // establish a custom error message.
+      Studio.message = requiredForSuccess.message;
+    }
+  } 
 
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
     Studio.result = ResultType.FAILURE;
