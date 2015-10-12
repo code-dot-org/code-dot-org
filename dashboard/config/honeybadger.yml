@@ -1,0 +1,7 @@
+---
+api_key: "#{CDO.dashboard_honeybadger_api_key}"
+
+exceptions.ignore:
+  <%  %w(Sinatra StorageApps DynamoTable PropertyBag).each do |class_name| %>
+  - <%= class_name + "::NotFound" %>
+  <% end %>
