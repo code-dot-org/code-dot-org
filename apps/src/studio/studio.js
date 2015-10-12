@@ -2435,7 +2435,6 @@ Studio.drawDebugRect = function(className, x, y, width, height) {
  * It doesn't appear until halfway through the level, and briefly fades in 
  * when first appearing.
  */
-
 Studio.drawTimeoutRect = function() {
   if (!level.showTimeoutRect || Studio.timeoutFailureTick === Infinity) {
     return;
@@ -2452,7 +2451,6 @@ Studio.drawTimeoutRect = function() {
   var currentFraction = timeRemaining / Studio.timeoutFailureTick;
 
   if (currentFraction <= startFadeInAt) {
-
     var opacity = currentFraction < endFadeInAt ? 1 : 
       1 - (currentFraction - endFadeInAt) / (startFadeInAt - endFadeInAt);
 
