@@ -185,10 +185,15 @@ ec2client.create_tags({
                           ],
                       })
 
+instance_info = ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0]
+private_dns_name = instance_info.private_dns_name
+public_dns_name = instance_info.public_dns_name
 
-private_dns_name = ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0].private_dns_name
-puts "Created instance #{instance_id} with name #{instance_name} and private dns name #{private_dns_name}"
-
+puts
+puts "Created instance #{instance_id} with name #{instance_name} "
+puts "Private dns name: #{private_dns_name}, "
+puts "Public dns name: #{public_dns_name}"
+puts
 puts 'Writing new configuration file'
 
 file_suffix = rand(100000000)
@@ -220,5 +225,24 @@ Net::SSH.start('gateway.code.org', username) do |ssh|
   ssh.exec!("rm /tmp/*#{file_suffix}*")
 end
 
-puts "To deploy new chef instance, run the following:"
-puts "ssh gateway -t knife bootstrap #{private_dns_name} -x ubuntu --sudo -E production -N #{instance_name} -r role[front-end]"
+puts ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0]
+puts "Private dns name: #{private_dns_name}"
+
+case options['environment']
+when 'production'
+  cmd =  "ssh gateway -t knife bootstrap #{private_dns_name} -x ubuntu --sudo -E production -N #{instance_name} -r role[front-end]"
+when 'adhoc'
+  cmd =  "ssh gateway -t knife bootstrap #{private_dns_name} -x ubuntu --sudo -E adhoc -N #{instance_name} -r role[unmonitored-standalone]"
+else
+  cmd = nil
+end
+
+if cmd
+  puts "Bootstrapping frontend: '#{cmd}'"
+  `#{cmd}`
+  puts '--------------------------------------------------------'
+  puts "Dashboard listening at: http://#{public_dns_name}:8080"
+  puts "Pegasus listening at:   http://#{public_dns_name}:8081"
+else
+  puts 'Unknown environment, not deploying'
+end
