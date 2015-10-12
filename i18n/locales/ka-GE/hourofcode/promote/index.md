@@ -12,7 +12,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 1. Sign up to host an Hour of Code
 
-კოდის ერთი საათის ჩატარება ნიებისმიერს, ნებისმიერ ადგილას შეუძლია. სიახლეების მისაღებად და პრიზების კანდიდატობისთვის [დარეგისტრირდით](%= resolve_url('/') %).   
+Anyone, anywhere can host an Hour of Code. [Sign up](%= resolve_url('/') %) to receive updates and qualify for prizes.   
 
 
 [<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)

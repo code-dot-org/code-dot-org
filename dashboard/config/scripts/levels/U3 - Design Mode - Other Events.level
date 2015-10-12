@@ -7,15 +7,55 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "onEvent": null,
+      "button": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
       "setPosition": null,
+      "textLabel": {
+        "params": [
+          "\"id\"",
+          "\"text\""
+        ]
+      },
+      "image": null,
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "getX": null,
+      "getY": null,
+      "getDirection": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
       "randomNumber_max": null,
-      "randomNumber_min_max": null
+      "randomNumber_min_max": null,
+      "console.log": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null
     },
     "edit_code": true,
     "encrypted_examples": "3uHFs2HnO+A9yFuJHCjBvwMrD/HfimMbhRet7b/ZwWerFMdWnaP9/oBzHgan\nHtBv\n",
     "embed": "false",
-    "markdown_instructions": "# Mouse Event\r\n\r\nIn the last level you set up the the image to move on the button click. In this level we are going to remove the button and make the image respond to mouse motion.\r\n\r\n**Goal:** Make the image move whenever the image is clicked. Check out the example provided.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/d9b81ebe5f3669b7c92fb5d07f464d7e-image-1444335283961.gif\" style=\"width: 250px; float: right\">\r\n\r\nSwith to Design Mode and **delete the button**. In order to delete the button you have to go into the button Properties and find the red delete button at the bottom.\r\n\r\n**Note:** You may have to click on the button to get its Properties to show up.\r\n\r\nYou want to make the image move when the mouse is pressed down. There are two ways to do this. You can use either one. \r\n\r\n1. Pull out an `onEvent()` block from Code Mode \r\n1. Insert it using the *Insert and Show Code* under Click in the Events tab in Design Mode. \r\n\r\nEither way you need to **choose the mousedown option from the dropdown list**.\r\n\r\n**Reminder:** The ID is what connects the onEvent block to the UI element. Make sure you make the IDs match.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -40,7 +80,7 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "submittable": "false",
-    "hide_view_data_button": "false",
+    "hide_view_data_button": "true",
     "instructions": "Delete the button and make the image move to a random location when you click on it. (click to see detailed instructions)"
   }
 }]]></config>

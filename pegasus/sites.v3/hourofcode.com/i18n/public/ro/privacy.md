@@ -1,6 +1,6 @@
 ---
 
-Titlu: Politica de confidenţialitate
+title: Politica de confidenţialitate
 
 ---
 

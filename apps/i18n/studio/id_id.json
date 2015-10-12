@@ -476,5 +476,12 @@
   "whenTouchWallTooltip": "Execute the actions below when the actor touches a wall.",
   "whenUp": "ketika anak panah atas",
   "whenUpTooltip": "Laksanakan tindakan-tindakan di bawah ini ketika tombol panah keatas ditekan.",
-  "yes": "Ya"
+  "yes": "Ya",
+  "calloutPlaceCommandsHere": "Place commands here",
+  "calloutPlaceCommandsAtTop": "Place commands to set up your game at the top",
+  "calloutTypeCommandsHere": "Type your commands here",
+  "calloutCharactersMove": "These new commands let you control how the characters move",
+  "calloutPutCommandsTouchCharacter": "Put a command here to have it happen when you touch a character",
+  "calloutClickCategory": "Click a category header to see commands in each category",
+  "calloutTryOutNewCommands": "Try out all the new commands you’ve unlocked"
 }
