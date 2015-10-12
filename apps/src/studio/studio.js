@@ -4365,7 +4365,7 @@ Studio.checkRequiredForSuccess = function() {
   }
 
   return { achieved: true, message: null };
-}
+};
 
 
 var checkFinished = function () {
