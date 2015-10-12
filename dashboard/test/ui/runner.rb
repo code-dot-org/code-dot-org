@@ -51,17 +51,19 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-f", "--feature Feature", Array, "Single feature or comma separated list of features to run") do |f|
     $options.feature = f
   end
-  opts.on("-l", "--local", "Use local webdriver, not Saucelabs") do
+  opts.on("-l", "--local", "Use local webdriver (not Saucelabs) and local domains") do
     $options.local = 'true'
     $options.pegasus_domain = 'localhost.code.org:3000'
     $options.dashboard_domain = 'localhost.studio.code.org:3000'
   end
   opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
-    raise "'localhost:3000' is an invalid pegasus domain. Try '-p localhost.code.org:3000'." if p == 'localhost:3000'
+    print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n"\
+          "Try '-p localhost.code.org:3000' instead (this is the default when using '-l').\n" if p == 'localhost:3000'
     $options.pegasus_domain = p
   end
   opts.on("-d", "--dashboard Domain", String, "Specify an override domain for studio.code.org, e.g. localhost.studio.code.org:3000") do |d|
-    raise "'localhost:3000' is an invalid dashboard domain. Try '-d localhost.studio.code.org:3000'." if d == 'localhost:3000'
+    print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n"\
+          "Try '-d localhost.studio.code.org:3000' instead (this is the default when using '-l').\n" if d == 'localhost:3000'
     $options.dashboard_domain = d
   end
   opts.on("-r", "--real_mobile_browser", "Use real mobile browser, not emulator") do
