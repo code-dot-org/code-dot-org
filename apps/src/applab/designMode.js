@@ -320,7 +320,7 @@ designMode.onDeletePropertiesButton = function(element, event) {
   if (isScreen) {
     designMode.loadDefaultScreen();
   } else {
-    designMode.editElementProperties(elementUtils.getElementById(currentScreenId));
+    designMode.editElementProperties(elementUtils.getPrefixedElementById(currentScreenId));
   }
 };
 
@@ -391,10 +391,10 @@ designMode.serializeToLevelHtml = function () {
   // remove prefixes from the element ids.
   var designModeVizClone = designModeViz.clone();
   designModeVizClone.children().each(function() {
-    removeElementIdPrefix(this);
+    elementUtils.removeIdPrefix(this);
   });
   designModeVizClone.children().children().each(function() {
-    removeElementIdPrefix(this);
+    elementUtils.removeIdPrefix(this);
   });
 
   var serialization = new XMLSerializer().serializeToString(designModeVizClone[0]);
@@ -427,13 +427,13 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   var children = $(levelDom).children();
 
   children.each(function () {
-    addElementIdPrefix(this, prefix);
+    elementUtils.addIdPrefix(this, prefix);
   });
   children.children().each(function() {
-    addElementIdPrefix(this, prefix);
+    elementUtils.addIdPrefix(this, prefix);
   });
 
-    children.appendTo(rootEl);
+  children.appendTo(rootEl);
   if (allowDragging) {
     // children are screens. make grandchildren draggable
     makeDraggable(children.children());
@@ -446,28 +446,6 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
     elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
   });
 };
-
-/**
- * Adds the prefix to the element's id.
- * @param element {Element}
- * @param prefix {string} Optional prefix to add. Defaults to ''.
- * @returns {Element}
- */
-function addElementIdPrefix(element, prefix) {
-  // Specify an empty prefix explicitly, so that helper functions do
-  // not implicitly use DESIGN_ELEMENT_ID_PREFIX.
-  prefix = prefix === undefined ? '' : prefix;
-  elementUtils.setId(element, element.getAttribute('id'), prefix);
-}
-
-/**
- * Removes the DESIGN_ELEMENT_ID_PREFIX from the element's id.
- * @param element {Element}
- * @returns {Element}
- */
-function removeElementIdPrefix(element) {
-  element.setAttribute('id', elementUtils.getId(element));
-}
 
 designMode.toggleDesignMode = function(enable) {
   var designWorkspace = document.getElementById('designWorkspace');
@@ -748,7 +726,7 @@ designMode.changeScreen = function (screenId) {
     );
   }
 
-  designMode.editElementProperties(elementUtils.getElementById(screenId));
+  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
 };
 
 designMode.getCurrentScreenId = function() {
