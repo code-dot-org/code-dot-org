@@ -36,7 +36,7 @@ var sendReport = function(report) {
   var queryString = queryItems.join('&');
 
   dashboard.clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.level.scriptLevelId);
-
+  console.log(report.callback);
   var thisAjax = jQuery.ajax({
     type: 'POST',
     url: report.callback,
