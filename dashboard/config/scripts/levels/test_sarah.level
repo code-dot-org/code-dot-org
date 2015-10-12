@@ -1,9 +1,9 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-10-07T15:41:08.000Z",
+  "created_at": "2015-10-10T01:12:26.000Z",
   "level_num": "custom",
-  "user_id": 155,
+  "user_id": 42,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -94,43 +94,15 @@
       "divideOperator": null,
       "equalityOperator": null,
       "inequalityOperator": null,
-      "greaterThanOperator": null,
-      "lessThanOperator": null,
-      "andOperator": null,
-      "orOperator": null,
-      "notOperator": null,
-      "randomNumber_max": null,
-      "randomNumber_min_max": null,
-      "mathRound": null,
-      "mathAbs": null,
-      "mathMax": null,
-      "mathMin": null,
-      "declareAssign_x": null,
-      "assign_x": null,
-      "declareAssign_x_prompt": null,
-      "console.log": null,
-      "declareAssign_str_hello_world": null,
-      "substring": null,
-      "indexOf": null,
-      "length": null,
-      "toUpperCase": null,
-      "toLowerCase": null,
-      "declareAssign_list_abd": null,
-      "listLength": null,
-      "insertItem": null,
-      "appendItem": null,
-      "removeItem": null,
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null,
-      "return": null
+      "greaterThanOperator": null
     },
     "edit_code": true,
-    "encrypted_examples": "rekFzZUJd6xk+soKqRLxkkGXuqBxi0o1wHmJkDYN354EDO2i915c95r96j1r\ne3cr\n",
+    "encrypted_examples": [
+
+    ],
     "embed": "false",
-    "instructions": "Add an event handler for the button using the \"Insert and show\" link in the Design Mode Events tab. (Click to see full instructions).",
-    "markdown_instructions": "# Activate Your Button\r\nOn the last level you added a button using Design Mode. If you click it nothing happens. So lets make the button work. \r\nYour button has been brought over to this level.  \r\n\r\n**Goal:** Add code using Design Mode to make the button respond to a click.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/9ff41c3ea30ece355e91eaca5cdc1e36-image-1444417748945.gif\"  style=\"width: 250px; float: right\">\r\n\r\n* **Change ID of button** from “button1” to “redButton”\r\n\r\n* **Insert `onEvent()` from Design Mode** by clicking *Insert and Show in Code* under the **Events Tab**.\r\n\r\n* Run the program and **look for the output in the *Debug Console* **below the workspace instead of the app window. We will discuss the *Debug Console* on the next level.",
+    "instructions": "hi",
+    "markdown_instructions": "hi",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -146,7 +118,6 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "project_template_level_name": "U3 - Design Mode 1",
     "free_play": "false",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
@@ -154,8 +125,11 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
+    "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"divApplab\" class=\"appModern\" tabindex=\"1\" style=\"width: 320px; height: 480px;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; height: 480px; background-color: rgb(47, 184, 222);\">\r\n    <input id=\"text_input\" style=\"margin: 0px; color: rgb(0, 0, 0); top: 45px; left: 15px; width: 290px; height: 35px; position: absolute; background-color: rgb(255, 255, 255);\"/>\r\n    <div contenteditable=\"true\" id=\"text_area\" style=\"font-size: 10px; color: rgb(0, 0, 0); margin: 0px; width: 290px; height: 380px; top: 90px; left: 15px; position: absolute; background-color: rgb(255, 255, 255);\"/>\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 20px; overflow: hidden; word-wrap: break-word; color: rgb(134, 78, 204); width: 105px; height: 25px; top: 10px; left: 15px; position: absolute;\" id=\"label\">Sushi Bot!</label>\r\n  </div>\r\n</div>",
     "submittable": "false",
-    "hide_view_data_button": "true"
+    "hide_view_data_button": "false",
+    "data_properties": "{\r\n  \"sarah\": \"hi\"\r\n}",
+    "start_blocks": "//this is some starting code"
   }
 }]]></config>
   <blocks/>
