@@ -422,6 +422,7 @@ And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
     element.send_keys(make_symbol_if_colon(key))
   else
     # Workaround for Firefox, see https://code.google.com/p/selenium/issues/detail?id=6822
+    key.gsub!(/\\n/, "\n") # Cucumber does not convert captured \n to newline.
     key.split('').each do |k|
       if k == '('
         element.send_keys :shift, 9
