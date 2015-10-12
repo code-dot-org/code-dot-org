@@ -60,9 +60,9 @@ describe('getIdDropdown filtering modes', function () {
     var sampleDom =
         '<div>' +
           '<div id="designModeViz">' +
-            '<div class="screen" id="screen1">' +
-              '<div class="chart" id="chart9"></div>' +
-              '<img src="" class="chart-friend" id="image1">' +
+            '<div class="screen" id="design_screen1">' +
+              '<div class="chart" id="design_chart9"></div>' +
+              '<img src="" class="chart-friend" id="design_image1">' +
             '</div>' +
           '</div>' +
         '</div>';
@@ -97,13 +97,13 @@ describe('getIdDropdown filtering modes', function () {
   });
 
   it('can filter on ID', function () {
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#screen1'), [
+    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#design_screen1'), [
       { "display": '"screen1"', "text": '"screen1"' }
     ]);
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#chart9'), [
+    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#design_chart9'), [
       { "display": '"chart9"', "text": '"chart9"' }
     ]);
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#image1'), [
+    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#design_image1'), [
       { "display": '"image1"', "text": '"image1"' }
     ]);
   });
