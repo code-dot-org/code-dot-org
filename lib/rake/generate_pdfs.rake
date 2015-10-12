@@ -35,9 +35,10 @@ def generate_pdf_file(base_url, pdf_conversion_info, fetchfile_for_pdf)
 
   PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose: true)
 
-  fetchable_url = RakeUtils.replace_file_with_s3_backed_fetch_file(pdf_conversion_info.output_pdf_path, fetchfile_for_pdf, bucket: 'cdo-fetch')
-
-  HipChat.log "Created <b>#{pdf_conversion_info.output_pdf_path}</b> and moved to <a href='#{fetchable_url}'>#{fetchable_url}</a></b>."
+  if File.exist?(pdf_conversion_info.output_pdf_path)
+    fetchable_url = RakeUtils.replace_file_with_s3_backed_fetch_file(pdf_conversion_info.output_pdf_path, fetchfile_for_pdf, bucket: 'cdo-fetch')
+    HipChat.log "Created <b>#{pdf_conversion_info.output_pdf_path}</b> and moved to <a href='#{fetchable_url}'>#{fetchable_url}</a></b>."
+  end
 end
 
 all_outfiles = [].tap do |all_outfiles|
