@@ -368,7 +368,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "subtitle":function(d){return "a visual programming environment"},
 "textVariable":function(d){return "text"},
 "toggleBlocksErrorMsg":function(d){return "You need to correct an error in your program before it can be shown as blocks."},
-"tooFewBlocksMsg":function(d){return "You are using all of the necessary types of blocks, but try using more  of these types of blocks to complete this puzzle."},
+"tooFewBlocksMsg":function(d){return "You are using all of the necessary types of blocks, but try using more of these types of blocks to complete this puzzle."},
 "tooManyBlocksMsg":function(d){return "This puzzle can be solved with <x id='START_SPAN'/><x id='END_SPAN'/> blocks."},
 "tooMuchWork":function(d){return "You made me do a lot of work!  Could you try repeating fewer times?"},
 "toolboxHeader":function(d){return "Blocks"},
