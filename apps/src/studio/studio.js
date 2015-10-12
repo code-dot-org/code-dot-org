@@ -2470,8 +2470,6 @@ Studio.drawTimeoutRect = function() {
       background.setAttribute('x', 0);
       background.setAttribute('y', Studio.MAZE_HEIGHT - height);
       background.setAttribute('fill', 'rgba(255, 255, 255, 0.5)');
-      //background.setAttribute('stroke', '#000000');
-      //background.setAttribute('stroke-width', 0);
       group.appendChild(background);
       svg.appendChild(group);
     }
