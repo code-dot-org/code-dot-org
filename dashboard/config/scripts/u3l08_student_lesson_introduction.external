@@ -1,5 +1,6 @@
 name 'U3L08 Student Lesson Introduction'
 title 'Creating Functions with Parameters'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 06 - Creating Functions with Parameters
