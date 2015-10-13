@@ -1,6 +1,6 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
-testUtils.setupLocales('applab');
+testUtils.setupLocales('Applab');
 
 var $ = require('jquery');
 var React = require('react');
@@ -13,8 +13,8 @@ window.Applab = {
   appHeight: 480
 };
 
-var AppLab = require('@cdo/apps/applab/applab');
-var designMode = require('@cdo/apps/applab/designMode');
+var Applab = require('@cdo/apps/Applab/Applab');
+var designMode = require('@cdo/apps/Applab/designMode');
 
 describe('applab: designMode.addScreenIfNecessary', function () {
   it ('adds a screen if we dont have one', function () {
@@ -70,7 +70,7 @@ describe('applab: getIdDropdown filtering modes', function () {
   });
 
   it('produces all IDs when no filter is given', function () {
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot), [
       { "display": '"chart9"', "text": '"chart9"' },
       { "display": '"image1"', "text": '"image1"' },
       { "display": '"screen1"', "text": '"screen1"' }
@@ -78,20 +78,20 @@ describe('applab: getIdDropdown filtering modes', function () {
   });
 
   it('can filter on tag type', function () {
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, 'div'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, 'div'), [
       { "display": '"chart9"', "text": '"chart9"' },
       { "display": '"screen1"', "text": '"screen1"' }
     ]);
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, 'img'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, 'img'), [
       { "display": '"image1"', "text": '"image1"' }
     ]);
   });
 
   it('can filter on class', function () {
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '.chart'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.chart'), [
       { "display": '"chart9"', "text": '"chart9"' }
     ]);
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '.screen'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.screen'), [
       { "display": '"screen1"', "text": '"screen1"' }
     ]);
   });
@@ -111,11 +111,42 @@ describe('applab: getIdDropdown filtering modes', function () {
   it('does not accidentally pick up superset classes', function () {
     // Make sure searching for elements with class ".chart" does not also pick
     // up elements with class ".chart-friend"
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '.chart'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.chart'), [
       { "display": '"chart9"', "text": '"chart9"' }
     ]);
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '.chart-friend'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.chart-friend'), [
       { "display": '"image1"', "text": '"image1"' }
     ]);
+  });
+});
+
+describe('hasDataStoreAPIs', function () {
+  it('returns true if we use createRecord', function () {
+    var code = ['',
+      'createRecord("mytable", {name:\'Alice\'}, function(record) {' +
+      '  ',
+      '});'
+    ].join('\n');
+    assert.strictEqual(Applab.hasDataStoreAPIs(code), true);
+  });
+
+  it('returns true if we use updateRecord', function () {
+    var code = ['',
+      'updateRecord("mytable", {name:\'Bob\'}, function(record) {' +
+      '  ',
+      '});'
+    ].join('\n');
+    assert.strictEqual(Applab.hasDataStoreAPIs(code), true);
+  });
+
+  it('returns false if we just read records', function () {
+    var code = ['',
+      'readRecords("mytable", {}, function(records) {',
+      '  for (var i =0; i < records.length; i++) {',
+      '    textLabel(\'id\', records[i].id + \': \' + records[i].name);',
+      '  }',
+      '});'
+    ].join('\n');
+    assert.strictEqual(Applab.hasDataStoreAPIs(code), false);
   });
 });

@@ -383,11 +383,13 @@ function renderFooterInSharedGame() {
   }, footerDiv);
 }
 
-function hasDataStoreAPIs(code) {
-  // TODO
-  // return true;
-  return false;
-}
+/**
+ * @param {string} code The code to search for Data Storage APIs
+ * @return {boolean} True if the code uses any data storage APIs
+ */
+Applab.hasDataStoreAPIs = function (code) {
+  return /createRecord/.test(code) || /updateRecord/.test(code);
+};
 
 Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {
   return 300 * Math.pow(1 - sliderSpeed, 2);
@@ -604,7 +606,7 @@ function startSharedAppAfterWarnings() {
   var modal = document.createElement('div');
   document.body.appendChild(modal);
   React.render(React.createElement(ShareWarningsDialog, {
-    storesData: hasDataStoreAPIs(),
+    storesData: Applab.hasDataStoreAPIs(Applab.getCode()),
     signedIn: Applab.user.isSignedIn,
     handleClose: function () {
       window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
