@@ -113,17 +113,17 @@ describe("clientState#trackProgress", function() {
   it("handles malformed storage for video progress", function () {
     var state = dashboard.clientState;
 
-    $.cookie('videosSeen', null, {expires: 365, path: '/'});
+    localStorage.setItem('videosSeen', null);
     state.hasSeenVideo('someVideo').should.equal(false);
     state.recordVideoSeen('someVideo');
     state.hasSeenVideo('someVideo').should.equal(true);
 
-    $.cookie('videosSeen', '', {expires: 365, path: '/'});
+    localStorage.setItem('videosSeen', '');
     state.hasSeenVideo('someVideo').should.equal(false);
     state.recordVideoSeen('someVideo');
     state.hasSeenVideo('someVideo').should.equal(true);
 
-    $.cookie('videosSeen', '{\'malformed_json\': true', {expires: 365, path: '/'});
+    localStorage.setItem('videosSeen', '{\'malformed_json\': true');
     state.hasSeenVideo('someVideo').should.equal(false);
     state.recordVideoSeen('someVideo');
     state.hasSeenVideo('someVideo').should.equal(true);
