@@ -362,19 +362,6 @@ $debug-area-initial-height: 120px;
     -ms-user-select: none;
     user-select: none;
   }
-}
-
-$debug-commands-column-width: 270px;
-
-#debug-commands-header {
-  width: $debug-commands-column-width;
-  float: left;
-  border-right: 1px solid gray;
-
-  .fa {
-    margin: 0 0.25em;
-  }
-
   #show-hide-debug-icon {
     position: absolute;
     top: 0;
@@ -389,6 +376,19 @@ $debug-commands-column-width: 270px;
     #show-hide-debug-icon {
       color: white;
     }
+  }
+
+}
+
+$debug-commands-column-width: 270px;
+
+#debug-commands-header {
+  width: $debug-commands-column-width;
+  float: left;
+  border-right: 1px solid gray;
+
+  .fa {
+    margin: 0 0.25em;
   }
 }
 
@@ -408,6 +408,9 @@ $debug-commands-column-width: 270px;
 }
 
 .debug-console {
+  &.full {
+    left: 0;
+  }
   left: $debug-commands-column-width;
   right: 0;
 }

@@ -3002,7 +3002,7 @@ Studio.callCmd = function (cmd) {
     case 'playSound':
       studioApp.highlight(cmd.id);
       studioApp.playAudio(cmd.opts.soundName, { volume: 1.0 });
-      Studio.trackedBehavior.playSoundCount++;
+      Studio.playSoundCount++;
       break;
     case 'showTitleScreen':
       if (!cmd.opts.started) {

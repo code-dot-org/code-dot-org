@@ -483,7 +483,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
     }
   }
 
-  dom.setText(feedback, message);
+  $(feedback).text(message);
 
   // Update the feedback box design, if the hint message came from server.
   if (this.useSpecialFeedbackDesign_(options)) {
@@ -500,7 +500,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
     feedbackDiv.appendChild(imageDiv);
     // Add new text
     var hintHeader = document.createElement('p');
-    dom.setText(hintHeader, msg.hintHeader());
+    $(hintHeader).text(msg.hintHeader());
     feedbackDiv.appendChild(hintHeader);
     hintHeader.className = 'hint-header';
     // Append the original text
