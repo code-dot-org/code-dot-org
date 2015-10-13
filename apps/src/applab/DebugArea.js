@@ -67,26 +67,6 @@ DebugArea.prototype.bindHandlersForDebugCommandsHeader = function () {
   if (header.length === 0) {
     return;
   }
-  header.mouseover(DebugArea.prototype.onCommandsHeaderOver.bind(this));
-  header.mouseout(DebugArea.prototype.onCommandsHeaderOut.bind(this));
-};
-
-/**
- * We do this manually instead of via a simple css :hover because this element
- * can be animated out from under the cursor when sliding open and closed,
- * and the :hover effect isn't removed unless the mouse is moved.
- */
-DebugArea.prototype.onCommandsHeaderOver = function () {
-  this.rootDiv_.find('#debug-commands-header').addClass('js-hover-hack');
-};
-
-/**
- * We do this manually instead of via a simple css :hover because this element
- * can be animated out from under the cursor when sliding open and closed,
- * and the :hover effect isn't removed unless the mouse is moved.
- */
-DebugArea.prototype.onCommandsHeaderOut = function () {
-  this.rootDiv_.find('#debug-commands-header').removeClass('js-hover-hack');
 };
 
 /** @returns {boolean} */
@@ -154,13 +134,11 @@ DebugArea.prototype.slideOpen = function () {
 
   // Manually remove hover effect at start and end of animation to get *close*
   // to the correct effect.
-  this.onCommandsHeaderOut();
   this.rootDiv_.animate({
     height: this.lastOpenHeight_
   },{
     complete: function () {
       this.setIconPointingDown(true);
-      this.onCommandsHeaderOut();
     }.bind(this)
   });
 
@@ -188,14 +166,12 @@ DebugArea.prototype.slideShut = function () {
   var closedHeight = this.getHeightWhenClosed();
   // Manually remove hover effect at start and end of animation to get *close*
   // to the correct effect.
-  this.onCommandsHeaderOut();
   this.rootDiv_.animate({
     height: closedHeight
   },{
     complete: function () {
       this.setContentsVisible(false);
       this.setIconPointingDown(false);
-      this.onCommandsHeaderOut();
     }.bind(this)
   });
 
