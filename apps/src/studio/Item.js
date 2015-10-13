@@ -109,6 +109,8 @@ Item.prototype.removeElement = function () {
     window.clearInterval(this.animator_);
     this.animator_ = null;
   }
+
+  Studio.trackedBehavior.removedItemCount++;
 };
 
 /**

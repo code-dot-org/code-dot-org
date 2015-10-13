@@ -42,6 +42,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    return if redirect_applab_under_13(@level)
     sharing = params[:share] == true
     readonly = params[:readonly] == true
     level_view_options(
@@ -65,7 +66,6 @@ class ProjectsController < ApplicationController
     if STANDALONE_PROJECTS[params[:key]][:login_required]
       authenticate_user!
     end
-    return if redirect_applab_under_13(@level)
     show
   end
 
