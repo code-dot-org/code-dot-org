@@ -157,9 +157,11 @@ Breakfast and lunch will be served.
 **October 17th Location**
 
 Ball Junior High School<br/>
-Room TBD<br/>
+Room 37<br/>
 1500 W Ball Rd<br/>
 Anaheim, CA 92802
+
+[Click here for a School Map](/images/ball-jr-high-map.JPG)
 
 **What to bring to Phase 3 quarterly sessions:**
 

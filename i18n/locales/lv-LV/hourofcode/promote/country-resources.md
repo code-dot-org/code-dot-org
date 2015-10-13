@@ -28,6 +28,12 @@ p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6
 
 p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
 
+<% elsif @country == 'id' %>
+
+Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Desember 2015, kami mengetahui bahwa banyak siswa-siswi Indonesia yang menjalankan prosesi ujian. Untuk alasan ini kami memutuskan untuk menjalankan masa kampanye Hour of Code di Indonesia pada 12 hingga 20 Desember 2015. Kita tetap akan merasakan kemeriahan yang sama dan dengan tujuan yang sama namun dengan kebersamaan yang lebih besar karena akan ada lebih banyak siswa-siswi yang dapat mengikutinya.
+
+Mari bersama kita dukung gerakan Hour of Code di Indonesia!
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -62,13 +68,13 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 ## 4) Iedvesmojiet skolēnus - parādat viņiem video
 
-Parādiet studentiem iedvosmojošu video, lai uzsāktu "Programmēšans stundu". Piemēram:
+Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * Oriģinālo Code.org atklāšanas video, piedaloties Bill Gates, Mark Zuckerberg un NBA zzvaigsne Chris Bosh(Tur ir [1 minūtes](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minūšu](https://www.youtube.com/watch?v=nKIu9yen5nc), un [9 minūšu](https://www.youtube.com/watch?v=dU1xS07N-FA) versijas)
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [Prezidents Obama saucis visus skolēnus mācīties datorzinātnes](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Liec saviem skolniekiem satraukties - parādi viņiem īsu ievadu**
+**Get your students excited - give them a short intro**
 
 <% else %>
 
