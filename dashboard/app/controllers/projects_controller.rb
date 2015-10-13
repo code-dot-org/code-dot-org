@@ -1,7 +1,7 @@
 require 'active_support/core_ext/hash/indifferent_access'
 
 class ProjectsController < ApplicationController
-  before_filter :authenticate_user!, except: [:show, :edit, :readonly, :redirect_legacy]
+  before_filter :authenticate_user!, except: [:load, :show, :edit, :readonly, :redirect_legacy]
   before_action :set_level, only: [:show, :edit, :readonly, :remix]
   include LevelsHelper
 
@@ -44,10 +44,20 @@ class ProjectsController < ApplicationController
   def load
     if current_user
       channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
-    else
-      channel = create_channel
+      if channel
+        redirect_to action: 'edit', channel_id: channel
+        return
+      end
     end
-    redirect_to action: 'edit', channel_id: channel
+
+    create_new
+  end
+
+  def create_new
+    redirect_to action: 'edit', channel_id: create_channel({
+      name: 'Untitled Project',
+      level: polymorphic_url([params[:key], 'project_projects'])
+    })
   end
 
   def show
