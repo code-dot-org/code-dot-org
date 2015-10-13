@@ -352,6 +352,16 @@ img#turtleImage {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+  #debug-area-header #show-hide-debug-icon {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    margin: 0;
+    line-height: 30px; }
+  #debug-area-header.js-hover-hack {
+    cursor: pointer; }
+    #debug-area-header.js-hover-hack #show-hide-debug-icon {
+      color: white; }
 
 #debug-commands-header {
   width: 270px;
@@ -359,16 +369,6 @@ img#turtleImage {
   border-right: 1px solid gray; }
   #debug-commands-header .fa {
     margin: 0 0.25em; }
-  #debug-commands-header #show-hide-debug-icon {
-    position: absolute;
-    top: 0;
-    left: 8px;
-    margin: 0;
-    line-height: 30px; }
-  #debug-commands-header.js-hover-hack {
-    cursor: pointer; }
-    #debug-commands-header.js-hover-hack #show-hide-debug-icon {
-      color: white; }
 
 .debug-commands, .debug-console {
   display: block;
@@ -386,6 +386,8 @@ img#turtleImage {
 .debug-console {
   left: 270px;
   right: 0; }
+  .debug-console.full {
+    left: 0; }
 
 .debug-console * {
   font-family: monospace;
