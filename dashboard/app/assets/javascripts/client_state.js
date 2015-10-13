@@ -122,10 +122,18 @@ dashboard.clientState.hasSeenVideo = function(videoId) {
 };
 
 dashboard.clientState.recordVideoSeen = function (videoId) {
-  //Handle malformed JSON
-  var videosSeen = JSON.parse($.cookie('videosSeen')) || {};
-  videosSeen[videoId] = 1;
-  $.cookie('videosSeen', JSON.stringify(videosSeen), COOKIE_OPTIONS);
+  var videosSeenJson = $.cookie('videosSeen') || '{}';
+  console.log('The cookie is ' + $.cookie('videosSeen'));
+  try {
+    var videosSeen = JSON.parse(videosSeenJson);
+    videosSeen[videoId] = 1;
+    $.cookie('videosSeen', JSON.stringify(videosSeen), COOKIE_OPTIONS);
+  } catch (e) {
+    //Something went wrong parsing the json. Blow it up and just put in the new video
+    var videosSeen = {};
+    videosSeen[videoId] = 1;
+    $.cookie('videosSeen', JSON.stringify(videosSeen), COOKIE_OPTIONS);
+  }
 };
 
 
