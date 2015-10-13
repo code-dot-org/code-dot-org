@@ -123,7 +123,7 @@ dashboard.clientState.hasSeenVideo = function(videoId) {
 
 dashboard.clientState.recordVideoSeen = function (videoId) {
   var videosSeenJson = localStorage.getItem('videosSeen') || '{}';
-  console.log('The cookie is ' + $.cookie('videosSeen'));
+
   try {
     var videosSeen = JSON.parse(videosSeenJson);
     videosSeen[videoId] = 1;

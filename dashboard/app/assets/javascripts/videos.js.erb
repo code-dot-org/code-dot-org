@@ -26,7 +26,7 @@ function createVideo(options) {
 function showVideoDialog(options) {
 
   if (dashboard.clientState.hasSeenVideo(options.key)) {
-    return ;
+    return;
   }
 
   upgradeInsecureOptions(options);
@@ -50,10 +50,11 @@ function showVideoDialog(options) {
   $div = $(dialog.div);
   $div.addClass('video-modal');
 
-  $('.video-modal #x-close').click(function () {
-    console.log('Marking ' + options.key + ' as seen');
+  $('.video-modal').on("remove", function () {
     dashboard.clientState.recordVideoSeen(options.key);
   });
+
+
 
   var tabHandler = function(event, ui) {
     var tab = ui.tab || ui.newTab;  // Depends on event.
