@@ -279,6 +279,7 @@ namespace :install do
       end
 
       if OS.linux?
+        RakeUtils.system 'sudo apt-get install -y nodejs npm'
         RakeUtils.npm_update_g 'npm'
         RakeUtils.npm_install_g 'grunt-cli'
       elsif OS.mac?
