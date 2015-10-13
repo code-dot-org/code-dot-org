@@ -327,10 +327,6 @@ var drawDiv = function () {
 
   if (studioApp.share) {
     renderFooterInSharedGame();
-
-    var modal = document.createElement('div');
-    document.body.appendChild(modal);
-    React.render(React.createElement(ShareWarningsDialog, {}), modal);
   }
 };
 
@@ -385,6 +381,12 @@ function renderFooterInSharedGame() {
     className: 'dark',
     menuItems: menuItems
   }, footerDiv);
+}
+
+function hasDataStoreAPIs(code) {
+  // TODO
+  // return true;
+  return false;
 }
 
 Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {
@@ -595,6 +597,25 @@ Applab.initReadonly = function(config) {
 };
 
 /**
+ * Starts the app after (potentially) Showing a modal warning about data sharing
+ * (if appropriate) and determining user is old enough
+ */
+function startSharedAppAfterWarnings() {
+  var modal = document.createElement('div');
+  document.body.appendChild(modal);
+  React.render(React.createElement(ShareWarningsDialog, {
+    storesData: hasDataStoreAPIs(),
+    signedIn: Applab.user.isSignedIn,
+    handleClose: function () {
+      window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+    },
+    handleTooYoung: function () {
+      window.location.href = '/too_young';
+    }
+  }), modal);
+}
+
+/**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
 Applab.init = function(config) {
@@ -619,7 +640,8 @@ Applab.init = function(config) {
   copyrightStrings = config.copyrightStrings;
   Applab.user = {
     applabUserId: config.applabUserId,
-    isAdmin: (config.isAdmin === true)
+    isAdmin: (config.isAdmin === true),
+    isSignedIn: config.isSignedIn
   };
 
   loadLevel();
@@ -731,8 +753,7 @@ Applab.init = function(config) {
     }
 
     if (studioApp.share) {
-      // automatically run in share mode:
-      window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+      startSharedAppAfterWarnings();
     }
   };
 
