@@ -11,10 +11,11 @@ class Slack
   }
 
   CHANNEL_MAP = {
-    developers: 'general',
-    staging: 'infra-staging',
-    test: 'infra-test',
-    production: 'infra-production'
+    'developers' => 'general',
+    'server operations' => 'general',
+    'staging' => 'infra-staging',
+    'test' => 'infra-test',
+    'production' => 'infra-production'
   }
 
   def self.message(text, params={})

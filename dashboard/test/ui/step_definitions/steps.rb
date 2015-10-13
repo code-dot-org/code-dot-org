@@ -408,6 +408,7 @@ Given(/^I sign in as a (student|teacher)$/) do |user_type|
 end
 
 When(/^I debug cookies$/) do
+  puts "DEBUG: url=#{CGI::escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
 end
 
