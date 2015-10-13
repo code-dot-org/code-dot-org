@@ -24,11 +24,6 @@ function createVideo(options) {
 //   name - a string.
 //   redirect - the redirect page after the video is dismissed.
 function showVideoDialog(options) {
-
-  if (dashboard.clientState.hasSeenVideo(options.key)) {
-    return;
-  }
-
   upgradeInsecureOptions(options);
   var widthRatio = .8;
   var heightRatio = .8;
@@ -49,12 +44,6 @@ function showVideoDialog(options) {
   var dialog = new Dialog({ body: body, redirect : options.redirect });
   $div = $(dialog.div);
   $div.addClass('video-modal');
-
-  $('.video-modal').on("remove", function () {
-    dashboard.clientState.recordVideoSeen(options.key);
-  });
-
-
 
   var tabHandler = function(event, ui) {
     var tab = ui.tab || ui.newTab;  // Depends on event.

@@ -77,11 +77,8 @@ describe("clientState#trackProgress", function() {
     state.lines().should.equal(10);
   });
 
-  it("handles malformed cookies for level progress", function () {
+  it("handles malformed cookies", function () {
     var state = dashboard.clientState;
-
-    $.cookie('progress', null, {expires: 365, path: '/'});
-    state.levelProgress(1).should.equal(0);
 
     $.cookie('progress', '', {expires: 365, path: '/'});
     state.levelProgress(1).should.equal(0);
@@ -89,44 +86,6 @@ describe("clientState#trackProgress", function() {
     $.cookie('progress', '{\'malformed_json\':true', {expires: 365, path: '/'});
     state.levelProgress(1).should.equal(0);
 
-  });
-
-  it("records video progress", function () {
-    var state = dashboard.clientState;
-    state.hasSeenVideo('video1').should.equal(false);
-    state.hasSeenVideo('video2').should.equal(false);
-
-    state.recordVideoSeen('video1');
-    state.hasSeenVideo('video1').should.equal(true);
-    state.hasSeenVideo('video2').should.equal(false);
-
-    state.recordVideoSeen('video2');
-    state.hasSeenVideo('video1').should.equal(true);
-    state.hasSeenVideo('video2').should.equal(true);
-
-    //Check idempotency
-    state.recordVideoSeen('video1');
-    state.hasSeenVideo('video1').should.equal(true);
-    state.hasSeenVideo('video2').should.equal(true);
-  });
-
-  it("handles malformed storage for video progress", function () {
-    var state = dashboard.clientState;
-
-    localStorage.setItem('videosSeen', null);
-    state.hasSeenVideo('someVideo').should.equal(false);
-    state.recordVideoSeen('someVideo');
-    state.hasSeenVideo('someVideo').should.equal(true);
-
-    localStorage.setItem('videosSeen', '');
-    state.hasSeenVideo('someVideo').should.equal(false);
-    state.recordVideoSeen('someVideo');
-    state.hasSeenVideo('someVideo').should.equal(true);
-
-    localStorage.setItem('videosSeen', '{\'malformed_json\': true');
-    state.hasSeenVideo('someVideo').should.equal(false);
-    state.recordVideoSeen('someVideo');
-    state.hasSeenVideo('someVideo').should.equal(true);
   });
 });
 
