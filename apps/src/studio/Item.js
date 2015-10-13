@@ -300,6 +300,15 @@ Item.prototype.removeElement = function() {
   Studio.trackedBehavior.removedItemCount++;
 };
 
+
+/**
+ * Returns true if the item is currently fading away.
+ */
+Item.prototype.isFading = function() {
+  return this.startFadeTime ? true : false;
+};
+
+
 /**
  * Returns true if the item has finished fading away.  The caller will usually
  * then call removeElement to destroy this item's assets.
