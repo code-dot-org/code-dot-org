@@ -6054,10 +6054,10 @@ StudioApp.prototype.init = function(config) {
   var promptDiv = document.getElementById('prompt');
   var prompt2Div = document.getElementById('prompt2');
   if (config.level.instructions) {
-    dom.setText(promptDiv, config.level.instructions);
+    $(promptDiv).text(config.level.instructions);
   }
   if (config.level.instructions2) {
-    dom.setText(prompt2Div, config.level.instructions2);
+    $(prompt2Div).text(config.level.instructions2);
     $(prompt2Div).show();
   }
 
@@ -29749,7 +29749,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
     }
   }
 
-  dom.setText(feedback, message);
+  $(feedback).text(message);
 
   // Update the feedback box design, if the hint message came from server.
   if (this.useSpecialFeedbackDesign_(options)) {
@@ -29766,7 +29766,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
     feedbackDiv.appendChild(imageDiv);
     // Add new text
     var hintHeader = document.createElement('p');
-    dom.setText(hintHeader, msg.hintHeader());
+    $(hintHeader).text(msg.hintHeader());
     feedbackDiv.appendChild(hintHeader);
     hintHeader.className = 'hint-header';
     // Append the original text
@@ -31972,18 +31972,6 @@ exports.addReadyListener = function(callback) {
   } else {
     window.addEventListener('load', callback, false);
   }
-};
-
-exports.getText = function(node) {
-  return node.textContent || node.innerText;
-};
-
-exports.setText = function(node, string) {
-  // innerText is not supported in Firefox
-  // textContent is not supported in IE8
-  // See: http://caniuse.com/#feat=textcontent
-  //      http://caniuse.com/#feat=innertext
-  node.innerText = node.textContent = string;
 };
 
 exports.getTouchEventName = function(eventName) {
