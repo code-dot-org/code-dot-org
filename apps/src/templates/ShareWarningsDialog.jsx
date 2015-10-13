@@ -49,7 +49,7 @@ var SharingWarningsDialog = module.exports = React.createClass({
         borderRadius: '4px',
         outline: 'none',
         padding: '20px',
-        zIndex: 1050,
+        zIndex: 1050 // based off of behavior in dashboard's dialog.js
       },
       overlay: {
         position: 'fixed',
@@ -59,7 +59,7 @@ var SharingWarningsDialog = module.exports = React.createClass({
         left: 0,
         bottom: 0,
         right: 0,
-        zIndex: 1040
+        zIndex: 1040 // based off of behavior in dashboard's dialog.js
       }
     };
 
