@@ -28,6 +28,12 @@ p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6
 
 p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
 
+<% elsif @country == 'id' %>
+
+Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Desember 2015, kami mengetahui bahwa banyak siswa-siswi Indonesia yang menjalankan prosesi ujian. Untuk alasan ini kami memutuskan untuk menjalankan masa kampanye Hour of Code di Indonesia pada 12 hingga 20 Desember 2015. Kita tetap akan merasakan kemeriahan yang sama dan dengan tujuan yang sama namun dengan kebersamaan yang lebih besar karena akan ada lebih banyak siswa-siswi yang dapat mengikutinya.
+
+Mari bersama kita dukung gerakan Hour of Code di Indonesia!
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -62,13 +68,13 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 ## 4) Şagirdləri ruhlandırın - onlara video göstərin
 
-Kod Saatına start vermək üçün şagirdlərinizə ruhlandırıcı bir video göstərin. Məsələn:
+Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * "Code.org"un Bill Qeyts, Mark Tsukerberq və NBA basketbol ulduzu Kris Boşun iştirakı ilə çəkilmiş ilk açılış videosu (Uzunluğu [1 dəqiqə](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 dəqiqə](https://www.youtube.com/watch?v=nKIu9yen5nc) və [9 dəqiqə](https://www.youtube.com/watch?v=dU1xS07N-FA) olan versiyalar var)
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [Prezident Obamanın bütün şagirdləri infromatikanı öyrənməyə çağırması](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Şagirdlərinizlə həyəcanı bölüşün - mövzuya qısa giriş verin**
+**Get your students excited - give them a short intro**
 
 <% else %>
 

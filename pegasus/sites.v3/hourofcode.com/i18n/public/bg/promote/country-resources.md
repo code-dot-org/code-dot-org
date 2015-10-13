@@ -30,6 +30,12 @@ p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6
 
 p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
 
+<% elsif @country == 'id' %>
+
+Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Desember 2015, kami mengetahui bahwa banyak siswa-siswi Indonesia yang menjalankan prosesi ujian. Untuk alasan ini kami memutuskan untuk menjalankan masa kampanye Hour of Code di Indonesia pada 12 hingga 20 Desember 2015. Kita tetap akan merasakan kemeriahan yang sama dan dengan tujuan yang sama namun dengan kebersamaan yang lebih besar karena akan ada lebih banyak siswa-siswi yang dapat mengikutinya.
+
+Mari bersama kita dukung gerakan Hour of Code di Indonesia!
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -51,9 +57,9 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 ## 2) Планирайте нужният ви хардуер - компютрите са задължителни
 
-Най-добре е Часът на кодирането да се проведе със свързани към Интернет компютри. Но вие не се нуждаете от компютър за всяко дете и дори можете да проведете Часът на кодирането и без компютър.
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
-  * **Преди да започнете урока по програмиране проверете да ли програмата работи.** Уверете се, че звукът и видеото работят.
+  * **Преди да започнете урока по програмиране, проверете дали програмата работи.** Уверете се, че звукът и видеото работят.
   * **Пуснете поздравителната страница, за** да видите какво ще виждат учениците, когато приключат уроците. 
   * **Осигурете слушалки за класа си**, или помолете учениците да си донесат собствени, ако изберете уроци за начинаещи- работете най-добре със звук.
 
@@ -64,13 +70,13 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 ## 4) Вдъхновете учениците - Покажете им видео
 
-Покажете на учениците вдъхновяващи видео филми за старта на часът на кодирането. Примери:
+Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * Оригиналният стартиращ Code.org клип, с участието на Бил Гейтс, Марк Зукерберг и НБА звезда Крис Бош (има версии за [ 1 минута](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5 минути](https://www.youtube.com/watch?v=nKIu9yen5nc) и [ 9 минути](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [Президентът Обама призовава всички ученици да учат компютърни науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Ентусиазирайте учениците си - представете им това интро**
+**Get your students excited - give them a short intro**
 
 <% else %>
 

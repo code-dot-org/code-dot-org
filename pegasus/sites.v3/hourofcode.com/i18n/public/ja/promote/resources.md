@@ -37,17 +37,17 @@ nav: promote_nav
 
 <a id="logo"></a>
 
-## 以下の画像をHour of Codeを広めるために使ってください。
+## 以下のロゴをHour of Codeを広めるために使ってください。
 
 [![画像](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[高解像度のバージョンをダウンロードします。](http://images.code.org/share/hour-of-code-logo.zip)
+[高解像度のバージョンをダウンロード](http://images.code.org/share/hour-of-code-logo.zip)
 
 <a id="stickers"></a>
 
-## ステッカーを印刷し、学生たちにあげてください。
+## ステッカーを印刷して生徒に配布
 
-(ステッカーは直径 1 インチ、1 枚 63)  
+(ステッカーは直径 1 インチ、1 枚 あたり63個)  
 [![画像](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
