@@ -357,7 +357,8 @@ img#turtleImage {
     top: 0;
     left: 8px;
     margin: 0;
-    line-height: 30px; }
+    line-height: 30px;
+    font-size: 18px; }
   #debug-area-header.js-hover-hack {
     cursor: pointer; }
     #debug-area-header.js-hover-hack #show-hide-debug-icon {
