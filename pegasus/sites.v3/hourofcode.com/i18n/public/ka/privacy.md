@@ -4,7 +4,7 @@ title: უსაფრთხოების პოლიტიკა
 
 ---
 
-### სავალდებულო ლეგალური ენა არის EN, რომლის ნახვაც შეიძლება [აქ](https://code.org/privacy). ქვემოთ თარგმანია.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # კონფიდენციალურობის პოლიტიკა
 
