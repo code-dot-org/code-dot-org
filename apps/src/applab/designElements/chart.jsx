@@ -25,7 +25,7 @@ var ChartProperties = React.createClass({
       <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true} />
         <PropertyRow
@@ -70,7 +70,7 @@ var ChartEvents = React.createClass({
   },
 
   getDrawChartFromRecordsCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'drawChartFromRecords("' + id + '", "bar", "tableName", ' +
       '["columnOne", "columnTwo"]);\n';
@@ -91,7 +91,7 @@ var ChartEvents = React.createClass({
       <div id='eventRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
         <EventHeaderRow/>
