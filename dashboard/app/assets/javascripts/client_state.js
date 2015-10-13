@@ -112,7 +112,7 @@ function addLines(addedLines) {
 }
 
 dashboard.clientState.hasSeenVideo = function(videoId) {
-  var videosSeenJson = $.cookie('videosSeen') || '{}';
+  var videosSeenJson = localStorage.getItem('videosSeen') || '{}';
   try {
     var videosSeen = JSON.parse(videosSeenJson);
     return videosSeen[videoId] == 1;
@@ -122,17 +122,17 @@ dashboard.clientState.hasSeenVideo = function(videoId) {
 };
 
 dashboard.clientState.recordVideoSeen = function (videoId) {
-  var videosSeenJson = $.cookie('videosSeen') || '{}';
+  var videosSeenJson = localStorage.getItem('videosSeen') || '{}';
   console.log('The cookie is ' + $.cookie('videosSeen'));
   try {
     var videosSeen = JSON.parse(videosSeenJson);
     videosSeen[videoId] = 1;
-    $.cookie('videosSeen', JSON.stringify(videosSeen), COOKIE_OPTIONS);
+    localStorage.setItem('videosSeen', JSON.stringify(videosSeen));
   } catch (e) {
     //Something went wrong parsing the json. Blow it up and just put in the new video
     var videosSeen = {};
     videosSeen[videoId] = 1;
-    $.cookie('videosSeen', JSON.stringify(videosSeen), COOKIE_OPTIONS);
+    localStorage.setItem('videosSeen', JSON.stringify(videosSeen));
   }
 };
 
