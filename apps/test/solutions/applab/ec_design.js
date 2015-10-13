@@ -241,8 +241,33 @@ module.exports = {
 
           assert.equal($('#my_button').length, 0, 'API created element should be gone');
           assert.equal($('#design_my_button').length, 0, 'API created element should not appear in design mode');
+          assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible when designing');
 
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
 
+    {
+      description: "design mode box dims when running in design mode",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        $("#designModeButton").click();
+        assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible when designing');
+
+        $("#runButton").click();
+        assert.equal($('#design-mode-dimmed').length, 1, 'transparency layer visible when running in design mode');
+
+        $("#resetButton").click();
+        assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible after resetting');
+
+        testUtils.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
