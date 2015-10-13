@@ -12,7 +12,7 @@
     %button.signup-button
       = hoc_s(:signup_your_event)
 -elsif @country != 'us'
-  -country_total = format_integer_with_commas(country_count(@company))
+  -country_total = format_integer_with_commas(country_count(@country))
   %h2.mapheader.float-left
     %a{href: resolve_url("/events/all")}
       = hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count)) + ","
