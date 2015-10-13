@@ -63,7 +63,7 @@ def honeybadger_notify command, exitstatus, stdout, stderr
     config.environment_name = ENV['RACK_ENV']
   end
 
-  Honeybadger.notify_command_error command, exitstatus, stdout, stderr
+  Honeybadger.notify_command_error "cronjob #{command}", exitstatus, stdout, stderr
 end
 
 #

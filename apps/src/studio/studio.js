@@ -909,6 +909,8 @@ Studio.onTick = function() {
 
   Studio.updateFloatingScore();
 
+  Studio.drawTimeoutRect();
+
   sortDrawOrder();
 
   var currentTime = new Date().getTime();
@@ -1709,6 +1711,14 @@ Studio.reset = function(first) {
   Studio.sayComplete = 0;
   Studio.playSoundCount = 0;
 
+  // More things used to validate level completion.
+  Studio.trackedBehavior = {
+    removedItemCount: 0,
+    setActivityRecord: null,
+    hasSetBot: false,
+    hasAddedItem: false
+  };
+
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -2429,6 +2439,50 @@ Studio.drawDebugRect = function(className, x, y, width, height) {
 };
 
 /**
+ * Draw a timeout rectangle across the bottom of the play area.
+ * It doesn't appear until halfway through the level, and briefly fades in 
+ * when first appearing.
+ */
+Studio.drawTimeoutRect = function() {
+  if (!level.showTimeoutRect || Studio.timeoutFailureTick === Infinity) {
+    return;
+  }
+
+  $(".timeoutRect").remove();
+
+  // The fraction of the entire level duration that we start and end the
+  // fade-in.
+  var startFadeInAt = 0.5;
+  var endFadeInAt = 0.4;
+
+  var timeRemaining = Studio.timeoutFailureTick - Studio.tickCount;
+  var currentFraction = timeRemaining / Studio.timeoutFailureTick;
+
+  if (currentFraction <= startFadeInAt) {
+    var opacity = currentFraction < endFadeInAt ? 1 : 
+      1 - (currentFraction - endFadeInAt) / (startFadeInAt - endFadeInAt);
+
+    var width = timeRemaining * Studio.MAZE_WIDTH / (Studio.timeoutFailureTick * startFadeInAt);
+    var height = 6;
+
+    if (width > 0) {
+      var svg = document.getElementById('svgStudio');
+      var group = document.createElementNS(SVG_NS, 'g');
+      group.setAttribute('class', "timeoutRect");
+      var background = document.createElementNS(SVG_NS, 'rect');
+      background.setAttribute('opacity', opacity);
+      background.setAttribute('width', width);
+      background.setAttribute('height', height);
+      background.setAttribute('x', 0);
+      background.setAttribute('y', Studio.MAZE_HEIGHT - height);
+      background.setAttribute('fill', 'rgba(255, 255, 255, 0.5)');
+      group.appendChild(background);
+      svg.appendChild(group);
+    }
+  }
+};
+
+/**
  * Clear the debug rectangles.
  */
 
@@ -2913,6 +2967,7 @@ Studio.callCmd = function (cmd) {
     case 'setSprite':
       studioApp.highlight(cmd.id);
       Studio.setSprite(cmd.opts);
+      Studio.trackedBehavior.hasSetSprite = true;
       break;
     case 'saySprite':
       if (!cmd.opts.started) {
@@ -2930,6 +2985,7 @@ Studio.callCmd = function (cmd) {
     case 'setBotSpeed':
       studioApp.highlight(cmd.id);
       Studio.setBotSpeed(cmd.opts);
+      Studio.trackedBehavior.hasSetBotSpeed = true;
       break;
     case 'setSpriteSize':
       studioApp.highlight(cmd.id);
@@ -3027,6 +3083,7 @@ Studio.callCmd = function (cmd) {
     case 'addItem':
       studioApp.highlight(cmd.id);
       Studio.addItem(cmd.opts);
+      Studio.trackedBehavior.hasAddedItem = true;
       break;
     case 'setItemActivity':
       studioApp.highlight(cmd.id);
@@ -3153,6 +3210,19 @@ Studio.setItemActivity = function (opts) {
     Studio.items.forEach(function (item) {
       if (item.className === opts.className) {
         item.setActivity(opts.type);
+
+        // For verifying success, record this combination of activity type and
+        // item type.
+
+        if (!Studio.trackedBehavior.setActivityRecord) {
+          Studio.trackedBehavior.setActivityRecord = [];
+        }
+
+        if (!Studio.trackedBehavior.setActivityRecord[opts.className]) {
+          Studio.trackedBehavior.setActivityRecord[opts.className] = [];
+        }
+
+        Studio.trackedBehavior.setActivityRecord[opts.className][opts.type] = true;
       }
     });
   }
@@ -4307,10 +4377,60 @@ Studio.allGoalsVisited = function() {
   return finishedGoals === Studio.spriteGoals_.length;
 };
 
+/**
+ * A level can provide zero or more requiredForSuccess criteria which are
+ * special cases that a level requires for success.  This function evaluates
+ * the state of these criteria.
+ * @returns {Object} outcome
+ * @returns {boolean} outcome.exists Whether the level even has any of these criteria.
+ * @returns {boolean} outcome.achieved false if any of the criteria was required but not met.
+ * @returns {string} outcome.message A custom message for the first of the failing criteria.
+ */
+Studio.checkRequiredForSuccess = function() {
+
+  if (!level.requiredForSuccess) {
+    return { exists: false, achieved: false, message: null };
+  }
+
+  var required = level.requiredForSuccess;
+  var tracked = Studio.trackedBehavior;
+
+  if (required.setSprite && !tracked.hasSetSprite) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasSetSprite() };
+  }
+
+  if (required.setBotSpeed && !tracked.hasSetBotSpeed) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasSetBotSpeed() };
+  }
+
+  if (required.touchAllItems && Studio.items.length > 0) {
+    return { exists: true, achieved: false, message: studioMsg.failedTouchAllItems() };
+  }
+
+  if (required.scoreMinimum && Studio.playerScore < required.scoreMinimum) {
+    return { exists: true, achieved: false, message: studioMsg.failedScoreMinimum() };
+  }
+
+  if (required.removedItemCount && tracked.removedItemCount < required.removedItemCount) {
+    return { exists: true, achieved: false, message: studioMsg.failedRemovedItemCount() };
+  }
+
+  if (required.setActivity &&
+      !(tracked.setActivityRecord && 
+        tracked.setActivityRecord[required.setActivity.itemType] &&
+        tracked.setActivityRecord[required.setActivity.itemType][required.setActivity.activityType])) {
+    return { exists: true, achieved: false, message: studioMsg.failedSetActivity() };
+  }
+
+  return { exists: true, achieved: true, message: null };
+};
+
+
 var checkFinished = function () {
 
   var hasGoals = Studio.spriteGoals_.length !== 0;
   var achievedGoals = Studio.allGoalsVisited();
+  var requiredForSuccess = Studio.checkRequiredForSuccess();
   var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
   var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
   var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
@@ -4329,6 +4449,18 @@ var checkFinished = function () {
     Studio.result = ResultType.SUCCESS;
     return true;
   }
+
+  if (requiredForSuccess.exists) {
+    if (requiredForSuccess.achieved) {
+      Studio.message = null;
+      Studio.result = ResultType.SUCCESS;
+      return true;
+    } else {
+      // Not meeting these is not reason for immediate failure in itself, but they do
+      // establish a custom error message.
+      Studio.message = requiredForSuccess.message;
+    }
+  } 
 
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
     Studio.result = ResultType.FAILURE;

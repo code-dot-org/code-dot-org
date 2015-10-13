@@ -330,6 +330,7 @@
   dashboard_landing_progress_title: "Main class progress"
   dashboard_landing_progress_biggest: "This is the progress for your biggest section."
   dashboard_landing_view_progress: "View Progress for %{biggest_section}"
+  dashboard_landing_print_progress: "Print progress"
   dashboard_landing_available_title: "Available courses"
   dashboard_landing_available_courses: "Here are the courses currently available for you and your students."
   dashboard_landing_more_tutorials: "Want to see even more tutorials?"

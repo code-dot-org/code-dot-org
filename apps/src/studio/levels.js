@@ -1588,8 +1588,6 @@ levels.js_hoc2015_move_right = {
   "itemGridAlignedMovement": true,
   "slowJsExecutionFactor": 10,
   "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 16, 0, 1, 4,0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
@@ -1636,8 +1634,6 @@ levels.js_hoc2015_move_two_items = {
   "itemGridAlignedMovement": true,
   "slowJsExecutionFactor": 10,
   "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
   "delayCompletion": 2000,
   "floating_score": true,
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 0, 0, 0, 4,0, 0], [0, 4, 0, 4, 0, 4, 0, 0], [0, 4, 1, 16, 0, 4, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
@@ -1667,8 +1663,6 @@ levels.js_hoc2015_move_item_destination = {
   "itemGridAlignedMovement": true,
   "slowJsExecutionFactor": 10,
   "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
   "map": [[0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 4, 4, 4, 4, 0, 0], [0, 4,  4, 4, 4, 4, 4, 0], [0, 4,  0, 4, 4,1, 4, 0], [0, 4,1,16, 0, 0, 4, 0], [0, 4, 4, 4,  4, 4, 4, 0], [0, 0, 0, 0,  0, 0, 0, 0], [0, 0, 0, 0,  0, 0, 0, 0]],
@@ -1698,8 +1692,6 @@ levels.js_hoc2015_move_item_destination_2 = {
   "itemGridAlignedMovement": true,
   "slowJsExecutionFactor": 10,
   "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
   "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 0, 0,  4, 0, 0], [0, 4,  4, 4, 4,  0, 4, 0], [0, 4,  4,16, 0,  0, 4, 0], [0, 4,  0, 0, 4,  4, 4, 0], [0, 4,  1, 1, 0,  4, 4, 0], [0, 4,  4, 0, 4,  0, 0, 0], [0, 0,  4, 4, 4,  0, 0, 0]],
@@ -1730,8 +1722,6 @@ levels.js_hoc2015_move_item_destination_3 = {
   "itemGridAlignedMovement": true,
   "slowJsExecutionFactor": 10,
   "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
   "delayCompletion": 2000,
   "floating_score": true,  
   "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  4, 4, 4,  4, 4, 0], [0, 0, 4,  0, 0, 1,  4, 0], [0, 0,  4,0, 1,  4, 4, 0], [0, 4,  0, 16, 0,  0, 4, 0], [0, 4, 4, 4, 4,  0, 4, 0], [0, 0,  0, 0, 4,  4, 4, 0], [0, 0,  0, 0, 0, 0, 0, 0]],
@@ -1763,8 +1753,6 @@ levels.js_hoc2015_move_cross = {
   "itemGridAlignedMovement": true,
   "slowJsExecutionFactor": 10,
   "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
   "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 4, 0, 0, 0, 0], [0, 0, 4,  1, 4, 0, 0, 0], [0, 4, 1, 0, 1, 4, 0, 0], [0, 0,  4, 16, 4,  0, 0, 0], [0, 0, 0, 4, 0, 0, 0, 0], [0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
@@ -1801,11 +1789,7 @@ levels.js_hoc2015_event_two_items = {
   "sortDrawOrder": true,
   "wallMapCollisions": true,
   "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
-  "itemGridAlignedMovement": false,
   "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
@@ -1813,6 +1797,9 @@ levels.js_hoc2015_event_two_items = {
   "embed": "false",
   "instructions": "\"BOT1, I need you to get a critical message to the GOALs.\"",
   "instructions2": "Make BOT1 move when you hit the arrow keys.",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
   "goalOverride": {
     "goalAnimation": "animatedGoal",
     "imageWidth": 100,
@@ -1871,23 +1858,19 @@ levels.js_hoc2015_event_four_items = {
     "function whenDown() {",
     "  ",
     "}"].join("\n"),
-
   "sortDrawOrder": true,
   "wallMapCollisions": true,
   "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
-  "itemGridAlignedMovement": false,
   "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-  
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 16, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
-
   "embed": "false",
   "instructions": "\"Get to all the GOALs as quickly as you can.\"",
   "instructions2": "Move in all directions.",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
   "goalOverride": {
     "goalAnimation": "animatedGoal",
     "imageWidth": 100,
@@ -1951,23 +1934,20 @@ levels.js_hoc2015_event_choose_character =
     "function whenDown() {",
     "  moveDown();",
     "}"].join("\n"),
-
   "sortDrawOrder": true,
   "wallMapCollisions": true,
   "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
   "itemGridAlignedMovement": true,
   "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
   "edgeCollisions": "true",
-
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-
   "instructions": "\"Time to visit another planet.\"",
   "instructions2": "Use the dropdown to change the background.  Now find a command to change your BOT.",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
   "callouts": [
     {
       "element_id": ".droplet-main-canvas",
@@ -1990,6 +1970,9 @@ levels.js_hoc2015_event_choose_character =
       }
     }
   ],
+  "requiredForSuccess" : {
+    "setSprite": true
+  }
 };
 
 
@@ -2031,22 +2014,23 @@ levels.js_hoc2015_event_add_items = {
     "function whenDown() {",
     "  moveDown();",
     "}"].join("\n"),
-
   "sortDrawOrder": true,
   "wallMapCollisions": true,
   "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
   "itemGridAlignedMovement": true,
   "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"I’m seeing signs of increased activity on this planet.\"",
   "instructions2": "Use the addCharacter(); command a couple times to add BIRDs at the start of your program.  Then, go get them.",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
+  "requiredForSuccess" : {
+    "removedItemCount": 2
+  }
 };
 
 
@@ -2100,17 +2084,17 @@ levels.js_hoc2015_event_item_behavior = {
   "sortDrawOrder": true,
   "wallMapCollisions": true,
   "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
   "itemGridAlignedMovement": true,
   "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingFcore": true,
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"It’s up to you, BOT2.\"",
   "instructions2": "Make the ROOs flee from BOT2.",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
   "callouts": [
     {
       "element_id": "#droplet_palette_block_setToFlee",
@@ -2129,6 +2113,10 @@ levels.js_hoc2015_event_item_behavior = {
       }
     }
   ],
+  "requiredForSuccess" : {
+    "touchAllItems": true,
+    "setActivity": {itemType: "roo", "activityType": "flee"}
+  }
 };
 
 levels.js_hoc2015_event_touch_items = {
@@ -2183,23 +2171,20 @@ levels.js_hoc2015_event_touch_items = {
     "function whenDown() {",
     "  moveDown();",
     "}"].join("\n"),
-
   "sortDrawOrder": true,
   "wallMapCollisions": true,
   "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
   "itemGridAlignedMovement": true,
   "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-  
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-
   "embed": "false",
   "instructions": "\"Be careful, they might be behind you!\"",
   "instructions2": "Every time you get a ROO, add one MOUSE and one SPIDER to the world.",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
   "callouts": [
     {
       "element_id": ".ace_gutter-cell:nth-of-type(8)",
@@ -2216,6 +2201,9 @@ levels.js_hoc2015_event_touch_items = {
       }
     }
   ],
+  "requiredForSuccess" : {
+    "removedItemCount": 3
+  }
 };
 
 levels.js_hoc2015_event_points = {
@@ -2257,8 +2245,7 @@ levels.js_hoc2015_event_points = {
     "addCharacter('bird');",
     "addCharacter('bird');",
     "function whenTouchCharacter() {",
-    "  addCharacter(\"random\"",
-    ");",
+    "  addCharacter(\"random\");",
     "}",
     "function whenLeft() {",
     "  moveLeft();",
@@ -2275,23 +2262,23 @@ levels.js_hoc2015_event_points = {
     "function whenTouchCharacter() {",
     "  ",
     "}"].join("\n"),
-
   "sortDrawOrder": true,
   "wallMapCollisions": true,
   "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
   "itemGridAlignedMovement": true,
   "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-  
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-
   "embed": "false",
   "instructions": "\"I’m counting on you, BOT1!\"",
   "instructions2": "Change your score when you touch a character. Can you reach 100 points?",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
+  "requiredForSuccess" : {
+    "scoreMinimum": 100
+  }
 };
 
 levels.js_hoc2015_event_random_items = {
@@ -2351,22 +2338,20 @@ levels.js_hoc2015_event_random_items = {
     "  changeScore(1);",
     "  ",
     "}"].join("\n"),
-
   "sortDrawOrder": true,
   "wallMapCollisions": true,
   "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
   "itemGridAlignedMovement": true,
   "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-  
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
-  "instructions": "\"Quick! They’re moving faster!\"",
+  "instructions": "\"Quick! We need to move faster!\"",
   "instructions2": "Ready to move faster? Increase your speed when you touch a MOUSE and slow down when you hit a SPIDER.",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
   "callouts": [
     {
       "element_id": ".droplet-palette-group-header.green",
@@ -2381,6 +2366,9 @@ levels.js_hoc2015_event_random_items = {
       }
     }
   ],
+  "requiredForSuccess" : {
+    "setBotSpeed": true
+  }
 };
 
 levels.js_hoc2015_event_free = {
@@ -2440,18 +2428,13 @@ levels.js_hoc2015_event_free = {
     "function whenDown() {",
     "  moveDown();",
     "}"].join("\n"),
-
   "sortDrawOrder": true,
   "wallMapCollisions": true,
   "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
   "itemGridAlignedMovement": true,
   "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
   "delayCompletion": 2000,
   "floatingScore": true,
-
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"You’re on your own now, BOT1.\"",

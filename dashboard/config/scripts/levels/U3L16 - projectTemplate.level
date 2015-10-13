@@ -20,6 +20,10 @@
         "params": [
           "\"id\"",
           "\"text\""
+        ],
+        "paletteParams": [
+          "id",
+          "text"
         ]
       },
       "image": null,

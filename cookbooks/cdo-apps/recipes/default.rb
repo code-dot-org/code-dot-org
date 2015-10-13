@@ -31,4 +31,24 @@ execute "install-aws-crontab" do
   user node[:current_user]
   group node[:current_user]
   action :nothing
+  notifies :run, 'execute[precompile-assets]', :immediately
+end
+
+execute "precompile-assets" do
+  command "rake assets:precompile"
+  cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
+  environment ({
+    'LC_ALL' => 'en_US.UTF-8', 'RAILS_ENV' => "#{node.chef_environment}"
+  })
+  user node[:current_user]
+  group node[:current_user]
+  action :nothing
+  notifies :run, 'execute[upgrade-dashboard]', :immediately
+end
+
+execute "upgrade-dashboard" do
+  command "sudo service dashboard upgrade"
+  user node[:current_user]
+  group node[:current_user]
+  action :nothing
 end

@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+#
 # Script for deploying an new Amazon EC2 frontend instance.
 # For details usage instructions, please see:
 # http://wiki.code.org/display/PROD/How+to+add+a+new+Frontend+server
@@ -10,9 +12,20 @@ require 'io/console'
 require 'json'
 require 'etc'
 
-MAX_WAIT_TIME = 600 #Wait no longer than 10 minutes for instance creation. Typically this takes a couple minutes
 
-# Executes an arbitrary command on an ssh channel, prints the output to console, bails out if the command fails
+# A map from a supported environment to the corresponding Chef role to use for
+# that environment.
+ROLE_MAP = {
+  'production' => 'front-end',
+  'adhoc' => 'unmonitored-standalone',
+}
+
+# Wait no longer than 10 minutes for instance creation. Typically this takes a
+# couple minutes.
+MAX_WAIT_TIME = 600
+
+# Executes an arbitrary command on an ssh channel, prints the output to console,
+# bails out if the command fails
 # ssh: ssh channel from Net::SSH start
 # command: Command to execute on the remote host
 # exit_error_string: Error message to throw if the command exits with something other than 1
@@ -60,11 +73,13 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-unless ['production', 'adhoc'].include?(options['environment'])
-  throw 'Environments other than production and adhoc are currently unsupported'
-end
+environment = options['environment']
+raise OptionParser::MissingArgument, 'Environment is required' if environment.nil?
 
-raise OptionParser::MissingArgument, 'Environment is required' if options['environment'].nil?
+role = ROLE_MAP[environment]
+raise "Unsupported environment #{environment}" unless role
+
+puts "Creating new #{environment} instance using role #{role}"
 
 username = options['username'] || Etc.getlogin
 
@@ -172,7 +187,7 @@ ec2client.wait_until(:instance_status_ok, instance_ids: [instance_id]) do |waiti
   end
 end
 
-puts "Instance #{instance_id} is healthy - adding to list of frontends for environment #{options['environment']}"
+puts "Instance #{instance_id} is healthy - adding to list of frontends for environment #{environment}"
 
 #Tag the instance with a name.
 ec2client.create_tags({
@@ -185,16 +200,21 @@ ec2client.create_tags({
                           ],
                       })
 
+instance_info = ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0]
+private_dns_name = instance_info.private_dns_name
+public_dns_name = instance_info.public_dns_name
 
-private_dns_name = ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0].private_dns_name
-puts "Created instance #{instance_id} with name #{instance_name} and private dns name #{private_dns_name}"
-
+puts
+puts "Created instance #{instance_id} with name #{instance_name} "
+puts "Private dns name: #{private_dns_name}"
+puts "Public dns name: #{public_dns_name}"
+puts
 puts 'Writing new configuration file'
 
 file_suffix = rand(100000000)
 
 Net::SSH.start('gateway.code.org', username) do |ssh|
-  ssh.exec!("knife environment show #{options['environment']} -F json > /tmp/old_knife_config#{file_suffix}")
+  ssh.exec!("knife environment show #{environment} -F json > /tmp/old_knife_config#{file_suffix}")
 end
 
 Net::SCP.download!('gateway.code.org', username, "/tmp/old_knife_config#{file_suffix}",
@@ -214,11 +234,15 @@ puts 'New configuration file uploaded, now loading it.'
 Net::SSH.start('gateway.code.org', username) do |ssh|
   execute_ssh_on_channel(ssh,
                          "knife environment from file /tmp/new_knife_config#{file_suffix}.json",
-                         "Unable to update environment #{options['environment']}")
-  puts 'Done executing! Cleaning up!'
-
+                         "Unable to update environment #{environment}")
   ssh.exec!("rm /tmp/*#{file_suffix}*")
 end
 
-puts "To deploy new chef instance, run the following:"
-puts "ssh gateway -t knife bootstrap #{private_dns_name} -x ubuntu --sudo -E production -N #{instance_name} -r role[front-end]"
+cmd = "ssh gateway -t knife bootstrap #{private_dns_name} -x ubuntu --sudo -E #{environment} -N #{instance_name} -r role[#{role}]"
+puts "Bootstrapping #{environment} frontend, please be patient. This takes ~15 minutes."
+puts  "#{cmd}"
+`#{cmd}`
+
+puts '--------------------------------------------------------'
+puts "Dashboard listening at: http://#{public_dns_name}:8080"
+puts "Pegasus listening at:   http://#{public_dns_name}:8081"
