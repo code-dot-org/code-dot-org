@@ -380,12 +380,14 @@ module.exports = {
         assert.equal($('#designModeViz').is(':visible'), true, 'designModeViz is visible');
         assert.equal($('#design_screen1')[0].style.display === 'none', true, 'screen 1 hidden');
         assert.equal($('#design_screen2')[0].style.display === 'none', false, 'screen 2 visible');
+        assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible when designing');
 
         testUtils.runOnAppTick(Applab, 2, function () {
           // should be on screen 2 after run
           assert.equal($('#divApplab').is(':visible'), true, 'divApplab is visible');
           assert.equal($('#divApplab #screen1')[0].style.display === 'none', true, 'screen 1 hidden after run');
           assert.equal($('#divApplab #screen2')[0].style.display === 'none', false, 'screen 2 visible after run');
+          assert.equal($('#design-mode-dimmed').length, 1, 'transparency layer visible when running');
 
           // return to code mode, screen 2 still visible
           $("#codeModeButton").click();

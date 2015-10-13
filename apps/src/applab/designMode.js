@@ -92,6 +92,15 @@ designMode.editElementProperties = function(element) {
 };
 
 /**
+ * Loads the current element or current screen into the property tab.
+ * Also makes sure we re-render design mode to update properties such as isDimmed.
+ */
+designMode.resetPropertyTab = function() {
+  var element = currentlyEditedElement || designMode.activeScreen();
+  designMode.editElementProperties(element);
+};
+
+/**
  * Enable (or disable) dragging of new elements from the element tray
  * @param allowEditing {boolean}
  */

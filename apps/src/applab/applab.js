@@ -1033,6 +1033,7 @@ Applab.reset = function(first) {
   designMode.parseFromLevelHtml(newDivApplab, false);
   if (Applab.isInDesignMode()) {
     designMode.resetElementTray(isDesigning);
+    designMode.resetPropertyTab();
   }
 
   if (level.showTurtleBeforeRun) {
