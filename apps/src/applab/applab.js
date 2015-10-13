@@ -500,10 +500,16 @@ function handleExecutionError(err, lineNumber) {
     }
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
-  Applab.executionError = err;
+  Applab.executionError = { err: err, lineNumber: lineNumber };
 
-  // Call onPuzzleComplete() here if we want to create levels that end
-  // automatically without requiring a press of the Finish button:
+  // NOTE: We call onPuzzleComplete() here only when we hit syntax errors,
+  // because we can't enter the onTick loop when the interpreter didn't
+  // parse the program and instantiate properly.
+  // In the future, we may want to call it on non freeplay-levels to handle
+  // runtime errors (as part of level validation):
+  if (err instanceof SyntaxError) {
+    Applab.onPuzzleComplete();
+  }
 }
 
 Applab.getCode = function () {
@@ -1181,6 +1187,7 @@ var displayFeedback = function() {
       app: 'applab', //XXX
       skin: skin.id,
       feedbackType: Applab.testResults,
+      executionError: Applab.executionError,
       response: Applab.response,
       level: level,
       showingSharing: level.freePlay,
@@ -1276,6 +1283,9 @@ Applab.execute = function() {
           onExecutionError: handleExecutionError,
           onExecutionWarning: outputApplabConsole
       });
+      if (!Applab.JSInterpreter.initialized()) {
+          return;
+      }
     } else {
       Applab.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
                                           StudioApp: studioApp,
@@ -1492,12 +1502,26 @@ Applab.onPuzzleFinish = function() {
 };
 
 Applab.onPuzzleComplete = function(submit) {
-  // Submit all results as success / freePlay
-  Applab.result = ResultType.SUCCESS;
-  if (submit) {
-    Applab.testResults = TestResults.SUBMITTED;
+  if (Applab.executionError) {
+    Applab.result = ResultType.ERROR;
   } else {
-    Applab.testResults = TestResults.FREE_PLAY;
+    // In most cases, submit all results as success
+    Applab.result = ResultType.SUCCESS;
+  }
+
+  // If we know they succeeded, mark levelComplete true
+  var levelComplete = (Applab.result === ResultType.SUCCESS);
+
+  if (Applab.executionError) {
+    Applab.testResults = studioApp.getTestResults(levelComplete, {
+        executionError: Applab.executionError
+    });
+  } else {
+    if (submit) {
+      Applab.testResults = TestResults.SUBMITTED;
+    } else {
+      Applab.testResults = TestResults.FREE_PLAY;
+    }
   }
 
   // Stop everything on screen
@@ -1530,7 +1554,7 @@ Applab.onPuzzleComplete = function(submit) {
     studioApp.report({
       app: 'applab',
       level: level.id,
-      result: Applab.result === ResultType.SUCCESS,
+      result: levelComplete,
       testResult: Applab.testResults,
       program: encodeURIComponent(program),
       image: Applab.encodedFeedbackImage,

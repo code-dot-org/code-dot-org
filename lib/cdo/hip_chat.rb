@@ -24,7 +24,9 @@ class HipChat
   MAX_RETRIES = 3
 
   def self.developers(message, options={})
-    message(:developers, message, options)
+    # temporarily redirect developer logging to 'Server operations'.
+    # TODO(dave): rename or split HipChat.developers once we settle on a HipChat logging strategy.
+    message('Server operations', message, options)
   end
 
   def self.log(message, options={})
