@@ -1908,6 +1908,7 @@ var displayFeedback = function() {
       app: 'studio', //XXX
       skin: skin.id,
       feedbackType: Studio.testResults,
+      executionError: Studio.executionError,
       tryAgainText: tryAgainText,
       continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
       response: Studio.response,
@@ -2173,10 +2174,16 @@ function handleExecutionError(err, lineNumber) {
     }
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
-  Studio.executionError = err;
+  Studio.executionError = { err: err, lineNumber: lineNumber };
 
-  // Call onPuzzleComplete() if we're not on a freeplay level:
-  if (!level.freePlay) {
+  // Call onPuzzleComplete() if syntax error or any time we're not on a freeplay level:
+  if (err instanceof SyntaxError) {
+    // Mark preExecutionFailure and testResults immediately so that an error
+    // message always appears, even on freeplay:
+    Studio.preExecutionFailure = true;
+    Studio.testResults = TestResults.SYNTAX_ERROR_FAIL;
+    Studio.onPuzzleComplete();
+  } else if (!level.freePlay) {
     Studio.onPuzzleComplete();
   }
 }
@@ -2252,6 +2259,9 @@ Studio.execute = function() {
       studioApp: studioApp,
       onExecutionError: handleExecutionError,
     });
+    if (!Studio.JSInterpreter.initialized()) {
+        return;
+    }
     Studio.initAutoHandlers(AUTO_HANDLER_MAP);
   } else {
     // Define any top-level procedures the user may have created
@@ -2289,7 +2299,7 @@ Studio.onPuzzleComplete = function() {
     // If the current level is a free play, always return the free play
     // result type
     Studio.testResults = level.freePlay ? TestResults.FREE_PLAY :
-      studioApp.getTestResults(levelComplete);
+      studioApp.getTestResults(levelComplete, { executionError: Studio.executionError });
   }
 
   if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
@@ -3015,7 +3025,7 @@ Studio.callCmd = function (cmd) {
     case 'playSound':
       studioApp.highlight(cmd.id);
       studioApp.playAudio(cmd.opts.soundName, { volume: 1.0 });
-      Studio.trackedBehavior.playSoundCount++;
+      Studio.playSoundCount++;
       break;
     case 'showTitleScreen':
       if (!cmd.opts.started) {
