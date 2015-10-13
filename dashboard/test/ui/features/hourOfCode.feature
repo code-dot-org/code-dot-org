@@ -40,8 +40,8 @@ Scenario: Go to puzzle 1, see video, go somewhere else, return to puzzle 1, shou
   And I rotate to landscape
   Then I wait until element "#video" is visible
   Then I close the dialog
-  Then I wait to see a dialog titled "Puzzle 1 of 20"
+  Then I wait to see a dialog titled "Puzzle 6 of 20"
   Then I close the dialog
-  Then I am on "http://studio.code.org/hoc/2"
-  Then I am on "http://studio.code.org/hoc/1"
+  Then I am on "http://studio.code.org/hoc/7"
+  Then I am on "http://studio.code.org/hoc/6"
   Then element "#runButton" is visible
