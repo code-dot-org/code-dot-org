@@ -978,11 +978,13 @@ function edgeCollidableCollisionDistance (collidable, edgeName, yAxis) {
 function handleActorCollisionsWithCollidableList (
            spriteIndex, xCenter, yCenter, list, autoDisappear)
 {
-  // Traverse the list in reverse order because we may remove elements from the
-  // list while inside the loop:
-  for (var i = list.length - 1; i >= 0; i--) {
+  for (var i = 0; i < list.length; i++) {
     var collidable = list[i];
     var next = collidable.getNextPosition();
+
+    if (collidable.fading) {
+      continue;
+    }
 
     Studio.drawDebugRect("itemCollision",
       next.x,
@@ -1016,8 +1018,7 @@ function handleActorCollisionsWithCollidableList (
         // Make the projectile/item disappear automatically if this parameter
         // is set:
         if (autoDisappear) {
-          collidable.removeElement();
-          list.splice(i, 1);
+          collidable.beginRemoveElement();
         }
       }
     } else {
@@ -1179,9 +1180,17 @@ function createItemEdgeCollisionHandler (item) {
 /* Calls each item's update function
  */
 function updateItems () {
-  for (var i = 0; i < Studio.items.length; i++) {
+  // Traverse the list in reverse order because we may remove elements from the
+  // list while inside the loop:
+  for (var i = Studio.items.length - 1; i >= 0; i--) {
     var item = Studio.items[i];
+
     item.update();
+
+    if (item.isGone()) {
+      item.removeElement();
+      Studio.items.splice(i, 1);
+    }
   }
 }
 
@@ -1189,6 +1198,10 @@ function checkForItemCollisions () {
   for (var i = 0; i < Studio.items.length; i++) {
     var item = Studio.items[i];
     var next = item.getNextPosition();
+
+    if (item.fading) {
+      continue;
+    }
 
     if (level.wallMapCollisions) {
       if (Studio.willCollidableTouchWall(item, next.x, next.y)) {

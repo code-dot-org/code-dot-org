@@ -24,6 +24,8 @@ var Item = function (options) {
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
   this.renderScale = options.renderScale || 1;
   this.displayDir = Direction.SOUTH;
+  this.startFadeTime = null;
+  this.fadeTime = 350;
 
   this.currentFrame_ = 0;
   this.animator_ = window.setInterval(function () {
@@ -268,9 +270,17 @@ Item.prototype.update = function () {
 };
 
 /**
+ * Begin a fade out.
+ */
+Item.prototype.beginRemoveElement = function () {
+  this.startFadeTime = new Date().getTime();
+}
+
+/**
  * Remove our element/clipPath/animator
  */
-Item.prototype.removeElement = function () {
+Item.prototype.removeElement = function() {
+
   if (this.element) {
     this.element.parentNode.removeChild(this.element);
     this.element = null;
@@ -291,6 +301,16 @@ Item.prototype.removeElement = function () {
 };
 
 /**
+ * Returns true if the item has finished fading away.  The caller will usually
+ * then call removeElement to destroy this item's assets.
+ */
+Item.prototype.isGone = function() {
+  var currentTime = new Date().getTime();
+
+  return this.startFadeTime && currentTime > this.startFadeTime + this.fadeTime;
+};
+
+/**
  * Display our item at its current location
  */
 Item.prototype.display = function () {
@@ -299,9 +319,17 @@ Item.prototype.display = function () {
     y: this.y - this.height / 2
   };
 
+  var currentTime = new Date().getTime();
+  var opacity = 1;
+  if (this.startFadeTime) {
+    opacity = 1 - (currentTime - this.startFadeTime) / this.fadeTime;
+    opacity = Math.max(opacity, 0);
+  }
+
   var directionFrame = this.getDirectionFrame();
   this.element.setAttribute('x', topLeft.x - this.width * (directionFrame * this.renderScale + (this.renderScale-1)/2));
   this.element.setAttribute('y', topLeft.y - this.height * (this.currentFrame_ * this.renderScale + (this.renderScale-1)));
+  this.element.setAttribute('opacity', opacity);
 
   var clipRect = this.clipPath.childNodes[0];
   clipRect.setAttribute('x', topLeft.x - this.width * (this.renderScale-1)/2);
