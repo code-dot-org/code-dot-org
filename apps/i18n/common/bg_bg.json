@@ -226,5 +226,7 @@
   "watchVideo": "Гледайте видеото",
   "when": "когато",
   "whenRun": "при стартиране",
-  "workspaceHeaderShort": "Работна област: "
+  "workspaceHeaderShort": "Работна област: ",
+  "runtimeErrorMsg": "Your program did not run successfully. Please remove line {lineNumber} and try again.",
+  "syntaxErrorMsg": "Your program contains a typo. Please remove line {lineNumber} and try again."
 }

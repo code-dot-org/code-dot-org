@@ -226,5 +226,7 @@
   "watchVideo": "شاهد الفيديو",
   "when": "عندما",
   "whenRun": "عند التشغيل",
-  "workspaceHeaderShort": "مساحة العمل: "
+  "workspaceHeaderShort": "مساحة العمل: ",
+  "runtimeErrorMsg": "Your program did not run successfully. Please remove line {lineNumber} and try again.",
+  "syntaxErrorMsg": "Your program contains a typo. Please remove line {lineNumber} and try again."
 }

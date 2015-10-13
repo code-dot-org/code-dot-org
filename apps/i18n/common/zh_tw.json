@@ -226,5 +226,7 @@
   "watchVideo": "觀看影片",
   "when": "當",
   "whenRun": "當按下\"執行\"時",
-  "workspaceHeaderShort": "工作區:"
+  "workspaceHeaderShort": "工作區:",
+  "runtimeErrorMsg": "Your program did not run successfully. Please remove line {lineNumber} and try again.",
+  "syntaxErrorMsg": "Your program contains a typo. Please remove line {lineNumber} and try again."
 }
