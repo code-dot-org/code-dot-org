@@ -29,7 +29,7 @@
   %link{href: asset_path("css/#{app_name}.css"), rel: 'stylesheet', type: 'text/css'}
 
   -# Droplet style dependencies
-  - if computed_app_options[:droplet]
+  - if is_droplet
     %link{href: asset_path('css/droplet/droplet.min.css'), rel: 'stylesheet', type: 'text/css'}
     %link{href: asset_path('css/tooltipster/tooltipster.min.css'), rel: 'stylesheet', type: 'text/css'}
     %link{href: asset_path('css/colpick.css'), rel: 'stylesheet', type: 'text/css'}
