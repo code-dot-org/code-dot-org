@@ -233,7 +233,7 @@ div#visualizationResizeBar {
   }
 }
 
-#divApplab {
+#divApplab, #designModeViz {
   overflow: hidden;
   outline: none;
   position: relative;
@@ -247,7 +247,7 @@ div#visualizationResizeBar {
   user-select: none;
 }
 
-#divApplab canvas {
+#divApplab canvas, #designModeViz canvas {
   position: absolute;
   overflow: hidden;
   top: 0px;
