@@ -41,6 +41,15 @@ class ProjectsController < ApplicationController
     render template: "projects/projects", layout: nil
   end
 
+  def load
+    if current_user
+      channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
+    else
+      channel = create_channel
+    end
+    redirect_to action: 'edit', channel_id: channel
+  end
+
   def show
     sharing = params[:share] == true
     readonly = params[:readonly] == true
