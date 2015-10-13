@@ -176,9 +176,9 @@ class AssetsTest < Minitest::Test
     src_channel_id = create_channel(@channels)
     dest_channel_id = create_channel(@channels)
 
-    image_filename = URI.encode 'çat.jpg'
+    image_filename = 'dog.jpg'
     image_body = 'stub-image-contents'
-    expected_image_info = {'filename' =>  'çat.jpg', 'category' =>  'image', 'size' =>  image_body.length}
+    expected_image_info = {'filename' =>  image_filename, 'category' =>  'image', 'size' =>  image_body.length}
     sound_filename = 'woof.mp3'
     sound_body = 'stub-sound-contents'
     expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
@@ -190,13 +190,13 @@ class AssetsTest < Minitest::Test
     copy_file_infos = JSON.parse(copy_all(src_channel_id, dest_channel_id))
     dest_file_infos = JSON.parse(list(@assets, dest_channel_id))
 
-    assert_fileinfo_equal(expected_image_info, copy_file_infos[1])
-    assert_fileinfo_equal(expected_sound_info, copy_file_infos[0])
-    assert_fileinfo_equal(expected_image_info, dest_file_infos[1])
-    assert_fileinfo_equal(expected_sound_info, dest_file_infos[0])
+    assert_fileinfo_equal(expected_image_info, copy_file_infos[0])
+    assert_fileinfo_equal(expected_sound_info, copy_file_infos[1])
+    assert_fileinfo_equal(expected_image_info, dest_file_infos[0])
+    assert_fileinfo_equal(expected_sound_info, dest_file_infos[1])
 
     # abuse score didn't carry over
-    assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, 'çat.jpg')
+    assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, image_filename)
     assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, sound_filename)
 
     delete(@assets, src_channel_id, image_filename)

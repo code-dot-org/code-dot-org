@@ -4,7 +4,7 @@ title: Privacy Policy
 
 * * *
 
-### この法的文書は英語で書かれた[こちらの文書](https://code.org/privacy)の翻訳版です。
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # プライバシーポリシー
 

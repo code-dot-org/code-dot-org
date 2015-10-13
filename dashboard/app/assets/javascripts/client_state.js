@@ -37,6 +37,7 @@ var COOKIE_OPTIONS = {expires: dashboard.clientState.EXPIRY_DAYS, path: '/'};
 dashboard.clientState.reset = function() {
   $.removeCookie('progress', {path: '/'});
   $.removeCookie('lines', {path: '/'});
+  $.removeCookie('videosSeen', {path: '/'});
 };
 
 /**
@@ -109,4 +110,31 @@ function addLines(addedLines) {
 
   $.cookie('lines', String(newLines), COOKIE_OPTIONS);
 }
+
+dashboard.clientState.hasSeenVideo = function(videoId) {
+  var videosSeenJson = localStorage.getItem('videosSeen') || '{}';
+  try {
+    var videosSeen = JSON.parse(videosSeenJson);
+    return videosSeen[videoId] == 1;
+  } catch (e) {
+    return false;
+  }
+};
+
+dashboard.clientState.recordVideoSeen = function (videoId) {
+  var videosSeenJson = localStorage.getItem('videosSeen') || '{}';
+
+  try {
+    var videosSeen = JSON.parse(videosSeenJson);
+    videosSeen[videoId] = 1;
+    localStorage.setItem('videosSeen', JSON.stringify(videosSeen));
+  } catch (e) {
+    //Something went wrong parsing the json. Blow it up and just put in the new video
+    var videosSeen = {};
+    videosSeen[videoId] = 1;
+    localStorage.setItem('videosSeen', JSON.stringify(videosSeen));
+  }
+};
+
+
 })(window, $);

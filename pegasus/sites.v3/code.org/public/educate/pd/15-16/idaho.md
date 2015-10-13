@@ -108,7 +108,7 @@ Room 307 (3rd floor) <br/>
 1020 S. Manitou Ave. <br/>
 Boise, ID 83706
 
-The building location has changed so please carefully look at the  [BSU map here](http://code.org/files/bsu-parking.pdf). The MEC building is circled in red. All of the blue highlights indicate free street parking on Saturdays.
+<b>NOTE:</b> The building location has changed so please carefully look at the  [BSU map here](http://code.org/files/bsu-parking.pdf). The MEC building is circled in red. All of the blue highlights indicate free street parking on Saturdays.
 
 **What to bring to Phase 3 bi-yearly sessions:**
 

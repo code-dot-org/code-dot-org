@@ -1,12 +1,12 @@
 * * *
 
-from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subject: "Obrigado por te inscreveres para organizar um Hora de Código!" litmus_tracking_id: "5g5lyi1a"
+De: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" Assunto: "Obrigado por te inscreveres na Hora de Código!" litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Thanks for signing up to host an Hour of Code!
+# Obrigado por se inscrever para promover uma Hora de Código!
 
 <% if @country == 'la' || @country == 'br' || @country == 'ar' %> Estás a tornar possível que os estudantes na América Latina aprendam uma Hora do Código, criando a possibilidade de *alterar o resto das suas vidas*, durante Outubro, de 5 a 11. <% else %> Estás a tornar possível que estudantes de todo o mundo aprendam uma Hora do Código, criando a possibilidade de *alterar o resto das suas vidas*, durante Dezembro, de 7 a 13. <% end %>
 
