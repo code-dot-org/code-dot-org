@@ -38,6 +38,15 @@ module LevelsHelper
     ))
     headers = result[1]
 
+    # The ChannelsApi may set a storage_id cookie that we need to copy to the response.
+    if headers['Set-Cookie']
+      begin
+        cookies headers['Set-Cookie'].split('\;').first.split('=')
+      rescue
+        # Unable to copy over storage_id.
+      end
+    end
+
     # Return the newly created channel ID.
     headers['Location'].split('/').last
   end
@@ -125,12 +134,13 @@ module LevelsHelper
   def app_options
     set_channel if @level.channel_backed?
 
-    callouts = params[:share] ? [] : select_and_remember_callouts(params[:show_callouts])
-    # Set videos and callouts.
-    view_options(
-      autoplay_video: select_and_track_autoplay_video,
-      callouts: callouts
-    )
+    unless params[:share]
+      # Set videos and callouts.
+      view_options(
+        autoplay_video: select_and_track_autoplay_video,
+        callouts: select_and_remember_callouts(params[:show_callouts])
+      )
+    end
 
     # External project levels are any levels of type 'external' which use
     # the projects code to save and load the user's progress on that level.
