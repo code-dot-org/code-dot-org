@@ -274,7 +274,7 @@ Item.prototype.update = function () {
  */
 Item.prototype.beginRemoveElement = function () {
   this.startFadeTime = new Date().getTime();
-}
+};
 
 /**
  * Remove our element/clipPath/animator
