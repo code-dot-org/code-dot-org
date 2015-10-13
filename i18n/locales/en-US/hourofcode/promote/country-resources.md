@@ -28,6 +28,12 @@ crwdns50223:0crwdne50223:0
 
 crwdns50224:0crwdne50224:0
 
+<% elsif @country == 'id' %>
+
+crwdns50414:0crwdne50414:0 crwdns50415:0crwdne50415:0 crwdns50416:0crwdne50416:0
+
+crwdns50417:0crwdne50417:0
+
 <% elsif @country == 'uk' %>
 
 # crwdns49387:0crwdne49387:0
@@ -38,9 +44,9 @@ crwdns50224:0crwdne50224:0
 
 ## crwdns50226:0crwdne50226:0
 
-crwdns50227:0crwdne50227:0<%= campaign_date('full') %>.
+crwdns50418:0crwdne50418:0<%= campaign_date('full') %>.
 
-**crwdns50228:0crwdne50228:0**
+**crwdns50419:0crwdne50419:0**
 
   * crwdns49392:0crwdne49392:0
   * crwdns49393:0crwdne49393:0
@@ -49,7 +55,7 @@ crwdns50227:0crwdne50227:0<%= campaign_date('full') %>.
 
 ## crwdns50229:0crwdne50229:0
 
-crwdns50230:0crwdne50230:0
+crwdns50420:0crwdne50420:0
 
   * crwdns49396:0crwdne49396:0
   * crwdns49397:0crwdne49397:0 
@@ -62,13 +68,13 @@ crwdns50230:0crwdne50230:0
 
 ## crwdns50232:0crwdne50232:0
 
-crwdns50233:0crwdne50233:0
+crwdns50421:0crwdne50421:0
 
   * crwdns49405:0crwdne49405:0
   * crwdns49406:0crwdne49406:0
   * [crwdns49407:0crwdne49407:0](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**crwdns50234:0crwdne50234:0**
+**crwdns50422:0crwdne50422:0**
 
 <% else %>
 
