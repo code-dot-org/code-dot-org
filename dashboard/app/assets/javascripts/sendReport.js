@@ -7,6 +7,12 @@ var lastServerResponse = {};
  * Notify the progression system of level attempt or completion.
  * Provides a response to a callback, which can provide a video to play
  * and next/previous level URLs.
+ *
+ * The client posts the progress JSON to the URL specified by
+ * report.callback (e.g. /milestone). In the event of a failure or timeout,
+ * the client relies on report.fallbackResponse (if specified) to allow
+ * the user to progress.
+ *
  * @param {Object} report
  * @param {string} report.callback - The url where the report should be sent.
  *        For studioApp-based levels, this is provided on initialization as
@@ -41,6 +47,9 @@ var sendReport = function(report) {
     type: 'POST',
     url: report.callback,
     contentType: 'application/x-www-form-urlencoded',
+    // Set a timeout of a few seconds so the user will get the fallback
+    // response even if the server is hung and unresponsive.
+    timeout: 4000,
     data: queryString,
     dataType: 'json',
     beforeSend: function(xhr) {
