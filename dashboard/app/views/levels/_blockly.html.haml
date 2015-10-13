@@ -17,6 +17,7 @@
 -#   of the page as possible before running scripts, but so that browsers can
 -#   intelligently optimize downloading resources.
 - computed_app_options = app_options
+- apps_path = computed_app_options[:baseUrl]
 - app_name = computed_app_options[:app]
 - is_droplet = computed_app_options[:droplet]
 - is_netsim = @level.game == Game.netsim
@@ -31,13 +32,14 @@
   - if computed_app_options[:droplet]
     %link{href: asset_path('css/droplet/droplet.min.css'), rel: 'stylesheet', type: 'text/css'}
     %link{href: asset_path('css/tooltipster/tooltipster.min.css'), rel: 'stylesheet', type: 'text/css'}
+    %link{href: asset_path('css/colpick.css'), rel: 'stylesheet', type: 'text/css'}
 
   -# Droplet script dependencies
   - if is_droplet
     %script{src: asset_path('js/jsinterpreter/acorn_interpreter.js')}
-    %script{src: asset_path('js/ace/ace.js')}
-    %script{src: asset_path('js/ace/mode-javascript.js')}
-    %script{src: asset_path('js/ace/ext-language_tools.js')}
+    %script{src: "#{apps_path}js/ace/ace.js"}
+    %script{src: "#{apps_path}js/ace/mode-javascript.js"}
+    %script{src: "#{apps_path}js/ace/ext-language_tools.js"}
     %script{src: asset_path('js/droplet/droplet-full.js')}
     %script{src: asset_path('js/tooltipster/jquery.tooltipster.js')}
 
