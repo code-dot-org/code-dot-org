@@ -605,6 +605,7 @@ Applab.initReadonly = function(config) {
 function startSharedAppAfterWarnings() {
   var modal = document.createElement('div');
   document.body.appendChild(modal);
+  // TODO - track wether we've already seen dialog for this app
   React.render(React.createElement(ShareWarningsDialog, {
     storesData: Applab.hasDataStoreAPIs(Applab.getCode()),
     signedIn: Applab.user.isSignedIn,

@@ -1,13 +1,13 @@
+var colors = require('../sharedJsxStyles').colors;
 var AgeDropdown = require('./AgeDropdown.jsx');
-// var Modal = require('react-modal');
 
-// TODO - share this somewhere
-var colors = {
-  green: '#b9bf15',
-  white: 'white',
-  orange: '#ffa400'
-};
+var commonMsg = require('../locale');
 
+/**
+ * Dialog contents for when you visit a shared Applab page. If not signed in,
+ * it will ask your age. If the app stores data, it will also alert you to
+ * that.
+ */
 var SharingWarnings = module.exports = React.createClass({
   propTypes: {
     signedIn: React.PropTypes.bool.isRequired,
@@ -65,12 +65,11 @@ var SharingWarnings = module.exports = React.createClass({
       }
     };
 
-    // TODO - i18n
     var i18n = {
-      storeDataMsg: 'This app built on Code Studio stores data that can be viewed by anyone with this sharing link, so be careful if you are asked to provide personal information.',
-      ageMsg: 'Please provide your age below and click OK to continue.',
-      moreInfo: 'More Info',
-      ok: 'OK'
+      storeDataMsg: commonMsg.shareWarningsStoreData(),
+      ageMsg: commonMsg.shareWarningsAge(),
+      moreInfo: commonMsg.shareWarningsMoreInfo(),
+      ok: commonMsg.dialogOK()
     };
 
     var dataPrompt, agePrompt;
