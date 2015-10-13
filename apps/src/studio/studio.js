@@ -3213,6 +3213,16 @@ Studio.setItemActivity = function (opts) {
         skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
   }
 
+  // For verifying success, record this combination of activity type and
+  // item type.
+  if (!Studio.trackedBehavior.setActivityRecord) {
+    Studio.trackedBehavior.setActivityRecord = [];
+  }
+  if (!Studio.trackedBehavior.setActivityRecord[opts.className]) {
+    Studio.trackedBehavior.setActivityRecord[opts.className] = [];
+  }
+  Studio.trackedBehavior.setActivityRecord[opts.className][opts.type] = true;
+
   if (opts.type === "roam" || opts.type === "chase" ||
       opts.type === "flee" || opts.type === "none") {
     // retain this activity type for items of this class created in the future:
@@ -3220,19 +3230,6 @@ Studio.setItemActivity = function (opts) {
     Studio.items.forEach(function (item) {
       if (item.className === opts.className) {
         item.setActivity(opts.type);
-
-        // For verifying success, record this combination of activity type and
-        // item type.
-
-        if (!Studio.trackedBehavior.setActivityRecord) {
-          Studio.trackedBehavior.setActivityRecord = [];
-        }
-
-        if (!Studio.trackedBehavior.setActivityRecord[opts.className]) {
-          Studio.trackedBehavior.setActivityRecord[opts.className] = [];
-        }
-
-        Studio.trackedBehavior.setActivityRecord[opts.className][opts.type] = true;
       }
     });
   }
