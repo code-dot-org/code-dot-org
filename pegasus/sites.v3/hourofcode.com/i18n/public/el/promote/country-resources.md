@@ -30,6 +30,12 @@ p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6
 
 p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
 
+<% elsif @country == 'id' %>
+
+Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Desember 2015, kami mengetahui bahwa banyak siswa-siswi Indonesia yang menjalankan prosesi ujian. Untuk alasan ini kami memutuskan untuk menjalankan masa kampanye Hour of Code di Indonesia pada 12 hingga 20 Desember 2015. Kita tetap akan merasakan kemeriahan yang sama dan dengan tujuan yang sama namun dengan kebersamaan yang lebih besar karena akan ada lebih banyak siswa-siswi yang dapat mengikutinya.
+
+Mari bersama kita dukung gerakan Hour of Code di Indonesia!
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -51,7 +57,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 ## 2) Σχεδίασε τις ανάγκες σου σε υλικό - οι υπολογιστές είναι προαιρετικοί
 
-Η καλύτερη εμπειρία της Ώρας του Κώδικα θα είναι με υπολογιστές συνδεδεμένους στο διαδίκτυο. Όμως δεν χρειάζεστε έναν υπολογιστή για κάθε συμμετέχοντα κι επιπλέον μπορείτε ακόμη να πραγματοποιήσετε την Ώρα του Κώδικα χωρίς καν υπολογιστή.
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
   * **Δοκίμασε τους οδηγους στους υπολογιστές ή τις συσκευές των μαθητών.** Βεβαιώσου ότι δουλεύουν σωστά (με ήχο και βίντεο).
   * **Κάνε προεπισκόπηση της σελίδας των συγχαρητηρίων** για να δεις τι θα βλέπουν οι μαθητές όταν τελειώνουν. 
@@ -64,13 +70,13 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 ## 4) Ενέπνευσε τους μαθητές - Δείξε τους ένα βίντεο
 
-Στην έναρξη της εκδήλωσης δείξε στο μαθητές ένα βίντεο έμπνευσης. Παραδείγματα:
+Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * Το αρχικό βίντεο του Code.org, με τον Bill Gates, τον Mark Zuckerberg και τον παίχτη του ΝΒΑ Chris Bosh (Υπάρχουν εκδόσεις [1 λεπτού](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 λεπτών](https://www.youtube.com/watch?v=nKIu9yen5nc) και [9 λεπτών](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [Ο πρόεδρος Ομπάμα καλεί όλους του μαθητές να μάθουν την Επιστήμη της Πληροφορικής](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Ενθουσίασε του μαθητές σου - κάνε μια μικρή εισαγωγή**
+**Get your students excited - give them a short intro**
 
 <% else %>
 
