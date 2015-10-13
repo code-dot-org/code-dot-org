@@ -340,10 +340,10 @@ StudioApp.prototype.init = function(config) {
   var promptDiv = document.getElementById('prompt');
   var prompt2Div = document.getElementById('prompt2');
   if (config.level.instructions) {
-    dom.setText(promptDiv, config.level.instructions);
+    $(promptDiv).text(config.level.instructions);
   }
   if (config.level.instructions2) {
-    dom.setText(prompt2Div, config.level.instructions2);
+    $(prompt2Div).text(config.level.instructions2);
     $(prompt2Div).show();
   }
 
