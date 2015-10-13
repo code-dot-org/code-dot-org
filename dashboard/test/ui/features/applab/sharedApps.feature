@@ -26,7 +26,7 @@ Feature: App Lab Scenarios
 
   Scenario: Can click a button in shared app
     Given I switch to text mode
-    And I press keys "button('testButton1', 'Click me');" for element ".ace_text-input"
+    And I press keys "button('testButton1', 'Click me');\n" for element ".ace_text-input"
     And I press keys "onEvent('testButton1', 'click', function() { setText('testButton1', 'Clicked'); });" for element ".ace_text-input"
     When I navigate to the shared version of my project
     And I wait until element "#divApplab > .screen > button#testButton1" is visible
@@ -45,8 +45,8 @@ Feature: App Lab Scenarios
 
   Scenario: Can change a radio button value in shared app
     Given I switch to text mode
-    And I press keys "radioButton('radio1', false, 'testGroup');" for element ".ace_text-input"
-    And I press keys "radioButton('radio2', false, 'testGroup');" for element ".ace_text-input"
+    And I press keys "radioButton('radio1', false, 'testGroup');\n" for element ".ace_text-input"
+    And I press keys "radioButton('radio2', false, 'testGroup');\n" for element ".ace_text-input"
 
     When I navigate to the shared version of my project
     And I wait until element ".screen > #radio2" is visible
@@ -63,8 +63,8 @@ Feature: App Lab Scenarios
 
   Scenario: Can change a checkbox value in shared app
     Given I switch to text mode
-    And I press keys "checkbox('checkbox1', false, 'testGroup');" for element ".ace_text-input"
-    And I press keys "checkbox('checkbox2', false, 'testGroup');" for element ".ace_text-input"
+    And I press keys "checkbox('checkbox1', false, 'testGroup');\n" for element ".ace_text-input"
+    And I press keys "checkbox('checkbox2', false, 'testGroup');\n" for element ".ace_text-input"
 
     When I navigate to the shared version of my project
     And I wait until element ".screen > #checkbox2" is visible

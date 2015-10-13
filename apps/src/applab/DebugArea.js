@@ -59,14 +59,16 @@ var DebugArea = module.exports = function (debugAreaRoot, codeTextboxRoot) {
  * header div.
  */
 DebugArea.prototype.bindHandlersForDebugCommandsHeader = function () {
+  var toggleDebugIcon = this.rootDiv_.find('#show-hide-debug-icon');
+  dom.addClickTouchEvent(toggleDebugIcon[0], DebugArea.prototype.slideToggle.bind(this));
   var header = this.rootDiv_.find('#debug-commands-header');
+
   // Element may not exist (if in share mode)
   if (header.length === 0) {
     return;
   }
   header.mouseover(DebugArea.prototype.onCommandsHeaderOver.bind(this));
   header.mouseout(DebugArea.prototype.onCommandsHeaderOut.bind(this));
-  dom.addClickTouchEvent(header[0], DebugArea.prototype.slideToggle.bind(this));
 };
 
 /**
@@ -224,7 +226,7 @@ DebugArea.prototype.setContentsVisible = function (isVisible) {
 DebugArea.prototype.setIconPointingDown = function (isPointingDown) {
   var commandsHeader = this.rootDiv_.find('#debug-commands-header');
 
-  var icon = commandsHeader.find('#show-hide-debug-icon');
+  var icon = this.rootDiv_.find('#show-hide-debug-icon');
   icon.toggleClass('fa-chevron-circle-up', !isPointingDown);
   icon.toggleClass('fa-chevron-circle-down', isPointingDown);
 

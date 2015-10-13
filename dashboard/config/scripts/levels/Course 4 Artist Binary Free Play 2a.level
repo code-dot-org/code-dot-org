@@ -19,7 +19,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "instructions": "Free Play: Here's a higher resolution canvas to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we start to get creative with the bits?",
+    "instructions": "Here's a higher resolution canvas to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we start to get creative with the bits?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -62,7 +62,7 @@
                     </block>
                   </value>
                   <statement name="DO">
-                    <block type="procedures_callnoreturn" inline="false">
+                    <block type="procedures_callnoreturn" inline="true">
                       <mutation name="draw">
                         <arg name="binary"/>
                       </mutation>
@@ -91,7 +91,7 @@
                         </block>
                       </value>
                       <statement name="DO">
-                        <block type="procedures_callnoreturn" inline="false">
+                        <block type="procedures_callnoreturn" inline="true">
                           <mutation name="draw">
                             <arg name="binary"/>
                           </mutation>
@@ -352,6 +352,9 @@
         </block>
         <block type="variables_get">
           <title name="VAR">counter</title>
+        </block>
+        <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
         </block>
         <block type="procedures_callnoreturn" inline="true">
           <mutation name="draw">
