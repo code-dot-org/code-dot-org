@@ -61,12 +61,6 @@ var DebugArea = module.exports = function (debugAreaRoot, codeTextboxRoot) {
 DebugArea.prototype.bindHandlersForDebugCommandsHeader = function () {
   var toggleDebugIcon = this.rootDiv_.find('#show-hide-debug-icon');
   dom.addClickTouchEvent(toggleDebugIcon[0], DebugArea.prototype.slideToggle.bind(this));
-  var header = this.rootDiv_.find('#debug-commands-header');
-
-  // Element may not exist (if in share mode)
-  if (header.length === 0) {
-    return;
-  }
 };
 
 /** @returns {boolean} */
