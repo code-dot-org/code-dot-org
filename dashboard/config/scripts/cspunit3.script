@@ -149,13 +149,12 @@ level 'U3 - Design Mode - Multi Screens 2'
 level 'U3 - Design Mode -Recreate Beyond Buttons'
 
 # 13
-stage 'Clicker Game'
-level 'U1L1 Student Lesson Introduction'
-level 'U3L16 - quick double click'
+stage 'Multi-screen App'
+level 'U3L13 Student Facing Lesson Plan'
+level 'U3L13 - Project'
 
 # 14
 stage 'Getting User Input'
-level 'U1L1 Student Lesson Introduction'
 level 'U3L16 - textInput getText write'
 level 'U3L16 - hideAndShowPractice'
 level 'U3L16 - challenge say hi app'
@@ -363,3 +362,4 @@ stage 'Cookie Clicker'
 stage 'Variable Basics DEPRECIATED'
 stage 'Clicker Variable Basics'
 stage 'Looping and Random Numbers'
+stage 'Clicker Game'
