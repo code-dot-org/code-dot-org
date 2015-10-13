@@ -230,6 +230,19 @@ def local_environment?
   (rack_env?(:development) && !CDO.chef_managed) || rack_env?(:adhoc)
 end
 
+def install_npm
+ if OS.linux?
+   RakeUtils.system 'sudo apt-get install -y nodejs npm'
+   RakeUtils.system 'sudo ln -s -f /usr/bin/nodejs /usr/bin/node'
+   RakeUtils.npm_update_g 'sudo npm install -g npm@2.9.1'
+   RakeUtils.npm_install_g 'grunt-cli'
+ elsif OS.mac?
+   RakeUtils.system 'brew install node'
+   RakeUtils.system 'npm', 'update', '-g', 'npm'
+   RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
+ end
+end
+
 namespace :install do
 
   # Create a symlink in the public directory that points at the appropriate blockly
@@ -260,14 +273,7 @@ namespace :install do
 
   task :apps do
     if local_environment?
-      if OS.linux?
-        RakeUtils.npm_update_g 'npm'
-        RakeUtils.npm_install_g 'grunt-cli'
-      elsif OS.mac?
-        RakeUtils.system 'brew install node'
-        RakeUtils.system 'npm', 'update', '-g', 'npm'
-        RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
-      end
+      install_npm
     end
   end
 
@@ -277,16 +283,7 @@ namespace :install do
         shared_js_build = CDO.use_my_shared_js ? shared_js_dir('build/package') : 'shared-package'
         RakeUtils.ln_s shared_js_build, dashboard_dir('public','shared')
       end
-
-      if OS.linux?
-        RakeUtils.system 'sudo apt-get install -y nodejs npm'
-        RakeUtils.npm_update_g 'npm'
-        RakeUtils.npm_install_g 'grunt-cli'
-      elsif OS.mac?
-        RakeUtils.system 'brew install node'
-        RakeUtils.system 'npm', 'update', '-g', 'npm'
-        RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
-      end
+      install_npm
     end
   end
 
