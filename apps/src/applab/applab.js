@@ -627,7 +627,10 @@ Applab.init = function(config) {
   adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
-  var showDebugButtons = !config.hideSource && config.level.editCode;
+  var showDebugButtons = (!config.hideSource &&
+                          config.level.editCode &&
+                          !config.level.debuggerDisabled);
+  var breakpointsEnabled = !config.level.debuggerDisabled;
   var showDebugConsole = !config.hideSource && config.level.editCode;
   var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: studioApp.assetUrl,
@@ -705,14 +708,16 @@ Applab.init = function(config) {
     // ace gutter:
     var aceEditor = studioApp.editor.aceEditor;
 
-    studioApp.editor.on('guttermousedown', function(e) {
-      var bps = studioApp.editor.getBreakpoints();
-      if (bps[e.line]) {
-        studioApp.editor.clearBreakpoint(e.line);
-      } else {
-        studioApp.editor.setBreakpoint(e.line);
-      }
-    });
+    if (breakpointsEnabled) {
+      studioApp.editor.on('guttermousedown', function(e) {
+        var bps = studioApp.editor.getBreakpoints();
+        if (bps[e.line]) {
+          studioApp.editor.clearBreakpoint(e.line);
+        } else {
+          studioApp.editor.setBreakpoint(e.line);
+        }
+      });
+    }
 
     if (studioApp.share) {
       // automatically run in share mode:
