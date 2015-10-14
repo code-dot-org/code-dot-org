@@ -56,6 +56,32 @@ SQL
     render 'usage', formats: [:html]
   end
 
+  def search_for_teachers
+    authorize! :read, :reports
+    fields = ['id', 'name', 'email', 'num_students']
+    email_filter = params[:emailFilter]
+    address_filter = params[:addressFilter]
+    query = <<-SQL
+SELECT
+  u.id, u.name, u.email, COUNT(f.student_user_id) AS num_students
+FROM (
+  SELECT id, name, email
+  FROM users
+  WHERE user_type = 'teacher'
+    AND email LIKE '%#{email_filter}%'
+    AND full_address LIKE '%#{address_filter}%'
+) AS u
+LEFT JOIN (
+  SELECT user_id, student_user_id
+  FROM followers
+) AS f
+ON u.id = f.user_id
+GROUP BY u.id, u.name, u.email
+SQL
+    teachers = User.find_by_sql(query)
+    render locals: {headers: fields, data: teachers}
+  end
+
   def admin_stats
     authorize! :read, :reports
 
