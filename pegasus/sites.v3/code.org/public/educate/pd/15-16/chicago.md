@@ -177,23 +177,22 @@ Semester 2: Saturday, April 30, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**Location**
+**October 24th Location**
 
 <i><b>Group 1</i></b><br/>
 Loyola University - Water Tower Campus<br/> 
 Corboy Law Center <br/>
-Room TBD<br/>
+Room CLC 302<br/>
 25 E Pearson St<br/> 
 Chicago, IL 60611
 
 <i><b>Group 2</i></b><br/>
 Loyola University - Water Tower Campus<br/> 
 Corboy Law Center <br/>
-Room CLC TBD<br/>
+Room CLC 301<br/>
 25 E Pearson St<br/> 
 Chicago, IL 60611
 
-Please [click here](http://luc.edu/campus_reservations/corboylawcenter.shtml) for directions to the rooms.
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -260,7 +259,6 @@ Room CLC 302<br/>
 25 E Pearson St<br/> 
 Chicago, IL 60611
 
-Please [click here](http://luc.edu/campus_reservations/corboylawcenter.shtml) for directions to the rooms.
 
 
 **What to bring to Phase 3 bi-yearly sessions:**
