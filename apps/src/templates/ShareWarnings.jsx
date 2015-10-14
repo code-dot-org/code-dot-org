@@ -1,6 +1,8 @@
 var colors = require('../sharedJsxStyles').colors;
 var AgeDropdown = require('./AgeDropdown.jsx');
 
+// TODO - cookies, mobile, pin to homescreen
+
 var commonMsg = require('../locale');
 
 /**
@@ -14,10 +16,6 @@ var SharingWarnings = module.exports = React.createClass({
     storesData: React.PropTypes.bool.isRequired,
     handleClose: React.PropTypes.func.isRequired,
     handleTooYoung: React.PropTypes.func.isRequired
-  },
-
-  getInitialState: function() {
-    return { modalIsOpen: this.props.signedIn || this.props.storesData };
   },
 
   handleOk: function() {
@@ -38,7 +36,6 @@ var SharingWarnings = module.exports = React.createClass({
     } else {
       this.props.handleTooYoung();
     }
-
   },
 
   render: function () {
