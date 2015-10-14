@@ -360,9 +360,8 @@ img#turtleImage {
     margin: 0;
     line-height: 30px;
     font-size: 18px; }
-  #debug-area-header.js-hover-hack {
-    cursor: pointer; }
-    #debug-area-header.js-hover-hack #show-hide-debug-icon {
+    #debug-area-header #show-hide-debug-icon:hover {
+      cursor: pointer;
       color: white; }
 
 #debug-commands-header {
