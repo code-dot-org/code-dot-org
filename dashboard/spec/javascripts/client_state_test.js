@@ -4,12 +4,13 @@
 //= require jquery.cookie
 
 describe("clientState#trackProgress", function() {
+  var state = dashboard.clientState;
+
   beforeEach(function() {
-    dashboard.clientState.reset();
+    state.reset();
   });
 
   it("records level progress and line counts when level is completed", function() {
-    var state = dashboard.clientState;
     state.levelProgress(1).should.equal(0);
     state.levelProgress(2).should.equal(0);
     state.lines().should.equal(0);
@@ -34,7 +35,6 @@ describe("clientState#trackProgress", function() {
   });
 
   it("records level progress but not line counts when level is failed", function() {
-    var state = dashboard.clientState;
     state.levelProgress(1).should.equal(0);
     state.levelProgress(2).should.equal(0);
     state.lines().should.equal(0);
@@ -53,7 +53,6 @@ describe("clientState#trackProgress", function() {
   });
 
   it("records level progress truncates line count at a certain level", function () {
-    var state = dashboard.clientState;
     state.trackProgress(true, 999, 20, 1);
     state.levelProgress(1).should.equal(20);
     state.lines().should.equal(999);
@@ -67,7 +66,6 @@ describe("clientState#trackProgress", function() {
   });
 
   it("records level progress does not allow negative line counts", function () {
-    var state = dashboard.clientState;
     state.trackProgress(true, 10, 100, 1);
     state.levelProgress(1).should.equal(100);
     state.lines().should.equal(10);
@@ -78,8 +76,6 @@ describe("clientState#trackProgress", function() {
   });
 
   it("handles malformed cookies for level progress", function () {
-    var state = dashboard.clientState;
-
     $.cookie('progress', null, {expires: 365, path: '/'});
     state.levelProgress(1).should.equal(0);
 
@@ -92,7 +88,6 @@ describe("clientState#trackProgress", function() {
   });
 
   it("records video progress", function () {
-    var state = dashboard.clientState;
     state.hasSeenVideo('video1').should.equal(false);
     state.hasSeenVideo('video2').should.equal(false);
 
@@ -111,8 +106,6 @@ describe("clientState#trackProgress", function() {
   });
 
   it("handles malformed storage for video progress", function () {
-    var state = dashboard.clientState;
-
     localStorage.setItem('videosSeen', null);
     state.hasSeenVideo('someVideo').should.equal(false);
     state.recordVideoSeen('someVideo');
@@ -127,6 +120,41 @@ describe("clientState#trackProgress", function() {
     state.hasSeenVideo('someVideo').should.equal(false);
     state.recordVideoSeen('someVideo');
     state.hasSeenVideo('someVideo').should.equal(true);
+  });
+
+  it("records callouts seen", function () {
+    state.hasSeenCallout('callout1').should.equal(false);
+    state.hasSeenCallout('callout2').should.equal(false);
+
+    state.recordCalloutSeen('callout1');
+    state.hasSeenCallout('callout1').should.equal(true);
+    state.hasSeenCallout('callout2').should.equal(false);
+
+    state.recordCalloutSeen('callout2');
+    state.hasSeenCallout('callout1').should.equal(true);
+    state.hasSeenCallout('callout2').should.equal(true);
+
+    //Check idempotency
+    state.recordCalloutSeen('callout1');
+    state.hasSeenCallout('callout1').should.equal(true);
+    state.hasSeenCallout('callout2').should.equal(true);
+  });
+
+  it("handles malformed storage for callouts seen", function () {
+    localStorage.setItem('calloutsSeen', null);
+    state.hasSeenCallout('someCallout').should.equal(false);
+    state.recordCalloutSeen('someCallout');
+    state.hasSeenCallout('someCallout').should.equal(true);
+
+    localStorage.setItem('calloutsSeen', '');
+    state.hasSeenCallout('someCallout').should.equal(false);
+    state.recordCalloutSeen('someCallout');
+    state.hasSeenCallout('someCallout').should.equal(true);
+
+    localStorage.setItem('calloutsSeen', '{\'malformed_json\': true');
+    state.hasSeenCallout('someCallout').should.equal(false);
+    state.recordCalloutSeen('someCallout');
+    state.hasSeenCallout('someCallout').should.equal(true);
   });
 });
 

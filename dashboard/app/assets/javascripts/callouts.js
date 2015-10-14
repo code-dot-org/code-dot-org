@@ -25,7 +25,16 @@
    * @param {CalloutDefinition[]} callouts
    */
   dashboard.createCallouts = function (callouts) {
-    if (!callouts) {
+    callouts = callouts.filter(function (element, index, array) {
+      if (dashboard.clientState.hasSeenCallout(element.id)) {
+        return false;
+      } else {
+        dashboard.clientState.recordCalloutSeen(element.id);
+        return true;
+      }
+    });
+
+    if (!callouts || callouts.length === 0) {
       return;
     }
 

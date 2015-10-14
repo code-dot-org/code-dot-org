@@ -102,11 +102,9 @@ module LevelsHelper
     autoplay_video.summarize unless params[:noautoplay]
   end
 
-  def select_and_remember_callouts(always_show = false)
-    # Filter if already seen (unless always_show)
-    callouts_to_show = @level.available_callouts(@script_level).
-      reject { |c| !always_show && client_state.callout_seen?(c.localization_key) }.
-      each { |c| client_state.add_callout_seen(c.localization_key) }
+  def select_callouts
+    callouts_to_show = @level.available_callouts(@script_level)
+
     # Localize
     callouts_to_show.map do |callout|
       callout_hash = callout.attributes
@@ -125,7 +123,7 @@ module LevelsHelper
   def app_options
     set_channel if @level.channel_backed?
 
-    callouts = params[:share] ? [] : select_and_remember_callouts(params[:show_callouts])
+    callouts = params[:share] ? [] : select_callouts
     # Set videos and callouts.
     view_options(
       autoplay_video: select_and_track_autoplay_video,

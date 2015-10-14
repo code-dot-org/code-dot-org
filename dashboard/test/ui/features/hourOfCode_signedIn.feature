@@ -52,3 +52,13 @@ Scenario: Go to puzzle 6, see video, go somewhere else, return to puzzle 6, shou
   Then I am on "http://studio.code.org/hoc/7"
   Then I am on "http://studio.code.org/hoc/6"
   Then element "#runButton" is visible
+
+Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, should not see callouts
+  Given I am on "http://studio.code.org/hoc/9"
+  And I rotate to landscape
+  Then I wait to see a dialog titled "Puzzle 9 of 20"
+  And I close the dialog
+  Then element "#qtip-4-content" is visible
+  Then I am on "http://studio.code.org/hoc/10"
+  Then I am on "http://studio.code.org/hoc/9"
+  Then element "#qtip-4-content" does not exist

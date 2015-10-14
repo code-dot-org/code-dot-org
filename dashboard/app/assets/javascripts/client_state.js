@@ -136,5 +136,29 @@ dashboard.clientState.recordVideoSeen = function (videoId) {
   }
 };
 
+dashboard.clientState.hasSeenCallout = function(calloutId) {
+  var calloutsSeenJson = localStorage.getItem('calloutsSeen') || '{}';
+  try {
+    var calloutsSeen = JSON.parse(calloutsSeenJson);
+    return calloutsSeen[calloutId] == 1;
+  } catch (e) {
+    return false;
+  }
+};
+
+dashboard.clientState.recordCalloutSeen = function (calloutId) {
+  var calloutsSeenJson = localStorage.getItem('calloutsSeen') || '{}';
+
+  try {
+    var calloutsSeen = JSON.parse(calloutsSeenJson);
+    calloutsSeen[calloutId] = 1;
+    localStorage.setItem('calloutsSeen', JSON.stringify(calloutsSeen));
+  } catch (e) {
+    //Something went wrong parsing the json. Blow it up and just put in the new callout
+    var calloutsSeen = {};
+    calloutsSeen[calloutId] = 1;
+    localStorage.setItem('calloutsSeen', JSON.stringify(calloutsSeen));
+  }
+};
 
 })(window, $);
