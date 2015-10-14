@@ -58,27 +58,20 @@ SQL
 
   def search_for_teachers
     authorize! :read, :reports
-    fields = ['id', 'name', 'email', 'num_students']
-    email_filter = params[:emailFilter]
-    address_filter = params[:addressFilter]
-    query = <<-SQL
-SELECT
-  u.id, u.name, u.email, COUNT(f.student_user_id) AS num_students
-FROM (
-  SELECT id, name, email
-  FROM users
-  WHERE user_type = 'teacher'
-    AND email LIKE '%#{email_filter}%'
-    AND full_address LIKE '%#{address_filter}%'
-) AS u
-LEFT JOIN (
-  SELECT user_id, student_user_id
-  FROM followers
-) AS f
-ON u.id = f.user_id
-GROUP BY u.id, u.name, u.email
-SQL
-    teachers = User.find_by_sql(query)
+    fields = ['id', 'name', 'email', 'address', 'num_students']
+    if (params[:emailFilter])
+      email_filter = '%' + params[:emailFilter] + '%'
+    else
+      email_filter = '%%'
+    end
+    if (params[:addressFilter])
+      address_filter = '%' + params[:addressFilter] + '%'
+    else
+      address_filter = '%%'
+    end
+
+    teachers = User.where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id').pluck(:id, :name, :email, :full_address, 'COUNT(followers.id) AS num_students')
+
     render locals: {headers: fields, data: teachers}
   end
 
