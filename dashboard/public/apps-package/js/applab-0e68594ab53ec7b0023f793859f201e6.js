@@ -2036,9 +2036,9 @@ Applab.getIdDropdown = function (filterSelector) {
  * @private
  */
 Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
-  var designModeVizChildren = documentRoot.find('#designModeViz').children();
-  var elements = designModeVizChildren.toArray().concat(
-      designModeVizChildren.children().toArray());
+  var divApplabChildren = documentRoot.find('#divApplab').children();
+  var elements = divApplabChildren.toArray().concat(
+      divApplabChildren.children().toArray());
 
   // Return all elements when no filter is given
   if (filterSelector) {
@@ -2047,12 +2047,12 @@ Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
 
   return elements
       .sort(function (elementA, elementB) {
-        return elementUtils.getId(elementA) < elementUtils.getId(elementB) ? -1 : 1;
+        return elementA.id < elementB.id ? -1 : 1;
       })
       .map(function (element) {
         return {
-          text: quote(elementUtils.getId(element)),
-          display: quote(elementUtils.getId(element))
+          text: quote(element.id),
+          display: quote(element.id)
         };
       });
 };
@@ -2132,6 +2132,7 @@ var dontMarshalApi = require('./dontMarshalApi');
 var consoleApi = require('./consoleApi');
 var showAssetManager = require('../applab/assetManagement/show.js');
 var ChartApi = require('./ChartApi');
+var elementUtils = require('./designElements/elementUtils');
 
 var applabConstants = require('./constants');
 
@@ -2154,7 +2155,7 @@ var COLOR_YELLOW = '#FFF176';
  */
 function getScreenIds() {
   var ret = $("#designModeViz .screen").map(function () {
-    return '"' + this.id + '"';
+    return '"' + elementUtils.getId(this) + '"';
   });
 
   // Convert from jQuery's array-like object to a true array
@@ -2297,7 +2298,7 @@ module.exports.categories = {
 };
 
 
-},{"../applab/assetManagement/show.js":"/home/ubuntu/staging/apps/build/js/applab/assetManagement/show.js","./ChartApi":"/home/ubuntu/staging/apps/build/js/applab/ChartApi.js","./api":"/home/ubuntu/staging/apps/build/js/applab/api.js","./consoleApi":"/home/ubuntu/staging/apps/build/js/applab/consoleApi.js","./constants":"/home/ubuntu/staging/apps/build/js/applab/constants.js","./dontMarshalApi":"/home/ubuntu/staging/apps/build/js/applab/dontMarshalApi.js"}],"/home/ubuntu/staging/apps/build/js/applab/consoleApi.js":[function(require,module,exports){
+},{"../applab/assetManagement/show.js":"/home/ubuntu/staging/apps/build/js/applab/assetManagement/show.js","./ChartApi":"/home/ubuntu/staging/apps/build/js/applab/ChartApi.js","./api":"/home/ubuntu/staging/apps/build/js/applab/api.js","./consoleApi":"/home/ubuntu/staging/apps/build/js/applab/consoleApi.js","./constants":"/home/ubuntu/staging/apps/build/js/applab/constants.js","./designElements/elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js","./dontMarshalApi":"/home/ubuntu/staging/apps/build/js/applab/dontMarshalApi.js"}],"/home/ubuntu/staging/apps/build/js/applab/consoleApi.js":[function(require,module,exports){
 var codegen = require('../codegen');
 var vsprintf = require('./sprintf').vsprintf;
 var errorHandler = require('./errorHandler');
@@ -11041,32 +11042,6 @@ var DebugArea = module.exports = function (debugAreaRoot, codeTextboxRoot) {
 DebugArea.prototype.bindHandlersForDebugCommandsHeader = function () {
   var toggleDebugIcon = this.rootDiv_.find('#show-hide-debug-icon');
   dom.addClickTouchEvent(toggleDebugIcon[0], DebugArea.prototype.slideToggle.bind(this));
-  var header = this.rootDiv_.find('#debug-commands-header');
-
-  // Element may not exist (if in share mode)
-  if (header.length === 0) {
-    return;
-  }
-  header.mouseover(DebugArea.prototype.onCommandsHeaderOver.bind(this));
-  header.mouseout(DebugArea.prototype.onCommandsHeaderOut.bind(this));
-};
-
-/**
- * We do this manually instead of via a simple css :hover because this element
- * can be animated out from under the cursor when sliding open and closed,
- * and the :hover effect isn't removed unless the mouse is moved.
- */
-DebugArea.prototype.onCommandsHeaderOver = function () {
-  this.rootDiv_.find('#debug-commands-header').addClass('js-hover-hack');
-};
-
-/**
- * We do this manually instead of via a simple css :hover because this element
- * can be animated out from under the cursor when sliding open and closed,
- * and the :hover effect isn't removed unless the mouse is moved.
- */
-DebugArea.prototype.onCommandsHeaderOut = function () {
-  this.rootDiv_.find('#debug-commands-header').removeClass('js-hover-hack');
 };
 
 /** @returns {boolean} */
@@ -11134,13 +11109,11 @@ DebugArea.prototype.slideOpen = function () {
 
   // Manually remove hover effect at start and end of animation to get *close*
   // to the correct effect.
-  this.onCommandsHeaderOut();
   this.rootDiv_.animate({
     height: this.lastOpenHeight_
   },{
     complete: function () {
       this.setIconPointingDown(true);
-      this.onCommandsHeaderOut();
     }.bind(this)
   });
 
@@ -11168,14 +11141,12 @@ DebugArea.prototype.slideShut = function () {
   var closedHeight = this.getHeightWhenClosed();
   // Manually remove hover effect at start and end of animation to get *close*
   // to the correct effect.
-  this.onCommandsHeaderOut();
   this.rootDiv_.animate({
     height: closedHeight
   },{
     complete: function () {
       this.setContentsVisible(false);
       this.setIconPointingDown(false);
-      this.onCommandsHeaderOut();
     }.bind(this)
   });
 
