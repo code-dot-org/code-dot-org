@@ -16,20 +16,20 @@ describe('ShareWarningsDialog', function () {
   //   if(!ReactTestUtils.
   // }
 
-  function isDivWithText(childComponent, text) {
+  function isTagWithText(childComponent, tagName, text) {
     if (!ReactTestUtils.isDOMComponent(childComponent)) {
       return false;
     }
     var dom = childComponent.getDOMNode();
-    return dom.tagName === 'DIV' && dom.innerHTML === text;
+    return dom.tagName === tagName && dom.innerHTML === text;
   }
 
   function isDataPromptDiv(childComponent) {
-    return isDivWithText(childComponent, msg.shareWarningsStoreData());
+    return isTagWithText(childComponent, 'DIV', msg.shareWarningsStoreData());
   }
 
   function isAgeDiv(childComponent) {
-    return isDivWithText(childComponent, msg.shareWarningsAge());
+    return isTagWithText(childComponent, 'DIV', msg.shareWarningsAge());
   }
 
   it('only shows age prompt if not signedIn and we dont storeData', function () {
@@ -115,5 +115,115 @@ describe('ShareWarningsDialog', function () {
     // isMounted returns undefined instead of false. this is allegedly fixed
     // in future versions of React
     assert.equal(!!componentInstance.isMounted(), false, 'component unmounted');
+  });
+
+  it('calls handleClose if we click OK when signed in', function () {
+    var handleCloseCalled = false;
+    var reactElement = React.createElement(ShareWarningsDialog, {
+      storesData: true,
+      signedIn: true,
+      handleClose: function () {
+        handleCloseCalled = true;
+      },
+      handleTooYoung: function () {}
+    });
+    var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
+    assert.equal(!!componentInstance.isMounted(), true, 'component is mounted');
+
+    var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
+      componentInstance, ShareWarnings)[0];
+
+    var okButton = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
+      'button')[0];
+    assert(okButton, 'have an ok button');
+    
+    ReactTestUtils.Simulate.click(okButton.getDOMNode());
+    assert(handleCloseCalled, 'closed dialog');
+
+    assert.equal(!!componentInstance.isMounted(), false, 'component unmounted');
+  });
+
+  it('does not close if we click OK when signed out and didnt specify age', function () {
+    var handleCloseCalled = false;
+    var reactElement = React.createElement(ShareWarningsDialog, {
+      storesData: true,
+      signedIn: false,
+      handleClose: function () {
+        handleCloseCalled = true;
+      },
+      handleTooYoung: function () {}
+    });
+    var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
+    assert.equal(!!componentInstance.isMounted(), true, 'component is mounted');
+
+    var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
+      componentInstance, ShareWarnings)[0];
+
+    var okButton = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
+      'button')[0];
+    assert(okButton, 'have an ok button');
+
+    ReactTestUtils.Simulate.click(okButton.getDOMNode());
+    assert(!handleCloseCalled, 'closed dialog');
+
+    assert.equal(!!componentInstance.isMounted(), true, 'component still mounted');
+  });
+
+  it('calls handleClose if we click OK when signed out and specified an age', function () {
+    var handleCloseCalled = false;
+    var reactElement = React.createElement(ShareWarningsDialog, {
+      storesData: true,
+      signedIn: false,
+      handleClose: function () {
+        handleCloseCalled = true;
+      },
+      handleTooYoung: function () {}
+    });
+    var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
+    assert.equal(!!componentInstance.isMounted(), true, 'component is mounted');
+
+    var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
+      componentInstance, ShareWarnings)[0];
+
+    var select = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
+      'select')[0];
+    select.getDOMNode().value = "13";
+
+    var okButton = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
+      'button')[0];
+    assert(okButton, 'have an ok button');
+
+    ReactTestUtils.Simulate.click(okButton.getDOMNode());
+    assert(handleCloseCalled, 'closed dialog');
+
+    assert.equal(!!componentInstance.isMounted(), false, 'component unmounted');
+  });
+
+  it('calls handleTooYoung if we enter an age < 13', function () {
+    var handleTooYoungCalled = false;
+    var reactElement = React.createElement(ShareWarningsDialog, {
+      storesData: true,
+      signedIn: false,
+      handleClose: function () { },
+      handleTooYoung: function () {
+        handleTooYoungCalled = true;
+      }
+    });
+    var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
+    assert.equal(!!componentInstance.isMounted(), true, 'component is mounted');
+
+    var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
+      componentInstance, ShareWarnings)[0];
+
+    var select = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
+      'select')[0];
+    select.getDOMNode().value = "12";
+
+    var okButton = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
+      'button')[0];
+    assert(okButton, 'have an ok button');
+
+    ReactTestUtils.Simulate.click(okButton.getDOMNode());
+    assert(handleTooYoungCalled, 'closed dialog');
   });
 });
