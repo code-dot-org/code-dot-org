@@ -70,7 +70,7 @@ SQL
       address_filter = '%%'
     end
 
-    teachers = User.where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id').pluck(:id, :name, :email, :full_address, 'COUNT(followers.id) AS num_students')
+    teachers = User.limit(100).where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id').pluck(:id, :name, :email, :full_address, 'COUNT(followers.id) AS num_students')
 
     render locals: {headers: fields, data: teachers}
   end
