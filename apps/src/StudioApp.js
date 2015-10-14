@@ -383,7 +383,8 @@ StudioApp.prototype.init = function(config) {
       readOnly: config.readonlyWorkspace,
       textModeAtStart: config.level.textModeAtStart,
       beginnerMode: config.level.beginnerMode,
-      autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
+      autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly,
+      dropletTooltipsDisabled: config.level.dropletTooltipsDisabled
     });
   }
 
@@ -1524,6 +1525,9 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   });
 
   this.dropletTooltipManager = new DropletTooltipManager(this.appMsg, options.dropletConfig);
+  if (options.dropletTooltipsDisabled) {
+    this.dropletTooltipManager.setTooltipsEnabled(false);
+  }
   this.dropletTooltipManager.registerBlocksFromList(
     dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 
