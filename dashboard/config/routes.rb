@@ -17,6 +17,7 @@ Dashboard::Application.routes.draw do
     end
   end
   resources :activity_hints, only: [:update]
+  resources :hint_view_requests, only: [:create]
   resources :callouts
   resources :videos do
     collection do
