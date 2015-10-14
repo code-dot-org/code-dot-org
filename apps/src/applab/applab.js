@@ -598,25 +598,58 @@ Applab.initReadonly = function(config) {
   studioApp.initReadonly(config);
 };
 
+function hasSeenDataAlert(channelId) {
+  var dataAlerts = localStorage.getItem('dataAlerts');
+  if (!dataAlerts) {
+    return false;
+  }
+  var channelIds = JSON.parse(dataAlerts);
+  return channelIds.indexOf(channelId) !== -1;
+}
+
+function markSeenDataAlert(channelId) {
+  var dataAlerts = localStorage.getItem('dataAlerts');
+  if (!dataAlerts) {
+    dataAlerts = '[]';
+  }
+  var channelIds = JSON.parse(dataAlerts);
+  channelIds.push(channelId);
+  localStorage.setItem('dataAlerts', JSON.stringify(channelIds));
+}
+
 /**
  * Starts the app after (potentially) Showing a modal warning about data sharing
  * (if appropriate) and determining user is old enough
  */
-function startSharedAppAfterWarnings() {
+Applab.startSharedAppAfterWarnings = function () {
+  // dashboard will redirect young signed in users
+  var is13Plus = Applab.user.isSignedIn || localStorage.getItem('is13Plus') === "true";
+  var showStoreDataAlert = Applab.hasDataStoreAPIs(Applab.getCode()) &&
+    !hasSeenDataAlert(AppStorage.getChannelId());
+
   var modal = document.createElement('div');
   document.body.appendChild(modal);
-  // TODO - track wether we've already seen dialog for this app
-  React.render(React.createElement(ShareWarningsDialog, {
-    storesData: Applab.hasDataStoreAPIs(Applab.getCode()),
-    signedIn: Applab.user.isSignedIn,
+  return React.render(React.createElement(ShareWarningsDialog, {
+    showStoreDataAlert: showStoreDataAlert,
+    is13Plus: is13Plus,
     handleClose: function () {
+      // we closed the dialog without hitting too_young
+      // Only want to ask about age once across apps
+      if (!Applab.user.isSignedIn) {
+        localStorage.setItem('is13Plus', 'true');
+      }
+      // Only want to ask about storing data once per app.
+      if (showStoreDataAlert) {
+        markSeenDataAlert(AppStorage.getChannelId());
+      }
       window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
     },
     handleTooYoung: function () {
+      localStorage.setItem('is13Plus', 'false');
       window.location.href = '/too_young';
     }
   }), modal);
-}
+};
 
 /**
  * Initialize Blockly and the Applab app.  Called on page load.
@@ -756,7 +789,7 @@ Applab.init = function(config) {
     }
 
     if (studioApp.share) {
-      startSharedAppAfterWarnings();
+      Applab.startSharedAppAfterWarnings();
     }
   };
 
