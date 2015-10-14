@@ -1,4 +1,4 @@
-9#!/usr/bin/env ruby
+#!/usr/bin/env ruby
 #
 # Script for deploying an new Amazon EC2 frontend instance.
 # For details usage instructions, please see:
