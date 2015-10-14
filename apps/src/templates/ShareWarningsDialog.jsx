@@ -5,14 +5,14 @@ var ShareWarnings = require('./ShareWarnings.jsx');
  */
 var SharingWarningsDialog = module.exports = React.createClass({
   propTypes: {
-    signedIn: React.PropTypes.bool.isRequired,
-    storesData: React.PropTypes.bool.isRequired,
+    is13Plus: React.PropTypes.bool.isRequired,
+    showStoreDataAlert: React.PropTypes.bool.isRequired,
     handleClose: React.PropTypes.func.isRequired,
     handleTooYoung: React.PropTypes.func.isRequired
   },
 
   getInitialState: function() {
-    return { modalIsOpen: !this.props.signedIn || this.props.storesData };
+    return { modalIsOpen: !this.props.is13Plus || this.props.showStoreDataAlert };
   },
 
   componentDidMount: function () {
@@ -67,8 +67,8 @@ var SharingWarningsDialog = module.exports = React.createClass({
         <div style={styles.overlay}/>
         <div style={styles.main}>
           <ShareWarnings
-            signedIn={this.props.signedIn}
-            storesData={this.props.storesData}
+            is13Plus={this.props.is13Plus}
+            showStoreDataAlert={this.props.showStoreDataAlert}
             handleTooYoung={this.props.handleTooYoung}
             handleClose={this.handleClose}/>
         </div>

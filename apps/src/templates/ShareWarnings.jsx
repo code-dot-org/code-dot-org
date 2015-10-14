@@ -1,8 +1,6 @@
 var colors = require('../sharedJsxStyles').colors;
 var AgeDropdown = require('./AgeDropdown.jsx');
 
-// TODO - cookies, mobile, pin to homescreen
-
 var commonMsg = require('../locale');
 
 /**
@@ -12,14 +10,14 @@ var commonMsg = require('../locale');
  */
 var SharingWarnings = module.exports = React.createClass({
   propTypes: {
-    signedIn: React.PropTypes.bool.isRequired,
-    storesData: React.PropTypes.bool.isRequired,
+    is13Plus: React.PropTypes.bool.isRequired,
+    showStoreDataAlert: React.PropTypes.bool.isRequired,
     handleClose: React.PropTypes.func.isRequired,
     handleTooYoung: React.PropTypes.func.isRequired
   },
 
   handleOk: function() {
-    if (this.props.signedIn) {
+    if (this.props.is13Plus) {
       this.props.handleClose();
       return;
     }
@@ -70,10 +68,10 @@ var SharingWarnings = module.exports = React.createClass({
     };
 
     var dataPrompt, agePrompt;
-    if (this.props.storesData) {
+    if (this.props.showStoreDataAlert) {
       dataPrompt = <div style={styles.dataMessage}>{i18n.storeDataMsg}</div>;
     }
-    if (!this.props.signedIn) {
+    if (!this.props.is13Plus) {
       agePrompt = <div>
         <div style={styles.ageMessage}>{i18n.ageMsg}</div>
         <AgeDropdown style={styles.ageDropdonw} ref='age'/>
