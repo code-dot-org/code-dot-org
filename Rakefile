@@ -234,7 +234,7 @@ def install_npm
   if OS.linux?
     RakeUtils.system 'sudo apt-get install -y nodejs npm'
     RakeUtils.system 'sudo ln -s -f /usr/bin/nodejs /usr/bin/node'
-    RakeUtils.npm_update_g 'sudo npm install -g npm@2.9.1'
+    RakeUtils.system 'sudo npm install -g npm@2.9.1'
     RakeUtils.npm_install_g 'grunt-cli'
   elsif OS.mac?
     RakeUtils.system 'brew install node'
