@@ -978,11 +978,13 @@ function edgeCollidableCollisionDistance (collidable, edgeName, yAxis) {
 function handleActorCollisionsWithCollidableList (
            spriteIndex, xCenter, yCenter, list, autoDisappear)
 {
-  for (var i = 0; i < list.length; i++) {
+  // Traverse the list in reverse order because we may remove elements from the
+  // list while inside the loop:
+  for (var i = list.length - 1; i >= 0; i--) {
     var collidable = list[i];
     var next = collidable.getNextPosition();
 
-    if (collidable.isFading()) {
+    if (collidable.isFading && collidable.isFading()) {
       continue;
     }
 
@@ -1018,7 +1020,11 @@ function handleActorCollisionsWithCollidableList (
         // Make the projectile/item disappear automatically if this parameter
         // is set:
         if (autoDisappear) {
-          collidable.beginRemoveElement();
+          if (collidable.beginRemoveElement) {
+            collidable.beginRemoveElement();
+          } else {
+            collidable.removeElement();
+          }
         }
       }
     } else {
@@ -1187,7 +1193,7 @@ function updateItems () {
 
     item.update();
 
-    if (item.isGone()) {
+    if (item.hasCompletedFade && item.hasCompletedFade()) {
       item.removeElement();
       Studio.items.splice(i, 1);
     }
@@ -1199,7 +1205,7 @@ function checkForItemCollisions () {
     var item = Studio.items[i];
     var next = item.getNextPosition();
 
-    if (item.isFading()) {
+    if (item.isFading && item.isFading()) {
       continue;
     }
 
@@ -4404,7 +4410,7 @@ Studio.allGoalsVisited = function() {
         studioApp.playAudio('flag');
       }
 
-      if (!skin.fadeOutGoal) {
+      if (skin.goalSuccess) {
         // Change the finish icon to goalSuccess.
         var successAsset = skin.goalSuccess;
         if (level.goalOverride && level.goalOverride.success) {
