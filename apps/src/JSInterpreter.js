@@ -74,6 +74,15 @@ var JSInterpreter = module.exports = function (options) {
 
 };
 
+/**
+ * Returns true if the JSInterpreter instance initialized successfully. This
+ * would typically fail when the program contains a syntax error.
+ */
+JSInterpreter.prototype.initialized = function () {
+  return !!this.interpreter;
+};
+
+
 JSInterpreter.StepType = {
   RUN:  0,
   IN:   1,

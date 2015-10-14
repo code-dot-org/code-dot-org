@@ -6,18 +6,6 @@ exports.addReadyListener = function(callback) {
   }
 };
 
-exports.getText = function(node) {
-  return node.textContent || node.innerText;
-};
-
-exports.setText = function(node, string) {
-  // innerText is not supported in Firefox
-  // textContent is not supported in IE8
-  // See: http://caniuse.com/#feat=textcontent
-  //      http://caniuse.com/#feat=innertext
-  node.innerText = node.textContent = string;
-};
-
 exports.getTouchEventName = function(eventName) {
   var isIE11Touch = window.navigator.pointerEnabled;
   var isIE10Touch = window.navigator.msPointerEnabled;

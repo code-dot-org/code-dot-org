@@ -16,10 +16,10 @@ window.Applab = {
 var AppLab = require('@cdo/apps/applab/applab');
 var designMode = require('@cdo/apps/applab/designMode');
 
-describe('designMode.addScreenIfNecessary', function () {
+describe('applab: designMode.addScreenIfNecessary', function () {
   it ('adds a screen if we dont have one', function () {
     var html =
-      '<div xmlns="http://www.w3.org/1999/xhtml" id="divApplab" tabindex="1" style="width: 320px; height: 480px;" class="divApplabDesignMode">' +
+      '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" tabindex="1" style="width: 320px; height: 480px;">' +
         '<button id="button1" style="padding: 0px; margin: 0px; height: 40px; width: 80px; font-size: 14px; color: rgb(0, 0, 0); position: absolute; left: 95px; top: 55px; background-color: rgb(238, 238, 238);" class="">Button</button>' +
         '<button id="button2" style="padding: 0px; margin: 0px; height: 40px; width: 80px; font-size: 14px; color: rgb(0, 0, 0); position: absolute; left: 100px; top: 160px; background-color: rgb(238, 238, 238);" class="">Button</button>' +
       '</div>';
@@ -35,7 +35,7 @@ describe('designMode.addScreenIfNecessary', function () {
 
   it('changes nothing if we already have a screen', function () {
     var html =
-      '<div xmlns="http://www.w3.org/1999/xhtml" id="divApplab" tabindex="1" style="width: 320px; height: 480px;" class="divApplabDesignMode">' +
+      '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" tabindex="1" style="width: 320px; height: 480px;">' +
         '<div class="screen" id="screen1" style="display: block; height: 480px; width: 320px; left: 0px; top: 0px; position: relative;">' +
           '<button id="button1" class="" style="padding: 0px; margin: 0px; height: 40px; width: 80px; font-size: 14px; color: rgb(0, 0, 0); position: absolute; left: 120px; top: 75px; background-color: rgb(238, 238, 238);">Button</button>' +
         '</div>' +
@@ -52,14 +52,14 @@ describe('designMode.addScreenIfNecessary', function () {
   });
 });
 
-describe('getIdDropdown filtering modes', function () {
+describe('applab: getIdDropdown filtering modes', function () {
   var documentRoot;
 
   beforeEach(function () {
     // Create a sample DOM to test against
     var sampleDom =
         '<div>' +
-          '<div id="divApplab" class="appModern">' +
+          '<div id="divApplab">' +
             '<div class="screen" id="screen1">' +
               '<div class="chart" id="chart9"></div>' +
               '<img src="" class="chart-friend" id="image1">' +
