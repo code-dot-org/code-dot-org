@@ -1722,9 +1722,9 @@ Applab.getIdDropdown = function (filterSelector) {
  * @private
  */
 Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
-  var designModeVizChildren = documentRoot.find('#designModeViz').children();
-  var elements = designModeVizChildren.toArray().concat(
-      designModeVizChildren.children().toArray());
+  var divApplabChildren = documentRoot.find('#divApplab').children();
+  var elements = divApplabChildren.toArray().concat(
+      divApplabChildren.children().toArray());
 
   // Return all elements when no filter is given
   if (filterSelector) {
@@ -1733,12 +1733,12 @@ Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
 
   return elements
       .sort(function (elementA, elementB) {
-        return elementUtils.getId(elementA) < elementUtils.getId(elementB) ? -1 : 1;
+        return elementA.id < elementB.id ? -1 : 1;
       })
       .map(function (element) {
         return {
-          text: quote(elementUtils.getId(element)),
-          display: quote(elementUtils.getId(element))
+          text: quote(element.id),
+          display: quote(element.id)
         };
       });
 };

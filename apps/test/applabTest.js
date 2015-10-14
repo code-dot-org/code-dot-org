@@ -16,7 +16,7 @@ window.Applab = {
 var AppLab = require('@cdo/apps/applab/applab');
 var designMode = require('@cdo/apps/applab/designMode');
 
-describe('designMode.addScreenIfNecessary', function () {
+describe('applab: designMode.addScreenIfNecessary', function () {
   it ('adds a screen if we dont have one', function () {
     var html =
       '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" tabindex="1" style="width: 320px; height: 480px;">' +
@@ -52,17 +52,17 @@ describe('designMode.addScreenIfNecessary', function () {
   });
 });
 
-describe('getIdDropdown filtering modes', function () {
+describe('applab: getIdDropdown filtering modes', function () {
   var documentRoot;
 
   beforeEach(function () {
     // Create a sample DOM to test against
     var sampleDom =
         '<div>' +
-          '<div id="designModeViz">' +
-            '<div class="screen" id="design_screen1">' +
-              '<div class="chart" id="design_chart9"></div>' +
-              '<img src="" class="chart-friend" id="design_image1">' +
+          '<div id="divApplab">' +
+            '<div class="screen" id="screen1">' +
+              '<div class="chart" id="chart9"></div>' +
+              '<img src="" class="chart-friend" id="image1">' +
             '</div>' +
           '</div>' +
         '</div>';
@@ -97,13 +97,13 @@ describe('getIdDropdown filtering modes', function () {
   });
 
   it('can filter on ID', function () {
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#design_screen1'), [
+    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#screen1'), [
       { "display": '"screen1"', "text": '"screen1"' }
     ]);
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#design_chart9'), [
+    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#chart9'), [
       { "display": '"chart9"', "text": '"chart9"' }
     ]);
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#design_image1'), [
+    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#image1'), [
       { "display": '"image1"', "text": '"image1"' }
     ]);
   });
