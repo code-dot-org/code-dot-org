@@ -2,10 +2,11 @@
 
 #addressees
   #before-contact
-    %p You are contacting the following volunteer:
+    %p You are contacting the following volunteer(s):
   #after-contact{:style=>"display: none;"}
-    %p You've successfully contacted this volunteer:
-  #names
+    %p You've successfully contacted these volunteer(s):
+  #name{:style=>"display: none;"}
+  #allnames{:style=>"display: none;"}
   %br
     Want to contact different volunteers?
     %a{href: "/volunteer/local"}
@@ -24,7 +25,7 @@
 
     .form-group
       %label.control-label{for: "teacher-email"} Your email
-      %p Your email address will be shared with the volunteer you contact.
+      %p Your email address will be shared with the volunteer(s) you contact.
       %div
         %input#teacher-email.form-control{name: "teacher_email_s", placeholder: "Email address", required: true, type: "text"}
 
@@ -40,7 +41,7 @@
 
     .form-group
       %label.control-label{for: "email-message"} Your message
-      %p Describe your Hour of Code event and how the volunteer can participate.
+      %p Describe your Hour of Code event and how these volunteer(s) can participate.
       %div
         %textarea#email-message.form-control{name: "email_message_s", placeholder: "Hi! I would like to invite you to my Hour of Code event. We'll have to run a quick background check, but we'd love if you could make it.", required: true, style: "height: 10em;"}
 

@@ -82,6 +82,7 @@ function sendQuery(params) {
 function updateResults(locations) {
   if (locations.length > 0) {
     $('#volunteer-search-facets').show();
+    $('#btn-contact-all').show();
     $('#controls').html('');
   } else {
     displayNoResults();
@@ -106,7 +107,7 @@ function getLocations(results) {
       var title = volunteers[i].name_s;
       var html = compileHTML(index, volunteers[i]);
       var contact_title = compileContact(index, volunteers[i]);
-      var contact_link = '<a id="contact-trigger-' + index + '" class="contact-trigger" onclick="return contactVolunteers()">Contact</a>';
+      var contact_link = '<a id="contact-trigger-' + index + '" class="contact-trigger" onclick="return contactVolunteer()">Contact</a>';
 
       var location = {
         lat: lat,
@@ -137,6 +138,7 @@ function updateFacets(results) {
 
 function displayNoResults() {
   $('#controls').html('<p>No results were found.</p>');
+  $('#btn-contact-all').hide();
 
   // Hide the facets by default.
   $('#volunteer-search-facets').hide();
@@ -245,6 +247,7 @@ function compileContact(index, location)
 {
   var details = '<li>' + location.name_s + ' (' + i18n(location.experience_s) + ')' + '</li>';
   var html = '<div id="addressee-details-' + index + '">' + details + '</div>';
+  $('#allnames').append(html);
   
   return html;
 }
@@ -252,13 +255,23 @@ function compileContact(index, location)
 function setContactTrigger(index, location, marker) {
   var contact_trigger = '.contact-trigger';
   $('#gmap').on('click', contact_trigger, function() {
-    $('#names').append(location.contact_title);
+    $('#name').append(location.contact_title);
   });
 }
 
-function contactVolunteers()
+function contactAllVolunteers()
 {
   $('#volunteer-map').hide();
+  $('#allnames').show();
+  $('#volunteer-contact').show();
+
+  return false;
+}
+
+function contactVolunteer()
+{
+  $('#volunteer-map').hide();
+  $('#name').show();
   $('#volunteer-contact').show();
 
   return false;
