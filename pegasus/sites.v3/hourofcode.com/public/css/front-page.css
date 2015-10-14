@@ -101,3 +101,17 @@
   line-height: 16px;
   padding-bottom: 15px;
 }
+
+.prizes-header {
+  margin-top: 25px;
+  margin-bottom: 10px; 
+}
+
+.apple {
+  width: 100px;
+}
+
+.amazon {
+  width: 190px;
+  padding-top: 16px;
+}
