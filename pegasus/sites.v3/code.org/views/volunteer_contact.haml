@@ -43,17 +43,17 @@
       %label.control-label{for: "email-message"} Your message
       %p Describe your Hour of Code event and how these volunteer(s) can participate.
       %div
-        %textarea#email-message.form-control{name: "email_message_s", placeholder: "Hi! I would like to invite you to my Hour of Code event. We'll have to run a quick background check, but we'd love if you could make it.", required: true, style: "height: 10em;"}
+        %textarea#email-message.form-control{name: "email_message_s", placeholder: "I would like to invite you to our Hour of Code event...  [If your school/district has background check requirements that need to be completed before a potential volunteer can attend an event, be sure to let the volunteer know by telling them about it here.]", required: true, style: "height: 10em;"}
 
 
-    %p{style: 'color: #00adbc; font-size: 1.125em;'} IMPORTANT: Code.org does not vet these volunteers
-    %p These volunteers are students or industry professionals who are looking to visit the classroom or participate remotely to inspire students. We have not vetted these volunteers. It is up to your school to run background and safety checks, and to verify that they are reliable, good public speakers, and a good fit for your Hour of Code. Code.org is not responsible for direct, indirect, incidental or consequential damages.
+    %p{style: 'color: #00adbc; font-size: 1.125em;'} IMPORTANT: Code.org has performed no references or background checks on these potential volunteers and neither recommends nor certifies any volunteer.
+    %p It is entirely your responsibility to thoroughly check references or perform any background checks required by your school or district. Code.org provides no warranty, guarantees of suitability, or information other than the ability to contact these potential volunteers, and all liability in any use of volunteers rests only with you. Under no circumstances is Code.org responsible for any loss or damage resulting from any person's reliance on this potential volunteer.
 
     .form-group
       .checkbox
         %label
           %input#understand-damages{name: "understand_damages_b", type: "checkbox", value: "1", required: true}
-            I understand Code.org does not vet volunteers and is not responsible for damages
+            I have read and I understood the paragraph above.
 
     .form-group.contact-submit-btn
       %button{type: "submit"} Send
