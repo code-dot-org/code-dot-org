@@ -305,7 +305,7 @@ Item.prototype.removeElement = function() {
  * Returns true if the item is currently fading away.
  */
 Item.prototype.isFading = function() {
-  return this.startFadeTime ? true : false;
+  return !!this.startFadeTime;
 };
 
 
@@ -313,7 +313,7 @@ Item.prototype.isFading = function() {
  * Returns true if the item has finished fading away.  The caller will usually
  * then call removeElement to destroy this item's assets.
  */
-Item.prototype.isGone = function() {
+Item.prototype.hasCompletedFade = function() {
   var currentTime = new Date().getTime();
 
   return this.startFadeTime && currentTime > this.startFadeTime + this.fadeTime;

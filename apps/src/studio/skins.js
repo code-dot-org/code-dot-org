@@ -265,6 +265,7 @@ function loadHoc2015(skin, assetUrl) {
   // Whether that goal should fade out when touched.  If true, then the
   // success image is never shown.
   skin.fadeOutGoal = true;
+  skin.goalSuccess = null;
 
   // Draw a goal an an offset to its usual location, useful for oversize goal
   // images, such as a person standing taller than a single grid square whose
