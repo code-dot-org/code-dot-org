@@ -24,7 +24,9 @@ class HipChat
   MAX_RETRIES = 3
 
   def self.developers(message, options={})
-    message(:developers, message, options)
+    # temporarily redirect developer logging to 'Server operations'.
+    # TODO(dave): rename or split HipChat.developers once we settle on a HipChat logging strategy.
+    message('server operations', message, options)
   end
 
   def self.log(message, options={})
@@ -34,7 +36,7 @@ class HipChat
   def self.message(room, message, options={})
     post_to_hipchat(room, message, options)
 
-    channel = "\##{Slack::CHANNEL_MAP[room.to_sym] || room}"
+    channel = "\##{Slack::CHANNEL_MAP[room] || room}"
     Slack.message slackify(message.to_s), channel: channel, username: @@name, color: options[:color]
   end
 

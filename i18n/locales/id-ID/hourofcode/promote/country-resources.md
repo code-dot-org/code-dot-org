@@ -28,6 +28,12 @@ p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6
 
 p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
 
+<% elsif @country == 'id' %>
+
+Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Desember 2015, kami mengetahui bahwa banyak siswa-siswi Indonesia yang menjalankan prosesi ujian. Untuk alasan ini kami memutuskan untuk menjalankan masa kampanye Hour of Code di Indonesia pada 12 hingga 20 Desember 2015. Kita tetap akan merasakan kemeriahan yang sama dan dengan tujuan yang sama namun dengan kebersamaan yang lebih besar karena akan ada lebih banyak siswa-siswi yang dapat mengikutinya.
+
+Mari bersama kita dukung gerakan Hour of Code di Indonesia!
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -49,7 +55,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 ## 2) Rencanakan perangkat yang keras yang anda butuhkan - komputer hanyalah opsional
 
-Pengalaman terbaik dari Hour of Code adalah jika tersedia komputer-komputer yang terkoneksi dengan internet. Tetapi Anda tidak membutuhkan komputer untuk tiap anak, dan Hour of Code tetap dapat dilakukan tanpa komputer sama sekali.
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
   * **Tes tutorial pada perangkat atau komputer pelajar.** Pastikan itu bekerja dengan baik (dengan suara dan gambar).
   * **Tinjau ulang halaman keberhasilan menyelesaikan tutorial** untuk melihat apa yang pelajar akan lihat ketika menyelesaikannya. 
@@ -62,13 +68,13 @@ Pengalaman terbaik dari Hour of Code adalah jika tersedia komputer-komputer yang
 
 ## 4) Inspirasikan pelajar - tunjukan mereka video
 
-Menunjukkan kepada siswa video inspiratif untuk kick off jam kode. Contoh:
+Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * Video orginal peluncuran Code.org, yang menampilkan Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (Ada versi [1 menit](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 menit](https://www.youtube.com/watch?v=nKIu9yen5nc), dan [9 menit](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [Presiden Obama menyerukan semua pelajar untuk belajar ilmu komputer](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Buat pelajar anda bersemangat - berikan intro singkat**
+**Get your students excited - give them a short intro**
 
 <% else %>
 

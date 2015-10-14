@@ -226,5 +226,7 @@
   "watchVideo": "Xem Video",
   "when": "Khi nào",
   "whenRun": "Khi chạy",
-  "workspaceHeaderShort": "Không gian làm việc:"
+  "workspaceHeaderShort": "Không gian làm việc:",
+  "runtimeErrorMsg": "Your program did not run successfully. Please remove line {lineNumber} and try again.",
+  "syntaxErrorMsg": "Your program contains a typo. Please remove line {lineNumber} and try again."
 }

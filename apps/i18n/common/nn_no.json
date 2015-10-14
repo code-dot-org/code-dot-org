@@ -226,5 +226,7 @@
   "watchVideo": "Sjå videoen",
   "when": "når",
   "whenRun": "når køyrande",
-  "workspaceHeaderShort": "Arbeidsområde: "
+  "workspaceHeaderShort": "Arbeidsområde: ",
+  "runtimeErrorMsg": "Your program did not run successfully. Please remove line {lineNumber} and try again.",
+  "syntaxErrorMsg": "Your program contains a typo. Please remove line {lineNumber} and try again."
 }

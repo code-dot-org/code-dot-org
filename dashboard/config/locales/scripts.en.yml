@@ -184,6 +184,7 @@ en:
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
           description_audience: Ages 10-18
+          Super Challenge - Variables: Super Challenge - Variables
         Course4pre:
           title: Course 4 Prerequisite
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
@@ -646,6 +647,7 @@ en:
           Getting User Input: Getting User Input
           Variables: Variables
           Looping and Random Numbers - Under the Sea: Looping and Random Numbers - Under the Sea
+          Multi-screen App: Multi-screen App
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming

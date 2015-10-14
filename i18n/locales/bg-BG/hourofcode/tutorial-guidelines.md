@@ -44,11 +44,11 @@ Code.org ще подготви разнообразие от дейности з
 
 Примери:
 
-  * [Mirror Images (an activity for an art teacher)](https://csedweek.org/csteacher/mirrorimages.pdf)
-  * [An arduino activity for a physics teacher](https://csedweek.org/csteacher/arduino.pdf)
-  * [A history of technology activity for a history teacher](https://csedweek.org/csteacher/besttechnology.pdf)
+  * [Огледални образи (дейност за преподавател по изобразително изкуство)](https://csedweek.org/csteacher/mirrorimages.pdf)
+  * [Arduino дейност за учител по физика](https://csedweek.org/csteacher/arduino.pdf)
+  * [История на технологията -дейност за учител по история](https://csedweek.org/csteacher/besttechnology.pdf)
 
-[<button>How can I submit my own lesson plan?</button>](#submit)
+[<button>Как мога да подам моя собствен план за урок?</button>](#submit)
 
   
   

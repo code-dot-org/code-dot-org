@@ -62,8 +62,11 @@ ____________________________________________________
 [example]
 
 **Example: X Marks the Spot** Use penUp and penDown to have the turtle draw an 'X', returning the turtle to the starting point.
- 
-```
+
+<table>
+<tr>
+<td>
+<pre>
 // Use penUp and penDown to have the turtle draw an 'X', returning the turtle to the starting point.
 penUp();
 move(-100,-100);
@@ -76,9 +79,18 @@ penDown();
 move(200,-200);
 penUp();
 move(-100,100);
-```
+</pre>
+</td>
+<td>
 
 <img src='https://images.code.org/146a196d93cc1520440ae1b1379d5c7f-image-1444486592202.gif' style='width: 150px;'> 
+
+</td>
+</tr>
+</table>
+ 
+
+
 
 [/example]
 
