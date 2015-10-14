@@ -24,9 +24,9 @@ In this interactive webinar, you'll hear from Melissa Jones, Community Manager a
 <br>
 [<button>Register Now</button>](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
-### Sneak Peak: 2015 Hour of Code Tutorials
+### Sneak Peek: 2015 Hour of Code Tutorials
 #### Wednesday, December 2, 2015 from 7:00 PM to 8:00 PM (CDT) 
-In this interactive webinar, you'll get a sneak peak of all the new tutorials for 2015. You'll get a chance to preview what's new, what's cool and what you might want to use in your classroom. This guided tour of the tutorials will be hosted by Code.org's VP of Product,  Alice Steinglass, VP of Product and will feature guest speakers from a number of the Hour of Code partners.
+In this interactive webinar, you'll get a sneak peek of all the new tutorials for 2015. You'll get a chance to preview what's new, what's cool and what you might want to use in your classroom. This guided tour of the tutorials will be hosted by Code.org's VP of Product,  Alice Steinglass, VP of Product and will feature guest speakers from a number of the Hour of Code partners.
 <br>
 [<button>Register Now</button>](http://www.eventbrite.com/e/sneak-peak-2015-hour-of-code-tutorials-tickets-17987437911)
 
