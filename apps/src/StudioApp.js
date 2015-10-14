@@ -340,10 +340,10 @@ StudioApp.prototype.init = function(config) {
   var promptDiv = document.getElementById('prompt');
   var prompt2Div = document.getElementById('prompt2');
   if (config.level.instructions) {
-    dom.setText(promptDiv, config.level.instructions);
+    $(promptDiv).text(config.level.instructions);
   }
   if (config.level.instructions2) {
-    dom.setText(prompt2Div, config.level.instructions2);
+    $(prompt2Div).text(config.level.instructions2);
     $(prompt2Div).show();
   }
 
@@ -383,7 +383,8 @@ StudioApp.prototype.init = function(config) {
       readOnly: config.readonlyWorkspace,
       textModeAtStart: config.level.textModeAtStart,
       beginnerMode: config.level.beginnerMode,
-      autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
+      autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly,
+      dropletTooltipsDisabled: config.level.dropletTooltipsDisabled
     });
   }
 
@@ -1524,6 +1525,9 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   });
 
   this.dropletTooltipManager = new DropletTooltipManager(this.appMsg, options.dropletConfig);
+  if (options.dropletTooltipsDisabled) {
+    this.dropletTooltipManager.setTooltipsEnabled(false);
+  }
   this.dropletTooltipManager.registerBlocksFromList(
     dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 

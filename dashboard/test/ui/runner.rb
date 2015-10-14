@@ -51,17 +51,23 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-f", "--feature Feature", Array, "Single feature or comma separated list of features to run") do |f|
     $options.feature = f
   end
-  opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost:9393") do |d|
-    $options.pegasus_domain = d
+  opts.on("-l", "--local", "Use local webdriver (not Saucelabs) and local domains") do
+    $options.local = 'true'
+    $options.pegasus_domain = 'localhost.code.org:3000'
+    $options.dashboard_domain = 'localhost.studio.code.org:3000'
   end
-  opts.on("-d", "--dashboard Domain", String, "Specify an override domain for studio.code.org, e.g. localhost:3000") do |d|
+  opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
+    print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n"\
+          "Try '-p localhost.code.org:3000' instead (this is the default when using '-l').\n" if p == 'localhost:3000'
+    $options.pegasus_domain = p
+  end
+  opts.on("-d", "--dashboard Domain", String, "Specify an override domain for studio.code.org, e.g. localhost.studio.code.org:3000") do |d|
+    print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n"\
+          "Try '-d localhost.studio.code.org:3000' instead (this is the default when using '-l').\n" if d == 'localhost:3000'
     $options.dashboard_domain = d
   end
   opts.on("-r", "--real_mobile_browser", "Use real mobile browser, not emulator") do
     $options.realmobile = 'true'
-  end
-  opts.on("-l", "--local", "Use local webdriver, not Saucelabs") do
-    $options.local = 'true'
   end
   opts.on("-m", "--maximize", "Maximize local webdriver window on startup") do
     $options.maximize = true
@@ -172,7 +178,8 @@ end
 features = $options.feature || Dir.glob('features/**/*.feature')
 browser_features = $browsers.product features
 
-HipChat.log "Starting #{browser_features.count} <b>dashboard</b> UI tests in #{$options.parallel_limit} threads</b>..."
+test_type = $options.run_eyes_tests ? 'eyes tests' : 'UI tests'
+HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} in #{$options.parallel_limit} threads</b>..."
 
 Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
   feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
@@ -296,7 +303,8 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   end
 
   if !parsed_output.nil? && scenario_count == 0 && succeeded
-    HipChat.log "<b>dashboard</b> UI tests skipped with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
+    # Don't log individual skips because we hit HipChat rate limits
+    # HipChat.log "<b>dashboard</b> UI tests skipped with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
   elsif succeeded
     # Don't log individual successes because we hit HipChat rate limits
     # HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
