@@ -33,3 +33,11 @@
     </button>
   </div>
 <% } %>
+
+<% if (unsubmitButton) { %>
+  <div id="share-cell" class="share-cell-enabled">
+    <button id="unsubmitButton" class="share">
+      <img src="<%= assetUrl('media/1x1.gif') %>"><%= msg.unsubmit() %>
+    </button>
+  </div>
+<% } %>

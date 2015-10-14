@@ -854,5 +854,4 @@ class ActivitiesControllerTest < ActionController::TestCase
     post :milestone, @milestone_params.merge(script_level_id: script_level_with_trophies.id)
     assert_response :success
   end
-
 end

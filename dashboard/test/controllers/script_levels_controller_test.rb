@@ -712,4 +712,24 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'submitted view option if submitted' do
+    sign_in @student
+    # Ensure that activity data from the last attempt is present in the @last_attempt instance variable
+    # Used by TextMatch view partial
+
+    last_attempt_data = 'test'
+    level = create(:applab, submittable: true)
+    script_level = create(:script_level, level: level)
+    Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
+    UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::SUBMITTED_RESULT)
+
+    get :show, script_id: script_level.script_id, stage_id: script_level.stage.position, id: script_level.position
+    p 'lvo'
+    p assigns(:level_view_options)
+    p 'ao'
+    p assigns(:app_options)
+    # submitted
+    # unsubmit_url
+  end
+
 end
