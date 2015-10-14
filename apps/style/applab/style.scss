@@ -597,6 +597,18 @@ button.arrow:focus {
   }
 }
 
+#submitButton {
+  border-color: $purple;
+  background-color: $purple;
+  color: white;
+}
+
+#unsubmitButton {
+  border-color: $light_purple;
+  background-color: $light_purple;
+  color: white;
+}
+
 #manageAssetsModal {
   width: 800px;
   margin-left: -400px;
