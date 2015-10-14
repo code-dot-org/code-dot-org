@@ -423,7 +423,7 @@ end
 
   # For the following file types, blow away the cookie (unless under one of the
   # blacklisted paths), so that we always cache.
-  if (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js)(\?[a-z0-9]+)?$" &&
+  if (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js|ttf)(\?[a-z0-9]+)?$" &&
       !(req.url ~ "^/api/") &&
       !(req.url ~ "^/v3/assets/") &&
       (req.request == "GET" || req.request == "HEAD")) {
