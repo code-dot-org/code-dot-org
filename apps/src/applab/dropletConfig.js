@@ -3,6 +3,7 @@ var dontMarshalApi = require('./dontMarshalApi');
 var consoleApi = require('./consoleApi');
 var showAssetManager = require('../applab/assetManagement/show.js');
 var ChartApi = require('./ChartApi');
+var elementUtils = require('./designElements/elementUtils');
 
 var applabConstants = require('./constants');
 
@@ -25,7 +26,7 @@ var COLOR_YELLOW = '#FFF176';
  */
 function getScreenIds() {
   var ret = $("#designModeViz .screen").map(function () {
-    return '"' + this.id + '"';
+    return '"' + elementUtils.getId(this) + '"';
   });
 
   // Convert from jQuery's array-like object to a true array
