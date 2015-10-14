@@ -95,22 +95,24 @@ function getLocations(results) {
   var locations = [];
 
   if(results.response){
-    var places = results.response.docs; // The actual places that were returned by Solr.
-    var places_count = places.length;
+    var volunteers = results.response.docs; // The actual volunteers that were returned by Solr.
+    var volunteers_count = volunteers.length;
 
-    for(var i = 0; i < places_count; i++){
+    for(var i = 0; i < volunteers_count; i++){
       var index = i;
-      var coordinates = places[i].location_p.split(',');
+      var coordinates = volunteers[i].location_p.split(',');
       var lat = coordinates[0];
       var lon = coordinates[1];
-      var title = places[i].school_name_s;
-      var html = compileHTML(index, places[i]);
-      var contact_link = '<a href="/volunteer/local/contact">Contact</a>'
+      var title = volunteers[i].name_s;
+      var html = compileHTML(index, volunteers[i]);
+      var contact_title = compileContact(index, volunteers[i]);
+      var contact_link = '<a id="contact-trigger-' + index + '" class="contact-trigger" onclick="return contactVolunteers()">Contact</a>';
 
       var location = {
         lat: lat,
         lon: lon,
         title: title,
+        contact_title: contact_title,
         html: html + contact_link,
         zoom: 10
       };
@@ -175,6 +177,9 @@ function loadMap(locations) {
   if (locations.length > 0) {
     map_options.force_generate_controls = true;
     map_options.locations = locations;
+    map_options.afterOpenInfowindow = function(index, location, marker) {
+      setContactTrigger(index, location, marker);
+    };
   }
 
   gmap.Load(map_options);
@@ -235,6 +240,42 @@ function compileHTML(index, location) {
 
   return html;
 }
+
+function compileContact(index, location)
+{
+  var details = '<li>' + location.name_s + ' (' + i18n(location.experience_s) + ')' + '</li>';
+  var html = '<div id="addressee-details-' + index + '">' + details + '</div>';
+  
+  return html;
+}
+
+function setContactTrigger(index, location, marker) {
+  var contact_trigger = '.contact-trigger';
+  $('#gmap').on('click', contact_trigger, function() {
+    $('#names').append(location.contact_title);
+  });
+}
+
+function contactVolunteers()
+{
+  $('#volunteer-map').hide();
+  $('#volunteer-contact').show();
+
+  return false;
+}
+
+function sendEmail(data)
+{
+  $("#contact-submit-btn").attr('disabled','disabled');
+  $("#contact-submit-btn").removeClass("button_enabled").addClass("button_disabled");
+
+  $('#volunteer-contact-form').hide();
+  $('#before-contact').hide();
+  $('#after-contact').show();
+
+  return false;
+}
+
 
 function i18n(token) {
   var labels = {
