@@ -32,8 +32,7 @@ var envOptions = {
   minify: (process.env.MOOC_MINIFY === '1'),
   localize: (process.env.MOOC_LOCALIZE === '1'),
   dev: (process.env.MOOC_DEV === '1'),
-  digest: false //(process.env.MOOC_DIGEST === '1')
-
+  digest: false // Handled by Rails now
 };
 
 var LOCALES = (envOptions.localize ? [
