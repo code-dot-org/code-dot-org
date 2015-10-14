@@ -247,4 +247,5 @@ if $?.success?
   puts '--------------------------------------------------------'
   puts "Dashboard listening at: http://#{public_dns_name}:8080"
   puts "Pegasus listening at:   http://#{public_dns_name}:8081"
+  puts "To ssh to server:       ssh gateway.code.org -t ssh #{private_dns_name}"
 end
