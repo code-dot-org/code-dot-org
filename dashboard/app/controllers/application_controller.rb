@@ -129,6 +129,9 @@ class ApplicationController < ActionController::Base
         script_level_solved_response(response, script_level)
       else # not solved
         response[:message] = 'try again'
+        response[:hint_view_requests] = HintViewRequest.milestone_response(options[:script_level], current_user)
+        response[:hint_view_request_url] = hint_view_requests_path
+        response[:script_level_id] = options[:script_level].id
       end
     else
       response[:message] = 'no script provided'
@@ -153,22 +156,6 @@ class ApplicationController < ActionController::Base
         options[:activity] &&
         options[:level_source_image]
       response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
-    end
-
-    unless options[:solved?]
-      # Call method to generate hint and related attributes, copying results into response.
-      hint_details = ExperimentActivity::determine_hint({
-                                                         level_source: options[:level_source],
-                                                         current_user: current_user,
-                                                         enable_external_hints: Rails.env.production?,
-                                                         ip: request.remote_ip,
-                                                         uri: request.referer,
-                                                         activity: options[:activity]})
-      response[:hint] = hint_details[:hint] if hint_details[:hint]
-      response[:hint_request_placement] = hint_details[:hint_request_placement] if
-        hint_details[:hint_request_placement]
-      response[:hint_requested_url] =
-        activity_hint_path(hint_details[:activity_hint]) if hint_details[:activity_hint]
     end
 
     # Set up the background design

@@ -19,4 +19,16 @@
 class HintViewRequest < ActiveRecord::Base
   belongs_to :user
   belongs_to :script_level
+
+  # Returns an array of serializable hashes representing all of a given
+  # user's hint view requests for a given script_level
+  # called by ApplicationController.milestone_response
+  # used by Studio's feedback modal to decide whether or not to show a
+  # user a hint based on the already-viewed hints.
+  def HintViewRequest.milestone_response(script_level, user)
+    return HintViewRequest.where(script_level: script_level, user: user).find_each.map do |hint_view_request|
+      hint_view_request.serializable_hash(only: [:feedback_type, :feedback_xml])
+    end
+  end
+
 end
