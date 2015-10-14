@@ -36,10 +36,8 @@ var SharingWarningsDialog = module.exports = React.createClass({
 
     var styles = {
       main: {
-        margin: '10px 0px 10px 10px',
         position: 'absolute',
         top: 50,
-        // TODO - centering doesnt look quite right yet on mobile
         left: '50%',
         transform: 'translate(-50%, 0)',
         border: '1px solid #ccc',
@@ -49,7 +47,8 @@ var SharingWarningsDialog = module.exports = React.createClass({
         borderRadius: '4px',
         outline: 'none',
         padding: '20px',
-        zIndex: 1050 // based off of behavior in dashboard's dialog.js
+        zIndex: 1050, // based off of behavior in dashboard's dialog.js
+        width: window.screen.width < 500 ? '80%' : undefined
       },
       overlay: {
         position: 'fixed',
