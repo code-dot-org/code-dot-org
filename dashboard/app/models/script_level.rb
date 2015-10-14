@@ -27,6 +27,7 @@ class ScriptLevel < ActiveRecord::Base
   belongs_to :stage, inverse_of: :script_levels
   acts_as_list scope: :stage
   has_many :callouts, inverse_of: :script_level
+  has_many :hint_view_requests
 
   NEXT = 'next'
 
