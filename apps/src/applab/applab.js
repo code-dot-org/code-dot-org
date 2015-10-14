@@ -229,8 +229,10 @@ function adjustAppSizeStyles(container) {
   }
 
   var ss = document.styleSheets;
+  // Match applab.css or (for production) applab-{hex-fingerprint}.css
+  var applabStyleSheetRegex = /\/applab-?[0-9a-f]*\.css$/i;
   for (var i = 0; i < ss.length; i++) {
-    if (ss[i].href && (ss[i].href.indexOf('applab.css') !== -1)) {
+    if (ss[i].href && (applabStyleSheetRegex.test(ss[i].href))) {
       // We found our applab specific stylesheet:
       var rules = ss[i].cssRules || ss[i].rules;
       var changedRules = 0;
