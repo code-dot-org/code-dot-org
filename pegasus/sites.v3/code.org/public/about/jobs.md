@@ -8,6 +8,7 @@ nav: about_nav
 **We are currently hiring for:**
 
 - [CS Curriculum Writer](#curric)
+- [Engineering Manager / Chief Architect](#eng)
 - [Operations Coordinator  (Events) ](#opscoord)
 - [Technical Product Manager](#techpm)
 
@@ -56,6 +57,41 @@ The candidate should also have:
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 Please include lesson plan samples that are your original work, and highlight relevant experience designing, developing, or writing implement curricular materials. 
+
+## <a name="eng" href="#eng">Engineering Manager / Chief Architect (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is recruiting for an experienced Head of Engineering / Chief Architect. Full-time, salaried. Responsibilities of the position include:
+
+- Partnering with the Head of Product/Marketing to build a curriculum platform that reaches tens of millions of students and hundreds of thousands of classrooms
+- Set architectural direction for how Code.org's web site, services, and tutorial platform is built, and be accountable for scalability + uptime
+- Manage the Code.org engineering team (team of 12+ software engineers)
+- Hiring, career development, and mentorship of new engineers
+
+
+
+**Skills and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Bachelor’s degree with a major in Computer Science
+- 10+ years as a software engineer or manager of software engineers
+- 5+ years as a manager of software engineers; past experience managing a team of at least 7 engineers
+- Full stack Web engineering experience, i.e. databases, application, front-end
+- DEEP knowledge and experience in either JavaScript OR Ruby
+- Experienced in what it takes to scale a large back-end; scalability, analytics, particularly the modern tools of the trade
+- Experience building and running a large scale consumer-focused Web service, with at least 1M users
+- Mobile development experience (iOS, Android) desired but not required
+- Experience in a fast growth start-up environment desired
+
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+
+Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="opscoord" href="#opscoord">Operations Coordinator (Seattle, WA)</a>
