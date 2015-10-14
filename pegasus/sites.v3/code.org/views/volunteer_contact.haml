@@ -1,0 +1,58 @@
+%h1 Contact a Volunteer
+
+#addressees
+  #before-contact
+    %p You are contacting the following volunteer:
+  #after-contact{:style=>"display: none;"}
+    %p You've successfully contacted this volunteer:
+  #names
+  %br
+    Want to contact different volunteers?
+    %a{href: "/volunteer/local"}
+      Search here
+    for volunteers near your school.
+
+%br
+#volunteer-contact-form
+  %form{:id=>"contact-volunteer-form", role: "form", onsubmit: "return sendEmail()"}
+    #error_message
+
+    .form-group
+      %label.control-label{for: "teacher-name"} Your name
+      %div
+        %input#teacher-name.form-control{name: "teacher_name_s", placeholder: "Full name", required: true, type: "text"}
+
+    .form-group
+      %label.control-label{for: "teacher-email"} Your email
+      %p Your email address will be shared with the volunteer you contact.
+      %div
+        %input#teacher-email.form-control{name: "teacher_email_s", placeholder: "Email address", required: true, type: "text"}
+
+    .form-group
+      %label.control-label{for: "school-name"} School name
+      %div
+        %input#school-name.form-control{name: "school_name_s", placeholder: "School name", required: true, type: "text"}
+
+    .form-group
+      %label.control-label{for: "school-location"} School address
+      %div
+        %input#school-location.form-control{name: "school_location_s", placeholder: "School address", required: true, type: "text"}
+
+    .form-group
+      %label.control-label{for: "email-message"} Your message
+      %p Describe your Hour of Code event and how the volunteer can participate.
+      %div
+        %textarea#email-message.form-control{name: "email_message_s", placeholder: "Hi! I would like to invite you to my Hour of Code event. We'll have to run a quick background check, but we'd love if you could make it.", required: true, style: "height: 10em;"}
+
+
+    %p{style: 'color: #00adbc; font-size: 1.125em;'} IMPORTANT: Code.org does not vet these volunteers
+    %p These volunteers are students or industry professionals who are looking to visit the classroom or participate remotely to inspire students. We have not vetted these volunteers. It is up to your school to run background and safety checks, and to verify that they are reliable, good public speakers, and a good fit for your Hour of Code. Code.org is not responsible for direct, indirect, incidental or consequential damages.
+
+    .form-group
+      .checkbox
+        %label
+          %input#understand-damages{name: "understand_damages_b", type: "checkbox", value: "1", required: true}
+            I understand Code.org does not vet volunteers and is not responsible for damages
+
+    .form-group.contact-submit-btn
+      %button{type: "submit"} Send
