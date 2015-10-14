@@ -214,7 +214,8 @@ div#visualizationResizeBar {
   max-width: none !important;
   width: 352px;
   height: 612px;
-  margin: 20px auto;
+  margin: 0 auto;
+  padding: 20px 0;
 
   #designToggleRow, #gameButtons {
     display: none;
