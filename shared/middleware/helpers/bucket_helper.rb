@@ -57,7 +57,7 @@ class BucketHelper
 
       src = "#{@bucket}/#{src_prefix}#{filename}"
       dest = s3_path dest_owner_id, dest_channel_id, filename
-      @s3.copy_object(bucket: @bucket, key: dest, copy_source: src, metadata_directive: 'REPLACE')
+      @s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
 
       {filename: filename, category: category, size: fileinfo.size}
     end
