@@ -9360,8 +9360,6 @@ module.exports = {
 },{"./BooleanPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/BooleanPropertyRow.jsx","./ColorPickerPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ColorPickerPropertyRow.jsx","./EventHeaderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventHeaderRow.jsx","./EventRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventRow.jsx","./PropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/PropertyRow.jsx","./ZOrderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ZOrderRow.jsx","./elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js"}],"/home/ubuntu/staging/apps/build/js/applab/designElements/chart.jsx":[function(require,module,exports){
 /* global $ */
 
-var React = require('react');
-
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
@@ -9483,7 +9481,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/BooleanPropertyRow.jsx","./EventHeaderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventHeaderRow.jsx","./EventRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventRow.jsx","./ImagePickerPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ImagePickerPropertyRow.jsx","./PropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/PropertyRow.jsx","./ZOrderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ZOrderRow.jsx","./elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js","react":"/home/ubuntu/staging/apps/node_modules/react/react.js"}],"/home/ubuntu/staging/apps/build/js/applab/designElements/canvas.jsx":[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/BooleanPropertyRow.jsx","./EventHeaderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventHeaderRow.jsx","./EventRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventRow.jsx","./ImagePickerPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ImagePickerPropertyRow.jsx","./PropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/PropertyRow.jsx","./ZOrderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ZOrderRow.jsx","./elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js"}],"/home/ubuntu/staging/apps/build/js/applab/designElements/canvas.jsx":[function(require,module,exports){
 
 var PropertyRow = require('./PropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
