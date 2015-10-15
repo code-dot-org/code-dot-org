@@ -14,8 +14,8 @@ window.Applab = {
   appHeight: 480
 };
 
-var Applab = require('@cdo/apps/Applab/Applab');
-var designMode = require('@cdo/apps/Applab/designMode');
+var Applab = require('@cdo/apps/applab/applab');
+var designMode = require('@cdo/apps/applab/designMode');
 
 describe('applab: designMode.addScreenIfNecessary', function () {
   it ('adds a screen if we dont have one', function () {
