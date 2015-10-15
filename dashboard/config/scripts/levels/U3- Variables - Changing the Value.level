@@ -1,9 +1,9 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-05-19T14:13:02.000Z",
+  "created_at": "2015-10-15T14:51:26.000Z",
   "level_num": "custom",
-  "user_id": 13,
+  "user_id": 155,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -59,11 +59,14 @@
       "addOperator": null
     },
     "edit_code": true,
+    "encrypted_examples": [
+
+    ],
     "embed": "false",
-    "instructions": "Predict the value of a and b. Add console.log statements to find out the actual value of a and b. (Click for full instructions)",
+    "markdown_instructions": "# Variable Reassignment\r\n\r\nOur old friend Turtle is back! Turtle is going to allow us to easily play with some variables. \r\n\r\nIn the programs we have seen so far the value of the variable stays the same through the whole program. You don't have to keep a variable the same value for the whole program. We can change its value as the program runs.\r\n\r\n# Do This\r\n\r\n* ** Run the code** and see what happens.\r\n\r\n* ** Update the value of 'turnAmount' before each moveForward** so the turtle turns a different amount each time.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "slider_speed": "0.1",
+    "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -72,27 +75,22 @@
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
+    "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "true",
-    "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "true",
-    "start_blocks": "var a = 3;\r\nvar b = 7;\r\na = b;\r\nb = a;",
-    "encrypted_examples": [
-
-    ],
-    "markdown_instructions": "# Variable Reassignment\r\n\r\nWe can change the value of variables as the program runs. Sometimes we event set the value of a variable to value of another variable!\r\n\r\nWhen we assign values of variables remember: the variable on the left of the equal sign gets set to the value of the expression on the right side of the equal sign.\r\n\r\n# Do This\r\n\r\n* **Make a prediction** about what will happen when you run the code. What will the values of a and b at the end of the program?\r\n\r\n* **Add console.log statements** at the end of the program to find out what the value of a and b are.\r\n\r\n* On the next level we will take a closer look at the why.",
-    "never_autoplay_video": "false",
-    "examples_required": "false",
     "droplet_tooltips_disabled": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "start_blocks": "var moveAmount = 50;\r\nvar turnAmount = 90;\r\npenColor(\"red\");\r\nturnRight(turnAmount);\r\nmoveForward(moveAmount);\r\nmoveAmount = 75;\r\npenColor(\"blue\");\r\nturnRight(turnAmount);\r\nmoveForward(moveAmount);\r\nmoveAmount = 100;\r\npenColor(\"green\");\r\nturnRight(turnAmount);\r\nmoveForward(moveAmount);\r\n"
   }
 }]]></config>
   <blocks/>
