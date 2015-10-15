@@ -34,8 +34,8 @@ title: Poste Stats
       FROM poste_clicks where message_id = #{message_id}
      ").count
 
-     first_sent_message = DB[:poste_deliveries].where(message_id: 58).order(:id).first
-     last_sent_message = DB[:poste_deliveries].where(message_id: 58).order(:id).last
+     first_sent_message = DB[:poste_deliveries].where(message_id: message_id).order(:id).first
+     last_sent_message = DB[:poste_deliveries].where(message_id: message_id).order(:id).last
      if first_sent_message && last_sent_message
        message_sent_dates = [first_sent_message[:created_at], last_sent_message[:created_at]]
      end
