@@ -28,13 +28,32 @@ def export_contacts_to_csv(contacts, path)
   end
 end
 
+COUNTRY_FIELDS_TO_US_VALUES =
+  {
+   'hoc_country_s' => ['us'],
+   'country_s' => ['united states'],
+   'create_ip_country_s' => ['united states', 'reserved']
+  }
+
+def international?(solr_record)
+  COUNTRY_FIELDS_TO_US_VALUES.each do |field, us_values|
+    record_value = solr_record[field]
+    if record_value
+      return !us_values.include?(record_value)
+    end
+  end
+  # if the record has no country fields in it assume us
+  return false
+end
+
 def query_contacts(params, &block)
   fields = params[:fields] if params[:fields]
 
   [].tap do |results|
     SOLR.query(params.merge(rows: 10000)).each do |i|
-      i = yield(i) if block_given?
-      results << {email: i['email_s'].downcase.strip, name: i['name_s'], international: i['international'], organizer: i['organizer']}.merge(i.slice(*fields)) if i
+      next unless i
+      i['international'] = international?(i)
+      results << {email: i['email_s'].downcase.strip, name: i['name_s'], international: international?(i)}.merge(i.slice(*fields))
     end
   end
 end
