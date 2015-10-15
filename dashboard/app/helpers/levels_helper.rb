@@ -176,7 +176,7 @@ module LevelsHelper
   # Options hash for Blockly
   def blockly_options
     l = @level
-    throw ArgumentError("#{l} is not a Blockly object") unless l.is_a? Blockly
+    raise ArgumentError.new("#{l} is not a Blockly object") unless l.is_a? Blockly
     # Level-dependent options
     app_options = l.blockly_options.dup
     level_options = app_options[:level] = app_options[:level].dup
