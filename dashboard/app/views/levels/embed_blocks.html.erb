@@ -1,13 +1,22 @@
 <%- # Embedded Blockly block html template. Derived from /blockly/src/templates/readonly.html.ejs, converted to erb %>
 <%-
   options = local_assigns
-  options[:pretty] = Rails.configuration.pretty_apps ? '' : '.min'
+  blockly_path = options[:baseUrl]
+  js_locale = options[:locale]
+  app = options.delete :app
 %>
 <!DOCTYPE html>
 <html dir="<%= locale_dir %>">
 <head>
   <meta charset="utf-8">
   <title>Blockly</title>
+  <link href="<%= asset_path('css/common.css') %>" rel="stylesheet" type="text/css"/>
+  <script src="<%= asset_path('js/blockly.js') %>"></script>
+  <script src="<%= asset_path("js/#{js_locale}/blockly_locale.js") %>"></script>
+  <script src="<%= asset_path('js/common.js') %>"></script>
+  <script src="<%= asset_path("js/#{js_locale}/common_locale.js") %>"></script>
+  <script src="<%= asset_path("js/#{js_locale}/#{app}_locale.js") %>"></script>
+  <script src="<%= asset_path("js/#{app}.js") %>"></script>
   <%= javascript_include_tag 'application' %>
 </head>
 <body class="readonly embed-block">
@@ -15,9 +24,9 @@
   <script type="text/javascript" src="/shared/js/shared.js"></script>
   <script>
     var appOptions = <%= raw options.to_json %>;
-    apps.load(function () {
-      window[appOptions.app + 'Main'](appOptions);
-    });
+    window.onload = function () {
+      <%= app %>Main(appOptions);
+    };
   </script>
 </body>
 </html>
