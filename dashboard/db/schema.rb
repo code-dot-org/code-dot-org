@@ -192,15 +192,17 @@ ActiveRecord::Schema.define(version: 20151013224202) do
   add_index "games", ["intro_video_id"], name: "index_games_on_intro_video_id", using: :btree
 
   create_table "hint_view_requests", force: :cascade do |t|
-    t.integer  "user_id",         limit: 4
-    t.integer  "script_level_id", limit: 4
-    t.integer  "feedback_type",   limit: 4
-    t.string   "feedback_xml",    limit: 255
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.integer  "user_id",       limit: 4
+    t.integer  "script_id",     limit: 4
+    t.integer  "level_id",      limit: 4
+    t.integer  "feedback_type", limit: 4
+    t.string   "feedback_xml",  limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
-  add_index "hint_view_requests", ["script_level_id"], name: "index_hint_view_requests_on_script_level_id", using: :btree
+  add_index "hint_view_requests", ["level_id"], name: "index_hint_view_requests_on_level_id", using: :btree
+  add_index "hint_view_requests", ["script_id"], name: "index_hint_view_requests_on_script_id", using: :btree
   add_index "hint_view_requests", ["user_id"], name: "index_hint_view_requests_on_user_id", using: :btree
 
   create_table "level_source_hints", force: :cascade do |t|
@@ -549,6 +551,7 @@ ActiveRecord::Schema.define(version: 20151013224202) do
   add_index "workshops", ["name"], name: "index_workshops_on_name", using: :btree
   add_index "workshops", ["program_type"], name: "index_workshops_on_program_type", using: :btree
 
-  add_foreign_key "hint_view_requests", "script_levels"
+  add_foreign_key "hint_view_requests", "levels"
+  add_foreign_key "hint_view_requests", "scripts"
   add_foreign_key "hint_view_requests", "users"
 end
