@@ -34,14 +34,15 @@ Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as att
   When element "#runButton" is visible
   Then element ".header_middle a:first" has class "level_link attempted"
 
-Scenario: Go to puzzle 1, see video, go somewhere else, return to puzzle 1, should not see video
-  Given I am on "http://studio.code.org/hoc/1"
+@no_mobile
+Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video
+  Given I am on "http://studio.code.org/hoc/10"
   And I rotate to landscape
   Then I wait until element "#video" is visible
   Then I close the dialog
-  Then I wait to see a dialog titled "Puzzle 1 of 20"
+  Then I wait to see a dialog titled "Puzzle 10 of 20"
   Then I close the dialog
-  Then I am on "http://studio.code.org/hoc/2"
-  Then I am on "http://studio.code.org/hoc/1"
-  Then element "#runButton" is visible
-
+  Then I am on "http://studio.code.org/hoc/11"
+  Then I wait to see a dialog titled "Puzzle 11 of 20"
+  Then I am on "http://studio.code.org/hoc/10"
+  Then I wait to see a dialog titled "Puzzle 10 of 20"

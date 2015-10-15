@@ -30,6 +30,14 @@ Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Des
 
 Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
+<% elsif @country == 'jp' %>
+
+## Hour of Code(アワーオブコード) 2015紹介ビデオ
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/watch?v=_C9odNcq3uQ"><strong>Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)</strong></a>
+
+[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+
 <% elsif @country ==  'uk' %>
 
 # How-to Guide for Organizations
