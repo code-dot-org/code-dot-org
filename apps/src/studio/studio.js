@@ -4462,8 +4462,6 @@ Studio.allGoalsVisited = function() {
           var allowQueueExtension = false;
           var prefix = 'whenSpriteCollided-' + Studio.protagonistSpriteIndex + '-';
           callHandler(prefix + 'anything', allowQueueExtension);
-
-          callHandler('whenTouchGoal');
         }
 
       } else {
@@ -4474,6 +4472,9 @@ Studio.allGoalsVisited = function() {
             if (skin.fadeOutGoal) {
               goal.startFadeTime = new Date().getTime();
             }
+
+            callHandler('whenTouchGoal');  
+             
             break;
           }
         }

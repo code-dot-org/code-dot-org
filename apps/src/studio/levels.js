@@ -2124,7 +2124,6 @@ levels.js_hoc2015_event_score_points = {
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 1,  0, 0, 0, 0]],
   "embed": "false",
-  'protagonistSpriteIndex': 0,
   "instructions": "\"I’m counting on you, BOT1!\"",
   "instructions2": "Change your score when you get a pilot. Can you make BOT1 win when he gets 1000 points?",
   "autoArrowSteer": true,
@@ -2133,7 +2132,12 @@ levels.js_hoc2015_event_score_points = {
   "showTimeoutRect": true,
   "requiredForSuccess" : {
     "removedItemCount": 2
-  }
+  },
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  },
 };
 
 
