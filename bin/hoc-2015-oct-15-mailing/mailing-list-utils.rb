@@ -53,7 +53,7 @@ def query_contacts(params, &block)
     SOLR.query(params.merge(rows: 10000)).each do |i|
       next unless i
       i['international'] = international?(i)
-      results << {email: i['email_s'].downcase.strip, name: i['name_s'], international: international?(i)}.merge(i.slice(*fields))
+      results << {email: i['email_s'].downcase.strip, name: i['name_s'], international: international?(i).to_s}.merge(i.slice(*fields))
     end
   end
 end
