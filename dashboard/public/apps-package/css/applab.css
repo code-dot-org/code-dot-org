@@ -239,7 +239,8 @@ div#visualizationResizeBar {
   max-width: none !important;
   width: 352px;
   height: 612px;
-  margin: 20px auto; }
+  margin: 0 auto;
+  padding: 20px 0; }
   #visualizationColumn.wireframeShare #designToggleRow, #visualizationColumn.wireframeShare #gameButtons {
     display: none; }
   #visualizationColumn.wireframeShare #visualization {
@@ -359,9 +360,8 @@ img#turtleImage {
     margin: 0;
     line-height: 30px;
     font-size: 18px; }
-  #debug-area-header.js-hover-hack {
-    cursor: pointer; }
-    #debug-area-header.js-hover-hack #show-hide-debug-icon {
+    #debug-area-header #show-hide-debug-icon:hover {
+      cursor: pointer;
       color: white; }
 
 #debug-commands-header {
