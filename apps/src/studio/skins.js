@@ -235,7 +235,7 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.specialItemProperties = {
     'pig':    { frames: 12, scale: 1,   activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
-    'man':    { frames: 12, scale: 1,   activity: 'chase', speed: constants.SpriteSpeed.VERT_SLOW  },
+    'man':    { frames: 12, scale: 1,   activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
     'roo':    { frames: 15, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
     'bird':   { frames:  8, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
     'spider': { frames: 12, scale: 1.2, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
