@@ -27,6 +27,13 @@ class LevelsHelperTest < ActionView::TestCase
     self.stubs(:current_user).returns nil
   end
 
+  test "blockly_options refuses to generate options for non-blockly levels" do
+    @level = create(:match)
+    assert_raises(ArgumentError) do
+      blockly_options
+    end
+  end
+
   test "should parse maze level with non string array" do
     @level.properties["maze"] = [[0, 0], [2, 3]]
     options = blockly_options
