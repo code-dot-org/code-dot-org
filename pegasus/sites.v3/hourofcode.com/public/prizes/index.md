@@ -38,7 +38,7 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
 
 ## Prizes for EVERY organizer
 
-Every educator who hosts an Hour of Code is eligible to receive **$10 in Amazon credit** as a thank you gift!
+Every educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com or Microsoft’s Windows Store** as a thank you gift!
 
 <% if @country == 'us' %>
 
@@ -54,7 +54,10 @@ One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 wo
 You must sign up **before** Dec 7th in order to be eligible to receive the all organizer thank you gift. 
 
 ## When will I receive my thank you gift?
-We will contact you in December after Computer Science Education Week (Dec 7-11th) with next steps on how to redeem your thank you gift.
+We will contact you in December after Computer Science Education Week (Dec 7-11th) with next steps on how to redeem your choice of thank you gift.
+
+## Can I receive both Amazon.com and Microsoft's Windows store credit?
+No. Thank you gifts are limited to one per organizer. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank you gift.
 
 ## Does your whole school have to enter to win the $10,000 in hardware?
 Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= resolve_url('/prizes/hardware-signup') %>). Every teacher participating will need to [sign up](<%= resolve_url('/') %>) their classroom individually in order to receive the all organizer thank you gift.
