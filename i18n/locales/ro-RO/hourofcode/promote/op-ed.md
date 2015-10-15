@@ -11,7 +11,7 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
   
 
 
-Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to find state specific information about computer science.
+Mergeti la [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) pentru a gasi statistici specifice si informatii despre tehnologia computerelor.
 
 **Titlu: Utilizarea computerului la Locurile de Munca**
 
@@ -43,6 +43,6 @@ Trebuie sa recrutam mai multi profesori de stiinta compuerului si sa incurajam d
 
 Potrivit Biroului de statistică a muncii, până în 2020, avor fi disponibile 9,2 milioane de locuri de muncă în domenii STEM. Jumătate din aceste locuri de muncă-4,6 milioane — vor fi in IT si tehnologie. Si stiinta calculatorului este intr-o continua crestere a cunostintelor fundamentale ale secolului 21. Cine va ocupa aceste locuri de munca disponibile daca elevilor nu le este data oportunitatea de a aduna aceste abilitati necesare?
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. In scolile din **[STATUL]**, elevii vor participa la un eveniment national marca Hour of Code, demistificand ideea stiintei computerului si speram ca va fi stimulat apetitul lor de cunoastere si vor invata mai multe. Eu ma voi alatura lor si va invit si pe voi sa va alaturati. Toata lumea ar trebui sa invete cum sa programeze. Visit https://hourofcode.com/<%= @country %> to learn more and get started. Sprijiniti eforturile noastre pentru a aduce stiinta computerelor si programarea in cat mai multe scoli din **[ORASUL]**.
+Aceasta saptamana <%= campaign_date('full') %>, este numita Saptamana Educatiei in Tehnologia computerelor si programare. In scolile din **[STATUL]**, elevii vor participa la un eveniment national marca Hour of Code, demistificand ideea stiintei computerului si speram ca va fi stimulat apetitul lor de cunoastere si vor invata mai multe. Eu ma voi alatura lor si va invit si pe voi sa va alaturati. Toata lumea ar trebui sa invete cum sa programeze. Vizitaţi https://hourofcode.com/ < % = alte @country %> pentru a afla mai multe şi pentru a începe. Sprijiniti eforturile noastre pentru a aduce stiinta computerelor si programarea in cat mai multe scoli din **[ORASUL]**.
 
 <%= view :signup_button %>
