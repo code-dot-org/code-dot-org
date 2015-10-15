@@ -62251,20 +62251,20 @@ hook('mouseup', 1, function(point, event, state) {
       position = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
       if (this.trackerPointIsInAce(position)) {
         leadingWhitespaceRegex = /^(\s*)/;
-        firstNonWhitespaceRegex = /\S/;
         pos = this.aceEditor.renderer.screenToTextCoordinates(position.x, position.y);
         line = this.aceEditor.session.getLine(pos.row);
         currentIndentation = leadingWhitespaceRegex.exec(line)[0];
-        firstChar = firstNonWhitespaceRegex.exec(line);
-        if (firstChar && firstChar[0] === '}') {
-          prevLine = this.aceEditor.session.getLine(pos.row - 1);
-          currentIndentation = leadingWhitespaceRegex.exec(prevLine)[0];
-        }
         skipInitialIndent = true;
         prefix = '';
         indentation = currentIndentation;
         suffix = '';
         if (this.dropIntoAceAtLineStart) {
+          firstNonWhitespaceRegex = /\S/;
+          firstChar = firstNonWhitespaceRegex.exec(line);
+          if (firstChar && firstChar[0] === '}') {
+            prevLine = this.aceEditor.session.getLine(pos.row - 1);
+            currentIndentation = leadingWhitespaceRegex.exec(prevLine)[0];
+          }
           pos = this.adjustPosToLineStart(pos);
           skipInitialIndent = false;
           if (pos.column === 0) {
