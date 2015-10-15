@@ -8,7 +8,7 @@
  eqeqeq: true
  */
 'use strict';
-/* global $, describe, beforeEach, it */
+/* globaldescribe, beforeEach, it */
 
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var NetSimRouterLogModal = require('@cdo/apps/netsim/NetSimRouterLogModal');

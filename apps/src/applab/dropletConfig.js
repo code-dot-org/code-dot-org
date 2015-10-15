@@ -1,9 +1,9 @@
-/* globals $ */
-
 var api = require('./api');
 var dontMarshalApi = require('./dontMarshalApi');
 var consoleApi = require('./consoleApi');
 var showAssetManager = require('../applab/assetManagement/show.js');
+var ChartApi = require('./ChartApi');
+var elementUtils = require('./designElements/elementUtils');
 
 var applabConstants = require('./constants');
 
@@ -25,8 +25,8 @@ var COLOR_YELLOW = '#FFF176';
  * Generate a list of screen ids for our setScreen dropdown
  */
 function getScreenIds() {
-  var ret = $(".screen").map(function () {
-    return '"' + this.id + '"';
+  var ret = $("#designModeViz .screen").map(function () {
+    return '"' + elementUtils.getId(this) + '"';
   });
 
   // Convert from jQuery's array-like object to a true array
@@ -89,6 +89,7 @@ module.exports.blocks = [
   {func: 'updateRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{id:1, name:'Bob'}", "function(record) {\n  \n}"] },
   {func: 'deleteRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{id:1}", "function() {\n  \n}"] },
   {func: 'getUserId', parent: api, category: 'Data', type: 'value' },
+  {func: 'drawChartFromRecords', parent: api, category: 'Data', paletteParams: ['chartId', 'chartType', 'tableName', 'columns'], params: ['"chartId"', '"bar"', '"mytable"', '["columnOne", "columnTwo"]'], dropdown: { 0: function () { return Applab.getIdDropdown(".chart"); }, 1: ChartApi.getChartTypeDropdown } },
 
   {func: 'moveForward', parent: api, category: 'Turtle', paletteParams: ['pixels'], params: ["25"], dropdown: { 0: [ "25", "50", "100", "200" ] } },
   {func: 'moveBackward', parent: api, category: 'Turtle', paletteParams: ['pixels'], params: ["25"], dropdown: { 0: [ "25", "50", "100", "200" ] } },

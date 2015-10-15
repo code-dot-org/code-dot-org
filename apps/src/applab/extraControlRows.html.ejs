@@ -5,9 +5,9 @@
   <div id="debugResizeBar" class="fa fa-ellipsis-h"></div>
   <div id="debug-area-header">
     <span class="header-text"><%= applabMsg.debugConsoleHeader() %></span>
+    <i id="show-hide-debug-icon" class="fa fa-chevron-circle-down"></i>
     <% if (debugButtons) { %>
     <div id="debug-commands-header" class="workspace-header">
-      <i id="show-hide-debug-icon" class="fa fa-chevron-circle-down"></i>
       <i id="running-spinner" style="display: none;" class="fa fa-spinner fa-spin"></i>
       <i id="paused-icon" style="display: none;" class="fa fa-pause"></i>
       <span class="header-text"><%= applabMsg.debugCommandsHeaderWhenOpen() %></span>
@@ -65,7 +65,7 @@
   </div>
   <% } %>
   <% if (debugConsole) { %>
-  <div id="debug-console" class="debug-console">
+  <div id="debug-console" class="debug-console <%= debugButtons ? '' : 'full' %>">
     <div id="debug-output" class="debug-output"></div>
     <span class="debug-input-prompt">
       &gt;

@@ -66,6 +66,7 @@ class Table
   end
 
   def insert(value, ip_address)
+    raise ArgumentError, 'Value is not a hash' unless value.is_a? Hash
     row = {
       app_id: @channel_id,
       storage_id: @storage_id,
@@ -92,6 +93,7 @@ class Table
   end
 
   def update(id, value, ip_address)
+    raise ArgumentError, 'Value is not a hash' unless value.is_a? Hash
     row = {
       value: value.to_json,
       updated_at: DateTime.now,
@@ -210,6 +212,7 @@ class DynamoTable
   def insert(value, ip_address)
     retries = 5
 
+    raise ArgumentError, 'Value is not a hash' unless value.is_a? Hash
     begin
       row_id = next_id
 
@@ -293,6 +296,7 @@ class DynamoTable
   end
 
   def update(id, value, ip_address)
+    raise ArgumentError, 'Value is not a hash' unless value.is_a? Hash
     begin
       db.put_item(
         table_name: CDO.dynamo_tables_table,

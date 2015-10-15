@@ -7,7 +7,7 @@ gem 'rails', '~> 4.2.4'
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 2.0'
 
-gem 'sinatra', '1.4.4', require: 'sinatra/base'
+gem 'sinatra', require: 'sinatra/base'
 gem 'rack-contrib', '~> 1.1'
 
 gem 'mysql2', '~> 0.3.13'
@@ -108,7 +108,7 @@ gem 'nokogiri', '~> 1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger', '~> 1.11.2',  group: [:staging, :production] # error monitoring
+gem 'honeybadger', '~> 1.11' # error monitoring
 
 gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
@@ -156,7 +156,7 @@ gem 'react-rails', '~> 1.0'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
 gem 'aws-sdk', '~> 2'
 
-gem 'rubocop', '~> 0.29.1', require: false, group: [:development, :staging]
+gem 'rubocop', '0.34.2', require: false, group: [:development, :staging]
 gem 'haml_lint', require: false, group: [:development, :staging]
 
 # Reduce volume of production logs
@@ -173,5 +173,4 @@ gem 'viddl-rb', group: [:development, :staging, :levelbuilder]
 gem 'net-ssh'
 gem 'net-scp'
 gem 'httparty'
-
 gem 'jquery-cookie-rails'

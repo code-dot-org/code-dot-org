@@ -8,5 +8,7 @@ It is said that *functions with parameters generalize the behavior of a more spe
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-with TurnLeft I could only turn 90 degrees at a time.  Now I can turn any angle I want. Before if I wanted to turn left 270 degrees I would have to write `turnLeft()` three times.  Now I can just make one call to `turnLeft(270)`
+Sample response:
+
+Using the turnLeft function I could only turn 90 degrees at a time. Without parameters, if I wanted to turn left 270 degrees I would have to write `turnLeft()` three times. But with parameters, I can turn any angle I want. Now I can just make one call to the leftTurn function (`turnLeft(270)`) that includes the correct number of degrees I want to turn.
 MARKDOWN

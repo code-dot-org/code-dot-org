@@ -2,6 +2,14 @@ name 'U3L01 Assessment3'
 title 'Free Response: Programming Language Features'
 
 markdown <<MARKDOWN
-Describe the features of a programming language that make it different from the language you are used to using in everyday life? Explain why a programming language must be created in this way.
+Describe the features of a programming language that make it different from the language you typically use in everyday life. Explain why a programming language must be created in this way.
 
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary, but should include these concepts. 
+
+* Precision - Progamming languages must be precise because there can be no ambiguity in instructions to a computer.
+* Unique terms - Programming terms that have synonyms would add confusion.
+* Completely predictable - There must be only one way to interpret a command which results in a single, repeatable action.
 MARKDOWN

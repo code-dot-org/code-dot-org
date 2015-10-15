@@ -1,10 +1,12 @@
 name 'ECSPD What Is Problem Solving'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# WHAT IS PROBLEM SOLVING?
-### Unit 2 and Problem Solving
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-This unit is all about the Problem Solving Process. The point of the unit is to make students comfortable with a situation where they are given a task and need to find a possible way to solve it. They may not always find the perfect solution but as long as they can show they worked through the process that is most important in this unit. 
+## Teaching Strategies > The Problem Solving Process
+
+Unit 2 is all about problem solving. The ECS version 5 curriculum suggests you teach students an explicit problem solving process, which has four main steps:
+
 ### PROBLEM SOLVING STEPS
 
 1. **Understand the problem** - read or listen to the problem statement.
@@ -15,6 +17,15 @@ This unit is all about the Problem Solving Process. The point of the unit is to 
 
 4. **Review and reflect** - once the problem is solved, reflect on the plan that was used.
 
+### Share your problem solving strategies
+We have all learned different problem solving strategies throughout our lives. Some work all the time and others only in certain situations. Make a list of all the problem solving strategies you can think of. You will continue to add to this list over the course of this unit PD. You can also share strategies or find new strategies on the forum.
+<br><br>
+<a href="http://forum.code.org/t/pd-discussion-topic-problem-solving-strategies/2086/1"><button>
+Post in the forums</button></a>
+<br><br>
+Then, return to this page and click "Continue" to move on.
+
+<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

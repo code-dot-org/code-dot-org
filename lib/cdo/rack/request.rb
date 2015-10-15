@@ -1,5 +1,3 @@
-require 'cdo/session'
-
 module Rack
   class Request
     def json_body()
@@ -70,7 +68,10 @@ module Rack
     end
 
     def user_id_from_session_cookie()
-      message = CGI.unescape(cookies[Session::KEY].to_s)
+      session_cookie_key = "_learn_session"
+      session_cookie_key += "_#{rack_env}" unless rack_env?(:production)
+
+      message = CGI.unescape(cookies[session_cookie_key].to_s)
 
       key_generator = ActiveSupport::KeyGenerator.new(
         CDO.dashboard_secret_key_base,

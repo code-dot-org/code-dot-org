@@ -13,7 +13,6 @@
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var NetSimApiError = require('./NetSimApiError');

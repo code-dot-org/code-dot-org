@@ -159,7 +159,31 @@ en:
         Getting Started > Welcome!: Getting Started > Welcome!
       CSPPD3-u2 Welcome:
         Welcome!: Welcome!
+      CSPPD3-u2 breakdown of u2 chunks: {}
+      CSPPD3-u2 challege overview: {}
+      CSPPD3-u2 challenge overview: {}
+      CSPPD3-u2 checkin: {}
+      CSPPD3-u2 chunk 1 concepts: {}
+      CSPPD3-u2 chunk 1 resources: {}
+      CSPPD3-u2 chunk 2 concepts: {}
+      CSPPD3-u2 chunk 2 resources: {}
+      CSPPD3-u2 complete the challenge overview: {}
+      CSPPD3-u2 completing the challenge: {}
+      CSPPD3-u2 create your extension: {}
+      CSPPD3-u2 do the challenge: {}
+      CSPPD3-u2 expectations: {}
+      CSPPD3-u2 final progress check: {}
+      CSPPD3-u2 list of challenges: {}
       CSPPD3-u2 overivew: {}
+      CSPPD3-u2 plan: {}
+      CSPPD3-u2 post survey: {}
+      CSPPD3-u2 post to forum: {}
+      CSPPD3-u2 pt overview: {}
+      CSPPD3-u2 reflect on challenge: {}
+      CSPPD3-u2 share out overview: {}
+      CSPPD3-u2 tips for prep: {}
+      CSPPD3-u2 unit 2 overview: {}
+      CSPPD3-u2 what is a challenge: {}
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
@@ -228,6 +252,8 @@ en:
         Welcome to ECS PD Online!: Welcome to ECS PD Online!
       ECSPD Online intro:
         Introduction: Introduction
+      ECSPD P3 Plan: {}
+      ECSPD P3Unit2 Go: {}
       ECSPD PD Phases:
         ECSPD PD Phases: ECSPD PD Phases
       ECSPD PD details:
@@ -290,8 +316,32 @@ en:
       ECSPD U4 D 5-6 Intro: {}
       ECSPD U4 D 7-8 Intro: {}
       ECSPD U4 D 9 Intro: {}
+      ECSPD Unit 2 Break: {}
+      ECSPD Unit 2 Challenge Preview: {}
+      ECSPD Unit 2 Cornrow Forum: {}
+      ECSPD Unit 2 Dani: {}
+      ECSPD Unit 2 Growth: {}
       ECSPD Unit 2 Intro: {}
       ECSPD Unit 2 Lesson Overview: {}
+      ECSPD Unit 2 Outline: {}
+      ECSPD Unit 2 Pick2: {}
+      ECSPD Unit 2 Stage10: {}
+      ECSPD Unit 2 Stage11:
+        description here: description here
+        title: title
+      ECSPD Unit 2 Stage12: {}
+      ECSPD Unit 2 Stage13:
+        description here: description here
+        title: title
+      ECSPD Unit 2 Stage4Review: {}
+      ECSPD Unit 2 Stage5: {}
+      ECSPD Unit 2 Stage6:
+        description here: description here
+        title: title
+      ECSPD Unit 2 Stage7: {}
+      ECSPD Unit 2 Stage8: {}
+      ECSPD Unit 2 Stage9: {}
+      ECSPD Unit2 Connections: {}
       ECSPD What Is Problem Solving: {}
       ECSPD What is the Challenge: {}
       ECSPD Why Binary - The Internet Video: {}
@@ -420,6 +470,7 @@ en:
       OPD-K5 Your Plan: {}
       OPD-Stage3Start: {}
       OnlinePDK5 Intro: {}
+      PD check your progress: {}
       PDAlg 1-3 Circles: {}
       PDAlg 1-3 Circles Practice: {}
       PDAlg 13-16 Booleans: {}
@@ -727,6 +778,7 @@ en:
         title: title
       U2L9 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
+      U3- L12 -Design Mode SFLP: {}
       U3L01 Student Lesson Introduction:
         Why Programming and Programming Languages?: Why Programming and Programming Languages?
       U3L02 Student Lesson Introduction:
@@ -755,12 +807,16 @@ en:
       U3L13 - Explanation of Ids:
         description here: description here
         title: title
+      U3L13 - Make a Prediction Explanation:
+        description here: description here
+        title: title
       U3L13 Add Button Instrucitons:
         description here: description here
         title: title
       U3L13 Add Button Instructions:
         description here: description here
         title: title
+      U3L13 Student Facing Lesson Plan: {}
       U3L13 Student Lesson Introduction:
         Buttons on the Screen: Buttons on the Screen
       U3L14 - Student Intro Page:
@@ -955,6 +1011,10 @@ en:
       challenges sample 7:
         Give these a try: Give these a try
         Life Science Challenges: Life Science Challenges
+      duino battery led:
+        duino battery led: duino battery led
+      duino button led:
+        duino button led: duino button led
       equity Intro:
         Introduction to Equity PD: Introduction to Equity PD
       equity activity:
@@ -1832,13 +1892,11 @@ en:
         'onEvent("id", "click", function() {...}):': 'onEvent("id", "click", function() {...}):'
         trigger: trigger
       U3L14 - Matching Events to Description:
-        Event triggers: Event triggers
-        Match the event type name with the description of what triggers it.: Match the event type name with the description of what triggers it.
-        Triggers constantly while moving over a button.: Triggers constantly while moving over a button.
         Triggers once, the instant mouse hovers over the button: Triggers once, the instant mouse hovers over the button
-        Triggers when mouse button is clicked once: Triggers when mouse button is clicked once
         Triggers when mouse button is pressed: Triggers when mouse button is pressed
         Triggers when mouse button is released: Triggers when mouse button is released
+        Triggers when mouse the button is clicked once: Triggers when mouse the button is clicked once
+        Triggers whenever the mouses moves: Triggers whenever the mouses moves
         click: click
         mousedown: mousedown
         mousemove: mousemove
@@ -2249,6 +2307,18 @@ en:
         Monitor 1 has the same density as Monitor 2.: Monitor 1 has the same density as Monitor 2.
         Monitor 2 has higher density than 2: Monitor 2 has higher density than 2
         There is not enough information to compare the density of the monitors.: There is not enough information to compare the density of the monitors.
+      CSPPD3-u2 chunk 1 checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u2 chunk 2 checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u2 unit overview checkin:
+        I feel like I could teach this right now: I feel like I could teach this right now
+        I feel like I need to do A LOT of review of lessons, content, etc before I teach this: I feel like I need to do A LOT of review of lessons, content, etc before I teach this
+        I feel like I need to do SOME review of lessons, content, etc before I teach this: I feel like I need to do SOME review of lessons, content, etc before I teach this
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
@@ -2922,7 +2992,7 @@ en:
         '6': '6'
         '8': '8'
         '9': '9'
-        Router Table Assessment: Router Table Assessment
+        'Router Table: Assessment': 'Router Table: Assessment'
       U2L09 Assessment1:
         ? A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
         : A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
@@ -3065,27 +3135,27 @@ en:
         Why Programming? Question 2: Why Programming? Question 2
       U3L03 - multiselect - properties of functions:
         Choose Two - True statements about functions: Choose Two - True statements about functions
-        Chose the two (2) statements that are true about functions: Chose the two (2) statements that are true about functions
-        Functions in programming are a named grouping of programming instructions.: Functions in programming are a named grouping of programming instructions.
+        Choose the two (2) statements that are true about functions: Choose the two (2) statements that are true about functions
+        Functions in programming are named groupings of programming instructions.: Functions in programming are named groupings of programming instructions.
         Functions in programming are useful mathematical tools for doing complex computations.: Functions in programming are useful mathematical tools for doing complex computations.
         Meaningful function names help <em>computers</em> better understand programs.: Meaningful function names help <em>computers</em> better understand programs.
         Meaningful function names help <em>people</em> better understand programs.: Meaningful function names help <em>people</em> better understand programs.
       U3L03 Assessment:
         Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
-        Functions cannot make calls to other functions written by the same programmer: Functions cannot make calls to other functions written by the same programmer
-        Functions help break a problem into logical chunks: Functions help break a problem into logical chunks
+        Functions cannot make calls to other functions written by the same programmer.: Functions cannot make calls to other functions written by the same programmer.
+        Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
         Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
         Multiple Choice - False statements about functions: Multiple Choice - False statements about functions
-        Once defined, a function can be called many times from different parts of a program: Once defined, a function can be called many times from different parts of a program
+        Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
         Which of the following is NOT a true statement about functions?: Which of the following is NOT a true statement about functions?
       U3L04 Assessment2:
-        'Multiple Choice: Functions and Top Down Design': 'Multiple Choice: Functions and Top Down Design'
-        Top Down Design assists in identifying the layers of functions that will be used to solve a programming problem: Top Down Design assists in identifying the layers of functions that will be used to solve a programming problem
-        Top Down Design leads to programs which feature multiple layers of abstraction: Top Down Design leads to programs which feature multiple layers of abstraction
-        Top Down Design relies upon identifying sub-problems of a larger problem: Top Down Design relies upon identifying sub-problems of a larger problem
-        Two programmers solving the same problem using Top Down Design should arrive at identical programs: Two programmers solving the same problem using Top Down Design should arrive at identical programs
-        Which of the following statements about writing functions and Top Down Design is NOT true?: Which of the following statements about writing functions and Top Down Design is NOT true?
-        Writing functions helps manage complexity in a program: Writing functions helps manage complexity in a program
+        'Multiple Choice: Functions and Top-Down Design': 'Multiple Choice: Functions and Top-Down Design'
+        Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.: Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.
+        Top-Down Design leads to programs which feature multiple layers of abstraction.: Top-Down Design leads to programs which feature multiple layers of abstraction.
+        Top-Down Design relies upon identifying sub-problems of a larger problem.: Top-Down Design relies upon identifying sub-problems of a larger problem.
+        Two programmers solving the same problem using Top-Down Design should arrive at identical programs.: Two programmers solving the same problem using Top-Down Design should arrive at identical programs.
+        Which of the following statements about writing functions and Top-Down Design is NOT true?: Which of the following statements about writing functions and Top-Down Design is NOT true?
+        Writing functions helps manage complexity in a program.: Writing functions helps manage complexity in a program.
       U3L06 Assessment2:
         A collection of commands that can be used in a programming language.: A collection of commands that can be used in a programming language.
         A named memory location.: A named memory location.
@@ -3133,6 +3203,27 @@ en:
         penUp();: penUp();
         square();: square();
         turnLeft(90); }: turnLeft(90); }
+      U3L13 - Making Predications MC:
+        ? "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As you are learning to program you will encounter more and more new features of a language and be naturally curious about how things work.  Research has shown that when you encounter a new piece of code or new situation, you learn faster by simply making a prediction about what will happen before you run the program for the first time.  \n</p><p>Making a prediction forces you to study the code and use your intuitions based on what you already know. Even experienced programmers might disagree about what a piece of code would do!  So making a prediction is not like some sort of test about how smart you are.  <strong>By making a prediction first, when you run the code you learn so much more whether you were right, wrong or somewhere in between.  You construct a stronger mental model for how code works than if you just ran the program to see what happened.</strong></p>\n<p>  So let's try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\" align=right>Here is a piece of code with two buttons and two event handlers.  Notice that both buttons still have the default IDs of \"id\". You will need to fix this because we know it causes a warning message.  But it turns out the program can still run and it does do <i>something.</i></p>\n<p><strong>What do you think will happen with this code is run?</strong></p>"
+        : "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As you are learning to program you will encounter more and more new features of a language and be naturally curious about how things work.  Research has shown that when you encounter a new piece of code or new situation, you learn faster by simply making a prediction about what will happen before you run the program for the first time.  \n</p><p>Making a prediction forces you to study the code and use your intuitions based on what you already know. Even experienced programmers might disagree about what a piece of code would do!  So making a prediction is not like some sort of test about how smart you are.  <strong>By making a prediction first, when you run the code you learn so much more whether you were right, wrong or somewhere in between.  You construct a stronger mental model for how code works than if you just ran the program to see what happened.</strong></p>\n<p>  So let's try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\" align=right>Here is a piece of code with two buttons and two event handlers.  Notice that both buttons still have the default IDs of \"id\". You will need to fix this because we know it causes a warning message.  But it turns out the program can still run and it does do <i>something.</i></p>\n<p><strong>What do you think will happen with this code is run?</strong></p>"
+        Make a prediction: Make a prediction
+        When the "forward" button is clicked The turtle will only move forward: When the "forward" button is clicked The turtle will only move forward
+        'When the "forward" button is clicked: The turtle will only turnLeft forward': 'When the "forward" button is clicked: The turtle will only turnLeft forward'
+        'When the "forward" button is clicked: nothing will happen': 'When the "forward" button is clicked: nothing will happen'
+        'When the "left" button is clicked: The turtle will move forward and turn left': 'When the "left" button is clicked: The turtle will move forward and turn left'
+        'When the "left" button is clicked: The turtle will only move forward': 'When the "left" button is clicked: The turtle will only move forward'
+        'When the "left" button is clicked: The turtle will only turnLeft forward': 'When the "left" button is clicked: The turtle will only turnLeft forward'
+        'When the "left" button is clicked: nothing will happen': 'When the "left" button is clicked: nothing will happen'
+        'When the forward button is clicked: The turtle will move forward and turn left': 'When the forward button is clicked: The turtle will move forward and turn left'
+        description here: description here
+      U3L13 debugging Multi:
+        A program that does not generate any error messages will run as intended: A program that does not generate any error messages will run as intended
+        Debugging is the process of locating and correcting errors in a program: Debugging is the process of locating and correcting errors in a program
+        Error messages help programmers identify problems in their code: Error messages help programmers identify problems in their code
+        It is common for programs to contain errors the first time they are written: It is common for programs to contain errors the first time they are written
+        Multiple Choice - Debugging and Error Messages: Multiple Choice - Debugging and Error Messages
+        Not all errors in a program will generate an error message: Not all errors in a program will generate an error message
+        Which of the following statements about debugging and program errors is FALSE?: Which of the following statements about debugging and program errors is FALSE?
       U3L14 - MC Duplicate Ids:
         A warning message will appear for the second button that that id is already in use: A warning message will appear for the second button that that id is already in use
         Buttons and Ids: Buttons and Ids
@@ -4044,6 +4135,8 @@ en:
         Classroom Strategies Journal: Classroom Strategies Journal
       CSPPD2 PT activity: {}
       CSPPD2 share protocol: {}
+      CSPPD3-u2 pick a challenge: {}
+      CSPPD3-u2 submit forum link: {}
       ECSPD Fence post Q1: {}
       ECSPD Handshake Q1: {}
       ECSPD Online U1D1-2 Assessment 1:
@@ -4098,8 +4191,7 @@ en:
         Classroom Strategies Journal: Classroom Strategies Journal
       ECSPD your goals:
         Documenting Your Goals: Documenting Your Goals
-      ECSU2 Challenge Submission:
-        U2 Challenge Submission URL: U2 Challenge Submission URL
+      ECSU2 Challenge Submission: {}
       Glossary O:
         ? 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
         : 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'

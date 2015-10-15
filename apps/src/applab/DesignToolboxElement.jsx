@@ -1,6 +1,5 @@
 /* global $ */
 
-var React = require('react');
 var library = require('./designElements/library');
 
 module.exports = React.createClass({

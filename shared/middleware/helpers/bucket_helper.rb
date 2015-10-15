@@ -32,12 +32,17 @@ class BucketHelper
     key = s3_path owner_id, channel_id, filename
     begin
       s3_object = @s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
-      {status: 'FOUND', body: s3_object.body, last_modified: s3_object.last_modified}
+      {status: 'FOUND', body: s3_object.body, last_modified: s3_object.last_modified, metadata: s3_object.metadata}
     rescue Aws::S3::Errors::NotModified
       {status: 'NOT_MODIFIED'}
     rescue Aws::S3::Errors::NoSuchKey
       {status: 'NOT_FOUND'}
     end
+  end
+
+  def get_abuse_score(encrypted_channel_id, filename, version = nil)
+    response = get(encrypted_channel_id, filename, version)
+    response.nil? ? 0 : response[:metadata]['abuse_score'].to_i
   end
 
   def copy_files(src_channel, dest_channel)
@@ -52,17 +57,24 @@ class BucketHelper
 
       src = "#{@bucket}/#{src_prefix}#{filename}"
       dest = s3_path dest_owner_id, dest_channel_id, filename
-      @s3.copy_object(bucket: @bucket, key: dest, copy_source: src)
+      @s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
 
       {filename: filename, category: category, size: fileinfo.size}
     end
   end
 
-  def create_or_replace(encrypted_channel_id, filename, body, version = nil)
+  def replace_abuse_score(encrypted_channel_id, filename, abuse_score)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, channel_id, filename
+
+    @s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}"), key: key, metadata: { abuse_score: abuse_score.to_s}, metadata_directive: 'REPLACE')
+  end
+
+  def create_or_replace(encrypted_channel_id, filename, body, version = nil, abuse_score = 0)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
 
     key = s3_path owner_id, channel_id, filename
-    response = @s3.put_object(bucket: @bucket, key: key, body: body)
+    response = @s3.put_object(bucket: @bucket, key: key, body: body, metadata: { abuse_score: abuse_score.to_s})
 
     # Delete the old version, if doing an in-place replace
     @s3.delete_object(bucket: @bucket, key: key, version_id: version) if version

@@ -3,5 +3,12 @@ title 'Free Response: Abstraction to Manage Complexity'
 
 
 markdown <<MARKDOWN
-In the Create Performance Task you will be asked to identify an abstraction in your program and explain how it helps manage the complexity of the program. Functions are a form of abstraction. Pick a function you wrote in your solution to the 3 by 3 square problem and explain how it helps manage the complexity of your program.
+In the Create Performance Task you will be asked to identify an abstraction in your program and explain how it helps manage the complexity of the program. Functions are a form of abstraction. Pick a function you wrote in your solution to the 3x3 square problem and explain how it helps manage the complexity of your program.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary, but should include these concepts:
+
+* A function combines multiple more primitive commands. Instead of calling each of many commands, they can be wrapped together into one command (function call). At an even higher level of abstraction, one function could wrap up several lower level functions from one call. The complexity of many, many primitive calls listed in a complex and long series of programming statements can be simplified into just a few lines of function calls. 
+
 MARKDOWN

@@ -1,6 +1,7 @@
-# uncomment the below if you want to see code coverage
-#  require 'simplecov'
-#  SimpleCov.start :rails
+if ENV['COVERAGE'] # set this environment variable when running tests if you want to see test coverage
+  require 'simplecov'
+  SimpleCov.start :rails
+end
 
 require 'minitest/reporters'
 MiniTest::Reporters.use!($stdout.tty? ? Minitest::Reporters::ProgressReporter.new : Minitest::Reporters::DefaultReporter.new)

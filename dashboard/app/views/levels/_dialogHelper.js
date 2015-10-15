@@ -1,4 +1,4 @@
-/* global $ appOptions lastServerResponse Dialog getResult CDOSounds sendReport showVideoDialog */
+/* globals appOptions, lastServerResponse, Dialog, getResult, CDOSounds, sendReport, showVideoDialog */
 
 /*
  * This file contains general logic for displaying modal dialogs and handling
@@ -49,7 +49,9 @@ window.dashboard.dialog = (function () {
     // Clicking the okay button in the dialog box dismisses it, and calls the callback.
     $(content).find("#ok-button").click(function () {
       dialog.hide();
-      callback && callback();
+      if (callback) {
+        callback();
+      }
     });
 
     // Clicking the cancel button in the dialog box dismisses it.
@@ -123,9 +125,9 @@ window.dashboard.dialog = (function () {
   // which render 'levels/dialog'.
   var processResults = function (onComplete) {
     var results = getResult();
-    var response = results['response'];
-    var result = results['result'];
-    var errorType = results['errorType'];
+    var response = results.response;
+    var result = results.result;
+    var errorType = results.errorType;
 
     if (!result) {
       showDialog(errorType || "error");
@@ -148,7 +150,9 @@ window.dashboard.dialog = (function () {
       testResult: result ? 100 : 0,
       onComplete: function () {
         var willRedirect = !!lastServerResponse.nextRedirect;
-        onComplete && onComplete(willRedirect);
+        if (onComplete) {
+          onComplete(willRedirect);
+        }
 
         if (lastServerResponse.videoInfo)
         {
@@ -170,4 +174,3 @@ window.dashboard.dialog = (function () {
     processResults: processResults
   };
 })();
-

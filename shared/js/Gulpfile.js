@@ -6,7 +6,6 @@
 
 
 var gulp = require('gulp');
-var glob = require('glob');
 var del = require('del');
 var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
@@ -28,7 +27,11 @@ gulp.task('lint', function () {
       node: true,
       mocha: true,
       browser: true,
-      undef: true
+      undef: true,
+      globals: {
+        $: true,
+        jQuery: true
+      }
     }))
     .pipe(jshint.reporter('default'))
     .pipe(jshint.reporter('fail')); // report error code on failure

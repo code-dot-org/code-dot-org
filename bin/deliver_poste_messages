@@ -63,8 +63,11 @@ module Poste
       locals = OpenStruct.new(params).instance_eval{binding}
 
       header = @header.result(locals) unless @header.nil?
+      # TODO(andrew): Fix this so that we get a signal as to how often this is happening.
+      # For more information, see https://www.pivotaltracker.com/story/show/104750788.
+      tracking_id = header['litmus_tracking_id'] unless header.nil?
       html = replace_urls_with_click_trackers @html.result(locals), params if @html
-      html = inject_litmus_tracking html, header['litmus_tracking_id'], params[:encrypted_id] if html
+      html = inject_litmus_tracking html, tracking_id, params[:encrypted_id] if html
       text = @text.result(locals) unless @text.nil?
 
       [header, html, text]

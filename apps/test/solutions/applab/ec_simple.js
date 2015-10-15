@@ -36,7 +36,7 @@ module.exports = {
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
-          assert(document.getElementById('idTxt2').innerText === 'test-value');
+          assert(document.getElementById('idTxt2').textContent === 'test-value');
           Applab.onPuzzleComplete();
         });
       },
