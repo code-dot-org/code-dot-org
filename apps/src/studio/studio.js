@@ -1024,6 +1024,7 @@ function handleActorCollisionsWithCollidableList (
             collidable.beginRemoveElement();
           } else {
             collidable.removeElement();
+            list.splice(i, 1);
           }
         }
       }
