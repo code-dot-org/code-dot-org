@@ -174,7 +174,7 @@ Dashboard::Application.routes.draw do
 
   get '/admin/pd_progress(/:script)', to: 'reports#pd_progress', as: 'pd_progress'
   get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'reports#level_completions', as: 'level_completions'
-  get '/admin/search_for_teachers(/addressFilter/:addressFilter)(/emailFilter/:emailFilter)', to: 'reports#search_for_teachers', as: 'search_for_teachers'
+  get 'admin/search_for_teachers', to: 'reports#search_for_teachers', as: 'search_for_teachers'
   get '/admin/usage', to: 'reports#all_usage', as: 'all_usage'
   get '/admin/stats', to: 'reports#admin_stats', as: 'admin_stats'
   get '/admin/progress', to: 'reports#admin_progress', as: 'admin_progress'

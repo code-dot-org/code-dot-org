@@ -58,6 +58,7 @@ SQL
 
   def search_for_teachers
     authorize! :read, :reports
+
     fields = ['id', 'name', 'email', 'address', 'num_students']
     if (params[:emailFilter])
       email_filter = '%' + params[:emailFilter] + '%'
@@ -69,10 +70,7 @@ SQL
     else
       address_filter = '%%'
     end
-
-    teachers = User.limit(100).where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id').pluck(:id, :name, :email, :full_address, 'COUNT(followers.id) AS num_students')
-
-    render locals: {headers: fields, data: teachers}
+    @teachers = User.limit(100).where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id').pluck(:id, :name, :email, :full_address, 'COUNT(followers.id) AS num_students')
   end
 
   def admin_stats
