@@ -477,6 +477,7 @@
   "whenSpriteCollidedWithLeftEdge": "touches left edge",
   "whenSpriteCollidedWithRightEdge": "touches right edge",
   "whenSpriteCollidedWithTopEdge": "touches top edge",
+  "whenGetAllPilots": "when touched all pilots",
   "whenTouchItem": "when character touched",
   "whenTouchItemTooltip": "Execute the actions below when the actor touches a character.",
   "whenTouchWall": "when obstacle touched",

@@ -116,6 +116,9 @@ var AUTO_HANDLER_MAP = {
   whenTouchObstacle: 'whenSpriteCollided-' +
       (Studio.protagonistSpriteIndex || 0) +
       '-wall',
+  whenGetAllPilots: 'whenGetAllPilots',
+  whenTouchGoal: 'whenTouchGoal',
+  whenScore1000: 'whenScore1000'
 };
 
 // Default Scalings
@@ -172,7 +175,7 @@ function loadLevel() {
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
-  Studio.protagonistSpriteIndex = level.protagonistSpriteIndex || level.protaganistSpriteIndex;
+  Studio.protagonistSpriteIndex = utils.valueOr(level.protagonistSpriteIndex,level.protaganistSpriteIndex);
 
   switch (level.customGameType) {
     case 'Big Game':
@@ -795,16 +798,40 @@ Studio.onTick = function() {
           Studio.keyState[KeyCodes[key]] === "keydown") {
         switch (KeyCodes[key]) {
           case KeyCodes.LEFT:
-            callHandler('when-left');
+            if (level.autoArrowSteer) {
+              Studio.moveSingle({
+                spriteIndex: Studio.protagonistSpriteIndex || 0,
+                dir: Direction.WEST });
+            } else {
+              callHandler('when-left');
+            }
             break;
           case KeyCodes.UP:
-            callHandler('when-up');
+            if (level.autoArrowSteer) {
+              Studio.moveSingle({
+                spriteIndex: Studio.protagonistSpriteIndex || 0,
+                dir: Direction.NORTH });
+            } else {
+              callHandler('when-up');
+            }
             break;
           case KeyCodes.RIGHT:
-            callHandler('when-right');
+            if (level.autoArrowSteer) {
+              Studio.moveSingle({
+                spriteIndex: Studio.protagonistSpriteIndex || 0,
+                dir: Direction.EAST });
+            } else {
+              callHandler('when-right');
+            }
             break;
           case KeyCodes.DOWN:
-            callHandler('when-down');
+            if (level.autoArrowSteer) {
+              Studio.moveSingle({
+                spriteIndex: Studio.protagonistSpriteIndex || 0,
+                dir: Direction.SOUTH });
+            } else {
+              callHandler('when-down');
+            }
             break;
         }
       }
@@ -2191,6 +2218,7 @@ Studio.execute = function() {
     }
 
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers()
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
         'whenGameStarts');
@@ -2966,6 +2994,14 @@ Studio.executeQueue = function (name, oneOnly) {
 
 Studio.callCmd = function (cmd) {
   switch (cmd.name) {
+    case 'winGame':
+      studioApp.highlight(cmd.id);
+      Studio.winGame(cmd.opts);
+      break;
+    case 'loseGame':
+      studioApp.highlight(cmd.id);
+      Studio.loseGame(cmd.opts);
+      break;
     case 'setBackground':
       studioApp.highlight(cmd.id);
       Studio.setBackground(cmd.opts);
@@ -3373,6 +3409,10 @@ Studio.setSpriteSize = function (opts) {
 };
 
 Studio.changeScore = function (opts) {
+  if (Studio.playerScore < 1000 && Studio.playerScore + Number(opts.value) > 1000) {
+    callHandler('whenScore1000');
+  }
+
   Studio.playerScore += Number(opts.value);
   Studio.displayScore();
   Studio.displayFloatingScore(opts.value);
@@ -3381,6 +3421,14 @@ Studio.changeScore = function (opts) {
 Studio.setScoreText = function (opts) {
   Studio.scoreText = opts.text;
   Studio.displayScore();
+};
+
+Studio.winGame = function(opts) {
+  Studio.setScoreText({text: "You win!"});
+};
+
+Studio.loseGame = function(opts) {
+  Studio.setScoreText({text: "You lose!"});
 };
 
 Studio.setBackground = function (opts) {
@@ -4351,6 +4399,8 @@ Studio.allGoalsVisited = function() {
           var allowQueueExtension = false;
           var prefix = 'whenSpriteCollided-' + Studio.protagonistSpriteIndex + '-';
           callHandler(prefix + 'anything', allowQueueExtension);
+
+          callHandler('whenTouchGoal');
         }
 
       } else {
@@ -4382,6 +4432,10 @@ Studio.allGoalsVisited = function() {
       spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
         'xlink:href', successAsset);
     }
+  }
+
+  if (finishedGoals === Studio.spriteGoals_.length) {
+    callHandler('whenGetAllPilots');
   }
 
   return finishedGoals === Studio.spriteGoals_.length;

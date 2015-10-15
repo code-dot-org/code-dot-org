@@ -2,6 +2,14 @@ var constants = require('./constants');
 
 // API definitions for functions exposed for JavaScript (droplet/ace) levels:
 
+exports.winGame = function (value) {
+  Studio.queueCmd(null, 'winGame', {'value': value});
+}
+
+exports.loseGame = function (value) {
+  Studio.queueCmd(null, 'winGame', {'value': value});
+}
+
 exports.setBackground = function (value) {
   Studio.queueCmd(null, 'setBackground', {'value': value});
 };
