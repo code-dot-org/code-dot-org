@@ -111,54 +111,73 @@ function addLines(addedLines) {
   $.cookie('lines', String(newLines), COOKIE_OPTIONS);
 }
 
+/**
+ * Returns whether or not the user has seen a given video based on contents of the local storage
+ * @param videoId
+ * @returns {*}
+ */
 dashboard.clientState.hasSeenVideo = function(videoId) {
-  var videosSeenJson = localStorage.getItem('videosSeen') || '{}';
-  try {
-    var videosSeen = JSON.parse(videosSeenJson);
-    return videosSeen[videoId] == 1;
-  } catch (e) {
-    return false;
-  }
+  return hasSeenVisualElement('video', videoId);
 };
 
+/**
+ * Records that a user has seen a given video in local storage
+ * @param videoId
+ */
 dashboard.clientState.recordVideoSeen = function (videoId) {
-  var videosSeenJson = localStorage.getItem('videosSeen') || '{}';
-
-  try {
-    var videosSeen = JSON.parse(videosSeenJson);
-    videosSeen[videoId] = 1;
-    localStorage.setItem('videosSeen', JSON.stringify(videosSeen));
-  } catch (e) {
-    //Something went wrong parsing the json. Blow it up and just put in the new video
-    var videosSeen = {};
-    videosSeen[videoId] = 1;
-    localStorage.setItem('videosSeen', JSON.stringify(videosSeen));
-  }
+  recordVisualElementSeen('video', videoId);
 };
 
+/**
+ * Returns whether or not the user has seen the given callout based on contents of the local storage
+ * @param calloutId
+ * @returns {boolean}
+ */
 dashboard.clientState.hasSeenCallout = function(calloutId) {
-  var calloutsSeenJson = localStorage.getItem('calloutsSeen') || '{}';
-  try {
-    var calloutsSeen = JSON.parse(calloutsSeenJson);
-    return calloutsSeen[calloutId] == 1;
-  } catch (e) {
-    return false;
-  }
+  return hasSeenVisualElement('callout', calloutId);
 };
 
+/**
+ * Records that a user has seen a given callout in local storage
+ * @param calloutId
+ */
 dashboard.clientState.recordCalloutSeen = function (calloutId) {
-  var calloutsSeenJson = localStorage.getItem('calloutsSeen') || '{}';
+  recordVisualElementSeen('callout', calloutId);
+};
+
+/**
+ * Private helper for videos and callouts - persists info in the local storage that a given element has been seen
+ * @param visualElementType
+ * @param visualElementId
+ */
+function recordVisualElementSeen(visualElementType, visualElementId) {
+  var elementSeenJson = localStorage.getItem(visualElementType) || '{}';
 
   try {
-    var calloutsSeen = JSON.parse(calloutsSeenJson);
-    calloutsSeen[calloutId] = 1;
-    localStorage.setItem('calloutsSeen', JSON.stringify(calloutsSeen));
+    var elementSeen = JSON.parse(elementSeenJson);
+    elementSeen[visualElementId] = true;
+    localStorage.setItem(visualElementType, JSON.stringify(elementSeen));
   } catch (e) {
     //Something went wrong parsing the json. Blow it up and just put in the new callout
-    var calloutsSeen = {};
-    calloutsSeen[calloutId] = 1;
-    localStorage.setItem('calloutsSeen', JSON.stringify(calloutsSeen));
+    var elementSeen = {};
+    elementSeen[visualElementId] = true;
+    localStorage.setItem(visualElementType, JSON.stringify(elementSeen));
   }
-};
+}
+
+/**
+ * Private helper for videos and callouts - looks in local storage to see if the element has been seen
+ * @param visualElementType
+ * @param visualElementId
+ */
+function hasSeenVisualElement(visualElementType, visualElementId) {
+  var elementSeenJson = localStorage.getItem(visualElementType) || '{}';
+  try {
+    var elementSeen = JSON.parse(elementSeenJson);
+    return elementSeen[visualElementId] === true;
+  } catch (e) {
+    return false;
+  }
+}
 
 })(window, $);
