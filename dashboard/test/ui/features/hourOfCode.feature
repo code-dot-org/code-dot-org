@@ -44,7 +44,7 @@ Scenario: Go to puzzle 6, see video, go somewhere else, return to puzzle 6, shou
   Then I close the dialog
   Then I am on "http://studio.code.org/hoc/7"
   Then I am on "http://studio.code.org/hoc/6"
-  Then element "#runButton" is visible
+  Then element "#video" does not exist
 
 Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, should not see callouts
   Given I am on "http://studio.code.org/hoc/9"

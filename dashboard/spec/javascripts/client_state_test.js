@@ -106,17 +106,17 @@ describe("clientState#trackProgress", function() {
   });
 
   it("handles malformed storage for video progress", function () {
-    localStorage.setItem('videosSeen', null);
+    localStorage.setItem('video', null);
     state.hasSeenVideo('someVideo').should.equal(false);
     state.recordVideoSeen('someVideo');
     state.hasSeenVideo('someVideo').should.equal(true);
 
-    localStorage.setItem('videosSeen', '');
+    localStorage.setItem('video', '');
     state.hasSeenVideo('someVideo').should.equal(false);
     state.recordVideoSeen('someVideo');
     state.hasSeenVideo('someVideo').should.equal(true);
 
-    localStorage.setItem('videosSeen', '{\'malformed_json\': true');
+    localStorage.setItem('video', '{\'malformed_json\': true');
     state.hasSeenVideo('someVideo').should.equal(false);
     state.recordVideoSeen('someVideo');
     state.hasSeenVideo('someVideo').should.equal(true);
@@ -141,17 +141,17 @@ describe("clientState#trackProgress", function() {
   });
 
   it("handles malformed storage for callouts seen", function () {
-    localStorage.setItem('calloutsSeen', null);
+    localStorage.setItem('callout', null);
     state.hasSeenCallout('someCallout').should.equal(false);
     state.recordCalloutSeen('someCallout');
     state.hasSeenCallout('someCallout').should.equal(true);
 
-    localStorage.setItem('calloutsSeen', '');
+    localStorage.setItem('callout', '');
     state.hasSeenCallout('someCallout').should.equal(false);
     state.recordCalloutSeen('someCallout');
     state.hasSeenCallout('someCallout').should.equal(true);
 
-    localStorage.setItem('calloutsSeen', '{\'malformed_json\': true');
+    localStorage.setItem('callout', '{\'malformed_json\': true');
     state.hasSeenCallout('someCallout').should.equal(false);
     state.recordCalloutSeen('someCallout');
     state.hasSeenCallout('someCallout').should.equal(true);
