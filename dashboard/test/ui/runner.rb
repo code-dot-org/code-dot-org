@@ -321,9 +321,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
     message += "<br/><i>rerun: ./runner.rb -c #{browser_name} -f #{feature} --html</i>"
     HipChat.log message, color: 'red'
-    if CDO.hip_chat_logging && !(['adhoc', 'production'].include? Rails.env)
-      HipChat.developers short_message, color: 'red'
-    end
+    HipChat.developers short_message, color: 'red' if Rails.env.test?
   end
   result_string =
     if scenario_count == 0
