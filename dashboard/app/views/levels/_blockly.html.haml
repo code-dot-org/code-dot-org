@@ -13,7 +13,7 @@
     %a{href: 'javascript: location.reload();'}= t(:try_reloading)
 
 - content_for :body_scripts do
-  = render_dependencies
+  = render_app_dependencies
 
   -# Small inline script to kick off app initialization once all dependencies
   -# have been loaded.
