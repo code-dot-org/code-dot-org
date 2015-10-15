@@ -101,10 +101,13 @@ class LevelsHelperTest < ActionView::TestCase
     @level.level_num = 'custom'
     @level.callout_json = '[{"localization_key": "run", "element_id": "#runButton"}]'
 
-    callouts = select_callouts
+    callouts = select_and_remember_callouts
     assert_equal 1, callouts.count
     assert_equal '#runButton', callouts[0]['element_id']
     assert_equal 'Hit "Run" to try your program', callouts[0]['localized_text']
+
+    callouts = select_and_remember_callouts
+    assert_equal 0, callouts.count
   end
 
   test "should select only callouts for current script level" do
@@ -117,7 +120,7 @@ class LevelsHelperTest < ActionView::TestCase
     callout2 = create(:callout, script_level: @script_level)
     irrelevant_callout = create(:callout)
 
-    callouts = select_callouts
+    callouts = select_and_remember_callouts
 
     assert callouts.any? { |callout| callout['id'] == callout1.id }
     assert callouts.any? { |callout| callout['id'] == callout2.id }
@@ -132,7 +135,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     create(:callout, script_level: @script_level, localization_key: 'run')
 
-    callouts = select_callouts
+    callouts = select_and_remember_callouts
 
     assert callouts.any?{ |c| c['localized_text'] == 'Hit "Run" to try your program'}
   end

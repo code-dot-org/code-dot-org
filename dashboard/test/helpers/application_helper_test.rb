@@ -160,6 +160,13 @@ class ApplicationHelperTest < ActionView::TestCase
     assert client_state.video_seen? 'foo'
   end
 
+  test 'callout_seen' do
+    assert_not client_state.callout_seen? 'callout'
+    client_state.add_callout_seen 'callout'
+    assert client_state.callout_seen? 'callout'
+    assert_not client_state.callout_seen? 'callout2'
+  end
+
   test 'client state with invalid cookie' do
     cookies[:progress] = '&*%$% mangled #$#$$'
     assert_equal 0, client_state.level_progress(10),

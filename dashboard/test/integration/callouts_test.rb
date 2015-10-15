@@ -25,11 +25,45 @@ class CalloutsTest < ActionDispatch::IntegrationTest
     # first, yes callouts
     get @script_level_path
     got_callouts true
+
+    # second, no callouts
+    get @script_level_path
+    got_callouts false
+
+    # as level, no callouts
+    get @level_path
+    got_callouts false
   end
 
   test 'remember that we saw callouts in levels/show' do
     # first, yes callouts
     get @level_path
+    got_callouts true
+
+    # second, no callouts
+    get @level_path
+    got_callouts false
+
+    # as script_level, no callouts
+    get @script_level_path
+    got_callouts false
+  end
+
+  test 'forget that we saw callouts if given the show_callouts param' do
+    # first, yes callouts
+    get @level_path
+    got_callouts true
+
+    # second, no callouts
+    get @level_path
+    got_callouts false
+
+    # with param, yes callouts
+    get @level_path + '?show_callouts=1'
+    got_callouts true
+
+    # as script_level with param, yes callouts
+    get @script_level_path + '?show_callouts=1'
     got_callouts true
   end
 end
