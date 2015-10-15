@@ -32,12 +32,14 @@ COUNTRY_FIELDS_TO_US_VALUES =
   {
    'hoc_country_s' => ['us'],
    'country_s' => ['united states'],
+   'location_country_s' => ['united states'],
+   'location_country_code_s' => ["us"],
    'create_ip_country_s' => ['united states', 'reserved']
   }
 
 def international?(solr_record)
   COUNTRY_FIELDS_TO_US_VALUES.each do |field, us_values|
-    record_value = solr_record[field]
+    record_value = solr_record[field].downcase
     if record_value
       return !us_values.include?(record_value)
     end
