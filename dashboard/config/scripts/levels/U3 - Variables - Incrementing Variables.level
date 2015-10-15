@@ -63,7 +63,7 @@
 
     ],
     "embed": "false",
-    "markdown_instructions": "# Incrementing Variables\r\n\r\nYou may have noticed that we repeat a lot of the same code in this example and the only thing that changes during the programm is the value of the variables. Your mind should be scream loop.  That would be a great thing but how do we deal with updating the variables?\r\n\r\nWell take a look at the variable\r\n\r\nmoveAmount goes up by 25 each time\r\n\r\nSo could we just add 25 to the value?\r\n\r\n# Do This\r\n\r\n* **Run the code** and to see what it does. We want to recreate the same behavior with the loop\r\n\r\n* **Create a repeat loop for the repeated code**\r\n\r\n* **Use `moveAmount = moveAmount + 25;` to add 25 to the move amount.",
+    "markdown_instructions": "# Incrementing Variables\r\n\r\nYou may have noticed that we repeat a lot of the same code in this example and the only thing that changes during the programm is the value of the variables. Your mind should be scream loop.  That would be a great thing but how do we deal with updating the variables?\r\n\r\nWell take a look at the variable.\r\n\r\nmoveAmount goes up by 25 each time. So we could use incrementing!\r\n\r\n# Do This\r\n\r\n* **Run the code** and to see what it does. We want to recreate the same behavior with the loop\r\n\r\n* **Create a repeat loop for the repeated code**\r\n\r\n* **Use `moveAmount = moveAmount + 25;` to add 25 to the move amount.",
     "start_blocks": "var moveAmount = 50;\r\npenColor(\"red\");\r\nmoveForward(moveAmount);\r\nmoveAmount = 75;\r\npenColor(\"blue\");\r\nmoveForward(moveAmount);\r\nmoveAmount = 100;\r\npenColor(\"green\");\r\nmoveForward(moveAmount);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
