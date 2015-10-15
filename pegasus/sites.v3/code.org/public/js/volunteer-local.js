@@ -82,7 +82,6 @@ function sendQuery(params) {
 function updateResults(locations) {
   if (locations.length > 0) {
     $('#volunteer-search-facets').show();
-    $('#btn-contact-all').show();
     $('#controls').html('');
   } else {
     displayNoResults();
@@ -105,6 +104,7 @@ function getLocations(results) {
       var lat = coordinates[0];
       var lon = coordinates[1];
       var title = volunteers[i].name_s;
+      var id = volunteers[i].id;
       var html = compileHTML(index, volunteers[i]);
       var contact_title = compileContact(index, volunteers[i]);
       var contact_link = '<a id="contact-trigger-' + index + '" class="contact-trigger" onclick="return contactVolunteer()">Contact</a>';
@@ -113,6 +113,7 @@ function getLocations(results) {
         lat: lat,
         lon: lon,
         title: title,
+        id: id,
         contact_title: contact_title,
         html: html + contact_link,
         zoom: 10
@@ -138,7 +139,6 @@ function updateFacets(results) {
 
 function displayNoResults() {
   $('#controls').html('<p>No results were found.</p>');
-  $('#btn-contact-all').hide();
 
   // Hide the facets by default.
   $('#volunteer-search-facets').hide();
@@ -245,7 +245,7 @@ function compileHTML(index, location) {
 
 function compileContact(index, location)
 {
-  var details = '<li>' + location.name_s + ' (' + i18n(location.experience_s) + ')' + '</li>';
+  var details =  location.name_s + ' (' + i18n(location.experience_s) + ')';
   var html = '<div id="addressee-details-' + index + '">' + details + '</div>';
   $('#allnames').append(html);
   
@@ -255,17 +255,9 @@ function compileContact(index, location)
 function setContactTrigger(index, location, marker) {
   var contact_trigger = '.contact-trigger';
   $('#gmap').on('click', contact_trigger, function() {
-    $('#name').append(location.contact_title);
+    $('#name').html(location.contact_title);
+    $('#volunteer-id').val(location.id);
   });
-}
-
-function contactAllVolunteers()
-{
-  $('#volunteer-map').hide();
-  $('#allnames').show();
-  $('#volunteer-contact').show();
-
-  return false;
 }
 
 function contactVolunteer()
@@ -273,22 +265,52 @@ function contactVolunteer()
   $('#volunteer-map').hide();
   $('#name').show();
   $('#volunteer-contact').show();
+  $('body').scrollTop(0);
 
   return false;
+}
+
+function processResponse(data)
+{
+  $('#contact-volunteer-form').hide();
+  $('#before-contact').hide();
+  $('#after-contact').show();
+}
+
+function processError(data)
+{
+  $('.has-error').removeClass('has-error');
+  
+  var errors = Object.keys(data.responseJSON);
+  var errors_count = errors.length;
+
+  for (var i = 0; i < errors_count; ++i) {
+    var error_id = '#volunteer-contact-' + errors[i].replace(/_/g, '-');
+    error_id = error_id.replace(/-[sb]s?$/, '');
+    $(error_id).parents('.form-group').addClass('has-error');
+  }
+  
+  $('#error_message').html('<font color="#a94442">An error occurred. Please check that all required fields have been filled out properly.</font>').show();
+  
+  $('body').scrollTop(0);
+  $("#contact-submit-btn").prop('disabled', false);
+  $("#contact-submit-btn").removeClass("button_disabled").addClass("button_enabled");
 }
 
 function sendEmail(data)
 {
-  $("#contact-submit-btn").attr('disabled','disabled');
+  $("#contact-submit-btn").prop('disabled', true);
   $("#contact-submit-btn").removeClass("button_enabled").addClass("button_disabled");
 
-  $('#volunteer-contact-form').hide();
-  $('#before-contact').hide();
-  $('#after-contact').show();
+  $.ajax({
+    url: "/forms/VolunteerContact2015",
+    type: "post",
+    dataType: "json",
+    data: $('#contact-volunteer-form').serialize()
+  }).done(processResponse).fail(processError);
 
   return false;
 }
-
 
 function i18n(token) {
   var labels = {

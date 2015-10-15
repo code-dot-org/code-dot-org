@@ -2,9 +2,9 @@
 
 #addressees
   #before-contact
-    %p You are contacting the following volunteer(s):
+    %p You are contacting the following volunteer:
   #after-contact{:style=>"display: none;"}
-    %p You've successfully contacted these volunteer(s):
+    %p You've successfully contacted this volunteer:
   #name{:style=>"display: none;"}
   #allnames{:style=>"display: none;"}
   %br
@@ -14,46 +14,47 @@
     for volunteers near your school.
 
 %br
-#volunteer-contact-form
-  %form{:id=>"contact-volunteer-form", role: "form", onsubmit: "return sendEmail()"}
-    #error_message
+%form#contact-volunteer-form{role: "form", onsubmit: "return sendEmail()"}
+  #error_message{style: 'display: none'}
 
-    .form-group
-      %label.control-label{for: "teacher-name"} Your name
-      %div
-        %input#teacher-name.form-control{name: "teacher_name_s", placeholder: "Full name", required: true, type: "text"}
+  .form-group
+    %label.control-label{for: "teacher-name"} Your name
+    %div
+      %input#volunteer-contact-teacher-name.form-control{name: "teacher_name_s", placeholder: "Full name", required: true, type: "text"}
 
-    .form-group
-      %label.control-label{for: "teacher-email"} Your email
-      %p Your email address will be shared with the volunteer(s) you contact.
-      %div
-        %input#teacher-email.form-control{name: "teacher_email_s", placeholder: "Email address", required: true, type: "text"}
+  .form-group
+    %label.control-label{for: "teacher-email"} Your email
+    %p Your email address will be shared with the volunteer you contact.
+    %div
+      %input#volunteer-contact-teacher-email.form-control{name: "teacher_email_s", placeholder: "Email address", required: true, type: "text"}
 
-    .form-group
-      %label.control-label{for: "school-name"} School name
-      %div
-        %input#school-name.form-control{name: "school_name_s", placeholder: "School name", required: true, type: "text"}
+  .form-group
+    %label.control-label{for: "school-name"} School name
+    %div
+      %input#volunteer-contact-school-name.form-control{name: "school_name_s", placeholder: "School name", required: true, type: "text"}
 
-    .form-group
-      %label.control-label{for: "school-location"} School address
-      %div
-        %input#school-location.form-control{name: "school_location_s", placeholder: "School address", required: true, type: "text"}
+  .form-group
+    %label.control-label{for: "school-location"} School address
+    %div
+      %input#volunteer-contact-school-location.form-control{name: "school_location_s", placeholder: "School address", required: true, type: "text"}
 
-    .form-group
-      %label.control-label{for: "email-message"} Your message
-      %p Describe your Hour of Code event and how these volunteer(s) can participate.
-      %div
-        %textarea#email-message.form-control{name: "email_message_s", placeholder: "I would like to invite you to our Hour of Code event...  [If your school/district has background check requirements that need to be completed before a potential volunteer can attend an event, be sure to let the volunteer know by telling them about it here.]", required: true, style: "height: 10em;"}
+  .form-group
+    %label.control-label{for: "email-message"} Your message
+    %p Describe your Hour of Code event and how the volunteer can participate.
+    %div
+      %textarea#volunteer-contact-email-message.form-control{name: "email_message_s", placeholder: "I would like to invite you to our Hour of Code event...  [If your school/district has background check requirements that need to be completed before a potential volunteer can attend an event, be sure to let the volunteer know by telling them about it here.]", required: true, style: "height: 10em;"}
 
 
-    %p{style: 'color: #00adbc; font-size: 1.125em;'} IMPORTANT: Code.org has performed no references or background checks on these potential volunteers and neither recommends nor certifies any volunteer.
-    %p It is entirely your responsibility to thoroughly check references or perform any background checks required by your school or district. Code.org provides no warranty, guarantees of suitability, or information other than the ability to contact these potential volunteers, and all liability in any use of volunteers rests only with you. Under no circumstances is Code.org responsible for any loss or damage resulting from any person's reliance on this potential volunteer.
+  %p{style: 'color: #00adbc; font-size: 1.125em;'} IMPORTANT: Code.org has performed no references or background checks on these potential volunteers and neither recommends nor certifies any volunteer.
+  %p It is entirely your responsibility to thoroughly check references or perform any background checks required by your school or district. Code.org provides no warranty, guarantees of suitability, or information other than the ability to contact these potential volunteers, and all liability in any use of volunteers rests only with you. Under no circumstances is Code.org responsible for any loss or damage resulting from any person's reliance on this potential volunteer.
 
-    .form-group
-      .checkbox
-        %label
-          %input#understand-damages{name: "understand_damages_b", type: "checkbox", value: "1", required: true}
-            I have read and I understood the paragraph above.
+  .form-group
+    .checkbox
+      %label
+        %input#volunteer-contact-understand-damages{name: "understand_damages_b", type: "checkbox", value: "1", required: true}
+          I have read and I understood the paragraph above.
 
-    .form-group.contact-submit-btn
-      %button{type: "submit"} Send
+  %input{id: 'volunteer-id', name:'volunteer_id_i', type:'hidden', required: true}
+
+  .form-group#contact-submit-btn
+    %button{type: "submit"} Send
