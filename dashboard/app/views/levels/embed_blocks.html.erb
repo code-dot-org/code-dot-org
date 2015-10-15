@@ -1,8 +1,6 @@
 <%- # Embedded Blockly block html template. Derived from /blockly/src/templates/readonly.html.ejs, converted to erb %>
 <%-
   options = local_assigns
-  blockly_path = options[:baseUrl]
-  js_locale = options[:locale]
   app = options.delete :app
 %>
 <!DOCTYPE html>
@@ -10,18 +8,11 @@
 <head>
   <meta charset="utf-8">
   <title>Blockly</title>
-  <link href="<%= asset_path('css/common.css') %>" rel="stylesheet" type="text/css"/>
-  <script src="<%= asset_path('js/blockly.js') %>"></script>
-  <script src="<%= asset_path("js/#{js_locale}/blockly_locale.js") %>"></script>
-  <script src="<%= asset_path('js/common.js') %>"></script>
-  <script src="<%= asset_path("js/#{js_locale}/common_locale.js") %>"></script>
-  <script src="<%= asset_path("js/#{js_locale}/#{app}_locale.js") %>"></script>
-  <script src="<%= asset_path("js/#{app}.js") %>"></script>
   <%= javascript_include_tag 'application' %>
+  <%= render partial: 'levels/apps_dependencies', locals: { app: app, use_blockly: true } %>
 </head>
 <body class="readonly embed-block">
   <div id="codeWorkspace"></div>
-  <script type="text/javascript" src="/shared/js/shared.js"></script>
   <script>
     var appOptions = <%= raw options.to_json %>;
     window.onload = function () {
