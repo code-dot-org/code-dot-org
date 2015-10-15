@@ -36,10 +36,10 @@ function loadInfinity(skin, assetUrl) {
     'projectile_duck'
   ];
 
-  skin.specialProjectileFrames = {
-    'projectile_cherry': 13,
-    'projectile_ice': 12,
-    'projectile_duck': 12
+  skin.specialProjectileProperties = {
+    'projectile_cherry': { frames: 13 },
+    'projectile_ice': { frames: 12 },
+    'projectile_duck': { frames: 12 }
   };
 
   // TODO: proper item class names
@@ -54,10 +54,10 @@ function loadInfinity(skin, assetUrl) {
     'item_duck'
   ];
 
-  skin.specialItemFrames = {
-    'item_cherry': 13,
-    'item_ice': 12,
-    'item_duck': 12
+  skin.specialItemProperties = {
+    'item_cherry': { frames: 13 },
+    'item_ice': { frames: 12 },
+    'item_duck': { frames: 12 }
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -202,9 +202,6 @@ function loadHoc2015(skin, assetUrl) {
   skin.ProjectileClassNames = [
   ];
 
-  skin.specialProjectileFrames = {
-  };
-
   // TODO: proper item class names
   skin.ItemClassNames = [
     'pig',
@@ -226,24 +223,14 @@ function loadHoc2015(skin, assetUrl) {
     'pilot': 'whenTouchPilot'
   };
 
-  skin.specialItemFrames = {
-    'pig': 12,
-    'man': 12,
-    'roo': 15,
-    'bird': 8,
-    'spider': 12,
-    'mouse': 1,
-    'pilot': 13
-  };
-
-  skin.specialItemScale = {
-    'pig': 1,
-    'man': 1,
-    'roo': 1.6,
-    'bird': 1.6,
-    'spider': 1.2,
-    'mouse': 0.6,
-    'pilot': 1
+  skin.specialItemProperties = {
+    'pig':    { frames: 12, scale: 1,   activity: 'roam',  speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'man':    { frames: 12, scale: 1,   activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW  },
+    'roo':    { frames: 15, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.NORMAl },
+    'bird':   { frames:  8, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.NORMAl },
+    'spider': { frames: 12, scale: 1.2, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW  },
+    'mouse':  { frames:  1, scale: 0.6, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_FAST },
+    'pilot':  { frames: 13, scale: 1,   activity: 'flee',  speed: constants.SpriteSpeed.NORMAl },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');

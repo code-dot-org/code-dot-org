@@ -1590,7 +1590,15 @@ levels.js_hoc2015_move_right = {
   "removeItemsWhenActorCollides": true,
   "delayCompletion": 2000,
   "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 16, 0, 1, 4,0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "map": [
+    [0, 0, 0,  0, 0, 0, 0, 0], 
+    [0, 4, 4,  4, 4, 4, 0, 0], 
+    [0, 4, 16, 0, 1, 4,0, 0], 
+    [0, 4, 4,  4, 4, 4, 0, 0], 
+    [0, 0, 0,  0, 0, 0, 0, 0], 
+    [0, 0, 0,  0, 0, 0, 0, 0], 
+    [0, 0, 0,  0, 0, 0, 0, 0], 
+    [0, 0, 0,  0, 0, 0, 0, 0]],
   "instructions": "Help me program the character to get the item and bring it to the destination. Stack a couple moveRight(); commands and then hit Run to make him go.",
   "goalOverride": {
     "goalAnimation": "animatedGoal",
@@ -1636,7 +1644,15 @@ levels.js_hoc2015_move_two_items = {
   "removeItemsWhenActorCollides": true,
   "delayCompletion": 2000,
   "floating_score": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 0, 0, 0, 4,0, 0], [0, 4, 0, 4, 0, 4, 0, 0], [0, 4, 1, 16, 0, 4, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "map": [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 4, 4, 4,  4, 4, 0, 0], 
+    [0, 4, 0, 0,  0, 4,0, 0], 
+    [0, 4, 0, 4,  0, 4, 0, 0], 
+    [0, 4, 1, 16, 0, 4, 0, 0], 
+    [0, 4, 4, 4,  4, 4, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0]],
   "instructions": "We need the items. Help me get them all!",
   "goalOverride": {
     "goalAnimation": "animatedGoal",
@@ -1694,7 +1710,15 @@ levels.js_hoc2015_move_item_destination_2 = {
   "removeItemsWhenActorCollides": true,
   "delayCompletion": 2000,
   "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 0, 0,  4, 0, 0], [0, 4,  4, 4, 4,  0, 4, 0], [0, 4,  4,16, 0,  0, 4, 0], [0, 4,  0, 0, 4,  4, 4, 0], [0, 4,  1, 1, 0,  4, 4, 0], [0, 4,  4, 0, 4,  0, 0, 0], [0, 0,  4, 4, 4,  0, 0, 0]],
+  "map": [
+    [0, 0,  0,  0, 0, 0, 0, 0], 
+    [0, 0,  0,  0, 0, 4, 0, 0], 
+    [0, 4,  4,  4, 4, 0, 4, 0], 
+    [0, 4,  4, 16, 0, 0, 4, 0], 
+    [0, 4,  0,  0, 4, 4, 4, 0], 
+    [0, 4,  1,  1, 0, 4, 4, 0], 
+    [0, 4,  4,  0, 4, 0, 0, 0], 
+    [0, 0,  4,  4, 4, 0, 0, 0]],
   "embed": "false",
   "instructions": "Drag the code blocks into the workspace to help the character reach the destination.",
   "goalOverride": {
@@ -1724,7 +1748,15 @@ levels.js_hoc2015_move_item_destination_3 = {
   "removeItemsWhenActorCollides": true,
   "delayCompletion": 2000,
   "floating_score": true,  
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  4, 4, 4,  4, 4, 0], [0, 0, 4,  0, 0, 1,  4, 0], [0, 0,  4,0, 1,  4, 4, 0], [0, 4,  0, 16, 0,  0, 4, 0], [0, 4, 4, 4, 4,  0, 4, 0], [0, 0,  0, 0, 4,  4, 4, 0], [0, 0,  0, 0, 0, 0, 0, 0]],
+  "map": [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 4, 4,  4, 4, 4, 0], 
+    [0, 0, 4, 0,  0, 1, 4, 0], 
+    [0, 0, 4, 0,  1, 4, 4, 0], 
+    [0, 4, 0, 16, 0, 0, 4, 0], 
+    [0, 4, 4, 4,  4, 0, 4, 0], 
+    [0, 0, 0, 0,  4, 4, 4, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0]],
   "embed": "false",
   "instructions": "Try typing the commands to get the item to our destination. Don’t forget to end with ();",
   "goalOverride": {
@@ -1755,7 +1787,15 @@ levels.js_hoc2015_move_cross = {
   "removeItemsWhenActorCollides": true,
   "delayCompletion": 2000,
   "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 4, 0, 0, 0, 0], [0, 0, 4,  1, 4, 0, 0, 0], [0, 4, 1, 0, 1, 4, 0, 0], [0, 0,  4, 16, 4,  0, 0, 0], [0, 0, 0, 4, 0, 0, 0, 0], [0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "map": [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 4,  0, 0, 0, 0], 
+    [0, 0, 4, 1,  4, 0, 0, 0], 
+    [0, 4, 1, 0,  1, 4, 0, 0], 
+    [0, 0, 4, 16, 4, 0, 0, 0], 
+    [0, 0, 0, 4,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0]],
   "embed": "false",
   "instructions": "Type or drag the blocks to get both items to the destination.",
   "goalOverride": {
@@ -1792,7 +1832,15 @@ levels.js_hoc2015_event_two_items = {
   "removeItemsWhenActorCollides": true,
   "delayCompletion": 2000,
   "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
+  "map": [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 1,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 16, 0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 1,  0, 0, 0, 0]],
   "pinWorkspaceToBottom": "true",
   "embed": "false",
   "instructions": "\"BOT1, I need you to get a critical message to the GOALs.\"",
@@ -1831,7 +1879,6 @@ levels.js_hoc2015_event_two_items = {
 
 levels.js_hoc2015_event_four_items = {
   "editCode": true,
-  "textModeAtStart": true,
   "background": "snow",
   "wallMap": "blobs",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
@@ -1911,7 +1958,7 @@ levels.js_hoc2015_event_three_goals =
   "avatarList": ["bot1"],
   "editCode": true,
   "background": "snow",
-  "wallMap": "blank",
+  "wallMap": "circle",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
   "codeFunctions": {
     "whenGetAllPilots": null,
@@ -2008,7 +2055,6 @@ levels.js_hoc2015_event_three_goals =
 
 levels.js_hoc2015_event_score_points = {
   "editCode": true,
-  "textModeAtStart": true,
   "background": "forest",
   "wallMap": "horizontal",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
@@ -2153,7 +2199,15 @@ levels.js_hoc2015_win_lose = {
   "removeItemsWhenActorCollides": true,
   "delayCompletion": 2000,
   "floatingFcore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "map": [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 16, 0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"Watch out for the MAN.\"",
   "instructions2": "Make BOT1 lose the game if hits the MAN and win if he gets the pilot.",
@@ -2187,7 +2241,6 @@ levels.js_hoc2015_win_lose = {
 
 levels.js_hoc2015_add_characters = {
   "editCode": true,
-  "textModeAtStart": true,
   "background": "forest",
   "wallMap": "circle",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
@@ -2251,7 +2304,15 @@ levels.js_hoc2015_add_characters = {
   "removeItemsWhenActorCollides": true,
   "delayCompletion": 2000,
   "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "map": [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 16, 0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0]],
   "embed": "false",
   "instructions": "\"I'm seeing signs of increased activity on this planet!\"",
   "instructions2": "Now you have the WhenRun event and a new addCharacter command to create your own characters. Can you add 3 BIRDs to the world? Then, go get them.",
@@ -2282,7 +2343,6 @@ levels.js_hoc2015_add_characters = {
 
 levels.js_hoc2015_chain_characters = {
   "editCode": true,
-  "textModeAtStart": true,
   "background": "ship",
   "wallMap": "horizontal",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
@@ -2372,7 +2432,6 @@ levels.js_hoc2015_chain_characters = {
 
 levels.js_hoc2015_change_setting = {
   "editCode": true,
-  "textModeAtStart": true,
   "background": "ship",
   "wallMap": "blobs",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
@@ -2466,7 +2525,6 @@ levels.js_hoc2015_change_setting = {
 
 levels.js_hoc2015_event_free = {
   "editCode": true,
-  "textModeAtStart": true,
   "freePlay": true,
   "background": "forest",
   "wallMap": "blank",

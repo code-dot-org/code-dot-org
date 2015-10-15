@@ -7,7 +7,7 @@ exports.winGame = function (value) {
 }
 
 exports.loseGame = function (value) {
-  Studio.queueCmd(null, 'winGame', {'value': value});
+  Studio.queueCmd(null, 'loseGame', {'value': value});
 }
 
 exports.setBackground = function (value) {
