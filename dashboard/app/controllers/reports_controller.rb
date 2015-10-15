@@ -59,16 +59,8 @@ SQL
   def search_for_teachers
     authorize! :read, :reports
 
-    if (params[:emailFilter])
-      email_filter = '%' + params[:emailFilter] + '%'
-    else
-      email_filter = '%%'
-    end
-    if (params[:addressFilter])
-      address_filter = '%' + params[:addressFilter] + '%'
-    else
-      address_filter = '%%'
-    end
+    email_filter = "%#{params[:emailFilter]}%"
+    address_filter = "#{params[:addressFilter]}%"
 
     @teachers = User.limit(100).where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id').pluck(:id, :name, :email, :full_address, 'COUNT(followers.id) AS num_students')
   end
