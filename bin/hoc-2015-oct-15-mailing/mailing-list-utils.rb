@@ -34,7 +34,7 @@ def query_contacts(params, &block)
   [].tap do |results|
     SOLR.query(params.merge(rows: 10000)).each do |i|
       i = yield(i) if block_given?
-      results << {email: i['email_s'].downcase.strip, name: i['name_s'], international: i['international'], organizer: i['organizer']}.merge(i.slice(*fields))if i
+      results << {email: i['email_s'].downcase.strip, name: i['name_s'], international: i['international'], organizer: i['organizer']}.merge(i.slice(*fields)) if i
     end
   end
 end
