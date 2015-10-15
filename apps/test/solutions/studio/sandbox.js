@@ -771,6 +771,7 @@ module.exports = {
     },
     {
       description: 'random background/avatar',
+      timeout: 15000,
       xml: '<xml>' +
         blockUtils.blockWithNext('when_run', {},
           blockUtils.blockWithNext('studio_setSprite', {
