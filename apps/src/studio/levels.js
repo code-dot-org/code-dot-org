@@ -1600,9 +1600,13 @@ levels.js_hoc2015_move_right = {
   "callouts": [
     {
       "element_id": ".droplet-main-canvas",
+      "hide_target_selector": ".droplet-drag-cover",
       "qtip_config": {
-        "content" : {
+        "content": {
           "text": msg.calloutPlaceCommandsHere(),
+        },
+        "hide": {
+          "event": "mouseup touchend",
         },
         "position": {
           "my": "top left",
@@ -2258,9 +2262,6 @@ levels.js_hoc2015_event_points = {
     "}",
     "function whenDown() {",
     "  moveDown();",
-    "}",
-    "function whenTouchCharacter() {",
-    "  ",
     "}"].join("\n"),
   "sortDrawOrder": true,
   "wallMapCollisions": true,

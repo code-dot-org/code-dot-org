@@ -154,48 +154,62 @@ level 'U3L13 Student Facing Lesson Plan'
 level 'U3L13 - Project'
 
 # 14
-stage 'Getting User Input'
-level 'U3L16 - textInput getText write'
-level 'U3L16 - hideAndShowPractice'
-level 'U3L16 - challenge say hi app'
-
-# 15
 stage 'Variables'
 level 'U3L19 Student Lesson Intro'
 level 'U3L19 - Target Clicker App'
-level 'U3L19 - Intro to variables’
 level 'U3L19 - three basic ops of variables’
+level 'U3- Variables - Create And Assign'
 level 'U3L19 - write var and string with same name’
-level 'U3L19 - explanation diff between string and var name'
 level 'U3L19 - fix the var name syntax error’
-level 'U3L19 - concatenate string with var'
-level 'U3L19 - do concatenate string with var’
+level 'U3 - Variables - Identify Variables'
+level 'U3- Variables - Changing the Value'
+level 'U3L19 - test reassignment of two vars’
+level 'U3L19 - Debugging with consoleLog’
+level 'U3 - Variables - Increment'
+level 'U3 - Variables - Incrementing Variables'
+level 'U3L19 - variable reassignment challenge pt2’
+assessment 'U3L19 - MC what are values of abc'
+level 'U3L19 - practice with setText’
+level 'U3L19 - DEMO up down count practice app’
+level 'U3L19 - up down count practice app’
+level 'U3L19 - variable scoping problem debugging’
+level 'U3L19 - variable scope problem 2’
+level 'U3L19 - improve your clicker game'
+assessment 'U3L19 - final prompt'
+
+# 15 Arithmetic?
+stage 'More Variables (2 days)'
+level 'U3L21 Student Lesson Introduction'
+assessment 'U3L21 Assessment 1'
+assessment 'U3L21 Assessment 2'
+assessment 'U3L21 Assessment Wrap Up'
+
+#16
+stage 'Permanent Data Storage and Clicker Completion'
+level 'U3L22 Student Lesson Introduction'
+assessment 'U3L22 Free Response Getting Started'
+assessment 'U3L22 Assessment'
+assessment 'U3L22 Reflection'
+
+#temp
+stage 'Variables Conceptorial Fodder'
+level 'U3L19 - Target Clicker App'
+level 'U3L19 - Intro to variables’
+level 'U3L19 - explanation diff between string and var name'
 level 'U3L19 - variable breakdown intro'
 level 'U3L19 - variable breakdown - declaration'
 level 'U3L19 - variable breakdown - Assigning a value’
 level 'U3L19 - variable breakdown - common mistake - declaring twice'
 level 'U3L19 - variable breakdown - ways to read pt1'
-level 'U3L19 - try out console log’
 level 'U3L19 - misconception variable assignment order pt1’
-level 'U3L19 - test reassignment of two vars’
 level 'U3L19 - misconception variable assignment order pt2’
-level 'U3L19 - Debugging with consoleLog’
 level 'U3L19 - Arithmetic v Concatenation’
 level ‘AppLab Level U3L19 - variable re-assignment challenge pt1'
-level 'U3L19 - variable reassignment challenge pt2’
-assessment 'U3L19 - MC what are values of abc'
 level 'U3L19 - variable breakdown - setText in label'
-level 'U3L19 - practice with setText’
-level 'U3L19 - DEMO up down count practice app’
-level 'U3L19 - up down count practice app’
 level 'U3L19 - variable scope explanation’
-level 'U3L19 - variable scoping problem debugging’
 level 'U3L19 - variable scope explanation pt2’
-level 'U3L19 - variable scope problem 2’
 level 'U3L19 - variable scope explanation pt3’
 level 'U3L19 - done with variables finally'
-level 'U3L19 - improve your clicker game'
-assessment 'U3L19 - final prompt'
 
 # We think this stage_lesson goes away-Keeping for posterity
 stage 'Improving the Clicker Game'
@@ -207,33 +221,34 @@ level 'U3L18 Controlling Memory and Program Flow 4'
 level 'U3L18 Controlling Memory and Program Flow 5'
 assessment 'U3L18 Free Response Wrap Up'
 
+# 15
+stage 'Getting User Input'
+level 'U3L16 - textInput getText write'
+level 'U3L16 - hideAndShowPractice'
+level 'U3L16 - challenge say hi app'
+
 # 16
 stage 'Conditional Basics'
 level 'U3L20 Student Lesson Introduction'
+level 'U3 - Basic Conditionals - 1'
+level 'U3 - Basic Conditionals - 2'
+level 'U3 - Basic Conditionals - 3'
+level 'U3 - Basic Conditionals - 4'
+level 'U3 - Basic Conditionals - 5'
+level 'U3 - Conditional Basics - 6'
 assessment 'U3L20 Free Response Getting Started'
-level 'U3L20 Assessment1'
-level 'U3L20 Assessment2'
-level 'U3L20 Assessment3'
-level 'U3L20 Assessment4'
-level 'U3L20 Assessment5'
-level 'U3L20 Assessment6'
-level 'U3L20 Assessment7'
-level 'U3L20 Assessment8'
-level 'U3L20 Assessment9'
+assessment 'U3L20 Assessment1'
+assessment 'U3L20 Assessment2'
+assessment 'U3L20 Assessment3'
+assessment 'U3L20 Assessment4'
+assessment 'U3L20 Assessment5'
+assessment 'U3L20 Assessment6'
+assessment 'U3L20 Assessment7'
+assessment 'U3L20 Assessment8'
+assessment 'U3L20 Assessment9'
 assessment 'U3L20 Free Response Wrap Up' 
 
-# 17 Arithmetic?
-stage 'More Variables (2 days)'
-level 'U3L21 Student Lesson Introduction'
-assessment 'U3L21 Assessment 1'
-assessment 'U3L21 Assessment 2'
-assessment 'U3L21 Assessment Wrap Up'
 
-stage 'Permanent Data Storage and Clicker Completion'
-level 'U3L22 Student Lesson Introduction'
-assessment 'U3L22 Free Response Getting Started'
-assessment 'U3L22 Assessment'
-assessment 'U3L22 Reflection'
 
 stage 'Natural Language Processing'
 level 'U3L23 Student Lesson Introduction'

@@ -47,9 +47,9 @@ var sendReport = function(report) {
     type: 'POST',
     url: report.callback,
     contentType: 'application/x-www-form-urlencoded',
-    // Set a timeout of a few seconds so the user will get the fallback
+    // Set a timeout of fifteen seconds so the user will get the fallback
     // response even if the server is hung and unresponsive.
-    timeout: 4000,
+    timeout: 15000,
     data: queryString,
     dataType: 'json',
     beforeSend: function(xhr) {

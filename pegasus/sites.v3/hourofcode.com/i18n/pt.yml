@@ -145,15 +145,6 @@ pt:
   prizes_brilliant: Uma escola de cada província e território receberá US$2.000 para um Projeto Brilhante
   prizes_actua: Dentre as escolas do Canadá, as 15 sorteadas ganharão 2 oficinas práticas de STEM de um dos membros da Actua
   prizes_details: Detalhes
-  prizes_nav_dc: Viagem misteriosa para Washington D.C.
-  prizes_nav_technology: US$10.000 em tecnologia para sua escola
-  prizes_nav_video_chat: Chat com vídeo com um dos titãs da tecnologia
-  prizes_nav_skype_dropbox: Crédito no Skype ou espaço no Dropbox para cada organizador
-  prizes_nav_brilliant: US$2.000 para o projeto Brilliant Labs
-  prizes_nav_actua: Workshop da Actua
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Termos e Condições
-  prizes_nav_faq: Tire suas dúvidas
   nav_back_to_resources: Voltar para recursos
   how_to_nav_educators: Para educadores
   how_to_nav_after_school: Para atividade extracurricular
@@ -167,6 +158,18 @@ pt:
   prizes_nav_title: Prêmios
   prizes_nav_home: Todos os prêmios
   prizes_nav_hardware: Cadastro para o prêmio de hardware
+  prizes_nav_terms: Termos e Condições
+  prizes_nav_faq: Tire suas dúvidas
+  prizes_nav_dc: Viagem misteriosa para Washington D.C.
+  prizes_nav_technology: US$10.000 em tecnologia para sua escola
+  prizes_nav_video_chat: Chat com vídeo com um dos titãs da tecnologia
+  prizes_nav_skype_dropbox: Crédito no Skype ou espaço no Dropbox para cada organizador
+  prizes_nav_brilliant: US$2.000 para o projeto Brilliant Labs
+  prizes_nav_actua: Workshop da Actua
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: "Every organizer will receive a gift card to Amazon.com or Microsoft's Windows Store."
   whats_next_header: O que vem depois?
   whats_next_description: "Enviaremos materiais e dicas para seu evento. Novos tutoriais para 2015 estarão disponíveis em breve para qualquer navegador, smartphone ou até mesmo para fazer offline! <a href='http://code.org/learn'>Experimente nossos tutoriais</a>"
   whats_next_how_to: "<a href='/how-to'>Como fazer uma Hora do Código</a>"
