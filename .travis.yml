@@ -15,6 +15,10 @@ bundler_args: --without development --deployment
 before_script:
   - cd dashboard
   - bundle exec rake -t db:create db:schema:load
+  - cd ../pegasus
+  - echo create database pegasus_test | mysql -uroot
+  - bundle exec rake db:reset
+  - cd ../dashboard
 
 script: bundle exec rake -t test
 
