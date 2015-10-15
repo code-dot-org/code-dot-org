@@ -984,6 +984,10 @@ function handleActorCollisionsWithCollidableList (
     var collidable = list[i];
     var next = collidable.getNextPosition();
 
+    if (collidable.isFading && collidable.isFading()) {
+      continue;
+    }
+
     Studio.drawDebugRect("itemCollision",
       next.x,
       next.y,
@@ -1016,8 +1020,12 @@ function handleActorCollisionsWithCollidableList (
         // Make the projectile/item disappear automatically if this parameter
         // is set:
         if (autoDisappear) {
-          collidable.removeElement();
-          list.splice(i, 1);
+          if (collidable.beginRemoveElement) {
+            collidable.beginRemoveElement();
+          } else {
+            collidable.removeElement();
+            list.splice(i, 1);
+          }
         }
       }
     } else {
@@ -1179,9 +1187,17 @@ function createItemEdgeCollisionHandler (item) {
 /* Calls each item's update function
  */
 function updateItems () {
-  for (var i = 0; i < Studio.items.length; i++) {
+  // Traverse the list in reverse order because we may remove elements from the
+  // list while inside the loop:
+  for (var i = Studio.items.length - 1; i >= 0; i--) {
     var item = Studio.items[i];
+
     item.update();
+
+    if (item.hasCompletedFade && item.hasCompletedFade()) {
+      item.removeElement();
+      Studio.items.splice(i, 1);
+    }
   }
 }
 
@@ -1189,6 +1205,10 @@ function checkForItemCollisions () {
   for (var i = 0; i < Studio.items.length; i++) {
     var item = Studio.items[i];
     var next = item.getNextPosition();
+
+    if (item.isFading && item.isFading()) {
+      continue;
+    }
 
     if (level.wallMapCollisions) {
       if (Studio.willCollidableTouchWall(item, next.x, next.y)) {
@@ -1790,6 +1810,7 @@ Studio.reset = function(first) {
   for (i = 0; i < Studio.spriteGoals_.length; i++) {
     // Mark each finish as incomplete.
     Studio.spriteGoals_[i].finished = false;
+    Studio.spriteGoals_[i].startFadeTime = null;
 
     // Move the finish icons into position.
     var offsetX = skin.goalRenderOffsetX || 0;
@@ -1799,6 +1820,7 @@ Studio.reset = function(first) {
     spriteFinishIcon.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
     spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
       'xlink:href', goalAsset);
+    spriteFinishIcon.setAttribute('opacity', 1);
     var finishClipRect = document.getElementById('finishClipRect' + i);
     finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x + offsetX);
     finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
@@ -2848,7 +2870,8 @@ Studio.animateGoals = function() {
 
   for (var i = 0; i < Studio.spriteGoals_.length; i++) {
     var goal = Studio.spriteGoals_[i];
-    if (!goal.finished) {
+    // Keep showing the goal unless it's finished and we're not fading out.
+    if (!goal.finished || goal.startFadeTime) {
 
       var goalSprite = document.getElementById('spriteFinish' + i);
       var goalClipRect = document.getElementById('finishClipRect' + i);
@@ -2857,6 +2880,18 @@ Studio.animateGoals = function() {
       var frame = Math.floor(elapsed / frameDuration) % numFrames;
   
       goalSprite.setAttribute('x', baseX - frame * frameWidth);
+
+      var fadeTime = 350;
+
+      if (goal.startFadeTime) {
+        var opacity = 1 - (currentTime - goal.startFadeTime) / fadeTime;
+
+        if (opacity < 0) {
+          goal.startFadeTime = null;
+        } else {
+          goalSprite.setAttribute('opacity', opacity);
+        }
+      }
     }
   }
 };
@@ -4360,6 +4395,9 @@ Studio.allGoalsVisited = function() {
         for (var j = 0; j < Studio.sprite.length; j++) {
           if (spriteAtGoal(Studio.sprite[j], goal)) {
             goal.finished = true;
+            if (skin.fadeOutGoal) {
+              goal.startFadeTime = new Date().getTime();
+            }
             break;
           }
         }
@@ -4375,14 +4413,16 @@ Studio.allGoalsVisited = function() {
         studioApp.playAudio('flag');
       }
 
-      // Change the finish icon to goalSuccess.
-      var successAsset = skin.goalSuccess;
-      if (level.goalOverride && level.goalOverride.success) {
-        successAsset = skin[level.goalOverride.success];
+      if (skin.goalSuccess) {
+        // Change the finish icon to goalSuccess.
+        var successAsset = skin.goalSuccess;
+        if (level.goalOverride && level.goalOverride.success) {
+          successAsset = skin[level.goalOverride.success];
+        }
+        var spriteFinishIcon = document.getElementById('spriteFinish' + i);
+        spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
+          'xlink:href', successAsset);
       }
-      var spriteFinishIcon = document.getElementById('spriteFinish' + i);
-      spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
-        'xlink:href', successAsset);
     }
   }
 
