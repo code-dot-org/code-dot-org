@@ -6,7 +6,7 @@ nav: prizes_nav
 
 <%= view :signup_button %>
 
-# 2015 prizes
+# 2015 Hour of Code prizes
 
 [col-33]
 
@@ -28,6 +28,18 @@ nav: prizes_nav
 
 <p style="clear:both">&nbsp;</p>
 
+<% if @country == 'la' %>
+
+# Prizes for every organizer
+
+Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox space as a thank you gift!
+
+<% else %>
+
+## Prizes for EVERY organizer
+
+Every educator who hosts an Hour of Code is eligible to receive **$10 in Amazon credit** as a thank you gift!
+
 <% if @country == 'us' %>
 
 ## 51 schools will win a class-set of laptops (or $10,000 for other technology)
@@ -36,17 +48,28 @@ One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 wo
 
 <% end %>
 
-<% if @country == 'la' %>
+# FAQ
 
-# Prizes for every organizer
+## Is there a deadline to sign up to receive the all organizer thank you gift?
+You must sign up **before** Dec 7th in order to be eligible to receive the all organizer thank you gift. 
 
-Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox space as a thank you gift!
+## When will I receive my thank you gift?
+We will contact you in December after Computer Science Education Week (Dec 7-11th) with next steps on how to redeem your thank you gift.
+
+## Does your whole school have to enter to win the $10,000 in hardware?
+Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= resolve_url('/prizes/hardware-signup') %>). Every teacher participating will need to [sign up](<%= resolve_url('/') %>) their classroom individually in order to receive the all organizer thank you gift.
+
+## Why is the $10,000 hardware prize only available to public schools?
+We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
+
+## When is the deadline to apply for the hardware prize?
+To qualify, you must complete the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup') %>) by November 16, 2015. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2015.
+
+## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
+Yes, in the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup') %>) include the dates that your whole school is participating.
+
+## I’m outside the United States. Can I qualify for prizes?
+Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank you gift. The $10K hardware prize is US only.
 
 <% end %>
-
-## **Every** educator who organizes an Hour of Code event is eligible to receive a prize.
-
-Check back for updates in fall 2015.
-
-
-## More prizes coming soon!
+<%= view :signup_button %>
