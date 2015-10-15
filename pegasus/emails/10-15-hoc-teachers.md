@@ -5,10 +5,10 @@ subject: The Hour of Code teacher test
 
 ## The Hour of Code is coming, December 7-13, 2015!
 
-Thanks to educators like you, the [Hour of Code movement](https://hourofcode.com/) keeps changing the world. This year can be a turning point for computer science in our schools, with new tutorials, new prizes, and you.
+Thanks to educators like you, the [Hour of Code](https://hourofcode.com/) keeps changing the world. This year can be a turning point for computer science in our schools, with new tutorials, new prizes, and you.
 
 Together, we want to reach 100,000 classrooms worldwide
-I hope you’ll join us to prove anybody can learn, and every young person deserves to learn how to build technology that will impact everything in their futures. 
+I hope you’ll join us to prove anybody can learn, and every young person deserves to learn how to build technology that will impact everything in their future. 
 
 [Sign up to host an Hour of Code](https://hourofcode.com/)
 
@@ -21,13 +21,13 @@ Hour of Code activities are available in more than 40 languages. We need your he
 <% end %>
 
 ## New prizes for every organizer 
-<% if US == 'true' %>
-Every organizer will receive a gift card to Amazon.com or Microsoft’s Windows Store as a thank-you gift. And you can win $10,000 for your school. [Details](https://hourofcode.com/prizes)
+<% if international == 'false' %>
+Every organizer will receive a gift card to Amazon or Microsoft’s Windows Store as a thank-you gift. And you can win $10,000 for your school. [Details](https://hourofcode.com/prizes)
 <% else %>
-*Every* organizer will receive a gift card to Amazon.com or Microsoft’s Windows Store as a thank-you gift.
+*Every* organizer will receive a gift card to Amazon or Microsoft’s Windows Store as a thank-you gift.
 <% end %>
 
-### Computer science is foundational for every 21st-century student
+## Computer science is foundational for every 21st-century student
 Most schools still don’t teach it. We owe it to our children to start with just one hour.
 
 **[Join us](https://hourofcode.com/)**
