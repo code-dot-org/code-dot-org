@@ -22,7 +22,6 @@ var Item = function (options) {
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
   this.renderScale = options.renderScale || 1;
   this.displayDir = Direction.SOUTH;
-  this.activity = options.activity || "none";
 
   this.currentFrame_ = 0;
   this.animator_ = window.setInterval(function () {

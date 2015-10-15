@@ -117,8 +117,8 @@ var AUTO_HANDLER_MAP = {
       (Studio.protagonistSpriteIndex || 0) +
       '-wall',
   whenGetAllCharacters: 'whenGetAllCharacters',
-  whenGetAllPilots: 'whenGetAllPilots',
   whenTouchGoal: 'whenTouchGoal',
+  whenTouchAllGoals: 'whenTouchAllGoals',
   whenScore1000: 'whenScore1000',
 };
 
@@ -638,6 +638,30 @@ var setSvgText = function(opts) {
 *   JS machine for consumption by the student's event-handling code.
  */
 function callHandler (name, allowQueueExtension, extraArgs) {
+  if (level.autoArrowSteer) {
+    var moveDir;
+    switch (name) {
+      case 'when-up':
+        moveDir = Direction.NORTH;
+        break;
+      case 'when-down':
+        moveDir = Direction.SOUTH;
+        break;
+      case 'when-left':
+        moveDir = Direction.WEST;
+        break;
+      case 'when-right':
+        moveDir = Direction.EAST;
+        break;
+    }
+    if (moveDir) {
+      Studio.queueCmd(null, 'move', {
+        'spriteIndex': Studio.protagonistSpriteIndex || 0,
+        'dir': moveDir
+      });
+    }
+  }
+
   Studio.eventHandlers.forEach(function (handler) {
     if (studioApp.isUsingBlockly()) {
       // Note: we skip executing the code if we have not completed executing
@@ -799,40 +823,16 @@ Studio.onTick = function() {
           Studio.keyState[KeyCodes[key]] === "keydown") {
         switch (KeyCodes[key]) {
           case KeyCodes.LEFT:
-            if (level.autoArrowSteer) {
-              Studio.moveSingle({
-                spriteIndex: Studio.protagonistSpriteIndex || 0,
-                dir: Direction.WEST });
-            } else {
-              callHandler('when-left');
-            }
+            callHandler('when-left');
             break;
           case KeyCodes.UP:
-            if (level.autoArrowSteer) {
-              Studio.moveSingle({
-                spriteIndex: Studio.protagonistSpriteIndex || 0,
-                dir: Direction.NORTH });
-            } else {
-              callHandler('when-up');
-            }
+            callHandler('when-up');
             break;
           case KeyCodes.RIGHT:
-            if (level.autoArrowSteer) {
-              Studio.moveSingle({
-                spriteIndex: Studio.protagonistSpriteIndex || 0,
-                dir: Direction.EAST });
-            } else {
-              callHandler('when-right');
-            }
+            callHandler('when-right');
             break;
           case KeyCodes.DOWN:
-            if (level.autoArrowSteer) {
-              Studio.moveSingle({
-                spriteIndex: Studio.protagonistSpriteIndex || 0,
-                dir: Direction.SOUTH });
-            } else {
-              callHandler('when-down');
-            }
+            callHandler('when-down');
             break;
         }
       }
@@ -1047,7 +1047,11 @@ function handleActorCollisionsWithCollidableList (
           collidable.removeElement();
           list.splice(i, 1);
 
-          if (list.length == 0) {
+          if (list.length === 0 && list === Studio.items) {
+            // NOTE: we do this only for the Item list (not projectiles)
+            
+            // NOTE: if items are allowed to move outOfBounds(), this may never
+            // be called because the last item may not be removed here.
             callHandler('whenGetAllCharacters');
           }
         }
@@ -1571,12 +1575,16 @@ Studio.init = function(config) {
   config.varsInGlobals = true;
   config.dropletConfig = dropletConfig;
   config.unusedConfig = [];
-  if (skin.AutohandlerTouchItems) {
-    for (var prop in skin.AutohandlerTouchItems) {
-      AUTO_HANDLER_MAP[skin.AutohandlerTouchItems[prop]] =
-          'whenSpriteCollided-' +
-          (Studio.protagonistSpriteIndex || 0) + '-' + prop;
-    }
+  for (var prop in skin.AutohandlerTouchItems) {
+    AUTO_HANDLER_MAP[skin.AutohandlerTouchItems[prop]] =
+        'whenSpriteCollided-' +
+        (Studio.protagonistSpriteIndex || 0) + '-' + prop;
+  }
+  for (prop in skin.AutohandlerGetAllItems) {
+    AUTO_HANDLER_MAP[skin.AutohandlerGetAllItems[prop]] = 'whenGetAll-' + prop;
+  }
+  for (prop in level.autohandlerOverrides) {
+    AUTO_HANDLER_MAP[prop] = level.autohandlerOverrides[prop];
   }
   for (var handlerName in AUTO_HANDLER_MAP) {
     config.unusedConfig.push(handlerName);
@@ -1800,7 +1808,13 @@ Studio.reset = function(first) {
   }
 
   Studio.itemSpeed = {};
+  for (var className in skin.specialItemProperties) {
+    Studio.itemSpeed[className] = skin.specialItemProperties[className].speed;
+  }
   Studio.itemActivity = {};
+  for (className in skin.specialItemProperties) {
+    Studio.itemActivity[className] = skin.specialItemProperties[className].activity;
+  }
   // Create Items that are specified on the map:
   Studio.createLevelItems(svg);
 
@@ -1818,6 +1832,7 @@ Studio.reset = function(first) {
     goalAsset = skin[level.goalOverride.goalAnimation];
   }
 
+  Studio.touchAllGoalsEventFired = false;
   for (i = 0; i < Studio.spriteGoals_.length; i++) {
     // Mark each finish as incomplete.
     Studio.spriteGoals_[i].finished = false;
@@ -2223,7 +2238,6 @@ Studio.execute = function() {
     }
 
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
-    registerHandlers()
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
         'whenGameStarts');
@@ -3203,13 +3217,9 @@ Studio.addItem = function (opts) {
   var pos = generateRandomItemPosition();
 
   var renderScale = 1;
-  var activity = "none";
-  var speed = constants.SpriteSpeed.NORMAL;
   var properties = skin.specialItemProperties[opts.className];
   if (properties) {
     renderScale = utils.valueOr(properties.scale, renderScale);
-    activity = utils.valueOr(properties.activity, activity);
-    speed = utils.valueOr(properties.speed, speed);
   }
 
   var itemOptions = {
@@ -3220,13 +3230,11 @@ Studio.addItem = function (opts) {
     loop: true,
     x: pos.x,
     y: pos.y,
-    //speed: Studio.itemSpeed[opts.className],
-    //activity: utils.valueOr(Studio.itemActivity[opts.className], "roam"),
+    speed: Studio.itemSpeed[opts.className],
+    activity: utils.valueOr(Studio.itemActivity[opts.className], "roam"),
     width: 100,
     height: 100,
     renderScale: renderScale,
-    activity: activity,
-    speed: speed
   };
 
   var item = new Item(itemOptions);
@@ -3427,13 +3435,13 @@ Studio.setSpriteSize = function (opts) {
 };
 
 Studio.changeScore = function (opts) {
-  if (Studio.playerScore < 1000 && Studio.playerScore + Number(opts.value) > 1000) {
-    callHandler('whenScore1000');
-  }
-
   Studio.playerScore += Number(opts.value);
   Studio.displayScore();
   Studio.displayFloatingScore(opts.value);
+
+  if (Studio.playerScore - Number(opts.value) < 1000 && Studio.playerScore >= 1000) {
+    callHandler('whenScore1000');
+  }
 };
 
 Studio.setScoreText = function (opts) {
@@ -3442,11 +3450,11 @@ Studio.setScoreText = function (opts) {
 };
 
 Studio.winGame = function(opts) {
-  Studio.setScoreText({text: "You win!"});
+  Studio.setScoreText({text: studioMsg.winMessage()});
 };
 
 Studio.loseGame = function(opts) {
-  Studio.setScoreText({text: "You lose!"});
+  Studio.setScoreText({text: studioMsg.loseMessage()});
 };
 
 Studio.setBackground = function (opts) {
@@ -4452,11 +4460,14 @@ Studio.allGoalsVisited = function() {
     }
   }
 
-  if (finishedGoals === Studio.spriteGoals_.length) {
-    callHandler('whenGetAllPilots');
+  var retVal = finishedGoals === Studio.spriteGoals_.length;
+
+  if (retVal && !Studio.touchAllGoalsEventFired) {
+    Studio.touchAllGoalsEventFired = true;
+    callHandler('whenTouchAllGoals');
   }
 
-  return finishedGoals === Studio.spriteGoals_.length;
+  return retVal;
 };
 
 /**
