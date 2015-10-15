@@ -323,7 +323,7 @@ dashboard.header.showProjectHeader = function () {
       .append($('<div class="project_edit header_button header_button_light">').text(dashboard.i18n.t('project.rename')))
       .append($('<div class="project_share header_button header_button_light">').text(dashboard.i18n.t('project.share')))
       .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')))
-      .append($('<div class="project_new header_button header_button_light">').text(dashboard.i18n.t('project.new'));
+      .append($('<div class="project_new header_button header_button_light">').text(dashboard.i18n.t('project.new')));
 
   // TODO: Remove this (and the related style) when Applab is no longer in beta.
   if ('applab' === appOptions.app) {

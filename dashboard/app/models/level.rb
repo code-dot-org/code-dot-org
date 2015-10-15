@@ -214,7 +214,7 @@ class Level < ActiveRecord::Base
   # be passed to the client, typically to save and load user progress
   # on that level.
   def channel_backed?
-    false if @level.is_project_level
+    false if self.try(:is_project_level)
     self.project_template_level || self.game == Game.applab || self.is_a?(Pixelation)
   end
 
