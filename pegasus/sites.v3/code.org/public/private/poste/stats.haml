@@ -41,7 +41,7 @@ title: Poste Stats
      end
   %h2
     = params[:name]
-    %a{href: "https://raw.githubusercontent.com/code-dot-org/code-dot-org/staging/pegasus/emails/#{params[:name]}.md", target: '_blank'}
+    %a{href: "https://raw.githubusercontent.com/code-dot-org/code-dot-org/production/pegasus/emails/#{params[:name]}.md", target: '_blank'}
       [Content]
   - if message_sent_dates
     %h3 Sent between #{message_sent_dates.first} and #{message_sent_dates.last}
