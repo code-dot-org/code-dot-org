@@ -116,9 +116,10 @@ var AUTO_HANDLER_MAP = {
   whenTouchObstacle: 'whenSpriteCollided-' +
       (Studio.protagonistSpriteIndex || 0) +
       '-wall',
+  whenGetAllCharacters: 'whenGetAllCharacters',
   whenGetAllPilots: 'whenGetAllPilots',
   whenTouchGoal: 'whenTouchGoal',
-  whenScore1000: 'whenScore1000'
+  whenScore1000: 'whenScore1000',
 };
 
 // Default Scalings
@@ -1045,6 +1046,10 @@ function handleActorCollisionsWithCollidableList (
         if (autoDisappear) {
           collidable.removeElement();
           list.splice(i, 1);
+
+          if (list.length == 0) {
+            callHandler('whenGetAllCharacters');
+          }
         }
       }
     } else {
