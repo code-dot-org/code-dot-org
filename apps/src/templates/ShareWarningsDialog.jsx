@@ -40,6 +40,7 @@ var SharingWarningsDialog = module.exports = React.createClass({
         top: 50,
         left: '50%',
         transform: 'translate(-50%, 0)',
+        WebkitTransform: 'translate(-50%, 0)',
         border: '1px solid #ccc',
         background: '#fff',
         overflow: 'auto',
