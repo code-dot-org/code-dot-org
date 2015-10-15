@@ -1,6 +1,6 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
-testUtils.setupLocales('Applab');
+testUtils.setupLocales('applab');
 
 var $ = require('jquery');
 var React = require('react');
@@ -134,6 +134,15 @@ describe('hasDataStoreAPIs', function () {
   it('returns true if we use updateRecord', function () {
     var code = ['',
       'updateRecord("mytable", {name:\'Bob\'}, function(record) {' +
+      '  ',
+      '});'
+    ].join('\n');
+    assert.strictEqual(Applab.hasDataStoreAPIs(code), true);
+  });
+
+  it('returns true if we use setKeyValue', function () {
+    var code = ['',
+      'setKeyValue("key", "value", function () {',
       '  ',
       '});'
     ].join('\n');
