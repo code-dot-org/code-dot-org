@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require_relative 'mailing-list-utils'
+
+ORGANIZERS_2015 = query_subscribed_contacts(q: 'kind_s:"HocSignup2015"') do |raw|
+  raw['international'] = (!!raw['hoc_country_s'] && raw['hoc_country_s'].to_s.downcase != 'us').to_s
+  raw['organizer'] = 'true'
+  raw
+end
+puts "#{ORGANIZERS_2015.count} 2015 organizers loaded."
+
