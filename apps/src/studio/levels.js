@@ -2042,7 +2042,7 @@ levels.js_hoc2015_event_score_points = {
     "function whenTouchGoal() {",
     "  ",
     "}",
-    "function whenScore100() {",
+    "function whenScore1000() {",
     "  ",
     "}",
     ].join("\n"),
