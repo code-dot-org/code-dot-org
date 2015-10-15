@@ -46,4 +46,3 @@ Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, sh
   Then I wait to see a dialog titled "Puzzle 11 of 20"
   Then I am on "http://studio.code.org/hoc/10"
   Then I wait to see a dialog titled "Puzzle 10 of 20"
-

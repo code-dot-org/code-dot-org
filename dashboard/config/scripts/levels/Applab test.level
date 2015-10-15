@@ -43,8 +43,6 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "app_width": "200",
-    "app_height": "200",
     "instructions": "This level is submittable. For testing only!",
     "callout_json": "[]",
     "show_turtle_before_run": "true",

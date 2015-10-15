@@ -10,19 +10,15 @@ nav: prizes_nav
 
 # Hadiah - syarat dan ketentuan
 
-## Ruang Dropbox atau Kredit Skype:
+## Amazon.com or Microsoft’s Windows Store credit:
 
-10 GB Ruang Dropbox atau $10 Kredit Skype terbatas untuk sekolah K-12, guru pembimbing ekstrakurikuler, dan organisasi pendidikan. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Hanya dibatasi 1 bonus untuk setiap organisasi. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The Amazon.com and Microsoft’s Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Hanya dibatasi 1 bonus untuk setiap organisasi.
 
-Setiap penyelenggara harus mendaftar untuk Hour of Code untuk mendapatkan Ruang Dropbox atau Kredit Skype. Jika sekolahmu berpartisipasi dalam Hour of Code, setiap guru harus mendaftar secara individual untuk memenuhi syarat.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com or Microsoft’s Windows Store credit. Jika sekolahmu berpartisipasi dalam Hour of Code, setiap guru harus mendaftar secara individual untuk memenuhi syarat.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com and Microsoft’s Windows Store credit.
 
 <% if @country == 'us' %>
-
-## Percakapan video dengan seorang pembicara tamu:
-
-Hadiah terbatas hanya pada kelas K-12 di U.S dan Kanada. To qualify, sign up your classroom by November 2, 2015. Code.org akan secara acak memilih pemenang dari setiap sekolah, menyediakan waktu untuk web chat dan bekerja dengan guru yang bersangkutan untuk mengatur teknologi yang diperlukan. Seluruh isi sekolah Anda tidak perlu mengajukan permohonan untuk memenuhi syarat untuk hadiah ini. Sekolah Umum dan swasta layak untuk menjadi pemenang.
 
 ## Satu set laptop untuk kelas (atau teknologi lain yang bernilai $10,000):
 

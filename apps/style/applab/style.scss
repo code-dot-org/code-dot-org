@@ -214,7 +214,8 @@ div#visualizationResizeBar {
   max-width: none !important;
   width: 352px;
   height: 612px;
-  margin: 20px auto;
+  margin: 0 auto;
+  padding: 20px 0;
 
   #designToggleRow, #gameButtons {
     display: none;
@@ -369,16 +370,12 @@ $debug-area-initial-height: 120px;
     margin: 0;
     line-height: $workspace-headers-height;
     font-size: 18px;
-  }
 
-  &.js-hover-hack {
-    cursor: pointer;
-
-    #show-hide-debug-icon {
+    &:hover {
+      cursor: pointer;
       color: white;
     }
   }
-
 }
 
 $debug-commands-column-width: 270px;
