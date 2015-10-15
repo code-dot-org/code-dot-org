@@ -1,9 +1,9 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-05-19T14:13:02.000Z",
+  "created_at": "2015-10-15T15:52:36.000Z",
   "level_num": "custom",
-  "user_id": 13,
+  "user_id": 155,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -59,11 +59,15 @@
       "addOperator": null
     },
     "edit_code": true,
+    "encrypted_examples": [
+
+    ],
     "embed": "false",
-    "instructions": "Predict the value of a and b. Add console.log statements to find out the actual value of a and b. (Click for full instructions)",
+    "markdown_instructions": "Use your console.log debugging techniques to see what is happening to in this example.",
+    "start_blocks": "var foo = 10;\r\nfoo = foo + 8;",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "slider_speed": "0.1",
+    "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -72,20 +76,14 @@
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
+    "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "true",
-    "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "true",
-    "start_blocks": "var a = 3;\r\nvar b = 7;\r\na = b;\r\nb = a;",
-    "encrypted_examples": [
-
-    ],
-    "markdown_instructions": "# Variable Reassignment\r\n\r\nWe can change the value of variables as the program runs. Sometimes we event set the value of a variable to value of another variable!\r\n\r\nWhen we assign values of variables remember: the variable on the left of the equal sign gets set to the value of the expression on the right side of the equal sign.\r\n\r\n# Do This\r\n\r\n* **Make a prediction** about what will happen when you run the code. What will the values of a and b at the end of the program?\r\n\r\n* **Add console.log statements** at the end of the program to find out what the value of a and b are.\r\n\r\n* On the next level we will take a closer look at the why.",
-    "never_autoplay_video": "false",
-    "examples_required": "false",
     "droplet_tooltips_disabled": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",

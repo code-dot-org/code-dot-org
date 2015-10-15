@@ -27,7 +27,7 @@ Thank you for signing up to attend a Code.org K-5 workshop.
 	- Change your "Display name" 
 	- Click "Update"
 
-3. If you have any food allergies, please bring your own meal or eat responsibly. 
+3. If your facilitator plans to provide lunch and you have any food allergies, please bring your own meal or eat responsibly. 
 
 4. Other workshop attendees may post photos from the workshop to social media. If you don't want your photo taken, make sure the facilitator knows before the workshop begin.
 
