@@ -3,7 +3,7 @@
 
 %br/
 
-%form{:method => "get"}
+%form{method: 'get'}
   %table
     %tr
       %td
@@ -28,13 +28,8 @@
 %table.teachers
   - @teachers.each do |teacher|
     %tr
-      %td
-        = teacher.id
-      %td
-        = teacher.name
-      %td
-        = teacher.email
-      %td
-        = teacher.full_address
-      %td
-        = teacher.num_students
+      %td= teacher.id
+      %td= teacher.name
+      %td= teacher.email
+      %td= teacher.full_address
+      %td= teacher.num_students
