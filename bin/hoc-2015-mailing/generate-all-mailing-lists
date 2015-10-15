@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-f
 
 puts "General"
 puts `./generate-mailing-list-hoc-2015-general`
