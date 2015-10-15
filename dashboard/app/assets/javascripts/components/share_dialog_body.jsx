@@ -1,5 +1,7 @@
 //= require ./abuse_error
 
+/* global React */
+
 window.dashboard = window.dashboard || {};
 
 /**
@@ -23,7 +25,7 @@ window.dashboard.ShareDialogBody = (function (React) {
       var image;
       var modalClass = 'modal-content';
       if (this.props.icon) {
-        image = <img className="modal-image" src={this.props.icon}/>
+        image = <img className="modal-image" src={this.props.icon}/>;
       } else {
         modalClass += ' no-modal-icon';
       }

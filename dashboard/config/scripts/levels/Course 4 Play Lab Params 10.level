@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "We've added one last function for you. \r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\" function only when \"player_points\" becomes greater than a certain number.\r\n\r\nFor example: \"player_points\" > 10\r\n\r\nPlay the game, and make it past level 4 to move to the next puzzle. ",
+    "instructions": "We've added one last function for you. \r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\" function only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor example: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level 4 to move to the next puzzle. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -30,7 +30,7 @@
     "coordinate_grid_background": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "We've added one last function for you.\r\n<hr/>\r\n\r\n<h4>\r\nUse an `if` statement to program your game to call the `level_up` function only when `player_points` becomes greater than a certain number.<br/><br/>\r\n</h4>\r\n<i>For example: `player_points` > 10</i>\r\n\r\n\r\n<hr/>\r\n<i>Play the game, and make it past level 4 to move to the next puzzle.</i>",
+    "markdown_instructions": "We've added one last function for you.\r\n<hr/>\r\n\r\n<h4>\r\nUse an `if` statement to program your game to call the `level_up` function only when `player_score` becomes greater than a certain number.<br/><br/>\r\n</h4>\r\n<i>For example: `player_score` > 6</i>\r\n\r\n\r\n<hr/>\r\n<i>Play the game, and make it past level 4 to move to the next puzzle.</i>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -42,8 +42,8 @@
     "timeout_after_when_run": "false",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "maze_data": null,
-    "min_workspace_height": "1500"
+    "min_workspace_height": "2200",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -51,24 +51,36 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="studio_setBackground">
-              <title name="VALUE">"hardcourt"</title>
+            <block type="studio_setSpriteSize">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSize.SMALL</title>
               <next>
-                <block type="variables_set" inline="false">
-                  <title name="VAR">player_points</title>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <title name="NUM">0</title>
-                    </block>
-                  </value>
+                <block type="studio_setSpriteSize">
+                  <title name="SPRITE">1</title>
+                  <title name="VALUE">Studio.SpriteSize.SMALL</title>
                   <next>
-                    <block type="variables_set" inline="false">
-                      <title name="VAR">level</title>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <title name="NUM">1</title>
+                    <block type="studio_setBackground">
+                      <title name="VALUE">"hardcourt"</title>
+                      <next>
+                        <block type="variables_set" inline="false">
+                          <title name="VAR">player_score</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">0</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="variables_set" inline="false">
+                              <title name="VAR">level</title>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <title name="NUM">1</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
                         </block>
-                      </value>
+                      </next>
                     </block>
                   </next>
                 </block>
@@ -87,15 +99,6 @@
             </block>
           </statement>
         </block>
-        <block type="studio_whenArrow" uservisible="false">
-          <title name="VALUE">down</title>
-          <next>
-            <block type="studio_move" uservisible="false">
-              <title name="SPRITE">0</title>
-              <title name="DIR">4</title>
-            </block>
-          </next>
-        </block>
         <block type="studio_whenSpriteCollided">
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">anything</title>
@@ -109,6 +112,31 @@
                   <title name="NUM">-1</title>
                 </block>
               </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">anything</title>
+          <next>
+            <block type="procedures_callnoreturn" inline="false">
+              <mutation name="score_points">
+                <arg name="points"/>
+              </mutation>
+              <value name="ARG0">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow" uservisible="false">
+          <title name="VALUE">down</title>
+          <next>
+            <block type="studio_move" uservisible="false">
+              <title name="SPRITE">0</title>
+              <title name="DIR">4</title>
             </block>
           </next>
         </block>
@@ -144,22 +172,6 @@
             <block type="studio_move" uservisible="false">
               <title name="SPRITE">0</title>
               <title name="DIR">1</title>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenSpriteCollided">
-          <title name="SPRITE1">1</title>
-          <title name="SPRITE2">anything</title>
-          <next>
-            <block type="procedures_callnoreturn" inline="false">
-              <mutation name="score_points">
-                <arg name="points"/>
-              </mutation>
-              <value name="ARG0">
-                <block type="math_number">
-                  <title name="NUM">1</title>
-                </block>
-              </value>
             </block>
           </next>
         </block>
@@ -256,7 +268,7 @@
                   </value>
                   <value name="ADD3">
                     <block type="variables_get" uservisible="false">
-                      <title name="VAR">player_points</title>
+                      <title name="VAR">player_score</title>
                     </block>
                   </value>
                 </block>
@@ -289,7 +301,7 @@
               </value>
               <next>
                 <block type="variables_set" inline="false" uservisible="false">
-                  <title name="VAR">player_points</title>
+                  <title name="VAR">player_score</title>
                   <value name="VALUE">
                     <block type="math_number" uservisible="false">
                       <title name="NUM">0</title>
@@ -332,18 +344,18 @@
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="points"/>
-            <description>Adds the given number of points to the player_points variable.</description>
+            <description>Adds the given number of points to the player_score variable.</description>
           </mutation>
           <title name="NAME">score_points</title>
           <statement name="STACK">
             <block type="variables_set" inline="false" uservisible="false">
-              <title name="VAR">player_points</title>
+              <title name="VAR">player_score</title>
               <value name="VALUE">
                 <block type="math_arithmetic" inline="true" uservisible="false">
                   <title name="OP">ADD</title>
                   <value name="A">
                     <block type="variables_get" uservisible="false">
-                      <title name="VAR">player_points</title>
+                      <title name="VAR">player_score</title>
                     </block>
                   </value>
                   <value name="B">

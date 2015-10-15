@@ -2,7 +2,7 @@ name 'U3L02 Free Response Getting Started'
 title 'Free Response: Why limit to 4?'
 
 markdown <<MARKDOWN
-Today we solved a series of problems with a limited set of commands (only 4). Give at least one reason why it's useful to learn how to solve, and program solutions with a limited set of commands.  
+Today we solved a series of problems with a limited set of commands (only 4). Give at least one reason why it's useful to learn how to solve and program solutions with a limited set of commands.  
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

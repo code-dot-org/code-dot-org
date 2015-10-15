@@ -18,19 +18,19 @@
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[ Στείλε αυτό το email ](http://<%= hostname %>/resources#email) στον διευθυντή του σχολείου σου.
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## Ζήτησε από τον εργοδότη σου να συμμετάσχει
 
-[ Στείλε αυτό το email](http://<%= hostname %>/resources#email) στον Διευθυντή σου ή στον Διευθύνοντα Σύμβουλο.
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## 4. Προώθησε την Ώρα του Κώδικα στην κοινότητά σου
 
-Προσκάλεσε να αναμειχθούν μια τοπική ομάδα - αγόρια/κορίτσια πρόσκοποι, την Εκκλησία, μια πανεπιστημιακή ομάδα, μια ομάδα ατόμων τρίτης ηλικίας ή ένα σωματείο εργαζομένων. Ή φιλοξένησε μια Ώρα του Κώδικα "διασκέδασης με block" για τη γειτονιά σου. [ Στείλε αυτό το email](http://<%= hostname %>/resources#email).
+Προσκάλεσε να αναμειχθούν μια τοπική ομάδα - αγόρια/κορίτσια πρόσκοποι, την Εκκλησία, μια πανεπιστημιακή ομάδα, μια ομάδα ατόμων τρίτης ηλικίας ή ένα σωματείο εργαζομένων. Ή φιλοξένησε μια Ώρα του Κώδικα "διασκέδασης με block" για τη γειτονιά σου. [Send this email](https://<%= hostname %>/resources#email).
 
 ## 5. Ζήτα από έναν τοπικό άρχοντα να υποστηρίξει την Ώρα του Κώδικα
 
-[Στείλε αυτό το email](http://<%= hostname %>/resources#politicians) στον Δήμαρχο της πόλης σου, στο Δημοτικό Συμβούλιο, ή στη σχολική επιτροπή και κάλεσέ τους να επισκεφτούν το σχολείο σου.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 

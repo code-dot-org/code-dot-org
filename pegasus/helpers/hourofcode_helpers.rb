@@ -160,6 +160,22 @@ def company_count(company)
   return company_count
 end
 
+def country_count(country)
+  country_count = 0;
+  DB[:forms].where(kind: 'HocSignup2015').each do |i|
+    data = JSON.parse(i[:data])
+    if data['hoc_country_s'] == country
+      country_count += 1
+    end
+  end
+  return country_count
+end
+
 def solr_country_code
-  return HOC_COUNTRIES[@country]['solr_country_code']
+  code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
+  return code
+end
+
+def country_full_name
+  return HOC_COUNTRIES[@country]['full_name']
 end

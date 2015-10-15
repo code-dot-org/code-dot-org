@@ -1339,7 +1339,7 @@ levels.full_sandbox =  {
                         <value name="TEXT"><block type="text"></block> \
                         </value></block>' +
                         blockOfType('studio_setSpritePosition') +
-                        blockOfType('studio_addItems') +
+                        blockOfType('studio_addCharacter') +
                         blockOfType('studio_throw') +
                         blockOfType('studio_makeProjectile') +
                         blockOfType('studio_setSpriteSpeed') +
@@ -1520,7 +1520,7 @@ levels.hoc2015_1 = {
     [4, 4, 4, 4, 4, 4, 4, 4],
     [4, 4, 4, 4, 4, 4, 4, 4]
   ],
-  'avatarList': [ 'character1' ],
+  'avatarList': [ 'bot1' ],
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
@@ -1530,10 +1530,10 @@ levels.hoc2015_1 = {
   'markerWidth': 50,
   'codeFunctions': {
     // Play Lab
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
+    "moveRight": null,
+    "moveLeft": null,
+    "moveUp": null,
+    "moveDown": null,
   },
 };
 
@@ -1549,7 +1549,7 @@ levels.hoc2015_2 = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
-  'avatarList': [ 'character1' ],
+  'avatarList': [ 'bot1' ],
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -1560,9 +1560,900 @@ levels.hoc2015_2 = {
   'markerWidth': 50,
   'codeFunctions': {
     // Play Lab
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
+    "moveRight": null,
+    "moveLeft": null,
+    "moveUp": null,
+    "moveDown": null,
   },
+};
+
+
+/* ******* Hour of Code 2015 ********/
+
+
+levels.js_hoc2015_move_right = {
+  "editCode": true,
+  "background": "forest",
+  "codeFunctions": {
+    "moveRight": null,
+    "moveLeft": null,
+    "moveUp": null,
+    "moveDown": null,
+  },
+  "startBlocks": "",
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": true,
+  "itemGridAlignedMovement": true,
+  "slowJsExecutionFactor": 10,
+  "removeItemsWhenActorCollides": true,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 16, 0, 1, 4,0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "instructions": "Help me program the character to get the item and bring it to the destination. Stack a couple moveRight(); commands and then hit Run to make him go.",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  },
+  "callouts": [
+    {
+      "element_id": ".droplet-main-canvas",
+      "qtip_config": {
+        "content" : {
+          "text": msg.calloutPlaceCommandsHere(),
+        },
+        "position": {
+          "my": "top left",
+          "at": "top left",
+          "adjust": {
+            "x": 10,
+            "y": 20
+          }
+        }
+      }
+    }
+  ],
+};
+
+levels.js_hoc2015_move_two_items = {
+  "editCode": true,
+  "background": "forest",
+  "codeFunctions": {
+    "moveRight": null,
+    "moveLeft": null,
+    "moveUp": null,
+    "moveDown": null,
+  },
+  "startBlocks": "",
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": true,
+  "itemGridAlignedMovement": true,
+  "slowJsExecutionFactor": 10,
+  "removeItemsWhenActorCollides": true,
+  "delayCompletion": 2000,
+  "floating_score": true,
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 0, 0, 0, 4,0, 0], [0, 4, 0, 4, 0, 4, 0, 0], [0, 4, 1, 16, 0, 4, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "instructions": "We need the items. Help me get them all!",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  }
+};
+
+levels.js_hoc2015_move_item_destination = {
+  "editCode": true,
+  "background": "snow",
+  "textModeAtStart": true,
+  "codeFunctions": {
+    "moveRight": null,
+    "moveLeft": null,
+    "moveUp": null,
+    "moveDown": null,
+  },
+  "startBlocks": "",
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": true,
+  "itemGridAlignedMovement": true,
+  "slowJsExecutionFactor": 10,
+  "removeItemsWhenActorCollides": true,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 4, 4, 4, 4, 0, 0], [0, 4,  4, 4, 4, 4, 4, 0], [0, 4,  0, 4, 4,1, 4, 0], [0, 4,1,16, 0, 0, 4, 0], [0, 4, 4, 4,  4, 4, 4, 0], [0, 0, 0, 0,  0, 0, 0, 0], [0, 0, 0, 0,  0, 0, 0, 0]],
+  "instructions": "I see another item behind that obstacle. Can you bring it back to the destination?",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  }
+};
+
+levels.js_hoc2015_move_item_destination_2 = {
+ "editCode": true,
+  "background": "snow",
+  "textModeAtStart": true,
+  "codeFunctions": {
+    "moveRight": null,
+    "moveLeft": null,
+    "moveUp": null,
+    "moveDown": null,
+  },
+  "startBlocks": "",
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": true,
+  "itemGridAlignedMovement": true,
+  "slowJsExecutionFactor": 10,
+  "removeItemsWhenActorCollides": true,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 0, 0,  4, 0, 0], [0, 4,  4, 4, 4,  0, 4, 0], [0, 4,  4,16, 0,  0, 4, 0], [0, 4,  0, 0, 4,  4, 4, 0], [0, 4,  1, 1, 0,  4, 4, 0], [0, 4,  4, 0, 4,  0, 0, 0], [0, 0,  4, 4, 4,  0, 0, 0]],
+  "embed": "false",
+  "instructions": "Drag the code blocks into the workspace to help the character reach the destination.",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  }
+};
+
+levels.js_hoc2015_move_item_destination_3 = {
+  "editCode": true,
+  "background": "ship",
+  "textModeAtStart": true,
+  "codeFunctions": {
+    "moveRight": null,
+    "moveLeft": null,
+    "moveUp": null,
+    "moveDown": null,
+  },
+  "startBlocks": "",
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": true,
+  "itemGridAlignedMovement": true,
+  "slowJsExecutionFactor": 10,
+  "removeItemsWhenActorCollides": true,
+  "delayCompletion": 2000,
+  "floating_score": true,  
+  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  4, 4, 4,  4, 4, 0], [0, 0, 4,  0, 0, 1,  4, 0], [0, 0,  4,0, 1,  4, 4, 0], [0, 4,  0, 16, 0,  0, 4, 0], [0, 4, 4, 4, 4,  0, 4, 0], [0, 0,  0, 0, 4,  4, 4, 0], [0, 0,  0, 0, 0, 0, 0, 0]],
+  "embed": "false",
+  "instructions": "Try typing the commands to get the item to our destination. Don’t forget to end with ();",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  }
+};
+
+
+levels.js_hoc2015_move_cross = {
+  "editCode": true,
+  "background": "ship",
+  "textModeAtStart": true,
+  "codeFunctions": {
+    "moveRight": null,
+    "moveLeft": null,
+    "moveUp": null,
+    "moveDown": null,
+  },
+  "startBlocks": "",
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "gridAlignedMovement": true,
+  "itemGridAlignedMovement": true,
+  "slowJsExecutionFactor": 10,
+  "removeItemsWhenActorCollides": true,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 4, 0, 0, 0, 0], [0, 0, 4,  1, 4, 0, 0, 0], [0, 4, 1, 0, 1, 4, 0, 0], [0, 0,  4, 16, 4,  0, 0, 0], [0, 0, 0, 4, 0, 0, 0, 0], [0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "embed": "false",
+  "instructions": "Type or drag the blocks to get both items to the destination.",
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  }
+};
+
+
+/* ** level 7 ** */
+
+levels.js_hoc2015_event_two_items = {
+  "editCode": true,
+  "background": "forest",
+  "wallMap": "blank",
+  "softButtons": ["downButton", "upButton"],
+  "codeFunctions": {
+    "moveUp": null,
+    "moveDown": null,
+    "whenUp": null,
+    "whenDown": null
+  },
+  "startBlocks": [
+    "function whenUp() {", 
+    "  ",
+    "}",
+    "function whenDown() {",
+    "  ",
+    "}"].join("\n"),
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "removeItemsWhenActorCollides": true,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
+  "pinWorkspaceToBottom": "true",
+  "embed": "false",
+  "instructions": "\"BOT1, I need you to get a critical message to the GOALs.\"",
+  "instructions2": "Make BOT1 move when you hit the arrow keys.",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  },
+  "callouts": [
+    {
+      "element_id": ".droplet-main-canvas",
+      "hide_target_selector": ".droplet-drag-cover",
+      "qtip_config": {
+        "content": {
+          "text": msg.calloutPlaceCommandsHere(),
+        },
+        "hide": {
+          "event": "mouseup touchend",
+        },
+        "position": {
+          "my": "top left",
+          "at": "top left",
+          "adjust": {
+            "x": 10,
+            "y": 20
+          }
+        }
+      }
+    }
+  ],
+};
+
+levels.js_hoc2015_event_four_items = {
+  "editCode": true,
+  "textModeAtStart": true,
+  "background": "forest",
+  "wallMap": "blobs",
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "moveRight": null,
+    "moveLeft": null,
+    "moveUp": null,
+    "moveDown": null,
+    "whenLeft": null,
+    "whenRight": null,
+    "whenUp": null,
+    "whenDown": null
+  },
+  "startBlocks": [
+    "function whenLeft() {",
+    "  ",
+    "}",
+    "function whenRight() {",
+    "  ",
+    "}",
+    "function whenUp() {",
+    "  ",
+    "}",
+    "function whenDown() {",
+    "  ",
+    "}"].join("\n"),
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "removeItemsWhenActorCollides": true,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 16, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
+  "embed": "false",
+  "instructions": "\"Get to all the GOALs as quickly as you can.\"",
+  "instructions2": "Move in all directions.",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
+  "goalOverride": {
+    "goalAnimation": "animatedGoal",
+    "imageWidth": 100,
+    "imageHeight": 100
+  },
+  "callouts": [
+    {
+      "element_id": ".ace_scroller",
+      "qtip_config": {
+        "content" : {
+          "text": msg.calloutTypeCommandsHere(),
+        },
+        "event": "click mousedown touchstart mouseup touchend",
+        "position": {
+          "my": "center right",
+          "at": "top left",
+          "adjust": {
+            "x": 25,
+            "y": 25
+          }
+        }
+      }
+    }
+  ],
+};
+
+
+levels.js_hoc2015_event_choose_character =
+{
+  "avatarList": ["bot1"],
+  "editCode": true,
+  "background": "forest",
+  "wallMap": "blank",
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "setBot": null,
+    "setBackground": null,
+    "setMap": null,
+    "playSound": null,
+
+    "moveRight": null,
+    "moveLeft": null,
+    "moveUp": null,
+    "moveDown": null,
+    "whenLeft": null,
+    "whenRight": null,
+    "whenUp": null,
+    "whenDown": null
+  },
+  "startBlocks": [
+    "setBackground(\"forest\");",
+    "function whenLeft() {",
+    "  moveLeft();",
+    "}",
+    "function whenRight() {",
+    "  moveRight();",
+    "}",
+    "function whenUp() {",
+    "  moveUp();",
+    "}",
+    "function whenDown() {",
+    "  moveDown();",
+    "}"].join("\n"),
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "itemGridAlignedMovement": true,
+  "removeItemsWhenActorCollides": true,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "edgeCollisions": "true",
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "instructions": "\"Time to visit another planet.\"",
+  "instructions2": "Use the dropdown to change the background.  Now find a command to change your BOT.",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
+  "callouts": [
+    {
+      "element_id": ".droplet-main-canvas",
+      "hide_target_selector": ".droplet-drag-cover",
+      "qtip_config": {
+        "content": {
+          "text": msg.calloutPlaceCommandsAtTop(),
+        },
+        "hide": {
+          "event": "mouseup touchend",
+        },
+        "position": {
+          "my": "top left",
+          "at": "top left",
+          "adjust": {
+            "x": 10,
+            "y": 20
+          }
+        }
+      }
+    }
+  ],
+  "requiredForSuccess" : {
+    "setSprite": true
+  }
+};
+
+
+levels.js_hoc2015_event_add_items = {
+  "editCode": true,
+  "textModeAtStart": true,
+  "background": "snow",
+  "wallMap": "horizontal",
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "addCharacter": null,
+
+    "setBot": null,
+    "setBackground": null,
+    "setMap": null,
+    "playSound": null,
+    "moveRight": null,
+    "moveLeft": null,
+    "moveUp": null,
+    "moveDown": null,
+    "whenLeft": null,
+    "whenRight": null,
+    "whenUp": null,
+    "whenDown": null
+  },
+  "startBlocks": [
+    "setBackground(\"snow\");",
+    "setMap(\"horizontal\");",
+    "setBot(\"bot2\");",
+    "function whenLeft() {",
+    "  moveLeft();",
+    "}",
+    "function whenRight() {",
+    "  moveRight();",
+    "}",
+    "function whenUp() {",
+    "  moveUp();",
+    "}",
+    "function whenDown() {",
+    "  moveDown();",
+    "}"].join("\n"),
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "itemGridAlignedMovement": true,
+  "removeItemsWhenActorCollides": true,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "embed": "false",
+  "instructions": "\"I’m seeing signs of increased activity on this planet.\"",
+  "instructions2": "Use the addCharacter(); command a couple times to add BIRDs at the start of your program.  Then, go get them.",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
+  "requiredForSuccess" : {
+    "removedItemCount": 2
+  }
+};
+
+
+levels.js_hoc2015_event_item_behavior = {
+  "editCode": true,
+  "background": "snow",
+  "wallMap": "blobs",
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "setToChase": null,
+    "setToFlee": null,
+    "setToRoam": null,
+    "setToStop": null,
+    "moveSlow": null,
+    "moveNormal": null,
+    "moveFast": null,
+
+    "addCharacter": null,
+    "setBot": null,
+    "setBackground": null,
+    "setMap": null,
+    "playSound": null,
+    "moveRight": null,
+    "moveLeft": null,
+    "moveUp": null,
+    "moveDown": null,
+    "whenLeft": null,
+    "whenRight": null,
+    "whenUp": null,
+    "whenDown": null
+  },
+  "startBlocks": [
+    "setBackground(\"snow\");",
+    "setMap(\"blobs\");",
+    "setBot(\"bot2\");",
+    "addCharacter('roo');",
+    "addCharacter('roo');",
+    "function whenLeft() {",
+    "  moveLeft();",
+    "}",
+    "function whenRight() {",
+    "  moveRight();",
+    "}",
+    "function whenUp() {",
+    "  moveUp();",
+    "}",
+    "function whenDown() {",
+    "  moveDown();",
+    "}"].join("\n"),
+
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "itemGridAlignedMovement": true,
+  "removeItemsWhenActorCollides": true,
+  "delayCompletion": 2000,
+  "floatingFcore": true,
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "embed": "false",
+  "instructions": "\"It’s up to you, BOT2.\"",
+  "instructions2": "Make the ROOs flee from BOT2.",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
+  "callouts": [
+    {
+      "element_id": "#droplet_palette_block_setToFlee",
+      "qtip_config": {
+        "content": {
+          "text": msg.calloutCharactersMove(),
+        },
+        "position": {
+          "my": "center left",
+          "at": "center right",
+          "adjust": {
+            "x": 15,
+            "y": 0
+          }
+        }
+      }
+    }
+  ],
+  "requiredForSuccess" : {
+    "touchAllItems": true,
+    "setActivity": {itemType: "roo", "activityType": "flee"}
+  }
+};
+
+levels.js_hoc2015_event_touch_items = {
+  "editCode": true,
+  "textModeAtStart": true,
+  "background": "snow",
+  "wallMap": "circle",
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "whenTouchRoo": null,
+
+    "setToChase": null,
+    "setToFlee": null,
+    "setToRoam": null,
+    "setToStop": null,
+    "moveSlow": null,
+    "moveNormal": null,
+    "moveFast": null,
+    "addCharacter": null,
+    "setBot": null,
+    "setBackground": null,
+    "setMap": null,
+    "playSound": null,
+    "moveRight": null,
+    "moveLeft": null,
+    "moveUp": null,
+    "moveDown": null,
+    "whenLeft": null,
+    "whenRight": null,
+    "whenUp": null,
+    "whenDown": null
+  },
+  "startBlocks": [
+    "setBackground(\"snow\");",
+    "setMap(\"circle\");",
+    "setBot(\"bot2\");",
+    "addCharacter('roo');",
+    "addCharacter('roo');",
+    "addCharacter('roo');",
+    "function whenTouchRoo() {",
+    "  ",
+    "}",
+    "function whenLeft() {",
+    "  moveLeft();",
+    "}",
+    "function whenRight() {",
+    "  moveRight();",
+    "}",
+    "function whenUp() {",
+    "  moveUp();",
+    "}",
+    "function whenDown() {",
+    "  moveDown();",
+    "}"].join("\n"),
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "itemGridAlignedMovement": true,
+  "removeItemsWhenActorCollides": true,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "embed": "false",
+  "instructions": "\"Be careful, they might be behind you!\"",
+  "instructions2": "Every time you get a ROO, add one MOUSE and one SPIDER to the world.",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
+  "callouts": [
+    {
+      "element_id": ".ace_gutter-cell:nth-of-type(8)",
+      "hide_target_selector": ".ace_scroller",
+      "qtip_config": {
+        "content" : {
+          "text": msg.calloutPutCommandsTouchCharacter(),
+        },
+        "event": "click mousedown touchstart mouseup touchend",
+        "position": {
+          "my": "center right",
+          "at": "center right",
+        }
+      }
+    }
+  ],
+  "requiredForSuccess" : {
+    "removedItemCount": 3
+  }
+};
+
+levels.js_hoc2015_event_points = {
+  "editCode": true,
+  "textModeAtStart": true,
+  "background": "ship",
+  "wallMap": "horizontal",
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "changeScore": null,
+
+    "whenTouchCharacter": null,
+    "setToChase": null,
+    "setToFlee": null,
+    "setToRoam": null,
+    "setToStop": null,
+    "moveSlow": null,
+    "moveNormal": null,
+    "moveFast": null,
+    "addCharacter": null,
+    "setBot": null,
+    "setBackground": null,
+    "setMap": null,
+    "playSound": null,
+    "moveRight": null,
+    "moveLeft": null,
+    "moveUp": null,
+    "moveDown": null,
+    "whenLeft": null,
+    "whenRight": null,
+    "whenUp": null,
+    "whenDown": null
+  },
+  "startBlocks": [
+    "setBackground(\"ship\");",
+    "setMap(\"horizontal\");",
+    "setBot(\"bot1\");",
+    "addCharacter('bird');",
+    "addCharacter('bird');",
+    "addCharacter('bird');",
+    "function whenTouchCharacter() {",
+    "  addCharacter(\"random\");",
+    "}",
+    "function whenLeft() {",
+    "  moveLeft();",
+    "}",
+    "function whenRight() {",
+    "  moveRight();",
+    "}",
+    "function whenUp() {",
+    "  moveUp();",
+    "}",
+    "function whenDown() {",
+    "  moveDown();",
+    "}",
+    "function whenTouchCharacter() {",
+    "  ",
+    "}"].join("\n"),
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "itemGridAlignedMovement": true,
+  "removeItemsWhenActorCollides": true,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "embed": "false",
+  "instructions": "\"I’m counting on you, BOT1!\"",
+  "instructions2": "Change your score when you touch a character. Can you reach 100 points?",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
+  "requiredForSuccess" : {
+    "scoreMinimum": 100
+  }
+};
+
+levels.js_hoc2015_event_random_items = {
+  "editCode": true,
+  "textModeAtStart": true,
+  "background": "ship",
+  "wallMap": "blobs",
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "setBot": { "category": "Commands" },
+    "setBackground": { "category": "Commands" },
+    "setBotSpeed": { "category": "Commands" },
+    "setMap": { "category": "Commands" },
+    "playSound": { "category": "Commands" },
+    "addCharacter": { "category": "Commands" },
+    "setToChase": { "category": "Commands" },
+    "setToFlee": { "category": "Commands" },
+    "setToRoam": { "category": "Commands" },
+    "setToStop": { "category": "Commands" },
+    "moveSlow": { "category": "Commands" },
+    "moveNormal": { "category": "Commands" },
+    "moveFast": { "category": "Commands" },
+    "changeScore": { "category": "Commands" },
+    "moveRight": { "category": "Commands" },
+    "moveLeft": { "category": "Commands" },
+    "moveUp": { "category": "Commands" },
+    "moveDown": { "category": "Commands" },
+    "whenLeft": { "category": "Events" },
+    "whenRight": { "category": "Events" },
+    "whenUp": { "category": "Events" },
+    "whenDown": { "category": "Events" },
+    "whenTouchCharacter": { "category": "Events" },
+    "whenTouchMouse": { "category": "Events"},
+    "whenTouchSpider": { "category": "Events" }
+  },
+  "startBlocks": [
+    "setBackground(\"ship\");",
+    "setMap(\"blobs\");",
+    "setBot(\"bot1\");",
+    "addCharacter('spider');",
+    "addCharacter('spider');",
+    "addCharacter('mouse');",
+    "addCharacter('mouse');",
+    "function whenLeft() {",
+    "  moveLeft();",
+    "}",
+    "function whenRight() {",
+    "  moveRight();",
+    "}",
+    "function whenUp() {",
+    "  moveUp();",
+    "}",
+    "function whenDown() {",
+    "  moveDown();",
+    "}",
+    "function whenTouchCharacter() {",
+    "  changeScore(1);",
+    "  ",
+    "}"].join("\n"),
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "itemGridAlignedMovement": true,
+  "removeItemsWhenActorCollides": true,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "embed": "false",
+  "instructions": "\"Quick! We need to move faster!\"",
+  "instructions2": "Ready to move faster? Increase your speed when you touch a MOUSE and slow down when you hit a SPIDER.",
+  "timeoutFailureTick": 600,
+  "timeoutAfterWhenRun": true,
+  "showTimeoutRect": true,
+  "callouts": [
+    {
+      "element_id": ".droplet-palette-group-header.green",
+      "qtip_config": {
+        "content" : {
+          "text": msg.calloutClickCategory(),
+        },
+        "position": {
+          "my": "top center",
+          "at": "bottom center",
+        }
+      }
+    }
+  ],
+  "requiredForSuccess" : {
+    "setBotSpeed": true
+  }
+};
+
+levels.js_hoc2015_event_free = {
+  "editCode": true,
+  "textModeAtStart": true,
+  "freePlay": true,
+  "background": "forest",
+  "wallMap": "blank",
+  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "codeFunctions": {
+    "setBot": { "category": "Commands" },
+    "setBackground": { "category": "Commands" },
+    "setBotSpeed": { "category": "Commands" },
+    "setMap": { "category": "Commands" },
+    "playSound": { "category": "Commands" },
+    "addCharacter": { "category": "Commands" },
+    "setToChase": { "category": "Commands" },
+    "setToFlee": { "category": "Commands" },
+    "setToRoam": { "category": "Commands" },
+    "setToStop": { "category": "Commands" },
+    "moveSlow": { "category": "Commands" },
+    "moveNormal": { "category": "Commands" },
+    "moveFast": { "category": "Commands" },
+    "changeScore": { "category": "Commands" },
+
+    "moveRight": { "category": "Commands" },
+    "moveLeft": { "category": "Commands" },
+    "moveUp": { "category": "Commands" },
+    "moveDown": { "category": "Commands" },
+    "whenLeft": { "category": "Events" },
+    "whenRight": { "category": "Events" },
+    "whenUp": { "category": "Events" },
+    "whenDown": { "category": "Events" },
+    "whenTouchObstacle": { "category": "Events" },
+    "whenTouchMan": { "category": "Events" },
+    "whenTouchPilot": { "category": "Events" },
+    "whenTouchPig": { "category": "Events" },
+    "whenTouchBird": { "category": "Events" },
+    "whenTouchMouse": { "category": "Events" },
+    "whenTouchRoo": { "category": "Events" },
+    "whenTouchSpider": { "category": "Events" },
+    "whenTouchCharacter": { "category": "Events" }
+  },
+  "startBlocks": [
+    "setBackground(\"forest\");",
+    "setMap(\"circle\");",
+    "setBot(\"bot1\");",
+    "function whenLeft() {",
+    "  moveLeft();",
+    "}",
+    "function whenRight() {",
+    "  moveRight();",
+    "}",
+    "function whenUp() {",
+    "  moveUp();",
+    "}",
+    "function whenDown() {",
+    "  moveDown();",
+    "}"].join("\n"),
+  "sortDrawOrder": true,
+  "wallMapCollisions": true,
+  "blockMovingIntoWalls": true,
+  "itemGridAlignedMovement": true,
+  "removeItemsWhenActorCollides": true,
+  "delayCompletion": 2000,
+  "floatingScore": true,
+  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  "embed": "false",
+  "instructions": "\"You’re on your own now, BOT1.\"",
+  "callouts": [
+    {
+      "element_id": ".droplet-palette-canvas",
+      "qtip_config": {
+        "content": {
+          "text": msg.calloutTryOutNewCommands(),
+        },
+        "position": {
+          "my": "center left",
+          "at": "center right",
+          "adjust": {
+            "x": -20,
+            "y": 0
+          }
+        }
+      }
+    }
+  ],
 };

@@ -6,26 +6,26 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 <%= view :signup_button %>
 
-# Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
+# Насочващи уроци за Часът на кодирането и компютърните науки през образователната седмица
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
+Code.org ще подготви разнообразие от дейности за часа на кодирането на Code.org и на CSEdWeek уебсайта (ове). Настоящият списък е в [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 Бихме искали да има разнообразие от възможности за ангажиране, но основната цел е да се оптимизира опитът на учениците и учителите, за които компютърните науки са новост. Моля, използвайте това ръководство, което ще ви насочи по създаването на вашата дейност, предназначено е за потребителя, който е без знания в програмирането и компютърните науки.
 
   
 
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa).**
+**След като прочетете насоките, можете да изпратите вашите уроци чрез нашата [ страница за Часа на кода ™ за въвеждане](https://goo.gl/kNrV3l).**
 
-**NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
+**Ново:** За разлика от последните години, ние планираме да се въведем нов формат за "учител, ръководител" Часът на кода дейности. Ще бъдат изброени по-долу самонасочващи дейности за учениците във възрастово съобразени интернет страници. Детайли по-долу.
 
 <a id="top"></a>
 
 ## Списък:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [Общи насоки за създаване на дейности за Часът на кодирането](#guidelines)
   * [Как и кои от уроците ще бъдат включени](#inclusion)
-  * [How to submit (Due 10/15/2015)](#submit)
+  * [Как да се включите (до 10/1/2014)](#submit)
   * [Предложения за проектиране на вашата дейност](#design)
   * [Относно запазените марки](#tm)
   * [Tracking Pixel (проследяване на броя посетители)](#pixel)
@@ -34,21 +34,21 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
 <a id="guidelines"></a>
 
-## New for 2015: two formats of activites: self-guided or *lesson-plan*
+## Ново за 2015 г.: два формата на дейности: за самостоятелно изпълнение или * с план на урок*
 
-Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
+Сега, след като десетки хиляди преподаватели са опитвали Часът на кода, много класни стаи са готови за по-творчески, по-малко индивидуални дейности, които преподават основите на компютърните науки. За да помогнем на учителите да намерят вдъхновение, бихме искали да съберем и оформим едночасови планове за "ръководени от учител" уроци и дейности,, създадени от "ветераните". Ние ще продължим също така да насърчаваме "Самонасочващото" образуване.
 
-**Submit a Teacher-Led Lesson Plan, ideally for different subject areas *(NEW)***: Do you have an engaging or unique idea for an Hour of Code lesson? Some educators may prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We would love to collect **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+**Подаване ръководен от учител урочен план, идеален за различни тематични области *(нов)***: имате ли вдъхновение или уникална идея за Часът на кода урок? Някои педагози могат да предпочетат да промотират свои Час на кода дейности, които следват традиционния урочен формат, а не да ръководят пъзел/игра опит. Ако предпочитате повече безсрочни дейности, по-добре да покажете творческия характер на компютърните науки. Ще се радваме да се съберем **часът на кода урочни планове, предназначени за различни тематични области**. Например един час уроен план за преподаване на код в клас по геометрия. Или упражнение по английски в клас. Или творчески тест-Създаване на дейност по история. Това може да помогне да се включат и учители в други предметни области и да ръководят часът кода дейност, която е уникална за тяхната област и демонстрира как CS може да повлияе и подпомогне много различни предметни области.
 
-You can start with this [empty template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) for your lesson plan.
+Можете да започнете с този [ празен шаблон](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) за Вашия урочен план.
 
-Examples:
+Примери:
 
-  * [Mirror Images (an activity for an art teacher)](https://csedweek.org/csteacher/mirrorimages.pdf)
-  * [An arduino activity for a physics teacher](https://csedweek.org/csteacher/arduino.pdf)
-  * [A history of technology activity for a history teacher](https://csedweek.org/csteacher/besttechnology.pdf)
+  * [Огледални образи (дейност за преподавател по изобразително изкуство)](https://csedweek.org/csteacher/mirrorimages.pdf)
+  * [Arduino дейност за учител по физика](https://csedweek.org/csteacher/arduino.pdf)
+  * [История на технологията -дейност за учител по история](https://csedweek.org/csteacher/besttechnology.pdf)
 
-[<button>How can I submit my own lesson plan?</button>](#submit)
+[<button>Как мога да подам моя собствен план за урок?</button>](#submit)
 
   
   
@@ -115,7 +115,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 ## How to submit (Due 10/15/2015)
 
-Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
+Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
 **Какво ще ви трябва:**
 

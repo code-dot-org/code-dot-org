@@ -15,7 +15,7 @@ Gostaríamos de disponibilizar uma variedade de opções atrativas, mas nosso ob
   
 
 
-**Depois de ler as diretrizes, você pode enviar seu tutorial por meio de nossa [Página de envio de atividade da Hora do Código](http://goo.gl/forms/6GSklaO9Oa).**
+**Depois de ler as diretrizes, você pode enviar seu tutorial por meio de nossa [Página de envio de atividade da Hora do Código](https://goo.gl/kNrV3l).**
 
 **NOVO:** ao contrário dos últimos anos, planejamos introduzir um novo formato para atividades da Hora do Código "conduzidas por professores". Elas serão listadas abaixo das atividades autoexplicativas em páginas e e-mails voltados aos alunos. Os detalhes estão a seguir.
 
@@ -115,7 +115,7 @@ Fundamentalmente, o objetivo da campanha Hora do Código é ampliar a participa�
 
 ## Como enviar (até 15/10/2015)
 
-Visite a [Página de envio de atividade da Hora do Código](http://goo.gl/forms/6GSklaO9Oa) e siga as etapas para enviar o seu tutorial.
+Visite a [Página de envio de atividade da Hour of Code™](https://goo.gl/kNrV3l) e siga as etapas para enviar seu tutorial.
 
 **O que você precisará:**
 
@@ -154,7 +154,7 @@ Visite a [Página de envio de atividade da Hora do Código](http://goo.gl/forms/
           * Compartilhar nas mídias sociais que participaram da Hora do Código
           * Receber um certificado de que completaram a Hora do Código
           * Ver a classificação dos países/cidades com maiores taxas de participação em atividades da Hora do Código
-          * Para os usuários que passarem uma hora na atividade e não conseguirem concluí-la, inclua um botão em sua atividade, dizendo: "Terminei minha Hora do Código". Esse botão também deve levá-los de volta para [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('http://code.org/api/hour/finish') %>). 
+          * Para os usuários que passarem uma hora na atividade e não conseguirem concluí-la, inclua um botão em sua atividade, dizendo: "Terminei minha Hora do Código". Esse botão também deve levá-los de volta para [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %). 
   * *(Opcional)* Faremos o acompanhamento com um link de pesquisa/formulário on-line, solicitando um relatório com as seguintes métricas de atividade da semana (das 12h01 de 7 de dezembro até as 23h59 de 13 de dezembro) 
       * Para atividades on-line (especialmente aplicativos para smartphone/tablet): 
           * Número de usuários

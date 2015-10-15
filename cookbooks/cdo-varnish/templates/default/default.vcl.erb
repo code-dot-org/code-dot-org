@@ -355,7 +355,7 @@ node['cdo-apps']['i18n']['languages'].to_hash.keys.each do |language|
 end
 %>
 
-  if (req.http.host == "<%= canonical_hostname('learn.code.org') %>" ||
+  if (req.http.host ~ "(dashboard|studio).code.org$" ||
       req.http.host == "<%= canonical_hostname('studio.code.org') %>" ||
       req.http.host == "code-dot-org.cartoonnetworkarabic.com")
   {
@@ -415,25 +415,28 @@ end
     }
   }
 
-  # Always cache the following file types for all users.
-  if (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js)(\?[a-z0-9]+)?$" &&
-      !(req.url ~ "^/api/") &&
-      (req.request == "GET" || req.request == "HEAD")) {
-    unset req.http.Cookie;
-  }
-
   # Remove all cookies that our sites don't need to know about. ANY remaining
   # cookie will cause the request to pass-through to a backend. For the most part
   # we always set the NO_CACHE cookie after any POST request, disabling the
   # Varnish cache temporarily. The session cookie allows all authenticated users
   # to pass through as long as they're logged in.
+
+  # For the following file types, blow away the cookie (unless under one of the
+  # blacklisted paths), so that we always cache.
+  if (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js|ttf)(\?[a-z0-9]+)?$" &&
+      !(req.url ~ "^/api/") &&
+      !(req.url ~ "^/v3/assets/") &&
+      (req.request == "GET" || req.request == "HEAD")) {
+    unset req.http.Cookie;
+  }
+
   if (req.http.Cookie) {
     if (req.url ~ "^/volunteers") {
       cookie.filter_except("_fe_session,hour_of_code,NO_CACHE");
     } else if (req.url ~ "^/auth") {
       cookie.filter_except("cdo-private,hour_of_code,NO_CACHE");
     } else if (
-        req.http.host == "<%= canonical_hostname('learn.code.org') %>" ||
+        req.http.host ~ "(dashboard|studio).code.org$" ||
         req.http.host == "<%= canonical_hostname('studio.code.org') %>" ||
         req.url ~ "^/dashboardapi/" ||
         req.url ~ "^/v2/" ||
@@ -449,7 +452,7 @@ end
         req.url ~ "^/ops-dashboard" ||
         req.url ~ "^/poste"
       ) {
-      cookie.filter_except("<%=[session_cookie,deprecated_storage_cookie,storage_id_cookie].join(',')%>,language_,progress,lines,hour_of_code,NO_CACHE");
+      cookie.filter_except("<%=[session_cookie,deprecated_storage_cookie,storage_id_cookie].join(',')%>,language_,progress,lines,scripts,videos_seen,callouts_seen,hour_of_code,NO_CACHE");
     } else {
       cookie.filter_except("NO_CACHE");
     }

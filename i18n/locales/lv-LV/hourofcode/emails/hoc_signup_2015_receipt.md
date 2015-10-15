@@ -18,19 +18,19 @@ Pastāsti saviem draugiem par "Programmēšanas stundu".
 
 ## 2. Lūdz visai skolai piedalīties "Programmēšanas stundā"
 
-[Send this email](http://<%= hostname %>/resources#email) to your principal.
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## 3. Lai iesaistītos, jautā savam darba devējam
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## 4. Promote the Hour of Code in your community
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://<%= hostname %>/resources#email).
 
 ## 5. Jautājiet ievēlētajai amatpersonai, lai atbalsta "Programmēšanas stundu"
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 

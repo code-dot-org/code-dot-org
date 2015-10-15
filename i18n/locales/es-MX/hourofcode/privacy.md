@@ -1,10 +1,10 @@
 * * *
 
-titulo: Política de Privacidad
+title: Política de Privacidad
 
 * * *
 
-### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Política de Privacidad
 
@@ -16,7 +16,7 @@ Code.org® es una organización no lucrativa dedicada a expander la participaci�
 
 Por favor lea cuidadosamente esta política de privacidad ("**Aviso de privacidad**") antes de acceder o utilizar el sitio Web.
 
-## Code.org Principios de privacidad
+## Principios de privacidad de Code.org
 
 Nuestro aviso de privacidad es impulsado por nuestro compromiso a los siguientes principios de privacidad:
 
@@ -29,7 +29,7 @@ Nuestro aviso de privacidad es impulsado por nuestro compromiso a los siguientes
 
 ## Aviso de privacidad
 
-Estamos comprometidos a crear un ambiente sano y seguro para estudiantes de todas las edades en nuestros sitios web ubicado en <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, otros sitios web, applicationes interfaz de programación (nuestro "API") y servicios en línea (colectivamente, nuestro "sitio web"). Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. Como una organización no-para-beneficio,501 (c)(3), utilizamos los datos que recibimos sólo en la medida que ayuda a nuestra misión de ofrecer una enseñanza de las Ciencias de computación para cada alumno que lo quiere. Nos establecimos como una organización sin fines de lucro para un motivo con fines de lucro no interfieren con nuestra misión de proveer un recurso educativo de confianza.
+We are committed to creating a safe and secure environment for learners of all ages on our websites located at <https://code.org>, <https://studio.code.org>, <https://csedweek.org>, <http://computinginthecore.org>, <https://hourofcode.com>, other websites, application programming interface (our “API”), and online services (collectively, our “Website”). Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. Como una organización no-para-beneficio,501 (c)(3), utilizamos los datos que recibimos sólo en la medida que ayuda a nuestra misión de ofrecer una enseñanza de las Ciencias de computación para cada alumno que lo quiere. Nos establecimos como una organización sin fines de lucro para un motivo con fines de lucro no interfieren con nuestra misión de proveer un recurso educativo de confianza.
 
 Our Privacy Notice describes what information we gather from our Users, how we use that information, and what we do to protect it. Su uso del sitio web y cualquier información que usted proporcione en el sitio web están sujetos a los términos de este aviso de privacidad, que se incorpora en y sujeto a nuestros términos de servicio. Cualquier términos en mayúsculas utilizados pero no definido dentro de este aviso de privacidad tienen el significado que les dado en nuestros [Términos de servicio](http://code.org/tos). Al visitar o usar nuestro sitio web, usted acepta expresamente manejo las prácticas descritas en esta notificación de privacidad de la información.
 
@@ -39,11 +39,11 @@ De tiempo en tiempo nuestro aviso de privacidad cambiará. Code.org notificará 
 
 La sección a continuación describe la manera en que Code.org recopila y utiliza el nombre, correo electrónico, nombre y dirección de la escuela, o otra información de identificación personal de los usuarios(**Información Personal**"), como información no-personal e información técnica (descrita abajo) que recopilamos.
 
-**La Hora de Código**: Code.org no recopila cualquier información personal de los estudiantes participantes en la Hora de Código. Los tutoriales de Hora de Código no requieren login para utilizarse.
+**La Hora de Código**: Code.org no recopila ninguna información personal de los estudiantes participantes en la Hora de Código. Los tutoriales de Hora de Código no necesitan login para utilizarse.
 
 **Code Studio**: La siguiente tabla describe los datos que Code.org recopila de los Usuarios registrados en la plataforma Code Studio de tutoriales. Usted puede probar todos los tutoriales de Code Studio sin crear una cuenta, pero su progreso de aprendizaje no se guardará.
 
-| Datos almacenados por Code.org si Usted crea un cuenta de estudiante en Code Studio                                                                                                                                                                     | ¿Requeridos?                                                                                                                                   | Como son utilizados estos datos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Datos almacenados por Code.org si Usted crea un cuenta de estudiante en Code Studio                                                                                                                                                                     | ¿Requerido?                                                                                                                                    | Como se utilizan estos datos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Nombre a Mostrar (ej. "Cool Coder" o "JohnS")                                                                                                                                                                                                           | Requerido                                                                                                                                      | Proporcionar a los alumnos una bienvenida al iniciar la sesión , para identificar al estudiante , en la vista de profesor sobre el progreso del estudiante , y cuando mostrando las creaciones-código del estudiante.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Progreso en el curso</br>  
@@ -69,12 +69,12 @@ Nota: Ver la sección abajo para detalles de cómo manejar la dirección de corr
   
 
 
-| Otros datos almacenados por Code.org si se crea una cuenta maestra a Código Studio | ¿Requeridos? | Como son utilizados estos datos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ---------------------------------------------------------------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nombre de la escuela                                                               | Opcional     | A su discreción y bajo su control, Enumeraremos su escuela en el mapa Code.org y base de datos de las escuelas que enseñan cursos de ciencias de informática.</br>  
+| Otros datos almacenados por Code.org si se crea una cuenta maestra a Código Studio | ¿Requerido? | Como se utilizan estos datos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ---------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nombre de la escuela                                                               | Opcional    | A su discreción y bajo su control, Enumeraremos su escuela en el mapa Code.org y base de datos de las escuelas que enseñan cursos de ciencias de informática.</br>  
 Code.org también pueden usar esta información para contactar a su escuela o distrito para discutir la participación en eventos especiales o asociaciones de educación.</br>                                                                                                                                                                                                                                        |
-| Dirección de la escuela                                                            | Opcional     | A su discreción y bajo su control, podriamos enlistar su escuela (y la información de contacto pertinente, si lo proporcionas) en el mapa Code.org y base de datos de las escuelas que enseñan cursos de ciencia de computación.                                                                                                                                                                                                                                                                                                                                                        |
-| Sección de datos de estudiantes                                                    | Requeridos   | Usted puede crear cuentas para sus alumnos (y proporcionar su nombre para cada estudiante y opcionalmente su edad y género) y organizar a estos estudiantes en secciones o grupos. usted puede asignar cada sección un nombre para mostrar y una asignación de curso. La sección agrupada de datos se utiliza para simplificar su visión de los estudiantes a través de múltiples secciones.</br>  
+| Dirección de la escuela                                                            | Opcional    | A su discreción y bajo su control, podriamos enlistar su escuela (y la información de contacto pertinente, si lo proporcionas) en el mapa Code.org y base de datos de las escuelas que enseñan cursos de ciencia de computación.                                                                                                                                                                                                                                                                                                                                                        |
+| Sección de datos de estudiantes                                                    | Requeridos  | Usted puede crear cuentas para sus alumnos (y proporcionar su nombre para cada estudiante y opcionalmente su edad y género) y organizar a estos estudiantes en secciones o grupos. usted puede asignar cada sección un nombre para mostrar y una asignación de curso. La sección agrupada de datos se utiliza para simplificar su visión de los estudiantes a través de múltiples secciones.</br>  
 Se anima a los maestros a compartir un documento con los estudiantes y padres informándoles acerca del curso de estudio de código, incluyendo las implicaciones de privacidad.</br> |
 
   
@@ -94,7 +94,7 @@ Si usted decide inscribirse para el estudio de código a través de un servicio 
 
 Usted puede revocar acceso de Code.org a su cuenta en cualquier servicio de autenticación en cualquier momento mediante la actualización de la configuración apropiada en las preferencias de la cuenta del respectivo servicio de autenticación. Usted debe comprobar la configuración de privacidad en cada servicio de autenticación para comprender y cambiar la información enviada a nosotros a través de cada servicio de autenticación. Por favor revise los términos de cada servicio de autenticación de las políticas de uso y privacidad cuidadosamente antes de utilizar sus servicios y la conexión a nuestro sitio Web.
 
-## Otros servicios
+## Other Services
 
 Cuando usted utiliza algunas otras funciones de nuestro sitio web, tales como firma de formularios o peticiones para ayudar a abogar por Code.org, participando en un taller, traer Code.org programas a su escuela o distrito, donar a Code.org, comprar camisetas u otros artículos o participar en encuestas en línea, Code.org le puede pedir que proporcione información Personal, incluyendo su nombre completo, dirección de correo electrónico y código postal, o la dirección de la se escuela, así como su facturación y envío de información cuando sea necesario para completar una compra o hacer una donación. La información se utiliza para permitir su participación en la característica relevante y para enviarle mensajes con información sobre Code.org que creemos que pueden interesarle. Todos los correos electrónicos que enviamos incluyen un enlace "darse de baja" que inmediatamente lo dará de baja y de todo correo electrónico de Code.org.
 
@@ -126,17 +126,17 @@ Una etiqueta de píxel (también conocido como "clear GIF" o "balizas web") es u
 
 Code.org puede usar una variedad de proveedores de servicios de terceros, como empresas de análisis para comprender nuestro uso de portal y plataformas de redes sociales para organizar nuestros videos. Podemos permitir a proveedores de servicios de terceros colocar y leer sus propias cookies, balizas web y tecnologías similares para recopilar información a través de la Web. Esta información técnica se recoge directamente y automáticamente por estas terceras partes.
 
-Code.org no permite publicidad en nuestro sitio web, y no tenemos la capacidad de recoger tu historial de búsqueda web a través de 3er partes sitios web en Internet o motores de búsqueda. (Si se navega a la página web Code.org mediante una búsqueda en la web, el navegador web puede automáticamente proporcionarnos el término de búsqueda web que usaste para encontrar Code.org). Sin embargo, ciertas entidades terceras partes que utilizamos para proporcionar la funcionalidad del sitio web o compartir social pueden recopilar información no Personal para los propósitos de la publicidad online del comportamiento. Nuestro sitio web no responde para "no seguir" las señales transmitidas por los navegadores web, pero recomendamos visitar los siguientes enlaces si no desea publicidad en línea: <http://www.networkadvertising.org/choices> o <http://www.aboutads.info/choices/>. Si opta por utilizar estas herramientas, necesitar optar por separado para cada uno de sus dispositivos y para cada navegador de cada dispositivo.
+Code.org does not allow advertising on our Website, and we do not have the ability to collect your web search history across 3rd party Internet websites or search engines. (Si se navega a la página web Code.org mediante una búsqueda en la web, el navegador web puede automáticamente proporcionarnos el término de búsqueda web que usaste para encontrar Code.org). Sin embargo, ciertas entidades terceras partes que utilizamos para proporcionar la funcionalidad del sitio web o compartir social pueden recopilar información no Personal para los propósitos de la publicidad online del comportamiento. Our Website does not respond to “do not track” signals transmitted by web browsers, but we encourage you to visit the following links if you would like to opt out of online behavioral advertising: <http://www.networkadvertising.org/choices> or <http://www.aboutads.info/choices/>. Si opta por utilizar estas herramientas, necesitar optar por separado para cada uno de sus dispositivos y para cada navegador de cada dispositivo.
 
 Ciertas capacidades enlazadas desde el sitio web Code.org pueden implementarse por terceras personas que recogen los datos. Por ejemplo, las donaciones a Code.org son procesadas a través de un tercero que recoge y puede almacenar el instrumento de pago. Mensajes de apoyo o mensajes a nuestro foro público para los profesores son procesados por un sitio de terceros que puede permitir a los usuarios crear perfiles, enviar mensajes y fotos. Otros sitios web de terceros, tales como el de Code.org [página en Facebook](https://www.facebook.com/Code.org) y [Twitter Página](https://twitter.com/codeorg), puede ser compartido con nuestro nombre o logotipo. Uso de estos servicios de terceros son totalmente opcionales para usuarios, normalmente sólo para adultos y regida por la política de privacidad de estos terceros. Le recomendamos que revise la política de privacidad de terceros para obtener más información acerca de cómo pueden recopilar, almacenar y utilizar su información Personal.
 
-## Uploading custom content
+## Uploading Custom Content
 
 Student and teacher profiles can NOT be customized with a photo.
 
 As part of “App Lab,” an in-browser programming tool available on Code Studio for students over the age of 13, students can upload custom photos, sound, and videos to the Code Studio platform to use within applications or “apps” that they create. These files are stored in the Code Studio platform, and are not used by Code.org for any purpose other than within the applications created by students.
 
-## Message sending between users
+## Message Sending Between Users
 
 Code.org has created a tool called the [“Internet Simulator”](/internetsimulator) for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Message contents are not accessed or used by Code.org for any purpose other than in this educational tool.
 
@@ -146,11 +146,11 @@ In addition, Users may send messages to Code.org for customer support requests.
 
 Other than the above, the Website supports no other form of messaging among Users.
 
-## Información que No recopilamos
+## Information We Do NOT Collect
 
-Code.org directamente no recopila o almacena forma de pago. Donaciones a Code.org o compras de camisetas en la tienda de Code.org son procesadas a través de terceras personas, y aunque Code.org obtiene un recibo por donaciones (para efectos fiscales), nunca recibimos la forma de pago (como tarjetas de crédito o información de cartera).
+Code.org directamente no recopila o almacena forma de pago. Donations to Code.org or purchases from the Code.org store are processed via third parties, and although Code.org receives a receipt for donations (for tax purposes), we never receive the payment instrument (such as credit card or wallet information).
 
-## Niños menores de 13 años
+## Children Under the Age 13
 
 La plataforma de aprendizaje de Código Studio está diseñada para ser usada por usuarios de todas las edades, incluyendo a niños menores de 13 años con la participación de su escuela, profesor, padre o tutor legal. Certain features, especially features that involve uploading custom media files or sending messages, are disabled or inaccessible to accounts created by children under the age of 13, in order to provide greater protection to those Users.
 
@@ -170,7 +170,7 @@ Para participar en la evaluación, estas escuelas se les pide proporcionar estud
 
 empleados de Code.org, agentes y contratistas deben tener una razón de negocios legítimos (relacionada directamente a promover nuestra misión orientada a educación) para acceder a información Personal que usted proporciona Code.org, por ejemplo para ayudar en el soporte del producto. Code.org requiere a nuestros empleados, agentes y contratistas para cumplir con este aviso de privacidad y tratar cualquier información Personal de usuarios de Code.org como información confidencial.
 
-## ¿Cómo compartimos o transferimos datos?
+## How We Share or Transfer Data
 
 Nosotros no alquilamos o vendemos información Personal que obtenemos de los usuarios ni explotamos para ganar dinero de cualquier otro modo. Code.org nunca comparte información Personal con otras organizaciones de terceros sin su consentimiento o salvo como parte de un programa específico o función para la cual usted tendrá la capacidad y la opción de opt-in.
 
@@ -196,7 +196,7 @@ Cuando se comunique con nosotros con una solicitud de apoyo, usted puede proporc
 
 Code.org promueve un estudiante semanal de la semana y una maestra del mes, junto con premios mensual. Estos perfiles y testimonios similares se publican siempre con el permiso de los participantes estudiantes o profesores y, si procede, sus padres o tutor legal o maestro y pueden incluir información Personal como el nombre, imagen y foto o video de la persona que se perfila.
 
-### Public Reporting on Student Use and Performance
+### Public reporting on student use and performance
 
 Nosotros podemos publicar información anónima sobre el rendimiento estudiantil en nuestros tutoriales y sitios web, sin embargo, nunca públicamente divulgaremos su información Personal de estos informes. Datos sobre el rendimiento estudiantil se mantendrán anónimos, pero pueden presentarse datos agregados y anónimos sobre grandes poblaciones de estudiantes por criterios demográficos tales como edad, ubicación general, género, etnicidad y estatus socioeconómico.
 
@@ -216,11 +216,11 @@ Code.org may disclose User data including Personal Information that we believe, 
 
 En caso de que Code.org adquirida por, combinada o fusionada con otra entidad, podemos transferir o asignar la información Personal que hemos recogido de los usuarios como parte de dicha fusión, adquisición, venta o cambio de control. Nuestra promesa a usted es que cualquier información Personal que hemos recopilado de usuarios podría ser salvaguardado bajo el mismo nivel de seguridad y privacidad que otorga este aviso de privacidad.
 
-## Nuestro enfoque de seguridad de datos
+## Our Approach to Data Security
 
 ### Website security is important to you, and to us
 
-Para proteger su privacidad y seguridad, tomamos pasos razonables para verificar su identidad antes de otorgarle acceso a la cuenta o hacer correcciones a su información Personal. Dado que algunas escuelas bloquean sitios web SSL-asegura, Code.org permite el acceso con o sin protección SSL, bajo la dirección de las escuelas. Si usted desea un SSL cifrada en conexión o para cifrar los datos de entrada mientras usa el sitio web, utiliza el protocolo HTTPS visitando https://code.org/.
+Para proteger su privacidad y seguridad, tomamos pasos razonables para verificar su identidad antes de otorgarle acceso a la cuenta o hacer correcciones a su información Personal. Because some schools block SSL-secure websites, Code.org allows access with or without SSL protection, at the direction of those schools. Si usted desea un SSL cifrada en conexión o para cifrar los datos de entrada mientras usa el sitio web, utiliza el protocolo HTTPS visitando https://code.org/.
 
 ### We try to ensure that our Website and information sent to us are safe, but no security measures are perfect
 
@@ -234,9 +234,9 @@ Nuestro sitio web es operado y administrado en servidores ubicados en los Estado
 
 ### Conditions of Use and Notices
 
-Si usted decide visitar Code.org, su visita y cualquier disputa sobre privacidad está sujeta a este aviso de privacidad y nuestros términos de acuerdo de servicio, incluidas las limitaciones sobre daños, arbitraje de disputas, aplicación de la ley del estado de Washington y lugar de celebración para todos los litigios en Seattle, Washington.
+If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 
-### A Note to California Residents:
+### A note to California residents:
 
 No revelamos ninguna información personal a terceros para propósitos de mercadotecnia. Para obtener información adicional acerca de nuestras prácticas de privacidad o revisión y solicitud para borrar cualquier información personal que ha compartido con nosotros, por favor envíe una solicitud a http://code.org/contact.
 

@@ -18,19 +18,19 @@ Erzähl deinen Freunden von #HourOfCode.
 
 ## 2. Frage deine Schule eine Hour of Code anzubieten
 
-[Sende diese Email](http://<%= hostname %>/resources#email) zu deinem Schuldirektor/Schulleiter.
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## 3. Frage deinen Arbeitgeber sich zu engagieren
 
-[Sende diese Email](http://<%= hostname %>/resources#email) zu deinem Manager oder CEO.
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## 4. Fördere die Hour of Code in deiner Umgebung
 
-Werbe eine lokale Gruppe an – Jungen/Mädchen Pfadfinder Verein, Kirche, Universität oder eine Gewerkschaft. Oder hoste eine Hour of Code "Block Party" für in deiner Nachbarschaft. [Sende diese Email](http://<%= hostname %>/resources#email).
+Werbe eine lokale Gruppe an – Jungen/Mädchen Pfadfinder Verein, Kirche, Universität oder eine Gewerkschaft. Oder hoste eine Hour of Code "Block Party" für in deiner Nachbarschaft. [Send this email](https://<%= hostname %>/resources#email).
 
 ## 5. Frage eine öffentliche Stelle ob sie die Hour of Code unterstützen möchte
 
-[Sende diese Email](http://<%= hostname %>/resources#politicians) zu eurem Bürgermeister, Stadtrat, oder zum Schulvorstand und lade sie ein, um deine Schule zu besuchen.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 

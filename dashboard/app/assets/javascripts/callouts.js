@@ -72,9 +72,14 @@
         show: false // don't show on mouseover
       };
 
-      var customConfig = $.parseJSON(callout.qtip_config);
+      var customConfig = typeof callout.qtip_config === 'string' ?
+          $.parseJSON(callout.qtip_config) : callout.qtip_config;
       var config = $.extend(true, {}, defaultConfig, customConfig);
       config.style.classes = config.style.classes.concat(" cdo-qtips");
+
+      if (callout.hide_target_selector) {
+        config.hide.target = $(callout.hide_target_selector);
+      }
 
       // Reverse callouts in RTL mode
       if ($('html[dir=rtl]').length) {

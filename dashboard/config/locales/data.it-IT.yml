@@ -132,8 +132,8 @@
           (TNT)
         maze_2_4: Mantieni la calma e aiutami a trovare quel cattivone di un maiale.
           Altrimenti potrei arrabbiarmi!
-        maze_2_5: C'è un modo per arrivare a quello sciocco maiale utilizzando solo
-          2 blocchi. Riesci a trovarlo?
+        maze_2_5: C'è un modo per arrivare a quello sciocco maiale aggiungendo solo
+          due blocchi. Riesci a trovarlo?
         maze_2_6: Prova a farmi arrivare all'intruso verde utilizzando solo tre blocchi.
         maze_2_7: Aiutami a catturare questo maialaccio utilizzando il minor numero
           possibile di blocchi. Prova a utilizzare più di un blocco "ripeti ... volte".
@@ -144,19 +144,19 @@
         maze_2_9: Ok, prova ad usare il nuovo blocco "ripeti fino a che". Esso mi
           farà "ripetere" le azioni "fino a che"  raggiungo quel fastidioso maiale.
         maze_2_10: 'Ok, un''ultima volta per fare pratica: riesci a risolvere questo
-          esercizio utilizzando solo 4 blocchi?'
+          esercizio aggiungendo solo 4 blocchi?'
         maze_2_11: Caro umano. Io zombie. Io affamato. Devo ... arrivare ... al girasole.
-          Riesci a farmi arrivare là con solo 5 blocchi?
+          Riesci a farmi arrivare là aggiungendo solo 5 blocchi?
         maze_2_12: Ok, questo esercizio è simile, ma leggermente diverso. Riesci a
-          farlo con solo 5 blocchi?
+          farlo aggiungendo solo cinque blocchi?
         maze_2_13: 'Qui il nuovo blocco "se" viene usato per farmi decidere quando
           girare. Fai attenzione: adesso hai bisogno di inserire un solo blocco, ma
           capisci bene il procedimento in modo che puoi farlo tutto da solo la prossima
           volta.'
         maze_2_14: Ok, questo è quasi come l'esercizio precedente, ma devi ricordarti
           come hai usato insieme i blocchi "se" e "ripeti".
-        maze_2_15: Io volere girasole! Usa un blocco "se" per farmi arrivare là con
-          il minor numero possibile di blocchi.
+        maze_2_15: Me ... volere ... girasole! Usa un blocco "se c'è strada" per farmi
+          arrivare là utilizzando il minor numero possibile di blocchi.
         maze_2_16: 'Ok, esercitiamoci di nuovo per far pratica: questo esercizio non
           è molto diverso, ma stai attento alle piante carnivore!'
         maze_2_17: 'Il blocco "se-altrimenti" controlla una condizione: SE è vera
@@ -715,6 +715,7 @@
         infinity_playlab_intro: Play Lab - Introduzione
         infinity_playlab_events: Play Lab - Eventi
         infinity_playlab_repeat_forever: Play Lab - Ripeti per sempre
+        csp_applab_functions: Introduzione alle Funzioni
         csp_concept_rgb: Un po ' sui pixel
         csp_pixelation_color_1: Color pixelation widget - parte 1
         csp_pixelation_color_2: Color pixelation widget - parte 2
@@ -766,7 +767,7 @@
         jigsaw_click: Clicca su questo blocco!
         move_elsa_forward: Per far muovere Elsa in avanti prendi il blocco "vai avanti"
           ed attaccalo sotto il blocco "quando si clicca su 'Esegui' "
-        turn_elsa: Usa il blocco "gira" per far girare Elsa. Il numero nell'elenco
+        turn_elsa: Usa il blocco "gira a ..." per far girare Elsa. Il numero nell'elenco
           a discesa determina di quanto Elsa deve girare
         replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
           numero
@@ -805,11 +806,11 @@
         length_parameter: Riesci a modificare questa funzione così che utilizzi il
           parametro "lunghezza"?
         frozen_diamond_repeat: Usa il blocco di ripetizione per creare questa forma.
-        frozen_circle_function_in_circle_turn: Non dimenticare di girare dopo la creazione
-          di ogni cerchio.
-        frozen_circle_function_with_parameter_circle: Usa il blocco  "crea un cerchio"
+        frozen_circle_function_in_circle_turn: Non dimenticarti di girare dopo aver
+          disegnato ogni cerchio.
+        frozen_circle_function_with_parameter_circle: Usa il blocco "disegna un cerchio"
           e modifica le dimensioni.
-        frozen_snowflake_branch: Usa il blocco "crea un ramo del fiocco di neve"
+        frozen_snowflake_branch: Usa il blocco "disegna un ramo di un fiocco di neve"
         frozen_create_square: Attacca più blocchi qui per creare un quadrato
         playlab_drag_say: Sposta qui il blocco "pronuncia" e scrivi "ciao" al posto
           di "scrivi qua"

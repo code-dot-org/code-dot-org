@@ -683,6 +683,10 @@ pt-BR:
       4-5 Artist Patterns Free Play_instruction: |
         Atividade livre - experimente criar
         seu próprio padrão!
+      4-5 Bee Conditionals - FC Test_instruction: |
+        The bee only wants nectar right
+        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
+        it is hiding a flower. If it is, then you can gather nectar.
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         A abelha não sabe se isso é
         uma flor ou uma colmeia. Colete néctar apenas das flores, mas primeiro verifique
@@ -697,7 +701,8 @@ pt-BR:
         das flores.
       4-5 Bee Conditionals 2_instruction: |
         Agora a abelha só quer néctar. Lembre-se,
-        nem todos os objetos são flores, então faça a verificação para coletar néctar apenas das flores.
+        nem todos os objetos são flores, então veja se o objeto abaixo da nuvem é
+        uma flor. Se ele for, então você pode coletar o néctar.
       4-5 Bee Conditionals 3_instruction: |
         Agora a abelha só quer produzir mel.
         Faça a verificação para produzir mel apenas nas colmeias.
@@ -920,7 +925,11 @@ pt-BR:
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AllTheThings Applab - Turtle move with button_instruction: |
+        Add a button that
+        moves the turtle when clicked.  (Click to see full instructions)
       App Lab test_instruction: teste
+      Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
         view full instructions.
@@ -956,6 +965,11 @@ pt-BR:
       Artist - Nested Loops Assessment 1_instruction: |
         Use um laço aninhado para completar
         o design.
+      Auto Open Function Editor_instruction: |
+        Você pode chamar funções de dentro
+        de outras funções! Usando sua função "forma" como base, crie 3 formas
+        de casa, cada uma 20 pixels maior que a anterior, começando com um comprimento de 50 pixels. Usar
+        um laço com contador pode ser útil. 
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1188,7 +1202,7 @@ pt-BR:
         a essa instrução.
       Calc Circles of Eval 8_instruction: |
         Complete os blocos de cálculo para corresponder
-        a essa expressão.
+        a essa instrução.
       Calc Circles of Eval 9_instruction: |
         Complete os blocos de cálculo para corresponder
         a essa instrução.
@@ -1527,12 +1541,21 @@ pt-BR:
       Course 4 Artist Functions 11_instruction: |
         Veja esse código para desenhar um
         cubo - você consegue movê-lo para dentro de uma função chamada "desenhe um cubo"?
+      Course 4 Artist Functions 12.1_instruction: |
+        Vamos criar uma função chamada
+        "desenhe um octógono 20" que desenha um octógono no qual cada lado tem 20 pixels
+        de comprimento.
       Course 4 Artist Functions 12_instruction: Repita a função quadrado para desenhar uma reta
+      Course 4 Artist Functions 13.1_instruction: "Agora, vamos criar uma função chamada\n\"pule para a parte superior direita\" que move o artista para a parte superior direito do octógono\nque você acabou de desenhar para terminarmos esse padrão.\r\n\r\nDica: para ir para o\ncanto superior direito, tente usar um padrão que faz apenas 3/8 do\noctógono."
       Course 4 Artist Functions 13_instruction: |
         Confira nossa nova função
         "desenhe uma linha de quadrados". Fique à vontade para olhar dentro do bloco da função
         e ver como a construímos. Clique em "Executar" quando estiver pronto para o
         próximo desafio.
+      Course 4 Artist Functions 14.1_instruction: |
+        Agora, vamos criar uma função chamada
+        "pule para a parte superior direita" que move o artista para a parte superior direita do octógono
+        que você acabou de desenhar, assim podemos terminar esse padrão.
       Course 4 Artist Functions 14_instruction: |
         Excelente! Vamos usar
         sua nova função "desenhe uma linha de quadrados" para desenhar uma forma de quadrado. Lembre-se,
@@ -1569,7 +1592,15 @@ pt-BR:
         A maior parte do código para
         criar uma função foi dada a você. Contudo, parece que algo está faltando. Você consegue
         completar este bloco de função?
-      Course 4 Artist Functions inspire_instruction: "Atividade livre - Inspiração:\nAgora você aprendeu tudo o que precisa saber para criar um padrão como esse!\nSe essa imagem inspira você, tente fazer algo similar. Caso contrário, crie\nalgo você mesmo.\r\n\r\nQuer saber como nosso padrão de inspiração foi\nfeito? Acesse https://studio.code.org/c/106387801 para ver a solução."
+      Course 4 Artist Functions challenge_instruction: |
+        Clique aqui para ver as dicas
+        novamente.
+      Course 4 Artist Functions Inspiration_instruction: |
+        Clique aqui para ver as dicas
+        novamente.
+      Course 4 Artist Functions inspire_instruction: |
+        Clique aqui para ver a figura
+        de inspiração novamente.
       Course 4 Artist Inspire_instruction: "Quer ver o design de inspiração ou as\ndicas? Clique aqui!\r\n\r\nCaso contrário, crie um design você mesmo!"
       Course 4 Artist Params 1_instruction: |
         Vamos editar uma função que desenha um
@@ -1776,6 +1807,9 @@ pt-BR:
       Course 4 Bee Params 4 (copy 1)_instruction: |
         Tente usar sua nova função para
         coletar todas as flores. Lembre-se, 0 = esquerda e 1 = direita.
+      Course 4 Bee Params 4 - Two WhenRun_instruction: |
+        Try using your new function
+        to collect all of the flowers. Remember to use the left and right variables.
       Course 4 Bee Params 4 backup_instruction: |
         Não seria legal se pudéssemos
         coletar todo o néctar com uma única função? Tente adicionar um novo
@@ -1801,6 +1835,21 @@ pt-BR:
       Course 4 Bee Params 7_instruction: |
         Tente usar sua nova função para coletar
         todo o néctar.
+      Course 4 Bee Params 8 Clone 2_instruction: |
+        Ah, agora também precisamos lidar
+        com mel! Como você poderia atualizar sua função para coletar néctar ou produzir
+        mel?
+      Course 4 Bee Params 8 clone 3_instruction: |
+        Ah, agora também precisamos lidar
+        com mel! Como você poderia atualizar sua função para coletar néctar ou produzir
+        mel?
+      Course 4 Bee Params 8 Clone_instruction: |
+        Ah, agora também precisamos lidar
+        com mel! Como você poderia atualizar sua função para coletar néctar ou produzir
+        mel?
+      Course 4 Bee Params 8 new_instruction: |
+        Ah, agora também é preciso lidar com o
+        mel! Como você poderia atualizar sua função para coletar néctar ou produzir mel?
       Course 4 Bee Params 8_instruction: |
         Desafio: Agora você também precisa lidar com
         mel! Reescreva sua função para receber tanto o número de unidades de mel quanto o
@@ -1858,10 +1907,10 @@ pt-BR:
         Aqui temos uma função chamada "pule"
         que faz seu personagem principal pular 100 pixels. Use a função pule
         para coletar todas as bandeiras.
-      Course 4 Play Lab Params 10_instruction: "Adicionamos uma última função para\nque você use.\r\n\r\nPrograme seu jogo para chamar a função \"suba de nível\" se\n\"pontos_jogador\" > 10. \r\n\r\nJogue o jogo e passe do nível 4\npara seguir para o próximo desafio. "
+      Course 4 Play Lab Params 10_instruction: "Adicionamos uma última função para\nque você use.\r\n\r\nUse uma instrução \"se\" para que seu jogo chame a função \"suba de nível\"\nsomente quando \"pontos_jogador\" for maior que um determinado número. \r\n\r\nPor\nexemplo: \"pontos_jogador\" > 6\r\n\r\nJogue o jogo e chegue até o nível\n4 para ir para o próximo desafio. "
       Course 4 Play Lab Params 2_instruction: "Agora temos bandeiras que estão altas\ndemais para nosso pulo atual! Vamos usar as setas \"para cima\" e \"para baixo\"\npara termos diversas alturas de pulos. \r\n\r\nPrecisamos adicionar um parâmetro\nà função pule chamado \"altura\". A seta para cima deve fazer o cão\npular 200 pixels, e a seta para baixo deve fazê-lo pular somente 100 pixels.\n\r\n\r\nDica: clique em \"editar\" na função pule e atualize-a para que\nela use o parâmetro \"altura\"."
       Course 4 Play Lab Params 3_instruction: |
-        Vamos adicionar outro parâmetro à
+        Adicionamos outro parâmetro à
         função pule para que possamos usá-la com outros personagens. Cada personagem é representado
         por um número, começando em um. Edite a função "pule" para que a definição
         inclua o parâmetro "personagem". 
@@ -1869,18 +1918,18 @@ pt-BR:
         Aqui temos uma função chamada "patrulhe".
         Edite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo.
       Course 4 Play Lab Params 5_instruction: |
-        Preencha a entrada do parâmetro "personagem"
-        para que possamos chamar a função "patrulhe" para cada um dos personagens. Lembre-se,
-        os personagens correspondem aos números 1, 2 e 3.
+        Edite a função chamada "patrulhe" para
+        adicionar um parâmetro "personagem", assim podemos chamá-la para todos os personagens
+        da tela. Lembre-se, os personagens correspondem aos números 1, 2 e 3.
       Course 4 Play Lab Params 6_instruction: |
         Adicione outro parâmetro chamado "velocidade"
         à função "patrulhe". Use um bloco "defina a velocidade" com o novo parâmetro
         "velocidade".
-      Course 4 Play Lab Params 7_instruction: "Analise o código fornecido para ver se\nvocê consegue descobrir o que cada bloco faz.  \r\n\r\nQuando terminar, use as\nsetas do teclado para controlar o cão e coletar todas as bandeiras."
+      Course 4 Play Lab Params 7_instruction: "Vamos nos divertir! Analise o\ncódigo fornecido para ver se você consegue descobrir o que cada bloco faz.  \r\n\r\nQuando terminar, use as\nsetas do teclado para controlar o cão e coletar todas as bandeiras."
       Course 4 Play Lab Params 8_instruction: |
-        Use um bloco "quando tocar" para enviar
+        Use um bloco "quando o personagem tocar" para enviar
         o cão de volta para a parte superior esquerda SOMENTE se ele tocar em qualquer outro personagem.
-      Course 4 Play Lab Params 9_instruction: "Você deve se lembrar desse jogo de um\nnível anterior. \r\n\r\nAdicionamos uma função chamada \"marcar_pontos\" que\nrecebe o parâmetro \"pontos\". \r\n\r\nEdite a função para que o parâmetro \"pontos\"\nseja adicionado à variável \"pontos_do_jogador\". \r\n\r\nQuando terminar,\nclique em \"Executar\" para jogar. Quando o cão marcar 10 pontos, você vai avançar\npara o próximo desafio. "
+      Course 4 Play Lab Params 9_instruction: "Temos aqui nosso jogo de antes, mas\na maior parte do código está oculta. Há uma nova função chamada \"marcar_pontos\".\r\n\r\nEdite\na função para que um parâmetro \"pontos\" seja adicionado à variável \"pontos_do_jogador\".\n\r\n\r\nA variável \"pontos_do_jogador\" deve aumentar toda vez\nque o cão marcar o gato com corações e diminuir toda vez que o gato marcar o cão com corações.\r\n\r\nObservação:\nQuando estiver pronto, clique em \"Executar\" para jogar. Quando o cão marcar 6 pontos, você\nvai para o próximo desafio. "
       Course 4 Play Lab Vars 1_instruction: |
         Desta vez você não precisa escrever código algum, apenas
         clique em "Executar" para jogar! Nesse jogo, você é o cão que está tentando
@@ -1950,29 +1999,33 @@ pt-BR:
         distância do anterior). E se eu quisesse contar exponencialmente? Sem alterar
         as configurações desse laço para, você pode contar 1, 4, 9 , 16, 25... (contador
         ao quadrado)?
-      Course 4 Play Labs For Loops 4a_instruction: "Now, let's blend the variables\nfrom Stage 7 together with your \"counter\" variable to make some magic happen.   \r\n\r\nIn\nthis puzzle, Dog will count from 0 to 1000 by \"increment\".  Set the \"increment\"\nvariable to 10 at the beginning of your code to see what happens."
+      Course 4 Play Labs For Loops 4a_instruction: "Agora, vamos combinar as variáveis\nda Fase 7 com sua variável \"contador\" para fazer algo mágico acontecer.   \r\n\r\nNesse\ndesafio, o cão vai contar de 0 até 1000 usando \"incremento\".  Defina a variável \"incremento\"\ncomo 10 no começo do seu código para ver o que acontece."
       Course 4 Play Labs For Loops 5_instruction: |
         Na última etapa contamos o
         quadrado de cada número. Tente alterar "contador ^ 2" para "contador ^ 3" para
         contar o cubo de cada número (1, 8, 27, 64, 125, 216, 343…)
-      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable will begin with a value of 1.\r\n\r\nCan you make it so that each\ntime you click Dog, the increment increases by 2?  Click the forward arrow\nto run the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before\neach one."
+      Course 4 Play Labs For Loops 5a_instruction: "Nesse desafio, o cão vai ser seu\nguardião do tempo.\r\n\r\nO cão vai contar de 0 até 30 usando \"incremento\".  A variável \"incremento\"\nvai começar com um valor de 1.\r\n\r\nVocê consegue fazer com que a cada\nvez que você clicar no cão, o incremento aumente em 2?  Clique na seta para a frente\npara executar o laço para.\r\n\r\nExecute o laço algumas vezes, clicando no cão antes\nde cada vez."
       Course 4 Play Labs For Loops 6_instruction: |
         Você deve se lembrar de que um número primo
         é qualquer número inteiro que é divisível apenas por ele mesmo e por 1. Use a função "é_primo"
         para falar apenas os números primos de 1 a 100.
-      Course 4 Play Labs For Loops 6a_instruction: "Dog will still keep time by counting\nwith our \"for loop\" by \"increment\", but this time, we will add The Wizard\ninto the mix.  Can you change the code so that \"increment\" goes up by two\neach time The Wizard is clicked?\r\n\r\nWatch out!  The Wizard moves quickly!"
+      Course 4 Play Labs For Loops 6a_instruction: "O cão vai continuar contando\ncom nosso \"laço para\" usando \"incremento\", mas dessa vez vamos adicionar o mago\nà mistura. Você consegue alterar o código para que \"incremento\" aumente em duas unidades\ntoda vez que o mago for clicado?\r\n\r\nAtenção! O mago se move rápido!"
       Course 4 Play Labs For Loops 7_instruction: |
         Você poderia usar um laço "para" para me
         ajudar a falar a sequência 1, 4, 7, 10, 13, 16, 19, 22, 25?
-      Course 4 Play Labs For Loops 7a_instruction: "Now we're getting somewhere!  What\nif we start counting how many times we can click The Wizard before Dog gets\nto 30?  \r\n\r\nFinish adding blocks to The Wizard so that every time he's\nclicked the variable \"clicked\" increases by one. You can ignore \"increment\"\nfor now.\r\n\r\nDog will start counting when you click \"Run\"."
+      Course 4 Play Labs For Loops 7a_instruction: "Agora estamos chegando em algum lugar! E\nse começarmos a contar quantas vezes conseguimos clicar no mago antes do cão chegar\naté 30?  \r\n\r\nTermine adicionando blocos ao mago para que toda vez que ele for\nclicado a variável \"clicado\" aumente por um. Você pode ignorar \"incremento\"\npor enquanto.\r\n\r\nO cão vai começar a contar quando você clicar em \"Executar\"."
       Course 4 Play Labs For Loops 8_instruction: "Agora, ajude os personagens a se moverem enquanto\ncontam  \r\n\r\nO cão deve se mover e contar adicionando 2 (contador + 2) a cada vez. O gato\nvai se mover e contar multiplicando por 2 (contador * 2)  a cada vez. O pinguim\nvai se mover e contar fazendo a potência de 2 (contador ^ 2) a cada vez.  Quem vai chegar\nprimeiro à bandeira?"
-      Course 4 Play Labs For Loops 8a_instruction: "To finish our game, we need to\nbring back the \"increment\" variable!    Let's tie it to the level of the\ngame.\r\n\r\n1) Keep track of the number of times The Wizard is clicked.\r\n2)\nIf The Wizard is clicked at least 10 times before Dog counts to 30, raise\n\"increment\" by 1 and start again.\r\n3) If The Wizard does not get clicked\nat least 10 times, the game is over."
+      Course 4 Play Labs For Loops 8a_instruction: "Para terminar nosso jogo, precisamos\ntrazer de volta a variável \"incremento\"!    Vamos relacioná-la ao nível do\njogo.\r\n\r\n1) Guarde o número de vezes que o mago é clicado.\r\n2)\nSe o mago for clicado pelo menos 10 vezes antes do cão contar até 30, aumente\n\"incremento\" em 1 unidade e comece de novo.\r\n3) Se o mago não for clicado\npelo menos 10 vezes, o jogo acaba."
       Course 4 Variables Assessment_instruction: |
         Você consegue criar essa imagem usando
         uma variável para os lados? Cada linha deve ter 50 pixels de comprimento.
       Course1BeePuzzle12_instruction: Obtenha três néctares e então fabrique duas unidades de mel
       Course1MazeAssessment1_instruction: "Isso é um teste!\r\nMova-me por um caminho e então\npor outro para me levar até o porco"
       Course1MazeAssessment2_instruction: "Isso é um teste!\r\nMova-me por um caminho e então\npor outro para me levar até o porco."
+      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\r\n\r\nFind out how many people like something\nother than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom this\r\n\r\nx% are dog lovers"
+      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \r\nfind the length of an array\r\n"
+      CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor all records\r\n2. Way to loop through and count\r\n"
+      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2210,6 +2263,7 @@ pt-BR:
       Eval Strings Images Free Play_instruction: |
         Atividade livre: explore os blocos disponíveis
         para criar algo interessante. Lembre-se de compartilhar suas criações favoritas.
+      Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: |
         Agora vamos criar 20 círculos
         sobrepostos, virando 18 graus entre cada círculo.
@@ -2279,74 +2333,6 @@ pt-BR:
         Você consegue criar um floco de neve usando o bloco
         "repita" para criar um quadrado 10 vezes e o bloco "vire" para virar 36
         graus entre cada quadrado?
-      hoc2015_event_add_items_instruction: |
-        Now you create the game. Use the addItemsToScene
-        command to choose how many items are in the game.
-      hoc2015_event_add_items_2_instruction: |
-        Add more items. This time, try using
-        code mode instead of blocks. Don’t forget to type “quotes” around the item
-        name.
-      hoc2015_event_choose_character_instruction: |
-        Customize your game by choosing
-        your character. Let’s switch back to block mode. To set a value, just click
-        the drop down on the block.
-      hoc2015_event_four_items_instruction: |
-        Now the items are all over the screen.
-        Can you make your character walk in any direction so he can collect all the
-        items?
-      hoc2015_event_free_instruction: Now you can make and share anything you like.
-      hoc2015_event_move_items_instruction: |
-        This game would be more fun if the items
-        moved. Use setItemActivity to make the items move around. Then, capture them!
-      hoc2015_event_points_instruction: |
-        Let’s add points. Give yourself some points
-        when you touch an item. Can you score 10 points?
-      hoc2015_event_random_items_instruction: |
-        We can change settings at any point.
-        Change the items to a new random movement every time you catch one.
-      hoc2015_event_two_items_instruction: |
-        Drag the move commands into the whenUp
-        and whenDown functions.  Then, click the arrows to move the character to get
-        the items.
-      hoc2015_free_instruction: |
-        Hiro é o "personagem 1".  Use o bloco Mova para mover
-        Hiro até tocar Baymax.
-      hoc2015_intro_instruction: |
-        Hiro é o "personagem 1".  Use o bloco Mova para mover
-        Hiro até tocar Baymax.
-      hoc2015_maze_instruction: |
-        Hiro é o "personagem 1".  Use o bloco Mova para mover
-        Hiro até tocar Baymax.
-      hoc2015_move_cross_instruction: |
-        Type or drag the blocks to get both items
-        to the destination.
-      hoc2015_move_down_instruction: |
-        Hiro is "actor 1".  Use the Move block to
-        move Hiro right to touch Baymax.
-      hoc2015_move_item_destination_instruction: |
-        I see another item behind that
-        obstacle. Can you bring it back to the destination?
-      hoc2015_move_item_destination_2_instruction: |
-        Drag the code blocks into the
-        workspace to help the character reach the destination.
-      hoc2015_move_item_destination_3_instruction: |
-        Try typing the commands to get
-        the item to our destination. Don’t forget to end with ();
-      hoc2015_move_right_instruction: |
-        Help me program the character to get the item
-        and bring it to the destination. Stack a couple moveEast(); commands and then
-        hit Run to make him go.
-      hoc2015_move_twice_instruction: We need the items. Help me get them all!
-      hoc2015_move_two_items_instruction: We need the items. Help me get them all!
-      hoc2015_random_instruction: |
-        Hiro é o "personagem 1".  Use o bloco Mova para mover
-        Hiro até tocar Baymax.
-      hoc2015_sandbox_instruction: |
-        Hiro é o "personagem 1".  Use o bloco Mova para mover
-        Hiro até tocar Baymax.
-      hoc2015_square_instruction: |
-        Hiro é o "personagem 1".  Use o bloco Mova para mover
-        Hiro até tocar Baymax.
       Infinity_catch_instruction: |
         Você pode fazer Elsa ("personagem 2") alcançar
         Anna usando as setas do teclado?
@@ -2737,20 +2723,20 @@ pt-BR:
       NEW Course 4 Artist Functions 1_instruction: |
         Você consegue desenhar um quadrado com
         100 pixels de comprimento usando um laço?
+      NEW Course 4 Artist Functions 10.1_instruction: |
+        Use as funções dos desafios
+        anteriores para desenhar esse padrão.
       NEW Course 4 Artist Functions 10_instruction: |
         Clique em "editar" para preencher
         os blocos na definição da função para fazer um quadrado de 40 pixels.
-      NEW Course 4 Artist Functions 11_instruction: |
-        Temos uma nova função chamada
-        "desenhe uma linha de quadrados". Fique à vontade para olhar dentro do bloco da função
-        para ver como a construímos. Clique em "Executar" quando você estiver pronto para o próximo
-        desafio.
+      NEW Course 4 Artist Functions 11_instruction: "Agora, queremos criar uma nova\nfunção chamada \"desenhe uma linha de quadrados\" que desenha seis quadrados em sequência. Você consegue criar essa função usando a função \"desenhe um quadrado 20\"\nque já criamos? Observação: alteramos a caneta para que ela fique muito mais\nfina. Clique em \"editar\" na função \"desenhe um quadrado 20\" para ver como!\r\n"
       NEW Course 4 Artist Functions 12_instruction: |
         Use a função "desenhe uma linha de quadrados"
         do último desafio para desenhar esse padrão."
       NEW Course 4 Artist Functions 13_instruction: |
         Você consegue desenhar uma forma de estrela usando
-        a função "desenhe uma linha de quadrados"? Dica: a cada iteração, você precisa avançar
+        a função "desenhe uma linha de quadrados"? Dica: a cada iteração depois de chamar
+        "desenhe uma linha de quadrados" várias vezes, você precisa avançar
         um determinado número de pixels e virar 144 graus.
       NEW Course 4 Artist Functions 14_instruction: 'Atividade livre! '
       NEW Course 4 Artist Functions 2_instruction: |
@@ -2758,7 +2744,9 @@ pt-BR:
         entre cada um? Dica: cada quadrado tem 100 pixels de tamanho
       NEW Course 4 Artist Functions 3_instruction: |
         Temos aqui um novo tipo de bloco.
-        Ele é chamado de "bloco de função". Clique em "Executar" para ver o que ele pode fazer. 
+        Ele é chamado de "bloco de função". Clique em "editar" e então preencha-o com o código
+        para desenhar um quadrado com lados de 100 pixels. Quando você terminar de editar a função,
+        clique em "Fechar" para retornar ao programa.
       NEW Course 4 Artist Functions 4_instruction: |
         Use a função "desenhe um quadrado"
         para desenhar esse padrão. Dica: você vai precisar usar um bloco "vire 120 graus à direita"
@@ -2773,17 +2761,18 @@ pt-BR:
       NEW Course 4 Artist Functions 7_instruction: |
         Você está pegando o jeito de como
         usar os blocos de função? Vamos modificar esse quadrado para que ele tenha 200 pixels
-        de tamanho. Dica: clique em "editar" para alterar o tamanho de "desenhe um quadrado"
-        no editor da função. Lembre-se de clicar em "Salvar e Fechar" para sair do
-        editor da função. 
+        de tamanho. Dica: clique em "editar" para acessar o editor da função "desenhe um quadrado".
+        Lembre-se de clicar em "Fechar" para sair do editor da função. 
       NEW Course 4 Artist Functions 8_instruction: |
-        Demos a você a maior parte do
-        código para criar uma função. Contudo, parece que algo está faltando. Você
-        consegue editar a definição da função para desenhar o triângulo?
+        Criamos uma nova função
+        para você chamada "desenhe um triângulo". Você consegue editar a definição da função
+        para desenhar um triângulo com lados de 100 pixels?
       NEW Course 4 Artist Functions 9_instruction: |
-        Qual bloco você precisa adicionar
-        para que o triângulo fique em cima do quadrado?
-      NEW Course 4 Artist Functions inspire_instruction: "Atividade livre - Inspiração:\nAgora você aprendeu tudo o que precisa saber para criar um padrão como esse!\nSe essa imagem inspira você, tente fazer algo similar. Caso contrário, crie\nalgo você mesmo.\r\n\r\nQuer saber como nosso padrão de inspiração foi\nfeito? Acesse https://studio.code.org/c/106387801 para ver a solução."
+        Você consegue resolver isso adicionando
+        apenas um bloco?
+      NEW Course 4 Artist Functions inspire_instruction: |
+        Clique aqui para ver a figura
+        de inspiração novamente.
       New Course 4 Artist Functions Level 4_instruction: |
         Use a função "desenhe um quadrado"
         para desenhar esse padrão.
@@ -2792,7 +2781,8 @@ pt-BR:
         um quadrado com lados de 50 pixels. Clique em "editar" para começar.
       NEW Course 4 Artist Params 10_instruction: |
         Crie um bloco de função "desenhe um hexágono"
-        com um parâmetro comprimento. Dica: esse hexágono tem 100 pixels de tamanho. 
+        com um parâmetro comprimento. Dica: esse hexágono tem lados de 100 pixels
+        de tamanho. 
       NEW Course 4 Artist Params 11_instruction: |
         Você consegue descobrir como desenhar
         essa forma? Edite a função para usar o parâmetro "lados".
@@ -2803,21 +2793,23 @@ pt-BR:
         Esta imagem é semelhante à anterior.
         Você consegue usar um "laço para" com sua função para criar deste design?
       NEW Course 4 Artist Params 13_instruction: |
-        Vamos editar essa função "desenhe uma forma".
-        Ela já tem um parâmetro "comprimento". Agora, vamos editar a função
-        para adicionar também um parâmetro "lados". Lembre-se de que o ângulo para virar para uma
-        determinada forma é 360 dividido pelos lados que ela tem. Dica: os comprimentos de cada forma
-        são: o triângulo tem 100 pixels, o hexágono tem 25 pixels e o quadrado tem 50 pixels.
+        Vamos editar essa função "desenhe um polígono".
+        Ela já tem um parâmetro "comprimento". Agora, vamos adicionar um parâmetro "lados".
+        Lembre-se de que o ângulo para virar para uma dada forma é 360 dividido pelo
+        número de lados que ela tem. Dica: O perímetro de cada forma é 200 pixels.
+        Você se lembra da equação para deixar as formas do mesmo tamanho quando elas
+        têm um número diferente de lados?
       NEW Course 4 Artist Params 14_instruction: |
-        Você consegue recriar essas formas?
-        Arraste o parâmetro "comprimento" para dentro da definição da função. 
+        Edite "desenhe uma borda espiral" para
+        usar os parâmetros "comprimento" e "lados" e então recrie essas formas.
       NEW Course 4 Artist Params 15_instruction: |
         Atividade livre: aqui estão as funções
-        que você escreveu e mais algumas com as quais você pode brincar. Desenhe alguma coisa incrível!
+        que você escreveu e mais algumas para você usar. Desenhe algo incrível!
+        Brinque com a largura da caneta para ver como seus desenhos ficam diferentes!
       NEW Course 4 Artist Params 2_instruction: |
         Crie uma função "desenhe um triângulo"
         com lados de 50 pixels desde o início
-      NEW Course 4 Artist Params 3_instruction: "Agora, vamos usar a função para desenhar\n3 triângulos do último desafio em uma linha. Dica: cada triângulo está separado por\n50 pixels.\r\n"
+      NEW Course 4 Artist Params 3_instruction: "Agora, vamos usar a função para desenhar\n5 triângulos em uma linha. Dica: cada triângulo está separado por 30 pixels.\r\n"
       NEW Course 4 Artist Params 4_instruction: |
         Você percebe algo diferente
         sobre esses blocos de função? Clique em "Executar" para ver o que acontece.
@@ -2827,12 +2819,12 @@ pt-BR:
       NEW Course 4 Artist Params 6_instruction: |
         Preencha o parâmetro "comprimento"
         para desenhar essa formas substituindo o "???" pelos números corretos. O
-        quadrado e o triângulo têm tamanho de 100 pixels, enquanto o hexágono tem tamanho de
+        quadrado e o triângulo têm lados de 100 pixels, enquanto o hexágono tem lados de
         75 pixels.
       NEW Course 4 Artist Params 7_instruction: |
         Você consegue completar este desenho? Dica:
-        cada triângulo é 25 pixels maior que o anterior. O primeiro triângulo tem 25
-        pixels.
+        cada triângulo é 25 pixels maior que o anterior. O primeiro triângulo
+        tem lados de 25 pixels de comprimento.
       NEW Course 4 Artist Params 8_instruction: |
         O código da função deste triângulo
         está corrompido. Você consegue editar a função para corrigi-lo e criar triângulos
@@ -2842,7 +2834,7 @@ pt-BR:
         da função "desenhe um quadrado" e adicionar um parâmetro. Ela deve receber um parâmetro
         comprimento, como no triângulo. Dessa vez, desenhe 3 quadrados: 25, 50 e 75
         pixels de comprimento e separados por 100 pixels cada.
-      NEW Course 4 Artist Params inspire_instruction: "Atividade livre - Inspiração: agora você\naprendeu tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n \r\nQuer saber como nosso padrão de inspiração foi feito? Acesse\nhttps://studio.code.org/c/106387530 para ver a solução."
+      NEW Course 4 Artist Params inspire_instruction: "Atividade livre - Inspiração: agora você\naprendeu tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n \r\nQuer saber como nosso padrão de inspiração foi feito? "
       NEW Course 4 Artist Vars 1.5_instruction: |
         Dê uma olhada no código. Você consegue
         ver como o bloco "defina o comprimento" e o bloco "comprimento" funcionam juntos? Clique
@@ -2949,6 +2941,29 @@ pt-BR:
         e então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o
         ninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você
         achar que já descobriu como o jogo funciona, clique em "Concluir"
+      PDAlg 13-16 Sam Extension Puzzle_instruction: |
+        Add a second parameter to "onscreen?"
+        for Sam's y coordinate and update the function so it keeps him safe on all
+        four sides.
+      PDAlg 17-20 Luigi Extension Puzzle_instruction: |
+        Without modifying your existing
+        "cost" function, create a new "coupon" function that takes a pizza topping
+        and coupon code and returns the cost of a pizza with that topping. If the
+        coupon code is correct (you get to decide what it is), apply a 30% discount
+        to the pizza.
+      PDAlg 8-12 ex dr 1_instruction: |
+        The definition in this Design Recipe doesn't
+        match both examples. Test each example to see which is failing, and then fix
+        the definition to match.
+      PDAlg 8-12 ex dr 2_instruction: |
+        This student has created two examples for
+        the function "apples" but something's not quite right. How would you direct
+        this student to correct their mistake?
+      PDAlg 8-12 Rocket Height Puzzle_instruction: |
+        Let's write a "rocket-height"
+        function with simple acceleration. Write a function that ensures the rocket
+        is at 15 meters at 1 second, 45 meters at 2 seconds, 95 at 3 seconds, and
+        165 at 4 seconds.
       PDAlg Big Game History_instruction: |
         Now that you've played through a Big
         Game level you should see a new entry in your history. Click the Version History
@@ -3110,6 +3125,11 @@ pt-BR:
         Atividade livre: faça uma experiência com sua função altura-foguete
         para fazer o foguete voar de formas diferentes. Clique em "Concluir" quando você
         terminar.
+      Ryan - 4-5 Bee Conditionals 2_instruction: |
+        The bee only wants nectar right
+        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
+        it is hiding a flower. If it is, then you can gather nectar.
+      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
         Essa borboleta se chama Sam e
         a área do jogo é o quintal de Sam. O quintal de Sam tem 400 pixels de largura por 400 de
@@ -3265,6 +3285,10 @@ pt-BR:
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
+      U2 frequency caesar_instruction: Instruções
+      U2 frequency random sub_instruction: Instruções
+      U2 vigenere cipher_instruction: Instruções
+      U2 Vigenere_instruction: Test
       U2L04 - NetSim Routers with Addresses_instruction: |
         Send messages with your
         classmates (Click to see full instructions)
@@ -3278,6 +3302,7 @@ pt-BR:
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
+      U2L14 frequency random_instruction: Test
       U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship moves. For setup, join a Room with your group, and add ships to\nyour paper board for each opponent. When playing, all communication must be\ndone through the tool, so no talking, but have fun!\r\n"
       U2L3 NetSim Hub Mode_instruction: |
         Use the Internet Simulator to test out your
@@ -3289,6 +3314,42 @@ pt-BR:
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
         to be dropped.
+      U3 - Design Mode - Multi Screens 2_instruction: |
+        Make a 2 screen app which
+        can switch back and forth between a black screen and a white screen using
+        buttons.
+      U3 - Design Mode - Multi Screens_instruction: |
+        Make a 2 screen app with black
+        screen and a white screen.
+      U3 - Design Mode - Other Events_instruction: |
+        Delete the button and make the
+        image move to a random location when you click on it. (click to see detailed
+        instructions)
+      U3 - Design Mode -Recreate Beyond Buttons_instruction: |
+        Recreate the game from
+        the last lesson with an extra welcome screen for the user to start on. (Click
+        for detailed instructions)
+      U3 - Design Mode 1_instruction: |
+        Add a button to your screen using design mode.
+        Change the style to look like the picture (click for instructions).
+      U3-Design Mode-ID and Event Handler_instruction: |
+        Using the Design Mode Events
+        tab add in code that when the button is clicked causes something to print
+        in the console. (Click to see detail instructions).
+      U3-Design Mode-ID_instruction: |
+        Using the Design Mode Events change the button
+        ID and update the code to match. (Click to see detail instructions).
+      U3-Design Mode-Image_instruction: |
+        Add an image to your app which moves to
+        a random position whenever the button is clicked. (Click to see detailed instructions).
+      U313 drag Two Buttons_instruction: |
+        Run a program with two buttons that have
+        the same id to see the warning message in the console. Change the ids to make
+        the program run without getting a warning message.
+      U313 eventsDetails_instruction: |
+        Run a program with two buttons that have the
+        same id to see the warning message in the console. Change the ids to make
+        the program run without getting a warning message.
       U313 Two Buttons with Ids_instruction: |
         Sua vez de tentar! Fornecemos a você um
         código inicial com dois botões e dois manipuladores de evento na tela, mas deixamos
@@ -3326,7 +3387,7 @@ pt-BR:
         o padrão do movimento. Você deve definir uma função chamada desenharPasso()
         que desenha um dos passos e então chamá-la 3 vezes para obter o efeito desejado.
       U3L04 - 3 by 3 with functions_instruction: |
-        Make the 3 by 3 square as efficiently
+        Make the 3x3 square as efficiently
         as you can. (Click to see full instructions)
       U3L04 - snowflake_instruction: |
         Create the design by breaking it down into
@@ -3360,9 +3421,9 @@ pt-BR:
         Use a single command to move the
         turtle to the edge of the screen. (Click to see full instructions)
       U3L06 Challenge 1 triangle_instruction: |
-        Read the documentation for one of
-        these commands. Then use them to create a triangle with sides 100 pixels long.
-        (Click to see full instructions)
+        Use the parameterized versions of
+        the turtle commands to create a triangle with sides 100 pixels long. (Click
+        to see full instructions)
       U3L06 Challenge 2 purple square_instruction: |
         Desta vez vamos aprender
         um pouco sobre como alterar a caneta da tartaruga. Leia a documentação para encontrar
@@ -3401,9 +3462,43 @@ pt-BR:
         amigos para ver se eles conseguem duplicar sua imagem. Vamos mostrar para você os
         desenhos que nós mesmos fizemos. Você pode tentar duplicá-los, se quiser.
         Caso não queira, divirta-se criando o seu próprio desenho!
+      U3L07 - allSeaGrass_instruction: |
+        Add 50 pieces of sea grass to the image by
+        writing drawAllSeaGrass with a loop. (Click to see full instructions)
+      U3L07 - bubbles_instruction: |
+        Add 200 bubbles to the image by writing drawAllBubbles
+        with a loop. (Click to see full instructions)
+      U3L07 - callingFunctionsInLoops_instruction: |
+        Call the function within the
+        loop to complete the figure. (Click to see full instructions)
+      U3L07 - createTriangleParam_instruction: |
+        Define a function that accepts a
+        parameter to match the function calls and complete the image. (Click to see
+        full instructions)
+      U3L07 - fish_instruction: |
+        Add 15 fish to the image by writing drawAllFish
+        with a loop. (Click to see full instructions)
       U3L07 - Free Play Loops and Random_instruction: |
         Atividade livre! Use o que você aprendeu
         sobre laços e aleatoriedade para criar sua própria pequena cena. Divirta-se.
+      U3L07 - introSquare_instruction: |
+        Use a loop to draw a square. (Click to see
+        full instructions)
+      U3L07 - loopsWithRandom_instruction: |
+        Increase the number of iterations to
+        fill the screen with black. (Click to see full instructions)
+      U3L07 - randomDots1_instruction: |
+        Increase the number of iterations to fully
+        fill the screen with random dots. (Click to see full instructions)
+      U3L07 - randomSquare_instruction: |
+        Draw the figure using a loop. (Click to
+        see full instructions)
+      U3L07 - seaGrass_instruction: |
+        Add a parameter to drawSeaGrass that controls
+        the number of waves in the grass. (Click to see full instructions)
+      U3L07 - seaStar_instruction: |
+        Add 5 sea stars to the image by writing drawAllSeaStars
+        with a loop. (Click to see full instructions)
       U3L07 - Starry Night Starter Code_instruction: |
         Você vai usar laços e números
         aleatórios para gerar uma imagem do céu em uma noite estrelada parecida com uma
@@ -3412,15 +3507,70 @@ pt-BR:
         estrelas, a grama e a lua.  Todos os efeitos são aplicações inteligentes dos pontos,
         linhas e cores da tartaruga.  Para começar, siga a série de etapas sugerida na
         planilha de acompanhamento. 
+      U3L07 - sunBeams_instruction: |
+        Add 100 sun beams to the image by writing drawAllSunBeams
+        with a loop. (Click to see full instructions)
+      U3L07 - topDownDesign_instruction: |
+        Get comfortable with the structure of this
+        program, then move on to the next exercise. (Click to see full instructions)
+      U3L08 - createTwoParamTriangle_instruction: |
+        Define a function called drawTriange()
+        that accepts two parameters to set the size and width of the triangle. (Click
+        to see full instructions)
+      U3L08 - digitalScene_instruction: |
+        Create the functions you were assigned as
+        part of your digital scene. (Click to see full instructions)
       U3L08 - drawSquaresWithParams_instruction: |
-        Change the code at top to make
-        use of the drawSquare() command. (Click to see full instructions)
+        Write drawSmallSquare() to draw
+        a 25px square. (Click to see full instructions)
+      U3L08 - drawSquareWithParam_instruction: |
+        Use drawSquare() to recreate the
+        image of both squares, this time using parameters. (Click to see full instructions)
       U3L08 - Enchantment Under the Sea_instruction: |
         You have been provided with
         starter code for an “Under the Sea” scene which includes three functions,
         one each for the starfish, sea grass, and fish. Create versions of these functions
         which accept parameters to allow you to add more variation to your scene.  The
         student worksheet provides more details and guidance.
+      U3L08 - fish_instruction: |
+        Add a parameter to drawFish() that changes the size
+        of the fish drawn. (Click to see full instructions)
+      U3L08 - freePlay_instruction: |
+        Keep adding to your image by making more calls
+        to your new functions with parameters. (Click to see full instructions)
+      U3L08 - individualCode_instruction: |
+        Create the functions you were assigned
+        as part of your digital scene. (Click to see full instructions)
+      U3L08 - introUnderTheSea_instruction: |
+        Add an extra fish, starfish, and piece
+        of sea grass to the image. Look at, but don't change, the functions that
+        create them. (Click to see full instructions)
+      U3L08 - multiParamFish_instruction: |
+        Add three parameters to your drawFish()
+        function to accept red, green and blue values to make your fish different
+        colors. (Click to see full instructions)
+      U3L08 - multipleLayersofParams_instruction: |
+        Call drawPlusSign() to complete
+        the image. (Click to see full instructions)
+      U3L08 - paramsToStarfish_instruction: |
+        Add a parameter to drawStarfish() that
+        changes the size of the starfish drawn. (Click to see full instructions)
+      U3L08 - randomInput_instruction: |
+        Use the randomNumber() blocks to test the
+        functions you designed with random input. (Click to see full instructions)
+      U3L08 - seaGrass_instruction: |
+        Add a parameter to drawSeaGrass() that changes
+        the size of the piece of sea grass drawn. (Click to see full instructions)
+      U3L08 - squareTwoParams_instruction: |
+        Call drawSquare() to complete the drawing
+        of two squares. (Click to see full instructions)
+      U3L08 - starFish_instruction: |
+        Add an extra fish, starfish, and piece of sea
+        grass to the image. Look at, but don't change, the functions that create
+        them. (Click to see full instructions)
+      U3L08 - triangleTwoParams_instruction: |
+        Call drawSquare() to complete the drawing
+        of two squares. (Click to see full instructions)
       U3L13 - Button with ID_instruction: |
         Arraste um botão para fora da tela e
         defina seu texto como "Vá em frente!".  Execute o programa para ver se você consegue enxergar
@@ -3432,6 +3582,15 @@ pt-BR:
         no console qual é o problema. Não há muito código para ver, então você deve ser capaz
         de descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração
         que permita que o programa funcione como esperado.
+      U3L13 - Debugging 1_instruction: |
+        Debug the program by verifying your IDs are
+        being referenced properly. (Click to see full instructions)
+      U3L13 - Debugging 2_instruction: |
+        Debug the program by properly ordering your
+        button commands and event handlers. (Click to see full instructions)
+      U3L13 - Debugging 3_instruction: |
+        Debug the program by fixing the logical error
+        within the program. (Click to see full instructions)
       U3L13 - Turtle Driver Project_instruction: |
         Desafio: crie uma "tartaruga motorista"
         com pelo menos três botões na tela para mover a tartaruga para a frente e
@@ -3444,11 +3603,20 @@ pt-BR:
         Arraste um botão para fora da tela e
         defina seu texto como "Vá em frente!". Adicione um manipulador de eventos para o botão que
         faz a tartaruga se mover para a frente. Execute o programa para ver se ele funciona. 
+      U3L13 eventsDetails_instruction: |
+        Add an event handler to the button to move
+        the turtle forward. (Click to see full instructions)
       U3L14 - Unfortunate Events Free Play_instruction: |
         Siga a planilha de "Eventos
         infelizes" e insira seu código aqui para testá-lo. Carregamos previamente
         o código que você precisa para começar.
       U3L16 - challenge say hi app_instruction: "In this challenge we give you starter\ncode that lays all the elements out on the screen.  Here’s what you need to\ndo:\r\nAdd event handler to textInput with the event type ‘input’ that shows\nthe “Say hi” button when that event occurs.\r\nAdd event handler to button\nso that on click, it writes a hello message to the screen and hides the textInput\nand button."
+      U3L16 - chaserApp_instruction: |
+        Create your own "Chaser App". (Click to see
+        full instructions)
+      U3L16 - chooseImages_instruction: |
+        Replace the image in your application with
+        one of your own. (Click to see full instructions)
       U3L16 - hideAndShow_instruction: |
         Introdução de textInput, getText e write.  Primeiro,
         execute o código inicial várias vezes. Tente alterar o que é escrito na
@@ -3476,6 +3644,15 @@ pt-BR:
         conectá-la a um manipulador de eventos. Fornecemos um código inicial similar
         ao resultado do último nível, então você pode copiar o código do último nível
         aqui se você preferir. 
+      U3L16 - introSetPosition_instruction: |
+        Move the buttons to the bottom of the
+        screen. (Click to see full instructions)
+      U3L16 - newEventTypes_instruction: |
+        Experiment with different event types and
+        select the one that you think is best. (Click to see full instructions)
+      U3L16 - projectTemplate_instruction: |
+        Create your own "Chaser App". (Click
+        to see full instructions)
       U3L16 - quick double click_instruction: |
         Mini-Project.  The Quick Double-Click
         game.  In this simple game an object (an image) moves around, or pops up randomly
@@ -3507,11 +3684,8 @@ pt-BR:
         é escrito na tela quando o botão for clicado. Então, use getText para escrever
         na tela o que o usuário digitou na caixa de texto.
       U3L16 - use images_instruction: |
-        Introducing Images.  Try replacing the textLabel
-        with an image..  Will the image respond to events just like the button?  Try
-        connecting an event handler to it.  We've started you out with code similar
-        to the result of the last level, you can copy your code from that level into
-        here if you prefer.
+        Use the image command to replace the text
+        label in your program with an image. (Click to see full instructions)
       U3L19 - Clicker Game Freeplay Area_instruction: |
         Use esta área de laboratório do aplicativo para melhorar
         seu jogo no estilo clicker.  Você deve começar copiando/colando o código do seu jogo antigo
@@ -3778,4 +3952,5 @@ pt-BR:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      Vigenere_instruction: Test
       XML Scratchpad_instruction: Use este nível de teste para pegar xml para testes de unidade

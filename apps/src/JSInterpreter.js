@@ -74,6 +74,15 @@ var JSInterpreter = module.exports = function (options) {
 
 };
 
+/**
+ * Returns true if the JSInterpreter instance initialized successfully. This
+ * would typically fail when the program contains a syntax error.
+ */
+JSInterpreter.prototype.initialized = function () {
+  return !!this.interpreter;
+};
+
+
 JSInterpreter.StepType = {
   RUN:  0,
   IN:   1,
@@ -383,12 +392,13 @@ JSInterpreter.prototype.createPrimitive = function (data) {
  * Returns the row (line) of code highlighted. If nothing is highlighted
  * because it is outside of the userCode area, the return value is -1
  */
-JSInterpreter.prototype.selectCurrentCode = function () {
+JSInterpreter.prototype.selectCurrentCode = function (highlightClass) {
   return codegen.selectCurrentCode(this.interpreter,
                                    this.codeInfo.cumulativeLength,
                                    this.codeInfo.userCodeStartOffset,
                                    this.codeInfo.userCodeLength,
-                                   this.studioApp.editor);
+                                   this.studioApp.editor,
+                                   highlightClass);
 };
 
 /**

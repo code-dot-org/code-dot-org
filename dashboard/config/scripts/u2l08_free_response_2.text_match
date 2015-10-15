@@ -1,9 +1,10 @@
 name 'U2L08 Free Response 2'
 title 'Router Table: Reflection'
 
-
 markdown <<MARKDOWN
-Why do routers store information about neighbors and costs, rather than the whole path from themselves to another router?
+Why do routers store information about neighbors and costs, rather than the whole path from themselves to another router? 
 MARKDOWN
 
-
+teacher_markdown <<MARKDOWN
+Routers do not need to know the whole path, because they rely on a protocol in which each router will always pass along a packet towards its final destination, using whatever path is cheapest. By storing the node through which exists the cheapest path to that destination, the router is able to route packets efficiently, without using large amounts of memory.
+MARKDOWN

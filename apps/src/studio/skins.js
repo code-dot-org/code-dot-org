@@ -143,6 +143,8 @@ function loadInfinity(skin, assetUrl) {
     [msg.setBackgroundSnowy(), '"snowy"'],
     ];
 
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
     [skin.leafy.background, '"leafy"'],
     [skin.grassy.background, '"grassy"'],
@@ -174,6 +176,8 @@ function loadInfinity(skin, assetUrl) {
     [msg.projectileRandom(), RANDOM_VALUE]];
 
   // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
     [msg.itemHiro(), '"item_hiro"'],
     [msg.itemAnna(), '"item_anna"'],
@@ -189,8 +193,7 @@ function loadInfinity(skin, assetUrl) {
 function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
-  skin.defaultBackground = 'background3';
-  skin.defaultWalls = 'maze2';
+  skin.defaultBackground = 'forest';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
@@ -204,28 +207,66 @@ function loadHoc2015(skin, assetUrl) {
 
   // TODO: proper item class names
   skin.ItemClassNames = [
-    'item_walk_item1',
-    'item_walk_item2',
-    'item_walk_item3',
-    'item_walk_item4'
+    'pig',
+    'man',
+    'roo',
+    'bird',
+    'spider',
+    'mouse',
+    'pilot'
   ];
 
   skin.AutohandlerTouchItems = {
-    'item_walk_item1': 'whenTouchWalkItem1',
-    'item_walk_item2': 'whenTouchWalkItem2',
-    'item_walk_item3': 'whenTouchWalkItem3',
-    'item_walk_item4': 'whenTouchWalkItem4'
+    'pig': 'whenTouchPig',
+    'man': 'whenTouchMan',
+    'roo': 'whenTouchRoo',
+    'bird': 'whenTouchBird',
+    'spider': 'whenTouchSpider',
+    'mouse': 'whenTouchMouse',
+    'pilot': 'whenTouchPilot'
   };
 
   skin.specialItemFrames = {
-    'item_walk_item1': 12,
-    'item_walk_item2': 12,
-    'item_walk_item3': 15,
-    'item_walk_item4': 12
+    'pig': 12,
+    'man': 12,
+    'roo': 15,
+    'bird': 8,
+    'spider': 12,
+    'mouse': 1,
+    'pilot': 13
+  };
+
+  skin.specialItemScale = {
+    'pig': 1,
+    'man': 1,
+    'roo': 1.6,
+    'bird': 1.6,
+    'spider': 1.2,
+    'mouse': 0.6,
+    'pilot': 1
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
   skin.explosionFrames = 17;
+
+  // Spritesheet for animated goal.
+  skin.animatedGoal = skin.assetUrl('goal_idle.png');
+
+  // How many frames in the animated goal spritesheet.
+  skin.animatedGoalFrames = 16;
+
+  // How long to show each frame of the optional goal animation.
+  skin.timePerGoalAnimationFrame = 100;
+
+  // For a smaller collision region on a goal.
+  skin.goalCollisionRectWidth = 50;
+  skin.goalCollisionRectHeight = 50;
+
+  // Draw a goal an an offset to its usual location, useful for oversize goal
+  // images, such as a person standing taller than a single grid square whose
+  // feet should still be planted in that grid square.
+  skin.goalRenderOffsetX = -25;
+  skin.goalRenderOffsetY = -45;
 
   // Dimensions of a rectangle in collidable center from which projectiles begin.
   skin.projectileSpriteWidth  = 70;
@@ -255,18 +296,18 @@ function loadHoc2015(skin, assetUrl) {
   skin.gridSpriteRenderOffsetX = -30;
   skin.gridSpriteRenderOffsetY = -40;
 
-  skin.avatarList = ['character1', 'character2'];
+  skin.avatarList = ['bot1', 'bot2'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 1,
+        normal: name == 'bot1' ? 14 : 16,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: name == 'character1' ? 1 : 8
+        walk: name == 'bot1' ? 14 : 8
       },
       timePerFrame: 100
     };
@@ -281,13 +322,15 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   // TODO: Create actual item choices
-  skin.item_walk_item1 = skin.assetUrl('walk_item1.png');
-  skin.item_walk_item2 = skin.assetUrl('walk_item2.png');
-  skin.item_walk_item3 = skin.assetUrl('walk_item3.png');
-  skin.item_walk_item4 = skin.assetUrl('walk_item4.png');
+  skin.pig = skin.assetUrl('walk_item1.png');
+  skin.man = skin.assetUrl('walk_item2.png');
+  skin.roo = skin.assetUrl('walk_item3.png');
+  skin.bird = skin.assetUrl('walk_item4.png');
+  skin.spider = skin.assetUrl('walk_item5.png');
+  skin.mouse = skin.assetUrl('walk_item6.png');
+  skin.pilot = skin.assetUrl('walk_item7.png');
 
-
-  skin.background1 = {
+  skin.forest = {
     background: skin.assetUrl('background_background1.jpg'),
     tiles: skin.assetUrl('tiles_background1.png'),
     jumboTiles: skin.assetUrl('jumbotiles_background1.png'),
@@ -296,7 +339,7 @@ function loadHoc2015(skin, assetUrl) {
     jumboTilesRows: 4,
     jumboTilesCols: 4
   };
-  skin.background2 = {
+  skin.snow = {
     background: skin.assetUrl('background_background2.jpg'),
     tiles: skin.assetUrl('tiles_background2.png'),
     jumboTiles: skin.assetUrl('jumbotiles_background2.png'),
@@ -305,7 +348,7 @@ function loadHoc2015(skin, assetUrl) {
     jumboTilesRows: 4,
     jumboTilesCols: 4
   };
-  skin.background3 = {
+  skin.ship = {
     background: skin.assetUrl('background_background3.jpg'),
     tiles: skin.assetUrl('tiles_background3.png'),
     jumboTiles: skin.assetUrl('jumbotiles_background3.png'),
@@ -321,7 +364,20 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
 
-  skin.walls_blank = 
+  // Since we don't have jumbo tiles for our "snow" background, in the case
+  // of the two maps that use jumbo pieces ("circle" and "horizontal") we
+  // return a special version of the map that just uses regular tile pieces.
+
+  skin.getMap = function(background, map) {
+    if (background == "snow" && (map == "circle" || map == "horizontal")) {
+      return map + "_nonjumbo";
+    }
+    else {
+      return map;
+    }
+  };
+
+  skin.blank = 
     [[0,  0,  0,  0,  0,  0,  0,  0], 
      [0,  0,  0,  0,  0,  0,  0,  0], 
      [0,  0,  0,  0,  0,  0,  0,  0], 
@@ -331,7 +387,7 @@ function loadHoc2015(skin, assetUrl) {
      [0,  0,  0,  0,  0,  0,  0,  0],  
      [0,  0,  0,  0,  0,  0,  0,  0]];
 
-  skin.walls_circle = 
+  skin.circle_nonjumbo = 
     [[0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00], 
      [0x00, 0x11, 0x02, 0x03,  0x00,  0x44, 0x45, 0x00], 
      [0x00, 0x04, 0x00, 0x00,  0x00,  0x00, 0x03, 0x00], 
@@ -341,17 +397,17 @@ function loadHoc2015(skin, assetUrl) {
      [0x00, 0x24, 0x25, 0x02,  0x00,  0x34, 0x35, 0x00], 
      [0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00]];
 
-  skin.walls_circle_alt = 
-    [[0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00], 
-     [0x00, 0x200, 0x213, 0x213, 0x00, 0x213, 0x201, 0x00], 
-     [0x00, 0x212, 0x00,  0x00,  0x00, 0x00,  0x212, 0x00], 
-     [0x00, 0x212, 0x00,  0x21,  0x21, 0x00,  0x212, 0x00],
-     [0x00, 0x212, 0x00,  0x21,  0x21, 0x00,  0x212, 0x00], 
-     [0x00, 0x212, 0x00,  0x00,  0x00, 0x00,  0x212, 0x00], 
-     [0x00, 0x202, 0x213, 0x213, 0x00, 0x213, 0x203, 0x00], 
-     [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00]];
+  skin.circle = 
+    [[0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+     [0x00, 0x200, 0x213, 0x213, 0x00,  0x213, 0x201, 0x00], 
+     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00], 
+     [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00],
+     [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00], 
+     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00], 
+     [0x00, 0x202, 0x213, 0x213, 0x00,  0x213, 0x203, 0x00], 
+     [0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00]];
 
-  skin.walls_horizontal = 
+  skin.horizontal_nonjumbo = 
     [[0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
      [0, 0x02, 0x03, 0x04, 0x00, 0x24, 0x25, 0x00], 
      [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
@@ -361,7 +417,17 @@ function loadHoc2015(skin, assetUrl) {
      [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
      [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]];
 
-  skin.walls_grid = 
+  skin.horizontal = 
+    [[0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+     [0, 0x213, 0x213, 0x213, 0x00,  0x213, 0x213, 0x00], 
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+     [0, 0x10,  0x00,  0x213, 0x213, 0x213, 0x213, 0x00],
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+     [0, 0x213, 0x213, 0x213, 0x213, 0x213, 0x00,  0x00], 
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00]];
+
+  skin.grid = 
     [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
      [0x00, 0x21, 0x00, 0x10, 0x00, 0x20, 0x00, 0x03], 
      [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
@@ -371,64 +437,83 @@ function loadHoc2015(skin, assetUrl) {
      [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
      [0x00, 0x10, 0x00, 0x21, 0x00, 0x23, 0x00, 0x10]];
 
-  skin.walls_blobs = 
-    [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
-     [0x00, 0x03, 0x03, 0x00, 0x00, 0x00, 0x22, 0x00], 
-     [0x00, 0x03, 0x03, 0x00, 0x00, 0x10, 0x10, 0x00], 
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x10, 0x10, 0x00],  
-     [0x00, 0x00, 0x02, 0x02, 0x00, 0x00, 0x00, 0x00], 
-     [0x00, 0x00, 0x02, 0x02, 0x00, 0x00, 0x00, 0x23],   
-     [0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x21, 0x21],  
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x21, 0x21]];
+  skin.blobs = 
+    [[0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00], 
+     [0x00, 0x103, 0x103, 0x00,  0x00, 0x00,  0x22,  0x00], 
+     [0x00, 0x103, 0x103, 0x00,  0x00, 0x110, 0x110, 0x00], 
+     [0x00, 0x00,  0x00,  0x00,  0x00, 0x110, 0x110, 0x00],  
+     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x00], 
+     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x23],   
+     [0x00, 0x00,  0x03,  0x00,  0x00, 0x00,  0x121, 0x121],  
+     [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x121, 0x121]];
 
   // Sounds.
-  skin.character1sound1 = [skin.assetUrl('character1sound1.mp3'), skin.assetUrl('wall.ogg')];
-  skin.character1sound2 = [skin.assetUrl('character1sound2.mp3'), skin.assetUrl('wall.ogg')];
-  skin.character1sound3 = [skin.assetUrl('character1sound3.mp3'), skin.assetUrl('wall.ogg')];
-  skin.character1sound4 = [skin.assetUrl('character1sound4.mp3'), skin.assetUrl('wall.ogg')];
+  var sounds = [
+    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
+    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
+    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
+    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
+    'alert1', 'alert2', 'alert3', 'alert4',
+    'applause',
+    'start', 'win', 'failure', 'flag'
+  ];
 
-  studioApp.loadAudio(skin.character1sound1, 'character1sound1');
-  studioApp.loadAudio(skin.character1sound2, 'character1sound2');
-  studioApp.loadAudio(skin.character1sound3, 'character1sound3');
-  studioApp.loadAudio(skin.character1sound4, 'character1sound4');
+  // Override the default loadAudio function with this one.
+  skin.loadAudio = function() {
+    for (var s = 0; s < sounds.length; s++) {
+      var sound = sounds[s];
+      skin[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl('wall.ogg')];
+      studioApp.loadAudio(skin[sound], sound);
+    }
+  };
 
   // These are used by blocks.js to customize our dropdown blocks across skins
-  skin.wallChoices = [
-    [msg.setWallsHidden(), HIDDEN_VALUE],
-    [msg.setWallsRandom(), RANDOM_VALUE],
-    [msg.setWallsBorder(), '"border"'],
-    [msg.setWallsMaze(), '"maze"'],
-    [msg.setWallsMaze2(), '"maze2"'],
-    [msg.setWallsDefault(), '"default"']
+  // NOTE: map names must have double quotes inside single quotes
+  // NOTE: first item must be RANDOM_VALUE
+  skin.mapChoices = [
+    [msg.setMapRandom(), RANDOM_VALUE],
+    [msg.setMapBlank(), '"blank"'],
+    [msg.setMapCircle(), '"circle"'],
+    [msg.setMapCircle2(), '"circle2"'],
+    [msg.setMapHorizontal(), '"horizontal"'],
+    [msg.setMapGrid(), '"grid"'],
+    [msg.setMapBlobs(), '"blobs"']
     ];
 
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    [msg.setBackgroundBackground1(), '"background1"'],
-    [msg.setBackgroundBackground2(), '"background2"'],
-    [msg.setBackgroundBackground3(), '"background3"']
+    [msg.setBackgroundForest(), '"forest"'],
+    [msg.setBackgroundSnow(), '"snow"'],
+    [msg.setBackgroundShip(), '"ship"']
     ];
 
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
-    [skin.background1.background, '"background1"'],
-    [skin.background2.background, '"background2"'],
-    [skin.background3.background, '"background3"'],
+    [skin.forest.background, '"forest"'],
+    [skin.snow.background, '"snow"'],
+    [skin.ship.background, '"ship"'],
     [skin.randomPurpleIcon, RANDOM_VALUE],
     ];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
     [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteCharacter1(), '"character1"'],
-    [msg.setSpriteCharacter2(), '"character2"']];
+    [msg.setSpriteBot1(), '"bot1"'],
+    [msg.setSpriteBot2(), '"bot2"']];
 
   skin.projectileChoices = [];
 
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
-    [msg.itemItem1(), '"item_walk_item1"'],
-    [msg.itemItem2(), '"item_walk_item2"'],
-    [msg.itemItem3(), '"item_walk_item3"'],
-    [msg.itemItem4(), '"item_walk_item4"'],
+    [msg.itemMan(), '"man"'],
+    [msg.itemPilot(), '"pilot"'],
+    [msg.itemPig(), '"pig"'],
+    [msg.itemBird(), '"bird"'],
+    [msg.itemMouse(), '"mouse"'],
+    [msg.itemRoo(), '"roo"'],
+    [msg.itemSpider(), '"spider"'],
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
@@ -527,6 +612,8 @@ function loadStudio(skin, assetUrl) {
     [msg.setBackgroundTennis(), '"tennis"'],
     [msg.setBackgroundWinter(), '"winter"']];
 
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
     [skin.cave.background, '"cave"'],
     [skin.night.background, '"night"'],
@@ -585,6 +672,8 @@ function loadStudio(skin, assetUrl) {
     [msg.projectileRandom(), RANDOM_VALUE]];
 
   // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
     [msg.itemBlueFireball(), '"item_blue_fireball"'],
     [msg.itemPurpleFireball(), '"item_purple_fireball"'],
@@ -671,6 +760,26 @@ exports.load = function(assetUrl, id) {
   skin.hitSound = [skin.assetUrl('2_wall_bounce.mp3'),
                    skin.assetUrl('2_wall_bounce.ogg')];
 
+  // This function might be overloaded by a skin.
+  skin.loadAudio = function() {
+    studioApp.loadAudio(skin.winSound, 'win');
+    studioApp.loadAudio(skin.startSound, 'start');
+    studioApp.loadAudio(skin.failureSound, 'failure');
+    studioApp.loadAudio(skin.rubberSound, 'rubber');
+    studioApp.loadAudio(skin.crunchSound, 'crunch');
+    studioApp.loadAudio(skin.flagSound, 'flag');
+    studioApp.loadAudio(skin.winPointSound, 'winpoint');
+    studioApp.loadAudio(skin.winPoint2Sound, 'winpoint2');
+    studioApp.loadAudio(skin.losePointSound, 'losepoint');
+    studioApp.loadAudio(skin.losePoint2Sound, 'losepoint2');
+    studioApp.loadAudio(skin.goal1Sound, 'goal1');
+    studioApp.loadAudio(skin.goal2Sound, 'goal2');
+    studioApp.loadAudio(skin.woodSound, 'wood');
+    studioApp.loadAudio(skin.retroSound, 'retro');
+    studioApp.loadAudio(skin.slapSound, 'slap');
+    studioApp.loadAudio(skin.hitSound, 'hit');
+  };
+
   // Settings
   skin.background = skin.assetUrl('background.png');
   skin.spriteHeight = 100;
@@ -681,7 +790,7 @@ exports.load = function(assetUrl, id) {
 
   skin.activityChoices = [
     [msg.setActivityRandom(), RANDOM_VALUE],
-    [msg.setActivityPatrol(), '"patrol"'],
+    [msg.setActivityRoam(), '"roam"'],
     [msg.setActivityChase(), '"chase"'],
     [msg.setActivityFlee(), '"flee"'],
     [msg.setActivityNone(), '"none"'],

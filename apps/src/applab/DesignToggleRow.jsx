@@ -1,6 +1,5 @@
 /* global $ */
 
-var React = require('react');
 var msg = require('../locale');
 var applabMsg = require('./locale');
 
@@ -65,7 +64,7 @@ module.exports = React.createClass({
     var dropdownStyle = {
       display: 'inline-block',
       verticalAlign: 'top',
-      width: 130,
+      width: '100%',
       height: 28,
       marginBottom: 6,
       borderColor: '#949ca2'
@@ -103,7 +102,14 @@ module.exports = React.createClass({
     };
 
     var showDataButtonStyle = $.extend(
-      {},
+      {
+        float: 'right',
+        textAlign: 'left',
+        maxWidth: '100%',
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis'
+      },
       buttonStyle,
       inactive,
       this.props.hideViewDataButton ? hidden : null
@@ -142,29 +148,36 @@ module.exports = React.createClass({
     }
 
     return (
-      <div className={this.props.hideToggle ? 'rightalign-contents' : 'justify-contents'}>
-        <button
-            id='codeModeButton'
-            style={$.extend({}, codeButtonStyle,
-                this.state.mode === Mode.CODE ? active : inactive,
-                this.props.hideToggle ? hidden : null)}
-            className='no-outline'
-            onClick={this.handleSetMode.bind(this, Mode.CODE)}>
-          {msg.codeMode()}
-        </button>
-        <button
-            id='designModeButton'
-            style={$.extend({}, designButtonStyle,
-                this.state.mode === Mode.DESIGN ? active : inactive,
-                this.props.hideToggle ? hidden : null)}
-            className='no-outline'
-            onClick={this.handleSetMode.bind(this, Mode.DESIGN)}>
-          {msg.designMode()}
-        </button>
-        {' ' /* Needed for "text-align: justify;" to work. */ }
-        {selectDropdown}
-        {showDataButton}
-      </div>
+      <table style={{width: '100%'}}>
+        <tbody>
+          <tr>
+            <td style={{width: '120px'}}>
+              <button
+                  id='codeModeButton'
+                  style={$.extend({}, codeButtonStyle,
+                      this.state.mode === Mode.CODE ? active : inactive,
+                      this.props.hideToggle ? hidden : null)}
+                  className='no-outline'
+                  onClick={this.handleSetMode.bind(this, Mode.CODE)}>
+                {msg.codeMode()}
+              </button>
+              <button
+                  id='designModeButton'
+                  style={$.extend({}, designButtonStyle,
+                      this.state.mode === Mode.DESIGN ? active : inactive,
+                      this.props.hideToggle ? hidden : null)}
+                  className='no-outline'
+                  onClick={this.handleSetMode.bind(this, Mode.DESIGN)}>
+                {msg.designMode()}
+              </button>
+            </td>
+            <td style={{maxWidth: 0}}>
+              {selectDropdown}
+              {showDataButton}
+            </td>
+          </tr>
+        </tbody>
+      </table>
     );
   }
 });

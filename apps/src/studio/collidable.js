@@ -131,10 +131,6 @@ Collidable.prototype.setActivity = function(type) {
  * options.
  */
 Collidable.prototype.update = function () {
-
-  if (this.activity === 'none') {
-    return;
-  }
   
   // Do we have an active location in grid coords?  If not, determine it.
   if (this.gridX === undefined) {
@@ -176,6 +172,13 @@ Collidable.prototype.update = function () {
   // If not, determine it.
   if (this.destGridX === undefined || reachedDestinationGridPosition) {
 
+    if (this.activity === 'none') {
+      this.dir = Direction.NONE;
+      this.destGridX = undefined;
+      this.destGridY = undefined;
+      return;
+    }
+
     var sprite = Studio.sprite[0];
 
     var spriteX = sprite.x + sprite.width/2;
@@ -200,7 +203,7 @@ Collidable.prototype.update = function () {
       candidate = {gridX: candidateX, gridY: candidateY};
       candidate.score = 0;
 
-      if (this.activity === "patrol") {
+      if (this.activity === "roam") {
         candidate.score ++;
       } else if (this.activity === "chase") {
         if (candidateY == this.gridY - 1 && spriteY < this.y - bufferDistance) {

@@ -22,9 +22,9 @@ class OpsMailer < ActionMailer::Base
   end
 
   def unexpected_teacher_added(user, added_teachers, workshop)
+    @user = user
     @added_teachers = added_teachers
     @workshop = workshop
-    @user = user
 
     subject = "[ops notification] #{user.email} has added unexpected teachers to #{workshop.name}"
     mail content_type: 'text/html', subject: subject
@@ -34,11 +34,10 @@ class OpsMailer < ActionMailer::Base
     @workshop = workshop
     @recipient = recipient
 
-    subject = "Important: Your #{@workshop.phase_info[:long_name]} workshop is coming up in
+    subject = "Important: Your #{@workshop.phase_long_name} workshop is coming up in
        #{(@workshop.segments.first.start.to_date - Date.today).to_i} days"
-    if @workshop.phase_info[:prerequisite_phase]
-      @prerequisite_phase = ActivityConstants::PHASES[@workshop.phase_info[:prerequisite_phase]]
-      subject += ". Complete #{@prerequisite_phase[:long_name]}"
+    if @workshop.prerequisite_phase
+      subject += ". Complete #{@workshop.prerequisite_phase[:long_name]}"
     end
 
     mail content_type: 'text/html', subject: subject, to: @recipient.email, from: 'pd@code.org'

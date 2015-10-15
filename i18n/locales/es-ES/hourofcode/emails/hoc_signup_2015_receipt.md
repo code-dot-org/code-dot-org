@@ -18,19 +18,19 @@ Dile a tus amigos acerca de la #HourOfCode.
 
 ## 2. Pídele a toda tu escuela que ofrezca una Hora de Programación
 
-[Envía este email](http://<%= hostname %>/resources#email) a tu director.
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## 3. Pregunta a tu empresa que se involucre
 
-[Envía este e-mail](http://<%= hostname %>/resources#email) a tu jefe o CEO.
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## 4. Promociona la Hora del Código en tu comunidad
 
-Recluta a un grupo local - clubs de scouts de chicos/chicas, iglesia, universidad, grupo de veteranos o sindicato. O alberga una hora de código en la "fiesta de barrio" de tu vecindario. [Envía este e-mail](http://<%= hostname %>/resources#email).
+Recluta a un grupo local - clubs de scouts de chicos/chicas, iglesia, universidad, grupo de veteranos o sindicato. O alberga una hora de código en la "fiesta de barrio" de tu vecindario. [Send this email](https://<%= hostname %>/resources#email).
 
 ## 5. Pídele a un funcionario electo local que apoye la Hora del Código.
 
-[Envía este email](http://<%= hostname %>/resources#politicians) a tu alcalde, a tu Ayuntamiento o comunidad educativa e invítales a visitar tu escuela.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 

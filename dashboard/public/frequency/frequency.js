@@ -1,4 +1,4 @@
-/* global $, d3, Dialog, confirm, options */
+/* global $, d3, Dialog, confirm, options, dashboard */
 // options is appOptions.level, from the level parameters themselves
 
 var messages = {
@@ -1124,6 +1124,21 @@ $(document).ready(function () {
     if (bg.shift(shiftAmt)) {
       $("#shiftAmt").val(shiftAmt);
     }
+  });
+
+  $("#finished").click(function () {
+    var finishedButton = $(this);
+
+    if (finishedButton.prop("disabled") === true) {
+      return;
+    }
+
+    finishedButton.prop("disabled", true);
+    dashboard.dialog.processResults(function (willRedirect) {
+      if (!willRedirect) {
+        finishedButton.prop("disabled", false);
+      }
+    });
   });
 
   $(".reset-simulation").click(function () {

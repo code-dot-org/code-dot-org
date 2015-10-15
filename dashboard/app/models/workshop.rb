@@ -9,13 +9,15 @@
 #  instructions :string(255)
 #  created_at   :datetime
 #  updated_at   :datetime
-#  phase        :text(65535)
+#  phase        :integer
 #
 # Indexes
 #
 #  index_workshops_on_name          (name)
 #  index_workshops_on_program_type  (program_type)
 #
+
+require 'cdo/activity_constants'
 
 class Workshop < ActiveRecord::Base
   PROGRAM_TYPES = %w(1 2 3 4 5 6)
@@ -46,15 +48,15 @@ class Workshop < ActiveRecord::Base
                           association_foreign_key: 'facilitator_id',
                           join_table: 'facilitators_workshops'
 
-  def self.workshops_ending_today
+  def self.ending_today
     Workshop.joins(:segments).group(:workshop_id).having("(DATE(MAX(start)) = ?)", Date.today)
   end
 
-  def self.workshops_in_2_weeks
+  def self.in_2_weeks
     Workshop.joins(:segments).group(:workshop_id).having("(DATE(MIN(start)) = DATE_ADD(?, INTERVAL 2 WEEK))", Date.today)
   end
 
-  def self.workshops_in_3_days
+  def self.in_3_days
     Workshop.joins(:segments).group(:workshop_id).having("DATE(MIN(start)) = (DATE_ADD(?, INTERVAL 3 DAY))", Date.today)
   end
 
@@ -62,33 +64,51 @@ class Workshop < ActiveRecord::Base
     ActivityConstants::PHASES[self.phase]
   end
 
-  def program_type_info
-    ActivityConstants::PHASES[self.program_type.to_i]
+  def phase_long_name
+    return nil unless phase_info
+    phase_info[:long_name]
+  end
+
+  def prerequisite_phase
+    return nil unless phase_info
+    ActivityConstants::PHASES[phase_info[:prerequisite_phase]]
+  end
+
+  def automated_email_recipients
+    (teachers + unexpected_teachers + facilitators + district_contacts).uniq
+  end
+
+  def send_reminders
+    automated_email_recipients.each do |recipient|
+      next unless EmailValidator::email_address?(recipient.email)
+      logger.debug("Sending email reminder to #{recipient.email}")
+      OpsMailer.workshop_reminder(self, recipient).deliver_now
+    end
+  end
+
+  def self.send_2_week_reminders
+    in_2_weeks.each(&:send_reminders)
+  end
+
+  def self.send_3_day_reminders
+    in_3_days.each(&:send_reminders)
+  end
+
+  def send_exit_surveys
+    automated_email_recipients.each do |recipient|
+      next unless EmailValidator::email_address?(recipient.email)
+      logger.debug("Sending exit survey info to #{recipient.email}")
+      OpsMailer.exit_survey_information(self, recipient).deliver_now
+    end
+  end
+
+  def self.send_exit_surveys
+    ending_today.each(&:send_exit_surveys)
   end
 
   def self.send_automated_emails
-    [Workshop.workshops_in_2_weeks, Workshop.workshops_in_3_days, Workshop.workshops_ending_today].each do |workshop_list|
-      workshop_list.each do |workshop|
-        teachers = workshop.teachers
-        drop_ins = workshop.unexpected_teachers
-        facilitators = workshop.facilitators
-        district_contacts = workshop.district_contacts
-        [teachers, drop_ins, facilitators, district_contacts].each do |recipient_list|
-          recipient_list.each do |recipient|
-            if EmailValidator::email_address?(recipient.email)
-              if workshop.segments.first.start.to_date == Date.today
-                logger.debug("Sending exit survey info to #{recipient.email}")
-                OpsMailer.exit_survey_information(workshop, recipient).deliver_now
-              else
-                logger.debug("Sending email reminder to #{recipient.email}")
-                OpsMailer.workshop_reminder(workshop, recipient).deliver_now
-              end
-            else
-              logger.debug("Cannot send email to #{recipient.email} because it is not a valid email address")
-            end
-          end
-        end
-      end
-    end
+    send_2_week_reminders
+    send_3_day_reminders
+    send_exit_surveys
   end
 end

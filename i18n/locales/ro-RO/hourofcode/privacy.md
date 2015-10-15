@@ -1,10 +1,10 @@
 * * *
 
-Titlu: Politica de confidenţialitate
+title: Politica de confidenţialitate
 
 * * *
 
-### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Politică de Confidenţialitate
 
@@ -29,7 +29,7 @@ Politica noastră de confidențialitate este alimentată de angajamentul nostru 
 
 ## Confidențialitate
 
-Suntem dedicati sa cream un mediu sigur pentru elevii de toate vârstele pe site-ul nostru situat la <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, alte site-uri web, interfete de aplicare a programarii şi servicii online. Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. Ca si asociatie non-profit, 501(c)(3), vom folosi datele pe care le primim numai în măsura în care ajută la misiunea noastră de a oferi o baza in programare pentru fiecare student care si-o doreste. Suntem o asociatie non-profit, astfel încât actiunile cu profit nu vor interfera cu misiunea noastră de a oferi informatii educationale de incredere.
+We are committed to creating a safe and secure environment for learners of all ages on our websites located at <https://code.org>, <https://studio.code.org>, <https://csedweek.org>, <http://computinginthecore.org>, <https://hourofcode.com>, other websites, application programming interface (our “API”), and online services (collectively, our “Website”). Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. Ca si asociatie non-profit, 501(c)(3), vom folosi datele pe care le primim numai în măsura în care ajută la misiunea noastră de a oferi o baza in programare pentru fiecare student care si-o doreste. Suntem o asociatie non-profit, astfel încât actiunile cu profit nu vor interfera cu misiunea noastră de a oferi informatii educationale de incredere.
 
 Our Privacy Notice describes what information we gather from our Users, how we use that information, and what we do to protect it. Utilizarea site-ului şi orice informaţii pe care le furnizaţi pe site sunt în condițiile din prezenta comunicare de confidenţialitate, care este încorporată în termenii serviciului nostru. Orice termeni capitalizati folositi dar nu definiti în prezenta comunicare de confidenţialitate au sensul dat în [Conditii de utilizare](http://code.org/tos). Prin vizitarea sau utilizarea site-ul nostru, consimţiţi la utilizarea practicilor pentru informatiilor descrise în prezenta comunicare de confidenţialitate.
 
@@ -94,7 +94,7 @@ Dacă decideţi să se înregistreze pentru Studio Cod printr-un serviciu de aut
 
 Puteti revoca accesul Code.org in contul de pe orice serviciu de autentificare, în orice moment, prin actualizarea setările corespunzătoare în preferinţele contului respectiv. Ar trebui să verificaţi setările de confidenţialitate pentru fiecare serviciu de autentificare pentru a înţelege şi modifica informaţiile trimise la noi prin fiecare serviciu de autentificare. Vă rugăm să revedeţi termenii de autentificare pentru fiecare serviciu si politicile de utilizare şi confidenţialitate cu mare atenţie înainte de utilizarea lor si conectarea la site-ul nostru.
 
-## Alte servicii
+## Other Services
 
 Atunci când utilizaţi anumite alte caracteristici ale site-ul nostru, cum ar fi semnarea formularelor sau petiţii pentru a pleda pentru Code.org, participarea la un atelier, aducând Code.org la şcoală sau in judet, donarea de Code.org, achiziţionarea de tricouri sau alte elemente, sau participarea la sondaje online, Code.org vă poate cere să furnizati informaţii personale, inclusiv numele complet, adresa de email, şi codul poştal, sau adresa scolii, precum si o adresa de facturare şi/sau transport atunci când este necesar pentru a finaliza o achiziţie sau face o donatie. Informaţiile sunt utilizate pentru a permite participarea dumneavoastră în caracteristicile relevante şi pentru a vă trimite emailuri ocazionale cu informaţii despre Code.org care simţim că v-ar putea interesa. Toate e-mailurile pe care le trimitem includ un link "Dezabonare" care va va dezabona imediat de la toate e-mailurile de pe Code.org.
 
@@ -126,17 +126,17 @@ O etichetă de pixeli (de asemenea, cunoscut ca, un GIF"clar" sau "web far") est
 
 ro.code.org poate utiliza o varietate de furnizori terți, precum companii care să analizeze utilizarea website-ului, ca și platforme de social networking care să hosteze video-urile pe care le publicăm. Este posibil să permitem unor furnizori de servicii terți să plaseze și analizeze propriile cookie-uri, web beacons sau tehnologii similare care colecteaza informații din website. Aceste informații tehnice sunt colectate direct și în mod automat de către acești terți.
 
-ro.code.org nu permite afișarea de mesaje publicitare pe acest website și nu avem capacitatea de a colecta istoricul de căutări web prin website-uri sau motoare de căutare terțe. (Dacă accesezi website-ul ro.code.org prin intermediul unei căutări web, browserul tău web poate să ne ofere în mod automat termenul de căutare pe care l-ai folosit pentru a găsi ro.code.org). Cu toate acestea, anumite entități terțe pe care le folosim pentru a asigura funcționalitatea website-ului sau capacitatea de a share-ui informația în Social Media pot colecta date non-personale în scopul de a le folosi în advertising online de tip comportamental. Website-ul nostru nu răspunde la semnale “do not track” transmise de browsere web, dar te încurajăm să accesezi următoarele website-uri dacă vrei să eviți acest tip de publicitate: <http://www.networkadvertising.org/choices> or <http://www.aboutads.info/choices/>. Dacă vrei să renunți la utilizarea acestor tool-uri, este posibil să trebuiască să o faci separat, pentru fiecare dintre device-urile folosite, ca și pentru fiecare web browser de pe aceste device-uri.
+Code.org does not allow advertising on our Website, and we do not have the ability to collect your web search history across 3rd party Internet websites or search engines. (Dacă accesezi website-ul ro.code.org prin intermediul unei căutări web, browserul tău web poate să ne ofere în mod automat termenul de căutare pe care l-ai folosit pentru a găsi ro.code.org). Cu toate acestea, anumite entități terțe pe care le folosim pentru a asigura funcționalitatea website-ului sau capacitatea de a share-ui informația în Social Media pot colecta date non-personale în scopul de a le folosi în advertising online de tip comportamental. Our Website does not respond to “do not track” signals transmitted by web browsers, but we encourage you to visit the following links if you would like to opt out of online behavioral advertising: <http://www.networkadvertising.org/choices> or <http://www.aboutads.info/choices/>. Dacă vrei să renunți la utilizarea acestor tool-uri, este posibil să trebuiască să o faci separat, pentru fiecare dintre device-urile folosite, ca și pentru fiecare web browser de pe aceste device-uri.
 
 Anumite funcționalități de pe Website-ul ro.code.org pot fi implementate de părți terțe care colectează informații. De exemplu, donațiile către ro.code.org sunt procesate prin intermediul unui terț care colectează și poate păstra informațiile despre realizarea tranzacției. Mesajele de suport sau posturile de pe forumul public pentru profesori sunt procesate, de asemenea, de un website terț care poate permite utilizatorilor să creeze profiluri, să posteze mesaje sau să încarce poze. Alte website-uri terțe, precum paginile de [Facebook](https://www.facebook.com/Code.org) și [Twitter](https://twitter.com/codeorg) ro.code.org pot fi co-branduite cu numele sau logo-ul nostru. Utilizarea acestor servicii terțe sunt complet opționale pentru utilizatori, fiind destinate în general adulților și aflate sub incidența politicii de confidențialitate a acestor terțe părți. Vă încurajăm să o revizuiți pe aceasta - în acest fel, veți descoperi mai multe detalii despre modul în care ele colectează, stochează și folosesc informațiile dumneavoastră personale.
 
-## Uploading custom content
+## Uploading Custom Content
 
 Student and teacher profiles can NOT be customized with a photo.
 
 As part of “App Lab,” an in-browser programming tool available on Code Studio for students over the age of 13, students can upload custom photos, sound, and videos to the Code Studio platform to use within applications or “apps” that they create. These files are stored in the Code Studio platform, and are not used by Code.org for any purpose other than within the applications created by students.
 
-## Message sending between users
+## Message Sending Between Users
 
 Code.org has created a tool called the [“Internet Simulator”](/internetsimulator) for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Message contents are not accessed or used by Code.org for any purpose other than in this educational tool.
 
@@ -146,11 +146,11 @@ In addition, Users may send messages to Code.org for customer support requests.
 
 Other than the above, the Website supports no other form of messaging among Users.
 
-## Informații pe care NU le colectăm
+## Information We Do NOT Collect
 
-ro.code.org nu colectează și stochează date despre tranzacții în mod direct. Donațiile către ro.code.org sau achiziționarea de tricouri din magazinul ro.code.org sunt procesate prin intermediul unor terți și, deși ro.code.org primește o chitanță pentru donații (necesară pentru gestionarea impozitelor), nu primim niciodată detalii despre realizarea tranzacției (precum date despre card sau portofelul electronic).
+ro.code.org nu colectează și stochează date despre tranzacții în mod direct. Donations to Code.org or purchases from the Code.org store are processed via third parties, and although Code.org receives a receipt for donations (for tax purposes), we never receive the payment instrument (such as credit card or wallet information).
 
-## Copii cu vârsta de până la 13 ani
+## Children Under the Age 13
 
 Platforma educațională Code Studio este destinată pentru utilizatori de toate vârstele, inclusiv copii până la vârsta de 13 ani care pot accesa website-ul cu acordul școlii, profesorului, părintelui sau reprezentantului legal. Certain features, especially features that involve uploading custom media files or sending messages, are disabled or inaccessible to accounts created by children under the age of 13, in order to provide greater protection to those Users.
 
@@ -170,7 +170,7 @@ Pentru a participa la evaluare, acestor districte școlare li se cere să ofere 
 
 Angajații, agenții și contractorii ro.code.org trebuie să aibă un motiv legitim (în legătură directă cu promovarea misiunii noastre focusate pe educație) pentru a accesa informațiile personale pe care le oferiți ro.code.org, de exemplu să contribuie la suportul oferit pentru produs. ro.code.org va solicita angajaților, agenților și contractorilor săi să respecte această Notă de Confidențialitate și să trateze orice informație personală a utilizatorilor ro.code.org ca informație confidențială.
 
-## Transmiterea și transferul datelor
+## How We Share or Transfer Data
 
 Nu închiriem sau vindem informațiile personale colectate de la utilizatori, nici nu le exploatăm pentru câștiguri financiare de orice fel. ro.code.org nu va dezvălui niciodată informații cu caracter personal altor organizații terțe fără acordul dumneavoastră decât în cazul unui program sau funcționalitate specifice, pe care veți avea posibilitatea și alegerea de a le folosi.
 
@@ -196,7 +196,7 @@ Atunci când ne contactezi cu o cerere pentru suport, este posibil să ne oferi 
 
 Code.org promovează Elevul săptămânii și Profesorul lunii, cu premii. Aceste profile şi mărturii similare sunt întotdeauna publicate cu permisiunea elevilor sau profesorilor participanți şi, dacă este cazul, părinte sau tutorele lor legal, sau profesor şi pot include informații personale precum numele, chipul şi foto sau video cu persoana respectivă.
 
-### Public Reporting on Student Use and Performance
+### Public reporting on student use and performance
 
 Putem publica informații anonimizate despre performanțele elevilor cu tutorialele și site-urile noastre, totuși, nu vom divulga niciodată informații personale în aceste rapoarte. Datele despre performanțele elevilor vor rămâne anonimizate, dar vor fi agregate cu alte date anonimizate din întreaga populașie școlară pentru a realiza rapoarte demografice pe criterii precum vârsta, localizarea generală, genul, etnia și statutul socio-economic.
 
@@ -216,11 +216,11 @@ Code.org may disclose User data including Personal Information that we believe, 
 
 În cazul în care Code.org este preluat de, combinat sau fuzionează cu o altă entitate, ne putem transfera sau atribui informaţiile personale pe care le-am colectat de la utilizatori ca o parte din această fuziune, achiziţie, vânzare, sau altă formă de control. Promisiunea noastră către dvs. este că orice informaţie personală pe care am colectat-o de la utilizatori va fi protejată la același nivel de siguranță și confidențialitate ca și cel oferit de acest aviz de confidențialitate.
 
-## Abordarea noastră cu privire la securitatea datelor
+## Our Approach to Data Security
 
 ### Website security is important to you, and to us
 
-Pentru a-ți proteja intimitatea și securitatea, acționăm pentru a verifica identitatea ta înainte de a-ți oferi acces la cont sau posibilitatea de a modifica informațiile tale personale. Întrucât unele școli blochează website-urile securizate prin SSL, ro.code.org acordă acces cu sau fără protecția SSL, la indicația școlilor respective. Dacă doriţi o conexiune criptată SSL criptatăsau dacă doriți să criptați datele pe care le introduceți în timpul folosirii site-ului, utilizaţi protocolul HTTPS, vizitând https://code.org/.
+Pentru a-ți proteja intimitatea și securitatea, acționăm pentru a verifica identitatea ta înainte de a-ți oferi acces la cont sau posibilitatea de a modifica informațiile tale personale. Because some schools block SSL-secure websites, Code.org allows access with or without SSL protection, at the direction of those schools. Dacă doriţi o conexiune criptată SSL criptatăsau dacă doriți să criptați datele pe care le introduceți în timpul folosirii site-ului, utilizaţi protocolul HTTPS, vizitând https://code.org/.
 
 ### We try to ensure that our Website and information sent to us are safe, but no security measures are perfect
 
@@ -234,9 +234,9 @@ Site-ul nostru este operat şi gestionat pe servere situate în Statele Unite. D
 
 ### Conditions of Use and Notices
 
-Dacă alegeţi să vizitați Code.org, vizita dvs. și orice dispută asupra vieţii private face obiectul Avizului de Confidențialitate şi al acordului privind Termenii Serviciului nostru, inclusiv limitările de daune, arbitraj a litigiilor, aplicarea legii din statul Washington şi locul de întâlnire pentru toate litigiile este în Seattle, Washington.
+If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 
-### A Note to California Residents:
+### A note to California residents:
 
 Nu divulgăm informaţii personale către terţe părţi pentru scopuri de marketing. Pentru informaţii suplimentare despre practicile noastre de confidenţialitate, sau de revizuire şi cerere de ştergere a informaţiilor personale pe care le-ați împărtăşit cu noi, vă rugăm să trimiteţi o solicitare la http://code.org/contact.
 

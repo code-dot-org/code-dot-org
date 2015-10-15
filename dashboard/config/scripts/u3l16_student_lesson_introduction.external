@@ -2,22 +2,15 @@ name 'U3L16 Student Lesson Introduction'
 title 'Beyond Buttons'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 16 - Beyond Buttons. Toward Apps.
+## Unit 3: Lesson 11 - Beyond Buttons and Toward Apps
 
 # Background
 
-It’s time to add interactive images, textLabels, and textInput (text boxes) to the screen. Don’t worry--these act in much the same way as buttons. They respond to mouse events, keystrokes, and other events. Add to that the ability to place elements wherever you want, and you have a clicker game!
+Modern applications are built using a variety of page elements and event types, allowing applications to display information and respond to user input in a variety of ways. While the look and feel of an application may change drastically, the event-driven model underlying the application is largely unchanged. Buttons, text, and images are just different page elements on a screen. Clicks, double clicks, and key presses are just different events that an event handler can respond to. Once you are comfortable with the connections between elements, events, and event handlers you can quickly substitute it new page elements and event handlers to create a variety of interactive applications.
 
 # Lesson
 
-* Place images at a specific place on the screen.
-* Hide and show elements on the screen in response to events.
-* Create a clicker game.
-
-
-# Resources
-* Activity Guide: <a href="https://docs.google.com/document/d/15zX072HeR9vdi_8sfj-qYERlOAXPxIea6-PJCWJwl2w/edit?usp=sharing" target="_blank">Beyond Buttons Project Guide</a>
-* Activity Rubric: <a href="https://docs.google.com/a/code.org/document/d/1eJx4Nf8pTA-8rFMn16ReMoF02NAKLJ6EENxojWb_XHM/edit?usp=sharing" target="_blank">Beyond Buttons Project Rubric</a>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+* Introduction to new user interface elements
+* Exploration of new event types
+* Create simple "chaser-game" app
 MARKDOWN

@@ -14,9 +14,7 @@
  * limitations under the License.
  */
 
- /* global $*/
-
-'use strict';
+ 'use strict';
 
 var Calc = module.exports;
 

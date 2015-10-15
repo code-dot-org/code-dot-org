@@ -21,7 +21,7 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "freeplay artist sharing"
-  And I am on "https://studio.code.org/s/course3/stage/21/puzzle/15?noautoplay=true"
+  And I am on "http://studio.code.org/s/course3/stage/21/puzzle/15?noautoplay=true"
   When I rotate to landscape
   And I see no difference for "initial load"
   And I wait to see "#x-close"
@@ -89,6 +89,21 @@ Scenario:
   Given I am on "http://learn.code.org/s/allthethings/stage/17/puzzle/2?noautoplay=true"
   And I rotate to landscape
   And I see no difference for "level load"
+  And I close my eyes
+
+Scenario:
+  When I open my eyes to test "maze"
+  Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
+  And I rotate to landscape
+  And I wait to see "#x-close"
+  And I press "x-close"
+  # Let close animation finish
+  And I wait for 2 seconds
+  And I wait to see "#runButton"
+  And I press "runButton"
+  And I wait to see ".congrats"
+  And element ".congrats" is visible
+  And I see no difference for "maze feedback with blocks"
   And I close my eyes
 
 @dashboard_db_access
@@ -159,15 +174,15 @@ Scenario Outline: Simple blockly level page view
   And I see no difference for "closed dialog"
   And I close my eyes
 Examples:
-  | url                                                                | test_name                 |
-  | http://learn.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true   | first maze level          |
-  | http://learn.code.org/s/course2/stage/7/puzzle/2?noautoplay=true   | artist level              |
-  | http://learn.code.org/s/playlab/stage/1/puzzle/10?noautoplay=true  | playlab level             |
-  | http://learn.code.org/s/course1/stage/3/puzzle/5?noautoplay=true   | jigsaw level              |
-  | http://learn.code.org/s/course1/stage/18/puzzle/10?noautoplay=true | course1 artist level      |
-  | http://learn.code.org/s/algebra/stage/20/puzzle/2?noautoplay=true  | auto open function editor |
-  | http://learn.code.org/s/algebra/stage/10/puzzle/6?noautoplay=true  | auto open contract editor |
-  | http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true   | auto open variable editor |
+  | url                                                                   | test_name                 |
+  | http://learn.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true      | first maze level          |
+  | http://learn.code.org/s/course2/stage/7/puzzle/2?noautoplay=true      | artist level              |
+  | http://learn.code.org/s/playlab/stage/1/puzzle/10?noautoplay=true     | playlab level             |
+  | http://learn.code.org/s/course1/stage/3/puzzle/5?noautoplay=true      | jigsaw level              |
+  | http://learn.code.org/s/course1/stage/18/puzzle/10?noautoplay=true    | course1 artist level      |
+  | http://learn.code.org/s/allthethings/stage/3/puzzle/6?noautoplay=true | auto open function editor |
+  | http://learn.code.org/s/algebra/stage/10/puzzle/6?noautoplay=true     | auto open contract editor |
+  | http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true      | auto open variable editor |
 
 @dashboard_db_access
 Scenario Outline: Simple page view without instructions dialog

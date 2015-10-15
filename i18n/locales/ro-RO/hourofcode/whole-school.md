@@ -1,13 +1,13 @@
 * * *
 
-title: <%= hoc_s(:title_whole_school) %> layout: wide
+titlu: < % = hoc_s(:title_whole_school) %> aspect: largă
 
 * * *
 
 <%= view :signup_button %>
 
-# Implică întreaga şcoală să participe
+# Indeamna întreaga şcoală să participe
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Informaţii despre cum să indemni întreaga şcoală să participe la Hour of Code vor fi prezentate aici.
 
 <%= view :signup_button %>

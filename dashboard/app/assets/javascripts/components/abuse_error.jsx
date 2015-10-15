@@ -1,5 +1,6 @@
-window.dashboard = window.dashboard || {};
+/* global React */
 
+window.dashboard = window.dashboard || {};
 /**
  * A component containing some text/links for projects that have had abuse
  * reported. This is used in our blocking AbuseBox, in the share dialog, and

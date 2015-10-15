@@ -38,6 +38,6 @@ Use drag-and-drop programming to make your own Flappy Bird game, and customize i
 
 **Technology Requirements:** Modern browsers, smartphones + tablets
 
-<a href="http://studio.code.org/s/frozen/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/flappy/reset"><button>Try the tutorial</button></a>
 
 [/col-50]

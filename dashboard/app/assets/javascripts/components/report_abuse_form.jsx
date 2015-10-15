@@ -1,4 +1,4 @@
-/* global dashboard */
+/* global dashboard, React */
 
 window.dashboard = window.dashboard || {};
 
@@ -12,6 +12,8 @@ window.dashboard.ReportAbuseForm = (function (React) {
   // dropdown width is wider so that it still lines up with inputs (which have
   // padding)
   var DROPDOWN_WIDTH = 514;
+
+  var alert = window.alert;
 
   /**
    * A dropdown with the set of ages we use across our site (4-20, 21+)

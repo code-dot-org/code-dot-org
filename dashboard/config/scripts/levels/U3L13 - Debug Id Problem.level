@@ -32,6 +32,20 @@
       "penDown": null,
       "penWidth": null,
       "penColor": null,
+      "penRGB": {
+        "params": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "paletteParams": [
+          "r",
+          "g",
+          "b",
+          "a"
+        ]
+      },
       "show": null,
       "hide": null,
       "speed": null,
@@ -41,13 +55,12 @@
       "functionParams_none": null,
       "functionParams_n": null,
       "callMyFunction": null,
-      "callMyFunction_n": null,
-      "return": null
+      "callMyFunction_n": null
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "This program has problem!  Can you figure it out?  Run the program and see if you can figure out from the error messages in the console what the issue is.  There is not much code, so you might be able to figure it out just by reading carefully.  Make a change that will make the program work as expected.",
-    "start_blocks": "button(\"fwdBtn\",\"Go Forth!\");\r\nonEvent(\"id\",\"click\",function(){\r\n  moveForward(25);\r\n});",
+    "instructions": "Improve the button by choosing a descriptive and meaningful ID. (Click to see full instructions)",
+    "start_blocks": "button(\"btn1\",\"Go Forth!\");\r\nonEvent(\"id\",\"click\",function(){\r\n  moveForward();\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -61,7 +74,21 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "true"
+    "free_play": "true",
+    "markdown_instructions": "# Choosing good IDs\r\n\r\n<img src=\"https://images.code.org/f968ce4b09d2500b224af1bf9bacbacd-image-1444155536105.png\" style=\"float: right\">**Good IDs** are **meaningful and descriptive**\r\nJust like good names for functions, you want an ID to describe the intended purpose of the element it belongs to.  For example, you might have many buttons in your program so you want to give them IDs that describe what they are for. For example \"forwardButton\", \"leftButton\", etc.\r\n\r\n**IDs are also case-sensitive** which means you'll likely want to develop a pattern for how you capitalize your IDs. A common strategy is to use a style called **camelcase**.  In Camelcase style you put a bunch of words together with no spaces and capitalize each new word. itTypicallyLooksLikeThis.  \r\n\r\n**Why?** Many computer systems do no allow keywords like function names and IDs to contain spaces.  You've already seen a bunch of examples like this: `moveForward()`, `onEvent()`, `turnLeft()`, etc.  It's important to realize that camelcase is a style convention, not a hard and fast rule. Sometimes you'll see other styles like using underscores: move_forward(), turn_left(), etc.  But in App Lab we typically stick to camelcase.\r\n\r\n# Rules about IDs\r\nIn making descriptive and meaningful IDs there **are some rules about IDs** you need to know.  IDs...\r\n* cannot contain spaces\r\n* *must* begin with a letter (A-Z or a-z) and may be followed by any number of digits and letters\r\n* can contain hyphens (\"-\"), underscores (\"_\"), colons (\":\"), or periods (\".\")\r\n\r\n# Do This\r\nThe code we start you with has an error. If you run it first you'll see that the id of the button and the event handler don't match.\r\n**Improve ** the button ID by choosing a **descriptive and meaningful** ID\r\n**Change ** the event handler so that it correctly references the button by its new ID\r\n**Run ** the program to make sure it works\r\n",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>

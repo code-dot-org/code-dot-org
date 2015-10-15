@@ -1,9 +1,14 @@
 name 'U3L03 - multiselect - properties of functions'
 title 'Choose Two - True statements about functions'
 type 'multi2'
-question 'Chose the two (2) statements that are true about functions'
+question 'Choose the two (2) statements that are true about functions'
 
 right 'Meaningful function names help <em>people</em> better understand programs.'
 wrong 'Meaningful function names help <em>computers</em> better understand programs.'
 wrong 'Functions in programming are useful mathematical tools for doing complex computations.'
-right 'Functions in programming are a named grouping of programming instructions.'
+right 'Functions in programming are named groupings of programming instructions.'
+teacher_markdown <<MARKDOWN
+Correct answers:
+* Meaningful function names help <em>people</em> better understand programs.
+* Functions in programming are a named grouping of programming instructions.
+MARKDOWN

@@ -573,3 +573,755 @@
           kóngsríkisins til vinstri og hægri endalaust. Ef þú lærir hvernig endurtaka
           skipunin virkar, mun það spara þér hellingstíma þegar kemur að því að smíða
           eigin leiki.
+    C1_artist_intro:
+      1:
+        image: notes/C1_artist_intro_1.png
+        text: Þetta hér eru teiknikubbarnir. Notaðu þann rétta til að færa listamanninn
+          svo að hann teikni yfir gráu línurnar.
+      2:
+        image: notes/C1_artist_intro_2.png
+        text: Þetta eru stökkkubbar. Þegar þú notar þá færist listamaðurinn en teiknar
+          ekki. Notaðu þá til að láta hann hoppa yfir á næstu gráu línu.
+    C1_bee_level_intro:
+      1:
+        image: notes/C1_bee_level_intro_1.png
+        text: Eru ekki býflugur frábærar? Í næstu þrautum er markmið þitt að hjálpa
+          býflugunni að komast til blómanna og sækja blómasafa úr blómunum og fljúga
+          yfir að býflugnabúinu til að búa til hunang. Til þess notar þú kubbana "sækja
+          blómasafa" og "búa til hunang".
+      2:
+        image: notes/C1_bee_level_intro_2.png
+        text: 'Hvert blóm hefur mismunandi magn blómasafa: 1, 2, 3 eða meira. Við
+          vitum hve mikinn safa rauðu blómin hafa út frá litlu tölunni í horninu.
+          Gættu þess að taka allan blómasafann úr hverju blómi áður en þú færir býfluguna
+          áfram. Hvert býflugnabú getur aðeins innihaldið visst magn af hunangi: 1,
+          2, 3 eða meira. Gættu þess að búa til það magn í hverju búi.'
+      3:
+        image: notes/C1_bee_level_intro_3.png
+        text: Ef þér tekst að sækja allan safann og búa til allt hunangið, þá hefurðu
+          leyst þrautina og getur farið í næstu þraut. Annars verður þú að reyna aftur
+          við þrautina. Gerðu tilraunir og upplifðu það að forrita býflugu!
+    C1_bee_loops:
+      1:
+        image: notes/C1_bee_loops_1.png
+        text: Lykkja er endurtekning á aðgerð. Þegar ég opna býflugnabú, þá skoða
+          ég ramma og set hann svo aftur, og ég endurtek þessa sömu aðgerð mörgum
+          sinnum. Þetta er lykkja - að endurtaka það sama mörgum sinnum.
+      2:
+        image: notes/C1_bee_loops_2.png
+        text: Í þessari þraut viljum við býflugan safni 3 af blómasafa úr blóminu.
+          Í stað þess að nota þrjá "sækja blómasafa" kubba átt þú að nota endurtaka
+          kubbinn til að sækja blómasafa 3 sinnum. Keyrðu svo forritið til að prófa.
+    C1_bigevent_unplugged:
+      1:
+        image: notes/C1_bigevent_unplugged_1.png
+        text: Þessi kennslustund er kölluð stóra atvikið (big event). Hún er um það
+          hvernig við getum stjórnað forritum og í reynd breytt því hvað keyrandi
+          forrit er að gera með því að nota atvik, svo sem að ýta á hnapp eða smella
+          með mús.
+      2:
+        image: notes/C1_bigevent_unplugged_2.png
+        text: Í þessari kennslustund verður þér stjórnað með fjarstýringu úr pappír.
+          Á sama hátt og gert er í alvöru tölvuleik.
+      3:
+        image: notes/C1_bigevent_unplugged_3.png
+        text: Atvik (event) er aðgerð sem orsakar það að eitthvað gerist. T.d. eins
+          og það að smella músarhnappi til að sækja vefsíðu. Smellurinn er atvik.
+          Að fletta skjámynd á spjaldtölvu með snertingu er líka atvik. Atvik eru
+          frábær leið til að notandinn geti stjórnað forriti hvenær sem hann þarf
+          eða vill.
+      4:
+        image: notes/C1_bigevent_unplugged_4.png
+        text: Ýmislegt gerist sem við öll bregðumst við. Við finnum til svengdar og
+          þá leitum við að einhverju til að borða. Við heyrum bankað og förum til
+          dyra. Þetta eru dæmi um atvik alveg eins og það að ýta á hnapp eða hreyfa
+          stýripinna. Þau eru eitthvað sem gerist og sem lætur okkur bregðast við
+          á einhvern hátt.
+      5:
+        image: notes/C1_bigevent_unplugged_5.png
+        text: Í tölvuleikjum er atvik sem nefnist uppfærsla (update) og gerist 30
+          eða 60 sinnum á sekúndu. Fyrir forritara tölvuleikja er þetta næstum mikilvægara
+          sem atvik en aðgerðir með hnöppum og stýripinnum.
+      6:
+        image: notes/C1_bigevent_unplugged_6.png
+        text: Stóra atvikið "uppfærsla" tifar eins og klukka. Í hvert sinn sem það
+          gerist athugum við stýripinnann. "Hefur einhver ýtt á hnapp innan þessa
+          tímaramma? Já eða nei?" Án atvika gætu leikverur ekki hreyfst eða hoppað
+          og þú gætir ekki stjórnað hvað er að gerast. Tölvuleikurinn gæti ekki látið
+          neitt hreyfast.
+    C1_building_foundation:
+      1:
+        image: notes/C1_building_foundation_1.jpg
+        text: Þegar listaverk eru gerð úr sandi skaltu vita að það er hluti af sköpuninni
+          að mistakast. En ef maður heldur áfram getur árangurinn bara orðið betri
+          og áhugaverðari. Þetta snýst um þrautseigju. Ekki gefast upp, ánægjan verður
+          meiri.
+      2:
+        image: notes/C1_building_foundation_2.jpg
+        text: Þessi kennslustund er um það að byggja grunn. Ætlunin er að vinna við
+          verkefni sem á að vera mjög erfitt. Þú átt að finna út hvernig á að byggja
+          hlut sem er að minnsta kosti eins hár og eitt þessara mála og nógu sterkur
+          til að bera uppi þyngd bókar.
+      3:
+        image: notes/C1_building_foundation_3.jpg
+        text: Stundum kemur það fyrir að sköpunarverk okkar heppnast ekki. Og stundum
+          finnst okkur ekkert ganga og við viljum gefast upp. Svona stundir geta komið
+          oft. En ef við höldum áfram að reyna, gerum okkar besta aftur og aftur,
+          þá er nokkuð víst að okkur muni takast áður en langt um líður.
+      4:
+        image: notes/C1_building_foundation_4.jpg
+        text: Þrautseigja snýst um að halda áfram þegar maður vill helst gefast upp.
+          Ef þú vilt búa til eitthvað nýtt og frumlegt, verður margt sem misheppnast
+          á leiðinni.
+      5:
+        image: notes/C1_building_foundation_5.jpg
+        text: Galdurinn við þrautseigju er að ákveða að halda áfram og læra af því
+          sem misheppnast í stað þess að hætta af því að þér finnst ekkert ganga.
+          Þegar manni finnst ekkert heppnast er yfirleitt eitthvað dásamlegt handan
+          við hornið. Ekki hætta áður en það gerist. Vúúú!
+    C1_getting_loopy:
+      1:
+        image: notes/C1_getting_loopy_1.png
+        text: Hæ ég heiti Miral Kotb og ég skapaði Iluminate. Í minni vinnu er svolítið
+          sem við notum bæði í dönsum og í forritun ljósabúninga. Það eru lykkjur!
+          Lykkjur eru að endurtaka eitthvað aftur og aftur.
+      2:
+        image: notes/C1_getting_loopy_2.png
+        text: Þegar maður endurtekur eitthvað margsinnis, eins og hreyfingar mínar
+          sem láta húlahringinn snúast, er maður að nota lykkju með aðgerðinni. Þetta
+          er lykkja. Þetta er lykkja. Og þetta er lykkja.
+      3:
+        image: notes/C1_getting_loopy_3.png
+        text: Í dag ætlum við að halda danspartí. Við ætlum að framkvæma lykkjur með
+          nýjum dansi. Lúppunni. Við ætlum að læra um lykkjur með því að nota dans.
+          Þú munt læra nokkrar auðveldar hreyfingar og endurtaka þær aftur og aftur
+          í dansinum.
+      4:
+        image: notes/C1_getting_loopy_4.png
+        text: Hér eru hreyfingar sem þú þarft að læra. Klappa saman höndunum. Setja
+          hendur aftur fyrir höfuð. Setja hendur á mitti. Lyfta vinstri hendi. Lyfta
+          hægri hendi. Frekar einfalt, ekki satt? Þú munt uppgötva að þú getur stytt
+          leiðbeiningarnar með því að setja danshreyfingar í lykkju.
+      5:
+        image: notes/C1_getting_loopy_5.png
+        text: Við notum reyndar lykkjur í dönsum okkar. Dansararnir eru klæddir tölvum
+          sem allar eru tengdar sama neti. Ég get látið ljósin mynda lykkju í gegnum
+          sömu dansarana aftur og aftur. Í lykkjunni gæti ég haft endurtekningu þar
+          sem ég læt ljósið fara í gegnum þessa sex dansara aftur og aftur og innan
+          lykkjunnar gæti ég svo aukið hraðann á ljósunum. Og þetta er allt gert með
+          lykkjum. Lykkjur eru mikilvægar í tölvunarfræði því þær gera vinnu okkar
+          styttri og auðveldari.
+    C1_happy_maps_unplugged:
+      1:
+        image: notes/C1_happy_maps_unplugged_1.png
+        text: Þessi kennslustund heitir Krúttleg kort. Í dag ætlum við að hjálpa loðna
+          litla vini okkar Flurb að komast til ávaxtanna sinna.
+      2:
+        image: notes/C1_happy_maps_unplugged_2.png
+        text: Láttu Flurb ná ávextinum. Til þess þarftu að finna út í hvaða átt Flurb
+          þarf að fara og stýra henni með örvum. Í hvaða átt þarf Flurb að fara til
+          að komast að eplinu? Hún getur líka farið upp.
+      3:
+        image: notes/C1_happy_maps_unplugged_3.png
+        text: Til að koma henni þangað á að teikna hring um áttina sem hún verður
+          að fara.
+      4:
+        image: notes/C1_happy_maps_unplugged_4.png
+        text: Búðu til algrímið með því að líma örvar við kortið sem þú ert að reyna
+          að leysa. Næsta er eins en stefnir niður.
+      5:
+        image: notes/C1_happy_maps_unplugged_5.png
+        text: Þetta er eins og að forrita með pappír. Svona er það!
+    C1_maze_debugging:
+      1:
+        image: notes/C1_maze_debugging_1.png
+        text: Villukembing er að finna og leysa vandamál. Það eru margar leiðir til
+          að villukemba vandamál. Ein sú auðveldasta er að fara skref fyrir skref
+          þar til eitthvað virkar rangt. Hér er ég að reyna afturbak stökk á slánni
+          en ég er alltaf að detta af.
+      2:
+        image: notes/C1_maze_debugging_2.png
+        text: Ég fór yfir hverja hvern hluta skref fyrir skref og uppgötvaði hvar
+          ég gerði mistök. Ég staðsetti hendurnar ekki rétt á slánni. Svo ég reyndi
+          annað afturábak stökk á slánni með nýju handstöðunni og það tókst. Ég var
+          virkilega ánægð með að hafa villukembt stökkið mitt.
+      3:
+        image: notes/C1_maze_debugging_3.png
+        text: Til að læra um villukembingu byrjum við með nokkra kubba á sviðinu.
+          Taktu eftir að þessir kubbar koma þér ekki að markinu. VIð þurfum að kemba
+          lausnina og laga hana. Hvað er vandamálið? Taktu eftir að þú þurftir að
+          fara einum kubbi lengra í vestur.
+      4:
+        image: notes/C1_maze_debugging_4.png
+        text: Lögum þetta með því að bæta við öðrum vestur-kubbi og keyrum svo til
+          að sjá ef þetta var lausnin. Jú, þér tókst það!
+    C1_maze_intro_sequencing:
+      1:
+        image: notes/C1_maze_intro_sequencing_1.png
+        text: Í þessari þraut þarft þú að koma fuglinum til svínsins. Skoðaðu þrautina
+          og finndu út í hvaða áttir þarf að fara.
+      2:
+        image: notes/C1_maze_intro_sequencing_2.png
+        text: Þú þarft að draga kubba frá verkfærakassanum yfir á vinnusvæðið. Gættu
+          þess að þeir séu tengdir við "þegar keyrt" kubbinn. Smelltu svo á "Keyra"
+          og sjáðu fuglinn fara til svínsins.
+    C1_maze_loops:
+      1:
+        image: notes/C1_maze_loops_1.png
+        text: Eitt af því sem tölvur gera mjög vel er að endurtaka skipanir. Þar sem
+          þú ert mannvera mundi þér virkilega fara að leiðast ef þú þyrftir að gera
+          það sama aftur og aftur mjög oft. En tölva getur gert það sama miljón eða
+          jafnvel biljón sinnum án þess að leiðast og gert það mjög vel.
+      2:
+        image: notes/C1_maze_loops_2.png
+        text: Til dæmis ef ég vildi óska öllum á Facebook til hamingju með afmælið
+          með því að senda tölvupóst, þá gæti það tekið mig meira en öld ef ég skrifaði
+          hvert skeyti. En með aðeins nokkrum línum af kóða, get ég látið tölvu senda
+          tölvupóst til allra á Facebook til að óska þeim til hamingju með afmælið.
+      3:
+        image: notes/C1_maze_loops_3.png
+        text: Svo að fuglinnn komist til svínsins hér... í stað þess að draga þrjá
+          Norður kubba út á vinnusvæðið, átt þú að nota "endurtaka" kubbinn. Dragðu
+          "endurtaka" kubbinn út á vinnusvæðið og sláðu inn töluna 3. Dragðu svo "færa
+          Norður" kubb inn í "endurtaka" kubbinn og ýttu á "Keyra" til að prófa. Til
+          hamingju, það tókst!
+    C1_moveitmoveit_unplugged:
+      1:
+        image: notes/C1_moveitmoveit_unplugged_1.png
+        text: Þessi kennslustund heitir "hreyfa, hreyfa". Saman ætlum við að skrifa
+          forrit til að koma vinum okkar frá upphafinu með áttavitarósinni til broskallsins.
+      2:
+        image: notes/C1_moveitmoveit_unplugged_2.png
+        text: En broskallinn er á grúfu og aðeins ein manneskja veit hvernig á að
+          komast þangað. Komum forritinu af stað.
+      3:
+        image: notes/C1_moveitmoveit_unplugged_3.png
+        text: Forrit er algrím sem búið er að breyta í kóða sem hægt er að keyra í
+          vél. Flest okkar ímynda sér forrit sem eitthvað sem við skrifum fyrir tölvu.
+          Forrit eru mjög góð til þess en þau eru líka gagnleg annars staðar. Þú getur
+          búið til eigin leik eða jafnvel forritað vélmenni til að gera eitthvað fyrir
+          þig.
+    C1_going_places_safely:
+      1:
+        image: notes/C1_going_places_safely_1.png
+        text: Ég heiti Jeremiah. Hæ! Ég er sjö ára. Ég elska að leika á tölvunni hennar
+          mömmu en ég fær alltaf leyfi fyrst. "Mamma, má ég fara í tölvuna? Auðvitað
+          elskan!"
+      2:
+        image: notes/C1_going_places_safely_2.png
+        text: Ég elska tölvuna hennar mömmu því ég get farið á Internetið. Internetið
+          er svona eins og hverfið okkar. Maður getur heimsótt áhugaverða staði, talað
+          við fjölskyldu og vini og lært haug af nýjum hlutum.
+      3:
+        image: notes/C1_going_places_safely_3.png
+        text: Í gær heimsótti ég dýragarð sem er nálægt húsinu mínu. Ég sá sebrafolald.
+          Ég tók mynd af því og breytti um lit á röndunum, bætti við hatti og setti
+          því í safnið mitt yfir furðudýr. Frábært! Seinna fór ég á stað langt, langt
+          í burtu. Ég heimsótti Kenía. Það er land í Afríku. Þar eru mörg sebradýr.
+      4:
+        image: notes/C1_going_places_safely_4.png
+        text: 'Stundum á netinu tala ég við fólk sem ég þekki, eins og ömmu mína sem
+          á heima í öðrum landshluta. Hæ amma! Hún er baka smákökur sem hún ætlar
+          að senda mér fyrir afmælið mitt. "Namm, ég vildi að internetið gæti flutt
+          lykt!" Ég get talað við annað fólk á netinu, t.d. frænda minn, en ég tala
+          bara við fólk sem ég þekki. '
+      5:
+        image: notes/C1_going_places_safely_5.png
+        text: Það sem mér finnst mest gaman á netinu er að geta spilað skemmtilega
+          leiki. Fékk stig! Mér finnst líka gaman að teikna og búa til nýja hluti
+          og deila með vinum mínum. Það er svalt! Stundum heimsæki ég vefi þar sem
+          ég læri eitthvað nýtt en ég fer bara á vefi sem hæfa mér. Vá, risaeðlur!
+      6:
+        image: notes/C1_going_places_safely_6.png
+        text: 'Internetið er mjög skemmtilegur staður. En alveg eins og maður þarf
+          að passa sig að fara yfir götu, þarf maður að fara varlega á netinu. Hér
+          eru þrjár reglur til að muna. Regla númer 1: Alltaf spyrja foreldri fyrst.
+          Regla númer 2: Aðeins tala við fólk sem þú þekkir. Regla númer 3: Haltu
+          þig við staði sem eru hæfilegir fyrir þig.'
+      7:
+        image: notes/C1_going_places_safely_7.png
+        text: Vá, þetta var gaman! Matartími. Ég skrái mig út núna. Hlakka til að
+          skrá mig inn aftur til að sjá hvert ég farið næst.
+    C1_pair_programming:
+      1:
+        image: notes/C1_pair_programming_1.png
+        text: Í dag ætlum við að læa um félagaforritun. Í félagaforritun er unnið
+          í teymi. Af hverju ættu tvær manneskjur að nota sömu tölvu? Vegna þess að
+          tvö höfuð eru betri en eitt. Í félagaforritun sitjið þið félagi þinn saman
+          við eina tölvu og þið vinnið að sama verkefni.
+      2:
+        image: notes/C1_pair_programming_2.png
+        text: Í félagaforritun er annar félaginn ökumaður og hinn er leiðsögumaður,
+          eins og verið sé að aka bíl. Ökumaðurinn situr við tölvuna og notar lyklaborðið
+          og músina eða snertiskjáinn til að stjórna aðgerðum tölvunnar. Hinn félaginn
+          er leiðsögumaður og hjálpar ökumanninum með því að svara spurningum ökumannsins
+          og benda á hugsanleg vandamál eða villur.
+      3:
+        image: notes/C1_pair_programming_3.png
+        text: Góða samskipti eru lykillinn að vel heppnaðri félagaforritun. Móðgaðu
+          ekki heldur sýndu virðingu og ekki vera ráðríkur leiðsögumaður því engum
+          finnst gaman að hafa aftursætisbílstjóra. Þú og félagi þinn ættuð að tala
+          saman allan tímann. Ökumaðurinn getur útskýrt athafnir sínar. Og leiðsögumaðurinn
+          getur komið með hugmyndir um hvað eigi að gera næst.
+      4:
+        image: notes/C1_pair_programming_4.png
+        text: Leiðsögumaðurinn ætti að hugsa um stóru myndina og ökumaðurinn einbeitir
+          sér að smáatriðunum. Bæði hlutverkin eru mikilvæg. Félagaforritun snýst
+          um það að vinna saman sem teymi.
+    C1_planting_seed:
+      1:
+        image: notes/C1_planting_seed_1.png
+        text: Þessi kennslustund heitir Fræsáning og hún mun hjálpa okkur að skilja
+          algrím. Algrím eru nákvæm fyrirmæli sem lýsa í hvaða röð eigi að gera eitthvað.
+          Jafnvel hversdagslegir hlutir eins og að borða morgunverð eða bursta tennurnar
+          eru algrím sem fela í sér smærri skref til að ljúka ákveðnu verki.
+      2:
+        image: notes/C1_planting_seed_2.png
+        text: Tölvur geta verið mjög klárar en þær geta aðeins skilið þig ef þú segir
+          þeim nákvæmlega hvað þú vilt skref fyrir skref. Það merkilega við algrím
+          er að ef þú fylgir fyrirmælunum í röð, getur þú gert eitthvað sem kunnir
+          ekki að gera áður. Það er eins og að fylgja mataruppskrift.
+      3:
+        image: notes/C1_planting_seed_3.png
+        text: Í dag ætlum við að sá okkar eigin fræjum með því að nota algrím. Búðu
+          til þitt eigið algrím með því að klippa sundur myndirnar. Veldu myndirnar
+          sem sýna þrep í því að sá fræi og raðaðu þessum myndum í rétta röð.
+      4:
+        image: notes/C1_planting_seed_4.png
+        text: Nú er kominn tími til að sjá hvort algrímið þitt virkar. Fylgdu þrepunum
+          í algríminu vandlega. Eru þau í réttri röð? Tókst þér að sá fræi með því
+          að fylgja algríminu? Þetta er eins og forrita með myndum!
+      5:
+        image: notes/C1_planting_seed_5.png
+        text: Ef við viljum búa til súkkulaði, þá eru mörg stór þrep í því ferli og
+          hvert þessara stóru þrepa inniheldur röð smærri þrepa og það eru mismunandi
+          uppskriftir eða algrím eftir því hvernig við viljum að súkkulaðið bragðist.
+          Hvert þrep er mikilvægt, jafnvel þau litlu, svo að ef eitt þrep vantar,
+          þá er ekki hægt að ljúka hinum. Að búa til algrím sem aðrir geta skilið
+          er mjög mikilvægt. Þess vegna þarf að skrifa hvert þrep niður svo að sama
+          hver gerir þetta verði útkoman alltaf eins.
+    C1_playlab_storytelling:
+      1:
+        image: notes/C1_playlab_storytelling_1.png
+        text: Time to get creative and use your coding skills to tell a story. Your
+          story will have actors and you will be able to make these actors talk and
+          interact with each other. Start thinking of what kind of story you want
+          to tell.
+      2:
+        image: notes/C1_playlab_storytelling_2.png
+        text: The cat's always been afraid of the dog and what if the cat figures
+          out that the dog is trying to be nice? The "when run" block starts everything.
+          The "move" block will move your character and the "say" block will make
+          your character say whatever you type.
+      3:
+        image: notes/C1_playlab_storytelling_3.png
+        text: This is the "when actors collide" block which you can link up to the
+          other blocks.
+      4:
+        image: notes/C1_playlab_storytelling_4.png
+        text: I was making the dog come over and say "Hi" but then the cat got scared
+          so it ran away. "Ahh" If there was more time, it would have been a happy
+          ending. The end!
+    C1_spelling_bee_intro:
+      1:
+        image: notes/C1_spelling_bee_intro_1.png
+        text: This is the spelling bee level. Use the puzzle pieces to move the bee.
+          As it moves, it will collect letters to spell words.
+      2:
+        image: notes/C1_spelling_bee_intro_2.png
+        text: See if you can spell the word they give you in the box below the stage.
+          But bee careful! Moving the wrong direction will add letters you don't want.
+    C1_zuck_repeat_loop:
+      1:
+        image: notes/C1_zuck_repeat_loop_1.png
+        text: Eitt af því sem tölvur gera mjög vel er að endurtaka skipanir. Þar sem
+          þú ert mannvera mundi þér virkilega fara að leiðast ef þú þyrftir að gera
+          það sama aftur og aftur mjög oft. En tölva getur gert það sama miljón eða
+          jafnvel biljón sinnum án þess að leiðast og gert það mjög vel.
+      2:
+        image: notes/C1_zuck_repeat_loop_2.png
+        text: Til dæmis ef ég vildi óska öllum á Facebook til hamingju með afmælið
+          með því að senda tölvupóst, þá gæti það tekið mig meira en öld ef ég skrifaði
+          hvert skeyti. En með aðeins nokkrum línum af kóða, get ég látið tölvu senda
+          tölvupóst til allra á Facebook til að óska þeim til hamingju með afmælið.
+      3:
+        image: notes/C1_zuck_repeat_loop_3.png
+        text: In this example, your goal is going to be to move the bird to get the
+          pig. Now, we're going to be able to use the repeat block in order to be
+          able to do this very easily. You can either do this by giving the computer
+          a move forward command five times in order to advance the bird one step
+          each time to the pig or you can just tell the computer to move forward once,
+          and then tell it to repeat that five times and it'll do the same thing.
+      4:
+        image: notes/C1_zuck_repeat_loop_4.png
+        text: In order to do this, you drag your move forward command and then you
+          put it inside the repeat block. And you can click on it and tell it how
+          many times you  to repeat the block to tell it how many steps you want it
+          to take forward.
+      5:
+        image: notes/C1_zuck_repeat_loop_5.png
+        text: One more thing is you can put as many commands as you want inside the
+          repeat block. So in this example, you're telling it to move forward and
+          turn left, which it'll do five times. Have fun!
+    C2_artist_intro:
+      1:
+        image: notes/C2_artist_intro_1.png
+        text: You wouldn't even qualify for the race if you don't have people who
+          are proficient in computer science because of how much data the cars collect
+          and the necessity to be able to have people that can write programs to figure
+          out how you continue to figure out how to build performance.
+      2:
+        image: notes/C2_artist_intro_2.png
+        text: In these puzzles, you'll be an artist that uses a pencil to draw different
+          shapes. Wherever your artist goes, it will draw a line behind you.
+      3:
+        image: notes/C2_artist_intro_3.png
+        text: To move around the canvas, you'll use the move forward block. Here the
+          move forward block says move forward by 100 pixels. When we hit run, what
+          happens? The artist moves forward a certain amount and that amount is 100
+          pixels. Pixels are basically very tiny squares on your computer screen.
+      4:
+        image: notes/C2_artist_intro_4.png
+        text: The other block we have in this puzzle says turn right by 90 degrees.
+          And when we drag that out that makes our artist turn a certain amount. So
+          you can play around with how far you want the artist to turn. This is a
+          90 degree turn.
+      5:
+        image: notes/C2_artist_intro_5.png
+        text: And this is a 120 degree turn. And remember, you can change these values
+          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
+          drawing with your artist!
+    C2_bee_conditionals:
+      1:
+        image: notes/C2_bee_conditionals_1.png
+        text: This is the conditional block. It says IF there is nectar or honey that
+          is less than, equal to or greater than a number, THEN do something.
+      2:
+        image: notes/C2_bee_conditionals_2.png
+        text: This is useful when we don't know how much nectar or honey to get, as
+          we see here with this question mark.
+      3:
+        image: notes/C2_bee_conditionals_3.png
+        text: In this example, we're going to say IF the purple flower has nectar
+          greater than 0, get nectar. That will tell our bee to keep getting nectar
+          as long as it's there. Ta-dah!
+    C2_binary_bracelets:
+      1:
+        image: notes/C2_binary_bracelets_1.png
+        text: This is the binary bracelets lesson. We are going to code our initials
+          on a bracelet we can wear and show all our friends!
+      2:
+        image: notes/C2_binary_bracelets_2.png
+        text: Binary is a way of representing information using only two options.
+          Sometimes people think of this as only 1s and 0s. But you can represent
+          binary with combinations of on or off, up and down, in and out or really
+          any set of opposites.
+      3:
+        image: notes/C2_binary_bracelets_3.png
+        text: Hi, I'm Orion and I program robots here at Play-im. All computer and
+          robot brains at their most fundamental level are little electronic gates.
+          When the gate is open, electricity can flow through and when it's closed,
+          electricity can't.
+      4:
+        image: notes/C2_binary_bracelets_4.png
+        text: An example of binary on the robot is the robot's eyes. The robot's eyes
+          are LEDs and those are lights that are either on or off. It's a binary system,
+          one or the other. We can use the lights to represent binary numbers. If
+          we have a set of robots, we can say that the first robot is the 1s place
+          and the second robot is the 2s place, the third robot is the 4s place and
+          so on. That's how you represent a binary number. The robots will do it with
+          their binary eyes and count it out for you.
+    C2_conditionals_with_cards:
+      1:
+        image: notes/C2_conditionals_with_cards_1.png
+        text: This lesson is called conditionals with cards. Every day you make decisions
+          based on what you see and hear.
+      2:
+        image: notes/C2_conditionals_with_cards_2.png
+        text: I want to walk to the park but first I have to decide whether I should
+          bring an umbrella or not. So I look out the window. If it's cloudy, I'm
+          going to take my umbrella. Else, I'll take some sunglasses. I think I'd
+          better take the umbrella. What I see and hear determines what I take to
+          the park.
+      3:
+        image: notes/C2_conditionals_with_cards_3.png
+        text: Conditionals are used in games too. Today we're going to practice using
+          conditionals with a card game. In this game, the card that I draw determines
+          what my friends are going to do. If I draw a seven, everyone claps. Else,
+          everyone says "awww." Let's try it! "Awww" "cheers"
+      4:
+        image: notes/C2_conditionals_with_cards_4.png
+        text: I bet you can make up games that are even more fun with conditionals.
+          Give it a try! Conditionals are what make computers seem smart. A computer
+          program that includes conditionals can react to the user and change its
+          course of action.
+      5:
+        image: notes/C2_conditionals_with_cards_5.png
+        text: Think about your favorite video game. Do you earn more points for some
+          actions than you do for others? This occurs because the computer is using
+          conditionals. It's the way a computer makes a decision. How about, if you
+          hit the target, you earn ten points. Else, you lose three. When you know
+          how conditionals work, you can create all kinds of exciting games.
+    C2_artist_debugging:
+      1:
+        image: notes/C2_artist_debugging_1.png
+        text: Here we already have some blocks out in our work space. But there is
+          something wrong.
+      2:
+        image: notes/C2_artist_debugging_2.png
+        text: Let's debug this code by slowing down the speed and watching it as it
+          goes through each block step by step.
+      3:
+        image: notes/C2_artist_debugging_3.png
+        text: Oh, there's the problem! The cat's whiskers are 75 pixels long, not
+          25.
+    C2_bee_debugging:
+      1:
+        image: notes/C2_bee_debugging_1.png
+        text: Have you ever heard of debugging a program? This is the way you figure
+          out what's not working. When you debug code, you identify and remove errors.
+      2:
+        image: notes/C2_bee_debugging_2.png
+        text: Here we're given a few blocks already in our workplace. We're going
+          to use the step button to walk through the blocks, step by step, to see
+          if this is the right solution and where we may need to fix it.
+      3:
+        image: notes/C2_bee_debugging_3.png
+        text: Looks like there's our problem! We need one more move forward block.
+          The step button helps us debug our problem by identifying where the error
+          is so we can fix it.
+    C2_digital_footprint:
+      1:
+        image: notes/C2_digital_footprint_1.png
+        text: On your head you hold your hat and your smarts will tell you where you're
+          at and to think about the zoo, and to nod hello to you and you! Use your
+          head when you're online to keep what's yours inside your mind and to know
+          how to be safe, how to give your life some private space! From your head
+          down to your toes, pause, think about it. From your feet up to your nose,
+          pause and think online!
+      2:
+        image: notes/C2_digital_footprint_2.png
+        text: Use your heart to grow and grow, and to give yourself a healthy glow,
+          and to make a valentine, tell someone that you'll be mine! Use your heart
+          when you're online, feel what's right and always kind, and show your friends
+          respect, to be fair and nice on the internet. From your head down to your
+          toes, pause, think about it. From your feet up to your nose, pause and think
+          online!
+      3:
+        image: notes/C2_digital_footprint_3.png
+        text: Use your arms to hug your pet, to keep your clothes from getting wet,
+          and to wear your favorite sleeves and to help you fly and make believe.
+          Use your arms when you're online, to take break and balance time and leave
+          your tech behind and to find yourself a tree to climb. From your head down
+          to your toes, pause, think about it. From your feet up to your nose, pause
+          and think online!
+      4:
+        image: notes/C2_digital_footprint_4.png
+        text: Use your gut to store your food, and to listen to its growling mood,
+          to make a belly flop, and to feel the gas in soda pop. Use your gut when
+          you're online, to know to watch for certain signs, and to let it guide the
+          way and tell you when it's not ok. From your head down to your toes, pause,
+          think about it. From your feet up to your nose, pause and think online!
+      5:
+        image: notes/C2_digital_footprint_5.png
+        text: So think with your head, and feel with your heart, balance with your
+          arms, listen to your gut, online. Use your legs to run and kick, and to
+          jump and bounce on a pogo stick, and to dance around the block, and to skip
+          along in your smelly socks. Use your legs when you're online, to stand up
+          to bullies who cross the line, and remember to stand tall, be nice to creatures
+          great and small.
+      6:
+        image: notes/C2_digital_footprint_6.png
+        text: From your head down to your toes, pause, think about it. From your feet
+          up to your nose, pause and think online! So think with your head, and feel
+          with your heart, balance with your arms, listen to your gut, stand up with
+          your legs. From your head down to your toes, pause, think about it. From
+          your feet up to your nose, pause and think online!
+    C2_digital_footprint_v2:
+      1:
+        image: notes/C2_digital_footprint_v2_1.png
+        text: Everytime you go online, you leave a footprint that can be searched,
+          copied, shared, broadcast and is permanent. What kind of digital footprint
+          are you leaving? What kind of digital footprint do you want to leave?
+    C2_graph_paper:
+      1:
+        image: notes/C2_graph_paper_1.png
+        text: This lesson is called "Graph Paper Programming" and it's all about algorithms.
+          Today we're going to learn how to write programs that show each other how
+          to recreate simple black and white images, using only hand drawn arrows.
+      2:
+        image: notes/C2_graph_paper_2.png
+        text: An algorithm is a list of instructions for completing a task. We'll
+          follow this set of instructions to make the bowl. Algorithms are really
+          helpful when you need someone else to understand how to do something.
+      3:
+        image: notes/C2_graph_paper_3.png
+        text: If you're writing an algorithm for a computer, you have to break it
+          down to little tiny steps. So finish this row and go to the next, then the
+          next one, and you'll be done.
+      4:
+        image: notes/C2_graph_paper_4.png
+        text: I use algorithms in my work. If I write down all of the steps I can
+          recreate that same piece again, or I can teach someone else to do it. Put
+          the glass in the kiln, fuse it together, follow the rest of the instructions
+          to make the bowl. Algorithms give you a road map for getting something done.
+    C2_artist_loops:
+      1:
+        image: notes/C2_artist_loops_1.png
+        text: Here we are going to use the repeat block to help us save steps when
+          we are programming our artist. We already have some blocks out on our stage
+          but they are just there to get us started.
+      2:
+        image: notes/C2_artist_loops_2.png
+        text: To loop those blocks four times to draw the whole square, we just drag
+          out the repeat block and put the moveforward and turn right blocks inside
+          the repeat block. When we hit run, the artist will repeat those steps four
+          times to complete the square.
+    C2_bee_loops:
+      1:
+        image: notes/C2_bee_loops_1.png
+        text: A loop is a repetition of activity. Going into a hive to inspect, I
+          look at a frame, and then I put it back. I repeat that same activity multiple
+          times. It's looping around, doing the same activity multiple times.
+      2:
+        image: notes/C2_bee_loops_2.png
+        text: This is the repeat block. Whatever you put inside the repeat block will
+          repeat those actions the number of times that you tell it to. For example,
+          in this level, rather than drag out move forward and get nectar three times,
+          we're going to just drag them out once each and repeat the action three
+          times. That made it easy!
+    C2_maze_intro:
+      1:
+        image: notes/C2_maze_intro_1.png
+        text: Usually programming is all in text but we'll use Blockly which uses
+          visual blocks that you drag and drop to write programs. Under the hood,
+          you're still creating code. To start off, we're going to build code for
+          a program that will help this Angry Bird move through a maze to get to the
+          evil pigs that stole its eggs.
+      2:
+        image: notes/C2_maze_intro_2.png
+        text: Blockly is split into three main parts. On the left is the bird's maze,
+          where your program will run. The instructions for each level are written
+          below the maze. This middle area is the toolbox and each of these blocks
+          is a command that the bird can understand. The white space on the right
+          is called the workspace and this is where we'll build our program.
+      3:
+        image: notes/C2_maze_intro_3.png
+        text: If I drag the move block to our work space and press "Run", what happens?
+          The bird moves forward one box on the grid. And what if I want the bird
+          to do something after it moves forward one box? I can add another block
+          to our program.
+      4:
+        image: notes/C2_maze_intro_4.png
+        text: Ég ætla að velja "snúa til hægri" kubbinn og ég dreg hann undir "færa"
+          kubbinn þar til gula örin birtist. Þá sleppi ég honum og kubbarnir tveir
+          smella saman. Þegar ég ýti aftur á "Keyra" mun fuglinn gera þær skipanir
+          sem er staflað í röð á vinnusvæðinu.
+      5:
+        image: notes/C2_maze_intro_5.png
+        text: Ef þú vilt eyða kubbi, þá skaltu bara draga hann úr kubbastæðunni og
+          í ruslakörfuna. Eftir að þú hefur keyrt forritið, getur þú alltaf notað
+          "Endurstilla" hnappinn til að færa fuglinn á upphafið. Nú skulum við ná
+          þessum svínum!
+    C2_paper_airplanes:
+      1:
+        image: notes/C2_paper_airplanes_1.png
+        text: This lesson is called Real Life Algorithms. Algorithms describe things
+          that people do everyday. Cookie recipes and directions for building a birdhouse
+          are both everyday algorithms.
+      2:
+        image: notes/C2_paper_airplanes_2.png
+        text: Today we're gonna make, create, and test an algorithm for a paper airplane.
+          But first, we need to break this big project into easy to follow small steps.
+          For making a paper airplane, we need to decide what steps to take and in
+          what order to take them.
+      3:
+        image: notes/C2_paper_airplanes_3.png
+        text: You'll create your algorithm by first cutting apart the pictures. Next,
+          you'll select the 6 pictures that show the steps needed to make a paper
+          airplane and arrange those pictures in the correct order. After you have
+          everything in order, you will trade algorithms with another student team
+          to test out the algorithm to see if the algorithm works. A well designed
+          algorithm is super important to making the best paper airplane.
+      4:
+        image: notes/C2_paper_airplanes_4.png
+        text: When we want to make chocolate, there are many big steps to that process.
+          And each of those big steps has its own set of smaller steps. And there
+          are different recipes, or algorithms, depending on how we want the chocolate
+          to taste. Each step is important, even the small ones. So without one step,
+          the rest of them cannot be completed. Creating algorithms that others can
+          understand is really important. That's why each step has to be written down,
+          so no matter who does it, the result is the same.
+    C2_playlab_createastory:
+      1:
+        image: notes/C2_playlab_createastory_1.png
+        text: Hingað til hefur þú verið að búa til hreyfimynd eða sögu sem gerir nákvæmlega
+          það sama í hvert sinn sem þú keyrir hana. Nú getur þú búið til gagnvirkan
+          leik sem hægt er að spila.
+      2:
+        image: notes/C2_playlab_createastory_2.png
+        text: There are some new blocks to try out. There's the "when arrow" block
+          and the "move actor" block. You can put these blocks together to move the
+          actors around with the arrow keys. And there are some blocks that do stuff
+          when actors collide or are clicked. Check them out and have fun!
+    C2_relay_programming:
+      1:
+        image: notes/C2_relay_programming_1.png
+        text: Today we're going to do relay programming. It's all about programming
+          under pressure and debugging the mistakes that sometimes happen when you
+          work really quickly or in teams. We'll use graph paper programming to simulate
+          coding, and use relay races to simulate having a deadline.
+      2:
+        image: notes/C2_relay_programming_2.png
+        text: In relay programming, teams will be racing to finish a graph paper program.
+          You have to check your teammate's work, or debug it, fix it if there's a
+          mistake, add your arrow, and run back and tag your teammate.
+      3:
+        image: notes/C2_relay_programming_3.png
+        text: Programmers use debugging a lot to find and fix problems in their algorithms
+          or code. There are lots of ways to debug problems. One of the easiest is
+          to move step by step until you find where something goes wrong, then fix
+          it.
+      4:
+        image: notes/C2_relay_programming_4.png
+        text: Here, I'm trying to do a back handspring, but I keep falling off. I
+          walk through each part, step by step, and realize where my mistake was.
+          My coach showed me I wasn't putting my hands on the beam correctly. So I
+          tried another back handspring on the beam with my new hand position, and
+          I stuck it! I was really glad I debugged my back  handspring. We figured
+          it out! Debugging is finding and fixing problems. Nice, good job!
+    C2_zuck_repeat_loop:
+      1:
+        image: notes/C2_zuck_repeat_loop_1.png
+        text: One thing that computers are really good at is repeating commands. As
+          a person, you'd get really bored if you had to do the same thing lots of
+          times in a row. But a computer can do the same thing millions or even billions
+          of times, and not get bored and be able to carry that out really well.
+      2:
+        image: notes/C2_zuck_repeat_loop_2.png
+        text: So for example if I wanted to wish everyone on Facebook a happy birthday
+          by sending them an email, it might take me more than a century to actually
+          write out all of those emails to everyone. But with just a few lines of
+          code, I can have a system send an email to everyone on Facebook wishing
+          them a happy birthday. So that's what loops are, and why they're valuable,
+          and something that computers can do very well.
+      3:
+        image: notes/C2_zuck_repeat_loop_3.png
+        text: In this example your goal is going to be to move the bird to get the
+          pig.  Now we're gonna be able to use the "repeat" block in order to be able
+          to do this very easily. You can either do this by giving the computer a
+          "move forward" command five times in order to advance the bird one step
+          each time to the pig.
+      4:
+        image: notes/C2_zuck_repeat_loop_4.png
+        text: Or you can just tell the computer to "move forward" once, and then tell
+          it to "repeat" that 5 times, and it will do the same thing. So in order
+          to do this you drag your "move forward" command, and then you put it inside
+          the "repeat" block.And you can click on it and tell it how many times you
+          want to repeat the block to tell it how many steps you want it to take forward.
+      5:
+        image: notes/C2_zuck_repeat_loop_5.png
+        text: Now one more thing is you can put as many commands as you want inside
+          the "repeat" block. So in this example you're telling it to move forward
+          and turn left, which it will do five times. All right good job and have
+          fun!

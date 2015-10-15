@@ -1,4 +1,3 @@
-var React = require('react');
 var applabMsg = require('./locale');
 var msg = require('../locale');
 
@@ -45,6 +44,7 @@ module.exports = React.createClass({
     var manageAssetsIcon = (
       <span style={styles.iconContainer}>
         <i className="fa fa-cog workspace-header-clickable"
+          id="manage-assets-button"
           style={styles.assetsIcon}
           onClick={this.handleManageAssets}
           title={applabMsg.manageAssets()}></i>

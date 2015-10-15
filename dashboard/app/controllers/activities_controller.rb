@@ -160,15 +160,6 @@ class ActivitiesController < ApplicationController
     # hash of level_id => test_result
     test_result = params[:testResult].to_i
     old_result = client_state.level_progress(@level.id)
-    if test_result > old_result
-      client_state.set_level_progress(@level.id, test_result)
-    end
-
-    # Update count of total lines written if they passed the test.
-    lines = params[:lines].to_i
-    if lines > 0 && Activity.passing?(test_result)
-      client_state.add_lines(lines)
-    end
 
     @new_level_completed = true if !Activity.passing?(old_result) && Activity.passing?(test_result)
 

@@ -473,6 +473,7 @@ ca:
         infinity_playlab_intro: 'Play Lab - introducció'
         infinity_playlab_events: 'Play Lab - esdeveniments'
         infinity_playlab_repeat_forever: 'Play Lab - repeteix per sempre'
+        csp_applab_functions: Introducció a les funcions
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'

@@ -13,8 +13,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "We've given you some code with an error.  It doesn’t recognize the variable.  Can you figure out why?  Fix the error and get the program to run.  Also note the error message since it might come up at some point later in your life.\r\n\r\n",
-    "start_blocks": "var foo;\r\nfoo = 7;\r\nwrite(Foo);",
+    "start_blocks": "var foo;\r\nfoo = 7;\r\nconsole.log(Foo);\r\nvar blah;\r\nblah = 13;\r\nconsole.log(blah);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -31,7 +30,21 @@
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
-    "app_height": "200"
+    "app_height": "200",
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "# Debugging Variables: Part 2\r\n\r\nWe've given you some code with an error.  It doesn’t recognize the variable.  Can you figure out why?  Fix the error and get the program to run.  Also note the error message since it might come up at some point later in your life.\r\n\r\n",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false"
   }
 }]]></config>
   <blocks/>

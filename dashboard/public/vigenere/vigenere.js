@@ -1,5 +1,5 @@
-/* global $, options */
-// options is appOptions, from the level parameters themselves
+/* global $, options, dashboard */
+// options is appOptions.level, from the level parameters themselves
 
 var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
 var LETTERS = ALPHABET.split('');
@@ -59,6 +59,21 @@ $(document).ready(function () {
     min: 0,
     value: 500,
     change: setTimerFromSlider
+  });
+
+  $("#finished").click(function () {
+    var finishedButton = $(this);
+
+    if (finishedButton.prop("disabled") === true) {
+      return;
+    }
+
+    finishedButton.prop("disabled", true);
+    dashboard.dialog.processResults(function (willRedirect) {
+      if (!willRedirect) {
+        finishedButton.prop("disabled", false);
+      }
+    });
   });
 });
 
