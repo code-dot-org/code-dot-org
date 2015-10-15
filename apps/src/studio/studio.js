@@ -1795,7 +1795,9 @@ Studio.reset = function(first) {
 
   // Now that sprites are in place, we can set up a map, which might move
   // sprites around.
-  Studio.setMap({value: getDefaultMapName()});
+  if (level.wallMapCollisions) {
+    Studio.setMap({value: getDefaultMapName()});
+  }
 
   // Setting up walls might have moved the sprites, so draw them once more.
   for (i = 0; i < Studio.spriteCount; i++) {
@@ -3502,10 +3504,6 @@ Studio.setMap = function (opts) {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
 
-  if (!level.wallMapCollisions) {
-    return;
-  }
-
   if (!opts.forceRedraw && useMap === Studio.wallMap) {
     return;
   }
@@ -3613,7 +3611,7 @@ Studio.setSprite = function (opts) {
   }
 
   var skinSprite = skin[spriteValue];
-  if (!skinSprite) {
+  if (!skinSprite && spriteValue !== 'hidden' && spriteValue !== 'visible') {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
 
