@@ -1,5 +1,6 @@
 name 'U3L13 Student Lesson Introduction'
 title 'Buttons on the Screen'
+css 'unplugged'
 markdown <<MARKDOWN
 ## Unit 3: Lesson 10 - Buttons on the Screen
 
