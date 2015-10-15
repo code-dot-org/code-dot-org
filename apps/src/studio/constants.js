@@ -3,7 +3,9 @@
 exports.SpriteSpeed = {
   VERY_SLOW: 2,
   SLOW: 3,
+  LITTLE_SLOW: 4,
   NORMAL: 5,
+  LITTLE_FAST: 6,
   FAST: 8,
   VERY_FAST: 12,
 };

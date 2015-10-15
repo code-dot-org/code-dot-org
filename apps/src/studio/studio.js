@@ -2441,8 +2441,8 @@ function spriteTotalFrames (index) {
 function getFrameCount (className, exceptionList, defaultCount) {
   if (/.gif$/.test(skin[className])) {
     return 1;
-  } else if (exceptionList && exceptionList[className]) {
-    return exceptionList[className];
+  } else if (exceptionList && exceptionList[className] && exceptionList[className].frames) {
+    return exceptionList[className].frames;
   }
   return defaultCount;
 }
@@ -2621,7 +2621,7 @@ Studio.createLevelItems = function (svg) {
           var className = skin.ItemClassNames[index];
           // Create item:
           var itemOptions = {
-            frames: getFrameCount(className, skin.specialItemFrames, skin.itemFrames),
+            frames: getFrameCount(className, skin.specialItemProperties, skin.itemFrames),
             className: className,
             dir: Direction.NONE,
             image: skin[className],
@@ -3196,19 +3196,32 @@ Studio.addItem = function (opts) {
   var direction = level.itemGridAlignedMovement ? Direction.NONE :
                     directions[Math.floor(Math.random() * directions.length)];
   var pos = generateRandomItemPosition();
+
+  var renderScale = 1;
+  var activity = "none";
+  var speed = constants.SpriteSpeed.NORMAL;
+  var properties = skin.specialItemProperties[opts.className];
+  if (properties) {
+    renderScale = utils.valueOr(properties.scale, renderScale);
+    activity = utils.valueOr(properties.activity, activity);
+    speed = utils.valueOr(properties.speed, speed);
+  }
+
   var itemOptions = {
-    frames: getFrameCount(opts.className, skin.specialItemFrames, skin.itemFrames),
+    frames: getFrameCount(opts.className, skin.specialItemProperties, skin.itemFrames),
     className: opts.className,
     dir: direction,
     image: skin[opts.className],
     loop: true,
     x: pos.x,
     y: pos.y,
-    speed: Studio.itemSpeed[opts.className],
-    activity: utils.valueOr(Studio.itemActivity[opts.className], "roam"),
+    //speed: Studio.itemSpeed[opts.className],
+    //activity: utils.valueOr(Studio.itemActivity[opts.className], "roam"),
     width: 100,
     height: 100,
-    renderScale: skin.specialItemScale[opts.className] || 1
+    renderScale: renderScale,
+    activity: activity,
+    speed: speed
   };
 
   var item = new Item(itemOptions);
@@ -3908,7 +3921,7 @@ Studio.throwProjectile = function (options) {
   var preventLoop = skin.preventProjectileLoop && skin.preventProjectileLoop(options.className);
 
   var projectileOptions = {
-    frames: getFrameCount(options.className, skin.specialProjectileFrames, skin.projectileFrames),
+    frames: getFrameCount(options.className, skin.specialProjectileProperties, skin.projectileFrames),
     className: options.className,
     dir: options.dir,
     image: skin[options.className],
