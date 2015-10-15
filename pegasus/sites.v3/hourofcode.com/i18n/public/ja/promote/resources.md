@@ -106,7 +106,7 @@ Hour of Code は[学校名] が21世紀を生きるご子息の皆様に必須�
 
 [市町村名]の教育の未来を変えるチャンスです。
 
-詳細は、http://hourofcode.com/<%= @country %>をご覧ください。
+詳細は、http://hourofcode.com/<%= @country %> をご覧ください。
 
 敬具
 
