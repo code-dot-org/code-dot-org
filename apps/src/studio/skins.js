@@ -224,13 +224,13 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'pig':    { frames: 12, scale: 1,   activity: 'roam',  speed: constants.SpriteSpeed.LITTLE_SLOW },
-    'man':    { frames: 12, scale: 1,   activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW  },
-    'roo':    { frames: 15, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.NORMAl },
-    'bird':   { frames:  8, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.NORMAl },
-    'spider': { frames: 12, scale: 1.2, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW  },
-    'mouse':  { frames:  1, scale: 0.6, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_FAST },
-    'pilot':  { frames: 13, scale: 1,   activity: 'flee',  speed: constants.SpriteSpeed.NORMAl },
+    'pig':    { frames: 12, scale: 1,   activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
+    'man':    { frames: 12, scale: 1,   activity: 'chase', speed: constants.SpriteSpeed.VERT_SLOW  },
+    'roo':    { frames: 15, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'bird':   { frames:  8, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'spider': { frames: 12, scale: 1.2, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
+    'mouse':  { frames:  1, scale: 0.6, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'pilot':  { frames: 13, scale: 1,   activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
