@@ -13,7 +13,3 @@ Code.org partners with [Outlier Research & Evaluation at the University of Chica
 ## Available reports
 
 - [Code.org's Impact on Computer Science Education: June 2014 - June 2015 Program Evaluation Report](/about/evaluation/summary)
-
-## Join the team
-
-We are currently hiring for an [internal evaluation manager](/about/jobs#Eval) to work in collaboration with Outlier, in order to expand our ability to study student learning outcomes.
