@@ -28,7 +28,7 @@ describe('ShareWarningsDialog', function () {
     return isTagWithText(childComponent, 'DIV', msg.shareWarningsAge());
   }
 
-  it('only shows age prompt if not is13Plus and we dont storeData', function () {
+  it('only shows age prompt if not is13Plus and app doesnt store data', function () {
     var reactElement = React.createElement(ShareWarningsDialog, {
       showStoreDataAlert: false,
       is13Plus: false,
@@ -52,7 +52,7 @@ describe('ShareWarningsDialog', function () {
     assert.strictEqual(ageDropdowns.length, 1);
   });
 
-  it('only shows data prompt if is13Plus and we storeData', function () {
+  it('only shows data prompt if is13Plus and app stores data', function () {
     var reactElement = React.createElement(ShareWarningsDialog, {
       showStoreDataAlert: true,
       is13Plus: true,
@@ -76,7 +76,7 @@ describe('ShareWarningsDialog', function () {
     assert.strictEqual(ageDropdowns.length, 0);
   });
 
-  it('shows both age and data if not is13Plus and we storeData', function () {
+  it('shows both age and data if not is13Plus and app stores data', function () {
     var reactElement = React.createElement(ShareWarningsDialog, {
       showStoreDataAlert: true,
       is13Plus: false,
@@ -100,7 +100,7 @@ describe('ShareWarningsDialog', function () {
     assert.strictEqual(ageDropdowns.length, 1);
   });
 
-  it('doesnt show a dialog when is13Plus and we dont storeData', function () {
+  it('doesnt show a dialog when is13Plus and app doesnt store data', function () {
     var reactElement = React.createElement(ShareWarningsDialog, {
       showStoreDataAlert: false,
       is13Plus: true,
@@ -108,9 +108,7 @@ describe('ShareWarningsDialog', function () {
       handleTooYoung: function () {}
     });
     var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
-    // isMounted returns undefined instead of false. this is allegedly fixed
-    // in future versions of React
-    assert.equal(!!componentInstance.isMounted(), false, 'component unmounted');
+    assert.equal(componentInstance.state.modalIsOpen, false);
   });
 
   it('calls handleClose if we click OK when signed in', function () {
@@ -136,7 +134,7 @@ describe('ShareWarningsDialog', function () {
     ReactTestUtils.Simulate.click(okButton.getDOMNode());
     assert(handleCloseCalled, 'closed dialog');
 
-    assert.equal(!!componentInstance.isMounted(), false, 'component unmounted');
+    assert.equal(componentInstance.state.modalIsOpen, false);
   });
 
   it('does not close if we click OK when signed out and didnt specify age', function () {
@@ -162,7 +160,7 @@ describe('ShareWarningsDialog', function () {
     ReactTestUtils.Simulate.click(okButton.getDOMNode());
     assert(!handleCloseCalled, 'closed dialog');
 
-    assert.equal(!!componentInstance.isMounted(), true, 'component still mounted');
+    assert.equal(componentInstance.state.modalIsOpen, true);
   });
 
   it('calls handleClose if we click OK when signed out and specified an age', function () {
@@ -192,7 +190,7 @@ describe('ShareWarningsDialog', function () {
     ReactTestUtils.Simulate.click(okButton.getDOMNode());
     assert(handleCloseCalled, 'closed dialog');
 
-    assert.equal(!!componentInstance.isMounted(), false, 'component unmounted');
+    assert.equal(componentInstance.state.modalIsOpen, false);
   });
 
   it('calls handleTooYoung if we enter an age < 13', function () {

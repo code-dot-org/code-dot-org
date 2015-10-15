@@ -388,7 +388,8 @@ function renderFooterInSharedGame() {
  * @return {boolean} True if the code uses any data storage APIs
  */
 Applab.hasDataStoreAPIs = function (code) {
-  return /createRecord/.test(code) || /updateRecord/.test(code);
+  return /createRecord/.test(code) || /updateRecord/.test(code) ||
+    /setKeyValue/.test(code);
 };
 
 Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {

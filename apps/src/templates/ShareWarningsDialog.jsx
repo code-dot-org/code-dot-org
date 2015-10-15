@@ -25,7 +25,6 @@ var SharingWarningsDialog = module.exports = React.createClass({
 
   handleClose: function() {
     this.setState({modalIsOpen: false});
-    React.unmountComponentAtNode(this.getDOMNode().parentNode);
     this.props.handleClose();
   },
 
