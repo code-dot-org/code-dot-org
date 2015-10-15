@@ -269,7 +269,7 @@ Net::SSH.start('gateway.code.org', username) do |ssh|
   ssh.exec!("rm /tmp/*#{file_suffix}*")
 end
 
-cmd = "ssh gateway.code.org -t knife bootstrap #{private_dns_name} -x ubuntu --sudo -E #{environment} -N #{instance_name} -r role[#{role}]"
+cmd = "ssh gateway.code.org -t \"/bin/sh -c 'knife bootstrap #{private_dns_name} -x ubuntu --sudo -E #{environment} -N #{instance_name} -r role[#{role}]'\""
 puts "Bootstrapping #{environment} frontend, please be patient. This takes ~15 minutes."
 puts  "#{cmd}"
 result = `#{cmd}`
