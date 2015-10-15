@@ -39,8 +39,9 @@ COUNTRY_FIELDS_TO_US_VALUES =
 
 def international?(solr_record)
   COUNTRY_FIELDS_TO_US_VALUES.each do |field, us_values|
-    record_value = solr_record[field].downcase
-    if record_value
+    record_value = solr_record[field]
+    if record_value && !record_value.empty?
+      record_value = record_value.downcase
       return !us_values.include?(record_value)
     end
   end
@@ -48,7 +49,7 @@ def international?(solr_record)
   return false
 end
 
-def query_contacts(params, &block)
+def query_contacts(params)
   fields = params[:fields] if params[:fields]
 
   [].tap do |results|
@@ -60,9 +61,12 @@ def query_contacts(params, &block)
   end
 end
 
-def query_subscribed_contacts(params, &block)
+def query_subscribed_contacts(params)
+  puts "query:"
+  puts params[:q]
+
   {}.tap do |results|
-    query_contacts(params, &block).each do |processed|
+    query_contacts(params).each do |processed|
       email = processed[:email].downcase.strip
       results[email] = processed unless UNSUBSCRIBERS[email] || ALL[email] # don't override duplicates
     end
