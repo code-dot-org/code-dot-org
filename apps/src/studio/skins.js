@@ -223,6 +223,16 @@ function loadHoc2015(skin, assetUrl) {
     'pilot': 'whenTouchPilot'
   };
 
+  skin.AutohandlerGetAllItems = {
+    'pig': 'whenGetAllPigs',
+    'man': 'whenGetAllMen',
+    'roo': 'whenGetAllRoos',
+    'bird': 'whenGetAllBirds',
+    'spider': 'whenGetAllSpiders',
+    'mouse': 'whenGetAllMice',
+    'pilot': 'whenGetAllPilots'
+  };
+
   skin.specialItemProperties = {
     'pig':    { frames: 12, scale: 1,   activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
     'man':    { frames: 12, scale: 1,   activity: 'chase', speed: constants.SpriteSpeed.VERT_SLOW  },

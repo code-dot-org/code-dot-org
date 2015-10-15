@@ -1960,6 +1960,9 @@ levels.js_hoc2015_event_three_goals =
   "background": "snow",
   "wallMap": "circle",
   "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+  "autohandlerOverrides": {
+    "whenGetAllPilots": "whenTouchAllGoals"
+  },
   "codeFunctions": {
     "whenGetAllPilots": null,
     "winGame": null,
@@ -2505,7 +2508,6 @@ levels.js_hoc2015_change_setting = {
   "timeoutFailureTick": 600,
   "timeoutAfterWhenRun": true,
   "showTimeoutRect": true,
-  "autoArrowSteer": true,
   "callouts": [
     {
       "element_id": ".droplet-palette-group-header.green",

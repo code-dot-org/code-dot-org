@@ -23,8 +23,15 @@ module.exports.blocks = [
   {func: 'winGame', parent: api, category: '', },
   {func: 'loseGame', parent: api, category: '', },
   {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllMen', block: 'function whenGetAllMen() {}', expansion: 'function whenGetAllMen() {\n  __;\n}', category: '' },
   {func: 'whenGetAllPilots', block: 'function whenGetAllPilots() {}', expansion: 'function whenGetAllPilots() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllPigs', block: 'function whenGetAllPigs() {}', expansion: 'function whenGetAllPigs() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllBirds', block: 'function whenGetAllBirds() {}', expansion: 'function whenGetAllBirds() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllMice', block: 'function whenGetAllMice() {}', expansion: 'function whenGetAllMice() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllRoos', block: 'function whenGetAllRoos() {}', expansion: 'function whenGetAllRoos() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllSpiders', block: 'function whenGetAllSpiders() {}', expansion: 'function whenGetAllSpiders() {\n  __;\n}', category: '' },
   {func: 'whenTouchGoal', block: 'function whenTouchGoal() {}', expansion: 'function whenTouchGoal() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllGoals', block: 'function whenTouchAllGoals() {}', expansion: 'function whenTouchAllGoals() {\n  __;\n}', category: '' },
   {func: 'whenScore1000', block: 'function whenScore1000() {}', expansion: 'function whenScore1000() {\n  __;\n}', category: '' },
 
 
