@@ -129,9 +129,10 @@ class ApplicationController < ActionController::Base
         script_level_solved_response(response, script_level)
       else # not solved
         response[:message] = 'try again'
-        response[:hint_view_requests] = HintViewRequest.milestone_response(options[:script_level], current_user)
+        response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, script_level.level, current_user)
         response[:hint_view_request_url] = hint_view_requests_path
-        response[:script_level_id] = options[:script_level].id
+        response[:script_id] = script_level.script.id
+        response[:level_id] = script_level.level.id
       end
     else
       response[:message] = 'no script provided'
