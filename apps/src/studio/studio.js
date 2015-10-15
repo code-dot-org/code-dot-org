@@ -1538,6 +1538,7 @@ Studio.init = function(config) {
   config.enableShowCode = utils.valueOr(studioApp.editCode, false);
   config.varsInGlobals = true;
   config.dropletConfig = dropletConfig;
+  config.dropIntoAceAtLineStart = true;
   config.unusedConfig = [];
   if (skin.AutohandlerTouchItems) {
     for (var prop in skin.AutohandlerTouchItems) {
@@ -2244,6 +2245,7 @@ Studio.execute = function() {
       blocks: dropletConfig.blocks,
       enableEvents: true,
       studioApp: studioApp,
+      shouldRunAtMaxSpeed: function() { return Studio.slowJsExecutionFactor === 1; },
       onExecutionError: handleExecutionError,
     });
     if (!Studio.JSInterpreter.initialized()) {
