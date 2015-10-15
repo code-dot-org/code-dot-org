@@ -51,7 +51,7 @@
                 <block type="controls_repeat_ext" inline="true">
                   <value name="TIMES">
                     <block type="math_number">
-                      <title name="NUM">7</title>
+                      <title name="NUM">0</title>
                     </block>
                   </value>
                   <statement name="DO">
@@ -84,51 +84,9 @@
                                 <arg name="points"/>
                                 <arg name="length"/>
                               </mutation>
-                              <value name="ARG0">
-                                <block type="math_random_int" inline="true">
-                                  <value name="FROM">
-                                    <block type="math_number">
-                                      <title name="NUM">4</title>
-                                    </block>
-                                  </value>
-                                  <value name="TO">
-                                    <block type="math_number">
-                                      <title name="NUM">7</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <value name="ARG1">
-                                <block type="math_random_int" inline="true">
-                                  <value name="FROM">
-                                    <block type="math_number">
-                                      <title name="NUM">5</title>
-                                    </block>
-                                  </value>
-                                  <value name="TO">
-                                    <block type="math_number">
-                                      <title name="NUM">15</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
                               <next>
                                 <block type="jump" inline="true">
                                   <title name="DIR">jumpForward</title>
-                                  <value name="VALUE">
-                                    <block type="math_random_int" inline="true">
-                                      <value name="FROM">
-                                        <block type="math_number">
-                                          <title name="NUM">50</title>
-                                        </block>
-                                      </value>
-                                      <value name="TO">
-                                        <block type="math_number">
-                                          <title name="NUM">75</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
                                 </block>
                               </next>
                             </block>
@@ -161,82 +119,41 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation>
-            <arg name="points"/>
-            <arg name="length"/>
-            <description>draw a star with given points and sides of given length</description>
-          </mutation>
-          <title name="NAME">draw a star</title>
-          <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true" uservisible="false">
-              <value name="TIMES">
-                <block type="parameters_get" uservisible="false">
-                  <title name="VAR">points</title>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="draw_move" inline="true" uservisible="false">
-                  <title name="DIR">moveForward</title>
-                  <value name="VALUE">
-                    <block type="parameters_get" uservisible="false">
-                      <title name="VAR">length</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn" inline="true" uservisible="false">
-                      <title name="DIR">turnLeft</title>
-                      <value name="VALUE">
-                        <block type="math_arithmetic" inline="true" uservisible="false">
-                          <title name="OP">DIVIDE</title>
-                          <value name="A">
-                            <block type="math_number" uservisible="false">
-                              <title name="NUM">360</title>
-                            </block>
-                          </value>
-                          <value name="B">
-                            <block type="parameters_get" uservisible="false">
-                              <title name="VAR">points</title>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="draw_move" inline="true" uservisible="false">
-                          <title name="DIR">moveForward</title>
-                          <value name="VALUE">
-                            <block type="parameters_get" uservisible="false">
-                              <title name="VAR">length</title>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="draw_turn" inline="true" uservisible="false">
-                              <title name="DIR">turnRight</title>
-                              <value name="VALUE">
-                                <block type="math_arithmetic" inline="true" uservisible="false">
-                                  <title name="OP">DIVIDE</title>
-                                  <value name="A">
-                                    <block type="math_number" uservisible="false">
-                                      <title name="NUM">720</title>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <block type="parameters_get" uservisible="false">
-                                      <title name="VAR">points</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </statement>
+        <block type="math_random_int" inline="true" x="400" y="200">
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">4</title>
             </block>
-          </statement>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">7</title>
+            </block>
+          </value>
+        </block>
+        <block type="math_random_int" inline="true" x="20" y="400">
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">5</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">15</title>
+            </block>
+          </value>
+        </block>
+        <block type="math_random_int" inline="true" x="250" y="50">
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">50</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">75</title>
+            </block>
+          </value>
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
@@ -554,6 +471,83 @@
                           <title name="NUM">90</title>
                         </block>
                       </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <arg name="points"/>
+            <arg name="length"/>
+            <description>draw a star with given points and sides of given length</description>
+          </mutation>
+          <title name="NAME">draw a star</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" inline="true" uservisible="false">
+              <value name="TIMES">
+                <block type="parameters_get" uservisible="false">
+                  <title name="VAR">points</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" inline="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="parameters_get" uservisible="false">
+                      <title name="VAR">length</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" inline="true" uservisible="false">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_arithmetic" inline="true" uservisible="false">
+                          <title name="OP">DIVIDE</title>
+                          <value name="A">
+                            <block type="math_number" uservisible="false">
+                              <title name="NUM">360</title>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="parameters_get" uservisible="false">
+                              <title name="VAR">points</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_move" inline="true" uservisible="false">
+                          <title name="DIR">moveForward</title>
+                          <value name="VALUE">
+                            <block type="parameters_get" uservisible="false">
+                              <title name="VAR">length</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="draw_turn" inline="true" uservisible="false">
+                              <title name="DIR">turnRight</title>
+                              <value name="VALUE">
+                                <block type="math_arithmetic" inline="true" uservisible="false">
+                                  <title name="OP">DIVIDE</title>
+                                  <value name="A">
+                                    <block type="math_number" uservisible="false">
+                                      <title name="NUM">720</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="parameters_get" uservisible="false">
+                                      <title name="VAR">points</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>

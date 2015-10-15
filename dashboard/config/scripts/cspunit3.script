@@ -165,6 +165,8 @@ level 'U3 - Variables - Identify Variables'
 level 'U3- Variables - Changing the Value'
 level 'U3L19 - test reassignment of two vars’
 level 'U3L19 - Debugging with consoleLog’
+level 'U3 - Variables - Increment'
+level 'U3 - Variables - Incrementing Variables'
 level 'U3L19 - variable reassignment challenge pt2’
 assessment 'U3L19 - MC what are values of abc'
 level 'U3L19 - practice with setText’
