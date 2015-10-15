@@ -98,13 +98,13 @@ describe('applab: getIdDropdown filtering modes', function () {
   });
 
   it('can filter on ID', function () {
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#screen1'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '#screen1'), [
       { "display": '"screen1"', "text": '"screen1"' }
     ]);
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#chart9'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '#chart9'), [
       { "display": '"chart9"', "text": '"chart9"' }
     ]);
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#image1'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '#image1'), [
       { "display": '"image1"', "text": '"image1"' }
     ]);
   });
