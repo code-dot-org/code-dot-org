@@ -1,0 +1,35 @@
+%center
+  %h1 Search for Teachers
+
+%br/
+
+%form{method: 'get'}
+  %table
+    %tr
+      %td
+        Email Filter
+      %td
+        %input{:name => "emailFilter", :id => "emailFilter"}
+    %tr
+      %td
+        Address Filter
+      %td
+        %input{:name => "addressFilter", :id => "addressFilter"}
+
+  %br/
+
+  %center
+    %button
+      = link_to "Search", :search_for_teachers
+
+%br/
+
+%h2 Teachers
+%table.teachers
+  - @teachers.each do |teacher|
+    %tr
+      %td= teacher.id
+      %td= teacher.name
+      %td= teacher.email
+      %td= teacher.full_address
+      %td= teacher.num_students
