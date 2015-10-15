@@ -231,7 +231,8 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
             url: options.response.hint_view_request_url,
             type: 'POST',
             data: {
-              script_level_id : options.response.script_level_id,
+              script_id : options.response.script_id,
+              level_id : options.response.level_id,
               feedback_type : options.feedbackType,
               feedback_xml : feedbackBlocks ? feedbackBlocks.xml : undefined
             }
