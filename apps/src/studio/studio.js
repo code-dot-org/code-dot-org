@@ -1574,6 +1574,7 @@ Studio.init = function(config) {
   config.enableShowCode = utils.valueOr(studioApp.editCode, false);
   config.varsInGlobals = true;
   config.dropletConfig = dropletConfig;
+  config.dropIntoAceAtLineStart = true;
   config.unusedConfig = [];
   for (var prop in skin.AutohandlerTouchItems) {
     AUTO_HANDLER_MAP[skin.AutohandlerTouchItems[prop]] =
@@ -2291,6 +2292,7 @@ Studio.execute = function() {
       blocks: dropletConfig.blocks,
       enableEvents: true,
       studioApp: studioApp,
+      shouldRunAtMaxSpeed: function() { return Studio.slowJsExecutionFactor === 1; },
       onExecutionError: handleExecutionError,
     });
     if (!Studio.JSInterpreter.initialized()) {

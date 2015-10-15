@@ -147,15 +147,6 @@ cn:
   prizes_brilliant: 在每个省和地区一所学校因为一个辉煌的项目将收到 $2000美元。
   prizes_actua: 横跨加拿大的15所学校将通过Actua的成员之一获得实践STEM讲习班。
   prizes_details: 详细情况
-  prizes_nav_dc: 华盛顿特区的神秘之旅
-  prizes_nav_technology: 为你的学校提供$10,000的技术资助
-  prizes_nav_video_chat: 与科技大亨视频聊天
-  prizes_nav_skype_dropbox: 为每一位组织者提供Skype充值卡或Dropbox空间
-  prizes_nav_brilliant: $2,000的杰出实验室计划
-  prizes_nav_actua: 真实的工作室
-  prizes_nav_kids_code: Jeunesse儿童代码
-  prizes_nav_terms: 服务条款
-  prizes_nav_faq: 常见问题
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -169,6 +160,18 @@ cn:
   prizes_nav_title: 奖品
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: 服务条款
+  prizes_nav_faq: 常见问题
+  prizes_nav_dc: 华盛顿特区的神秘之旅
+  prizes_nav_technology: 为你的学校提供$10,000的技术资助
+  prizes_nav_video_chat: 与科技大亨视频聊天
+  prizes_nav_skype_dropbox: 为每一位组织者提供Skype充值卡或Dropbox空间
+  prizes_nav_brilliant: $2,000的杰出实验室计划
+  prizes_nav_actua: 真实的工作室
+  prizes_nav_kids_code: Jeunesse儿童代码
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: "Every organizer will receive a gift card to Amazon.com or Microsoft's Windows Store."
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
