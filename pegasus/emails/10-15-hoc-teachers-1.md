@@ -1,22 +1,23 @@
 ---
 from: 'Hadi Partovi <hadi_partovi@code.org>'
-subject: The Hour of Code teacher test
+subject: Grab your squad for the Hour of Code
 ---
 
 ## The Hour of Code is coming, December 7-13, 2015!
 
 Thanks to educators like you, the [Hour of Code](https://hourofcode.com/) keeps changing the world. This year can be a turning point for computer science in our schools, with new tutorials, new prizes, and you.
 
-Together, we want to reach 100,000 classrooms worldwide
+#### Together, we want to reach 100,000 classrooms worldwide
+
 I hope you’ll join us to prove anybody can learn, and every young person deserves to learn how to build technology that will impact everything in their future. 
 
-[Sign up to host an Hour of Code](https://hourofcode.com/)
+[Sign up for the Hour of Code](https://hourofcode.com/)
 
-## What is the Hour of Code?
+#### What is the Hour of Code?
 It’s a grassroots movement that’s already introduced 100 million students to the basics of computer science. Participate with any one-hour coding activity that students love — no experience needed! 
 
 <% if international == 'true' %>
-### Worldwide, in 40+ languages
+#### Worldwide, in 40+ languages
 Hour of Code activities are available in more than 40 languages. We need your help to reach schools where students or teachers don’t speak English. If you want to help translate new tutorials, [let us know](http://code.org/translate).
 <% end %>
 
@@ -37,7 +38,7 @@ Founder, Code.org
 
 <hr>
 
-<small>You’re receiving this email because you signed the petition on <a href="https://Code.org/">Code.org</a> and let us know you're an educator. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101.</small> <br />
+<small>You’re receiving this email because you signed the petition on <a href="https://code.org/">Code.org</a> and let us know you're an educator. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101.</small> <br />
 <small><strong>Don't like these emails? [Unsubscribe here](<%= unsubscribe_link %>).</strong></small>
 
 
