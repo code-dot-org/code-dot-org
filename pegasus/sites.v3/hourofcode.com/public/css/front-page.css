@@ -101,3 +101,12 @@
   line-height: 16px;
   padding-bottom: 15px;
 }
+
+.prizes-header {
+  margin-top: 25px;
+  margin-bottom: 10px; 
+}
+
+.amazon {
+  width: 200px;
+}
