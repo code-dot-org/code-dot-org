@@ -2,7 +2,7 @@
  * Copyright (c) 2015 Anthony Bau.
  * MIT License.
  *
- * Date: 2015-10-14
+ * Date: 2015-10-15
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Generated from C.g4 by ANTLR 4.5
@@ -62242,7 +62242,7 @@ hook('mouseup', 0, function() {
 });
 
 hook('mouseup', 1, function(point, event, state) {
-  var currentIndentation, el, firstChar, firstNonWhitespaceRegex, futureCursorLocation, hadTextToken, hasTextToken, i, indentation, j, leadingWhitespaceRegex, len, line, newBeginning, newIndex, nextLine, pos, position, prefix, prevLine, rememberedSocketOffsets, skipInitialIndent, suffix, text;
+  var el, firstChar, firstNonWhitespaceRegex, futureCursorLocation, hadTextToken, hasTextToken, i, indentation, j, leadingWhitespaceRegex, len, line, newBeginning, newIndex, nextLine, pos, position, prefix, prevLine, rememberedSocketOffsets, skipInitialIndent, suffix, text;
   if (this.dragReplacing) {
     this.endDrag();
   }
@@ -62253,17 +62253,16 @@ hook('mouseup', 1, function(point, event, state) {
         leadingWhitespaceRegex = /^(\s*)/;
         pos = this.aceEditor.renderer.screenToTextCoordinates(position.x, position.y);
         line = this.aceEditor.session.getLine(pos.row);
-        currentIndentation = leadingWhitespaceRegex.exec(line)[0];
+        indentation = leadingWhitespaceRegex.exec(line)[0];
         skipInitialIndent = true;
         prefix = '';
-        indentation = currentIndentation;
         suffix = '';
         if (this.dropIntoAceAtLineStart) {
           firstNonWhitespaceRegex = /\S/;
           firstChar = firstNonWhitespaceRegex.exec(line);
           if (firstChar && firstChar[0] === '}') {
             prevLine = this.aceEditor.session.getLine(pos.row - 1);
-            currentIndentation = leadingWhitespaceRegex.exec(prevLine)[0];
+            indentation = leadingWhitespaceRegex.exec(prevLine)[0];
           }
           pos = this.adjustPosToLineStart(pos);
           skipInitialIndent = false;
@@ -62272,7 +62271,7 @@ hook('mouseup', 1, function(point, event, state) {
           } else {
             prefix = '\n';
           }
-        } else if (currentIndentation.length === line.length || currentIndentation.length === pos.column) {
+        } else if (indentation.length === line.length || indentation.length === pos.column) {
           suffix = '\n' + indentation;
         } else if (pos.column === line.length) {
           prefix = '\n';
