@@ -41,14 +41,25 @@ Scenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as att
   And I debug cookies
   Then element ".progress_container div:nth-child(6) a" has class "level_link attempted"
 
-@skip
-Scenario: Go to puzzle 1, see video, go somewhere else, return to puzzle 1, should not see video
-  Given I am on "http://studio.code.org/hoc/1"
+@no_mobile
+Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video
+  Given I am on "http://studio.code.org/hoc/10"
   And I rotate to landscape
   Then I wait until element "#video" is visible
   Then I close the dialog
-  Then I wait to see a dialog titled "Puzzle 1 of 20"
+  Then I wait to see a dialog titled "Puzzle 10 of 20"
   Then I close the dialog
-  Then I am on "http://studio.code.org/hoc/2"
-  Then I am on "http://studio.code.org/hoc/1"
-  Then element "#runButton" is visible
+  Then I am on "http://studio.code.org/hoc/11"
+  Then I wait to see a dialog titled "Puzzle 11 of 20"
+  Then I am on "http://studio.code.org/hoc/10"
+  Then element "#video" does not exist
+
+Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, should not see callouts
+  Given I am on "http://studio.code.org/hoc/9"
+  And I rotate to landscape
+  Then I wait to see a dialog titled "Puzzle 9 of 20"
+  And I close the dialog
+  Then element "#qtip-4-content" is visible
+  Then I am on "http://studio.code.org/hoc/10"
+  Then I am on "http://studio.code.org/hoc/9"
+  Then element "#qtip-4-content" does not exist

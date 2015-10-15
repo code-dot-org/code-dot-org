@@ -29,6 +29,19 @@
       return;
     }
 
+    callouts = callouts.filter(function (element, index, array) {
+      if (dashboard.clientState.hasSeenCallout(element.id)) {
+        return false;
+      } else {
+        dashboard.clientState.recordCalloutSeen(element.id);
+        return true;
+      }
+    });
+
+    if (!callouts || callouts.length === 0) {
+      return;
+    }
+
     // Hide callouts when the function editor is closed (otherwise they jump to
     // the top left corner)
     $(window).on('function_editor_closed', function () {
