@@ -1,5 +1,6 @@
 ---
 title: Educator Overview
+nav: educate_nav
 ---
 
 <br/>
