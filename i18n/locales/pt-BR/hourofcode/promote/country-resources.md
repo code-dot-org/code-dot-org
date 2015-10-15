@@ -34,6 +34,15 @@ Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Des
 
 Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
+<% elsif @country == 'jp' %>
+
+## Hour of Code(アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
+
+[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -42,7 +51,7 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 [<img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
 
-## 1) Veja os tutoriais:
+## 1) Try the tutorials:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
@@ -53,7 +62,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Planeje suas necessidades de hardware (computadores são opcionais)
+## 2) Plan your hardware needs - computers are optional
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
@@ -61,12 +70,12 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **Visualize a página de parabenização** para saber o que os alunos veem quando terminam. 
   * **Forneça fones de ouvido para o seu grupo** ou peça aos alunos que tragam seus próprios fones, se o tutorial escolhido funcionar melhor com som.
 
-## 3) Programe-se com antecedência com base na tecnologia disponível
+## 3) Plan ahead based on your technology available
 
   * **Não tem dispositivos suficientes?** Use [programação em duplas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Quando os participantes trabalham em equipe, eles ajudam uns aos outros e dependem menos do professor.
   * **Tem baixa largura de banda?** Programe-se para mostrar os vídeos para a classe toda, assim os alunos não terão de fazer o download individualmente. Outra opção é trabalhar com os tutoriais offline.
 
-## 4) Inspire seus alunos - mostre um vídeo a eles
+## 4) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 

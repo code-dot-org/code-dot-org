@@ -34,6 +34,15 @@ Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Des
 
 Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
+<% elsif @country == 'jp' %>
+
+## Hour of Code(アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
+
+[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -42,7 +51,7 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 [<img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
 
-## 1) 다음 튜토리얼을 따라해 보세요:
+## 1) Try the tutorials:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
@@ -53,7 +62,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) 필요한 하드웨어 - 컴퓨터가 꼭 필요하지는 않습니다.
+## 2) Plan your hardware needs - computers are optional
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
@@ -61,12 +70,12 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **축하 페이지 미리보기** 를 통해 학생들이 완료했을 때 보게 될 내용들을 살펴보세요. 
   * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-## 3) 사용할 수 있는 것들을 미리 준비해 주세요.
+## 3) Plan ahead based on your technology available
 
   * **장비가 충분하지 않다면?** [페어프로그래밍(pair programming)](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) 방법을 사용하세요. When participants partner up, they help each other and rely less on the teacher.
   * **통신 속도가 느리다면?** 교실 앞에서 비디오를 보여주면, 학생들 모두가 비디오를 다운로드 받으면서 보지 않아도 됩니다. 아니면, 오프라인용 언플러그드 활동을 활용해 보세요. 
 
-## 4) 학생들 적극적으로 참여시키기 - 동영상을 보여주세요.
+## 4) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
