@@ -40,11 +40,13 @@ module LevelsHelper
 
     # The ChannelsApi may set a storage_id cookie that we need to copy to the response.
     if headers['Set-Cookie']
-      begin
-        cookies headers['Set-Cookie'].split('\;').first.split('=')
-      rescue
-        # Unable to copy over storage_id.
-      end
+      cookie = headers['Set-Cookie'].split(';').map{ |token| token.strip.split('=') }
+      name = cookie[0][0]
+      cookie[0][0] = 'value'
+      cookie = Hash[cookie]
+      cookie['value'] = CGI.unescape cookie['value']
+      cookie['expires'] = Time.parse cookie['expires']
+      cookies[name] = cookie
     end
 
     # Return the newly created channel ID.
