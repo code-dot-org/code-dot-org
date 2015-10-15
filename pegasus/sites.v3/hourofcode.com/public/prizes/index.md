@@ -40,6 +40,10 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
 
 Every educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com or Microsoft’s Windows Store** as a thank you gift!
 
+<img src="/images/fill-275x225/amazon_giftcards.jpg"/>
+
+<img src="/images/fill-275x225/microsoft_giftcards.png"/>
+
 <% if @country == 'us' %>
 
 ## 51 schools will win a class-set of laptops (or $10,000 for other technology)
