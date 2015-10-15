@@ -1,25 +1,26 @@
 ---
 from: 'Hadi Partovi <hadi_partovi@code.org>'
-subject: The Hour of Code
+subject: The Hour of Code 2015
 ---
 
 Hi friends, 
 
 ## The Hour of Code is coming again!
 
-The [Hour of Code movement](https://hourofcode.com/) keeps changing the world. It’s reached every Apple Store worldwide, the White House, 200 partners, and more than 100 million students in 180 countries. 
+The [Hour of Code movement](https://hourofcode.com/) keeps changing the world. It’s reached every Apple Store worldwide, the White House, 300 partners, and more than 100 million students in 180 countries. 
 
 **The Hour of Code is a challenge:** Try learning to code for just one hour and prove that anybody can learn the basics.
 
 This year can really be a turning point for computer science in our schools — with new tutorials, new prizes, and an ambitious new goal for December 7-13. **Can you get involved?**
 
 ## Together, we want to reach 100,000 events
-I hope you’ll join us to prove anybody can learn, and every young person deserves to learn how to build technology that will impact everything in their future. *Every* organizer will receive a gift card to Amazon.com or Microsoft’s Windows Store as a thank-you gift. 
+I hope you’ll join us to prove anybody can learn, and every young person deserves to learn how to build technology that will impact everything in their future. *Every* organizer will receive a gift card to Amazon or Microsoft’s Windows Store as a thank-you gift. 
 
 ## How can you help?
 - Ask your school to participate
 - Host your own Hour of Code event
-- Or take an hour to learn yourself<br />
+- Or take an hour to learn yourself
+
 [Here’s how to get involved](https://hourofcode.com/promote)
 
 <% if international == 'true' %>
