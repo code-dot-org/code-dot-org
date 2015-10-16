@@ -416,12 +416,12 @@
   events_nav_title: Hour of Code Events
   events_nav_all: All Events
   events_nav_whole_schools: Whole Schools
-  events_nav_special: Special Events
+  events_nav_special: CS Tech Jams
   events_nav_orgs: Organizations
   events_all_old_title: "All @year Hour of Code events"
   events_all_title: All Hour of Code events
   events_whole_school_title: Whole-school Hour of Code events
-  events_special_title: Special Hour of Code events
+  events_special_title: Hour of Code CS Tech Jams
   events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: event
   events: events
