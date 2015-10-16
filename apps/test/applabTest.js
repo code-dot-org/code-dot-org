@@ -15,6 +15,7 @@ window.Applab = {
 
 var AppLab = require('@cdo/apps/applab/applab');
 var designMode = require('@cdo/apps/applab/designMode');
+var applabCommands = require('@cdo/apps/applab/commands');
 
 describe('applab: designMode.addScreenIfNecessary', function () {
   it ('adds a screen if we dont have one', function () {
@@ -117,5 +118,132 @@ describe('applab: getIdDropdown filtering modes', function () {
     assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '.chart-friend'), [
       { "display": '"image1"', "text": '"image1"' }
     ]);
+  });
+});
+
+describe('getText/setText commands', function () {
+  describe('simplified innerText emulation', function () {
+    var getInnerText = applabCommands.getElementInnerText_;
+    var setInnerText = applabCommands.setElementInnerText_;
+    var element;
+
+    beforeEach(function () {
+      element = document.createElement('div');
+      element.setAttribute("contentEditable", true);
+    });
+
+    describe('getter', function () {
+      it('reads plain text as-is', function () {
+        element.innerHTML = 'plain text';
+        assert.equal(getInnerText(element), 'plain text');
+      });
+
+      it('converts nonbreaking spaces to plain spaces', function () {
+        element.innerHTML = 'text with &nbsp;lots &nbsp; of &nbsp; &nbsp;whitespace';
+        assert.equal(getInnerText(element), 'text with  lots   of    whitespace');
+
+        element.innerHTML = 'consecutive&nbsp;&nbsp;&nbsp;&nbsp;nonbreaking spaces';
+        assert.equal(getInnerText(element), 'consecutive    nonbreaking spaces');
+      });
+
+      it('converts divs to newlines', function () {
+        element.innerHTML = 'text<div>with</div><div>newlines</div>';
+        assert.equal(getInnerText(element), 'text\nwith\nnewlines');
+      });
+
+      it('converts <div><br></div> to blank lines', function () {
+        element.innerHTML = 'text<div><br></div><div>with</div><div><br></div><div><br></div><div>empty newlines</div>';
+        assert.equal(getInnerText(element), 'text\n\nwith\n\n\nempty newlines');
+      });
+
+      it('does not add leading newline for leading nonempty div', function () {
+        element.innerHTML = '<div>text</div><div>with</div><div>leading div</div>';
+        assert.equal(getInnerText(element), 'text\nwith\nleading div');
+      });
+
+      it('does add leading newline for leading empty div', function () {
+        element.innerHTML = '<div><br></div><div>text</div><div>with</div><div>leading empty div</div>';
+        assert.equal(getInnerText(element), '\n\ntext\nwith\nleading empty div');
+      });
+
+      it('Unescapes < and >', function () {
+        element.innerHTML = 'text with &lt;b&gt;markup&lt;/b&gt;';
+        assert.equal(getInnerText(element), 'text with <b>markup</b>');
+      });
+
+      it('Unescapes &', function () {
+        element.innerHTML = 'text with&amp;nbsp;HTML &amp;lt;escapes&amp;gt;';
+        assert.equal(getInnerText(element), 'text with&nbsp;HTML &lt;escapes&gt;');
+      });
+    });
+
+    describe('setter', function () {
+      it('sets plain text as-is', function () {
+        setInnerText(element, 'plain text');
+        assert.equal(element.innerHTML, 'plain text');
+      });
+
+      it('adds nonbreaking spaces for extra whitespace', function () {
+        setInnerText(element, 'text with  lots   of    whitespace');
+        assert.equal(element.innerHTML, 'text with &nbsp;lots &nbsp; of &nbsp; &nbsp;whitespace');
+      });
+
+      it('adds divs for lines after the first line', function () {
+        setInnerText(element, 'text\nwith\nnewlines');
+        assert.equal(element.innerHTML, 'text<div>with</div><div>newlines</div>');
+      });
+
+      it('adds divs containing <br> for empty lines', function () {
+        setInnerText(element, 'text\n\nwith\n\n\nempty newlines');
+        assert.equal(element.innerHTML, 'text<div><br></div><div>with</div><div><br></div><div><br></div><div>empty newlines</div>');
+      });
+
+      it('html-escapes < and >', function () {
+        setInnerText(element, 'text with <b>markup</b>');
+        assert.equal(element.innerHTML, 'text with &lt;b&gt;markup&lt;/b&gt;');
+      });
+
+      it('html-escapes &', function () {
+        setInnerText(element, 'text with&nbsp;HTML &lt;escapes&gt;');
+        assert.equal(element.innerHTML, 'text with&amp;nbsp;HTML &amp;lt;escapes&amp;gt;');
+      });
+    });
+
+    describe('round-trips', function () {
+      function roundTripTest(text) {
+        setInnerText(element, text);
+        // One extra round-trip for good measure
+        setInnerText(element, getInnerText(element));
+        assert.equal(getInnerText(element), text);
+      }
+
+      it('preserves plain text', function () {
+        roundTripTest('plain text');
+      });
+
+      it('preserves whitespace', function () {
+        roundTripTest('text with  lots   of    whitespace');
+      });
+
+      it('preserves newlines', function () {
+        roundTripTest('text\nwith\nnewlines');
+      });
+
+      it('preserves empty newlines', function () {
+        roundTripTest('text\n\nwith\n\n\nempty newlines');
+      });
+
+      it('preserves leading and trailing newlines', function () {
+        roundTripTest('\n\n\ntext between newlines\n\n');
+      });
+
+      it('preserves markup', function () {
+        roundTripTest('text with <b>markup</b>');
+      });
+
+      it('preserves escape characters', function () {
+        roundTripTest('text with&nbsp;HTML &lt;escapes&gt;');
+      });
+    });
   });
 });
