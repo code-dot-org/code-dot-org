@@ -2257,6 +2257,45 @@ levels.js_hoc2015_chain_characters = {
     'addCharacter("roo");',
     'addCharacter("roo");',
     'function whenTouchRoo() {',
+    '  ',
+    '}',
+    'function whenGetAllCharacters() {',
+    '  ',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"It\'s up to you, BOT1!"',
+  'instructions2': 'When you touch each ROO, make two MICE appear.  Then collect them all.  Make sure you can win the game.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'timeoutAfterWhenRun': true,
+  'showTimeoutRect': true,
+  'requiredForSuccess' : {
+    'scoreMinimum': 100
+  }
+};
+
+levels.js_hoc2015_double_chain_characters = {
+  'editCode': true,
+  'background': 'ship',
+  'wallMap': 'horizontal',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'addCharacter': null,
+    'winGame': null,
+  },
+  'startBlocks': [
+    'addCharacter("roo");',
+    'addCharacter("roo");',
+    'function whenTouchRoo() {',
     '  addCharacter("bird");',
     '  addCharacter("bird");',
     '}',
