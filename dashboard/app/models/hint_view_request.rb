@@ -40,5 +40,4 @@ class HintViewRequest < ActiveRecord::Base
         {feedback_type: feedback_type, feedback_xml: feedback_xml}
       end : []
   end
-
 end
