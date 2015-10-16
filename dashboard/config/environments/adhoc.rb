@@ -14,7 +14,9 @@ Dashboard::Application.configure do
   config.serve_static_files = true
   config.static_cache_control = "public, max-age=86400"
 
-  # Do not fallback to assets pipeline if a precompiled asset is missed.
+  config.action_controller.default_url_options = { host: 'adhoc-studio.code.org' } 
+
+  # DO not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
   # Version of your assets, change this if you want to expire all your assets.

@@ -10,6 +10,7 @@
     %li
       %a{href: '#notes-outer'}= I18n.t('video.notes')
 
+
 - if @game.unplugged?
   = render partial: 'levels/unplug', locals: {app: @game.app}
 - elsif @level.is_a?(Blockly) && @level.embed == 'true' && !@edit_blocks
@@ -31,11 +32,17 @@
 - else
   = render partial: 'levels/blockly'
 
-- if @script.try(:hoc?) && (@script_level.try(:chapter) == 1 || @script_level.try(:position) == 1)
+- # XXX Experimentally disable this since it appears to be slowing things down
+- if false && @script.try(:hoc?) && (@script_level.try(:chapter) == 1 || @script_level.try(:position) == 1)
   -# special tracking image to make sure a cookie is set when hoc starts (/hoc/1)
   = image_tag(tracking_pixel_url(@script))
 
 = render partial: 'levels/admin'
 
-- if @script && !@script.pd? && current_user.try(:teacher?)
+- # The respond_to? test below is to workaround a bug where we a server instance will sometimes fail to define that method.
+- if @script && current_user.try(:teacher?) && (!@script.respond_to?('pd?') || !@script.pd?)
   = render partial: 'levels/teacher'
+
+-if @script_level && @script_level.next_level
+  %link{:rel => 'prefetch', :href => build_script_level_path(@script_level.next_level)}
+

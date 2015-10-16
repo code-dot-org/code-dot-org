@@ -1,8 +1,12 @@
 class ScriptLevelsController < ApplicationController
+
+  # Maximum age in seconds for cached content
+  HTTP_MAXAGE = 10.minutes 
+
   check_authorization
   include LevelsHelper
 
-  before_filter :prevent_caching
+  before_filter :prevent_caching, :except => ['show', 'new']
 
   def reset
     authorize! :read, ScriptLevel
@@ -31,6 +35,8 @@ class ScriptLevelsController < ApplicationController
     @script = Script.get_from_cache(params[:script_id])
 
     load_script_level
+
+    response.headers['Cache-Control'] = "public,max-age=#{HTTP_MAXAGE},s-maxage=#{HTTP_MAXAGE}"
 
     if request.path != (canonical_path = build_script_level_path(@script_level))
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?

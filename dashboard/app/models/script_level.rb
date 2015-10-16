@@ -19,9 +19,14 @@
 #  index_script_levels_on_stage_id   (stage_id)
 #
 
+require 'levels_helper'
+
 # Joins a Script to a Level
 # A Script has one or more Levels, and a Level can belong to one or more Scripts
 class ScriptLevel < ActiveRecord::Base
+  include LevelsHelper
+  include Rails.application.routes.url_helpers
+
   belongs_to :level
   belongs_to :script, inverse_of: :script_levels
   belongs_to :stage, inverse_of: :script_levels
@@ -101,6 +106,7 @@ class ScriptLevel < ActiveRecord::Base
         position: position,
         kind: kind,
         title: level_display_text,
+        url: build_script_level_path(self)
     }
 
     # Add a previous pointer if it's not the obvious (level-1)
