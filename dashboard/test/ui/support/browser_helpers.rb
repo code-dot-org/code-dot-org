@@ -5,6 +5,12 @@ module BrowserHelpers
     text.should eq expectedText
   end
 
+  def element_has_html(selector, expectedHtml)
+    expectedHtml.gsub!('\"', '"')
+    text = @browser.execute_script("return $(\"#{selector}\").html();")
+    text.should eq expectedHtml
+  end
+
   def element_has_i18n_text(selector, language, locKey)
     locKey.gsub!('\"', '"')
     text = @browser.execute_script("return $(\"#{selector}\").text();")
