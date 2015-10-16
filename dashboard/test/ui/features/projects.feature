@@ -28,6 +28,7 @@ Scenario: Applab Flow
   And I reload the page
   Then I am on "http://studio.code.org/projects/applab"
   And I rotate to landscape
+  Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
   # TODO  ideally we should probably create some code and/or design elements here
   # looks like we have add_code_to_editor
   And I wait to see "#runButton"
