@@ -816,6 +816,7 @@ en:
       U3L13 Add Button Instructions:
         description here: description here
         title: title
+      U3L13 Student Facing Lesson Plan: {}
       U3L13 Student Lesson Introduction:
         Buttons on the Screen: Buttons on the Screen
       U3L14 - Student Intro Page:
@@ -1010,6 +1011,10 @@ en:
       challenges sample 7:
         Give these a try: Give these a try
         Life Science Challenges: Life Science Challenges
+      duino battery led:
+        duino battery led: duino battery led
+      duino button led:
+        duino button led: duino button led
       equity Intro:
         Introduction to Equity PD: Introduction to Equity PD
       equity activity:
@@ -1887,13 +1892,11 @@ en:
         'onEvent("id", "click", function() {...}):': 'onEvent("id", "click", function() {...}):'
         trigger: trigger
       U3L14 - Matching Events to Description:
-        Event triggers: Event triggers
-        Match the event type name with the description of what triggers it.: Match the event type name with the description of what triggers it.
-        Triggers constantly while moving over a button.: Triggers constantly while moving over a button.
         Triggers once, the instant mouse hovers over the button: Triggers once, the instant mouse hovers over the button
-        Triggers when mouse button is clicked once: Triggers when mouse button is clicked once
         Triggers when mouse button is pressed: Triggers when mouse button is pressed
         Triggers when mouse button is released: Triggers when mouse button is released
+        Triggers when mouse the button is clicked once: Triggers when mouse the button is clicked once
+        Triggers whenever the mouses moves: Triggers whenever the mouses moves
         click: click
         mousedown: mousedown
         mousemove: mousemove

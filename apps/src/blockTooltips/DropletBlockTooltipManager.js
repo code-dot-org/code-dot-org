@@ -13,6 +13,7 @@ var dom = require('../dom');
  */
 var DropletBlockTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.tooltipsEnabled = true;
 };
 
 var DEFAULT_TOOLTIP_CONFIG = {
@@ -44,6 +45,10 @@ DropletBlockTooltipManager.prototype.installTooltipsIfNotInstalled = function ()
 };
 
 DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = function () {
+  if (!this.tooltipsEnabled) {
+    return;
+  }
+
   $('.droplet-hover-div').each(function (_, blockHoverDiv) {
     if ($(blockHoverDiv).hasClass('tooltipstered')) {
       return;
@@ -72,6 +77,8 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = f
       }.bind(this)
     });
 
+    // Store the title/funcName as a block id so we can attach callouts later:
+    $(blockHoverDiv).attr('id', 'droplet_palette_block_' + funcName);
     $(blockHoverDiv).tooltipster(configuration);
   }.bind(this));
 };
@@ -98,6 +105,14 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
     signatureOverride: tooltipInfo.signatureOverride,
     fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
   });
+};
+
+/**
+ * @param {boolean} enabled if tooltips should be enabled
+ */
+
+DropletBlockTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
+  this.tooltipsEnabled = !!enabled;
 };
 
 module.exports = DropletBlockTooltipManager;

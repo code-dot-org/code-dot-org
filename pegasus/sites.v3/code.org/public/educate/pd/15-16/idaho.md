@@ -52,7 +52,7 @@ Room 307 (3rd floor) <br/>
 1020 S. Manitou Ave. <br/>
 Boise, ID 83706
 
-The building location has changed so please carefully look at the following BSU map: [code.org/files/bsu-parking.pdf](http://code.org/files/bsu-parking.pdf). The MEC building is circled in red. All of the blue highlights indicate free street parking on Saturdays.
+The building location has changed so please carefully look at the  [BSU map here](http://code.org/files/bsu-parking.pdf). The MEC building is circled in red. All of the blue highlights indicate free street parking on Saturdays.
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -108,7 +108,7 @@ Room 307 (3rd floor) <br/>
 1020 S. Manitou Ave. <br/>
 Boise, ID 83706
 
-The building location has changed so please carefully look at the following BSU map: [code.org/files/bsu-parking.pdf](http://code.org/files/bsu-parking.pdf). The MEC building is circled in red. All of the blue highlights indicate free street parking on Saturdays.
+<b>NOTE:</b> The building location has changed so please carefully look at the  [BSU map here](http://code.org/files/bsu-parking.pdf). The MEC building is circled in red. All of the blue highlights indicate free street parking on Saturdays.
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -171,9 +171,9 @@ University of Idaho - Idaho Falls<br/>
 TAB 320<br/>
 Idaho Falls, ID  83402
 
-Please refer to parking directions [here](http://www.uidaho.edu/idahofalls/aboutus/hoursmapsparking).
+Parking is free on Saturdays. Please refer to parking directions [here](http://www.uidaho.edu/idahofalls/aboutus/hoursmapsparking).
 
-**Satellite Location - North Idaho**
+**Satellite Location - CDA**
 
 University of Idaho - Coeur d’Alene<br/>
 1031 N. Academic Way<br/>
@@ -181,7 +181,7 @@ Suite 242 , Room 128<br/>
 Coeur d’Alene, ID  83814<br/>
 
 
-Parking is free. See directions [here](/files/UI-Harbor-Center.pdf).
+Parking is free on Saturdays. Please refer to parking directions [here](/files/UI-Harbor-Center.pdf).
 
 **What to bring to Phase 3 bi-yearly sessions:**
 

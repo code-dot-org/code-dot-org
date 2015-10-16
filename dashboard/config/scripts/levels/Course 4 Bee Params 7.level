@@ -17,7 +17,7 @@
     "step_mode": "1",
     "nectar_goal": "95",
     "flower_type": "redWithNectar",
-    "ideal": "39",
+    "ideal": "40",
     "instructions": "Try using your new function to collect all of this nectar.",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",

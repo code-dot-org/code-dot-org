@@ -17,7 +17,7 @@ There are 3 pages of background and information contained here:
  
 ### What is the Internet Simulator? An Overview:
 
-The Internet Simulator is a tool developed by Code.org for our new high school [Computer Science Principles](/educate/csp) class. The tool is designed to let students get a hands on experience experimenting with (and solving) diffferent kinds of problems associated with networked computers. The Internet Simulator is used in multiple lessons throughout Units 1 and 2 in our curriculum to successively build up the different layers of the Internet. 
+The Internet Simulator is a tool developed by Code.org for our new high school [Computer Science Principles](/educate/csp) class. The tool is designed to let students get a hands on experience experimenting with (and solving) different kinds of problems associated with networked computers. The Internet Simulator is used in multiple lessons throughout Units 1 and 2 in our curriculum to successively build up the different layers of the Internet. 
 
 If you are considering using the tool in your classroom with activities you design, we would recommend you get familiar with the tool via our [lesson plans](/educate/csp/unit1). **The setup instructions** on the next page are for teachers who would like to use the Internet Simulator separate from the Code.org CSP curriculum. 
 
@@ -38,7 +38,7 @@ The Internet Simulator was designed to be used in a *classroom* with students wo
 
 ### What Can The Internet Simulator be Configured To Do?
 
-At its most basic, the Interent Simulator ters can communicate a single bit of information via a single share wire, to what protocols are needed to ensure reliable delivery of messages, to experimenting with sophisticated text-based protocols such as HTTP or HTML.
+At its most basic, the Internet Simulator can communicate a single bit of information via a single share wire, to what protocols are needed to ensure reliable delivery of messages, to experimenting with sophisticated text-based protocols such as HTTP or HTML.
  <br><br>
 <img src="https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png" width="600px" hspace="100px"/>
 <br><br>

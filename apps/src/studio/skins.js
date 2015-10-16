@@ -194,7 +194,6 @@ function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
   skin.defaultBackground = 'forest';
-  skin.defaultWallMap = 'blank';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
@@ -208,43 +207,43 @@ function loadHoc2015(skin, assetUrl) {
 
   // TODO: proper item class names
   skin.ItemClassNames = [
-    'man',
-    'pilot',
     'pig',
-    'bird',
-    'mouse',
+    'man',
     'roo',
-    'spider'
+    'bird',
+    'spider',
+    'mouse',
+    'pilot'
   ];
 
   skin.AutohandlerTouchItems = {
-    'man': 'whenTouchMan',
-    'pilot': 'whenTouchPilot',
     'pig': 'whenTouchPig',
-    'bird': 'whenTouchBird',
-    'mouse': 'whenTouchMouse',
+    'man': 'whenTouchMan',
     'roo': 'whenTouchRoo',
-    'spider': 'whenTouchSpider'
+    'bird': 'whenTouchBird',
+    'spider': 'whenTouchSpider',
+    'mouse': 'whenTouchMouse',
+    'pilot': 'whenTouchPilot'
   };
 
   skin.specialItemFrames = {
+    'pig': 12,
     'man': 12,
-    'pilot': 12,
-    'pig': 15,
+    'roo': 15,
     'bird': 8,
-    'mouse': 12,
-    'roo': 1,
-    'spider': 1
+    'spider': 12,
+    'mouse': 1,
+    'pilot': 13
   };
 
   skin.specialItemScale = {
+    'pig': 1,
     'man': 1,
-    'pilot': 1,
-    'pig': 2,
-    'bird': 2,
-    'mouse': 1.2,
-    'roo': 0.6,
-    'spider': 0.6
+    'roo': 1.6,
+    'bird': 1.6,
+    'spider': 1.2,
+    'mouse': 0.6,
+    'pilot': 1
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -262,6 +261,11 @@ function loadHoc2015(skin, assetUrl) {
   // For a smaller collision region on a goal.
   skin.goalCollisionRectWidth = 50;
   skin.goalCollisionRectHeight = 50;
+
+  // Whether that goal should fade out when touched.  If true, then the
+  // success image is never shown.
+  skin.fadeOutGoal = true;
+  skin.goalSuccess = null;
 
   // Draw a goal an an offset to its usual location, useful for oversize goal
   // images, such as a person standing taller than a single grid square whose
@@ -323,13 +327,13 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   // TODO: Create actual item choices
-  skin.man = skin.assetUrl('walk_item1.png');
-  skin.pilot = skin.assetUrl('walk_item2.png');
-  skin.pig = skin.assetUrl('walk_item3.png');
+  skin.pig = skin.assetUrl('walk_item1.png');
+  skin.man = skin.assetUrl('walk_item2.png');
+  skin.roo = skin.assetUrl('walk_item3.png');
   skin.bird = skin.assetUrl('walk_item4.png');
-  skin.mouse = skin.assetUrl('walk_item5.png');
-  skin.roo = skin.assetUrl('walk_item6.png');
-  skin.spider = skin.assetUrl('walk_item7.png');
+  skin.spider = skin.assetUrl('walk_item5.png');
+  skin.mouse = skin.assetUrl('walk_item6.png');
+  skin.pilot = skin.assetUrl('walk_item7.png');
 
   skin.forest = {
     background: skin.assetUrl('background_background1.jpg'),

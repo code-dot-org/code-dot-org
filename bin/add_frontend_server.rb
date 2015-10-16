@@ -1,18 +1,31 @@
+#!/usr/bin/env ruby
+#
 # Script for deploying an new Amazon EC2 frontend instance.
 # For details usage instructions, please see:
 # http://wiki.code.org/display/PROD/How+to+add+a+new+Frontend+server
 
 require 'aws-sdk'
 require_relative '../deployment'
+require 'etc'
 require 'net/ssh'
 require 'net/scp'
 require 'io/console'
 require 'json'
-require 'etc'
+require 'set'
 
-MAX_WAIT_TIME = 600 #Wait no longer than 10 minutes for instance creation. Typically this takes a couple minutes
+# A map from a supported environment to the corresponding Chef role to use for
+# that environment.
+ROLE_MAP = {
+  'production' => 'front-end',
+  'adhoc' => 'unmonitored-standalone',
+}
 
-# Executes an arbitrary command on an ssh channel, prints the output to console, bails out if the command fails
+# Wait no longer than 10 minutes for instance creation. Typically this takes a
+# couple minutes.
+MAX_WAIT_TIME = 600
+
+# Executes an arbitrary command on an ssh channel, prints the output to console,
+# bails out if the command fails
 # ssh: ssh channel from Net::SSH start
 # command: Command to execute on the remote host
 # exit_error_string: Error message to throw if the command exits with something other than 1
@@ -42,6 +55,69 @@ def execute_ssh_on_channel(ssh, command, exit_error_string)
   ssh.loop
 end
 
+
+# Returns a (instance_zone, frontend_name) typle for the given
+# ec2client.  The instance_zone is the one with least capacity amongst frontend instances,
+# and the frontend_name is one that is (probably) not currently already a known name to Chef,
+# except in infrequent race conditions.
+
+# param {string} ssh_username: The ssh username to use for connecting to the gateway.
+# param {frontend_name}: The base frontend name, or nil to use an automatically generated name.
+# (If the base name is not unique, a unique suffix will be added to it to provide uniqueness)
+def generate_instance_zone_and_name(ec2client, ssh_username, frontend_name = nil)
+  instances = ec2client.describe_instances
+
+  #Determine distribution of availability zones, pick the one that has the least capacity among frontend instances
+  frontend_instances = instances.reservations.map do |reservation|
+    reservation.instances.select{|instance| instance.state.name == 'running' && instance.tags.detect{|tag| tag.key ==
+                                                                                                     'Name' && tag.value.include?('frontend')}}
+  end
+
+  frontend_instances.flatten!
+
+  instance_distribution = frontend_instances.each_with_object(Hash.new(0)){|(instance, _), instance_distribution|
+    instance_distribution[instance.placement.availability_zone] += 1}
+  determined_instance_zone, instance_count = instance_distribution.min_by{|_, v| v}
+
+  puts "Using underscaled instance zone #{determined_instance_zone}"
+
+  # There may be multiple instances of this script running at once or
+  # stale clients or nodes in Chef, so try a few different instance indices to
+  # find a unique one.
+  Net::SSH.start('gateway.code.org', ssh_username) do |ssh|
+    retry_index = 0
+    while retry_index < 50
+      if frontend_name
+        name = "#{frontend_name}#{retry_index == 0 ? '' : retry_index.to_s}"
+      else
+        name = "frontend-#{determined_instance_zone[-1, 1] + (instance_count + 1 + retry_index).to_s}"
+      end
+
+      # Collect the names of all of the AWS instances.
+      aws_instance_names = Set.new do |names|
+        c.describe_instances.reservations.each do |r|
+          r.instances.each { |i| i.tags.each { |tag| names << tag.value if tag.key == 'Name' }}
+        end
+      end
+
+      # Match sure there are not hits against Chef node or client names.
+      is_duplicate = aws_instance_names.include?(name) ||
+                     ssh.exec!("knife node list | egrep \'^#{name}$\'") ||
+                     ssh.exec!("knife client list | egrep \'^#{name}$\'")
+      if is_duplicate
+        puts "Name #{name} is already in use, trying new index."
+        sleep(rand(4))  # Back off a random amount.
+      else
+        return determined_instance_zone, name
+      end
+      retry_index += 1
+    end
+  end
+
+  raise "Unable to find unique instance name"
+end
+
+
 options = {}
 
 OptionParser.new do |opts|
@@ -53,6 +129,10 @@ OptionParser.new do |opts|
     options['name'] = name
   end
 
+  opts.on('-r', '--role ROLE', 'Role for new instance, overrides environment default') do |role|
+    options['role'] = role
+  end
+
   opts.on('-h', '--help', 'Print this') { puts options; exit }
 
   opts.on('-u', '--username-override USERNAME', 'Username to log into gateway with') do |username|
@@ -60,11 +140,13 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-unless ['production'].include?(options['environment'])
-  throw 'Environments other than production are currently unsupported'
-end
+environment = options['environment']
+raise OptionParser::MissingArgument, 'Environment is required' if environment.nil?
 
-raise OptionParser::MissingArgument, 'Environment is required' if options['environment'].nil?
+role = options['role'] || ROLE_MAP[environment]
+raise "Unsupported environment #{environment}" unless role
+
+puts "Creating new #{environment} instance using role #{role}"
 
 username = options['username'] || Etc.getlogin
 
@@ -76,43 +158,8 @@ end
 
 ec2client = Aws::EC2::Client.new
 
-instances = ec2client.describe_instances
-
-#Determine distribution of availability zones, pick the one that has the least capacity among frontend instances
-frontend_instances = instances.reservations.map do |reservation|
-  reservation.instances.select{|instance| instance.state.name == 'running' && instance.tags.detect{|tag| tag.key ==
-      'Name' && tag.value.include?('frontend')}}
-end
-
-frontend_instances.flatten!
-
-instance_distribution = frontend_instances.each_with_object(Hash.new(0)){|(instance, _), instance_distribution|
-  instance_distribution[instance.placement.availability_zone] += 1}
-determined_instance_zone, instance_count = instance_distribution.min_by{|_, v| v}
-
-puts "Using underscaled instance zone #{determined_instance_zone}"
-
-instance_name = options['name'] ||
-                "frontend-#{determined_instance_zone[-1, 1] + (instance_count + 1).to_s}"
-
-puts "Naming instance #{instance_name}, verifying that the name is okay"
-
-Net::SSH.start('gateway.code.org', username) do |ssh|
-  node_list = ssh.exec!("knife node list | egrep \'^#{instance_name}$\'")
-
-  unless node_list.nil?
-    throw 'Node name is currently in use. This should never happen - see if the host exists in EC2'
-  end
-
-  client_list = ssh.exec!("knife client list | egrep \'^#{instance_name}$\'")
-
-  unless client_list.nil?
-    throw 'Client name is in use and is likely stale. Log into gateway and delete the client, then rerun this command'
-  end
-
-end
-
-puts "Name #{instance_name} is okay, creating frontend server"
+determined_instance_zone, instance_name = generate_instance_zone_and_name(ec2client, username, options['name'])
+puts "Naming instance #{instance_name}, creating frontend server"
 
 run_instance_response = ec2client.run_instances ({
                                                     dry_run: false,
@@ -126,7 +173,7 @@ run_instance_response = ec2client.run_instances ({
                                                     },
                                                     disable_api_termination: true, #Prevent against api termination
                                                     placement: {
-                                                        availability_zone: determined_instance_zone
+                                                      availability_zone: determined_instance_zone
                                                     },
                                                     block_device_mappings: [
                                                         {
@@ -143,7 +190,7 @@ run_instance_response = ec2client.run_instances ({
 
 instance_id = run_instance_response.instances[0].instance_id
 
-puts "Looking for instance id  #{instance_id}"
+puts "Looking for instance id #{instance_id}"
 
 started_at = Time.now
 ec2client.wait_until(:instance_running, instance_ids: [instance_id]) do |waiting|
@@ -172,7 +219,7 @@ ec2client.wait_until(:instance_status_ok, instance_ids: [instance_id]) do |waiti
   end
 end
 
-puts "Instance #{instance_id} is healthy - adding to list of frontends for environment #{options['environment']}"
+puts "Instance #{instance_id} is healthy - adding to list of frontends for environment #{environment}"
 
 #Tag the instance with a name.
 ec2client.create_tags({
@@ -185,16 +232,20 @@ ec2client.create_tags({
                           ],
                       })
 
+instance_info = ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0]
+private_dns_name = instance_info.private_dns_name
+public_dns_name = instance_info.public_dns_name
 
-private_dns_name = ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0].private_dns_name
-puts "Created instance #{instance_id} with name #{instance_name} and private dns name #{private_dns_name}"
-
+puts
+puts "Created instance #{instance_id} with name #{instance_name} "
+puts "Private dns name: #{private_dns_name}"
+puts
 puts 'Writing new configuration file'
 
 file_suffix = rand(100000000)
 
 Net::SSH.start('gateway.code.org', username) do |ssh|
-  ssh.exec!("knife environment show #{options['environment']} -F json > /tmp/old_knife_config#{file_suffix}")
+  ssh.exec!("knife environment show #{environment} -F json > /tmp/old_knife_config#{file_suffix}")
 end
 
 Net::SCP.download!('gateway.code.org', username, "/tmp/old_knife_config#{file_suffix}",
@@ -214,11 +265,20 @@ puts 'New configuration file uploaded, now loading it.'
 Net::SSH.start('gateway.code.org', username) do |ssh|
   execute_ssh_on_channel(ssh,
                          "knife environment from file /tmp/new_knife_config#{file_suffix}.json",
-                         "Unable to update environment #{options['environment']}")
-  puts 'Done executing! Cleaning up!'
-
+                         "Unable to update environment #{environment}")
   ssh.exec!("rm /tmp/*#{file_suffix}*")
 end
 
-puts "To deploy new chef instance, run the following:"
-puts "ssh gateway -t knife bootstrap #{private_dns_name} -x ubuntu --sudo -E production -N #{instance_name} -r role[front-end]"
+cmd = "ssh gateway.code.org -t knife bootstrap #{private_dns_name} -x ubuntu --sudo -E #{environment} -N #{instance_name} -r role[#{role}]"
+puts "Bootstrapping #{environment} frontend, please be patient. This takes ~15 minutes."
+puts  "#{cmd}"
+result = `#{cmd}`
+if $?.success?
+  puts '--------------------------------------------------------'
+  puts "Dashboard listening at: http://#{public_dns_name}:8080"
+  puts "Pegasus listening at:   http://#{public_dns_name}:8081"
+  puts "To ssh to server:       ssh gateway.code.org -t ssh #{private_dns_name}"
+else
+  puts 'Error bootstrapping server'
+  puts result
+end

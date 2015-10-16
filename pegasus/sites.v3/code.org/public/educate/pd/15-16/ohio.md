@@ -22,13 +22,11 @@ Milestone complete!
 ### Phase 2: Blended Summer Study  (5 days in-person & ~8 hours online) ###
 
 
-#### In-person Workshop####
+
 
 Milestone Complete!
 
-#### Online Study####
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -49,7 +47,7 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**September 12th Location**
+**Location**
 
 Columbus State Community College<br/>
 Conference Center<br/>
@@ -57,7 +55,6 @@ Room 407<br/>
 315 Cleveland Avenue<br/>
 Columbus, OH 43215
 
-[Free Parking Pass](/files/Ohio-parking-pass.pdf) is available in the [lots adjacent](/files/ohio-lot27-s.pdf) to the conference center.
 
 **What to bring to Phase 3 quarterly sessions:**
 

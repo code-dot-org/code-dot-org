@@ -8,7 +8,7 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 # Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> Kalian membuat mungkin bag siswa di seluruh Amerika Latin untuk belajar Hour of Code yang dapat *mengubah hidup mereka seterusnya*, selama Oktober. 5-11. Anda membuat mungkin untuk siswa di seluruh dunia untuk belajar Hour of Code yang dapat *mengubah seluruh hidup mereka *, selama bulan Desember. 7-13. <% end %>
+<% if @country == 'la' || @country == 'br' || @country == 'ar' %> Kalian membuat mungkin bagi siswa di seluruh Amerika Latin untuk belajar Hour of Code yang dapat *mengubah hidup mereka seterusnya*, selama Oktober. tanggal 5-11. Anda membuat mungkin untuk siswa di seluruh dunia untuk belajar Hour of Code yang dapat *mengubah seluruh hidup mereka *, selama bulan Desember, tanggal 12-20. <% end %>
 
 Kami akan menghubungi tentang hadiah, tutorial baru dan pembaruan menarik lainnya di musim gugur. Jadi, apa yang dapat Anda lakukan sekarang?
 

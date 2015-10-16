@@ -2,17 +2,17 @@ bn:
   site_name: HOUR of CODE
   hour_of_code: Hour of Code
   language: বাংলা
-  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
+  front_title: 'ইতিহাসের সর্ববৃহৎ শেখার আয়োজনে যোগ দিন, %{campaign_date}, ২০১৫'
   coming_soon: শীঘ্রই আসছে
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
-  front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
+  front_header_banner: ইতিহাসের সর্ববৃহৎ শেখার আয়োজনে যোগ দিন, ডিসে. ৭-১৩, ২০১৫
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: নতুন ভিডিওটি দেখুন
   front_watch_regular_video: Watch the video
-  header_menu_resources: সম্পদ
+  header_menu_resources: Resources
   header_menu_faq: FAQ
   header_menu_prizes: পুরস্কার
   header_menu_how_to: How-To
@@ -138,22 +138,13 @@ bn:
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
   prizes_all: প্রতিটি আয়োজকের জন্য পুরস্কার থাকবে
-  prizes_every_organizer: 'প্রতিটি Hour of Code আয়োজকের জন্যে থাকবে  ড্রপবক্স অথবা স্কাইপের ক্রেডিট দেওয়া হবে, শুভেচ্ছা উপহার হিসেবে।'
+  prizes_every_organizer: প্রতি Hour of Code (এক ঘন্টার Code) আয়োজক শুভেচ্ছা উপহার হিসেবে পাবেন Dropbox অথবা Skype credit
   prizes_technology: 'One public school in every US state (& Washington DC) will win $10,000 worth of technology'
   prizes_tech_chats: '# classrooms will win video chats with very special guests'
   prizes_robots: 100 classrooms will win a set of programmable robots
   prizes_brilliant: One school in each province and territory will receive $2000 for a Brilliant Project
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
   prizes_details: বিস্তারিত
-  prizes_nav_dc: Mystery trip to Washington D.C.
-  prizes_nav_technology: $10,000 of technology for your school
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Terms and conditions
-  prizes_nav_faq: FAQ
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -167,6 +158,18 @@ bn:
   prizes_nav_title: পুরস্কার
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Terms and conditions
+  prizes_nav_faq: সচরাচর জিজ্ঞাসা (FAQ)
+  prizes_nav_dc: Mystery trip to Washington D.C.
+  prizes_nav_technology: $10,000 of technology for your school
+  prizes_nav_video_chat: Video chat with a tech titan
+  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
+  prizes_nav_brilliant: $2,000 Brilliant Labs project
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: "Every organizer will receive a gift card to Amazon.com or Microsoft's Windows Store."
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
@@ -176,25 +179,25 @@ bn:
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
-  anybody_can_learn: যেকেউ শিখতে পারবে।
+  anybody_can_learn: যেকেউ শিখতে পারে।
   get_started: Start
   beyond_an_hour: Beyond an Hour of Code
   register_now: এখনই নিবন্ধন করুন
   share_on_facebook: Share on Facebook
   share_on_twitter: Share on Twitter
-  front_join_us_heading: প্রতিটি ছাত্র-ছাত্রীর জন্যে একটি Hour of Code
+  front_join_us_heading: প্রত্যেক ছাত্র-ছাত্রীর জন্যে এক ঘন্টার Code.
   front_join_us_description: Computer science is a foundation for every student. Help us introduce it to 100 million.
   front_join_us_description_short: Computer science is a foundation for every student.
   front_join_us_button: আমাদের সাথে যোগ দিন
-  front_what_is_hoc: Hour of Code কি?
+  front_what_is_hoc: Hour of Code (এক ঘন্টার Code) কি?
   front_join_us_header: Anyone can learn the basics, and have fun doing it!
   front_join_us_teacher: আপনি কি একজন শিক্ষক?
   front_join_us_inspire: Inspire students with
   front_join_us_inspire_link: an Hour of Code in the classroom.
   front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: আপনি কি একজন অভিভাবক?
-  front_join_us_ask_link: আপনার স্থানীয় বিদ্যালয়ে জিজ্ঞাসা করুন
-  front_join_us_ask: একটি Hour of Code আয়োজন করতে
+  front_join_us_ask_link: আপনার স্থানীয় বিদ্যালয়ে বলুন
+  front_join_us_ask: একটি Hour of Code (এক ঘন্টার Code) আয়োজন করতে
   front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: আপনি কি শুধুই কম্পিউটার বিজ্ঞান ভালবাসেন?
   front_join_us_spread: Spread the word.
@@ -308,11 +311,11 @@ bn:
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   stats_growth: It was the fastest to reach 15 million users.
   stats_i18n: Students are learning in 40 languages
-  stats_tumblr: 'টাম্বলার: ৩.৫ বছর'
-  stats_facebook: 'ফেসবুক: ৩ বছর'
-  stats_twitter: 'টুইটার: ২.৫ বছর'
-  stats_pinterest: 'পিনটারেস্ট: ২ বছর'
-  stats_instagram: 'ইন্সটাগ্রাম: ১৪ মাস'
+  stats_tumblr: 'Tumblr: ৩.৫ বছর'
+  stats_facebook: 'Facebook: ৩ বছর'
+  stats_twitter: 'Twitter: ২.৫ বছর'
+  stats_pinterest: 'Pinterest: ২ বছর'
+  stats_instagram: 'Instagram: ১৪ মাস'
   stats_hoc: 'The Hour of Code: 5 days'
   stats_global: Over 100M students have tried an Hour of Code
   stats_girls_more: More girls tried computer science than in the last 70 years
@@ -372,7 +375,7 @@ bn:
   title_prizes_thanks: ধন্যবাদ তোমাকে
   title_prizes: পুরস্কার
   title_hardware_prize_form: Sign up for Hardware Prizes
-  title_resources: সম্পদ
+  title_resources: Resources
   title_signup_thanks: Thanks for signing up to host an Hour of Code!
   title_tutorial_guidelines: Tutorial Guidelines
   title_whole_school: Whole School Participation

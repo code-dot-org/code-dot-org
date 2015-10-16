@@ -2,17 +2,17 @@ id:
   site_name: HOUR of CODE
   hour_of_code: Hour of Code
   language: Bahasa Indonesia
-  front_title: Bergabunglah dalam acara belajar terbesar sepanjang sejarah pada tanggal 8-14 Desember 2014
-  coming_soon: Segera Hadir
-  campaign_date_start_short: 7 Desember
-  campaign_date_start_long: 7 Desember
-  campaign_date_short: 7-13 Desember
-  campaign_date_full: 7-13 Desember
-  front_header_banner: Bergabunglah dalam acara belajar terbesar sepanjang sejarah pada tanggal 8-14 Desember 2014
+  front_title: 'Bergabunglah dalam acara belajar terbesar sepanjang sejarah pada tanggal %{campaign_date}, 2015'
+  coming_soon: Akan Datang
+  campaign_date_start_short: Tanggal 7 Desember
+  campaign_date_start_long: Tanggal 7 Desember
+  campaign_date_short: Tanggal 7-13 Desember
+  campaign_date_full: Tanggal 7 hingga 13 Desember
+  front_header_banner: Bergabunglah dalam acara belajar terbesar sepanjang sejarah pada tanggal 7-13 Desember 2015
   front_intro_default: 'Hour of Code adalah gerakan mendunia yang merengkuh puluhan juta pelajar dari 180+ negara. Setiap orang, di mana saja, dapat mengadakan acara Hour of Code. Tersedia tutorial-tutorial berdurasi satu jam dalam lebih dari 40 bahasa. Tak perlu pengalaman. <strong>Usia 4 sampai 104.</strong>'
   front_watch_video: Tonton video terbaru
   front_watch_regular_video: Tontonlah video
-  header_menu_resources: Sumber daya
+  header_menu_resources: Alat-alat Promosi
   header_menu_faq: FAQ
   header_menu_prizes: Hadiah
   header_menu_how_to: How-To
@@ -138,22 +138,13 @@ id:
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
   prizes_all: Hadiah untuk tiap penyelanggara
-  prizes_every_organizer: Setiap Penyelanggara Hour of Code akan mendapatkan Dropbox atau Kredit Skype sebagai rasa terima kasih
+  prizes_every_organizer: Setiap Penyelanggara Hour of Code akan mendapatkan Dropbox atau Kredit Skype sebagai tanda terima kasih
   prizes_technology: 'Satu sekolah umum di setiap negara bagian US (& Washington DC) akan memenagkan teknologi bernilai $10.000'
   prizes_tech_chats: '# ruang kelas akan memenangkan percakapan video dengan tamu-tamu istimewa'
-  prizes_robots: 100 Kelas akan memenangkan satu set robot siap diprogram
-  prizes_brilliant: Satu sekolah di masing-masing propinsi dan territory akan menerima $2000 untuk proyek yang brilian
+  prizes_robots: 100 Kelas akan memenangkan satu set robot yang siap diprogram
+  prizes_brilliant: Satu sekolah di masing-masing propinsi dan territori akan menerima $2000 untuk proyek yang brilian
   prizes_actua: '15 sekolah di Kanada akan menerima 2  hands-on STEM workshop diberikan oleh salah satu anggota Actua'
   prizes_details: Rincian
-  prizes_nav_dc: Misteri perjalanan ke Washington D.C.
-  prizes_nav_technology: $10.000 teknologi untuk sekolah Anda
-  prizes_nav_video_chat: Video chat dengan seorang titan tech
-  prizes_nav_skype_dropbox: Skype kredit atau ruang Dropbox untuk setiap penyelenggara.
-  prizes_nav_brilliant: $2,000 Labs project yang cemerlang
-  prizes_nav_actua: ' Workshop Actua'
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Syarat dan Ketentuan
-  prizes_nav_faq: FAQ
   nav_back_to_resources: Kembali ke sumber daya
   how_to_nav_educators: Untuk pendidik
   how_to_nav_after_school: Untuk les
@@ -167,29 +158,41 @@ id:
   prizes_nav_title: Hadiah
   prizes_nav_home: Semua hadiah
   prizes_nav_hardware: Daftar hadiah Hardware
+  prizes_nav_terms: Syarat dan Ketentuan
+  prizes_nav_faq: FAQ
+  prizes_nav_dc: Perjalanan ke Washington D.C.
+  prizes_nav_technology: $10.000 teknologi untuk sekolah Anda
+  prizes_nav_video_chat: Video chat dengan seorang ahli teknologi
+  prizes_nav_skype_dropbox: Skype kredit atau ruang Dropbox untuk setiap penyelenggara.
+  prizes_nav_brilliant: Labs project yang cemerlang sebesar $2,000
+  prizes_nav_actua: ' Workshop Actua'
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: "Every organizer will receive a gift card to Amazon.com or Microsoft's Windows Store."
   whats_next_header: Apa berikutnya?
   whats_next_description: "Kami akan mengirimkan materi-materi dan tip yang berguna untuk acaramu. Tutorial 2015 yang baru akan hadir untuk semua browser, smarthphone - bahkan untuk tanpa komputer! <a href = 'http://code.org/learn'>Coba tutorial saat ini</a>"
-  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
-  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>Bagaimana cara menjalankan Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promosikan Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>Bagaimana cara mempromosikan Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>Bagaimana cara mempromosikan Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Coba tutorial</a>"
   whats_next_try_button: Coba tutorial
-  n_have_learned_an_hoc: '<h1>Coba</h1><h2>Hour of Code</h2><h3># served</h3>'
+  n_have_learned_an_hoc: '<h1>Coba</h1><h2>Hour of Code</h2><h3># terlaksana</h3>'
   anybody_can_learn: Siapa pun bisa belajar.
   get_started: Mulai
   beyond_an_hour: 'Di luar  Hour of Code'
   register_now: Daftar Sekarang
-  share_on_facebook: Bagi di Facebook
-  share_on_twitter: Bagi di Twitter
+  share_on_facebook: Bagikan di Facebook
+  share_on_twitter: Bagikan di Twitter
   front_join_us_heading: Hour of Code diperuntukan untuk setiap pelajar.
   front_join_us_description: Ilmu komputer adalah dasar untuk setiap pelajar. Bantu kami memperkenalkannya kepada 100 juta pelajar.
   front_join_us_description_short: Ilmu komputer adalah dasar fondasi untuk setiap siswa.
   front_join_us_button: Bergabunglah
   front_what_is_hoc: Apa itu Hour of Code?
-  front_join_us_header: Semua orang dapat mempelajari dasar, dan senang melakukannya!
+  front_join_us_header: Semua orang dapat mempelajari dasarnya dan senang melakukannya!
   front_join_us_teacher: Apaka anda guru?
-  front_join_us_inspire: Menginspirasi murid dengan
+  front_join_us_inspire: Inspirasi murid dengan
   front_join_us_inspire_link: Hour of Code di dalam kelas.
   front_join_us_teacher_link: Menginspirasi siswa dengan Hour of Code di dalam kelas
   front_join_us_parent: Apakah Anda orang tua?
@@ -213,7 +216,7 @@ id:
   front_join_us_more_info: "Untuk informasi lebih lanjut, silakan kunjungi <a href='https://code.org'> code.org</a>."
   front_join_us_code_info: Untuk informasi lebih lanjut, silakan kunjungi code.org
   front_join_us_n_students_served: '# tersaji'
-  signup_header: 'Atur Hour of Code selama %{campaign_date}, dan daftar di sini.'
+  signup_header: 'Selenggarakan Hour of Code selama %{campaign_date}, dan daftar di sini.'
   signup_name_label: Nama anda
   signup_email_label: Email Anda
   signup_organization_name_label: Nama sekolah atau organisasi
@@ -226,7 +229,7 @@ id:
   signup_send_posters_address_label: Alamat sekolah atau organisasi
   signup_whole_school_flag_label: Acara ini untuk suluruh sekolah
   signup_your_event: Daftarkan acaramu
-  signup_match_volunteer: Bantu saya menemukan seorang insinyur perangkat lunak lokal untuk menginspirasi siswa saya
+  signup_match_volunteer: Bantu saya menemukan seorang ahli program lokal untuk menginspirasi siswa saya
   signup_name_placeholder: Nama anda
   signup_email_placeholder: anda@contoh.com
   signup_organization_name_placeholder: Contohnya, SMA Lincoln
@@ -234,7 +237,7 @@ id:
   signup_special_event_details_placeholder: Deskripsikan apa yang membuat acara ini spesial
   signup_send_posters_address_placeholder: Alamat ini tidak akan dibagikan pada peta kami
   signup_event_type_in_school: Di sekolah
-  signup_event_type_out_of_school: Diluar sekolah
+  signup_event_type_out_of_school: Di luar sekolah
   signup_submit_label: Daftar
   signup_submit_error_message: Terjadi sebuah kesalahan. Silahkan periksa kembali apakah semua kolom isian yang diperlukan telah diisi secara benar.
   signup_thank_you_header: Terimakasih telah mendaftar sebagai penyelenggara acara Hour of Code.
@@ -245,7 +248,7 @@ id:
   map_header_country: '# di %{country}'
   map_search_placeholder: Carilah acara Hour of Code
   map_search_search: Cari
-  map_search_reset: Atur ulang
+  map_search_reset: Reset
   meta_tag_og_title: Hour of Code telah hadir
   meta_tag_og_description: Hour of Code adalah gerakan mendunia yang mencapai sepuluh juta pelajar dari lebih 180+ negara dan lebih dari 30 bahasa. Dari umur 4 sampai 104.
   meta_tag_twitter_title: Hour of Code telah hadir
@@ -273,40 +276,40 @@ id:
   hardware_prizes_form_plan_file_label: Unggah rencana logistik Hour of Code anda
   hardware_prizes_form_plan_file_description: 'Masukkan jadwal sederhana bagaimana perencanaan Hour of Code dari setiap pelajar pada sekolah Anda. Lihat contoh berikut: #PDF# | #Word#'
   hardware_prizes_form_submit_label: Masukkan
-  hoc_faq_title: Faq
+  hoc_faq_title: FAQ
   hoc_faq_what_is_hoc_q: Apa itu Hour of Code?
-  hoc_faq_what_is_hoc_a: "Hour of Code adalah satu jam perkenalan mengenai ilmu komputer, didesain untuk melawan mitos tentang kode dan menunjukkan pada siapa pun bisa belajar dasar-dasarnya.  <a href='http://code.org/learn'>Lihat tutorial-tutorial</a>."
+  hoc_faq_what_is_hoc_a: "Hour of Code adalah satu jam perkenalan mengenai ilmu komputer, didesain untuk melawan mitos tentang kode dan menunjukkan pada siapa pun bisa belajar dasar-dasarnya. <a href='%{codeorg_url}'>Lihat tutorial</a>."
   hoc_faq_last_year: Coba Tutorial
   hoc_faq_when_is_hoc_q: Kapan Hour of Code dilaksanakan?
   hoc_faq_when_is_hoc_a: "Semua orang dapat menyelenggarakan Hour of Code akapan saja, namun tujuan awal kampanye ini adalah untuk remaja dari jutaan siswa untuk mencoba Hour of Code selama %{campaign_date}, dalam perayaan dari <a href='http://csedweek.org'>Pekan Edukasi Ilmu Komputer</a>. Apakah harus <i>satu jam</i> spesifik? Tidak. Anda dapat melakukan Hour of Code kapanpun selama minggu ini. (Dan bila Anda tidak dapat melakukannya di minggu tersebut, lakukan di minggu sebelum atau sesudah)."
   hoc_faq_why_cs_q: Mengapa ilmu komputer?
-  hoc_faq_why_cs_a: "<i>Setiap</i> pelajar harus mendapatkan kesempatan untuk mempelajari ilmu komputer. Hal ini membantu untuk menumbuhkan kemampuan pemecahan masalah, logika dan kreativitas. Dengan dimulai sejak dini, pelajar-pelajar akan memiliki fondasi untuk sukses dalam karir pada abad 21 ini. Lihat mengenai statistiknya pada <a href='http://code.org'>Code.org</a>."
+  hoc_faq_why_cs_a: "<i>Setiap</i> pelajar harus mendapatkan kesempatan untuk mempelajari ilmu komputer. Hal ini membantu untuk menumbuhkan kemampuan pemecahan masalah, logika dan kreativitas. Dengan dimulai sejak dini, pelajar-pelajar akan memiliki fondasi untuk sukses dalam karir pada abad 21 ini. Lihat mengenai statistiknya pada <a href='%{codeorg_url}'>%{partner_url}</a>."
   hoc_faq_how_participate_q: Bagaimana saya berpartisipasi dalam Hour of Code?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Mulai perencanaan disini</a> dengan melihat panduan how-to kami. Anda dapat mengadakan event Hour of Code di sekolah atau di komunitas &mdash; seperti klub ekstrakulikuler, nirlaba atau pekerjaan. Atau, coba sendiri ketika %{campaign_date} tiba."
   hoc_faq_behind_hoc_q: Siapa di balik dari Hour of Code?
   hoc_faq_behind_hoc_a: "Hour of Code diorganisir dan diselenggarakan oleh <a href='http://code.org'>Code.org</a>, sebuah oraganisasi 501c3 non-profit yang berdedikasi untu memperluas partisipan dari ilmu komputer dengan membuatnya tersedia di berbagai sekolah, meningkatkan partisipan perempuan dan berbagai kalangan pelajar lainnya. Sebuah <a href='http://code.org/about/partners'>partisipasi dari mitra yang belum pernah berkoalisi</a> telah bersatu untuk mendukung Hour of Code, &mdash; termasuk didalamnya Microsoft, Apple, Amazon, Boys dan Girls Clubs of America dan universitas."
   hoc_faq_host_q: Saya tidak mengerti mengenai koding. Dapatkah saya menyelenggarakan acara ini?
-  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
+  hoc_faq_host_a: "Tentu saja. Hour of Code dipandu sendiri. Yang harus Anda lakukan adalah <a href='%{codeorg_url}/learn'> mencoba tutorial yang telah ada</a>, pilih tutorial yang Anda inginkan, pilih waktu satu jam &mdash; dan kami akan mengurus sisanya. Kami juga memiliki opsi untuk segala umur dan tingkat pengalaman, dari TK ke atas. Mulai perencanaan event Anda dengan membaca <a href='/how-to'>panduan hot-to</a> kami."
   hoc_faq_need_computers_q: Apakah saya perlu menyediakan komputer untuk setiap partisipan?
   hoc_faq_need_computers_a: |
     Tidak. Kami memiliki tutorial Hour of Code yang dapat berjalan di PC, Ponsel Pintar, Tablet, dan beberapa tidak membutuhkan komputer sama sekali! Anda dapat bergabung dimanapun anda berada, siapapun berada dengan anda. <p><i>Berikut beberapa pilihan:</i> <br><ul><li><b>Bekerja dalam berpasangan.</b> Penelitian menunjukkan bahwa pelajar belajar dengan sangat baik dengan <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pemrograman berpasangan</a>, saling berbagi komputer dan bekerja sama. Doronglah pelajar anda untuk bekerja sama.
     <li><b>Gunakkanlah layar proyektor.</b> Jika anda memiliki proyektor dan layarnya untuk digunakan untuk komputer tekoneksi internet, maka kelompok anda dapat melaksanakan Hour of Code bersama. Tonton sebagian dari video-video dan ambil giliran untuk memecahkan masalah atau menjawab pertanyaan.
     <li><b>Laksanakan tanpa online.</b> Kami juga menyediakan tutorial yang tidak membutuhkan komputer sama sekali.</ul>
   hoc_faq_international_q: 'Saya tinggal di <country>. Bagaimana cara untuk berpartisipasi internasional?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
+  hoc_faq_international_a: "Semua dapat mengadakan event Hour of Code, dimanapun di dunia. Tahun lalu, siswa-siswi dari seluruh dunia berkumpul bersama untuk Hour of Code. Cari tahu lebih lanjut <a href='/promote'>disini</a>."
   hoc_faq_tutorial_q: Bagaimana saya dapat membuat tutorial Hour of Code?
   hoc_faq_tutorial_a: "Jika anda tertarik menjadi mitra tutorial kami, <a href='/tutorial-guidelines'>silahkan lihat panduan dan instruksi kami</a>. Kami ingin menghelat berbagai pilihan yang menarik, namun tujuan utama kami adalah mengoptimalkan pengalaman untuk pelajar dan guru yang awam akan ilmu komputer."
   hoc_faq_more_questions_q: Masih ada pertanyaan?
   hoc_faq_more_questions_a: "Cobalah temukan jawaban di <a href='http://support.code.org'>forum dukungan</a> kami."
   hoc_faq_account_q: Apakah pelajar harus masuk menggunakan account?
-  hoc_faq_account_a: "Tidak. Secara absollut tidak diperlukan signup atau login untuk pelajar mencoba Hour of Code. Kebanyakan  <a href='http://code.org/learn/beyond'>follow-on courses</a> membutuhkan account untuk menyimpan kemajuan pelajar."
+  hoc_faq_account_a: "Tidak. Tidak diperlukan signup atau login sama sekali untuk pelajar mencoba Hour of Code. Kebanyakan <a href='%{codeorg_url}/learn/beyond'>follow-on courses</a> membutuhkan account untuk menyimpan kemajuan pelajar."
   hoc_faq_frozen_q: Dimana tutorial dengan Anna dan Elsa?
   hoc_faq_frozen_a: "Itu sekarang telah dipublish pada <a href='http://code.org/learn'>Code.org/learn</a>. Kami harap anda menikmatinya!"
   hoc_faq_high_school_q: Aktivitas apa yang harus saya lakukan dengan pelajar SMA?
-  hoc_faq_high_school_a: "Untuk segala umur, kami merekomendasikan untuk mencoba tutorial untuk pemla pada  <a href='http://code.org/learn'>Code.org/learn</a> untuk permulaan, seperti tutorial dengan Angry Birds atau dengan Anna dan Elsa. Pelajar SMA seharusnya bisa menyelesaikannya damam 30 menit dan dapat mencoba tutorial yang tingkat lanjut dalam Javascript, seperti Khan Academy atau CodeHS."
+  hoc_faq_high_school_a: "Untuk segala umur, kami merekomendasikan untuk mencoba tutorial untuk pemla pada <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> untuk permulaan, seperti tutorial dengan Angry Birds atau dengan Anna dan Elsa. Pelajar SMA seharusnya bisa menyelesaikannya dalam 30 menit dan dapat mencoba tutorial yang tingkat lanjut dalam Javascript, seperti Khan Academy atau CodeHS."
   hoc_faq_scratch_q: Saya mempersiapkan Scratch untuk Hour of Code, tetapi bagaimana untuk jika murid-murid saya memiliki iPads daripada laptop?
   hoc_faq_scratch_a: "Scratch tidak dapat dijalankan pada tablet. Jika pelajar anda masih muda, mereka dapat menggunakan ScratchJR iPad app(untuk pembawa acara). Jika anda melihat tutorial pada  <a href='http://code.org/learn'>Code.org/learn</a>, anda dapat menemukan tutorial lain yang berfungsi pada iPads - dari Code.org, Tynker, Lightbot, or CodeSpark."
-  hoc_faq_count_hoc_q: Bagaimana Anda menghitung jam kode?
+  hoc_faq_count_hoc_q: Bagaimana Anda menghitung Hour of Code?
   hoc_faq_count_hoc_a: "Pelacak dari The Hour of Code  bukanlah pengukuran yang tepat penggunaann. Kita tidak menghitung ID unik mahasiswa dengan sempurna ketika melacakan partisipasi dalam jam kode, terutama karena kita tidak mengharuskan siswa untuk login atau mendaftar. Sebagai hasilnya, kita menghitung di atas dan dibawah jumlah peserta pada waktu yang sama. Baca semua rincian <a href='http://code.org/loc'> di sini</a>."
   stats_hoc_2013_image_alt: Statistik Hour of Code dari tahun 2013
   stats_growth: Ini yang tercepat dalam mencapai 15 juta pengguna.
@@ -319,19 +322,19 @@ id:
   stats_hoc: 'Hour of Code: 5 hari'
   stats_global: Lebih dari 100 juta siswa telah mencoba Hour of Code
   stats_girls_more: Lebih banyak anak perempuan yang mencoba ilmu komputer di 70 tahun terakhir
-  stats_nina: '"Setiap hari menghasilkan hasil yang sama &mdash; 100% mengugah."-Nina Nichols Peery, guru'
+  stats_nina: '"Setiap hari menghasilkan hasil yang sama&mdash; 100% mengugah."-Nina Nichols Peery, guru'
   stats_student: '"Aku tahu ini adalah kesempatan <b>sekali dalam seumur hidup</b>."-Mariana Alzate, anak kelas 5'
-  stats_michael: 'Saya <b>tidak pernah</b> melihat murid-murid saya begitu gembira tentang belajar. "-Michael Clark, guru'
+  stats_michael: '"Saya <b>tidak pernah</b> melihat murid-murid saya begitu gembira tentang belajar." - Michael Clark, guru'
   resources_how_to: Panduan bagi guru
   resources_how_to_events: Panduan Kegiatan
   resources_how_to_districts: Panduan untuk daerah
   resources_how_to_officials: Panduan untuk para pejabat publik
   resources_handouts: Selebaran untuk menyebarkan berita
-  resources_one_pager: Satu halaman selebaran
+  resources_one_pager: Selebaran satu halaman
   resources_brochure: Brosur
   resources_posters: Poster
   resources_videos: Video
-  resources_banners: Banner
+  resources_banners: Banner social media
   resources_emails: Contoh email
   resources_logo: logo Hour of Code
   resources_stats: Statistik bermanfaat dan iklan-iklan promosi
@@ -375,7 +378,7 @@ id:
   title_prizes_thanks: Terima kasih
   title_prizes: Hadiah
   title_hardware_prize_form: Daftar untuk hadiah Hardware
-  title_resources: Sumber daya
+  title_resources: Alat-alat Promosi
   title_signup_thanks: Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
   title_tutorial_guidelines: Panduan Tutorial
   title_whole_school: Partisipasi seluruh sekolah

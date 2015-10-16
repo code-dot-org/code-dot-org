@@ -15,7 +15,7 @@ twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '
 
 ## 1. Sign up to host an Hour of Code
 
-Anyone, anywhere can host an Hour of Code. [Sign up](<%= resolve_url('/') %>) to recieve updates and qualify for prizes.   
+Anyone, anywhere can host an Hour of Code. [Sign up](<%= resolve_url('/') %>) to receive updates and qualify for prizes.   
 
 
 [<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)

@@ -26,6 +26,16 @@ Feature: App Lab Scenarios
     And I press "confirm-button"
     And Applab HTML has no button
 
+  Scenario: Can read and set button text
+    Given I switch to text mode
+    And I press keys "button('testButton1', 'Peanut Butter');\n" for element ".ace_text-input"
+    And I press keys "button('testButton2', 'Jelly');\n" for element ".ace_text-input"
+    And I press keys "setText('testButton1', getText('testButton2'));\n" for element ".ace_text-input"
+    When I press "runButton"
+    And I wait until element "#divApplab > .screen > button#testButton2" is visible
+    Then element "#testButton1" contains text "Jelly"
+    Then element "#testButton2" contains text "Jelly"
+
   @no_mobile
   @no_safari
   Scenario: Upload Image Asset

@@ -21,7 +21,7 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "freeplay artist sharing"
-  And I am on "https://studio.code.org/s/course3/stage/21/puzzle/15?noautoplay=true"
+  And I am on "http://studio.code.org/s/course3/stage/21/puzzle/15?noautoplay=true"
   When I rotate to landscape
   And I see no difference for "initial load"
   And I wait to see "#x-close"

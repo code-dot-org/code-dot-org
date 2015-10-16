@@ -244,6 +244,11 @@ Then /^element "([^"]*)" is visible$/ do |selector|
   visible.should eq true
 end
 
+Then /^element "([^"]*)" does not exist/ do |selector|
+  instances = @browser.execute_script("return $('#{selector}')");
+  instances.should eq []
+end
+
 Then /^element "([^"]*)" is hidden$/ do |selector|
   visibility = @browser.execute_script("return $('#{selector}').css('visibility')");
   visible = @browser.execute_script("return $('#{selector}').is(':visible')") && (visibility != 'hidden');
@@ -408,6 +413,7 @@ Given(/^I sign in as a (student|teacher)$/) do |user_type|
 end
 
 When(/^I debug cookies$/) do
+  puts "DEBUG: url=#{CGI::escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
 end
 
@@ -422,6 +428,7 @@ And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
     element.send_keys(make_symbol_if_colon(key))
   else
     # Workaround for Firefox, see https://code.google.com/p/selenium/issues/detail?id=6822
+    key.gsub!(/\\n/, "\n") # Cucumber does not convert captured \n to newline.
     key.split('').each do |k|
       if k == '('
         element.send_keys :shift, 9
@@ -495,10 +502,12 @@ end
 # Place files in dashboard/test/fixtures
 # Note: Safari webdriver does not support file uploads (https://code.google.com/p/selenium/issues/detail?id=4220)
 Then /^I upload the file named "(.*?)"$/ do |filename|
-  # Needed for remote (Sauce Labs) uploads
-  @browser.file_detector = lambda do |args|
-    str = args.first.to_s
-    str if File.exist? str
+  unless ENV['TEST_LOCAL'] == 'true'
+    # Needed for remote (Sauce Labs) uploads
+    @browser.file_detector = lambda do |args|
+      str = args.first.to_s
+      str if File.exist? str
+    end
   end
 
   filename = File.expand_path(filename, '../fixtures')
@@ -507,5 +516,7 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
   element.send_keys filename
   @browser.execute_script('$("input[type=file]").hide()')
 
-  @browser.file_detector = nil
+  unless ENV['TEST_LOCAL'] == 'true'
+    @browser.file_detector = nil
+  end
 end

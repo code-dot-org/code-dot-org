@@ -6,14 +6,14 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 <%= view :signup_button %>
 
-### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
+### Vous trouverez ci-dessous un exemple de tribune libre favorable à la semaine de l'éducation des Sciences informatiques qui pourrait être utilisé par une région, des législateurs, des chefs d'entreprise etc.
 
   
 
 
-Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to find state specific information about computer science.
+Allez dans [< % = resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) pour trouver des informations sur l'informatique.
 
-**Title: Computing…Where the Jobs Are**
+**Titre : Informatique... Où sont les emplois**
 
 **By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
 

@@ -382,6 +382,12 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
   } else {
     // Otherwise, the message will depend on the test result.
     switch (options.feedbackType) {
+      case TestResults.RUNTIME_ERROR_FAIL:
+        message = msg.runtimeErrorMsg({ lineNumber: options.executionError.lineNumber });
+        break;
+      case TestResults.SYNTAX_ERROR_FAIL:
+        message = msg.syntaxErrorMsg({ lineNumber: options.executionError.lineNumber });
+        break;
       case TestResults.EMPTY_BLOCK_FAIL:
         message = options.level.emptyBlocksErrorMsg ||
             msg.emptyBlocksErrorMsg();
@@ -483,7 +489,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
     }
   }
 
-  dom.setText(feedback, message);
+  $(feedback).text(message);
 
   // Update the feedback box design, if the hint message came from server.
   if (this.useSpecialFeedbackDesign_(options)) {
@@ -500,7 +506,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
     feedbackDiv.appendChild(imageDiv);
     // Add new text
     var hintHeader = document.createElement('p');
-    dom.setText(hintHeader, msg.hintHeader());
+    $(hintHeader).text(msg.hintHeader());
     feedbackDiv.appendChild(hintHeader);
     hintHeader.className = 'hint-header';
     // Append the original text
@@ -1078,10 +1084,15 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
     shouldCheckForEmptyBlocks, options) {
   options = options || {};
   if (this.studioApp_.editCode) {
-    // TODO (cpirich): implement better test results for editCode
-    return levelComplete ?
-        this.studioApp_.TestResults.ALL_PASS :
-        this.studioApp_.TestResults.TOO_FEW_BLOCKS_FAIL;
+    if (levelComplete) {
+      return this.studioApp_.TestResults.ALL_PASS;
+    } else if (options.executionError && options.executionError.err instanceof SyntaxError) {
+      return this.studioApp_.TestResults.SYNTAX_ERROR_FAIL;
+    } else if (options.executionError) {
+      return this.studioApp_.TestResults.RUNTIME_ERROR_FAIL;
+    } else {
+      return this.studioApp_.TestResults.TOO_FEW_BLOCKS_FAIL;
+    }
   }
   if (shouldCheckForEmptyBlocks) {
     var emptyBlockFailure = this.checkForEmptyContainerBlockFailure_();

@@ -176,7 +176,7 @@ module LevelsHelper
   # Options hash for Blockly
   def blockly_options
     l = @level
-    throw ArgumentError("#{l} is not a Blockly object") unless l.is_a? Blockly
+    raise ArgumentError.new("#{l} is not a Blockly object") unless l.is_a? Blockly
     # Level-dependent options
     app_options = l.blockly_options.dup
     level_options = app_options[:level] = app_options[:level].dup
@@ -257,6 +257,7 @@ module LevelsHelper
     app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
     app_options[:isAdmin] = true if (@game == Game.applab && current_user && current_user.admin?)
+    app_options[:isSignedIn] = !current_user.nil?
     app_options[:pinWorkspaceToBottom] = true if enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if enable_scrolling?
     app_options[:showExampleTestButtons] = true if enable_examples?
@@ -301,6 +302,7 @@ module LevelsHelper
     embed
     share
     hide_source
+    script_level_id
   )
   # Sets custom level options to be used by the view layer. The option hash is frozen once read.
   def level_view_options(opts = nil)
