@@ -1,7 +1,7 @@
 require 'active_support/core_ext/hash/indifferent_access'
 
 class ProjectsController < ApplicationController
-  before_filter :authenticate_user!, except: [:load, :show, :edit, :readonly, :redirect_legacy]
+  before_filter :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix]
   include LevelsHelper
 

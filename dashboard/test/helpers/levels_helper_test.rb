@@ -238,6 +238,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'submittable level is submittable for student with teacher' do
     @level = create(:applab, submittable: true)
+    @level.stubs(:channel_backed?).returns(false)
 
     user = create(:follower).student_user
     sign_in user
@@ -249,6 +250,8 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'submittable level is not submittable for student without teacher' do
     @level = create(:applab, submittable: true)
+    @level.stubs(:channel_backed?).returns(false)
+
     user = create :student
     sign_in user
 
@@ -259,6 +262,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'submittable level is not submittable for non-logged in user' do
     @level = create(:applab, submittable: true)
+    @level.stubs(:channel_backed?).returns(false)
 
     app_options = self.app_options # ha
     assert_equal false, app_options[:level]['submittable']
