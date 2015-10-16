@@ -1,8 +1,9 @@
 name 'U3L22 Student Lesson Introduction'
 title 'Permanent Data Storage'
+css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 22 - Permanent Data Storage
+## Unit 3: Lesson 16 - Permanent Data Storage
 
 # Background
 

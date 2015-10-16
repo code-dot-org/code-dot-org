@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-10-07T15:41:08.000Z",
+  "created_at": "2015-10-15T20:41:39.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -127,10 +127,11 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": "rekFzZUJd6xk+soKqRLxkkGXuqBxi0o1wHmJkDYN354EDO2i915c95r96j1r\ne3cr\n",
+    "encrypted_examples": [
+
+    ],
     "embed": "false",
-    "instructions": "Add an event handler for the button using the \"Insert and show\" link in the Design Mode Events tab. (Click to see full instructions).",
-    "markdown_instructions": "# Activate Your Button\r\nOn the last level you added a button using Design Mode. If you click it, nothing happens. Let's make the button work. \r\nYour button has been brought over to this level.  \r\n\r\n**Goal:** Add code using Design Mode to make the button respond to a click.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/9ff41c3ea30ece355e91eaca5cdc1e36-image-1444417748945.gif\"  style=\"width: 250px; float: right\">\r\n\r\n* **Change ID of button** from “button1” to “redButton”.\r\n\r\n* **Insert `onEvent()` from Design Mode** by clicking *Insert and Show in Code* under the **Events Tab**.\r\n\r\n* Run the program and **look for the output in the *Debug Console* **below the workspace instead of the app window. We will discuss the *Debug Console* on the next level.",
+    "markdown_instructions": "### 'Chaser-game' Continued\r\n\r\nNow, you'll finally get to modify your 'chaser-game'.  Making the minimum requirement might be pretty easy at this point.  Consider some of the enhancements suggested.\r\n\r\n#### Minimum requirement - Clicker version 1\r\n\r\n* Starting from your previous clicker app and use a variable to store a click counter. \r\n* Declare and initialize your counter variable as a global variable\r\n* update your counter variable within the click event handler. \r\n* A textLabel can be updated on each click to output the click counter value along with a message. \r\n\r\n#### Enhancements\r\n\r\nThere are lots of ways to enhance this app.  Here are some things you can do in no particular order...\r\n\r\n* Add a big image which can serve as a background image. If the player clicks on the background image they lose a point. \r\n* Add a button that lets the user start over - reset the score.\r\n* Add another image that jumps around randomly, or appears and disappears that the user can click\r\n* Use arithmetic to change how the score is calculated with each click (e.g. rather than losing a point for doing something wrong, divide the score by 2).  \r\n* Add more and different event handlers that alter the score in different ways.\r\n* Use arithmetic to change the size of the image you need to click based on the score.  For example, make the image smaller and smaller as the score gets higher.\r\n* Make the size of the image change to a random value each time\r\n* Make the score go up and down by a random value",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -146,7 +147,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "project_template_level_name": "U3 - Design Mode 1",
+    "droplet_tooltips_disabled": "false",
     "free_play": "false",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
@@ -156,8 +157,8 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "true",
+    "instructions": "Create your improved Chaser-Game here. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

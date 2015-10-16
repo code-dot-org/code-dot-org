@@ -73,11 +73,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "start_blocks": "var foo;\r\nfoo = 7;\r\nconsole.log(foo);",
+    "start_blocks": "var foo;\r\nfoo = 7;\r\nconsole.log(foo);\r\nvar x;",
     "encrypted_examples": [
 
     ],
-    "markdown_instructions": "# Variables\r\n\r\nCheck out the variables tab. It has a couple new commands. We are going to use those to set up variables.\r\n\r\nThere are three steps to setting up a variable:\r\n\r\n1. Create the variable\r\n2. Assign a value to the variable\r\n3. Use the variable (To start with we will just be printing the variable to the console)\r\n\r\n\r\n# Do This\r\n\r\n* **Starter Code:** You start with code for making, assigning and using a variable called 'foo'\r\n\r\n* **Run the program** to test out what happens. \r\n\r\n* **Add another variable.** Below foo add another variable with a name of your choosing. Test that it has the correct value by printing it to the console. You can not use the default value x. ",
+    "markdown_instructions": "# Variables\r\n\r\nCheck out the variables tab. It has a couple new commands. Take a look at `var x =  ;` and `x = ;`. These are commands to create variables. We are going to use those to set up variables.\r\n\r\nThere are three steps to setting up a variable:\r\n\r\n1. **Create** the variable\r\n2. **Assign** a value to the variable\r\n3. **Read** the value of the variable\r\n\r\nIn the starter code you can see these three steps broken down\r\n\r\n<img src=\"https://images.code.org/722644a199e91c6c31ee6fb7ffb8261f-image-1445003843261.png\" style=\"width: 350px; border: solid 1px black\">\r\n\r\n# Do This\r\n\r\n* **Starter Code:** You start with code for making, assigning and using a variable called 'foo'\r\n\r\n* **Run the program** to test out what happens. \r\n\r\n* **Add another variable.** Below foo we have started you with a variable named x. Change the name of the variable to a name of your choosing besides x. Then do step 2 and 3 of variables. \r\n\r\n* **Test** that it has the correct value by printing it to the console. ",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",
@@ -89,7 +89,7 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "instructions": "Add another variable with a name of your choosing. Print the value of the variable to the console. (Click to see full instructions)"
   }
 }]]></config>
