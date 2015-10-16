@@ -1572,56 +1572,56 @@ levels.hoc2015_2 = {
 
 
 levels.js_hoc2015_move_right = {
-  "editCode": true,
-  "background": "forest",
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'forest',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [
+  'startBlocks': '',
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
     [0, 0, 0,  0, 0, 0, 0, 0], 
-    [0, 4, 4,  4, 4, 4, 0, 0], 
-    [0, 4, 16, 0, 1, 4,0, 0], 
-    [0, 4, 4,  4, 4, 4, 0, 0], 
     [0, 0, 0,  0, 0, 0, 0, 0], 
+    [0, 0, 0,  4, 4, 4, 0, 0], 
+    [0, 4, 16, 0, 1, 0, 0, 0], 
+    [0, 4, 0,  0, 4, 0, 0, 0], 
     [0, 0, 0,  0, 0, 0, 0, 0], 
     [0, 0, 0,  0, 0, 0, 0, 0], 
     [0, 0, 0,  0, 0, 0, 0, 0]],
-  "instructions": "Help me program the character to get the item and bring it to the destination. Stack a couple moveRight(); commands and then hit Run to make him go.",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'instructions': 'Help me program the character to get the item and bring it to the destination. Stack a couple moveRight(); commands and then hit Run to make him go.',
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
   },
-  "callouts": [
+  'callouts': [
     {
-      "element_id": ".droplet-main-canvas",
-      "hide_target_selector": ".droplet-drag-cover",
-      "qtip_config": {
-        "content": {
-          "text": msg.calloutPlaceCommandsHere(),
+      'element_id': '.droplet-main-canvas',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutPlaceCommandsHere(),
         },
-        "hide": {
-          "event": "mouseup touchend",
+        'hide': {
+          'event': 'mouseup touchend',
         },
-        "position": {
-          "my": "top left",
-          "at": "top left",
-          "adjust": {
-            "x": 10,
-            "y": 20
+        'position': {
+          'my': 'top left',
+          'at': 'top left',
+          'adjust': {
+            'x': 10,
+            'y': 20
           }
         }
       }
@@ -1630,25 +1630,25 @@ levels.js_hoc2015_move_right = {
 };
 
 levels.js_hoc2015_move_two_items = {
-  "editCode": true,
-  "background": "forest",
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'forest',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floating_score": true,
-  "map": [
+  'startBlocks': '',
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floating_score': true,
+  'map': [
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 4, 4, 4,  4, 4, 0, 0], 
     [0, 4, 0, 0,  0, 4,0, 0], 
@@ -1657,64 +1657,64 @@ levels.js_hoc2015_move_two_items = {
     [0, 4, 4, 4,  4, 4, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0]],
-  "instructions": "We need the items. Help me get them all!",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'instructions': 'We need the items. Help me get them all!',
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
   }
 };
 
 levels.js_hoc2015_move_item_destination = {
-  "editCode": true,
-  "background": "snow",
-  "textModeAtStart": true,
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'snow',
+  'textModeAtStart': true,
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 4, 4, 4, 4, 0, 0], [0, 4,  4, 4, 4, 4, 4, 0], [0, 4,  0, 4, 4,1, 4, 0], [0, 4,1,16, 0, 0, 4, 0], [0, 4, 4, 4,  4, 4, 4, 0], [0, 0, 0, 0,  0, 0, 0, 0], [0, 0, 0, 0,  0, 0, 0, 0]],
-  "instructions": "I see another item behind that obstacle. Can you bring it back to the destination?",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': '',
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 4, 4, 4, 4, 0, 0], [0, 4,  4, 4, 4, 4, 4, 0], [0, 4,  0, 4, 4,1, 4, 0], [0, 4,1,16, 0, 0, 4, 0], [0, 4, 4, 4,  4, 4, 4, 0], [0, 0, 0, 0,  0, 0, 0, 0], [0, 0, 0, 0,  0, 0, 0, 0]],
+  'instructions': 'I see another item behind that obstacle. Can you bring it back to the destination?',
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
   }
 };
 
 levels.js_hoc2015_move_item_destination_2 = {
- "editCode": true,
-  "background": "snow",
-  "textModeAtStart": true,
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+ 'editCode': true,
+  'background': 'snow',
+  'textModeAtStart': true,
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [
+  'startBlocks': '',
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
     [0, 0,  0,  0, 0, 0, 0, 0], 
     [0, 0,  0,  0, 0, 4, 0, 0], 
     [0, 4,  4,  4, 4, 0, 4, 0], 
@@ -1723,36 +1723,36 @@ levels.js_hoc2015_move_item_destination_2 = {
     [0, 4,  1,  1, 0, 4, 4, 0], 
     [0, 4,  4,  0, 4, 0, 0, 0], 
     [0, 0,  4,  4, 4, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "Drag the code blocks into the workspace to help the character reach the destination.",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'embed': 'false',
+  'instructions': 'Drag the code blocks into the workspace to help the character reach the destination.',
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
   }
 };
 
 levels.js_hoc2015_move_item_destination_3 = {
-  "editCode": true,
-  "background": "ship",
-  "textModeAtStart": true,
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'ship',
+  'textModeAtStart': true,
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floating_score": true,  
-  "map": [
+  'startBlocks': '',
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floating_score': true,  
+  'map': [
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 4, 4,  4, 4, 4, 0], 
     [0, 0, 4, 0,  0, 1, 4, 0], 
@@ -1761,37 +1761,37 @@ levels.js_hoc2015_move_item_destination_3 = {
     [0, 4, 4, 4,  4, 0, 4, 0], 
     [0, 0, 0, 0,  4, 4, 4, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "Try typing the commands to get the item to our destination. Don’t forget to end with ();",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'embed': 'false',
+  'instructions': 'Try typing the commands to get the item to our destination. Don’t forget to end with ();',
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
   }
 };
 
 
 levels.js_hoc2015_move_cross = {
-  "editCode": true,
-  "background": "ship",
-  "textModeAtStart": true,
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'ship',
+  'textModeAtStart': true,
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [
+  'startBlocks': '',
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 4,  0, 0, 0, 0], 
     [0, 0, 4, 1,  4, 0, 0, 0], 
@@ -1800,12 +1800,12 @@ levels.js_hoc2015_move_cross = {
     [0, 0, 0, 4,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "Type or drag the blocks to get both items to the destination.",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'embed': 'false',
+  'instructions': 'Type or drag the blocks to get both items to the destination.',
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
   }
 };
 
@@ -1813,28 +1813,28 @@ levels.js_hoc2015_move_cross = {
 /* ** level 7 ** */
 
 levels.js_hoc2015_event_two_items = {
-  "editCode": true,
-  "background": "snow",
-  "wallMap": "blank",
-  "softButtons": ["downButton", "upButton"],
-  "codeFunctions": {
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'snow',
+  'wallMap': 'blank',
+  'softButtons': ['downButton', 'upButton'],
+  'codeFunctions': {
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": [
-    "function whenUp() {", 
-    "  ",
-    "}",
-    "function whenDown() {",
-    "  ",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [
+  'startBlocks': [
+    'function whenUp() {', 
+    '  ',
+    '}',
+    'function whenDown() {',
+    '  ',
+    '}'].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 1,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
@@ -1843,35 +1843,35 @@ levels.js_hoc2015_event_two_items = {
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 1,  0, 0, 0, 0]],
-  "pinWorkspaceToBottom": "true",
-  "embed": "false",
-  "instructions": "\"BOT1, I need you to get a critical message to the GOALs.\"",
-  "instructions2": "Make BOT1 move when you hit the arrow keys.",
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'pinWorkspaceToBottom': 'true',
+  'embed': 'false',
+  'instructions': '"BOT1, I need you to get a critical message to the GOALs."',
+  'instructions2': 'Make BOT1 move when you hit the arrow keys.',
+  'timeoutFailureTick': 600,
+  'timeoutAfterWhenRun': true,
+  'showTimeoutRect': true,
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
   },
-  "callouts": [
+  'callouts': [
     {
-      "element_id": ".droplet-main-canvas",
-      "hide_target_selector": ".droplet-drag-cover",
-      "qtip_config": {
-        "content": {
-          "text": msg.calloutPlaceCommandsHere(),
+      'element_id': '.droplet-main-canvas',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutPlaceCommandsHere(),
         },
-        "hide": {
-          "event": "mouseup touchend",
+        'hide': {
+          'event': 'mouseup touchend',
         },
-        "position": {
-          "my": "top left",
-          "at": "top left",
-          "adjust": {
-            "x": 10,
-            "y": 20
+        'position': {
+          'my': 'top left',
+          'at': 'top left',
+          'adjust': {
+            'x': 10,
+            'y': 20
           }
         }
       }
@@ -1880,36 +1880,36 @@ levels.js_hoc2015_event_two_items = {
 };
 
 levels.js_hoc2015_event_four_items = {
-  "editCode": true,
-  "background": "snow",
-  "wallMap": "blobs",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'snow',
+  'wallMap': 'blobs',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": [
-    "function whenLeft() {",
-    "  ",
-    "}",
-    "function whenRight() {",
-    "  ",
-    "}",
-    "function whenUp() {",
-    "  ",
-    "}",
-    "function whenDown() {",
-    "  ",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [
+  'startBlocks': [
+    'function whenLeft() {',
+    '  ',
+    '}',
+    'function whenRight() {',
+    '  ',
+    '}',
+    'function whenUp() {',
+    '  ',
+    '}',
+    'function whenDown() {',
+    '  ',
+    '}'].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 1,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
@@ -1918,31 +1918,31 @@ levels.js_hoc2015_event_four_items = {
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 1,  0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"Get to all the GOALs as quickly as you can.\"",
-  "instructions2": "Move in all directions.",
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'embed': 'false',
+  'instructions': '"Get to all the GOALs as quickly as you can."',
+  'instructions2': 'Move in all directions.',
+  'timeoutFailureTick': 600,
+  'timeoutAfterWhenRun': true,
+  'showTimeoutRect': true,
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
   },
-  "callouts": [
+  'callouts': [
     {
-      "element_id": ".ace_scroller",
-      "qtip_config": {
-        "content" : {
-          "text": msg.calloutTypeCommandsHere(),
+      'element_id': '.ace_scroller',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutTypeCommandsHere(),
         },
-        "event": "click mousedown touchstart mouseup touchend",
-        "position": {
-          "my": "center right",
-          "at": "top left",
-          "adjust": {
-            "x": 25,
-            "y": 25
+        'event': 'click mousedown touchstart mouseup touchend',
+        'position': {
+          'my': 'center right',
+          'at': 'top left',
+          'adjust': {
+            'x': 25,
+            'y': 25
           }
         }
       }
@@ -1953,32 +1953,32 @@ levels.js_hoc2015_event_four_items = {
 
 levels.js_hoc2015_event_three_goals =
 {
-  "avatarList": ["bot1"],
-  "editCode": true,
-  "background": "snow",
-  "wallMap": "circle",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "autohandlerOverrides": {
-    "whenGetAllPilots": "whenTouchAllGoals"
+  'avatarList': ['bot1'],
+  'editCode': true,
+  'background': 'snow',
+  'wallMap': 'circle',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'autohandlerOverrides': {
+    'whenGetAllPilots': 'whenTouchAllGoals'
   },
-  "codeFunctions": {
-    "whenGetAllPilots": null,
-    "winGame": null,
+  'codeFunctions': {
+    'whenGetAllPilots': null,
+    'winGame': null,
   },
-  "startBlocks": [
-    "function whenGetAllPilots() {",
-    "  ",
-    "}",
-    ].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "edgeCollisions": "true",
-  "map": [
+  'startBlocks': [
+    'function whenGetAllPilots() {',
+    '  ',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'edgeCollisions': 'true',
+  'map': [
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
@@ -1987,40 +1987,40 @@ levels.js_hoc2015_event_three_goals =
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 1,  0, 0, 0, 0]],
-  "instructions": "\"Reach the GOALs!\"",
-  "instructions2": "On the last level, we ended the game for you. Now you're in charge: use the whenGetAllPilots event to let BOT1 win the game when he gets all the pilots.",
-  "autoArrowSteer": true,
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'instructions': '"Reach the GOALs!"',
+  'instructions2': "On the last level, we ended the game for you. Now you're in charge: use the whenGetAllPilots event to let BOT1 win the game when he gets all the pilots.",
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'timeoutAfterWhenRun': true,
+  'showTimeoutRect': true,
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
   },
-  "goal": {
+  'goal': {
     successCondition: function () {
       return false;
     }
   },
-  "completeOnSuccessConditionNotGoals": true,
-  "callouts": [
+  'completeOnSuccessConditionNotGoals': true,
+  'callouts': [
     {
-      "element_id": ".droplet-main-canvas",
-      "hide_target_selector": ".droplet-drag-cover",
-      "qtip_config": {
-        "content": {
-          "text": msg.calloutPlaceCommandsAtTop(),
+      'element_id': '.droplet-main-canvas',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutPlaceCommandsAtTop(),
         },
-        "hide": {
-          "event": "mouseup touchend",
+        'hide': {
+          'event': 'mouseup touchend',
         },
-        "position": {
-          "my": "top left",
-          "at": "top left",
-          "adjust": {
-            "x": 10,
-            "y": 20
+        'position': {
+          'my': 'top left',
+          'at': 'top left',
+          'adjust': {
+            'x': 10,
+            'y': 20
           }
         }
       }
@@ -2030,30 +2030,30 @@ levels.js_hoc2015_event_three_goals =
 
 
 levels.js_hoc2015_event_score_points = {
-  "editCode": true,
-  "background": "forest",
-  "wallMap": "horizontal",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "winGame": null,
-    "changeScore": null,
+  'editCode': true,
+  'background': 'forest',
+  'wallMap': 'horizontal',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'winGame': null,
+    'changeScore': null,
   },
-  "startBlocks": [
-    "function whenTouchGoal() {",
-    "  ",
-    "}",
-    "function whenScore1000() {",
-    "  ",
-    "}",
-    ].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [
+  'startBlocks': [
+    'function whenTouchGoal() {',
+    '  ',
+    '}',
+    'function whenScore1000() {',
+    '  ',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
@@ -2062,53 +2062,53 @@ levels.js_hoc2015_event_score_points = {
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 1,  0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"I’m counting on you, BOT1!\"",
-  "instructions2": "Change your score when you get a pilot. Can you make BOT1 win when he gets 1000 points?",
-  "autoArrowSteer": true,
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "requiredForSuccess" : {
-    "removedItemCount": 2
+  'embed': 'false',
+  'instructions': '"I’m counting on you, BOT1!"',
+  'instructions2': 'Change your score when you get a pilot. Can you make BOT1 win when he gets 1000 points?',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'timeoutAfterWhenRun': true,
+  'showTimeoutRect': true,
+  'requiredForSuccess' : {
+    'removedItemCount': 2
   },
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
   },
 };
 
 
 levels.js_hoc2015_win_lose = {
-  "editCode": true,
-  "background": "forest",
-  "wallMap": "blobs",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
+  'editCode': true,
+  'background': 'forest',
+  'wallMap': 'blobs',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
 
-    "winGame": null,
-    "loseGame": null,
+    'winGame': null,
+    'loseGame': null,
   },
-  "startBlocks": [
-    "addCharacter('pilot');",
-    "addCharacter('man');",
-    "function whenTouchPilot() {",
-    "  ",
-    "}",
-    "function whenTouchMan() {",
-    "  ",
-    "}",   
-    ""].join("\n"),
+  'startBlocks': [
+    'addCharacter("pilot");',
+    'addCharacter("man");',
+    'function whenTouchPilot() {',
+    '  ',
+    '}',
+    'function whenTouchMan() {',
+    '  ',
+    '}',   
+    ''].join('\n'),
 
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingFcore": true,
-  "map": [
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingFcore': true,
+  'map': [
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0],
@@ -2117,59 +2117,59 @@ levels.js_hoc2015_win_lose = {
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"Watch out for the MAN.\"",
-  "instructions2": "Make BOT1 lose the game if hits the MAN and win if he gets the pilot.",
-  "autoArrowSteer": true,
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "callouts": [
+  'embed': 'false',
+  'instructions': '"Watch out for the MAN."',
+  'instructions2': 'Make BOT1 lose the game if hits the MAN and win if he gets the pilot.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'timeoutAfterWhenRun': true,
+  'showTimeoutRect': true,
+  'callouts': [
     {
-      "element_id": "#droplet_palette_block_setToFlee",
-      "qtip_config": {
-        "content": {
-          "text": msg.calloutCharactersMove(),
+      'element_id': '#droplet_palette_block_setToFlee',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutCharactersMove(),
         },
-        "position": {
-          "my": "center left",
-          "at": "center right",
-          "adjust": {
-            "x": 15,
-            "y": 0
+        'position': {
+          'my': 'center left',
+          'at': 'center right',
+          'adjust': {
+            'x': 15,
+            'y': 0
           }
         }
       }
     }
   ],
-  "requiredForSuccess" : {
-    "touchAllItems": true,
-    "setActivity": {itemType: "roo", "activityType": "flee"}
+  'requiredForSuccess' : {
+    'touchAllItems': true,
+    'setActivity': {itemType: 'roo', 'activityType': 'flee'}
   }
 };
 
 levels.js_hoc2015_add_characters = {
-  "editCode": true,
-  "background": "forest",
-  "wallMap": "circle",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "addCharacter": null,
+  'editCode': true,
+  'background': 'forest',
+  'wallMap': 'circle',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'addCharacter': null,
   },
-  "startBlocks": [
+  'startBlocks': [
 
-    "function whenGetAllCharacters() {",
-    "  winGame();",
-    "}",
-    ].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [
+    'function whenGetAllCharacters() {',
+    '  winGame();',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0],
@@ -2178,207 +2178,192 @@ levels.js_hoc2015_add_characters = {
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"I'm seeing signs of increased activity on this planet!\"",
-  "instructions2": "Now you have the WhenRun event and a new addCharacter command to create your own characters. Can you add 3 BIRDs to the world? Then, go get them.",
-  "autoArrowSteer": true,
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "callouts": [
+  'embed': 'false',
+  'instructions': '"I\'m seeing signs of increased activity on this planet!"',
+  'instructions2': 'Now you have the WhenRun event and a new addCharacter command to create your own characters. Can you add 3 BIRDs to the world? Then, go get them.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'timeoutAfterWhenRun': true,
+  'showTimeoutRect': true,
+  'callouts': [
     {
-      "element_id": ".ace_gutter-cell:nth-of-type(8)",
-      "hide_target_selector": ".ace_scroller",
-      "qtip_config": {
-        "content" : {
-          "text": msg.calloutPutCommandsTouchCharacter(),
+      'element_id': '.ace_gutter-cell:nth-of-type(8)',
+      'hide_target_selector': '.ace_scroller',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutPutCommandsTouchCharacter(),
         },
-        "event": "click mousedown touchstart mouseup touchend",
-        "position": {
-          "my": "center right",
-          "at": "center right",
+        'event': 'click mousedown touchstart mouseup touchend',
+        'position': {
+          'my': 'center right',
+          'at': 'center right',
         }
       }
     }
   ],
-  "requiredForSuccess" : {
-    "removedItemCount": 3
+  'requiredForSuccess' : {
+    'removedItemCount': 3
   }
 };
 
 levels.js_hoc2015_chain_characters = {
-  "editCode": true,
-  "background": "ship",
-  "wallMap": "horizontal",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "addCharacter": null,
-    "winGame": null,
+  'editCode': true,
+  'background': 'ship',
+  'wallMap': 'horizontal',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'addCharacter': null,
+    'winGame': null,
   },
-  "startBlocks": [
-    "addCharacter('roo');",
-    "addCharacter('roo');",
-    "function whenTouchRoo() {",
-    "  addCharacter('bird');",
-    "  addCharacter('bird');",
-    "}",
-    "function whenTouchBird() {",
-    "  ",
-    "}",
-    "function whenGetAllCharacters() {",
-    "  ",
-    "}",
-    ].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"Its up to you, BOT1!\"",
-  "instructions2": "With this code, when you get a ROO, two BIRDs appear. Can you make two MICE appear when you get a BIRD? Collect the MICE.",
-  "autoArrowSteer": true,
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "requiredForSuccess" : {
-    "scoreMinimum": 100
+  'startBlocks': [
+    'addCharacter("roo");',
+    'addCharacter("roo");',
+    'function whenTouchRoo() {',
+    '  addCharacter("bird");',
+    '  addCharacter("bird");',
+    '}',
+    'function whenTouchBird() {',
+    '  ',
+    '}',
+    'function whenGetAllCharacters() {',
+    '  ',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"It\'s up to you, BOT1!"',
+  'instructions2': 'With this code, when you get a ROO, two BIRDs appear. Can you make two MICE appear when you get a BIRD? Collect the MICE.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'timeoutAfterWhenRun': true,
+  'showTimeoutRect': true,
+  'requiredForSuccess' : {
+    'scoreMinimum': 100
   }
 };
 
 levels.js_hoc2015_change_setting = {
-  "editCode": true,
-  "background": "ship",
-  "wallMap": "blobs",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "setBot": { "category": "Commands" },
-    "setBackground": { "category": "Commands" },
-    "setBotSpeed": { "category": "Commands" },
-    "setMap": { "category": "Commands" },
-    "playSound": { "category": "Commands" },
-    "addCharacter": { "category": "Commands" },
+  'editCode': true,
+  'background': 'ship',
+  'wallMap': 'blobs',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'setBot': { 'category': 'Commands' },
+    'setBackground': { 'category': 'Commands' },
+    'setBotSpeed': { 'category': 'Commands' },
+    'setMap': { 'category': 'Commands' },
+    'playSound': { 'category': 'Commands' },
+    'addCharacter': { 'category': 'Commands' },
   },
-  "startBlocks": [
-    "addCharacter('pilot');",
-    "addCharacter('pilot');",
-    "addCharacter('pilot');",
-    "function whenTouchPilot() {",
-    "  setBackground('random');",
-    "}",
-    "function whenTouchCharacter() {",
-    "  changeScore(400);",
-    "  ",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"Time to visit another planet.\"",
-  "instructions2": "Use the new commands to change the background, map, BOT, and speed.",
-  "autoArrowSteer": true,
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "callouts": [
+  'startBlocks': [
+    'addCharacter("pilot");',
+    'addCharacter("pilot");',
+    'addCharacter("pilot");',
+    'function whenTouchPilot() {',
+    '  setBackground("random");',
+    '}',
+    'function whenTouchCharacter() {',
+    '  changeScore(400);',
+    '  ',
+    '}'].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"Time to visit another planet."',
+  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'timeoutAfterWhenRun': true,
+  'showTimeoutRect': true,
+  'callouts': [
     {
-      "element_id": ".droplet-palette-group-header.green",
-      "qtip_config": {
-        "content" : {
-          "text": msg.calloutClickCategory(),
+      'element_id': '.droplet-palette-group-header.green',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutClickCategory(),
         },
-        "position": {
-          "my": "top center",
-          "at": "bottom center",
+        'position': {
+          'my': 'top center',
+          'at': 'bottom center',
         }
       }
     }
   ],
-  "requiredForSuccess" : {
-    "setBotSpeed": true
+  'requiredForSuccess' : {
+    'setBotSpeed': true
   }
 };
 
 levels.js_hoc2015_event_free = {
-  "editCode": true,
-  "freePlay": true,
-  "background": "forest",
-  "wallMap": "blank",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "setBot": { "category": "Commands" },
-    "setBackground": { "category": "Commands" },
-    "setBotSpeed": { "category": "Commands" },
-    "setMap": { "category": "Commands" },
-    "playSound": { "category": "Commands" },
-    "addCharacter": { "category": "Commands" },
-    "setToChase": { "category": "Commands" },
-    "setToFlee": { "category": "Commands" },
-    "setToRoam": { "category": "Commands" },
-    "setToStop": { "category": "Commands" },
-    "moveSlow": { "category": "Commands" },
-    "moveNormal": { "category": "Commands" },
-    "moveFast": { "category": "Commands" },
-    "changeScore": { "category": "Commands" },
+  'editCode': true,
+  'freePlay': true,
+  'background': 'forest',
+  'wallMap': 'blank',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'setBot': { 'category': 'Commands' },
+    'setBackground': { 'category': 'Commands' },
+    'setBotSpeed': { 'category': 'Commands' },
+    'setMap': { 'category': 'Commands' },
+    'playSound': { 'category': 'Commands' },
+    'addCharacter': { 'category': 'Commands' },
+    'moveSlow': { 'category': 'Commands' },
+    'moveNormal': { 'category': 'Commands' },
+    'moveFast': { 'category': 'Commands' },
+    'changeScore': { 'category': 'Commands' },
 
-    "whenTouchObstacle": { "category": "Events" },
-    "whenTouchMan": { "category": "Events" },
-    "whenTouchPilot": { "category": "Events" },
-    "whenTouchPig": { "category": "Events" },
-    "whenTouchBird": { "category": "Events" },
-    "whenTouchMouse": { "category": "Events" },
-    "whenTouchRoo": { "category": "Events" },
-    "whenTouchSpider": { "category": "Events" },
-    "whenTouchCharacter": { "category": "Events" }
+    'whenTouchObstacle': { 'category': 'Events' },
+    'whenTouchMan': { 'category': 'Events' },
+    'whenTouchPilot': { 'category': 'Events' },
+    'whenTouchPig': { 'category': 'Events' },
+    'whenTouchBird': { 'category': 'Events' },
+    'whenTouchMouse': { 'category': 'Events' },
+    'whenTouchRoo': { 'category': 'Events' },
+    'whenTouchSpider': { 'category': 'Events' },
+    'whenTouchCharacter': { 'category': 'Events' }
   },
-  "startBlocks": [
-    "setBackground(\"forest\");",
-    "setMap(\"circle\");",
-    "setBot(\"bot1\");",
-    "function whenLeft() {",
-    "  moveLeft();",
-    "}",
-    "function whenRight() {",
-    "  moveRight();",
-    "}",
-    "function whenUp() {",
-    "  moveUp();",
-    "}",
-    "function whenDown() {",
-    "  moveDown();",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"You’re on your own now, BOT1.\"",
-  "autoArrowSteer": true,
-  "callouts": [
+  'startBlocks': [
+    'setBackground("forest");',
+    'setMap("circle");',
+    'setBot("bot1");',
+    '}'].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"You\'re on your own now, BOT1."',
+  'autoArrowSteer': true,
+  'callouts': [
     {
-      "element_id": ".droplet-palette-canvas",
-      "qtip_config": {
-        "content": {
-          "text": msg.calloutTryOutNewCommands(),
+      'element_id': '.droplet-palette-canvas',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutTryOutNewCommands(),
         },
-        "position": {
-          "my": "center left",
-          "at": "center right",
-          "adjust": {
-            "x": -20,
-            "y": 0
+        'position': {
+          'my': 'center left',
+          'at': 'center right',
+          'adjust': {
+            'x': -20,
+            'y': 0
           }
         }
       }
