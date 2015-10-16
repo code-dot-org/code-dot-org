@@ -145,15 +145,6 @@ fr:
   prizes_brilliant: Une école de chaque province ou territoire recevra 2000$ pour un projet brillant
   prizes_actua: "15 écoles à travers le Canada recevront 2 workshops STEM par l'un des membres d'Actua"
   prizes_details: Détails
-  prizes_nav_dc: Voyage mystère à Washington D.C.
-  prizes_nav_technology: $ 10 000 de technologie pour votre école
-  prizes_nav_video_chat: Chattez en vidéo avec une personnalités des nouvelles technologies
-  prizes_nav_skype_dropbox: "Du crédits Skype ou de l'espace Dropbox pour chaque organisateur"
-  prizes_nav_brilliant: Brillants projets de labs de 2000$
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: "Conditions d'utilisation"
-  prizes_nav_faq: Foire aux questions
   nav_back_to_resources: Retournez aux ressources
   how_to_nav_educators: Pour les enseignants
   how_to_nav_after_school: "Après l'école"
@@ -167,6 +158,18 @@ fr:
   prizes_nav_title: Prix
   prizes_nav_home: Tous les prix
   prizes_nav_hardware: Inscription pour le prix en matériel technologique
+  prizes_nav_terms: "Conditions d'utilisation"
+  prizes_nav_faq: Foire aux questions
+  prizes_nav_dc: Voyage mystère à Washington D.C.
+  prizes_nav_technology: $ 10 000 de technologie pour votre école
+  prizes_nav_video_chat: Chattez en vidéo avec une personnalités des nouvelles technologies
+  prizes_nav_skype_dropbox: "Du crédits Skype ou de l'espace Dropbox pour chaque organisateur"
+  prizes_nav_brilliant: Brillants projets de labs de 2000$
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: "Every organizer will receive a gift card to Amazon.com or Microsoft's Windows Store."
   whats_next_header: Ensuite ?
   whats_next_description: "Nous vous enverrons des outils et conseils utiles pour votre évènement. Les tutoriels 2015 seront bientôt à votre disposition pour tous les navigateurs, smartphones - ou si vous n'avez pas d'ordinateur ! <a href='http://code.org/learn'>Essayez les tutoriels déjà disponibles </a>"
   whats_next_how_to: "<a href='/how-to'> Comment organiser Une Heure de Code ?</a>"

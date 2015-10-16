@@ -16,7 +16,7 @@
     "use_contract_editor": "false",
     "start_direction": "90",
     "x": "125",
-    "y": "185",
+    "y": "200",
     "free_play": "true",
     "impressive": "false",
     "embed": "false",
@@ -210,80 +210,6 @@
         </category>
       </xml>
     </toolbox_blocks>
-    <solution_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="controls_repeat_ext" inline="true">
-              <value name="TIMES">
-                <block type="math_number">
-                  <title name="NUM">3</title>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="draw_move" inline="true">
-                  <title name="DIR">moveForward</title>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <title name="NUM">50</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn" inline="true">
-                      <title name="DIR">turnLeft</title>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <title name="NUM">120</title>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-              <next>
-                <block type="jump" inline="true">
-                  <title name="DIR">jumpForward</title>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <title name="NUM">100</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="controls_repeat_ext" inline="true">
-                      <value name="TIMES">
-                        <block type="math_number">
-                          <title name="NUM">3</title>
-                        </block>
-                      </value>
-                      <statement name="DO">
-                        <block type="draw_move" inline="true">
-                          <title name="DIR">moveForward</title>
-                          <value name="VALUE">
-                            <block type="math_number">
-                              <title name="NUM">50</title>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="draw_turn" inline="true">
-                              <title name="DIR">turnLeft</title>
-                              <value name="VALUE">
-                                <block type="math_number">
-                                  <title name="NUM">120</title>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-      </xml>
-    </solution_blocks>
     <predraw_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
@@ -582,6 +508,154 @@
                                       </next>
                                     </block>
                                   </statement>
+                                  <next>
+                                    <block type="draw_colour" inline="true" id="draw-color">
+                                      <value name="COLOUR">
+                                        <block type="colour_picker">
+                                          <title name="COLOUR">#228b22</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_width" inline="false">
+                                          <value name="WIDTH">
+                                            <block type="math_number">
+                                              <title name="NUM">20</title>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="jump" inline="true">
+                                              <title name="DIR">jumpBackward</title>
+                                              <value name="VALUE">
+                                                <block type="math_number">
+                                                  <title name="NUM">42</title>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="draw_turn" inline="true">
+                                                  <title name="DIR">turnRight</title>
+                                                  <value name="VALUE">
+                                                    <block type="math_number">
+                                                      <title name="NUM">91</title>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="jump" inline="true">
+                                                      <title name="DIR">jumpForward</title>
+                                                      <value name="VALUE">
+                                                        <block type="math_number">
+                                                          <title name="NUM">235</title>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="draw_turn" inline="true">
+                                                          <title name="DIR">turnRight</title>
+                                                          <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">25</title>
+                                                            </block>
+                                                          </value>
+                                                          <next>
+                                                            <block type="draw_move" inline="true">
+                                                            <title name="DIR">moveForward</title>
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">35</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="draw_turn" inline="true">
+                                                            <title name="DIR">turnRight</title>
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">45</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="draw_move" inline="true">
+                                                            <title name="DIR">moveForward</title>
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">30</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="draw_turn" inline="true">
+                                                            <title name="DIR">turnRight</title>
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">140</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="draw_move" inline="true">
+                                                            <title name="DIR">moveForward</title>
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">25</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="draw_turn" inline="true">
+                                                            <title name="DIR">turnLeft</title>
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">10</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="draw_move" inline="true">
+                                                            <title name="DIR">moveForward</title>
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">25</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="draw_turn" inline="true">
+                                                            <title name="DIR">turnRight</title>
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">92</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="draw_move" inline="true">
+                                                            <title name="DIR">moveForward</title>
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">15</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>

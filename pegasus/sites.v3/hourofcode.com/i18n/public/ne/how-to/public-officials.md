@@ -32,7 +32,7 @@ nav: how_to_nav
   &nbsp;
 </p>
 
-## Get every school participating, every student learning!
+## सबै विद्याथी, सबै सहभागीले ,
 
   1. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/prizes') %>) and in **each state**, one participating school will win **$10,000 in technology**!
 
