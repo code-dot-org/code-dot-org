@@ -178,17 +178,17 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   // hint if the button gets pressed.
   if (hintRequestButton) {
 
-    var already_seen = options.response &&
+    var alreadySeen = options.response &&
         options.response.hint_view_requests &&
         options.response.hint_view_requests.some(function (request) {
-          var matches = request.feedback_type === options.feedbackType;
+          var requestMatchesFeedback = request.feedback_type === options.feedbackType;
           if (feedbackBlocks && feedbackBlocks.xml) {
-            matches = matches && request.feedback_xml === feedbackBlocks.xml;
+            requestMatchesFeedback = requestMatchesFeedback && request.feedback_xml === feedbackBlocks.xml;
           }
-          return matches;
+          return requestMatchesFeedback;
         });
 
-    if (already_seen) {
+    if (alreadySeen) {
       // Remove "Show hint" button.  Making it invisible isn't enough,
       // because it will still take up space.
       hintRequestButton.parentNode.removeChild(hintRequestButton);
