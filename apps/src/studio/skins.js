@@ -476,7 +476,6 @@ function loadHoc2015(skin, assetUrl) {
     [msg.setMapRandom(), RANDOM_VALUE],
     [msg.setMapBlank(), '"blank"'],
     [msg.setMapCircle(), '"circle"'],
-    [msg.setMapCircle2(), '"circle2"'],
     [msg.setMapHorizontal(), '"horizontal"'],
     [msg.setMapGrid(), '"grid"'],
     [msg.setMapBlobs(), '"blobs"']

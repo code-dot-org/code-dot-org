@@ -1842,7 +1842,9 @@ Studio.reset = function(first) {
 
   // Now that sprites are in place, we can set up a map, which might move
   // sprites around.
-  Studio.setMap({value: getDefaultMapName()});
+  if (level.wallMapCollisions && getDefaultMapName()) {
+    Studio.setMap({value: getDefaultMapName()});
+  }
 
   // Setting up walls might have moved the sprites, so draw them once more.
   for (i = 0; i < Studio.spriteCount; i++) {
@@ -3209,9 +3211,21 @@ Studio.callCmd = function (cmd) {
 };
 
 Studio.addItem = function (opts) {
-  if (opts.className === constants.RANDOM_VALUE) {
-    opts.className =
+
+  if (typeof opts.className !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.className);
+  }
+
+  var itemClass = opts.className.toLowerCase().trim();
+
+  if (itemClass === constants.RANDOM_VALUE) {
+    itemClass =
         skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
+  }
+
+  var skinItem = skin[itemClass];
+  if (!skinItem) {
+    throw new RangeError("Incorrect parameter: " + opts.className);
   }
 
   var directions = [
@@ -3255,21 +3269,21 @@ Studio.addItem = function (opts) {
   var pos = generateRandomItemPosition();
 
   var renderScale = 1;
-  var properties = skin.specialItemProperties[opts.className];
+  var properties = skin.specialItemProperties[itemClass];
   if (properties) {
     renderScale = utils.valueOr(properties.scale, renderScale);
   }
 
   var itemOptions = {
-    frames: getFrameCount(opts.className, skin.specialItemProperties, skin.itemFrames),
-    className: opts.className,
+    frames: getFrameCount(itemClass, skin.specialItemProperties, skin.itemFrames),
+    className: itemClass,
     dir: direction,
-    image: skin[opts.className],
+    image: skinItem,
     loop: true,
     x: pos.x,
     y: pos.y,
-    speed: Studio.itemSpeed[opts.className],
-    activity: utils.valueOr(Studio.itemActivity[opts.className], "roam"),
+    speed: Studio.itemSpeed[itemClass],
+    activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     width: 100,
     height: 100,
     renderScale: renderScale,
@@ -3308,17 +3322,29 @@ Studio.getDistance = function(x1, y1, x2, y2) {
 
 
 Studio.setItemActivity = function (opts) {
-  if (opts.className === constants.RANDOM_VALUE) {
-    opts.className =
+
+  if (typeof opts.className !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.className);
+  }
+
+  var itemClass = opts.className.toLowerCase().trim();
+
+  if (itemClass === constants.RANDOM_VALUE) {
+    itemClass =
         skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
+  }
+
+  var skinItem = skin[itemClass];
+  if (!skinItem) {
+    throw new RangeError("Incorrect parameter: " + opts.className);
   }
 
   if (opts.type === "roam" || opts.type === "chase" ||
       opts.type === "flee" || opts.type === "none") {
     // retain this activity type for items of this class created in the future:
-    Studio.itemActivity[opts.className] = opts.type;
+    Studio.itemActivity[itemClass] = opts.type;
     Studio.items.forEach(function (item) {
-      if (item.className === opts.className) {
+      if (item.className === itemClass) {
         item.setActivity(opts.type);
 
         // For verifying success, record this combination of activity type and
@@ -3328,26 +3354,38 @@ Studio.setItemActivity = function (opts) {
           Studio.trackedBehavior.setActivityRecord = [];
         }
 
-        if (!Studio.trackedBehavior.setActivityRecord[opts.className]) {
-          Studio.trackedBehavior.setActivityRecord[opts.className] = [];
+        if (!Studio.trackedBehavior.setActivityRecord[itemClass]) {
+          Studio.trackedBehavior.setActivityRecord[itemClass] = [];
         }
 
-        Studio.trackedBehavior.setActivityRecord[opts.className][opts.type] = true;
+        Studio.trackedBehavior.setActivityRecord[itemClass][opts.type] = true;
       }
     });
   }
 };
 
 Studio.setItemSpeed = function (opts) {
-  if (opts.className === constants.RANDOM_VALUE) {
-    opts.className =
+
+  if (typeof opts.className !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.className);
+  }
+
+  var itemClass = opts.className.toLowerCase().trim();
+
+  if (itemClass === constants.RANDOM_VALUE) {
+    itemClass =
         skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
   }
 
+  var skinItem = skin[itemClass];
+  if (!skinItem) {
+    throw new RangeError("Incorrect parameter: " + opts.className);
+  }
+
   // retain this speed value for items of this class created in the future:
-  Studio.itemSpeed[opts.className] = opts.speed;
+  Studio.itemSpeed[itemClass] = opts.speed;
   Studio.items.forEach(function (item) {
-    if (item.className === opts.className) {
+    if (item.className === itemClass) {
       item.speed = opts.speed;
     }
   });
@@ -3497,7 +3535,13 @@ Studio.loseGame = function(opts) {
 
 Studio.setBackground = function (opts) {
 
-  if (opts.value === constants.RANDOM_VALUE) {
+  if (typeof opts.value !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.value);
+  }
+
+  var backgroundValue = opts.value.toLowerCase().trim();
+
+  if (backgroundValue === constants.RANDOM_VALUE) {
     // NOTE: never select the last item from backgroundChoicesK1, since it is
     // presumed to be the "random" item for blockly
     // NOTE: the [1] index in the array contains the name parameter with an
@@ -3505,15 +3549,20 @@ Studio.setBackground = function (opts) {
     var quotedBackground = skin.backgroundChoicesK1[
         Math.floor(Math.random() * (skin.backgroundChoicesK1.length - 1))][1];
     // Remove the outer quotes:
-    opts.value = quotedBackground.replace(/^"(.*)"$/, '$1');
+    backgroundValue = quotedBackground.replace(/^"(.*)"$/, '$1');
   }
 
-  if (opts.value !== Studio.background) {
-    Studio.background = opts.value;
+  var skinBackground = skin[backgroundValue];
+  if (!skinBackground) {
+    throw new RangeError("Incorrect parameter: " + opts.value);
+  }
+
+  if (backgroundValue !== Studio.background) {
+    Studio.background = backgroundValue;
 
     var element = document.getElementById('background');
     element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      skin[Studio.background].background);
+      skinBackground.background);
 
     // Draw the tiles (again) now that we know which background we're using.
     if (level.wallMapCollisions) {
@@ -3532,13 +3581,15 @@ Studio.setBackground = function (opts) {
  * @param {string} opts.value - The name of the wall map.
  * @param {boolean} opts.forceRedraw - Force drawing map, even if it's already set.
  */
-Studio.setMap = function (opts, forceLoad) {
+Studio.setMap = function (opts) {
 
-  if (!opts.value) {
-    return;
+  if (typeof opts.value !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.value);
   }
 
-  if (opts.value === constants.RANDOM_VALUE) {
+  var mapValue = opts.value.toLowerCase().trim();
+
+  if (mapValue === constants.RANDOM_VALUE) {
     // NOTE: never select the first item from mapChoices, since it is
     // presumed to be the "random" item for blockly
     // NOTE: the [1] index in the array contains the name parameter with an
@@ -3546,24 +3597,24 @@ Studio.setMap = function (opts, forceLoad) {
     var quotedMap = skin.mapChoices[
         Math.floor(1 + Math.random() * (skin.mapChoices.length - 1))][1];
     // Remove the outer quotes:
-    opts.value = quotedMap.replace(/^"(.*)"$/, '$1');
+    mapValue = quotedMap.replace(/^"(.*)"$/, '$1');
   }
 
-  if (!level.wallMapCollisions) {
-    return;
-  }
- 
   var useMap;
 
-  if (opts.value === 'default') {
+  if (mapValue === 'default') {
     // Treat 'default' as resetting to the level's map (Studio.wallMap = null)
     useMap = null;
   } else if (skin.getMap) {
     // Give the skin a chance to adjust the map name depending upon the
     // background name.
-    useMap = skin.getMap(Studio.background, opts.value);
+    useMap = skin.getMap(Studio.background, mapValue);
   } else {
     useMap = opts.value;
+  }
+
+  if (useMap !== null && !skin[useMap]) {
+    throw new RangeError("Incorrect parameter: " + opts.value);
   }
 
   if (!opts.forceRedraw && useMap === Studio.wallMap) {
@@ -3643,7 +3694,6 @@ Studio.fixSpriteLocation = function () {
   }
 };
 
-
 /**
  * Sets an actor to be a specific sprite, or alternatively to be hidden.
  * @param opts.value {string} Name of sprite, or 'hidden'
@@ -3653,27 +3703,29 @@ Studio.setSprite = function (opts) {
   var spriteIndex = opts.spriteIndex;
   var sprite = Studio.sprite[spriteIndex];
 
-  if (opts.value === constants.RANDOM_VALUE) {
-    opts.value = skin.avatarList[Math.floor(Math.random() * skin.avatarList.length)];
+  if (typeof opts.value !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.value);
   }
 
-  var spriteValue = opts.value;
+  var spriteValue = opts.value.toLowerCase().trim();
+
+  if (spriteValue === constants.RANDOM_VALUE) {
+    spriteValue = skin.avatarList[Math.floor(Math.random() * skin.avatarList.length)];
+  }
 
   var spriteIcon = document.getElementById('sprite' + spriteIndex);
   if (!spriteIcon) {
     return;
+    // TODO (cpirich): We should probably throw here, but since our JS tutorials
+    // don't allow the student to set the spriteIndex, we will fail silently
+    // in case existing blockly tutorials expect this error to fail quietly
+
+    // throw new RangeError("Incorrect parameter: " + spriteIndex);
   }
 
-  // If this skin has walking spritesheet, then load that too.
-  var spriteWalk = null;
-  if (spriteValue !== undefined && skin[spriteValue] && skin[spriteValue].walk) {
-    spriteWalk = document.getElementById('spriteWalk' + spriteIndex);
-    if (!spriteWalk) {
-      return;
-    }
-
-    // Hide the walking sprite at this stage.
-    spriteWalk.setAttribute('visibility', 'hidden');
+  var skinSprite = skin[spriteValue];
+  if (!skinSprite && spriteValue !== 'hidden' && spriteValue !== 'visible') {
+    throw new RangeError("Incorrect parameter: " + opts.value);
   }
 
   sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
@@ -3683,8 +3735,20 @@ Studio.setSprite = function (opts) {
     return;
   }
 
-  sprite.frameCounts = skin[spriteValue].frameCounts;
-  sprite.timePerFrame = skin[spriteValue].timePerFrame;
+  // If this skin has walking spritesheet, then load that too.
+  var spriteWalk = null;
+  if (spriteValue !== undefined && skinSprite.walk) {
+    spriteWalk = document.getElementById('spriteWalk' + spriteIndex);
+    if (!spriteWalk) {
+      return;
+    }
+
+    // Hide the walking sprite at this stage.
+    spriteWalk.setAttribute('visibility', 'hidden');
+  }
+
+  sprite.frameCounts = skinSprite.frameCounts;
+  sprite.timePerFrame = skinSprite.timePerFrame;
   // Reset height and width:
   if (level.gridAlignedMovement) {
     // This mode only works properly with square sprites
@@ -3708,8 +3772,7 @@ Studio.setSprite = function (opts) {
   spriteClipRect.setAttribute('width', sprite.drawWidth);
   spriteClipRect.setAttribute('height', sprite.drawHeight);
 
-  spriteIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    skin[spriteValue].sprite);
+  spriteIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.sprite);
   spriteIcon.setAttribute('width', sprite.drawWidth * spriteTotalFrames(spriteIndex));
   spriteIcon.setAttribute('height', sprite.drawHeight);
 
@@ -3719,11 +3782,9 @@ Studio.setSprite = function (opts) {
     spriteWalkClipRect.setAttribute('width', sprite.drawWidth);
     spriteWalkClipRect.setAttribute('height', sprite.drawHeight);
 
-    spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      skin[spriteValue].walk);
-    var spriteFramecounts = Studio.sprite[spriteIndex].frameCounts;
-    spriteWalk.setAttribute('width', sprite.drawWidth * spriteFramecounts.turns); // 800
-    spriteWalk.setAttribute('height', sprite.drawHeight * spriteFramecounts.walk); // 1200
+    spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.walk);
+    spriteWalk.setAttribute('width', sprite.drawWidth * sprite.frameCounts.turns); // 800
+    spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
   // call display right away since the frame number may have changed:

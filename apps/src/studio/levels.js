@@ -1445,7 +1445,7 @@ levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
   'map': [
-    [0,16, 0, 0, 0,16, 0,32],
+    [0,16, 0, 0, 0,16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0,16, 0, 0, 0,16, 0, 0],
@@ -2309,7 +2309,6 @@ levels.js_hoc2015_change_setting = {
     '}',
     'function whenTouchCharacter() {',
     '  changeScore(400);',
-    '  ',
     '}'].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
@@ -2340,9 +2339,8 @@ levels.js_hoc2015_change_setting = {
       }
     }
   ],
-  'requiredForSuccess' : {
-    'setBotSpeed': true
-  }
+  //'requiredForSuccess' : {
+  //}
 };
 
 levels.js_hoc2015_event_free = {
@@ -2377,7 +2375,7 @@ levels.js_hoc2015_event_free = {
     'setBackground("forest");',
     'setMap("circle");',
     'setBot("bot1");',
-    '}'].join('\n'),
+    ''].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
