@@ -9,12 +9,19 @@
       %td
         Email Filter
       %td
-        %input{:name => "emailFilter", :id => "emailFilter"}
+        %input{name: "emailFilter", id: "emailFilter"}
     %tr
       %td
         Address Filter
       %td
-        %input{:name => "addressFilter", :id => "addressFilter"}
+        %input{name: "addressFilter", id: "addressFilter"}
+    %tr
+      %td 
+        PD Filter
+      %td
+        %input{type: "radio", name: "pd", id: "pd-all", value: "all", checked: true} All
+        %input{type: "radio", name: "pd", id: "pd-pd", value: "pd"} PD
+        %input{type: "radio", name: "pd", id: "pd-nopd", value: "nopd"} No PD
 
   %br/
 
@@ -26,10 +33,14 @@
 
 %h2 Teachers
 %table.teachers
-  - @teachers.each do |teacher|
-    %tr
-      %td= teacher.id
-      %td= teacher.name
-      %td= teacher.email
-      %td= teacher.full_address
-      %td= teacher.num_students
+  - if @teachers.size > 0
+    - if @headers
+      %tr
+      - @headers.each do |field|
+        %td= field
+    - @teachers.each do |teacher|
+      %tr
+      - teacher.each do |field|
+        %td= field
+  - else
+    No teachers met the specified search criteria.
