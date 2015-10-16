@@ -23,9 +23,12 @@ function createVideo(options) {
 //   key - an uid.
 //   name - a string.
 //   redirect - the redirect page after the video is dismissed.
-function showVideoDialog(options) {
+function showVideoDialog(options, forceShowVideo) {
+  if (forceShowVideo === undefined) {
+    forceShowVideo = false;
+  }
 
-  if (dashboard.clientState.hasSeenVideo(options.key)) {
+  if (dashboard.clientState.hasSeenVideo(options.key) && forceShowVideo === false) {
     return;
   }
 
