@@ -1573,14 +1573,17 @@ levels.hoc2015_2 = {
 
 levels.js_hoc2015_move_right = {
   'editCode': true,
-  'background': 'forest',
+  'background': 'main',
+  //'wallMap': 'blobs',
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
     'moveUp': null,
     'moveDown': null,
   },
-  'startBlocks': '',
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -1590,16 +1593,29 @@ levels.js_hoc2015_move_right = {
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
-  'map': [
-    [0, 0, 0,  0, 0, 0, 0, 0], 
-    [0, 0, 0,  0, 0, 0, 0, 0], 
-    [0, 0, 0,  4, 4, 4, 0, 0], 
-    [0, 4, 16, 0, 1, 0, 0, 0], 
-    [0, 4, 0,  0, 4, 0, 0, 0], 
-    [0, 0, 0,  0, 0, 0, 0, 0], 
-    [0, 0, 0,  0, 0, 0, 0, 0], 
-    [0, 0, 0,  0, 0, 0, 0, 0]],
-  'instructions': 'Help me program the character to get the item and bring it to the destination. Stack a couple moveRight(); commands and then hit Run to make him go.',
+  'map':
+  /*
+    [[0x00,  0x000000,  0x000000,  0x000000, 0x00,  0x000000,  0x000000,  0x000000], 
+     [0x00, 0x1030000, 0x1030000,  0x000000, 0x00,  0x000000,  0x220000,  0x000000], 
+     [0x00, 0x1030000, 0x1030000,  0x000000, 0x00, 0x1100000, 0x1100000,  0x000000], 
+     [0x00,  0x000010,  0x000000,  0x000001, 0x00, 0x1100000, 0x1100000,  0x000000],  
+     [0x00,  0x000000, 0x1020000, 0x1020000, 0x00,  0x000000,  0x000000,  0x000000], 
+     [0x00,  0x000000, 0x1020000, 0x1020000, 0x00,  0x000000,  0x000000,  0x230000],   
+     [0x00,  0x000000,  0x030000,  0x000000, 0x00,  0x000000, 0x1210000, 0x1210000],  
+     [0x00,  0x000000,  0x000000,  0x000000, 0x00,  0x000000, 0x1210000, 0x1210000]],
+  */
+    [[0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x0010000, 0x0020000, 0x0030000, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],  
+     [0x00, 0x00, 0x00, 0x0100000, 0x0110000, 0x0120000, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],   
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
+
+  'instructions': '"Collect the item!"',
+  'instructions2': 'Program BOTX to get to the item.  Add a second moveRight command and then hit Run.',
+  'ticksBeforeFaceSouth': 15,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
     'imageWidth': 100,
@@ -1631,7 +1647,7 @@ levels.js_hoc2015_move_right = {
 
 levels.js_hoc2015_move_two_items = {
   'editCode': true,
-  'background': 'forest',
+  'background': 'main',
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -1648,16 +1664,18 @@ levels.js_hoc2015_move_two_items = {
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floating_score': true,
-  'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 4, 4, 4,  4, 4, 0, 0], 
-    [0, 4, 0, 0,  0, 4,0, 0], 
-    [0, 4, 0, 4,  0, 4, 0, 0], 
-    [0, 4, 1, 16, 0, 4, 0, 0], 
-    [0, 4, 4, 4,  4, 4, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0]],
-  'instructions': 'We need the items. Help me get them all!',
+  'map': 
+    [[0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x00, 0x00, 0x00, 0x0120000, 0x0110000, 0x0100000, 0x0000000, 0x00], 
+     [0x00, 0x00, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0030000, 0x00],  
+     [0x00, 0x00, 0x00, 0x1010000, 0x1010000, 0x0000000, 0x0020000, 0x00], 
+     [0x00, 0x00, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0010000, 0x00],   
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],  
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
+  'instructions': '"We need the items. Help me get them all!"',
+  'instructions2': 'Program BOTX to get to both items.',
+  'ticksBeforeFaceSouth': 10,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
     'imageWidth': 100,
@@ -1667,8 +1685,7 @@ levels.js_hoc2015_move_two_items = {
 
 levels.js_hoc2015_move_item_destination = {
   'editCode': true,
-  'background': 'snow',
-  'textModeAtStart': true,
+  'background': 'main',
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -1685,8 +1702,18 @@ levels.js_hoc2015_move_item_destination = {
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
-  'map': [[0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 4, 4, 4, 4, 0, 0], [0, 4,  4, 4, 4, 4, 4, 0], [0, 4,  0, 4, 4,1, 4, 0], [0, 4,1,16, 0, 0, 4, 0], [0, 4, 4, 4,  4, 4, 4, 0], [0, 0, 0, 0,  0, 0, 0, 0], [0, 0, 0, 0,  0, 0, 0, 0]],
-  'instructions': 'I see another item behind that obstacle. Can you bring it back to the destination?',
+  'map': 
+    [[0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x0110000, 0x0000001, 0x0120000, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],  
+     [0x00, 0x00, 0x00, 0x0000000, 0x0240000, 0x0250000, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],   
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
+  'instructions': '"I see another item behind that obstacle. Can you get it too?"',
+  'instructions2': 'Program BOTX to get all the items.',
+  'ticksBeforeFaceSouth': 10,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
     'imageWidth': 100,
@@ -1696,8 +1723,7 @@ levels.js_hoc2015_move_item_destination = {
 
 levels.js_hoc2015_move_item_destination_2 = {
  'editCode': true,
-  'background': 'snow',
-  'textModeAtStart': true,
+  'background': 'main',
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -1714,17 +1740,19 @@ levels.js_hoc2015_move_item_destination_2 = {
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
-  'map': [
-    [0, 0,  0,  0, 0, 0, 0, 0], 
-    [0, 0,  0,  0, 0, 4, 0, 0], 
-    [0, 4,  4,  4, 4, 0, 4, 0], 
-    [0, 4,  4, 16, 0, 0, 4, 0], 
-    [0, 4,  0,  0, 4, 4, 4, 0], 
-    [0, 4,  1,  1, 0, 4, 4, 0], 
-    [0, 4,  4,  0, 4, 0, 0, 0], 
-    [0, 0,  4,  4, 4, 0, 0, 0]],
+  'map':
+    [[0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x00, 0x00, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0110000, 0x00],  
+     [0x00, 0x00, 0x00, 0x0040000, 0x0030000, 0x0000000, 0x0120000, 0x00], 
+     [0x00, 0x00, 0x00, 0x0140000, 0x0000000, 0x0000001, 0x0030000, 0x00],   
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000001, 0x0340000, 0x0350000, 0x00],  
+     [0x00, 0x00, 0x00, 0x0000000, 0x0100000, 0x0000000, 0x0000000, 0x00], 
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
   'embed': 'false',
-  'instructions': 'Drag the code blocks into the workspace to help the character reach the destination.',
+  'instructions': '"There are more items to collect."',
+  'instructions2': 'Program BOTX to get all the items.',
+  'ticksBeforeFaceSouth': 10,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
     'imageWidth': 100,
@@ -1734,8 +1762,7 @@ levels.js_hoc2015_move_item_destination_2 = {
 
 levels.js_hoc2015_move_item_destination_3 = {
   'editCode': true,
-  'background': 'ship',
-  'textModeAtStart': true,
+  'background': 'main',
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -1752,17 +1779,19 @@ levels.js_hoc2015_move_item_destination_3 = {
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floating_score': true,  
-  'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 4, 4,  4, 4, 4, 0], 
-    [0, 0, 4, 0,  0, 1, 4, 0], 
-    [0, 0, 4, 0,  1, 4, 4, 0], 
-    [0, 4, 0, 16, 0, 0, 4, 0], 
-    [0, 4, 4, 4,  4, 0, 4, 0], 
-    [0, 0, 0, 0,  4, 4, 4, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0]],
+  'map':
+    [[0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x00, 0x00],  
+     [0x00, 0x00, 0x0040000, 0x0000000, 0x0000001, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x00, 0x0140000, 0x0000001, 0x0240000, 0x0250000, 0x00, 0x00],   
+     [0x00, 0x00, 0x0000001, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
+     [0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],   
+     [0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
   'embed': 'false',
-  'instructions': 'Try typing the commands to get the item to our destination. Don’t forget to end with ();',
+  'instructions': '"Time to get more items."',
+  'instructions2': 'Try typing the commands to get the items. Don’t forget to end with ();',
+  'ticksBeforeFaceSouth': 10,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
     'imageWidth': 100,
@@ -1773,8 +1802,7 @@ levels.js_hoc2015_move_item_destination_3 = {
 
 levels.js_hoc2015_move_cross = {
   'editCode': true,
-  'background': 'ship',
-  'textModeAtStart': true,
+  'background': 'main',
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -1791,17 +1819,27 @@ levels.js_hoc2015_move_cross = {
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
-  'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 4,  0, 0, 0, 0], 
-    [0, 0, 4, 1,  4, 0, 0, 0], 
-    [0, 4, 1, 0,  1, 4, 0, 0], 
-    [0, 0, 4, 16, 4, 0, 0, 0], 
-    [0, 0, 0, 4,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0]],
+  'map':
+    /*[[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x00, 0x10, 0x00, 0x01, 0x00, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00],  
+     [0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00],   
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],  
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]],*/
+    [[0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x00, 0x10, 0x0110000, 0x0000001, 0x0100000, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x0000001, 0x0000000, 0x0000001, 0x00, 0x00],  
+     [0x00, 0x00, 0x01, 0x0120000, 0x0340000, 0x0350000, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],   
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
+     [0x00, 0x00, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
   'embed': 'false',
-  'instructions': 'Type or drag the blocks to get both items to the destination.',
+  'instructions': '"More items to get!"',
+  'instructions2': 'Type or drag the blocks to get all the items.',
+  'ticksBeforeFaceSouth': 10,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
     'imageWidth': 100,

@@ -902,6 +902,7 @@ Studio.onTick = function() {
     var isWalking = true;
 
     // After 5 ticks of no movement, turn sprite forward.
+    var ticksBeforeFaceSouth = utils.valueOr(level.ticksBeforeFaceSouth, Studio.ticksBeforeFaceSouth);
     if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].dir = Direction.SOUTH;
       isWalking = false;
@@ -3561,6 +3562,8 @@ Studio.setMap = function (opts, forceLoad) {
     // Give the skin a chance to adjust the map name depending upon the
     // background name.
     useMap = skin.getMap(Studio.background, opts.value);
+  } else {
+    useMap = opts.value;
   }
 
   if (!opts.forceRedraw && useMap === Studio.wallMap) {
@@ -4474,7 +4477,7 @@ Studio.allGoalsVisited = function() {
             }
 
             callHandler('whenTouchGoal');  
-             
+
             break;
           }
         }
