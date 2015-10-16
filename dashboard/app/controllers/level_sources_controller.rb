@@ -88,7 +88,7 @@ class LevelSourcesController < ApplicationController
       has_i18n: @game.has_i18n?,
       no_padding: browser.mobile? && @game.share_mobile_fullscreen?
     )
-    @callback = milestone_level_url(user_id: current_user.try(:id) || 0, level_id: @level.id)
+    @callback = milestone_level_path(user_id: current_user.try(:id) || 0, level_id: @level.id)
     level_view_options(
       start_blocks: @level_source.data,
       share: true
