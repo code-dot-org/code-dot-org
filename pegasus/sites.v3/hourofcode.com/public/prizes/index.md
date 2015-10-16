@@ -69,7 +69,7 @@ One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 wo
 Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank-you gift. The $10K hardware prize is limited to US residents only.
 
 ## Is there a deadline to sign up to receive the all organizer thank-you gift?
-You must sign up **before** Dec 7th in order to be eligible to receive the all organizer thank-you gift. 
+You must sign up **before** Dec 7th in order to be eligible to receive the all organizer thank-you gift.
 
 ## When will I receive my thank-you gift?
 We will contact you in December after Computer Science Education Week (Dec 7-11th) with next steps on how to redeem your choice of thank-you gift.
@@ -81,10 +81,6 @@ No. Thank-you gifts are limited to one per organizer. We will contact you in Dec
 
 ## Does your whole school have to enter to win the $10,000 in hardware?
 Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= resolve_url('/prizes/hardware-signup') %>). Every teacher participating will need to [sign up](<%= resolve_url('/') %>) their classroom individually in order to receive the all organizer thank you gift.
-
-## Who is eligible to win the $10,000 in hardware?
-
-Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2015.
 
 ## Who is eligible to win the $10,000 in hardware?
 
