@@ -3219,50 +3219,28 @@ en:
         'When the forward button is clicked: The turtle will move forward and turn left': 'When the forward button is clicked: The turtle will move forward and turn left'
         description here: description here
       U3L13 debugging Multi:
-        A program that does not generate any error messages will run as intended: A program that does not generate any error messages will run as intended
         A program that does not generate any error messages will run as intended.: A program that does not generate any error messages will run as intended.
-        Debugging is the process of locating and correcting errors in a program: Debugging is the process of locating and correcting errors in a program
         Debugging is the process of locating and correcting errors in a program.: Debugging is the process of locating and correcting errors in a program.
-        Error messages help programmers identify problems in their code: Error messages help programmers identify problems in their code
         Error messages help programmers identify problems in their code.: Error messages help programmers identify problems in their code.
-        It is common for programs to contain errors the first time they are written: It is common for programs to contain errors the first time they are written
         It is common for programs to contain errors the first time they are written.: It is common for programs to contain errors the first time they are written.
         Multiple Choice - Debugging and Error Messages: Multiple Choice - Debugging and Error Messages
-        Not all errors in a program will generate an error message: Not all errors in a program will generate an error message
         Not all errors in a program will generate an error message.: Not all errors in a program will generate an error message.
         Which of the following statements about debugging and program errors is FALSE?: Which of the following statements about debugging and program errors is FALSE?
       U3L14 - MC Duplicate Ids:
         A warning message will appear for the second button that that ID is already in use.: A warning message will appear for the second button that that ID is already in use.
-        A warning message will appear for the second button that that id is already in use: A warning message will appear for the second button that that id is already in use
         Buttons and IDs: Buttons and IDs
-        Buttons and Ids: Buttons and Ids
         JavaScript is flexible. Two buttons with same ID will respond to a single event handler associated with that ID.: JavaScript is flexible. Two buttons with same ID will respond to a single event handler associated with that ID.
-        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id: JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id
         The JavaScript API for MVC allows for duplicate IDs as long as the HTML is CSS compliant.: The JavaScript API for MVC allows for duplicate IDs as long as the HTML is CSS compliant.
-        The JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS compliant: The JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS compliant
         The first button created with the ID will work, the other will not.: The first button created with the ID will work, the other will not.
-        The first button created with the id will work, the other will not: The first button created with the id will work, the other will not
         Two buttons with same ID are linked during the running of the program; clicking one is just like clicking the other.: Two buttons with same ID are linked during the running of the program; clicking one is just like clicking the other.
-        Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other: Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other
         What happens when two buttons are given the same ID?: What happens when two buttons are given the same ID?
-        What happens when two buttons are given the same id?: What happens when two buttons are given the same id?
       U3L14 - MC order of button and onEvent:
         Buttons and Event Handlers: Buttons and Event Handlers
-        Does order matter when adding a button and its event handler to your code?: Does order matter when adding a button and its event handler to your code?
         Does the order in which the code for a button and the code for its event handler appear within the program matter?: Does the order in which the code for a button and the code for its event handler appear within the program matter?
-        JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API: JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API
-        JavaScript is flexible. The button and its event handler can appear in any order in the code: JavaScript is flexible. The button and its event handler can appear in any order in the code
-        No, JavaScript is flexible. The button and its event handler can appear in any order in the code: No, JavaScript is flexible. The button and its event handler can appear in any order in the code
         No, JavaScript is flexible; the button and its event handler can appear in any order in the code.: No, JavaScript is flexible; the button and its event handler can appear in any order in the code.
-        The button, with its id, must appear in the code AFTER the event handler: The button, with its id, must appear in the code AFTER the event handler
-        The button, with its id, must appear in the code BEFORE the event handler: The button, with its id, must appear in the code BEFORE the event handler
-        Yes, JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API: Yes, JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API
-        Yes, JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API.: Yes, JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API.
         Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.: Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.
         Yes, the button, with its ID, must appear in the code AFTER the event handler.: Yes, the button, with its ID, must appear in the code AFTER the event handler.
         Yes, the button, with its ID, must appear in the code BEFORE the event handler.: Yes, the button, with its ID, must appear in the code BEFORE the event handler.
-        Yes, the button, with its id, must appear in the code AFTER the event handler: Yes, the button, with its id, must appear in the code AFTER the event handler
-        Yes, the button, with its id, must appear in the code BEFORE the event handler: Yes, the button, with its id, must appear in the code BEFORE the event handler
       U3L18 Controlling Memory and Program Flow:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
         Keep track of time: Keep track of time
@@ -3306,14 +3284,7 @@ en:
       U3L19 - MC what are values of abc:
         ' Variable Check In': ' Variable Check In'
         ' What are the values of the variables a, b and c after all of the code below has executed? ': ' What are the values of the variables a, b and c after all of the code below has executed? '
-        Choose the best answer: Choose the best answer
         Code does not execute due to error: Code does not execute due to error
-        So, what's the answer?: So, what's the answer?
-        a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7: a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7
-        a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13: a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13
-        a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21: a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21
-        a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16: a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16
-        a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8: a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8
         a=10, b=3, c=7: a=10, b=3, c=7
         a=13, b =16, c=29: a=13, b =16, c=29
         a=13, b=13, c=13: a=13, b=13, c=13
@@ -4590,7 +4561,6 @@ en:
       U3L13 Free Response Getting Started:
         Buttons on the Screen - Getting Started: Buttons on the Screen - Getting Started
       U3L13 Free Response Reflection:
-        Buttons on the Screen Wrap Up: Buttons on the Screen Wrap Up
         Event-Driven Programming Wrap-Up: Event-Driven Programming Wrap-Up
       U3L14 - Journal Favorite Event:
         Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.
