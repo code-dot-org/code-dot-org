@@ -519,6 +519,165 @@ function loadHoc2015(skin, assetUrl) {
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
+function loadHoc2015x(skin, assetUrl) {
+  skin.preloadAssets = true;
+
+  skin.defaultBackground = 'main';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+  ];
+
+  // TODO: proper item class names
+  skin.ItemClassNames = [  ];
+
+  skin.AutohandlerTouchItems = {
+  };
+
+  skin.AutohandlerGetAllItems = {
+  };
+
+  skin.specialItemProperties = {
+  };
+
+  // Spritesheet for animated goal.
+  skin.animatedGoal = skin.assetUrl('goal_idle.png');
+
+  // How many frames in the animated goal spritesheet.
+  skin.animatedGoalFrames = 16;
+
+  // How long to show each frame of the optional goal animation.
+  skin.timePerGoalAnimationFrame = 100;
+
+  // For a smaller collision region on a goal.
+  skin.goalCollisionRectWidth = 50;
+  skin.goalCollisionRectHeight = 50;
+
+  // Whether that goal should fade out when touched.  If true, then the
+  // success image is never shown.
+  skin.fadeOutGoal = true;
+  skin.goalSuccess = null;
+
+  // Draw a goal an an offset to its usual location, useful for oversize goal
+  // images, such as a person standing taller than a single grid square whose
+  // feet should still be planted in that grid square.
+  skin.goalRenderOffsetX = -25;
+  skin.goalRenderOffsetY = -45;
+
+  // Dimensions of a rectangle in collidable center from which projectiles begin.
+  skin.projectileSpriteWidth  = 70;
+  skin.projectileSpriteHeight = 70;
+
+  // Dimensions of a rectangle in collidable center in which item collisions occur.
+  skin.itemCollisionRectWidth  = 50;
+  skin.itemCollisionRectHeight = 50;
+
+  // Dimensions of a rectangle in sprite center in which item collisions occur.
+  skin.spriteCollisionRectWidth  = 50;
+  skin.spriteCollisionRectHeight = 50;
+
+  // Offset & dimensions of a rectangle in collidable in which wall collisions occur.
+  // For isometric-style rendering, this would normally be the feet.
+  skin.wallCollisionRectOffsetX = 0;
+  skin.wallCollisionRectOffsetY = 24;
+  skin.wallCollisionRectWidth  = 30;
+  skin.wallCollisionRectHeight = 20;
+
+  // When movement is grid aligned, sprite coordinates are the top-left corner
+  // of the sprite, and match the top-left corner of the grid square in question.
+  // When we draw the sprites bigger, this means the sprite's "feet" will usually
+  // be too far to the right and below that square.  These offsets are a chance
+  // to move the rendering of the sprite up and to the left, when negative, so
+  // that the "feet" are planted at the bottom center of the grid square.
+  skin.gridSpriteRenderOffsetX = -30;
+  skin.gridSpriteRenderOffsetY = -40;
+
+  skin.avatarList = ['bot1'];
+  skin.avatarList.forEach(function (name) {
+    skin[name] = {
+      sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 16,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: 19
+      },
+      timePerFrame: 100
+    };
+  });
+
+  skin.preventProjectileLoop = function (className) {
+    return className === '';
+  };
+
+  skin.preventItemLoop = function (className) {
+    return className === 'item_character1';
+  };
+
+  skin.main = {
+    background: skin.assetUrl('background_background1.jpg'),
+    tiles: skin.assetUrl('tiles_background1.png')
+  };
+
+  // It's possible to enlarge the rendering of some wall tiles so that they
+  // overlap each other a little.  Define a bounding rectangle for the source
+  // tiles that get this treatment.
+
+  skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
+
+  // Sounds.
+  var sounds = [
+    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
+    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
+    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
+    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
+    'alert1', 'alert2', 'alert3', 'alert4',
+    'applause',
+    'start', 'win', 'failure', 'flag'
+  ];
+
+  // Override the default loadAudio function with this one.
+  skin.loadAudio = function() {
+    for (var s = 0; s < sounds.length; s++) {
+      var sound = sounds[s];
+      skin[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl('wall.ogg')];
+      studioApp.loadAudio(skin[sound], sound);
+    }
+  };
+
+  // These are used by blocks.js to customize our dropdown blocks across skins
+  // NOTE: map names must have double quotes inside single quotes
+  // NOTE: first item must be RANDOM_VALUE
+  skin.mapChoices = [
+    ];
+
+  skin.backgroundChoices = [
+    ];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.backgroundChoicesK1 = [
+    ];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteBot1(), '"bot1"']];
+
+  skin.projectileChoices = [];
+
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.itemChoices = [
+    ];
+}
+
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
   skin.projectileFrames = 8;
@@ -805,6 +964,9 @@ exports.load = function(assetUrl, id) {
       break;
     case 'hoc2015':
       loadHoc2015(skin, assetUrl);
+      break;
+    case 'hoc2015x':
+      loadHoc2015x(skin, assetUrl);
       break;
     case 'studio':
       loadStudio(skin, assetUrl);
