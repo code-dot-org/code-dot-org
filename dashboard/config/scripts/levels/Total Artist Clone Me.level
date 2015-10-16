@@ -600,7 +600,7 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false"/>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </solution_blocks>
   </blocks>
