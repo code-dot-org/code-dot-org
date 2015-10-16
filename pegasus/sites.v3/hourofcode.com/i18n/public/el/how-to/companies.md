@@ -12,10 +12,12 @@ nav: how_to_nav
 
 **Υπάρχουν πολλοί τρόποι για εταιρείες να συμμετέχουν στην Ώρα του Κώδικα και να συμβάλουν στη διεύρυνση της συμμετοχής στην επιστήμη των υπολογιστών. Σκεφτείτε να:**
 
-  * Ζητήσετε από το Διευθύνων Σύμβουλο της εταιρείας σας να στείλει ένα email σε ολόκληρη την εταιρεία, υπογραμμίζοντας τη σημασία της επιστήμης των υπολογιστών και να ενθαρρύνει τους υπαλλήλους της εταιρείας να διαδώσουν τη λέξη. [See this email](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Φιλοξενήσετε μια Ώρα του Κώδικα Happy Hour με συναδέλφους για να δοκιμάσουν τα [σεμινάρια](<%= resolve_url('https://code.org/learn') %>).
-  * Προσκαλέστε μια τοπική τάξη από μαθητές ή άλλους μη κερδοσκοπικούς εταίρους να κάνει μια ώρα του κώδικα στο γραφείο της εταιρείας σας.
-  * Ενθαρρύνετε τους **μηχανικούς λογισμικού** της εταιρείας σας να επισκεφθούν μια τοπική τάξη για να βοηθήσουν σε μια Ώρα του Κώδικα και να εμπνεύσουν φοιτητές να σπουδάσουν την επιστήμη των υπολογιστών. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
+  * Use our [marketing toolkit](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) to create a communications timeline and share promotional content.
+  * Asking your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](<%= resolve_url('/promote/resources#sample-emails') %>).
+  * Hosting an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
+  * Inviting a local classroom of students or other non profits you partner with to do an Hour of Code at your company’s office.
+  * Encouraging **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
+  * For more instructions on connecting your employees with classrooms, use our [guide for corporate partners](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>)
 
 ## How to host an Hour of Code event
 

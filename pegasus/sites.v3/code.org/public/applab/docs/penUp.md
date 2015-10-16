@@ -20,11 +20,11 @@ Category: Turtle
 
 [short_description]
 
-Stops the turtle from drawing a trail behind it as it moves.
+Picks the pen up so the turtle does not draw a line as it moves.
 
 [/short_description]
 
-Just like you sometimes lift your pen when drawing, the turtle pen can be lifted using penUp so the turtle will not leave a drawing trail behind it as it moves.
+Just like you sometimes lift your pen when drawing, the turtle pen can be lifted using penUp so the turtle will not draw a line as it moves.
 
 [/description]
 
@@ -47,7 +47,10 @@ ____________________________________________________
 
 **Example: Dotted Line** Use penUp and penDown to have the turtle draw a thick, dotted line.
 
-```
+<table>
+<tr>
+<td>
+<pre>
 // Use penUp and penDown to have the turtle draw a thick, dotted line.
 penWidth(3);
 penDown();
@@ -60,9 +63,13 @@ penUp();
 moveForward(25);
 penDown();
 moveForward(25);
-```
-
+</pre>
+</td>
+<td>
 <img src='https://images.code.org/ac4b960578d41e88a17d13c3f4208860-image-1444488945312.gif' style='width: 150px;'> 
+</td>
+</tr>
+</table>
 
 [/example]
 

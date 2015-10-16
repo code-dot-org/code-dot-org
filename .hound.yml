@@ -1,7 +1,7 @@
 ruby:
   config_file: .rubocop.yml
 
-java_script:
+javascript:
   enabled: false
 
 scss:

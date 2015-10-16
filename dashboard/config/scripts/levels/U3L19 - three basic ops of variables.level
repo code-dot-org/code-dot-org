@@ -7,13 +7,58 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "write": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "button": null,
+      "textLabel": {
+        "params": [
+          "\"id\"",
+          "\"text\""
+        ]
+      },
+      "image": null,
+      "playSound": null,
+      "setPosition": null,
+      "setScreen": null,
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "getX": null,
+      "getY": null,
+      "getDirection": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_max": null,
+      "randomNumber_min_max": null,
+      "console.log": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null,
       "declareAssign_x": null,
       "assign_x": null
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Do this:\r\nWe've given you the three lines of code shown in the previous page.  Add three lines of code just below the ones shown here to make your own variable, assign it a value and write it to the screen.  NOTE: change the variable name from the default x to something else.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -28,7 +73,24 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "start_blocks": "var foo;\r\nfoo = 7;\r\nwrite(foo);"
+    "start_blocks": "var foo;\r\nfoo = 7;\r\nconsole.log(foo);\r\nvar x;",
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "# Variables\r\n\r\nCheck out the variables tab. It has a couple new commands. Take a look at `var x =  ;` and `x = ;`. These are commands to create variables. We are going to use those to set up variables.\r\n\r\nThere are three steps to setting up a variable:\r\n\r\n1. **Create** the variable\r\n2. **Assign** a value to the variable\r\n3. **Read** the value of the variable\r\n\r\nIn the starter code you can see these three steps broken down\r\n\r\n<img src=\"https://images.code.org/722644a199e91c6c31ee6fb7ffb8261f-image-1445003843261.png\" style=\"width: 350px; border: solid 1px black\">\r\n\r\n# Do This\r\n\r\n* **Starter Code:** You start with code for making, assigning and using a variable called 'foo'\r\n\r\n* **Run the program** to test out what happens. \r\n\r\n* **Add another variable.** Below foo we have started you with a variable named x. Change the name of the variable to a name of your choosing besides x. Then do step 2 and 3 of variables. \r\n\r\n* **Test** that it has the correct value by printing it to the console. ",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "instructions": "Add another variable with a name of your choosing. Print the value of the variable to the console. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

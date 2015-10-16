@@ -7,14 +7,60 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "addOperator": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "button": null,
+      "textLabel": {
+        "params": [
+          "\"id\"",
+          "\"text\""
+        ]
+      },
+      "image": null,
+      "playSound": null,
+      "setPosition": null,
+      "setScreen": null,
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "getX": null,
+      "getY": null,
+      "getDirection": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_max": null,
+      "randomNumber_min_max": null,
+      "console.log": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null,
       "declareAssign_x": null,
       "assign_x": null,
-      "write": null
+      "addOperator": null
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Why is this happening? The code given here is the same as the example from the previous page where we asked you to make a prediction about what will happen.  Run this code to find out if you were right.  If you weren't, that's okay.  You might experiment  a little if you want to, but bon't spend too much time here. We'll explain more on the next page.",
+    "instructions": "Predict the value of a and b. Add console.log statements to find out the actual value of a and b. (Click for full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "0.1",
@@ -32,7 +78,21 @@
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
-    "start_blocks": "var a = 3;\r\nvar b = 7;\r\na = b;\r\nb = a;\r\nwrite(\"The value of a is: \" + a);\r\nwrite(\"The value of b is: \" + b);"
+    "start_blocks": "var a = 3;\r\nvar b = 7;\r\na = b;\r\nb = a;",
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "# Variable Reassignment\r\n\r\nWe can change the value of variables as the program runs. Sometimes we even set the value of a variable to value of another variable!\r\n\r\nWhen we assign values of variables remember: the variable on the left gets the value of the expression on the right side of the equal sign.\r\n\r\nExample ` foo = a;` <br>\r\n**Read foo GETS the value of a** <br>\r\n\r\n# Do This\r\n\r\n* **Make a prediction** about what will happen when you run the code. What will the values of a and b at the end of the program?\r\n\r\n* **Add console.log statements** at the end of the program to find out what the value of a and b are.\r\n\r\n* On the next level we will take a closer look at the why.",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>
