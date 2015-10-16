@@ -43,37 +43,4 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     end
     results
   end
-
-  def self.process(data)
-    {}.tap do |results|
-      location = search_for_address(data['location_s'])
-      results.merge! location.to_solr if location
-    end
-  end
-
-  # OPTIONAL: Enable searching the SOLR index
-  def self.solr_query(params)
-    query = "kind_s:\"#{self.name}\""
-
-    coordinates = params['coordinates']
-    distance = 500
-    rows = 500
-
-    fq = ["{!geofilt pt=#{coordinates} sfield=location_p d=#{distance}}"]
-
-    params['location_flexibility_ss'].each { |location|
-      fq.push("location_flexibility_ss:#{location}")
-    } unless params['location_flexibility_ss'].nil_or_empty?
-
-    fq.push("experience_s:#{params['experience_s']}") unless params['experience_s'].nil_or_empty?
-
-    {
-      q: query,
-      fq: fq,
-      facet: true,
-      'facet.field'=>['location_flexibility_ss', 'experience_s'],
-      rows: rows,
-      sort: "name_s asc"
-    }
-  end
 end
