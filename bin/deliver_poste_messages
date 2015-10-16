@@ -270,18 +270,26 @@ def main()
     until queue.empty?
       next unless delivery = queue.pop(true) rescue nil
 
+      sent_at = DateTime.now
+
       begin
         deliverer.send delivery
-      rescue Net::SMTPSyntaxError => e
+      rescue Net::SMTPSyntaxError, Net::SMTPFatalError => e
         puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
-      rescue Net::SMTPFatalError => e
-        puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+      rescue RuntimeError => e
+        if e.message.to_s.start_with? 'ABORT:'
+          puts "Abandoning delivery of #{delivery[:id]} because '#{e.message.to_s.sub('ABORT:','').strip}'"
+          sent_at = 0
+        else
+          puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+          raise
+        end
       rescue => e
         puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
         raise
       end
 
-      POSTE_DB[:poste_deliveries].where(id: delivery[:id]).update(sent_at: DateTime.now)
+      POSTE_DB[:poste_deliveries].where(id: delivery[:id]).update(sent_at: sent_at)
     end
   end
   workers.each(&:join)
