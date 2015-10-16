@@ -22,6 +22,14 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
+<% if @country == 'jp' %>
+
+# Japan Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
+
+<% end %>
+
 <% if @country == 'uk' %>
 
 # United Kingdom Partners

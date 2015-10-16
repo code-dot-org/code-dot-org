@@ -3,8 +3,8 @@ title: <%= hoc_s(:title_how_to_volunteers) %>
 layout: wide
 nav: how_to_nav
 ---
+# How-to Guide for Volunteers
 
-# How To Guide for Hour of Code Volunteers
 ## 1. Sign up to volunteer
 Visit a local classroom to inspire students to keep learning computer science. [Volunteer for an hour](https://code.org/volunteer/engineer).
 

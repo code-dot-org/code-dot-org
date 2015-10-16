@@ -27,6 +27,7 @@ module.exports = {
   levelDefinition: levelDef,
   tests: [
     {
+      timeout: 15000,
       description: "rocket_height = (2 + 4) / 2",
       // make sprite visible, have them say something
       xml:  '' +
