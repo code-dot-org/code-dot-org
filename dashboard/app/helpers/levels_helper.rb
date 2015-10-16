@@ -28,29 +28,15 @@ module LevelsHelper
   #   using the value from the `data` param.
   def create_channel(data = {}, src = nil)
 
-    result = ChannelsApi.call(request.env.merge(
-      'REQUEST_METHOD' => 'POST',
-      'PATH_INFO' => '/v3/channels',
-      'REQUEST_PATH' => '/v3/channels',
-      'QUERY_STRING' => src ? "src=#{src}" : '',
-      'CONTENT_TYPE' => 'application/json;charset=utf-8',
-      'rack.input' => StringIO.new(data.to_json)
-    ))
-    headers = result[1]
-
-    # The ChannelsApi may set a storage_id cookie that we need to copy to the response.
-    if headers['Set-Cookie']
-      cookie = headers['Set-Cookie'].split(';').map{ |token| token.strip.split('=') }
-      name = cookie[0][0]
-      cookie[0][0] = 'value'
-      cookie = Hash[cookie]
-      cookie['value'] = CGI.unescape cookie['value']
-      cookie['expires'] = Time.parse cookie['expires']
-      cookies[name] = cookie
+    storage_app = StorageApps.new(storage_id('user'))
+    if src
+      data = storage_app.get(src)
+      data['name'] = "Remix: #{data['name']}"
+      data['hidden'] = false
     end
 
-    # Return the newly created channel ID.
-    headers['Location'].split('/').last
+    timestamp = Time.now
+    storage_app.create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
   end
 
   def readonly_view_options
