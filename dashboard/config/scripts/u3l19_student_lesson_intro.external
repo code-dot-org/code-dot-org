@@ -1,5 +1,6 @@
 name 'U3L19 Student Lesson Intro'
 title 'Clicker V.1'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 14
@@ -7,6 +8,10 @@ markdown <<MARKDOWN
 # Background
 
 You probably have many ideas about how the quick double-clicker game could be more fun and challenging. The good news is that over the next few lessons, you will learn how to add some of your ideas by using a variety of techniques to keep track of game details, make calculations and decisions, and store information about the game from one session to the next. 
+
+# Vocab
+
+* **Variable:** In JavaScript (and most programming languages) the most primitive type of memory you can use is called a variable. It's called a variable because it's a piece of memory in which you can change what's stored - its value can vary.
 
 # Lesson
 

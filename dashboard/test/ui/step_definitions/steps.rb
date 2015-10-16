@@ -248,6 +248,11 @@ Then /^element "([^"]*)" is visible$/ do |selector|
   visible.should eq true
 end
 
+Then /^element "([^"]*)" does not exist/ do |selector|
+  instances = @browser.execute_script("return $('#{selector}')");
+  instances.should eq []
+end
+
 Then /^element "([^"]*)" is hidden$/ do |selector|
   visibility = @browser.execute_script("return $('#{selector}').css('visibility')");
   visible = @browser.execute_script("return $('#{selector}').is(':visible')") && (visibility != 'hidden');

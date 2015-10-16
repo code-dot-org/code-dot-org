@@ -8,12 +8,13 @@ window.$ = $;
 window.jQuery = window.$;
 window.React = React;
 
+// used in design mode
 window.Applab = {
   appWidth: 320,
   appHeight: 480
 };
 
-var AppLab = require('@cdo/apps/applab/applab');
+var Applab = require('@cdo/apps/applab/applab');
 var designMode = require('@cdo/apps/applab/designMode');
 var applabCommands = require('@cdo/apps/applab/commands');
 
@@ -71,7 +72,7 @@ describe('applab: getIdDropdown filtering modes', function () {
   });
 
   it('produces all IDs when no filter is given', function () {
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot), [
       { "display": '"chart9"', "text": '"chart9"' },
       { "display": '"image1"', "text": '"image1"' },
       { "display": '"screen1"', "text": '"screen1"' }
@@ -79,32 +80,32 @@ describe('applab: getIdDropdown filtering modes', function () {
   });
 
   it('can filter on tag type', function () {
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, 'div'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, 'div'), [
       { "display": '"chart9"', "text": '"chart9"' },
       { "display": '"screen1"', "text": '"screen1"' }
     ]);
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, 'img'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, 'img'), [
       { "display": '"image1"', "text": '"image1"' }
     ]);
   });
 
   it('can filter on class', function () {
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '.chart'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.chart'), [
       { "display": '"chart9"', "text": '"chart9"' }
     ]);
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '.screen'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.screen'), [
       { "display": '"screen1"', "text": '"screen1"' }
     ]);
   });
 
   it('can filter on ID', function () {
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#screen1'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '#screen1'), [
       { "display": '"screen1"', "text": '"screen1"' }
     ]);
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#chart9'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '#chart9'), [
       { "display": '"chart9"', "text": '"chart9"' }
     ]);
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '#image1'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '#image1'), [
       { "display": '"image1"', "text": '"image1"' }
     ]);
   });
@@ -112,10 +113,10 @@ describe('applab: getIdDropdown filtering modes', function () {
   it('does not accidentally pick up superset classes', function () {
     // Make sure searching for elements with class ".chart" does not also pick
     // up elements with class ".chart-friend"
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '.chart'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.chart'), [
       { "display": '"chart9"', "text": '"chart9"' }
     ]);
-    assert.deepEqual(AppLab.getIdDropdownFromDom_(documentRoot, '.chart-friend'), [
+    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.chart-friend'), [
       { "display": '"image1"', "text": '"image1"' }
     ]);
   });
@@ -245,5 +246,145 @@ describe('getText/setText commands', function () {
         roundTripTest('text with&nbsp;HTML &lt;escapes&gt;');
       });
     });
+  });
+});
+
+describe('hasDataStoreAPIs', function () {
+  it('returns true if we use createRecord', function () {
+    var code = ['',
+      'createRecord("mytable", {name:\'Alice\'}, function(record) {' +
+      '  ',
+      '});'
+    ].join('\n');
+    assert.strictEqual(Applab.hasDataStoreAPIs(code), true);
+  });
+
+  it('returns true if we use updateRecord', function () {
+    var code = ['',
+      'updateRecord("mytable", {name:\'Bob\'}, function(record) {' +
+      '  ',
+      '});'
+    ].join('\n');
+    assert.strictEqual(Applab.hasDataStoreAPIs(code), true);
+  });
+
+  it('returns true if we use setKeyValue', function () {
+    var code = ['',
+      'setKeyValue("key", "value", function () {',
+      '  ',
+      '});'
+    ].join('\n');
+    assert.strictEqual(Applab.hasDataStoreAPIs(code), true);
+  });
+
+  it('returns false if we just read records', function () {
+    var code = ['',
+      'readRecords("mytable", {}, function(records) {',
+      '  for (var i =0; i < records.length; i++) {',
+      '    textLabel(\'id\', records[i].id + \': \' + records[i].name);',
+      '  }',
+      '});'
+    ].join('\n');
+    assert.strictEqual(Applab.hasDataStoreAPIs(code), false);
+  });
+});
+
+describe('startSharedAppAfterWarnings', function () {
+  var originalState = {};
+  var mockedApplabItems = ['user', 'getCode', 'runButtonClick'];
+
+  beforeEach(function () {
+    localStorage.clear();
+    mockedApplabItems.forEach(function (item) {
+      originalState[item] = Applab[item];
+    });
+    originalState.dashboard = window.dashboard;
+
+    window.dashboard = {
+      project: {
+        getCurrentId: function () { return 'current_channel'; }
+      }
+    };
+
+    Applab.user = {};
+    Applab.getCode = function () {
+      return 'createRecord'; // use data API
+    };
+    Applab.runButtonClick = function () {};
+  });
+
+  afterEach(function () {
+    mockedApplabItems.forEach(function (item) {
+      Applab[item] = originalState[item];
+    });
+    window.dashboard = originalState.dashboard;
+  });
+
+  describe('is13plus', function () {
+    it('is true if user is signed in', function () {
+      Applab.user = { isSignedIn: true };
+      var component = Applab.startSharedAppAfterWarnings();
+      assert.equal(component.props.is13Plus, true);
+    });
+
+    it('is true if user is not signed in but has local storage set', function () {
+      Applab.user = { isSignedIn: false };
+      localStorage.setItem('is13Plus', 'true');
+      var component = Applab.startSharedAppAfterWarnings();
+      assert.equal(component.props.is13Plus, true);
+    });
+
+    it('is false if user is not signed in and has no local storage set', function () {
+      Applab.user = { isSignedIn: false };
+      var component = Applab.startSharedAppAfterWarnings();
+      assert.equal(component.props.is13Plus, false);
+    });
+  });
+
+  describe('showStoreDataAlert', function () {
+    it('is true if user has viewed no channels', function () {
+      var component = Applab.startSharedAppAfterWarnings();
+      assert.equal(component.props.showStoreDataAlert, true);
+    });
+
+    it('is true if user has viewed only other channels', function () {
+      localStorage.setItem('dataAlerts', JSON.stringify(['other_channel']));
+      var component = Applab.startSharedAppAfterWarnings();
+      assert.equal(component.props.showStoreDataAlert, true);
+    });
+
+    it('is false if user has viewed this channel', function () {
+      localStorage.setItem('dataAlerts', JSON.stringify(['other_channel', 'current_channel']));
+      var component = Applab.startSharedAppAfterWarnings();
+      assert.equal(component.props.showStoreDataAlert, false);
+    });
+
+    it('is false if code has no data storage APIs', function () {
+      Applab.getCode = function () {
+        return 'asdf';
+      };
+      var component = Applab.startSharedAppAfterWarnings();
+      assert.equal(component.props.showStoreDataAlert, false);
+    });
+  });
+
+  it('sets is13Plus to true on close', function () {
+    var component = Applab.startSharedAppAfterWarnings();
+    component.props.handleClose();
+    assert.strictEqual(localStorage.getItem('is13Plus'), 'true');
+  });
+
+  it('sets is13Plus to false on too young', function () {
+    var component = Applab.startSharedAppAfterWarnings();
+    component.props.handleTooYoung();
+    assert.strictEqual(localStorage.getItem('is13Plus'), 'false');
+  });
+
+  it('adds our channelId on close', function () {
+    localStorage.setItem('dataAlerts', JSON.stringify(['other_channel']));
+    var component = Applab.startSharedAppAfterWarnings();
+    component.props.handleClose();
+    assert.strictEqual(localStorage.getItem('dataAlerts'),
+      JSON.stringify(['other_channel', 'current_channel']));
   });
 });
