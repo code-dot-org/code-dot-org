@@ -43,8 +43,6 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "app_width": "200",
-    "app_height": "200",
     "instructions": "Draw a 1x1 square above and to the left of the turtle's starting position. Click to see full instructions.",
     "callout_json": "[]",
     "show_turtle_before_run": "true",
