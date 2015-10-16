@@ -89,8 +89,9 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false",
-    "start_blocks": "var moveAmount = 50;\r\nvar turnAmount = 90;\r\npenColor(\"red\");\r\nturnRight(turnAmount);\r\nmoveForward(moveAmount);\r\nmoveAmount = 75;\r\npenColor(\"blue\");\r\nturnRight(turnAmount);\r\nmoveForward(moveAmount);\r\nmoveAmount = 100;\r\npenColor(\"green\");\r\nturnRight(turnAmount);\r\nmoveForward(moveAmount);\r\n"
+    "debugger_disabled": "true",
+    "start_blocks": "var moveAmount = 50;\r\nvar turnAmount = 90;\r\npenColor(\"red\");\r\nturnRight(turnAmount);\r\nmoveForward(moveAmount);\r\nmoveAmount = 75;\r\npenColor(\"blue\");\r\nturnRight(turnAmount);\r\nmoveForward(moveAmount);\r\nmoveAmount = 100;\r\npenColor(\"green\");\r\nturnRight(turnAmount);\r\nmoveForward(moveAmount);\r\n",
+    "instructions": "Update the value of 'turnAmount' before each moveForward so the turtle turns a different amount each time. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

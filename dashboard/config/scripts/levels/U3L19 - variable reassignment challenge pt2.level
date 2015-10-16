@@ -80,7 +80,7 @@
     "encrypted_examples": [
 
     ],
-    "markdown_instructions": "# Incrementing Continued\r\n\r\nSometimes we don't just increment by a value but also by a variable value. It works the same way though. \r\n\r\nRemember: the variable on the left of the equal sign gets assigned to the value of the expression on the right.\r\n\r\n# Do This\r\n\r\n* ** Make a prediction **. You should have enough experience from the last couple levels to hopefully guess what this will do.\r\n\r\n* ** Add `console.log()` statements** to see the final values of a,b, and c\r\n\r\n* ** If you didn't get your guess correct** try retracing through to see if you can figure out what happened.\r\n\r\n* ** Add `console.log()` statements along the way** to see what is happening to the values of a,b, and c",
+    "markdown_instructions": "# Incrementing Continued\r\n\r\nSometimes we don't just increment by a specific value but also by a variable value. It works the same way though. \r\n\r\nRemember: the variable on the left of the equal sign gets assigned to the value of the expression on the right.\r\n\r\n# Do This\r\n\r\n* ** Make a prediction **. You should have enough experience from the last couple levels to hopefully guess what this will do.\r\n\r\n* ** Add `console.log()` statements** to see the final values of a,b, and c\r\n\r\n* ** If you didn't get your guess correct** try retracing through to see if you can figure out what happened.\r\n\r\n* ** Add `console.log()` statements along the way** to see what is happening to the values of a,b, and c",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",
@@ -90,7 +90,8 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false"
+    "debugger_disabled": "true",
+    "instructions": "Make a prediction about the ending values of a,b, and c. Then use console.log to check your understanding (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

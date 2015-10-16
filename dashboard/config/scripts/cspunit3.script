@@ -154,7 +154,7 @@ level 'U3L13 Student Facing Lesson Plan'
 level 'U3L13 - Project'
 
 # 14
-stage 'Variables'
+stage 'Variables: Create, Assign, and Read'
 level 'U3L19 Student Lesson Intro'
 level 'U3L19 - Target Clicker App'
 level 'U3L19 - three basic ops of variables’
@@ -165,21 +165,24 @@ level 'U3 - Variables - Identify Variables'
 level 'U3- Variables - Changing the Value'
 level 'U3L19 - test reassignment of two vars’
 level 'U3L19 - Debugging with consoleLog’
+level 'U3-Variables-Memory Breakdown'
+
+# 15
+stage 'Variables: Increment, Decrement, Display, and Scope'
+level 'U3-Variables 2 - SFLP'
 level 'U3 - Variables - Increment'
+level 'U3 - Variables - Decrement'
 level 'U3 - Variables - Incrementing Variables'
 level 'U3L19 - variable reassignment challenge pt2’
 assessment 'U3L19 - MC what are values of abc'
 level 'U3L19 - practice with setText’
-level 'U3L19 - DEMO up down count practice app’
+level 'U3 - Variables - Debug Scope'
 level 'U3L19 - up down count practice app’
 level 'U3L19 - variable scoping problem debugging’
+level 'U3L19 - DEMO up down count practice app’
 level 'U3L19 - variable scope problem 2’
-level 'U3L19 - improve your clicker game'
+level 'U3 - Variables - Clicker Game'
 assessment 'U3L19 - final prompt'
-
-# 15 Arithmetic?
-stage 'More Variables (2 days)'
-level 'U3L21 Student Lesson Introduction'
 assessment 'U3L21 Assessment 1'
 assessment 'U3L21 Assessment 2'
 assessment 'U3L21 Assessment Wrap Up'
@@ -378,3 +381,5 @@ stage 'Variable Basics DEPRECIATED'
 stage 'Clicker Variable Basics'
 stage 'Looping and Random Numbers'
 stage 'Clicker Game'
+stage 'More Variables (2 days)'
+stage 'Variables'
