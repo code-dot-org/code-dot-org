@@ -3615,6 +3615,13 @@ Studio.setSprite = function (opts) {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
 
+  sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
+  spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
+  sprite.value = opts.forceHidden ? 'hidden' : opts.value;
+  if (spriteValue === 'hidden' || spriteValue === 'visible') {
+    return;
+  }
+
   // If this skin has walking spritesheet, then load that too.
   var spriteWalk = null;
   if (spriteValue !== undefined && skinSprite.walk) {
@@ -3625,13 +3632,6 @@ Studio.setSprite = function (opts) {
 
     // Hide the walking sprite at this stage.
     spriteWalk.setAttribute('visibility', 'hidden');
-  }
-
-  sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
-  spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
-  sprite.value = opts.forceHidden ? 'hidden' : opts.value;
-  if (spriteValue === 'hidden' || spriteValue === 'visible') {
-    return;
   }
 
   sprite.frameCounts = skinSprite.frameCounts;
