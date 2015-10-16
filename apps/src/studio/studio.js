@@ -3155,9 +3155,21 @@ Studio.callCmd = function (cmd) {
 };
 
 Studio.addItem = function (opts) {
-  if (opts.className === constants.RANDOM_VALUE) {
-    opts.className =
+
+  if (typeof opts.className !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.className);
+  }
+
+  var itemClass = opts.className.toLowerCase().trim();
+
+  if (itemClass === constants.RANDOM_VALUE) {
+    itemClass =
         skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
+  }
+
+  var skinItem = skin[itemClass];
+  if (!skinItem) {
+    throw new RangeError("Incorrect parameter: " + opts.className);
   }
 
   var directions = [
@@ -3200,18 +3212,18 @@ Studio.addItem = function (opts) {
                     directions[Math.floor(Math.random() * directions.length)];
   var pos = generateRandomItemPosition();
   var itemOptions = {
-    frames: getFrameCount(opts.className, skin.specialItemFrames, skin.itemFrames),
-    className: opts.className,
+    frames: getFrameCount(itemClass, skin.specialItemFrames, skin.itemFrames),
+    className: itemClass,
     dir: direction,
-    image: skin[opts.className],
+    image: skinItem,
     loop: true,
     x: pos.x,
     y: pos.y,
-    speed: Studio.itemSpeed[opts.className],
-    activity: utils.valueOr(Studio.itemActivity[opts.className], "roam"),
+    speed: Studio.itemSpeed[itemClass],
+    activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     width: 100,
     height: 100,
-    renderScale: skin.specialItemScale[opts.className] || 1
+    renderScale: skin.specialItemScale[itemClass] || 1
   };
 
   var item = new Item(itemOptions);
@@ -3247,17 +3259,29 @@ Studio.getDistance = function(x1, y1, x2, y2) {
 
 
 Studio.setItemActivity = function (opts) {
-  if (opts.className === constants.RANDOM_VALUE) {
-    opts.className =
+
+  if (typeof opts.className !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.className);
+  }
+
+  var itemClass = opts.className.toLowerCase().trim();
+
+  if (itemClass === constants.RANDOM_VALUE) {
+    itemClass =
         skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
+  }
+
+  var skinItem = skin[itemClass];
+  if (!skinItem) {
+    throw new RangeError("Incorrect parameter: " + opts.className);
   }
 
   if (opts.type === "roam" || opts.type === "chase" ||
       opts.type === "flee" || opts.type === "none") {
     // retain this activity type for items of this class created in the future:
-    Studio.itemActivity[opts.className] = opts.type;
+    Studio.itemActivity[itemClass] = opts.type;
     Studio.items.forEach(function (item) {
-      if (item.className === opts.className) {
+      if (item.className === itemClass) {
         item.setActivity(opts.type);
 
         // For verifying success, record this combination of activity type and
@@ -3267,26 +3291,38 @@ Studio.setItemActivity = function (opts) {
           Studio.trackedBehavior.setActivityRecord = [];
         }
 
-        if (!Studio.trackedBehavior.setActivityRecord[opts.className]) {
-          Studio.trackedBehavior.setActivityRecord[opts.className] = [];
+        if (!Studio.trackedBehavior.setActivityRecord[itemClass]) {
+          Studio.trackedBehavior.setActivityRecord[itemClass] = [];
         }
 
-        Studio.trackedBehavior.setActivityRecord[opts.className][opts.type] = true;
+        Studio.trackedBehavior.setActivityRecord[itemClass][opts.type] = true;
       }
     });
   }
 };
 
 Studio.setItemSpeed = function (opts) {
-  if (opts.className === constants.RANDOM_VALUE) {
-    opts.className =
+
+  if (typeof opts.className !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.className);
+  }
+
+  var itemClass = opts.className.toLowerCase().trim();
+
+  if (itemClass === constants.RANDOM_VALUE) {
+    itemClass =
         skin.ItemClassNames[Math.floor(Math.random() * skin.ItemClassNames.length)];
   }
 
+  var skinItem = skin[itemClass];
+  if (!skinItem) {
+    throw new RangeError("Incorrect parameter: " + opts.className);
+  }
+
   // retain this speed value for items of this class created in the future:
-  Studio.itemSpeed[opts.className] = opts.speed;
+  Studio.itemSpeed[itemClass] = opts.speed;
   Studio.items.forEach(function (item) {
-    if (item.className === opts.className) {
+    if (item.className === itemClass) {
       item.speed = opts.speed;
     }
   });
