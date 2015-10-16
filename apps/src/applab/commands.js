@@ -790,7 +790,7 @@ applabCommands.getText = function (opts) {
     } else if (element.tagName === 'IMG') {
       return String(element.alt);
     } else {
-      return element.textContent;
+      return element.innerHTML.replace(/<div>/gi, '\n').replace(/<[^>]+>/gi, '');
     }
   }
   return false;
@@ -808,7 +808,10 @@ applabCommands.setText = function (opts) {
     } else if (element.tagName === 'IMG') {
       element.alt = opts.text;
     } else {
-      element.textContent = opts.text;
+      var lines = opts.text.split('\n');
+      element.innerHTML = lines[0] + lines.slice(1).map(function (line) {
+        return '<div>' + (line.length ? line : '<br>') + '</div>';
+      }).join('');
     }
     return true;
   }
