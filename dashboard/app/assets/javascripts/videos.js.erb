@@ -24,11 +24,6 @@ function createVideo(options) {
 //   name - a string.
 //   redirect - the redirect page after the video is dismissed.
 function showVideoDialog(options) {
-
-  if (dashboard.clientState.hasSeenVideo(options.key)) {
-    return;
-  }
-
   upgradeInsecureOptions(options);
   var widthRatio = .8;
   var heightRatio = .8;

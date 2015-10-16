@@ -3,6 +3,7 @@ Feature: Hour of Code progress is saved on client side when puzzles are solved a
 Background:
   Given I am on "http://studio.code.org/hoc/reset"
 
+@skip
 Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appears as solved
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I rotate to landscape
@@ -19,6 +20,7 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
   When element "#runButton" is visible
   Then element ".header_middle a:first" has class "level_link perfect"
 
+@skip
 Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as attempted
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I rotate to landscape
@@ -35,7 +37,7 @@ Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as att
   Then element ".header_middle a:first" has class "level_link attempted"
 
 @no_mobile
-Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video
+Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video, comes back on link
   Given I am on "http://studio.code.org/hoc/10"
   And I rotate to landscape
   Then I wait until element "#video" is visible
@@ -46,7 +48,10 @@ Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, sh
   Then I wait to see a dialog titled "Puzzle 11 of 20"
   Then I am on "http://studio.code.org/hoc/10"
   Then I wait to see a dialog titled "Puzzle 10 of 20"
+  Then I close the dialog
+  Then I click selector ".reference_area a:last"
 
+@skip
 Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, should not see callouts
   Given I am on "http://studio.code.org/hoc/9"
   And I rotate to landscape
