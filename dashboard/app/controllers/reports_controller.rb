@@ -60,9 +60,14 @@ SQL
     authorize! :read, :reports
 
     email_filter = "%#{params[:emailFilter]}%"
-    address_filter = "#{params[:addressFilter]}%"
+    address_filter = "%#{params[:addressFilter]}%"
 
-    @teachers = User.limit(100).where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id').pluck(:id, :name, :email, :full_address, 'COUNT(followers.id) AS num_students')
+    @teachers = User.limit(100).where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id')
+
+    # Prune the set of fields to those that will be displayed.
+    @teachers = @teachers.pluck('id', 'name', 'email', 'full_address', 'COUNT(followers.id) AS num_students')
+
+    @headers = ['ID', 'Name', 'Email', 'Address', 'Num Students']
   end
 
   def admin_stats
