@@ -13,3 +13,8 @@ Code.org partners with [Outlier Research & Evaluation at the University of Chica
 ## Available reports
 
 - [Code.org's Impact on Computer Science Education: June 2014 - June 2015 Program Evaluation Report](/about/evaluation/summary)
+
+## Learn More About Our Approach
+In this recorded session, you’ll hear from [Pat Yongpradit](http://twitter.com/mryongpradit), Chief Academic Officer at [Code.org](https://code.org) and [Heather King](http://outlier.uchicago.edu/outlier/team/), program manager at [Outlier](http://outlier.uchicago.edu/), about the results of our programs over the course of the 2014-15 school year. What did teachers take away from professional development? What did students learn? What did we learn from our district partnerships? Learn from our successes and challenges as we discuss how we might work together as a CS education community to increase access to CS education for all.
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/jJfZMgvm4SU" frameborder="0" allowfullscreen></iframe>
