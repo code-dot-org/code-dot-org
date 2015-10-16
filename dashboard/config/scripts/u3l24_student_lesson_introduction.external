@@ -1,5 +1,6 @@
 name 'U3L24 Student Lesson Introduction'
 title 'Chained Conditionals'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 24 - Chained and Nested Conditionals
@@ -20,5 +21,3 @@ To make your digital assistant respond to user input, you must evaluate keywords
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
-
-

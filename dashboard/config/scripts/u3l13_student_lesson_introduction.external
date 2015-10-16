@@ -10,7 +10,7 @@ In the previous lesson you were introduced to event-driven programming with an u
 
 # Vocabulary
 
-**Event:** a user action or other occurance that can be detected by a program. Events can be used to trigger execution of specified blocks of code
+**Event:** a user action or other occurrence that can be detected by a program. Events can be used to trigger execution of specified blocks of code
 
 **Event Handler:** indicates which commands should run when a specified event occurs
 

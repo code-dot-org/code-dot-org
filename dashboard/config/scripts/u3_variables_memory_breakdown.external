@@ -1,0 +1,15 @@
+name 'U3-Variables-Memory Breakdown'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# What happened on the last level?
+
+<img src="https://images.code.org/af52f10dffc8980e9b291b42057d9f8c-image-1445006639426.png" style="width: 250px; border: solid 1px black; float:left">
+
+
+Step | Memory Before | Memory After
+--- | --- | ---
+<img src="https://images.code.org/ea0eb0595929c5fb8bcfc199b254840e-image-1445007367058.png" style="width: 150px">  | <img src="https://images.code.org/1ac4d58ff165e29d4a20e7e955308841-image-1445006717460.png" style="width: 150px; border: solid 1px black"> | <img src="https://images.code.org/7e55d6fa399c613424b76587f7c225b2-image-1445006715257.png" style="width: 150px; border: solid 1px black">
+<img src="https://images.code.org/91447282489a0bcd7e7905394e608ada-image-1445007368831.png" style="width: 150px">  | <img src="https://images.code.org/7e55d6fa399c613424b76587f7c225b2-image-1445006715257.png" style="width: 150px; border: solid 1px black"> | <img src="https://images.code.org/8219a8e2c0c311359600dc13d52c3e69-image-1445006646134.png" style="width: 150px; border: solid 1px black">
+<img src="https://images.code.org/738fff341d21e2b4235271ea137a1016-image-1445007370615.png" style="width: 150px"> | <img src="https://images.code.org/8219a8e2c0c311359600dc13d52c3e69-image-1445006646134.png" style="width: 150px; border: solid 1px black"> | <img src="https://images.code.org/68c3c077d22bc13165f2edc83a96a1a2-image-1445006648296.png" style="width: 150px; border: solid 1px black">
+<img src="https://images.code.org/4b0faa246754583696c4c0132277bda8-image-1445007372291.png" style="width: 150px"> | <img src="https://images.code.org/68c3c077d22bc13165f2edc83a96a1a2-image-1445006648296.png" style="width: 150px; border: solid 1px black"> | <img src="https://images.code.org/68c3c077d22bc13165f2edc83a96a1a2-image-1445006648296.png" style="width: 150px; border: solid 1px black">
+MARKDOWN
