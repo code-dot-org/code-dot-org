@@ -65,7 +65,9 @@ window.apps = {
       },
       onContinue: function() {
         if (lastServerResponse.videoInfo) {
-          showVideoDialog(lastServerResponse.videoInfo);
+          if (dashboard.clientState.hasSeenVideo(lastServerResponse.videoInfo.key)) {
+            showVideoDialog(lastServerResponse.videoInfo);
+          }
         } else if (lastServerResponse.nextRedirect) {
           window.location.href = lastServerResponse.nextRedirect;
         }
