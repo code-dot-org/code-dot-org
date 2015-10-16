@@ -10,13 +10,13 @@ Thank you for submitting your information to help local teachers during the Hour
 Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteer engineers, so ask them to [sign up as a volunteer](https://code.org/volunteer/engineer).
 
 ## 2. Ask your employer to get involved
-[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
 
 ## 3. Promote the Hour of Code in your community
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://<%= hostname %>/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://<%= hostname %>/promote/resources#sample-emails).
 
 ## 4. Ask a local elected official to support the Hour of Code
-[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](https://<%= hostname %>/promote/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 Thanks again for your support,
 

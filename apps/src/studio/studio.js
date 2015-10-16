@@ -909,6 +909,8 @@ Studio.onTick = function() {
 
   Studio.updateFloatingScore();
 
+  Studio.drawTimeoutRect();
+
   sortDrawOrder();
 
   var currentTime = new Date().getTime();
@@ -982,6 +984,10 @@ function handleActorCollisionsWithCollidableList (
     var collidable = list[i];
     var next = collidable.getNextPosition();
 
+    if (collidable.isFading && collidable.isFading()) {
+      continue;
+    }
+
     Studio.drawDebugRect("itemCollision",
       next.x,
       next.y,
@@ -1014,8 +1020,12 @@ function handleActorCollisionsWithCollidableList (
         // Make the projectile/item disappear automatically if this parameter
         // is set:
         if (autoDisappear) {
-          collidable.removeElement();
-          list.splice(i, 1);
+          if (collidable.beginRemoveElement) {
+            collidable.beginRemoveElement();
+          } else {
+            collidable.removeElement();
+            list.splice(i, 1);
+          }
         }
       }
     } else {
@@ -1177,9 +1187,17 @@ function createItemEdgeCollisionHandler (item) {
 /* Calls each item's update function
  */
 function updateItems () {
-  for (var i = 0; i < Studio.items.length; i++) {
+  // Traverse the list in reverse order because we may remove elements from the
+  // list while inside the loop:
+  for (var i = Studio.items.length - 1; i >= 0; i--) {
     var item = Studio.items[i];
+
     item.update();
+
+    if (item.hasCompletedFade && item.hasCompletedFade()) {
+      item.removeElement();
+      Studio.items.splice(i, 1);
+    }
   }
 }
 
@@ -1187,6 +1205,10 @@ function checkForItemCollisions () {
   for (var i = 0; i < Studio.items.length; i++) {
     var item = Studio.items[i];
     var next = item.getNextPosition();
+
+    if (item.isFading && item.isFading()) {
+      continue;
+    }
 
     if (level.wallMapCollisions) {
       if (Studio.willCollidableTouchWall(item, next.x, next.y)) {
@@ -1429,6 +1451,7 @@ Studio.init = function(config) {
   Studio.perExecutionTimeouts = [];
   Studio.tickIntervalId = null;
   Studio.tiles = [];
+  Studio.tilesDrawn = false;
 
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -1535,6 +1558,7 @@ Studio.init = function(config) {
   config.enableShowCode = utils.valueOr(studioApp.editCode, false);
   config.varsInGlobals = true;
   config.dropletConfig = dropletConfig;
+  config.dropIntoAceAtLineStart = true;
   config.unusedConfig = [];
   if (skin.AutohandlerTouchItems) {
     for (var prop in skin.AutohandlerTouchItems) {
@@ -1708,6 +1732,14 @@ Studio.reset = function(first) {
   Studio.sayComplete = 0;
   Studio.playSoundCount = 0;
 
+  // More things used to validate level completion.
+  Studio.trackedBehavior = {
+    removedItemCount: 0,
+    setActivityRecord: null,
+    hasSetBot: false,
+    hasAddedItem: false
+  };
+
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -1778,6 +1810,7 @@ Studio.reset = function(first) {
   for (i = 0; i < Studio.spriteGoals_.length; i++) {
     // Mark each finish as incomplete.
     Studio.spriteGoals_[i].finished = false;
+    Studio.spriteGoals_[i].startFadeTime = null;
 
     // Move the finish icons into position.
     var offsetX = skin.goalRenderOffsetX || 0;
@@ -1787,6 +1820,7 @@ Studio.reset = function(first) {
     spriteFinishIcon.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
     spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
       'xlink:href', goalAsset);
+    spriteFinishIcon.setAttribute('opacity', 1);
     var finishClipRect = document.getElementById('finishClipRect' + i);
     finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x + offsetX);
     finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
@@ -1884,6 +1918,7 @@ var displayFeedback = function() {
       app: 'studio', //XXX
       skin: skin.id,
       feedbackType: Studio.testResults,
+      executionError: Studio.executionError,
       tryAgainText: tryAgainText,
       continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
       response: Studio.response,
@@ -2149,10 +2184,16 @@ function handleExecutionError(err, lineNumber) {
     }
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
-  Studio.executionError = err;
+  Studio.executionError = { err: err, lineNumber: lineNumber };
 
-  // Call onPuzzleComplete() if we're not on a freeplay level:
-  if (!level.freePlay) {
+  // Call onPuzzleComplete() if syntax error or any time we're not on a freeplay level:
+  if (err instanceof SyntaxError) {
+    // Mark preExecutionFailure and testResults immediately so that an error
+    // message always appears, even on freeplay:
+    Studio.preExecutionFailure = true;
+    Studio.testResults = TestResults.SYNTAX_ERROR_FAIL;
+    Studio.onPuzzleComplete();
+  } else if (!level.freePlay) {
     Studio.onPuzzleComplete();
   }
 }
@@ -2226,8 +2267,12 @@ Studio.execute = function() {
       blocks: dropletConfig.blocks,
       enableEvents: true,
       studioApp: studioApp,
+      shouldRunAtMaxSpeed: function() { return Studio.slowJsExecutionFactor === 1; },
       onExecutionError: handleExecutionError,
     });
+    if (!Studio.JSInterpreter.initialized()) {
+        return;
+    }
     Studio.initAutoHandlers(AUTO_HANDLER_MAP);
   } else {
     // Define any top-level procedures the user may have created
@@ -2265,7 +2310,7 @@ Studio.onPuzzleComplete = function() {
     // If the current level is a free play, always return the free play
     // result type
     Studio.testResults = level.freePlay ? TestResults.FREE_PLAY :
-      studioApp.getTestResults(levelComplete);
+      studioApp.getTestResults(levelComplete, { executionError: Studio.executionError });
   }
 
   if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
@@ -2428,6 +2473,50 @@ Studio.drawDebugRect = function(className, x, y, width, height) {
 };
 
 /**
+ * Draw a timeout rectangle across the bottom of the play area.
+ * It doesn't appear until halfway through the level, and briefly fades in 
+ * when first appearing.
+ */
+Studio.drawTimeoutRect = function() {
+  if (!level.showTimeoutRect || Studio.timeoutFailureTick === Infinity) {
+    return;
+  }
+
+  $(".timeoutRect").remove();
+
+  // The fraction of the entire level duration that we start and end the
+  // fade-in.
+  var startFadeInAt = 0.5;
+  var endFadeInAt = 0.4;
+
+  var timeRemaining = Studio.timeoutFailureTick - Studio.tickCount;
+  var currentFraction = timeRemaining / Studio.timeoutFailureTick;
+
+  if (currentFraction <= startFadeInAt) {
+    var opacity = currentFraction < endFadeInAt ? 1 : 
+      1 - (currentFraction - endFadeInAt) / (startFadeInAt - endFadeInAt);
+
+    var width = timeRemaining * Studio.MAZE_WIDTH / (Studio.timeoutFailureTick * startFadeInAt);
+    var height = 6;
+
+    if (width > 0) {
+      var svg = document.getElementById('svgStudio');
+      var group = document.createElementNS(SVG_NS, 'g');
+      group.setAttribute('class', "timeoutRect");
+      var background = document.createElementNS(SVG_NS, 'rect');
+      background.setAttribute('opacity', opacity);
+      background.setAttribute('width', width);
+      background.setAttribute('height', height);
+      background.setAttribute('x', 0);
+      background.setAttribute('y', Studio.MAZE_HEIGHT - height);
+      background.setAttribute('fill', 'rgba(255, 255, 255, 0.5)');
+      group.appendChild(background);
+      svg.appendChild(group);
+    }
+  }
+};
+
+/**
  * Clear the debug rectangles.
  */
 
@@ -2492,7 +2581,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   var clipPath = document.createElementNS(SVG_NS, 'clipPath');
   var clipId = 'tile_clippath_' + Studio.tiles.length;
   clipPath.setAttribute('id', clipId);
-  clipPath.setAttribute('class', 'tile_clip');
+  clipPath.setAttribute('class', "tile");
   var rect = document.createElementNS(SVG_NS, 'rect');
   rect.setAttribute('width', tileSize);
   rect.setAttribute('height', tileSize);
@@ -2504,7 +2593,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   var tile = document.createElementNS(SVG_NS, 'image');
   var tileId = 'tile_' + (Studio.tiles.length);
   tile.setAttribute('id', tileId);
-  tile.setAttribute('class', 'tile');
+  tile.setAttribute('class', "tileClip");
   tile.setAttribute('width', numSrcCols * tileSize);
   tile.setAttribute('height', numSrcRows * tileSize);
   tile.setAttribute('x', col * Studio.SQUARE_SIZE - srcCol * tileSize + addOffset);
@@ -2553,6 +2642,14 @@ Studio.createLevelItems = function (svg) {
 };
 
 Studio.drawMapTiles = function (svg) {
+
+  // If we're just using the level's own map, then draw it only once.
+  if (!Studio.wallMap && Studio.tilesDrawn) {
+    return;
+  }
+
+  Studio.tilesDrawn = true;
+
   var row, col;
 
   var tilesDrawn = [];
@@ -2773,7 +2870,8 @@ Studio.animateGoals = function() {
 
   for (var i = 0; i < Studio.spriteGoals_.length; i++) {
     var goal = Studio.spriteGoals_[i];
-    if (!goal.finished) {
+    // Keep showing the goal unless it's finished and we're not fading out.
+    if (!goal.finished || goal.startFadeTime) {
 
       var goalSprite = document.getElementById('spriteFinish' + i);
       var goalClipRect = document.getElementById('finishClipRect' + i);
@@ -2782,6 +2880,18 @@ Studio.animateGoals = function() {
       var frame = Math.floor(elapsed / frameDuration) % numFrames;
   
       goalSprite.setAttribute('x', baseX - frame * frameWidth);
+
+      var fadeTime = 350;
+
+      if (goal.startFadeTime) {
+        var opacity = 1 - (currentTime - goal.startFadeTime) / fadeTime;
+
+        if (opacity < 0) {
+          goal.startFadeTime = null;
+        } else {
+          goalSprite.setAttribute('opacity', opacity);
+        }
+      }
     }
   }
 };
@@ -2904,6 +3014,7 @@ Studio.callCmd = function (cmd) {
     case 'setSprite':
       studioApp.highlight(cmd.id);
       Studio.setSprite(cmd.opts);
+      Studio.trackedBehavior.hasSetSprite = true;
       break;
     case 'saySprite':
       if (!cmd.opts.started) {
@@ -2921,6 +3032,7 @@ Studio.callCmd = function (cmd) {
     case 'setBotSpeed':
       studioApp.highlight(cmd.id);
       Studio.setBotSpeed(cmd.opts);
+      Studio.trackedBehavior.hasSetBotSpeed = true;
       break;
     case 'setSpriteSize':
       studioApp.highlight(cmd.id);
@@ -3018,6 +3130,7 @@ Studio.callCmd = function (cmd) {
     case 'addItem':
       studioApp.highlight(cmd.id);
       Studio.addItem(cmd.opts);
+      Studio.trackedBehavior.hasAddedItem = true;
       break;
     case 'setItemActivity':
       studioApp.highlight(cmd.id);
@@ -3144,6 +3257,19 @@ Studio.setItemActivity = function (opts) {
     Studio.items.forEach(function (item) {
       if (item.className === opts.className) {
         item.setActivity(opts.type);
+
+        // For verifying success, record this combination of activity type and
+        // item type.
+
+        if (!Studio.trackedBehavior.setActivityRecord) {
+          Studio.trackedBehavior.setActivityRecord = [];
+        }
+
+        if (!Studio.trackedBehavior.setActivityRecord[opts.className]) {
+          Studio.trackedBehavior.setActivityRecord[opts.className] = [];
+        }
+
+        Studio.trackedBehavior.setActivityRecord[opts.className][opts.type] = true;
       }
     });
   }
@@ -3295,6 +3421,7 @@ Studio.setScoreText = function (opts) {
 };
 
 Studio.setBackground = function (opts) {
+
   if (opts.value === constants.RANDOM_VALUE) {
     // NOTE: never select the last item from backgroundChoicesK1, since it is
     // presumed to be the "random" item for blockly
@@ -3315,14 +3442,12 @@ Studio.setBackground = function (opts) {
 
     // Draw the tiles (again) now that we know which background we're using.
     if (level.wallMapCollisions) {
-      $(".tile_clip").remove();
-      $(".tile").remove();
-      Studio.tiles = [];
-
       // Changing background can cause a change in the map used internally,
       // since we might use a different map to suit this background, so set
       // the map again.
-      Studio.setMap({value: Studio.wallMapRequested}, true);
+      if (Studio.wallMapRequested) {
+        Studio.setMap({value: Studio.wallMapRequested, forceRedraw: true});
+      }
     }
   }
 };
@@ -3330,9 +3455,14 @@ Studio.setBackground = function (opts) {
 /**
  * Set the wall map.
  * @param {string} opts.value - The name of the wall map.
- * @param {boolean} forceLoad - Force loading the map, even if it's already set.
+ * @param {boolean} opts.forceRedraw - Force drawing map, even if it's already set.
  */
 Studio.setMap = function (opts, forceLoad) {
+
+  if (!opts.value) {
+    return;
+  }
+
   if (opts.value === constants.RANDOM_VALUE) {
     // NOTE: never select the first item from mapChoices, since it is
     // presumed to be the "random" item for blockly
@@ -3359,7 +3489,7 @@ Studio.setMap = function (opts, forceLoad) {
     useMap = skin.getMap(Studio.background, opts.value);
   }
 
-  if (!forceLoad && useMap === Studio.wallMap) {
+  if (!opts.forceRedraw && useMap === Studio.wallMap) {
     return;
   }
 
@@ -3371,7 +3501,7 @@ Studio.setMap = function (opts, forceLoad) {
   Studio.wallMapRequested = opts.value;
 
   // Draw the tiles (again) now that we know which background we're using.
-  $(".tile_clip").remove();
+  $(".tileClip").remove();
   $(".tile").remove();
   Studio.tiles = [];
   Studio.drawMapTiles();
@@ -4265,6 +4395,9 @@ Studio.allGoalsVisited = function() {
         for (var j = 0; j < Studio.sprite.length; j++) {
           if (spriteAtGoal(Studio.sprite[j], goal)) {
             goal.finished = true;
+            if (skin.fadeOutGoal) {
+              goal.startFadeTime = new Date().getTime();
+            }
             break;
           }
         }
@@ -4280,24 +4413,76 @@ Studio.allGoalsVisited = function() {
         studioApp.playAudio('flag');
       }
 
-      // Change the finish icon to goalSuccess.
-      var successAsset = skin.goalSuccess;
-      if (level.goalOverride && level.goalOverride.success) {
-        successAsset = skin[level.goalOverride.success];
+      if (skin.goalSuccess) {
+        // Change the finish icon to goalSuccess.
+        var successAsset = skin.goalSuccess;
+        if (level.goalOverride && level.goalOverride.success) {
+          successAsset = skin[level.goalOverride.success];
+        }
+        var spriteFinishIcon = document.getElementById('spriteFinish' + i);
+        spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
+          'xlink:href', successAsset);
       }
-      var spriteFinishIcon = document.getElementById('spriteFinish' + i);
-      spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
-        'xlink:href', successAsset);
     }
   }
 
   return finishedGoals === Studio.spriteGoals_.length;
 };
 
+/**
+ * A level can provide zero or more requiredForSuccess criteria which are
+ * special cases that a level requires for success.  This function evaluates
+ * the state of these criteria.
+ * @returns {Object} outcome
+ * @returns {boolean} outcome.exists Whether the level even has any of these criteria.
+ * @returns {boolean} outcome.achieved false if any of the criteria was required but not met.
+ * @returns {string} outcome.message A custom message for the first of the failing criteria.
+ */
+Studio.checkRequiredForSuccess = function() {
+
+  if (!level.requiredForSuccess) {
+    return { exists: false, achieved: false, message: null };
+  }
+
+  var required = level.requiredForSuccess;
+  var tracked = Studio.trackedBehavior;
+
+  if (required.setSprite && !tracked.hasSetSprite) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasSetSprite() };
+  }
+
+  if (required.setBotSpeed && !tracked.hasSetBotSpeed) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasSetBotSpeed() };
+  }
+
+  if (required.touchAllItems && Studio.items.length > 0) {
+    return { exists: true, achieved: false, message: studioMsg.failedTouchAllItems() };
+  }
+
+  if (required.scoreMinimum && Studio.playerScore < required.scoreMinimum) {
+    return { exists: true, achieved: false, message: studioMsg.failedScoreMinimum() };
+  }
+
+  if (required.removedItemCount && tracked.removedItemCount < required.removedItemCount) {
+    return { exists: true, achieved: false, message: studioMsg.failedRemovedItemCount() };
+  }
+
+  if (required.setActivity &&
+      !(tracked.setActivityRecord && 
+        tracked.setActivityRecord[required.setActivity.itemType] &&
+        tracked.setActivityRecord[required.setActivity.itemType][required.setActivity.activityType])) {
+    return { exists: true, achieved: false, message: studioMsg.failedSetActivity() };
+  }
+
+  return { exists: true, achieved: true, message: null };
+};
+
+
 var checkFinished = function () {
 
   var hasGoals = Studio.spriteGoals_.length !== 0;
   var achievedGoals = Studio.allGoalsVisited();
+  var requiredForSuccess = Studio.checkRequiredForSuccess();
   var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
   var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
   var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
@@ -4316,6 +4501,18 @@ var checkFinished = function () {
     Studio.result = ResultType.SUCCESS;
     return true;
   }
+
+  if (requiredForSuccess.exists) {
+    if (requiredForSuccess.achieved) {
+      Studio.message = null;
+      Studio.result = ResultType.SUCCESS;
+      return true;
+    } else {
+      // Not meeting these is not reason for immediate failure in itself, but they do
+      // establish a custom error message.
+      Studio.message = requiredForSuccess.message;
+    }
+  } 
 
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
     Studio.result = ResultType.FAILURE;

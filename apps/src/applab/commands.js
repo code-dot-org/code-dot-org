@@ -154,14 +154,7 @@ applabCommands.setScreen = function (opts) {
     return;
   }
 
-  // toggle all screens to be visible if equal to given id, hidden otherwise
-  $('.screen').each(function () {
-    $(this).toggle(this.id === opts.screenId);
-    if (this.id === opts.screenId) {
-      // Allow the active screen to receive keyboard events.
-      this.focus();
-    }
-  });
+  Applab.changeScreen(opts.screenId);
 };
 
 applabCommands.container = function (opts) {
@@ -797,7 +790,7 @@ applabCommands.getText = function (opts) {
     } else if (element.tagName === 'IMG') {
       return String(element.alt);
     } else {
-      return element.innerText;
+      return element.textContent;
     }
   }
   return false;

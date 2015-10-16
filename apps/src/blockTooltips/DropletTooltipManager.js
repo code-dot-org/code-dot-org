@@ -17,6 +17,7 @@ function DropletTooltipManager(appMsg, dropletConfig) {
    * @type {Object.<String, Function>}
    */
   this.appMsg = appMsg || {};
+  this.tooltipsEnabled = true;
 
   /**
    * Droplet config for this app
@@ -81,6 +82,9 @@ DropletTooltipManager.prototype.hasDocFor = function (functionName) {
 };
 
 DropletTooltipManager.prototype.showDocFor = function (functionName) {
+  if (!this.tooltipsEnabled) {
+    return;
+  }
   $('.tooltipstered').tooltipster('hide');
   var dialog = new window.Dialog({
     body: $('<iframe>')
@@ -103,6 +107,16 @@ DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
   }
 
   return this.blockTypeToTooltip[functionName];
+};
+
+/**
+ * @param {boolean} enabled if tooltips should be enabled.
+ */
+DropletTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
+  this.tooltipsEnabled = !!enabled;
+  this.dropletAutocompletePopupTooltipManager_.setTooltipsEnabled(enabled);
+  this.dropletAutocompleteParameterTooltipManager_.setTooltipsEnabled(enabled);
+  this.dropletBlockTooltipManager_.setTooltipsEnabled(enabled);
 };
 
 module.exports = DropletTooltipManager;

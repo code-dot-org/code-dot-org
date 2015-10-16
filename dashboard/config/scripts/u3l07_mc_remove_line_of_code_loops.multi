@@ -13,7 +13,7 @@ A programmer wants to write a program in which the turtle draws 8 squares in a r
 
 <img src="https://images.code.org/59b3db519d6507b71fdf0670eeb98ab2-image-1443129607058.png" style="float: left; height: 120px">
 
-But **something is wrong!**  The incorrect code is shown below.  The programmer has attempted to write a function to draw a single square.  Then they wrote another function that attempts to call that function 8 times.  
+But **something is wrong!**  The incorrect code is shown below.  The programmer has attempted to write a function to draw a single square.  Then he wrote another function that attempts to call that function 8 times.  
 
 Mentally trace through the code and determine which line of code should be removed to make the program do what it's supposed to.
 

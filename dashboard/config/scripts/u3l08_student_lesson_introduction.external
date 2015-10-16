@@ -1,8 +1,9 @@
 name 'U3L08 Student Lesson Introduction'
 title 'Creating Functions with Parameters'
+css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 08 - Creating Functions with Parameters
+## Unit 3: Lesson 06 - Creating Functions with Parameters
 
 # Background
 
@@ -10,9 +11,9 @@ Drawing functions which accept parameters have already proven to be an extremely
 
 # Lesson
 
-* Identify situations for creating functions with parameters
-* Incorporate functions with parameters into an “Under the Sea” digital scene
-* Test functions with parameters using random input
+* Identify situations for creating functions with parameters.
+* Incorporate functions with parameters into an “Under the Sea” digital scene.
+* Test functions with parameters using random input.
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

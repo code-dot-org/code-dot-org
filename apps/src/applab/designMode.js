@@ -6,6 +6,7 @@ var DesignWorkspace = require('./DesignWorkspace.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
 var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
+var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
 var _ = require('../utils').getLodash();
 var KeyCodes = require('../constants').KeyCodes;
@@ -13,6 +14,7 @@ var KeyCodes = require('../constants').KeyCodes;
 var designMode = module.exports;
 
 var currentlyEditedElement = null;
+var currentScreenId = null;
 
 var GRID_SIZE = 5;
 
@@ -21,7 +23,7 @@ var GRID_SIZE = 5;
  * pane for editing the clicked element.
  * @param event
  */
-designMode.onDivApplabClick = function (event) {
+designMode.onDesignModeVizClick = function (event) {
   if (!Applab.isInDesignMode() ||
       $('#resetButton').is(':visible')) {
     return;
@@ -29,7 +31,7 @@ designMode.onDivApplabClick = function (event) {
   event.preventDefault();
 
   var element = event.target;
-  if (element.id === 'divApplab') {
+  if (element.id === 'designModeViz') {
     element = designMode.activeScreen();
   }
 
@@ -39,7 +41,7 @@ designMode.onDivApplabClick = function (event) {
     element = getInnerElement(element.parentNode);
   }
   // give the div focus so that we can listen for keyboard events
-  $("#divApplab").focus();
+  $("#designModeViz").focus();
   designMode.editElementProperties(element);
 };
 
@@ -47,7 +49,7 @@ designMode.onDivApplabClick = function (event) {
  * @returns {HTMLElement} The currently visible screen element.
  */
 designMode.activeScreen = function () {
-  return $('.screen').filter(function () {
+  return $('#designModeViz .screen').filter(function () {
     return this.style.display !== 'none';
   }).first()[0];
 };
@@ -65,7 +67,7 @@ designMode.createElement = function (elementType, left, top) {
   var parent;
   var isScreen = $(element).hasClass('screen');
   if (isScreen) {
-    parent = document.getElementById('divApplab');
+    parent = document.getElementById('designModeViz');
   } else {
     parent = designMode.activeScreen();
   }
@@ -90,10 +92,12 @@ designMode.editElementProperties = function(element) {
 };
 
 /**
- * Clear the Properties pane of applab's design mode.
+ * Loads the current element or current screen into the property tab.
+ * Also makes sure we re-render design mode to update properties such as isDimmed.
  */
-designMode.clearProperties = function () {
-  designMode.editElementProperties(null);
+designMode.resetPropertyTab = function() {
+  var element = currentlyEditedElement || designMode.activeScreen();
+  designMode.editElementProperties(element);
 };
 
 /**
@@ -115,14 +119,28 @@ var appendPx = function (inp) {
 };
 
 /**
- * Handle a change from our properties table. After handling properties
- * generically, give elementLibrary a chance to do any element specific changes.
+ * Handle a change from our properties table.
+ * @param element {Element}
+ * @param name {string}
+ * @param value {string}
  */
 designMode.onPropertyChange = function(element, name, value) {
+  designMode.updateProperty(element, name, value);
+  designMode.editElementProperties(element);
+};
+
+/**
+ * After handling properties generically, give elementLibrary a chance
+ * to do any element specific changes.
+ * @param element
+ * @param name
+ * @param value
+ */
+designMode.updateProperty = function(element, name, value) {
   var handled = true;
   switch (name) {
     case 'id':
-      element.id = value;
+      elementUtils.setId(element, value);
       if (elementLibrary.getElementType(element) ===
           elementLibrary.ElementType.SCREEN) {
         // rerender design toggle, which has a dropdown of screen ids
@@ -299,8 +317,6 @@ designMode.onPropertyChange = function(element, name, value) {
   if (!handled) {
     throw "unknown property name " + name;
   }
-
-  designMode.editElementProperties(element);
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {
@@ -312,9 +328,9 @@ designMode.onDeletePropertiesButton = function(element, event) {
 
   if (isScreen) {
     designMode.loadDefaultScreen();
+  } else {
+    designMode.editElementProperties(elementUtils.getPrefixedElementById(currentScreenId));
   }
-
-  designMode.clearProperties();
 };
 
 designMode.onDepthChange = function (element, depthDirection) {
@@ -374,32 +390,57 @@ designMode.onInsertEvent = function(code) {
   $('#codeModeButton').click(); // TODO(dave): reactify / extract toggle state
 };
 
+/**/
 designMode.serializeToLevelHtml = function () {
-  // TODO(dave): remove this check once design mode content is separated
-  // from divApplab: https://www.pivotaltracker.com/story/show/103544608
-  if (Applab.hideDesignMode) {
-    return;
-  }
-  var divApplab = $('#divApplab');
+  var designModeViz = $('#designModeViz');
   // Children are screens. Want to operate on grandchildren
-  var madeUndraggable = makeUndraggable(divApplab.children().children());
-  var serialization = new XMLSerializer().serializeToString(divApplab[0]);
+  var madeUndraggable = makeUndraggable(designModeViz.children().children());
+
+  // Make a copy so that we don't affect designModeViz contents as we
+  // remove prefixes from the element ids.
+  var designModeVizClone = designModeViz.clone();
+  designModeVizClone.children().each(function() {
+    elementUtils.removeIdPrefix(this);
+  });
+  designModeVizClone.children().children().each(function() {
+    elementUtils.removeIdPrefix(this);
+  });
+
+  var serialization = new XMLSerializer().serializeToString(designModeVizClone[0]);
   if (madeUndraggable) {
-    makeDraggable(divApplab.children().children());
+    makeDraggable(designModeViz.children().children());
   }
   Applab.levelHtml = serialization;
 };
 
 /**
- * @param rootEl {Element}
- * @param allowDragging {boolean}
+ * Replace the contents of rootEl with the children of the DOM node obtained by
+ * parsing Applab.levelHtml (the root node in the levelHtml is ignored).
+ * @param rootEl {Element} Element whose children should be replaced.
+ * @param allowDragging {boolean} Whether to make elements resizable and draggable.
+ * @param prefix {string} Optional prefix to attach to element ids of children and
+ *     grandchildren after parsing. Defaults to ''.
  */
-designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
+designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
+  if (!rootEl) {
+    return;
+  }
+  while (rootEl.firstChild) {
+    rootEl.removeChild(rootEl.firstChild);
+  }
+
   if (!Applab.levelHtml) {
     return;
   }
   var levelDom = $.parseHTML(Applab.levelHtml);
   var children = $(levelDom).children();
+
+  children.each(function () {
+    elementUtils.addIdPrefix(this, prefix);
+  });
+  children.children().each(function() {
+    elementUtils.addIdPrefix(this, prefix);
+  });
 
   children.appendTo(rootEl);
   if (allowDragging) {
@@ -408,21 +449,12 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
   }
 
   children.each(function () {
-    elementLibrary.onDeserialize($(this)[0], designMode.onPropertyChange.bind(this));
+    elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
   });
   children.children().each(function() {
-    elementLibrary.onDeserialize($(this)[0], designMode.onPropertyChange.bind(this));
+    elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
   });
 };
-
-function toggleDragging (enable) {
-  var grandChildren = $('#divApplab').children().children();
-  if (enable) {
-    makeDraggable(grandChildren);
-  } else {
-    makeUndraggable(grandChildren);
-  }
-}
 
 designMode.toggleDesignMode = function(enable) {
   var designWorkspace = document.getElementById('designWorkspace');
@@ -439,10 +471,7 @@ designMode.toggleDesignMode = function(enable) {
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
 
-  $("#divApplab").toggleClass('divApplabDesignMode', enable);
-
-  toggleDragging(enable);
-  designMode.loadDefaultScreen();
+  Applab.toggleDivApplab(!enable);
 };
 
 /**
@@ -483,7 +512,7 @@ function makeDraggable (jqueryElements) {
         newHeight = snapToGridSize(newHeight, GRID_SIZE);
 
         // Bound at app edges
-        var container = $('#divApplab');
+        var container = $('#designModeViz');
         var maxWidth = container.outerWidth() - ui.position.left;
         var maxHeight = container.outerHeight() - ui.position.top;
         newWidth = Math.min(newWidth, maxWidth);
@@ -508,8 +537,8 @@ function makeDraggable (jqueryElements) {
           widthProperty = 'width';
           heightProperty = 'height';
         }
-        designMode.onPropertyChange(element, widthProperty, element.style.width);
-        designMode.onPropertyChange(element, heightProperty, element.style.height);
+        designMode.updateProperty(element, widthProperty, element.style.width);
+        designMode.updateProperty(element, heightProperty, element.style.height);
       }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
@@ -527,7 +556,7 @@ function makeDraggable (jqueryElements) {
         newTop = snapToGridSize(newTop, GRID_SIZE);
 
         // containment
-        var container = $('#divApplab');
+        var container = $('#designModeViz');
         var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
         var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
         newLeft = Math.min(newLeft, maxLeft);
@@ -578,7 +607,7 @@ function makeDraggable (jqueryElements) {
  * @returns {number}
  */
 function getVisualizationScale() {
-  var div = document.getElementById('divApplab');
+  var div = document.getElementById('designModeViz');
   return div.getBoundingClientRect().width / div.offsetWidth;
 }
 
@@ -629,12 +658,12 @@ designMode.configureDragAndDrop = function () {
     drop: function (event, ui) {
       var elementType = ui.draggable[0].getAttribute('data-element-type');
 
-      var div = document.getElementById('divApplab');
+      var div = document.getElementById('designModeViz');
       var xScale = div.getBoundingClientRect().width / div.offsetWidth;
       var yScale = div.getBoundingClientRect().height / div.offsetHeight;
 
-      var left = (ui.helper.offset().left - $('#divApplab').offset().left) / xScale;
-      var top = (ui.helper.offset().top - $('#divApplab').offset().top) / yScale;
+      var left = (ui.helper.offset().left - $('#designModeViz').offset().left) / xScale;
+      var top = (ui.helper.offset().top - $('#designModeViz').offset().top) / yScale;
 
       // snap top-left corner to nearest location in the grid
       left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
@@ -642,7 +671,7 @@ designMode.configureDragAndDrop = function () {
 
       var element = designMode.createElement(elementType, left, top);
       if (elementType === elementLibrary.ElementType.SCREEN) {
-        designMode.changeScreen(element.id);
+        designMode.changeScreen(elementUtils.getId(element));
       }
     }
   });
@@ -654,7 +683,7 @@ designMode.configureDesignToggleRow = function () {
     return;
   }
 
-  var firstScreen = $('.screen').first().attr('id');
+  var firstScreen = elementUtils.getId($('#designModeViz .screen')[0]);
   designMode.changeScreen(firstScreen);
 };
 
@@ -664,9 +693,9 @@ designMode.configureDesignToggleRow = function () {
  */
 designMode.createScreen = function () {
   var newScreen = elementLibrary.createElement('SCREEN', 0, 0);
-  $("#divApplab").append(newScreen);
+  $("#designModeViz").append(newScreen);
 
-  return newScreen.getAttribute('id');
+  return elementUtils.getId(newScreen);
 };
 
 /**
@@ -675,17 +704,15 @@ designMode.createScreen = function () {
  * change, and opens the element property editor for the new screen.
  */
 designMode.changeScreen = function (screenId) {
+  currentScreenId = screenId;
   var screenIds = [];
-  $('.screen').each(function () {
-    screenIds.push(this.id);
-    $(this).toggle(this.id === screenId);
+  $('#designModeViz .screen').each(function () {
+    screenIds.push(elementUtils.getId(this));
+    $(this).toggle(elementUtils.getId(this) === screenId);
   });
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
-    var designModeClick = Applab.onDesignModeButton;
-    var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
-
     // View Data must simulate a run button click, to load the channel id.
     var viewDataClick = studioApp.runButtonClickWrapper.bind(
         studioApp, Applab.onViewData);
@@ -698,7 +725,7 @@ designMode.changeScreen = function (screenId) {
         startInDesignMode: Applab.startInDesignMode(),
         initialScreen: screenId,
         screens: screenIds,
-        onDesignModeButton: throttledDesignModeClick,
+        onDesignModeButton: Applab.onDesignModeButton,
         onCodeModeButton: Applab.onCodeModeButton,
         onViewDataButton: throttledViewDataClick,
         onScreenChange: designMode.changeScreen,
@@ -708,7 +735,11 @@ designMode.changeScreen = function (screenId) {
     );
   }
 
-  designMode.editElementProperties(document.getElementById(screenId));
+  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
+};
+
+designMode.getCurrentScreenId = function() {
+  return currentScreenId;
 };
 
 /**
@@ -717,10 +748,10 @@ designMode.changeScreen = function (screenId) {
  */
 designMode.loadDefaultScreen = function () {
   var defaultScreen;
-  if ($('.screen').length === 0) {
+  if ($('#designModeViz .screen').length === 0) {
     defaultScreen = designMode.createScreen();
   } else {
-    defaultScreen = $('.screen').first().attr('id');
+    defaultScreen = elementUtils.getId($('#designModeViz .screen')[0]);
   }
   designMode.changeScreen(defaultScreen);
 };
@@ -770,7 +801,7 @@ designMode.addScreenIfNecessary = function(html) {
 };
 
 designMode.addKeyboardHandlers = function () {
-  $('#divApplab').keydown(function (event) {
+  $('#designModeViz').keydown(function (event) {
     if (!Applab.isInDesignMode() || Applab.isRunning()) {
       return;
     }
@@ -806,4 +837,8 @@ designMode.addKeyboardHandlers = function () {
     }
     designMode.onPropertyChange(currentlyEditedElement, property, newValue);
   });
+};
+
+designMode.resetIds = function() {
+  elementLibrary.resetIds();
 };

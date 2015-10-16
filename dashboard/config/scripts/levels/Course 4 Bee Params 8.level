@@ -17,7 +17,7 @@
     "step_mode": "1",
     "nectar_goal": "5",
     "flower_type": "redWithNectar",
-    "ideal": "48",
+    "ideal": "49",
     "instructions": "Challenge: Now there's honey to deal with too! Rewrite your function to use both the number of honey units and the number of nectar units.  How would you use those numbers to decide what you should do?",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",

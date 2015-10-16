@@ -24,3 +24,6 @@
 /aws/.shared-built
 /aws/.shared-commit-built
 /shared/js/node_modules/
+/apps/build
+/apps/node_modules/
+/apps/npm-debug.log

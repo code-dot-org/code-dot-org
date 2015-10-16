@@ -26,10 +26,7 @@ theme: pdf
 
   .intro
     .intro-text 
-      Computer science drives job growth and innovation throughout our economy and society. Computing occupations make up two-thirds of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. 
-      %br
-      %br
-      75 percent of U.S. schools don’t even offer computer science and only 8% of STEM graduates study it. We need to improve access for all students, including groups who have traditionally been underrepresented.
+      Computer science drives job growth and innovation throughout our economy and society. Computing occupations make up two-thirds of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. 75 percent of U.S. schools don’t even offer computer science and only 8% of STEM graduates study it. We need to improve access for all students, including groups who have traditionally been underrepresented.
 
     %img.chart{src: "/images/charts/jobs_degrees.png"}
 
@@ -45,8 +42,9 @@ theme: pdf
       %li
         = state_info[:state_name_s]
         currently has
-        = format_integer_with_commas(state_info[:cs_jobs_i])
-        open computing jobs
+        %b
+          = format_integer_with_commas(state_info[:cs_jobs_i])
+          open computing jobs
         = precede "(" do
           = state_info[:growth_vs_average_f]
         times the average demand rate in 
@@ -56,36 +54,42 @@ theme: pdf
         The average salary for a computing occupation in
         = state_info[:state_code_s]
         is
-        = surround "$", "," do
-          = format_integer_with_commas(state_info[:avg_sal_computing_i])
+        %b
+          = surround "$", "," do
+            = format_integer_with_commas(state_info[:avg_sal_computing_i])
         which is significantly higher than the average salary in the state 
         = surround "($", ")." do
           = format_integer_with_commas(state_info[:avg_sal_all_i])
       %li
         = state_info[:state_name_s]
         had only
-        = format_integer_with_commas(state_info[:cs_graduates_i])
-        - if state_info[:cs_graduates_i] == 1
-          computer science graduate in 2015;
-        - else 
-          computer science graduates in 2015;
+        %b
+          = format_integer_with_commas(state_info[:cs_graduates_i])
+          - if state_info[:cs_graduates_i] == 1
+            computer science graduate
+          - else 
+            computer science graduates
+        in 2015;
         - if state_info[:percent_female_cs_grad_i] == 0
-          none
+          %b none
         - else 
           only
           = succeed "%" do
-            = state_info[:percent_female_cs_grad_i]
+            %b= state_info[:percent_female_cs_grad_i]
         were female.
       %li
         - if state_info[:ap_cs_exams_i] == 0
-          = format_integer_with_commas(state_info[:ap_cs_exams_i])
-          high school students in 
+          %b 
+            = format_integer_with_commas(state_info[:ap_cs_exams_i])
+            high school students
+          in 
           = state_info[:state_name_s]
           took the AP Computer Science exam in 2014.
         - else
           Only
-          = format_integer_with_commas(state_info[:ap_cs_exams_i])
-          high school students in 
+          %b 
+            = format_integer_with_commas(state_info[:ap_cs_exams_i])
+            high school students in 
           = state_info[:state_name_s]
           took the AP Computer Science exam in 2014;
           - if state_info[:percent_ap_female_i] != 0
@@ -110,11 +114,12 @@ theme: pdf
       %li
         - if state_info[:schools_ap_cs_i] != 0
           Only
-          = format_integer_with_commas(state_info[:schools_ap_cs_i])
-          - if state_info[:schools_ap_cs_i] == 1
-            school
-          - else
-            schools
+          %b
+            = format_integer_with_commas(state_info[:schools_ap_cs_i])
+            - if state_info[:schools_ap_cs_i] == 1
+              school
+            - else
+              schools
           in 
           = state_info[:state_code_s]
           = surround "(", "% of" do
@@ -134,10 +139,7 @@ theme: pdf
     .improve-edu
       %h2.improve-edu-h2 What can you do to improve K-12 CS education? 
       %ol
-        %li
-          %a{href: "https://code.org/promote/letter"}
-            Call
-          on your school to expand computer science offerings at every grade level.
+        %li Call on your school to expand computer science offerings at every grade level.
         %li Ask your local school district to allow computer science courses to satisfy a core math or science requirement.
         %li
           Visit
@@ -166,18 +168,20 @@ theme: pdf
             There are no Code.org affiliates in the state to offer professional development for elementary teachers.
           - else
             - if state_info[:num_elementary_trained_i] == 0
+              There are
               = state_info[:num_affiliates_i]
-              Code.org affiliates offer professional development for elementary teachers in
+              Code.org Affiliates that offer professional development for elementary teachers in
               = state_info[:state_name_s]
             - else
               = format_integer_with_commas(state_info[:num_affiliates_i])
               Code.org
               - if state_info[:num_affiliates_i] == 1
-                affiliate
+                Affiliate,
               - else 
-                affiliates
+                Affiliates,
               offering professional development for elementary teachers in
-              = state_info[:state_name_s]
+              = succeed ',' do
+                = state_info[:state_name_s]
               have already trained
               %b
                 = format_integer_with_commas(state_info[:num_elementary_trained_i])
@@ -215,7 +219,9 @@ theme: pdf
   %div
     %p
       %h2 What can your state do to improve computer science education?
-      Here are 8 key policies that help to provide all students with access to computer science.
+      Here are 8 key policies that help to provide all students with access to computer science. Read more about these 8 policy ideas at
+      = succeed "." do
+        %a{href: "https://code.org/files/Making_CS_Fundamental.pdf"} https://code.org/files/Making_CS_Fundamental.pdf
     %div.policies
 
       %div.policy-item
@@ -321,10 +327,6 @@ theme: pdf
             = state_info[:state_name_s]
             %b does not
             allow computer science to count as a mathematics or science admission requirement at institutions of higher education.  Admission policies that do not include rigorous computer science courses as meeting the mathematics or science entrance requirements discourage students from taking such courses in secondary education. State leaders can work with institutions of higher education to ensure credit and articulation policies align with secondary school graduation requirements.
-
-    %p
-      %a{href: "https://code.org/files/Making_CS_Fundamental.pdf"} Read more
-      about these 8 policy ideas.
 
   %div
     %h3 Follow us! 
