@@ -5,7 +5,7 @@ require 'test_helper'
 
 class DslTest < ActiveSupport::TestCase
   setup do
-    CDO.stubs(:properties_encryption_key).returns('this is a key for testing')
+    CDO.stubs(:properties_encryption_key).returns('this is a key for testing that is long enough that nothing is complaining')
   end
 
   test 'remove property' do
