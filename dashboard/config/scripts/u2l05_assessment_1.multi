@@ -1,18 +1,23 @@
 name 'U2L05 Assessment 1'
-title 'Packets and Making a Reliable Internet: Question 1'
-type 'multi2'
-
-question 'Pick Two: Pick the two statements about packets and routing on the Internet which are true.'
-wrong 'Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent'
-right 'TCP ensures messages can be reliably transmitted across the Internet'
-wrong 'TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission'
-right 'TCP must account for the fact that packets may not arrive at a destination computer in the intended order'
-
-teacher_markdown <<MARKDOWN
-Answers:
-
-- B. TCP ensures messages can be reliably transmitted across the Internet.
-- D. TCP must account for the fact that packets may not arrive at a destination computer in the intended order
-
- 
-MARKDOWN
+encrypted 'Iii0AAM3DF3MYDcgrDwcZVqnPlrPjY1jVw6tzUz9D3qg6hqjGBWa1SV4OFkt
+DzfmzfihQoZxRXp4BPeyx0y9dyeFv/21EoyV5Yts5oP+vSx+bPWGJcThrPcp
+WHBgAMEAy9rNu7V7p7k7rqSUivFDMZ8Vw0ua5KOv+vT+xOGrmAlxfGlX8I9D
+WUKuri/RR0fCPRviTSys+NOqoRYe0e4ws18tORp3rTh8+XoxpH/xPnOVy3WN
+rJ7STYU+1f7vgzexSvkArnGT50YB8Knu/vkerwrpr3LXQoZywNuDWiq8UBAt
+nHwu6Y2lZUJayK3LOkWsiflSn+BIh/onkCGRRLe3YcIXPuxe/+uqrvih5QwO
+BwEpSo92G54USovOrXQJD3xo5EAuTh6klJiLYnIpW/aM4a3yK/J0Y0seiG4o
+Kie7invySHbqICnZdbv/8nN26RF39IvKi5IStBJXALQk5F+UpNQfjc6MMhH2
+/+2u0ipYF7LutoC9/pPakNSBHhkmS2bxeWjS6tCvO1jtWN8CTJKbEOkhTKQ3
+ymqwrU6U1RFFYLQt4ecfQ52fXyg2xbOQ5uifAiiP+7oTAU5kyZzv0dgGJgPi
+nuqQAQJ51vwO2RS5BtocRlj1DUV1QishMa2IDSaiZqFZAAl2LkJ5F2QeQq1a
+7yAbHcqZiLo3kbIftrQ87TjAOdiPiLFDaBwLAU2f4vPJB3jOqYKKLuHCwxYI
+4gXn+les6GVVxDxh3dacvEh6nY8tNb4ETjiYxDEBTCijx4GXf8+vPIFv6UdZ
+tvJjaUuNPT9Fe3abYMxBamliYV9Lg25y0W/7KBiDyCVtpIP00FK0kfa9MDB8
+LhhR9x6XUPwF9ZFdqBjWs2vUDEpjmFBAbw7DVtOVj7ASTTBvb3LUQG3LEFRW
+I/VuPR6xlX7MwTbSb6HQr3yEa6lnIn5G6djJzDo7gaV/ykCik3a/7a3yLA98
+OMx1EF0eDjTsV32/C6uA06mB6Lj7CUrW9j575P71waFJqTMm20O/z7N9UvEt
+8v80zzC/sPtzLJ+4WPymtmGppo4aHCHROujDLVMfrm7naJO8TYNY90un0bp0
+ppUepE+rcryPEQ+stNMFuQ+X9BUXpLB5oem/SOBh0tbnJmEdGzMvZU4MlKg8
+LgYDSImGDbxUNH33DkmgUW8FXxoal2kNlU5JXvuGg5y8Rog32y0GbxLw1mZa
+z5fYTHOARaSoUH/AhOi9Y3vJlOjfAIu5uODwxROf09WWLWkReOHxKwrxbOw=
+'

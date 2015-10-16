@@ -55,4 +55,6 @@ Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, s
   Then element "#qtip-4-content" is visible
   Then I am on "http://studio.code.org/hoc/10"
   Then I am on "http://studio.code.org/hoc/9"
+  Then I wait to see a dialog titled "Puzzle 9 of 20"
+  And I close the dialog
   Then element "#qtip-4-content" does not exist
