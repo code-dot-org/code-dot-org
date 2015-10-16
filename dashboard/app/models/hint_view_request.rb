@@ -34,10 +34,12 @@ class HintViewRequest < ActiveRecord::Base
   # used by Studio's feedback modal to decide whether or not to show a
   # user a hint based on the already-viewed hints.
   def HintViewRequest.milestone_response(script, level, user)
-    HintViewRequest::ENABLED ? HintViewRequest.where(script: script, level: level, user: user)
-      .pluck(:feedback_type, :feedback_xml)
-      .map do |feedback_type, feedback_xml|
+    return [] unless HintViewRequest::ENABLED
+    HintViewRequest.
+      where(script: script, level: level, user: user).
+      pluck(:feedback_type, :feedback_xml).
+      map { |feedback_type, feedback_xml|
         {feedback_type: feedback_type, feedback_xml: feedback_xml}
-      end : []
+      }
   end
 end
