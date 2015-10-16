@@ -204,6 +204,10 @@ Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedTe
   element_has_text(selector, expectedText)
 end
 
+Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expectedHtml|
+  element_has_html(selector, expectedHtml)
+end
+
 Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
   steps %{
     Then I wait to see a ".dialog-title"
@@ -428,7 +432,8 @@ And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
     element.send_keys(make_symbol_if_colon(key))
   else
     # Workaround for Firefox, see https://code.google.com/p/selenium/issues/detail?id=6822
-    key.gsub!(/\\n/, "\n") # Cucumber does not convert captured \n to newline.
+    key.gsub!(/([^\\])\\n/, "\\1\n") # Cucumber does not convert captured \n to newline.
+    key.gsub!(/\\\\n/, "\\n") # Fix up escaped newline
     key.split('').each do |k|
       if k == '('
         element.send_keys :shift, 9
