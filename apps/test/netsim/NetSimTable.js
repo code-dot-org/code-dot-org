@@ -517,15 +517,17 @@ describe("NetSimTable", function () {
   });
 
   describe("initial delay coalescing", function () {
+    var COALESCE_WINDOW = 100; // ms
+
     beforeEach(function () {
-      // Re-enable 50ms before-refresh delay to coalesce messages
-      netsimTable.setMinimumDelayBeforeRefresh(50);
+      // Re-enable 100ms before-refresh delay to coalesce messages
+      netsimTable.setMinimumDelayBeforeRefresh(COALESCE_WINDOW);
     });
 
     it("does not read until minimum delay passes", function (testDone) {
       netsimTable.refreshTable_(callback);
       assert.equal('', apiTable.log());
-      delayTest(50, testDone, function () {
+      delayTest(COALESCE_WINDOW, testDone, function () {
         assert.equal('readAll', apiTable.log());
         testDone();
       });
@@ -537,18 +539,18 @@ describe("NetSimTable", function () {
       netsimTable.refreshTable_(callback);
       assert.equal('', apiTable.log());
 
-      delayTest(25, testDone, function () {
+      delayTest(COALESCE_WINDOW / 2, testDone, function () {
         netsimTable.refreshTable_(callback);
         netsimTable.refreshTable_(callback);
         netsimTable.refreshTable_(callback);
         assert.equal('', apiTable.log());
 
-        delayTest(25, testDone, function () {
+        delayTest(COALESCE_WINDOW / 2, testDone, function () {
           // Only one request at initial delay
           assert.equal('readAll', apiTable.log());
 
-          delayTest(25, testDone, function () {
-            // Still only one request has occurred - the calls at 25ms
+          delayTest(COALESCE_WINDOW / 2, testDone, function () {
+            // Still only one request has occurred - the calls at 50ms
             // were coalesced into the initial call.
             assert.equal('readAll', apiTable.log());
 
@@ -560,14 +562,14 @@ describe("NetSimTable", function () {
 
     it("does not coalesce if requests are far enough apart", function (testDone) {
       netsimTable.refreshTable_(callback);
-      delayTest(50, testDone, function () {
+      delayTest(COALESCE_WINDOW, testDone, function () {
         assert.equal('readAll', apiTable.log());
 
         // This kicks off another delayed request
         netsimTable.refreshTable_(callback);
         assert.equal('readAll', apiTable.log());
 
-        delayTest(50, testDone, function () {
+        delayTest(COALESCE_WINDOW, testDone, function () {
           // Both requests occur
           assert.equal('readAllreadAll', apiTable.log());
 

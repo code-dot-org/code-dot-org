@@ -383,6 +383,7 @@ StudioApp.prototype.init = function(config) {
       readOnly: config.readonlyWorkspace,
       textModeAtStart: config.level.textModeAtStart,
       beginnerMode: config.level.beginnerMode,
+      dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
       autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly,
       dropletTooltipsDisabled: config.level.dropletTooltipsDisabled
     });
@@ -1497,6 +1498,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig, options),
     palette: fullDropletPalette,
     showPaletteInTextMode: true,
+    dropIntoAceAtLineStart: options.dropIntoAceAtLineStart,
     enablePaletteAtStart: !options.readOnly,
     textModeAtStart: options.textModeAtStart
   });
@@ -1583,6 +1585,11 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   this.onDropletToggle_();
 
   this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
+
+  this.editor.on('palettetoggledone', function(e) {
+    // Reposition callouts after block/text toggle (in case they need to move)
+    $('.cdo-qtips').qtip('reposition', null, false);
+  });
 
   if (options.afterEditorReady) {
     options.afterEditorReady();

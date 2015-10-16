@@ -779,6 +779,8 @@ en:
       U2L9 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       U3- L12 -Design Mode SFLP: {}
+      U3-Variables 2 - SFLP: {}
+      U3-Variables-Memory Breakdown: {}
       U3L01 Student Lesson Introduction:
         Why Programming and Programming Languages?: Why Programming and Programming Languages?
       U3L02 Student Lesson Introduction:
@@ -1822,10 +1824,10 @@ en:
         Caesar Shift Cipher(of 18): Caesar Shift Cipher(of 18)
         GBRXBN MBGGEFB GTTTT: GBRXBN MBGGEFB GTTTT
         ? |-
-          Given the original plaintext: "SECRET MESSAGE SHHHH"
+          Given the original plaintext: “SECRET MESSAGE SHHHH”
           Match the encryption method to the output:
         : |-
-          Given the original plaintext: "SECRET MESSAGE SHHHH"
+          Given the original plaintext: “SECRET MESSAGE SHHHH”
           Match the encryption method to the output:
         Random Substitution Cipher: Random Substitution Cipher
         TEMVVU WIITAQIQTHRLY: TEMVVU WIITAQIQTHRLY
@@ -2914,7 +2916,7 @@ en:
         Messages are routed over different paths.: Messages are routed over different paths.
         'Routers and Redundancy: Question 1': 'Routers and Redundancy: Question 1'
         The first 4 bits of the address specify the router number that your friend is on.: The first 4 bits of the address specify the router number that your friend is on.
-        You set the "other router" bit in the message.: You set the "other router" bit in the message.
+        You set the “other router” bit in the message.: You set the “other router” bit in the message.
       U2L04 Assessment4:
         ? If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?
         : If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?
@@ -2948,8 +2950,8 @@ en:
         The receiver computer must confirm to the sending computer that each packet was received.: The receiver computer must confirm to the sending computer that each packet was received.
         Which of the following is NOT true about packets?: Which of the following is NOT true about packets?
       'U2L06 - MC: Which is an MST?':
-        ? "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
-        : "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
+        ? "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
+        : "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
         A: A
         B: B
         C: C
@@ -2969,11 +2971,11 @@ en:
         A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.: A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.
         ? |-
           Both the minimum spanning tree algorithm you learned and the
-          shortest path algorithm you learned used a "greedy" approach,
+          shortest path algorithm you learned used a “greedy” approach,
           choosing the smallest edge first or vertex with the smallest distance value first.
         : |-
           Both the minimum spanning tree algorithm you learned and the
-          shortest path algorithm you learned used a "greedy" approach,
+          shortest path algorithm you learned used a “greedy” approach,
           choosing the smallest edge first or vertex with the smallest distance value first.
         Question 2: Question 2
         The minimum spanning tree algorithm you learned does not necessarily need to try every edge.: The minimum spanning tree algorithm you learned does not necessarily need to try every edge.
@@ -3035,11 +3037,11 @@ en:
         The day of the month that the encrypted message was sent.: The day of the month that the encrypted message was sent.
         The letter that occurs most often in the encrypted message.: The letter that occurs most often in the encrypted message.
         The number of characters to shift each letter in the alphabet.: The number of characters to shift each letter in the alphabet.
-        What is the "key" to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?: What is the "key" to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?
+        What is the “key” to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?: What is the “key” to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?
       U2L13 Assessment4:
         '26': '26'
         26 x 25: 26 x 25
-        26 x 25 x 24 x***x 3 x 2 x 1: 26 x 25 x 24 x***x 3 x 2 x 1
+        26 × 25 × 24 ×···× 3 × 2 x 1: 26 × 25 × 24 ×···× 3 × 2 x 1
         26^26: 26^26
         'Assessment: Question 3': 'Assessment: Question 3'
         The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?: The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?
@@ -3162,7 +3164,7 @@ en:
         A way to give input to a function that controls how the function runs.: A way to give input to a function that controls how the function runs.
         Another name for the purpose of a function.: Another name for the purpose of a function.
         'Multiple Choice: What is a function parameter?': 'Multiple Choice: What is a function parameter?'
-        para-meter -- a measure of the distance between a function's conception and implementation.: para-meter -- a measure of the distance between a function's conception and implementation.
+        para-meter -- a measure of the distance between a function\’s conception and implementation.: para-meter -- a measure of the distance between a function\’s conception and implementation.
       U3L06-API-multichoice:
         Abstract Parameter Interface: Abstract Parameter Interface
         Abstract Programming Inheritance: Abstract Programming Inheritance
@@ -3217,28 +3219,28 @@ en:
         'When the forward button is clicked: The turtle will move forward and turn left': 'When the forward button is clicked: The turtle will move forward and turn left'
         description here: description here
       U3L13 debugging Multi:
-        A program that does not generate any error messages will run as intended: A program that does not generate any error messages will run as intended
-        Debugging is the process of locating and correcting errors in a program: Debugging is the process of locating and correcting errors in a program
-        Error messages help programmers identify problems in their code: Error messages help programmers identify problems in their code
-        It is common for programs to contain errors the first time they are written: It is common for programs to contain errors the first time they are written
+        A program that does not generate any error messages will run as intended.: A program that does not generate any error messages will run as intended.
+        Debugging is the process of locating and correcting errors in a program.: Debugging is the process of locating and correcting errors in a program.
+        Error messages help programmers identify problems in their code.: Error messages help programmers identify problems in their code.
+        It is common for programs to contain errors the first time they are written.: It is common for programs to contain errors the first time they are written.
         Multiple Choice - Debugging and Error Messages: Multiple Choice - Debugging and Error Messages
-        Not all errors in a program will generate an error message: Not all errors in a program will generate an error message
+        Not all errors in a program will generate an error message.: Not all errors in a program will generate an error message.
         Which of the following statements about debugging and program errors is FALSE?: Which of the following statements about debugging and program errors is FALSE?
       U3L14 - MC Duplicate Ids:
-        A warning message will appear for the second button that that id is already in use: A warning message will appear for the second button that that id is already in use
-        Buttons and Ids: Buttons and Ids
-        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id: JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id
-        The JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS compliant: The JavaScript API for MVC allows for duplicate ids as long as the HTML is CSS compliant
-        The first button created with the id will work, the other will not: The first button created with the id will work, the other will not
-        Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other: Two buttons with same id are linked during the running of the program. Clicking one is just like clicking the other
-        What happens when two buttons are given the same id?: What happens when two buttons are given the same id?
+        A warning message will appear for the second button that that ID is already in use.: A warning message will appear for the second button that that ID is already in use.
+        Buttons and IDs: Buttons and IDs
+        JavaScript is flexible. Two buttons with same ID will respond to a single event handler associated with that ID.: JavaScript is flexible. Two buttons with same ID will respond to a single event handler associated with that ID.
+        The JavaScript API for MVC allows for duplicate IDs as long as the HTML is CSS compliant.: The JavaScript API for MVC allows for duplicate IDs as long as the HTML is CSS compliant.
+        The first button created with the ID will work, the other will not.: The first button created with the ID will work, the other will not.
+        Two buttons with same ID are linked during the running of the program; clicking one is just like clicking the other.: Two buttons with same ID are linked during the running of the program; clicking one is just like clicking the other.
+        What happens when two buttons are given the same ID?: What happens when two buttons are given the same ID?
       U3L14 - MC order of button and onEvent:
         Buttons and Event Handlers: Buttons and Event Handlers
-        Does order matter when adding a button and its event handler to your code?: Does order matter when adding a button and its event handler to your code?
-        JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API: JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API
-        JavaScript is flexible. The button and its event handler can appear in any order in the code: JavaScript is flexible. The button and its event handler can appear in any order in the code
-        The button, with its id, must appear in the code AFTER the event handler: The button, with its id, must appear in the code AFTER the event handler
-        The button, with its id, must appear in the code BEFORE the event handler: The button, with its id, must appear in the code BEFORE the event handler
+        Does the order in which the code for a button and the code for its event handler appear within the program matter?: Does the order in which the code for a button and the code for its event handler appear within the program matter?
+        No, JavaScript is flexible; the button and its event handler can appear in any order in the code.: No, JavaScript is flexible; the button and its event handler can appear in any order in the code.
+        Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.: Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.
+        Yes, the button, with its ID, must appear in the code AFTER the event handler.: Yes, the button, with its ID, must appear in the code AFTER the event handler.
+        Yes, the button, with its ID, must appear in the code BEFORE the event handler.: Yes, the button, with its ID, must appear in the code BEFORE the event handler.
       U3L18 Controlling Memory and Program Flow:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
         Keep track of time: Keep track of time
@@ -3280,14 +3282,14 @@ en:
         'Select two (2) of programming categories below that are the best fit for desired behavior of the game described at left. ': 'Select two (2) of programming categories below that are the best fit for desired behavior of the game described at left. '
         Store information permanently: Store information permanently
       U3L19 - MC what are values of abc:
-        Choose the best answer: Choose the best answer
+        ' Variable Check In': ' Variable Check In'
+        ' What are the values of the variables a, b and c after all of the code below has executed? ': ' What are the values of the variables a, b and c after all of the code below has executed? '
         Code does not execute due to error: Code does not execute due to error
-        So, what's the answer?: So, what's the answer?
-        a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7: a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7
-        a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13: a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13
-        a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21: a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21
-        a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16: a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16
-        a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8: a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8
+        a=10, b=3, c=7: a=10, b=3, c=7
+        a=13, b =16, c=29: a=13, b =16, c=29
+        a=13, b=13, c=13: a=13, b=13, c=13
+        a=13, b=16, c=13: a=13, b=16, c=13
+        a=3, b=3, c=3: a=3, b=3, c=3
       U3L20 Assessment1:
         Conditional Basics Question 1: Conditional Basics Question 1
         Which two of the following programming statements did you use when you wrote turtle drawing programs?: Which two of the following programming statements did you use when you wrote turtle drawing programs?
@@ -4408,8 +4410,8 @@ en:
         'Tell Me a Secret: Wrap Up': 'Tell Me a Secret: Wrap Up'
       U2L14 Assessment2:
         'Assessment: Question 3': 'Assessment: Question 3'
-        ? "Using the Vigenere cipher, does the length of the key matter? \nFor example, if one key is length 5 and another is 20, does one produce a \"better\" encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning."
-        : "Using the Vigenere cipher, does the length of the key matter? \nFor example, if one key is length 5 and another is 20, does one produce a \"better\" encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning."
+        ? "Using the Vigenere cipher, does the length of the key matter? \nFor example, if one key is length 5 and another is 20, does one produce a “better” encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning."
+        : "Using the Vigenere cipher, does the length of the key matter? \nFor example, if one key is length 5 and another is 20, does one produce a “better” encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning."
       U2L14 Free Response Getting Started:
         'Cracking the Code: Getting Started': 'Cracking the Code: Getting Started'
       U2L14 Free Response Wrap Up:
@@ -4432,13 +4434,13 @@ en:
         What does "computationally hard" mean?: What does "computationally hard" mean?
       U2L17 Assessment 1:
         Assessment Question 1: Assessment Question 1
-        Describe what it means for a problem to be "computationally hard.": Describe what it means for a problem to be "computationally hard."
+        Describe what it means for a problem to be “computationally hard.”: Describe what it means for a problem to be “computationally hard.”
       U2L17 Assessment 2:
         Assessment Question 2: Assessment Question 2
         What strategies do people use to solve large computationally-hard problems?: What strategies do people use to solve large computationally-hard problems?
       U2L17 Free Response Getting Started:
         'Hard Problems: Getting Started': 'Hard Problems: Getting Started'
-        What kinds of problems do you think are "computationally hard"?: What kinds of problems do you think are "computationally hard"?
+        What kinds of problems do you think are “computationally hard"?: What kinds of problems do you think are “computationally hard"?
       U2L17 Free Response Wrap Up:
         'Hard Problems: Wrap Up': 'Hard Problems: Wrap Up'
         ? If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?
@@ -4559,7 +4561,7 @@ en:
       U3L13 Free Response Getting Started:
         Buttons on the Screen - Getting Started: Buttons on the Screen - Getting Started
       U3L13 Free Response Reflection:
-        Buttons on the Screen Wrap Up: Buttons on the Screen Wrap Up
+        Event-Driven Programming Wrap-Up: Event-Driven Programming Wrap-Up
       U3L14 - Journal Favorite Event:
         Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.
         'Reflection: Events': 'Reflection: Events'

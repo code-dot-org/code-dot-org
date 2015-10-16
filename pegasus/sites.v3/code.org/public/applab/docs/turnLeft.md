@@ -81,7 +81,10 @@ ____________________________________________________
 
 **Example: House** Draw a house with left turns only. 
 
-```
+<table>
+<tr>
+<td>
+<pre>
 // Draw a house with left turns only.
 turnLeft(45);
 moveForward(50);
@@ -93,9 +96,13 @@ turnLeft(-270); // same as turnLeft(90);
 moveForward(70);
 turnLeft(90);
 moveForward(75);
-```
-
+</pre>
+</td>
+<td>
 <img src='https://images.code.org/ca17e64ad78403c93fabcb18dd08a66b-image-1444503308399.gif' style='width: 150px;'> 
+</td>
+</tr>
+</table>
 
 [/example]
 

@@ -53,7 +53,7 @@ link "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/sha
 end
 
 execute "install-dashboard" do
-  command "bundle exec rake install:dashboard"
+  command 'bundle exec rake install'
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
   environment ({
     'LC_ALL' => 'en_US.UTF-8', 'RAILS_ENV' => "#{node.chef_environment}"

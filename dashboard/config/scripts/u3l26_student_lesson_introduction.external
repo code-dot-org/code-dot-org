@@ -1,5 +1,6 @@
 name 'U3L26 Student Lesson Introduction'
 title 'Strings and Substrings'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 25 - Strings and Substrings
@@ -21,5 +22,3 @@ String Exploration
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
-
-
