@@ -47,7 +47,7 @@ module ApplicationHelper
   end
 
   def activity_css_class(result)
-    # For definitions of the result values, see /apps/src/constants.js.
+    # For definitions of the result values, see /app/src/constants.js.
     if result.nil? || result == 0
       'not_tried'
     elsif result >= Activity::SUBMITTED_RESULT
