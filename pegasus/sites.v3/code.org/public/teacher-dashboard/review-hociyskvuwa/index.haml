@@ -2,7 +2,7 @@
 title: Review Hour of Code special events
 ---
 -dont_cache
-- authentication_required!
+-authentication_required!
 -forbidden! unless dashboard_user[:user_type] == 'teacher'
 
 :css
@@ -41,10 +41,16 @@ title: Review Hour of Code special events
       -by_state.each_pair do |state_code, events|
         -unless state_code.nil_or_empty?
           %li{class: "hoc-event-state"}
-            %a{href: "/teacher-dashboard/review-hociyskvuwa/us/#{state_code.downcase}"}= state_code
+            %a{href: "/teacher-dashboard/review-hociyskvuwa/us/#{state_code.downcase}"}
+              = state_code
+              = surround "(", ")" do
+                = events.count
 
 %ul
   -by_country.each_pair do |country_code, events|
     -if country_code != 'US'
       %li{class: "hoc-event-country"}
-        %a{href: "/teacher-dashboard/review-hociyskvuwa/#{country_code.downcase}"}= events[0]["location_country_s"]
+        %a{href: "/teacher-dashboard/review-hociyskvuwa/#{country_code.downcase}"}
+          = events[0]["location_country_s"]
+          = surround "(", ")" do
+            = events.count
