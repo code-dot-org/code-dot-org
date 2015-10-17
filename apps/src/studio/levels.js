@@ -2037,9 +2037,10 @@ levels.js_hoc2015_event_three_goals =
     'imageHeight': 100
   },
   'goal': {
-    successCondition: function () {
-      return false;
-    }
+    successCondition: function () { return false; }
+  },
+  'requiredForSuccess' : {
+    'winGame': true
   },
   'completeOnSuccessConditionNotGoals': true,
   'callouts': [
@@ -2108,7 +2109,8 @@ levels.js_hoc2015_event_score_points = {
   'timeoutAfterWhenRun': true,
   'showTimeoutRect': true,
   'requiredForSuccess' : {
-    'removedItemCount': 2
+    'winGame': true,
+    'scoreMinimum': 1000
   },
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
@@ -2181,9 +2183,9 @@ levels.js_hoc2015_win_lose = {
     }
   ],
   'requiredForSuccess' : {
-    'touchAllItems': true,
-    'setActivity': {itemType: 'roo', 'activityType': 'flee'}
-  }
+    'winGame': true,
+    'loseGame': true
+  },
 };
 
 levels.js_hoc2015_add_characters = {
@@ -2279,7 +2281,7 @@ levels.js_hoc2015_chain_characters = {
   'timeoutAfterWhenRun': true,
   'showTimeoutRect': true,
   'requiredForSuccess' : {
-    'scoreMinimum': 100
+    'winGame': true
   }
 };
 
@@ -2338,6 +2340,10 @@ levels.js_hoc2015_change_setting = {
     'setMap': { 'category': 'Commands' },
     'playSound': { 'category': 'Commands' },
     'addCharacter': { 'category': 'Commands' },
+    'winGame': { 'category': 'Commands' },
+    'loseGame': { 'category': 'Commands' },
+    'whenGetAllCharacters': { 'category': 'Events' },
+    'whenScore1000': { 'category': 'Events' }
   },
   'startBlocks': [
     'addCharacter("pilot");',
@@ -2359,7 +2365,7 @@ levels.js_hoc2015_change_setting = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"Time to visit another planet."',
-  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.',
+  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.  Then, win your game.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 600,
   'timeoutAfterWhenRun': true,
@@ -2378,8 +2384,13 @@ levels.js_hoc2015_change_setting = {
       }
     }
   ],
-  //'requiredForSuccess' : {
-  //}
+  'requiredForSuccess' : {
+    'setSprite': true,
+    'setBotSpeed': true,
+    'setBackground': true,
+    'setMap': true,
+    'winGame': true
+  }
 };
 
 levels.js_hoc2015_event_free = {

@@ -1778,7 +1778,11 @@ Studio.reset = function(first) {
     removedItemCount: 0,
     setActivityRecord: null,
     hasSetBot: false,
-    hasAddedItem: false
+    hasSetBackground: false,
+    hasSetMap: false,
+    hasAddedItem: false,
+    hasWonGame: false,
+    hasLostGame: false
   };
 
   // Reset goal successState:
@@ -3067,18 +3071,22 @@ Studio.callCmd = function (cmd) {
     case 'winGame':
       studioApp.highlight(cmd.id);
       Studio.winGame(cmd.opts);
+      Studio.trackedBehavior.hasWonGame = true;
       break;
     case 'loseGame':
       studioApp.highlight(cmd.id);
       Studio.loseGame(cmd.opts);
+      Studio.trackedBehavior.hasLostGame = true;
       break;
     case 'setBackground':
       studioApp.highlight(cmd.id);
       Studio.setBackground(cmd.opts);
+      Studio.trackedBehavior.hasSetBackground = true;
       break;
     case 'setMap':
       studioApp.highlight(cmd.id);
       Studio.setMap(cmd.opts);
+      Studio.trackedBehavior.hasSetMap = true;
       break;
     case 'setSprite':
       studioApp.highlight(cmd.id);
@@ -4614,6 +4622,14 @@ Studio.checkRequiredForSuccess = function() {
     return { exists: true, achieved: false, message: studioMsg.failedHasSetBotSpeed() };
   }
 
+  if (required.setBackground && !tracked.hasSetBackground) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasSetBackground() };
+  }
+
+  if (required.setBotMap && !tracked.hasSetMap) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasSetMap() };
+  }
+
   if (required.touchAllItems && Studio.items.length > 0) {
     return { exists: true, achieved: false, message: studioMsg.failedTouchAllItems() };
   }
@@ -4624,6 +4640,14 @@ Studio.checkRequiredForSuccess = function() {
 
   if (required.removedItemCount && tracked.removedItemCount < required.removedItemCount) {
     return { exists: true, achieved: false, message: studioMsg.failedRemovedItemCount() };
+  }
+
+  if (required.winGame && ! tracked.hasWonGame) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasWonGame() };
+  }
+
+  if (required.lostGame && ! tracked.hasLostGame) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasLostGame() };
   }
 
   if (required.setActivity &&
