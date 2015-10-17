@@ -2,7 +2,7 @@ Feature: Callouts
 
   Background:
     Given I am on "http://learn.code.org/reset_session"
-    And evaluate JavaScript expression "window.localStorage.clear()"
+    And execute JavaScript expression "window.localStorage.clear()"
 
   Scenario Outline: Callouts having correct content and being dismissable via the target element
     Given I am on "<url>"
