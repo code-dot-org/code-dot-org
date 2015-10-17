@@ -1615,7 +1615,7 @@ levels.js_hoc2015_move_right = {
 
   'instructions': '"Collect the item!"',
   'instructions2': 'Program BOTX to get to the item.  Add a second moveRight command and then hit Run.',
-  'ticksBeforeFaceSouth': 15,
+  'ticksBeforeFaceSouth': 9,
   'goalOverride': {
     'goalImage': 'goal1',
     'imageWidth': 50,
@@ -1675,7 +1675,7 @@ levels.js_hoc2015_move_two_items = {
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
   'instructions': '"We need the items. Help me get them all!"',
   'instructions2': 'Program BOTX to get to both items.',
-  'ticksBeforeFaceSouth': 10,
+  'ticksBeforeFaceSouth': 9,
   'goalOverride': {
     'goalImage': 'goal2',
     'imageWidth': 50,
@@ -1713,7 +1713,7 @@ levels.js_hoc2015_move_item_destination = {
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
   'instructions': '"I see another item behind that obstacle. Can you get it too?"',
   'instructions2': 'Program BOTX to get all the items.',
-  'ticksBeforeFaceSouth': 10,
+  'ticksBeforeFaceSouth': 9,
   'goalOverride': {
     'goalImage': 'goal1',
     'imageWidth': 50,
@@ -1752,7 +1752,7 @@ levels.js_hoc2015_move_item_destination_2 = {
   'embed': 'false',
   'instructions': '"There are more items to collect."',
   'instructions2': 'Program BOTX to get all the items.',
-  'ticksBeforeFaceSouth': 10,
+  'ticksBeforeFaceSouth': 9,
   'goalOverride': {
     'goalImage': 'goal2',
     'imageWidth': 50,
@@ -1791,7 +1791,7 @@ levels.js_hoc2015_move_item_destination_3 = {
   'embed': 'false',
   'instructions': '"Time to get more items."',
   'instructions2': 'Try typing the commands to get the items. Don’t forget to end with ();',
-  'ticksBeforeFaceSouth': 10,
+  'ticksBeforeFaceSouth': 9,
   'goalOverride': {
     'goalImage': 'goal1',
     'imageWidth': 50,
@@ -1839,7 +1839,7 @@ levels.js_hoc2015_move_cross = {
   'embed': 'false',
   'instructions': '"More items to get!"',
   'instructions2': 'Type or drag the blocks to get all the items.',
-  'ticksBeforeFaceSouth': 10,
+  'ticksBeforeFaceSouth': 9,
   'goalOverride': {
     'goalImage': 'goal2',
     'imageWidth': 50,
