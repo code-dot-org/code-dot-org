@@ -2054,12 +2054,15 @@ levels.js_hoc2015_event_score_points = {
   'background': 'forest',
   'wallMap': 'horizontal',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'autohandlerOverrides': {
+    'whenTouchPilot': 'whenTouchGoal'
+  },
   'codeFunctions': {
     'winGame': null,
     'changeScore': null,
   },
   'startBlocks': [
-    'function whenTouchGoal() {',
+    'function whenTouchPilot() {',
     '  ',
     '}',
     'function whenScore1000() {',
