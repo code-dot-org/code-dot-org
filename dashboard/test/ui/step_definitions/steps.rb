@@ -195,6 +195,10 @@ Then /^I should see title "([^"]*)"$/ do |title|
 end
 
 Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
+  @browser.execute_script("return #{expression}").should eq true
+end
+
+Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
   @browser.execute_script("return #{expression}")
 end
 
