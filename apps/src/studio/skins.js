@@ -564,7 +564,7 @@ function loadHoc2015x(skin, assetUrl) {
   // Draw a goal an an offset to its usual location, useful for oversize goal
   // images, such as a person standing taller than a single grid square whose
   // feet should still be planted in that grid square.
-  skin.goalRenderOffsetX = 5;
+  skin.goalRenderOffsetX = 0;
   skin.goalRenderOffsetY = 0;
 
   // Dimensions of a rectangle in collidable center from which projectiles begin.
