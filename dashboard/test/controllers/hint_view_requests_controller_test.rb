@@ -17,6 +17,11 @@ class HintViewRequestsControllerTest < ActionController::TestCase
     sign_in @student
     post :create, {}, format: :json
     assert_response :bad_request
+  end
+
+  test 'can be created' do
+    HintViewRequest::ENABLED = true
+    sign_in @student
 
     params = {
       script_id: 1,
