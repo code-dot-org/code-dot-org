@@ -204,6 +204,10 @@ Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
   @browser.execute_script("return #{expression}").should eq true
 end
 
+Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
+  @browser.execute_script("return #{expression}")
+end
+
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
 Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
