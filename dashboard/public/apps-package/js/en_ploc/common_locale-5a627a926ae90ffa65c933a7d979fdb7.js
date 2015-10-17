@@ -316,7 +316,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "finalStageTrophies":function(d){return "!!-Congratulations! You have completed the final stage and won "+common_locale.p(d,"numTrophies",0,"en",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+".-!!"},
 "finish":function(d){return "!!-Finish-!!"},
 "generatedCodeInfo":function(d){return "!!-Even top universities teach block-based coding (e.g., "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:-!!"},
-"genericFeedback":function(d){return "!!-See how you ended up, and try to fix your program.-!!"},
+"genericFeedback":function(d){return "!!-Not quite; this level requires specific blocks.-!!"},
 "hashError":function(d){return "!!-Sorry, '%1' doesn't correspond with any saved program.-!!"},
 "help":function(d){return "!!-Help-!!"},
 "hideToolbox":function(d){return "!!-(Hide)-!!"},

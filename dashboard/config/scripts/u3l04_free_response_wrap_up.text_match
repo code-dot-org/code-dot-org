@@ -1,14 +1,25 @@
 name 'U3L04 Free Response Wrap Up'
-title 'Free Response: Abstraction to Manage Complexity'
-
-
-markdown <<MARKDOWN
-In the Create Performance Task you will be asked to identify an abstraction in your program and explain how it helps manage the complexity of the program. Functions are a form of abstraction. Pick a function you wrote in your solution to the 3x3 square problem and explain how it helps manage the complexity of your program.
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-Answers will vary, but should include these concepts:
-
-* A function combines multiple more primitive commands. Instead of calling each of many commands, they can be wrapped together into one command (function call). At an even higher level of abstraction, one function could wrap up several lower level functions from one call. The complexity of many, many primitive calls listed in a complex and long series of programming statements can be simplified into just a few lines of function calls. 
-
-MARKDOWN
+encrypted '+RmgWddg56Mp7Da5Whb1Dqt1ygdbz6eFDsEXtXKoil39A5o2LzGUqBKyaqbJ
+iAMU9o73CnCMA4TbByz/He1bOS3wb3Kygil2XEqMboWzf5hTp2yYnR/+biQA
+2tVIxeeY7aJ13vZxe/bOiVvyPCNRD42MtNrjmu0OdQnRIeFmGFDzgCozWPcy
+AD2Ci1/De+9+1f9pL/n5++1pYbStKjm3fR0EHLHqAlL0MrddWn5j5MrQzWTn
+Oy7KB98xwZ2cZw9zIel64sT5cHfdl4ClAgcWVzax/3cw+yOxExXqVRzVeaVY
+uZ4qcj4BEiBOKIIe8jUfetie34bLvQcsDTlGJygpri9WU1PH3SKcfn0SY4bw
+Uihl3CoWS4H8Yb7C1qdILvfVzJiP3oBBGErncQhSeeXS4dPKg9zg1DzKvyF7
+m/bnCKF5K/WiIAGRWa1jD76AHzIzQ7hL3k3hbKFZmIgWGRpRzl55KV8Ma1ST
+IFFPXKtWw8lbfWeuEBjGaTScp0k4a6O+rUDlHXeGM/lUnwj+2keVrwvbW0XY
+eAJMgewqw+h8ZGonNEPviAToHVXuadNZ8I/L0h2iXXO4cubh47QaabvnkNye
+g4SG2teiIeSfHTe39x/RXZ2c3LLX0OH+5JCjXWJHhK0FqUsb7SX61LGtNBaP
+gfy4HGW5VZAla2xQwkpi22uTH1SQ5MddfQ1TW//Cd21P5815Ah7Or91L5kAC
+6W1d/5ojtbrLCGbSx/qB1ytiYrW0kslcaTPDEqObzhgpC3nTAQOfCUK7/WOM
+BKnai9TYrij9MQC3nussROcISOe8dI1m0rz7hykVjqSKS5C97oxEncKPDEJt
+69/UAfbxDxVXKV39hO+99Nu/i1hpkAOpUaitgSIvZurzwf7eBfjLOvs3OM3I
+Si06YvHfz6aP9v3WPRncZbr84wbkY4YQwy7Wq4UMDJES2l3sTjMbl4DJ2wjR
+eeCFKT1qVrUDJREeFF/aIyBPFp2pWkV+qVbfSHgX0fzw4NpBVvxoyTY4zypY
++sH7fcQ3LD3tK/xqmSqGBEIeA6PHVNGy+8JrKFay5GpM/6kh06tEvMlUL66e
+dIOdoUyZJxryZDwcMzSl69YDmD0BZg2T1VnFdjKRBsdVESKThSG4pi/Kk5Ir
+pxuvJYvgfO+iwgh6Z5Ls7kj1iXYnnc54+UjPLgIWKl14oFGCWqPj6S7mhstM
+GzCtjwqXkcWuwHI5bQH6Xu1yGELWJA4hnuPZZn03ZrG1Xyiy57DW7MPGJwcP
+ayg+8S+xBE2GTHmpeCwP9C+WeUboNrskpqyRQRrtW/YxrALrHiU0AMm/l8EY
+Xc1n09DUKUrfbO0y5l4Vijm5
+'
