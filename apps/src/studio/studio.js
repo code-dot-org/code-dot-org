@@ -1852,8 +1852,12 @@ Studio.reset = function(first) {
   }
 
   var goalAsset = skin.goal;
-  if (level.goalOverride && level.goalOverride.goalAnimation) {
-    goalAsset = skin[level.goalOverride.goalAnimation];
+  if (level.goalOverride) {
+    if (level.goalOverride.goalAnimation) {
+      goalAsset = skin[level.goalOverride.goalAnimation];
+    } else if (level.goalOverride.goalImage) {
+      goalAsset = skin[level.goalOverride.goalImage];
+    }
   }
 
   Studio.touchAllGoalsEventFired = false;
@@ -2907,44 +2911,51 @@ Studio.displayScore = function() {
 };
 
 Studio.animateGoals = function() {
-  if (!(level.goalOverride && level.goalOverride.goalAnimation)) {
-    return;
-  }
-
   var currentTime = new Date();
-  var elapsed = currentTime - Studio.startTime;
 
-  var numFrames = skin.animatedGoalFrames;
-  var frameDuration = skin.timePerGoalAnimationFrame;
-  var frameWidth = level.goalOverride.imageWidth;
+  var animate = level.goalOverride && level.goalOverride.goalAnimation;
+  var fade = skin.fadeOutGoal;
+
+  var elapsed, numFrames, frameDuration, frameWidth;
+
+  if (animate) {
+    elapsed = currentTime - Studio.startTime;
+    numFrames = skin.animatedGoalFrames;
+    frameDuration = skin.timePerGoalAnimationFrame;
+    frameWidth = level.goalOverride.imageWidth;
+  }
 
   for (var i = 0; i < Studio.spriteGoals_.length; i++) {
     var goal = Studio.spriteGoals_[i];
-    // Keep showing the goal unless it's finished and we're not fading out.
+    // Keep animating the goal unless it's finished and we're not fading out.
     if (!goal.finished || goal.startFadeTime) {
-
       var goalSprite = document.getElementById('spriteFinish' + i);
       var goalClipRect = document.getElementById('finishClipRect' + i);
 
-      var baseX = parseInt(goalClipRect.getAttribute('x'), 10);
-      var frame = Math.floor(elapsed / frameDuration) % numFrames;
-  
-      goalSprite.setAttribute('x', baseX - frame * frameWidth);
+      if (animate) {
+        var baseX = parseInt(goalClipRect.getAttribute('x'), 10);
+        var frame = Math.floor(elapsed / frameDuration) % numFrames;
+    
+        goalSprite.setAttribute('x', baseX - frame * frameWidth);
+      }
 
-      var fadeTime = 350;
+      if (fade) {
+        var fadeTime = 350;
 
-      if (goal.startFadeTime) {
-        var opacity = 1 - (currentTime - goal.startFadeTime) / fadeTime;
+        if (goal.startFadeTime) {
+          var opacity = 1 - (currentTime - goal.startFadeTime) / fadeTime;
 
-        if (opacity < 0) {
-          goal.startFadeTime = null;
-        } else {
-          goalSprite.setAttribute('opacity', opacity);
+          if (opacity < 0) {
+            goal.startFadeTime = null;
+          } else {
+            goalSprite.setAttribute('opacity', opacity);
+          }
         }
       }
     }
   }
 };
+
 
 /**
  * Start showing an upwards-floating score at the location of sprite 0.

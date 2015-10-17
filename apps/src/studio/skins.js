@@ -543,7 +543,8 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   // Spritesheet for animated goal.
-  skin.animatedGoal = skin.assetUrl('goal_idle.png');
+  skin.goal1 = skin.assetUrl('goal1.png');
+  skin.goal2 = skin.assetUrl('goal2.png');
 
   // How many frames in the animated goal spritesheet.
   skin.animatedGoalFrames = 16;
@@ -563,8 +564,8 @@ function loadHoc2015x(skin, assetUrl) {
   // Draw a goal an an offset to its usual location, useful for oversize goal
   // images, such as a person standing taller than a single grid square whose
   // feet should still be planted in that grid square.
-  skin.goalRenderOffsetX = -25;
-  skin.goalRenderOffsetY = -45;
+  skin.goalRenderOffsetX = 5;
+  skin.goalRenderOffsetY = 0;
 
   // Dimensions of a rectangle in collidable center from which projectiles begin.
   skin.projectileSpriteWidth  = 70;
