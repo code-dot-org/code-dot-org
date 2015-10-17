@@ -116,7 +116,7 @@ var AUTO_HANDLER_MAP = {
   whenTouchObstacle: 'whenSpriteCollided-' +
       (Studio.protagonistSpriteIndex || 0) +
       '-wall',
-  whenGetAllCharacters: 'whenGetAllCharacters',
+  whenGetAllCharacters: 'whenGetAllItems',
   whenTouchGoal: 'whenTouchGoal',
   whenTouchAllGoals: 'whenTouchAllGoals',
   whenScore1000: 'whenScore1000',
@@ -1054,7 +1054,7 @@ function handleActorCollisionsWithCollidableList (
             
             // NOTE: if items are allowed to move outOfBounds(), this may never
             // be called because the last item may not be removed here.
-            callHandler('whenGetAllCharacters');
+            callHandler('whenGetAllItems');
           }
 
           if (collidable.beginRemoveElement) {
