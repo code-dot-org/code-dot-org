@@ -1617,9 +1617,9 @@ levels.js_hoc2015_move_right = {
   'instructions2': 'Program BOTX to get to the item.  Add a second moveRight command and then hit Run.',
   'ticksBeforeFaceSouth': 15,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalImage': 'goal1',
+    'imageWidth': 50,
+    'imageHeight': 50
   },
   'callouts': [
     {
@@ -1677,9 +1677,9 @@ levels.js_hoc2015_move_two_items = {
   'instructions2': 'Program BOTX to get to both items.',
   'ticksBeforeFaceSouth': 10,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalImage': 'goal2',
+    'imageWidth': 50,
+    'imageHeight': 50
   }
 };
 
@@ -1715,9 +1715,9 @@ levels.js_hoc2015_move_item_destination = {
   'instructions2': 'Program BOTX to get all the items.',
   'ticksBeforeFaceSouth': 10,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalImage': 'goal1',
+    'imageWidth': 50,
+    'imageHeight': 50
   }
 };
 
@@ -1754,9 +1754,9 @@ levels.js_hoc2015_move_item_destination_2 = {
   'instructions2': 'Program BOTX to get all the items.',
   'ticksBeforeFaceSouth': 10,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalImage': 'goal2',
+    'imageWidth': 50,
+    'imageHeight': 50
   }
 };
 
@@ -1793,9 +1793,9 @@ levels.js_hoc2015_move_item_destination_3 = {
   'instructions2': 'Try typing the commands to get the items. Don’t forget to end with ();',
   'ticksBeforeFaceSouth': 10,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalImage': 'goal1',
+    'imageWidth': 50,
+    'imageHeight': 50
   }
 };
 
@@ -1841,9 +1841,9 @@ levels.js_hoc2015_move_cross = {
   'instructions2': 'Type or drag the blocks to get all the items.',
   'ticksBeforeFaceSouth': 10,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalImage': 'goal2',
+    'imageWidth': 50,
+    'imageHeight': 50
   }
 };
 
