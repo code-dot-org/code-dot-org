@@ -92,6 +92,8 @@
   "dropletBlock_setMap_param0_description": "The name of the map ('random', 'blank', 'circle', 'circle2', 'horizontal', 'grid', or 'blobs').",
   "dropletBlock_throw_description": "Throws a projectile from the specified actor.",
   "dropletBlock_vanish_description": "Vanishes the actor.",
+  "dropletBlock_winGame_description": "Win the game.",
+  "dropletBlock_loseGame_description": "Lose the game.",
   "dropletBlock_whenDown_description": "This function executes when the down button is pressed.",
   "dropletBlock_whenLeft_description": "This function executes when the left button is pressed.",
   "dropletBlock_whenRight_description": "This function executes when the right button is pressed.",
