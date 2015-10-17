@@ -1,6 +1,9 @@
 module Encryption
+  class KeyMissingError < RuntimeError; end
+
   def self.key
-    CDO.properties_encryption_key || "thisisafakekeyyyyyyyyyyyyyyyyyyyyy"
+    raise KeyMissingError.new("please define CDO.properties_encryption_key") if CDO.properties_encryption_key.blank?
+    CDO.properties_encryption_key
   end
 
   def self.encrypt_string(string)
