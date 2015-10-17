@@ -195,7 +195,7 @@ Then /^I should see title "([^"]*)"$/ do |title|
 end
 
 Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
-  @browser.execute_script("return #{expression}").should eq true
+  @browser.execute_script("return #{expression}")
 end
 
 # The second regex matches strings in which all double quotes and backslashes
