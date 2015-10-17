@@ -1824,10 +1824,10 @@ en:
         Caesar Shift Cipher(of 18): Caesar Shift Cipher(of 18)
         GBRXBN MBGGEFB GTTTT: GBRXBN MBGGEFB GTTTT
         ? |-
-          Given the original plaintext: "SECRET MESSAGE SHHHH"
+          Given the original plaintext: “SECRET MESSAGE SHHHH”
           Match the encryption method to the output:
         : |-
-          Given the original plaintext: "SECRET MESSAGE SHHHH"
+          Given the original plaintext: “SECRET MESSAGE SHHHH”
           Match the encryption method to the output:
         Random Substitution Cipher: Random Substitution Cipher
         TEMVVU WIITAQIQTHRLY: TEMVVU WIITAQIQTHRLY
@@ -2916,7 +2916,7 @@ en:
         Messages are routed over different paths.: Messages are routed over different paths.
         'Routers and Redundancy: Question 1': 'Routers and Redundancy: Question 1'
         The first 4 bits of the address specify the router number that your friend is on.: The first 4 bits of the address specify the router number that your friend is on.
-        You set the "other router" bit in the message.: You set the "other router" bit in the message.
+        You set the “other router” bit in the message.: You set the “other router” bit in the message.
       U2L04 Assessment4:
         ? If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?
         : If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?
@@ -2950,8 +2950,8 @@ en:
         The receiver computer must confirm to the sending computer that each packet was received.: The receiver computer must confirm to the sending computer that each packet was received.
         Which of the following is NOT true about packets?: Which of the following is NOT true about packets?
       'U2L06 - MC: Which is an MST?':
-        ? "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
-        : "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The \"distance\" between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
+        ? "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
+        : "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
         A: A
         B: B
         C: C
@@ -2971,11 +2971,11 @@ en:
         A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.: A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.
         ? |-
           Both the minimum spanning tree algorithm you learned and the
-          shortest path algorithm you learned used a "greedy" approach,
+          shortest path algorithm you learned used a “greedy” approach,
           choosing the smallest edge first or vertex with the smallest distance value first.
         : |-
           Both the minimum spanning tree algorithm you learned and the
-          shortest path algorithm you learned used a "greedy" approach,
+          shortest path algorithm you learned used a “greedy” approach,
           choosing the smallest edge first or vertex with the smallest distance value first.
         Question 2: Question 2
         The minimum spanning tree algorithm you learned does not necessarily need to try every edge.: The minimum spanning tree algorithm you learned does not necessarily need to try every edge.
@@ -3037,11 +3037,11 @@ en:
         The day of the month that the encrypted message was sent.: The day of the month that the encrypted message was sent.
         The letter that occurs most often in the encrypted message.: The letter that occurs most often in the encrypted message.
         The number of characters to shift each letter in the alphabet.: The number of characters to shift each letter in the alphabet.
-        What is the "key" to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?: What is the "key" to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?
+        What is the “key” to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?: What is the “key” to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?
       U2L13 Assessment4:
         '26': '26'
         26 x 25: 26 x 25
-        26 x 25 x 24 x***x 3 x 2 x 1: 26 x 25 x 24 x***x 3 x 2 x 1
+        26 × 25 × 24 ×···× 3 × 2 x 1: 26 × 25 × 24 ×···× 3 × 2 x 1
         26^26: 26^26
         'Assessment: Question 3': 'Assessment: Question 3'
         The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?: The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?
@@ -3164,7 +3164,7 @@ en:
         A way to give input to a function that controls how the function runs.: A way to give input to a function that controls how the function runs.
         Another name for the purpose of a function.: Another name for the purpose of a function.
         'Multiple Choice: What is a function parameter?': 'Multiple Choice: What is a function parameter?'
-        para-meter -- a measure of the distance between a function's conception and implementation.: para-meter -- a measure of the distance between a function's conception and implementation.
+        para-meter -- a measure of the distance between a function\’s conception and implementation.: para-meter -- a measure of the distance between a function\’s conception and implementation.
       U3L06-API-multichoice:
         Abstract Parameter Interface: Abstract Parameter Interface
         Abstract Programming Inheritance: Abstract Programming Inheritance
@@ -4410,8 +4410,8 @@ en:
         'Tell Me a Secret: Wrap Up': 'Tell Me a Secret: Wrap Up'
       U2L14 Assessment2:
         'Assessment: Question 3': 'Assessment: Question 3'
-        ? "Using the Vigenere cipher, does the length of the key matter? \nFor example, if one key is length 5 and another is 20, does one produce a \"better\" encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning."
-        : "Using the Vigenere cipher, does the length of the key matter? \nFor example, if one key is length 5 and another is 20, does one produce a \"better\" encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning."
+        ? "Using the Vigenere cipher, does the length of the key matter? \nFor example, if one key is length 5 and another is 20, does one produce a “better” encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning."
+        : "Using the Vigenere cipher, does the length of the key matter? \nFor example, if one key is length 5 and another is 20, does one produce a “better” encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning."
       U2L14 Free Response Getting Started:
         'Cracking the Code: Getting Started': 'Cracking the Code: Getting Started'
       U2L14 Free Response Wrap Up:
@@ -4434,13 +4434,13 @@ en:
         What does "computationally hard" mean?: What does "computationally hard" mean?
       U2L17 Assessment 1:
         Assessment Question 1: Assessment Question 1
-        Describe what it means for a problem to be "computationally hard.": Describe what it means for a problem to be "computationally hard."
+        Describe what it means for a problem to be “computationally hard.”: Describe what it means for a problem to be “computationally hard.”
       U2L17 Assessment 2:
         Assessment Question 2: Assessment Question 2
         What strategies do people use to solve large computationally-hard problems?: What strategies do people use to solve large computationally-hard problems?
       U2L17 Free Response Getting Started:
         'Hard Problems: Getting Started': 'Hard Problems: Getting Started'
-        What kinds of problems do you think are "computationally hard"?: What kinds of problems do you think are "computationally hard"?
+        What kinds of problems do you think are “computationally hard"?: What kinds of problems do you think are “computationally hard"?
       U2L17 Free Response Wrap Up:
         'Hard Problems: Wrap Up': 'Hard Problems: Wrap Up'
         ? If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?

@@ -29320,8 +29320,7 @@ var KeyCodes = constants.KeyCodes;
  */
 FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
     maxRequiredBlocksToFlag) {
-  options.hintRequestExperiment = options.response &&
-      options.response.hint_request_placement;
+
   options.level = options.level || {};
   options.numTrophies = this.numTrophiesEarned_(options);
 
@@ -29404,7 +29403,6 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       continueText: options.continueText,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
-      hintRequestExperiment: options.hintRequestExperiment,
       freePlay: options.level.freePlay
     })
   );
@@ -29456,42 +29454,70 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   // be shown (including any feedback blocks), and add code to restore the
   // hint if the button gets pressed.
   if (hintRequestButton) {
-    // Swap out the specific feedback message with a generic one.
-    var genericFeedback = this.getFeedbackMessage_({message: msg.genericFeedback()});
-    var parentNode = feedbackMessage.parentNode;
-    parentNode.replaceChild(genericFeedback, feedbackMessage);
 
-    // If there are feedback blocks, temporarily remove them.
-    // Get pointers to the parent and next sibling so we can re-insert
-    // the feedback blocks into the correct location if needed.
-    var feedbackBlocksParent = null;
-    var feedbackBlocksNextSib = null;
-    if (feedbackBlocks && feedbackBlocks.div) {
-      feedbackBlocksParent = feedbackBlocks.div.parentNode;
-      feedbackBlocksNextSib = feedbackBlocks.div.nextSibling;
-      feedbackBlocksParent.removeChild(feedbackBlocks.div);
-    }
+    var alreadySeen = options.response &&
+        options.response.hint_view_requests &&
+        options.response.hint_view_requests.some(function (request) {
+          var requestMatchesFeedback = request.feedback_type === options.feedbackType;
+          if (feedbackBlocks && feedbackBlocks.xml) {
+            requestMatchesFeedback = requestMatchesFeedback && request.feedback_xml === feedbackBlocks.xml;
+          }
+          return requestMatchesFeedback;
+        });
 
-    // If the user requests the hint...
-    dom.addClickTouchEvent(hintRequestButton, function() {
-      // Swap the specific feedback message back in.
-      parentNode.replaceChild(feedbackMessage, genericFeedback);
-
+    if (alreadySeen) {
       // Remove "Show hint" button.  Making it invisible isn't enough,
       // because it will still take up space.
       hintRequestButton.parentNode.removeChild(hintRequestButton);
+    } else {
+      // Swap out the specific feedback message with a generic one.
+      var genericFeedback = this.getFeedbackMessage_({message: msg.genericFeedback()});
+      var parentNode = feedbackMessage.parentNode;
+      parentNode.replaceChild(genericFeedback, feedbackMessage);
 
-      // Restore feedback blocks, if present.
-      if (feedbackBlocks && feedbackBlocks.div && feedbackBlocksParent) {
-        feedbackBlocksParent.insertBefore(feedbackBlocks.div, feedbackBlocksNextSib);
-        feedbackBlocks.show();
+      // If there are feedback blocks, temporarily remove them.
+      // Get pointers to the parent and next sibling so we can re-insert
+      // the feedback blocks into the correct location if needed.
+      var feedbackBlocksParent = null;
+      var feedbackBlocksNextSib = null;
+      if (feedbackBlocks && feedbackBlocks.div) {
+        feedbackBlocksParent = feedbackBlocks.div.parentNode;
+        feedbackBlocksNextSib = feedbackBlocks.div.nextSibling;
+        feedbackBlocksParent.removeChild(feedbackBlocks.div);
       }
 
-      // Report hint request to server.
-      if (options.response.hint_requested_url) {
-        $.ajax({url: options.response.hint_requested_url, type: 'PUT'});
-      }
-    });
+      // If the user requests the hint...
+      dom.addClickTouchEvent(hintRequestButton, function () {
+
+        // Swap the specific feedback message back in.
+        parentNode.replaceChild(feedbackMessage, genericFeedback);
+
+        // Remove "Show hint" button.  Making it invisible isn't enough,
+        // because it will still take up space.
+        hintRequestButton.parentNode.removeChild(hintRequestButton);
+
+        // Restore feedback blocks, if present.
+        if (feedbackBlocks && feedbackBlocks.div && feedbackBlocksParent) {
+          feedbackBlocksParent.insertBefore(feedbackBlocks.div, feedbackBlocksNextSib);
+          feedbackBlocks.show();
+        }
+
+        // Report hint request to server.
+        if (options.response.hint_view_request_url) {
+          $.ajax({
+            url: options.response.hint_view_request_url,
+            type: 'POST',
+            data: {
+              script_id: options.response.script_id,
+              level_id: options.response.level_id,
+              feedback_type: options.feedbackType,
+              feedback_xml: feedbackBlocks ? feedbackBlocks.xml : undefined
+            }
+          });
+        }
+      });
+    }
+
   }
 
   if (continueButton) {
@@ -29599,10 +29625,8 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
       tryAgain: tryAgainText,
       continueText: options.continueText || msg.continue(),
       nextLevel: this.canContinueToNextLevel(options.feedbackType),
+      shouldPromptForHint: this.shouldPromptForHint(options.feedbackType),
       isK1: options.isK1,
-      hintRequestExperiment: options.hintRequestExperiment &&
-          (options.hintRequestExperiment === HINT_REQUEST_PLACEMENT.LEFT ?
-              'left' : 'right'),
       assetUrl: this.studioApp_.assetUrl,
       freePlay: options.freePlay
     }
@@ -29647,7 +29671,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
 
   // If a message was explicitly passed in, use that.
   if (options.feedbackType !== TestResults.ALL_PASS &&
-      options.level.failureMessageOverride) {
+      options.level && options.level.failureMessageOverride) {
     message = options.level.failureMessageOverride;
   } else  if (options.message) {
     message = options.message;
@@ -29983,6 +30007,18 @@ FeedbackUtils.prototype.canContinueToNextLevel = function(feedbackType) {
     feedbackType === TestResults.TOO_MANY_BLOCKS_FAIL ||
     feedbackType ===  TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL ||
     feedbackType ===  TestResults.FREE_PLAY);
+};
+
+/**
+ * Determines whether we should prompt the user to show the given
+ * feedback, rather than showing it to them automatically. Currently
+ * only used for missing block feedback; may expand in the future
+ * @param {number} feedbackType A constant property of TestResults,
+ *     typically produced by StudioApp.getTestResults().
+ */
+FeedbackUtils.prototype.shouldPromptForHint = function(feedbackType) {
+  return (feedbackType === TestResults.MISSING_BLOCK_UNFINISHED ||
+    feedbackType === TestResults.MISSING_BLOCK_FINISHED);
 };
 
 /**
@@ -30689,7 +30725,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../locale'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.cancelText) {; buf.push('<button id="again-button" class="', escape((9,  data.cancelButtonClass || '' )), '">\n    ', escape((10,  data.cancelText )), '\n</button>\n');12; }; buf.push('\n');13; if (data.confirmText) {; buf.push('<button id="confirm-button" class="launch" style="float: right">\n    ', escape((14,  data.confirmText )), '\n</button>\n');16; }; buf.push('\n');17; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((18,  msg.backToPreviousLevel() )), '\n  </button>\n');20; }; buf.push('\n');21; if (data.tryAgain) {; buf.push('  ');21; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((22,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((23,  data.tryAgain )), '</div>\n    </div>\n  ');25; } else {; buf.push('    ');25; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((26,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((29,  data.tryAgain )), '\n      </button>\n    ');31; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((32,  data.tryAgain )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((35,  msg.hintRequest() )), '\n      </button>\n    ');37; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((38,  data.tryAgain )), '\n      </button>\n    ');40; }; buf.push('  ');40; }; buf.push('');40; }; buf.push('\n');41; if (data.nextLevel) {; buf.push('  ');41; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((42,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((43,  data.continueText )), '</div>\n    </div>\n  ');45; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((46,  data.continueText )), '\n    </button>\n  ');48; }; buf.push('');48; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../locale'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.cancelText) {; buf.push('<button id="again-button" class="', escape((9,  data.cancelButtonClass || '' )), '">\n    ', escape((10,  data.cancelText )), '\n</button>\n');12; }; buf.push('\n');13; if (data.confirmText) {; buf.push('<button id="confirm-button" class="launch" style="float: right">\n    ', escape((14,  data.confirmText )), '\n</button>\n');16; }; buf.push('\n');17; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((18,  msg.backToPreviousLevel() )), '\n  </button>\n');20; }; buf.push('\n');21; if (data.tryAgain) {; buf.push('  ');21; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((22,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((23,  data.tryAgain )), '</div>\n    </div>\n  ');25; } else {; buf.push('    ');25; if (data.shouldPromptForHint) {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((26,  msg.hintRequest() )), '\n      </button>\n    ');28; } ; buf.push('\n    <button id="again-button" class="launch">\n      ', escape((30,  data.tryAgain )), '\n    </button>\n  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  data.continueText )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((38,  data.continueText )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -30742,6 +30778,8 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, studioApp) {
     return;
   }
 
+  this.xml = this.generateXMLForBlocks_(blocksToDisplay);
+
   this.div = document.createElement('div');
   this.html = readonly({
     app: options.app,
@@ -30754,7 +30792,7 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, studioApp) {
       cacheBust: studioApp.CACHE_BUST,
       skinId: options.skin,
       level: options.level,
-      blocks: this.generateXMLForBlocks_(blocksToDisplay)
+      blocks: this.xml
     }
   });
   this.iframe = document.createElement('iframe');

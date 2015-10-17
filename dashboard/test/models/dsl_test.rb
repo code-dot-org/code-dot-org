@@ -4,6 +4,10 @@ require 'test_helper'
 # and would fail if they did.
 
 class DslTest < ActiveSupport::TestCase
+  setup do
+    CDO.stubs(:properties_encryption_key).returns('this is a key for testing that is long enough that nothing is complaining')
+  end
+
   test 'remove property' do
     # mock file so we don't actually write a file, 2x for each "create_from_level_builder"
     File.expects(:write).times(4)

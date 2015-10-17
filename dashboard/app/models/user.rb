@@ -99,6 +99,7 @@ class User < ActiveRecord::Base
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, on: :create
 
   has_many :permissions, class_name: 'UserPermission', dependent: :destroy
+  has_many :hint_view_requests
 
   # Teachers can be in multiple cohorts
   has_and_belongs_to_many :cohorts
