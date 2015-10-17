@@ -4,8 +4,8 @@ Background:
   Given I am on "http://learn.code.org/"
   And I am a student
 
-Scenario: Attempt Bee Conditions 4-5 Level 1
-  Given I am on "http://learn.code.org/s/course3/stage/7/puzzle/1?noautoplay=true"
+Scenario: Attempt 2-3 Maze 1
+  Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/3?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
   And I close the dialog
@@ -42,17 +42,10 @@ Scenario: Attempt Bee Conditions 4-5 Level 1
   When I press "again-button"
   And I wait to see "#resetButton"
   And I press "resetButton"
-  And I drag block "1" to block "8"
+  And I drag block "1" to block "4"
   And I wait to see "#runButton"
   And I press "runButton"
-  And I wait to see "#hint-request-button"
-
-  Then element "#hint-request-button" is visible
-
-  When I press "hint-request-button"
   And I wait to see ".congrats"
-  And I wait to see "#feedbackBlocks"
 
   Then element ".congrats" is visible
-  And element ".congrats" has text "Try one or more of the blocks below to solve this puzzle."
-  And element "#feedbackBlocks" is visible
+  And element ".congrats" has text "You are using all of the necessary types of blocks, but try using more  of these types of blocks to complete this puzzle."
