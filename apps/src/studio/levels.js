@@ -2002,7 +2002,7 @@ levels.js_hoc2015_event_three_goals =
     'whenGetAllPilots': 'whenTouchAllGoals'
   },
   'codeFunctions': {
-    'winGame': null,
+    'endGame': null,
 
     'whenGetAllPilots': null
   },
@@ -2081,7 +2081,7 @@ levels.js_hoc2015_event_score_points = {
     'whenTouchPilot': 'whenTouchGoal'
   },
   'codeFunctions': {
-    'winGame': null,
+    'endGame': null,
     'changeScore': null,
 
     'whenTouchPilot': null,
@@ -2136,8 +2136,7 @@ levels.js_hoc2015_win_lose = {
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'winGame': null,
-    'loseGame': null,
+    'endGame': null,
 
     'addCharacter': null,
     'whenTouchPilot': null,
@@ -2196,8 +2195,7 @@ levels.js_hoc2015_win_lose = {
     }
   ],
   'requiredForSuccess' : {
-    'winGame': true,
-    'loseGame': true
+    'winGame': true
   },
 };
 
@@ -2210,12 +2208,12 @@ levels.js_hoc2015_add_characters = {
     'addCharacter': null,
 
     'whenGetAllCharacters': null,
-    'winGame': null
+    'endGame': null
   },
   'startBlocks': [
 
     'function whenGetAllCharacters() {',
-    '  winGame();',
+    '  endGame("win");',
     '}',
     ].join('\n'),
   'sortDrawOrder': true,
@@ -2269,7 +2267,7 @@ levels.js_hoc2015_chain_characters = {
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
     'addCharacter': null,
-    'winGame': null,
+    'endGame': null,
 
     'whenTouchRoo': null,
     'whenGetAllCharacters': null
@@ -2311,7 +2309,7 @@ levels.js_hoc2015_double_chain_characters = {
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
     'addCharacter': null,
-    'winGame': null,
+    'endGame': null,
 
     'whenTouchRoo': null,
     'whenTouchBird': null,
@@ -2363,8 +2361,7 @@ levels.js_hoc2015_change_setting = {
     'setMap': { 'category': 'Commands' },
     'playSound': { 'category': 'Commands' },
     'addCharacter': { 'category': 'Commands' },
-    'winGame': { 'category': 'Commands' },
-    'loseGame': { 'category': 'Commands' },
+    'endGame': { 'category': 'Commands' },
     'whenGetAllCharacters': { 'category': 'Events' },
     'whenScore1000': { 'category': 'Events' },
 
