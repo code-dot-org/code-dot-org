@@ -52,7 +52,7 @@ Item.prototype.getDirectionFrame = function() {
     if (Studio.tickCount && (0 === Studio.tickCount % 2)) {
       this.displayDir = NextTurn[this.displayDir][this.dir];
     }
-}
+  }
 
   return constants.frameDirTableWalkingWithIdle[this.displayDir];
 };
