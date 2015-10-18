@@ -33,7 +33,8 @@ module.exports.blocks = [
   {func: 'whenScore1000', block: 'function whenScore1000() {}', expansion: 'function whenScore1000() {\n  __;\n}', category: '' },
 
   {func: 'endGame', parent: api, category: '', params: ['"win"'], dropdown: { 0: ['"win"', '"lose"' ] } },
-  {func: 'changeScore', parent: api, category: '', params: ["250"] },
+  {func: 'addPoints', parent: api, category: '', params: ["250"] },
+  {func: 'changeScore', parent: api, category: '', params: ["1"] },
   {func: 'addCharacter', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'setToChase', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'setToFlee', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },

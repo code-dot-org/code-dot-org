@@ -122,6 +122,12 @@ exports.moveDown = function() {
   Studio.queueCmd(null, 'moveDown');
 };
 
+// addPoints is a wrapper for changeScore (used by hoc2015)
+
+exports.addPoints = function(value) {
+  Studio.queueCmd(null, 'changeScore', {'value': value});
+};
+
 exports.changeScore = function(value) {
   Studio.queueCmd(null, 'changeScore', {'value': value});
 };
