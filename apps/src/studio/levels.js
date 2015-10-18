@@ -1999,15 +1999,15 @@ levels.js_hoc2015_event_three_goals =
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
-    'whenGetAllPilots': 'whenTouchAllGoals'
+    'whenTouchPilot': 'whenTouchGoal'
   },
   'codeFunctions': {
     'endGame': null,
 
-    'whenGetAllPilots': null
+    'whenTouchPilot': null
   },
   'startBlocks': [
-    'function whenGetAllPilots() {',
+    'function whenTouchPilot() {',
     '  ',
     '}',
     ].join('\n'),
@@ -2023,13 +2023,13 @@ levels.js_hoc2015_event_three_goals =
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
-    [1, 0, 0, 16, 0, 0, 0, 1],
+    [1, 0, 0, 16, 0, 0, 0, 0],
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 1,  0, 0, 0, 0]],
+    [0, 0, 0, 0,  0, 0, 0, 0]],
   'instructions': '"Reach the GOALs!"',
-  'instructions2': "On the last level, we ended the game for you. Now you're in charge: use the whenGetAllPilots event to let BOT1 win the game when he gets all the pilots.",
+  'instructions2': "On the last level, we ended the game for you. Now you're in charge: use the whenTouchPilot event to let BOT1 win the game when he reaches the pilot.",
   'autoArrowSteer': true,
   'timeoutFailureTick': 600,
   'timeoutAfterWhenRun': true,
