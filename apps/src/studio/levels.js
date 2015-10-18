@@ -1643,7 +1643,9 @@ levels.js_hoc2015_move_two_items = {
     'moveUp': null,
     'moveDown': null,
   },
-  'startBlocks': '',
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -1672,8 +1674,10 @@ levels.js_hoc2015_move_two_items = {
   }
 };
 
+
 levels.js_hoc2015_move_item_destination = {
   'editCode': true,
+  'textModeAtStart': true,
   'background': 'main',
   'codeFunctions': {
     'moveRight': null,
@@ -1681,84 +1685,9 @@ levels.js_hoc2015_move_item_destination = {
     'moveUp': null,
     'moveDown': null,
   },
-  'startBlocks': '',
-  'sortDrawOrder': true,
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
-  'gridAlignedMovement': true,
-  'itemGridAlignedMovement': true,
-  'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
-  'delayCompletion': 2000,
-  'floatingScore': true,
-  'map': 
-    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
-     [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00], 
-     [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],  
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0240000, 0x0250000, 0x00, 0x00], 
-     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],   
-     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
-  'instructions': '"I see another item behind that obstacle. Can you get it too?"',
-  'instructions2': 'Program BOTX to get all the items.',
-  'ticksBeforeFaceSouth': 9,
-  'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
-  }
-};
-
-levels.js_hoc2015_move_item_destination_2 = {
- 'editCode': true,
-  'background': 'main',
-  'codeFunctions': {
-    'moveRight': null,
-    'moveLeft': null,
-    'moveUp': null,
-    'moveDown': null,
-  },
-  'startBlocks': '',
-  'sortDrawOrder': true,
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
-  'gridAlignedMovement': true,
-  'itemGridAlignedMovement': true,
-  'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
-  'delayCompletion': 2000,
-  'floatingScore': true,
-  'map':
-    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000, 0x00],  
-     [0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0120000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0140000, 0x0000000, 0x0000001, 0x0020000, 0x00],   
-     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0340000, 0x0350000, 0x00],  
-     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0100000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
-  'embed': 'false',
-  'instructions': '"There are more items to collect."',
-  'instructions2': 'Program BOTX to get all the items.',
-  'ticksBeforeFaceSouth': 9,
-  'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
-  }
-};
-
-levels.js_hoc2015_move_item_destination_3 = {
-  'editCode': true,
-  'background': 'main',
-  'codeFunctions': {
-    'moveRight': null,
-    'moveLeft': null,
-    'moveUp': null,
-    'moveDown': null,
-  },
-  'startBlocks': '',
+  'startBlocks': [
+    'moveDown();',
+    ''].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -1789,6 +1718,88 @@ levels.js_hoc2015_move_item_destination_3 = {
 };
 
 
+levels.js_hoc2015_move_item_destination_2 = {
+  'editCode': true,
+  'background': 'main',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
+  },
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': 
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00], 
+     [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],  
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0240000, 0x0250000, 0x00, 0x00], 
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],   
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
+  'instructions': '"I see another item behind that obstacle. Can you get it too?"',
+  'instructions2': 'Program BOTX to get all the items.',
+  'ticksBeforeFaceSouth': 9,
+  'goalOverride': {
+    'goalImage': 'goal1',
+    'imageWidth': 50,
+    'imageHeight': 50
+  }
+};
+
+levels.js_hoc2015_move_item_destination_3 = {
+  'editCode': true,
+  'background': 'main',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
+  },
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map':
+    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000, 0x00],  
+     [0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0120000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0140000, 0x0000000, 0x0000001, 0x0020000, 0x00],   
+     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0340000, 0x0350000, 0x00],  
+     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0100000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
+  'embed': 'false',
+  'instructions': '"There are more items to collect."',
+  'instructions2': 'Program BOTX to get all the items.',
+  'ticksBeforeFaceSouth': 9,
+  'goalOverride': {
+    'goalImage': 'goal2',
+    'imageWidth': 50,
+    'imageHeight': 50
+  }
+};
+
+
 levels.js_hoc2015_move_cross = {
   'editCode': true,
   'background': 'main',
@@ -1798,7 +1809,9 @@ levels.js_hoc2015_move_cross = {
     'moveUp': null,
     'moveDown': null,
   },
-  'startBlocks': '',
+  'startBlocks': [
+    'moveDown();',
+    ''].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -1839,6 +1852,9 @@ levels.js_hoc2015_event_two_items = {
   'codeFunctions': {
     'moveUp': null,
     'moveDown': null,
+
+    'whenUp': null,
+    'whenDown': null
   },
   'startBlocks': [
     'function whenUp() {', 
@@ -1908,6 +1924,11 @@ levels.js_hoc2015_event_four_items = {
     'moveLeft': null,
     'moveUp': null,
     'moveDown': null,
+
+    'whenLeft': null,
+    'whenRight': null,
+    'whenUp': null,
+    'whenDown': null
   },
   'startBlocks': [
     'function whenLeft() {',
@@ -1981,8 +2002,9 @@ levels.js_hoc2015_event_three_goals =
     'whenGetAllPilots': 'whenTouchAllGoals'
   },
   'codeFunctions': {
-    'whenGetAllPilots': null,
     'winGame': null,
+
+    'whenGetAllPilots': null
   },
   'startBlocks': [
     'function whenGetAllPilots() {',
@@ -2021,6 +2043,7 @@ levels.js_hoc2015_event_three_goals =
     successCondition: function () { return false; }
   },
   'requiredForSuccess' : {
+    'touchAllItems': true,
     'winGame': true
   },
   'completeOnSuccessConditionNotGoals': true,
@@ -2060,6 +2083,9 @@ levels.js_hoc2015_event_score_points = {
   'codeFunctions': {
     'winGame': null,
     'changeScore': null,
+
+    'whenTouchPilot': null,
+    'whenScore1000': null
   },
   'startBlocks': [
     'function whenTouchPilot() {',
@@ -2110,9 +2136,12 @@ levels.js_hoc2015_win_lose = {
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-
     'winGame': null,
     'loseGame': null,
+
+    'addCharacter': null,
+    'whenTouchPilot': null,
+    'whenTouchMan': null
   },
   'startBlocks': [
     'addCharacter("pilot");',
@@ -2179,6 +2208,9 @@ levels.js_hoc2015_add_characters = {
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
     'addCharacter': null,
+
+    'whenGetAllCharacters': null,
+    'winGame': null
   },
   'startBlocks': [
 
@@ -2238,6 +2270,9 @@ levels.js_hoc2015_chain_characters = {
   'codeFunctions': {
     'addCharacter': null,
     'winGame': null,
+
+    'whenTouchRoo': null,
+    'whenGetAllCharacters': null
   },
   'startBlocks': [
     'addCharacter("roo");',
@@ -2277,6 +2312,10 @@ levels.js_hoc2015_double_chain_characters = {
   'codeFunctions': {
     'addCharacter': null,
     'winGame': null,
+
+    'whenTouchRoo': null,
+    'whenTouchBird': null,
+    'whenGetAllCharacters': null
   },
   'startBlocks': [
     'addCharacter("roo");',
@@ -2327,7 +2366,11 @@ levels.js_hoc2015_change_setting = {
     'winGame': { 'category': 'Commands' },
     'loseGame': { 'category': 'Commands' },
     'whenGetAllCharacters': { 'category': 'Events' },
-    'whenScore1000': { 'category': 'Events' }
+    'whenScore1000': { 'category': 'Events' },
+
+    'changeScore': { 'category': 'Commands' },
+    'whenTouchPilot': { 'category': 'Events' },
+    'whenTouchCharacter': { 'category': 'Events' }
   },
   'startBlocks': [
     'addCharacter("pilot");',
