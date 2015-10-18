@@ -2082,7 +2082,7 @@ levels.js_hoc2015_event_score_points = {
   },
   'codeFunctions': {
     'endGame': null,
-    'changeScore': null,
+    'addPoints': null,
 
     'whenTouchPilot': null,
     'whenScore1000': null
@@ -2341,7 +2341,7 @@ levels.js_hoc2015_double_chain_characters = {
   'instructions': '"It\'s up to you, BOT1!"',
   'instructions2': 'With this code, when you get a ROO, two BIRDs appear. Can you make two MICE appear when you get a BIRD? Collect the MICE.',
   'autoArrowSteer': true,
-  'timeoutFailureTick': 600,
+  'timeoutFailureTick': 900,
   'timeoutAfterWhenRun': true,
   'showTimeoutRect': true,
   'requiredForSuccess' : {
@@ -2365,7 +2365,7 @@ levels.js_hoc2015_change_setting = {
     'whenGetAllCharacters': { 'category': 'Events' },
     'whenScore1000': { 'category': 'Events' },
 
-    'changeScore': { 'category': 'Commands' },
+    'addPoints': { 'category': 'Commands' },
     'whenTouchPilot': { 'category': 'Events' },
     'whenTouchCharacter': { 'category': 'Events' }
   },
@@ -2377,7 +2377,7 @@ levels.js_hoc2015_change_setting = {
     '  setBackground("random");',
     '}',
     'function whenTouchCharacter() {',
-    '  changeScore(400);',
+    '  addPoints(400);',
     '}'].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
@@ -2433,7 +2433,7 @@ levels.js_hoc2015_event_free = {
     'moveSlow': { 'category': 'Commands' },
     'moveNormal': { 'category': 'Commands' },
     'moveFast': { 'category': 'Commands' },
-    'changeScore': { 'category': 'Commands' },
+    'addPoints': { 'category': 'Commands' },
 
     'whenTouchObstacle': { 'category': 'Events' },
     'whenTouchMan': { 'category': 'Events' },
