@@ -3068,15 +3068,9 @@ Studio.executeQueue = function (name, oneOnly) {
 
 Studio.callCmd = function (cmd) {
   switch (cmd.name) {
-    case 'winGame':
+    case 'endGame':
       studioApp.highlight(cmd.id);
-      Studio.winGame(cmd.opts);
-      Studio.trackedBehavior.hasWonGame = true;
-      break;
-    case 'loseGame':
-      studioApp.highlight(cmd.id);
-      Studio.loseGame(cmd.opts);
-      Studio.trackedBehavior.hasLostGame = true;
+      Studio.endGame(cmd.opts);
       break;
     case 'setBackground':
       studioApp.highlight(cmd.id);
@@ -3544,8 +3538,20 @@ Studio.setScoreText = function (opts) {
   Studio.displayScore();
 };
 
-Studio.winGame = function(opts) {
-  Studio.setScoreText({text: studioMsg.winMessage()});
+Studio.endGame = function(opts) {
+  if (typeof opts.value !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.value);
+  }
+
+  if (opts.value == "win") {
+    Studio.trackedBehavior.hasWonGame = true;
+    Studio.setScoreText({text: studioMsg.winMessage()});
+  } else if (opts.value == "lose") {
+    Studio.trackedBehavior.hasLostGame = true;
+    Studio.setScoreText({text: studioMsg.loseMessage()});  
+  } else {
+    throw new RangeError("Incorrect parameter: " + opts.value);
+  }
 };
 
 Studio.loseGame = function(opts) {
