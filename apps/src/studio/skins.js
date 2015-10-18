@@ -238,7 +238,7 @@ function loadHoc2015(skin, assetUrl) {
     'man':    { frames: 12, scale: 1,   activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
     'roo':    { frames: 15, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
     'bird':   { frames:  8, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
-    'spider': { frames: 12, scale: 1.2, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
+    'spider': { frames: 12, scale: 1.2, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW },
     'mouse':  { frames:  1, scale: 0.6, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
     'pilot':  { frames: 13, scale: 1,   activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
   };
