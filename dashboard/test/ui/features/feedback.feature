@@ -21,7 +21,7 @@ Scenario: Attempt 2-3 Maze 1
   And I wait to see "#feedbackBlocks"
 
   Then element ".congrats" is visible
-  And element ".congrats" has text "Try one or more of the blocks below to solve this puzzle."
+  And element ".congrats" has text "Not quite; this level requires specific blocks."
   And element "#feedbackBlocks" is visible
 
   # the second time, we see the hint right away
@@ -34,7 +34,7 @@ Scenario: Attempt 2-3 Maze 1
   And I wait to see "#feedbackBlocks"
 
   Then element ".congrats" is visible
-  And element ".congrats" has text "Try one or more of the blocks below to solve this puzzle."
+  And element ".congrats" has text "Not quite; this level requires specific blocks."
   And element "#feedbackBlocks" is visible
 
   # after we fulfill the requirements of the hint, we see a different

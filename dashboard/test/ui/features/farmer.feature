@@ -39,7 +39,7 @@ Scenario: Losing the first level
   And element "#resetButton" is visible
   Then I see ".congrats"
   And element ".congrats" is visible
-  And element ".congrats" has text "Try one or more of the blocks below to solve this puzzle."
+  And element ".congrats" has text "Not quite; this level requires specific blocks."
   Then I see "#feedbackBlocks"
   And there's an image "farmer/failure_avatar.png"
   And I press "again-button"
