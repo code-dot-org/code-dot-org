@@ -1,13 +1,16 @@
 name 'U2L11 Assessment 1'
-title 'HTTP and Abstraction on the Internet: Question 1'
-question 'HTTP is considered to be a high level protocol because:'
-wrong 'HTTP requests are given higher priority for fast delivery when being routed on the Internet.'
-wrong 'HTTP requests are encoded using higher frequency radio waves.'
-wrong 'HTTP messages can be either requests or responses.'
-right 'HTTP requests make use of abstractions provided by lower level protocols.'
-
-teacher_markdown <<MARKDOWN
-Answer:
-
-- HTTP requests make use of abstractions provided by lower level protocols.
-MARKDOWN
+encrypted 'cDFglYnD4PBLdl/+FOt/5OIfQjpZCFpG7V6v+jM5iGY37VYSSakpmEjVnCPl
+x9ZxG2DR8oPYB7Im2ll7Aqv8A8bWBrYeo54uaDFCI6nzkJBX5wjkPqJUi9+k
++lDF8fgKn3Xs+8JZboDh3UPGzLUklpvjR20owhEOevNQSb4a1dTrdE9GvWjL
+KGQOOUbUWdPqSQhotBs6e4y2/qGQLXMC2FyR1K6VSROsYxjaW12MmfUjCtBx
+XCwBAytu29qXImcd0Uq2UVyH0k9FxjIDme3uNI10aPb2vT1quC6ap6CnzHuU
+EI65tcSRRnICgfFAHWGt1fxlX4fUlfjUWSGWs2lL6AQiRZkCa+HYq63PTkoA
+z2IEq7BLK7e6HUKHWT8QK6hpB73FpDqLUdHvu+9FWi5YHBLoSU7sgJRq92Fg
+3VyNQGk5d1pMKKDIn8mZVWkfmTOi5fcVsGqFe950Yu0ONpGxS5bUXlyzI9hf
+dni5IGNLShmNEzcJBNdEFoVukTECL2hmvzP4h/vSzl4+Vm1+uuY1mMlGi0xX
+MA7MgL4dp4LKLRsT7ZJT70KAlfy384NGwbaUgqXZL+Mso4QE3bRrONc1KUnf
+212eESLygJn2lUwaZjzA1wd5ACZ7mjyMhDQgtA7cIR+UWs6kT5QQZmDFNcOy
+ewvr1JWsb/1LDzjCEgb3VHXdNJ5E0+GflXdVyOepZk1uDYgvKXyawSAOrHgX
+NmkCCwgoSdQuBl+3gtoHABwm3/Z4rIKhxFT509L2kXQYl+m3qckDLvMsqG+a
+YX7BYNqKu3kHORLQhUhpXoi36pOpeQhlXq0E0pmos5pc86eqdpoR
+'

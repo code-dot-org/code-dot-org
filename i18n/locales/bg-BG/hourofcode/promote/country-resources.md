@@ -34,6 +34,15 @@ Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Des
 
 Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
+<% elsif @country == 'jp' %>
+
+## Hour of Code(アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
+
+[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -42,7 +51,7 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 [<img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
 
-## 1) Опитайте уроците:
+## 1) Try the tutorials:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
@@ -53,7 +62,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Планирайте нужният ви хардуер - компютрите са задължителни
+## 2) Plan your hardware needs - computers are optional
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
@@ -61,12 +70,12 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **Пуснете поздравителната страница, за** да видите какво ще виждат учениците, когато приключат уроците. 
   * **Осигурете слушалки за класа си**, или помолете учениците да си донесат собствени, ако изберете уроци за начинаещи- работете най-добре със звук.
 
-## 3) План как да се използва наличната техника
+## 3) Plan ahead based on your technology available
 
   * **Нямате достатъчно устройства?** Използвайте [ програмиране по двойки](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Когато участниците работят по двойки, те си помагат един на друг и разчитат по-малко на учителя.
   * **Имате слаби машини?** Планирайте показване на видео клиповете пред целия клас, така че да няма нужда учениците да ги стартират на техните компютри. Или опитайте дейностите без компютър.
 
-## 4) Вдъхновете учениците - Покажете им видео
+## 4) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
