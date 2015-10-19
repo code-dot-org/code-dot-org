@@ -65,6 +65,16 @@ SQL
     @teachers = User.limit(100).where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id').pluck(:id, :name, :email, :full_address, 'COUNT(followers.id) AS num_students')
   end
 
+  def csp_pd_responses
+    authorize! :read, :reports
+
+    @headers = ['Level ID', 'ID', 'Data']
+    @responses = {}
+    for level_id in [3911, 3909, 3910, 3907]
+      @responses[level_id] = LevelSource.limit(50).where(level_id: level_id).pluck(:level_id, :id, :data)
+    end
+  end
+
   def admin_stats
     authorize! :read, :reports
 
