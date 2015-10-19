@@ -2,23 +2,21 @@
   CS Principles PD Responses
 
 - if @responses.size > 0
-  - @responses.each do |response|
-    - response.each_with_index do |row, index|
-      - if index == 0
-        %h3
-          CSP PD Responses for Level
-          = row
-      - if index > 0 and row.size > 0
-        %table.pd_responses
+  - @responses.each do |level_id, level_responses|
+    %h3
+      CSP PD Responses for Level
+      = level_id
+    - if level_responses.size > 0
+      %table
+        %tr
+        - @headers.each do |header|
+          %th= header
+        - level_responses.each do |response|
           %tr
-          - @headers.each do |header|
-            %th= header
-          - row.each do |field|
-            %tr
-            - field.each do |subfield|
-              %td= subfield
-      - elsif index > 0
-        No data.
-      %br
+          - response.each do |field|
+            %td= field
+    - else
+      No data.
+    %br
 - else
   No levels queried.
