@@ -1,5 +1,6 @@
 name 'U3L28 Student Lesson Introduction'
 title 'While Loop Basics'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 28 - While Loop Basics

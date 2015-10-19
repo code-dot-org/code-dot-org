@@ -22,6 +22,7 @@
 
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -128,6 +129,7 @@
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -414,12 +416,12 @@
   events_nav_title: Hour of Code Events
   events_nav_all: All Events
   events_nav_whole_schools: Whole Schools
-  events_nav_special: Special Events
+  events_nav_special: CS Tech Jams
   events_nav_orgs: Organizations
   events_all_old_title: "All @year Hour of Code events"
   events_all_title: All Hour of Code events
   events_whole_school_title: Whole-school Hour of Code events
-  events_special_title: Special Hour of Code events
+  events_special_title: Computer Science Tech Jams
   events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: event
   events: events

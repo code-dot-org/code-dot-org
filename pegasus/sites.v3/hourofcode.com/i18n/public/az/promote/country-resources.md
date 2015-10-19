@@ -36,6 +36,15 @@ Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Des
 
 Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
+<% elsif @country == 'jp' %>
+
+## Hour of Code(アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
+
+[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -44,7 +53,7 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 [<img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
 
-## 1) Dərs vəsaitlərindən istifadə edin:
+## 1) Try the tutorials:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
@@ -55,7 +64,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Avadanlığa olan ehtiyacınızı planlaşdırın - kompüterlərin olması zəruri deyil
+## 2) Plan your hardware needs - computers are optional
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
@@ -63,12 +72,12 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **Təbrik səhifələrinə baxın,** çalışma yekunlaşdıqda şagirdlərin nə ilə rastlaşacaqlarıyla tanış olun. 
   * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-## 3) Tədbirləri texnoloji imkanlarınıza uyğun planlaşdırın
+## 3) Plan ahead based on your technology available
 
   * **Kifayət qədər qurğunuz yoxdur?** Onda [cüt-cüt proqramlaşdırma](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning)dan istifadə edin. When participants partner up, they help each other and rely less on the teacher.
   * **Şəbəkənizin ötürmə sürəti azdır?** Videoları sinfin qarşısında göstərməyi planlaşdırın ki, hər şagird özü üçün videoları endirməsin, ya da avadanlıqsız, oflayn dərslikləri sınayın.
 
-## 4) Şagirdləri ruhlandırın - onlara video göstərin
+## 4) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
