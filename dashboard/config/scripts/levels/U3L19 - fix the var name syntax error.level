@@ -7,14 +7,59 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "button": null,
+      "textLabel": {
+        "params": [
+          "\"id\"",
+          "\"text\""
+        ]
+      },
+      "image": null,
+      "playSound": null,
+      "setPosition": null,
+      "setScreen": null,
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "getX": null,
+      "getY": null,
+      "getDirection": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_max": null,
+      "randomNumber_min_max": null,
+      "console.log": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null,
       "declareAssign_x": null,
-      "assign_x": null,
-      "write": null
+      "assign_x": null
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "We've given you some code with an error.  It doesn’t recognize the variable.  Can you figure out why?  Fix the error and get the program to run.  Also note the error message since it might come up at some point later in your life.\r\n\r\n",
-    "start_blocks": "var foo;\r\nfoo = 7;\r\nwrite(Foo);",
+    "start_blocks": "var foo = 7;\r\nconsole.log(Foo);\r\nvar blah = 13;\r\nconsole.log(blah);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -31,7 +76,21 @@
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
-    "app_height": "200"
+    "markdown_instructions": "# What happened in the last level?\r\nOn the last level we saw the difference between: <br>\r\n\r\n` console.log(foo);`  and    `console.log(\"foo\");`\r\n<br>\r\n\r\nThese lines show how JavaScript knows whether or not you want to literally print the characters \"foo\" to the screen, or whether you want to retrieve a value from memory. \r\n* If JavaScript sees a **word in your code that’s inside quotes it treats it as a string of text**. \r\n* If the word **doesn’t have quotes it assumes that it’s a variable and attempts to look it up in memory**. If it doesn’t find it in memory. It throws an error.\r\n\r\n# Debugging Variables: Part 2\r\n\r\nHere is another common variable problem. We've given you some code with an error. It is supposed to print the value of both variables but it doesn’t recognize the variable.  Can you figure out why?  \r\n\r\n<img src=\"https://images.code.org/2b3df64dcc27d2f1f2c5fa14ad06a833-image-1445005292650.gif\" style=\"width: 350px; float: right; border: solid 1px black\">\r\n\r\nNotice some new symbols appear in your Code Workspace. If you hover over them you can see a message that explains why they are there.\r\n\r\n# Do This\r\n\r\n* **Run the program**\r\n\r\n* **Locate the error**\r\n\r\n* **Fix the error**\r\n\r\n* **Note the error message** since it might come up at some point later.",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "encrypted_examples": [
+
+    ],
+    "instructions": "Fix the error and get it to print the value of both variables (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>
