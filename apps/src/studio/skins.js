@@ -592,7 +592,7 @@ function loadHoc2015x(skin, assetUrl) {
   // be too far to the right and below that square.  These offsets are a chance
   // to move the rendering of the sprite up and to the left, when negative, so
   // that the "feet" are planted at the bottom center of the grid square.
-  skin.gridSpriteRenderOffsetX = -30;
+  skin.gridSpriteRenderOffsetX = -20;
   skin.gridSpriteRenderOffsetY = -40;
 
   skin.avatarList = ['bot1'];
