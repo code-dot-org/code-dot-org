@@ -2263,7 +2263,8 @@ levels.js_hoc2015_add_characters = {
     }
   ],
   'requiredForSuccess' : {
-    'removedItemCount': 3
+    'removedItemCount': 3,
+    'winGame': true
   }
 };
 
