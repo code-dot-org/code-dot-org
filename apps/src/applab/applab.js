@@ -1587,7 +1587,7 @@ Applab.onPuzzleSubmit = function() {
 
 Applab.unsubmit = function() {
   $.post(level.unsubmitUrl,
-         {"_method": 'PUT', user_level: {best_result: 0}},
+         {"_method": 'PUT', user_level: {best_result: 1}},
          function( data ) {
            location.reload();
          });
