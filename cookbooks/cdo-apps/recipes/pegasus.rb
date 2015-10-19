@@ -13,7 +13,7 @@ template "/etc/init.d/pegasus" do
     user: node[:current_user],
     env: node.chef_environment,
   })
-  notifies :run, 'execute[build-pegasus]', :immediately
+  notifies :run, 'execute[install-pegasus]', :immediately
 end
 
 template "/etc/logrotate.d/pegasus" do
@@ -36,6 +36,18 @@ template "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/config/n
     log_dir: "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/log",
     auto_instrument: true,
   })
+end
+
+execute "install-pegasus" do
+  command "bundle exec rake install:pegasus"
+  cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
+  environment ({
+    'LC_ALL' => 'en_US.UTF-8'
+  })
+  user node[:current_user]
+  group node[:current_user]
+  action :nothing
+  notifies :run, 'execute[build-pegasus]', :immediately
 end
 
 execute "build-pegasus" do
