@@ -256,6 +256,8 @@ class ReportsControllerTest < ActionController::TestCase
 
   generate_admin_only_tests_for :admin_stats
 
+  generate_admin_only_tests_for :search_for_teachers
+
   generate_admin_only_tests_for :csp_pd_progress
 
   test "should get level_stats" do
