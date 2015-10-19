@@ -1785,6 +1785,9 @@ Studio.reset = function(first) {
     hasLostGame: false
   };
 
+  // Reset the record of the last direction that the user moved the sprite.
+  Studio.lastMoveSingleDir = null;
+
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -4377,9 +4380,12 @@ Studio.getSkin = function() {
 
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
+  var lastMove = sprite.lastMove;
   sprite.lastMove = Studio.tickCount;
   var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   var wallCollision = false;
+  var playSound = false;
+
   switch (opts.dir) {
     case Direction.NORTH:
       if (level.blockMovingIntoWalls &&
@@ -4436,11 +4442,28 @@ Studio.moveSingle = function (opts) {
     Studio.collideSpriteWith(opts.spriteIndex, 'wall');
     sprite.endCollision('wall');
   }
+
   if (level.gridAlignedMovement) {
     Studio.yieldThisTick = true;
     if (Studio.JSInterpreter) {
       Studio.JSInterpreter.yield();
     }
+
+    playSound = true;
+  } else if (!wallCollision && 
+             opts.dir !== Studio.lastMoveSingleDir &&
+             lastMove === Infinity ||
+             Studio.tickCount > lastMove + 1) {
+    // So long as there was no wall collision, a new direction, and we
+    // haven't already processed a move in the previous tick, then play a sound.
+    playSound = true;
+  }
+
+  Studio.lastMoveSingleDir = opts.dir;
+
+  if (playSound && skin.moveSounds) {
+    var randomSoundIndex = Math.floor(Math.random() * skin.moveSounds.length);
+    studioApp.playAudio(skin.moveSounds[randomSoundIndex]);
   }
 };
 
@@ -4575,8 +4598,10 @@ Studio.allGoalsVisited = function() {
     if (goal.finished) {
       finishedGoals++;
 
-      // Play a sound unless we've hit the last flag
-      if (playSound && finishedGoals !== Studio.spriteGoals_.length) {
+      // Play a sound unless we've hit the last flag (though that can be
+      // overridden by the skin)
+      if (playSound && 
+          (finishedGoals !== Studio.spriteGoals_.length || skin.playFinalGoalSound)) {
         studioApp.playAudio('flag');
       }
 
