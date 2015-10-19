@@ -520,5 +520,53 @@ module.exports = {
         testResult: TestResults.FREE_PLAY
       },
     },
+    {
+      description: "load a level with two screens",
+      editCode: true,
+      xml: '',
+      levelHtml: '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" style="width: 320px; height: 450px; display: block;">' +
+                   '<div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
+                     '<button id="button1" style="padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 160px; top: 70px; background-color: rgb(26, 188, 156);">Button</button>' +
+                   '</div>' +
+                   '<div class="screen" tabindex="1" id="screen2" style="display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
+                     '<button id="button2" style="padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 185px; top: 65px; background-color: rgb(26, 188, 156);">Button</button>' +
+                   '</div>' +
+                 '</div>',
+      runBeforeClick: function (assert) {
+        assert.equal($("#divApplab").is(':visible'), true, 'divApplab is visible');
+        assert.equal($("#divApplab").children().length, 2, 'code mode has two screen divs');
+        assert.equal($("#divApplab #screen1 #button1").length, 1, 'code mode screen1 contains button1');
+        assert.equal($("#divApplab #screen2 #button2").length, 1, 'code mode screen2 contains button2');
+
+        // enter design mode
+        $("#designModeButton").click();
+        assert.equal($("#designModeViz").is(':visible'), true, 'designModeViz is visible');
+        assert.equal($("#designModeViz").children().length, 2, 'design mode has two screen divs');
+        assert.equal($("#designModeViz #design_screen1 #design_button1").length, 1, 'design mode screen1 contains button1');
+        assert.equal($("#designModeViz #design_screen2 #design_button2").length, 1, 'design mode screen2 contains button2');
+
+        // drag a new screen in
+        testUtils.dragToVisualization('SCREEN', 10, 10);
+        assert.equal($("#designModeViz").children().length, 3, 'has three screen divs');
+        validatePropertyRow(0, 'id', 'screen3', assert);
+
+        assert.equal($("#screenSelector").children().length, 4);
+        assert.equal($("#screenSelector").children().eq(3).text(), "New screen...");
+
+        // New screen via dropdown
+        ReactTestUtils.Simulate.change(document.getElementById('screenSelector'),
+          { target: { value: 'New screen...' } });
+
+        assert.equal($("#designModeViz").children().length, 4, 'has four screen divs');
+        assert.equal($("#screenSelector").children().length, 5);
+        validatePropertyRow(0, 'id', 'screen4', assert);
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
   ]
 };
