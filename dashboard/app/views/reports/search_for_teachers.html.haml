@@ -1,3 +1,8 @@
+:css
+  .radio {
+    margin: 0 10px !important
+  }
+
 %center
   %h1 Search for Teachers
 
@@ -19,9 +24,9 @@
       %td 
         PD Filter
       %td
-        %input{type: "radio", name: "pd", id: "pd-all", value: "all", checked: true} All
-        %input{type: "radio", name: "pd", id: "pd-pd", value: "pd"} PD
-        %input{type: "radio", name: "pd", id: "pd-nopd", value: "nopd"} No PD
+        %input.radio{type: "radio", name: "pd", id: "pd-all", value: "all", checked: true} All
+        %input.radio{type: "radio", name: "pd", id: "pd-pd", value: "pd"} PD
+        %input.radio{type: "radio", name: "pd", id: "pd-nopd", value: "nopd"} No PD
 
   %br/
 
