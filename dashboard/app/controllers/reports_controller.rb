@@ -68,11 +68,11 @@ SQL
   def csp_pd_responses
     authorize! :read, :reports
 
-    @headers = ['ID', 'Level ID', 'Data']
-    @responses3911 = LevelSource.limit(50).where(level_id: 3911).pluck(:id, :level_id, :data)
-    @responses3909 = LevelSource.limit(50).where(level_id: 3909).pluck(:id, :level_id, :data)
-    @responses3910 = LevelSource.limit(50).where(level_id: 3910).pluck(:id, :level_id, :data)
-    @responses3907 = LevelSource.limit(50).where(level_id: 3907).pluck(:id, :level_id, :data)
+    @headers = ['Level ID', 'ID', 'Data']
+    @responses = {}
+    for level_id in [3911, 3909, 3910, 3907]
+      @responses[level_id] = LevelSource.limit(50).where(level_id: level_id).pluck(:level_id, :id, :data)
+    end
   end
 
   def admin_stats
