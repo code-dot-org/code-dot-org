@@ -1,52 +1,45 @@
 name 'U2L13 Student Lesson Introduction'
-title 'Tell Me a Secret - Encrypting Text'
-
-css 'unplugged'
-skip_dialog 'true'
-
-markdown <<MARKDOWN
-## Unit 2: Lesson 13 - The Need for Encryption
-
-# Background
-
-Encryption is a process - an algorithm - for transforming a message so that the original text is hidden from anyone who is not the intended recipient. This is often called a “secret code.” Reversing the encryption process to reveal the original message is called decryption. History is full of examples of people encrypting messages and attempting to crack secret codes.
-
-# Vocabulary
-
-* **Algorithm**: a sequential process for solving a problem.
-
-* **Encryption**: encoding a message with an algorithm so that it is unreadable.
-
-* **Decryption**: reversing the encryption process to reveal the original message.
-
-* **Locks and keys**: common terms for encryption and decryption algorithms.
-
-* **Caesar Cipher**: an encoding technique that shifts letters of the alphabet by a fixed amount.
-
-* **Random Substitution**: an encoding technique that maps each letter of the alphabet randomly to different letters or characters.
-
-
-# Lesson
-
-* Think about the uses of encryption on the Internet.
-* Encrypt a message with a secret algorithm.
-* Test the security of your encryption.
-
-
-# Resources
-
-* [Encryption Reading and Activity Guide](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/edit)
-
-* [Blown to Bits: Chapter 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)
-
-* Frequency Analysis Widget - Click Continue below
-
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-* <a href="https://docs.google.com/document/d/1gVfrgQKyFIn0guqN1OgwslhPB6GEPukEy63kPzjHgy4" target="_blank">KEY: Reading Guide for Encryption</a>
-MARKDOWN
+encrypted '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
+'

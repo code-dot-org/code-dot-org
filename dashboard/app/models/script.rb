@@ -27,6 +27,7 @@ class Script < ActiveRecord::Base
   has_many :stages, -> { order('position ASC') }, dependent: :destroy, inverse_of: :script
   has_many :users, through: :user_scripts
   has_many :user_scripts
+  has_many :hint_view_requests
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
   validates :name, presence: true, uniqueness: { case_sensitive: false}

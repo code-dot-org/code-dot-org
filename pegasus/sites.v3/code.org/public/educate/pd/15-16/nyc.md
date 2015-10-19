@@ -69,7 +69,7 @@ More info coming soon!
 
 [**Back to the top**](#top)
 
-
+<a id="ecs"></a>
 ## Exploring Computer Science
 
 ### Phase 1: Online Introduction (~2 hours) ###

@@ -1,5 +1,6 @@
 %div.resources-navigation
-  %div.nav-header= hoc_s(:prizes_nav_title)
+  %a.nav-link{href: resolve_url('/prizes')}
+    %div.nav-header= hoc_s(:prizes_nav_title)
   %div.nav-item
     %a.nav-link{href: resolve_url('/prizes')}
       = hoc_s(:prizes_nav_home)

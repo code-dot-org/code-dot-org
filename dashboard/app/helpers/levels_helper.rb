@@ -144,6 +144,8 @@ module LevelsHelper
       dsl_defined_options
     elsif @level.is_a? Widget
       widget_options
+    elsif @level.unplugged?
+      unplugged_options
     else
       # currently, all levels are Blockly or DSLDefined except for Unplugged
       view_options.camelize_keys
@@ -155,6 +157,14 @@ module LevelsHelper
     app_options = {}
     app_options[:level] ||= {}
     app_options[:level].merge! @level.properties.camelize_keys
+    app_options.merge! view_options.camelize_keys
+    app_options
+  end
+
+  def unplugged_options
+    app_options = {}
+    app_options[:level] ||= {}
+    app_options[:level].merge! level_view_options
     app_options.merge! view_options.camelize_keys
     app_options
   end

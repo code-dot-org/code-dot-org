@@ -4766,7 +4766,7 @@ applabCommands.getText = function (opts) {
     } else if (element.tagName === 'IMG') {
       return String(element.alt);
     } else {
-      return element.textContent;
+      return applabCommands.getElementInnerText_(element);
     }
   }
   return false;
@@ -4784,11 +4784,72 @@ applabCommands.setText = function (opts) {
     } else if (element.tagName === 'IMG') {
       element.alt = opts.text;
     } else {
-      element.textContent = opts.text;
+      applabCommands.setElementInnerText_(element, opts.text);
     }
     return true;
   }
   return false;
+};
+
+/**
+ * Attempts to emulate Chrome's version of innerText by way of innerHTML, only
+ * for the simplified case of plain text content (in, for example, a
+ * contentEditable div).
+ * @param {Element} element
+ * @private
+ */
+applabCommands.getElementInnerText_ = function (element) {
+  var cleanedText = element.innerHTML;
+  cleanedText = cleanedText.replace(/<div>/gi, '\n'); // Divs generate newlines
+  cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
+
+  // This next step requires some explanation
+  // In multiline text it's possible for the first line to render wrapped or unwrapped.
+  //     Line 1
+  //     Line 2
+  //   Can render as either of:
+  //     Line 1<div>Line 2</div>
+  //     <div>Line 1</div><div>Line 2</div>
+  //
+  // But leading blank lines will always render wrapped and should be preserved
+  //
+  //     Line 2
+  //     Line 3
+  //   Renders as
+  //    <div><br></div><div>Line 2</div><div>Line 3</div>
+  //
+  // To handle this behavior we strip leading newlines UNLESS they are followed
+  // by another newline, using a negative lookahead (?!)
+  cleanedText = cleanedText.replace(/^\n(?!\n)/, ''); // Strip leading nondoubled newline
+
+  cleanedText = cleanedText.replace(/&nbsp;/gi, ' '); // Unescape nonbreaking spaces
+  cleanedText = cleanedText.replace(/&gt;/gi, '>');   // Unescape >
+  cleanedText = cleanedText.replace(/&lt;/gi, '<');   // Unescape <
+  cleanedText = cleanedText.replace(/&amp;/gi, '&');  // Unescape & (must happen last!)
+  return cleanedText;
+};
+
+/**
+ * Attempts to emulate Chrome's version of innerText by way of innerHTML, only
+ * for the simplified case of plain text content (in, for example, a
+ * contentEditable div).
+ * @param {Element} element
+ * @param {string} newText
+ * @private
+ */
+applabCommands.setElementInnerText_ = function (element, newText) {
+  var escapedText = newText;
+  escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
+  escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
+  escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >
+  escapedText = escapedText.replace(/  /g,' &nbsp;'); // Escape doubled spaces
+
+  // Now wrap each line except the first line in a <div>,
+  // replacing blank lines with <div><br><div>
+  var lines = escapedText.split('\n');
+  element.innerHTML = lines[0] + lines.slice(1).map(function (line) {
+    return '<div>' + (line.length ? line : '<br>') + '</div>';
+  }).join('');
 };
 
 applabCommands.getChecked = function (opts) {
@@ -7971,9 +8032,8 @@ module.exports = {
   // Seems a little like we should always get the lowest available (as in step 3)
   // or always get the next (as in step 2)
   getUnusedElementId: function (prefix) {
-    var designModeViz = $('#designModeViz');
     var i = nextElementIdMap[prefix] || 1;
-    while (designModeViz.find("#" + prefix + i).length !== 0) {
+    while (elementUtils.getPrefixedElementById(prefix + i)) {
       i++;
     }
     nextElementIdMap[prefix] = i + 1;
