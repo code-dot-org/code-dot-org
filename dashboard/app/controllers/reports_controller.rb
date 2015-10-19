@@ -56,6 +56,13 @@ SQL
     render 'usage', formats: [:html]
   end
 
+  def search_for_teachers
+    email_filter = "%#{params[:emailFilter]}%"
+    address_filter = "#{params[:addressFilter]}%"
+
+    @teachers = User.limit(100).where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id').pluck(:id, :name, :email, :full_address, 'COUNT(followers.id) AS num_students')
+  end
+
   def csp_pd_responses
     authorize! :read, :reports
 
