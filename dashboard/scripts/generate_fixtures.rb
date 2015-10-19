@@ -87,4 +87,3 @@ File.new("#{prefix}script_level.yml", 'w').write(yamlize(@script_levels))
 File.new("#{prefix}stage.yml", 'w').write(yamlize(@stages))
 File.new("#{prefix}level_source.yml", 'w').write(yamlize(@level_sources))
 File.new("#{prefix}callout.yml", 'w').write(yamlize(@callouts))
-
