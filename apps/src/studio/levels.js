@@ -1605,6 +1605,7 @@ levels.js_hoc2015_move_right = {
   'instructions': '"Collect the item!"',
   'instructions2': 'Program BOTX to get to the item.  Add a second moveRight command and then hit Run.',
   'ticksBeforeFaceSouth': 9,
+  'timeoutFailureTick': 100,
   'goalOverride': {
     'goalImage': 'goal1',
     'imageWidth': 50,
@@ -2140,16 +2141,18 @@ levels.js_hoc2015_win_lose = {
 
     'addCharacter': null,
     'whenTouchPilot': null,
-    'whenTouchMan': null
+    'whenTouchMan': null,
+    'playSound': null,
   },
   'startBlocks': [
     'addCharacter("pilot");',
     'addCharacter("man");',
     'function whenTouchPilot() {',
+    '  playSound("character1sound5");',
     '  ',
     '}',
     'function whenTouchMan() {',
-    '  ',
+    '  playSound("character1sound6");',
     '}',   
     ''].join('\n'),
 
@@ -2208,10 +2211,14 @@ levels.js_hoc2015_add_characters = {
     'addCharacter': null,
 
     'whenGetAllCharacters': null,
-    'endGame': null
+    'endGame': null,
+    'playSound': null,
+    'whenTouchPig': null
   },
   'startBlocks': [
-
+    'function whenTouchPig() {',
+    '  playSound("item1sound1");',
+    '}',
     'function whenGetAllCharacters() {',
     '  endGame("win");',
     '}',
@@ -2234,7 +2241,7 @@ levels.js_hoc2015_add_characters = {
     [0, 0, 0, 0,  0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"I\'m seeing signs of increased activity on this planet!"',
-  'instructions2': 'Now you have the WhenRun event and a new addCharacter command to create your own characters. Can you add 3 BIRDs to the world? Then, go get them.',
+  'instructions2': 'Now you have the WhenRun event and a new addCharacter command to create your own characters. Can you add 3 PIGs to the world? Then, go get them.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 600,
   'timeoutAfterWhenRun': true,
@@ -2270,13 +2277,18 @@ levels.js_hoc2015_chain_characters = {
     'endGame': null,
 
     'whenTouchRoo': null,
-    'whenGetAllCharacters': null
+    'whenGetAllCharacters': null,
+    'playSound': null
   },
   'startBlocks': [
     'addCharacter("roo");',
     'addCharacter("roo");',
     'function whenTouchRoo() {',
+    '  playSound("item3sound4");',
     '  ',
+    '}',
+    'function whenTouchMouse() {',
+    '  playSound("character1sound8");',
     '}',
     'function whenGetAllCharacters() {',
     '  ',
@@ -2294,7 +2306,7 @@ levels.js_hoc2015_chain_characters = {
   'instructions': '"It\'s up to you, BOT1!"',
   'instructions2': 'When you touch each ROO, make two MICE appear.  Then collect them all.  Make sure you can win the game.',
   'autoArrowSteer': true,
-  'timeoutFailureTick': 600,
+  'timeoutFailureTick': 900,
   'timeoutAfterWhenRun': true,
   'showTimeoutRect': true,
   'requiredForSuccess' : {

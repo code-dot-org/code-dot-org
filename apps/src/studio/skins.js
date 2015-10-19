@@ -452,12 +452,14 @@ function loadHoc2015(skin, assetUrl) {
   // Sounds.
   var sounds = [
     'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
+    'character1sound5', 'character1sound6', 'character1sound7', 'character1sound8',
     'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
     'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
     'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
     'alert1', 'alert2', 'alert3', 'alert4',
     'applause',
-    'start', 'win', 'failure', 'flag'
+    'start', 'win', 'failure', 'flag',
+    'move1', 'move2', 'move3'
   ];
 
   // Override the default loadAudio function with this one.
@@ -469,6 +471,12 @@ function loadHoc2015(skin, assetUrl) {
     }
   };
 
+  // Normally the sound isn't played for the final goal, but this forces it
+  // to be played.
+  skin.playFinalGoalSound = true;
+
+  skin.moveSounds = ['move1', 'move2', 'move3'];
+  
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes
   // NOTE: first item must be RANDOM_VALUE
@@ -639,7 +647,8 @@ function loadHoc2015x(skin, assetUrl) {
     'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
     'alert1', 'alert2', 'alert3', 'alert4',
     'applause',
-    'start', 'win', 'failure', 'flag'
+    'start', 'win', 'failure', 'flag',
+    'move1', 'move2', 'move3', 'move4'
   ];
 
   // Override the default loadAudio function with this one.
@@ -650,6 +659,12 @@ function loadHoc2015x(skin, assetUrl) {
       studioApp.loadAudio(skin[sound], sound);
     }
   };
+
+  // Normally the sound isn't played for the final goal, but this forces it
+  // to be played.
+  skin.playFinalGoalSound = true;
+
+  skin.moveSounds = ['move1', 'move2', 'move3', 'move4'];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes
