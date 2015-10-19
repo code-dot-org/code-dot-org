@@ -5,6 +5,7 @@ require 'cdo/hip_chat'
 require 'base64'
 require 'nokogiri'
 require src_dir 'forms'
+require src_dir 'abort_email_error'
 
 BATCH_SIZE = 6000
 MAX_THREAD_COUNT = 30
@@ -276,14 +277,9 @@ def main()
         deliverer.send delivery
       rescue Net::SMTPSyntaxError, Net::SMTPFatalError => e
         puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
-      rescue RuntimeError => e
-        if e.message.to_s.start_with? 'ABORT:'
-          puts "Abandoning delivery of #{delivery[:id]} because '#{e.message.to_s.sub('ABORT:','').strip}'"
-          sent_at = 0
-        else
-          puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
-          raise
-        end
+      rescue AbortEmailError => e
+        puts "Abandoning delivery of #{delivery[:id]} because '#{e.message.to_s.strip}'"
+        sent_at = 0
       rescue => e
         puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
         raise
