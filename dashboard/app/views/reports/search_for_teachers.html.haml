@@ -1,3 +1,5 @@
+# TODO(asher): Eliminate the need for the !important and move to a shareable
+# location.
 :css
   .radio {
     margin: 0 10px !important
@@ -40,7 +42,7 @@
 %table.teachers
   - if @teachers.size > 0
     - if @headers
-      %tr
+      %th
       - @headers.each do |field|
         %td= field
     - @teachers.each do |teacher|
