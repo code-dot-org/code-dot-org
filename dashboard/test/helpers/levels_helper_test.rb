@@ -1,12 +1,5 @@
 require 'test_helper'
 
-# Mock the ChannelsApi to generate random tokens
-class ChannelsApi
-  def self.call(_)
-    [nil, {'Location' => "/#{rand}"}]
-  end
-end
-
 class LevelsHelperTest < ActionView::TestCase
   include Devise::TestHelpers
   include LocaleHelper
@@ -20,8 +13,10 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create(:maze, level_num: 'custom')
 
     def request
-      OpenStruct.new(env: {}, headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) ' \
-      'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36'))
+      OpenStruct.new(
+        env: {},
+        headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36')
+      )
     end
 
     self.stubs(:current_user).returns nil
@@ -238,7 +233,6 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'submittable level is submittable for student with teacher' do
     @level = create(:applab, submittable: true)
-    @level.stubs(:channel_backed?).returns(false)
 
     user = create(:follower).student_user
     sign_in user
@@ -250,7 +244,6 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'submittable level is not submittable for student without teacher' do
     @level = create(:applab, submittable: true)
-    @level.stubs(:channel_backed?).returns(false)
 
     user = create :student
     sign_in user
@@ -262,7 +255,6 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'submittable level is not submittable for non-logged in user' do
     @level = create(:applab, submittable: true)
-    @level.stubs(:channel_backed?).returns(false)
 
     app_options = self.app_options # ha
     assert_equal false, app_options[:level]['submittable']

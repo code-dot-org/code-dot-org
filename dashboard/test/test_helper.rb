@@ -289,3 +289,19 @@ def with_locale(locale)
     I18n.locale = old_locale
   end
 end
+
+# Mock StorageApps to generate random tokens
+class StorageApps
+  def initialize(_); end
+  def create(_, _)
+    SecureRandom.base64 18
+  end
+  def most_recent(_)
+    create(nil, nil)
+  end
+end
+
+# Mock storage_id to generate random IDs
+def storage_id(_)
+  SecureRandom.hex
+end
