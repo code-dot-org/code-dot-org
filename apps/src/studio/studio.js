@@ -2944,16 +2944,17 @@ Studio.animateGoals = function() {
       }
 
       if (fade) {
-        var fadeTime = 350;
+        var fadeTime = constants.GOAL_FADE_TIME;
 
         if (goal.startFadeTime) {
           var opacity = 1 - (currentTime - goal.startFadeTime) / fadeTime;
 
           if (opacity < 0) {
+            opacity = 0;
             goal.startFadeTime = null;
-          } else {
-            goalSprite.setAttribute('opacity', opacity);
           }
+          
+          goalSprite.setAttribute('opacity', opacity);
         }
       }
     }
