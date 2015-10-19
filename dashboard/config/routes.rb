@@ -17,6 +17,7 @@ Dashboard::Application.routes.draw do
     end
   end
   resources :activity_hints, only: [:update]
+  resources :hint_view_requests, only: [:create]
   resources :callouts
   resources :videos do
     collection do
@@ -198,6 +199,8 @@ Dashboard::Application.routes.draw do
 
   post '/report_abuse', :to => 'report_abuse#report_abuse'
   get '/report_abuse', :to => 'report_abuse#report_abuse_form'
+
+  get '/too_young', :to => redirect { |p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
