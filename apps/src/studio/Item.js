@@ -25,7 +25,7 @@ var Item = function (options) {
   this.renderScale = options.renderScale || 1;
   this.displayDir = Direction.SOUTH;
   this.startFadeTime = null;
-  this.fadeTime = 350;
+  this.fadeTime = constants.ITEM_FADE_TIME;
 
   this.currentFrame_ = 0;
   this.animator_ = window.setInterval(function () {
