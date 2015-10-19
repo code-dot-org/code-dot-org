@@ -2738,6 +2738,326 @@ script_level_34_398:
   stage_id: 232
   position: 4
   assessment: 
+script_level_37_2231:
+  id: 1234
+  level_id: 2231
+  script_id: 37
+  chapter: 1
+  created_at: 2015-10-16 22:37:44.000000000 Z
+  updated_at: 2015-10-16 22:37:44.000000000 Z
+  stage_id: 245
+  position: 1
+  assessment: 
+script_level_37_2023:
+  id: 1235
+  level_id: 2023
+  script_id: 37
+  chapter: 2
+  created_at: 2015-10-16 22:37:44.000000000 Z
+  updated_at: 2015-10-16 22:37:44.000000000 Z
+  stage_id: 245
+  position: 2
+  assessment: 
+script_level_37_1968:
+  id: 1236
+  level_id: 1968
+  script_id: 37
+  chapter: 3
+  created_at: 2015-10-16 22:37:44.000000000 Z
+  updated_at: 2015-10-16 22:37:44.000000000 Z
+  stage_id: 245
+  position: 3
+  assessment: 
+script_level_37_1488:
+  id: 1237
+  level_id: 1488
+  script_id: 37
+  chapter: 4
+  created_at: 2015-10-16 22:37:44.000000000 Z
+  updated_at: 2015-10-16 22:37:44.000000000 Z
+  stage_id: 245
+  position: 4
+  assessment: 
+script_level_37_2631:
+  id: 1238
+  level_id: 2631
+  script_id: 37
+  chapter: 5
+  created_at: 2015-10-16 22:37:44.000000000 Z
+  updated_at: 2015-10-16 22:37:44.000000000 Z
+  stage_id: 245
+  position: 5
+  assessment: 
+script_level_37_1812:
+  id: 1239
+  level_id: 1812
+  script_id: 37
+  chapter: 6
+  created_at: 2015-10-16 22:37:44.000000000 Z
+  updated_at: 2015-10-16 22:37:44.000000000 Z
+  stage_id: 245
+  position: 6
+  assessment: 
+script_level_37_2182:
+  id: 1240
+  level_id: 2182
+  script_id: 37
+  chapter: 7
+  created_at: 2015-10-16 22:37:44.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 246
+  position: 1
+  assessment: 
+script_level_37_2001:
+  id: 1241
+  level_id: 2001
+  script_id: 37
+  chapter: 8
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 246
+  position: 2
+  assessment: 
+script_level_37_2540:
+  id: 1242
+  level_id: 2540
+  script_id: 37
+  chapter: 9
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 246
+  position: 3
+  assessment: 
+script_level_37_1598:
+  id: 1243
+  level_id: 1598
+  script_id: 37
+  chapter: 10
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 246
+  position: 4
+  assessment: 
+script_level_37_2230:
+  id: 1244
+  level_id: 2230
+  script_id: 37
+  chapter: 11
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 246
+  position: 5
+  assessment: 
+script_level_37_2261:
+  id: 1245
+  level_id: 2261
+  script_id: 37
+  chapter: 12
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 246
+  position: 6
+  assessment: 
+script_level_37_2193:
+  id: 1246
+  level_id: 2193
+  script_id: 37
+  chapter: 13
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 247
+  position: 1
+  assessment: 
+script_level_37_2425:
+  id: 1247
+  level_id: 2425
+  script_id: 37
+  chapter: 14
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 247
+  position: 2
+  assessment: 
+script_level_37_2695:
+  id: 1248
+  level_id: 2695
+  script_id: 37
+  chapter: 15
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 247
+  position: 3
+  assessment: 
+script_level_37_2636:
+  id: 1249
+  level_id: 2636
+  script_id: 37
+  chapter: 16
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 248
+  position: 1
+  assessment: 
+script_level_37_447:
+  id: 1250
+  level_id: 447
+  script_id: 37
+  chapter: 17
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 248
+  position: 2
+  assessment: 
+script_level_37_449:
+  id: 1251
+  level_id: 449
+  script_id: 37
+  chapter: 18
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 248
+  position: 3
+  assessment: 
+script_level_37_450:
+  id: 1252
+  level_id: 450
+  script_id: 37
+  chapter: 19
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 248
+  position: 4
+  assessment: 
+script_level_37_452:
+  id: 1253
+  level_id: 452
+  script_id: 37
+  chapter: 20
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 248
+  position: 5
+  assessment: 
+script_level_37_453:
+  id: 1254
+  level_id: 453
+  script_id: 37
+  chapter: 21
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 248
+  position: 6
+  assessment: 
+script_level_37_454:
+  id: 1255
+  level_id: 454
+  script_id: 37
+  chapter: 22
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 248
+  position: 7
+  assessment: 
+script_level_37_455:
+  id: 1256
+  level_id: 455
+  script_id: 37
+  chapter: 23
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 248
+  position: 8
+  assessment: 
+script_level_37_456:
+  id: 1257
+  level_id: 456
+  script_id: 37
+  chapter: 24
+  created_at: 2015-10-16 22:37:45.000000000 Z
+  updated_at: 2015-10-16 22:37:45.000000000 Z
+  stage_id: 248
+  position: 9
+  assessment: 
+script_level_37_457:
+  id: 1258
+  level_id: 457
+  script_id: 37
+  chapter: 25
+  created_at: 2015-10-16 22:37:46.000000000 Z
+  updated_at: 2015-10-16 22:37:46.000000000 Z
+  stage_id: 248
+  position: 10
+  assessment: 
+script_level_37_2196:
+  id: 1259
+  level_id: 2196
+  script_id: 37
+  chapter: 26
+  created_at: 2015-10-16 22:37:46.000000000 Z
+  updated_at: 2015-10-16 22:37:46.000000000 Z
+  stage_id: 249
+  position: 1
+  assessment: 
+script_level_37_2282:
+  id: 1260
+  level_id: 2282
+  script_id: 37
+  chapter: 27
+  created_at: 2015-10-16 22:37:46.000000000 Z
+  updated_at: 2015-10-16 22:37:46.000000000 Z
+  stage_id: 249
+  position: 2
+  assessment: 
+script_level_37_2356:
+  id: 1261
+  level_id: 2356
+  script_id: 37
+  chapter: 28
+  created_at: 2015-10-16 22:37:46.000000000 Z
+  updated_at: 2015-10-16 22:37:46.000000000 Z
+  stage_id: 249
+  position: 3
+  assessment: 
+script_level_37_2211:
+  id: 1262
+  level_id: 2211
+  script_id: 37
+  chapter: 29
+  created_at: 2015-10-16 22:37:46.000000000 Z
+  updated_at: 2015-10-16 22:37:46.000000000 Z
+  stage_id: 250
+  position: 1
+  assessment: 
+script_level_37_2123:
+  id: 1263
+  level_id: 2123
+  script_id: 37
+  chapter: 30
+  created_at: 2015-10-16 22:37:46.000000000 Z
+  updated_at: 2015-10-16 22:37:46.000000000 Z
+  stage_id: 250
+  position: 2
+  assessment: 
+script_level_37_1899:
+  id: 1264
+  level_id: 1899
+  script_id: 37
+  chapter: 31
+  created_at: 2015-10-16 22:37:46.000000000 Z
+  updated_at: 2015-10-16 22:37:46.000000000 Z
+  stage_id: 250
+  position: 3
+  assessment: 
+script_level_37_2331:
+  id: 1265
+  level_id: 2331
+  script_id: 37
+  chapter: 32
+  created_at: 2015-10-16 22:37:46.000000000 Z
+  updated_at: 2015-10-16 22:37:46.000000000 Z
+  stage_id: 250
+  position: 4
+  assessment: 
 script_level_6_2923:
   id: 154
   level_id: 2923
