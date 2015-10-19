@@ -26,7 +26,7 @@ class FilesApi < Sinatra::Base
     case endpoint
     when 'assets'
       # Only allow specific image and sound types to be uploaded by users.
-      %w(.jpg .jpeg .gif .png .mp3).include? extension
+      %w(.jpg .jpeg .gif .png .mp3).include? extension.downcase
     when 'sources'
       # Only allow JavaScript and Blockly XML source files.
       %w(.js .xml .txt .json).include? extension
