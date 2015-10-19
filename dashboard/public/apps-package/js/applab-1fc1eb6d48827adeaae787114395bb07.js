@@ -8032,9 +8032,8 @@ module.exports = {
   // Seems a little like we should always get the lowest available (as in step 3)
   // or always get the next (as in step 2)
   getUnusedElementId: function (prefix) {
-    var designModeViz = $('#designModeViz');
     var i = nextElementIdMap[prefix] || 1;
-    while (designModeViz.find("#" + prefix + i).length !== 0) {
+    while (elementUtils.getPrefixedElementById(prefix + i)) {
       i++;
     }
     nextElementIdMap[prefix] = i + 1;
