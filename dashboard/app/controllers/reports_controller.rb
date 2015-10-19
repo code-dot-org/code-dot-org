@@ -56,13 +56,14 @@ SQL
     render 'usage', formats: [:html]
   end
 
-  def search_for_teachers
+  def csp_pd_responses
     authorize! :read, :reports
 
-    email_filter = "%#{params[:emailFilter]}%"
-    address_filter = "#{params[:addressFilter]}%"
-
-    @teachers = User.limit(100).where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id').pluck(:id, :name, :email, :full_address, 'COUNT(followers.id) AS num_students')
+    @headers = ['ID', 'Level ID', 'Data']
+    @responses3911 = LevelSource.limit(50).where(level_id: 3911).pluck(:id, :level_id, :data)
+    @responses3909 = LevelSource.limit(50).where(level_id: 3909).pluck(:id, :level_id, :data)
+    @responses3910 = LevelSource.limit(50).where(level_id: 3910).pluck(:id, :level_id, :data)
+    @responses3907 = LevelSource.limit(50).where(level_id: 3907).pluck(:id, :level_id, :data)
   end
 
   def admin_stats
