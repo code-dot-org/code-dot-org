@@ -182,7 +182,7 @@ Breakfast and lunch will be served.
 <i><b>Group 1</i></b><br/>
 Loyola University - Water Tower Campus<br/> 
 Corboy Law Center <br/>
-Room CLC 302<br/>
+Room CLC 205<br/>
 25 E Pearson St<br/> 
 Chicago, IL 60611
 
