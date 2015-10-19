@@ -19,7 +19,7 @@ Category: Turtle
 
 [short_description]
 
-Moves the turtle forward a given number of pixels in its current direction.
+Moves the turtle forward a given number of pixels in the current direction.
 
 [/short_description]
 
@@ -43,18 +43,16 @@ ____________________________________________________
 
 [example]
 
-**Example: Square** Draw a square with right turns only.
+**Example: Letter L** Draw the letter L with left turns only.
 
 ```
-// Draw a square with right turns only.
+// Draw the letter L with left turns only.
+turnLeft();
+turnLeft();
 moveForward();
-turnRight();
 moveForward();
-turnRight();
+turnLeft();
 moveForward();
-turnRight();
-moveForward();
-turnRight();
 ```
 
 [/example]
@@ -78,7 +76,10 @@ ____________________________________________________
 
 **Example: Lemon Popsicle** Draw a lemon popsicle by changing the pen color and width, and by specifing how many pixels the turtle should move in the direction forwards and backwards.
 
-```
+<table>
+<tr>
+<td>
+<pre>
 // Draw a lemon popsicle by changing the pen color and width
 // and by specifing how many pixels the turtle should move in the direction forwards and backwards.
 penColor("yellow");
@@ -87,9 +88,13 @@ moveForward(100);
 penWidth(5);
 penColor("brown");
 moveForward(-200);
-```
-
+</pre>
+</td>
+<td>
 <img src='https://images.code.org/9bbc8dc1d83ef8aa32029dab1237b6d5-image-1444559746146.gif' style='width: 150px;'> 
+</td>
+</tr>
+</table>
 
 [/example]
 
