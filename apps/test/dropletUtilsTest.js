@@ -21,7 +21,7 @@ describe('promptNum', function () {
     assert.strictEqual(val, 123);
   });
 
-  it('returns NaN if I enter a non-numerical value', function () {
+  it('reprompts if I enter a non-numerical value', function () {
     var prompt = sinon.stub(window, 'prompt');
     prompt.onCall(0).returns('onetwothree');
     prompt.onCall(1).returns('123');
