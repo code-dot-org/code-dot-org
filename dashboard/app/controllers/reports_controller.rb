@@ -57,6 +57,8 @@ SQL
   end
 
   def search_for_teachers
+    authorize! :read, :reports
+
     email_filter = "%#{params[:emailFilter]}%"
     address_filter = "#{params[:addressFilter]}%"
 
