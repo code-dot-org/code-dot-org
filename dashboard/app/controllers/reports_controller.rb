@@ -70,7 +70,7 @@ SQL
 
     @headers = ['Level ID', 'ID', 'Data']
     @responses = {}
-    for level_id in [3911, 3909, 3910, 3907]
+    [3911, 3909, 3910, 3907].each do |level_id|
       @responses[level_id] = LevelSource.limit(50).where(level_id: level_id).pluck(:level_id, :id, :data)
     end
   end
