@@ -4,7 +4,7 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 2 Day 17: 
 
-First, let's explore the lesson in the curriculum. To begin, find your ECS your curriculum and open to page 96.
+First, let's explore the lesson in the curriculum. To begin, find your ECS Version 5 curriculum and open to page 96.
 
 <a href="http://www.code.org/ecs#page=96" target="_blank">Access a Digital Copy of the Lesson >></a>
 
@@ -17,7 +17,10 @@ First, let's explore the lesson in the curriculum. To begin, find your ECS your 
 1. Students will be able to find the minimal spanning tree of a graph. 
 
 #### Common Difficulties
-MISSING
+
+1. The problem is not about finding a path starting at a certain node but about finding a tree that connects all the nodes with lowest cost.
+
+1. Students often solve the problem without learning the algorithm for solving Minimal Spanning Trees. Makes sure students understand the algorithm. A great resource for this might be the <a href="https://docs.google.com/document/d/1cGO6r4XccHinB1LORkVTzEEE_vehZxqQ72jIip0ZRw4/edit" target="_blank">CSP Lesson on Minimal Spanning Trees</a> .  There are lots of other graphs for them to test out their algorithm on as part of the CSP lesson.
 
 ### All Resources for This Lesson
 

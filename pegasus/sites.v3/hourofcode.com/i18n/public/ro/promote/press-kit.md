@@ -24,10 +24,10 @@ nav: promote_nav
 **1. Planifică-ti evenimentul**
 
   * Planifică o întâlnire pentru a începe evenimentul.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organizează activităţi de grup (cum ar fi o demonstraţie de activitate de programare "unplugged"), sau prezentați activităţi create şi conduse de elevi.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote#videos') %>) to inspire.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Identifică reporteri locali care se ocupă de evenimente locale despre educaţie.**
 
@@ -37,7 +37,7 @@ Caută online informațiile de contact ale reporterului. Dacă nu le găsești, 
 
 **3. Contactează media locală**
 
-Cel mai bun mod de a ajunge la ei este e-mail-ul. Ar trebui să fie scurt şi să comunice: de ce ar trebui să le pese altor persoane despre acest eveniment? Include informaţii de contact (inclusiv un număr de telefon mobil) pentru cine va accesa site-ul la eveniment. **See a [sample pitch to media](<%= resolve_url('/promote#sample-emails') %>):**
+Cel mai bun mod de a ajunge la ei este e-mail-ul. Ar trebui să fie scurt şi să comunice: de ce ar trebui să le pese altor persoane despre acest eveniment? Include informaţii de contact (inclusiv un număr de telefon mobil) pentru cine va accesa site-ul la eveniment. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Pregătește raspunsuri la întrebări despre evenimentul dumneavoastră. Iată câteva exemple:**
 

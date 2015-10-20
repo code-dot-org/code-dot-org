@@ -13,7 +13,7 @@ nav: promote_nav
   
 
 
-Go to [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to find state specific information about computer science.
+このページに行き、[<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) コンピュータサイエンスに関する州ごとの情報を探してみてください。 
 
 **Title: コンピューティング…仕事のありか**
 
@@ -37,14 +37,14 @@ Go to [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org
 
 **[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+1 つの有望な解決策は、コンピュータサイエンスの授業で、高校の数学や理科の卒業要件を満たすことができるようにすることでしょう。 **[県名]**において、コンピュータサイエンスは選択授業です。 大学に入学するために他の教科を選択するために、生徒は選択科目としてコンピュータサイエンスを選ぶ余裕がありません。 そして、それを変えることはとても大きなインパクトを与えることができるのです。 コンピュータ サイエンスのコースが卒業の要件としてカウントされている州においては、コンピュータサイエンスのコースは少数派民族の参加により、コンピュータサイエンスを選択授業として扱っている州より50％も大きいものとなっています。
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+また、私たちは若い世代の学生のためにも、彼らのコンピュータサイエンスやコーディングに対する興味を刺戟するために動くべきです。 私たちの子供は、ただアプリを使いゲームで遊ぶのではいけません。 彼らはそれらをどのように作るかを学ぶべきなのです。 子供達は早ければ小学2年生でコーディングの基礎を学ぶことができます。
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+私たちはさらにコンピュータサイエンスの先生を募集し、彼らの分野の専門的な開発を奨励する必要が有ります。 今日、世の中にはたくさんのオンラインの資料があます。先生はそれらの資料を使うことにより、生徒のために最新のテクノロジーに触れることができます。
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+労働統計局によると、2020年までには920万もの科学・技術・エンジニアリング・数学に関する分野の仕事があると予測されています。 それらの半分にあたる460万の仕事はコンピューティングや情報処理技術に関する仕事となるでしょう。 そして21世紀までに、コンピュータサイエンスはどんどん基礎知識となるでしょう。 もしも私たちの子供たちが、必要とされているスキルを学ぶ機会を与えられなかったのだとしたら、誰がそれらの仕事をするのでしょうか？
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+今週、<%= campaign_date('full') %>は コンピュータサイエンス教育週間です。 **[県名]**の学校では、生徒はHour of Code に参加しているでしょう。そしてコンピュータサイエンスに関する謎を紐解き、そしてうまくいけば、彼らはさらに学びたいと思うでしょう。 私はHour of Codeに加わります。そして、あなたもHour of Codeに招待します。 全ての人がプログラミングを学ぶべきなのです。 Hour of Codeで始めましょう。さらに情報を知るために是非サイトを訪れてください。 https://hourofcode.com/<%= @country %> そして、**[県名]** でより多くの学校にコンピューター科学をもたらすための私たちの活動をサポートしてください。.
 
 <%= view :signup_button %>

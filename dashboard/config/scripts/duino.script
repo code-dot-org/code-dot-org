@@ -1,0 +1,5 @@
+stage 'Experimenting with Arduino stuff'
+
+stage 'Basic Circuits'
+level 'duino battery led'
+level 'duino button led'

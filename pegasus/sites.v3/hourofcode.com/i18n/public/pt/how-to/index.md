@@ -11,9 +11,9 @@ nav: how_to_nav
 ## 1) Cadastre-se
 
   * Cadastre-se para sediar uma [Hora do Código](<%= resolve_url('/') %>) durante <%= campaign_date('short') %>.
-  * Promova seu evento da [Hora do Código](<%= resolve_url('/resources') %>) e incentive outras pessoas a organizarem eventos também.
+  * Promova seu evento da [Hora do Código](<%= resolve_url('/promote') %>) e incentive outras pessoas a organizarem eventos também.
 
-## 2) Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Escolha um tutorial:
 
 Teremos uma grande variedade de [tutoriais divertidos de uma hora de duração](<%= resolve_url('https://code.org/learn') %>) para alunos de todas as idades, criados por diversos parceiros. *Novos tutoriais estão a caminho para dar início à Hora do Código antes de <%= campaign_date('full') %>.* [Experimente os tutoriais atuais.](<%= resolve_url("https://code.org/learn") %>)
@@ -43,7 +43,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 **Mostre um vídeo inspirador:**
 
   * O vídeo original de lançamento da Code.org, com a participação de Bill Gates, Mark Zuckerberg e o astro da NBA, Chris Bosh (há versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * O [vídeo de lançamento da Hora do Código de 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou o <% if @country == 'uk' %> [vídeo da Hora do Código de 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [vídeo da Hora do Código de 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * O [vídeo de lançamento da Hora do Código de 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou o <% if @country == 'uk' %> [vídeo da Hora do Código de 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [vídeo da Hora do Código de 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [O vídeo do presidente Obama convidando todos os alunos a aprender ciência da computação](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Encontre outros vídeos inspiradores [aqui](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -53,7 +53,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
   * Em uma atividade com a turma toda, monte uma lista com as coisas que usam a programação na vida cotidiana.
   * Veja algumas dicas para deixar as meninas interessadas em ciência da computação [aqui](<%= resolve_url('https://code.org/girls') %>).
 
-**Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
+**Precisa de mais orientação?** Baixe este [modelo de plano de aula](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
 **Quer mais idéias de ensino?** Confira as [melhores práticas](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) de educadores experientes.
 
@@ -93,7 +93,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 ## 7) Comemore
 
   * [Imprima certificados](<%= resolve_url('https://code.org/certificates') %>) para seus alunos.
-  * Imprima adesivos com a mensagem ["Eu participei da Hora do Código!"](<%= resolve_url('/resources/promote#stickers') %>) para seus alunos.
+  * Imprima adesivos com a mensagem ["Eu participei da Hora do Código!"](<%= resolve_url('/promote/resources#stickers') %>) para seus alunos.
   * Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso, também!
 
 [col-33]
@@ -120,7 +120,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 
 ## Outros recursos da Hora do Código para educadores:
 
-  * Use this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx) to organize your Hour of Code.
+  * Use este[modelo de plano de aula](/files/EducatorHourofCodeLessonPlanOutline.docx) para organizar a Hora do Código.
   * Confira as [melhores práticas](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) dos professores que já trabalharam na Hora do Código. 
   * Participe do nosso webinar [Guia da Hora do Código para Educadores](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
   * Visite o [Fórum da Hora do Código para Professores](http://forum.code.org/c/plc/hour-of-code) para conseguir conselhos, ideias e apoio de outros educadores. <% if @country == 'us' %>

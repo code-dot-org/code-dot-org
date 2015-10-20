@@ -227,7 +227,7 @@ NetSimRouterLogModal.prototype.render = function () {
   if (rows.length === MAXIMUM_ROWS_IN_FULL_RENDER) {
     var maxRenderedWarning = document.createElement('div');
     maxRenderedWarning.className = 'log-browser-limit-message';
-    maxRenderedWarning.innerText = i18n.showingFirstXLogEntries({
+    maxRenderedWarning.textContent = i18n.showingFirstXLogEntries({
       x: MAXIMUM_ROWS_IN_FULL_RENDER
     });
     this.rootDiv_.find('table').after(maxRenderedWarning);
@@ -360,7 +360,7 @@ NetSimRouterLogModal.prototype.makeTableRow_ = function (logEntry) {
 function makeCell(text) {
   var td = document.createElement('td');
   td.style.whiteSpace = 'nowrap';
-  td.innerText = text;
+  td.textContent = text;
   return td;
 }
 

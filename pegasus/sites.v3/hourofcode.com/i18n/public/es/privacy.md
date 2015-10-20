@@ -1,10 +1,10 @@
 ---
 
-titulo: Política de Privacidad
+title: Política de Privacidad
 
 ---
 
-### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Política de Privacidad
 
@@ -16,7 +16,7 @@ Code.org® es una organización no lucrativa dedicada a expander la participaci�
 
 Por favor lea cuidadosamente esta política de privacidad ("**Aviso de privacidad**") antes de acceder o utilizar el sitio Web.
 
-## Code.org Principios de privacidad
+## Principios de privacidad de Code.org
 
 Nuestro aviso de privacidad es impulsado por nuestro compromiso a los siguientes principios de privacidad:
 
@@ -39,11 +39,11 @@ De tiempo en tiempo nuestro aviso de privacidad cambiará. Code.org notificará 
 
 La sección a continuación describe la manera en que Code.org recopila y utiliza el nombre, correo electrónico, nombre y dirección de la escuela, o otra información de identificación personal de los usuarios(**Información Personal**"), como información no-personal e información técnica (descrita abajo) que recopilamos.
 
-**La Hora de Código**: Code.org no recopila cualquier información personal de los estudiantes participantes en la Hora de Código. Los tutoriales de Hora de Código no requieren login para utilizarse.
+**La Hora de Código**: Code.org no recopila ninguna información personal de los estudiantes participantes en la Hora de Código. Los tutoriales de Hora de Código no necesitan login para utilizarse.
 
 **Code Studio**: La siguiente tabla describe los datos que Code.org recopila de los Usuarios registrados en la plataforma Code Studio de tutoriales. Usted puede probar todos los tutoriales de Code Studio sin crear una cuenta, pero su progreso de aprendizaje no se guardará.
 
-| Datos almacenados por Code.org si Usted crea un cuenta de estudiante en Code Studio                                                                                                                                                                     | ¿Requeridos?                                                                                                                                   | Como son utilizados estos datos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Datos almacenados por Code.org si Usted crea un cuenta de estudiante en Code Studio                                                                                                                                                                     | ¿Requerido?                                                                                                                                    | Como se utilizan estos datos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Nombre a Mostrar (ej. "Cool Coder" o "JohnS")                                                                                                                                                                                                           | Requerido                                                                                                                                      | Proporcionar a los alumnos una bienvenida al iniciar la sesión , para identificar al estudiante , en la vista de profesor sobre el progreso del estudiante , y cuando mostrando las creaciones-código del estudiante.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Progreso en el curso</br>  

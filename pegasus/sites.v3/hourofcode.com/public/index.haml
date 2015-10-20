@@ -5,9 +5,9 @@ title: "<%= hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('short'))
 social:
   "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
   "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/code-video-thumbnail.jpg"
+  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
   "og:image:width": 1440
-  "og:image:height": 810
+  "og:image:height": 900
   "og:url": "http://<%=request.host%>"
 
   "twitter:card": player
@@ -15,10 +15,7 @@ social:
   "twitter:url": "http://<%=request.host%>"
   "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/code-video-thumbnail.jpg?456"
-  "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
-  "twitter:player:width": 1920
-  "twitter:player:height": 1080
+  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
 
 -facebook = {:u=>"http://#{request.host}/us"}
@@ -200,7 +197,7 @@ social:
         .col-md-1
         .col-md-5
           =view :join_us_description
-          =view :whats_next
+          =view :prizes_announce
 
   -# FAQ
 

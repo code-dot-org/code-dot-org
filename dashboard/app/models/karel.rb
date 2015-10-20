@@ -112,6 +112,7 @@ class Karel < Maze
       <block type="bee_ifelseNectarAmount"></block>
       <block type="bee_ifTotalNectar"></block>
       <block type="bee_ifelseTotalNectar"></block>
+      <block type="bee_ifOnlyFlower"></block>
       <block type="bee_ifFlower"></block>
       <block type="bee_ifElseFlower"></block>
       <block type="bee_whileNectarAmount"></block>

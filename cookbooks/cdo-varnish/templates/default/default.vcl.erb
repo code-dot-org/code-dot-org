@@ -423,7 +423,7 @@ end
 
   # For the following file types, blow away the cookie (unless under one of the
   # blacklisted paths), so that we always cache.
-  if (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js)(\?[a-z0-9]+)?$" &&
+  if (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js|ttf|woff|woff2)(\?[a-z0-9]+)?$" &&
       !(req.url ~ "^/api/") &&
       !(req.url ~ "^/v3/assets/") &&
       (req.request == "GET" || req.request == "HEAD")) {
@@ -452,7 +452,7 @@ end
         req.url ~ "^/ops-dashboard" ||
         req.url ~ "^/poste"
       ) {
-      cookie.filter_except("<%=[session_cookie,deprecated_storage_cookie,storage_id_cookie].join(',')%>,language_,progress,lines,hour_of_code,NO_CACHE");
+      cookie.filter_except("<%=[session_cookie,deprecated_storage_cookie,storage_id_cookie].join(',')%>,language_,progress,lines,scripts,videos_seen,callouts_seen,hour_of_code,NO_CACHE");
     } else {
       cookie.filter_except("NO_CACHE");
     }

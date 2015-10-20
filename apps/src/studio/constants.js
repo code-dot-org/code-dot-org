@@ -55,6 +55,35 @@ frameDirTableWalking[Dir.SOUTHWEST]  = 7;
 
 exports.frameDirTableWalking = frameDirTableWalking;
 
+
+// Normal for preview
+var frameDirTableWalkingWithIdle = {};
+frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
+frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
+frameDirTableWalkingWithIdle[Dir.SOUTHEAST]  = 1;
+frameDirTableWalkingWithIdle[Dir.EAST]       = 2;
+frameDirTableWalkingWithIdle[Dir.NORTHEAST]  = 3;
+frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
+frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 5;
+frameDirTableWalkingWithIdle[Dir.WEST]       = 6;
+frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 7;
+
+/*
+// Reversed for final
+var frameDirTableWalkingWithIdle = {};
+frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
+frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
+frameDirTableWalkingWithIdle[Dir.SOUTHEAST]  = 7;
+frameDirTableWalkingWithIdle[Dir.EAST]       = 6;
+frameDirTableWalkingWithIdle[Dir.NORTHEAST]  = 5;
+frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
+frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 3;
+frameDirTableWalkingWithIdle[Dir.WEST]       = 2;
+frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 1;
+*/
+
+exports.frameDirTableWalkingWithIdle = frameDirTableWalkingWithIdle;
+
 /**
  * Given a direction, returns the unit vector for it.
  */
@@ -111,6 +140,7 @@ exports.NextTurn[Dir.NORTH] = {};
 exports.NextTurn[Dir.NORTH][Dir.NORTH] = Dir.NORTH;
 exports.NextTurn[Dir.NORTH][Dir.EAST] = Dir.NORTHEAST;
 exports.NextTurn[Dir.NORTH][Dir.SOUTH] = Dir.NORTHEAST;
+exports.NextTurn[Dir.NORTH][Dir.NONE] = Dir.NORTHEAST;
 exports.NextTurn[Dir.NORTH][Dir.WEST] = Dir.NORTHWEST;
 exports.NextTurn[Dir.NORTH][Dir.NORTHEAST] = Dir.NORTHEAST;
 exports.NextTurn[Dir.NORTH][Dir.SOUTHEAST] = Dir.NORTHEAST;
@@ -121,6 +151,7 @@ exports.NextTurn[Dir.EAST] = {};
 exports.NextTurn[Dir.EAST][Dir.NORTH] = Dir.NORTHEAST;
 exports.NextTurn[Dir.EAST][Dir.EAST] = Dir.EAST;
 exports.NextTurn[Dir.EAST][Dir.SOUTH] = Dir.SOUTHEAST;
+exports.NextTurn[Dir.EAST][Dir.NONE] = Dir.SOUTHEAST;
 exports.NextTurn[Dir.EAST][Dir.WEST] = Dir.SOUTHEAST;
 exports.NextTurn[Dir.EAST][Dir.NORTHEAST] = Dir.NORTHEAST;
 exports.NextTurn[Dir.EAST][Dir.SOUTHEAST] = Dir.SOUTHEAST;
@@ -131,6 +162,7 @@ exports.NextTurn[Dir.SOUTH] = {};
 exports.NextTurn[Dir.SOUTH][Dir.NORTH] = Dir.SOUTHEAST;
 exports.NextTurn[Dir.SOUTH][Dir.EAST] = Dir.SOUTHEAST;
 exports.NextTurn[Dir.SOUTH][Dir.SOUTH] = Dir.SOUTH;
+exports.NextTurn[Dir.SOUTH][Dir.NONE] = Dir.NONE;
 exports.NextTurn[Dir.SOUTH][Dir.WEST] = Dir.SOUTHWEST;
 exports.NextTurn[Dir.SOUTH][Dir.NORTHEAST] = Dir.SOUTHEAST;
 exports.NextTurn[Dir.SOUTH][Dir.SOUTHEAST] = Dir.SOUTHEAST;
@@ -141,6 +173,7 @@ exports.NextTurn[Dir.WEST] = {};
 exports.NextTurn[Dir.WEST][Dir.NORTH] = Dir.NORTHWEST;
 exports.NextTurn[Dir.WEST][Dir.EAST] = Dir.SOUTHWEST;
 exports.NextTurn[Dir.WEST][Dir.SOUTH] = Dir.SOUTHWEST;
+exports.NextTurn[Dir.WEST][Dir.NONE] = Dir.SOUTHWEST;
 exports.NextTurn[Dir.WEST][Dir.WEST] = Dir.WEST;
 exports.NextTurn[Dir.WEST][Dir.NORTHEAST] = Dir.NORTHWEST;
 exports.NextTurn[Dir.WEST][Dir.SOUTHEAST] = Dir.SOUTHWEST;
@@ -151,6 +184,7 @@ exports.NextTurn[Dir.NORTHEAST] = {};
 exports.NextTurn[Dir.NORTHEAST][Dir.NORTH] = Dir.NORTH;
 exports.NextTurn[Dir.NORTHEAST][Dir.EAST] = Dir.EAST;
 exports.NextTurn[Dir.NORTHEAST][Dir.SOUTH] = Dir.EAST;
+exports.NextTurn[Dir.NORTHEAST][Dir.NONE] = Dir.EAST;
 exports.NextTurn[Dir.NORTHEAST][Dir.WEST] = Dir.NORTH;
 exports.NextTurn[Dir.NORTHEAST][Dir.NORTHEAST] = Dir.NORTHEAST;
 exports.NextTurn[Dir.NORTHEAST][Dir.SOUTHEAST] = Dir.EAST;
@@ -161,6 +195,7 @@ exports.NextTurn[Dir.SOUTHEAST] = {};
 exports.NextTurn[Dir.SOUTHEAST][Dir.NORTH] = Dir.EAST;
 exports.NextTurn[Dir.SOUTHEAST][Dir.EAST] = Dir.EAST;
 exports.NextTurn[Dir.SOUTHEAST][Dir.SOUTH] = Dir.SOUTH;
+exports.NextTurn[Dir.SOUTHEAST][Dir.NONE] = Dir.SOUTH;
 exports.NextTurn[Dir.SOUTHEAST][Dir.WEST] = Dir.SOUTH;
 exports.NextTurn[Dir.SOUTHEAST][Dir.NORTHEAST] = Dir.EAST;
 exports.NextTurn[Dir.SOUTHEAST][Dir.SOUTHEAST] = Dir.SOUTHEAST;
@@ -171,6 +206,7 @@ exports.NextTurn[Dir.SOUTHWEST] = {};
 exports.NextTurn[Dir.SOUTHWEST][Dir.NORTH] = Dir.WEST;
 exports.NextTurn[Dir.SOUTHWEST][Dir.EAST] = Dir.SOUTH;
 exports.NextTurn[Dir.SOUTHWEST][Dir.SOUTH] = Dir.SOUTH;
+exports.NextTurn[Dir.SOUTHWEST][Dir.NONE] = Dir.SOUTH;
 exports.NextTurn[Dir.SOUTHWEST][Dir.WEST] = Dir.WEST;
 exports.NextTurn[Dir.SOUTHWEST][Dir.NORTHEAST] = Dir.SOUTH;
 exports.NextTurn[Dir.SOUTHWEST][Dir.SOUTHEAST] = Dir.SOUTH;
@@ -181,12 +217,23 @@ exports.NextTurn[Dir.NORTHWEST] = {};
 exports.NextTurn[Dir.NORTHWEST][Dir.NORTH] = Dir.NORTH;
 exports.NextTurn[Dir.NORTHWEST][Dir.EAST] = Dir.NORTH;
 exports.NextTurn[Dir.NORTHWEST][Dir.SOUTH] = Dir.WEST;
+exports.NextTurn[Dir.NORTHWEST][Dir.NONE] = Dir.WEST;
 exports.NextTurn[Dir.NORTHWEST][Dir.WEST] = Dir.WEST;
 exports.NextTurn[Dir.NORTHWEST][Dir.NORTHEAST] = Dir.NORTH;
 exports.NextTurn[Dir.NORTHWEST][Dir.SOUTHEAST] = Dir.WEST;
 exports.NextTurn[Dir.NORTHWEST][Dir.SOUTHWEST] = Dir.WEST;
 exports.NextTurn[Dir.NORTHWEST][Dir.NORTHWEST] = Dir.NORTHWEST;
 
+exports.NextTurn[Dir.NONE] = {};
+exports.NextTurn[Dir.NONE][Dir.NORTH] = Dir.SOUTHEAST;
+exports.NextTurn[Dir.NONE][Dir.EAST] = Dir.SOUTHEAST;
+exports.NextTurn[Dir.NONE][Dir.SOUTH] = Dir.SOUTH;
+exports.NextTurn[Dir.NONE][Dir.NONE] = Dir.NONE;
+exports.NextTurn[Dir.NONE][Dir.WEST] = Dir.SOUTHWEST;
+exports.NextTurn[Dir.NONE][Dir.NORTHEAST] = Dir.SOUTHEAST;
+exports.NextTurn[Dir.NONE][Dir.SOUTHEAST] = Dir.SOUTHEAST;
+exports.NextTurn[Dir.NONE][Dir.SOUTHWEST] = Dir.SOUTHWEST;
+exports.NextTurn[Dir.NONE][Dir.NORTHWEST] = Dir.SOUTHWEST;
 
 exports.Emotions = {
   NORMAL: 0,

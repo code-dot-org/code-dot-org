@@ -24,10 +24,10 @@ nav: promote_nav
 **1. Etkinliğinizi planlayın**
 
   * Kodlama Saatini başlatmak için bir toplantı planlayın.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Grup aktiviteleri organize edin (çevrimdışı bir programlama aktivitesinin denemesi gibi), ya da öğrenciler tarafından yaratılmış ve yönetilmiş aktiviteleri yapın.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote#videos') %>) to inspire.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Eğitim veya yerel haberleri konu edinen yerel gazetecileri saptayın.**
 
@@ -37,7 +37,7 @@ Gazetecilerin iletişim bilgilerini internetten araştırın. Bulamazsanız, sor
 
 **3. Yerel medyaya ulaşın**
 
-En iyi yol e-posta ile ulaşmaktır. Kısa ve öz olmalı: Neden bu etkinlik diğer insanların da ilgisini çeker? Etkinlikte sahada olacak kişilerin iletişim bilgilerini dahil edin (cep telefonu numaraları dahil). **See a [sample pitch to media](<%= resolve_url('/promote#sample-emails') %>):**
+En iyi yol e-posta ile ulaşmaktır. Kısa ve öz olmalı: Neden bu etkinlik diğer insanların da ilgisini çeker? Etkinlikte sahada olacak kişilerin iletişim bilgilerini dahil edin (cep telefonu numaraları dahil). **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Okul etkinliğinizle ilgili sorulara cevap vermeye hazırlanın. İşte bazı örnekler:**
 

@@ -224,6 +224,25 @@ task :build => ['build:all']
 ##
 ##################################################################################################
 
+# Whether this is a development or adhoc environment where we should install npm and create
+# a local database.
+def local_environment?
+  (rack_env?(:development) && !CDO.chef_managed) || rack_env?(:adhoc)
+end
+
+def install_npm
+  if OS.linux?
+    RakeUtils.system 'sudo apt-get install -y nodejs npm'
+    RakeUtils.system 'sudo ln -s -f /usr/bin/nodejs /usr/bin/node'
+    RakeUtils.system 'sudo npm install -g npm@2.9.1'
+    RakeUtils.npm_install_g 'grunt-cli'
+  elsif OS.mac?
+    RakeUtils.system 'brew install node'
+    RakeUtils.system 'npm', 'update', '-g', 'npm'
+    RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
+  end
+end
+
 namespace :install do
 
   # Create a symlink in the public directory that points at the appropriate blockly
@@ -239,9 +258,9 @@ namespace :install do
 
   task :hooks do
     files = [
-      'pre-commit',
-      'post-checkout',
-      'post-merge',
+        'pre-commit',
+        'post-checkout',
+        'post-merge',
     ]
     git_path = ".git/hooks"
 
@@ -253,38 +272,23 @@ namespace :install do
 
 
   task :apps do
-    if rack_env?(:development) && !CDO.chef_managed
-      if OS.linux?
-        RakeUtils.npm_update_g 'npm'
-        RakeUtils.npm_install_g 'grunt-cli'
-      elsif OS.mac?
-        RakeUtils.system 'brew install node'
-        RakeUtils.system 'npm', 'update', '-g', 'npm'
-        RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
-      end
+    if local_environment?
+      install_npm
     end
   end
 
   task :shared do
-    if rack_env?(:development) && !CDO.chef_managed
+    if local_environment?
       Dir.chdir(shared_js_dir) do
         shared_js_build = CDO.use_my_shared_js ? shared_js_dir('build/package') : 'shared-package'
         RakeUtils.ln_s shared_js_build, dashboard_dir('public','shared')
       end
-
-      if OS.linux?
-        RakeUtils.npm_update_g 'npm'
-        RakeUtils.npm_install_g 'grunt-cli'
-      elsif OS.mac?
-        RakeUtils.system 'brew install node'
-        RakeUtils.system 'npm', 'update', '-g', 'npm'
-        RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
-      end
+      install_npm
     end
   end
 
   task :dashboard do
-    if rack_env?(:development) && !CDO.chef_managed
+    if local_environment?
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
         puts CDO.dashboard_db_writer
@@ -295,7 +299,7 @@ namespace :install do
   end
 
   task :pegasus do
-    if rack_env?(:development) && !CDO.chef_managed
+    if local_environment?
       Dir.chdir(pegasus_dir) do
         RakeUtils.bundle_install
         create_database CDO.pegasus_db_writer
