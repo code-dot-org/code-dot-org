@@ -123,6 +123,9 @@ module LevelsHelper
 
   # Options hash for all level types
   def app_options
+    # Unsafe to generate these twice, so use the cached version if it exists.
+    return @app_options unless @app_options.nil?
+
     set_channel if @level.channel_backed?
 
     callouts = params[:share] ? [] : select_and_remember_callouts(params[:show_callouts])
@@ -139,17 +142,34 @@ module LevelsHelper
     view_options(is_channel_backed: true) if @level.channel_backed?
 
     if @level.is_a? Blockly
-      blockly_options
+      @app_options = blockly_options
     elsif @level.is_a? DSLDefined
-      dsl_defined_options
+      @app_options = dsl_defined_options
     elsif @level.is_a? Widget
-      widget_options
+      @app_options = widget_options
     elsif @level.unplugged?
-      unplugged_options
+      @app_options = unplugged_options
     else
       # currently, all levels are Blockly or DSLDefined except for Unplugged
-      view_options.camelize_keys
+      @app_options = view_options.camelize_keys
     end
+    @app_options
+  end
+
+  # Helper that renders the _apps_dependencies partial with a configuration
+  # appropriate to the level being rendered.
+  def render_app_dependencies
+    use_droplet = app_options[:droplet]
+    use_netsim = @level.game == Game.netsim
+    use_blockly = !use_droplet && !use_netsim
+    render partial: 'levels/apps_dependencies',
+           locals: {
+               app: app_options[:app],
+               use_droplet: use_droplet,
+               use_netsim: use_netsim,
+               use_blockly: use_blockly,
+               static_asset_base_path: app_options[:baseUrl]
+           }
   end
 
   # Options hash for Widget
