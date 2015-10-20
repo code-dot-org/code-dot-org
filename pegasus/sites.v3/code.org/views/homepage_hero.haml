@@ -102,6 +102,11 @@
               = I18n.t(entry[:text1_s])
           .actiongap
             &nbsp;
+      -# Japanese Campaign Site
+      - if request.language == "ja"
+        .action{style: "display: block; opacity: 0;"}
+          %a(href="http://hourofcode.jp/")
+            %button{style: "font-weight: 500; font-size: 20px; height: 50px;"} 日本での開催情報
 
 :javascript
   var petition;
