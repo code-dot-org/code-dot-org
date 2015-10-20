@@ -9,7 +9,14 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
     var oop = acerequire("ace/lib/oop");
     var JavaScriptMode = acerequire("ace/mode/javascript").Mode;
     var JavaScriptHighlightRules = acerequire("ace/mode/javascript_highlight_rules").JavaScriptHighlightRules;
-    var WorkerClient = acerequire("../worker/worker_client").WorkerClient;
+    var WorkerModule = acerequire("ace/worker/worker_client");
+    var WorkerClient = WorkerModule.WorkerClient;
+    if (!window.Worker) {
+      // If we don't support web workers, do everything on the UI thread
+      WorkerClient = WorkerModule.UIWorkerClient;
+      window.Worker = WorkerClient;
+    }
+
     var MatchingBraceOutdent = acerequire("./matching_brace_outdent").MatchingBraceOutdent;
     var CstyleBehaviour = acerequire("./behaviour/cstyle").CstyleBehaviour;
     var CStyleFoldMode = acerequire("./folding/cstyle").FoldMode;
