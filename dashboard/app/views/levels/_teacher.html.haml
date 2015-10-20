@@ -30,7 +30,7 @@
               - if @user_level.submitted?
                 #submitted
                   %div= t('teacher.panel.submitted_on')
-                  .timestamp= @user_level.updated_at
+                  .timestamp= @user_level.updated_at.iso8601
                   %button.btn.btn-info#unsubmit{"data-user-level-url" => url_for(@user_level)}
                     = t('teacher.panel.unsubmit')
                   :javascript
