@@ -17,6 +17,7 @@ Dashboard::Application.routes.draw do
     end
   end
   resources :activity_hints, only: [:update]
+  resources :hint_view_requests, only: [:create]
   resources :callouts
   resources :videos do
     collection do
@@ -171,6 +172,9 @@ Dashboard::Application.routes.draw do
 
   post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
+
+  # one-off internal reports
+  get '/admin/brook/csppd', to: 'reports#csp_pd_responses', as: 'csp_pd_responses'
 
   get '/admin/pd_progress(/:script)', to: 'reports#pd_progress', as: 'pd_progress'
   get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'reports#level_completions', as: 'level_completions'
