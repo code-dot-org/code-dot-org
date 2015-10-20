@@ -23,6 +23,7 @@
   "calloutPutCommandsTouchCharacter": "Put a command here to have it happen when you touch a character",
   "calloutClickCategory": "Click a category header to see commands in each category",
   "calloutTryOutNewCommands": "Try out all the new commands you’ve unlocked",
+  "calloutUseArrowButtons": "Hold down these buttons or the arrow keys on your keyboard to trigger the move events.",
   "catActions": "Actions",
   "catControl": "Loops",
   "catEvents": "Events",
