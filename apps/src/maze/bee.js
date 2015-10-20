@@ -139,7 +139,7 @@ Bee.prototype.getTestResults = function (terminationValue) {
     case TerminationValue.UNCHECKED_PURPLE:
     case TerminationValue.INSUFFICIENT_NECTAR:
     case TerminationValue.INSUFFICIENT_HONEY:
-      var testResults = this.studioApp_.getTestResults(this.finished());
+      var testResults = this.studioApp_.getTestResults(true);
       // If we have a non-app specific failure, we want that to take precedence.
       // Values over TOO_MANY_BLOCKS_FAIL are not true failures, but indicate
       // a suboptimal solution, so in those cases we want to return our
@@ -150,7 +150,7 @@ Bee.prototype.getTestResults = function (terminationValue) {
       return testResults;
   }
 
-  return this.studioApp_.getTestResults(this.finished());
+  return this.studioApp_.getTestResults(false);
 };
 
 /**
