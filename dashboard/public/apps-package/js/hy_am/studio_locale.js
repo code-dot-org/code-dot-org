@@ -644,4 +644,5 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedTouchAllItems":function(d){return "Next time, get all the items."},
 "failedScoreMinimum":function(d){return "Next time, reach the minimum score."},
 "failedRemovedItemCount":function(d){return "Next time, get the right number of items."},
-"failedSetActivity":function(d){return "Next time, set the correct character activity."}};
+"failedSetActivity":function(d){return "Next time, set the correct character activity."},
+"failedAddItem":function(d){return "Next time, add a character."}};

@@ -33636,6 +33636,7 @@ var JSInterpreter = module.exports = function (options) {
 
   this.paused = false;
   this.yieldExecution = false;
+  this.startedHandlingEvents = false;
   this.nextStep = StepType.RUN;
   this.maxValidCallExpressionDepth = 0;
   this.callExpressionSeenAtDepth = [];
@@ -33714,6 +33715,7 @@ JSInterpreter.StepType = {
  * optionally, callback arguments (stored in "arguments")
  */
 JSInterpreter.prototype.nativeGetCallback = function () {
+  this.startedHandlingEvents = true;
   var retVal = this.eventQueue.shift();
   if (typeof retVal === "undefined") {
     this.yield();

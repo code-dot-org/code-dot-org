@@ -4434,15 +4434,20 @@ Studio.allWhenRunBlocksComplete = function () {
 };
 
 Studio.timedOut = function() {
-  // If the only event block that had children is when_run, and those commands
-  // are finished executing, don't wait for the timeout.
-  // If we have additional event blocks that DO have children, we don't timeout
-  // until timeoutFailureTick
   if (level.timeoutAfterWhenRun) {
-    if (Studio.eventHandlers.length === 0 || (Studio.eventHandlers.length === 1 &&
-        Studio.eventHandlers[0].name === 'whenGameStarts' &&
-        Studio.allWhenRunBlocksComplete())) {
-    return true;
+    if (level.editCode) {
+      // If the interpreter has started handling events, the main body of the
+      // program is complete:
+      return Studio.JSInterpreter && Studio.JSInterpreter.startedHandlingEvents;
+    } else if (Studio.eventHandlers.length === 0 ||
+               (Studio.eventHandlers.length === 1 &&
+                  Studio.eventHandlers[0].name === 'whenGameStarts' &&
+                  Studio.allWhenRunBlocksComplete())) {
+      // If the only event block that had children is when_run, and those commands
+      // are finished executing, don't wait for the timeout.
+      // If we have additional event blocks that DO have children, we don't timeout
+      // until timeoutFailureTick
+      return true;
     }
   }
 
@@ -4583,6 +4588,10 @@ Studio.checkRequiredForSuccess = function() {
 
   if (required.scoreMinimum && Studio.playerScore < required.scoreMinimum) {
     return { exists: true, achieved: false, message: studioMsg.failedScoreMinimum() };
+  }
+
+  if (required.addItem && !tracked.hasAddedItem) {
+    return { exists: true, achieved: false, message: studioMsg.failedAddItem() };
   }
 
   if (required.removedItemCount && tracked.removedItemCount < required.removedItemCount) {
@@ -7444,6 +7453,7 @@ levels.js_hoc2015_move_right = {
   "itemGridAlignedMovement": true,
   "slowJsExecutionFactor": 10,
   "removeItemsWhenActorCollides": true,
+  "timeoutAfterWhenRun": true,
   "delayCompletion": 2000,
   "floatingScore": true,
   "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 16, 0, 1, 4,0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
@@ -7455,7 +7465,7 @@ levels.js_hoc2015_move_right = {
   },
   "callouts": [
     {
-      "id": "level:js_hoc2015_move_right:placeCommandsHere",
+      "id": "playlab:js_hoc2015_move_right:placeCommandsHere",
       "element_id": ".droplet-main-canvas",
       "hide_target_selector": ".droplet-drag-cover",
       "qtip_config": {
@@ -7659,7 +7669,6 @@ levels.js_hoc2015_event_two_items = {
   "instructions": "\"BOT1, I need you to get a critical message to the GOALs.\"",
   "instructions2": "Make BOT1 move when you hit the arrow keys.",
   "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
   "showTimeoutRect": true,
   "goalOverride": {
     "goalAnimation": "animatedGoal",
@@ -7668,7 +7677,7 @@ levels.js_hoc2015_event_two_items = {
   },
   "callouts": [
     {
-      "id": "level:js_hoc2015_event_two_items:placeCommandsHere",
+      "id": "playlab:js_hoc2015_event_two_items:placeCommandsHere",
       "element_id": ".droplet-main-canvas",
       "hide_target_selector": ".droplet-drag-cover",
       "qtip_config": {
@@ -7731,7 +7740,6 @@ levels.js_hoc2015_event_four_items = {
   "instructions": "\"Get to all the GOALs as quickly as you can.\"",
   "instructions2": "Move in all directions.",
   "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
   "showTimeoutRect": true,
   "goalOverride": {
     "goalAnimation": "animatedGoal",
@@ -7740,7 +7748,7 @@ levels.js_hoc2015_event_four_items = {
   },
   "callouts": [
     {
-      "id": "level:js_hoc2015_event_four_items:typeCommandsHere",
+      "id": "playlab:js_hoc2015_event_four_items:typeCommandsHere",
       "element_id": ".ace_scroller",
       "qtip_config": {
         "content" : {
@@ -7813,7 +7821,7 @@ levels.js_hoc2015_event_choose_character =
   "showTimeoutRect": true,
   "callouts": [
     {
-      "id": "level:js_hoc2015_event_choose_character:placeCommandsAtTop",
+      "id": "playlab:js_hoc2015_event_choose_character:placeCommandsAtTop",
       "element_id": ".droplet-main-canvas",
       "hide_target_selector": ".droplet-drag-cover",
       "qtip_config": {
@@ -7890,7 +7898,6 @@ levels.js_hoc2015_event_add_items = {
   "instructions": "\"I’m seeing signs of increased activity on this planet.\"",
   "instructions2": "Use the addCharacter(); command a couple times to add BIRDs at the start of your program.  Then, go get them.",
   "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
   "showTimeoutRect": true,
   "requiredForSuccess" : {
     "removedItemCount": 2
@@ -7957,11 +7964,10 @@ levels.js_hoc2015_event_item_behavior = {
   "instructions": "\"It’s up to you, BOT2.\"",
   "instructions2": "Make the ROOs flee from BOT2.",
   "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
   "showTimeoutRect": true,
   "callouts": [
     {
-      "id": "level:js_hoc2015_event_item_behavior:charactersMove",
+      "id": "playlab:js_hoc2015_event_item_behavior:charactersMove",
       "element_id": "#droplet_palette_block_setToFlee",
       "qtip_config": {
         "content": {
@@ -8048,11 +8054,10 @@ levels.js_hoc2015_event_touch_items = {
   "instructions": "\"Be careful, they might be behind you!\"",
   "instructions2": "Every time you get a ROO, add one MOUSE and one SPIDER to the world.",
   "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
   "showTimeoutRect": true,
   "callouts": [
     {
-      "id": "level:js_hoc2015_event_touch_items:putCommandsTouchCharacter",
+      "id": "playlab:js_hoc2015_event_touch_items:putCommandsTouchCharacter",
       "element_id": ".ace_gutter-cell:nth-of-type(8)",
       "hide_target_selector": ".ace_scroller",
       "qtip_config": {
@@ -8068,7 +8073,8 @@ levels.js_hoc2015_event_touch_items = {
     }
   ],
   "requiredForSuccess" : {
-    "removedItemCount": 3
+    "removedItemCount": 3,
+    "addItem": true
   }
 };
 
@@ -8137,7 +8143,6 @@ levels.js_hoc2015_event_points = {
   "instructions": "\"I’m counting on you, BOT1!\"",
   "instructions2": "Change your score when you touch a character. Can you reach 100 points?",
   "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
   "showTimeoutRect": true,
   "requiredForSuccess" : {
     "scoreMinimum": 100
@@ -8213,11 +8218,10 @@ levels.js_hoc2015_event_random_items = {
   "instructions": "\"Quick! We need to move faster!\"",
   "instructions2": "Ready to move faster? Increase your speed when you touch a MOUSE and slow down when you hit a SPIDER.",
   "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
   "showTimeoutRect": true,
   "callouts": [
     {
-      "id": "level:js_hoc2015_event_random_items:clickCategory",
+      "id": "playlab:js_hoc2015_event_random_items:clickCategory",
       "element_id": ".droplet-palette-group-header.green",
       "qtip_config": {
         "content" : {
@@ -8304,7 +8308,7 @@ levels.js_hoc2015_event_free = {
   "instructions": "\"You’re on your own now, BOT1.\"",
   "callouts": [
     {
-      "id": "level:js_hoc2015_event_free:tryOutNewCommands",
+      "id": "playlab:js_hoc2015_event_free:tryOutNewCommands",
       "element_id": ".droplet-palette-canvas",
       "qtip_config": {
         "content": {
