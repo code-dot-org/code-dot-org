@@ -20,4 +20,3 @@ script: bundle exec rake test
 
 env:
   - DB=mysql
-  - TESTOPTS=-t
