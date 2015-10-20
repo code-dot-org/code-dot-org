@@ -259,8 +259,7 @@ Then /^element "([^"]*)" is visible$/ do |selector|
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
-  instances = @browser.execute_script("return $('#{selector}')");
-  instances.should eq []
+  @browser.execute_script("return $('#{selector}').length").should eq 0
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
