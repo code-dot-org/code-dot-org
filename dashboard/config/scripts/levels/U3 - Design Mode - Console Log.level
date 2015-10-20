@@ -86,7 +86,9 @@
     "instructions": "Update the ID names and `console.log()` messages to match the correct button (Click to see full instructions).",
     "start_blocks": "onEvent(\"button1\", \"click\", function(event) {\r\n  console.log(\"red?\");\r\n});\r\nonEvent(\"button2\", \"click\", function(event) {\r\n  console.log(\"green?\");\r\n});\r\nonEvent(\"button3\", \"click\", function(event) {\r\n  console.log(\"blue?\");\r\n});\r\n",
     "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"divApplab\" class=\"appModern\" tabindex=\"1\" style=\"width: 320px; height: 450px;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\">\r\n    <button id=\"button2\" style=\"padding: 0px; margin: 0px; height: 70px; width: 105px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 20px; top: 65px; background-color: rgb(189, 26, 26);\">Red Button!</button>\r\n    <button id=\"button3\" style=\"padding: 0px; margin: 0px; height: 80px; width: 105px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 180px; top: 185px; background-color: rgb(26, 188, 156);\">Click me!</button>\r\n    <button id=\"button1\" style=\"padding: 0px; margin: 0px; height: 75px; width: 115px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 20px; top: 300px; background-color: rgb(26, 78, 189);\">I'm a button!</button>\r\n  </div>\r\n</div>",
-    "slider_speed": "1.0"
+    "slider_speed": "1.0",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

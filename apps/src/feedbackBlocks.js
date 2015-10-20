@@ -49,6 +49,8 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommended
     return;
   }
 
+  this.xml = this.generateXMLForBlocks_(blocksToDisplay);
+
   this.div = document.createElement('div');
   this.html = readonly({
     app: options.app,
@@ -61,7 +63,7 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommended
       cacheBust: studioApp.CACHE_BUST,
       skinId: options.skin,
       level: options.level,
-      blocks: this.generateXMLForBlocks_(blocksToDisplay)
+      blocks: this.xml
     }
   });
   this.iframe = document.createElement('iframe');
