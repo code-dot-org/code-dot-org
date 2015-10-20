@@ -11,7 +11,8 @@ module.exports.blocks = [
   {func: 'moveUp', parent: api, category: '', },
   {func: 'moveDown', parent: api, category: '', },
   {func: 'playSound', parent: api, category: '', params: ['"character1sound1"'], 
-    dropdown: { 0: [ 
+    dropdown: { 0: [
+      '"random"',
       '"character1sound1"', '"character1sound2"', '"character1sound3"', '"character1sound4"',
       '"character2sound1"', '"character2sound2"', '"character2sound3"', '"character2sound4"',
       '"item1sound1"', '"item1sound2"', '"item1sound3"', '"item1sound4"',
