@@ -158,6 +158,7 @@ stage 'Variables: Create, Assign, and Read'
 level 'U3L19 Student Lesson Intro' # 1
 level 'U3L19 - three basic ops of variables’ #2
 level 'U3- Variables - Create And Assign' #3
+level 'U3- Variables - Text Mode'
 level 'U3 - Variables - Read Using Turtle' #4 
 level 'U3L19 - write var and string with same name’ # 5
 level 'U3L19 - fix the var name syntax error’ #6
