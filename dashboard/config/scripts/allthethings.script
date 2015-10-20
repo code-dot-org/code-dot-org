@@ -25,6 +25,7 @@ level 'K-1 Bee 1'
 level 'blockly:CustomMaze:wordsearch_k_1'
 level '2-3 Bee Loops 2A'
 level '2-3 Bee Conditionals 5'
+level 'Bee Recommended Blocks test'
 
 stage 'PlayLab'
 level 'blockly:Studio:k1_1'
