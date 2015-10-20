@@ -30,7 +30,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. follow the instructions in the output of the previous command to finish installing nvm
   1. Install the right version of node `nvm install v0.12.4`
   1. Make that your default version `nvm alias default v0.12.4`
-  1. Note: When changing between node versions, you may need to reinstall node_modules (`rm -rf node_modules && npm install` from apps)
+  1. reinstall node_modules `cd apps; rm -rf node_modules && npm install; cd ..` (can be skipped if your version of node did not just change)
 1. Check that you have the correct versions of everything:
   1. open a new Terminal window  
   1. `ruby --version  # --> ruby 2.2.3`
@@ -91,7 +91,8 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 1. `bundle install`
 1. `cd ..`
 1. `rake install`
-1. `sudo chown -R $(whoami) $HOME/.npm`
+1. `rake build`
+1. `sudo chown -R $(whoami) $HOME/.npm` (do we still need this step when using nvm?)
 
 
 ## Organizational Structure
