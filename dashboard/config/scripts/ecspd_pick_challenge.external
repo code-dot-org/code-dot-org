@@ -1,6 +1,8 @@
 name 'ECSPD Pick Challenge'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
 ## Unit 2 Challenge > Ready, set, go!
 <br><br>
 Now you’re ready to make the lesson you chose your own! Refer to [this document](https://docs.google.com/document/d/15dwdDBF-nya-wQjRq4zxsr0u4p5PEvf-jFnu2OuepmQ/edit?usp=sharing) for a complete how-to guide on challenges. Follow the steps provided and have fun! We hope this activity will be useful to you in supporting your ability to successfully teach Unit 2.

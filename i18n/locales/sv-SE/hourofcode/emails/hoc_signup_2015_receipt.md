@@ -14,15 +14,15 @@ We'll be in touch about prizes, new tutorials and other exciting updates in the 
 
 ## 1. Sprid ordet
 
-Tell your friends about the #HourOfCode.
+Berätta för dina vänner om #HourOfCode.
 
 ## 2. Ask your whole school to offer an Hour of Code
 
 [Send this email](https://<%= hostname %>/resources#email) to your principal.
 
-## 3. Ask your employer to get involved
+## Fråga om din arbetsgivare vill engagera sig
 
-[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
+[ Skicka detta mail](https://<%= hostname %>/ resurser #email) till din chef eller VD.
 
 ## 4. Promote the Hour of Code in your community
 

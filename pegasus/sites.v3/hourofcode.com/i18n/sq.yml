@@ -145,15 +145,6 @@ sq:
   prizes_brilliant: Një shkollë në secilën zonë apo territor do të fitojë $2000 për një Projekt Brilant
   prizes_actua: 15 shkolla nga Kanadaja do të fitojnë 2 ndihmës për STEM punëtoritë nga një prej anëtarëve Actua
   prizes_details: Detajet
-  prizes_nav_dc: Udhëtimi i mistershëm në Washington D.C.
-  prizes_nav_technology: 10.000$ teknologji për shkollën tënde
-  prizes_nav_video_chat: Bisedë me video me një gjigand të teknologjisë
-  prizes_nav_skype_dropbox: Kredit në Skype ose Dropbox për secilin organizator
-  prizes_nav_brilliant: 2.000$ projekt për Laboratorë të shkëlqyera
-  prizes_nav_actua: Workshop aktual
-  prizes_nav_kids_code: Kodim për Fëmijët dhe të Rinjtë
-  prizes_nav_terms: Termat dhe Kushtet
-  prizes_nav_faq: PESH (pyetje të shpeshta)
   nav_back_to_resources: Kthehu tek Resurset
   how_to_nav_educators: Për mësuesit
   how_to_nav_after_school: Për aktivitet pas mësimit
@@ -162,15 +153,28 @@ sq:
   how_to_nav_districts: Për qarqe
   how_to_nav_assemblies: Për asambletë e shkollave
   how_to_nav_organizations: Për organizatat
+  how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
   prizes_nav_title: Shpërblime
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Termat dhe Kushtet
+  prizes_nav_faq: PESH (pyetje të shpeshta)
+  prizes_nav_dc: Udhëtimi i mistershëm në Washington D.C.
+  prizes_nav_technology: 10.000$ teknologji për shkollën tënde
+  prizes_nav_video_chat: Bisedë me video me një gjigand të teknologjisë
+  prizes_nav_skype_dropbox: Kredit në Skype ose Dropbox për secilin organizator
+  prizes_nav_brilliant: 2.000$ projekt për Laboratorë të shkëlqyera
+  prizes_nav_actua: Workshop aktual
+  prizes_nav_kids_code: Kodim për Fëmijët dhe të Rinjtë
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: "Every organizer will receive a gift card to Amazon.com or Microsoft's Windows Store."
   whats_next_header: çfarë tutje?
   whats_next_description: "Do ju dergojmë materiale dhe këshilla të dobishme për eventin tuaj. Tutorialet e reja të 2015 së shpejti do të arrijnë për çfarëdo browser-i, smartphone -apo edhe pa kompjuter! <a href='http://code.org/learn'>provo tutorialet aktual</a>"
-  whats_next_how_to: "<a href='http://hourofcode. com/resources/how-to'>Si të realizojmë një Orë Kodimi</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Promovo Orën e Kodimit</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>Si të promovoni Orën e Kodimit</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Provoni tutorialet</a>"
   whats_next_try_button: Provoni tutorialet
@@ -211,7 +215,7 @@ sq:
   front_join_us_support: Përkrahe
   front_join_us_more_info: "Për më shumë informata. luteni të vizitoni faqen <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: Për më shumë informacione, ju lutem vizitoni code.org
-  front_join_us_n_students_served: '# students served'
+  front_join_us_n_students_served: '# served'
   signup_header: 'Organizoni një Orë Kodim gjatë %{campaign_date}, dhe regjistroni këtu.'
   signup_name_label: Emri juaj
   signup_email_label: Emaili juaj
@@ -241,6 +245,7 @@ sq:
   map_header: '# Eventi Ora e Kodimit nëpër botë'
   see_all_events: Shiko të gjitha eventet
   map_header_company: '# nga organizator kompanie'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Kërko për eventet e Orës së Kodimit
   map_search_search: Kërko
   map_search_reset: Rivendos
@@ -280,15 +285,15 @@ sq:
   hoc_faq_why_cs_q: Pse shkencat kompjuterike?
   hoc_faq_why_cs_a: "<i>Çdo</i> nxënës duhet t'i jepet mundësia të mësojë shkencën kompjuterike. Kjo ndihmon në aftësitë e zgjidhjes së problemave. logjikë dhe kreativitet. Duke e nisur herët, studentët do të kenë bazat e suksesit për çdo karrierë në shekullin e 21-të. Shikoni më shumë statistika në <a href='%{codeorg_url}'>%{partner_url}</a>."
   hoc_faq_how_participate_q: Si të marr pjesë në Orën e Kodimit?
-  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Fillo planifikimin këtu</a> duke rishikuar udhëzuesit tanë. Mund të organizosh një Orë të Kodimit në shkollën tuaj ose në komunitetin tuaj &mdash; si në një aktivitet ekstra kurikularë, organizata jo-fitimprurëse ose në punë. Ose, thjeshtë provoje atë për vete kur të vijë %%{campaign_date}{7 dhjetori} ."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Kush është prapa Orës së Kodimit?
   hoc_faq_behind_hoc_a: "Ora e Kodimit organizohet nga <a href='http://code.org'>Code.org</a>, organizatë jofitimprurëse 501c3 e dedikuar të zgjeroje pjesëmarrjen në shkencat kompjuterike duke e bërë të disponueshme në më shumë shkolla, dhe duke e rritur pjesëmarrjen e femrave dhe nxënësve të pak-përfaqësuar me ngjyrë. dhe <a href='http://code.org/about/partners'>koalicion i paprecedent i partnerëve</a> janë bashkuar ta përkrahin Orën e Kodimit &mdash; duke e përfshirë Microsoft, Apple, Amazon, Boys and Girls Clubs of America dhe College Board."
   hoc_faq_host_q: Nuk di asgjë për kodimin. A mund të jem organizator i ndonjë eventi?
-  hoc_faq_host_a: "Sigurisht që mundeni. Aktivitetet e Orës së Kodimit janë të vetë-drejtuara.Ajo cfarë duhet të bëni është <a href='http://code.org/learn'>të provoni tutorialet tona aktuale</a>, të zgjidhni tutorialin që dëshironi, dhe të zgjidhni një orë &mdash; për të tjerat kujdesemi ne. Kemi obsione për çdo moshë dhe nivel përvoje, nga fëmijët e kopështit e tutje. Filloni të planifikoni eventin tuaj duke lexuar <a href='target-resources-how-to'>udhëzuesin tonë</a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Më duhet të siguroj nga një kompjuter për secilin pjesëmarrës?
   hoc_faq_need_computers_a: "Jo. Ne kemi tutoriale të Orës së Kodimit që janë të përdorueshme në PC, smartphona, tableta, madje dhe të tjerë për të cilët nuk nevojiten fare kompjuter! Mund të n'a bashkoheni kudo që të jeni, me ato mjete që keni. <p><i>Ja disa mundësi:</i> <br> <ul> <li><b>Punoni në grupe.</b>Studimet tregojnë se studentët mësojnë më mirë <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programimin nga dy</a>, duke drejtuar nga një kompjuter dhe duke punuar sëbashku. Inkurajoni studentët tuaj të punojnë në grup.<li><b>Përdorni projektorë.</b> Nëse keni projektor dhe një ekran për një kompjuter të lidhur në Web, i gjithë grupi juaj mund të zhvillojë një Orë të Kodimit sëbashku. Ndiqni bashkarisht pjesë të videove  dhe kaloni radhën duke zgjidhur problema ose duke i'u përgjigjur pyetjeve. <li><b>Punoni të shkëputur.</b> Ofrojmë tutoriale që nuk kërkojnë fare kompjuter.</ul>"
   hoc_faq_international_q: 'Ndodhem në </vend/shtet>. Si të marr pjesë?'
-  hoc_faq_international_a: "Çdokush mund të organizojë eventin Ora e Kodimit, çdokund në botë. Vitin e kaluar nxënësit/studentët anëmbanë botës iu bashkuan Orës së Kodimit. Për më shumë gjeni <a href='target-resources'>këtu</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Si mund të zhvilloj një tutorial të Orës së Kodimit?
   hoc_faq_tutorial_a: "Nëse jeni të interesuar të bëheni partner për tutoriale, <a href='target-tutorial-guidelines'>ndiqni udhëzimet dhe instruksionet tona</a>. Do të dëshironim të kishim një mori mundësish angazhimi, por qëllimi kryesor është të optimiziohet përvoja për studentët dhe mësimdhënësit e rinj në shkencat kompjuterike."
   hoc_faq_more_questions_q: Keni ende pyetje të tjera?
@@ -356,6 +361,7 @@ sq:
   title_how_to_districts: Ora e Kodimit Metoda për Shpërndarje
   title_how_to_events: Eventi i Orës së Kodimit, Metoda
   title_how_to_organizations: 'Si të behemi nikoqir të Orës së Kodimit- Organizatat'
+  title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: Udhëzuesit për zyrtarët publikë
   title_how_to: Si të Drejtojmë
   title_press_release: Deklarata për Shtyp e Orës së Kodimit për zyrtarët e zgjedhur

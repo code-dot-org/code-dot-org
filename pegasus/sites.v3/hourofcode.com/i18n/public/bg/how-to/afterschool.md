@@ -15,7 +15,7 @@ nav: how_to_nav
   * Регистрирай се за да домакин на[ Часа на кода](<%= resolve_url('/') %>) по време на <%= campaign_date('short') %>.
   * Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
 
-## 1) Гледай видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 1) Гледай видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Избери урок:
 
 We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. *Нови уроци идват за началото на часа на кода < % = campaign_date('full') % >.* [Опитайте текущите уроци.](<%= resolve_url("https://code.org/learn") %>)
@@ -40,12 +40,12 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
 
 ## 5) Вдъхновете участниците да започнат Вашият час на кода
 
-**Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.**
+Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
 **Покажи вдъхновяващо видео:**
 
   * Оригиналният стартиращ Code.org клип, с участието на Бил Гейтс, Марк Зукерберг и НБА звезда Крис Бош (има версии за [ 1 минута](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5 минути](https://www.youtube.com/watch?v=nKIu9yen5nc) и [ 9 минути](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * [ Стартиращото видео на миналогодишния час на кодирането](https://www.youtube.com/watch?v=FC5FbmsH4fw), или <% if @country == 'uk' %> [ Часът на кодирането 2014 видео](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [ Часът на кодирането 2014 видео](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Президентът Обама призовава всички ученици да учат компютърни науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Намери още вдъхновяващи видео клипове [ тук](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -95,7 +95,7 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
 ## 7) Празник
 
   * [ Отпечатайте сертификати](<%= resolve_url('https://code.org/certificates') %>) за вашите ученици.
-  * [Print "I did an Hour of Code!"](<%= resolve_url('/resources/promote#stickers') %>) stickers.
+  * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
   * Споделете снимки и видео на събитието си в социалните медии. Използвайте #HourOfCode и @codeorg,, така ще можем да научим за Вашия успех!
 
 [col-33]

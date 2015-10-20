@@ -69,7 +69,7 @@ More info coming soon!
 
 [**Back to the top**](#top)
 
-
+<a id="ecs"></a>
 ## Exploring Computer Science
 
 ### Phase 1: Online Introduction (~2 hours) ###
@@ -176,6 +176,40 @@ Snacks
 <br/>
 Water
 
+
+[**Back to the top**](#top)
+
+
+<a id="counselor-admin"></a>
+
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
+
+
+### Administrators
+
+**Save the date**
+
+Thursday, November 5th, 2015  <br/>
+8:00am - 10:00pm
+
+**Location**
+
+TBD 
+
+
+### Counselors
+
+**Save the date**
+
+Thursday, November 5th, 2015 <br/>
+11:00am - 3:00pm
+
+**Location**
+
+TBD
 
 [**Back to the top**](#top)
 

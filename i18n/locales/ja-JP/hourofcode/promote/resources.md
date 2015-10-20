@@ -9,7 +9,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 # Hour of Codeを多くの人に知ってもらうには
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Hour of Code を開催するには [ガイド](<%= resolve_url('/how-to') %>)を見て下さい。
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -35,17 +35,17 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## 以下のロゴをHour of Codeを広めるために使ってください。
 
 [![画像](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[高解像度のバージョンをダウンロード](http://images.code.org/share/hour-of-code-logo.zip)
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## ステッカーを印刷して生徒に配布
 
-(Stickers are 1" diameter, 63 per sheet)  
+(ステッカーは直径 1 インチ、1 枚 あたり63個)  
 [![画像](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>

@@ -385,3 +385,411 @@ en:
       3:
         image: crwdns25702:0crwdne25702:0
         text: crwdns25703:0crwdne25703:0
+    C1_artist_intro:
+      1:
+        image: crwdns49797:0crwdne49797:0
+        text: crwdns49798:0crwdne49798:0
+      2:
+        image: crwdns49799:0crwdne49799:0
+        text: crwdns49800:0crwdne49800:0
+    C1_bee_level_intro:
+      1:
+        image: crwdns49801:0crwdne49801:0
+        text: crwdns49802:0crwdne49802:0
+      2:
+        image: crwdns49803:0crwdne49803:0
+        text: crwdns49804:0crwdne49804:0
+      3:
+        image: crwdns49805:0crwdne49805:0
+        text: crwdns49806:0crwdne49806:0
+    C1_bee_loops:
+      1:
+        image: crwdns49807:0crwdne49807:0
+        text: crwdns49808:0crwdne49808:0
+      2:
+        image: crwdns49809:0crwdne49809:0
+        text: crwdns49810:0crwdne49810:0
+    C1_bigevent_unplugged:
+      1:
+        image: crwdns49811:0crwdne49811:0
+        text: crwdns49812:0crwdne49812:0
+      2:
+        image: crwdns49813:0crwdne49813:0
+        text: crwdns49814:0crwdne49814:0
+      3:
+        image: crwdns49815:0crwdne49815:0
+        text: crwdns49816:0crwdne49816:0
+      4:
+        image: crwdns49817:0crwdne49817:0
+        text: crwdns49818:0crwdne49818:0
+      5:
+        image: crwdns49819:0crwdne49819:0
+        text: crwdns49820:0crwdne49820:0
+      6:
+        image: crwdns49821:0crwdne49821:0
+        text: crwdns49822:0crwdne49822:0
+    C1_building_foundation:
+      1:
+        image: crwdns49823:0crwdne49823:0
+        text: crwdns49824:0crwdne49824:0
+      2:
+        image: crwdns49825:0crwdne49825:0
+        text: crwdns49826:0crwdne49826:0
+      3:
+        image: crwdns49827:0crwdne49827:0
+        text: crwdns49828:0crwdne49828:0
+      4:
+        image: crwdns49829:0crwdne49829:0
+        text: crwdns49830:0crwdne49830:0
+      5:
+        image: crwdns49831:0crwdne49831:0
+        text: crwdns49832:0crwdne49832:0
+    C1_getting_loopy:
+      1:
+        image: crwdns49833:0crwdne49833:0
+        text: crwdns49834:0crwdne49834:0
+      2:
+        image: crwdns49835:0crwdne49835:0
+        text: crwdns49836:0crwdne49836:0
+      3:
+        image: crwdns49837:0crwdne49837:0
+        text: crwdns49838:0crwdne49838:0
+      4:
+        image: crwdns49839:0crwdne49839:0
+        text: crwdns49840:0crwdne49840:0
+      5:
+        image: crwdns49841:0crwdne49841:0
+        text: crwdns49842:0crwdne49842:0
+    C1_happy_maps_unplugged:
+      1:
+        image: crwdns49843:0crwdne49843:0
+        text: crwdns49844:0crwdne49844:0
+      2:
+        image: crwdns49845:0crwdne49845:0
+        text: crwdns49846:0crwdne49846:0
+      3:
+        image: crwdns49847:0crwdne49847:0
+        text: crwdns49848:0crwdne49848:0
+      4:
+        image: crwdns49849:0crwdne49849:0
+        text: crwdns49850:0crwdne49850:0
+      5:
+        image: crwdns49851:0crwdne49851:0
+        text: crwdns49852:0crwdne49852:0
+    C1_maze_debugging:
+      1:
+        image: crwdns49853:0crwdne49853:0
+        text: crwdns49854:0crwdne49854:0
+      2:
+        image: crwdns49855:0crwdne49855:0
+        text: crwdns49856:0crwdne49856:0
+      3:
+        image: crwdns49857:0crwdne49857:0
+        text: crwdns49858:0crwdne49858:0
+      4:
+        image: crwdns49859:0crwdne49859:0
+        text: crwdns49860:0crwdne49860:0
+    C1_maze_intro_sequencing:
+      1:
+        image: crwdns49861:0crwdne49861:0
+        text: crwdns49862:0crwdne49862:0
+      2:
+        image: crwdns49863:0crwdne49863:0
+        text: crwdns49864:0crwdne49864:0
+    C1_maze_loops:
+      1:
+        image: crwdns49865:0crwdne49865:0
+        text: crwdns49866:0crwdne49866:0
+      2:
+        image: crwdns49867:0crwdne49867:0
+        text: crwdns49868:0crwdne49868:0
+      3:
+        image: crwdns49869:0crwdne49869:0
+        text: crwdns49870:0crwdne49870:0
+    C1_moveitmoveit_unplugged:
+      1:
+        image: crwdns49871:0crwdne49871:0
+        text: crwdns49872:0crwdne49872:0
+      2:
+        image: crwdns49873:0crwdne49873:0
+        text: crwdns49874:0crwdne49874:0
+      3:
+        image: crwdns49875:0crwdne49875:0
+        text: crwdns49876:0crwdne49876:0
+    C1_going_places_safely:
+      1:
+        image: crwdns49877:0crwdne49877:0
+        text: crwdns49878:0crwdne49878:0
+      2:
+        image: crwdns49879:0crwdne49879:0
+        text: crwdns49880:0crwdne49880:0
+      3:
+        image: crwdns49881:0crwdne49881:0
+        text: crwdns49882:0crwdne49882:0
+      4:
+        image: crwdns49883:0crwdne49883:0
+        text: crwdns49884:0crwdne49884:0
+      5:
+        image: crwdns49885:0crwdne49885:0
+        text: crwdns49886:0crwdne49886:0
+      6:
+        image: crwdns49887:0crwdne49887:0
+        text: crwdns49888:0crwdne49888:0
+      7:
+        image: crwdns49889:0crwdne49889:0
+        text: crwdns49890:0crwdne49890:0
+    C1_pair_programming:
+      1:
+        image: crwdns49891:0crwdne49891:0
+        text: crwdns49892:0crwdne49892:0
+      2:
+        image: crwdns49893:0crwdne49893:0
+        text: crwdns49894:0crwdne49894:0
+      3:
+        image: crwdns49895:0crwdne49895:0
+        text: crwdns49896:0crwdne49896:0
+      4:
+        image: crwdns49897:0crwdne49897:0
+        text: crwdns49898:0crwdne49898:0
+    C1_planting_seed:
+      1:
+        image: crwdns49899:0crwdne49899:0
+        text: crwdns49900:0crwdne49900:0
+      2:
+        image: crwdns49901:0crwdne49901:0
+        text: crwdns49902:0crwdne49902:0
+      3:
+        image: crwdns49903:0crwdne49903:0
+        text: crwdns49904:0crwdne49904:0
+      4:
+        image: crwdns49905:0crwdne49905:0
+        text: crwdns49906:0crwdne49906:0
+      5:
+        image: crwdns49907:0crwdne49907:0
+        text: crwdns49908:0crwdne49908:0
+    C1_playlab_storytelling:
+      1:
+        image: crwdns49909:0crwdne49909:0
+        text: crwdns49910:0crwdne49910:0
+      2:
+        image: crwdns49911:0crwdne49911:0
+        text: crwdns49912:0crwdne49912:0
+      3:
+        image: crwdns49913:0crwdne49913:0
+        text: crwdns49914:0crwdne49914:0
+      4:
+        image: crwdns49915:0crwdne49915:0
+        text: crwdns49916:0crwdne49916:0
+    C1_spelling_bee_intro:
+      1:
+        image: crwdns49917:0crwdne49917:0
+        text: crwdns49918:0crwdne49918:0
+      2:
+        image: crwdns49919:0crwdne49919:0
+        text: crwdns49920:0crwdne49920:0
+    C1_zuck_repeat_loop:
+      1:
+        image: crwdns49921:0crwdne49921:0
+        text: crwdns49922:0crwdne49922:0
+      2:
+        image: crwdns49923:0crwdne49923:0
+        text: crwdns49924:0crwdne49924:0
+      3:
+        image: crwdns49925:0crwdne49925:0
+        text: crwdns49926:0crwdne49926:0
+      4:
+        image: crwdns49927:0crwdne49927:0
+        text: crwdns49928:0crwdne49928:0
+      5:
+        image: crwdns49929:0crwdne49929:0
+        text: crwdns49930:0crwdne49930:0
+    C2_artist_intro:
+      1:
+        image: crwdns49931:0crwdne49931:0
+        text: crwdns49932:0crwdne49932:0
+      2:
+        image: crwdns49933:0crwdne49933:0
+        text: crwdns49934:0crwdne49934:0
+      3:
+        image: crwdns49935:0crwdne49935:0
+        text: crwdns49936:0crwdne49936:0
+      4:
+        image: crwdns49937:0crwdne49937:0
+        text: crwdns49938:0crwdne49938:0
+      5:
+        image: crwdns49939:0crwdne49939:0
+        text: crwdns49940:0crwdne49940:0
+    C2_bee_conditionals:
+      1:
+        image: crwdns49941:0crwdne49941:0
+        text: crwdns49942:0crwdne49942:0
+      2:
+        image: crwdns49943:0crwdne49943:0
+        text: crwdns49944:0crwdne49944:0
+      3:
+        image: crwdns49945:0crwdne49945:0
+        text: crwdns49946:0crwdne49946:0
+    C2_binary_bracelets:
+      1:
+        image: crwdns49947:0crwdne49947:0
+        text: crwdns49948:0crwdne49948:0
+      2:
+        image: crwdns49949:0crwdne49949:0
+        text: crwdns49950:0crwdne49950:0
+      3:
+        image: crwdns49951:0crwdne49951:0
+        text: crwdns49952:0crwdne49952:0
+      4:
+        image: crwdns49953:0crwdne49953:0
+        text: crwdns49954:0crwdne49954:0
+    C2_conditionals_with_cards:
+      1:
+        image: crwdns49955:0crwdne49955:0
+        text: crwdns49956:0crwdne49956:0
+      2:
+        image: crwdns49957:0crwdne49957:0
+        text: crwdns49958:0crwdne49958:0
+      3:
+        image: crwdns49959:0crwdne49959:0
+        text: crwdns49960:0crwdne49960:0
+      4:
+        image: crwdns49961:0crwdne49961:0
+        text: crwdns49962:0crwdne49962:0
+      5:
+        image: crwdns49963:0crwdne49963:0
+        text: crwdns49964:0crwdne49964:0
+    C2_artist_debugging:
+      1:
+        image: crwdns49965:0crwdne49965:0
+        text: crwdns49966:0crwdne49966:0
+      2:
+        image: crwdns49967:0crwdne49967:0
+        text: crwdns49968:0crwdne49968:0
+      3:
+        image: crwdns49969:0crwdne49969:0
+        text: crwdns49970:0crwdne49970:0
+    C2_bee_debugging:
+      1:
+        image: crwdns49971:0crwdne49971:0
+        text: crwdns49972:0crwdne49972:0
+      2:
+        image: crwdns49973:0crwdne49973:0
+        text: crwdns49974:0crwdne49974:0
+      3:
+        image: crwdns49975:0crwdne49975:0
+        text: crwdns49976:0crwdne49976:0
+    C2_digital_footprint:
+      1:
+        image: crwdns49977:0crwdne49977:0
+        text: crwdns49978:0crwdne49978:0
+      2:
+        image: crwdns49979:0crwdne49979:0
+        text: crwdns49980:0crwdne49980:0
+      3:
+        image: crwdns49981:0crwdne49981:0
+        text: crwdns49982:0crwdne49982:0
+      4:
+        image: crwdns49983:0crwdne49983:0
+        text: crwdns49984:0crwdne49984:0
+      5:
+        image: crwdns49985:0crwdne49985:0
+        text: crwdns49986:0crwdne49986:0
+      6:
+        image: crwdns49987:0crwdne49987:0
+        text: crwdns49988:0crwdne49988:0
+    C2_digital_footprint_v2:
+      1:
+        image: crwdns49989:0crwdne49989:0
+        text: crwdns49990:0crwdne49990:0
+    C2_graph_paper:
+      1:
+        image: crwdns49991:0crwdne49991:0
+        text: crwdns49992:0crwdne49992:0
+      2:
+        image: crwdns49993:0crwdne49993:0
+        text: crwdns49994:0crwdne49994:0
+      3:
+        image: crwdns49995:0crwdne49995:0
+        text: crwdns49996:0crwdne49996:0
+      4:
+        image: crwdns49997:0crwdne49997:0
+        text: crwdns49998:0crwdne49998:0
+    C2_artist_loops:
+      1:
+        image: crwdns49999:0crwdne49999:0
+        text: crwdns50000:0crwdne50000:0
+      2:
+        image: crwdns50001:0crwdne50001:0
+        text: crwdns50002:0crwdne50002:0
+    C2_bee_loops:
+      1:
+        image: crwdns50003:0crwdne50003:0
+        text: crwdns50004:0crwdne50004:0
+      2:
+        image: crwdns50005:0crwdne50005:0
+        text: crwdns50006:0crwdne50006:0
+    C2_maze_intro:
+      1:
+        image: crwdns50007:0crwdne50007:0
+        text: crwdns50008:0crwdne50008:0
+      2:
+        image: crwdns50009:0crwdne50009:0
+        text: crwdns50010:0crwdne50010:0
+      3:
+        image: crwdns50011:0crwdne50011:0
+        text: crwdns50012:0crwdne50012:0
+      4:
+        image: crwdns50013:0crwdne50013:0
+        text: crwdns50014:0crwdne50014:0
+      5:
+        image: crwdns50015:0crwdne50015:0
+        text: crwdns50016:0crwdne50016:0
+    C2_paper_airplanes:
+      1:
+        image: crwdns50017:0crwdne50017:0
+        text: crwdns50018:0crwdne50018:0
+      2:
+        image: crwdns50019:0crwdne50019:0
+        text: crwdns50020:0crwdne50020:0
+      3:
+        image: crwdns50021:0crwdne50021:0
+        text: crwdns50022:0crwdne50022:0
+      4:
+        image: crwdns50023:0crwdne50023:0
+        text: crwdns50024:0crwdne50024:0
+    C2_playlab_createastory:
+      1:
+        image: crwdns50025:0crwdne50025:0
+        text: crwdns50026:0crwdne50026:0
+      2:
+        image: crwdns50027:0crwdne50027:0
+        text: crwdns50028:0crwdne50028:0
+    C2_relay_programming:
+      1:
+        image: crwdns50029:0crwdne50029:0
+        text: crwdns50030:0crwdne50030:0
+      2:
+        image: crwdns50031:0crwdne50031:0
+        text: crwdns50032:0crwdne50032:0
+      3:
+        image: crwdns50033:0crwdne50033:0
+        text: crwdns50034:0crwdne50034:0
+      4:
+        image: crwdns50035:0crwdne50035:0
+        text: crwdns50036:0crwdne50036:0
+    C2_zuck_repeat_loop:
+      1:
+        image: crwdns50037:0crwdne50037:0
+        text: crwdns50038:0crwdne50038:0
+      2:
+        image: crwdns50039:0crwdne50039:0
+        text: crwdns50040:0crwdne50040:0
+      3:
+        image: crwdns50041:0crwdne50041:0
+        text: crwdns50042:0crwdne50042:0
+      4:
+        image: crwdns50043:0crwdne50043:0
+        text: crwdns50044:0crwdne50044:0
+      5:
+        image: crwdns50045:0crwdne50045:0
+        text: crwdns50046:0crwdne50046:0

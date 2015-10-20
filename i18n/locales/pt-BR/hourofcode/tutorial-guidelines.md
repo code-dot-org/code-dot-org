@@ -34,7 +34,7 @@ Gostaríamos de disponibilizar uma variedade de opções atrativas, mas nosso ob
 
 <a id="guidelines"></a>
 
-## New for 2015: two formats of activities: self-guided or *lesson-plan*
+## Novidades para 2015: haverá dois formatos de atividades: autoexplicativas ou *plano de aula*
 
 Agora que dezenas de milhares de educadores experimentaram a Hora do Código, muitas salas de aula estão prontas para atividades mais criativas e menos padronizadas para o ensino dos fundamentos da ciência da computação. Para ajudar os professores a se inspirarem, gostaríamos de reunir e organizar planos de aula e de atividades de uma hora "Conduzidas por Professor" para quem já tem experiência com a Hora do Código. Continuaremos oferecendo o formato "autoexplicativo" também.
 
@@ -115,7 +115,7 @@ Fundamentalmente, o objetivo da campanha Hora do Código é ampliar a participa�
 
 ## Como enviar (até 15/10/2015)
 
-Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
+Visite a [Página de envio de atividade da Hour of Code™](https://goo.gl/kNrV3l) e siga as etapas para enviar seu tutorial.
 
 **O que você precisará:**
 

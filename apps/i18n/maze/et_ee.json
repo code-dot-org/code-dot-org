@@ -31,6 +31,7 @@
   "ifTooltip": "Kui märgitud suunas on tee, tee teatud toimingud.",
   "ifelseTooltip": "Kui märgitud suunas on tee, siis tee esimese ploki toiminguid.\nMuudel juhtudel tee teise ploki toiminguid.",
   "ifFlowerTooltip": "Kui selles suunas on lill/mesikärg, siis tee mõned toimingud.",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions.",
   "ifelseFlowerTooltip": "Kui selles suunas on lill/mesikärg, siis tee esimene blokk toiminguid. Vastasel korral tee teine blokk toiminguid.",
   "insufficientHoney": "Sa kasutad õigeid blokke, kuid valet kogust mett.",
   "insufficientNectar": "Sa kasutad õigeid plokke, kuid sa pead koguma õige koguse nektarit.",

@@ -11,9 +11,9 @@ nav: how_to_nav
 ## 1) დარეგისტრირდით
 
   * დარეგისტრირდით [კოდის ერთი საათის](<%= resolve_url('/') %>) ჩასატარებლად <%= campaign_date('short') %>.
-  * გაუკეთეთ რეკლამა თქვენს [კოდის ერთ საათს](<%= resolve_url('/resources') %>) და წაახალისეთ სხვებიც ღონისძიების ჩასატარებლად.
+  * Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
 
-## 2) უყურეთ ამ "როგორ უნდა" ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) უყურეთ ამ "როგორ უნდა" ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) აირჩიეთ ტუტორიალი:
 
 ჩვენ ნებისმიერი ასაკის მოსწავლისთვის ჩავატარებთ სხვადასხვა პარტნიორის მიერ შექმნილ მრავალ [სახალისო, ერთსაათიან გაკვეთილს](<%= resolve_url('https://code.org/learn') %>). *<%= campaign_date('full') %>-მდე კოდის ერთი საათის დასაწყებად ახალ გაკვეთილებს შემოგთავაზებთ.* [სცადეთ მიმდინარე გაკვეთილები.](<%= resolve_url("https://code.org/learn") %>)
@@ -43,7 +43,7 @@ nav: how_to_nav
 **აჩვენე შთამაგონებელი ვიდეო:**
 
   * Code.org-ის მთავარი ვიდეო-რგოლი, რომელშიც ლაპარაკობენ ბილ გეითსი, მარკ ცუკერბერგი და NBA ვარსკვლავი ქრის ბოში (ხანგრძლივობა: [1 წუთი](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 წუთი](https://www.youtube.com/watch?v=nKIu9yen5nc) ან [9 წუთი](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * [2013 წლის კოდის ერთი საათის პრომო-ვიდეო](https://www.youtube.com/watch?v=FC5FbmsH4fw) ან <% if @country == 'uk' %> [2014 წლის კოდის ერთი საათის პრომო-ვიდეო](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [2014 წლის კოდის ერთი საათის პრომო-ვიდეო](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [პრეზიდენტი ობამა მოუწოდებს ყველა მოსწავლეს პროგრამირების სწავლას](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * ნახეთ მეტი შთამაგონებელი ვიდეო [აქ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -93,7 +93,7 @@ nav: how_to_nav
 ## 7) აღნიშნეთ
 
   * [დაბეჭდეთ სერთიფიკატები](<%= resolve_url('https://code.org/certificates') %>) თქვენი მოსწავლეებისთვის.
-  * [დაბეჭდეთ "მე გავაკეთე კოდის ერთი საათი!"](<%= resolve_url('/resources/promote#stickers') %>) სტიკერები თქვენი მოსწავლეებისთვის.
+  * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
   * გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
 
 [col-33]

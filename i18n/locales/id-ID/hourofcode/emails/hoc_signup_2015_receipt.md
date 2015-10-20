@@ -8,9 +8,9 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 # Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. Anda membantu siswa di seluruh dunia untuk belajar satu Jam Kode yang dapat mengubah seluruh hidup mereka selama bulan Desember. 7-13. <% end %>
+<% if @country == 'la' || @country == 'br' || @country == 'ar' %> Kalian membuat mungkin bagi siswa di seluruh Amerika Latin untuk belajar Hour of Code yang dapat *mengubah hidup mereka seterusnya*, selama Oktober. tanggal 5-11. Anda membuat mungkin untuk siswa di seluruh dunia untuk belajar Hour of Code yang dapat *mengubah seluruh hidup mereka *, selama bulan Desember, tanggal 12-20. <% end %>
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+Kami akan menghubungi tentang hadiah, tutorial baru dan pembaruan menarik lainnya di musim gugur. Jadi, apa yang dapat Anda lakukan sekarang?
 
 ## 1. Sebarkan berita
 
@@ -18,19 +18,19 @@ Beritahu temanmu mengenai #HourOfCode.
 
 ## 2. Tawarkan pada seluruh isi sekolah anda untuk mengikuti Hour of Code
 
-[Send this email](https://<%= hostname %>/resources#email) to your principal.
+[Kirimkan email ini](https://<%= hostname %>/resources#email) kepada Kepala Sekolah Anda.
 
 ## 3. Tanyakanlah kepada bos anda untuk terlibat
 
-[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Kirimkan email ini](https://<%= hostname %>/resources#email) kepada manajer Anda, atau CEO Anda.
 
-## 4. Promosikan Jam Kode di komunitas Anda
+## 4. Promosikan Hour of Code di komunitas Anda
 
-Ajak kelompok masayarakat — Pramuka, kelompok pengajian/gereja, unit mahasiswa, pensiunan atau serikat pekerja. Atau selenggarakan "hajatan" Jam Kode untuk masyarakat di lingkunganmu. [Send this email](https://<%= hostname %>/resources#email).
+Ajak kelompok masayarakat — Pramuka, kelompok pengajian/gereja, unit mahasiswa, pensiunan atau serikat pekerja. Atau selenggarakan "hajatan" Hour of Code untuk masyarakat di lingkunganmu. [Kirim email ini](https://<%= hostname %>/resources#email).
 
 ## 5. Tanyakan seorang pejabat terpilih setempat untuk mendukung Hour of Code
 
-[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Kirim email ini](https://<%= hostname %>/resources#politicians) ke pimpinan daerah Anda, Dewan Kota, atau Dewan Pendidikan dan undang mereka untuk mengunjungi sekolah Anda.
 
 * * *
 

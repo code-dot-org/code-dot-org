@@ -145,15 +145,6 @@ ca:
   prizes_brilliant: Una escola de cada província i territori rebrà $2000 per a un projecte brillant (EUA)
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
   prizes_details: Detalls
-  prizes_nav_dc: Mystery trip to Washington D.C.
-  prizes_nav_technology: $10,000 of technology for your school
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Terms and conditions
-  prizes_nav_faq: PMFs
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -162,15 +153,28 @@ ca:
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
   how_to_nav_organizations: For organizations
+  how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
   prizes_nav_title: Premis
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Terms and conditions
+  prizes_nav_faq: PMFs
+  prizes_nav_dc: Mystery trip to Washington D.C.
+  prizes_nav_technology: $10,000 of technology for your school
+  prizes_nav_video_chat: Video chat with a tech titan
+  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
+  prizes_nav_brilliant: $2,000 Brilliant Labs project
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: "Every organizer will receive a gift card to Amazon.com or Microsoft's Windows Store."
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='/resources/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='/resources'>Promote the Hour of Code</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
@@ -211,7 +215,7 @@ ca:
   front_join_us_support: Donar-li suport
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: For more information, please visit code.org
-  front_join_us_n_students_served: '# students served'
+  front_join_us_n_students_served: '# served'
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: El teu nom
   signup_email_label: El teu correu
@@ -241,6 +245,7 @@ ca:
   map_header: "# Esdeveniments d'Hora de Codi de tot el món"
   see_all_events: See all events
   map_header_company: '# by company organizers'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Search for Hour of Code events
   map_search_search: Cerca
   map_search_reset: Reset
@@ -280,15 +285,15 @@ ca:
   hoc_faq_why_cs_q: Per què informàtica?
   hoc_faq_why_cs_a: "<i>Cada</i> estudiant ha de tenir l'oportunitat d'aprendre informàtica. Ajuda a generar habilitats, lògica i creativitat en la resolució de problemes. Començant aviat, els alumnes tindran els fonaments per tenir èxit en qualsevol carrera del segle XXI. Veure més informes a <a href='http://code.org'> Code.org</a>."
   hoc_faq_how_participate_q: "Com participo a l'Hora de Codi?"
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: "Qui hi ha darrere l'Hora de Codi?"
   hoc_faq_behind_hoc_a: "L'Hora de Codi esta organitzat per <a href='http://code.org'> Code.org</a>, una organització pública 501c3 sense ànim de lucre dedicada a promoure la participació en informàtica fent-lo disponible a més escoles i incrementant la participació de les dones i de les minories de estudiants de color. Una <a href='http://code.org/about/partners'> coalició sense precedents de socis</a> que s'han ajuntat per donar suport a l'Hora de Codi, també &mdash; incloent-hi Microsoft, Apple, Amazon, Boys i Girls Clubs d'Amèrica i el Consell Escolar."
   hoc_faq_host_q: Jo no sé res sobre programació. Puc acollir un esdeveniment?
-  hoc_faq_host_a: "Per descomptat. Hora de Codi son activitats autoguiades. Tot el que has de fer és <a href='http://code.org/learn'> provar els tutorials actuals</a>, triar la classe que vols i escollir una hora &mdash; nosaltres ens ocupem de la resta. A més tenim opcions per a cada edat i nivell d'experiència, des de llar d'infants cap amunt. Comença a planificar el teu esdeveniment llegint els nostres <a href='/resources/how-to'> com a guia</a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Necessito ordinadors per a cada persona participant?
   hoc_faq_need_computers_a: "No. Tenim tutorials d'Hora de Codi que funcionen en PCs, smartphones, tauletes i alguns que no requereixen cap ordinador en absolut! Pots unir-te siguis on siguis, amb el que tinguis. <p><i>Aquí hi ha unes quantes opcions:</i> <br><ul><li><b>Treballar en parelles.</b>La investigació mostra que els estudiants aprenen millor la <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programació per parelles</a>, compartint un ordinador i treballant junts. Encoratja els teus estudiants a unir-se. <li><b>Utilitza una pantalla de projecció.</b> Si teniu un ordinador  connectat a la Web, amb pantalla i projector, tot el teu grup pot fer una Hora de Codi conjunta. Veieu junts fragments de vídeo i feu torns per resoldre puzles o respondre preguntes. <li><b>Sense connexió.</b> Oferim tutorials que no requereixen cap ordinador. </ul>"
   hoc_faq_international_q: 'Visc a<country>. Com puc participar internacionalment?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: "Com puc fer una classe d'Hora de Codi?"
   hoc_faq_tutorial_a: "Si estàs interessat en convertir-te en col·laborador de tutorials, <a href='target-tutorial-guidelines'> mira les nostres guies i instruccions</a>. Ens agradaria oferir una varietat d'opcions atractives, però l'objectiu principal és optimitzar l'experiència per a estudiants i professors que són nous en informàtica."
   hoc_faq_more_questions_q: Teniu encara més preguntes?
@@ -357,6 +362,7 @@ ca:
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: How-to guide for public officials
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials

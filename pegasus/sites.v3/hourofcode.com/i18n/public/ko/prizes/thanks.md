@@ -32,18 +32,18 @@ Your whole school is now entered to win a class-set of laptops (or $10,000 for o
 
 ## 2. 여러분의 모든 학교에 Hour of Code 이벤트 행사를 열어달라고 요청하세요.
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your principal.
+[Send this email](<%= resolve_url('/promote/resources#email') %>) to your principal.
 
 ## 3. 여러분의 직장 상사에게 함께 참여하도록 요청해 보세요.
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your manager, or the CEO.
+[Send this email](<%= resolve_url('/promote/resources#email') %>) to your manager, or the CEO.
 
-## 4. Promote the Hour of Code in your community
+## 4. 여러분의 동료들과 Hour of Code를 함께 해 보세요.
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](<%= resolve_url('/resources#email') %>).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](<%= resolve_url('/promote/resources#email') %>).
 
 ## 5. 지역 의원 등에게 Hour of Code 를 지원해달라고 요청하세요.
 
-[Send this email](<%= resolve_url('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](<%= resolve_url('/promote/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
 
 <%= view :signup_button %>

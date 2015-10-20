@@ -22,10 +22,10 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 **1. Izplāno savu pasākumu**
 
   * Ieplāno savu laiku, lai varētu sagatavoties pirms "Programmēšanas stundas".
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organizējiet grupu aktivitātes, piemēram, demonstrācijas vai programmēšanas aktīvitātes neizmantojot personālo datoru, vai parādi skolēnu un vadītāju izveidotās aktivitātes.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote#videos') %) to inspire.
+  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. Noskaidro specifiskus vietējos mēdijus, kuri publicē informāciju par izglītojošiem pasākumiem.**
 
@@ -35,7 +35,7 @@ Meklē tiešsaistē, lai atrastu mediju kontaktinformāciju. Ja jūs nevarat atr
 
 **3. Sazinieties ar vietējiem plašsaziņas līdzekļiem**
 
-Lai sasniegtu kādu, e-pasts ir labākā izvēle. Ziņai vēlams būt īsai, taču kodolīgai: kāpēc citiem cilvēkiem būtu nepieciešams aizdomāties par šo pasākumu? Iekļauj kontaktinformāciju (arī tālruņa numuru) tiem, kuri piedalīsies pasākumā. **See a [sample pitch to media](%= resolve_url('/promote#sample-emails') %):**
+Lai sasniegtu kādu, e-pasts ir labākā izvēle. Ziņai vēlams būt īsai, taču kodolīgai: kāpēc citiem cilvēkiem būtu nepieciešams aizdomāties par šo pasākumu? Iekļauj kontaktinformāciju (arī tālruņa numuru) tiem, kuri piedalīsies pasākumā. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %):**
 
 **4. Sagatavojiem jautājumus par jūsu skolas pasākumiem. Lūk pāris paraugi:**
 

@@ -22,6 +22,10 @@ class TablesTest < Minitest::Test
     assert_equal 7, record['age']
     assert_equal false, record['male']
 
+    assert_raises do
+      record_id = create_record([{'name' => 'alice', 'age' => 7, 'male' => false}])
+    end
+
     assert_equal 8, update_record(record_id, {'id' => record_id, 'age' => 8})['age']
     record = read_records.first
     assert_equal 8, record['age']

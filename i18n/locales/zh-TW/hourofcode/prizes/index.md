@@ -6,6 +6,30 @@ title: <%= hoc_s(:title_prizes) %> layout: wide nav: prizes_nav
 
 <%= view :signup_button %>
 
+# 2015 Hour of Code prizes
+
+[col-33]
+
+![](/images/fill-275x200/prize1.jpg)
+
+[/col-33]
+
+[col-33]
+
+![](/images/fill-275x200/prize3.png)
+
+[/col-33]
+
+[col-33]
+
+![](/images/fill-275x200/prize4.png)
+
+[/col-33]
+
+<p style="clear:both">
+  &nbsp;
+</p>
+
 <% if @country == 'la' %>
 
 # 給所有組織者的獎勵
@@ -14,9 +38,25 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
 
 <% else %>
 
-# 2015 prizes
+## Prizes for EVERY organizer
 
-<% end %>
+Every educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com or Microsoft’s Windows Store** as a thank you gift!
+
+[col-33]
+
+![](/images/fit-100/amazon_giftcards_crop.png)
+
+[/col-33]
+
+[col-33]
+
+![](/images/fit-100/microsoft_giftcards.png)
+
+[/col-33]
+
+<p style="clear:both">
+  &nbsp;
+</p>
 
 <% if @country == 'us' %>
 
@@ -26,8 +66,50 @@ One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 wo
 
 <% end %>
 
-## **Every** educator who organizes an Hour of Code event is eligible to receive a prize.
+# 常見問題與解答
 
-Check back for updates in fall 2015.
+## Who is eligible to receive the all organizer thank you gift?
 
-## More prizes coming soon!
+Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank you gift. The $10K hardware prize is limited to US residents only.
+
+## Is there a deadline to sign up to receive the all organizer thank you gift?
+
+You must sign up **before** Dec 7th in order to be eligible to receive the all organizer thank you gift.
+
+## When will I receive my thank you gift?
+
+We will contact you in December after Computer Science Education Week (Dec 7-11th) with next steps on how to redeem your choice of thank you gift.
+
+## Can I receive both Amazon.com and Microsoft's Windows store credit?
+
+No. Thank you gifts are limited to one per organizer. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank you gift.
+
+<% if @country == 'us' %>
+
+## 是否全校都需要參加才能贏得價值 $10,000 美元的硬體呢？
+
+Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](%= resolve_url('/prizes/hardware-signup') %). Every teacher participating will need to [sign up](%= resolve_url('/') %) their classroom individually in order to receive the all organizer thank you gift.
+
+## Who is eligible to win the $10,000 in hardware?
+
+公共 K 12 美國的學校僅限於獎。 To qualify, your entire school must register for the Hour of Code by November 16, 2015. 在每個美國州一所學校將收到一類組的電腦。 Code.org will select and notify winners via email by December 1, 2015.
+
+## 為甚麼價值一萬美元的硬體獎勵只提供給公立學校？
+
+我們很樂意説明教師在公立和私立學校一致好評，但在這個時候，可以歸結為後勤。 我們與 [DonorsChoose.org](http://donorschoose.org) 成為伙伴，管理班級的獎金獎品，其中僅適用于公共，美國 k-12 學校合作。 根據 DonorsChoose.org，該組織能更有效地為公立學校存取一致、 準確的資料。
+
+## 硬件獎申請的截止日期是什麼時候?
+
+To qualify, you must complete the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) by November 16, 2015. 在每個美國州一所學校將收到一類組的電腦。 Code.org will select and notify winners via email by December 1, 2015.
+
+## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
+
+Yes, in the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) include the dates that your whole school is participating.
+
+<% end %>
+
+## 我是美國以外的國家。可以領取獎品?
+
+Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank you gift. The $10K hardware prize is US only.
+
+<% end %> <%= view :signup_button %>

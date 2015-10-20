@@ -22,10 +22,10 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 **1. Zaplanuj wydarzenie**
 
   * Zaplanuj zebranie, by wystartować z Hour of Code.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Zorganizuj działania grupowe (jak pokaz programowania bez prądu) lub wyeksponuj aktywności wymyślone i przeprowadzone przez uczniów.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote#videos') %) to inspire.
+  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **Znajdź odpowiednich reporterów z twojej okolicy, którzy zajmują się kwestiami związanymi z edukacją i wydarzeniami lokalnymi.**
 
@@ -35,7 +35,7 @@ Poszukaj w internecie kontaktu do dziennikarza. Jeśli nie możesz go znaleźć,
 
 **3. Skontaktuj się z mediami lokalnymi**
 
-Najlepszą metodą jest poczta elektroniczna. Mail powinien być któtki i zawierać informację: czemu inni ludzie powinni się zainteresować tym wydarzeniem? Załącz informacje kontaktowe (w tym numer telefonu komówkowego) do osoby, która w dniu wydarzenia będzie na miejscu. **See a [sample pitch to media](%= resolve_url('/promote#sample-emails') %):**
+Najlepszą metodą jest poczta elektroniczna. Mail powinien być któtki i zawierać informację: czemu inni ludzie powinni się zainteresować tym wydarzeniem? Załącz informacje kontaktowe (w tym numer telefonu komówkowego) do osoby, która w dniu wydarzenia będzie na miejscu. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %):**
 
 **4. Przygotuj odpowiedzi na pytania dotyczące wydarzenia w twojej szkole. Tutaj jest kilka przykładów:**
 

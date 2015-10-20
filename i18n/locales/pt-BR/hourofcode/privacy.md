@@ -1,6 +1,6 @@
 * * *
 
-título: Política de privacidade
+title: Política de privacidade
 
 * * *
 
@@ -29,7 +29,7 @@ A nossa Política de Privacidade é fomentada por nosso compromisso com os segui
 
 ## Aviso de privacidade
 
-We are committed to creating a safe and secure environment for learners of all ages on our websites located at <https://code.org>, <https://studio.code.org>, <https://csedweek.org>, <http://computinginthecore.org>, <https://hourofcode.com>, other websites, application programming interface (our “API”), and online services (collectively, our “Website”). Visitantes e usuários do site e participantes dos nossos programas educacionais são referidos individualmente como "usuário" e coletivamente como "usuários". Como somos uma organização sem fins lucrativos, só utilizamos os dados que recebemos para que eles nos ajudem em nossa missão de proporcionar uma excelente educação em ciência da computação para todos os alunos que tiverem interesse. Nós nos estabelecemos como uma organização sem fins lucrativos, de maneira que nenhuma causa relacionada a lucro interferirá na nossa missão de oferecer um recurso educacional confiável.
+Nós temos o compromisso de criar um ambiente seguro e protegido para os estudantes de todas as idades nos nossos sites da Web localizados em [http://code.org](https://code.org), <https://studio.code.org>, [http://csedweek.org](https://csedweek.org), <http://computinginthecore.org>, [http://hourofcode.com](https://hourofcode.com), e também em outros sites, interface de programação de aplicativo (nossa “API”) e serviços on-line (coletivamente, nosso "Site"). Visitantes e usuários do site e participantes dos nossos programas educacionais são referidos individualmente como "usuário" e coletivamente como "usuários". Como somos uma organização sem fins lucrativos, só utilizamos os dados que recebemos para que eles nos ajudem em nossa missão de proporcionar uma excelente educação em ciência da computação para todos os alunos que tiverem interesse. Nós nos estabelecemos como uma organização sem fins lucrativos, de maneira que nenhuma causa relacionada a lucro interferirá na nossa missão de oferecer um recurso educacional confiável.
 
 Nosso aviso de privacidade descreve quais informações coletamos dos nossos usuários, como usamos essas informações e o que fazemos para protegê-las. O seu uso do site e de qualquer informação que você fornecer no site estão sujeitos aos termos do presente Aviso de Privacidade, que está incorporado e sujeito a nossos Termos de Serviço. Todos os termos em letras maiúsculas usados, mas que não estão definidos neste Aviso de Privacidade, têm seus respectivos significados nos nossos [Termos de Serviço](http://code.org/tos). Ao visitar ou usar o nosso site, você concorda expressamente com as práticas de tratamento das informações descritas nesta Política de Privacidade.
 
@@ -136,7 +136,7 @@ Perfis de aluno e professor NÃO podem ser personalizados com uma foto.
 
 Como parte do "Laboratório de aplicativo", há uma ferramenta de programação para navegadores disponível no Code Studio para alunos com 13 anos ou mais. Com ela os alunos podem fazer o upload de fotos, áudio e vídeos personalizados para a plataforma do Code Studio para usar dentro das aplicações ou aplicativos que eles criarem. Esses arquivos são armazenados na plataforma do Code Studio e não são usados pela Code.org para qualquer finalidade diferente daquelas das aplicações criadas pelos alunos.
 
-## Message Sending Between Users
+## Envio de mensagem entre usuários
 
 A Code.org criou uma ferramenta chamada [“Simulador de internet”](/internetsimulator) para ser usada nas salas de aula do Ensino Médio na simulação do funcionamento da internet. Com esta ferramenta, os alunos podem enviar mensagens de texto para outros alunos e para o professor, somente em sua sala de aula. O conteúdo das mensagens não é acessado nem usado pela Code.org para qualquer finalidade que não seja a ferramenta educacional.
 
@@ -146,9 +146,9 @@ Além disso, os usuários podem enviar mensagens para a Code.org para solicitar 
 
 Além das formas citadas acima, o site não apoia nenhum outro meio de troca de mensagens entre os usuários.
 
-## Information We Do NOT Collect
+## Informações que NÃO coletamos
 
-A Code.org não coleta ou armazena formas de pagamento de maneira direta. Donations to Code.org or purchases from the Code.org store are processed via third parties, and although Code.org receives a receipt for donations (for tax purposes), we never receive the payment instrument (such as credit card or wallet information).
+A Code.org não coleta ou armazena formas de pagamento de maneira direta. As doações feitas para a Code.org ou as compras da loja da Code.org são processadas por terceiros e, embora a Code.org receba um recibo das doações (para fins de tributação), nunca recebemos a forma de pagamento (tais como cartão de crédito ou informações de pagamento).
 
 ## Crianças menores de 13 anos
 
@@ -170,7 +170,7 @@ Para participar da avaliação, esses distritos escolares precisam fornecer, dir
 
 Os funcionários, agentes e prestadores de serviço da Code.org deverão ter motivos comerciais legítimos (diretamente relacionados à promoção da nossa missão com foco educacional) para acessar as Informações pessoais que você fornece à Code.org, como, por exemplo, auxiliar no suporte a produtos. A Code.org exige que seus funcionários, agentes e prestadores de serviços atuem em conformidade com este Aviso de privacidade, e que tratem todas as Informações pessoais dos Usuários da Code.org como informações confidenciais.
 
-## How We Share or Transfer Data
+## Como compartilhamos ou transferimos dados
 
 Nós não alugamos ou vendemos as Informações pessoais que coletamos de Usuários, nem as exploramos em função de lucro financeiro de qualquer outra forma. A Code.org nunca compartilha Informações pessoais com outras organizações de terceiros sem seu consentimento, exceto como parte de um programa ou recurso específico para os quais você terá a possibilidade de aceitar ou não tal compartilhamento.
 
@@ -216,11 +216,11 @@ A Code.org pode divulgar as informações do usuário, incluindo dados pessoais,
 
 Caso a Code.org seja adquirida, combinada ou fundida com outra entidade, podemos transferir ou atribuir as Informações pessoais que coletamos de Usuários como parte de tal fusão, aquisição, venda ou outra mudança de direção. Nós garantimos que quaisquer Informações pessoais que tivermos coletado de Usuários serão protegidas com o mesmo nível de segurança e privacidade conforme assegurado por este Aviso de privacidade.
 
-## Our Approach to Data Security
+## Nossa abordagem para a segurança de dados
 
 ### A segurança do Site é importante para você, e também para nós
 
-Para proteger sua privacidade e segurança, tomamos as medidas razoáveis para verificar sua identidade antes de lhe conceder acesso à conta ou de corrigir suas Informações pessoais. Because some schools block SSL-secure websites, Code.org allows access with or without SSL protection, at the direction of those schools. Se desejar uma conexão criptografada por SSL ou se preferir criptografar os dados que você insere enquanto utiliza o Site, utilize o protocolo HTTPS, visitando https://code.org/.
+Para proteger sua privacidade e segurança, tomamos as medidas razoáveis para verificar sua identidade antes de lhe conceder acesso à conta ou de corrigir suas Informações pessoais. Uma vez que algumas escolas bloqueiam sites da Web protegidos por SSL, a Code.org permite o acesso com ou sem proteção SSL, a critério de tais escolas. Se desejar uma conexão criptografada por SSL ou se preferir criptografar os dados que você insere enquanto utiliza o Site, utilize o protocolo HTTPS, visitando https://code.org/.
 
 ### Nós nos esforçamos para garantir que nosso Site e as informações que nos são enviadas sejam seguros, mas nenhuma medida de segurança é perfeita
 
@@ -234,7 +234,7 @@ Nosso Site é operado e gerenciado em servidores localizados nos Estados Unidos.
 
 ### Condições de uso e avisos
 
-If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
+Se optar por visitar a Code.org, sua visita e qualquer conflito sobre privacidade estarão sujeitos a este Aviso de privacidade e aos nossos Termos do Contrato de Serviços, incluindo limitações sobre danos, mediação de conflitos, aplicação da lei do Estado de Washington e a jurisdição para todas as disputas em Seattle, Washington.
 
 ### Observação para os moradores do Estado da Califórnia:
 

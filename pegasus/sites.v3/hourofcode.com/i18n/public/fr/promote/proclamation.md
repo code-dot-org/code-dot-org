@@ -8,12 +8,12 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### Ci-dessous, vous trouverez un exemple de résolution favorable à la Semaine d"éducation des Sciences Informatiques et ses objectifs qui pourraient être utilisé par une région et vos législateurs locaux.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[Maison, Sénat, Assemblée Général, région ou ville résolution ou proclamation ###] – La semaine de l'éducation des Sciences Informatiques met en lumière le rôle crucial que joue l'informatique dans la transformation de notre société et sur la manière dont l'informatique facilite l'innovation et crée des opportunités économiques ;
 
-[HOUSE OR SENATE RESOLUTION ###]
+[RÉSOLUTION ASSEMBLEE NATIONALE OU SÉNAT ###]
 
 [DATE]
 

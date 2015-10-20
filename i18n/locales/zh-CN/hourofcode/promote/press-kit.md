@@ -22,10 +22,10 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 **1. 计划你的活动**
 
   * 策划一系列活动揭开编程一小时的序幕
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * 组织集体活动（如策划“不插电”活动），或展示学生创建并领导的活动。
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote#videos') %) to inspire.
+  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2.确定具体的涵盖教育或本地事件的本地记者。**
 
@@ -35,7 +35,7 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 **3.联系当地媒体**
 
-通过电子邮件是最好的联系办法。 邮件应言简意赅：为什么其他人会关注这个活动？ 内容包括在座的出席活动各位的联系信息（含手机号码）。 **See a [sample pitch to media](%= resolve_url('/promote#sample-emails') %):**
+通过电子邮件是最好的联系办法。 邮件应言简意赅：为什么其他人会关注这个活动？ 内容包括在座的出席活动各位的联系信息（含手机号码）。 **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %):**
 
 **4. 准备好回答关于你学校活动的问题，以下是一些例子：**
 

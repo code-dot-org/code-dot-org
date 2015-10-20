@@ -309,6 +309,8 @@ uk:
       section: Група
       example: Приклад рішення
       example_with_number: 'Приклад рішення %{solution_number}'
+      submitted_on: 'Надіслано %{date}'
+      unsubmit: Відкликати
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
     email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'
@@ -397,6 +399,7 @@ uk:
     tos: Умови надання послуг
     privacy: Політика конфіденційності
     secure: Безпечна версія
+    report_abuse: Повідомити про порушення
   reference_area:
     title: Потрібна допомога?
     subtitle: Переглянути ці відео та підказки
@@ -604,8 +607,24 @@ uk:
     view_all: Переглянути Мої проекти
     remix: Ремікс
     click_to_remix: "Клацни 'Ремікс', щоб створити власну версію на основі цієї!"
-    edit_project: Edit Project
+    edit_project: Редагування проекту
     abuse:
-      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
-      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
-      go_to_code_studio: Go to Code Studio
+      tos: "На цей проект надійшла скарга про порушення <a href='http://code.org/tos'>Умов надання послуг</a> Code.org's, тому ним не можна поділитись з іншими."
+      contact_us: "Якщо ви вважаєте це помилкою, будь ласка <a href='https://code.org/contact'>зв'яжіться з нами.</a>"
+      go_to_code_studio: Перейти до Студії коду
+      report_abuse_form:
+        intro: Якщо Ви стикнулися з образливим вмістом, погрозами, залякуваннями, домаганнями або порушенням авторських прав стосовно Ваших матеріалів у Студії коду, будь ласка, заповніть наведену нижче форму. Ми докладно розглядаємо кожну скаргу і вживаємо відповідних заходів.
+        validation:
+          email: Будь ласка, вкажіть адресу електронної пошти
+          age: Будь ласка, вкажіть вік
+          abuse_type: Будь ласка, вкажіть, як цей вміст порушує умови надання послуг
+          abuse_detail: Будь ласка, надайте подробиці, що стосуються вмісту, на який Ви скаржитесь
+        abusive_url: URL-адреса вмісту, на який скаржитесь
+        abuse_type:
+          question: 'Як цей вміст порушує %{link_start}Умови надання послуг%{link_end}?'
+          harassment: Погрози, залякування, образи
+          offensive: Образливий вміст
+          infringement: Порушення авторських прав
+          other: Інше
+        detail: Будь ласка, опишіть якомога докладніше свою скаргу стосовно вмісту, про який повідомляєте.
+        acknowledge: 'Надсилаючи цю інформацію, ви підтверджуєте, що він буде оброблятися відповідно до умов %{link_start_privacy}Політики конфіденційності%{link_end} та %{link_start_tos}Умов надання послуг%{link_end}'

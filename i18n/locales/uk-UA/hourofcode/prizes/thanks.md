@@ -16,18 +16,18 @@ Your whole school is now entered to win a class-set of laptops (or $10,000 for o
 
 ## 2. Запропонуйте взяти участь у Годині коду всій школі
 
-[Send this email](%= resolve_url('/resources#email') %) to your principal.
+[Send this email](%= resolve_url('/promote/resources#email') %) to your principal.
 
 ## 3. Попросіть про участь свою адміністрацію
 
-[Send this email](%= resolve_url('/resources#email') %) to your manager, or the CEO.
+[Send this email](%= resolve_url('/promote/resources#email') %) to your manager, or the CEO.
 
 ## 4. Розкажіть у своїй спільноті про Годину Програмування
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](%= resolve_url('/resources#email') %).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](%= resolve_url('/promote/resources#email') %).
 
 ## 5. Зверніться до місцевих депутатів по підтримку Години коду
 
-[Send this email](%= resolve_url('/resources#politicians') %) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](%= resolve_url('/promote/resources#politicians') %) to your mayor, city council, or school board and invite them to visit your school.
 
 <%= view :signup_button %>

@@ -1,12 +1,13 @@
 name 'U3L09 Student Lesson Introduction'
 title 'Scene Design Part 1: Plan '
+css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 09 - Scene Design Part 1: Plan 
+## Unit 3: Lesson 08 - Practice PT - Design a Digital Scene
 
 # Background
 
-Breaking down complex programming tasks is useful not only because it makes solutions easier to conceive of, but because it allows multiple programmers to work on the program at the same time. In this project you will use this principle to collaborative develop your own digital scene.
+Breaking down complex programming tasks is useful not only because it makes solutions easier to conceive of, but because it allows multiple programmers to work on the program at the same time. In this project you will use this principle to collaboratively develop your own digital scene.
 
 # Lesson
 
@@ -17,8 +18,8 @@ Breaking down complex programming tasks is useful not only because it makes solu
 * Complete reflection questions
   
 # Resources
-* Activity Guide and Group Planning Guide: <a href="https://docs.google.com/document/d/1iOJKDxN-oOlodP5p3fj0t6svk88C9081UEj3iNSxN60/edit?usp=sharing" target="_blank">
-Design a Digital Scene
+* Activity Guide and Group Planning Guide: <a href="https://docs.google.com/document/d/1FI-_esPMKY9I455G75w0-X932aGJktrLCc16v1iCtlQ/edit?usp=sharing" target="_blank">
+ Practice PT - Design a Digital Scene
 </a>
 * Worksheet: <a href="https://docs.google.com/document/d/19pgdzB9bs94iti-fC3iIMDUmEWSpY5v17wQt14AUzHg/edit?usp=sharing" target="_blank">
 Submission Guidelines: Reflection and Rubric

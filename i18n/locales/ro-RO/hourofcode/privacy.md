@@ -1,10 +1,10 @@
 * * *
 
-Titlu: Politica de confidenţialitate
+title: Politica de confidenţialitate
 
 * * *
 
-### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Politică de Confidenţialitate
 

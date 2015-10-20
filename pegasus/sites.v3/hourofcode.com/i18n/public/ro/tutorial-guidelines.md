@@ -7,18 +7,18 @@ aspect: largă
 
 <%= view :signup_button %>
 
-# Recomandări si explicații pentru Hour of Code și Saptamana Educatiei
+# Recomandări si explicații pentru Hour of Code și Saptamana Educatiei in Tehnologia computer-ului si programare
 
-Code.org va gazdui o varietate de activităţi Hour of Code pe Code.org, Hour of Code, şi CSEdWeek site(urile) Web. Lista curentă este la [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
+Code.org va gazdui o varietate de activităţi site(urile) Web Hour of Code pe Code.org, Hour of Code, şi CSEdWeek. Lista curentă este la [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
-Ne dorim sa găzduim o varietate de elemente interactive, dar obiectivul principal este de a optimiza experienţa pentru elevi şi profesori care sunt începători în ceea ce priveste tehnologia computerelor si programarea. Vă rugăm să folosiţi acest document ca și ghid pentru organizarea activității, orientată către utilizatorul care nu are nici o experiență în informatică, programare sau tehnologia calculatorului.
+Ne dorim sa găzduim o varietate de elemente interactive, dar obiectivul principal este de a optimiza experienţa pentru elevi şi profesori care sunt începători în ceea ce priveste tehnologia computerelor si programarea. Vă rugăm să folosiţi acest document ca și ghid pentru organizarea activității, orientat către utilizatorul care nu are nicio experiență în informatică, programare sau tehnologia calculatorului.
 
   
 
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
+**Dupsa citirea ghidului, iti poti inscrie tutorialul in cadrul paginii [Hour of Code™ Prezentarea Activitatii](https://goo.gl/kNrV3l).**
 
-**NOU:** Spre deosebire de ultimii ani, avem de gând să introducem un nou format pentru activităţi Hour of Code "conduse de profesor". Acestea vor fi listate mai jos de activităţile auto-didacte orientate spre pagini şi e-mailuri pentru elevi. Detaliile mai jos.
+**NOU:** Spre deosebire de ultimii ani, avem de gând să introducem un nou format pentru activităţi Hour of Code "conduse de profesor". Acestea vor fi listate mai jos de activităţile autodidacte orientate spre pagini şi e-mailuri pentru elevi. Detaliile mai jos.
 
 <a id="top"></a>
 
@@ -35,7 +35,7 @@ Ne dorim sa găzduim o varietate de elemente interactive, dar obiectivul princip
 
 <a id="guidelines"></a>
 
-## New for 2015: two formats of activities: self-guided or *lesson-plan*
+## Noi pentru 2015: două formate de activităţi: autodidact sau *plan de lecţie*
 
 Acum, că zeci de mii de cadre didactice au încercat Ora de Programare, multe săli de clasă sunt gata pentru activităţi mai creative, mai puţin atotcuprinzatoare, care invata elementele de bază din informatică separat. Pentru a ajuta profesorii sa-si gaseasca inspiratia, vrem sa colectam cateva lectii si activitati de o ora "Conduse de catre profesor" planuite de catre veteranii Hour of Code. Vom continua si promovarea formatul de "Auto-ghidat".
 
@@ -116,7 +116,7 @@ Un comitet de profesori din domeniul informaticii vor nota tutorialele, pe baza 
 
 ## Cum să trimiteți (Termen limită 10/15/2015)
 
-Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
+Vizitaţi [pagina Hour of Code™ Prezentarea Activitatii](https://goo.gl/kNrV3l) şi urmaţi paşii pentru a trimite tutorialul dvs.
 
 **De ce aveţi nevoie:**
 

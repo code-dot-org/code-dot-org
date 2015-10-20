@@ -31,6 +31,7 @@
   "ifTooltip": "Hvis det er ein sti i gitt retning, så gjer nokre handlingar.",
   "ifelseTooltip": "Hvis det er ein sti i gitt retning, utfør den første blokka av handlingar. Ellers gjer den andre blokka.",
   "ifFlowerTooltip": "Hvis det er ein blome/bikube i gitt retning, så gjer nokre handlingar.",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions.",
   "ifelseFlowerTooltip": "Hvis det er ein blome/bikube i gitt retning, så utfør handlingane  i første blokka. Ellers, utfør handlingan i blokk nummer to.",
   "insufficientHoney": "Du bruker alle dei rette blokkene, men du må ha rett mengde honning.",
   "insufficientNectar": "Du bruker alle dei rette blokkene, men du må samle inn rett mengde nektar.",

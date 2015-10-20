@@ -45,7 +45,7 @@ Breakfast and lunch will be served.
 **Location**
 
 Ryan Professional Development Center<br/>
-Building A<br/> 
+Building A<br/>
 Room PL7<br/>
 4001 Hardy Street<br/>
 Houston, TX 77009
@@ -84,31 +84,11 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Algebra. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+The CS in Algebra Phase 3: Academic Year Development workshops originally scheduled for 12/12 and 2/27 have been cancelled.
 
+For those of you implementing the CS in Algebra curriculum, you can continue to find support through the [online PD](studio.code.org) and your [CS in Algebra forum](http://forum.code.org/c/cs-in-algebra). 
 
-**Save the dates:**
-
-Semester 1: Saturday, December 12, 2015 
-
-Semester 2: Saturday, February 27, 2016 
-
-8:00am - 4:00pm<br/>
-Breakfast and lunch will be served. 
-
-**Location**
-
-TBD
-
-**What to bring to Phase 3 bi-yearly sessions:**
-
-Laptop and Charger
-<br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
+Note: you will not receive payment for any CS in Algebra Phase 3 online work you complete. 
 
 [**Back to the top**](#top)
 

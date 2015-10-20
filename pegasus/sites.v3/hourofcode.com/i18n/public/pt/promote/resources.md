@@ -11,7 +11,7 @@ nav: promote_nav
 
 # Promova a Hora do Código
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Quer sediar uma Hora do Código? [Consulte o guia prático](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -37,17 +37,17 @@ nav: promote_nav
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Use o logotipo da Hora do Código para divulgar o evento
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Baixar a versão em alta resolução](http://images.code.org/share/hour-of-code-logo.zip)
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## Imprima esses adesivos para seus alunos
 
-(Stickers are 1" diameter, 63 per sheet)  
+(São 63 adesivos de 1 polegada de diâmetro por folha)  
 [![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>

@@ -31,6 +31,7 @@
   "ifTooltip": "Ako staza ide u zadanom smjeru, onda napravi zadane akcije.",
   "ifelseTooltip": "Ako staza vodi u zadanom smjeru, onda napravi prvi grupu akcija, a inače napravi drugu grupu akcija.",
   "ifFlowerTooltip": "Ako u navedenom smjeru postoji cvijet ili saće, onda napravi neke akcije.",
+  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions.",
   "ifelseFlowerTooltip": "Ako u navedenom smjeru postoji cvijet ili saće, onda napravi prvi blok akcija. Inače napravi drugi blok akcija.",
   "insufficientHoney": "Koristiš sve odgovarajuće blokove, ali trebaš napraviti pravu količinu meda.",
   "insufficientNectar": "Koristiš sve odgovarajuće blokove, ali trebaš prikupiti pravu količinu nektara.",

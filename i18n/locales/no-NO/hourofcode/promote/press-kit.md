@@ -22,10 +22,10 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 **Planlegg samlingen**
 
   * Planlegg en samling for å sparke i gang Kodetimen.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organiser gruppeaktiviteter som for eksempel en en kode demo eller vis fram noe en student har gjort. 
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote#videos') %) to inspire.
+  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **Identifiser lokal presse som kan dekke samlingen.**
 
@@ -35,7 +35,7 @@ Søk etter kontaktinformasjon til journalister på nett. Hvis du ikke finner det
 
 **3. Ta kontakt med lokale medier**
 
-Den beste måten å nå ut på er via epost. Hold deg kortfattet og prøv å formidle hvorfor folk skulle bry seg om akkurat dette arrangementet. Inkluder kontaktinformasjon (bl.a. et mobilnummer) til personen som vil være til stede under arrangementet. **See a [sample pitch to media](%= resolve_url('/promote#sample-emails') %):**
+Den beste måten å nå ut på er via epost. Hold deg kortfattet og prøv å formidle hvorfor folk skulle bry seg om akkurat dette arrangementet. Inkluder kontaktinformasjon (bl.a. et mobilnummer) til personen som vil være til stede under arrangementet. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %):**
 
 **4. Vær forberedt på å svare på spørsmål om arrangementet på skolen din. Her er noen eksempler:**
 

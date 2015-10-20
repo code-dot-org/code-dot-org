@@ -145,15 +145,6 @@ vi:
   prizes_brilliant: Một trường học tại mỗi tỉnh và khu vực sẽ nhận được $2000 cho dự án Brilliant
   prizes_actua: 15 trường trên khắp Canada được 2 cuộc hội thảo STEM thực hành bởi thành viên của Actua
   prizes_details: Chi tiết
-  prizes_nav_dc: Chuyến đi bí ẩn đến Washington D.C.
-  prizes_nav_technology: Công nghệ $10.000 cho trường học của bạn
-  prizes_nav_video_chat: Chat video với một người giỏi công nghệ
-  prizes_nav_skype_dropbox: Thẻ tín dụng Skype hoặc không gian Dropbox cho mỗi người tổ chức
-  prizes_nav_brilliant: dự án Brilliant Labs $2,000
-  prizes_nav_actua: Hội thảo Actua
-  prizes_nav_kids_code: Mã hóa Jeunesse cho trẻ em
-  prizes_nav_terms: Điều khoản và điều kiện
-  prizes_nav_faq: Những câu hỏi thường gặp
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -162,15 +153,28 @@ vi:
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
   how_to_nav_organizations: For organizations
+  how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
   prizes_nav_title: Phần thưởng
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Điều khoản và điều kiện
+  prizes_nav_faq: Những câu hỏi thường gặp
+  prizes_nav_dc: Chuyến đi bí ẩn đến Washington D.C.
+  prizes_nav_technology: Công nghệ $10.000 cho trường học của bạn
+  prizes_nav_video_chat: Chat video với một người giỏi công nghệ
+  prizes_nav_skype_dropbox: Thẻ tín dụng Skype hoặc không gian Dropbox cho mỗi người tổ chức
+  prizes_nav_brilliant: dự án Brilliant Labs $2,000
+  prizes_nav_actua: Hội thảo Actua
+  prizes_nav_kids_code: Mã hóa Jeunesse cho trẻ em
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: "Every organizer will receive a gift card to Amazon.com or Microsoft's Windows Store."
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "a href='http://hourofcode.com/resources/how-to' làm thế nào để chạy Hour of Code"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'> đẩy mạnh Hour of Code"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
@@ -211,7 +215,7 @@ vi:
   front_join_us_support: Hỗ trợ nó
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: For more information, please visit code.org
-  front_join_us_n_students_served: '# students served'
+  front_join_us_n_students_served: '# served'
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Tên của bạn
   signup_email_label: Email của bạn
@@ -241,6 +245,7 @@ vi:
   map_header: Sự kiện Hour of Code trên toàn thế giới
   see_all_events: Xem tất cả sự kiện
   map_header_company: '# bởi những người tổ chức công ty'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Tìm kiếm sự kiện Hour of Code
   map_search_search: Tìm kiếm
   map_search_reset: Đặt lại
@@ -280,16 +285,15 @@ vi:
   hoc_faq_why_cs_q: Tại sao lại là khoa học máy tính?
   hoc_faq_why_cs_a: "<i>Mỗi</i> học sinh nên có cơ hội để tìm hiểu khoa học máy tính. Nó giúp nuôi dưỡng giải quyết vấn đề kỹ năng, logic và sáng tạo. Bằng cách bắt đầu sớm, học sinh/ sinh viên sẽ có một nền tảng cho sự thành công trong bất kỳ con đường sự nghiệp thế kỷ 21. Xem thêm thống kê trên <a href='http://code.org'> Code.org</a>."
   hoc_faq_how_participate_q: Làm thế nào để tham gia vào Hour of Code?
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Những ai đã làm nên Hour of Code?
   hoc_faq_behind_hoc_a: "Giờ mã được tổ chức bởi <a href='http://code.org'> Code.org</a>, một khu vực 501 c 3 phi lợi nhuận chuyên dụng để mở rộng sự tham gia trong khoa học máy tính bằng cách làm cho nó có sẵn trong các trường học thêm, và tăng sự tham gia của phụ nữ và các sinh viên underrepresented của màu sắc. Một <a href='http://code.org/about/partners'> liên minh chưa từng có của các đối tác</a> đã đến với nhau để hỗ trợ giờ mã, quá &mdash; bao gồm Microsoft, Apple, Amazon, chàng trai và cô gái câu lạc bộ của Mỹ và hội đồng quản trị trường cao đẳng."
   hoc_faq_host_q: Tôi không biết điều gì hết về coding/ lập trình. Tôi vẫn có thể đến tham dự sự kiện?
-  hoc_faq_host_a: |-
-    Dĩ nhiên. Các hoạt động của chương trình "Hour of Code" đều có hướng dẫn trên trang web. Tất cả những gì bạn cần làm là <a href='http://code.org/learn'>tham gia vào các khóa học hiện hành của chúng tôi</a>, chọn lấy một khóa học bạn muốn và dành ra 1 giờ, chúng tôi sẽ giúp bạn trong những phần tiếp theo. Chúng tôi cũng có nhiều lựa chọn cho các lứa tuổi và các mức độ người học khác nhau, từ học sinh mầm non trở lên. Băt đầu lên kế hoạch cho việc học của bạn bằng việc đọc  <a href='/resources/how-to'>hướng dẫn</a> của chúng tôi.
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Tôi có cần máy tính cho mọi người tham gia?
   hoc_faq_need_computers_a: "Không. Chúng tôi đã hướng dẫn giờ mã làm việc trên máy tính, điện thoại thông minh, viên nén, và một số đó có yêu cầu máy tính không có ở tất cả! Bạn có thể tham gia ở bất cứ đâu, với bất cứ điều gì bạn có. <p><i>Dưới đây là một vài lựa chọn:</i> <br><ul><li><b>làm việc trong cặp.</b> Nghiên cứu cho thấy học sinh tìm hiểu tốt nhất với <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> cặp lập trình</a>, chia sẻ một máy tính và làm việc cùng nhau. Khuyến khích học sinh của bạn tăng gấp đôi lên. <li><b>Sử dụng một màn hình dự kiến.</b> Nếu bạn có một máy chiếu và màn hình cho một máy tính kết nối Web, toàn bộ nhóm của bạn có thể làm một giờ mã với nhau. Xem video phần với nhau và đưa sang giải những câu đố hoặc trả lời câu hỏi. <li><b>Đi chưa cắm phít được.</b> Chúng tôi cung cấp hướng dẫn yêu cầu máy tính không có ở tất cả. </ul>"
   hoc_faq_international_q: 'Tôi đang ở <country>. Làm thế nào tôi có thể tham gia các sự kiện quốc tế?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Làm thế nào tôi có thể làm một hướng dẫn về Hour of Code?
   hoc_faq_tutorial_a: "Nếu bạn đang quan tâm đến việc trở thành một hướng dẫn viên, <a href='/tutorial-guidelines'> xem hướng dẫn và hướng dẫn của chúng tôi</a>. Chúng tôi muốn tổ chức một loạt các lựa chọn hấp dẫn, nhưng mục tiêu chính là để tối ưu hóa kinh nghiệm cho học sinh/ sinh viên và giáo viên những người mới tìm hiểu về khoa học máy tính."
   hoc_faq_more_questions_q: Còn thêm bất cứ câu hỏi nào ko?
@@ -359,6 +363,7 @@ vi:
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: Làm thế nào để hướng dẫn cho các công chức
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials

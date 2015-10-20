@@ -4,7 +4,7 @@ title: Privacy Policy
 
 ---
 
-### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Privacy Policy
 
@@ -73,7 +73,7 @@ Note: See section below for details on how we handle email addresses from childr
 | ------------------------------------------------------------------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | School name                                                                    | Optional  | At your option and under your control, we would list your school in the Code.org map and database of schools that teach computer science courses.</br>  
 Code.org may also use this information to reach out to your school or district to discuss broader education partnerships or participation in special events.</br>                                                                                                                                                                                          |
-| School address                                                                 | Optional  | At your option and under your control, we would list your school (and relevant contact information, if you provide it) in the Code.org map and database of schools that teach computer science courses.                                                                                                                                                                                                                                                                                                             |
+| اسکول کا پتہ                                                                   | Optional  | At your option and under your control, we would list your school (and relevant contact information, if you provide it) in the Code.org map and database of schools that teach computer science courses.                                                                                                                                                                                                                                                                                                             |
 | Student section data                                                           | Required  | You may create accounts for your students (and provide each student’s display name and optionally their age and gender), and organize these students into sections or groups. You may assign each section a display name, and a course assignment. The section grouping data is used to simplify your view of students across multiple sections.</br>  
 Teachers are encouraged to share a document with students and parents informing them about the Code Studio course, including the privacy implications.</br> |
 

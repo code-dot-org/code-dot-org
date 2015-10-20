@@ -145,15 +145,6 @@ nl:
   prizes_brilliant: Een school per provincie ontvangt $2000 voor een briljant project
   prizes_actua: "15 scholen over Canada zullen  2 hands-on STEM workshops ontvangen van een Atua's leden"
   prizes_details: Details
-  prizes_nav_dc: Mystery trip naar Washington D.C.
-  prizes_nav_technology: Voor 10.000 dollar aan technologie voor uw school
-  prizes_nav_video_chat: Video-chat met een IT-held
-  prizes_nav_skype_dropbox: Skypetegoed of Dropbox ruimte voor elke organisator
-  prizes_nav_brilliant: Een Brilliant Labs project van 2000 dollar
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Algemene voorwaarden
-  prizes_nav_faq: Veelgestelde Vragen
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -162,15 +153,28 @@ nl:
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
   how_to_nav_organizations: For organizations
+  how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
   prizes_nav_title: Prijzen
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Algemene voorwaarden
+  prizes_nav_faq: Veelgestelde Vragen
+  prizes_nav_dc: Mystery trip naar Washington D.C.
+  prizes_nav_technology: Voor 10.000 dollar aan technologie voor uw school
+  prizes_nav_video_chat: Video-chat met een IT-held
+  prizes_nav_skype_dropbox: Skypetegoed of Dropbox ruimte voor elke organisator
+  prizes_nav_brilliant: Een Brilliant Labs project van 2000 dollar
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: "Every organizer will receive a gift card to Amazon.com or Microsoft's Windows Store."
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Hoe doe je een HOUR of CODE</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Promoot de HOUR of CODE</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
@@ -211,7 +215,7 @@ nl:
   front_join_us_support: Ondersteun het
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: For more information, please visit code.org
-  front_join_us_n_students_served: '# students served'
+  front_join_us_n_students_served: '# served'
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Je naam
   signup_email_label: Je email
@@ -241,6 +245,7 @@ nl:
   map_header: '# Uur van Code gebeurtenissen rond de wereld'
   see_all_events: Bekijk alle evenementen
   map_header_company: '# door bedijfsorganisatoren'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Zoek Uur Code events
   map_search_search: Zoek
   map_search_reset: Resetten
@@ -280,15 +285,15 @@ nl:
   hoc_faq_why_cs_q: Waarom Informatica?
   hoc_faq_why_cs_a: "<i>Elke</i> leerling moet de kans krijgen om te leren programmeren. Het helpt probleemoplossende vaardigheden, logica en creativiteit te ontwikkelen. Leerlingen krijgen door vroeg te beginnen de basis voor een succesvole hedendaagse loopbaan. Kijk voor meer informatie op <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Hoe kan ik aan het Uur Code deelnemen?
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Wie zit er achter het Uur Code?
   hoc_faq_behind_hoc_a: "Het Uur Code wordt georganiseerd door <a href='http://code.org'>Code.org</a>, een openbare 501c3 non-profit gewijd aan verspreiden van interesse in de informatica, door deze beschikbaar te stellen aan scholen en door de deelname door vrouwen en allochtone studenten te ondersteunen. Een <a href='http://code.org/about/partners'>ongekende coalitie van partners</a>  steunen samen het Uur Code &mdash; waaronder Microsoft, Apple, Amazon, Boys and Girls Clubs of America en het College Board."
   hoc_faq_host_q: Ik weet niets over programmeren. Kan ik nog steeds een evenement organiseren?
-  hoc_faq_host_a: "Natuurlijk. Uur Code-activiteiten zijn doe-het-zelf. Je hoeft alleen maar een van onze <a href='http://code.org/learn'>huidige cursussen</a> te proberen. Kies een leuke cursus en kies een uur &mdash; wij zorgen voor de rest. We hebben mogelijkheden voor iedere leeftijd en ervaringsniveau, van de kleuterschool af aan. Begin het plannen van je evenement door onze <a href='/resources/how-to'>how-to guide</a> te lezen."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Heb ik een computer nodig voor iedere deelnemer?
   hoc_faq_need_computers_a: "Nee. We hebben cursussen die werken op PC's, smartphones, tablets, en een paar waarvoor je helemaal geen computer nodig hebt! Je kunt meedoen waar je ook bent, wat je ook hebt. <p><i>Hier zijn een aantal mogelijkheden:</i> <br> <ul> <li><b>Werk in paren.</b> Onderzoek wijst uit dat leerlingen het best leren met <a href='https://nl.wikipedia.org/wiki/Pair_programming'>pair programming</a>, door een computer te delen en samen te werken. Moedig je leerlingen aan tweetallen te vormen. <li><b>Gebruik een projector.</b> Als je een projector en scherm hebt voor een computer met een internetverbinding, dan kan je hele groep samen een Uur Code doen. Kijk naar stukken video en los om de beurt opdrachten op of beantwoord vragen. <li><b>Ga draadloos</b> We hebben ook opdrachten die helemaal geen computer vereisen.</ul>"
   hoc_faq_international_q: 'Ik ben in <country>. Hoe doe ik internationaal mee?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Hoe kan ik een Uur Code-opdracht maken?
   hoc_faq_tutorial_a: "Als je opdracht-partner wil worden, <a href='targetHOC'>lees onze richtlijnen en instructies</a>. We bieden graag een veelheid aan mogelijkheden, maar het hoofddoel is de ervaring voor leerlingen en leraren die nieuw zijn in de informatica te optimaliseren."
   hoc_faq_more_questions_q: Heb je meer vragen?
@@ -356,6 +361,7 @@ nl:
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: How-to guide voor overheidsfunctionarissen
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials

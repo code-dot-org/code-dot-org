@@ -145,15 +145,6 @@ ko:
   prizes_brilliant: 멋진 결과를 얻은, 각 지역/주의 1개 학교는 $2000 상당의 상품을 받게 됩니다.
   prizes_actua: 캐나다까지 포함해 15개의 학교들은 Actua 멤버중에 하나에서 진행하는 STEM 활동 워크샵 기회를 얻게 됩니다.
   prizes_details: 세부 사항
-  prizes_nav_dc: 워싱턴 디씨(D.C)로의 신비한 여행
-  prizes_nav_technology: 여러분의 학교에 제공되는 1만 달러 상당의 지원
-  prizes_nav_video_chat: 위대한 기술자와 영상 채팅
-  prizes_nav_skype_dropbox: 모든 주최자에 제공되는 스카이프 크레딧 또는 드롭박스 공간
-  prizes_nav_brilliant: 2천달러 짜리 멋진 연구실 프로젝트
-  prizes_nav_actua: Actua 워크숍
-  prizes_nav_kids_code: 키드 코드 주네세
-  prizes_nav_terms: 이용 약관
-  prizes_nav_faq: 자주 묻는 질문 (FAQ)
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -162,15 +153,28 @@ ko:
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
   how_to_nav_organizations: For organizations
+  how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
   prizes_nav_title: 상품
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: 이용 약관
+  prizes_nav_faq: 자주 묻는 질문 (FAQ)
+  prizes_nav_dc: 워싱턴 디씨(D.C)로의 신비한 여행
+  prizes_nav_technology: 여러분의 학교에 제공되는 1만 달러 상당의 지원
+  prizes_nav_video_chat: 위대한 기술자와 영상 채팅
+  prizes_nav_skype_dropbox: 모든 주최자에 제공되는 스카이프 크레딧 또는 드롭박스 공간
+  prizes_nav_brilliant: 2천달러 짜리 멋진 연구실 프로젝트
+  prizes_nav_actua: Actua 워크숍
+  prizes_nav_kids_code: 키드 코드 주네세
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: "Every organizer will receive a gift card to Amazon.com or Microsoft's Windows Store."
   whats_next_header: 다음은?
   whats_next_description: "여러분의 이벤트에 도움이 될 팁과 자료를 보내드립니다. 모든 인터넷 브라우저와 스마트폰에서 사용할 수 있는, 2015년 새로운 튜토리얼을 곧 제공합니다. <a href='http://code.org/learn'>현재 튜토리얼 실행하기 </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Hour of Code 행사 진행방법</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Hour of Code 행사 지원하기</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
@@ -211,7 +215,7 @@ ko:
   front_join_us_support: 도움주기
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: For more information, please visit code.org
-  front_join_us_n_students_served: '# students served'
+  front_join_us_n_students_served: '# served'
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: 이름
   signup_email_label: 이메일
@@ -241,6 +245,7 @@ ko:
   map_header: '# 전세계적으로 운영되는 Hour of Code 이벤트들'
   see_all_events: 모든 이벤트 보기
   map_header_company: '# 개의 회사들이 행사를 조직/운영하고 있습니다.'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Hour of Code 행사 검색
   map_search_search: 검색
   map_search_reset: 다시 설정
@@ -282,15 +287,15 @@ ko:
   hoc_faq_why_cs_q: 왜 하필이면 컴퓨터과학(정보과학) 인가요?
   hoc_faq_why_cs_a: "<i>모든</i> 학생은 컴퓨터과학(정보과학)을 배울 기회를 얻을 수 있도록 해야합니다. 컴퓨터과학(정보과학)을 통해 현실에서의 문제 해결 능력, 논리와 창의성을 키워줍니다. 쉽게 시작하게 됨으로서 학생들은 21세기의 생활과 진로탐색에 있어서 새로운 경험들과 성공들을 경험하게 됩니다. <a href='http://code.org'>Code.org</a>의 효과들을 살펴보세요."
   hoc_faq_how_participate_q: Hour of Code 에 어떻게 참여할 수 있나요?
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Hour of Code 운영의 주최/후원은 누구인가요?
   hoc_faq_behind_hoc_a: "Hour of Code는 미국의 비영리 단체 코드인 501c3에 따르는 <a href='http://code.org'>Code.org</a>에 의해 조직되고 운영됩니다. Code.org는 더 인종, 나이, 성별과 상관없이 보다 많은 학교들에서 컴퓨터과학(정보과학)을 가르칠 수 있도록 하는 확산 운동을 추진하고 있습니다. <a href='http://code.org/about/partners'>수많은 협력 및 후원자들</a> 은 Hour of Code 를 지원하고 있습니다. &mdash; Microsoft, Apple, Amazon, 미국 소년 소녀 학생 동아리들, 미국 대학 교육협회 등."
   hoc_faq_host_q: 저는 코딩을 전혀 모릅니다. 그래도 이벤트를 운영할 수 있을까요?
-  hoc_faq_host_a: "물론 가능합니다. Hour of Code 활동은 자기주도적 학습입니다. 여러분은 <a href='http://code.org/learn'>예전 튜토리얼 해보기</a>, 원하는 튜토리얼 선택하기,  시간 잡기 등입니다. &mdash; 나머지 필요한 사항들은 모두 지원합니다. 모든 연령대에 대해서, 유치원부터 그 이상의 모든 수준을 위한 것들이 준비되어있습니다. <a href='/resources/how-to'>시작하기 가이드</a>를 읽고 이벤트 개최를 계획해 보세요."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: 참여하는 사람들을 위해 컴퓨터들을 준비해야 하나요?
   hoc_faq_need_computers_a: "아니요. 컴퓨터가 없이도 스마트폰, 태블릿PC 등 등에서도 모두 튜토리얼을 해 볼 수 있습니다. 언제 어디서든지, 가지고 있는 것 만으로도 이벤트가 가능합니다. <p><i>몇 개의 옵션이 있습니다.:</i> <br> <ul> <li><b>두명이 한 팀으로 활동하기</b> 학생들은 페어 프로그래밍(<a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pair programming</a>)이라는 방법으로 컴퓨터를 같이 사용하고 문제들을 함께 해결하면서 가장 잘 배울 수 있다고 알려져 있습니다. 둘이 같이 협력하도록 해보세요.  <li><b>프로젝트 화면 사용하기</b> 인터넷에 연결된 컴퓨터와 프로젝터와 스크린이 있다면, Hour of Code 를 모두 함께 해볼 수 있습니다. 화면을 보면서 함께 퍼즐과 문제를 해결할 수 있습니다.<li><b>언플로그드 활동 하기</b> 컴퓨터가 전혀 없이도 할 수 있는 많은 언플러그드 활동이 있습니다.</ul>"
   hoc_faq_international_q: '저는 <country>에 살고 있습니다. 어떻게하면 저도 국제적으로 함께 참여할 수 있을까요?'
-  hoc_faq_international_a: "세계 어디서나 누구든지 Hour of Code 이벤트를 조직할 수 있습니다. 작년에 전 세계적으로 학생들이 Hour of Code에 참여했습니다. 더 많은 정보를 <a href='/resources'>여기서</a> 확인하세요."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Hour of Code 튜토리얼을 어떻게 만들 수 있나요?
   hoc_faq_tutorial_a: "튜토리얼을 만드는 것에 관심이 있으시다면, <a href='targetHOC'>가이드라인과 방법</a>을 살펴보세요. 어떤 형태로든 다양한 방법으로 함께 하기를 원하고 있습니다. 가장 중요한 목표는 컴퓨터과학(정보과학)을 모르는 학생들과 선생님들에게 가장 효과적으로 경험을 제공하는데 있습니다."
   hoc_faq_more_questions_q: 더 궁금하신 것이 있으신가요?
@@ -358,6 +363,7 @@ ko:
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: 공무원들을 위한 이벤트 가이드
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials

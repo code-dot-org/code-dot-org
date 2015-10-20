@@ -31,6 +31,7 @@
   "ifTooltip":"Ak sa tam nachádza cesta v určenom smere, sprav niektoré opatrenia.",
   "ifelseTooltip":"Ak je v určenom smere cesta, potom vykonaj prvý blok akcií. V opačnom prípade vykonaj druhý blok akcií.",
   "ifFlowerTooltip":"Ak je kvetina\/úľ v určenom smere, potom urob niektoré činnosti.",
+  "ifOnlyFlowerTooltip":"If there is a flower in the specified direction, then do some actions.",
   "ifelseFlowerTooltip":"Ak je kvetina\/úľ v určenom smere, potom urob prvý blok činností . Inač urob druhý blok činností.",
   "insufficientHoney":"Používate správne bloky, ale musíte vyrobiť dostatočné množstvo medu.",
   "insufficientNectar":"Používate správne bloky, ale musíte pozbierať dostatočné množstvo nektáru.",

@@ -32,18 +32,18 @@ Arkadaşlarınıza #KodlamaSaati 'ni anlatın.
 
 ## 2. Tüm okulun bir Kodlama Saati talep etmesini sağlayın
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your principal.
+[Send this email](<%= resolve_url('/promote/resources#email') %>) to your principal.
 
 ## 3. İşvereninizin de katılmasını rica edin
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your manager, or the CEO.
+[Send this email](<%= resolve_url('/promote/resources#email') %>) to your manager, or the CEO.
 
 ## 4. Kodlama Saati'ni çevrenize tanıtın
 
-Yerel bir grupla iletişime geçin - öğrenci kulüpleri, dernekler ve bu çeşit diğer organizasyonlara ulaşabilirsiniz. Veya, mahallenizde bir "Kodlama Saati Partisi" düzenleyebilirsiniz. [Send this email](<%= resolve_url('/resources#email') %>).
+Yerel bir grupla iletişime geçin - öğrenci kulüpleri, dernekler ve bu çeşit diğer organizasyonlara ulaşabilirsiniz. Veya, mahallenizde bir "Kodlama Saati Partisi" düzenleyebilirsiniz. [Send this email](<%= resolve_url('/promote/resources#email') %>).
 
 ## 5. Yerel yönetim idarelerinden Kodlama Saatini desteklemelerini rica edin
 
-[Send this email](<%= resolve_url('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](<%= resolve_url('/promote/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
 
 <%= view :signup_button %>

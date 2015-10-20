@@ -20,7 +20,9 @@ Category: Variables
 [description]
 
 [short_description]
+
 1 sentence (2 max) that describes what the function does. This should be mirrored in the tooltip in App Lab. Be pithy.
+
 [/short_description]
 
 Here goes a very student friendly longer description. Why is this useful? Wherever possible, provide context that matches the first time the student is exposed to this topic.

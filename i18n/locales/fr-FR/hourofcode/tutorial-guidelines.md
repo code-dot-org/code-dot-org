@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 <%= view :signup_button %>
 
-# Directives pour Hour of Code™ et Computer Science Education Week
+# Directives pour Une Hour of Code™ et pour la semaine de l'apprentissage des sciences informatiques
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 

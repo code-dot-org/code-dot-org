@@ -1,10 +1,10 @@
 ---
 
-titulli: Politika e Privatësisë
+title: Politika e Privatësisë
 
 ---
 
-### Gjuha detyruese ligjore është në EN, dhe mund të gjenden [ këtu ](https://code.org/privacy). Më poshtë është një përkthim.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Politika e Privatësisë
 

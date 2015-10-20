@@ -117,11 +117,12 @@ module.exports = React.createClass({
         <button
             onClick={this.fileUploadClicked}
             className="share"
+            id="upload-asset"
             disabled={!this.props.uploadsEnabled}>
           <i className="fa fa-upload"></i>
           &nbsp;Upload File
         </button>
-        <span style={{margin: '0 10px'}}>
+        <span style={{margin: '0 10px'}} id="manage-asset-status">
           {this.state.statusMessage}
         </span>
       </div>
@@ -163,7 +164,7 @@ module.exports = React.createClass({
 
       assetList = (
         <div>
-          <div style={{maxHeight: '330px', overflowX: 'scroll', margin: '1em 0'}}>
+          <div style={{maxHeight: '330px', overflowY: 'scroll', margin: '1em 0', paddingRight: '15px'}}>
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}

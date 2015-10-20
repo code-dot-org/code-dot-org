@@ -24,10 +24,10 @@ nav: promote_nav
 **1, Ispalnirajte svoj događaj**
 
   * Planirajte sastanak kako bi označili početak Sata Kodiranja.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organizirajte grupne aktivnosti (kao na primjer prikazivanje aktivnosti programiranja bez elektronskih uređaja) ili pokažite aktivnosti koje su izvršili i vodili učenici.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote#videos') %>) to inspire.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Identificirajte pojedine novinare koji pišu o edukacji ili mjesnim događanjima.**
 
@@ -37,7 +37,7 @@ Pretražite internet da biste našli kontakt informacije. Ukoliko ih ne možete 
 
 **3. Kontaktirajte mjesne medije**
 
-Najbolji način kontakta je putem elektroničke pošte. Poruka treba biti kratka i prenijeti razlog zašto ih se ovaj događaj tiče. Uključite kontakt informacije (također i broj mobitela) osoba koje će biti prisutne tijekom događaja. **See a [sample pitch to media](<%= resolve_url('/promote#sample-emails') %>):**
+Najbolji način kontakta je putem elektroničke pošte. Poruka treba biti kratka i prenijeti razlog zašto ih se ovaj događaj tiče. Uključite kontakt informacije (također i broj mobitela) osoba koje će biti prisutne tijekom događaja. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Pripremite se odgovoriti na pitanja o vašim školskim aktivnostima u vezi događaja. Na primjer:**
 

@@ -32,18 +32,18 @@ Your whole school is now entered to win a class-set of laptops (or $10,000 for o
 
 ## 2. آپنے پورے اسکول کو ایک گھنٹے کے کوڈ کی پیشکش دیں۔
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your principal.
+[Send this email](<%= resolve_url('/promote/resources#email') %>) to your principal.
 
 ## 3. اپنے ایمپلائر کو ملوث/شامل ہونے کے لئے پوچھیں/کہے۔
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your manager, or the CEO.
+[Send this email](<%= resolve_url('/promote/resources#email') %>) to your manager, or the CEO.
 
 ## ٤۔ اپنی کمیونٹی میں" آور آف کوڈ" کو فروغ دیں
 
-ایک مقامی گروپ کو بھرتی کریں، جیسے کے لڑکے یا لڑکیوں کے سکاؤٹس کلب، چرچ، یونیورسٹی، سابق فوجیوں کے گروپ یا مزدور یونین. یا اپنے پڑوس کے لئے آور آف کوڈ "بلاک پارٹی" کی میزبانی کریں۔ [Send this email](<%= resolve_url('/resources#email') %>).
+ایک مقامی گروپ کو بھرتی کریں، جیسے کے لڑکے یا لڑکیوں کے سکاؤٹس کلب، چرچ، یونیورسٹی، سابق فوجیوں کے گروپ یا مزدور یونین. یا اپنے پڑوس کے لئے آور آف کوڈ "بلاک پارٹی" کی میزبانی کریں۔ [Send this email](<%= resolve_url('/promote/resources#email') %>).
 
 ## 5. کوڈ کی گھڑی کی حمایت کرنے کے لئے ایک مقامی منتخب اہلکار سے کہیں/پوچھیں۔
 
-[Send this email](<%= resolve_url('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](<%= resolve_url('/promote/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
 
 <%= view :signup_button %>

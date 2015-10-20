@@ -1,5 +1,4 @@
 @import "color";
-@import "colpick.css";
 @import "style-constants";
 @import "skins/base.scss";
 @import "skins/modern.scss";
@@ -212,17 +211,18 @@ div#visualizationResizeBar {
 #visualizationColumn.wireframeShare {
   background: url("#{$root}phone_wireframe.png") center center no-repeat;
   max-width: none !important;
-  width: 363px;
-  height: 714px;
-  margin: 20px auto;
+  width: 352px;
+  height: 612px;
+  margin: 0 auto;
+  padding: 20px 0;
 
   #designToggleRow, #gameButtons {
     display: none;
   }
 
   #visualization {
-    top: 116px;
-    left: 21px;
+    top: 68px;
+    left: 16px;
     border: 0;
   }
 }
@@ -233,7 +233,7 @@ div#visualizationResizeBar {
   }
 }
 
-#divApplab {
+#divApplab, #designModeViz {
   overflow: hidden;
   outline: none;
   position: relative;
@@ -247,7 +247,7 @@ div#visualizationResizeBar {
   user-select: none;
 }
 
-#divApplab canvas {
+#divApplab canvas, #designModeViz canvas {
   position: absolute;
   overflow: hidden;
   top: 0px;
@@ -362,6 +362,19 @@ $debug-area-initial-height: 120px;
     -ms-user-select: none;
     user-select: none;
   }
+  #show-hide-debug-icon {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    margin: 0;
+    line-height: $workspace-headers-height;
+    font-size: 18px;
+
+    &:hover {
+      cursor: pointer;
+      color: white;
+    }
+  }
 }
 
 $debug-commands-column-width: 270px;
@@ -373,22 +386,6 @@ $debug-commands-column-width: 270px;
 
   .fa {
     margin: 0 0.25em;
-  }
-
-  #show-hide-debug-icon {
-    position: absolute;
-    top: 0;
-    left: 8px;
-    margin: 0;
-    line-height: $workspace-headers-height;
-  }
-
-  &.js-hover-hack {
-    cursor: pointer;
-
-    #show-hide-debug-icon {
-      color: white;
-    }
   }
 }
 
@@ -408,6 +405,9 @@ $debug-commands-column-width: 270px;
 }
 
 .debug-console {
+  &.full {
+    left: 0;
+  }
   left: $debug-commands-column-width;
   right: 0;
 }
