@@ -9,7 +9,6 @@ embedded_layout: simple_embedded
 
 [/name]
 
-
 [category]
 
 Category: Turtle
@@ -18,16 +17,13 @@ Category: Turtle
 
 [description]
 
-Sets the speed for the entire app's execution (which includes the turtle's speed).
-
 [short_description]
 
-The speed can also be set by the slider bar below the blue reset button.
+Sets the speed for the app's execution, which includes the turtle's speed.
 
 [/short_description]
 
-**Note**: Be sure to [show()](/applab/docs/show)  the turtle to see its movement.
-**Note**: A speed of 100 will be too fast for the human eye to see the movement on screen.
+Slowing down the speed of the turtle while drawing allows us to see the execuion of each command more easily. 
 
 [/description]
 
@@ -36,13 +32,10 @@ ____________________________________________________
 
 [example]
 
-**Example 1**
-
-
 ```
-show();             // shows the turtle by making it visible at its current location
-speed(50);          // sets the speed to 50
-moveForward(100);   // moves the turtle forward 100 pixels
+// Draw a line slowly.
+speed(1);
+moveForward();
 ```
 
 [/example]
@@ -51,26 +44,29 @@ ____________________________________________________
 
 [example]
 
-**Example 2**
+**Example: Different Speeds** Draw a square with the turtle moving at increasingly faster speeds (10, 20, 30, 40, 50, 60, 70, 80, 90, 100).
 
-This example illustrates the turtle moving at different speeds (10, 20, 30, 40, 50, 60, 70, 80, 90, 100) as it draws a square on the screen.
-
-
-```
-textLabel("speed", "speed: 10", "forId");   // creates a text label that displays the current speed
-                                            //    of the turtle
-show();                                     // shows the turtle by making it visible at its current location
-for (var i = 1; i <= 10; i++) {             // creates a for loop that will repeat 10 times
-  for (var j = 0; j < 4; j++) {             // creates a for loop that will repeat 4 times,
-                                            //    to create a square
-    setText("speed", "speed: " + i * 10);   // updates the text label to the current speed
-    speed(i*10);                            // increases the speed by a multiple of 10
-    moveForward(100);                       // moves the turtle forward by 100 pixels
-    turnRight(90);                          // turns the turtle 90 degrees to the right
+<table>
+<tr>
+<td>
+<pre>
+// Draw a square with the turtle moving at increasingly faster speeds (10, 20, 30, 40, 50, 60, 70, 80, 90, 100).
+textLabel("speed", "speed: 10");
+for (var i = 1; i <= 10; i++) {
+  for (var j = 0; j < 4; j++) {
+    setText("speed", "speed: " + i * 10);
+    speed(i*10);
+    moveForward(100);
+    turnRight(90);
   }
 }
-```
-
+</pre>
+</td>
+<td>
+<img src='https://images.code.org/a256d470562fb4ee20c893401860f60f-image-1445202062387.gif' style='width: 150px;'> 
+</td>
+</tr>
+</table>
 
 [/example]
 
@@ -99,15 +95,14 @@ speed(value);
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+No return value. Alters execution speed only.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- Be sure to [show()](/applab/docs/show)  the turtle to see its movement.
-- A speed of 100 will be too fast for the human eye to see the movement on screen.
+- The app execution speed can also be set by the tortoise-to-hare slider bar at the top of the Debug Console.
 
 [/tips]
 

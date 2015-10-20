@@ -36,7 +36,7 @@ ____________________________________________________
 ```
 // Draw a line up from the turtle starting postion at the center of the screen.
 penDown();
-moveForward(100);
+moveForward();
 ```
 
 [/example]
@@ -50,9 +50,9 @@ ____________________________________________________
 ```
 // Move the turtle from the center of the screen without drawing a line, then draw a line up.
 penUp();
-moveForward(100);
+moveForward();
 penDown();
-moveForward(100);
+moveForward();
 ```
 
 [/example]
