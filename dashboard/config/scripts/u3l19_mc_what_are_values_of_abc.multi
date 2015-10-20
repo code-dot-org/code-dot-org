@@ -1,6 +1,6 @@
 name 'U3L19 - MC what are values of abc'
-title' Variable Check In'
-question ' What are the values of the variables a, b and c after all of the code below has executed? '
+title 'Variable Check In'
+question 'What are the values of the variables a, b and c after all of the code below has executed? '
 wrong 'a=10, b=3, c=7'
 wrong 'a=13, b=13, c=13'
 wrong 'a=3, b=3, c=3'
