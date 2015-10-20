@@ -16,7 +16,7 @@ You’re one of the awesome organizers who signed up for the Hour of Code first.
 
 We’re on track to celebrate the biggest Hour of Code yet during December 7-13. Our most exciting tutorials yet are coming soon. But we’re only halfway to our goal of 100,000 organizers.
 
-<a href="https://hourofcode.com"><img src="https://code.org/images/email/fit-600/hoc-map.png"></a>
+<a href="https://hourofcode.com/"><img src="https://code.org/images/email/fit-600/hoc-map.png"></a>
 
 <% if international == 'true' %>
 Please, ask another teacher you know to join you. Or challenge your entire school.
@@ -38,6 +38,5 @@ Founder, Code.org
 
 <small>You’re receiving this email because you signed up to host an <a href="https://hourofcode.com/">Hour of Code</a>. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101.</small> <br />
 <small><strong>Don't like these emails? [Unsubscribe here](<%= unsubscribe_link %>).</strong></small>
-<% end %>
 
 ![](<%= tracking_pixel %>)
