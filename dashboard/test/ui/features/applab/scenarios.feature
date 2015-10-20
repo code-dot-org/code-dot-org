@@ -21,9 +21,7 @@ Feature: App Lab Scenarios
     And I drag a BUTTON into the app
     And I switch to code mode
     And Applab HTML has a button
-    And I press "clear-puzzle-header"
-    And element "#confirm-button" is visible
-    And I press "confirm-button"
+    And I reset the puzzle to the starting version
     And Applab HTML has no button
 
   Scenario: Can read and set button text
