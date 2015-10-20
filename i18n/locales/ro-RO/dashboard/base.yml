@@ -309,8 +309,8 @@ ro:
       section: Secţiune
       example: Exemplu soluţie
       example_with_number: 'Exemplu soluţie %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
-      unsubmit: Unsubmit
+      submitted_on: 'Înregistrat la %{date}'
+      unsubmit: Retrage
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
     email_confirm_needed_required: 'Adresa ta de e-mail %{email} nu a fost confirmată:'
@@ -396,10 +396,10 @@ ro:
     support: Suport
     support_url: http://support.code.org/
     tos_short: Termeni
-    tos: Termeni
+    tos: Termeni şi condiţii de utilizare
     privacy: Politică de confidențialitate
     secure: Versiunea Securizată
-    report_abuse: Report Abuse
+    report_abuse: Raportează abuz
   reference_area:
     title: Ai nevoie de ajutor?
     subtitle: Vezi aceste clipuri video şi sugestii
@@ -612,18 +612,18 @@ ro:
       contact_us: "Dacă credeţi că acest lucru să fie o eroare, vă rugăm să <a href='https://code.org/contact'> contact.</a>"
       go_to_code_studio: Du-te la Code Studio
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        intro: Dacă aţi întâlnit conţinut ofensator, ameninţări, ciberbullying, hărţuire sau o instanţă a încălcării drepturilor de autor pentru conţinut care vă aparține, în timpul utilizării aplicațiilor construite în Studio-ul Code, vă rugăm să completaţi formularul de mai jos. Vom lua în considerare raportul dumneavoastră în mod foarte serios, vom investiga în mod corespunzător şi vom lua măsuri corespunzătoare.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Vă rugăm să furnizaţi o adresă de e-mail
+          age: Vă rugăm să specificaţi o vârstă
+          abuse_type: Vă rugăm să răspundeţi cum acest conţinut încalcă termenii serviciului
+          abuse_detail: Vă rugăm să oferiți detalii cu privire la conţinutul pe care îl raportați
+        abusive_url: URL-ul conţinutului care este raportat
         abuse_type:
-          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: 'Cum încalcă %{link_start}Termenii serviciului%{link_end} acest conținut?'
+          harassment: Ameninţări, cyberbullying, hărțuire
+          offensive: Conținut ofensiv
+          infringement: Încălcarea drepturilor de autor
           other: Alte
-        detail: Please provide as much detail as possible regarding the content you are reporting.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        detail: Vă rugăm să oferiți cât mai multe detalii posibil cu privire la conţinutul pe care îl raportați.
+        acknowledge: 'Prin trimiterea acestor informaţii, sunteţi de acord că acesta vor fi gestionate în conformitate cu termenii %{link_start_privacy}Politicii de confidențialitate%{link_end} și %{link_start_tos}Termenii și condițiile de utilizare a serviciilor%{link_end}'
