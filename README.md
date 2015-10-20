@@ -15,7 +15,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Set up MySQL
   1. Have launchd start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
   1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
-1. Set up [RBENV](https://github.com/sstephenson/rbenv#homebrew-on-mac-os-x), ruby-build, and ~~Ruby 2.0~~ Ruby 2.0
+1. Set up [RBENV](https://github.com/sstephenson/rbenv#homebrew-on-mac-os-x), ruby-build, and ~~Ruby 2.0~~ Ruby 2.2
   1. Add `if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi` to `~/.profile` or whatever profile gets sourced when you start your terminal
   1. source `~/.profile` or whatever you changed in the above step. You should only have to do this once.
   1. `git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build`
@@ -32,9 +32,10 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. Make that your default version `nvm alias default v0.12.4`
   1. Note: When changing between node versions, you may need to reinstall node_modules (`rm -rf node_modules && npm install` from apps)
 1. in a new Terminal window, check that you have the correct versions of everything:
-  1. `ruby --version # 2.2.3`
-  2. `node --vesrion # 0.12.4`
-  3. `npm --version # 2.10.1`
+  1. `ruby --version  # --> ruby 2.2.3`
+  1. `nvm ls          # --> v0.12.4` 
+  1. `node --version  # --> v0.12.4`
+  1. `npm --version   # --> 2.10.1`
 
 ### Ubuntu 14.04
 
