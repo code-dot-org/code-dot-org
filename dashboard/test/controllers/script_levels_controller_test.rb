@@ -203,7 +203,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
     assert_equal '/s/20-hour/stage/2/puzzle/2', build_script_level_path(sl)
     assert_routing({method: "get", path: build_script_level_path(sl)},
-        {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, stage_id: sl.stage.id.to_s, id: sl.position.to_s})
+        {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, stage_id: sl.stage.to_param, id: sl.to_param})
   end
 
   test "chapter based routing" do
@@ -714,22 +714,18 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'submitted view option if submitted' do
     sign_in @student
-    # Ensure that activity data from the last attempt is present in the @last_attempt instance variable
-    # Used by TextMatch view partial
 
     last_attempt_data = 'test'
     level = create(:applab, submittable: true)
     script_level = create(:script_level, level: level)
     Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
-    UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::SUBMITTED_RESULT)
+    ul = UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::SUBMITTED_RESULT)
 
-    get :show, script_id: script_level.script_id, stage_id: script_level.stage.position, id: script_level.position
-    p 'lvo'
-    p assigns(:level_view_options)
-    p 'ao'
-    p assigns(:app_options)
-    # submitted
-    # unsubmit_url
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level
+    assert_response :success
+
+    assert_equal true, assigns(:level_view_options)[:submitted]
+    assert_equal "http://test.host/user_levels/#{ul.id}", assigns(:level_view_options)[:unsubmit_url]
   end
 
 end
