@@ -1,0 +1,50 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-20T17:33:09.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "setKeyValue": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Callback Functions\r\n\r\nMaking requests to a remote server makes sequencing a set of commands more challenging, if not impossible. In order to address this issue the data commands include **an optional third parameter** called a **callback function**. A callback function is a function which will run only after you've received confirmation from the server that it has received a request. Commands that should run after you've received confirmation from a server **must go in the callback function**.\r\n\r\n![](https://images.code.org/5df603c069fbe2011d2825f0f749f498-image-1445363715944.51.54 PM.png)\r\n\r\nThe program you are about to see contains two `setKeyValue` commands which update the same key value pair, called `predictableBit`. This time, however, we have used **callback functions** to sequence the `setKeyValue` commands. Since the second call to `setKeyValue` is in the callback function of the first it will only run after the server has confirmed that it received the first request. \r\n\r\n\r\n\r\n# Do This\r\n\r\n* **Run the program** and check the **Data Viewer** to see what value `predictableBit` was set to\r\n* **Repeat the experiment** to confirm the `setKeyValue` commands are now arriving in the correct order.\r\n* **Alter the program** so that instead of always setting `predictableBit` to **0 and then 1** it always sets it to **1 and then 0**. You will need to use **callback functions**",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "data_properties": "{\r\n  \"predictableBit\": 0\r\n}",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true",
+    "instructions": "Run the program several times to observe how the setKeyValue commands now always arrive in order. (Click to see full instructions)",
+    "encrypted_examples": [
+
+    ]
+  }
+}]]></config>
+  <blocks/>
+</Applab>
