@@ -1504,7 +1504,13 @@ Studio.init = function(config) {
     }
   });
 
-  config.loadAudio = skin.loadAudio;
+  config.loadAudio = function() {
+    skin.soundFiles = {};
+    skin.sounds.forEach(function (sound) {
+      skin.soundFiles[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl(sound + '.ogg')];
+      studioApp.loadAudio(skin.soundFiles[sound], sound);
+    });
+  };
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1674,7 +1680,7 @@ function getDefaultBackgroundName() {
 }
 
 function getDefaultMapName() {
-  return level.wallMap || skin.defaultWallMap;
+  return level.wallMapCollisions ? (level.wallMap || skin.defaultWallMap) : undefined;
 }
 
 /**
@@ -1795,7 +1801,8 @@ Studio.reset = function(first) {
 
   // Now that sprites are in place, we can set up a map, which might move
   // sprites around.
-  if (level.wallMapCollisions) {
+  var defaultMap = getDefaultMapName();
+  if (defaultMap) {
     Studio.setMap({value: getDefaultMapName()});
   }
 
@@ -3050,8 +3057,7 @@ Studio.callCmd = function (cmd) {
       break;
     case 'playSound':
       studioApp.highlight(cmd.id);
-      studioApp.playAudio(cmd.opts.soundName, { volume: 1.0 });
-      Studio.playSoundCount++;
+      Studio.playSound(cmd.opts);
       break;
     case 'showTitleScreen':
       if (!cmd.opts.started) {
@@ -3152,6 +3158,26 @@ Studio.callCmd = function (cmd) {
       break;
   }
   return true;
+};
+
+Studio.playSound = function (opts) {
+
+  if (typeof opts.soundName !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.soundName);
+  }
+
+  var soundVal = opts.soundName.toLowerCase().trim();
+
+  if (soundVal === constants.RANDOM_VALUE) {
+    soundVal = skin.sounds[Math.floor(Math.random() * skin.sounds.length)];
+  }
+
+  if (!skin.soundFiles[soundVal]) {
+    throw new RangeError("Incorrect parameter: " + opts.soundName);
+  }
+
+  studioApp.playAudio(soundVal, { volume: 1.0 });
+  Studio.playSoundCount++;
 };
 
 Studio.addItem = function (opts) {
@@ -3423,15 +3449,24 @@ var BOT_SPEEDS = {
 };
 
 Studio.setBotSpeed = function (opts) {
-  if (opts.value === constants.RANDOM_VALUE) {
-    opts.value = utils.randomKey(BOT_SPEEDS);
+
+  if (typeof opts.value !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.value);
   }
 
-  var speedVal = BOT_SPEEDS[opts.value];
-  if (speedVal) {
-    opts.value = speedVal;
-    Studio.setSpriteSpeed(opts);
+  var speedValue = opts.value.toLowerCase().trim();
+
+  if (speedValue === constants.RANDOM_VALUE) {
+    speedValue = utils.randomKey(BOT_SPEEDS);
   }
+
+  var speedNumericVal = BOT_SPEEDS[speedValue];
+  if (typeof speedNumericVal === 'undefined') {
+    throw new RangeError("Incorrect parameter: " + opts.value);
+  }
+
+  opts.value = speedNumericVal;
+  Studio.setSpriteSpeed(opts);
 };
 
 Studio.setSpriteSize = function (opts) {
@@ -3448,9 +3483,15 @@ Studio.setSpriteSize = function (opts) {
 };
 
 Studio.changeScore = function (opts) {
+
+  if (typeof opts.value !== 'number' &&
+      (typeof opts.value !== 'string' || isNaN(opts.value))) {
+    throw new TypeError("Incorrect parameter: " + opts.value);
+  }
+
   Studio.playerScore += Number(opts.value);
   Studio.displayScore();
-  Studio.displayFloatingScore(opts.value);
+  Studio.displayFloatingScore(Number(opts.value));
 };
 
 Studio.setScoreText = function (opts) {

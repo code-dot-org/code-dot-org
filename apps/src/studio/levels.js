@@ -1599,6 +1599,7 @@ levels.js_hoc2015_move_right = {
   },
   "callouts": [
     {
+      "id": "level:js_hoc2015_move_right:placeCommandsHere",
       "element_id": ".droplet-main-canvas",
       "hide_target_selector": ".droplet-drag-cover",
       "qtip_config": {
@@ -1811,6 +1812,7 @@ levels.js_hoc2015_event_two_items = {
   },
   "callouts": [
     {
+      "id": "level:js_hoc2015_event_two_items:placeCommandsHere",
       "element_id": ".droplet-main-canvas",
       "hide_target_selector": ".droplet-drag-cover",
       "qtip_config": {
@@ -1882,6 +1884,7 @@ levels.js_hoc2015_event_four_items = {
   },
   "callouts": [
     {
+      "id": "level:js_hoc2015_event_four_items:typeCommandsHere",
       "element_id": ".ace_scroller",
       "qtip_config": {
         "content" : {
@@ -1954,6 +1957,7 @@ levels.js_hoc2015_event_choose_character =
   "showTimeoutRect": true,
   "callouts": [
     {
+      "id": "level:js_hoc2015_event_choose_character:placeCommandsAtTop",
       "element_id": ".droplet-main-canvas",
       "hide_target_selector": ".droplet-drag-cover",
       "qtip_config": {
@@ -2101,6 +2105,7 @@ levels.js_hoc2015_event_item_behavior = {
   "showTimeoutRect": true,
   "callouts": [
     {
+      "id": "level:js_hoc2015_event_item_behavior:charactersMove",
       "element_id": "#droplet_palette_block_setToFlee",
       "qtip_config": {
         "content": {
@@ -2191,6 +2196,7 @@ levels.js_hoc2015_event_touch_items = {
   "showTimeoutRect": true,
   "callouts": [
     {
+      "id": "level:js_hoc2015_event_touch_items:putCommandsTouchCharacter",
       "element_id": ".ace_gutter-cell:nth-of-type(8)",
       "hide_target_selector": ".ace_scroller",
       "qtip_config": {
@@ -2355,6 +2361,7 @@ levels.js_hoc2015_event_random_items = {
   "showTimeoutRect": true,
   "callouts": [
     {
+      "id": "level:js_hoc2015_event_random_items:clickCategory",
       "element_id": ".droplet-palette-group-header.green",
       "qtip_config": {
         "content" : {
@@ -2441,6 +2448,7 @@ levels.js_hoc2015_event_free = {
   "instructions": "\"You’re on your own now, BOT1.\"",
   "callouts": [
     {
+      "id": "level:js_hoc2015_event_free:tryOutNewCommands",
       "element_id": ".droplet-palette-canvas",
       "qtip_config": {
         "content": {
