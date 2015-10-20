@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Se c'è strada nella direzione specificata, allora esegue alcune azioni."},
 "ifelseTooltip":function(d){return "Se c'è strada nella direzione specificata, allora esegue il primo blocco di azioni. Altrimenti, esegue il secondo."},
 "ifFlowerTooltip":function(d){return "Se c'è un fiore o un favo nella casella corrente, allora esegue alcune azioni."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Se c'è un fiore nella direzione indicata allora fai alcune azioni."},
 "ifelseFlowerTooltip":function(d){return "Se c'è un fiore o un favo nella casella corrente, allora esegue il primo blocco di azioni. Altrimenti, esegue il secondo."},
 "insufficientHoney":function(d){return "Stai utilizzando i tutti i blocchi necessari, ma la quantità di miele è insufficiente."},
 "insufficientNectar":function(d){return "Stai utilizzando i tutti i blocchi necessari, ma devi raccogliere la giusta quantità di nettare.\n"},

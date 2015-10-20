@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "如果在指定的方向有路，执行一些操作。"},
 "ifelseTooltip":function(d){return "如果在指定的方向有路，执行第一部分的操作。否则，执行第二部分的操作。"},
 "ifFlowerTooltip":function(d){return "如果在指定的方向有花或蜂巢，执行一些操作"},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "如果在指定的方向有一朵花，然后做一些动作。"},
 "ifelseFlowerTooltip":function(d){return "如果在指定的方向有花或蜂巢，执行第一部分的操作。否则，执行第二部分的操作。"},
 "insufficientHoney":function(d){return "你正确地使用了所有的块，但是你需要得到正确数量的蜂蜜。"},
 "insufficientNectar":function(d){return "你正确地使用了所有的块，但是你需要收集正确数量的花蜜。"},
