@@ -54,6 +54,7 @@ levels.custom = {
     "hideElement": null,
     "deleteElement": null,
     "setPosition": null,
+    "setSize": null,
     "write": null,
     "getXPosition": null,
     "getYPosition": null,
