@@ -34726,12 +34726,26 @@ exports.getTime = function() {
 };
 
 /**
+ * Use native window.prompt to ask for a value, but continue prompting until we
+ * get a numerical value.
+ * @returns {number} User value, converted to a number
+ */
+exports.promptNum = function (text) {
+  var val;
+  do {
+    val = parseInt(window.prompt(text), 10);
+  } while (isNaN(val));
+  return val;
+};
+
+/**
  * @type {DropletBlock[]}
  */
 exports.dropletGlobalConfigBlocks = [
   {'func': 'getTime', 'parent': exports, 'category': 'Control', 'type': 'value' },
   {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
   {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
+  {'func': 'promptNum', 'parent': exports, 'category': 'Variables', 'type': 'value' }
 ];
 
 /**
@@ -34782,6 +34796,7 @@ standardConfig.blocks = [
   {'func': 'assign_x', 'block': 'x = __;', 'category': 'Variables' },
   {'func': 'declareAssign_x_array_1_4', 'block': 'var x = [1, 2, 3, 4];', 'category': 'Variables' },
   {'func': 'declareAssign_x_prompt', 'block': 'var x = prompt("Enter a value");', 'category': 'Variables' },
+  {'func': 'declareAssign_x_promptNum', 'block': 'var x = promptNum("Enter a value");', 'category': 'Variables' },
 
   // Functions
   {'func': 'functionParams_none', 'block': 'function myFunction() {\n  __;\n}', 'category': 'Functions' },
