@@ -1929,7 +1929,7 @@ levels.js_hoc2015_event_two_items = {
           'at': 'bottom left',
           'adjust': {
             'x': 30,
-            'y': 00
+            'y': 0
           }
         }
       }
