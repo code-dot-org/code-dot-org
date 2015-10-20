@@ -145,15 +145,6 @@ sq:
   prizes_brilliant: Një shkollë në secilën zonë apo territor do të fitojë $2000 për një Projekt Brilant
   prizes_actua: 15 shkolla nga Kanadaja do të fitojnë 2 ndihmës për STEM punëtoritë nga një prej anëtarëve Actua
   prizes_details: Detajet
-  prizes_nav_dc: Udhëtimi i mistershëm në Washington D.C.
-  prizes_nav_technology: 10.000$ teknologji për shkollën tënde
-  prizes_nav_video_chat: Bisedë me video me një gjigand të teknologjisë
-  prizes_nav_skype_dropbox: Kredit në Skype ose Dropbox për secilin organizator
-  prizes_nav_brilliant: 2.000$ projekt për Laboratorë të shkëlqyera
-  prizes_nav_actua: Workshop aktual
-  prizes_nav_kids_code: Kodim për Fëmijët dhe të Rinjtë
-  prizes_nav_terms: Termat dhe Kushtet
-  prizes_nav_faq: PESH (pyetje të shpeshta)
   nav_back_to_resources: Kthehu tek Resurset
   how_to_nav_educators: Për mësuesit
   how_to_nav_after_school: Për aktivitet pas mësimit
@@ -167,6 +158,18 @@ sq:
   prizes_nav_title: Shpërblime
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Termat dhe Kushtet
+  prizes_nav_faq: PESH (pyetje të shpeshta)
+  prizes_nav_dc: Udhëtimi i mistershëm në Washington D.C.
+  prizes_nav_technology: 10.000$ teknologji për shkollën tënde
+  prizes_nav_video_chat: Bisedë me video me një gjigand të teknologjisë
+  prizes_nav_skype_dropbox: Kredit në Skype ose Dropbox për secilin organizator
+  prizes_nav_brilliant: 2.000$ projekt për Laboratorë të shkëlqyera
+  prizes_nav_actua: Workshop aktual
+  prizes_nav_kids_code: Kodim për Fëmijët dhe të Rinjtë
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: "Every organizer will receive a gift card to Amazon.com or Microsoft's Windows Store."
   whats_next_header: çfarë tutje?
   whats_next_description: "Do ju dergojmë materiale dhe këshilla të dobishme për eventin tuaj. Tutorialet e reja të 2015 së shpejti do të arrijnë për çfarëdo browser-i, smartphone -apo edhe pa kompjuter! <a href='http://code.org/learn'>provo tutorialet aktual</a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"

@@ -1,4 +1,3 @@
-@import url(colpick.css);
 #divApplab, .draggingParent {
   overflow: hidden;
   outline: none;
@@ -42,13 +41,13 @@
   #divApplab .design-mode-hidden, .draggingParent .design-mode-hidden {
     visibility: hidden; }
 
-#divApplab.divApplabDesignMode canvas, .draggingParent canvas {
+#designModeViz canvas, .draggingParent canvas {
   background-color: #eee; }
 
-#divApplab.divApplabDesignMode .chart, .draggingParent .chart {
+#designModeViz .chart, .draggingParent .chart {
   background-color: #eee; }
 
-#divApplab.divApplabDesignMode .design-mode-hidden, .draggingParent .design-mode-hidden {
+#designModeViz .design-mode-hidden, .draggingParent .design-mode-hidden {
   visibility: visible;
   opacity: 0.3; }
 
@@ -85,19 +84,19 @@
   #divApplab.appModern .screen, .draggingParent .screen {
     outline: 0; }
 
-#divApplab.appModern.divApplabDesignMode img[src=''], #divApplab.appModern.divApplabDesignMode canvas, #divApplab.appModern.divApplabDesignMode .chart, .draggingParent img[src=''], .draggingParent canvas, .draggingParent .chart {
+#designModeViz.appModern img[src=''], #designModeViz.appModern canvas, #designModeViz.appModern .chart, .draggingParent img[src=''], .draggingParent canvas, .draggingParent .chart {
   border: 5px solid #fff;
   outline: 1px solid #bdc3c7;
   outline-offset: -1px; }
 
-#divApplab.appModern.divApplabDesignMode img[src=''], .draggingParent img[src=''] {
+#designModeViz.appModern img[src=''], .draggingParent img[src=''] {
   display: block;
   background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat; }
 
-#divApplab.appModern.divApplabDesignMode canvas, .draggingParent canvas {
+#designModeViz.appModern canvas, .draggingParent canvas {
   background: #bdc3c7 url("/blockly/media/applab/placeholder_canvas.png") center center no-repeat; }
 
-#divApplab.appModern.divApplabDesignMode .chart, .draggingParent .chart {
+#designModeViz.appModern .chart, .draggingParent .chart {
   background: #bdc3c7 url("/blockly/media/applab/placeholder_chart.png") center center no-repeat; }
 
 div#visualization {
@@ -239,7 +238,8 @@ div#visualizationResizeBar {
   max-width: none !important;
   width: 352px;
   height: 612px;
-  margin: 20px auto; }
+  margin: 0 auto;
+  padding: 20px 0; }
   #visualizationColumn.wireframeShare #designToggleRow, #visualizationColumn.wireframeShare #gameButtons {
     display: none; }
   #visualizationColumn.wireframeShare #visualization {
@@ -250,7 +250,7 @@ div#visualizationResizeBar {
 #visualizationColumn.chromelessShare #designToggleRow, #visualizationColumn.chromelessShare #gameButtons {
   display: none; }
 
-#divApplab {
+#divApplab, #designModeViz {
   overflow: hidden;
   outline: none;
   position: relative;
@@ -263,7 +263,7 @@ div#visualizationResizeBar {
   -ms-user-select: none;
   user-select: none; }
 
-#divApplab canvas {
+#divApplab canvas, #designModeViz canvas {
   position: absolute;
   overflow: hidden;
   top: 0px;
@@ -352,6 +352,16 @@ img#turtleImage {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+  #debug-area-header #show-hide-debug-icon {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    margin: 0;
+    line-height: 30px;
+    font-size: 18px; }
+    #debug-area-header #show-hide-debug-icon:hover {
+      cursor: pointer;
+      color: white; }
 
 #debug-commands-header {
   width: 270px;
@@ -359,16 +369,6 @@ img#turtleImage {
   border-right: 1px solid gray; }
   #debug-commands-header .fa {
     margin: 0 0.25em; }
-  #debug-commands-header #show-hide-debug-icon {
-    position: absolute;
-    top: 0;
-    left: 8px;
-    margin: 0;
-    line-height: 30px; }
-  #debug-commands-header.js-hover-hack {
-    cursor: pointer; }
-    #debug-commands-header.js-hover-hack #show-hide-debug-icon {
-      color: white; }
 
 .debug-commands, .debug-console {
   display: block;
@@ -386,6 +386,8 @@ img#turtleImage {
 .debug-console {
   left: 270px;
   right: 0; }
+  .debug-console.full {
+    left: 0; }
 
 .debug-console * {
   font-family: monospace;

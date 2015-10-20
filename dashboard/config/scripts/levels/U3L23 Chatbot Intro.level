@@ -89,7 +89,9 @@
     ],
     "never_autoplay_video": "false",
     "submittable": "false",
-    "hide_view_data_button": "false"
+    "hide_view_data_button": "false",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

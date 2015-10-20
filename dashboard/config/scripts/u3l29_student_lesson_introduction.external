@@ -1,5 +1,6 @@
 name 'U3L29 Student Lesson Introduction'
 title 'While Loops and Counting'
+css 'unplugged'
 
 
 markdown <<MARKDOWN

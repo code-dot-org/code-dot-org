@@ -12,7 +12,7 @@ Scenario: Save Artist Project
   Then I click selector ".project_share"
   And I wait to see "#x-close"
   And I navigate to the share URL
-  And I wait to see "#runButton"
+  And I wait until element "#visualization" is visible
   Then element "#draw-color" is a child of element "#when_run"
 
 # dashboard_db_access for sign in
@@ -28,6 +28,7 @@ Scenario: Applab Flow
   Then I am on "http://studio.code.org/projects/applab"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
   And I rotate to landscape
+  Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
   # TODO  ideally we should probably create some code and/or design elements here
   # looks like we have add_code_to_editor
   And I wait to see "#runButton"

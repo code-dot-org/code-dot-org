@@ -4,7 +4,7 @@ title: Politique de Confidentialité
 
 ---
 
-### Le texte juridique original en anglais est disponible [ici](https://code.org/privacy). Ci-dessous, vous trouverez une traduction.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Politique de Confidentialité
 

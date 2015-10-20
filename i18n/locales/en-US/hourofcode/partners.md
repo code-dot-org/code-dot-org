@@ -22,9 +22,17 @@ crwdns45411:0crwdne45411:0<%= hoc_s(:title_partners) %>
 
 <% end %>
 
+<% if @country == 'jp' %>
+
+# crwdns50528:0crwdne50528:0
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
+
+<% end %>
+
 <% if @country == 'uk' %>
 
-# crwdns48797:0crwdne48797:0
+# crwdns50529:0crwdne50529:0
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -32,43 +40,43 @@ crwdns45411:0crwdne45411:0<%= hoc_s(:title_partners) %>
 
 <% if @country == 'ca' %>
 
-# crwdns50235:0crwdne50235:0
+# crwdns50530:0crwdne50530:0
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
 <% end %>
 
-# crwdns50236:0crwdne50236:0
+# crwdns50531:0crwdne50531:0
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# crwdns50237:0crwdne50237:0
+# crwdns50532:0crwdne50532:0
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# crwdns50238:0crwdne50238:0
+# crwdns50533:0crwdne50533:0
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# crwdns50239:0crwdne50239:0
+# crwdns50534:0crwdne50534:0
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# crwdns50240:0crwdne50240:0
+# crwdns50535:0crwdne50535:0
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 * * *
 
-# crwdns50241:0crwdne50241:0
+# crwdns50536:0crwdne50536:0
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

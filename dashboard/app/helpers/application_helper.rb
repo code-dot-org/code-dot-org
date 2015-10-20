@@ -47,7 +47,8 @@ module ApplicationHelper
   end
 
   def activity_css_class(result)
-    if result.nil? || result <= 0
+    # For definitions of the result values, see /app/src/constants.js.
+    if result.nil? || result == 0
       'not_tried'
     elsif result >= Activity::SUBMITTED_RESULT
       'submitted'
@@ -181,7 +182,7 @@ module ApplicationHelper
     certificate_image_url(name: user.name, course: script_name)
   end
 
-  def minifiable_shared_path(path)
+  def minifiable_asset_path(path)
     path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs
     asset_path(path)
   end

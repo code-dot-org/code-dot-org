@@ -31,7 +31,8 @@ end
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
   steps %q{
-    When I press "x-close"
+    When I wait to see ".x-close"
+    And I press "x-close"
     And I wait for 0.75 seconds
   }
 end
@@ -49,6 +50,12 @@ end
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
   wait.until { @browser.execute_script("return $('#{selector}').is(':visible')") }
+end
+
+# Required for inspecting elements within an iframe
+When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |selector, parent_selector|
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until { @browser.execute_script("return $('#{selector}', $('#{parent_selector}').contents()).is(':visible')") }
 end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
@@ -198,10 +205,18 @@ Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
   @browser.execute_script("return #{expression}").should eq true
 end
 
+Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
+  @browser.execute_script("return #{expression}")
+end
+
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
 Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
   element_has_text(selector, expectedText)
+end
+
+Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expectedHtml|
+  element_has_html(selector, expectedHtml)
 end
 
 Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
@@ -244,22 +259,32 @@ Then /^element "([^"]*)" is visible$/ do |selector|
   visible.should eq true
 end
 
+Then /^element "([^"]*)" does not exist/ do |selector|
+  @browser.execute_script("return $('#{selector}').length").should eq 0
+end
+
 Then /^element "([^"]*)" is hidden$/ do |selector|
   visibility = @browser.execute_script("return $('#{selector}').css('visibility')");
   visible = @browser.execute_script("return $('#{selector}').is(':visible')") && (visibility != 'hidden');
   visible.should eq false
 end
 
-def has_class(selector, className)
-  @browser.execute_script("return $('#{selector}').hasClass('#{className}')")
+def has_class(selector, class_name)
+  @browser.execute_script("return $('#{selector}').hasClass('#{class_name}')")
 end
 
-Then /^element "([^"]*)" has class "([^"]*)"$/ do |selector, className|
-  has_class(selector, className).should eq true
+Then /^element "([^"]*)" has class "([^"]*)"$/ do |selector, class_name|
+  has_class(selector, class_name).should eq true
 end
 
-Then /^element "([^"]*)" (?:does not|doesn't) have class "([^"]*)"$/ do |selector, className|
-  has_class(selector, className).should eq false
+Then /^element "([^"]*)" (?:does not|doesn't) have class "([^"]*)"$/ do |selector, class_name|
+  has_class(selector, class_name).should eq false
+end
+
+Then /^SVG element "([^"]*)" within element "([^"]*)" has class "([^"]*)"$/ do |selector, parent_selector, class_name|
+  # Can't use jQuery hasClass here, due to limited SVG support
+  class_list = @browser.execute_script("return $(\"#{selector}\", $(\"#{parent_selector}\").contents())[0].getAttribute(\"class\")")
+  class_list.should include class_name
 end
 
 def is_disabled(selector)
@@ -408,6 +433,7 @@ Given(/^I sign in as a (student|teacher)$/) do |user_type|
 end
 
 When(/^I debug cookies$/) do
+  puts "DEBUG: url=#{CGI::escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
 end
 
@@ -422,7 +448,8 @@ And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
     element.send_keys(make_symbol_if_colon(key))
   else
     # Workaround for Firefox, see https://code.google.com/p/selenium/issues/detail?id=6822
-    key.gsub!(/\\n/, "\n") # Cucumber does not convert captured \n to newline.
+    key.gsub!(/([^\\])\\n/, "\\1\n") # Cucumber does not convert captured \n to newline.
+    key.gsub!(/\\\\n/, "\\n") # Fix up escaped newline
     key.split('').each do |k|
       if k == '('
         element.send_keys :shift, 9

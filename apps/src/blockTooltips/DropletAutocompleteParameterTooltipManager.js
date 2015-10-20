@@ -29,7 +29,8 @@ var DropletAutocompleteParameterTooltipManager = function (dropletTooltipManager
     offsetY: 2,
     restoration: 'none',
     updateAnimation: false,
-    positionTracker: true
+    positionTracker: true,
+    tooltipsEnabled: true
   };
 };
 
@@ -125,7 +126,7 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
 };
 
 DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = function (aceEditor, functionName, currentParameterIndex) {
-  if (!this.dropletTooltipManager.hasDocFor(functionName)) {
+  if (!this.tooltipConfig.tooltipsEnabled || !this.dropletTooltipManager.hasDocFor(functionName)) {
     return;
   }
   var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
@@ -214,6 +215,13 @@ DropletAutocompleteParameterTooltipManager.showPopup = function (editor) {
   // after each call to showPopup()
   DropletAutocompleteParameterTooltipManager.originalShowPopup.call(this, editor);
   this.overrideCompleter = null;
+};
+
+/**
+ * @param {boolean} enabled if tooltips should be enabled
+ */
+DropletAutocompleteParameterTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
+  this.tooltipConfig.tooltipsEnabled = !!enabled;
 };
 
 module.exports = DropletAutocompleteParameterTooltipManager;
