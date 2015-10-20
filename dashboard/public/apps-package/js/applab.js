@@ -94,6 +94,7 @@ levels.custom = {
     "hideElement": null,
     "deleteElement": null,
     "setPosition": null,
+    "setSize": null,
     "write": null,
     "getXPosition": null,
     "getYPosition": null,
@@ -2469,6 +2470,7 @@ module.exports.blocks = [
   {func: 'hideElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: function () { return Applab.getIdDropdown(); } } },
   {func: 'deleteElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: function () { return Applab.getIdDropdown(); } } },
   {func: 'setPosition', parent: api, category: 'UI controls', paletteParams: ['id','x','y','width','height'], params: ['"id"', "0", "0", "100", "100"], dropdown: { 0: function () { return Applab.getIdDropdown(); } } },
+  {func: 'setSize', parent: api, category: 'UI controls', paletteParams: ['id','width','height'], params: ['"id"', "100", "100"], dropdown: { 0: function () { return Applab.getIdDropdown(); } } },
   {func: 'write', parent: api, category: 'UI controls', paletteParams: ['text'], params: ['"text"'] },
   {func: 'getXPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: function () { return Applab.getIdDropdown(); } }, type: 'value' },
   {func: 'getYPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: function () { return Applab.getIdDropdown(); } }, type: 'value' },
@@ -5018,22 +5020,41 @@ applabCommands.setPosition = function (opts) {
     // (2) width/height already specified OR IMG element with width/height attributes
     if ((el.style.width.length > 0 && el.style.height.length > 0) ||
         (el.tagName === 'IMG' && el.width > 0 && el.height > 0)) {
-        if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
-            setWidthHeight = true;
-        }
-    } else {
+      if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
         setWidthHeight = true;
+      }
+    } else {
+      setWidthHeight = true;
     }
     if (setWidthHeight) {
-        apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
-        apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
-        el.style.width = opts.width + 'px';
-        el.style.height = opts.height + 'px';
+      apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
+      apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+      setSize_(opts.elementId, opts.width, opts.height);
     }
     return true;
   }
   return false;
 };
+
+applabCommands.setSize = function (opts) {
+  apiValidateType(opts, 'setSize', 'width', opts.width, 'number');
+  apiValidateType(opts, 'setSize', 'height', opts.height, 'number');
+  setSize_(opts.elementId, opts.width, opts.height);
+
+  return true;
+};
+
+/**
+ * Logic shared between setPosition and setSize for setting the size
+ */
+function setSize_(elementId, width, height) {
+  var element = document.getElementById(elementId);
+  var divApplab = document.getElementById('divApplab');
+  if (divApplab.contains(element)) {
+    element.style.width = width + 'px';
+    element.style.height = height + 'px';
+  }
+}
 
 applabCommands.getXPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
@@ -6070,6 +6091,15 @@ exports.setPosition = function (blockId, elementId, left, top, width, height) {
                            'height': height });
 };
 
+exports.setSize = function (blockId, elementId, width, height) {
+  return Applab.executeCmd(blockId,
+                          'setSize',
+                          {'elementId': elementId,
+                           'width': width,
+                           'height': height });
+};
+
+
 exports.getXPosition = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
                           'getXPosition',
@@ -6612,6 +6642,14 @@ exports.setPosition = function (elementId, left, top, width, height) {
                           {'elementId': elementId,
                            'left': left,
                            'top': top,
+                           'width': width,
+                           'height': height });
+};
+
+exports.setSize = function (elementId, width, height) {
+  return Applab.executeCmd(null,
+                          'setSize',
+                          {'elementId': elementId,
                            'width': width,
                            'height': height });
 };
