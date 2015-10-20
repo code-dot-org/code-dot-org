@@ -786,7 +786,12 @@ module.exports = {
         )
         ) + '</xml>',
       runBeforeClick: function (assert) {
+        // var start = new Date();
+        // console.log('runBeforeClick', start);
         testUtils.runOnStudioTick (5, function () {
+          // var now = new Date();
+          // console.log('tick5: ' + (now - start));
+
           var sprite = document.getElementById('sprite0');
           var vis = sprite.getAttribute('visibility');
           assert(sprite.getAttribute('visibility') === 'visible', 'vis: ' + vis);
@@ -797,6 +802,8 @@ module.exports = {
 
         });
         testUtils.runOnStudioTick (6, function () {
+          // var now = new Date();
+          // console.log('tick6: ' + (now - start));
           Studio.onPuzzleComplete();
         });
       },
