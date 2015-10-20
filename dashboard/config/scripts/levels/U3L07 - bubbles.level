@@ -160,7 +160,9 @@
     "instructions": "Add 200 bubbles to the image by writing drawAllBubbles with a loop. (Click to see full instructions)",
     "encrypted_examples": [
 
-    ]
+    ],
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>
