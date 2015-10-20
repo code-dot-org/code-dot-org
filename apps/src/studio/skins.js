@@ -450,7 +450,7 @@ function loadHoc2015(skin, assetUrl) {
      [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x121, 0x121]];
 
   // Sounds.
-  var sounds = [
+  skin.sounds = [
     'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
     'character1sound5', 'character1sound6', 'character1sound7', 'character1sound8',
     'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
@@ -462,21 +462,12 @@ function loadHoc2015(skin, assetUrl) {
     'move1', 'move2', 'move3'
   ];
 
-  // Override the default loadAudio function with this one.
-  skin.loadAudio = function() {
-    for (var s = 0; s < sounds.length; s++) {
-      var sound = sounds[s];
-      skin[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl('wall.ogg')];
-      studioApp.loadAudio(skin[sound], sound);
-    }
-  };
-
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
   skin.playFinalGoalSound = true;
 
   skin.moveSounds = ['move1', 'move2', 'move3'];
-  
+
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes
   // NOTE: first item must be RANDOM_VALUE
@@ -640,7 +631,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
 
   // Sounds.
-  var sounds = [
+  skin.sounds = [
     'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
     'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
     'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
@@ -650,15 +641,6 @@ function loadHoc2015x(skin, assetUrl) {
     'start', 'win', 'failure', 'flag',
     'move1', 'move2', 'move3', 'move4'
   ];
-
-  // Override the default loadAudio function with this one.
-  skin.loadAudio = function() {
-    for (var s = 0; s < sounds.length; s++) {
-      var sound = sounds[s];
-      skin[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl('wall.ogg')];
-      studioApp.loadAudio(skin[sound], sound);
-    }
-  };
 
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
@@ -912,49 +894,13 @@ exports.load = function(assetUrl, id) {
   skin.speechBubble = skin.assetUrl('say-sprite.png');
   skin.goal = skin.assetUrl('goal.png');
   skin.goalSuccess = skin.assetUrl('goal_success.png');
-  // Sounds
-  skin.rubberSound = [skin.assetUrl('wall.mp3'), skin.assetUrl('wall.ogg')];
-  skin.flagSound = [skin.assetUrl('win_goal.mp3'),
-                    skin.assetUrl('win_goal.ogg')];
-  skin.crunchSound = [skin.assetUrl('wall0.mp3'), skin.assetUrl('wall0.ogg')];
-  skin.winPointSound = [skin.assetUrl('1_we_win.mp3'),
-                        skin.assetUrl('1_we_win.ogg')];
-  skin.winPoint2Sound = [skin.assetUrl('2_we_win.mp3'),
-                         skin.assetUrl('2_we_win.ogg')];
-  skin.losePointSound = [skin.assetUrl('1_we_lose.mp3'),
-                         skin.assetUrl('1_we_lose.ogg')];
-  skin.losePoint2Sound = [skin.assetUrl('2_we_lose.mp3'),
-                          skin.assetUrl('2_we_lose.ogg')];
-  skin.goal1Sound = [skin.assetUrl('1_goal.mp3'), skin.assetUrl('1_goal.ogg')];
-  skin.goal2Sound = [skin.assetUrl('2_goal.mp3'), skin.assetUrl('2_goal.ogg')];
-  skin.woodSound = [skin.assetUrl('1_paddle_bounce.mp3'),
-                    skin.assetUrl('1_paddle_bounce.ogg')];
-  skin.retroSound = [skin.assetUrl('2_paddle_bounce.mp3'),
-                     skin.assetUrl('2_paddle_bounce.ogg')];
-  skin.slapSound = [skin.assetUrl('1_wall_bounce.mp3'),
-                    skin.assetUrl('1_wall_bounce.ogg')];
-  skin.hitSound = [skin.assetUrl('2_wall_bounce.mp3'),
-                   skin.assetUrl('2_wall_bounce.ogg')];
 
-  // This function might be overloaded by a skin.
-  skin.loadAudio = function() {
-    studioApp.loadAudio(skin.winSound, 'win');
-    studioApp.loadAudio(skin.startSound, 'start');
-    studioApp.loadAudio(skin.failureSound, 'failure');
-    studioApp.loadAudio(skin.rubberSound, 'rubber');
-    studioApp.loadAudio(skin.crunchSound, 'crunch');
-    studioApp.loadAudio(skin.flagSound, 'flag');
-    studioApp.loadAudio(skin.winPointSound, 'winpoint');
-    studioApp.loadAudio(skin.winPoint2Sound, 'winpoint2');
-    studioApp.loadAudio(skin.losePointSound, 'losepoint');
-    studioApp.loadAudio(skin.losePoint2Sound, 'losepoint2');
-    studioApp.loadAudio(skin.goal1Sound, 'goal1');
-    studioApp.loadAudio(skin.goal2Sound, 'goal2');
-    studioApp.loadAudio(skin.woodSound, 'wood');
-    studioApp.loadAudio(skin.retroSound, 'retro');
-    studioApp.loadAudio(skin.slapSound, 'slap');
-    studioApp.loadAudio(skin.hitSound, 'hit');
-  };
+  // Sounds
+  skin.sounds = [
+    'rubber', 'crunch', 'goal1', 'goal2', 'wood', 'retro', 'slap', 'hit',
+    'winpoint', 'winpoint2', 'losepoint', 'losepoint2',
+    'start', 'win', 'failure', 'flag'
+  ];
 
   // Settings
   skin.background = skin.assetUrl('background.png');

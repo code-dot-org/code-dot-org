@@ -1606,18 +1606,20 @@ levels.js_hoc2015_move_right = {
   'instructions2': 'Program BOTX to get to the item.  Add a second moveRight command and then hit Run.',
   'ticksBeforeFaceSouth': 9,
   'timeoutFailureTick': 100,
+  'timeoutAfterWhenRun': true,
   'goalOverride': {
     'goalImage': 'goal1',
     'imageWidth': 50,
     'imageHeight': 50
   },
-  'callouts': [
+  "callouts": [
     {
-      'element_id': '.droplet-main-canvas',
-      'hide_target_selector': '.droplet-drag-cover',
-      'qtip_config': {
-        'content': {
-          'text': msg.calloutPlaceCommandsHere(),
+      "id": "playlab:js_hoc2015_move_right:placeCommandsHere",
+      "element_id": ".droplet-main-canvas",
+      "hide_target_selector": ".droplet-drag-cover",
+      "qtip_config": {
+        "content": {
+          "text": msg.calloutPlaceCommandsHere(),
         },
         'hide': {
           'event': 'mouseup touchend',
@@ -1668,6 +1670,7 @@ levels.js_hoc2015_move_two_items = {
   'instructions': '"We need the items. Help me get them all!"',
   'instructions2': 'Program BOTX to get to both items.',
   'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
   'goalOverride': {
     'goalImage': 'goal2',
     'imageWidth': 50,
@@ -1711,6 +1714,7 @@ levels.js_hoc2015_move_item_destination = {
   'instructions': '"Time to get more items."',
   'instructions2': 'Try typing the commands to get the items. Don’t forget to end with ();',
   'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
   'goalOverride': {
     'goalImage': 'goal1',
     'imageWidth': 50,
@@ -1752,6 +1756,7 @@ levels.js_hoc2015_move_item_destination_2 = {
   'instructions': '"I see another item behind that obstacle. Can you get it too?"',
   'instructions2': 'Program BOTX to get all the items.',
   'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
   'goalOverride': {
     'goalImage': 'goal1',
     'imageWidth': 50,
@@ -1793,6 +1798,7 @@ levels.js_hoc2015_move_item_destination_3 = {
   'instructions': '"There are more items to collect."',
   'instructions2': 'Program BOTX to get all the items.',
   'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
   'goalOverride': {
     'goalImage': 'goal2',
     'imageWidth': 50,
@@ -1835,6 +1841,7 @@ levels.js_hoc2015_move_cross = {
   'instructions': '"More items to get!"',
   'instructions2': 'Type or drag the blocks to get all the items.',
   'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
   'goalOverride': {
     'goalImage': 'goal2',
     'imageWidth': 50,
@@ -1884,7 +1891,6 @@ levels.js_hoc2015_event_two_items = {
   'instructions': '"BOT1, I need you to get a critical message to the GOALs."',
   'instructions2': 'Make BOT1 move when you hit the arrow keys.',
   'timeoutFailureTick': 600,
-  'timeoutAfterWhenRun': true,
   'showTimeoutRect': true,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
@@ -1893,7 +1899,7 @@ levels.js_hoc2015_event_two_items = {
   },
   'callouts': [
     {
-      'id': 'commandsCallout',
+      'id': 'playlab:js_hoc2015_event_two_items:placeCommandsHere',
       'element_id': '.droplet-main-canvas',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
@@ -1985,7 +1991,6 @@ levels.js_hoc2015_event_four_items = {
   'instructions': '"Get to all the GOALs as quickly as you can."',
   'instructions2': 'Move in all directions.',
   'timeoutFailureTick': 600,
-  'timeoutAfterWhenRun': true,
   'showTimeoutRect': true,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
@@ -1994,6 +1999,7 @@ levels.js_hoc2015_event_four_items = {
   },
   'callouts': [
     {
+      'id': 'playlab:js_hoc2015_event_four_items:typeCommandsHere',
       'element_id': '.ace_scroller',
       'qtip_config': {
         'content' : {
@@ -2055,7 +2061,6 @@ levels.js_hoc2015_event_three_goals =
   'instructions2': "On the last level, we ended the game for you. Now you're in charge: use the whenTouchPilot event to let BOT1 win the game when he reaches the pilot.",
   'autoArrowSteer': true,
   'timeoutFailureTick': 600,
-  'timeoutAfterWhenRun': true,
   'showTimeoutRect': true,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
@@ -2072,6 +2077,7 @@ levels.js_hoc2015_event_three_goals =
   'completeOnSuccessConditionNotGoals': true,
   'callouts': [
     {
+      'id': 'playlab:js_hoc2015_event_choose_character:placeCommandsAtTop',
       'element_id': '.droplet-main-canvas',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
@@ -2139,7 +2145,6 @@ levels.js_hoc2015_event_score_points = {
   'instructions2': 'Change your score when you get a pilot. Can you make BOT1 win when he gets 1000 points?',
   'autoArrowSteer': true,
   'timeoutFailureTick': 600,
-  'timeoutAfterWhenRun': true,
   'showTimeoutRect': true,
   'requiredForSuccess' : {
     'winGame': true,
@@ -2200,10 +2205,10 @@ levels.js_hoc2015_win_lose = {
   'instructions2': 'Make BOT1 lose the game if hits the MAN and win if he gets the pilot.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 600,
-  'timeoutAfterWhenRun': true,
   'showTimeoutRect': true,
   'callouts': [
     {
+      'id': 'playlab:js_hoc2015_win_lose:charactersMove',
       'element_id': '#droplet_palette_block_setToFlee',
       'qtip_config': {
         'content': {
@@ -2269,10 +2274,10 @@ levels.js_hoc2015_add_characters = {
   'instructions2': 'Now you have the WhenRun event and a new addCharacter command to create your own characters. Can you add 3 PIGs to the world? Then, go get them.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 600,
-  'timeoutAfterWhenRun': true,
   'showTimeoutRect': true,
   'callouts': [
     {
+      'id': 'playlab:js_hoc2015_add_characters:putCommandsTouchCharacter',
       'element_id': '.ace_gutter-cell:nth-of-type(8)',
       'hide_target_selector': '.ace_scroller',
       'qtip_config': {
@@ -2287,6 +2292,7 @@ levels.js_hoc2015_add_characters = {
       }
     }
   ],
+
   'requiredForSuccess' : {
     'removedItemCount': 3,
     'winGame': true
@@ -2334,7 +2340,6 @@ levels.js_hoc2015_chain_characters = {
   'instructions2': 'When you touch each ROO, make two MICE appear.  Then collect them all.  Make sure you can win the game.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900,
-  'timeoutAfterWhenRun': true,
   'showTimeoutRect': true,
   'requiredForSuccess' : {
     'winGame': true
@@ -2381,7 +2386,6 @@ levels.js_hoc2015_double_chain_characters = {
   'instructions2': 'With this code, when you get a ROO, two BIRDs appear. Can you make two MICE appear when you get a BIRD? Collect the MICE.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900,
-  'timeoutAfterWhenRun': true,
   'showTimeoutRect': true,
   'requiredForSuccess' : {
     'scoreMinimum': 100
@@ -2435,10 +2439,10 @@ levels.js_hoc2015_change_setting = {
   'instructions2': 'Use the new commands to change the background, map, BOT, and speed.  Then, play your game and get all the characters to win.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 600,
-  'timeoutAfterWhenRun': true,
   'showTimeoutRect': true,
   'callouts': [
     {
+      'id': 'playlab:js_hoc2015_change_setting:clickCategory',
       'element_id': '.droplet-palette-group-header.green',
       'qtip_config': {
         'content' : {
@@ -2506,6 +2510,7 @@ levels.js_hoc2015_event_free = {
   'autoArrowSteer': true,
   'callouts': [
     {
+      'id': 'playlab:js_hoc2015_event_free:tryOutNewCommands',
       'element_id': '.droplet-palette-canvas',
       'qtip_config': {
         'content': {

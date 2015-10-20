@@ -1,6 +1,14 @@
 - @page_title = level_title
 = render partial: 'shared/sharing_meta_tags'
 
+- if params[:share] && @game.share_mobile_fullscreen? && browser.safari?
+  :javascript
+    if (!window.navigator.standalone) {
+      window.addEventListener("load", function() {
+        addToHome.show(true);
+      }, false);
+    }
+
 #notes-content{style: 'display: none;'}
   %ul
     %li
@@ -21,7 +29,7 @@
   - # Pass special parameters to Blockly partial for embedded level type.
   = render partial: 'levels/blockly'
 - elsif @level.is_a?(DSLDefined) || @level.is_a?(Widget)
-  %script{src: minifiable_shared_path('shared.js')}
+  %script{src: minifiable_asset_path('shared.js')}
   :javascript
     var appOptions = #{app_options.to_json};
     dashboard.createCallouts(appOptions.callouts);

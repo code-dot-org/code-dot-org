@@ -155,31 +155,37 @@ level 'U3L13 - Project'
 
 # 14
 stage 'Variables: Create, Assign, and Read'
-level 'U3L19 Student Lesson Intro'
-level 'U3L19 - Target Clicker App'
-level 'U3L19 - three basic ops of variables’
-level 'U3- Variables - Create And Assign'
-level 'U3L19 - write var and string with same name’
-level 'U3L19 - fix the var name syntax error’
-level 'U3 - Variables - Identify Variables'
-level 'U3- Variables - Changing the Value'
-level 'U3L19 - test reassignment of two vars’
-level 'U3L19 - Debugging with consoleLog’
-level 'U3-Variables-Memory Breakdown'
+level 'U3L19 Student Lesson Intro' # 1
+level 'U3L19 - three basic ops of variables’ #2
+level 'U3- Variables - Create And Assign' #3
+level 'U3- Variables - Text Mode'
+level 'U3 - Variables - Read Using Turtle' #4 
+level 'U3L19 - write var and string with same name’ # 5
+level 'U3L19 - fix the var name syntax error’ #6
+level 'U3 - Variables - Debugging with Turtle' #7
+level 'U3 - Variables - Reassigning Variables with Console.log' #8
+level 'U3- Variables - Changing the Value' #9
+level 'U3L19 - test reassignment of two vars’ #10
+level 'U3L19 - Debugging with consoleLog’ #11
+level 'U3-Variables-Memory Breakdown' #12
+level 'U3 - Variables - Set to Expression' #13
+level 'U3 - Variables - Set to Expression with Turtle' #14
+level 'U3 - Variables - Set to Expression with Other Variables' #15
+level 'U3 - Variables - Set to Expression with Other Variables and Turtle' #16
+level 'U3 - Variables - Increment'
+level 'U3 - Variables - Incrementing Variables'
+level 'U3L19 - variable reassignment challenge pt2’
+assessment 'U3L19 - MC what are values of abc'
 
 # 15
 stage 'Variables: Increment, Decrement, Display, and Scope'
 level 'U3-Variables 2 - SFLP'
-level 'U3 - Variables - Increment'
-level 'U3 - Variables - Decrement'
-level 'U3 - Variables - Incrementing Variables'
-level 'U3L19 - variable reassignment challenge pt2’
-assessment 'U3L19 - MC what are values of abc'
+level 'U3L19 - Target Clicker App'
 level 'U3L19 - practice with setText’
 level 'U3 - Variables - Debug Scope'
+level 'U3L19 - DEMO up down count practice app’
 level 'U3L19 - up down count practice app’
 level 'U3L19 - variable scoping problem debugging’
-level 'U3L19 - DEMO up down count practice app’
 level 'U3L19 - variable scope problem 2’
 level 'U3 - Variables - Clicker Game'
 assessment 'U3L19 - final prompt'
@@ -190,6 +196,9 @@ assessment 'U3L21 Assessment Wrap Up'
 #16
 stage 'Permanent Data Storage and Clicker Completion'
 level 'U3L22 Student Lesson Introduction'
+level 'U3L17 - introKeyValue'
+level 'U3L17 - setKeyValue'
+level 'U3L17 - twoSetKeyValue'
 assessment 'U3L22 Free Response Getting Started'
 assessment 'U3L22 Assessment'
 assessment 'U3L22 Reflection'
