@@ -81,6 +81,8 @@
   $(document).ready(function() {
     new google.maps.places.SearchBox(document.getElementById('hoc-event-location'));
 
+    $('#hoc-send-posters-flag').closest('.form-group').hide();
+
     $('#hoc-signup-form select').selectize({
       plugins: ['fast_click']
     });

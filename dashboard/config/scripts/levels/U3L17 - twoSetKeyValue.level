@@ -1,0 +1,60 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-19T21:10:13.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "setKeyValue": {
+        "params": [
+          "\"key\"",
+          "\"value\""
+        ],
+        "paletteParams": [
+          "key",
+          "value"
+        ]
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Unpredictability with setKeyValue\r\n\r\nKey value pairs are **stored remotely** on a network of servers. When you set a key value you are actually **sending data across the Internet**, a process which **takes an unpredictable amount of time**. We actually cannot assume that requests will arrive in the order they are sent.\r\n\r\nThe program you are about to see contains two `setKeyValue` commands which update the same key value pair, called `unpredictableBit`.\r\n\r\n![](https://images.code.org/0343bc61aab6e14940a6af559074a35a-image-1445353609544.06.13 AM.png)\r\n\r\nGiven the order of the commands you'd expect `unpredictableBit` would be set to 0 and then 1. That said, it is possible that the requests arrive **out of order**, leaving the value as 0 instead.\r\n\r\n# Do This\r\n\r\n* **Run the program**\r\n* **Open the Data Viewer** to see what value `unpredictableBit` was set to.\r\n* **Record** what value `unpredictableBit` was set to (0 or 1)\r\n* **Repeat the experiment** a few more times (5-10). You'll need to **refresh the Data Viewer** each time by reloading the tab it is in.\r\n* **About what percent of the time do the `setKeyValue` requests arrive out of order?**",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "data_properties": "{\r\n  \"unpredictableBit\": 0\r\n}",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true",
+    "instructions": "Run the program several times to observe how often setKeyValue commands arrive out of order. (Click to see full instructions)",
+    "encrypted_examples": [
+
+    ],
+    "start_blocks": "setKeyValue(\"unpredictableBit\", 0);\r\nsetKeyValue(\"unpredictableBit\", 1);"
+  }
+}]]></config>
+  <blocks/>
+</Applab>
