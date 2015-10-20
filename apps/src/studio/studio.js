@@ -1680,7 +1680,7 @@ function getDefaultBackgroundName() {
 }
 
 function getDefaultMapName() {
-  return level.wallMap || skin.defaultWallMap;
+  return level.wallMapCollisions ? (level.wallMap || skin.defaultWallMap) : undefined;
 }
 
 /**
@@ -1801,7 +1801,8 @@ Studio.reset = function(first) {
 
   // Now that sprites are in place, we can set up a map, which might move
   // sprites around.
-  if (level.wallMapCollisions) {
+  var defaultMap = getDefaultMapName();
+  if (defaultMap) {
     Studio.setMap({value: getDefaultMapName()});
   }
 
