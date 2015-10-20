@@ -81,7 +81,6 @@ Scenario: Changing Parameter names
   When I open my eyes to test "changing contract parameters"
   Given I am on "http://learn.code.org/s/allthethings/stage/13/puzzle/11?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#x-close"
   And I close the dialog
   And I press "modalEditorClose"
 

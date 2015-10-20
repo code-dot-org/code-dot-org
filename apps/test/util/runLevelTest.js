@@ -29,6 +29,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
 
   // Override start blocks to load the solution;
   level.startBlocks = testData.xml;
+  level.levelHtml = testData.levelHtml;
 
   // Validate successful solution.
   var validateResult = function (report) {
