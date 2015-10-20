@@ -199,8 +199,8 @@
   homepage_action_text_signpetition: "Sign the petition"
   homepage_signpetition_dropdown: "I agree &#x25BE;"
   homepage_diversity_pledge: "Take the diversity pledge"
-  homepage_banner_text_prizes: "The Hour of Code is coming again. Join the largest learning event in history."
-  homepage_banner_link_prizes: 'Join us. '
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: "Code.org and the College Board form an alliance to improve diversity in computer science."
   homepage_banner_text_link: "Learn more"
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'

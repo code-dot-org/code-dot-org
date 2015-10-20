@@ -36,7 +36,7 @@ ____________________________________________________
 ```
 // Move the turtle up from the turtle starting postion at the center of the screen without drawing a line.
 penUp();
-moveForward(100);
+moveForward();
 ```
 
 [/example]
@@ -54,15 +54,15 @@ ____________________________________________________
 // Use penUp and penDown to have the turtle draw a thick, dotted line.
 penWidth(3);
 penDown();
-moveForward(25);
+moveForward();
 penUp();
-moveForward(25);
+moveForward();
 penDown();
-moveForward(25);
+moveForward();
 penUp();
-moveForward(25);
+moveForward();
 penDown();
-moveForward(25);
+moveForward();
 </pre>
 </td>
 <td>

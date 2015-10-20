@@ -31,7 +31,8 @@ end
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
   steps %q{
-    When I press "x-close"
+    When I wait to see ".x-close"
+    And I press "x-close"
     And I wait for 0.75 seconds
   }
 end
@@ -204,6 +205,10 @@ Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
   @browser.execute_script("return #{expression}").should eq true
 end
 
+Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
+  @browser.execute_script("return #{expression}")
+end
+
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
 Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
@@ -255,8 +260,7 @@ Then /^element "([^"]*)" is visible$/ do |selector|
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
-  instances = @browser.execute_script("return $('#{selector}')");
-  instances.should eq []
+  @browser.execute_script("return $('#{selector}').length").should eq 0
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
