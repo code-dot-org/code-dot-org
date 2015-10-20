@@ -3285,6 +3285,8 @@ en:
         ' Variable Check In': ' Variable Check In'
         ' What are the values of the variables a, b and c after all of the code below has executed? ': ' What are the values of the variables a, b and c after all of the code below has executed? '
         Code does not execute due to error: Code does not execute due to error
+        Variable Check In: Variable Check In
+        'What are the values of the variables a, b and c after all of the code below has executed? ': 'What are the values of the variables a, b and c after all of the code below has executed? '
         a=10, b=3, c=7: a=10, b=3, c=7
         a=13, b =16, c=29: a=13, b =16, c=29
         a=13, b=13, c=13: a=13, b=13, c=13
