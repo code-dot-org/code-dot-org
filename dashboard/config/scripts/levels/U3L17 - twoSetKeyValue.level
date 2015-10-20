@@ -7,46 +7,16 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "onEvent": null,
-      "button": null,
-      "textLabel": null,
-      "image": null,
-      "playSound": null,
-      "showElement": null,
-      "hideElement": null,
-      "deleteElement": null,
-      "setPosition": null,
-      "write": null,
-      "moveForward": null,
-      "moveBackward": null,
-      "move": null,
-      "moveTo": null,
-      "dot": null,
-      "turnRight": null,
-      "turnLeft": null,
-      "turnTo": null,
-      "arcRight": null,
-      "arcLeft": null,
-      "getX": null,
-      "getY": null,
-      "getDirection": null,
-      "penUp": null,
-      "penDown": null,
-      "penWidth": null,
-      "penColor": null,
-      "show": null,
-      "hide": null,
-      "speed": null,
-      "forLoop_i_0_4": null,
-      "randomNumber_min_max": null,
-      "declareAssign_x": null,
-      "assign_x": null,
-      "console.log": null,
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null,
-      "setKeyValue": null
+      "setKeyValue": {
+        "params": [
+          "\"key\"",
+          "\"value\""
+        ],
+        "paletteParams": [
+          "key",
+          "value"
+        ]
+      }
     },
     "edit_code": true,
     "embed": "false",

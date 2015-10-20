@@ -35,7 +35,7 @@ execute "install-aws-crontab" do
 end
 
 execute "precompile-assets" do
-  command "rake assets:precompile"
+  command "bundle exec rake assets:precompile"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
   environment ({
     'LC_ALL' => 'en_US.UTF-8', 'RAILS_ENV' => "#{node.chef_environment}"
