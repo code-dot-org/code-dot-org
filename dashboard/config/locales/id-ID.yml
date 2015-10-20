@@ -363,9 +363,9 @@
       viewing_solution: Melihat Solusi
       try_it_yourself: Lakukan itu sendiri
       section: Sesi
-      example: Example Solution
-      example_with_number: Example Solution %{solution_number}
-      submitted_on: Submitted on %{date}
+      example: Contoh solusi
+      example_with_number: Contoh solusi %{solution_number}
+      submitted_on: Dikirimkan pada %{date}
       unsubmit: Unsubmit
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
@@ -443,9 +443,9 @@
       ini
     print_certificate: Cetak Sertifikat
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with
-      code.
+    title: Belajar di Code Studio
+    description: Siapa pun bisa belajar ilmu komputer. Membuat permainan, aplikasi
+      dan seni dengan kode.
   gender:
     male: Laki-laki
     female: Wanita

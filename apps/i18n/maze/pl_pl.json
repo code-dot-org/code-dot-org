@@ -1,6 +1,6 @@
 {
-  "atHoneycomb": "w plastrze miodu",
-  "atFlower": "w kwiat",
+  "atHoneycomb": "na plastrze miodu",
+  "atFlower": "na kwiatku",
   "avoidCowAndRemove": "unikaj krowy i usuń 1",
   "continue": "Kontynuuj",
   "dig": "usuń 1",
@@ -31,7 +31,7 @@
   "ifTooltip": "Jeśli jest ścieżka w określonym kierunku, to wykonaj pewne działania.",
   "ifelseTooltip": "Jeśli jest ścieżka w określonym kierunku, to wykonaj pierwszy blok działań. W przeciwnym razie, wykonaj drugi blok działań.",
   "ifFlowerTooltip": "Jeśli jest kwiat/plaster miodu w określonym kierunku, to wykonaj pewne akcje.",
-  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions.",
+  "ifOnlyFlowerTooltip": "Jeśli jest kwiat w określonym kierunku, to wykonaj pewne działania.",
   "ifelseFlowerTooltip": "Jeśli jest kwiat/plaster miodu w określonym kierunku, to wykonaj pierwszy blok akcji. W przeciwnym razie wykonaj drugi blok akcji.",
   "insufficientHoney": "Używasz wszystkich prawidłowych bloków, ale musisz wyprodukować odpowiednią ilość miodu.",
   "insufficientNectar": "Używasz wszystkich prawidłowych bloków, ale musisz zgromadzić odpowiednią ilość nektaru.",

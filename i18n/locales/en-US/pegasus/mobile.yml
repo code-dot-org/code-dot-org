@@ -109,6 +109,7 @@ en-US:
   hoc_is_here: crwdns3941:0crwdne3941:0
   just_did_hoc: crwdns3942:0crwdne3942:0
   twitter_teach_cs: crwdns35452:0crwdne35452:0
+  learn_hoc_prizes: crwdns50834:0crwdne50834:0
   learn_hoc: crwdns3953:0crwdne3953:0
   beyond_hoc: crwdns3954:0crwdne3954:0
   what_gender: crwdns3955:0crwdne3955:0
@@ -171,6 +172,8 @@ en-US:
   homepage_action_text_signpetition: crwdns35465:0crwdne35465:0
   homepage_signpetition_dropdown: crwdns35466:0crwdne35466:0
   homepage_diversity_pledge: crwdns45366:0crwdne45366:0
+  homepage_banner_text_prizes: crwdns50835:0crwdne50835:0
+  homepage_banner_link_prizes: crwdns50836:0crwdne50836:0
   homepage_banner_text_main: crwdns38545:0crwdne38545:0
   homepage_banner_text_link: crwdns38546:0crwdne38546:0
   homepage_banner_privacy_main: crwdns43507:0crwdne43507:0
@@ -180,6 +183,7 @@ en-US:
   homepage_slot_text_link_hoc: crwdns35769:0crwdne35769:0
   homepage_slot_text_link_host: crwdns35770:0crwdne35770:0
   homepage_slot_text_link_hocserved: crwdns35771:0crwdne35771:0
+  homepage_solot_text_link_volunteer: crwdns50837:0crwdne50837:0
   homepage_slot_text_title_students: crwdns35772:0crwdne35772:0
   homepage_slot_text_blurb_students: crwdns35773:0crwdne35773:0
   homepage_slot_text_link_codestudio: crwdns35774:0crwdne35774:0
@@ -237,8 +241,11 @@ en-US:
   class_submission_level_vocational: crwdns5159:0crwdne5159:0
   class_submission_languages_other: crwdns5160:0crwdne5160:0
   volunteer_engineer_submission_title: crwdns50054:0crwdne50054:0
-  volunteer_engineer_submission_num_teachers: 'crwdns50055:0%{num_teachers}crwdne50055:0'
-  volunteer_engineer_submission_intro_paragraph: crwdns50056:0crwdne50056:0
+  volunteer_engineer_submission_subtitle_generic: crwdns50838:0crwdne50838:0
+  volunteer_engineer_submission_subtitle_specific: 'crwdns50839:0%{num_teachers}crwdnd50839:0%{num_volunteers}crwdne50839:0'
+  volunteer_engineer_submission_intro_background: crwdns50840:0crwdne50840:0
+  volunteer_engineer_submission_intro_recruit: 'crwdns50841:0%{url}crwdne50841:0'
+  volunteer_engineer_submission_intro_signup: crwdns50842:0crwdne50842:0
   volunteer_engineer_submission_header_shared: crwdns50057:0crwdne50057:0
   volunteer_engineer_submission_field_name: crwdns50058:0crwdne50058:0
   volunteer_engineer_submission_field_name_placeholder: crwdns50059:0crwdne50059:0
@@ -265,7 +272,7 @@ en-US:
   volunteer_engineer_submission_final_paragraph: crwdns50080:0crwdne50080:0
   volunteer_engineer_submission_checkbox_contact: crwdns50081:0crwdne50081:0
   volunteer_engineer_submission_submit: crwdns50082:0crwdne50082:0
-  volunteer_engineer_submission_thankyou: crwdns50083:0crwdne50083:0
+  volunteer_engineer_submission_thankyou: 'crwdns50083:0%{url}crwdne50083:0'
   volunteer_engineer_submission_commitment_uncertain: crwdns5490:0crwdne5490:0
   volunteer_engineer_submission_commitment_one_hr_per_week: crwdns5492:0crwdne5492:0
   volunteer_engineer_submission_commitment_three_hrs_per_week: crwdns5493:0crwdne5493:0
@@ -301,6 +308,7 @@ en-US:
   dashboard_landing_progress_title: crwdns7779:0crwdne7779:0
   dashboard_landing_progress_biggest: crwdns7780:0crwdne7780:0
   dashboard_landing_view_progress: 'crwdns7781:0%{biggest_section}crwdne7781:0'
+  dashboard_landing_print_progress: crwdns50843:0crwdne50843:0
   dashboard_landing_available_title: crwdns7782:0crwdne7782:0
   dashboard_landing_available_courses: crwdns7783:0crwdne7783:0
   dashboard_landing_more_tutorials: crwdns42148:0crwdne42148:0

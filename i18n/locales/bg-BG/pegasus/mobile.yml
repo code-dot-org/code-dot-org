@@ -27,10 +27,10 @@ bg-BG:
   hoc2014_everyone: Всички
   hoc2014_support: 'Подкрепете  &#x25BE;'
   hoc2014_whatishoc: Какво представлява Часът на кодирането?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_header: '# CSEdWeek / Часът на кода събития по света'
+  csedweek_map_signup: Запишете вашето събитие
+  csedweek_map_search_placeholder: Търсене на събития
+  csedweek_map_search_search: Търси
   csedweek_map_search_reset: Начално състояние
   cded_sign_up: Регистрирайте се
   cded_try_it: Опитайте го
@@ -62,7 +62,7 @@ bg-BG:
   get_a_certificate_of_achievement: Получете сертификат за постижение
   enter_valid_age: Моля, изберете валидна възраст
   enter_valid_email: Моля, въведете валиден имейл адрес
-  get_a_certificate_message: "Ние ще ви изпратим сертификат и информация за това как да <a href='/learn/beyond'> учите и след първия час кодиране</a>"
+  get_a_certificate_message: "Ние ще Ви изпратим сертификат и информация за това как да <a href='/learn/beyond'> учите и след първия час кодиране</a>"
   get_a_certificate_message_after: "Щракнете върху сертификата, за да го изтеглите или да го отпечатате. Сега продължете с нашият <a href='http://studio.code.org'> 20-часов курс</a>, или вижте повече възможности да <a href='/learn/beyond'> учите и след Часът на кодирането</a>."
   thanks_for_submitting: Благодарим за изпращането!
   if_you_enjoyed: Ако Ви е харесало наученото, споделете с приятелите си, за да пробват и те! Ние искаме целият свят да научи.
@@ -109,6 +109,7 @@ bg-BG:
   hoc_is_here: '#HourOfCode е тук - вижте го! @codeorg'
   just_did_hoc: 'Преди малко завърших #HourOfCode - вижте го! @codeorg'
   twitter_teach_cs: Защо да не се преподава информатика в повече училища? Можем да поправим това. http://Youtu.be/nKIu9yen5nc. Посетете http://code.org/, за да научите повече.
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: 'Научете се да програмирате с "Часът на кодирането"'
   beyond_hoc: След Часа по Кодиране
   what_gender: Какъв пол сте?
@@ -157,7 +158,7 @@ bg-BG:
   homepage_hero_text_teacher2: '&ldquo;Тази програма ангажира и увлича  учениците ми на 100%&rdquo; Адам, учител'
   homepage_hero_text_stat_loc: 2,5 милиона момичета са се записани да учат в Студиото по кодиране
   homepage_hero_text_stat_students: '#student_count Ученически акаунти на Студиото по кодиране'
-  homepage_hero_text_stat_served: 'Часът на кодирането: #served сервира'
+  homepage_hero_text_stat_served: 'Часът на кодирането: #served работи'
   homepage_slot_text_hoc: Часът на кодирането
   homepage_slot_text_frozen: Frozen с Анна и Елза
   homepage_slot_text_teacher: Учителско табло
@@ -171,6 +172,8 @@ bg-BG:
   homepage_action_text_signpetition: Подпишете петицията
   homepage_signpetition_dropdown: 'Съгласен&#x25BE;'
   homepage_diversity_pledge: Вземете разнообразни подаръци
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org и College Board се обединяват, за да премахнат различията в обучението по компютърни науки.
   homepage_banner_text_link: Научете повече
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -178,8 +181,9 @@ bg-BG:
   homepage_slot_text_title_hoc: Час на Кодирането
   homepage_slot_text_blurb_hoc: Всеки може да се научи. Започнете днес
   homepage_slot_text_link_hoc: Опитайте Часа на Кодирането
-  homepage_slot_text_link_host: Препоръчайте един час кодиране
+  homepage_slot_text_link_host: Организирайте Hour of Code
   homepage_slot_text_link_hocserved: '# served'
+  homepage_solot_text_link_volunteer: Доброволец за Часа на кода
   homepage_slot_text_title_students: Ученици
   homepage_slot_text_blurb_students: Разгледайте всички наши уроци
   homepage_slot_text_link_codestudio: Опитайте Студиото по кодиране
@@ -237,8 +241,12 @@ bg-BG:
   class_submission_level_vocational: Професионално
   class_submission_languages_other: Друг език (и)
   volunteer_engineer_submission_title: Доброволец за Часа на кода
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} учителите, които са се регистрирали за Часа на кода, желаещи да им помогне доброволец.'
-  volunteer_engineer_submission_intro_paragraph: 'Моля, въведете следната информация, ако сте студент по информатика или професионален разработчик на софтуер и се интересувате от възможност да подпомагнете местни учители за часа на кода. Полетата, отбелязани със <span class="form-required-field"> *</span> са задължителни.'
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: |-
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
   volunteer_engineer_submission_header_shared: Информацията, споделена от учители на доброволческата карта
   volunteer_engineer_submission_field_name: Име
   volunteer_engineer_submission_field_name_placeholder: Пълно име
@@ -262,7 +270,7 @@ bg-BG:
   volunteer_engineer_submission_field_email: Имейл адрес
   volunteer_engineer_submission_field_email_desc: Вашият имейл адрес няма да бъде споделен, но ние ще Ви изпратим заявки от учителите.
   volunteer_engineer_submission_field_email_placeholder: Имейл адрес
-  volunteer_engineer_submission_final_paragraph: Вас ще бъде отбелязан на картата в помощ на местните учители, за да се свържем с Вас за Часът на кода или други възможности за доброволчество. Вашата електронна поща и точния адрес няма да бъдат споделяни. Но друга информация (включително приблизителното местоположение) ще бъде публично и видимо от местните учители.
+  volunteer_engineer_submission_final_paragraph: Вие ще бъдете отбелязан на картата в помощ на местните учители, за да се свържем с Вас за Часът на кода или други възможности за доброволчество. Вашата електронна поща и точния адрес няма да бъдат споделяни. Но друга информация (включително приблизителното местоположение) ще бъде публична и видима от местните учители.
   volunteer_engineer_submission_checkbox_contact: 'Съгласен съм, учителите да могат да се свържат с мен за доброволческа помощ (Забележка: Вашият имейл адрес няма да бъде споделен)'
   volunteer_engineer_submission_submit: Изпрати
   volunteer_engineer_submission_thankyou: Благодарим Ви за изпращане на Вашата информация.
@@ -275,7 +283,7 @@ bg-BG:
   volunteer_engineer_submission_commitment_monthly: Няколко часа на месец
   volunteer_engineer_submission_commitment_weekly: Няколко часа на седмица
   volunteer_engineer_submission_commitment_more: Повече
-  volunteer_engineer_submission_location_flexibility_onsite: посещение на сайта в училище (1-2 часа в класната стая или в кръжок)
+  volunteer_engineer_submission_location_flexibility_onsite: посещение в сайта от училище (1-2 часа в класната стая или в кръжок)
   volunteer_engineer_submission_location_flexibility_remote: Дистанционно обучение (учители или ученици)
   volunteer_engineer_submission_location_flexibility_curriculum: Желае да допринесе за проекти с отворен код
   volunteer_engineer_submission_experience_unspecified: Неизвестен
@@ -301,11 +309,12 @@ bg-BG:
   dashboard_landing_progress_title: Общ напредък на класа
   dashboard_landing_progress_biggest: Това е напредъкът във най-големия ви раздел.
   dashboard_landing_view_progress: 'Преглед на прогреса за %{biggest_section}'
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Налични курсове
   dashboard_landing_available_courses: Ето курсове, които в момента са достъпни за вас и вашите ученици.
   dashboard_landing_more_tutorials: Искате ли да видите още уроци?
   dashboard_landing_more_tutorials_desc: 'Има повече уроци <a href="/learn/beyond">, предлагани от нашите партньори.</a> Научете се да програмирате с роботи, да правите уеб страници, да направете свое собствено  приложение или разгледайте уроци с други езици като C++, Ruby или Python!'
-  dashboard_hoc_courses: Часът на кодирането за всички възрасти
+  dashboard_hoc_courses: Часът на кода за всички възрасти
   dashboard_hoc_courses_desc: Опитайте някои от тези кратки едночасови уроци с учениците си!
   dashboard_hoc_courses_desc_and_cta: 'Опитайте тези кратки, едночасови уроци с учениците си. <a href="https://hourofcode.com"> Включете се в Hour of Code движението</a> по време на седмицата на компютърни науки и образованието.'
   dashboard_k5_courses: '20-часов курс за K-5 (детска градина- 5 клас)'
@@ -461,7 +470,7 @@ bg-BG:
   dashboard_announcements: Съобщения
   dashboard_announce_view_all: Преглед на всички
   dashboard_announce_hoc: '<b>30 септември 2015</b> - часът на кода 2015 идва! Присъединете се към класните стаи по целия свят за най-голямото обучително събитие в историята.'
-  code_hoc_coming: 'Часът на кодирането е тук - декември 8-14!'
+  code_hoc_coming: 'Часът на кода е тук - декември 8-14!'
   code_sign_up: Регистрирайте се за участие по време на CS седмицата на образованието
   learn_more: Научете повече
   learn_sign_up_description: Регистрирайте се, за да участвате в Hour of Code по време на CS образователната седмица
@@ -469,7 +478,7 @@ bg-BG:
   learn_educator_resources_description: Научете как да преподавате Hour of Code
   learn_educator_resources_button: Ресурси за учители
   learn_are_you_educator: 'Вие сте учител? Научете <a href="http://hourofcode.com/resources/how-to"> как да преподавате часът на кода</a>'
-  hoc2014_try_new_tutorials: Опитайте нашите нови уроци за Часа на кодирането
+  hoc2014_try_new_tutorials: Опитайте нашите нови уроци за Часа на кода
   hoc2014_try_new_tutorial: Опитайте нашия нов Час на кодирането (бета версия)
   hoc2014_try_scrat: Angry Birds, PvZ и Scrat
   hoc2014_try_frozen: Художникът с Анна и Елза от Frozen
@@ -486,7 +495,7 @@ bg-BG:
   carousel_heading_robots: Научете се да програмирате с роботи
   carousel_heading_ide: Платформи, популярни сред учителите
   educator_notes: Бележки за учители
-  how_to_teach_hoc: Как да преподавате един Час Кодиране
+  how_to_teach_hoc: Как да преподавате един Час на Кода
   more_resources_educators: Повече ресурси за учители и възпитатели
   beyond_submission: Искате ли да продължите с уроците и след Часа на кода? Вижте критериите за попълване на форма.
   participants: участници
