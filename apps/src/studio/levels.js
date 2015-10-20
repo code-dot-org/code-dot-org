@@ -1893,6 +1893,7 @@ levels.js_hoc2015_event_two_items = {
   },
   'callouts': [
     {
+      'id': 'commandsCallout',
       'element_id': '.droplet-main-canvas',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
@@ -1911,8 +1912,29 @@ levels.js_hoc2015_event_two_items = {
           }
         }
       }
+    },
+    {
+      'id': 'arrowsCallout',
+      'element_id': '#upButton',
+      'hide_target_selector': '#soft-buttons',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutUseArrowButtons(),
+        },
+        'hide': {
+          'event': 'mouseup touchend',
+        },
+        'position': {
+          'my': 'top left',
+          'at': 'bottom left',
+          'adjust': {
+            'x': 30,
+            'y': 00
+          }
+        }
+      }
     }
-  ],
+  ]
 };
 
 levels.js_hoc2015_event_four_items = {
@@ -2153,6 +2175,7 @@ levels.js_hoc2015_win_lose = {
     '}',
     'function whenTouchMan() {',
     '  playSound("character1sound6");',
+    '  ',
     '}',   
     ''].join('\n'),
 
@@ -2218,9 +2241,11 @@ levels.js_hoc2015_add_characters = {
   'startBlocks': [
     'function whenTouchPig() {',
     '  playSound("item1sound1");',
+    '  ',
     '}',
     'function whenGetAllCharacters() {',
     '  endGame("win");',
+    '  ',
     '}',
     ].join('\n'),
   'sortDrawOrder': true,
@@ -2290,6 +2315,7 @@ levels.js_hoc2015_chain_characters = {
     '}',
     'function whenTouchMouse() {',
     '  playSound("character1sound8");',
+    '  ',
     '}',
     'function whenGetAllCharacters() {',
     '  ',
@@ -2389,9 +2415,11 @@ levels.js_hoc2015_change_setting = {
     'function whenTouchCharacter() {',
     '  setBackground("random");',
     '  addPoints(400);',
+    '  ',
     '}',
     'function whenGetAllCharacters() {',
     '  endGame("win");',
+    '  ',
     '}',
     ''].join('\n'),
   'sortDrawOrder': true,
