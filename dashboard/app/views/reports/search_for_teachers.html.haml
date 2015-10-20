@@ -41,6 +41,8 @@
 %h2 Teachers
 - if @teachers.size > 0
   - if @teachers.size == @teacher_limit
+    -# This is actually not true if the there were exactly @response_limit
+    -# records.
     WARNING: The results are sampled, there are additional records not being
     displayed.
     %br
