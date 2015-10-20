@@ -310,7 +310,15 @@ task :dashboard_unit_tests do
   end
 end
 
-task :dashboard_browserstack_ui_tests do
+UI_TEST_SYMLINK = dashboard_dir 'public/ui_test'
+
+file UI_TEST_SYMLINK do
+  Dir.chdir(dashboard_dir('public')) do
+    RakeUtils.system_ 'ln', '-s', '../test/ui', 'ui_test'
+  end
+end
+
+task :dashboard_browserstack_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
@@ -328,7 +336,7 @@ task :dashboard_browserstack_ui_tests do
   end
 end
 
-task :dashboard_eyes_ui_tests do
+task :dashboard_eyes_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI visual tests...'
