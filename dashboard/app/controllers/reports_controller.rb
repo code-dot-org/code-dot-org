@@ -64,7 +64,7 @@ SQL
 
     # TODO(asher): Determine whether we should be doing an inner join or a left
     # outer join.
-    @teachers = User.limit(1000).where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id')
+    @teachers = User.where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id')
 
     # If requested, join with the workshop_attendance table to filter out based
     # on PD attendance.

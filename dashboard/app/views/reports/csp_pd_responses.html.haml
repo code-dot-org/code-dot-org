@@ -10,6 +10,8 @@
       = level_id
     - if level_responses.size > 0
       - if level_responses.size == @response_limit
+        -# This is actually not true if the there were exactly @response_limit
+        -# records.
         WARNING: The results are truncated, there are additional records not
         being displayed.
         %br
