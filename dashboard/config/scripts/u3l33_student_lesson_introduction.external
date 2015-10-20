@@ -1,5 +1,6 @@
 name 'U3L33 Student Lesson Introduction'
 title 'Arrays and Loops: Altering Images'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 33 - Arrays and Loops: Altering Images

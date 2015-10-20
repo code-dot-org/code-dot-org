@@ -3,6 +3,7 @@ var dontMarshalApi = require('./dontMarshalApi');
 var consoleApi = require('./consoleApi');
 var showAssetManager = require('../applab/assetManagement/show.js');
 var ChartApi = require('./ChartApi');
+var elementUtils = require('./designElements/elementUtils');
 
 var applabConstants = require('./constants');
 
@@ -24,8 +25,8 @@ var COLOR_YELLOW = '#FFF176';
  * Generate a list of screen ids for our setScreen dropdown
  */
 function getScreenIds() {
-  var ret = $(".screen").map(function () {
-    return '"' + this.id + '"';
+  var ret = $("#designModeViz .screen").map(function () {
+    return '"' + elementUtils.getId(this) + '"';
   });
 
   // Convert from jQuery's array-like object to a true array
@@ -53,6 +54,7 @@ module.exports.blocks = [
   {func: 'hideElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: function () { return Applab.getIdDropdown(); } } },
   {func: 'deleteElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: function () { return Applab.getIdDropdown(); } } },
   {func: 'setPosition', parent: api, category: 'UI controls', paletteParams: ['id','x','y','width','height'], params: ['"id"', "0", "0", "100", "100"], dropdown: { 0: function () { return Applab.getIdDropdown(); } } },
+  {func: 'setSize', parent: api, category: 'UI controls', paletteParams: ['id','width','height'], params: ['"id"', "100", "100"], dropdown: { 0: function () { return Applab.getIdDropdown(); } } },
   {func: 'write', parent: api, category: 'UI controls', paletteParams: ['text'], params: ['"text"'] },
   {func: 'getXPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: function () { return Applab.getIdDropdown(); } }, type: 'value' },
   {func: 'getYPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: function () { return Applab.getIdDropdown(); } }, type: 'value' },

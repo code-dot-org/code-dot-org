@@ -168,18 +168,20 @@ theme: pdf
             There are no Code.org affiliates in the state to offer professional development for elementary teachers.
           - else
             - if state_info[:num_elementary_trained_i] == 0
+              There are
               = state_info[:num_affiliates_i]
-              Code.org affiliates offer professional development for elementary teachers in
+              Code.org Affiliates that offer professional development for elementary teachers in
               = state_info[:state_name_s]
             - else
               = format_integer_with_commas(state_info[:num_affiliates_i])
               Code.org
               - if state_info[:num_affiliates_i] == 1
-                affiliate
+                Affiliate,
               - else 
-                affiliates
+                Affiliates,
               offering professional development for elementary teachers in
-              = state_info[:state_name_s]
+              = succeed ',' do
+                = state_info[:state_name_s]
               have already trained
               %b
                 = format_integer_with_commas(state_info[:num_elementary_trained_i])

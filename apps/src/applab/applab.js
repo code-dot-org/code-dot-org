@@ -37,10 +37,12 @@ var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
 var StepType = JSInterpreter.StepType;
 var elementLibrary = require('./designElements/library');
+var elementUtils = require('./designElements/elementUtils');
 var assetsApi = require('../clientApi').assets;
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
 var DebugArea = require('./DebugArea');
+var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 
 var applabConstants = require('./constants');
 
@@ -183,10 +185,10 @@ function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
 // case and scale downward from there. The visualization height will be set
 // to preserve the proper aspect ratio with respect to the current width.
 //
-// The divApplab coordinate space will be Applab.appWidth by Applab.appHeight.
+// The visualization coordinate space will be Applab.appWidth by Applab.appHeight.
 // The scale values are then adjusted such that the max-width case may result
-// in a scaled-up version of divApplab and the min-width case will typically
-// result in a scaled-down version of divApplab.
+// in a scaled-up version of the visualization area and the min-width case will
+// typically result in a scaled-down version of the visualization area.
 //
 // @returns {Array.<number>} Array of scale factors which will be used
 //     on the applab app area at the following screen widths, respectively:
@@ -228,8 +230,10 @@ function adjustAppSizeStyles(container) {
   }
 
   var ss = document.styleSheets;
+  // Match applab.css or (for production) applab-{hex-fingerprint}.css
+  var applabStyleSheetRegex = /\/applab-?[0-9a-f]*\.css$/i;
   for (var i = 0; i < ss.length; i++) {
-    if (ss[i].href && (ss[i].href.indexOf('applab.css') !== -1)) {
+    if (ss[i].href && (applabStyleSheetRegex.test(ss[i].href))) {
       // We found our applab specific stylesheet:
       var rules = ss[i].cssRules || ss[i].rules;
       var changedRules = 0;
@@ -296,7 +300,7 @@ function adjustAppSizeStyles(container) {
             } else if (childRules[k].selectorText === "div#visualization.responsive > *" ||
                        childRules[k].selectorText === "div.responsive#visualization > *") {
               // and set the scale factor for all children of the visualization
-              // (importantly, the divApplab element)
+              // (importantly, the divApplab and designModeViz elements)
               childRules[k].style.cssText = "-webkit-transform: scale(" + scale +
                   ");-ms-transform: scale(" + scale +
                   ");transform: scale(" + scale + ");";
@@ -319,11 +323,9 @@ var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.footerlessAppHeight + "px";
-  if (Applab.levelHtml === '') {
-    // On clear gives us a fresh start, including our default screen.
-    designMode.loadDefaultScreen();
-    designMode.serializeToLevelHtml();
-  }
+  var designModeViz = document.getElementById('designModeViz');
+  designModeViz.style.width = Applab.appWidth + "px";
+  designModeViz.style.height = Applab.footerlessAppHeight + "px";
 
   if (studioApp.share) {
     renderFooterInSharedGame();
@@ -382,6 +384,15 @@ function renderFooterInSharedGame() {
     menuItems: menuItems
   }, footerDiv);
 }
+
+/**
+ * @param {string} code The code to search for Data Storage APIs
+ * @return {boolean} True if the code uses any data storage APIs
+ */
+Applab.hasDataStoreAPIs = function (code) {
+  return /createRecord/.test(code) || /updateRecord/.test(code) ||
+    /setKeyValue/.test(code);
+};
 
 Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {
   return 300 * Math.pow(1 - sliderSpeed, 2);
@@ -501,10 +512,16 @@ function handleExecutionError(err, lineNumber) {
     }
   }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
-  Applab.executionError = err;
+  Applab.executionError = { err: err, lineNumber: lineNumber };
 
-  // Call onPuzzleComplete() here if we want to create levels that end
-  // automatically without requiring a press of the Finish button:
+  // NOTE: We call onPuzzleComplete() here only when we hit syntax errors,
+  // because we can't enter the onTick loop when the interpreter didn't
+  // parse the program and instantiate properly.
+  // In the future, we may want to call it on non freeplay-levels to handle
+  // runtime errors (as part of level validation):
+  if (err instanceof SyntaxError) {
+    Applab.onPuzzleComplete();
+  }
 }
 
 Applab.getCode = function () {
@@ -514,21 +531,31 @@ Applab.getCode = function () {
 Applab.getHtml = function () {
   // This method is called on autosave. If we're about to autosave, let's update
   // levelHtml to include our current state.
-  if (Applab.isInDesignMode() && !Applab.isRunning() || Applab.levelHtml === '') {
+  if ($('#designModeViz').is(':visible')) {
     designMode.serializeToLevelHtml();
   }
   return Applab.levelHtml;
 };
 
+/**
+ * Sets Applab.levelHtml as well as #designModeViz contents.
+ * designModeViz is the source of truth for the app's HTML.
+ * levelHtml can be lazily updated from designModeViz via serializeToLevelHtml.
+ * @param html
+ */
 Applab.setLevelHtml = function (html) {
   if (html === '') {
-    if (window.dashboard) {
-      dashboard.project.clearHtml();
-    }
     Applab.levelHtml = '';
   } else {
     Applab.levelHtml = designMode.addScreenIfNecessary(html);
   }
+  var designModeViz = document.getElementById('designModeViz');
+  designMode.parseFromLevelHtml(designModeViz, true, applabConstants.DESIGN_ELEMENT_ID_PREFIX);
+
+  // Make sure at least one screen exists, and that the first
+  // screen is visible.
+  designMode.loadDefaultScreen();
+  designMode.serializeToLevelHtml();
 };
 
 Applab.onTick = function() {
@@ -574,6 +601,59 @@ Applab.initReadonly = function(config) {
   studioApp.initReadonly(config);
 };
 
+function hasSeenDataAlert(channelId) {
+  var dataAlerts = localStorage.getItem('dataAlerts');
+  if (!dataAlerts) {
+    return false;
+  }
+  var channelIds = JSON.parse(dataAlerts);
+  return channelIds.indexOf(channelId) !== -1;
+}
+
+function markSeenDataAlert(channelId) {
+  var dataAlerts = localStorage.getItem('dataAlerts');
+  if (!dataAlerts) {
+    dataAlerts = '[]';
+  }
+  var channelIds = JSON.parse(dataAlerts);
+  channelIds.push(channelId);
+  localStorage.setItem('dataAlerts', JSON.stringify(channelIds));
+}
+
+/**
+ * Starts the app after (potentially) Showing a modal warning about data sharing
+ * (if appropriate) and determining user is old enough
+ */
+Applab.startSharedAppAfterWarnings = function () {
+  // dashboard will redirect young signed in users
+  var is13Plus = Applab.user.isSignedIn || localStorage.getItem('is13Plus') === "true";
+  var showStoreDataAlert = Applab.hasDataStoreAPIs(Applab.getCode()) &&
+    !hasSeenDataAlert(AppStorage.getChannelId());
+
+  var modal = document.createElement('div');
+  document.body.appendChild(modal);
+  return React.render(React.createElement(ShareWarningsDialog, {
+    showStoreDataAlert: showStoreDataAlert,
+    is13Plus: is13Plus,
+    handleClose: function () {
+      // we closed the dialog without hitting too_young
+      // Only want to ask about age once across apps
+      if (!Applab.user.isSignedIn) {
+        localStorage.setItem('is13Plus', 'true');
+      }
+      // Only want to ask about storing data once per app.
+      if (showStoreDataAlert) {
+        markSeenDataAlert(AppStorage.getChannelId());
+      }
+      window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+    },
+    handleTooYoung: function () {
+      localStorage.setItem('is13Plus', 'false');
+      window.location.href = '/too_young';
+    }
+  }), modal);
+};
+
 /**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
@@ -599,7 +679,8 @@ Applab.init = function(config) {
   copyrightStrings = config.copyrightStrings;
   Applab.user = {
     applabUserId: config.applabUserId,
-    isAdmin: (config.isAdmin === true)
+    isAdmin: (config.isAdmin === true),
+    isSignedIn: config.isSignedIn
   };
 
   loadLevel();
@@ -618,7 +699,10 @@ Applab.init = function(config) {
   adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
-  var showDebugButtons = !config.hideSource && config.level.editCode;
+  var showDebugButtons = (!config.hideSource &&
+                          config.level.editCode &&
+                          !config.level.debuggerDisabled);
+  var breakpointsEnabled = !config.level.debuggerDisabled;
   var showDebugConsole = !config.hideSource && config.level.editCode;
   var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: studioApp.assetUrl,
@@ -670,6 +754,18 @@ Applab.init = function(config) {
     }
     drawDiv();
 
+    // Ignore the user's levelHtml for levels without design mode. levelHtml
+    // should never be present on such levels, however some levels do
+    // have levelHtml stored due to a previous bug. HTML set by levelbuilder
+    // is stored in startHtml, not levelHtml.
+    if (config.level.hideDesignMode) {
+      config.level.levelHtml = '';
+    }
+
+    // Set designModeViz contents after it is created in configureDom()
+    // and sized in drawDiv().
+    Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
+
     studioApp.alertIfAbusiveProject('#codeWorkspace');
 
     // IE9 doesnt support the way we handle responsiveness. Instead, explicitly
@@ -684,22 +780,24 @@ Applab.init = function(config) {
     // ace gutter:
     var aceEditor = studioApp.editor.aceEditor;
 
-    studioApp.editor.on('guttermousedown', function(e) {
-      var bps = studioApp.editor.getBreakpoints();
-      if (bps[e.line]) {
-        studioApp.editor.clearBreakpoint(e.line);
-      } else {
-        studioApp.editor.setBreakpoint(e.line);
-      }
-    });
+    if (breakpointsEnabled) {
+      studioApp.editor.on('guttermousedown', function(e) {
+        var bps = studioApp.editor.getBreakpoints();
+        if (bps[e.line]) {
+          studioApp.editor.clearBreakpoint(e.line);
+        } else {
+          studioApp.editor.setBreakpoint(e.line);
+        }
+      });
+    }
 
     if (studioApp.share) {
-      // automatically run in share mode:
-      window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+      Applab.startSharedAppAfterWarnings();
     }
   };
 
   config.afterClearPuzzle = function() {
+    designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
     AppStorage.populateTable(level.dataTables, true); // overwrite = true
     AppStorage.populateKeyValue(level.dataProperties, true); // overwrite = true
@@ -731,16 +829,6 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
-  // Ignore the user's levelHtml for levels without design mode. levelHtml
-  // should never be present on such levels, however some levels do
-  // have levelHtml stored due to a previous bug. HTML set by levelbuilder
-  // is stored in startHtml, not levelHtml.
-  // TODO(dave): remove this check once design mode content is separated
-  // from divApplab: https://www.pivotaltracker.com/story/show/103544608
-  if (level.hideDesignMode) {
-    level.levelHtml = '';
-  }
-  Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
   studioApp.init(config);
@@ -867,6 +955,9 @@ Applab.init = function(config) {
     designMode.toggleDesignMode(Applab.startInDesignMode());
 
     designMode.configureDragAndDrop();
+
+    var designModeViz = document.getElementById('designModeViz');
+    designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
   }
 };
 
@@ -973,6 +1064,20 @@ Applab.isRunning = function () {
 };
 
 /**
+ * Toggle whether divApplab or designModeViz is visible.
+ * @param isVisible whether divApplab should be visible.
+ */
+Applab.toggleDivApplab = function(isVisible) {
+  if (isVisible) {
+    $('#divApplab').show();
+    $('#designModeViz').hide();
+  } else {
+    $('#divApplab').hide();
+    $('#designModeViz').show();
+  }
+};
+
+/**
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
@@ -1009,21 +1114,17 @@ Applab.reset = function(first) {
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
-  designMode.addKeyboardHandlers();
-
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
-  $("#divApplab").toggleClass('divApplabDesignMode', isDesigning);
-  designMode.parseFromLevelHtml(newDivApplab, isDesigning);
-  designMode.loadDefaultScreen();
+  Applab.toggleDivApplab(!isDesigning);
+  designMode.parseFromLevelHtml(newDivApplab, false);
   if (Applab.isInDesignMode()) {
     designMode.resetElementTray(isDesigning);
+    designMode.resetPropertyTab();
   }
 
   if (level.showTurtleBeforeRun) {
     applabTurtle.turtleSetVisibility(true);
   }
-
-  newDivApplab.addEventListener('click', designMode.onDivApplabClick);
 
   // Reset goal successState:
   if (level.goal) {
@@ -1151,6 +1252,7 @@ var displayFeedback = function() {
       app: 'applab', //XXX
       skin: skin.id,
       feedbackType: Applab.testResults,
+      executionError: Applab.executionError,
       response: Applab.response,
       level: level,
       showingSharing: level.freePlay,
@@ -1246,6 +1348,9 @@ Applab.execute = function() {
           onExecutionError: handleExecutionError,
           onExecutionWarning: outputApplabConsole
       });
+      if (!Applab.JSInterpreter.initialized()) {
+          return;
+      }
     } else {
       Applab.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
                                           StudioApp: studioApp,
@@ -1279,9 +1384,8 @@ Applab.execute = function() {
   }
 
   // Set focus on the default screen so key events can be handled
-  // right from the start without requiring the user to adjust focus:
-  var divApplab = document.getElementById('divApplab');
-  divApplab.firstChild.focus();
+  // right from the start without requiring the user to adjust focus.
+  Applab.loadDefaultScreen();
 
   Applab.running = true;
   $('#headers').addClass('dimmed');
@@ -1377,6 +1481,11 @@ Applab.onCodeModeButton = function() {
   utils.fireResizeEvent();
   if (!Applab.isRunning()) {
     Applab.serializeAndSave();
+    var divApplab = document.getElementById('divApplab');
+    designMode.parseFromLevelHtml(divApplab, false);
+    Applab.changeScreen(designMode.getCurrentScreenId());
+  } else {
+    Applab.activeScreen().focus();
   }
 };
 
@@ -1458,12 +1567,26 @@ Applab.onPuzzleFinish = function() {
 };
 
 Applab.onPuzzleComplete = function(submit) {
-  // Submit all results as success / freePlay
-  Applab.result = ResultType.SUCCESS;
-  if (submit) {
-    Applab.testResults = TestResults.SUBMITTED;
+  if (Applab.executionError) {
+    Applab.result = ResultType.ERROR;
   } else {
-    Applab.testResults = TestResults.FREE_PLAY;
+    // In most cases, submit all results as success
+    Applab.result = ResultType.SUCCESS;
+  }
+
+  // If we know they succeeded, mark levelComplete true
+  var levelComplete = (Applab.result === ResultType.SUCCESS);
+
+  if (Applab.executionError) {
+    Applab.testResults = studioApp.getTestResults(levelComplete, {
+        executionError: Applab.executionError
+    });
+  } else {
+    if (submit) {
+      Applab.testResults = TestResults.SUBMITTED;
+    } else {
+      Applab.testResults = TestResults.FREE_PLAY;
+    }
   }
 
   // Stop everything on screen
@@ -1496,7 +1619,7 @@ Applab.onPuzzleComplete = function(submit) {
     studioApp.report({
       app: 'applab',
       level: level.id,
-      result: Applab.result === ResultType.SUCCESS,
+      result: levelComplete,
       testResult: Applab.testResults,
       program: encodeURIComponent(program),
       image: Applab.encodedFeedbackImage,
@@ -1689,7 +1812,26 @@ Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
  * @returns {HTMLElement} The first "screen" that isn't hidden.
  */
 Applab.activeScreen = function () {
-  return $('.screen').filter(function () {
+  return $('#divApplab .screen').filter(function () {
     return this.style.display !== 'none';
   }).first()[0];
+};
+
+/**
+ * Changes the active screen by toggling all screens in divApplab to be non-visible,
+ * unless they match the provided screenId. Also focuses the screen.
+ */
+Applab.changeScreen = function(screenId) {
+  $('#divApplab .screen').each(function () {
+    $(this).toggle(this.id === screenId);
+    if ((this.id === screenId)) {
+      // Allow the active screen to receive keyboard events.
+      this.focus();
+    }
+  });
+};
+
+Applab.loadDefaultScreen = function() {
+  var defaultScreen = $('#divApplab .screen').first().attr('id');
+  Applab.changeScreen(defaultScreen);
 };

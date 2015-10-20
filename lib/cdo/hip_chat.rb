@@ -23,8 +23,13 @@ class HipChat
   # Maximum times to retry on test failure
   MAX_RETRIES = 3
 
+  TRUNCATION_PREFIX = '[TRUNCATED]'
+  MAX_MESSAGE_SIZE = 10000
+
   def self.developers(message, options={})
-    message(:developers, message, options)
+    # temporarily redirect developer logging to 'Server operations'.
+    # TODO(dave): rename or split HipChat.developers once we settle on a HipChat logging strategy.
+    message('server operations', message, options)
   end
 
   def self.log(message, options={})
@@ -34,7 +39,7 @@ class HipChat
   def self.message(room, message, options={})
     post_to_hipchat(room, message, options)
 
-    channel = "\##{Slack::CHANNEL_MAP[room.to_sym] || room}"
+    channel = "\##{Slack::CHANNEL_MAP[room] || room}"
     Slack.message slackify(message.to_s), channel: channel, username: @@name, color: options[:color]
   end
 
@@ -91,6 +96,11 @@ class HipChat
   end
 
   def self.post_hipchat_form(room, message, options)
+    body = message.to_s
+    if body.length > MAX_MESSAGE_SIZE
+      # trim to 10000 chars, including some space for our truncation prefix
+      body = TRUNCATION_PREFIX + body.slice(-MAX_MESSAGE_SIZE + TRUNCATION_PREFIX.length, MAX_MESSAGE_SIZE)
+    end
     uri = URI.parse('http://api.hipchat.com/v1/rooms/message')
     Net::HTTP.post_form(
         uri,
@@ -98,7 +108,7 @@ class HipChat
                                                  from: @@name,
                                                  auth_token: @@auth_token,
                                                  room_id: room.to_s,
-                                                 message: message.to_s,
+                                                 message: body
                                              }))
   end
 

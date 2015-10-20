@@ -178,7 +178,8 @@ end
 features = $options.feature || Dir.glob('features/**/*.feature')
 browser_features = $browsers.product features
 
-HipChat.log "Starting #{browser_features.count} <b>dashboard</b> UI tests in #{$options.parallel_limit} threads</b>..."
+test_type = $options.run_eyes_tests ? 'eyes tests' : 'UI tests'
+HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} in #{$options.parallel_limit} threads</b>..."
 
 Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
   feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
@@ -302,7 +303,8 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   end
 
   if !parsed_output.nil? && scenario_count == 0 && succeeded
-    HipChat.log "<b>dashboard</b> UI tests skipped with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
+    # Don't log individual skips because we hit HipChat rate limits
+    # HipChat.log "<b>dashboard</b> UI tests skipped with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
   elsif succeeded
     # Don't log individual successes because we hit HipChat rate limits
     # HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
@@ -319,7 +321,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
     message += "<br/><i>rerun: ./runner.rb -c #{browser_name} -f #{feature} --html</i>"
     HipChat.log message, color: 'red'
-    HipChat.developers short_message, color: 'red' if CDO.hip_chat_logging
+    HipChat.developers short_message, color: 'red' if Rails.env.test?
   end
   result_string =
     if scenario_count == 0

@@ -127,9 +127,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "We are going to walk you through a process that shows you the benefit of thinking about programming tasks in terms of writing functions.\r\n\r\n* We are going to write a program that draws the figure shown at right which sort of looks like a jagged diamond shape. <img src=\"https://images.code.org/53679cc10ff90b6120184d93ad012797-image-1441770558200.png\" align='right'>\r\n\r\n* If you look at this image you might recognize elements that repeat: this is a 4-sided figure, and each side is made up of some zig-zag steps.\r\n\r\n* We're going to break the programming down into useable parts and then use those parts as building blocks to make this more complex drawing.\r\n\r\n* First let's **define** a function that can do one of these zig-zag steps.  We've started you out with a definition of `right()` that you can use...\r\n\r\n**Define** a function called `drawStep()` which makes the turtle move forward and left as shown. NOTE: at the end the turtle should be facing the same direction it started.\r\n\r\n![](https://images.code.org/4fa605353695afa0cd01ec01a1e2c709-image-1441772033658.gif)",
     "is_k1": "false",
@@ -155,7 +152,14 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "instructions": "Write the drawStep function. (Click to see full instructions)",
-    "project_template_level_name": "U3L03 - drawDiamond Template"
+    "project_template_level_name": "U3L03 - drawDiamond Template",
+    "encrypted_examples": [
+
+    ],
+    "droplet_tooltips_disabled": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

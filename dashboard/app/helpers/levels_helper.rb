@@ -120,6 +120,9 @@ module LevelsHelper
 
   # Options hash for all level types
   def app_options
+    # Unsafe to generate these twice, so use the cached version if it exists.
+    return @app_options unless @app_options.nil?
+
     set_channel if @level.channel_backed?
 
     unless params[:share]
@@ -137,15 +140,34 @@ module LevelsHelper
     view_options(is_channel_backed: true) if @level.channel_backed?
 
     if @level.is_a? Blockly
-      blockly_options
+      @app_options = blockly_options
     elsif @level.is_a? DSLDefined
-      dsl_defined_options
+      @app_options = dsl_defined_options
     elsif @level.is_a? Widget
-      widget_options
+      @app_options = widget_options
+    elsif @level.unplugged?
+      @app_options = unplugged_options
     else
       # currently, all levels are Blockly or DSLDefined except for Unplugged
-      view_options.camelize_keys
+      @app_options = view_options.camelize_keys
     end
+    @app_options
+  end
+
+  # Helper that renders the _apps_dependencies partial with a configuration
+  # appropriate to the level being rendered.
+  def render_app_dependencies
+    use_droplet = app_options[:droplet]
+    use_netsim = @level.game == Game.netsim
+    use_blockly = !use_droplet && !use_netsim
+    render partial: 'levels/apps_dependencies',
+           locals: {
+               app: app_options[:app],
+               use_droplet: use_droplet,
+               use_netsim: use_netsim,
+               use_blockly: use_blockly,
+               static_asset_base_path: app_options[:baseUrl]
+           }
   end
 
   # Options hash for Widget
@@ -153,6 +175,14 @@ module LevelsHelper
     app_options = {}
     app_options[:level] ||= {}
     app_options[:level].merge! @level.properties.camelize_keys
+    app_options.merge! view_options.camelize_keys
+    app_options
+  end
+
+  def unplugged_options
+    app_options = {}
+    app_options[:level] ||= {}
+    app_options[:level].merge! level_view_options
     app_options.merge! view_options.camelize_keys
     app_options
   end
@@ -174,7 +204,7 @@ module LevelsHelper
   # Options hash for Blockly
   def blockly_options
     l = @level
-    throw ArgumentError("#{l} is not a Blockly object") unless l.is_a? Blockly
+    raise ArgumentError.new("#{l} is not a Blockly object") unless l.is_a? Blockly
     # Level-dependent options
     app_options = l.blockly_options.dup
     level_options = app_options[:level] = app_options[:level].dup
@@ -255,6 +285,7 @@ module LevelsHelper
     app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
     app_options[:isAdmin] = true if (@game == Game.applab && current_user && current_user.admin?)
+    app_options[:isSignedIn] = !current_user.nil?
     app_options[:pinWorkspaceToBottom] = true if enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if enable_scrolling?
     app_options[:showExampleTestButtons] = true if enable_examples?
