@@ -5,7 +5,6 @@ Background:
   And I rotate to landscape
   Then I wait to see a dialog titled "Puzzle 1 of 11"
   And element ".modal-content p:nth-child(2)" has text "Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting. Move me to the pile of dirt and use the \"remove\" block to remove it."
-  And I see "#x-close"
   And I close the dialog
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
@@ -24,8 +23,7 @@ Scenario: Winning the first level
   And there's 1 dirt at (4, 4)
   Then I press "runButton"
   And element "#resetButton" is visible
-  Then I see ".congrats"
-  And element ".congrats" is visible
+  Then I wait until element ".congrats" is visible
   And element ".congrats" has text "Congratulations! You completed Puzzle 1."
   And there's 0 dirt at (4, 4)
   And I press "continue-button"
@@ -37,8 +35,7 @@ Scenario: Losing the first level
   When I drag block "1" to block "6"
   And I press "runButton"
   And element "#resetButton" is visible
-  Then I see ".congrats"
-  And element ".congrats" is visible
+  Then I wait until element ".congrats" is visible
   And element ".congrats" has text "Not quite; this level requires specific blocks."
   And there's an image "farmer/failure_avatar.png"
   And I press "again-button"

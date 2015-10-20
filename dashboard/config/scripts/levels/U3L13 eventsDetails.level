@@ -77,7 +77,7 @@
     ],
     "start_blocks": "button(\"moveForwardButton\", \"Move Forward\");",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

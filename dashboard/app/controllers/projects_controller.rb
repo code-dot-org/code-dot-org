@@ -1,8 +1,8 @@
 require 'active_support/core_ext/hash/indifferent_access'
 
 class ProjectsController < ApplicationController
-  before_filter :authenticate_user!, except: [:show, :edit, :readonly, :redirect_legacy]
-  before_action :set_level, only: [:show, :edit, :readonly, :remix]
+  before_filter :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy]
+  before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix]
   include LevelsHelper
 
   TEMPLATES = %w(projects)
@@ -39,6 +39,27 @@ class ProjectsController < ApplicationController
 
   def angular
     render template: "projects/projects", layout: nil
+  end
+
+  def load
+    return if redirect_applab_under_13(@level)
+    if current_user
+      channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
+      if channel
+        redirect_to action: 'edit', channel_id: channel
+        return
+      end
+    end
+
+    create_new
+  end
+
+  def create_new
+    return if redirect_applab_under_13(@level)
+    redirect_to action: 'edit', channel_id: create_channel({
+      name: 'Untitled Project',
+      level: polymorphic_url([params[:key], 'project_projects'])
+    })
   end
 
   def show
