@@ -4414,15 +4414,20 @@ Studio.allWhenRunBlocksComplete = function () {
 };
 
 Studio.timedOut = function() {
-  // If the only event block that had children is when_run, and those commands
-  // are finished executing, don't wait for the timeout.
-  // If we have additional event blocks that DO have children, we don't timeout
-  // until timeoutFailureTick
   if (level.timeoutAfterWhenRun) {
-    if (Studio.eventHandlers.length === 0 || (Studio.eventHandlers.length === 1 &&
-        Studio.eventHandlers[0].name === 'whenGameStarts' &&
-        Studio.allWhenRunBlocksComplete())) {
-    return true;
+    if (level.editCode) {
+      // If the interpreter has started handling events, the main body of the
+      // program is complete:
+      return Studio.JSInterpreter && Studio.JSInterpreter.startedHandlingEvents;
+    } else if (Studio.eventHandlers.length === 0 ||
+               (Studio.eventHandlers.length === 1 &&
+                  Studio.eventHandlers[0].name === 'whenGameStarts' &&
+                  Studio.allWhenRunBlocksComplete())) {
+      // If the only event block that had children is when_run, and those commands
+      // are finished executing, don't wait for the timeout.
+      // If we have additional event blocks that DO have children, we don't timeout
+      // until timeoutFailureTick
+      return true;
     }
   }
 
@@ -4563,6 +4568,10 @@ Studio.checkRequiredForSuccess = function() {
 
   if (required.scoreMinimum && Studio.playerScore < required.scoreMinimum) {
     return { exists: true, achieved: false, message: studioMsg.failedScoreMinimum() };
+  }
+
+  if (required.addItem && !tracked.hasAddedItem) {
+    return { exists: true, achieved: false, message: studioMsg.failedAddItem() };
   }
 
   if (required.removedItemCount && tracked.removedItemCount < required.removedItemCount) {
