@@ -140,6 +140,7 @@ module.exports = {
     element.textContent = 'text';
     element.style.color = '#333333';
     element.style.backgroundColor = '';
+    element.style.maxWidth = Applab.appWidth + 'px';
 
     this.resizeToFitText(element);
     return element;
@@ -155,8 +156,15 @@ module.exports = {
 
     var padding = parseInt(element.style.padding, 10);
 
+    //Below line allows us to wrap text in a reasonable manner. Set a max width that is at least a third but no more
+    //than the full width of the screen. That forces text the label to stop growing at a certain point
+    var maxWidthInt = element.style.left ? Math.max(Applab.appWidth - parseInt(element.style.left), Applab.appWidth / 3)
+        : Applab.appWidth;
+
+    element.style.maxWidth = maxWidthInt + 'px';
+
     if ($(element).data('lock-width') !== PropertyRow.LockState.LOCKED) {
-      element.style.width = clone.width() + 1 + 2 * padding + 'px';
+      element.style.width = clone.width() ? Math.min(clone.width() + 1 + 2 * padding, maxWidthInt) + 'px' : '';
     }
     if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
       element.style.height = clone.height() + 1 + 2 * padding + 'px';
