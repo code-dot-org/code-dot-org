@@ -510,7 +510,7 @@ Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, className|
   classes.include?(className).should eq true
 end
 
-Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, className|
+Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, className|    
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")
   classes.include?(className).should eq false
