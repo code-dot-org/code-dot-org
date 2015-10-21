@@ -51,6 +51,48 @@ class FilesApi < Sinatra::Base
     teaches_student?(owner_user_id)
   end
 
+  def file_too_large(quota_type)
+    # Don't record a custom event since these events may be very common.
+    increment_metric('FileTooLarge', quota_type)
+    too_large
+  end
+
+  def quota_crossed_half_used?(app_size, body_length)
+    app_size < FilesApi::max_app_size / 2 && app_size + body_length >= FilesApi::max_app_size / 2
+  end
+
+  def quota_crossed_half_used(quota_type, encrypted_channel_id)
+    quota_event_type = 'QuotaCrossedHalfUsed'
+    increment_metric(quota_event_type, quota_type)
+    record_event(quota_event_type, quota_type, encrypted_channel_id)
+  end
+
+  def quota_exceeded(quota_type, encrypted_channel_id)
+    quota_event_type = 'QuotaExceeded'
+    increment_metric(quota_event_type, quota_type)
+    record_event(quota_event_type, quota_type, encrypted_channel_id)
+    forbidden
+  end
+
+  def increment_metric(quota_event_type, quota_type)
+    return if !CDO.newrelic_logging
+
+    NewRelic::Agent.increment_metric("Custom/FilesApi/#{quota_event_type}_#{quota_type}")
+  end
+
+  def record_event(quota_event_type, quota_type, encrypted_channel_id)
+    return if !CDO.newrelic_logging
+
+    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    event_details = {
+        quota_type: quota_type,
+        encrypted_channel_id: encrypted_channel_id,
+        owner_user_id: owner_user_id
+    }
+    NewRelic::Agent.record_custom_event("FilesApi#{quota_event_type}", event_details)
+  end
+
   helpers do
     %w(core.rb bucket_helper.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
@@ -115,7 +157,7 @@ class FilesApi < Sinatra::Base
 
     not_authorized unless owns_channel?(encrypted_channel_id)
 
-    too_large unless body.length < FilesApi::max_file_size
+    file_too_large(endpoint) unless body.length < FilesApi::max_file_size
 
     # verify that file type is in our whitelist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
@@ -128,7 +170,8 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
     app_size = buckets.app_size(encrypted_channel_id)
 
-    forbidden unless app_size + body.length < FilesApi::max_app_size
+    quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < FilesApi::max_app_size
+    quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 
     content_type :json

@@ -59,6 +59,7 @@ def load_configuration()
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
     'localize_apps'               => false,
     'name'                        => hostname,
+    'newrelic_logging'            => rack_env == :production,
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
     'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
