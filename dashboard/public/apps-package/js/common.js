@@ -28981,7 +28981,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; if (!locals.renderedMarkdown) { /** if md, rendered in header instead */; buf.push('  <p class=\'dialog-title\'>', escape((1,  locals.puzzleTitle )), '</p>\n');2; }; buf.push('');2; if (locals.renderedMarkdown) {; buf.push('<div class=\'instructions-markdown\'>', (2,  locals.renderedMarkdown ), '</div>\n');3; } else if (locals.instructions) {; buf.push('  <p>', escape((3,  locals.instructions )), '</p>\n');4; }; buf.push('');4; if (locals.instructions2) {; buf.push('  <p>', escape((4,  locals.instructions2 )), '</p>\n');5; }; buf.push('');5; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((5,  locals.aniGifURL )), '\'/>\n');6; }; buf.push(''); })();
+ buf.push('');1; if (!locals.renderedMarkdown) { /** if md, rendered in header instead */; buf.push('  <p class=\'dialog-title\'>', escape((1,  locals.puzzleTitle )), '</p>\n');2; }; buf.push('');2; if (locals.renderedMarkdown) {; buf.push('<div class=\'instructions-markdown\'>', (2,  locals.renderedMarkdown ), '</div>\n');3; } else if (locals.instructions) {; buf.push('  <p>', escape((3,  locals.instructions )), '</p>\n');4; }; buf.push('');4; if (locals.instructions2) {; buf.push('  <p class="instructions2">', escape((4,  locals.instructions2 )), '</p>\n');5; }; buf.push('');5; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((5,  locals.aniGifURL )), '\'/>\n');6; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -33636,6 +33636,7 @@ var JSInterpreter = module.exports = function (options) {
 
   this.paused = false;
   this.yieldExecution = false;
+  this.startedHandlingEvents = false;
   this.nextStep = StepType.RUN;
   this.maxValidCallExpressionDepth = 0;
   this.callExpressionSeenAtDepth = [];
@@ -33714,6 +33715,7 @@ JSInterpreter.StepType = {
  * optionally, callback arguments (stored in "arguments")
  */
 JSInterpreter.prototype.nativeGetCallback = function () {
+  this.startedHandlingEvents = true;
   var retVal = this.eventQueue.shift();
   if (typeof retVal === "undefined") {
     this.yield();
@@ -34742,20 +34744,20 @@ exports.promptNum = function (text) {
  * @type {DropletBlock[]}
  */
 exports.dropletGlobalConfigBlocks = [
-  {'func': 'getTime', 'parent': exports, 'category': 'Control', 'type': 'value' },
-  {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
-  {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
-  {'func': 'promptNum', 'parent': exports, 'category': 'Variables', 'type': 'value' }
+  {func: 'getTime', parent: exports, category: 'Control', type: 'value' },
+  {func: 'randomNumber', parent: exports, category: 'Math', type: 'value' },
+  {func: 'prompt', parent: window, category: 'Variables', type: 'value' },
+  {func: 'promptNum', parent: exports, category: 'Variables', type: 'value' }
 ];
 
 /**
  * @type {DropletBlock[]}
  */
 exports.dropletBuiltinConfigBlocks = [
-  {'func': 'Math.round', 'category': 'Math', 'type': 'value' },
-  {'func': 'Math.abs', 'category': 'Math', 'type': 'value' },
-  {'func': 'Math.max', 'category': 'Math', 'type': 'value' },
-  {'func': 'Math.min', 'category': 'Math', 'type': 'value' },
+  {func: 'Math.round', category: 'Math', type: 'value' },
+  {func: 'Math.abs', category: 'Math', type: 'value' },
+  {func: 'Math.max', category: 'Math', type: 'value' },
+  {func: 'Math.min', category: 'Math', type: 'value' },
 ];
 
 /**
@@ -34765,67 +34767,67 @@ var standardConfig = {};
 
 standardConfig.blocks = [
   // Control
-  {'func': 'forLoop_i_0_4', 'block': 'for (var i = 0; i < 4; i++) {\n  __;\n}', 'category': 'Control' },
-  {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'category': 'Control' },
-  {'func': 'ifBlock', 'block': 'if (__) {\n  __;\n}', 'category': 'Control' },
-  {'func': 'ifElseBlock', 'block': 'if (__) {\n  __;\n} else {\n  __;\n}', 'category': 'Control' },
-  {'func': 'getTime', 'block': 'getTime()', 'category': 'Control', type: 'value' },
+  {func: 'forLoop_i_0_4', block: 'for (var i = 0; i < 4; i++) {\n  __;\n}', category: 'Control' },
+  {func: 'whileBlock', block: 'while (__) {\n  __;\n}', category: 'Control' },
+  {func: 'ifBlock', block: 'if (__) {\n  __;\n}', category: 'Control' },
+  {func: 'ifElseBlock', block: 'if (__) {\n  __;\n} else {\n  __;\n}', category: 'Control' },
+  {func: 'getTime', block: 'getTime()', category: 'Control', type: 'value' },
 
   // Math
-  {'func': 'addOperator', 'block': '__ + __', 'category': 'Math' },
-  {'func': 'subtractOperator', 'block': '__ - __', 'category': 'Math' },
-  {'func': 'multiplyOperator', 'block': '__ * __', 'category': 'Math' },
-  {'func': 'divideOperator', 'block': '__ / __', 'category': 'Math' },
-  {'func': 'equalityOperator', 'block': '__ == __', 'category': 'Math' },
-  {'func': 'inequalityOperator', 'block': '__ != __', 'category': 'Math' },
-  {'func': 'greaterThanOperator', 'block': '__ > __', 'category': 'Math' },
-  {'func': 'lessThanOperator', 'block': '__ < __', 'category': 'Math' },
-  {'func': 'andOperator', 'block': '__ && __', 'category': 'Math' },
-  {'func': 'orOperator', 'block': '__ || __', 'category': 'Math' },
-  {'func': 'notOperator', 'block': '!__', 'category': 'Math' },
-  {'func': 'randomNumber_max', 'block': 'randomNumber(__)', 'category': 'Math' },
-  {'func': 'randomNumber_min_max', 'block': 'randomNumber(__, __)', 'category': 'Math' },
-  {'func': 'mathRound', 'block': 'Math.round(__)', 'category': 'Math' },
-  {'func': 'mathAbs', 'block': 'Math.abs(__)', 'category': 'Math' },
-  {'func': 'mathMax', 'block': 'Math.max(__)', 'category': 'Math' },
-  {'func': 'mathMin', 'block': 'Math.min(__)', 'category': 'Math' },
+  {func: 'addOperator', block: '__ + __', category: 'Math' },
+  {func: 'subtractOperator', block: '__ - __', category: 'Math' },
+  {func: 'multiplyOperator', block: '__ * __', category: 'Math' },
+  {func: 'divideOperator', block: '__ / __', category: 'Math' },
+  {func: 'equalityOperator', block: '__ == __', category: 'Math' },
+  {func: 'inequalityOperator', block: '__ != __', category: 'Math' },
+  {func: 'greaterThanOperator', block: '__ > __', category: 'Math' },
+  {func: 'lessThanOperator', block: '__ < __', category: 'Math' },
+  {func: 'andOperator', block: '__ && __', category: 'Math' },
+  {func: 'orOperator', block: '__ || __', category: 'Math' },
+  {func: 'notOperator', block: '!__', category: 'Math' },
+  {func: 'randomNumber_max', block: 'randomNumber(__)', category: 'Math' },
+  {func: 'randomNumber_min_max', block: 'randomNumber(__, __)', category: 'Math' },
+  {func: 'mathRound', block: 'Math.round(__)', category: 'Math' },
+  {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math' },
+  {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },
+  {func: 'mathMin', block: 'Math.min(__)', category: 'Math' },
 
   // Variables
-  {'func': 'declareAssign_x', 'block': 'var x = __;', 'category': 'Variables' },
-  {'func': 'declareNoAssign_x', 'block': 'var x;', 'category': 'Variables' },
-  {'func': 'assign_x', 'block': 'x = __;', 'category': 'Variables' },
-  {'func': 'declareAssign_x_array_1_4', 'block': 'var x = [1, 2, 3, 4];', 'category': 'Variables' },
-  {'func': 'declareAssign_x_prompt', 'block': 'var x = prompt("Enter a value");', 'category': 'Variables' },
-  {'func': 'declareAssign_x_promptNum', 'block': 'var x = promptNum("Enter a value");', 'category': 'Variables' },
+  {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables' },
+  {func: 'declareNoAssign_x', block: 'var x;', category: 'Variables' },
+  {func: 'assign_x', block: 'x = __;', category: 'Variables' },
+  {func: 'declareAssign_x_array_1_4', block: 'var x = [1, 2, 3, 4];', category: 'Variables' },
+  {func: 'declareAssign_x_prompt', block: 'var x = prompt("Enter a value");', category: 'Variables' },
+  {func: 'declareAssign_x_promptNum', block: 'var x = promptNum("Enter a value");', category: 'Variables' },
 
   // Functions
-  {'func': 'functionParams_none', 'block': 'function myFunction() {\n  __;\n}', 'category': 'Functions' },
-  {'func': 'functionParams_n', 'block': 'function myFunction(n) {\n  __;\n}', 'category': 'Functions' },
-  {'func': 'callMyFunction', 'block': 'myFunction()', 'category': 'Functions' },
-  {'func': 'callMyFunction_n', 'block': 'myFunction(n)', 'category': 'Functions' },
-  {'func': 'return', 'block': 'return __;', 'category': 'Functions' },
+  {func: 'functionParams_none', block: 'function myFunction() {\n  __;\n}', category: 'Functions' },
+  {func: 'functionParams_n', block: 'function myFunction(n) {\n  __;\n}', category: 'Functions' },
+  {func: 'callMyFunction', block: 'myFunction()', category: 'Functions' },
+  {func: 'callMyFunction_n', block: 'myFunction(n)', category: 'Functions' },
+  {func: 'return', block: 'return __;', category: 'Functions' },
 ];
 
 standardConfig.categories = {
-  'Control': {
-    'color': 'blue',
-    'rgb': COLOR_BLUE,
-    'blocks': []
+  Control: {
+    color: 'blue',
+    rgb: COLOR_BLUE,
+    blocks: []
   },
-  'Math': {
-    'color': 'orange',
-    'rgb': COLOR_ORANGE,
-    'blocks': []
+  Math: {
+    color: 'orange',
+    rgb: COLOR_ORANGE,
+    blocks: []
   },
-  'Variables': {
-    'color': 'purple',
-    'rgb': COLOR_PURPLE,
-    'blocks': []
+  Variables: {
+    color: 'purple',
+    rgb: COLOR_PURPLE,
+    blocks: []
   },
-  'Functions': {
-    'color': 'green',
-    'rgb': COLOR_GREEN,
-    'blocks': []
+  Functions: {
+    color: 'green',
+    rgb: COLOR_GREEN,
+    blocks: []
   },
   // create blank category in case level builders want to move all blocks here
   // (which will cause the palette header to disappear)

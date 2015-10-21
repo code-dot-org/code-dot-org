@@ -62,53 +62,54 @@
         C. Kannst du es richtig herum drehen?
       2-3 Artist Debugging 8_instruction: Mein Windrad ist noch nicht fertig. Wie
         oft muss ich den Block wiederholen, um es zu vervollständigen?
-      2-3 Artist Debugging 9_instruction: 'Der Code für diese Stem ist falsch. Hinweis:
-        Der Winkel ist um 60 Grad verfehlt'
+      2-3 Artist Debugging 9_instruction: 'Der Code für diese Blüte ist falsch. Hinweis:
+        Der Winkel ist um 60 Grad daneben'
       2-3 Artist Debugging Assessment 1_instruction: 'Diese Form ist zu klein. Kannst
         du sie größer machen? Hinweis: Sie sollte auf jeder Seite 75 Pixel länger
         sein.'
       2-3 Artist Free Play_instruction: Freies Spiel! Zeichne was du willst.
-      2-3 Artist Functions 1_instruction: 'Hallo. Ich bin ein Zombie-Künstler. Ich
-        liebe zeichnen! Hilf mir, die quadratischen Gläser zu zeichnen.  Hinweis:
-        die Brücke zwischen den Gläsern ist 25 Pixel kürzer als die  Länge der Quadrate.'
+      2-3 Artist Functions 1_instruction: 'Hallo. Ich Zombie-Künstler. Ich zeichnen
+        liebe! Hilf mir, die quadratischen Gläser zu zeichnen.  Hinweis: die Brücke
+        zwischen den Gläsern ist 25 Pixel kürzer als die  Länge der Quadrate.'
       2-3 Artist Functions 10_instruction: Hier sind zwei Funktionen, um ein großes  und
         ein kleines Zahnrad zu zeichnen. Verwende sie, um das Innere einer Maschine
         zu zeichnen!
       2-3 Artist Functions 11.5_instruction: Hier ist die gleiche "Zeichne ein Sechseck"-Funktion.
-        Was passiert, wenn du sie nur mit 60 Grad jedes Mal aktivierst?
+        Was passiert, wenn du bei jeder Wiederholung nur um 60 Grad drehst?
       2-3 Artist Functions 11_instruction: Wir haben die Funktion "zeichne ein Quadrat",
-        um "ein Sechseck zeichnen" umbenannt, aber es zeichnet immer noch Quadrate!
-        Kannst du die Funktion "zeichnen ein Sechseck" ändern, um ein Sechseck mit
-        50 Pixel-Seiten zu zeichnen, und  das Bild mithilfe der Funktion zeichnen?
-      2-3 Artist Functions 12_instruction: 'Funktionen sind wirklich toll für das
-        mehrfache Zeichnen von komplexen Dingen. Benutze die Funktion "zeichne eine
-        Blume", um das restliche Feld mit Pflanzen zu füllen! (Hinweis: die Pflanzen
-        haben 100 Pixel Abstand)  '
+        um "zeichne ein Sechseck" umbenannt, aber es zeichnet immer noch Quadrate!
+        Kannst du die Funktion "zeichne ein Sechseck" so ändern, dass sie ein Sechseck
+        mit 50 Pixel Seiten zeichnet, und das Bild mithilfe dieser Funktion zeichnen?
+      2-3 Artist Functions 12_instruction: 'Funktionen sind für das mehrfache Zeichnen
+        von komplexen Dingen wirklich toll. Benutze die Funktion "zeichne eine Blume",
+        um das restliche Feld mit Pflanzen zu füllen! (Hinweis: die Pflanzen haben
+        100 Pixel Abstand)  '
       2-3 Artist Functions 13_instruction: Wir haben dir vier Funktionen zur Verfügung
         gestellt. Verwende sie innerhalb von einer oder mehreren Schleifen, um Bilder
         zu zeichnen, die du mit deinen Freunden teilen kannst. Klicke ausführen, um
         ein Beispiel zu sehen.
       2-3 Artist Functions 2_instruction: Funktionen erlauben dir, neue Blöcke zu
         definieren! Wir haben Blöcke in eine Funktion namens "zeichne ein Quadrat"
-        verschoben, um ein Quadrat zu zeichnen. Nutze die Funktion "zeichne ein Quadrat",
-        um die Gläser zu erstellen? Die Quadrate sind 75 Pixel auseinander.
+        verschoben, um ein Quadrat zu zeichnen. Kannst du die Funktion "zeichne ein
+        Quadrat" benutzen, um die Gläser zu erstellen? Die Quadrate haben einen Abstand
+        von 75 Pixel.
       2-3 Artist Functions 3_instruction: Bearbeite die Funktion, um ein Quadrat mit
         einer Seitenlänge von 115 zeichnen und zeichne die  Gläser größer. Die Quadrate
         sind jetzt 45 Pixel auseinander.
       2-3 Artist Functions 4_instruction: Verwende den "Wiederholen"-Block, um diese
         3 Quadrate zu zeichnen.
-      2-3 Artist Functions 7_instruction: 'Verwende die Funktion "zeichnen ein Haus",
+      2-3 Artist Functions 7_instruction: 'Verwende die Funktion "zeichne ein Haus",
         um zwei Häuser mit zwei verschiedenen Parametern zu zeichnen. (Hinweis: das
         erste Haus ist 100 Pixel).'
       2-3 Artist Functions 9_instruction: Hier ist eine Schneeflocken-Funktion. Experimentiere,
         um damit eine Winterszene zu erstellen! Dies ist ein freies Spiel-Level, es
         gibt keine Aufgaben zu lösen. Viel Spass!
       2-3 Artist Loops 1_instruction: Zeichne ein Sechseck mit Seiten, die 100 Pixel
-        lang sind, um das Bild zu beenden? Bedenke, das du nur 60 Grad drehen mußt!
+        lang sind, um das Bild zu beenden? Bedenke, das du nur 60 Grad drehen musst!
       2-3 Artist Loops 10_instruction: Was passiert mit dem Design, wenn wir unseren
         letzten Schritt vorwärts halb so lang machen?
-      2-3 Artist Loops 11_instruction: Jetzt lass uns * noch eine * Schleife um unsere
-        ganze Schöpfung legen!  Vergiß nicht, einen Winkel am Ende der äußeren Schleife
+      2-3 Artist Loops 11_instruction: Jetzt lass uns *noch eine * Schleife um unsere
+        ganze Schöpfung legen!  Vergiss nicht einen Winkel am Ende der äußeren Schleife
         hinzuzufügen.
       2-3 Artist Loops 2_instruction: Jetzt verwende einen Wiederholen-Block, um die
         Zelle zur Muschel zu machen.
@@ -147,9 +148,9 @@
       2-3 Artist Match Rho Pic_instruction: 'Match: Ergänze den fehlenden Code.'
       2-3 Artist Match Sq Pic_instruction: 'Spiel: Ergänze den fehlenden Code'
       2-3 Artist Match Tri pic_instruction: 'Passend: Füge den fehlenden Code ein.'
-      2-3 Artist Nested Loops 1_instruction: "Du hast bereits Schlaufen gebraucht
-        um Formen zu zeichnen.\nWusstest du, das du auch eine Schlaufe in einer anderen
-        Schlaufe setzten kannst?\r\nWiederhole diesen Code-Baustein 3 mal um das Muster
+      2-3 Artist Nested Loops 1_instruction: "Du hast bereits Schleifen genutzt um
+        Formen zu zeichnen. Aber wusstest du, dass du auch eine Schleife in eine andere
+        Schleife bauen kannst?\r\nWiederhole diesen Code-Baustein 3 mal um das Muster
         zu zeichnen."
       2-3 Artist Nested Loops 10_instruction: Wiederhole diesen Code 12 mal um das
         Muster zu zeichen.
@@ -157,16 +158,16 @@
         Muster zu vervolständigen und drehe es um 90 Grad nach jedem Kreis.
       2-3 Artist Nested Loops 12_instruction: Wiederhole diesen Code 12 mal um die
         Wirbel zu vervollständigen.
-      2-3 Artist Nested Loops 2_instruction: Jetzt soll das Dreieck 6 mal durchlaufen
+      2-3 Artist Nested Loops 2_instruction: Jetzt soll das Dreieck 6 mal wiederholt
         werden. Nach jedem Dreiecksdurchlauf musst du eine 60 Grad- Drehung ausführen,
         bevor du das nächste zeichnest.
-      2-3 Artist Nested Loops 3_instruction: Du musst das Dreieck 12 mal durchlaufen,
+      2-3 Artist Nested Loops 3_instruction: Du musst das Dreieck 12 mal wiederholen,
         um dieses Muster zu zeichnen. Teile die Gradzahl eines Kreises (360) durch
         die Zahl der Figuren, die du zeichnest (12), um herauszufinden, um wieviel
         Grad du drehen musst, nachdem eine Figur gezeichnet wurde.
-      2-3 Artist Nested Loops 4_instruction: 'Durlaufe diesen Diamanten 12 mal, um
-        eine Blume zu zeichnen. Hinweis: 12 Diamanten sind vergleichbar mit den 12
-        Dreiecken, die du gemacht hast - wieviel Grad musste die Drehung betragen,
+      2-3 Artist Nested Loops 4_instruction: 'Wiederhole diesen Diamanten 12 mal,
+        um eine Blume zu zeichnen. Hinweis: 12 Diamanten sind vergleichbar mit den
+        12 Dreiecken, die du gemacht hast - wieviel Grad musste die Drehung betragen,
         die Du nach jeder Figur ausführen musstest?'
       2-3 Artist Nested Loops 5_instruction: Setze mithilfe einer verschachtelten
         Schleife Fenster in das Gebäude. Die Fenster sind 20 Pixel lang und liegen
@@ -175,8 +176,8 @@
         jede Spitze ist 30 Pixel lang. Das Dreieck muss 8 mal durchlaufen werden,
         aber sorge dafür, dass es sich nach jedem Durchlauf vorwärts bewegt.
       2-3 Artist Nested Loops 7_instruction: Wiederhole dieses Dreieck 10 mal, um
-        die Sonne zu zeichnen. Nach jedem Durchlauf muss eine Verschiebung und eine
-        Drehung erfolgen. Du kannst herausfinden, wie groß die Drehung sein muss,
+        die Sonne zu zeichnen. Nach jeder Wiederholung muss eine Verschiebung und
+        eine Drehung erfolgen. Du kannst herausfinden, wie groß die Drehung sein muss,
         indem du die Gradzahl eines Kreises durch die Anzahl der Figuren teilst, aus
         denen die Sonne besteht.
       2-3 Artist Nested Loops 8_instruction: Wir wollen nun etwas Gras zu unserem
@@ -195,127 +196,127 @@
       2-3 Bee Conditionals 12_instruction: Benutze eine Schleife, um dies zu prüfen
         und sammle den Nektar aller dieser Blüten.
       2-3 Bee Conditionals 13_instruction: "Sammle Nektar und mache Honig. Hinweis:
-        \nWas passiert, wenn du die \"Wenn Necktar\"- Bedingung auf eine rote Blüte
+        \nWas passiert, wenn du die \"Wenn Nektar\"- Bedingung auf eine rote Blüte
         anwendest? Kannst du dies mit einer Schleife vervollständigen?\n"
       2-3 Bee Conditionals 14_instruction: Sammle Necktar und mache Honig. Achte darauf,
         dass du keinen Necktar aus einer lila Blüte sammelst, wenn sie keinen hat.
       2-3 Bee Conditionals 15_instruction: Sammle Nektar von allen vier Blumen.
       2-3 Bee Conditionals 2_instruction: Hallo, ich bin eine Biene. Hilf mir, den
-        ganzen Necktar aus den Blüten zu sammeln. Benutze eine Schleife.
-      2-3 Bee Conditionals 3_instruction: Hilf mir, den ganzen Necktar aus den Blüten
+        ganzen Nektar aus den Blüten zu sammeln. Benutze eine Schleife.
+      2-3 Bee Conditionals 3_instruction: Hilf mir, den ganzen Nektar aus den Blüten
         zu sammeln. Benutze eine Schleife.
       2-3 Bee Conditionals 4_instruction: Hallo, ich bin eine Biene. Hilf mir, den
-        ganzen Necktar aus den Blüten zu sammeln und den ganzen Honig zu machen.
-      2-3 Bee Conditionals 5_instruction: Lila Blüten können entweder 1 oder 0 Necktar
-        haben, aber du weist nicht, was zutrifft!  Pass auf, dass kein Nektar von
-        einer lila Blüte gesammelt wird, wenn sie keinen hat. Prüfe, ob Necktar gleich
+        ganzen Nektar aus den Blüten zu sammeln und den ganzen Honig zu erzeugen.
+      2-3 Bee Conditionals 5_instruction: Lila Blüten können entweder 1 oder 0 Nektar
+        haben, aber du weisst nicht, was zutrifft! Pass auf, dass kein Nektar von
+        einer lila Blüte gesammelt wird, wenn sie keinen hat. Prüfe, ob Nektar gleich
         1 ist, indem du den Wenn- Baustein benutzt.
       2-3 Bee Conditionals 6_instruction: Überprüfe diese Blüte mit einem "Wenn"-
-        Baustein um zu erkennen, ob Necktar zur Verfügung steht.
-      2-3 Bee Conditionals 7_instruction: Sammle Necktar von jeder Blüte, wenn sie
+        Baustein um zu erkennen, ob Nektar zur Verfügung steht.
+      2-3 Bee Conditionals 7_instruction: Sammle Nektar von jeder Blüte, wenn sie
         welchen hat.
       2-3 Bee Conditionals 8_instruction: |
         Auf diesem Feld gibt es rote und lila Blüten.
-        Rote Blüten haben eine bekannte Necktarmenge, während die der lila Blüten unbekannt ist. Sammle den ganzen Necktar.
+        Rote Blüten haben eine bekannte Nektarmenge, während die der lila Blüten unbekannt ist. Sammle den ganzen Nektar.
       2-3 Bee Conditionals 9_instruction: Sammle den ganzen Nektar von allen Blumen.
       2-3 Bee Conditionals Assessment 1_instruction: 'Beurteilung: Sammle den ganzen
-        Necktar. Achte darauf, dass du keinen Necktar aus einer Blüte sammelst, wenn
+        Nektar. Achte darauf, dass du keinen Nektar aus einer Blüte sammelst, wenn
         sie keinen hat.'
       2-3 Bee Debugging 1_instruction: Diese Bausteine nerven mich wirklich. Korrigiere
-        den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+        den/die Fehler, sammle den ganzen Nektar und erzeuge den ganzen Honig.
       2-3 Bee Debugging 10_instruction: Diese Bausteine nerven mich wirklich. Korrigiere
-        den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+        den/die Fehler, sammle den ganzen Nektar und erzeuge den ganzen Honig.
       2-3 Bee Debugging 2_instruction: Diese Bausteine nerven mich wirklich. Korrigiere
-        den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+        den/die Fehler, sammle den ganzen Nektar und erzeuge den ganzen Honig.
       2-3 Bee Debugging 3_instruction: Diese Bausteine nerven mich wirklich. Korrigiere
-        den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+        den/die Fehler, sammle den ganzen Nektar und erzeuge den ganzen Honig.
       2-3 Bee Debugging 4_instruction: Diese Bausteine nerven mich wirklich. Korrigiere
-        den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+        den/die Fehler, sammle den ganzen Nektar und erzeuge den ganzen Honig.
       2-3 Bee Debugging 5_instruction: Diese Bausteine nerven mich wirklich. Korrigiere
-        den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig. Du kannst
+        den/die Fehler, sammle den ganzen Nektar und mache den ganzen Honig. Du kannst
         jetzt Schritt für Schritt "Ausführen" benutzen.
       2-3 Bee Debugging 6_instruction: Diese Bausteine nerven mich wirklich. Korrigiere
         den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
       2-3 Bee Debugging 7_instruction: Diese Bausteine nerven mich wirklich. Korrigiere
-        den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+        den/die Fehler, sammle den ganzen Nektar und erzeuge den ganzen Honig.
       2-3 Bee Debugging 8_instruction: Diese Bausteine nerven mich wirklich. Korrigiere
-        den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+        den/die Fehler, sammle den ganzen Nektar und erzeuge den ganzen Honig.
       2-3 Bee Debugging 9_instruction: Diese Bausteine nerven mich wirklich. Korrigiere
-        den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+        den/die Fehler, sammle den ganzen Nektar und erzeuge den ganzen Honig.
       2-3 Bee Debugging Assessment 1_instruction: 'Bewertung: Diese Bausteine nerven
-        mich wirklich. Korrigiere den/die Fehler, sammle den ganzen Necktar und mache
+        mich wirklich. Korrigiere den/die Fehler, sammle den ganzen Nektar und mache
         den ganzen Honig.'
-      2-3 Bee Functions 1_instruction: Funktionen sind Code- Bausteine, die einen
-        Auftrag ausführen. Benutze die "Hole 2 Necktar"- Funktion, um Necktar von
-        jeder Blüte zu sammeln.
+      2-3 Bee Functions 1_instruction: Funktionen sind Programm-Bausteine, die einen
+        Auftrag ausführen. Benutze die "Hole 2 Nektar"- Funktion, um Nektar von jeder
+        Blüte zu sammeln.
       2-3 Bee Functions 10_instruction: Lila Blüten haben entweder 1 oder 0 Nektar.  Erstelle
         eine Funktion, die Nektar nur aus den lila Blüten sammelt, die Nektar haben.
-      2-3 Bee Functions 2_instruction: Funktionen sind Codeblöcke, die einen Auftrag
-        ausführen. Verwende die "hole 5"- Funktion, um gleichzeitig 5 mal Nektar zu
-        holen. Stelle sicher, dass eine Schleife verwendet wird, die eine optimale
-        Blockzählung ermöglicht.
+      2-3 Bee Functions 2_instruction: Funktionen sind Programm-Bausteine, die einen
+        Auftrag ausführen. Verwende die "hohle 5"- Funktion, um gleichzeitig 5 mal
+        Nektar zu holen. Stelle sicher, dass eine Schleife verwendet wird, die eine
+        optimale Blockzählung ermöglicht.
       2-3 Bee Functions 3_instruction: Sammle den ganzen Nektar von allen Blumen.
-      2-3 Bee Functions 4_instruction: Die "bewege und hole Necktar"- Funktion dreht
-        die Biene, sammelt Necktar und bringt die Biene an den Ausgangsort zurück.
-        Benutze die Funktion, um den ganzen Necktar zu sammeln.
+      2-3 Bee Functions 4_instruction: Die "bewege und hole Nektar"- Funktion dreht
+        die Biene, sammelt Nektar und bringt die Biene an den Ausgangsort zurück.
+        Benutze die Funktion, um den ganzen Nektar zu sammeln.
       2-3 Bee Functions 5_instruction: |
-        Die Blüten haben jetzt mehr Necktar.
-        Bearbeite die gegebene Funktion so, dass sie 4 Portionen Necktar sammelt und benutze sie, um den ganzen Necktar von den Blüten zu sammeln.
-      2-3 Bee Functions 6_instruction: Jetzt benutze dieselbe Funktion, um Necktar
+        Die Blüten haben jetzt mehr Nektar.
+        Bearbeite die gegebene Funktion so, dass sie 4 Portionen Nektar sammelt und benutze sie, um den ganzen Nektar von den Blüten zu sammeln.
+      2-3 Bee Functions 6_instruction: Jetzt benutze dieselbe Funktion, um Nektar
         von den drei Blüten zu sammeln.
       2-3 Bee Functions 7_instruction: Die Blüten sind jetzt weiter weg. Bearbeite
-        die gegebene Funktion und benutze sie, um den ganzen Necktar aus den Blüten
+        die gegebene Funktion und benutze sie, um den ganzen Nektar aus den Blüten
         zu sammeln.
       2-3 Bee Functions 8_instruction: Erzeuge deine eigene Funktion, die 7 Portionen
-        Necktar holt, nach vorn geht  7 mal Honig macht. Benutze die Funktion, um
-        bei jeder Blüte Necktar zu sammeln und bei jeder Wabe Honig zu machen.
+        Nektar holt, nach vorn geht 7 mal Honig macht. Benutze die Funktion, um bei
+        jeder Blüte Nektar zu sammeln und bei jeder Wabe Honig zu erzeugen.
       2-3 Bee Functions 9_instruction: Erzeuge deine eigene Funktion, die einen Weg
-        entlanggeht, Necktar holt, Honig macht und dann die Biene zum Anfang des Weges
-        zurückbringt.
+        entlanggeht, Nektar holt, Honig erzeugt und dann die Biene zum Anfang des
+        Weges zurückbringt.
       2-3 Bee Functions Assessment 1_instruction: 'Bewertung: Benutze die gegebene
-        Funktion, um von jeder Blüte Necktar zu sammeln.'
+        Funktion, um von jeder Blüte Nektar zu sammeln.'
       2-3 Bee Functions Assessment 2_instruction: 'Bewertung: Erzeuge eine Funktion,
-        mit der man gleichzeitig 3 mal Honig machen kann.'
+        mit der man gleichzeitig 3 mal Honig erzeugen kann.'
       2-3 Bee Loops 1_instruction: 'Jede Blüte enthält eine Einheit Necktar. Sammle
-        Necktar von jeder Blüte. '
-      2-3 Bee Loops 10_instruction: Kannst Du eine innerhalb zwei anderer Schleifen
-        while-Schleife benutzen, um den ganzen Necktar zu sammeln?
-      2-3 Bee Loops 11_instruction: Benutze while- Schleifen, um den ganzen Necktar
+        Nektar von jeder Blüte. '
+      2-3 Bee Loops 10_instruction: Kannst Du eine Solange-Schleife innerhalb von
+        zwei anderen Schleifen benutzen, um den ganzen Nektar zu sammeln?
+      2-3 Bee Loops 11_instruction: Benutze Solange Schleifen, um den ganzen Nektar
         aller Blumen auf diesem Feld zu sammeln.
-      2-3 Bee Loops 12_instruction: Benutze while- Schleifen, um den ganzen Necktar
+      2-3 Bee Loops 12_instruction: Benutze Solange Schleifen, um den ganzen Nektar
         aller Blumen auf diesem Feld zu sammeln.
-      2-3 Bee Loops 13_instruction: 'Wissenstest: Benutze den Repeat-Block um den
-        gesamten Nektar einzusammeln.'
+      2-3 Bee Loops 13_instruction: 'Wissenstest: Benutze den Wiederhole-Block um
+        den gesamten Nektar einzusammeln.'
       2-3 Bee Loops 1A_instruction: 'Hi, bin ich eine Biene. Hilfst du mir den Blütennektar
         zu sammeln? '
-      2-3 Bee Loops 2_instruction: Benutze eine Schleife, um den Necktar zu sammeln
-        und Honig zu machen.
+      2-3 Bee Loops 2_instruction: Benutze eine Schleife, um den Nektar zu sammeln
+        und Honig zu erzeugen.
       2-3 Bee Loops 2A_instruction: Kannst du diese Aufgabe mit einer Schleife vereinfachen?
-      2-3 Bee Loops 3_instruction: Sammle Necktar aus jeder Blüte und mache Honig
+      2-3 Bee Loops 3_instruction: Sammle Nektar aus jeder Blüte und erzeuge Honig
         bei jeder Wabe.
       2-3 Bee Loops 3A_instruction: Kannst du eine Schleife verwenden um den ganzen
         Nektar einzusammeln?
       2-3 Bee Loops 3B_instruction: Verwende nun den Wiederhole-Baustein um den ganzen
-        Nektar aufzusammeln und daraus Honig herzustellen.
+        Nektar aufzusammeln und daraus Honig zu erzeugen.
       2-3 Bee Loops 4_instruction: Benutze eine ähnliche Schleife wie in der letzten
         Aufgabe, aber arbeite eine Drehung ein.
       2-3 Bee Loops 4A_instruction: Versuche nun diese Sequenz mit Hilfe einer Schleife
         dreimal zu wiederholen. Vergiss nicht am Schluss Honig zu erzeugen!
       2-3 Bee Loops 5_instruction: Benutze eine Schleife, um die Stufen herabzusteigen
-        und den Necktar zu sammeln.
-      2-3 Bee Loops 6_instruction: Benutze eine Schleife, um Necktar von jeder Blüte
-        zu sammeln und Honig bei jeder Wabe zu machen.
-      2-3 Bee Loops 7_instruction: Füge diese Bausteine in eine Schleife ein, um Honig
+        und den Nektar zu sammeln.
+      2-3 Bee Loops 6_instruction: Benutze eine Schleife, um Nektar von jeder Blüte
+        zu sammeln und Honig bei jeder Wabe zu erzeugen.
+      2-3 Bee Loops 7_instruction: Füge diese Bausteine in eine Schleife ein, um Nektar
         von jeder Blüte zu sammeln.
       2-3 Bee Loops 8_instruction: 'Diese lila Blüten haben eine unbekannte Menge
-        Necktar. Benutze die "while Necktar"- Schleife, um den ganzen Necktar zu sammeln.
-        Diese Schleife wird solange durchlaufen, wie die Bedingung - in diesem Fall:
-        Necktar > 0 - wahr ist.'
-      2-3 Bee Loops 9_instruction: Die while- Schleife kann dasselbe bewirken wie
-        eine if- Anweisung in einer Schleife. Füge eine while- Schleife zu dem Code
-        hinzu, so dass dieselbe Aufgabe erledigt wird.
-      2-3 Bee Loops Assessment 1_instruction: Bewertung - Benutze eine while- Schleife,
-        um den ganzen Necktar dieser Blüte zu sammeln.
+        Nektar. Benutze die "Solange Nektar"- Schleife, um den ganzen Nektar zu sammeln.
+        Diese Schleife wird solange durchlaufen, wie die Bedingung wahr ist - in diesem
+        Fall: Nektar > 0.'
+      2-3 Bee Loops 9_instruction: Die Solange-Schleife kann dasselbe bewirken wie
+        eine Falls-Anweisung in einer Schleife. Füge eine Solange-Schleife zu dem
+        Programm hinzu, so dass dieselbe Aufgabe erledigt wird.
+      2-3 Bee Loops Assessment 1_instruction: Bewertung - Benutze eine Solange-Schleife,
+        um den ganzen Nektar dieser Blüte zu sammeln.
       2-3 Maze 1_instruction: 'Kannst du mir helfen, das freche Schwein zu fangen?
         Stecke ein paar "vorwärts bewegen"- Bausteine zusammen und drücke auf "ausführen". '
       2-3 Maze 10_instruction: Führe mich zu dem grünen Bösewicht! (Achte auf das
@@ -342,7 +343,7 @@
         ...-mal"- Baustein, wenn ich ihn brauche?)
       2-3 Maze 15 (old)_instruction: Hole mir das Schweint mit dem "Wiederholen bis"-
         Baustein!
-      2-3 Maze 15_instruction: Benutze zwei Schleifen, um das Schein zu holen; benutze
+      2-3 Maze 15_instruction: Benutze zwei Schleifen, um das Schwein zu holen; benutze
         dabei weniger Bausteine.
       2-3 Maze 16 (old)_instruction: Hole mir das Schweint mit dem "Wiederholen bis"-
         Baustein!
@@ -351,7 +352,7 @@
         in einer Schleife laufen!
       2-3 Maze 2_instruction: Dieses Schwein zerzaust meine Federn. Hilf mir, zu ihm
         zu kommen!
-      2-3 Maze 3_instruction: Finde den Weg und führe mich zu dem dummen Schwein.
+      2-3 Maze 3_instruction: Finde den Weg und führe mich zu dem albernen Schwein.
         Meide das TNT, sonst fliegen die Federn!
       2-3 Maze 4_instruction: Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)
       2-3 Maze 5_instruction: Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)
@@ -384,9 +385,9 @@
         Bausteine benutzen?
       2-3 maze sq15_instruction: Kannst du die Sonnenblume holen und dabei nur fünf
         Bausteine benutzen?
-      2-3 maze sq16_instruction: Okay, das ist ähnlich, aber etwas anders. Kannst
-        du das mit nur fünf Bausteinen machen?
-      2-3 Maze sq2_instruction: Finde den Weg und führe mich zu dem dummen Schwein.
+      2-3 maze sq16_instruction: Okay, das ist ähnlich, aber doch anders. Kannst du
+        das mit nur fünf Bausteinen machen?
+      2-3 Maze sq2_instruction: Finde den Weg und führe mich zu dem albernen Schwein.
         Meide das TNT, sonst fliegen die Federn!
       2-3 Maze sq3_instruction: Führe mich zu dem grünen Bösewicht! (Achte auf das
         TNT)
@@ -415,8 +416,8 @@
         jedes Mal anders.
       4-5 Artist 11_instruction: Vervollständige die grünen Linien. Die Linien sind
         300 Pixel lang und liegen 15 Pixel auseinander.
-      4-5 Artist 2_instruction: Kannst du diesen Code in eine Schleife einschließen
-        und so das Quadrat vervollständigen?
+      4-5 Artist 2_instruction: Kannst du diesen Code in eine Schleife bauen und so
+        das Quadrat vervollständigen?
       4-5 Artist 3.5_instruction: Okay, versuche herauszufinden was passiert, wenn
         du diesen Code ausführen lässt (oder drücke auf "ausführen", um es auszuprobieren).
         Anschließend wiederhole dies so lange, bis die Zeichnung fertig ist. Die Farben
@@ -446,10 +447,10 @@
       4-5 Artist For Loops 12_instruction: 'Was passiert, wenn du die "Für"- und "Bis"-Zahlen
         miteinander tauscht? Vervollständige den "Für"-Baustein, sodass er wie folgt
         zählt: 200, 180, 160, 140, 120... 0. '
-      4-5 Artist For Loops 13_instruction: 'Dieser Lösungsansatz beginnt ohne "for"-
-        Schleife und es werden zu viele Bausteine! benötigt. Benutze einen "for"-
-        Baustein, um die Spirale zu vervollständigen. Hinweis: Die Länge des letzten
-        Strichs beträgt 250 Pixel.'
+      4-5 Artist For Loops 13_instruction: 'Dieser Lösungsansatz beginnt ohne "Für"-
+        Schleife und es werden zu viele Bausteine! benötigt. Benutze einen "Für"-Baustein,
+        um die Spirale zu vervollständigen. Hinweis: Die Länge des letzten Strichs
+        beträgt 250 Pixel.'
       4-5 Artist For Loops 14_instruction: 'Jemand hat hat bereits mit dem Code begonnen
         und dann festgestellt, dass es einen schnelleren Weg geben muss. Nutze den
         "Für"-Baustein, um die bereits vorhandenen Bausteine auszutauschen und zeichne
@@ -460,28 +461,28 @@
         die Sechsecksspirale zu Ende. (Hinweis: Die letzte Linie ist 200 Pixel lang.'
       4-5 Artist For Loops 3_instruction: Wie können wir von 1 bis 50 zählen? Ändere
         den "Für"-Baustein.
-      4-5 Artist For Loops 4_instruction: Vervollständige den "for"- Baustein, so
-        dass er in 1er- Schritten von 1 bis 10 zählt.
+      4-5 Artist For Loops 4_instruction: Vervollständige den "Für"-Baustein, so dass
+        er in 1er- Schritten von 1 bis 10 zählt.
       4-5 Artist For Loops 6_instruction: Zeichne Quadrate mit den Seitenlängen 50,
         60, 70, 80 und 90 Pixeln. Du musst die "Zeichne ein Quadrat"- Funktion fünf
         mal benutzen.
       4-5 Artist For Loops 7_instruction: 'Zeichne dieselben Quadrate, aber benutze
-        einen "count with"- Baustein um die Größe zu ändern. Positioniere den "Zähler"-
+        einen "Zähle mit"- Baustein um die Größe zu ändern. Positioniere den "Zähler"-
         Baustein in der "Zeichne ein Quadrat"- Funktion. Hinweis: Er gehört zur Kategorie
         "Variablen".'
       4-5 Artist For Loops 8_instruction: Kannst du das Programm vervollständigen,
-        indem in eine "for"- Schleife einschließt, die in 10er - Schritten von 200
-        bis 10 zählt? Du findest den "for"- Baustein in der "Schleifen"- Kategorie.
+        indem in eine "Für"-Schleife einschließt, die in 10er Schritten von 200 bis
+        10 zählt? Du findest den "Für"-Baustein in der "Schleifen"- Kategorie.
       4-5 Artist For Loops 9_instruction: |
         Diese Kreise haben die Größe 5, 10, 15, 20,
-        25, 30, und 35. Zeichne die Kreise. Benutze einen "for"-Baustein.
+        25, 30, und 35. Zeichne die Kreise. Benutze einen "Für"-Baustein.
       4-5 Artist Free Draw 1_instruction: Freies Zeichnen! Zeichne, was deine Inspiration
         dir eingibt.
       4-5 Artist Functions 1_instruction: Benutze eine "wiederholen"- Schleife, um
         dieses Dreieck zu zeichnen.
       4-5 Artist Functions 10a_instruction: Füge diesen Code in die "Zeichne eine
         Schneeflocke"- Funktion ein und ersetze die 50 durch den Parameter "Größe".
-        Die Funktion ist schon einmal aufgerufen worden, um eine 100- Pixel- Schneeflocke
+        Die Funktion ist schon einmal aufgerufen worden, um eine 100- Pixel-Schneeflocke
         zu machen.
       4-5 Artist Functions 10b_instruction: 'Benutze die "Zeichne eine Schneeflocke"-
         Funktion um Schneeflocken verschiedener Größe zu erstellen. Hinweis: die erste
@@ -496,7 +497,7 @@
       4-5 Artist Functions 13 Free play_instruction: Hier sind einige Funktionen,
         mit denen man Planeten, Sterne, Raketen und Roboter zeichnen kann. Benutze
         sie wie du es magst für Bilder, die du mit deinen Freunden teilen kannst.
-      4-5 Artist Functions 14 Free play_instruction: Wir haben dir hier einge Funktionen
+      4-5 Artist Functions 14 Free play_instruction: Wir haben dir hier einige Funktionen
         zur Verfügung gestellt. Benutze sie wie du es willst innerhalb einer oder
         mehrerer Schleifen und male Bilder, die du mit deinen Freunden teilen kannst.
         Klicke auf "Ausführen", um dir ein Beispiel anzusehen.
@@ -592,62 +593,62 @@
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
       4-5 Bee Conditionals 1_instruction: Die Biene kann nicht unterscheiden, ob das
-        eine Blüte oder eine Wabe ist. Sammle den Necktar nur aus Blüten, aber prüfe
+        eine Blüte oder eine Wabe ist. Sammle den Nektar nur aus Blüten, aber prüfe
         erst, ob es sich um eine Wabe oder um eine Blüte handelt.
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: 'Die Biene will nur Necktar, und zwar sofort.
+      4-5 Bee Conditionals 2_instruction: 'Die Biene will nur Nektar, und zwar sofort.
         Erinnere dich: Nicht alle Objekte sind Blüten, also prüfe, damit nur aus Blüten
-        Necktar gesammelt wird.'
-      4-5 Bee Conditionals 3_instruction: Jetzt will die Biene nur noch Honig machen.
-        Prüfe, damit nur bei Waben Honig gemacht wird.
+        Nektar gesammelt wird.'
+      4-5 Bee Conditionals 3_instruction: Jetzt will die Biene nur noch Honig erzeugen.
+        Prüfe, damit nur bei Waben Honig erzeugt wird.
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
       4-5 Bee Conditionals 4_instruction: Das unbekannte Objekt ist entweder eine
-        Blüte oder eine Wabe. Benutze den "wenn/ansonsten"- Baustein um Necktar zu
-        machen, wenn es eine Blüte ist, "ansonsten", um Honig zu machen (weil es eine
-        Wabe ist).
-      4-5 Bee Conditionals 5_instruction: Vielleicht ist eine Blüte oder eine Wabe
-        unter diesen Wolken. Benutze den "wenn/ansonsten"- Baustein um Necktar zu
-        machen, wenn dort eine Blüte ist, "ansonsten", um Honig zu machen (weil dort
+        Blüte oder eine Wabe. Benutze den "wenn/ansonsten"- Baustein um Nektar zu
+        machen, wenn es eine Blüte ist, "ansonsten", um Honig zu erzeugen (weil es
         eine Wabe ist).
+      4-5 Bee Conditionals 5_instruction: Vielleicht ist eine Blüte oder eine Wabe
+        unter diesen Wolken. Benutze den "wenn/ansonsten"- Baustein um Nektar zu machen,
+        wenn dort eine Blüte ist, "ansonsten", um Honig zu erzeugen (weil dort eine
+        Wabe ist).
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: Diese lila Blüte kann entweder  3, 2, oder
-        1 Necktar haben. Hier ist ein "wenn/ansonsten"-Baustein mit einem weiteren
+      4-5 Bee Conditionals 6_instruction: Diese lila Blüte kann entweder 3, 2, oder
+        1 Nektar tragen. Hier ist ein "wenn/ansonsten"-Baustein mit einem weiteren
         "wenn/ansonsten"- Baustein kombiniert, damit ein "wenn", "ansonsten-wenn",
-        "ansonsten" - Block erzeugt wird. Vervollständige die Lösung, um eine Unbekannte
-        Menge Necktar zu sammeln.
-      4-5 Bee Conditionals 7_instruction: Bedenke, dass lila Blüten 3, 2, oder 1 Necktar
-        haben können. Vervollständige die "Prüfe lila Blüte"- Funktion und benutze
-        sie, um den ganzen Necktar bei den Blüten zu sammeln.
+        "ansonsten" - Block erzeugt wird. Vervollständige die Lösung, um eine unbekannte
+        Menge Nektar zu sammeln.
+      4-5 Bee Conditionals 7_instruction: Bedenke, dass lila Blüten 3, 2, oder 1 Nektar
+        tragen können. Vervollständige die "Prüfe lila Blüte"- Funktion und benutze
+        sie, um den ganzen Nektar bei den Blüten zu sammeln.
       4-5 Bee Conditionals 8_instruction: Schreibe innerhalb des Bausteins eine Funktion
-        mit dem Namen "Prüfe Blüte mache Honig". Deine Funktion soll prüfen, wieviel
-        Necktar die lila Blüte hat und diesen sammeln, weitergehen, und dann Honig
-        machen.
-      4-5 Bee Conditionals Assessment 1_instruction: 'Bewertung: Dieser Code ist Fehlerhaft.
-        Vervollständige die  "Prüfe Blüte mache Honig"- Funktion, dann rufe sie auf
-        um  den ganzen Necktar und Honig zu machen. Bedenke, dass lila Blüten 3, 2,
-        oder 1 Necktar haben können.'
+        mit dem Namen "Prüfe Blüte erzeuge Honig". Deine Funktion soll prüfen, wie
+        viel Nektar die lila Blüte hat und diesen sammeln, weitergehen, und dann Honig
+        erzeugen.
+      4-5 Bee Conditionals Assessment 1_instruction: 'Bewertung: Dieser Code ist fehlerhaft.
+        Vervollständige die "sammle Nektar oder erzeuge Honig"- Funktion, dann rufe
+        sie auf um den ganzen Nektar einzusammeln und den Honig zu erzeugen. Bedenke,
+        dass lila Blüten 3, 2, oder 1 Nektar haben können.'
       4-5 Bee Debugging 1_instruction: Diese Bausteine nerven mich wirklich. Kannst
         du sie in Ordnung bringen?
       4-5 Bee Debugging 10_instruction: Finde die Fehler und behebe sie.
       4-5 Bee Debugging 11_instruction: Zählt dies richtig?
-      4-5 Bee Debugging 2_instruction: Hilf der Biene, Necktar zu holen und Honig
-        zu machen.
+      4-5 Bee Debugging 2_instruction: Hilf der Biene, Nektar zu holen und Honig zu
+        erzeugen.
       4-5 Bee Debugging 3_instruction: Finde die Fehler und behebe sie.
       4-5 Bee Debugging 4_instruction: Diese Bausteine funktionieren nicht. Wie sieht
         das Muster aus?
       4-5 Bee Debugging 5_instruction: Etwas stimmt hier nicht...
-      4-5 Bee Debugging 6_instruction: Die lila Blüte hat eine unbekannte Menge Necktar.
-        Bringe die Bausteine in Ordnung, so dass der ganze Necktar aus der Blüte herausgeholt
+      4-5 Bee Debugging 6_instruction: Die lila Blüte hat eine unbekannte Menge Nektar.
+        Bringe die Bausteine in Ordnung, so dass der ganze Nektar aus der Blüte herausgeholt
         wird.
       4-5 Bee Debugging 7_instruction: Der Funktion fehlt etwas...
       4-5 Bee Debugging 8_instruction: Die Funktion ist gut, aber sie wird nicht richtig
@@ -656,13 +657,13 @@
       4-5 Bee Debugging Assessment 1_instruction: 'Aufgabe: Repariere das Programm.'
       4-5 Bee Nested Loops 1_instruction: Benutze eine Schleife, um den gesamten Necktar
         zu sammeln.
-      4-5 Bee Nested Loops 2_instruction: 'Sammle den gesamten Necktar von jeder Blüte.
+      4-5 Bee Nested Loops 2_instruction: 'Sammle den gesamten Nektar von jeder Blüte.
         Benutze eine geschachtelte Schleife. '
-      4-5 Bee Nested Loops 3_instruction: Sammle den gesamten Necktar, indem du den
+      4-5 Bee Nested Loops 3_instruction: Sammle den gesamten Nektar, indem du den
         anfangs vorhandenen Code in eine geschachtelte Schleife einschließt.
-      4-5 Bee Nested Loops 4_instruction: 'Sammle den gesamten Necktar jeder Blüte
-        und mache Honig an jeder Honigwabe. Benutze eine geschachtelte Schleife. '
-      4-5 Bee Nested Loops 5_instruction: Sammle den gesamten Necktar, indem du eine
+      4-5 Bee Nested Loops 4_instruction: 'Sammle den gesamten Nektar jeder Blüte
+        und erzeuge Honig bei jeder Honigwabe. Benutze eine geschachtelte Schleife. '
+      4-5 Bee Nested Loops 5_instruction: Sammle den gesamten Nektar, indem du eine
         geschachtelte Schleife erzeugst.
       4-5 Bee Nested Loops 6_instruction: Sammle den ganzen Nektar.
       4-5 Bee Nested Loops 7_instruction: Schließe diese Schleife in eine andere Schleife
@@ -976,10 +977,24 @@
         your Player, Target, and Danger. Feel free to play with all of the variables
         at this point to make your game look like you'd like it to. Click "Finish"
         when you're done.
+      Brad Spooky House Copy_instruction: |
+        Freeplay: Here are the functions you've
+        written, and some more for you to play with. Draw something awesome! Play
+        with the pen width to see how different your drawings look!
+      Brad Spooky House_instruction: |
+        Freeplay: Here are the functions you've written,
+        and some more for you to play with. Draw something awesome! Play with the
+        pen width to see how different your drawings look!
       Building a Foundation Assessment_instruction: |
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
         it!
+      Busy Bee 2_instruction: |
+        This bee has a lot of work to do! Do you notice any
+        patterns that you can use to simplify your code?
+      Busy Bee_instruction: |
+        This bee has a lot of work to do! Do you notice any
+        patterns that you can use to simplify your code?
       C3-Farmer While Loops 1_instruction: |
         Move me to the hole and fill it with
         two shovelfuls of dirt, using the "fill" block.
@@ -1251,8 +1266,12 @@
         alle Objekte Blumen sind, also achte darauf, nur Nektar von Blumen zu sammeln.
       Course 4 Artist 1_instruction: 'Hilf mir, meine Box fertig zu zeichnen. (Jede
         Linie ist 200 Pixel lang) '
-      Course 4 Artist 10_instruction: 'Es ist an der Zeit, frei zu spielen! Viel Spaß
-        und zeichne alles, was du möchtest. '
+      Course 4 Artist 10_instruction: "Klicke hier um die Hinweise noch mal zu sehen!\r\n\r\nHier
+        ist ein Programm für eine interessante Form. Was passiert, wenn du ihn wiederholst?
+        Beachte, dass die Drehungen in dieser Form insgesamt 420 Grad betragen. Das
+        bedeutet, dass der Künstler am Ende der Zeichnung in einer andere Richtung
+        schaut als zu Beginn. Diese neue Richtung ist genau 60 Grad nach rechts von
+        der Richtung bei der du begonnen hast."
       Course 4 Artist 11_instruction: |
         Jetzt eine Herausforderung! Hier ist ein Design, das nur Blöcke benutzt, die Ihnen bereits gezeigt wurden! Schaffen Sie es, es ohne weitere Informationen wieder zuerstellten? Tipp:
         Zögern Sie nicht, Versuch und Fehlschlag zu versuchen. Es wird nicht erwartet, dass es beim ersten Mal perfekt wird.
@@ -1291,6 +1310,11 @@
         von rechts nach links und von oben nach unten zu füllen, wenn er eine Eins
         sieht und sie zu ignorieren, wenn er eine Null sieht. Führ diesen Code aus,
         um zu sehen, wie der Künstler die Binärmethode anwendet um dieses Muster auszumalen.
+      Course 4 Artist Binary 1a_instruction: Hier ist eine Funktion, die einen Binärstring
+        von Einsen und Nullen verwendet und den Künstler anweist, unterwegs die Quadrate
+        von rechts nach links und von oben nach unten zu füllen, wenn er eine Eins
+        sieht und sie zu ignorieren, wenn er eine Null sieht. Führ diesen Code aus,
+        um zu sehen, wie der Künstler die Binärmethode anwendet um dieses Muster auszumalen.
       Course 4 Artist Binary 2_instruction: Welche dieser Binärfolgen könntest du
         8 Mal durchlaufen lassen, um dieses Bild zu malen?
       Course 4 Artist Binary 3_instruction: Kannst du dieses Muster zeichnen, indem
@@ -1306,8 +1330,18 @@
       Course 4 Artist Binary Free Play 2_instruction: 'Freies Spielen: Hier ist eine
         Leinwand mit einer höheren Auflösung um darauf zu zeichnen - 16 bits mal 16
         bits!'
+      Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas
+        to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we\nstart
+        to get creative with the bits?"
+      Course 4 Artist Binary Free Play 2b_instruction: Click here to see hints.
       Course 4 Artist Binary Free Play_instruction: 'Freies Spielen: Zeichne mit binären
         Zeichenfolgen, was auch immer du möchtest!'
+      Course 4 Artist Binary pre1_instruction: "Binary is a way of representing information\nusing
+        only two options.  Here, we're going to use the options \"off\" (represented\nby
+        the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided
+        you with a grid of \"pixels\" that you can walk through and make\ndesigns
+        by turning on only certain squares.  Can you have the artist draw\n\"01010101\"
+        in binary in the first row?"
       Course 4 Artist For  Functions 10_instruction: 'Gehen wir mal einen Schritt
         weiter: kannst du mit Hilfe der Funktion "Zeichne ein Quadrat" einen Stern
         zeichnen? Viel Erfolg!'
@@ -1923,6 +1957,21 @@
         is clicked at least 10 times before Dog counts to 30, raise\n\"increment\"
         by 1 and start again.\r\n3) If The Wizard does not get clicked\nat least 10
         times, the game is over."
+      Course 4 SCV 1_instruction: Click here to view the instructions again.
+      Course 4 SCV 2_instruction: Click here to view the instructions again.
+      Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.\nTag
+        Penguin to get 3 points.  Get 10 points to win!\r\nBut be careful, when\nCat
+        and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks\nnecessary
+        to make this game work the way it's been explained.  How will you\nget Dog
+        to move in all directions using the arrow keys?  How will you add\npoints
+        when Dog tags Cat or Penguin?  How will you subtract points when Cat\nand
+        Penguin touch?"
+      Course 4 SCV 4_instruction: |
+        Solve this puzzle with the fewest number of blocks
+        possible.
+      Course 4 SCV 5_instruction: |
+        Solve this puzzle with the fewest number of blocks
+        possible.
       Course 4 Variables Assessment_instruction: Können Sie dieses Bild mit einer
         Variablen für die Seiten erstellen? Jede Zeile sollte 50 Pixel lang sein.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
@@ -2209,19 +2258,15 @@
       frozen cross_instruction: |
         Use the “Repeat” block to create a plus sign. Did
         you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using the “Repeat" block
-        to repeat a parallelogram 4 times, turning right by 90 degrees between each
-        parallelogram.
-      frozen diamond snowflake_instruction: |
-        Now, let's create a new snowflake by
-        using the repeat block to repeat a parallelogram 10 times, turning right by
-        36 degrees between each one.
-      frozen diamond_instruction: |
-        Let's create a parallelogram. It's just like
-        a square but has different angles: 60 and 120 degree angles instead of 90
-        degree angles.
+      frozen diamond mini snowflake_instruction: Wusstest du schon, dass jede Schneeflocke
+        eine andere Form hat? Erstelle eine neue Schneeflocke mit Hilfe des "Wiederholungs"
+        Bausteins zu einem Parallelogramm, das 4 mal wiederholt wird. Drehe jedes
+        Parallelogramm 90 Grad nach rechts.
+      frozen diamond snowflake_instruction: Nun erstellen wir eine neue Schneeflocke
+        mit dem Wiederholen-Baustein um 10 Parallelogramme zu zeichnen, zwischen denen
+        wir uns jeweils um 36 Grad nach rechts drehen.
+      frozen diamond_instruction: 'Erstelle ein Parallelogramm. Es ist wie ein Quadrat,
+        hat aber verschiedene Winkel: 60 und 120 Grad Winkel anstatt 90 Grad Winkel.'
       frozen freeplay_instruction: |
         You've officially become a master artist! Create
         a winter wonderland.
@@ -2874,6 +2919,20 @@
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      October15 bat_instruction: "Freeplay: Here are some functions to play with.
+        \ Can\nyou draw a bat?\r\n"
+      October15 ghost 1_instruction: |
+        Give the ghost eyes, using the "draw a circle"
+        function.
+      October15 JoL 1_instruction: |
+        Program the artist to design a face for your
+        jack-o-lantern!
+      October15 pumpkin 1_instruction: |
+        Finish this jack-o-lantern by drawing the
+        eyes and nose in any style you would like.
+      October15 stars 1_instruction: |
+        Use loops and the "random integer" block
+        to fill the night sky with stars of different shapes and sizes.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -2950,8 +3009,8 @@
         shorter than the square length.
       PDK5 Functions 2_instruction: Funktionen erlauben dir, neue Blöcke zu definieren!
         Wir haben Blöcke in eine Funktion namens "zeichne ein Quadrat" verschoben,
-        um ein Quadrat zu zeichnen. Nutze die Funktion "zeichne ein Quadrat", um die
-        Gläser zu erstellen? Die Quadrate sind 75 Pixel auseinander.
+        um ein Quadrat zu zeichnen. Kannst du die Funktion "zeichne ein Quadrat" benutzen,
+        um die Gläser zu erstellen? Die Quadrate haben einen Abstand von 75 Pixel.
       PDK5 Loops 1_instruction: "Instead of using 5 \"move forward\" blocks, use\nthe
         \"repeat\" block with a \"move forward\" block inside of it. In computer\nscience,
         this is called a \"loop.\" \n"
@@ -3061,6 +3120,9 @@
         The bee only wants nectar right
         now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
         it is hiding a flower. If it is, then you can gather nectar.
+      Ryan Test Locked Blocks_instruction: |
+        Here's a function called "patrol."
+        Edit it to move Cat up 400 pixels and then down 400 pixels.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse
         an \"if\" statement to program your game to call the \"level_up\"\nfunction
         only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample:
@@ -3185,12 +3247,18 @@
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
+      template test_instruction: what up
       Test Play Lab_instruction: This is a test play lab level.
+      test_sarah_instruction: hi
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
         into the text in place of the pattern.
+      Total Artist Clone Me_instruction: |
+        Freeplay: Here are the functions you've
+        written, and some more for you to play with. Draw something awesome! Play
+        with the pen width to see how different your drawings look!
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters
@@ -3256,34 +3324,98 @@
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
         to be dropped.
+      U3 - Design Mode - Console Log_instruction: |
+        Update the ID names and `console.log()`
+        messages to match the correct button (Click to see full instructions).
+      U3 - Design Mode - Layers and Delete_instruction: |
+        Fix the layout of the bullseye
+        game. (Click to see full instructions)
       U3 - Design Mode - Multi Screens 2_instruction: |
         Make a 2 screen app which
         can switch back and forth between a black screen and a white screen using
-        buttons.
+        buttons. (Click to see detailed instructions.)
       U3 - Design Mode - Multi Screens_instruction: |
-        Make a 2 screen app with black
-        screen and a white screen.
+        Make a 2 screen app with a black
+        screen and a white screen. (Click to see detailed instructions)
       U3 - Design Mode - Other Events_instruction: |
         Delete the button and make the
         image move to a random location when you click on it. (click to see detailed
         instructions)
+      U3 - Design Mode - WTF Console Log_instruction: |
+        Add a 3 console.log messages
+        and test them out(Click to see full instructions).
       U3 - Design Mode -Recreate Beyond Buttons_instruction: |
         Recreate the game from
-        the last lesson with an extra welcome screen for the user to start on. (Click
-        for detailed instructions)
+        the 'chaser-game' with a welcome screen and game over screen. (Click to
+        see full instructions)
       U3 - Design Mode 1_instruction: |
-        Add a button to your screen using design mode.
-        Change the style to look like the picture (click for instructions).
+        Add a large red button to your screen using
+        Design Mode (Click for full instructions).
+      U3 - Variables - Clicker Game_instruction: |
+        Create your improved Chaser-Game
+        here. (Click to see full instructions)
+      U3 - Variables - Debug Scope_instruction: |
+        Why isn't the value of foo changing
+        correctly? Make a guess. (Click to see full instructions)
+      U3 - Variables - Debugging with Turtle_instruction: |
+        Use your new debugging
+        techniques to get the code to run correctly (Click to see full instructions)
+      U3 - Variables - Decrement_instruction: |
+        Decrement the value of the variable.
+        (Click to see full instructions)
+      U3 - Variables - Identify Variables_instruction: |
+        Identify the values printing
+        in the terminal with console.log statements. (Click to see full instructions)
+      U3 - Variables - Increment_instruction: |
+        Use the console.log debugging technique
+        to see what is happening in this example. Add another variable and increment
+        its value. (Click to see full instructions)
+      U3 - Variables - Incrementing Variables_instruction: |
+        Create a repeat loop
+        for the repeated code and use increment to recreate the original program with
+        less lines of code! (Click to see full instructions)
+      U3 - Variables - Read Using Turtle_instruction: |
+        Create a second set of variables
+        for x and y position. Move turtle to that new location. (Click to see full
+        instructions)
+      U3 - Variables - Reassigning Variables with Console.log_instruction: |
+        Add another
+        reassignment statement at the end of the code to change the value of the variable
+        at second time. (Click to see full instructions)
+      U3 - Variables - Set to Expression with Other Variables and Turtle_instruction: |
+        (click
+        to see full instructions)
+      U3 - Variables - Set to Expression with Other Variables_instruction: |
+        (click
+        to see full instructions)
+      U3 - Variables - Set to Expression with Turtle_instruction: |
+        (click to see
+        full)
+      U3 - Variables - Set to Expression_instruction: |
+        Test out the new expressions.
+        (Click to see full instructions)
+      U3- Variables - Assign Random For Turtle Draw_instruction: |
+        Try writing the
+        same code in text mode.
+      U3- Variables - Changing the Value_instruction: |
+        Update the value of 'turnAmount'
+        before each moveForward so the turtle turns a different amount each time.
+        (Click to see full instructions)
+      U3- Variables - Create And Assign_instruction: |
+        Edit the variables to be created
+        and assigned on one line. Add a third variable. Print all three in the console.
+        (Click to see full instructions)
+      U3- Variables - Text Mode_instruction: Try writing the same code in text mode.
       U3-Design Mode-ID and Event Handler_instruction: |
-        Using the Design Mode Events
-        tab add in code that when the button is clicked causes something to print
-        in the console. (Click to see detail instructions).
+        Add an event handler for
+        the button using the "Insert and show" link in the Design Mode Events tab.
+        (Click to see full instructions).
       U3-Design Mode-ID_instruction: |
         Using the Design Mode Events change the button
         ID and update the code to match. (Click to see detail instructions).
       U3-Design Mode-Image_instruction: |
-        Add an image to your app which moves to
-        a random position whenever the button is clicked. (Click to see detailed instructions).
+        Recreate the 'chaser-game' from the last
+        lesson using Design Mode. (Click to see full instructions).
       U313 drag Two Buttons_instruction: |
         Run a program with two buttons that have
         the same id to see the warning message in the console. Change the ids to make
@@ -3387,8 +3519,8 @@
         Create a drawing of your own.
         (Click to see full instructions)
       U3L07 - allSeaGrass_instruction: |
-        Add 50 pieces of sea grass to the image by
-        writing drawAllSeaGrass with a loop. (Click to see full instructions)
+        Add 50 pieces of seagrass to the image by
+        writing drawAllSeagrass with a loop. (Click to see full instructions)
       U3L07 - bubbles_instruction: |
         Add 200 bubbles to the image by writing drawAllBubbles
         with a loop. (Click to see full instructions)
@@ -3410,7 +3542,7 @@
         full instructions)
       U3L07 - loopsWithRandom_instruction: |
         Increase the number of iterations to
-        fill the screen with black. (Click to see full instructions)
+        fill the screen with white. (Click to see full instructions)
       U3L07 - randomDots1_instruction: |
         Increase the number of iterations to fully
         fill the screen with random dots. (Click to see full instructions)
@@ -3418,7 +3550,7 @@
         Draw the figure using a loop. (Click to
         see full instructions)
       U3L07 - seaGrass_instruction: |
-        Add a parameter to drawSeaGrass that controls
+        Add a parameter to drawSeagrass that controls
         the number of waves in the grass. (Click to see full instructions)
       U3L07 - seaStar_instruction: |
         Add 5 sea stars to the image by writing drawAllSeaStars
@@ -3431,13 +3563,13 @@
         and colors.  To get started, follow the series of steps suggested in\nthe
         accompanying worksheet. \n"
       U3L07 - sunBeams_instruction: |
-        Add 100 sun beams to the image by writing drawAllSunBeams
+        Add 100 sunbeams to the image by writing drawAllSunbeams
         with a loop. (Click to see full instructions)
       U3L07 - topDownDesign_instruction: |
         Get comfortable with the structure of this
         program, then move on to the next exercise. (Click to see full instructions)
       U3L08 - createTwoParamTriangle_instruction: |
-        Define a function called drawTriange()
+        Define a function called drawTriangle()
         that accepts two parameters to set the size and width of the triangle. (Click
         to see full instructions)
       U3L08 - digitalScene_instruction: |
@@ -3517,6 +3649,9 @@
       U3L13 - Debugging 3_instruction: |
         Debug the program by fixing the logical error
         within the program. (Click to see full instructions)
+      U3L13 - Project_instruction: |
+        Create your Multi-screen App. (Click to see full
+        instructions)
       U3L13 - Turtle Driver Project_instruction: |
         Create a "turtle driver" that
         includes buttons to move the turtle forward and turn it left and right. (Click
@@ -3594,6 +3729,9 @@
         Modify the code so that the turtle
         moves to a random screen location when the button is clicked. (Click to see
         full instructions)
+      U3L16 - singleSetPosition_instruction: |
+        Move the button to the middle of the
+        screen. (Click to see full instructions)
       U3L16 - text labels_instruction: |
         Use the textLabel command to replace the
         button in your program with a text label. (Click to see full instructions)
@@ -3605,6 +3743,25 @@
       U3L16 - use images_instruction: |
         Use the image command to replace the text
         label in your program with an image. (Click to see full instructions)
+      U3L17 - getKeyValue_instruction: |
+        Create and update your key value pairs using
+        setKeyValue. (Click to see full instructions)
+      U3L17 - introCallbacks_instruction: |
+        Run the program several times to observe
+        how the setKeyValue commands now always arrive in order. (Click to see full
+        instructions)
+      U3L17 - introKeyValue_instruction: |
+        Explore your key value pairs with the Data
+        Viewer. (Click to see full instructions)
+      U3L17 - readKeyValue_instruction: |
+        Explore your key value pairs with the Data
+        Viewer. (Click to see full instructions)
+      U3L17 - setKeyValue_instruction: |
+        Create and update your key value pairs using
+        setKeyValue. (Click to see full instructions)
+      U3L17 - twoSetKeyValue_instruction: |
+        Run the program several times to observe
+        how often setKeyValue commands arrive out of order. (Click to see full instructions)
       U3L19 - Clicker Game Freeplay Area_instruction: |
         Use this App Lab area to improve
         your clicker game.  You should start by copy/pasting the code from your old
@@ -3613,12 +3770,9 @@
         experiment if you want to.  Everything else you need should be shown.  Have
         fun!
       U3L19 - Debugging with consoleLog_instruction: |
-        This example shows how you
-        might insert console.log statements in your code to verify for yourself how
-        the values in the variables change during the running of the code.  This is
-        an important debugging technique to use when each line in your program doesn't
-        have a visual effect on the app that you can see to verify things are working
-        right.  Run the code to see the output in the console.
+        Add console.log() statements
+        to find out the value of a and b after the first reassignment statement a
+        = b; (Click to see full instructions)
       U3L19 - DEMO up down count practice app_instruction: |
         This is a demonstration
         of a simple App that uses variables, arithmetic and setText.  Play with it
@@ -3632,48 +3786,23 @@
         foo to see the string change. \r\n2. By only modifying the lines of code\nthat
         were given to you, try to get the output to say: “The value of foo is:\n9.
         \ And isn’t that fine.” \r\n"
-      U3L19 - fix the var name syntax error_instruction: "We've given you some code\nwith
-        an error.  It doesn’t recognize the variable.  Can you figure out why?  Fix\nthe
-        error and get the program to run.  Also note the error message since it\nmight
-        come up at some point later in your life.\r\n\r\n"
+      U3L19 - fix the var name syntax error_instruction: |
+        Fix the error and get it
+        to print the value of both variables (Click to see full instructions)
       U3L19 - practice with setText_instruction: |
-        We've started you out with the
-        code shown on the previous screen.  First experiment with the app.  Identify
-        where setText is being used.  CHALLENGE: modify the code to also use setText
-        to change the text on the button itself when it's clicked.  GIF: U3L19 -
-        setTextOfButton.gif
-      U3L19 - Target Clicker App_instruction: "# A motivating example\r\n\r\nHere\nis
-        an example of the kind of app we want to make.  Study this for the elements\ncontained
-        in the app rather than what it is or does.  Things to investigate:\n\r\n\r\n1.
-        what happens when you click on the Code.org logo? \r\n2. What happens\nwhen
-        you click somewhere else? \r\n3. Try the reset button.   \r\n\r\nThe\nelements
-        contained in this app appear to be simple, and they are in some ways.\nHowever,
-        the computing principles involved - controlling and keeping track\nof things
-        in memory while the program is running - get into some deeper issues\nof programming
-        and computer science in general.  There are some devilish details\nand paths
-        that can lead to misunderstanding if you're not careful.\r\n\r\nSo,\nkeep
-        this app in mind as you go through the different levels in this lesson.  It\nmight
-        seem like you need to learn a lot in order to get this simple thing\nworking.
-        \ But it's worth taking the time to understand at a deeper level\nwhat is
-        going on.  Because this one topic: controlling memory leads to many\npossible
-        misunderstandings about coding, and how computers work.  We want\nto make
-        sure you get it right from the outset.  \r\n\r\nSo take your time.  Work\nthrough
-        the issues.  Read the explanations.  You'll come out on the other\nside a
-        better programmer with much deeper knowledge and understanding of how\nthings
-        work.  \r\n\r\nAre you ready?  Click 'finish' to move to the next\npage and
-        start the lesson."
+        Add another button that changes
+        the text to the value of a new variable. (Click to see full instructions)
+      U3L19 - Target Clicker App_instruction: |
+        Investigate the new elements of the
+        'chaser-game'
       U3L19 - test reassignment of two vars_instruction: |
-        Why is this happening?
-        The code given here is the same as the example from the previous page where
-        we asked you to make a prediction about what will happen.  Run this code to
-        find out if you were right.  If you weren't, that's okay.  You might experiment  a
-        little if you want to, but bon't spend too much time here. We'll explain
-        more on the next page.
-      U3L19 - three basic ops of variables_instruction: "Do this:\r\nWe've given\nyou
-        the three lines of code shown in the previous page.  Add three lines of\ncode
-        just below the ones shown here to make your own variable, assign it a\nvalue
-        and write it to the screen.  NOTE: change the variable name from the\ndefault
-        x to something else.\r\n"
+        Predict the value of a
+        and b. Add console.log statements to find out the actual value of a and b.
+        (Click for full instructions)
+      U3L19 - three basic ops of variables_instruction: |
+        Add another variable with
+        a name of your choosing. Print the value of the variable to the console. (Click
+        to see full instructions)
       U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe
         statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).
         \ Run\nthe program and you should see the output show up in the console area
@@ -3683,12 +3812,9 @@
         output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF:
         U3L19-useconsolelog.gif"
       U3L19 - up down count practice app_instruction: |
-        This app is only SLIGHTLY
-        different from the previous one, but much more dynamic.  See if you can figure
-        out how and why the count is going up.  Once you've figured it out then you
-        should be able to DO THIS: add a button to the app that when clicked makes
-        the count go down, and updates the label.  When you're done the app should
-        work as shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
+        Set up the down button to
+        decrease the value of count by 1 each time it is clicked. (Click to see full
+        instructions)
       U3L19 - updating variables pt1_instruction: |
         This app is only SLIGHTLY different
         from the previous one, but much more dynamic.  See if you can figure out how
@@ -3697,33 +3823,21 @@
         go down, and updates the label.  When you're done the app should work as
         shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
       U3L19 - variable reassignment challenge pt2_instruction: |
-        We've given you
-        the code from the previous page.  Right now, because the code only sets the
-        values of variables, the app doesn't display anything. DO THIS: insert write
-        or console.log statements into the code to figure out what the values of a,
-        b, and c are after the code has executed.  You should have first made a prediction
-        to see if your mental model of how the computer works is correct.  We'll
-        ask for the answer on the next page.
+        Make a prediction
+        about the ending values of a,b, and c. Then use console.log to check your
+        understanding (Click to see full instructions)
       U3L19 - variable scope problem 2_instruction: |
-        First run the program to see
-        the problem.  You don't need to write code to solve any problem here.  But
-        you do need to investigate the code and come up with an explanation for WHY
-        what's happening is happening.  Why aren't 3 things being written to the
-        screen?  Why does the variable foo seem to exist once but not the other times?  If
-        you switch to code mode you'll see some warning messages next to two lines
-        of code -- why do you get those messages?  Once you think you have a good
-        answer, continue to the next page.
-      U3L19 - variable scoping problem debugging_instruction: "Here is the code from\nprevious
-        page that has a subtle problem with it.  FIRST: run the app and try\nit to
-        see the problem. NOTE: NaN stands for \"Not a Number\".   DO THIS: figure\nout
-        what's happening, where, and fix the problem.  We'll explain the issue\non
-        the next page. \n"
+        What is happening with foo?
+        Play with the level to try to figure it out. (Click to see full instructions)
+      U3L19 - variable scoping problem debugging_instruction: |
+        See if you can figure
+        out why the code is no longer work. (Click to see full instructions)
       U3L19 - write var and string with same name_instruction: |
-        Now look at this
-        example. We’ve added another write statement.  Before you run the code, see
-        if you can predict what the output will be.  Seriously, write it down. THEN
-        run the code, mess with it if you like, and continue to the next page for
-        an explanation.
+        Fix the code so that
+        the value of both variables prints to the console. (Click to see full instructions)
+      U3L2 Using Simple Commands (no tooltips)_instruction: |
+        Draw a 1x1 square above
+        and to the left of the turtle's starting position. Click to see full instructions.
       U3L2 Using Simple Commands_instruction: |
         Draw a 1x1 square above and to the
         left of the turtle's starting position. Click to see full instructions.

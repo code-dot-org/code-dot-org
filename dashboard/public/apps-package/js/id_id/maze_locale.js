@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "jika ada jalan di arah yang ditentukan, lakukan beberapa tindakan."},
 "ifelseTooltip":function(d){return "jika ada jalan di arah yang sudah ditentukan, lakukan blok perintah pertama. Jika tidak, lakukan blok perintah ke dua."},
 "ifFlowerTooltip":function(d){return "Jika ada bunga/sarang lebah ke arah yang ditentukan, kemudian lakukan beberapa aksi."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Jika ada bunga ke arah yang ditentukan, lakukan beberapa perintah."},
 "ifelseFlowerTooltip":function(d){return "Jika ada bunga/sarang lebah di arahan yang telah ditetapkan, maka lakukan blok pertama dari aksi. Jika tidak, melakukan blok kedua aksi."},
 "insufficientHoney":function(d){return "Anda menggunakan semua blok kanan, tetapi anda perlu membuat jumlah madu yang tepat."},
 "insufficientNectar":function(d){return "Anda menggunakan semua blok kanan, tetapi anda perlu membuat jumlah madu yang tepat."},

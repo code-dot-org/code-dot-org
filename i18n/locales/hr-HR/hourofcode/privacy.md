@@ -245,4 +245,4 @@ We do not disclose any personal information to third parties for marketing purpo
 Molimo vas kontaktirajte Code.org sa bilo kakvim pitanjima iliti komentarima o ovoj obavijesti o privatnosti, vašim osobnim podatcima ili vašim odabirima o suglasnosti tako što ćete nam pisati na<http://code.org/contact> ili na 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.   
   
   
-[![image](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![image](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

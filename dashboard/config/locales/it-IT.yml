@@ -370,12 +370,12 @@
       answer_viewer: Visualizza la risposta
       student: Studente
       viewing_solution: Guarda la soluzione
-      try_it_yourself: Provate voi stessi
+      try_it_yourself: Prova da solo
       section: Classe
       example: Esempio di soluzione
       example_with_number: Esempio di soluzione %{solution_number}
       submitted_on: Inserito il %{date}
-      unsubmit: Unsubmit
+      unsubmit: Annulla l'invio
   user:
     email_confirm_needed: 'L''indirizzo di posta elettronica non è stato confermato:'
     email_confirm_needed_required: 'Il tuo indirizzo di posta elettronica %{email}
@@ -423,7 +423,7 @@
     student_stats: Hai guadagnato %{trophy_count} trofei su %{trophy_max} in "Padronanza
       dei concetti".
     student_left_off: 'Eri arrivato qua:'
-    student_finished: Hai completato tutti i tutorial, scegli un'altra classe %{online_link}
+    student_finished: Hai completato tutti i corsi, scegli un'altra classe %{online_link}
       o una %{local_school_link}
     local_school: scuola locale
     online: in linea
@@ -468,9 +468,8 @@
       <a href="https://code.org/about/partners"> partner</a>, il nostro <a href="https://code.org/about/team">
       team</a>, il nostro cast video e i nostri <a href="https://code.org/about/advisors">
       consulenti di formazione</a> per il loro supporto nella creazione di Code Studio.
-    help_from_html: Vogliamo soprattutto essere riconoscenti agli ingegneri di Google,
-      Microsoft, Facebook, Twitter e molti altri che hanno aiutato a creare questi
-      materiali.
+    help_from_html: Siamo particolarmente riconoscenti agli ingegneri di Google, Microsoft,
+      Facebook, Twitter, e molti altri, che hanno aiutato a creare questi corsi.
     help_from_html_old: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno
       contribuito a creare questi materiali.
     art_from_html: |
@@ -490,7 +489,7 @@
     support: Supporto
     support_url: http://programmailfuturo.it/aiuto
     tos_short: Condizioni
-    tos: Termini d'uso del servizio
+    tos: Termini di servizio
     privacy: Informativa sulla privacy
     secure: Versione sicura
     report_abuse: Segnala un abuso
@@ -756,25 +755,26 @@
         contattarci.</a>
       go_to_code_studio: Vai al Code Studio
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: Se hai incontrato contenuti offensivi, minacce, bullismo, molestie
+          o un'istanza di violazione del copyright per il contenuto che vi appartiene
+          mentre usate le app di Code Studio, compilate il modulo sottostante. Prenderemo
+          in seria considerazione la vostra segnalazione, indagheremo e prenderemo
+          i provvedimenti opportuni.
         validation:
           email: Si prega di fornire un indirizzo email
           age: Si prega di specificare un'età
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
+          abuse_type: Indicate come questo contenuto violi i Termini del servizio
+          abuse_detail: Si prega di fornire i dettagli concernenti il contenuto che
+            si desidera segnalare
         abusive_url: URL del contenuto da segnalare
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
+          question: Come questo contenuto viola i %{link_start}Termini del servizio%{link_end}?
+          harassment: Minacce, cyberbullismo, molestie
           offensive: Contenuti offensivi
           infringement: Violazione del copyright
           other: Altro
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
-        acknowledge: By submitting this information, you acknowledge it will be handled
-          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+        detail: Fornite quanti più dettagli possibili riguardanti il contenuto che
+          stai segnalando.
+        acknowledge: Inviando queste informazioni, l'utente riconosce che sarà gestita
+          in conformità con i termini della %{link_start_privacy}Politica della privacy%{link_end}
+          e i %{link_start_tos}Termini del servizio%{link_end}

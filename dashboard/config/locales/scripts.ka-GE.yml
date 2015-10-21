@@ -212,6 +212,7 @@
           Maze and Bee: ლაბირინთი და ფუტკარი
           Artist Binary: 'მხატვარი: ორობითი'
           description_audience: 'ასაკი: 10-18'
+          Super Challenge - Variables: Super Challenge - Variables
         Course4pre:
           title: კურსი 4-ის პრერეკვიზიტი
           description_short: მცირე შეჯამება მოსწავლეებისთვის, რომლებსაც არ გაუვლიათ
@@ -717,6 +718,13 @@
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
           Variables: ცვლადები
+          Looping and Random Numbers - Under the Sea: Looping and Random Numbers -
+            Under the Sea
+          Multi-screen App: Multi-screen App
+          Variables Conceptorial Fodder: Variables Conceptorial Fodder
+          'Variables: Create, Assign, and Read': 'Variables: Create, Assign, and Read'
+          'Variables: Increment, Decrement, Display, and Scope': 'Variables: Increment,
+            Decrement, Display, and Scope'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1480,3 +1488,18 @@
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        duino:
+          Experimenting with Arduino stuff: Experimenting with Arduino stuff
+          Basic Circuits: Basic Circuits
+        Special Fun:
+          title: Special Fun
+          description_short: Something special for those who know it exists. These
+            puzzles might not be around long, so enjoy them while you can!
+          description_audience: 'ასაკი: 10-18'
+          Halloween 2015: Halloween 2015
+        SpecialSeries:
+          title: Special Levels
+          description_short: Something special for those who know it exists. These
+            puzzles might not be around long, so enjoy them while you can!
+          description_audience: 'ასაკი: 10-18'
+          Halloween 2015: Halloween 2015

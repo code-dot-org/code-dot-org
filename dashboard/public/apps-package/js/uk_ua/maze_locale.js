@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Якщо є шлях у вказаному напрямку, то виконуй певні дії."},
 "ifelseTooltip":function(d){return "Якщо є шлях у вказаному напрямку, то виконуй перший блок дій. У протилежному випадку, виконуй другий блок дій."},
 "ifFlowerTooltip":function(d){return "Якщо у вказаному напрямку є квітка або стільник, то виконувати певні дії."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Якщо у вказаному напрямку є квітка, то виконуй певні дії."},
 "ifelseFlowerTooltip":function(d){return "Якщо у вказаному напрямку є квітка або стільник, то виконувати перший блок дій. У протилежному випадку, виконувати другий блок дій."},
 "insufficientHoney":function(d){return "Ви склали блоки правильно, але потрібно виготовити вказану кількість меду."},
 "insufficientNectar":function(d){return "Ви склали блоки правильно, але потрібно виготовити вказану кількість нектару."},

@@ -52,6 +52,7 @@ var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
 var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
+var spriteActions = require('./spriteActions');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -136,6 +137,10 @@ var AUTO_HANDLER_MAP = {
   whenTouchObstacle: 'whenSpriteCollided-' +
       (Studio.protagonistSpriteIndex || 0) +
       '-wall',
+  whenGetAllCharacters: 'whenGetAllItems',
+  whenTouchGoal: 'whenTouchGoal',
+  whenTouchAllGoals: 'whenTouchAllGoals',
+  whenScore1000: 'whenScore1000',
 };
 
 // Default Scalings
@@ -188,11 +193,11 @@ function loadLevel() {
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.slowJsExecutionFactor = level.slowJsExecutionFactor || 1;
   Studio.ticksBeforeFaceSouth = Studio.slowJsExecutionFactor +
-                                  IDLE_TICKS_BEFORE_FACE_SOUTH;
+                                  utils.valueOr(level.ticksBeforeFaceSouth, IDLE_TICKS_BEFORE_FACE_SOUTH);
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
-  Studio.protagonistSpriteIndex = level.protagonistSpriteIndex || level.protaganistSpriteIndex;
+  Studio.protagonistSpriteIndex = utils.valueOr(level.protagonistSpriteIndex,level.protaganistSpriteIndex);
 
   switch (level.customGameType) {
     case 'Big Game':
@@ -654,6 +659,30 @@ var setSvgText = function(opts) {
 *   JS machine for consumption by the student's event-handling code.
  */
 function callHandler (name, allowQueueExtension, extraArgs) {
+  if (level.autoArrowSteer) {
+    var moveDir;
+    switch (name) {
+      case 'when-up':
+        moveDir = Direction.NORTH;
+        break;
+      case 'when-down':
+        moveDir = Direction.SOUTH;
+        break;
+      case 'when-left':
+        moveDir = Direction.WEST;
+        break;
+      case 'when-right':
+        moveDir = Direction.EAST;
+        break;
+    }
+    if (moveDir) {
+      Studio.queueCmd(null, 'move', {
+        'spriteIndex': Studio.protagonistSpriteIndex || 0,
+        'dir': moveDir
+      });
+    }
+  }
+
   Studio.eventHandlers.forEach(function (handler) {
     if (studioApp.isUsingBlockly()) {
       // Note: we skip executing the code if we have not completed executing
@@ -894,6 +923,7 @@ Studio.onTick = function() {
     var isWalking = true;
 
     // After 5 ticks of no movement, turn sprite forward.
+    var ticksBeforeFaceSouth = utils.valueOr(level.ticksBeforeFaceSouth, Studio.ticksBeforeFaceSouth);
     if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].dir = Direction.SOUTH;
       isWalking = false;
@@ -914,8 +944,7 @@ Studio.onTick = function() {
     Studio.animateGoals();
 
     var sprite = Studio.sprite[i];
-    if (level.gridAlignedMovement &&
-        (sprite.x !== sprite.displayX || sprite.y !== sprite.displayY)) {
+    if (sprite.hasActions()) {
       spritesNeedMoreAnimationFrames = true;
     }
 
@@ -1040,6 +1069,14 @@ function handleActorCollisionsWithCollidableList (
         // Make the projectile/item disappear automatically if this parameter
         // is set:
         if (autoDisappear) {
+          if (list.length === 1 && list === Studio.items) {
+            // NOTE: we do this only for the Item list (not projectiles)
+            
+            // NOTE: if items are allowed to move outOfBounds(), this may never
+            // be called because the last item may not be removed here.
+            callHandler('whenGetAllItems');
+          }
+
           if (collidable.beginRemoveElement) {
             collidable.beginRemoveElement();
           } else {
@@ -1264,11 +1301,23 @@ function checkForItemCollisions () {
  * Test to see if an actor sprite will be touching a wall given particular X/Y
  * position coordinates (top-left)
  */
-
 Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
   var xCenter = xPos + sprite.width / 2;
   var yCenter = yPos + sprite.height / 2;
   return Studio.willCollidableTouchWall(sprite, xCenter, yCenter);
+};
+
+/**
+ * Test to see if an actor sprite will be beyond its given playspace boundaries
+ * if it is moved to a given X/Y position.
+ * @param {Collidable} sprite
+ * @param {number} xPos
+ * @param {number} yPos
+ */
+Studio.willSpriteLeavePlayspace = function (sprite, xPos, yPos) {
+  var boundary = Studio.getPlayspaceBoundaries(sprite);
+  return (xPos < boundary.left) || (xPos > boundary.right) ||
+      (yPos < boundary.top) || (yPos > boundary.bottom);
 };
 
 /**
@@ -1524,7 +1573,13 @@ Studio.init = function(config) {
     }
   });
 
-  config.loadAudio = skin.loadAudio;
+  config.loadAudio = function() {
+    skin.soundFiles = {};
+    skin.sounds.forEach(function (sound) {
+      skin.soundFiles[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl(sound + '.ogg')];
+      studioApp.loadAudio(skin.soundFiles[sound], sound);
+    });
+  };
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1580,12 +1635,16 @@ Studio.init = function(config) {
   config.dropletConfig = dropletConfig;
   config.dropIntoAceAtLineStart = true;
   config.unusedConfig = [];
-  if (skin.AutohandlerTouchItems) {
-    for (var prop in skin.AutohandlerTouchItems) {
-      AUTO_HANDLER_MAP[skin.AutohandlerTouchItems[prop]] =
-          'whenSpriteCollided-' +
-          (Studio.protagonistSpriteIndex || 0) + '-' + prop;
-    }
+  for (var prop in skin.AutohandlerTouchItems) {
+    AUTO_HANDLER_MAP[skin.AutohandlerTouchItems[prop]] =
+        'whenSpriteCollided-' +
+        (Studio.protagonistSpriteIndex || 0) + '-' + prop;
+  }
+  for (prop in skin.AutohandlerGetAllItems) {
+    AUTO_HANDLER_MAP[skin.AutohandlerGetAllItems[prop]] = 'whenGetAll-' + prop;
+  }
+  for (prop in level.autohandlerOverrides) {
+    AUTO_HANDLER_MAP[prop] = level.autohandlerOverrides[prop];
   }
   for (var handlerName in AUTO_HANDLER_MAP) {
     config.unusedConfig.push(handlerName);
@@ -1694,7 +1753,7 @@ function getDefaultBackgroundName() {
 }
 
 function getDefaultMapName() {
-  return level.wallMap || skin.defaultWallMap;
+  return level.wallMapCollisions ? (level.wallMap || skin.defaultWallMap) : undefined;
 }
 
 /**
@@ -1757,8 +1816,15 @@ Studio.reset = function(first) {
     removedItemCount: 0,
     setActivityRecord: null,
     hasSetBot: false,
-    hasAddedItem: false
+    hasSetBackground: false,
+    hasSetMap: false,
+    hasAddedItem: false,
+    hasWonGame: false,
+    hasLostGame: false
   };
+
+  // Reset the record of the last direction that the user moved the sprite.
+  Studio.lastMoveSingleDir = null;
 
   // Reset goal successState:
   if (level.goal) {
@@ -1809,13 +1875,20 @@ Studio.reset = function(first) {
   }
 
   Studio.itemSpeed = {};
+  for (var className in skin.specialItemProperties) {
+    Studio.itemSpeed[className] = skin.specialItemProperties[className].speed;
+  }
   Studio.itemActivity = {};
+  for (className in skin.specialItemProperties) {
+    Studio.itemActivity[className] = skin.specialItemProperties[className].activity;
+  }
   // Create Items that are specified on the map:
   Studio.createLevelItems(svg);
 
   // Now that sprites are in place, we can set up a map, which might move
   // sprites around.
-  if (level.wallMapCollisions) {
+  var defaultMap = getDefaultMapName();
+  if (defaultMap) {
     Studio.setMap({value: getDefaultMapName()});
   }
 
@@ -1825,10 +1898,15 @@ Studio.reset = function(first) {
   }
 
   var goalAsset = skin.goal;
-  if (level.goalOverride && level.goalOverride.goalAnimation) {
-    goalAsset = skin[level.goalOverride.goalAnimation];
+  if (level.goalOverride) {
+    if (level.goalOverride.goalAnimation) {
+      goalAsset = skin[level.goalOverride.goalAnimation];
+    } else if (level.goalOverride.goalImage) {
+      goalAsset = skin[level.goalOverride.goalImage];
+    }
   }
 
+  Studio.touchAllGoalsEventFired = false;
   for (i = 0; i < Studio.spriteGoals_.length; i++) {
     // Mark each finish as incomplete.
     Studio.spriteGoals_[i].finished = false;
@@ -2459,8 +2537,8 @@ function spriteTotalFrames (index) {
 function getFrameCount (className, exceptionList, defaultCount) {
   if (/.gif$/.test(skin[className])) {
     return 1;
-  } else if (exceptionList && exceptionList[className]) {
-    return exceptionList[className];
+  } else if (exceptionList && exceptionList[className] && exceptionList[className].frames) {
+    return exceptionList[className].frames;
   }
   return defaultCount;
 }
@@ -2639,7 +2717,7 @@ Studio.createLevelItems = function (svg) {
           var className = skin.ItemClassNames[index];
           // Create item:
           var itemOptions = {
-            frames: getFrameCount(className, skin.specialItemFrames, skin.itemFrames),
+            frames: getFrameCount(className, skin.specialItemProperties, skin.itemFrames),
             className: className,
             dir: Direction.NONE,
             image: skin[className],
@@ -2778,51 +2856,42 @@ Studio.displaySprite = function(i, isWalking) {
     extraOffsetY = skin.gridSpriteRenderOffsetY || 0;
   }
 
-  var xCoordPrev = spriteClipRect.getAttribute('x') - extraOffsetX;
-  var yCoordPrev = spriteClipRect.getAttribute('y') - extraOffsetY;
+  if (sprite.hasActions()) {
+    sprite.updateActions();
+  } else {
+    var xCoordPrev = spriteClipRect.getAttribute('x') - extraOffsetX;
+    var yCoordPrev = spriteClipRect.getAttribute('y') - extraOffsetY;
 
-  var dirPrev = sprite.dir;
-  if (dirPrev === Direction.NONE) {
-    // direction not yet set, start at SOUTH (forward facing)
-    sprite.dir = Direction.SOUTH;
-  }
-  else if ((sprite.x != xCoordPrev) || (sprite.y != yCoordPrev)) {
-    sprite.dir = Direction.NONE;
-    if (sprite.x < xCoordPrev) {
-      sprite.dir |= Direction.WEST;
-    } else if (sprite.x > xCoordPrev) {
-      sprite.dir |= Direction.EAST;
+    var dirPrev = sprite.dir;
+    if (dirPrev === Direction.NONE) {
+      // direction not yet set, start at SOUTH (forward facing)
+      sprite.dir = Direction.SOUTH;
     }
-    if (sprite.y < yCoordPrev) {
-      sprite.dir |= Direction.NORTH;
-    } else if (sprite.y > yCoordPrev) {
-      sprite.dir |= Direction.SOUTH;
+    else if ((sprite.x != xCoordPrev) || (sprite.y != yCoordPrev)) {
+      sprite.dir = Direction.NONE;
+      if (sprite.x < xCoordPrev) {
+        sprite.dir |= Direction.WEST;
+      } else if (sprite.x > xCoordPrev) {
+        sprite.dir |= Direction.EAST;
+      }
+      if (sprite.y < yCoordPrev) {
+        sprite.dir |= Direction.NORTH;
+      } else if (sprite.y > yCoordPrev) {
+        sprite.dir |= Direction.SOUTH;
+      }
     }
+
+    sprite.displayX = sprite.x;
+    sprite.displayY = sprite.y;
   }
 
+  // Turn sprite toward target direction after evaluating actions.
   if (sprite.dir !== sprite.displayDir) {
     // Every other frame, assign a new displayDir from state table
     // (only one turn at a time):
     if (Studio.tickCount && (0 === Studio.tickCount % 2)) {
       sprite.displayDir = NextTurn[sprite.displayDir][sprite.dir];
     }
-  }
-
-  if (level.gridAlignedMovement) {
-    if (sprite.x > sprite.displayX) {
-      sprite.displayX += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
-    } else if (sprite.x < sprite.displayX) {
-      sprite.displayX -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
-    }
-    if (sprite.y > sprite.displayY) {
-      sprite.displayY += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
-    } else if (sprite.y < sprite.displayY) {
-      sprite.displayY -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
-    }
-
-  } else {
-    sprite.displayX = sprite.x;
-    sprite.displayY = sprite.y;
   }
 
   spriteIcon.setAttribute('x', sprite.displayX - xOffset + extraOffsetX);
@@ -2879,44 +2948,52 @@ Studio.displayScore = function() {
 };
 
 Studio.animateGoals = function() {
-  if (!(level.goalOverride && level.goalOverride.goalAnimation)) {
-    return;
-  }
-
   var currentTime = new Date();
-  var elapsed = currentTime - Studio.startTime;
 
-  var numFrames = skin.animatedGoalFrames;
-  var frameDuration = skin.timePerGoalAnimationFrame;
-  var frameWidth = level.goalOverride.imageWidth;
+  var animate = level.goalOverride && level.goalOverride.goalAnimation;
+  var fade = skin.fadeOutGoal;
+
+  var elapsed, numFrames, frameDuration, frameWidth;
+
+  if (animate) {
+    elapsed = currentTime - Studio.startTime;
+    numFrames = skin.animatedGoalFrames;
+    frameDuration = skin.timePerGoalAnimationFrame;
+    frameWidth = level.goalOverride.imageWidth;
+  }
 
   for (var i = 0; i < Studio.spriteGoals_.length; i++) {
     var goal = Studio.spriteGoals_[i];
-    // Keep showing the goal unless it's finished and we're not fading out.
+    // Keep animating the goal unless it's finished and we're not fading out.
     if (!goal.finished || goal.startFadeTime) {
-
       var goalSprite = document.getElementById('spriteFinish' + i);
       var goalClipRect = document.getElementById('finishClipRect' + i);
 
-      var baseX = parseInt(goalClipRect.getAttribute('x'), 10);
-      var frame = Math.floor(elapsed / frameDuration) % numFrames;
-  
-      goalSprite.setAttribute('x', baseX - frame * frameWidth);
+      if (animate) {
+        var baseX = parseInt(goalClipRect.getAttribute('x'), 10);
+        var frame = Math.floor(elapsed / frameDuration) % numFrames;
+    
+        goalSprite.setAttribute('x', baseX - frame * frameWidth);
+      }
 
-      var fadeTime = 350;
+      if (fade) {
+        var fadeTime = constants.GOAL_FADE_TIME;
 
-      if (goal.startFadeTime) {
-        var opacity = 1 - (currentTime - goal.startFadeTime) / fadeTime;
+        if (goal.startFadeTime) {
+          var opacity = 1 - (currentTime - goal.startFadeTime) / fadeTime;
 
-        if (opacity < 0) {
-          goal.startFadeTime = null;
-        } else {
+          if (opacity < 0) {
+            opacity = 0;
+            goal.startFadeTime = null;
+          }
+          
           goalSprite.setAttribute('opacity', opacity);
         }
       }
     }
   }
 };
+
 
 /**
  * Start showing an upwards-floating score at the location of sprite 0.
@@ -3025,13 +3102,19 @@ Studio.executeQueue = function (name, oneOnly) {
 
 Studio.callCmd = function (cmd) {
   switch (cmd.name) {
+    case 'endGame':
+      studioApp.highlight(cmd.id);
+      Studio.endGame(cmd.opts);
+      break;
     case 'setBackground':
       studioApp.highlight(cmd.id);
       Studio.setBackground(cmd.opts);
+      Studio.trackedBehavior.hasSetBackground = true;
       break;
     case 'setMap':
       studioApp.highlight(cmd.id);
       Studio.setMap(cmd.opts);
+      Studio.trackedBehavior.hasSetMap = true;
       break;
     case 'setSprite':
       studioApp.highlight(cmd.id);
@@ -3070,8 +3153,7 @@ Studio.callCmd = function (cmd) {
       break;
     case 'playSound':
       studioApp.highlight(cmd.id);
-      studioApp.playAudio(cmd.opts.soundName, { volume: 1.0 });
-      Studio.playSoundCount++;
+      Studio.playSound(cmd.opts);
       break;
     case 'showTitleScreen':
       if (!cmd.opts.started) {
@@ -3174,6 +3256,26 @@ Studio.callCmd = function (cmd) {
   return true;
 };
 
+Studio.playSound = function (opts) {
+
+  if (typeof opts.soundName !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.soundName);
+  }
+
+  var soundVal = opts.soundName.toLowerCase().trim();
+
+  if (soundVal === constants.RANDOM_VALUE) {
+    soundVal = skin.sounds[Math.floor(Math.random() * skin.sounds.length)];
+  }
+
+  if (!skin.soundFiles[soundVal]) {
+    throw new RangeError("Incorrect parameter: " + opts.soundName);
+  }
+
+  studioApp.playAudio(soundVal, { volume: 1.0 });
+  Studio.playSoundCount++;
+};
+
 Studio.addItem = function (opts) {
 
   if (typeof opts.className !== 'string') {
@@ -3231,8 +3333,15 @@ Studio.addItem = function (opts) {
   var direction = level.itemGridAlignedMovement ? Direction.NONE :
                     directions[Math.floor(Math.random() * directions.length)];
   var pos = generateRandomItemPosition();
+
+  var renderScale = 1;
+  var properties = skin.specialItemProperties[itemClass];
+  if (properties) {
+    renderScale = utils.valueOr(properties.scale, renderScale);
+  }
+
   var itemOptions = {
-    frames: getFrameCount(itemClass, skin.specialItemFrames, skin.itemFrames),
+    frames: getFrameCount(itemClass, skin.specialItemProperties, skin.itemFrames),
     className: itemClass,
     dir: direction,
     image: skinItem,
@@ -3243,7 +3352,7 @@ Studio.addItem = function (opts) {
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     width: 100,
     height: 100,
-    renderScale: skin.specialItemScale[itemClass] || 1
+    renderScale: renderScale,
   };
 
   var item = new Item(itemOptions);
@@ -3443,15 +3552,24 @@ var BOT_SPEEDS = {
 };
 
 Studio.setBotSpeed = function (opts) {
-  if (opts.value === constants.RANDOM_VALUE) {
-    opts.value = utils.randomKey(BOT_SPEEDS);
+
+  if (typeof opts.value !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.value);
   }
 
-  var speedVal = BOT_SPEEDS[opts.value];
-  if (speedVal) {
-    opts.value = speedVal;
-    Studio.setSpriteSpeed(opts);
+  var speedValue = opts.value.toLowerCase().trim();
+
+  if (speedValue === constants.RANDOM_VALUE) {
+    speedValue = utils.randomKey(BOT_SPEEDS);
   }
+
+  var speedNumericVal = BOT_SPEEDS[speedValue];
+  if (typeof speedNumericVal === 'undefined') {
+    throw new RangeError("Incorrect parameter: " + opts.value);
+  }
+
+  opts.value = speedNumericVal;
+  Studio.setSpriteSpeed(opts);
 };
 
 Studio.setSpriteSize = function (opts) {
@@ -3468,14 +3586,43 @@ Studio.setSpriteSize = function (opts) {
 };
 
 Studio.changeScore = function (opts) {
+
+  if (typeof opts.value !== 'number' &&
+      (typeof opts.value !== 'string' || isNaN(opts.value))) {
+    throw new TypeError("Incorrect parameter: " + opts.value);
+  }
+
   Studio.playerScore += Number(opts.value);
   Studio.displayScore();
-  Studio.displayFloatingScore(opts.value);
+
+  Studio.displayFloatingScore(Number(opts.value));
+
+  if (Studio.playerScore - Number(opts.value) < 1000 && Studio.playerScore >= 1000) {
+    callHandler('whenScore1000');
+  }
 };
 
 Studio.setScoreText = function (opts) {
   Studio.scoreText = opts.text;
   Studio.displayScore();
+};
+
+Studio.endGame = function(opts) {
+  if (typeof opts.value !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.value);
+  }
+
+  var winValue = opts.value.toLowerCase().trim();
+
+  if (winValue == "win") {
+    Studio.trackedBehavior.hasWonGame = true;
+    Studio.setScoreText({text: studioMsg.winMessage()});
+  } else if (winValue== "lose") {
+    Studio.trackedBehavior.hasLostGame = true;
+    Studio.setScoreText({text: studioMsg.loseMessage()});  
+  } else {
+    throw new RangeError("Incorrect parameter: " + opts.value);
+  }
 };
 
 Studio.setBackground = function (opts) {
@@ -3554,6 +3701,8 @@ Studio.setMap = function (opts) {
     // Give the skin a chance to adjust the map name depending upon the
     // background name.
     useMap = skin.getMap(Studio.background, mapValue);
+  } else {
+    useMap = mapValue;
   }
 
   if (useMap !== null && !skin[useMap]) {
@@ -3978,7 +4127,7 @@ Studio.throwProjectile = function (options) {
   var preventLoop = skin.preventProjectileLoop && skin.preventProjectileLoop(options.className);
 
   var projectileOptions = {
-    frames: getFrameCount(options.className, skin.specialProjectileFrames, skin.projectileFrames),
+    frames: getFrameCount(options.className, skin.specialProjectileProperties, skin.projectileFrames),
     className: options.className,
     dir: options.dir,
     image: skin[options.className],
@@ -4204,7 +4353,7 @@ function executeCollision(src, target) {
 /**
  * Looks to see if the item is already colliding with target.  If it
  * isn't, it starts the collision and calls the relevant code.
- * @param {Collidable} Collidable colliding
+ * @param {Collidable} item colliding
  * @param {string/number} target Class name of the target. String for classes,
  *   index if colliding with another sprite.
  * @param {boolean} allowQueueExtension Passed on to callHandler
@@ -4218,7 +4367,7 @@ Studio.collideItemWith = function (item, target, allowQueueExtension) {
 /**
  * Looks to see if the sprite is already colliding with target.  If it isn't, it
  * starts the collision and calls the relevant code.
- * @param {Collidable} Collidable colliding
+ * @param {Collidable} spriteIndex colliding
  * @param {string/number} target Class name of the target. String for classes,
  *   index if colliding with another sprite.
  * @param {boolean} allowQueueExtension Passed on to callHandler
@@ -4269,7 +4418,7 @@ Studio.getPlayspaceBoundaries = function(sprite)
 {
   var boundaries;
 
-  if (skin.wallCollisionRectWidth && skin.wallCollisionRectHeight) {
+  if (skin.wallCollisionRectWidth && skin.wallCollisionRectHeight && !level.gridAlignedMovement) {
     boundaries = {
       top:    0 - (sprite.height - skin.wallCollisionRectHeight)/2 - skin.wallCollisionRectOffsetY,
       right:  Studio.MAZE_WIDTH - skin.wallCollisionRectWidth - (sprite.width - skin.wallCollisionRectWidth)/2 - skin.wallCollisionRectOffsetX,
@@ -4292,72 +4441,95 @@ Studio.getSkin = function() {
   return skin;
 };
 
+/**
+ * For executing a single "goLeft" or "goNorth" sort of command in student code.
+ * Moves the avatar by a different amount.
+ * Has slightly different behaviors depending on whether the level is configured
+ * for discrete, grid-based movement or free movement.
+ * @param {Object} opts
+ * @param {Direction} opts.dir - The direction in which the sprite should move.
+ * @param {number} opts.spriteIndex
+ */
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
+  var lastMove = sprite.lastMove;
   sprite.lastMove = Studio.tickCount;
   var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   var wallCollision = false;
+  var playspaceEdgeCollision = false;
+  var playSound = false;
+  var deltaX = 0, deltaY = 0;
+
   switch (opts.dir) {
     case Direction.NORTH:
-      if (level.blockMovingIntoWalls &&
-          Studio.willSpriteTouchWall(sprite, sprite.x, sprite.y - distance)) {
-        wallCollision = true;
-        break;
-      }
-      sprite.y -= distance;
-      var topBoundary = Studio.getPlayspaceBoundaries(sprite).top;
-      if (sprite.y < topBoundary && !level.allowSpritesOutsidePlayspace) {
-        sprite.y = topBoundary;
-      }
+      deltaY = -distance;
       break;
     case Direction.EAST:
-      if (level.blockMovingIntoWalls &&
-          Studio.willSpriteTouchWall(sprite, sprite.x + distance, sprite.y)) {
-        wallCollision = true;
-        break;
-      }
-      sprite.x += distance;
-      var rightBoundary = Studio.getPlayspaceBoundaries(sprite).right;
-      if (sprite.x > rightBoundary && !level.allowSpritesOutsidePlayspace) {
-        sprite.x = rightBoundary;
-      }
+      deltaX = distance;
       break;
     case Direction.SOUTH:
-      if (level.blockMovingIntoWalls &&
-          Studio.willSpriteTouchWall(sprite, sprite.x, sprite.y + distance)) {
-        wallCollision = true;
-        break;
-      }
-      sprite.y += distance;
-      var bottomBoundary = Studio.getPlayspaceBoundaries(sprite).bottom;
-      if (sprite.y > bottomBoundary && !level.allowSpritesOutsidePlayspace) {
-        sprite.y = bottomBoundary;
-      }
+      deltaY = distance;
       break;
     case Direction.WEST:
-      if (level.blockMovingIntoWalls &&
-          Studio.willSpriteTouchWall(sprite, sprite.x - distance, sprite.y)) {
-        wallCollision = true;
-        break;
-      }
-      sprite.x -= distance;
-      var leftBoundary = Studio.getPlayspaceBoundaries(sprite).left;
-      if (sprite.x < leftBoundary && !level.allowSpritesOutsidePlayspace) {
-        sprite.x = leftBoundary;
-      }
+      deltaX = -distance;
       break;
   }
-  if (wallCollision) {
+
+  var projectedX = sprite.x + deltaX;
+  var projectedY = sprite.y + deltaY;
+
+  if (level.blockMovingIntoWalls &&
+      Studio.willSpriteTouchWall(sprite, projectedX, projectedY)) {
+    wallCollision = true;
+
     // We prevented the wall collision, but queue a wall collision event and
     // immediately reset the collision state since we didn't actually overlap:
     Studio.collideSpriteWith(opts.spriteIndex, 'wall');
     sprite.endCollision('wall');
   }
+
+  if (!level.allowSpritesOutsidePlayspace &&
+      Studio.willSpriteLeavePlayspace(sprite, projectedX, projectedY)) {
+    playspaceEdgeCollision = true;
+  }
+
   if (level.gridAlignedMovement) {
+    if (wallCollision || playspaceEdgeCollision) {
+      sprite.addAction(new spriteActions.GridMoveAndCancel(
+          deltaX, deltaY, level.slowJsExecutionFactor));
+    } else {
+      sprite.addAction(new spriteActions.GridMove(
+          deltaX, deltaY, level.slowJsExecutionFactor));
+    }
+
     Studio.yieldThisTick = true;
     if (Studio.JSInterpreter) {
       Studio.JSInterpreter.yield();
     }
+
+    playSound = true;
+  } else if (!wallCollision) {
+    if (playspaceEdgeCollision) {
+      var boundary = Studio.getPlayspaceBoundaries(sprite);
+      projectedX = Math.max(boundary.left, Math.min(boundary.right, projectedX));
+      projectedY = Math.max(boundary.top, Math.min(boundary.bottom, projectedY));
+    }
+    sprite.x = projectedX;
+    sprite.y = projectedY;
+
+    if (opts.dir !== Studio.lastMoveSingleDir &&
+        lastMove === Infinity || Studio.tickCount > lastMove + 1) {
+      // So long as there was no wall collision, a new direction, and we
+      // haven't already processed a move in the previous tick, then play a sound.
+      playSound = true;
+    }
+  }
+
+  Studio.lastMoveSingleDir = opts.dir;
+
+  if (playSound && skin.moveSounds) {
+    var randomSoundIndex = Math.floor(Math.random() * skin.moveSounds.length);
+    studioApp.playAudio(skin.moveSounds[randomSoundIndex]);
   }
 };
 
@@ -4393,15 +4565,20 @@ Studio.allWhenRunBlocksComplete = function () {
 };
 
 Studio.timedOut = function() {
-  // If the only event block that had children is when_run, and those commands
-  // are finished executing, don't wait for the timeout.
-  // If we have additional event blocks that DO have children, we don't timeout
-  // until timeoutFailureTick
   if (level.timeoutAfterWhenRun) {
-    if (Studio.eventHandlers.length === 0 || (Studio.eventHandlers.length === 1 &&
-        Studio.eventHandlers[0].name === 'whenGameStarts' &&
-        Studio.allWhenRunBlocksComplete())) {
-    return true;
+    if (level.editCode) {
+      // If the interpreter has started handling events, the main body of the
+      // program is complete:
+      return Studio.JSInterpreter && Studio.JSInterpreter.startedHandlingEvents;
+    } else if (Studio.eventHandlers.length === 0 ||
+               (Studio.eventHandlers.length === 1 &&
+                  Studio.eventHandlers[0].name === 'whenGameStarts' &&
+                  Studio.allWhenRunBlocksComplete())) {
+      // If the only event block that had children is when_run, and those commands
+      // are finished executing, don't wait for the timeout.
+      // If we have additional event blocks that DO have children, we don't timeout
+      // until timeoutFailureTick
+      return true;
     }
   }
 
@@ -4479,6 +4656,9 @@ Studio.allGoalsVisited = function() {
             if (skin.fadeOutGoal) {
               goal.startFadeTime = new Date().getTime();
             }
+
+            callHandler('whenTouchGoal');  
+
             break;
           }
         }
@@ -4489,8 +4669,10 @@ Studio.allGoalsVisited = function() {
     if (goal.finished) {
       finishedGoals++;
 
-      // Play a sound unless we've hit the last flag
-      if (playSound && finishedGoals !== Studio.spriteGoals_.length) {
+      // Play a sound unless we've hit the last flag (though that can be
+      // overridden by the skin)
+      if (playSound && 
+          (finishedGoals !== Studio.spriteGoals_.length || skin.playFinalGoalSound)) {
         studioApp.playAudio('flag');
       }
 
@@ -4507,7 +4689,14 @@ Studio.allGoalsVisited = function() {
     }
   }
 
-  return finishedGoals === Studio.spriteGoals_.length;
+  var retVal = finishedGoals === Studio.spriteGoals_.length;
+
+  if (retVal && !Studio.touchAllGoalsEventFired) {
+    Studio.touchAllGoalsEventFired = true;
+    callHandler('whenTouchAllGoals');
+  }
+
+  return retVal;
 };
 
 /**
@@ -4536,6 +4725,14 @@ Studio.checkRequiredForSuccess = function() {
     return { exists: true, achieved: false, message: studioMsg.failedHasSetBotSpeed() };
   }
 
+  if (required.setBackground && !tracked.hasSetBackground) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasSetBackground() };
+  }
+
+  if (required.setBotMap && !tracked.hasSetMap) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasSetMap() };
+  }
+
   if (required.touchAllItems && Studio.items.length > 0) {
     return { exists: true, achieved: false, message: studioMsg.failedTouchAllItems() };
   }
@@ -4544,8 +4741,20 @@ Studio.checkRequiredForSuccess = function() {
     return { exists: true, achieved: false, message: studioMsg.failedScoreMinimum() };
   }
 
+  if (required.addItem && !tracked.hasAddedItem) {
+    return { exists: true, achieved: false, message: studioMsg.failedAddItem() };
+  }
+
   if (required.removedItemCount && tracked.removedItemCount < required.removedItemCount) {
     return { exists: true, achieved: false, message: studioMsg.failedRemovedItemCount() };
+  }
+
+  if (required.winGame && ! tracked.hasWonGame) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasWonGame() };
+  }
+
+  if (required.lostGame && ! tracked.hasLostGame) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasLostGame() };
   }
 
   if (required.setActivity &&
@@ -4609,7 +4818,7 @@ var checkFinished = function () {
 };
 
 
-},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
+},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4629,7 +4838,175 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js":[function(require,module,exports){
+},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js":[function(require,module,exports){
+/** @file Actions that can be given to a playlab sprite to execute over a set time. */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var constants = require('./constants');
+var Direction = constants.Direction;
+
+/**
+ * Work/animation for a sprite to do that will require more than one tick/frame.
+ *
+ * See Collidable#queueAction and Collidable#updateActions for usage.
+ *
+ * Note: All sprite actions must, for now, be able to complete in a provided
+ * number of steps/frames, instead of blocking until they complete.  The latter
+ * is a larger change that we'll save until later.
+ *
+ * @interface SpriteAction
+ */
+
+/**
+ * Perform one tick/frame step of the action on the given sprite.
+ *
+ * @function
+ * @name SpriteAction#update
+ * @param {Collidable} sprite - the sprite the action is being performed on
+ */
+
+/**
+ * Perform one tick/frame step of the action on the given sprite.
+ *
+ * @function
+ * @name SpriteAction#isDone
+ * @returns {boolean} whether the action is finished running.
+ */
+
+/**
+ * Move sprite by a desired delta over a certain number of steps/ticks.
+ * Used to provide discrete grid movement in playlab's continuous interpreted
+ * environment.
+ * @constructor
+ * @implements {SpriteAction}
+ * @param {number} towardDeltaX
+ * @param {number} towardDeltaY
+ * @param {number} totalSteps
+ */
+exports.GridMove = function (towardDeltaX, towardDeltaY, totalSteps) {
+  this.towardDeltaX_ = towardDeltaX;
+  this.towardDeltaY_ = towardDeltaY;
+  this.totalSteps_ = totalSteps;
+  this.elapsedSteps_ = 0;
+
+  /** @private {number} How much of the full distance to travel. */
+  this.percentBeforeReverse_ = 0.3;
+};
+
+/**
+ * Apply a single frame of change to the given sprite.
+ * @param {Collidable} sprite
+ */
+exports.GridMove.prototype.update = function (sprite) {
+  // Logically snap the sprite to its final position on the first frame,
+  // the interpolation is for display only.
+  if (this.elapsedSteps_ === 0) {
+    this.startX_ = sprite.x;
+    this.startY_ = sprite.y;
+    sprite.x += this.towardDeltaX_;
+    sprite.y += this.towardDeltaY_;
+  }
+  var normalizedProgress = (this.elapsedSteps_ + 1) / this.totalSteps_;
+  sprite.displayX = this.startX_ + this.towardDeltaX_ * normalizedProgress;
+  sprite.displayY = this.startY_ + this.towardDeltaY_ * normalizedProgress;
+  sprite.dir = getDirection(this.towardDeltaX_, this.towardDeltaY_);
+  this.elapsedSteps_++;
+};
+
+/**
+ * @returns {boolean} whether the action is done; in this case, whether the
+ *          animation is complete, based on the number of steps that have
+ *          elapsed.
+ */
+exports.GridMove.prototype.isDone = function () {
+  return this.elapsedSteps_ >= this.totalSteps_;
+};
+
+/**
+ * Move sprite partway toward a desired destination position, but have it
+ * stop and reverse to its original position after a moment, as if it was
+ * bouncing off a wall.
+ * @constructor
+ * @implements {SpriteAction}
+ * @param {number} towardDeltaX - the relative target X position, if the motion
+ *        was completed instead of cancelled (e.g. one grid-space away).
+ * @param {number} towardDeltaY - as above.
+ * @param {number} totalSteps - the number of steps (or frames) to take for the
+ *        animation.
+ */
+exports.GridMoveAndCancel = function (towardDeltaX, towardDeltaY, totalSteps) {
+  this.towardDeltaX_ = towardDeltaX;
+  this.towardDeltaY_ = towardDeltaY;
+  this.totalSteps_ = totalSteps;
+  this.elapsedSteps_ = 0;
+
+  /** @private {number} How much of the full distance to travel. */
+  this.percentBeforeReverse_ = 0.3;
+};
+
+/**
+ * Apply a single frame of change to the given sprite.
+ * @param {Collidable} sprite
+ */
+exports.GridMoveAndCancel.prototype.update = function (sprite) {
+  // Note: The sprite's logical position (sprite.x, sprite.y) never changes
+  //       for this action.
+  var normalizedProgress = (this.elapsedSteps_ + 1) / this.totalSteps_;
+  var percentOffset = (2 * this.percentBeforeReverse_) *
+      (normalizedProgress < 0.5 ? normalizedProgress : (1 - normalizedProgress));
+  sprite.displayX = sprite.x + this.towardDeltaX_ * percentOffset;
+  sprite.displayY = sprite.y + this.towardDeltaY_ * percentOffset;
+  sprite.dir = getDirection(this.towardDeltaX_, this.towardDeltaY_);
+  // Could do a forced reversal of animation here, depends on how it looks
+  // with the real assets.
+  this.elapsedSteps_++;
+};
+
+/**
+ * @returns {boolean} whether the action is done; in this case, whether the
+ *          animation is complete, based on the number of steps that have
+ *          elapsed.
+ */
+exports.GridMoveAndCancel.prototype.isDone = function () {
+  return this.elapsedSteps_ >= this.totalSteps_;
+};
+
+/**
+ * Given a 2D vector (x and y) provides the approximate animation direction
+ * given in our Direction enum.  Does not calculate 'closest' direction or
+ * anything like that - you'll always get a diagonal if both x and y are nonzero.
+ * @param {number} x
+ * @param {number} y
+ * @returns {Direction}
+ */
+function getDirection(x, y) {
+  var dir = Direction.NONE;
+  if (x < 0) {
+    dir |= Direction.WEST;
+  } else if (x > 0) {
+    dir |= Direction.EAST;
+  }
+  if (y < 0) {
+    dir |= Direction.NORTH;
+  } else if (y > 0) {
+    dir |= Direction.SOUTH;
+  }
+  return dir;
+}
+
+
+},{"./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js":[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -5075,10 +5452,10 @@ function loadInfinity(skin, assetUrl) {
     'projectile_duck'
   ];
 
-  skin.specialProjectileFrames = {
-    'projectile_cherry': 13,
-    'projectile_ice': 12,
-    'projectile_duck': 12
+  skin.specialProjectileProperties = {
+    'projectile_cherry': { frames: 13 },
+    'projectile_ice': { frames: 12 },
+    'projectile_duck': { frames: 12 }
   };
 
   // TODO: proper item class names
@@ -5093,10 +5470,10 @@ function loadInfinity(skin, assetUrl) {
     'item_duck'
   ];
 
-  skin.specialItemFrames = {
-    'item_cherry': 13,
-    'item_ice': 12,
-    'item_duck': 12
+  skin.specialItemProperties = {
+    'item_cherry': { frames: 13 },
+    'item_ice': { frames: 12 },
+    'item_duck': { frames: 12 }
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -5241,9 +5618,6 @@ function loadHoc2015(skin, assetUrl) {
   skin.ProjectileClassNames = [
   ];
 
-  skin.specialProjectileFrames = {
-  };
-
   // TODO: proper item class names
   skin.ItemClassNames = [
     'pig',
@@ -5265,24 +5639,24 @@ function loadHoc2015(skin, assetUrl) {
     'pilot': 'whenTouchPilot'
   };
 
-  skin.specialItemFrames = {
-    'pig': 12,
-    'man': 12,
-    'roo': 15,
-    'bird': 8,
-    'spider': 12,
-    'mouse': 1,
-    'pilot': 13
+  skin.AutohandlerGetAllItems = {
+    'pig': 'whenGetAllPigs',
+    'man': 'whenGetAllMen',
+    'roo': 'whenGetAllRoos',
+    'bird': 'whenGetAllBirds',
+    'spider': 'whenGetAllSpiders',
+    'mouse': 'whenGetAllMice',
+    'pilot': 'whenGetAllPilots'
   };
 
-  skin.specialItemScale = {
-    'pig': 1,
-    'man': 1,
-    'roo': 1.6,
-    'bird': 1.6,
-    'spider': 1.2,
-    'mouse': 0.6,
-    'pilot': 1
+  skin.specialItemProperties = {
+    'pig':    { frames: 12, scale: 1,   activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
+    'man':    { frames: 12, scale: 1,   activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
+    'roo':    { frames: 15, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'bird':   { frames:  8, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'spider': { frames: 12, scale: 1.2, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'mouse':  { frames:  1, scale: 0.6, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'pilot':  { frames: 13, scale: 1,   activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -5492,24 +5866,23 @@ function loadHoc2015(skin, assetUrl) {
      [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x121, 0x121]];
 
   // Sounds.
-  var sounds = [
+  skin.sounds = [
     'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
+    'character1sound5', 'character1sound6', 'character1sound7', 'character1sound8',
     'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
     'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
     'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
     'alert1', 'alert2', 'alert3', 'alert4',
     'applause',
-    'start', 'win', 'failure', 'flag'
+    'start', 'win', 'failure', 'flag',
+    'move1', 'move2', 'move3'
   ];
 
-  // Override the default loadAudio function with this one.
-  skin.loadAudio = function() {
-    for (var s = 0; s < sounds.length; s++) {
-      var sound = sounds[s];
-      skin[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl('wall.ogg')];
-      studioApp.loadAudio(skin[sound], sound);
-    }
-  };
+  // Normally the sound isn't played for the final goal, but this forces it
+  // to be played.
+  skin.playFinalGoalSound = true;
+
+  skin.moveSounds = ['move1', 'move2', 'move3'];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes
@@ -5518,7 +5891,6 @@ function loadHoc2015(skin, assetUrl) {
     [msg.setMapRandom(), RANDOM_VALUE],
     [msg.setMapBlank(), '"blank"'],
     [msg.setMapCircle(), '"circle"'],
-    [msg.setMapCircle2(), '"circle2"'],
     [msg.setMapHorizontal(), '"horizontal"'],
     [msg.setMapGrid(), '"grid"'],
     [msg.setMapBlobs(), '"blobs"']
@@ -5559,6 +5931,164 @@ function loadHoc2015(skin, assetUrl) {
     [msg.itemRoo(), '"roo"'],
     [msg.itemSpider(), '"spider"'],
     [msg.itemRandom(), RANDOM_VALUE]];
+}
+
+function loadHoc2015x(skin, assetUrl) {
+  skin.preloadAssets = true;
+
+  skin.defaultBackground = 'main';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+  ];
+
+  // TODO: proper item class names
+  skin.ItemClassNames = [  ];
+
+  skin.AutohandlerTouchItems = {
+  };
+
+  skin.AutohandlerGetAllItems = {
+  };
+
+  skin.specialItemProperties = {
+  };
+
+  // Spritesheet for animated goal.
+  skin.goal1 = skin.assetUrl('goal1.png');
+  skin.goal2 = skin.assetUrl('goal2.png');
+
+  // How many frames in the animated goal spritesheet.
+  skin.animatedGoalFrames = 16;
+
+  // How long to show each frame of the optional goal animation.
+  skin.timePerGoalAnimationFrame = 100;
+
+  // For a smaller collision region on a goal.
+  skin.goalCollisionRectWidth = 50;
+  skin.goalCollisionRectHeight = 50;
+
+  // Whether that goal should fade out when touched.  If true, then the
+  // success image is never shown.
+  skin.fadeOutGoal = true;
+  skin.goalSuccess = null;
+
+  // Draw a goal an an offset to its usual location, useful for oversize goal
+  // images, such as a person standing taller than a single grid square whose
+  // feet should still be planted in that grid square.
+  skin.goalRenderOffsetX = 0;
+  skin.goalRenderOffsetY = 0;
+
+  // Dimensions of a rectangle in collidable center from which projectiles begin.
+  skin.projectileSpriteWidth  = 70;
+  skin.projectileSpriteHeight = 70;
+
+  // Dimensions of a rectangle in collidable center in which item collisions occur.
+  skin.itemCollisionRectWidth  = 50;
+  skin.itemCollisionRectHeight = 50;
+
+  // Dimensions of a rectangle in sprite center in which item collisions occur.
+  skin.spriteCollisionRectWidth  = 50;
+  skin.spriteCollisionRectHeight = 50;
+
+  // Offset & dimensions of a rectangle in collidable in which wall collisions occur.
+  // For isometric-style rendering, this would normally be the feet.
+  skin.wallCollisionRectOffsetX = 0;
+  skin.wallCollisionRectOffsetY = 24;
+  skin.wallCollisionRectWidth  = 30;
+  skin.wallCollisionRectHeight = 20;
+
+  // When movement is grid aligned, sprite coordinates are the top-left corner
+  // of the sprite, and match the top-left corner of the grid square in question.
+  // When we draw the sprites bigger, this means the sprite's "feet" will usually
+  // be too far to the right and below that square.  These offsets are a chance
+  // to move the rendering of the sprite up and to the left, when negative, so
+  // that the "feet" are planted at the bottom center of the grid square.
+  skin.gridSpriteRenderOffsetX = -20;
+  skin.gridSpriteRenderOffsetY = -40;
+
+  skin.avatarList = ['bot1'];
+  skin.avatarList.forEach(function (name) {
+    skin[name] = {
+      sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 16,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: 19
+      },
+      timePerFrame: 100
+    };
+  });
+
+  skin.preventProjectileLoop = function (className) {
+    return className === '';
+  };
+
+  skin.preventItemLoop = function (className) {
+    return className === 'item_character1';
+  };
+
+  skin.main = {
+    background: skin.assetUrl('background_background1.jpg'),
+    tiles: skin.assetUrl('tiles_background1.png')
+  };
+
+  // It's possible to enlarge the rendering of some wall tiles so that they
+  // overlap each other a little.  Define a bounding rectangle for the source
+  // tiles that get this treatment.
+
+  skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
+
+  // Sounds.
+  skin.sounds = [
+    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
+    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
+    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
+    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
+    'alert1', 'alert2', 'alert3', 'alert4',
+    'applause',
+    'start', 'win', 'failure', 'flag',
+    'move1', 'move2', 'move3', 'move4'
+  ];
+
+  // Normally the sound isn't played for the final goal, but this forces it
+  // to be played.
+  skin.playFinalGoalSound = true;
+
+  skin.moveSounds = ['move1', 'move2', 'move3', 'move4'];
+
+  // These are used by blocks.js to customize our dropdown blocks across skins
+  // NOTE: map names must have double quotes inside single quotes
+  // NOTE: first item must be RANDOM_VALUE
+  skin.mapChoices = [
+    ];
+
+  skin.backgroundChoices = [
+    ];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.backgroundChoicesK1 = [
+    ];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteBot1(), '"bot1"']];
+
+  skin.projectileChoices = [];
+
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.itemChoices = [
+    ];
 }
 
 function loadStudio(skin, assetUrl) {
@@ -5780,49 +6310,13 @@ exports.load = function(assetUrl, id) {
   skin.speechBubble = skin.assetUrl('say-sprite.png');
   skin.goal = skin.assetUrl('goal.png');
   skin.goalSuccess = skin.assetUrl('goal_success.png');
-  // Sounds
-  skin.rubberSound = [skin.assetUrl('wall.mp3'), skin.assetUrl('wall.ogg')];
-  skin.flagSound = [skin.assetUrl('win_goal.mp3'),
-                    skin.assetUrl('win_goal.ogg')];
-  skin.crunchSound = [skin.assetUrl('wall0.mp3'), skin.assetUrl('wall0.ogg')];
-  skin.winPointSound = [skin.assetUrl('1_we_win.mp3'),
-                        skin.assetUrl('1_we_win.ogg')];
-  skin.winPoint2Sound = [skin.assetUrl('2_we_win.mp3'),
-                         skin.assetUrl('2_we_win.ogg')];
-  skin.losePointSound = [skin.assetUrl('1_we_lose.mp3'),
-                         skin.assetUrl('1_we_lose.ogg')];
-  skin.losePoint2Sound = [skin.assetUrl('2_we_lose.mp3'),
-                          skin.assetUrl('2_we_lose.ogg')];
-  skin.goal1Sound = [skin.assetUrl('1_goal.mp3'), skin.assetUrl('1_goal.ogg')];
-  skin.goal2Sound = [skin.assetUrl('2_goal.mp3'), skin.assetUrl('2_goal.ogg')];
-  skin.woodSound = [skin.assetUrl('1_paddle_bounce.mp3'),
-                    skin.assetUrl('1_paddle_bounce.ogg')];
-  skin.retroSound = [skin.assetUrl('2_paddle_bounce.mp3'),
-                     skin.assetUrl('2_paddle_bounce.ogg')];
-  skin.slapSound = [skin.assetUrl('1_wall_bounce.mp3'),
-                    skin.assetUrl('1_wall_bounce.ogg')];
-  skin.hitSound = [skin.assetUrl('2_wall_bounce.mp3'),
-                   skin.assetUrl('2_wall_bounce.ogg')];
 
-  // This function might be overloaded by a skin.
-  skin.loadAudio = function() {
-    studioApp.loadAudio(skin.winSound, 'win');
-    studioApp.loadAudio(skin.startSound, 'start');
-    studioApp.loadAudio(skin.failureSound, 'failure');
-    studioApp.loadAudio(skin.rubberSound, 'rubber');
-    studioApp.loadAudio(skin.crunchSound, 'crunch');
-    studioApp.loadAudio(skin.flagSound, 'flag');
-    studioApp.loadAudio(skin.winPointSound, 'winpoint');
-    studioApp.loadAudio(skin.winPoint2Sound, 'winpoint2');
-    studioApp.loadAudio(skin.losePointSound, 'losepoint');
-    studioApp.loadAudio(skin.losePoint2Sound, 'losepoint2');
-    studioApp.loadAudio(skin.goal1Sound, 'goal1');
-    studioApp.loadAudio(skin.goal2Sound, 'goal2');
-    studioApp.loadAudio(skin.woodSound, 'wood');
-    studioApp.loadAudio(skin.retroSound, 'retro');
-    studioApp.loadAudio(skin.slapSound, 'slap');
-    studioApp.loadAudio(skin.hitSound, 'hit');
-  };
+  // Sounds
+  skin.sounds = [
+    'rubber', 'crunch', 'goal1', 'goal2', 'wood', 'retro', 'slap', 'hit',
+    'winpoint', 'winpoint2', 'losepoint', 'losepoint2',
+    'start', 'win', 'failure', 'flag'
+  ];
 
   // Settings
   skin.background = skin.assetUrl('background.png');
@@ -5847,6 +6341,9 @@ exports.load = function(assetUrl, id) {
       break;
     case 'hoc2015':
       loadHoc2015(skin, assetUrl);
+      break;
+    case 'hoc2015x':
+      loadHoc2015x(skin, assetUrl);
       break;
     case 'studio':
       loadStudio(skin, assetUrl);
@@ -5912,6 +6409,64 @@ function saySpriteRequiredBlock(options) {
     }
   ];
 }
+
+/**
+ * Constructs a required block definition to match "move [sprite] [dir]" blocks
+ * @param options (all optional):
+ *          sprite (string): zero-indexed string ID of sprite, e.g., "1"
+ *          dir (string): string of Direction constant. We show
+ *            the direction in feedback blocks
+ * @returns test definition suitable for feedback.js::getMissingRequiredBlocks
+ *          required block processing
+ */
+function moveRequiredBlock(options) {
+  var titles = {};
+  if (options.sprite) {
+    titles.SPRITE = options.sprite;
+  }
+  if (options.dir) {
+    titles.DIR = options.dir;
+  }
+
+  return [
+    {
+      test: function (block) {
+        if (block.type !== 'studio_move') {
+          return false;
+        }
+        if (options.sprite && block.getTitleValue("SPRITE") !== options.sprite) {
+          return false;
+        }
+        if (options.dir && block.getTitleValue("DIR") !== options.dir) {
+          return false;
+        }
+
+        return true;
+      },
+      type: 'studio_move',
+      titles: titles
+    }
+  ];
+}
+
+/**
+ * Hoc2015 blockly helpers. We base hoc2015 blockly levels off of hoc2015 droplet
+ * levels, marking them as editCode=false and overriding the startBlocks,
+ * requiredBlocks and toolboxes as appropriate for the blockly progression
+ */
+
+var hocMoveNSEW = '<block type="studio_move"><title name="DIR">1</title></block> \
+  <block type="studio_move"><title name="DIR">4</title></block> \
+  <block type="studio_move"><title name="DIR">2</title></block> \
+  <block type="studio_move"><title name="DIR">8</title></block>';
+
+var whenRunMoveEast = '<block type="when_run"><next> \
+  <block type="studio_move"><title name="DIR">2</title></block></next> \
+  </block>';
+
+var whenRunMoveSouth = '<block type="when_run"><next> \
+  <block type="studio_move"><title name="DIR">4</title></block></next> \
+  </block>';
 
 /**
  * K1 helpers. We base k1 levels off of existing non-k1 levels, marking them as isK1 and
@@ -7368,112 +7923,67 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-levels.hoc2015_1 = {
-  'editCode': true,
-  'map': [
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4,16, 0,256,1, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4]
-  ],
-  'avatarList': [ 'bot1' ],
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
-  'gridAlignedMovement': true,
-  'removeItemsWhenActorCollides': true,
-  'slowJsExecutionFactor': 10,
-  'markerHeight': 50,
-  'markerWidth': 50,
-  'codeFunctions': {
-    // Play Lab
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-  },
-};
+/* ******* Hour of Code 2015 ********/
 
-levels.hoc2015_2 = {
+levels.js_hoc2015_move_right = {
   'editCode': true,
-  'map': [
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 4, 4, 4, 4, 4, 0],
-    [0, 0, 4, 0, 0,256,4, 0],
-    [0, 0, 4, 0, 4, 0, 4, 0],
-    [0, 0, 4, 1,16,256,4, 0],
-    [0, 0, 4, 4, 4, 4, 4, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ],
-  'avatarList': [ 'bot1' ],
+  'background': 'main',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
+  },
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
-  'removeItemsWhenActorCollides': true,
+  'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'markerHeight': 50,
-  'markerWidth': 50,
-  'codeFunctions': {
-    // Play Lab
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-  },
-};
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map':
+    [[0x1020000, 0x1020000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
+     [0x1020000, 0x1020000, 0x0000000, 0x0010000, 0x0020000, 0x0100000, 0x00, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x0000000],  
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],   
+     [0x0000000, 0x0000000, 0x0000000, 0x0100000, 0x0010000, 0x0120000, 0x00, 0x0000000], 
+     [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],  
+     [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000]],
 
-
-/* ******* Hour of Code 2015 ********/
-
-
-levels.js_hoc2015_move_right = {
-  "editCode": true,
-  "background": "forest",
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-  },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 16, 0, 1, 4,0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "instructions": "Help me program the character to get the item and bring it to the destination. Stack a couple moveRight(); commands and then hit Run to make him go.",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'instructions': '"Collect the item!"',
+  'instructions2': 'Program BOTX to get to the item.  Add a second moveRight command and then hit Run.',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutFailureTick': 100,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal1',
+    'imageWidth': 50,
+    'imageHeight': 50
   },
   "callouts": [
     {
+      "id": "playlab:js_hoc2015_move_right:placeCommandsHere",
       "element_id": ".droplet-main-canvas",
       "hide_target_selector": ".droplet-drag-cover",
       "qtip_config": {
         "content": {
           "text": msg.calloutPlaceCommandsHere(),
         },
-        "hide": {
-          "event": "mouseup touchend",
+        'hide': {
+          'event': 'mouseup touchend',
         },
-        "position": {
-          "my": "top left",
-          "at": "top left",
-          "adjust": {
-            "x": 10,
-            "y": 20
+        'position': {
+          'my': 'top left',
+          'at': 'top left',
+          'adjust': {
+            'x': 10,
+            'y': 20
           }
         }
       }
@@ -7482,150 +7992,214 @@ levels.js_hoc2015_move_right = {
 };
 
 levels.js_hoc2015_move_two_items = {
-  "editCode": true,
-  "background": "forest",
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'main',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floating_score": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 0, 0, 0, 4,0, 0], [0, 4, 0, 4, 0, 4, 0, 0], [0, 4, 1, 16, 0, 4, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "instructions": "We need the items. Help me get them all!",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floating_score': true,
+  'map': 
+    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x1100000, 0x1100000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x1100000, 0x1100000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0000000, 0x00],  
+     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],   
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],  
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
+  'instructions': '"We need the items. Help me get them all!"',
+  'instructions2': 'Program BOTX to get to both items.',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal2',
+    'imageWidth': 50,
+    'imageHeight': 50
   }
 };
+
 
 levels.js_hoc2015_move_item_destination = {
-  "editCode": true,
-  "background": "snow",
-  "textModeAtStart": true,
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'textModeAtStart': true,
+  'background': 'main',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 4, 4, 4, 4, 0, 0], [0, 4,  4, 4, 4, 4, 4, 0], [0, 4,  0, 4, 4,1, 4, 0], [0, 4,1,16, 0, 0, 4, 0], [0, 4, 4, 4,  4, 4, 4, 0], [0, 0, 0, 0,  0, 0, 0, 0], [0, 0, 0, 0,  0, 0, 0, 0]],
-  "instructions": "I see another item behind that obstacle. Can you bring it back to the destination?",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'moveDown();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floating_score': true,  
+  'map':
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000, 0x0000000],  
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000], 
+     [0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000, 0x0000000],   
+     [0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
+     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000],   
+     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000]],
+  'embed': 'false',
+  'instructions': '"Time to get more items."',
+  'instructions2': 'Try typing the commands to get the items. Don’t forget to end with ();',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal1',
+    'imageWidth': 50,
+    'imageHeight': 50
   }
 };
 
+
 levels.js_hoc2015_move_item_destination_2 = {
- "editCode": true,
-  "background": "snow",
-  "textModeAtStart": true,
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'main',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 0, 0,  4, 0, 0], [0, 4,  4, 4, 4,  0, 4, 0], [0, 4,  4,16, 0,  0, 4, 0], [0, 4,  0, 0, 4,  4, 4, 0], [0, 4,  1, 1, 0,  4, 4, 0], [0, 4,  4, 0, 4,  0, 0, 0], [0, 0,  4, 4, 4,  0, 0, 0]],
-  "embed": "false",
-  "instructions": "Drag the code blocks into the workspace to help the character reach the destination.",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': 
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00], 
+     [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],  
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],   
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
+  'instructions': '"I see another item behind that obstacle. Can you get it too?"',
+  'instructions2': 'Program BOTX to get all the items.',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal1',
+    'imageWidth': 50,
+    'imageHeight': 50
   }
 };
 
 levels.js_hoc2015_move_item_destination_3 = {
-  "editCode": true,
-  "background": "ship",
-  "textModeAtStart": true,
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'main',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floating_score": true,  
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  4, 4, 4,  4, 4, 0], [0, 0, 4,  0, 0, 1,  4, 0], [0, 0,  4,0, 1,  4, 4, 0], [0, 4,  0, 16, 0,  0, 4, 0], [0, 4, 4, 4, 4,  0, 4, 0], [0, 0,  0, 0, 4,  4, 4, 0], [0, 0,  0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "Try typing the commands to get the item to our destination. Don’t forget to end with ();",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map':
+    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000, 0x00],  
+     [0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0140000, 0x0000000, 0x0000001, 0x0000000, 0x00],   
+     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x00],  
+     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
+  'embed': 'false',
+  'instructions': '"There are more items to collect."',
+  'instructions2': 'Program BOTX to get all the items.',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal2',
+    'imageWidth': 50,
+    'imageHeight': 50
   }
 };
 
 
 levels.js_hoc2015_move_cross = {
-  "editCode": true,
-  "background": "ship",
-  "textModeAtStart": true,
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'main',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 4, 0, 0, 0, 0], [0, 0, 4,  1, 4, 0, 0, 0], [0, 4, 1, 0, 1, 4, 0, 0], [0, 0,  4, 16, 4,  0, 0, 0], [0, 0, 0, 4, 0, 0, 0, 0], [0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "Type or drag the blocks to get both items to the destination.",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'moveDown();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map':
+    [[0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000000, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000000, 0x0000000],  
+     [0x0000000, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],   
+     [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],  
+     [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000]],
+  'embed': 'false',
+  'instructions': '"More items to get!"',
+  'instructions2': 'Type or drag the blocks to get all the items.',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal2',
+    'imageWidth': 50,
+    'imageHeight': 50
   }
 };
 
@@ -7633,127 +8207,165 @@ levels.js_hoc2015_move_cross = {
 /* ** level 7 ** */
 
 levels.js_hoc2015_event_two_items = {
-  "editCode": true,
-  "background": "forest",
-  "wallMap": "blank",
-  "softButtons": ["downButton", "upButton"],
-  "codeFunctions": {
-    "moveUp": null,
-    "moveDown": null,
-    "whenUp": null,
-    "whenDown": null
+  'editCode': true,
+  'background': 'snow',
+  'wallMap': 'blank',
+  'softButtons': ['downButton', 'upButton'],
+  'codeFunctions': {
+    'moveUp': null,
+    'moveDown': null,
+
+    'whenUp': null,
+    'whenDown': null
   },
-  "startBlocks": [
-    "function whenUp() {", 
-    "  ",
-    "}",
-    "function whenDown() {",
-    "  ",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
-  "pinWorkspaceToBottom": "true",
-  "embed": "false",
-  "instructions": "\"BOT1, I need you to get a critical message to the GOALs.\"",
-  "instructions2": "Make BOT1 move when you hit the arrow keys.",
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'function whenUp() {', 
+    '  ',
+    '}',
+    'function whenDown() {',
+    '  ',
+    '}'].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 1,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 16, 0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 1,  0, 0, 0, 0]],
+  'pinWorkspaceToBottom': 'true',
+  'embed': 'false',
+  'instructions': '"BOT1, I need you to get a critical message to the GOALs."',
+  'instructions2': 'Make BOT1 move when you hit the arrow keys.',
+  'timeoutFailureTick': 600,
+  'showTimeoutRect': true,
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
   },
-  "callouts": [
+  'callouts': [
     {
-      "element_id": ".droplet-main-canvas",
-      "hide_target_selector": ".droplet-drag-cover",
-      "qtip_config": {
-        "content": {
-          "text": msg.calloutPlaceCommandsHere(),
+      'id': 'playlab:js_hoc2015_event_two_items:placeCommandsHere',
+      'element_id': '.droplet-main-canvas',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutPlaceCommandsHere(),
         },
-        "hide": {
-          "event": "mouseup touchend",
+        'hide': {
+          'event': 'mouseup touchend',
         },
-        "position": {
-          "my": "top left",
-          "at": "top left",
-          "adjust": {
-            "x": 10,
-            "y": 20
+        'position': {
+          'my': 'top left',
+          'at': 'top left',
+          'adjust': {
+            'x': 10,
+            'y': 20
+          }
+        }
+      }
+    },
+    {
+      'id': 'arrowsCallout',
+      'element_id': '#upButton',
+      'hide_target_selector': '#soft-buttons',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutUseArrowButtons(),
+        },
+        'hide': {
+          'event': 'mouseup touchend',
+        },
+        'position': {
+          'my': 'top left',
+          'at': 'bottom left',
+          'adjust': {
+            'x': 30,
+            'y': 0
           }
         }
       }
     }
-  ],
+  ]
 };
 
 levels.js_hoc2015_event_four_items = {
-  "editCode": true,
-  "textModeAtStart": true,
-  "background": "forest",
-  "wallMap": "blobs",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+  'editCode': true,
+  'background': 'snow',
+  'wallMap': 'blobs',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
+
+    'whenLeft': null,
+    'whenRight': null,
+    'whenUp': null,
+    'whenDown': null
   },
-  "startBlocks": [
-    "function whenLeft() {",
-    "  ",
-    "}",
-    "function whenRight() {",
-    "  ",
-    "}",
-    "function whenUp() {",
-    "  ",
-    "}",
-    "function whenDown() {",
-    "  ",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 16, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"Get to all the GOALs as quickly as you can.\"",
-  "instructions2": "Move in all directions.",
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'function whenLeft() {',
+    '  ',
+    '}',
+    'function whenRight() {',
+    '  ',
+    '}',
+    'function whenUp() {',
+    '  ',
+    '}',
+    'function whenDown() {',
+    '  ',
+    '}'].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 1,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [1, 0, 0, 16, 0, 0, 0, 1], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 1,  0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"Get to all the GOALs as quickly as you can."',
+  'instructions2': 'Move in all directions.',
+  'timeoutFailureTick': 600,
+  'showTimeoutRect': true,
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
   },
-  "callouts": [
+  'callouts': [
     {
-      "element_id": ".ace_scroller",
-      "qtip_config": {
-        "content" : {
-          "text": msg.calloutTypeCommandsHere(),
+      'id': 'playlab:js_hoc2015_event_four_items:typeCommandsHere',
+      'element_id': '.ace_scroller',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutTypeCommandsHere(),
         },
-        "event": "click mousedown touchstart mouseup touchend",
-        "position": {
-          "my": "center right",
-          "at": "top left",
-          "adjust": {
-            "x": 25,
-            "y": 25
+        'event': 'click mousedown touchstart mouseup touchend',
+        'position': {
+          'my': 'center right',
+          'at': 'top left',
+          'adjust': {
+            'x': 25,
+            'y': 25
           }
         }
       }
@@ -7762,562 +8374,576 @@ levels.js_hoc2015_event_four_items = {
 };
 
 
-levels.js_hoc2015_event_choose_character =
+levels.js_hoc2015_event_three_goals =
 {
-  "avatarList": ["bot1"],
-  "editCode": true,
-  "background": "forest",
-  "wallMap": "blank",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "setBot": null,
-    "setBackground": null,
-    "setMap": null,
-    "playSound": null,
-
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+  'avatarList': ['bot1'],
+  'editCode': true,
+  'background': 'snow',
+  'wallMap': 'circle',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'autohandlerOverrides': {
+    'whenTouchPilot': 'whenTouchGoal'
   },
-  "startBlocks": [
-    "setBackground(\"forest\");",
-    "function whenLeft() {",
-    "  moveLeft();",
-    "}",
-    "function whenRight() {",
-    "  moveRight();",
-    "}",
-    "function whenUp() {",
-    "  moveUp();",
-    "}",
-    "function whenDown() {",
-    "  moveDown();",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "edgeCollisions": "true",
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "instructions": "\"Time to visit another planet.\"",
-  "instructions2": "Use the dropdown to change the background.  Now find a command to change your BOT.",
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "callouts": [
+  'codeFunctions': {
+    'endGame': null,
+
+    'whenTouchPilot': null
+  },
+  'startBlocks': [
+    'function whenTouchPilot() {',
+    '  ',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'edgeCollisions': 'true',
+  'map': [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [1, 0, 0, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0]],
+  'instructions': '"Reach the GOALs!"',
+  'instructions2': "On the last level, we ended the game for you. Now you're in charge: use the whenTouchPilot event to let BOT1 win the game when he reaches the pilot.",
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'showTimeoutRect': true,
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
+  },
+  'goal': {
+    successCondition: function () { return false; }
+  },
+  'requiredForSuccess' : {
+    'touchAllItems': true,
+    'winGame': true
+  },
+  'completeOnSuccessConditionNotGoals': true,
+  'callouts': [
     {
-      "element_id": ".droplet-main-canvas",
-      "hide_target_selector": ".droplet-drag-cover",
-      "qtip_config": {
-        "content": {
-          "text": msg.calloutPlaceCommandsAtTop(),
+      'id': 'playlab:js_hoc2015_event_choose_character:placeCommandsAtTop',
+      'element_id': '.droplet-main-canvas',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutPlaceCommandsAtTop(),
         },
-        "hide": {
-          "event": "mouseup touchend",
+        'hide': {
+          'event': 'mouseup touchend',
         },
-        "position": {
-          "my": "top left",
-          "at": "top left",
-          "adjust": {
-            "x": 10,
-            "y": 20
+        'position': {
+          'my': 'top left',
+          'at': 'top left',
+          'adjust': {
+            'x': 10,
+            'y': 20
           }
         }
       }
     }
   ],
-  "requiredForSuccess" : {
-    "setSprite": true
-  }
 };
 
 
-levels.js_hoc2015_event_add_items = {
-  "editCode": true,
-  "textModeAtStart": true,
-  "background": "snow",
-  "wallMap": "horizontal",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "addCharacter": null,
-
-    "setBot": null,
-    "setBackground": null,
-    "setMap": null,
-    "playSound": null,
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+levels.js_hoc2015_event_score_points = {
+  'editCode': true,
+  'background': 'forest',
+  'wallMap': 'horizontal',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'autohandlerOverrides': {
+    'whenTouchPilot': 'whenTouchGoal'
   },
-  "startBlocks": [
-    "setBackground(\"snow\");",
-    "setMap(\"horizontal\");",
-    "setBot(\"bot2\");",
-    "function whenLeft() {",
-    "  moveLeft();",
-    "}",
-    "function whenRight() {",
-    "  moveRight();",
-    "}",
-    "function whenUp() {",
-    "  moveUp();",
-    "}",
-    "function whenDown() {",
-    "  moveDown();",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"I’m seeing signs of increased activity on this planet.\"",
-  "instructions2": "Use the addCharacter(); command a couple times to add BIRDs at the start of your program.  Then, go get them.",
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "requiredForSuccess" : {
-    "removedItemCount": 2
-  }
+  'codeFunctions': {
+    'endGame': null,
+    'addPoints': null,
+
+    'whenTouchPilot': null,
+    'whenScore1000': null
+  },
+  'startBlocks': [
+    'function whenTouchPilot() {',
+    '  ',
+    '}',
+    'function whenScore1000() {',
+    '  ',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [1, 0, 0, 16, 0, 0, 0, 1], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 1,  0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"I’m counting on you, BOT1!"',
+  'instructions2': 'Change your score when you get a pilot. Can you make BOT1 win when he gets 1000 points?',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'showTimeoutRect': true,
+  'requiredForSuccess' : {
+    'winGame': true,
+    'scoreMinimum': 1000
+  },
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
+  },
 };
 
 
-levels.js_hoc2015_event_item_behavior = {
-  "editCode": true,
-  "background": "snow",
-  "wallMap": "blobs",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "setToChase": null,
-    "setToFlee": null,
-    "setToRoam": null,
-    "setToStop": null,
-    "moveSlow": null,
-    "moveNormal": null,
-    "moveFast": null,
+levels.js_hoc2015_win_lose = {
+  'editCode': true,
+  'background': 'forest',
+  'wallMap': 'blobs',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'endGame': null,
 
-    "addCharacter": null,
-    "setBot": null,
-    "setBackground": null,
-    "setMap": null,
-    "playSound": null,
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+    'addCharacter': null,
+    'whenTouchPilot': null,
+    'whenTouchMan': null,
+    'playSound': null,
   },
-  "startBlocks": [
-    "setBackground(\"snow\");",
-    "setMap(\"blobs\");",
-    "setBot(\"bot2\");",
-    "addCharacter('roo');",
-    "addCharacter('roo');",
-    "function whenLeft() {",
-    "  moveLeft();",
-    "}",
-    "function whenRight() {",
-    "  moveRight();",
-    "}",
-    "function whenUp() {",
-    "  moveUp();",
-    "}",
-    "function whenDown() {",
-    "  moveDown();",
-    "}"].join("\n"),
+  'startBlocks': [
+    'addCharacter("pilot");',
+    'addCharacter("man");',
+    'function whenTouchPilot() {',
+    '  playSound("character1sound5");',
+    '  ',
+    '}',
+    'function whenTouchMan() {',
+    '  playSound("character1sound6");',
+    '  ',
+    '}',   
+    ''].join('\n'),
 
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingFcore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"It’s up to you, BOT2.\"",
-  "instructions2": "Make the ROOs flee from BOT2.",
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "callouts": [
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingFcore': true,
+  'map': [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 16, 0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"Watch out for the MAN."',
+  'instructions2': 'Make BOT1 lose the game if hits the MAN and win if he gets the pilot.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'showTimeoutRect': true,
+  'callouts': [
     {
-      "element_id": "#droplet_palette_block_setToFlee",
-      "qtip_config": {
-        "content": {
-          "text": msg.calloutCharactersMove(),
+      'id': 'playlab:js_hoc2015_win_lose:charactersMove',
+      'element_id': '#droplet_palette_block_setToFlee',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutCharactersMove(),
         },
-        "position": {
-          "my": "center left",
-          "at": "center right",
-          "adjust": {
-            "x": 15,
-            "y": 0
+        'position': {
+          'my': 'center left',
+          'at': 'center right',
+          'adjust': {
+            'x': 15,
+            'y': 0
           }
         }
       }
     }
   ],
-  "requiredForSuccess" : {
-    "touchAllItems": true,
-    "setActivity": {itemType: "roo", "activityType": "flee"}
-  }
+  'requiredForSuccess' : {
+    'winGame': true
+  },
 };
 
-levels.js_hoc2015_event_touch_items = {
-  "editCode": true,
-  "textModeAtStart": true,
-  "background": "snow",
-  "wallMap": "circle",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "whenTouchRoo": null,
+levels.js_hoc2015_add_characters = {
+  'editCode': true,
+  'background': 'forest',
+  'wallMap': 'circle',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'addCharacter': null,
 
-    "setToChase": null,
-    "setToFlee": null,
-    "setToRoam": null,
-    "setToStop": null,
-    "moveSlow": null,
-    "moveNormal": null,
-    "moveFast": null,
-    "addCharacter": null,
-    "setBot": null,
-    "setBackground": null,
-    "setMap": null,
-    "playSound": null,
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+    'whenGetAllCharacters': null,
+    'endGame': null,
+    'playSound': null,
+    'whenTouchPig': null
   },
-  "startBlocks": [
-    "setBackground(\"snow\");",
-    "setMap(\"circle\");",
-    "setBot(\"bot2\");",
-    "addCharacter('roo');",
-    "addCharacter('roo');",
-    "addCharacter('roo');",
-    "function whenTouchRoo() {",
-    "  ",
-    "}",
-    "function whenLeft() {",
-    "  moveLeft();",
-    "}",
-    "function whenRight() {",
-    "  moveRight();",
-    "}",
-    "function whenUp() {",
-    "  moveUp();",
-    "}",
-    "function whenDown() {",
-    "  moveDown();",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"Be careful, they might be behind you!\"",
-  "instructions2": "Every time you get a ROO, add one MOUSE and one SPIDER to the world.",
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "callouts": [
+  'startBlocks': [
+    'function whenTouchPig() {',
+    '  playSound("item1sound1");',
+    '  ',
+    '}',
+    'function whenGetAllCharacters() {',
+    '  endGame("win");',
+    '  ',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 16, 0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"I\'m seeing signs of increased activity on this planet!"',
+  'instructions2': 'Now you have the WhenRun event and a new addCharacter command to create your own characters. Can you add 3 PIGs to the world? Then, go get them.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'showTimeoutRect': true,
+  'callouts': [
     {
-      "element_id": ".ace_gutter-cell:nth-of-type(8)",
-      "hide_target_selector": ".ace_scroller",
-      "qtip_config": {
-        "content" : {
-          "text": msg.calloutPutCommandsTouchCharacter(),
+      'id': 'playlab:js_hoc2015_add_characters:putCommandsTouchCharacter',
+      'element_id': '.ace_gutter-cell:nth-of-type(8)',
+      'hide_target_selector': '.ace_scroller',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutPutCommandsTouchCharacter(),
         },
-        "event": "click mousedown touchstart mouseup touchend",
-        "position": {
-          "my": "center right",
-          "at": "center right",
+        'event': 'click mousedown touchstart mouseup touchend',
+        'position': {
+          'my': 'center right',
+          'at': 'center right',
         }
       }
     }
   ],
-  "requiredForSuccess" : {
-    "removedItemCount": 3
+
+  'requiredForSuccess' : {
+    'removedItemCount': 3,
+    'winGame': true
   }
 };
 
-levels.js_hoc2015_event_points = {
-  "editCode": true,
-  "textModeAtStart": true,
-  "background": "ship",
-  "wallMap": "horizontal",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "changeScore": null,
+levels.js_hoc2015_chain_characters = {
+  'editCode': true,
+  'background': 'ship',
+  'wallMap': 'horizontal',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'addCharacter': null,
+    'endGame': null,
 
-    "whenTouchCharacter": null,
-    "setToChase": null,
-    "setToFlee": null,
-    "setToRoam": null,
-    "setToStop": null,
-    "moveSlow": null,
-    "moveNormal": null,
-    "moveFast": null,
-    "addCharacter": null,
-    "setBot": null,
-    "setBackground": null,
-    "setMap": null,
-    "playSound": null,
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+    'whenTouchRoo': null,
+    'whenGetAllCharacters': null,
+    'playSound': null
   },
-  "startBlocks": [
-    "setBackground(\"ship\");",
-    "setMap(\"horizontal\");",
-    "setBot(\"bot1\");",
-    "addCharacter('bird');",
-    "addCharacter('bird');",
-    "addCharacter('bird');",
-    "function whenTouchCharacter() {",
-    "  addCharacter(\"random\");",
-    "}",
-    "function whenLeft() {",
-    "  moveLeft();",
-    "}",
-    "function whenRight() {",
-    "  moveRight();",
-    "}",
-    "function whenUp() {",
-    "  moveUp();",
-    "}",
-    "function whenDown() {",
-    "  moveDown();",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"I’m counting on you, BOT1!\"",
-  "instructions2": "Change your score when you touch a character. Can you reach 100 points?",
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "requiredForSuccess" : {
-    "scoreMinimum": 100
+  'startBlocks': [
+    'addCharacter("roo");',
+    'addCharacter("roo");',
+    'function whenTouchRoo() {',
+    '  playSound("item3sound4");',
+    '  ',
+    '}',
+    'function whenTouchMouse() {',
+    '  playSound("character1sound8");',
+    '  ',
+    '}',
+    'function whenGetAllCharacters() {',
+    '  ',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"It\'s up to you, BOT1!"',
+  'instructions2': 'When you touch each ROO, make two MICE appear.  Then collect them all.  Make sure you can win the game.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 900,
+  'showTimeoutRect': true,
+  'requiredForSuccess' : {
+    'winGame': true
   }
 };
 
-levels.js_hoc2015_event_random_items = {
-  "editCode": true,
-  "textModeAtStart": true,
-  "background": "ship",
-  "wallMap": "blobs",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "setBot": { "category": "Commands" },
-    "setBackground": { "category": "Commands" },
-    "setBotSpeed": { "category": "Commands" },
-    "setMap": { "category": "Commands" },
-    "playSound": { "category": "Commands" },
-    "addCharacter": { "category": "Commands" },
-    "setToChase": { "category": "Commands" },
-    "setToFlee": { "category": "Commands" },
-    "setToRoam": { "category": "Commands" },
-    "setToStop": { "category": "Commands" },
-    "moveSlow": { "category": "Commands" },
-    "moveNormal": { "category": "Commands" },
-    "moveFast": { "category": "Commands" },
-    "changeScore": { "category": "Commands" },
-    "moveRight": { "category": "Commands" },
-    "moveLeft": { "category": "Commands" },
-    "moveUp": { "category": "Commands" },
-    "moveDown": { "category": "Commands" },
-    "whenLeft": { "category": "Events" },
-    "whenRight": { "category": "Events" },
-    "whenUp": { "category": "Events" },
-    "whenDown": { "category": "Events" },
-    "whenTouchCharacter": { "category": "Events" },
-    "whenTouchMouse": { "category": "Events"},
-    "whenTouchSpider": { "category": "Events" }
+levels.js_hoc2015_double_chain_characters = {
+  'editCode': true,
+  'background': 'ship',
+  'wallMap': 'horizontal',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'addCharacter': null,
+    'endGame': null,
+
+    'whenTouchRoo': null,
+    'whenTouchBird': null,
+    'whenGetAllCharacters': null
   },
-  "startBlocks": [
-    "setBackground(\"ship\");",
-    "setMap(\"blobs\");",
-    "setBot(\"bot1\");",
-    "addCharacter('spider');",
-    "addCharacter('spider');",
-    "addCharacter('mouse');",
-    "addCharacter('mouse');",
-    "function whenLeft() {",
-    "  moveLeft();",
-    "}",
-    "function whenRight() {",
-    "  moveRight();",
-    "}",
-    "function whenUp() {",
-    "  moveUp();",
-    "}",
-    "function whenDown() {",
-    "  moveDown();",
-    "}",
-    "function whenTouchCharacter() {",
-    "  changeScore(1);",
-    "  ",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"Quick! We need to move faster!\"",
-  "instructions2": "Ready to move faster? Increase your speed when you touch a MOUSE and slow down when you hit a SPIDER.",
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "callouts": [
+  'startBlocks': [
+    'addCharacter("roo");',
+    'addCharacter("roo");',
+    'function whenTouchRoo() {',
+    '  addCharacter("bird");',
+    '  addCharacter("bird");',
+    '}',
+    'function whenTouchBird() {',
+    '  ',
+    '}',
+    'function whenGetAllCharacters() {',
+    '  ',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"It\'s up to you, BOT1!"',
+  'instructions2': 'With this code, when you get a ROO, two BIRDs appear. Can you make two MICE appear when you get a BIRD? Collect the MICE.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 900,
+  'showTimeoutRect': true,
+  'requiredForSuccess' : {
+    'scoreMinimum': 100
+  }
+};
+
+levels.js_hoc2015_change_setting = {
+  'editCode': true,
+  'background': 'ship',
+  'wallMap': 'blobs',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'setBot': { 'category': 'Commands' },
+    'setBackground': { 'category': 'Commands' },
+    'setBotSpeed': { 'category': 'Commands' },
+    'setMap': { 'category': 'Commands' },
+    'playSound': { 'category': 'Commands' },
+    'endGame': { 'category': 'Commands' },
+
+    'whenScore1000': { 'category': 'Events' },
+
+    'addCharacter': { 'category': 'Commands' },
+    'addPoints': { 'category': 'Commands' },
+    'whenTouchCharacter': { 'category': 'Events' },
+    'whenGetAllCharacters': { 'category': 'Events' },
+  },
+  'startBlocks': [
+    'addCharacter("pilot");',
+    'addCharacter("pilot");',
+    'addCharacter("pilot");',
+    'function whenTouchCharacter() {',
+    '  setBackground("random");',
+    '  addPoints(400);',
+    '  ',
+    '}',
+    'function whenGetAllCharacters() {',
+    '  endGame("win");',
+    '  ',
+    '}',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"Time to visit another planet."',
+  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.  Then, play your game and get all the characters to win.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'showTimeoutRect': true,
+  'callouts': [
     {
-      "element_id": ".droplet-palette-group-header.green",
-      "qtip_config": {
-        "content" : {
-          "text": msg.calloutClickCategory(),
+      'id': 'playlab:js_hoc2015_change_setting:clickCategory',
+      'element_id': '.droplet-palette-group-header.green',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutClickCategory(),
         },
-        "position": {
-          "my": "top center",
-          "at": "bottom center",
+        'position': {
+          'my': 'top center',
+          'at': 'bottom center',
         }
       }
     }
   ],
-  "requiredForSuccess" : {
-    "setBotSpeed": true
+  'requiredForSuccess' : {
+    'setSprite': true,
+    'setBotSpeed': true,
+    'setBackground': true,
+    'setMap': true,
+    'winGame': true
   }
 };
 
 levels.js_hoc2015_event_free = {
-  "editCode": true,
-  "textModeAtStart": true,
-  "freePlay": true,
-  "background": "forest",
-  "wallMap": "blank",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "setBot": { "category": "Commands" },
-    "setBackground": { "category": "Commands" },
-    "setBotSpeed": { "category": "Commands" },
-    "setMap": { "category": "Commands" },
-    "playSound": { "category": "Commands" },
-    "addCharacter": { "category": "Commands" },
-    "setToChase": { "category": "Commands" },
-    "setToFlee": { "category": "Commands" },
-    "setToRoam": { "category": "Commands" },
-    "setToStop": { "category": "Commands" },
-    "moveSlow": { "category": "Commands" },
-    "moveNormal": { "category": "Commands" },
-    "moveFast": { "category": "Commands" },
-    "changeScore": { "category": "Commands" },
+  'editCode': true,
+  'freePlay': true,
+  'background': 'forest',
+  'wallMap': 'blank',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'setBot': { 'category': 'Commands' },
+    'setBackground': { 'category': 'Commands' },
+    'setBotSpeed': { 'category': 'Commands' },
+    'setMap': { 'category': 'Commands' },
+    'playSound': { 'category': 'Commands' },
+    'addCharacter': { 'category': 'Commands' },
+    'moveSlow': { 'category': 'Commands' },
+    'moveNormal': { 'category': 'Commands' },
+    'moveFast': { 'category': 'Commands' },
+    'addPoints': { 'category': 'Commands' },
 
-    "moveRight": { "category": "Commands" },
-    "moveLeft": { "category": "Commands" },
-    "moveUp": { "category": "Commands" },
-    "moveDown": { "category": "Commands" },
-    "whenLeft": { "category": "Events" },
-    "whenRight": { "category": "Events" },
-    "whenUp": { "category": "Events" },
-    "whenDown": { "category": "Events" },
-    "whenTouchObstacle": { "category": "Events" },
-    "whenTouchMan": { "category": "Events" },
-    "whenTouchPilot": { "category": "Events" },
-    "whenTouchPig": { "category": "Events" },
-    "whenTouchBird": { "category": "Events" },
-    "whenTouchMouse": { "category": "Events" },
-    "whenTouchRoo": { "category": "Events" },
-    "whenTouchSpider": { "category": "Events" },
-    "whenTouchCharacter": { "category": "Events" }
+    'whenTouchObstacle': { 'category': 'Events' },
+    'whenTouchMan': { 'category': 'Events' },
+    'whenTouchPilot': { 'category': 'Events' },
+    'whenTouchPig': { 'category': 'Events' },
+    'whenTouchBird': { 'category': 'Events' },
+    'whenTouchMouse': { 'category': 'Events' },
+    'whenTouchRoo': { 'category': 'Events' },
+    'whenTouchSpider': { 'category': 'Events' },
+    'whenTouchCharacter': { 'category': 'Events' }
   },
-  "startBlocks": [
-    "setBackground(\"forest\");",
-    "setMap(\"circle\");",
-    "setBot(\"bot1\");",
-    "function whenLeft() {",
-    "  moveLeft();",
-    "}",
-    "function whenRight() {",
-    "  moveRight();",
-    "}",
-    "function whenUp() {",
-    "  moveUp();",
-    "}",
-    "function whenDown() {",
-    "  moveDown();",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"You’re on your own now, BOT1.\"",
-  "callouts": [
+  'startBlocks': [
+    'setBackground("forest");',
+    'setMap("circle");',
+    'setBot("bot1");',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"You\'re on your own now, BOT1."',
+  'autoArrowSteer': true,
+  'callouts': [
     {
-      "element_id": ".droplet-palette-canvas",
-      "qtip_config": {
-        "content": {
-          "text": msg.calloutTryOutNewCommands(),
+      'id': 'playlab:js_hoc2015_event_free:tryOutNewCommands',
+      'element_id': '.droplet-palette-canvas',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutTryOutNewCommands(),
         },
-        "position": {
-          "my": "center left",
-          "at": "center right",
-          "adjust": {
-            "x": -20,
-            "y": 0
+        'position': {
+          'my': 'center left',
+          'at': 'center right',
+          'adjust': {
+            'x': -20,
+            'y': 0
           }
         }
       }
     }
   ],
 };
+
+levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
+  editCode: false,
+  startBlocks: whenRunMoveEast,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveRequiredBlock({ dir: '2' }), // East
+  ],
+});
+
+levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_two_items,  {
+  editCode: false,
+  startBlocks: whenRunMoveEast,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveRequiredBlock({ dir: '2' }), // East
+    moveRequiredBlock({ dir: '4' }), // South
+  ],
+});
+
+levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_item_destination,  {
+  editCode: false,
+  startBlocks: whenRunMoveSouth,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveRequiredBlock({ dir: '4' }), // South
+    moveRequiredBlock({ dir: '8' }), // West
+  ],
+});
+
+levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_item_destination_2,  {
+  editCode: false,
+  startBlocks: whenRunMoveEast,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveRequiredBlock({ dir: '2' }), // East
+    moveRequiredBlock({ dir: '1' }), // North
+    moveRequiredBlock({ dir: '4' }), // South
+  ],
+});
+
+levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_item_destination_3,  {
+  editCode: false,
+  startBlocks: whenRunMoveEast,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveRequiredBlock({ dir: '2' }), // East
+    moveRequiredBlock({ dir: '4' }), // South
+    moveRequiredBlock({ dir: '8' }), // West
+  ],
+});
+
+levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_cross,  {
+  editCode: false,
+  startBlocks: whenRunMoveSouth,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveRequiredBlock({ dir: '1' }), // North
+    moveRequiredBlock({ dir: '4' }), // South
+    moveRequiredBlock({ dir: '8' }), // West
+  ],
+});
 
 
 },{"../block_utils":"/home/ubuntu/staging/apps/build/js/block_utils.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js"}],"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs":[function(require,module,exports){
@@ -8353,15 +8979,19 @@ module.exports.blocks = [
   {func: 'moveLeft', parent: api, category: '', },
   {func: 'moveUp', parent: api, category: '', },
   {func: 'moveDown', parent: api, category: '', },
-  {func: 'playSound', parent: api, category: '', params: ['"character1sound1"'], 
-    dropdown: { 0: [ 
+  {func: 'playSound', parent: api, category: '', params: ['"character1sound1"'],
+    dropdown: { 0: [
+      '"random"',
       '"character1sound1"', '"character1sound2"', '"character1sound3"', '"character1sound4"',
       '"character2sound1"', '"character2sound2"', '"character2sound3"', '"character2sound4"',
       '"item1sound1"', '"item1sound2"', '"item1sound3"', '"item1sound4"',
       '"item3sound1"', '"item3sound2"', '"item3sound3"', '"item3sound4"',
       '"alert1"', '"alert2"', '"alert3"', '"alert4"',
-      '"applause"' 
+      '"applause"'
       ] } },
+
+  {func: 'endGame', parent: api, category: '', params: ['"win"'], dropdown: { 0: ['"win"', '"lose"' ] } },
+  {func: 'addPoints', parent: api, category: '', params: ["250"] },
   {func: 'changeScore', parent: api, category: '', params: ["1"] },
   {func: 'addCharacter', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'setToChase', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
@@ -8371,6 +9001,19 @@ module.exports.blocks = [
   {func: 'moveFast', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'moveNormal', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'moveSlow', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
+  
+  {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllMen', block: 'function whenGetAllMen() {}', expansion: 'function whenGetAllMen() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllPilots', block: 'function whenGetAllPilots() {}', expansion: 'function whenGetAllPilots() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllPigs', block: 'function whenGetAllPigs() {}', expansion: 'function whenGetAllPigs() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllBirds', block: 'function whenGetAllBirds() {}', expansion: 'function whenGetAllBirds() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllMice', block: 'function whenGetAllMice() {}', expansion: 'function whenGetAllMice() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllRoos', block: 'function whenGetAllRoos() {}', expansion: 'function whenGetAllRoos() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllSpiders', block: 'function whenGetAllSpiders() {}', expansion: 'function whenGetAllSpiders() {\n  __;\n}', category: '' },
+  {func: 'whenTouchGoal', block: 'function whenTouchGoal() {}', expansion: 'function whenTouchGoal() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllGoals', block: 'function whenTouchAllGoals() {}', expansion: 'function whenTouchAllGoals() {\n  __;\n}', category: '' },
+  {func: 'whenScore1000', block: 'function whenScore1000() {}', expansion: 'function whenScore1000() {\n  __;\n}', category: '' },
+
   {func: 'whenLeft', block: 'function whenLeft() {}', expansion: 'function whenLeft() {\n  __;\n}', category: '' },
   {func: 'whenRight', block: 'function whenRight() {}', expansion: 'function whenRight() {\n  __;\n}', category: '' },
   {func: 'whenUp', block: 'function whenUp() {}', expansion: 'function whenUp() {\n  __;\n}', category: '' },
@@ -8387,32 +9030,32 @@ module.exports.blocks = [
 
   // Functions hidden from autocomplete - not used in hoc2015:
   {func: 'setSprite', parent: api, category: '', params: ['0', '"bot1"'], dropdown: { 1: [ '"random"', '"bot1"', '"bot2"' ] } },
-  {func: 'setSpritePosition', parent: api, category: '', params: ["0", "7"], 'noAutocomplete': true },
-  {func: 'setSpriteSpeed', parent: api, category: '', params: ["0", "8"], 'noAutocomplete': true },
-  {func: 'setSpriteEmotion', parent: api, category: '', params: ["0", "1"], 'noAutocomplete': true },
-  {func: 'throwProjectile', parent: api, category: '', params: ["0", "1", '"blue_fireball"'], 'noAutocomplete': true },
-  {func: 'vanish', parent: api, category: '', params: ["0"], 'noAutocomplete': true },
-  {func: 'move', parent: api, category: '', params: ["0", "1"], 'noAutocomplete': true },
-  {func: 'showDebugInfo', parent: api, category: '', params: ["false"], 'noAutocomplete': true },
-  {func: 'onEvent', parent: api, category: '', params: ["'when-left'", "function() {\n  \n}"], 'noAutocomplete': true },
+  {func: 'setSpritePosition', parent: api, category: '', params: ["0", "7"], noAutocomplete: true },
+  {func: 'setSpriteSpeed', parent: api, category: '', params: ["0", "8"], noAutocomplete: true },
+  {func: 'setSpriteEmotion', parent: api, category: '', params: ["0", "1"], noAutocomplete: true },
+  {func: 'throwProjectile', parent: api, category: '', params: ["0", "1", '"blue_fireball"'], noAutocomplete: true },
+  {func: 'vanish', parent: api, category: '', params: ["0"], noAutocomplete: true },
+  {func: 'move', parent: api, category: '', params: ["0", "1"], noAutocomplete: true },
+  {func: 'showDebugInfo', parent: api, category: '', params: ["false"], noAutocomplete: true },
+  {func: 'onEvent', parent: api, category: '', params: ["'when-left'", "function() {\n  \n}"], noAutocomplete: true },
 ];
 
 module.exports.categories = {
   '': {
-    'color': 'red',
-    'blocks': []
+    color: 'red',
+    blocks: []
   },
   'Play Lab': {
-    'color': 'red',
-    'blocks': []
+    color: 'red',
+    blocks: []
   },
-  'Commands': {
-    'color': 'red',
-    'blocks': []
+  Commands: {
+    color: 'red',
+    blocks: []
   },
-  'Events': {
-    'color': 'green',
-    'blocks': []
+  Events: {
+    color: 'green',
+    blocks: []
   },
 };
 
@@ -10975,6 +11618,10 @@ var constants = require('./constants');
 
 // API definitions for functions exposed for JavaScript (droplet/ace) levels:
 
+exports.endGame = function(value) {
+  Studio.queueCmd(null, 'endGame', {'value': value});
+};
+
 exports.setBackground = function (value) {
   Studio.queueCmd(null, 'setBackground', {'value': value});
 };
@@ -11089,6 +11736,12 @@ exports.moveUp = function() {
 
 exports.moveDown = function() {
   Studio.queueCmd(null, 'moveDown');
+};
+
+// addPoints is a wrapper for changeScore (used by hoc2015)
+
+exports.addPoints = function(value) {
+  Studio.queueCmd(null, 'changeScore', {'value': value});
 };
 
 exports.changeScore = function(value) {
@@ -11409,7 +12062,7 @@ var Item = function (options) {
   this.renderScale = options.renderScale || 1;
   this.displayDir = Direction.SOUTH;
   this.startFadeTime = null;
-  this.fadeTime = 350;
+  this.fadeTime = constants.ITEM_FADE_TIME;
 
   this.currentFrame_ = 0;
   this.animator_ = window.setInterval(function () {
@@ -11436,7 +12089,7 @@ Item.prototype.getDirectionFrame = function() {
     if (Studio.tickCount && (0 === Studio.tickCount % 2)) {
       this.displayDir = NextTurn[this.displayDir][this.dir];
     }
-}
+  }
 
   return constants.frameDirTableWalkingWithIdle[this.displayDir];
 };
@@ -11788,6 +12441,9 @@ var Collidable = function (opts) {
 
   // default num frames is 1
   this.frames = this.frames || 1;
+
+  /** @private {SpriteAction[]} */
+  this.actions_ = [];
 };
 
 module.exports = Collidable;
@@ -11877,6 +12533,42 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
+/**
+ * Add an action (probably an animation) for this sprite to run.
+ * Note: This is a 'sprouted' new system for updating sprites, separate from
+ *       how older playlab stuff works.  For now it's driving the discrete
+ *       movement hoc2015 levels.
+ * @param {SpriteAction} action
+ */
+Collidable.prototype.addAction = function (action) {
+  this.actions_.push(action);
+};
+
+/**
+ * @returns {boolean} whether this sprite is currently running any actions.
+ */
+Collidable.prototype.hasActions = function () {
+  return this.actions_.length > 0;
+};
+
+/**
+ * Causes this sprite to update all actions it's currently running, and then
+ * remove any that are complete.
+ */
+Collidable.prototype.updateActions = function () {
+  this.actions_.forEach(function (action) {
+    action.update(this);
+  }, this);
+
+  // Splice completed actions out of the current action list, iterating
+  // backwards so we don't skip anything.
+  for (var i = this.actions_.length - 1; i >= 0; i--) {
+    if (this.actions_[i].isDone()) {
+      this.actions_.splice(i, 1);
+    }
+  }
+};
+
 
 },{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/constants.js":[function(require,module,exports){
 'use strict';
@@ -11884,7 +12576,9 @@ Collidable.prototype.outOfBounds = function () {
 exports.SpriteSpeed = {
   VERY_SLOW: 2,
   SLOW: 3,
+  LITTLE_SLOW: 4,
   NORMAL: 5,
+  LITTLE_FAST: 6,
   FAST: 8,
   VERY_FAST: 12,
 };
@@ -11949,8 +12643,9 @@ frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 5;
 frameDirTableWalkingWithIdle[Dir.WEST]       = 6;
 frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 7;
 
-/*
+
 // Reversed for final
+/*
 var frameDirTableWalkingWithIdle = {};
 frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
 frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
@@ -12209,6 +12904,10 @@ exports.RANDOM_VALUE = 'random';
 exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
+
+// Fade durations (in milliseconds)
+exports.GOAL_FADE_TIME = 200;
+exports.ITEM_FADE_TIME = 200;
 
 
 },{}]},{},["/home/ubuntu/staging/apps/build/js/studio/main.js"]);

@@ -133,6 +133,7 @@ ku-TR:
   hoc_is_here: 'تاگی #کاتژێری_کۆدنووسی لێرەیە - سەیرەکی @codeorg بكە'
   just_did_hoc: 'هەرئێستا من #کاتژێری_کۆدنووسی م تەواوکرد - دەتوانی لە @codeorg سەیری بکەی'
   twitter_teach_cs: 'لۆ قوتابخانەی زیاتر زانستی کۆمپیوتەر ناڵێنەوە؟ دەتوانیین ئەوە چارەسەر بکەین. لەو لینکە http://youtu.be/nKIu9yen5nc. Visit http://code.org/  دەتوانی زیاتر فێرببی.'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: یەك کاژێر فێرە کۆدنووسی ببە
   beyond_hoc: پاش یەك کاتژێر
   what_gender: کوڕیت یان کچ؟
@@ -211,6 +212,8 @@ ku-TR:
   homepage_action_text_signpetition: داواکە واژووبکە
   homepage_signpetition_dropdown: 'داواکەمان واژوو بکە &#x25BE;'
   homepage_diversity_pledge: Take the diversity pledge
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: زیاتر فێرببە
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -220,6 +223,7 @@ ku-TR:
   homepage_slot_text_link_hoc: Try the Hour of Code
   homepage_slot_text_link_host: خانەخوێی كاژێرێکی كۆدنووسی بە
   homepage_slot_text_link_hocserved: '# خزمەت کراوە'
+  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: خوێندکارەکان
   homepage_slot_text_blurb_students: لە نێو هەموو وانەکانمان بگەڕێ
   homepage_slot_text_link_codestudio: کۆد ستۆدیۆ تاقیکەوە
@@ -277,8 +281,12 @@ ku-TR:
   class_submission_level_vocational: Vocational
   class_submission_languages_other: Other language(s)
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} teachers have signed up for the Hour of Code and would like a volunteer to help them.'
-  volunteer_engineer_submission_intro_paragraph: 'Please enter the following information if you are a computer science student or software professional, and you’re interested in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: |-
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: ناو
   volunteer_engineer_submission_field_name_placeholder: Full Name
@@ -305,7 +313,7 @@ ku-TR:
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
   volunteer_engineer_submission_submit: بنێرە
-  volunteer_engineer_submission_thankyou: Thank you for submitting your information.
+  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn more here.</a>'
   volunteer_engineer_submission_commitment_uncertain: Uncertain
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hours per week
@@ -341,6 +349,7 @@ ku-TR:
   dashboard_landing_progress_title: Main class progress
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
   dashboard_landing_view_progress: 'View Progress for %{biggest_section}'
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Available courses
   dashboard_landing_available_courses: Here are the courses currently available for you and your students.
   dashboard_landing_more_tutorials: Want to see even more tutorials?
@@ -500,7 +509,7 @@ ku-TR:
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>September 30, 2015</b> - The Hour of Code 2015 is coming! Join classrooms worldwide for the largest learning event in history.'
+  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
   code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: زیاتر فێرببە
