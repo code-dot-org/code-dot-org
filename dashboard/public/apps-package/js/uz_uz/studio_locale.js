@@ -644,4 +644,16 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedTouchAllItems":function(d){return "Next time, get all the items."},
 "failedScoreMinimum":function(d){return "Next time, reach the minimum score."},
 "failedRemovedItemCount":function(d){return "Next time, get the right number of items."},
-"failedSetActivity":function(d){return "Next time, set the correct character activity."}};
+"failedSetActivity":function(d){return "Next time, set the correct character activity."},
+"calloutPutCommandsHereRunStart":function(d){return "Put commands here to have them run when the program starts"},
+"calloutUseArrowButtons":function(d){return "Hold down these buttons or the arrow keys on your keyboard to trigger the move events."},
+"dropletBlock_endGame_description":function(d){return "End the game."},
+"dropletBlock_endGame_param0":function(d){return "type"},
+"dropletBlock_endGame_param0_description":function(d){return "Whether the game was won or lost ('win', 'lose')."},
+"loseMessage":function(d){return "You lose!"},
+"winMessage":function(d){return "You win!"},
+"failedHasSetBackground":function(d){return "Next time, set the background."},
+"failedHasSetMap":function(d){return "Next time, set the map."},
+"failedHasWonGame":function(d){return "Next time, win the game."},
+"failedHasLostGame":function(d){return "Next time, lose the game"},
+"failedAddItem":function(d){return "Next time, add a character."}};

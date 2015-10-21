@@ -8625,13 +8625,11 @@ levels.js_hoc2015_add_characters = {
     'whenTouchPig': null
   },
   'startBlocks': [
+    'playSound("alert1");',
+    'addCharacter("pig");',
     'function whenTouchPig() {',
     '  playSound("item1sound1");',
-    '  ',
-    '}',
-    'function whenGetAllCharacters() {',
-    '  endGame("win");',
-    '  ',
+    '  addPoints(1000);',
     '}',
     ].join('\n'),
   'sortDrawOrder': true,
@@ -8652,22 +8650,22 @@ levels.js_hoc2015_add_characters = {
     [0, 0, 0, 0,  0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"I\'m seeing signs of increased activity on this planet!"',
-  'instructions2': 'Now you have the WhenRun event and a new addCharacter command to create your own characters. Can you add 3 PIGs to the world? Then, go get them.',
+  'instructions2': 'Add 3 PIGs to the planet. Then, go get them.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 600,
   'showTimeoutRect': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_add_characters:putCommandsTouchCharacter',
-      'element_id': '.ace_gutter-cell:nth-of-type(8)',
-      'hide_target_selector': '.ace_scroller',
+      'id': 'playlab:js_hoc2015_add_characters:calloutPutCommandsHereRunStart',
+      'element_id': '.droplet-gutter-line:nth-of-type(2)',
+      'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content' : {
-          'text': msg.calloutPutCommandsTouchCharacter(),
+          'text': msg.calloutPutCommandsHereRunStart(),
         },
-        'event': 'click mousedown touchstart mouseup touchend',
+        'event': 'mouseup touchend',
         'position': {
-          'my': 'center right',
+          'my': 'top left',
           'at': 'center right',
         }
       }
