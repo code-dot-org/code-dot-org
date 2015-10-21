@@ -55,12 +55,12 @@ function saySpriteRequiredBlock(options) {
 
 /**
  * Constructs a required block definition to match "move [sprite] [dir]" blocks
- * @param options (all optional):
- *          sprite (string): zero-indexed string ID of sprite, e.g., "1"
- *          dir (string): string of Direction constant. We show
- *            the direction in feedback blocks
- * @returns test definition suitable for feedback.js::getMissingRequiredBlocks
+ * @param {string} [options.sprite] zero-indexed string ID of sprite, e.g., "1"
+ * @param {string} [options.dir] string of Direction constant. We show
+ *        the direction in feedback blocks
+ * @returns {Array} test definition suitable for getMissingRequiredBlocks
  *          required block processing
+ * @see FeedbackUtils#getMissingRequiredBlocks
  */
 function moveRequiredBlock(options) {
   var titles = {};
