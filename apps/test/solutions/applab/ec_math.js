@@ -104,14 +104,14 @@ module.exports = {
         assert.equal($(".ace_autocomplete").is(":visible"), false,
           'no autocomplete to start');
 
-        typeText('randomNumb');
+        testUtils.typeAceText('randomNumb');
         assert.equal($(".ace_autocomplete").is(":visible"), true,
           'we have autocomplete options after typing');
         assert.equal(/randomNumber/.test($(".ace_autocomplete").text()), true,
           'our autocomplete options contain randomNumber');
 
         // clear contents before run
-        setText('');
+        testUtils.setAceText('');
 
         testUtils.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
@@ -136,13 +136,13 @@ module.exports = {
       runBeforeClick: function (assert) {
         $("#show-code-header").click();
         assert.equal($(".tooltipster-content").text(), '', 'No tooltip to start');
-        typeText('randomNumber(');
+        testUtils.typeAceText('randomNumber(');
 
         assert.equal(/randomNumber\(min, max\)/.test($(".tooltipster-content").text()),
           true, 'get tooltip');
 
         // clear contents before run
-        setText('');
+        testUtils.setAceText('');
 
         testUtils.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
@@ -161,16 +161,3 @@ module.exports = {
     }
   ]
 };
-
-// TODO - move
-function typeText(text) {
-  var aceEditor = window.__TestInterface.getDroplet().aceEditor;
-  aceEditor.textInput.focus();
-  aceEditor.onTextInput(text);
-}
-
-function setText(text) {
-  var aceEditor = window.__TestInterface.getDroplet().aceEditor;
-  aceEditor.textInput.focus();
-  aceEditor.setValue(text);
-}
