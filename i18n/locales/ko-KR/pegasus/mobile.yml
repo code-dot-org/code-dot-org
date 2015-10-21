@@ -27,10 +27,10 @@ ko-KR:
   hoc2014_everyone: 모든사람
   hoc2014_support: '후원하기 &#x25BE;'
   hoc2014_whatishoc: Hour of Code 란?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_header: '# CSEdWeek / Hour of Code 전세계의 이벤트'
+  csedweek_map_signup: 이벤트 등록하기
+  csedweek_map_search_placeholder: Hour of Code 이벤트 검색하기
+  csedweek_map_search_search: 검색
   csedweek_map_search_reset: 처음 상태로
   cded_sign_up: 가입 신청하기
   cded_try_it: 해보기
@@ -109,6 +109,7 @@ ko-KR:
   hoc_is_here: '@codeorg 에서  #HourOfCode 를 살펴보세요'
   just_did_hoc: '@codeorg 에서  #HourOfCode 를 완료했습니다'
   twitter_teach_cs: '왜 더 많은 학교들이 컴퓨터 과학을 가르치지 않을까요? 우리가 이를 해결 할 수 있습니다.  http://youtu.be/nKIu9yen5nc. http://code.org/ 에서 더 자세한 내용을 알아보세요.'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: Hour of Code 해보기
   beyond_hoc: Hour of Code 이후 학습
   what_gender: 성별?
@@ -171,6 +172,8 @@ ko-KR:
   homepage_action_text_signpetition: 청원서에 서명하세요
   homepage_signpetition_dropdown: 청원서에 서명하세요
   homepage_diversity_pledge: 다양성 인증 서약하기
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org와 College Board는 컴퓨터 과학 분야에서 다양성을 개선하기 위해 동맹을 형성 한다.
   homepage_banner_text_link: 더 알아보기
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -180,6 +183,7 @@ ko-KR:
   homepage_slot_text_link_hoc: Hour of Code 해보기
   homepage_slot_text_link_host: Hour of Code의 주인
   homepage_slot_text_link_hocserved: '# 명에게 제공하였습니다'
+  homepage_solot_text_link_volunteer: Hour of Code 자원봉사하기
   homepage_slot_text_title_students: 학생들
   homepage_slot_text_blurb_students: 우리의 모든 튜토리얼을 탐구해 보세요.
   homepage_slot_text_link_codestudio: 코드 스튜디오를 사용해 보세요.
@@ -236,14 +240,18 @@ ko-KR:
   class_submission_level_college: 대학교
   class_submission_level_vocational: 직업관련
   class_submission_languages_other: 다른 프로그래밍언어
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} teachers have signed up for the Hour of Code and would like a volunteer to help them.'
-  volunteer_engineer_submission_intro_paragraph: 'Please enter the following information if you are a computer science student or software professional, and you’re interested in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_title: Hour of Code 자원봉사하기
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: |-
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: 이름
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
+  volunteer_engineer_submission_field_name_placeholder: 성명
+  volunteer_engineer_submission_field_company: 회사 (또는 대학)
+  volunteer_engineer_submission_field_company_placeholder: 회사 (또는 대학)
   volunteer_engineer_submission_field_experience_level: Experience level
   volunteer_engineer_submission_field_location: Location
   volunteer_engineer_submission_field_location_desc: "If you enter your exact address we won't share it, just show you as a pin on map."
@@ -265,7 +273,7 @@ ko-KR:
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
   volunteer_engineer_submission_submit: 제출하기
-  volunteer_engineer_submission_thankyou: Thank you for submitting your information.
+  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn more here.</a>'
   volunteer_engineer_submission_commitment_uncertain: 소속없음
   volunteer_engineer_submission_commitment_one_hr_per_week: 1주일에 1시간
   volunteer_engineer_submission_commitment_three_hrs_per_week: 1주일에 3시간
@@ -301,6 +309,7 @@ ko-KR:
   dashboard_landing_progress_title: 반 진도
   dashboard_landing_progress_biggest: 주요 진도의 상황
   dashboard_landing_view_progress: '%{biggest_section} 진도 살펴보기'
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: 가능한 코스
   dashboard_landing_available_courses: 선생님과 학생들에게 현재 가능한 코스
   dashboard_landing_more_tutorials: 더 많은 튜토리얼을 보고 싶습니까?
@@ -460,7 +469,7 @@ ko-KR:
   dashboard_faq_k5: K-5(초등학교 5학년) 자주묻는 질문들
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>September 30, 2015</b> - The Hour of Code 2015 is coming! Join classrooms worldwide for the largest learning event in history.'
+  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
   code_hoc_coming: 'Hour of Code 가 여기있습니다. - 12월8일-14일!'
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   learn_more: 더 알아보기

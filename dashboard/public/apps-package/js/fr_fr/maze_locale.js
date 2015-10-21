@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "S'il y a un chemin dans la direction indiquée, alors effectuer certaines actions."},
 "ifelseTooltip":function(d){return "S'il y a un chemin dans la direction indiquée, alors exécuter le premier bloc d'actions. Sinon, exécuter le deuxième bloc d'actions."},
 "ifFlowerTooltip":function(d){return "S'il y a une fleur/une ruche dans la direction indiquée, alors fais quelque chose."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Si il y a une fleur dans la direction indiquée, alors effectuer certaines actions."},
 "ifelseFlowerTooltip":function(d){return "S'il y a une fleur ou une ruche dans la direction indiquée, alors le premier bloc d'actions est exécuté. Sinon, on exécute le deuxième bloc d'actions."},
 "insufficientHoney":function(d){return "Tu utilises correctement tous les blocs, mais tu dois produire la bonne quantité de miel."},
 "insufficientNectar":function(d){return "Tu utilises correctement tous les blocs, mais tu dois collecter la bonne quantité de nectar."},

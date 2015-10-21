@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Mengangkat atau menurunkan pensil, mulai atau berhenti menggambar."},
 "penUp":function(d){return "pensil keatas"},
 "reinfFeedbackMsg":function(d){return "Inilah gambar Anda! Teruslah mengerjakan atau lanjutan ke teka-teki berikutnya."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "mengatur alpha"},
 "setColour":function(d){return "Atur warna"},
 "setPattern":function(d){return "tetapkan pola"},
 "setWidth":function(d){return "atur lebar"},
