@@ -5,20 +5,6 @@ require 'os'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 
-def create_database(uri)
-  db = URI.parse(uri)
-
-  command = [
-    'mysql',
-    "--user=#{db.user}",
-    "--host=#{db.host}",
-  ]
-  command << "--execute=\"CREATE DATABASE IF NOT EXISTS #{db.path[1..-1]}\""
-  command << "--password=#{db.password}" unless db.password.nil?
-
-  system command.join(' ')
-end
-
 namespace :lint do
   task :ruby do
     RakeUtils.bundle_exec 'rubocop'
@@ -292,8 +278,7 @@ namespace :install do
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
         puts CDO.dashboard_db_writer
-        RakeUtils.rake 'db:setup_or_migrate'
-        RakeUtils.rake 'seed:all'
+        RakeUtils.rake 'dashboard:setup_db'
       end
     end
   end
@@ -302,9 +287,7 @@ namespace :install do
     if local_environment?
       Dir.chdir(pegasus_dir) do
         RakeUtils.bundle_install
-        create_database CDO.pegasus_db_writer
-        RakeUtils.rake 'db:migrate'
-        RakeUtils.rake 'seed:migrate'
+        RakeUtils.rake 'pegasus:setup_db'
       end
     end
   end
