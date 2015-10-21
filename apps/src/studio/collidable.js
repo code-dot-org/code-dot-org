@@ -42,10 +42,7 @@ var Collidable = function (opts) {
   // default num frames is 1
   this.frames = this.frames || 1;
 
-  /**
-   * @type {Array}
-   * @private
-   */
+  /** @private {SpriteAction[]} */
   this.actions_ = [];
 };
 
@@ -141,9 +138,9 @@ Collidable.prototype.outOfBounds = function () {
  * Note: This is a 'sprouted' new system for updating sprites, separate from
  *       how older playlab stuff works.  For now it's driving the discrete
  *       movement hoc2015 levels.
- * @param {Object} action
+ * @param {SpriteAction} action
  */
-Collidable.prototype.queueAction = function (action) {
+Collidable.prototype.addAction = function (action) {
   this.actions_.push(action);
 };
 
