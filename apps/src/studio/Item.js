@@ -1,5 +1,6 @@
 var Collidable = require('./collidable');
 var constants = require('./constants');
+var studioMsg = require('./locale');
 var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
 var utils = require('../utils');
@@ -375,7 +376,7 @@ Item.prototype.startCollision = function (key) {
   var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
   if (newCollisionStarted) {
     if (this.className === 'hazard') {
-      Studio.fail("Don't run into the guy!");
+      Studio.fail(studioMsg.failedAvoidHazard());
     }
   }
   return newCollisionStarted;
