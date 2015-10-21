@@ -924,8 +924,7 @@ Studio.onTick = function() {
     Studio.animateGoals();
 
     var sprite = Studio.sprite[i];
-    if (sprite.hasActions() || (level.gridAlignedMovement &&
-        (sprite.x !== sprite.displayX || sprite.y !== sprite.displayY))) {
+    if (sprite.hasActions()) {
       spritesNeedMoreAnimationFrames = true;
     }
 
@@ -2850,22 +2849,8 @@ Studio.displaySprite = function(i, isWalking) {
       }
     }
 
-    if (level.gridAlignedMovement) {
-      if (sprite.x > sprite.displayX) {
-        sprite.displayX += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
-      } else if (sprite.x < sprite.displayX) {
-        sprite.displayX -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
-      }
-      if (sprite.y > sprite.displayY) {
-        sprite.displayY += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
-      } else if (sprite.y < sprite.displayY) {
-        sprite.displayY -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
-      }
-
-    } else {
-      sprite.displayX = sprite.x;
-      sprite.displayY = sprite.y;
-    }
+    sprite.displayX = sprite.x;
+    sprite.displayY = sprite.y;
   }
 
   // Turn sprite toward target direction after evaluating actions.
@@ -4462,13 +4447,20 @@ Studio.moveSingle = function (opts) {
           deltaX, deltaY, level.slowJsExecutionFactor));
     }
   } else {
-    sprite.x += deltaX;
-    sprite.y += deltaY;
-
+    var clampedNewX = sprite.x + deltaX;
+    var clampedNewY = sprite.y + deltaY;
     var boundary = Studio.getPlayspaceBoundaries(sprite);
     if (!level.allowSpritesOutsidePlayspace) {
-      sprite.x = Math.max(boundary.left, Math.min(boundary.right, sprite.x));
-      sprite.y = Math.max(boundary.top, Math.min(boundary.bottom, sprite.y));
+      clampedNewX = Math.max(boundary.left, Math.min(boundary.right, clampedNewX));
+      clampedNewY = Math.max(boundary.top, Math.min(boundary.bottom, clampedNewY));
+    }
+
+    if (level.gridAlignedMovement) {
+      sprite.queueAction(new spriteActions.GridMove(
+          clampedNewX - sprite.x, clampedNewY - sprite.y, level.slowJsExecutionFactor));
+    } else {
+      sprite.x = clampedNewX;
+      sprite.y = clampedNewY;
     }
   }
 
