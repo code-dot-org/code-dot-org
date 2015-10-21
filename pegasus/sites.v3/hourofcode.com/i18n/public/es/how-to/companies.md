@@ -45,7 +45,7 @@ Obtendrá una mejor experiencia de la Hora de Código con computadores conectado
 
   * Test tutorials on the devices you plan to use. Make sure they work properly on browsers with sound and video.
   * If the tutorial you choose works best with sound you may want to consider providing headphones.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Have participants partner with each other. Además se dan cuenta que en las ciencias computacionales se puede ser sociable y trabajar en equipo.
+  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Have participants partner with each other. Además se darán cuenta de que las ciencias de la computación son una actividad social y colaborativa.
   * Or try the [unplugged / offline tutorials](<%= resolve_url('https://code.org/learn') %>). These require no computers and is a great way to get participants up and moving. 
 
 ![](/images/fit-350/group_ipad.jpg)
@@ -58,7 +58,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
   * El vídeo original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [El llamado del presidente Obama a que todos los estudiantes aprendan Ciencias de la Computación](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * [El presidente Obama pide a todos los estudiantes que aprendan Ciencias de la Computación](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Ideas to introduce your Hour of Code activity:** - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about technology that’s saving lives, helping people, connecting people). - If you are a tech company, demo fun, innovative products your company is working on. - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals. - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on. - See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).

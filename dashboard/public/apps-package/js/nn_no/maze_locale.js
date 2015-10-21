@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Hvis det er ein sti i gitt retning, så gjer nokre handlingar."},
 "ifelseTooltip":function(d){return "Hvis det er ein sti i gitt retning, utfør den første blokka av handlingar. Ellers gjer den andre blokka."},
 "ifFlowerTooltip":function(d){return "Hvis det er ein blome/bikube i gitt retning, så gjer nokre handlingar."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Hvis det er en blomst i den angitte retningen, utfør handlinger."},
 "ifelseFlowerTooltip":function(d){return "Hvis det er ein blome/bikube i gitt retning, så utfør handlingane  i første blokka. Ellers, utfør handlingan i blokk nummer to."},
 "insufficientHoney":function(d){return "Du bruker alle dei rette blokkene, men du må ha rett mengde honning."},
 "insufficientNectar":function(d){return "Du bruker alle dei rette blokkene, men du må samle inn rett mengde nektar."},

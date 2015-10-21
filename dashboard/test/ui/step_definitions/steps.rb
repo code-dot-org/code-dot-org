@@ -37,6 +37,20 @@ When /^I close the dialog$/ do
   }
 end
 
+When /^I reset the puzzle to the starting version$/ do
+  steps %q{
+    Then I click selector "#versions-header"
+    And I wait to see a dialog titled "Version History"
+    And I close the dialog
+    And I wait for 3 seconds
+    Then I click selector "#versions-header"
+    And I wait until element "button:contains(Delete Progress)" is visible
+    And I click selector "button:contains(Delete Progress)"
+    And I click selector "#confirm-button"
+    Then I wait for 15 seconds
+  }
+end
+
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
   @browser.find_element(selection_criteria)

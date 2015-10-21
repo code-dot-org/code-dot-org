@@ -403,6 +403,7 @@ config.jshint = {
     'tasks/**/*.js',
     'src/**/*.js*',
     'test/**/*.js',
+    '!src/**/*.min.js*',
     '!src/hammer.js',
     '!src/lodash.js',
     '!src/lodash.min.js',

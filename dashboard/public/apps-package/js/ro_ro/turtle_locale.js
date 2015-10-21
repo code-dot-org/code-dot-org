@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Ridică sau coboară creionul, pentru a porni sau a înceta desenul."},
 "penUp":function(d){return "creionul sus"},
 "reinfFeedbackMsg":function(d){return "Aici este desenul dvs.! Continuaţi să lucrați la el sau continuați cu următorul puzzle."},
-"setAlpha":function(d){return "setaţi alfa"},
+"setAlpha":function(d){return "setează alfa"},
 "setColour":function(d){return "setează culoarea"},
 "setPattern":function(d){return "setează model"},
 "setWidth":function(d){return "setează lăţimea"},

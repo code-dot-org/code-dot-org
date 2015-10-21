@@ -616,6 +616,10 @@ input[type="radio"] {
 #prompt-cell {
   vertical-align: top; }
 
+#prompt2 {
+  font-size: 12px;
+  color: #5b6770; }
+
 #ani-gif-preview-wrapper {
   display: inline-block;
   vertical-align: top; }

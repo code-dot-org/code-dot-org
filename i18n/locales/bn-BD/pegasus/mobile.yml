@@ -110,6 +110,7 @@ bn-BD:
   hoc_is_here: '#HourOfCode  এসেছে, @codeorg -এ দেখুন'
   just_did_hoc: '#HourOfCode সম্পন্ন করেছি @codeorg'
   twitter_teach_cs: কেন একাধিক স্কুল কম্পিউটার বিজ্ঞান শিক্ষা দেবেন না? আমরা এটি সামাধান করতে পারি। http://youtu.be/nKIu9yen5nc। Http://code.org/ আরও জানতে ভিজিট করুন.
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: সম্পন্ন করুন Hour of Code
   beyond_hoc: এক ঘণ্টারও বেশি
   what_gender: আপনার লিঙ্গ কি?
@@ -175,6 +176,8 @@ bn-BD:
   homepage_action_text_signpetition: পিটিশন স্বাক্ষর করুন
   homepage_signpetition_dropdown: ▾ একমত;
   homepage_diversity_pledge: বৈচিত্রতার অঙ্গীকার নিন
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: কম্পিউটার বিজ্ঞান-বৈচিত্র্য বাড়ানোর জন্য জোট Code.org ও কলেজ বোর্ড গঠন করে।
   homepage_banner_text_link: আরও জানুন
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -184,6 +187,7 @@ bn-BD:
   homepage_slot_text_link_hoc: Try the Hour of Code
   homepage_slot_text_link_host: কোডের ঘন্টার নিমন্ত্রক হন
   homepage_slot_text_link_hocserved: '# সেবা'
+  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Students
   homepage_slot_text_blurb_students: আমাদের সব টিউটোরিয়াল অনুসন্ধান করুন
   homepage_slot_text_link_codestudio: কোড স্টুডিও চেষ্টা করুন।
@@ -241,8 +245,12 @@ bn-BD:
   class_submission_level_vocational: পেশাগত
   class_submission_languages_other: অন্যান্য ভাষা
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} teachers have signed up for the Hour of Code and would like a volunteer to help them.'
-  volunteer_engineer_submission_intro_paragraph: 'Please enter the following information if you are a computer science student or software professional, and you’re interested in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: |-
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: নাম
   volunteer_engineer_submission_field_name_placeholder: Full Name
@@ -269,7 +277,7 @@ bn-BD:
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
   volunteer_engineer_submission_submit: জমা করুন
-  volunteer_engineer_submission_thankyou: Thank you for submitting your information.
+  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn more here.</a>'
   volunteer_engineer_submission_commitment_uncertain: অনিশ্চিত
   volunteer_engineer_submission_commitment_one_hr_per_week: প্রতি সপ্তাহে ১ ঘন্টা
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ঘন্টা প্রতি সপ্তাহে
@@ -305,6 +313,7 @@ bn-BD:
   dashboard_landing_progress_title: মূল শ্রেণী অগ্রগতি
   dashboard_landing_progress_biggest: এটি হল আপনার সবচেয়ে বড় অংশের অগ্রগতি।
   dashboard_landing_view_progress: '%{biggest_section} এর জন্য আপনার অগ্রগতি দেখুন'
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: বিদ্যমান কোর্সসমূহ
   dashboard_landing_available_courses: 'এখানে  আপনার এবং আপনার ছাত্রদের জন্য বিদ্যমান কোর্সগুলো রয়েছে।'
   dashboard_landing_more_tutorials: Want to see even more tutorials?
@@ -464,7 +473,7 @@ bn-BD:
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>September 30, 2015</b> - The Hour of Code 2015 is coming! Join classrooms worldwide for the largest learning event in history.'
+  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
   code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: আরও জানুন

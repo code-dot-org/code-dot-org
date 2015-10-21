@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Zehaztutako norabidean bidea bada, orduan zenbait ekintza egin."},
 "ifelseTooltip":function(d){return "Zehaztutako norabidean bidea bada, orduan lehenengo blokeko ekintzak egin. Bestela, egin bigarren blokeko ekintzak."},
 "ifFlowerTooltip":function(d){return "Baldin eta zehazturiko norabidean lore/abaraskarik dagoen, egin zenbait ekintza."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Zehaztutako norabidean lorerik badago, egin ekintza batzuk."},
 "ifelseFlowerTooltip":function(d){return "Baldin eta zehazturiko norabidean lore/abaraskarik dagoen, lehen blokeko ekintzak egin. Bestela bigarren blokeko ekintzak egin."},
 "insufficientHoney":function(d){return "Bloke guztiak egokiak dira, baina ezti kopuru egokia bildu behar duzu."},
 "insufficientNectar":function(d){return "Bloke guztiak egokiak dira, baina nektar kopuru egokia bildu behar duzu."},

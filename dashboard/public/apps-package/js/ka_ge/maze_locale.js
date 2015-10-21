@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "თუ განსაზღვრული მიმართულებით გზა არის, შეასრულეთ გარკვეული მოქმედებები."},
 "ifelseTooltip":function(d){return "თუ განსაზღვრული მიმართულებით არის გზა, შეასრულეთ მოქმედებების პირველი ბლოკი. სხვა შემთხვევაში, შეასრულეთ მოქმედებების მეორე ბლოკი."},
 "ifFlowerTooltip":function(d){return "თუ განსაზღვრული მიმართულებით არის ყვავილი/ფიჭა, შეასრულეთ გარკვეული მოქმედებები."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "თუ განსაზღვრული მიმართულებით არის ყვავილი, შეასრულეთ მოქმედებები."},
 "ifelseFlowerTooltip":function(d){return "თუ განსაზღვრული მიმართულებით არის ყვავილი/ფიჭა, შეასრულეთ მოქმედებების პირველი ბლოკი. სხვა შემთხვევაში, შეასრულეთ მოქმედებების მეორე ბლოკი."},
 "insufficientHoney":function(d){return "ყველა საჭირო ბლოკს იყენებთ, მაგრამ ასევე საჭიროა სწორი რაოდენობის თაფლის გაკეთება."},
 "insufficientNectar":function(d){return "ყველა საჭირო ბლოკს იყენებთ, მაგრამ ასევე საჭიროა სწორი რაოდენობის ნექტარი შეაგროვოთ."},

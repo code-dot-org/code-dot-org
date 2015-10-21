@@ -143,10 +143,9 @@
           sväng.'
         maze_2_9: Ok, försök nu att använda det nya 'upprepa tills' blocket - det
           kommer att 'upprepa tills' jag når den irriterande grisen.
-        maze_2_10: Ok, en sista gång för att övning - kan du lösa den här med endast
-          4 block?
-        maze_2_11: Kära person.  Mig zombie. Mig hungrig. Måste... komma... till solros...
-          Kan du få mig dit med bara 5 block?
+        maze_2_10: Okej, öva en gång till - kan du lösa den här med bara 4 block?
+        maze_2_11: Kära människa.  Jag zombie. Jag hungrig. Måste... komma... till
+          solros... Kan du ta mig dit med bara 5 block?
         maze_2_12: Den här är liknande, men lite annorlunda. Kan du klara det med
           bara 5 block?
         maze_2_13: 'Använda det nya "om"-blocket för att låta mig avgöra när jag ka
@@ -156,8 +155,8 @@
           hur du använder "Om"-blocket och "Upprepa"-blocket tillsammans.
         maze_2_15: Jag vill ha solros! Använd ett "Om"-block för att få mig dit med
           minsta antalet block.
-        maze_2_16: Ok, låt oss göra det igen för övningens skull - detta inte är mycket
-          olikt, men se upp för de köttätande växterna!
+        maze_2_16: Okej, vi tränar lite till – denna omgång är ganska lik den förra,
+          men se upp för de köttätande växterna!
         maze_2_17: '"Om/annars"-blocket kontrollerar ett villkor, och gör sen en sak
           ELLER en annan. För att få mig till solrosen försök att använda det här
           blocket.'
@@ -706,14 +705,17 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
-        drag_blocks: Dra ett "flytta" block och fäst det under det andra blocket
+        drag_blocks: Dra ett "gå framåt" block och fäst det under det andra blocket
         run: Klicka på "Kör" för att prova ditt program
         watch_again: Klicka här för att titta på videon igen
         gray_block_explanation: Block som är grå kan inte tas bort. Kan du lösa pusslet
           ändå?
-        show_code_explanation: Klicka här för att se koden till programmet du gör
+        show_code_explanation: Klicka här för att se koden till programmet du skriver
         instructions_repeat_explanation: Instruktionerna för varje uppgift upprepas
           här
         category_explanation: Du har kvar alla block men de har nu ordnats i kategorier
