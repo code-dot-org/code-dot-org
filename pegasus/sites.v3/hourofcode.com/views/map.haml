@@ -3,7 +3,7 @@
 -total_count = DB[:forms].where(kind:'HocSignup2015').count
 -if @company
   -company_name = hoc_s("company_" + @company)
-  -company_total = format_integer_with_commas(company_count(@company))
+  -company_total = format_integer_with_commas(company_count)
   %h2.mapheader
     %a{href: resolve_url('/events/all')}
       = hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count)) + ","
@@ -12,7 +12,7 @@
       %button.signup-button
         = hoc_s(:signup_your_event)
 -elsif @country != 'us'
-  -country_total = format_integer_with_commas(country_count(@country))
+  -country_total = format_integer_with_commas(country_count)
   %h2.mapheader
     %a{href: resolve_url("/events/all")}
       = hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count)) + ","
