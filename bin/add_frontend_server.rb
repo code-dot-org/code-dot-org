@@ -56,12 +56,14 @@ def execute_ssh_on_channel(ssh, command, exit_error_string)
 end
 
 # Return the AWS instance type to use for the given role.
-def aws_instance_type(role)
-  case role
+def aws_instance_type(environment)
+  case environment
   when 'adhoc'
     'c3.large'  # Default to a somewhat smaller instance type for adhco
-  else
+  when 'production'
     'c3.8xlarge'
+  else
+    raise "Unknown environment #{environment}"
   end
 end
 
@@ -168,7 +170,8 @@ end
 ec2client = Aws::EC2::Client.new
 
 determined_instance_zone, instance_name = generate_instance_zone_and_name(ec2client, username, options['name'])
-puts "Naming instance #{instance_name}, creating frontend server"
+instance_type = aws_instance_type(environment)
+puts "Naming instance #{instance_name}, creating frontend server with instance type #{instance_type}"
 
 run_instance_response = ec2client.run_instances ({
                                                     dry_run: false,
@@ -176,12 +179,12 @@ run_instance_response = ec2client.run_instances ({
                                                     min_count: 1,
                                                     max_count: 1,
                                                     image_id: 'ami-d05e75b8',  #Image ID for ubuntu instance we use
-                                                    instance_type: aws_instance_type(role),
+                                                    instance_type: instance_type,
                                                     monitoring: {
                                                         enabled: true
                                                     },
                                                     # Prevent api termination, except for adhoc instances.
-                                                    disable_api_termination: (role != 'adhoc'),
+                                                    disable_api_termination: (environment != 'adhoc'),
                                                     placement: {
                                                       availability_zone: determined_instance_zone
                                                     },
