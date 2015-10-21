@@ -176,7 +176,7 @@ run_instance_response = ec2client.run_instances ({
                                                     min_count: 1,
                                                     max_count: 1,
                                                     image_id: 'ami-d05e75b8',  #Image ID for ubuntu instance we use
-                                                    instance_type: aws_instance_type(role)
+                                                    instance_type: aws_instance_type(role),
                                                     monitoring: {
                                                         enabled: true
                                                     },
