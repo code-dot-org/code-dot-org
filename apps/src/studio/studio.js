@@ -32,6 +32,7 @@ var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
 var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
+var spriteActions = require('./spriteActions');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -923,8 +924,8 @@ Studio.onTick = function() {
     Studio.animateGoals();
 
     var sprite = Studio.sprite[i];
-    if (level.gridAlignedMovement &&
-        (sprite.x !== sprite.displayX || sprite.y !== sprite.displayY)) {
+    if (sprite.hasActions() || (level.gridAlignedMovement &&
+        (sprite.x !== sprite.displayX || sprite.y !== sprite.displayY))) {
       spritesNeedMoreAnimationFrames = true;
     }
 
@@ -2824,51 +2825,56 @@ Studio.displaySprite = function(i, isWalking) {
     extraOffsetY = skin.gridSpriteRenderOffsetY || 0;
   }
 
-  var xCoordPrev = spriteClipRect.getAttribute('x') - extraOffsetX;
-  var yCoordPrev = spriteClipRect.getAttribute('y') - extraOffsetY;
+  if (sprite.hasActions()) {
+    sprite.updateActions();
+  } else {
+    var xCoordPrev = spriteClipRect.getAttribute('x') - extraOffsetX;
+    var yCoordPrev = spriteClipRect.getAttribute('y') - extraOffsetY;
 
-  var dirPrev = sprite.dir;
-  if (dirPrev === Direction.NONE) {
-    // direction not yet set, start at SOUTH (forward facing)
-    sprite.dir = Direction.SOUTH;
-  }
-  else if ((sprite.x != xCoordPrev) || (sprite.y != yCoordPrev)) {
-    sprite.dir = Direction.NONE;
-    if (sprite.x < xCoordPrev) {
-      sprite.dir |= Direction.WEST;
-    } else if (sprite.x > xCoordPrev) {
-      sprite.dir |= Direction.EAST;
+    var dirPrev = sprite.dir;
+    if (dirPrev === Direction.NONE) {
+      // direction not yet set, start at SOUTH (forward facing)
+      sprite.dir = Direction.SOUTH;
     }
-    if (sprite.y < yCoordPrev) {
-      sprite.dir |= Direction.NORTH;
-    } else if (sprite.y > yCoordPrev) {
-      sprite.dir |= Direction.SOUTH;
+    else if ((sprite.x != xCoordPrev) || (sprite.y != yCoordPrev)) {
+      sprite.dir = Direction.NONE;
+      if (sprite.x < xCoordPrev) {
+        sprite.dir |= Direction.WEST;
+      } else if (sprite.x > xCoordPrev) {
+        sprite.dir |= Direction.EAST;
+      }
+      if (sprite.y < yCoordPrev) {
+        sprite.dir |= Direction.NORTH;
+      } else if (sprite.y > yCoordPrev) {
+        sprite.dir |= Direction.SOUTH;
+      }
+    }
+
+    if (level.gridAlignedMovement) {
+      if (sprite.x > sprite.displayX) {
+        sprite.displayX += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
+      } else if (sprite.x < sprite.displayX) {
+        sprite.displayX -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
+      }
+      if (sprite.y > sprite.displayY) {
+        sprite.displayY += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
+      } else if (sprite.y < sprite.displayY) {
+        sprite.displayY -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
+      }
+
+    } else {
+      sprite.displayX = sprite.x;
+      sprite.displayY = sprite.y;
     }
   }
 
+  // Turn sprite toward target direction after evaluating actions.
   if (sprite.dir !== sprite.displayDir) {
     // Every other frame, assign a new displayDir from state table
     // (only one turn at a time):
     if (Studio.tickCount && (0 === Studio.tickCount % 2)) {
       sprite.displayDir = NextTurn[sprite.displayDir][sprite.dir];
     }
-  }
-
-  if (level.gridAlignedMovement) {
-    if (sprite.x > sprite.displayX) {
-      sprite.displayX += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
-    } else if (sprite.x < sprite.displayX) {
-      sprite.displayX -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
-    }
-    if (sprite.y > sprite.displayY) {
-      sprite.displayY += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
-    } else if (sprite.y < sprite.displayY) {
-      sprite.displayY -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
-    }
-
-  } else {
-    sprite.displayX = sprite.x;
-    sprite.displayY = sprite.y;
   }
 
   spriteIcon.setAttribute('x', sprite.displayX - xOffset + extraOffsetX);
@@ -4450,6 +4456,11 @@ Studio.moveSingle = function (opts) {
     // immediately reset the collision state since we didn't actually overlap:
     Studio.collideSpriteWith(opts.spriteIndex, 'wall');
     sprite.endCollision('wall');
+
+    if (level.gridAlignedMovement) {
+      sprite.queueAction(new spriteActions.MoveAndCancel(
+          deltaX, deltaY, level.slowJsExecutionFactor));
+    }
   } else {
     sprite.x += deltaX;
     sprite.y += deltaY;
