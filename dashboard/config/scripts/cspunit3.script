@@ -159,6 +159,7 @@ level 'U3L19 Student Lesson Intro' # 1
 level 'U3L19 - three basic ops of variables’ #2
 level 'U3- Variables - Create And Assign' #3
 level 'U3- Variables - Text Mode'
+level 'U3- Variables - Assign Random For Turtle Draw'
 level 'U3 - Variables - Read Using Turtle' #4 
 level 'U3L19 - write var and string with same name’ # 5
 level 'U3L19 - fix the var name syntax error’ #6
@@ -199,29 +200,13 @@ level 'U3L22 Student Lesson Introduction'
 level 'U3L17 - introKeyValue'
 level 'U3L17 - setKeyValue'
 level 'U3L17 - twoSetKeyValue'
+level 'U3L17 - introCallbacks'
+level 'U3L17 - getKeyValue'
 assessment 'U3L22 Free Response Getting Started'
 assessment 'U3L22 Assessment'
 assessment 'U3L22 Reflection'
 
-#temp
-stage 'Variables Conceptorial Fodder'
-level 'U3L19 - Target Clicker App'
-level 'U3L19 - Intro to variables’
-level 'U3L19 - explanation diff between string and var name'
-level 'U3L19 - variable breakdown intro'
-level 'U3L19 - variable breakdown - declaration'
-level 'U3L19 - variable breakdown - Assigning a value’
-level 'U3L19 - variable breakdown - common mistake - declaring twice'
-level 'U3L19 - variable breakdown - ways to read pt1'
-level 'U3L19 - misconception variable assignment order pt1’
-level 'U3L19 - misconception variable assignment order pt2’
-level 'U3L19 - Arithmetic v Concatenation’
-level ‘AppLab Level U3L19 - variable re-assignment challenge pt1'
-level 'U3L19 - variable breakdown - setText in label'
-level 'U3L19 - variable scope explanation’
-level 'U3L19 - variable scope explanation pt2’
-level 'U3L19 - variable scope explanation pt3’
-level 'U3L19 - done with variables finally'
+
 
 # We think this stage_lesson goes away-Keeping for posterity
 stage 'Improving the Clicker Game'
@@ -392,3 +377,21 @@ stage 'Looping and Random Numbers'
 stage 'Clicker Game'
 stage 'More Variables (2 days)'
 stage 'Variables'
+stage 'Variables Conceptorial Fodder'
+# level 'U3L19 - Target Clicker App'
+# level 'U3L19 - Intro to variables’
+# level 'U3L19 - explanation diff between string and var name'
+# level 'U3L19 - variable breakdown intro'
+# level 'U3L19 - variable breakdown - declaration'
+# level 'U3L19 - variable breakdown - Assigning a value’
+# level 'U3L19 - variable breakdown - common mistake - declaring twice'
+# level 'U3L19 - variable breakdown - ways to read pt1'
+# level 'U3L19 - misconception variable assignment order pt1’
+# level 'U3L19 - misconception variable assignment order pt2’
+# level 'U3L19 - Arithmetic v Concatenation’
+# level ‘AppLab Level U3L19 - variable re-assignment challenge pt1'
+# level 'U3L19 - variable breakdown - setText in label'
+# level 'U3L19 - variable scope explanation’
+# level 'U3L19 - variable scope explanation pt2’
+# level 'U3L19 - variable scope explanation pt3’
+# level 'U3L19 - done with variables finally'

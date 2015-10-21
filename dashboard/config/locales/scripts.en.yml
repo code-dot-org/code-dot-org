@@ -1162,8 +1162,8 @@ en:
           Frequency Analysis: Frequency Analysis
         algebraPD3a:
           title: Computer Science in Algebra PD
-          description_short: CS in Algebra blended online school year study
-          description: CS in Algebra blended online school year study
+          description_short: 'Phase 3 (Part 1): CS in Algebra blended online school year study'
+          description: 'Phase 3 (Part 2): CS in Algebra blended online school year study'
           Updates - Tweaks and Polish: Updates - Tweaks and Polish
           Updates - The Big Game and Projects: Updates - The Big Game and Projects
           Updates - The Design Recipe: Updates - The Design Recipe
@@ -1316,8 +1316,8 @@ en:
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
           title: Computer Science in Algebra PD
-          description_short: CS in Algebra mid year lesson support
-          description: CS in Algebra mid year lesson support
+          description_short: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
+          description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
           Teaching Support - Lessons 1-3: Teaching Support - Lessons 1-3
           Teaching Support - Lessons 4-7: Teaching Support - Lessons 4-7
           Teaching Support - Lessons 8-12: Teaching Support - Lessons 8-12
