@@ -151,20 +151,15 @@ module.exports = {
       position: 'absolute',
       visibility: 'hidden',
       width: 'auto',
-      height: 'auto'
+      height: 'auto',
+      maxWidth: (Applab.appWidth - parseInt(element.style.left, 10)) + 'px',
     }).appendTo($(document.body));
 
     var padding = parseInt(element.style.padding, 10);
 
-    //Below line allows us to wrap text in a reasonable manner. Set a max width that is at least a third but no more
-    //than the full width of the screen. That forces text the label to stop growing at a certain point
-    var maxWidthInt = element.style.left ? Math.max(Applab.appWidth - parseInt(element.style.left), Applab.appWidth / 3)
-        : Applab.appWidth;
-
-    element.style.maxWidth = maxWidthInt + 'px';
-
     if ($(element).data('lock-width') !== PropertyRow.LockState.LOCKED) {
-      element.style.width = clone.width() ? Math.min(clone.width() + 1 + 2 * padding, maxWidthInt) + 'px' : '';
+      //Truncate the width before it runs off the edge of the screen
+      element.style.width = Math.min(clone.width() + 1 + 2 * padding, Applab.appWidth - clone.position().left) + 'px';
     }
     if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
       element.style.height = clone.height() + 1 + 2 * padding + 'px';
