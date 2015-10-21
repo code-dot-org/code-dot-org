@@ -3589,19 +3589,17 @@ Studio.endGame = function(opts) {
     throw new TypeError("Incorrect parameter: " + opts.value);
   }
 
-  if (opts.value == "win") {
+  var winValue = opts.value.toLowerCase().trim();
+
+  if (winValue == "win") {
     Studio.trackedBehavior.hasWonGame = true;
     Studio.setScoreText({text: studioMsg.winMessage()});
-  } else if (opts.value == "lose") {
+  } else if (winValue== "lose") {
     Studio.trackedBehavior.hasLostGame = true;
     Studio.setScoreText({text: studioMsg.loseMessage()});  
   } else {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
-};
-
-Studio.loseGame = function(opts) {
-  Studio.setScoreText({text: studioMsg.loseMessage()});
 };
 
 Studio.setBackground = function (opts) {
@@ -3681,7 +3679,7 @@ Studio.setMap = function (opts) {
     // background name.
     useMap = skin.getMap(Studio.background, mapValue);
   } else {
-    useMap = opts.value;
+    useMap = mapValue;
   }
 
   if (useMap !== null && !skin[useMap]) {
