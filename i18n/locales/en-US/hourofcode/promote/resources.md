@@ -31,7 +31,7 @@ crwdns49573:0crwdne49573:0
 
 [![crwdns49582:0crwdne49582:0](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![crwdns49583:0crwdne49583:0](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![crwdns49584:0crwdne49584:0](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![crwdns49585:0crwdne49585:0](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![crwdns49586:0crwdne49586:0](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![crwdns49587:0crwdne49587:0](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![crwdns49588:0crwdne49588:0](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![crwdns49589:0crwdne49589:0](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![crwdns49590:0crwdne49590:0](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+<%= view :social_posters %>
 
 <a id="logo"></a>
 

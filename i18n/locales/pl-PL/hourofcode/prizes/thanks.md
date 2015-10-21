@@ -22,9 +22,9 @@ Opowiedz swoim znajomym o #HourOfCode.
 
 [Send this email](%= resolve_url('/promote/resources#email') %) to your manager, or the CEO.
 
-## 4. Promote the Hour of Code in your community
+## 4. Promuj Godzinę Kodowania w swojej społeczności
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](%= resolve_url('/promote/resources#email') %).
+Zwerbuj lokalną grupę harcerzy, kościół, uczelnię, koło zainteresowań. Albo zorganizuj blokową Godzinę Kodowania dla sąsiadów. [Send this email](%= resolve_url('/promote/resources#email') %).
 
 ## 6. Poproś władze lokalne o udzielenie wsparcia akcji 'Hour of Code'
 

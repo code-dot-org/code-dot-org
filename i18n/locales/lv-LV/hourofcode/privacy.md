@@ -245,4 +245,4 @@ Mēs neizpaužam nekādu personas informāciju trešajām pusēm mārketinga nol
 Lūdzam sazināties ar Code.org, ja Jums ir radušies jebkādi jautājumi vai komentāri par šo konfidencialitātes ziņojumu, Jūsu personīgo informāciju, mūsu trešo pušu atklāšanas politiku vai Jūsu piekrišanas izvēlēm, rakstot mums <http://code.org/contact> vai 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.   
   
   
-[![image](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![image](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)
