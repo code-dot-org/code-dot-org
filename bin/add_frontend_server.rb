@@ -55,15 +55,6 @@ def execute_ssh_on_channel(ssh, command, exit_error_string)
   ssh.loop
 end
 
-# Return the AWS instance type to use for the given role.
-def aws_instance_type(role)
-  case role
-  when 'adhoc'
-    'c3.large'  # Default to a somewhat smaller instance type for adhco
-  else
-    'c3.8xlarge'
-  end
-end
 
 # Returns a (instance_zone, frontend_name) typle for the given
 # ec2client.  The instance_zone is the one with least capacity amongst frontend instances,
@@ -176,12 +167,11 @@ run_instance_response = ec2client.run_instances ({
                                                     min_count: 1,
                                                     max_count: 1,
                                                     image_id: 'ami-d05e75b8',  #Image ID for ubuntu instance we use
-                                                    instance_type: aws_instance_type(role),
+                                                    instance_type: 'c3.8xlarge',
                                                     monitoring: {
                                                         enabled: true
                                                     },
-                                                    # Prevent api termination, except for adhoc instances.
-                                                    disable_api_termination: (role != 'adhoc'),
+                                                    disable_api_termination: true, #Prevent against api termination
                                                     placement: {
                                                       availability_zone: determined_instance_zone
                                                     },
@@ -287,7 +277,6 @@ if $?.success?
   puts '--------------------------------------------------------'
   puts "Dashboard listening at: http://#{public_dns_name}:8080"
   puts "Pegasus listening at:   http://#{public_dns_name}:8081"
-  puts "To ssh to server:       ssh gateway.code.org -t ssh #{private_dns_name}"
 else
   puts 'Error bootstrapping server'
   puts result
