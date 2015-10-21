@@ -136,14 +136,28 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
+/**
+ * Add an action (probably an animation) for this sprite to run.
+ * Note: This is a 'sprouted' new system for updating sprites, separate from
+ *       how older playlab stuff works.  For now it's driving the discrete
+ *       movement hoc2015 levels.
+ * @param {Object} action
+ */
 Collidable.prototype.queueAction = function (action) {
   this.actions_.push(action);
 };
 
+/**
+ * @returns {boolean} whether this sprite is currently running any actions.
+ */
 Collidable.prototype.hasActions = function () {
   return this.actions_.length > 0;
 };
 
+/**
+ * Causes this sprite to update all actions it's currently running, and then
+ * remove any that are complete.
+ */
 Collidable.prototype.updateActions = function () {
   this.actions_.forEach(function (action) {
     action.update(this);
