@@ -10,13 +10,13 @@
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "start_direction": "1",
-    "nectar_goal": "20",
+    "start_direction": "2",
+    "nectar_goal": "9",
     "flower_type": "redWithNectar",
     "maze": "[[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,2,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,-3,0,0,0,0],[0,0,-2,0,0,0,0,0],[0,0,3,0,0,-1,5,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "33",
+    "ideal": "26",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -29,8 +29,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "honey_goal": "30",
-    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\nSolve this puzzle with the fewest number of blocks possible.\r\n\r\n<h4 class=\"hint\">\r\n<details>\r\n<summary><b>Hints</b></summary>\r\n\t<br/><br/>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #1</b></summary>\r\n    \t<br/>\r\n    \tThree variables will help you out here.  One for units of nectar, one for units of honey, and one for how far the bee should move each iteration.\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n\t<h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #2</b></summary>\r\n    \t<br/>\r\n    \tIt will be very helpful to use three loops inside of your main loop.  One for moving forward, one for collecting nectar and one for making honey. \r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #3</b></summary>\r\n    \t<br/>\r\n        Take a look at this option for movement:  \r\n    \t<img src=\"https://images.code.org/ded2ac384c78452fb2baf9bb5da29316-image-1445316708155.33.17.png\" width=\"350px\"/>\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Solution</b></summary>\r\n    \t<br/>\r\n    \t<br/>\r\n    \t<img src=\"https://images.code.org/efe1293f7e33c88e8de6642ead6a5b87-image-1445316708157.33.42.png\" width=\"450px\"/>\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n</details>\r\n</h4>\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>\r\n",
+    "honey_goal": "6",
+    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\nSolve this puzzle with the fewest number of blocks possible.\r\n\r\n<h4 class=\"hint\">\r\n<details>\r\n<summary><b>Hints</b></summary>\r\n\t<br/><br/>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #1</b></summary>\r\n    \t<br/>\r\n    \tNotice that at the beginning of the outside loop, the bee moves as many times as there is nectar in the next flower.\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n\t<h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #2</b></summary>\r\n    \t<br/>\r\n    \tEach time through the loop, the flowers have two less nectar and the bee needs to make one more honey.\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #3</b></summary>\r\n    \t<br/>\r\n        Take a look at this option for movement:  \r\n    \t<img src=\"https://images.code.org/1b899e781ceeb65a8dcca4fd6d2bdb9a-image-1445406085550.40.46.png\" width=\"350px\"/>\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Solution</b></summary>\r\n    \t<br/>\r\n    \t<br/>\r\n    \t<img src=\"https://images.code.org/d006cddb67306301489cf001e8e8a6da-image-1445405887028.34.02.png\" width=\"450px\"/>\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n</details>\r\n</h4>",
     "video_key": "C4_variables_playlab",
     "never_autoplay_video": "true",
     "fast_get_nectar_animation": "true",
@@ -38,11 +38,6 @@
   }
 }]]></config>
   <blocks>
-    <start_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false"/>
-      </xml>
-    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="maze_moveForward"/>

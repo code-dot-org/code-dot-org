@@ -1,19 +1,9 @@
 .mapheader {
-  position: relative;
+  text-align: center;
 }
 
 .signup-button {
-  margin: 40px 0 0 20px;
-}
-
-@media screen and (max-width: 640px) {
-  .signup-button {
-    margin: 0 0 10px 0;
-  }
-}
-
-.float-left {
-  float: left;
+  margin-left: 10px;
 }
 
 .full-width {
