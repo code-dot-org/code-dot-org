@@ -5,6 +5,8 @@ Feature: App Lab Data Blocks
 
   Background:
     Given I sign in as a student
+    # This level evaluates the create/read/update/deleteRecord and set/getKeyValue blocks
+    # when run, and prints success if the data storage APIs are working properly.
     And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/8?noautoplay=true"
     And I rotate to landscape
     And element "#runButton" is visible
