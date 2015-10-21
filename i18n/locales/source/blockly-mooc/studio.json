@@ -497,7 +497,5 @@
   "failedScoreMinimum": "Next time, reach the minimum score.",
   "failedRemovedItemCount": "Next time, get the right number of items.",
   "failedSetActivity": "Next time, set the correct character activity.",
-  "failedHasWonGame": "Next time, win the game.",
-  "failedHasLostGame": "Next time, lose the game"
-
+  "failedAddItem": "Next time, add a character."
 }
