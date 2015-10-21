@@ -529,8 +529,9 @@ function loadHoc2015x(skin, assetUrl) {
   skin.ProjectileClassNames = [
   ];
 
-  // TODO: proper item class names
-  skin.ItemClassNames = [  ];
+  skin.ItemClassNames = [
+    'hazard'
+  ];
 
   skin.AutohandlerTouchItems = {
   };
@@ -539,6 +540,17 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
+    'hazard': {
+      frames: 13,
+      width: 100,
+      height: 100,
+      renderOffset: {
+        x: 0,
+        y: -20
+      },
+      activity: 'none',
+      speed: constants.SpriteSpeed.VERY_SLOW
+    }
   };
 
   // Spritesheet for animated goal.
@@ -618,6 +630,8 @@ function loadHoc2015x(skin, assetUrl) {
   skin.preventItemLoop = function (className) {
     return className === 'item_character1';
   };
+
+  skin.hazard = skin.assetUrl('hazard_idle.png');
 
   skin.main = {
     background: skin.assetUrl('background_background1.jpg'),
