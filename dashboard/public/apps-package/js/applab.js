@@ -7421,9 +7421,9 @@ module.exports = React.createClass({displayName: "exports",
     return (
       React.createElement("div", {id: "design-headers"}, 
         React.createElement("div", {id: "design-toolbox-header", className: "workspace-header", style: styles.toolboxHeader}, 
+          manageAssetsIcon, 
           React.createElement("span", null, applabMsg.designToolboxHeader()), 
-          React.createElement("span", {className: "workspace-header-clickable", onClick: this.onToggleToolbox}, " ", msg.hideToolbox()), 
-          manageAssetsIcon
+          React.createElement("span", {className: "workspace-header-clickable", onClick: this.onToggleToolbox}, " ", msg.hideToolbox())
         ), 
         React.createElement("div", {className: "workspace-header", onClick: this.onToggleToolbox, 
             style: styles.showToolboxHeader}, 
