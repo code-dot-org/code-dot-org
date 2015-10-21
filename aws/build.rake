@@ -22,17 +22,41 @@ require 'shellwords'
 # with dependencies. In short, it let's create blocks of Ruby code that are only invoked when one of
 # the dependent files changes.
 #
+
+def format_duration(total_seconds)
+  total_seconds = total_seconds.to_i
+  minutes = (total_seconds / 60).to_i
+  seconds = total_seconds - (minutes * 60)
+  "%.1d:%.2d minutes" % [minutes, seconds]
+end
+
+def with_hipchat_logging(name)
+  start_time = Time.now
+  HipChat.log "Running #{name}..."
+
+  begin
+    yield if block_given?
+  rescue => e
+    # notify developers room and our own room
+    "<b>#{name}</b> failed in #{format_duration(Time.now - start_time)}".tap do |message|
+      HipChat.log message, color: 'red', notify: 1
+      HipChat.developers message, color: 'red', notify: 1
+    end
+    # log detailed error information in our own room
+    HipChat.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'
+    raise
+  end
+
+  HipChat.log "#{name} succeeded in #{format_duration(Time.now - start_time)}"
+end
+
 def build_task(name, dependencies=[], params={})
   path = aws_dir(".#{name}-built")
 
   file path => dependencies do
-    begin
+    with_hipchat_logging(name) do
       yield if block_given?
       touch path
-    rescue => e
-      HipChat.log "<b>#{name}</b> FAILED!", color: 'red', notify: 1
-      HipChat.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'
-      raise
     end
   end
 
@@ -272,51 +296,49 @@ end
 
 task :pegasus_unit_tests do
   Dir.chdir(pegasus_dir) do
-    HipChat.log 'Running <b>pegasus</b> unit tests...'
-    begin
+    with_hipchat_logging("pegasus unit tests") do
       RakeUtils.rake 'test'
-    rescue
-      HipChat.log 'Unit tests for <b>pegasus</b> failed.', color: 'red'
-      HipChat.developers 'Unit tests for <b>pegasus</b> failed.', color: 'red', notify: 1
-      raise
     end
   end
 end
 
 task :shared_unit_tests do
   Dir.chdir(shared_dir) do
-    HipChat.log 'Running <b>shared</b> unit tests...'
-    begin
+    with_hipchat_logging("shared unit tests") do
       RakeUtils.rake 'test'
-    rescue
-      HipChat.log 'Unit tests for <b>shared</b> failed.', color: 'red'
-      HipChat.developers 'Unit tests for <b>shared</b> failed.', color: 'red', notify: 1
-      raise
     end
   end
 end
 
-task :dashboard_unit_tests do
+def log_coverage_results
+  results_file = dashboard_dir('coverage/.last_run.json')
+  results = JSON.parse(File.read(results_file))
+  HipChat.log "Unit tests for <b>dashboard</b> coverage: #{results["results"]["coverage_percent"]}. Details: https://test-studio.code.org/coverage/index.html", color: 'green'
+rescue Exception => e
+  HipChat.log "Couldn't read test coverage results at #{results_file}: #{e.to_s}\n#{e.backtrace.join("\n")}"
+end
+
+COVERAGE_SYMLINK = dashboard_dir 'public/coverage'
+file COVERAGE_SYMLINK do
+  Dir.chdir(dashboard_dir('public')) do
+    RakeUtils.system_ 'ln', '-s', '../coverage', 'coverage'
+  end
+end
+
+task :dashboard_unit_tests => [COVERAGE_SYMLINK] do
   Dir.chdir(dashboard_dir) do
-    # Unit tests mess with the database so stop the service before running them and
-    # reset the database afterward.
-    RakeUtils.stop_service CDO.dashboard_unicorn_name
-    HipChat.log "Resetting <b>dashboard</b> database..."
-    RakeUtils.rake 'db:schema:load'
-    HipChat.log 'Running <b>dashboard</b> unit tests...'
-    begin
-      RakeUtils.rake 'test'
-    rescue
-      HipChat.log 'Unit tests for <b>dashboard</b> failed.', color: 'red'
-      HipChat.developers 'Unit tests for <b>dashboard</b> failed.', color: 'red', notify: 1
-      raise
+    with_hipchat_logging("dashboard unit tests") do
+      # Unit tests mess with the database so stop the service before running them and
+      # reset the database afterward.
+      RakeUtils.stop_service CDO.dashboard_unicorn_name
+      RakeUtils.rake 'test', 'COVERAGE=1'
+      log_coverage_results
+      RakeUtils.start_service CDO.dashboard_unicorn_name
     end
-    RakeUtils.start_service CDO.dashboard_unicorn_name
   end
 end
 
 UI_TEST_SYMLINK = dashboard_dir 'public/ui_test'
-
 file UI_TEST_SYMLINK do
   Dir.chdir(dashboard_dir('public')) do
     RakeUtils.system_ 'ln', '-s', '../test/ui', 'ui_test'
