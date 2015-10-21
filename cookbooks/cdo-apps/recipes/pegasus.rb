@@ -13,7 +13,7 @@ template "/etc/init.d/pegasus" do
     user: node[:current_user],
     env: node.chef_environment,
   })
-  notifies :run, 'execute[install-pegasus]', :immediately
+  notifies :run, 'execute[bundle-install-pegasus]', :immediately
 end
 
 template "/etc/logrotate.d/pegasus" do
@@ -38,12 +38,18 @@ template "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/config/n
   })
 end
 
-execute "install-pegasus" do
-  command "bundle exec rake install:pegasus"
-  cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
-  environment ({
-    'LC_ALL' => 'en_US.UTF-8'
-  })
+execute "bundle-install-pegasus" do
+  command "sudo bundle install"
+  cwd "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus"
+  user node[:current_user]
+  group node[:current_user]
+  action :nothing
+  notifies :run, 'execute[setup-pegasus-db]', :immediately
+end
+
+execute "setup-pegasus-db" do
+  command "rake pegasus:setup_db"
+  cwd "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus"
   user node[:current_user]
   group node[:current_user]
   action :nothing
