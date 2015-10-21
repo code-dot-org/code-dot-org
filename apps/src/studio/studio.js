@@ -2706,25 +2706,12 @@ Studio.createLevelItems = function (svg) {
       var mapVal = Studio.map[row][col];
       for (var index = 0; index < skin.ItemClassNames.length; index++) {
         if (constants.squareHasItemClass(index, mapVal)) {
-          var className = skin.ItemClassNames[index];
-          var classProperties = skin.specialItemProperties[className] || {};
           // Create item:
-          var itemOptions = {
-            frames: getFrameCount(className, skin.specialItemProperties, skin.itemFrames),
-            className: className,
-            dir: Direction.NONE,
-            image: skin[className],
-            speed: Studio.itemSpeed[className],
-            activity: Studio.itemActivity[className],
-            width: utils.valueOr(classProperties.width, 50),
-            height: utils.valueOr(classProperties.height, 50),
-            renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0}),
-            loop: true,
+          var classOptions = Studio.getItemOptionsForItemClass(skin.ItemClassNames[index]);
+          var itemOptions = $.extend({}, classOptions, {
             x: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col,
-            y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row,
-            renderScale: utils.valueOr(classProperties.scale, 1)
-          };
-
+            y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row
+          });
           var item = new Item(itemOptions);
 
           item.createElement(svg);
@@ -3277,6 +3264,30 @@ Studio.playSound = function (opts) {
   Studio.playSoundCount++;
 };
 
+/**
+ * De-duplicated legwork of finding appropriate options for the given item
+ * class.  Does not set things like position and direction - those should
+ * be applied on top of the returned options object.
+ * @param {string} itemClass
+ * @returns {Object} options object that can be passed to item constructor.
+ */
+Studio.getItemOptionsForItemClass = function (itemClass) {
+  var classProperties = utils.valueOr(skin.specialItemProperties[itemClass], {});
+  return {
+    className: itemClass,
+    image: skin[itemClass],
+    frames: getFrameCount(itemClass, skin.specialItemProperties, skin.itemFrames),
+    loop: true,
+    width: utils.valueOr(classProperties.width, 50),
+    height: utils.valueOr(classProperties.height, 50),
+    dir: Direction.NONE,
+    speed: Studio.itemSpeed[itemClass],
+    activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
+    renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
+    renderScale: utils.valueOr(classProperties.scale, 1)
+  };
+};
+
 Studio.addItem = function (opts) {
 
   if (typeof opts.className !== 'string') {
@@ -3331,31 +3342,14 @@ Studio.addItem = function (opts) {
     return pos;
   };
 
-  var direction = level.itemGridAlignedMovement ? Direction.NONE :
-                    directions[Math.floor(Math.random() * directions.length)];
   var pos = generateRandomItemPosition();
-
-  var renderScale = 1;
-  var properties = skin.specialItemProperties[itemClass];
-  if (properties) {
-    renderScale = utils.valueOr(properties.scale, renderScale);
-  }
-
-  var itemOptions = {
-    frames: getFrameCount(itemClass, skin.specialItemProperties, skin.itemFrames),
-    className: itemClass,
-    dir: direction,
-    image: skinItem,
-    loop: true,
+  var dir = level.itemGridAlignedMovement ? Direction.NONE :
+      directions[Math.floor(Math.random() * directions.length)];
+  var itemOptions = $.extend({}, Studio.getItemOptionsForItemClass(itemClass), {
     x: pos.x,
     y: pos.y,
-    speed: Studio.itemSpeed[itemClass],
-    activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
-    width: 100,
-    height: 100,
-    renderScale: renderScale,
-  };
-
+    dir: dir
+  });
   var item = new Item(itemOptions);
 
   if (level.blockMovingIntoWalls) {
