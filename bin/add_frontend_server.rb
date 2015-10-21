@@ -59,7 +59,7 @@ end
 def aws_instance_type(environment)
   case environment
   when 'adhoc'
-    'c3.large'  # Default to a somewhat smaller instance type for adhco
+    'c3.xlarge'  # Default to a somewhat smaller instance type for adhco
   when 'production'
     'c3.8xlarge'
   else
