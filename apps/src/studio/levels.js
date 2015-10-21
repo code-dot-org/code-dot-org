@@ -1572,31 +1572,45 @@ levels.hoc2015_2 = {
 
 
 levels.js_hoc2015_move_right = {
-  "editCode": true,
-  "background": "forest",
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'main',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "timeoutAfterWhenRun": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 16, 0, 1, 4,0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "instructions": "Help me program the character to get the item and bring it to the destination. Stack a couple moveRight(); commands and then hit Run to make him go.",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map':
+    [[0x1020000, 0x1020000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
+     [0x1020000, 0x1020000, 0x0000000, 0x0010000, 0x0020000, 0x0100000, 0x00, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x0000000],  
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],   
+     [0x0000000, 0x0000000, 0x0000000, 0x0100000, 0x0010000, 0x0120000, 0x00, 0x0000000], 
+     [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],  
+     [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000]],
+
+  'instructions': '"Collect the item!"',
+  'instructions2': 'Program BOTX to get to the item.  Add a second moveRight command and then hit Run.',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutFailureTick': 100,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal1',
+    'imageWidth': 50,
+    'imageHeight': 50
   },
   "callouts": [
     {
@@ -1607,15 +1621,15 @@ levels.js_hoc2015_move_right = {
         "content": {
           "text": msg.calloutPlaceCommandsHere(),
         },
-        "hide": {
-          "event": "mouseup touchend",
+        'hide': {
+          'event': 'mouseup touchend',
         },
-        "position": {
-          "my": "top left",
-          "at": "top left",
-          "adjust": {
-            "x": 10,
-            "y": 20
+        'position': {
+          'my': 'top left',
+          'at': 'top left',
+          'adjust': {
+            'x': 10,
+            'y': 20
           }
         }
       }
@@ -1624,150 +1638,214 @@ levels.js_hoc2015_move_right = {
 };
 
 levels.js_hoc2015_move_two_items = {
-  "editCode": true,
-  "background": "forest",
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'main',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floating_score": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 0, 0, 0, 4,0, 0], [0, 4, 0, 4, 0, 4, 0, 0], [0, 4, 1, 16, 0, 4, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "instructions": "We need the items. Help me get them all!",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floating_score': true,
+  'map': 
+    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x1100000, 0x1100000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x1100000, 0x1100000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0000000, 0x00],  
+     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],   
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],  
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
+  'instructions': '"We need the items. Help me get them all!"',
+  'instructions2': 'Program BOTX to get to both items.',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal2',
+    'imageWidth': 50,
+    'imageHeight': 50
   }
 };
+
 
 levels.js_hoc2015_move_item_destination = {
-  "editCode": true,
-  "background": "snow",
-  "textModeAtStart": true,
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'textModeAtStart': true,
+  'background': 'main',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 4, 4, 4, 4, 0, 0], [0, 4,  4, 4, 4, 4, 4, 0], [0, 4,  0, 4, 4,1, 4, 0], [0, 4,1,16, 0, 0, 4, 0], [0, 4, 4, 4,  4, 4, 4, 0], [0, 0, 0, 0,  0, 0, 0, 0], [0, 0, 0, 0,  0, 0, 0, 0]],
-  "instructions": "I see another item behind that obstacle. Can you bring it back to the destination?",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'moveDown();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floating_score': true,  
+  'map':
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000, 0x0000000],  
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000], 
+     [0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000, 0x0000000],   
+     [0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
+     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000],   
+     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000]],
+  'embed': 'false',
+  'instructions': '"Time to get more items."',
+  'instructions2': 'Try typing the commands to get the items. Don’t forget to end with ();',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal1',
+    'imageWidth': 50,
+    'imageHeight': 50
   }
 };
 
+
 levels.js_hoc2015_move_item_destination_2 = {
- "editCode": true,
-  "background": "snow",
-  "textModeAtStart": true,
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'main',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 0, 0,  4, 0, 0], [0, 4,  4, 4, 4,  0, 4, 0], [0, 4,  4,16, 0,  0, 4, 0], [0, 4,  0, 0, 4,  4, 4, 0], [0, 4,  1, 1, 0,  4, 4, 0], [0, 4,  4, 0, 4,  0, 0, 0], [0, 0,  4, 4, 4,  0, 0, 0]],
-  "embed": "false",
-  "instructions": "Drag the code blocks into the workspace to help the character reach the destination.",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': 
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00], 
+     [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],  
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],   
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
+  'instructions': '"I see another item behind that obstacle. Can you get it too?"',
+  'instructions2': 'Program BOTX to get all the items.',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal1',
+    'imageWidth': 50,
+    'imageHeight': 50
   }
 };
 
 levels.js_hoc2015_move_item_destination_3 = {
-  "editCode": true,
-  "background": "ship",
-  "textModeAtStart": true,
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'main',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floating_score": true,  
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  4, 4, 4,  4, 4, 0], [0, 0, 4,  0, 0, 1,  4, 0], [0, 0,  4,0, 1,  4, 4, 0], [0, 4,  0, 16, 0,  0, 4, 0], [0, 4, 4, 4, 4,  0, 4, 0], [0, 0,  0, 0, 4,  4, 4, 0], [0, 0,  0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "Try typing the commands to get the item to our destination. Don’t forget to end with ();",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map':
+    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000, 0x00],  
+     [0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0140000, 0x0000000, 0x0000001, 0x0000000, 0x00],   
+     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x00],  
+     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
+  'embed': 'false',
+  'instructions': '"There are more items to collect."',
+  'instructions2': 'Program BOTX to get all the items.',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal2',
+    'imageWidth': 50,
+    'imageHeight': 50
   }
 };
 
 
 levels.js_hoc2015_move_cross = {
-  "editCode": true,
-  "background": "ship",
-  "textModeAtStart": true,
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
+  'editCode': true,
+  'background': 'main',
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 4, 0, 0, 0, 0], [0, 0, 4,  1, 4, 0, 0, 0], [0, 4, 1, 0, 1, 4, 0, 0], [0, 0,  4, 16, 4,  0, 0, 0], [0, 0, 0, 4, 0, 0, 0, 0], [0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "Type or drag the blocks to get both items to the destination.",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'moveDown();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map':
+    [[0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000000, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000000, 0x0000000],  
+     [0x0000000, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],   
+     [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],  
+     [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000]],
+  'embed': 'false',
+  'instructions': '"More items to get!"',
+  'instructions2': 'Type or drag the blocks to get all the items.',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal2',
+    'imageWidth': 50,
+    'imageHeight': 50
   }
 };
 
@@ -1775,127 +1853,165 @@ levels.js_hoc2015_move_cross = {
 /* ** level 7 ** */
 
 levels.js_hoc2015_event_two_items = {
-  "editCode": true,
-  "background": "forest",
-  "wallMap": "blank",
-  "softButtons": ["downButton", "upButton"],
-  "codeFunctions": {
-    "moveUp": null,
-    "moveDown": null,
-    "whenUp": null,
-    "whenDown": null
+  'editCode': true,
+  'background': 'snow',
+  'wallMap': 'blank',
+  'softButtons': ['downButton', 'upButton'],
+  'codeFunctions': {
+    'moveUp': null,
+    'moveDown': null,
+
+    'whenUp': null,
+    'whenDown': null
   },
-  "startBlocks": [
-    "function whenUp() {", 
-    "  ",
-    "}",
-    "function whenDown() {",
-    "  ",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
-  "pinWorkspaceToBottom": "true",
-  "embed": "false",
-  "instructions": "\"BOT1, I need you to get a critical message to the GOALs.\"",
-  "instructions2": "Make BOT1 move when you hit the arrow keys.",
-  "timeoutFailureTick": 600,
-  "showTimeoutRect": true,
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'function whenUp() {', 
+    '  ',
+    '}',
+    'function whenDown() {',
+    '  ',
+    '}'].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 1,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 16, 0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 1,  0, 0, 0, 0]],
+  'pinWorkspaceToBottom': 'true',
+  'embed': 'false',
+  'instructions': '"BOT1, I need you to get a critical message to the GOALs."',
+  'instructions2': 'Make BOT1 move when you hit the arrow keys.',
+  'timeoutFailureTick': 600,
+  'showTimeoutRect': true,
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
   },
-  "callouts": [
+  'callouts': [
     {
-      "id": "playlab:js_hoc2015_event_two_items:placeCommandsHere",
-      "element_id": ".droplet-main-canvas",
-      "hide_target_selector": ".droplet-drag-cover",
-      "qtip_config": {
-        "content": {
-          "text": msg.calloutPlaceCommandsHere(),
+      'id': 'playlab:js_hoc2015_event_two_items:placeCommandsHere',
+      'element_id': '.droplet-main-canvas',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutPlaceCommandsHere(),
         },
-        "hide": {
-          "event": "mouseup touchend",
+        'hide': {
+          'event': 'mouseup touchend',
         },
-        "position": {
-          "my": "top left",
-          "at": "top left",
-          "adjust": {
-            "x": 10,
-            "y": 20
+        'position': {
+          'my': 'top left',
+          'at': 'top left',
+          'adjust': {
+            'x': 10,
+            'y': 20
+          }
+        }
+      }
+    },
+    {
+      'id': 'arrowsCallout',
+      'element_id': '#upButton',
+      'hide_target_selector': '#soft-buttons',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutUseArrowButtons(),
+        },
+        'hide': {
+          'event': 'mouseup touchend',
+        },
+        'position': {
+          'my': 'top left',
+          'at': 'bottom left',
+          'adjust': {
+            'x': 30,
+            'y': 0
           }
         }
       }
     }
-  ],
+  ]
 };
 
 levels.js_hoc2015_event_four_items = {
-  "editCode": true,
-  "textModeAtStart": true,
-  "background": "forest",
-  "wallMap": "blobs",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+  'editCode': true,
+  'background': 'snow',
+  'wallMap': 'blobs',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
+
+    'whenLeft': null,
+    'whenRight': null,
+    'whenUp': null,
+    'whenDown': null
   },
-  "startBlocks": [
-    "function whenLeft() {",
-    "  ",
-    "}",
-    "function whenRight() {",
-    "  ",
-    "}",
-    "function whenUp() {",
-    "  ",
-    "}",
-    "function whenDown() {",
-    "  ",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 16, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"Get to all the GOALs as quickly as you can.\"",
-  "instructions2": "Move in all directions.",
-  "timeoutFailureTick": 600,
-  "showTimeoutRect": true,
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'function whenLeft() {',
+    '  ',
+    '}',
+    'function whenRight() {',
+    '  ',
+    '}',
+    'function whenUp() {',
+    '  ',
+    '}',
+    'function whenDown() {',
+    '  ',
+    '}'].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 1,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [1, 0, 0, 16, 0, 0, 0, 1], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 1,  0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"Get to all the GOALs as quickly as you can."',
+  'instructions2': 'Move in all directions.',
+  'timeoutFailureTick': 600,
+  'showTimeoutRect': true,
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
   },
-  "callouts": [
+  'callouts': [
     {
-      "id": "playlab:js_hoc2015_event_four_items:typeCommandsHere",
-      "element_id": ".ace_scroller",
-      "qtip_config": {
-        "content" : {
-          "text": msg.calloutTypeCommandsHere(),
+      'id': 'playlab:js_hoc2015_event_four_items:typeCommandsHere',
+      'element_id': '.ace_scroller',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutTypeCommandsHere(),
         },
-        "event": "click mousedown touchstart mouseup touchend",
-        "position": {
-          "my": "center right",
-          "at": "top left",
-          "adjust": {
-            "x": 25,
-            "y": 25
+        'event': 'click mousedown touchstart mouseup touchend',
+        'position': {
+          'my': 'center right',
+          'at': 'top left',
+          'adjust': {
+            'x': 25,
+            'y': 25
           }
         }
       }
@@ -1904,557 +2020,508 @@ levels.js_hoc2015_event_four_items = {
 };
 
 
-levels.js_hoc2015_event_choose_character =
+levels.js_hoc2015_event_three_goals =
 {
-  "avatarList": ["bot1"],
-  "editCode": true,
-  "background": "forest",
-  "wallMap": "blank",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "setBot": null,
-    "setBackground": null,
-    "setMap": null,
-    "playSound": null,
-
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+  'avatarList': ['bot1'],
+  'editCode': true,
+  'background': 'snow',
+  'wallMap': 'circle',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'autohandlerOverrides': {
+    'whenTouchPilot': 'whenTouchGoal'
   },
-  "startBlocks": [
-    "setBackground(\"forest\");",
-    "function whenLeft() {",
-    "  moveLeft();",
-    "}",
-    "function whenRight() {",
-    "  moveRight();",
-    "}",
-    "function whenUp() {",
-    "  moveUp();",
-    "}",
-    "function whenDown() {",
-    "  moveDown();",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "edgeCollisions": "true",
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "instructions": "\"Time to visit another planet.\"",
-  "instructions2": "Use the dropdown to change the background.  Now find a command to change your BOT.",
-  "timeoutFailureTick": 600,
-  "timeoutAfterWhenRun": true,
-  "showTimeoutRect": true,
-  "callouts": [
+  'codeFunctions': {
+    'endGame': null,
+
+    'whenTouchPilot': null
+  },
+  'startBlocks': [
+    'function whenTouchPilot() {',
+    '  ',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'edgeCollisions': 'true',
+  'map': [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [1, 0, 0, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0]],
+  'instructions': '"Reach the GOALs!"',
+  'instructions2': "On the last level, we ended the game for you. Now you're in charge: use the whenTouchPilot event to let BOT1 win the game when he reaches the pilot.",
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'showTimeoutRect': true,
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
+  },
+  'goal': {
+    successCondition: function () { return false; }
+  },
+  'requiredForSuccess' : {
+    'touchAllItems': true,
+    'winGame': true
+  },
+  'completeOnSuccessConditionNotGoals': true,
+  'callouts': [
     {
-      "id": "playlab:js_hoc2015_event_choose_character:placeCommandsAtTop",
-      "element_id": ".droplet-main-canvas",
-      "hide_target_selector": ".droplet-drag-cover",
-      "qtip_config": {
-        "content": {
-          "text": msg.calloutPlaceCommandsAtTop(),
+      'id': 'playlab:js_hoc2015_event_choose_character:placeCommandsAtTop',
+      'element_id': '.droplet-main-canvas',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutPlaceCommandsAtTop(),
         },
-        "hide": {
-          "event": "mouseup touchend",
+        'hide': {
+          'event': 'mouseup touchend',
         },
-        "position": {
-          "my": "top left",
-          "at": "top left",
-          "adjust": {
-            "x": 10,
-            "y": 20
+        'position': {
+          'my': 'top left',
+          'at': 'top left',
+          'adjust': {
+            'x': 10,
+            'y': 20
           }
         }
       }
     }
   ],
-  "requiredForSuccess" : {
-    "setSprite": true
-  }
 };
 
 
-levels.js_hoc2015_event_add_items = {
-  "editCode": true,
-  "textModeAtStart": true,
-  "background": "snow",
-  "wallMap": "horizontal",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "addCharacter": null,
-
-    "setBot": null,
-    "setBackground": null,
-    "setMap": null,
-    "playSound": null,
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+levels.js_hoc2015_event_score_points = {
+  'editCode': true,
+  'background': 'forest',
+  'wallMap': 'horizontal',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'autohandlerOverrides': {
+    'whenTouchPilot': 'whenTouchGoal'
   },
-  "startBlocks": [
-    "setBackground(\"snow\");",
-    "setMap(\"horizontal\");",
-    "setBot(\"bot2\");",
-    "function whenLeft() {",
-    "  moveLeft();",
-    "}",
-    "function whenRight() {",
-    "  moveRight();",
-    "}",
-    "function whenUp() {",
-    "  moveUp();",
-    "}",
-    "function whenDown() {",
-    "  moveDown();",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"I’m seeing signs of increased activity on this planet.\"",
-  "instructions2": "Use the addCharacter(); command a couple times to add BIRDs at the start of your program.  Then, go get them.",
-  "timeoutFailureTick": 600,
-  "showTimeoutRect": true,
-  "requiredForSuccess" : {
-    "removedItemCount": 2
-  }
+  'codeFunctions': {
+    'endGame': null,
+    'addPoints': null,
+
+    'whenTouchPilot': null,
+    'whenScore1000': null
+  },
+  'startBlocks': [
+    'function whenTouchPilot() {',
+    '  ',
+    '}',
+    'function whenScore1000() {',
+    '  ',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [1, 0, 0, 16, 0, 0, 0, 1], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 1,  0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"I’m counting on you, BOT1!"',
+  'instructions2': 'Change your score when you get a pilot. Can you make BOT1 win when he gets 1000 points?',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'showTimeoutRect': true,
+  'requiredForSuccess' : {
+    'winGame': true,
+    'scoreMinimum': 1000
+  },
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
+  },
 };
 
 
-levels.js_hoc2015_event_item_behavior = {
-  "editCode": true,
-  "background": "snow",
-  "wallMap": "blobs",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "setToChase": null,
-    "setToFlee": null,
-    "setToRoam": null,
-    "setToStop": null,
-    "moveSlow": null,
-    "moveNormal": null,
-    "moveFast": null,
+levels.js_hoc2015_win_lose = {
+  'editCode': true,
+  'background': 'forest',
+  'wallMap': 'blobs',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'endGame': null,
 
-    "addCharacter": null,
-    "setBot": null,
-    "setBackground": null,
-    "setMap": null,
-    "playSound": null,
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+    'addCharacter': null,
+    'whenTouchPilot': null,
+    'whenTouchMan': null,
+    'playSound': null,
   },
-  "startBlocks": [
-    "setBackground(\"snow\");",
-    "setMap(\"blobs\");",
-    "setBot(\"bot2\");",
-    "addCharacter('roo');",
-    "addCharacter('roo');",
-    "function whenLeft() {",
-    "  moveLeft();",
-    "}",
-    "function whenRight() {",
-    "  moveRight();",
-    "}",
-    "function whenUp() {",
-    "  moveUp();",
-    "}",
-    "function whenDown() {",
-    "  moveDown();",
-    "}"].join("\n"),
+  'startBlocks': [
+    'addCharacter("pilot");',
+    'addCharacter("man");',
+    'function whenTouchPilot() {',
+    '  playSound("character1sound5");',
+    '  ',
+    '}',
+    'function whenTouchMan() {',
+    '  playSound("character1sound6");',
+    '  ',
+    '}',   
+    ''].join('\n'),
 
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingFcore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"It’s up to you, BOT2.\"",
-  "instructions2": "Make the ROOs flee from BOT2.",
-  "timeoutFailureTick": 600,
-  "showTimeoutRect": true,
-  "callouts": [
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingFcore': true,
+  'map': [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 16, 0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"Watch out for the MAN."',
+  'instructions2': 'Make BOT1 lose the game if hits the MAN and win if he gets the pilot.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'showTimeoutRect': true,
+  'callouts': [
     {
-      "id": "playlab:js_hoc2015_event_item_behavior:charactersMove",
-      "element_id": "#droplet_palette_block_setToFlee",
-      "qtip_config": {
-        "content": {
-          "text": msg.calloutCharactersMove(),
+      'id': 'playlab:js_hoc2015_win_lose:charactersMove',
+      'element_id': '#droplet_palette_block_setToFlee',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutCharactersMove(),
         },
-        "position": {
-          "my": "center left",
-          "at": "center right",
-          "adjust": {
-            "x": 15,
-            "y": 0
+        'position': {
+          'my': 'center left',
+          'at': 'center right',
+          'adjust': {
+            'x': 15,
+            'y': 0
           }
         }
       }
     }
   ],
-  "requiredForSuccess" : {
-    "touchAllItems": true,
-    "setActivity": {itemType: "roo", "activityType": "flee"}
-  }
+  'requiredForSuccess' : {
+    'winGame': true
+  },
 };
 
-levels.js_hoc2015_event_touch_items = {
-  "editCode": true,
-  "textModeAtStart": true,
-  "background": "snow",
-  "wallMap": "circle",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "whenTouchRoo": null,
+levels.js_hoc2015_add_characters = {
+  'editCode': true,
+  'background': 'forest',
+  'wallMap': 'circle',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'addCharacter': null,
 
-    "setToChase": null,
-    "setToFlee": null,
-    "setToRoam": null,
-    "setToStop": null,
-    "moveSlow": null,
-    "moveNormal": null,
-    "moveFast": null,
-    "addCharacter": null,
-    "setBot": null,
-    "setBackground": null,
-    "setMap": null,
-    "playSound": null,
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+    'whenGetAllCharacters': null,
+    'endGame': null,
+    'playSound': null,
+    'whenTouchPig': null
   },
-  "startBlocks": [
-    "setBackground(\"snow\");",
-    "setMap(\"circle\");",
-    "setBot(\"bot2\");",
-    "addCharacter('roo');",
-    "addCharacter('roo');",
-    "addCharacter('roo');",
-    "function whenTouchRoo() {",
-    "  ",
-    "}",
-    "function whenLeft() {",
-    "  moveLeft();",
-    "}",
-    "function whenRight() {",
-    "  moveRight();",
-    "}",
-    "function whenUp() {",
-    "  moveUp();",
-    "}",
-    "function whenDown() {",
-    "  moveDown();",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"Be careful, they might be behind you!\"",
-  "instructions2": "Every time you get a ROO, add one MOUSE and one SPIDER to the world.",
-  "timeoutFailureTick": 600,
-  "showTimeoutRect": true,
-  "callouts": [
+  'startBlocks': [
+    'function whenTouchPig() {',
+    '  playSound("item1sound1");',
+    '  ',
+    '}',
+    'function whenGetAllCharacters() {',
+    '  endGame("win");',
+    '  ',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 16, 0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"I\'m seeing signs of increased activity on this planet!"',
+  'instructions2': 'Now you have the WhenRun event and a new addCharacter command to create your own characters. Can you add 3 PIGs to the world? Then, go get them.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'showTimeoutRect': true,
+  'callouts': [
     {
-      "id": "playlab:js_hoc2015_event_touch_items:putCommandsTouchCharacter",
-      "element_id": ".ace_gutter-cell:nth-of-type(8)",
-      "hide_target_selector": ".ace_scroller",
-      "qtip_config": {
-        "content" : {
-          "text": msg.calloutPutCommandsTouchCharacter(),
+      'id': 'playlab:js_hoc2015_add_characters:putCommandsTouchCharacter',
+      'element_id': '.ace_gutter-cell:nth-of-type(8)',
+      'hide_target_selector': '.ace_scroller',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutPutCommandsTouchCharacter(),
         },
-        "event": "click mousedown touchstart mouseup touchend",
-        "position": {
-          "my": "center right",
-          "at": "center right",
+        'event': 'click mousedown touchstart mouseup touchend',
+        'position': {
+          'my': 'center right',
+          'at': 'center right',
         }
       }
     }
   ],
-  "requiredForSuccess" : {
-    "removedItemCount": 3,
-    "addItem": true
+
+  'requiredForSuccess' : {
+    'removedItemCount': 3,
+    'winGame': true
   }
 };
 
-levels.js_hoc2015_event_points = {
-  "editCode": true,
-  "textModeAtStart": true,
-  "background": "ship",
-  "wallMap": "horizontal",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "changeScore": null,
+levels.js_hoc2015_chain_characters = {
+  'editCode': true,
+  'background': 'ship',
+  'wallMap': 'horizontal',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'addCharacter': null,
+    'endGame': null,
 
-    "whenTouchCharacter": null,
-    "setToChase": null,
-    "setToFlee": null,
-    "setToRoam": null,
-    "setToStop": null,
-    "moveSlow": null,
-    "moveNormal": null,
-    "moveFast": null,
-    "addCharacter": null,
-    "setBot": null,
-    "setBackground": null,
-    "setMap": null,
-    "playSound": null,
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+    'whenTouchRoo': null,
+    'whenGetAllCharacters': null,
+    'playSound': null
   },
-  "startBlocks": [
-    "setBackground(\"ship\");",
-    "setMap(\"horizontal\");",
-    "setBot(\"bot1\");",
-    "addCharacter('bird');",
-    "addCharacter('bird');",
-    "addCharacter('bird');",
-    "function whenTouchCharacter() {",
-    "  addCharacter(\"random\");",
-    "}",
-    "function whenLeft() {",
-    "  moveLeft();",
-    "}",
-    "function whenRight() {",
-    "  moveRight();",
-    "}",
-    "function whenUp() {",
-    "  moveUp();",
-    "}",
-    "function whenDown() {",
-    "  moveDown();",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"I’m counting on you, BOT1!\"",
-  "instructions2": "Change your score when you touch a character. Can you reach 100 points?",
-  "timeoutFailureTick": 600,
-  "showTimeoutRect": true,
-  "requiredForSuccess" : {
-    "scoreMinimum": 100
+  'startBlocks': [
+    'addCharacter("roo");',
+    'addCharacter("roo");',
+    'function whenTouchRoo() {',
+    '  playSound("item3sound4");',
+    '  ',
+    '}',
+    'function whenTouchMouse() {',
+    '  playSound("character1sound8");',
+    '  ',
+    '}',
+    'function whenGetAllCharacters() {',
+    '  ',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"It\'s up to you, BOT1!"',
+  'instructions2': 'When you touch each ROO, make two MICE appear.  Then collect them all.  Make sure you can win the game.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 900,
+  'showTimeoutRect': true,
+  'requiredForSuccess' : {
+    'winGame': true
   }
 };
 
-levels.js_hoc2015_event_random_items = {
-  "editCode": true,
-  "textModeAtStart": true,
-  "background": "ship",
-  "wallMap": "blobs",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "setBot": { "category": "Commands" },
-    "setBackground": { "category": "Commands" },
-    "setBotSpeed": { "category": "Commands" },
-    "setMap": { "category": "Commands" },
-    "playSound": { "category": "Commands" },
-    "addCharacter": { "category": "Commands" },
-    "setToChase": { "category": "Commands" },
-    "setToFlee": { "category": "Commands" },
-    "setToRoam": { "category": "Commands" },
-    "setToStop": { "category": "Commands" },
-    "moveSlow": { "category": "Commands" },
-    "moveNormal": { "category": "Commands" },
-    "moveFast": { "category": "Commands" },
-    "changeScore": { "category": "Commands" },
-    "moveRight": { "category": "Commands" },
-    "moveLeft": { "category": "Commands" },
-    "moveUp": { "category": "Commands" },
-    "moveDown": { "category": "Commands" },
-    "whenLeft": { "category": "Events" },
-    "whenRight": { "category": "Events" },
-    "whenUp": { "category": "Events" },
-    "whenDown": { "category": "Events" },
-    "whenTouchCharacter": { "category": "Events" },
-    "whenTouchMouse": { "category": "Events"},
-    "whenTouchSpider": { "category": "Events" }
+levels.js_hoc2015_double_chain_characters = {
+  'editCode': true,
+  'background': 'ship',
+  'wallMap': 'horizontal',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'addCharacter': null,
+    'endGame': null,
+
+    'whenTouchRoo': null,
+    'whenTouchBird': null,
+    'whenGetAllCharacters': null
   },
-  "startBlocks": [
-    "setBackground(\"ship\");",
-    "setMap(\"blobs\");",
-    "setBot(\"bot1\");",
-    "addCharacter('spider');",
-    "addCharacter('spider');",
-    "addCharacter('mouse');",
-    "addCharacter('mouse');",
-    "function whenLeft() {",
-    "  moveLeft();",
-    "}",
-    "function whenRight() {",
-    "  moveRight();",
-    "}",
-    "function whenUp() {",
-    "  moveUp();",
-    "}",
-    "function whenDown() {",
-    "  moveDown();",
-    "}",
-    "function whenTouchCharacter() {",
-    "  changeScore(1);",
-    "  ",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"Quick! We need to move faster!\"",
-  "instructions2": "Ready to move faster? Increase your speed when you touch a MOUSE and slow down when you hit a SPIDER.",
-  "timeoutFailureTick": 600,
-  "showTimeoutRect": true,
-  "callouts": [
+  'startBlocks': [
+    'addCharacter("roo");',
+    'addCharacter("roo");',
+    'function whenTouchRoo() {',
+    '  addCharacter("bird");',
+    '  addCharacter("bird");',
+    '}',
+    'function whenTouchBird() {',
+    '  ',
+    '}',
+    'function whenGetAllCharacters() {',
+    '  ',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"It\'s up to you, BOT1!"',
+  'instructions2': 'With this code, when you get a ROO, two BIRDs appear. Can you make two MICE appear when you get a BIRD? Collect the MICE.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 900,
+  'showTimeoutRect': true,
+  'requiredForSuccess' : {
+    'scoreMinimum': 100
+  }
+};
+
+levels.js_hoc2015_change_setting = {
+  'editCode': true,
+  'background': 'ship',
+  'wallMap': 'blobs',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'setBot': { 'category': 'Commands' },
+    'setBackground': { 'category': 'Commands' },
+    'setBotSpeed': { 'category': 'Commands' },
+    'setMap': { 'category': 'Commands' },
+    'playSound': { 'category': 'Commands' },
+    'endGame': { 'category': 'Commands' },
+
+    'whenScore1000': { 'category': 'Events' },
+
+    'addCharacter': { 'category': 'Commands' },
+    'addPoints': { 'category': 'Commands' },
+    'whenTouchCharacter': { 'category': 'Events' },
+    'whenGetAllCharacters': { 'category': 'Events' },
+  },
+  'startBlocks': [
+    'addCharacter("pilot");',
+    'addCharacter("pilot");',
+    'addCharacter("pilot");',
+    'function whenTouchCharacter() {',
+    '  setBackground("random");',
+    '  addPoints(400);',
+    '  ',
+    '}',
+    'function whenGetAllCharacters() {',
+    '  endGame("win");',
+    '  ',
+    '}',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"Time to visit another planet."',
+  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.  Then, play your game and get all the characters to win.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600,
+  'showTimeoutRect': true,
+  'callouts': [
     {
-      "id": "playlab:js_hoc2015_event_random_items:clickCategory",
-      "element_id": ".droplet-palette-group-header.green",
-      "qtip_config": {
-        "content" : {
-          "text": msg.calloutClickCategory(),
+      'id': 'playlab:js_hoc2015_change_setting:clickCategory',
+      'element_id': '.droplet-palette-group-header.green',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutClickCategory(),
         },
-        "position": {
-          "my": "top center",
-          "at": "bottom center",
+        'position': {
+          'my': 'top center',
+          'at': 'bottom center',
         }
       }
     }
   ],
-  "requiredForSuccess" : {
-    "setBotSpeed": true
+  'requiredForSuccess' : {
+    'setSprite': true,
+    'setBotSpeed': true,
+    'setBackground': true,
+    'setMap': true,
+    'winGame': true
   }
 };
 
 levels.js_hoc2015_event_free = {
-  "editCode": true,
-  "textModeAtStart": true,
-  "freePlay": true,
-  "background": "forest",
-  "wallMap": "blank",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "setBot": { "category": "Commands" },
-    "setBackground": { "category": "Commands" },
-    "setBotSpeed": { "category": "Commands" },
-    "setMap": { "category": "Commands" },
-    "playSound": { "category": "Commands" },
-    "addCharacter": { "category": "Commands" },
-    "setToChase": { "category": "Commands" },
-    "setToFlee": { "category": "Commands" },
-    "setToRoam": { "category": "Commands" },
-    "setToStop": { "category": "Commands" },
-    "moveSlow": { "category": "Commands" },
-    "moveNormal": { "category": "Commands" },
-    "moveFast": { "category": "Commands" },
-    "changeScore": { "category": "Commands" },
+  'editCode': true,
+  'freePlay': true,
+  'background': 'forest',
+  'wallMap': 'blank',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'setBot': { 'category': 'Commands' },
+    'setBackground': { 'category': 'Commands' },
+    'setBotSpeed': { 'category': 'Commands' },
+    'setMap': { 'category': 'Commands' },
+    'playSound': { 'category': 'Commands' },
+    'addCharacter': { 'category': 'Commands' },
+    'moveSlow': { 'category': 'Commands' },
+    'moveNormal': { 'category': 'Commands' },
+    'moveFast': { 'category': 'Commands' },
+    'addPoints': { 'category': 'Commands' },
 
-    "moveRight": { "category": "Commands" },
-    "moveLeft": { "category": "Commands" },
-    "moveUp": { "category": "Commands" },
-    "moveDown": { "category": "Commands" },
-    "whenLeft": { "category": "Events" },
-    "whenRight": { "category": "Events" },
-    "whenUp": { "category": "Events" },
-    "whenDown": { "category": "Events" },
-    "whenTouchObstacle": { "category": "Events" },
-    "whenTouchMan": { "category": "Events" },
-    "whenTouchPilot": { "category": "Events" },
-    "whenTouchPig": { "category": "Events" },
-    "whenTouchBird": { "category": "Events" },
-    "whenTouchMouse": { "category": "Events" },
-    "whenTouchRoo": { "category": "Events" },
-    "whenTouchSpider": { "category": "Events" },
-    "whenTouchCharacter": { "category": "Events" }
+    'whenTouchObstacle': { 'category': 'Events' },
+    'whenTouchMan': { 'category': 'Events' },
+    'whenTouchPilot': { 'category': 'Events' },
+    'whenTouchPig': { 'category': 'Events' },
+    'whenTouchBird': { 'category': 'Events' },
+    'whenTouchMouse': { 'category': 'Events' },
+    'whenTouchRoo': { 'category': 'Events' },
+    'whenTouchSpider': { 'category': 'Events' },
+    'whenTouchCharacter': { 'category': 'Events' }
   },
-  "startBlocks": [
-    "setBackground(\"forest\");",
-    "setMap(\"circle\");",
-    "setBot(\"bot1\");",
-    "function whenLeft() {",
-    "  moveLeft();",
-    "}",
-    "function whenRight() {",
-    "  moveRight();",
-    "}",
-    "function whenUp() {",
-    "  moveUp();",
-    "}",
-    "function whenDown() {",
-    "  moveDown();",
-    "}"].join("\n"),
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"You’re on your own now, BOT1.\"",
-  "callouts": [
+  'startBlocks': [
+    'setBackground("forest");',
+    'setMap("circle");',
+    'setBot("bot1");',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"You\'re on your own now, BOT1."',
+  'autoArrowSteer': true,
+  'callouts': [
     {
-      "id": "playlab:js_hoc2015_event_free:tryOutNewCommands",
-      "element_id": ".droplet-palette-canvas",
-      "qtip_config": {
-        "content": {
-          "text": msg.calloutTryOutNewCommands(),
+      'id': 'playlab:js_hoc2015_event_free:tryOutNewCommands',
+      'element_id': '.droplet-palette-canvas',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutTryOutNewCommands(),
         },
-        "position": {
-          "my": "center left",
-          "at": "center right",
-          "adjust": {
-            "x": -20,
-            "y": 0
+        'position': {
+          'my': 'center left',
+          'at': 'center right',
+          'adjust': {
+            'x': -20,
+            'y': 0
           }
         }
       }

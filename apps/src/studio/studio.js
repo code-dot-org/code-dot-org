@@ -116,6 +116,10 @@ var AUTO_HANDLER_MAP = {
   whenTouchObstacle: 'whenSpriteCollided-' +
       (Studio.protagonistSpriteIndex || 0) +
       '-wall',
+  whenGetAllCharacters: 'whenGetAllItems',
+  whenTouchGoal: 'whenTouchGoal',
+  whenTouchAllGoals: 'whenTouchAllGoals',
+  whenScore1000: 'whenScore1000',
 };
 
 // Default Scalings
@@ -168,11 +172,11 @@ function loadLevel() {
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.slowJsExecutionFactor = level.slowJsExecutionFactor || 1;
   Studio.ticksBeforeFaceSouth = Studio.slowJsExecutionFactor +
-                                  IDLE_TICKS_BEFORE_FACE_SOUTH;
+                                  utils.valueOr(level.ticksBeforeFaceSouth, IDLE_TICKS_BEFORE_FACE_SOUTH);
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
-  Studio.protagonistSpriteIndex = level.protagonistSpriteIndex || level.protaganistSpriteIndex;
+  Studio.protagonistSpriteIndex = utils.valueOr(level.protagonistSpriteIndex,level.protaganistSpriteIndex);
 
   switch (level.customGameType) {
     case 'Big Game':
@@ -634,6 +638,30 @@ var setSvgText = function(opts) {
 *   JS machine for consumption by the student's event-handling code.
  */
 function callHandler (name, allowQueueExtension, extraArgs) {
+  if (level.autoArrowSteer) {
+    var moveDir;
+    switch (name) {
+      case 'when-up':
+        moveDir = Direction.NORTH;
+        break;
+      case 'when-down':
+        moveDir = Direction.SOUTH;
+        break;
+      case 'when-left':
+        moveDir = Direction.WEST;
+        break;
+      case 'when-right':
+        moveDir = Direction.EAST;
+        break;
+    }
+    if (moveDir) {
+      Studio.queueCmd(null, 'move', {
+        'spriteIndex': Studio.protagonistSpriteIndex || 0,
+        'dir': moveDir
+      });
+    }
+  }
+
   Studio.eventHandlers.forEach(function (handler) {
     if (studioApp.isUsingBlockly()) {
       // Note: we skip executing the code if we have not completed executing
@@ -874,6 +902,7 @@ Studio.onTick = function() {
     var isWalking = true;
 
     // After 5 ticks of no movement, turn sprite forward.
+    var ticksBeforeFaceSouth = utils.valueOr(level.ticksBeforeFaceSouth, Studio.ticksBeforeFaceSouth);
     if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].dir = Direction.SOUTH;
       isWalking = false;
@@ -1020,6 +1049,14 @@ function handleActorCollisionsWithCollidableList (
         // Make the projectile/item disappear automatically if this parameter
         // is set:
         if (autoDisappear) {
+          if (list.length === 1 && list === Studio.items) {
+            // NOTE: we do this only for the Item list (not projectiles)
+            
+            // NOTE: if items are allowed to move outOfBounds(), this may never
+            // be called because the last item may not be removed here.
+            callHandler('whenGetAllItems');
+          }
+
           if (collidable.beginRemoveElement) {
             collidable.beginRemoveElement();
           } else {
@@ -1566,12 +1603,16 @@ Studio.init = function(config) {
   config.dropletConfig = dropletConfig;
   config.dropIntoAceAtLineStart = true;
   config.unusedConfig = [];
-  if (skin.AutohandlerTouchItems) {
-    for (var prop in skin.AutohandlerTouchItems) {
-      AUTO_HANDLER_MAP[skin.AutohandlerTouchItems[prop]] =
-          'whenSpriteCollided-' +
-          (Studio.protagonistSpriteIndex || 0) + '-' + prop;
-    }
+  for (var prop in skin.AutohandlerTouchItems) {
+    AUTO_HANDLER_MAP[skin.AutohandlerTouchItems[prop]] =
+        'whenSpriteCollided-' +
+        (Studio.protagonistSpriteIndex || 0) + '-' + prop;
+  }
+  for (prop in skin.AutohandlerGetAllItems) {
+    AUTO_HANDLER_MAP[skin.AutohandlerGetAllItems[prop]] = 'whenGetAll-' + prop;
+  }
+  for (prop in level.autohandlerOverrides) {
+    AUTO_HANDLER_MAP[prop] = level.autohandlerOverrides[prop];
   }
   for (var handlerName in AUTO_HANDLER_MAP) {
     config.unusedConfig.push(handlerName);
@@ -1743,8 +1784,15 @@ Studio.reset = function(first) {
     removedItemCount: 0,
     setActivityRecord: null,
     hasSetBot: false,
-    hasAddedItem: false
+    hasSetBackground: false,
+    hasSetMap: false,
+    hasAddedItem: false,
+    hasWonGame: false,
+    hasLostGame: false
   };
+
+  // Reset the record of the last direction that the user moved the sprite.
+  Studio.lastMoveSingleDir = null;
 
   // Reset goal successState:
   if (level.goal) {
@@ -1795,7 +1843,13 @@ Studio.reset = function(first) {
   }
 
   Studio.itemSpeed = {};
+  for (var className in skin.specialItemProperties) {
+    Studio.itemSpeed[className] = skin.specialItemProperties[className].speed;
+  }
   Studio.itemActivity = {};
+  for (className in skin.specialItemProperties) {
+    Studio.itemActivity[className] = skin.specialItemProperties[className].activity;
+  }
   // Create Items that are specified on the map:
   Studio.createLevelItems(svg);
 
@@ -1812,10 +1866,15 @@ Studio.reset = function(first) {
   }
 
   var goalAsset = skin.goal;
-  if (level.goalOverride && level.goalOverride.goalAnimation) {
-    goalAsset = skin[level.goalOverride.goalAnimation];
+  if (level.goalOverride) {
+    if (level.goalOverride.goalAnimation) {
+      goalAsset = skin[level.goalOverride.goalAnimation];
+    } else if (level.goalOverride.goalImage) {
+      goalAsset = skin[level.goalOverride.goalImage];
+    }
   }
 
+  Studio.touchAllGoalsEventFired = false;
   for (i = 0; i < Studio.spriteGoals_.length; i++) {
     // Mark each finish as incomplete.
     Studio.spriteGoals_[i].finished = false;
@@ -2446,8 +2505,8 @@ function spriteTotalFrames (index) {
 function getFrameCount (className, exceptionList, defaultCount) {
   if (/.gif$/.test(skin[className])) {
     return 1;
-  } else if (exceptionList && exceptionList[className]) {
-    return exceptionList[className];
+  } else if (exceptionList && exceptionList[className] && exceptionList[className].frames) {
+    return exceptionList[className].frames;
   }
   return defaultCount;
 }
@@ -2626,7 +2685,7 @@ Studio.createLevelItems = function (svg) {
           var className = skin.ItemClassNames[index];
           // Create item:
           var itemOptions = {
-            frames: getFrameCount(className, skin.specialItemFrames, skin.itemFrames),
+            frames: getFrameCount(className, skin.specialItemProperties, skin.itemFrames),
             className: className,
             dir: Direction.NONE,
             image: skin[className],
@@ -2866,44 +2925,52 @@ Studio.displayScore = function() {
 };
 
 Studio.animateGoals = function() {
-  if (!(level.goalOverride && level.goalOverride.goalAnimation)) {
-    return;
-  }
-
   var currentTime = new Date();
-  var elapsed = currentTime - Studio.startTime;
 
-  var numFrames = skin.animatedGoalFrames;
-  var frameDuration = skin.timePerGoalAnimationFrame;
-  var frameWidth = level.goalOverride.imageWidth;
+  var animate = level.goalOverride && level.goalOverride.goalAnimation;
+  var fade = skin.fadeOutGoal;
+
+  var elapsed, numFrames, frameDuration, frameWidth;
+
+  if (animate) {
+    elapsed = currentTime - Studio.startTime;
+    numFrames = skin.animatedGoalFrames;
+    frameDuration = skin.timePerGoalAnimationFrame;
+    frameWidth = level.goalOverride.imageWidth;
+  }
 
   for (var i = 0; i < Studio.spriteGoals_.length; i++) {
     var goal = Studio.spriteGoals_[i];
-    // Keep showing the goal unless it's finished and we're not fading out.
+    // Keep animating the goal unless it's finished and we're not fading out.
     if (!goal.finished || goal.startFadeTime) {
-
       var goalSprite = document.getElementById('spriteFinish' + i);
       var goalClipRect = document.getElementById('finishClipRect' + i);
 
-      var baseX = parseInt(goalClipRect.getAttribute('x'), 10);
-      var frame = Math.floor(elapsed / frameDuration) % numFrames;
-  
-      goalSprite.setAttribute('x', baseX - frame * frameWidth);
+      if (animate) {
+        var baseX = parseInt(goalClipRect.getAttribute('x'), 10);
+        var frame = Math.floor(elapsed / frameDuration) % numFrames;
+    
+        goalSprite.setAttribute('x', baseX - frame * frameWidth);
+      }
 
-      var fadeTime = 350;
+      if (fade) {
+        var fadeTime = constants.GOAL_FADE_TIME;
 
-      if (goal.startFadeTime) {
-        var opacity = 1 - (currentTime - goal.startFadeTime) / fadeTime;
+        if (goal.startFadeTime) {
+          var opacity = 1 - (currentTime - goal.startFadeTime) / fadeTime;
 
-        if (opacity < 0) {
-          goal.startFadeTime = null;
-        } else {
+          if (opacity < 0) {
+            opacity = 0;
+            goal.startFadeTime = null;
+          }
+          
           goalSprite.setAttribute('opacity', opacity);
         }
       }
     }
   }
 };
+
 
 /**
  * Start showing an upwards-floating score at the location of sprite 0.
@@ -3012,13 +3079,19 @@ Studio.executeQueue = function (name, oneOnly) {
 
 Studio.callCmd = function (cmd) {
   switch (cmd.name) {
+    case 'endGame':
+      studioApp.highlight(cmd.id);
+      Studio.endGame(cmd.opts);
+      break;
     case 'setBackground':
       studioApp.highlight(cmd.id);
       Studio.setBackground(cmd.opts);
+      Studio.trackedBehavior.hasSetBackground = true;
       break;
     case 'setMap':
       studioApp.highlight(cmd.id);
       Studio.setMap(cmd.opts);
+      Studio.trackedBehavior.hasSetMap = true;
       break;
     case 'setSprite':
       studioApp.highlight(cmd.id);
@@ -3237,8 +3310,15 @@ Studio.addItem = function (opts) {
   var direction = level.itemGridAlignedMovement ? Direction.NONE :
                     directions[Math.floor(Math.random() * directions.length)];
   var pos = generateRandomItemPosition();
+
+  var renderScale = 1;
+  var properties = skin.specialItemProperties[itemClass];
+  if (properties) {
+    renderScale = utils.valueOr(properties.scale, renderScale);
+  }
+
   var itemOptions = {
-    frames: getFrameCount(itemClass, skin.specialItemFrames, skin.itemFrames),
+    frames: getFrameCount(itemClass, skin.specialItemProperties, skin.itemFrames),
     className: itemClass,
     dir: direction,
     image: skinItem,
@@ -3249,7 +3329,7 @@ Studio.addItem = function (opts) {
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     width: 100,
     height: 100,
-    renderScale: skin.specialItemScale[itemClass] || 1
+    renderScale: renderScale,
   };
 
   var item = new Item(itemOptions);
@@ -3491,12 +3571,35 @@ Studio.changeScore = function (opts) {
 
   Studio.playerScore += Number(opts.value);
   Studio.displayScore();
+
   Studio.displayFloatingScore(Number(opts.value));
+
+  if (Studio.playerScore - Number(opts.value) < 1000 && Studio.playerScore >= 1000) {
+    callHandler('whenScore1000');
+  }
 };
 
 Studio.setScoreText = function (opts) {
   Studio.scoreText = opts.text;
   Studio.displayScore();
+};
+
+Studio.endGame = function(opts) {
+  if (typeof opts.value !== 'string') {
+    throw new TypeError("Incorrect parameter: " + opts.value);
+  }
+
+  var winValue = opts.value.toLowerCase().trim();
+
+  if (winValue == "win") {
+    Studio.trackedBehavior.hasWonGame = true;
+    Studio.setScoreText({text: studioMsg.winMessage()});
+  } else if (winValue== "lose") {
+    Studio.trackedBehavior.hasLostGame = true;
+    Studio.setScoreText({text: studioMsg.loseMessage()});  
+  } else {
+    throw new RangeError("Incorrect parameter: " + opts.value);
+  }
 };
 
 Studio.setBackground = function (opts) {
@@ -3575,6 +3678,8 @@ Studio.setMap = function (opts) {
     // Give the skin a chance to adjust the map name depending upon the
     // background name.
     useMap = skin.getMap(Studio.background, mapValue);
+  } else {
+    useMap = mapValue;
   }
 
   if (useMap !== null && !skin[useMap]) {
@@ -3999,7 +4104,7 @@ Studio.throwProjectile = function (options) {
   var preventLoop = skin.preventProjectileLoop && skin.preventProjectileLoop(options.className);
 
   var projectileOptions = {
-    frames: getFrameCount(options.className, skin.specialProjectileFrames, skin.projectileFrames),
+    frames: getFrameCount(options.className, skin.specialProjectileProperties, skin.projectileFrames),
     className: options.className,
     dir: options.dir,
     image: skin[options.className],
@@ -4315,9 +4420,12 @@ Studio.getSkin = function() {
 
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
+  var lastMove = sprite.lastMove;
   sprite.lastMove = Studio.tickCount;
   var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   var wallCollision = false;
+  var playSound = false;
+
   switch (opts.dir) {
     case Direction.NORTH:
       if (level.blockMovingIntoWalls &&
@@ -4374,11 +4482,28 @@ Studio.moveSingle = function (opts) {
     Studio.collideSpriteWith(opts.spriteIndex, 'wall');
     sprite.endCollision('wall');
   }
+
   if (level.gridAlignedMovement) {
     Studio.yieldThisTick = true;
     if (Studio.JSInterpreter) {
       Studio.JSInterpreter.yield();
     }
+
+    playSound = true;
+  } else if (!wallCollision && 
+             opts.dir !== Studio.lastMoveSingleDir &&
+             lastMove === Infinity ||
+             Studio.tickCount > lastMove + 1) {
+    // So long as there was no wall collision, a new direction, and we
+    // haven't already processed a move in the previous tick, then play a sound.
+    playSound = true;
+  }
+
+  Studio.lastMoveSingleDir = opts.dir;
+
+  if (playSound && skin.moveSounds) {
+    var randomSoundIndex = Math.floor(Math.random() * skin.moveSounds.length);
+    studioApp.playAudio(skin.moveSounds[randomSoundIndex]);
   }
 };
 
@@ -4505,6 +4630,9 @@ Studio.allGoalsVisited = function() {
             if (skin.fadeOutGoal) {
               goal.startFadeTime = new Date().getTime();
             }
+
+            callHandler('whenTouchGoal');  
+
             break;
           }
         }
@@ -4515,8 +4643,10 @@ Studio.allGoalsVisited = function() {
     if (goal.finished) {
       finishedGoals++;
 
-      // Play a sound unless we've hit the last flag
-      if (playSound && finishedGoals !== Studio.spriteGoals_.length) {
+      // Play a sound unless we've hit the last flag (though that can be
+      // overridden by the skin)
+      if (playSound && 
+          (finishedGoals !== Studio.spriteGoals_.length || skin.playFinalGoalSound)) {
         studioApp.playAudio('flag');
       }
 
@@ -4533,7 +4663,14 @@ Studio.allGoalsVisited = function() {
     }
   }
 
-  return finishedGoals === Studio.spriteGoals_.length;
+  var retVal = finishedGoals === Studio.spriteGoals_.length;
+
+  if (retVal && !Studio.touchAllGoalsEventFired) {
+    Studio.touchAllGoalsEventFired = true;
+    callHandler('whenTouchAllGoals');
+  }
+
+  return retVal;
 };
 
 /**
@@ -4562,6 +4699,14 @@ Studio.checkRequiredForSuccess = function() {
     return { exists: true, achieved: false, message: studioMsg.failedHasSetBotSpeed() };
   }
 
+  if (required.setBackground && !tracked.hasSetBackground) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasSetBackground() };
+  }
+
+  if (required.setBotMap && !tracked.hasSetMap) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasSetMap() };
+  }
+
   if (required.touchAllItems && Studio.items.length > 0) {
     return { exists: true, achieved: false, message: studioMsg.failedTouchAllItems() };
   }
@@ -4576,6 +4721,14 @@ Studio.checkRequiredForSuccess = function() {
 
   if (required.removedItemCount && tracked.removedItemCount < required.removedItemCount) {
     return { exists: true, achieved: false, message: studioMsg.failedRemovedItemCount() };
+  }
+
+  if (required.winGame && ! tracked.hasWonGame) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasWonGame() };
+  }
+
+  if (required.lostGame && ! tracked.hasLostGame) {
+    return { exists: true, achieved: false, message: studioMsg.failedHasLostGame() };
   }
 
   if (required.setActivity &&
