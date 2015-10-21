@@ -4421,6 +4421,15 @@ Studio.getSkin = function() {
   return skin;
 };
 
+/**
+ * For executing a single "goLeft" or "goNorth" sort of command in student code.
+ * Moves the avatar by a different amount.
+ * Has slightly different behaviors depending on whether the level is configured
+ * for discrete, grid-based movement or free movement.
+ * @param {Object} opts
+ * @param {Direction} opts.dir - The direction in which the sprite should move.
+ * @param {number} opts.spriteIndex
+ */
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   var lastMove = sprite.lastMove;
