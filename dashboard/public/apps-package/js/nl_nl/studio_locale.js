@@ -641,6 +641,8 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "yes":function(d){return "Ja"},
 "failedHasSetSprite":function(d){return "Next time, set a character."},
 "failedHasSetBotSpeed":function(d){return "Next time, set a bot speed."},
+"failedHasSetBackground":function(d){return "Next time, set the background."},
+"failedHasSetMap":function(d){return "Next time, set the map."},
 "failedTouchAllItems":function(d){return "Next time, get all the items."},
 "failedScoreMinimum":function(d){return "Next time, reach the minimum score."},
 "failedRemovedItemCount":function(d){return "Next time, get the right number of items."},
