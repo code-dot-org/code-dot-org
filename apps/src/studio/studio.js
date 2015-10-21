@@ -4425,62 +4425,40 @@ Studio.moveSingle = function (opts) {
   var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   var wallCollision = false;
   var playSound = false;
+  var deltaX = 0, deltaY = 0;
 
   switch (opts.dir) {
     case Direction.NORTH:
-      if (level.blockMovingIntoWalls &&
-          Studio.willSpriteTouchWall(sprite, sprite.x, sprite.y - distance)) {
-        wallCollision = true;
-        break;
-      }
-      sprite.y -= distance;
-      var topBoundary = Studio.getPlayspaceBoundaries(sprite).top;
-      if (sprite.y < topBoundary && !level.allowSpritesOutsidePlayspace) {
-        sprite.y = topBoundary;
-      }
+      deltaY = -distance;
       break;
     case Direction.EAST:
-      if (level.blockMovingIntoWalls &&
-          Studio.willSpriteTouchWall(sprite, sprite.x + distance, sprite.y)) {
-        wallCollision = true;
-        break;
-      }
-      sprite.x += distance;
-      var rightBoundary = Studio.getPlayspaceBoundaries(sprite).right;
-      if (sprite.x > rightBoundary && !level.allowSpritesOutsidePlayspace) {
-        sprite.x = rightBoundary;
-      }
+      deltaX = distance;
       break;
     case Direction.SOUTH:
-      if (level.blockMovingIntoWalls &&
-          Studio.willSpriteTouchWall(sprite, sprite.x, sprite.y + distance)) {
-        wallCollision = true;
-        break;
-      }
-      sprite.y += distance;
-      var bottomBoundary = Studio.getPlayspaceBoundaries(sprite).bottom;
-      if (sprite.y > bottomBoundary && !level.allowSpritesOutsidePlayspace) {
-        sprite.y = bottomBoundary;
-      }
+      deltaY = distance;
       break;
     case Direction.WEST:
-      if (level.blockMovingIntoWalls &&
-          Studio.willSpriteTouchWall(sprite, sprite.x - distance, sprite.y)) {
-        wallCollision = true;
-        break;
-      }
-      sprite.x -= distance;
-      var leftBoundary = Studio.getPlayspaceBoundaries(sprite).left;
-      if (sprite.x < leftBoundary && !level.allowSpritesOutsidePlayspace) {
-        sprite.x = leftBoundary;
-      }
+      deltaX = -distance;
       break;
   }
-  if (wallCollision) {
+
+  if (level.blockMovingIntoWalls &&
+      Studio.willSpriteTouchWall(sprite, sprite.x + deltaX, sprite.y + deltaY)) {
+    wallCollision = true;
+
     // We prevented the wall collision, but queue a wall collision event and
     // immediately reset the collision state since we didn't actually overlap:
     Studio.collideSpriteWith(opts.spriteIndex, 'wall');
     sprite.endCollision('wall');
+  } else {
+    sprite.x += deltaX;
+    sprite.y += deltaY;
+
+    var boundary = Studio.getPlayspaceBoundaries(sprite);
+    if (!level.allowSpritesOutsidePlayspace) {
+      sprite.x = Math.max(boundary.left, Math.min(boundary.right, sprite.x));
+      sprite.y = Math.max(boundary.top, Math.min(boundary.bottom, sprite.y));
+    }
   }
 
   if (level.gridAlignedMovement) {
