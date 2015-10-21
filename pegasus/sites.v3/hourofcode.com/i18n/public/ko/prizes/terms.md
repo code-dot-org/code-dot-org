@@ -10,13 +10,13 @@ nav: prizes_nav
 
 # 상품 - 약관 및 조건
 
-## Amazon.com or Microsoft’s Windows Store credit:
+## Amazon.com, iTunes and Windows Store credit:
 
-The Amazon.com and Microsoft’s Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. 주최자 한 명당 최대 1개의 상품이 주어집니다.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. 주최자 한 명당 최대 1개의 상품이 주어집니다.
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com or Microsoft’s Windows Store credit. 학교 전체가 Hour of Code 행사에 참여하게 되면, 인증을 위해 각각의 선생님들은 개인적으로 행사 조직자로서 등록해야 합니다.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. 학교 전체가 Hour of Code 행사에 참여하게 되면, 인증을 위해 각각의 선생님들은 개인적으로 행사 조직자로서 등록해야 합니다.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com and Microsoft’s Windows Store credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
 
