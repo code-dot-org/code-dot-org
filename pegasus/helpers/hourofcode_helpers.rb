@@ -164,7 +164,8 @@ def country_count(country)
   country_count = 0;
   DB[:forms].where(kind: 'HocSignup2015').each do |i|
     data = JSON.parse(i[:data])
-    if data['hoc_country_s'] == country
+    code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
+    if data['location_country_code_s'] == code.upcase
       country_count += 1
     end
   end
