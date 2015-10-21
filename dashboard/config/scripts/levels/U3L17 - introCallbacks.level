@@ -11,7 +11,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Callback Functions\r\n\r\nMaking requests to a remote server makes sequencing a set of commands more challenging, if not impossible. In order to address this issue the data commands include **an optional third parameter** called a **callback function**. A callback function is a function which will run only after you've received confirmation from the server that it has received a request. Commands that should run after you've received confirmation from a server **must go in the callback function**.\r\n\r\n![](https://images.code.org/5df603c069fbe2011d2825f0f749f498-image-1445363715944.51.54 PM.png)\r\n\r\nThe program you are about to see contains two `setKeyValue` commands which update the same key value pair, called `predictableBit`. This time, however, we have used **callback functions** to sequence the `setKeyValue` commands. Since the second call to `setKeyValue` is in the callback function of the first it will only run after the server has confirmed that it received the first request. \r\n\r\n\r\n\r\n# Do This\r\n\r\n* **Run the program** and check the **Data Viewer** to see what value `predictableBit` was set to\r\n* **Repeat the experiment** to confirm the `setKeyValue` commands are now arriving in the correct order.\r\n* **Alter the program** so that instead of always setting `predictableBit` to **0 and then 1** it always sets it to **1 and then 0**. You will need to use **callback functions**",
+    "markdown_instructions": "# Callback Functions\r\n\r\nMaking requests to a remote server makes sequencing a set of commands more challenging, if not impossible. In order to address this issue the data commands include **an optional third parameter** called a **callback function**. A callback function is a function which **will run only after you've received confirmation from the server that it has received a request.**\r\n\r\n![](https://images.code.org/f82d29612f31ca3ec90353b8bc804f0a-image-1445364087348.01.13 PM.png)\r\n\r\n# Ordering setKeyValue Commands\r\n\r\nThe program you are about to see contains two `setKeyValue` commands which update the same key value pair, called `predictableBit`. Currently we cannot predict the sequence in which the commands will run, but if we use the **callback functions** each now includes we can. \r\n\r\n# Do This\r\n\r\n* **Alter the program** so that the second `setKeyValue` command appears within the **callback function** of the first, as in the image below.\r\n* **Run the program multiple times** and check the results in the **Data Viewer** to ensure that the requests are now consistently arriving in the correct order.\r\n* **Alter the program** so that instead of always setting `predictableBit` to **0 and then 1** it always sets it to **1 and then 0**\r\n\r\nBefore | After\r\n---|---\r\n![](https://images.code.org/b3b56f9070fdb9d5f7e6b57aa09bfdf3-image-1445365075454.17.42 PM.png) | ![](https://images.code.org/04ad6f1a70df9ef01b3b826eb265035b-image-1445363861130.57.13 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -43,7 +43,8 @@
     "instructions": "Run the program several times to observe how the setKeyValue commands now always arrive in order. (Click to see full instructions)",
     "encrypted_examples": [
 
-    ]
+    ],
+    "start_blocks": "setKeyValue(\"predictableBit\", 0, function () {\r\n  \r\n});\r\nsetKeyValue(\"predictableBit\", 1, function () {\r\n\r\n});"
   }
 }]]></config>
   <blocks/>
