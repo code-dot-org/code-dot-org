@@ -1,4 +1,15 @@
 /** @file Actions that can be given to a playlab sprite to execute over a set time. */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
 'use strict';
 
 var constants = require('./constants');
@@ -69,7 +80,7 @@ exports.GridMove.prototype.isDone = function () {
  * @param {number} totalSteps - the number of steps (or frames) to take for the
  *        animation.
  */
-exports.MoveAndCancel = function (towardDeltaX, towardDeltaY, totalSteps) {
+exports.GridMoveAndCancel = function (towardDeltaX, towardDeltaY, totalSteps) {
   this.towardDeltaX_ = towardDeltaX;
   this.towardDeltaY_ = towardDeltaY;
   this.totalSteps_ = totalSteps;
@@ -83,7 +94,7 @@ exports.MoveAndCancel = function (towardDeltaX, towardDeltaY, totalSteps) {
  * Apply a single frame of change to the given sprite.
  * @param {Collidable} sprite
  */
-exports.MoveAndCancel.prototype.update = function (sprite) {
+exports.GridMoveAndCancel.prototype.update = function (sprite) {
   // Note: The sprite's logical position (sprite.x, sprite.y) never changes
   //       for this action.
   var normalizedProgress = (this.elapsedSteps_ + 1) / this.totalSteps_;
@@ -102,7 +113,7 @@ exports.MoveAndCancel.prototype.update = function (sprite) {
  *          animation is complete, based on the number of steps that have
  *          elapsed.
  */
-exports.MoveAndCancel.prototype.isDone = function () {
+exports.GridMoveAndCancel.prototype.isDone = function () {
   return this.elapsedSteps_ >= this.totalSteps_;
 };
 
