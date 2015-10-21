@@ -1,7 +1,7 @@
 class HintViewRequestsController < ApplicationController
   def create
     status_code = :unauthorized
-    if HintViewRequest::ENABLED and current_user
+    if HintViewRequest.enabled? && current_user
       valid_request = HintViewRequest.create(
         script_id: params[:script_id],
         level_id: params[:level_id],
