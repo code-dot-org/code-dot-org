@@ -4475,10 +4475,10 @@ Studio.moveSingle = function (opts) {
 
   if (level.gridAlignedMovement) {
     if (wallCollision || playspaceEdgeCollision) {
-      sprite.queueAction(new spriteActions.GridMoveAndCancel(
+      sprite.addAction(new spriteActions.GridMoveAndCancel(
           deltaX, deltaY, level.slowJsExecutionFactor));
     } else {
-      sprite.queueAction(new spriteActions.GridMove(
+      sprite.addAction(new spriteActions.GridMove(
           deltaX, deltaY, level.slowJsExecutionFactor));
     }
 

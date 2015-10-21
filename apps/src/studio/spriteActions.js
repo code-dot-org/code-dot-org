@@ -15,20 +15,43 @@
 var constants = require('./constants');
 var Direction = constants.Direction;
 
-/*
-Note: All sprite actions must, for now, take be able to complete in a provided
-number of steps/frames, instead of blocking until they complete.  The latter
-is a larger change that we'll save until later.
+/**
+ * Work/animation for a sprite to do that will require more than one tick/frame.
+ *
+ * See Collidable#queueAction and Collidable#updateActions for usage.
+ *
+ * Note: All sprite actions must, for now, take be able to complete in a provided
+ * number of steps/frames, instead of blocking until they complete.  The latter
+ * is a larger change that we'll save until later.
+ *
+ * @interface SpriteAction
+ */
+
+/**
+ * Perform one tick/frame step of the action on the given sprite.
+ *
+ * @function
+ * @name SpriteAction#update
+ * @param {Collidable} sprite - the sprite the action is being performed on
+ */
+
+/**
+ * Perform one tick/frame step of the action on the given sprite.
+ *
+ * @function
+ * @name SpriteAction#isDone
+ * @returns {boolean} whether the action is finished running.
  */
 
 /**
  * Move sprite by a desired delta over a certain number of steps/ticks.
  * Used to provide discrete grid movement in playlab's continuous interpreted
  * environment.
+ * @constructor
+ * @implements {SpriteAction}
  * @param {number} towardDeltaX
  * @param {number} towardDeltaY
  * @param {number} totalSteps
- * @constructor
  */
 exports.GridMove = function (towardDeltaX, towardDeltaY, totalSteps) {
   this.towardDeltaX_ = towardDeltaX;
@@ -74,6 +97,7 @@ exports.GridMove.prototype.isDone = function () {
  * stop and reverse to its original position after a moment, as if it was
  * bouncing off a wall.
  * @constructor
+ * @implements {SpriteAction}
  * @param {number} towardDeltaX - the relative target X position, if the motion
  *        was completed instead of cancelled (e.g. one grid-space away).
  * @param {number} towardDeltaY - as above.
