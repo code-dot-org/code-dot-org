@@ -44,6 +44,15 @@ execute "bundle-install-pegasus" do
   user node[:current_user]
   group node[:current_user]
   action :nothing
+  notifies :run, 'execute[setup-pegasus-db]', :immediately
+end
+
+execute "setup-pegasus-db" do
+  command "rake pegasus:setup_db"
+  cwd "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus"
+  user node[:current_user]
+  group node[:current_user]
+  action :nothing
   notifies :run, 'execute[build-pegasus]', :immediately
 end
 
