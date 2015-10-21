@@ -61,9 +61,11 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
 
     fq = ["{!geofilt pt=#{coordinates} sfield=location_p d=#{distance}}"]
 
-    params['location_flexibility_ss'].each { |location|
-      fq.push("location_flexibility_ss:#{location}")
-    } unless params['location_flexibility_ss'].nil_or_empty?
+    unless params['location_flexibility_ss'].nil_or_empty?
+      params['location_flexibility_ss'].each do |location|
+        fq.push("location_flexibility_ss:#{location}")
+      end
+    end
 
     fq.push("experience_s:#{params['experience_s']}") unless params['experience_s'].nil_or_empty?
 

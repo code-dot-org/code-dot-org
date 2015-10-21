@@ -167,9 +167,9 @@ function loadMap(locations) {
   $('#gmap').html('');
   gmap = new Maplace;
 
-  var map_options = {
-    map_options: {
-      set_center: [lat, lng],
+  var mapOptions = {
+    mapOptions: {
+      setCenter: [lat, lng],
       zoom: 12
     },
     controls_type: 'list',
@@ -177,14 +177,14 @@ function loadMap(locations) {
   };
 
   if (locations.length > 0) {
-    map_options.force_generate_controls = true;
-    map_options.locations = locations;
-    map_options.afterOpenInfowindow = function(index, location, marker) {
+    mapOptions.forceGenerateControls = true;
+    mapOptions.locations = locations;
+    mapOptions.afterOpenInfowindow = function(index, location, marker) {
       setContactTrigger(index, location, marker);
     };
   }
 
-  gmap.Load(map_options);
+  gmap.Load(mapOptions);
 }
 
 function compileHTML(index, location) {
