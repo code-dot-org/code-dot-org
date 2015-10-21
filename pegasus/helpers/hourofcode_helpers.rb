@@ -149,18 +149,18 @@ def campaign_date(format)
   end
 end
 
-def company_count(company)
+def company_count
   company_count = 0;
   DB[:forms].where(kind: 'HocSignup2015').each do |i|
     data = JSON.parse(i[:data])
-    if data['hoc_company_s'] == company
+    if data['hoc_company_s'] == @company
       company_count += 1
     end
   end
   return company_count
 end
 
-def country_count(country)
+def country_count
   country_count = 0;
   DB[:forms].where(kind: 'HocSignup2015').each do |i|
     data = JSON.parse(i[:data])
