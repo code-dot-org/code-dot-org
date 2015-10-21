@@ -807,7 +807,8 @@ Studio.onTick = function() {
 
   Studio.clearDebugRects();
 
-  var animationOnlyFrame = 0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor;
+  var animationOnlyFrame = Studio.midExecutionFailure ||
+      (0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor);
   Studio.yieldThisTick = false;
 
   if (Studio.customLogic) {
@@ -1775,6 +1776,7 @@ Studio.reset = function(first) {
   // True if we should fail before execution, even if freeplay
   Studio.preExecutionFailure = false;
   Studio.message = null;
+  Studio.midExecutionFailure = false;
 
   // Reset the score and title screen.
   Studio.playerScore = 0;
@@ -4778,6 +4780,15 @@ Studio.checkRequiredForSuccess = function() {
   return { exists: true, achieved: true, message: null };
 };
 
+/**
+ * Trigger a manual failure, which stops the interpreter and ends the level
+ * prematurely.
+ * @param {string} [message] optional failure message text
+ */
+Studio.fail = function (message) {
+  Studio.message = utils.valueOr(message, null);
+  Studio.midExecutionFailure = true;
+};
 
 var checkFinished = function () {
 
@@ -4813,7 +4824,12 @@ var checkFinished = function () {
       // establish a custom error message.
       Studio.message = requiredForSuccess.message;
     }
-  } 
+  }
+
+  if (Studio.midExecutionFailure) {
+    Studio.result = ResultType.FAILURE;
+    return true;
+  }
 
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
     Studio.result = ResultType.FAILURE;
