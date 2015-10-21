@@ -486,6 +486,8 @@
   "yes": "დიახ",
   "failedHasSetSprite": "Next time, set a character.",
   "failedHasSetBotSpeed": "Next time, set a bot speed.",
+  "failedHasSetBackground": "Next time, set the background.",
+  "failedHasSetMap": "Next time, set the map.",
   "failedTouchAllItems": "Next time, get all the items.",
   "failedScoreMinimum": "Next time, reach the minimum score.",
   "failedRemovedItemCount": "Next time, get the right number of items.",
