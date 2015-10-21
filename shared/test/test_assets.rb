@@ -280,6 +280,8 @@ class AssetsTest < Minitest::Test
           put(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
           assert @assets.last_response.successful?, "First small file upload is successful."
 
+          assert NewRelic::Agent.metrics.length == 1, 'still only one custom metric recorded'
+
           put(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
           assert @assets.last_response.successful?, "Second small file upload is successful."
 
