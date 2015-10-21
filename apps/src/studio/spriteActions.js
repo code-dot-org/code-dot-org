@@ -20,7 +20,7 @@ var Direction = constants.Direction;
  *
  * See Collidable#queueAction and Collidable#updateActions for usage.
  *
- * Note: All sprite actions must, for now, take be able to complete in a provided
+ * Note: All sprite actions must, for now, be able to complete in a provided
  * number of steps/frames, instead of blocking until they complete.  The latter
  * is a larger change that we'll save until later.
  *
