@@ -1860,7 +1860,7 @@ Studio.reset = function(first) {
     document.getElementById('speechBubble' + i)
       .setAttribute('visibility', 'hidden');
 
-    document.getElementById('sprite' + i).removeAttribute('opacity');
+    Studio.sprite[i].setOpacity(1);
 
     var explosion = document.getElementById('explosion' + i);
     if (explosion) {
@@ -3456,6 +3456,19 @@ Studio.setItemSpeed = function (opts) {
 
 Studio.showDebugInfo = function (opts) {
   showDebugInfo = opts.value;
+};
+
+/**
+ * Begin fading an actor out to nothing.
+ * @param {number} spriteIndex
+ * @param {number} [duration] - how long in milliseconds the fade should take.
+ *        See spriteActions#FadeActor for default value.
+ */
+Studio.fadeActor = function (spriteIndex, duration) {
+  var sprite = Studio.sprite[spriteIndex];
+  if (sprite) {
+    sprite.addAction(new spriteActions.FadeActor(duration));
+  }
 };
 
 Studio.vanishActor = function (opts) {

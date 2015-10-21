@@ -14,6 +14,7 @@ var uniqueId = 0;
 /**
  * An Item is a type of Collidable.
  * Note: x/y represent x/y of center in gridspace
+ * @extends {Collidable}
  */
 var Item = function (options) {
   // call collidable constructor
@@ -376,8 +377,20 @@ Item.prototype.startCollision = function (key) {
   var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
   if (newCollisionStarted) {
     if (this.className === 'hazard') {
+      Studio.fadeActor(key, 2000);
       Studio.fail(studioMsg.failedAvoidHazard());
     }
   }
   return newCollisionStarted;
+};
+
+/**
+ * Change visible opacity of this item.
+ * @param {number} newOpacity (between 0 and 1)
+ * @override
+ */
+Item.prototype.setOpacity = function (newOpacity) {
+  if (this.element) {
+    this.element.setAttribute('opacity', newOpacity);
+  }
 };
