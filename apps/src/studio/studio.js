@@ -1281,11 +1281,23 @@ function checkForItemCollisions () {
  * Test to see if an actor sprite will be touching a wall given particular X/Y
  * position coordinates (top-left)
  */
-
 Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
   var xCenter = xPos + sprite.width / 2;
   var yCenter = yPos + sprite.height / 2;
   return Studio.willCollidableTouchWall(sprite, xCenter, yCenter);
+};
+
+/**
+ * Test to see if an actor sprite will be beyond its given playspace boundaries
+ * if it is moved to a given X/Y position.
+ * @param {Collidable} sprite
+ * @param {number} xPos
+ * @param {number} yPos
+ */
+Studio.willSpriteLeavePlayspace = function (sprite, xPos, yPos) {
+  var boundary = Studio.getPlayspaceBoundaries(sprite);
+  return (xPos < boundary.left) || (xPos > boundary.right) ||
+      (yPos < boundary.top) || (yPos > boundary.bottom);
 };
 
 /**
@@ -4415,6 +4427,7 @@ Studio.moveSingle = function (opts) {
   sprite.lastMove = Studio.tickCount;
   var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   var wallCollision = false;
+  var playspaceEdgeCollision = false;
   var playSound = false;
   var deltaX = 0, deltaY = 0;
 
@@ -4433,51 +4446,54 @@ Studio.moveSingle = function (opts) {
       break;
   }
 
+  var projectedX = sprite.x + deltaX;
+  var projectedY = sprite.y + deltaY;
+
   if (level.blockMovingIntoWalls &&
-      Studio.willSpriteTouchWall(sprite, sprite.x + deltaX, sprite.y + deltaY)) {
+      Studio.willSpriteTouchWall(sprite, projectedX, projectedY)) {
     wallCollision = true;
 
     // We prevented the wall collision, but queue a wall collision event and
     // immediately reset the collision state since we didn't actually overlap:
     Studio.collideSpriteWith(opts.spriteIndex, 'wall');
     sprite.endCollision('wall');
+  }
 
-    if (level.gridAlignedMovement) {
-      sprite.queueAction(new spriteActions.GridMoveAndCancel(
-          deltaX, deltaY, level.slowJsExecutionFactor));
-    }
-  } else {
-    var clampedNewX = sprite.x + deltaX;
-    var clampedNewY = sprite.y + deltaY;
-    var boundary = Studio.getPlayspaceBoundaries(sprite);
-    if (!level.allowSpritesOutsidePlayspace) {
-      clampedNewX = Math.max(boundary.left, Math.min(boundary.right, clampedNewX));
-      clampedNewY = Math.max(boundary.top, Math.min(boundary.bottom, clampedNewY));
-    }
-
-    if (level.gridAlignedMovement) {
-      sprite.queueAction(new spriteActions.GridMove(
-          clampedNewX - sprite.x, clampedNewY - sprite.y, level.slowJsExecutionFactor));
-    } else {
-      sprite.x = clampedNewX;
-      sprite.y = clampedNewY;
-    }
+  if (!level.allowSpritesOutsidePlayspace &&
+      Studio.willSpriteLeavePlayspace(sprite, projectedX, projectedY)) {
+    playspaceEdgeCollision = true;
   }
 
   if (level.gridAlignedMovement) {
+    if (wallCollision || playspaceEdgeCollision) {
+      sprite.queueAction(new spriteActions.GridMoveAndCancel(
+          deltaX, deltaY, level.slowJsExecutionFactor));
+    } else {
+      sprite.queueAction(new spriteActions.GridMove(
+          deltaX, deltaY, level.slowJsExecutionFactor));
+    }
+
     Studio.yieldThisTick = true;
     if (Studio.JSInterpreter) {
       Studio.JSInterpreter.yield();
     }
 
     playSound = true;
-  } else if (!wallCollision && 
-             opts.dir !== Studio.lastMoveSingleDir &&
-             lastMove === Infinity ||
-             Studio.tickCount > lastMove + 1) {
-    // So long as there was no wall collision, a new direction, and we
-    // haven't already processed a move in the previous tick, then play a sound.
-    playSound = true;
+  } else if (!wallCollision) {
+    if (playspaceEdgeCollision) {
+      var boundary = Studio.getPlayspaceBoundaries(sprite);
+      projectedX = Math.max(boundary.left, Math.min(boundary.right, projectedX));
+      projectedY = Math.max(boundary.top, Math.min(boundary.bottom, projectedY));
+    }
+    sprite.x = projectedX;
+    sprite.y = projectedY;
+
+    if (opts.dir !== Studio.lastMoveSingleDir &&
+        lastMove === Infinity || Studio.tickCount > lastMove + 1) {
+      // So long as there was no wall collision, a new direction, and we
+      // haven't already processed a move in the previous tick, then play a sound.
+      playSound = true;
+    }
   }
 
   Studio.lastMoveSingleDir = opts.dir;
