@@ -6449,6 +6449,22 @@ function moveRequiredBlock(options) {
   ];
 }
 
+function moveNorthRequiredBlock() {
+  return moveRequiredBlock({ dir: '1' });
+}
+
+function moveSouthRequiredBlock() {
+  return moveRequiredBlock({ dir: '4' });
+}
+
+function moveEastRequiredBlock() {
+  return moveRequiredBlock({ dir: '2' });
+}
+
+function moveWestRequiredBlock() {
+  return moveRequiredBlock({ dir: '8' });
+}
+
 /**
  * Hoc2015 blockly helpers. We base hoc2015 blockly levels off of hoc2015 droplet
  * levels, marking them as editCode=false and overriding the startBlocks,
@@ -6457,8 +6473,11 @@ function moveRequiredBlock(options) {
 
 var hocMoveNSEW = '<block type="studio_move"><title name="DIR">1</title></block> \
   <block type="studio_move"><title name="DIR">4</title></block> \
-  <block type="studio_move"><title name="DIR">2</title></block> \
-  <block type="studio_move"><title name="DIR">8</title></block>';
+  <block type="studio_move"><title name="DIR">8</title></block> \
+  <block type="studio_move"><title name="DIR">2</title></block>';
+
+var hocMoveNS = '<block type="studio_move"><title name="DIR">1</title></block> \
+  <block type="studio_move"><title name="DIR">4</title></block>';
 
 var whenRunMoveEast = '<block type="when_run"><next> \
   <block type="studio_move"><title name="DIR">2</title></block></next> \
@@ -6467,6 +6486,14 @@ var whenRunMoveEast = '<block type="when_run"><next> \
 var whenRunMoveSouth = '<block type="when_run"><next> \
   <block type="studio_move"><title name="DIR">4</title></block></next> \
   </block>';
+
+var whenUpDown = '<block type="studio_whenUp" deletable="false" x="20" y="20"></block> \
+  <block type="studio_whenDown" deletable="false" x="20" y="150"></block>';
+
+var whenUpDownLeftRight = '<block type="studio_whenUp" deletable="false" x="20" y="20"></block> \
+  <block type="studio_whenDown" deletable="false" x="20" y="150"></block> \
+  <block type="studio_whenLeft" deletable="false" x="20" y="280"></block> \
+  <block type="studio_whenRight" deletable="false" x="20" y="410"></block>';
 
 /**
  * K1 helpers. We base k1 levels off of existing non-k1 levels, marking them as isK1 and
@@ -8888,7 +8915,7 @@ levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
-    moveRequiredBlock({ dir: '2' }), // East
+    moveEastRequiredBlock(),
   ],
 });
 
@@ -8897,8 +8924,8 @@ levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_two_items,  {
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
-    moveRequiredBlock({ dir: '2' }), // East
-    moveRequiredBlock({ dir: '4' }), // South
+    moveEastRequiredBlock(),
+    moveSouthRequiredBlock(),
   ],
 });
 
@@ -8907,8 +8934,8 @@ levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_item_destination,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
-    moveRequiredBlock({ dir: '4' }), // South
-    moveRequiredBlock({ dir: '8' }), // West
+    moveSouthRequiredBlock(),
+    moveWestRequiredBlock(),
   ],
 });
 
@@ -8917,9 +8944,9 @@ levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_item_destination_
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
-    moveRequiredBlock({ dir: '2' }), // East
-    moveRequiredBlock({ dir: '1' }), // North
-    moveRequiredBlock({ dir: '4' }), // South
+    moveEastRequiredBlock(),
+    moveNorthRequiredBlock(),
+    moveSouthRequiredBlock(),
   ],
 });
 
@@ -8928,9 +8955,9 @@ levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_item_destination_
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
-    moveRequiredBlock({ dir: '2' }), // East
-    moveRequiredBlock({ dir: '4' }), // South
-    moveRequiredBlock({ dir: '8' }), // West
+    moveEastRequiredBlock(),
+    moveSouthRequiredBlock(),
+    moveWestRequiredBlock(),
   ],
 });
 
@@ -8939,10 +8966,60 @@ levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_cross,  {
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
-    moveRequiredBlock({ dir: '1' }), // North
-    moveRequiredBlock({ dir: '4' }), // South
-    moveRequiredBlock({ dir: '8' }), // West
+    moveNorthRequiredBlock(),
+    moveSouthRequiredBlock(),
+    moveWestRequiredBlock(),
   ],
+});
+
+levels.hoc2015_blockly_7 = utils.extend(levels.js_hoc2015_event_two_items,  {
+  editCode: false,
+  startBlocks: whenUpDown,
+  toolbox: tb(hocMoveNS),
+  requiredBlocks: [
+    moveNorthRequiredBlock(),
+    moveSouthRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_8 = utils.extend(levels.js_hoc2015_event_four_items,  {
+  editCode: false,
+  startBlocks: whenUpDownLeftRight,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveNorthRequiredBlock(),
+    moveSouthRequiredBlock(),
+    moveEastRequiredBlock(),
+    moveWestRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_event_three_goals,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_event_score_points,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_win_lose,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_add_characters,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
+  editCode: false,
 });
 
 
