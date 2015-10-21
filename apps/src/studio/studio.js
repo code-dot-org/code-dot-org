@@ -4443,7 +4443,7 @@ Studio.moveSingle = function (opts) {
     sprite.endCollision('wall');
 
     if (level.gridAlignedMovement) {
-      sprite.queueAction(new spriteActions.MoveAndCancel(
+      sprite.queueAction(new spriteActions.GridMoveAndCancel(
           deltaX, deltaY, level.slowJsExecutionFactor));
     }
   } else {
