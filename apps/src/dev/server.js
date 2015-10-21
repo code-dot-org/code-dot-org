@@ -18,6 +18,8 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
+app.use('/dev', express.static(__dirname));
+
 app.use('/node_modules', express.static(__dirname + '/../../node_modules'));
 
 var renderApp = function(app, req, res) {
