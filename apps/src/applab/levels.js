@@ -148,12 +148,13 @@ levels.custom = {
     "andOperator": null,
     "orOperator": null,
     "notOperator": null,
-    "randomNumber_max": null,
+    // "randomNumber_max": null, // DEPRECATED
     "randomNumber_min_max": null,
     "mathRound": null,
     "mathAbs": null,
     "mathMax": null,
     "mathMin": null,
+    "mathRandom": null,
 
     // Variables
     "declareAssign_x": null,
