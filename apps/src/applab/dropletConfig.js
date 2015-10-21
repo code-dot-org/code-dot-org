@@ -168,3 +168,6 @@ module.exports.categories = {
     blocks: []
   },
 };
+
+module.exports.showExamplesLink = true;
+
