@@ -41,6 +41,12 @@ var Collidable = function (opts) {
 
   // default num frames is 1
   this.frames = this.frames || 1;
+
+  /**
+   * @type {Array}
+   * @private
+   */
+  this.actions_ = [];
 };
 
 module.exports = Collidable;
@@ -128,4 +134,26 @@ Collidable.prototype.outOfBounds = function () {
          (this.x > studioApp.MAZE_WIDTH + (this.width / 2)) ||
          (this.y < -(this.height / 2)) ||
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
+};
+
+Collidable.prototype.queueAction = function (action) {
+  this.actions_.push(action);
+};
+
+Collidable.prototype.hasActions = function () {
+  return this.actions_.length > 0;
+};
+
+Collidable.prototype.updateActions = function () {
+  this.actions_.forEach(function (action) {
+    action.update(this);
+  }, this);
+
+  // Splice completed actions out of the current action list, iterating
+  // backwards so we don't skip anything.
+  for (var i = this.actions_.length - 1; i >= 0; i--) {
+    if (this.actions_[i].isDone()) {
+      this.actions_.splice(i, 1);
+    }
+  }
 };
