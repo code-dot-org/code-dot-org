@@ -33,21 +33,18 @@ end
 def with_hipchat_logging(name)
   start_time = Time.now
   HipChat.log "Running #{name}..."
-
-  begin
-    yield if block_given?
-  rescue => e
-    # notify developers room and our own room
-    "<b>#{name}</b> failed in #{format_duration(Time.now - start_time)}".tap do |message|
-      HipChat.log message, color: 'red', notify: 1
-      HipChat.developers message, color: 'red', notify: 1
-    end
-    # log detailed error information in our own room
-    HipChat.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'
-    raise
-  end
-
+  yield if block_given?
   HipChat.log "#{name} succeeded in #{format_duration(Time.now - start_time)}"
+
+rescue => e
+  # notify developers room and our own room
+  "<b>#{name}</b> failed in #{format_duration(Time.now - start_time)}".tap do |message|
+    HipChat.log message, color: 'red', notify: 1
+    HipChat.developers message, color: 'red', notify: 1
+  end
+  # log detailed error information in our own room
+  HipChat.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'
+  raise
 end
 
 def build_task(name, dependencies=[], params={})
@@ -315,7 +312,7 @@ def log_coverage_results
   results = JSON.parse(File.read(results_file))
   HipChat.log "Unit tests for <b>dashboard</b> coverage: #{results["results"]["coverage_percent"]}. Details: https://test-studio.code.org/coverage/index.html", color: 'green'
 rescue Exception => e
-  HipChat.log "Couldn't read test coverage results at #{results_file}: #{e.to_s}\n#{e.backtrace.join("\n")}"
+  HipChat.log "Couldn't read test coverage results at #{results_file}: #{e.message}\n#{e.backtrace.join("\n")}"
 end
 
 COVERAGE_SYMLINK = dashboard_dir 'public/coverage'
