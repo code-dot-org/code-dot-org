@@ -28,9 +28,9 @@ fa-AF:
   hoc2014_support: 'حمایتش کن &#x25BE;'
   hoc2014_whatishoc: ساعتِ کدنویسی چيست؟
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
+  csedweek_map_signup: رویدادتان را ثبت کنید
   csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_search_search: جستجو کن
   csedweek_map_search_reset: تنظیم مجدد
   cded_sign_up: ثبت نام
   cded_try_it: آن را امتحان کنید
@@ -109,6 +109,7 @@ fa-AF:
   hoc_is_here: 'زمانِ HourOfCode# رسید - امتحانش کنید! codeorg@'
   just_did_hoc: 'من HourOfCode# رو تموم کردم - امتحانش کنید! codeorg@'
   twitter_teach_cs: 'چرا مدرسه های بیشتری علوم کامپیوتر درس نمی دهند؟ ما می توانیم این را اصلاح کنیم. http://youtu.be/nKIu9yen5nc. سایت  http://code.org/ را ببینید تا بیشتر بیاموزید.'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: یک ساعت کدنویسی یاد بگیرید
   beyond_hoc: فراتر از یک ساعت
   what_gender: جنسیت شما چیست؟
@@ -197,6 +198,8 @@ fa-AF:
   homepage_action_text_signpetition: درخواست را امضا کنید
   homepage_signpetition_dropdown: 'درخواست ما را امضا کنید  &#x25BE;'
   homepage_diversity_pledge: پیمان احترام و برابری نژاد ها را بپذیرید
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org و هیئت مدیره ی دانشگاه با هم متحد شدند تا تنوع علوم کامپیوتر را بهبود ببخشند.
   homepage_banner_text_link: بیشتر یاد بگیرید
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -206,6 +209,7 @@ fa-AF:
   homepage_slot_text_link_hoc: ساعتِ کد نویسی را امتحان کنید
   homepage_slot_text_link_host: میزبان یک ساعت کدزنی باشید
   homepage_slot_text_link_hocserved: '# تائید شده'
+  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: دانش آموزان
   homepage_slot_text_blurb_students: تمام آموزش های ما را کشف کنید
   homepage_slot_text_link_codestudio: استودیو ی کد را امتحان کنید
@@ -263,11 +267,15 @@ fa-AF:
   class_submission_level_vocational: فنی و حرفه ای
   class_submission_languages_other: زبان (های) دیگر
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} teachers have signed up for the Hour of Code and would like a volunteer to help them.'
-  volunteer_engineer_submission_intro_paragraph: 'Please enter the following information if you are a computer science student or software professional, and you’re interested in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: |-
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: نام
-  volunteer_engineer_submission_field_name_placeholder: Full Name
+  volunteer_engineer_submission_field_name_placeholder: نام و نام خانوادگی
   volunteer_engineer_submission_field_company: Company (or University)
   volunteer_engineer_submission_field_company_placeholder: Company (or University)
   volunteer_engineer_submission_field_experience_level: Experience level
@@ -277,7 +285,7 @@ fa-AF:
   volunteer_engineer_submission_field_location_flexibility: I can help during the Hour of Code by... (select all that apply)
   volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering after the Hour of Code
   volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_field_linkedin: پروفایل لینکداین
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook profile
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
@@ -291,7 +299,7 @@ fa-AF:
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
   volunteer_engineer_submission_submit: ارسال کنید
-  volunteer_engineer_submission_thankyou: Thank you for submitting your information.
+  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn more here.</a>'
   volunteer_engineer_submission_commitment_uncertain: نامطمئن
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 ساعت در هفته
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ساعت در هفته
@@ -327,6 +335,7 @@ fa-AF:
   dashboard_landing_progress_title: پیشرفت کلاس اصلی
   dashboard_landing_progress_biggest: این پیشرفت بزرگترین بخش شما است.
   dashboard_landing_view_progress: 'مشاهده‌ی پیشرفتِ %{biggest_section}'
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: دوره‌های قابل دسترس
   dashboard_landing_available_courses: 'دوره های که در  حال حاضر در دسترس  هستند برای شما و دانش آموزان شما در اینجا هستند.'
   dashboard_landing_more_tutorials: می خواهی بازم هم آموزش های بیشتری را ببینی؟
@@ -466,7 +475,7 @@ fa-AF:
   dashboard_progress_furthest_level_attempted: 'تلاش برای دسترسی به سطح دسترسی خارج از محدوده '
   dashboard_stage: مرحله
   dashboard_puzzle: پازل
-  dashboard_question: Question
+  dashboard_question: سوال
   dashboard_response: Response
   stats_hoc_2013_heading: 'آمار باور نکردنی از سال گذشته ساعت کدنويسي. تنها در یک هفته:'
   stats_hoc_2013_image_alt: وضعیت کد نویسی در سال 2013
@@ -485,8 +494,8 @@ fa-AF:
   dashboard_faq: پرسش و پاسخ‌های متداول
   dashboard_faq_k5: پرسش های متداول پیش از دبستان
   dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>September 30, 2015</b> - The Hour of Code 2015 is coming! Join classrooms worldwide for the largest learning event in history.'
+  dashboard_announce_view_all: مشاهده همه
+  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
   code_hoc_coming: 'ساعت کد نویسی اینجاست - 8 تا 14 دسامبر!'
   code_sign_up: ثبت نام کنید برای شرکت کردن تو هفته ی آموزش علوم کامپیوتر
   learn_more: بیشتر یاد بگیرید
@@ -554,7 +563,7 @@ fa-AF:
   robomindnl_name: برنامه‌نویسیِ یک ربات مجازی
   flappy_name: درست کردن بازی فلاپی
   bitsbox_name: 'Bitsbox - یک بازی بسازید'
-  makeschool_name: Build an iPhone game in your browser!
+  makeschool_name: یک بازی آیفون در مرورگر خود بسازید!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor ساعت کد نویسی
   blockly_name: بلوکی
@@ -736,7 +745,7 @@ fa-AF:
   groklearning_beyond_name: یادگیری برنامه نویسی پایتون
   hacketyhack_beyond_name: یادگیری روبی
   robomind_beyond_name: برنامه‌نویسیِ یک ربات مجازی
-  makeschool_beyond_name: Build an iPhone game in your browser!
+  makeschool_beyond_name: یک بازی آیفون در مرورگر خود بسازید!
   appinventor_beyond_name: AppInventor ساعت کد نویسی
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: یادگیری کد با کارل سگ

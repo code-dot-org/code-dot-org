@@ -8,19 +8,19 @@ title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: prizes_nav
 
 # Premii - termeni și condiții
 
-## Amazon.com or Microsoft’s Windows Store credit:
+## Amazon.com, iTunes and Windows Store credit:
 
-The Amazon.com and Microsoft’s Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Limita este de un premiu pe organizator.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. Creditul de 10 dolari trebuie adaugat unui cont deja existent, acesta expirand dupa 1 an. Limita este de un premiu pe organizator.
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com or Microsoft’s Windows Store credit. În cazul în care întreaga şcoală participă la Hour of Code, pentru a se califica, fiecare profesor trebuie să înregistreze individual ca organizator.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. În cazul în care întreaga şcoală participă la Hour of Code, pentru a se califica, fiecare profesor trebuie să se înregistreze individual ca organizator.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com and Microsoft’s Windows Store credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
 
-## Laptopuri pentru întreaga clasă (sau 10.000 USD pentru alte tehnologii):
+## Laptopuri pentru întreaga clasă (sau 10.000 Usd pentru alte tehnologii):
 
-Premiul limitat numai pentru şcoli publice K-12 SUA. To qualify, your entire school must register for the Hour of Code by November 16, 2015. O şcoală în fiecare stat al SUA va primi un set de calculatoare pentru clasă. Code.org will select and notify winners via email by December 1, 2015.
+Premiul limitat numai pentru şcoli publice K-12 Sua. Pentru a te califica, intreaga scoala trebuie sa fie inregistrata pentru evenimentul Hour of Code pana pe 16 noiembrie 2015. O şcoală din fiecare stat al Sua va primi un set de calculatoare pentru clasă. Code.org va selecta si anunta castigatorii prin e-mail pana pe 1 decembrie 2015.
 
 Pentru a clarifica, acest lucru nu este un concurs care implică noroc.
 

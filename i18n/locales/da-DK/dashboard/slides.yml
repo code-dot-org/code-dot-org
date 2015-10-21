@@ -335,16 +335,6 @@ da:
       7:
         image: notes/frozen3_7.jpg
         text: Enkle former kan bruges til at oprette mere komplekse mønstre. I den næste øvelse er den kode, du for nylig skrev til at oprette en cirkel tilgængelig for dig som en ny funktion, der kan lave cirkler af forskellige størrelser. Kan du bruge det til at hjælpe Elsa med at skabe mere indviklede og smukke mønstre i sneen?
-    C3_playlab_create_game:
-      1:
-        image: notes/playlab_1.png
-        text: Indtil nu har du lavet en animation eller en historie, der gør præcis det samme, hver gang du kører den. Nu kan du lave et interaktivt spil, som du rent faktisk kan spille.
-      2:
-        image: notes/playlab_2.png
-        text: 'Her er "når pilen"- og "flyt figur"-blokkene. Du kan sætte disse blokke sammen for at kunne flytte figurerne rundt med piletasterne.'
-      3:
-        image: notes/playlab_3.png
-        text: Og der er nogle blokke, der gør noget når figurer kolliderer eller der klikkes på dem. Tjek dem ud og hav det sjovt!
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
@@ -777,8 +767,7 @@ da:
         text: Indtil nu har du lavet en animation eller en historie, der gør præcis det samme, hver gang du kører den. Nu kan du lave et interaktivt spil, som du rent faktisk kan spille.
       2:
         image: notes/C2_playlab_createastory_2.png
-        text: |-
-          There are some new blocks to try out. There's the "when arrow" block and the "move actor" block. You can put these blocks together to move the actors around with the arrow keys. And there are some blocks that do stuff when actors collide or are clicked. Check them out and have fun!
+        text: 'Her er "når pilen"- og "flyt figur"-blokkene. Du kan sætte disse blokke sammen for at kunne flytte figurerne rundt med piletasterne.'
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
@@ -810,3 +799,201 @@ da:
         image: notes/C2_zuck_repeat_loop_5.png
         text: |-
           Now one more thing is you can put as many commands as you want inside the "repeat" block. So in this example you're telling it to move forward and turn left, which it will do five times. All right good job and have fun!
+    C3_artist_functions:
+      1:
+        image: notes/C3_artist_functions_1.png
+        text: "One of the great things in computer programming is once you've taught a computer how to do an action, you can call that function again. You give it a name and then you can call it. That's really like extending the language."
+      2:
+        image: notes/C3_artist_functions_2.png
+        text: "In the program we built, we learned how to draw a square by moving and turning four times. We can take that function and give it a name, draw a square, so that any time we want to do that, we simply say draw a square and it will go back and invoke that function, that code. It will get done for us. We've added that concept to our programming language."
+    C3_artist_intro:
+      1:
+        image: notes/C3_artist_intro_1.png
+        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+      2:
+        image: notes/C3_artist_intro_2.png
+        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+      3:
+        image: notes/C3_artist_intro_3.png
+        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+      4:
+        image: notes/C3_artist_intro_4.png
+        text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
+      5:
+        image: notes/C3_artist_intro_5.png
+        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+    C3_artist_nested_loops:
+      1:
+        image: notes/C3_artist_nested_loops_1.png
+        text: "When you put a loop inside of another loop, we call that a nested loop. For example, here we're given the code already to draw one triangle with sides of length 100 pixels using the repeat times block set to three, once for each side of a triangle."
+      2:
+        image: notes/C3_artist_nested_loops_2.png
+        text: "But we want to draw six triangles. In order to do that, we're going to take that loop and place it inside of another repeat times block. Pretty cool!"
+    C3_bee_conditionals:
+      1:
+        image: notes/C3_bee_conditionals_1.png
+        text: This is the conditional block. It says IF there is nectar or honey that is less than, equal to or greater than a number, THEN do something.
+      2:
+        image: notes/C3_bee_conditionals_2.png
+        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+      3:
+        image: notes/C3_bee_conditionals_3.png
+        text: "In this example, we're going to say IF the purple flower has nectar greater than 0, get nectar. That will tell our bee to keep getting nectar as long as it's there. Ta-dah!"
+    C3_debugging_bee:
+      1:
+        image: notes/C3_debugging_bee_1.png
+        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+      2:
+        image: notes/C3_debugging_bee_2.png
+        text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
+      3:
+        image: notes/C3_debugging_bee_3.png
+        text: "Looks like there's our problem! We need one more move forward block. The step button helps us debug our problem by identifying where the error is so we can fix it."
+    C3_bee_functions:
+      1:
+        image: notes/C3_bee_functions_1.png
+        text: One of the most important concepts in computer science is how to define new commands, how to add your own words to a computer language. Most computer languages have only about one hundred words or commands. The art and magic is in defining your own new words out of these building blocks.
+      2:
+        image: notes/C3_bee_functions_2.png
+        text: "We do this all the time in sports. For example, in basketball, you start by learning how to dribble, how to do a lay-up, how to rebound. Once you've learned these really basic moves, you learn new moves and put together these building blocks, like a pick and roll or give and go. You can then go from there to do more complex plays. Once you learn that play and give it a name, everybody on the team knows how to do it."
+      3:
+        image: notes/C3_bee_functions_3.png
+        text: "Similarly once you've taught a computer how to do an action once using these sequences of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function. Now we're going to use functions to help the bee."
+      4:
+        image: notes/C3_bee_functions_4.png
+        text: "In this example, our function is called get 2 nectar, this green block right here. We know what get 2 nectar does by looking at this grey box which is the function definition. If we look inside there, the get 2 nectar is going to get nectar and then get nectar again. Always look at what's inside the grey box so that you know what these green function blocks can do."
+    C3_bee_nested_loops:
+      1:
+        image: notes/C3_bee_nested_loops_1.png
+        text: "Now we're going to use nested loops with the bee. We're given some starter code which tells the bee to move forward and get nectar three times and then turn right. Let's take that whole piece of code and nest it inside another repeat block and set to repeat three times. Done!"
+    C3_bounce:
+      1:
+        image: notes/C3_bounce_1.png
+        text: "You're going to be creating your very own bounce game that you'll be able to share with your friends! How cool!"
+      2:
+        image: notes/C3_bounce_2.png
+        text: To get started, we have to link up the paddle controls to the arrow keys on our keyboard.
+      3:
+        image: notes/C3_bounce_3.png
+        text: "We can do this by linking the when left arrow block to the move left block and the when right arrow block to the move right block. Give it a go and you'll be programming your own bounce game in no time!"
+    C3_computational_thinking:
+      1:
+        image: notes/C3_computational_thinking_1.png
+        text: "This lesson is computational thinking. Sometimes learning a new game can be tough, right? At first it might seem really confusing and sometimes, there's no one there to teach you the rules, so you have to figure it out on your own."
+      2:
+        image: notes/C3_computational_thinking_2.png
+        text: "The good news is that you can get better at figuring things out on your own when you know a few thinking tricks. These tricks are unique ways for looking at and solving problems. In this lesson, you'll learn about four tricks and practice them with your friends to figure out the rules to a game."
+      3:
+        image: notes/C3_computational_thinking_3.png
+        text: "When you break down a big problem into smaller pieces, you're using your brain to decompose the big problem. Once we've decomposed the big problem into several smaller problems, we can go on to our next trick, which is called pattern match."
+      4:
+        image: notes/C3_computational_thinking_4.png
+        text: "That's when we look for similarities between things. Once I find the things that are the same, I can figure out what things are different. When I remove those differences, that's called abstraction."
+      5:
+        image: notes/C3_computational_thinking_5.png
+        text: "After I have figured out the steps to solving a problem, I can put those steps in a specific order called an algorithm so that anyone can use my directions to solve that problem. We're going to use these four steps to figure out how to play the game with no rules. By the end of the game, you'll be able to play something that looks like this!"
+    C3_crowdsourcing:
+      1:
+        image: notes/C3_crowdsourcing_1.png
+        text: "This lesson is called crowdsourcing. In this lesson we'll use a deck of cards to learn about how much easier some things can be to do in groups instead of trying to do them all alone. So grab some friends and make something awesome. Crowdsourcing is getting help from a large group of people to finish something faster."
+      2:
+        image: notes/C3_crowdsourcing_2.png
+        text: In computer science, we use crowdsourcing all the time. Thousands of amateurs and professionals link their computers together to search through billions and billions of pieces of information. Looking for things like the next Marsenne prime number, or even possible alien communications.
+      3:
+        image: notes/C3_crowdsourcing_3.png
+        text: "When you see a movie, each second of the movie is 24 individual pictures, we call those frames. So every one of those pictures needs to be created and rendered and put all together. My team and I, we're all software developers. We all work together to create a piece of software that actually creates an image, creates the final image that you see on screen. That's a tool that artists and other developers can use as part of their teamwork and their process to be able to create the images that they want on screen."
+      4:
+        image: notes/C3_crowdsourcing_4.png
+        text: "For example, in Finding Nemo, when Crush and Squirt and all their friends are flying through the East Australian Current. You're seeing images of water flowing by, you're seeing the colors on the back of the turtle, you're seeing the sides of the fish. All of those things are generated through math and computer programs that we write, that we then give to the artist and they take that to create that final image and tweak it and make it look beautiful and look fun."
+    C3_dice_race:
+      1:
+        image: notes/C3_dice_race_1.png
+        text: This lesson is called dice race. Almost everyone likes to play computer games. Have you ever thought about how computer programmers turn the steps of a game into a program? The first step in creating computer games and in solving any problem requires thinking and planning.
+      2:
+        image: notes/C3_dice_race_2.png
+        text: "The thinking step of problem solving produces an algorithm, which is a step by step plan for solving a problem or finishing a task. In this lesson, you'll create an algorithm for a dice race game. Then you'll ask your friends to try out your plan to see if they can follow the steps to play the game. After the programmer is sure the steps are correct, it's time to translate the algorithm into a program with language that the computer can understand."
+      3:
+        image: notes/C3_dice_race_3.png
+        text: "Almost everything we do every day requires an algorithm, a list of steps you can follow to finish a task. Think about getting ready for school or planning a fun day with your friends or fixing a snack. To complete any of those tasks, you'll need to break it down into smaller steps and sometimes the steps must be in a specific order."
+      4:
+        image: notes/C3_dice_race_4.png
+        text: "Think about making a sandwich. It doesn't matter which ingredient you get out of the cabinet first. But you can't spread the peanut butter until you open the jar. Computers need algorithms and programs to show them how to do even simple things that we can do without thinking about it."
+      5:
+        image: notes/C3_dice_race_5.png
+        text: An algorithm is the thinking behind what needs to happen while the program is the actual instructions given to the computer to make it happen. An algorithm has to be translated into a program before a computer can run it. Breaking a task into steps called an algorithm is sometimes difficult. But like any new skill, it gets easier and easier with practice.
+    C3_farmer_while:
+      1:
+        image: notes/C3_farmer_while_1.png
+        text: "While loops are pretty similar to what you do in everyday life. Imagine you are washing your car, you'll keep scrubbing until it's clean. While it's not clean, continue to scrub. You're evaluating these things all the time."
+      2:
+        image: notes/C3_farmer_while_2.png
+        text: "We've got a new look to help your farmer out. It's called a while-block. It's pretty simple actually. While a statement at the top is true, do something. For example, while there's a pile move one hayful. Go ahead and give it a try with your farmer."
+    C3_functional_suncatchers:
+      1:
+        image: notes/C3_functional_suncatchers_1.png
+        text: "This lesson is functional suncatchers. You'll be creating these pretty suncatchers using functions. There are several steps in creating one of these suncatchers. Some of the steps you have to repeat many times."
+      2:
+        image: notes/C3_functional_suncatchers_2.png
+        text: The first step in simplifying the process of making a suncatcher is figure out what we have to repeat over and over again. We can group these steps into what we call a function.
+      3:
+        image: notes/C3_functional_suncatchers_3.png
+        text: "But there is more to creating a beautiful suncatcher than following precise steps. Sometimes we want to be creative and change the color of the beads we're using. We can make every suncatcher unique if we use different colored beads."
+      4:
+        image: notes/C3_functional_suncatchers_4.png
+        text: Your suncatcher will be uniquely yours when you learn to think of the beads as variables which is a word that means a placeholder for information that can change. Have fun creating beautiful suncatchers using functions and variables!
+    C3_internet:
+      1:
+        image: notes/C3_internet_1.png
+        text: This lesson is all about the internet. The internet is a very busy place and similar to this busy road. Messages like cars are zooming along to get to their destinations. Messages move through the internet very quickly.
+      2:
+        image: notes/C3_internet_2.png
+        text: "Acting out how the internet works will help you understand what's happening when you use the internet. You'll learn how messages get from your computer to a favorite website or from a friend to an email inbox. Just like it's easier to navigate busy roads when you know the roads and can read the signs, traveling the internet is not so complicated when you know what goes on behind the scenes."
+      3:
+        image: notes/C3_internet_3.png
+        text: "Sending messages on the internet is a little bit like sending messages in the mail but with a few differences. I'm here at Google.com. The IP address for this website is this number. You can think of an IP address as your return address in the mail. Let's imagine that I want to send a message in the mail to someone in the office down the there. Do you see URL and the IP address on that door? I've written this message and hit send."
+      4:
+        image: notes/C3_internet_4.png
+        text: "Unlike the Postal Service, the first thing that happens is that the internet breaks the message into smaller parts so it can be sent more easily. These small parts are called packets. Each packet of the message is delivered to the destination one at a time. These packets are all put together in the right order so that the receiver can read the message correctly. Of course, there are many more things to learn about how the internet works but this is a great start. You're on your way to becoming a savvy internet user! Be sure to tell your family and friends what you've learned!"
+      5:
+        image: notes/C3_internet_5.png
+        text: "My name is Amanda Camp and I'm a software engineer at Google. I work on a team that works on a backend server that stores profiles and contacts. In my job, we think a lot about how contacts can be sent to other devices, such as your phone. Most people have a lot of contacts, you might have say, 1000 contacts and we don't want to send all of those contacts at once to your phone because it's too large of a message. Similar to the way the internet breaks large messages down into packets, we use a concept called paging where we might only send your phone 100 contacts at a time and let your phone respond to us and ask for the next 100."
+      6:
+        image: notes/C3_internet_6.png
+        text: "The most exciting thing about software is the fact that it can impact the entire world. I first learned to program when I was about nineteen. I think I was already a sophomore or a junior in college. The first program I remember writing is something that converted Celsius to Fahrenheit. I like programming because I like helping people. I can write programs at Google that help people all over the world and that's really mind-boggling and exciting."
+    C3_maze_conditionals:
+      1:
+        image: notes/C3_maze_conditionals_1.png
+        text: "People make decisions everyday. For example, before you go outside, you have an if statement that says if it's raining, then I need to get my jacket. Computers are amazing once you decide those kinds of statements that they can reliably execute those things and unbelievable speed. A computer program really is a little bit of math and some if statements where the decision gets made."
+      2:
+        image: notes/C3_maze_conditionals_2.png
+        text: "The if block helps the zombie make a decision. It checks something. For example, let's use the block that says if there's a path to the left, and put a turn left command inside it. We're telling the zombie to check its surroundings, see if there's a path on the left and if so, make that turn."
+      3:
+        image: notes/C3_maze_conditionals_3.png
+        text: "Then we use the move forward block inside this repeat to get it to keep moving forward as long as it just wants to go straight. Then when there's a turn, the if block will tell it to make that turn to the left. You can see that if we do that, if we take the turn to the left and otherwise moving forward, we'll achieve our goal."
+      4:
+        image: notes/C3_maze_conditionals_4.png
+        text: "It's an example of using an if statement which is really a fundamental concept in computer programming. One of the first things I learned was how to write a program that played tic-tac-toe. I had if statements to say, ok, if the other person is about to win, go ahead and block that spot. Have fun learning how to use if statements, it's a key concept."
+    C3_maze_level_4:
+      1:
+        image: notes/C3_maze_level_4_1.png
+        text: In this example, your goal is to get zombie to the sunflower. We could use five move forward blocks or we could tell the computer to move forward and repeat five times using the one repeat block.
+      2:
+        image: notes/C3_maze_level_4_2.png
+        text: This saves time and makes it way easier. To use it, just put the move forward block inside the repeat block. Hit run and the zombie will move forward five times to the yummy sunflower.
+    C3_playlab_create_game:
+      1:
+        image: notes/C3_playlab_create_game_1.png
+        text: Indtil nu har du lavet en animation eller en historie, der gør præcis det samme, hver gang du kører den. Nu kan du lave et interaktivt spil, som du rent faktisk kan spille.
+      2:
+        image: notes/C3_playlab_create_game_2.png
+        text: 'Her er "når pilen"- og "flyt figur"-blokkene. Du kan sætte disse blokke sammen for at kunne flytte figurerne rundt med piletasterne.'
+    C3_songwriting_with_parameters:
+      1:
+        image: notes/C3_songwriting_with_parameters_1.png
+        text: This is the song writing lesson. Music is a lot like a computer program. The written notes and words tell the singer exactly what to do. Some parts of music are used over and over again.
+      2:
+        image: notes/C3_songwriting_with_parameters_2.png
+        text: We call this the chorus. In a computer program, the parts of the program that are used over and over again are called functions. When you read song lyrics and it says the word chorus, do you sing the word chorus? No, you look at the top of the page to see what words make up the chorus.
+      3:
+        image: notes/C3_songwriting_with_parameters_3.png
+        text: "In this lesson, you'll learn a silly little song called little bunny foo foo. The song has a chorus that you will sing several times over and over again. A function is a piece of code that you can call and use over and over again. It makes programming easier and more efficient so you don't have to write out the steps of your function over and over again. You can just write it once!"

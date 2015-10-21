@@ -57,7 +57,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 **Semua tutorial Hour of Code:**
 
-  * Require minimal prep-time for organizers
+  * Memerlukan persiapan-waktu minimal untuk penyelenggara
   * Tutorial mandiri - memungkinkan pelajar untuk bekerja sesuai kecepatan dan tingkat keahlian mereka sendiri
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)

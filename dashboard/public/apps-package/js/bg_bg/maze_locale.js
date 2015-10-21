@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Ако има път в тази посока, то направи следните действия."},
 "ifelseTooltip":function(d){return "Ако има път в тази посока,  извърши първия блок действия. Ако няма, извърши втория блок действия."},
 "ifFlowerTooltip":function(d){return "Ако има цвете/пчелна пита в определената посока,  извършете определени действия."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Ако има цвете в тази посока, то направи следните действия."},
 "ifelseFlowerTooltip":function(d){return "Ако има цвете/пчелна пита в тази посока,  извърши действията от първия блок. Ако няма, извърши действията от втория блок."},
 "insufficientHoney":function(d){return "Използвате всички правилни блокове, но трябва да направите точното количество мед."},
 "insufficientNectar":function(d){return "Използвате всички правилни блокове, но трябва да съберете нужното количество нектар."},

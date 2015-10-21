@@ -29,14 +29,16 @@
       return;
     }
 
-    callouts = callouts.filter(function (element, index, array) {
-      if (dashboard.clientState.hasSeenCallout(element.id)) {
-        return false;
-      } else {
-        dashboard.clientState.recordCalloutSeen(element.id);
-        return true;
-      }
-    });
+    if (document.URL.indexOf('show_callouts=1') === -1) {
+      callouts = callouts.filter(function (element, index, array) {
+        if (dashboard.clientState.hasSeenCallout(element.id)) {
+          return false;
+        } else {
+          dashboard.clientState.recordCalloutSeen(element.id);
+          return true;
+        }
+      });
+    }
 
     if (!callouts || callouts.length === 0) {
       return;

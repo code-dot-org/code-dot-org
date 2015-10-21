@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Ef það er slóð í þessa stefnu þá á að gera eitthvað."},
 "ifelseTooltip":function(d){return "Ef það er slóð í þessa stefnu þá á að gera fyrstu kubbastæðuna. Annars á að gera stæðu númer tvö."},
 "ifFlowerTooltip":function(d){return "Ef það er blóm/býkúpa í hina tilteknu átt, þá skal gera einhverjar aðgerðir."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Ef það er blóm í hina tilteknu átt, þá gera einhverjar aðgerðir."},
 "ifelseFlowerTooltip":function(d){return "Ef það er blóm/býkúpa í hina tilteknu átt, þá skal gera fyrstu aðgerðastæðuna. Annars skal gera hina aðgerðastæðuna."},
 "insufficientHoney":function(d){return "Þú ert að nota alla réttu kubbana, en þú þarft að búa til rétt magn hunangs."},
 "insufficientNectar":function(d){return "Þú ert að nota alla réttu kubbana, en þú þarft að safna réttu magni af blómasafa."},

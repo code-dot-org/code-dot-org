@@ -28,18 +28,15 @@ module LevelsHelper
   #   using the value from the `data` param.
   def create_channel(data = {}, src = nil)
 
-    result = ChannelsApi.call(request.env.merge(
-      'REQUEST_METHOD' => 'POST',
-      'PATH_INFO' => '/v3/channels',
-      'REQUEST_PATH' => '/v3/channels',
-      'QUERY_STRING' => src ? "src=#{src}" : '',
-      'CONTENT_TYPE' => 'application/json;charset=utf-8',
-      'rack.input' => StringIO.new(data.to_json)
-    ))
-    headers = result[1]
+    storage_app = StorageApps.new(storage_id('user'))
+    if src
+      data = storage_app.get(src)
+      data['name'] = "Remix: #{data['name']}"
+      data['hidden'] = false
+    end
 
-    # Return the newly created channel ID.
-    headers['Location'].split('/').last
+    timestamp = Time.now
+    storage_app.create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
   end
 
   def readonly_view_options
@@ -128,12 +125,13 @@ module LevelsHelper
 
     set_channel if @level.channel_backed?
 
-    callouts = params[:share] ? [] : select_and_remember_callouts(params[:show_callouts])
-    # Set videos and callouts.
-    view_options(
-      autoplay_video: select_and_track_autoplay_video,
-      callouts: callouts
-    )
+    unless params[:share]
+      # Set videos and callouts.
+      view_options(
+        autoplay_video: select_and_track_autoplay_video,
+        callouts: select_and_remember_callouts(params[:show_callouts])
+      )
+    end
 
     # External project levels are any levels of type 'external' which use
     # the projects code to save and load the user's progress on that level.
