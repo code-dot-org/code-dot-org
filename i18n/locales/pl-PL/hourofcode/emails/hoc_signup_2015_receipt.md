@@ -8,29 +8,29 @@ from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x7
 
 # Dziękujemy za rejestrację jako organizator Hour of Code!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
+<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> Umożliwiasz uczniom na całym świecie odbycie jednej Godziny Kodowania, która może *zmienić resztę ich życia* podczas tygodnia 7-13 grudnia. <% end %>
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+Będziemy w kontakcie odnośnie nagród, nowych samouczków i innych ekscytujących wiadomości tej jesieni. To co możesz zrobić teraz?
 
-## 1. Udostępniaj
+## 1. Nagłaśniaj sprawę
 
 Opowiedz swoim znajomym o #HourOfCode.
 
-## 2. Zapytaj Twoją szkołę o chęć udziału w Hour of Code
+## 2. Poproś swoją szkołę o zorganizowanie Godziny Kodowania
 
-[Send this email](https://<%= hostname %>/resources#email) to your principal.
+[Wyślij ten list](https://<%= hostname %>/resources#email) do swojego dyrektora szkoły.
 
 ## 3. Poproś swojego pracodawcę o przyłączenie się do akcji
 
-[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Wyślij ten list](https://<%= hostname %>/resources#email)do swojego przełożonego lub prezesa.
 
-## 4. Promote the Hour of Code in your community
+## 4. Promuj Godzinę Kodowania w swojej społeczności
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://<%= hostname %>/resources#email).
+Zwerbuj lokalną grupę harcerzy, kościół, uczelnię, koło zainteresowań. Albo zorganizuj blokową Godzinę Kodowania dla sąsiadów. [Wyślij ten list](https://<%= hostname %>/resources#email).
 
-## 6. Poproś władze lokalne o udzielenie wsparcia akcji 'Hour of Code'
+## 6. Poproś władze lokalne o udzielenie wsparcia akcji "Godzina Kodowania"
 
-[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Wyślij ten list](https://<%= hostname %>/resources#politicians) do swojego burmistrza, rady miasta lub rady rodziców i zaproś, ich aby odwiedzili Twoją szkołę.
 
 * * *
 

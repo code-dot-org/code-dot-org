@@ -57,9 +57,9 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
-**Tous les tutoriels Heure de Code:**
+**Tous les tutoriels Une Heure de Code:**
 
-  * Require minimal prep-time for organizers
+  * Nécessitent un minimum de préparation
   * Sont guidés, permettant aux élèves de travailler à leur rythme et à leur niveau
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
