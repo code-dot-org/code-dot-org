@@ -4333,7 +4333,7 @@ function executeCollision(src, target) {
 /**
  * Looks to see if the item is already colliding with target.  If it
  * isn't, it starts the collision and calls the relevant code.
- * @param {Collidable} Collidable colliding
+ * @param {Collidable} item colliding
  * @param {string/number} target Class name of the target. String for classes,
  *   index if colliding with another sprite.
  * @param {boolean} allowQueueExtension Passed on to callHandler
@@ -4347,7 +4347,7 @@ Studio.collideItemWith = function (item, target, allowQueueExtension) {
 /**
  * Looks to see if the sprite is already colliding with target.  If it isn't, it
  * starts the collision and calls the relevant code.
- * @param {Collidable} Collidable colliding
+ * @param {Collidable} spriteIndex colliding
  * @param {string/number} target Class name of the target. String for classes,
  *   index if colliding with another sprite.
  * @param {boolean} allowQueueExtension Passed on to callHandler
