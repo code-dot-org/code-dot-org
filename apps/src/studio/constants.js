@@ -3,7 +3,9 @@
 exports.SpriteSpeed = {
   VERY_SLOW: 2,
   SLOW: 3,
+  LITTLE_SLOW: 4,
   NORMAL: 5,
+  LITTLE_FAST: 6,
   FAST: 8,
   VERY_FAST: 12,
 };
@@ -68,8 +70,9 @@ frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 5;
 frameDirTableWalkingWithIdle[Dir.WEST]       = 6;
 frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 7;
 
-/*
+
 // Reversed for final
+/*
 var frameDirTableWalkingWithIdle = {};
 frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
 frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
@@ -328,3 +331,7 @@ exports.RANDOM_VALUE = 'random';
 exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
+
+// Fade durations (in milliseconds)
+exports.GOAL_FADE_TIME = 200;
+exports.ITEM_FADE_TIME = 200;

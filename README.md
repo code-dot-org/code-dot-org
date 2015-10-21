@@ -15,13 +15,28 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Set up MySQL
   1. Have launchd start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
   1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
-1. Set up [RBENV](https://github.com/sstephenson/rbenv#homebrew-on-mac-os-x), ruby-build, and Ruby 2.0
+1. Set up [RBENV](https://github.com/sstephenson/rbenv#homebrew-on-mac-os-x), ruby-build, and ~~Ruby 2.0~~ Ruby 2.2
   1. Add `if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi` to `~/.profile` or whatever profile gets sourced when you start your terminal
   1. source `~/.profile` or whatever you changed in the above step. You should only have to do this once.
   1. `git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build`
-  1. `rbenv install 2.0.0-p451`
-  1. `rbenv global 2.0.0-p451`
+  1. ~~`rbenv install 2.0.0-p451`~~
+  1. ~~`rbenv global 2.0.0-p451`~~
+  1. `rbenv install 2.2.3`
+  1. `rbenv global 2.2.3`
   1. `rbenv rehash`
+1. Set up nvm
+  1. These steps are now necessary because of problems with the newest versions of node. We want to be on node 0.12.4 and npm 2.10.1.
+  1. Install node version manager `brew install nvm` 
+    1. follow the instructions in the output of the previous command to finish installing nvm
+  1. Install the right version of node `nvm install v0.12.4`
+  1. Make that your default version `nvm alias default v0.12.4`
+  1. reinstall node_modules `cd apps; rm -rf node_modules && npm install; cd ..` (can be skipped if your version of node did not just change)
+1. Check that you have the correct versions of everything:
+  1. open a new Terminal window  
+  1. `ruby --version  # --> ruby 2.2.3`
+  1. `nvm ls          # --> v0.12.4` 
+  1. `node --version  # --> v0.12.4`
+  1. `npm --version   # --> 2.10.1`
 
 ### Ubuntu 14.04
 
@@ -76,7 +91,8 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 1. `bundle install`
 1. `cd ..`
 1. `rake install`
-1. `sudo chown -R $(whoami) $HOME/.npm`
+1. `rake build`
+1. `sudo chown -R $(whoami) $HOME/.npm` (do we still need this step when using nvm?)
 
 
 ## Organizational Structure

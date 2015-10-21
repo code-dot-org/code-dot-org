@@ -92,6 +92,9 @@
   "dropletBlock_setMap_param0_description": "The name of the map ('random', 'blank', 'circle', 'circle2', 'horizontal', 'grid', or 'blobs').",
   "dropletBlock_throw_description": "Throws a projectile from the specified actor.",
   "dropletBlock_vanish_description": "Vanishes the actor.",
+  "dropletBlock_endGame_description": "End the game.",
+  "dropletBlock_endGame_param0": "type",
+  "dropletBlock_endGame_param0_description": "Whether the game was won or lost ('win', 'lose').",
   "dropletBlock_whenDown_description": "This function executes when the down button is pressed.",
   "dropletBlock_whenLeft_description": "This function executes when the left button is pressed.",
   "dropletBlock_whenRight_description": "This function executes when the right button is pressed.",
@@ -133,6 +136,7 @@
   "itemMouse": "mouse",
   "itemRoo": "roo",
   "itemSpider": "spider",
+  "loseMessage": "You lose!",
   "makeProjectileDisappear": "disappear",
   "makeProjectileBounce": "bounce",
   "makeProjectileBlueFireball": "make blue fireball",
@@ -483,12 +487,15 @@
   "whenTouchWallTooltip": "Execute the actions below when the actor touches an obstacle.",
   "whenUp": "when up arrow",
   "whenUpTooltip": "Execute the actions below when the up arrow key is pressed.",
+  "winMessage": "You win!",
   "yes": "Yes",
-  "failedHasSetSprite": "Next time, set a character.",
+  "failedHasSetSprite": "Next time, set a bot.",
   "failedHasSetBotSpeed": "Next time, set a bot speed.",
+  "failedHasSetBackground": "Next time, set the background.",
+  "failedHasSetMap": "Next time, set the map.",
   "failedTouchAllItems": "Next time, get all the items.",
   "failedScoreMinimum": "Next time, reach the minimum score.",
   "failedRemovedItemCount": "Next time, get the right number of items.",
-  "failedSetActivity": "Next time, set the correct character activity."
-
+  "failedSetActivity": "Next time, set the correct character activity.",
+  "failedAddItem": "Next time, add a character."
 }
