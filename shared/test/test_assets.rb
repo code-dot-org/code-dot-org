@@ -284,9 +284,9 @@ class AssetsTest < Minitest::Test
           assert @assets.last_response.successful?, "Second small file upload is successful."
 
           assert NewRelic::Agent.metrics.length == 2, 'two custom metrics recorded'
-          assert NewRelic::Agent.metrics[1] == 'Custom/FilesApi/QuotaHalfUsed_assets', 'QuotaHalfUsed metric recorded'
+          assert NewRelic::Agent.metrics[1] == 'Custom/FilesApi/QuotaCrossedHalfUsed_assets', 'QuotaCrossedHalfUsed metric recorded'
           assert NewRelic::Agent.events.length == 1, 'one custom event recorded'
-          assert NewRelic::Agent.events[0].first == 'FilesApiQuotaHalfUsed', 'QuotaHalfUsed event recorded'
+          assert NewRelic::Agent.events[0].first == 'FilesApiQuotaCrossedHalfUsed', 'QuotaCrossedHalfUsed event recorded'
 
           put(@assets, channel_id, "file4.jpg", "ABCD", 'image/jpeg')
           assert @assets.last_response.client_error?, "Error when exceeding max app size."

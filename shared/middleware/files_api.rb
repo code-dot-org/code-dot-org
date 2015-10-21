@@ -51,23 +51,23 @@ class FilesApi < Sinatra::Base
     teaches_student?(owner_user_id)
   end
 
-  def report_too_large(quota_type)
+  def file_too_large(quota_type)
     # Don't record a custom event since these events may be very common.
     increment_metric('FileTooLarge', quota_type)
     too_large
   end
 
-  def quota_half_used?(app_size, body_length)
+  def quota_crossed_half_used?(app_size, body_length)
     app_size < FilesApi::max_app_size / 2 && app_size + body_length >= FilesApi::max_app_size / 2
   end
 
-  def report_quota_half_used(quota_type, encrypted_channel_id)
-    quota_event_type = 'QuotaHalfUsed'
+  def quota_crossed_half_used(quota_type, encrypted_channel_id)
+    quota_event_type = 'QuotaCrossedHalfUsed'
     increment_metric(quota_event_type, quota_type)
     record_event(quota_event_type, quota_type, encrypted_channel_id)
   end
 
-  def report_quota_exceeded(quota_type, encrypted_channel_id)
+  def quota_exceeded(quota_type, encrypted_channel_id)
     quota_event_type = 'QuotaExceeded'
     increment_metric(quota_event_type, quota_type)
     record_event(quota_event_type, quota_type, encrypted_channel_id)
@@ -157,7 +157,7 @@ class FilesApi < Sinatra::Base
 
     not_authorized unless owns_channel?(encrypted_channel_id)
 
-    report_too_large(endpoint) unless body.length < FilesApi::max_file_size
+    file_too_large(endpoint) unless body.length < FilesApi::max_file_size
 
     # verify that file type is in our whitelist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
@@ -170,8 +170,8 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
     app_size = buckets.app_size(encrypted_channel_id)
 
-    report_quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < FilesApi::max_app_size
-    report_quota_half_used(endpoint, encrypted_channel_id) if quota_half_used?(app_size, body.length)
+    quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < FilesApi::max_app_size
+    quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 
     content_type :json
