@@ -1,6 +1,7 @@
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
+require('../utils'); // Get Function.prototype.inherits
 
 var SVG_NS = "http://www.w3.org/2000/svg";
 
@@ -96,6 +97,7 @@ OFFSET_CENTER[Direction.NORTHWEST] = {
 /**
  * A Projectile is a type of Collidable.
  * Note: x/y represent x/y of center in gridspace
+ * @extends {Collidable}
  */
 var Projectile = function (options) {
   // call collidable constructor
@@ -119,10 +121,7 @@ var Projectile = function (options) {
   this.y = options.spriteY + OFFSET_CENTER[options.dir].y +
             (options.spriteHeight * OFFSET_FROM_SPRITE[options.dir].y);
 };
-
-// inherit from Collidable
-Projectile.prototype = new Collidable();
-
+Projectile.inherits(Collidable);
 module.exports = Projectile;
 
 /**
@@ -212,4 +211,15 @@ Projectile.prototype.moveToNextPosition = function () {
   var next = this.getNextPosition();
   this.x = next.x;
   this.y = next.y;
+};
+
+/**
+ * Change visible opacity of this projectile.
+ * @param {number} newOpacity (between 0 and 1)
+ * @override
+ */
+Projectile.prototype.setOpacity = function (newOpacity) {
+  if (this.element) {
+    this.element.setAttribute('opacity', newOpacity);
+  }
 };
