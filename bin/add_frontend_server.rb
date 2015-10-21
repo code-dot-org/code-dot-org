@@ -55,6 +55,17 @@ def execute_ssh_on_channel(ssh, command, exit_error_string)
   ssh.loop
 end
 
+# Return the AWS instance type to use for the given role.
+def aws_instance_type(environment)
+  case environment
+  when 'adhoc'
+    'c3.xlarge'  # Default to a somewhat smaller instance type for adhco
+  when 'production'
+    'c3.8xlarge'
+  else
+    raise "Unknown environment #{environment}"
+  end
+end
 
 # Returns a (instance_zone, frontend_name) typle for the given
 # ec2client.  The instance_zone is the one with least capacity amongst frontend instances,
@@ -159,7 +170,8 @@ end
 ec2client = Aws::EC2::Client.new
 
 determined_instance_zone, instance_name = generate_instance_zone_and_name(ec2client, username, options['name'])
-puts "Naming instance #{instance_name}, creating frontend server"
+instance_type = aws_instance_type(environment)
+puts "Naming instance #{instance_name}, creating frontend server with instance type #{instance_type}"
 
 run_instance_response = ec2client.run_instances ({
                                                     dry_run: false,
@@ -167,11 +179,12 @@ run_instance_response = ec2client.run_instances ({
                                                     min_count: 1,
                                                     max_count: 1,
                                                     image_id: 'ami-d05e75b8',  #Image ID for ubuntu instance we use
-                                                    instance_type: 'c3.8xlarge',
+                                                    instance_type: instance_type,
                                                     monitoring: {
                                                         enabled: true
                                                     },
-                                                    disable_api_termination: true, #Prevent against api termination
+                                                    # Prevent api termination, except for adhoc instances.
+                                                    disable_api_termination: (environment != 'adhoc'),
                                                     placement: {
                                                       availability_zone: determined_instance_zone
                                                     },
@@ -277,6 +290,11 @@ if $?.success?
   puts '--------------------------------------------------------'
   puts "Dashboard listening at: http://#{public_dns_name}:8080"
   puts "Pegasus listening at:   http://#{public_dns_name}:8081"
+  puts "To ssh to server:       ssh gateway.code.org -t ssh #{private_dns_name}"
+  puts
+  puts 'Updating production-daemon chef config with new node.'
+  `ssh gateway -t "ssh production-daemon -t sudo chef-client"`
+  puts "Done"
 else
   puts 'Error bootstrapping server'
   puts result

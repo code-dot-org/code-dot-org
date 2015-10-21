@@ -175,7 +175,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "calloutPlaceCommandsAtTop":function(d){return "Place commands to set up your game at the top"},
 "calloutTypeCommandsHere":function(d){return "Type your commands here"},
 "calloutCharactersMove":function(d){return "These new commands let you control how the characters move"},
-"calloutPutCommandsTouchCharacter":function(d){return "Put a command here to have it happen when you touch a character"},
+"calloutPutCommandsHereRunStart":function(d){return "Put commands here to have them run when the program starts"},
 "calloutClickCategory":function(d){return "Click a category header to see commands in each category"},
 "calloutTryOutNewCommands":function(d){return "Try out all the new commands you’ve unlocked"},
 "calloutUseArrowButtons":function(d){return "Hold down these buttons or the arrow keys on your keyboard to trigger the move events."},
