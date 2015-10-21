@@ -12,12 +12,12 @@ nav: how_to_nav
 
 **Există multe modalităţi in care companiile pot participa la Hour of Code şi pot ajuta la extinderea evenimentului si studiului tehnologiei computerelor. Luaţi în considerare:**
 
-  * Use our [marketing toolkit](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) to create a communications timeline and share promotional content.
-  * Asking your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Hosting an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
-  * Inviting a local classroom of students or other non profits you partner with to do an Hour of Code at your company’s office.
-  * Encouraging **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. Ei se pot [înscrie](<%= resolve_url('https://code.org/volunteer/engineer') %>)pentru a fi conectati cu o clasă de elevi.
-  * For more instructions on connecting your employees with classrooms, use our [guide for corporate partners](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>)
+  * Foloseşte [ instrumentul nostru de marketing](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) pentru a realiza comunicarea şi pentru a distribui conținut promoțional.
+  * Îndeamnă-l pe CEO sa trimită un e-mail catre toată compania în care subliniază importanța studiului tehnologiei computerelor şi programării şi îi încurajează pe profesori să ducă vorba mai departe. [ Iată acest e-mal](<%= resolve_url('/promote/resources#sample-emails') %>).
+  * Puteți încerca o Happy Hour of Code cu angajații dvs folosind [tutorialele](<%= resolve_url('https://code.org/learn') %>).
+  * Puteți invita o clasă dintr-o scoală locală sau alte organizații non-profit pentru a face o Ora de Programare la sediul companiei dvs.
+  * Încurajati **ingineri software** de la compania dumneavoastră sa viziteze o clasă din zona pentru a ajuta la organizarea unui eveniment Hour of Code şi pentru a inspira elevii în a studia tehnologia computerelor si programarea. Ei se pot [înscrie](<%= resolve_url('https://code.org/volunteer/engineer') %>)pentru a fi conectati cu o clasă de elevi.
+  * Pentru mai multe instrucţiuni privind conectarea angajaţilor dumneavoastră cu clasele de elevi, utilizaţi al nostru [ghid pentru parteneri corporativi](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>)
 
 ## Cum să organizezi un eveniment Hour of Code
 

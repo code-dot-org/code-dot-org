@@ -10,13 +10,13 @@ nav: prizes_nav
 
 # 奖品 - 条款和条件
 
-## Amazon.com or Microsoft’s Windows Store credit:
+## Amazon.com, iTunes and Windows Store credit:
 
-The Amazon.com and Microsoft’s Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. 每位组织者仅可以兑换一次。
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. 每位组织者仅可以兑换一次。
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com or Microsoft’s Windows Store credit. 如果您的整个学校都要参与编程一小时，每位教师都必须单独注册为一名组织者以获得资格。
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. 如果您的整个学校都要参与编程一小时，每位教师都必须单独注册为一名组织者以获得资格。
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com and Microsoft’s Windows Store credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
 

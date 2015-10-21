@@ -10,19 +10,19 @@ nav: prizes_nav
 
 # Hadiah - syarat dan ketentuan
 
-## Amazon.com or Microsoft’s Windows Store credit:
+## Amazon.com, iTunes and Windows Store credit:
 
-The Amazon.com and Microsoft’s Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Hanya dibatasi 1 bonus untuk setiap organisasi.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. $10 kredit harus ditambahkan ke akun yang ada, dan kredit akan berakhir setelah 1 tahun. Hanya dibatasi 1 bonus untuk setiap organisasi.
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com or Microsoft’s Windows Store credit. Jika sekolahmu berpartisipasi dalam Hour of Code, setiap guru harus mendaftar secara individual untuk memenuhi syarat.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Jika sekolahmu berpartisipasi dalam Hour of Code, setiap guru harus mendaftar secara individual untuk memenuhi syarat.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com and Microsoft’s Windows Store credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
 
 ## Satu set laptop untuk kelas (atau teknologi lain yang bernilai $10,000):
 
-Hadiah terbatas untuk sekolah publik K-12 U.S. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Satu sekolah di setiap negara bagian di U.S. akan menerima satu set komputer untuk kelas. Code.org will select and notify winners via email by December 1, 2015.
+Hadiah terbatas untuk sekolah publik K-12 U.S. Untuk memenuhi syarat, sekolah anda harus mendaftar untuk Hour of Code sebelum 16 November 2015. Satu sekolah di setiap negara bagian di U.S. akan menerima satu set komputer untuk kelas. Code.org akan memilih dan memberitahukan pemenang melalui email paling lambat tanggal 1 Desember 2015.
 
 Untuk memperjelas, ini bukanlah undian atau kontes melibatkan kesempatan murni.
 
