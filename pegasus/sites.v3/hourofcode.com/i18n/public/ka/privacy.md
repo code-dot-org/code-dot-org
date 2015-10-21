@@ -245,4 +245,4 @@ If you choose to visit Code.org, your visit and any dispute over privacy is subj
 გთხოვთ მიმართოთ Code.org-ს ნებისმიერი კითხივთ ან შენიშვნით ამ კონფიდენციალურობის ცნობასთან, თქვენს პირად ინფორმაციასთან, ჩვენს მესამე პირთან დაკავშირებულ გამჟღავნების საკითხებთან, ან თანხმობის არჩევნებთან დაკავშირებით. მოგვწერეთ აქ: <http://code.org/contact> ან 1301 მეხუთე გამზირი, ლუქსი 1225, სიეტლი, WA 98101.   
   
   
-[![გამოსახულება](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![გამოსახულება](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

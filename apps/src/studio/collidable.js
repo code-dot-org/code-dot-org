@@ -41,6 +41,9 @@ var Collidable = function (opts) {
 
   // default num frames is 1
   this.frames = this.frames || 1;
+
+  /** @private {SpriteAction[]} */
+  this.actions_ = [];
 };
 
 module.exports = Collidable;
@@ -128,4 +131,40 @@ Collidable.prototype.outOfBounds = function () {
          (this.x > studioApp.MAZE_WIDTH + (this.width / 2)) ||
          (this.y < -(this.height / 2)) ||
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
+};
+
+/**
+ * Add an action (probably an animation) for this sprite to run.
+ * Note: This is a 'sprouted' new system for updating sprites, separate from
+ *       how older playlab stuff works.  For now it's driving the discrete
+ *       movement hoc2015 levels.
+ * @param {SpriteAction} action
+ */
+Collidable.prototype.addAction = function (action) {
+  this.actions_.push(action);
+};
+
+/**
+ * @returns {boolean} whether this sprite is currently running any actions.
+ */
+Collidable.prototype.hasActions = function () {
+  return this.actions_.length > 0;
+};
+
+/**
+ * Causes this sprite to update all actions it's currently running, and then
+ * remove any that are complete.
+ */
+Collidable.prototype.updateActions = function () {
+  this.actions_.forEach(function (action) {
+    action.update(this);
+  }, this);
+
+  // Splice completed actions out of the current action list, iterating
+  // backwards so we don't skip anything.
+  for (var i = this.actions_.length - 1; i >= 0; i--) {
+    if (this.actions_[i].isDone()) {
+      this.actions_.splice(i, 1);
+    }
+  }
 };
