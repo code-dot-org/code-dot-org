@@ -310,7 +310,7 @@ end
 def log_coverage_results
   results_file = dashboard_dir('coverage/.last_run.json')
   results = JSON.parse(File.read(results_file))
-  HipChat.log "Unit tests for <b>dashboard</b> coverage: #{results["results"]["coverage_percent"]}. Details: https://test-studio.code.org/coverage/index.html", color: 'green'
+  HipChat.log "Unit tests for <b>dashboard</b> coverage: #{results["result"]["covered_percent"]}%. Details: https:#{CDO.studio_url('coverage/index.html')}", color: 'green'
 rescue Exception => e
   HipChat.log "Couldn't read test coverage results at #{results_file}: #{e.message}\n#{e.backtrace.join("\n")}"
 end
