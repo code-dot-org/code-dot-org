@@ -2,7 +2,6 @@ var Collidable = require('./collidable');
 var constants = require('./constants');
 var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
-var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -42,10 +41,7 @@ var Item = function (options) {
     }
   }.bind(this), 50);
 };
-
-// inherit from Collidable
-Item.prototype = new Collidable();
-
+Item.inherits(Collidable);
 module.exports = Item;
 
 /**
@@ -365,4 +361,22 @@ Item.prototype.moveToNextPosition = function () {
   var next = this.getNextPosition();
   this.x = next.x;
   this.y = next.y;
+};
+
+/**
+ * Mark that we're colliding with object represented by key.
+ * Here, override base implemention to special on-collision logic for certain
+ * item classes.
+ * @param key A unique key representing the object we're colliding with
+ * @returns {boolean} True if collision is started, false if we're already colliding
+ * @override
+ */
+Item.prototype.startCollision = function (key) {
+  var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
+  if (newCollisionStarted) {
+    if (this.className === 'hazard') {
+      Studio.fail("Don't run into the guy!");
+    }
+  }
+  return newCollisionStarted;
 };
