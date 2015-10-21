@@ -21,6 +21,14 @@ var Item = function (options) {
 
   this.height = options.height || 50;
   this.width = options.width || 50;
+
+  /**
+   * Rendering offset for item animation vs display position - applied as
+   * late as possible.
+   * @type {{x: number, y: number}}
+   */
+  this.renderOffset = options.renderOffset || { x: 0, y: 0 };
+
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
   this.renderScale = options.renderScale || 1;
   this.displayDir = Direction.SOUTH;
@@ -324,8 +332,8 @@ Item.prototype.hasCompletedFade = function() {
  */
 Item.prototype.display = function () {
   var topLeft = {
-    x: this.x - this.width / 2,
-    y: this.y - this.height / 2
+    x: this.x + this.renderOffset.x - this.width / 2,
+    y: this.y + this.renderOffset.y - this.height / 2
   };
 
   var currentTime = new Date().getTime();

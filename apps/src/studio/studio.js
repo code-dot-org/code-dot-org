@@ -698,6 +698,7 @@ Studio.initAutoHandlers = function (map) {
 /**
  * Performs movement on a list of Projectiles or Items. Removes items from the
  * list automatically when they move out of bounds
+ * @param {Item[]|Projectile[]} list
  */
 function performItemOrProjectileMoves (list) {
   for (var i = list.length - 1; i >= 0; i--) {
@@ -705,9 +706,18 @@ function performItemOrProjectileMoves (list) {
     if (list[i].outOfBounds()) {
       list[i].removeElement();
       list.splice(i, 1);
-    } else {
-      list[i].display();
     }
+  }
+}
+
+/**
+ * Triggers display update on a list of Projectiles or Items - for updating
+ * position and/or animation frames.
+ * @param {Item[]|Projectile[]} list
+ */
+function displayItemsOrProjectiles (list) {
+  for (var i = list.length - 1; i >= 0; i--) {
+    list[i].display();
   }
 }
 
@@ -935,6 +945,8 @@ Studio.onTick = function() {
     performItemOrProjectileMoves(Studio.projectiles);
     performItemOrProjectileMoves(Studio.items);
   }
+  displayItemsOrProjectiles(Studio.projectiles);
+  displayItemsOrProjectiles(Studio.items);
 
   Studio.updateFloatingScore();
 
@@ -2695,6 +2707,7 @@ Studio.createLevelItems = function (svg) {
       for (var index = 0; index < skin.ItemClassNames.length; index++) {
         if (constants.squareHasItemClass(index, mapVal)) {
           var className = skin.ItemClassNames[index];
+          var classProperties = skin.specialItemProperties[className] || {};
           // Create item:
           var itemOptions = {
             frames: getFrameCount(className, skin.specialItemProperties, skin.itemFrames),
@@ -2703,9 +2716,13 @@ Studio.createLevelItems = function (svg) {
             image: skin[className],
             speed: Studio.itemSpeed[className],
             activity: Studio.itemActivity[className],
+            width: utils.valueOr(classProperties.width, 50),
+            height: utils.valueOr(classProperties.height, 50),
+            renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0}),
             loop: true,
             x: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col,
             y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row,
+            renderScale: utils.valueOr(classProperties.scale, 1)
           };
 
           var item = new Item(itemOptions);
