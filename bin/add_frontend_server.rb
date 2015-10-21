@@ -288,6 +288,10 @@ if $?.success?
   puts "Dashboard listening at: http://#{public_dns_name}:8080"
   puts "Pegasus listening at:   http://#{public_dns_name}:8081"
   puts "To ssh to server:       ssh gateway.code.org -t ssh #{private_dns_name}"
+  puts
+  puts 'Updating production-daemon chef config with new node.'
+  `ssh gateway -t "ssh production-daemon -t sudo chef-client"`
+  puts "Done"
 else
   puts 'Error bootstrapping server'
   puts result
