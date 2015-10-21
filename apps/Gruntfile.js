@@ -406,7 +406,6 @@ config.jshint = {
     '!src/**/*.min.js*',
     '!src/hammer.js',
     '!src/lodash.js',
-    '!src/lodash.min.js',
     '!src/canvg/*.js',
     '!src/calc/js-numbers/js-numbers.js',
     '!src/ResizeSensor.js',

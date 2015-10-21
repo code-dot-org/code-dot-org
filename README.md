@@ -91,6 +91,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 1. `bundle install`
 1. `cd ..`
 1. `rake install`
+1. `rake install:hooks` (recommended, to install precommit linting hooks)
 1. `rake build`
 1. `sudo chown -R $(whoami) $HOME/.npm` (do we still need this step when using nvm?)
 

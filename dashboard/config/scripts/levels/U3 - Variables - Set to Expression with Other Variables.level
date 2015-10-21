@@ -158,7 +158,8 @@
 
     ],
     "markdown_instructions": "# Expression with Variables\r\n\r\nWe can use other variables in our expressions!\r\n\r\n\r\n# Do This\r\n\r\n* **Run the code**\r\n\r\n* **Change the values of a and b**\r\n\r\n* \r\n",
-    "instructions": "(click to see full instructions)"
+    "instructions": "(click to see full instructions)",
+    "start_blocks": "var foo = 10;\r\nvar blah = 390;\r\nvar sumResult = foo + blah;\r\nconsole.log(\"Result of blah + foo\");\r\nconsole.log(sumResult);\r\nvar minusResult = blah - foo;\r\nconsole.log(\"Result of blah - foo\");\r\nconsole.log(minusResult);\r\nvar multiplyResult = foo * blah;\r\nconsole.log(\"Result of blah * foo\");\r\nconsole.log(multiplyResult);\r\nvar dividResult = blah / foo;\r\nconsole.log(\"Result of blah / foo\");\r\nconsole.log(dividResult);"
   }
 }]]></config>
   <blocks/>
