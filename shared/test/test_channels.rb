@@ -160,7 +160,9 @@ class ChannelsTest < Minitest::Test
 
     sleep 1
 
+    # These hidden and frozen projects should be skipped when considering most_recent
     post '/v3/channels', {hidden: true, level: 'projects/abc'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    post '/v3/channels', {frozen: true, level: 'projects/xyz'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
 
     user_storage_id = storage_decrypt_id CGI.unescape @session.cookie_jar[storage_id_cookie_name]
 
