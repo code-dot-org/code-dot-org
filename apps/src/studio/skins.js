@@ -16,6 +16,173 @@ var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 
+function loadIceAge(skin, assetUrl) {
+  skin.defaultBackground = 'cave';
+  skin.projectileFrames = 8;
+  skin.itemFrames = 8;
+
+  skin.explosion = skin.assetUrl('explosion.png');
+  skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
+  skin.explosionFrames = 20;
+  skin.fadeExplosion = false;
+  skin.timePerExplosionFrame = 40;
+
+  skin.hardcourt = {
+    background: skin.assetUrl('background.jpg'),
+  };
+  skin.black = {
+    background: skin.assetUrl('background_tile.jpg'),
+  };
+  skin.cave = {
+    background: skin.assetUrl('background_leafy.jpg'),
+  };
+  skin.night = {
+    background: skin.assetUrl('background_icy.jpg'),
+  };
+  skin.cloudy = {
+    background: skin.assetUrl('background_flower.jpg'),
+  };
+  skin.underwater = {
+    background: skin.assetUrl('background.jpg'),
+  };
+  skin.city = {
+    background: skin.assetUrl('background_tile.jpg'),
+  };
+  skin.desert = {
+    background: skin.assetUrl('background_leafy.jpg'),
+  };
+  skin.rainbow = {
+    background: skin.assetUrl('background_icy.jpg'),
+  };
+  skin.soccer = {
+    background: skin.assetUrl('background_flower.jpg'),
+  };
+  skin.space = {
+    background: skin.assetUrl('background.jpg'),
+  };
+  skin.tennis = {
+    background: skin.assetUrl('background_tile.jpg'),
+  };
+  skin.winter = {
+    background: skin.assetUrl('background_leafy.jpg'),
+  };
+  skin.grid = {
+    background: skin.assetUrl('background_icy.jpg'),
+  };
+
+  skin.avatarList = [ "dog", "cat", "penguin", "dinosaur", "octopus", "witch",
+    "bat", "bird", "dragon", "squirrel", "wizard", "alien", "ghost", "monster",
+    "robot", "unicorn", "zombie", "knight", "ninja", "pirate", "caveboy",
+    "cavegirl", "princess", "spacebot", "soccergirl", "soccerboy", "tennisgirl",
+    "tennisboy"];
+
+  /**
+   * Sprite thumbs generated with:
+   * `brew install graphicsmagick`
+   * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
+   */
+  skin.avatarList.forEach(function (name) {
+    skin[name] = {
+      sprite: skin.assetUrl(name + '_spritesheet_200px.png'),
+      dropdownThumbnail: skin.assetUrl(name + '_thumb.png'),
+      frameCounts: {
+        normal: 1,
+        animation: 1,
+        turns: 7,
+        emotions: 3
+      }
+    };
+  });
+
+
+  skin.backgroundChoices = [
+    [msg.setBackgroundRandom(), RANDOM_VALUE],
+    [msg.setBackgroundCave(), '"cave"'],
+    [msg.setBackgroundNight(), '"night"'],
+    [msg.setBackgroundCloudy(), '"cloudy"'],
+    [msg.setBackgroundUnderwater(), '"underwater"'],
+    [msg.setBackgroundHardcourt(), '"hardcourt"'],
+    [msg.setBackgroundBlack(), '"black"'],
+    [msg.setBackgroundCity(), '"city"'],
+    [msg.setBackgroundDesert(), '"desert"'],
+    [msg.setBackgroundRainbow(), '"rainbow"'],
+    [msg.setBackgroundSoccer(), '"soccer"'],
+    [msg.setBackgroundSpace(), '"space"'],
+    [msg.setBackgroundTennis(), '"tennis"'],
+    [msg.setBackgroundWinter(), '"winter"']];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.backgroundChoicesK1 = [
+    [skin.cave.background, '"cave"'],
+    [skin.night.background, '"night"'],
+    [skin.cloudy.background, '"cloudy"'],
+    [skin.underwater.background, '"underwater"'],
+    [skin.hardcourt.background, '"hardcourt"'],
+    [skin.black.background, '"black"'],
+    [skin.city.background, '"city"'],
+    [skin.desert.background, '"desert"'],
+    [skin.rainbow.background, '"rainbow"'],
+    [skin.soccer.background, '"soccer"'],
+    [skin.space.background, '"space"'],
+    [skin.tennis.background, '"tennis"'],
+    [skin.winter.background, '"winter"'],
+    [skin.randomPurpleIcon, RANDOM_VALUE]];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteWitch(), '"witch"'],
+    [msg.setSpriteCat(), '"cat"'],
+    [msg.setSpriteDinosaur(), '"dinosaur"'],
+    [msg.setSpriteDog(), '"dog"'],
+    [msg.setSpriteOctopus(), '"octopus"'],
+    [msg.setSpritePenguin(), '"penguin"'],
+    [msg.setSpriteBat(), '"bat"'],
+    [msg.setSpriteBird(), '"bird"'],
+    [msg.setSpriteDragon(), '"dragon"'],
+    [msg.setSpriteSquirrel(), '"squirrel"'],
+    [msg.setSpriteWizard(), '"wizard"'],
+    [msg.setSpriteAlien(), '"alien"'],
+    [msg.setSpriteGhost(), '"ghost"'],
+    [msg.setSpriteMonster(), '"monster"'],
+    [msg.setSpriteRobot(), '"robot"'],
+    [msg.setSpriteUnicorn(), '"unicorn"'],
+    [msg.setSpriteZombie(), '"zombie"'],
+    [msg.setSpriteKnight(), '"knight"'],
+    [msg.setSpriteNinja(), '"ninja"'],
+    [msg.setSpritePirate(), '"pirate"'],
+    [msg.setSpriteCaveBoy(), '"caveboy"'],
+    [msg.setSpriteCaveGirl(), '"cavegirl"'],
+    [msg.setSpritePrincess(), '"princess"'],
+    [msg.setSpriteSpacebot(), '"spacebot"'],
+    [msg.setSpriteSoccerGirl(), '"soccergirl"'],
+    [msg.setSpriteSoccerBoy(), '"soccerboy"'],
+    [msg.setSpriteTennisGirl(), '"tennisgirl"'],
+    [msg.setSpriteTennisBoy(), '"tennisboy"']];
+
+  skin.projectileChoices = [
+    [msg.projectileBlueFireball(), '"blue_fireball"'],
+    [msg.projectilePurpleFireball(), '"purple_fireball"'],
+    [msg.projectileRedFireball(), '"red_fireball"'],
+    [msg.projectileYellowHearts(), '"yellow_hearts"'],
+    [msg.projectilePurpleHearts(), '"purple_hearts"'],
+    [msg.projectileRedHearts(), '"red_hearts"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.itemChoices = [
+    [msg.itemBlueFireball(), '"item_blue_fireball"'],
+    [msg.itemPurpleFireball(), '"item_purple_fireball"'],
+    [msg.itemRedFireball(), '"item_red_fireball"'],
+    [msg.itemYellowHearts(), '"item_yellow_hearts"'],
+    [msg.itemPurpleHearts(), '"item_purple_hearts"'],
+    [msg.itemRedHearts(), '"item_red_hearts"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
+}
+
 function loadInfinity(skin, assetUrl) {
   skin.preloadAssets = true;
 
@@ -920,6 +1087,9 @@ exports.load = function(assetUrl, id) {
 
   // take care of items specific to skins
   switch (skin.id) {
+    case 'iceage':
+      loadIceAge(skin, assetUrl);
+      break;
     case 'infinity':
       loadInfinity(skin, assetUrl);
       break;
