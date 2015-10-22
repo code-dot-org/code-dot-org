@@ -6017,11 +6017,11 @@ function loadHoc2015x(skin, assetUrl) {
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 16,
+        normal: 8,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: 19
+        walk: 10
       },
       timePerFrame: 100
     };
@@ -6409,6 +6409,91 @@ function saySpriteRequiredBlock(options) {
     }
   ];
 }
+
+/**
+ * Constructs a required block definition to match "move [sprite] [dir]" blocks
+ * @param options (all optional):
+ *          sprite (string): zero-indexed string ID of sprite, e.g., "1"
+ *          dir (string): string of Direction constant. We show
+ *            the direction in feedback blocks
+ * @returns test definition suitable for feedback.js::getMissingRequiredBlocks
+ *          required block processing
+ */
+function moveRequiredBlock(options) {
+  var titles = {};
+  if (options.sprite) {
+    titles.SPRITE = options.sprite;
+  }
+  if (options.dir) {
+    titles.DIR = options.dir;
+  }
+
+  return [
+    {
+      test: function (block) {
+        if (block.type !== 'studio_move') {
+          return false;
+        }
+        if (options.sprite && block.getTitleValue("SPRITE") !== options.sprite) {
+          return false;
+        }
+        if (options.dir && block.getTitleValue("DIR") !== options.dir) {
+          return false;
+        }
+
+        return true;
+      },
+      type: 'studio_move',
+      titles: titles
+    }
+  ];
+}
+
+function moveNorthRequiredBlock() {
+  return moveRequiredBlock({ dir: '1' });
+}
+
+function moveSouthRequiredBlock() {
+  return moveRequiredBlock({ dir: '4' });
+}
+
+function moveEastRequiredBlock() {
+  return moveRequiredBlock({ dir: '2' });
+}
+
+function moveWestRequiredBlock() {
+  return moveRequiredBlock({ dir: '8' });
+}
+
+/**
+ * Hoc2015 blockly helpers. We base hoc2015 blockly levels off of hoc2015 droplet
+ * levels, marking them as editCode=false and overriding the startBlocks,
+ * requiredBlocks and toolboxes as appropriate for the blockly progression
+ */
+
+var hocMoveNSEW = '<block type="studio_move"><title name="DIR">1</title></block> \
+  <block type="studio_move"><title name="DIR">4</title></block> \
+  <block type="studio_move"><title name="DIR">8</title></block> \
+  <block type="studio_move"><title name="DIR">2</title></block>';
+
+var hocMoveNS = '<block type="studio_move"><title name="DIR">1</title></block> \
+  <block type="studio_move"><title name="DIR">4</title></block>';
+
+var whenRunMoveEast = '<block type="when_run"><next> \
+  <block type="studio_move"><title name="DIR">2</title></block></next> \
+  </block>';
+
+var whenRunMoveSouth = '<block type="when_run"><next> \
+  <block type="studio_move"><title name="DIR">4</title></block></next> \
+  </block>';
+
+var whenUpDown = '<block type="studio_whenUp" deletable="false" x="20" y="20"></block> \
+  <block type="studio_whenDown" deletable="false" x="20" y="150"></block>';
+
+var whenUpDownLeftRight = '<block type="studio_whenUp" deletable="false" x="20" y="20"></block> \
+  <block type="studio_whenDown" deletable="false" x="20" y="150"></block> \
+  <block type="studio_whenLeft" deletable="false" x="20" y="280"></block> \
+  <block type="studio_whenRight" deletable="false" x="20" y="410"></block>';
 
 /**
  * K1 helpers. We base k1 levels off of existing non-k1 levels, marking them as isK1 and
@@ -7865,68 +7950,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-levels.hoc2015_1 = {
-  'editCode': true,
-  'map': [
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4,16, 0,256,1, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4]
-  ],
-  'avatarList': [ 'bot1' ],
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
-  'gridAlignedMovement': true,
-  'removeItemsWhenActorCollides': true,
-  'slowJsExecutionFactor': 10,
-  'markerHeight': 50,
-  'markerWidth': 50,
-  'codeFunctions': {
-    // Play Lab
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-  },
-};
-
-levels.hoc2015_2 = {
-  'editCode': true,
-  'map': [
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 4, 4, 4, 4, 4, 0],
-    [0, 0, 4, 0, 0,256,4, 0],
-    [0, 0, 4, 0, 4, 0, 4, 0],
-    [0, 0, 4, 1,16,256,4, 0],
-    [0, 0, 4, 4, 4, 4, 4, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ],
-  'avatarList': [ 'bot1' ],
-  'sortDrawOrder': true,
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
-  'gridAlignedMovement': true,
-  'removeItemsWhenActorCollides': true,
-  'slowJsExecutionFactor': 10,
-  'markerHeight': 50,
-  'markerWidth': 50,
-  'codeFunctions': {
-    // Play Lab
-    "moveRight": null,
-    "moveLeft": null,
-    "moveUp": null,
-    "moveDown": null,
-  },
-};
-
-
 /* ******* Hour of Code 2015 ********/
-
 
 levels.js_hoc2015_move_right = {
   'editCode': true,
@@ -8601,13 +8625,11 @@ levels.js_hoc2015_add_characters = {
     'whenTouchPig': null
   },
   'startBlocks': [
+    'playSound("alert1");',
+    'addCharacter("pig");',
     'function whenTouchPig() {',
     '  playSound("item1sound1");',
-    '  ',
-    '}',
-    'function whenGetAllCharacters() {',
-    '  endGame("win");',
-    '  ',
+    '  addPoints(1000);',
     '}',
     ].join('\n'),
   'sortDrawOrder': true,
@@ -8628,22 +8650,22 @@ levels.js_hoc2015_add_characters = {
     [0, 0, 0, 0,  0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"I\'m seeing signs of increased activity on this planet!"',
-  'instructions2': 'Now you have the WhenRun event and a new addCharacter command to create your own characters. Can you add 3 PIGs to the world? Then, go get them.',
+  'instructions2': 'Add 3 PIGs to the planet. Then, go get them.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 600,
   'showTimeoutRect': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_add_characters:putCommandsTouchCharacter',
-      'element_id': '.ace_gutter-cell:nth-of-type(8)',
-      'hide_target_selector': '.ace_scroller',
+      'id': 'playlab:js_hoc2015_add_characters:calloutPutCommandsHereRunStart',
+      'element_id': '.droplet-gutter-line:nth-of-type(2)',
+      'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content' : {
-          'text': msg.calloutPutCommandsTouchCharacter(),
+          'text': msg.calloutPutCommandsHereRunStart(),
         },
-        'event': 'click mousedown touchstart mouseup touchend',
+        'event': 'mouseup touchend',
         'position': {
-          'my': 'center right',
+          'my': 'top left',
           'at': 'center right',
         }
       }
@@ -8885,6 +8907,118 @@ levels.js_hoc2015_event_free = {
     }
   ],
 };
+
+levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
+  editCode: false,
+  startBlocks: whenRunMoveEast,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveEastRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_two_items,  {
+  editCode: false,
+  startBlocks: whenRunMoveEast,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveEastRequiredBlock(),
+    moveSouthRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_item_destination,  {
+  editCode: false,
+  startBlocks: whenRunMoveSouth,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveSouthRequiredBlock(),
+    moveWestRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_item_destination_2,  {
+  editCode: false,
+  startBlocks: whenRunMoveEast,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveEastRequiredBlock(),
+    moveNorthRequiredBlock(),
+    moveSouthRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_item_destination_3,  {
+  editCode: false,
+  startBlocks: whenRunMoveEast,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveEastRequiredBlock(),
+    moveSouthRequiredBlock(),
+    moveWestRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_cross,  {
+  editCode: false,
+  startBlocks: whenRunMoveSouth,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveNorthRequiredBlock(),
+    moveSouthRequiredBlock(),
+    moveWestRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_7 = utils.extend(levels.js_hoc2015_event_two_items,  {
+  editCode: false,
+  startBlocks: whenUpDown,
+  toolbox: tb(hocMoveNS),
+  requiredBlocks: [
+    moveNorthRequiredBlock(),
+    moveSouthRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_8 = utils.extend(levels.js_hoc2015_event_four_items,  {
+  editCode: false,
+  startBlocks: whenUpDownLeftRight,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveNorthRequiredBlock(),
+    moveSouthRequiredBlock(),
+    moveEastRequiredBlock(),
+    moveWestRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_event_three_goals,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_event_score_points,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_win_lose,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_add_characters,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
+  editCode: false,
+});
 
 
 },{"../block_utils":"/home/ubuntu/staging/apps/build/js/block_utils.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js"}],"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs":[function(require,module,exports){

@@ -49,7 +49,7 @@ ____________________________________________________
 
 <table>
 <tr>
-<td>
+<td style="border-style:none; width:90%; padding:0px">
 <pre>
 // Use penUp and penDown to have the turtle draw a thick, dotted line.
 penWidth(3);
@@ -65,8 +65,9 @@ penDown();
 moveForward();
 </pre>
 </td>
-<td>
-<img src='https://images.code.org/ac4b960578d41e88a17d13c3f4208860-image-1444488945312.gif' style='width: 150px;'> 
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/89e8224609867d151d327efedefe84fc-image-1445476963436.gif'>
+	
 </td>
 </tr>
 </table>
