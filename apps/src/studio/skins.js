@@ -248,13 +248,13 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'pig':    { frames: 12, scale: 1,   activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
-    'man':    { frames: 12, scale: 1,   activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
-    'roo':    { frames: 15, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
-    'bird':   { frames:  8, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
-    'spider': { frames: 12, scale: 1.2, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW },
-    'mouse':  { frames:  1, scale: 0.6, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
-    'pilot':  { frames: 13, scale: 1,   activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
+    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
+    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
+    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -543,8 +543,9 @@ function loadHoc2015x(skin, assetUrl) {
   skin.ProjectileClassNames = [
   ];
 
-  // TODO: proper item class names
-  skin.ItemClassNames = [  ];
+  skin.ItemClassNames = [
+    'hazard'
+  ];
 
   skin.AutohandlerTouchItems = {
   };
@@ -553,6 +554,7 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
+    'hazard': { frames: 13, width: 100, height: 100, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
   };
 
   // Spritesheet for animated goal.
@@ -632,6 +634,8 @@ function loadHoc2015x(skin, assetUrl) {
   skin.preventItemLoop = function (className) {
     return className === 'item_character1';
   };
+
+  skin.hazard = skin.assetUrl('hazard_idle.png');
 
   skin.main = {
     background: skin.assetUrl('background_background1.jpg'),
