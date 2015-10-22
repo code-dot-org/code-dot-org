@@ -2262,6 +2262,8 @@ levels.js_hoc2015_chain_characters = {
   'codeFunctions': {
     'addCharacter': null,
     'playSound': null,
+    'addPoints': null,
+    'removePoints': null,
 
     'whenTouchMouse': null,
   },
@@ -2437,6 +2439,7 @@ levels.js_hoc2015_event_free = {
     'moveNormal': { 'category': 'Commands' },
     'moveFast': { 'category': 'Commands' },
     'addPoints': { 'category': 'Commands' },
+    'removePoints': { 'category': 'Commands' },
 
     'whenTouchObstacle': { 'category': 'Events' },
     'whenTouchMan': { 'category': 'Events' },
@@ -2452,7 +2455,7 @@ levels.js_hoc2015_event_free = {
     'setBackground("forest");',
     'setMap("circle");',
     'setBot("bot1");',
-    'setSpeed("normal");',
+    'setBotSpeed("normal");',
     'playSound("character1sound5");',
     ''].join('\n'),
   'sortDrawOrder': true,
@@ -2575,7 +2578,7 @@ levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   editCode: false,
 });
 
-levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_event_score_points,  {
+levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
   editCode: false,
 });
 
