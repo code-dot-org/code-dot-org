@@ -218,11 +218,16 @@ def upgrade_frontend(name, host)
 
   log_path = aws_dir "deploy-#{name}.log"
 
+  # Stop the frontend before running the commands so that the git pull doesn't modify files
+  # out from under a running instance. The rake build command will restart the instance.
+  stop_frontend name, host, log_path
+
   begin
     RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>', log_path
     #HipChat.log "Upgraded <b>#{name}</b> (#{host})."
   rescue
     HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, removing from rotation.", color: 'red'
+    # The frontend is in indeterminate state, so make sure it is stopped.
     stop_frontend name, host, log_path
   end
 

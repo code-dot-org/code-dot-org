@@ -235,7 +235,14 @@ level 'Course 4 Artist Binary Free Play 2'
 
 stage 'Super Challenge - Variables'
 level 'Course 4 SCV 3'
+level 'Course 4 SCV 5'
 level 'Course 4 SCV 4'
-#level 'Course 4 SCV 5'
 level 'Course 4 SCV 1'
 level 'Course 4 SCV 2'
+
+stage 'Super Challenge - For Loops'
+level 'Course 4 SCFL 1'
+
+stage 'Super Challenge - Functions and Parameters'
+level 'Course 4 SCF 1'
+level 'Course 4 SCF 2'

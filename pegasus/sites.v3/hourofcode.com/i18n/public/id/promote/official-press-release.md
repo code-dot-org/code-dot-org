@@ -34,16 +34,16 @@ Contact: [**INFORMASI KONTAK**]
 [**CONTOH TEKS KONTEKS**]  
 Komputer ada dimana-mana, tetapi sedikit sekolah yang mengjarkan ilmu komputer dibandingkan 10 tahun lalu. Perepuan dan siswa-siswi berkulit non-putih sangat kurang terwakili. Kabar baiknya adalah kita mengubah ini untuk menjadi lebih baik. Hour of Code adalah gerbang menuju ketersediaan akses untuk siswa kepada edukasi ilmu komputer berkualitas tinggi.
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! dan Disney. Presiden Obama, Shakira dan Ashton Kutcher semua memulaikan Hour of Code dengan video. Lebih dari 100 mitra kerja datang untuk mendukng gerakan ini.
+Lebih dari 100 juta siswa di seluruh dunia telah mencoba Hour of Code. Berkat Hour of Code, ilmu komputer telah ditampilkan pada homepage dari Google, MSN, Yahoo! dan Disney. Presiden Obama, Shakira dan Ashton Kutcher semua memulaikan Hour of Code dengan video. Lebih dari 100 mitra kerja datang untuk mendukng gerakan ini.
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+[**MASUKKAN KUTIPAN DARI JURU BICARA, CONTOH DI BAWAH INI:**]   
+"Kita perlu untuk mendorong dan merangkul minat siswa kami untuk ilmu komputer," kata [**Masukkan nama**]. "Setiap siswa berhakmendapatkan kesempatan untuk belajar ilmu komputer untuk mengakses karir terbaik di abad ke-21."
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+[**MASUKKAN INFORMASI LEBIH LANJUT TENTANG ACARA ANDA DAN/ATAU ORGANISASI ANDA**]
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
+[**MASUKKAN KUTIPAN DARI ORGANISASI LAIN ATAU ORANG YANG HADIR DI ACARA**]
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+Untuk informasi lebih lanjut tentang [**EVENT/PROGRAM/ETC**], kunjungi [**Masukkan WEBSITE**] atau hubungi [**Masukkan CONTACT INFORMATION**]
 
   
   

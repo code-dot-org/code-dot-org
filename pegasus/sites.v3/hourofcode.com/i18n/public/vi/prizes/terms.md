@@ -10,13 +10,13 @@ nav: prizes_nav
 
 # Giải thưởng - Các điều khoản và điều kiện khi nhận giải
 
-## Amazon.com or Microsoft’s Windows Store credit:
+## Amazon.com, iTunes and Windows Store credit:
 
-The Amazon.com and Microsoft’s Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Giới hạn chỉ cho một cá nhân/ một tổ chức và duy nhất một tài khoản.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Giới hạn chỉ cho một cá nhân/ một tổ chức và duy nhất một tài khoản.
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com or Microsoft’s Windows Store credit. Nếu toàn bộ học sinh/ sinh viên của một trường đều tham gia vào Hour of Code, thì hãy đảm bảo rằng mỗi cá nhân đều có một tài khoản riêng để đảm bảo sự công bằng và điều kiện khi tham gia nhận thưởng.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Nếu toàn bộ học sinh/ sinh viên của một trường đều tham gia vào Hour of Code, thì hãy đảm bảo rằng mỗi cá nhân đều có một tài khoản riêng để đảm bảo sự công bằng và điều kiện khi tham gia nhận thưởng.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com and Microsoft’s Windows Store credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
 

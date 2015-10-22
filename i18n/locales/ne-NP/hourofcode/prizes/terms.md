@@ -8,13 +8,13 @@ title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: prizes_nav
 
 # पुरस्कार - नियम र शर्तहरू
 
-## Amazon.com or Microsoft’s Windows Store credit:
+## Amazon.com, iTunes and Windows Store credit:
 
-The Amazon.com and Microsoft’s Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. आयोजक प्रति एक छुटकारा सिमित छ.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. आयोजक प्रति एक छुटकारा सिमित छ.
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com or Microsoft’s Windows Store credit. यदि सम्पूर्ण स्कूल Hour of Code को बेला मा सहभागी हुन्छभने, प्रत्येक शिक्षाविद्ले व्यक्तिगत आयोजकको रूपमा दर्ता गर्नै पर्छ.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. यदि सम्पूर्ण स्कूल Hour of Code को बेला मा सहभागी हुन्छभने, प्रत्येक शिक्षाविद्ले व्यक्तिगत आयोजकको रूपमा दर्ता गर्नै पर्छ.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com and Microsoft’s Windows Store credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
 

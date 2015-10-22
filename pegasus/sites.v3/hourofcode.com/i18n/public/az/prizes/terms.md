@@ -10,13 +10,13 @@ nav: prizes_nav
 
 # Hədiyyələrlə bağlı şərtlər
 
-## Amazon.com or Microsoft’s Windows Store credit:
+## Amazon.com, iTunes and Windows Store credit:
 
-The Amazon.com and Microsoft’s Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Limit one redemption per organizer.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Limit one redemption per organizer.
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com or Microsoft’s Windows Store credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com and Microsoft’s Windows Store credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
 
