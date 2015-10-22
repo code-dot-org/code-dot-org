@@ -515,5 +515,6 @@
   "failedHasSetMap": "Next time, set the map.",
   "failedHasWonGame": "Next time, win the game.",
   "failedHasLostGame": "Next time, lose the game",
-  "failedAddItem": "Next time, add a character."
+  "failedAddItem": "Next time, add a character.",
+  "failedAvoidHazard": "Next time, don't touch the hazard."
 }

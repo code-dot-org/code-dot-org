@@ -722,6 +722,7 @@ Studio.initAutoHandlers = function (map) {
 /**
  * Performs movement on a list of Projectiles or Items. Removes items from the
  * list automatically when they move out of bounds
+ * @param {Item[]|Projectile[]} list
  */
 function performItemOrProjectileMoves (list) {
   for (var i = list.length - 1; i >= 0; i--) {
@@ -729,9 +730,18 @@ function performItemOrProjectileMoves (list) {
     if (list[i].outOfBounds()) {
       list[i].removeElement();
       list.splice(i, 1);
-    } else {
-      list[i].display();
     }
+  }
+}
+
+/**
+ * Triggers display update on a list of Projectiles or Items - for updating
+ * position and/or animation frames.
+ * @param {Item[]|Projectile[]} list
+ */
+function displayItemsOrProjectiles (list) {
+  for (var i = list.length - 1; i >= 0; i--) {
+    list[i].display();
   }
 }
 
@@ -753,7 +763,7 @@ function sortDrawOrder() {
   for (var i = 0; i < Studio.items.length; i++) {
     var item = {};
     item.element = Studio.items[i].element;
-    item.y = Studio.items[i].y + Studio.items[i].height/2;
+    item.y = Studio.items[i].y + Studio.items[i].height/2 + Studio.items[i].renderOffset.y;
     itemsArray.push(item);
 
     Studio.drawDebugRect("itemLocation", Studio.items[i].x, Studio.items[i].y, 4, 4);
@@ -764,12 +774,12 @@ function sortDrawOrder() {
   for (i = 0; i < Studio.sprite.length; i++) {
     var sprite = {};
     sprite.element = document.getElementById('sprite' + i);
-    sprite.y = Studio.sprite[i].y + Studio.sprite[i].height;
+    sprite.y = Studio.sprite[i].displayY + Studio.sprite[i].height;
     itemsArray.push(sprite);
 
     sprite = {};
     sprite.element = document.getElementById('spriteWalk' + i);
-    sprite.y = Studio.sprite[i].y + Studio.sprite[i].height;
+    sprite.y = Studio.sprite[i].displayY + Studio.sprite[i].height;
     itemsArray.push(sprite);
 
     Studio.drawDebugRect("spriteBottom", Studio.sprite[i].x, sprite.y, 4, 4);
@@ -819,9 +829,10 @@ Studio.onTick = function() {
   Studio.tickCount++;
   var i;
 
-  Studio.clearDebugRects();
+  Studio.clearDebugElements();
 
-  var animationOnlyFrame = 0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor;
+  var animationOnlyFrame = Studio.midExecutionFailure ||
+      (0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor);
   Studio.yieldThisTick = false;
 
   if (Studio.customLogic) {
@@ -959,6 +970,8 @@ Studio.onTick = function() {
     performItemOrProjectileMoves(Studio.projectiles);
     performItemOrProjectileMoves(Studio.items);
   }
+  displayItemsOrProjectiles(Studio.projectiles);
+  displayItemsOrProjectiles(Studio.items);
 
   Studio.updateFloatingScore();
 
@@ -1787,6 +1800,7 @@ Studio.reset = function(first) {
   // True if we should fail before execution, even if freeplay
   Studio.preExecutionFailure = false;
   Studio.message = null;
+  Studio.midExecutionFailure = false;
 
   // Reset the score and title screen.
   Studio.playerScore = 0;
@@ -1870,7 +1884,7 @@ Studio.reset = function(first) {
     document.getElementById('speechBubble' + i)
       .setAttribute('visibility', 'hidden');
 
-    document.getElementById('sprite' + i).removeAttribute('opacity');
+    Studio.sprite[i].setOpacity(1);
 
     var explosion = document.getElementById('explosion' + i);
     if (explosion) {
@@ -2577,6 +2591,36 @@ Studio.drawDebugRect = function(className, x, y, width, height) {
 };
 
 /**
+ * Draw a debug line from point to point using the given CSS class name.
+ * @param {string} className
+ * @param {number} x1
+ * @param {number} y1
+ * @param {number} x2
+ * @param {number} y2
+ * @param {string} [color] - defaults to black
+ */
+Studio.drawDebugLine = function(className, x1, y1, x2, y2, color) {
+  if (!showDebugInfo) {
+    return;
+  }
+
+  color = utils.valueOr(color, '#000000');
+
+  var svg = document.getElementById('svgStudio');
+  var group = document.createElementNS(SVG_NS, 'g');
+  group.setAttribute('class', className + " debugLine");
+  var line = document.createElementNS(SVG_NS, 'line');
+  line.setAttribute('x1', x1);
+  line.setAttribute('y1', y1);
+  line.setAttribute('x2', x2);
+  line.setAttribute('y2', y2);
+  line.setAttribute('stroke', color);
+  line.setAttribute('stroke-width', 2);
+  group.appendChild(line);
+  svg.appendChild(group);
+};
+
+/**
  * Draw a timeout rectangle across the bottom of the play area.
  * It doesn't appear until halfway through the level, and briefly fades in 
  * when first appearing.
@@ -2624,8 +2668,9 @@ Studio.drawTimeoutRect = function() {
  * Clear the debug rectangles.
  */
 
-Studio.clearDebugRects = function() {
+Studio.clearDebugElements = function() {
   $(".debugRect").remove();
+  $(".debugLine").remove();
 };
 
 Studio.drawWallTile = function (svg, wallVal, row, col) {
@@ -2718,20 +2763,12 @@ Studio.createLevelItems = function (svg) {
       var mapVal = Studio.map[row][col];
       for (var index = 0; index < skin.ItemClassNames.length; index++) {
         if (constants.squareHasItemClass(index, mapVal)) {
-          var className = skin.ItemClassNames[index];
           // Create item:
-          var itemOptions = {
-            frames: getFrameCount(className, skin.specialItemProperties, skin.itemFrames),
-            className: className,
-            dir: Direction.NONE,
-            image: skin[className],
-            speed: Studio.itemSpeed[className],
-            activity: Studio.itemActivity[className],
-            loop: true,
+          var classOptions = Studio.getItemOptionsForItemClass(skin.ItemClassNames[index]);
+          var itemOptions = $.extend({}, classOptions, {
             x: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col,
-            y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row,
-          };
-
+            y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row
+          });
           var item = new Item(itemOptions);
 
           item.createElement(svg);
@@ -3284,6 +3321,31 @@ Studio.playSound = function (opts) {
   Studio.playSoundCount++;
 };
 
+/**
+ * De-duplicated legwork of finding appropriate options for the given item
+ * class.  Does not set things like position and direction - those should
+ * be applied on top of the returned options object.
+ * @param {string} itemClass
+ * @returns {Object} options object that can be passed to item constructor.
+ */
+Studio.getItemOptionsForItemClass = function (itemClass) {
+  var classProperties = utils.valueOr(skin.specialItemProperties[itemClass], {});
+  return {
+    className: itemClass,
+    image: skin[itemClass],
+    frames: getFrameCount(itemClass, skin.specialItemProperties, skin.itemFrames),
+    loop: true,
+    width: classProperties.width,
+    height: classProperties.height,
+    dir: Direction.NONE,
+    speed: Studio.itemSpeed[itemClass],
+    activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
+    isHazard: classProperties.isHazard,
+    renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
+    renderScale: utils.valueOr(classProperties.scale, 1)
+  };
+};
+
 Studio.addItem = function (opts) {
 
   if (typeof opts.className !== 'string') {
@@ -3338,31 +3400,14 @@ Studio.addItem = function (opts) {
     return pos;
   };
 
-  var direction = level.itemGridAlignedMovement ? Direction.NONE :
-                    directions[Math.floor(Math.random() * directions.length)];
   var pos = generateRandomItemPosition();
-
-  var renderScale = 1;
-  var properties = skin.specialItemProperties[itemClass];
-  if (properties) {
-    renderScale = utils.valueOr(properties.scale, renderScale);
-  }
-
-  var itemOptions = {
-    frames: getFrameCount(itemClass, skin.specialItemProperties, skin.itemFrames),
-    className: itemClass,
-    dir: direction,
-    image: skinItem,
-    loop: true,
+  var dir = level.itemGridAlignedMovement ? Direction.NONE :
+      directions[Math.floor(Math.random() * directions.length)];
+  var itemOptions = $.extend({}, Studio.getItemOptionsForItemClass(itemClass), {
     x: pos.x,
     y: pos.y,
-    speed: Studio.itemSpeed[itemClass],
-    activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
-    width: 100,
-    height: 100,
-    renderScale: renderScale,
-  };
-
+    dir: dir
+  });
   var item = new Item(itemOptions);
 
   if (level.blockMovingIntoWalls) {
@@ -4791,6 +4836,21 @@ Studio.checkRequiredForSuccess = function() {
   return { exists: true, achieved: true, message: null };
 };
 
+/**
+ * Trigger a manual failure, which stops the interpreter and ends the level
+ * prematurely.
+ *
+ * Note: Has certain known limitations at the moment.
+ * - In droplet, it's possible for the interpreter to run several instructions
+ *   before we return to the end of a tick and check this condition.
+ * - Does not yet work in blockly mode (with no interpreter)
+ *
+ * @param {string} [message] optional failure message text
+ */
+Studio.fail = function (message) {
+  Studio.message = utils.valueOr(message, null);
+  Studio.midExecutionFailure = true;
+};
 
 var checkFinished = function () {
 
@@ -4826,7 +4886,12 @@ var checkFinished = function () {
       // establish a custom error message.
       Studio.message = requiredForSuccess.message;
     }
-  } 
+  }
+
+  if (Studio.midExecutionFailure) {
+    Studio.result = ResultType.FAILURE;
+    return true;
+  }
 
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
     Studio.result = ResultType.FAILURE;
@@ -4862,175 +4927,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js":[function(require,module,exports){
-/** @file Actions that can be given to a playlab sprite to execute over a set time. */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxstatements: 200
- */
-'use strict';
-
-var constants = require('./constants');
-var Direction = constants.Direction;
-
-/**
- * Work/animation for a sprite to do that will require more than one tick/frame.
- *
- * See Collidable#queueAction and Collidable#updateActions for usage.
- *
- * Note: All sprite actions must, for now, be able to complete in a provided
- * number of steps/frames, instead of blocking until they complete.  The latter
- * is a larger change that we'll save until later.
- *
- * @interface SpriteAction
- */
-
-/**
- * Perform one tick/frame step of the action on the given sprite.
- *
- * @function
- * @name SpriteAction#update
- * @param {Collidable} sprite - the sprite the action is being performed on
- */
-
-/**
- * Perform one tick/frame step of the action on the given sprite.
- *
- * @function
- * @name SpriteAction#isDone
- * @returns {boolean} whether the action is finished running.
- */
-
-/**
- * Move sprite by a desired delta over a certain number of steps/ticks.
- * Used to provide discrete grid movement in playlab's continuous interpreted
- * environment.
- * @constructor
- * @implements {SpriteAction}
- * @param {number} towardDeltaX
- * @param {number} towardDeltaY
- * @param {number} totalSteps
- */
-exports.GridMove = function (towardDeltaX, towardDeltaY, totalSteps) {
-  this.towardDeltaX_ = towardDeltaX;
-  this.towardDeltaY_ = towardDeltaY;
-  this.totalSteps_ = totalSteps;
-  this.elapsedSteps_ = 0;
-
-  /** @private {number} How much of the full distance to travel. */
-  this.percentBeforeReverse_ = 0.3;
-};
-
-/**
- * Apply a single frame of change to the given sprite.
- * @param {Collidable} sprite
- */
-exports.GridMove.prototype.update = function (sprite) {
-  // Logically snap the sprite to its final position on the first frame,
-  // the interpolation is for display only.
-  if (this.elapsedSteps_ === 0) {
-    this.startX_ = sprite.x;
-    this.startY_ = sprite.y;
-    sprite.x += this.towardDeltaX_;
-    sprite.y += this.towardDeltaY_;
-  }
-  var normalizedProgress = (this.elapsedSteps_ + 1) / this.totalSteps_;
-  sprite.displayX = this.startX_ + this.towardDeltaX_ * normalizedProgress;
-  sprite.displayY = this.startY_ + this.towardDeltaY_ * normalizedProgress;
-  sprite.dir = getDirection(this.towardDeltaX_, this.towardDeltaY_);
-  this.elapsedSteps_++;
-};
-
-/**
- * @returns {boolean} whether the action is done; in this case, whether the
- *          animation is complete, based on the number of steps that have
- *          elapsed.
- */
-exports.GridMove.prototype.isDone = function () {
-  return this.elapsedSteps_ >= this.totalSteps_;
-};
-
-/**
- * Move sprite partway toward a desired destination position, but have it
- * stop and reverse to its original position after a moment, as if it was
- * bouncing off a wall.
- * @constructor
- * @implements {SpriteAction}
- * @param {number} towardDeltaX - the relative target X position, if the motion
- *        was completed instead of cancelled (e.g. one grid-space away).
- * @param {number} towardDeltaY - as above.
- * @param {number} totalSteps - the number of steps (or frames) to take for the
- *        animation.
- */
-exports.GridMoveAndCancel = function (towardDeltaX, towardDeltaY, totalSteps) {
-  this.towardDeltaX_ = towardDeltaX;
-  this.towardDeltaY_ = towardDeltaY;
-  this.totalSteps_ = totalSteps;
-  this.elapsedSteps_ = 0;
-
-  /** @private {number} How much of the full distance to travel. */
-  this.percentBeforeReverse_ = 0.3;
-};
-
-/**
- * Apply a single frame of change to the given sprite.
- * @param {Collidable} sprite
- */
-exports.GridMoveAndCancel.prototype.update = function (sprite) {
-  // Note: The sprite's logical position (sprite.x, sprite.y) never changes
-  //       for this action.
-  var normalizedProgress = (this.elapsedSteps_ + 1) / this.totalSteps_;
-  var percentOffset = (2 * this.percentBeforeReverse_) *
-      (normalizedProgress < 0.5 ? normalizedProgress : (1 - normalizedProgress));
-  sprite.displayX = sprite.x + this.towardDeltaX_ * percentOffset;
-  sprite.displayY = sprite.y + this.towardDeltaY_ * percentOffset;
-  sprite.dir = getDirection(this.towardDeltaX_, this.towardDeltaY_);
-  // Could do a forced reversal of animation here, depends on how it looks
-  // with the real assets.
-  this.elapsedSteps_++;
-};
-
-/**
- * @returns {boolean} whether the action is done; in this case, whether the
- *          animation is complete, based on the number of steps that have
- *          elapsed.
- */
-exports.GridMoveAndCancel.prototype.isDone = function () {
-  return this.elapsedSteps_ >= this.totalSteps_;
-};
-
-/**
- * Given a 2D vector (x and y) provides the approximate animation direction
- * given in our Direction enum.  Does not calculate 'closest' direction or
- * anything like that - you'll always get a diagonal if both x and y are nonzero.
- * @param {number} x
- * @param {number} y
- * @returns {Direction}
- */
-function getDirection(x, y) {
-  var dir = Direction.NONE;
-  if (x < 0) {
-    dir |= Direction.WEST;
-  } else if (x > 0) {
-    dir |= Direction.EAST;
-  }
-  if (y < 0) {
-    dir |= Direction.NORTH;
-  } else if (y > 0) {
-    dir |= Direction.SOUTH;
-  }
-  return dir;
-}
-
-
-},{"./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js":[function(require,module,exports){
+},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js":[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -5223,6 +5120,7 @@ module.exports = RocketHeightLogic;
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
+require('../utils'); // Get Function.prototype.inherits
 
 var SVG_NS = "http://www.w3.org/2000/svg";
 
@@ -5318,6 +5216,7 @@ OFFSET_CENTER[Direction.NORTHWEST] = {
 /**
  * A Projectile is a type of Collidable.
  * Note: x/y represent x/y of center in gridspace
+ * @extends {Collidable}
  */
 var Projectile = function (options) {
   // call collidable constructor
@@ -5341,10 +5240,7 @@ var Projectile = function (options) {
   this.y = options.spriteY + OFFSET_CENTER[options.dir].y +
             (options.spriteHeight * OFFSET_FROM_SPRITE[options.dir].y);
 };
-
-// inherit from Collidable
-Projectile.prototype = new Collidable();
-
+Projectile.inherits(Collidable);
 module.exports = Projectile;
 
 /**
@@ -5436,8 +5332,19 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
+/**
+ * Change visible opacity of this projectile.
+ * @param {number} newOpacity (between 0 and 1)
+ * @override
+ */
+Projectile.prototype.setOpacity = function (newOpacity) {
+  if (this.element) {
+    this.element.setAttribute('opacity', newOpacity);
+  }
+};
 
-},{"./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/skins.js":[function(require,module,exports){
+
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/skins.js":[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -5688,13 +5595,13 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'pig':    { frames: 12, scale: 1,   activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
-    'man':    { frames: 12, scale: 1,   activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
-    'roo':    { frames: 15, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
-    'bird':   { frames:  8, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
-    'spider': { frames: 12, scale: 1.2, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW },
-    'mouse':  { frames:  1, scale: 0.6, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
-    'pilot':  { frames: 13, scale: 1,   activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
+    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
+    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
+    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -5983,8 +5890,9 @@ function loadHoc2015x(skin, assetUrl) {
   skin.ProjectileClassNames = [
   ];
 
-  // TODO: proper item class names
-  skin.ItemClassNames = [  ];
+  skin.ItemClassNames = [
+    'hazard'
+  ];
 
   skin.AutohandlerTouchItems = {
   };
@@ -5993,6 +5901,7 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
+    'hazard': { frames: 13, width: 100, height: 100, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
   };
 
   // Spritesheet for animated goal.
@@ -6072,6 +5981,8 @@ function loadHoc2015x(skin, assetUrl) {
   skin.preventItemLoop = function (className) {
     return className === 'item_character1';
   };
+
+  skin.hazard = skin.assetUrl('hazard_idle.png');
 
   skin.main = {
     background: skin.assetUrl('background_background1.jpg'),
@@ -8008,14 +7919,14 @@ levels.js_hoc2015_move_right = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
     [[0x1020000, 0x1020000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
      [0x1020000, 0x1020000, 0x0000000, 0x0010000, 0x0020000, 0x0100000, 0x00, 0x0000000], 
      [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x0000000],  
+     [0x0000000, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x0000000],
      [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],   
      [0x0000000, 0x0000000, 0x0000000, 0x0100000, 0x0010000, 0x0120000, 0x00, 0x0000000], 
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],  
@@ -8073,7 +7984,7 @@ levels.js_hoc2015_move_right_down = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': 
@@ -8115,13 +8026,13 @@ levels.js_hoc2015_move_diagonal = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,  
   'map':
     [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000, 0x0000000],  
-     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000], 
+     [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000],
      [0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000, 0x0000000],   
      [0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
@@ -8157,7 +8068,7 @@ levels.js_hoc2015_move_backtrack = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': 
@@ -8166,7 +8077,7 @@ levels.js_hoc2015_move_backtrack = {
      [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00], 
      [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],  
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
-     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],   
+     [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
   'instructions': '"Go quickly, BOTX."',
@@ -8197,7 +8108,7 @@ levels.js_hoc2015_move_around = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -8205,7 +8116,7 @@ levels.js_hoc2015_move_around = {
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
      [0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000, 0x00],  
      [0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0140000, 0x0000000, 0x0000001, 0x0000000, 0x00],   
+     [0x0000000, 0x0000000, 0x20, 0x0140000, 0x0000000, 0x0000001, 0x0000000, 0x00],
      [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x00],  
      [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
@@ -8239,7 +8150,7 @@ levels.js_hoc2015_move_finale = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -8247,8 +8158,8 @@ levels.js_hoc2015_move_finale = {
      [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
      [0x0000000, 0x0000000, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000000, 0x0000000], 
      [0x0000000, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000000, 0x0000000],  
-     [0x0000000, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],   
+     [0x0000000, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
      [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],  
      [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000]],
   'embed': 'false',
@@ -11349,13 +11260,7 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
 }
 
 
-},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../sharedFunctionalBlocks":"/home/ubuntu/staging/apps/build/js/sharedFunctionalBlocks.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js"}],"/home/ubuntu/staging/apps/build/js/studio/locale.js":[function(require,module,exports){
-// locale for studio
-
-module.exports = window.blockly.studio_locale;
-
-
-},{}],"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js":[function(require,module,exports){
+},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../sharedFunctionalBlocks":"/home/ubuntu/staging/apps/build/js/sharedFunctionalBlocks.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js"}],"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js":[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -12139,9 +12044,10 @@ exports.isKeyDown = function (keyCode) {
 },{"./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/Item.js":[function(require,module,exports){
 var Collidable = require('./collidable');
 var constants = require('./constants');
+var studioMsg = require('./locale');
+var spriteActions = require('./spriteActions');
 var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
-var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -12153,6 +12059,7 @@ var uniqueId = 0;
 /**
  * An Item is a type of Collidable.
  * Note: x/y represent x/y of center in gridspace
+ * @extends {Collidable}
  */
 var Item = function (options) {
   // call collidable constructor
@@ -12160,6 +12067,14 @@ var Item = function (options) {
 
   this.height = options.height || 50;
   this.width = options.width || 50;
+
+  /**
+   * Rendering offset for item animation vs display position - applied as
+   * late as possible.
+   * @type {{x: number, y: number}}
+   */
+  this.renderOffset = options.renderOffset || { x: 0, y: 0 };
+
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
   this.renderScale = options.renderScale || 1;
   this.displayDir = Direction.SOUTH;
@@ -12173,10 +12088,7 @@ var Item = function (options) {
     }
   }.bind(this), 50);
 };
-
-// inherit from Collidable
-Item.prototype = new Collidable();
-
+Item.inherits(Collidable);
 module.exports = Item;
 
 /**
@@ -12257,6 +12169,12 @@ Item.prototype.update = function () {
 
   // Draw the item's current location.
   Studio.drawDebugRect("itemCenter", this.x, this.y, 3, 3);
+
+  // In this stationary activity case, we don't need to do any of this
+  // update logic (facing the actor is handled every frame in display())
+  if (this.activity === 'watchActor') {
+    return;
+  }
 
   if (this.destGridX !== undefined) {
     // Draw the item's destination grid square.
@@ -12409,6 +12327,35 @@ Item.prototype.update = function () {
 };
 
 /**
+ * Isolated update logic for "watchActor" activity where the "item" keeps
+ * turning to look at the actor with the given sprite index.
+ * @param {number} targetSpriteIndex
+ */
+Item.prototype.turnToFaceActor = function (targetSpriteIndex) {
+  // Pick a target direction closest to the relative direction toward the target.
+  var target = Studio.sprite[targetSpriteIndex];
+  if (!target) {
+    return;
+  }
+
+  // Actor positions are the top-left of their square (or their "feet" square
+  // in the 'isometric' case) - we should look at the middle of their square
+  var actorGroundCenterX = target.displayX + Studio.HALF_SQUARE;
+  var actorGroundCenterY = target.displayY + Studio.HALF_SQUARE;
+  var deltaX = actorGroundCenterX - this.x;
+  var deltaY = actorGroundCenterY - this.y;
+
+  // We shouldn't adjust our direction if the actor is sufficiently close that
+  // relative direction doesn't make much sense
+  // Basically, avoid thrashing when moving into their space.
+  var SQUARED_MINIMUM_DISTANCE = 25;
+  if (deltaX * deltaX + deltaY * deltaY > SQUARED_MINIMUM_DISTANCE) {
+    Studio.drawDebugLine("watchActor", this.x, this.y, actorGroundCenterX, actorGroundCenterY, '#ffff00');
+    this.dir = constants.getClosestDirection(deltaX, deltaY);
+  }
+};
+
+/**
  * Begin a fade out.
  */
 Item.prototype.beginRemoveElement = function () {
@@ -12463,8 +12410,8 @@ Item.prototype.hasCompletedFade = function() {
  */
 Item.prototype.display = function () {
   var topLeft = {
-    x: this.x - this.width / 2,
-    y: this.y - this.height / 2
+    x: this.x + this.renderOffset.x - this.width / 2,
+    y: this.y + this.renderOffset.y - this.height / 2
   };
 
   var currentTime = new Date().getTime();
@@ -12472,6 +12419,11 @@ Item.prototype.display = function () {
   if (this.startFadeTime) {
     opacity = 1 - (currentTime - this.startFadeTime) / this.fadeTime;
     opacity = Math.max(opacity, 0);
+  }
+
+  // Watch behavior does not change logical position, should update every frame
+  if (this.activity === "watchActor") {
+    this.turnToFaceActor(Studio.protagonistSpriteIndex || 0);
   }
 
   var directionFrame = this.getDirectionFrame();
@@ -12486,9 +12438,15 @@ Item.prototype.display = function () {
 
 Item.prototype.getNextPosition = function () {
   var unit = Direction.getUnitVector(this.dir);
+  var speed = this.speed;
+  // TODO: Better concept of which actions actually move the actor
+  // Projected position should not be in front of you if you are not moving!
+  if (this.activity === "none" || this.activity === "watchActor") {
+    speed = 0;
+  }
   return {
-    x: this.x + this.speed * unit.x,
-    y: this.y + this.speed * unit.y
+    x: this.x + speed * unit.x,
+    y: this.y + speed * unit.y
   };
 };
 
@@ -12498,8 +12456,308 @@ Item.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
+/**
+ * Mark that we're colliding with object represented by key.
+ * Here, override base implemention to special on-collision logic for certain
+ * item classes.
+ * @param key A unique key representing the object we're colliding with
+ * @returns {boolean} True if collision is started, false if we're already colliding
+ * @override
+ */
+Item.prototype.startCollision = function (key) {
+  var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
+  if (newCollisionStarted) {
+    if (this.isHazard) {
+      var actor = Studio.sprite[key];
+      if (actor) {
+        actor.addAction(new spriteActions.FadeActor(constants.TOUCH_HAZARD_FADE_TIME));
+        actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_FADE_TIME));
+        Studio.fail(studioMsg.failedAvoidHazard());
+      }
+    }
+  }
+  return newCollisionStarted;
+};
 
-},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/collidable.js":[function(require,module,exports){
+/**
+ * Change visible opacity of this item.
+ * @param {number} newOpacity (between 0 and 1)
+ * @override
+ */
+Item.prototype.setOpacity = function (newOpacity) {
+  if (this.element) {
+    this.element.setAttribute('opacity', newOpacity);
+  }
+};
+
+
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js"}],"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js":[function(require,module,exports){
+/** @file Actions that can be given to a playlab sprite to execute over a set time. */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var utils = require('../utils');
+var constants = require('./constants');
+var Direction = constants.Direction;
+
+/**
+ * Work/animation for a sprite to do that will require more than one tick/frame.
+ *
+ * See Collidable#queueAction and Collidable#updateActions for usage.
+ *
+ * Note: All sprite actions must, for now, be able to complete in a provided
+ * number of steps/frames, instead of blocking until they complete.  The latter
+ * is a larger change that we'll save until later.
+ *
+ * @interface SpriteAction
+ */
+
+/**
+ * Perform one tick/frame step of the action on the given sprite.
+ *
+ * @function
+ * @name SpriteAction#update
+ * @param {Collidable} sprite - the sprite the action is being performed on
+ */
+
+/**
+ * Perform one tick/frame step of the action on the given sprite.
+ *
+ * @function
+ * @name SpriteAction#isDone
+ * @returns {boolean} whether the action is finished running.
+ */
+
+/**
+ * Move sprite by a desired delta over a certain number of steps/ticks.
+ * Used to provide discrete grid movement in playlab's continuous interpreted
+ * environment.
+ * @constructor
+ * @implements {SpriteAction}
+ * @param {number} towardDeltaX
+ * @param {number} towardDeltaY
+ * @param {number} totalSteps
+ */
+exports.GridMove = function (towardDeltaX, towardDeltaY, totalSteps) {
+  this.towardDeltaX_ = towardDeltaX;
+  this.towardDeltaY_ = towardDeltaY;
+  this.totalSteps_ = totalSteps;
+  this.elapsedSteps_ = 0;
+
+  /** @private {number} How much of the full distance to travel. */
+  this.percentBeforeReverse_ = 0.3;
+};
+
+/**
+ * Apply a single frame of change to the given sprite.
+ * @param {Collidable} sprite
+ */
+exports.GridMove.prototype.update = function (sprite) {
+  // Logically snap the sprite to its final position on the first frame,
+  // the interpolation is for display only.
+  if (this.elapsedSteps_ === 0) {
+    this.startX_ = sprite.x;
+    this.startY_ = sprite.y;
+    sprite.x += this.towardDeltaX_;
+    sprite.y += this.towardDeltaY_;
+  }
+  var normalizedProgress = (this.elapsedSteps_ + 1) / this.totalSteps_;
+  sprite.displayX = this.startX_ + this.towardDeltaX_ * normalizedProgress;
+  sprite.displayY = this.startY_ + this.towardDeltaY_ * normalizedProgress;
+  sprite.dir = getDirection(this.towardDeltaX_, this.towardDeltaY_);
+  this.elapsedSteps_++;
+};
+
+/**
+ * @returns {boolean} whether the action is done; in this case, whether the
+ *          animation is complete, based on the number of steps that have
+ *          elapsed.
+ */
+exports.GridMove.prototype.isDone = function () {
+  return this.elapsedSteps_ >= this.totalSteps_;
+};
+
+/**
+ * Move sprite partway toward a desired destination position, but have it
+ * stop and reverse to its original position after a moment, as if it was
+ * bouncing off a wall.
+ * @constructor
+ * @implements {SpriteAction}
+ * @param {number} towardDeltaX - the relative target X position, if the motion
+ *        was completed instead of cancelled (e.g. one grid-space away).
+ * @param {number} towardDeltaY - as above.
+ * @param {number} totalSteps - the number of steps (or frames) to take for the
+ *        animation.
+ */
+exports.GridMoveAndCancel = function (towardDeltaX, towardDeltaY, totalSteps) {
+  this.towardDeltaX_ = towardDeltaX;
+  this.towardDeltaY_ = towardDeltaY;
+  this.totalSteps_ = totalSteps;
+  this.elapsedSteps_ = 0;
+
+  /** @private {number} How much of the full distance to travel. */
+  this.percentBeforeReverse_ = 0.3;
+};
+
+/**
+ * Apply a single frame of change to the given sprite.
+ * @param {Collidable} sprite
+ */
+exports.GridMoveAndCancel.prototype.update = function (sprite) {
+  // Note: The sprite's logical position (sprite.x, sprite.y) never changes
+  //       for this action.
+  var normalizedProgress = (this.elapsedSteps_ + 1) / this.totalSteps_;
+  var percentOffset = (2 * this.percentBeforeReverse_) *
+      (normalizedProgress < 0.5 ? normalizedProgress : (1 - normalizedProgress));
+  sprite.displayX = sprite.x + this.towardDeltaX_ * percentOffset;
+  sprite.displayY = sprite.y + this.towardDeltaY_ * percentOffset;
+  sprite.dir = getDirection(this.towardDeltaX_, this.towardDeltaY_);
+  // Could do a forced reversal of animation here, depends on how it looks
+  // with the real assets.
+  this.elapsedSteps_++;
+};
+
+/**
+ * @returns {boolean} whether the action is done; in this case, whether the
+ *          animation is complete, based on the number of steps that have
+ *          elapsed.
+ */
+exports.GridMoveAndCancel.prototype.isDone = function () {
+  return this.elapsedSteps_ >= this.totalSteps_;
+};
+
+/**
+ * Given a 2D vector (x and y) provides the approximate animation direction
+ * given in our Direction enum.  Does not calculate 'closest' direction or
+ * anything like that - you'll always get a diagonal if both x and y are nonzero.
+ * @param {number} x
+ * @param {number} y
+ * @returns {Direction}
+ */
+function getDirection(x, y) {
+  var dir = Direction.NONE;
+  if (x < 0) {
+    dir |= Direction.WEST;
+  } else if (x > 0) {
+    dir |= Direction.EAST;
+  }
+  if (y < 0) {
+    dir |= Direction.NORTH;
+  } else if (y > 0) {
+    dir |= Direction.SOUTH;
+  }
+  return dir;
+}
+
+/**
+ * Fade an actor out to nothing.
+ * @param {number} [fadeDuration] how long it should take to fade out, in
+ *        milliseconds.  Default to 1 second.
+ * @constructor
+ * @implements {SpriteAction}
+ */
+exports.FadeActor = function (fadeDuration) {
+  /** @private {number} */
+  this.startFadeTime_ = null;
+
+  /** @private {number} */
+  this.fadeDurationMs_ = utils.valueOr(fadeDuration, constants.DEFAULT_ACTOR_FADE_TIME);
+};
+
+/**
+ * Apply a single frame of change to the given sprite.
+ * @param {Collidable} sprite
+ */
+exports.FadeActor.prototype.update = function (sprite) {
+  if (!this.startFadeTime_) {
+    // First frame of fade
+    this.startFadeTime_ = new Date().getTime();
+  }
+
+  var currentTime = new Date().getTime();
+  var opacity = 1 - (currentTime - this.startFadeTime_) / this.fadeDurationMs_;
+  opacity = Math.max(opacity, 0);
+  sprite.setOpacity(opacity);
+};
+
+/**
+ * @returns {boolean} whether the action is done; in this case, whether the
+ *          fade is complete, based on the elapsed time.
+ */
+exports.FadeActor.prototype.isDone = function () {
+  var currentTime = new Date().getTime();
+  return this.startFadeTime_ && currentTime > this.startFadeTime_ + this.fadeDurationMs_;
+};
+
+/**
+ * Shake an actor left and right for a moment.
+ * @param {number} [shakeDuration] how long it should take to fade out, in
+ *        milliseconds.  Default to 1 second.
+ * @constructor
+ * @implements {SpriteAction}
+ */
+exports.ShakeActor = function (shakeDuration) {
+  /** @private {number} */
+  this.startShakeTime_ = null;
+
+  /** @private {number} How long to shake, in milliseconds */
+  this.shakeDurationMs_ = utils.valueOr(shakeDuration,
+      constants.SHAKE_DEFAULT_DURATION);
+
+  /** @private {number} How many complete back-and-forth shakes occur */
+  this.cycleCount_ = constants.SHAKE_DEFAULT_CYCLES;
+
+  /** @private {number} max shake distance from real position */
+  this.amplitude_ = constants.SHAKE_DEFAULT_DISTANCE;
+
+  /** @private {number} precalculated angular frequency of sine wave equation. */
+  this.angularFrequency_ = 2 * Math.PI * (this.cycleCount_ / this.shakeDurationMs_);
+};
+
+/**
+ * Apply a single frame of change to the given sprite.
+ * @param {Collidable} sprite
+ */
+exports.ShakeActor.prototype.update = function (sprite) {
+  if (!this.startShakeTime_) {
+    // First frame of fade
+    this.startShakeTime_ = new Date().getTime();
+  }
+
+  var elapsedTime = new Date().getTime() - this.startShakeTime_;
+  var offset = this.amplitude_ * Math.sin(this.angularFrequency_ * elapsedTime);
+
+  sprite.displayX = sprite.x + offset;
+};
+
+/**
+ * @returns {boolean} whether the action is done; in this case, whether the
+ *          fade is complete, based on the elapsed time.
+ */
+exports.ShakeActor.prototype.isDone = function () {
+  var currentTime = new Date().getTime();
+  return this.startShakeTime_ &&
+      currentTime > this.startShakeTime_ +this.shakeDurationMs_;
+};
+
+
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/locale.js":[function(require,module,exports){
+// locale for studio
+
+module.exports = window.blockly.studio_locale;
+
+
+},{}],"/home/ubuntu/staging/apps/build/js/studio/collidable.js":[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -12671,6 +12929,26 @@ Collidable.prototype.updateActions = function () {
   }
 };
 
+/**
+ * Change visible opacity of this collidable sprite.
+ * @param {number} newOpacity (between 0 and 1)
+ */
+Collidable.prototype.setOpacity = function (newOpacity) {
+  var spriteIndex = Studio.sprite.indexOf(this);
+  if (spriteIndex < 0) {
+    return;
+  }
+
+  var spriteRegularIcon = document.getElementById('sprite' + spriteIndex);
+  var spriteWalkIcon = document.getElementById('spriteWalk' + spriteIndex);
+  if (spriteRegularIcon) {
+    spriteRegularIcon.setAttribute('opacity', newOpacity);
+  }
+  if (spriteWalkIcon) {
+    spriteWalkIcon.setAttribute('opacity', newOpacity);
+  }
+};
+
 
 },{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/constants.js":[function(require,module,exports){
 'use strict';
@@ -12707,6 +12985,37 @@ exports.Direction = {
 
 var Dir = exports.Direction;
 
+/**
+ * Mapping number of steps away from north to direction enum.
+ * @type {Direction[]}
+ */
+exports.ClockwiseDirectionsFromNorth = [
+  Dir.NORTH,
+  Dir.NORTHEAST,
+  Dir.EAST,
+  Dir.SOUTHEAST,
+  Dir.SOUTH,
+  Dir.SOUTHWEST,
+  Dir.WEST,
+  Dir.NORTHWEST
+];
+
+/**
+ * Given a 2D vector (x and y) provides the closest animation direction
+ * given in our Direction enum.
+ * @param {number} x
+ * @param {number} y
+ * @returns {Direction}
+ */
+exports.getClosestDirection = function (x, y) {
+  // Y is inverted between our playlab coordinate space and what atan2 expects.
+  var radiansFromNorth = Math.atan2(x, -y);
+  var stepRadians = Math.PI / 4;
+  // Snap positive index of nearest 45° where 0 is North, 1 is NE, etc...
+  var stepsFromNorth = (Math.round(radiansFromNorth / stepRadians) + 8) % 8;
+  // At this point we should have an int between 0 and 7
+  return exports.ClockwiseDirectionsFromNorth[stepsFromNorth];
+};
 
 var frameDirTable = {};
 frameDirTable[Dir.SOUTHEAST]  = 0;
@@ -13010,6 +13319,13 @@ exports.VISIBLE_VALUE = '"visible"';
 // Fade durations (in milliseconds)
 exports.GOAL_FADE_TIME = 200;
 exports.ITEM_FADE_TIME = 200;
+exports.DEFAULT_ACTOR_FADE_TIME = 1000;
+exports.TOUCH_HAZARD_FADE_TIME = 2000;
+
+// Other defaults for actions
+exports.SHAKE_DEFAULT_DURATION = 1000;
+exports.SHAKE_DEFAULT_CYCLES = 8;
+exports.SHAKE_DEFAULT_DISTANCE = 5;
 
 
 },{}]},{},["/home/ubuntu/staging/apps/build/js/studio/main.js"]);

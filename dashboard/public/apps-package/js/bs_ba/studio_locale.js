@@ -670,4 +670,5 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedHasSetMap":function(d){return "Next time, set the map."},
 "failedHasWonGame":function(d){return "Next time, win the game."},
 "failedHasLostGame":function(d){return "Next time, lose the game"},
-"failedAddItem":function(d){return "Next time, add a character."}};
+"failedAddItem":function(d){return "Next time, add a character."},
+"failedAvoidHazard":function(d){return "Next time, don't touch the hazard."}};
