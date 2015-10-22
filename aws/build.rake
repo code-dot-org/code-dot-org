@@ -330,6 +330,7 @@ task :dashboard_unit_tests => [COVERAGE_SYMLINK] do
     with_hipchat_logging(name) do
       # Unit tests mess with the database so stop the service before running them
       RakeUtils.stop_service CDO.dashboard_unicorn_name
+      RakeUtils.rake 'db:schema:load'
       RakeUtils.rake 'test', 'COVERAGE=1'
       log_coverage_results(name)
       RakeUtils.start_service CDO.dashboard_unicorn_name
