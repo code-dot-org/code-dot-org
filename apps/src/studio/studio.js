@@ -3311,8 +3311,8 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     image: skin[itemClass],
     frames: getFrameCount(itemClass, skin.specialItemProperties, skin.itemFrames),
     loop: true,
-    width: utils.valueOr(classProperties.width, 50),
-    height: utils.valueOr(classProperties.height, 50),
+    width: classProperties.width,
+    height: classProperties.height,
     dir: Direction.NONE,
     speed: Studio.itemSpeed[itemClass],
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
@@ -4814,6 +4814,12 @@ Studio.checkRequiredForSuccess = function() {
 /**
  * Trigger a manual failure, which stops the interpreter and ends the level
  * prematurely.
+ *
+ * Note: Has certain known limitations at the moment.
+ * - In droplet, it's possible for the interpreter to run several instructions
+ *   before we return to the end of a tick and check this condition.
+ * - Does not yet work in blockly mode (with no interpreter)
+ *
  * @param {string} [message] optional failure message text
  */
 Studio.fail = function (message) {
