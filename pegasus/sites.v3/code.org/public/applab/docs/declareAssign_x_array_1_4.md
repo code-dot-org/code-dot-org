@@ -40,12 +40,13 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // flip a coin
 var coinFaces = ["heads","tails"];
 var myFlip = randomNumber(1);
 console.log("You flipped " + coinFaces[myFlip]);
-</pre>
+```
 
 [/example]
 
@@ -53,7 +54,8 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // pick a prime
 var primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];
 var numberEndings = ["st","nd","rd","th","th","th","th","th","th","th"];
@@ -66,7 +68,7 @@ else
 {
   console.log("I don't know the " + myPick + "th Prime");
 }
-</pre>
+```
 
 [/example]
 
@@ -74,7 +76,8 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // plot your path
 var coordinates = [[10,10], [100,10], [100,100], [10,100], [10,10]];
 penUp();
@@ -88,7 +91,7 @@ for(var i=0;i<5;i++)
 }
 
 
-</pre>
+```
 
 [/example]
 
@@ -97,9 +100,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 var x = [1,2,3,4];
-</pre>
+```
 
 [/syntax]
 

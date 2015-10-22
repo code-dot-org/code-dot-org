@@ -1,0 +1,17 @@
+<TextCompression>
+  <config><![CDATA[{
+  "game_id": 45,
+  "created_at": "2015-08-25T16:30:00.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "dictionary": "peter_piper_picked\npeck_of_pickled_peppers",
+    "poems": [
+      "Peter Piper picked a peck of pickled peppers.\nA peck of pickled peppers Peter Piper picked.\nIf Peter Piper picked a peck of pickled peppers,\nWhere's the peck of pickled peppers that Peter Piper picked?"
+    ],
+    "href": "text-compression/text-compression.html",
+    "video_key": "csp_textcompression",
+    "skip_dialog": true
+  }
+}]]></config>
+</TextCompression>

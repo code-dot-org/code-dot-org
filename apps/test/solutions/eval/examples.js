@@ -100,12 +100,14 @@ module.exports = {
         testResult: TestResults.EXAMPLE_FAILED
       },
       customValidator: function (assert) {
-        assert.equal(Eval.message, 'You need at least one example in function ' +
-          'green-triangle. Make sure each example has a call and a result.');
+        assert.equal(Eval.message, 'You need at least two examples in' +
+            ' function green-triangle. Make sure each example has a call and ' +
+            'a result.');
         return true;
       },
       xml: '<xml>' +
         solutionBlocks +
+        matchingExampleBlock +
         '<block type="functional_example" inline="false">' +
         '  <functional_input name="ACTUAL">' +
         '    <block type="functional_call" inline="false">' +
@@ -131,6 +133,7 @@ module.exports = {
       },
       xml: '<xml>' +
         solutionBlocks +
+        matchingExampleBlock +
         '<block type="functional_example" inline="false">' +
         '  <functional_input name="ACTUAL">' +
         '      <block type="functional_call" inline="false">' +
@@ -180,6 +183,7 @@ module.exports = {
       xml: '<xml>' +
         solutionBlocks +
         matchingExampleBlock +
+        matchingExampleBlock +
         '</xml>'
     },
 
@@ -190,12 +194,31 @@ module.exports = {
         testResult: TestResults.EXAMPLE_FAILED
       },
       customValidator: function (assert) {
-        assert.equal(Eval.message, 'You need at least one example in function ' +
-        'green-triangle. Make sure each example has a call and a result.');
+        assert.equal(Eval.message, 'You need at least two examples in' +
+            ' function green-triangle. Make sure each example has a call and ' +
+            'a result.');
         return true;
       },
       xml: '<xml>' +
         solutionBlocks +
+        '</xml>'
+    },
+
+    {
+      description: "one example when two examples required",
+      expected: {
+        result: false,
+        testResult: TestResults.EXAMPLE_FAILED
+      },
+      customValidator: function (assert) {
+        assert.equal(Eval.message, 'You need at least two examples in' +
+            ' function green-triangle. Make sure each example has a call and ' +
+            'a result.');
+        return true;
+      },
+      xml: '<xml>' +
+        solutionBlocks +
+        matchingExampleBlock +
         '</xml>'
     },
 
@@ -240,6 +263,7 @@ module.exports = {
       },
       xml: '<xml>' +
       solutionBlocks +
+      matchingExampleBlock +
       matchingExampleBlock +
       '</xml>'
     }

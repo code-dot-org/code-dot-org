@@ -103,6 +103,15 @@ em strong {
   font-family: $gotham-extra-bold-italics;
 }
 
+a.video_link {
+  /* IE9 CSS hack */
+  max-width: 100%\9;
+}
+
+img.video_thumbnail {
+  width: 183px;
+}
+
 .center {
   margin-left: auto;
   margin-right: auto;
@@ -267,7 +276,7 @@ $small-footer-horizontal-margin: 15px;
 $small-footer-standard-width: 400px;
 
 /* Shared styles so flyout looks like footer */
-.small-footer, #copyright-flyout, #more-menu {
+.small-footer-base, #copyright-flyout, #more-menu {
   background-color: #ddd; /* Matches blockly flyout */
   color: $light_gray;
   font-size: 14px;
@@ -293,16 +302,23 @@ $small-footer-standard-width: 400px;
       text-decoration: none;
     }
   }
+
+  .dark & {
+    background-color: $dark-charcoal;
+    a {
+      &:hover {
+        color: $lightest_gray
+      }
+    }
+  }
 }
 
-.small-footer {
+.small-footer-base {
   position: absolute;
   bottom: 0;
   width: $small-footer-standard-width;
   overflow: hidden;
   padding-left: $codeApp-left-margin;
-  padding-top: 3px;
-  padding-bottom: 3px;
 
   /*
    * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
@@ -363,17 +379,29 @@ $small-footer-standard-width: 400px;
       text-decoration: none;
     }
   }
+
+  .dark & {
+    & > li > a {
+      &:hover {
+        background-color: $lightest_gray;
+        color: $dark_charcoal;
+      }
+    }
+  }
 }
 
-/* All three major components of .small-footer are stacked: */
+/* All three major components of .small-footer are stacked:
+   Need to have this reasonably, high since some of our elements (such as
+   applab editor) have higher values
+*/
 #more-menu {
-  z-index: 1;
+  z-index: 998;
 }
 #copyright-flyout {
-  z-index: 2;
+  z-index: 999;
 }
-.small-footer {
-  z-index: 3;
+.small-footer-base {
+  z-index: 1000;
 }
 
 #locale {
@@ -426,6 +454,9 @@ $default-modal-width: 640px;
 
   &#block-documentation-lightbox {
     width: 80% !important;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 }
 
@@ -434,10 +465,8 @@ $default-modal-width: 640px;
     position: absolute;
     top: 50px; // top of the dialog
 
-    // make dialog auto-center regardless of width
-    right: 0;
-    left: 0;
-    margin: 0 auto;
+    width: $default-modal-width;
+    margin-left: -($default-modal-width / 2);
 
     // margin-bottom is reused in JavaScript to determine
     // how close to get to the bottom of the viewport.
@@ -1767,6 +1796,11 @@ $modal-no-icon-gap: 22px;
     margin-bottom: 15px;
   }
 
+  .instructions2 {
+    font-size: 18px;
+    color: $charcoal;
+  }
+  
   .aniGif {
     display: block;
     margin: 0px auto 6px;
@@ -1775,9 +1809,9 @@ $modal-no-icon-gap: 22px;
   }
 
   .feedback-image {
-    width: 40%;
+    width: 180px;
     height: auto;
-    margin: 15px;
+    margin: 0 15px 0 0;
     float: left;
     border: lightgrey;
     border-style: solid
@@ -1885,8 +1919,8 @@ $modal-no-icon-gap: 22px;
   padding-top: 19px;
   p {
     line-height: 25px;
-    font-size: initial;
-    color: initial;
+    font-size: 16px;
+    color: $black;
   }
 }
 
@@ -1918,6 +1952,13 @@ $modal-no-icon-gap: 22px;
   text-align: right;
   html[dir=rtl] & {
     text-align: left;
+  }
+}
+
+.exclamation-abuse {
+  a, a:hover {
+    color: white;
+    text-decoration: underline;
   }
 }
 
@@ -1990,4 +2031,61 @@ button.notext {
 .example-image {
   @include bottom-shadow;
   @include rounded-border;
+}
+
+/*
+ * The following responsive styles are designed to match behavior
+ * with the vizualizationColumn and visualizationEditor styles
+ * defined in apps/style/common.scss, so that the columns in the
+ * header line up with the columns below them.
+ */
+
+$width: 400px;
+#visualizationColumnHeader {
+  max-width: $width;
+  float: left;
+}
+#visualizationEditorHeader {
+  margin-left: $width;
+  padding-left: 15px;
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1150px) {
+  $width: 350px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1100px) {
+  $width: 300px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1050px) {
+  $width: 250px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  $width: 200px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
 }

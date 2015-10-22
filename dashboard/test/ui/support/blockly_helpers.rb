@@ -11,14 +11,14 @@ module BlocklyHelpers
   end
 
   def generate_selector_drag_code(from, to, target_dx, target_dy)
-    "var drag_dx = $(\"#{to}\").position().left - $(\"#{from}\").position().left;" +
-        "var drag_dy = $(\"#{to}\").position().top  - $(\"#{from}\").position().top;" +
+    "var drag_dx = $(\"#{to}\").offset().left - $(\"#{from}\").offset().left;" +
+        "var drag_dy = $(\"#{to}\").offset().top  - $(\"#{from}\").offset().top;" +
         "$(\"#{from}\").simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
   end
 
   def generate_begin_to_drag_code(from, to, target_dx, target_dy)
-    "var drag_dx = $(\"[block-id='#{to}']\").position().left - $(\"[block-id='#{from}']\").position().left;" +
-        "var drag_dy = $(\"[block-id='#{to}']\").position().top  - $(\"[block-id='#{from}']\").position().top;" +
+    "var drag_dx = $(\"[block-id='#{to}']\").offset().left - $(\"[block-id='#{from}']\").offset().left;" +
+        "var drag_dy = $(\"[block-id='#{to}']\").offset().top  - $(\"[block-id='#{from}']\").offset().top;" +
         "$(\"[block-id='#{from}']\").simulate( 'drag', {justDrag: true, handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
   end
 
@@ -45,6 +45,26 @@ module BlocklyHelpers
       return @block_aliases[alias_or_id]
     end
     alias_or_id
+  end
+
+  def get_scrollable_height(block_space_name)
+    @browser.execute_script("return Blockly.#{block_space_name}.getScrollableSize(Blockly.modalBlockSpace.getMetrics()).height;")
+  end
+
+  def get_block_absolute_left(block_id)
+    @browser.execute_script("return $(\"[block-id='#{block_id}']\").position().left")
+  end
+
+  def get_block_absolute_top(block_id)
+    @browser.execute_script("return $(\"[block-id='#{block_id}']\").position().top")
+  end
+
+  def get_block_workspace_left(block_id)
+    @browser.execute_script("return Blockly.mainBlockSpace.getBlockById(#{block_id}).getRelativeToSurfaceXY().x;")
+  end
+
+  def get_block_workspace_top(block_id)
+    @browser.execute_script("return Blockly.mainBlockSpace.getBlockById(#{block_id}).getRelativeToSurfaceXY().y;")
   end
 end
 

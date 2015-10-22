@@ -1,55 +1,41 @@
 * * *
 
-crwdns19689:0crwdne19689:0
+crwdns49042:0crwdne49042:0
 
-crwdns26339:0crwdne26339:0
+crwdns50403:0crwdne50403:0
 
-crwdns26340:0crwdne26340:0
+crwdns50404:0crwdne50404:0
 
 * * *
 
-crwdns19692:0{request.host}crwdne19692:0
+crwdns44087:0{request.host}crwdne44087:0
 
-crwdns19693:0crwdne19693:0 crwdns19694:0crwdne19694:0
+crwdns44088:0crwdne44088:0 crwdns44089:0crwdne44089:0
 
-# crwdns19695:0crwdne19695:0
+# crwdns44090:0crwdne44090:0
 
-crwdns21413:0crwdne21413:0
+crwdns49043:0crwdne49043:0 crwdns49044:0crwdne49044:0 crwdns49045:0crwdne49045:0
 
-## crwdns19698:0crwdne19698:0
+## crwdns49046:0crwdne49046:0
 
-crwdns23959:0crwdne23959:0
+crwdns49047:0crwdne49047:0!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<% if @country == 'us' %>
+## crwdns49048:0crwdne49048:0
 
-## crwdns19700:0crwdne19700:0
+crwdns50273:0crwdne50273:0 crwdns49050:0crwdne49050:0 crwdns49051:0crwdne49051:0 <% end %>
 
-crwdns23960:0crwdne23960:0
+## crwdns49052:0crwdne49052:0
 
-<% else %>
+crwdns50274:0crwdne50274:0
 
-## crwdns19703:0crwdne19703:0
+## crwdns49054:0crwdne49054:0
 
-crwdns23961:0crwdne23961:0
+crwdns50275:0crwdne50275:0 crwdns49056:0crwdne49056:0 crwdns50276:0crwdne50276:0
 
-<% end %>
+## crwdns49058:0crwdne49058:0
 
-## crwdns20720:0crwdne20720:0
-
-crwdns23962:0crwdne23962:0 crwdns23963:0crwdne23963:0 crwdns23964:0crwdne23964:0
-
-## crwdns20725:0crwdne20725:0
-
-crwdns23965:0crwdne23965:0.
-
-## crwdns20727:0crwdne20727:0
-
-crwdns23966:0crwdne23966:0
-
-## crwdns20729:0crwdne20729:0
-
-crwdns23967:0crwdne23967:0 crwdns23968:0crwdne23968:0
+crwdns50277:0crwdne50277:0 crwdns49060:0crwdne49060:0
 
 <%= view 'popup_window.js' %>

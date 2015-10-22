@@ -2,6 +2,7 @@ is:
   errors:
     messages:
       not_saved: 'Vinsamlegast leiðréttu eftirfarandi villur:'
+      too_young: Þetta efni er með aldurstakmarkanir og er ekki tiltækt yngri nemendum
   activerecord:
     errors:
       messages:
@@ -306,6 +307,10 @@ is:
       viewing_solution: Skoðun lausnar
       try_it_yourself: Prófaðu þetta
       section: Hópur
+      example: Dæmi um lausn
+      example_with_number: 'Dæmi %{solution_number} um lausn'
+      submitted_on: 'Sent inn dags. %{date}'
+      unsubmit: Afturkalla innsendingu
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
     email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'
@@ -345,11 +350,11 @@ is:
     student_progress: Námsframvinda þín
     student_stats: 'Þú hefur unnið til %{trophy_count} af %{trophy_max} mögulegum "Concept Mastery" bikurum.'
     student_left_off: 'Þú varst hér síðast:'
-    student_finished: 'Þú hefur lokið öllu kennsluefninu. Veldu annað nám á netinu: %{online_link} eða í skóla: %{local_school_link}'
+    student_finished: 'Þú hefur lokið öllu Code.org kennsluefninu. Veldu annað nám á netinu: %{online_link} eða í skóla: %{local_school_link}.'
     local_school: nálægur skóli
     online: á netinu
     see_details: Sjá nánar
-    view_course: View Course
+    view_course: Skoða námskeið
     prize_info: 'Verðlaun fyrir þátttöku (aðeins kennarar í opinberum skólum í USA): Allt að $1.000 bekkjarverðlaun.'
     tryfirst: 'Eða þú getur prófað fyrst og skráð þig seinna:'
     trynow: Prófa núna
@@ -359,13 +364,16 @@ is:
     try_beta_courses: Nýtt! Prófaðu beta námskeiðin okkar fyrir K-5 nemendur
     use_as_teacher: Nota þennan vef sem kennari
     heading_hoc2014: '<h2>Klukkustund kóðunar fyrir</h2><h1>alla aldurshópa</h1>'
-    heading_elementary: '<h2>20 stunda námskeið fyrir</h2><h1>byrjendur (á öllum aldri)</h1>'
+    heading_elementary: '<h2>20 stunda námskeið í</h2><h1>Undirstöðuatriðum tölvunarfræði (fyrir alla aldurshópa)</h1>'
     heading_apps: '<h2>Skemmtun fyrir</h2><h1>alla</h1>'
     heading_legacy: '<h2>Hraðnámskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>'
     your_gallery: Safn
     no_primary_course: Prófaðu námskeið í Kóðastúdíóinu
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Prófaðu Kóðastúdíóið með því að velja námskeið hér fyrir neðan
     print_certificate: Prenta skírteini
+  share:
+    title: Lærðu í Kóðastúdíóinu
+    description: Allir geta lært tölvunarfræði. Búðu til leiki, öpp og list með kóða.
   gender:
     male: Karlkyns
     female: Kvenkyns
@@ -374,16 +382,24 @@ is:
     student: nemandi
     teacher: Kennari
   footer:
-    help_from_html: Tæknifólk hjá Google, Microsoft, Facebook og Twitter aðstoðuðu við gerð þessa kennsluefnis.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Öll réttindi áskilin.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Öll réttindi áskilin.'
+    thank_you: 'Þakkir til <a href="https://code.org/about/donors">stuðningsaðila</a>, <a href="https://code.org/about/partners">samstarfsaðila</a>, <a href="https://code.org/about/team">allra í vinnuteyminu</a>, þeirra sem koma fram í myndböndum og <a href="https://code.org/about/advisors">fræðsluráðgjafa</a> fyrir stuðninginn við gerð Kóðastúdíósins.'
+    help_from_html: Við viljum sérstaklega nefna tæknifólkið hjá Google, Microsoft, Facebook, Twitter og marga aðra sem aðstoðuðu við gerð þessa kennsluefnis.
+    help_from_html_old: Tæknifólk hjá Google, Microsoft, Facebook og Twitter aðstoðaði við gerð þessa kennsluefnis.
+    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Öll réttindi áskilin.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Öll réttindi áskilin.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Öll réttindi áskilin.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin'
     powered_by_aws: Knúið af Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE merkið og Hour of Code&reg; eru vörumerki Code.org.'
+    copyright: Höfundarréttur
+    more: Meira
     feedback: Gefðu endurgjöf
     translate: Hjálpaðu okkur að þýða yfir á þitt tungumál
     support: Aðstoð
     support_url: http://support.code.org
+    tos_short: Skilmálar
     tos: Skilmálar
     privacy: Persónuvernd
     secure: Örugg útgáfa
+    report_abuse: Tilkynna misnotkun
   reference_area:
     title: Vantar þig aðstoð?
     subtitle: Skoðaðu þessi myndbönd og vísbendingar
@@ -504,6 +520,10 @@ is:
     open_response_body: Þökkum viðbrögð þín!
   dialog:
     ok: Í lagi
+    startover_title: Ertu viss um að þú viljir byrja aftur?
+    startover_body: Þetta setur þrautina aftur í upphafsstöðu og eyðir öllum upplýsingum sem þú hefur bætt við eða breytt.
+    startover_ok: Byrja aftur
+    startover_cancel: Hætta við
   time:
     hour: 1 klst.
     day: dagur
@@ -586,3 +606,24 @@ is:
     view_all: Sýna verkefnin mín
     remix: Endurblanda
     click_to_remix: 'Smelltu á "Endurblanda" til að stofna afleidda útgáfu!'
+    edit_project: Breyta verkefni
+    abuse:
+      tos: "Þetta verkefni hefur verið tilkynnt fyrir brot á <a href='http://code.org/tos'>Þjónustuskilmálum</a> Code.org og þess vegna er ekki hægt að deila því."
+      contact_us: "Ef þú telur þetta vera rangt, hafðu þá <a href='https://code.org/contact'>samband við okkur.</a>"
+      go_to_code_studio: Fara í Kóðastúdíó
+      report_abuse_form:
+        intro: Ef þú hefur rekist á ósæmilegt efni eða orðið fyrir hótunum, neteinelti, áreitni eða broti á höfundarrétti hvað varðar efni sem þú átt við notkun appa sem gerð eru í Kóðastúdíóinu, biðjum við þig vinsamlegast að fylla út formið hér fyrir neðan. Við munum taka kvörtun þina alvarlega, rannsaka málið í samræmi við það og gera viðeigandi ráðstafanir.
+        validation:
+          email: Vinsamlegast gefðu upp tölvupóstfang
+          age: Vinsamlegast tilgreindu aldur
+          abuse_type: Vinsamlegast tilgreindu hvernig þetta innihald brýtur gegn Þjónustuskilmálunum
+          abuse_detail: Vinsamlegast lýstu því efni sem þú ert að tilkynna
+        abusive_url: Vefslóð (URL) efnisins sem tilkynnt er
+        abuse_type:
+          question: 'Á hvaða hátt brýtur þetta efni gegn %{link_start}Þjónustuskilmálunum%{link_end}?'
+          harassment: Hótar, neteinelti, áreitni
+          offensive: Ósæmilegt efni
+          infringement: Brot á höfundarrétti
+          other: Annað
+        detail: Vinsamlegast lýstu efninu sem þú ert að tilkynna eins nákvæmlega og unnt er.
+        acknowledge: 'Með því að senda inn þessar upplýsingar, staðfestir þú að þær megi nota í samræmi við %{link_start_privacy}Persónuverndarstefnu%{link_end} og %{link_start_tos}Þjónustuskilmála%{link_end}'

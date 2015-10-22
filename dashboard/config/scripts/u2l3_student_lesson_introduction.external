@@ -1,30 +1,52 @@
 name 'U2L3 Student Lesson Introduction'
-title 'Lesson 3 - Invent an addressing protocol'
-css 'unplugged'
-
-markdown <<MARKDOWN
-## Unit 2: Lesson 3 - Invent an Addressing Protocol
-
-# Background
-
-What kinds of information do you need to send when you send a message over the internet? You would probably want to include some control information, such as sender and receiver addresses, along with the message itself. How long should this control information be and how long should the message be? More importantly, if a message and its control information are sent as a string of bits, how does the receiver know where the information ends and where the actual message begins? In computing, the control information and its message are called a "packet" and the rules that define where the control information ends and the message begins are part of a "protocol." For this lesson, you will implement an addressing protocol for the battleship game.
-
-# Vocabulary
-* **Protocol:** A well-known set of rules and standards used to communicate between machines
-* **Packet:** A message of data that includes information to route the message from the source to the destination computer. Also known as a datagram 
-* **Internet Protocol:** The communication protocol that dictates of the specific format and structure of a packet in order for it to be routed properly on the internet   
-
-# Lesson
-
-* Learn about the requirements of an internet addressing protocol
-* Invent an efficient and flexible addressing protocol for the battleship
-
-# Resources
-
-* Worksheet: <a href="https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing” target="_blank">IP/DNS video questions</a>
-* Worksheet: <a href="https://docs.google.com/document/d/1sFmHWCY-jSKs40jvTnfkbjO61xZEZp_UyTolmGt_zjw/edit” target="_blank">Inventing a protocol for Battleship</a>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
-MARKDOWN
+encrypted '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
+7oLV
+'

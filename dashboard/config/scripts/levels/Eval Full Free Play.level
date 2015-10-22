@@ -6,7 +6,23 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "use_contract_editor": true
+    "use_contract_editor": "true",
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "coordinate_grid_background": "false"
   }
 }]]></config>
   <blocks>
@@ -56,7 +72,10 @@
           <block type="functional_boolean"/>
         </category>
         <category name="Conditionals">
-          <block type="functional_cond"/>
+          <block type="functional_cond_number"/>
+          <block type="functional_cond_string"/>
+          <block type="functional_cond_image"/>
+          <block type="functional_cond_boolean"/>
         </category>
         <category name="Functions" custom="PROCEDURE"/>
         <category name="Variables" custom="FUNCTIONAL_VARIABLE"/>

@@ -1,0 +1,8 @@
+name 'CSP U4L04 Assessment 1 '
+question 'Question'
+wrong 'wrong answer'
+right 'right answer'
+
+markdown <<MARKDOWN
+# Assessment
+MARKDOWN

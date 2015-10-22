@@ -33,9 +33,10 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 arcRight(90, 25);    // Move the turtle forward and to the right
-</pre>
+```
 
 [/example]
 
@@ -43,9 +44,10 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 arcRight(360, 50)    // Make a full circle to the right
-</pre>
+```
 
 [/example]
 
@@ -53,12 +55,13 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // Smoothly turn the turtle around
 arcLeft(60, 25);    // Turn left a bit
 arcRight(300, 25);  // Turn almost all the way
 arcLeft(60, 25);    // Straighten out
-</pre>
+```
 
 [/example]
 
@@ -67,9 +70,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 arcRight(angle, radius);
-</pre>
+```
 
 [/syntax]
 

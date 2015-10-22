@@ -1,3 +1,26 @@
+# == Schema Information
+#
+# Table name: activities
+#
+#  id              :integer          not null, primary key
+#  user_id         :integer
+#  level_id        :integer
+#  action          :string(255)
+#  url             :string(255)
+#  created_at      :datetime
+#  updated_at      :datetime
+#  attempt         :integer
+#  time            :integer
+#  test_result     :integer
+#  level_source_id :integer
+#  lines           :integer          default(0), not null
+#
+# Indexes
+#
+#  index_activities_on_level_source_id       (level_source_id)
+#  index_activities_on_user_id_and_level_id  (user_id,level_id)
+#
+
 require 'cdo/activity_constants'
 
 class Activity < ActiveRecord::Base
@@ -8,6 +31,11 @@ class Activity < ActiveRecord::Base
   belongs_to :level_source
   has_one :activity_hint
   has_many :experiment_activities
+
+  def Activity.submitted?(result)
+    return false if result.nil?
+    (result == SUBMITTED_RESULT)
+  end
 
   def Activity.best?(result)
     return false if result.nil?
@@ -22,6 +50,10 @@ class Activity < ActiveRecord::Base
   def Activity.finished?(result)
     return false if result.nil?
     (result >= MINIMUM_FINISHED_RESULT)
+  end
+
+  def submitted?
+    Activity.submitted? test_result
   end
 
   def best?

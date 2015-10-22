@@ -1,5 +1,28 @@
+# == Schema Information
+#
+# Table name: levels
+#
+#  id                       :integer          not null, primary key
+#  game_id                  :integer
+#  name                     :string(255)      not null
+#  created_at               :datetime
+#  updated_at               :datetime
+#  level_num                :string(255)
+#  ideal_level_source_id    :integer
+#  solution_level_source_id :integer
+#  user_id                  :integer
+#  properties               :text(65535)
+#  type                     :string(255)
+#  md5                      :string(255)
+#
+# Indexes
+#
+#  index_levels_on_game_id  (game_id)
+#
+
 class Applab < Blockly
   before_save :update_palette
+  before_save :fix_examples
 
   serialized_attrs %w(
     app_width
@@ -12,6 +35,12 @@ class Applab < Blockly
     hide_design_mode
     beginner_mode
     start_html
+    encrypted_examples
+    submittable
+    data_tables
+    data_properties
+    hide_view_data_button
+    debugger_disabled
   )
 
   # List of possible skins, the first is used as a default.
@@ -181,4 +210,9 @@ class Applab < Blockly
     JSON
   end
 
+  def fix_examples
+    # remove nil and empty strings from examples
+    return if examples.nil?
+    self.examples = examples.select(&:present?)
+  end
 end

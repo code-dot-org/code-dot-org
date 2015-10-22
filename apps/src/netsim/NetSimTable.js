@@ -7,12 +7,12 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 4,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var _ = require('../utils').getLodash();
@@ -95,13 +95,6 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
    */
   this.channel_ = channel;
   this.subscribe();
-
-  /**
-   * The callback we most recently subscribed with, so that we can
-   * cleanly unsubscribe.
-   * @private {function{}}
-   */
-  this.channelCallback_ = undefined;
 
   /**
    * API object for making remote calls
@@ -204,21 +197,19 @@ NetSimTable.prototype.getTableName = function () {
 
 /**
  * Subscribes this table's onPubSubEvent method to events for this table
- * on our local channel. Also saves the callback locally, so we can
- * later reference it on unsubscribe
+ * on our local channel.
  */
 NetSimTable.prototype.subscribe = function () {
-  this.channelCallback_ = NetSimTable.prototype.onPubSubEvent_.bind(this);
-  this.channel_.subscribe(this.tableName_, this.channelCallback_);
+  this.channel_.subscribe(this.tableName_,
+      NetSimTable.prototype.onPubSubEvent_.bind(this));
 };
 
 /**
  * Unubscribes the saved callback from events for this table on our
- * local channel. Also clears the saved callback.
+ * local channel.
  */
 NetSimTable.prototype.unsubscribe = function () {
-  this.channel_.unsubscribe(this.tableName_, this.channelCallback_);
-  this.channelCallback = undefined;
+  this.channel_.unsubscribe(this.tableName_);
 };
 
 /**
@@ -343,6 +334,21 @@ NetSimTable.prototype.create = function (value, callback) {
       this.addRowToCache_(data);
     }
     callback(err, data);
+  }.bind(this));
+};
+
+/**
+ * @param {Object[]} values
+ * @param {!NodeStyleCallback} callback
+ */
+NetSimTable.prototype.multiCreate = function (values, callback) {
+  this.api_.createRow(values, function (err, datas) {
+    if (err === null) {
+      datas.forEach(function (data) {
+        this.addRowToCache_(data);
+      }, this);
+    }
+    callback(err, datas);
   }.bind(this));
 };
 
@@ -482,8 +488,9 @@ NetSimTable.prototype.updateCacheRow_ = function (id, row) {
   var oldRow = this.cache_[id];
   var newRow = row;
 
-  // Manually apply ID which should be present in row.
+  // Manually apply IDs which should be present in row.
   newRow.id = id;
+  newRow.uuid = oldRow.uuid;
 
   if (!_.isEqual(oldRow, newRow)) {
     this.cache_[id] = newRow;

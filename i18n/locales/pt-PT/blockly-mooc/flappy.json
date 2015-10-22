@@ -18,7 +18,7 @@
   "incrementPlayerScoreTooltip":"Adiciona um ponto à pontuação atual do jogador.",
   "nextLevel":"Parabéns! Concluíste este desafio.",
   "no":"Não",
-  "numBlocksNeeded":"Este puzzle pode ser resolvido com blocos de  %1 .",
+  "numBlocksNeeded":"Este desafio pode ser resolvido com %1 blocos.",
   "playSoundRandom":"reproduzir som aleatório",
   "playSoundBounce":"reproduzir som de salto",
   "playSoundCrunch":"reproduzir som de triturar",

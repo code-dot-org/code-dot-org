@@ -1,11 +1,12 @@
 "cs":
   errors:
     messages:
-      not_saved: 'Oprav prosím následující chyby:'
+      not_saved: 'Opravte prosím následující chyby:'
+      too_young: Tento obsah má zde věkové omezení a není dostupné mladším studentům
   activerecord:
     errors:
       messages:
-        blank: je vyžadován
+        blank: je vyžadováno
     attributes:
       user:
         name: Zobrazit jméno
@@ -29,7 +30,7 @@
       placeholder: Kód sekce (ABCDEF)
     submit: Přidat učitele
   add_hint_form:
-    placeholder: Zadej svůj tip
+    placeholder: Zadej zde svůj tip
     submit: Přidat tip
   appname: Code.org
   stage: fáze
@@ -42,12 +43,12 @@
   less: MÉNĚ
   beta: beta
   try_hoc: Zkus Hodinu Kódu kliknutím zde >> 
-  try_k8intro: Vyzkoušej náš kurz K-8 Úvod do počítačové vědy (15-25 hodin)
-  k8intro: Kurz K-8 Úvod do počítačové vědy (15-25 hodin)
+  try_k8intro: Vyzkoušej náš kurz K-8 Úvod do informatiky (15-25 hodin)
+  k8intro: Kurz K-8 Úvod do informatiky (15-25 hodin)
   already_started: 'Už jsi začal? Pokračuj zde >> '
   demos: 'Admin: Všechny Ukázky'
   continue: Pokračovat
-  prize: cena
+  prize: odměna
   more_info: Více informací
   auth:
     sign_in_with: Přihlásit přes %{provider}
@@ -57,7 +58,7 @@
       sem</a> se odhlásíte ze služby %{provider}.
     already_signedup: Již jsi zaregistrován?
     notyet_signedup: Ještě ses nepřidal?
-    google_oauth2: Účet Google
+    google_oauth2: Google účet
     twitter: Twitter
     facebook: Facebook
     windowslive: Účet společnosti Microsoft
@@ -65,22 +66,22 @@
     need_confirmation: Nedostal jsi instrukce pro potvrzení?
     need_unlock: Nezískal si instrukce pro odemčení?
   signup_form:
-    student_count: Již se registrovalo %{count} studentů.
+    student_count: Již se zaregistrovalo %{count} studentů.
     teacher_count: Již se přihlásilo %{count} učitelů.
-    overview_student: Vytvořte si účet, abyste mohli sledovat svůj postup.. Váš email
+    overview_student: Vytvořte si účet, abyste mohli sledovat svůj pokrok. Váš email
       slouží především k přihlášení a pro obnovení hesla. Další informace naleznete
       v našich <a hrefshttp://code.org/privacy"> Zásadách ochrany osobních údajů</a>.
     overview_teacher: Učte informatiku ve své třídě tím, že si zaregistrujete účet.
       <p/> Budete  moci přidávat své studenty a sledovat jejich průběh.
     no_signup_message: Můžeš si <a target="_blank" href="http://learn.code.org">prohlédnout
-      různé úrovně a hádanky</a>, ale budeš se muset zaregistrovat, aby se uložil
-      tvůj pokrok.
-    teacher_educator_guide: Podívat se na průvodce učitele
+      různé fáze a hádanky</a>, ale budeš se muset zaregistrovat, aby se uložil tvůj
+      pokrok.
+    teacher_educator_guide: Viz přiručka pedagoga
     teacher_pitch: Registrace učitelů  zde.
     teacher_title: Registrace učitele
     student_pitch: |
       Registrace studentů zde.
-    student_title: Student přihlásit se
+    student_title: Přihlášení studenta
     school_name: Název školy (volitelné)
     school_address: Adresa školy (volitelné)
     address_placeholder: adresa, město, stát, psč
@@ -89,13 +90,13 @@
     age: Věk
     user_type: Jste student nebo učitel?
     submit: Registrace
-    teacher: Jsi učitel?
+    teacher: Jste učitel?
     valid_username: K dispozici!
     invalid_username: Uživatelské jméno musí mít nejméně 5 znaků
     taken_username: Uživatelské jméno je již obsazeno
     valid_password: Platné heslo!
     invalid_password: Heslo musí obsahovat nejméně 6 znaků
-    mismatch_password: Zadaná hesla se neshodují
+    mismatch_password: Zadaná dvě hesla se neshodují
     student_terms: Souhlasím s <a href="http://code.org">podmínkami</a> Code.org.
       Pokud jsem mladší 13 let, Potvrzuji odesláním formuláře, že moji rodiče mi dovolují
       používat Code.org <br/> Uživatelům mladším 13 let není uchovávána emailovová
@@ -115,8 +116,8 @@
   signinsection:
     welcome: Vítejte v %{section_name}
     name: Vyberte si své jméno
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    picture: Najít nyní utajený obrázek
+    words: Nyní zadejte utajená slova
     login: Přihlásit
   password:
     reset_form:
@@ -148,9 +149,9 @@
       username_in_use: '%{username} je již zabráno, prosím, vyber si jiné'
       no_teacher: Nenalezen nikdo přihlášený jako '%{teacher_email_or_code}'. Prosím
         požádej ho, aby se zde přihlásil, a poté jej zkus přidat znovu
-      section_not_found: Could not find a section with code '%{section_code}'.
+      section_not_found: Nelze nalézt sekci s kódem "%{section_code}".
       blank_code: Prosím zadej kód sekce
-      cant_join_own_section: Sorry, you can't join your own section.
+      cant_join_own_section: Lituji, ale nemůžete se připojit s vlastní sekcí.
     mail:
       invite_student:
         subject: Přidat se do třídy s %{teacher_name} na Code.org!
@@ -165,12 +166,12 @@
     title: 'Získat ceny: %{name}'
     provider: 'Poskytovatel:'
     code: 'Kód:'
-    redeem_header: 'To redeem:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
-    donorschoose_project: Post a project
+    redeem_header: 'K uplatnění:'
+    donorschoose_register: Zaregistrovat se jako učitel na DonorsChoose.org
+    donorschoose_project: Zaslat projekt
     donorschoose_how_to: Jak používat tvůj kód
-    success: Your prize was succesfully redeemed, see code below.
-    error: Your prize could not be redeemed, please try again.
+    success: Vaše cena byla úspěšně uplatněná, viz uvedený kód níže.
+    error: Vaše cena nemohla být uplatněná, prosím opakujte znova.
     error_us_only: Nabízená odměna platí pouze pro uživatele z USA.
     error_not_earned: Zatím sis nevysloužil tuto cenu.
     error_already_redeemed: Tvá cena již byla vybrána.
@@ -182,7 +183,7 @@
       'no': Ne
       'yes': Ano
       msg: Jste si jistí, že si chcete nárokovat %{prize_name} ocenění?
-      msg_student: 'NOTE: You can only choose one type of prize.'
+      msg_student: 'Poznámka: Můžete zvolit pouze jeden typ výhry.'
       msg_publicschool: Prosím potvrďte, že jste učitel veřejné školy v USA.
       msg_visit_website: Navštivte webové stránky
     providers:
@@ -200,7 +201,8 @@
       choose: 'Zvol cenu:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Získal jsi odměnu! (Pouze studenti z USA)
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      not_earned_title: Dokončete výukový program, získáte odměny (pouze studenti
+        v USA)
       not_earned: 'Nauč se všechny pojmy počítačové vědy, posbírej všech %{num_trophies}
         trofejí a získej reálné ceny. Můžeš vybírat mezi 10GB volného místa na Dropbox,
         Skype kredity v hodnotě 10$ nebo volně stažitelné hry. POZNÁMKA: nabídka platí
@@ -254,7 +256,7 @@
         calculate: Calculate Something
     user:
       classroom: Domovská stránka pro učitele
-      district_dashboard: District Dashboard
+      district_dashboard: Okresní řídicí panel
       label: Ahoj %{username}
       stats: Můj pokrok
       settings: Můj účet
@@ -264,7 +266,7 @@
       signup: Registrace
       already_registered: Už jste zaregistrováni?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: pokrok je %{name}
       progress: Tvůj pokrok
       lines: 'Celkem řádků kódu: %{lines}'
       close: ZAVŘÍT
@@ -284,15 +286,15 @@
     tools: Nástroje pro učitele
     followers:
       section: 'Sekce:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
+      stages: 'Zobrazit dílčí fáze:'
+      show_past: 'Zobrazit studentské aktivity (%{bullet_html}) v minulosti:'
+      levels_key: Úrovňové klíče
+      perfect: Dokončeno, perfektně
+      completed: Dokončeno, ale příliš použito mnoho bloků
+      tried: Pokus, ale není dokončeno
       not_tried: Žádný pokus
-      activity: Indicates student activity in the last %{hours} %{plural}
-      no_section: No assigned section
+      activity: Označuje studentské aktivity v posledních %{hours} %{plural}
+      no_section: Nepřiřazená sekce
       trophies: trofeje
     students:
       name: Jméno
@@ -301,29 +303,28 @@
       manage: Správa studentů
       dashboard: Přejít na přehled učitele
       add: Přidat studenty
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing
-        student data, you can set up your class quickly by asking them to signup.
-        Your students will need to choose usernames and passwords, but they WILL NOT
-        be required to provide an email address. If a student forgets their password,
-        you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: First, please %{add_section}
-      for: For
-      enter: 'enter:'
+      remove: odebrání studenta
+      confirm_remove: Jste si jistý, že chcete smazat tento prvek?
+      help_reassign: Rozdělte třídu do několika skupin, vyberte studenty k přiřazení
+        do nové skupiny.
+      help_register: Místo strávení spousty času individuálním importem dat studentů,
+        nastavte rychle třídu požadavkem na registraci. Studenti si potřebují zvolit
+        uživatelská jména a hesla, ale nebudou mít povinnost poskytovat e-mailovou
+        adresu. Pokud student zapomene své heslo, budete schopni obnovit jej pro ně.
+      register: Požadejte studenty, aby se zaregistrovali
+      vist: Požádejte studenty, aby navšítivili
+      section_code: 'a zadejte jejich kód sekce:'
+      first_please: Prvně prosím %{add_section}
+      for: Pro
+      enter: 'zadejte:'
     sections:
-      add: Add section
+      add: Přidat sekci
       manage: Spravovat části
-      section: Section
+      section: Sekce
       students: Studenti
       section_code: Kód sekce
-      add_section_code: Add Students Section-Code
-      secret: Secret type
+      add_section_code: Přidat studentům kód sekce
+      secret: Tajný typ
       grade: Stupeň
       course: Kurz
       rename: přejmenovat
@@ -341,23 +342,27 @@
     student_teacher_disassociated: '%{teacher_name} byl odstraněn jako učitel pro
       %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Odpověď diváka
       student: student
-      viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
-      section: Section
+      viewing_solution: Zobrazení řešení
+      try_it_yourself: Vyzkoušejte to sami
+      section: Sekce
+      example: Vzorové řešení
+      example_with_number: Vzorové řešení %{solution_number}
+      submitted_on: Odesláno na %{date}
+      unsubmit: Neodesláno
   user:
     email_confirm_needed: 'E-mailová adresa nebyla potvrzena:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Vaše e-mailová adresa %{email} nebyla potvrzena:'
+    email_confirm_wrong_email: (Špatná e-mailová adresa?)
     email_resend_confirm: Znovu odeslat instrukce o potvrzení
     new_password_hint: (zanech prázdné, pokud nechceš provést změnu)
     current_password_hint: (potřebujeme tvé aktuální heslo pro potvrzení změny)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: 'Please note: deleting your account will not delete
-      your students'' accounts.'
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Vymazat účet
+    delete_text: Klepnutím na následující tlačítko se vymaže váš účet.
+    delete_text_teacher_note: 'Upozornění: smazáním účtu nebudou vymazané vaše studentské
+      účty.'
+    delete_confirm: Jste si jisti, že chcete vymazat tento účet?
   user_level:
     completed: Dokončeno
     tried: Snažil se
@@ -367,17 +372,17 @@
     classroom_activity: Aktivita bez počítače
   home:
     title: Code studio
-    description: Code Studio is home to online courses created by Code.org
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
-      MILLION STUDENTS'
+    description: Code Studio je místem pro on-line kurzy vytvořené Code.org
+    lines_of_code: '%{lines_count} ŘÁDKY KÓDU NAPSANÝCH STUDENTY'
+    lines_of_code_linebreak: ŘÁDKY KÓDU, %{lines_count} <br/> NAPSANÉ %{students_count}
+      MILIONY STUDENTŮ
     all_courses: Přehled kurzů 1, 2 a 3
     lesson_plans: Plány hodin
     signin_message: Nejsi už zaregistrován? %{link}
     student_reg_link: Přihlásit se jako student
     teacher_reg_link: Přihlásit se jako učitel
-    signin_directions: Use an account to track progress.<br/> Teachers, track your
-      entire class.
+    signin_directions: Použijte účet ke sledování pokroku. <br/> Učitelé, sledujte
+      celou třídu.
     teacher_dashboard: Zobrazit tabulku pokroku
     teacher_student_count_one: Máš %{count} studenta.
     teacher_student_count: Máš %{count} studentů.
@@ -397,27 +402,32 @@
     local_school: místní škola
     online: online
     see_details: Viz podrobnosti
-    view_course: View Course
-    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
-      $1,000 in classroom rewards.'
+    view_course: Prohlídka kurzu
+    prize_info: 'Odměny za účast (jen U.S. veřejné školy): až 1.000 dolarů odměny
+      do učebny.'
     tryfirst: 'Nebo to můžeš nejdřív zkusit a zaregistrovat se později:'
     trynow: Vyzkoušej hned
-    add_hint_help: Please help us to add smart hints to Code.org tutorials
+    add_hint_help: Prosím, pomozte nám s přidáním chytrých tipů na Code.org výukové
+      programy
     20hour_overview: Tento 20-ti hodinový kurz představuje základní koncepty počítačových
       věd a programování. Kurz je navrhnut pro děti od 1. po 7. třídu (stupeň K-8),
       ale jistě bude bavit studenty jakéhokoliv věku.
-    test_videos_help: Test our new video player at your school
+    test_videos_help: Vyzkoušejte náš nový video přehrávač ve vaší škole
     try_beta_courses: Novinka! Vyzkoušejte naše beta kurzy pro žáky 1. stupně ZŠ
-    use_as_teacher: Use this site as a teacher
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Computer Science Fundamentals
-      (all ages)</h1>
-    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
+    use_as_teacher: Použijte jako učitel tento web
+    heading_hoc2014: <h2>Hodina kódu pro</h2> <h1>všechny věkové kategorie</h1>
+    heading_elementary: <h2>20 hodinové kurzy pro</h2> <h1>Základy počítačové vědy
+      (všechny věkové kategorie)</h1>
+    heading_apps: <h2>Zábava pro</h2> <h1>kohokoliv</h1>
     heading_legacy: <h2>Náš všeobecný kurz pro</h2><h1>Všechny věkové kategorie</h1>
     your_gallery: Galerie
-    no_primary_course: Try a course at Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    no_primary_course: Zkuste Code Studio kurz
+    choose_next_course: Zkuste kurz Code Studio výběrem níže
+    print_certificate: Vytisknout certifikát
+  share:
+    title: Poznat Code studio
+    description: Každý se může naučit informatiku. Udělejte hry, aplikace a umění
+      s kódem.
   gender:
     male: Muž
     female: Žena
@@ -426,19 +436,34 @@
     student: student
     teacher: Učitel
   footer:
+    thank_you: Děkujeme, našim <a href="https://code.org/about/donors"> dárcům</a>,
+      <a href="https://code.org/about/partners"> partnerům</a>, náš <a href="https://code.org/about/team">
+      rozšířený tým</a>, náše video obsazení a naši <a href="https://code.org/about/advisors">
+      poradci ve vzdělávání </a> za jejich podporu při vytváření Code studia.
     help_from_html: Inženýři od Google, Microsoft, Facebook a Twitter pomohli vytvořit
       tento kurz.
+    help_from_html_old: Inženýři od Google, Microsoft, Facebook a Twitter pomohli
+      vytvořit tyto materiály.
     art_from_html: Rozzlobený ptáci ™ & © 2009-2014 Rovio Entertainment Ltd. Všechna
       práva vyhrazena. <br/> Rostliny vs. Zombies ™ & © 2014 Electronic Arts Inc.
       Všechna práva vyhrazena.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Poháněn Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo a Hour
+      of Code&reg; jsou trademarks of Code.org.'
+    copyright: Autorská práva
+    more: Více
     feedback: Poskytnout zpětnou vazbu
     translate: Pomož nám v překladu do tvého jazyka
     support: Podpora
     support_url: http://support.code.org
+    tos_short: Podmínky
     tos: Podmínky
     privacy: Zásady ochrany osobních údajů
     secure: Zabezpečená verze
+    report_abuse: Ohlásit urážlivý příspěvek
   reference_area:
     title: Potřebuješ pomoc?
     subtitle: Podívej se na tyto videa a tipy
@@ -449,7 +474,7 @@
   video:
     tab: Video.
     notes: Žádné video? Zobraz poznámky.
-    notes_coming_soon: Notes for this video coming soon.
+    notes_coming_soon: Poznámky pro toto video přijdou brzy.
     autoplay_option: Automatické přehrávání videa
     download: Stáhnout Video
   compatability:
@@ -583,6 +608,11 @@
     open_response_body: Thanks for your response!
   dialog:
     ok: OK
+    startover_title: Jste si jisti, že chcete začít znovu?
+    startover_body: This will reset the puzzle to its start state and reset all the
+      data you've added or changed.
+    startover_ok: Začít znovu
+    startover_cancel: Storno
   time:
     hour: 1 hodina
     day: den
@@ -645,36 +675,63 @@
     all_courses: All courses
   project:
     projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    create: Vytvořit projekt
+    create_a_project: 'Vytvořte nový projekt:'
+    new: Vytvořit nový
+    rename: Přejmenovat
     save: Uložit
     delete: Odstranit
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Návrat ke kurzu
+    my_projects: Moje projekty
     share: Sdílet
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Sdílení projektu
+    share_copy_link: 'Zkopírujte odkaz:'
+    close: Zavřít
     more: Více
     name: Jméno
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
+    updated: Aktualizováno
+    project_type: Typ projektu
+    help_text: Klepněte na tlačítko <strong>vytvořit aplikaci</strong> nebo <strong>nakreslit
+      něco</strong> níže se vytvoří nový projekt Play Lab nebo umělec! <br/> Můžete
+      se vrátit a pracovat na vašich projektech v kteroukoli dobu.
+    need_help: Potřebujete pomoc, začneme?
     really_delete: Odstranit?
     delete_yes: Ano
     delete_no: Ne
-    saved: Saved
-    not_saved: Not saved
+    saved: Uloženo
+    not_saved: Neuloženo
     cancel: Storno
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Opravdu chcete odstranit toto nastavení?
+    delete_confirm_text: Váš projekt bude natrvalo odstraněn ze seznamu projektů.
+      Každý, s kterým jste sdíleli odkaz, nebude již schopen zobrazit váš projekt.
+    view_all: Zobrazit mé projekty
     remix: Remix
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    click_to_remix: Klepněte na "Remix" na přetočení vlastní verze!
+    edit_project: Upravit projekt
+    abuse:
+      tos: Tento projekt byl nahlášen pro Code.org-si <a href='http://code.org/tos'>
+        Podmínky služby</a> a nemůže být sdílen s ostatními.
+      contact_us: Pokud se domníváte, že je to chyb, kontaktujte <a href='https://code.org/contact'>
+        nás prosím.</a>
+      go_to_code_studio: Přejít na Code studio
+      report_abuse_form:
+        intro: Pokud jste se setkali s urážlivým obsahem, hrozbou, šikanou, obtěžováním
+          nebo porušováním autorských práv k obsahu, který vlastníte, pomocí které
+          aplikace byla vytvořena v Code studii, vyplňte níže uvedený formulář, prosím.
+          Budeme vaší zprávu velmi seriózně zkoumat a přijmeme vhodná opatření.
+        validation:
+          email: Zadejte e-mailovou adresu, prosím
+          age: Uveďte prosím věk
+          abuse_type: Odpovězte, prosím, jak tento obsah porušuje podmínky služby
+          abuse_detail: Uveďte podrobnosti o obsahu, který chcete ohlásit
+        abusive_url: Adresa URL hlášeného obsahu
+        abuse_type:
+          question: Jak tento obsah porušujeje %{link_start}podmínky služeb%{link_end}?
+          harassment: Hrozby, šikana, harašení
+          offensive: Nevhodný obsah
+          infringement: Porušení autorských práv
+          other: Ostatní
+        detail: Uveďte co nejvíce podrobností o obsahu, který chcete ohlásit.
+        acknowledge: Poskytnutím těchto informací potvrzujete, že bude zpracována
+          v souladu s podmínkami %{link_start_privacy}zásad ochrany osobních údajů%{link_end}
+          a %{link_start_tos}podmínek služeb%{link_end}

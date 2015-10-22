@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Коригирайте следните грешки:'
+      too_young: Това съдържание има възрастови ограничения и не е достъпно за по-малките
+        ученици
   activerecord:
     errors:
       messages:
@@ -113,7 +115,7 @@
     submit: Вход
   signin:
     try_heading: Искате ли да опитате кодиране без да се регистрирате?
-    try_hoc: Опитайте първо един час програмиране
+    try_hoc: Опитайте първо "Часът на кодирането"
     try_20hours: Опитайте нашите 20 часа въведение в компютърните науки
   signinsection:
     welcome: Добре дошли в %{section_name}
@@ -351,6 +353,10 @@
       viewing_solution: Показване на решението
       try_it_yourself: Опитайте сами
       section: Раздел
+      example: Примерно решение
+      example_with_number: Примерно решение %{solution_number}
+      submitted_on: Добавено на %{date}
+      unsubmit: Не е добавено
   user:
     email_confirm_needed: 'Имейл адресът не е потвърден:'
     email_confirm_needed_required: 'Вашият email адрес не е потвърден %{email} :'
@@ -416,13 +422,18 @@
     try_beta_courses: Ново! Опитайте нашите бета курсове за K-5 ученици
     use_as_teacher: Използвайте този сайт като учител
     heading_hoc2014: <h2>Часът на кодирането за</h2><h1>Всички възрасти</h1>
-    heading_elementary: <h2>20 часа курсове за</h2><h1>Начинаещи (всички възрасти)</h1>
+    heading_elementary: <h2>20 часа курсове за</h2><h1>Въведение на компютърните науки
+      (всички възрасти)</h1>
     heading_apps: <h2>Забавление за</h2><h1>Всеки</h1>
     heading_legacy: <h2>Нашият общ курс за</h2><h1>всички възрасти</h1>
     your_gallery: Галерия
     no_primary_course: Опитайте курс в студиото по кодиране
-    choose_next_course: Опитайте курс като си избирете един от тези по-долу
+    choose_next_course: Опитайте курс като си изберете един от тези по-долу
     print_certificate: Печат на сертификат
+  share:
+    title: Обучавайте се в Code Studio
+    description: Всеки може да учи компютърни науки. Програмирай игри, приложения
+      и изкуство с код.
   gender:
     male: Мъж
     female: Жена
@@ -431,19 +442,35 @@
     student: Ученик
     teacher: Учител
   footer:
+    thank_you: Благодарим на нашите <a href="https://code.org/about/donors"> дарители</a>,
+      <a href="https://code.org/about/partners"> партньори</a>, нашия <a href="https://code.org/about/team">
+      разширен екип</a>, нашите видео гласове и нашите <a href="https://code.org/about/advisors">
+      образователни съветници</a> за подкрепата им в създаването на Code Studio.
     help_from_html: Инженери от Google, Microsoft, Facebook и Twitter помогнаха за
       създаването на този урок.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Всички права запазени. <br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
-      Arts Inc. Всички права запазени.
+    help_from_html_old: Инженери от Google, Microsoft, Facebook и Twitter помогнаха
+      за създаването на тези материали.
+    art_from_html: Ice Age&#8482; &amp; &copy;%{current_year} 20th Century Fox. Всички
+      права запазени. <br /> Angry Birds&#8482; &amp;&copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Всички права запазени. < br / > Plants vs. Zombies&#8482;
+      &amp;&copy; %{current_year} Electronic Arts Inc. Всички права запазени
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Всички права са запазени.<br />Plants vs. Zombies&#8482;
+      &amp; &copy; %{current_year} Electronic Arts Inc. Всички права са запазени
     powered_by_aws: Създадено с Amazon Web Services
+    trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, the CODE
+      logo и Hour of Code&reg; са търговски марки на Code.org.'
+    copyright: Авторско право
+    more: Повече
     feedback: Обратна връзка
     translate: Помогнете ни да преведем на вашия език
     support: Поддръжка
     support_url: http://support.code.org
+    tos_short: Условия
     tos: Термини
     privacy: Защита на личните данни
     secure: Защитената версия
+    report_abuse: Съобщи за злоупотреба
   reference_area:
     title: Нужда от помощ?
     subtitle: Вижте тези клипове и съвети
@@ -591,6 +618,11 @@
     open_response_body: Благодаря за вашия отговор!
   dialog:
     ok: OK
+    startover_title: Наистина ли искате да започнете отначало?
+    startover_body: Това ще рестартира пъзела в начално състояние и ще изтрие всички
+      блокове, които сте добавили или променили.
+    startover_ok: Стартиране отначало
+    startover_cancel: Отмени
   time:
     hour: 1 час
     day: ден
@@ -690,3 +722,33 @@
       да може да ги вижда.
     remix: Ремикс
     click_to_remix: Щракнете върху "Ремикс", за да създадете  собствена версия!
+    edit_project: Редактиране на проект
+    abuse:
+      tos: Този проект нарушава Code.org <a href='http://code.org/tos'> Условията
+        за ползване</a> и не може да бъде споделен с други потребители.
+      contact_us: Ако смятате, че това е грешка, моля <a href='https://code.org/contact'>
+        свържете се с нас.</a>
+      go_to_code_studio: Отидете в Code Studio
+      report_abuse_form:
+        intro: Ако сте сте открили обидно съдържание, заплахи, кибертормоз, тормоз
+          или следа от нарушение на авторските права в съдържанието, което притежавате,
+          докато използвате приложения, направени в код студио, моля попълнете формуляра
+          по-долу. Ние ще се отнесем много сериозно и ще разследваме съответно и ще
+          предприемем подходящи действия.
+        validation:
+          email: Моля да предоставите имейл адрес
+          age: Моля посочете възрастта си
+          abuse_type: Моля, отговорете как това съдържание нарушава условията за ползване
+          abuse_detail: Моля, представете подробности по отношение на съдържанието,
+            което съобщавате
+        abusive_url: URL на съдържанието, за което докладвате
+        abuse_type:
+          question: Как това съдържание нарушава %{link_start}Terms на Service%{link_end}?
+          harassment: Заплахи, кибертормоз, harassement
+          offensive: Обидно съдържание
+          infringement: Нарушение на авторските права
+          other: Друго
+        detail: Моля, опишете подробно колкото е възможно съдържанието, за което съобщавате.
+        acknowledge: С подаването на тази информация, Вие се съгласявате, че тя ще
+          бъде третирана съобразно условията на %{link_start_privacy}Privacy Policy%{link_end}
+          и %{link_start_tos}Terms на Service%{link_end}

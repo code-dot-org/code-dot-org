@@ -9,12 +9,12 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
@@ -51,6 +51,37 @@ var decimalToBinary = DataConverters.decimalToBinary;
 var asciiToBinary = DataConverters.asciiToBinary;
 
 /**
+ * Type for tructured access to jQuery-wrapped DOM elements.  Two layers deep;
+ * can be used for quick access to one of the fields in the packet editor grid
+ * by referencing via row and column.
+ *
+ * Map keys at the first layer correspond to NetSimConstants.EncodingType.
+ * Map keys at the second layer correspond to Packet.HeaderType, plus the
+ *   'message' field.
+ *
+ * Usage:
+ *   map.binary.fromAddress
+ *   map['binary']['fromAddress']
+ *   map[EncodingType.BINARY][Packet.HeaderType.FROM_ADDRESS]
+ *
+ * @typedef {Object} UIMap
+ * @property {UIRowMap} a_and_b
+ * @property {UIRowMap} binary
+ * @property {UIRowMap} hexadecimal
+ * @property {UIRowMap} decimal
+ * @property {UIRowMap} ascii
+ */
+
+/**
+ * @typedef {Object} UIRowMap
+ * @property {jQuery} toAddress
+ * @property {jQuery} fromAddress
+ * @property {jQuery} packetIndex
+ * @property {jQuery} packetCount
+ * @property {jQuery} message
+ */
+
+/**
  * Generator and controller for message sending view.
  * @param {Object} initialConfig
  * @param {MessageGranularity} initialConfig.messageGranularity
@@ -65,13 +96,13 @@ var asciiToBinary = DataConverters.asciiToBinary;
  * @param {number} [initialConfig.bitRate]
  * @param {EncodingType[]} [initialConfig.enabledEncodings]
  * @param {function} initialConfig.removePacketCallback
+ * @param {function} initialConfig.doneSendingCallback
  * @param {function} initialConfig.contentChangeCallback
  * @param {function} initialConfig.enterKeyPressedCallback
  * @constructor
  */
 var NetSimPacketEditor = module.exports = function (initialConfig) {
   var level = NetSimGlobals.getLevelConfig();
-
 
   /**
    * @type {RowType[]}
@@ -159,15 +190,15 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   /** @type {string} */
   this.toAddress = initialConfig.toAddress ||
       DataConverters.binaryToAddressString('0', level.addressFormat);
-  
+
   /** @type {string} */
   this.fromAddress = initialConfig.fromAddress ||
       DataConverters.binaryToAddressString('0', level.addressFormat);
-  
+
   /** @type {number} */
   this.packetIndex = initialConfig.packetIndex !== undefined ?
       initialConfig.packetIndex : 1;
-  
+
   /** @type {number} */
   this.packetCount = initialConfig.packetCount !== undefined ?
       initialConfig.packetCount : 1;
@@ -214,6 +245,14 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.removePacketCallback_ = initialConfig.removePacketCallback;
+
+  /**
+   * Method to call when this packet is done playing its sending animation.
+   * Function should take this PacketEditor as an argument.
+   * @type {function}
+   * @private
+   */
+  this.doneSendingCallback_ = initialConfig.doneSendingCallback;
 
   /**
    * Method to notify our parent container that the packet's binary
@@ -274,13 +313,12 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   this.originalBinary_ = '';
 
   /**
-   * We capture the packet binary before we start the sending animation,
-   * and drain this variable as we go; mostly because getPacketBinary()
-   * will always include packet headers.
-   * @type {string}
+   * Index into original binary indicating how many bits have been 'sent'
+   * in the animation.
+   * @type {number}
    * @private
    */
-  this.remainingBinary_ = '';
+  this.sendAnimationIndex_ = 0;
 
   /**
    * Simulation-time timestamp (ms) of the last bit-send animation.
@@ -288,7 +326,19 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.lastBitSentTime_ = undefined;
-  
+
+  /**
+   * Map of bound UI elements manipulated by this editor.  Provides quick
+   * access to input elements in the editor grid.  See type notes for usage.
+   *
+   * Populated dynamically in `bindElements_` during `render`.  May not include
+   * all fields, as we try to optimize and omit fields not enabled in the level.
+   *
+   * @type {UIMap}
+   * @private
+   */
+  this.ui_ = {};
+
   this.render();
 };
 
@@ -298,6 +348,22 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
  */
 NetSimPacketEditor.prototype.getRoot = function () {
   return this.rootDiv_;
+};
+
+/**
+ * Clear the packet payload and put the editor back in a state where it's
+ * ready for composing a new packet.
+ * Intentionally preserves toAddress and fromAddress.
+ */
+NetSimPacketEditor.prototype.resetPacket = function () {
+  this.message = '';
+  this.packetIndex = 1;
+  this.packetCount = 1;
+  this.originalBinary_ = '';
+  this.sendAnimationIndex_ = 0;
+  this.lastBitSentTime_ = undefined;
+  this.updateFields_();
+  this.updateRemoveButtonVisibility_();
 };
 
 /**
@@ -333,11 +399,11 @@ NetSimPacketEditor.prototype.render = function () {
 NetSimPacketEditor.prototype.beginSending = function (myNode) {
   this.isPlayingSendAnimation_ = true;
   this.originalBinary_ = this.getPacketBinary().substr(0, this.maxPacketSize_);
-  this.remainingBinary_ = this.originalBinary_;
+  this.sendAnimationIndex_ = 0;
   this.myNode_ = myNode;
 
   // Finish now if the packet is empty.
-  if (this.remainingBinary_.length === 0) {
+  if (0 === this.originalBinary_.length) {
     this.finishSending();
   }
 };
@@ -351,7 +417,7 @@ NetSimPacketEditor.prototype.finishSending = function () {
   this.isSendingPacketToRemote_ = true;
   this.myNode_.sendMessage(this.originalBinary_, function () {
     this.isSendingPacketToRemote_ = false;
-    this.removePacketCallback_(this);
+    this.doneSendingCallback_(this);
   }.bind(this));
 };
 
@@ -378,14 +444,18 @@ NetSimPacketEditor.prototype.tick = function (clock) {
   }
 
   // How many characters should be consumed this tick?
-  var msSinceLastBitConsumed = clock.time - this.lastBitSentTime_;
   var msPerBit = 1000 * (1 / this.bitRate_);
-  var maxBitsToSendThisTick = Math.floor(msSinceLastBitConsumed / msPerBit);
+  var maxBitsToSendThisTick = Infinity;
+  if (msPerBit > 0) {
+    var msSinceLastBitConsumed = clock.time - this.lastBitSentTime_;
+    maxBitsToSendThisTick = Math.floor(msSinceLastBitConsumed / msPerBit);
+  }
+
   if (maxBitsToSendThisTick > 0) {
     this.lastBitSentTime_ = clock.time;
-    this.remainingBinary_ = this.remainingBinary_.substr(maxBitsToSendThisTick);
-    this.setPacketBinary(this.remainingBinary_);
-    if (this.remainingBinary_.length === 0) {
+    this.sendAnimationIndex_ += maxBitsToSendThisTick;
+    this.updateForAnimation_();
+    if (this.sendAnimationIndex_ >= this.originalBinary_.length) {
       this.finishSending();
     }
   }
@@ -412,7 +482,8 @@ var removeWatermark = function (focusEvent) {
  * @returns {boolean} true iff the given event represents a clean enter
  */
 var isUnmodifiedEnterPress = function (jqueryEvent) {
-  return (jqueryEvent.keyCode == 13 && !(jqueryEvent.ctrlKey || jqueryEvent.shiftKey));
+  return (jqueryEvent.keyCode === KeyCodes.ENTER &&
+      !(jqueryEvent.ctrlKey || jqueryEvent.shiftKey));
 };
 
 /**
@@ -613,9 +684,8 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
 
   this.getEnabledRowTypes_().forEach(function (rowType) {
     var tr = rootDiv.find('tr.' + rowType.typeName);
-    var rowUIKey = rowType.typeName + 'UI';
-    this[rowUIKey] = {};
-    var rowFields = this[rowUIKey];
+    this.ui_[rowType.typeName] = {};
+    var rowFields = this.ui_[rowType.typeName];
 
     // We attach focus (sometimes) to clear the field watermark, if present
     // We attach keypress to block certain characters
@@ -665,6 +735,177 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
   this.removePacketButton_ = rootDiv.find('.remove-packet-button');
   this.removePacketButton_.click(this.onRemovePacketButtonClick_.bind(this));
   this.bitCounter_ = rootDiv.find('.bit-counter');
+};
+
+/**
+ * Special update method called during send animation that changes the editor
+ * display to show each field left-truncated at an appropriate amount for the
+ * simulated send progress.
+ *
+ * This works differently for different fields:
+ *  - Binary and A/B fields send a single bit at a time.
+ *  - Hex sends a single hex digit at a time, but at the correct slower rate.
+ *  - Decimal and ASCII send one chunk at a time, which depends on the current
+ *    chunk size, and is adjusted to the correct slower rate as well.  For
+ *    ASCII this maps to one character at a time.  For decimal, it's one
+ *    whitespace-delimited number.
+ *
+ * This avoids the jumbled effect of reinterpreting nonbinary fields using
+ * misaligned binary, and communicates in a visual way that it takes longer to
+ * send a single character than it does to send a single bit.
+ *
+ * This method is also designed to send the packet header fields in sequence
+ * before sending the packet body.  Body binary is never seen in the header
+ * fields, each field is treated as an independent space.
+ * @private
+ */
+NetSimPacketEditor.prototype.updateForAnimation_ = function () {
+  var chunkSize = this.currentChunkSize_;
+  var liveFields = [];
+
+  // There may be potential for performance optimization here, but it's not
+  // particularly high on our perf list right now.
+
+  var level = NetSimGlobals.getLevelConfig();
+  var encoder = new Packet.Encoder(level.addressFormat,
+      level.packetCountBitWidth, this.packetSpec_);
+
+  var fieldStart = 0;
+
+  this.packetSpec_.forEach(function (fieldSpec) {
+    /** @type {Packet.HeaderType} */
+    var fieldName = fieldSpec;
+    /** @type {number} */
+    var fieldWidth = encoder.getFieldBitWidth(fieldName);
+
+    if (this.sendAnimationIndex_ < fieldStart + fieldWidth) {
+      // Either we haven't reached this field yet or we're currently animating
+      // through it; don't do anything to the more complex fields, and animate
+      // the binary appropriately.
+      var fieldBinary = this.originalBinary_.substr(fieldStart, fieldWidth);
+      var truncatedBits = Math.max(0, this.sendAnimationIndex_ - fieldStart);
+
+      if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
+        liveFields.push({
+          inputElement: this.ui_[EncodingType.A_AND_B][fieldName],
+          newValue: binaryToAB(fieldBinary).substr(truncatedBits)
+        });
+      }
+
+      if (this.isEncodingEnabled_(EncodingType.BINARY)) {
+        liveFields.push({
+          inputElement: this.ui_[EncodingType.BINARY][fieldName],
+          newValue: fieldBinary.substr(truncatedBits)
+        });
+      }
+
+      if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
+        var truncatedHexDigits = Math.floor(truncatedBits / 4);
+        liveFields.push({
+          inputElement: this.ui_[EncodingType.HEXADECIMAL][fieldName],
+          newValue: binaryToHex(fieldBinary).substr(truncatedHexDigits)
+        });
+      }
+    } else {
+      // We're past this field - it should be blank
+      if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
+        liveFields.push({
+          inputElement: this.ui_[EncodingType.A_AND_B][fieldName],
+          newValue: ''
+        });
+      }
+
+      if (this.isEncodingEnabled_(EncodingType.BINARY)) {
+        liveFields.push({
+          inputElement: this.ui_[EncodingType.BINARY][fieldName],
+          newValue: ''
+        });
+      }
+
+      if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
+        liveFields.push({
+          inputElement: this.ui_[EncodingType.HEXADECIMAL][fieldName],
+          newValue: ''
+        });
+      }
+
+      if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
+        liveFields.push({
+          inputElement: this.ui_[EncodingType.DECIMAL][fieldName],
+          newValue: ''
+        });
+      }
+
+      if (this.isEncodingEnabled_(EncodingType.ASCII)) {
+        liveFields.push({
+          inputElement: this.ui_[EncodingType.ASCII][fieldName],
+          newValue: ''
+        });
+      }
+    }
+
+    // Advance to the next field
+    fieldStart += fieldWidth;
+  }, this);
+
+  var bodyBinary = this.originalBinary_.substr(fieldStart);
+  var truncatedBits = Math.max(0, this.sendAnimationIndex_ - fieldStart);
+  var truncatedChunks = Math.floor(truncatedBits / chunkSize);
+  var partialBinaryAtChunkSize = bodyBinary.substr(truncatedChunks * chunkSize);
+
+  if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
+    liveFields.push({
+      inputElement: this.ui_[EncodingType.A_AND_B].message,
+      newValue: formatAB(binaryToAB(bodyBinary).substr(truncatedBits),
+          chunkSize, -truncatedBits),
+      watermark: netsimMsg.a_and_b()
+    });
+  }
+
+  if (this.isEncodingEnabled_(EncodingType.BINARY)) {
+    liveFields.push({
+      inputElement: this.ui_[EncodingType.BINARY].message,
+      newValue: formatBinary(bodyBinary.substr(truncatedBits), chunkSize,
+          -truncatedBits),
+      watermark: netsimMsg.binary()
+    });
+  }
+
+  if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
+    var truncatedHexDigits = Math.floor(truncatedBits / 4);
+    liveFields.push({
+      inputElement: this.ui_[EncodingType.HEXADECIMAL].message,
+      newValue: formatHex(binaryToHex(bodyBinary).substr(truncatedHexDigits),
+          chunkSize, -truncatedHexDigits),
+      watermark: netsimMsg.hexadecimal()
+    });
+  }
+
+  if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
+    liveFields.push({
+      inputElement: this.ui_[EncodingType.DECIMAL].message,
+      newValue: alignDecimal(binaryToDecimal(partialBinaryAtChunkSize, chunkSize)),
+      watermark: netsimMsg.decimal()
+    });
+  }
+
+  if (this.isEncodingEnabled_(EncodingType.ASCII)) {
+    liveFields.push({
+      inputElement: this.ui_[EncodingType.ASCII].message,
+      newValue: binaryToAscii(partialBinaryAtChunkSize, chunkSize),
+      watermark: netsimMsg.ascii()
+    });
+  }
+
+  liveFields.forEach(function (field) {
+    if (field.watermark && field.newValue === '') {
+      field.inputElement.val(field.watermark);
+      field.inputElement.addClass('watermark');
+    } else {
+      field.inputElement.val(field.newValue);
+      field.inputElement.removeClass('watermark');
+    }
+  });
 };
 
 /**
@@ -721,35 +962,35 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 
     if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
       liveFields.push({
-        inputElement: this.a_and_bUI[fieldName],
+        inputElement: this.ui_[EncodingType.A_AND_B][fieldName],
         newValue: abConverter(this[fieldName], fieldWidth)
       });
     }
 
     if (this.isEncodingEnabled_(EncodingType.BINARY)) {
       liveFields.push({
-        inputElement: this.binaryUI[fieldName],
+        inputElement: this.ui_[EncodingType.BINARY][fieldName],
         newValue: binaryConverter(this[fieldName], fieldWidth)
       });
     }
 
     if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
       liveFields.push({
-        inputElement: this.hexadecimalUI[fieldName],
+        inputElement: this.ui_[EncodingType.HEXADECIMAL][fieldName],
         newValue: hexConverter(this[fieldName], Math.ceil(fieldWidth / 4))
       });
     }
 
     if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
       liveFields.push({
-        inputElement: this.decimalUI[fieldName],
+        inputElement: this.ui_[EncodingType.DECIMAL][fieldName],
         newValue: decimalConverter(this[fieldName], fieldWidth)
       });
     }
 
     if (this.isEncodingEnabled_(EncodingType.ASCII)) {
       liveFields.push({
-        inputElement: this.asciiUI[fieldName],
+        inputElement: this.ui_[EncodingType.ASCII][fieldName],
         newValue: asciiConverter(this[fieldName], fieldWidth)
       });
     }
@@ -757,7 +998,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 
   if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
     liveFields.push({
-      inputElement: this.a_and_bUI.message,
+      inputElement: this.ui_[EncodingType.A_AND_B].message,
       newValue: formatAB(binaryToAB(this.message), chunkSize),
       watermark: netsimMsg.a_and_b()
     });
@@ -765,7 +1006,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 
   if (this.isEncodingEnabled_(EncodingType.BINARY)) {
     liveFields.push({
-      inputElement: this.binaryUI.message,
+      inputElement: this.ui_[EncodingType.BINARY].message,
       newValue: formatBinary(this.message, chunkSize),
       watermark: netsimMsg.binary()
     });
@@ -773,7 +1014,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 
   if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
     liveFields.push({
-      inputElement: this.hexadecimalUI.message,
+      inputElement: this.ui_[EncodingType.HEXADECIMAL].message,
       newValue: formatHex(binaryToHex(this.message), chunkSize),
       watermark: netsimMsg.hexadecimal()
     });
@@ -781,7 +1022,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 
   if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
     liveFields.push({
-      inputElement: this.decimalUI.message,
+      inputElement: this.ui_[EncodingType.DECIMAL].message,
       newValue: alignDecimal(binaryToDecimal(this.message, chunkSize)),
       watermark: netsimMsg.decimal()
     });
@@ -789,7 +1030,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 
   if (this.isEncodingEnabled_(EncodingType.ASCII)) {
     liveFields.push({
-      inputElement: this.asciiUI.message,
+      inputElement: this.ui_[EncodingType.ASCII].message,
       newValue: binaryToAscii(this.message, chunkSize),
       watermark: netsimMsg.ascii()
     });

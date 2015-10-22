@@ -9,12 +9,12 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var utils = require('../utils');
@@ -72,13 +72,6 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
    * @private
    */
   this.packets_ = [];
-
-  /**
-   * Last addres we sent a packet to
-   * @type {string}
-   * @private
-   */
-  this.lastPacketToAddress_ = "0";
 
   /**
    * Our local node's address, zero until assigned by a router.
@@ -159,19 +152,37 @@ NetSimSendPanel.inherits(NetSimPanel);
  * @private
  */
 NetSimSendPanel.prototype.beginSendingPackets_ = function () {
+  if (0 === this.packets_.length) {
+    return;
+  }
+
   this.isPlayingSendAnimation_ = true;
   this.disableEverything();
+  this.packets_[0].beginSending(this.netsim_.myNode);
 };
 
 /**
- * Resets send panel, emptying packets, making it interactive, and stopping
- * the remote-send process.
+ * Callback for when an individual packet finishes its send animation.
+ * Most of the time the packet gets removed and the next packet begins its
+ * animation.
+ * If it's the last packet, we finish sending and perform a packet editor
+ * reset instead.
+ * @param {NetSimPacketEditor} packet
  * @private
  */
-NetSimSendPanel.prototype.stopSendingPackets_ = function () {
-  this.resetPackets_();
-  this.enableEverything();
-  this.isPlayingSendAnimation_ = false;
+NetSimSendPanel.prototype.doneSendingPacket_ = function (packet) {
+  // If it's the last packet, we're done sending altogether.
+  if (1 === this.packets_.length) {
+    this.resetPackets_();
+    this.enableEverything();
+    this.packets_[0].getFirstVisibleMessageBox().focus();
+    this.isPlayingSendAnimation_ = false;
+    return;
+  }
+
+  // Remove the completed packet and start sending the next one.
+  this.removePacket_(packet);
+  this.packets_[0].beginSending(this.netsim_.myNode);
 };
 
 /**
@@ -181,22 +192,8 @@ NetSimSendPanel.prototype.stopSendingPackets_ = function () {
  * @param {RunLoop.Clock} clock
  */
 NetSimSendPanel.prototype.tick = function (clock) {
-  if (!this.isPlayingSendAnimation_) {
-    return;
-  }
-
-  // Nothing left to send, we're done.
-  if (this.packets_.length === 0) {
-    this.stopSendingPackets_();
-    return;
-  }
-
-  var firstPacket = this.packets_[0];
-  if (firstPacket.isSending()) {
-    firstPacket.tick(clock);
-  } else {
-    this.lastPacketToAddress_ = firstPacket.toAddress;
-    firstPacket.beginSending(this.netsim_.myNode);
+  if (this.isPlayingSendAnimation_ && this.packets_.length > 0) {
+    this.packets_[0].tick(clock);
   }
 };
 
@@ -237,7 +234,7 @@ NetSimSendPanel.prototype.render = function () {
       .click(this.onSendEventTriggered_.bind(this));
   this.getBody()
       .find('#set-wire-button')
-      .click(this.onSetWireButtonPress_.bind(this));
+      .click(this.onSendEventTriggered_.bind(this));
 
   // Note: At some point, we might want to replace this with something
   // that nicely re-renders the contents of this.packets_... for now,
@@ -264,7 +261,7 @@ NetSimSendPanel.prototype.addPacket_ = function () {
   if (this.packets_.length > 0) {
     newPacketToAddress = this.packets_[this.packets_.length - 1].toAddress;
   } else {
-    newPacketToAddress = this.lastPacketToAddress_;
+    newPacketToAddress = '0';
   }
 
   // Create a new packet
@@ -280,6 +277,7 @@ NetSimSendPanel.prototype.addPacket_ = function () {
     bitRate: this.bitRate_,
     enabledEncodings: this.enabledEncodings_,
     removePacketCallback: this.removePacket_.bind(this),
+    doneSendingCallback: this.doneSendingPacket_.bind(this),
     contentChangeCallback: this.onContentChange_.bind(this),
     enterKeyPressedCallback: this.onSendEventTriggered_.bind(this)
   });
@@ -327,13 +325,18 @@ NetSimSendPanel.prototype.removePacket_ = function (packet) {
 };
 
 /**
- * Remove all packet editors from the panel.
+ * Reset the editor to its 'empty' state: Remove all but the first packet,
+ * and reset the first packet to empty.
  * @private
  */
 NetSimSendPanel.prototype.resetPackets_ = function () {
-  this.packetsDiv_.empty();
-  this.packets_.length = 0;
-  this.addPacket_();
+  if (this.packets_.length > 0) {
+    this.packetsDiv_.children().slice(1).remove();
+    this.packets_.length = Math.min(1, this.packets_.length);
+    this.packets_[0].resetPacket();
+  } else {
+    this.addPacket_();
+  }
 };
 
 /**
@@ -416,20 +419,19 @@ NetSimSendPanel.prototype.onSendEventTriggered_ = function (jQueryEvent) {
     return;
   }
 
-  this.beginSendingPackets_();
+  var level = NetSimGlobals.getLevelConfig();
+  if (level.messageGranularity === MessageGranularity.PACKETS) {
+    this.beginSendingPackets_();
+  } else if (level.messageGranularity === MessageGranularity.BITS) {
+    this.sendOneBit_();
+  }
 };
 
 /**
  * Send a single bit, manually 'setting the wire state'.
- * @param {Event} jQueryEvent
  * @private
  */
-NetSimSendPanel.prototype.onSetWireButtonPress_ = function (jQueryEvent) {
-  var thisButton = $(jQueryEvent.target);
-  if (thisButton.is('[disabled]')) {
-    return;
-  }
-
+NetSimSendPanel.prototype.sendOneBit_ = function () {
   var myNode = this.netsim_.myNode;
   if (!myNode) {
     throw new Error("Tried to set wire state when no connection is established.");

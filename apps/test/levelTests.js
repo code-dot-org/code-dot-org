@@ -12,7 +12,50 @@
 var path = require('path');
 var assert = require('chai').assert;
 var $ = require('jquery');
+var React = require('react');
+var sinon = require('sinon');
 require('jquery-ui');
+
+// Anatomy of a level test collection. The example itself is uncommented so
+// that you get the benefits of editor syntax highlighting
+var example = {
+  // app name
+  app: "turtle",
+  // name of the level file within the app directory. will almost always be levels
+  levelFile: "levels",
+  // id of the level within the levels file
+  levelId: "5_5",
+  // a complete level defintion, can be used instead of levelFile/levelId
+  levelDefinition: {},
+  // a set of tests
+  tests: [
+    {
+      description: 'Text describing this test',
+      // this is passed to report
+      expected: {
+        result: true, // expected result value
+        testResult: 10 // expected testResult value
+      },
+      // a function that returns a level definition on demand. this allows for
+      // per test level definitions (dont need a collection levelId/levelDefinition
+      // if taking this approach)
+      delayLoadLevelDefinition: function () {},
+
+      // xml to be used for startBlocks. set to string 'startBlocks' if you want
+      // to use the xml from the level itself
+      xml: '',
+      customValidator: function (assert) {
+        // optional function called at puzzle finish (i.e. when BlocklyApps.report
+        // is called.
+        return true; // test fails if it returns false
+      },
+      runBeforeClick: function (assert) {
+        // optional function called after puzzle loads, but before execution
+        // starts
+      }
+    }
+  ]
+};
 
 var testUtils = require('./util/testUtils');
 testUtils.setupLocales();
@@ -32,12 +75,28 @@ function loadSource(src) {
 describe('Level tests', function() {
   var studioApp;
   var originalRender;
+  var clock, tickInterval;
 
   before(function(done) {
     this.timeout(15000);
 
     window.jQuery = $;
     window.$ = $;
+    window.React = React;
+    window.dashboard = $.extend(window.dashboard, {
+      i18n: {
+        t: function (selector) { return selector; }
+      },
+      // Right now we're just faking some of our dashboard project interactions.
+      // If this becomes insufficient, we might be able to require the project.js
+      // file from shared here.
+      project: {
+        clearHtml: function() {},
+        getCurrentId: function () { return 'fake_id'; },
+        exceedsAbuseThreshold: function () { return false; },
+        isEditing: function () { return true; }
+      }
+    });
 
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
@@ -54,6 +113,13 @@ describe('Level tests', function() {
   });
 
   beforeEach(function () {
+    tickInterval = window.setInterval(function () {
+      if (clock) {
+        clock.tick(100); // fake 1000 ms for every real 1ms
+      }
+    }, 1);
+    clock = sinon.useFakeTimers();
+
     testUtils.setupBlocklyFrame();
     studioApp = testUtils.getStudioAppSingleton();
 
@@ -87,6 +153,8 @@ describe('Level tests', function() {
   testCollectionUtils.getCollections().forEach(runTestCollection);
 
   afterEach(function () {
+    clock.restore();
+    clearInterval(tickInterval);
     var studioApp = require('@cdo/apps/StudioApp').singleton;
     if (studioApp.editor && studioApp.editor.aceEditor &&
         studioApp.editor.aceEditor.session &&

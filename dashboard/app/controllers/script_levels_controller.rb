@@ -4,20 +4,18 @@ class ScriptLevelsController < ApplicationController
 
   before_filter :prevent_caching
 
-  def prevent_caching
-    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
-    response.headers["Pragma"] = "no-cache"
-    response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
-  end
-
   def reset
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
 
-    # delete the session if the user is not signed in
+    # delete the client state and other session state if the user is not signed in
     # and start them at the beginning of the script.
-    # If the user is signed in, continue normally
-    reset_session unless current_user
+    # If the user is signed in, continue normally.
+    unless current_user
+      client_state.reset
+      reset_session
+    end
+
     redirect_to(build_script_level_path(@script.starting_level)) and return
   end
 
@@ -43,6 +41,8 @@ class ScriptLevelsController < ApplicationController
     load_user
     load_section
 
+    return if redirect_applab_under_13(@script_level.level)
+
     present_level
 
     slog(tag: 'activity_start',
@@ -66,17 +66,12 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
-  # Attempts to find the next level for this session and script
+  # Attempts to find the next unpassed level for this session and script
   def find_next_level_for_session(script)
-    session_progress = session[:progress] || {}
-
-    script.script_levels.each do |sl|
-      next unless sl.valid_progression_level?
-      passed_level = session_progress.fetch(sl.level_id, -1) < Activity::MINIMUM_PASS_RESULT
-      return sl if passed_level
+    script.script_levels.detect do |sl|
+      sl.valid_progression_level? &&
+          (client_state.level_progress(sl.level_id) < Activity::MINIMUM_PASS_RESULT)
     end
-
-    nil
   end
 
   def load_script_level
@@ -92,22 +87,25 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_level_source
+    # never load solutions for Jigsaw
     return if @level.game.name == 'Jigsaw'
 
     if params[:solution] && @ideal_level_source = @level.ideal_level_source
+      # load the solution for teachers clicking "See the Solution"
       authorize! :manage, :teacher
       level_source = @ideal_level_source
-      level_view_options(share: true)
-      view_options(readonly_workspace: true,
-                   callouts: [],
-                   full_width: true)
+      readonly_view_options
     elsif @user && current_user && @user != current_user
+      # load other user's solution for teachers viewing their students' solution
       level_source = @user.last_attempt(@level).try(:level_source)
-      view_options(readonly_workspace: true,
-                   callouts: [])
+      readonly_view_options
     elsif current_user
-      # Set start blocks to the user's previous attempt at this puzzle.
+      # load user's previous attempt at this puzzle.
       level_source = current_user.last_attempt(@level).try(:level_source)
+
+      if current_user.user_level_for(@script_level).try(:submitted?)
+        readonly_view_options
+      end
     end
 
     level_source.try(:replace_old_when_run_blocks)
@@ -150,9 +148,12 @@ class ScriptLevelsController < ApplicationController
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level.id)
     view_options(
       full_width: true,
-      no_footer: !@game.has_footer?,
       small_footer: @game.uses_small_footer? || enable_scrolling?,
       has_i18n: @game.has_i18n?
+    )
+
+    level_view_options(
+      script_level_id: @script_level.level_id
     )
 
     @@fallback_responses ||= {}

@@ -412,6 +412,8 @@ en:
         C4_variables_artist: crwdns25652:0crwdne25652:0
         C4_variables_playlab: crwdns25653:0crwdne25653:0
         C4_for_loops: crwdns24821:0crwdne24821:0
+        C4_for_loops_bee: crwdns48362:0crwdne48362:0
+        C4_for_loops_no_bee: crwdns48363:0crwdne48363:0
         C4_math_artist: crwdns25654:0crwdne25654:0
         C4_function_edit: crwdns25655:0crwdne25655:0
         C4_function_create: crwdns25656:0crwdne25656:0
@@ -433,6 +435,7 @@ en:
         infinity_playlab_intro: crwdns35943:0crwdne35943:0
         infinity_playlab_events: crwdns35944:0crwdne35944:0
         infinity_playlab_repeat_forever: crwdns35945:0crwdne35945:0
+        csp_applab_functions: crwdns49683:0crwdne49683:0
         csp_concept_rgb: crwdns36227:0crwdne36227:0
         csp_pixelation_color_1: crwdns36228:0crwdne36228:0
         csp_pixelation_color_2: crwdns36229:0crwdne36229:0
@@ -440,6 +443,7 @@ en:
         csp_pixelation_bw: crwdns36231:0crwdne36231:0
         csp_U1L14_tipstricks: crwdns36232:0crwdne36232:0
         csp_textcompression: crwdns36303:0crwdne36303:0
+        csp_textcompression_new: crwdns48364:0crwdne48364:0
         csp_internetsimulator_1: crwdns41507:0crwdne41507:0
         csp_internetsimulator_2: crwdns41508:0crwdne41508:0
         csp_internetsimulator_3: crwdns41899:0crwdne41899:0
@@ -460,6 +464,9 @@ en:
         alg_15_biggame_update_player: crwdns36318:0crwdne36318:0
         alg_16_biggame_collision_detection: crwdns36319:0crwdne36319:0
         alg_17_sambat_compound_booleans: crwdns36320:0crwdne36320:0
+        hoc2015_preview_blocks: crwdns50648:0crwdne50648:0
+        hoc2015_preview_typing: crwdns50649:0crwdne50649:0
+        hoc2015_preview_conclusion: crwdns50650:0crwdne50650:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

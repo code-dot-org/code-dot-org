@@ -1,4 +1,7 @@
 .field
+  = f.label :instructions
+  = f.text_area :instructions, placeholder: 'Instructions', rows: 4
+.field
   = f.label :markdown_instructions
   %p When specified, these instructions will render in the instructions popup.
   %p The regular instruction field above will still display as the instructions below the game area.

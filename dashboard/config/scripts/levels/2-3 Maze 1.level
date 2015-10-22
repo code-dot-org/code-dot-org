@@ -9,7 +9,7 @@
     "skin": "birds",
     "instructions": "Can you help me to catch the naughty pig? Stack a couple of \"move forward\" blocks together and press \"Run\". ",
     "start_direction": "1",
-    "step_mode": "0",
+    "step_mode": 1,
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "3",

@@ -242,26 +242,22 @@ eu:
         flappy_2: |-
           Orain, lurzorua gehitu dugu. Itsatsi bloke bat "lurzorua jotzean" blokeari. Zure kodeak 'JOKOA AMAITU' behar du Flappyk tupust egiten duenean.
         flappy_3: '"egikaritzean" blokeak ahalbidetzen dizu kodea exekutatzea zure jokoa hasten denean. Saia zaitez mailako abiadura eta hegalen mugimendua finkatzen helburuaren arabera.'
-        flappy_4: |-
-          Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_5: |-
-          Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either a smaller or larger amount.
-        flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
+        flappy_4: 'Flappyk oztopoen artean hegan egingo du, oztopo batekin jo dadin agindua ematen duzun arte. Erants iezaziozu bloke bat blokeari "oztopo bat jotzen duenean". Zure kodeak, "jokua bukatu" behar du, lehenengoko tutu multzoarekin topatzen denean.'
+        flappy_5: 'Orain markatzailea gehituko dugu , horrela, Flappyk oztopoak gainditzen dituenean, puntuak zenbatuko ditugu. Erantsi  blokeari "oztopoa gainditzean" eta puntu bat markatu Flappyk lehenengoko tutu multzoan hegan egiten duenean.'
+        flappy_6: Saiatu puntu bat lortzen Flappyri arinago edo motelago hegan eginaraziz.
+        flappy_7: 'Jarraian, atzekaldean aldatzen saia zaitez "egitean" blokeari beste bloke bat erantsiz'
         flappy_8: You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
-        flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
+        flappy_9: Gauzak nahasteko, oztopo batekin topo egiten, jokua bukatu beharrean, markatzailea berriro 0-an jartzen saiatu.
+        flappy_11: Zure Plappy jokua sortu. Ikus-efektuak eta arauak alda ditzakezu, baita ere grabitatea. Bukatzean klik egin Amaiera-n, zure lagunen euren telefonoetan proba dezaten.
         flappy_k1_1: Jolastu Flappy
         flappy_k1_2: 'Itsatsi bloke bat "klikatzean" blokeari; ondoren, sakatu "Egikaritu". Klikatu edo ukitu pantaila Flappy mugiarazteko helbururaino.'
         flappy_k1_3: |-
           Orain, lurzorua gehitu dugu. Itsatsi bloke bat "lurzorua jotzean" blokeari. Zure kodeak 'JOKOA AMAITU' behar du Flappyk tupust egiten duenean.
         flappy_k1_4: '"egikaritzean" blokeak ahalbidetzen dizu kodea exekutatzea zure jokoa hasten denean. Saia zaitez mailako abiadura eta hegalen mugimendua finkatzen helburuaren arabera.'
-        flappy_k1_5: |-
-          Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_k1_6: |-
-          Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
+        flappy_k1_5: 'Flappyk oztopoen artean hegan egingo du, oztopo batekin jo dadin agindua ematen duzun arte. Erants iezaziozu bloke bat blokeari "oztopo bat jotzen duenean". Zure kodeak, "jokua bukatu" behar du, lehenengoko tutu multzoarekin topatzen denean.'
+        flappy_k1_6: 'Orain markatzailea gehituko dugu , horrela, Flappyk oztopoak gainditzen dituenean, puntuak zenbatuko ditugu. Erantsi  blokeari "oztopoa gainditzean" eta puntu bat markatu Flappyk lehenengoko tutu multzoan hegan egiten duenean.'
         flappy_k1_7: Saiatu puntu anitzak lortzen traba bat gainditzean.
-        flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
+        flappy_k1_8: 'Jarraian, atzekaldean aldatzen saia zaitez "egitean" blokeari beste bloke bat erantsiz'
         flappy_k1_9: 'Saiatu jokalaria aldatzen. Horretarako "jokalaria ipini" blokea gehitu "egitean" blokeari'
         jigsaw_1: Klikatu blokea
         jigsaw_2: Arrastatu blokea helburura
@@ -282,56 +278,56 @@ eu:
         mazestep_4: Labirinto pausuaren deskribapena hemen
         mazestep_5: Labirinto pausuaren deskribapena hemen
         studio_c2_1: 'Esanarazi diezaiokezu txakurrari "Kaixo mundua"?'
-        studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_c2_2: Lor dezakezu, txakurrak zerbait esan eta katuak erantzutea?
         studio_c2_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
         studio_c2_4: 'Sor dezakezu programa bat, txakurra katuarengana mugiarazteko eta katuak "kaixo" esan dezala txakurra hurbiltzen denean?'
         studio_c2_5: 'Sor dezakezu programa bat, olagarroak "kaixo" esan dezan bere gainean klik egitean?'
         studio_c2_6: Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?
         studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c2_8: 'Can you have Waddles say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
+        studio_c2_8: 'Lor dezakezu pinguinoak Ene! esan eta kolpe baten soinua sortzea dinosauruarekin topo egitean? Gezidun teklekin mugiarazi behar da  guzti hau gertatzeko.'
         studio_c2_9: Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?
         studio_c2_10: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
         studio_c2_11: Zure istorioa sortu. Bukatzean egin klik amaieran zure lagunek euren telefonoetan froga dezaten.
         studio_c3_story_1: 'Esanarazi diezaiokezu txakurrari "Kaixo mundua"?'
-        studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_c3_story_2: Lor dezakezu, txakurrak zerbait esan eta katuak erantzutea?
         studio_c3_story_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
         studio_c3_story_4: 'Sor dezakezu programa bat, txakurra katuarengana mugiarazteko eta katuak "kaixo" esan dezala txakurra hurbiltzen denean?'
-        studio_c3_story_5: Can you add a block to make the octopus happy?
+        studio_c3_story_5: Erants dezakezu bloke bat, olagarroa pozik egon dadin?
         studio_c3_story_6: Zure istorioa sortu. Bukatzean egin klik amaieran zure lagunek euren telefonoetan froga dezaten.
         studio_c3_game_1: 'Sor dezakezu programa bat, olagarroak "kaixo" esan dezan bere gainean klik egitean?'
         studio_c3_game_2: Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?
         studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c3_game_4: 'Can you have Waddles say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
+        studio_c3_game_4: 'Lor dezakezu pinguinoak Ene! esan eta kolpe baten soinua sortzea dinosauruarekin topo egitean? Gezidun teklekin mugiarazi behar da  guzti hau gertatzeko.'
         studio_c3_game_5: Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?
         studio_c3_game_6: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
         studio_c3_game_7: Sortu zeure jokoa. Bukatuta daukazunean, amaieran sakatu zure jokoa zure lagunak beraien sakelakoetan froga egin dezatela.
         studio_playlab_1: 'Pinguinoak "kaixo" esan nahi du. Lagun dezakezu?'
         studio_playlab_2: 'Haitzuloko mutilak (1.aktorea) eta neskak (2.aktorea) "kaixo" esan nahi diote elkarri. Lagun ditzakezu "esan" blokea bi aldiz erabiliz?'
         studio_playlab_3: Lagun dezakezu tenislaria bandera heltzen?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
-        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
+        studio_playlab_4: Lagun dezakezu mutil tenislaria (1. aktorea) neska tenislariarengana (2. aktorea) iristen eta lortzean soinu bat egin?
+        studio_playlab_5: 'Lagunduko diozu espazioko Robotari "Agur lurtarrak" esaten klikatzen dugunean? Ez ahaztu bere gainean klik egiten "Egin"-en klik egiten duzunean.'
+        studio_playlab_6: Lagun dezakezu sorgina su-bola guztietara iristen, gezidun teklak gora/behera/ezker/eskuin erabiliz?
         studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
         studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
         studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: Sortu zeure jokoa. Bukatuta daukazunean, amaieran sakatu zure jokoa zure lagunak beraien sakelakoetan froga egin dezatela.
         studio_full_sandbox: Sortu zeure jokoa. Bukatuta daukazunean, amaieran sakatu zure jokoa zure lagunak beraien sakelakoetan froga egin dezatela.
         studio_k1_1: 'Esanarazi diezaiokezu txakurrari "Kaixo mundua"?'
-        studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_k1_2: Lor dezakezu, txakurrak zerbait esan eta katuak erantzutea?
         studio_k1_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
-        studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
+        studio_k1_4: 'Txakurra katuarengana mugi dadin agindu eta iristean "Kaixo" esan dezala.'
+        studio_k1_5: Erants dezakezu bloke bat, olagarroa pozik egon dadin?
+        studio_k1_6: Sortu ezazu zure istorioa! Mugi itzazu txakurra eta katua eta gauzak esan ditzaten lortu ezazu.
         maze_wordsearch_k_1: Mugi nazazu EKIALDEA hitza letreiatzeko
         maze_wordsearch_k_2: Mugi nazazu HEGOALDEA hitza letreiatzeko
         maze_wordsearch_k_3: Mugi nazazu MENDEBALDEA hitza letreiatzeko
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
+        maze_wordsearch_k_4: Mugi nazazu iparralde hitza letratzeko
+        maze_wordsearch_k_6: Mugi nazazu lehenik ekialdera eta ondoren hegoaldera SALTO hitza letratzeko
+        maze_wordsearch_k_9: Mugi nazazu alde batetara, eta ondoren bestera KODE hitza letratzeko
         maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        maze_wordsearch_k_20: 'Hau proba da! Mugi nazazu norabide batean eta bestean HISTORIA  hitza letratzeko'
         applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
@@ -370,14 +366,14 @@ eu:
         C1_pair_programming: Bikoitien programazioa.
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
-        C1_bee_level_intro: 'Bee Level - Intro'
+        C1_bee_level_intro: 'Erle maila - Sarrera'
         C1_artist_intro: Artistara sarrera
         C1_spelling_bee_intro: Spelling Bee Intro
         C1_zuck_repeat_loop: Maze Loops
         C1_bee_loops: Bee Loops
         C1_maze_loops: Maze Loops
-        C1_playlab_storytelling: 'Play Lab - Create a Story'
-        C1_planting_seed: Planting a Seed
+        C1_playlab_storytelling: Jolas laborategia. Historio bat sortu
+        C1_planting_seed: Hazi bat ereiten.
         C1_building_foundation: Building a Foundation
         C1_going_places_safely: Going Places Safely
         C2_maze_intro: Labirintora sarrera
@@ -388,12 +384,12 @@ eu:
         C2_bee_loops: Bee Loops
         C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
-        C2_playlab_createstory: 'Play Lab - Create a Story'
+        C2_playlab_createstory: Jolas laborategia. Historio bat sortu
         C2_graph_paper: Paper grafiko programazioa
         C2_conditionals_with_cards: Baldintzak
         C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: Errele programazioa
-        C2_paper_airplanes: Paper Airplanes
+        C2_paper_airplanes: Paperezko hegazkinak.
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
         C3_maze_level_4: Maze Loops
@@ -407,40 +403,43 @@ eu:
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
         C3_bounce: Errebotea
-        C3_playlab_create_game: 'Play Lab - Create a Game'
+        C3_playlab_create_game: 'Jolas laborategia - Jolas bat sortu.'
         C3_computational_thinking: Pentsamendu konputazionala
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: Introduction
+        C4_intro: Sarrera
         C4_loops_zombie: Itzuliak
         C4_bee_conditional: Bee Conditionals
-        C4_variables_artist: 'Variables - Artist'
-        C4_variables_playlab: 'Variables - Play Lab'
+        C4_variables_artist: 'Aldagaiak - Artista'
+        C4_variables_playlab: 'Aldaerak - Jolas laborategia.'
         C4_for_loops: For Loops
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
+        C4_for_loops_bee: For Loops
+        C4_for_loops_no_bee: For Loops
+        C4_math_artist: Artista programatzen matematikaren bidez.
+        C4_function_edit: Funtzioak editatzen.
+        C4_function_create: Funtzioak sortzen
         C4_function_parameters: Parametrodun funtzioak
         C4_conditionals: Baldintzak
         C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_madlibs: Liburutegi eroak.
+        C4_unplugged_variables: Aldaerak gutunazaletan.
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Songwriting with Parameters
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Bitarra
         frozen_intro: Hour of Code Intro
         frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        frozen_functions: Funtzioetara sarrera.
         playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
+        playlab_events: Jolas laborategiko gertaerak
         playlab_repeat_forever: Play Lab Repeat Forever
         tutorial_puzzle_challenge: Tutorial Puzzle Challenge
         infinity_playlab_intro: 'Play Lab - Introduction'
         infinity_playlab_events: 'Play Lab - Events'
         infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        csp_applab_functions: Funtzioetara sarrera.
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
@@ -448,6 +447,7 @@ eu:
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
         csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'
@@ -468,17 +468,20 @@ eu:
         alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
         alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
         alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'
         run: 'Hit "Run" to try your program'
-        watch_again: Click here to watch the video again
+        watch_again: Klik egin hemen bideoa berriro ikusteko.
         gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
         show_code_explanation: "Click here to see the code for the program you're making"
-        instructions_repeat_explanation: The instructions for each puzzle are repeated here
-        category_explanation: "You have all the same blocks but they've now been arranged in categories"
+        instructions_repeat_explanation: Buruhauste bakoitzerako jarraibideak hemen errepikatzen dira.
+        category_explanation: Bloke berberak dituzu baino oraingoan kategorietan antolatu dira
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
-        studio_say_text: Type what you want your actor to say within these quotes
+        studio_say_text: Kakots artean idatzi zure aktoreak esango duena.
         jigsaw_click: Click this block!
         move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
         turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
@@ -495,7 +498,7 @@ eu:
         get_nectar: 'Use the new "get nectar" block.'
         actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
         draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Click here to edit your function.
+        edit_function: Hemen klikatu zure funtzioa editatzeko.
         create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
         house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
         edit_draw_square: Use this button to edit the function and add the loop.
@@ -530,11 +533,11 @@ eu:
         if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
         if_else_bee: |-
           Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
+        repeat_full_circle: Adierazi zenbatetan mugitu behar den zonbia biribil osoa egiteko.
         place_length_variable: Drag the length variable here to replace the question marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        arrows_move_actor: Geziak erabili aktorea mugitzeko.
+        right_arrow_fireball: Eskuineko gezia erabili su-bolak jaurtikitzeko.
+        name_function: Idatzi hemen zure funtzioaren izena.
         Infinity_move_right_runbutton: Add move block here
         Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
         Infinity_move_directions_callout_arrow: Use these arrows to steer

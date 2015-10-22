@@ -45,8 +45,10 @@
     "timeout_after_when_run": "false",
     "custom_game_type": "Sam the Bat",
     "disable_examples": "false",
-    "markdown_instructions": "Sam's mom wants to make sure that she can always see at least a bit of him, so lets write some functions that help make sure he doesn't go too far out of the yard. Here's a function called `safe-left?` - it should take a Number for its domain that represents Sam's x-coordinates and return `true` if he's completely visible on screen. If your function works, Sam shouldn't be able to leave the yard from the left side.",
-    "examples_required": "true"
+    "markdown_instructions": "Sam's mom wants to make sure that she can always see at least a bit of him, so lets write some functions that help make sure he doesn't go too far out of the yard. Here's a function called `safe-left?` - it should take a Number for its domain that represents Sam's x-coordinates and return *true* if he's completely visible on screen. If your function works, Sam shouldn't be able to leave the yard from the left side.",
+    "examples_required": "true",
+    "never_autoplay_video": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

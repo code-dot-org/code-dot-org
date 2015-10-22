@@ -20,7 +20,11 @@
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
-    "definition_collapse": "false"
+    "definition_collapse": "false",
+    "markdown_instructions": "Great, let's do one more example before writing the function - what should the rocket height be after 30 seconds?",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

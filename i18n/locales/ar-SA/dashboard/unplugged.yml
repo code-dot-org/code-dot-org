@@ -3,7 +3,7 @@ ar:
     unplugged:
       Unplug1:
         title: مقدمة لعلوم الحاسب الآلي
-        desc: سوف يعطي هذا الدرس مقدمة عن مفهوم علوم الحاسب الآلي ويشرح مالذي يقوم به عالم الحاسوب، سوف يعطي أيضا فرصة لطلاب ليتوقعوا ماهو دور عالم الحاسوب، فبنهاية هذا النشاط سوف يعطى كل طالب واجب تذكريي في ليقوم به في المنزل حول ماتعلم / تعلمتة. لربما تميل بدورك إلى تجاهل تعليم الأطفال الصغار المصطلحات التي تتعلق بدرس القادم ولكن يجدر بك تقديمها بطريقة ممتعة ومرحة بحث تصبح أكثر إنتاجية من الإنتظار للحصول على فرص أكثر متطورة.
+        desc: سوف يعطي هذا الدرس مقدمة عن مفهوم علوم الحاسب الآلي ويشرح مالذي يقوم به عالم الحاسوب، سوف يعطي أيضا فرصة للطلاب ليمثلوا دور عالم الحاسوب. عند نهاية هذا النشاط سيكون لدى كل طالب ما يذكره بما تعلمه. لربما تميل بدورك إلى تجاهل تعليم الأطفال الصغار المصطلحات التي تتعلق بالدروس القادمة ولكن يجدر بك تقديمها بطريقة ممتعة ومرحة بحيث تصبح أكثر إنتاجية من الإنتظار للحصول على فرص أكثر متطورة.
         pdfs:
           - unplug1
         video: Unplug1
@@ -189,7 +189,7 @@ ar:
         desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
-        title: الجمل الشرطية ووظائف Piecewise
+        title: الجمل الشرطية ووظائف مقطّعة
         desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
         video: alg_10_conditionals
       CollisionDetection:

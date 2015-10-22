@@ -357,7 +357,7 @@ ru:
         Unplug9: Эстафетное программирование
         Unplug10: интернет
         Unplug11: Итоги
-        C1_happy_maps_unplugged: Весёлые карты
+        C1_happy_maps_unplugged: Счастливые карты
         C1_moveitmoveit_unplugged: Переместить это, переместить это
         C1_bigevent_unplugged: Большое Событие
         C1_getting_loopy: Зацикливание
@@ -372,7 +372,7 @@ ru:
         C1_maze_loops: 'Лабиринт: Циклы'
         C1_playlab_storytelling: 'Лаборатория игр: Создай историю'
         C1_planting_seed: Посади семечко
-        C1_building_foundation: Создание основы
+        C1_building_foundation: Построение фундамента
         C1_going_places_safely: Безопасное путешествие
         C2_maze_intro: 'Лабиринт - Введение'
         C2_artist_intro: 'Художник - Введение'
@@ -414,6 +414,8 @@ ru:
         C4_variables_artist: 'Переменные: Художник'
         C4_variables_playlab: 'Переменные: Лаборатория игр'
         C4_for_loops: Циклы с параметром
+        C4_for_loops_bee: Циклы с параметром
+        C4_for_loops_no_bee: Циклы с параметром
         C4_math_artist: Программирование Художника используя математику
         C4_function_edit: Редактирование процедур
         C4_function_create: Создание процедур
@@ -435,6 +437,7 @@ ru:
         infinity_playlab_intro: 'Лаборатория игр - введение'
         infinity_playlab_events: 'Лаборатория игр - события'
         infinity_playlab_repeat_forever: 'Лаборатория игр - повторять бесконечно'
+        csp_applab_functions: Знакомство с функциями
         csp_concept_rgb: Немного о пикселях
         csp_pixelation_color_1: 'Инструмент пикселизации цвета - часть 1'
         csp_pixelation_color_2: 'Инструмент пикселизации цвета - часть 2'
@@ -442,6 +445,7 @@ ru:
         csp_pixelation_bw: Инструмент пикселизации чёрного и белого
         csp_U1L14_tipstricks: 'Модуль 1, урок 14: советы для учителей'
         csp_textcompression: Виджет сжатия текста
+        csp_textcompression_new: Виджет сжатия текста
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'
@@ -462,6 +466,9 @@ ru:
         alg_15_biggame_update_player: 'Информатика в Алгебре - Большая Игра: Обновление Игрока'
         alg_16_biggame_collision_detection: 'Информатика в Алгебре - Большая Игра: Обнаружение Конфликтов'
         alg_17_sambat_compound_booleans: 'Информатика в Алгебре - Составные Логические значения'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

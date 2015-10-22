@@ -1,29 +1,72 @@
 * * *
 
-layout: wide
+title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-# Retningslinjer for øvelserne til Hour of Code og Computer Science Education Week
+<%= view :signup_button %>
 
-**Deadline for indsendelse af øvelser til Hour of Code 2014 er overskredet. Du kan stadig indsende et forslag, og så vil vi forsøge at nå at vurdere det, hvis tiden tillader det.**
+# Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org er vært for en række forskellige Hour of Code aktiviteter på Code.org, Hour of Code og CSEdWeek hjemmesiderne. Den nuværende liste kan ses på [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 Vi vil gerne tilbyde en masse motiverende muligheder, men det primære mål er at optimere oplevelsen for elever og lærere som er helt nye indenfor programmering. Brug venligst dette dokument som retningslinjer for udvikling af aktiviteter, som er målrettet brugere helt uden baggrund indenfor programmering og datalogi.
+
+  
+
+
+**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
+
+**NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
 
 <a id="top"></a>
 
 ## Indhold:
 
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
   * [Sådan evalueres øvelser med henblik på optagelse](#inclusion)
-  * [Generelle retningslinjer for Hour of Code aktiviteter](#guidelines)
-  * [Sådan indsender du (inden 1/10/2014)](#submit)
+  * [How to submit (Due 10/15/2015)](#submit)
   * [Forslag til hvordan du kan designe din aktivitet](#design)
   * [Retningslinjer for varemærker](#tm)
   * [Sporings Pixel](#pixel)
   * [Promoting af dine tutorials, CSEdWeek og Hour of Code](#promote)
   * [En note til elever med handicap](#disabilities)
+
+<a id="guidelines"></a>
+
+## New for 2015: two formats of activities: self-guided or *lesson-plan*
+
+Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
+
+**Submit a Teacher-Led Lesson Plan, ideally for different subject areas *(NEW)***: Do you have an engaging or unique idea for an Hour of Code lesson? Some educators may prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We would love to collect **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+
+You can start with this [empty template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) for your lesson plan.
+
+Examples:
+
+  * [Mirror Images (an activity for an art teacher)](https://csedweek.org/csteacher/mirrorimages.pdf)
+  * [An arduino activity for a physics teacher](https://csedweek.org/csteacher/arduino.pdf)
+  * [A history of technology activity for a history teacher](https://csedweek.org/csteacher/besttechnology.pdf)
+
+[<button>How can I submit my own lesson plan?</button>](#submit)
+
+  
+  
+**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideelt set så skal vejledninger og tutorials være integreret direkte i programmerings platformen,for at undgå at skifte faner eller vinduer mellem tutorial´en og programmeringsplatformen.
+
+Note: On student-facing pages we'll list teacher-led activities *below* the self-guided ones, but we'll specifically call them out on pages or emails meant for educators.
+
+## Generelle retningslinjer for Hour of Code aktiviteter
+
+The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming (not HTML). The tone should be that:
+
+  * Computer science is not just for geniuses, regardless of age, gender, race. Anybody *can* learn!
+  * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
+  * Tilskynd eleverne til at skabe noget der kan deles med venner/online.
+
+**Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
+
+[**Tilbage til toppen**](#top)
 
 <a id="inclusion"></a>
 
@@ -34,12 +77,14 @@ Et udvalg af computer science lærere vil vurdere de indsendte forslag baseret p
 **Tutorials vil blive vurderet højere hvis de er:**
 
   * af høj kvalitet
-  * selvguidende og ikke kræver nogen instruktion
-  * designet til begyndere
+  * designed for beginners - among students AND teachers
   * udformet som en 1 times aktivitet
+  * require no sign up
+  * require no payment
+  * require no installation
   * kan bruges på tværs af platforme, herunder mobil, tablet og pc'er
   * bruge på flere sprog
-  * fremme indlæring af alle demografiske grupper (specielt mindretalsgrupper)
+  * promote learning by all demographic groups (esp. under-represented groups)
   * ikke rent HTML + CSS web design fokus - (vores mål er programmering, ikke kun HTML-kodning)
 
 **Tutorials vil blive vurderet lavere hvis de er:**
@@ -48,49 +93,29 @@ Et udvalg af computer science lærere vil vurdere de indsendte forslag baseret p
   * på et mere avanceret niveau (ikke for begyndere)
   * kun understøtter et begrænset antal OS/device platforme - for Web-baserede platforme bør du sigte mod at kunne understøtte alle de følgende: IE9 +, og den nyeste version af Chrome, Firefox og Safari
   * kun kan bruges på engelsk
-  * har en kønsspecifik drejning (fx tematisk rettet primært mod drenge)
+  * reinforce stereotypes that hinder participation by under-represented student groups
   * tjene som et link til en læringsplatform der kræver betaling
 
 **Tutorials vil ikke blive vist hvis de:**
 
-  * kræve en høj grad af hjælp fra en lærer, der kræver stor forberedelse (dvs. ikke selvguidede opgaver for eleverne)
   * er ikke designet til at være en (nogenlunde) 1-times aktivitet
   * kræver login 
   * kræver betaling
-  * kræver installation
+  * require installation (other than mobile apps)
   * kun fokuserer på HTML og CSS webdesign
   * indsendes efter afsendelsesdeadline, eller med ufuldstændige oplysninger (se nedenfor)
 
-I sidste ende er målet med Hour of Code kampagnen er at udbrede deltagelsen i kodning for elever og lærere, og hjælpe med at vise, at programmering er tilgængelig for alle, og "lettere end du tror." På mange måder kan dette mål bedst opnås ved at give elever og lærere færre og enklere valg, med fokus på de bedste kvalitetsoplevelser for en førstegangs bruger.
+**If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
 
-Bemærk også, at 2013-CSEdWeek var en fantastisk succes, set ud fra de tilbagemeldinger lærere og elever kom med. 20 millioner deltog fra d 9.-23. december, og 97% sagde, at de nød det og ønskede at gentage kampagnen!!
-
-Så de eksisterende oversigter over øvelser er sikkert "gode nok", og de vigtigste grunde til at tilføje nye tutorials til Hour of Codes programoversigt er ikke at udvide valget, men at hæve kvaliteten (eller fornyelse) for eleverne, samt at kunne udvide mulighederne for ikke-engelsktalende kundekredse og styrke den globale karakter af kampagnen i 2014.
-
-[**Tilbage til toppen**](#top)
-
-<a id="guidelines"></a>
-
-## Generelle retningslinjer for Hour of Code aktiviteter
-
-  * **Emne:** Indledende kodning eller programmering (ikke HTML).
-  * **Mål:** At give begyndere en let introduktion til programmeringen.
-  * **Temaer:** 
-      * Programmering er ikke kun for genier. Din alder, køn og race er underordnet. Alle kan lære det!
-      * Programmering er forbundet til en lang række felter og interesser. Alle skal lære!
-      * Tilskynd eleverne til at skabe noget der kan deles med venner/online.
-  * **Typer af aktiviteter:** 
-      * **De bedste:** Web-baserede, smartphone-venlige eller unplugged aktiviteter, der lærer kodningdbegreber uden brug af en computer (Se <http://csunplugged.com/>). 
-      * **Okay, men ikke foretrukne:** app-installering, desktop programmer eller spilkonsol oplevelser.
-  * **Format:** Selv-guidede tutorials eller lektioner, eventuelt med lidt hjælp af læreren. Der bør være vejledninger for eleverne i modsætning til en open-ended timelange udfordringer. Ideelt set så skal vejledninger og tutorials være integreret direkte i programmerings platformen,for at undgå at skifte faner eller vinduer mellem tutorial´en og programmeringsplatformen.
+I sidste ende er målet med Hour of Code kampagnen er at udbrede deltagelsen i kodning for elever og lærere, og hjælpe med at vise, at programmering er tilgængelig for alle, og "lettere end du tror." På mange måder kan dette mål bedst opnås ved at give elever og lærere færre og enklere valg, med fokus på de bedste kvalitetsoplevelser for en førstegangs bruger. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
 
 [**Tilbage til toppen**](#top)
 
 <a id="submit"></a>
 
-## Sådan indsender du (inden 1/10/2014)
+## How to submit (Due 10/15/2015)
 
-Besøg [Hour of Code aktivitets indsendelsessides](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) og følg trinene for at indsende din tutorial.
+Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
 **Hvad du skal bruge:**
 
@@ -105,12 +130,12 @@ Besøg [Hour of Code aktivitets indsendelsessides](https://docs.google.com/a/cod
       * **Max character for mobiltelefon-Se:** 74
       * Vedlæg i beskrivelsen om det hovedsagligt er elev-styret eller lærer-styret. Derudover er nogle skoler interesseret i at vide om Hour of Code aktiviteten vedrører Common Core eller Next Generation Science Standards. Hvis aktiviteten omhandler specifikke standarder, overvej at medtage dette i informationen.
   * En liste over testede/kompatible platforme: 
-      * **Web-baseret:** 
+      * Web based: Which platforms have you tested 
           * OS - Mac og Win versioner
           * Browsere - IE8, IE9, IE10, Firefox, Chrome, Safari
           * iOS mobile Safari (mobil-optimerede)
           * Android Chrome (mobil-optimerede)
-      * **Ikke-webbaserede:** angive platform til den oprindelig kode (Mac, vinde, iOS, Android, xBox, eller anden)
+      * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
       * Unplugged
   * En liste over understøttede sprog og passende formater: 
       * Tutorials skal angive hvilket sprog de støtter ved hjælp af 2-karakter sprogkoder, f.eks. en - engelsk; Ja - japansk
@@ -122,15 +147,15 @@ Besøg [Hour of Code aktivitets indsendelsessides](https://docs.google.com/a/cod
       * Udskolingen: 7.-9. klasse
       * Ungdomsuddannelserne: årgangene 10 -12
       * Alle aldre
-  * Vedlæg også anbefalet programmeringsviden inden for følgende kategorier: begynder, øvet eller avanceret. Hour of Codes hjemmeside vil fremhæve begynderaktiviteterne mest fremtrædende. Hvis du vil lave mellemsvære, og avancerede Hour of Code aktiviteter, bedes du inkludere den forudgående viden, som er nødvendig i beskrivelsen af dine aktiviteter.
+  * Vedlæg også anbefalet programmeringsviden inden for følgende kategorier: begynder, øvet eller avanceret. Hour of Codes hjemmeside vil fremhæve begynderaktiviteterne mest fremtrædende. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Tekniske krav: 
       * For mere præcist at kunne spore elevernes deltagelse, vil vi have tredjeparts tutorial-partnere til også at indbygge 1 pixel sporingsbilleder på den første og sidste side i deres Hour of Code tutorials. Placer et start pixel-billede på startsiden og et afslutnings pixel-billede på sidste side. Placer ikke pixel på mellemliggende sider). Se afsnittet Tracking Pixel nedenfor, for flere detaljer. 
-      * Efter afslutningen af aktiviteten skal brugerne ledes videre til <http://code.org/api/hour/finish> hvor de vil være i stand til at: 
+      * Efter afslutningen af aktiviteten skal brugerne ledes videre til [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
           * Dele på sociale medier, at de færdige Hour of Code
           * Modtage et certifikat, at de har gennemført Hour of Code
           * Se på leaderboards hvilke lande/byer der har de højeste deltager antal i Hour of Code aktiviteterne
-          * For brugere, der bruger en time på din aktivitet og ikke fuldføre det, bedes du inkludere en knap på din aktivitet, der siger "Jeg er færdig med min Hour of Code" der også linker tilbage til <http://code.org/api/hour/finish> . 
-  * ***(Valgfrit)*** Vi vil følge op med et onlineformular survey link der beder om en rapport om de følgende aktivitetsmålinger for ugen fra kl. 12:01 d. 8. december frem til d. 14. december klokken 11:59 pm) 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
+  * *(Valgfrit)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * For online aktiviteter (især smartphone/tablet-apps): 
           * Antallet af brugere
           * Hvor mange der fuldført opgaven
@@ -146,30 +171,28 @@ Besøg [Hour of Code aktivitets indsendelsessides](https://docs.google.com/a/cod
 
 ## Forslag til hvordan du kan designe din aktivitet
 
-**Inkluder CSEdWeek logo i din tutorial.** Du kan medtage CSEdWeek logo ([små](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) eller [store](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) i din tutorial, men dette er ikke påkrævet. Du kan også kontakte os for at anmode om specifikke tilladelse til at bruge “In Partnership with Code.org” logo. ***Dette logo kan kun bruges, hvis særlige tilladelse gives skriftligt af Code.org.*** Vi kan ende med at lave et Hour of Code logo, men på dette tidspunkt har vi ikke et. Under ingen omstændigheder kan Code.org logo og navn bruges. Begge er varemærkeregistrerede, og kan ikke være blandet med et tredjeparts mærkevarenavn.
+You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. Under ingen omstændigheder kan Code.org logo og navn bruges. Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
 **Sørg for at den gennemsnitlige elev kan afslutte inden for en time.** Overvej at tilføje en tidsubestemt aktivitet i slutningen for elever, der er hurtigere gennem lektion. Husk at de fleste børn vil være absolutte begyndere til kodning.
 
 **Vedhæft lærernoter.** De fleste aktiviteter bør være elev-rettet, men hvis en aktivitet skal ledes af en lærer, så inkluder tydelige og enkle anvisninger til læreren i form af lærer-noter på en separat URL indsendt med din aktivitet. Det er ikke kun eleverne der er nybegyndere, det er mange af lærerne også. Medtage også information om:
 
   * Vores tutorial fungerer bedst på følgende platforme og browsere
-  * Virker det på smartphones? tablets?
+  * Does it work on smartphones? Tablets?
   * Vil du anbefale parvis kodning? 
-  * Overvejelser om brug i et klasseværelse? fx hvis der er videoer, rådgiv lærere om at vise videoerne på en skærm, for at hele klassen kan se det sammen
+  * Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
 
 **Indarbejd feedback i slutningen af aktiviteten.** (F.eks.: "du færdig 10 niveauer og lærte om løkker! Great job!")
 
-**Indarbejde sociale medier.** Tilskynde eleverne til at poste til sociale medier (hvis det er relevant), når de er færdig. For eksempel "Jeg har gennemført Hour of Code med ___ har du?" #HourOfCode"eller"Jeg har gennemført en #HourofCode som en del af #CSEdWeek. Har du? @Scratch." Brug hashtag **#HourOfCode** (med store bogstaver H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode"eller"Jeg har gennemført en #HourofCode som en del af #CSEdWeek. Har du? @Scratch." Brug hashtag **#HourOfCode** (med store bogstaver H, O, C)
 
-**Opret din aktivitet i sprog udover engelsk.** Vi fokusere denne kampagne internationalt i år og vil gerne have et antal aktiviteter at tilbyde ikke-engelsk talende deltagere.
+**Create your activity in Spanish or in other languages besides English.** ]
 
 **Forklaring eller tilslutning til en socialt signifikant sammenhængs aktivitet.** Programmering bliver en supermagt, når eleverne ser, hvordan det kan ændre verden til det bedre!
 
 **Forlang ikke tilmelding eller betaling før eleverne kan prøve din tutorial.** Tutorials der kræver tilmelding eller betaling vil ikke blive vist
 
-**Sørg for at din tutorial kan bruges i [parvis kodning ](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
-
-De tre regler for parvis kodning i en skolesammenhæng:
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** The three rules of pair programming in a school setting are:
 
   * Føreren kontrollerer musen og tastatur.
   * Navigator kommer med forslag, påpeger fejl og stiller spørgsmål. 
@@ -187,15 +210,15 @@ Fordelene ved parvis kodning:
 
 ## Retningslinjer for varemærker
 
-Med 40 millioner elever, som har prøvet Hour of Code og over 97% af de deltagende lærere, som beder os om at gentage arrangementet hvert år, så vil vi sikre os, at vi kan gøre Hour of Code til en bevægelse, der kan gentages hvert år, med større præcision og uden forvirring.
+After the success of the 2013 campaign, we took steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
 Én del af dette er, at beskytte varemærket "Hour of Code" for, at forhindre forvirring. Mange af vores tutorial-partnere har brugt "Hour of Code" på deres websteder. Vi ønsker ikke at forhindre denne anvendelse, men vi vil sørge for at det passer inden for nogle grænser:
 
-  1. Enhver reference til "Hour of Code" bør anvendes på en måde, der ikke tyder på, at det er dit eget navn, men snarere henviser til Hour of Code som en græsrodsbevægelse. Et godt eksempel: "Deltage i the Hour of Code på ACMECorp.com". Dårligt eksempel: "Prøve Hour of Code, udviklet af ACME Corp"
+  1. Enhver reference til "Hour of Code" bør anvendes på en måde, der ikke tyder på, at det er dit eget navn, men snarere henviser til Hour of Code som en græsrodsbevægelse. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Dårligt eksempel: "Prøve Hour of Code, udviklet af ACME Corp"
   2. Brug en "TM" hævet skrift på de mest fremtrædende steder, hvor du nævner "Hour of Code", både på webstedet og i app beskrivelser
   3. Inkluder sprog på siden (eller i den sidefod), herunder links til hjemmesiderne CSEdWeek og Code.org, der siger følgende:
     
-    ***"'Hour of Code' er et landsdækkende initiativ fra Computer Science Education Week[csedweek.org] og Code.org [code.org] som vil indføre millioner af elever til en times kodning og edb-programmering."***
+    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
   4. Ingen brug af "Hour of Code" i app navne
 
@@ -211,13 +234,12 @@ Dette vil give os mulighed for at tælle brugere, som du får til at besøge din
 
 Hvis din tutorial bliver godkendt og medtages på den endelige tutorial side, vil Code.org give dig en unik tracking pixel til dig, til at integrere på din tutorial. Se nedenstående eksempel.
 
-***Bemærk: Dette er ikke vigtigt at gøre for installerbare programmer (iOS/Android apps eller desktop-installere apps)***
+Bemærk: Dette er ikke vigtigt at gøre for installerbare programmer (iOS/Android apps eller desktop-installere apps)
 
-**Eksempel på tracking pixels for AppInventor:**
+Eksempel på tracking pixels for AppInventor:
 
-IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
-
-IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
+IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
+IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
 [**Tilbage til toppen**](#top)
 
@@ -225,10 +247,9 @@ IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
 ## Promoting af dine tutorials, CSEdWeek og Hour of Code
 
-Vi beder alle om at fremme deres egen 1 times tutorial til dine brugere. Venligst link direkte dem til jeres Hour of Code side. Brugerne er langt mere tilbøjelige til at reagere på en mail fra dig om din tutorial. Bruge den internationale Hour of Code kampagne for Computer Science Education Week som en anledning til at opfordre brugerne til at invitere andre til at deltage, hjælpe os med at nå 100 millioner samlede deltagere.
+Vi beder alle om at fremme deres egen 1 times tutorial til dine brugere. Please direct them to ***your*** Hour of Code page. Brugerne er langt mere tilbøjelige til at reagere på en mail fra dig om din tutorial. Bruge den internationale Hour of Code kampagne for Computer Science Education Week som en anledning til at opfordre brugerne til at invitere andre til at deltage, hjælpe os med at nå 100 millioner samlede deltagere.
 
-  * Vis Hour of Code og CSEdWeek på din hjemmeside.   
-    Ex: <http://www.tynker.com/hour-of-code>
+  * Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
   * Promover Hour of Code ved hjælp af de sociale medier, traditionelle medier, postlister, osv., ved hjælp af hashtaget **#HourOfCode** (med store bogstaver H, O, C)
   * Være vært for en lokal begivenhed eller spørg dine medarbejdere til at være vært for en begivenhed på den lokale skoler eller lokalgrupper.
   * Se vores resource kit for at få yderligere oplysninger (kommer snart).
@@ -242,3 +263,5 @@ Vi beder alle om at fremme deres egen 1 times tutorial til dine brugere. Venligs
 Hvis du opretter en tutorial, der er designet til de svagtseende, vil vi gerne fremhæve det for seerne med skærm-læsere. Vi har endnu ikke modtaget sådan en tutorial, men vi vil meget gerne også give disse elever muligheder.
 
 [**Tilbage til toppen**](#top)
+
+<%= view :signup_button %>

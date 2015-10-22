@@ -1,5 +1,5 @@
 ---
-title: Parteneri Hour of Code România 
+title: Parteneri Hour of Code România
 nav: about_nav
 social:
   'og:title' : ‘Hour of Code România se apropie'
@@ -13,7 +13,7 @@ social:
   "og:video:type": ""
 ---
 
-# Sponsori Hour of Code România 
+# Sponsori Hour of Code România
 
 <div class="container main-content">
 
@@ -22,11 +22,11 @@ social:
 
         <h2 class="text-align-center">Sponsori corporate</h2><div class="row"><div class="col-sm-3 col span_3 one-fourths clear-both">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.intel.com" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/11/intSFT_rgb-175x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.intel.com" target="_blank"><img style="max-width: 100%" src="/images/adfaber/intSFT_rgb-175x160.png"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3 one-fourths right-edge">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/10/upc-logo-cmyk-lo-e1417814082326-156x160.png">
+                      <img style="max-width: 100%" src="/images/adfaber/upc-logo-cmyk-lo-e1417814082326-156x160.png">
                     </div>
                   </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
@@ -54,15 +54,15 @@ social:
                     </div>
                   </div><div class="col-sm-3 col span_3 one-fourths right-edge">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://strategad.com" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/10/strategad-162x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://strategad.com" target="_blank"><img style="max-width: 100%" src="/images/adfaber/strategad-162x160.png"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3 one-fourths clear-both">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.facebook.com/GirlsWhoCodeRO" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/10/GWCR_logo_300-160x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.facebook.com/GirlsWhoCodeRO" target="_blank"><img style="max-width: 100%" src="/images/adfaber/GWCR_logo_300-160x160.png"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3 one-fourths right-edge">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.facebook.com/GITRomania" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/10/romania_GIT-336x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.facebook.com/GITRomania" target="_blank"><img style="max-width: 100%" src="/images/adfaber/romania_GIT-336x160.png"></a>
                     </div>
                   </div></div><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
@@ -98,39 +98,39 @@ social:
                     </div>
                   </div><div class="col-sm-3 col span_3 one-fourths right-edge">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://techsoup.ro/" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/10/logo_techsoup_fundal_tranparent-285x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://techsoup.ro/" target="_blank"><img style="max-width: 100%" src="/images/adfaber/logo_techsoup_fundal_tranparent-285x160.png"></a>
                     </div>
                   </div></div><div class="row"><div class="col-sm-3 col span_3 one-fourths clear-both">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.rgda.ro" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/10/RGDA-new-logo-336x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.rgda.ro" target="_blank"><img style="max-width: 100%" src="/images/adfaber/RGDA-new-logo-336x160.png"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3 one-fourths right-edge">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.anis.ro" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/10/logo-ANIS-L-full-RO-326x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.anis.ro" target="_blank"><img style="max-width: 100%" src="/images/adfaber/logo-ANIS-L-full-RO-326x160.png"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3 one-fourths clear-both">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.femei-in-afaceri.ro/ro/index" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/10/FIA_negru-382x160.jpg"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.femei-in-afaceri.ro/ro/index" target="_blank"><img style="max-width: 100%" src="/images/adfaber/FIA_negru-382x160.jpg"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3 one-fourths right-edge">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.lsacbucuresti.ro/" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/10/sigla_LSAC_vectorial_72dpi-1-452x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.lsacbucuresti.ro/" target="_blank"><img style="max-width: 100%" src="/images/adfaber/sigla_LSAC_vectorial_72dpi-1-452x160.png"></a>
                     </div>
                   </div></div><div class="row"><div class="col-sm-3 col span_3 one-fourths clear-both">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://acs.pub.ro/" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/10/ACS_logo_digit-1-364x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://acs.pub.ro/" target="_blank"><img style="max-width: 100%" src="/images/adfaber/ACS_logo_digit-1-364x160.png"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3 one-fourths right-edge">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.upb.ro/" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/10/Sigla_UPB_color-1-e1414702368515-160x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.upb.ro/" target="_blank"><img style="max-width: 100%" src="/images/adfaber/Sigla_UPB_color-1-e1414702368515-160x160.png"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3 one-fourths clear-both">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.geyc.ro/" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/10/logo_geyc-2-279x160.jpg"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.geyc.ro/" target="_blank"><img style="max-width: 100%" src="/images/adfaber/logo_geyc-2-279x160.jpg"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3 one-fourths right-edge">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.ipp.ro/" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/10/IPP-163x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.ipp.ro/" target="_blank"><img style="max-width: 100%" src="/images/adfaber/IPP-163x160.png"></a>
                     </div>
                   </div></div>
 
@@ -145,6 +145,6 @@ social:
 
 ---
 
-## Parteneri Tutorial 
+## Parteneri Tutorial
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'tutorial') %>

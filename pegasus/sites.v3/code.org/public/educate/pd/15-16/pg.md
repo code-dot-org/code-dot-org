@@ -18,11 +18,9 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-#### In-person workshop####
+
 Milestone Complete! 
 
-#### Online Study ####
- <b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
@@ -43,11 +41,15 @@ Quarter 4: Saturday, May 14, 2016
 8:30am - 3:30pm
 <br/>
 Breakfast and lunch will be served.
-<br/><br/>
+
 **Location**
 
-TBD
-<br/><br/>
+Prince George's Community College<br/>
+Center for the Advancement of Technology (CAT)<br/>
+Room 110<br/>
+301 Largo Rd</br>
+Largo, MD 20774
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger

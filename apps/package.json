@@ -2,7 +2,7 @@
   "name": "blockly-mooc",
   "version": "0.0.161",
   "repository": "code-dot-org/code-dot-org",
-  "license" : "SEE LICENSE IN LICENSE",
+  "license": "SEE LICENSE IN LICENSE",
   "engines": {
     "node": ">=0.10.25 <0.13",
     "npm": "^2.9.1"
@@ -28,12 +28,15 @@
   "devDependencies": {
     "@cdo/apps": "file:src",
     "@cdo/shared": "file:../shared/js",
+    "Base64": "0.3.0",
     "browserify": "10.2.4",
     "browserify-shim": "3.8.10",
+    "browserify-incremental": "3.0.1",
     "chai": "1.10.0",
     "connect-livereload": "0.5.3",
     "ejs": "0.8.4",
     "ejsify": "1.0.0",
+    "es6-promise": "3.0.2",
     "express": "4.11.2",
     "factor-bundle": "2.3.3",
     "glob": "5.0.14",
@@ -75,12 +78,12 @@
     "require-globify": "1.2.1",
     "rfile": "1.0.0",
     "seedrandom": "2.4.2",
+    "sinon": "^1.16.1",
     "through": "2.3.8",
     "uglify-js": "2.4.24",
     "watchify": "3.2.3",
     "which": "1.1.1",
     "wrench": "1.5.8",
-    "xmldom": "0.1.19",
-    "Base64": "0.3.0"
+    "xmldom": "0.1.19"
   }
 }

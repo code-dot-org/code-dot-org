@@ -27,7 +27,7 @@ import header;
   def rack_env?(env)
     env.to_s == node.chef_environment
   end
-  
+
   def session_cookie
     append_env '_learn_session'
   end
@@ -266,26 +266,6 @@ director dashboard round-robin {
 <% end %>
 }
 
-# api.change.org
-backend api_change_org_4 {
-  .host = "104.16.4.13";
-  .port = "80";
-  .connect_timeout = 600s;
-  .first_byte_timeout = 600s;
-  .between_bytes_timeout = 600s;
-}
-backend api_change_org_5 {
-  .host = "104.16.5.13";
-  .port = "80";
-  .connect_timeout = 600s;
-  .first_byte_timeout = 600s;
-  .between_bytes_timeout = 600s;
-}
-director api_change_org round-robin {
-  { .backend = api_change_org_4; }
-  { .backend = api_change_org_5; }
-}
-
 # Respond to incoming requests.
 sub vcl_recv
 {
@@ -375,7 +355,7 @@ node['cdo-apps']['i18n']['languages'].to_hash.keys.each do |language|
 end
 %>
 
-  if (req.http.host == "<%= canonical_hostname('learn.code.org') %>" ||
+  if (req.http.host ~ "(dashboard|studio).code.org$" ||
       req.http.host == "<%= canonical_hostname('studio.code.org') %>" ||
       req.http.host == "code-dot-org.cartoonnetworkarabic.com")
   {
@@ -395,13 +375,6 @@ end
     set req.backend = dashboard;
     set req.http.host = "<%= canonical_hostname('studio.code.org') %>";
     set req.url = regsub(req.url, "^/dashboardapi/", "/api/");
-    return(pass);
-  }
-  else if (req.url ~ "^/api/change.org/")
-  {
-    set req.backend = api_change_org;
-    set req.http.host = "api.change.org";
-    set req.url = regsub(req.url, "^/api/change.org/", "/");
     return(pass);
   }
   else
@@ -442,23 +415,28 @@ end
     }
   }
 
-  # Always cache the following file types for all users.
-  if( (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js)(\?[a-z0-9]+)?$") && (!(req.url ~ "^/api/")) ) {
-    unset req.http.Cookie;
-  }
-
   # Remove all cookies that our sites don't need to know about. ANY remaining
   # cookie will cause the request to pass-through to a backend. For the most part
   # we always set the NO_CACHE cookie after any POST request, disabling the
   # Varnish cache temporarily. The session cookie allows all authenticated users
   # to pass through as long as they're logged in.
+
+  # For the following file types, blow away the cookie (unless under one of the
+  # blacklisted paths), so that we always cache.
+  if (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js|ttf|woff|woff2)(\?[a-z0-9]+)?$" &&
+      !(req.url ~ "^/api/") &&
+      !(req.url ~ "^/v3/assets/") &&
+      (req.request == "GET" || req.request == "HEAD")) {
+    unset req.http.Cookie;
+  }
+
   if (req.http.Cookie) {
     if (req.url ~ "^/volunteers") {
       cookie.filter_except("_fe_session,hour_of_code,NO_CACHE");
     } else if (req.url ~ "^/auth") {
       cookie.filter_except("cdo-private,hour_of_code,NO_CACHE");
     } else if (
-        req.http.host == "<%= canonical_hostname('learn.code.org') %>" ||
+        req.http.host ~ "(dashboard|studio).code.org$" ||
         req.http.host == "<%= canonical_hostname('studio.code.org') %>" ||
         req.url ~ "^/dashboardapi/" ||
         req.url ~ "^/v2/" ||
@@ -474,7 +452,7 @@ end
         req.url ~ "^/ops-dashboard" ||
         req.url ~ "^/poste"
       ) {
-      cookie.filter_except("<%=[session_cookie,deprecated_storage_cookie,storage_id_cookie].join(',')%>,language_,hour_of_code,NO_CACHE");
+      cookie.filter_except("<%=[session_cookie,deprecated_storage_cookie,storage_id_cookie].join(',')%>,language_,progress,lines,scripts,videos_seen,callouts_seen,hour_of_code,NO_CACHE");
     } else {
       cookie.filter_except("NO_CACHE");
     }

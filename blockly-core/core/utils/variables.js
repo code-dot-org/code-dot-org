@@ -173,7 +173,11 @@ Blockly.Variables.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
 * If no unique name is located it will try 'i1' to 'z1', then 'i2' to 'z2' etc.
 * @return {string} New variable name.
 */
-Blockly.Variables.generateUniqueName = function() {
+Blockly.Variables.generateUniqueName = function(baseName) {
+  if (baseName) {
+    return Blockly.Variables.generateUniqueNameFromBase_(baseName);
+  }
+
   var variableList = Blockly.Variables.allVariables();
   var newName = '';
   if (variableList.length) {
@@ -215,4 +219,34 @@ Blockly.Variables.generateUniqueName = function() {
     newName = 'i';
   }
   return newName;
+};
+
+/**
+ * Given a base name, attempts to find an unused variable using that baseName
+ * followed by an integer. For example, if given "counter1", it will look at
+ * counter1, then counter2, then counter3, etc.
+ * @param {string} baseName
+ */
+Blockly.Variables.generateUniqueNameFromBase_ = function(baseName) {
+  var variableList = Blockly.Variables.allVariables();
+  if (variableList.indexOf(baseName) === -1) {
+    return baseName;
+  }
+
+  var num = 1;
+  var match = /^([^\d]*)(\d+)$/.exec(baseName);
+  if (match) {
+    baseName = match[1];
+    num = parseInt(match[2], 10) + 1;
+  }
+
+  // There are more efficient ways this could be done if we have large numbers
+  // of variables, but since we expect on the order of 10s in the worst case,
+  // I optimized for code simplicity
+  do {
+    var newName = baseName + num.toString();
+    if (variableList.indexOf(newName) === -1) {
+      return newName;
+    }
+  } while(num++);
 };

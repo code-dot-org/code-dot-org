@@ -1,8 +1,0 @@
-name 'Pixelation 3'
-title 'Pixelation 3'
-description 'Create images with bits and bytes.'
-href 'pixelation/pixelation.html'
-
-version '3'
-hex 'true'
-data '07070329CB8A72E29CB8A72E29CB8A72E29CB8A72E2'

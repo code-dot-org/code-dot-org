@@ -7,7 +7,7 @@
   "properties": {
     "skin": "studio",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return Studio.Globals.points == 10;\r\n}",
-    "failure_condition": "function () {\r\n}",
+    "failure_condition": "function () {\r\n   return Studio.Globals.points != 10;\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
       "leftButton",
@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Let's build a game! First we'll need a score. Use the \"set points to\" block to set the score to 10. ",
+    "instructions": "Let's build a game! First we'll need a score. Rebuild the code that you saw in the last level to set the score to 10. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -28,7 +28,17 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "embed": "false"
+    "embed": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>

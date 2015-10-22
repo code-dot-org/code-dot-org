@@ -1,5 +1,6 @@
 name 'U3L34 Student Lesson Introduction'
 title 'Arrays and Loops: Hidden Images'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 34 - Arrays and Loops: Hidden Images

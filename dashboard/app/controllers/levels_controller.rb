@@ -17,7 +17,7 @@ class LevelsController < ApplicationController
   # GET /levels
   # GET /levels.json
   def index
-    @levels = Level.order(:game_id)
+    @levels = Level.all
   end
 
   # GET /levels/1
@@ -25,7 +25,6 @@ class LevelsController < ApplicationController
   def show
     view_options(
         full_width: true,
-        no_footer: !@game.has_footer?,
         small_footer: @game.uses_small_footer? || enable_scrolling?,
         has_i18n: @game.has_i18n?
     )
@@ -234,13 +233,14 @@ class LevelsController < ApplicationController
       :user,
       :dsl_text,
       :encrypted,
+      {poems: []},
       {concept_ids: []},
-      {soft_buttons: []}
+      {soft_buttons: []},
+      {examples: []}
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
     params[:level][:soft_buttons].delete_if(&:empty?) if params[:level][:soft_buttons].is_a? Array
-
     permitted_params.concat(Level.serialized_properties.values.flatten)
     params[:level].permit(permitted_params)
   end

@@ -2,6 +2,7 @@ es:
   errors:
     messages:
       not_saved: 'Por favor corrije los siguientes errores:'
+      too_young: Este contenido tiene restricciones de edad y no está disponible para los estudiantes más jóvenes
   activerecord:
     errors:
       messages:
@@ -306,6 +307,10 @@ es:
       viewing_solution: Visualizando la Solución
       try_it_yourself: Inténtalo tu mismo
       section: Sección
+      example: Solución de ejemplo
+      example_with_number: 'Example Solution %{solution_number}'
+      submitted_on: 'Submitted on %{date}'
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
     email_confirm_needed_required: 'Tu dirección de email %{email} no ha sido confirmada:'
@@ -349,7 +354,7 @@ es:
     local_school: escuela local
     online: en línea
     see_details: Ver detalles
-    view_course: View Course
+    view_course: Ver el curso
     prize_info: 'Premio por participación (solo maestros de escuelas públicas de Estados Unidos): hasta 1000 dólares en material escolar.'
     tryfirst: 'O, puedes probarlo primero y registrarte más adelante:'
     trynow: Probar ahora
@@ -359,13 +364,16 @@ es:
     try_beta_courses: ¡Nuevo! Prueba nuestros cursos en beta para estudiantes de 6 a 11 años K-5
     use_as_teacher: Usa este sitio como un maestro
     heading_hoc2014: '<h2>La Hora Del Código Para</h2><h1>Todas Las Edades</h1>'
-    heading_elementary: '<h2>Cursos de 20 Horas para</h2><h1>Principiantes (todas las edades)</h1>'
+    heading_elementary: '<h2>Cursos de 20 Horas sobre</h2><h1>Fundamentos de la Ciencia Computacional (todas las edades)</h1>'
     heading_apps: '<h2>Diversión para</h2><h1>Todos</h1>'
     heading_legacy: '<h2>Nuestro curso acelerado para</h2><h1>Todas las edades</h1>'
     your_gallery: Galeria
-    no_primary_course: Prueba un curso en Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
+    no_primary_course: Prueba un curso de Code Studio
+    choose_next_course: Prueba un curso de Código Studio eligiendo uno a continuación
     print_certificate: Imprimir Certificado
+  share:
+    title: Aprender en Código Studio
+    description: Cualquier persona puede aprender informática. Crear juegos, aplicaciones y arte con código.
   gender:
     male: Varón
     female: Mujer
@@ -374,16 +382,24 @@ es:
     student: estudiante
     teacher: Profesor
   footer:
-    help_from_html: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado a crear este tutorial.
+    thank_you: 'Agradecemos a nuestros <a href="https://code.org/about/donors">donantes</a>, <a href="https://code.org/about/partners">aliados</a>, nuestro <a href="https://code.org/about/team">equipo extendido</a> nuestro elenco de video y nuestros <a href="https://code.org/about/advisors">asesores académicos</a> por su apoyo a la creación de Codigo Studio.'
+    help_from_html: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado a crear estos materiales educativos.
+    help_from_html_old: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado a crear este material.
     art_from_html: 'Angry Brids&trade;&&copy; 2009-2013 Rovio Entertainment Ltd. Todos los derechos reservados. <br/>Plantas vs. Zombies&trade;&&copy; 2013 Electronic Arts Inc. Todos los derechos reservados.'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados.<br />Plantas vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados'
     powered_by_aws: Powered by Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, el logotipo de CODE y hora de Codigo &reg; son marcas registradas de Code.org.'
+    copyright: Derechos de autor
+    more: Más
     feedback: Enviar comentarios
     translate: Ayúdanos a traducir a tu idioma
     support: Soporte
     support_url: http://support.code.org
+    tos_short: Términos
     tos: Términos
     privacy: Política de Privacidad
     secure: Versión Segura
+    report_abuse: Report Abuse
   reference_area:
     title: ¿Necesitas ayuda?
     subtitle: Ver estos videos y sugerencias
@@ -504,6 +520,10 @@ es:
     open_response_body: Gracias por tu respuesta!
   dialog:
     ok: OK
+    startover_title: ¿Seguro que quieres empezar de nuevo?
+    startover_body: Esto reiniciará el rompecabeza a su estado inicial y reiniciara todos los datos que hayas agregado o cambiado.
+    startover_ok: Volver a empezar
+    startover_cancel: Cancelar
   time:
     hour: 1 hora
     day: día
@@ -567,7 +587,7 @@ es:
     my_projects: Mis Proyectos
     share: Compartir
     share_title: Compartir su Proyecto
-    share_copy_link: 'Copiar el Enlace:'
+    share_copy_link: 'Copiar el enlace:'
     close: Cerrar
     more: Más
     name: Nombre
@@ -581,8 +601,29 @@ es:
     saved: Guardado
     not_saved: No guardado
     cancel: Cancelar
-    delete_confirm_title: Esta seguro de querer eliminar este proyecto?
-    delete_confirm_text: Eliminar su proyecto hará que se retire permanentemente de su lista de proyectos. Cualquiera que tenga un enlace compartido por usted no podrá seguir viendo el proyecto.
+    delete_confirm_title: ¿Está seguro de que quiere eliminar este proyecto?
+    delete_confirm_text: Borrar su proyecto hará que se retire permanentemente de su Lista de Proyectos. Cualquiera que tenga un enlace compartido por usted no podrá seguir viendo este proyecto.
     view_all: Ver Mis Proyectos
     remix: Remezclar
     click_to_remix: "¡Haz clic en 'Remix' para obtener tu propia versión!"
+    edit_project: Editar proyecto
+    abuse:
+      tos: "Este proyecto ha sido denunciado por violar los <a href='http://code.org/tos'>Términos de Uso</a> y no puede ser compartido con otros."
+      contact_us: "Si cree que esto es un error, por favor <a href='https://code.org/contact'>contáctenos.</a>"
+      go_to_code_studio: Ve a Code Studio
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        validation:
+          email: Please provide an email address
+          age: Please specify an age
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
+          harassment: Threats, cyberbullying, harassement
+          offensive: Offensive content
+          infringement: Copyright Infringement
+          other: Otros
+        detail: Please provide as much detail as possible regarding the content you are reporting.
+        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'

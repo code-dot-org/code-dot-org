@@ -24,7 +24,7 @@ offering the Hour of Code in your classroom or after school program. If you're
 planning on participating in the Hour of Code, or if you have any questions,
 watch it!
 
-<iframe allowfullscreen="" frameborder="0" height="360" src="http://www.youtubeeducation.com/embed/hfZrX5YDltU?iv_load_policy=3" style="margin-bottom: 0px; margin-top: 0px" width="640"></iframe>
+<iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtubeeducation.com/embed/hfZrX5YDltU?iv_load_policy=3" style="margin-bottom: 0px; margin-top: 0px" width="640"></iframe>
 
 (Can't play it online? [Download](https://dl.dropboxusercont
 ent.com/s/6swx35qq5ljleom/HourOfCodeWalkthrough.mp4?token_hash=AAHHqIlb77DTpBo

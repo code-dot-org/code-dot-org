@@ -1,3 +1,24 @@
+# == Schema Information
+#
+# Table name: scripts
+#
+#  id              :integer          not null, primary key
+#  name            :string(255)      not null
+#  created_at      :datetime
+#  updated_at      :datetime
+#  wrapup_video_id :integer
+#  trophies        :boolean          default(FALSE), not null
+#  hidden          :boolean          default(FALSE), not null
+#  user_id         :integer
+#  login_required  :boolean          default(FALSE), not null
+#  properties      :text(65535)
+#
+# Indexes
+#
+#  index_scripts_on_name             (name) UNIQUE
+#  index_scripts_on_wrapup_video_id  (wrapup_video_id)
+#
+
 # A sequence of Levels
 class Script < ActiveRecord::Base
   include Seeded
@@ -6,6 +27,7 @@ class Script < ActiveRecord::Base
   has_many :stages, -> { order('position ASC') }, dependent: :destroy, inverse_of: :script
   has_many :users, through: :user_scripts
   has_many :user_scripts
+  has_many :hint_view_requests
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
   validates :name, presence: true, uniqueness: { case_sensitive: false}
@@ -20,6 +42,7 @@ class Script < ActiveRecord::Base
   TWENTY_FOURTEEN_NAME = 'events'
   JIGSAW_NAME = 'jigsaw'
   HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
+  HOC2015_NAME = 'hoc2015' # name of the 2015 hour of code script
   FROZEN_NAME = 'frozen'
   PLAYLAB_NAME = 'playlab'
   INFINITY_NAME = 'infinity'
@@ -173,7 +196,7 @@ class Script < ActiveRecord::Base
 
   def get_script_level_by_chapter(chapter)
     chapter = chapter.to_i
-    return nil if chapter < 1 || chapter > self.script_levels.count
+    return nil if chapter < 1 || chapter > self.script_levels.to_a.count
     self.script_levels[chapter - 1] # order is by chapter
   end
 
@@ -204,9 +227,7 @@ class Script < ActiveRecord::Base
   end
 
   def banner_image
-    if k5_course?
-      "banner_#{name}_cropped.jpg"
-    elsif self.name == 'cspunit1'
+    if has_banner?
       "banner_#{name}_cropped.png"
     end
   end
@@ -224,11 +245,15 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra cspunit1 cspunit2).include?(self.name)
+    k5_course? || %w(msm algebra cspunit1 cspunit2 cspunit3).include?(self.name)
+  end
+
+  def has_banner?
+    k5_course? || %w(cspunit1 cspunit2).include?(self.name)
   end
 
   def freeplay_links
-    if name == 'algebra'
+    if name.include?('algebra')
       ['calc', 'eval']
     else
       ['playlab', 'artist']

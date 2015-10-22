@@ -37,7 +37,7 @@
           desc: Brukeropprettede oppgaver (beta)
           Custom: Trinn 1
         Flappy Levels:
-          desc: Fuglen Flakse
+          desc: Fuglen Flappy
           Flappy: Trinn 1
         Jigsaw Levels:
           desc: Puslespill (beta)
@@ -236,17 +236,17 @@
         bounce_11: Du kan nå feste blokker til «når kjørt» blokken. Du må feste den nye «fyr ny ball» blokken på mer enn en plass. Også, prøv å skifte scenen eller farten på kontrolleren og ballen og se hvor mange poeng du kan skåre før motstanderen din har skåret to ganger.
         bounce_12: Opprett ditt eget Sprett spill. Du kan endre alle bilder og reglene. Når du er ferdig, klikk Fullfør for å la venner prøve spillet på sine telefoner.
         Custom_builder: 'Dra blokker fra verktøykassen til arbeidsområdet for å tegne nivået du vil opprette. Trykk "Kjør" når du er klar.'
-        flappy_1: 'Fest en blokk "når klikk" blokken, og trykk "Kjør". Klikk eller trykk på skjermen for å fly  Flakse til målet.'
-        flappy_2: 'Vi har nå lagt til en bakke.  Fest en blokk "når traff bakken"-blokken. Koden må "Avslutte spillet" når Flakse krasjer.'
-        flappy_3: 'Med "Når kjørt"-blokken kan du kjøre kode når spillet starter.  Prøv å sette farten og fly Flakse til målet.'
-        flappy_4: 'Flakse vil fly gjennom hindringer med mindre du skriver kode for å få han til å krasje. Feste en blokk "når truffet en hindring" blokken. Koden må "Avslutte spillet" når Flakse krasjer inn i det første settet av rør.'
-        flappy_5: 'La oss legge til en resultattavle og telle poeng når Flakse kommer seg forbi hindringer. Legge til blokken "når hinder passert" se at du får poeng år du flyr Flakse forbi de første rørene.'
-        flappy_6: Se om du fortsatt kan få poeng hvis Flakse flakser mer eller mindre.
-        flappy_7: 'Prøv å endre scenen ved å feste en annen blokk til blokk "når kjørt"-blokken.'
+        flappy_1: 'Fest en blokk til "når klikk"-blokken, og trykk "Kjør". Klikk eller trykk på skjermen for å fly Flappy til målet.'
+        flappy_2: 'Vi har nå lagt til en bakke.  Fest en blokk til "når traff bakken"-blokken. Koden må "Avslutte spillet" når Flappy krasjer.'
+        flappy_3: 'Med "Når kjørt"-blokken kan du kjøre kode når spillet starter.  Prøv å sette farten og flaks til målet.'
+        flappy_4: 'Flappy vil fly gjennom hindringer med mindre du skriver kode for å få ham til å krasje. Fest en blokk til "når treffer en hindring"-blokken. Koden må "Avslutte spillet" når Flappy krasjer inn i det første rørsettet.'
+        flappy_5: 'La oss legge til en resultattavle og telle poeng når Flappy kommer seg forbi hindringer. Utvid blokken "når passert hindring" og se at du får poeng når du flyr Flappy forbi de første rørene.'
+        flappy_6: Se om du fortsatt kan få poeng hvis Flappy flakser mer eller mindre.
+        flappy_7: 'Prøv å endre scenen ved å feste en annen blokk til "når den kjører"-blokken.'
         flappy_8: Du kan angi visuelle effekter når som helst, ikke bare når spillet starter. Prøv å angi en tilfeldig scene når andre hendelser skjer, for eksempel når du passerer en hindring.
         flappy_9: For å blande ting, når du treffer et hinder, i stedet for å avslutte spillet Prøv innstillingen score tilbake til 0.
-        flappy_11: Lag ditt eget Flakse-spill! Du kan endre alle bilder og alle regler, selv tyngdekraften. Når du er ferdig, klikk Fullfør og du kan la vennene dine prøve spillet på sine telefoner.
-        flappy_k1_1: Spill Flakse
+        flappy_11: Lag ditt eget Flappy-spill! Du kan endre alle bilder og alle regler, selv tyngdekraften. Når du er ferdig, klikk Fullfør og du kan la vennene dine prøve spillet på sine telefoner.
+        flappy_k1_1: Spill Flappy
         flappy_k1_2: 'Fest en blokk til "når klikk"-blokken og trykk "Start". Klikk eller trykk på skjermen for å fly Flakse til målet.'
         flappy_k1_3: 'Vi har nå lagt til en bakke.  Fest en blokk "når traff bakken"-blokken. Koden må "Avslutte spillet" når Flakse krasjer.'
         flappy_k1_4: 'Med "Når startet"-blokken kan du koden som skal kjøre når spillet starter.  Prøv å sette farten og så flakse i vei til målet.'
@@ -333,7 +333,7 @@
         maze_intro: Labyrint intro
         artist_intro: Kunstner intro
         farmer_intro: Bonde intro
-        flappy_intro: Flakse Intro
+        flappy_intro: Introduksjon til Flappy
         loop_times: En blokk for å gjenta noe et antall ganger
         loop_until: Gjenta inntil blokk
         if: Hvis-blokk
@@ -412,6 +412,8 @@
         C4_variables_artist: 'Variabler - Kunstner'
         C4_variables_playlab: Variabler – Spill-Lab
         C4_for_loops: For-løkker
+        C4_for_loops_bee: For-løkker
+        C4_for_loops_no_bee: For-løkker
         C4_math_artist: Programmere Kunstneren med Matematikk
         C4_function_edit: Redigere Funksjoner
         C4_function_create: Lage Funksjoner
@@ -433,6 +435,7 @@
         infinity_playlab_intro: Spill-Lab – introduksjon
         infinity_playlab_events: Spill-Lab – hendelser
         infinity_playlab_repeat_forever: Spill-Lab Gjenta for alltid
+        csp_applab_functions: Introduksjon til funksjoner
         csp_concept_rgb: Litt om pixler
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
@@ -440,6 +443,7 @@
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
         csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'
@@ -460,6 +464,9 @@
         alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
         alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
         alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: 'Dra en "flytt" blokk og fest den under den andre blokken'

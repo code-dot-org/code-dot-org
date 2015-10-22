@@ -7,7 +7,7 @@
   "properties": {
     "skin": "bee",
     "instructions": "Assessment: Use the repeat block to collect all of the nectar.",
-    "step_mode": "0",
+    "step_mode": 1,
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "start_direction": "1",

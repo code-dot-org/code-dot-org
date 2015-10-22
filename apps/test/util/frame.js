@@ -11,8 +11,8 @@ function setGlobals () {
   document.body.innerHTML = '<div id="codeApp"><div id="app"></div></div>';
   // locale file requires Blockly as a global
   try {
-    // Get our digested copy of blockly
-    window.Blockly = require('../../build/package/js/blockly-????????????????????????????????.js', { mode: 'expand'});
+    // Get our (potentially) digested copy of blockly
+    window.Blockly = require('../../build/package/js/blockly*js', { mode: 'expand'});
     require('../../lib/blockly/en_us');
   } catch (err) {
     console.log(err);

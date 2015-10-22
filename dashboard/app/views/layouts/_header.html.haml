@@ -1,3 +1,4 @@
+= console if @use_web_console
 - script = local_assigns[:script] || Script.twenty_hour_script
 - script_level = local_assigns[:script_level]
 - level = local_assigns[:level]
@@ -52,7 +53,9 @@
               = render partial: 'shared/user_header'
 
 - if script_level
+  - user_progress = current_user == nil ? 'null' : summarize_user_progress(script_level.script, @user || current_user).to_json
+
   :javascript
     //<![CDATA[
-    dashboard.buildHeader(#{script_level.stage.summarize.to_json}, #{summarize_user_progress(script_level.script, @user || current_user).to_json}, #{script_level.level_id}, #{@user.try(:id) || 'null'}, #{@section.try(:id) || 'null'});
+    dashboard.buildHeader(#{script_level.stage.summarize.to_json}, #{user_progress}, #{script_level.level_id}, #{@user.try(:id) || 'null'}, #{@section.try(:id) || 'null'})
     //]]>

@@ -17,14 +17,25 @@ FactoryGirl.define do
       birthday Date.new(1980, 03, 14)
       factory :facilitator do
         name 'Facilitator Person'
+        after(:create) do |facilitator|
+          facilitator.permission = 'facilitator'
+          facilitator.save
+        end
       end
       factory :district_contact do
         name 'District Contact Person'
+        ops_first_name 'District'
+        ops_last_name 'Person'
       end
     end
 
     factory :student do
       user_type User::TYPE_STUDENT
+    end
+
+    factory :young_student do
+      user_type User::TYPE_STUDENT
+      birthday Time.zone.today - 10.years
     end
   end
 
@@ -39,7 +50,7 @@ FactoryGirl.define do
   end
 
   factory :level, :class => Blockly do
-    sequence(:name) { |n| "Level #{n}" }
+    sequence(:name) { |n| "Level_#{n}" }
     sequence(:level_num) {|n| "1_2_#{n}" }
 
     # User id must be non-nil for custom level
@@ -50,6 +61,22 @@ FactoryGirl.define do
       video_key {create(:video).key}
     end
 
+    trait :never_autoplay_video_true do
+      with_autoplay_video
+      after(:create) do |level|
+        level.never_autoplay_video = 'true'
+        level.save!
+      end
+    end
+
+    trait :never_autoplay_video_false do
+      with_autoplay_video
+      after(:create) do |level|
+        level.never_autoplay_video = 'false'
+        level.save!
+      end
+    end
+
     trait :blockly do
       game {create(:game, app: "maze", name: "Maze")}
     end
@@ -58,6 +85,12 @@ FactoryGirl.define do
       game {create(:game, app: "unplug")}
     end
 
+    trait :with_ideal_level_source do
+      after :create do |level, _|
+        level.ideal_level_source = create(:level_source, level: level)
+        level.save!
+      end
+    end
   end
 
   factory :unplugged, :parent => Level, :class => Unplugged do
@@ -73,6 +106,7 @@ FactoryGirl.define do
   end
 
   factory :maze, :parent => Level, :class => Maze do
+    skin 'birds'
   end
 
   factory :applab, :parent => Level, :class => Applab do
@@ -83,11 +117,21 @@ FactoryGirl.define do
     level
     data '<xml/>'
     md5 { Digest::MD5.hexdigest(data) }
+    trait :with_image do
+      level { create(:level, game: Game.find_by_app(Game::ARTIST))}
+      after :create do |level_source, _|
+        create :level_source_image, level_source: level_source
+      end
+    end
   end
 
   factory :level_source_image do
     level_source
-    image File.read(Rails.root.join('test/fixtures/artist_image_blank.png'), binmode: true)
+  end
+
+  factory :gallery_activity do
+    user
+    activity { create(:activity, level_source: create(:level_source, :with_image)) }
   end
 
   factory :script do
@@ -105,6 +149,14 @@ FactoryGirl.define do
     end
 
     level
+
+    trait :never_autoplay_video_true do
+      level {create(:level, :never_autoplay_video_true)}
+    end
+
+    trait :never_autoplay_video_false do
+      level {create(:level, :never_autoplay_video_false)}
+    end
 
     chapter do |script_level|
       (script_level.script.script_levels.maximum(:chapter) || 0) + 1
@@ -173,6 +225,7 @@ FactoryGirl.define do
 
   factory :user_level do
     user {create :student}
+    level {create :applab}
   end
 
   factory :user_script do
@@ -197,16 +250,12 @@ FactoryGirl.define do
   end
 
   factory :workshop do
-    name 'My Workshop'
+    sequence(:name) { |n| "My Workshop #{n}" }
     program_type '1'
     location 'Somewhere, USA'
     instructions 'Test workshop instructions.'
-    facilitators {[
-      create(:facilitator).tap{|f| f.permission = 'facilitator'}
-    ]}
-    cohorts {[
-        create(:cohort)
-    ]}
+    facilitators {[create(:facilitator)]}
+    cohorts {[create(:cohort)]}
     after :create do |workshop, _|
       create_list :segment, 1, workshop: workshop
     end
@@ -214,8 +263,8 @@ FactoryGirl.define do
 
   factory :segment do
     workshop
-    start DateTime.now
-    self.send(:end, DateTime.now + 1.day)
+    start DateTime.now.utc
+    self.send(:end, DateTime.now.utc + 1.day)
   end
 
   factory :attendance, class: WorkshopAttendance do

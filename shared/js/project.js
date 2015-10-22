@@ -1,7 +1,10 @@
-/* global dashboard, appOptions, $, trackEvent */
+/* global dashboard, appOptions, trackEvent */
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
+
+var ABUSE_THRESHOLD = 10;
+
 var hasProjectChanged = false;
 
 var assets = require('./clientApi').create('/v3/assets');
@@ -60,6 +63,7 @@ var PathPart = {
  */
 var current;
 var currentSourceVersionId;
+var currentAbuseScore = 0;
 var isEditing = false;
 
 var projects = module.exports = {
@@ -90,6 +94,85 @@ var projects = module.exports = {
       return;
     }
     return current.updatedAt;
+  },
+
+  /**
+   * @returns {number}
+   */
+  getAbuseScore: function () {
+    return currentAbuseScore;
+  },
+
+  /**
+   * Sets abuse score to zero, saves the project, and reloads the page
+   */
+  adminResetAbuseScore: function () {
+    var id = this.getCurrentId();
+    if (!id) {
+      return;
+    }
+    channels.delete(id + '/abuse', function (err, result) {
+      if (err) {
+        throw err;
+      }
+      assets.patchAll(id, 'abuse_score=0', null, function (err, result) {
+        if (err) {
+          throw err;
+        }
+        $('.admin-abuse-score').text(0);
+      });
+    });
+  },
+
+  /**
+   * @returns {boolean} true if we're frozen
+   */
+  isFrozen: function () {
+    if (!current) {
+      return;
+    }
+    return current.frozen;
+  },
+
+  /**
+   * @returns {boolean}
+   */
+  isOwner: function () {
+    return current && current.isOwner;
+  },
+
+  /**
+   * @returns {boolean} true if project has been reported enough times to
+   *   exceed our threshold
+   */
+  exceedsAbuseThreshold: function () {
+    return currentAbuseScore >= ABUSE_THRESHOLD;
+  },
+
+  /**
+   * @return {boolean} true if we should show our abuse box instead of showing
+   *   the project.
+   */
+  hideBecauseAbusive: function () {
+    if (!this.exceedsAbuseThreshold() || appOptions.scriptId) {
+      // Never want to hide when in the context of a script, as this will always
+      // either be me or my teacher viewing my last submission
+      return false;
+    }
+
+    // When owners edit a project, we don't want to hide it entirely. Instead,
+    // we'll load the project and show them a small alert
+    var pageAction = parsePath().action;
+
+    // NOTE: appOptions.isAdmin is not a security setting as it can be manipulated
+    // by the user. In this case that's okay, since all that does is allow them to
+    // view a project that was marked as abusive.
+    if ((this.isOwner() || appOptions.isAdmin) &&
+        (pageAction === 'edit' || pageAction === 'view')) {
+      return false;
+    }
+
+    return true;
   },
 
   //////////////////////////////////////////////////////////////////////
@@ -123,6 +206,14 @@ var projects = module.exports = {
     if (this.shouldUpdateHeaders()) {
       dashboard.header.showProjectHeader();
     }
+  },
+
+  /**
+   * Updates the contents of the admin box for admins. We have no knowledge
+   * here whether we're an admin, and depend on dashboard getting this right.
+   */
+  showAdmin: function() {
+    dashboard.admin.showProjectAdmin();
   },
 
   showMinimalProjectHeader: function() {
@@ -206,6 +297,8 @@ var projects = module.exports = {
     if (appOptions.noPadding) {
       $(".full_container").css({"padding":"0px"});
     }
+
+    this.showAdmin();
   },
   projectChanged: function() {
     hasProjectChanged = true;
@@ -231,23 +324,52 @@ var projects = module.exports = {
     return '/projects/' + projects.getCurrentApp();
   },
   /**
+   * Explicitly clear the HTML, circumventing safety measures which prevent it from
+   * being accidentally deleted.
+   */
+  clearHtml: function() {
+    current.levelHtml = '';
+  },
+  /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
-   * @param {string?} source Optional source to be provided, saving us another
-   *   call to sourceHandler.getLevelSource
-   * @param {function} callback Function to be called after saving
+   * @param {object?} sourceAndHtml Optional source to be provided, saving us another
+   *   call to `sourceHandler.getLevelSource`.
+   * @param {function} callback Function to be called after saving.
+   * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
-  save: function(source, callback) {
-    if (arguments.length < 2) {
-      // If no source is provided, the only argument is our callback and we
-      // ask for the source ourselves
-      callback = arguments[0];
-      source = this.sourceHandler.getLevelSource();
+  save: function(sourceAndHtml, callback, forceNewVersion) {
+
+    // Can't save a project if we're not the owner.
+    if (current && current.isOwner === false) {
+      return;
     }
+
+    if (typeof arguments[0] === 'function' || !sourceAndHtml) {
+      // If no source is provided, shift the arguments and ask for the source
+      // ourselves.
+      callback = arguments[0];
+      forceNewVersion = arguments[1];
+      sourceAndHtml = {
+        source: this.sourceHandler.getLevelSource(),
+        html: this.sourceHandler.getLevelHtml()
+      };
+    }
+
+    if (forceNewVersion) {
+      currentSourceVersionId = null;
+    }
+
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
-    current.levelSource = source;
-    current.levelHtml = this.sourceHandler.getLevelHtml();
+    // TODO(dave): Remove this check and remove clearHtml() once all projects
+    // have versioning: https://www.pivotaltracker.com/story/show/103347498
+    if (current.levelHtml && !sourceAndHtml.html) {
+      throw new Error('Attempting to blow away existing levelHtml');
+    }
+
+    current.levelSource = sourceAndHtml.source;
+    current.levelHtml = sourceAndHtml.html;
     current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {
@@ -312,7 +434,7 @@ var projects = module.exports = {
       return;
     }
 
-    this.save(source, function () {
+    this.save({source: source, html: html}, function () {
       hasProjectChanged = false;
     });
   },
@@ -322,6 +444,17 @@ var projects = module.exports = {
   rename: function(newName, callback) {
     current.name = newName;
     this.save(callback);
+  },
+  /**
+   * Freezes and saves the project. Also hides so that it's not available for deleting/renaming in the user's project list.
+   */
+  freeze: function(callback) {
+    current.frozen = true;
+    current.hidden = true;
+    this.save(function(data) {
+      executeCallback(callback, data);
+      redirectEditView();
+    });
   },
   /**
    * Creates a copy of the project, gives it the provided name, and sets the
@@ -367,6 +500,11 @@ var projects = module.exports = {
       redirectToRemix();
     }
   },
+  createNew: function() {
+    projects.save(function () {
+      location.href = projects.appToProjectUrl() + '/new';
+    });
+  },
   delete: function(callback) {
     var channelId = current.id;
     if (channelId) {
@@ -381,10 +519,11 @@ var projects = module.exports = {
    * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
    */
   load: function () {
-    var deferred;
+    var deferred = new $.Deferred();
     if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
-        return;
+        deferred.resolve();
+        return deferred;
       }
       var pathInfo = parsePath();
 
@@ -396,7 +535,6 @@ var projects = module.exports = {
         }
 
         // Load the project ID, if one exists
-        deferred = new $.Deferred();
         channels.fetch(pathInfo.channelId, function (err, data) {
           if (err) {
             // Project not found, redirect to the new project experience.
@@ -407,29 +545,34 @@ var projects = module.exports = {
               if (current.isOwner && pathInfo.action === 'view') {
                 isEditing = true;
               }
-              deferred.resolve();
+              fetchAbuseScore(function () {
+                deferred.resolve();
+              });
             });
           }
         });
-        return deferred;
       } else {
         isEditing = true;
+        deferred.resolve();
       }
     } else if (appOptions.isChannelBacked) {
       isEditing = true;
-      deferred = new $.Deferred();
       channels.fetch(appOptions.channel, function(err, data) {
         if (err) {
           deferred.reject();
         } else {
           fetchSource(data, function () {
             projects.showProjectLevelHeader();
-            deferred.resolve();
+            fetchAbuseScore(function () {
+              deferred.resolve();
+            });
           });
         }
       });
-      return deferred;
+    } else {
+      deferred.resolve();
     }
+    return deferred;
   },
 
   getPathName: function (action) {
@@ -453,6 +596,18 @@ function fetchSource(data, callback) {
   }
 }
 
+function fetchAbuseScore(callback) {
+  channels.fetch(current.id + '/abuse', function (err, data) {
+    currentAbuseScore = (data && data.abuse_score) || currentAbuseScore;
+    callback();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else
+      throw err;
+    }
+  });
+}
+
 /**
  * Only execute the given argument if it is a function.
  * @param callback
@@ -461,6 +616,13 @@ function executeCallback(callback, data) {
   if (typeof callback === 'function') {
     callback(data);
   }
+}
+
+/**
+ * is the current project (if any) editable by the logged in user (if any)?
+ */
+function isEditable() {
+  return (current && current.isOwner && !current.frozen);
 }
 
 /**
@@ -473,15 +635,21 @@ function redirectEditView() {
   if (!parseInfo.action) {
     return;
   }
+  // don't do any redirecting if we havent loaded a channel yet
+  if (!current) {
+    return;
+  }
   var newUrl;
-  if (parseInfo.action === 'view' && current && current.isOwner) {
+  if (parseInfo.action === 'view' && isEditable()) {
     // Redirect to /edit without a readonly workspace
-    newUrl = location.href.replace(/\/view$/, '/edit');
+    newUrl = location.href.replace(/(\/projects\/[^/]+\/[^/]+)\/view/, '$1/edit');
     appOptions.readonlyWorkspace = false;
-  } else if (parseInfo.action === 'edit' && (!current || !current.isOwner)) {
+    isEditing = true;
+  } else if (parseInfo.action === 'edit' && !isEditable()) {
     // Redirect to /view with a readonly workspace
-    newUrl = location.href.replace(/\/edit$/, '/view');
+    newUrl = location.href.replace(/(\/projects\/[^/]+\/[^/]+)\/edit/, '$1/view');
     appOptions.readonlyWorkspace = true;
+    isEditing = false;
   }
 
   // PushState to the new Url if we can, otherwise do nothing.

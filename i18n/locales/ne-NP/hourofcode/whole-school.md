@@ -1,9 +1,13 @@
 * * *
 
-सजावट: फराकिलो
+title: <%= hoc_s(:title_whole_school) %> layout: wide
 
 * * *
 
-# Get your whole school to participate
+<%= view :signup_button %>
 
-Hour of Code को बेलामा स्कूललाई सहभागीगराउने बारे जानकारी यहाँ जानेछन्.
+# यदि पुरै विद्यालय सहभागि हुने भए 
+
+पुरै विद्यालय hour of code मा सहभागी हुनको लागि यहाजना सक्नुहुन्छ सूचन 
+
+<%= view :signup_button %>

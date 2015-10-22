@@ -1,0 +1,13 @@
+%div.resources-nav
+  %a{href: resolve_url('/promote/resources')}
+    %div.display-link
+      %img.display-img{src: localized_image("/images/flyers.jpg")}
+      %div.link-text.display-purple= hoc_s(:header_menu_resources)
+  %a{href: resolve_url('https://code.org/learn')}
+    %div.display-link
+      %img.display-img{src: localized_image("/images/try_tutorials.jpg")}
+      %div.link-text.display-blue= hoc_s(:resources_nav_tutorials)
+  %a{href: resolve_url('/promote')}
+    %div.display-link
+      %img.display-img{src: localized_image("/images/hourofcode-2015-video-thumbnail-cropped.png")}
+      %div.link-text.display-green= hoc_s(:resources_nav_spread_word)

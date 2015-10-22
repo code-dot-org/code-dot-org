@@ -737,6 +737,34 @@ Blockly.svgRectToRect = function (svgRect) {
     svgRect.height);
 };
 
+
+/**
+ * Callback which displays a simple dialog.
+ * @callback SimpleDialogFunction
+ * @param {DialogOptions} dialogOptions
+ */
+
+/**
+ * Options for showing a simple dialog.
+ * @typedef {Object} DialogOptions
+ * @property {string} headerText
+ * @property {string} bodyText
+ * @property {string} cancelText
+ * @property {string} confirmText
+ * @property {function} onConfirm
+ * @property {function} onCancel
+ * @property {string} cancelButtonClass
+ */
+
+/**
+ * @param {DialogOptions} dialogOptions simple dialog options
+ */
+Blockly.showSimpleDialog = function (dialogOptions) {
+  if (Blockly.customSimpleDialog) {
+    Blockly.customSimpleDialog(dialogOptions);
+  }
+};
+
 /**
  * Direction properties for goog.math.Boxes
  * @type {string[]}
@@ -805,3 +833,29 @@ Blockly.makeTestMouseEvent = function (eventName) {
   return event;
 };
 
+/**
+ * Attempts to find a container block with an empty input.
+ * @param {Blockly.Block[]} blocks
+ * @returns {Blockly.Block|null} block with empty input, or null if none found
+ */
+Blockly.findEmptyContainerBlock = function (blocks) {
+  for (var i = 0; i < blocks.length; i++) {
+    var block = blocks[i];
+    if (Blockly.findEmptyInput(block, Blockly.NEXT_STATEMENT)) {
+      return block;
+    }
+  }
+  return null;
+};
+
+/**
+ * Finds an empty input of the given input type.
+ * @param {Blockly.Block} block
+ * @param {number} inputType
+ * @returns {Blockly.Input|null} empty input or null if none found
+ */
+Blockly.findEmptyInput = function (block, inputType) {
+  return goog.array.find(block.inputList, function(input) {
+    return input.type === inputType && !input.connection.targetConnection;
+  });
+};

@@ -9,10 +9,11 @@ class BaseDSL
 
   def encrypted(text)
     @hash['encrypted'] = '1'
+
     begin
       instance_eval(Encryption::decrypt_object(text))
-    rescue OpenSSL::Cipher::CipherError
-      puts "warning: level #{@name} is encrypted, skipping"
+    rescue OpenSSL::Cipher::CipherError, Encryption::KeyMissingError
+      puts "warning: unable to decrypt level #{@name}, skipping"
       return
     end
   end
@@ -52,7 +53,7 @@ class BaseDSL
 
   def self.boolean(name)
     define_method(name) do |val|
-      instance_variable_set "@#{name}", ActiveRecord::ConnectionAdapters::Column::value_to_boolean(val)
+      instance_variable_set "@#{name}", ActiveRecord::Type::Boolean.new.type_cast_from_database(val)
     end
   end
 
@@ -64,7 +65,7 @@ class BaseDSL
 
   def self.integer(name)
     define_method(name) do |val|
-      instance_variable_set "@#{name}", ActiveRecord::ConnectionAdapters::Column::value_to_integer(val)
+      instance_variable_set "@#{name}", ActiveRecord::Type::Integer.new.type_cast_from_database(val)
     end
   end
 end

@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: secret_words
+#
+#  id         :integer          not null, primary key
+#  word       :string(255)      not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+# Indexes
+#
+#  index_secret_words_on_word  (word) UNIQUE
+#
+
 class SecretWord < ActiveRecord::Base
   include Seeded
 

@@ -11,8 +11,8 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: Αντιστοίχισε τον συνδυασμό
-          των κουμπιών με τις χορευτικές κινήσεις.
+        Match the button combination to the dance moves.: Ταίριαξε τον συνδυασμό των
+          κουμπιών με τις χορευτικές κινήσεις.
         Matching: Ταίριαξε
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
@@ -179,8 +179,8 @@
         <br/><br/>above: <br/><br/> παραπάνω
         <br/><br/>below: <br/><br/> κάτω από
         <br/><br/>next to: <br/><br/> δίπλα στο
-        Is the square next to, above, or below the ball?: Είναι η πλατεία δίπλα στο,
-          πάνω ή κάτω από την μπάλα;
+        Is the square next to, above, or below the ball?: Είναι το τετράγωνο δίπλα
+          στο, πάνω ή κάτω από την μπάλα;
         Matching: Ταίριαξε
       K-1 Artist 2 Match 2:
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -191,7 +191,7 @@
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/small_triangle.png: /script_assets/k_1_images/artist_images/small_triangle.png
-        Match the shapes based on type.: Ταιριάζει με τα σχήματα βασισμένα στον τύπο.
+        Match the shapes based on type.: Ταίριαξε τα σχήματα βασιζόμενος στο είδος.
         Matching: Ταίριαξε
       K-1 Artist 2 Match 3:
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
@@ -324,8 +324,9 @@
           ένα παραλληλόγραμμο δεξιά του τριγώνου
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
+        : Ξεκίνα με ένα τατράγωνο<br/>Βάλε ένα τρίγωνο δεξιά από το τετράγωνο<br/>Βάλε
+          ένα παραλληλόγραμμο δεξιά από το τετράγωνο<br/>Βάλε το τρίγωνο δεξιά από
+          το παραλληλόγραμμο
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -480,28 +481,29 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
         Maze Multiple Choice One: Λαβύρινθος Πολλαπλή Επιλογή Ένα
-        Which set of blocks is the correct answer?: Which set of blocks is the correct
-          answer?
+        Which set of blocks is the correct answer?: Ποιό σύνολο μπλοκς είναι η σωστή
+          απάντηση;
       4-5 Algorithms Multi 1:
-        Baking cookies: Baking cookies
-        Banana: Banana
-        Brushing your teeth: Brushing your teeth
+        Baking cookies: Ψήνοντας μπισκότα
+        Banana: Μπανάνα
+        Brushing your teeth: Βουρτσίζοντας τα δόντια σας
         Multiple Choice: Πολλαπλή Επιλογή
-        Shopping from a grocery list: Shopping from a grocery list
+        Shopping from a grocery list: Αγοράζοντας από μια λίστα του μπακάλη
         Which one of these items is hardest to describe an algorithm for?: Ποιο από
           αυτά τα αντικείμενα είναι δύσκολο να περιγραφεί με αλγόριθμο;
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene is a _____ city.
+        Eugene is a _____ city.: Eugene είναι μια _____ πόλη.
         0: '? Εδώ είναι τρεις προτάσεις. Ποιο από τα παρακάτω πρότυπα είναι κατάλληλα
           αφαιρετικό ώστε και οι τρεις να ταιριάζουν με το ίδιο μοτίβο όπως το πρότυπο;'
         1: ': Εδώ είναι τρεις προτάσεις. Ποιο από τα παρακάτω πρότυπα είναι κατάλληλα
           αφαιρετικό ώστε και οι τρεις να ταιριάζουν με το ίδιο μοτίβο όπως το πρότυπο;'
         Multiple Choice: Πολλαπλή Επιλογή
-        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
-          is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
-        _____ is _____ a _____.: _____ is _____ a _____.
-        _____ is a _____ city.: _____ is a _____ city.
+        Seattle _____ a _____ _____.: Seattle _____ μια _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Το
+          Σιάτλ είναι μια μεγάλη πόλη. <br/> Eugene είναι μια πόλη μεσαίου <br/> Hillview
+          είναι μια μικρή πόλη.
+        _____ is _____ a _____.: _____ είναι μια _____ _____.
+        _____ is a _____ city.: _____ είναι μια _____ πόλη.
       4-5 Crowdsourcing Multi 1:
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
@@ -509,11 +511,11 @@
         Which of these pictures best represents crowdsourcing?: Ποια από τις παρακάτω
           εικόνες αναπαριστά καλύτερα το crowdsourcing;
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Brushing your hair
-        Cleaning your room: Cleaning your room
-        Eating your dessert: Eating your dessert
+        Brushing your hair: Βουρτσίζοντας τα μαλλιά σου
+        Cleaning your room: καθαρίζοντας το δωμάτιο σου
+        Eating your dessert: Τρώγοντας το επίδόρπιο σου
         Multiple Choice: Πολλαπλή Επιλογή
-        Washing your face: Washing your face
+        Washing your face: Πλένοντας το πρόσωπό σου
         Which one of these activities would be best for practicing crowdsourcing?: Ποια
           από αυτές τις δραστηριότητες θα ήταν καλύτερη για την πραγματοποίηση του
           crowdsourcing;
@@ -521,10 +523,10 @@
         Multiple Choice: Πολλαπλή Επιλογή
         Which piece of information listed below is okay to share on the internet?: Ποια
           από τις παρακάτω πληροφορίες μπορούμε άνετα να μοιραστούμε στο διαδίκτυο;
-        Your address: Your address
-        Your birthday: Your birthday
-        Your favorite food: Your favorite food
-        Your parent's credit card number: Your parent's credit card number
+        Your address: Η διεύθυνση σου
+        Your birthday: Τα γενέθλιά σου
+        Your favorite food: Η αγαπημένη σου τροφή
+        Your parent's credit card number: Ο αριθμός πιστωτικής κάρτας των γονιών σου
       4-5 Internet Multi 1:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         23.23.224.106: 23.23.224.106
@@ -566,17 +568,18 @@
         Multiple Choice: Πολλαπλή Επιλογή
         ? What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?
-        : What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
+        : Ποιο είναι το μεγαλύτερο τμήμα αυτού του τραγουδιού που μπορείς να ορίσεις
+          ως χορωδία, ώστε η χορωδία να επαναλαμβάνεται ακριβώς μία φορά κάθε φορά
+          που καλείται;
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
         Multiple Choice: Πολλαπλή Επιλογή
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Which
-          of the programs below <em>does not</em> make the exact same sequence as
-          Program 1?
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Ποιά
+          από τα παρακάτω προγράμματα <em> δεν κάνουν </em> ακριβώς την ίδια ακολουθία
+          με το πρόγραμμα 1;
       4-5 artist functions multi 1:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
@@ -696,18 +699,19 @@
           lines of code should be removed so the program will work as intended? Select
           <u>two</u> answers
       K-1 Artist 1 Multi 1:
-        /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
-        /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
-        /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
-        /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
+        /script_assets/k_1_images/artist_images/E-S-S.png: /script_assets/k_1_images/artist_images/E-S-S.png
+        /script_assets/k_1_images/artist_images/E-S.png: /script_assets/k_1_images/artist_images/E-S.png
+        /script_assets/k_1_images/artist_images/S-E-E.png: /script_assets/k_1_images/artist_images/S-E-E.png
+        /script_assets/k_1_images/artist_images/W-S-S.png: /script_assets/k_1_images/artist_images/W-S-S.png
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
           500
         Multiple Choice: Πολλαπλή Επιλογή
         Which blocks solve this puzzle?: Ποια μπλοκ λύνουν αυτό το παζλ;
       K-1 Artist 1 Multi 2:
-        /script_assets/k_1_images/artist_images/E|S|W|N.png: /script_assets/k_1_images/artist_images/E|S|W|N.png
-        /script_assets/k_1_images/artist_images/N|E|S|W.png: /script_assets/k_1_images/artist_images/N|E|S|W.png
-        /script_assets/k_1_images/artist_images/N|W|S|E.png: /script_assets/k_1_images/artist_images/N|W|S|E.png
+        /script_assets/k_1_images/artist_images/E-S-W-N.png: /script_assets/k_1_images/artist_images/E-S-W-N.png
+        /script_assets/k_1_images/artist_images/N-E-S-W.png: /script_assets/k_1_images/artist_images/N-E-S-W.png
+        /script_assets/k_1_images/artist_images/N-S-E-W.png: /script_assets/k_1_images/artist_images/N-S-E-W.png
+        /script_assets/k_1_images/artist_images/N-W-S-E.png: /script_assets/k_1_images/artist_images/N-W-S-E.png
         /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png,
           500
         Multiple Choice: Πολλαπλή Επιλογή

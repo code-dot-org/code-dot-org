@@ -1,5 +1,3 @@
-/* global $ */
-
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
 var dom = require('../dom');
 
@@ -14,6 +12,7 @@ var dom = require('../dom');
  */
 var DropletAutocompletePopupTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.tooltipsEnabled = true;
 };
 
 var DEFAULT_TOOLTIP_CONFIG = {
@@ -76,7 +75,7 @@ DropletAutocompletePopupTooltipManager.prototype.setupForEditorPopup_ = function
 };
 
 DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip = function (aceEditor) {
-  if (!aceEditor.completer.completions) {
+  if (!this.tooltipsEnabled || !aceEditor.completer.completions) {
     return;
   }
 
@@ -136,6 +135,14 @@ DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (func
     fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
   });
   return dropletFunctionTooltipMarkup;
+};
+
+/**
+ * @param {boolean} enabled if tooltips are enabled
+ */
+
+DropletAutocompletePopupTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
+  this.tooltipsEnabled = !!enabled;
 };
 
 module.exports = DropletAutocompletePopupTooltipManager;

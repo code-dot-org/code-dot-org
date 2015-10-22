@@ -59,8 +59,16 @@ exec(command, function (err, stdout, stderr) {
     console.log('restricting to entries: ' + globs);
   }
 
+  var grep = process.env.mocha_grep;
+  if (process.argv.indexOf('--fast') !== -1) {
+    console.log('Running without maze/turtle level tests.');
+    // Load mochaFastMode as an entry point as a way of getting this option
+    // into our bundle code.
+    globs = ['./test/util/mochaFastMode.js'].concat(globs);
+  }
+
   mochify(globs.join(' '), {
-    grep: process.env.mocha_grep,
+    grep: grep,
     debug: process.env.mocha_debug,
     invert: process.env.mocha_invert,
     reporter : 'spec',

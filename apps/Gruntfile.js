@@ -1,7 +1,7 @@
 var path = require('path');
-var crypto = require('crypto');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
+var glob = require('glob');
 
 var config = {};
 
@@ -27,11 +27,13 @@ if (process.env.MOOC_APP) {
 }
 
 // Parse options from environment.
-var MINIFY = (process.env.MOOC_MINIFY === '1');
-var LOCALIZE = (process.env.MOOC_LOCALIZE === '1');
-var DEV = (process.env.MOOC_DEV === '1');
+var envOptions = {
+  minify: (process.env.MOOC_MINIFY === '1'),
+  localize: (process.env.MOOC_LOCALIZE === '1'),
+  dev: (process.env.MOOC_DEV === '1')
+};
 
-var LOCALES = (LOCALIZE ? [
+var LOCALES = (envOptions.localize ? [
   'ar_sa',
   'az_az',
   'bg_bg',
@@ -93,12 +95,11 @@ if (process.env.MOOC_LOCALE) {
 }
 
 config.clean = {
-  all: ['build'],
-  digest: ['build/package/js/**/*-????????????????????????????????.js']
+  all: ['build']
 };
 
-var ace_suffix = DEV ? '' : '-min';
-var dotMinIfNotDev = DEV ? '' : '.min';
+var ace_suffix = envOptions.dev ? '' : '-min';
+var dotMinIfNotDev = envOptions.dev ? '' : '.min';
 
 config.copy = {
   src: {
@@ -205,15 +206,6 @@ config.copy = {
   }
 };
 
-config.digest = {
-  options: {
-    out: 'build/package/js/manifest.js'
-  },
-  files: {
-    src: ['build/package/js/**/*.js', '!build/package/js/ace/**/*.js']
-  }
-};
-
 config.lodash = {
   'build': {
     'dest': 'src/lodash.js',
@@ -229,7 +221,7 @@ config.lodash = {
 config.sass = {
   all: {
     options: {
-      outputStyle: (MINIFY ? 'compressed' : 'nested'),
+      outputStyle: (envOptions.minify ? 'compressed' : 'nested'),
       includePaths: ['../shared/css/']
     },
     files: {
@@ -287,18 +279,21 @@ APPS.forEach(function (app) {
 });
 
 // Use command-line tools to run browserify (faster/more stable this way)
-var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserify ' +
+var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserifyinc ' +
+  '--cachefile ' + outputDir + 'browserifyinc-cache.json ' +
   '-t reactify --extension=.jsx ' + allFilesSrc.join(' ') +
   (APPS.length > 1 ? ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
   ' -o ' + allFilesDest[0]);
 
+var fastMochaTest = process.argv.indexOf('--fast') !== -1;
+
 config.exec = {
   browserify: browserifyExec,
-  watchify: browserifyExec.replace('browserify', 'watchify') + ' -v',
-  mochaTest: 'node test/util/runTests.js --color'
+  watchify: browserifyExec.replace('browserifyinc', 'watchify') + ' -v',
+  mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : '')
 };
 
-var ext = DEV ? 'uncompressed' : 'compressed';
+var ext = envOptions.dev ? 'uncompressed' : 'compressed';
 config.concat = {
   vendor: {
     nonull: true,
@@ -386,6 +381,9 @@ config.jshint = {
     browser: true,
     undef: true,
     globals: {
+      $: true,
+      jQuery: true,
+      React: true,
       Blockly: true,
       //TODO: Eliminate the globals below here. Could at least warn about them
       // in their respective files
@@ -405,14 +403,15 @@ config.jshint = {
     'tasks/**/*.js',
     'src/**/*.js*',
     'test/**/*.js',
+    '!src/**/*.min.js*',
     '!src/hammer.js',
     '!src/lodash.js',
-    '!src/lodash.min.js',
     '!src/canvg/*.js',
     '!src/calc/js-numbers/js-numbers.js',
     '!src/ResizeSensor.js',
     '!src/applab/colpick.js'
-  ]
+  ],
+  some: [], // This gets dynamically populated in the register task
 };
 
 config.strip_code = {
@@ -433,28 +432,6 @@ module.exports = function(grunt) {
 
   grunt.loadTasks('tasks');
   grunt.registerTask('noop', function () {});
-
-  // Add md5 digest to filenames
-  grunt.registerMultiTask('digest', function () {
-    var manifest = {};
-    var manifestFile = this.options().out;
-
-    this.filesSrc.forEach(function (file) {
-
-      // Don't add a digest to the manifest
-      if (file === manifestFile) {
-        return;
-      }
-
-      var data = grunt.file.read(file);
-      var digest = crypto.createHash('md5').update(data).digest('hex');
-      var oldName = path.relative('build/package', file);
-      var newName = oldName.replace(/\.js$/, '-' + digest + '.js');
-      fs.rename(file, file.replace(/\.js$/, '-' + digest + '.js'));
-      manifest[oldName] = newName;
-    });
-    grunt.file.write(manifestFile, 'window.digestManifest = ' + JSON.stringify(manifest));
-  });
 
   // Generate locale stub files in the build/locale/current folder
   grunt.registerTask('locales', function() {
@@ -486,10 +463,8 @@ module.exports = function(grunt) {
     'prebuild',
     'exec:browserify',
     // Skip minification in development environment.
-    DEV ? 'noop' : ('concurrent:uglify'),
-    'postbuild',
-    'clean:digest',
-    'digest'
+    envOptions.dev ? 'noop' : ('concurrent:uglify'),
+    'postbuild'
   ]);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
@@ -508,9 +483,22 @@ module.exports = function(grunt) {
     'concurrent:watch'
   ]);
 
+  grunt.registerTask('jshint:files', function () {
+    var files;
+    if (grunt.option('files')) {
+      files = grunt.option('files').split(",");
+      grunt.config('jshint.some', files);
+    } else  if (grunt.option('glob')) {
+      files = glob.sync(grunt.option('glob'));
+      console.log('files: ' + files.join('\n'));
+      grunt.config('jshint.some', files);
+    }
+    grunt.task.run('jshint:some');
+  });
+
   grunt.registerTask('mochaTest', ['exec:mochaTest']);
 
-  grunt.registerTask('test', ['jshint', 'mochaTest']);
+  grunt.registerTask('test', ['jshint:all', 'mochaTest']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 

@@ -63,7 +63,6 @@
           <block type="functional_star" inline="false"/>
           <block type="place_image" inline="false"/>
           <block type="overlay" inline="false"/>
-          <block type="underlay" inline="false"/>
           <block type="rotate" inline="false"/>
           <block type="scale" inline="false"/>
           <block type="functional_text" inline="false"/>

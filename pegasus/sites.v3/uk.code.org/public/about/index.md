@@ -36,14 +36,14 @@ Follow Code.org on social media:
 Please help promote Computer Science education in your community. 5% of the proceeds will be used by Code.org to bring Computer Science to more schools.
 
 <a href="http://www.zazzle.co.uk/codeorg*?tc=codewebsite">
-<img src="http://www.code.org/images/swag1.jpg" width=150/>
-<img src="http://www.code.org/images/swag4.jpg" width=150/>
-<img src="http://www.code.org/images/swag2.jpg" width=150/>
-<img src="http://www.code.org/images/swag6.jpg" width=150/>
-<img src="http://www.code.org/images/swag3.jpg" width=150/>
+<img src="https://www.code.org/images/swag1.jpg" width=150/>
+<img src="https://www.code.org/images/swag4.jpg" width=150/>
+<img src="https://www.code.org/images/swag2.jpg" width=150/>
+<img src="https://www.code.org/images/swag6.jpg" width=150/>
+<img src="https://www.code.org/images/swag3.jpg" width=150/>
 </a>
 
 <br />
 <a href="http://www.guidestar.org/organizations/46-0858543/code-org.aspx" target="_blank">
-    <img src="http://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
+    <img src="https://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
 </a>

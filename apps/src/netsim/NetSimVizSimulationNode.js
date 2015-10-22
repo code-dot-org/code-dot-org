@@ -7,6 +7,7 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -33,10 +34,16 @@ var NetSimVizSimulationNode = module.exports = function (sourceNode,
   NetSimVizNode.call(this, useBackgroundAnimation);
 
   /**
-   * ID of the simulation node that this viz element represents.
+   * ID of the NetSimNode that this NetSimVizSimulationNode represents.
    * @type {number}
    */
   this.correspondingNodeID_ = sourceNode.entityID;
+
+  /**
+   * UUID of the NetSimNode that this NetSimVizSimulationNode represents.
+   * @type {string}
+   */
+  this.correspondingNodeUuid_ = sourceNode.uuid;
 
   /**
    * If we end up representing a router, we may need to hold the auto-dns address
@@ -55,7 +62,8 @@ NetSimVizSimulationNode.inherits(NetSimVizNode);
  * @param {NetSimNode} sourceNode
  */
 NetSimVizSimulationNode.prototype.configureFrom = function (sourceNode) {
-  this.correspondingNodeID_ = sourceNode.entityID;
+  this.correspondingNodeId_ = sourceNode.entityID;
+  this.correspondingNodeUuid_ = sourceNode.uuid;
 
   var levelConfig = NetSimGlobals.getLevelConfig();
   if (levelConfig.showHostnameInGraph) {
@@ -78,8 +86,17 @@ NetSimVizSimulationNode.prototype.configureFrom = function (sourceNode) {
  * ID of the simulation entity that maps to this one.
  * @returns {number}
  */
-NetSimVizSimulationNode.prototype.getCorrespondingEntityID = function () {
-  return this.correspondingNodeID_;
+NetSimVizSimulationNode.prototype.getCorrespondingEntityId = function () {
+  return this.correspondingNodeId_;
+};
+
+/**
+ * @param {NetSimEntity} entity
+ * @returns {boolean} TRUE of this VizElement represents the given Entity.
+ */
+NetSimVizSimulationNode.prototype.representsEntity = function (entity) {
+  return this.correspondingNodeId_ === entity.entityID &&
+      this.correspondingNodeUuid_ === entity.uuid;
 };
 
 /**
@@ -89,5 +106,6 @@ NetSimVizSimulationNode.prototype.getCorrespondingEntityID = function () {
  */
 NetSimVizSimulationNode.prototype.kill = function () {
   NetSimVizSimulationNode.superPrototype.kill.call(this);
-  this.correspondingNodeID_ = undefined;
+  this.correspondingNodeId_ = undefined;
+  this.correspondingNodeUuid_ = undefined;
 };

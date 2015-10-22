@@ -236,7 +236,6 @@ div.droplet-palette-group-header-selected.orange {
 
 #codeTextbox.pin_bottom {
   border: 1px solid #ddd;
-  bottom: 156px;
 }
 
 html[dir='rtl'] #codeWorkspace {
@@ -262,14 +261,26 @@ html[dir='rtl'] #codeWorkspace {
   border-top: 1px solid #ddd;
 }
 
-// #codeWorkspace.readonly is used when we are displaying a workspace but it iss not editable (like someone else project)
-#codeWorkspace.readonly {
+// #codeWorkspace.readonly is used when we are displaying a workspace but it
+// is not editable (like someone else project), or when app is running
+#codeWorkspace.readonly, #codeWorkspace.dimmed {
   // special cases for:
   .blocklySvg, // blockly
   .droplet-main-scroller, // droplet block view
   .ace_scroller, { // droplet code view
     background-color: rgba(0, 0, 0, 0.1);
   }
+  // Note: We do something similar in our DesignModeBox React component's
+  // transparency layer. These two should be kept in sync as much as possible
+}
+
+.ace-chrome .ace_marker-layer .ace_error {
+  background: rgb(232, 47, 25);
+}
+
+.ace_marker-layer .ace_error {
+  position: absolute;
+  z-index: 3;
 }
 
 .ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
@@ -362,7 +373,7 @@ html[dir='rtl'] #codeWorkspace {
   #visualizationColumn.responsive {
     max-width: $width;
   }
-  .small-footer.responsive {
+  .small-footer-base.responsive {
     max-width: $width;
   }
   #codeWorkspace {
@@ -401,7 +412,7 @@ html[dir='rtl'] #codeWorkspace {
   #visualizationColumn.responsive {
     max-width: $width;
   }
-  .small-footer.responsive {
+  .small-footer-base.responsive {
     max-width: $width;
   }
   #codeWorkspace {
@@ -440,7 +451,7 @@ html[dir='rtl'] #codeWorkspace {
   #visualizationColumn.responsive {
     max-width: $width;
   }
-  .small-footer.responsive {
+  .small-footer-base.responsive {
     max-width: $width;
   }
   #codeWorkspace {
@@ -479,7 +490,7 @@ html[dir='rtl'] #codeWorkspace {
   #visualizationColumn.responsive {
     max-width: $width;
   }
-  .small-footer.responsive {
+  .small-footer-base.responsive {
     max-width: $width;
     small {
       float: left;
@@ -790,6 +801,11 @@ input[type="radio"] {
   vertical-align: top;
 }
 
+#prompt2 {
+  font-size: 12px;
+  color: $charcoal;  
+}
+
 #ani-gif-preview-wrapper {
   display: inline-block;
   vertical-align: top;
@@ -902,8 +918,11 @@ $workspace-header-button-margin: ($workspace-headers-height -
 }
 
 
-.readonly #headers {
-  background-color: $charcoal;
+.readonly {
+  #headers,
+  #design-headers {
+    background-color: $charcoal;
+  }
 }
 
 #headers {
@@ -1025,6 +1044,10 @@ $workspace-header-button-margin: ($workspace-headers-height -
   background-color: white;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   display: none;
   background-position: 50% 50%;
   background-size: contain;
@@ -1171,6 +1194,7 @@ $workspace-header-button-margin: ($workspace-headers-height -
   color: white;
   margin-left: 0px;
   margin-right: 10px;
+  text-align: center;
 }
 
 #save-to-gallery-button {

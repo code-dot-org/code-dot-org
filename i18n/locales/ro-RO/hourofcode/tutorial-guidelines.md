@@ -1,29 +1,72 @@
 * * *
 
-aspect: wide
+titlu: < % = hoc_s(:title_tutorial_guidelines) %> aspect: largă
 
 * * *
 
-# Recomandări si explicații pentru Hour of Code și săptămâna Computer Science Education
+<%= view :signup_button %>
 
-**A trecut termenul limită pentru a incarca un tutorial pentru Hour of Code 2014. Incă mai poti depune o intrare şi vom încerca să il verificam dacă timpul ne permite.**
+# Recomandări si explicații pentru Hour of Code și Saptamana Educatiei in Tehnologia computer-ului si programare
 
-Code.org va gazdui o varietate de activităţi Hour of Code pe Code.org, Hour of Code, şi CSEdWeek site(urile) Web. Lista curentă este la [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Code.org va gazdui o varietate de activităţi site(urile) Web Hour of Code pe Code.org, Hour of Code, şi CSEdWeek. Lista curentă este la [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
-Ne dorim sa găzduim o varietate de elemente interactive, dar obiectivul principal este de a optimiza experienţa pentru elevi şi profesori care sunt începători în ceea ce priveste informatica. Vă rugăm să folosiţi acest document ca și ghid pentru organizarea activității, orientată către utilizatorul care nu are nici o experiență în informatică, programare sau tehnologia calculatorului.
+Ne dorim sa găzduim o varietate de elemente interactive, dar obiectivul principal este de a optimiza experienţa pentru elevi şi profesori care sunt începători în ceea ce priveste tehnologia computerelor si programarea. Vă rugăm să folosiţi acest document ca și ghid pentru organizarea activității, orientat către utilizatorul care nu are nicio experiență în informatică, programare sau tehnologia calculatorului.
+
+  
+
+
+**Dupsa citirea ghidului, iti poti inscrie tutorialul in cadrul paginii [Hour of Code™ Prezentarea Activitatii](https://goo.gl/kNrV3l).**
+
+**NOU:** Spre deosebire de ultimii ani, avem de gând să introducem un nou format pentru activităţi Hour of Code "conduse de profesor". Acestea vor fi listate mai jos de activităţile autodidacte orientate spre pagini şi e-mailuri pentru elevi. Detaliile mai jos.
 
 <a id="top"></a>
 
 ## Cuprins:
 
-  * [Cum vor fi evaluate tutorialele pentru includere](#inclusion)
   * [Recomandări generale pentru a organiza o activitate Hour of Code](#guidelines)
-  * [Cum să trimiteți (Termen limită 1/10/2014)](#submit)
+  * [Cum vor fi evaluate tutorialele pentru includere](#inclusion)
+  * [Cum să trimiteți (Termen limită 10/15/2015)](#submit)
   * [Sugestii pentru proiectarea activității](#design)
   * [Recomandarile legate de Marca Inregistrată](#tm)
   * [Pixel pentru tracking](#pixel)
   * [Promovarea tutorialelor dumneavoastră, CSEdWeek, și Hour of Code](#promote)
   * [O notă pentru elevii cu dizabilități](#disabilities)
+
+<a id="guidelines"></a>
+
+## Noi pentru 2015: două formate de activităţi: autodidact sau *plan de lecţie*
+
+Acum, că zeci de mii de cadre didactice au încercat Ora de Programare, multe săli de clasă sunt gata pentru activităţi mai creative, mai puţin atotcuprinzatoare, care invata elementele de bază din informatică separat. Pentru a ajuta profesorii sa-si gaseasca inspiratia, vrem sa colectam cateva lectii si activitati de o ora "Conduse de catre profesor" planuite de catre veteranii Hour of Code. Vom continua si promovarea formatul de "Auto-ghidat".
+
+**Trimiteti un Plan de lectie condusa de profesor, de preferat pe subiecte diferite *(nou)***: Ai o idee unica sau promitatoare despre cum am putea face o lectie Hour of Code? Unele cadre didactice preferă să gazduiasca activităţi Hour of Code care urmează un format de lecţie tradiţional decât o experienţă tip puzzle/joc. Daca sunt facilitate in mod corespunzator, orice activitati pot demonstra natura creativa a tehnologiei computerului. Ne-ar plăcea să colectam **lecţiii de cate o oră concepute pentru diferite domenii**. De exemplu, un plan de lecţie de o oră pentru predarea liniilor de cod intr-o ora de geometrie. Sau un exerciţiu pentru ora de limba engleză. Sau o activitate de creare a testelor in ora de istorie. Aceasta ne poate ajuta sa recrutam profesori din diferite arii de studiu pentru a sustine o Ora de Programare unica in domeniul lor de lucru, demonstrand cum stiinta computerelor poate influenta diferite materii.
+
+Puteţi începe cu acest [ şablon](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) pentru planul de lectie.
+
+Exemple:
+
+  * [Oglinda imaginii (o activitate pentru un profesor de artă)](https://csedweek.org/csteacher/mirrorimages.pdf)
+  * [O activitate de calcul in spatiu pentru un profesor de fizica](https://csedweek.org/csteacher/arduino.pdf)
+  * [O istorie a tehnologiei ce activitate unui profesor de istorie](https://csedweek.org/csteacher/besttechnology.pdf)
+
+[<button>Cum pot depune propriul meu plan de lecţie?</button>](#submit)
+
+  
+  
+**Condus de elev (auto-ghidate) Format**: Ora de Programare in formatul original era construita in mare parte pe succesul tutorialelor sau lectiilor auto-didactice, facilitate optional de catre profesor. Exista o multime de optiuni existente, dar dacă doriţi să creaţi una noua, aceste activităţi trebuie să fie proiectate astfel încât să poata fi distractiv pentru un elev sa lucreze de unul singur, sau în sala de clasă cand profesorul are pregatire minima in Tehnologia computerelor si programare. Ei ar trebui sa le ofere elevilor indrumari, pe langa Ora de Programare propriu-zisa. În mod ideal, instrucţiunile şi tutorialele sunt integrate direct în platformă, pentru a evita întreruperea lor prin navigarea între tab-uri sau ferestre între tutorial şi platformă.
+
+Notă: In paginile pentru elevi vom nota activitatile conduse de profesor *mai jos* cele auto-ghidate, dar le vom prezenta in special pe paginile si e-mail-urile pentru profesori.
+
+## Recomandări generale pentru a organiza o activitate Hour of Code
+
+Scopul unei Ore de Programare este de a da incepatorilor o prima idee despre tehnologie computerelorsi programare (nu HTML). Tonul trebuie să fie:
+
+  * Programarea nu este doar pentru genii, indiferent de vârstă, sex, rasă. Oricine *poate* învăţa!
+  * Tehnologia computerelor este conectată la o mare varietate de domenii şi interese. Toată lumea *ar trebui* să înveţe!
+  * Încurajează elevii să creeze ceva care poate fi distribuit prietenilor/online.
+
+**Cerințele tehnice**: din cauzaunei largi varietati de setari tehnice in şcoli şi clase, cele mai bune activităţi sunt bazate pe Web sau smartphone, apoi sunt activitatile offline ce te invata concepte de tehnologia computerelor fara a fi nevoie sa accesezi un computer. (a se vedea <http://csunplugged.com/>). Activităţi care necesită o instalare de aplicatie, desktop sau experienţe pe consolă sunt ok, dar nu ideale.
+
+[**La începutul paginii**](#top)
 
 <a id="inclusion"></a>
 
@@ -34,9 +77,11 @@ Un comitet de profesori din domeniul informaticii vor nota tutorialele, pe baza 
 **Tutorialul va avea punctaj mai mare dacă este:**
 
   * de înaltă calitate
-  * ușor de înteles, nu are nevoie de instrucţiuni
-  * proiectat pentru incepatori
+  * proiectat pentru incepatori - printre elevi şi profesori
   * conceput pentru ~ o 1 oră de activitate
+  * nu necesită înregistrare
+  * nu necesită plată
+  * nu necesită instalare
   * functionează pe mai multe sisteme de operare sau dispozitive, inclusiv smartphone şi tablete
   * funcționează în mai multe limbi straine
   * se adresează tuturor grupurilor demografice (de ex. minorități)
@@ -48,49 +93,29 @@ Un comitet de profesori din domeniul informaticii vor nota tutorialele, pe baza 
   * adresat unui nivel avansat (dacă exclude începatorii)
   * funcționează pe un număr limitat de platforme, sisteme operare sau dispozitive - pentru platformele Web ar trebui să urmărească funcționarea pe următoarele browsere: IE9 +, şi cele mai recente Chrome, Firefox şi Safari
   * funcționează doar în limba engleză
-  * au o inclinare specifică către unul dintre sexe (ex. tematica vizează în primul rând băieţi)
+  * întări stereotipurile care împiedică participarea grupurilor de studenti sub-reprezentate
   * reprezintă un demo al unei platforme sau al unui program ce necesită costuri viitoare
 
 **Tutorialele nu vor fi listate, dacă:**
 
-  * necesită un grad ridicat de implicare si um profesor cu experiență semnificativă (adică nu este intuitiv pentru studenţi)
   * nu sunt concepute pentru a fi o activitate de (aproximativ) oră
   * necesită înregistrare prealabilă 
   * solicită plata
-  * necesită instalare
+  * necesita instalare (cu excepția mobile apps)
   * se concentrează numai pe HTML + CSS web design
   * sunt transmise după termenul limită de depunere, sau cu informaţii incomplete (a se vedea mai jos)
 
-În cele din urmă, scopul campaniei Hour of Code este să marească numărul elevilor, studenților si profesorilor participanți, interesați de tehnologia computerelor, să arate ca programarea și tehnologia computerelor este accesibilă tuturor şi "mai uşoară decât se crede". În multe privinţe, acest obiectiv este realizat mai bine oferindu-le elevilor şi profesorilor opţiuni mai puţine, mai simple, însă cu accent pe cel mai înalt nivel de calitate pentru un utilizator începător.
+**Dacă tutorialul tau este axat pe elev** Tutoriale pentru studenti trebuie să fie proiectate pentru a fi auto-dirijate, nu să solicite CS instrucţiuni semnificative
 
-De asemenea, reţineţi că în 2013 CSEdWeek a avut un succes fantastic conform numărului de profesori şi elevi implicați - 20 Milioane de participanţi între 9 si 23 Decembrie, iar 97% au declarat ca şi-ar dori să repete experiența!!
-
-Ca rezultat, tutorialele existente sunt cu siguranţă "suficient de bune" şi motivul principal pentru a adăuga tutoriale noi in cadrul Hour of Code, nu este de a mari numărul opțiunilor, ci de a crește calitatea (sau interactivitarea) pentru elevi, sau pentru a crește opţiunile pentru non-vorbitorii de engleză, având în vedere natura globală a campaniei 2014.
-
-[**La începutul paginii**](#top)
-
-<a id="guidelines"></a>
-
-## Recomandări generale pentru a organiza o activitate Hour of Code
-
-  * **Subiect:** Introducere in tehnologia computerelor sau programare (nu HTML).
-  * **Obiectiv:** Oferă începatorilor o prima exeriență accesibilă cu programarea.
-  * **Tonul:** 
-      * Tehnologia computerelor nu este doar pentru genii. Nu contează vârstă, sex, rasă. Oricine poate învăța!
-      * Tehnologia computerelor este conectată la o mare varietate de domenii şi interese. Toată lumea ar trebui să înveţe!
-      * Încurajează elevii să creeze ceva care pot fi distribuit prietenilor/online.
-  * **Tipuri de activităţi:** 
-      * **Recomandate:** Activităţi web-based, adaptate pentru smartphone sau activități unplugged, care învață concepte de tehnologia computerelor fără a utiliza un computer (a se vedea <http://csunplugged.com/>). 
-      * **OK, dar nu de preferat:** Aplicații care se instalează, aplicații desktop, sau experienţe de joc pe consolă.
-  * **Format:** Tutoriale intuitive sau lecţii, opţional, facilitate de către profesor. Ar trebui să existe îndrumări pentru elevi, spre deosebire de provocări de rezolvat într-o oră. În mod ideal, instrucţiunile şi tutorialele sunt integrate direct în platformă, pentru a evita întreruperea exterienței prin navigarea între tab-uri sau ferestre între tutorial şi platformă.
+În cele din urmă, scopul campaniei Hour of Code este să marească numărul elevilor, studenților si profesorilor participanți, interesați de tehnologia computerelor, să arate ca programarea și tehnologia computerelor este accesibilă tuturor şi "mai uşoară decât se crede". În multe privinţe, acest obiectiv este realizat mai bine oferindu-le elevilor şi profesorilor opţiuni mai puţine, mai simple, însă cu accent pe cel mai înalt nivel de calitate pentru un utilizator începător. Reţineţi, de asemenea, că, 2013 şi 2014 campanii de Hour of Code au fost un succes fantastic cu peste 120M de participanti, cu răspunsuri in aproape unanim pozitive in sondajul facut elevilor si cadrelor didactice participante. Ca rezultat, tutorialele existente sunt cu siguranţăfoarte bune şi motivul principal pentru a adăuga tutoriale noi in cadrul Hour of Code, nu este de a mari numărul opțiunilor, ci de a crește calitatea (sau interactivitarea) pentru elevi, sau pentru a crește opţiunile pentru non-vorbitorii de engleză, având în vedere natura globală a campaniei 2015.
 
 [**La începutul paginii**](#top)
 
 <a id="submit"></a>
 
-## Cum să trimiteți (Termen limită 1/10/2014)
+## Cum să trimiteți (Termen limită 10/15/2015)
 
-Vizitaţi [pagina Hour of Code pentru înregistrarea activității](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) şi urmaţi paşii pentru a trimite tutorialul dumneavoastră.
+Vizitaţi [pagina Hour of Code™ Prezentarea Activitatii](https://goo.gl/kNrV3l) şi urmaţi paşii pentru a trimite tutorialul dvs.
 
 **De ce aveţi nevoie:**
 
@@ -105,12 +130,12 @@ Vizitaţi [pagina Hour of Code pentru înregistrarea activității](https://docs
       * **Număr maxim de caractere pentru mobile** 74
       * Vă rugăm să includeţi în descriere dacă activitatea este în principal intuitivă pentru elevi sau trebuie facilitată de profesor. În plus, unele şcoli sunt interesate să ştie dacă activităţile Hour of Code adresează standarde si tehnologii noi, inovative. Dacă activitatea abordează standarde specifice, considerați să includeți și această informaţie.
   * O listă de platforme testate/compatibile: 
-      * **Web based:** 
+      * Bazate pe web: ce platforme ai testat 
           * OS - Mac, Win, şi versiuni
           * Browsere - IE8, IE9, IE10, Firefox, Chrome, Safari
           * iOS mobile Safari (optimizat pentru mobil)
           * Android Chrome (optimizat pentru mobil)
-      * **Non web-based:** specifică platforma pentru codul nativ (Mac, Win, iOS, Android, xBox, altele)
+      * Offline: specifica platforma pentru codul nativ (Mac, Win, iOS, Android, xBox,)
       * Unplugged
   * Lista de limbi suportate şi format corespunzător: 
       * Tutorialele trebuie să precizeze ce limbi suporta coduri de limba de 2 caractere, ex. en - engleza; Ja - japoneză
@@ -125,12 +150,12 @@ Vizitaţi [pagina Hour of Code pentru înregistrarea activității](https://docs
   * Vă rugăm să includeţi, de asemenea, cunoștințele despre computer recomandate în funcție de nivel: începător, intermediar sau avansat. Site-ul Hour of Code va evidenţia mai vizibil activităţile pentru incepatori. Dacă doriţi să pregătiți activități intermediare şi avansate, vă rugăm să includeţi în descrierea activității dvs. cunoştinţe anterioare necesare.
   * Cerințe tehnice: 
       * Pentru a urmări mai corect participarea, ne dorim ca fiecare tutorial realizat de un partener, să includă imagini urmărire de 1 pixel pe prima şi ultima pagină a tutorialului realizat pentru Hour of Code. Plasați un pixel inițial pe pagina de start şi un pixel final în ultima pagina. Nu aşezaţi pixeli în pagini intermediare). Consultaţi secţiunea Tracking Pixel mai jos pentru mai multe detalii. 
-      * La terminarea activității, utilizatorii ar trebui să fie direcționați către <http://code.org/api/hour/finish> unde vor putea să: 
+      * La terminarea activității, utilizatorii ar trebui să fie direcționați către [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) unde vor putea să: 
           * Share-uiasca pe rețelele sociale că au finalizat Hour of Code
           * Primească un certificat de participare/finalizare a Hour of Code
           * Vadă clasamentele cu țările/orașele cea mai mare rată de participare în activităţi Hour of Code
-          * Pentru utilizatorii care petrec în cadrul activității dumneavoastră dar nu o finalizează, vă rugăm să includeţi un buton care spune "Am terminat Hour of Code" care duce la <http://code.org/api/hour/finish>, de asemenea. 
-  * ***(Opţional)*** Vom face un follow-up cu un formular/sondaj online solicitând un raport de activitate pentru săptămâna 8 decembrie, 12:01 am pana pe 14 decembrie, 11:59 pm) 
+          * Pentru utilizatorii care petrece o oră activitatea şi nu vor termina, vă rugăm să includeţi un buton activitatea care spune că "Am terminat Ora mea Programare" care leagă înapoi la [< % = resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %), de asemenea. 
+  * *(Opţional)* Vom face un follow-up cu un formular/sondaj online solicitând un raport de activitate pentru săptămâna 8 decembrie, 12:01 am pana pe 14 decembrie, 11:59 pm) 
       * Pentru activităţile online (în special aplicații smartphone/tablete): 
           * Numărul de utilizatori
           * Câți au finalizat sarcinile
@@ -146,30 +171,28 @@ Vizitaţi [pagina Hour of Code pentru înregistrarea activității](https://docs
 
 ## Sugestii pentru proiectarea activității
 
-**Includeți logo-ul CSEdWeek în tutorialul dvs.** Aveţi posibilitatea să includeţi logo-ul CSEdWeek ([mic](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) sau [mare](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) în tutorialul dvs., dar acest lucru nu este obligatoriu. De asemenea, ne puteti contacta pentru a solicita permisiunea specifica de a utiliza logo-ul "În parteneriat cu Code.org". ***Acest logo-ul poate fi folosit numai în cazul în care primiți permisiunea Code.org în scris .*** Este posibil să creăm un logo Hour of Code, dar în acest moment nu avem unul. Logo-ul și numele Code.org nu pot fi folosite sub nici o formă fără o aprobare scrisă. Ambele sunt mărci înregistrate, şi nu poate fi incluse în brandul/ identitatea unei terțe părți.
+Puteţi include logo-ul CSEdWeek ([mari](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png) sau [mici](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg)) sau [logo-ul de ore de cod](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) în tutorialul dumneavoastră, dar acest lucru nu este necesar. Dacă folosiţi logo-ul Hour Of Code, consultaţi orientările de marcă de mai jos. Logo-ul și numele Code.org nu pot fi folosite sub nici o formă fără o aprobare scrisă. Ambele sunt mărci înregistrate, şi nu poat fi co-amestecate cu o a treia parte fără permisiunea în scris.
 
-**Asiguraţi-vă că un elev mediu poate termina confortabil într-o oră.** Luaţi în considerare adăugarea unei activități cu final deschis, pentru elevii care trec mai repede prin lecţie. Amintiţi-vă că majoritatea copiilor vor fi incepatori pentru Informatică şi codificare.
+**Asiguraţi-vă că un elev cu cunostinte medii poate termina confortabil într-o oră.** Luaţi în considerare adăugarea unei activități cu final deschis, pentru elevii care trec mai repede prin lecţie. Amintiţi-vă că majoritatea copiilor vor fi incepatori pentru Informatică şi codificare.
 
 **Includeți note pentru profesori.** Cele mai multe activităţi ar trebui să fie orientate către elevi, dar dacă o activitate este facilitată sau administrată de un profesor, vă rugăm să includeţi clar şi simplu direcţii pentru profesor în formă de note-profesor la un URL separat transmis cu activitatea dvs. Nu numai că elevii sunt începători, și unii dintre profesori sunt de asemenea. Includeți informaţii cum ar fi:
 
   * Tutorialul nostru funcţionează cel mai bine pe următoarele platforme şi browsere
   * Funcționează pe smartphone-uri? tablete?
   * Se recomandă programarea în perechi? 
-  * Consideraţii pentru utilizarea într-o clasă? de exemplu dacă există videoclipuri, recomandați cadrelor didactice să arăte clipuri video pe un ecran/proiector pentru întreaga clasă
+  * Consideraţii pentru utilizarea lor într-o clasă? de exemplu dacă există videoclipuri, recomandați cadrelor didactice să arăte clipuri video pe un ecran/proiector pentru întreaga clasă
 
 **Încorporati feedback la sfârşitul activităţii.** (Ex.: "ai terminat 10 nivele şi aflat despre bucle! Buna treaba!")
 
-**Includeți Social Media.** Încurajați elevii să posteze pe rețelele de socializare (după caz), atunci când termină, de exemplu "am terminat Hour of Code cu ___ Tu? #HourOfCode" sau "Am terminat #HourofCode ca parte a #CSEdWeek. Tu? @Scratch." Utilizează hashtag-ul **#HourOfCode** (cu litere mari H, O, C)
+**Încurajati studenţii să posteze pe Social Media (după caz), atunci când le-au terminat.** De exemplu "Am realizat o Ora de Programare cu________ Tu ai participat? #HourOfCode" sau "Am terminat #HourofCode ca parte a #CSEdWeek. Tu? @Scratch." Utilizează hashtag-ul **#HourOfCode** (cu litere mari H, O, C)
 
-**Creați activitatea dumneavoastră și în alte limbi în afară de engleză.** Noi promovam această campanie la nivel internaţional în acest an şi am dori să avem un număr de activităţi pentru participanţii care nu vorbesc engleză.
+**Crea activitatea dumneavoastră în spaniolă sau în alte limbi în afară de engleză.** ]
 
 **Explicați sau conectaţi activitatea cu un context social important.** Programarea pe computer devine o superputere atunci când elevii văd cum se poate schimba lumea în bine!
 
 **Nu solicitați înscriere sau plată înainte ca elevii sa poată încerca tutorialul.** Tutoriale care necesită înscriere sau plată nu vor fi listate
 
-**Asiguraţi-vă că tutorialul poate fi folosit într-o [paradigmă de Programare în Perechi](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
-
-Cele trei reguli de programare în pereche într-un cadru educațional:
+**Asiguraţi-vă că al tău tutorial poate fi folosit într-o paradigmă de [Programare pereche](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).** Cele trei reguli ale programarii pereche intr-o scoala sunt:
 
   * Conducatorul controlează mouse-ul şi tastatura.
   * Cel ce urmarește activitatea face sugestii, subliniază erori şi pune întrebări. 
@@ -187,7 +210,7 @@ Beneficiile programarii în perechi:
 
 ## Recomandarile legate de Marca Inregistrată
 
-Cu ~ 40 de milioane de elevi care au încercat Hour of Code, şi peste 97% din cadrele didactice participante cerându-ne să repetăm evenimentul anual, ne asigurăm că dăm tonul unei mişcări Hour of Code care se poate repeta anual, cu mai mare fidelitate şi fără confuzie.
+După succesul campaniei 2013, am luat măsuri pentru a face sigur că am înfiinţat Hour of Code ca o mişcare care se poate repeta anual cu mai mare fidelitate şi fără confuzie.
 
 O parte din acest lucru este de a proteja marca "Oră de cod" pentru a preveni confuzii. Mulţi dintre partenerii noştri au realizat tutoriale sau au folosit "Hour of Code" pe site-urile web. Nu vrem să prevenim acest lucru, dar vrem să ne asigurăm că se încadrează în câteva limite:
 
@@ -195,7 +218,7 @@ O parte din acest lucru este de a proteja marca "Oră de cod" pentru a preveni c
   2. Utilizaţi un exponent "TM" în locurile cele mai proeminente în care menționați "Hour of Code", atât pe site-ul web cât şi în descrierea aplicației
   3. Includeți limba pe pagina (sau în subsol), inclusiv link-uri către CSEdWeek şi Code.org, care spun următoarele:
     
-    ***"Hour of Code este o iniţiativă internațională a Computer Science Education Week[csedweek.org] şi Code.org [code.org] pentru a iniția milioane de studenţi în tehnologia computerelor și în programare cu ajutorul unei ore globale de programare."***
+    *"Hour of Code este o iniţiativă internațională a Computer Science Education Week[csedweek.org] şi Code.org [code.org] pentru a iniția milioane de studenţi în tehnologia computerelor și în programare cu ajutorul unei ore globale de programare."*
 
   4. A nu se utiliza "Hour of Code" în numele aplicației
 
@@ -211,13 +234,12 @@ Acest lucru ne va permite să monitorizăm userii veniți pe website-ul dumneavo
 
 Dacă tutorialul dumneavoastră este aprobat şi inclus pe pagina de tutoriale, Code.org va furniza un pixel pentru tracking unic pentru a fi integrat în tutorial. A se vedea exemplul de mai jos.
 
-***Notă: acest lucru nu este important să se facă pentru aplicațiile instalabile (iOS/Android, sau desktop)***
+Notă: acest lucru nu este important să se facă pentru aplicațiile instalabile (iOS/Android, sau desktop)
 
-**Exemplu de pixeli pentru tracking pentru AppInventor:**
+Exemplu de pixeli pentru tracking pentru AppInventor:
 
-IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
-
-IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
+IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
+IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
 [**La începutul paginii**](#top)
 
@@ -225,7 +247,7 @@ IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
 ## Promovarea tutorialelor dumneavoastră, CSEdWeek, și Hour of Code
 
-Recomandăm tuturor să-și promoveze singuri propriile tutoriale de 1-oră utilizatorilor. Vă rugăm să îi direcționați la pagina dumneavoastră Hour of Code. Utilizatorii dumneavoastră sunt mult mai dispuși să reacționeze la o corespondenţă de la și despre tutorialul dumneavoastră. Utilizaţi campania internațională Hour of Code pentru Computer Science Education Week ca o scuză pentru a încuraja utilizatorii de a invita și pe alţii să se alăture, ajutaţi-ne să ajungem la 100 de milioane de participanti.
+Recomandăm tuturor să-și promoveze singuri propriile tutoriale de 1-oră utilizatorilor. Vă rugăm să le directionati la ***pagina Hour of Code***. Utilizatorii dumneavoastră sunt mult mai dispuși să reacționeze la o corespondenţă de la și despre tutorialul dumneavoastră. Utilizaţi campania internațională Hour of Code pentru Computer Science Education Week ca o scuză pentru a încuraja utilizatorii de a invita și pe alţii să se alăture, ajutaţi-ne să ajungem la 100 de milioane de participanti.
 
   * Prezentați Hour of Code și CSEdWeek pe website-ul dumneavoastră.  
     Ex: <http://www.tynker.com/hour-of-code>
@@ -242,3 +264,5 @@ Recomandăm tuturor să-și promoveze singuri propriile tutoriale de 1-oră util
 Dacă creaţi un tutorial care este proiectat pentru vision-impaired, ne-ar plăcea să-l evidenţiaţi pentru telespectatorii cu cititoare de ecran. Noi nu au primit încă un astfel de tutorial, şi ar fi dornici să includem unul ca o opţiune pentru acesti elevi.
 
 [**La începutul paginii**](#top)
+
+<%= view :signup_button %>

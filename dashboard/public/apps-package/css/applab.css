@@ -1,4 +1,3 @@
-@import url(colpick.css);
 #divApplab, .draggingParent {
   overflow: hidden;
   outline: none;
@@ -14,8 +13,8 @@
   #divApplab canvas, .draggingParent canvas {
     position: absolute;
     overflow: hidden;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: -1; }
   #divApplab img, .draggingParent img {
     opacity: 1.0; }
@@ -23,6 +22,8 @@
     display: inline-block; }
   #divApplab div, .draggingParent div {
     overflow: hidden; }
+  #divApplab div[contenteditable=true], .draggingParent div[contenteditable=true] {
+    overflow: auto; }
   #divApplab button, .draggingParent button {
     padding: 7px 12px;
     margin: 2px;
@@ -31,13 +32,22 @@
     box-sizing: border-box;
     line-height: 1.2em;
     margin: 5px; }
+  #divApplab .chart, .draggingParent .chart {
+    position: absolute;
+    display: block;
+    overflow: hidden; }
+    #divApplab .chart .loading, .draggingParent .chart .loading {
+      background: image-url("spinner-big.gif") no-repeat center center; }
   #divApplab .design-mode-hidden, .draggingParent .design-mode-hidden {
     visibility: hidden; }
 
-#divApplab.divApplabDesignMode canvas, .draggingParent canvas {
+#designModeViz canvas, .draggingParent canvas {
   background-color: #eee; }
 
-#divApplab.divApplabDesignMode .design-mode-hidden, .draggingParent .design-mode-hidden {
+#designModeViz .chart, .draggingParent .chart {
+  background-color: #eee; }
+
+#designModeViz .design-mode-hidden, .draggingParent .design-mode-hidden {
   visibility: visible;
   opacity: 0.3; }
 
@@ -69,17 +79,25 @@
       background: url("/blockly/media/applab/dropdown.png") no-repeat center right, url("/blockly/media/applab/brighter.png"); }
   #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern [contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent [contenteditable=true] {
     outline: 0; }
+  #divApplab.appModern img[src=''], .draggingParent img[src=''] {
+    display: none; }
+  #divApplab.appModern .screen, .draggingParent .screen {
+    outline: 0; }
 
-#divApplab.appModern.divApplabDesignMode img[src=''], #divApplab.appModern.divApplabDesignMode canvas, .draggingParent img[src=''], .draggingParent canvas {
+#designModeViz.appModern img[src=''], #designModeViz.appModern canvas, #designModeViz.appModern .chart, .draggingParent img[src=''], .draggingParent canvas, .draggingParent .chart {
   border: 5px solid #fff;
   outline: 1px solid #bdc3c7;
   outline-offset: -1px; }
 
-#divApplab.appModern.divApplabDesignMode img[src=''], .draggingParent img[src=''] {
+#designModeViz.appModern img[src=''], .draggingParent img[src=''] {
+  display: block;
   background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat; }
 
-#divApplab.appModern.divApplabDesignMode canvas, .draggingParent canvas {
+#designModeViz.appModern canvas, .draggingParent canvas {
   background: #bdc3c7 url("/blockly/media/applab/placeholder_canvas.png") center center no-repeat; }
+
+#designModeViz.appModern .chart, .draggingParent .chart {
+  background: #bdc3c7 url("/blockly/media/applab/placeholder_chart.png") center center no-repeat; }
 
 div#visualization {
   height: 400px;
@@ -103,6 +121,8 @@ div#visualizationResizeBar {
     max-width: 400px; }
   div#visualizationColumn.responsive.with_padding {
     max-width: 402px; }
+  .small-footer-base.responsive {
+    max-width: 400px; }
   div#codeWorkspace {
     left: 400px; }
   html[dir='rtl'] div#codeWorkspace {
@@ -125,6 +145,8 @@ div#visualizationResizeBar {
     max-width: 350px; }
   div#visualizationColumn.responsive.with_padding {
     max-width: 352px; }
+  .small-footer-base.responsive {
+    max-width: 350px; }
   div#codeWorkspace {
     left: 350px; }
   html[dir='rtl'] div#codeWorkspace {
@@ -147,6 +169,8 @@ div#visualizationResizeBar {
     max-width: 300px; }
   div#visualizationColumn.responsive.with_padding {
     max-width: 302px; }
+  .small-footer-base.responsive {
+    max-width: 300px; }
   div#codeWorkspace {
     left: 300px; }
   html[dir='rtl'] div#codeWorkspace {
@@ -169,6 +193,8 @@ div#visualizationResizeBar {
     max-width: 250px; }
   div#visualizationColumn.responsive.with_padding {
     max-width: 252px; }
+  .small-footer-base.responsive {
+    max-width: 250px; }
   div#codeWorkspace {
     left: 250px; }
   html[dir='rtl'] div#codeWorkspace {
@@ -191,6 +217,8 @@ div#visualizationResizeBar {
     max-width: 200px; }
   div#visualizationColumn.responsive.with_padding {
     max-width: 202px; }
+  .small-footer-base.responsive {
+    max-width: 200px; }
   div#codeWorkspace {
     left: 200px; }
   html[dir='rtl'] div#codeWorkspace {
@@ -205,7 +233,24 @@ div#visualizationResizeBar {
     -ms-transform: scale(0.5);
     transform: scale(0.5); } }
 
-#divApplab {
+#visualizationColumn.wireframeShare {
+  background: url("/blockly/media/applab/phone_wireframe.png") center center no-repeat;
+  max-width: none !important;
+  width: 352px;
+  height: 612px;
+  margin: 0 auto;
+  padding: 20px 0; }
+  #visualizationColumn.wireframeShare #designToggleRow, #visualizationColumn.wireframeShare #gameButtons {
+    display: none; }
+  #visualizationColumn.wireframeShare #visualization {
+    top: 68px;
+    left: 16px;
+    border: 0; }
+
+#visualizationColumn.chromelessShare #designToggleRow, #visualizationColumn.chromelessShare #gameButtons {
+  display: none; }
+
+#divApplab, #designModeViz {
   overflow: hidden;
   outline: none;
   position: relative;
@@ -218,7 +263,7 @@ div#visualizationResizeBar {
   -ms-user-select: none;
   user-select: none; }
 
-#divApplab canvas {
+#divApplab canvas, #designModeViz canvas {
   position: absolute;
   overflow: hidden;
   top: 0px;
@@ -276,10 +321,13 @@ img#turtleImage {
 #debug-area {
   position: absolute;
   bottom: 0;
-  height: 156px;
+  height: 120px;
   left: 0;
   right: 0;
   max-height: calc(50% - 16px) !important; }
+
+#codeTextbox.pin_bottom {
+  bottom: 120px; }
 
 #debug-area-header {
   position: absolute;
@@ -304,6 +352,16 @@ img#turtleImage {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+  #debug-area-header #show-hide-debug-icon {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    margin: 0;
+    line-height: 30px;
+    font-size: 18px; }
+    #debug-area-header #show-hide-debug-icon:hover {
+      cursor: pointer;
+      color: white; }
 
 #debug-commands-header {
   width: 270px;
@@ -311,16 +369,6 @@ img#turtleImage {
   border-right: 1px solid gray; }
   #debug-commands-header .fa {
     margin: 0 0.25em; }
-  #debug-commands-header #show-hide-debug-icon {
-    position: absolute;
-    top: 0;
-    left: 8px;
-    margin: 0;
-    line-height: 30px; }
-  #debug-commands-header.js-hover-hack {
-    cursor: pointer; }
-    #debug-commands-header.js-hover-hack #show-hide-debug-icon {
-      color: white; }
 
 .debug-commands, .debug-console {
   display: block;
@@ -338,6 +386,8 @@ img#turtleImage {
 .debug-console {
   left: 270px;
   right: 0; }
+  .debug-console.full {
+    left: 0; }
 
 .debug-console * {
   font-family: monospace;

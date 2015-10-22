@@ -34,7 +34,8 @@ ____________________________________________________
 [example]
 
 In this example, we display a countdown from 10 to 0, then stop the interval timer.
-<pre>
+
+```
 var countdown = 10; //Initialize the countdown variable to 10
 textLabel("countdown", countdown); //Display the value of the countdown in a text label
 var i = setInterval(function() { //Save the interval timer value in variable i
@@ -48,7 +49,7 @@ var i = setInterval(function() { //Save the interval timer value in variable i
   }
 }, 1000); //Set the delay to 1000 milliseconds
 console.log("Interval timer ID: " + i); //Print the timer ID to the console
-</pre>
+```
 
 [/example]
 
@@ -57,7 +58,8 @@ ____________________________________________________
 [example]
 
 In this example, we run an interval timer and provide a button that can be used to interrupt it.
-<pre>
+
+```
 button("stop", "Stop the timer");
 var i = setInterval(function() { //Save the interval timer value in variable i
   //Write text to the display to indicate that the timer code was executed
@@ -66,7 +68,7 @@ var i = setInterval(function() { //Save the interval timer value in variable i
 onEvent("stop", "click", function(event){
   clearInterval(i); //Use variable i to cancel the interval timer
 });
-</pre>
+```
 
 [/example]
 
@@ -75,9 +77,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 clearInterval(interval);
-</pre>
+```
 
 [/syntax]
 

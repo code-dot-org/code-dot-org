@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Please correct the following errors:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -352,6 +354,10 @@
       viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
       section: Section
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
+      submitted_on: Submitted on %{date}
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -423,6 +429,10 @@
     no_primary_course: Try a course at Code Studio
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with
+      code.
   gender:
     male: Male
     female: Female
@@ -431,19 +441,34 @@
     student: विध्यार्थी
     teacher: Teacher
   footer:
+    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
+      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
+      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
+      advisors</a> for their support in creating Code Studio.
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
       create this tutorial.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. All Rights Reserved.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Powered by Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: More
     feedback: Provide feedback
     translate: Help us translate to your language
     support: Support
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Terms
     privacy: Privacy Policy
     secure: Secure Version
+    report_abuse: Report Abuse
   reference_area:
     title: Need help?
     subtitle: See these videos and hints
@@ -588,6 +613,11 @@
     open_response_body: Thanks for your response!
   dialog:
     ok: OK
+    startover_title: Are you sure you want to start over?
+    startover_body: This will reset the puzzle to its start state and reset all the
+      data you've added or changed.
+    startover_ok: Start Over
+    startover_cancel: Cancel
   time:
     hour: 1 hour
     day: day
@@ -683,3 +713,33 @@
     view_all: View My Projects
     remix: Remix
     click_to_remix: Click 'Remix' to spin-off your own version!
+    edit_project: Edit Project
+    abuse:
+      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
+        of Service</a> and cannot be shared with others.
+      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
+        us.</a>
+      go_to_code_studio: Go to Code Studio
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying,
+          harassment, or an instance of copyright infringement for content you own
+          while using apps built on Code Studio, please fill out the form below. We
+          will take your report very seriously, investigate accordingly, and take
+          appropriate action.
+        validation:
+          email: Please provide an email address
+          age: Please specify an age
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
+          harassment: Threats, cyberbullying, harassement
+          offensive: Offensive content
+          infringement: Copyright Infringement
+          other: Other
+        detail: Please provide as much detail as possible regarding the content you
+          are reporting.
+        acknowledge: By submitting this information, you acknowledge it will be handled
+          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
+          and the %{link_start_tos}Terms of Service%{link_end}

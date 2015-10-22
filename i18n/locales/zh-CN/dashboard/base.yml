@@ -2,6 +2,7 @@ zh:
   errors:
     messages:
       not_saved: '请更正以下错误:'
+      too_young: 此内容不适合更低龄学生。
   activerecord:
     errors:
       messages:
@@ -303,6 +304,10 @@ zh:
       viewing_solution: 查看解决方案
       try_it_yourself: 自己试一试
       section: 节点
+      example: 示例解决方案
+      example_with_number: '示例解决方案 %{solution_number}'
+      submitted_on: '在 %{date} 前提交'
+      unsubmit: 未提交
   user:
     email_confirm_needed: 没有确认的电子邮件地址：
     email_confirm_needed_required: '你的电子邮件地址尚未确认 %{email}：'
@@ -323,9 +328,9 @@ zh:
     classroom_activity: 不用电脑的活动
   home:
     title: 代码工作室
-    description: Code Studio is home to online courses created by Code.org
+    description: 代码工作室是Code.org创办的在线课程的家园
     lines_of_code: '%{lines_count} 这行代码由学生编写'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} 行代码 <br/> 由%{students_count} 百万学生编写'
     all_courses: 课程1、 2 和 3 的概要
     lesson_plans: 课程计划
     signin_message: '已经注册了吗？%{link}'
@@ -346,7 +351,7 @@ zh:
     local_school: 本地学校
     online: 在线
     see_details: 查看详细信息
-    view_course: View Course
+    view_course: 查看课程
     prize_info: 奖品为参与 （仅限美国公立学校教师）： 最高在课堂奖励 1000 元。
     tryfirst: 或者，你也可以先试一试，晚些再注册：
     trynow: 现在就试试
@@ -361,8 +366,11 @@ zh:
     heading_legacy: '<h2>我们的一般课程</h2><h1>所有年龄</h1>'
     your_gallery: 画廊
     no_primary_course: 试试在 Code Studio 参加一个课程
-    choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    choose_next_course: 从下面选择一个来尝试代码工作室课程
+    print_certificate: 打印证书
+  share:
+    title: 在代码工作室学习
+    description: 任何人都可以学习计算机科学。用代码制作游戏、 应用程序和艺术作品。
   gender:
     male: 男性
     female: 女性
@@ -371,16 +379,24 @@ zh:
     student: 学生
     teacher: 老师
   footer:
+    thank_you: '我们感谢 <a href="https://code.org/about/donors"> 捐助者</a>、 <a href="https://code.org/about/partners"> 合作伙伴</a>、 <a href="https://code.org/about/team"> 扩展团队</a>、视频演员、<a href="https://code.org/about/advisors"> 教育顾问</a>在创建代码工作室中给予的支持。'
     help_from_html: 从谷歌、 微软、 Facebook 和 Twitter 工程师帮助创建本教程。
+    help_from_html_old: 来自谷歌、 微软、 Facebook 和 Twitter 的工程师们帮助创建了本教程。
     art_from_html: '愤怒的小鸟 ™ & © 2009年-2013 Rovio 娱乐有限公司版权所有。 <br/>植物与僵尸 ™ & © 2013年电子艺术公司保留所有的权利。'
+    art_from_html_old: '愤怒的小鸟&#8482; &amp; &copy; 2009年-%{current_year} Rovio Entertainment Ltd. 版权所有。<br /> 植物大战僵尸&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. 版权所有'
     powered_by_aws: 由亚马逊网络服务
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE标识和Hour of Code标识&reg; 是Code.org的注册商标。'
+    copyright: 版权
+    more: 更多
     feedback: 提供反馈
     translate: 帮助我们翻译成你的语言
     support: 支持
     support_url: http://support.code.org/
+    tos_short: 条款
     tos: 条目
     privacy: 隐私政策
     secure: 安全版本
+    report_abuse: 报告滥用
   reference_area:
     title: 需要帮助吗？
     subtitle: 看看这些视频和提示
@@ -442,9 +458,9 @@ zh:
       title: 飞扬的代码
       body: 想要在 10 分钟内写你自己的游戏吗？请尝试我们飞扬的代码教程 ！
     20-hour:
-      title: Accelerated Course
+      title: 速成班
       body: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
-      body_short: Learn basic computer science in an accelerated version of courses 2-4.
+      body_short: 在速成版课程2-4中学习入门的计算机科学。
     hoc2014:
       try_new_tutorial: 试试我们新的beta 版的一小时代码教程
       try_frozen: 艺术家与冻结的安娜和艾尔莎
@@ -491,16 +507,20 @@ zh:
     wrong_title: 不正确的答案
     badname: 你的合同中含有错误的名称。
     badname_case: 函数的名称是区分大小写的。试着改变一下你的联系人名称。
-    badrange: Your contract has the wrong range.
-    baddomainsize: "Your contract doesn't have the right number of items in the domain."
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
+    badrange: 你的合同包含的范围有误。
+    baddomainsize: 你的合同在区域中的项目数有误。
+    baddomainname: 您的一个或多个域名有错误。
+    baddomaintype: 您的一个或多个域名中含有错误类型或错误的顺序。
   text_match:
     placeholder: 在这里输入你的答案
     open_response_title: 感谢
     open_response_body: 感谢您的回复！
   dialog:
     ok: 确定
+    startover_title: 你确定要重新开始吗？
+    startover_body: 这将重置这个谜题到初始状态，并且删除所有你添加或修改的数据。
+    startover_ok: 重新开始
+    startover_cancel: 取消
   time:
     hour: 1 小时
     day: 日
@@ -582,4 +602,25 @@ zh:
     delete_confirm_text: 您的项目将从我的项目列表中永久删除。任何人将不再能够通过您已共享的链接查看您的项目。
     view_all: 查看我的项目
     remix: 混合
-    click_to_remix: "Click 'Remix' to spin-off your own version!"
+    click_to_remix: '点击"混合"拆分自己的版本！'
+    edit_project: 编辑工程
+    abuse:
+      tos: "此工程因违法了Code.org的<a href='http://code.org/tos'>服务条款</a> ，不能被共享。"
+      contact_us: "如果你认为有错误，请 <a href='https://code.org/contact'>联系我们</a>"
+      go_to_code_studio: 转到代码工作室
+      report_abuse_form:
+        intro: 如果你遇到了冒犯性的内容、 威胁、 网络欺凌、 骚扰或通过代码工作室编写的应用程序实例侵犯了你的版权，请填写下面的表格。我们将非常认真对待你的报告，据此调查并采取适当的行动。
+        validation:
+          email: 请提供一个电子邮件地址
+          age: 请指定年龄
+          abuse_type: 请回答此内容如何违反服务条款
+          abuse_detail: 请提供有关您所报告的内容的详细信息
+        abusive_url: 内容的地址将被提交
+        abuse_type:
+          question: '此内容是如何违反%{link_end}服务条款%{link_start} 的?'
+          harassment: 威胁，网络欺凌不法之徒
+          offensive: 冒犯性的内容
+          infringement: 著作权侵权
+          other: 其他
+        detail: 请提供尽可能详细的信息，尽可能关于您所报告的内容。
+        acknowledge: '提交的信息将会根据%{link_start_privacy}隐藏策略%{link_end} 和 %{link_start_tos}服务条款%{link_end}的职权范围进行处理。'

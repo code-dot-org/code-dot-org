@@ -1,13 +1,14 @@
 
+%link{rel:'stylesheet', type:'text/css', href:'/css/wide-layout.css'}
 = view :header
 
 .container
 
   - if header['nav']
     .row
-      .col-sm-3{style: "margin-top:50px; background-color: rgba(0,0,0,0.02); font-size: 16px; padding-left: 0px; padding-right: 0px;"}
+      .col-sm-3.nav-col.col-sm-push-9
         = view(header['nav'])
-      .col-sm-9
+      .col-sm-9.col-sm-pull-3
         = body
   - else
     = body

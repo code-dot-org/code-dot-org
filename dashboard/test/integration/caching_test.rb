@@ -19,6 +19,16 @@ class CachingTest < ActionDispatch::IntegrationTest
     ActiveRecord::Base.connection.disconnect!
   end
 
+  test "should get /hoc/1" do
+    get '/hoc/1'
+    assert_response :success
+
+    no_database
+
+    get '/hoc/1'
+    assert_response :success
+  end
+
   test "should get /s/frozen" do
     get '/s/frozen'
     assert_response :success
@@ -74,12 +84,12 @@ class CachingTest < ActionDispatch::IntegrationTest
     sl = Script.find_by_name('frozen').script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
-    post "milestone/0/#{sl.id}", params
+    post "/milestone/0/#{sl.id}", params
     assert_response 200
 
     no_database
 
-    post "milestone/0/#{sl.id}", params
+    post "/milestone/0/#{sl.id}", params
     assert_response 200
   end
 
@@ -125,12 +135,12 @@ class CachingTest < ActionDispatch::IntegrationTest
     sl = Script.find_by_name('course1').script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
-    post "milestone/0/#{sl.id}", params
+    post "/milestone/0/#{sl.id}", params
     assert_response 200
 
     no_database
 
-    post "milestone/0/#{sl.id}", params
+    post "/milestone/0/#{sl.id}", params
     assert_response 200
   end
 

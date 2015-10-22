@@ -24,7 +24,9 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "true",
     "disable_examples": "false",
-    "markdown_instructions": "The _offset_ block lets you move an image relative to where it would normally be placed. Use this block to offset the square by 100 pixels on the y-axis."
+    "markdown_instructions": "The `offset` block lets you move an image relative to where it would normally be placed. Use this block to offset the square by 100 pixels on the y-axis.",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

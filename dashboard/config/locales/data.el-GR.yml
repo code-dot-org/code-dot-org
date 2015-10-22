@@ -709,6 +709,8 @@
         C4_variables_artist: Μεταβλητές - Καλλιτέχνης
         C4_variables_playlab: Μεταβλητές - Εργαστήριο παιχνιδιού
         C4_for_loops: Βρόχοι Για
+        C4_for_loops_bee: Βρόχοι Για
+        C4_for_loops_no_bee: Βρόχοι Για
         C4_math_artist: Προγραμματίζουμε τον Καλλιτέχνη χρησιμοποιώντας Μαθηματικά
         C4_function_edit: Επεξεργαζόμαστε Συναρτήσεις
         C4_function_create: Δημιουργούμε Συναρτήσεις
@@ -730,6 +732,7 @@
         infinity_playlab_intro: Εργαστηριακό παιχνίδι - Εισαγωγή
         infinity_playlab_events: Εργαστηριακό παιχνίδι - Γεγονότα
         infinity_playlab_repeat_forever: Εργαστηριακό παιχνίδι - Επανάλαβε Για πάντα
+        csp_applab_functions: Εισαγωγή στις Συναρτήσεις
         csp_concept_rgb: Λίγα για τα Εικονοστοιχεία
         csp_pixelation_color_1: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 1
         csp_pixelation_color_2: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 2
@@ -737,6 +740,7 @@
         csp_pixelation_bw: Βοήθημα Ασπρόμαυρης εικονοστοιχειοποίησης
         csp_U1L14_tipstricks: Ενότητα 1 Μάθημα 14 Βοηθήματα για δασκάλους
         csp_textcompression: Εργαλείο συμπίεσης κειμένου
+        csp_textcompression_new: Εργαλείο συμπίεσης κειμένου
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3
@@ -762,6 +766,9 @@
           μεγάλου παιχνιδιού
         alg_17_sambat_compound_booleans: Πληροφορική στην Άλγεβρα - Σύνθετες λογικές
           τιμές
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ

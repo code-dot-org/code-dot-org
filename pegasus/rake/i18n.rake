@@ -6,13 +6,15 @@ require 'cdo/google_drive'
 # We do this because, without quoting, the consumer of the YAML will mistake
 # convertable[-to-boolean] values like yes/no true/false as booleans instead
 # of treating them as strings.
-def yml_line_quoted_value(line)
+def format_enus_yml_with_quotes(line)
   match_data = /^ +[a-zA-Z0-9_ ]+?: *(.+)$/.match(line)
-  if match_data
+  if match_data # formats the values
     unless /^(".*"|'.*'|\|.*)$/.match(match_data[1])
       line.gsub!(/"/, '\\"')
       line.gsub!(/^([ a-zA-Z0-9_ ]+?): *(.*)$/, '\1: "\2"')
     end
+  else # formats the first key
+    line.gsub!(/^en-US:$/, '"en-US":')
   end
 
   return line
@@ -24,7 +26,7 @@ def hash_to_yml_with_quoted_values(hash, yml_path)
     buffer.each_line do |line|
       next if line=="---\n"
       next if line.empty?
-      file.write(yml_line_quoted_value(line))
+      file.write(format_enus_yml_with_quotes(line))
     end
   end
 end

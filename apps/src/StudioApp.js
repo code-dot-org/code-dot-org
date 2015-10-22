@@ -1,4 +1,18 @@
-/* global Blockly, ace:true, $, droplet, marked, digestManifest */
+/* global Blockly, ace:true, droplet, marked, digestManifest, dashboard */
+
+/**
+ * For the most part, we depend on dashboard providing us with React as a global.
+ * However, there is at least one context in which this won't be true - when we
+ * show feedback blocks in their own iframe. In that case, load React from
+ * our module.
+ * This approach has a couple of drawbacks
+ * (1) ability for dashboard React and apps React versions to get out of sync
+ * (2) if we end up in other cases where React isn't provided to us as a global
+ *     we probably won't notice, which may not be intended behavior
+ */
+if (!window.React) {
+  window.React = require('react');
+}
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
@@ -12,9 +26,9 @@ var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
-var smallFooterUtils = require('@cdo/shared/smallFooter');
-var React = require('react');
 var VersionHistory = require('./templates/VersionHistory.jsx');
+var Alert = require('./templates/alert.jsx');
+var codegen = require('./codegen');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -25,16 +39,12 @@ var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
 
-var BLOCK_X_COORDINATE = 70;
-var BLOCK_Y_COORDINATE = 30;
-
 var ENGLISH_LOCALE = 'en_us';
 
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
  */
 var MAX_PHONE_WIDTH = 500;
-
 
 var StudioApp = function () {
   this.feedback_ = new FeedbackUtils(this);
@@ -71,8 +81,6 @@ var StudioApp = function () {
    * @type {?DropletTooltipManager}
    */
   this.dropletTooltipManager = null;
-
-  this.blockYCoordinateInterval = 200;
 
   // @type {string} for all of these
   this.icon = undefined;
@@ -216,7 +224,8 @@ StudioApp.prototype.init = function(config) {
       level_source_id: config.level_source_id,
       phone_share_url: config.send_to_phone_url,
       sendToPhone: config.sendToPhone,
-      twitter: config.twitter
+      twitter: config.twitter,
+      app: config.app
     });
   }
 
@@ -243,7 +252,12 @@ StudioApp.prototype.init = function(config) {
   if (showCode && this.enableShowCode) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
-        var result = this.editor.toggleBlocks();
+        var result;
+        try {
+          result = this.editor.toggleBlocks();
+        } catch (err) {
+          result = {error: err};
+        }
         if (result && result.error) {
           // TODO (cpirich) We could extract error.loc to determine where the
           // error occurred and highlight that error
@@ -315,9 +329,6 @@ StudioApp.prototype.init = function(config) {
 
   var orientationHandler = function() {
     window.scrollTo(0, 0);  // Browsers like to mess with scroll on rotate.
-    var rotateContainer = document.getElementById('rotateContainer');
-    rotateContainer.style.width = window.innerWidth + 'px';
-    rotateContainer.style.height = window.innerHeight + 'px';
   };
   window.addEventListener('orientationchange', orientationHandler);
   orientationHandler();
@@ -327,8 +338,13 @@ StudioApp.prototype.init = function(config) {
   }
 
   var promptDiv = document.getElementById('prompt');
+  var prompt2Div = document.getElementById('prompt2');
   if (config.level.instructions) {
-    dom.setText(promptDiv, config.level.instructions);
+    $(promptDiv).text(config.level.instructions);
+  }
+  if (config.level.instructions2) {
+    $(prompt2Div).text(config.level.instructions2);
+    $(prompt2Div).show();
   }
 
   if (config.level.instructions || config.level.aniGifURL) {
@@ -367,12 +383,18 @@ StudioApp.prototype.init = function(config) {
       readOnly: config.readonlyWorkspace,
       textModeAtStart: config.level.textModeAtStart,
       beginnerMode: config.level.beginnerMode,
-      autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
+      dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
+      autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly,
+      dropletTooltipsDisabled: config.level.dropletTooltipsDisabled
     });
   }
 
   if (this.isUsingBlockly()) {
     this.handleUsingBlockly_(config);
+  } else {
+    // handleUsingBlockly_ already does an onResize. We still want that goodness
+    // if we're not blockly
+    this.onResize();
   }
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
@@ -430,7 +452,9 @@ StudioApp.prototype.init = function(config) {
         defaultBtnSelector: 'again-button',
         id: 'showVersionsModal'
       });
-      React.render(React.createElement(VersionHistory, {}), codeDiv);
+      React.render(React.createElement(VersionHistory, {
+        handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
+      }), codeDiv);
 
       dialog.show();
     }).bind(this));
@@ -454,8 +478,6 @@ StudioApp.prototype.init = function(config) {
       return true;
     }.bind(this));
   }
-
-  smallFooterUtils.bindHandlers();
 };
 
 StudioApp.prototype.handleClearPuzzle = function (config) {
@@ -475,6 +497,9 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
       resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
     }
     this.editor.setValue(resetValue);
+  }
+  if (config.afterClearPuzzle) {
+    config.afterClearPuzzle();
   }
 };
 
@@ -652,7 +677,9 @@ StudioApp.prototype.inject = function(div, options) {
     assetUrl: this.assetUrl,
     rtl: this.isRtl(),
     toolbox: document.getElementById('toolbox'),
-    trashcan: true
+    trashcan: true,
+    customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_,
+        this.Dialog)
   };
   Blockly.inject(div, utils.extend(defaults, options), this.cdoSounds);
 };
@@ -702,66 +729,41 @@ StudioApp.prototype.loadBlocks = function(blocksXml) {
 };
 
 /**
-* Spreading out the top blocks in workspace if it is not already set.
+* Applies the specified arrangement to top startBlocks. If any
+* individual blocks have x or y properties set in the XML, those values
+* take priority. If no arrangement for a particular block type is
+* specified, blocks are automatically positioned by Blockly.
+*
+* Note that, currently, only bounce and flappy use arrangements.
+*
 * @param {string} startBlocks String representation of start blocks xml.
 * @param {Object.<Object>} arrangement A map from block type to position.
 * @return {string} String representation of start blocks xml, including
 *    block position.
 */
 StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
-  var type, arrangeX, arrangeY;
+
+  var type, xmlChild;
+
   var xml = parseXmlElement(startBlocks);
-  var xmlChildNodes = this.sortBlocksByVisibility(xml.childNodes);
-  var numberOfPlacedBlocks = 0;
-  for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
-    xmlChild = xmlChildNodes[x];
+
+  var xmlChildNodes = xml.childNodes || [];
+  arrangement = arrangement || {};
+
+  for (var i = 0; i < xmlChildNodes.length; i++) {
+    xmlChild = xmlChildNodes[i];
 
     // Only look at element nodes
     if (xmlChild.nodeType === 1) {
       // look to see if we have a predefined arrangement for this type
       type = xmlChild.getAttribute('type');
-      arrangeX = arrangement && arrangement[type] ? arrangement[type].x : null;
-      arrangeY = arrangement && arrangement[type] ? arrangement[type].y : null;
-
-      xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangeX ||
-        BLOCK_X_COORDINATE);
-      xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangeY ||
-        BLOCK_Y_COORDINATE +
-      this.blockYCoordinateInterval * numberOfPlacedBlocks);
-      numberOfPlacedBlocks += 1;
+      if (arrangement[type]) {
+        xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangement[type].x);
+        xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangement[type].y);
+      }
     }
   }
   return Blockly.Xml.domToText(xml);
-};
-
-/**
-* Sorts the array of xml blocks, moving visible blocks to the front.
-* @param {Array.<Element>} xmlBlocks An array of xml blocks.
-* @return {Array.<Element>} A sorted array of xml blocks, with all
-*     visible blocks preceding all hidden blocks.
-*/
-StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
-  var userVisible;
-  var currentlyHidden = false;
-  var visibleXmlBlocks = [];
-  var hiddenXmlBlocks = [];
-  for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
-    xmlBlock = xmlBlocks[x];
-    if (xmlBlock.getAttribute) {
-      userVisible = xmlBlock.getAttribute('uservisible');
-      var type = xmlBlock.getAttribute('type');
-      currentlyHidden = type &&
-        Blockly.Blocks[type].shouldHideIfInMainBlockSpace &&
-        Blockly.Blocks[type].shouldHideIfInMainBlockSpace();
-    }
-
-    if (currentlyHidden || userVisible === 'false') {
-      hiddenXmlBlocks.push(xmlBlock);
-    } else {
-      visibleXmlBlocks.push(xmlBlock);
-    }
-  }
-  return visibleXmlBlocks.concat(hiddenXmlBlocks);
 };
 
 StudioApp.prototype.createModalDialog = function(options) {
@@ -783,7 +785,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     renderedMarkdown = marked(level.markdownInstructions);
     instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
-    headerElement.className = 'markdown-level-header-text';
+    headerElement.className = 'markdown-level-header-text dialog-title';
     headerElement.innerHTML = puzzleTitle;
     if (!this.icon) {
       headerElement.className += ' no-modal-icon';
@@ -793,6 +795,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
     puzzleTitle: puzzleTitle,
     instructions: level.instructions,
+    instructions2: level.instructions2,
     renderedMarkdown: renderedMarkdown,
     aniGifURL: level.aniGifURL
   });
@@ -894,7 +897,7 @@ function resizePinnedBelowVisualizationArea() {
 
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
-  var smallFooter = document.querySelector('.small-footer');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
   if (visualization) {
@@ -925,8 +928,6 @@ function resizePinnedBelowVisualizationArea() {
  */
 var onResizeSmallFooter = _.debounce(function () {
   resizePinnedBelowVisualizationArea();
-  smallFooterUtils.repositionCopyrightFlyout();
-  smallFooterUtils.repositionMoreMenu();
 }, 10);
 
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
@@ -959,27 +960,36 @@ function applyTransformScaleToChildren(element, scale) {
 *  classes that would typically adjust width and scale.
 */
 StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
-  var codeWorkspace = document.getElementById('codeWorkspace');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
-  var visualization = document.getElementById('visualization');
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  var visualizationEditor = document.getElementById('visualizationEditor');
 
   var rect = visualizationResizeBar.getBoundingClientRect();
   var offset;
   var newVizWidth;
   if (this.isRtl()) {
     offset = window.innerWidth -
-             (window.pageXOffset + rect.left + (rect.width / 2)) -
-             parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
+      (window.pageXOffset + rect.left + (rect.width / 2)) -
+      parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
     newVizWidth = (window.innerWidth - event.pageX) - offset;
   } else {
     offset = window.pageXOffset + rect.left + (rect.width / 2) -
-             parseInt(window.getComputedStyle(visualizationResizeBar).left, 10);
+      parseInt(window.getComputedStyle(visualizationResizeBar).left, 10);
     newVizWidth = event.pageX - offset;
   }
-  newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
-                         Math.min(MAX_VISUALIZATION_WIDTH, newVizWidth));
+  this.resizeVisualization(newVizWidth);
+};
+
+/**
+ * Resize the visualization to the given width
+ */
+StudioApp.prototype.resizeVisualization = function (width) {
+  var codeWorkspace = document.getElementById('codeWorkspace');
+  var visualization = document.getElementById('visualization');
+  var visualizationResizeBar = document.getElementById('visualizationResizeBar');
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualizationEditor = document.getElementById('visualizationEditor');
+
+  var newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
+                         Math.min(MAX_VISUALIZATION_WIDTH, width));
   var newVizWidthString = newVizWidth + 'px';
   var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
@@ -996,13 +1006,21 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   visualizationColumn.style.maxWidth = (newVizWidth + vizSideBorderWidth) + 'px';
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
-  applyTransformScaleToChildren(visualization,
-      'scale(' + (newVizWidth / this.nativeVizWidth) + ')');
+
+  // We don't get the benefits of our responsive styling, so set height
+  // explicitly
+  if (!utils.browserSupportsCssMedia()) {
+    visualization.style.height = newVizHeightString;
+    visualization.style.width = newVizWidthString;
+  }
+  var scale = (newVizWidth / this.nativeVizWidth);
+
+  applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
   if (visualizationEditor) {
     visualizationEditor.style.marginLeft = newVizWidthString;
   }
 
-  var smallFooter = document.querySelector('.small-footer');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
   if (smallFooter) {
     smallFooter.style.maxWidth = newVizWidthString;
 
@@ -1010,7 +1028,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
     // the small print should float right.  Otherwise, it should float left.
     var languageSelector = smallFooter.querySelector('form');
     var smallPrint = smallFooter.querySelector('small');
-    if (smallPrint.offsetTop === languageSelector.offsetTop) {
+    if (languageSelector && smallPrint.offsetTop === languageSelector.offsetTop) {
       smallPrint.style.float = 'right';
     } else {
       smallPrint.style.float = 'left';
@@ -1072,7 +1090,12 @@ StudioApp.prototype.highlight = function(id, spotlight) {
 * Remove highlighting from all blocks
 */
 StudioApp.prototype.clearHighlighting = function () {
-  this.highlight(null);
+  if (this.isUsingBlockly()) {
+    this.highlight(null);
+  } else if (this.editCode && this.editor) {
+    // Clear everything (step highlighting, errors, etc.)
+    codegen.clearDropletAceHighlighting(this.editor, true);
+  }
 };
 
 /**
@@ -1391,7 +1414,7 @@ StudioApp.prototype.configureDom = function (config) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
-    var smallFooter = document.querySelector(".small-footer");
+    var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
     if (smallFooter) {
       smallFooter.className += " responsive";
     }
@@ -1405,14 +1428,23 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   var container = document.getElementById(options.containerId);
   this.hideSource = true;
   var workspaceDiv = document.getElementById('codeWorkspace');
-  if(!options.embed || options.level.skipInstructionsPopup) {
+  if (!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
   document.getElementById('visualizationResizeBar').style.display = 'none';
 
+  // Chrome-less share page.
+  if (this.share && options.app === 'applab') {
+    if (dom.isMobile()) {
+      document.getElementById('visualizationColumn').className = 'chromelessShare';
+    } else {
+      document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
+      document.getElementById('visualizationColumn').className = 'wireframeShare';
+    }
+    document.body.style.backgroundColor = '#202B34';
   // For share page on mobile, do not show this part.
-  if ((!options.embed) && (!this.share || !dom.isMobile())) {
+  } else if (!options.embed && !(this.share && dom.isMobile())) {
     var runButton = document.getElementById('runButton');
     var buttonRow = runButton.parentElement;
     var openWorkspace = document.createElement('button');
@@ -1466,6 +1498,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig, options),
     palette: fullDropletPalette,
     showPaletteInTextMode: true,
+    dropIntoAceAtLineStart: options.dropIntoAceAtLineStart,
     enablePaletteAtStart: !options.readOnly,
     textModeAtStart: options.textModeAtStart
   });
@@ -1493,7 +1526,10 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     enableLiveAutocompletion: true
   });
 
-  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg);
+  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg, options.dropletConfig);
+  if (options.dropletTooltipsDisabled) {
+    this.dropletTooltipManager.setTooltipsEnabled(false);
+  }
   this.dropletTooltipManager.registerBlocksFromList(
     dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 
@@ -1521,8 +1557,15 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   this.resizeToolboxHeader();
 
   if (options.startBlocks) {
-    // Don't pass CRLF pairs to droplet until they fix CR handling:
-    this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
+
+    try {
+      // Don't pass CRLF pairs to droplet until they fix CR handling:
+      this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
+    } catch (err) {
+      // catch errors without blowing up entirely. we may still not be in a
+      // great state
+      console.error(err.message);
+    }
     // Reset droplet Undo stack:
     this.editor.clearUndoStack();
     // Reset ace Undo stack:
@@ -1542,6 +1585,11 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   this.onDropletToggle_();
 
   this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
+
+  this.editor.on('palettetoggledone', function(e) {
+    // Reposition callouts after block/text toggle (in case they need to move)
+    $('.cdo-qtips').qtip('reposition', null, false);
+  });
 
   if (options.afterEditorReady) {
     options.afterEditorReady();
@@ -1785,7 +1833,7 @@ StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
  * @returns {string} The name of a function that doesn't have any examples, or
  *   undefined if all have at least one.
  */
-StudioApp.prototype.getFunctionWithoutExample = function () {
+StudioApp.prototype.getFunctionWithoutTwoExamples = function () {
   var definitionNames = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
     return block.type === 'functional_definition' && !block.isVariable();
   }).map(function (definitionBlock) {
@@ -1805,13 +1853,17 @@ StudioApp.prototype.getFunctionWithoutExample = function () {
     return exampleBlock.getInputTargetBlock('ACTUAL').getTitleValue('NAME');
   });
 
-  var exampleless;
+  var definitionWithLessThanTwoExamples;
   definitionNames.forEach(function (def) {
-    if (exampleNames.indexOf(def) === -1) {
-      exampleless = def;
+    var definitionExamples = exampleNames.filter(function(example) {
+      return def === example;
+    });
+
+    if (definitionExamples.length < 2) {
+      definitionWithLessThanTwoExamples = def;
     }
   });
-  return exampleless;
+  return definitionWithLessThanTwoExamples;
 };
 
 /**
@@ -1934,3 +1986,89 @@ function rectFromElementBoundingBox(element) {
   rect.setAttribute('height', bbox.height);
   return rect;
 }
+
+/**
+ * Displays a small alert box inside DOM element at parentSelector.
+ * @param {string} parentSelector
+ * @param {object} props A set of React properties passed to the AbuseError
+ *   component
+ */
+StudioApp.prototype.displayAlert = function (parentSelector, props) {
+  // Each parent is assumed to have at most a single alert. This assumption
+  // could be changed, but we would then want to clean up our DOM element on
+  // close
+  var parent = $(parentSelector);
+  var container = parent.children('.react-alert');
+  if (container.length === 0) {
+    container = $("<div class='react-alert'/>");
+    parent.append(container);
+  }
+
+  var reactProps = $.extend({}, {
+    className: 'alert-error',
+    onClose: function () {
+      React.unmountComponentAtNode(container[0]);
+    }
+  }, props);
+
+  var element = React.createElement(Alert, reactProps);
+  React.render(element, container[0]);
+};
+
+/**
+ * If the current project is considered abusive, display a small alert box
+ * @param {string} parentSelector The selector for the DOM element parent we
+ *   should display the error in.
+ */
+StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
+  if (dashboard.project.exceedsAbuseThreshold()) {
+    this.displayAlert(parentSelector, {
+      body: React.createElement(dashboard.AbuseError, {
+        i18n: {
+          tos: window.dashboard.i18n.t('project.abuse.tos'),
+          contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
+        }
+      }),
+      style: {
+        top: 45,
+        left: 350,
+        right: 50
+      }
+    });
+  }
+};
+
+/**
+ * Searches for cases where we have two (or more) nested for loops in which
+ * both loops use the same variable. This can cause infinite loops.
+ * @returns {boolean} True if we detect an instance of this.
+ */
+StudioApp.prototype.hasDuplicateVariablesInForLoops = function () {
+  return Blockly.mainBlockSpace.getAllBlocks().some(this.forLoopHasDuplicatedNestedVariables_);
+};
+
+/**
+ * Looks to see if a particular block is (a) a for loop and (b) has a descendant
+ * for loop using the same variable.
+ * @returns {boolean} True if that is true of this block
+ */
+StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
+  if (!block || block.type !== 'controls_for' &&
+      block.type !== 'controls_for_counter') {
+    return;
+  }
+
+  var innerBlock = block.getInput('DO').connection.targetBlock();
+
+  // Not the most efficient of algo's, but we shouldn't have enough blocks for
+  // it to matter.
+  return block.getVars().some(function (varName) {
+    return innerBlock.getDescendants().some(function (descendant) {
+      if (descendant.type !== 'controls_for' &&
+          descendant.type !== 'controls_for_counter') {
+        return false;
+      }
+      return descendant.getVars().indexOf(varName) !== -1;
+    });
+  });
+};

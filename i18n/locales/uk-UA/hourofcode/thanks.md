@@ -1,10 +1,10 @@
 * * *
 
-title: Дякуємо за реєстрацію заходу Години коду! layout: wide
+title: <%= hoc_s(:title_signup_thanks) %> layout: wide nav: how_to_nav
 
-social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
+social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png" "og:image:width": 1440 "og:image:height": 900 "og:url": "http://<%=request.host%>"
 
-"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 
 * * *
 
@@ -14,42 +14,28 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Дякуємо за реєстрацію заходу в межах Години коду!
 
-**КОЖЕН** організатор заходів Години коду отримає 10 GB простору на Dropbox або $10 кредиту Skype в якості подяки. [Детальніше](<%= hoc_uri('/prizes') %>)
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about prizes, new tutorials and other exciting updates. What can you do now?
 
 ## 1. Поширюйте інформацію
 
-Розкажіть своїм друзям про #HourOfCode.
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<% if @country == 'us' %>
-
 ## 2. Запропонуйте взяти участь у Годині коду всій школі
 
-[Надішліть цього листа](<%= hoc_uri('/resources#email') %>) або [цей буклет](/resources/hoc-one-pager.pdf) своєму директору.
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](%= resolve_url('/prizes/hardware-signup') %) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
 
-<% else %>
+## 3. Попросіть про участь свою адміністрацію
 
-## 2. Запропонуйте взяти участь у Годині коду всій школі
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your manager or company's CEO.
 
-[Надішліть цього листа](<%= hoc_uri('/resources#email') %>) або передайте [цей ](/resources/hoc-one-pager.pdf) буклет</a> своєму директору.
+## 4. Promote Hour of Code in your community
 
-<% end %>
+[Recruit a local group](%= resolve_url('/promote/resources#sample-emails') %)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
 
-## 3. Зробіть пожертву
+## 5. Зверніться до місцевих депутатів по підтримку Години коду
 
-[Зробіть внесок у нашу краудфандингову кампанію.](http://<%= codeorg_url() %>/donate) Щоб навчити 100 мільйонів учнів, нам потрібна підтримка. Ми запустили [найбільшу краудсорсингову кампанію](http://<%= codeorg_url() %>/donate) в історії. *Кожен* долар пожертв подвоять [спонсори](http://<%= codeorg_url() %>/about/donors), збільшуючи ваш внесок.
-
-## 4. Попросіть про участь свою адміністрацію
-
-[Надішліть цього листа](<%= hoc_uri('/resources#email') %>) своєму керівникові чи директору. Або [передайте їм буклет](http://hourofcode.com/resources/hoc-one-pager.pdf).
-
-## 5. Сприяйте Годині коду у свій спільноті
-
-Залучайте місцеву спільноту - клуб пластунів, церкву, університет, ветеранський клуб чи профспілку. Або проведіть вечірку Години коду для своїх сусідів.
-
-## 6. Зверніться до місцевих депутатів по підтримку Години коду
-
-[Надішліть цього листа](<%= hoc_uri('/resources#politicians') %>) міському голові, місцевій або шкільній раді. Або [передайте буклет](http://hourofcode.com/resources/hoc-one-pager.pdf) та запросіть відвідати школу.
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
 
 <%= view 'popup_window.js' %>

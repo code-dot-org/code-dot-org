@@ -22,7 +22,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "markdown_instructions": "Here's an Evaluation Block called `and` - it returns *true* if both of its parameters are *true*, otherwise it returns *false*. Edit the x variable so that this expression returns *true*.",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

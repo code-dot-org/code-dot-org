@@ -6,14 +6,14 @@ nav: educate_nav
 # Computer Science Principles #
 
 ## <a name="whatis"></a>What is CS Principles?
-The College Board has proposed a new course called AP® Computer Science Principles.  This  course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. The official AP® exam is set to go live in the 2016-17 school year with an exam and performance-based assessments.
+In fall 2016, the College Board will launch its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
 
-Find more information about the College Board CS Principles project at: [http://apcsprinciples.org/](http://apcsprinciples.org/)
+For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.org/APCSP).
 
 ## Code.org's CS Principles Curriculum
-Check back often as batches of lessons will be released on a rolling basis from now until Summer 2015 when the entire curriculum will be publicly available. The resources will be distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+Check back often as batches of lessons will be released on a rolling basis. The resources will be distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/mjMLCpXz3eo" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="//www.youtube.com/embed/S1vFrz4NETg" frameborder="0" allowfullscreen></iframe>
 
 ### <a name="features"></a>Features
 
@@ -32,9 +32,11 @@ Check back often.  The video library is growing every week!
 
 <iframe src="https://www.youtube.com/embed/15aqFQQVBWU" frameborder="0" allowfullscreen></iframe>
 
-<iframe src="https://www.youtube.com/embed/CfczKEzp4kY" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/By30SCp-Tsw" frameborder="0" allowfullscreen></iframe>
 
-<iframe src="https://www.youtube.com/embed/xOJTUuw62v4" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/ZhEf7e4kopM" frameborder="0" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/JJ1S9Y31vgQ" frameborder="0" allowfullscreen></iframe>
 
 
 
@@ -54,17 +56,17 @@ We have forums for educators to discuss and trade ideas about CSP and talk about
 Several documents describe the overarching themes and direction of the course.
 
 - [One-pager](/files/programs/CSP_1-pager_final.pdf)
-- [Curriculum Syllabus and Overview](/files/CSPSyllabusJune2015.pdf) (rev. June. 2015)
+- [Curriculum Syllabus and Overview](/files/CSPSyllabusSept2015.pdf) (rev. Sept. 2015)
 - [Professional development overview](/files/CSPPDoverview.pdf)
 
 
 ## <a name="lessons"></a>Lessons
 
 
-| Link| Unit Description |
+| Link | Unit Description |
 | :------------------:|-----------|
 |  [![binary magic](csp/images/thumb_binaryMagic.png "Unit 1")](/educate/csp/unit1) [Unit 1](/educate/csp/unit1) | **Digital Information** What can be represented with a single bit and how do we get a single bit of information from one place to another? This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. Topics include: the digital representation of information - numbers, text, images, and communication protocols |
-|*Coming Soon*| **The Internet** Students continue to work together to invent solutions and protocols to many of the problems that arise in the structure and function of the Internet. Topics include the Internet Protocol, DNS, TCP/IP, cryptography and other security and hacking concerns. Topics include: encryption, security, computationally hard problems, and internet protocols|
+|  [![Internet Simulator](csp/images/thumb_netsim.png "Unit 2")](/educate/csp/unit2) [Unit 2](/educate/csp/unit2)  | **The Internet** Students continue to work together to invent solutions and protocols to many of the problems that arise in the structure and function of the Internet. Topics include the Internet Protocol, DNS, TCP/IP, cryptography, computationally hard problems, and other security and hacking concerns.
 |*Coming Soon*| **Programming** Students learn the fundamentals programming constructs of JavaScript by solving problems with “turtle graphics.”  Then move on to programming simple event driven apps.  An emphasis is placed on enabling students to solve problems and write code in teams. |
 |*Coming Soon*| **Data** Students continue programming and building web apps, now with a view towards data: processing it with algorithms, and the implications of storing data collected from and by others on the web.  Students explore “big data” by making queries against a data analysis api.|
 |*Coming Soon*| **Explore and Create** Class time devoted to preparation and execution of the AP® Performance Tasks: Explore and Create.|
@@ -85,7 +87,7 @@ Unit completion is driven primarily by our professional development schedule. Un
 As the units undergo revisions we hope to publish them on an ongoing basis leading up to and through the beginning of the school year. These are our targets.
 
 * Unit 1 - Target July 1 - **done!** see [Unit 1](/educate/csp/unit1)
-* Unit 2 - Target Aug. 1
+* Unit 2 - Target Aug. 31 - **done!** see [Unit 2](/educate/csp/unit2)
 * Unit 3 - Target Early Fall (Sept/Oct)
 * Unit 4 - Target Mid Fall (Oct/Nov)
 

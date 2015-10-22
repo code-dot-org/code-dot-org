@@ -2,6 +2,7 @@ el:
   errors:
     messages:
       not_saved: 'Παρακαλώ διορθώστε τα ακόλουθα σφάλματα:'
+      too_young: Αυτό το περιεχόμενο έχει ηλικιακούς περιορισμούς σε ισχύ και δεν είναι διαθέσιμο για τους νεότερους μαθητές
   activerecord:
     errors:
       messages:
@@ -307,6 +308,10 @@ el:
       viewing_solution: Προβολή λύσης
       try_it_yourself: Δοκίμασέ το μόνος σου
       section: Ενότητα
+      example: Παράδειγμα λύσης
+      example_with_number: 'Παράδειγμα λύσης %{solution_number}'
+      submitted_on: 'Υποβλήθηκε στις %{date}'
+      unsubmit: Ανακλήθηκε
   user:
     email_confirm_needed: 'Η διεύθυνση email δεν έχει επιβεβαιωθεί:'
     email_confirm_needed_required: 'Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου %{email}  δεν έχει επιβεβαιωθεί:'
@@ -327,9 +332,9 @@ el:
     classroom_activity: Αποσυνδεδεμένη Δραστηριότητα
   home:
     title: Στούντιο Κώδικα
-    description: Code Studio is home to online courses created by Code.org
+    description: Το Code Studio φιλοξενεί τα online μαθήματα που δημιουργήθηκαν από το Code.org
     lines_of_code: '%{lines_count} ΓΡΑΜΜΕΣ ΚΩΔΙΚΑ ΓΡΑΜΜΕΝΕΣ ΑΠΟ ΜΑΘΗΤΕΣ'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} ΓΡΑΜΜΈΣ ΚΩΔΙΚΑ<br/> ΓΡΆΦΤΗΚΑΝ ΑΠΟ%{students_count} ΕΚΑΤΟΜΜΎΡΙΑ ΜΑΘΗΤΕΣ'
     all_courses: Επισκόπηση των μαθημάτων 1, 2 και 3
     lesson_plans: Σχέδια μαθήματος
     signin_message: 'Ήδη εγγεγραμμένος; %{link}'
@@ -350,7 +355,7 @@ el:
     local_school: τοπικό σχολείο
     online: σε σύνδεση
     see_details: Δείτε λεπτομέρειες
-    view_course: View Course
+    view_course: Προβολή μαθημάτων
     prize_info: 'Έπαθλα για συμμετέχοντες (μόνο για δασκάλους σε αμερικάνικα δημόσια σχολεία): Μέχρι $1.000 σε έπαθλα για τάξεις.'
     tryfirst: 'Ή μπορείτε να κάνετε πρώτα μία δοκιμή και να εγγραφείτε αργότερα:'
     trynow: Δοκιμάστε τώρα
@@ -365,8 +370,11 @@ el:
     heading_legacy: '<h2>Το γενικό μάθημα για </h2><h1>όλες τις ηλικίες</h1>'
     your_gallery: Συλλογή φωτογραφιών
     no_primary_course: Δοκιμάστε μία σειρά μαθημάτων στο Στούντιο Κώδικα
-    choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    choose_next_course: Δοκιμάστε μια σειρά μαθημάτων Code Studio επιλέγοντας ένα παρακάτω
+    print_certificate: Εκτύπωση πιστοποιητικού
+  share:
+    title: Μάθετε με κώδικα Studio
+    description: Καθένας μπορεί να μάθει την επιστήμη των υπολογιστών. Κάντε παιχνίδια, εφαρμογές και τέχνη με τη χρήση κώδικα.
   gender:
     male: Αγόρι
     female: Κορίτσι
@@ -375,16 +383,24 @@ el:
     student: φοιτητής/μαθητής
     teacher: Καθηγητής
   footer:
+    thank_you: 'Ευχαριστούμε τους <a href="https://code.org/about/donors"> χωρηγούς</a>, <a href="https://code.org/about/partners"> συνεργάτες</a>, μας <a href="https://code.org/about/team"> την εκτεταμένη ομάδα</a>, τους ανθρώπους που δούλεψαν στα βίντεο τους <a href="https://code.org/about/advisors"> συμβούλους εκπαίδευσης</a> για την υποστήριξή τους στη δημιουργία του κώδικα Studio.'
     help_from_html: Μηχανικοί από τη Google, Microsoft, Facebook και Twitter βοήθησαν να δημιουργήσουμε αυτό το σεμινάριο.
+    help_from_html_old: Μηχανικών από το Google, Microsoft, Facebook και Twitter βοήθησε στη δημιουργία αυτών των εκπαιδεευτικών υλικών.
     art_from_html: 'Angry Birds ™ & © 2009-2013 Rovio Entertainment Ltd. Με την επιφύλαξη παντός δικαιώματος.<br/> Plants vs. Zombies ™ & © 2013 Electronic Arts&trade; S.A. Με την επιφύλαξη παντός δικαιώματος.'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Με την υποστήριξη των Amazon Web Services
+    trademark: '© Code.org, οι %{current_year}. Code.org®, το λογότυπο του κώδικα και την ώρα του κώδικα ® αποτελούν εμπορικά σήματα της Code.org.'
+    copyright: Πνευματικά δικαιώματα
+    more: Περισσότερα
     feedback: Πες τη γνώμη σου
     translate: Βοηθήστε μας να μεταφράσουμε στη γλώσσα σας
     support: Υποστήριξη
     support_url: http://support.code.org/
+    tos_short: Όροι
     tos: Όροι
     privacy: Πολιτική Aπορρήτου
     secure: Ασφαλής έκδοση
+    report_abuse: Αναφορά κατάχρησης
   reference_area:
     title: Χρειάζεσε βοήθεια;
     subtitle: Δες αυτά τα βίντεο και τις υποδείξεις
@@ -446,9 +462,9 @@ el:
       title: Flappy κώδικα
       body: θέλετε να γράψετε το δικό σας παιχνίδι σε λιγότερο από 10 λεπτά; Δοκιμάστε το σεμινάριο μας για τον Flappy κώδικα!
     20-hour:
-      title: Accelerated Course
+      title: Επιταχυνόμενη πορεία μάθησης
       body: Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής και προγραμματισμού . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
-      body_short: Learn basic computer science in an accelerated version of courses 2-4.
+      body_short: Μάθετε τις βασικές αρχές Επιστήμης Πληροφορικής σε μια ταχεία έκδοση των μαθημάτων 2-4.
     hoc2014:
       try_new_tutorial: Δοκιμάστε μας νέο σεμινάριο για την ώρα του κώδικα σε δοκιμαστική μορφή
       try_frozen: Καλλιτέχνης με την Άννα και την Έλσα, από το Frozen
@@ -505,6 +521,10 @@ el:
     open_response_body: Ευχαριστούμε για την απάντησή σου!
   dialog:
     ok: OΚ
+    startover_title: Είστε βέβαιος ότι θέλετε να ξεκινήσετε από την αρχή;
+    startover_body: Αυτό θα επαναφέρει το παζλ στην αρχική του κατάσταση και θα διαγράψει όλα τα δεδομένα που προσθέσατε ή αλλάξατε.
+    startover_ok: Ξεκινήστε από την αρχή
+    startover_cancel: Άκυρο
   time:
     hour: 1 ώρα
     day: ημέρα
@@ -587,3 +607,24 @@ el:
     view_all: Δείξε τα Έργα μου
     remix: Μιξάρισμα
     click_to_remix: "Κάνε κλικ στο 'Μιξάρισμα' για να ξεκινήσεις τη δική σου έκδοση!"
+    edit_project: Επεξεργαστείτε το έργο
+    abuse:
+      tos: "Το έργο αυτό έχει αναφερθεί για την παραβίαση των όρων παροχής υπηρεσιών του Code.org <a href='http://code.org/tos'></a> και δεν μπορεί να μοιραστεί με άλλους."
+      contact_us: "Αν νομίζετε ότι αυτό να είναι ένα λάθος, παρακαλώ <a href='https://code.org/contact'> επικοινωνήστε μαζί μας.</a>"
+      go_to_code_studio: Πηγαίνετε στο Code Studio
+      report_abuse_form:
+        intro: Αν έχετε αντιμετωπίσει προσβλητικό περιεχόμενο, απειλές, cyberbullying, παρενόχληση, ή ένα παράδειγμα της παραβίασης πνευματικών δικαιωμάτων για το περιεχόμενο που έχετε στην κατοχή σας ενώ χρησιμοποιώντας apps ενσωματωμένο σε κώδικα Studio, παρακαλούμε συμπληρώστε την παρακάτω φόρμα. Θα λάβει έκθεσή σας πολύ σοβαρά, διεξαγάγω, και θα λάβει τα κατάλληλα μέτρα.
+        validation:
+          email: Καλείσθε να παράσχετε μια διεύθυνση ηλεκτρονικού ταχυδρομείου
+          age: Προσδιορίστε την ηλικία
+          abuse_type: Σας παρακαλούμε να απαντήσετε πώς αυτό το περιεχόμενο παραβιάζει τους όρους παροχής υπηρεσιών
+          abuse_detail: Παραθέστε λεπτομέρειες σχετικά με το περιεχόμενο που πρόκειται να αναφέρετε
+        abusive_url: URL του περιεχομένου που αναφέρθηκαν
+        abuse_type:
+          question: 'Πόσο αυτό το περιεχόμενο παραβιάζει το %{link_start}Terms της Service%{link_end};'
+          harassment: Ψηφιακού εκφοβισμού, απειλές, παρενόχληση
+          offensive: Προσβλητικό περιεχόμενο
+          infringement: Παραβίαση πνευματικών δικαιωμάτων
+          other: Άλλα
+        detail: Καλείσθε να παράσχετε τόσο λεπτομερώς όσο το δυνατόν σχετικά με το περιεχόμενο που πρόκειται να αναφέρετε.
+        acknowledge: 'Υποβάλλοντας αυτές τις πληροφορίες, αναγνωρίζετε ότι θα τη μεταχειριστούμε σύμφωνα με τους όρους της Policy%{link_end} το %{link_start_privacy}Privacy και το %{link_start_tos}Terms του Service%{link_end}'

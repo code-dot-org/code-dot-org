@@ -16,11 +16,7 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-#### In-person workshop####
 Milestone Complete! 
-
-#### Online Study ####
- <b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
  
@@ -40,16 +36,18 @@ Quarter 4: Saturday, April 2, 2016
 8:30am - 3:30pm
 <br/>
 Breakfast and lunch will be served.
-<br/><br/>
-**Location**
 
-<b>Quarter 1: September 19th</b><br/>
-IDLP Building<br/>
-Room 118<br/>
-3950 Pecos-McLeod Interconnect<br/>
-Las Vegas, NV 89121
-<br/> 
-<br/>
+
+**November 21st Location**
+
+Innevation Center<br/>
+3rd Floor<br/>
+Collaboration Station<br/>
+6795 S Edmond St<br/>
+Las Vegas, NV 89118
+
+Free parking is located in front of the building. Please park in Visitor Parking.
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger
@@ -66,7 +64,61 @@ Water
 
 More info coming soon!
 
+
+
 [**Back to the top**](#top)
+
+<a id="counselor-admin"></a>
+
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
+
+
+### Counselors##
+
+**Save the date**
+
+Tuesday, November 17, 2015 <br/>
+10:00am - 12:00pm
+
+**Location**
+
+Instructional Design and Professional Learning Division<br/>
+3950 S. Pecos-Mcleod<br/>
+Room 118<br/>
+Las Vegas, NV  89121
+
+**What to bring**
+
+Snacks
+<br/>
+Water
+
+### Administrators##
+
+**Save the date**
+
+Tuesday, November 17, 2015 <br/>
+7:00am - 9:00am
+
+**Location**
+
+Instructional Design and Professional Learning Division<br/>
+3950 S. Pecos-Mcleod<br/>
+Room 118<br/>
+Las Vegas, NV  89121
+
+**What to bring**
+
+Snacks
+<br/>
+Water
+
+[**Back to the top**](#top)
+
+
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

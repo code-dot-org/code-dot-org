@@ -2,6 +2,7 @@ ru:
   errors:
     messages:
       not_saved: 'Пожалуйста, исправьте следующие ошибки:'
+      too_young: Этот урок имеет возрастные ограничения и не доступен для юных студентов
   activerecord:
     errors:
       messages:
@@ -301,6 +302,10 @@ ru:
       viewing_solution: Просмотр решения
       try_it_yourself: Попробуйте сами
       section: Раздел
+      example: Пример решения
+      example_with_number: 'Пример решения %{solution_number}'
+      submitted_on: 'Отправлено %{date}'
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
     email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был подтверждён:'
@@ -344,7 +349,7 @@ ru:
     local_school: местная школа
     online: онлайн
     see_details: Подробнее
-    view_course: View Course
+    view_course: Просмотр курса
     prize_info: 'Призы за участие (только для учителей государственных школ США): до $1000 на  класс.'
     tryfirst: 'Или Вы можете сначала попробовать, а зарегистрироваться позже:'
     trynow: Попробуйте сейчас
@@ -359,8 +364,11 @@ ru:
     heading_legacy: '<h2>Наш общий курс для</h2><h1>Для всех возрастов</h1>'
     your_gallery: Галерея
     no_primary_course: Попробуйте курс Студии Кода
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Попробуйте курс Студии кода, выбрав один из вариантов ниже
     print_certificate: Распечатать сертификат
+  share:
+    title: Учиться в Студии кода
+    description: Любой человек может обучиться информатике. Создавайте игры, приложения и искусство с помощью кода.
   gender:
     male: Мужской
     female: Женский
@@ -369,16 +377,24 @@ ru:
     student: Ученик
     teacher: Учитель
   footer:
+    thank_you: 'Мы благодарим наших <a href="https://code.org/about/donors">доноров</a>, <a href="https://code.org/about/partners"> партнеров</a>, нашу <a href="https://code.org/about/team"> большую команду</a>, наши участников видеозаписей и наших <a href="https://code.org/about/advisors"> консультантов по вопросам образования</a> за их поддержку в создании Студии Кода.'
     help_from_html: Инженеры от Google, Microsoft, Facebook и Twitter помогли создать этот учебник.
+    help_from_html_old: Инженеры из Google, Microsoft, Facebook, и Twitter помогли с созданием этих материалов.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Все права защищены.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Все права защищены.'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Создано с помощью Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Авторское право
+    more: Ещё
     feedback: Оставить отзыв
     translate: Помогите нам выполнить перевод на Ваш язык
     support: Поддержка
     support_url: http://support.сode.org
+    tos_short: Условия использования
     tos: Условия использования
     privacy: Правила конфиденциальности
     secure: Защищенная версия
+    report_abuse: Сообщить о нарушении
   reference_area:
     title: Нужна помощь?
     subtitle: Смотрите эти видео и подсказки
@@ -499,6 +515,10 @@ ru:
     open_response_body: Спасибо за ваш ответ!
   dialog:
     ok: Продолжить
+    startover_title: Вы уверены, что хотите начать заново?
+    startover_body: Так вы удалите все блоки, которые вы добавили или изменили, и начнёте головоломку сначала.
+    startover_ok: Начать заново
+    startover_cancel: Отмена
   time:
     hour: 1 час
     day: день
@@ -581,3 +601,24 @@ ru:
     view_all: Посмотреть Мои проекты
     remix: Ремикс
     click_to_remix: Нажмите «Ремикс», чтобы воспроизвести вашу собственную версию!
+    edit_project: Редактировать проект
+    abuse:
+      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
+      go_to_code_studio: Перейти в студию кода
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        validation:
+          email: Пожалуйста предоставьте адрес электронной почты
+          age: Пожалуйста, укажите возраст
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
+          harassment: Threats, cyberbullying, harassement
+          offensive: Оскорбительное содержание
+          infringement: Нарушение авторских прав
+          other: Другое
+        detail: Пожалуйста укажите как можно больше подробностей относительно содержания, которое вы сообщаете.
+        acknowledge: 'Отправляя эту информацию, вы признаёте, что она будет обрабатываться в соответствии с %{link_start_privacy}Правилами конфиденциальности%{link_end} и %{link_start_tos}Условиями использования%{link_end}'

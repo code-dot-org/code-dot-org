@@ -134,6 +134,13 @@ Blockly.Blocks.controls_for = {
     xmlBlock.setAttribute('type', 'variables_get');
     option.callback = Blockly.ContextMenu.callbackFactory(this, xmlBlock);
     options.push(option);
+  },
+  domToMutation: function(xmlElement) {
+    if (xmlElement.getAttribute('name') === 'default_var') {
+      var baseName = xmlElement.childNodes[0].data;
+      var newName = Blockly.Variables.generateUniqueNameFromBase_(baseName);
+      this.setTitleValue(newName, 'VAR');
+    }
   }
 };
 

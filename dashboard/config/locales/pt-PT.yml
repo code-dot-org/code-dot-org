@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Por favor, corrige os seguintes erros:'
+      too_young: Este conteúdo tem restrições de idade e não está disponível para
+        os estudantes mais jovens
   activerecord:
     errors:
       messages:
@@ -42,10 +44,10 @@
   less: MENOS
   beta: beta
   try_hoc: 'Experimenta a Hora de Código >> '
-  try_k8intro: Experimente nossa introdução do curso de Ciência da Computação (15-25
-    horas) para o Ensino Fundamental
-  k8intro: Introdução ao Curso de Ciência da Computação (15-25 horas) para estudantes
-    do ensino fundamental
+  try_k8intro: Experimente o nosso curso de Introdução às Ciências da Computação para
+    o Ensino Básico (15-25 horas)
+  k8intro: Curso de Introdução às Ciências da Computação para Ensino Básico (15-25
+    horas)
   already_started: 'Já começaste? Retoma >> '
   demos: 'Administrador: Todas as demonstrações'
   continue: Continuar
@@ -108,20 +110,20 @@
     additional_information: Precisamos de mais informações para continuarmos o processo
       de criação da conta.
   signin_form:
-    title: Já tem uma conta? Entre
+    title: Já tem conta? Inicie a sessão
     login: E-mail ou utilizador
     password: Palavra-passe
     remember: Manter sessão iniciada
     submit: Iniciar sessão
   signin:
     try_heading: Queres programar sem criares uma conta?
-    try_hoc: Primeiro, experimente a Hora do Código
-    try_20hours: Experimente nossa introdução de 20 horas à Ciência da Computação
+    try_hoc: Primeiro, experimente a Hora de Código
+    try_20hours: Experimente introdução de 20 horas às Ciências da Computação
   signinsection:
     welcome: '%{section_name} dá-te as boas-vindas'
-    name: Escolha seu nome
-    picture: Agora encontre sua foto secreta
-    words: Agora digite suas palavras secretas
+    name: Escolha o nome de utilizador
+    picture: Agora localize a sua foto secreta
+    words: Agora digite as palavras secretas
     login: Iniciar sessão
   password:
     reset_form:
@@ -160,9 +162,9 @@
       invite_student:
         subject: Junta-te a uma aula com %{teacher_name} em Code.org!
       student_disassociated:
-        subject: 'Notificação Code.org: %{student_name} não é mais seu aluno.'
+        subject: 'Notificação de Code.org: %{student_name} deixou de ser seu aluno.'
       teacher_disassociated:
-        subject: 'Notificação Code.org: %{teacher_name} não é mais seu professor.'
+        subject: 'Notificação de Code.org: %{teacher_name} deixou de ser seu professor.'
   reports:
     error:
       access_denied: Não tem acesso às estatísticas desta pessoa
@@ -173,24 +175,24 @@
     redeem_header: 'Para resgatar:'
     donorschoose_register: Registre-se como professor no DonorsChoose.org
     donorschoose_project: Publicar um projeto
-    donorschoose_how_to: Como usar seu código
+    donorschoose_how_to: Como usar o código
     success: O teu prémio foi recolhido com êxito, vê o código abaixo.
     error: O teu prémio não pôde ser recolhido, por favor tenta novamente.
-    error_us_only: A oferta do prêmio só é válida para usuários nos Estados Unidos.
-    error_not_earned: Você ainda não ganhou esse prêmio.
-    error_already_redeemed: Seu prêmio já foi reivindicado.
-    no_prizes_available: Infelizmente, não temos prêmios disponíveis no momento.
-    teacher_info_required: 'Premiações para professores exigem informações sobre o
-      nome e o endereço de escola:'
-    teacher_email_required: 'A premiação para professores requer a confirmação do
-      endereço de email:'
+    error_us_only: O prémio oferecido só é valido para utilizadores dos Estados Unidos.
+    error_not_earned: Ainda não ganhou este prémio.
+    error_already_redeemed: Este prémio já foi levantado.
+    no_prizes_available: Infelizmente não temos prémios disponíveis, neste momento.
+    teacher_info_required: 'Prémios dos professores requerem o preenchimento do nome
+      e morada da escola:'
+    teacher_email_required: 'Prémios dos professores requerem a confirmação do endereço
+      de email:'
     confirm:
       title: Confirma por favor
       'no': Não
       'yes': Sim
       msg: Tens a certeza de que pretendes reclamar o prémio %{prize_name}?
       msg_student: 'Nota: Só podes escolher um tipo de prémio.'
-      msg_publicschool: Confirme que você é um professor de escola pública dos EUA.
+      msg_publicschool: Confirme que é um professor de uma escola pública dos E.U.A.
       msg_visit_website: Visitar o site
     providers:
       apple_itunes: $10 iTunes Gift Card
@@ -207,43 +209,43 @@
       choose: 'Escolhe um prémio:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Ganhaste um prémio! (apenas para alunos dos EUA)
-      not_earned_title: Termine o tutorial e ganhe recompensas (apenas para alunos
-        dos EUA)
-      not_earned: 'Aprende todos os conceitos de informática, colecione todos os %{num_trophies}
-        troféus e ganha prémios reais. Podes escolher entre 10GB de armazenamento
-        gratuito na Dropbox, 10$ US em crédito Skype, e baixar jogos grátis. Nota:
-        oferta válida apenas para estudantes dos EUA e só enquanto houver stock.'
+      not_earned_title: Conclua o tutorial e ganhe prémios (apenas para alunos dos
+        E.U.A.)
+      not_earned: 'Aprenda todos os conceitos das ciências de computação, ganhe os
+        %{num_trophies} troféus e prémios reais. Pode escolher entre 10GB de armazenamento
+        gratuito na Dropbox, 10$ US em crédito Skype, e descarregar jogos gratuitamente.
+        Nota: oferta válida apenas para alunos dos E.U.A. até ao limite de stock.'
       teacher:
-        earned: 15 ou mais alunos receberam todos os %{num_trophies} troféus. Você
-          ganhou um prêmio de professor! (Somente para professores dos EUA)
+        earned: 15 ou mais alunos receberam todos os %{num_trophies} troféus. Por
+          este motivo, ganhou um prémio de professor! (apenas para professores dos
+          E.U.A.)
         not_earned_title: Ensine e ganhe até $1,000 em créditos da <a target="_blank"
           href="http://DonorsChoose.org">DonorsChoose.org</a> (apenas para professores
-          dos EUA)
-        not_earned: Para recompensar os professores de ciência da computação, você
-          pode ganhar até US$1.000 em créditos da <a href="http://DonorsChoose.org">DonorsChoose.org</a>
-          para ministrar uma aula introdutória para uma sala de ensino fundamental.
-          Para se qualificar, você precisa ministrar um curso introdutório para uma
-          sala com pelo menos 15 alunos de ensino fundamental, e todos os 15 alunos
-          (ou mais) devem completar todos os tutoriais e ganhar todos os %{num_trophies}
-          troféus. Se 7 ou mais alunos que ganharem todos os troféus forem garotas,
-          sua recompensa será de US$1.000 em créditos da <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>.
-          Caso contrário, sua recompensa será de US$750 em créditos da <a target="_blank"
+          dos E.U.A.)
+        not_earned: Para recompensar os professores de ciência da computação, pode
+          ganhar até Us$1.000 em créditos da <a href="http://DonorsChoose.org">DonorsChoose.org</a>
+          para ministrar uma aula introdutória para uma turma de ensino básico. Para
+          ser elegível, é necessário ministrar um curso introdutório para uma turma
+          de pelo menos 15 alunos do ensino básico, e todos os 15 alunos (ou mais)
+          devem completar todos os tutoriais e ganhar todos os %{num_trophies} troféus.
+          Se 7 ou mais alunos que ganharem todos os troféus forem meninas,  a recompensa
+          é de Us$1.000 em créditos da <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>.
+          Caso contrário, a recompensa é de Us$750 em créditos da <a target="_blank"
           href="http://DonorsChoose.org">DonorsChoose.org</a>. Os créditos da <a target="_blank"
           href="http://DonorsChoose.org">DonorsChoose.org</a> só podem ser utilizados
-          pelos professores nas escolas públicas no Estados Unidos.
+          pelos professores nas escolas públicas dos E.U.A.
         bonus:
-          not_earned_title: Você ainda pode banhar um bônus de $250 em créditos da
-            <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-            (apenas professores dos EUA)
+          not_earned_title: Ainda pode ganhar um bónus de $250 em créditos da <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a> (apenas professores
+            dos E.U.A.)
           earned: 7 ou mais dos alunos que ganharam todos os %{num_trophies} troféus,
-            são meninas. Você ganhou um prêmio de bônus! (Somente para professores
-            dos EUA)
+            são meninas. Por isso ganhou um prémio adicional! (apenas para professores
+            dos E.U.A.)
           not_earned: Se pelo menos 7 dos seus alunos que ganharem todos os %{num_trophies}
-            troféus forem meninas, sua recompensa é um adicional de $250 em créditos
-            da <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>.
+            troféus forem meninas, terá um prémio adicional de $250 em créditos da
+            <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>.
             Os créditos da <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-            só podem ser utilizados pelos professores de escolas públicas dos Estados
-            Unidos.
+            só podem ser utilizados pelos professores de escolas públicas dos E.U.A.
   crud:
     new_model: Novo %{model}
     show: Mostrar
@@ -255,8 +257,8 @@
     confirm: Tens a certeza?
     created: '% {modelo} foi criado com êxito.'
     updated: '% {modelo} foi actualizado com sucesso.'
-    destroyed: '%{model} foi excluído com êxito.'
-    access_denied: Você não tem acesso a esse %{model}.
+    destroyed: '%{model} foi eliminado com êxito.'
+    access_denied: Você não tem acesso a este %{model}.
   nav:
     header:
       finished_hoc: Terminei a minha Hora de Código
@@ -335,7 +337,7 @@
       section: Turma
       students: Alunos
       section_code: Código
-      add_section_code: Adicionar código da seção dos alunos
+      add_section_code: Adicionar código-seção dos alunos
       secret: Tipo secreto
       grade: Ano
       course: Curso
@@ -346,19 +348,23 @@
       email: Enviar por e-mail
     rollup: Painel de controlo do Progresso
     activity: Atividade recente da turma
-    user_not_found: O professor ou aluno não pôde ser encontrado
-    cant_remove_student_no_email: '%{student_name} não pode ser removido como seu
+    user_not_found: Não é possível localizar o professor ou aluno
+    cant_remove_student_no_email: '%{student_name} não pode ser eliminado como seu
       aluno porque %{student_name} não tem um endereço de email registrado'
     cant_remove_teacher_no_email: '%{teacher_name} não pode ser removido como seu
-      professor porque você não registrou um endereço de email'
+      professor porque não registou o seu endereço de email'
     student_teacher_disassociated: '%{teacher_name} foi removido como professor de
       %{student_name}'
     panel:
       answer_viewer: Resposta
       student: Aluno
-      viewing_solution: Visualizando solução
+      viewing_solution: Visualizar solução
       try_it_yourself: Tente você mesmo
       section: Turma
+      example: Solução exemplo
+      example_with_number: Solução exemplo %{solution_number}
+      submitted_on: Enviado em %{date}
+      unsubmit: Remover submissão
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -432,6 +438,10 @@
     no_primary_course: Faça um curso no Code Studio
     choose_next_course: Experimenta um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
+  share:
+    title: Aprende no Code Studio
+    description: Todos podem aprender a programar. Constrói jogos, aplicações e desenhos
+      com código.
   gender:
     male: Masculino
     female: Feminino
@@ -440,19 +450,34 @@
     student: Aluno
     teacher: Professor
   footer:
-    help_from_html: Os engenheiros da Google, da Microsoft, do Facebook e do Twitter
-      ajudaram a criar este tutorial.
+    thank_you: Agradecemos aos <a href="https://code.org/about/donors">doadores</a>,
+      <a href="https://code.org/about/partners">parceiros</a>, à <a href="https://code.org/about/team">nossa
+      equipa</a>, aos produtores dos vídeos e aos <a href="https://code.org/about/advisors">professores</a>
+      pelo apoio na criação do Code Studio.
+    help_from_html: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram
+      a criar este tutorial.
+    help_from_html_old: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram
+      a criar estes materiais.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       Todos os direitos reservados.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Todos os direitos reservados.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482;
+      &amp; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados
     powered_by_aws: Powered by Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logótipo do CODE
+      e a Hora de Código&reg; são marcas registadas do Code.org.'
+    copyright: Copyright
+    more: Mais
     feedback: Fornecer feedback
     translate: Ajuda-nos a traduzir para o teu idioma
     support: Suporte
     support_url: http://support.code.org
+    tos_short: Termos
     tos: Termos
     privacy: Política de privacidade
     secure: Versão segura
+    report_abuse: Denunciar abuso
   reference_area:
     title: Precisas de ajuda?
     subtitle: Vê estes vídeos e sugestões
@@ -602,6 +627,11 @@
     open_response_body: Obrigado por responderes!
   dialog:
     ok: OK
+    startover_title: Tens a certeza de que pretendes recomeçar?
+    startover_body: Esta ação irá repor o teu puzzle ao estado inicial e repor todos
+      os dados que adicionaste ou alteraste.
+    startover_ok: Recomeçar
+    startover_cancel: Cancelar
   time:
     hour: 1 hora
     day: dia
@@ -699,3 +729,33 @@
     view_all: Ver os meus projetos
     remix: Criar variação
     click_to_remix: Clica em “Criar variação” para criares a tua própria versão!
+    edit_project: Editar Projeto
+    abuse:
+      tos: Este projeto foi reportado por violar os <a href='http://code.org/tos'>Termos
+        de Serviço</a> do Code.org e não pode ser partilhado.
+      contact_us: Se acredita que isto é um erro, <a href='https://code.org/contact'>contacte-nos</a>
+        se faz favor.
+      go_to_code_studio: Vá para o "Code Studio"
+      report_abuse_form:
+        intro: Caso tenha encontrado conteúdos ofensivos, ameaças, cyberbullying,
+          assédio ou violação de direitos de autor relativamente a conteúdos seus
+          durante a utilização de aplicações desenvolvidas no Code Studio, por favor
+          preencha o formulário abaixo. Iremos tratar da queixa de forma séria, investigar
+          e tomar as ações ecessárias.
+        validation:
+          email: Por favor indique um endereço de email
+          age: Por favor indique a idade
+          abuse_type: Por favor indique de que forma este conteúdo viola os Termos
+            de Utilização
+          abuse_detail: Por favor forneça detalhes sobre o conteúdo ao qual se refere
+        abusive_url: URL do conteúdo denunciado
+        abuse_type:
+          question: De que forma este conteúdo viola os %{link_start}Termos de Utilização%{link_end}?
+          harassment: Ameaças, cyberbullying, assédio
+          offensive: Conteúdo ofensivo
+          infringement: Violação de direitos de autor
+          other: Outros
+        detail: Por favor forneça todos os detalhes sobre o conteúdo que está a reportar.
+        acknowledge: Ao submeter esta informação, aceita que esta será tratada de
+          acordo com os termos da nossa %{link_start_privacy}Política de Privacidade%{link_end}
+          e dos %{link_start_tos}Termos de Utilização%{link_end}

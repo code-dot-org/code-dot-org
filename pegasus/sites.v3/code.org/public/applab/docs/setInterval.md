@@ -34,14 +34,15 @@ ____________________________________________________
 [example]
 
 Create a counter that increments by one every second.
-<pre>
+
+```
 var seconds = 0; //Initialize the seconds count to 0
 setInterval(function() {
   seconds = seconds + 1; //Increment the seconds count
   //When the code runs, print the current seconds count to the debugging console
   console.log(seconds + " seconds have elapsed");
 }, 1000); //Set the interval to 1000 milliseconds
-</pre>
+```
 
 [/example]
 
@@ -50,7 +51,8 @@ ____________________________________________________
 [example]
 
 In this example, we use an interval functions to make the turtle move randomly.
-<pre>
+
+```
 show(); //Show the turtle
 setInterval(function(){ //Start the interval timer
   //When the code runs, randomly select a point in a circle of radius 50
@@ -60,7 +62,7 @@ setInterval(function(){ //Start the interval timer
   console.log("Move " + x + " horizontally and " + y + " vertically.");
   move(x, y); //Move the turtle
 }, 1000); //Set the interval to 1000 milliseconds
-</pre>
+```
 
 
 [/example]
@@ -70,7 +72,8 @@ ____________________________________________________
 [example]
 
 Here we use the interval and timeout functions to make a text label blink.
-<pre>
+
+```
 textLabel("blinker", "This text blinks");
 setInterval(function() { //Create an interval timer to show the blinker
   showElement("blinker"); //Show the blinker textLabel
@@ -80,7 +83,7 @@ setInterval(function() { //Create an interval timer to show the blinker
     hideElement("blinker"); //Show the blinker textLabel
   }, 1000); //Set the timeout to 1000 milliseconds
 }, 2000); //Set the interval to 2000 milliseconds
-</pre>
+```
 
 [/example]
 
@@ -89,9 +92,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 setInterval(function, milliseconds);
-</pre>
+```
 
 [/syntax]
 

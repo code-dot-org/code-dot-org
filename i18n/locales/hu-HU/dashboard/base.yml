@@ -2,6 +2,7 @@ hu:
   errors:
     messages:
       not_saved: 'Kérjük, javítsd a következő hibákat:'
+      too_young: Erre a tartalomra életkori korlátozás van érvényben, és nem elérhető fiatalabb diákok számára
   activerecord:
     errors:
       messages:
@@ -218,7 +219,7 @@ hu:
         calculate: Calculate Something
     user:
       classroom: Tanári kezdőlap
-      district_dashboard: District Dashboard
+      district_dashboard: Tankerületi munkafelület
       label: 'Üdv %{username}'
       stats: Fejlődésem
       settings: Profilom
@@ -302,6 +303,10 @@ hu:
       viewing_solution: Megoldások megtekintése
       try_it_yourself: Próbáld ki magad
       section: Szakasz
+      example: Példa a megoldásra
+      example_with_number: 'Példa a megoldásra %{solution_number}'
+      submitted_on: 'Submitted on %{date}'
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: 'Az e-mail cím nincs megerősítve:'
     email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
@@ -345,7 +350,7 @@ hu:
     local_school: helyi iskola
     online: online
     see_details: Részletek
-    view_course: View Course
+    view_course: Tanfolyam megtekintése
     prize_info: 'Részvételért járó díjak (csak USA állami iskolai tanároknak): akár $1,000.'
     tryfirst: 'Akár ki is próbálhatja, és csak utána jelentkezik be:'
     trynow: Próbálja ki most
@@ -360,8 +365,11 @@ hu:
     heading_legacy: '<h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>'
     your_gallery: Galéria
     no_primary_course: Próbálj ki egy tanfolyamot a Code Studio-nál
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Próbáld ki a Kód Stúdiót, válassz egyet az alábbi tanfolyamok közül
     print_certificate: Igazolás kinyomtatása
+  share:
+    title: Tanulj a Kód Stúdióban
+    description: Mindenki megismerkedhet a számítógép-tudománnyal. Készíts játékokat, alkalmazásokat vagy alkoss a kódolás segítségével!
   gender:
     male: Férfi
     female: Nő
@@ -370,16 +378,24 @@ hu:
     student: Diák
     teacher: Tanár
   footer:
+    thank_you: 'A Kód Stúdió létrehozásában segítettek minket támogatóink: <a href="https://code.org/about/donors">, partnereink: </a>, <a href="https://code.org/about/partners">tágabb csapatunk tagjai:</a>, our <a href="https://code.org/about/team">videó stábunk tagjai: </a>, és oktatási tanácsadóink: <a href="https://code.org/about/advisors">education advisors</a>, akiknek köszönetet mondunk a támogatásért.'
     help_from_html: A Google, a Microsoft, a Facebook és a Twitter mérnökei segítettek létrehozni ezt a gyakorlatot.
+    help_from_html_old: A Google, Microsoft, Facebook, és a Twitter mérnökei segítettek létrehozni ezeket a tartalmakat.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Minden jog fenntartva.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Minden jog fenntartva.'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Minden jog fenntartva'
     powered_by_aws: Az Amazon Web Services működteti
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, a CODE logó és az Hour of Code&reg; a Code.org védjegyei.'
+    copyright: Szerzői jog
+    more: Mégtöbb
     feedback: Visszajelzés küldése
     translate: Segítsen lefordítani az oldalt az anyanyelvére
     support: Segítség
     support_url: http://support.code.org
+    tos_short: Felhasználási feltételek
     tos: Feltételek
     privacy: Adatvédelmi Elvek
     secure: Biztonságos változat
+    report_abuse: Report Abuse
   reference_area:
     title: Segítségre van szükséged?
     subtitle: Nézd meg ezeket a videókat és tanácsokat
@@ -500,6 +516,10 @@ hu:
     open_response_body: Köszönjük a választ!
   dialog:
     ok: OK
+    startover_title: Biztosan újra szeretnéd kezdeni?
+    startover_body: Visszaállítja a kiindulási állapotot és töröl minden blokkot, amit hozzáadtál a programhoz, vagy amit megváltoztattál.
+    startover_ok: Újrakezdés
+    startover_cancel: Mégsem
   time:
     hour: 1 óra
     day: nap
@@ -582,3 +602,24 @@ hu:
     view_all: Projektjeim megtekintése
     remix: Remix
     click_to_remix: "Kattints a 'Remix'-re, hogy lepörgesd a saját verziódat!"
+    edit_project: Projekt szerkesztése
+    abuse:
+      tos: "Ezt a projektet jelentették, mint amely nem tesz eleget a Code.org <a href='http://code.org/tos'>Felhasználói Feltételekben előírtaknak,</a> így nem osztható meg másokkal."
+      contact_us: "Ha úgy gondolod, hogy ez egy hiba, kérünk <a href='https://code.org/contact'>vedd fel velünk a kapcsolatot.</a>"
+      go_to_code_studio: Menj a Kód stúdióba
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        validation:
+          email: Please provide an email address
+          age: Please specify an age
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
+          harassment: Threats, cyberbullying, harassement
+          offensive: Offensive content
+          infringement: Copyright Infringement
+          other: Egyéb
+        detail: Please provide as much detail as possible regarding the content you are reporting.
+        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'

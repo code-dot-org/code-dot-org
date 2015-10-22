@@ -30,7 +30,8 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "never_autoplay_video": "false"
   }
 }]]></config>
   <blocks>
@@ -39,7 +40,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="procedures_callnoreturn">
-              <mutation name="Draw a square"/>
+              <mutation name="draw a square"/>
             </block>
           </next>
         </block>
@@ -47,7 +48,7 @@
           <mutation>
             <description>Draw a square with 50 pixel sides</description>
           </mutation>
-          <title name="NAME">Draw a square</title>
+          <title name="NAME">draw a square</title>
         </block>
       </xml>
     </start_blocks>
@@ -194,7 +195,7 @@
       <xml>
         <block type="procedures_defnoreturn" movable="false">
           <mutation/>
-          <title name="NAME">Draw a square</title>
+          <title name="NAME">draw a square</title>
           <statement name="STACK">
             <block type="controls_repeat_ext" inline="true">
               <value name="TIMES">
@@ -228,7 +229,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="procedures_callnoreturn">
-              <mutation name="Draw a square"/>
+              <mutation name="draw a square"/>
             </block>
           </next>
         </block>

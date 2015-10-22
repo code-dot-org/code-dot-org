@@ -1,10 +1,10 @@
 * * *
 
-Merci de vous inscrire pour organiser une Heure de Code! mise en page: large
+title: <%= hoc_s(:title_signup_thanks) %> layout: wide nav: how_to_nav
 
-social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
+social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png" "og:image:width": 1440 "og:image:height": 900 "og:url": "http://<%=request.host%>"
 
-"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 
 * * *
 
@@ -12,44 +12,30 @@ social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= ho
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# Merci de vous inscrire pour organiser une Heure de Code!
+# Merci de vous être inscrit(e) pour organiser Une Heure de Code !
 
-**Chaque** organisateur d'Heure de Code recevra 10 GB d'aspace sur Dropbox ou 10$ de crédits Skype comme remerciement. [Détails](<%= hoc_uri('/prizes') %>)
+Grâce à vous, des étudiants du monde entier vont pouvoir apprendre en faisant Une Heure de Code, moment qui pourrait *changer le reste de leur vie*, au cours de < % = campaign_date('full') % &gt. Nous prendrons contact avec vous concernant les prix, les nouveaux tutoriels et les nouvelles mises à jour qui pourraient vous intéresser. Que pouvez-vous faire maintenant ?
 
-## Passer le mot
+## 1. Parlez-en autour de vous
 
-Parlez de #HourOfCode à vos amis.
+Vous venez de rejoindre le mouvement Une Heure de Code. Parlez-en à vos amis avec **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<% if @country == 'us' %>
+## 2. Proposez à votre école de participer à Une Heure de Code
 
-## 2. Demandez à toute votre école de participer à l'Heure de Code
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up. Pour cela, c'est simple ! [Inscrivez-vous ici](%= resolve_url('/prizes/hardware-signup') %) pour être admissibles. <% end %>
 
-[ Envoyez ce courriel](<%= hoc_uri('/resources#email') %>) ou [ce document](/resources/hoc-one-pager.pdf) à votre directeur ou votre directrice.
+## 3. Invitez votre employeur à s'impliquer
 
-<% else %>
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your manager or company's CEO.
 
-## 2. Demandez à toute votre école de participer à l'Heure de Code
+## 4. Promouvez votre Heure de Code dans votre communauté
 
-[ Envoyez ce courriel](<%= hoc_uri('/resources#email') %>) ou [ce document](/resources/hoc-one-pager.pdf) ce document</a> à votre directeur ou votre directrice.
+[Recruit a local group](%= resolve_url('/promote/resources#sample-emails') %)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Pas besoin d'être à l'école pour apprendre de nouvelles compétences. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
 
-<% end %>
+## 5. Demandez à un élu local de soutenir l'initiative Une Heure de Code
 
-## 3. Faites un don généreux
-
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
-
-## 4. Demandez à votre employeur de s'impliquer
-
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
-
-## 5. Promouvoir Une Heure de Code au sein de votre communauté
-
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
-
-## 6. Demandez à un élu local d'appuyer l'heure de Code
-
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Ça pourrait aider à agrandir le groupe des amoureux d'informatique de votre région au-delà du projet d'une heure.
 
 <%= view 'popup_window.js' %>

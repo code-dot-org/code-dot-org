@@ -6,4 +6,5 @@ Background:
 @new_courses
 Scenario: The level loads
   When I rotate to landscape
+  Then I wait to see a dialog titled "Puzzle 2 of 15"
   Then element "#codeWorkspace" is visible

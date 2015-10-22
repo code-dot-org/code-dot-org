@@ -1,5 +1,4 @@
 class SessionsController < Devise::SessionsController
-
   # see also
   # https://github.com/plataformatec/devise/blob/v3.2/app/controllers/devise/sessions_controller.rb
 
@@ -11,7 +10,7 @@ class SessionsController < Devise::SessionsController
 
   # DELETE /resource/sign_out
   def destroy
-    redirect_path = after_sign_out_path_for_user(current_user)
+    redirect_path = after_sign_out_path_for(:user)
 
     sign_out
 
@@ -27,7 +26,9 @@ class SessionsController < Devise::SessionsController
 
   private
 
-  def after_sign_out_path_for_user(user)
+  # Override default Devise sign_out path method
+  def after_sign_out_path_for(resource_or_scope)
+    user = resource_or_scope && send(:"current_#{resource_or_scope}")
     if user && user.oauth?
       return oauth_sign_out_path(user.provider)
     end

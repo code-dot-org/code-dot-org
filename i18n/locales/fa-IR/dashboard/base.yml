@@ -2,6 +2,7 @@ fa:
   errors:
     messages:
       not_saved: 'لطفا خطاهای زیر را درست کنید:'
+      too_young: این مطلب محدودیت سنی دارد و برای دانش آموزان با سن کمتر موجود نیست
   activerecord:
     errors:
       messages:
@@ -304,6 +305,10 @@ fa:
       viewing_solution: دیدن راه حل
       try_it_yourself: خودت امتحان کن
       section: بخش
+      example: راه حل مثال
+      example_with_number: 'راه حل مثال%{solution_number}'
+      submitted_on: 'Submitted on %{date}'
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: 'آدرس ایمیل تأیید نشده است:'
     email_confirm_needed_required: 'آدرس ایمیل شما ایمیل%{email} تائید نشده است:'
@@ -347,7 +352,7 @@ fa:
     local_school: مدرسه محلی
     online: آنلاین
     see_details: مشاهده جزئیات
-    view_course: View Course
+    view_course: مشاهده ی دوره
     prize_info: 'هدیه مشارکت (فقط معلمان مدارس عمومی ایالات متحده): تا سقف 1000$ از جوایز کلاسی.'
     tryfirst: 'یا شما می توانیدآن را اول امتحان کنید و بعد ثبت نام کنید:'
     trynow: هم اکنون شروع کنید
@@ -362,8 +367,11 @@ fa:
     heading_legacy: '<h2> دوره عمومی ما </h2><h1>همه سنین</h1>'
     your_gallery: گالری
     no_primary_course: یک کلاس را در کد استدیو امتحان کنید
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: یک دوره ی استودیو ی کد را با انتخاب آن در پایین امتحان کنید
     print_certificate: چاپ گواهینامه
+  share:
+    title: در استودیو ی کد یاد بگیرید
+    description: هرکسی می تواند علوم کامپیوتر را بیاموزد. با کد نویسی بازی، نرم افزار و هنر ایجاد کنید.
   gender:
     male: مرد
     female: زن
@@ -372,16 +380,24 @@ fa:
     student: دانش آموز
     teacher: دبیر
   footer:
+    thank_you: 'ما از <a href="https://code.org/about/donors"> اهدا کنندگانمان</a>،<a href="https://code.org/about/partners"> همکارانمان</a>، <a href="https://code.org/about/team"> تیم گسترده مان</a>، گروه فیلم برداری مان، و <a href="https://code.org/about/advisors"> مشاوران آموزشیمان</a> برای همکاریشان در ایجاد استودیو ی کد سپاسگزاریم.'
     help_from_html: مهندسین از گوگل , مایکروسافت ، فیس بوک و توییتر در ایجاد این آموزش کمک کردند
+    help_from_html_old: مهندسینی از گوگل، مایکروسافت، فیسبوک، و توییتر به تولید این محتوا کمک کردند.
     art_from_html: 'نام و علامت تجاری پرندگان خشمگین متعلق به 2009-2014 Rovio Entertainment می باشد و  کلیه حقوق محفوظ است. <br/> نام و علامت تجاری گیاهان در مقابل زامبی متعلق به 2014 شرکت الکترونیک آرتز می باشد و کلیه حقوق  محفوظ است.'
+    art_from_html_old: 'پرنده های خشمگین &#8482;&amp;&copy; 2009-%{current_year} کمپانی سرگرمی روویو. تمامی حقوق محفوظ است.<br />گیاهان در برابر زامبی ها&#8482;&amp;&copy;%{current_year} شرکت هنرهای الکترونیک. تمامی حقوق محفوظ است'
     powered_by_aws: قدرت گرفته شده توسط وب سرویس های آمازون
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, لوگوی کد نویسی و ساعت کد نویسی &reg; علائم تجاری Code.org هستند.'
+    copyright: حق کپی برداری و نشر
+    more: بیشتر
     feedback: ارائه پیشنهادات و انتقادات
     translate: کمک به ما در ترجمه به زبان شما
     support: پشتیبانی
     support_url: http://support.code.org/
+    tos_short: شرایط
     tos: شرایط
     privacy: قوانین حفظ حریم خصوصی
     secure: نسخهٔ امن
+    report_abuse: Report Abuse
   reference_area:
     title: کمک نیاز دارید؟
     subtitle: دیدن این فیلم ها و نکات
@@ -502,6 +518,10 @@ fa:
     open_response_body: برای پاسختان سپاسگزارم!
   dialog:
     ok: Ok
+    startover_title: آیا مطمئنی که می خواهی دوباره شروع کنی؟
+    startover_body: این کار معما را به حالت اولیه اش تنظیم خواهد کرد و تمام داده هایی که شما اضافه کرده یا تغییر داده اید را بازنشانی می کند.
+    startover_ok: دوباره شروع کنید
+    startover_cancel: لغو کن
   time:
     hour: ۱ ساعت
     day: روز
@@ -584,3 +604,24 @@ fa:
     view_all: پروژه های من را ببینید
     remix: ترکیب دوباره
     click_to_remix: "روی 'Remix' کلیک کنید تا نسخه ی خودتان را ایجاد کنید!"
+    edit_project: ویرایش پروژه
+    abuse:
+      tos: "این پروژه بعنوان نقض کننده ی <a href='http://code.org/tos'>شرایط استفاده از سرویس </a> code.org گزارش شده و نمیتوان آنرا با دیگران به اشتراک گذاشت."
+      contact_us: "اگه باور دارید این یه اشتباهه لطفا، <a href='https://code.org/contact'>با ما تماس بگیرید.</a>"
+      go_to_code_studio: رفتن به استودیو کد
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        validation:
+          email: Please provide an email address
+          age: Please specify an age
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
+          harassment: Threats, cyberbullying, harassement
+          offensive: Offensive content
+          infringement: Copyright Infringement
+          other: دیگر
+        detail: Please provide as much detail as possible regarding the content you are reporting.
+        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'

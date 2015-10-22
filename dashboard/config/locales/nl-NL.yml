@@ -2,6 +2,7 @@
   errors:
     messages:
       not_saved: 'Corrigeer de volgende fouten:'
+      too_young: Deze pagina is niet geschikt voor jongere studenten
   activerecord:
     errors:
       messages:
@@ -364,6 +365,10 @@
       viewing_solution: Oplossing bekijken
       try_it_yourself: Probeer het zelf
       section: Groep
+      example: Voorbeeld uitkomst
+      example_with_number: Voorbeeld uitkomst getal %{solution_number}
+      submitted_on: Submitted on %{date}
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'
@@ -387,8 +392,8 @@
   home:
     title: Code Studio
     description: Code Studio is de basis voor online cursussen gemaakt door code.org
-    lines_of_code: '%{lines_count} LIJNEN CODE DIE GESCHREVEN DOOR STUDENTEN'
-    lines_of_code_linebreak: '%{lines_count} LIJNEN CODE <br/> GESCHREVEN DOOR leerlingen%{students_count}
+    lines_of_code: '%{lines_count} REGELS CODE DIE GESCHREVEN DOOR STUDENTEN'
+    lines_of_code_linebreak: '%{lines_count} REGELS CODE <br/> GESCHREVEN DOOR leerlingen%{students_count}
       MILJOEN LEERLINGEN'
     all_courses: Overzicht van cursussen 1, 2 en 3
     lesson_plans: Lesplannen
@@ -415,7 +420,7 @@
     local_school: lokale school
     online: online
     see_details: Bekijk details
-    view_course: View Course
+    view_course: Toon cursus
     prize_info: 'Prijzen voor deelname (alleen voor leerkrachten van Amerikaanse openbare
       scholen): tot $1.000 aan prijzengeld voor je klas.'
     tryfirst: 'Of, je kunt het eerst proberen, en later registreren:'
@@ -434,8 +439,11 @@
     heading_legacy: <h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>
     your_gallery: Galerij
     no_primary_course: Probeer een cursus bij Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Probeer een Code Studio cursus door er hier onder één te kiezen
     print_certificate: print certificaat
+  share:
+    title: Leer meer op Code Studio
+    description: Iedereen kan informatica leren. Maak games, apps en kunst met code.
   gender:
     male: Man
     female: Vrouw
@@ -444,26 +452,42 @@
     student: Leerling
     teacher: Leraar
   footer:
+    thank_you: Wij danken onze <a href="https://code.org/about/donors">donoren</a>,
+      <a href="https://code.org/about/partners">partners</a>, ons <a href="https://code.org/about/team">uitgebreide
+      team</a>, onze videocast en onze <a href="https://code.org/about/advisors">onderwijsadviseurs</a>
+      voor hun steun bij het maken van Code Studio.
     help_from_html: Werknemers van Google, Microsoft, Facebook en Twitter hebben geholpen
       bij het samenstellen van deze opdracht.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
-      Arts Inc. All Rights Reserved.
+    help_from_html_old: Ontwikkelaars van Google, Microsoft, Facebook en Twitter hebben
+      bijgedragen aan het samenstellen van deze opdrachten.
+    art_from_html: Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Alle
+      rechten voorbehouden.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Alle rechten voorbehouden.<br/>Plants vs. Zombies;&#8482;
+      &amp; &copy; %{current_year} Electronic Arts Inc. Alle rechten voorbehouden.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Alle rechten voorbehouden. <br />Plants vs. Zombies &#8482;
+      &amp; &copy; %{current_year} Electronic Arts Inc. Alle rechten voorbehouden
     powered_by_aws: Aangedreven door Amazon webservices
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, het CODE logo en
+      Hour of Code&reg; zijn handelsmerken van Code.org.'
+    copyright: Copyright
+    more: Meer
     feedback: Geef feedback
     translate: Help ons om te vertalen naar uw taal
     support: Ondersteuning
     support_url: http://support.code.org
-    tos: Voorwaarden
-    privacy: Privacy Policy
+    tos_short: Voorwaarden
+    tos: Gebruiksvoorwaarden
+    privacy: Privacybeleid
     secure: Beveiligde versie
+    report_abuse: Report Abuse
   reference_area:
     title: Hulp nodig?
     subtitle: Bekijk deze video's en hints
     teacher: Zie de oplossing
     auth_error: U bent niet gemachtigd om de oplossing te zien.
     submit: Werk de locatie van de Kunstenaar bij
-    direction: Start richting (in graden)
+    direction: Startrichting (in graden)
   video:
     tab: Video.
     notes: Geen video? Laat notities zien.
@@ -604,6 +628,11 @@
     open_response_body: Bedankt voor uw reactie!
   dialog:
     ok: OK
+    startover_title: Weet je zeker dat je opnieuw wilt beginnen?
+    startover_body: Hiermee breng je de puzzel terug naar zijn beginstaat en verwijder
+      je alle blokken die je toegevoegd of veranderd hebt.
+    startover_ok: Begin opnieuw
+    startover_cancel: Annuleren
   time:
     hour: 1 uur
     day: dag
@@ -699,3 +728,33 @@
     view_all: Mijn Projecten Bekijken
     remix: Remix
     click_to_remix: Klik op 'Remix' om een spin-off voor je eigen versie te maken!
+    edit_project: Edit Project
+    abuse:
+      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
+        of Service</a> and cannot be shared with others.
+      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
+        us.</a>
+      go_to_code_studio: Go to Code Studio
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying,
+          harassment, or an instance of copyright infringement for content you own
+          while using apps built on Code Studio, please fill out the form below. We
+          will take your report very seriously, investigate accordingly, and take
+          appropriate action.
+        validation:
+          email: Please provide an email address
+          age: Please specify an age
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
+          harassment: Threats, cyberbullying, harassement
+          offensive: Offensive content
+          infringement: Copyright Infringement
+          other: Anders
+        detail: Please provide as much detail as possible regarding the content you
+          are reporting.
+        acknowledge: By submitting this information, you acknowledge it will be handled
+          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
+          and the %{link_start_tos}Terms of Service%{link_end}

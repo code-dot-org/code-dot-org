@@ -1,3 +1,24 @@
+# == Schema Information
+#
+# Table name: script_levels
+#
+#  id         :integer          not null, primary key
+#  level_id   :integer          not null
+#  script_id  :integer          not null
+#  chapter    :integer
+#  created_at :datetime
+#  updated_at :datetime
+#  stage_id   :integer
+#  position   :integer
+#  assessment :boolean
+#
+# Indexes
+#
+#  index_script_levels_on_level_id   (level_id)
+#  index_script_levels_on_script_id  (script_id)
+#  index_script_levels_on_stage_id   (stage_id)
+#
+
 # Joins a Script to a Level
 # A Script has one or more Levels, and a Level can belong to one or more Scripts
 class ScriptLevel < ActiveRecord::Base
@@ -12,10 +33,6 @@ class ScriptLevel < ActiveRecord::Base
   def script
     Script.get_from_cache(script_id)
   end
-
-  # this is a temporary (request-scope) variable set by User.rb#levels_from_script to find the UserLevel
-  # corresponding to this ScriptLevel for a specific user
-  attr_accessor :user_level
 
   def next_level
     i = script.script_levels.index(self)

@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Try using the rectangle block to draw this solid red rectangle - it is 175 pixels wide and 100 pixels tall.",
+    "instructions": "Try using the rectangle block to draw this solid, red rectangle - it is 175 pixels wide and 100 pixels tall.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -22,8 +22,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "markdown_instructions": "Try using the _rectangle_ block to draw this solid red rectangle - it is 175 pixels wide and 100 pixels tall.",
-    "disable_examples": "false"
+    "markdown_instructions": "Try using the `rectangle` block to draw this solid, red rectangle - it is 175 pixels wide and 100 pixels tall.",
+    "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
@@ -33,11 +35,11 @@
         <block type="functional_math_number_dropdown">
           <title name="NUM" config="100, 125, 150, 175, 200">???</title>
         </block>
-        <block type="functional_string">
-          <title name="VAL"/>
-        </block>
         <block type="functional_style">
           <title name="VAL">solid</title>
+        </block>
+        <block type="functional_string">
+          <title name="VAL"/>
         </block>
       </xml>
     </toolbox_blocks>

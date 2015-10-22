@@ -1,0 +1,84 @@
+<link type="text/css" rel="stylesheet" href="/frequency/frequency.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+
+<script type="text/javascript" src="/frequency/frequency.js"></script>
+
+<div class="container-fluid" style="max-width: 1280px">
+
+  <div class="row-fluid">
+
+    <div class="span4">
+      <div class="row-fluid" id="top-buttons">
+        <div class="form-inline pull-left">
+          <label for="messages" class="">Message:</label>
+          <select id="messages" class="input-small">
+            <option selected disabled hidden value=''></option>
+          </select>
+          <button id="custom-message" class="btn">Write your own</button>
+          <i id="bubble" class="fa fa-question-circle fa-lg"></i>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="text-container uneditable-input" id='output'></div>
+      </div>
+      <div class="row-fluid">
+        <button id="finished" class="btn btn-primary pull-right">Finished!</button>
+      </div>
+    </div>
+
+    <div class="span8">
+      <div id="d3chart" class="control-group">
+      </div>
+
+      <ul class="nav nav-tabs" id="myTab">
+        <li class="active"><a href="#shift" data-toggle="tab">Caesar Substitution</a></li>
+        <li><a href="#random" data-toggle="tab">Random Substitution</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active form-inline" id="shift">
+
+          <div class="span8">
+            <label>Shift the substitutions left or right</label>
+            <div class="span12">
+              <a class="btn btn-small" id="shift-left"><i class="fa fa-caret-left"></i></a>
+              <input type="text" id="shiftAmt" value="0" style="width:20px; text-align: center;">
+              <a class="btn btn-small" id="shift-right"><i class="fa fa-caret-right"></i></a>
+              <button class="btn btn-info inline reset-simulation">Reset</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tab-pane form-inline" id="random">
+
+          <div class="span3">
+          <label>Sort originals</label>
+          <div class="span12 btn-group" id="sort-toggle" data-toggle="buttons-radio">
+            <button type="button" class="btn btn-primary active" value="alphabetic">A to Z</button>
+            <button type="button" class="btn btn-primary" value="frequency">By %</button>
+          </div>
+          </div>
+
+          <div class="span8">
+            <label>Sort substitutions</label>
+            <div class="span12">
+              <div class="btn-group">
+                <button id="fill-rand" class="btn btn-info">Random</button>
+                <button id="alpha-substitutions" class="btn btn-info">A to Z</button>
+                <button id="order-substitutions" class="btn btn-info">By %</button>
+              </div>
+
+              <button class="btn btn-info reset-simulation">Reset</button>
+              <button id="assign-all" class="btn btn-info">Assign</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

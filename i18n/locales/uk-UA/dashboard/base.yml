@@ -2,6 +2,7 @@ uk:
   errors:
     messages:
       not_saved: 'Будь-ласка виправте ці помилки:'
+      too_young: Цей вміст має вікові обмеження і недоступний для молодших школярів
   activerecord:
     errors:
       messages:
@@ -306,6 +307,10 @@ uk:
       viewing_solution: Перегляд рішення
       try_it_yourself: Спробуйте самі
       section: Група
+      example: Приклад рішення
+      example_with_number: 'Приклад рішення %{solution_number}'
+      submitted_on: 'Надіслано %{date}'
+      unsubmit: Відкликати
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
     email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'
@@ -345,11 +350,11 @@ uk:
     student_progress: Ваші навчальні досягнення
     student_stats: 'Ви здобули %{trophy_count} із %{trophy_max} трофеїв "Опанування понять".'
     student_left_off: 'Де ви зупинилися:'
-    student_finished: 'Ви завершили всі уроки, виберіть інший клас %{online_link} або %{local_school_link}'
+    student_finished: 'Ви завершили всі уроки Code.org, виберіть інший клас %{online_link} або %{local_school_link}.'
     local_school: місцева школа
     online: онлайн
     see_details: Див. докладніше
-    view_course: View Course
+    view_course: Перегляд курсу
     prize_info: 'Призи за участь (тільки для вчителів державних шкіл США): до $1000 нагород на клас.'
     tryfirst: 'Або, ви можете спочатку спробувати і зареєструватися пізніше:'
     trynow: Спробувати
@@ -359,13 +364,16 @@ uk:
     try_beta_courses: Новинка! Спробуйте наші бета-курси для учнів 1-5 класів
     use_as_teacher: Використовуйте цей сайт як вчитель
     heading_hoc2014: '<h2>Година коду</h2><h1>для будь-якого віку</h1>'
-    heading_elementary: '<h2>20-годинні курси</h2><h1>для початківців</h1>'
+    heading_elementary: '<h2>20-годинні курси</h2><h1>вступу до інформатики (для будь-якого віку)</h1>'
     heading_apps: '<h2>Цікавинки</h2><h1>для усіх</h1>'
     heading_legacy: '<h2>Прискорений курс</h2><h1>для будь-якого віку</h1>'
     your_gallery: Галерея
     no_primary_course: Спробуйте курс Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Спробуйте курс Студії коду, обравши один з варіантів
     print_certificate: Друкувати сертифікат
+  share:
+    title: Навчання у Студії коду
+    description: Кожен може вивчати інформатику. Створюй ігри, програмки та твори з кодом.
   gender:
     male: Чоловік
     female: Жінка
@@ -374,16 +382,24 @@ uk:
     student: учень
     teacher: Вчитель
   footer:
-    help_from_html: Інженери Google, Microsoft, Facebook і Twitter допомогли створити цей підручник.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Всі права захищені.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Всі права захищені.'
+    thank_you: 'Ми вдячні нашим <a href="https://code.org/about/donors">спонсорам</a>, <a href="https://code.org/about/partners">partners</a>, нашій<a href="https://code.org/about/team">розширеній команді</a>, нашим авторам відео, а також нашим <a href="https://code.org/about/advisors">освітнім консультантам</a> за підтримку створення Студії коду.'
+    help_from_html: Ми особливо хочемо відзначити інженерів з Google, Microsoft, Facebook, Twitter, та багатьох інших, які допомогли створити ці матеріали.
+    help_from_html_old: Інженери Google, Microsoft, Facebook та Twitter допомогли створити цей підручник.
+    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Всі права захищені.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Всі права захищені.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Всі права захищені'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Всі права застережено.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Всі права застережено'
     powered_by_aws: На потужностях Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE та Hour of Code&reg; з торговими марками Code.org.'
+    copyright: Авторське право
+    more: Більше
     feedback: Надати відгук
     translate: Допоможіть нам перекласти вашою мовою
     support: Підтримка
     support_url: http://support.code.org
-    tos: Умови
+    tos_short: Умови
+    tos: Умови надання послуг
     privacy: Політика конфіденційності
     secure: Безпечна версія
+    report_abuse: Повідомити про порушення
   reference_area:
     title: Потрібна допомога?
     subtitle: Переглянути ці відео та підказки
@@ -504,6 +520,10 @@ uk:
     open_response_body: Дякуємо за вашу відповідь!
   dialog:
     ok: Гаразд
+    startover_title: Ви впевнені, що хочете почати все спочатку?
+    startover_body: Це скине задачу до початкового стану, видаливши всі дані, які ви додали чи змінили.
+    startover_ok: Почати знову
+    startover_cancel: Скасувати
   time:
     hour: 1 година
     day: день
@@ -587,3 +607,24 @@ uk:
     view_all: Переглянути Мої проекти
     remix: Ремікс
     click_to_remix: "Клацни 'Ремікс', щоб створити власну версію на основі цієї!"
+    edit_project: Редагування проекту
+    abuse:
+      tos: "На цей проект надійшла скарга про порушення <a href='http://code.org/tos'>Умов надання послуг</a> Code.org's, тому ним не можна поділитись з іншими."
+      contact_us: "Якщо ви вважаєте це помилкою, будь ласка <a href='https://code.org/contact'>зв'яжіться з нами.</a>"
+      go_to_code_studio: Перейти до Студії коду
+      report_abuse_form:
+        intro: Якщо Ви стикнулися з образливим вмістом, погрозами, залякуваннями, домаганнями або порушенням авторських прав стосовно Ваших матеріалів у Студії коду, будь ласка, заповніть наведену нижче форму. Ми докладно розглядаємо кожну скаргу і вживаємо відповідних заходів.
+        validation:
+          email: Будь ласка, вкажіть адресу електронної пошти
+          age: Будь ласка, вкажіть вік
+          abuse_type: Будь ласка, вкажіть, як цей вміст порушує умови надання послуг
+          abuse_detail: Будь ласка, надайте подробиці, що стосуються вмісту, на який Ви скаржитесь
+        abusive_url: URL-адреса вмісту, на який скаржитесь
+        abuse_type:
+          question: 'Як цей вміст порушує %{link_start}Умови надання послуг%{link_end}?'
+          harassment: Погрози, залякування, образи
+          offensive: Образливий вміст
+          infringement: Порушення авторських прав
+          other: Інше
+        detail: Будь ласка, опишіть якомога докладніше свою скаргу стосовно вмісту, про який повідомляєте.
+        acknowledge: 'Надсилаючи цю інформацію, ви підтверджуєте, що він буде оброблятися відповідно до умов %{link_start_privacy}Політики конфіденційності%{link_end} та %{link_start_tos}Умов надання послуг%{link_end}'

@@ -11,9 +11,9 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: დაუკავშირეთ ღილაკების კომბინაციები
+        Match the button combination to the dance moves.: შეუსაბამეთ ღილაკების კომბინაციები
           ცეკვის მოძრაობებს.
-        Matching: დაკავშირება
+        Matching: შესაბამება
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
         /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
@@ -25,9 +25,9 @@
         <strong>O</strong>: <strong>O</strong>
         <strong>P</strong>: <strong>P</strong>
         <strong>Q</strong>: <strong>Q</strong>
-        Matching: დაკავშირება
-        Use the key to match each code to its letter: გამოიყენეთ გასაღები ყოველი კოდისა
-          და მისი ასოს დასაკავშირებლად
+        Matching: შესაბამება
+        Use the key to match each code to its letter: გამოიყენეთ ცხრილი და შეუსაბამეთ
+          ერთმანეთს კოდი და ასო
       2-3 Graph Paper Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -35,8 +35,8 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: დააკავშირეთ ქსელი და პროგრამა.
-        Matching: დაკავშირება
+        Match the grid to the program.: შეუსაბამეთ პროგრამას ქსელი.
+        Matching: შესაბამება
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
@@ -47,7 +47,7 @@
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: გადაადგილე და დააკავშირე ბლოკები.
         Instructions: ინსტრუქციები
-        Match the puzzles to the blocks: დააკავშირე თავსატეხები და ბლოკები
+        Match the puzzles to the blocks: შეუსაბამეთ ბლოკები თავსატეხებს
         Maze Match: 'ლაბირინთი: დაკავშირება'
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
@@ -56,8 +56,8 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program: დააკავშირეთ ქსელი და პროგრამა
-        Matching: დაკავშირება
+        Match the grid to the program: დაუკავშირეთ პროგრამას ცხრილი
+        Matching: შესაბამისობა
       2-3 artist loops match 1:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png
@@ -68,7 +68,7 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: 'მხატვარი: ციკლების დაკავშირება 1'
-        Match the loop to the shape: დააკავშირე ციკლი და ფორმა
+        Match the loop to the shape: შეუსაბამე ფორმას ციკლი
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -78,7 +78,7 @@
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png
-        Artist Matching: 'მხატვარი: დაკავშირება'
+        Artist Matching: 'მხატვარი: შესაბამისობა'
         Match the shape with the blocks that complete it.: დააკავშირეთ ფორმა და ბლოკი,
           რომელიც მას ასრულებს.
       2-3 bounce match 1:
@@ -92,7 +92,7 @@
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
-        Bounce Matching: ასხლეტის დაკავშირება
+        Bounce Matching: Bounce შესაბამისობა
         Match the events with the actions: დააკავშირეთ მოვლენები და მოქმედებები
         Matching: დაკავშირება
       2-3 flappy match 1:
@@ -102,7 +102,7 @@
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
-        Flappy Matching One: 'ფლაპი: დაკავშირება 1'
+        Flappy Matching One: 'Flappy: შესაბამისობა 1'
         Match the events with the actions: დააკავშირეთ მოვლენები და მოქმედებები
         Matching: დაკავშირება
       2-3 maze match 1:
@@ -112,8 +112,8 @@
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
-        Match the puzzles to the blocks: დააკავშირე თავსატეხები და ბლოკები
-        Maze Match One: 'ლაბირინთი: დაკავშირება 1'
+        Match the puzzles to the blocks: შეუსაბამეთ ბლოკები თავსატეხებს
+        Maze Match One: 'ლაბირინთი: შესაბამისობა 1'
       4-5 Algorithms Match 1:
         <h4>1)</h4>: <h4>1)</h4>
         <h4>2)</h4>: <h4>2)</h4>
@@ -121,14 +121,14 @@
         <h4>4)</h4>: <h4>4)</h4>
         <h4>Add Player 1 roll to total score</h4>: <h4> დაუმატე მოთამაშე 1-ის გაგორების
           შედეგი სართო ჯამს </h4>
-        <h4>Compare player scores to see who wins</h4>: <h4> შეადარე მოთამაშეების
-          შედეგები და გაიგე, ვინ მოიგო</h4>
+        <h4>Compare player scores to see who wins</h4>: <h4> შეადარეთ მოთამაშეების
+          შედეგები და გაიგეთ, ვინ მოიგო</h4>
         <h4>Player 1 rolls die</h4>: <h4> მოთამაშე 1 აგორებს კამათელს </h4>
-        <h4>Set Player 1 score to 0</h4>: <h4> დააყენე მოთამაშე 1-ის შედეგი 0-ზე</h4>
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: დაუკავშირე
+        <h4>Set Player 1 score to 0</h4>: <h4> დააყენეთ მოთამაშე 1-ის შედეგი 0-ზე</h4>
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: დაუკავშირეთ
           ნაბიჯები კამათლის თამაშში იმ წესრიგს, რომლის მიხედვითაც ისინი უნდა გამოჩდნენ
           ალგორითმში.
-        Matching: დაკავშირება
+        Matching: შესაბამება
       4-5 Computational Thinking Match 1:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
@@ -143,9 +143,9 @@
         '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>ბორბლები/მხარე: 3<br/>
           ფანჯრები/ მხარე: 2</h3>'
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: ყველა
-          ეს სატრანსპორტო საშუალება პატარა ნაწილებად დაშალეს. დაუკავშირე ყოველი ტრანსპორტი
+          ეს სატრანსპორტო საშუალება პატარა ნაწილებად დაშალეს. დაუკავშირეთ ყოველი ტრანსპორტი
           მისი ნაწილების სიას.
-        Matching: დაკავშირება
+        Matching: შესაბამება
       4-5 Suncatchers Match 1:
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
@@ -156,9 +156,9 @@
         <h4>STACK</h4>: <h4>STACK</h4>
         <h4>STAMP</h4>: <h4>STAMP</h4>
         <h4>STAR</h4>: <h4>STAR</h4>
-        Match each program to the word it makes, using the provided group of skills.: დაუკავშირე
+        Match each program to the word it makes, using the provided group of skills.: დაუკავშირეთ
           ყოველი პროგრამა სიტყვას, რომელსაც იგი ქმნის, უნარების ჯგუფების გამოყენებით.
-        Matching: დაკავშირება
+        Matching: შესაბამება
       4-5 maze match 1:
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
@@ -169,7 +169,7 @@
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: გადაადგილე და დააკავშირე ბლოკები.
         Instructions: ინსტრუქციები
-        Match the puzzles to the blocks: დააკავშირე თავსატეხები და ბლოკები
+        Match the puzzles to the blocks: შეუსაბამეთ ბლოკები თავსატეხებს
         Maze Match: 'ლაბირინთი: დაკავშირება'
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
@@ -180,7 +180,7 @@
         <br/><br/>next to: <br/><br/>გვერდით
         Is the square next to, above, or below the ball?: კვადრატი ბურთის გვერდით,
           ზემოთ თუ ქვემოთაა?
-        Matching: დაკავშირება
+        Matching: შესაბამება
       K-1 Artist 2 Match 2:
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
@@ -191,7 +191,7 @@
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/small_triangle.png: /script_assets/k_1_images/artist_images/small_triangle.png
         Match the shapes based on type.: დააკავშირეთ ფიგურები ტიპის მიხედვით.
-        Matching: დაკავშირება
+        Matching: შესაბამება
       K-1 Artist 2 Match 3:
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -202,7 +202,7 @@
         /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         Match the shapes based on type.: დააკავშირეთ ფიგურები ტიპის მიხედვით.
-        Matching: დაკავშირება
+        Matching: შესაბამება
       K-1 Artist Loops Match 1:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png
@@ -210,9 +210,9 @@
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
-        Match the code to the stairs it draws.: დაუკავშირე კოდი კიბეებს, რომელთაც
-          ის დახატავს.
-        Matching: დაკავშირება
+        Match the code to the stairs it draws.: შეუსაბამეთ კოდი კიბეს, რომელსაც ის
+          დახატავს.
+        Matching: შესაბამება
       K-1 Bee Loops Match 1:
         /script_assets/k_1_images/bee_images/4_gnectar.png: /script_assets/k_1_images/bee_images/4_gnectar.png
         /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
@@ -223,7 +223,7 @@
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
         Match the blocks: ბლოკების დაკავშირება
-        Matching: დაკავშირება
+        Matching: შესაბამება
       K-1 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
@@ -232,9 +232,9 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
-        Match the button combination to the dance moves.: დაუკავშირეთ ღილაკების კომბინაციები
+        Match the button combination to the dance moves.: შეუსაბამეთ ღილაკების კომბინაციები
           ცეკვის მოძრაობებს.
-        Matching: დაკავშირება
+        Matching: შესაბამება
       K-1 Flappy Match 1:
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/end.png: /script_assets/k_1_images/flappy_images/end.png
@@ -243,7 +243,7 @@
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
         Match the blocks: ბლოკების დაკავშირება
-        Matching: დაკავშირება
+        Matching: შესაბამება
       K-1 Happy Maps Match 1:
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
@@ -251,9 +251,9 @@
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
-        Match the Map to the arrow that gets the Flurb to the treasure: დააკავშირე
+        Match the Map to the arrow that gets the Flurb to the treasure: დააკავშირეთ
           რუკა და ის ისარი, რომელიც მიიყვანს ფლარბის განძამდე
-        Matching: დაკავშირება
+        Matching: შესაბამება
       K-1 Maze Match 1:
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
@@ -266,8 +266,8 @@
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         Drag the blocks to match.: გადაადგილე და დააკავშირე ბლოკები.
         Instructions: ინსტრუქციები
-        Match the puzzles and blocks: დააკავშირე თავსატეხები და ბლოკები
-        Matching: დაკავშირება
+        Match the puzzles and blocks: დააკავშირეთ თავსატეხები და ბლოკები
+        Matching: შესაბამება
       K-1 Move It Match 1:
         /script_assets/k_1_images/unplugged_images/leftup.png: /script_assets/k_1_images/unplugged_images/leftup.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
@@ -275,9 +275,9 @@
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
-        Match the Map to the algorithm that gets the Flurb to the flowers.: დააკავშირე
+        Match the Map to the algorithm that gets the Flurb to the flowers.: დააკავშირეთ
           რუკა და ის ალგორითმი, რომელიც მიიყვანს ფლარბის ყვავილებამდე.
-        Matching: დაკავშირება
+        Matching: შესაბამება
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
@@ -293,7 +293,7 @@
         Match up all the flowers by colour!: Match up all the flowers by colour!
         Matching Images Two: Matching Images Two
       test matching text:
-        Matching: დაკავშირება
+        Matching: შესაბამება
         Some really easy stuff to match.  Drag it around until you get it.: Some really
           easy stuff to match.  Drag it around until you get it.
         Sydney: Sydney
@@ -307,30 +307,30 @@
     multi:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided.: აირჩიე ნახატის შესამაბისი ალგორითმი.
+        Choose an algorithm for the image provided.: აირჩიეთ ნახატის შესამაბისი ალგორითმი.
         Multiple Choice: ვარიანტის არჩევა
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: დაიწყე
-          კვადრატით <br/> კვადრატის ზემოთ დასვი პარალელოგრამი <br/> პარალელოგრამის
-          მარჯვნივ დასვი სამკუთხედი
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: დაიწყე
-          კვადრატით <br/> კვადრატის ზემოთ დასვი სამკუთხედი<br/> კვადრატის ქვემოთ დასვი
-          სამკუთხედი
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: დაიწყე
-          კვადრატით <br/> კვადრატის ქვემოთ დასვი სამკუთხედი<br/> სამკუთხედის მარჯვნივ
-          დასვი პარალელოგრამი
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: დაიწყეთ
+          კვადრატით <br/> კვადრატის ზემოთ დასვით პარალელოგრამი <br/> პარალელოგრამის
+          მარჯვნივ დასვით სამკუთხედი
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: დაიწყეთ
+          კვადრატით <br/> კვადრატის ზემოთ დასვით სამკუთხედი<br/> კვადრატის ქვემოთ
+          დასვით სამკუთხედი
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: დაიწყეთ
+          კვადრატით <br/> კვადრატის ქვემოთ დასვით სამკუთხედი<br/> სამკუთხედის მარჯვნივ
+          დასვით პარალელოგრამი
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : დაიწყე კვადრატით <br/> კვადრატის მარჯვნივ დასვი სამკუთხედი<br/> კვადრატის
-          ქვემოთ დასვი პარალელოგრამი <br/> პარალელოგრამის მარჯვნივ დასვი სამკუთხედი
+        : დაიწყეთ კვადრატით <br/> კვადრატის მარჯვნივ დასვით სამკუთხედი<br/> კვადრატის
+          ქვემოთ დასვით პარალელოგრამი <br/> პარალელოგრამის მარჯვნივ დასვით სამკუთხედი
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
         Multiple Choice: ვარიანტის არჩევა
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: დაიწყე
-          სამკუთხედით <br/> სამკუთხედის ქვემოთ დასვი კვადრატი <br/> კვადრატის ქვემოთ
-          კიდევ ერთი სამკუთხედი დასვი
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: დაიწყეთ
+          სამკუთხედით <br/> სამკუთხედის ქვემოთ დასვით კვადრატი <br/> კვადრატის ქვემოთ
+          კიდევ ერთი სამკუთხედი დასვით
         Which image does <em>not</em> follow this algorithm?: რომელი ნახატი <em>არ</em>
           შეესაბამება ამ ალგორითმს?
       2-3 Binary Multi 1:
@@ -355,8 +355,8 @@
         /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: როგორ გაამარტივებდი ამ თანმიმდევრობას
-          ციკლების მეშვეობით?
+        How would you simplify this sequence with loops?: როგორ გაამარტივებდით ამ
+          თანმიმდევრობას ციკლების მეშვეობით?
         Multiple Choice: ვარიანტის არჩევა
       2-3 Graph Paper Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
@@ -386,7 +386,7 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
         Multiple Choice: ვარიანტის არჩევა
-        Which image-program combo does not contain mistakes?: რომელი წყვილი სურათი-პროგრამა
+        Which image-program combo does not contain mistakes?: რომელი წყვილი "სურათი-პროგრამა"
           არ შეიცავს შეცდომას?
       2-3 artist debug multi 1:
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
@@ -395,8 +395,8 @@
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700
-        Artist Debugging Multiple Choice One: 'მხატვარი: გასწორება: ვარიანტის არჩევა
-          1'
+        Artist Debugging Multiple Choice One: 'მხატვარი, ბაგების გასწორება: ვარიანტის
+          არჩევა 1'
         Why won't this circle go all the way around?: რატომ არ სრულდება ეს წრეწირი?
       2-3 artist functions multi 1:
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png
@@ -404,10 +404,10 @@
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
           500
-        Artist Functions Multiple Choice One: 'მხატვარი: ფუნქციები: ვარიანტის არჩევა
+        Artist Functions Multiple Choice One: 'მხატვარი, ფუნქციები: ვარიანტის არჩევა
           1'
-        Pick the correct blocks to draw this image using the given functions: აირჩიე
-          შესაბამისი ბლოკები ამ ნახატის მოცვემული ფუნქციების გამოყენებით დასახატად
+        Pick the correct blocks to draw this image using the given functions: აირჩიეთ
+          შესაბამისი ბლოკები ამ ნახატის მოცემული ფუნქციების გამოყენებით დასახატად
       2-3 artist loops multi 1:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
           500
@@ -425,13 +425,13 @@
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
         Artist Loops Multiple Choice: 'მხატვარი: ციკლები: ვარიანტის არჩევა'
-        Which shape is made by this program?: რომელ ფიგურას ქმნის ეს პროგრამა?
+        Which shape is made by this program?: რომელი ფიგურაა შექმნილი ამ პროგრამით?
       2-3 bee conditionals multi 1:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png
-        Bee Conditionals Multiple Choice One: 'ფუტკარი: პირობები: ვარიანტის არჩევა
+        Bee Conditionals Multiple Choice One: 'ფუტკარი: პირობები. ვარიანტის არჩევა
           1'
         Which comparison below is true?: ქვემოთ მოყვანილი შედარებებიდან რომელია სწორი?
       2-3 bee conditionals multi 2:
@@ -441,9 +441,9 @@
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
           500
-        Bee Conditionals Multiple Choice Two: 'ფუტკარი: პირობები: ვარიანტის არჩევა
+        Bee Conditionals Multiple Choice Two: 'ფუტკარი: პირობები. ვარიანტის არჩევა
           2'
-        Choose the best blocks.: აირჩიე საუკეთესო ბლოკები.
+        Choose the best blocks.: აირჩიეთ საუკეთესო ბლოკები.
       2-3 bee conditionals multi 3:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
@@ -451,9 +451,9 @@
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500
-        Bee Conditionals Multiple Choice Two: 'ფუტკარი: პირობები: ვარიანტის არჩევა
+        Bee Conditionals Multiple Choice Two: 'ფუტკარი: პირობები. ვარიანტის არჩევა
           2'
-        Choose the best blocks.: აირჩიე საუკეთესო ბლოკები.
+        Choose the best blocks.: აირჩიეთ საუკეთესო ბლოკები.
       2-3 bee loops multi 1:
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png
@@ -461,7 +461,7 @@
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
           500
-        Bee Loops Multiple Choice One: 'ფუტკარი: ციკლები: ვარიანტის არჩევა 1'
+        Bee Loops Multiple Choice One: 'ფუტკარი: ციკლები. ვარიანტის არჩევა 1'
         Which blocks collect all of the nectar?: რომელი ბლოკები მოაგროვებს მთელ ნექტარს?
       2-3 maze multi 1:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
@@ -522,8 +522,8 @@
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
         Multiple Choice: ვარიანტის არჩევა
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: როცა
-          code.org-ზე შედიხართ, რომელ IP მისამართზე გადაგიყვანტ DNS ყველაზე დიდი ალბათობით?
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: რომელ
+          IP მისამართზე გადაგიყვანთ DNS ყველაზე დიდი ალბათობით, როცა code.org-ზე შედიხართ?
       4-5 Internet Multi 2:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: თუ
@@ -554,7 +554,7 @@
         Multiple Choice: ვარიანტის არჩევა
         ? What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?
-        : რა არის ამ სიმღერის ყველაზე დიდი ნაწილი რომელიც შეგიძლია განსაზღვრო მისამღერად
+        : რა არის ამ სიმღერის ყველაზე დიდი ნაწილი, რომელიც შეგიძლიათ განსაზღვროთ მისამღერად
           ისე, რომ ყოველ გამოძახებაზე მისამღერი ზუსტად გამეორდეს?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
@@ -589,7 +589,7 @@
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
         Artist Functions Multiple Choice: 'მხატვრის ფუნქცები: ვარიანტის არჩევა'
-        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'აირჩიე
+        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'აირჩიეთ
           ციკლი, რომელიც გამოხატავს შემდეგ თანმიმდევრობას: 5, 10, 15, 20, 25, 30,
           35, 40, 45, 50'
       4-5 artist multi 1:
@@ -598,7 +598,7 @@
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
         Artist Multiple Choice: 'მხატვარი: ვარიანტის არჩევა'
-        Which blocks draw a rectangle with a perimeter of 100?: /რომელი ბლოკები ხატავს
+        Which blocks draw a rectangle with a perimeter of 100?: რომელი ბლოკები ხატავს
           მართკუთხედს პერიმეტრით 100?
       4-5 artist multi 2:
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
@@ -616,11 +616,11 @@
         0: '? A purple flower may have either 3, 2 or 1 nectars, but you don''t know
           how many. Which blocks correctly check and collect all of the nectar from
           a purple flower?'
-        1: ': იასამნისფერ ყვავილს შეიძლება ჰქონდეს 3, 2 ან 1 ნექტარი, მაგრამ შენ არ
-          იცი, რამდენი აქვს. რომელი ბლოკები სწორად შეამოწმებენ რაოდენაბას და მთლიანად
+        1: ': იასამნისფერ ყვავილს შეიძლება ჰქონდეს 3, 2 ან 1 ნექტარი, მაგრამ თქვენ
+          არ იცით, რამდენი აქვს. რომელი ბლოკები სწორად შეამოწმებენ რაოდენაბას და მთლიანად
           მოაგროვებენ ნექტარს?'
         Bee Conditionals Multiple Choice: 'ფუტკარი, პირობები: ვარიანტის არჩევა'
-        Choose the best blocks.: აირჩიე საუკეთესო ბლოკები.
+        Choose the best blocks.: აირჩიეთ საუკეთესო ბლოკები.
       4-5 bee debug multi 1:
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png
@@ -628,7 +628,7 @@
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
-        Bee Debug Multiple Choice: 'ფუტკარი, გასწორება: ვარიანტის არჩევა'
+        Bee Debug Multiple Choice: 'ფუტკარი, ბაგების გასწორება: ვარიანტის არჩევა'
         Which version of the function will work?: ფუნქციის რომელი ვერსია იმუშავებს?
       4-5 bee loops multi 1:
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
@@ -685,18 +685,19 @@
           lines of code should be removed so the program will work as intended? Select
           <u>two</u> answers
       K-1 Artist 1 Multi 1:
-        /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
-        /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
-        /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
-        /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
+        /script_assets/k_1_images/artist_images/E-S-S.png: /script_assets/k_1_images/artist_images/E-S-S.png
+        /script_assets/k_1_images/artist_images/E-S.png: /script_assets/k_1_images/artist_images/E-S.png
+        /script_assets/k_1_images/artist_images/S-E-E.png: /script_assets/k_1_images/artist_images/S-E-E.png
+        /script_assets/k_1_images/artist_images/W-S-S.png: /script_assets/k_1_images/artist_images/W-S-S.png
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
           500
         Multiple Choice: ვარიანტის არჩევა
         Which blocks solve this puzzle?: რომელი ბლოკებით ამოიხსნება ეს თავსატეხი?
       K-1 Artist 1 Multi 2:
-        /script_assets/k_1_images/artist_images/E|S|W|N.png: /script_assets/k_1_images/artist_images/E|S|W|N.png
-        /script_assets/k_1_images/artist_images/N|E|S|W.png: /script_assets/k_1_images/artist_images/N|E|S|W.png
-        /script_assets/k_1_images/artist_images/N|W|S|E.png: /script_assets/k_1_images/artist_images/N|W|S|E.png
+        /script_assets/k_1_images/artist_images/E-S-W-N.png: /script_assets/k_1_images/artist_images/E-S-W-N.png
+        /script_assets/k_1_images/artist_images/N-E-S-W.png: /script_assets/k_1_images/artist_images/N-E-S-W.png
+        /script_assets/k_1_images/artist_images/N-S-E-W.png: /script_assets/k_1_images/artist_images/N-S-E-W.png
+        /script_assets/k_1_images/artist_images/N-W-S-E.png: /script_assets/k_1_images/artist_images/N-W-S-E.png
         /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png,
           500
         Multiple Choice: ვარიანტის არჩევა
@@ -719,7 +720,7 @@
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
           300
         Multiple Choice: ვარიანტის არჩევა
-        Which blocks create this picture?: რომელი ბლოკები ქმნის ამ ნახატს?
+        Which blocks create this picture?: რომელი ბლოკებით იქმნება ეს ნახატი?
       K-1 Bee 1 Multi 1:
         /script_assets/k_1_images/bee_images/1nectar+2nectar.png: /script_assets/k_1_images/bee_images/1nectar+2nectar.png
         /script_assets/k_1_images/bee_images/2nectar.png: /script_assets/k_1_images/bee_images/2nectar.png
@@ -749,8 +750,8 @@
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: როგორ გაამარტივებდი ამ თანმიმდევრობას
-          ციკლების მეშვეობით?
+        How would you simplify this sequence with loops?: როგორ გაამარტივებდით ამ
+          თანმიმდევრობას ციკლების მეშვეობით?
         Multiple Choice: ვარიანტის არჩევა
       K-1 Happy Maps Multi 1:
         /script_assets/k_1_images/unplugged_images/down.png: /script_assets/k_1_images/unplugged_images/down.png
@@ -767,7 +768,7 @@
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
         Multiple Choice: ვარიანტის არჩევა
         Which information should you <strong>not</strong> share online?: რომელი ინფორმაცია
-          <strong>არ</strong> უნდა გააზიარო ონლაინ?
+          <strong>არ</strong> უნდა გააზიაროთ ონლაინ?
       K-1 Maze Debugging Multi 1:
         /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png,
           700
@@ -792,7 +793,7 @@
         /script_assets/k_1_images/move_blocks/r3_S.png: /script_assets/k_1_images/move_blocks/r3_S.png
         /script_assets/k_1_images/move_blocks/r3_SE.png: /script_assets/k_1_images/move_blocks/r3_SE.png
         Multiple Choice: ვარიანტის არჩევა
-        Pick the correct repeat block.: აირჩიე გამეორების სწორი ბლოკი.
+        Pick the correct repeat block.: აირჩიეთ გამეორების სწორი ბლოკი.
       K-1 Maze Multiple Choice 2:
         /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png,
           500

@@ -416,6 +416,8 @@ fa:
         C4_variables_artist: 'متغیرها - هنرمند'
         C4_variables_playlab: 'متغیرها - آزمایشگاه بازی'
         C4_for_loops: 'حلقه های "برای"'
+        C4_for_loops_bee: 'حلقه های "برای"'
+        C4_for_loops_no_bee: 'حلقه های "برای"'
         C4_math_artist: برنامه نویسی هنرمند با ریاضی
         C4_function_edit: ویرایش تابع ها
         C4_function_create: ساختن تابع ها
@@ -437,6 +439,7 @@ fa:
         infinity_playlab_intro: 'آزمایشگاه بازی - معرفی'
         infinity_playlab_events: 'آزمایشگته بازی - رویداد ها'
         infinity_playlab_repeat_forever: 'آزمایشگاه بازی - حلقه ی تکرار برای همیشه'
+        csp_applab_functions: معرفی تابع ها
         csp_concept_rgb: کمی راجع به پیکسل ها
         csp_pixelation_color_1: 'نرم افزار پیکسل کردن رنگ - قسمت 1'
         csp_pixelation_color_2: 'نرم افزار پیکسل کردن رنگ - قسمت 2'
@@ -444,6 +447,7 @@ fa:
         csp_pixelation_bw: نرم افزار پیکسل کردن سیاه و سفید
         csp_U1L14_tipstricks: توصیه ها و ترفند های معلم واحد 1 درس 14
         csp_textcompression: نرم افزار فشرده سازی متن
+        csp_textcompression_new: نرم افزار فشرده سازی متن
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'
@@ -464,6 +468,9 @@ fa:
         alg_15_biggame_update_player: 'CS در جبر - به روز رسانی بازیکن بازی بزرگ'
         alg_16_biggame_collision_detection: 'CS در جبر - تشخیص برخورد بازی بزرگ'
         alg_17_sambat_compound_booleans: 'CS در جبر - دودویی های ترکیبی'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: 'یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان'
@@ -484,55 +491,54 @@ fa:
         repeat_blocks_1: (1) از این بلوک استفاده کنید و آن را دور بلوک های خاکستری در فضای کار بگذارید
         repeat_blocks_2: '(2) بلوک "Repeat" را به اینجا حرکت دهید، و بلوک های خاکستری را داخلش قرار دهید'
         snowflake_dropdown: از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each angle in degrees.
-        set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
-        set_length: 'Use this block to set "length" to the correct value.'
-        which_equation: Which equation makes each side shorter for shapes with more sides?
-        get_nectar: 'Use the new "get nectar" block.'
-        actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Click here to edit your function.
-        create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
-        house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction the Bee will turn to get the nectar.
-        logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
-        length_parameter: 'Can you update this function so it uses the "length" parameter?'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: 'Drag the "say" block here and type "hello"'
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
-        playlab_play_sound: 'Add "play sound" block here'
-        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
-        playlab_add_move: 'Add "move" blocks inside this repeat block'
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
+        degrees_per_side: 360 را بر تعداد اضلاع تقسیم کنید تا اندازه ی هر زاویه را به درجه بدست آورید.
+        set_sides: از این بلوک برای تنظیم اضلاع به تعداد مورد نیاز برای حل معما استفاده کنید.
+        set_length: 'از این بلوک برای تنظیم "طول" به میزان درست استفاده کنید.'
+        which_equation: کدام معادله هر ضلع را برای شکل هایی با اضلاع بیشتر کوتاهتر می کند?
+        get_nectar: 'از بلوک جدید "شهد را بگیر" استفاده کن.'
+        actions_category: 'جعبه ابزار قیافه ی جدیدی پیدا کرده! بلوک های "کارها" حالا اینجا هستند.'
+        draw_square_hint: 'راهنمایی: از حلقه ی مربع که به تازگی در معمای قبلی درست کردید استفاده کنید.'
+        edit_function: اینجا را کلیک کنید تا تابع خود را ویرایش کنید.
+        create_function: 'برای باز کردن منوی " تابع ها" اینجا را کلیک کنید، سپس دکمه ی "یک تابع بساز" را کلیک کنید.'
+        house_hint: اشکالی ندارد اگر تصویر هنوز مثل یک خانه به نظر نمی رسد. در معمای بعدی درستش می کنیم.
+        edit_draw_square: از این دکمه برای ویرایش تابع و اضافه کردن حلقه استفاده کنید.
+        edit_get_nectar: از این دکمه برای ویرایش تابع استفاده کنید و جهتی که زنبور برای گرفتن شهد می چرخد را تغییر دهید.
+        logic_category: 'منوی "logic" را برای پیدا کردن بلوک "if/else" باز کنید.'
+        length_parameter: 'می توانید این تابع را به روز کنید به طوری که از ورودی "طول" استفاده کند?'
+        frozen_diamond_repeat: از بلوک تکرار برای ایجاد این شکل استفاده کنید.
+        frozen_circle_function_in_circle_turn: فراموش نکنید بعد از ایجاد هر دایره برگردید.
+        frozen_circle_function_with_parameter_circle: 'استفاده از بلوک "ایجاد یک دایره" و تغییر سایز.'
+        frozen_snowflake_branch: 'استفاده از بلوک "ایجاد شعبه برف ریزه"'
+        frozen_create_square: برای ایجاد میدان بلوک های بیشتری اینجا پیوست کنید
+        playlab_drag_say: 'بلوک "گفتن" رو به این جا بکشید و "سلام" رو تایپ کنید'
+        playlab_use_twice: از این بلوک دو بار استفاده کنید و به یاد داشته باشید تغییر تعداد بازیگر ها را
+        playlab_move_girl: 'برای حرکت تنیس دختر از بلوک "حرکت به راست" استفاده کنید'
+        playlab_play_sound: 'بلوک "پخش صدا" را اینجا اضاف کنید'
+        playlab_arrow_keys: استفاده از این را برای حرکت جادوگر بعد از کلیک روی اجرا به یاد داشته باشید
+        playlab_add_move: 'بلوک "حرکت" را داخل این بوک تکرار اضاف کنید'
+        playlab_add_score: اضافه کردن بلوک امتیاز در اینجا
+        playlab_add_blocks: بلوک های خود را اینجا اضافه کنید
+        set_variable: برای تنظیم متغیر خود، یک بلوک شماره را به اینجا بکشید
+        place_variable: متغیر خود را به داخل این بلوک بکشید
+        bee_for_loop: بزرگترین عدد شهدی که میخواهید زنبور جمع کند را به اینجا بکشید
+        place_counter_variable: شمارنده ی متغیر خود را به داخل این بلوک بکشید
+        function_editor_draw_square: 'این تعریف تابع شماست. این بلوک ها هر زمان که از بلوک "کشیدن یک میدان" استفاده کنید، اجرا میشوند'
         change_here: تغییرات خود را اینجا انجام دهید
-        write_draw_square_function: Drag blocks from the toolbox into here that draw a square
-        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
-        if_else_bee: |-
-          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
-        place_length_variable: Drag the length variable here to replace the question marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
-        Infinity_move_collide_callout: Play a sound when this event occurs.
-        Infinity_repeat_callout: Place Move blocks inside here
+        write_draw_square_function: برای کشیدن یک میدان بلوک ها را از جعبه ابزار به اینجا بکشید
+        write_draw_triangle_function: برای کشیدن مثلث بلوک ها را از جعبه ابزار به اینجا بکشید
+        edit_add_parameter: برای افزودن یک پارامتر به عملکرد تان ویرایش را کلیک کنید
+        add_and_drag_parameter: نام پارامتر خود را اینجا بنویسید، روی افزودن کلیک کرده، و سپس آنرا به تعریف عملکرد تان بکشید
+        fill_in_actor: پر کردن با؟؟؟ با اعداد که هر کدام مربوط به یک بازیگر است(۱، ۲ و ۳)
+        repeat: برای تکرار دستورات بلوک ها را داخل حلقه قرار دهید
+        if_bee_nectar: 'استفاده از بلوک "اگر" برای تصمیم گرفتن، اگر زنبور شهد جمع کرد'
+        if_else_bee: 'استفاده از بلوک "اگر/وگرنه" بنابراین که اگر گلی نبود، زنبور از یک گل شهد جمع میکنه و عسل میسازه'
+        repeat_full_circle: تعداد دفعاتی که زامبی باید حرکت کند تا یک دایره کامل بسازد را وارد کنید
+        place_length_variable: برای جابجایی علامت سوال طول متغیر را به اینجا بکشید
+        arrows_move_actor: استفاده از فلش برای حرکت بازیگر
+        right_arrow_fireball: استفاده از فلش راست برای شلیک توپ های آتشین
+        name_function: نام عملکرد تان را اینجا بنویسید
+        Infinity_move_right_runbutton: افزودن بلوک حرکت در اینجا
+        Infinity_move_directions_callout: وقتی فلش بالا فشرده میشود کدام بلوک بایمکس را به بالا حرکت میدهد؟
+        Infinity_move_directions_callout_arrow: برای هدایت کردن از این فلش ها استفاده کنید
+        Infinity_move_collide_callout: پخش صدا هنگامی که این رویداد رخ می دهد.
+        Infinity_repeat_callout: بلوک های حرکت را داخل اینجا قرار دهید

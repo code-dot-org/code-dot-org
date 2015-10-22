@@ -14,10 +14,11 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test "create retries on Duplicate exception" do
     # some Mocha shenanigans to simulate throwing a duplicate entry
-    # error and then succeeding by returning the existing userlevel
+    # error and then succeeding by returning the existing user
 
     exception = ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry 'coder1234574782' for key 'index_users_on_username'"))
     User.any_instance.stubs(:save).raises(exception).then.returns(true)
+    User.any_instance.stubs(:persisted?).returns(true)
 
     student_params = {name: "A name",
                       password: "apassword",
@@ -229,7 +230,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     # no age dropdown, yes age hidden field
     assert_select 'select[name*="age"]', 0
-    assert_select 'input[type="hidden"][name*="age"][value=21]'
+    assert_select 'input[type="hidden"][name*="age"][value="21"]'
   end
 
   test 'sign up as student' do
@@ -257,7 +258,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_select '.alert span', /Your email address my_email@test.xx has not been confirmed:/
-    assert_select '.alert input[value=my_email@test.xx]'
+    assert_select '.alert input[value="my_email@test.xx"]'
     assert_select '.alert .btn[value="Resend confirmation instructions"]'
   end
 

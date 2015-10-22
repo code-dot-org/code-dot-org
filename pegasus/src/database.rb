@@ -16,6 +16,7 @@ class Tutorials
     api_domain = api_domain.gsub('br.code.org','code.org')
     api_domain = api_domain.gsub('eu.code.org','code.org')
     api_domain = api_domain.gsub('ro.code.org','code.org')
+    api_domain = api_domain.gsub('sg.code.org','code.org')
     api_domain = api_domain.gsub('uk.code.org','code.org')
     api_domain = api_domain.gsub('za.code.org','code.org')
     "http://#{api_domain}/api/hour/begin/#{code}"
@@ -62,7 +63,7 @@ def no_credit_count
   DB[:cdo_state_promote].where(cs_counts_t: 'No').exclude(state_code_s: 'DC').count
 end
 def credit_count
-  50 - no_credit_count
+  DB[:cdo_state_promote].where(cs_counts_t: 'Yes').exclude(state_code_s: 'DC').count
 end
 def jobs_nationwide
   DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_jobs_i]

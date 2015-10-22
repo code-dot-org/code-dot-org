@@ -412,6 +412,8 @@ bg:
         C4_variables_artist: 'Променливи - художник'
         C4_variables_playlab: 'Променливи - Игрална лаборатория'
         C4_for_loops: За циклите
+        C4_for_loops_bee: За циклите
+        C4_for_loops_no_bee: За циклите
         C4_math_artist: Програмиране на художника с математика
         C4_function_edit: Редактиране на функции
         C4_function_create: Създаване на функции
@@ -433,6 +435,7 @@ bg:
         infinity_playlab_intro: 'Игрална лаборатория - Въведение'
         infinity_playlab_events: 'Игрална лаборатория - Събития'
         infinity_playlab_repeat_forever: 'Игрална Лаборатория - повторение завинаги'
+        csp_applab_functions: Въвеждане във функциите
         csp_concept_rgb: Малко за пикселите
         csp_pixelation_color_1: 'Приспособление за цветова пикселизация - част 1'
         csp_pixelation_color_2: 'Приспособление за цветова пикселизация - част 2'
@@ -440,6 +443,7 @@ bg:
         csp_pixelation_bw: 'Приспособление за черно- бяла пикселизация '
         csp_U1L14_tipstricks: 'Част 1 урок 14 съвети & трикове за учителя'
         csp_textcompression: Приспособление за компресиране на текст
+        csp_textcompression_new: Приспособление за компресиране на текст
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'
@@ -460,6 +464,9 @@ bg:
         alg_15_biggame_update_player: 'CS в алгебрата - "Голямата игра": актуализация на играч'
         alg_16_biggame_collision_detection: 'CS в алгебрата - "Голямата игра": отчитане на сблъсък'
         alg_17_sambat_compound_booleans: 'CS в алгебрата - комбинирани Booleans'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

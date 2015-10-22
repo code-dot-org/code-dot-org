@@ -155,8 +155,7 @@ div.droplet-palette-group-header-selected.orange {
   min-height: calc(50% - 16px) !important; }
 
 #codeTextbox.pin_bottom {
-  border: 1px solid #ddd;
-  bottom: 156px; }
+  border: 1px solid #ddd; }
 
 html[dir='rtl'] #codeWorkspace {
   right: 400px;
@@ -178,8 +177,15 @@ html[dir='rtl'] #codeWorkspace {
   border: none;
   border-top: 1px solid #ddd; }
 
-#codeWorkspace.readonly .blocklySvg, #codeWorkspace.readonly .droplet-main-scroller, #codeWorkspace.readonly .ace_scroller {
+#codeWorkspace.readonly .blocklySvg, #codeWorkspace.readonly .droplet-main-scroller, #codeWorkspace.readonly .ace_scroller, #codeWorkspace.dimmed .blocklySvg, #codeWorkspace.dimmed .droplet-main-scroller, #codeWorkspace.dimmed .ace_scroller {
   background-color: rgba(0, 0, 0, 0.1); }
+
+.ace-chrome .ace_marker-layer .ace_error {
+  background: #e82f19; }
+
+.ace_marker-layer .ace_error {
+  position: absolute;
+  z-index: 3; }
 
 .ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
   border-radius: 15px 0px 0px 15px;
@@ -255,7 +261,7 @@ html[dir='rtl'] #codeWorkspace {
     max-width: 350px; }
   #visualizationColumn.responsive {
     max-width: 350px; }
-  .small-footer.responsive {
+  .small-footer-base.responsive {
     max-width: 350px; }
   #codeWorkspace {
     left: 350px; }
@@ -282,7 +288,7 @@ html[dir='rtl'] #codeWorkspace {
     max-width: 300px; }
   #visualizationColumn.responsive {
     max-width: 300px; }
-  .small-footer.responsive {
+  .small-footer-base.responsive {
     max-width: 300px; }
   #codeWorkspace {
     left: 300px; }
@@ -309,7 +315,7 @@ html[dir='rtl'] #codeWorkspace {
     max-width: 250px; }
   #visualizationColumn.responsive {
     max-width: 250px; }
-  .small-footer.responsive {
+  .small-footer-base.responsive {
     max-width: 250px; }
   #codeWorkspace {
     left: 250px; }
@@ -336,9 +342,9 @@ html[dir='rtl'] #codeWorkspace {
     max-width: 200px; }
   #visualizationColumn.responsive {
     max-width: 200px; }
-  .small-footer.responsive {
+  .small-footer-base.responsive {
     max-width: 200px; }
-    .small-footer.responsive small {
+    .small-footer-base.responsive small {
       float: left; }
   #codeWorkspace {
     left: 200px; }
@@ -610,6 +616,10 @@ input[type="radio"] {
 #prompt-cell {
   vertical-align: top; }
 
+#prompt2 {
+  font-size: 12px;
+  color: #5b6770; }
+
 #ani-gif-preview-wrapper {
   display: inline-block;
   vertical-align: top; }
@@ -693,7 +703,8 @@ input[type="radio"] {
   -ms-user-select: none;
   user-select: none; }
 
-.readonly #headers {
+.readonly #headers,
+.readonly #design-headers {
   background-color: #5b6770; }
 
 #headers {
@@ -800,6 +811,10 @@ input[type="radio"] {
   background-color: white;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   display: none;
   background-position: 50% 50%;
   background-size: contain;
@@ -915,7 +930,8 @@ input[type="radio"] {
   border: 1px solid #ffa400;
   color: white;
   margin-left: 0px;
-  margin-right: 10px; }
+  margin-right: 10px;
+  text-align: center; }
 
 #save-to-gallery-button {
   background-color: #7665a0;

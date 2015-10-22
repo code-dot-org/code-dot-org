@@ -36,7 +36,8 @@ ____________________________________________________
 **List of Favorite Colors**
 Creates a list of colors to choose from.
 
-<pre>
+
+```
 // Creates a list of color options
 textLabel("RedLabel","Red","Red");
 radioButton("Red", true, "Color");
@@ -46,7 +47,7 @@ textLabel("GreenLabel","Green","Green");
 radioButton("Green", false, "Color");
 textLabel("OrangeLabel","Orange","Orange");
 radioButton("Orange", false, "Color");
-</pre>
+```
 
 [/example]
 
@@ -56,7 +57,8 @@ ____________________________________________________
 **Radio button click events**
 Retrieve and display your favorite color each time the radio button is clicked.
 
-<pre>
+
+```
 // Creates a list of color options
 textLabel("RedLabel","Red","Red");
 radioButton("Red", true, "Color");
@@ -82,7 +84,7 @@ onEvent("Green", "click", function(event) {
 onEvent("Orange", "click", function(event) {
   setText("favorite","Orange");
 });
-</pre>
+```
 
 [/example]
 
@@ -93,7 +95,8 @@ ____________________________________________________
 **Finding the Checked Item**
 In this example, we iterate over the radio buttons in a group to determine which one is selected each time the favorite button is clicked.
 
-<pre>
+
+```
 // Creates a list of color options
 textLabel("RedLabel","Red","Red");
 radioButton("Red", true, "Color");
@@ -111,13 +114,13 @@ onEvent("favorite","click", function(event) {
     var radioIDs = ["Red","Blue","Green","Orange"];
     var index = 0;
     // Loop through radio buttons until one is checked
-    while (index &lt; radioIDs.length && !getChecked(radioIDs[index])) {
+    while (index < radioIDs.length && !getChecked(radioIDs[index])) {
       index++;
     }
     // Log the checked button
     console.log("Your favorite color is: " + radioIDs[index])
 })
-</pre>
+```
 
 [/example]
 
@@ -126,9 +129,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 radioButton(id,false,group)
-</pre>
+```
 
 [/syntax]
 

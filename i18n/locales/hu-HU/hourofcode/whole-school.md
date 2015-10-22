@@ -1,9 +1,13 @@
 * * *
 
-layout: wide
+title: <%= hoc_s(:title_whole_school) %> layout: wide
 
 * * *
 
-# Szervezze meg az teljes iskola részvételét
+<%= view :signup_button %>
 
-Itt lesz majd megtalálható a teljes iskola Hour of Code-on való részvételével kapcsolatos információ.
+# Szervezd meg az teljes iskola részvételét
+
+Information about getting whole schools to participate in the Hour of Code will go here.
+
+<%= view :signup_button %>

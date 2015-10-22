@@ -3,10 +3,17 @@ title: How to help
 ---
 
 # How to Help
-## Host an Hour of Code - at work, in your community, or local school
-Millions of people of all ages have learned an [Hour of Code](http://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics.
 
-[<button>Join us</button>](http://code.org/learn)
+
+## Host an Hour of Code - at work, in your community, or local school
+Millions of people of all ages have learned an [Hour of Code](http://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics. Join the worldwide movement during Dec. 7-13, 2015. 
+
+[<button>Join us</button>](https://hourofcode.com)
+
+## Software engineers &mdash; volunteer at a local Hour of Code 
+If you're a software professional or a computer science student, we'll help match you with a nearby classroom learning an Hour of Code during Dec. 7-13. Assist students on intro tutorials, share your story, and inspire new coders to keep going.
+
+[<button>Volunteer</button>](/volunteer/engineer)
 
 ## Make a generous donation
 We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate.
@@ -23,8 +30,8 @@ Petition your state to allow computer science to count towards math or science h
 
 [<button>Add your support</button>](/promote)
 
-## Translate our Tutorials
-Volunteers have translated our tutorials in over 34 languages. Help us continue to expand our tutorials for students around the world!
+## Translate our tutorials
+Volunteers have translated our tutorials in over 40 languages. Help us continue to expand our tutorials for students around the world!
 
 [<button>Translate tutorials</button>](/translate)
 
@@ -32,9 +39,9 @@ Volunteers have translated our tutorials in over 34 languages. Help us continue 
 Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too. 
 
 <br/>
-![Code.org Cap](/images//fit-160/swag7.jpg)
-![Code.org T-shirt](/images//fit-160/swag10.jpg)
-![Code.org Stickers](/images//fit-160/swag8.jpg)
+![Code.org cap](/images//fit-160/swag7.jpg)
+![Code.org t-shirt](/images//fit-160/swag10.jpg)
+![Code.org stickers](/images//fit-160/swag8.jpg)
 
 [<button>Shop</button>](/shop)
 

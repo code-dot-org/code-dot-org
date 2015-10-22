@@ -11,7 +11,7 @@ goog.provide('Blockly.SvgTextButton');
  */
 Blockly.SvgTextButton = function (parent, text, onMouseDown) {
   var button = Blockly.createSvgElement('g', {
-    'id': 'addExampleButton',
+    'class': 'svgTextButton',
     'filter': 'url(#blocklyTrashcanShadowFilter)'
   }, parent);
   var padding = 7;
@@ -47,11 +47,18 @@ Blockly.SvgTextButton = function (parent, text, onMouseDown) {
  * @return {Number} y offset to continue rendering at
  */
 Blockly.SvgTextButton.prototype.renderAt = function (xOffset, yOffset) {
-  var transformYPosition = yOffset - this.buttonRectYOffset;
-  this.svgGroup_.setAttribute('transform', 'translate(' + xOffset + ',' + transformYPosition + ')');
+  this.svgGroup_.setAttribute('transform', 'translate(' + xOffset + ','
+      + yOffset + ')');
   return yOffset + this.buttonRectHeight;
 };
 
 Blockly.SvgTextButton.prototype.setVisible = function (visible) {
   goog.style.setElementShown(this.svgGroup_, visible);
+};
+
+/**
+ * @returns {number} width of the button
+ */
+Blockly.SvgTextButton.prototype.getButtonWidth = function () {
+  return parseInt(this.buttonRect.getAttribute('width'), 10);
 };

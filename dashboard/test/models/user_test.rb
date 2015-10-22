@@ -571,7 +571,7 @@ class UserTest < ActiveSupport::TestCase
 
     old_password = user.encrypted_password
 
-    user.reset_password!('goodpassword', 'goodpassword')
+    user.reset_password('goodpassword', 'goodpassword')
 
     # changed password
     assert user.reload.encrypted_password != old_password
@@ -856,13 +856,12 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'captain56', UserHelpers.generate_username(User, "Captain")
 
     assert_equal "d_andre_means", UserHelpers.generate_username(User, "D'Andre Means")
-    assert_equal "coder", UserHelpers.generate_username(User, '樊瑞')
 
     create_user_with_username 'coder'
     create_user_with_username 'coder1'
     create_user_with_username 'coder99'
     create_user_with_username 'coder556'
-    assert_equal "coder557", UserHelpers.generate_username(User, '樊瑞')
+    assert_equal "coder5561", UserHelpers.generate_username(User, 'coder556')
 
     # short names
     assert_equal "coder_a", UserHelpers.generate_username(User, 'a')
@@ -872,11 +871,15 @@ class UserTest < ActiveSupport::TestCase
 
     # parens
     assert_equal "kermit_the_frog", UserHelpers.generate_username(User, "Kermit (the frog)")
+
+    # non-ascii names
+    assert /coder\d{1,10}/ =~ UserHelpers.generate_username(User, '樊瑞')
+    assert /coder\d{1,10}/ =~ UserHelpers.generate_username(User, 'فاطمة بنت أسد')
   end
 
   test 'generates usernames' do
-    names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', '樊瑞', 'فاطمة بنت أسد', 'this is a really long name blah blah blah blah blah blah']
-    expected_usernames = ['coder_a', 'coder_b', 'captain_picard', 'captain_picard1', 'captain_picard2', 'coder', 'coder1', 'this_is_a_really']
+    names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', 'this is a really long name blah blah blah blah blah blah']
+    expected_usernames = ['coder_a', 'coder_b', 'captain_picard', 'captain_picard1', 'captain_picard2', 'this_is_a_really']
 
     i = 0
     users = names.map do |name|
@@ -897,28 +900,6 @@ class UserTest < ActiveSupport::TestCase
     assert !user.confirmation_required?
     assert !user.confirmed_at
   end
-
-
-  test 'levels_from_script does not include userlevels from other scripts' do
-    user = create :user
-
-    script = Script.find(2) # original hoc script
-    shared_level = script.script_levels.first.level
-
-    assert shared_level.script_levels.count > 1
-
-    other_script = (shared_level.script_levels.collect(&:script) - [script]).first
-    assert other_script
-
-    other_script_user_level = UserLevel.create!(script_id: other_script.id, level_id: shared_level.id, user_id: user.id)
-    user_level = UserLevel.create!(script_id: script.id, level_id: shared_level.id, user_id: user.id)
-
-    lfs = user.levels_from_script(script)
-
-    assert_not_equal other_script_user_level, lfs.first.user_level
-    assert_equal user_level, lfs.first.user_level
-  end
-
 
   test 'student and teacher relationships' do
     student = create :student

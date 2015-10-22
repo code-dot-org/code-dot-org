@@ -1,3 +1,77 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                         :integer          not null, primary key
+#  email                      :string(255)      default(""), not null
+#  encrypted_password         :string(255)      default("")
+#  reset_password_token       :string(255)
+#  reset_password_sent_at     :datetime
+#  remember_created_at        :datetime
+#  sign_in_count              :integer          default(0)
+#  current_sign_in_at         :datetime
+#  last_sign_in_at            :datetime
+#  current_sign_in_ip         :string(255)
+#  last_sign_in_ip            :string(255)
+#  created_at                 :datetime
+#  updated_at                 :datetime
+#  username                   :string(255)
+#  provider                   :string(255)
+#  uid                        :string(255)
+#  admin                      :boolean
+#  gender                     :string(1)
+#  name                       :string(255)
+#  locale                     :string(10)       default("en-US"), not null
+#  birthday                   :date
+#  parent_email               :string(255)
+#  user_type                  :string(16)
+#  school                     :string(255)
+#  full_address               :string(1024)
+#  total_lines                :integer          default(0), not null
+#  prize_earned               :boolean          default(FALSE)
+#  prize_id                   :integer
+#  teacher_prize_earned       :boolean          default(FALSE)
+#  teacher_prize_id           :integer
+#  teacher_bonus_prize_earned :boolean          default(FALSE)
+#  teacher_bonus_prize_id     :integer
+#  confirmation_token         :string(255)
+#  confirmed_at               :datetime
+#  confirmation_sent_at       :datetime
+#  unconfirmed_email          :string(255)
+#  prize_teacher_id           :integer
+#  hint_access                :boolean
+#  secret_picture_id          :integer
+#  active                     :boolean          default(TRUE), not null
+#  hashed_email               :string(255)
+#  deleted_at                 :datetime
+#  secret_words               :string(255)
+#  properties                 :text(65535)
+#  invitation_token           :string(255)
+#  invitation_created_at      :datetime
+#  invitation_sent_at         :datetime
+#  invitation_accepted_at     :datetime
+#  invitation_limit           :integer
+#  invited_by_id              :integer
+#  invited_by_type            :string(255)
+#  invitations_count          :integer          default(0)
+#
+# Indexes
+#
+#  index_users_on_confirmation_token_and_deleted_at      (confirmation_token,deleted_at) UNIQUE
+#  index_users_on_email_and_deleted_at                   (email,deleted_at)
+#  index_users_on_hashed_email_and_deleted_at            (hashed_email,deleted_at)
+#  index_users_on_invitation_token                       (invitation_token) UNIQUE
+#  index_users_on_invitations_count                      (invitations_count)
+#  index_users_on_invited_by_id                          (invited_by_id)
+#  index_users_on_prize_id_and_deleted_at                (prize_id,deleted_at) UNIQUE
+#  index_users_on_provider_and_uid_and_deleted_at        (provider,uid,deleted_at) UNIQUE
+#  index_users_on_reset_password_token_and_deleted_at    (reset_password_token,deleted_at) UNIQUE
+#  index_users_on_teacher_bonus_prize_id_and_deleted_at  (teacher_bonus_prize_id,deleted_at) UNIQUE
+#  index_users_on_teacher_prize_id_and_deleted_at        (teacher_prize_id,deleted_at) UNIQUE
+#  index_users_on_unconfirmed_email_and_deleted_at       (unconfirmed_email,deleted_at)
+#  index_users_on_username_and_deleted_at                (username,deleted_at) UNIQUE
+#
+
 require 'digest/md5'
 require 'cdo/user_helpers'
 
@@ -25,6 +99,7 @@ class User < ActiveRecord::Base
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, on: :create
 
   has_many :permissions, class_name: 'UserPermission', dependent: :destroy
+  has_many :hint_view_requests
 
   # Teachers can be in multiple cohorts
   has_and_belongs_to_many :cohorts
@@ -253,7 +328,7 @@ class User < ActiveRecord::Base
       "#{raw_name['first']} #{raw_name['last']}".squish
     end
 
-    where(auth.slice(:provider, :uid)).first_or_create do |user|
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
@@ -341,19 +416,6 @@ class User < ActiveRecord::Base
   def user_level_for(script_level)
     user_levels.find_by(script_id: script_level.script_id,
                         level_id: script_level.level_id)
-  end
-
-  def levels_from_script(script, stage = nil)
-    ul_map = user_levels_by_level(script)
-    q = script.script_levels.includes(:level, :script, :stage).order(:position)
-
-    if stage
-      q = q.where(['stages.id = :stage_id', {stage_id: stage}]).references(:stage)
-    end
-
-    q.each do |sl|
-      sl.user_level = ul_map[sl.level_id]
-    end
   end
 
   def next_unpassed_progression_level(script)
@@ -668,8 +730,9 @@ SQL
     Script.all.each do |script|
       retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         user_script = UserScript.find_or_initialize_by(user_id: self.id, script_id: script.id)
-        levels_from_script(script).each do |sl|
-          ul = sl.user_level
+        ul_map = user_levels_by_level(script)
+        script.script_levels.each do |sl|
+          ul = ul_map[sl.level_id]
           next unless ul
           # is this the first level we started?
           user_script.started_at = ul.created_at if
