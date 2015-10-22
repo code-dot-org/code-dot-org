@@ -35,7 +35,7 @@ def main()
     RakeUtils.git_pull if count > 0
     count = [1, count].max
 
-    log = `git log --oneline -n #{count}`
+    log = `git log --pretty=format:"%h %s (%an)" -n #{count}`
     IO.write(deploy_dir('rebuild'), log)
 
     HipChat.log "https://github.com/code-dot-org/code-dot-org/commit/#{`git rev-parse HEAD`}", message_format: 'text', color: 'purple'
