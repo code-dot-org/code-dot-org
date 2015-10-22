@@ -3214,6 +3214,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.changeScore(cmd.opts);
       break;
+    case 'reduceScore':
+      studioApp.highlight(cmd.id);
+      Studio.reduceScore(cmd.opts);
+      break;
     case 'setScoreText':
       studioApp.highlight(cmd.id);
       Studio.setScoreText(cmd.opts);
@@ -3592,15 +3596,31 @@ Studio.changeScore = function (opts) {
     throw new TypeError("Incorrect parameter: " + opts.value);
   }
 
-  Studio.playerScore += Number(opts.value);
+  Studio.adjustScore(Number(opts.value));
+};
+
+Studio.reduceScore = function (opts) {
+
+  if (typeof opts.value !== 'number' &&
+      (typeof opts.value !== 'string' || isNaN(opts.value))) {
+    throw new TypeError("Incorrect parameter: " + opts.value);
+  }
+
+  Studio.adjustScore(-Number(opts.value));
+};
+
+Studio.adjustScore = function(value) {
+
+  Studio.playerScore += value;
   Studio.displayScore();
 
-  Studio.displayFloatingScore(Number(opts.value));
+  Studio.displayFloatingScore(value);
 
-  if (Studio.playerScore - Number(opts.value) < 1000 && Studio.playerScore >= 1000) {
+  if (Studio.playerScore - value < 1000 && Studio.playerScore >= 1000) {
     callHandler('whenScore1000');
   }
 };
+
 
 Studio.setScoreText = function (opts) {
   Studio.scoreText = opts.text;
@@ -7983,8 +8003,7 @@ levels.js_hoc2015_move_right = {
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],  
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000]],
 
-  'instructions': '"Collect the item!"',
-  'instructions2': 'Program BOTX to get to the item.  Add a second moveRight command and then hit Run.',
+  'instructions': '"We need that scrap metal. BOTX, can you get it?"',
   'ticksBeforeFaceSouth': 9,
   'timeoutFailureTick': 100,
   'timeoutAfterWhenRun': true,
@@ -8018,7 +8037,7 @@ levels.js_hoc2015_move_right = {
   ],
 };
 
-levels.js_hoc2015_move_two_items = {
+levels.js_hoc2015_move_right_down = {
   'editCode': true,
   'background': 'main',
   'codeFunctions': {
@@ -8038,7 +8057,7 @@ levels.js_hoc2015_move_two_items = {
   'slowJsExecutionFactor': 10,
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
-  'floating_score': true,
+  'floatingScore': true,
   'map': 
     [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
@@ -8048,8 +8067,7 @@ levels.js_hoc2015_move_two_items = {
      [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],   
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],  
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
-  'instructions': '"We need the items. Help me get them all!"',
-  'instructions2': 'Program BOTX to get to both items.',
+  'instructions': '"We need more scrap metal. Can you get all the metal on this planet?"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -8060,7 +8078,7 @@ levels.js_hoc2015_move_two_items = {
 };
 
 
-levels.js_hoc2015_move_item_destination = {
+levels.js_hoc2015_move_diagonal = {
   'editCode': true,
   'textModeAtStart': true,
   'background': 'main',
@@ -8081,7 +8099,7 @@ levels.js_hoc2015_move_item_destination = {
   'slowJsExecutionFactor': 10,
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
-  'floating_score': true,  
+  'floatingScore': true,  
   'map':
     [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000, 0x0000000],  
@@ -8092,8 +8110,7 @@ levels.js_hoc2015_move_item_destination = {
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000],   
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000]],
   'embed': 'false',
-  'instructions': '"Time to get more items."',
-  'instructions2': 'Try typing the commands to get the items. Don’t forget to end with ();',
+  'instructions': '"Watch out for the GUY!"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -8104,7 +8121,7 @@ levels.js_hoc2015_move_item_destination = {
 };
 
 
-levels.js_hoc2015_move_item_destination_2 = {
+levels.js_hoc2015_move_backtrack = {
   'editCode': true,
   'background': 'main',
   'codeFunctions': {
@@ -8134,8 +8151,7 @@ levels.js_hoc2015_move_item_destination_2 = {
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],   
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
-  'instructions': '"I see another item behind that obstacle. Can you get it too?"',
-  'instructions2': 'Program BOTX to get all the items.',
+  'instructions': '"Go quickly, BOTX."',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -8145,7 +8161,7 @@ levels.js_hoc2015_move_item_destination_2 = {
   }
 };
 
-levels.js_hoc2015_move_item_destination_3 = {
+levels.js_hoc2015_move_around = {
   'editCode': true,
   'background': 'main',
   'codeFunctions': {
@@ -8176,8 +8192,7 @@ levels.js_hoc2015_move_item_destination_3 = {
      [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
   'embed': 'false',
-  'instructions': '"There are more items to collect."',
-  'instructions2': 'Program BOTX to get all the items.',
+  'instructions': '"It\'s up to you, BOTX!"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -8188,7 +8203,7 @@ levels.js_hoc2015_move_item_destination_3 = {
 };
 
 
-levels.js_hoc2015_move_cross = {
+levels.js_hoc2015_move_finale = {
   'editCode': true,
   'background': 'main',
   'codeFunctions': {
@@ -8219,8 +8234,7 @@ levels.js_hoc2015_move_cross = {
      [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],  
      [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000]],
   'embed': 'false',
-  'instructions': '"More items to get!"',
-  'instructions2': 'Type or drag the blocks to get all the items.',
+  'instructions': '"We need 4 more pieces of metal. Can you find them?"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -8239,8 +8253,8 @@ levels.js_hoc2015_event_two_items = {
   'wallMap': 'blank',
   'softButtons': ['downButton', 'upButton'],
   'codeFunctions': {
-    'moveUp': null,
-    'moveDown': null,
+    'goUp': null,
+    'goDown': null,
 
     'whenUp': null,
     'whenDown': null
@@ -8270,7 +8284,7 @@ levels.js_hoc2015_event_two_items = {
   'pinWorkspaceToBottom': 'true',
   'embed': 'false',
   'instructions': '"BOT1, I need you to get a critical message to the GOALs."',
-  'instructions2': 'Make BOT1 move when you hit the arrow keys.',
+  'instructions2': 'Make BOT1 move when you use the arrow keys.',
   'timeoutFailureTick': 600,
   'showTimeoutRect': true,
   'goalOverride': {
@@ -8330,10 +8344,10 @@ levels.js_hoc2015_event_four_items = {
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'moveRight': null,
-    'moveLeft': null,
-    'moveUp': null,
-    'moveDown': null,
+    'goRight': null,
+    'goLeft': null,
+    'goUp': null,
+    'goDown': null,
 
     'whenLeft': null,
     'whenRight': null,
@@ -8341,12 +8355,6 @@ levels.js_hoc2015_event_four_items = {
     'whenDown': null
   },
   'startBlocks': [
-    'function whenLeft() {',
-    '  ',
-    '}',
-    'function whenRight() {',
-    '  ',
-    '}',
     'function whenUp() {',
     '  ',
     '}',
@@ -8401,7 +8409,7 @@ levels.js_hoc2015_event_four_items = {
 };
 
 
-levels.js_hoc2015_event_three_goals =
+levels.js_hoc2015_score =
 {
   'avatarList': ['bot1'],
   'editCode': true,
@@ -8412,13 +8420,14 @@ levels.js_hoc2015_event_three_goals =
     'whenTouchPilot': 'whenTouchGoal'
   },
   'codeFunctions': {
-    'endGame': null,
+    'playSound': null,
+    'addPoints': { params: ["100"] },
 
     'whenTouchPilot': null
   },
   'startBlocks': [
     'function whenTouchPilot() {',
-    '  ',
+    '  playSound("character1sound1");',
     '}',
     ].join('\n'),
   'sortDrawOrder': true,
@@ -8433,13 +8442,13 @@ levels.js_hoc2015_event_three_goals =
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
-    [1, 0, 0, 16, 0, 0, 0, 0],
+    [1, 0, 0, 16, 0, 0, 0, 1],
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0]],
-  'instructions': '"Reach the GOALs!"',
-  'instructions2': "On the last level, we ended the game for you. Now you're in charge: use the whenTouchPilot event to let BOT1 win the game when he reaches the pilot.",
+    [0, 0, 0, 1,  0, 0, 0, 0]],
+  'instructions': '"Reach the GOAL!"',
+  'instructions2': "Let's add points. Add 100 points when BOT1 gets the pilot.",
   'autoArrowSteer': true,
   'timeoutFailureTick': 600,
   'showTimeoutRect': true,
@@ -8482,62 +8491,6 @@ levels.js_hoc2015_event_three_goals =
 };
 
 
-levels.js_hoc2015_event_score_points = {
-  'editCode': true,
-  'background': 'forest',
-  'wallMap': 'horizontal',
-  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
-  'autohandlerOverrides': {
-    'whenTouchPilot': 'whenTouchGoal'
-  },
-  'codeFunctions': {
-    'endGame': null,
-    'addPoints': null,
-
-    'whenTouchPilot': null,
-    'whenScore1000': null
-  },
-  'startBlocks': [
-    'function whenTouchPilot() {',
-    '  ',
-    '}',
-    'function whenScore1000() {',
-    '  ',
-    '}',
-    ].join('\n'),
-  'sortDrawOrder': true,
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
-  'itemGridAlignedMovement': true,
-  'removeItemsWhenActorCollides': true,
-  'delayCompletion': 2000,
-  'floatingScore': true,
-  'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [1, 0, 0, 16, 0, 0, 0, 1], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 1,  0, 0, 0, 0]],
-  'embed': 'false',
-  'instructions': '"I’m counting on you, BOT1!"',
-  'instructions2': 'Change your score when you get a pilot. Can you make BOT1 win when he gets 1000 points?',
-  'autoArrowSteer': true,
-  'timeoutFailureTick': 600,
-  'showTimeoutRect': true,
-  'requiredForSuccess' : {
-    'winGame': true,
-    'scoreMinimum': 1000
-  },
-  'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
-  },
-};
-
 
 levels.js_hoc2015_win_lose = {
   'editCode': true,
@@ -8545,24 +8498,21 @@ levels.js_hoc2015_win_lose = {
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'endGame': null,
+    'playSound': null,
+    'addPoints': { params: ["100"] },
+    'removePoints': { params: ["100"] },
 
     'addCharacter': null,
     'whenTouchPilot': null,
     'whenTouchMan': null,
-    'playSound': null,
+    'whenTouchBird': null,
   },
   'startBlocks': [
-    'addCharacter("pilot");',
-    'addCharacter("man");',
-    'function whenTouchPilot() {',
-    '  playSound("character1sound5");',
-    '  ',
-    '}',
-    'function whenTouchMan() {',
-    '  playSound("character1sound6");',
-    '  ',
-    '}',   
+    'addCharacter("pilot");', // temporary until auto-characters
+    'addCharacter("pilot");', // temporary until auto-characters
+    'addCharacter("man");',   // temporary until auto-characters
+    'addCharacter("man");',   // temporary until auto-characters
+    'addCharacter("bird");',
     ''].join('\n'),
 
   'sortDrawOrder': true,
@@ -8571,7 +8521,7 @@ levels.js_hoc2015_win_lose = {
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
-  'floatingFcore': true,
+  'floatingScore': true,
   'map': [
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
@@ -8583,7 +8533,7 @@ levels.js_hoc2015_win_lose = {
     [0, 0, 0, 0,  0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"Watch out for the MAN."',
-  'instructions2': 'Make BOT1 lose the game if hits the MAN and win if he gets the pilot.',
+  'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN!',
   'autoArrowSteer': true,
   'timeoutFailureTick': 600,
   'showTimeoutRect': true,
@@ -8611,22 +8561,24 @@ levels.js_hoc2015_win_lose = {
   },
 };
 
+
 levels.js_hoc2015_add_characters = {
   'editCode': true,
   'background': 'forest',
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': null,
-
-    'whenGetAllCharacters': null,
-    'endGame': null,
+    'addCharacter': { params: ['"pig"'] },
+    'addPoints': { params: ["1000"] },
+    'removePoints': { params: ["1000"] },
     'playSound': null,
-    'whenTouchPig': null
+
+    'whenTouchPig': null,
   },
   'startBlocks': [
-    'playSound("alert1");',
+    'playSound("character1sound1");',
     'addCharacter("pig");',
+    '',
     'function whenTouchPig() {',
     '  playSound("item1sound1");',
     '  addPoints(1000);',
@@ -8678,32 +8630,28 @@ levels.js_hoc2015_add_characters = {
   }
 };
 
+
 levels.js_hoc2015_chain_characters = {
   'editCode': true,
   'background': 'ship',
-  'wallMap': 'horizontal',
+  'wallMap': 'grid',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
     'addCharacter': null,
-    'endGame': null,
+    'playSound': null,
+    'addPoints': null,
+    'removePoints': null,
 
-    'whenTouchRoo': null,
-    'whenGetAllCharacters': null,
-    'playSound': null
+    'whenTouchMouse': null,
   },
   'startBlocks': [
-    'addCharacter("roo");',
-    'addCharacter("roo");',
-    'function whenTouchRoo() {',
-    '  playSound("item3sound4");',
-    '  ',
-    '}',
+    'addCharacter("mouse");',
+    'playSound("character1sound3");',
+    '',
     'function whenTouchMouse() {',
-    '  playSound("character1sound8");',
-    '  ',
-    '}',
-    'function whenGetAllCharacters() {',
-    '  ',
+    '  playSound("item3sound4");',
+    '  addCharacter("mouse");',
+    '  addCharacter("mouse");',
     '}',
     ].join('\n'),
   'sortDrawOrder': true,
@@ -8715,8 +8663,8 @@ levels.js_hoc2015_chain_characters = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"It\'s up to you, BOT1!"',
-  'instructions2': 'When you touch each ROO, make two MICE appear.  Then collect them all.  Make sure you can win the game.',
+  'instructions': '"They\'re multiplying!"',
+  'instructions2': 'Add 100 points every time BOT1 gets a MOUSE. Can you get 800 points? ',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900,
   'showTimeoutRect': true,
@@ -8725,30 +8673,37 @@ levels.js_hoc2015_chain_characters = {
   }
 };
 
-levels.js_hoc2015_double_chain_characters = {
+levels.js_hoc2015_chain_characters_2 = {
   'editCode': true,
   'background': 'ship',
   'wallMap': 'horizontal',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': null,
-    'endGame': null,
+    'addCharacter': { params: ['"mouse"'] },
+    'addPoints': null,
+    'removePoints': null,
+    'playSound': null,
 
     'whenTouchRoo': null,
-    'whenTouchBird': null,
-    'whenGetAllCharacters': null
+    'whenTouchMouse': null
   },
   'startBlocks': [
     'addCharacter("roo");',
     'addCharacter("roo");',
+    '',
     'function whenTouchRoo() {',
+    '  playSound("character1sound2");',
+    '  addPoints(50);',
     '  addCharacter("bird");',
     '  addCharacter("bird");',
     '}',
+    '',
     'function whenTouchBird() {',
-    '  ',
+    '',
     '}',
-    'function whenGetAllCharacters() {',
+    'function whenTouchMouse() {',
+    '  playSound("character1sound3");',
+    '  addPoints(100);',
     '  ',
     '}',
     ].join('\n'),
@@ -8762,7 +8717,7 @@ levels.js_hoc2015_double_chain_characters = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"It\'s up to you, BOT1!"',
-  'instructions2': 'With this code, when you get a ROO, two BIRDs appear. Can you make two MICE appear when you get a BIRD? Collect the MICE.',
+  'instructions2': 'When you get a ROO, two BIRDs appear. Can you make two MICE appear when you get a BIRD? Then, get them all.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900,
   'showTimeoutRect': true,
@@ -8782,22 +8737,23 @@ levels.js_hoc2015_change_setting = {
     'setBotSpeed': { 'category': 'Commands' },
     'setMap': { 'category': 'Commands' },
     'playSound': { 'category': 'Commands' },
-    'endGame': { 'category': 'Commands' },
-
-    'whenScore1000': { 'category': 'Events' },
-
     'addCharacter': { 'category': 'Commands' },
     'addPoints': { 'category': 'Commands' },
-    'whenTouchCharacter': { 'category': 'Events' },
-    'whenGetAllCharacters': { 'category': 'Events' },
+    'removePoints': { 'category': 'Commands' },
+
+    'whenScore1000': { 'category': 'Events' },
+    'whenTouchPilot': { 'category': 'Events' },
   },
   'startBlocks': [
     'addCharacter("pilot");',
     'addCharacter("pilot");',
     'addCharacter("pilot");',
-    'function whenTouchCharacter() {',
-    '  setBackground("random");',
+    'playSound("character1sound4");',
+    'setBot("bot1");',
+    '',
+    'function whenTouchPilot() {',
     '  addPoints(400);',
+    '  setBackground("random");',
     '  ',
     '}',
     'function whenGetAllCharacters() {',
@@ -8815,7 +8771,7 @@ levels.js_hoc2015_change_setting = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"Time to visit another planet."',
-  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.  Then, play your game and get all the characters to win.',
+  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 600,
   'showTimeoutRect': true,
@@ -8860,6 +8816,7 @@ levels.js_hoc2015_event_free = {
     'moveNormal': { 'category': 'Commands' },
     'moveFast': { 'category': 'Commands' },
     'addPoints': { 'category': 'Commands' },
+    'removePoints': { 'category': 'Commands' },
 
     'whenTouchObstacle': { 'category': 'Events' },
     'whenTouchMan': { 'category': 'Events' },
@@ -8875,6 +8832,8 @@ levels.js_hoc2015_event_free = {
     'setBackground("forest");',
     'setMap("circle");',
     'setBot("bot1");',
+    'setBotSpeed("normal");',
+    'playSound("character1sound5");',
     ''].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
@@ -8917,7 +8876,7 @@ levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
   ],
 });
 
-levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_two_items,  {
+levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
   editCode: false,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
@@ -8927,7 +8886,7 @@ levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_two_items,  {
   ],
 });
 
-levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_item_destination,  {
+levels.hoc2015_blockly_3 = utils.extend(levels.js_move_diagonal,  {
   editCode: false,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
@@ -8937,7 +8896,7 @@ levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_item_destination,
   ],
 });
 
-levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_item_destination_2,  {
+levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_backtrack,  {
   editCode: false,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
@@ -8948,7 +8907,7 @@ levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_item_destination_
   ],
 });
 
-levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_item_destination_3,  {
+levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_around,  {
   editCode: false,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
@@ -8959,7 +8918,7 @@ levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_item_destination_
   ],
 });
 
-levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_cross,  {
+levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_finale,  {
   editCode: false,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
@@ -8992,23 +8951,23 @@ levels.hoc2015_blockly_8 = utils.extend(levels.js_hoc2015_event_four_items,  {
   ],
 });
 
-levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_event_three_goals,  {
+levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   editCode: false,
 });
 
-levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_event_score_points,  {
+levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
   editCode: false,
 });
 
-levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_win_lose,  {
+levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
   editCode: false,
 });
 
-levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_add_characters,  {
+levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
   editCode: false,
 });
 
-levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters,  {
+levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  {
   editCode: false,
 });
 
@@ -9054,6 +9013,10 @@ module.exports.blocks = [
   {func: 'moveLeft', parent: api, category: '', },
   {func: 'moveUp', parent: api, category: '', },
   {func: 'moveDown', parent: api, category: '', },
+  {func: 'goRight', parent: api, category: '', },
+  {func: 'goLeft', parent: api, category: '', },
+  {func: 'goUp', parent: api, category: '', },
+  {func: 'goDown', parent: api, category: '', },
   {func: 'playSound', parent: api, category: '', params: ['"character1sound1"'],
     dropdown: { 0: [
       '"random"',
@@ -9066,7 +9029,8 @@ module.exports.blocks = [
       ] } },
 
   {func: 'endGame', parent: api, category: '', params: ['"win"'], dropdown: { 0: ['"win"', '"lose"' ] } },
-  {func: 'addPoints', parent: api, category: '', params: ["250"] },
+  {func: 'addPoints', parent: api, category: '', params: ["100"] },
+  {func: 'removePoints', parent: api, category: '', params: ["100"] },
   {func: 'changeScore', parent: api, category: '', params: ["1"] },
   {func: 'addCharacter', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'setToChase', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
@@ -11813,10 +11777,33 @@ exports.moveDown = function() {
   Studio.queueCmd(null, 'moveDown');
 };
 
+// goUp/Down/LeftRight are wrappers for moveUp/Down/Left/Right (used by hoc2015)
+exports.goRight = function() {
+  Studio.queueCmd(null, 'moveRight');
+};
+
+exports.goLeft = function() {
+  Studio.queueCmd(null, 'moveLeft');
+};
+
+exports.goUp = function() {
+  Studio.queueCmd(null, 'moveUp');
+};
+
+exports.goDown = function() {
+  Studio.queueCmd(null, 'moveDown');
+};
+
 // addPoints is a wrapper for changeScore (used by hoc2015)
 
 exports.addPoints = function(value) {
   Studio.queueCmd(null, 'changeScore', {'value': value});
+};
+
+// removePoints is a wrapper for reduceScore (used by hoc2015)
+
+exports.removePoints = function(value) {
+  Studio.queueCmd(null, 'reduceScore', {'value': value});
 };
 
 exports.changeScore = function(value) {
