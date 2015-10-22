@@ -177,11 +177,8 @@ exports.FadeActor = function (fadeDuration) {
   this.startFadeTime_ = null;
 
   /** @private {number} */
-  this.fadeDurationMs_ = utils.valueOr(fadeDuration, exports.FadeActor.DEFAULT_DURATION);
+  this.fadeDurationMs_ = utils.valueOr(fadeDuration, constants.DEFAULT_ACTOR_FADE_TIME);
 };
-
-/** @const {number} */
-exports.FadeActor.DEFAULT_DURATION = 1000;
 
 /**
  * Apply a single frame of change to the given sprite.
@@ -221,26 +218,17 @@ exports.ShakeActor = function (shakeDuration) {
 
   /** @private {number} How long to shake, in milliseconds */
   this.shakeDurationMs_ = utils.valueOr(shakeDuration,
-      exports.ShakeActor.DEFAULT_DURATION);
+      constants.SHAKE_DEFAULT_DURATION);
 
   /** @private {number} How many complete back-and-forth shakes occur */
-  this.cycleCount_ = exports.ShakeActor.DEFAULT_CYCLES;
+  this.cycleCount_ = constants.SHAKE_DEFAULT_CYCLES;
 
   /** @private {number} max shake distance from real position */
-  this.amplitude_ = exports.ShakeActor.DEFAULT_DISTANCE;
+  this.amplitude_ = constants.SHAKE_DEFAULT_DISTANCE;
 
   /** @private {number} precalculated angular frequency of sine wave equation. */
   this.angularFrequency_ = 2 * Math.PI * (this.cycleCount_ / this.shakeDurationMs_);
 };
-
-/** @const {number} */
-exports.ShakeActor.DEFAULT_DURATION = 1000;
-
-/** @const {number} */
-exports.ShakeActor.DEFAULT_CYCLES = 8;
-
-/** @const {number} */
-exports.ShakeActor.DEFAULT_DISTANCE = 5;
 
 /**
  * Apply a single frame of change to the given sprite.
