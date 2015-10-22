@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'mocha/api'
 require 'test_helper'
+require 'cdo/activity_constants'
 
 class ActivitiesControllerTest < ActionController::TestCase
   include Devise::TestHelpers
@@ -855,4 +856,31 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'script_progress returns level progress' do
+    level_id = @script_level.level.id
+    ul1 = UserLevel.create(
+      user_id: @user.id,
+      level_id: level_id,
+      attempts: 2,
+      best_result: 4,
+      script: @script,
+    )
+
+    ul2 = UserLevel.create(
+      user_id: @user.id,
+      level_id: @script_level_next.level.id,
+      attempts: 2,
+      best_result: ActivityConstants::BEST_PASS_RESULT,
+      script: @script,
+    )
+
+    post :script_progress, { script_id: @script.id }
+    assert_response :success
+
+    response = JSON.parse(@response.body)
+
+    assert_equal response['script_id'], @script.id
+    assert_equal response['levels'][@script_level.level.id.to_s], ul1.best_result
+    assert_equal response['levels'][@script_level_next.level.id.to_s], ul2.best_result
+  end
 end
