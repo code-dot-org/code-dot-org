@@ -87,7 +87,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 ## Common setup
 
 1. `git clone https://github.com/code-dot-org/code-dot-org.git`
-1. `sudo gem install bundler -v 1.10.4`
+1. `sudo gem install bundler -v 1.10.6`
 1. `rbenv rehash` (if using rbenv)
 1. `cd code-dot-org/aws`
 1. `bundle install`
