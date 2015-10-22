@@ -244,8 +244,36 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   }
 
   if (continueButton) {
+
+    feedback.appendChild(this.getPuzzleRatingButtons_());
+
+    var buttons = feedback.querySelectorAll('.puzzle-rating-btn');
+    var buttonClickHandler = function () {
+      for (var _ = 0, button; (button = buttons[_]); _++) {
+        if (button != this) {
+          button.classList.remove('enabled');
+        }
+      }
+      this.classList.toggle('enabled');
+    };
+    for (var _ = 0, button; (button = buttons[_]); _++) {
+      dom.addClickTouchEvent(button, buttonClickHandler);
+    }
+
     dom.addClickTouchEvent(continueButton, function() {
       feedbackDialog.hide();
+      var selectedRating = feedback.querySelector('.puzzle-rating-btn.enabled');
+      if (options.response.submit_puzzle_rating_url && selectedRating) {
+        $.ajax({
+          url: options.response.submit_puzzle_rating_url,
+          type: 'POST',
+          data: {
+            script_id: options.response.script_id,
+            level_id: options.response.level_id,
+            rating: selectedRating.getAttribute('value')
+          },
+        });
+      }
       // onContinue will fire already if there was only a continue button
       if (!onlyContinue) {
         options.onContinue();
@@ -326,6 +354,13 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
     return codeLines;
   }
   return this.getCountableBlocks_().length;
+};
+
+FeedbackUtils.prototype.getPuzzleRatingButtons_ = function() {
+  var buttons = document.createElement('div');
+  buttons.id = 'puzzleRatingButtons';
+  buttons.innerHTML = require('./templates/puzzleRating.html.ejs')();
+  return buttons;
 };
 
 /**
