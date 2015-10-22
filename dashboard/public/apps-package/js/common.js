@@ -31418,6 +31418,7 @@ var dom = require('../dom');
  */
 var DropletBlockTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.showExamplesLink = dropletTooltipManager.dropletConfig.showExamplesLink;
   this.tooltipsEnabled = true;
 };
 
@@ -31471,6 +31472,9 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = f
       content: this.getTooltipHTML(funcName),
       offsetX: tooltipOffsetX,
       functionReady: function (_, contents) {
+        if (!this.showExamplesLink) {
+          return;
+        }
         var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
         // Important this binds to mouseDown/touchDown rather than click, needs to
         // happen before `blur` which triggers the ace editor completer popup
@@ -31508,7 +31512,7 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
+    showExamplesLink: this.showExamplesLink
   });
 };
 
@@ -31685,6 +31689,7 @@ var dom = require('../dom');
  */
 var DropletAutocompletePopupTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.showExamplesLink = dropletTooltipManager.dropletConfig.showExamplesLink;
   this.tooltipsEnabled = true;
 };
 
@@ -31775,6 +31780,9 @@ DropletAutocompletePopupTooltipManager.prototype.attachTooltipForFunction = func
   var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
     content: tooltipDOM,
     functionReady: function (_, contents) {
+      if (!this.showExamplesLink) {
+        return;
+      }
       var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
       // Important this binds to mouseDown/touchDown rather than click, needs to
       // happen before `blur` which triggers the ace editor completer popup
@@ -31805,7 +31813,7 @@ DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (func
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
+    showExamplesLink: this.showExamplesLink
   });
   return dropletFunctionTooltipMarkup;
 };
@@ -31837,7 +31845,7 @@ with (locals || {}) { (function(){
      * TODO(bjordan): would be nice to split the following line up, can't figure
      * out how to do so without inserting extraneous spaces between parameters.
      */
-   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('', (8,  parameters[i].name), '');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (functionShortDescription) { ; buf.push('<div>', escape((10,  functionShortDescription )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="javascript:void(0);">See examples</a>\n</div>\n'); })();
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('', (8,  parameters[i].name), '');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (functionShortDescription) { ; buf.push('<div>', escape((10,  functionShortDescription )), '</div>');10; } ; buf.push('\n');11; if (showExamplesLink) { ; buf.push('\n  <div class="tooltip-example-link">\n    <a href="javascript:void(0);">See examples</a>\n  </div>\n');15; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -31864,6 +31872,7 @@ var dom = require('../dom');
  */
 var DropletAutocompleteParameterTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.showExamplesLink = dropletTooltipManager.dropletConfig.showExamplesLink;
   this.showParamDropdowns = dropletTooltipManager.dropletConfig.showParamDropdowns;
   this.tooltipConfig = {
     interactive: true,
@@ -31988,11 +31997,13 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
   cursorTooltip.tooltipster('content', this.getTooltipHTML(tooltipInfo, currentParameterIndex));
   cursorTooltip.tooltipster('show');
 
-  var seeExamplesLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-example-link > a')[0];
-  dom.addClickTouchEvent(seeExamplesLink, function (event) {
-    this.dropletTooltipManager.showDocFor(functionName);
-    event.stopPropagation();
-  }.bind(this));
+  if (this.showExamplesLink) {
+    var seeExamplesLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-example-link > a')[0];
+    dom.addClickTouchEvent(seeExamplesLink, function (event) {
+      this.dropletTooltipManager.showDocFor(functionName);
+      event.stopPropagation();
+    }.bind(this));
+  }
 
   var chooseAsset = tooltipInfo.parameterInfos[currentParameterIndex].assetTooltip;
   if (chooseAsset) {
@@ -32025,7 +32036,7 @@ DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL(),
+    showExamplesLink : this.showExamplesLink,
     currentParameterIndex: currentParameterIndex
   });
 };
@@ -32333,7 +32344,7 @@ with (locals || {}) { (function(){
      * TODO(bjordan): would be nice to split the following line up, can't figure
      * out how to do so without inserting extraneous spaces between parameters.
      */
-   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n');11; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].assetTooltip) { ; buf.push('\n  <div class="tooltip-choose-link">\n    <a href="javascript:void(0);">Choose...</a>\n  </div>\n');15; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="javascript:void(0);">See examples</a>\n</div>\n'); })();
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n');11; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].assetTooltip) { ; buf.push('\n  <div class="tooltip-choose-link">\n    <a href="javascript:void(0);">Choose...</a>\n  </div>\n');15; } ; buf.push('\n');16; if (showExamplesLink) { ; buf.push('\n  <div class="tooltip-example-link">\n    <a href="javascript:void(0);">See examples</a>\n  </div>\n');20; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };

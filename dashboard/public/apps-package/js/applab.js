@@ -2593,6 +2593,13 @@ module.exports.categories = {
   },
 };
 
+/*
+ * Set the showExamplesLink config value so that the droplet tooltips will show
+ * an 'Examples' link that opens documentation in a lightbox:
+ */
+module.exports.showExamplesLink = true;
+
+
 
 },{"../applab/assetManagement/show.js":"/home/ubuntu/staging/apps/build/js/applab/assetManagement/show.js","./ChartApi":"/home/ubuntu/staging/apps/build/js/applab/ChartApi.js","./api":"/home/ubuntu/staging/apps/build/js/applab/api.js","./consoleApi":"/home/ubuntu/staging/apps/build/js/applab/consoleApi.js","./constants":"/home/ubuntu/staging/apps/build/js/applab/constants.js","./designElements/elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js","./dontMarshalApi":"/home/ubuntu/staging/apps/build/js/applab/dontMarshalApi.js"}],"/home/ubuntu/staging/apps/build/js/applab/consoleApi.js":[function(require,module,exports){
 var codegen = require('../codegen');
