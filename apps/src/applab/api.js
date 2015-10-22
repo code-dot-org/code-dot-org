@@ -68,6 +68,14 @@ exports.setPosition = function (elementId, left, top, width, height) {
                            'height': height });
 };
 
+exports.setSize = function (elementId, width, height) {
+  return Applab.executeCmd(null,
+                          'setSize',
+                          {'elementId': elementId,
+                           'width': width,
+                           'height': height });
+};
+
 exports.getXPosition = function (elementId) {
   return Applab.executeCmd(null,
                           'getXPosition',
@@ -529,4 +537,15 @@ exports.removeItem = function (array, index) {
                           'removeItem',
                           {'array': array,
                            'index': index });
+};
+
+exports.drawChartFromRecords = function (chartId, chartType, tableName, columns, options, callback) {
+  return Applab.executeCmd(null,
+                          'drawChartFromRecords',
+                          {'chartId': chartId,
+                           'chartType': chartType,
+                           'tableName': tableName,
+                           'columns': columns,
+                           'options': options,
+                           'callback': callback });
 };

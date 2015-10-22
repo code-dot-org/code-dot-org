@@ -10,7 +10,7 @@ ECS Monthly Meetings take place on the first Tuesday of every month at 7:00 pm C
 
 |Monthly Meeting | Date & Time | Registration Link|
 |------------ | ------------- | ------------|
-|[September](https://www.eventbrite.com/e/ecs-monthly-meeting-september-tickets-17789364468) | September 1, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/ecs-monthly-meeting-september-tickets-17789364468)|
+|[September](https://www.eventbrite.com/e/ecs-monthly-meeting-september-tickets-17789364468) | September 1, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>View Recording</button>](https://youtu.be/Bph8a7GZaQg)|
 |[October](https://www.eventbrite.com/e/ecs-monthly-meeting-october-tickets-17789153838) | October 6, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/ecs-monthly-meeting-october-tickets-17789153838)|
 |[November](https://www.eventbrite.com/e/ecs-monthly-meeting-november-tickets-17856984722) | November 3, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/ecs-monthly-meeting-november-tickets-17856984722)|
 |[December](https://www.eventbrite.com/e/ecs-monthly-meeting-december-tickets-17857003779) | December 1, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/ecs-monthly-meeting-december-tickets-17857003779)|

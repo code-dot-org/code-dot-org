@@ -1,4 +1,4 @@
-var React = require('react');
+/* global dashboard */
 var VersionRow = require('./VersionRow.jsx');
 var sourcesApi = require('../clientApi').sources;
 
@@ -6,7 +6,9 @@ var sourcesApi = require('../clientApi').sources;
  * A component for viewing project version history.
  */
 module.exports = React.createClass({
-  propTypes: {},
+  propTypes: {
+    handleClearPuzzle: React.PropTypes.func.isRequired
+  },
 
   /**
    * @returns {{statusMessage: string, versions: (null|{
@@ -18,7 +20,9 @@ module.exports = React.createClass({
   getInitialState: function () {
     return {
       versions: null,
-      statusMessage: ''
+      statusMessage: '',
+      showSpinner: true,
+      confirmingClearPuzzle: false
     };
   },
 
@@ -33,7 +37,7 @@ module.exports = React.createClass({
    * @param xhr
    */
   onVersionListReceived: function (xhr) {
-    this.setState({versions: JSON.parse(xhr.responseText)});
+    this.setState({versions: JSON.parse(xhr.responseText), showSpinner: false});
   },
 
   /**
@@ -59,16 +63,39 @@ module.exports = React.createClass({
     sourcesApi.ajax('PUT', 'main.json/restore?version=' + versionId, this.onRestoreSuccess, this.onAjaxFailure);
 
     // Show the spinner.
-    this.setState({versions: null});
+    this.setState({showSpinner: true});
+  },
+
+  onConfirmClearPuzzle: function () {
+    this.setState({confirmingClearPuzzle: true});
+  },
+
+  onCancelClearPuzzle: function () {
+    this.setState({confirmingClearPuzzle: false});
+  },
+
+  onClearPuzzle: function () {
+    this.setState({showSpinner: true});
+    this.props.handleClearPuzzle();
+    dashboard.project.save(function () {
+      location.reload();
+    }, true);
   },
 
   render: function () {
-    var versionList;
-    // If `this.state.versions` is null, the versions are still loading.
-    if (this.state.versions === null) {
-      versionList = (
-        <div style={{margin: '1em 0', textAlign: 'center'}}>
-          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}}></i>
+    var body;
+    if (this.state.showSpinner) {
+      body = (
+          <div style={{margin: '1em 0', textAlign: 'center'}}>
+            <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}}></i>
+          </div>
+      );
+    } else if (this.state.confirmingClearPuzzle) {
+      body = (
+        <div>
+          <p>Are you sure you want to clear all progress for this level&#63;</p>
+          <button id="confirm-button" style={{float: 'right'}} onClick={this.onClearPuzzle}>Start Over</button>
+          <button id="again-button" onClick={this.onCancelClearPuzzle}>Cancel</button>
         </div>
       );
     } else {
@@ -79,12 +106,22 @@ module.exports = React.createClass({
           onChoose={this.onChooseVersion.bind(this, version.versionId)} />;
       }.bind(this));
 
-      versionList = (
+      body = (
         <div>
           <div style={{maxHeight: '330px', overflowX: 'scroll', margin: '1em 0'}}>
             <table style={{width: '100%'}}>
               <tbody>
-              {rows}
+                {rows}
+                <tr>
+                  <td>
+                    <p style={{margin: 0}}>Initial version</p>
+                  </td>
+                  <td width="250" style={{textAlign: 'right'}}>
+                  <button className="btn-danger" onClick={this.onConfirmClearPuzzle} style={{float: 'right'}}>
+                    Delete Progress
+                  </button>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -95,7 +132,7 @@ module.exports = React.createClass({
     return (
       <div className="modal-content" style={{margin: 0}}>
         <p className="dialog-title">Version History</p>
-        {versionList}
+        {body}
         {this.state.statusMessage}
       </div>
     );

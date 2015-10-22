@@ -1,3 +1,4 @@
+
 require 'test_helper'
 
 class ScriptsControllerTest < ActionController::TestCase
@@ -55,6 +56,44 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should not get show of ECSPD if not signed in" do
     get :show, id: 'ECSPD'
     assert_redirected_to_sign_in
+  end
+
+  test "should not show link to lesson plans if logged in as a student" do
+    sign_in create(:student)
+
+    get :show, id: 'cspunit1'
+    assert_response :success
+    assert_select 'a', text: 'Lesson plans', count: 0
+  end
+
+  test "should show link to lesson plans if logged in as a teacher" do
+    sign_in create(:teacher)
+
+    get :show, id: 'cspunit1'
+    assert_response :success
+    assert_select 'a', text: 'Lesson plans'
+  end
+
+  test "should not show link to Overview of Courses 1, 2, and 3 if logged in as a student" do
+    sign_in create(:student)
+
+    get :show, id: 'course1'
+    assert_response :success
+    assert_select 'a', text: 'Overview of Courses 1, 2, and 3', count: 0
+  end
+
+  test "should not show link to Overview of Courses 1, 2, and 3 if not logged in" do
+    get :show, id: 'course1'
+    assert_response :success
+    assert_select 'a', text: 'Overview of Courses 1, 2, and 3', count: 0
+  end
+
+  test "should show link to Overview of Courses 1, 2, and 3 if logged in as a teacher" do
+    sign_in create(:teacher)
+
+    get :show, id: 'course1'
+    assert_response :success
+    assert_select 'a', text: 'Overview of Courses 1, 2, and 3'
   end
 
   test "should redirect to /s/course1" do

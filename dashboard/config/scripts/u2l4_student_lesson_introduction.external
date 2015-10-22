@@ -1,5 +1,5 @@
 name 'U2L4 Student Lesson Introduction'
-title 'U2L04 Routers and Addresses'
+title 'U2L04 Routers and Redundancy'
 
 css 'unplugged'
 skip_dialog 'true'
@@ -26,7 +26,7 @@ Routing on the Internet also mirrors routing in the postal network in that there
 
 # Resources
 
-* Activity: <a href="https://docs.google.com/document/d/1LXVhisxGinMbQkur59R8AguItQMxB1w8x5CLnQuPAng/edit?usp=sharing” target="_blank"> Routers and Addresses </a>
+* Activity: <a href="https://docs.google.com/document/d/1LXVhisxGinMbQkur59R8AguItQMxB1w8x5CLnQuPAng/edit?usp=sharing” target="_blank"> Routers and Redundancy</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

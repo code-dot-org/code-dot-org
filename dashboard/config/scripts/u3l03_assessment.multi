@@ -1,24 +1,19 @@
 name 'U3L03 Assessment'
-title 'Creating Procedures Part 1: Assessment'
-
-question 'Which of the following is NOT an advantage of using well-designed procedures and functions?'
-wrong 'They create shorter algorithms that sound like spoken language.'
-
-
-wrong 'There are fewer lines in the program to debug.'
-
-
-wrong 'The “spoken-language style” makes errors more logically recognizable.'
-
-
-right 'They reduce the level of program abstraction.' 
-
-
-wrong 'It is easier to divide the work among several programmers.'
-
-
-wrong 'Logical names make the program code more intuitive/understandable.'
-
-markdown <<MARKDOWN
-
-MARKDOWN
+encrypted 'u88ynfynPoAKY1RIicocoLb8tidnpuDT/QJhsk3sjlaBtnfGFByRxanFjmRt
+1q50dR4VZ3KP6DHH9za0LsvzLEERBiMsDbqY+ZxG52bOqNpcWrQbkL9GW7FF
+Gei3O28b8fl9mhtBqUfPov4zp2OcDOIEM8nJ5rWs6c3yelPPMSo2+LUiHFbZ
+3MR+eT5EeYayP2zFznl51S7etrA26l6d3x28cyEINesEvaKVTjkliD1CGwxD
+JHCZIqio5V7YlxxClMHsMQNRyxqMXLQK5qWJQ687FvZhtoA/h2wm7Fpl8ubQ
+G9BJl2AbdwR51+nsGalZgUMgnE7/dlw9yGougBq0iPYSPv9pg9f0NygqwqKh
+fN2wLX8WNVf7KXdnbL23HBqX29UVdiR907IBbMUe92OjYXZWdLn9t7QCwjhD
+O6BdHCVgoonKqeiq6EfqUYqm6NZQ9ylk3gopPupVs/Bw7mBT+xJacI8ahzBV
+rfqACa8I/vZTApqqRG5fS0Gn2q70Ex0+zSrZh3XyeDKguFtjQbpWTpZj7kFO
+ud8KfMv+ZVRaMlOZgncxLKW2f/qpevA9SZJpRNYt7uExrjF8ANX+yDl5jmdi
+lF4tEEEWNPUB4sHrW08QksW+LbDi/JuyPqpn4fXJhSBYIqhyDfVUI0ODEyoi
+ljWUeqm3g0CzjVrrQYV2kfBNFK7eicEEj/BWQEI4Q7Wz92KKd7WP0VwJfxoA
+4E9jkvn7qhsj8QiiGq2aWgGJ3HbJwoSx0PYEQ+3m4WcmdiRUUJk1X/rrg99q
+mg/UIm5KlDdmIcmmCd0djLUEZ41aM/tW/JJI35nltnL8IUMOIGRLHTOisIyW
+pBEtpLEjbPlsJtNubsWqMVUd9rUDSukoC8rQiNF57pz357s+ICpqDORV7gN6
+tAvdzdxbd/sPvTW+oQJb/xOB4PKOyu4quGfJIsicILp1hSrIyFcrsgY7ohMd
+sK296AeHycfFIwoIflPqIRSwfwPNYzJIAbDLvXE1clQ=
+'

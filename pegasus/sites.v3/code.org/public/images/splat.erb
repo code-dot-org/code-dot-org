@@ -20,6 +20,7 @@
   end
 
   pass unless path = resolve_template('public/images', settings.image_extnames, File.join(dirname, basename))
+  last_modified(File.mtime(path))
 
   img = load_manipulated_image(path, mode, width, height)
   img.format = extname[1..-1]

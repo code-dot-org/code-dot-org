@@ -2,7 +2,7 @@ code_s!,four_letter_code_s,name_s,english_name_s
 ar,ar-SA,العربية,Arabic
 az,az-AZ,Azərbaycan dili,Azerbaijani
 bg,bg-BG,български,Bulgarian
-bs,bs-BA,Босански,Bosnian
+bs,bs-BA,Bosanski,Bosnian
 ca,ca-ES,Català,Catalan
 cs,cs-CZ,Čeština,Czech
 da,da-DK,Dansk,Danish
@@ -20,6 +20,7 @@ id,id-ID,Bahasa Indonesia,Indonesian
 is,is-IS,Íslenska,Icelandic
 it,it-IT,Italiano,Italian
 ja,ja-JP,日本語,Japanese
+ka,ka-GE,ქართული,Georgian
 ko,ko-KR,한국어,Korean
 lt,lt-LT,Lietuvių,Lithuanian
 lv,lv-LV,Latviešu,Latvian

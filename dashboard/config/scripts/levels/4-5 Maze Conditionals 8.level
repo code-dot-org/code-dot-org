@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "The \"If-else\" block checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block.",
+    "instructions": "The \"if/else\" block checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -24,6 +24,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "video_key": "C3_bee_conditionals",
+    "examples_required": "false",
     "maze_data": null
   }
 }]]></config>

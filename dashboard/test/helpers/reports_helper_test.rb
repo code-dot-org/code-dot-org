@@ -1,10 +1,12 @@
 require 'test_helper'
 
 class ReportsHelperTest < ActionView::TestCase
+  include UsersHelper
 
   setup do
     @user = create(:user)
     @level = create(:level)
+    client_state.reset
   end
 
   test "level_passed should return true if userlevel best result is above the minimum pass result" do

@@ -14,13 +14,12 @@ nav: pd2_nav
 
 Milestone complete! 
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study  (5 days in-person & ~8 hours online)###
 
-#### In-person workshop####
+
 Milestone Complete! 
 
-#### Online Study ####
- <b><i>Deadline:</b> Phase 2 Online is due September 7th.</i> 
+
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -44,7 +43,7 @@ Breakfast and lunch will be served.
 **Location**
 
 Applications and Research Laboratory (ARL)<br/>
-Room A8<br/>
+Room B37<br/>
 10920 Clarksville Pike<br/>
 Ellicott City, MD 21042<br/><br/>
 

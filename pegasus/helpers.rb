@@ -1,4 +1,5 @@
 require 'cdo/aws/s3'
+require_relative '../shared/middleware/helpers/storage_id'
 
 def avatar_image(name,width=320)
   basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
@@ -9,20 +10,12 @@ end
 
 def authentication_required!(url=request.url)
   dont_cache
-  return if dashboard_user
+  return if dashboard_user_helper
   redirect((request.scheme || 'http') + ':' + CDO.studio_url("/users/sign_in?return_to=#{url}"), 302)
 end
 
 def dont_cache()
   cache_control(:private, :must_revalidate, max_age: 0)
-end
-
-def dashboard_user()
-  @dashboard_user ||= DASHBOARD_DB[:users][id: dashboard_user_id]
-end
-
-def dashboard_user_id()
-  request.user_id
 end
 
 def canonical_hostname(domain)
@@ -38,17 +31,8 @@ def form_error!(e)
 end
 
 def have_permission?(permission)
-  return false unless user = dashboard_user
-
-  permission = permission.to_s.strip.downcase
-  case permission
-  when 'admin'
-    return !!user[:admin]
-  when 'teacher'
-    return user[:user_type] == 'teacher'
-  end
-
-  !!DASHBOARD_DB[:user_permissions].where(user_id: user[:id]).and(permission: permission).first
+  return false unless dashboard_user_helper
+  dashboard_user_helper.has_permission?(permission)
 end
 
 def no_content!()

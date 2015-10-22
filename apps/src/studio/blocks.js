@@ -305,6 +305,36 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.studio_whenSpriteClicked = generator.studio_eventHandlerPrologue;
 
+  blockly.Blocks.studio_whenTouchItem = {
+    // Block to handle event when sprite touches item.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.whenTouchItem());
+      this.setPreviousStatement(false);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenTouchItemTooltip());
+    }
+  };
+
+  generator.studio_whenTouchItem = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenTouchWall = {
+    // Block to handle event when sprite touches wall.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.whenTouchWall());
+      this.setPreviousStatement(false);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenTouchWallTooltip());
+    }
+  };
+
+  generator.studio_whenTouchWall = generator.studio_eventHandlerPrologue;
+
   blockly.Blocks.studio_whenSpriteCollided = {
     // Block to handle event when sprite collides with another sprite.
     helpUrl: '',
@@ -423,39 +453,24 @@ exports.install = function(blockly, blockInstallOptions) {
         spriteParam + ');\n';
   };
 
-  blockly.Blocks.studio_addItems = {
-    // Block for adding items to a scene.
+  blockly.Blocks.studio_addCharacter = {
+    // Block for adding a character to the scene.
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(this.NUMBER), 'NUMBER');
+        .appendTitle(msg.addCharacter());
       this.appendDummyInput()
         .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'VALUE');
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
-      this.setTooltip(msg.addItemsTooltip());
+      this.setTooltip(msg.addCharacterTooltip());
     }
   };
 
-  blockly.Blocks.studio_addItems.NUMBER =
-      [[msg.addItems1(), '1'],
-       [msg.addItems2(), '2'],
-       [msg.addItems3(), '3'],
-       [msg.addItems5(), '5'],
-       [msg.addItems10(), '10'],
-       [msg.addItemsRandom(), 'random']];
-
-  generator.studio_addItems = function() {
-    // Generate JavaScript for adding items to a scene.
-    var allNumbers = this.NUMBER.slice(0, -1).map(function (item) {
-      return item[1];
-    });
-    var numParam = this.getTitleValue('NUMBER');
-    if (numParam === 'random') {
-      numParam = 'Studio.random([' + allNumbers + '])';
-    }
+  generator.studio_addCharacter = function() {
+    // Generate JavaScript for adding a character to the scene.
     var allValues = skin.itemChoices.slice(0, -1).map(function (item) {
       return item[1];
     });
@@ -464,10 +479,82 @@ exports.install = function(blockly, blockInstallOptions) {
       valParam = 'Studio.random([' + allValues + '])';
     }
 
-    return 'Studio.addItemsToScene(\'block_id_' + this.id +
+    return 'Studio.addItem(\'block_id_' + this.id + '\', ' + valParam + ');\n';
+  };
+
+  blockly.Blocks.studio_setItemActivity = {
+    // Block for setting the activity type on a class of items.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(skin.activityChoices), 'TYPE');
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'VALUE');
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setActivityTooltip());
+    }
+  };
+
+  generator.studio_setItemActivity = function() {
+    // Generate JavaScript for adding items to a scene.
+    var allValues = skin.itemChoices.slice(0, -1).map(function (item) {
+      return item[1];
+    });
+    var valParam = this.getTitleValue('VALUE');
+    if (valParam === 'random') {
+      valParam = 'Studio.random([' + allValues + '])';
+    }
+    var allTypes = skin.activityChoices.slice(0, -1).map(function (item) {
+      return item[1];
+    });
+    var typeParam = this.getTitleValue('TYPE');
+    if (typeParam === 'random') {
+      typeParam = 'Studio.random([' + allTypes + '])';
+    }
+
+    return 'Studio.setItemActivity(\'block_id_' + this.id +
         '\', ' +
         valParam + ', ' +
-        (numParam || '1') + ');\n';
+        typeParam + ');\n';
+  };
+
+  blockly.Blocks.studio_setItemSpeed = {
+    // Block for setting item speed
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+
+      this.appendDummyInput().appendTitle(msg.setItemSpeedSet());
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'CLASS');
+
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      dropdown.setValue(this.VALUES[2][1]); // default to slow
+      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setItemSpeedTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_setItemSpeed.VALUES =
+      [[msg.setSpriteSpeedRandom(), RANDOM_VALUE],
+       [msg.setSpriteSpeedVerySlow(), 'Studio.SpriteSpeed.VERY_SLOW'],
+       [msg.setSpriteSpeedSlow(), 'Studio.SpriteSpeed.SLOW'],
+       [msg.setSpriteSpeedNormal(), 'Studio.SpriteSpeed.NORMAL'],
+       [msg.setSpriteSpeedFast(), 'Studio.SpriteSpeed.FAST'],
+       [msg.setSpriteSpeedVeryFast(), 'Studio.SpriteSpeed.VERY_FAST']];
+
+  generator.studio_setItemSpeed = function () {
+    return generateSetterCode({
+      ctx: this,
+      extraParams: this.getTitleValue('CLASS'),
+      name: 'setItemSpeed'});
   };
 
   blockly.Blocks.studio_throw = {
@@ -1315,6 +1402,30 @@ exports.install = function(blockly, blockInstallOptions) {
       value: backgroundValue,
       ctx: this,
       name: 'setBackground'});
+  };
+
+  /**
+   * setMap
+   */
+  blockly.Blocks.studio_setMap = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(312, 0.32, 0.62);
+      this.VALUES = skin.mapChoices;
+
+      var dropdown = new blockly.FieldDropdown(skin.mapChoices);
+      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      dropdown.setValue('"' + skin.defaultWallMap + '"');
+      
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setMapTooltip());
+    }
+  };
+
+  generator.studio_setMap = function() {
+    return generateSetterCode({ctx: this, name: 'setMap'});
   };
 
   /**

@@ -1,6 +1,8 @@
 #
 # Table
 #
+require 'csv'
+require 'set'
 class Table
 
   class NotFound < Sinatra::NotFound
@@ -12,6 +14,10 @@ class Table
     @table_name = table_name
 
     @table = PEGASUS_DB[:app_tables]
+  end
+
+  def exists?()
+    not @table.where(app_id: @channel_id, storage_id: @storage_id, table_name: @table_name).limit(1).first.nil?
   end
 
   def items()
@@ -28,13 +34,39 @@ class Table
     items.delete
   end
 
+  def rename_column(old_name, new_name, ip_address)
+    items.each do |r|
+      # We want to preserve the order of the columns so creating
+      # a new hash is required.
+      new_value = {}
+      value = JSON.load(r[:value])
+      value.each do |k, v|
+        if k == old_name
+          new_value[new_name] = v
+        else
+          new_value[k] = v
+        end
+      end
+      update(r[:row_id], new_value, ip_address)
+    end
+  end
+
+  def delete_column(column_name, ip_address)
+    items.each do |r|
+      value = JSON.load(r[:value])
+      value.delete(column_name)
+      update(r[:row_id], value, ip_address)
+    end
+  end
+
   def fetch(id)
     row = items.where(row_id: id).first
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless row
-    JSON.load(row[:value]).merge(id: row[:row_id])
+    JSON.load(row[:value]).merge('id' => row[:row_id])
   end
 
   def insert(value, ip_address)
+    raise ArgumentError, 'Value is not a hash' unless value.is_a? Hash
     row = {
       app_id: @channel_id,
       storage_id: @storage_id,
@@ -53,7 +85,7 @@ class Table
       raise
     end
 
-    JSON.load(row[:value]).merge(id: row[:row_id])
+    JSON.load(row[:value]).merge('id' => row[:row_id])
   end
 
   def next_id()
@@ -61,6 +93,7 @@ class Table
   end
 
   def update(id, value, ip_address)
+    raise ArgumentError, 'Value is not a hash' unless value.is_a? Hash
     row = {
       value: value.to_json,
       updated_at: DateTime.now,
@@ -69,13 +102,17 @@ class Table
     update_count = items.where(row_id: id).update(row)
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" if update_count == 0
 
-    JSON.load(row[:value]).merge(id: id)
+    JSON.load(row[:value]).merge('id' => id)
   end
 
   def to_a()
     items.map do |row|
       JSON.load(row[:value]).merge('id' => row[:row_id])
     end
+  end
+
+  def to_csv()
+    return table_to_csv(to_a, column_order: ['id'])
   end
 
   def self.table_names(channel_id)
@@ -105,11 +142,7 @@ class DynamoTable
   end
 
   def db
-    @@dynamo_db ||= Aws::DynamoDB::Client.new(
-      region: 'us-east-1',
-      access_key_id: CDO.s3_access_key_id,
-      secret_access_key: CDO.s3_secret_access_key,
-    )
+    @@dynamo_db ||= Aws::DynamoDB::Client.new
   end
 
   def delete(id)
@@ -179,6 +212,7 @@ class DynamoTable
   def insert(value, ip_address)
     retries = 5
 
+    raise ArgumentError, 'Value is not a hash' unless value.is_a? Hash
     begin
       row_id = next_id
 
@@ -201,7 +235,11 @@ class DynamoTable
       retry
     end
 
-    value.merge(id: row_id)
+    value.merge('id' => row_id)
+  end
+
+  def exists?()
+    return next_id > 1
   end
 
   def next_id()
@@ -232,7 +270,33 @@ class DynamoTable
     { "row_id" => { value: id, comparison_operator: 'NE', } }
   end
 
+  def rename_column(old_name, new_name, ip_address)
+    items.each do |r|
+      # We want to preserve the order of the columns so creating
+      # a new hash is required.
+      new_value = {}
+      value = JSON.load(r['value'])
+      value.each do |k, v|
+        if k == old_name
+          new_value[new_name] = v
+        else
+          new_value[k] = v
+        end
+      end
+      update(r['row_id'], new_value, ip_address)
+    end
+  end
+
+  def delete_column(column_name, ip_address)
+    items.each do |r|
+      value = JSON.load(r['value'])
+      value.delete(column_name)
+      update(r['row_id'], value, ip_address)
+    end
+  end
+
   def update(id, value, ip_address)
+    raise ArgumentError, 'Value is not a hash' unless value.is_a? Hash
     begin
       db.put_item(
         table_name: CDO.dynamo_tables_table,
@@ -251,10 +315,10 @@ class DynamoTable
       raise NotFound, "row `#{id}` not found in `#{@table_name}` table"
     end
 
-    value.merge(id: id)
+    value.merge('id' => id)
   end
 
-  def to_a()
+  def items()
     last_evaluated_key = nil
 
     [].tap do |results|
@@ -272,7 +336,7 @@ class DynamoTable
         ).first
 
         page[:items].each do |item|
-          results << value_from_row(item)
+          results << item
         end
 
         last_evaluated_key = page[:last_evaluated_key]
@@ -280,16 +344,20 @@ class DynamoTable
     end
   end
 
+  def to_a()
+    return items.map { |i| value_from_row(i) }
+  end
+
+  def to_csv()
+    return table_to_csv(to_a, column_order: ['id'])
+  end
+
   def value_from_row(row)
-    JSON.load(row['value']).merge(id: row['row_id'].to_i)
+    JSON.load(row['value']).merge('id' => row['row_id'].to_i)
   end
 
   def self.table_names(channel_id)
-    @dynamo_db ||= Aws::DynamoDB::Client.new(
-      region: 'us-east-1',
-      access_key_id: CDO.s3_access_key_id,
-      secret_access_key: CDO.s3_secret_access_key,
-    )
+    @dynamo_db ||= Aws::DynamoDB::Client.new
     last_evaluated_key = nil
     results = {}
     begin
@@ -315,4 +383,33 @@ class DynamoTable
     results.keys
   end
 
+end
+
+# Converts an array of hashes into a csv string
+def table_to_csv(table_array, column_order: nil)
+  # Since not every row will have all the columns we need to take
+  # two passes through the table. The first is to
+  # collect all the column names and the second to write the data.
+
+  unique_columns = Set.new
+
+  table_array.each do |table_row|
+    unique_columns.merge(table_row.keys)
+  end
+
+  unique_columns = unique_columns.to_a
+  if column_order
+    column_order.reverse_each do |c|
+      unique_columns.delete(c)
+      unique_columns.insert(0, c)
+    end
+  end
+
+  csv_string = CSV.generate do |csv|
+    csv << unique_columns
+    table_array.each do |table_row|
+      csv << unique_columns.collect { |x| table_row[x] }
+    end
+  end
+  return csv_string
 end

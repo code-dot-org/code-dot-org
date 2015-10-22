@@ -32,7 +32,7 @@ def build_task(name, dependencies=[], params={})
     rescue => e
       HipChat.log "<b>#{name}</b> FAILED!", color: 'red', notify: 1
       HipChat.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'
-      raise $!, $!.message, []
+      raise
     end
   end
 
@@ -209,7 +209,7 @@ end
 def upgrade_frontend(name, host)
   commands = [
     'cd production',
-    'git pull',
+    'git pull --ff-only',
     'rake build',
   ]
   command = commands.join(' && ')
@@ -218,11 +218,16 @@ def upgrade_frontend(name, host)
 
   log_path = aws_dir "deploy-#{name}.log"
 
+  # Stop the frontend before running the commands so that the git pull doesn't modify files
+  # out from under a running instance. The rake build command will restart the instance.
+  stop_frontend name, host, log_path
+
   begin
     RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>', log_path
     #HipChat.log "Upgraded <b>#{name}</b> (#{host})."
   rescue
     HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, removing from rotation.", color: 'red'
+    # The frontend is in indeterminate state, so make sure it is stopped.
     stop_frontend name, host, log_path
   end
 
@@ -296,6 +301,8 @@ task :dashboard_unit_tests do
     # Unit tests mess with the database so stop the service before running them and
     # reset the database afterward.
     RakeUtils.stop_service CDO.dashboard_unicorn_name
+    HipChat.log "Resetting <b>dashboard</b> database..."
+    RakeUtils.rake 'db:schema:load'
     HipChat.log 'Running <b>dashboard</b> unit tests...'
     begin
       RakeUtils.rake 'test'
@@ -304,19 +311,23 @@ task :dashboard_unit_tests do
       HipChat.developers 'Unit tests for <b>dashboard</b> failed.', color: 'red', notify: 1
       raise
     end
-    HipChat.log "Resetting <b>dashboard</b> database..."
-    RakeUtils.rake 'db:schema:load'
-    HipChat.log "Reseeding <b>dashboard</b>..."
-    RakeUtils.rake 'seed:all'
     RakeUtils.start_service CDO.dashboard_unicorn_name
   end
 end
 
-task :dashboard_browserstack_ui_tests do
+UI_TEST_SYMLINK = dashboard_dir 'public/ui_test'
+
+file UI_TEST_SYMLINK do
+  Dir.chdir(dashboard_dir('public')) do
+    RakeUtils.system_ 'ln', '-s', '../test/ui', 'ui_test'
+  end
+end
+
+task :dashboard_browserstack_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '-p', '10', '--auto_retry', '--html'
+      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '110', '--auto_retry', '--html'
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         HipChat.log message
@@ -330,11 +341,12 @@ task :dashboard_browserstack_ui_tests do
   end
 end
 
-task :dashboard_eyes_ui_tests do
+task :dashboard_eyes_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI visual tests...'
-      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-c', 'Chrome33Win7', '-d', 'test-studio.code.org', '--eyes', '--html', '--auto_retry'
+      eyes_features = `grep -lr '@eyes' features`.split("\n")
+      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7', '-d', 'test-studio.code.org', '--eyes', '--html', '-f', eyes_features.join(","), '--parallel', eyes_features.count.to_s
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
         HipChat.log message

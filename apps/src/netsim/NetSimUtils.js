@@ -7,18 +7,19 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
 var NetSimConstants = require('./NetSimConstants');
+var NetSimGlobals = require('./NetSimGlobals');
 
 var logger = require('./NetSimLogger').getSingleton();
 
@@ -372,3 +373,21 @@ exports.zeroPadRight = function (string, desiredWidth) {
   return (string + padding).substr(0, desiredWidth);
 };
 
+/**
+ * Creates a Continue/Finish button on the given NetSimPanel (in its header).
+ * @param {NetSimPanel} onPanel
+ * @static
+ */
+exports.makeContinueButton = function (onPanel) {
+  onPanel.addButton(
+      i18n.continueButton({ caret: '<i class="fa fa-caret-right"></i>' }),
+      function (jQueryEvent) {
+        if (!$(jQueryEvent.target).is(':disabled')) {
+          NetSimGlobals.completeLevelAndContinue();
+        }
+      },
+      {
+        secondary: false,
+        classes: [ 'submitButton' ]
+      });
+};

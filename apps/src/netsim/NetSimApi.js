@@ -7,13 +7,15 @@
  newcap: true,
  nonew: true,
  shadow: false,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
+
+var NetSimApiError = require('./NetSimApiError');
 
 /**
  * @type {string}
@@ -101,8 +103,7 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, null);
+      callback(new NetSimApiError(request), null);
     });
   },
 
@@ -120,28 +121,38 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, null);
+      callback(new NetSimApiError(request), null);
     });
   },
 
   /**
-   * Insert a row into the table.
-   * @param {Object} value - desired row contents, must be JSON.stringify-able.
+   * Insert a row or rows into the table.
+   * @param {Object|Object[]} value - desired row contents, as either an
+   *        Object for a single row or an Array of Objects for multiple.
+   *        Must be JSON.stringify-able.
    * @param {NodeStyleCallback} callback - Expected result is the created
-   *        row object (which will include an assigned 'id' key).
+   *        row object or objects (which will include an assigned 'id'
+   *        key).
    */
   createRow: function(value, callback) {
+    var data;
+
+    try {
+      data = JSON.stringify(value);
+    } catch (e) {
+      callback(e, undefined);
+      return;
+    }
+
     $.ajax({
       url: this.baseUrl,
       type: "post",
       contentType: "application/json; charset=utf-8",
-      data: JSON.stringify(value)
-    }).done(function(data, text) {
-      callback(null, data);
+      data: data
+    }).done(function(body, text) {
+      callback(null, body);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, undefined);
+      callback(new NetSimApiError(request), undefined);
     });
   },
 
@@ -167,8 +178,7 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, true);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, false);
+      callback(new NetSimApiError(request), false);
     });
   },
 
@@ -186,8 +196,7 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, undefined);
+      callback(new NetSimApiError(request), undefined);
     });
   },
 
@@ -206,8 +215,7 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, false);
+      callback(new NetSimApiError(request), false);
     });
   }
 };

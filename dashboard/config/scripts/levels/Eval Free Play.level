@@ -27,7 +27,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "coordinate_grid_background": "false",
-    "examples_required": "false"
+    "examples_required": "false",
+    "never_autoplay_video": "false"
   }
 }]]></config>
   <blocks>
@@ -57,6 +58,7 @@
           <block type="functional_ellipse"/>
           <block type="functional_star"/>
           <block type="functional_radial_star"/>
+          <block type="functional_polygon"/>
           <block type="place_image"/>
           <block type="offset"/>
           <block type="overlay"/>
@@ -76,7 +78,10 @@
           <block type="functional_boolean"/>
         </category>
         <category name="Conditionals">
-          <block type="functional_cond"/>
+          <block type="functional_cond_number"/>
+          <block type="functional_cond_string"/>
+          <block type="functional_cond_image"/>
+          <block type="functional_cond_boolean"/>
         </category>
         <category name="Functions" custom="PROCEDURE"/>
         <category name="Variables" custom="FUNCTIONAL_VARIABLE"/>

@@ -2,12 +2,13 @@ require 'test_helper'
 
 class ScriptLevelsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
-
-  include LevelsHelper # test the levels helper stuff here because it has to do w/ routes...
+  include UsersHelper  # For user session state accessors.
+  include LevelsHelper  # Test the levels helper stuff here because it has to do w/ routes...
   include ScriptLevelsHelper
 
   setup do
     @student = create :student
+    @young_student = create :young_student
     @teacher = create :teacher
     @section = create :section, user_id: @teacher.id
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user_id: @teacher.id)
@@ -24,6 +25,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                            stage: @custom_stage_2, :position => 1)
     @custom_s2_l2 = create(:script_level, script: @custom_script,
                            stage: @custom_stage_2, :position => 2)
+    client_state.reset
   end
 
   test 'should show script level for twenty hour' do
@@ -130,6 +132,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_nil assigns(:view_options)[:autoplay_video]
   end
 
+  test 'should have autoplay video when never_autoplay_video is false on level' do
+    level_with_autoplay_video = create(:script_level, :never_autoplay_video_false)
+    get :show, script_id: level_with_autoplay_video.script, stage_id: '1',  id: '1'
+    assert_response :success
+    assert_not_empty assigns(:level).related_videos
+    assert_not_nil assigns(:view_options)[:autoplay_video]
+  end
+
+  test 'should not have autoplay video when never_autoplay_video is true on level' do
+    level_with_autoplay_video = create(:script_level, :never_autoplay_video_true)
+    get :show, script_id: level_with_autoplay_video.script, stage_id: '1', id: '1'
+    assert_response :success
+    assert_not_empty assigns(:level).related_videos
+    assert_nil assigns(:view_options)[:autoplay_video]
+  end
+
   test 'should track video play even if noautoplay param is set' do
     # This behavior is relied on by UI tests that navigate to the next level after completion,
     # because the ?noautoplay=true parameter does not propagate to the next level.
@@ -137,11 +155,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script = create(:script)
     stage = create(:stage, script: script, name: 'Testing Stage 1', position: 1)
     level_with_autoplay_video = create(:script_level, :with_autoplay_video, script: script, stage: stage, :position => 1)
-    assert_nil session[:videos_seen]
+    assert !client_state.videos_seen_for_test?
 
     get :show, script_id: level_with_autoplay_video.script, stage_id: stage.position, id: '1', noautoplay: 'true'
     assert_nil assigns(:view_options)[:autoplay_video]
-    assert_not_empty session[:videos_seen]
+    assert client_state.videos_seen_for_test?
 
     @controller = ScriptLevelsController.new
     get :show, script_id: level_with_autoplay_video.script, stage_id: stage.position, id: '1'
@@ -150,9 +168,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "shouldn't show autoplay video when already seen" do
     non_legacy_script_level = create(:script_level, :with_autoplay_video)
-    seen = Set.new
-    seen.add(non_legacy_script_level.level.video_key)
-    session[:videos_seen] = seen
+    client_state.add_video_seen(non_legacy_script_level.level.video_key)
     get :show, script_id: non_legacy_script_level.script, stage_id: '1', id: '1'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
@@ -344,7 +360,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     unplugged_curriculum_path_start = "curriculum/#{script_level.script.name}/#{script_level.stage.position}"
     assert_select '.pdf-button' do
-      assert_select "[href=?]", /.*#{unplugged_curriculum_path_start}.*/
+      assert_select ":match('href', ?)", /.*#{unplugged_curriculum_path_start}.*/
     end
 
     assert_equal script_level, assigns(:script_level)
@@ -358,13 +374,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show with the reset param should reset session when not logged in" do
-    session[:progress] = {5 => 10}
+    client_state.set_level_progress(5, 10)
 
     get :reset, script_id: Script::HOC_NAME
 
     assert_redirected_to hoc_chapter_path(chapter: 1)
 
-    assert !session[:progress]
+    assert client_state.level_progress_is_empty_for_test
     assert !session['warden.user.user.key']
   end
 
@@ -384,12 +400,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "reset resets for custom scripts" do
-    session[:progress] = {5 => 10}
+    client_state.set_level_progress(5, 10)
 
     get :reset, script_id: 'laurel'
     assert_redirected_to "/s/laurel/stage/1/puzzle/1"
 
-    assert !session[:progress]
+    assert client_state.level_progress_is_empty_for_test
     assert !session['warden.user.user.key']
   end
 
@@ -484,25 +500,25 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     set_env :production
     get :show, script_id: Script::HOC_NAME, chapter: 1
 
-    assert_select 'img[src=//code.org/api/hour/begin_hourofcode.png]'
+    assert_select 'img[src="//code.org/api/hour/begin_hourofcode.png"]'
   end
 
   test 'should show tracking pixel for frozen chapter 1 in prod' do
     set_env :production
     get :show, script_id: Script::FROZEN_NAME, stage_id: 1, id: 1
-    assert_select 'img[src=//code.org/api/hour/begin_frozen.png]'
+    assert_select 'img[src="//code.org/api/hour/begin_frozen.png"]'
   end
 
   test 'should show tracking pixel for flappy chapter 1 in prod' do
     set_env :production
     get :show, script_id: Script::FLAPPY_NAME, chapter: 1
-    assert_select 'img[src=//code.org/api/hour/begin_flappy.png]'
+    assert_select 'img[src="//code.org/api/hour/begin_flappy.png"]'
   end
 
   test 'should show tracking pixel for playlab chapter 1 in prod' do
     set_env :production
     get :show, script_id: Script::PLAYLAB_NAME, stage_id: 1, id: 1
-    assert_select 'img[src=//code.org/api/hour/begin_playlab.png]'
+    assert_select 'img[src="//code.org/api/hour/begin_playlab.png"]'
   end
 
   test 'no report bug link for 20 hour' do
@@ -589,6 +605,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_equal @section, assigns(:section)
     assert_equal @student, assigns(:user)
+
+    assert_equal true, assigns(:view_options)[:readonly_workspace]
+    assert_equal true, assigns(:level_view_options)[:skip_instructions_popup]
+    assert_equal [], assigns(:view_options)[:callouts]
   end
 
   test 'shows expanded teacher panel when section is chosen but student is not' do
@@ -655,6 +675,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '.teacher-panel' # showing teacher panel
     assert_select '.teacher-panel.hidden', 0 # not hidden
+
+    assert_equal true, assigns(:view_options)[:readonly_workspace]
+    assert_equal true, assigns(:level_view_options)[:skip_instructions_popup]
+    assert_equal [], assigns(:view_options)[:callouts]
   end
 
 
@@ -666,6 +690,26 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: sl.script, stage_id: sl.stage, id: sl, solution: true
 
     assert_response :forbidden
+  end
+
+  test 'under 13 gets redirected when trying to access applab' do
+    sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('U3L2 Using Simple Commands'))
+
+    sign_in @young_student
+
+    get :show, script_id: sl.script, stage_id: sl.stage, id: sl
+
+    assert_redirected_to '/'
+  end
+
+  test 'over 13 does not get redirected when trying to access applab' do
+    sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('U3L2 Using Simple Commands'))
+
+    sign_in @student
+
+    get :show, script_id: sl.script, stage_id: sl.stage, id: sl
+
+    assert_response :success
   end
 
 end

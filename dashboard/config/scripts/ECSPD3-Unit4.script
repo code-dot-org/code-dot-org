@@ -1,0 +1,82 @@
+title 'Exploring Computer Science PD: Academic Year Development'
+description 'Academic Year Development'
+description_short 'Academic Year Development'
+login_required 'true'
+pd 'true'
+
+stage 'Welcome!'
+level 'ECS Phase 3 Welcome'
+level 'PDECS Tour'
+level 'ECSPD PD details'
+level 'ECS Phase 3 Overview'
+level 'ECSPD course goals'
+
+stage 'Teaching Strategies'
+level 'ECSPD Teaching Strategies Intro'
+level 'ECSPD Phase 3 - Unit 4 - Teaching Practice'
+level 'Forum-ECSPD-Unit 4-Teaching Practice'
+level  'ECSPD Find Learning Strategy'
+level 'ECSPD strategies'
+
+stage 'Unit 4 Overview'
+
+stage 'Introduction to the Unit 4 Challenge'
+level 'ECSPD What is the Challenge'
+
+stage 'Day 1 Scratch: Intro'
+level 'ECSPD U4 D 1 Intro'
+
+stage 'Day 2-3 Scratch: Name Project'
+level 'ECSPD U4 D 2-3 Intro'
+
+stage 'Day 4 Scratch: Creating Dialogue'
+level 'ECSPD U4 D 4 Intro'
+
+stage 'Day 5-6 Scratch: Moving Sprites'
+level 'ECSPD U4 D 5-6 Intro'
+
+stage 'Day 7-8 Scratch: Event Driven Programming'
+level 'ECSPD U4 D 7-8 Intro'
+
+stage 'Day 9 Broadcasting Role Play'
+level 'ECSPD U4 D 9 Intro'
+
+stage 'Day 10-13 Scratch: Broadcasting'
+level 'ECSPD U4 D 10-13 Intro'
+
+stage 'Day 14 Scratch: Variables'
+level 'ECSPD U4 D 14 Intro'
+
+stage 'Day 15 Scratch: Conditionals'
+level 'ECSPD U4 D 15 Intro'
+
+stage 'Day 16-17 Scratch: AND OR and Randomness'
+level 'ECSPD U4 D 16-17 Intro'
+
+stage 'Day 18 Scratch: Rock Paper Scissors'
+level 'ECSPD U4 D 18 Intro'
+
+stage 'Day 19 Scratch: Timer'
+level 'ECSPD U4 D 19 Intro'
+
+stage 'Day 20-23 Scratch: Timing Game'
+level 'ECSPD U4 D 20-23 Intro'
+
+stage 'Day 24 Scratch: Games'
+level 'ECSPD U4 D 24 Intro'
+
+stage 'Day 25-30 Final Project'
+level 'ECSPD U4 D 25-30 Intro'
+
+stage 'Unit 4 Challenge Planning & Creation'
+
+stage 'Unit 4 Challenge Planning'
+level 'ECSPD What is the Challenge'
+level 'ECSPD Pick Challenge'
+
+
+stage 'Unit 4 Challenge Creation'
+level 'ECSPD Start Challenge'
+level 'ECSPD Challenge Reflection'
+level 'ECSPD 1 page template'
+level 'ECSPD Challenge Rubric'

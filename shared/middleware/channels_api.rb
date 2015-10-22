@@ -6,7 +6,12 @@ require 'cdo/rack/request'
 class ChannelsApi < Sinatra::Base
 
   helpers do
-    %w(core.rb storage_apps.rb storage_id.rb).each do |file|
+    %w(
+      core.rb
+      storage_apps.rb
+      storage_id.rb
+      auth_helpers.rb
+    ).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
   end
@@ -121,5 +126,49 @@ class ChannelsApi < Sinatra::Base
   end
   put %r{/v3/channels/([^/]+)$} do |id|
     call(env.merge('REQUEST_METHOD'=>'PATCH'))
+  end
+
+  #
+  # GET /v3/channels/<channel-id>/abuse
+  #
+  # Get an abuse score.
+  #
+  get %r{/v3/channels/([^/]+)/abuse$} do |id|
+    dont_cache
+    content_type :json
+
+    value = StorageApps.new(storage_id('user')).get_abuse(id)
+    {:abuse_score => value }.to_json
+  end
+
+  #
+  # POST /v3/channels/<channel-id>/abuse
+  #
+  # Increment an abuse score
+  #
+  post %r{/v3/channels/([^/]+)/abuse$} do |id|
+    dont_cache
+    content_type :json
+
+    value = StorageApps.new(storage_id('user')).increment_abuse(id)
+    {:abuse_score => value }.to_json
+  end
+
+  #
+  # DELETE /v3/channels/<channel-id>/abuse
+  #
+  # Clear an abuse score. Admin only.
+  #
+  delete %r{/v3/channels/([^/]+)/abuse$} do |id|
+    not_authorized unless admin?
+
+    dont_cache
+    content_type :json
+
+    value = StorageApps.new(storage_id('user')).reset_abuse(id)
+    {:abuse_score => value }.to_json
+  end
+  post %r{/v3/channels/([^/]+)/abuse/delete$} do |id|
+    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 end

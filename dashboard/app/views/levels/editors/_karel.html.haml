@@ -7,3 +7,6 @@
 .field
   = f.label :honey_goal, 'Honey Goal (bee only)'
   = f.number_field :honey_goal, :value => @level.honey_goal
+.field
+  = f.label :fast_get_nectar_animation, "Fast get nectar animation"
+  = boolean_check_box f, :fast_get_nectar_animation

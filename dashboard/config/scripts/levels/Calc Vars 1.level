@@ -24,7 +24,9 @@
     "definition_collapse": "false",
     "video_key": "alg_6_variables",
     "disable_examples": "false",
-    "markdown_instructions": "Variables allow us to name values so that we can easily refer to them repeatedly throughout our programs. Here's a variable called _age_. Set its value to your age and click run."
+    "markdown_instructions": "Variables allow us to name values so that we can easily refer to them repeatedly throughout our programs. Here's a variable called `age`. Set its value to your age and click run.",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

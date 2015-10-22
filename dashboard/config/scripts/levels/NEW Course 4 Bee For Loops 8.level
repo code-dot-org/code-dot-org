@@ -6,10 +6,10 @@
   "user_id": 16,
   "properties": {
     "skin": "bee",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,6,9,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,2,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,6,9,12,15,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "What will you do if we take away some blocks? Can you add them back to help the bee collect the nectar?\r\nRemember: If your loop is counting up, the increment is added to your counter variable each time through. What should your increment be to collect 3, 6, 9 nectar?\r\n",
+    "instructions": "You've got this! What should your increment be to collect 3, 6, 9, 12, 15 nectar?\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "9",
@@ -18,10 +18,10 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "start_direction": "1",
-    "step_mode": "0",
-    "nectar_goal": "18",
+    "step_mode": "1",
+    "nectar_goal": "45",
     "flower_type": "redWithNectar",
-    "markdown_instructions": "What will you do if we take away some blocks? Can you add them back to help the bee collect the nectar?\r\n\r\nRemember: If your loop is counting up, the increment is added to your counter variable each time through. What should your increment be to collect 3, 6, 9 nectar?\r\n",
+    "markdown_instructions": "You've got this! What should your increment be to collect 3, 6, 9, 12, 15 nectar?\r\n\r\nRemember: If your loop is counting up, the increment is added to your counter variable each time through.\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -29,6 +29,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "examples_required": "false",
+    "step_speed": "1",
     "maze_data": null
   }
 }]]></config>
@@ -37,7 +39,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_for" inline="true">
+            <block type="controls_for" inline="true" movable="false">
               <title name="VAR">counter</title>
               <value name="FROM">
                 <block type="math_number">
@@ -86,7 +88,7 @@
           </value>
           <value name="TO">
             <block type="math_number">
-              <title name="NUM">9</title>
+              <title name="NUM">15</title>
             </block>
           </value>
           <value name="BY">

@@ -66,6 +66,7 @@ locales = {
   'Turkish' => 'tr-TR',
   'Ukrainian' => 'uk-UA',
   'Urdu (Pakistan)' => 'ur-PK',
+  'Uzbek' => 'uz-UZ',
   'Vietnamese' => 'vi-VN'
 }
 

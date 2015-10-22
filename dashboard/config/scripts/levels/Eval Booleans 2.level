@@ -23,8 +23,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "markdown_instructions": "Can you set the values so that this expression evaluates as _true_?",
-    "disable_examples": "false"
+    "markdown_instructions": "Can you set the values so that this expression evaluates as *true*?",
+    "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

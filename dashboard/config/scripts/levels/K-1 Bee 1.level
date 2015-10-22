@@ -11,7 +11,7 @@
     "skin": "bee",
     "instructions": "Move me to the flower, get the nectar, then move me to the honeycomb, and make honey",
     "start_direction": "1",
-    "step_mode": "0",
+    "step_mode": 1,
     "is_k1": "true",
     "flower_type": "redWithNectar",
     "skip_instructions_popup": "false",

@@ -14,6 +14,7 @@ require 'cgi'
 require 'json'
 require 'uri'
 require 'cdo/rack/upgrade_insecure_requests'
+require_relative 'helper_modules/dashboard'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -77,7 +78,7 @@ class Documents < Sinatra::Base
     set :redirect_extnames, ['.redirect','.moved','.found','.301','.302']
     set :template_extnames, ['.erb','.fetch','.haml','.html','.md','.txt']
     set :non_static_extnames, settings.not_found_extnames + settings.redirect_extnames + settings.template_extnames + settings.exclude_extnames
-    set :markdown, {autolink: true, tables: true, space_after_headers: true}
+    set :markdown, {autolink: true, tables: true, space_after_headers: true, fenced_code_blocks: true}
 
     if rack_env?(:production)
       Honeybadger.configure do |config|
@@ -120,7 +121,13 @@ class Documents < Sinatra::Base
     @config = settings.configs[request.site]
     @header = {}
 
-    @dirs = [request.site]
+    @dirs = []
+
+    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
+      @dirs << [File.join(request.site, 'i18n')]
+    end
+
+    @dirs << request.site
 
     if @config
       base = @config[:base]
@@ -146,12 +153,35 @@ class Documents < Sinatra::Base
   ['/private', '/private/*'].each do |uri|
     get_head_or_post uri do
       unless rack_env?(:development)
-        not_authorized! unless dashboard_user
-        forbidden! unless dashboard_user[:admin]
+        not_authorized! unless dashboard_user_helper
+        forbidden! unless dashboard_user_helper.admin?
       end
       pass
     end
   end
+
+  # Static files
+  get '*' do |uri|
+    pass unless path = resolve_static('public', uri)
+    cache_control :public, :must_revalidate, max_age: settings.static_max_age
+    send_file(path)
+  end
+
+  get '/style.css' do
+    content_type :css
+    css_last_modified = Time.at(0)
+    css = Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map do |i|
+      css_last_modified = [css_last_modified, File.mtime(i)].max
+      IO.read(i)
+    end.join("\n\n")
+    last_modified(css_last_modified) if css_last_modified > Time.at(0)
+    cache_control :public, :must_revalidate, max_age: settings.static_max_age
+    css
+  end
+
+  # rubocop:disable Lint/Eval
+  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path))}
+  # rubocop:enable Lint/Eval
 
   # Manipulated images
   get "/images/*" do |path|
@@ -173,7 +203,11 @@ class Documents < Sinatra::Base
     # Assume we are returning the same resolution as we're reading.
     retina_in = retina_out = basename[-3..-1] == '_2x'
 
-    path = resolve_image File.join(dirname, basename)
+    path = nil
+    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
+      path = resolve_image File.join(@language, dirname, basename)
+    end
+    path ||= resolve_image File.join(dirname, basename)
     unless path
       # Didn't find a match at this resolution, look for a match at the other resolution.
       if retina_out
@@ -186,6 +220,7 @@ class Documents < Sinatra::Base
       path = resolve_image File.join(dirname, basename)
     end
     pass unless path # No match at any resolution.
+    last_modified(File.mtime(path))
 
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
@@ -243,22 +278,6 @@ class Documents < Sinatra::Base
     image.to_blob
   end
 
-  # Static files
-  get '*' do |uri|
-    pass unless path = resolve_static('public', uri)
-    cache_control :public, :must_revalidate, max_age: settings.static_max_age
-    send_file(path)
-  end
-
-  get '/style.css' do
-    content_type :css
-    Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map{|i| IO.read(i)}.join("\n\n")
-  end
-
-  # rubocop:disable Lint/Eval
-  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path))}
-  # rubocop:enable Lint/Eval
-
   # Documents
   get_head_or_post '*' do |uri|
     pass unless path = resolve_document(uri)
@@ -276,6 +295,9 @@ class Documents < Sinatra::Base
       response.headers['X-Frame-Options'] = 'ALLOWALL'
     end
 
+    if @locals[:header]['content-type']
+      response.headers['Content-Type'] = @locals[:header]['content-type']
+    end
     layout = @locals[:header]['layout']||'default'
     unless ['', 'none'].include?(layout)
       template = resolve_template('layouts', settings.template_extnames, layout)
@@ -294,13 +316,36 @@ class Documents < Sinatra::Base
   not_found do
     status 404
     path = resolve_template('views', settings.template_extnames, '/404')
-    document path
+    document(path).tap{dont_cache}
   end
 
-  helpers do
+  helpers(Dashboard) do
     def content_dir(*paths)
       File.join(settings.views, *paths)
     end
+
+    # Get the current dashboard user record
+    # @returns [Hash]
+    #
+    # TODO: Switch to using `dashboard_user_helper` everywhere and remove this
+    def dashboard_user
+      @dashboard_user ||= Dashboard::db[:users][id: dashboard_user_id]
+    end
+
+    # Get the current dashboard user wrapped in a helper
+    # @returns [Dashboard::User] or nil if not signed in
+    #
+    # TODO: When we are using this everywhere, rename to just `dashboard_user`
+    def dashboard_user_helper
+      @dashboard_user_helper ||= Dashboard::User.get(dashboard_user_id)
+    end
+
+    # Get the current dashboard user ID
+    # @returns [Integer]
+    def dashboard_user_id
+      request.user_id
+    end
+
 
     def document(path)
       content = IO.read(path)
@@ -336,6 +381,10 @@ class Documents < Sinatra::Base
       end
     end
 
+    def preprocess_markdown(markdown_content)
+      markdown_content.gsub(/```/, "```\n")
+    end
+
     def post_process_html_from_markdown(full_document)
       full_document.gsub!(/<p>\[\/(.*)\]<\/p>/) do
         "</div>"
@@ -357,6 +406,7 @@ class Documents < Sinatra::Base
 
     def resolve_static(subdir, uri)
       return nil if settings.non_static_extnames.include?(File.extname(uri))
+
       @dirs.each do |dir|
         path = content_dir(dir, subdir, uri)
         return path if File.file?(path)
@@ -437,6 +487,7 @@ class Documents < Sinatra::Base
         send_file(cache_file)
       when '.md', '.txt'
         preprocessed = erb body, locals: locals
+        preprocessed = preprocess_markdown preprocessed
         html = markdown preprocessed, locals: locals
         post_process_html_from_markdown html
       when '.redirect', '.moved', '.301'

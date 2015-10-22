@@ -1,8 +1,30 @@
+# == Schema Information
+#
+# Table name: levels
+#
+#  id                       :integer          not null, primary key
+#  game_id                  :integer
+#  name                     :string(255)      not null
+#  created_at               :datetime
+#  updated_at               :datetime
+#  level_num                :string(255)
+#  ideal_level_source_id    :integer
+#  solution_level_source_id :integer
+#  user_id                  :integer
+#  properties               :text(65535)
+#  type                     :string(255)
+#  md5                      :string(255)
+#
+# Indexes
+#
+#  index_levels_on_game_id  (game_id)
+#
+
 # Used by Bee to indicate a flower/honeycomb of capacity 0
 ZERO_DIRT_ITEM = 98
 
 class Karel < Maze
-  serialized_attrs :nectar_goal, :honey_goal, :flower_type
+  serialized_attrs :nectar_goal, :honey_goal, :flower_type, :fast_get_nectar_animation
 
   # List of possible skins, the first is used as a default.
   def self.skins
@@ -90,6 +112,7 @@ class Karel < Maze
       <block type="bee_ifelseNectarAmount"></block>
       <block type="bee_ifTotalNectar"></block>
       <block type="bee_ifelseTotalNectar"></block>
+      <block type="bee_ifOnlyFlower"></block>
       <block type="bee_ifFlower"></block>
       <block type="bee_ifElseFlower"></block>
       <block type="bee_whileNectarAmount"></block>

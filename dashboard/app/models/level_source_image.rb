@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: level_source_images
+#
+#  id              :integer          not null, primary key
+#  level_source_id :integer
+#  image           :binary(16777215)
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+# Indexes
+#
+#  index_level_source_images_on_level_source_id  (level_source_id)
+#
+
 require 'cdo/aws/s3'
 require 'image_lib'
 require 'digest/md5'
@@ -8,39 +23,44 @@ class LevelSourceImage < ActiveRecord::Base
 
   def save_to_s3(image)
     return false if CDO.disable_s3_image_uploads
-
     return false if image.blank?
 
-    # also create the framed image
-    if level_source.level.skin == 'anna' || level_source.level.skin == 'elsa'
-      image_filename = "app/assets/images/blank_sharing_drawing_#{level_source.level.skin}.png"
-    else
-      image_filename = "app/assets/images/blank_sharing_drawing.png"
+    return false unless upload_original_image(image)
+
+    if level_source.level.game.app == Game::ARTIST
+      return false unless upload_framed_image(image)
     end
 
-    begin
-      framed_image = ImageLib::overlay_image(:background_url => Rails.root.join(image_filename),
-                                             :foreground_blob => image).to_blob
-    rescue Magick::ImageMagickError # something wrong with the image
-      return false
-    end
-
-    # upload both the original and framed images
-    unless AWS::S3.upload_to_bucket('cdo-art', s3_filename, image, no_random: true)
-      return false
-    end
-
-    unless AWS::S3.upload_to_bucket('cdo-art', s3_framed_filename, framed_image, no_random: true)
-      return false
-    end
-
-    # remember that this image is in S3 (for images that are not in S3, image is the actual image blob)
-    self.image = 'S3'
     self.save
   end
 
-  def s3?
-    image == 'S3'
+  S3_BUCKET = 'cdo-art'
+
+  def upload_image(filename, image)
+    AWS::S3.upload_to_bucket(S3_BUCKET, filename, image, no_random: true)
+  end
+
+  def upload_original_image(image)
+    upload_image(s3_filename, image)
+  end
+
+  # Adds a frame to an image blob and uploads it to s3.
+  # @param [String] image An image blob.
+  def upload_framed_image(image)
+    if level_source.level.try(:skin) == 'anna' || level_source.level.try(:skin) == 'elsa'
+      frame_image_filename = "app/assets/images/blank_sharing_drawing_#{level_source.level.skin}.png"
+    else
+      frame_image_filename = "app/assets/images/blank_sharing_drawing.png"
+    end
+
+    begin
+      framed_image = ImageLib::overlay_image(:background_url => Rails.root.join(frame_image_filename),
+                                             :foreground_blob => image).to_blob
+    rescue MiniMagick::Invalid, MiniMagick::Error # something wrong with the image or runtime error.
+      return false
+    end
+
+    upload_image(s3_framed_filename, framed_image)
   end
 
   def LevelSourceImage.hashify_filename(plain)
@@ -55,10 +75,7 @@ class LevelSourceImage < ActiveRecord::Base
     LevelSourceImage.hashify_filename "#{Rails.env}/#{level_source.id}_framed.png"
   end
 
-  # TODO: make this url work for https
-  #  S3_URL = "http://cdo-art.s3-website-us-east-1.amazonaws.com/"
-  # below is for cloudfront
-  S3_URL = "http://d3p74s6bwmy6t9.cloudfront.net/"
+  S3_URL = "https://d3p74s6bwmy6t9.cloudfront.net/"
 
   def s3_url
     return "http://code.org/images/logo.png" if CDO.disable_s3_image_uploads

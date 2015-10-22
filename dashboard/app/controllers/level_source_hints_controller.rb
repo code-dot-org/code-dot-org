@@ -9,7 +9,8 @@ class LevelSourceHintsController < ApplicationController
   CODE_DOT_ORG_HINTS_PAGE = 'http://code.org/hints'
 
   def review_hints
-    raise 'unauthorized' unless current_user.admin?
+    authorize! :manage, :all
+
     @hints = LevelSourceHint.where(source: LevelSourceHint::CROWDSOURCED)
     @user = current_user
     @restriction = params[:restriction]
@@ -138,7 +139,8 @@ class LevelSourceHintsController < ApplicationController
   # This shows not just the hint whose popularity index is specified but also
   # all the other hints having the same level source id.
   def show_pop_hints
-    raise "unauthorized" unless current_user.admin?
+    authorize! :manage, :all
+
     unless setup_display_of_pop_hints(
         FrequentUnsuccessfulLevelSource,
         lambda {|idx, restriction| show_pop_hints_path idx, restriction})
@@ -167,7 +169,8 @@ class LevelSourceHintsController < ApplicationController
   end
 
   def show_pop_hints_per_level
-    raise "unauthorized" unless current_user.admin?
+    authorize! :manage, :all
+
     if setup_display_of_pop_hints(
         FrequentUnsuccessfulLevelSource.where(level_id: params[:level_id].to_i),
         lambda {|idx, restriction| show_pop_hints_per_level_path(params[:level_id].to_i, idx, restriction)})

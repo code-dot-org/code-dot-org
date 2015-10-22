@@ -8,6 +8,7 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -16,6 +17,17 @@
 
 require('../utils');
 var NetSimEntity = require('./NetSimEntity');
+var ArgumentUtils = require('./ArgumentUtils');
+
+/**
+ * @typedef {Object} WireRow
+ * @property {!number} localNodeID
+ * @property {!number} remoteNodeID
+ * @property {string} localAddress
+ * @property {string} remoteAddress
+ * @property {string} localHostname
+ * @property {string} remoteHostname
+ */
 
 /**
  * Local controller for a simulated connection between nodes,
@@ -24,7 +36,7 @@ var NetSimEntity = require('./NetSimEntity');
  * data in helpful methods.
  *
  * @param {!NetSimShard} shard - The shard where this wire lives.
- * @param {Object} [wireRow] - A row out of the _wire table on the shard.
+ * @param {WireRow} [wireRow] - A row out of the _wire table on the shard.
  *        If provided, will initialize this wire with the given data.  If not,
  *        this wire will initialize to default values.
  * @constructor
@@ -64,15 +76,17 @@ NetSimWire.inherits(NetSimEntity);
 /**
  * Static async creation method.  See NetSimEntity.create().
  * @param {!NetSimShard} shard
- * @param {!number} localNodeID
- * @param {!number} remoteNodeID
+ * @param {!WireRow} initialRow
  * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimWire.create = function (shard, localNodeID, remoteNodeID, onComplete) {
-  var entity = new NetSimWire(shard);
-  entity.localNodeID = localNodeID;
-  entity.remoteNodeID = remoteNodeID;
+NetSimWire.create = function (shard, initialRow, onComplete) {
+  ArgumentUtils.validateRequired(initialRow, "initialRow");
+  ArgumentUtils.validateRequired(initialRow.localNodeID, "localNodeID",
+      ArgumentUtils.isPositiveNoninfiniteNumber);
+  ArgumentUtils.validateRequired(initialRow.remoteNodeID, "remoteNodeID",
+      ArgumentUtils.isPositiveNoninfiniteNumber);
+  var entity = new NetSimWire(shard, initialRow);
   entity.getTable().create(entity.buildRow(), function (err, row) {
     if (err) {
       onComplete(err, null);
@@ -90,7 +104,10 @@ NetSimWire.prototype.getTable = function () {
   return this.shard_.wireTable;
 };
 
-/** Build own row for the wire table  */
+/**
+ * Build own row for the wire table
+ * @returns {WireRow}
+ */
 NetSimWire.prototype.buildRow = function () {
   return {
     localNodeID: this.localNodeID,
@@ -103,7 +120,7 @@ NetSimWire.prototype.buildRow = function () {
 };
 
 /**
- * @param {MessageRow} MessageRow
+ * @param {MessageRow} messageRow
  * @returns {boolean} TRUE if the given message is travelling between the nodes
  *          that this wire connects, in the wire's direction.
  */

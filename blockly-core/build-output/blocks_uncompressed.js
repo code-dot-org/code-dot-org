@@ -19,7 +19,7 @@ Blockly.Blocks.colour_random = {init:function() {
 }};
 Blockly.Blocks.colour_rgb = {init:function() {
   this.setHelpUrl(Blockly.Msg.COLOUR_RGB_HELPURL);
-  this.setHSV(42, 0.89, 0.99);
+  this.setHSV(196, 1, 0.79);
   this.appendValueInput("RED").setCheck(Blockly.BlockValueType.NUMBER).setAlign(Blockly.ALIGN_RIGHT).appendTitle(Blockly.Msg.COLOUR_RGB_TITLE).appendTitle(Blockly.Msg.COLOUR_RGB_RED);
   this.appendValueInput("GREEN").setCheck(Blockly.BlockValueType.NUMBER).setAlign(Blockly.ALIGN_RIGHT).appendTitle(Blockly.Msg.COLOUR_RGB_GREEN);
   this.appendValueInput("BLUE").setCheck(Blockly.BlockValueType.NUMBER).setAlign(Blockly.ALIGN_RIGHT).appendTitle(Blockly.Msg.COLOUR_RGB_BLUE);
@@ -519,6 +519,8 @@ Blockly.Blocks.controls_for = {init:function() {
   c.setAttribute("type", "variables_get");
   b.callback = Blockly.ContextMenu.callbackFactory(this, c);
   a.push(b)
+}, domToMutation:function(a) {
+  "default_var" === a.getAttribute("name") && (a = Blockly.Variables.generateUniqueNameFromBase_(a.childNodes[0].data), this.setTitleValue(a, "VAR"))
 }};
 Blockly.Blocks.controls_forEach = {init:function() {
   this.setHelpUrl(Blockly.Msg.CONTROLS_FOREACH_HELPURL);

@@ -6,18 +6,6 @@ exports.addReadyListener = function(callback) {
   }
 };
 
-exports.getText = function(node) {
-  return node.innerText || node.textContent;
-};
-
-exports.setText = function(node, string) {
-  if (node.innerText) {
-    node.innerText = string;
-  } else {
-    node.textContent = string;
-  }
-};
-
 exports.getTouchEventName = function(eventName) {
   var isIE11Touch = window.navigator.pointerEnabled;
   var isIE10Touch = window.navigator.msPointerEnabled;

@@ -41,10 +41,11 @@ ____________________________________________________
 
 This example draws an empty circle in the middle of the screen.
 
-<pre>
+
+```
 createCanvas(); //Create a canvas on which to draw
 circle(160, 240, 100); // Draw an empty circle centered at x:160 y:240
-</pre>
+```
 
 [/example]
 
@@ -54,7 +55,8 @@ ____________________________________________________
 
 This example draws a worried emoticon face using filled shapes.
 
-<pre>
+
+```
 createCanvas();         //Create a canvas on which to draw
 setFillColor("yellow");
 circle(160, 240, 100);  //Draw a big, yellow circle for a head
@@ -64,7 +66,7 @@ circle(195, 215, 20);
 setFillColor("white");
 rect(100, 260, 120, 20);//Draw a white rectangle for a mouth
 
-</pre>
+```
 
 [/example]
 
@@ -74,7 +76,8 @@ ____________________________________________________
 
 This example draws three filled yellow rectangles, using three different ways of specifying the color yellow.
 
-<pre>
+
+```
 createCanvas();
 setFillColor("yellow");
 rect(80, 50, 160, 40);
@@ -82,7 +85,7 @@ setFillColor("#FFFF00");
 rect(80, 100, 160, 40);
 setFillColor("rgb(255,255,0)");
 rect(80, 150, 160, 40);
-</pre>
+```
 
 [/example]
 
@@ -91,9 +94,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 setFillColor(color)
-</pre>
+```
 
 [/syntax]
 

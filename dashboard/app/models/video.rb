@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: videos
+#
+#  id           :integer          not null, primary key
+#  key          :string(255)
+#  youtube_code :string(255)
+#  created_at   :datetime
+#  updated_at   :datetime
+#  download     :string(255)
+#
+
 # Links to a YouTube video
 class Video < ActiveRecord::Base
   include Seeded

@@ -7,8 +7,10 @@ rightbar: blank
 %p{style: 'font-size: 1.5em; line-height: 1.5em;'} Check the web address and resubmit or choose a link from the list below.
 %ul{style: 'font-size: 1.25em; line-height: 1.5em; min-height: 240px;'}
   %li<
-    %a{href:hoc_uri('/resources')} Resources
+    %a{href:resolve_url('/how-to')} How-to
   %li<
-    %a{href:hoc_uri('/#faq')} FAQ
+    %a{href:resolve_url('/promote')} Promote
   %li<
-    %a{href:hoc_uri('/prizes')} Prizes
+    %a{href:resolve_url('/#faq')} FAQ
+  %li<
+    %a{href:resolve_url('/prizes')} Prizes

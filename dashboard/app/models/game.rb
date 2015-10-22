@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: games
+#
+#  id             :integer          not null, primary key
+#  name           :string(255)
+#  created_at     :datetime
+#  updated_at     :datetime
+#  app            :string(255)
+#  intro_video_id :integer
+#
+# Indexes
+#
+#  index_games_on_intro_video_id  (intro_video_id)
+#
+
 # An ordered set of levels associated with a single app, e.g. Farmer2
 # also associates an intro video
 
@@ -22,6 +38,7 @@ class Game < ActiveRecord::Base
   FLAPPY = 'flappy'
   BOUNCE = 'bounce'
   PLAYLAB = STUDIO = 'studio'
+  STUDIO_EC = 'StudioEC'
   APPLAB = WEBAPP = 'applab'
   NETSIM = 'netsim'
   MAZE = 'maze'
@@ -30,6 +47,10 @@ class Game < ActiveRecord::Base
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
+  end
+
+  def self.studio_ec
+    @@game_custom_studio ||= find_by_name("StudioEC")
   end
 
   def self.custom_artist
@@ -52,6 +73,26 @@ class Game < ActiveRecord::Base
     @@game_netsim ||= find_by_name("NetSim")
   end
 
+  def self.pixelation
+    @@game_pixelation ||= find_by_name("Pixelation")
+  end
+
+  def self.text_compression
+    @@game_text_compression ||= find_by_name("TextCompression")
+  end
+
+  def self.odometer
+    @@game_odometer ||= find_by_name("Odometer")
+  end
+
+  def self.vigenere
+    @@game_vigenere ||= find_by_name("Vigenere")
+  end
+
+  def self.frequency_analysis
+    @@game_frequency_analysis ||= find_by_name("FrequencyAnalysis")
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -65,11 +106,11 @@ class Game < ActiveRecord::Base
   end
 
   def supports_sharing?
-    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == APPLAB
+    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
   end
 
   def share_mobile_fullscreen?
-    app == FLAPPY || app == BOUNCE || app == STUDIO || app == APPLAB
+    app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
   end
 
   def flappy?
@@ -84,12 +125,13 @@ class Game < ActiveRecord::Base
     app == NETSIM
   end
 
-  def has_footer?
-    !(app == APPLAB)
+  def uses_small_footer?
+    app == NETSIM || app == APPLAB
   end
 
-  def uses_small_footer?
-    app == NETSIM
+  # True if the app takes responsability for showing footer info
+  def owns_footer_for_share?
+    app === APPLAB
   end
 
   def has_i18n?
@@ -145,6 +187,11 @@ class Game < ActiveRecord::Base
         Applab:applab
         NetSim:netsim
         External:external
+        Pixelation:pixelation
+        TextCompression:text_compression
+        Odometer:odometer
+        FrequencyAnalysis:frequency_analysis
+        Vigenere:vigenere
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

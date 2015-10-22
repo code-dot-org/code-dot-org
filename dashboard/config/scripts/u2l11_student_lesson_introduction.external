@@ -13,13 +13,13 @@ Internet protocols define how computers "talk" to one another on the Internet. M
 
 # Vocabulary
 
-HTTP: Hypertext Transfer Protocol (HTTP) is the protocol used by the World Wide Web. It describes how messages are formatted and interchanged, and how web servers respond to commands.
+**HTTP: Hypertext Transfer Protocol (HTTP)** is the protocol used by the World Wide Web. It describes how messages are formatted and interchanged, and how web servers respond to commands.
 
-Abstraction: Reducing information and detail to focus on essential characteristics
+**Abstraction:** Reducing information and detail to focus on essential characteristics
 
-Server: A computer that awaits and responds to requests for data
+**Server:** A computer that awaits and responds to requests for data
 
-Client: A computer that requests data stored on a server
+**Client:** A computer that requests data stored on a server
 
 # Lesson
 
@@ -35,19 +35,3 @@ Client: A computer that requests data stored on a server
 
 
 MARKDOWN
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

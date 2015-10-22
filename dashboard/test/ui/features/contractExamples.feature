@@ -7,7 +7,7 @@ Background: Testing example add and removal
   And I am a student
   And I am on "http://learn.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
   And I rotate to landscape
-  And I press "x-close"
+  And I close the dialog
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 
@@ -37,10 +37,13 @@ Scenario: Expected failure to hotkey-delete function definition block
   And I press delete
   Then block "function definition" has not been deleted
 
+# Skip due to bug: https://www.pivotaltracker.com/story/show/102630766
+@skip
 @no_mobile
 Scenario: Deleting an example block via delete key
   When I click block "second example"
   And the contract editor has 2 examples
   And I press delete
+  And I wait for 2 seconds
   Then block "second example" has been deleted
   And the contract editor has 1 example

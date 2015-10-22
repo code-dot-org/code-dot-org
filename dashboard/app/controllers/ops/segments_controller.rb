@@ -24,7 +24,7 @@ module Ops
 
     # PATCH/PUT /ops/segments/1
     def update
-      @segment.update!(params[:segment])
+      @segment.update!(segment_params)
       respond_with @segment
     end
 
@@ -35,13 +35,9 @@ module Ops
     end
 
     private
-    # Required for CanCanCan to work with strong parameters
-    # (see: http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
+
     def segment_params
-      params.require(:segment).permit(
-        :start,
-        :end
-      )
+      params.require(:segment).permit(:start, :end)
     end
   end
 end

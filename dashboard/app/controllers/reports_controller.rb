@@ -56,6 +56,39 @@ SQL
     render 'usage', formats: [:html]
   end
 
+  def search_for_teachers
+    authorize! :read, :reports
+
+    email_filter = "%#{params[:emailFilter]}%"
+    address_filter = "%#{params[:addressFilter]}%"
+
+    # TODO(asher): Determine whether we should be doing an inner join or a left
+    # outer join.
+    @teachers = User.limit(100).where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id')
+
+    # If requested, join with the workshop_attendance table to filter out based
+    # on PD attendance.
+    if params[:pd] == "pd"
+      @teachers = @teachers.joins("INNER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").distinct
+    elsif params[:pd] == "nopd"
+      @teachers = @teachers.joins("LEFT OUTER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").where("workshop_attendance.teacher_id IS NULL").distinct
+    end
+
+    # Prune the set of fields to those that will be displayed.
+    @headers = ['ID', 'Name', 'Email', 'Address', 'Num Students']
+    @teachers = @teachers.pluck('id', 'name', 'email', 'full_address', 'COUNT(followers.id) AS num_students')
+  end
+
+  def csp_pd_responses
+    authorize! :read, :reports
+
+    @headers = ['Level ID', 'ID', 'Data']
+    @responses = {}
+    [3911, 3909, 3910, 3907].each do |level_id|
+      @responses[level_id] = LevelSource.limit(50).where(level_id: level_id).pluck(:level_id, :id, :data)
+    end
+  end
+
   def admin_stats
     authorize! :read, :reports
 
@@ -204,10 +237,12 @@ SQL
     authorize! :read, :reports
     require 'date'
 # noinspection RubyResolve
-    require '../dashboard/scripts/archive/ga_client/ga_client'
+    require Rails.root.join('scripts/archive/ga_client/ga_client')
 
     @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
     @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
+
+    @is_sampled = false
 
     output_data = {}
     %w(Attempt Success).each do |key|
@@ -218,9 +253,8 @@ SQL
         filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
       end
       ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
-      if ga_data.data.containsSampledData
-        throw new ArgumentError 'Google Analytics response contains sampled data, aborting.'
-      end
+
+      @is_sampled ||= ga_data.data.contains_sampled_data
 
       ga_data.data.rows.each do |r|
         label = r[0]

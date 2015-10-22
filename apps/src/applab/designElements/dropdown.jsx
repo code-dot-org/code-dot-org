@@ -1,5 +1,4 @@
 /* global $ */
-var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
@@ -25,7 +24,7 @@ var DropdownProperties = React.createClass({
       <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true} />
         <OptionsSelectRow
@@ -89,7 +88,7 @@ var DropdownEvents = React.createClass({
   },
 
   getChangeEventCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
       '  console.log("Selected option: " + getText("' + id + '"));\n' +
@@ -110,7 +109,7 @@ var DropdownEvents = React.createClass({
       <div id='eventRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
         <EventHeaderRow/>

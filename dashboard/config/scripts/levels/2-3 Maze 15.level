@@ -9,7 +9,7 @@
     "skin": "birds",
     "instructions": "Use two loops to get to the pig using fewer blocks.",
     "start_direction": "1",
-    "step_mode": "0",
+    "step_mode": 1,
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "6"

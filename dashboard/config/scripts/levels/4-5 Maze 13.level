@@ -9,7 +9,7 @@
     "skin": "birds",
     "instructions": "Get me to the pig!",
     "start_direction": "2",
-    "step_mode": 0
+    "step_mode": 1
   }
 }]]></config>
   <blocks/>

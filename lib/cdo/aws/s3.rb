@@ -2,10 +2,6 @@ require 'aws-sdk'
 
 module AWS
   module S3
-
-    # Region for storing S3 buckets. TODO: Move this to the CDO configuration.
-    S3_REGION = 'us-east-1'
-
     # An exception class used to wrap the underlying Amazon NoSuchKey exception.
     class NoSuchKey < Exception
       def initialize(message = nil)
@@ -17,10 +13,7 @@ module AWS
     # the credentials specified in the CDO config.
     # @return [Aws::S3::Client]
     def self.connect_v2!
-      s3_params = {access_key_id: CDO.s3_access_key_id,
-                   secret_access_key: CDO.s3_secret_access_key,
-                   region: S3_REGION}
-      Aws::S3::Client.new(s3_params)
+      Aws::S3::Client.new
     end
 
     # A simpler name for connect_v2!
@@ -55,7 +48,7 @@ module AWS
     end
 
     def self.public_url(bucket, filename)
-      Aws::S3::Object.new(bucket, filename, region: S3_REGION).public_url
+      Aws::S3::Object.new(bucket, filename, region: CDO.aws_region).public_url
     end
   end
 end

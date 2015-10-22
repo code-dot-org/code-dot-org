@@ -28,13 +28,10 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-**In-person**
+
 
 Milestone Complete!
 
-**Online Study**
-
-<b><i>Deadline:</b> Phase 2 online is due on September 7th.</i>
 
 
 
@@ -57,7 +54,7 @@ Quarter 4: Saturday, April 30, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**Sept 26th Location**
+**September 26th Location**
 
 [Talaris Conference Center](http://www.talarisconferencecenter.com/)
 <br />
@@ -68,11 +65,11 @@ Cedar Room
 Seattle, WA 98105
 <br />
 
-Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000 and let them know you are attending the Code.org's Exploring Computer Science event.
+Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000 and let them know you are attending the Code.org's Exploring Computer Science event. Go [here](http://www.talarisconferencecenter.com/maps-directions.php) for a map and directions.
 
 **What to bring to Phase 3 quarterly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
 ECS green journal
 <br/>Curriculum guide
@@ -98,16 +95,14 @@ More info coming soon!
 Milestone Complete! 
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
-**In-person**
+
 
 Milestone Complete!
 
-**Online Study**
 
-<b><i>Deadline:</b> Phase 2 online is due on September 7th.</i>
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Algebra. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
 **Save the dates**
@@ -116,12 +111,22 @@ Semester 1: Saturday, November 7, 2015
 
 Semester 2: Saturday, April 30, 2016 
 
-8:00am - 4:00pm
+8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
-<br/><br/>
-**Location**
 
-TBD
+**November 7th Location**
+
+[Talaris Conference Center](http://www.talarisconferencecenter.com/)
+<br />
+Lodge Conference Room
+<br />
+4000 NE 41st Street
+<br />
+Seattle, WA 98105
+<br />
+
+
+Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000 and let them know you are attending the Code.org's CS in Algebra event. Go [here](http://www.talarisconferencecenter.com/maps-directions.php) for a map and directions.
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -146,17 +151,13 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-**In-person**
 
 Milestone Complete!
 
-**Online Study**
-
-<b><i>Deadline:</b> Phase 2 online is due on September 7th.</i>
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Algebra. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
 **Save the dates:**
@@ -165,11 +166,10 @@ Semester 1: Saturday, September 26, 2015
 
 Semester 2: Saturday, February 20, 2016 
 
-8:00am - 4:00pm
-
+8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
-<br/><br/>
-**Sept 26th Location**
+
+**September 26th Location**
 
 [Talaris Conference Center](http://www.talarisconferencecenter.com/)
 <br />
@@ -180,7 +180,8 @@ Maple Room
 Seattle, WA 98105
 <br />
 
-Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000and let them know you are attending the Code.org CS in Science event.
+Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000and let them know you are attending the Code.org CS in Science event. Go [here](http://www.talarisconferencecenter.com/maps-directions.php) for a map and directions.
+
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -194,6 +195,37 @@ Water
 
 
 [**Back to the top**](#top)
+
+<a id="counselor-admin"></a>
+
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
+
+
+### Counselors##
+
+**Save the date**
+
+Thursday, November 5th, 2015 <br/>
+8:00am - 10:00am
+
+**Location**
+
+TBD 
+
+
+### Administrators##
+
+**Save the date**
+
+Thursday, November 5th, 2015  <br/>
+11:00am - 3:00pm
+
+**Location**
+
+TBD
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

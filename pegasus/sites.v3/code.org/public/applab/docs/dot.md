@@ -9,7 +9,6 @@ embedded_layout: simple_embedded
 
 [/name]
 
-
 [category]
 
 Category: Turtle
@@ -20,9 +19,11 @@ Category: Turtle
 
 [short_description]
 
-Draws a dot in the turtle's location with the specified radius.
+Draws a dot centered at the turtle's location with the specified radius.
 
 [/short_description]
+
+Drawing a dot is one of the ways to draw with the turtle. There are many things you can draw with just dots and lines, along wth the ability to change the pen color, line thickness and dot radius.
 
 [/description]
 
@@ -31,10 +32,10 @@ ____________________________________________________
 
 [example]
 
-<pre>
-dot(5);     //  Draws a radius 5 pixel dot
-hide();     // Hide the turtle so we can actually see the dot
-</pre>
+```
+//  Draw a 5 pixel radius dot.
+dot(5);
+```
 
 [/example]
 
@@ -42,9 +43,12 @@ ____________________________________________________
 
 [example]
 
-<pre>
-dot(150);   // Draws a really big dot
-</pre>
+**Example: Large Dot** Draw a really big dot.
+
+```
+// Draw a really big dot.
+dot(150);
+```
 
 [/example]
 
@@ -52,14 +56,51 @@ ____________________________________________________
 
 [example]
 
-<pre>
-// Draw a lot of random dots!
-penUp();        // We only want dots, no lines
-while (true) {  // Loop forever
-  moveTo(randomNumber(320), randomNumber(480)); // Jump to a random position on the display
-  dot(randomNumber(1, 10));                     // draw a random sized dot there
+**Example: Fill the Screen** Draw a huge dot to change the color of the entire screen.
+
+```
+// Draw a huge dot to change the color of the entire screen.
+penColor("red");
+dot(300);
+```
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Example: Mickey Mouse** Draw Mickey Mouse with three dots.
+
+```
+// Draw Mickey Mouse with three dots.
+penUp();
+dot(100);
+moveForward(125);
+turnLeft();
+moveForward(75);
+dot(50);
+turnLeft(180);
+moveForward(150);
+dot(50);
+```
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Example: Dalmatian** Draw a lot of random sized dots at random locations.
+
+```
+// Draw a lot of random sized dots at random locations.
+penUp();
+for (var i = 0; i < 500; i++) {
+  moveTo(randomNumber(320), randomNumber(480));
+  dot(randomNumber(1, 10));
 }
-</pre>
+```
 
 [/example]
 
@@ -68,9 +109,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 dot(radius);
-</pre>
+```
 
 [/syntax]
 
@@ -80,7 +122,7 @@ dot(radius);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| radius | number | Yes | The radius of the dot to draw  |
+| radius | number | Yes | The radius (in pixels) of the dot to draw  |
 
 [/parameters]
 
@@ -95,6 +137,7 @@ No return value. Outputs to the display only.
 
 ### Tips
 - When drawing small dots, make sure you move or hide the turtle so you can actually see them.
+- Draw a huge dot to color the screen all one color.
 
 [/tips]
 

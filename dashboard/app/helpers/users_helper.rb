@@ -1,12 +1,15 @@
 module UsersHelper
+  include ApplicationHelper
 
   # Summarize the current user's progress within a certain script.
   def summarize_user_progress(script, user = current_user)
     user_data = {}
+    uls = {}
+    script_levels = script.script_levels
     if user
       lines = user.total_lines
-      script_levels = user.levels_from_script(script)
 
+      uls = user.user_levels_by_level(script)
       user_data[:disableSocialShare] = true if user.under_13?
 
       if script.trophies
@@ -22,7 +25,7 @@ module UsersHelper
         end
       end
     else
-      lines = session[:lines] || 0
+      lines = client_state.lines
       script_levels = script.script_levels
     end
 
@@ -33,9 +36,9 @@ module UsersHelper
 
     user_data[:levels] = {}
     script_levels.each do |sl|
-      completion_status = level_info(user, sl)
+      completion_status = level_info(user, sl, uls)
       if completion_status != 'not_tried'
-        user_data[:levels][sl.level.id] = {
+        user_data[:levels][sl.level_id] = {
           status: completion_status
           # More info could go in here...
         }

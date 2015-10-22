@@ -42,7 +42,8 @@ linters:
     enabled: false
 
   TrailingWhitespace:
-    enabled: false
+    exclude:
+      - 'pegasus/**/*.haml'
 
   UnnecessaryInterpolation:
     enabled: false

@@ -6,13 +6,10 @@ require File.expand_path '../../middleware/channels_api', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
-class SourcesTest < Minitest::Unit::TestCase
+class SourcesTest < Minitest::Test
 
   def setup
-    # The Sources API does not *currently* need to share a cookie jar with the Channels API,
-    # but it may once we restrict put, delete and list operations to the channel owner.
-    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, 'studio.code.org'))
-    @files = Rack::Test::Session.new(Rack::MockSession.new(FilesApi, 'studio.code.org'))
+    init_apis
   end
 
   def test_source_versions
@@ -45,6 +42,9 @@ class SourcesTest < Minitest::Unit::TestCase
     assert_equal file_data, @files.last_response.body
     @files.get "/v3/sources/#{channel}/#{filename}?version=#{versions.first['versionId']}"
     assert_equal new_file_data, @files.last_response.body
+
+    # Check cache headers
+    assert_equal 'private, must-revalidate, max-age=0', @files.last_response['Cache-Control']
   end
 
   def test_replace_version
@@ -68,5 +68,19 @@ class SourcesTest < Minitest::Unit::TestCase
     assert @files.last_response.successful?
     versions = JSON.parse(@files.last_response.body)
     assert_equal 1, versions.count
+  end
+
+  # Methods below this line are test utilities, not actual tests
+  private
+
+  def init_apis
+    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, 'studio.code.org'))
+
+    # Make sure the sources api has the same storage id cookie used by the channels api.
+    @channels.get '/v3/channels'
+    cookies = @channels.last_response.headers['Set-Cookie']
+    sources_mock_session = Rack::MockSession.new(FilesApi, "studio.code.org")
+    sources_mock_session.cookie_jar.merge(cookies)
+    @files = Rack::Test::Session.new(sources_mock_session)
   end
 end

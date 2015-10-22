@@ -35,9 +35,10 @@ ____________________________________________________
 [example]
 
 
-<pre>
+
+```
 checkbox("checkbox1", true);
-</pre>
+```
 
 [/example]
 
@@ -49,12 +50,13 @@ ____________________________________________________
 
 Getting the state of a checkbox:
 
-<pre>
+
+```
 checkbox("checkbox1", true);                // Create a checked checkbox with id checkbox1
 var isChecked = getChecked("checkbox1");    // isChecked will be assigned the boolean value true
 
 console.log("The value of isChecked is " + isChecked);
-</pre>
+```
 
 [/example]
 
@@ -66,7 +68,8 @@ ____________________________________________________
 
 Many websites have a registration page where users are asked to accept the terms of service by checking a checkbox.
 
-<pre>
+
+```
 checkbox("checkbox1", false);
 textLabel("label1", "I accept the terms of service");
 
@@ -82,7 +85,7 @@ onEvent("button1", "click", function(){                   // Whenever the "Regis
     write("You must accept the terms of service");
   }
 });
-</pre>
+```
 
 
 [/example]
@@ -93,9 +96,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 checkbox(id, checked);
-</pre>
+```
 
 [/syntax]
 

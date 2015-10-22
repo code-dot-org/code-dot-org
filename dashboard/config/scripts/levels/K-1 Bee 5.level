@@ -11,7 +11,7 @@
     "skin": "bee",
     "instructions": "Get three nectar and then make three honey!",
     "start_direction": "2",
-    "step_mode": "0",
+    "step_mode": 1,
     "is_k1": "true",
     "nectar_goal": "3",
     "honey_goal": "3",

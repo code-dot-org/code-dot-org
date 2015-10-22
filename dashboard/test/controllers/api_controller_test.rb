@@ -15,6 +15,7 @@ class ApiControllerTest < ActionController::TestCase
     @student_3 = create(:follower, section: @flappy_section).student_user
     @student_4 = create(:follower, section: @flappy_section).student_user
     @student_3.backfill_user_scripts
+    @student_3.reload
   end
 
   test "should get progress for section with default script" do
@@ -85,11 +86,13 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get user_hero for student with script" do
-    sign_in @student_3
+    user_script = create(:user_script, script: Script.get_from_cache(Script::FLAPPY_NAME))
+    sign_in user_script.user
+
     get :user_hero
 
     assert_select '#welcome.student'
-    assert_select '#currentprogress'
+    assert_select '#currentprogress', true, "Response was: #{@response.body}"
   end
 
   test "should get user_hero for student with no script" do

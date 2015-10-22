@@ -14,6 +14,10 @@ exports.setBackground = function (id, value) {
   Studio.queueCmd(id, 'setBackground', {'value': value});
 };
 
+exports.setMap = function (id, value) {
+  Studio.queueCmd(id, 'setMap', {'value': value});
+};
+
 exports.setSprite = function (id, spriteIndex, value) {
   Studio.queueCmd(id, 'setSprite', {
     'spriteIndex': spriteIndex,
@@ -117,17 +121,44 @@ exports.changeScore = function(id, value) {
   Studio.queueCmd(id, 'changeScore', {'value': value});
 };
 
-exports.addItemsToScene = function(id, className, number) {
-  Studio.queueCmd(id, 'addItemsToScene', {
-    'className': className,
-    'number': number
+exports.addCharacter = function(id, className) {
+  Studio.queueCmd(id, 'addItem', {
+    'className': className
   });
 };
 
-exports.setItemAction = function(id, itemIndex, type) {
-  Studio.queueCmd(id, 'setItemAction', {
-    'itemIndex': itemIndex,
+exports.setItemActivity = function(id, className, type) {
+  Studio.queueCmd(id, 'setItemActivity', {
+    'className': className,
     'type': type
+  });
+};
+
+exports.setItemSpeed = function(id, className, speed) {
+  Studio.queueCmd(id, 'setItemSpeed', {
+    'className': className,
+    'speed': speed
+  });
+};
+
+exports.moveFast = function(id, className) {
+  Studio.queueCmd(id, 'setItemSpeed', {
+    'className': className,
+    'speed': constants.SpriteSpeed.FAST
+  });
+};
+
+exports.moveNormal = function(id, className) {
+  Studio.queueCmd(id, 'setItemSpeed', {
+    'className': className,
+    'speed': constants.SpriteSpeed.SLOW
+  });
+};
+
+exports.moveSlow = function(id, className) {
+  Studio.queueCmd(id, 'setItemSpeed', {
+    'className': className,
+    'speed': constants.SpriteSpeed.VERY_SLOW
   });
 };
 

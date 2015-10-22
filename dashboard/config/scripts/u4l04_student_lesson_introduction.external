@@ -1,0 +1,29 @@
+name 'U4L04 Student Lesson Introduction'
+title 'title'
+description 'description here'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Unit 4: Lesson 04 - Data App Part 1: Brainstorm
+
+# Background
+
+Background goes here
+
+# Vocabulary
+* **Word 1:** Definition 1
+* **Word 2:** Definition 2 
+
+# Lesson
+
+* Activity description 1
+* Activity description 2
+
+# Resources
+
+* Worksheet: <a href="https://docs.google.com/document/d/10nErwTefifuDOj926qSxF4Mv4GqY5mJAEsVWUCAtlvo/edit” target="_blank">Data App - Audience and Goals</a>
+* Worksheet: <a href="https://docs.google.com/document/d/1motGnBuuXaQ7U_XsNQtJoo5oT8xJ8r5fJqwcmnZ989c/edit” target="_blank"> Data App - Rubric</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

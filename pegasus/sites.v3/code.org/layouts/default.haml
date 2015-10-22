@@ -19,6 +19,9 @@
   -else
     -containerClass = "container_nonresponsive"
 
+  - if header['state-facts']
+    %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/state-facts.css'}
+
   %div{:class=>containerClass}
 
     -if header['theme'] == 'responsive'
@@ -45,7 +48,8 @@
         -if header['rightbar']
           -contentWidth -= 180
 
-        %div{:style=>"width: #{contentWidth}px; float: left; margin: 0; padding: 0;"}= body
+        %div{:style=>"width: #{contentWidth}px; float: left; margin: 0; padding: 0;"}
+          = body
 
         -if header['rightbar']
           %div{:style=>'width: 140px; margin-left: 40px; float: left;'}

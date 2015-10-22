@@ -22,7 +22,10 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "Here we've nested an Addition Block inside a Multiplication Block. Complete this code so it multiplies 3 by (4 + 1)",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

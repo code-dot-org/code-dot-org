@@ -39,14 +39,15 @@ ____________________________________________________
 
 This example demonstrates the use of `drawImage` and the effect of specifying width and height values. The cat image is drawn at three different positions, in three different sizes. When width and height are not specified, the image is drawn at its original size.
 
-<pre>
+
+```
 //Create an image element (cat_thumb.png is 100x100 pixels)
 image("cat", "http://studio.code.org/blockly/media/skins/studio/cat_thumb.png");
 createCanvas();                         //Create a canvas on which to draw
 drawImage("cat", 0, 200);               //Draw "cat" at regular size (100x100)
 drawImage("cat", 100, 100, 100, 200);   //Draw "cat" with double height (100x200)
 drawImage("cat", 0, 300, 200, 100);     //Draw "cat" with double width (200x100)
-</pre>
+```
 
 [/example]
 
@@ -56,13 +57,14 @@ ____________________________________________________
 
 In this example, the image element is hidden so that only the canvas image is visible.
 
-<pre>
+
+```
 //Create an image element (cat_thumb.png is 100x100 pixels)
 image("cat", "http://studio.code.org/blockly/media/skins/studio/cat_thumb.png");
 hideElement("cat");         //Hide the original image element
 createCanvas();             //Create a canvas on which to draw
 drawImage("cat", 0, 0, 320, 480); //Draw "cat" full-screen
-</pre>
+```
 
 [/example]
 
@@ -74,7 +76,8 @@ This example draws one canvas onto another canvas. First, a small canvas is crea
 
 The canvas with the blue circle segment is then drawn repeatedly across a second canvas to create a scalloped pattern, like waves.
 
-<pre>
+
+```
 //Create a small canvas and draw a large circle onto it,
 //off-center so that most of the circle is clipped.
 createCanvas("wave", 60, 40);
@@ -88,7 +91,7 @@ setActiveCanvas("water");
 for (var x = 0; x < 320; x += 60) {
   drawImage("wave", x, 300);
 }
-</pre>
+```
 
 [/example]
 
@@ -100,7 +103,8 @@ This example combines techniques from previous examples to draw an octopus under
 
 In this example, the elements referenced in the `drawImage()` calls are hidden, so that only the final drawing is visible. The elements being drawn by `drawImage()` do not need to be visible to be drawn onto a canvas.
 
-<pre>
+
+```
 //Create and hide an image
 image("octopus", "http://studio.code.org/blockly/media/skins/studio/octopus_thumb.png");
 hideElement("octopus");
@@ -118,7 +122,7 @@ for (var x = 0; x < 320; x += 60) {
   drawImage("wave", x, 300);
 }
 drawImage("octopus", 110, 350);
-</pre>
+```
 
 [/example]
 
@@ -127,9 +131,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 drawImage(id, x, y, width, height);
-</pre>
+```
 
 [/syntax]
 

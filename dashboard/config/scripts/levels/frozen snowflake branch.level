@@ -23,7 +23,17 @@
     "embed": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"frozen_snowflake_branch\",\"callout_text\":\"Use the \\\"create a snowflake branch\\\" block\",\"element_id\":\"#create_branch_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false",
-    "permitted_errors": "0"
+    "permitted_errors": "0",
+    "markdown_instructions": "Try using the ”Create a snowflake branch” block to create three branches, which starts to look like a snowflake.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/8ac71bed65fe0a472a6cc7629e8fdac9-image-1442593741401.png)\r\n</details>\r\n</h4>",
+    "never_autoplay_video": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

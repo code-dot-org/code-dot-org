@@ -1,6 +1,5 @@
 // TODO (brent) - way too many globals
-// TODO (brent) - I wonder if we should sub-namespace dashboard
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
+/* global script_path, Dialog, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
@@ -14,7 +13,7 @@ window.apps = {
   // Legacy Blockly initialization that was moved here from _blockly.html.haml.
   // Modifies `appOptions` with some default values in `baseOptions`.
   // TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.
-  setupBlockly: function () {
+  setupApp: function (appOptions) {
 
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
@@ -30,11 +29,11 @@ window.apps = {
       cdoSounds: CDOSounds,
       position: {blockYCoordinateInterval: 25},
       onInitialize: function() {
-        dashboard.createCallouts(this.callouts);
+        dashboard.createCallouts(this.level.callouts || this.callouts);
         if (window.dashboard.isChrome34) {
           chrome34Fix.fixup();
         }
-        if (appOptions.level.projectTemplateLevelName) {
+        if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
           $('#clear-puzzle-header').hide();
           $('#versions-header').show();
         }

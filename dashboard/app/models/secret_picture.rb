@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: secret_pictures
+#
+#  id         :integer          not null, primary key
+#  name       :string(255)      not null
+#  path       :string(255)      not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+# Indexes
+#
+#  index_secret_pictures_on_name  (name) UNIQUE
+#  index_secret_pictures_on_path  (path) UNIQUE
+#
+
 class SecretPicture < ActiveRecord::Base
   include Seeded
 

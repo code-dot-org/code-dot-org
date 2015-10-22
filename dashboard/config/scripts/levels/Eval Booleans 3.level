@@ -15,7 +15,7 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "free_play": "false",
-    "markdown_instructions": "The `string-length` function returns the number of characters in a string (including spaces!) - make this code evaluate to _true_.",
+    "markdown_instructions": "The `string-length` function returns the number of characters in a string (including spaces!) - make this code evaluate to *true*.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -24,7 +24,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "coordinate_grid_background": "false",
-    "examples_required": "false"
+    "examples_required": "false",
+    "never_autoplay_video": "false"
   }
 }]]></config>
   <blocks>

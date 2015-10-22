@@ -142,6 +142,10 @@ $wide-column-width: 121px;
     height: 100%;
     margin: auto;
     overflow-y: auto;
+
+    #netsim-scrolling-lobby {
+      overflow-y: auto;
+    }
   }
 
   #netsim-leftcol {
@@ -429,6 +433,10 @@ $wide-column-width: 121px;
     table {
       margin-bottom: 1em;
 
+      &.nomargin {
+        margin-bottom: 0;
+      }
+
       img {
         height: 14px;
         vertical-align: text-top;
@@ -507,7 +515,7 @@ $wide-column-width: 121px;
 
     h1 {
       margin: 0;
-      padding: 0.3em 0.5em;
+      padding: 0.3em;
       font-family: $gotham-regular;
       font-size: 110%;
       font-weight: bold;
@@ -525,6 +533,10 @@ $wide-column-width: 121px;
         .netsim-button {
           margin-left: 3px;
         }
+      }
+
+      .pad-left {
+        padding-left: 0.2em;
       }
     }
 

@@ -17,6 +17,15 @@ class NotesControllerTest< ActionController::TestCase
     end
   end
 
+  test 'should raise RuntimeError if there is no slide in english' do
+    # there is no slide 100 in english
+    fake_slides = {100 => {image: 'notes/flappy01.jpg', text: 'here is some text'}}
+    @controller.stubs(:params).returns({key: 'flappy_intro'})
+    assert_raises(RuntimeError) do
+      @controller.send(:fix_slide_images, fake_slides)
+    end
+  end
+
   test 'should show coming soon for missing slides' do
     get :index, key: 'nonexistent_slide_key'
     assert_template 'notes/coming_soon'

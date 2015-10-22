@@ -23,7 +23,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "examples_required": "true"
+    "examples_required": "true",
+    "markdown_instructions": "Let's look at some more traditional algebraic functions now. Here's a function translated from the simple algebraic function `f(x) = x + 1`. What would you expect this function to output if provided an input of 15?",
+    "never_autoplay_video": "false"
   }
 }]]></config>
   <blocks>

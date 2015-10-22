@@ -9,6 +9,7 @@ nav: pd2_nav
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
+- [I'm attending Counselor-Administrator PD](#counselor-admin)
 
 
 <a id="ecs"></a>
@@ -21,61 +22,8 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-**Save the dates**
 
-Monday, July 27, 2015 - Friday, July 31, 2015
-<br/>
-Mon - Thurs: 8:30am - 3:30pm
-<br/>
-Friday: 8:30am - 1:30pm
-<br/>
-Breakfast and lunch will be served. 
-
-**Location**
-
-University of California Irvine
-<br />
-Donald Bren Hall
-<br />
-6th Floor, Room 6011
-<br />
-Irvine, CA 92617
-
-For directions to Donald Bren Hall go here: [http://tinyurl.com/DonaldBrenHall](http://tinyurl.com/DonaldBrenHall)
-
-We were able to reserve UCI parking permits for your attendance next week. Please note, your parking lot changes on Thursday.
- 
-**Monday, Tuesday and Wednesday Parking Instructions**
-<br />
-Park in the Anteater Parking Structure on the corner of East Peltason Drive and Anteater Drive. There will be signs at all campus entrances leading you to the parking lot and we highly recommend you [get directions](http://tinyurl.com/AnteaterParking) ahead of time. There will be a parking attendant and you will need to tell them you are with the Code.org Professional Development event. You will then receive your permit and instructions on where to park and how to exit the parking structure. We will also have pedestrian signs leading you to Donald Bren Hall.
- 
-**Thursday and Friday Parking Instructions**
-<br />
-Park at the University Club Parking Lot, 801 East Peltason Drive
-<br />
-[http://tinyurl.com/UClubUCI](http://tinyurl.com/UClubUCI)
-<br />
-No permit is required.
-
-[Click here](http://communications.uci.edu//documents/pdf/UCI_14_map_campus_core.pdf) for a campus map.
-<br />
-Anteater Parking Structure is in quadrant H-10 on the map
-<br />
-Donald Bren Hall is Bldg 314 and in quadrant H-8 on the map
-<br />
-The University Club is Bldg 801 and in quadrant H-8 on the map.
-
-
-**What do I bring to Phase 2?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop optional, not required
-
-</br>
-</br>
+Milestone Complete!
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -97,15 +45,21 @@ Quarter 4: Saturday, April 23, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**Location**
+**November 7th Location**
 
-TBD
+Orange County Department of Education<br/>
+Board Room<br/>
+200 Kalmus Dr<br/>
+Costa Mesa, CA 92626
+
+For a campus map and parking information, [click here](code.org/files/OCDEmap.pdf)
 
 **What to bring to Phase 3 quarterly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
-ECS green journal and curriculum guide
+ECS green journal <br/>
+Curriculum guide
 <br/>
 Snacks
 <br/>
@@ -125,99 +79,46 @@ More info coming soon!
 ### Phase 1: Online Introduction (~2 hours) ###
 
 Milestone complete!
-</br>
-</br>
+
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-**Save the dates:**
 
-Monday, July 27, 2015 - Wednesday, July 29, 2015
-<br/>
-8:00am - 4:00pm
-<br />
-Breakfast and lunch will be served. 
-
-**Location**
-
-University of California Irvine
-<br />
-Donald Bren Hall
-<br />
-2nd Floor, Room 2011
-<br />
-Irvine, CA 92617
-
-For directions to Donald Bren Hall go here: [http://tinyurl.com/DonaldBrenHall](http://tinyurl.com/DonaldBrenHall)
-<br />
-We were able to reserve UCI parking permits for your attendance next week. Please note, your parking lot changes on Tuesday.
- 
-**Monday Parking Instructions**
-<br />
-Park in the Anteater Parking Structure on the corner of East Peltason Drive and Anteater Drive. There will be signs at all campus entrances leading you to the parking lot and we highly recommend you [get directions](http://tinyurl.com/AnteaterParking) ahead of time. There will be a parking attendant and you will need to tell them you are with the Code.org Professional Development event. You will then receive your permit and instructions on where to park and how to exit the parking structure. We will also have pedestrian signs leading you to Donald Bren Hall.
- 
-**Tuesday and Wednesday Parking Instructions**
-<br />
-Park at the University Club Parking Lot, 801 East Peltason Drive
-<br />
-[http://tinyurl.com/UClubUCI](http://tinyurl.com/UClubUCI)
-<br />
-No permit is required.
-
-[Click here](http://communications.uci.edu//documents/pdf/UCI_14_map_campus_core.pdf) for a campus map.
-<br />
-Anteater Parking Structure is in quadrant H-10 on the map
-<br />
-Donald Bren Hall is Bldg 314 and in quadrant H-8 on the map
-<br />
-The University Club is Bldg 801 and in quadrant H-8 on the map.
-
-
-**What do I bring to Phase 2?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop
+Milestone Complete!
 
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
 
-Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Algebra. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
 **Save the dates:**
 
-Semester 1: Saturday, October 10, 2015 in Orange County.
+Semester 1: Saturday, October 10, 2015 
 
 
-Semester 2: Saturday, April 16, 2016 in Los Angeles.
+Semester 2: Saturday, April 16, 2016
 
-8:30am - 3:30pm
+8:00am - 4:00pm
 <br/>
 Breakfast and lunch will be served.
 
 **Location**
 
-TBD
+Columbia Memorial Space Center<br/> 
+12400 Columbia Way<br/> 
+Downey, CA 90242
 
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop
 <br/>
-ECS green journal and curriculum guide
+Curriculum guide
 <br/>
 Snacks
 <br/>
 Water
-
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
-
-More info coming soon!
-
-
-[**Back to the top**](#top)
+<br/><br/>[**Back to the top**](#top)
 
 <a id="science"></a>
 
@@ -226,45 +127,19 @@ More info coming soon!
 ### Phase 1: Online Introduction (~2 hours) ###
 
 Milestone complete!
-</br>
-</br>
+
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-**Save the dates:**
 
-Monday, July 27, 2015 - Wednesday, July 29, 2015
-<br/>
-8:00am - 4:00pm
-<br />
-Breakfast and lunch will be served. 
+Milestone Complete!
 
-**Location**
 
-University of California Irvine
-<br />
-Donald Bren Hall
-<br />
-4th Floor, Room 4011
-<br />
-Irvine, CA 92617
-
-For directions to Donald Bren Hall go here: [http://tinyurl.com/DonaldBrenHall](http://tinyurl.com/DonaldBrenHall)
-<br />
-Park in the Anteater Parking Structure on the corner of East Peltason Drive and Anteater Drive. There will be signs at all campus entrances leading you to the parking lot and we highly recommend you get directions ahead of time: [http://tinyurl.com/AnteaterParking](http://tinyurl.com/AnteaterParking). Tell the parking attendant you are with the Code.org Professional Development event. You will then receive your permit and instructions on where to park and how to exit the parking structure. We will also have pedestrian signs leading you to Donald Bren Hall from the parking structure.
-
-**What do I bring to Phase 2?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop
 
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
 **Save the dates:**
@@ -275,28 +150,69 @@ Semester 1: Saturday, October 17, 2015 in Orange County.
 Semester 2: Saturday, February 20, 2016 in Los Angeles.
 
 
-8:30am - 3:30pm
+8:00am - 4:00pm
 <br/>
 Breakfast and lunch will be served.
 
-**Location**
+**October 17th Location**
 
-TBD
+Ball Junior High School<br/>
+Room 37<br/>
+1500 W Ball Rd<br/>
+Anaheim, CA 92802
+
+[Click here for a School Map](/images/ball-jr-high-map.JPG)
 
 **What to bring to Phase 3 quarterly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
-ECS green journal and curriculum guide
+Curriculum guide
 <br/>
 Snacks
 <br/>
 Water
 
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-More info coming soon!
+[**Back to the top**](#top)
 
+
+<a id="counselor-admin"></a>
+
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
+
+
+### Counselors##
+
+**Save the date**
+
+Wednesday, October 21st, 2015 <br/>
+12:00pm - 2:30pm
+
+**Location**
+
+Orange USD<br/> 
+1401 N. Handy Street<br/>
+Board Rooms 1 and 2 <br/>
+Orange, CA 92867 
+
+
+### Administrators##
+
+**Save the date**
+
+Wednesday, October 21st, 2015 <br/>
+3:00pm - 5:00pm
+
+**Location**
+
+Orange USD<br/> 
+1401 N. Handy Street<br/>
+Board Rooms 1 and 2 <br/>
+Orange, CA 92867 
 
 
 [**Back to the top**](#top)

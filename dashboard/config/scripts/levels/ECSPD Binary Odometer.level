@@ -1,0 +1,14 @@
+<Odometer>
+  <config><![CDATA[{
+  "game_id": 46,
+  "created_at": "2015-09-08T19:54:08.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "instructions": "This is another resource you could use with your students.",
+    "markdown_instructions": "# Binary Odometer Widget\r\n\r\nThis widget was created as part of the Code.org Computer Science Principles class. It is a great additional resource for teaching binary!\r\n",
+    "skip_dialog": true,
+    "href": "odometer/odometer.html"
+  }
+}]]></config>
+</Odometer>

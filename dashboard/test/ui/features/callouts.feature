@@ -2,6 +2,7 @@ Feature: Callouts
 
   Background:
     Given I am on "http://learn.code.org/reset_session"
+    And execute JavaScript expression "window.localStorage.clear()"
 
   Scenario Outline: Callouts having correct content and being dismissable via the target element
     Given I am on "<url>"
@@ -24,6 +25,8 @@ Feature: Callouts
     | http://learn.code.org/hoc/15?noautoplay=true       | 0          | The instructions for each puzzle are repeated here                       | #prompt           |
     | http://learn.code.org/s/20-hour/stage/11/puzzle/1?noautoplay=true | 0          | You have all the same blocks but they've now been arranged in categories | .blocklyTreeLabel |
 
+  # See #101702822. "Watch video" section inaccessible from iPhone.
+  @no_mobile
   Scenario Outline: Callouts having correct content and being dismissable via the x-button
     Given I am on "<url>"
     And I rotate to landscape

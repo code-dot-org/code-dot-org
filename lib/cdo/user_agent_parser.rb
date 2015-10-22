@@ -10,7 +10,7 @@ class UserAgentParser::UserAgent
   end
 
   def safari?
-    name == 'Safari'
+    name == 'Safari' || name == 'Mobile Safari'
   end
 
   def ie?

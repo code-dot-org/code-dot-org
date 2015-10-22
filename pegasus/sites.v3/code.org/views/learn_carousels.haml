@@ -1,11 +1,5 @@
 - categories = [{tag:"Beginner", name: I18n.t(:carousel_heading_beginners)}, {tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}, {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}, {tag:"Apps", name: I18n.t(:carousel_heading_devices)}, {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}, {tag:"MakeApps", name: I18n.t(:carousel_heading_apps_games)}, {tag: "Univ", name: I18n.t(:carousel_heading_university)}, {tag: "Web", name: I18n.t(:carousel_heading_webpages)}, {tag: "Robot", name: I18n.t(:carousel_heading_robots)}, {tag: "IDE", name: I18n.t(:carousel_heading_ide)}]
 
--if variation == 'learn'
-  #rightbox.desktop-feature{:style=>'float:right'}
-    %a{:href=>"http://hourofcode.com/resources/how-to"}= I18n.t(:educator_notes)
-    %br/
-    %br/
-
 %div{style: "clear:both"}
 
 -tutorials = Tutorials.new(variation=='learn' ? :tutorials : :beyond_tutorials)
@@ -38,11 +32,14 @@
 -if variation == 'learn'
   %h1 
     %a{:href=>"http://hourofcode.com/resources/how-to"}
-      = I18n.t(:educator_notes)
+      = I18n.t(:how_to_teach_hoc)
 
 -if variation == 'beyond'
   %a{:href=>"/educate"}
     = I18n.t(:more_resources_educators)
+  %br
+  %a{:href=>"https://docs.google.com/document/d/1rWq7Bvr72bDjnT7tGXNPcJxizpNLbuEBmal-5vgTXag/pub"}
+    = I18n.t(:beyond_submission)
 
 :javascript
 

@@ -1,8 +1,7 @@
-/* global $ */
-
 var studioApp = require('../StudioApp').singleton;
 var AppStorage = require('./appStorage');
 var apiTimeoutList = require('../timeoutList');
+var ChartApi = require('./ChartApi');
 var RGBColor = require('./rgbcolor.js');
 var codegen = require('../codegen');
 var keyEvent = require('./keyEvent');
@@ -17,6 +16,14 @@ var ChangeEventHandler = require('./ChangeEventHandler');
 var OPTIONAL = true;
 
 var applabCommands = module.exports;
+
+/**
+ * Lookup table of asset URLs. If an asset isn't listed here, initiate a
+ * separate request to ensure it is downloaded without interruption. Otherwise
+ * a quickly changing src could cancel the download before it can be cached by
+ * the browser.
+ */
+var toBeCached = {};
 
 /**
  * @param value
@@ -137,12 +144,6 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
   }
 }
 
-function activeScreen() {
-  return $('.screen').filter(function () {
-    return this.style.display !== 'none';
-  }).first()[0];
-}
-
 // (brent) We may in the future also provide a second option that allows you to
 // reset the state of the screen to it's original (design mode) state.
 applabCommands.setScreen = function (opts) {
@@ -153,14 +154,7 @@ applabCommands.setScreen = function (opts) {
     return;
   }
 
-  // toggle all screens to be visible if equal to given id, hidden otherwise
-  $('.screen').each(function () {
-    $(this).toggle(this.id === opts.screenId);
-    if (this.id === opts.screenId) {
-      // Allow the active screen to receive keyboard events.
-      this.focus();
-    }
-  });
+  Applab.changeScreen(opts.screenId);
 };
 
 applabCommands.container = function (opts) {
@@ -171,7 +165,7 @@ applabCommands.container = function (opts) {
   newDiv.innerHTML = opts.html;
   newDiv.style.position = 'relative';
 
-  return Boolean(activeScreen().appendChild(newDiv));
+  return Boolean(Applab.activeScreen().appendChild(newDiv));
 };
 
 applabCommands.write = function (opts) {
@@ -188,9 +182,11 @@ applabCommands.button = function (opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
+  newButton.style.color = '#fff';
+  newButton.style.backgroundColor = '#1abc9c';
 
   return Boolean(newButton.appendChild(textNode) &&
-    activeScreen().appendChild(newButton));
+    Applab.activeScreen().appendChild(newButton));
 };
 
 applabCommands.image = function (opts) {
@@ -202,7 +198,7 @@ applabCommands.image = function (opts) {
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
 
-  return Boolean(activeScreen().appendChild(newImage));
+  return Boolean(Applab.activeScreen().appendChild(newImage));
 };
 
 applabCommands.imageUploadButton = function (opts) {
@@ -225,7 +221,7 @@ applabCommands.imageUploadButton = function (opts) {
 
   return Boolean(newLabel.appendChild(newInput) &&
                  newLabel.appendChild(textNode) &&
-                 activeScreen().appendChild(newLabel));
+                 Applab.activeScreen().appendChild(newLabel));
 };
 
 applabCommands.show = function (opts) {
@@ -475,7 +471,7 @@ applabCommands.createCanvas = function (opts) {
     newElement.id = opts.elementId;
     // default width/height if params are missing
     var width = opts.width || Applab.appWidth;
-    var height = opts.height || Applab.appHeight;
+    var height = opts.height || Applab.footerlessAppHeight;
     newElement.width = width;
     newElement.height = height;
     newElement.setAttribute('width', width + 'px');
@@ -495,7 +491,7 @@ applabCommands.createCanvas = function (opts) {
       Applab.activeCanvas = newElement;
     }
 
-    return Boolean(activeScreen().appendChild(newElement));
+    return Boolean(Applab.activeScreen().appendChild(newElement));
   }
   return false;
 };
@@ -682,8 +678,10 @@ applabCommands.textInput = function (opts) {
   newInput.value = opts.text;
   newInput.id = opts.elementId;
   newInput.style.position = 'relative';
+  newInput.style.height = '30px';
+  newInput.style.width = '200px';
 
-  return Boolean(activeScreen().appendChild(newInput));
+  return Boolean(Applab.activeScreen().appendChild(newInput));
 };
 
 applabCommands.textLabel = function (opts) {
@@ -699,12 +697,12 @@ applabCommands.textLabel = function (opts) {
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
   var forElement = document.getElementById(opts.forId);
-  if (forElement && activeScreen().contains(forElement)) {
+  if (forElement && Applab.activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
   }
 
   return Boolean(newLabel.appendChild(textNode) &&
-                 activeScreen().appendChild(newLabel));
+                 Applab.activeScreen().appendChild(newLabel));
 };
 
 applabCommands.checkbox = function (opts) {
@@ -718,7 +716,7 @@ applabCommands.checkbox = function (opts) {
   newCheckbox.id = opts.elementId;
   newCheckbox.style.position = 'relative';
 
-  return Boolean(activeScreen().appendChild(newCheckbox));
+  return Boolean(Applab.activeScreen().appendChild(newCheckbox));
 };
 
 applabCommands.radioButton = function (opts) {
@@ -733,7 +731,7 @@ applabCommands.radioButton = function (opts) {
   newRadio.id = opts.elementId;
   newRadio.style.position = 'relative';
 
-  return Boolean(activeScreen().appendChild(newRadio));
+  return Boolean(Applab.activeScreen().appendChild(newRadio));
 };
 
 applabCommands.dropdown = function (opts) {
@@ -752,8 +750,10 @@ applabCommands.dropdown = function (opts) {
   }
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
+  newSelect.style.color = '#fff';
+  newSelect.style.backgroundColor = '#1abc9c';
 
-  return Boolean(activeScreen().appendChild(newSelect));
+  return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
 
 applabCommands.getAttribute = function (opts) {
@@ -790,7 +790,7 @@ applabCommands.getText = function (opts) {
     } else if (element.tagName === 'IMG') {
       return String(element.alt);
     } else {
-      return element.innerText;
+      return applabCommands.getElementInnerText_(element);
     }
   }
   return false;
@@ -808,11 +808,72 @@ applabCommands.setText = function (opts) {
     } else if (element.tagName === 'IMG') {
       element.alt = opts.text;
     } else {
-      element.innerText = opts.text;
+      applabCommands.setElementInnerText_(element, opts.text);
     }
     return true;
   }
   return false;
+};
+
+/**
+ * Attempts to emulate Chrome's version of innerText by way of innerHTML, only
+ * for the simplified case of plain text content (in, for example, a
+ * contentEditable div).
+ * @param {Element} element
+ * @private
+ */
+applabCommands.getElementInnerText_ = function (element) {
+  var cleanedText = element.innerHTML;
+  cleanedText = cleanedText.replace(/<div>/gi, '\n'); // Divs generate newlines
+  cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
+
+  // This next step requires some explanation
+  // In multiline text it's possible for the first line to render wrapped or unwrapped.
+  //     Line 1
+  //     Line 2
+  //   Can render as either of:
+  //     Line 1<div>Line 2</div>
+  //     <div>Line 1</div><div>Line 2</div>
+  //
+  // But leading blank lines will always render wrapped and should be preserved
+  //
+  //     Line 2
+  //     Line 3
+  //   Renders as
+  //    <div><br></div><div>Line 2</div><div>Line 3</div>
+  //
+  // To handle this behavior we strip leading newlines UNLESS they are followed
+  // by another newline, using a negative lookahead (?!)
+  cleanedText = cleanedText.replace(/^\n(?!\n)/, ''); // Strip leading nondoubled newline
+
+  cleanedText = cleanedText.replace(/&nbsp;/gi, ' '); // Unescape nonbreaking spaces
+  cleanedText = cleanedText.replace(/&gt;/gi, '>');   // Unescape >
+  cleanedText = cleanedText.replace(/&lt;/gi, '<');   // Unescape <
+  cleanedText = cleanedText.replace(/&amp;/gi, '&');  // Unescape & (must happen last!)
+  return cleanedText;
+};
+
+/**
+ * Attempts to emulate Chrome's version of innerText by way of innerHTML, only
+ * for the simplified case of plain text content (in, for example, a
+ * contentEditable div).
+ * @param {Element} element
+ * @param {string} newText
+ * @private
+ */
+applabCommands.setElementInnerText_ = function (element, newText) {
+  var escapedText = newText;
+  escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
+  escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
+  escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >
+  escapedText = escapedText.replace(/  /g,' &nbsp;'); // Escape doubled spaces
+
+  // Now wrap each line except the first line in a <div>,
+  // replacing blank lines with <div><br><div>
+  var lines = escapedText.split('\n');
+  element.innerHTML = lines[0] + lines.slice(1).map(function (line) {
+    return '<div>' + (line.length ? line : '<br>') + '</div>';
+  }).join('');
 };
 
 applabCommands.getChecked = function (opts) {
@@ -866,6 +927,13 @@ applabCommands.setImageURL = function (opts) {
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
     element.src = Applab.maybeAddAssetPathPrefix(opts.src);
+
+    if (!toBeCached[element.src]) {
+      var img = new Image();
+      img.src = element.src;
+      toBeCached[element.src] = true;
+    }
+
     return true;
   }
   return false;
@@ -971,22 +1039,41 @@ applabCommands.setPosition = function (opts) {
     // (2) width/height already specified OR IMG element with width/height attributes
     if ((el.style.width.length > 0 && el.style.height.length > 0) ||
         (el.tagName === 'IMG' && el.width > 0 && el.height > 0)) {
-        if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
-            setWidthHeight = true;
-        }
-    } else {
+      if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
         setWidthHeight = true;
+      }
+    } else {
+      setWidthHeight = true;
     }
     if (setWidthHeight) {
-        apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
-        apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
-        el.style.width = opts.width + 'px';
-        el.style.height = opts.height + 'px';
+      apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
+      apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+      setSize_(opts.elementId, opts.width, opts.height);
     }
     return true;
   }
   return false;
 };
+
+applabCommands.setSize = function (opts) {
+  apiValidateType(opts, 'setSize', 'width', opts.width, 'number');
+  apiValidateType(opts, 'setSize', 'height', opts.height, 'number');
+  setSize_(opts.elementId, opts.width, opts.height);
+
+  return true;
+};
+
+/**
+ * Logic shared between setPosition and setSize for setting the size
+ */
+function setSize_(elementId, width, height) {
+  var element = document.getElementById(elementId);
+  var divApplab = document.getElementById('divApplab');
+  if (divApplab.contains(element)) {
+    element.style.width = width + 'px';
+    element.style.height = height + 'px';
+  }
+}
 
 applabCommands.getXPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
@@ -1378,4 +1465,133 @@ applabCommands.getUserId = function (opts) {
     throw new Error("User ID failed to load.");
   }
   return Applab.user.applabUserId;
+};
+
+/**
+ * How to execute the 'drawChartFromRecords' function.
+ * Delegates most work to ChartApi.drawChartFromRecords, but a few things are
+ * handled directly at this layer:
+ *   - Type validation (before execution)
+ *   - Queueing callbacks (after execution)
+ *   - Reporting errors and warnings (after execution)
+ * @see {ChartApi}
+ * @param {Object} opts
+ * @param {string} opts.chartId
+ * @param {ChartType} opts.chartType
+ * @param {string} opts.tableName
+ * @param {string[]} opts.columns
+ * @param {Object} opts.options
+ * @param {function} opts.callback
+ */
+applabCommands.drawChartFromRecords = function (opts) {
+  apiValidateType(opts, 'drawChartFromRecords', 'chartId', opts.chartId, 'string');
+  apiValidateType(opts, 'drawChartFromRecords', 'chartType', opts.chartType, 'string');
+  apiValidateType(opts, 'drawChartFromRecords', 'tableName', opts.tableName, 'string');
+  apiValidateType(opts, 'drawChartFromRecords', 'columns', opts.columns, 'array');
+  apiValidateType(opts, 'drawChartFromRecords', 'options', opts.options, 'object', OPTIONAL);
+  apiValidateType(opts, 'drawChartFromRecords', 'callback', opts.callback, 'function', OPTIONAL);
+  apiValidateDomIdExistence(opts, 'drawChartFromRecords', 'chartId', opts.chartId, true);
+
+  // Bind a reference to the current interpreter so we can later make sure we're
+  // not doing anything asynchronous across re-runs.
+  var jsInterpreter = Applab.JSInterpreter;
+
+  var currentLineNumber = getCurrentLineNumber(jsInterpreter);
+
+  var chartApi = new ChartApi();
+
+  /**
+   * What to do after drawing the chart succeeds/completes:
+   *   1. Report any warnings, attributed to the current line.
+   *   2. Queue the user-provided success callback.
+   *
+   * @param {Error[]} warnings - Any non-terminal errors generated by the
+   *        drawChartFromRecords call, which we will report on after the fact
+   *        without halting execution.
+   */
+  var onSuccess = function () {
+    stopLoadingSpinnerFor(opts.chartId);
+    chartApi.warnings.forEach(function (warning) {
+      outputError(warning.message, ErrorLevel.WARNING, currentLineNumber);
+    });
+    queueCallback(jsInterpreter, opts.callback);
+  };
+
+  /**
+   * What to do if something goes wrong:
+   *   1. Report the error.
+   *
+   * @param {Error} error - A rejected promise usually passes an error.
+   */
+  var onError = function (error) {
+    stopLoadingSpinnerFor(opts.chartId);
+    outputError(error.message, ErrorLevel.ERROR, currentLineNumber);
+  };
+
+  startLoadingSpinnerFor(opts.chartId);
+  chartApi.drawChartFromRecords(
+      opts.chartId,
+      opts.chartType,
+      opts.tableName,
+      opts.columns,
+      opts.options
+  ).then(onSuccess, onError);
+};
+
+/**
+ * If the element is found, add the 'loading' class to it so that it
+ * displays the loading spinner.
+ * @param {string} elementId
+ */
+function startLoadingSpinnerFor(elementId) {
+  var element = document.getElementById(elementId);
+  if (!element) {
+    return;
+  }
+
+  // Add 'loading' class
+  element.className += ' loading';
+}
+
+/**
+ * If the element is found, make sure to remove the 'loading' class from it
+ * so that it hides the loading spinner.
+ * @param {string} elementId
+ */
+function stopLoadingSpinnerFor(elementId) {
+  var element = document.getElementById(elementId);
+  if (!element) {
+    return;
+  }
+
+  // Remove 'loading' class
+  element.className = element.className.split(/\s+/).filter(function (x) {
+    return !(/loading/i.test(x));
+  }).join(' ');
+}
+
+/**
+ * Queue the given callback in the given interpreter IF the callback exists
+ * AND the interpreter is still the active interpreter for Applab.
+ * @param {JSInterpreter} jsInterpreter
+ * @param {function} callback
+ */
+var queueCallback = function (jsInterpreter, callback) {
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active, so we don't queue callbacks for slow async events
+  // from past executions of the app.
+  // (We use a different interpreter instance for every run.)
+  if (callback && jsInterpreter === Applab.JSInterpreter) {
+    Applab.JSInterpreter.queueEvent(callback);
+  }
+};
+
+/**
+ * For the provided interpreter, get the nearest line number in user code
+ * up the stack from the last executed command.
+ * @param {JSInterpreter} jsInterpreter
+ * @returns {number}
+ */
+var getCurrentLineNumber = function (jsInterpreter) {
+  return 1 + jsInterpreter.getNearestUserCodeLine();
 };

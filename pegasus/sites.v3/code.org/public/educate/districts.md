@@ -23,7 +23,7 @@ Code.org partners with school districts across the country to suppport and expan
 
 
 
-[<button>Do You Qualify?</button>](/educate/qualify) 
+[<button>Do you qualify?</button>](/educate/qualify) 
 
 ## The Application Process
 Applying for a district partnership is a relatively thorough process. You can read through the materials here, but we expect it to be a collaborative process between you and our district outreach team. 
@@ -34,14 +34,14 @@ Applying for a district partnership is a relatively thorough process. You can re
 1. Meet with Code.org's outreach team as you complete your application. Here’s [a detailed term sheet](/educate/districtterms) that describes what you need to do and what we will do as part of the partnership.
 1. Submit your completed application to us via email at <district@code.org>.
 
-[<button>Start Your Application</button>](/educate/interesteddistrict)
+[<button>Start your application</button>](/educate/interesteddistrict)
 
 ## Deadlines
 
 Here are our deadlines for Applications. Applications received earlier will receive higher priorty. 
 
 - <del>Window 1  -- Applications need to be in by June 30th.</del>
-- **Window 2**  -- Applications need to be in by August 31st.
+- <del>Window 2  -- Applications need to be in by August 31st.</del>
 - **Window 3**  -- Applications need to be in by October 31st.
 
 ## Information on Curriculum and PD

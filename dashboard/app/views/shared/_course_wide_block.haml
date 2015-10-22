@@ -23,7 +23,7 @@
   .courseblock-span6.courseblock-wide-large
     =link_to script_url(Script::TWENTY_HOUR_NAME) do
       .courseblock-span2.imgspan
-        %img{src: '//code.org/images/fit-150x100/code20hr.jpg'}   
+        %img{src: '//code.org/images/fit-150x100/code20hr.jpg'}
       .courseblock-span4.heading
         %h3= t('upsell.20-hour.title')
         %h4= data_t_suffix('script.name', '20-hour', 'description_audience')
@@ -36,7 +36,7 @@
     .courseblock-span6.courseblock-wide-small{style: "min-height: #{height}px;"}
       =link_to script_url(Script::TWENTY_HOUR_NAME) do
         .courseblock-span2.imgspan
-          %img{src: '//code.org/images/fit-150x100/code20hr.jpg'}   
+          %img{src: '//code.org/images/fit-150x100/code20hr.jpg'}
         .courseblock-span4.heading
           %h3= t('upsell.20-hour.title')
           .smalltext= t('upsell.20-hour.body_short')
@@ -55,7 +55,7 @@
   .courseblock-span6.courseblock-wide-small{style: "min-height: #{height}px;"}
     =link_to url do
       .courseblock-span2.imgspan
-        %img{src: CDO.code_org_url("/shared/images/courses/fill-150x100/logo_tall_#{id}.jpg")}
+        %img{src: CDO.code_org_url("/shared/images/courses/fill-150x110/logo_tall_#{id}.jpg")}
       .courseblock-span4.heading
         %h3= title
         .smalltext= body
@@ -73,5 +73,5 @@
             &nbsp;
             %span.betatext
               =t('beta')
-        %h4= data_t_suffix('script.name', id, 'description_audience')  
+        %h4= data_t_suffix('script.name', id, 'description_audience')
         .smalltext= data_t_suffix('script.name', id, 'description')

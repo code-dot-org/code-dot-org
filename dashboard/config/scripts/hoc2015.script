@@ -1,11 +1,33 @@
 title 'Hour of Code 2015'
 description_short "Use Play Lab to create a story or game."
 description "Use Play Lab to create a story or game."
+wrapup_video 'hoc2015_preview_conclusion'
 hidden 'true'
 login_required 'true'
 
-stage 'Hour of Code'
-level 'hoc2015_free'
-level 'hoc2015_square'
-level 'hoc2015_random'
-level 'hoc2015_maze'
+stage 'Hour of Code 2015'
+
+skin 'hoc2015x'
+
+level 'blockly:StudioEC:js_hoc2015_move_right'
+level 'blockly:StudioEC:js_hoc2015_move_two_items'
+video_key_for_next_level 'hoc2015_preview_typing'
+level 'blockly:StudioEC:js_hoc2015_move_item_destination'
+level 'blockly:StudioEC:js_hoc2015_move_item_destination_2'
+level 'blockly:StudioEC:js_hoc2015_move_item_destination_3'
+level 'blockly:StudioEC:js_hoc2015_move_cross'
+
+skin 'hoc2015'
+
+video_key_for_next_level 'hoc2015_preview_blocks'
+level 'blockly:StudioEC:js_hoc2015_event_two_items'
+level 'blockly:StudioEC:js_hoc2015_event_four_items'
+level 'blockly:StudioEC:js_hoc2015_event_three_goals'
+
+level 'blockly:StudioEC:js_hoc2015_event_score_points'
+level 'blockly:StudioEC:js_hoc2015_win_lose'
+level 'blockly:StudioEC:js_hoc2015_add_characters'
+level 'blockly:StudioEC:js_hoc2015_chain_characters'
+level 'blockly:StudioEC:js_hoc2015_change_setting'
+
+level 'blockly:StudioEC:js_hoc2015_event_free'

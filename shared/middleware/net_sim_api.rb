@@ -16,6 +16,17 @@ class NetSimApi < Sinatra::Base
       log: 'l'
   }
 
+  NODE_TYPES = {
+      client: 'client',
+      router: 'router'
+  }
+
+  VALIDATION_ERRORS = {
+      malformed: 'malformed',
+      conflict: 'conflict',
+      limit_reached: 'limit_reached'
+  }
+
   helpers do
     %w{
       core.rb
@@ -178,32 +189,130 @@ class NetSimApi < Sinatra::Base
   #
   # POST /v3/netsim/<shard-id>/<table-name>
   #
-  # Insert a new row.
+  # Insert a new row or rows.
+  # Accepts a JSON request body of either an Object if inserting a
+  # single row or an Array of Objects if inserting multiple rows
+  #
+  # Examples:
+  #
+  # POST "{ 'name': 'alice', 'male': false }"
+  # -> 201 "{ 'name': 'alice', 'male': false, 'id': 1 }"
+  #
+  # POST "[{ 'name': 'nancy', 'male': false }, { 'name': 'drew', 'male': true }]"
+  # -> 201 "[{ 'name': 'nancy', 'male': false, 'id': 2 }, { 'name': 'drew', 'male': true, 'id': 3 }]"
   #
   post %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
     unsupported_media_type unless has_json_utf8_headers(request)
 
+    # Parse JSON
     begin
-      value = get_table(shard_id, table_name).
-          insert(JSON.parse(request.body.read), request.ip)
-      if table_name == TABLE_NAMES[:message]
-        node_exists = get_table(shard_id, TABLE_NAMES[:node]).to_a.any? do |node|
-          node['id'] == value['simulatedBy']
-        end
-        unless node_exists
-          get_table(shard_id, table_name).delete(value['id'])
-          json_bad_request
-        end
-      end
+      body = JSON.parse(request.body.read)
     rescue JSON::ParserError
-      json_bad_request
+      json_bad_request(VALIDATION_ERRORS[:malformed])
     end
+
+    # Determine whether or not we are performing a multi-insert and
+    # normalize our request body into an array of values
+    multi_insert = body.is_a?(Array)
+    values = multi_insert ? body : [body]
+
+    validation_errors = validate_all(shard_id, table_name, values)
+    unless validation_errors.none?
+      error_details = multi_insert ? validation_errors : validation_errors.first
+      json_bad_request(error_details)
+    end
+
+    # If we get all the way down here without errors, insert everything
+    table = get_table(shard_id, table_name)
+    result = values.map { |value| table.insert(value, request.ip) }
+
+    # Finally, if we are not performing a multi-insert, denormalize our
+    # return value to a single item
+    result = result[0] unless multi_insert
 
     dont_cache
     content_type :json
     status 201
-    value.to_json
+    result.to_json
+  end
+
+  def validate_all(shard_id, table_name, values)
+    values.map { |value| validate_one(shard_id, table_name, value) }
+  end
+
+  # @param [String] shard_id - The shard we're checking validation on.
+  # @param [String] table_name - The table we're validating for
+  # @param [Hash] value - The value we're validating
+  # @return [String] a validation error, or nil if no problems were found
+  def validate_one(shard_id, table_name, value)
+    return VALIDATION_ERRORS[:malformed] unless value.is_a? Hash
+    case table_name
+      when TABLE_NAMES[:node]
+        validate_node(shard_id, value)
+      when TABLE_NAMES[:message]
+        validate_message(shard_id, value)
+      when TABLE_NAMES[:wire]
+        validate_wire(shard_id, value)
+      else
+        nil
+    end
+  end
+
+  # @param [String] shard_id - The shard we're checking validation on.
+  # @param [Hash] node - The new node we are validating
+  # @return [String] a validation error, or nil if no problems were found
+  def validate_node(shard_id, node)
+    case node['type']
+      when NODE_TYPES[:router] then validate_router(shard_id, node)
+      when NODE_TYPES[:client] then nil
+      else VALIDATION_ERRORS[:malformed]
+    end
+  end
+
+  # Makes sure the router has a routerNumber and will not cause the shard
+  # to exceed the router limit.
+  # @param [String] shard_id - The shard we're checking validation on
+  # @param [Hash] router - The new router we are validating
+  # @return [String] a validation error, or nil if no problems were found
+  def validate_router(shard_id, router)
+    return VALIDATION_ERRORS[:malformed] unless router.has_key?('routerNumber')
+    existing_routers = get_table(shard_id, TABLE_NAMES[:node]).
+        to_a.select {|x| x['type'] == NODE_TYPES[:router]}
+
+    # Check for routerNumber collisions and router limits
+    return VALIDATION_ERRORS[:limit_reached] unless existing_routers.count < CDO.netsim_max_routers
+    return VALIDATION_ERRORS[:conflict] if existing_routers.any? {|x| x['routerNumber'] == router['routerNumber']}
+    nil
+  end
+
+  # Makes sure the message owner node exists.
+  # @param [String] shard_id - The shard we're checking validation on.
+  # @param [Hash] message - The message we're validating
+  # @return [String] a validation error, or nil if no problems were found
+  def validate_message(shard_id, message)
+    # TODO validate the base64
+    # TODO this is wildly inefficient, particularly when validating
+    # multi-insert messages
+    node_exists = get_table(shard_id, TABLE_NAMES[:node]).to_a.any? do |node|
+      node['id'] == message['simulatedBy']
+    end
+
+    return VALIDATION_ERRORS[:conflict] unless node_exists
+    nil
+  end
+
+  # Makes sure an existing wire does not already define the same directed connection.
+  # @param [String] shard_id - The shard we're checking validation on.
+  # @param [Hash] wire - The wire we're validating.
+  # @return [String] a validation error, or nil if no problems were found
+  def validate_wire(shard_id, wire)
+    # Check for another wire between the same nodes in the same direction.
+    wire_already_exists = get_table(shard_id, TABLE_NAMES[:wire]).to_a.any? do |stored_wire|
+      stored_wire['localNodeID'] == wire['localNodeID'] and stored_wire['remoteNodeID'] == wire['remoteNodeID']
+    end
+    return VALIDATION_ERRORS[:conflict] if wire_already_exists
+    nil
   end
 
   #
