@@ -4843,7 +4843,7 @@ applabCommands.getElementInnerText_ = function (element) {
  * @private
  */
 applabCommands.setElementInnerText_ = function (element, newText) {
-  var escapedText = newText;
+  var escapedText = newText.toString();
   escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
   escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
   escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >
@@ -7421,9 +7421,9 @@ module.exports = React.createClass({displayName: "exports",
     return (
       React.createElement("div", {id: "design-headers"}, 
         React.createElement("div", {id: "design-toolbox-header", className: "workspace-header", style: styles.toolboxHeader}, 
+          manageAssetsIcon, 
           React.createElement("span", null, applabMsg.designToolboxHeader()), 
-          React.createElement("span", {className: "workspace-header-clickable", onClick: this.onToggleToolbox}, " ", msg.hideToolbox()), 
-          manageAssetsIcon
+          React.createElement("span", {className: "workspace-header-clickable", onClick: this.onToggleToolbox}, " ", msg.hideToolbox())
         ), 
         React.createElement("div", {className: "workspace-header", onClick: this.onToggleToolbox, 
             style: styles.showToolboxHeader}, 
@@ -8929,6 +8929,7 @@ module.exports = {
     element.textContent = 'text';
     element.style.color = '#333333';
     element.style.backgroundColor = '';
+    element.style.maxWidth = Applab.appWidth + 'px';
 
     this.resizeToFitText(element);
     return element;
@@ -8939,13 +8940,15 @@ module.exports = {
       position: 'absolute',
       visibility: 'hidden',
       width: 'auto',
-      height: 'auto'
+      height: 'auto',
+      maxWidth: (Applab.appWidth - parseInt(element.style.left, 10)) + 'px',
     }).appendTo($(document.body));
 
     var padding = parseInt(element.style.padding, 10);
 
     if ($(element).data('lock-width') !== PropertyRow.LockState.LOCKED) {
-      element.style.width = clone.width() + 1 + 2 * padding + 'px';
+      //Truncate the width before it runs off the edge of the screen
+      element.style.width = Math.min(clone.width() + 1 + 2 * padding, Applab.appWidth - clone.position().left) + 'px';
     }
     if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
       element.style.height = clone.height() + 1 + 2 * padding + 'px';
