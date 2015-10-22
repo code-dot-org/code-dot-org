@@ -39,15 +39,26 @@
 %br/
 
 %h2 Teachers
-%table.teachers
-  - if @teachers.size > 0
+- if @teachers.size > 0
+  - if @teachers.size == @teacher_limit
+    -# This is actually not true if the there were exactly @response_limit
+    -# records.
+    WARNING: The results are sampled, there are additional records not being
+    displayed.
+    %br
+
+  #{link_to 'Download CSV', {:format => :csv}}
+
+  %br
+  
+  %table.teachers
     - if @headers
       %th
-      - @headers.each do |field|
-        %td= field
+        - @headers.each do |field|
+          %td= field
     - @teachers.each do |teacher|
       %tr
-      - teacher.each do |field|
-        %td= field
-  - else
-    No teachers met the specified search criteria.
+        - teacher.each do |field|
+          %td= field
+- else
+  No teachers met the specified search criteria.
