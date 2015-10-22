@@ -3194,6 +3194,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.changeScore(cmd.opts);
       break;
+    case 'reduceScore':
+      studioApp.highlight(cmd.id);
+      Studio.reduceScore(cmd.opts);
+      break;
     case 'setScoreText':
       studioApp.highlight(cmd.id);
       Studio.setScoreText(cmd.opts);
@@ -3572,15 +3576,31 @@ Studio.changeScore = function (opts) {
     throw new TypeError("Incorrect parameter: " + opts.value);
   }
 
-  Studio.playerScore += Number(opts.value);
+  Studio.adjustScore(Number(opts.value));
+};
+
+Studio.reduceScore = function (opts) {
+
+  if (typeof opts.value !== 'number' &&
+      (typeof opts.value !== 'string' || isNaN(opts.value))) {
+    throw new TypeError("Incorrect parameter: " + opts.value);
+  }
+
+  Studio.adjustScore(-Number(opts.value));
+};
+
+Studio.adjustScore = function(value) {
+
+  Studio.playerScore += value;
   Studio.displayScore();
 
-  Studio.displayFloatingScore(Number(opts.value));
+  Studio.displayFloatingScore(value);
 
-  if (Studio.playerScore - Number(opts.value) < 1000 && Studio.playerScore >= 1000) {
+  if (Studio.playerScore - value < 1000 && Studio.playerScore >= 1000) {
     callHandler('whenScore1000');
   }
 };
+
 
 Studio.setScoreText = function (opts) {
   Studio.scoreText = opts.text;
