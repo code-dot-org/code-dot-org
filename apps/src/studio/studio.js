@@ -739,7 +739,7 @@ function sortDrawOrder() {
   for (var i = 0; i < Studio.items.length; i++) {
     var item = {};
     item.element = Studio.items[i].element;
-    item.y = Studio.items[i].y + Studio.items[i].height/2;
+    item.y = Studio.items[i].y + Studio.items[i].height/2 + Studio.items[i].renderOffset.y;
     itemsArray.push(item);
 
     Studio.drawDebugRect("itemLocation", Studio.items[i].x, Studio.items[i].y, 4, 4);
@@ -750,12 +750,12 @@ function sortDrawOrder() {
   for (i = 0; i < Studio.sprite.length; i++) {
     var sprite = {};
     sprite.element = document.getElementById('sprite' + i);
-    sprite.y = Studio.sprite[i].y + Studio.sprite[i].height;
+    sprite.y = Studio.sprite[i].displayY + Studio.sprite[i].height;
     itemsArray.push(sprite);
 
     sprite = {};
     sprite.element = document.getElementById('spriteWalk' + i);
-    sprite.y = Studio.sprite[i].y + Studio.sprite[i].height;
+    sprite.y = Studio.sprite[i].displayY + Studio.sprite[i].height;
     itemsArray.push(sprite);
 
     Studio.drawDebugRect("spriteBottom", Studio.sprite[i].x, sprite.y, 4, 4);
