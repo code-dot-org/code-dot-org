@@ -628,7 +628,7 @@ Applab.startSharedAppAfterWarnings = function () {
   // dashboard will redirect young signed in users
   var is13Plus = Applab.user.isSignedIn || localStorage.getItem('is13Plus') === "true";
   var showStoreDataAlert = Applab.hasDataStoreAPIs(Applab.getCode()) &&
-    !hasSeenDataAlert(AppStorage.getChannelId());
+    !hasSeenDataAlert(Applab.channelId);
 
   var modal = document.createElement('div');
   document.body.appendChild(modal);
@@ -643,7 +643,7 @@ Applab.startSharedAppAfterWarnings = function () {
       }
       // Only want to ask about storing data once per app.
       if (showStoreDataAlert) {
-        markSeenDataAlert(AppStorage.getChannelId());
+        markSeenDataAlert(Applab.channelId);
       }
       window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
     },
@@ -661,6 +661,8 @@ Applab.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
+
+  Applab.channelId = config.channel;
 
   // Pre-populate asset list
   assetsApi.ajax('GET', '', function (xhr) {
@@ -1454,7 +1456,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + AppStorage.getChannelId(),
+    '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + Applab.channelId,
     '_blank');
 };
 
@@ -1498,8 +1500,7 @@ Applab.maybeAddAssetPathPrefix = function (filename) {
     return filename;
   }
 
-  var channelId = dashboard && dashboard.project.getCurrentId();
-  return '/v3/assets/' + channelId + '/'  + filename;
+  return '/v3/assets/' + Applab.channelId + '/'  + filename;
 };
 
 Applab.showSubmitConfirmation = function() {

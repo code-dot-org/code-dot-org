@@ -92,7 +92,6 @@ describe('Level tests', function() {
       // file from shared here.
       project: {
         clearHtml: function() {},
-        getCurrentId: function () { return 'fake_id'; },
         exceedsAbuseThreshold: function () { return false; },
         isEditing: function () { return true; }
       }
