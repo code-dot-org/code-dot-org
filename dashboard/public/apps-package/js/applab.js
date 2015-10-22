@@ -4843,7 +4843,7 @@ applabCommands.getElementInnerText_ = function (element) {
  * @private
  */
 applabCommands.setElementInnerText_ = function (element, newText) {
-  var escapedText = newText;
+  var escapedText = newText.toString();
   escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
   escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
   escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >
