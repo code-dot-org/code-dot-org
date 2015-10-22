@@ -17,64 +17,65 @@ var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 
 function loadIceAge(skin, assetUrl) {
-  skin.defaultBackground = 'cave';
-  skin.projectileFrames = 8;
-  skin.itemFrames = 8;
+  skin.defaultBackground = 'icy';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'ia_projectile_1',
+    'ia_projectile_2',
+    'ia_projectile_3',
+    'ia_projectile_4',
+    'ia_projectile_5',
+  ];
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_ia_projectile_1',
+    'item_ia_projectile_2',
+    'item_ia_projectile_3',
+    'item_ia_projectile_4',
+    'item_ia_projectile_5',
+  ];
+
+  // Images
+  skin.ia_projectile_1 = skin.assetUrl('ia_projectile_1.png');
+  skin.ia_projectile_2 = skin.assetUrl('ia_projectile_2.png');
+  skin.ia_projectile_3 = skin.assetUrl('ia_projectile_3.png');
+  skin.ia_projectile_4 = skin.assetUrl('ia_projectile_4.png');
+  skin.ia_projectile_5 = skin.assetUrl('ia_projectile_5.png');
+
+  // TODO: proper item class names
+  skin.item_ia_projectile_1 = skin.assetUrl('ia_projectile_1.png');
+  skin.item_ia_projectile_2 = skin.assetUrl('ia_projectile_2.png');
+  skin.item_ia_projectile_3 = skin.assetUrl('ia_projectile_3.png');
+  skin.item_ia_projectile_4 = skin.assetUrl('ia_projectile_4.png');
+  skin.item_ia_projectile_5 = skin.assetUrl('ia_projectile_5.png');
 
   skin.explosion = skin.assetUrl('explosion.png');
   skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
-  skin.explosionFrames = 20;
+  skin.explosionFrames = 17;
   skin.fadeExplosion = false;
   skin.timePerExplosionFrame = 40;
 
-  skin.hardcourt = {
+  skin.grassy = {
     background: skin.assetUrl('background.jpg'),
   };
-  skin.black = {
+  skin.tile = {
     background: skin.assetUrl('background_tile.jpg'),
   };
-  skin.cave = {
+  skin.leafy = {
     background: skin.assetUrl('background_leafy.jpg'),
   };
-  skin.night = {
+  skin.icy = {
     background: skin.assetUrl('background_icy.jpg'),
   };
-  skin.cloudy = {
+  skin.flower = {
     background: skin.assetUrl('background_flower.jpg'),
-  };
-  skin.underwater = {
-    background: skin.assetUrl('background.jpg'),
-  };
-  skin.city = {
-    background: skin.assetUrl('background_tile.jpg'),
-  };
-  skin.desert = {
-    background: skin.assetUrl('background_leafy.jpg'),
-  };
-  skin.rainbow = {
-    background: skin.assetUrl('background_icy.jpg'),
-  };
-  skin.soccer = {
-    background: skin.assetUrl('background_flower.jpg'),
-  };
-  skin.space = {
-    background: skin.assetUrl('background.jpg'),
-  };
-  skin.tennis = {
-    background: skin.assetUrl('background_tile.jpg'),
-  };
-  skin.winter = {
-    background: skin.assetUrl('background_leafy.jpg'),
-  };
-  skin.grid = {
-    background: skin.assetUrl('background_icy.jpg'),
   };
 
-  skin.avatarList = [ "dog", "cat", "penguin", "dinosaur", "octopus", "witch",
-    "bat", "bird", "dragon", "squirrel", "wizard", "alien", "ghost", "monster",
-    "robot", "unicorn", "zombie", "knight", "ninja", "pirate", "caveboy",
-    "cavegirl", "princess", "spacebot", "soccergirl", "soccerboy", "tennisgirl",
-    "tennisboy"];
+  skin.avatarList = ["manny", "sid", "scrat", "diego", "granny"];
 
   /**
    * Sprite thumbs generated with:
@@ -83,103 +84,65 @@ function loadIceAge(skin, assetUrl) {
    */
   skin.avatarList.forEach(function (name) {
     skin[name] = {
-      sprite: skin.assetUrl(name + '_spritesheet_200px.png'),
-      dropdownThumbnail: skin.assetUrl(name + '_thumb.png'),
+      sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 1,
-        animation: 1,
-        turns: 7,
-        emotions: 3
-      }
+        normal: 19,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: 12
+      },
+      timePerFrame: 100
     };
   });
 
 
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    [msg.setBackgroundCave(), '"cave"'],
-    [msg.setBackgroundNight(), '"night"'],
-    [msg.setBackgroundCloudy(), '"cloudy"'],
-    [msg.setBackgroundUnderwater(), '"underwater"'],
-    [msg.setBackgroundHardcourt(), '"hardcourt"'],
-    [msg.setBackgroundBlack(), '"black"'],
-    [msg.setBackgroundCity(), '"city"'],
-    [msg.setBackgroundDesert(), '"desert"'],
-    [msg.setBackgroundRainbow(), '"rainbow"'],
-    [msg.setBackgroundSoccer(), '"soccer"'],
-    [msg.setBackgroundSpace(), '"space"'],
-    [msg.setBackgroundTennis(), '"tennis"'],
-    [msg.setBackgroundWinter(), '"winter"']];
+    [msg.setBackgroundGrassy(), '"grassy"'],
+    [msg.setBackgroundTile(), '"tile"'],
+    [msg.setBackgroundLeafy(), '"leafy"'],
+    [msg.setBackgroundIcy(), '"icy"'],
+    [msg.setBackgroundFlower(), '"flower"']];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
-    [skin.cave.background, '"cave"'],
-    [skin.night.background, '"night"'],
-    [skin.cloudy.background, '"cloudy"'],
-    [skin.underwater.background, '"underwater"'],
-    [skin.hardcourt.background, '"hardcourt"'],
-    [skin.black.background, '"black"'],
-    [skin.city.background, '"city"'],
-    [skin.desert.background, '"desert"'],
-    [skin.rainbow.background, '"rainbow"'],
-    [skin.soccer.background, '"soccer"'],
-    [skin.space.background, '"space"'],
-    [skin.tennis.background, '"tennis"'],
-    [skin.winter.background, '"winter"'],
+    [skin.grassy.background, '"grassy"'],
+    [skin.tile.background, '"tile"'],
+    [skin.leafy.background, '"leafy"'],
+    [skin.icy.background, '"icy"'],
+    [skin.flower.background, '"flower"'],
     [skin.randomPurpleIcon, RANDOM_VALUE]];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
     [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteWitch(), '"witch"'],
-    [msg.setSpriteCat(), '"cat"'],
-    [msg.setSpriteDinosaur(), '"dinosaur"'],
-    [msg.setSpriteDog(), '"dog"'],
-    [msg.setSpriteOctopus(), '"octopus"'],
-    [msg.setSpritePenguin(), '"penguin"'],
-    [msg.setSpriteBat(), '"bat"'],
-    [msg.setSpriteBird(), '"bird"'],
-    [msg.setSpriteDragon(), '"dragon"'],
-    [msg.setSpriteSquirrel(), '"squirrel"'],
-    [msg.setSpriteWizard(), '"wizard"'],
-    [msg.setSpriteAlien(), '"alien"'],
-    [msg.setSpriteGhost(), '"ghost"'],
-    [msg.setSpriteMonster(), '"monster"'],
-    [msg.setSpriteRobot(), '"robot"'],
-    [msg.setSpriteUnicorn(), '"unicorn"'],
-    [msg.setSpriteZombie(), '"zombie"'],
-    [msg.setSpriteKnight(), '"knight"'],
-    [msg.setSpriteNinja(), '"ninja"'],
-    [msg.setSpritePirate(), '"pirate"'],
-    [msg.setSpriteCaveBoy(), '"caveboy"'],
-    [msg.setSpriteCaveGirl(), '"cavegirl"'],
-    [msg.setSpritePrincess(), '"princess"'],
-    [msg.setSpriteSpacebot(), '"spacebot"'],
-    [msg.setSpriteSoccerGirl(), '"soccergirl"'],
-    [msg.setSpriteSoccerBoy(), '"soccerboy"'],
-    [msg.setSpriteTennisGirl(), '"tennisgirl"'],
-    [msg.setSpriteTennisBoy(), '"tennisboy"']];
+    [msg.setSpriteManny(), '"manny"'],
+    [msg.setSpriteSid(), '"sid"'],
+    [msg.setSpriteScrat(), '"scrat"'],
+    [msg.setSpriteDiego(), '"diego"'],
+    [msg.setSpriteGranny(), '"granny"']];
 
   skin.projectileChoices = [
-    [msg.projectileBlueFireball(), '"blue_fireball"'],
-    [msg.projectilePurpleFireball(), '"purple_fireball"'],
-    [msg.projectileRedFireball(), '"red_fireball"'],
-    [msg.projectileYellowHearts(), '"yellow_hearts"'],
-    [msg.projectilePurpleHearts(), '"purple_hearts"'],
-    [msg.projectileRedHearts(), '"red_hearts"'],
+    [msg.projectileIAProjectile1(), '"ia_projectile_1"'],
+    [msg.projectileIAProjectile2(), '"ia_projectile_2"'],
+    [msg.projectileIAProjectile3(), '"ia_projectile_3"'],
+    [msg.projectileIAProjectile4(), '"ia_projectile_4"'],
+    [msg.projectileIAProjectile5(), '"ia_projectile_5"'],
     [msg.projectileRandom(), RANDOM_VALUE]];
 
   // TODO: Create actual item choices
   // NOTE: item names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
-    [msg.itemBlueFireball(), '"item_blue_fireball"'],
-    [msg.itemPurpleFireball(), '"item_purple_fireball"'],
-    [msg.itemRedFireball(), '"item_red_fireball"'],
-    [msg.itemYellowHearts(), '"item_yellow_hearts"'],
-    [msg.itemPurpleHearts(), '"item_purple_hearts"'],
-    [msg.itemRedHearts(), '"item_red_hearts"'],
+    [msg.itemIAProjectile1(), '"item_ia_projectile_1"'],
+    [msg.itemIAProjectile2(), '"item_ia_projectile_2"'],
+    [msg.itemIAProjectile3(), '"item_ia_projectile_3"'],
+    [msg.itemIAProjectile4(), '"item_ia_projectile_4"'],
+    [msg.itemIAProjectile5(), '"item_ia_projectile_5"'],
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
