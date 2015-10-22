@@ -347,10 +347,9 @@ var drawMap = function () {
     }
   }
 
+  var goalOverride = utils.valueOr(level.goalOverride, {});
   var numFrames = 1;
-  if (level.goalOverride && 
-      level.goalOverride.goalAnimation && 
-      skin.animatedGoalFrames) {
+  if (goalOverride.goalAnimation && skin.animatedGoalFrames) {
     numFrames = skin.animatedGoalFrames;
   }
 
@@ -358,11 +357,8 @@ var drawMap = function () {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
       // Add finish markers.
 
-      var width =
-        ((level.goalOverride && level.goalOverride.imageWidth) || Studio.MARKER_WIDTH);
-
-      var height = 
-        (level.goalOverride && level.goalOverride.imageHeight) || Studio.MARKER_HEIGHT;
+      var width = goalOverride.imageWidth || Studio.MARKER_WIDTH;
+      var height = goalOverride.imageHeight || Studio.MARKER_HEIGHT;
 
       var finishClipPath = document.createElementNS(SVG_NS, 'clipPath');
       finishClipPath.setAttribute('id', 'finishClipPath' + i);
@@ -373,15 +369,9 @@ var drawMap = function () {
       finishClipPath.appendChild(finishClipRect);
       svg.appendChild(finishClipPath);
 
-      width = numFrames * 
-        ((level.goalOverride && level.goalOverride.imageWidth) || Studio.MARKER_WIDTH);
-
-      height = 
-        (level.goalOverride && level.goalOverride.imageHeight) || Studio.MARKER_HEIGHT;
-
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
-      spriteFinishMarker.setAttribute('width', width);
+      spriteFinishMarker.setAttribute('width', numFrames * width);
       spriteFinishMarker.setAttribute('height', height);
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
       svg.appendChild(spriteFinishMarker);
@@ -1894,7 +1884,47 @@ Studio.reset = function(first) {
   for (i = 0; i < Studio.spriteCount; i++) {
     Studio.displaySprite(i);
   }
+  this.resetGoalSprites();
+  sortDrawOrder();
 
+  // A little flag for script-based code to consume.
+  Studio.levelRestarted = true;
+
+  // Reset whether level has succeeded.
+  Studio.succeededTime = null;
+};
+
+/**
+ * Move all goal sprites to their original positions, and reset their completion
+ * state, both visual and logical.
+ */
+Studio.resetGoalSprites = function () {
+  Studio.touchAllGoalsEventFired = false;
+  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
+    // Mark each finish as incomplete.
+    Studio.spriteGoals_[i].finished = false;
+    Studio.spriteGoals_[i].startFadeTime = null;
+
+    // Move the finish icons into position.
+    var goalOverride = utils.valueOr(level.goalOverride, {});
+    var offsetX = utils.valueOr(goalOverride.goalRenderOffsetX,
+        utils.valueOr(skin.goalRenderOffsetX, 0));
+    var offsetY = utils.valueOr(goalOverride.goalRenderOffsetY,
+        utils.valueOr(skin.goalRenderOffsetY, 0));
+    var spriteFinishIcon = document.getElementById('spriteFinish' + i);
+    spriteFinishIcon.setAttribute('x', Studio.spriteGoals_[i].x + offsetX);
+    spriteFinishIcon.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
+    spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
+        'xlink:href', Studio.getGoalAssetFromSkin());
+    spriteFinishIcon.setAttribute('opacity', 1);
+    var finishClipRect = document.getElementById('finishClipRect' + i);
+    finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x + offsetX);
+    finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
+  }
+};
+
+/** @returns {string} URL of the asset to use for goal objects */
+Studio.getGoalAssetFromSkin = function () {
   var goalAsset = skin.goal;
   if (level.goalOverride) {
     if (level.goalOverride.goalAnimation) {
@@ -1903,34 +1933,7 @@ Studio.reset = function(first) {
       goalAsset = skin[level.goalOverride.goalImage];
     }
   }
-
-  Studio.touchAllGoalsEventFired = false;
-  for (i = 0; i < Studio.spriteGoals_.length; i++) {
-    // Mark each finish as incomplete.
-    Studio.spriteGoals_[i].finished = false;
-    Studio.spriteGoals_[i].startFadeTime = null;
-
-    // Move the finish icons into position.
-    var offsetX = skin.goalRenderOffsetX || 0;
-    var offsetY = skin.goalRenderOffsetY || 0;
-    var spriteFinishIcon = document.getElementById('spriteFinish' + i);
-    spriteFinishIcon.setAttribute('x', Studio.spriteGoals_[i].x + offsetX);
-    spriteFinishIcon.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
-    spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
-      'xlink:href', goalAsset);
-    spriteFinishIcon.setAttribute('opacity', 1);
-    var finishClipRect = document.getElementById('finishClipRect' + i);
-    finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x + offsetX);
-    finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
-  }
-
-  sortDrawOrder();
-
-  // A little flag for script-based code to consume.
-  Studio.levelRestarted = true;
-
-  // Reset whether level has succeeded.
-  Studio.succeededTime = null;
+  return goalAsset;
 };
 
 /**
