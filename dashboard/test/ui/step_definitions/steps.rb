@@ -37,6 +37,20 @@ When /^I close the dialog$/ do
   }
 end
 
+When /^I reset the puzzle to the starting version$/ do
+  steps %q{
+    Then I click selector "#versions-header"
+    And I wait to see a dialog titled "Version History"
+    And I close the dialog
+    And I wait for 3 seconds
+    Then I click selector "#versions-header"
+    And I wait until element "button:contains(Delete Progress)" is visible
+    And I click selector "button:contains(Delete Progress)"
+    And I click selector "#confirm-button"
+    Then I wait for 15 seconds
+  }
+end
+
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
   @browser.find_element(selection_criteria)
@@ -50,6 +64,12 @@ end
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
   wait.until { @browser.execute_script("return $('#{selector}').is(':visible')") }
+end
+
+# Required for inspecting elements within an iframe
+When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |selector, parent_selector|
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until { @browser.execute_script("return $('#{selector}', $('#{parent_selector}').contents()).is(':visible')") }
 end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
@@ -199,10 +219,18 @@ Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
   @browser.execute_script("return #{expression}").should eq true
 end
 
+Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
+  @browser.execute_script("return #{expression}")
+end
+
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
 Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
   element_has_text(selector, expectedText)
+end
+
+Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expectedHtml|
+  element_has_html(selector, expectedHtml)
 end
 
 Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
@@ -246,8 +274,7 @@ Then /^element "([^"]*)" is visible$/ do |selector|
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
-  instances = @browser.execute_script("return $('#{selector}')");
-  instances.should eq []
+  @browser.execute_script("return $('#{selector}').length").should eq 0
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
@@ -256,16 +283,22 @@ Then /^element "([^"]*)" is hidden$/ do |selector|
   visible.should eq false
 end
 
-def has_class(selector, className)
-  @browser.execute_script("return $('#{selector}').hasClass('#{className}')")
+def has_class(selector, class_name)
+  @browser.execute_script("return $('#{selector}').hasClass('#{class_name}')")
 end
 
-Then /^element "([^"]*)" has class "([^"]*)"$/ do |selector, className|
-  has_class(selector, className).should eq true
+Then /^element "([^"]*)" has class "([^"]*)"$/ do |selector, class_name|
+  has_class(selector, class_name).should eq true
 end
 
-Then /^element "([^"]*)" (?:does not|doesn't) have class "([^"]*)"$/ do |selector, className|
-  has_class(selector, className).should eq false
+Then /^element "([^"]*)" (?:does not|doesn't) have class "([^"]*)"$/ do |selector, class_name|
+  has_class(selector, class_name).should eq false
+end
+
+Then /^SVG element "([^"]*)" within element "([^"]*)" has class "([^"]*)"$/ do |selector, parent_selector, class_name|
+  # Can't use jQuery hasClass here, due to limited SVG support
+  class_list = @browser.execute_script("return $(\"#{selector}\", $(\"#{parent_selector}\").contents())[0].getAttribute(\"class\")")
+  class_list.should include class_name
 end
 
 def is_disabled(selector)
@@ -429,7 +462,8 @@ And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
     element.send_keys(make_symbol_if_colon(key))
   else
     # Workaround for Firefox, see https://code.google.com/p/selenium/issues/detail?id=6822
-    key.gsub!(/\\n/, "\n") # Cucumber does not convert captured \n to newline.
+    key.gsub!(/([^\\])\\n/, "\\1\n") # Cucumber does not convert captured \n to newline.
+    key.gsub!(/\\\\n/, "\\n") # Fix up escaped newline
     key.split('').each do |k|
       if k == '('
         element.send_keys :shift, 9

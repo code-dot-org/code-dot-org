@@ -10,19 +10,15 @@ nav: prizes_nav
 
 # Balvas - noteikumi un nosacījumi
 
-## Vietu Dropboxā vai Skype kredītu:
+## Amazon.com, iTunes and Windows Store credit:
 
-10 GB vietas Dropboxā vai Skype kredītu 10 dolāru vērtībā ir ierobežotas K-12 fakultātei, pedagogiem priekš ārpusskolas klubiem un izglītības organizācijām. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Ierobežojums, viens uz organizatoru. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Ierobežojums, viens uz organizatoru.
 
-Katram organizatoram ir nepieciešams reģistrēties Programmēšanas stundai lai varētu pretendēt Dropbox vietai vai Skype kredītu. Ja pasākumā piedalās visa jūsu skola, tad katram pedagogam ir nepieciešams piereģistrēties kā organizatoram, lai varētu pretendēt uz balvām.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Ja pasākumā piedalās visa jūsu skola, tad katram pedagogam ir nepieciešams piereģistrēties kā organizatoram, lai varētu pretendēt uz balvām.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
-
-## Video chat with a guest speaker:
-
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Class-set of laptops (or $10,000 for other technology):
 

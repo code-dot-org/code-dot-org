@@ -5,6 +5,7 @@ require File.expand_path '../../../deployment', __FILE__
 require File.expand_path '../../middleware/files_api', __FILE__
 require File.expand_path '../../middleware/channels_api', __FILE__
 require File.expand_path '../../middleware/helpers/asset_bucket', __FILE__
+require File.expand_path '../spy_newrelic_agent', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
@@ -56,7 +57,17 @@ class AssetsTest < Minitest::Test
     delete(@assets, channel_id, 'filename.jpg')
     assert @assets.last_response.successful?
 
-    # invalid files are not uploaded
+    # file extension case insensitivity
+    put(@assets, channel_id, 'filename.JPG', 'stub-contents', 'application/jpeg')
+    assert @assets.last_response.successful?
+    get(@assets, channel_id, 'filename.JPG')
+    assert @assets.last_response.successful?
+    get(@assets, channel_id, 'filename.jpg')
+    assert @assets.last_response.not_found?
+    delete(@assets, channel_id, 'filename.JPG')
+    assert @assets.last_response.successful?
+
+    # invalid files are not uploaded, and other added files were deleted
     file_infos = JSON.parse(list(@assets, channel_id))
     assert_equal 0, file_infos.length
 
@@ -176,9 +187,9 @@ class AssetsTest < Minitest::Test
     src_channel_id = create_channel(@channels)
     dest_channel_id = create_channel(@channels)
 
-    image_filename = 'dog.jpg'
+    image_filename = URI.encode 'çat.jpg'
     image_body = 'stub-image-contents'
-    expected_image_info = {'filename' =>  image_filename, 'category' =>  'image', 'size' =>  image_body.length}
+    expected_image_info = {'filename' =>  'çat.jpg', 'category' =>  'image', 'size' =>  image_body.length}
     sound_filename = 'woof.mp3'
     sound_body = 'stub-sound-contents'
     expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
@@ -190,13 +201,13 @@ class AssetsTest < Minitest::Test
     copy_file_infos = JSON.parse(copy_all(src_channel_id, dest_channel_id))
     dest_file_infos = JSON.parse(list(@assets, dest_channel_id))
 
-    assert_fileinfo_equal(expected_image_info, copy_file_infos[0])
-    assert_fileinfo_equal(expected_sound_info, copy_file_infos[1])
-    assert_fileinfo_equal(expected_image_info, dest_file_infos[0])
-    assert_fileinfo_equal(expected_sound_info, dest_file_infos[1])
+    assert_fileinfo_equal(expected_image_info, copy_file_infos[1])
+    assert_fileinfo_equal(expected_sound_info, copy_file_infos[0])
+    assert_fileinfo_equal(expected_image_info, dest_file_infos[1])
+    assert_fileinfo_equal(expected_sound_info, dest_file_infos[0])
 
     # abuse score didn't carry over
-    assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, image_filename)
+    assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, 'çat.jpg')
     assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, sound_filename)
 
     delete(@assets, src_channel_id, image_filename)
@@ -260,6 +271,49 @@ class AssetsTest < Minitest::Test
         assert (JSON.parse(list(@assets, channel_id)).length == 0), "No unexpected assets were written to storage."
 
         delete_channel(@channels, channel_id)
+      end
+    end
+  end
+
+  def test_assets_quota_newrelic_logging
+    FilesApi.stub(:max_file_size, 5) do
+      FilesApi.stub(:max_app_size, 10) do
+        CDO.stub(:newrelic_logging, true) do
+          channel_id = create_channel(@channels)
+
+          put(@assets, channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
+          assert @assets.last_response.client_error?, "Error when file is larger than max file size."
+
+          assert NewRelic::Agent.metrics.length == 1, 'one custom metric recorded'
+          assert NewRelic::Agent.metrics[0] == 'Custom/FilesApi/FileTooLarge_assets'
+
+          put(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
+          assert @assets.last_response.successful?, "First small file upload is successful."
+
+          assert NewRelic::Agent.metrics.length == 1, 'still only one custom metric recorded'
+
+          put(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
+          assert @assets.last_response.successful?, "Second small file upload is successful."
+
+          assert NewRelic::Agent.metrics.length == 2, 'two custom metrics recorded'
+          assert NewRelic::Agent.metrics[1] == 'Custom/FilesApi/QuotaCrossedHalfUsed_assets', 'QuotaCrossedHalfUsed metric recorded'
+          assert NewRelic::Agent.events.length == 1, 'one custom event recorded'
+          assert NewRelic::Agent.events[0].first == 'FilesApiQuotaCrossedHalfUsed', 'QuotaCrossedHalfUsed event recorded'
+
+          put(@assets, channel_id, "file4.jpg", "ABCD", 'image/jpeg')
+          assert @assets.last_response.client_error?, "Error when exceeding max app size."
+
+          assert NewRelic::Agent.metrics.length == 3, 'three custom metrics recorded'
+          assert NewRelic::Agent.metrics[2] == 'Custom/FilesApi/QuotaExceeded_assets', 'QuotaExceeded metric recorded'
+          assert NewRelic::Agent.events.length == 2, 'two custom events recorded'
+          assert NewRelic::Agent.events[1].first == 'FilesApiQuotaExceeded', 'QuotaExceeded event recorded'
+
+          delete(@assets, channel_id, "file2.jpg")
+          delete(@assets, channel_id, "file3.jpg")
+
+          assert (JSON.parse(list(@assets, channel_id)).length == 0), "No unexpected assets were written to storage."
+          delete_channel(@channels, channel_id)
+        end
       end
     end
   end

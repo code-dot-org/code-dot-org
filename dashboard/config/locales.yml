@@ -380,6 +380,12 @@
   dir: 'rtl'
   webfonts: false
 
+"uz": "uz-UZ"
+"uz-UZ":
+  english: "Uzbekistan"
+  native: "Oʻzbekcha"
+  debug: true
+
 "vi": "vi-VN"
 "vi-VN":
   english: "Vietnamese"

@@ -10,19 +10,15 @@ nav: prizes_nav
 
 # Prêmios - termos e condições
 
-## Espaço no Dropbox ou crédito para o Skype:
+## Amazon.com, iTunes and Windows Store credit:
 
-Os 10 GB de espaço no Dropbox ou os US$10 de crédito no Skype limitam-se a professores do ensino fundamental e médio, educadores de clubes de programação e instituições de ensino. O espaço livre de 10 GB deve ser adicionado à conta Dropbox existente e o espaço extra expira 1 ano após o usuário aplicar o crédito ao Dropbox. Limite de um resgate por organizador. Observação: se você resgatou 10 GB no Dropbox no passado, você só pode aplicar seu novo código a uma conta *diferente* ou optar pelos créditos do Skype.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. O crédito de US$10,00 deve ser adicionado a uma conta existente e expira depois de 1 ano. Limite de um resgate por organizador.
 
-Cada organizador deve se cadastrar na Hora do Código para receber o espaço no Dropbox ou crédito do Skype. Caso sua escola inteira participe da Hora do Código, cada educador deve se cadastrar individualmente como organizador para se qualificar.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Caso sua escola inteira participe da Hora do Código, cada educador deve se cadastrar individualmente como organizador para se qualificar.
 
-A Code.org entrará em contato com os organizadores após a Hora do Código (de 7 a 13 dezembro), fornecendo instruções para o resgate do espaço no Dropbox ou crédito do Skype.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
-
-## Chat com vídeo com um orador convidado:
-
-Prêmio limitado para turmas do ensino fundamental e médio dos EUA e Canadá. Para concorrer, inscreva sua turma até 2 de novembro de 2015. A Code.org selecionará as turmas vencedoras, fornecerá um horário para o bate-papo on-line e trabalhará com o professor apropriado para definir os detalhes da tecnologia. Não é preciso que a escola toda se inscreva para se qualificar para este prêmio. Tanto escolas públicas como privadas podem concorrer.
 
 ## Conjunto de laptops para sala de aula (ou US$10.000 para outra tecnologia)
 

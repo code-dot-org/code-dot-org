@@ -199,6 +199,8 @@
   homepage_action_text_signpetition: "Sign the petition"
   homepage_signpetition_dropdown: "I agree &#x25BE;"
   homepage_diversity_pledge: "Take the diversity pledge"
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: "Code.org and the College Board form an alliance to improve diversity in computer science."
   homepage_banner_text_link: "Learn more"
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
@@ -493,7 +495,7 @@
   dashboard_faq_k5: "K-5 Frequently Asked Questions"
   dashboard_announcements: "Announcements"
   dashboard_announce_view_all: "View all"
-  dashboard_announce_hoc: "<b>September 30, 2015</b> - The Hour of Code 2015 is coming! Join classrooms worldwide for the largest learning event in history."
+  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
   code_hoc_coming: "The Hour of Code is here - December 8-14!"
   code_sign_up: "Sign up to participate during CS Education Week"
   learn_more: "Learn more"

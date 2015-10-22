@@ -1,6 +1,14 @@
 - @page_title = level_title
 = render partial: 'shared/sharing_meta_tags'
 
+- if params[:share] && @game.share_mobile_fullscreen? && browser.safari?
+  :javascript
+    if (!window.navigator.standalone) {
+      window.addEventListener("load", function() {
+        addToHome.show(true);
+      }, false);
+    }
+
 #notes-content{style: 'display: none;'}
   %ul
     %li
@@ -12,6 +20,8 @@
 
 
 - if @game.unplugged?
+  :javascript
+    var appOptions = #{app_options.to_json};
   = render partial: 'levels/unplug', locals: {app: @game.app}
 - elsif @level.is_a?(Blockly) && @level.embed == 'true' && !@edit_blocks
   #title
@@ -39,7 +49,8 @@
 
 = render partial: 'levels/admin'
 
-- # The respond_to? test below is to workaround a bug where we a server instance will sometimes fail to define that method.
+- # HACKHACK: The respond_to? test below is to workaround a bug where a server instance
+- # will sometimes fail to define that method.
 - if @script && current_user.try(:teacher?) && (!@script.respond_to?('pd?') || !@script.pd?)
   = render partial: 'levels/teacher'
 

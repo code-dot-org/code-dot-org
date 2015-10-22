@@ -10,10 +10,12 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 **あなたの会社がHour of Code、そしてコンピュータサイエンス教育に貢献できる方法は一つではありません。例えば:**
 
-  * CEOに、コンピュータサイエンスの重要性及び、社員への協力をお願いする全社メールを送ってもらう。 [サンプルメール](%= resolve_url('/promote/resources#sample-emails') %).
-  * 同僚と一緒に[Hour of Codeのチュートリアル](%= resolve_url('https://code.org/learn') %)を利用したイベントを開催する。.
-  * あなたの会社のオフィスで、地域の学校やNPOを招いてHour of Codeのイベントを行う。
-  * あなたの会社の**ソフトウェアエンジニア**の方々に、地域の学校を訪問してHour of Codeのイベントを手助けすることを奨励する。 [ここから](%= resolve_url('https://code.org/volunteer/engineer') %)登録して、学校とつながることができます。
+  * Use our [marketing toolkit](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %) to create a communications timeline and share promotional content.
+  * Asking your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](%= resolve_url('/promote/resources#sample-emails') %).
+  * Hosting an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('https://code.org/learn') %).
+  * Inviting a local classroom of students or other non profits you partner with to do an Hour of Code at your company’s office.
+  * Encouraging **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. [ここから](%= resolve_url('https://code.org/volunteer/engineer') %)登録して、学校とつながることができます。
+  * For more instructions on connecting your employees with classrooms, use our [guide for corporate partners](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %)
 
 ## Hour of Codeのイベントを、企業で開催する方法
 
@@ -54,7 +56,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
     **以下の映像を見せることも非常に効果的です:**
     
       * オリジナルのCode.orgはビル・ゲイツ、マーク・ザッカーバーグ、NBAスターのクリス・ボッシュが出演されているビデオをリリースしています。 (それらは [1 分](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 分](https://www.youtube.com/watch?v=nKIu9yen5nc), そして[9分](https://www.youtube.com/watch?v=dU1xS07N-FA) バージョンがあります。)
-      * [Hour of Code 2015年度版のビデオ](https://www.youtube.com/watch?v=7L97YMYqLHc)か、[2013年度版のビデオ](https://www.youtube.com/watch?v=FC5FbmsH4fw)をみる。 <% end %>
+      * [Hour of Code 2015年度版のビデオ](https://www.youtube.com/watch?v=7L97YMYqLHc)か、<% if @country == 'uk' %> [2013年度版のビデオ](https://www.youtube.com/watch?v=FC5FbmsH4fw)をみる。 <% else %> <% end %>
       * [アメリカのオバマ大統領が生徒たちにコンピュータサイエンスを学ぶよう呼びかけてる映像もあります。](https://www.youtube.com/watch?v=6XvmhE1J9PY)
       * その他の映像は[こちら](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
     

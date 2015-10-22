@@ -16,7 +16,7 @@ Dashboard::Application.configure do
 
   config.asset_host = 'adhoc-studio.code.org'
 
-  # DO not fallback to assets pipeline if a precompiled asset is missed.
+  # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
   # Version of your assets, change this if you want to expire all your assets.

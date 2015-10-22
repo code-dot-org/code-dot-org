@@ -10,10 +10,12 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 **Há muitas maneiras de as empresas participarem da Hora do Código e ajudarem a expandir o ensino da ciência da computação. Considere:**
 
-  * Pedir ao seu CEO para enviar um e-mail para toda a empresa enfatizando a importância da ciência da computação e incentivando os funcionários a divulgar. [Veja este e-mail](%= resolve_url('/promote/resources#sample-emails') %)..
+  * Use nosso [kit de ferramentas de marketing](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %) para criar um cronograma de comunicações e compartilhar conteúdos promocionais.
+  * Pedir ao seu CEO para enviar um e-mail para toda a empresa enfatizando a importância da ciência da computação e incentivando os funcionários a divulgar. [Veja este e-mail](%= resolve_url('/promote/resources#sample-emails') %).
   * Organizar um Happy Hour da Hora do Código com seus colegas de trabalho para experimentar os [tutoriais](%= resolve_url('https://code.org/learn') %).
   * Convidar uma turma de alunos ou de outros parceiros sem fins lucrativos para realizar uma Hora do Código no escritório da empresa.
   * Incentivar os **engenheiros de software** da sua empresa a visitar uma sala de aula local para ajudar a conduzir uma Hora do Código e inspirar os alunos a estudar ciência da computação. Eles podem se [cadastrar](%= resolve_url('https://code.org/volunteer/engineer') %) para se conectar com uma sala de aula.
+  * Para mais instruções sobre como conectar seus funcionários com salas de aula, use nosso [guia para parceiros corporativos](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %)
 
 ## Como sediar um evento da Hora do Código
 

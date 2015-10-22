@@ -1,5 +1,6 @@
 name 'U3L20 Student Lesson Introduction'
 title 'Conditional Basics'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 20 - Conditional Basics

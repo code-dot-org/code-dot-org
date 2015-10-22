@@ -21,9 +21,7 @@ Feature: App Lab Scenarios
     And I drag a BUTTON into the app
     And I switch to code mode
     And Applab HTML has a button
-    And I press "clear-puzzle-header"
-    And element "#confirm-button" is visible
-    And I press "confirm-button"
+    And I reset the puzzle to the starting version
     And Applab HTML has no button
 
   Scenario: Can read and set button text
@@ -35,6 +33,17 @@ Feature: App Lab Scenarios
     And I wait until element "#divApplab > .screen > button#testButton2" is visible
     Then element "#testButton1" contains text "Jelly"
     Then element "#testButton2" contains text "Jelly"
+
+  Scenario: Text is preserved when reading and setting newlines in textarea
+    Given I switch to design mode
+    And I drag a TEXT_AREA into the app
+    Then I switch to code mode
+    And I switch to text mode
+    And I press keys "setText('text_area1', 'Line 1\\nLine 2\\n\\nLine3');\n" for element ".ace_text-input"
+    And I press keys "for (var i = 0; i < 100; i++) { setText('text_area1', getText('text_area1')); }" for element ".ace_text-input"
+    When I press "runButton"
+    And I wait until element "#divApplab > .screen > div#text_area1" is visible
+    Then element "div#text_area1" has html "Line 1<div>Line 2</div><div><br></div><div>Line3</div>"
 
   @no_mobile
   @no_safari
