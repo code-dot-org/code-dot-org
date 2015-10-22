@@ -214,23 +214,37 @@ function loadHoc2015(skin, assetUrl) {
   ];
 
   skin.AutohandlerTouchItems = {
-    'pig': 'whenTouchPig',
-    'man': 'whenTouchMan',
-    'roo': 'whenTouchRoo',
-    'bird': 'whenTouchBird',
-    'spider': 'whenTouchSpider',
-    'mouse': 'whenTouchMouse',
-    'pilot': 'whenTouchPilot'
+    whenTouchPig: 'pig',
+    whenTouchMan: 'man',
+    whenTouchRoo: 'roo',
+    whenTouchBird: 'bird',
+    whenTouchSpider: 'spider',
+    whenTouchMouse: 'mouse',
+    whenTouchPilot: 'pilot',
+    whenGetPig: 'pig',
+    whenGetMan: 'man',
+    whenGetRoo: 'roo',
+    whenGetBird: 'bird',
+    whenGetSpider: 'spider',
+    whenGetMouse: 'mouse',
+    whenGetPilot: 'pilot',
   };
 
-  skin.AutohandlerGetAllItems = {
-    'pig': 'whenGetAllPigs',
-    'man': 'whenGetAllMen',
-    'roo': 'whenGetAllRoos',
-    'bird': 'whenGetAllBirds',
-    'spider': 'whenGetAllSpiders',
-    'mouse': 'whenGetAllMice',
-    'pilot': 'whenGetAllPilots'
+  skin.AutohandlerTouchAllItems = {
+    whenTouchAllPigs: 'pig',
+    whenTouchAllMen: 'man',
+    whenTouchAllRoos: 'roo',
+    whenTouchAllBirds: 'bird',
+    whenTouchAllSpiders: 'spider',
+    whenTouchAllMice: 'mouse',
+    whenTouchAllPilots: 'pilot',
+    whenGetAllPigs: 'pig',
+    whenGetAllMen: 'man',
+    whenGetAllRoos: 'roo',
+    whenGetAllBirds: 'bird',
+    whenGetAllSpiders: 'spider',
+    whenGetAllMice: 'mouse',
+    whenGetAllPilots: 'pilot',
   };
 
   skin.specialItemProperties = {
@@ -535,7 +549,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.AutohandlerTouchItems = {
   };
 
-  skin.AutohandlerGetAllItems = {
+  skin.AutohandlerTouchAllItems = {
   };
 
   skin.specialItemProperties = {
