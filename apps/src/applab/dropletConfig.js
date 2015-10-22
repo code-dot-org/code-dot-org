@@ -168,3 +168,10 @@ module.exports.categories = {
     blocks: []
   },
 };
+
+/*
+ * Set the showExamplesLink config value so that the droplet tooltips will show
+ * an 'Examples' link that opens documentation in a lightbox:
+ */
+module.exports.showExamplesLink = true;
+
