@@ -168,3 +168,23 @@ Collidable.prototype.updateActions = function () {
     }
   }
 };
+
+/**
+ * Change visible opacity of this collidable sprite.
+ * @param {number} newOpacity (between 0 and 1)
+ */
+Collidable.prototype.setOpacity = function (newOpacity) {
+  var spriteIndex = Studio.sprite.indexOf(this);
+  if (spriteIndex < 0) {
+    return;
+  }
+
+  var spriteRegularIcon = document.getElementById('sprite' + spriteIndex);
+  var spriteWalkIcon = document.getElementById('spriteWalk' + spriteIndex);
+  if (spriteRegularIcon) {
+    spriteRegularIcon.setAttribute('opacity', newOpacity);
+  }
+  if (spriteWalkIcon) {
+    spriteWalkIcon.setAttribute('opacity', newOpacity);
+  }
+};

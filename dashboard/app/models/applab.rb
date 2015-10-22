@@ -93,6 +93,7 @@ class Applab < Blockly
         "hideElement": null,
         "deleteElement": null,
         "setPosition": null,
+        "setSize": null,
         "write": null,
         "getXPosition": null,
         "getYPosition": null,
@@ -130,6 +131,7 @@ class Applab < Blockly
         "updateRecord": null,
         "deleteRecord": null,
         "getUserId": null,
+        "drawChartFromRecords": null,
 
         // Turtle
         "moveForward": null,
@@ -149,6 +151,7 @@ class Applab < Blockly
         "penDown": null,
         "penWidth": null,
         "penColor": null,
+        "penRGB": null,
         "show": null,
         "hide": null,
         "speed": null,
@@ -185,8 +188,10 @@ class Applab < Blockly
 
         // Variables
         "declareAssign_x": null,
+        "declareNoAssign_x": null,
         "assign_x": null,
         "declareAssign_x_prompt": null,
+        "declareAssign_x_promptNum": null,
         "console.log": null,
         "declareAssign_str_hello_world": null,
         "substring": null,

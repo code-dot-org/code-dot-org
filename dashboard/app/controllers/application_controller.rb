@@ -157,7 +157,7 @@ class ApplicationController < ActionController::Base
       end
 
       # record which hints they've requested to view
-      if HintViewRequest::ENABLED and !options[:solved?]
+      if HintViewRequest.enabled? and !options[:solved?]
         response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, script_level.level, current_user)
         response[:hint_view_request_url] = hint_view_requests_path
         response[:script_id] = script_level.script.id
