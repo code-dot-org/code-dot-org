@@ -1,0 +1,12 @@
+#sign_in_or_user{:style=>'display:block; float: right'}
+
+:javascript
+  jQuery(document).ready(function() {
+    $.ajax({
+      type: "GET",
+      url: '/dashboardapi/user_menu',
+      success: function(data) {
+        jQuery('#sign_in_or_user').html(data);
+      }
+    });
+  });
