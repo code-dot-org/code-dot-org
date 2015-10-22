@@ -182,28 +182,13 @@ function mergeFunctionsWithConfig(codeFunctions, dropletConfig, otherConfig) {
   return merged;
 }
 
-//
-// Return a new categories object with the categories from dropletConfig
-// merged with the ones in standardConfig
-//
-
+/**
+ * Return a new categories object with the categories from dropletConfig (app
+ * specific configuration) merged with the ones in standardConfig (global
+ * configuration). App configuration takes precendence
+ */
 function mergeCategoriesWithConfig(dropletConfig) {
-  var merged = {};
-
-  if (dropletConfig && dropletConfig.categories) {
-    var categorySets = [ dropletConfig.categories, standardConfig.categories ];
-    for (var s = 0; s < categorySets.length; s++) {
-      var categories = categorySets[s];
-      for (var catName in categories) {
-        if (!(catName in merged)) {
-          merged[catName] = utils.shallowCopy(categories[catName]);
-        }
-      }
-    }
-  } else {
-    merged = standardConfig.categories;
-  }
-  return merged;
+  return $.extend({}, standardConfig.categories, dropletConfig && dropletConfig.categories);
 }
 
 /**
@@ -249,6 +234,10 @@ function buildFunctionPrototype(prefix, params) {
 
 /**
  * Generate a palette for the droplet editor based on some level data.
+ * @param {object} codeFunctions The set of functions we want to use for this level
+ * @param {object} dropletConfig
+ * @param {function} dropletConfig.getBlocks
+ * @param {object} dropletConfig.categories
  */
 exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
@@ -367,8 +356,16 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   };
 };
 
-function populateModeOptionsFromConfigBlocks(modeOptions, config) {
+/**
+ * Given a droplet config, create a mode option functions object
+ * @param {object} config
+ * @param {object[]} config.blocks
+ * @param {object[]} config.categories
+ */
+function getModeOptionFunctionsFromConfig(config) {
   var mergedCategories = mergeCategoriesWithConfig(config);
+
+  var modeOptionFunctions = {};
 
   for (var i = 0; i < config.blocks.length; i++) {
     var newFunc = {};
@@ -388,15 +385,11 @@ function populateModeOptionsFromConfigBlocks(modeOptions, config) {
     newFunc.dropdown = config.blocks[i].dropdown;
 
     var modeOptionName = config.blocks[i].modeOptionName || config.blocks[i].func;
+    newFunc.title = modeOptionName;
 
-    modeOptions.functions[modeOptionName] = newFunc;
+    modeOptionFunctions[modeOptionName] = newFunc;
   }
-}
-
-function setTitlesToFuncNamesForDocumentedBlocks(modeOptions) {
-  Object.keys(modeOptions.functions).forEach(function (funcName) {
-    modeOptions.functions[funcName].title = funcName;
-  });
+  return modeOptionFunctions;
 }
 
 /**
@@ -425,11 +418,11 @@ exports.generateDropletModeOptions = function (dropletConfig, options) {
     }
   };
 
-  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletGlobalConfigBlocks });
-  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletBuiltinConfigBlocks });
-  populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig);
-
-  setTitlesToFuncNamesForDocumentedBlocks(modeOptions);
+  $.extend(modeOptions.functions,
+    getModeOptionFunctionsFromConfig({ blocks: exports.dropletGlobalConfigBlocks }),
+    getModeOptionFunctionsFromConfig({ blocks: exports.dropletBuiltinConfigBlocks }),
+    getModeOptionFunctionsFromConfig(dropletConfig)
+  );
 
   return modeOptions;
 };
