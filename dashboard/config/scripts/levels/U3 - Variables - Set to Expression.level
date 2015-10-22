@@ -158,7 +158,8 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "instructions": "Test out the new expressions. (Click to see full instructions)",
-    "markdown_instructions": "# Variables and Expressions\r\n\r\nWe don't just have to set a variable to on single number. We can also set it equal to a expression! \r\n\r\nCheck out the toolbox there are a couple new Math blocks! <br>\r\nAdd:`() + ()` <br>\r\nSubstract: `() - ()` <br>\r\nMultiply: `() * ()`<br>\r\nDivid: `() / ()` <br>\r\n\r\nYou'll also notice that `randomNumber` also works here as an expresion. \r\n\r\n# Do This\r\n\r\n* **Run the program** a couple times to see what it prints out.\r\n\r\n* **Change the expressions** to try out different numbers.\r\n\r\n"
+    "markdown_instructions": "# Variables and Expressions\r\n\r\nWe don't just have to set a variable to on single number. We can also set it equal to a expression! \r\n\r\nCheck out the toolbox there are a couple new Math blocks! <br>\r\nAdd:`() + ()` <br>\r\nSubstract: `() - ()` <br>\r\nMultiply: `() * ()`<br>\r\nDivid: `() / ()` <br>\r\n\r\nYou'll also notice that `randomNumber` also works here as an expresion. \r\n\r\n# Do This\r\n\r\n* **Run the program** a couple times to see what it prints out.\r\n\r\n* **Change the expressions** to try out different numbers.\r\n\r\n",
+    "start_blocks": "var addingExpression = 23 + 42;\r\nconsole.log(\"The value of 23 + 42 is \");\r\nconsole.log(addingExpression);\r\nvar subtractExpression = 23 - 14;\r\nconsole.log(\"The value of 23 -14 is\");\r\nconsole.log(subtractExpression);\r\nvar multiplyExpression = 9 * 5;\r\nconsole.log(\"The value of 9 * 5 is\");\r\nconsole.log(multiplyExpression);\r\nvar dividExpression = 82 / 12;\r\nconsole.log(\"The value of 82 / 12 is \");\r\nconsole.log(dividExpression);\r\nvar randNum = randomNumber(1, 10);\r\nconsole.log(\"The random number between 1 and 10 is\");\r\nconsole.log(randNum);"
   }
 }]]></config>
   <blocks/>

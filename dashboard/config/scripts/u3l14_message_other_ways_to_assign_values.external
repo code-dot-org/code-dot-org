@@ -1,0 +1,11 @@
+name 'U3L14 - Message - Other ways to assign values'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Controlling Memory - Other ways to store values
+
+* Assign the result of an arithmetic expression
+* Assign the value returned by `randomNumber`
+* Assign a value given by the user through `promptNum`
+MARKDOWN

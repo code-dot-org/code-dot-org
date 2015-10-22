@@ -10,13 +10,13 @@ nav: prizes_nav
 
 # Mga Premyo - mga tuntunin at kundisyon
 
-## Amazon.com or Microsoft’s Windows Store credit:
+## Amazon.com, iTunes and Windows Store credit:
 
-The Amazon.com and Microsoft’s Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Limitado ang premyo sa isa kada isang organizer.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Limitado ang premyo sa isa kada isang organizer.
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com or Microsoft’s Windows Store credit. Kung ang iyong buong paaralan ay sasali sa Hour of Code, bawat isang guro ay kailangang magparehistro bilang organizer para makasali.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Kung ang iyong buong paaralan ay sasali sa Hour of Code, bawat isang guro ay kailangang magparehistro bilang organizer para makasali.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com and Microsoft’s Windows Store credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
 
