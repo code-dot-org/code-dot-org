@@ -423,7 +423,7 @@ Item.prototype.moveToNextPosition = function () {
 Item.prototype.startCollision = function (key) {
   var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
   if (newCollisionStarted) {
-    if (this.className === 'hazard') {
+    if (this.isHazard) {
       var actor = Studio.sprite[key];
       if (actor) {
         actor.addAction(new spriteActions.FadeActor(constants.TOUCH_HAZARD_FADE_TIME));
