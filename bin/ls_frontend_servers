@@ -1,7 +1,13 @@
 #!/usr/bin/env ruby
 #
 # Script to list the name, public DNS name, and private DNS name of
-# each running AWS frontend instance.
+# each running AWS frontend instance. For example:
+#
+#
+# $ ruby ls_frontend_servers
+# frontend-b4             ip-10-145-54-123.ec2.internal   http://ec2-54-204-132-24.compute-1.amazonaws.com:8080
+# frontend-d02            ip-10-157-137-197.ec2.internal  http://ec2-54-146-39-69.compute-1.amazonaws.com:8080
+# ...
 
 require 'aws-sdk'
 require_relative '../deployment'
