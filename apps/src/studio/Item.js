@@ -457,9 +457,12 @@ Item.prototype.startCollision = function (key) {
   var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
   if (newCollisionStarted) {
     if (this.className === 'hazard') {
-      Studio.sprite[key].addAction(new spriteActions.FadeActor(2000));
-      Studio.sprite[key].addAction(new spriteActions.ShakeActor(2000));
-      Studio.fail(studioMsg.failedAvoidHazard());
+      var actor = Studio.sprite[key];
+      if (actor) {
+        Studio.sprite[key].addAction(new spriteActions.FadeActor(2000));
+        Studio.sprite[key].addAction(new spriteActions.ShakeActor(2000));
+        Studio.fail(studioMsg.failedAvoidHazard());
+      }
     }
   }
   return newCollisionStarted;
