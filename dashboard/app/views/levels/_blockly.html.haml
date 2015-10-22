@@ -17,6 +17,7 @@
 -#   of the page as possible before running scripts, but so that browsers can
 -#   intelligently optimize downloading resources.
 - computed_app_options = app_options
+- computed_app_options[:baseUrl] = "//" + computed_app_options[:baseUrl] unless computed_app_options[:baseUrl].start_with? '/'
 - apps_path = computed_app_options[:baseUrl]
 - app_name = computed_app_options[:app]
 - is_droplet = computed_app_options[:droplet]

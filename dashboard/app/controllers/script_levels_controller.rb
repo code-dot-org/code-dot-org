@@ -1,7 +1,7 @@
 class ScriptLevelsController < ApplicationController
 
   # Maximum age in seconds for cached content
-  HTTP_MAXAGE = 10.minutes 
+  HTTP_MAXAGE = 1.day
 
   check_authorization
   include LevelsHelper
