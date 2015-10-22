@@ -177,8 +177,11 @@ exports.FadeActor = function (fadeDuration) {
   this.startFadeTime_ = null;
 
   /** @private {number} */
-  this.fadeDurationMs_ = utils.valueOr(fadeDuration, 1000);
+  this.fadeDurationMs_ = utils.valueOr(fadeDuration, exports.FadeActor.DEFAULT_DURATION);
 };
+
+/** @const {number} */
+exports.FadeActor.DEFAULT_DURATION = 1000;
 
 /**
  * Apply a single frame of change to the given sprite.
@@ -203,4 +206,64 @@ exports.FadeActor.prototype.update = function (sprite) {
 exports.FadeActor.prototype.isDone = function () {
   var currentTime = new Date().getTime();
   return this.startFadeTime_ && currentTime > this.startFadeTime_ + this.fadeDurationMs_;
+};
+
+/**
+ * Shake an actor left and right for a moment.
+ * @param {number} [shakeDuration] how long it should take to fade out, in
+ *        milliseconds.  Default to 1 second.
+ * @constructor
+ * @implements {SpriteAction}
+ */
+exports.ShakeActor = function (shakeDuration) {
+  /** @private {number} */
+  this.startShakeTime_ = null;
+
+  /** @private {number} How long to shake, in milliseconds */
+  this.shakeDurationMs_ = utils.valueOr(shakeDuration,
+      exports.ShakeActor.DEFAULT_DURATION);
+
+  /** @private {number} How many complete back-and-forth shakes occur */
+  this.cycleCount_ = exports.ShakeActor.DEFAULT_CYCLES;
+
+  /** @private {number} max shake distance from real position */
+  this.amplitude_ = exports.ShakeActor.DEFAULT_DISTANCE;
+
+  /** @private {number} precalculated angular frequency of sine wave equation. */
+  this.angularFrequency_ = 2 * Math.PI * (this.cycleCount_ / this.shakeDurationMs_);
+};
+
+/** @const {number} */
+exports.ShakeActor.DEFAULT_DURATION = 1000;
+
+/** @const {number} */
+exports.ShakeActor.DEFAULT_CYCLES = 8;
+
+/** @const {number} */
+exports.ShakeActor.DEFAULT_DISTANCE = 5;
+
+/**
+ * Apply a single frame of change to the given sprite.
+ * @param {Collidable} sprite
+ */
+exports.ShakeActor.prototype.update = function (sprite) {
+  if (!this.startShakeTime_) {
+    // First frame of fade
+    this.startShakeTime_ = new Date().getTime();
+  }
+
+  var elapsedTime = new Date().getTime() - this.startShakeTime_;
+  var offset = this.amplitude_ * Math.sin(this.angularFrequency_ * elapsedTime);
+
+  sprite.displayX = sprite.x + offset;
+};
+
+/**
+ * @returns {boolean} whether the action is done; in this case, whether the
+ *          fade is complete, based on the elapsed time.
+ */
+exports.ShakeActor.prototype.isDone = function () {
+  var currentTime = new Date().getTime();
+  return this.startShakeTime_ &&
+      currentTime > this.startShakeTime_ +this.shakeDurationMs_;
 };

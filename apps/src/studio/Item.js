@@ -1,6 +1,7 @@
 var Collidable = require('./collidable');
 var constants = require('./constants');
 var studioMsg = require('./locale');
+var spriteActions = require('./spriteActions');
 var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
 var utils = require('../utils');
@@ -377,7 +378,8 @@ Item.prototype.startCollision = function (key) {
   var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
   if (newCollisionStarted) {
     if (this.className === 'hazard') {
-      Studio.fadeActor(key, 2000);
+      Studio.sprite[key].addAction(new spriteActions.FadeActor(2000));
+      Studio.sprite[key].addAction(new spriteActions.ShakeActor(2000));
       Studio.fail(studioMsg.failedAvoidHazard());
     }
   }
