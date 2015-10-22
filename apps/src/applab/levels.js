@@ -33,6 +33,14 @@ levels.custom = {
   'sliderSpeed': 0.95,
   'appWidth': 320,
   'appHeight': 480,
+
+  /**
+   * This is the default set of functions available to us if the levelbuilder
+   * leaves codeFunctions blank.
+   * Applab.rb self.palette serves a similar function, intially providing
+   * levelbuilders with the text for the default set of blocks.
+   * These two places shouldbe kept in sync
+   */
   'codeFunctions': {
     // UI Controls
     "onEvent": null,
@@ -115,7 +123,7 @@ levels.custom = {
     "penRGB": null,
     "show": null,
     "hide": null,
-    "speed" : null,
+    "speed": null,
 
     // Control
     "forLoop_i_0_4": null,

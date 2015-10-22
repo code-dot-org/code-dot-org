@@ -193,11 +193,14 @@ Code.org has designed these computer science professional development (PD) progr
 **Save the date**
 
 Thursday, November 5th, 2015  <br/>
-8:00am - 10:00pm
+8:00am - 10:00am
 
 **Location**
 
-TBD 
+Yotel <br/>
+Studio - Fourth Floor<br/>
+570 10th Ave<br/>
+New York, NY 10036<br/>
 
 
 ### Counselors
@@ -209,7 +212,10 @@ Thursday, November 5th, 2015 <br/>
 
 **Location**
 
-TBD
+Yotel <br/>
+Studio - Fourth Floor<br/>
+570 10th Ave<br/>
+New York, NY 10036<br/>
 
 [**Back to the top**](#top)
 
