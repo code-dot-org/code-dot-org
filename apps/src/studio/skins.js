@@ -601,11 +601,11 @@ function loadHoc2015x(skin, assetUrl) {
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 16,
+        normal: 8,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: 19
+        walk: 10
       },
       timePerFrame: 100
     };

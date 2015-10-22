@@ -10,6 +10,10 @@ module.exports.blocks = [
   {func: 'moveLeft', parent: api, category: '', },
   {func: 'moveUp', parent: api, category: '', },
   {func: 'moveDown', parent: api, category: '', },
+  {func: 'goRight', parent: api, category: '', },
+  {func: 'goLeft', parent: api, category: '', },
+  {func: 'goUp', parent: api, category: '', },
+  {func: 'goDown', parent: api, category: '', },
   {func: 'playSound', parent: api, category: '', params: ['"character1sound1"'],
     dropdown: { 0: [
       '"random"',
@@ -22,7 +26,8 @@ module.exports.blocks = [
       ] } },
 
   {func: 'endGame', parent: api, category: '', params: ['"win"'], dropdown: { 0: ['"win"', '"lose"' ] } },
-  {func: 'addPoints', parent: api, category: '', params: ["250"] },
+  {func: 'addPoints', parent: api, category: '', params: ["100"] },
+  {func: 'removePoints', parent: api, category: '', params: ["100"] },
   {func: 'changeScore', parent: api, category: '', params: ["1"] },
   {func: 'addCharacter', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'setToChase', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
