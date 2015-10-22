@@ -210,7 +210,7 @@ class Applab < Blockly
         "functionParams_n": null,
         "callMyFunction": null,
         "callMyFunction_n": null,
-        "return": null,
+        "return": null
       }
     JSON
   end
