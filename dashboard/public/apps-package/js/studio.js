@@ -131,6 +131,9 @@ var AUTO_HANDLER_MAP = {
   whenUp: 'when-up',
   whenLeft: 'when-left',
   whenRight: 'when-right',
+  whenGetCharacter: 'whenSpriteCollided-' +
+      (Studio.protagonistSpriteIndex || 0) +
+      '-any_item',
   whenTouchCharacter: 'whenSpriteCollided-' +
       (Studio.protagonistSpriteIndex || 0) +
       '-any_item',
@@ -138,6 +141,7 @@ var AUTO_HANDLER_MAP = {
       (Studio.protagonistSpriteIndex || 0) +
       '-wall',
   whenGetAllCharacters: 'whenGetAllItems',
+  whenTouchAllCharacters: 'whenGetAllItems',
   whenTouchGoal: 'whenTouchGoal',
   whenTouchAllGoals: 'whenTouchAllGoals',
   whenScore1000: 'whenScore1000',
@@ -1636,12 +1640,12 @@ Studio.init = function(config) {
   config.dropIntoAceAtLineStart = true;
   config.unusedConfig = [];
   for (var prop in skin.AutohandlerTouchItems) {
-    AUTO_HANDLER_MAP[skin.AutohandlerTouchItems[prop]] =
+    AUTO_HANDLER_MAP[prop] =
         'whenSpriteCollided-' +
-        (Studio.protagonistSpriteIndex || 0) + '-' + prop;
+        (Studio.protagonistSpriteIndex || 0) + '-' + skin.AutohandlerTouchItems[prop];
   }
-  for (prop in skin.AutohandlerGetAllItems) {
-    AUTO_HANDLER_MAP[skin.AutohandlerGetAllItems[prop]] = 'whenGetAll-' + prop;
+  for (prop in skin.AutohandlerTouchAllItems) {
+    AUTO_HANDLER_MAP[prop] = 'whenGetAll-' + skin.AutohandlerTouchAllItems[prop];
   }
   for (prop in level.autohandlerOverrides) {
     AUTO_HANDLER_MAP[prop] = level.autohandlerOverrides[prop];
@@ -5650,23 +5654,37 @@ function loadHoc2015(skin, assetUrl) {
   ];
 
   skin.AutohandlerTouchItems = {
-    'pig': 'whenTouchPig',
-    'man': 'whenTouchMan',
-    'roo': 'whenTouchRoo',
-    'bird': 'whenTouchBird',
-    'spider': 'whenTouchSpider',
-    'mouse': 'whenTouchMouse',
-    'pilot': 'whenTouchPilot'
+    whenTouchPig: 'pig',
+    whenTouchMan: 'man',
+    whenTouchRoo: 'roo',
+    whenTouchBird: 'bird',
+    whenTouchSpider: 'spider',
+    whenTouchMouse: 'mouse',
+    whenTouchPilot: 'pilot',
+    whenGetPig: 'pig',
+    whenGetMan: 'man',
+    whenGetRoo: 'roo',
+    whenGetBird: 'bird',
+    whenGetSpider: 'spider',
+    whenGetMouse: 'mouse',
+    whenGetPilot: 'pilot',
   };
 
-  skin.AutohandlerGetAllItems = {
-    'pig': 'whenGetAllPigs',
-    'man': 'whenGetAllMen',
-    'roo': 'whenGetAllRoos',
-    'bird': 'whenGetAllBirds',
-    'spider': 'whenGetAllSpiders',
-    'mouse': 'whenGetAllMice',
-    'pilot': 'whenGetAllPilots'
+  skin.AutohandlerTouchAllItems = {
+    whenTouchAllPigs: 'pig',
+    whenTouchAllMen: 'man',
+    whenTouchAllRoos: 'roo',
+    whenTouchAllBirds: 'bird',
+    whenTouchAllSpiders: 'spider',
+    whenTouchAllMice: 'mouse',
+    whenTouchAllPilots: 'pilot',
+    whenGetAllPigs: 'pig',
+    whenGetAllMen: 'man',
+    whenGetAllRoos: 'roo',
+    whenGetAllBirds: 'bird',
+    whenGetAllSpiders: 'spider',
+    whenGetAllMice: 'mouse',
+    whenGetAllPilots: 'pilot',
   };
 
   skin.specialItemProperties = {
@@ -5971,7 +5989,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.AutohandlerTouchItems = {
   };
 
-  skin.AutohandlerGetAllItems = {
+  skin.AutohandlerTouchAllItems = {
   };
 
   skin.specialItemProperties = {
@@ -8417,16 +8435,16 @@ levels.js_hoc2015_score =
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
-    'whenTouchPilot': 'whenTouchGoal'
+    'whenGetPilot': 'whenTouchGoal'
   },
   'codeFunctions': {
     'playSound': null,
     'addPoints': { params: ["100"] },
 
-    'whenTouchPilot': null
+    'whenGetPilot': null
   },
   'startBlocks': [
-    'function whenTouchPilot() {',
+    'function whenGetPilot() {',
     '  playSound("character1sound1");',
     '}',
     ].join('\n'),
@@ -8503,9 +8521,9 @@ levels.js_hoc2015_win_lose = {
     'removePoints': { params: ["100"] },
 
     'addCharacter': null,
-    'whenTouchPilot': null,
-    'whenTouchMan': null,
-    'whenTouchBird': null,
+    'whenGetPilot': null,
+    'whenGetMan': null,
+    'whenGetBird': null,
   },
   'startBlocks': [
     'addCharacter("pilot");', // temporary until auto-characters
@@ -8573,13 +8591,13 @@ levels.js_hoc2015_add_characters = {
     'removePoints': { params: ["1000"] },
     'playSound': null,
 
-    'whenTouchPig': null,
+    'whenGetPig': null,
   },
   'startBlocks': [
     'playSound("character1sound1");',
     'addCharacter("pig");',
     '',
-    'function whenTouchPig() {',
+    'function whenGetPig() {',
     '  playSound("item1sound1");',
     '  addPoints(1000);',
     '}',
@@ -8642,13 +8660,13 @@ levels.js_hoc2015_chain_characters = {
     'addPoints': null,
     'removePoints': null,
 
-    'whenTouchMouse': null,
+    'whenGetMouse': null,
   },
   'startBlocks': [
     'addCharacter("mouse");',
     'playSound("character1sound3");',
     '',
-    'function whenTouchMouse() {',
+    'function whenGetMouse() {',
     '  playSound("item3sound4");',
     '  addCharacter("mouse");',
     '  addCharacter("mouse");',
@@ -8684,24 +8702,24 @@ levels.js_hoc2015_chain_characters_2 = {
     'removePoints': null,
     'playSound': null,
 
-    'whenTouchRoo': null,
-    'whenTouchMouse': null
+    'whenGetRoo': null,
+    'whenGetMouse': null
   },
   'startBlocks': [
     'addCharacter("roo");',
     'addCharacter("roo");',
     '',
-    'function whenTouchRoo() {',
+    'function whenGetRoo() {',
     '  playSound("character1sound2");',
     '  addPoints(50);',
     '  addCharacter("bird");',
     '  addCharacter("bird");',
     '}',
     '',
-    'function whenTouchBird() {',
+    'function whenGetBird() {',
     '',
     '}',
-    'function whenTouchMouse() {',
+    'function whenGetMouse() {',
     '  playSound("character1sound3");',
     '  addPoints(100);',
     '  ',
@@ -8742,7 +8760,7 @@ levels.js_hoc2015_change_setting = {
     'removePoints': { 'category': 'Commands' },
 
     'whenScore1000': { 'category': 'Events' },
-    'whenTouchPilot': { 'category': 'Events' },
+    'whenGetPilot': { 'category': 'Events' },
   },
   'startBlocks': [
     'addCharacter("pilot");',
@@ -8751,7 +8769,7 @@ levels.js_hoc2015_change_setting = {
     'playSound("character1sound4");',
     'setBot("bot1");',
     '',
-    'function whenTouchPilot() {',
+    'function whenGetPilot() {',
     '  addPoints(400);',
     '  setBackground("random");',
     '  ',
@@ -8819,14 +8837,14 @@ levels.js_hoc2015_event_free = {
     'removePoints': { 'category': 'Commands' },
 
     'whenTouchObstacle': { 'category': 'Events' },
-    'whenTouchMan': { 'category': 'Events' },
-    'whenTouchPilot': { 'category': 'Events' },
-    'whenTouchPig': { 'category': 'Events' },
-    'whenTouchBird': { 'category': 'Events' },
-    'whenTouchMouse': { 'category': 'Events' },
-    'whenTouchRoo': { 'category': 'Events' },
-    'whenTouchSpider': { 'category': 'Events' },
-    'whenTouchCharacter': { 'category': 'Events' }
+    'whenGetMan': { 'category': 'Events' },
+    'whenGetPilot': { 'category': 'Events' },
+    'whenGetPig': { 'category': 'Events' },
+    'whenGetBird': { 'category': 'Events' },
+    'whenGetMouse': { 'category': 'Events' },
+    'whenGetRoo': { 'category': 'Events' },
+    'whenGetSpider': { 'category': 'Events' },
+    'whenGetCharacter': { 'category': 'Events' }
   },
   'startBlocks': [
     'setBackground("forest");',
@@ -9041,7 +9059,9 @@ module.exports.blocks = [
   {func: 'moveNormal', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'moveSlow', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   
+  {func: 'whenTouchAllCharacters', block: 'function whenTouchAllCharacters() {}', expansion: 'function whenTouchAllCharacters() {\n  __;\n}', category: '' },
   {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
+
   {func: 'whenGetAllMen', block: 'function whenGetAllMen() {}', expansion: 'function whenGetAllMen() {\n  __;\n}', category: '' },
   {func: 'whenGetAllPilots', block: 'function whenGetAllPilots() {}', expansion: 'function whenGetAllPilots() {\n  __;\n}', category: '' },
   {func: 'whenGetAllPigs', block: 'function whenGetAllPigs() {}', expansion: 'function whenGetAllPigs() {\n  __;\n}', category: '' },
@@ -9049,6 +9069,15 @@ module.exports.blocks = [
   {func: 'whenGetAllMice', block: 'function whenGetAllMice() {}', expansion: 'function whenGetAllMice() {\n  __;\n}', category: '' },
   {func: 'whenGetAllRoos', block: 'function whenGetAllRoos() {}', expansion: 'function whenGetAllRoos() {\n  __;\n}', category: '' },
   {func: 'whenGetAllSpiders', block: 'function whenGetAllSpiders() {}', expansion: 'function whenGetAllSpiders() {\n  __;\n}', category: '' },
+
+  {func: 'whenTouchAllMen', block: 'function whenTouchAllMen() {}', expansion: 'function whenTouchAllMen() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllPilots', block: 'function whenTouchAllPilots() {}', expansion: 'function whenTouchAllPilots() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllPigs', block: 'function whenTouchAllPigs() {}', expansion: 'function whenTouchAllPigs() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllBirds', block: 'function whenTouchAllBirds() {}', expansion: 'function whenTouchAllBirds() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllMice', block: 'function whenTouchAllMice() {}', expansion: 'function whenTouchAllMice() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllRoos', block: 'function whenTouchAllRoos() {}', expansion: 'function whenTouchAllRoos() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllSpiders', block: 'function whenTouchAllSpiders() {}', expansion: 'function whenTouchAllSpiders() {\n  __;\n}', category: '' },
+
   {func: 'whenTouchGoal', block: 'function whenTouchGoal() {}', expansion: 'function whenTouchGoal() {\n  __;\n}', category: '' },
   {func: 'whenTouchAllGoals', block: 'function whenTouchAllGoals() {}', expansion: 'function whenTouchAllGoals() {\n  __;\n}', category: '' },
   {func: 'whenScore1000', block: 'function whenScore1000() {}', expansion: 'function whenScore1000() {\n  __;\n}', category: '' },
@@ -9058,7 +9087,18 @@ module.exports.blocks = [
   {func: 'whenUp', block: 'function whenUp() {}', expansion: 'function whenUp() {\n  __;\n}', category: '' },
   {func: 'whenDown', block: 'function whenDown() {}', expansion: 'function whenDown() {\n  __;\n}', category: '' },
   {func: 'whenTouchObstacle', block: 'function whenTouchObstacle() {}', expansion: 'function whenTouchObstacle() {\n  __;\n}', category: '' },
+
+  {func: 'whenGetCharacter', block: 'function whenGetCharacter() {}', expansion: 'function whenGetCharacter() {\n  __;\n}', category: '' },
   {func: 'whenTouchCharacter', block: 'function whenTouchCharacter() {}', expansion: 'function whenTouchCharacter() {\n  __;\n}', category: '' },
+
+  {func: 'whenGetMan', block: 'function whenGetMan() {}', expansion: 'function whenGetMan() {\n  __;\n}', category: '' },
+  {func: 'whenGetPilot', block: 'function whenGetPilot() {}', expansion: 'function whenGetPilot() {\n  __;\n}', category: '' },
+  {func: 'whenGetPig', block: 'function whenGetPig() {}', expansion: 'function whenGetPig() {\n  __;\n}', category: '' },
+  {func: 'whenGetBird', block: 'function whenGetBird() {}', expansion: 'function whenGetBird() {\n  __;\n}', category: '' },
+  {func: 'whenGetMouse', block: 'function whenGetMouse() {}', expansion: 'function whenGetMouse() {\n  __;\n}', category: '' },
+  {func: 'whenGetRoo', block: 'function whenGetRoo() {}', expansion: 'function whenGetRoo() {\n  __;\n}', category: '' },
+  {func: 'whenGetSpider', block: 'function whenGetSpider() {}', expansion: 'function whenGetSpider() {\n  __;\n}', category: '' },
+
   {func: 'whenTouchMan', block: 'function whenTouchMan() {}', expansion: 'function whenTouchMan() {\n  __;\n}', category: '' },
   {func: 'whenTouchPilot', block: 'function whenTouchPilot() {}', expansion: 'function whenTouchPilot() {\n  __;\n}', category: '' },
   {func: 'whenTouchPig', block: 'function whenTouchPig() {}', expansion: 'function whenTouchPig() {\n  __;\n}', category: '' },
