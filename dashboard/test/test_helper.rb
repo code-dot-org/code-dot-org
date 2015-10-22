@@ -29,7 +29,7 @@ require 'rails/test_help'
 require 'mocha/mini_test'
 
 # Raise exceptions instead of rendering exception templates.
-Dashboard::Application.config.action_dispatch.show_exceptions = false#
+Dashboard::Application.config.action_dispatch.show_exceptions = false
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!

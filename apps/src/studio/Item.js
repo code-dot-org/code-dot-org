@@ -1,8 +1,9 @@
 var Collidable = require('./collidable');
 var constants = require('./constants');
+var studioMsg = require('./locale');
+var spriteActions = require('./spriteActions');
 var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
-var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -14,6 +15,7 @@ var uniqueId = 0;
 /**
  * An Item is a type of Collidable.
  * Note: x/y represent x/y of center in gridspace
+ * @extends {Collidable}
  */
 var Item = function (options) {
   // call collidable constructor
@@ -21,6 +23,14 @@ var Item = function (options) {
 
   this.height = options.height || 50;
   this.width = options.width || 50;
+
+  /**
+   * Rendering offset for item animation vs display position - applied as
+   * late as possible.
+   * @type {{x: number, y: number}}
+   */
+  this.renderOffset = options.renderOffset || { x: 0, y: 0 };
+
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
   this.renderScale = options.renderScale || 1;
   this.displayDir = Direction.SOUTH;
@@ -34,10 +44,7 @@ var Item = function (options) {
     }
   }.bind(this), 50);
 };
-
-// inherit from Collidable
-Item.prototype = new Collidable();
-
+Item.inherits(Collidable);
 module.exports = Item;
 
 /**
@@ -118,6 +125,12 @@ Item.prototype.update = function () {
 
   // Draw the item's current location.
   Studio.drawDebugRect("itemCenter", this.x, this.y, 3, 3);
+
+  // In this stationary activity case, we don't need to do any of this
+  // update logic (facing the actor is handled every frame in display())
+  if (this.activity === 'watchActor') {
+    return;
+  }
 
   if (this.destGridX !== undefined) {
     // Draw the item's destination grid square.
@@ -270,6 +283,35 @@ Item.prototype.update = function () {
 };
 
 /**
+ * Isolated update logic for "watchActor" activity where the "item" keeps
+ * turning to look at the actor with the given sprite index.
+ * @param {number} targetSpriteIndex
+ */
+Item.prototype.turnToFaceActor = function (targetSpriteIndex) {
+  // Pick a target direction closest to the relative direction toward the target.
+  var target = Studio.sprite[targetSpriteIndex];
+  if (!target) {
+    return;
+  }
+
+  // Actor positions are the top-left of their square (or their "feet" square
+  // in the 'isometric' case) - we should look at the middle of their square
+  var actorGroundCenterX = target.displayX + Studio.HALF_SQUARE;
+  var actorGroundCenterY = target.displayY + Studio.HALF_SQUARE;
+  var deltaX = actorGroundCenterX - this.x;
+  var deltaY = actorGroundCenterY - this.y;
+
+  // We shouldn't adjust our direction if the actor is sufficiently close that
+  // relative direction doesn't make much sense
+  // Basically, avoid thrashing when moving into their space.
+  var SQUARED_MINIMUM_DISTANCE = 25;
+  if (deltaX * deltaX + deltaY * deltaY > SQUARED_MINIMUM_DISTANCE) {
+    Studio.drawDebugLine("watchActor", this.x, this.y, actorGroundCenterX, actorGroundCenterY, '#ffff00');
+    this.dir = constants.getClosestDirection(deltaX, deltaY);
+  }
+};
+
+/**
  * Begin a fade out.
  */
 Item.prototype.beginRemoveElement = function () {
@@ -324,8 +366,8 @@ Item.prototype.hasCompletedFade = function() {
  */
 Item.prototype.display = function () {
   var topLeft = {
-    x: this.x - this.width / 2,
-    y: this.y - this.height / 2
+    x: this.x + this.renderOffset.x - this.width / 2,
+    y: this.y + this.renderOffset.y - this.height / 2
   };
 
   var currentTime = new Date().getTime();
@@ -333,6 +375,11 @@ Item.prototype.display = function () {
   if (this.startFadeTime) {
     opacity = 1 - (currentTime - this.startFadeTime) / this.fadeTime;
     opacity = Math.max(opacity, 0);
+  }
+
+  // Watch behavior does not change logical position, should update every frame
+  if (this.activity === "watchActor") {
+    this.turnToFaceActor(Studio.protagonistSpriteIndex || 0);
   }
 
   var directionFrame = this.getDirectionFrame();
@@ -347,9 +394,15 @@ Item.prototype.display = function () {
 
 Item.prototype.getNextPosition = function () {
   var unit = Direction.getUnitVector(this.dir);
+  var speed = this.speed;
+  // TODO: Better concept of which actions actually move the actor
+  // Projected position should not be in front of you if you are not moving!
+  if (this.activity === "none" || this.activity === "watchActor") {
+    speed = 0;
+  }
   return {
-    x: this.x + this.speed * unit.x,
-    y: this.y + this.speed * unit.y
+    x: this.x + speed * unit.x,
+    y: this.y + speed * unit.y
   };
 };
 
@@ -357,4 +410,38 @@ Item.prototype.moveToNextPosition = function () {
   var next = this.getNextPosition();
   this.x = next.x;
   this.y = next.y;
+};
+
+/**
+ * Mark that we're colliding with object represented by key.
+ * Here, override base implemention to special on-collision logic for certain
+ * item classes.
+ * @param key A unique key representing the object we're colliding with
+ * @returns {boolean} True if collision is started, false if we're already colliding
+ * @override
+ */
+Item.prototype.startCollision = function (key) {
+  var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
+  if (newCollisionStarted) {
+    if (this.isHazard) {
+      var actor = Studio.sprite[key];
+      if (actor) {
+        actor.addAction(new spriteActions.FadeActor(constants.TOUCH_HAZARD_FADE_TIME));
+        actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_FADE_TIME));
+        Studio.fail(studioMsg.failedAvoidHazard());
+      }
+    }
+  }
+  return newCollisionStarted;
+};
+
+/**
+ * Change visible opacity of this item.
+ * @param {number} newOpacity (between 0 and 1)
+ * @override
+ */
+Item.prototype.setOpacity = function (newOpacity) {
+  if (this.element) {
+    this.element.setAttribute('opacity', newOpacity);
+  }
 };

@@ -55,12 +55,12 @@ function saySpriteRequiredBlock(options) {
 
 /**
  * Constructs a required block definition to match "move [sprite] [dir]" blocks
- * @param options (all optional):
- *          sprite (string): zero-indexed string ID of sprite, e.g., "1"
- *          dir (string): string of Direction constant. We show
- *            the direction in feedback blocks
- * @returns test definition suitable for feedback.js::getMissingRequiredBlocks
+ * @param {string} [options.sprite] zero-indexed string ID of sprite, e.g., "1"
+ * @param {string} [options.dir] string of Direction constant. We show
+ *        the direction in feedback blocks
+ * @returns {Array} test definition suitable for getMissingRequiredBlocks
  *          required block processing
+ * @see FeedbackUtils#getMissingRequiredBlocks
  */
 function moveRequiredBlock(options) {
   var titles = {};
@@ -1613,14 +1613,14 @@ levels.js_hoc2015_move_right = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
     [[0x1020000, 0x1020000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
      [0x1020000, 0x1020000, 0x0000000, 0x0010000, 0x0020000, 0x0100000, 0x00, 0x0000000], 
      [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x0000000],  
+     [0x0000000, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x0000000],
      [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],   
      [0x0000000, 0x0000000, 0x0000000, 0x0100000, 0x0010000, 0x0120000, 0x00, 0x0000000], 
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],  
@@ -1678,7 +1678,7 @@ levels.js_hoc2015_move_right_down = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': 
@@ -1720,13 +1720,13 @@ levels.js_hoc2015_move_diagonal = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,  
   'map':
     [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000, 0x0000000],  
-     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000], 
+     [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000],
      [0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000, 0x0000000],   
      [0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
@@ -1762,7 +1762,7 @@ levels.js_hoc2015_move_backtrack = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': 
@@ -1771,7 +1771,7 @@ levels.js_hoc2015_move_backtrack = {
      [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00], 
      [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],  
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
-     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],   
+     [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
   'instructions': '"Go quickly, BOTX."',
@@ -1802,7 +1802,7 @@ levels.js_hoc2015_move_around = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -1810,7 +1810,7 @@ levels.js_hoc2015_move_around = {
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
      [0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000, 0x00],  
      [0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0140000, 0x0000000, 0x0000001, 0x0000000, 0x00],   
+     [0x0000000, 0x0000000, 0x20, 0x0140000, 0x0000000, 0x0000001, 0x0000000, 0x00],
      [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x00],  
      [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
@@ -1844,7 +1844,7 @@ levels.js_hoc2015_move_finale = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -1852,8 +1852,8 @@ levels.js_hoc2015_move_finale = {
      [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
      [0x0000000, 0x0000000, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000000, 0x0000000], 
      [0x0000000, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000000, 0x0000000],  
-     [0x0000000, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],   
+     [0x0000000, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
      [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],  
      [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000]],
   'embed': 'false',
@@ -2040,16 +2040,16 @@ levels.js_hoc2015_score =
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
-    'whenTouchPilot': 'whenTouchGoal'
+    'whenGetPilot': 'whenTouchGoal'
   },
   'codeFunctions': {
     'playSound': null,
     'addPoints': { params: ["100"] },
 
-    'whenTouchPilot': null
+    'whenGetPilot': null
   },
   'startBlocks': [
-    'function whenTouchPilot() {',
+    'function whenGetPilot() {',
     '  playSound("character1sound1");',
     '}',
     ].join('\n'),
@@ -2126,9 +2126,9 @@ levels.js_hoc2015_win_lose = {
     'removePoints': { params: ["100"] },
 
     'addCharacter': null,
-    'whenTouchPilot': null,
-    'whenTouchMan': null,
-    'whenTouchBird': null,
+    'whenGetPilot': null,
+    'whenGetMan': null,
+    'whenGetBird': null,
   },
   'startBlocks': [
     'addCharacter("pilot");', // temporary until auto-characters
@@ -2196,13 +2196,13 @@ levels.js_hoc2015_add_characters = {
     'removePoints': { params: ["1000"] },
     'playSound': null,
 
-    'whenTouchPig': null,
+    'whenGetPig': null,
   },
   'startBlocks': [
     'playSound("character1sound1");',
     'addCharacter("pig");',
     '',
-    'function whenTouchPig() {',
+    'function whenGetPig() {',
     '  playSound("item1sound1");',
     '  addPoints(1000);',
     '}',
@@ -2265,13 +2265,13 @@ levels.js_hoc2015_chain_characters = {
     'addPoints': null,
     'removePoints': null,
 
-    'whenTouchMouse': null,
+    'whenGetMouse': null,
   },
   'startBlocks': [
     'addCharacter("mouse");',
     'playSound("character1sound3");',
     '',
-    'function whenTouchMouse() {',
+    'function whenGetMouse() {',
     '  playSound("item3sound4");',
     '  addCharacter("mouse");',
     '  addCharacter("mouse");',
@@ -2307,24 +2307,24 @@ levels.js_hoc2015_chain_characters_2 = {
     'removePoints': null,
     'playSound': null,
 
-    'whenTouchRoo': null,
-    'whenTouchMouse': null
+    'whenGetRoo': null,
+    'whenGetMouse': null
   },
   'startBlocks': [
     'addCharacter("roo");',
     'addCharacter("roo");',
     '',
-    'function whenTouchRoo() {',
+    'function whenGetRoo() {',
     '  playSound("character1sound2");',
     '  addPoints(50);',
     '  addCharacter("bird");',
     '  addCharacter("bird");',
     '}',
     '',
-    'function whenTouchBird() {',
+    'function whenGetBird() {',
     '',
     '}',
-    'function whenTouchMouse() {',
+    'function whenGetMouse() {',
     '  playSound("character1sound3");',
     '  addPoints(100);',
     '  ',
@@ -2365,7 +2365,7 @@ levels.js_hoc2015_change_setting = {
     'removePoints': { 'category': 'Commands' },
 
     'whenScore1000': { 'category': 'Events' },
-    'whenTouchPilot': { 'category': 'Events' },
+    'whenGetPilot': { 'category': 'Events' },
   },
   'startBlocks': [
     'addCharacter("pilot");',
@@ -2374,7 +2374,7 @@ levels.js_hoc2015_change_setting = {
     'playSound("character1sound4");',
     'setBot("bot1");',
     '',
-    'function whenTouchPilot() {',
+    'function whenGetPilot() {',
     '  addPoints(400);',
     '  setBackground("random");',
     '  ',
@@ -2442,14 +2442,14 @@ levels.js_hoc2015_event_free = {
     'removePoints': { 'category': 'Commands' },
 
     'whenTouchObstacle': { 'category': 'Events' },
-    'whenTouchMan': { 'category': 'Events' },
-    'whenTouchPilot': { 'category': 'Events' },
-    'whenTouchPig': { 'category': 'Events' },
-    'whenTouchBird': { 'category': 'Events' },
-    'whenTouchMouse': { 'category': 'Events' },
-    'whenTouchRoo': { 'category': 'Events' },
-    'whenTouchSpider': { 'category': 'Events' },
-    'whenTouchCharacter': { 'category': 'Events' }
+    'whenGetMan': { 'category': 'Events' },
+    'whenGetPilot': { 'category': 'Events' },
+    'whenGetPig': { 'category': 'Events' },
+    'whenGetBird': { 'category': 'Events' },
+    'whenGetMouse': { 'category': 'Events' },
+    'whenGetRoo': { 'category': 'Events' },
+    'whenGetSpider': { 'category': 'Events' },
+    'whenGetCharacter': { 'category': 'Events' }
   },
   'startBlocks': [
     'setBackground("forest");',
