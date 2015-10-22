@@ -2124,19 +2124,11 @@ levels.js_hoc2015_win_lose = {
     'playSound': null,
     'addPoints': { params: ["100"] },
     'removePoints': { params: ["100"] },
-
-    'addCharacter': null,
     'whenGetPilot': null,
     'whenGetMan': null,
     'whenGetBird': null,
   },
-  'startBlocks': [
-    'addCharacter("pilot");', // temporary until auto-characters
-    'addCharacter("pilot");', // temporary until auto-characters
-    'addCharacter("man");',   // temporary until auto-characters
-    'addCharacter("man");',   // temporary until auto-characters
-    'addCharacter("bird");',
-    ''].join('\n'),
+  'startBlocks': [].join('\n'),
 
   'sortDrawOrder': true,
   'wallMapCollisions': true,
@@ -2146,19 +2138,19 @@ levels.js_hoc2015_win_lose = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0],
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 16, 0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0]],
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x040, 0x040, 0x000, 0x000, 0x000],
+    [0x800, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x800],
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x010, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
   'instructions': '"Watch out for the MAN."',
   'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN!',
   'autoArrowSteer': true,
-  'timeoutFailureTick': 600,
+  'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'callouts': [
     {
