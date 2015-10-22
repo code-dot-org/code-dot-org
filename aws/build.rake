@@ -293,7 +293,7 @@ end
 
 task :pegasus_unit_tests do
   Dir.chdir(pegasus_dir) do
-    with_hipchat_logging("pegasus unit tests") do
+    with_hipchat_logging("pegasus ruby unit tests") do
       RakeUtils.rake 'test'
     end
   end
@@ -301,16 +301,18 @@ end
 
 task :shared_unit_tests do
   Dir.chdir(shared_dir) do
-    with_hipchat_logging("shared unit tests") do
+    with_hipchat_logging("shared ruby unit tests") do
       RakeUtils.rake 'test'
     end
   end
 end
 
-def log_coverage_results
+# currently this is only implemented for dashboard ruby unit tests but
+# maybe in the future it will work for other types of tests
+def log_coverage_results(name)
   results_file = dashboard_dir('coverage/.last_run.json')
   results = JSON.parse(File.read(results_file))
-  HipChat.log "Unit tests for <b>dashboard</b> coverage: #{results["result"]["covered_percent"]}%. Details: https:#{CDO.studio_url('coverage/index.html')}", color: 'green'
+  HipChat.log "<b>#{name}</b> coverage: #{results["result"]["covered_percent"]}%. Details: https:#{CDO.studio_url('coverage/index.html')}", color: 'green'
 rescue Exception => e
   HipChat.log "Couldn't read test coverage results at #{results_file}: #{e.message}\n#{e.backtrace.join("\n")}"
 end
@@ -324,12 +326,12 @@ end
 
 task :dashboard_unit_tests => [COVERAGE_SYMLINK] do
   Dir.chdir(dashboard_dir) do
-    with_hipchat_logging("dashboard unit tests") do
-      # Unit tests mess with the database so stop the service before running them and
-      # reset the database afterward.
+    name = "dashboard ruby unit tests"
+    with_hipchat_logging(name) do
+      # Unit tests mess with the database so stop the service before running them
       RakeUtils.stop_service CDO.dashboard_unicorn_name
       RakeUtils.rake 'test', 'COVERAGE=1'
-      log_coverage_results
+      log_coverage_results(name)
       RakeUtils.start_service CDO.dashboard_unicorn_name
     end
   end
