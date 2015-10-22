@@ -228,6 +228,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   arguments += " -t ~@no_mobile" if browser['mobile']
   arguments += " -t ~@no_ie" if browser['browserName'] == 'Internet Explorer'
   arguments += " -t ~@no_ie9" if browser['browserName'] == 'Internet Explorer' && browser['version'] == '9.0'
+  arguments += " -t ~@no_ie10" if browser['browserName'] == 'Internet Explorer' && browser['version'] == '10.0'
   arguments += " -t ~@chrome" if browser['browserName'] != 'chrome' && !$options.local
   arguments += " -t ~@no_safari" if browser['browserName'] == 'Safari'
   arguments += " -t ~@skip"
@@ -319,7 +320,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     end
     short_message = message
 
-    message += "<br/><i>rerun: ./runner.rb -c #{browser_name} -f #{feature} --html</i>"
+    message += "<br/><i>rerun: bundle exec ./runner.rb -c #{browser_name} -f #{feature} --html</i>"
     HipChat.log message, color: 'red'
     HipChat.developers short_message, color: 'red' if Rails.env.test?
   end

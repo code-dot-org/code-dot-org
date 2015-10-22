@@ -64,7 +64,7 @@ SQL
 
     # TODO(asher): Determine whether we should be doing an inner join or a left
     # outer join.
-    @teachers = User.limit(100).where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id')
+    @teachers = User.where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id')
 
     # If requested, join with the workshop_attendance table to filter out based
     # on PD attendance.
@@ -75,17 +75,19 @@ SQL
     end
 
     # Prune the set of fields to those that will be displayed.
+    @teacher_limit = 100
     @headers = ['ID', 'Name', 'Email', 'Address', 'Num Students']
-    @teachers = @teachers.pluck('id', 'name', 'email', 'full_address', 'COUNT(followers.id) AS num_students')
+    @teachers = @teachers.limit(@teacher_limit).pluck('id', 'name', 'email', 'full_address', 'COUNT(followers.id) AS num_students')
   end
 
   def csp_pd_responses
     authorize! :read, :reports
 
     @headers = ['Level ID', 'ID', 'Data']
+    @response_limit = 100
     @responses = {}
     [3911, 3909, 3910, 3907].each do |level_id|
-      @responses[level_id] = LevelSource.limit(50).where(level_id: level_id).pluck(:level_id, :id, :data)
+      @responses[level_id] = LevelSource.limit(@response_limit).where(level_id: level_id).pluck(:level_id, :id, :data)
     end
   end
 
