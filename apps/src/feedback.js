@@ -245,27 +245,18 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
   if (continueButton) {
 
-    feedback.appendChild(this.getPuzzleRatingButtons_());
-
-    var buttons = feedback.querySelectorAll('.puzzle-rating-btn');
-    var buttonClickHandler = function () {
-      for (var _ = 0, button; (button = buttons[_]); _++) {
-        if (button != this) {
-          button.classList.remove('enabled');
-        }
-      }
-      this.classList.toggle('enabled');
-    };
-    for (var _ = 0, button; (button = buttons[_]); _++) {
-      dom.addClickTouchEvent(button, buttonClickHandler);
+    if (options.response.puzzle_rating_url) {
+      feedback.appendChild(this.buildPuzzleRatingButtons_());
     }
 
-    dom.addClickTouchEvent(continueButton, function() {
+    dom.addClickTouchEvent(continueButton, function () {
       feedbackDialog.hide();
+
+      // Submit Puzzle Rating
       var selectedRating = feedback.querySelector('.puzzle-rating-btn.enabled');
-      if (options.response.submit_puzzle_rating_url && selectedRating) {
+      if (options.response.puzzle_rating_url && selectedRating) {
         $.ajax({
-          url: options.response.submit_puzzle_rating_url,
+          url: options.response.puzzle_rating_url,
           type: 'POST',
           data: {
             script_id: options.response.script_id,
@@ -356,11 +347,25 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
   return this.getCountableBlocks_().length;
 };
 
-FeedbackUtils.prototype.getPuzzleRatingButtons_ = function() {
-  var buttons = document.createElement('div');
-  buttons.id = 'puzzleRatingButtons';
-  buttons.innerHTML = require('./templates/puzzleRating.html.ejs')();
-  return buttons;
+FeedbackUtils.prototype.buildPuzzleRatingButtons_ = function () {
+  var buttonContainer = document.createElement('div');
+  buttonContainer.id = 'puzzleRatingButtons';
+  buttonContainer.innerHTML = require('./templates/puzzleRating.html.ejs')();
+
+  var buttons = buttonContainer.querySelectorAll('.puzzle-rating-btn');
+  var buttonClickHandler = function () {
+    for (var _ = 0, button; (button = buttons[_]); _++) {
+      if (button != this) {
+        button.classList.remove('enabled');
+      }
+    }
+    this.classList.toggle('enabled');
+  };
+  for (var _ = 0, button; (button = buttons[_]); _++) {
+    dom.addClickTouchEvent(button, buttonClickHandler);
+  }
+
+  return buttonContainer;
 };
 
 /**
