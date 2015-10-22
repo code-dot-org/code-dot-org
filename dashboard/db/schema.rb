@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013224202) do
+ActiveRecord::Schema.define(version: 20151022174100) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -273,6 +273,19 @@ ActiveRecord::Schema.define(version: 20151013224202) do
 
   add_index "prizes", ["prize_provider_id"], name: "index_prizes_on_prize_provider_id", using: :btree
   add_index "prizes", ["user_id"], name: "index_prizes_on_user_id", using: :btree
+
+  create_table "puzzle_ratings", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.integer  "script_id",  limit: 4
+    t.integer  "level_id",   limit: 4
+    t.integer  "rating",     limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "puzzle_ratings", ["script_id", "level_id"], name: "index_puzzle_ratings_on_script_id_and_level_id", using: :btree
+  add_index "puzzle_ratings", ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
+  add_index "puzzle_ratings", ["user_id"], name: "index_puzzle_ratings_on_user_id", using: :btree
 
   create_table "script_levels", force: :cascade do |t|
     t.integer  "level_id",   limit: 4, null: false
@@ -551,4 +564,5 @@ ActiveRecord::Schema.define(version: 20151013224202) do
   add_index "workshops", ["program_type"], name: "index_workshops_on_program_type", using: :btree
 
   add_foreign_key "hint_view_requests", "users"
+  add_foreign_key "puzzle_ratings", "users"
 end
