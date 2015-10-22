@@ -19,7 +19,7 @@ def describe_frontends
     instances.reservations.each do |reservation|
       reservation.instances.each do |instance|
         name = instance.tags.detect{|tag| tag.key == 'Name'}
-        next unless name.value.start_with? "frontend"
+        next unless name && name.value.start_with?('frontend')
         result <<  [(name ? name.value : '').ljust(16),
                     instance.private_dns_name,
                     "http://#{instance.public_dns_name}:8080"]
