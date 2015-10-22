@@ -307,42 +307,9 @@ Item.prototype.turnToFaceActor = function (targetSpriteIndex) {
   var SQUARED_MINIMUM_DISTANCE = 25;
   if (deltaX * deltaX + deltaY * deltaY > SQUARED_MINIMUM_DISTANCE) {
     Studio.drawDebugLine("watchActor", this.x, this.y, actorGroundCenterX, actorGroundCenterY, '#ffff00');
-    this.dir = getClosestDirection(deltaX, deltaY);
+    this.dir = constants.getClosestDirection(deltaX, deltaY);
   }
 };
-
-/**
- * Given a 2D vector (x and y) provides the closest animation direction
- * given in our Direction enum.
- * @param {number} x
- * @param {number} y
- * @returns {Direction}
- */
-function getClosestDirection(x, y) {
-  // Y is inverted between our playlab coordinate space and what atan2 expects.
-  var radiansFromNorth = Math.atan2(x, -y);
-  var stepRadians = Math.PI / 4;
-  // Snap positive index of nearest 45° where 0 is North, 1 is NE, etc...
-  var stepsFromNorth = (Math.round(radiansFromNorth / stepRadians) + 8) % 8;
-  // At this point we should have an int between 0 and 7
-  return CLOCKWISE_DIRECTIONS_FROM_NORTH[stepsFromNorth];
-}
-
-/**
- * Mapping number of steps away from north to direction enum.
- * Can be indexed backwards with Array#slice.
- * @type {Direction[]}
- */
-var CLOCKWISE_DIRECTIONS_FROM_NORTH = [
-  Direction.NORTH,
-  Direction.NORTHEAST,
-  Direction.EAST,
-  Direction.SOUTHEAST,
-  Direction.SOUTH,
-  Direction.SOUTHWEST,
-  Direction.WEST,
-  Direction.NORTHWEST,
-];
 
 /**
  * Begin a fade out.
@@ -412,7 +379,7 @@ Item.prototype.display = function () {
 
   // Watch behavior does not change logical position, should update every frame
   if (this.activity === "watchActor") {
-    this.turnToFaceActor(0);
+    this.turnToFaceActor(Studio.protagonistSpriteIndex || 0);
   }
 
   var directionFrame = this.getDirectionFrame();
@@ -459,8 +426,8 @@ Item.prototype.startCollision = function (key) {
     if (this.className === 'hazard') {
       var actor = Studio.sprite[key];
       if (actor) {
-        Studio.sprite[key].addAction(new spriteActions.FadeActor(2000));
-        Studio.sprite[key].addAction(new spriteActions.ShakeActor(2000));
+        actor.addAction(new spriteActions.FadeActor(constants.TOUCH_HAZARD_FADE_TIME));
+        actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_FADE_TIME));
         Studio.fail(studioMsg.failedAvoidHazard());
       }
     }
