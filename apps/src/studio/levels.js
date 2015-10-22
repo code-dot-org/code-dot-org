@@ -2040,16 +2040,16 @@ levels.js_hoc2015_score =
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
-    'whenTouchPilot': 'whenTouchGoal'
+    'whenGetPilot': 'whenTouchGoal'
   },
   'codeFunctions': {
     'playSound': null,
     'addPoints': { params: ["100"] },
 
-    'whenTouchPilot': null
+    'whenGetPilot': null
   },
   'startBlocks': [
-    'function whenTouchPilot() {',
+    'function whenGetPilot() {',
     '  playSound("character1sound1");',
     '}',
     ].join('\n'),
@@ -2126,9 +2126,9 @@ levels.js_hoc2015_win_lose = {
     'removePoints': { params: ["100"] },
 
     'addCharacter': null,
-    'whenTouchPilot': null,
-    'whenTouchMan': null,
-    'whenTouchBird': null,
+    'whenGetPilot': null,
+    'whenGetMan': null,
+    'whenGetBird': null,
   },
   'startBlocks': [
     'addCharacter("pilot");', // temporary until auto-characters
@@ -2196,13 +2196,13 @@ levels.js_hoc2015_add_characters = {
     'removePoints': { params: ["1000"] },
     'playSound': null,
 
-    'whenTouchPig': null,
+    'whenGetPig': null,
   },
   'startBlocks': [
     'playSound("character1sound1");',
     'addCharacter("pig");',
     '',
-    'function whenTouchPig() {',
+    'function whenGetPig() {',
     '  playSound("item1sound1");',
     '  addPoints(1000);',
     '}',
@@ -2265,13 +2265,13 @@ levels.js_hoc2015_chain_characters = {
     'addPoints': null,
     'removePoints': null,
 
-    'whenTouchMouse': null,
+    'whenGetMouse': null,
   },
   'startBlocks': [
     'addCharacter("mouse");',
     'playSound("character1sound3");',
     '',
-    'function whenTouchMouse() {',
+    'function whenGetMouse() {',
     '  playSound("item3sound4");',
     '  addCharacter("mouse");',
     '  addCharacter("mouse");',
@@ -2307,24 +2307,24 @@ levels.js_hoc2015_chain_characters_2 = {
     'removePoints': null,
     'playSound': null,
 
-    'whenTouchRoo': null,
-    'whenTouchMouse': null
+    'whenGetRoo': null,
+    'whenGetMouse': null
   },
   'startBlocks': [
     'addCharacter("roo");',
     'addCharacter("roo");',
     '',
-    'function whenTouchRoo() {',
+    'function whenGetRoo() {',
     '  playSound("character1sound2");',
     '  addPoints(50);',
     '  addCharacter("bird");',
     '  addCharacter("bird");',
     '}',
     '',
-    'function whenTouchBird() {',
+    'function whenGetBird() {',
     '',
     '}',
-    'function whenTouchMouse() {',
+    'function whenGetMouse() {',
     '  playSound("character1sound3");',
     '  addPoints(100);',
     '  ',
@@ -2365,7 +2365,7 @@ levels.js_hoc2015_change_setting = {
     'removePoints': { 'category': 'Commands' },
 
     'whenScore1000': { 'category': 'Events' },
-    'whenTouchPilot': { 'category': 'Events' },
+    'whenGetPilot': { 'category': 'Events' },
   },
   'startBlocks': [
     'addCharacter("pilot");',
@@ -2374,7 +2374,7 @@ levels.js_hoc2015_change_setting = {
     'playSound("character1sound4");',
     'setBot("bot1");',
     '',
-    'function whenTouchPilot() {',
+    'function whenGetPilot() {',
     '  addPoints(400);',
     '  setBackground("random");',
     '  ',
@@ -2442,14 +2442,14 @@ levels.js_hoc2015_event_free = {
     'removePoints': { 'category': 'Commands' },
 
     'whenTouchObstacle': { 'category': 'Events' },
-    'whenTouchMan': { 'category': 'Events' },
-    'whenTouchPilot': { 'category': 'Events' },
-    'whenTouchPig': { 'category': 'Events' },
-    'whenTouchBird': { 'category': 'Events' },
-    'whenTouchMouse': { 'category': 'Events' },
-    'whenTouchRoo': { 'category': 'Events' },
-    'whenTouchSpider': { 'category': 'Events' },
-    'whenTouchCharacter': { 'category': 'Events' }
+    'whenGetMan': { 'category': 'Events' },
+    'whenGetPilot': { 'category': 'Events' },
+    'whenGetPig': { 'category': 'Events' },
+    'whenGetBird': { 'category': 'Events' },
+    'whenGetMouse': { 'category': 'Events' },
+    'whenGetRoo': { 'category': 'Events' },
+    'whenGetSpider': { 'category': 'Events' },
+    'whenGetCharacter': { 'category': 'Events' }
   },
   'startBlocks': [
     'setBackground("forest");',
