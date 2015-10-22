@@ -111,6 +111,9 @@ var AUTO_HANDLER_MAP = {
   whenUp: 'when-up',
   whenLeft: 'when-left',
   whenRight: 'when-right',
+  whenGetCharacter: 'whenSpriteCollided-' +
+      (Studio.protagonistSpriteIndex || 0) +
+      '-any_item',
   whenTouchCharacter: 'whenSpriteCollided-' +
       (Studio.protagonistSpriteIndex || 0) +
       '-any_item',
@@ -118,6 +121,7 @@ var AUTO_HANDLER_MAP = {
       (Studio.protagonistSpriteIndex || 0) +
       '-wall',
   whenGetAllCharacters: 'whenGetAllItems',
+  whenTouchAllCharacters: 'whenGetAllItems',
   whenTouchGoal: 'whenTouchGoal',
   whenTouchAllGoals: 'whenTouchAllGoals',
   whenScore1000: 'whenScore1000',
@@ -1616,12 +1620,12 @@ Studio.init = function(config) {
   config.dropIntoAceAtLineStart = true;
   config.unusedConfig = [];
   for (var prop in skin.AutohandlerTouchItems) {
-    AUTO_HANDLER_MAP[skin.AutohandlerTouchItems[prop]] =
+    AUTO_HANDLER_MAP[prop] =
         'whenSpriteCollided-' +
-        (Studio.protagonistSpriteIndex || 0) + '-' + prop;
+        (Studio.protagonistSpriteIndex || 0) + '-' + skin.AutohandlerTouchItems[prop];
   }
-  for (prop in skin.AutohandlerGetAllItems) {
-    AUTO_HANDLER_MAP[skin.AutohandlerGetAllItems[prop]] = 'whenGetAll-' + prop;
+  for (prop in skin.AutohandlerTouchAllItems) {
+    AUTO_HANDLER_MAP[prop] = 'whenGetAll-' + skin.AutohandlerTouchAllItems[prop];
   }
   for (prop in level.autohandlerOverrides) {
     AUTO_HANDLER_MAP[prop] = level.autohandlerOverrides[prop];
