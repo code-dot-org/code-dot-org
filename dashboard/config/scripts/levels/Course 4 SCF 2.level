@@ -1,21 +1,21 @@
 <Artist>
   <config><![CDATA[{
   "game_id": 23,
-  "created_at": "2015-10-21T20:28:32.000Z",
+  "created_at": "2015-10-21T21:02:35.000Z",
   "level_num": "custom",
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "x": "25",
-    "y": "150",
+    "x": "115",
+    "y": "90",
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "Use the functions provided to draw three rows of hexagons. Notice how our second row is shifted to the right.",
-    "ideal": "24",
+    "instructions": "Use what you learned in the previous level to draw an image like this.",
+    "ideal": "28",
     "embed": "false",
-    "markdown_instructions": "Use the functions provided to draw three rows of hexagons. Notice how our second row is shifted to the right.\r\n\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Use what you learned in the previous level to draw an image like this.\r\n\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -37,22 +37,6 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="procedures_defnoreturn" y="150" x="20">
-          <mutation/>
-          <title name="NAME">draw a hexagon</title>
-        </block>
-        <block type="procedures_defnoreturn" y="300" x="20">
-          <mutation/>
-          <title name="NAME">draw a line of hexagons</title>
-        </block>
-        <block type="procedures_defnoreturn" y="450" x="20">
-          <mutation/>
-          <title name="NAME">shift down/forward</title>
-        </block>
-        <block type="procedures_defnoreturn" y="600" x="20">
-          <mutation/>
-          <title name="NAME">shift down/backward</title>
-        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -167,19 +151,19 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="procedures_callnoreturn">
-              <mutation name="draw a line of hexagons"/>
+              <mutation name="draw two octagons"/>
               <next>
                 <block type="procedures_callnoreturn">
                   <mutation name="shift down/forward"/>
                   <next>
                     <block type="procedures_callnoreturn">
-                      <mutation name="draw a line of hexagons"/>
+                      <mutation name="draw three octagons"/>
                       <next>
                         <block type="procedures_callnoreturn">
                           <mutation name="shift down/backward"/>
                           <next>
                             <block type="procedures_callnoreturn">
-                              <mutation name="draw a line of hexagons"/>
+                              <mutation name="draw two octagons"/>
                             </block>
                           </next>
                         </block>
@@ -193,10 +177,10 @@
         </block>
         <block type="procedures_defnoreturn">
           <mutation/>
-          <title name="NAME">draw a hexagon</title>
+          <title name="NAME">draw an octagon</title>
           <statement name="STACK">
             <block type="controls_repeat">
-              <title name="TIMES">6</title>
+              <title name="TIMES">8</title>
               <statement name="DO">
                 <block type="draw_move_by_constant">
                   <title name="DIR">moveForward</title>
@@ -204,7 +188,7 @@
                   <next>
                     <block type="draw_turn_by_constant">
                       <title name="DIR">turnRight</title>
-                      <title name="VALUE">60</title>
+                      <title name="VALUE">45</title>
                     </block>
                   </next>
                 </block>
@@ -214,17 +198,17 @@
         </block>
         <block type="procedures_defnoreturn">
           <mutation/>
-          <title name="NAME">draw a line of hexagons</title>
+          <title name="NAME">draw three octagons</title>
           <statement name="STACK">
             <block type="controls_repeat">
               <title name="TIMES">3</title>
               <statement name="DO">
                 <block type="procedures_callnoreturn">
-                  <mutation name="draw a hexagon"/>
+                  <mutation name="draw an octagon"/>
                   <next>
                     <block type="jump_by_constant">
                       <title name="DIR">jumpForward</title>
-                      <title name="VALUE">120</title>
+                      <title name="VALUE">136</title>
                     </block>
                   </next>
                 </block>
@@ -238,19 +222,19 @@
           <statement name="STACK">
             <block type="draw_turn_by_constant">
               <title name="DIR">turnRight</title>
-              <title name="VALUE">60</title>
+              <title name="VALUE">45</title>
               <next>
                 <block type="jump_by_constant">
                   <title name="DIR">jumpForward</title>
-                  <title name="VALUE">40</title>
+                  <title name="VALUE">96</title>
                   <next>
                     <block type="draw_turn_by_constant">
                       <title name="DIR">turnLeft</title>
-                      <title name="VALUE">60</title>
+                      <title name="VALUE">45</title>
                       <next>
                         <block type="jump_by_constant">
                           <title name="DIR">jumpBackward</title>
-                          <title name="VALUE">320</title>
+                          <title name="VALUE">408</title>
                         </block>
                       </next>
                     </block>
@@ -262,23 +246,43 @@
         </block>
         <block type="procedures_defnoreturn">
           <mutation/>
+          <title name="NAME">draw two octagons</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw an octagon"/>
+                  <next>
+                    <block type="jump_by_constant">
+                      <title name="DIR">jumpForward</title>
+                      <title name="VALUE">136</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
           <title name="NAME">shift down/backward</title>
           <statement name="STACK">
             <block type="draw_turn_by_constant">
               <title name="DIR">turnRight</title>
-              <title name="VALUE">60</title>
+              <title name="VALUE">45</title>
               <next>
                 <block type="jump_by_constant">
                   <title name="DIR">jumpForward</title>
-                  <title name="VALUE">40</title>
+                  <title name="VALUE">96</title>
                   <next>
                     <block type="draw_turn_by_constant">
                       <title name="DIR">turnLeft</title>
-                      <title name="VALUE">60</title>
+                      <title name="VALUE">45</title>
                       <next>
                         <block type="jump_by_constant">
                           <title name="DIR">jumpBackward</title>
-                          <title name="VALUE">440</title>
+                          <title name="VALUE">408</title>
                         </block>
                       </next>
                     </block>
