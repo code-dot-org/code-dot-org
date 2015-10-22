@@ -126,6 +126,12 @@ Item.prototype.update = function () {
   // Draw the item's current location.
   Studio.drawDebugRect("itemCenter", this.x, this.y, 3, 3);
 
+  // In this stationary activity case, we don't need to do any of this
+  // update logic (facing the actor is handled every frame in display())
+  if (this.activity === 'watchActor') {
+    return;
+  }
+
   if (this.destGridX !== undefined) {
     // Draw the item's destination grid square.
     Studio.drawDebugRect(
@@ -277,6 +283,68 @@ Item.prototype.update = function () {
 };
 
 /**
+ * Isolated update logic for "watchActor" activity where the "item" keeps
+ * turning to look at the actor with the given sprite index.
+ * @param {number} targetSpriteIndex
+ */
+Item.prototype.turnToFaceActor = function (targetSpriteIndex) {
+  // Pick a target direction closest to the relative direction toward the target.
+  var target = Studio.sprite[targetSpriteIndex];
+  if (!target) {
+    return;
+  }
+
+  // Actor positions are the top-left of their square (or their "feet" square
+  // in the 'isometric' case) - we should look at the middle of their square
+  var actorGroundCenterX = target.displayX + Studio.HALF_SQUARE;
+  var actorGroundCenterY = target.displayY + Studio.HALF_SQUARE;
+  var deltaX = actorGroundCenterX - this.x;
+  var deltaY = actorGroundCenterY - this.y;
+
+  // We shouldn't adjust our direction if the actor is sufficiently close that
+  // relative direction doesn't make much sense
+  // Basically, avoid thrashing when moving into their space.
+  var SQUARED_MINIMUM_DISTANCE = 25;
+  if (deltaX * deltaX + deltaY * deltaY > SQUARED_MINIMUM_DISTANCE) {
+    Studio.drawDebugLine("watchActor", this.x, this.y, actorGroundCenterX, actorGroundCenterY, '#ffff00');
+    this.dir = getClosestDirection(deltaX, deltaY);
+  }
+};
+
+/**
+ * Given a 2D vector (x and y) provides the closest animation direction
+ * given in our Direction enum.
+ * @param {number} x
+ * @param {number} y
+ * @returns {Direction}
+ */
+function getClosestDirection(x, y) {
+  // Y is inverted between our playlab coordinate space and what atan2 expects.
+  var radiansFromNorth = Math.atan2(x, -y);
+  var stepRadians = Math.PI / 4;
+  // Snap positive index of nearest 45° where 0 is North, 1 is NE, etc...
+  var stepsFromNorth = (Math.round(radiansFromNorth / stepRadians) + 8) % 8;
+  // At this point we should have an int between 0 and 7
+  return CLOCKWISE_DIRECTIONS_FROM_NORTH[stepsFromNorth];
+}
+
+/**
+ * Mapping number of steps away from north to direction enum.
+ * Can be indexed backwards with Array#slice.
+ * @type {Direction[]}
+ */
+var CLOCKWISE_DIRECTIONS_FROM_NORTH = [
+  Direction.NORTH,
+  Direction.NORTHEAST,
+  Direction.EAST,
+  Direction.SOUTHEAST,
+  Direction.SOUTH,
+  Direction.SOUTHWEST,
+  Direction.WEST,
+  Direction.NORTHWEST,
+];
+
+/**
  * Begin a fade out.
  */
 Item.prototype.beginRemoveElement = function () {
@@ -342,6 +410,11 @@ Item.prototype.display = function () {
     opacity = Math.max(opacity, 0);
   }
 
+  // Watch behavior does not change logical position, should update every frame
+  if (this.activity === "watchActor") {
+    this.turnToFaceActor(0);
+  }
+
   var directionFrame = this.getDirectionFrame();
   this.element.setAttribute('x', topLeft.x - this.width * (directionFrame * this.renderScale + (this.renderScale-1)/2));
   this.element.setAttribute('y', topLeft.y - this.height * (this.currentFrame_ * this.renderScale + (this.renderScale-1)));
@@ -354,9 +427,15 @@ Item.prototype.display = function () {
 
 Item.prototype.getNextPosition = function () {
   var unit = Direction.getUnitVector(this.dir);
+  var speed = this.speed;
+  // TODO: Better concept of which actions actually move the actor
+  // Projected position should not be in front of you if you are not moving!
+  if (this.activity === "none" || this.activity === "watchActor") {
+    speed = 0;
+  }
   return {
-    x: this.x + this.speed * unit.x,
-    y: this.y + this.speed * unit.y
+    x: this.x + speed * unit.x,
+    y: this.y + speed * unit.y
   };
 };
 
