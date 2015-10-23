@@ -333,6 +333,7 @@ task :dashboard_unit_tests => [COVERAGE_SYMLINK] do
       RakeUtils.rake 'db:schema:load'
       RakeUtils.rake 'test', 'COVERAGE=1'
       log_coverage_results(name)
+      RakeUtils.rake "seed:all"
       RakeUtils.start_service CDO.dashboard_unicorn_name
     end
   end
