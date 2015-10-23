@@ -363,6 +363,8 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
+/** @type {number} animation rate in frames per second. */
+exports.DEFAULT_ANIMATION_RATE = 20;
 exports.DEFAULT_ITEM_FRAME_RATE = 20;
 exports.DEFAULT_PROJECTILE_FRAME_RATE = 20;
 
