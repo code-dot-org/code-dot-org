@@ -32,7 +32,6 @@
       "subtractOperator": null,
       "multiplyOperator": null,
       "divideOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "functionParams_none": null,
       "functionParams_n": null,
@@ -63,9 +62,6 @@
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L08 - Under the sea.gif",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
-    "encrypted_examples": [
-
-    ],
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",
