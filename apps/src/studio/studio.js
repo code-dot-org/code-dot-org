@@ -369,82 +369,8 @@ var drawMap = function () {
     goalFilter = new ImageFilter.Pulse(svg);
     goalFilter.createInDom();
   } else if (skin.goalEffect === 'shine') {
-    /*
-     <filter id="shine-filter">
-       <!--Blur effect-->
-       <feGaussianBlur stdDeviation="6" result="blur1" />
-
-       <!--Lighting effect-->
-       <feSpecularLighting in="blur1" result="spec1" specularExponent="60" lighting-color="#ffffff">
-
-         <!--Light source effect-->
-         <fePointLight x="50" y="100" z="400">
-           <animate attributeName="x" values="-200;-200;600;600" dur="2s" repeatCount="indefinite"></animate>
-           <animate attributeName="y" values="-200;-200;600;600" dur="2s" repeatCount="indefinite"></animate>
-         </fePointLight>
-       </feSpecularLighting>
-
-       <feComposite in="spec1" in2="SourceGraphic" operator="in" result="makedSpecular" />
-       <feComposite in="maskedSpecular" in2="SourceGraphic" operator="over" />
-     </filter>
-     */
-
-    shineFilterId = 'shine-filter';
-    var shineFilter = document.createElementNS(SVG_NS, 'filter');
-    shineFilter.setAttribute('id', shineFilterId);
-
-    var blur = document.createElementNS(SVG_NS, 'feGaussianBlur');
-    var blurId = shineFilterId + '-blur';
-    blur.setAttribute('stdDeviation', 6);
-    blur.setAttribute('result', blurId);
-
-    var feSpecularLighting = document.createElementNS(SVG_NS, 'feSpecularLighting');
-    var specularId = shineFilterId + '-specular';
-    feSpecularLighting.setAttribute('in', blurId);
-    feSpecularLighting.setAttribute('specularExponent', 60);
-    feSpecularLighting.setAttribute('lighting-color', 'white');
-    feSpecularLighting.setAttribute('result', specularId);
-
-    var fePointLight = document.createElementNS(SVG_NS, 'fePointLight');
-    var pointLightZ = 200;
-    fePointLight.setAttribute('x', 0);
-    fePointLight.setAttribute('y', 0);
-    fePointLight.setAttribute('z', pointLightZ);
-    var xPositionAnimation = document.createElementNS(SVG_NS, 'animate');
-    xPositionAnimation.setAttribute('attributeName', 'x');
-    var values = [
-        -pointLightZ,
-        -pointLightZ,
-        Studio.MAZE_WIDTH + pointLightZ,
-        Studio.MAZE_WIDTH + pointLightZ
-    ];
-    xPositionAnimation.setAttribute('values', values.join(';'));
-    xPositionAnimation.setAttribute('dur', '2s');
-    xPositionAnimation.setAttribute('repeatCount', 'indefinite');
-    var yPositionAnimation = xPositionAnimation.cloneNode();
-    yPositionAnimation.setAttribute('attributeName', 'y');
-    fePointLight.appendChild(xPositionAnimation);
-    fePointLight.appendChild(yPositionAnimation);
-    feSpecularLighting.appendChild(fePointLight);
-
-    var feCompositeMask = document.createElementNS(SVG_NS, 'feComposite');
-    var maskedSpecularId = specularId + '-masked';
-    feCompositeMask.setAttribute('in', specularId);
-    feCompositeMask.setAttribute('operator', 'in');
-    feCompositeMask.setAttribute('in2', 'SourceGraphic');
-    feCompositeMask.setAttribute('result', maskedSpecularId);
-
-    var feCompositeLayer = document.createElementNS(SVG_NS, 'feComposite');
-    feCompositeLayer.setAttribute('in', maskedSpecularId);
-    feCompositeLayer.setAttribute('operator', 'over');
-    feCompositeLayer.setAttribute('in2', 'SourceGraphic');
-
-
-    shineFilter.appendChild(blur);
-    shineFilter.appendChild(feSpecularLighting);
-    shineFilter.appendChild(feCompositeMask);
-    shineFilter.appendChild(feCompositeLayer);
-    defs.appendChild(shineFilter);
+    goalFilter = new ImageFilter.Shine(svg);
+    goalFilter.createInDom();
   } else if (skin.goalEffect === 'glow') {
     /*
      <filter id="glow-filter">
@@ -548,8 +474,6 @@ var drawMap = function () {
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
       if (goalFilter) {
         spriteFinishMarker.setAttribute('filter', 'url(#' + goalFilter.getFilterId() + ')');
-      } else if (skin.goalEffect === 'shine') {
-        spriteFinishMarker.setAttribute('filter', 'url(#' + shineFilterId + ')');
       } else if (skin.goalEffect === 'glow') {
         spriteFinishMarker.setAttribute('filter', 'url(#' + glowFilterId + ')');
       }
