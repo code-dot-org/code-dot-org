@@ -12,9 +12,7 @@
  */
 'use strict';
 
-require('../utils');
-
-var SVG_NS = "http://www.w3.org/2000/svg";
+var SVG_NS = require('../constants').SVG_NS;
 
 // Unique element ID that increments by 1 each time an element is created
 var uniqueId = 0;
