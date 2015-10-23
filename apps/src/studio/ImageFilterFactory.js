@@ -13,8 +13,9 @@
  */
 'use strict';
 
-var ImageFilter = require('./ImageFilter');
 var GlowFilter = require('./GlowFilter');
+var PulseFilter = require('./PulseFilter');
+var ShineFilter = require('./ShineFilter');
 
 /**
  * Given a type name, constructs and returns a filter of the given type.
@@ -24,11 +25,11 @@ var GlowFilter = require('./GlowFilter');
  */
 exports.makeFilterOfType = function (filterTypeName, svg) {
   if (filterTypeName === 'pulse') {
-    return new ImageFilter.Pulse(svg);
+    return new PulseFilter(svg);
   }
 
   if (filterTypeName === 'shine') {
-    return new ImageFilter.Shine(svg);
+    return new ShineFilter(svg);
   }
 
   if (filterTypeName === 'glow') {
