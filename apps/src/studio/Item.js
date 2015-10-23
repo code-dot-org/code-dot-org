@@ -38,14 +38,26 @@ var Item = function (options) {
   this.fadeTime = constants.ITEM_FADE_TIME;
 
   this.currentFrame_ = 0;
+  this.setAnimationRate(utils.valueOr(options.animationRate,
+      constants.DEFAULT_ITEM_FRAME_RATE));
+};
+Item.inherits(Collidable);
+module.exports = Item;
+
+/**
+ * Set the animation rate for this item's sprite.
+ * @param {number} framesPerSecond
+ */
+Item.prototype.setAnimationRate = function (framesPerSecond) {
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+  }
   this.animator_ = window.setInterval(function () {
     if (this.loop || this.currentFrame_ + 1 < this.frames) {
       this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
     }
-  }.bind(this), 50);
+  }.bind(this), 1000 / framesPerSecond);
 };
-Item.inherits(Collidable);
-module.exports = Item;
 
 /**
  * Returns the frame of the spritesheet for the current walking direction.
