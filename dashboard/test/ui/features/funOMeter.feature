@@ -4,7 +4,7 @@ Background:
   Given I am on "http://learn.code.org/"
   And I am a student
 
-Scenario: Attempt 2-3 Maze 1
+Scenario: Rate a Puzzle
   Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/3?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"

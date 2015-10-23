@@ -8,18 +8,34 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
     @script = create :script
   end
 
-  test 'creation requires current_user' do
-    post :create, {}, format: :json
-    assert_response :unauthorized
-  end
+  test 'creation requires script and level' do
+    level = create :level
 
-  test 'creation requires params' do
-    sign_in @student
-    post :create, {}, format: :json
+    assert_does_not_create(PuzzleRating) do
+      post :create, {}, format: :json
+    end
     assert_response :bad_request
+
+    assert_does_not_create(PuzzleRating) do
+      post :create, {script_id: @script.id}, format: :json
+    end
+    assert_response :bad_request
+
+    assert_does_not_create(PuzzleRating) do
+      post :create, {level_id: level.id}, format: :json
+    end
+    assert_response :bad_request
+
+    assert_creates(PuzzleRating) do
+      post :create, {
+        script_id: @script.id,
+        level_id: level.id
+      }, format: :json
+    end
+    assert_response :created
   end
 
-  test 'can be created uniquely only once' do
+  test 'logged-in user can create uniquely only once' do
     sign_in @student
 
     level = create :level
@@ -43,16 +59,36 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  test 'can be disabled' do
-    PuzzleRating.stubs(:enabled?).returns false
-    sign_in @student
-
+  test 'anonymous user can create many' do
     level = create :level
 
     params = {
       script_id: @script.id,
       level_id: level.id,
       rating: 1
+    }
+
+    assert_creates(PuzzleRating) do
+      post :create, params, format: :json
+    end
+
+    assert_response :created
+
+    assert_creates(PuzzleRating) do
+      post :create, params, format: :json
+    end
+
+    assert_response :created
+  end
+
+  test 'can be disabled' do
+    PuzzleRating.stubs(:enabled?).returns false
+
+    level = create :level
+
+    params = {
+      script_id: @script.id,
+      level_id: level.id,
     }
 
     assert_does_not_create(PuzzleRating) do
