@@ -144,7 +144,7 @@ class CDOImpl < OpenStruct
   end
 
   def canonical_hostname(domain)
-    return "adhoc-studio.org" if self.name == 'adhoc-dashboard.code.org'
+    return "adhoc-studio.code.org" if self.name == 'adhoc-dashboard.code.org'
     return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?(self.name)
     return domain if rack_env?(:production)
 
