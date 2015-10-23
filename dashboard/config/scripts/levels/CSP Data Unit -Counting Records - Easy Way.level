@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,9 +126,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "ReadRecords with specific criteria \r\nfind the length of an array\r\n",
     "markdown_instructions": "ReadRecords with specific criteria \r\nfind the length of an array\r\n",

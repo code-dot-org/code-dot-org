@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,9 +126,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "Run the level and see what happens. Then edit the code to make it print a different column of information.",
     "markdown_instructions": "## Reading Data\r\n\r\nWe have looked closely at createRecord. Now we are going to to learn how to readRecords out of a table. This can be useful for instances where you want to display stored data back to your user.\r\n\r\n1. Look at the code and write down on paper what you think it will do.  Think back to createRecord as you make your guess.\r\n1. Run the level\r\n1. Open the data view\r\n1. Take a look at the outcome and see if you connect the code to the output.\r\n1. Make it print a different column of information.\r\n",

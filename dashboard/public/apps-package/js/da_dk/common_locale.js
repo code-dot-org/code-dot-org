@@ -282,7 +282,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_notOperator_signatureOverride":function(d){return "OG boolesk operator"},
 "dropletBlock_orOperator_description":function(d){return "Returnerer sand, når begge udtryk er sande, og ellers falsk"},
 "dropletBlock_orOperator_signatureOverride":function(d){return "ELLER boolesk operator"},
-"dropletBlock_randomNumber_max_description":function(d){return "Få et tilfældigt tal mellem 0 og den angivne maksimumværdi"},
+"dropletBlock_randomNumber_max_description":function(d){return "Returns a random number ranging from zero to max, including both zero and max in the range"},
 "dropletBlock_randomNumber_max_param0":function(d){return "max"},
 "dropletBlock_randomNumber_max_param0_description":function(d){return "The maximum number returned"},
 "dropletBlock_randomNumber_max_signatureOverride":function(d){return "randomNumber(max)"},
@@ -392,4 +392,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Se videoen"},
 "when":function(d){return "når"},
 "whenRun":function(d){return "når programmet kører"},
-"workspaceHeaderShort":function(d){return "Arbejdsområde: "}};
+"workspaceHeaderShort":function(d){return "Arbejdsområde: "},
+"dropletBlock_mathRandom_description":function(d){return "Returns a random number ranging from 0 (inclusive) up to but not including 1 (exclusive)"},
+"dropletBlock_mathRandom_signatureOverride":function(d){return "Math.random()"},
+"dropletBlock_randomNumber_param0":function(d){return "min"},
+"dropletBlock_randomNumber_param0_description":function(d){return "The minimum number returned"},
+"dropletBlock_randomNumber_param1":function(d){return "max"},
+"dropletBlock_randomNumber_param1_description":function(d){return "The maximum number returned"},
+"dropletBlock_randomNumber_signatureOverride":function(d){return "randomNumber(min, max)"}};

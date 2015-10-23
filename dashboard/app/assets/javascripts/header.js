@@ -58,7 +58,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   stageData.levels.forEach(function(level, index, levels) {
     var status = (levelProgress[level.id] || {}).status || 'not_tried';
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
-    var href = "/s/" + stageData.script_name + "/stage/" + stageData.position + "/puzzle/" + level.position;
+    var href = level.url;
     if (userId) {
       href += '?user_id=' + userId;
     }

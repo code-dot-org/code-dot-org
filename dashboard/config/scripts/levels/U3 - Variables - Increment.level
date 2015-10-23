@@ -46,7 +46,6 @@
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "console.log": null,
       "functionParams_none": null,
@@ -59,9 +58,6 @@
       "addOperator": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "# Incrementing Variables\r\n\r\nSo far we have seen explicitly changing the value of a variable to a specific value. What if we want to increase the current value by a certain amount? We can add to the current value. This is called **incrementing** a value.\r\n\r\n# Do This\r\n\r\n* **Run the program** and add `console.log()` statements to see what is happening. \r\n\r\n* ** Add another increment of the current variable**\r\n\r\n* **Create another variable**\r\n\r\n* **Increment the value of the new variable**.",
     "start_blocks": "var foo = 10;\r\nfoo = foo + 8;",
