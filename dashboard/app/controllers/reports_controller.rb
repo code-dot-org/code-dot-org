@@ -89,7 +89,7 @@ SQL
     [3911, 3909, 3910, 3907].each do |level_id|
       # Regardless of the level type, query the DB for teacher repsonses.
       @responses[level_id] = LevelSource.limit(@response_limit).where(level_id: level_id).pluck(:level_id, :id, :data)
- 
+
       # If the level type is multiple choice, get the text answers and replace
       # the numerical responses stored with the corresponding text.
       if [3909, 3910, 3907].include? level_id
