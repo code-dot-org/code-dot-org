@@ -1804,6 +1804,7 @@ Studio.reset = function(first) {
     removedItemCount: 0,
     setActivityRecord: null,
     hasSetBot: false,
+    hasSetBotSpeed: false,
     hasSetBackground: false,
     hasSetMap: false,
     hasAddedItem: false,
@@ -4753,71 +4754,78 @@ Studio.allGoalsVisited = function() {
 };
 
 /**
- * A level can provide zero or more requiredForSuccess criteria which are
- * special cases that a level requires for success.  This function evaluates
- * the state of these criteria.
- * @returns {Object} outcome
- * @returns {boolean} outcome.exists Whether the level even has any of these criteria.
- * @returns {boolean} outcome.achieved false if any of the criteria was required but not met.
- * @returns {string} outcome.message A custom message for the first of the failing criteria.
+ * Returns true if the specified criteria, provided as an Object, is satisfied.
  */
-Studio.checkRequiredForSuccess = function() {
-
-  if (!level.requiredForSuccess) {
-    return { exists: false, achieved: false, message: null };
-  }
-
-  var required = level.requiredForSuccess;
+Studio.conditionSatisfied = function(required) {
   var tracked = Studio.trackedBehavior;
+  var valueNames = Object.keys(required);
 
-  if (required.setSprite && !tracked.hasSetSprite) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetSprite() };
+  for (var k = 0; k < valueNames.length; k++) {
+    var valueName = valueNames[k];
+    var value = required[valueName];
+
+    if (valueName == 'timedOut' && Studio.timedOut() != value) {
+      return false;
+    }
+
+    if (valueName == 'collectedItemsAtOrAbove' && tracked.removedItemCount < value) {
+      return false;
+    }
+
+    if (valueName == 'collectedItemsBelow' && tracked.removedItemCount >= value) {
+      return false;
+    }
+
+    if (valueName == 'currentPointsAtOrAbove' && Studio.playerScore < value) {
+      return false;
+    }
+
+    if (valueName == 'currentPointsBelow' && Studio.playerScore >= value) {
+      return false;
+    }
+
+    if (valueName == 'allGoalsVisited' && Studio.allGoalsVisited() != value) {
+      return false;
+    }
+
+    if (valueName == 'setMap' && tracked.hasSetMap != value) {
+      return false;
+    }
+
+    if (valueName == 'setBotSpeed' && tracked.hasSetBotSpeed != value) {
+      return false;
+    }
   }
 
-  if (required.setBotSpeed && !tracked.hasSetBotSpeed) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetBotSpeed() };
+  return true;
+};
+
+/**
+ * A level can provide zero or more progress conditions which are special cases
+ * that we test to see if the level has succeeded or failed.  This function
+ * evaluates the state of these criteria.  It returns false if none of the
+ * criteria affects progress, otherwise an object that contains information
+ * about the specific succeeding or failing criteria.
+ *
+ * @param {Array} conditions. 
+ * @returns {Object|false} outcome
+ * @returns {boolean} outcome.success Whether level has succeeded.
+ * @returns {message} outcome.message Optional result message.
+ */
+Studio.checkProgressConditions = function() {
+  if (!level.progressConditions) {
+    return;
   }
 
-  if (required.setBackground && !tracked.hasSetBackground) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetBackground() };
+  for (var i = 0; i < level.progressConditions.length; i++) {
+    var condition = level.progressConditions[i];
+
+    if (Studio.conditionSatisfied(condition.required)) {
+      return condition.result;
+    }
   }
 
-  if (required.setBotMap && !tracked.hasSetMap) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetMap() };
-  }
-
-  if (required.touchAllItems && Studio.items.length > 0) {
-    return { exists: true, achieved: false, message: studioMsg.failedTouchAllItems() };
-  }
-
-  if (required.scoreMinimum && Studio.playerScore < required.scoreMinimum) {
-    return { exists: true, achieved: false, message: studioMsg.failedScoreMinimum() };
-  }
-
-  if (required.addItem && !tracked.hasAddedItem) {
-    return { exists: true, achieved: false, message: studioMsg.failedAddItem() };
-  }
-
-  if (required.removedItemCount && tracked.removedItemCount < required.removedItemCount) {
-    return { exists: true, achieved: false, message: studioMsg.failedRemovedItemCount() };
-  }
-
-  if (required.winGame && ! tracked.hasWonGame) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasWonGame() };
-  }
-
-  if (required.lostGame && ! tracked.hasLostGame) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasLostGame() };
-  }
-
-  if (required.setActivity &&
-      !(tracked.setActivityRecord && 
-        tracked.setActivityRecord[required.setActivity.itemType] &&
-        tracked.setActivityRecord[required.setActivity.itemType][required.setActivity.activityType])) {
-    return { exists: true, achieved: false, message: studioMsg.failedSetActivity() };
-  }
-
-  return { exists: true, achieved: true, message: null };
+  return false;
 };
 
 /**
@@ -4840,7 +4848,7 @@ var checkFinished = function () {
 
   var hasGoals = Studio.spriteGoals_.length !== 0;
   var achievedGoals = Studio.allGoalsVisited();
-  var requiredForSuccess = Studio.checkRequiredForSuccess();
+  var progressConditionResult = Studio.checkProgressConditions();
   var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
   var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
   var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
@@ -4860,16 +4868,10 @@ var checkFinished = function () {
     return true;
   }
 
-  if (requiredForSuccess.exists) {
-    if (requiredForSuccess.achieved) {
-      Studio.message = null;
-      Studio.result = ResultType.SUCCESS;
-      return true;
-    } else {
-      // Not meeting these is not reason for immediate failure in itself, but they do
-      // establish a custom error message.
-      Studio.message = requiredForSuccess.message;
-    }
+  if (progressConditionResult) {
+    Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
+    Studio.message = utils.valueOr(progressConditionResult.message, null);
+    return true;
   }
 
   if (Studio.midExecutionFailure) {
