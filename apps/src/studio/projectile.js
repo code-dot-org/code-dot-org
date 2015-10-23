@@ -132,7 +132,7 @@ Projectile.prototype.setAnimationRate = function (framesPerSecond) {
     if (this.loop || this.currentFrame_ + 1 < this.frames) {
       this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
     }
-  }.bind(this), 1000 / framesPerSecond);
+  }.bind(this), Math.round(1000 / framesPerSecond));
 };
 
 /**

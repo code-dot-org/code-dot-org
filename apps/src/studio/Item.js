@@ -38,8 +38,8 @@ var Item = function (options) {
   this.fadeTime = constants.ITEM_FADE_TIME;
 
   this.currentFrame_ = 0;
-  this.setAnimationRate(utils.valueOr(options.animationRate,
-      constants.DEFAULT_ITEM_FRAME_RATE));
+  this.setAnimationRate(
+      utils.valueOr(options.animationRate, constants.DEFAULT_ITEM_FRAME_RATE));
 };
 Item.inherits(Collidable);
 module.exports = Item;
@@ -56,7 +56,7 @@ Item.prototype.setAnimationRate = function (framesPerSecond) {
     if (this.loop || this.currentFrame_ + 1 < this.frames) {
       this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
     }
-  }.bind(this), 1000 / framesPerSecond);
+  }.bind(this), Math.round(1000 / framesPerSecond));
 };
 
 /**
