@@ -21,7 +21,7 @@ apt_package 'varnish' do
 end
 
 apt_repository 'varnish-3.0-vmods' do
-  uri          'http://ppa.launchpad.net/cmcdermottroe/varnish-3.0-vmods'
+  uri          'ppa:cmcdermottroe/varnish-3.0-vmods'
   distribution 'trusty'
 end
 apt_package 'libvmod-cookie'

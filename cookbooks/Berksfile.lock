@@ -1,5 +1,5 @@
 DEPENDENCIES
-  apt (~> 2.3.8)
+  apt (~> 2.6.0)
   build-essential (~> 2.1.3)
   cdo-apps
     path: cdo-apps
@@ -37,7 +37,7 @@ DEPENDENCIES
   ntp (~> 1.8.6)
 
 GRAPH
-  apt (2.3.10)
+  apt (2.6.1)
   brightbox-ruby (1.2.1)
     apt (>= 0.0.0)
   build-essential (2.1.3)
