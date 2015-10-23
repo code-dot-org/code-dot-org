@@ -12,6 +12,7 @@ testUtils.setupLocales('applab');
 var dropletUtils = require('@cdo/apps/dropletUtils');
 
 var applabDropletConfig = require('@cdo/apps/applab/dropletConfig');
+var mazeDropletConfig = require('@cdo/apps/maze/dropletConfig');
 
 describe('promptNum', function () {
   afterEach(function () {
@@ -619,5 +620,197 @@ describe('generateDropletModeOptions', function () {
     // this result so that it will match our expected
     var normalizedResult = JSON.parse(JSON.stringify(result));
     assert.deepEqual(normalizedResult, expected);
+  });
+
+  it('generates the expected object for maze', function () {
+    var expected = {
+      "functions": {
+        "getTime": {
+          "value": true,
+          "color": "#64B5F6",
+          "title": "getTime"
+        },
+        "randomNumber": {
+          "value": true,
+          "color": "#FFB74D",
+          "title": "randomNumber"
+        },
+        "prompt": {
+          "value": true,
+          "color": "#BB77C7",
+          "title": "prompt"
+        },
+        "promptNum": {
+          "value": true,
+          "color": "#BB77C7",
+          "title": "promptNum"
+        },
+        "Math.round": {
+          "value": true,
+          "color": "#FFB74D",
+          "title": "Math.round"
+        },
+        "Math.abs": {
+          "value": true,
+          "color": "#FFB74D",
+          "title": "Math.abs"
+        },
+        "Math.max": {
+          "value": true,
+          "color": "#FFB74D",
+          "title": "Math.max"
+        },
+        "Math.min": {
+          "value": true,
+          "color": "#FFB74D",
+          "title": "Math.min"
+        },
+        "moveForward": {
+          "color": "red",
+          "title": "moveForward"
+        },
+        "turnLeft": {
+          "color": "red",
+          "title": "turnLeft"
+        },
+        "turnRight": {
+          "color": "red",
+          "title": "turnRight"
+        }
+      },
+      "categories": {
+        "arithmetic": {
+          "color": "#FFB74D"
+        },
+        "logic": {
+          "color": "#FFB74D"
+        },
+        "conditionals": {
+          "color": "#64B5F6"
+        },
+        "loops": {
+          "color": "#64B5F6",
+          "beginner": false
+        },
+        "functions": {
+          "color": "#68D995"
+        },
+        "returns": {
+          "color": "#64B5F6"
+        },
+        "comments": {
+          "color": "#FFFFFF"
+        },
+        "containers": {
+          "color": "#BB77C7"
+        },
+        "value": {
+          "color": "#BB77C7"
+        },
+        "command": {
+          "color": "#68D995"
+        },
+        "assignments": {
+          "color": "#BB77C7"
+        }
+      }
+    };
+    var result = dropletUtils.generateDropletModeOptions(mazeDropletConfig, {});
+
+    // I got our expected result by running this code and doing a JSON.parse on
+    // the result. This does some things like ignore fields set to undefined.
+    // In order to be able to do an equality comparison, I stringify/parse
+    // this result so that it will match our expected
+    var normalizedResult = JSON.parse(JSON.stringify(result));
+    assert.deepEqual(normalizedResult, expected);
+  });
+});
+
+describe('mergeCategoriesWithConfig', function () {
+  var mergeCategoriesWithConfig = dropletUtils.__TestInterface.mergeCategoriesWithConfig;
+
+  it('asdf', function () {
+    var expected = {
+      "UI controls": {
+        "color": "yellow",
+        "rgb": "#FFF176",
+        "blocks": []
+      },
+      "Canvas": {
+        "color": "red",
+        "rgb": "#F78183",
+        "blocks": []
+      },
+      "Data": {
+        "color": "lightgreen",
+        "rgb": "#D3E965",
+        "blocks": []
+      },
+      "Turtle": {
+        "color": "cyan",
+        "rgb": "#4DD0E1",
+        "blocks": []
+      },
+      "Advanced": {
+        "color": "blue",
+        "rgb": "#19C3E1",
+        "blocks": []
+      },
+      "Control": {
+        "color": "blue",
+        "rgb": "#64B5F6",
+        "blocks": []
+      },
+      "Math": {
+        "color": "orange",
+        "rgb": "#FFB74D",
+        "blocks": []
+      },
+      "Variables": {
+        "color": "purple",
+        "rgb": "#BB77C7",
+        "blocks": []
+      },
+      "Functions": {
+        "color": "green",
+        "rgb": "#68D995",
+        "blocks": []
+      },
+      "": {
+        "blocks": []
+      }
+    };
+
+    var result = mergeCategoriesWithConfig(applabDropletConfig);
+    // I got our expected result by running this code and doing a JSON.parse on
+    // the result. This does some things like ignore fields set to undefined.
+    // In order to be able to do an equality comparison, I stringify/parse
+    // this result so that it will match our expected
+    var normalizedResult = JSON.parse(JSON.stringify(result));
+    assert.deepEqual(normalizedResult, expected);
+    // assert.deepEqual(Object.keys(expected), Object.keys(normalizedResult));
+  });
+
+  it('returns cloned categories', function () {
+    var appConfig = {
+      blocks: [
+        {func: 'penUp', parent: {}, category: 'Turtle' }
+      ],
+      categories: {
+        Turtle: {
+          color: 'cyan',
+          rgb: '#4DD0E1',
+          blocks: []
+        }
+      }
+    };
+
+    var result = mergeCategoriesWithConfig(appConfig);
+
+    // Make sure that the returned merged object is a clone. Otherwise, if we
+    // were to be modifying result.Turtle.blocks (something that happens in
+    // generateDropletPalette), we end up modifying the base config unintentionally
+    assert(result.Turtle !== appConfig.categories.Turtle);
+    assert(result.Turtle.blocks !== appConfig.categories.Turtle.blocks);
   });
 });

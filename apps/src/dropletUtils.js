@@ -158,27 +158,31 @@ standardConfig.categories = {
  * @returns {Array}
  */
 function mergeFunctionsWithConfig(codeFunctions, dropletConfig, otherConfig) {
+  if (!codeFunctions || !dropletConfig || !dropletConfig.blocks) {
+    return [];
+  }
+
   var merged = [];
 
-  if (codeFunctions && dropletConfig && dropletConfig.blocks) {
-    var blockSets = [ dropletConfig.blocks ];
-    if (otherConfig) {
-      blockSets.splice(0, 0, otherConfig.blocks);
-    }
-    // codeFunctions is an object with named key/value pairs
-    //  key is a block name from dropletBlocks or standardBlocks
-    //  value is an object that can be used to override block defaults
-    for (var s = 0; s < blockSets.length; s++) {
-      var blocks = blockSets[s];
-      for (var i = 0; i < blocks.length; i++) {
-        var block = blocks[i];
-        if (blocks[i].func in codeFunctions) {
-          // We found this particular block, now override the defaults with extend
-          merged.push(utils.extend(blocks[i], codeFunctions[blocks[i].func]));
-        }
+  var blockSets = [ dropletConfig.blocks ];
+  if (otherConfig) {
+    blockSets.splice(0, 0, otherConfig.blocks);
+  }
+
+  // codeFunctions is an object with named key/value pairs
+  //  key is a block name from dropletBlocks or standardBlocks
+  //  value is an object that can be used to override block defaults
+  for (var s = 0; s < blockSets.length; s++) {
+    var set = blockSets[s];
+    for (var i = 0; i < set.length; i++) {
+      var block = set[i];
+      if (block.func in codeFunctions) {
+        // We found this particular block, now override the defaults with extend
+        merged.push($.extend({}, block, codeFunctions[block.func]));
       }
     }
   }
+
   return merged;
 }
 
@@ -188,7 +192,10 @@ function mergeFunctionsWithConfig(codeFunctions, dropletConfig, otherConfig) {
  * configuration). App configuration takes precendence
  */
 function mergeCategoriesWithConfig(dropletConfig) {
-  return $.extend({}, standardConfig.categories, dropletConfig && dropletConfig.categories);
+  // Clone our merged categories so that as we mutate it, we're not mutating
+  // our original config
+  return _.cloneDeep($.extend({}, standardConfig.categories,
+    dropletConfig && dropletConfig.categories));
 }
 
 /**
@@ -239,10 +246,11 @@ function buildFunctionPrototype(prefix, params) {
  * @param {function} dropletConfig.getBlocks
  * @param {object} dropletConfig.categories
  */
-exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
+exports.generateDropletPalette = function (codeFunctions, dropletConfig, useOrig) {
   var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
   var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig,
     standardConfig);
+
   for (var i = 0; i < mergedFunctions.length; i++) {
     var funcInfo = mergedFunctions[i];
     var block = funcInfo.block;
@@ -440,4 +448,8 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
     .concat(exports.dropletBuiltinConfigBlocks)
     .concat(standardConfig.blocks)
     .concat(configuredBlocks);
+};
+
+exports.__TestInterface = {
+  mergeCategoriesWithConfig: mergeCategoriesWithConfig
 };
