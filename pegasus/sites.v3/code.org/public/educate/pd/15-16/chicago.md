@@ -53,7 +53,7 @@ Breakfast and lunch will be served.
 
 Loyola University - Water Tower Campus<br/> 
 Corboy Law Center<br/> 
-Room: TBD<br/>
+Room: 205<br/>
 25 E Pearson St <br/>
 Chicago, IL 60611
 
