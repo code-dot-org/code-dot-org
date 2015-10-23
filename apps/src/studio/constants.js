@@ -363,6 +363,9 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
+exports.DEFAULT_ITEM_FRAME_RATE = 20;
+exports.DEFAULT_PROJECTILE_FRAME_RATE = 20;
+
 // Fade durations (in milliseconds)
 exports.GOAL_FADE_TIME = 200;
 exports.ITEM_FADE_TIME = 200;
