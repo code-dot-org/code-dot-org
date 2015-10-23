@@ -29,8 +29,7 @@ class VolunteerContact2015
   def self.solr_query(params)
     query = '*:*'
 
-    fq = []
-    fq.push("kind_s:#{self.name}")
+    fq = ["kind_s:#{self.name}"]
     {
       q: query,
       fq: fq,

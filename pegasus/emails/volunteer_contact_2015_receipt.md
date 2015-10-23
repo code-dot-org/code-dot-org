@@ -4,12 +4,12 @@ to: <%= volunteer_name_s + " <" + volunteer_email_s + ">" %>
 subject: "A teacher is requesting your help for the Hour of Code"
 ---
 
-<% remove_link = "http://#{CDO.canonical_hostname('code.org')}/v2/forms/VolunteerEngineerSubmission2015/#{form.secret}/delete" %>
+<% remove_link = "http://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/unsubscribe/#{form.secret}/" %>
 
 ### The following teacher is requesting your help for the Hour of Code
 
 - Name: <%= teacher_name_s %>
-- Email address: [<%= teacher_email_s %>](<%= teacher_email_s %>)
+- Email address: [<%= teacher_email_s %>](<%= "mailto:" + teacher_email_s %>)
 - School name: <%= school_name_s %>
 - School location: <%= school_location_s %>
 - Message: <%= email_message_s %>
