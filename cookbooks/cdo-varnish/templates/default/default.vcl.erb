@@ -355,6 +355,14 @@ node['cdo-apps']['i18n']['languages'].to_hash.keys.each do |language|
 end
 %>
 
+  # Ensure that we aggressively cache HOC levels.
+  # TODO: Make this general
+  if ((req.url ~ "^/hoc" || req.url ~ "^/s/hourofcode/" || req.url ~ "^/assets/")) {
+    unset req.http.Cookie;
+    unset req.http.max-age;
+    unset req.http.Accept;
+  }
+
   if (req.http.host ~ "(dashboard|studio).code.org$" ||
       req.http.host == "<%= canonical_hostname('studio.code.org') %>" ||
       req.http.host == "code-dot-org.cartoonnetworkarabic.com")
@@ -438,6 +446,7 @@ end
     } else if (
         req.http.host ~ "(dashboard|studio).code.org$" ||
         req.http.host == "<%= canonical_hostname('studio.code.org') %>" ||
+        req.http.host == "adhoc-studio.code.org" ||
         req.url ~ "^/dashboardapi/" ||
         req.url ~ "^/v2/" ||
         req.url ~ "^/v3/" ||
@@ -519,7 +528,17 @@ sub vcl_fetch {
     # Don't allow static files to set cookies.
     # beresp == Back-end response from the web server.
     unset beresp.http.set-cookie;
+  } else if (req.url ~ "^/hoc" || req.url ~ "^/s/hourofcode/" || req.url ~ "^/assets/") {
+    # Don't allow cached hoc files to set cookies.
+    # beresp == Back-end response from the web server.
+    unset beresp.http.set-cookie;
+    if (beresp.status == 301) {
+      set beresp.ttl = 4h;
+      unset beresp.http.set-cookie;
+      return(deliver);
+    }
   }
+
   else if (beresp.http.Cache-Control) {
     unset beresp.http.Expires;
   }
