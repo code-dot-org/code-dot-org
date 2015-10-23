@@ -542,6 +542,8 @@ function makeDraggable (jqueryElements) {
         }
         designMode.updateProperty(element, widthProperty, element.style.width);
         designMode.updateProperty(element, heightProperty, element.style.height);
+
+        highlightElement(elm[0]);
       }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
@@ -572,7 +574,7 @@ function makeDraggable (jqueryElements) {
 
         elm.css({
           top: newTop,
-          left: newLeft,
+          left: newLeft
         });
 
         designMode.renderDesignWorkspace(elm[0]);
@@ -658,6 +660,7 @@ function makeUndraggable(jqueryElements) {
 
 /**
  * Highlights an element with a dashed border, removes border from all other elements
+ * Must only be called on an element wrapped in a draggable div
  */
 function highlightElement(element) {
   removeElementHighlights();
