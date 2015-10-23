@@ -1,8 +1,5 @@
 #!/usr/bin/env ruby
 
-# This script updates all maze levels that are configured to
-# only show the run button to also show the step button
-
 require_relative '../config/environment'
 
 scripts_map = {
