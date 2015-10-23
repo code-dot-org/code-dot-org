@@ -6328,6 +6328,9 @@ StudioApp.prototype.toggleRunReset = function(button) {
   run.disabled = !showRun;
   reset.style.display = !showRun ? 'inline-block' : 'none';
   reset.disabled = showRun;
+
+  // Toggle soft-buttons (all have the 'arrow' class set):
+  $('.arrow').prop("disabled", showRun);
 };
 
 /**
@@ -7735,7 +7738,7 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
  *   should display the error in.
  */
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
-  if (dashboard.project.exceedsAbuseThreshold()) {
+  if (window.dashboard && dashboard.project.exceedsAbuseThreshold()) {
     this.displayAlert(parentSelector, {
       body: React.createElement(dashboard.AbuseError, {
         i18n: {
@@ -30876,8 +30879,8 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <link href="', escape((6,  assetUrl('css/common.css') )), '" media="all" rel="stylesheet">\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/manifest.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/blockly.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/' + options.locale + '/blockly_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((11,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((12,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((13,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');15; // delay to onload to fix IE9. 
-; buf.push('\n    window.onload = function() {\n      ', escape((17,  app )), 'Main(', (17,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body class="readonly">\n  <div id="codeWorkspace"></div>\n</body>\n</html>\n'); })();
+ buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <link href="', escape((6,  assetUrl('css/common.css') )), '" media="all" rel="stylesheet">\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/blockly.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/' + options.locale + '/blockly_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((11,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((12,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');14; // delay to onload to fix IE9. 
+; buf.push('\n    window.onload = function() {\n      ', escape((16,  app )), 'Main(', (16,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body class="readonly">\n  <div id="codeWorkspace"></div>\n</body>\n</html>\n'); })();
 } 
 return buf.join('');
 };
@@ -31415,6 +31418,7 @@ var dom = require('../dom');
  */
 var DropletBlockTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.showExamplesLink = dropletTooltipManager.dropletConfig.showExamplesLink;
   this.tooltipsEnabled = true;
 };
 
@@ -31468,6 +31472,9 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = f
       content: this.getTooltipHTML(funcName),
       offsetX: tooltipOffsetX,
       functionReady: function (_, contents) {
+        if (!this.showExamplesLink) {
+          return;
+        }
         var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
         // Important this binds to mouseDown/touchDown rather than click, needs to
         // happen before `blur` which triggers the ace editor completer popup
@@ -31505,7 +31512,7 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
+    showExamplesLink: this.showExamplesLink
   });
 };
 
@@ -31682,6 +31689,7 @@ var dom = require('../dom');
  */
 var DropletAutocompletePopupTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.showExamplesLink = dropletTooltipManager.dropletConfig.showExamplesLink;
   this.tooltipsEnabled = true;
 };
 
@@ -31772,6 +31780,9 @@ DropletAutocompletePopupTooltipManager.prototype.attachTooltipForFunction = func
   var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
     content: tooltipDOM,
     functionReady: function (_, contents) {
+      if (!this.showExamplesLink) {
+        return;
+      }
       var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
       // Important this binds to mouseDown/touchDown rather than click, needs to
       // happen before `blur` which triggers the ace editor completer popup
@@ -31802,7 +31813,7 @@ DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (func
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
+    showExamplesLink: this.showExamplesLink
   });
   return dropletFunctionTooltipMarkup;
 };
@@ -31834,7 +31845,7 @@ with (locals || {}) { (function(){
      * TODO(bjordan): would be nice to split the following line up, can't figure
      * out how to do so without inserting extraneous spaces between parameters.
      */
-   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('', (8,  parameters[i].name), '');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (functionShortDescription) { ; buf.push('<div>', escape((10,  functionShortDescription )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="javascript:void(0);">See examples</a>\n</div>\n'); })();
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('', (8,  parameters[i].name), '');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (functionShortDescription) { ; buf.push('<div>', escape((10,  functionShortDescription )), '</div>');10; } ; buf.push('\n');11; if (showExamplesLink) { ; buf.push('\n  <div class="tooltip-example-link">\n    <a href="javascript:void(0);">See examples</a>\n  </div>\n');15; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -31861,6 +31872,7 @@ var dom = require('../dom');
  */
 var DropletAutocompleteParameterTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.showExamplesLink = dropletTooltipManager.dropletConfig.showExamplesLink;
   this.showParamDropdowns = dropletTooltipManager.dropletConfig.showParamDropdowns;
   this.tooltipConfig = {
     interactive: true,
@@ -31985,11 +31997,13 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
   cursorTooltip.tooltipster('content', this.getTooltipHTML(tooltipInfo, currentParameterIndex));
   cursorTooltip.tooltipster('show');
 
-  var seeExamplesLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-example-link > a')[0];
-  dom.addClickTouchEvent(seeExamplesLink, function (event) {
-    this.dropletTooltipManager.showDocFor(functionName);
-    event.stopPropagation();
-  }.bind(this));
+  if (this.showExamplesLink) {
+    var seeExamplesLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-example-link > a')[0];
+    dom.addClickTouchEvent(seeExamplesLink, function (event) {
+      this.dropletTooltipManager.showDocFor(functionName);
+      event.stopPropagation();
+    }.bind(this));
+  }
 
   var chooseAsset = tooltipInfo.parameterInfos[currentParameterIndex].assetTooltip;
   if (chooseAsset) {
@@ -32022,7 +32036,7 @@ DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL(),
+    showExamplesLink : this.showExamplesLink,
     currentParameterIndex: currentParameterIndex
   });
 };
@@ -32330,7 +32344,7 @@ with (locals || {}) { (function(){
      * TODO(bjordan): would be nice to split the following line up, can't figure
      * out how to do so without inserting extraneous spaces between parameters.
      */
-   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n');11; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].assetTooltip) { ; buf.push('\n  <div class="tooltip-choose-link">\n    <a href="javascript:void(0);">Choose...</a>\n  </div>\n');15; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="javascript:void(0);">See examples</a>\n</div>\n'); })();
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n');11; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].assetTooltip) { ; buf.push('\n  <div class="tooltip-choose-link">\n    <a href="javascript:void(0);">Choose...</a>\n  </div>\n');15; } ; buf.push('\n');16; if (showExamplesLink) { ; buf.push('\n  <div class="tooltip-example-link">\n    <a href="javascript:void(0);">See examples</a>\n  </div>\n');20; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };

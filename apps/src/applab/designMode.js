@@ -87,6 +87,9 @@ designMode.editElementProperties = function(element) {
     // design-properties won't exist when !user.isAdmin
     return;
   }
+
+  highlightElement(element);
+
   currentlyEditedElement = element;
   designMode.renderDesignWorkspace(element);
 };
@@ -539,6 +542,8 @@ function makeDraggable (jqueryElements) {
         }
         designMode.updateProperty(element, widthProperty, element.style.width);
         designMode.updateProperty(element, heightProperty, element.style.height);
+
+        highlightElement(elm[0]);
       }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
@@ -573,7 +578,10 @@ function makeDraggable (jqueryElements) {
         });
 
         designMode.renderDesignWorkspace(elm[0]);
-      }
+      },
+      start: function () {
+        highlightElement(elm[0]);
+      },
     }).css({
       position: 'absolute',
       lineHeight: '0px'
@@ -648,6 +656,31 @@ function makeUndraggable(jqueryElements) {
   });
 
   return foundOne;
+}
+
+/**
+ * Highlights an element with a dashed border, removes border from all other elements
+ * Must only be called on an element wrapped in a draggable div
+ */
+function highlightElement(element) {
+  removeElementHighlights();
+
+  if ($(element).is('#designModeViz img,#designModeViz label')) {
+    $(element).parent().css({
+      outlineStyle: 'dashed',
+      outlineWidth: '1px',
+    });
+  }
+}
+
+/**
+ * Remove dashed borders from all elements
+ */
+function removeElementHighlights() {
+  $('#designModeViz .ui-draggable').css({
+    outlineStyle: '',
+    outlineWidth: ''
+  });
 }
 
 designMode.configureDragAndDrop = function () {

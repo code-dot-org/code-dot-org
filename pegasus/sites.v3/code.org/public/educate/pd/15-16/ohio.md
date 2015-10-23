@@ -225,8 +225,8 @@ Tuesday, November 10, 2015 <br/>
 **Location**
 
 Microsoft Corporation<br/> 
-Scarlet Room<br/>
-8800 Lyra Drive, Suite 400<br/>
+Scarlet Room, Suite 400<br/>
+8800 Lyra Drive<br/>
 Columbus, OH 43240
 
 Free parking is available in three lots surrounding the building.

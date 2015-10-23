@@ -1,6 +1,7 @@
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
+var utils = require('../utils');
 
 var SVG_NS = "http://www.w3.org/2000/svg";
 
@@ -96,6 +97,7 @@ OFFSET_CENTER[Direction.NORTHWEST] = {
 /**
  * A Projectile is a type of Collidable.
  * Note: x/y represent x/y of center in gridspace
+ * @extends {Collidable}
  */
 var Projectile = function (options) {
   // call collidable constructor
@@ -106,12 +108,8 @@ var Projectile = function (options) {
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
 
   this.currentFrame_ = 0;
-  var self = this;
-  this.animator_ = window.setInterval(function () {
-    if (self.loop || self.currentFrame_ + 1 < self.frames) {
-      self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
-    }
-  }, 50);
+  this.setAnimationRate(utils.valueOr(options.animationRate,
+      constants.DEFAULT_PROJECTILE_FRAME_RATE));
 
   // origin is at an offset from sprite location
   this.x = options.spriteX + OFFSET_CENTER[options.dir].x +
@@ -119,11 +117,23 @@ var Projectile = function (options) {
   this.y = options.spriteY + OFFSET_CENTER[options.dir].y +
             (options.spriteHeight * OFFSET_FROM_SPRITE[options.dir].y);
 };
-
-// inherit from Collidable
-Projectile.prototype = new Collidable();
-
+Projectile.inherits(Collidable);
 module.exports = Projectile;
+
+/**
+ * Set the animation rate for this projectile's sprite.
+ * @param {number} framesPerSecond
+ */
+Projectile.prototype.setAnimationRate = function (framesPerSecond) {
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+  }
+  this.animator_ = window.setInterval(function () {
+    if (this.loop || this.currentFrame_ + 1 < this.frames) {
+      this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
+    }
+  }.bind(this), Math.round(1000 / framesPerSecond));
+};
 
 /**
  * Test only function so that we can start our id count over.
@@ -212,4 +222,15 @@ Projectile.prototype.moveToNextPosition = function () {
   var next = this.getNextPosition();
   this.x = next.x;
   this.y = next.y;
+};
+
+/**
+ * Change visible opacity of this projectile.
+ * @param {number} newOpacity (between 0 and 1)
+ * @override
+ */
+Projectile.prototype.setOpacity = function (newOpacity) {
+  if (this.element) {
+    this.element.setAttribute('opacity', newOpacity);
+  }
 };
