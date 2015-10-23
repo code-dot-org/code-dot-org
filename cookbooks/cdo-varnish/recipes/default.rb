@@ -32,8 +32,8 @@ end
 apt_package 'varnish' do
   version '4.0.3-1~trusty'
   options '--force-yes'
-  # Keep overwritten package-maintained config files on upgrade
-  options '-o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"'
+  # Overwrite existing config files on upgrade (templates will be reapplied afterwards)
+  options '-o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew"'
 end
 apt_package 'libvmod-cookie' do
   version '1.03+4.0.3-4~trusty'
@@ -55,7 +55,7 @@ template '/etc/default/varnish' do
   user 'root'
   group 'root'
   mode '0644'
-  notifies :restart, "service[varnish]"
+  notifies :restart, 'service[varnish]', :delayed
 end
 
 template '/etc/varnish/accept-language.vcl' do
@@ -63,7 +63,7 @@ template '/etc/varnish/accept-language.vcl' do
   user 'root'
   group 'root'
   mode '0644'
-  notifies :restart, "service[varnish]"
+  notifies :restart, 'service[varnish]', :delayed
 end
 
 template '/etc/varnish/default.vcl' do
@@ -71,7 +71,7 @@ template '/etc/varnish/default.vcl' do
   user 'root'
   group 'root'
   mode '0644'
-  notifies :restart, "service[varnish]"
+  notifies :restart, 'service[varnish]', :delayed
 end
 
 template '/etc/varnish/secret' do
@@ -79,7 +79,7 @@ template '/etc/varnish/secret' do
   user 'root'
   group 'root'
   mode '0600'
-  notifies :restart, "service[varnish]"
+  notifies :restart, 'service[varnish]', :delayed
 end
 
 service "varnish" do
