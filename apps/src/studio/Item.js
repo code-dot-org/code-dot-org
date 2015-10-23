@@ -7,6 +7,7 @@ var NextTurn = constants.NextTurn;
 var utils = require('../utils');
 var _ = utils.getLodash();
 var StudioAnimation = require('./StudioAnimation');
+var StudioSpriteSheet = require('./StudioSpriteSheet');
 
 // uniqueId that increments by 1 each time an element is created
 var uniqueId = 0;
@@ -35,7 +36,9 @@ var Item = function (options) {
   this.startFadeTime = null;
   this.fadeTime = constants.ITEM_FADE_TIME;
 
-  this.animation_ = new StudioAnimation(options);
+  this.animation_ = new StudioAnimation($.extend({}, options, {
+    spriteSheet: new StudioSpriteSheet(options)
+  }));
 };
 Item.inherits(Collidable);
 module.exports = Item;
@@ -339,9 +342,9 @@ Item.prototype.display = function () {
   }
 
   this.animation_.setCurrentAnimation(this.getDirectionFrame());
-  this.animation_.redrawAt({
-    x: this.x + this.renderOffset.x - this.width / 2,
-    y: this.y + this.renderOffset.y - this.height / 2
+  this.animation_.redrawCenteredAt({
+    x: this.x + this.renderOffset.x,
+    y: this.y + this.renderOffset.y
   });
 };
 
