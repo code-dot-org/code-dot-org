@@ -752,7 +752,7 @@ function sortDrawOrder() {
   // Add items.
   for (var i = 0; i < Studio.items.length; i++) {
     var item = {};
-    item.element = Studio.items[i].element;
+    item.element = Studio.items[i].getElement();
     item.y = Studio.items[i].y + Studio.items[i].height/2 + Studio.items[i].renderOffset.y;
     itemsArray.push(item);
 
@@ -5125,11 +5125,8 @@ var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
 var utils = require('../utils');
-
-var SVG_NS = "http://www.w3.org/2000/svg";
-
-// uniqueId that increments by 1 each time an element is created
-var uniqueId = 0;
+var StudioAnimation = require('./StudioAnimation');
+var StudioSpriteSheet = require('./StudioSpriteSheet');
 
 // mapping of how much we should rotate based on direction
 var DIR_TO_ROTATION = {};
@@ -5230,85 +5227,45 @@ var Projectile = function (options) {
   this.width = options.width || 50;
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
 
-  this.currentFrame_ = 0;
-  this.setAnimationRate(utils.valueOr(options.animationRate,
-      constants.DEFAULT_PROJECTILE_FRAME_RATE));
-
   // origin is at an offset from sprite location
   this.x = options.spriteX + OFFSET_CENTER[options.dir].x +
             (options.spriteWidth * OFFSET_FROM_SPRITE[options.dir].x);
   this.y = options.spriteY + OFFSET_CENTER[options.dir].y +
             (options.spriteHeight * OFFSET_FROM_SPRITE[options.dir].y);
+
+  /** @private {StudioSpriteSheet} */
+  this.spriteSheet_ = new StudioSpriteSheet($.extend({}, options, {
+    width: options.spriteWidth,
+    height: options.spriteHeight,
+    horizontalAnimation: true,
+    totalAnimations: 1
+  }));
+
+  /** @private {StudioAnimation} */
+  this.animation_ = new StudioAnimation($.extend({}, options, {
+    spriteSheet: this.spriteSheet_
+  }));
 };
 Projectile.inherits(Collidable);
 module.exports = Projectile;
 
-/**
- * Set the animation rate for this projectile's sprite.
- * @param {number} framesPerSecond
- */
-Projectile.prototype.setAnimationRate = function (framesPerSecond) {
-  if (this.animator_) {
-    window.clearInterval(this.animator_);
-  }
-  this.animator_ = window.setInterval(function () {
-    if (this.loop || this.currentFrame_ + 1 < this.frames) {
-      this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
-    }
-  }.bind(this), Math.round(1000 / framesPerSecond));
-};
-
-/**
- * Test only function so that we can start our id count over.
- */
-Projectile.__resetIds = function () {
-  uniqueId = 0;
+/** @returns {SVGImageElement} */
+Projectile.prototype.getElement = function () {
+  return this.animation_.getElement();
 };
 
 /**
  * Create an image element with a clip path
  */
 Projectile.prototype.createElement = function (parentElement) {
-  // create our clipping path/rect
-  this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
-  var clipId = 'projectile_clippath_' + (uniqueId++);
-  this.clipPath.setAttribute('id', clipId);
-  var rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttribute('width', this.width);
-  rect.setAttribute('height', this.height);
-  this.clipPath.appendChild(rect);
-
-  parentElement.appendChild(this.clipPath);
-
-  this.element = document.createElementNS(SVG_NS, 'image');
-  this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    this.image);
-  this.element.setAttribute('height', this.height);
-  this.element.setAttribute('width', this.width * this.frames);
-  parentElement.appendChild(this.element);
-
-  this.element.setAttribute('clip-path', 'url(#' + clipId + ')');
+  this.animation_.createElement(parentElement);
 };
 
 /**
  * Remove our element/clipPath/animator
  */
 Projectile.prototype.removeElement = function () {
-  if (this.element) {
-    this.element.parentNode.removeChild(this.element);
-    this.element = null;
-  }
-
-  // remove clip path element
-  if (this.clipPath) {
-    this.clipPath.parentNode.removeChild(this.clipPath);
-    this.clipPath = null;
-  }
-
-  if (this.animator_) {
-    window.clearInterval(this.animator_);
-    this.animator_ = null;
-  }
+  this.animation_.removeElement();
 };
 
 /**
@@ -5320,15 +5277,13 @@ Projectile.prototype.display = function () {
     y: this.y - this.height / 2
   };
 
-  this.element.setAttribute('x', topLeft.x - this.width * this.currentFrame_);
-  this.element.setAttribute('y', topLeft.y);
+  this.animation_.redrawCenteredAt({
+    x: this.x,
+    y: this.y
+  });
 
-  var clipRect = this.clipPath.childNodes[0];
-  clipRect.setAttribute('x', topLeft.x);
-  clipRect.setAttribute('y', topLeft.y);
-
-  if (this.frames > 1) {
-    this.element.setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
+  if (this.spriteSheet_.framesPerAnimation > 1) {
+    this.getElement().setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
      ', ' + this.x + ', ' + this.y + ')');
   }
 };
@@ -5353,13 +5308,11 @@ Projectile.prototype.moveToNextPosition = function () {
  * @override
  */
 Projectile.prototype.setOpacity = function (newOpacity) {
-  if (this.element) {
-    this.element.setAttribute('opacity', newOpacity);
-  }
+  this.animation_.setOpacity(newOpacity);
 };
 
 
-},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/skins.js":[function(require,module,exports){
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./StudioAnimation":"/home/ubuntu/staging/apps/build/js/studio/StudioAnimation.js","./StudioSpriteSheet":"/home/ubuntu/staging/apps/build/js/studio/StudioSpriteSheet.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/skins.js":[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -8977,7 +8930,7 @@ module.exports.blocks = [
   {func: 'moveFast', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'moveNormal', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'moveSlow', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
-  
+
   {func: 'whenTouchAllCharacters', block: 'function whenTouchAllCharacters() {}', expansion: 'function whenTouchAllCharacters() {\n  __;\n}', category: '' },
   {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
 
@@ -12058,11 +12011,8 @@ var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
 var utils = require('../utils');
 var _ = utils.getLodash();
-
-var SVG_NS = "http://www.w3.org/2000/svg";
-
-// uniqueId that increments by 1 each time an element is created
-var uniqueId = 0;
+var StudioAnimation = require('./StudioAnimation');
+var StudioSpriteSheet = require('./StudioSpriteSheet');
 
 /**
  * An Item is a type of Collidable.
@@ -12084,31 +12034,21 @@ var Item = function (options) {
   this.renderOffset = options.renderOffset || { x: 0, y: 0 };
 
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
-  this.renderScale = options.renderScale || 1;
   this.displayDir = Direction.SOUTH;
   this.startFadeTime = null;
   this.fadeTime = constants.ITEM_FADE_TIME;
 
-  this.currentFrame_ = 0;
-  this.setAnimationRate(
-      utils.valueOr(options.animationRate, constants.DEFAULT_ITEM_FRAME_RATE));
+  /** @private {StudioAnimation} */
+  this.animation_ = new StudioAnimation($.extend({}, options, {
+    spriteSheet: new StudioSpriteSheet(options)
+  }));
 };
 Item.inherits(Collidable);
 module.exports = Item;
 
-/**
- * Set the animation rate for this item's sprite.
- * @param {number} framesPerSecond
- */
-Item.prototype.setAnimationRate = function (framesPerSecond) {
-  if (this.animator_) {
-    window.clearInterval(this.animator_);
-  }
-  this.animator_ = window.setInterval(function () {
-    if (this.loop || this.currentFrame_ + 1 < this.frames) {
-      this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
-    }
-  }.bind(this), Math.round(1000 / framesPerSecond));
+/** @returns {SVGImageElement} */
+Item.prototype.getElement = function () {
+  return this.animation_.getElement();
 };
 
 /**
@@ -12129,40 +12069,10 @@ Item.prototype.getDirectionFrame = function() {
 };
 
 /**
- * Test only function so that we can start our id count over.
- */
-Item.__resetIds = function () {
-  uniqueId = 0;
-};
-
-/**
  * Create an image element with a clip path
  */
 Item.prototype.createElement = function (parentElement) {
-  var nextId = (uniqueId++);
-
-  var numFacingAngles = 9;
-
-  // create our clipping path/rect
-  this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
-  var clipId = 'item_clippath_' + nextId;
-  this.clipPath.setAttribute('id', clipId);
-  var rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttribute('width', this.width * this.renderScale);
-  rect.setAttribute('height', this.height * this.renderScale);
-  this.clipPath.appendChild(rect);
-
-  parentElement.appendChild(this.clipPath);
-  var itemId = 'item_' + nextId;
-  this.element = document.createElementNS(SVG_NS, 'image');
-  this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    this.image);
-  this.element.setAttribute('id', itemId);
-  this.element.setAttribute('height', this.height * this.frames * this.renderScale);
-  this.element.setAttribute('width', this.width * numFacingAngles * this.renderScale);
-  parentElement.appendChild(this.element);
-
-  this.element.setAttribute('clip-path', 'url(#' + clipId + ')');
+  this.animation_.createElement(parentElement);
 };
 
 
@@ -12386,23 +12296,7 @@ Item.prototype.beginRemoveElement = function () {
  * Remove our element/clipPath/animator
  */
 Item.prototype.removeElement = function() {
-
-  if (this.element) {
-    this.element.parentNode.removeChild(this.element);
-    this.element = null;
-  }
-
-  // remove clip path element
-  if (this.clipPath) {
-    this.clipPath.parentNode.removeChild(this.clipPath);
-    this.clipPath = null;
-  }
-
-  if (this.animator_) {
-    window.clearInterval(this.animator_);
-    this.animator_ = null;
-  }
-
+  this.animation_.removeElement();
   Studio.trackedBehavior.removedItemCount++;
 };
 
@@ -12429,16 +12323,12 @@ Item.prototype.hasCompletedFade = function() {
  * Display our item at its current location
  */
 Item.prototype.display = function () {
-  var topLeft = {
-    x: this.x + this.renderOffset.x - this.width / 2,
-    y: this.y + this.renderOffset.y - this.height / 2
-  };
-
   var currentTime = new Date().getTime();
   var opacity = 1;
   if (this.startFadeTime) {
     opacity = 1 - (currentTime - this.startFadeTime) / this.fadeTime;
     opacity = Math.max(opacity, 0);
+    this.animation_.setOpacity(opacity);
   }
 
   // Watch behavior does not change logical position, should update every frame
@@ -12446,14 +12336,11 @@ Item.prototype.display = function () {
     this.turnToFaceActor(Studio.protagonistSpriteIndex || 0);
   }
 
-  var directionFrame = this.getDirectionFrame();
-  this.element.setAttribute('x', topLeft.x - this.width * (directionFrame * this.renderScale + (this.renderScale-1)/2));
-  this.element.setAttribute('y', topLeft.y - this.height * (this.currentFrame_ * this.renderScale + (this.renderScale-1)));
-  this.element.setAttribute('opacity', opacity);
-
-  var clipRect = this.clipPath.childNodes[0];
-  clipRect.setAttribute('x', topLeft.x - this.width * (this.renderScale-1)/2);
-  clipRect.setAttribute('y', topLeft.y - this.height * (this.renderScale-1));
+  this.animation_.setCurrentAnimation(this.getDirectionFrame());
+  this.animation_.redrawCenteredAt({
+    x: this.x + this.renderOffset.x,
+    y: this.y + this.renderOffset.y
+  });
 };
 
 Item.prototype.getNextPosition = function () {
@@ -12505,13 +12392,11 @@ Item.prototype.startCollision = function (key) {
  * @override
  */
 Item.prototype.setOpacity = function (newOpacity) {
-  if (this.element) {
-    this.element.setAttribute('opacity', newOpacity);
-  }
+  this.animation_.setOpacity(newOpacity);
 };
 
 
-},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js"}],"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js":[function(require,module,exports){
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./StudioAnimation":"/home/ubuntu/staging/apps/build/js/studio/StudioAnimation.js","./StudioSpriteSheet":"/home/ubuntu/staging/apps/build/js/studio/StudioSpriteSheet.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js"}],"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js":[function(require,module,exports){
 /** @file Actions that can be given to a playlab sprite to execute over a set time. */
 /* jshint
  funcscope: true,
@@ -12970,7 +12855,307 @@ Collidable.prototype.setOpacity = function (newOpacity) {
 };
 
 
-},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/constants.js":[function(require,module,exports){
+},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/StudioSpriteSheet.js":[function(require,module,exports){
+/** @file A utility that can help find particular frames within a spritesheet,
+ * given certain metadata about that spritesheet */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var utils = require('../utils');
+
+/**
+ * Provider of metadata about a particular sprite sheet, to help find frames
+ * within it.
+ *
+ * Assumptions:
+ * All frames are the same size, and are arranged in a grid.
+ * All animations are the same number of frames.
+ * Each animation is a single column or a single row
+ *
+ * @constructor
+ * @param {!Object} options
+ * @param {!string} options.image - URL of the sprite sheet asset.
+ * @param {number} [options.width] - frame width in original asset.  Default 50.
+ * @param {number} [options.height] - frame height in original asset. Default 50.
+ * @param {number} [options.totalAnimations] - How many animations (columns)
+ *        there are in the sprite sheet. Default 9.
+ * @param {number} [options.frames] - How many frames (rows) there are per
+ *        animation. Default 1.
+ * @param {boolean} [options.horizontalAnimation] - If animation frames run in
+ *        rows instead of columns.
+ */
+var StudioSpriteSheet = module.exports = function (options) {
+  /** @type {string} spritesheet asset path */
+  this.assetPath = options.image;
+
+  /** @type {number} */
+  this.frameWidth = utils.valueOr(options.width, 50); // TODO: Magic Number
+
+  /** @type {number} */
+  this.frameHeight = utils.valueOr(options.height, 50); // TODO: Magic Number
+
+  /** @type {number} animations in sheet / width in frames of sprite sheet */
+  this.totalAnimations = utils.valueOr(options.totalAnimations, 9);
+
+  /** @type {number} frames per animation / height in frames of sprite sheet */
+  this.framesPerAnimation = utils.valueOr(options.frames, 1);
+
+  /** @type {boolean} Whether animation frames run in rows, not columns */
+  this.horizontalAnimation = utils.valueOr(options.horizontalAnimation, false);
+};
+
+/** @return {number} original height of the whole sprite sheet. */
+StudioSpriteSheet.prototype.assetWidth = function () {
+    return this.frameWidth * (this.horizontalAnimation ?
+            this.framesPerAnimation : this.totalAnimations);
+};
+
+/** @return {number} original width of the whole sprite sheet. */
+StudioSpriteSheet.prototype.assetHeight = function () {
+  return this.frameHeight * (this.horizontalAnimation ?
+          this.totalAnimations : this.framesPerAnimation);
+};
+
+/**
+ * Get the framing rect for a particular animation and frame within the
+ * sprite sheet.
+ * @param {number} animationIndex - Which animation to look up.
+ * @param {number} frameIndex - Which frame in the animation to look up.
+ * @returns {Object} a frame rect at spritesheet scale relative to the sheet's
+ *          top-left corner.
+ */
+StudioSpriteSheet.prototype.getFrame = function (animationIndex, frameIndex) {
+  var x = this.frameWidth * (this.horizontalAnimation ? frameIndex : animationIndex);
+  var y = this.frameHeight * (this.horizontalAnimation ? animationIndex : frameIndex);
+  return {
+    x: x,
+    y: y,
+    width: this.frameWidth,
+    height: this.frameHeight,
+    top: y,
+    left: x,
+    right: x + this.frameWidth,
+    bottom: y + this.frameHeight
+  };
+};
+
+
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/studio/StudioAnimation.js":[function(require,module,exports){
+/** @file An animated image, which handles frame counts, rates and offsets
+ * internally and exposes simple methods for rendering at the desired position. */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var constants = require('./constants');
+var utils = require('../utils');
+
+// The SVG namespace that must be applied to new SVG elements
+var SVG_NS = "http://www.w3.org/2000/svg";
+
+// Unique element ID that increments by 1 each time an element is created
+var uniqueId = 0;
+
+/**
+ * A StudioAnimation represents an animation asset that can be created,
+ * positioned and rendered by other code.  It tries to hide away all the
+ * details of actually rendering the correct frame at the correct offset
+ * and advancing frames at the correct rate.
+ * @constructor
+ * @param {!Object} options
+ * @param {!StudioSpriteSheet} spriteSheet - The source asset for this animation,
+ *        wrapped in necessary metadata.
+ * @param {number} [options.renderScale] - Default 1.
+ * @param {number} [options.opacity] - Opacity on a 0-1 scale.  Default 1.
+ * @param {number} [options.animationRate] - How fast the animation should be
+ *        played, in frames per second.  Default 20.
+ * @param {boolean} [options.loop] - Whether the animation should loop
+ *        automatically.  Default false.
+ */
+var StudioAnimation = module.exports = function (options) {
+  /** @private {StudioSpriteSheet} */
+  this.spriteSheet_ = options.spriteSheet;
+
+  /** @private {number} render scale */
+  this.renderScale_ = utils.valueOr(options.renderScale, 1);
+
+  /** @private {number} opacity on a scale of 0 (transparent) to 1 (opaque) */
+  this.opacity_ = utils.valueOr(options.opacity, 1);
+
+  /**
+   * Which animation (which column in the sprite sheet) is currently playing.
+   * @private {number}
+   */
+  this.currentAnimation_ = 0;
+
+  /** @private {number} index of current frame in the current animation. */
+  this.currentFrame_ = 0;
+
+  /** @private {boolean} whether the animation should loop automatically. */
+  this.loop_ = utils.valueOr(options.loop, false);
+
+  /** @private {SVGImageElement} */
+  this.element_ = null;
+
+  /** @private {SVGElement} */
+  this.clipPath_ = null;
+
+  // Setting the animation rate here initializes the setInterval that keeps
+  // the current frame changing at the framerate.
+  this.setAnimationRate(utils.valueOr(options.animationRate,
+      constants.DEFAULT_ANIMATION_RATE));
+};
+
+/**
+ * Test only function so that we can start our id count over.
+ */
+StudioAnimation.__resetIds = function () {
+  uniqueId = 0;
+};
+
+/** @returns {SVGImageElement} */
+StudioAnimation.prototype.getElement = function () {
+  return this.element_;
+};
+
+/**
+ * Create an image element with a clip path
+ */
+StudioAnimation.prototype.createElement = function (parentElement) {
+  var nextId = (uniqueId++);
+
+  // create our clipping path/rect
+  this.clipPath_ = document.createElementNS(SVG_NS, 'clipPath');
+  var clipId = 'studioanimation_clippath_' + nextId;
+  this.clipPath_.setAttribute('id', clipId);
+  var rect = document.createElementNS(SVG_NS, 'rect');
+  rect.setAttribute('width', this.spriteSheet_.frameWidth * this.renderScale_);
+  rect.setAttribute('height', this.spriteSheet_.frameHeight * this.renderScale_);
+  this.clipPath_.appendChild(rect);
+  parentElement.appendChild(this.clipPath_);
+
+  var itemId = 'studioanimation_' + nextId;
+  this.element_ = document.createElementNS(SVG_NS, 'image');
+  this.element_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+     this.spriteSheet_.assetPath);
+  this.element_.setAttribute('id', itemId);
+  this.element_.setAttribute('height',
+      this.spriteSheet_.assetHeight() * this.renderScale_);
+  this.element_.setAttribute('width',
+      this.spriteSheet_.assetWidth() * this.renderScale_);
+  parentElement.appendChild(this.element_);
+
+  this.element_.setAttribute('clip-path', 'url(#' + clipId + ')');
+};
+
+/**
+ * Remove our element/clipPath/animator
+ */
+StudioAnimation.prototype.removeElement = function() {
+
+  if (this.element_) {
+    this.element_.parentNode.removeChild(this.element_);
+    this.element_ = null;
+  }
+
+  // remove clip path element
+  if (this.clipPath_) {
+    this.clipPath_.parentNode.removeChild(this.clipPath_);
+    this.clipPath_ = null;
+  }
+
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+    this.animator_ = null;
+  }
+};
+
+/**
+ * Display the current frame at the given location
+ */
+StudioAnimation.prototype.redrawCenteredAt = function (center) {
+  var frame = this.spriteSheet_.getFrame(this.currentAnimation_, this.currentFrame_);
+  var scale = this.renderScale_;
+
+  // Preserved behavior: When scaling a sprite up, we actually scale around the
+  //       bottom-center of the sprite (so feet stay planted in the same place)
+  //       rather than actually around its center.
+  //       That's what the (2 * scale - 1) bit is about; just change that to
+  //       (scale) if you want to scale about the sprite center again.
+  // TODO: Improve this by scaling around an explicitly encoded 'sprite center'
+  var topLeft = {
+    x: center.x - (frame.width / 2) * scale,
+    y: center.y - (frame.height / 2) * (2 * scale - 1)
+  };
+
+  // Offset the spritesheet DOM element by the inverse of the offset of the
+  // frame we want to display.
+  this.element_.setAttribute('x', topLeft.x - frame.left * scale);
+  this.element_.setAttribute('y', topLeft.y - frame.top * scale);
+  this.element_.setAttribute('opacity', this.opacity_);
+
+  // Then set the clip rect to the position where we want to display it, so
+  // only the frame that's now positioned correctly is shown.
+  var clipRect = this.clipPath_.childNodes[0];
+  clipRect.setAttribute('x', topLeft.x);
+  clipRect.setAttribute('y', topLeft.y);
+};
+
+/**
+ * Sets which animation to play out of the sprite sheet.
+ * Animations are indexed by their position in the sprite sheet, where each
+ * animation is its own column and animation zero is the far-left column.
+ * @param {!number} animationIndex
+ */
+StudioAnimation.prototype.setCurrentAnimation = function (animationIndex) {
+  this.currentAnimation_ = animationIndex;
+};
+
+/**
+ * Set the animation rate for this item's sprite.
+ * @param {number} framesPerSecond
+ */
+StudioAnimation.prototype.setAnimationRate = function (framesPerSecond) {
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+  }
+  this.animator_ = window.setInterval(function () {
+    if (this.loop_ || this.currentFrame_ + 1 < this.spriteSheet_.framesPerAnimation) {
+      this.currentFrame_ = (this.currentFrame_ + 1) %
+          this.spriteSheet_.framesPerAnimation;
+    }
+  }.bind(this), Math.round(1000 / framesPerSecond));
+};
+
+/**
+ * Change visible opacity of this animation..
+ * @param {number} newOpacity (between 0 and 1)
+ */
+StudioAnimation.prototype.setOpacity = function (newOpacity) {
+  this.opacity_ = newOpacity;
+};
+
+
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/constants.js":[function(require,module,exports){
 'use strict';
 
 exports.SpriteSpeed = {
@@ -13336,8 +13521,8 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-exports.DEFAULT_ITEM_FRAME_RATE = 20;
-exports.DEFAULT_PROJECTILE_FRAME_RATE = 20;
+/** @type {number} animation rate in frames per second. */
+exports.DEFAULT_ANIMATION_RATE = 20;
 
 // Fade durations (in milliseconds)
 exports.GOAL_FADE_TIME = 200;
