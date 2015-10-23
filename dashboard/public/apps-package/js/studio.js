@@ -3345,7 +3345,8 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     isHazard: classProperties.isHazard,
     renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
-    renderScale: utils.valueOr(classProperties.scale, 1)
+    renderScale: utils.valueOr(classProperties.scale, 1),
+    animationRate: classProperties.animationRate
   };
 };
 
@@ -5123,7 +5124,7 @@ module.exports = RocketHeightLogic;
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
-require('../utils'); // Get Function.prototype.inherits
+var utils = require('../utils');
 
 var SVG_NS = "http://www.w3.org/2000/svg";
 
@@ -5230,12 +5231,8 @@ var Projectile = function (options) {
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
 
   this.currentFrame_ = 0;
-  var self = this;
-  this.animator_ = window.setInterval(function () {
-    if (self.loop || self.currentFrame_ + 1 < self.frames) {
-      self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
-    }
-  }, 50);
+  this.setAnimationRate(utils.valueOr(options.animationRate,
+      constants.DEFAULT_PROJECTILE_FRAME_RATE));
 
   // origin is at an offset from sprite location
   this.x = options.spriteX + OFFSET_CENTER[options.dir].x +
@@ -5245,6 +5242,21 @@ var Projectile = function (options) {
 };
 Projectile.inherits(Collidable);
 module.exports = Projectile;
+
+/**
+ * Set the animation rate for this projectile's sprite.
+ * @param {number} framesPerSecond
+ */
+Projectile.prototype.setAnimationRate = function (framesPerSecond) {
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+  }
+  this.animator_ = window.setInterval(function () {
+    if (this.loop || this.currentFrame_ + 1 < this.frames) {
+      this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
+    }
+  }.bind(this), Math.round(1000 / framesPerSecond));
+};
 
 /**
  * Test only function so that we can start our id count over.
@@ -5904,7 +5916,7 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'hazard': { frames: 13, width: 100, height: 100, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
+    'hazard': { frames: 13, animationRate: 5, width: 100, height: 100, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
   };
 
   // Spritesheet for animated goal.
@@ -12078,14 +12090,26 @@ var Item = function (options) {
   this.fadeTime = constants.ITEM_FADE_TIME;
 
   this.currentFrame_ = 0;
+  this.setAnimationRate(
+      utils.valueOr(options.animationRate, constants.DEFAULT_ITEM_FRAME_RATE));
+};
+Item.inherits(Collidable);
+module.exports = Item;
+
+/**
+ * Set the animation rate for this item's sprite.
+ * @param {number} framesPerSecond
+ */
+Item.prototype.setAnimationRate = function (framesPerSecond) {
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+  }
   this.animator_ = window.setInterval(function () {
     if (this.loop || this.currentFrame_ + 1 < this.frames) {
       this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
     }
-  }.bind(this), 50);
+  }.bind(this), Math.round(1000 / framesPerSecond));
 };
-Item.inherits(Collidable);
-module.exports = Item;
 
 /**
  * Returns the frame of the spritesheet for the current walking direction.
@@ -13311,6 +13335,9 @@ exports.RANDOM_VALUE = 'random';
 exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
+
+exports.DEFAULT_ITEM_FRAME_RATE = 20;
+exports.DEFAULT_PROJECTILE_FRAME_RATE = 20;
 
 // Fade durations (in milliseconds)
 exports.GOAL_FADE_TIME = 200;
