@@ -33,6 +33,7 @@ var Hammer = utils.getHammer();
 var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
+var ImageFilter = require('./ImageFilter');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -362,44 +363,11 @@ var drawMap = function () {
     }
   }
 
+  var goalFilter;
   var pulseFilterId, shineFilterId, glowFilterId;
   if (skin.goalEffect === 'pulse') {
-    // <filter id="pulse-filter">
-    //  <feComponentTransfer>
-    //   <feFuncR type="linear" slope="1" intercept="0"/>
-    //   <feFuncG type="linear" slope="1" intercept="0"/>
-    //   <feFuncB type="linear" slope="1" intercept="0"/>
-    //  </feComponentTransfer>
-    // </filter>
-    pulseFilterId = 'pusle-filter';
-    var pulseFilter = document.createElementNS(SVG_NS, 'filter');
-    pulseFilter.setAttribute('id', pulseFilterId);
-    var feComponentTransfer = document.createElementNS(SVG_NS, 'feComponentTransfer');
-    var brightnessAnimation = document.createElementNS(SVG_NS, 'animate');
-    brightnessAnimation.setAttribute('attributeName', 'intercept');
-    brightnessAnimation.setAttribute('values', '0;0;0;0.1;0.25;1;0.25;0.1;0;0;0');
-    brightnessAnimation.setAttribute('dur', '2s');
-    brightnessAnimation.setAttribute('repeatCount', 'indefinite');
-    var feFuncR = document.createElementNS(SVG_NS, 'feFuncR');
-    feFuncR.setAttribute('type', 'linear');
-    feFuncR.setAttribute('slope', '1');
-    feFuncR.setAttribute('intercept', '1');
-    feFuncR.appendChild(brightnessAnimation.cloneNode());
-    var feFuncG = document.createElementNS(SVG_NS, 'feFuncG');
-    feFuncG.setAttribute('type', 'linear');
-    feFuncG.setAttribute('slope', '1');
-    feFuncG.setAttribute('intercept', '1');
-    feFuncG.appendChild(brightnessAnimation.cloneNode());
-    var feFuncB = document.createElementNS(SVG_NS, 'feFuncB');
-    feFuncB.setAttribute('type', 'linear');
-    feFuncB.setAttribute('slope', '1');
-    feFuncB.setAttribute('intercept', '1');
-    feFuncB.appendChild(brightnessAnimation.cloneNode());
-    feComponentTransfer.appendChild(feFuncR);
-    feComponentTransfer.appendChild(feFuncG);
-    feComponentTransfer.appendChild(feFuncB);
-    pulseFilter.appendChild(feComponentTransfer);
-    defs.appendChild(pulseFilter);
+    goalFilter = new ImageFilter.Pulse(svg);
+    goalFilter.createInDom();
   } else if (skin.goalEffect === 'shine') {
     /*
      <filter id="shine-filter">
@@ -578,8 +546,8 @@ var drawMap = function () {
       spriteFinishMarker.setAttribute('width', numFrames * width);
       spriteFinishMarker.setAttribute('height', height);
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
-      if (skin.goalEffect === 'pulse') {
-        spriteFinishMarker.setAttribute('filter', 'url(#' + pulseFilterId + ')');
+      if (goalFilter) {
+        spriteFinishMarker.setAttribute('filter', 'url(#' + goalFilter.getFilterId() + ')');
       } else if (skin.goalEffect === 'shine') {
         spriteFinishMarker.setAttribute('filter', 'url(#' + shineFilterId + ')');
       } else if (skin.goalEffect === 'glow') {
