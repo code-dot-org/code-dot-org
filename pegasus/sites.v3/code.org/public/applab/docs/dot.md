@@ -23,7 +23,7 @@ Draws a dot centered at the turtle's location with the specified radius.
 
 [/short_description]
 
-Drawing a dot is one of the ways to draw with the turtle. There are many things you can draw with just dots and lines, along wth the ability to change the pen color, line thickness and dot radius.
+Drawing a dot is one of the ways to draw with the turtle. There are many things you can draw with just dots and lines, along with the ability to change the pen color, line thickness and dot radius.
 
 [/description]
 
@@ -72,7 +72,10 @@ ____________________________________________________
 
 **Example: Mickey Mouse** Draw Mickey Mouse with three dots.
 
-```
+<table>
+<tr>
+<td style="border-style:none; width:90%; padding:0px">
+<pre>
 // Draw Mickey Mouse with three dots.
 penUp();
 dot(100);
@@ -83,7 +86,13 @@ dot(50);
 turnLeft(180);
 moveForward(150);
 dot(50);
-```
+</pre>
+</td>
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/cba6c4d2f33c8314770584ab16341a65-image-1445615420999.gif'>
+</td>
+</tr>
+</table>
 
 [/example]
 
@@ -97,7 +106,7 @@ ____________________________________________________
 // Draw a lot of random sized dots at random locations.
 penUp();
 for (var i = 0; i < 500; i++) {
-  moveTo(randomNumber(320), randomNumber(480));
+  moveTo(randomNumber(0,320), randomNumber(0,450));
   dot(randomNumber(1, 10));
 }
 ```
@@ -122,7 +131,7 @@ dot(radius);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| radius | number | Yes | The radius (in pixels) of the dot to draw  |
+| radius | number | Yes | The radius (in pixels, greater than zero) of the dot to draw  |
 
 [/parameters]
 

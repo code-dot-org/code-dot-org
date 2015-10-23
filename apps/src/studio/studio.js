@@ -3325,7 +3325,8 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     isHazard: classProperties.isHazard,
     renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
-    renderScale: utils.valueOr(classProperties.scale, 1)
+    renderScale: utils.valueOr(classProperties.scale, 1),
+    animationRate: classProperties.animationRate
   };
 };
 

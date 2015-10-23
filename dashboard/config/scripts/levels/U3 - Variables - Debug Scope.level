@@ -47,7 +47,6 @@
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "addOperator": null,
       "subtractOperator": null,
@@ -63,9 +62,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "# Debugging Variables: Part 4\r\n\r\nWe have the same starting code as last time with a few things added to it. I'm trying to change the value of foo to 4. It seems to be 4 in some places but not others?  Can you fix it?\r\n\r\n# Do This\r\n\r\n* **Run the program**\r\n\r\n* **Add console log statements to try to figure out the value of the variable at different points**\r\n\r\n* Take a guess at what the problem is. We will discuss it on the next level.",
     "is_k1": "false",

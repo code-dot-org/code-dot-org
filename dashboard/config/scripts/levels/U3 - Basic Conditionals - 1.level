@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,9 +126,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "0-  True and False statement\r\n\r\nif ( 1 < 5) {\r\n  console.log(\"Hello\");\r\n}",
     "start_blocks": "if ( 1 < 5) {\r\n  console.log(\"Hello\");\r\n}",
