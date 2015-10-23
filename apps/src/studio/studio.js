@@ -55,7 +55,7 @@ var KeyCodes = sharedConstants.KeyCodes;
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
-var SVG_NS = "http://www.w3.org/2000/svg";
+var SVG_NS = sharedConstants.SVG_NS;
 
 // Whether we are showing debug information
 var showDebugInfo = false;

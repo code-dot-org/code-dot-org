@@ -13,9 +13,8 @@
 'use strict';
 
 require('../utils');
+var SVG_NS = require('../constants').SVG_NS;
 var ImageFilter = require('./ImageFilter');
-
-var SVG_NS = "http://www.w3.org/2000/svg";
 
 /**
  * Adds a white glowing outline to the image.
