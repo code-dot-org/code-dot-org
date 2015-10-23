@@ -87,8 +87,26 @@ SQL
     @response_limit = 100
     @responses = {}
     [3911, 3909, 3910, 3907].each do |level_id|
+      # Regardless of the level type, query the DB for teacher repsonses.
       @responses[level_id] = LevelSource.limit(@response_limit).where(level_id: level_id).pluck(:level_id, :id, :data)
+      
+      # If the level type is multiple choice, get the text answers and replace
+      # the numerical responses stored with the corresponding text.
+      if [3909, 3910, 3907].include? level_id
+        level_properties = Level.where(id: level_id).pluck(:properties)
+        level_answers = level_properties[0]["answers"]
+
+        @responses[level_id].each do |response|
+          response[2] = level_answers[response[2].to_i]["text"]
+        end
+      end
     end
+
+    # Convert the numerical answers stored in the database to the text answers
+    # selected.
+    @property = Level.where(id: 2951).pluck(:properties)
+    @answers = @property[0]["answers"][1]["text"]
+    
   end
 
   def admin_stats
