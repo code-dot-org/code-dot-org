@@ -125,7 +125,9 @@ languages.each_pair do |name, codes|
       FileUtils.mkdir_p(language_folder)
       FileUtils.mkdir_p(language_folder + "/files")
       FileUtils.mkdir_p(language_folder + "/images")
-      FileUtils.mkdir_p(language_folder + "/resources")
+      FileUtils.mkdir_p(language_folder + "/how-to")
+      FileUtils.mkdir_p(language_folder + "/promote")
+      FileUtils.mkdir_p(language_folder + "/prizes")
     end
 
     i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/*.md"]
@@ -133,9 +135,19 @@ languages.each_pair do |name, codes|
       FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/#{File.basename(file)}")
     end
 
-    i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/resources/*.md"]
+    i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/how-to/*.md"]
     i18n_dir.each do |file|
-      FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/resources/#{File.basename(file)}")
+      FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/how-to/#{File.basename(file)}")
+    end
+
+    i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/promote/*.md"]
+    i18n_dir.each do |file|
+      FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/promote/#{File.basename(file)}")
+    end
+
+    i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/prizes/*.md"]
+    i18n_dir.each do |file|
+      FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/prizes/#{File.basename(file)}")
     end
   end
 end
@@ -157,7 +169,7 @@ end
 # fix metadata to be multiline
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
   puts file
-  metadata_pattern = /(\---[^---]*\---)/m
+  metadata_pattern = /(---.*?---)/m
   metadata_matches = File.read(file).match metadata_pattern
   if metadata_matches
     original_metadata = metadata_matches.captures.first
@@ -167,14 +179,14 @@ Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |f
 end
 
 # fix twitter tags
-Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/resources/index.md").each do |file|
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/promote/index.md").each do |file|
   puts file
-  File.write(file, File.read(file).gsub(/\stwitter\[:hashtags]/, "\ntwitter\[:hashtags]"))
+  File.write(file, File.read(file).gsub(/\stwitter\[:hashtags\]/, "\ntwitter[:hashtags]"))
 end
 
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
   puts file
-  File.write(file, File.read(file).gsub(/\stwitter\[:hashtags]/, "\ntwitter\[:hashtags]"))
+  File.write(file, File.read(file).gsub(/\stwitter\[:hashtags\]/, "\ntwitter[:hashtags]"))
 end
 
 # fix social media metadata
@@ -188,7 +200,7 @@ Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each 
 'twitter:description': '<%= hoc_s(:meta_tag_twitter_description) %>'\n'twitter:image:src': 'http://<%=request.host%>/images/code-video-thumbnail.jpg'
 'twitter:player': 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
 'twitter:player:width': 1920\n'twitter:player:height': 1080\n---"
-  File.write(file, File.read(file).gsub(/^---[^---].*---/m, social_media_metada))
+  File.write(file, File.read(file).gsub(/^---.*?---/m, social_media_metada))
 end
 
 # fix embedded ruby in markdown

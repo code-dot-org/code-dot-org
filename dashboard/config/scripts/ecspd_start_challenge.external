@@ -1,0 +1,18 @@
+name 'ECSPD Start Challenge'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+## Close & Next Steps > Let’s Review
+<br><br>
+By now you should have completed Stages 1-14, and accomplished the following learning objectives:
+
+- Developed a deep understanding of the core concepts covered in the ECS version 5 curriculum, specifically Unit 2
+- Explored teaching strategies that support success delivering Unit 2
+- Prepared, planned and shared at least one lesson from Unit 2, tailored to your classroom and your needs
+- Connected with the Code.org ECS community for addtional support throughout Unit 2
+
+Take a moment to reflect on your learning. If you like, you can go back and review any stages and levels that you wish to spend more time on. When you’re ready, click “Continue” below to move on.
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

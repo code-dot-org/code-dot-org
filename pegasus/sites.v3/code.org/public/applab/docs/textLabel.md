@@ -31,11 +31,12 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // Create a label for the text box
 textLabel("YourNameLabel","Enter your name:", "YourName");
 textInput("YourName","");
-</pre>
+```
 
 [/example]
 
@@ -44,25 +45,26 @@ ____________________________________________________
 [example]
 
 **Demonstrate a label for each of the input types**
-<pre>
+
+```
 textLabel("textInputLabel","Text Input:", "textInputCtrl");
 textInput("textInputCtrl","");
-write("&lt;br>");
+write("<br>");
 checkbox("checkBoxCtrl",false);
 textLabel("checkBoxLabel","Ok?", "checkBoxCtrl");
-write("&lt;br>");
+write("<br>");
 textLabel("dropdownLabel","dropdown List ","dropdownCtrl");
 dropdown("dropdownCtrl","Option 1","Option 2","Option 3");
-write("&lt;br>");
+write("<br>");
 radioButton("radioCtrl1","true","radioGroup");
 textLabel("radioLabel1","Radio 1","radioCtrl1");
-write("&lt;br>");
+write("<br>");
 radioButton("radioCtrl2","false","radioGroup");
 textLabel("radioLabel2","Radio 2","radioCtrl2");
-write("&lt;br>");
+write("<br>");
 radioButton("radioCtrl3","false","radioGroup");
 textLabel("radioLabel3","Radio 3","radioCtrl3");
-</pre>
+```
 
 [/example]
 
@@ -71,9 +73,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 textLabel(labelId, text, forId)
-</pre>
+```
 
 [/syntax]
 

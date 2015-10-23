@@ -1,7 +1,6 @@
-/* global Dialog */
+/* global Dialog, dashboard */
 // TODO (josh) - don't pass `Dialog` into `createModalDialog`.
 
-var React = require('react');
 var AssetManager = require('./AssetManager.jsx');
 var studioApp = require('../../StudioApp').singleton;
 
@@ -21,7 +20,8 @@ var showAssetManager = function(assetChosen, typeFilter) {
     id: 'manageAssetsModal'
   });
   React.render(React.createElement(AssetManager, {
-    typeFilter : typeFilter,
+    typeFilter: typeFilter,
+    uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
     assetChosen: showChoseImageButton ? function (fileWithPath) {
       dialog.hide();
       assetChosen(fileWithPath);

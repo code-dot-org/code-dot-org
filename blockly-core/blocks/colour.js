@@ -56,7 +56,7 @@ Blockly.Blocks.colour_rgb = {
   // Compose a colour from RGB components.
   init: function() {
     this.setHelpUrl(Blockly.Msg.COLOUR_RGB_HELPURL);
-    this.setHSV(42, 0.89, 0.99);
+    this.setHSV(196, 1.0, 0.79);
     this.appendValueInput('RED')
         .setCheck(Blockly.BlockValueType.NUMBER)
         .setAlign(Blockly.ALIGN_RIGHT)

@@ -1,4 +1,3 @@
-var React = require('react');
 var rowStyle = require('./rowStyle');
 
 var ZOrderRow = React.createClass({

@@ -32,10 +32,11 @@ ____________________________________________________
 **Display an Application Title**
 Creates and displays a title at the top of your application.
 
-<pre>
+
+```
 write("My Awesome Application");
 // Followed by the rest of your application
-</pre>
+```
 
 [/example]
 
@@ -45,9 +46,10 @@ ____________________________________________________
 
 **Ticker Tape Calculator**
 Creates a simple ticker tape calculator.
-<pre>
+
+```
 textInput("value","0");
-write("&lt;br>");
+write("<br>");
 button("plus","+");
 button("minus","-");
 button("clear","clear");
@@ -66,7 +68,7 @@ onEvent("clear", "click", function(event) {
   write(total);
 })
 write(total);
-</pre>
+```
 
 [/example]
 
@@ -75,9 +77,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 write(html)
-</pre>
+```
 
 [/syntax]
 

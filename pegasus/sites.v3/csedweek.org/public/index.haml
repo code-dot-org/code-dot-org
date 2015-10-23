@@ -61,6 +61,8 @@ social:
 -twitter[:url] = "http://#{request.site}/" unless twitter[:text].include? "http://#{request.site}/" || "#{twitter[:text]} http://#{request.site}/".length > 140
 
 %script{:src=>"/js/jquery.placeholder.js"}
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
+%script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
 - if request.site == 'code.org'
   #user_hero
@@ -93,37 +95,16 @@ social:
         %div{:style=>'margin-bottom: 8px'}
           %a#trybutton{:href=>'/learn'}
             %button.optionbutton
-              =I18n.t :get_started
+              =I18n.t :cded_try_it
+          %a#trybutton{:href=>'https://hourofcode.com'}
+            %button.optionbutton
+              =I18n.t :cded_sign_up
         %a{:href=>'/learn/beyond', :style=>'font-size: 16px; color: white'}
           =I18n.t :beyond_an_hour
 
     -download_filename = 'HoC-video-15mb.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
       = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/#{download_filename}"
-
-  -if locale_ro?
-    %br
-    %br
-    %h1{:style=>'text-align: center;'}
-      Esti din Romania? Te rugam sa vizitezi
-      %a{:href=>'http://ro.code.org'}
-        ro.code.org
-
-  -if locale_br?
-    %br
-    %br
-    %h1{:style=>'text-align: center;'}
-      Voce está no Brasil? Por favor, visite
-      %a{:href=>'http://br.code.org'}
-        br.code.org
-
-  -if locale_it?
-    %br
-    %br
-    %h1{:style=>'text-align: center;'}
-      Sei in Italia? Visita per favore 
-      %a{:href=>'http://italia.code.org'}
-        italia.code.org
 
   -if request.site != 'csedweek.org'
     #header-social-links.desktop-feature{style: "margin: 15px 0 0 0; float: right;"}
@@ -180,9 +161,9 @@ social:
               .body=I18n.t "studiobar_shop_body"
     %br/
 
-
+  %br
   %div{:style=>'clear:both;'}
-  = view :petition
+  = view :map
 
   #columns.desktop-feature{:style=>'clear:both; overflow:hidden'}
     #column1{:style=>'float:left; width: 33.33%'}

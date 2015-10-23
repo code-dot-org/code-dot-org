@@ -12,7 +12,6 @@
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var markup = require('./NetSimDnsManualControl.html.ejs');

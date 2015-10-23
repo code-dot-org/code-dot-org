@@ -16,7 +16,6 @@
  maxstatements: 200
 */
 /* global -Blockly */
-/* global $ */
 /* global sendReport */
 /* global confirm */
 'use strict';

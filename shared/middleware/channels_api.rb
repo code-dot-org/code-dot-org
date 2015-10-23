@@ -138,7 +138,7 @@ class ChannelsApi < Sinatra::Base
     content_type :json
 
     value = StorageApps.new(storage_id('user')).get_abuse(id)
-    {:abuseScore => value }.to_json
+    {:abuse_score => value }.to_json
   end
 
   #
@@ -151,7 +151,7 @@ class ChannelsApi < Sinatra::Base
     content_type :json
 
     value = StorageApps.new(storage_id('user')).increment_abuse(id)
-    {:abuseScore => value }.to_json
+    {:abuse_score => value }.to_json
   end
 
   #
@@ -166,7 +166,7 @@ class ChannelsApi < Sinatra::Base
     content_type :json
 
     value = StorageApps.new(storage_id('user')).reset_abuse(id)
-    {:abuseScore => value }.to_json
+    {:abuse_score => value }.to_json
   end
   post %r{/v3/channels/([^/]+)/abuse/delete$} do |id|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))

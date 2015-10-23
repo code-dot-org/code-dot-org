@@ -218,7 +218,7 @@ module Poste2
       body = mail.body.to_s
 
       recipient = Poste2::ensure_recipient(mail.to.first, ip_address: '127.0.0.1')
-      Poste2::send_message('dashboard', recipient, body: body, subject: subject)
+      Poste2::send_message('dashboard', recipient, body: body, subject: subject, from: sender)
     end
 
   end

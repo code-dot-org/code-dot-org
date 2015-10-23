@@ -20,6 +20,7 @@ var JSInterpreter = module.exports = function (options) {
 
   this.paused = false;
   this.yieldExecution = false;
+  this.startedHandlingEvents = false;
   this.nextStep = StepType.RUN;
   this.maxValidCallExpressionDepth = 0;
   this.callExpressionSeenAtDepth = [];
@@ -74,6 +75,15 @@ var JSInterpreter = module.exports = function (options) {
 
 };
 
+/**
+ * Returns true if the JSInterpreter instance initialized successfully. This
+ * would typically fail when the program contains a syntax error.
+ */
+JSInterpreter.prototype.initialized = function () {
+  return !!this.interpreter;
+};
+
+
 JSInterpreter.StepType = {
   RUN:  0,
   IN:   1,
@@ -89,6 +99,7 @@ JSInterpreter.StepType = {
  * optionally, callback arguments (stored in "arguments")
  */
 JSInterpreter.prototype.nativeGetCallback = function () {
+  this.startedHandlingEvents = true;
   var retVal = this.eventQueue.shift();
   if (typeof retVal === "undefined") {
     this.yield();
@@ -383,12 +394,13 @@ JSInterpreter.prototype.createPrimitive = function (data) {
  * Returns the row (line) of code highlighted. If nothing is highlighted
  * because it is outside of the userCode area, the return value is -1
  */
-JSInterpreter.prototype.selectCurrentCode = function () {
+JSInterpreter.prototype.selectCurrentCode = function (highlightClass) {
   return codegen.selectCurrentCode(this.interpreter,
                                    this.codeInfo.cumulativeLength,
                                    this.codeInfo.userCodeStartOffset,
                                    this.codeInfo.userCodeLength,
-                                   this.studioApp.editor);
+                                   this.studioApp.editor,
+                                   highlightClass);
 };
 
 /**

@@ -76,6 +76,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.movable_ = true;
   this.editable_ = true;
   this.userVisible_ = true;
+  this.nextConnectionDisabled_ = false;
   this.collapsed_ = false;
   this.dragging_ = false;
   // Used to hide function blocks when not in modal workspace. This property
@@ -1495,6 +1496,18 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
 };
 
 /**
+ * Set whether this block should allow for succeeding connections.
+ * Called by Xml.domToBlock, primarily used as a passthrough to
+ * setNextStatement to disable any existing connections.
+ */
+Blockly.Block.prototype.setNextConnectionDisabled = function(disabled) {
+  this.nextConnectionDisabled_ = disabled;
+  if (this.nextConnectionDisabled_ === true) {
+    this.setNextStatement(false);
+  }
+};
+
+/**
  * @returns {boolean} whether this block is selected and mid-drag
  */
 Blockly.Block.prototype.isCurrentlyBeingDragged = function () {
@@ -1529,12 +1542,21 @@ Blockly.Block.prototype.setCurrentlyHidden = function (hidden) {
  * CurrentlyHidden is a non-persistent property used to hide certain blocks
  * (like function definitions/examples) that should only be visible when using
  * the modal function editor.
- * This method calculates whether this block is currently visible
+ * This method calculates whether this block is currently visible based
+ * on our current block-editing state (Blockly.editBlocks)
  * @returns true if both visibility conditions are met.
  */
 Blockly.Block.prototype.isVisible = function () {
   var visibleThroughParent = !this.parentBlock_ || this.parentBlock_.isVisible();
-  return visibleThroughParent && this.isUserVisible() && !this.isCurrentlyHidden_();
+  var visible = visibleThroughParent && !this.isCurrentlyHidden_();
+
+  if (Blockly.editBlocks) {
+    // If we're in edit mode, we're not a "user", so we don't care if
+    // the block isUserVisible or not.
+    return visible;
+  }
+
+  return visible && this.isUserVisible();
 };
 
 /**

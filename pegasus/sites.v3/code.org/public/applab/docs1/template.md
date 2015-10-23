@@ -45,11 +45,12 @@ Each piece of documentation should have two examples, with a third or beyond bei
 
 [example]
 
-<pre>
+
+```
 //Example 1 goes here. Example 1 should ideally use just the API where possible, so as not to presume
 knowledge about other functions. This example should be self-documenting and not need an intro. For APIs
 that have optional parameters, create two bare bones examples, one without the optional param and one with.
-</pre>
+```
 
 [/example]
 
@@ -62,16 +63,18 @@ has a purpose that is moderately interesting. Contrast this with the first examp
 doing something like printing out the value of a variable for its own sake, which is not a real program.
 
 Do this:
-<pre>
+
+```
 //Draw 2 eyes <-- this is a comment that helps you understand the intent of the code. It is also on its own line
 dot(50);
 moveTo(100,100);
 dot(50);
-</pre>
+```
 
 Don't do this:
 
-<pre>
+
+```
 dot(50); //Make a dot of radius 50<--this comment is obvious/not helpful AND is inline, which copies poorly in App Lab
 moveTo(100,100); //move to x:100, y:100 <-- this comment is equally not helpful AND is inline, which copies poorly in App Lab
 dot(50);
@@ -81,7 +84,7 @@ When a block comment is necessary (for example to describe a function) make a pr
 Thoughts on comments: Don't comment extraneously if you think it can survive without a comment. This
 will also make the example look more digestable.
 */
-</pre>
+```
 
 [/example]
 
@@ -90,9 +93,10 @@ ____________________________________________________
 [example]
 
 **Example: descriptive title** Helper/intro text. Optional example that would be more complex. 
-<pre>
+
+```
 Code here	
-</pre>
+```
 
 
 [/example]
@@ -103,9 +107,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 functionsignature(requiredparam1, requiredparam2, *optionalparam3*)
-</pre>
+```
 
 [/syntax]
 

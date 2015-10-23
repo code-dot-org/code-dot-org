@@ -21,7 +21,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "instructions": "Use a \"when touching\" block to send Dog back to the top-left ONLY if Dog touches any of the other actors.",
+    "instructions": "Use a \"when actor touches\" block to send Dog back to the top-left ONLY if Dog touches any of the other actors.",
     "first_sprite_index": "0",
     "embed": "false",
     "disable_sharing": "false",
@@ -40,17 +40,16 @@
     "disable_examples": "false",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Use a `when touching` block to send Dog back to the top-left ONLY if Dog touches any of the other actors.",
+    "markdown_instructions": "Use a `when actor touches` block to send Dog back to the top-left ONLY if Dog touches any of the other actors.",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "min_workspace_height": "1200",
     "maze_data": null
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="studio_whenSpriteCollided">
-          <title name="SPRITE1">0</title>
-          <title name="SPRITE2">anything</title>
-        </block>
         <block type="studio_whenArrow">
           <title name="VALUE">up</title>
           <next>
@@ -310,5 +309,17 @@
         <category name="Functions" custom="PROCEDURE"/>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">any_actor</title>
+        </block>
+        <block type="studio_setSpritePosition">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">7</title>
+        </block>
+      </xml>
+    </required_blocks>
   </blocks>
 </Studio>

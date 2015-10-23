@@ -9,7 +9,7 @@
     "skin": "birds",
     "instructions": "Can you make me move West to get to the pig?",
     "start_direction": "3",
-    "step_mode": 1,
+    "step_mode": "0",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "ideal": "3",
@@ -23,7 +23,11 @@
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
-    "definition_collapse": "false"
+    "definition_collapse": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "disable_examples": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

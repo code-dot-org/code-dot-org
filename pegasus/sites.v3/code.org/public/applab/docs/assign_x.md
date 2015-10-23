@@ -33,11 +33,12 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 var x = 0;
 x = 5;
 console.log("x has the value " + x)
-</pre>
+```
 
 [/example]
 
@@ -45,7 +46,8 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // simple Fibonacci
 var x = 1;
 var y = 1;
@@ -61,7 +63,7 @@ x = y + z;
 y = z + x;
 z = x + y;
 console.log(x + " " + y + " " + z)
-</pre>
+```
 
 [/example]
 
@@ -69,7 +71,8 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 textInput("myTextInput", "Hi")
 button("myButton","Click Me")
 onEvent("myButton", "click", function(event) {
@@ -77,7 +80,7 @@ onEvent("myButton", "click", function(event) {
   myText = getText("myTextInput");
   console.log(myText)
 })
-</pre>
+```
 
 
 [/example]
@@ -87,9 +90,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 x = 5
-</pre>
+```
 
 [/syntax]
 
@@ -109,11 +113,12 @@ x = 5
 ### Returns
 Usually you do not think of assignment returning a value, you simply think of it as completing the assignment of the variable to the value.  However, the expression technically does return the value that the variable was assigned to.
 For instance the following code displays "Value is 4"
-<pre>
+
+```
 var x = 1;
 var y = 2*(x=2)
 console.log("Value is " + y)
-</pre>
+```
 
 [/returns]
 
@@ -126,7 +131,8 @@ console.log("Value is " + y)
 - If you're assigning a value to some complicated mathematical expression (say E = m*c*c) it can be helpful to add a comment letting the next developer know you're calculating the energy in the mass using Einstein's theory of relativity.
 - Puzzler for you: what does the following code print...
 
-<pre>
+
+```
 var x = 1
 x = x + (x=3)
 console.log(x)
@@ -135,7 +141,7 @@ x = 1
 x = (x=3) + x
 console.log(x)
 // Neat isn't it!
-</pre>
+```
 
 
 [/tips]

@@ -1,42 +1,25 @@
 name 'ECSPD What is the Challenge'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## What is the Challenge? 
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+## Unit 2 Challenge Preview > How do challenges work?
+<br><br>
+Please review this document, which summarizes what Dani told you in the last video about challenges. You can refer to this document anytime as a reminder of what’s required for this assessment.
 
 <br>
-** In a challenge you will be preparing to teach a specific lesson. You will: **
 
-1. Work through the lesson and complete the activities in the lesson. 
-1. Create samples of the type of work students will create
-1. Consider important teaching tips
-1. Reflect on your experience by answering a group of questions. 
-1. Pick an extension resource that you can provide for other teachers looking to teach this lesson. Extension resources could include: 
-	- a video demo of the lesson (example: teaching tips videos)
-    - a video demo of a lesson concept (example: concept videos)
-    - an extension activity
-    - an alternative tool for the lesson with explanation of how it would be used
-    - anything else you think might be useful for someone teaching this lesson.
-    
-    
-## Why do this challenge?
+**To make a copy in Google Docs:**
+File > Make Copy
 
-Why did we decide to include challenges in phase 3 PD?
+<br>
 
-1. ** Prepare For Classroom ** - The challenge allows you to work specifically on preparing a lesson that you will use in your classroom
-1. ** Benefit From Cohort ** -  You will benefit from other teachers work as they prepare other lessons from the unit.
-1. ** Accumulate Great Resources** - In the process of preparing for lessons teachers will find or create great resources.
+<object src="https://docs.google.com/document/d/15dwdDBF-nya-wQjRq4zxsr0u4p5PEvf-jFnu2OuepmQ/edit?usp=sharing" width="100%" height="700">
+    <embed src="https://docs.google.com/document/d/15dwdDBF-nya-wQjRq4zxsr0u4p5PEvf-jFnu2OuepmQ/edit?usp=sharing"  width="100%" height="700">
+    </embed>
+</object>
 
-## When does it need to be done?
+### <a href="https://docs.google.com/document/d/15dwdDBF-nya-wQjRq4zxsr0u4p5PEvf-jFnu2OuepmQ/edit?usp=sharing" target="_blank">Access the Google Document Here >>></a>
 
-You should aim to complete these challenges before you begin to teach the unit. Completing the work before teaching will improve your preparation for teaching the unit and make this process more beneficial for yourself. Below is a suggested timeline to give you an idea. You should adapt it to your teaching schedule.
-
-#### Suggested Completion Dates:
-
-* Unit 2 -  November 1st
-* Unit 3 -  December 1st
-* Unit 4 -  February 1st
-
-### Note: All pieces of Phase 3 PD, including the challenge work, must be submitted before your Phase 4 in person to recieve credit.
-
-
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

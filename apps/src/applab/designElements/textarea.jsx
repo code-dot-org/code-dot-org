@@ -1,5 +1,4 @@
 /* global $ */
-var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
@@ -24,7 +23,7 @@ var TextAreaProperties = React.createClass({
       <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true} />
         <PropertyRow
@@ -90,7 +89,7 @@ var TextAreaEvents = React.createClass({
   },
 
   getChangeEventCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
       '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
@@ -111,7 +110,7 @@ var TextAreaEvents = React.createClass({
       <div id='eventRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
         <EventHeaderRow/>
@@ -135,7 +134,7 @@ module.exports = {
     element.style.height = '100px';
     element.style.fontSize = '14px';
     element.style.color = '#000000';
-    element.style.backgroundColor = '';
+    element.style.backgroundColor = '#ffffff';
 
     this.onDeserialize(element);
 

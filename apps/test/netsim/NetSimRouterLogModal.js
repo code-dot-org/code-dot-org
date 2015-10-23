@@ -8,7 +8,7 @@
  eqeqeq: true
  */
 'use strict';
-/* global $, describe, beforeEach, it */
+/* globaldescribe, beforeEach, it */
 
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var NetSimRouterLogModal = require('@cdo/apps/netsim/NetSimRouterLogModal');
@@ -38,12 +38,18 @@ describe("NetSimRouterLogModal", function () {
       modal = new NetSimRouterLogModal(rootDiv);
     });
 
-    it("defaults to logging all if it can", function () {
+    it("defaults to showing all router logs when not connected to a router", function () {
       assert.isTrue(modal.isAllRouterLogMode_);
     });
 
-    it("defaults to logging one if it has to", function () {
+    it("defaults to showing one router log when connected to an isolated router", function () {
       levelConfig.connectedRouters = false;
+      modal.setRouter(router);
+      assert.isFalse(modal.isAllRouterLogMode_);
+    });
+
+    it("defaults to showing one router log when connected to a connected router", function () {
+      levelConfig.connectedRouters = true;
       modal.setRouter(router);
       assert.isFalse(modal.isAllRouterLogMode_);
     });

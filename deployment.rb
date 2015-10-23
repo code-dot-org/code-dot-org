@@ -1,5 +1,10 @@
 $:.unshift File.expand_path('../lib', __FILE__)
 $:.unshift File.expand_path('../shared/middleware', __FILE__)
+
+# Set up gems listed in the Gemfile.
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __FILE__)
+require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
+
 require 'csv'
 require 'yaml'
 require 'cdo/erb'
@@ -51,12 +56,15 @@ def load_configuration()
     'dashboard_workers'           => 8,
     'db_reader'                   => 'mysql://root@localhost/',
     'db_writer'                   => 'mysql://root@localhost/',
+    'reporting_db_reader'         => 'mysql://root@localhost/',
+    'reporting_db_writer'         => 'mysql://root@localhost/',
     'hip_chat_log_room'           => rack_env.to_s,
     'hip_chat_logging'            => false,
     'home_dir'                    => File.expand_path('~'),
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
     'localize_apps'               => false,
     'name'                        => hostname,
+    'newrelic_logging'            => rack_env == :production,
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
     'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
@@ -76,7 +84,7 @@ def load_configuration()
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
     'use_dynamo_tables'           => [:staging, :adhoc, :test, :production].include?(rack_env),
-    'use_dynamo_properties'       => [:staging, :adhoc, :test, :production].include?(rack_env),
+    #'use_dynamo_properties'       => [:staging, :adhoc, :test, :production].include?(rack_env),
     'dynamo_tables_table'         => "#{rack_env}_tables",
     'dynamo_tables_index'         => "channel_id-table_name-index",
     'use_dynamo_properties'       => false,
@@ -106,8 +114,12 @@ def load_configuration()
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'production-daemon'
     config['dashboard_db_reader'] ||= config['db_reader'] + config['dashboard_db_name']
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']
+    config['dashboard_reporting_db_reader'] ||= config['reporting_db_reader'] + config['dashboard_db_name']
+    config['dashboard_reporting_db_writer'] ||= config['reporting_db_writer'] + config['dashboard_db_name']
     config['pegasus_db_reader']   ||= config['db_reader'] + config['pegasus_db_name']
     config['pegasus_db_writer']   ||= config['db_writer'] + config['pegasus_db_name']
+    config['pegasus_reporting_db_reader'] ||= config['reporting_db_reader'] + config['pegasus_db_name']
+    config['pegasus_reporting_db_writer'] ||= config['reporting_db_writer'] + config['pegasus_db_name']
 
     # Set AWS SDK environment variables from provided config.
     ENV['AWS_ACCESS_KEY_ID'] ||= config['aws_access_key'] || config['s3_access_key_id']

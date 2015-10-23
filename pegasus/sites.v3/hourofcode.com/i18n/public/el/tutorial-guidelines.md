@@ -16,7 +16,7 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
   
 
 
-**Αφού διαβάσετε τις οδηγίες μας, μπορείτε να υποβάλετε το σενάριό σας μέσω της [σελίδας υποβολής δραστηριοτήτων της Ώρας του Κώδικα ™ ](http://goo.gl/forms/6GSklaO9Oa).**
+**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
 
 **ΝΕΟ:** Σε αντίθεση με τα προηγούμενα χρόνια, προγραμματίζουμε να εισαγάγουμε μια νέα μορφή για τις "καθοδηγούμενες από τον δάσκαλο" δραστηριότητες της Ώρας του Κώδικα. Αυτές οι δραστηριότητες θα είναι καταχωρημένες κάτω από τις αυτο-καθοδηγούμενες δραστηριότητες, χρησιμοποιώντας σελίδες και μηνύματα ηλεκτρονικού ταχυδρομείου για μαθητές. Ακολουθούν λεπτομέρειες.
 
@@ -35,7 +35,7 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
 <a id="guidelines"></a>
 
-## New for 2015: two formats of activites: self-guided or *lesson-plan*
+## New for 2015: two formats of activities: self-guided or *lesson-plan*
 
 Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
 
@@ -116,7 +116,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 ## How to submit (Due 10/15/2015)
 
-Επισκεφθείτε την [σελίδα υποβολής δραστηριότητας για την Ώρα του Κώδικα ™](http://goo.gl/forms/6GSklaO9Oa) και ακολουθήστε τα βήματα για να υποβάλει το σενάριό σας.
+Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
 **Τι θα χρειαστείτε:**
 

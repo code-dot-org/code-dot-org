@@ -19,7 +19,7 @@ class NotesController < ApplicationController
     slides_english = try_t('slides.' + params[:key], locale: :en)
     slides.each do |slide_number, slide_data|
       unless slides_english.key?(slide_number) && slides_english[slide_number].key?(:image)
-        throw("Missing English slide #{slide_number} for video #{params[:key]}")
+        raise "Missing English slide #{slide_number} for video #{params[:key]}"
       end
       slide_data[:image] = slides_english[slide_number][:image]
     end

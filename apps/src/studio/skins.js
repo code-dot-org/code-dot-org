@@ -8,6 +8,7 @@
 var skinsBase = require('../skins');
 var msg = require('./locale');
 var constants = require('./constants');
+var studioApp = require('../StudioApp').singleton;
 
 var RANDOM_VALUE = constants.RANDOM_VALUE;
 var HIDDEN_VALUE = constants.HIDDEN_VALUE;
@@ -35,10 +36,10 @@ function loadInfinity(skin, assetUrl) {
     'projectile_duck'
   ];
 
-  skin.specialProjectileFrames = {
-    'projectile_cherry': 13,
-    'projectile_ice': 12,
-    'projectile_duck': 12
+  skin.specialProjectileProperties = {
+    'projectile_cherry': { frames: 13 },
+    'projectile_ice': { frames: 12 },
+    'projectile_duck': { frames: 12 }
   };
 
   // TODO: proper item class names
@@ -53,10 +54,10 @@ function loadInfinity(skin, assetUrl) {
     'item_duck'
   ];
 
-  skin.specialItemFrames = {
-    'item_cherry': 13,
-    'item_ice': 12,
-    'item_duck': 12
+  skin.specialItemProperties = {
+    'item_cherry': { frames: 13 },
+    'item_ice': { frames: 12 },
+    'item_duck': { frames: 12 }
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -142,6 +143,8 @@ function loadInfinity(skin, assetUrl) {
     [msg.setBackgroundSnowy(), '"snowy"'],
     ];
 
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
     [skin.leafy.background, '"leafy"'],
     [skin.grassy.background, '"grassy"'],
@@ -173,6 +176,8 @@ function loadInfinity(skin, assetUrl) {
     [msg.projectileRandom(), RANDOM_VALUE]];
 
   // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
     [msg.itemHiro(), '"item_hiro"'],
     [msg.itemAnna(), '"item_anna"'],
@@ -188,8 +193,7 @@ function loadInfinity(skin, assetUrl) {
 function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
-  skin.defaultBackground = 'background3';
-  skin.defaultWalls = 'maze2';
+  skin.defaultBackground = 'forest';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
@@ -198,26 +202,87 @@ function loadHoc2015(skin, assetUrl) {
   skin.ProjectileClassNames = [
   ];
 
-  skin.specialProjectileFrames = {
-  };
-
   // TODO: proper item class names
   skin.ItemClassNames = [
-    'item_walk_item1',
-    'item_walk_item2',
-    'item_walk_item3',
-    'item_walk_item4'
+    'pig',
+    'man',
+    'roo',
+    'bird',
+    'spider',
+    'mouse',
+    'pilot'
   ];
 
-  skin.specialItemFrames = {
-    'item_walk_item1': 12,
-    'item_walk_item2': 12,
-    'item_walk_item3': 15,
-    'item_walk_item4': 12
+  skin.AutohandlerTouchItems = {
+    whenTouchPig: 'pig',
+    whenTouchMan: 'man',
+    whenTouchRoo: 'roo',
+    whenTouchBird: 'bird',
+    whenTouchSpider: 'spider',
+    whenTouchMouse: 'mouse',
+    whenTouchPilot: 'pilot',
+    whenGetPig: 'pig',
+    whenGetMan: 'man',
+    whenGetRoo: 'roo',
+    whenGetBird: 'bird',
+    whenGetSpider: 'spider',
+    whenGetMouse: 'mouse',
+    whenGetPilot: 'pilot',
+  };
+
+  skin.AutohandlerTouchAllItems = {
+    whenTouchAllPigs: 'pig',
+    whenTouchAllMen: 'man',
+    whenTouchAllRoos: 'roo',
+    whenTouchAllBirds: 'bird',
+    whenTouchAllSpiders: 'spider',
+    whenTouchAllMice: 'mouse',
+    whenTouchAllPilots: 'pilot',
+    whenGetAllPigs: 'pig',
+    whenGetAllMen: 'man',
+    whenGetAllRoos: 'roo',
+    whenGetAllBirds: 'bird',
+    whenGetAllSpiders: 'spider',
+    whenGetAllMice: 'mouse',
+    whenGetAllPilots: 'pilot',
+  };
+
+  skin.specialItemProperties = {
+    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
+    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
+    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
   skin.explosionFrames = 17;
+
+  // Spritesheet for animated goal.
+  skin.animatedGoal = skin.assetUrl('goal_idle.png');
+
+  // How many frames in the animated goal spritesheet.
+  skin.animatedGoalFrames = 16;
+
+  // How long to show each frame of the optional goal animation.
+  skin.timePerGoalAnimationFrame = 100;
+
+  // For a smaller collision region on a goal.
+  skin.goalCollisionRectWidth = 50;
+  skin.goalCollisionRectHeight = 50;
+
+  // Whether that goal should fade out when touched.  If true, then the
+  // success image is never shown.
+  skin.fadeOutGoal = true;
+  skin.goalSuccess = null;
+
+  // Draw a goal an an offset to its usual location, useful for oversize goal
+  // images, such as a person standing taller than a single grid square whose
+  // feet should still be planted in that grid square.
+  skin.goalRenderOffsetX = -25;
+  skin.goalRenderOffsetY = -45;
 
   // Dimensions of a rectangle in collidable center from which projectiles begin.
   skin.projectileSpriteWidth  = 70;
@@ -238,7 +303,7 @@ function loadHoc2015(skin, assetUrl) {
   skin.wallCollisionRectWidth  = 30;
   skin.wallCollisionRectHeight = 20;
 
-  // When movement is grid aligned, sprites coordinates are the top-left corner
+  // When movement is grid aligned, sprite coordinates are the top-left corner
   // of the sprite, and match the top-left corner of the grid square in question.
   // When we draw the sprites bigger, this means the sprite's "feet" will usually
   // be too far to the right and below that square.  These offsets are a chance
@@ -247,18 +312,18 @@ function loadHoc2015(skin, assetUrl) {
   skin.gridSpriteRenderOffsetX = -30;
   skin.gridSpriteRenderOffsetY = -40;
 
-  skin.avatarList = ['character1', 'character2'];
+  skin.avatarList = ['bot1', 'bot2'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 1,
+        normal: name == 'bot1' ? 14 : 16,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: name == 'character1' ? 1 : 8
+        walk: name == 'bot1' ? 14 : 8
       },
       timePerFrame: 100
     };
@@ -273,78 +338,359 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   // TODO: Create actual item choices
-  skin.item_walk_item1 = skin.assetUrl('walk_item1.png');
-  skin.item_walk_item2 = skin.assetUrl('walk_item2.png');
-  skin.item_walk_item3 = skin.assetUrl('walk_item3.png');
-  skin.item_walk_item4 = skin.assetUrl('walk_item4.png');
+  skin.pig = skin.assetUrl('walk_item1.png');
+  skin.man = skin.assetUrl('walk_item2.png');
+  skin.roo = skin.assetUrl('walk_item3.png');
+  skin.bird = skin.assetUrl('walk_item4.png');
+  skin.spider = skin.assetUrl('walk_item5.png');
+  skin.mouse = skin.assetUrl('walk_item6.png');
+  skin.pilot = skin.assetUrl('walk_item7.png');
 
-
-  skin.background1 = {
+  skin.forest = {
     background: skin.assetUrl('background_background1.jpg'),
-    tiles: skin.assetUrl('tiles_background1.png')
+    tiles: skin.assetUrl('tiles_background1.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_background1.png'),
+    jumboTilesAddOffset: -5,
+    jumboTilesSize: 60,
+    jumboTilesRows: 4,
+    jumboTilesCols: 4
   };
-  skin.background2 = {
+  skin.snow = {
     background: skin.assetUrl('background_background2.jpg'),
-    tiles: skin.assetUrl('tiles_background2.png')
+    tiles: skin.assetUrl('tiles_background2.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_background2.png'),
+    jumboTilesAddOffset: -5,
+    jumboTilesSize: 60,
+    jumboTilesRows: 4,
+    jumboTilesCols: 4
   };
-  skin.background3 = {
+  skin.ship = {
     background: skin.assetUrl('background_background3.jpg'),
-    tiles: skin.assetUrl('tiles_background3.png')
+    tiles: skin.assetUrl('tiles_background3.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_background3.png'),
+    jumboTilesAddOffset: -5,
+    jumboTilesSize: 60,
+    jumboTilesRows: 4,
+    jumboTilesCols: 4
   };
 
-  skin.border = 
-    [[1, 1, 1, 1, 1, 1, 1, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], 
-     [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 1, 1, 1, 1, 1, 1, 1]];
-  skin.maze = 
-    [[1, 0, 0, 0, 0, 0, 0, 1], [0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0,0, 0], [0, 0, 1, 0, 1, 0, 0, 0],
-     [0, 0, 1, 0,0,0,0, 0], [0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0], [1, 0, 0, 0, 1, 0, 0, 1]];
-  skin.maze2 = 
-    [[0, 0, 0, 0, 0, 0, 0, 0], 
-     [0, 1, 1, 1, 0, 1, 1, 0], 
-     [0, 1, 0, 0, 0, 0, 1, 0], 
-     [0, 1, 0, 1, 1, 0, 1, 0],
-     [0, 1, 0, 1, 1, 0, 1, 0], 
-     [0, 1, 0, 0, 0, 0, 1, 0], 
-     [0, 1, 1, 1, 0, 1, 1, 0], 
-     [0, 0, 0, 0, 0, 0, 0, 0]];
+  // It's possible to enlarge the rendering of some wall tiles so that they
+  // overlap each other a little.  Define a bounding rectangle for the source
+  // tiles that get this treatment.
+
+  skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
+
+  // Since we don't have jumbo tiles for our "snow" background, in the case
+  // of the two maps that use jumbo pieces ("circle" and "horizontal") we
+  // return a special version of the map that just uses regular tile pieces.
+
+  skin.getMap = function(background, map) {
+    if (background == "snow" && (map == "circle" || map == "horizontal")) {
+      return map + "_nonjumbo";
+    }
+    else {
+      return map;
+    }
+  };
+
+  skin.blank = 
+    [[0,  0,  0,  0,  0,  0,  0,  0], 
+     [0,  0,  0,  0,  0,  0,  0,  0], 
+     [0,  0,  0,  0,  0,  0,  0,  0], 
+     [0,  0,  0,  0,  0,  0,  0,  0],  
+     [0,  0,  0,  0,  0,  0,  0,  0], 
+     [0,  0,  0,  0,  0,  0,  0,  0],   
+     [0,  0,  0,  0,  0,  0,  0,  0],  
+     [0,  0,  0,  0,  0,  0,  0,  0]];
+
+  skin.circle_nonjumbo = 
+    [[0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00], 
+     [0x00, 0x11, 0x02, 0x03,  0x00,  0x44, 0x45, 0x00], 
+     [0x00, 0x04, 0x00, 0x00,  0x00,  0x00, 0x03, 0x00], 
+     [0x00, 0x14, 0x00, 0x121, 0x121, 0x00, 0x05, 0x00],
+     [0x00, 0x02, 0x00, 0x121, 0x121, 0x00, 0x15, 0x00], 
+     [0x00, 0x03, 0x00, 0x00,  0x00,  0x00, 0x02, 0x00], 
+     [0x00, 0x24, 0x25, 0x02,  0x00,  0x34, 0x35, 0x00], 
+     [0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00]];
+
+  skin.circle = 
+    [[0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+     [0x00, 0x200, 0x213, 0x213, 0x00,  0x213, 0x201, 0x00], 
+     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00], 
+     [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00],
+     [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00], 
+     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00], 
+     [0x00, 0x202, 0x213, 0x213, 0x00,  0x213, 0x203, 0x00], 
+     [0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00]];
+
+  skin.horizontal_nonjumbo = 
+    [[0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0, 0x02, 0x03, 0x04, 0x00, 0x24, 0x25, 0x00], 
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0, 0x10, 0x00, 0x34, 0x35, 0x20, 0x23, 0x00],
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0, 0x03, 0x02, 0x22, 0x20, 0x21, 0x00, 0x00], 
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]];
+
+  skin.horizontal = 
+    [[0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+     [0, 0x213, 0x213, 0x213, 0x00,  0x213, 0x213, 0x00], 
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+     [0, 0x10,  0x00,  0x213, 0x213, 0x213, 0x213, 0x00],
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+     [0, 0x213, 0x213, 0x213, 0x213, 0x213, 0x00,  0x00], 
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00]];
+
+  skin.grid = 
+    [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x21, 0x00, 0x10, 0x00, 0x20, 0x00, 0x03], 
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x02, 0x00, 0x11, 0x00, 0x21, 0x00, 0x02],
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x03, 0x00, 0x20, 0x00, 0x22, 0x00, 0x11],
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x10, 0x00, 0x21, 0x00, 0x23, 0x00, 0x10]];
+
+  skin.blobs = 
+    [[0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00], 
+     [0x00, 0x103, 0x103, 0x00,  0x00, 0x00,  0x22,  0x00], 
+     [0x00, 0x103, 0x103, 0x00,  0x00, 0x110, 0x110, 0x00], 
+     [0x00, 0x00,  0x00,  0x00,  0x00, 0x110, 0x110, 0x00],  
+     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x00], 
+     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x23],   
+     [0x00, 0x00,  0x03,  0x00,  0x00, 0x00,  0x121, 0x121],  
+     [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x121, 0x121]];
+
+  // Sounds.
+  skin.sounds = [
+    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
+    'character1sound5', 'character1sound6', 'character1sound7', 'character1sound8',
+    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
+    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
+    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
+    'alert1', 'alert2', 'alert3', 'alert4',
+    'applause',
+    'start', 'win', 'failure', 'flag',
+    'move1', 'move2', 'move3'
+  ];
+
+  // Normally the sound isn't played for the final goal, but this forces it
+  // to be played.
+  skin.playFinalGoalSound = true;
+
+  skin.moveSounds = ['move1', 'move2', 'move3'];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
-  skin.wallChoices = [
-    [msg.setWallsHidden(), HIDDEN_VALUE],
-    [msg.setWallsRandom(), RANDOM_VALUE],
-    [msg.setWallsBorder(), '"border"'],
-    [msg.setWallsMaze(), '"maze"'],
-    [msg.setWallsMaze2(), '"maze2"']
+  // NOTE: map names must have double quotes inside single quotes
+  // NOTE: first item must be RANDOM_VALUE
+  skin.mapChoices = [
+    [msg.setMapRandom(), RANDOM_VALUE],
+    [msg.setMapBlank(), '"blank"'],
+    [msg.setMapCircle(), '"circle"'],
+    [msg.setMapHorizontal(), '"horizontal"'],
+    [msg.setMapGrid(), '"grid"'],
+    [msg.setMapBlobs(), '"blobs"']
     ];
 
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    [msg.setBackgroundBackground1(), '"background1"'],
-    [msg.setBackgroundBackground2(), '"background2"'],
-    [msg.setBackgroundBackground3(), '"background3"']
+    [msg.setBackgroundForest(), '"forest"'],
+    [msg.setBackgroundSnow(), '"snow"'],
+    [msg.setBackgroundShip(), '"ship"']
     ];
 
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
-    [skin.background1.background, '"background1"'],
-    [skin.background2.background, '"background2"'],
-    [skin.background3.background, '"background3"'],
+    [skin.forest.background, '"forest"'],
+    [skin.snow.background, '"snow"'],
+    [skin.ship.background, '"ship"'],
     [skin.randomPurpleIcon, RANDOM_VALUE],
     ];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
     [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteCharacter1(), '"character1"'],
-    [msg.setSpriteCharacter2(), '"character2"']];
+    [msg.setSpriteBot1(), '"bot1"'],
+    [msg.setSpriteBot2(), '"bot2"']];
 
   skin.projectileChoices = [];
 
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
-    [msg.itemItem1(), '"item_walk_item1"'],
-    [msg.itemItem2(), '"item_walk_item2"'],
-    [msg.itemItem3(), '"item_walk_item3"'],
-    [msg.itemItem4(), '"item_walk_item4"'],
+    [msg.itemMan(), '"man"'],
+    [msg.itemPilot(), '"pilot"'],
+    [msg.itemPig(), '"pig"'],
+    [msg.itemBird(), '"bird"'],
+    [msg.itemMouse(), '"mouse"'],
+    [msg.itemRoo(), '"roo"'],
+    [msg.itemSpider(), '"spider"'],
     [msg.itemRandom(), RANDOM_VALUE]];
+}
+
+function loadHoc2015x(skin, assetUrl) {
+  skin.preloadAssets = true;
+
+  skin.defaultBackground = 'main';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+  ];
+
+  skin.ItemClassNames = [
+    'hazard'
+  ];
+
+  skin.AutohandlerTouchItems = {
+  };
+
+  skin.AutohandlerTouchAllItems = {
+  };
+
+  skin.specialItemProperties = {
+    'hazard': { frames: 13, width: 100, height: 100, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
+  };
+
+  // Spritesheet for animated goal.
+  skin.goal1 = skin.assetUrl('goal1.png');
+  skin.goal2 = skin.assetUrl('goal2.png');
+
+  // How many frames in the animated goal spritesheet.
+  skin.animatedGoalFrames = 16;
+
+  // How long to show each frame of the optional goal animation.
+  skin.timePerGoalAnimationFrame = 100;
+
+  // For a smaller collision region on a goal.
+  skin.goalCollisionRectWidth = 50;
+  skin.goalCollisionRectHeight = 50;
+
+  // Whether that goal should fade out when touched.  If true, then the
+  // success image is never shown.
+  skin.fadeOutGoal = true;
+  skin.goalSuccess = null;
+
+  // Draw a goal an an offset to its usual location, useful for oversize goal
+  // images, such as a person standing taller than a single grid square whose
+  // feet should still be planted in that grid square.
+  skin.goalRenderOffsetX = 0;
+  skin.goalRenderOffsetY = 0;
+
+  // Dimensions of a rectangle in collidable center from which projectiles begin.
+  skin.projectileSpriteWidth  = 70;
+  skin.projectileSpriteHeight = 70;
+
+  // Dimensions of a rectangle in collidable center in which item collisions occur.
+  skin.itemCollisionRectWidth  = 50;
+  skin.itemCollisionRectHeight = 50;
+
+  // Dimensions of a rectangle in sprite center in which item collisions occur.
+  skin.spriteCollisionRectWidth  = 50;
+  skin.spriteCollisionRectHeight = 50;
+
+  // Offset & dimensions of a rectangle in collidable in which wall collisions occur.
+  // For isometric-style rendering, this would normally be the feet.
+  skin.wallCollisionRectOffsetX = 0;
+  skin.wallCollisionRectOffsetY = 24;
+  skin.wallCollisionRectWidth  = 30;
+  skin.wallCollisionRectHeight = 20;
+
+  // When movement is grid aligned, sprite coordinates are the top-left corner
+  // of the sprite, and match the top-left corner of the grid square in question.
+  // When we draw the sprites bigger, this means the sprite's "feet" will usually
+  // be too far to the right and below that square.  These offsets are a chance
+  // to move the rendering of the sprite up and to the left, when negative, so
+  // that the "feet" are planted at the bottom center of the grid square.
+  skin.gridSpriteRenderOffsetX = -20;
+  skin.gridSpriteRenderOffsetY = -40;
+
+  skin.avatarList = ['bot1'];
+  skin.avatarList.forEach(function (name) {
+    skin[name] = {
+      sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 8,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: 10
+      },
+      timePerFrame: 100
+    };
+  });
+
+  skin.preventProjectileLoop = function (className) {
+    return className === '';
+  };
+
+  skin.preventItemLoop = function (className) {
+    return className === 'item_character1';
+  };
+
+  skin.hazard = skin.assetUrl('hazard_idle.png');
+
+  skin.main = {
+    background: skin.assetUrl('background_background1.jpg'),
+    tiles: skin.assetUrl('tiles_background1.png')
+  };
+
+  // It's possible to enlarge the rendering of some wall tiles so that they
+  // overlap each other a little.  Define a bounding rectangle for the source
+  // tiles that get this treatment.
+
+  skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
+
+  // Sounds.
+  skin.sounds = [
+    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
+    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
+    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
+    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
+    'alert1', 'alert2', 'alert3', 'alert4',
+    'applause',
+    'start', 'win', 'failure', 'flag',
+    'move1', 'move2', 'move3', 'move4'
+  ];
+
+  // Normally the sound isn't played for the final goal, but this forces it
+  // to be played.
+  skin.playFinalGoalSound = true;
+
+  skin.moveSounds = ['move1', 'move2', 'move3', 'move4'];
+
+  // These are used by blocks.js to customize our dropdown blocks across skins
+  // NOTE: map names must have double quotes inside single quotes
+  // NOTE: first item must be RANDOM_VALUE
+  skin.mapChoices = [
+    ];
+
+  skin.backgroundChoices = [
+    ];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.backgroundChoicesK1 = [
+    ];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteBot1(), '"bot1"']];
+
+  skin.projectileChoices = [];
+
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.itemChoices = [
+    ];
 }
 
 function loadStudio(skin, assetUrl) {
@@ -442,6 +788,8 @@ function loadStudio(skin, assetUrl) {
     [msg.setBackgroundTennis(), '"tennis"'],
     [msg.setBackgroundWinter(), '"winter"']];
 
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
     [skin.cave.background, '"cave"'],
     [skin.night.background, '"night"'],
@@ -500,6 +848,8 @@ function loadStudio(skin, assetUrl) {
     [msg.projectileRandom(), RANDOM_VALUE]];
 
   // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
     [msg.itemBlueFireball(), '"item_blue_fireball"'],
     [msg.itemPurpleFireball(), '"item_purple_fireball"'],
@@ -562,29 +912,13 @@ exports.load = function(assetUrl, id) {
   skin.speechBubble = skin.assetUrl('say-sprite.png');
   skin.goal = skin.assetUrl('goal.png');
   skin.goalSuccess = skin.assetUrl('goal_success.png');
+
   // Sounds
-  skin.rubberSound = [skin.assetUrl('wall.mp3'), skin.assetUrl('wall.ogg')];
-  skin.flagSound = [skin.assetUrl('win_goal.mp3'),
-                    skin.assetUrl('win_goal.ogg')];
-  skin.crunchSound = [skin.assetUrl('wall0.mp3'), skin.assetUrl('wall0.ogg')];
-  skin.winPointSound = [skin.assetUrl('1_we_win.mp3'),
-                        skin.assetUrl('1_we_win.ogg')];
-  skin.winPoint2Sound = [skin.assetUrl('2_we_win.mp3'),
-                         skin.assetUrl('2_we_win.ogg')];
-  skin.losePointSound = [skin.assetUrl('1_we_lose.mp3'),
-                         skin.assetUrl('1_we_lose.ogg')];
-  skin.losePoint2Sound = [skin.assetUrl('2_we_lose.mp3'),
-                          skin.assetUrl('2_we_lose.ogg')];
-  skin.goal1Sound = [skin.assetUrl('1_goal.mp3'), skin.assetUrl('1_goal.ogg')];
-  skin.goal2Sound = [skin.assetUrl('2_goal.mp3'), skin.assetUrl('2_goal.ogg')];
-  skin.woodSound = [skin.assetUrl('1_paddle_bounce.mp3'),
-                    skin.assetUrl('1_paddle_bounce.ogg')];
-  skin.retroSound = [skin.assetUrl('2_paddle_bounce.mp3'),
-                     skin.assetUrl('2_paddle_bounce.ogg')];
-  skin.slapSound = [skin.assetUrl('1_wall_bounce.mp3'),
-                    skin.assetUrl('1_wall_bounce.ogg')];
-  skin.hitSound = [skin.assetUrl('2_wall_bounce.mp3'),
-                   skin.assetUrl('2_wall_bounce.ogg')];
+  skin.sounds = [
+    'rubber', 'crunch', 'goal1', 'goal2', 'wood', 'retro', 'slap', 'hit',
+    'winpoint', 'winpoint2', 'losepoint', 'losepoint2',
+    'start', 'win', 'failure', 'flag'
+  ];
 
   // Settings
   skin.background = skin.assetUrl('background.png');
@@ -596,7 +930,7 @@ exports.load = function(assetUrl, id) {
 
   skin.activityChoices = [
     [msg.setActivityRandom(), RANDOM_VALUE],
-    [msg.setActivityPatrol(), '"patrol"'],
+    [msg.setActivityRoam(), '"roam"'],
     [msg.setActivityChase(), '"chase"'],
     [msg.setActivityFlee(), '"flee"'],
     [msg.setActivityNone(), '"none"'],
@@ -609,6 +943,9 @@ exports.load = function(assetUrl, id) {
       break;
     case 'hoc2015':
       loadHoc2015(skin, assetUrl);
+      break;
+    case 'hoc2015x':
+      loadHoc2015x(skin, assetUrl);
       break;
     case 'studio':
       loadStudio(skin, assetUrl);

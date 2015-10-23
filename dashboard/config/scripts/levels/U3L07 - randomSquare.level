@@ -8,19 +8,23 @@
     "skin": "applab",
     "code_functions": {
       "moveForward": null,
-      "dot": null,
       "turnLeft": null,
-      "forLoop_i_0_4": null
+      "turnRight": null,
+      "forLoop_i_0_4": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null
     },
     "edit_code": true,
     "encrypted_examples": "YU5ek2MOqRQv6neyShlCQHuGG4C1tWwBYGJraUqBnHH1+YgIFrvd8yX2uPCD\np7Ur\n",
     "embed": "false",
     "instructions": "Draw the figure using a loop. (Click to see full instructions)",
-    "markdown_instructions": "# Practice using loops\r\n\r\nGet some practice using loops yourself. Use a `for` block to draw the figure below.\r\n\r\n**Drag out ** a `for` block\r\n\r\n**Add ** the commands to draw one side of the figure\r\n\r\n**Select ** the number of **iterations**\r\n\r\n**Draw ** the figure\r\n\r\n![](https://images.code.org/0dc0fcfdcc2234051b8773036ca674b0-image-1442848212209.09.51 AM.png)",
+    "markdown_instructions": "# Practice using loops part 2\r\n\r\nLet's look at the second example from the video. \r\n\r\nUse a `for` loop to call a function that you wrote.  We've provided the code for the `drawSquare(size)` function for you. \r\n\r\n**Drag out** a `for` loop\r\n\r\n**Inside the loop** add a call to `drawSquare`, and a call to `turnRight`\r\n\r\n![](https://images.code.org/c4037292ac237ac60919fae2c24790db-image-1443104130552.gif)\r\n\r\n**Run the program** to see what's happening.\r\n\r\n# Quick Challenge - Make this!\r\nChange the number of loop iterations to draw a lot of squares.  Try to create the figure shown below (or something similar).  HINT: the image below has 72 squares in it.\r\n\r\n![](https://images.code.org/e4d3f180b2f1e421a96d40ecacce029a-image-1443104869913.gif)\r\n\r\nOnce you've played enough to get the hang of calling a function from inside a loop then **move on**.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
-    "slider_speed": "1",
+    "slider_speed": "0.9",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -34,14 +38,19 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "app_width": "320",
-    "app_height": "450",
+    "app_height": "480",
     "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
-    "beginner_mode": "true"
+    "beginner_mode": "true",
+    "start_blocks": "// Insert your code here\r\n\r\n// Draw a Square of the given size\r\nfunction drawSquare(size){\r\n  moveForward(size);\r\n  turnRight(90);\r\n  moveForward(size);\r\n  turnRight(90);\r\n  moveForward(size);\r\n  turnRight(90);\r\n  moveForward(size);\r\n  turnRight(90);\r\n}",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

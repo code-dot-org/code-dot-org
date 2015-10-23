@@ -13,7 +13,6 @@
  maxparams: 4,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var _ = require('../utils').getLodash();

@@ -1,11 +1,17 @@
 name 'ECSPD U2 Challenge Submission'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Submit it
 
-You may not be ready to post your final work yet. Come back to this place when you are and submit your final work. You will post it to the forum thread for the lesson you worked on. Make sure you upload all the resources you have created.  You can submit them to the resource folder as well!
+# Submit It!
 
-Make sure to complete the reflection before you submit it: <a href="https://docs.google.com/document/d/1QvJT9z8azRk1rpX37Cua00Lc9ddB29MKvirFt3aKC04/edit?usp=sharing" target="_blank"> Challenge Reflection</a>
+You should now be ready to post your work to the forum thread for the lesson you worked on. Make sure you upload all the resources you have created.  You can submit them to the resource folder as well!
+
+## Formatting your Post
+
+Your forum post should contain the following elements:
+
+1. Title: Completed Challenge 
+1. Link to your 1 Page Overview which captures all your work 
 
 ### Challenge Options:
 
@@ -17,5 +23,7 @@ Make sure to complete the reflection before you submit it: <a href="https://docs
 * <a href="http://forum.code.org/t/u2-day-15-16-lesson-resources/1796/1" target="_blank">Day 15-16: Sorting </a>
 * <a href="http://forum.code.org/t/u2-day-17-lesson-resources/1797/1" target="_blank">Day 17: Minimal Spanning Trees</a>
 * <a href="http://forum.code.org/t/u2-day-18-21-lesson-resources/1798/1" target="_blank">Day 18-21: Unit Final Project </a> 
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
 MARKDOWN

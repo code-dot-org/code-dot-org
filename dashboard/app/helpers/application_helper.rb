@@ -1,3 +1,4 @@
+require 'client_state'
 require 'nokogiri'
 require 'cdo/user_agent_parser'
 require 'cdo/graphics/certificate_image'
@@ -46,7 +47,8 @@ module ApplicationHelper
   end
 
   def activity_css_class(result)
-    if result.nil?
+    # For definitions of the result values, see /app/src/constants.js.
+    if result.nil? || result == 0
       'not_tried'
     elsif result >= Activity::SUBMITTED_RESULT
       'submitted'
@@ -64,8 +66,8 @@ module ApplicationHelper
     if user
       ul = user_levels[script_level.level_id]
       result = ul.try(:best_result) if ul
-    elsif session[:progress] && session[:progress][script_level.level_id]
-      result = session[:progress][script_level.level_id]
+    else
+      result = client_state.level_progress(script_level.level_id.to_i)
     end
     activity_css_class(result)
   end
@@ -180,8 +182,14 @@ module ApplicationHelper
     certificate_image_url(name: user.name, course: script_name)
   end
 
-  def minifiable_shared_path(path)
+  def minifiable_asset_path(path)
     path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs
     asset_path(path)
   end
+
+  # Returns a client state object for the current session and cookies.
+  def client_state
+    @client_state ||= ClientState.new(session, cookies)
+  end
+
 end

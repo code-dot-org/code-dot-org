@@ -1,4 +1,5 @@
 module UsersHelper
+  include ApplicationHelper
 
   # Summarize the current user's progress within a certain script.
   def summarize_user_progress(script, user = current_user)
@@ -24,7 +25,8 @@ module UsersHelper
         end
       end
     else
-      lines = session[:lines] || 0
+      lines = client_state.lines
+      script_levels = script.script_levels
     end
 
     user_data.merge!(

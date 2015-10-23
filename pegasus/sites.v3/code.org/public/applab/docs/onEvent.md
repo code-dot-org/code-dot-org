@@ -45,12 +45,13 @@ ____________________________________________________
 [example]
 
 In this example, we use `onEvent` to write a message to the screen every time a button is clicked.
-<pre>
+
+```
 button("myButton", "Click me"); //Create a button element
 onEvent("myButton", "click", function(event){ //Register a click callback for "myButton"
   write("You clicked the button!"); //Display text on the screen
 });
-</pre>
+```
 
 [/example]
 
@@ -59,7 +60,8 @@ ____________________________________________________
 [example]
 
 In this second example, we use `onEvent` to move an image to the coordinates specified in a textbox. Note that we declare only one function that we use for two different callback.
-<pre>
+
+```
 textLabel("xLabel", "X coordinate:", "xCoordinate"); //Create a label for the X coordinate text box
 textInput("xCoordinate", "160"); //Create a text box where the X coordinate can be modified
 textLabel("yLabel", "Y coordinate:", "yCoordinate"); //Create a label for the Y coordinate text box
@@ -75,7 +77,7 @@ function moveFromText(event) { //Define a funtion that moves the image based on 
 //Set our moveFromText function as the callback whenever one of the text boxes is modified
 onEvent("xCoordinate", "change", moveFromText);
 onEvent("yCoordinate", "change", moveFromText);
-</pre>
+```
 
 [/example]
 
@@ -84,7 +86,8 @@ ____________________________________________________
 [example]
 
 We can also write a variant of the previous example, where the image can respond to different events like mouse hover and click.
-<pre>
+
+```
 textLabel("xLabel", "X coordinate:", "xCoordinate"); //Create a label for the X coordinate text box
 textInput("xCoordinate", "160"); //Create a text box where the X coordinate can be modified
 textLabel("yLabel", "Y coordinate:", "yCoordinate"); //Create a label for the Y coordinate text box
@@ -120,7 +123,7 @@ onEvent("logo", "mouseout", function(event){
 onEvent("logo", "click", function(event){
   playSound("http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3");
 });
-</pre>
+```
 
 [/example]
 
@@ -129,11 +132,12 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 onEvent(id, type, function(event) {
   Code to execute
 });
-</pre>
+```
 
 [/syntax]
 

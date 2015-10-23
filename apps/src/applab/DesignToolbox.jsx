@@ -1,6 +1,5 @@
 /* global $ */
 
-var React = require('react');
 var DesignToolboxElement = require('./DesignToolboxElement.jsx');
 var applabMsg = require('./locale');
 
@@ -76,6 +75,11 @@ module.exports = React.createClass({
             imageUrl={IMAGE_BASE_URL + 'textarea.png'}
             desc={'Text Area'}
             elementType={'TEXT_AREA'}
+            handleDragStart={this.props.handleDragStart} />
+        <DesignToolboxElement
+            imageUrl={IMAGE_BASE_URL + 'chart.png'}
+            desc={'Chart'}
+            elementType={'CHART'}
             handleDragStart={this.props.handleDragStart} />
       </div>
     );

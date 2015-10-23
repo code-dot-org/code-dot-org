@@ -8,7 +8,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# Партньори от Латинска Америка
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -16,9 +16,25 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# Партньори от Австралия
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
+
+<% end %>
+
+<% if @country == 'id' %>
+
+# Indonesia Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
+
+<% end %>
+
+<% if @country == 'jp' %>
+
+# Japan Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
 <% end %>
 
@@ -27,6 +43,14 @@ title: <%= hoc_s(:title_partners) %>
 # United Kingdom Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
+
+<% end %>
+
+<% if @country == 'ca' %>
+
+# Canada Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
 <% end %>
 

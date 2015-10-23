@@ -1,4 +1,3 @@
-require File.expand_path('../boot', __FILE__)
 require File.expand_path('../deployment', __FILE__)
 require 'cdo/poste'
 require 'rails/all'
@@ -80,11 +79,14 @@ module Dashboard
     cache_bust_path = Rails.root.join('.cache_bust')
     ::CACHE_BUST = File.read(cache_bust_path).strip.gsub('.', '_') rescue ''
 
+    config.assets.paths << Rails.root.join('./public/blockly')
     config.assets.paths << Rails.root.join('./public/shared/js')
     config.assets.paths << Rails.root.join('../shared/css')
     config.assets.paths << Rails.root.join('../shared/js')
 
     config.assets.precompile += %w(
+      js/*.js
+      css/*.css
       angularProjects.js
       shared.js
       shared.min.js

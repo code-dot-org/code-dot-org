@@ -15,7 +15,6 @@
  maxparams: 3,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
@@ -191,15 +190,15 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   /** @type {string} */
   this.toAddress = initialConfig.toAddress ||
       DataConverters.binaryToAddressString('0', level.addressFormat);
-  
+
   /** @type {string} */
   this.fromAddress = initialConfig.fromAddress ||
       DataConverters.binaryToAddressString('0', level.addressFormat);
-  
+
   /** @type {number} */
   this.packetIndex = initialConfig.packetIndex !== undefined ?
       initialConfig.packetIndex : 1;
-  
+
   /** @type {number} */
   this.packetCount = initialConfig.packetCount !== undefined ?
       initialConfig.packetCount : 1;
@@ -339,7 +338,7 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.ui_ = {};
-  
+
   this.render();
 };
 

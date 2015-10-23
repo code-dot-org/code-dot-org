@@ -31,6 +31,8 @@ exports.TestResults = {
   LEVEL_INCOMPLETE_FAIL: 3,      // Default failure to complete a level.
   MISSING_BLOCK_UNFINISHED: 4,   // A required block was not used.
   EXTRA_TOP_BLOCKS_FAIL: 5,      // There was more than one top-level block.
+  RUNTIME_ERROR_FAIL: 6,         // There was a runtime error in the program.
+  SYNTAX_ERROR_FAIL: 7,          // There was a syntax error in the program.
   MISSING_BLOCK_FINISHED: 10,    // The level was solved without required block.
   APP_SPECIFIC_FAIL: 11,         // Application-specific failure.
   EMPTY_FUNCTION_BLOCK_FAIL: 12, // A "function" block was empty
@@ -56,7 +58,10 @@ exports.TestResults = {
   EDIT_BLOCKS: 70,            // The user is creating/editing a new level.
 
   // The level was solved in the ideal manner.
-  ALL_PASS: 100
+  ALL_PASS: 100,
+
+  // submitted for grading
+  SUBMITTED: 1000
 };
 
 exports.BeeTerminationValue = {

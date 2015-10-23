@@ -64,7 +64,61 @@ Water
 
 More info coming soon!
 
+
+
 [**Back to the top**](#top)
+
+<a id="counselor-admin"></a>
+
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
+
+
+### Counselors##
+
+**Save the date**
+
+Tuesday, November 17, 2015 <br/>
+10:00am - 12:00pm
+
+**Location**
+
+Instructional Design and Professional Learning Division<br/>
+3950 S. Pecos-Mcleod<br/>
+Room 118<br/>
+Las Vegas, NV  89121
+
+**What to bring**
+
+Snacks
+<br/>
+Water
+
+### Administrators##
+
+**Save the date**
+
+Tuesday, November 17, 2015 <br/>
+7:00am - 9:00am
+
+**Location**
+
+Instructional Design and Professional Learning Division<br/>
+3950 S. Pecos-Mcleod<br/>
+Room 118<br/>
+Las Vegas, NV  89121
+
+**What to bring**
+
+Snacks
+<br/>
+Water
+
+[**Back to the top**](#top)
+
+
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

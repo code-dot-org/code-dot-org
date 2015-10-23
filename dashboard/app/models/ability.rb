@@ -56,6 +56,9 @@ class Ability
         can :manage, user.students
         can :manage, Follower
         can :read, Workshop
+        can :manage, UserLevel do |user_level|
+          !user.students.where(id: user_level.user_id).empty?
+        end
       end
 
       if user.facilitator?

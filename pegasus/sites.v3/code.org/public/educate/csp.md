@@ -32,9 +32,9 @@ Check back often.  The video library is growing every week!
 
 <iframe src="https://www.youtube.com/embed/15aqFQQVBWU" frameborder="0" allowfullscreen></iframe>
 
-<iframe src="https://www.youtube.com/embed/i8TTdaEkBiw" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/By30SCp-Tsw" frameborder="0" allowfullscreen></iframe>
 
-<iframe src="https://www.youtube.com/embed/6RBM1aM1IKw" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/ZhEf7e4kopM" frameborder="0" allowfullscreen></iframe>
 
 <iframe src="https://www.youtube.com/embed/JJ1S9Y31vgQ" frameborder="0" allowfullscreen></iframe>
 
@@ -56,7 +56,7 @@ We have forums for educators to discuss and trade ideas about CSP and talk about
 Several documents describe the overarching themes and direction of the course.
 
 - [One-pager](/files/programs/CSP_1-pager_final.pdf)
-- [Curriculum Syllabus and Overview](/files/CSPSyllabusJune2015.pdf) (rev. June. 2015)
+- [Curriculum Syllabus and Overview](/files/CSPSyllabusSept2015.pdf) (rev. Sept. 2015)
 - [Professional development overview](/files/CSPPDoverview.pdf)
 
 
