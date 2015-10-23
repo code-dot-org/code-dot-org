@@ -255,10 +255,14 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should load file contents when editing a dsl defined level" do
+    level_path = 'config/scripts/test_demo_level.external'
+    data, _ = External.parse_file level_path
+    External.setup data
+
     level = Level.find_by_name 'Test Demo Level'
     get :edit, id: level.id
 
-    assert_equal 'config/scripts/test_demo_level.external', assigns(:level).filename
+    assert_equal level_path, assigns(:level).filename
     assert_equal "name 'test demo level'", assigns(:level).dsl_text.split("\n").first
   end
 
