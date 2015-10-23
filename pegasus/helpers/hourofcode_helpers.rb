@@ -111,7 +111,7 @@ def codeorg_url()
 end
 
 def chapter_partner?
-  return %w(al ar br eu italia ro sg uk za).include?(@country)
+  return CDO.partners.include?(@country)
 end
 
 def resolve_url(url)
