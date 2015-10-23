@@ -22,8 +22,7 @@ var utils = require('../utils');
  * Assumptions:
  * All frames are the same size, and are arranged in a grid.
  * All animations are the same number of frames.
- * Every column is an animation.
- * Animation frames run top to bottom.
+ * Each animation is a single column or a single row
  *
  * @constructor
  * @param {!Object} options
@@ -34,6 +33,8 @@ var utils = require('../utils');
  *        there are in the sprite sheet. Default 9.
  * @param {number} [options.frames] - How many frames (rows) there are per
  *        animation. Default 1.
+ * @param {boolean} [options.horizontalAnimation] - If animation frames run in
+ *        rows instead of columns.
  */
 var StudioSpriteSheet = module.exports = function (options) {
   /** @type {string} spritesheet asset path */
@@ -50,16 +51,21 @@ var StudioSpriteSheet = module.exports = function (options) {
 
   /** @type {number} frames per animation / height in frames of sprite sheet */
   this.framesPerAnimation = utils.valueOr(options.frames, 1);
+
+  /** @type {boolean} Whether animation frames run in rows, not columns */
+  this.horizontalAnimation = utils.valueOr(options.horizontalAnimation, false);
 };
 
 /** @return {number} original height of the whole sprite sheet. */
 StudioSpriteSheet.prototype.assetWidth = function () {
-  return this.frameWidth * this.totalAnimations;
+    return this.frameWidth * (this.horizontalAnimation ?
+            this.framesPerAnimation : this.totalAnimations);
 };
 
 /** @return {number} original width of the whole sprite sheet. */
 StudioSpriteSheet.prototype.assetHeight = function () {
-  return this.frameHeight * this.framesPerAnimation;
+  return this.frameHeight * (this.horizontalAnimation ?
+          this.totalAnimations : this.framesPerAnimation);
 };
 
 /**
@@ -71,8 +77,8 @@ StudioSpriteSheet.prototype.assetHeight = function () {
  *          top-left corner.
  */
 StudioSpriteSheet.prototype.getFrame = function (animationIndex, frameIndex) {
-  var x = this.frameWidth * animationIndex;
-  var y = this.frameHeight * frameIndex;
+  var x = this.frameWidth * (this.horizontalAnimation ? frameIndex : animationIndex);
+  var y = this.frameHeight * (this.horizontalAnimation ? animationIndex : frameIndex);
   return {
     x: x,
     y: y,
