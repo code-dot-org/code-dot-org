@@ -270,6 +270,10 @@ def blockly_core_dir(*dirs)
   deploy_dir('blockly-core', *dirs)
 end
 
+def cookbooks_dir(*dirs)
+  deploy_dir('cookbooks', *dirs)
+end
+
 def dashboard_dir(*dirs)
   deploy_dir('dashboard', *dirs)
 end

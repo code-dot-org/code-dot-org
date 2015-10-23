@@ -267,13 +267,24 @@ $websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, A
     RakeUtils.system 'rake', 'build'
 
     # If I'm daemon, do some additional work:
-    if rack_env?(:production) && CDO.daemon
-      # Update the front-end instances, in parallel, but not all at once. When the infrstracture is
-      # properly scaled we should be able to upgrade 20% of the front-ends at a time. Right now we're
-      # over-subscribed (have more resources than we need) so we're restarting 50% of the front-ends.
-      thread_count = 2
-      threaded_each CDO.app_servers.keys, thread_count do |name|
-        upgrade_frontend name, CDO.app_servers[name]
+    if CDO.daemon
+      if CDO.chef_managed
+        # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
+        Dir.chdir(cookbooks_dir) do
+          RakeUtils.bundle_install
+          RakeUtils.bundle_exec 'berks', 'install'
+          RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
+          RakeUtils.bundle_exec 'berks', 'apply', rack_env
+        end
+      end
+      if rack_env?(:production)
+        # Update the front-end instances, in parallel, but not all at once. When the infrastructure is
+        # properly scaled we should be able to upgrade 20% of the front-ends at a time. Right now we're
+        # over-subscribed (have more resources than we need) so we're restarting 50% of the front-ends.
+        thread_count = 2
+        threaded_each CDO.app_servers.keys, thread_count do |name|
+          upgrade_frontend name, CDO.app_servers[name]
+        end
       end
     end
   end
@@ -330,8 +341,10 @@ task :dashboard_unit_tests => [COVERAGE_SYMLINK] do
     with_hipchat_logging(name) do
       # Unit tests mess with the database so stop the service before running them
       RakeUtils.stop_service CDO.dashboard_unicorn_name
+      RakeUtils.rake 'db:schema:load'
       RakeUtils.rake 'test', 'COVERAGE=1'
       log_coverage_results(name)
+      RakeUtils.rake "seed:all"
       RakeUtils.start_service CDO.dashboard_unicorn_name
     end
   end

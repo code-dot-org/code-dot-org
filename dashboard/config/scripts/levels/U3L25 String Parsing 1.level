@@ -35,7 +35,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -81,9 +80,6 @@
     "beginner_mode": "false",
     "instructions": "Given the string \"Wisdom begins with wonder.\" what is the index of the following characters W, t, w, ., d, and k? Confirm your expectation using the string.indexOf() function.",
     "markdown_instructions": "## Challenge 1\r\n\r\nGiven the string <samp>\"Wisdom begins with wonder.\"</samp> what is the index of the following characters <samp>W</samp>, <samp>t</samp>, <samp>w</samp>, <samp>.</samp>, <samp>d</samp>, and <samp>k</samp>? Confirm your expectation using the <samp>string.indexOf()</samp> function.",
-    "encrypted_examples": [
-
-    ],
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",
