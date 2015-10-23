@@ -46,7 +46,6 @@
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "console.log": null,
       "functionParams_none": null,
@@ -78,9 +77,6 @@
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
-    "encrypted_examples": [
-
-    ],
     "markdown_instructions": "# Debugging Variables: Part 4\r\n\r\n`console.log()` is not just useful at the end of programs. It is really helpful when we want to check the value of variables part way through the running of a program. Since we can't see the value of the variable change on the screen we need to find another way to get that information.\r\n\r\n# Do This\r\n\r\n* **Starter Code:** We started you off with the same problem from the last level with `console.log()` statements at the beginning and end of the program to check the starting and ending values\r\n\r\n* **Add `console.log()` statements** to find out the value of a and b after the first reassignment statement `a = b;`",
     "never_autoplay_video": "false",
     "examples_required": "false",
