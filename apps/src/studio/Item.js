@@ -36,6 +36,7 @@ var Item = function (options) {
   this.startFadeTime = null;
   this.fadeTime = constants.ITEM_FADE_TIME;
 
+  /** @private {StudioAnimation} */
   this.animation_ = new StudioAnimation($.extend({}, options, {
     spriteSheet: new StudioSpriteSheet(options)
   }));
