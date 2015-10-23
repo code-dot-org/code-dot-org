@@ -276,6 +276,7 @@ $websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, A
           RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
           RakeUtils.bundle_exec 'berks', 'apply', rack_env
         end
+      end
       if rack_env?(:production)
         # Update the front-end instances, in parallel, but not all at once. When the infrastructure is
         # properly scaled we should be able to upgrade 20% of the front-ends at a time. Right now we're
