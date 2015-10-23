@@ -1,1 +1,1 @@
-Rake::Task[:test].enhance ['seed:test']
+Rake::Task[:test].enhance ['seed:all']
