@@ -97,6 +97,20 @@ var BLOCK_START_DISTANCE = 0;
 var BLOCK_START_FAST_DISTANCE = 50;
 
 /**
+ * A block is considered 'oversized' on a given dimension if it takes up more
+ * than this percentage of the viewport size.
+ * @type {number}
+ */
+var OVERSIZE_BLOCK_THRESHOLD = 0.85;
+
+/**
+ * Drag 'margin' around cursor to use instead of block bounds when the dragged
+ * block is oversized. Given in block space units.
+ * @type {number}
+ */
+var FALLBACK_DRAG_MARGIN = 15;
+
+/**
  * Enables debug drawing of various block drag scrolling operations
  * @type {boolean}
  */
@@ -143,9 +157,6 @@ Blockly.ScrollOnBlockDragHandler.prototype.panIfOverEdge = function (block,
     return;
   }
 
-  var viewportBox = this.blockSpace_.getViewportBox();
-  var blockBox = block.getBox();
-  var blockOverflows = Blockly.getBoxOverflow(viewportBox, blockBox);
   var mouseSvg = Blockly.mouseCoordinatesToSvg(
     mouseClientX, mouseClientY, this.blockSpace_.blockSpaceEditor.svg_);
   var mouseViewport = Blockly.svgCoordinatesToViewport(
@@ -153,6 +164,31 @@ Blockly.ScrollOnBlockDragHandler.prototype.panIfOverEdge = function (block,
   var mouseBlockSpace = Blockly.viewportCoordinateToBlockSpace(
     mouseViewport, this.blockSpace_);
 
+  var viewportBox = this.blockSpace_.getViewportBox();
+  var blockBox = block.getBox();
+
+  // When dragged block is almost as tall as the viewport, use a small bounding
+  // region around the cursor instead of the whole block bounding box to trigger
+  // autoscrolling.
+  var blockHeight = Blockly.getBoxHeight(blockBox);
+  var viewportHeight = Blockly.getBoxHeight(viewportBox);
+  if (blockHeight > viewportHeight * OVERSIZE_BLOCK_THRESHOLD) {
+    // Center box around cursor with fallback radius
+    blockBox.top = Math.max(blockBox.top, mouseBlockSpace.y - FALLBACK_DRAG_MARGIN);
+    blockBox.bottom = Math.min(blockBox.bottom, mouseBlockSpace.y + FALLBACK_DRAG_MARGIN);
+  }
+
+  // Same rule, but horizontal
+  var blockWidth = Blockly.getBoxWidth(blockBox);
+  var viewportWidth = Blockly.getBoxWidth(viewportBox);
+  if (blockWidth > viewportWidth * OVERSIZE_BLOCK_THRESHOLD) {
+    // Center box around cursor with fallback radius
+    blockBox.left = Math.max(blockBox.left, mouseBlockSpace.x - FALLBACK_DRAG_MARGIN);
+    blockBox.right = Math.min(blockBox.right, mouseBlockSpace.x + FALLBACK_DRAG_MARGIN);
+  }
+
+  // Calculate how far out-of-bounds the dragged block/cursor is.
+  var blockOverflows = Blockly.getBoxOverflow(viewportBox, blockBox);
   var mouseOverflows = Blockly.getPointBoxOverflow(viewportBox,
     new goog.math.Coordinate(mouseBlockSpace.x, mouseBlockSpace.y));
 

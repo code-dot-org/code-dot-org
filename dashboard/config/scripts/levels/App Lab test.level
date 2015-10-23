@@ -55,7 +55,7 @@
     "definition_collapse": "false",
     "free_play": "true",
     "app_width": "320",
-    "app_height": "450",
+    "app_height": "480",
     "disable_examples": "false",
     "start_blocks": "var x = 10;\r\nx = x + 10;",
     "show_turtle_before_run": "true",
@@ -66,7 +66,13 @@
     "beginner_mode": "false",
     "markdown_instructions": "<a href=\"https://docs.google.com/document/d/1HgSfQeUI1zxo-3bL-9jhff0jI2um2A-3vwpvy3JAD38\" target=\"_blank\">Innovation Project</a>",
     "examples_required": "false",
-    "instructions": "test"
+    "instructions": "test",
+    "encrypted_examples": [
+
+    ],
+    "never_autoplay_video": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true"
   }
 }]]></config>
   <blocks/>

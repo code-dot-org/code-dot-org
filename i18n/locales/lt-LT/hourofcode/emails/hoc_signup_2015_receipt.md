@@ -18,19 +18,19 @@ Papasakokite savo draugams apie Programavimo valand1 #HourofCode.
 
 ## 2. Pasiūlykite visai mokyklai surengti Programavimo valandą
 
-[Išsiųskite šį el. laišką](http://<%= hostname %>/resources#email) jūsų mokyklos direktoriui.
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## 3. Pasiūlykite įsitraukti savo darbdaviui
 
-[Išsiųskite šį el. laišką](http://<%= hostname %>/resources#email)jūsų vadovui arba įmonės direktoriui.
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## 4. Paskatinkite prisijungti jūsų bendruomenę prie Programavimo valandos
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://<%= hostname %>/resources#email).
 
 ## 5. Ask a local elected official to support the Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 

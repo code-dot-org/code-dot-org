@@ -688,6 +688,7 @@
         infinity_playlab_intro: Play Lab - Wprowadzenie
         infinity_playlab_events: Play Lab - Zdarzenia
         infinity_playlab_repeat_forever: Play Lab - Powtarzaj w nieskończoność
+        csp_applab_functions: Wprowadzenie do Funkcji
         csp_concept_rgb: Trochę o pikselach
         csp_pixelation_color_1: Pokoloruj pikselowy gadżet - część 1
         csp_pixelation_color_2: Pokoloruj pikselowy gadżet - część 2
@@ -722,6 +723,9 @@
           w Wielkiej Grze (Big Game)
         alg_17_sambat_compound_booleans: Informatyka w Algebrze - złożone wartości
           logiczne
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

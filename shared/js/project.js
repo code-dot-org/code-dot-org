@@ -1,4 +1,4 @@
-/* global dashboard, appOptions, $, trackEvent */
+/* global dashboard, appOptions, trackEvent */
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -115,7 +115,12 @@ var projects = module.exports = {
       if (err) {
         throw err;
       }
-      $('.admin-abuse-score').text(0);
+      assets.patchAll(id, 'abuse_score=0', null, function (err, result) {
+        if (err) {
+          throw err;
+        }
+        $('.admin-abuse-score').text(0);
+      });
     });
   },
 
@@ -158,7 +163,12 @@ var projects = module.exports = {
     // When owners edit a project, we don't want to hide it entirely. Instead,
     // we'll load the project and show them a small alert
     var pageAction = parsePath().action;
-    if (this.isOwner() && (pageAction === 'edit' || pageAction === 'view')) {
+
+    // NOTE: appOptions.isAdmin is not a security setting as it can be manipulated
+    // by the user. In this case that's okay, since all that does is allow them to
+    // view a project that was marked as abusive.
+    if ((this.isOwner() || appOptions.isAdmin) &&
+        (pageAction === 'edit' || pageAction === 'view')) {
       return false;
     }
 
@@ -199,7 +209,7 @@ var projects = module.exports = {
   },
 
   /**
-   * Updates the contents of the admin box for admins. We have no knolwedge
+   * Updates the contents of the admin box for admins. We have no knowledge
    * here whether we're an admin, and depend on dashboard getting this right.
    */
   showAdmin: function() {
@@ -314,6 +324,13 @@ var projects = module.exports = {
     return '/projects/' + projects.getCurrentApp();
   },
   /**
+   * Explicitly clear the HTML, circumventing safety measures which prevent it from
+   * being accidentally deleted.
+   */
+  clearHtml: function() {
+    current.levelHtml = '';
+  },
+  /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
    * @param {object?} sourceAndHtml Optional source to be provided, saving us another
@@ -322,6 +339,12 @@ var projects = module.exports = {
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
   save: function(sourceAndHtml, callback, forceNewVersion) {
+
+    // Can't save a project if we're not the owner.
+    if (current && current.isOwner === false) {
+      return;
+    }
+
     if (typeof arguments[0] === 'function' || !sourceAndHtml) {
       // If no source is provided, shift the arguments and ask for the source
       // ourselves.
@@ -339,6 +362,8 @@ var projects = module.exports = {
 
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
+    // TODO(dave): Remove this check and remove clearHtml() once all projects
+    // have versioning: https://www.pivotaltracker.com/story/show/103347498
     if (current.levelHtml && !sourceAndHtml.html) {
       throw new Error('Attempting to blow away existing levelHtml');
     }
@@ -475,6 +500,11 @@ var projects = module.exports = {
       redirectToRemix();
     }
   },
+  createNew: function() {
+    projects.save(function () {
+      location.href = projects.appToProjectUrl() + '/new';
+    });
+  },
   delete: function(callback) {
     var channelId = current.id;
     if (channelId) {
@@ -489,10 +519,11 @@ var projects = module.exports = {
    * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
    */
   load: function () {
-    var deferred;
+    var deferred = new $.Deferred();
     if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
-        return;
+        deferred.resolve();
+        return deferred;
       }
       var pathInfo = parsePath();
 
@@ -504,7 +535,6 @@ var projects = module.exports = {
         }
 
         // Load the project ID, if one exists
-        deferred = new $.Deferred();
         channels.fetch(pathInfo.channelId, function (err, data) {
           if (err) {
             // Project not found, redirect to the new project experience.
@@ -521,13 +551,12 @@ var projects = module.exports = {
             });
           }
         });
-        return deferred;
       } else {
         isEditing = true;
+        deferred.resolve();
       }
     } else if (appOptions.isChannelBacked) {
       isEditing = true;
-      deferred = new $.Deferred();
       channels.fetch(appOptions.channel, function(err, data) {
         if (err) {
           deferred.reject();
@@ -540,8 +569,10 @@ var projects = module.exports = {
           });
         }
       });
-      return deferred;
+    } else {
+      deferred.resolve();
     }
+    return deferred;
   },
 
   getPathName: function (action) {
@@ -567,7 +598,7 @@ function fetchSource(data, callback) {
 
 function fetchAbuseScore(callback) {
   channels.fetch(current.id + '/abuse', function (err, data) {
-    currentAbuseScore = (data && data.abuseScore) || currentAbuseScore;
+    currentAbuseScore = (data && data.abuse_score) || currentAbuseScore;
     callback();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't

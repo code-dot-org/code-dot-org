@@ -1,14 +1,9 @@
 get '/v2/user' do
   only_for 'code.org'
   dont_cache
-  forbidden! unless dashboard_user
+  forbidden! unless dashboard_user_helper
   content_type :json
-  result = dashboard_user.slice_keys(:id, :name, :admin)
-  result[:owned_sections] = DASHBOARD_DB[:sections].
-      select(:id).
-      where(user_id: dashboard_user_id).
-      all
-  JSON.pretty_generate(result)
+  JSON.pretty_generate(dashboard_user_helper.select(:id, :name, :admin, :owned_sections))
 end
 
 get '/v2/students' do

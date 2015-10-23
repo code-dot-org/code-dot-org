@@ -18,19 +18,19 @@ Tell your friends about the #HourOfCode.
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Küldd el ezt az e-mailt](http://<%= hostname %>/resources#email) a te iskolád igazgatójának a pontos részletekkel.
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## 3. Kérd meg a munkáltatódat, hogy vegyetek részt
 
-[Küldd el ezt az e-mailt](http://<%= hostname %>/resources#email) a főnöködnek, vagy a vállalat igazgatójának a pontos részletekkel.
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## 4. Hirdesd a Kódolás Óráját a saját közösségedben
 
-Keress meg egy egyesületet - sport klubbot, templomi társaságot, munkatársaidat vagy tanulótársaidat. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
+Keress meg egy egyesületet - sport klubbot, templomi társaságot, munkatársaidat vagy tanulótársaidat. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://<%= hostname %>/resources#email).
 
 ## 5. Kérj meg egy helyi választott vezetőt, hogy támogassa a Kód Órája kezdeményezést
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 

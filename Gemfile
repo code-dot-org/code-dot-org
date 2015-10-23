@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.4'
@@ -8,10 +7,10 @@ gem 'rails', '~> 4.2.4'
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 2.0'
 
-gem 'sinatra', '1.4.4', require: 'sinatra/base'
+gem 'sinatra', require: 'sinatra/base'
 gem 'rack-contrib', '~> 1.1'
 
-gem 'mysql2', '0.3.13'
+gem 'mysql2', '~> 0.3.13'
 gem 'seamless_database_pool'
 
 gem 'le', '~> 2.2'
@@ -35,6 +34,9 @@ end
 group :development, :test do
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
+  gem 'konacha'  # Mocha + Chai JS testing in Rails
+  gem 'poltergeist'  # Headless JS tests.p
+
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -44,9 +46,10 @@ group :development, :test do
   # for unit testing
   gem 'factory_girl_rails'
   gem 'fakeweb'
-  gem 'simplecov', require: false
+  gem 'simplecov', '~> 0.9', require: false
   gem 'mocha', require: false
   gem "codeclimate-test-reporter", require: false
+  gem 'sqlite3'
   gem 'timecop'
 
   # for ui testing
@@ -57,7 +60,6 @@ group :development, :test do
   gem 'colorize'
   gem 'spring'
   gem 'spring-commands-testunit'
-  gem "test-unit", "~> 3.0"
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
   gem 'eyes_selenium', '~> 2.5.0'
@@ -101,11 +103,11 @@ gem 'haml'
 
 gem 'jquery-ui-rails', '~> 5.0.3'
 
-gem 'nokogiri', '1.6.1'
+gem 'nokogiri', '~> 1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger', '~> 1.11.2',  group: [:staging, :production] # error monitoring
+gem 'honeybadger', '~> 1.11' # error monitoring
 
 gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
@@ -114,6 +116,7 @@ gem 'redcarpet', '~> 3.2.3'
 gem 'geocoder'
 
 gem 'rmagick'
+gem 'mini_magick'
 
 gem 'acts_as_list'
 
@@ -152,7 +155,7 @@ gem 'react-rails', '~> 1.0'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
 gem 'aws-sdk', '~> 2'
 
-gem 'rubocop', '~> 0.29.1', require: false, group: [:development, :staging]
+gem 'rubocop', '0.34.2', require: false, group: [:development, :staging]
 gem 'haml_lint', require: false, group: [:development, :staging]
 
 # Reduce volume of production logs
@@ -169,3 +172,4 @@ gem 'viddl-rb', group: [:development, :staging, :levelbuilder]
 gem 'net-ssh'
 gem 'net-scp'
 gem 'httparty'
+gem 'jquery-cookie-rails'

@@ -22,7 +22,7 @@ In partnership with [Outlier](http://outlier.uchicago.edu), 11 district leaders 
 	- District leaders see a need to engage the broader local community in this effort, including guidance counselors, higher education institutions and industry.
 	- Current district leaders do not have actionable plans to sustain their computer science efforts, even though they intend to do so.
 
-[Full findings are available on Outlier's website.](http://outlier.uchicago.edu/evaluation_codeorg/district-leader-findings/)
+[Full findings are available on Outlier's website.](http://outlier.uchicago.edu/evaluation_codeorg/district-leaders-interviews/)
 
 ### Implications
 
@@ -40,7 +40,7 @@ In an effort to create school-wide buy-in and support for our district partnersh
 - Respondents reported that the professional development “somewhat” influenced their values and beliefs about computer science and computer science education for students. The counselors reported a statistically significantly higher influence than the administrators.
 - Nearly a third of all respondents felt that the school did not have the resources (materials, CS content, and instructional strategy support) necessary to teach computer science, specifically the [Exploring Computer Science](http://exploringcs.org) curriculum on which they received training.
 
-[Full findings are available on Outlier's website.](http://outlier.uchicago.edu/evaluation_codeorg/admin-counselor-findings/)
+[Full findings are available on Outlier's website.](http://outlier.uchicago.edu/evaluation_codeorg/highschool-admin-counselor-questionnaires/)
 
 ### Implications 
 

@@ -4,7 +4,7 @@ title: Politika zasebnosti
 
 * * *
 
-### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Politika zasebnosti
 
@@ -29,7 +29,7 @@ Ta opomba o zasebnosti je osnovana na naši predanosti naslednjim osnovam zasebn
 
 ## Opomba o zasebnosti
 
-Predani smo ustvarjanju varnega okolja za učence vseh starosti na naši spletni strani, ki se nahaja na <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, drugih spletnih straneh, aplikacijskih programskih vmesnikih (naš “API”) in internetnih storitvah (krajše, naša "spletna stran"). Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. Kot neprofitna, 501(c)(3), organizacija uporabljamo podatke, ki jih dobimo samo toliko kot to zahteva naše poslanstvo nuditi odlično računalniško izobrazbo vsem učencem, ki si tega želijo. Ustanovili smo se kot neprofitna organizacija, da motiv dobička ne bi nasprotoval našemu poslanstvu nuditi zaupanja vreden učni pripomoček.
+We are committed to creating a safe and secure environment for learners of all ages on our websites located at <https://code.org>, <https://studio.code.org>, <https://csedweek.org>, <http://computinginthecore.org>, <https://hourofcode.com>, other websites, application programming interface (our “API”), and online services (collectively, our “Website”). Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. Kot neprofitna, 501(c)(3), organizacija uporabljamo podatke, ki jih dobimo samo toliko kot to zahteva naše poslanstvo nuditi odlično računalniško izobrazbo vsem učencem, ki si tega želijo. Ustanovili smo se kot neprofitna organizacija, da motiv dobička ne bi nasprotoval našemu poslanstvu nuditi zaupanja vreden učni pripomoček.
 
 Our Privacy Notice describes what information we gather from our Users, how we use that information, and what we do to protect it. Vaše uporaba te spletne strani in vseh informacij, ki jih ponudite na spletni strani je predmet pogojev te opombe o zasebnosti, ki je del naših pogojev uporabe. Vsi preddoločeni izrazi, ki se uporabljajo v tej opombi o zasebnosti vendar niso podrobneje določeni tu, se določeni v naših [pogojih uporabe](http://code.org/tos). Z obiskom ali uporabo naše spletne strani se strinjate s prakso obdelave informacij opisanimi v tej opombi o zasebnosti.
 
@@ -94,7 +94,7 @@ V kolikor se odločite za registracijo za Code Studio preko Prijavne storitve (k
 
 V vsakem trenutku lahko odvzamete Code.org dostop do vašega računa na katerikoli Prijavni storitvi tako, da spremenite ustrezne nastavitve v Prijavni storitvi. Preverite vaše nastavitve zasebnosti na vsaki Prijavni storitvi posebej, da boste razumeli in spremenili informacije, ki nam jih pošiljate preko Prijavne storitve. Prosimo skrbno preverite pogoje uporabe vsake Prijavne storitve in njeno politko zasebnosti preden jih začnete uporabljati in se preko njih povežete z našo spletno stranjo.
 
-## Druge storitve
+## Other Services
 
 Ko uporabljate določene druge značilnosti naše spletne strani, kot je podpisovanje obrazcev ali peticij v podporo Code.org, sodelujete na vajah, vpeljujete programe Code.org v vašo šolo, darujete prispevke Code.org, kupujete majice ali druge izdelke, ali sodelujete v spletnih anketah, vas lahko Code.org povpraša po osebnih informacijah vključno z vašim polnim imenom, elektronskim naslovom, poštno številko ali naslovom šole, kot tudi z naslovom za račun oz. dostavo, ko je to potrebno za izpolnitev nakupa ali izvršitev donacije. Te informacije se uporabljajo, da vam omogočimo uporabo teh možnosti in da vam pošljemo občasno elektronsko pismo z informacijo o Code.org za katere menimo, da bi vas utegnile zanimati. Vsa elektronska sporočila, ki jih pošljemo, imajo vključeno možnost "odjave", ki vas takoj odjavi od vseh nadaljnih sporočil s strani Code.org.
 
@@ -126,17 +126,17 @@ Piksel oznaka (znana tudi kot "prosojni GIF" ali "spletni sledilnik") je majhna 
 
 Code.org lahko uporablja različne zunanje ponudnike storitev, kot so podjetja za analitko, ki nam pomaga razumeti uporabo naše spletne strani, in socialna omrežja, ki gostujejo naše video posnetke. Zunanjim ponudnikom storitev lahko dovolimo, da nastavijo in berejo njihove lastne piškotke, spletne sledilnike in podobno tehnologijo za zbiranje informacij preko spletne strani. Te tehnične informacije se zbirajo neposredno in avtomatično s strani zunanjih partnerjev.
 
-Code.org ne dopušča oglaševanja na naši spletni strani in nima možnosti zbiranja zgodovine vaših spletnih poizved preko drugih spletnih strani in iskalnikov. (V kolikor pridete na spletno stran Code.org preko spletnega iskalnika nam lahko vaš spletni brskalnik avtomatično pove, katere iskalne pojme ste uporabili, da ste našli Code.org). Toda nekateri zunanji partnerji, ki jih uporabljamo za zagotovitev delovanja naše spletne strani ali delitev po socialnih omrežjih, lahko zbirajo ne-osebne podatke za namen spletnega oglaševanja na podlagi obnašanja uporabnikov. Naša spletna stran se ne odziva na "ne sledi" signalom, ki jih pošilja spletni brskalnik, vendar vas spodbujamo da si ogledate sledeče povezave v kolikor bi se želeli izključiti iz spletnega oglaševanja na podlagi obnašanja uporabnikov: <http://www.networkadvertising.org/choices> or <http://www.aboutads.info/choices/>. V kolikor se želite izključiti iz teh orodij, se morate ločeno izključiti na vsaki napravi in spletnemu brskalniku, ki ga uporabljate.
+Code.org does not allow advertising on our Website, and we do not have the ability to collect your web search history across 3rd party Internet websites or search engines. (V kolikor pridete na spletno stran Code.org preko spletnega iskalnika nam lahko vaš spletni brskalnik avtomatično pove, katere iskalne pojme ste uporabili, da ste našli Code.org). Toda nekateri zunanji partnerji, ki jih uporabljamo za zagotovitev delovanja naše spletne strani ali delitev po socialnih omrežjih, lahko zbirajo ne-osebne podatke za namen spletnega oglaševanja na podlagi obnašanja uporabnikov. Our Website does not respond to “do not track” signals transmitted by web browsers, but we encourage you to visit the following links if you would like to opt out of online behavioral advertising: <http://www.networkadvertising.org/choices> or <http://www.aboutads.info/choices/>. V kolikor se želite izključiti iz teh orodij, se morate ločeno izključiti na vsaki napravi in spletnemu brskalniku, ki ga uporabljate.
 
 Nekatere zmožnosti povezane iz spletne strani Code.org so lahko izvedene s strani zunanjih partnerjev, ki zbirajo podatke. Na primer, donacije Code.org so procesirane s strani zunanjega partnerja, ki zbira in lahko shrani plačilne mehanizme. Podporna sporočila in objave na našem javnem forumu za učitelje so procesirane s strani zunanje spletne strani, ki omogoča uporabnikom ustvarjanje profilov, objavo sporočil in nalaganje slik. Druge zunanje spletne strani, kot so [Facebook stran](https://www.facebook.com/Code.org) in [Twitter stran](https://twitter.com/codeorg) Code.org so lahko označeni z našim imenom in logom. Uporaba teh zunanjih spletnih strani je v celoti opcijska in je tipično namenjena samo odraslim in regulirana s politiko zasebnosti zunanjih partnerjev. Spodbujamo vas, da pregledate politiko zasebnosti teh zunanjih partnerjev glede podrobnosti kako zbirajo, hranijo in uporabljajo vaše osebne informacije.
 
-## Uploading custom content
+## Uploading Custom Content
 
 Student and teacher profiles can NOT be customized with a photo.
 
 As part of “App Lab,” an in-browser programming tool available on Code Studio for students over the age of 13, students can upload custom photos, sound, and videos to the Code Studio platform to use within applications or “apps” that they create. These files are stored in the Code Studio platform, and are not used by Code.org for any purpose other than within the applications created by students.
 
-## Message sending between users
+## Message Sending Between Users
 
 Code.org has created a tool called the [“Internet Simulator”](/internetsimulator) for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Message contents are not accessed or used by Code.org for any purpose other than in this educational tool.
 
@@ -146,11 +146,11 @@ In addition, Users may send messages to Code.org for customer support requests.
 
 Other than the above, the Website supports no other form of messaging among Users.
 
-## Informacije, ki jih NE zbiramo
+## Information We Do NOT Collect
 
-Code.org ne zbira in ne hrani direktno plačilnih mehanizmov. Donacije Code.org ali plačila majic v spletni trgovini Code.org so procesirane s strani zunanjih partnerjev, in čeprav Code.org dobi potrdilo o plačilu (za potrebe obračuna davka), nikoli ne prejmemo podrobnosti o plačilnemu mehanizmu (npr. kreditne kartice ali podatkov e-denarnice).
+Code.org ne zbira in ne hrani direktno plačilnih mehanizmov. Donations to Code.org or purchases from the Code.org store are processed via third parties, and although Code.org receives a receipt for donations (for tax purposes), we never receive the payment instrument (such as credit card or wallet information).
 
-## Otroci mlajši od 13 let
+## Children Under the Age 13
 
 Učna platforma Code Studio je načrtovana tako, da jo lahko uporabljajo otroci vseh starosti, vključno z otroci mlajšimi od 13 let ob sodelovanju njihove šole, učiteljev, staršev ali skrbnikov. Certain features, especially features that involve uploading custom media files or sending messages, are disabled or inaccessible to accounts created by children under the age of 13, in order to provide greater protection to those Users.
 
@@ -170,7 +170,7 @@ Da lahko sodelujejo v ocenjevanju, morajo te šole priskrbeti šolske in demogra
 
 Zaposleni, predstavniki in pogodbeni sodelavci Code.org morajo imeti legitimen poslovni razlog (neposredno povezan z našim izobraževalnim poslanstvom) da lahko dostopajo osebne podatke, ki jih podate Code.org, na primer, da lahko pomagajo uporabnikom. Code.org zahteva od svojih zaposlenih, predstavnikov in pogodbenih sodelavcev, da upoštevajo to opombo o zasebnosti in da obravnavajo vse osebne podatke uporabnikov Code.org kot zaupno informacijo.
 
-## Kako delimo ali prenašamo podatke
+## How We Share or Transfer Data
 
 Mi ne oddajamo ali prodajamo osebnih podatkov, ki jih zbiramo od uporabnikov, ali jih kakorkoli drugače izkoriščamo za finančno korist. Code.org ne bo nikoli delil osebnih podatkov z drugimi zunanjimi partnerji brez vaše odobritve ali v primeru specifičnega programa kateremu se boste lahko prostovoljno pridružili.
 
@@ -196,7 +196,7 @@ Ko se obrnete na nas s prošnjo za pomoč, lahko podate osebne podatke, ki so de
 
 Code.org tedensko promovira učenca tedna in učitelja meseca, skupaj z nagradami. Ti izbori in podobne izpovedi so vedno objavljeni z odobritvijo sodelujočega učenca ali učitelja in, kjer potrebno, njihovega starša, skrbnika ali učitelja, in lahko vključeje osebne podatke kot so ime, prikaz ali slika ali video posnetek izbrane osebe.
 
-### Public Reporting on Student Use and Performance
+### Public reporting on student use and performance
 
 Lahko objavimo anonimizirane podatke o dosežkih učencev pri naših vajah in spletnih straneh, vendar pri tem ne bomo nikoli javno objavili vaših osebnih podatkov. Podatki o dosežkih učencev bodo ostali anonimizirani, toda združeni, anonimizirani podatki večje populacije učencev se lahko uporabijo v poročilih po demografskih kriterijih kot so starost, lokacija, spol, narodnost in premoženjski status.
 
@@ -216,11 +216,11 @@ Code.org may disclose User data including Personal Information that we believe, 
 
 V primeru, da je Code.org prevzet, združen ali priključen drugemu subjektu, lahko prenesemo ali dodelimo osebne podatke o uporabnikih kot del take združitve, prevzema, prodaje ali spremembe nadzora. Naša obljuba je, da bodo osebni podatki, ki smo jih zbrali od uporabnikov, varovani z enako mero varnosti in zasebnosti kot določeno s to opombo o zasebnosti.
 
-## Naš pristop k varovanju podatkov
+## Our Approach to Data Security
 
 ### Website security is important to you, and to us
 
-Da zaščitimo vašo zasebnost in varnost, delamo smiselne korake za preverjanje vaše identitete preden vam omogočimo dostop do vašega računa ali izvajanje popravkov vaših osebnih podatkov. Ker nekatere šole preprečujejo spletne strani zaščitene s SSL, Code.org omogoča dostop tako z ali brez SSL zaščite, kot zahtevajo te šole. V kolikor želite povezavo zaščiteno s SSL ali za šifriranje podatkov, ki jih vnašate, ko uporabljate spletno stran, uporabite protokol HTTPS na naslovu https://code.org/.
+Da zaščitimo vašo zasebnost in varnost, delamo smiselne korake za preverjanje vaše identitete preden vam omogočimo dostop do vašega računa ali izvajanje popravkov vaših osebnih podatkov. Because some schools block SSL-secure websites, Code.org allows access with or without SSL protection, at the direction of those schools. V kolikor želite povezavo zaščiteno s SSL ali za šifriranje podatkov, ki jih vnašate, ko uporabljate spletno stran, uporabite protokol HTTPS na naslovu https://code.org/.
 
 ### We try to ensure that our Website and information sent to us are safe, but no security measures are perfect
 
@@ -234,9 +234,9 @@ Naša spletna stran je strežena in upravljana na strežnikih lociranih v ZDA. V
 
 ### Conditions of Use and Notices
 
-V kolikor se odločite obiskati Code.org, potem je vaš obisk in kakršenkoli spor glede zasebnosti, predmet te opombe o zasebnosti in pogojev uporabe, vključno z omejitvami odgovornosti za škodo, arbitražo sporov, aplikacije zakonov države Washington in prostor za reševanje vseh sporov v mestu Seattle, Washington.
+If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 
-### A Note to California Residents:
+### A note to California residents:
 
 Osebnih podatkov ne razkrivamo zunanjim partnerjem za namene oglaševanja. Za dodatne informacije o naših praksah varovanja zasebnosti ali za pregled in zahtevke za izbris osebnih podatkov, ki ste jih delili z nami, nas prosim kontaktirajte na http://code.org/contact.
 
@@ -245,4 +245,4 @@ Osebnih podatkov ne razkrivamo zunanjim partnerjem za namene oglaševanja. Za do
 Prosimo, da kontaktirate Code.org z vprašanji ali komentarji o tej opombi o zasebnosti, o vaših osebnih podatkih ali o praksah razkritja zunanjih partnerjev ali o naših izbirah glede strinjanja, tako da nam pišete na <http://code.org/contact> or at 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.   
   
   
-[![image](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![image](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

@@ -36,7 +36,7 @@ This workshop will be in Montgomery County, Maryland.
 Quarter 3: Saturday, February 27, 2016<br/>
 This workshop will be in New York.
 
-Quarter 4: TBA<br/>
+Quarter 4: Saturday, April 9, 2016<br/>
 This workshop will be in Montgomery County, Maryland.
 
 8:30am - 3:30pm
@@ -46,8 +46,11 @@ Breakfast and lunch will be served.
 
 **October 17th Location**
 
-TBD
-
+General Assembly<br/>
+10 E 21st St<br/>
+Level 3<br/>
+Concourse room<br/>
+New York, NY 10010
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -66,7 +69,7 @@ More info coming soon!
 
 [**Back to the top**](#top)
 
-
+<a id="ecs"></a>
 ## Exploring Computer Science
 
 ### Phase 1: Online Introduction (~2 hours) ###
@@ -87,6 +90,10 @@ Quarter 2: Saturday, November 14, 2015
 Quarter 3: Saturday, February 6, 2016
 
 Quarter 4: Saturday, April 16, 2016
+
+8:30am - 3:30pm
+<br/>
+Breakfast and lunch will be served.
 
 **Location for October 3rd**<br/>
 <i><b>Group 1</i></b><br/>
@@ -150,7 +157,7 @@ Semester 2: Saturday, February 6, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**Location**
+**October 3rd Location**
 
 Executive Conference Center<br/>
 8th Floor<br/>
@@ -169,6 +176,46 @@ Snacks
 <br/>
 Water
 
+
+[**Back to the top**](#top)
+
+
+<a id="counselor-admin"></a>
+
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
+
+
+### Administrators
+
+**Save the date**
+
+Thursday, November 5th, 2015  <br/>
+8:00am - 10:00am
+
+**Location**
+
+Yotel <br/>
+Studio - Fourth Floor<br/>
+570 10th Ave<br/>
+New York, NY 10036<br/>
+
+
+### Counselors
+
+**Save the date**
+
+Thursday, November 5th, 2015 <br/>
+11:00am - 3:00pm
+
+**Location**
+
+Yotel <br/>
+Studio - Fourth Floor<br/>
+570 10th Ave<br/>
+New York, NY 10036<br/>
 
 [**Back to the top**](#top)
 

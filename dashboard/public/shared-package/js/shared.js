@@ -1,5 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/* global $, WebKitMutationObserver */
+/* global WebKitMutationObserver */
 
 /**
  * Workaround for Chrome 34 SVG bug #349701
@@ -94,7 +94,6 @@ function wrapExistingClipPaths() {
 /**
  * @file Helper API object that wraps asynchronous calls to our data APIs.
  */
-/* global $ */
 
 /**
  * Standard callback form for asynchronous operations, popularized by Node.
@@ -230,7 +229,7 @@ var base = {
   },
 
   /**
-   * Change the contents of an asset or source file.
+   * Replace the contents of an asset or source file.
    * @param {number} id - The collection identifier.
    * @param {String} value - The new file contents.
    * @param {String} filename - The name of the file to create or update.
@@ -249,8 +248,32 @@ var base = {
       var err = new Error('status: ' + status + '; error: ' + error);
       callback(err, false);
     });
+  },
+
+  /**
+   * Modify the contents of a collection
+   * @param {number} id - The collection identifier.
+   * @param {String} queryParams - Any query parameters
+   * @param {String} value - The request body
+   * @param {NodeStyleCallback} callback - Expected result is the new collection
+   *        object.
+   */
+  patchAll: function(id, queryParams, value, callback) {
+    $.ajax({
+      url: this.api_base_url + "/" + id + "/?" + queryParams,
+      type: "patch",
+      contentType: "application/json; charset=utf-8",
+      data: value
+    }).done(function(data, text) {
+      callback(null, data);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
+    });
   }
 };
+
+
 
 module.exports = {
   /**
@@ -267,7 +290,7 @@ module.exports = {
 
 },{}],3:[function(require,module,exports){
 // TODO (brent) - way too many globals
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
+/* global script_path, Dialog, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
@@ -297,11 +320,11 @@ window.apps = {
       cdoSounds: CDOSounds,
       position: {blockYCoordinateInterval: 25},
       onInitialize: function() {
-        dashboard.createCallouts(this.callouts);
+        dashboard.createCallouts(this.level.callouts || this.callouts);
         if (window.dashboard.isChrome34) {
           chrome34Fix.fixup();
         }
-        if (appOptions.level.projectTemplateLevelName) {
+        if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
           $('#clear-puzzle-header').hide();
           $('#versions-header').show();
         }
@@ -432,35 +455,9 @@ window.apps = {
 };
 
 },{"./chrome34Fix":1,"./loadApp":4,"./project":5,"./timing":7}],4:[function(require,module,exports){
-/* global dashboard, appOptions, $ */
+/* global dashboard, appOptions */
 
 var renderAbusive = require('./renderAbusive');
-
-// Attempts to lookup the name in the digest hash, or returns the name if not found.
-function tryDigest(name) {
-  return (window.digestManifest || {})[name] || name;
-}
-
-/**
- * Returns a function which returns a $.Deferred instance. When executed, the
- * function loads the given app script.
- * @param name The name of the module to load.
- * @param cacheBust{Boolean?} If true, append a random query string to bypass the
- *   cache.
- * @returns {Function}
- */
-function loadSource(name, cacheBust) {
-  return function () {
-    var deferred = new $.Deferred();
-    var param = cacheBust ? '?' + Math.random() : '';
-    document.body.appendChild($('<script>', {
-      src: appOptions.baseUrl + tryDigest('js/' + name + '.js') + param
-    }).on('load', function () {
-      deferred.resolve();
-    })[0]);
-    return deferred;
-  };
-}
 
 // Loads the given app stylesheet.
 function loadStyle(name) {
@@ -472,44 +469,20 @@ function loadStyle(name) {
 }
 
 module.exports = function (callback) {
-  loadStyle('common');
-  loadStyle(appOptions.app);
-  var promise = loadSource('manifest', true)();
-  if (appOptions.droplet) {
-    loadStyle('droplet/droplet.min');
-    loadStyle('tooltipster/tooltipster.min');
-    promise = promise.then(loadSource('jsinterpreter/acorn_interpreter'))
-        .then(loadSource('marked/marked'))
-        .then(loadSource('ace/ace'))
-        .then(loadSource('ace/mode-javascript'))
-        .then(loadSource('ace/ext-language_tools'))
-        .then(loadSource('droplet/droplet-full'))
-        .then(loadSource('tooltipster/jquery.tooltipster'));
-  } else {
-    promise = promise.then(loadSource('blockly'))
-        .then(loadSource('marked/marked'))
-        .then(loadSource(appOptions.locale + '/blockly_locale'));
-  }
-
   if (window.dashboard && dashboard.project) {
-    promise = promise.then(dashboard.project.load)
-        .then(function () {
-          if (dashboard.project.hideBecauseAbusive()) {
-            renderAbusive();
-            return $.Deferred().reject();
-          }
-        });
+    dashboard.project.load().then(function () {
+      if (dashboard.project.hideBecauseAbusive()) {
+        renderAbusive();
+        return $.Deferred().reject();
+      }
+    }).then(callback);
+  } else {
+    callback();
   }
-
-  promise.then(loadSource('common' + appOptions.pretty))
-      .then(loadSource(appOptions.locale + '/common_locale'))
-      .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
-      .then(loadSource(appOptions.app + appOptions.pretty))
-      .then(callback);
 };
 
 },{"./renderAbusive":6}],5:[function(require,module,exports){
-/* global dashboard, appOptions, $, trackEvent */
+/* global dashboard, appOptions, trackEvent */
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -626,7 +599,12 @@ var projects = module.exports = {
       if (err) {
         throw err;
       }
-      $('.admin-abuse-score').text(0);
+      assets.patchAll(id, 'abuse_score=0', null, function (err, result) {
+        if (err) {
+          throw err;
+        }
+        $('.admin-abuse-score').text(0);
+      });
     });
   },
 
@@ -669,7 +647,12 @@ var projects = module.exports = {
     // When owners edit a project, we don't want to hide it entirely. Instead,
     // we'll load the project and show them a small alert
     var pageAction = parsePath().action;
-    if (this.isOwner() && (pageAction === 'edit' || pageAction === 'view')) {
+
+    // NOTE: appOptions.isAdmin is not a security setting as it can be manipulated
+    // by the user. In this case that's okay, since all that does is allow them to
+    // view a project that was marked as abusive.
+    if ((this.isOwner() || appOptions.isAdmin) &&
+        (pageAction === 'edit' || pageAction === 'view')) {
       return false;
     }
 
@@ -710,7 +693,7 @@ var projects = module.exports = {
   },
 
   /**
-   * Updates the contents of the admin box for admins. We have no knolwedge
+   * Updates the contents of the admin box for admins. We have no knowledge
    * here whether we're an admin, and depend on dashboard getting this right.
    */
   showAdmin: function() {
@@ -825,6 +808,13 @@ var projects = module.exports = {
     return '/projects/' + projects.getCurrentApp();
   },
   /**
+   * Explicitly clear the HTML, circumventing safety measures which prevent it from
+   * being accidentally deleted.
+   */
+  clearHtml: function() {
+    current.levelHtml = '';
+  },
+  /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
    * @param {object?} sourceAndHtml Optional source to be provided, saving us another
@@ -833,6 +823,12 @@ var projects = module.exports = {
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
   save: function(sourceAndHtml, callback, forceNewVersion) {
+
+    // Can't save a project if we're not the owner.
+    if (current && current.isOwner === false) {
+      return;
+    }
+
     if (typeof arguments[0] === 'function' || !sourceAndHtml) {
       // If no source is provided, shift the arguments and ask for the source
       // ourselves.
@@ -850,6 +846,8 @@ var projects = module.exports = {
 
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
+    // TODO(dave): Remove this check and remove clearHtml() once all projects
+    // have versioning: https://www.pivotaltracker.com/story/show/103347498
     if (current.levelHtml && !sourceAndHtml.html) {
       throw new Error('Attempting to blow away existing levelHtml');
     }
@@ -986,6 +984,11 @@ var projects = module.exports = {
       redirectToRemix();
     }
   },
+  createNew: function() {
+    projects.save(function () {
+      location.href = projects.appToProjectUrl() + '/new';
+    });
+  },
   delete: function(callback) {
     var channelId = current.id;
     if (channelId) {
@@ -1000,10 +1003,11 @@ var projects = module.exports = {
    * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
    */
   load: function () {
-    var deferred;
+    var deferred = new $.Deferred();
     if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
-        return;
+        deferred.resolve();
+        return deferred;
       }
       var pathInfo = parsePath();
 
@@ -1015,7 +1019,6 @@ var projects = module.exports = {
         }
 
         // Load the project ID, if one exists
-        deferred = new $.Deferred();
         channels.fetch(pathInfo.channelId, function (err, data) {
           if (err) {
             // Project not found, redirect to the new project experience.
@@ -1032,13 +1035,12 @@ var projects = module.exports = {
             });
           }
         });
-        return deferred;
       } else {
         isEditing = true;
+        deferred.resolve();
       }
     } else if (appOptions.isChannelBacked) {
       isEditing = true;
-      deferred = new $.Deferred();
       channels.fetch(appOptions.channel, function(err, data) {
         if (err) {
           deferred.reject();
@@ -1051,8 +1053,10 @@ var projects = module.exports = {
           });
         }
       });
-      return deferred;
+    } else {
+      deferred.resolve();
     }
+    return deferred;
   },
 
   getPathName: function (action) {
@@ -1078,7 +1082,7 @@ function fetchSource(data, callback) {
 
 function fetchAbuseScore(callback) {
   channels.fetch(current.id + '/abuse', function (err, data) {
-    currentAbuseScore = (data && data.abuseScore) || currentAbuseScore;
+    currentAbuseScore = (data && data.abuse_score) || currentAbuseScore;
     callback();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't

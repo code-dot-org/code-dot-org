@@ -1,4 +1,3 @@
-/* global $ */
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 

@@ -127,9 +127,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "Write a function called drawRectangle().\r\n(Click to see full instructions)",
     "markdown_instructions": "This is your code from the previous level.  Did you know that you can write functions that call your own functions?\r\n\r\nTake the code that draws the rectangle and move into a new function called `drawRectangle()`. The first line of your program should be a single call to `drawRectangle()`. The rest of the code should just be function definitions. \r\n\r\nNOTE: your program will still do the same thing.  We are just changing the way it is written to demonstrate that you can use functions you've already written as building blocks in new functions.\r\n\r\n![](https://images.code.org/2b8d21f4a31100136762274fdf517e1c-image-1441297846326.gif)",
@@ -155,7 +152,14 @@
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
-    "beginner_mode": "false"
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "encrypted_examples": [
+
+    ],
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

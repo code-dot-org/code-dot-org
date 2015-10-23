@@ -1,10 +1,10 @@
 * * *
 
-標題： 隱私權原則
+title: 隱私權原則
 
 * * *
 
-### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # 隱私政策
 
@@ -29,7 +29,7 @@ Code.org® 是一個非盈利性組織，並致力於在更多校園中提高婦
 
 ## 隱私權聲明
 
-我們是致力於為我們位於 [HTTP://code.org](http://code.org)、 [HTTP://csedweek.org](http://csedweek.org)、 [HTTP://computinginthecore.org](http://computinginthecore.org)、 [HTTP://hourofcode.com](http://hourofcode.com)、 其他網站、 應用程式開發介面 （我們"API"） 和線上服務 （統稱，我們"網站"） 的 web 網站各個年齡層次的學習者創造一個安全和有保障的環境。 Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. 作為非盈利，501(c)(3) 組織，我們使用我們接收只要它可以説明我們為每個學生都想要它提供很強的電腦科學教育的使命的資料。 我們建立自己作為一個非盈利組織這樣一個以營利為目的的動機不會干擾我們的使命提供可信的教育資源。
+We are committed to creating a safe and secure environment for learners of all ages on our websites located at <https://code.org>, <https://studio.code.org>, <https://csedweek.org>, <http://computinginthecore.org>, <https://hourofcode.com>, other websites, application programming interface (our “API”), and online services (collectively, our “Website”). Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. 作為非盈利，501(c)(3) 組織，我們使用我們接收只要它可以説明我們為每個學生都想要它提供很強的電腦科學教育的使命的資料。 我們建立自己作為一個非盈利組織這樣一個以營利為目的的動機不會干擾我們的使命提供可信的教育資源。
 
 Our Privacy Notice describes what information we gather from our Users, how we use that information, and what we do to protect it. 您的網站和您在網站提供的任何資訊的使用是本隱私權聲明，納入和接受我們的服務條款 》 中的條款。 任何加引號的術語使用，但不是在本隱私權聲明中定義具有我們的 [服務條款](http://code.org/tos) 中賦予它們的含義。 通過訪問或使用我們的網站，您明確同意的資訊處理本隱私權聲明中所述的做法。
 
@@ -87,7 +87,7 @@ Districts that use [Clever](https://clever.com/) as an Authentication Service ca
 
 你可能撤銷 Code.org 的訪問到您的帳戶上的任何身份驗證服務在任何時候通過更新各自的身份驗證服務帳戶首選參數中的適當設置。 您應該檢查你的每個身份驗證服務來理解和更改通過每個身份驗證服務發送給我們的資訊隱私設置。 請查看每個身份驗證服務使用和隱私的政策，在使用其服務和連接到我們的網站前仔細的職權範圍。
 
-## 其它服務
+## Other Services
 
 當您使用我們的網站的某些其他功能時，如簽名形式或請願活動，來説明主張為 Code.org，參加講習班，帶到你的學校或者區，捐給 Code.org，Code.org 程式購買 t 恤或其他物品，或參加線上調查顯示，Code.org 可能會要求您提供個人資訊，包括您的全名、 電子郵件地址和郵遞區號或學校街道位址，只要您的付費和/或發貨資訊時所需完成一次購買或捐款。 以便您參與相關的特徵，並給你偶爾發郵件與有關 Code.org 我們認為您可能感興趣的資訊，將使用的資訊。 我們發送的所有電子郵件包括"取消訂閱"連結，將立即退訂你從 Code.org 的所有未來電子郵件。
 
@@ -119,17 +119,17 @@ Districts that use [Clever](https://clever.com/) as an Authentication Service ca
 
 Code.org 可以使用各種各樣的協力廠商服務提供者，如資料分析公司，以瞭解我們的網站的使用方式，以及社交網路平臺承載我們的視頻。 我們可能會允許協力廠商服務提供者地閱讀自己的餅乾，web 信標和類似的技術，通過該網站收集資訊。 此技術的資訊是直接和自動徵收這些協力廠商。
 
-Code.org 不允許在我們網站上的廣告，我們沒有跨協力廠商互聯網網站收集網路搜索歷史記錄或搜尋引擎的能力。 （如果您導航到 Code.org 網站通過網路搜索，您的 web 瀏覽器可能自動向我們提供的 web 搜索術語你尋找 Code.org)。 然而，我們使用來提供網站的功能或社交分享某些協力廠商實體可能會收取非個人資訊，線上行為廣告的目的。 我們的網站不回應"不跟蹤"信號傳輸通過 web 瀏覽器，但我們鼓勵您訪問下面的連結，如果你想要退出線上行為廣告： [HTTP://www.networkadvertising.org/choices](http://www.networkadvertising.org/choices) 或 [HTTP://www.aboutads.info/choices/](http://www.aboutads.info/choices/)。 如果你想要退出使用這些工具，您可能需要退出單獨為每個您的設備和為每個設備上的每個 Web 瀏覽器。
+Code.org does not allow advertising on our Website, and we do not have the ability to collect your web search history across 3rd party Internet websites or search engines. （如果您導航到 Code.org 網站通過網路搜索，您的 web 瀏覽器可能自動向我們提供的 web 搜索術語你尋找 Code.org)。 然而，我們使用來提供網站的功能或社交分享某些協力廠商實體可能會收取非個人資訊，線上行為廣告的目的。 Our Website does not respond to “do not track” signals transmitted by web browsers, but we encourage you to visit the following links if you would like to opt out of online behavioral advertising: <http://www.networkadvertising.org/choices> or <http://www.aboutads.info/choices/>. 如果你想要退出使用這些工具，您可能需要退出單獨為每個您的設備和為每個設備上的每個 Web 瀏覽器。
 
 連結從 Code.org 網站的某些功能可能執行由協力廠商收集資料。 例如，Code.org 捐款進行處理通過協力廠商收集和可能存儲的支付工具。 支援消息或向我們公共的論壇，為教師的職位由一個協力廠商網站，它可以允許使用者創建設定檔、 發佈消息，並上傳照片進行處理。 其他協力廠商網站，例如 Code.org [facebook](https://www.facebook.com/Code.org) 和 [Twitter 頁面](https://twitter.com/codeorg)，可能與我們的名稱或標誌的品牌共顯。 使用這些協力廠商服務是完全可選的使用者，通常只適用于成年人，並且由這些協力廠商的隱私權原則。 我們鼓勵你審查有關他們可能收集、 存儲和使用您的個人資訊的詳細資訊的協力廠商的隱私權原則。
 
-## Uploading custom content
+## Uploading Custom Content
 
 Student and teacher profiles can NOT be customized with a photo.
 
 As part of “App Lab,” an in-browser programming tool available on Code Studio for students over the age of 13, students can upload custom photos, sound, and videos to the Code Studio platform to use within applications or “apps” that they create. These files are stored in the Code Studio platform, and are not used by Code.org for any purpose other than within the applications created by students.
 
-## Message sending between users
+## Message Sending Between Users
 
 Code.org has created a tool called the [“Internet Simulator”](/internetsimulator) for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Message contents are not accessed or used by Code.org for any purpose other than in this educational tool.
 
@@ -139,11 +139,11 @@ In addition, Users may send messages to Code.org for customer support requests.
 
 Other than the above, the Website supports no other form of messaging among Users.
 
-## 我們不會收集的資訊
+## Information We Do NOT Collect
 
-Code.org 並不是直接收集或存儲支付工具。 雖然 Code.org 接收 （為稅務目的） 的捐贈收據，我們從來沒有收到支付工具 （如信用卡或錢包資訊） 和 Code.org 存儲到 Code.org 或購買的 t 恤捐贈處理通過協力廠商。
+Code.org 並不是直接收集或存儲支付工具。 Donations to Code.org or purchases from the Code.org store are processed via third parties, and although Code.org receives a receipt for donations (for tax purposes), we never receive the payment instrument (such as credit card or wallet information).
 
-## 13 歲以下兒童
+## Children Under the Age 13
 
 代碼工作室學習平臺是用於由使用者的青睞，包括參與他們的學校、 老師、 父母或法定監護人的 13 歲的兒童而設計的。 Certain features, especially features that involve uploading custom media files or sending messages, are disabled or inaccessible to accounts created by children under the age of 13, in order to provide greater protection to those Users.
 
@@ -163,7 +163,7 @@ Code.org 並不是直接收集或存儲支付工具。 雖然 Code.org 接收 �
 
 Code.org 的雇員、 代理人和承包商必須有合法的商業理由 （直接向促進我們注重教育的使命相關），訪問個人資訊，例如您提供給 Code.org，協助產品支援。 Code.org 將要求我們的員工、 代理商和承包商遵守本隱私權聲明，並將任何個人資訊的 Code.org 使用者視為機密資訊。
 
-## 我們是如何共用或傳輸資料
+## How We Share or Transfer Data
 
 我們不做出租或出售我們從使用者收集的個人資訊或利用以任何其他方式獲得金錢。 Code.org 將永遠不會與其他協力廠商組織未經您的同意分享個人資訊或除作為特定程式或功能，你會選擇，選擇的能力的一部分。
 
@@ -189,7 +189,7 @@ Code.org 的雇員、 代理人和承包商必須有合法的商業理由 （直
 
 Code.org 促進每週的周師生每月月底，隨著獎品。 這些設定檔和類似的感言總是刊載與參賽的學生或老師的許可和，如果適用的話，他們的父母或法定監護人或老師，和可能包含個人資訊，如姓名、 肖像和照片或視頻被分析的人。
 
-### Public Reporting on Student Use and Performance
+### Public reporting on student use and performance
 
 我們可能會發佈有關學生的表現，在我們的教程和網站上的匿名的資訊，然而，我們將永遠不會公開披露您的個人資訊，這些報告中。 關於學生成績資料將保持匿名，但聚合、 匿名的資料，在人口眾多的學生可能會報告由人口的標準，例如年齡、 一般位置、 性別、 種族和社會經濟地位。
 
@@ -209,11 +209,11 @@ Code.org may disclose User data including Personal Information that we believe, 
 
 事件中 Code.org 後天的組合或合併與另一個實體，我們可以轉讓或分配我們有作為一部分的此類並購、 收購、 出售或其他變化控制從使用者那裡收集的個人資訊。 我們對您的承諾是我們從使用者處收集任何個人資訊的安全和隱私，本隱私權聲明所提供的同一水準下將會得到保證。
 
-## 我們對資料安全的方法
+## Our Approach to Data Security
 
 ### Website security is important to you, and to us
 
-為了保護您的隱私和安全，我們採取合理的步驟在授予您帳戶或修改您的個人資訊之前驗證您的身份。 因為有些學校阻止 SSL 保護的網站，Code.org 允許訪問與或者不帶 SSL 保護在這些學校的方向。 如果你想 SSL 加密的連接中的，或對資料進行加密同時使用本網站，那你輸入使用 HTTPS 協定訪問 HTTPs://code.org/。
+為了保護您的隱私和安全，我們採取合理的步驟在授予您帳戶或修改您的個人資訊之前驗證您的身份。 Because some schools block SSL-secure websites, Code.org allows access with or without SSL protection, at the direction of those schools. 如果你想 SSL 加密的連接中的，或對資料進行加密同時使用本網站，那你輸入使用 HTTPS 協定訪問 HTTPs://code.org/。
 
 ### We try to ensure that our Website and information sent to us are safe, but no security measures are perfect
 
@@ -227,9 +227,9 @@ Code.org 使用某些物理、 管理和技術保證措施，旨在保護您的�
 
 ### Conditions of Use and Notices
 
-如果您選擇訪問 Code.org，您的訪問和任何隱私的爭議是法律的受本隱私權聲明和我們的服務條款協定，包括損害賠償、 爭議仲裁、 華盛頓州和地點發生的一切爭議適用的限制在華盛頓州西雅圖市。
+If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 
-### A Note to California Residents:
+### A note to California residents:
 
 我們不會披露給協力廠商的任何個人資訊，用於市場行銷目的。 有關我們的隱私慣例，或審查和請求已刪除任何個人資訊與我們共用的其他資訊，請向 HTTP://code.org/contact 發送請求。
 
@@ -238,4 +238,4 @@ Code.org 使用某些物理、 管理和技術保證措施，旨在保護您的�
 請聯繫 Code.org 有任何疑問或意見本隱私權聲明，您的個人資訊，我們協力廠商披露做法或你同意選擇通過編寫我們在 [HTTP://code.org/contact](http://code.org/contact) 或 1301 第五大道，套房 1225，西雅圖，華盛頓州 98101。   
   
   
-[![圖片](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![圖片](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

@@ -18,19 +18,19 @@ Conte para seus amigos sobre a #HoraDoCodigo.
 
 ## 2. Peça para sua escola oferecer uma Hora do Código
 
-[Envie este e-mail](http://<%= hostname %>/resources#email) para seu diretor.
+[Envie este e-mail](https://<%= hostname %>/resources#email) para seu diretor.
 
 ## 3. Peça para seu empregador para participar
 
-[Envie este e-mail](http://<%= hostname %>/resources#email) para seu gerente ou CEO.
+[Envie este e-mail](https://<%= hostname %>/resources#email) para seu gerente ou CEO.
 
 ## 4. Promova a Hora do Código em sua comunidade
 
-Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de veteranos ou sindicato. Ou sedie uma "festa" da Hora do Código na sua vizinhança. [Envie este e-mail](http://<%= hostname %>/resources#email).
+Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de veteranos ou sindicato. Ou sedie uma "festa" da Hora do Código na sua vizinhança. [Envie este e-mail](https://<%= hostname %>/resources#email).
 
 ## 5. Peça que um representante político apoie a Hora do Código
 
-[Envie este e-mail](http://<%= hostname %>/resources#politicians) para seu prefeito, Câmara Municipal ou conselho escolar e convide-os para visitar sua escola.
+[Envie este e-mail](https://<%= hostname %>/resources#politicians) para seu prefeito, Câmara Municipal ou conselho escolar e convide-os para visitar sua escola.
 
 * * *
 

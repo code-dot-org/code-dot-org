@@ -370,6 +370,8 @@
       section: Section
       example: Exemple de Solution
       example_with_number: Exemple Solution %{solution_number}
+      submitted_on: Présenté le %{date}
+      unsubmit: Ne plus soumettre le travail
   user:
     email_confirm_needed: 'L''adresse email n''a pas été confirmée :'
     email_confirm_needed_required: 'Votre addresse email %{email} n''a pas été confirmée
@@ -437,9 +439,9 @@
       à CM2 (fin Maternelle à Ecole Primaire)
     use_as_teacher: Utiliser ce site en tant qu'enseignant
     heading_hoc2014: <h2>L'Heure du Code pour</h2><h1>tous les âges</h1>
-    heading_elementary: <h2>20 heures de cours pour</h2><h1>Débutants (tous âges)</h1>
+    heading_elementary: <h2>20 heures de cours pour</h2><h1>Débutants (tous les âges)</h1>
     heading_apps: <h2>Amusant pour</h2><h1>Tout le monde</h1>
-    heading_legacy: <h2>Notre cours accéléré pour</h2> <h1>Tous les âges</h1>
+    heading_legacy: <h2>Nos cours pour</h2><h1>Tous les âges</h1>
     your_gallery: Galerie
     no_primary_course: Essayer un cours sur Code Studio
     choose_next_course: Essayer un cours de Code Studio en le choisissant ci-dessous
@@ -483,6 +485,7 @@
     tos: Conditions
     privacy: Politique de confidentialité
     secure: Version sécurisée
+    report_abuse: Signaler un abus
   reference_area:
     title: Besoin d'aide ?
     subtitle: Voir ces vidéos et conseils
@@ -733,10 +736,36 @@
     view_all: Afficher mes projets
     remix: Remix
     click_to_remix: Cliquez sur «Remix» pour créer votre propre version!
-    edit_project: Edit Project
+    edit_project: Editer le Projet
     abuse:
-      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
-        of Service</a> and cannot be shared with others.
-      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
-        us.</a>
-      go_to_code_studio: Go to Code Studio
+      tos: Ce projet a été signalé comme ne respectant pas les <a href='http://code.org/tos'>conditions
+        d'utilisation</a> de Code.org, et ne peut donc pas être partagé avec d'autres.
+      contact_us: Si vous pensez qu'il s'agit d'une erreur, <a href='https://code.org/contact'>
+        contactez-nous.</a> s'il vous plaît
+      go_to_code_studio: Aller au Studio du Code
+      report_abuse_form:
+        intro: Si vous avez rencontré un contenu offensant, des menaces, de l'intimidation,
+          du harcèlement ou que vous possédez des droits d'auteur pour le contenu
+          créé à l'aide d'applications construites sur Code Studio, veuillez remplir
+          le formulaire ci-dessous. Nous étudierons votre rapport avec sérieux pour
+          prendre les mesures appropriées.
+        validation:
+          email: S'il vous plaît donnez une adresse e-mail
+          age: Merci de donner votre âge
+          abuse_type: S'il vous plaît, précisez comment ce contenu viole les conditions
+            du Service
+          abuse_detail: Veuillez donner des précisions au sujet du contenu que vous
+            signalez
+        abusive_url: URL du contenu signalé
+        abuse_type:
+          question: Pourquoi ce contenu ne viole pas la %{link_start}Terms de Service%{link_end}
+            ?
+          harassment: Menaces, intimidation, harcèlement
+          offensive: Contenu offensant
+          infringement: Violation du droit d'auteur
+          other: Autres
+        detail: Veuillez fournir autant de détails que possible au sujet du contenu
+          que vous signalez.
+        acknowledge: En soumettant ces informations, vous reconnaissez qu'il est traitée
+          selon les termes de la %{link_start_privacy}Privacy Policy%{link_end} and
+          the %{link_start_tos}Terms of Service%{link_end}

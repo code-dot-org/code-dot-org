@@ -13,7 +13,6 @@
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()

@@ -21,14 +21,25 @@ Category: UI Controls
 
 Displays the image from the provided URL on the screen.
 
-### How to find the URL of an image on the web
-To use an image in an app in App Lab the image must already exist somewhere on the web with a unique web address (or URL).  This gives you two options:
+To use an image in an app in App Lab you have two options:
 
-#### 1. Use an image that already exists on the web
-In most browsers you can simply **right-click (ctrl+click on a Mac)** on the image and there will be several options for you to copy the URL or even view it in a new window from which you can copy the URL.  So you might search for an image with Google image search, or Bing images.  Any image you find there, you can use this technique with.
+#### 1. Find the URL of an image on the web
+<img src="https://images.code.org/547f76e741252ca45201e8c70bf0075d-image-1444494509352.png" style="float:right; width: 200px">
 
-#### 2. Upload an image to a site that will give it an address
-You can upload images to websites or even image hosting services such as tumblr, imgur, or img42.  If you have a personal photo or image that you would like to use, upload it to one of those sites and get the URL from there.
+In most browsers you can simply **right-click (ctrl+click on a Mac)** on an image and you'll see a menu with a few option. One will be to copy the URL of the image.  You could also choose to view the image in its own window and just copy the URL from there.
+
+#### 2. Upload your own image to App Lab
+You can upload images from your computer to App Lab as well.  If you have saved an image to your computer and you know how to navigate to it on your file system uploading an image is easy.
+
+* Click the pulldown arrow in the image URL field and then click "Choose..."![](https://images.code.org/e726e56fd3e4c7cd4a0d58cba731a855-image-1444240440116.53.49%20PM.png)
+
+
+* Then click the "Upload File" button the in the window.
+![](https://images.code.org/4e33ebc4011b5eb6590f573ada3ed1da-image-1444241056243.04.04%20PM.png)
+
+* Then choose the file from your computer by navigating to it
+
+* Once its uploaded click "Choose" next to it.  This will insert the name of the file into the URL field.  Because you have uploaded it, it doesn't need to be an HTTP reference.
 
 
 [/short_description]
@@ -42,10 +53,11 @@ ____________________________________________________
 
 **Example 1**
 
-<pre>
+
+```
 // add the Code.org logo to the screen from the url
 image("logo", "http://code.org/images/logo.png");
-</pre>
+```
 
 [/example]
 
@@ -57,7 +69,8 @@ ____________________________________________________
 
 Click the button to change the character image on the screen from the dog to the bee and back again.
 
-<pre>
+
+```
 // use variables to store the ids for the image and button elements
 var imageId = "character";
 var buttonId = "changeButton";
@@ -91,7 +104,7 @@ onEvent(buttonId, "click", function(event) {
     setImageURL(imageId, dogImageURL);
   }
 });
-</pre>
+```
 
 [/example]
 
@@ -100,9 +113,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 image(id, url);
-</pre>
+```
 
 [/syntax]
 
@@ -128,13 +142,14 @@ Returns boolean value true.
 
 ### Tips
 - Image URL requires the full http:// prefix.
-<pre>
+
+```
 // image displayed on screen
 image("logo", "http://code.org/images/logo.png");
 
 // image not displayed on screen
 image("logo", "code.org/images/logo.png");
-</pre>
+```
 
 [/tips]
 

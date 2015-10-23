@@ -22,6 +22,22 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
+<% if @country == 'id' %>
+
+# Indonesia Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
+
+<% end %>
+
+<% if @country == 'jp' %>
+
+# Japan Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
+
+<% end %>
+
 <% if @country == 'uk' %>
 
 # United Kingdom Partners
@@ -30,37 +46,45 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-# Partnerët Kryesor dhe Korporatat Mbështetëse
+<% if @country == 'ca' %>
+
+# Canada Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
+
+<% end %>
+
+# Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# Partnerët Kryesorë Të Promovimit
+# Major Promotional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# Partnerët Ndërkombëtarë
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Partnerët e Tutorialeve
+# Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Partnerët e infrastrukturës dhe mjetet
+# Infrastructure partners and tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 * * *
 
-# Partnerët Plotësues
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

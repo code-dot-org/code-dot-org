@@ -1,4 +1,3 @@
-var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
@@ -21,7 +20,7 @@ var ScreenProperties = React.createClass({
       <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true} />
         <ColorPickerPropertyRow
@@ -46,7 +45,7 @@ var ScreenEvents = React.createClass({
   // other design element. This could be worked around by checking for
   // event.targetId === "<id>" here, at the expense of added complexity.
   getClickEventCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
       '  console.log("' + id + ' clicked!");\n' +
@@ -60,7 +59,7 @@ var ScreenEvents = React.createClass({
   },
 
   getKeyEventCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "keydown", function(event) {\n' +
       '  console.log("Key: " + event.key);\n' +
@@ -83,7 +82,7 @@ var ScreenEvents = React.createClass({
       <div id='eventRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
         <EventHeaderRow/>
@@ -123,10 +122,10 @@ module.exports = {
 
     return element;
   },
-  onDeserialize: function (element, onPropertyChange) {
+  onDeserialize: function (element, updateProperty) {
     var url = element.getAttribute('data-canonical-image-url');
     if (url) {
-      onPropertyChange(element, 'screen-image', url);
+      updateProperty(element, 'screen-image', url);
     }
     // Properly position existing screens, so that canvases appear correctly.
     element.style.position = 'absolute';

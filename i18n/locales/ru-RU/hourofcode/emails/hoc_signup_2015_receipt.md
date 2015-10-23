@@ -18,19 +18,19 @@ We'll be in touch about prizes, new tutorials and other exciting updates in the 
 
 ## 2. Попросите провести Час Программирования в Вашей школе
 
-[Отправьте это письмо](http://<%= hostname %>/resources#email) своему директору школы.
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## Обратитесь к вашему руководству с предложением принять участие в проекте Час Кодирования
 
-[Отправьте это письмо](http://<%= hostname %>/resources#email) руководителю Вашей организации.
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## 4. Расскажите у себя на районе о Часе Программирования
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://<%= hostname %>/resources#email).
 
 ## 5.Обратитесь к вашему местному должностному лицу c просьбой поддержать проект Час Кодирования
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 

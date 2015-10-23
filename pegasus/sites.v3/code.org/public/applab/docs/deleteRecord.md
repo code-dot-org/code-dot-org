@@ -36,7 +36,8 @@ ____________________________________________________
 
 **Create and then delete a record** In this example, a record is created in a table named 'fav_foods' when the 'Create Record' button is clicked. The record is deleted from the table when the 'Delete Record' button is clicked. First try clicking 'Create Record', and then viewing the data in the data browser. Then, click 'Delete Record' and refresh the data in the data browser. What happens if you click 'Delete Record' again?
 
-<pre>
+
+```
 //When 'Create' is clicked, add a new record to the table and write a confirmation to the display
 button("createButton", "1. Create record");
 onEvent("createButton", "click", function(event) {
@@ -54,7 +55,7 @@ onEvent("deleteButton", "click", function(event) {
 });
 
 
-</pre>
+```
 
 [/example]
 
@@ -68,7 +69,8 @@ data browser to view your data. Then, using the second text input, you can searc
 search for records matching the search query, and finally `deleteRecord` is called on each record that is returned in the records
 results array.
 
-<pre>
+
+```
 /*
 When the submit button is clicked, get the food from the text input and store it as a record
 */
@@ -108,7 +110,7 @@ function deleteItems() {
   });
 }
 
-</pre>
+```
 
 [/example]
 
@@ -117,11 +119,12 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 deleteRecord(tableName, recordId, function(){
     //callback function code goes here
   });
-</pre>
+```
 
 [/syntax]
 

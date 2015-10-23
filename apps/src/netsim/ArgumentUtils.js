@@ -13,7 +13,6 @@
  maxparams: 4,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 /**
@@ -144,5 +143,3 @@ exports.isArray = function (arg) {
 exports.isArrayOfStrings = function (arg) {
   return Array.isArray(arg) && arg.every(exports.isString);
 };
-
-

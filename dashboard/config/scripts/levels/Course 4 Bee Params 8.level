@@ -14,14 +14,13 @@
     "disable_param_editing": "false",
     "disable_variable_editing": "true",
     "start_direction": "3",
-    "step_mode": 1,
+    "step_mode": "1",
     "nectar_goal": "5",
     "flower_type": "redWithNectar",
     "ideal": "49",
-    "instructions": "Challenge: Now there's honey to deal with too! Rewrite your function to take in both the number of honey units and the number of nectar units.  How would you use those numbers to decide what you should do?",
+    "instructions": "Challenge: Now there's honey to deal with too! Rewrite your function to use both the number of honey units and the number of nectar units.  How would you use those numbers to decide what you should do?",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "open_function_definition": "get nectar make honey",
     "honey_goal": "5",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -29,26 +28,30 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "maze_data": null,
+    "fast_get_nectar_animation": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" deletable="false" movable="false" uservisible="false" y="0">
           <next>
-            <block type="variables_set" inline="false" deletable="false" movable="false">
+            <block type="variables_set" inline="false" uservisible="false">
               <title name="VAR">left</title>
               <value name="VALUE">
-                <block type="math_number" deletable="false" movable="false" editable="false">
+                <block type="math_number" uservisible="false">
                   <title name="NUM">0</title>
                 </block>
               </value>
               <next>
-                <block type="variables_set" inline="false" deletable="false" movable="false">
+                <block type="variables_set" inline="false" uservisible="false">
                   <title name="VAR">right</title>
                   <value name="VALUE">
-                    <block type="math_number" deletable="false" movable="false" editable="false">
+                    <block type="math_number" uservisible="false">
                       <title name="NUM">1</title>
                     </block>
                   </value>
@@ -57,6 +60,8 @@
             </block>
           </next>
         </block>
+        <block type="when_run" deletable="false" movable="false">
+  </block>
         <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
           <mutation>
             <arg name="direction"/>

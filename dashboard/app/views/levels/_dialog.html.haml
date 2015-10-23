@@ -87,6 +87,7 @@
 
 :ruby
   dialogOptions = {
+    autoResizeScrollableElement: '.modal-content',
     skipSound: !!(data['options'].try(:[], 'skip_sound')),
     preTitle: data['pre_title'],
     fallbackResponse: @fallback_response.to_json,

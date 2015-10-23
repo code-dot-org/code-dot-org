@@ -34,13 +34,14 @@ ____________________________________________________
 [example]
 
 In this example, note how the timer is cancelled before the code has run: the text indicating that the timeout has completed does not get printed to the debugging console.
-<pre>
+
+```
 var t = setTimeout(function() { //Save the timeout value in variable t
   console.log("The timeout has completed"); //When the code runs, print a message to the debugging console
 }, 10000); //Set the delay to 10000 milliseconds
 console.log("Timer ID: " + t); //Print the timer ID to the console
 clearTimeout(t); //Use variable t to cancel the timeout
-</pre>
+```
 
 [/example]
 
@@ -49,14 +50,15 @@ ____________________________________________________
 [example]
 
 We can also use `clearTimeout` with this turtle example from the [setTimeout](http://staging.code.org/applab/docs/setTimeout) page. Note how the turtle only moves once, instead of twice when the timeout is not cancelled.
-<pre>
+
+```
 show(); //Display the turtle
 moveForward(50); //Move the turtle 50 pixels
 var t = setTimeout(function() { //Save the timeout value in variable t
   moveForward(100); //Move the turtle another 100 pixels after the timeout
 }, 2000); //Set the delay to 2000 milliseconds
 clearTimeout(t); //Use variable t to cancel the timeout
-</pre>
+```
 
 [/example]
 
@@ -65,7 +67,8 @@ ____________________________________________________
 [example]
 
 In this advanced example, we create UI controls to start and stop a timer. We use `onEvent` to react to clicks on the buttons.
-<pre>
+
+```
 //Create a text label with instructions
 textLabel("instructions", "Click Start to being the timer, then Stop to prevent it from completing");
 //Create a text label to report status
@@ -95,7 +98,7 @@ onEvent("cancelButton", "click", function(){
     setText("status", "You need to start the timer before you can stop it :)");
   }
 });
-</pre>
+```
 
 [/example]
 
@@ -104,9 +107,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 clearTimeout(timeout);
-</pre>
+```
 
 [/syntax]
 

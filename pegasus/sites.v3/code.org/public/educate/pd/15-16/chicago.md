@@ -10,6 +10,8 @@ nav: pd2_nav
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
+- [I'm attending Counselor-Administrator PD](#counselor-admin)
+
 
 <a id="csp"></a>
 ## Computer Science Principles
@@ -49,8 +51,12 @@ Breakfast and lunch will be served.
 <br/><br/>
 **Location**
 
-TBD
-<br/><br/>
+Loyola University - Water Tower Campus<br/> 
+Corboy Law Center<br/> 
+Room: TBD<br/>
+25 E Pearson St <br/>
+Chicago, IL 60611
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger
@@ -112,8 +118,11 @@ Breakfast and lunch will be served.
 <br/><br/>
 **Location**
 
-TBD
-<br/><br/>
+DePaul University<br/> 
+CDM Room 924<br/>
+243 S. Wabash Ave<br/> 
+Chicago, IL 60604
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger
@@ -160,6 +169,7 @@ Phase 3 is composed of bi-yearly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
+<i>Both Group 1 & 2 will attend the following dates</i><br/>
 Semester 1: Saturday, October 24, 2015 
 
 Semester 2: Saturday, April 30, 2016 
@@ -167,9 +177,22 @@ Semester 2: Saturday, April 30, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**Location**
+**October 24th Location**
 
-TBD
+<i><b>Group 1</i></b><br/>
+Loyola University - Water Tower Campus<br/> 
+Corboy Law Center <br/>
+Room CLC 205<br/>
+25 E Pearson St<br/> 
+Chicago, IL 60611
+
+<i><b>Group 2</i></b><br/>
+Loyola University - Water Tower Campus<br/> 
+Corboy Law Center <br/>
+Room CLC 301<br/>
+25 E Pearson St<br/> 
+Chicago, IL 60611
+
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -212,6 +235,7 @@ Phase 3 is composed of bi-yearly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
+<i>Both Group 1 & 2 will attend the following dates</i><br/>
 Semester 1: Saturday, October 17, 2015 
 
 Semester 2: Saturday, January 23, 2016 
@@ -221,8 +245,22 @@ Breakfast and lunch will be served.
 <br/><br/>
 **Location**
 
-TBD
-<br/><br/>
+<i><b>Group 1</i></b><br/>
+Loyola University - Water Tower Campus<br/> 
+Corboy Law Center <br/>
+Room CLC 301<br/>
+25 E Pearson St<br/> 
+Chicago, IL 60611
+
+<i><b>Group 2</i></b><br/>
+Loyola University - Water Tower Campus<br/> 
+Corboy Law Center <br/>
+Room CLC 302<br/>
+25 E Pearson St<br/> 
+Chicago, IL 60611
+
+
+
 **What to bring to Phase 3 bi-yearly sessions:**
 
 Laptop and Charger
@@ -239,6 +277,41 @@ Water
 |----------- | ----- | ----|
 |**58177** | 10/17/2015 | CS4All CS in Science Phase 3 PD for 1st semester|
 |**58178** | 1/23/2016 | CS4All CS in Science Phase 3 PD for 2nd semester|
+
+[**Back to the top**](#top)
+
+<a id="counselor-admin"></a>
+
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
+
+
+### Counselors##
+
+**Save the date**
+
+Monday, October 20, 2015 <br/>
+11:00am - 3:00pm
+
+**Location**
+
+23 E Illinois St<br/>
+Chicago, IL 60611
+
+### Administrators##
+
+**Save the date**
+
+Monday, October 20, 2015 <br/>
+8:00am - 10:45am
+
+**Location**
+
+23 E Illinois St<br/>
+Chicago, IL 60611
+
 
 [**Back to the top**](#top)
 

@@ -435,6 +435,7 @@ en:
         infinity_playlab_intro: crwdns35943:0crwdne35943:0
         infinity_playlab_events: crwdns35944:0crwdne35944:0
         infinity_playlab_repeat_forever: crwdns35945:0crwdne35945:0
+        csp_applab_functions: crwdns49683:0crwdne49683:0
         csp_concept_rgb: crwdns36227:0crwdne36227:0
         csp_pixelation_color_1: crwdns36228:0crwdne36228:0
         csp_pixelation_color_2: crwdns36229:0crwdne36229:0
@@ -463,6 +464,9 @@ en:
         alg_15_biggame_update_player: crwdns36318:0crwdne36318:0
         alg_16_biggame_collision_detection: crwdns36319:0crwdne36319:0
         alg_17_sambat_compound_booleans: crwdns36320:0crwdne36320:0
+        hoc2015_preview_blocks: crwdns50648:0crwdne50648:0
+        hoc2015_preview_typing: crwdns50649:0crwdne50649:0
+        hoc2015_preview_conclusion: crwdns50650:0crwdne50650:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

@@ -48,6 +48,9 @@ PACCAR 007<br/>
 Spokane WA 99258
 
 Free parking is located on level 3 and 4 of the BARC parking garage on Hamilton and Boone Ave. See a campus map [here](/files/GU-campus-fall-2015-16.pdf).
+<br/>
+<br/>
+_Agendas_ for our frist Phase 3 Part A in-person workshop can be found [here](/files/CSPFirstQuarterWorkshop-teachers.pdf). 
 
 
 

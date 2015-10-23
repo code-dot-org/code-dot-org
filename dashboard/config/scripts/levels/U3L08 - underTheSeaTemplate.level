@@ -69,7 +69,7 @@
     "disable_examples": "false",
     "free_play": "true",
     "app_width": "320",
-    "app_height": "450",
+    "app_height": "480",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",

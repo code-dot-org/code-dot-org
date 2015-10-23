@@ -69,16 +69,18 @@
   signup_form:
     student_count: '%{count} ikasleek izena eman dute.'
     teacher_count: '%{count} irakasleek izena eman dute.'
-    overview_student: Sign up for an account to track your progress. Your email is
-      primarily used to allow you to log in and for password recovery. For more information,
-      see our <a href="http://code.org/privacy">Privacy Policy</a>.
-    overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to add your students and track their progress.
+    overview_student: Zure aurrerapena jarraitzeko eman ezazu izena kontu batean.
+      Zure email helbidea batez ere saioa hasteko eta pasahitza berreskuratzeko erabiltzen
+      da. Informazio gehiago lortzeko, ikusi gure <a href="http://code.org/privacy">Pribatutasun
+      Araua</a>.
+    overview_teacher: Irakatsi itzazu konputazio zientziak zure ikasgelan kontu batean
+      izena emanda. <p/>Zure ikasleak gehitu eta beraien aurrerapena jarraitu ahal
+      izango duzu.
     no_signup_message: <a target="_blank" href="http://learn.code.org">en eszenatoki
       eta puzleak bilatu ditzakezu</a>, baina izen eman beharko duzu zure aurrerapenak
       gordetzeko.
     teacher_educator_guide: Ikusi hezitzailearen gida
-    teacher_pitch: Teacher sign up for Code.org
+    teacher_pitch: Irakasleen sarbidea Code.org-rako
     teacher_title: Irakasle bezala sartu
     student_pitch: Ikasle bezala sartu Code.org-n
     student_title: Ikasle bezala sartu
@@ -89,7 +91,7 @@
     birthday: Urtebetetzea (aukerakoa)
     age: Adina
     user_type: Ikaslea edo irakaslea zara?
-    submit: Sign up
+    submit: Eman izena
     teacher: Irakaslea al zara?
     valid_username: Erabilgarri!
     invalid_username: Erabiltzailearen izenak gutxienez 5 karaktere izan behar ditu
@@ -110,7 +112,7 @@
     login: Emaila edo erabiltzailea
     password: Pasahitza
     remember: Gogoratu nazazu
-    submit: Sign in
+    submit: Hasi saioa
   signin:
     try_heading: Saioa hasi gabe kodetu nahi duzu ?
     try_hoc: Lehenengo probatu kode ordu bat
@@ -118,27 +120,27 @@
   signinsection:
     welcome: Ongi etorri %{section_name}-ra
     name: Aukeratu zure izena
-    picture: Now find your secret picture
-    words: Now enter your secret words
-    login: Sign in
+    picture: Orain bilatu ezazu zure irudi sekretua
+    words: Orain sartu itzazu zure hitz sekretuak
+    login: Hasi saioa
   password:
     reset_form:
       title: Pasahitza ahaztu duzu?
       email: Email helbidea
-      submit: Send me reset password instructions
+      submit: Bidali iezazkidazue pasahitza berrezartzeko instrukzioak
     change_form:
       title: Aldatu zure pasahitza
       new_password: Pasahitz berria
       confirm_password: Baieztatu pasahitz berria
       submit: Aldatu pasahitza
   welcome_email:
-    subject: Join my class (on Code.org)
+    subject: Nire klasean parte hartu (Code.org-n)
     body: |
-      Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
+      Klikatu ezazu azpiko estekan Code.org-ko konputazio zientzietako tutorialetan izena emateko (ni zure "irakaslea" izanda):
 
       %{link}
 
-      The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
+      Tutorialak dibertigarriak eta bisualki erakargarriak dira, eta jolas-antzeko esperientzia sinple eta gidatu batez konputazio zientzien kontzeptu basikoak irakasten dituzte. Ikasi ezazu programatzen Bill Gates, Mark Zuckerberg, Angry Birds eta Plants vs. Zombies-en eskutik! :-)
 
       %{name}
   follower:
@@ -150,45 +152,49 @@
       username_not_found: '%{username} erabiltzaile izena ez da topatzen'
       username_in_use: '%{username} erabiltzaile izena existitzen da, mesedez aukeratu
         beste bat'
-      no_teacher: Could not find anyone signed in with '%{teacher_email_or_code}'.
-        Please ask them to sign up here and then try adding them again
-      section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Please enter a section code
-      cant_join_own_section: Sorry, you can't join your own section.
+      no_teacher: Ezin izan da '%{teacher_email_or_code}'rekin izen emandako inor
+        aurkitu. Mesedez eska iezaiezu hemen izen ematea eta saiatu berriro gehitzen
+      section_not_found: Ez da aurkitu '%{section_code}' kodea duen sailik.
+      blank_code: Mesedez sar ezazu sailerako kode bat
+      cant_join_own_section: Barkatu baina ezin duzu parte hartu zuk sortutako sail
+        batean.
     mail:
       invite_student:
-        subject: Join a class with %{teacher_name} at Code.org!
+        subject: Har ezazu parte klase batean %{teacher_name}-rekin Code.org-n!
       student_disassociated:
         subject: 'Code.org abisua: %{student_name} dagoeneko ez da zure ikaslea.'
       teacher_disassociated:
         subject: 'Code.org abisua: %{teacher_name} dagoeneko ez da zure irakaslea.'
   reports:
     error:
-      access_denied: You don't have access to this person's stats
+      access_denied: Ez daukazu pertsona honen estatistika ikusteko baimena
   redeem_prizes:
-    title: 'Redeem Prizes: %{name}'
-    provider: 'Provider:'
+    title: Jardute sariak:%{name}
+    provider: 'Hornitzailea:'
     code: 'Kodea:'
-    redeem_header: 'To redeem:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
+    redeem_header: 'Jardutea:'
+    donorschoose_register: Irakasle moduan DonorsChoose.org-en izena eman
     donorschoose_project: Proiektu bat bidali
     donorschoose_how_to: Zure kodea nola erabili
-    success: Your prize was succesfully redeemed, see code below.
-    error: Your prize could not be redeemed, please try again.
-    error_us_only: The prize offer is only valid for U.S. users.
-    error_not_earned: You have not yet earned this prize.
-    error_already_redeemed: Your prize has already been redeemed.
-    no_prizes_available: We're sorry, but we currently have no prizes available.
-    teacher_info_required: 'Teacher prizes require school name and address information:'
-    teacher_email_required: 'Teacher prizes require a confirmed email address:'
+    success: Zure saria ondo burutu da, ikusi kodea azpian.
+    error: Zure saria ez da ondo burutu, mesedez saiatu berriro.
+    error_us_only: Sariaren eskaintza EEBBetako erabiltzaileentzako da baliozkoa.
+    error_not_earned: Oraindik ez duzu sari hau irabazi.
+    error_already_redeemed: Zure saria dagoeneko burutu da.
+    no_prizes_available: Sentitzen dugu, baina une honetan ez daukagu saririk eskuragarri.
+    teacher_info_required: 'Irakasleen sariek eskolaren izen eta helbidea beharrezkoa
+      dute:'
+    teacher_email_required: 'Irakasle sariek baieztatutako posta helbide bat behar
+      dute:'
     confirm:
-      title: Please Confirm
+      title: Mesedez baieztatu
       'no': Ez
       'yes': Bai
-      msg: Are you sure you want to claim the %{prize_name} prize?
-      msg_student: 'NOTE: You can only choose one type of prize.'
-      msg_publicschool: Please confirm that you are a U.S. public school teacher.
-      msg_visit_website: Visit website
+      msg: Benetan %{prize_name} saria eskatu nahi duzu?
+      msg_student: 'OHARRA: Bakarrik sari mota bat eska dezakezu.'
+      msg_publicschool: Mesedez baieztatu EEBBetako eskola publiko batetako irakaslea
+        zarela.
+      msg_visit_website: Bisitatu web orria
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
@@ -204,80 +210,78 @@
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Saria irabazi duzu! (AEBko ikasleak bakarrik)
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
-      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies}
-        trophies, and earn real-world prizes. You can choose between 10GB of free
-        Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer
-        only valid to U.S. students, and only as long as supplies last.'
+      not_earned_title: Bukatu tutoriala, eskuratu saria (EEBBetako ikasleak soilik)
+      not_earned: 'Konputazio zientzetako kontzeptu guztiak ikasi. bildu  %{num_trophies}
+        garaikurrak, eta irabazi mundu errealeko sariak. Dohako 10GBetako Dropbox
+        espazioa, 10$ Skype kreditu, eta  dohako joku deskargen artean aukera dezakezu.
+        OHARRA: eskaintza EEBBetako ikasleentzako soilik eta izakinak bukatu bitartean.'
       teacher:
-        earned: 15 or more students collected all %{num_trophies} trophies. You have
-          won a teacher prize! (U.S. teachers only)
-        not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
-          href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-          only)
-        not_earned: To reward first-time computer science teachers, you can earn up
-          to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits
-          for guiding a classroom through the K-8 intro course. To qualify, you need
-          to successfully host a classroom of at least 15 students through the entire
-          K-8 intro course, with all 15 students (or more) completing all tutorials
-          and earning all %{num_trophies} trophies. If 7 or more of the students who
-          earn all of the trophies are girls, your reward is $1,000 in <a target="_blank"
-          href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise,
-          your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-          credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-          credits can only be used by teachers in U.S. public schools.
+        earned: 15 edo gehiago dira %{num_trophies} garaikur guztiak batu dituztenak.
+          Irakasle-sari bat irabazi duzu! (AEBko irakasleak bakarrik)
+        not_earned_title: Irakatsi ikastaro hau eta irabazi 1.000$ <a target="_blank"
+          href="http://DonorsChoose.org">DonorsChoose.org</a>ko kreditutan (AEBko
+          irakasleak bakarrik)
+        not_earned: Lehen aldiko konputagailu-irakasleak saritzeko, 1.000$ irabaz
+          dezakezu <a href="http://DonorsChoose.org">DonorsChoose.org</a>ko kreditutan
+          ikastalde bat K-8 sarrera-ikastaroa gidatzeagatik. Kalifikatzeko, gutxienez
+          15 ikasleko talde bat arrakastaz eraman behar duzu K-8 sarrera-ikastaro
+          oso batean zehar,  15 ikaslek (edo gehiago) tutorial guztiak bukatuta eta  %{num_trophies}
+          garaikur guztiak lortuta. Garaikur guztiak lortzen dituztenen artean 7 neska
+          badaude, zure saria 1.000$-koa da  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+          kreditutan. Bestela 750$koa da zure saria <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>-ko
+          kreditutan. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+          kredituak bakarrik erabil ditzakete AEBko irakasleek.
         bonus:
-          not_earned_title: You can still earn an additional $250 in <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-            only)
-          earned: 7 or more of the students who collected all %{num_trophies} trophies
-            are girls. You have won a bonus prize! (U.S. teachers only)
-          not_earned: If at least 7 of your students who earn all %{num_trophies}
-            trophies are girls, your reward is an additional $250 in <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be
-            used by teachers in U.S. public schools.
+          not_earned_title: Oraindik irabaz dezakezu 250$ gehiago <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a> kreditutan (AEB-ko
+            irakasleak bakarrik)
+          earned: ' %{num_trophies} garaikur guztiak lortu dituztenen artean 7 neska
+            daude. Bonus-sariure bat irabazi duzu! (EABko irakasleek bakarrik)'
+          not_earned: '%{num_trophies} garaikur guztiak lortzen dituzten zure ikasleen
+            artean gutxienez 7 neska badaude, zure saria 250$-koa da <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a> kreditutan (AEBko
+            eskola publikoko irakasleeentzat bakarrik).'
   crud:
-    new_model: New %{model}
-    show: Show
-    edit: Edit
-    edit_model: Edit %{model}
-    update: Update
-    destroy: Destroy
+    new_model: '%{model} berria'
+    show: Erakutsi
+    edit: Editatu
+    edit_model: Editatu %{model}
+    update: Eguneratu
+    destroy: Suntsitu
     back: Atzera
     confirm: Ziur zaude?
     created: '%{model} ongi sortu da.'
     updated: '%{model} ongi eguneratu da.'
     destroyed: '%{model} ongi ezabatu da.'
-    access_denied: You do not have access to this %{model}.
+    access_denied: Ez daukazu %{model} eredu honetarko baimenik.
   nav:
     header:
-      finished_hoc: I've finished my Hour of Code
-      sign_in_to_save: Sign in to save progress
+      finished_hoc: Nire Kode Ordua bukatu dut
+      sign_in_to_save: Sartu aurrerapenak gordetzeko
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: Aplikazio bat sortu
+        artist: Marraztu zerbait
         calculate: Calculate Something
     user:
       classroom: Teacher Home Page
-      district_dashboard: District Dashboard
+      district_dashboard: Hezkuntza distritua
       label: Kaixo %{username}
-      stats: My progress
+      stats: Kode Estudioa
       settings: Nire kontua
       prizes: Sariak
-      logout: Sign out
-      signin: Sign in
-      signup: Sign up
-      already_registered: Already registered?
+      logout: Amaitu saioa
+      signin: Hasi saioa
+      signup: Eman izena
+      already_registered: Dagoeneko izena emanda?
     popup:
-      progress_for_user: '%{name}''s progress'
-      progress: Your progress
-      lines: 'Total lines of code: %{lines}'
+      progress_for_user: '%{name}''ren aurrerapenak'
+      progress: Zure aurrerapena
+      lines: 'Kode lerro kopuru osoa: %{lines}'
       close: ITXI
-      mastery: Concepts
-      puzzle_map: Stages
-      prizes: Collect all %{total_trophies} trophies and win prizes!
-      prize_earned: All %{total_trophies} trophies collected. Prize won!
+      mastery: Kontzeptuak
+      puzzle_map: Mailak
+      prizes: Eskuratu %{total_trophies} garaikur guztiak eta sariak irabazi!
+      prize_earned: '%{total_trophies} garaikur guztiak lortuta. Saria irabazita!'
       prize_us_only: (AEB-ko ikasleak bakarrik)
       prizes_link: informazio gehiago
   teacher:
@@ -287,25 +291,25 @@
     remove: (irakaslea ezabatu)
     confirm:
       remove: Ziur zaude irakasle hau ezabatu nahi duzula?
-    tools: Teacher Tools
+    tools: Irakasleentzako tresnak
     followers:
-      section: 'Section:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: Not tried yet
-      activity: Indicates student activity in the last %{hours} %{plural}
-      no_section: No assigned section
+      section: 'Atala:'
+      stages: 'Erakusteko urratsa(k):'
+      show_past: 'Ikaslearen iraganeko (%{bullet_html}) jarduera erakutsi:'
+      levels_key: Mailetako gakoa
+      perfect: Osatuta, perfektoa
+      completed: Osatuta, baina block gehiegi erabilita
+      tried: Saiatuta, baina ez osatuta
+      not_tried: Oraindik saiatu gabe
+      activity: Ikaslearen azken %{hours} %{plural}-etako jarduera erakusten du
+      no_section: Atalik asignatu gabe
       trophies: garaikurrak
     students:
       name: Izena
       username: Erabiltzaile-izena
       password: Pasahitza
       manage: Ikasleak kudeatu
-      dashboard: Go to Teacher Dashboard
+      dashboard: Joan irakaslearen mahaigainera
       add: Ikasleak gehitu
       remove: ikaslea ezabatu
       confirm_remove: Ziur zaude ikasle hau ezabatu nahi duzula?
@@ -354,6 +358,8 @@
       section: Section
       example: Example Solution
       example_with_number: Example Solution %{solution_number}
+      submitted_on: Submitted on %{date}
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -374,7 +380,7 @@
     show_more: Show more
     classroom_activity: Unplugged Activity
   home:
-    title: Code Studio
+    title: Kode Estudioa
     description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
@@ -464,6 +470,7 @@
     tos: Terms
     privacy: Privacy Policy
     secure: Secure Version
+    report_abuse: Report Abuse
   reference_area:
     title: Need help?
     subtitle: See these videos and hints
@@ -715,3 +722,26 @@
       contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
         us.</a>
       go_to_code_studio: Go to Code Studio
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying,
+          harassment, or an instance of copyright infringement for content you own
+          while using apps built on Code Studio, please fill out the form below. We
+          will take your report very seriously, investigate accordingly, and take
+          appropriate action.
+        validation:
+          email: Please provide an email address
+          age: Please specify an age
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
+          harassment: Threats, cyberbullying, harassement
+          offensive: Offensive content
+          infringement: Copyright Infringement
+          other: Beste bat
+        detail: Please provide as much detail as possible regarding the content you
+          are reporting.
+        acknowledge: By submitting this information, you acknowledge it will be handled
+          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
+          and the %{link_start_tos}Terms of Service%{link_end}

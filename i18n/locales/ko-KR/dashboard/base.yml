@@ -309,6 +309,8 @@ ko:
       section: 섹션
       example: 예시 해법
       example_with_number: '예시 해법 %{solution_number}'
+      submitted_on: '%{date} 에 제출됨'
+      unsubmit: 제출 취소
   user:
     email_confirm_needed: '이메일 주소가 확인되지 않았습니다:'
     email_confirm_needed_required: '당신의 이메일 주소 Email%{email}는 확인되지 않았습니다:'
@@ -397,6 +399,7 @@ ko:
     tos: 이용 약관
     privacy: 개인정보보호 정책
     secure: 보안 버전
+    report_abuse: 악용 사례 신고
   reference_area:
     title: 도움이 필요하신가요?
     subtitle: 동영상 및 힌트
@@ -602,9 +605,25 @@ ko:
     delete_confirm_text: "프로젝트를 삭제하면 '나의 프로젝트 리스트'에서 영원히 삭제됩니다. 삭제한 프로젝트의 링크를 공유하는 사람은 더 이상 당신의 프로젝트를 볼 수 없습니다."
     view_all: 내 프로젝트 보기
     remix: 리믹스
-    click_to_remix: "'리믹스'를 클릭해서 당신의 버전을 스핀오프 합니다!"
-    edit_project: Edit Project
+    click_to_remix: '자신만의 버전을 만들고 싶으시면 "Remix"를 클릭하세요!'
+    edit_project: 프로젝트 편집
     abuse:
-      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
-      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
-      go_to_code_studio: Go to Code Studio
+      tos: "이 프로젝트는 Code.org의 <a href='http://code.org/tos'>이용 약관</a>을 위반하였습니다. 이 프로젝트는 다른 사람과 공유할 수 없습니다."
+      contact_us: "오류를 발견하면 <a href='https://code.org/contact'> 로 문의해주세요.</a>"
+      go_to_code_studio: Code Studio로 가기
+      report_abuse_form:
+        intro: 만약 여러분이 코드스튜디오에서 제작한 앱을 사용하는 동안 불쾌한 내용이나 위협, 사이버 폭력, 괴롭힘 또는 저작권 침해를 당하셨을때는 아래의 양식을 작성해주세요. 여러분의 신고 내용을 엄격히 받아들여 적절한 후속조치를 취하도록 하겠습니다.
+        validation:
+          email: 이메일 주소를 제출하세요.
+          age: 나이를 알려주세요.
+          abuse_type: 이 서비스를 어떻게 방해하고 있는지 알려주세요.
+          abuse_detail: 알려주시는 내용에 대한 상세 사항을 알려주세요.
+        abusive_url: 신고할 URL 주소
+        abuse_type:
+          question: '이 신고 내용은 %{link_start}서비스 규정%{link_end}의 어떤 점을 위반합니까?'
+          harassment: 위협, 사이버 폭력, 괴롭힘
+          offensive: 불쾌한 내용
+          infringement: 저작권 침해
+          other: 기타
+        detail: 지금 신고하시는 내용에 관하여 가능한 상세하게 기술해주세요.
+        acknowledge: '이 내용을 제출하시면 당신이 신고한 내용이 %{link_start_privacy}개인보호정책link%{link_end}과 %{link_start_tos}서비스 규정%{link_end}에 따라 처리됨을 승인하게 됩니다.'

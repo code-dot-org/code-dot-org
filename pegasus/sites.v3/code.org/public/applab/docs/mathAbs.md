@@ -31,10 +31,11 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 var y = Math.abs(-23); //Get the absolute value of -23 and store it in variable y
 console.log(y); //Print the value of y to the debugging console, in this case "23"
-</pre>
+```
 
 [/example]
 
@@ -44,7 +45,8 @@ ____________________________________________________
 
 **Distance between two points.** In this example, we use coordinates to calculate the horizontal and vertical distance between two points. This example also uses [Math.round](/applab/docs/mathRound) to display results.
 
-<pre>
+
+```
 show(); //Display the turtle
 var x1 = getX(); //Get the X coordinate of the turtle and store it in variable x1
 var y1 = getX(); //Get the Y coordinate of the turtle and store it in variable x1
@@ -59,7 +61,7 @@ var verticalDistance = Math.abs(y2-y1);
 console.log("The turtle traveled " + Math.round(horizontalDistance) + " pixels horizontally.");
 //Print the vertical distance, rounded to the nearest integer
 console.log("The turtle traveled " + Math.round(verticalDistance) + " pixels vertically");
-</pre>
+```
 
 [/example]
 
@@ -68,7 +70,8 @@ ____________________________________________________
 [example]
 
 **Increments of distance.** In this more advanced example, we move the turtle a number of times at random, and keep track of the total distance traveled.
-<pre>
+
+```
 show(); //Display the turtle
 var distance = 0; //Initialize the distance variable to 0 (no travel)
 for (var i = 0; i < 4; i++) { //Move the turtle four times
@@ -79,7 +82,7 @@ for (var i = 0; i < 4; i++) { //Move the turtle four times
   distance = distance + Math.abs(y); //Increment the distance traveled by the absolute value of y
 }
 console.log("The turtle has moved a total of " + distance + " units."); //Print the total distance
-</pre>
+```
 
 
 [/example]
@@ -89,9 +92,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 Math.abs(x);
-</pre>
+```
 
 [/syntax]
 

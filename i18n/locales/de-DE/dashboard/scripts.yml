@@ -78,9 +78,9 @@ de:
           "Bee: Debugging": 'Biene: Debuggen'
           "Artist: Debugging": 'Künstler: Debuggen'
           "Bee: Conditionals": 'Biene: Bedingungen'
-          "Artist: Sequence2": 'Künstler: Sequenz2'
+          "Artist: Sequence2": 'Künstler: Sequenz 2'
           "Maze: Sequence2": 'Labyrinth: Sequenz'
-          "Artist: Nested Loops": 'Künstler: verschachtelte Schleifen'
+          "Artist: Nested Loops": 'Künstler: Verschachtelte Schleifen'
           description_audience: Ab 6 Jahre (Lesen erforderlich)
           description_short: Kurs 2 richtet sich an Schüler, die lesen können.
         course3:
@@ -90,16 +90,16 @@ de:
           title: Kurs 3
           Artist Functions: Künstler Funktionen
           Artist For Loops: Künstler Für-Schleifen
-          Artist Nested Loops: Künstler verschachtelte Schleifen
+          Artist Nested Loops: Künstler Verschachtelte Schleifen
           Bee Conditionals: Biene Bedingungen
-          Bee Nested Loops: Biene verschachtelte Schleifen
+          Bee Nested Loops: Biene Verschachtelte Schleifen
           Bee Debuggin: Biene Debuggen
           Bee Debugging: Biene Debuggen
           Bee Functions: Biene Funktionen
           Artist Functions with Params: Artist Functions with Params
           Bounce: Bounce
           Maze Conditionals: 'Labyrinth: Bedingungen'
-          Artist Functions with Parameters: Interpret-Funktionen mit Parametern
+          Artist Functions with Parameters: 'Künstler: Funktionen mit Parametern'
           Computational Thinking: Computerorientiertes Denken
           Functional Suncatchers: Funktionale Sonnenfänger
           Songwriting Parameters: Songwriting Parameters
@@ -107,7 +107,7 @@ de:
           Internet: Internet
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digitalen Staatsbürgerschaft
-          Farmer - While Loops: 'Bauer - Während Wiederholungen'
+          Farmer - While Loops: 'Bauer - Solange Wiederholungen'
           description: Kurs 3 wendet sich an Schüler, die Kurs 2 absolviert haben. Der Stoff des vorangegangenen Kurses wird mit Blick auf flexible Lösungen und komplexere Probleme vertieft. Am Ende des Kurses entwickeln die Schüler interaktive Geschichten und Spiele, an denen sie andere teilhaben lassen können. Empfohlen für Klasse 4-5.
           "Studio: Create a Game": 'Spielelabor: Erstelle ein Spiel'
           Maze: Labyrinth
@@ -116,21 +116,21 @@ de:
           "Bee: Functions": 'Biene: Funktionen'
           "Bee: Conditionals": 'Biene: Bedingungen'
           "Maze: Conditionals": 'Labyrinth: Bedingungen'
-          "Artist: Nested Loops": 'Künstler: verschachtelte Schleifen'
+          "Artist: Nested Loops": 'Künstler: Verschachtelte Schleifen'
           "Farmer: While Loops": 'Bauer: Solange Schleifen'
-          "Bee: Nested Loops": 'Biene: verschachtelte Schleifen'
+          "Bee: Nested Loops": 'Biene: Verschachtelte Schleifen'
           "Bee: Debugging": 'Biene: Debuggen'
-          Maze2: Labyrinth2
-          Artist2: Künstler2
-          "Artist: Functions2": 'Künstler: Funktionen2'
-          "Bee: Functions2": 'Biene: Funktionen2'
-          "Bee: Conditionals2": 'Biene: Bedingungen2'
-          "Maze: Conditionals2": 'Labyrinth: Bedingungen2'
-          "Artist: Nested Loops2": 'Künstler: verschachtelte Schleifen2'
-          "Farmer: While Loops2": 'Bauer: Während Schleifen2'
-          "Bee: Nested Loops2": 'Biene: verschachtelte Schleifen2'
-          "Bee: Debugging2": 'Biene: Debuggen2'
-          "Artist: Patterns": 'Interpret: Muster'
+          Maze2: Labyrinth 2
+          Artist2: Künstler 2
+          "Artist: Functions2": 'Künstler: Funktionen 2'
+          "Bee: Functions2": 'Biene: Funktionen 2'
+          "Bee: Conditionals2": 'Biene: Bedingungen 2'
+          "Maze: Conditionals2": 'Labyrinth: Bedingungen 2'
+          "Artist: Nested Loops2": 'Künstler: Verschachtelte Schleifen2'
+          "Farmer: While Loops2": 'Bauer: Solange Schleifen2'
+          "Bee: Nested Loops2": 'Biene: Verschachtelte Schleifen2'
+          "Bee: Debugging2": 'Biene: Debuggen 2'
+          "Artist: Patterns": 'Künstler: Muster'
           Songwriting: Songschreiben
           description_audience: ab 8 Jahre (nach Kurs 2)
           description_short: Kurs 3 schließt sich an Kurs 2 an.
@@ -151,7 +151,7 @@ de:
           description_short: Teste die Grundlagen der Computertechnologie mit vielen witzigen Charakteren!
         frozen:
           title: Programmiere mit Anna und Elsa
-          description: 'Wir wollen programmieren, damit wir Anna und Elsa treffen, wenn sie den Zauber und die Schönheit des Eises erkunden. Du wirst Schneeflocken machen und Muster, wie du eisläufst, und ein Winter- Wunderland, das du mit deinen Freunden teilen kannst!'
+          description: 'Wir wollen mit unseren Programmen gemeinsam mit Anna und Elsa den Zauber und die Schönheit des Eises erkunden. Beim Eislaufen wirst Du Schneeflocken und Muster erschaffen - ein Winter- Wunderland, das du mit deinen Freunden teilen kannst!'
           Artist: Künstler
           description_short: Verwende Code, um Anna und Elsa bei ihrer Entdeckung der Magie und Schönheit von Eis zu begleiten.
         course4:
@@ -165,7 +165,7 @@ de:
           "Play Lab: Variables": 'Spielelabor: Variablen'
           "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
           "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
-          "Artist: For Loops": 'Interpret: Für Wiederholungen'
+          "Artist: For Loops": 'Künstler: Für Wiederholungen'
           "Play Lab: For Loops": 'Play Lab: For Loops'
           "Artist: Functions": 'Künstler: Funktionen'
           "Unplugged: Tangrams": 'Unplugged: Tangrams'
@@ -179,9 +179,10 @@ de:
           "Unplugged: Binary": 'Unplugged: Binary'
           Bee Binary: Bee Binary
           Farmer Binary: Farmer Binary
-          Maze and Bee: Bienenlabyrinth
+          Maze and Bee: Labyrinth und Biene
           Artist Binary: Artist Binary
           description_audience: ab 10 Jahre (nach Kurs 3)
+          Super Challenge - Variables: 'Super Challenge - Variables'
         Course4pre:
           title: Course 4 Prerequisite
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
@@ -191,20 +192,20 @@ de:
           "Artist: Sequence": 'Künstler: Sequenz'
           "Artist: Loops": 'Künstler: Schleifen'
           "Bee: Conditionals": 'Biene: Bedingungen'
-          "Artist: Nested Loops": 'Künstler: verschachtelte Schleifen'
+          "Artist: Nested Loops": 'Künstler: Verschachtelte Schleifen'
           "Farmer: While Loops": 'Bauer: Solange Schleifen'
-          "Bee: Nested Loops": 'Biene: verschachtelte Schleifen'
+          "Bee: Nested Loops": 'Biene: Verschachtelte Schleifen'
           "Artist: Functions": 'Künstler: Funktionen'
           "Bee: Debugging": 'Biene: Debuggen'
         usability:
           Intro: Einleitung
-          Variables and For Loops: 'Variablen und "For"-Schleifen'
+          Variables and For Loops: 'Variablen und "Für"-Schleifen'
           Functions and Functions with Parameters: Funktionen und Funktionen mit Parametern
           title: Usability Testing
           description_short: ""
           description: A selection of Course 4 levels for usability testing.
           Variables: Variablen
-          For Loops: '"For"-Schleifen'
+          For Loops: '"Für"-Schleifen'
           Binary: Binärdatei
         potus:
           title: speziell
@@ -243,8 +244,8 @@ de:
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
           title: Disney Infinity Spiele Lab
-          description_short: Benutze den Spiele Lab, um eine Geschichte oder ein Spiel mit dem Disney Infinity Charakteren z u erstellen.
-          description: Benutze den Spiele Lab, um eine Geschichte oder ein Spiel mit dem Disney Infinity Charakteren z u erstellen.
+          description_short: Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Charakteren zu erstellen.
+          description: Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Charakteren zu erstellen.
           Play Lab: Play Lab
           Infinity: Unendlichkeit
         algebrademo:
@@ -418,9 +419,9 @@ de:
           "Artist: Sequence": 'Künstler: Sequenz'
           "Artist: Loops": 'Künstler: Schleifen'
           "Bee: Conditionals": 'Biene: Bedingungen'
-          "Artist: Nested Loops": 'Künstler: verschachtelte Schleifen'
+          "Artist: Nested Loops": 'Künstler: Verschachtelte Schleifen'
           "Farmer: While Loops": 'Bauer: Solange Schleifen'
-          "Bee: Nested Loops": 'Biene: verschachtelte Schleifen'
+          "Bee: Nested Loops": 'Biene: Verschachtelte Schleifen'
           "Artist: Functions": 'Künstler: Funktionen'
           "Bee: Debugging": 'Biene: Debuggen'
         cspunit1:
@@ -461,7 +462,7 @@ de:
           Personal Innovations: Personal Innovations
           Sending Complex Messages: Sending Complex Messages
           Sending Binary Messages with the Internet Simulator: Sending Binary Messages with the Internet Simulator
-          Encode a Complex Thing: Encode a Complex Thing
+          Encode a Complex Thing: Encode an Experience
         algebraPD:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -593,8 +594,8 @@ de:
           Layers of Abstraction and Programming Efficiency: Layers of Abstraction and Programming Efficiency
           APIs and Function Parameters: APIs and Function Parameters
           Looping and Random Numbers: Looping and Random Numbers
-          Creating functions with Parameters: Creating functions with Parameters
-          Scene Design Part 1 - Plan: 'Scene Design Part 1 - Plan'
+          Creating functions with Parameters: Creating Functions with Parameters
+          Scene Design Part 1 - Plan: Design a Digital Scene
           Scene Design Part 2 - Code: 'Scene Design Part 2 - Code'
           Scene Design Part 3 - Reflect: 'Scene Design Part 3 - Reflect'
           Unplugged Events Activity -  Mission Unsortable: 'Unplugged Events Activity -  Mission Unsortable'
@@ -635,6 +636,19 @@ de:
           Chained and Nested Conditionals: Chained and Nested Conditionals
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
           Digital Assistant Challenge: Digital Assistant Challenge
+          Creating Functions: Funktionen erstellen
+          Functions and Top-Down Design: Functions and Top-Down Design
+          Design a Digital Scene: Design a Digital Scene
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Introducing Design Mode: Introducing Design Mode
+          Clicker Game: Clicker Game
+          Getting User Input: Getting User Input
+          Variables: Variablen
+          Looping and Random Numbers - Under the Sea: 'Looping and Random Numbers - Under the Sea'
+          Multi-screen App: Multi-screen App
+          Variables Conceptorial Fodder: Variables Conceptorial Fodder
+          "Variables: Create, Assign, and Read": 'Variables: Create, Assign, and Read'
+          "Variables: Increment, Decrement, Display, and Scope": 'Variables: Increment, Decrement, Display, and Scope'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -830,6 +844,8 @@ de:
           The Need for Encryption: The Need for Encryption
           Keys and Passwords: Keys and Passwords
           Public Key Encryption: Public Key Encryption
+          Practice PT - The Internet and Society: 'Practice PT - The Internet and Society'
+          Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -977,6 +993,7 @@ de:
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
           Necessary Background: Necessary Background
+          Equity PD: Equity PD
         hoc2015:
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
@@ -1161,9 +1178,9 @@ de:
           description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
           Frequency Analysis: Frequency Analysis
         ECSPD3-Unit2:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description_short: Academic Year Development
-          description: Academic Year Development
+          title: 'Exploring Computer Science: Unit 2'
+          description_short: Unit 2 of the Exploring Computer Science curriculum
+          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the version 5 Exploring Computer Science curriculum.
           Welcome!: Welcome!
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
@@ -1179,6 +1196,13 @@ de:
           "Day 17 Minimal Spanning Trees: Muddy City": 'Day 17 Minimal Spanning Trees: Muddy City'
           Day 18-21 Final Project: Day 18-21 Final Project
           Unit 2 Challenge Planning & Creation: 'Unit 2 Challenge Planning & Creation'
+          Unit 2 Challenge Planning: Unit 2 Challenge Planning
+          Unit 2 Challenge Creation: Unit 2 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: 'Close & Next Steps'
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1224,6 +1248,8 @@ de:
           "Day 20-23 Scratch: Timing Game": 'Day 20-23 Scratch: Timing Game'
           "Day 24 Scratch: Games": 'Day 24 Scratch: Games'
           Day 25-30 Final Project: Day 25-30 Final Project
+          Unit 4 Challenge Planning: Unit 4 Challenge Planning
+          Unit 4 Challenge Creation: Unit 4 Challenge Creation
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1274,3 +1300,48 @@ de:
           "Data App Part 8: Visualize Data": 'Data App Part 8: Visualize Data'
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
+        ScienceP3OLPT2:
+          title: Computer Science in Science PD Phase 3b
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Welcome!
+          Earth Science Challenges: Earth Science Challenges
+          Life Science Challenges: Life Science Challenges
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Abschluss
+          Thinking About Implementation: Thinking About Implementation
+          Physical Science Challenges: Physical Science Challenges
+        algebraPD3b:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra mid year lesson support
+          description: CS in Algebra mid year lesson support
+          Teaching Support - Lessons 1-3: 'Teaching Support - Lessons 1-3'
+          Teaching Support - Lessons 4-7: 'Teaching Support - Lessons 4-7'
+          Teaching Support - Lessons 8-12: 'Teaching Support - Lessons 8-12'
+          Teaching Support - Lessons 13-16: 'Teaching Support - Lessons 13-16'
+          Teaching Support - Lessons 17-20: 'Teaching Support - Lessons 17-20'
+          Getting Started: Getting Started
+          Close and Next Steps: Close and Next Steps
+        CSPPD3-Unit2:
+          title: 'Computer Science Principles: Unit 2 PD'
+          description_short: Online Exploration of CSP Unit 2
+          description: Online Exploration of CSP Unit 2
+          Welcome!: Welcome!
+          Getting Started: Getting Started
+          Unit 2 Overview: Unit 2 Overview
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        duino:
+          Experimenting with Arduino stuff: Experimenting with Arduino stuff
+          Basic Circuits: Basic Circuits
+        Special Fun:
+          title: Special Fun
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: ab 10 Jahre (nach Kurs 3)
+          Halloween 2015: Halloween 2015
+        SpecialSeries:
+          title: Special Levels
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: ab 10 Jahre (nach Kurs 3)
+          Halloween 2015: Halloween 2015

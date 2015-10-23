@@ -35,16 +35,23 @@
     "disable_examples": "false",
     "free_play": "true",
     "app_width": "320",
-    "app_height": "450",
+    "app_height": "480",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "markdown_instructions": "# Drawing with Dots\r\n\r\nWe've added a new command called `dot()`.  \r\n\r\n**Read the documentation** for the `dot()` command.\r\n\r\n**Make a \"snowman\"**\r\n\r\n1. Using whatever color you like, make a dot so big that it fills the screen.\r\n\r\n2. In a different color, make 3 dots in a row, each one smaller than the next. (We made our dots white to look like a snowman)\r\n\r\nYou might want to go back to the documentation for `penColor()` to look up other colors to use.\r\n\r\n![](https://images.code.org/e63f3cf801abf22c01c475031c46ff66-image-1441992129690.gif)",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
-    "beginner_mode": "false",
+    "beginner_mode": "true",
     "never_autoplay_video": "false",
-    "examples_required": "false"
+    "examples_required": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "encrypted_examples": [
+
+    ],
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

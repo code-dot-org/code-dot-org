@@ -8,29 +8,29 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 # Thanks for signing up to host an Hour of Code!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
+<% if @country == 'la' || @country == 'br' || @country == 'ar' %> অক্টোবরের মধ্যেই, আপনি পুরো Latin America তে থাকা শিক্ষার্থীদের কাছে Hour of Code শিখতে পারাকে সম্ভবপর করে তুলছেন যা *তাদের বাকি জীবনকে পাল্টে দিতে চলেছে।* ৫-১১. <% else %> ডিসেম্বরের মধ্যেই, আপনি পুরো পৃথিবীর শিক্ষার্থীদের কাছে Hour of Code শিখতে পারাকে সম্ভবপর করে তুলছেন যা *তাদের বাকি জীবনকে পাল্টে দিতে চলেছে।* ৭-১৩. <% end %>
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+পুরস্কার, নব নব টিউটোরিয়াল আর অন্যান্য নানান চমৎকার সব নতুন জিনিস নিয়ে আমরা বছরের শেষ ভাগ জুড়ে সাথে সাথেই থাকবো। তাহলে, তুমি এখন কি কি করতে পারবে?
 
-## 1. Spread the word
+## ১. এই যুক্তশব্দকে ছড়িয়ে দাও
 
-Tell your friends about the #HourOfCode.
+তোমার বন্ধুবান্ধবদের সাথে #HourOfCode নিয়ে কথা বলো।
 
-## 2. Ask your whole school to offer an Hour of Code
+## ২. তোমার বিদ্যালয় জুড়ে Hour of Code শেখাতে বলো
 
-[Send this email](http://<%= hostname %>/resources#email) to your principal.
+তোমাদের অধ্যক্ষ বরাবর [email পাঠাও](https://<%= hostname %>/resources#email).
 
-## 3. Ask your employer to get involved
+## ৩. তোমার উর্ধতন কর্মকর্তাকে এতে অংশ নেবার জন্য তাঁকে অবহিত করো
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO.
+তোমার manager বা CEO বরাবর [email পাঠাও](https://<%= hostname %>/resources#email).
 
-## 4. Promote the Hour of Code in your community
+## ৪. তোমার সমাজে Hour of Code কে ছড়িয়ে দাও
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
+জাগিয়ে তোলো স্থানীয় দল ও গোষ্ঠিকে — যেমন ছেলে/মেয়েদের স্কাউট ক্লাব, চার্চ, বিশ্ববিদ্যালয়, পুরনো কোনো সম্প্রদায় বা শ্রমিক সংগঠন। অথবা তোমার পাড়া-প্রতিবেশীর জন্য "block party" 'র মতো Hour of Code এর এক পার্টির আয়োজন করো। [email পাঠিয়ে দাও](https://<%= hostname %>/resources#email).
 
-## 5. Ask a local elected official to support the Hour of Code
+## ৫. স্থানীয় কোনো নির্বাচিত official কর্মকর্তাকে বলো যেন তারা Hour of Code কে সমর্থন করেন
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+তোমাদের মেয়র, নগর পরিষদ, বা বিদ্যালয় বোর্ড কর্তৃপক্ষ বরাবর [email পাঠিয়ে দাও](https://<%= hostname %>/resources#politicians) এবং তাদেরকে তোমাদের বিদ্যালয় পরিদর্শন করতে আমন্ত্রণ জানাও।
 
 * * *
 

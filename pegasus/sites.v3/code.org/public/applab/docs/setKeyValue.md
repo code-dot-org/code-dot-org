@@ -35,12 +35,13 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 //Stores "highScore": 100 in the app's key/value data storage
 setKeyValue('highScore', 100, function(){     console.log("I execute asynchronously when key/value is stored.  Click View Data to see the data.");
 });
 console.log("I execute immediately after");
-</pre>
+```
 
 [/example]
 
@@ -48,7 +49,8 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 setKeyValue("highScore", 100 , function () { //Store "highScore": 100 in the app's key/value data storage
   console.log("highScore stored");
 
@@ -57,7 +59,7 @@ setKeyValue("highScore", 100 , function () { //Store "highScore": 100 in the app
   });
 
 });
-</pre>
+```
 
 [/example]
 
@@ -67,7 +69,8 @@ ____________________________________________________
 
 In this more detailed example, a random number between 1 and 100 is generated every time the app runs. The program checks whether the random number that was generated is bigger than the value stored in persistent key/value storage. If it is, then it updates the saved value. Try running this example multiple times and view the key/value data to see `biggestNumber` update.
 
-<pre>
+
+```
 var random = randomNumber(1, 100); //Generate a random number
 /*Get current value of "biggestNum". The data comes back asynchronously and is stored in 'value' */
 getKeyValue("biggestNum", function (value) {
@@ -79,7 +82,7 @@ getKeyValue("biggestNum", function (value) {
   }
 });
 
-</pre>
+```
 
 [/example]
 
@@ -88,11 +91,12 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 setKeyValue(key, value, function(){
     //callback function code goes here
   });
-</pre>
+```
 
 [/syntax]
 

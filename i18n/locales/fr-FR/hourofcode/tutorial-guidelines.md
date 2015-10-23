@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 <%= view :signup_button %>
 
-# Directives pour Hour of Code™ et Computer Science Education Week
+# Directives pour Une Hour of Code™ et pour la semaine de l'apprentissage des sciences informatiques
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
@@ -15,7 +15,7 @@ Nous aimerions offrir un large panel d'ateliers attractifs, mais le but premier 
   
 
 
-**Après avoir lu les directives, vous pouvez soumettre votre tutoriel à travers notre [page de soumission des activités Hour of Code ™](http://goo.gl/forms/6GSklaO9Oa).**
+**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
 
 **NOUVEAU :** Contrairement à ces dernières années, nous pensons introduire un nouveau format pour les activités Hour of Code « dirigées par des enseignants ». Celles-ci seront listées en-dessous des activités autoguidées dans les pages et les courriels orienté étudiant. Details below.
 
@@ -34,7 +34,7 @@ Nous aimerions offrir un large panel d'ateliers attractifs, mais le but premier 
 
 <a id="guidelines"></a>
 
-## New for 2015: two formats of activites: self-guided or *lesson-plan*
+## New for 2015: two formats of activities: self-guided or *lesson-plan*
 
 Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
 
@@ -115,7 +115,7 @@ Au final, le but de la campagne Hour of Code est d'élargir la participation à 
 
 ## How to submit (Due 10/15/2015)
 
-Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
+Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
 **What you’ll need:**
 

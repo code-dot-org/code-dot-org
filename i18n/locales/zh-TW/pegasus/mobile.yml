@@ -27,6 +27,13 @@ zh-TW:
   hoc2014_everyone: 任何人
   hoc2014_support: '支援 &#x25BE;'
   hoc2014_whatishoc: 什麼是”一小時編程“？
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: 再試一次
+  cded_sign_up: 註冊帳號
+  cded_try_it: 試一試
   twentyhours_trynow: 快來試試
   california_heading: 邀請你的學校推行計算機科學教育
   california_text: "任何一個老師可以提供我們 <a href='HTTP://learn.code.org/'> 免費介紹課程</a>。任何小學可 <a href='HTTP://code.org/educate/k5'> 教導電腦科學</a>。誠邀高中<a href='http://code.org/educate/districts'>與我們合作。"
@@ -44,9 +51,14 @@ zh-TW:
   thank_you_: 謝謝！
   congratulations: 恭喜你！
   congratulations_on_completing_hoc: 恭喜你，你已完成 1 個小時的程式設計課程。
-  congratulations_on_completing_course: 'Congratulations on completing %{course}'
-  congrats_next_tutorials_title: Try these tutorials next
-  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
+  course_name_accelerated: Accelerated Course
+  course_name_course1: 課程 1
+  course_name_course2: Course 2
+  course_name_course3: 課程 3
+  course_name_course4: 課程 4
+  congratulations_on_completing_course: '恭喜你完成 %{course}'
+  congrats_next_tutorials_title: 接下來請嘗試下面這些教程
+  congrats_next_tutorials_desc: '嘗試這些較短，約一小時的教程或嘗試 <a href="%{current_path}/next"> 合作夥伴教程</a>。'
   get_a_certificate_of_achievement: 獲取成就證書
   enter_valid_age: 請選擇一個有效的年齡
   enter_valid_email: 請輸入一個有效的電子郵件信箱
@@ -97,6 +109,7 @@ zh-TW:
   hoc_is_here: '#HourOfCode 已經開始了，讓我們一起試試吧！ @codeorg'
   just_did_hoc: '我已經完成了 #HourOfCode - 快來看看吧！ @codeorg'
   twitter_teach_cs: 為什麼沒有更多的學校教計算機科學？我們可以解決這個問題。HTTP://youtu.be/nKIu9yen5nc。請瀏覽 http://code.org/ 了解更多。
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: 學習一小時的程式設計
   beyond_hoc: 一小時後的學習課程
   what_gender: 您的性別是？
@@ -143,7 +156,7 @@ zh-TW:
   homepage_hero_text_student5: '&ldquo;計算機科學，不是為他人的。它是為了現在在這裡的你。&rdquo;傑拉爾多，老師。'
   homepage_hero_text_teacher1: '&ldquo;編程啟發創意、 靈感和創新 &mdash; 它們都是在任何職業不可缺少的&rdquo;Floresa，老師'
   homepage_hero_text_teacher2: '&ldquo;這個課程得到 同學100%的投入、 參與和參加。&rdquo;亞當，老師'
-  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
+  homepage_hero_text_stat_loc: 二百五十萬女生已報名在代碼工作室學習
   homepage_hero_text_stat_students: '#student_count 在程式碼工作室使用的學生帳號'
   homepage_hero_text_stat_served: '一小時程式設計體驗:#served服務'
   homepage_slot_text_hoc: 一小時的編程
@@ -159,6 +172,8 @@ zh-TW:
   homepage_action_text_signpetition: 意願書上簽名
   homepage_signpetition_dropdown: '我同意 &#x25BE;'
   homepage_diversity_pledge: Take the diversity pledge
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org 和美國大學理事會形成一個以提高在電腦科學中的多樣性為宗旨的聯盟。
   homepage_banner_text_link: 瞭解更多資訊
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -168,6 +183,7 @@ zh-TW:
   homepage_slot_text_link_hoc: 試試一小時的程式設計課程
   homepage_slot_text_link_host: 舉辦一個小時的程式設計活動。
   homepage_slot_text_link_hocserved: '#服務。'
+  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: 學生
   homepage_slot_text_blurb_students: 瀏覽所有教案
   homepage_slot_text_link_codestudio: 嘗試程式設計工作室
@@ -224,11 +240,48 @@ zh-TW:
   class_submission_level_college: 學院
   class_submission_level_vocational: 職業
   class_submission_languages_other: 其他語言
+  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: |-
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
+  volunteer_engineer_submission_field_name: 你的名字
+  volunteer_engineer_submission_field_name_placeholder: Full Name
+  volunteer_engineer_submission_field_company: Company (or University)
+  volunteer_engineer_submission_field_company_placeholder: Company (or University)
+  volunteer_engineer_submission_field_experience_level: Experience level
+  volunteer_engineer_submission_field_location: Location
+  volunteer_engineer_submission_field_location_desc: "If you enter your exact address we won't share it, just show you as a pin on map."
+  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country, or street address
+  volunteer_engineer_submission_field_location_flexibility: I can help during the Hour of Code by... (select all that apply)
+  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering after the Hour of Code
+  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
+  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
+  volunteer_engineer_submission_field_description: 描述
+  volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
+  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation
+  volunteer_engineer_submission_header_private: Information kept private and never shared
+  volunteer_engineer_submission_field_email: 電子郵件地址
+  volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
+  volunteer_engineer_submission_field_email_placeholder: 電子郵件地址
+  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
+  volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
+  volunteer_engineer_submission_submit: 送出
+  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn more here.</a>'
   volunteer_engineer_submission_commitment_uncertain: 不確定
-  volunteer_engineer_submission_commitment_now_and_then: 從現在開始
   volunteer_engineer_submission_commitment_one_hr_per_week: 每星期１小時
   volunteer_engineer_submission_commitment_three_hrs_per_week: 每星期３小時
   volunteer_engineer_submission_commitment_five_hrs_per_week: 每星期５小時
+  volunteer_engineer_submission_commitment_now_and_then: 從現在開始
+  volunteer_engineer_submission_commitment_annually: 2-3 times per year
+  volunteer_engineer_submission_commitment_monthly: A couple hours per month
+  volunteer_engineer_submission_commitment_weekly: A couple hours per week
   volunteer_engineer_submission_commitment_more: 更多
   volunteer_engineer_submission_location_flexibility_onsite: 網上學校
   volunteer_engineer_submission_location_flexibility_remote: 遠端教師或學生
@@ -256,10 +309,11 @@ zh-TW:
   dashboard_landing_progress_title: 主要課程進度
   dashboard_landing_progress_biggest: 這是您最大的分區進度
   dashboard_landing_view_progress: '查看%{biggest_section}的進度'
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: 可用課程
   dashboard_landing_available_courses: 這是目前可供您及您的學生們的課程。
   dashboard_landing_more_tutorials: 想看更多教程嗎?
-  dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
+  dashboard_landing_more_tutorials_desc: '我們的合作夥伴提供更多教程 <a href="/learn/beyond">。</a>學會用機器人程式設計， 製造網上頁面，製造你自己的應用程式，或探討其他電腦程式設計語言如C++、Ruby或Python!'
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
   dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
@@ -299,6 +353,7 @@ zh-TW:
   dashboard_navigation_section_speakers: '電腦科學 <br/> 特邀演講者'
   dashboard_navigation_all_sections: 學生戶口及進度
   dashboard_navigation_view_progress: 查看進度
+  dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_add_students: 新增學生
   dashboard_navigation_manage_students: 管理學生們
   dashboard_navigation_lesson_plans_resources: 教案和資源
@@ -392,6 +447,10 @@ zh-TW:
   dashboard_progress_completed_too_many_blocks: 完成，但使用過多積木
   dashboard_progress_completed_perfect: 完美完成
   dashboard_progress_furthest_level_attempted: 嘗試到的最遠關卡
+  dashboard_stage: 階段
+  dashboard_puzzle: 關卡
+  dashboard_question: Question
+  dashboard_response: Response
   stats_hoc_2013_heading: 去年的一小時程式設計有令人難以置信的統計資料。在一個禮拜內：
   stats_hoc_2013_image_alt: 統計來自2013的Hour of Code
   dashboard_teacher: 教師
@@ -408,6 +467,9 @@ zh-TW:
   dashboard_sections_login_type_explanation: '本表協助説明您可以選擇的課程區段登入類型，<b>通關圖片、 通關密語或電子郵件</b>。'
   dashboard_faq: 常見問題集
   dashboard_faq_k5: K-5 Frequently Asked Questions
+  dashboard_announcements: Announcements
+  dashboard_announce_view_all: View all
+  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
   code_hoc_coming: 代碼小時就在這裡 — — 12 月 8-14 ！
   code_sign_up: 註冊參與電腦科學教育週
   learn_more: 瞭解更多資訊
@@ -415,6 +477,7 @@ zh-TW:
   learn_sign_up_button: 註冊帳號
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
+  learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
   hoc2014_try_new_tutorials: 試試我們新的Hour of Code活動教案
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: 憤怒的小鳥，PvZ 和Scrat
@@ -474,7 +537,7 @@ zh-TW:
   robomindnl_name: 用程式設計出虛擬機器人
   flappy_name: 製作一個Flappy遊戲
   bitsbox_name: Bitsbox-製作遊戲
-  makegameswithus_name: 用您的瀏覽器建立 iPhone 遊戲 ！
+  makeschool_name: Build an iPhone game in your browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor（App產生器） Hour of Code活動
   blockly_name: Blockly
@@ -513,7 +576,7 @@ zh-TW:
   robomindnl_gradelevel: 適合年齡自 8至13歲
   flappy_gradelevel: 適合年齡自 4 至104歲
   bitsbox_gradelevel: 小學
-  makegameswithus_gradelevel: 高中
+  makeschool_gradelevel: 高中
   touchdevelop_gradelevel: 高中
   appinventor_gradelevel: 中學以上
   blockly_gradelevel: 適合所有年齢
@@ -553,7 +616,7 @@ zh-TW:
   robomindnl_platformtext: 當代 web 瀏覽器，行動網路
   flappy_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
   bitsbox_platformtext: 當代 Web 瀏覽器
-  makegameswithus_platformtext: 當代 Web 瀏覽器
+  makeschool_platformtext: 當代 Web 瀏覽器
   touchdevelop_platformtext: 當代的瀏覽器、 智慧型手機、 所有設備
   appinventor_platformtext: 當代瀏覽器 + android 系統
   blockly_platformtext: 僅支援當代瀏覽器
@@ -593,7 +656,7 @@ zh-TW:
   robomindnl_shortdescription: 為虛擬機器器人編寫程式碼
   flappy_shortdescription: 用Flappy鳥、鯊魚或潛艇設計出自己的遊戲
   bitsbox_shortdescription: 編寫一系列的Apps代碼來播放和共用，使用真正的 JavaScript 。
-  makegameswithus_shortdescription: 設計一個 iPhone 遊戲 ！學習用程式碼來教你的怪物移動 ！
+  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach your monster new moves!
   touchdevelop_shortdescription: 解謎，建立遊戲，和學習程式碼都在您的手機上完成。
   appinventor_shortdescription: 建立自己的應用程式 ！（只限安卓系統）
   blockly_shortdescription: 下載 ZIP 檔，以瞭解離線
@@ -633,7 +696,7 @@ zh-TW:
   robomindnl_longdescription: 學生透過控制他們自己的虛擬機器器人學習程式設計的基礎知識。線上課程完整包含了簡短的簡報、 影片、 測驗與自動指導/提示來協助程式設計練習。
   flappy_longdescription: 使用拖放式的程式語言設計你自己Flappy鳥遊戲，並可自訂它不同的外觀 （Flappy鯊魚、Flappy聖誕老人、或任何角色）。只要按一下，就可將遊戲加到您的手機中。
   bitsbox_longdescription: 自訂您自己的虛擬平板電腦，然後編寫一系列的Apps來使用及分享。讓非常小的孩子透過簡單體驗來使用真正 JAVAscript ，成為可能的事，您會達到比您想到還遠。
-  makegameswithus_longdescription: '使用這個全新的、容易上手的，名為Swift的程式語言建立一個iPhone遊戲以學習程式設計!建立一個神奇&eacute;寶貝啟發的動作遊戲和編寫程式碼來教你的怪物移動。您將學習如何使用變數、 方法和物件，來協助你的怪物獲勝 ！'
+  makeschool_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
   touchdevelop_longdescription: 觸控式螢幕友好編輯器將引導您創造像素藝術、 解決熊謎題，或者建立你自己的跳躍鳥遊戲。
   appinventor_longdescription: 娛樂、 簡短的影片教案引導您在您的 Android 手機或平板電腦上完成建立三個簡單的APPs程式。它設計給新手和專家，此Hour of Code活動讓你開始建構自己的Apps，在你瞭解它之前。想像一下與朋友分享您自己創造的應用程式 ！這些活動適合個人自學和教師帶領的班級課程。
   blockly_longdescription: 您有網際網路連線很慢（或根本不存在）的電腦嗎？下載 Blockly 的自學教案 ，Code.org 教案的前輩元老 — — 一個 3 MB ZIP 檔案可以載入到任何一台電腦上或存在一個隨身碟上使用。
@@ -656,7 +719,7 @@ zh-TW:
   groklearning_beyond_name: 學習 Python 程式設計
   hacketyhack_beyond_name: 學習 Ruby
   robomind_beyond_name: 用程式設計出虛擬機器人
-  makegameswithus_beyond_name: 用您的瀏覽器建立 iPhone 遊戲 ！
+  makeschool_beyond_name: Build an iPhone game in your browser!
   appinventor_beyond_name: AppInventor（App產生器） Hour of Code活動
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: 使用Karel狗學習程式設計
@@ -693,7 +756,7 @@ zh-TW:
   groklearning_beyond_gradelevel: 中學以上
   hacketyhack_beyond_gradelevel: 高中
   robomind_beyond_gradelevel: 適合年齡自 8至13歲
-  makegameswithus_beyond_gradelevel: 高中
+  makeschool_beyond_gradelevel: 高中
   appinventor_beyond_gradelevel: 中學以上
   touchdevelop_beyond_gradelevel: 高中
   codehs_beyond_gradelevel: 高中
@@ -730,7 +793,7 @@ zh-TW:
   groklearning_beyond_platformtext: 當代 Web 瀏覽器
   hacketyhack_beyond_platformtext: 桌面安裝
   robomind_beyond_platformtext: 當代 web 瀏覽器，行動網路
-  makegameswithus_beyond_platformtext: 當代 Web 瀏覽器
+  makeschool_beyond_platformtext: 當代 Web 瀏覽器
   appinventor_beyond_platformtext: 當代瀏覽器 + android 系統
   touchdevelop_beyond_platformtext: 當代的瀏覽器、 智慧型手機、 所有設備
   codehs_beyond_platformtext: 當代的瀏覽器 （需要$$ ）
@@ -767,7 +830,7 @@ zh-TW:
   groklearning_beyond_shortdescription: 基本的 python 程式設計簡介
   hacketyhack_beyond_shortdescription: 從基礎學習Ruby
   robomind_beyond_shortdescription: 為虛擬機器器人編寫程式碼
-  makegameswithus_beyond_shortdescription: 學會在一小時內做一個 iPhone 遊戲
+  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
   appinventor_beyond_shortdescription: 建立自己的應用程式 ！（只限安卓系統）
   touchdevelop_beyond_shortdescription: 直接在您的手機、 平板電腦或筆記型電腦上的編寫App程式碼
   codehs_beyond_shortdescription: 使用一個有趣的視覺環境來學習 JavaScript 程式設計
@@ -804,7 +867,7 @@ zh-TW:
   groklearning_beyond_longdescription: 有沒有程式設計經驗的人使用 Python 程式設計語言入門課程。我們的介紹性內容和挑戰的獨特組合將為您帶入 Python 透徹理解和程式設計本身。我們教過此內容不同年齡段的學生來自不同背景，我們相信它會太適合你。
   hacketyhack_beyond_longdescription: 'Hackety 駭客會教你程式設計從地面絕對基礎了。沒有以前的程式設計經驗被需要 ！Hackety 對駭客，您將學習 Ruby 程式設計語言。Ruby 用於所有種類的程式，包括桌面應用程式和網站。[注意： 桌面安裝所需]'
   robomind_beyond_longdescription: '學生透過控制他們自己的虛擬機器器人學習程式設計的基礎知識。線上課程完整包含了簡短的簡報、 影片、 測驗與自動指導/提示來協助程式設計練習。 '
-  makegameswithus_beyond_longdescription: 知道一些 ObjectiveC 嗎？學會讓 iPhone 遊戲一小時的時間 ！我們將引導您完成整個過程，以編寫代碼、 測試和完全在瀏覽器中玩你的遊戲，然後分享它在 facebook 上的朋友嘗試 ！沒有事先的 iPhone 開發經驗是必需的。您必須瞭解變數、 方法和物件是什麼。
+  makeschool_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
   appinventor_beyond_longdescription: 娛樂、 簡短的影片教案引導您在您的 Android 手機或平板電腦上完成建立三個簡單的APPs程式。它設計給新手和專家，此Hour of Code活動讓你開始建構自己的Apps，在你瞭解它之前。想像一下與朋友分享您自己創造的應用程式 ！這些活動適合個人自學和教師帶領的班級課程。
   touchdevelop_beyond_longdescription: TouchDevelop 允許您創建應用程式，ipad、 iPhone、 Android、 PC、 Mac、 Windows Phone。我們觸控式螢幕友好編輯器使編碼的樂趣，甚至在您的手機或平板電腦 ！
   codehs_beyond_longdescription: '學習通過Karel程式設計的基礎知識狗，編碼，給一台電腦的命令在哪裡就像給一隻狗的命令有趣、 無障礙和視覺上的簡介。本教程是偉大的如果由一名教師，但是也可以獨立完成。[注： 付款是必需]'

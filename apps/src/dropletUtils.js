@@ -1,4 +1,5 @@
 var utils = require('./utils');
+var _ = utils.getLodash();
 
 /**
  * @name DropletBlock
@@ -39,22 +40,36 @@ exports.getTime = function() {
 };
 
 /**
+ * Use native window.prompt to ask for a value, but continue prompting until we
+ * get a numerical value.
+ * @returns {number} User value, converted to a number
+ */
+exports.promptNum = function (text) {
+  var val;
+  do {
+    val = parseInt(window.prompt(text), 10);
+  } while (isNaN(val));
+  return val;
+};
+
+/**
  * @type {DropletBlock[]}
  */
 exports.dropletGlobalConfigBlocks = [
-  {'func': 'getTime', 'parent': exports, 'category': 'Control', 'type': 'value' },
-  {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
-  {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
+  {func: 'getTime', parent: exports, category: 'Control', type: 'value' },
+  {func: 'randomNumber', parent: exports, category: 'Math', type: 'value' },
+  {func: 'prompt', parent: window, category: 'Variables', type: 'value' },
+  {func: 'promptNum', parent: exports, category: 'Variables', type: 'value' }
 ];
 
 /**
  * @type {DropletBlock[]}
  */
 exports.dropletBuiltinConfigBlocks = [
-  {'func': 'Math.round', 'category': 'Math', 'type': 'value' },
-  {'func': 'Math.abs', 'category': 'Math', 'type': 'value' },
-  {'func': 'Math.max', 'category': 'Math', 'type': 'value' },
-  {'func': 'Math.min', 'category': 'Math', 'type': 'value' },
+  {func: 'Math.round', category: 'Math', type: 'value' },
+  {func: 'Math.abs', category: 'Math', type: 'value' },
+  {func: 'Math.max', category: 'Math', type: 'value' },
+  {func: 'Math.min', category: 'Math', type: 'value' },
 ];
 
 /**
@@ -64,65 +79,67 @@ var standardConfig = {};
 
 standardConfig.blocks = [
   // Control
-  {'func': 'forLoop_i_0_4', 'block': 'for (var i = 0; i < 4; i++) {\n  __;\n}', 'category': 'Control' },
-  {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'category': 'Control' },
-  {'func': 'ifBlock', 'block': 'if (__) {\n  __;\n}', 'category': 'Control' },
-  {'func': 'ifElseBlock', 'block': 'if (__) {\n  __;\n} else {\n  __;\n}', 'category': 'Control' },
-  {'func': 'getTime', 'block': 'getTime()', 'category': 'Control', type: 'value' },
+  {func: 'forLoop_i_0_4', block: 'for (var i = 0; i < 4; i++) {\n  __;\n}', category: 'Control' },
+  {func: 'whileBlock', block: 'while (__) {\n  __;\n}', category: 'Control' },
+  {func: 'ifBlock', block: 'if (__) {\n  __;\n}', category: 'Control' },
+  {func: 'ifElseBlock', block: 'if (__) {\n  __;\n} else {\n  __;\n}', category: 'Control' },
+  {func: 'getTime', block: 'getTime()', category: 'Control', type: 'value' },
 
   // Math
-  {'func': 'addOperator', 'block': '__ + __', 'category': 'Math' },
-  {'func': 'subtractOperator', 'block': '__ - __', 'category': 'Math' },
-  {'func': 'multiplyOperator', 'block': '__ * __', 'category': 'Math' },
-  {'func': 'divideOperator', 'block': '__ / __', 'category': 'Math' },
-  {'func': 'equalityOperator', 'block': '__ == __', 'category': 'Math' },
-  {'func': 'inequalityOperator', 'block': '__ != __', 'category': 'Math' },
-  {'func': 'greaterThanOperator', 'block': '__ > __', 'category': 'Math' },
-  {'func': 'lessThanOperator', 'block': '__ < __', 'category': 'Math' },
-  {'func': 'andOperator', 'block': '__ && __', 'category': 'Math' },
-  {'func': 'orOperator', 'block': '__ || __', 'category': 'Math' },
-  {'func': 'notOperator', 'block': '!__', 'category': 'Math' },
-  {'func': 'randomNumber_max', 'block': 'randomNumber(__)', 'category': 'Math' },
-  {'func': 'randomNumber_min_max', 'block': 'randomNumber(__, __)', 'category': 'Math' },
-  {'func': 'mathRound', 'block': 'Math.round(__)', 'category': 'Math' },
-  {'func': 'mathAbs', 'block': 'Math.abs(__)', 'category': 'Math' },
-  {'func': 'mathMax', 'block': 'Math.max(__)', 'category': 'Math' },
-  {'func': 'mathMin', 'block': 'Math.min(__)', 'category': 'Math' },
+  {func: 'addOperator', block: '__ + __', category: 'Math' },
+  {func: 'subtractOperator', block: '__ - __', category: 'Math' },
+  {func: 'multiplyOperator', block: '__ * __', category: 'Math' },
+  {func: 'divideOperator', block: '__ / __', category: 'Math' },
+  {func: 'equalityOperator', block: '__ == __', category: 'Math' },
+  {func: 'inequalityOperator', block: '__ != __', category: 'Math' },
+  {func: 'greaterThanOperator', block: '__ > __', category: 'Math' },
+  {func: 'lessThanOperator', block: '__ < __', category: 'Math' },
+  {func: 'andOperator', block: '__ && __', category: 'Math' },
+  {func: 'orOperator', block: '__ || __', category: 'Math' },
+  {func: 'notOperator', block: '!__', category: 'Math' },
+  {func: 'randomNumber_max', block: 'randomNumber(__)', category: 'Math' },
+  {func: 'randomNumber_min_max', block: 'randomNumber(__, __)', category: 'Math' },
+  {func: 'mathRound', block: 'Math.round(__)', category: 'Math' },
+  {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math' },
+  {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },
+  {func: 'mathMin', block: 'Math.min(__)', category: 'Math' },
 
   // Variables
-  {'func': 'declareAssign_x', 'block': 'var x = __;', 'category': 'Variables' },
-  {'func': 'assign_x', 'block': 'x = __;', 'category': 'Variables' },
-  {'func': 'declareAssign_x_array_1_4', 'block': 'var x = [1, 2, 3, 4];', 'category': 'Variables' },
-  {'func': 'declareAssign_x_prompt', 'block': 'var x = prompt("Enter a value");', 'category': 'Variables' },
+  {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables' },
+  {func: 'declareNoAssign_x', block: 'var x;', category: 'Variables' },
+  {func: 'assign_x', block: 'x = __;', category: 'Variables' },
+  {func: 'declareAssign_x_array_1_4', block: 'var x = [1, 2, 3, 4];', category: 'Variables' },
+  {func: 'declareAssign_x_prompt', block: 'var x = prompt("Enter a value");', category: 'Variables' },
+  {func: 'declareAssign_x_promptNum', block: 'var x = promptNum("Enter a value");', category: 'Variables' },
 
   // Functions
-  {'func': 'functionParams_none', 'block': 'function myFunction() {\n  __;\n}', 'category': 'Functions' },
-  {'func': 'functionParams_n', 'block': 'function myFunction(n) {\n  __;\n}', 'category': 'Functions' },
-  {'func': 'callMyFunction', 'block': 'myFunction()', 'category': 'Functions' },
-  {'func': 'callMyFunction_n', 'block': 'myFunction(n)', 'category': 'Functions' },
-  {'func': 'return', 'block': 'return __;', 'category': 'Functions' },
+  {func: 'functionParams_none', block: 'function myFunction() {\n  __;\n}', category: 'Functions' },
+  {func: 'functionParams_n', block: 'function myFunction(n) {\n  __;\n}', category: 'Functions' },
+  {func: 'callMyFunction', block: 'myFunction()', category: 'Functions' },
+  {func: 'callMyFunction_n', block: 'myFunction(n)', category: 'Functions' },
+  {func: 'return', block: 'return __;', category: 'Functions' },
 ];
 
 standardConfig.categories = {
-  'Control': {
-    'color': 'blue',
-    'rgb': COLOR_BLUE,
-    'blocks': []
+  Control: {
+    color: 'blue',
+    rgb: COLOR_BLUE,
+    blocks: []
   },
-  'Math': {
-    'color': 'orange',
-    'rgb': COLOR_ORANGE,
-    'blocks': []
+  Math: {
+    color: 'orange',
+    rgb: COLOR_ORANGE,
+    blocks: []
   },
-  'Variables': {
-    'color': 'purple',
-    'rgb': COLOR_PURPLE,
-    'blocks': []
+  Variables: {
+    color: 'purple',
+    rgb: COLOR_PURPLE,
+    blocks: []
   },
-  'Functions': {
-    'color': 'green',
-    'rgb': COLOR_GREEN,
-    'blocks': []
+  Functions: {
+    color: 'green',
+    rgb: COLOR_GREEN,
+    blocks: []
   },
   // create blank category in case level builders want to move all blocks here
   // (which will cause the palette header to disappear)
@@ -275,15 +292,43 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   return addedPalette;
 };
 
-function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
+function populateCompleterApisFromConfigBlocks(opts, apis, configBlocks) {
   for (var i = 0; i < configBlocks.length; i++) {
     var block = configBlocks[i];
     if (!block.noAutocomplete) {
-      apis.push({
+      // Use score value of 100 to ensure that our APIs are not replaced by
+      // other completers that are suggesting the same name
+      var newApi = {
         name: 'api',
         value: block.func,
+        score: 100,
         meta: block.category
-      });
+      };
+      if (opts.autocompleteFunctionsWithParens) {
+        newApi.completer = {
+          insertMatch: _.bind(function (editor) {
+            // Remove the filterText that was already typed (ace's built-in
+            // insertMatch would normally do this automatically)
+            if (editor.completer.completions.filterText) {
+              var ranges = editor.selection.getAllRanges();
+              for (var i = 0, range; !!(range = ranges[i]); i++) {
+                range.start.column -= editor.completer.completions.filterText.length;
+                editor.session.remove(range);
+              }
+            }
+            // Insert the function name plus parentheses and semicolon:
+            editor.execCommand("insertstring", this.func + '();');
+            if (this.params) {
+              // Move the selection back so parameters can be entered:
+              var curRange = editor.selection.getRange();
+              curRange.start.column -= 2;
+              curRange.end.column -= 2;
+              editor.selection.setSelectionRange(curRange);
+            }
+          }, block)
+        };
+      }
+      apis.push(newApi);
     }
   }
 }
@@ -291,19 +336,22 @@ function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
 /**
  * Generate an Ace editor completer for a set of APIs based on some level data.
  *
- * If functionFilter is non-null, use it to filter the dropletConfig APIs to
- * be set in autocomplete and create no other autocomplete entries
+ * If functionFilter is non-null, use it to filter the dropletConfig
+ * APIs to be set in autocomplete and create no other autocomplete entries
  */
 exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   var apis = [];
+  var opts = {};
+  // If autocompleteFunctionsWithParens is set, we will append "();" after functions
+  opts.autocompleteFunctionsWithParens = dropletConfig.autocompleteFunctionsWithParens;
 
   if (functionFilter) {
     var mergedBlocks = mergeFunctionsWithConfig(functionFilter, dropletConfig);
-    populateCompleterApisFromConfigBlocks(apis, mergedBlocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, mergedBlocks);
   } else {
-    populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
-    populateCompleterApisFromConfigBlocks(apis, exports.dropletBuiltinConfigBlocks);
-    populateCompleterApisFromConfigBlocks(apis, dropletConfig.blocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, exports.dropletGlobalConfigBlocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, exports.dropletBuiltinConfigBlocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, dropletConfig.blocks);
   }
 
   return {

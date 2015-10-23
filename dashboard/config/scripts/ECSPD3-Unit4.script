@@ -21,7 +21,7 @@ level 'ECSPD strategies'
 stage 'Unit 4 Overview'
 
 stage 'Introduction to the Unit 4 Challenge'
-level 'ECSPD Challenge Intro'
+level 'ECSPD What is the Challenge'
 
 stage 'Day 1 Scratch: Intro'
 level 'ECSPD U4 D 1 Intro'
@@ -69,3 +69,14 @@ stage 'Day 25-30 Final Project'
 level 'ECSPD U4 D 25-30 Intro'
 
 stage 'Unit 4 Challenge Planning & Creation'
+
+stage 'Unit 4 Challenge Planning'
+level 'ECSPD What is the Challenge'
+level 'ECSPD Pick Challenge'
+
+
+stage 'Unit 4 Challenge Creation'
+level 'ECSPD Start Challenge'
+level 'ECSPD Challenge Reflection'
+level 'ECSPD 1 page template'
+level 'ECSPD Challenge Rubric'

@@ -1,3 +1,5 @@
+/* global React */
+
 $(window).load(function () {
   $.widget("custom.coloriconselectmenu", $.ui.selectmenu, {
     /**
@@ -115,7 +117,7 @@ $(window).load(function () {
         name: "",
         rangeType: blockValueType.NUMBER,
         domainTypes: []
-      }
+      };
     },
     onNameChangeEvent: function (event) {
       this.setState({
@@ -125,7 +127,7 @@ $(window).load(function () {
     onRangeChange: function (newType) {
       this.setState({
         rangeType: newType
-      })
+      });
     },
     onDomainChange: function (domainKey, newType) {
       this.setState({
@@ -174,7 +176,7 @@ $(window).load(function () {
           <div id='sectionTitle' className="clear">Range <span className='section-type-hint'>(the range is the type of output)</span></div>
           <TypeChooser type={this.state.rangeType} onTypeChange={this.onRangeChange}/>
         </div>
-      )
+      );
     }
   });
 
@@ -201,7 +203,7 @@ $(window).load(function () {
           {typeChoiceNodes}
           <button className="btn domain-add-button" onClick={this.props.onDomainAdd}>Add Domain</button>
         </div>
-      )
+      );
     }
   });
 
@@ -220,7 +222,7 @@ $(window).load(function () {
           <option data-color={typesToColors[blockValueType.IMAGE]} value={blockValueType.IMAGE}>{blockValueType.IMAGE}</option>
           <option data-color={typesToColors[blockValueType.BOOLEAN]} value={blockValueType.BOOLEAN}>{blockValueType.BOOLEAN}</option>
         </select>
-      )
+      );
     },
     componentDidMount: function () {
       $(React.findDOMNode(this)).coloriconselectmenu({

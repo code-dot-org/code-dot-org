@@ -34,7 +34,8 @@ The following block of code calculates a random number between `min` and `max` w
 The code block declares the variable `compareString` which is implicitly assigned the JavaScript value `undefined`.
 Three conditional statements are executed to determine if the random number is equal to, less than, or greater than the midpoint. Finally, a message with that determination is printed to the console.
 
-<pre>
+
+```
 var min = 0;
 var max = 100;
 var num = randomNumber(min, max);
@@ -54,7 +55,7 @@ if (num > midpoint) {
 
 var message = num + ' is ' + compareString + ' than ' + midpoint;
 console.log(message);
-</pre>
+```
 
 [/example]
 ____________________________________________________
@@ -62,11 +63,12 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 if (condition) {
     statement
 }
-</pre>
+```
 
 [/syntax]
 

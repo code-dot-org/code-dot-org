@@ -36,7 +36,8 @@ ____________________________________________________
 
 **Create and then update a record** In this example, a record is created in a table named 'update_example1' when the 'Create Record' button is clicked. We assume that since it's the only record in the table, that the id is 1, and use that to update the record to have a different favorite food when the 'Update record' button is clicked. First try clicking 'Create Record', and then viewing the data in the data browser. Then, click 'Update Record' and refresh the data in the data browser.
 
-<pre>
+
+```
 //When 'Create' is clicked, add a new record to the table and write a confirmation to the display
 button("createButton", "1. Create record");
 onEvent("createButton", "click", function(event) {
@@ -53,7 +54,7 @@ onEvent("updateButton", "click", function(event) {
   });
 });
 
-</pre>
+```
 
 [/example]
 
@@ -68,7 +69,8 @@ to find all rows where the food is "sushi" and replaces the food name with "pine
 4 records have been created, view the records in the data browser. Then, click 'Find & Replace' and
 refresh the data browser to see the updates.
 
-<pre>
+
+```
 /*
 When the app loads, create 4 records in the table
 */
@@ -106,7 +108,7 @@ function updateSushi() {
   });
 }
 
-</pre>
+```
 
 [/example]
 
@@ -115,11 +117,12 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 updateRecord(tableName, record, function(record){
     //callback function code goes here
   });
-</pre>
+```
 
 [/syntax]
 

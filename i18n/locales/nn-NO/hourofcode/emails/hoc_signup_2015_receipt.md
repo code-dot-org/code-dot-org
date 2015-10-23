@@ -18,19 +18,19 @@ Fortel venane dine om #Kodetimen.
 
 ## 2. Be heile skulen din om å tilby ein Kodetime
 
-[Send denne eposten](http://<%= hostname %>/resources#email) til rektoren din.
+[Send this email](https://<%= hostname %>/resources#email) to your principal.
 
 ## 4. Be arbeidsgjevaren din om å engasjere seg
 
-[Send denne eposten](http://<%= hostname %>/resources#email) til lederen din.
+[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
 
 ## 4. Reklamer for Hour of Code i nærmiljøet ditt
 
-Rekrutter en lokal klubb eller gruppe - Speidere, Universitet og Høgskoler, Fagforeninger osv. Eller arranger en Hour of Code i nabolaget ditt. [Send denne eposten](http://<%= hostname %>/resources#email).
+Rekrutter en lokal klubb eller gruppe - Speidere, Universitet og Høgskoler, Fagforeninger osv. Eller arranger en Hour of Code i nabolaget ditt. [Send this email](https://<%= hostname %>/resources#email).
 
 ## 6. Be ein lokalpolitikar om å støtte Kodetimen
 
-[Send denne eposten](http://<%= hostname %>/resources#politicians) til din borgermester, rådmann, byråd, skole og inviter dem til å besøke skolen din.
+[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
 * * *
 

@@ -12,24 +12,16 @@ textarea, input, .textarea {
   margin-left: 0px;
 }
 
-#left-column > div {
-  /*padding: 5px 10px;*/
-  /*border: solid 1px #5b6770;*/
-  /*box-shadow: 5px 5px 10px #5b6770;*/
-  /*margin-bottom: 10px;*/
-}
-
-#controls {
-  /*background-color: #59cad3;*/
-  margin-top: 10px;
-}
-
 #inputs {
-  /*background-color: #ffc459;*/
+  margin-top: -10px;
 }
 
-legend {
-  border-color: #5b6770;
+.legend {
+  border-bottom: 1px solid #5b6770;
+}
+
+form {
+  margin-bottom: 0;
 }
 
 p.textarea {
@@ -39,22 +31,16 @@ p.textarea {
   border: 1px solid black;
   padding: 4px 6px;
   background-color: #e7e8ea;
-  /*background-color: #c6cacd;*/
   color: black;
-  /*background-color: #000000;*/
-  /*color: #55AA55;*/
 }
 
 #keyword-display mark, .highlight.key {
-  /*background-color: #0094ca;*/
   background-color: #59b9dc;
 }
-#plaintext-display mark, .highlight.plaintext {
-  /*background-color: #ffa400;*/
+#input-display mark, .highlight.plaintext {
   background-color: #ffc459;
 }
-#ciphertext-display mark, .highlight.ciphertext {
-  /*background-color: #b9bf15;*/
+#output-display mark, .highlight.ciphertext {
   background-color: #d1d567;
 }
 
@@ -68,12 +54,11 @@ input[type=range] {
 }
 
 table{
-  height: 700px;
-  max-width: 700px;
+  height: 560px;
+  max-width: 560px;
   width: 100%;
   border-collapse: separate;
-  border-spacing: 2px;
-  /*box-shadow: 10px 10px 20px #5b6770;*/
+  border-spacing: 0px;
 }
 
 th, td {
@@ -81,7 +66,7 @@ th, td {
   vertical-align: middle;
   font-family: monospace;
   font-size: 12px;
-  padding: 2px;
+  padding: 0px;
 }
 
 th {

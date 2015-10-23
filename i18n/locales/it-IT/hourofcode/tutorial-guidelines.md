@@ -15,7 +15,7 @@ Vorremmo mettere a disposizione dei fruitori diverse interessanti opportunità, 
   
 
 
-**Dopo aver letto le linee guida, puoi iniziare il tuo tutorial attraverso la [pagina di sottoposizione delle attività di Hour of Code™](http://goo.gl/forms/6GSklaO9Oa).**
+**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
 
 **NOVITÀ:** A differenza degli anni passati, abbiamo intenzione di introdurre un nuovo formato per le attività di Hour of Code guidate dagli insegnanti. Esse saranno elencate sotto le attività svolgibili in autonomia in pagine ed email destinate agli studenti. I dettagli sono qui di seguito.
 
@@ -34,7 +34,7 @@ Vorremmo mettere a disposizione dei fruitori diverse interessanti opportunità, 
 
 <a id="guidelines"></a>
 
-## New for 2015: two formats of activites: self-guided or *lesson-plan*
+## New for 2015: two formats of activities: self-guided or *lesson-plan*
 
 Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
 
@@ -115,7 +115,7 @@ In definitiva, l'obiettivo della campagna condotta dall'Ora del Codice è quello
 
 ## How to submit (Due 10/15/2015)
 
-Visita la [Pagina di Presentazione Attività de "L'Ora del Codice" ™](http://goo.gl/forms/6GSklaO9Oa) e segui le istruzioni per inviare il tuo tutorial.
+Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
 **Cosa ti serve:**
 

@@ -50,6 +50,34 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 2, sl2.stage_total
   end
 
+  test 'summarize with default route' do
+    sl = create(:script_level)
+    sl2 = create(:script_level, stage: sl.stage, script: sl.script)
+
+    summary = sl.summarize
+    assert_match Regexp.new('/s/bogus_script_[0-9]+/stage/1/puzzle/1'), summary[:url]
+    assert_equal false, summary[:previous]
+    assert_equal 1, summary[:position]
+    assert_equal 'puzzle', summary[:kind]
+    assert_equal 1, summary[:title]
+
+    summary = sl2.summarize
+    assert_match Regexp.new('/s/bogus_script_[0-9]+/stage/1/puzzle/2'), summary[:url]
+    assert_equal false, summary[:next]
+    assert_equal 2, summary[:position]
+    assert_equal 'puzzle', summary[:kind]
+    assert_equal 2, summary[:title]
+  end
+
+  test 'summarize with custom route' do
+    summary = Script.hoc_2014_script.script_levels.first.summarize
+    assert_equal '/hoc/1', summary[:url]  # Make sure we use the canonical /hoc/1 URL.
+    assert_equal false, summary[:previous]
+    assert_equal 1, summary[:position]
+    assert_equal 'puzzle', summary[:kind]
+    assert_equal 1, summary[:title]
+  end
+
   test 'calling next_level when next level is unplugged skips the level for script without stages' do
     last_20h_maze_1_level = ScriptLevel.find_by(level: Level.find_by_level_num('2_19'), script_id: 1)
     first_20h_artist_1_level = ScriptLevel.find_by(level: Level.find_by_level_num('1_1'), script_id: 1)

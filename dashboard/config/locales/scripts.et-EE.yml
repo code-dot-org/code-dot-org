@@ -14,219 +14,222 @@
         course1:
           'Jigsaw: Learn to drag and drop': 'Pusle: õpi lohistama ja paika seadma'
           'Maze: Sequence': 'Labürint: Jada'
-          'Maze: Debugging': 'Maze: Debugging'
+          'Maze: Debugging': 'labürint: silumine'
           'Artist 1: Intro': 'Artist 1: Sissejuhatus'
           Artists 2: Artistid 2
-          Spelling Bee: Spelling Bee
-          Spelling Bee not blockly: Spelling Bee not blockly
-          'Bee 1: Intro': 'Bee 1: Intro'
-          'Maze 2: Loops': 'Maze 2: Loops'
-          'Bee 2: Loops': 'Bee 2: Loops'
+          Spelling Bee: Sõnamesilane
+          Spelling Bee not blockly: Sõnamesilane, mitte Blocky
+          'Bee 1: Intro': 'Mesilane 1: Sissejuhatus'
+          'Maze 2: Loops': 'Labürint 2: Tsüklid'
+          'Bee 2: Loops': 'Mesilane 2: Tsüklid'
           Multi & Match: Multi & Match
           K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
+          Flappy non blockly: Flappy, mitte Blocky
           title: Kursus 1
-          Artist 2: Artist 2
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
-          description: Start with Course 1 for early readers. Students will create
-            computer programs that will help them learn to collaborate with others,
-            develop problem-solving skills, and persist through difficult tasks. By
-            the end of this course, students create their very own custom game or
-            story that they can share. Recommended for grades K-1.
-          'Bee: Sequence': 'Bee: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Shapes': 'Artist: Shapes'
-          'Maze: Loops': 'Maze: Loops'
-          'Bee: Loops': 'Bee: Loops'
-          'Studio: Create a Story': 'Play Lab: Create a Story'
-          'Artist: Loops': 'Artist: Loops'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Start with Course 1 for early readers.
+          Artist 2: Kunstnik 2
+          Happy Maps: '"Happy Maps"'
+          Move it, Move it: Liiguta, liiguta
+          'Real-life Algorithms: Plant a Seed': 'Päris elu algoritmid: Seemenda'
+          Building a Foundation: Vundamendi ehitus
+          Getting Loopy: muutub tsükliliseks
+          The Big Event: Suursündmus
+          Going Places Safely: Läheb asukohta turvaliselt
+          description: 'Kui oled aeglane lugeja, siis alusta kursus 1-ga. Õpilased
+            loovad arvutiprogramme, mis aitavad neil õppida teistega koostööd tegema,
+            arendada probleemi lahendamise oskust, ja läbi kannatada rasked ülesanded.
+            Selle kursuse lõpuks, õpilased moodustavad päris enda moodustatud mängu
+            või loo, mida nad saavad jagada. Soovitatav 5-8 aastastele. '
+          'Bee: Sequence': 'Mesilane: Jada'
+          'Artist: Sequence': 'Kunstnik: Jada'
+          'Artist: Shapes': 'Kunstnik: Kujundid'
+          'Maze: Loops': 'Labürint: Tsüklid'
+          'Bee: Loops': 'Mesilane: Tsüklid'
+          'Studio: Create a Story': 'Play Lab: Moodusta lugu'
+          'Artist: Loops': 'Kunstnik: Tsüklid'
+          description_audience: Vanustele 4-6
+          description_short: Alusta kursuse 1ga noortele lugejatele.
         course2:
           The Maze: Labürint
           Suzi: Suzi
           The Artist: Kunstnik
-          Artist Debugging: Artist Debugging
+          Artist Debugging: Kunstnik Silumine
           Bounce: Põrkama
-          'Studio: Create a Story': 'Play Lab: Create a Story'
-          Artist Loops: Artist Loops
-          Bee Conditionals: Bee Conditionals
+          'Studio: Create a Story': 'Play Lab: Moodusta lugu'
+          Artist Loops: Kunstnik Tsüklid
+          Bee Conditionals: Mesilane Tingimuslaused
           Flappy: Flappy
-          title: Course 2
-          Bee Loops: Bee Loops
-          Artist Functions: Artist Functions
-          The Artist Debugging: The Artist Debugging
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
-          Graph Paper Programming: Graph Paper Programming
-          'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: Getting Loopy
-          Relay programming: Relay programming
+          title: Kursus 2
+          Bee Loops: Mesilane Tsüklid
+          Artist Functions: Kunstink Funktsioonid
+          The Artist Debugging: Kunstnik Silumine
+          Bee Debugging: Mesilane Silumine
+          Bee Functions: Mesilane Funktsioonid
+          Maze Loops: Labürint Tsüklid
+          Graph Paper Programming: Millimeetripaberi programmeerimine
+          'Real-life Algorithms: Paper Planes': 'Päris elu algoritmid: Paberlennukid'
+          Getting Loopy: muutub tsükliliseks
+          Relay programming: Relee programmeerimine
           Conditionals: Tingimuslaused
-          Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
-          Your Digital Footprint: Your Digital Footprint
-          description: Start with Course 2 for students who can read and have no prior
-            programming experience. In this course students will create programs to
-            solve problems and develop interactive games or stories they can share.
-            Recommended for grades 2-5.
+          Binary Bracelets: Binaarsed käevõrud
+          The Big Event: Suursündmus
+          Your Digital Footprint: Teie digitaalne jalajälg
+          description: Kui oskad lugeda ja sul ei ole eelnevad programmeerimise kogemust,
+            siis alusta kursus 2-ga. Selles kursuses õpilased moodustavad programme
+            probleemide lahendamiseks ja arendavad interaktiivseid mänge või lugusid,
+            mida nad saavad jagada. Soovitatud 2. klassist kuni 5. klassini.
           'Maze: Sequence': 'Labürint: Jada'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Maze: Loops': 'Maze: Loops'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Loops': 'Bee: Loops'
-          'Bee: Debugging': 'Bee: Debugging'
-          'Artist: Debugging': 'Artist: Debugging'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Sequence2': 'Artist: Sequence2'
-          'Maze: Sequence2': 'Maze: Sequence2'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          description_audience: Ages  6+ (reading required)
-          description_short: Start with Course 2 for students who can read.
+          'Artist: Sequence': 'Kunstnik: Jada'
+          'Maze: Loops': 'Labürint: Tsüklid'
+          'Artist: Loops': 'Kunstnik: Tsüklid'
+          'Bee: Loops': 'Mesilane: Tsüklid'
+          'Bee: Debugging': 'Mesilane: Silumine'
+          'Artist: Debugging': 'Kunstnik: Silumine'
+          'Bee: Conditionals': 'Mesilane: Tingimuslaused'
+          'Artist: Sequence2': 'Kunstnik: Jada 2'
+          'Maze: Sequence2': 'Labürint: Jada 2'
+          'Artist: Nested Loops': 'Kunstnik: Korduvad Tsüklid'
+          description_audience: Vanustele 6-18
+          description_short: Õpilased, kes suudavad lugeda, alustage kursus 2-ga.
         course3:
           The Maze: Labürint
-          'Studio: Create a Story': 'Play Lab: Create a Story'
+          'Studio: Create a Story': 'Play Lab: Moodusta lugu'
           The Artist: Kunstnik
-          title: Course 3
-          Artist Functions: Artist Functions
-          Artist For Loops: Artist For Loops
-          Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
-          Bee Nested Loops: Bee Nested Loops
-          Bee Debuggin: Bee Debuggin
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Artist Functions with Params: Artist Functions with Params
+          title: Kursus 3
+          Artist Functions: Kunstink Funktsioonid
+          Artist For Loops: Kunstnik For Tsükkel
+          Artist Nested Loops: Kunstnik Korduvad Tsüklid
+          Bee Conditionals: Mesilane Tingimuslaused
+          Bee Nested Loops: Mesilane Korduvad Tsüklid
+          Bee Debuggin: Mesilane Silumas
+          Bee Debugging: Mesilane Silumine
+          Bee Functions: Mesilane Funktsioonid
+          Artist Functions with Params: Kunstnik Parameetritega funktsioonid
           Bounce: Põrkama
-          Maze Conditionals: Maze Conditionals
-          Artist Functions with Parameters: Artist Functions with Parameters
+          Maze Conditionals: Labürint Tingimuslause
+          Artist Functions with Parameters: Kunstnik Parameetritega funktsioonid
           Computational Thinking: Arvutuslik mõtlemine
-          Functional Suncatchers: Functional Suncatchers
-          Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
+          Functional Suncatchers: Funktsionaalsed päikesepüüdjad
+          Songwriting Parameters: Laulukirjutamise parameetrid
+          Dice Race: Täringu ralli
           Internet: Internet
-          Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital Citizenship
-          Farmer - While Loops: Farmer - While Loops
-          description: Course 3 is designed for students who have taken Course 2.
-            Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-5.
-          'Studio: Create a Game': 'Play Lab: Create a Game'
-          Maze: Maze
-          Artist: Artist
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Functions': 'Bee: Functions'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Maze: Conditionals': 'Maze: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Bee: Debugging': 'Bee: Debugging'
-          Maze2: Maze2
-          Artist2: Artist2
-          'Artist: Functions2': 'Artist: Functions2'
-          'Bee: Functions2': 'Bee: Functions2'
-          'Bee: Conditionals2': 'Bee: Conditionals2'
-          'Maze: Conditionals2': 'Maze: Conditionals2'
-          'Artist: Nested Loops2': 'Artist: Nested Loops2'
+          Crowdsourcing: Ühistegevused
+          Digital Citizenship: Digitaalne kodakondsus
+          Farmer - While Loops: Talunik - While tsükkel
+          description: Kursus 3 on disainitud õpilastele, kes on võtnud kursuse 2.
+            Õpilane läheb sügavamale programmeerimise teemadele tutvustatud eelmistes
+            kursuses, et leida painduvamaid lahendusi kompleksematele probleemidele.
+            Kursuse lõpuks õpilased loovad interaktiivseid lugusid ja mänge, mida
+            nad saavad jagada kõigiga. Soovitatav kooliastmetele 4-5.
+          'Studio: Create a Game': 'Play Lab: Moodusta mäng'
+          Maze: Labürint
+          Artist: Kunstnik
+          'Artist: Functions': 'Kunstnik: Funktsioonid'
+          'Bee: Functions': 'Mesinik: Funktsioonid'
+          'Bee: Conditionals': 'Mesilane: Tingimuslaused'
+          'Maze: Conditionals': 'Labürint: Tingimuslaused'
+          'Artist: Nested Loops': 'Kunstnik: Korduvad Tsüklid'
+          'Farmer: While Loops': 'Talunik: While Tsükkel'
+          'Bee: Nested Loops': 'Mesilane: Korduvad Tsüklid'
+          'Bee: Debugging': 'Mesilane: Silumine'
+          Maze2: Labürint2
+          Artist2: Kunstnik2
+          'Artist: Functions2': 'Kunstnik: Funktsioonid2'
+          'Bee: Functions2': 'Mesilane: Funktsioonid2'
+          'Bee: Conditionals2': 'Mesilased: Tingimuslaused2'
+          'Maze: Conditionals2': 'Labürint: Tingimuslaused2'
+          'Artist: Nested Loops2': 'Kunstnik: Korduvad Tsüklid2'
           'Farmer: While Loops2': 'Farmer: While Loops2'
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
           'Bee: Debugging2': 'Bee: Debugging2'
-          'Artist: Patterns': 'Artist: Patterns'
+          'Artist: Patterns': 'Kunstnik: Mustrid'
           Songwriting: Songwriting
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Vanustele 8-18
+          description_short: Kursus 3 on Kursus 2-e järg
         playlab:
           title: Play Lab
-          description: Create a story or make a game with Play Lab!
+          description: Loo lugu või mäng "Play Lab"iga!
           Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          description_short: Loo lugu või mäng "Play Lab"iga!
         artist:
-          title: Artist
-          description: Draw cool pictures and designs with the Artist!
-          Artist: Artist
-          description_short: Draw cool pictures and designs with the Artist!
+          title: Kunstnik
+          description: Joonista lahedaid pilte ja disaine Kunstnikuga!
+          Artist: Kunstnik
+          description_short: Joonista lahedaid pilte ja disaine Kunstnikuga!
         hourofcode:
-          Maze: Maze
-          title: Koodi Tund
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          Maze: Labürint
+          title: KoodiTund
+          description: Proovi programmeerimise põhitõdesid Angry Birds'is, Plants
+            vs. Zombies'is, ja Scrat'iga Jää ajast.
+          description_short: Proovi programmeerimise põhitõdesid paljude lõbusade
+            tegelsatega!
         frozen:
-          title: Code with Anna and Elsa
-          description: Let's use code to join Anna and Elsa as they explore the magic
-            and beauty of ice. You will create snowflakes and patterns as you ice-skate
-            and make a winter wonderland that you can then share with your friends!
-          Artist: Artist
+          title: Kirjuta koodi Anna ja Elsa'ga
+          description: Kasutame koodi, et liituda Anna ja Elsa'ga seiklusega avastada
+            jää maagilisust ja iludust. Sa moodustad lumehelbeid ja tauste uisutamise
+            ajal ning moodustad talvekuningriigi, mida saad jagada kõigi oma sõpradega!
+          Artist: Kunstnik
           description_short: Programmeerigem, et ühineda Anna ja Elsaga samal ajal,
             kui nad avastavad jää võlu ja ilu.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
-          'Artist: Variables': 'Artist: Variables'
-          'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
-          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          description_short: Õpilased, kes võtavad Kursus 4-ja peaksid enne olema
+            läbinud Kursused 2 ja 3.
+          description: Kursus 4 on disainitud õpilastele, kes on võtnud Kursus 2 ja
+            3. Õpilased lähevad sügavamale programmeerimise teemadega, mida tutvustati
+            eelmistes kursustes, et moodustada rohkem painduvamaid lahendusi rohkem
+            kompleksemate probleemide jaoks. Selle kursuse lõpuks, õpilased moodustavad
+            interaktiivseid lugusid ja mänge, mida nad saavad jaga kõigiga. Soovitatav
+            kooliastmetele 4-8.
+          'Artist: Variables': 'Kunstnik: Muutujad'
+          'Bee: For Loops': 'Mesilane: For tsüklid'
+          title: Kursus 4
+          'Algorithms: Tangrams': 'Algoritmid: Tangrammid'
           Variables: Muutujad
-          'Play Lab: Variables': 'Play Lab: Variables'
-          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-          'Artist: For Loops': 'Artist: For Loops'
-          'Play Lab: For Loops': 'Play Lab: For Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Unplugged: Tangrams': 'Unplugged: Tangrams'
-          Artist: Artist
+          'Play Lab: Variables': 'Play Lab: Muutujad'
+          'Play Lab: Functions with Parameters': 'Play Lab: Funktsioonid parameetritega'
+          'Bee: Functions with Parameters': 'Mesilane: Funktsioonid parameetritega'
+          'Artist: For Loops': 'Kunstnik: For tsüklid'
+          'Play Lab: For Loops': 'Play Lab: For tsükkel'
+          'Artist: Functions': 'Kunstnik: Funktsioonid'
+          'Unplugged: Tangrams': 'Unplugged: Tangrammid'
+          Artist: Kunstnik
           Bee: Mesilane
-          'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
+          'Unplugged: Envelope Variables': 'Unplugged: Kirja muutujad'
           'Unplugged: Madlibs': 'Unplugged: Madlibs'
-          'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
-          'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
-          'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
-          'Unplugged: Binary': 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          'Unplugged: For Loop Fun': 'Unplugged: For tsükkel Fun'
+          'Unplugged: Songwriting with Parameters': 'Unplugged: Laulukirjutamine parameetritega'
+          'Artist: Functions with Parameters': 'Kunstnik: Funktsioonid parameetritega'
+          'Unplugged: Binary': 'Unplugged: Binaar'
+          Bee Binary: Mesilane Binaar
+          Farmer Binary: Talunik Binaar
+          Maze and Bee: Labürint ja Mesilane
+          Artist Binary: Kunstnik Binaar
+          description_audience: Vanustele 10-18
+          Super Challenge - Variables: Super Challenge - Variables
         Course4pre:
-          title: Course 4 Prerequisite
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          title: Kursuse 4 Ettevalmistus
+          description_short: Väike kokkuvõte Kursuse 2 ja 3 põhimõtetest, õpilastele
+            kes pole neid võtnud veel.
+          description: Väike kokkuvõte Kursuse 2 ja 3 põhimõtetest, õpilastele kes
+            pole neid võtnud veel.
+          Course 4 Prerequisite: Kursuse 4 Ettevalmistus
           'Maze: Sequence': 'Labürint: Jada'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Debugging': 'Bee: Debugging'
+          'Artist: Sequence': 'Kunstnik: Jada'
+          'Artist: Loops': 'Kunstnik: Tsüklid'
+          'Bee: Conditionals': 'Mesilane: Tingimuslaused'
+          'Artist: Nested Loops': 'Kunstnik: Korduvad Tsüklid'
+          'Farmer: While Loops': 'Talunik: While Tsükkel'
+          'Bee: Nested Loops': 'Mesilane: Korduvad Tsüklid'
+          'Artist: Functions': 'Kunstnik: Funktsioonid'
+          'Bee: Debugging': 'Mesilane: Silumine'
         usability:
           Intro: Sissejuhatus
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
+          Variables and For Loops: Muutujad ja For tsüklid
+          Functions and Functions with Parameters: Funktsioonid ja funktsioonid parameetritega
           title: Usability Testing
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
           Variables: Muutujad
-          For Loops: For Loops
+          For Loops: For tsükkel
           Binary: Binary
         potus:
           title: special
@@ -243,17 +246,17 @@
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Videomängud
+            ja Koordinaadi Lennukid'
           'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Eval: Strings and Images': 'Eval: Strings and Images'
+          'Eval: Strings and Images': Sõned ja kujutised
           'Unplugged: Contracts': 'Unplugged: Contracts'
           'Eval: Writing Contracts': 'Eval: Writing Contracts'
           'Calc: Defining Variables': 'Calc: Defining Variables'
           'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
             (Big Game)'
           'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Unplugged: The Design Recipe': 'Unplugged: Disaini retsept'
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
           'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
@@ -261,8 +264,8 @@
           'Eval: Boolean Operators': 'Eval: Boolean Operators'
           'Play Lab: Booleans': 'Play Lab: Booleans'
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
-            and Piecewise Functions'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Tingimuslaused
+            ja tükipõhised funktsioonid'
           'Eval: Conditionals': Tingimuslaused
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Distance Formula'
@@ -270,8 +273,10 @@
             (Big Game)'
         infinity:
           title: Play Lab
-          description_short: Create a story or make a game with Play Lab!
-          description: Create a story or make a game with Play Lab!
+          description_short: Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad
+            Disney Infinity tegelased.
+          description: Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad
+            Disney Infinity tegelased.
           Play Lab: Play Lab
           Infinity: Lõpmatus
         algebrademo:
@@ -281,11 +286,11 @@
           description: A handful of puzzles to demonstrate the environment and programming
             language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Hindamise plokid
           Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
+          Defining Variables: Muutujate määratlemine
           Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: The Design Recipe
+          The Design Recipe: Disaini retsept
         K5PD:
           title: K5 Professional Development
           description: Professional Development for K5 Courses
@@ -350,8 +355,8 @@
           Color Pixelation Examples: Color Pixelation Examples
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
-          description_audience: Ages 10-18
+          title: Kiire sissejuhatus CS kursusele
+          description_audience: Vanustele 10-18
           description: This 20-hour course introduces core computer science and programming
             concepts. The course is designed for use in classrooms for grades K-8,
             but it is fun to learn at all ages.
@@ -360,7 +365,7 @@
           Introduction to Computer Science: Sissejuhatus arvutiõpetusse
           The Maze: Labürint
           Computational Thinking: Arvutuslik mõtlemine
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: Millimeetripaberi programmeerimine
           The Artist: Kunstnik
           Algorithms: Algoritmid
           The Artist 2: Kunstnik tase 2
@@ -370,12 +375,12 @@
           The Artist 3: Kunstnik tase 3
           Song Writing: Laulu kirjutamine
           The Farmer 2: Talunik tase 2
-          Abstraction: Abstraction
-          The Artist 4: Artist 4
-          Relay Programming: Relay Programming
-          The Farmer 3: The Farmer 3
+          Abstraction: Abstraktsus
+          The Artist 4: Kunstnik tase 4
+          Relay Programming: Relee Programmeerimine
+          The Farmer 3: Talunik tase 3
           The Internet: Internet
-          The Artist 5: Artist 5
+          The Artist 5: Kunstnik tase 5
           Wrap-up: Kokkuvõte
         edit-code:
           title: Muuda koodi
@@ -396,9 +401,9 @@
           Eval: Eval
         flappy:
           title: Flappy kood
-          description: Wanna write your own game in less than 10 minutes? Try our
-            Flappy Code tutorial!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description: Tahad kirjutada oma enda mängu vähem kui 10 minutiga? Proovi
+            meie Flappy Code õpetusvideot!
+          description_short: Loo oma Flappy mäng vähem kui 10 minutiga!
           Flappy Code: Flappy kood
         jigsaw:
           title: Pusle
@@ -407,14 +412,15 @@
           Jigsaw: Pusle
         step:
           title: samm
-          description: ''
-          description_short: Step tutorial
+          description: Samm-sammult juhendi
+          description_short: Samm-sammult juhendi
           Step: samm
         Hour of Code:
-          title: Hour of Code 2013
+          title: KoodiTund 2013
           description: ''
-          description_short: Try the basics of computer science with many fun characters!
-          Hour of Code 2013: Hour of Code 2013
+          description_short: Proovi programmeerimise põhitõdesid paljude lõbusade
+            tegelsatega!
+          Hour of Code 2013: KoodiTund 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -446,21 +452,21 @@
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: Puzzles
         course4pre:
-          title: Course 4 Prerequisite
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          title: Kursuse 4 Ettevalmistus
+          description_short: Väike kokkuvõte Kursuse 2 ja 3 põhimõtetest, õpilastele
+            kes pole neid võtnud veel.
+          description: Väike kokkuvõte Kursuse 2 ja 3 põhimõtetest, õpilastele kes
+            pole neid võtnud veel.
+          Course 4 Prerequisite: Kursuse 4 Ettevalmistus
           'Maze: Sequence': 'Labürint: Jada'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Debugging': 'Bee: Debugging'
+          'Artist: Sequence': 'Kunstnik: Jada'
+          'Artist: Loops': 'Kunstnik: Tsüklid'
+          'Bee: Conditionals': 'Mesilane: Tingimuslaused'
+          'Artist: Nested Loops': 'Kunstnik: Korduvad Tsüklid'
+          'Farmer: While Loops': 'Talunik: While Tsükkel'
+          'Bee: Nested Loops': 'Mesilane: Korduvad Tsüklid'
+          'Artist: Functions': 'Kunstnik: Funktsioonid'
+          'Bee: Debugging': 'Mesilane: Silumine'
         cspunit1:
           title: CSP Unit 1
           description_short: Make Black and White Images with the pixelation tool
@@ -506,8 +512,8 @@
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Videomängud
+            ja Koordinaadi Lennukid'
           'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
           'Eval: Strings and Images': 'Eval: Strings and Images'
           'Unplugged: Contracts': 'Unplugged: Contracts'
@@ -516,7 +522,7 @@
           'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
             (Big Game)'
           'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Unplugged: The Design Recipe': 'Unplugged: Disaini retsept'
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
           'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
@@ -524,24 +530,24 @@
           'Eval: Boolean Operators': 'Eval: Boolean Operators'
           'Play Lab: Booleans': 'Play Lab: Booleans'
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
-            and Piecewise Functions'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Tingimuslaused
+            ja tükipõhised funktsioonid'
           'Eval: Conditionals': 'Eval: Conditionals'
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Hindamise plokid
+          Strings and Images: Sõned ja kujutised
           Contracts: Contracts
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
-          The Design Recipe: The Design Recipe
+          The Design Recipe: Disaini retsept
           Your Game - Animation: Your Game - Animation
           Booleans: Booleans
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Conditionals and Piecewise Functions: Tingimuslaused ja Piecewise funktsioonid
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Introduction to PD: Introduction to PD
@@ -555,8 +561,8 @@
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Hindamise plokid
+          Strings and Images: Sõned ja kujutised
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
@@ -690,6 +696,21 @@
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant
             Challenge
           Digital Assistant Challenge: Digital Assistant Challenge
+          Creating Functions: Creating Functions
+          Functions and Top-Down Design: Functions and Top-Down Design
+          Design a Digital Scene: Design a Digital Scene
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Introducing Design Mode: Introducing Design Mode
+          Clicker Game: Clicker Game
+          Getting User Input: Getting User Input
+          Variables: Muutujad
+          Looping and Random Numbers - Under the Sea: Looping and Random Numbers -
+            Under the Sea
+          Multi-screen App: Multi-screen App
+          Variables Conceptorial Fodder: Variables Conceptorial Fodder
+          'Variables: Create, Assign, and Read': 'Variables: Create, Assign, and Read'
+          'Variables: Increment, Decrement, Display, and Scope': 'Variables: Increment,
+            Decrement, Display, and Scope'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -699,10 +720,10 @@
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Hindamise plokid
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
-          The Design Recipe: The Design Recipe
+          Strings and Images: Sõned ja kujutised
+          The Design Recipe: Disaini retsept
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
@@ -750,7 +771,7 @@
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Hindamise plokid
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -763,7 +784,7 @@
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Hindamise plokid
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -898,16 +919,18 @@
           The Need for Encryption: The Need for Encryption
           Keys and Passwords: Keys and Passwords
           Public Key Encryption: Public Key Encryption
+          Practice PT - The Internet and Society: Practice PT - The Internet and Society
+          Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
+          Evaluation Blocks: Hindamise plokid
+          Strings and Images: Sõned ja kujutised
+          Defining Variables: Muutujate määratlemine
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          The Design Recipe: The Design Recipe
+          The Design Recipe: Disaini retsept
           Big Game - Animation: Big Game - Animation
           Booleans: Booleans
           Sam the Bat: Sam the Bat
@@ -920,8 +943,8 @@
           Free Play: Free Play
         allthethings:
           Jigsaw: Pusle
-          Maze: Maze
-          Artist: Artist
+          Maze: Labürint
+          Artist: Kunstnik
           Bee: Mesilane
           PlayLab: PlayLab
           Farmer: Farmer
@@ -953,11 +976,11 @@
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Hindamise plokid
+          Strings and Images: Sõned ja kujutised
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Muutujate määratlemine
+          Defining Functions: Ülesannete määratlemine
           Rocket-Height: Rocket-Height
           Booleans: Booleans
           'Eval: Conditionals': 'Eval: Conditionals'
@@ -974,12 +997,12 @@
           App Lab: Rakenduste labor
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: Tere tulemast!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: Tere tulemast!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Interneti simulaator
@@ -1008,7 +1031,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: Tere tulemast!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1060,12 +1083,13 @@
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
           Necessary Background: Necessary Background
+          Equity PD: Equity PD
         hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
-          Hour of Code: Koodi Tund
-          Hour of Code 2015: Hour of Code 2015
+          title: Kooditund 2015
+          description_short: Kasuta Play Labi, et luua lugu või mäng.
+          description: Kasuta Play Labi, et luua lugu või mäng.
+          Hour of Code: KoodiTund
+          Hour of Code 2015: Kooditund 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1073,11 +1097,11 @@
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Hindamise plokid
+          Strings and Images: Sõned ja kujutised
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Muutujate määratlemine
+          Defining Functions: Ülesannete määratlemine
           Rocket-Height: Rocket-Height
           Booleans: Booleans
           'Eval: Conditionals': 'Eval: Conditionals'
@@ -1086,14 +1110,14 @@
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
-          The Design Recipe: The Design Recipe
+          Welcome!: Tere tulemast!
+          The Design Recipe: Disaini retsept
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: Tere tulemast!
           Wrap-Up: Kokkuvõte
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1110,7 +1134,7 @@
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: Tere tulemast!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1128,7 +1152,7 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: Tere tulemast!
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1142,7 +1166,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: Tere tulemast!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1166,7 +1190,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: Tere tulemast!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1226,14 +1250,14 @@
             or in combination with Afterschool 1 . This course focuses on learning
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-          Graph Paper Programming: Graph Paper Programming
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Binary Bracelets: Binary Bracelets
+          Happy Maps: '"Happy Maps"'
+          Move it, Move it: Liiguta, liiguta
+          'Real-life Algorithms: Plant a Seed': 'Päris elu algoritmid: Seemenda'
+          Graph Paper Programming: Millimeetripaberi programmeerimine
+          Building a Foundation: Vundamendi ehitus
+          Getting Loopy: muutub tsükliliseks
+          The Big Event: Suursündmus
+          Binary Bracelets: Binaarsed käevõrud
           Songwriting: Songwriting
         afterschool1:
           title: Afterschool 1
@@ -1283,7 +1307,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Tere tulemast!
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1304,11 +1328,18 @@
             Muddy City'
           Day 18-21 Final Project: Day 18-21 Final Project
           Unit 2 Challenge Planning & Creation: Unit 2 Challenge Planning & Creation
+          Unit 2 Challenge Planning: Unit 2 Challenge Planning
+          Unit 2 Challenge Creation: Unit 2 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Tere tulemast!
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1334,7 +1365,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Tere tulemast!
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1356,11 +1387,13 @@
           'Day 20-23 Scratch: Timing Game': 'Day 20-23 Scratch: Timing Game'
           'Day 24 Scratch: Games': 'Day 24 Scratch: Games'
           Day 25-30 Final Project: Day 25-30 Final Project
+          Unit 4 Challenge Planning: Unit 4 Challenge Planning
+          Unit 4 Challenge Creation: Unit 4 Challenge Creation
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Tere tulemast!
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1369,7 +1402,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Tere tulemast!
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1407,3 +1440,50 @@
           'Data App Part 8: Visualize Data': 'Data App Part 8: Visualize Data'
           'Data App Part 9: Reflect': 'Data App Part 9: Reflect'
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
+        ScienceP3OLPT2:
+          title: Computer Science in Science PD Phase 3b
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Tere tulemast!
+          Earth Science Challenges: Earth Science Challenges
+          Life Science Challenges: Life Science Challenges
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Kokkuvõte
+          Thinking About Implementation: Thinking About Implementation
+          Physical Science Challenges: Physical Science Challenges
+        algebraPD3b:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra mid year lesson support
+          description: CS in Algebra mid year lesson support
+          Teaching Support - Lessons 1-3: Teaching Support - Lessons 1-3
+          Teaching Support - Lessons 4-7: Teaching Support - Lessons 4-7
+          Teaching Support - Lessons 8-12: Teaching Support - Lessons 8-12
+          Teaching Support - Lessons 13-16: Teaching Support - Lessons 13-16
+          Teaching Support - Lessons 17-20: Teaching Support - Lessons 17-20
+          Getting Started: Getting Started
+          Close and Next Steps: Close and Next Steps
+        CSPPD3-Unit2:
+          title: 'Computer Science Principles: Unit 2 PD'
+          description_short: Online Exploration of CSP Unit 2
+          description: Online Exploration of CSP Unit 2
+          Welcome!: Tere tulemast!
+          Getting Started: Getting Started
+          Unit 2 Overview: Unit 2 Overview
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        duino:
+          Experimenting with Arduino stuff: Experimenting with Arduino stuff
+          Basic Circuits: Basic Circuits
+        Special Fun:
+          title: Special Fun
+          description_short: Something special for those who know it exists. These
+            puzzles might not be around long, so enjoy them while you can!
+          description_audience: Vanustele 10-18
+          Halloween 2015: Halloween 2015
+        SpecialSeries:
+          title: Special Levels
+          description_short: Something special for those who know it exists. These
+            puzzles might not be around long, so enjoy them while you can!
+          description_audience: Vanustele 10-18
+          Halloween 2015: Halloween 2015

@@ -1,3 +1,6 @@
+/* global $, options, dashboard */
+// options is appOptions.level, from the level parameters themselves
+
 var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
 var LETTERS = ALPHABET.split('');
 
@@ -19,16 +22,20 @@ var paused = true;
 
 // DOM elements
 var plaintext_input, keyword_input, vigenere_table;
-var plaintext_display, keyword_display, ciphertext_display;
+var input_display, keyword_display, output_display;
+var input_label, output_label;
 var play_button, pause_button;
 
 $(document).ready(function () {
   plaintext_input = $("#plaintext-input");
   keyword_input = $("#keyword-input");
 
-  plaintext_display = $("#plaintext-display");
   keyword_display = $("#keyword-display");
-  ciphertext_display = $("#ciphertext-display");
+  input_display = $("#input-display");
+  output_display = $("#output-display");
+
+  input_label = $("label[for=input-display]");
+  output_label = $("label[for=output-display]");
 
   play_button = $("#action-toggle button[title=play]");
   pause_button = $("#action-toggle button[title=pause]");
@@ -47,6 +54,27 @@ $(document).ready(function () {
   });
 
   $("#mode-toggle button[value=encrypt]").click();
+  $("#speedSlider").slider({
+    max: 1000,
+    min: 0,
+    value: 500,
+    change: setTimerFromSlider
+  });
+
+  $("#finished").click(function () {
+    var finishedButton = $(this);
+
+    if (finishedButton.prop("disabled") === true) {
+      return;
+    }
+
+    finishedButton.prop("disabled", true);
+    dashboard.dialog.processResults(function (willRedirect) {
+      if (!willRedirect) {
+        finishedButton.prop("disabled", false);
+      }
+    });
+  });
 });
 
 function renderVigenereTable () {
@@ -122,8 +150,8 @@ function decryptNextCharacter (skipAnimation) {
   if (inputMessage.length <= 0) {
     clearTimer();
     keyword_display.html(keyword_input.val());
-    plaintext_display.html(plaintext_input.val());
-    ciphertext_display.html(outputMessage);
+    input_display.html(plaintext_input.val());
+    output_display.html(outputMessage);
     return false;
   }
 
@@ -145,8 +173,8 @@ function decryptNextCharacter (skipAnimation) {
   if (skipAnimation === false) {
     highlightVigenereTable(keyRow, cipherCol);
     highlightCharacter(keyword_display, key, keyIndex);
-    highlightCharacter(plaintext_display, plaintext_input.val(), outputMessage.length - 1);
-    highlightCharacter(ciphertext_display, outputMessage, outputMessage.length - 1);
+    highlightCharacter(input_display, plaintext_input.val(), outputMessage.length - 1);
+    highlightCharacter(output_display, outputMessage, outputMessage.length - 1);
   }
 
   keyIndex = (keyIndex + 1) % keyword_input.val().length;
@@ -161,8 +189,8 @@ function encryptNextCharacter (skipAnimation) {
   if (inputMessage.length <= 0) {
     clearTimer();
     keyword_display.html(keyword_input.val());
-    plaintext_display.html(plaintext_input.val());
-    ciphertext_display.html(outputMessage);
+    input_display.html(plaintext_input.val());
+    output_display.html(outputMessage);
     return false;
   }
 
@@ -174,14 +202,14 @@ function encryptNextCharacter (skipAnimation) {
   var row = LETTERS.indexOf(keyChar);
   var col = LETTERS.indexOf(nextChar);
 
-  nextEncryptedChar = vigenereLetter(row, col);
+  var nextEncryptedChar = vigenereLetter(row, col);
   outputMessage += nextEncryptedChar;
 
   if (skipAnimation === false) {
     highlightVigenereTable(row, col);
     highlightCharacter(keyword_display, key, keyIndex);
-    highlightCharacter(plaintext_display, plaintext_input.val(), outputMessage.length - 1);
-    highlightCharacter(ciphertext_display, outputMessage, outputMessage.length - 1);
+    highlightCharacter(input_display, plaintext_input.val(), outputMessage.length - 1);
+    highlightCharacter(output_display, outputMessage, outputMessage.length - 1);
   }
 
   keyIndex = (keyIndex + 1) % key.length;
@@ -222,7 +250,7 @@ function encodeNextCharacter (){
 }
 
 function setTimerFromSlider () {
-  setTimer(1000 - $("#speedSlider").val());
+  setTimer(1000 - $("#speedSlider").slider("value"));
 }
 
 function clearTimer () {
@@ -271,8 +299,16 @@ function setup () {
   inputMessage = clean(plaintext_input.val());
 
   keyword_display.html(key);
-  plaintext_display.html(inputMessage);
-  ciphertext_display.html("&nbsp;");
+  input_display.html(inputMessage);
+  output_display.html("&nbsp;");
+
+  if (IS_ENCRYPTING === true) {
+    input_label.html("Plaintext");
+    output_label.html("Ciphertext");
+  } else {
+    output_label.html("Plaintext");
+    input_label.html("Ciphertext");
+  }
 
   clearVigenereTableHighlights();
 }

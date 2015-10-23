@@ -7,14 +7,14 @@ markdown <<MARKDOWN
 
 # Background
 
-All programming languages allow a programmer to create new commands for the computer to run.  These new commands are called **functions** in JavaScript (the generic term is 'procedures').  When you **define** a function you give a name a set of actions you want the computer to perform.  When you **call** a function you are telling the computer to run (or execute) that set of actions.
+All programming languages allow a programmer to create new commands for the computer to run.  In JavaScript these new commands are called **functions**. In other programming languages these might instead be called procedures or methods.  When you **define** a function you give a name to a set of actions you want the computer to perform.  When you **call** a function you are telling the computer to run (or execute) that set of actions.
 
-Procedures/functions are a way of “naming” chunks of code, that you can call (execute) as many times as needed. Procedures/functions are a form of computational abstraction. Abstractions allow us to simplify a process by ignoring the details. They allow us to think about code in larger logical chunks, making it much easier to design and reason about a program.
+Functions are a way of naming chunks of code that you can call (execute) as many times as needed. Functions are a form of computational abstraction. Abstractions allow us to simplify a process by ignoring the details. They allow us to think about code in larger logical chunks, making it much easier to design and reason about a program.
 
 # Lesson
 
-* Write procedures (i.e. functions) with names that describe what the function does in solving the problem.
-* Write a program that uses more than one function/procedure and more than one level of abstraction.
+* Write functions with names that describe what each function does in solving the problem.
+* Write a program that uses more than one function and more than one level of abstraction.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

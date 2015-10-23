@@ -33,6 +33,14 @@ levels.custom = {
   'sliderSpeed': 0.95,
   'appWidth': 320,
   'appHeight': 480,
+
+  /**
+   * This is the default set of functions available to us if the levelbuilder
+   * leaves codeFunctions blank.
+   * Applab.rb self.palette serves a similar function, intially providing
+   * levelbuilders with the text for the default set of blocks.
+   * These two places shouldbe kept in sync
+   */
   'codeFunctions': {
     // UI Controls
     "onEvent": null,
@@ -54,6 +62,7 @@ levels.custom = {
     "hideElement": null,
     "deleteElement": null,
     "setPosition": null,
+    "setSize": null,
     "write": null,
     "getXPosition": null,
     "getYPosition": null,
@@ -91,6 +100,7 @@ levels.custom = {
     "updateRecord": null,
     "deleteRecord": null,
     "getUserId": null,
+    "drawChartFromRecords": null,
 
     // Turtle
     "moveForward": null,
@@ -113,7 +123,7 @@ levels.custom = {
     "penRGB": null,
     "show": null,
     "hide": null,
-    "speed" : null,
+    "speed": null,
 
     // Control
     "forLoop_i_0_4": null,
@@ -147,8 +157,10 @@ levels.custom = {
 
     // Variables
     "declareAssign_x": null,
+    "declareNoAssign_x": null,
     "assign_x": null,
     "declareAssign_x_prompt": null,
+    "declareAssign_x_promptNum": null,
     "console.log": null,
     "declareAssign_str_hello_world": null,
     "substring": null,

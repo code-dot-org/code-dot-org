@@ -16,6 +16,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/* global Blockly, goog */
+/* global assert, assertNull, assertNotNull, assertEquals, assertFalse */
 'use strict';
 
 function test_setBlockNotDisconnectable() {
@@ -61,4 +64,129 @@ function test_clickIntoEditableUnmovableBlock() {
       goog.dom.getElementByClass('blocklyHtmlInput'));
 
   goog.dom.removeNode(containerDiv);
+}
+
+function test_setBlockNextConnectionDisabled() {
+  var containerDiv = Blockly.Test.initializeBlockSpaceEditor();
+
+  var blockSpace = Blockly.mainBlockSpace;
+  var single_block_next_connection_default = ''+
+      '<xml>' +
+        '<block type="math_change">' +
+          '<title name="VAR">i</title>' +
+        '</block>' +
+      '</xml>';
+
+  Blockly.Xml.domToBlockSpace(blockSpace, Blockly.Xml.textToDom(
+      single_block_next_connection_default));
+
+  var block = blockSpace.getTopBlocks()[0];
+
+  assert(block instanceof Blockly.Block);
+  assertNotNull(block.nextConnection);
+  assert(block.nextConnection instanceof Blockly.Connection);
+  assert(block.nextConnectionDisabled_ === false);
+
+  var single_block_next_connection_enabled = ''+
+      '<xml>' +
+      '  <block type="math_change" next_connection_disabled="false">' +
+      '    <title name="VAR">j</title>' +
+      '  </block>' +
+      '</xml>';
+
+  Blockly.Xml.domToBlockSpace(blockSpace, Blockly.Xml.textToDom(
+      single_block_next_connection_enabled));
+
+  block = blockSpace.getTopBlocks()[1];
+
+  assert(block instanceof Blockly.Block);
+  assertNotNull(block.nextConnection);
+  assert(block.nextConnection instanceof Blockly.Connection);
+  assert(block.nextConnectionDisabled_ === false);
+
+  var single_block_next_connection_disabled = ''+
+      '<xml>' +
+      '  <block type="math_change" next_connection_disabled="true">' +
+      '    <title name="VAR">k</title>' +
+      '  </block>' +
+      '</xml>';
+
+  Blockly.Xml.domToBlockSpace(blockSpace, Blockly.Xml.textToDom(
+      single_block_next_connection_disabled));
+
+  block = blockSpace.getTopBlocks()[2];
+
+  assert(block instanceof Blockly.Block);
+  assert(block.nextConnectionDisabled_ === true);
+  assertNull(block.nextConnection);
+
+}
+
+function test_visibleThroughParent() {
+  Blockly.Test.initializeBlockSpaceEditor();
+  var blockSpace = Blockly.mainBlockSpace;
+
+  Blockly.Xml.domToBlockSpace(blockSpace, Blockly.Xml.textToDom(
+    '<xml>' +
+      '<block type="math_change">' +
+        '<title name="VAR">i</title>' +
+        '<next>' +
+          '<block type="math_change">' +
+            '<title name="VAR">j</title>' +
+          '</block>' +
+        '</next>' +
+      '</block>' +
+    '</xml>'
+  ));
+
+  var parentBlock = blockSpace.getTopBlocks()[0];
+  var childBlock = parentBlock.getChildren()[0];
+
+  assert(parentBlock.isVisible() === true);
+  assert(childBlock.isVisible() === true);
+
+  parentBlock.setCurrentlyHidden(true);
+
+  assert(parentBlock.isVisible() === false);
+  assert(childBlock.isVisible() === false);
+}
+
+function test_isVisible() {
+  Blockly.Test.initializeBlockSpaceEditor();
+  var blockSpace = Blockly.mainBlockSpace;
+
+  Blockly.Xml.domToBlockSpace(blockSpace, Blockly.Xml.textToDom(
+    '<xml>' +
+      '<block type="math_change">' +
+        '<title name="VAR">k</title>' +
+      '</block>' +
+    '</xml>'
+  ));
+  var block = blockSpace.getTopBlocks()[0];
+
+  // block defaults to visible
+  assert(block.isVisible() === true);
+
+  // hide the block, and it's invisible
+  block.setCurrentlyHidden(true);
+  assert(block.isVisible() === false);
+
+  // unhide the block, make it invisible to users, and it's invisible
+  block.setCurrentlyHidden(false);
+  block.setUserVisible(false);
+  assert(block.isVisible() === false);
+
+  // cache the original editBlocks state, change Blockly to edit mode,
+  // and it becomes visible again
+  var original_editBlocks_state = Blockly.editBlocks;
+  Blockly.editBlocks = 'start_blocks';
+  assert(block.isVisible() === true);
+
+  // while still in edit mode, hide it, and it becomes invisible
+  block.setCurrentlyHidden(true);
+  assert(block.isVisible() === false);
+
+  // finally, restore the editBlocks state to avoid polluting future
+  // tests
+  Blockly.editBlocks = original_editBlocks_state;
 }

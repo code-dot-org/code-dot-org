@@ -1,7 +1,7 @@
 var path = require('path');
-var crypto = require('crypto');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
+var glob = require('glob');
 
 var config = {};
 
@@ -30,9 +30,7 @@ if (process.env.MOOC_APP) {
 var envOptions = {
   minify: (process.env.MOOC_MINIFY === '1'),
   localize: (process.env.MOOC_LOCALIZE === '1'),
-  dev: (process.env.MOOC_DEV === '1'),
-  digest: (process.env.MOOC_DIGEST === '1')
-
+  dev: (process.env.MOOC_DEV === '1')
 };
 
 var LOCALES = (envOptions.localize ? [
@@ -97,8 +95,7 @@ if (process.env.MOOC_LOCALE) {
 }
 
 config.clean = {
-  all: ['build'],
-  digest: ['build/package/js/**/*-????????????????????????????????.js']
+  all: ['build']
 };
 
 var ace_suffix = envOptions.dev ? '' : '-min';
@@ -206,15 +203,6 @@ config.copy = {
         dest: 'build/package/js/jsinterpreter/'
       }
     ]
-  }
-};
-
-config.digest = {
-  options: {
-    out: 'build/package/js/manifest.js'
-  },
-  files: {
-    src: ['build/package/js/**/*.js', '!build/package/js/ace/**/*.js']
   }
 };
 
@@ -393,6 +381,9 @@ config.jshint = {
     browser: true,
     undef: true,
     globals: {
+      $: true,
+      jQuery: true,
+      React: true,
       Blockly: true,
       //TODO: Eliminate the globals below here. Could at least warn about them
       // in their respective files
@@ -412,9 +403,9 @@ config.jshint = {
     'tasks/**/*.js',
     'src/**/*.js*',
     'test/**/*.js',
+    '!src/**/*.min.js*',
     '!src/hammer.js',
     '!src/lodash.js',
-    '!src/lodash.min.js',
     '!src/canvg/*.js',
     '!src/calc/js-numbers/js-numbers.js',
     '!src/ResizeSensor.js',
@@ -441,33 +432,6 @@ module.exports = function(grunt) {
 
   grunt.loadTasks('tasks');
   grunt.registerTask('noop', function () {});
-
-  // Add md5 digest to filenames
-  grunt.registerMultiTask('digest', function () {
-    var manifest = {};
-    var manifestFile = this.options().out;
-
-    this.filesSrc.forEach(function (file) {
-
-      // Don't add a digest to the manifest
-      if (file === manifestFile) {
-        return;
-      }
-
-      var oldName = path.relative('build/package', file);
-      var newName;
-      if (envOptions.digest) {
-        var data = grunt.file.read(file);
-        var digest = crypto.createHash('md5').update(data).digest('hex');
-        newName = oldName.replace(/\.js$/, '-' + digest + '.js');
-        fs.rename(file, file.replace(/\.js$/, '-' + digest + '.js'));
-      } else {
-        newName = oldName;
-      }
-      manifest[oldName] = newName;
-    });
-    grunt.file.write(manifestFile, 'window.digestManifest = ' + JSON.stringify(manifest));
-  });
 
   // Generate locale stub files in the build/locale/current folder
   grunt.registerTask('locales', function() {
@@ -500,9 +464,7 @@ module.exports = function(grunt) {
     'exec:browserify',
     // Skip minification in development environment.
     envOptions.dev ? 'noop' : ('concurrent:uglify'),
-    'postbuild',
-    'clean:digest',
-    'digest'
+    'postbuild'
   ]);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
@@ -522,8 +484,13 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('jshint:files', function () {
+    var files;
     if (grunt.option('files')) {
-      var files = grunt.option('files').split(",");
+      files = grunt.option('files').split(",");
+      grunt.config('jshint.some', files);
+    } else  if (grunt.option('glob')) {
+      files = glob.sync(grunt.option('glob'));
+      console.log('files: ' + files.join('\n'));
       grunt.config('jshint.some', files);
     }
     grunt.task.run('jshint:some');

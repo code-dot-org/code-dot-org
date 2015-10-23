@@ -59,7 +59,7 @@ function customizeStyles() {
     $('.hide_on_v2').hide();
     $('#height, #width').prop('readonly', true);
   }
-  if (options.hex) {
+  if (options.hex === "true" || options.hex === true) {
     $('input[name="binHex"][value="hex"]').prop('checked', true);
   }
   if (options.instructions) {
@@ -90,6 +90,9 @@ function initProjects() {
       options.saveProject = dashboard.project.save.bind(dashboard.project);
       options.projectChanged = dashboard.project.projectChanged;
       window.dashboard.project.init(sourceHandler);
+
+      // Complete project initialization sequence.
+      $(document).trigger('appInitialized');
     }).always(function() {
       pixelationDisplay();
     });

@@ -1,0 +1,14 @@
+name 'ECSPD Unit 2 Dani'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+## Unit 2 Challenge Preview > What is a challenge?
+
+Watch this brief video from Code.org ECS Program Manager, Dani McAvoy, to learn about challenges.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HI8KuNtao7Q" frameborder="0" allowfullscreen></iframe>
+
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

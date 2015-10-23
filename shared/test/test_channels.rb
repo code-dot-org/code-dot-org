@@ -9,7 +9,7 @@ class ChannelsTest < Minitest::Test
   include Rack::Test::Methods
 
   def build_rack_mock_session
-    Rack::MockSession.new(ChannelsApi, 'studio.code.org')
+    @session = Rack::MockSession.new(ChannelsApi, 'studio.code.org')
   end
 
   def test_create_channel
@@ -117,14 +117,14 @@ class ChannelsTest < Minitest::Test
 
     get "/v3/channels/#{channel_id}/abuse"
     assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuseScore']
+    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
 
     post "/v3/channels/#{channel_id}/abuse"
     assert last_response.ok?
 
     get "/v3/channels/#{channel_id}/abuse"
     assert last_response.ok?
-    assert_equal 10, JSON.parse(last_response.body)['abuseScore']
+    assert_equal 10, JSON.parse(last_response.body)['abuse_score']
 
     delete "/v3/channels/#{channel_id}/abuse"
     assert last_response.unauthorized?
@@ -139,13 +139,34 @@ class ChannelsTest < Minitest::Test
 
     get "/v3/channels/#{channel_id}/abuse"
     assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuseScore']
+    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
 
     post "/v3/channels/#{channel_id}/abuse"
     assert last_response.ok?
 
     get "/v3/channels/#{channel_id}/abuse"
     assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuseScore']
+    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
+  end
+
+  def test_most_recent
+    post '/v3/channels', {level: 'projects/abc'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    abc_channel_id = last_response.location.split('/').last
+
+    sleep 1
+
+    post '/v3/channels', {level: 'projects/xyz'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    xyz_channel_id = last_response.location.split('/').last
+
+    sleep 1
+
+    # These hidden and frozen projects should be skipped when considering most_recent
+    post '/v3/channels', {hidden: true, level: 'projects/abc'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    post '/v3/channels', {frozen: true, level: 'projects/xyz'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+
+    user_storage_id = storage_decrypt_id CGI.unescape @session.cookie_jar[storage_id_cookie_name]
+
+    assert_equal abc_channel_id, StorageApps.new(user_storage_id).most_recent('abc')
+    assert_equal xyz_channel_id, StorageApps.new(user_storage_id).most_recent('xyz')
   end
 end

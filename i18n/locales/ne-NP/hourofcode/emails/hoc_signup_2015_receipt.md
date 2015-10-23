@@ -18,11 +18,11 @@ We'll be in touch about prizes, new tutorials and other exciting updates in the 
 
 ## २. तपाईको स्कूललाई Hour of Code को प्रस्ताब राखन भन्नुहोश
 
-[ यो ईमेललाई](http://<%= hostname %>/resources #email) तपाइँको प्रधानाध्यापकमा पठाउनुहोस्।
+[यो मेल पठाउनुहोस् ](https://<%= hostname %>/resources#email) तपाइको प्रधानाध्यापक लाई .
 
 ## ३. तपाईको कम्पनीलाई संलग्न हुन भन्नुहोश
 
-[ यो ईमेललाई](http://<%= hostname %>/resources #email) तपाइँको सिईओमा पठाउनुहोस्।
+[मेल पठाउनुहोस् ](https://<%= hostname %>/resources#email) तपाईको व्यवस्थापकलाई वा CEO लाई .
 
 ## 4. आफ्नो समुदायमा Hour of Code लाई बढावा दिनुहोस्
 
@@ -30,7 +30,7 @@ We'll be in touch about prizes, new tutorials and other exciting updates in the 
 
 ## ५. Hour of Code समर्थनगर्नुकोलागी स्थानीय निर्वाचित आधिकारिकको सहयोग मग्नुहोश
 
-[ यो ईमेललाई ](http://<%= hostname %>/resources #politicians) तपाइँको मेयर, नगर परिषद्, वा स्कूल बोर्डमा पठाउनुहोस् र तिनिहरूलाई तपाइँको स्कूल भ्रमण गर्न आमन्त्रण गर्नुहोस्।
+[यो मेल पठाउनुहोस् ](https://<%= hostname %>/resources#politicians) गाविस सचिब , वडा प्रतिनिधि , नगर प्रमुख, विद्यालय , बिद्यालय ब्यबस्थापन समिति , बिद्यालयमा उपस्थिति को लागि .
 
 * * *
 
