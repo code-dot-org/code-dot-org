@@ -98,15 +98,14 @@ function getLocations(results) {
     var volunteers = results.response.docs; // The actual volunteers that were returned by Solr.
     var volunteers_count = volunteers.length;
 
-    for(var i = 0; i < volunteers_count; i++){
-      var index = i;
-      var coordinates = volunteers[i].location_p.split(',');
+    for(var index = 0; index < volunteers_count; index++){
+      var coordinates = volunteers[index].location_p.split(',');
       var lat = coordinates[0];
       var lon = coordinates[1];
-      var title = volunteers[i].name_s;
-      var id = volunteers[i].id;
-      var html = compileHTML(index, volunteers[i]);
-      var contact_title = compileContact(index, volunteers[i]);
+      var title = volunteers[index].name_s;
+      var id = volunteers[index].id;
+      var html = compileHTML(index, volunteers[index]);
+      var contact_title = compileContact(index, volunteers[index]);
       var contact_link = '<a id="contact-trigger-' + index + '" class="contact-trigger" onclick="return contactVolunteer()">Contact</a>';
 
       var location = {
@@ -237,7 +236,7 @@ function compileHTML(index, location) {
   }
 
   $.each(lines, function(key, field) {
-    html+= '<div>' + field + '</div>';
+    html += '<div>' + field + '</div>';
   });
 
   return html;

@@ -1,0 +1,60 @@
+---
+title: Unsubscribe from Hour of Code Volunteer List
+nav: blank
+rightbar: blank
+---
+%script{type: "text/javascript", src: "/js/volunteer-unsubscribe.js"}
+
+- dont_cache
+- secret = File.basename(request.path_info)
+- pass unless form = Form2.from_row(DB[:forms].where(kind:'VolunteerEngineerSubmission2015', secret:secret).first)
+- unsubscribed = form.data['unsubscribed_b']
+
+%h1 Unsubscribe from Hour of Code Volunteer List
+
+- if unsubscribed
+  You are no longer on the volunteer list and you will not be contacted by teachers. Did you unsubscribe by accident? If you'd like to volunteer again, please sign up at 
+  %a{href: "https://code.org/volunteer/engineer"}
+    code.org/volunteer/engineer.
+- else
+  %form#unsubscribe-volunteer-form{role: "form", onsubmit: "event.preventDefault(); unsubscribeVolunteerList();"}
+    #error-message{style: 'display: none'}
+    #test
+    %p You will be removed from the volunteer mailing list and you will no longer be contacted by teachers. If you have a moment, please let us know why you are unsubscribing.
+
+    .form-group#unsubscribe-volunteer-reason{style: 'margin-left: 20px;'}
+      %label.radio
+        %input#unsubscribe-volunteer-never{type: "radio", name: "unsubscribe_reason_s", required: false, value: "never"} I never signed up to be a volunteer
+      %label.radio
+        %input#unsubscribe-volunteer-matched{type: "radio", name: "unsubscribe_reason_s", required: false, value: "matched"} I've already connected with teacher(s) and don't want to be contacted anymore
+      %label.radio
+        %input#unsubscribe-volunteer-uninterested{type: "radio", name: "unsubscribe_reason_s", required: false, value: "uninterested"} I no longer want to be a volunteer
+      %label.radio
+        %input#unsubscribe-volunteer-spam{type: "radio", name: "unsubscribe_reason_s", required: false, value: "spam"} I received emails that are spam and should be reported
+      %label.radio
+        %input#unsubscribe-volunteer-other{type: "radio", name: "unsubscribe_reason_s", required: false, value: "other"} Other
+	 
+    .form-group{style: "display: none;"}
+      %textarea#unsubscribe-volunteer-details.form-control{name: "unsubscribe_details_t", placeholder: "Anything else you'd like to share?", required: false, style: "height: 5em;"}
+
+    %input#unsubscribe-volunteer-bool{name:'unsubscribed_b', type:'hidden', required: true, value: 1}
+    %input#unsubscribe-volunteer-name{name:'name_s', type:'hidden', required: true, value: form.data['name_s']}
+    %input#unsubscribe-volunteer-company{name:'company_s', type:'hidden', required: true, value: form.data['company_s']}
+    %input#unsubscribe-volunteer-experience{name:'experience_s', type:'hidden', required: true, value: form.data['experience_s']}
+    %input#unsubscribe-volunteer-location{name:'location_s', type:'hidden', required: true, value: form.data['location_s']}
+    %input#unsubscribe-volunteer-location-flexibility{name:'location_flexibility_ss', type:'hidden', required: true, value: form.data['location_flexibility_ss']}
+    %input#unsubscribe-volunteer-volunteer-after-hoc{name:'volunteer_after_hoc_b', type:'hidden', required: true, value: form.data['volunteer_after_hoc_b']}
+    %input#unsubscribe-volunteer-time-commitment{name:'time_commitment_s', type:'hidden', required: true, value: form.data['time_commitment_s']}
+    %input#unsubscribe-volunteer-linkedin{name:'linkedin_s', type:'hidden', required: true, value: form.data['linkedin_s']}
+    %input#unsubscribe-volunteer-facebook{name:'facebook_s', type:'hidden', required: true, value: form.data['facebook_s']}
+    %input#unsubscribe-volunteer-description{name:'description_s', type:'hidden', required: true, value: form.data['description_s']}
+    %input#unsubscribe-volunteer-email{name:'email_s', type:'hidden', required: true, value: form.data['email_s']}
+    %input#unsubscribe-volunteer-allow-contact{name:'allow_contact_b', type:'hidden', required: true, value: form.data['allow_contact_b']}
+    #volunteer-secret{style: 'display: none'}= secret
+
+    %button.btn-submit Unsubscribe
+
+  #thanks{:style=>"display: none;"}
+    You have been unsubscribed and will no longer be contacted by teachers. Did you unsubscribe by accident? If you'd like to volunteer again, please sign up at 
+    %a{href: "https://code.org/volunteer/engineer"}
+      code.org/volunteer/engineer.
