@@ -777,7 +777,7 @@ class UserTest < ActiveSupport::TestCase
     user = create :student
     assert !user.needs_to_backfill_user_scripts?
 
-    script = Script.find_by_name("course2")
+    script = Script.find(1)
 
     create :user_level, user: user, level: script.script_levels.first.level, script: script
     # now has progress
