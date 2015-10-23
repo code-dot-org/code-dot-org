@@ -5,9 +5,6 @@ var utils = require('../utils');
 var StudioAnimation = require('./StudioAnimation');
 var StudioSpriteSheet = require('./StudioSpriteSheet');
 
-// uniqueId that increments by 1 each time an element is created
-var uniqueId = 0;
-
 // mapping of how much we should rotate based on direction
 var DIR_TO_ROTATION = {};
 DIR_TO_ROTATION[Direction.EAST] = 0;
@@ -128,14 +125,6 @@ var Projectile = function (options) {
 };
 Projectile.inherits(Collidable);
 module.exports = Projectile;
-
-/**
- * Test only function so that we can start our id count over.
- */
-Projectile.__resetIds = function () {
-  StudioAnimation.__resetIds();
-  uniqueId = 0;
-};
 
 /** @returns {SVGImageElement} */
 Projectile.prototype.getElement = function () {
