@@ -92,7 +92,7 @@ SQL
 
       # If the level type is multiple choice, get the text answers and replace
       # the numerical responses stored with the corresponding text.
-      if [3909, 3910, 3907].include? level_id
+      if [3911, 3909, 3910].include? level_id
         level_properties = Level.where(id: level_id).pluck(:properties)
         level_answers = level_properties[0]["answers"]
 
