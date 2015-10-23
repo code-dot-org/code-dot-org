@@ -26,7 +26,7 @@ end
 
 Given /^I start a new Applab project$/ do
   steps %q{
-    And I am on "http://learn.code.org/projects/applab"
+    And I am on "http://learn.code.org/projects/applab/new"
     And I rotate to landscape
     And I wait to see "#runButton"
     And element "#runButton" is visible

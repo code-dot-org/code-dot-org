@@ -1896,24 +1896,25 @@ levels.js_hoc2015_event_two_items = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 1,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 16, 0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 1,  0, 0, 0, 0]],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00]],
   'pinWorkspaceToBottom': 'true',
   'embed': 'false',
   'instructions': '"BOT1, I need you to get a critical message to the GOALs."',
   'instructions2': 'Make BOT1 move when you use the arrow keys.',
-  'timeoutFailureTick': 600,
+  'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
     'imageWidth': 100,
-    'imageHeight': 100
+    'imageHeight': 100,
+    'goalRenderOffsetX': 0
   },
   'callouts': [
     {
@@ -1991,18 +1992,18 @@ levels.js_hoc2015_event_four_items = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 1,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [1, 0, 0, 16, 0, 0, 0, 1], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 1,  0, 0, 0, 0]],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x01],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00]],
   'embed': 'false',
   'instructions': '"Get to all the GOALs as quickly as you can."',
   'instructions2': 'Move in all directions.',
-  'timeoutFailureTick': 600,
+  'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
@@ -2073,7 +2074,7 @@ levels.js_hoc2015_score =
   'instructions': '"Reach the GOAL!"',
   'instructions2': "Let's add points. Add 100 points when BOT1 gets the pilot.",
   'autoArrowSteer': true,
-  'timeoutFailureTick': 600,
+  'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
@@ -2124,19 +2125,11 @@ levels.js_hoc2015_win_lose = {
     'playSound': null,
     'addPoints': { params: ["100"] },
     'removePoints': { params: ["100"] },
-
-    'addCharacter': null,
     'whenGetPilot': null,
     'whenGetMan': null,
     'whenGetBird': null,
   },
-  'startBlocks': [
-    'addCharacter("pilot");', // temporary until auto-characters
-    'addCharacter("pilot");', // temporary until auto-characters
-    'addCharacter("man");',   // temporary until auto-characters
-    'addCharacter("man");',   // temporary until auto-characters
-    'addCharacter("bird");',
-    ''].join('\n'),
+  'startBlocks': [].join('\n'),
 
   'sortDrawOrder': true,
   'wallMapCollisions': true,
@@ -2146,19 +2139,19 @@ levels.js_hoc2015_win_lose = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0],
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 16, 0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0]],
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x040, 0x040, 0x000, 0x000, 0x000],
+    [0x800, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x800],
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x010, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
   'instructions': '"Watch out for the MAN."',
   'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN!',
   'autoArrowSteer': true,
-  'timeoutFailureTick': 600,
+  'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'callouts': [
     {
@@ -2227,7 +2220,7 @@ levels.js_hoc2015_add_characters = {
   'instructions': '"I\'m seeing signs of increased activity on this planet!"',
   'instructions2': 'Add 3 PIGs to the planet. Then, go get them.',
   'autoArrowSteer': true,
-  'timeoutFailureTick': 600,
+  'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'callouts': [
     {
@@ -2289,7 +2282,7 @@ levels.js_hoc2015_chain_characters = {
   'instructions': '"They\'re multiplying!"',
   'instructions2': 'Add 100 points every time BOT1 gets a MOUSE. Can you get 800 points? ',
   'autoArrowSteer': true,
-  'timeoutFailureTick': 900,
+  'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
   'requiredForSuccess' : {
     'winGame': true
@@ -2342,7 +2335,7 @@ levels.js_hoc2015_chain_characters_2 = {
   'instructions': '"It\'s up to you, BOT1!"',
   'instructions2': 'When you get a ROO, two BIRDs appear. Can you make two MICE appear when you get a BIRD? Then, get them all.',
   'autoArrowSteer': true,
-  'timeoutFailureTick': 900,
+  'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
   'requiredForSuccess' : {
     'scoreMinimum': 100
@@ -2396,7 +2389,7 @@ levels.js_hoc2015_change_setting = {
   'instructions': '"Time to visit another planet."',
   'instructions2': 'Use the new commands to change the background, map, BOT, and speed.',
   'autoArrowSteer': true,
-  'timeoutFailureTick': 600,
+  'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'callouts': [
     {

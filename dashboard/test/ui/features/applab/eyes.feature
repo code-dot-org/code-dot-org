@@ -6,7 +6,7 @@ Scenario: Button shows up on top of canvas
   Given I am on "http://learn.code.org/"
   And I am a student
   When I open my eyes to test "applab eyes"
-  And I am on "http://learn.code.org/projects/applab"
+  And I am on "http://learn.code.org/projects/applab/new"
   And I rotate to landscape
   Then I see no difference for "initial load"
   And I press "show-code-header"
