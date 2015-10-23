@@ -564,5 +564,4 @@ ActiveRecord::Schema.define(version: 20151022174100) do
   add_index "workshops", ["program_type"], name: "index_workshops_on_program_type", using: :btree
 
   add_foreign_key "hint_view_requests", "users"
-  add_foreign_key "puzzle_ratings", "users"
 end

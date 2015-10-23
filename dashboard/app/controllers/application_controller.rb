@@ -120,6 +120,9 @@ class ApplicationController < ActionController::Base
         response[:previous_level] = build_script_level_path(previous_level)
       end
 
+      response[:script_id] = script_level.script.id
+      response[:level_id] = script_level.level.id
+
       # if they solved it, figure out next level
       if options[:solved?]
         response[:total_lines] = options[:total_lines]
@@ -155,19 +158,17 @@ class ApplicationController < ActionController::Base
           options[:level_source_image]
         response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
       end
+    end
 
-      response[:script_id] = script_level.script.id
-      response[:level_id] = script_level.level.id
-
-      # record which hints they've requested to view
-      if HintViewRequest.enabled? && !options[:solved?]
+    if HintViewRequest.enabled?
+      if script_level && current_user && !options[:solved?]
         response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, script_level.level, current_user)
         response[:hint_view_request_url] = hint_view_requests_path
       end
+    end
 
-      if PuzzleRating.enabled? &&
-          options[:solved?] &&
-          PuzzleRating.can_rate?(script: script_level.script, level: script_level.level, user: current_user)
+    if PuzzleRating.enabled?
+      if script_level && PuzzleRating.can_rate?(script_level.script, script_level.level, current_user)
         response[:puzzle_rating_url] = puzzle_ratings_path
       end
     end

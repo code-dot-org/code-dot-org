@@ -1,7 +1,7 @@
 class CreatePuzzleRatings < ActiveRecord::Migration
   def change
     create_table :puzzle_ratings do |t|
-      t.references :user, index: true, foreign_key: true
+      t.references :user, index: true
       t.integer :script_id
       t.integer :level_id
       t.integer :rating
