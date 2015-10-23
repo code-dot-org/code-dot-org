@@ -8,7 +8,7 @@ class ActivitiesController < ApplicationController
   # The action below disables the default request forgery protection
   # from application controller.  We don't do request forgery
   # protection on the milestone action because of the aggressive
-  # public caching we do on the show levels page. 
+  # public caching we do on the show levels page.
   protect_from_forgery except: :milestone
 
   MAX_INT_MILESTONE = 2147483647
