@@ -14,6 +14,7 @@
 'use strict';
 
 var ImageFilter = require('./ImageFilter');
+var GlowFilter = require('./GlowFilter');
 
 /**
  * Given a type name, constructs and returns a filter of the given type.
@@ -31,7 +32,7 @@ exports.makeFilterOfType = function (filterTypeName, svg) {
   }
 
   if (filterTypeName === 'glow') {
-    return new ImageFilter.Glow(svg);
+    return new GlowFilter(svg);
   }
 
   return null;
