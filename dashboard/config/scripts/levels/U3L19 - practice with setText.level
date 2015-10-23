@@ -47,7 +47,6 @@
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "addOperator": null,
       "subtractOperator": null,
@@ -81,9 +80,6 @@
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
-    "encrypted_examples": [
-
-    ],
     "markdown_instructions": "# TextLabels and Variables\r\n\r\nWe don't just have to print text to the Console. We can print it onto our app window. One of the easiests to do this is with TextLabels. We have `textLabel()` before. We are going to now set its value during the running of the program using `setText()`. Read about `setText()` in the documentation for more details.\r\n\r\n# Do This\r\n\r\n* **Run the code** to see what happens\r\n\r\n* Add another variable.\r\n\r\n* **Add a second button** that changes the textLabel to the value of the second variable.\r\n\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",

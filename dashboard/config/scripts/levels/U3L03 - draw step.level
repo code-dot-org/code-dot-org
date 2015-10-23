@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -153,9 +152,6 @@
     "beginner_mode": "false",
     "instructions": "Write the drawStep function. (Click to see full instructions)",
     "project_template_level_name": "U3L03 - drawDiamond Template",
-    "encrypted_examples": [
-
-    ],
     "droplet_tooltips_disabled": "false",
     "submittable": "false",
     "hide_view_data_button": "false",

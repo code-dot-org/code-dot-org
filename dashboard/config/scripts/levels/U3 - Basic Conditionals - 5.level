@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,9 +126,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": " Random number\r\nvar dice = randomNumber(1,6)\r\nif( 3 < dice){\r\n console.log(“Bigger”)\r\n}",
     "start_blocks": "var dice = randomNumber(1,6)\r\nif( 3 < dice){\r\n console.log(“Bigger”)\r\n}",

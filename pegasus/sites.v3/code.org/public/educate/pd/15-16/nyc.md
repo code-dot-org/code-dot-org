@@ -44,13 +44,12 @@ This workshop will be in Montgomery County, Maryland.
 Breakfast and lunch will be served.
 
 
-**October 17th Location**
+**December 5th Location**
 
-General Assembly<br/>
-10 E 21st St<br/>
-Level 3<br/>
-Concourse room<br/>
-New York, NY 10010
+I/O Spaces<br/>
+8120 Fenton St, Ste 202<br/>
+Silver Spring, MD  20910
+
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -95,7 +94,7 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**Location for October 3rd**<br/>
+**November 4th Location**<br/>
 <i><b>Group 1</i></b><br/>
 Microsoft<br/>
 Music Box 5411<br/>
