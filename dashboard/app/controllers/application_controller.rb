@@ -115,6 +115,9 @@ class ApplicationController < ActionController::Base
     script_level = options[:script_level]
 
     if script_level
+      response[:script_id] = script_level.script.id
+      response[:level_id] = script_level.level.id
+
       previous_level = script_level.previous_level
       if previous_level
         response[:previous_level] = build_script_level_path(previous_level)
@@ -144,6 +147,13 @@ class ApplicationController < ActionController::Base
       response[:share_failure] = options[:share_failure]
     end
 
+    if HintViewRequest.enabled?
+      if script_level && !options[:solved?]
+        response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, script_level.level, current_user)
+        response[:hint_view_request_url] = hint_view_requests_path
+      end
+    end
+
     # logged in users can:
     if current_user
       # save solved levels to a gallery (subject to
@@ -154,14 +164,6 @@ class ApplicationController < ActionController::Base
           options[:activity] &&
           options[:level_source_image]
         response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
-      end
-
-      # record which hints they've requested to view
-      if HintViewRequest.enabled? and !options[:solved?]
-        response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, script_level.level, current_user)
-        response[:hint_view_request_url] = hint_view_requests_path
-        response[:script_id] = script_level.script.id
-        response[:level_id] = script_level.level.id
       end
     end
 
