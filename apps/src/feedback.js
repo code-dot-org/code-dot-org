@@ -245,7 +245,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
   if (continueButton) {
 
-    if (options.response.puzzle_rating_url) {
+    if (options.response && options.response.puzzle_rating_url) {
       feedback.appendChild(this.buildPuzzleRatingButtons_());
     }
 
@@ -254,13 +254,14 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
       // Submit Puzzle Rating
       var selectedRating = feedback.querySelector('.puzzle-rating-btn.enabled');
-      if (options.response.puzzle_rating_url && selectedRating) {
+      if (options.response && options.response.puzzle_rating_url && selectedRating) {
         $.ajax({
           url: options.response.puzzle_rating_url,
           type: 'POST',
           data: {
             script_id: options.response.script_id,
             level_id: options.response.level_id,
+            level_source_id: options.response.level_source_id,
             rating: selectedRating.getAttribute('value')
           },
         });
