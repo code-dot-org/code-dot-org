@@ -27,6 +27,9 @@ class HttpCache
       'language_',
       'progress',
       'lines',
+      'scripts',
+      'videos_seen',
+      'callouts_seen',
       session_key,
       storage_id,
     ]
