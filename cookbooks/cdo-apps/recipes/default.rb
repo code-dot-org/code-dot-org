@@ -43,12 +43,5 @@ execute "precompile-assets" do
   user node[:current_user]
   group node[:current_user]
   action :nothing
-  notifies :run, 'execute[upgrade-dashboard]', :immediately
-end
-
-execute "upgrade-dashboard" do
-  command "sudo service dashboard upgrade"
-  user node[:current_user]
-  group node[:current_user]
-  action :nothing
+  notifies :reload, 'service[dashboard]', :delayed
 end

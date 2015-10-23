@@ -32,6 +32,37 @@ exports.Direction = {
 
 var Dir = exports.Direction;
 
+/**
+ * Mapping number of steps away from north to direction enum.
+ * @type {Direction[]}
+ */
+exports.ClockwiseDirectionsFromNorth = [
+  Dir.NORTH,
+  Dir.NORTHEAST,
+  Dir.EAST,
+  Dir.SOUTHEAST,
+  Dir.SOUTH,
+  Dir.SOUTHWEST,
+  Dir.WEST,
+  Dir.NORTHWEST
+];
+
+/**
+ * Given a 2D vector (x and y) provides the closest animation direction
+ * given in our Direction enum.
+ * @param {number} x
+ * @param {number} y
+ * @returns {Direction}
+ */
+exports.getClosestDirection = function (x, y) {
+  // Y is inverted between our playlab coordinate space and what atan2 expects.
+  var radiansFromNorth = Math.atan2(x, -y);
+  var stepRadians = Math.PI / 4;
+  // Snap positive index of nearest 45° where 0 is North, 1 is NE, etc...
+  var stepsFromNorth = (Math.round(radiansFromNorth / stepRadians) + 8) % 8;
+  // At this point we should have an int between 0 and 7
+  return exports.ClockwiseDirectionsFromNorth[stepsFromNorth];
+};
 
 var frameDirTable = {};
 frameDirTable[Dir.SOUTHEAST]  = 0;
@@ -332,6 +363,16 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
+exports.DEFAULT_ITEM_FRAME_RATE = 20;
+exports.DEFAULT_PROJECTILE_FRAME_RATE = 20;
+
 // Fade durations (in milliseconds)
 exports.GOAL_FADE_TIME = 200;
 exports.ITEM_FADE_TIME = 200;
+exports.DEFAULT_ACTOR_FADE_TIME = 1000;
+exports.TOUCH_HAZARD_FADE_TIME = 2000;
+
+// Other defaults for actions
+exports.SHAKE_DEFAULT_DURATION = 1000;
+exports.SHAKE_DEFAULT_CYCLES = 8;
+exports.SHAKE_DEFAULT_DISTANCE = 5;

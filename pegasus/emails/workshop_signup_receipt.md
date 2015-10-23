@@ -22,7 +22,7 @@ Thank you for signing up to attend a Code.org K-5 workshop.
 
 2. Update your name in your Code Studio account settings to be the name you want to appear on your PD completion certificate. To do so: 
 	- Log into your account
-	- Click the organge block in the upper right hand corner that says "Hi Your Name" 
+	- Click the orange block in the upper right hand corner that says "Hi Your Name" 
 	- Select "My account" 
 	- Change your "Display name" 
 	- Click "Update"
