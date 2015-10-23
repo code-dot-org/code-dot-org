@@ -96,7 +96,6 @@ SQL
         level_properties = Level.where(id: level_id).pluck(:properties)
         if level_properties.length > 0
           level_answers = level_properties[0]["answers"]
-  
           @responses[level_id].each do |response|
             response[2] = level_answers[response[2].to_i]["text"]
           end
