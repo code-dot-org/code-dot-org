@@ -93,7 +93,7 @@ ____________________________________________________
 
 <table>
 <tr>
-<td>
+<td style="border-style:none; width:90%; padding:0px">
 <pre>
 // Use canvas drawing and moveBackward() to parallel park.
 speed(10);
@@ -111,8 +111,8 @@ turnRight(45);
 moveForward();
 </pre>
 </td>
-<td>
-<img src='https://images.code.org/7537a5e6a8cbd32129451bd33c9ae549-image-1445198398879.gif' style='width: 150px;'> 
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/78a29825b8039d040862cd77bec86ea2-image-1445625258937.gif'>
 </td>
 </tr>
 </table>
@@ -152,7 +152,7 @@ No return value. Moves turtle only.
 
 ### Tips
 - Use [penUp()](/applab/docs/penUp) before calling moveBackward() to have the turtle not draw as it moves.
-- The screen default size is 320 pixels wide and 480 pixels high, but you can move the turtle off the screen by exceeding those dimensions.
+- The screen default size is 320 pixels wide and 450 pixels high, but you can move the turtle off the screen by exceeding those dimensions.
 - There are three ways to move the turtle in a straight line:
 	- Specify the number of pixels to move the turtle in the direction it is facing using [moveForward(pixels)](/applab/docs/moveForward) or moveBackward(pixels).
 	- Specify a number of pixels in the x and y direction to move the turtle using [move(x,y)](/applab/docs/move), regardless of direction that the turtle is facing.
