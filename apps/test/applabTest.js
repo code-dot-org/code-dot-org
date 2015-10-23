@@ -317,13 +317,8 @@ describe('startSharedAppAfterWarnings', function () {
     });
     originalState.dashboard = window.dashboard;
 
-    window.dashboard = {
-      project: {
-        getCurrentId: function () { return 'current_channel'; }
-      }
-    };
-
     Applab.user = {};
+    Applab.channelId = 'current_channel';
     Applab.getCode = function () {
       return 'createRecord'; // use data API
     };
