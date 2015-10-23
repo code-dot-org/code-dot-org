@@ -1,7 +1,7 @@
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
-require('../utils'); // Get Function.prototype.inherits
+var utils = require('../utils');
 
 var SVG_NS = "http://www.w3.org/2000/svg";
 
@@ -108,12 +108,8 @@ var Projectile = function (options) {
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
 
   this.currentFrame_ = 0;
-  var self = this;
-  this.animator_ = window.setInterval(function () {
-    if (self.loop || self.currentFrame_ + 1 < self.frames) {
-      self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
-    }
-  }, 50);
+  this.setAnimationRate(utils.valueOr(options.animationRate,
+      constants.DEFAULT_PROJECTILE_FRAME_RATE));
 
   // origin is at an offset from sprite location
   this.x = options.spriteX + OFFSET_CENTER[options.dir].x +
@@ -123,6 +119,21 @@ var Projectile = function (options) {
 };
 Projectile.inherits(Collidable);
 module.exports = Projectile;
+
+/**
+ * Set the animation rate for this projectile's sprite.
+ * @param {number} framesPerSecond
+ */
+Projectile.prototype.setAnimationRate = function (framesPerSecond) {
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+  }
+  this.animator_ = window.setInterval(function () {
+    if (this.loop || this.currentFrame_ + 1 < this.frames) {
+      this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
+    }
+  }.bind(this), 1000 / framesPerSecond);
+};
 
 /**
  * Test only function so that we can start our id count over.
