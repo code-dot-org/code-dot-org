@@ -80,8 +80,10 @@ namespace :build do
       HipChat.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
 
-      HipChat.log 'Updating <b>apps</b> i18n strings...'
-      RakeUtils.system './sync-apps.sh'
+      if rack_env?(:staging)
+        HipChat.log 'Updating <b>apps</b> i18n strings...'
+        RakeUtils.system './sync-apps.sh'
+      end
 
       HipChat.log 'Building <b>apps</b>...'
       env_vars = ''

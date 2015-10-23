@@ -46,7 +46,6 @@
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "console.log": null,
       "functionParams_none": null,
@@ -56,9 +55,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "Create your Multi-screen App. (Click to see full instructions)",
     "markdown_instructions": "# Multi Screen App\r\nYou will be creating your own multiscreen app to practice designing user interfaces and writing event-driven programs. \r\n\r\nMake sure to take a **look at the Project Guide and Planning Sheets before programming**.\r\n\r\n## Requirements Reminder\r\n* Your app will have at least **4 screens**\r\n* Your app should include **text, images, buttons, and sound**\r\n* **No “getting stuck” on a screen.**  It should always be possible to navigate from a screen in your app to some other screen. \r\n* Your program code should follow **good style**\r\n* Your user interface should be **intuitive to use**",

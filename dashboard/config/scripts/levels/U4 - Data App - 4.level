@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -151,10 +150,7 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "submittable": "false",
-    "hide_view_data_button": "false",
-    "encrypted_examples": [
-
-    ]
+    "hide_view_data_button": "false"
   }
 }]]></config>
   <blocks/>

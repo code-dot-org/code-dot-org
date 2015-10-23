@@ -392,4 +392,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Horfa á videóið"},
 "when":function(d){return "þegar"},
 "whenRun":function(d){return "þegar keyrt"},
-"workspaceHeaderShort":function(d){return "Vinnusvæði: "}};
+"workspaceHeaderShort":function(d){return "Vinnusvæði: "},
+"dropletBlock_mathRandom_description":function(d){return "Returns a random number ranging from 0 (inclusive) up to but not including 1 (exclusive)"},
+"dropletBlock_mathRandom_signatureOverride":function(d){return "Math.random()"},
+"dropletBlock_randomNumber_param0":function(d){return "min"},
+"dropletBlock_randomNumber_param0_description":function(d){return "The minimum number returned"},
+"dropletBlock_randomNumber_param1":function(d){return "max"},
+"dropletBlock_randomNumber_param1_description":function(d){return "The maximum number returned"},
+"dropletBlock_randomNumber_signatureOverride":function(d){return "randomNumber(min, max)"}};

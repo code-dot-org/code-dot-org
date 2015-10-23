@@ -73,6 +73,14 @@ levels.custom = {
   'sliderSpeed': 0.95,
   'appWidth': 320,
   'appHeight': 480,
+
+  /**
+   * This is the default set of functions available to us if the levelbuilder
+   * leaves codeFunctions blank.
+   * Applab.rb self.palette serves a similar function, intially providing
+   * levelbuilders with the text for the default set of blocks.
+   * These two places shouldbe kept in sync
+   */
   'codeFunctions': {
     // UI Controls
     "onEvent": null,
@@ -155,7 +163,7 @@ levels.custom = {
     "penRGB": null,
     "show": null,
     "hide": null,
-    "speed" : null,
+    "speed": null,
 
     // Control
     "forLoop_i_0_4": null,
@@ -180,12 +188,12 @@ levels.custom = {
     "andOperator": null,
     "orOperator": null,
     "notOperator": null,
-    "randomNumber_max": null,
     "randomNumber_min_max": null,
     "mathRound": null,
     "mathAbs": null,
     "mathMax": null,
     "mathMin": null,
+    "mathRandom": null,
 
     // Variables
     "declareAssign_x": null,
@@ -213,6 +221,8 @@ levels.custom = {
     "callMyFunction_n": null,
     "return": null,
   },
+
+  // "randomNumber_max": null, // DEPRECATED
 };
 
 levels.ec_simple = utils.extend(levels.custom, {
@@ -2585,6 +2595,13 @@ module.exports.categories = {
   },
 };
 
+/*
+ * Set the showExamplesLink config value so that the droplet tooltips will show
+ * an 'Examples' link that opens documentation in a lightbox:
+ */
+module.exports.showExamplesLink = true;
+
+
 
 },{"../applab/assetManagement/show.js":"/home/ubuntu/staging/apps/build/js/applab/assetManagement/show.js","./ChartApi":"/home/ubuntu/staging/apps/build/js/applab/ChartApi.js","./api":"/home/ubuntu/staging/apps/build/js/applab/api.js","./consoleApi":"/home/ubuntu/staging/apps/build/js/applab/consoleApi.js","./constants":"/home/ubuntu/staging/apps/build/js/applab/constants.js","./designElements/elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js","./dontMarshalApi":"/home/ubuntu/staging/apps/build/js/applab/dontMarshalApi.js"}],"/home/ubuntu/staging/apps/build/js/applab/consoleApi.js":[function(require,module,exports){
 var codegen = require('../codegen');
@@ -3069,6 +3086,9 @@ designMode.editElementProperties = function(element) {
     // design-properties won't exist when !user.isAdmin
     return;
   }
+
+  highlightElement(element);
+
   currentlyEditedElement = element;
   designMode.renderDesignWorkspace(element);
 };
@@ -3521,6 +3541,8 @@ function makeDraggable (jqueryElements) {
         }
         designMode.updateProperty(element, widthProperty, element.style.width);
         designMode.updateProperty(element, heightProperty, element.style.height);
+
+        highlightElement(elm[0]);
       }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
@@ -3555,7 +3577,10 @@ function makeDraggable (jqueryElements) {
         });
 
         designMode.renderDesignWorkspace(elm[0]);
-      }
+      },
+      start: function () {
+        highlightElement(elm[0]);
+      },
     }).css({
       position: 'absolute',
       lineHeight: '0px'
@@ -3630,6 +3655,31 @@ function makeUndraggable(jqueryElements) {
   });
 
   return foundOne;
+}
+
+/**
+ * Highlights an element with a dashed border, removes border from all other elements
+ * Must only be called on an element wrapped in a draggable div
+ */
+function highlightElement(element) {
+  removeElementHighlights();
+
+  if ($(element).is('#designModeViz img,#designModeViz label')) {
+    $(element).parent().css({
+      outlineStyle: 'dashed',
+      outlineWidth: '1px',
+    });
+  }
+}
+
+/**
+ * Remove dashed borders from all elements
+ */
+function removeElementHighlights() {
+  $('#designModeViz .ui-draggable').css({
+    outlineStyle: '',
+    outlineWidth: ''
+  });
 }
 
 designMode.configureDragAndDrop = function () {
@@ -3841,7 +3891,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../locale');
 ; buf.push('\n');4; // Comment so this file is not identical to studio/controls.html.ejs 
-; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" class="arrow">\n    <img src="', escape((17,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');21; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((24,  assetUrl('media/1x1.gif') )), '">', escape((24,  msg.finish() )), '\n    </button>\n  </div>\n');27; } ; buf.push('\n\n');29; if (submitButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="submitButton" class="share">\n      <img src="', escape((32,  assetUrl('media/1x1.gif') )), '">', escape((32,  msg.submit() )), '\n    </button>\n  </div>\n');35; } ; buf.push('\n'); })();
+; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" disabled=true class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" disabled=true class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" disabled=true class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" disabled=true class="arrow">\n    <img src="', escape((17,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');21; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((24,  assetUrl('media/1x1.gif') )), '">', escape((24,  msg.finish() )), '\n    </button>\n  </div>\n');27; } ; buf.push('\n\n');29; if (submitButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="submitButton" class="share">\n      <img src="', escape((32,  assetUrl('media/1x1.gif') )), '">', escape((32,  msg.submit() )), '\n    </button>\n  </div>\n');35; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -4843,7 +4893,7 @@ applabCommands.getElementInnerText_ = function (element) {
  * @private
  */
 applabCommands.setElementInnerText_ = function (element, newText) {
-  var escapedText = newText;
+  var escapedText = newText.toString();
   escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
   escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
   escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >

@@ -85,5 +85,10 @@ execute "build-dashboard" do
 end
 
 service 'dashboard' do
+  supports reload: true
+  reload_command '/etc/init.d/dashboard upgrade'
   action [:enable, :start]
+
+  # Restart Unicorn when Ruby is upgraded
+  subscribes :restart, "apt_package[ruby#{node['cdo-ruby']['version']}]", :delayed
 end
