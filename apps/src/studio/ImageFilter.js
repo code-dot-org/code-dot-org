@@ -52,21 +52,37 @@ var ImageFilter = module.exports = function (svg) {
 
   /** @private {string} */
   this.id_ = 'image-filter-' + uniqueId++;
+
+  /** @private {boolean} Whether this filter is in the DOM ready to use yet. */
+  this.addedToDom_ = false;
 };
 
 /**
- * Get the `id` attribute of the `filter` element, which is used to reference
- * the filter when applying it to an element.
- * @returns {string}
+ * Set the passed element to use this filter (replaces other filters it may
+ * be using.)
+ * @param {SVGElement} svgElement
  */
-ImageFilter.prototype.getFilterId = function () {
-  return this.id_;
+ImageFilter.prototype.applyTo = function (svgElement) {
+  if (!this.addedToDom_) {
+    this.createInDom_();
+  }
+
+  svgElement.setAttribute('filter', 'url(#' + this.id_ + ')');
 };
 
-ImageFilter.prototype.createInDom = function () {
+/**
+ * Generates the necessary elements and adds this filter to the parent SVG
+ * under the <defs> tag.
+ * @private
+ */
+ImageFilter.prototype.createInDom_ = function () {
+  if (this.addedToDom_) {
+    return;
+  }
+
   // Make a new filter element
   var filter = document.createElementNS(SVG_NS, 'filter');
-  filter.setAttribute('id', this.getFilterId());
+  filter.setAttribute('id', this.id_);
 
   // Add the filter steps (expected to be different for each filter type)
   var steps = this.createFilterSteps_();
@@ -77,6 +93,8 @@ ImageFilter.prototype.createInDom = function () {
   // Put the filter in the SVG Defs node.
   var defs = this.getDefsNode_();
   defs.appendChild(filter);
+
+  this.addedToDom_ = true;
 };
 
 /**
@@ -180,12 +198,12 @@ ImageFilter.Shine.prototype.createFilterSteps_ = function () {
   // 4. Composite the specular light over the original image
 
   var feGaussianBlur = document.createElementNS(SVG_NS, 'feGaussianBlur');
-  var blurResult = this.getFilterId() + '-blur';
+  var blurResult = this.id_ + '-blur';
   feGaussianBlur.setAttribute('stdDeviation', 6);
   feGaussianBlur.setAttribute('result', blurResult);
 
   var feSpecularLighting = document.createElementNS(SVG_NS, 'feSpecularLighting');
-  var specularResult = this.getFilterId() + '-specular';
+  var specularResult = this.id_ + '-specular';
   feSpecularLighting.setAttribute('in', blurResult);
   feSpecularLighting.setAttribute('specularExponent', 60);
   feSpecularLighting.setAttribute('lighting-color', 'white');
@@ -267,32 +285,32 @@ ImageFilter.Glow.prototype.createFilterSteps_ = function () {
   // 6. Composite the glow and original image, with varying glow alpha
 
   var feFloodWhite = document.createElementNS(SVG_NS, 'feFlood');
-  var feFloodWhiteResult = this.getFilterId() + '-flood-white';
+  var feFloodWhiteResult = this.id_ + '-flood-white';
   feFloodWhite.setAttribute('flood-color', 'white');
   feFloodWhite.setAttribute('result', feFloodWhiteResult);
 
   var feMorphology = document.createElementNS(SVG_NS, 'feMorphology');
-  var feMorphologyResult = this.getFilterId() + '-morphology';
+  var feMorphologyResult = this.id_ + '-morphology';
   feMorphology.setAttribute('in', 'SourceAlpha');
   feMorphology.setAttribute('operator', 'dilate');
   feMorphology.setAttribute('radius', 2);
   feMorphology.setAttribute('result', feMorphologyResult);
 
   var feCompositeSilhouette = document.createElementNS(SVG_NS, 'feComposite');
-  var feCompositeSilhouetteResult = this.getFilterId() + '-silhouette';
+  var feCompositeSilhouetteResult = this.id_ + '-silhouette';
   feCompositeSilhouette.setAttribute('in', feFloodWhiteResult);
   feCompositeSilhouette.setAttribute('operator', 'in');
   feCompositeSilhouette.setAttribute('in2', feMorphologyResult);
   feCompositeSilhouette.setAttribute('result', feCompositeSilhouetteResult);
 
   var feGaussianBlur = document.createElementNS(SVG_NS, 'feGaussianBlur');
-  var feGaussianBlurResult = this.getFilterId() + '-blur';
+  var feGaussianBlurResult = this.id_ + '-blur';
   feGaussianBlur.setAttribute('in', feCompositeSilhouetteResult);
   feGaussianBlur.setAttribute('stdDeviation', 2);
   feGaussianBlur.setAttribute('result', feGaussianBlurResult);
 
   var feCompositeMaskedGlow = document.createElementNS(SVG_NS, 'feComposite');
-  var feCompositeMaskedGlowResult = this.getFilterId() + '-masked-glow';
+  var feCompositeMaskedGlowResult = this.id_ + '-masked-glow';
   feCompositeMaskedGlow.setAttribute('in', feGaussianBlurResult);
   feCompositeMaskedGlow.setAttribute('operator', 'out');
   feCompositeMaskedGlow.setAttribute('in2', 'SourceAlpha');
