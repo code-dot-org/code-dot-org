@@ -29,41 +29,24 @@ var uniqueId = 0;
  * and advancing frames at the correct rate.
  * @constructor
  * @param {!Object} options
- * @param {!string} options.image - URL of the sprite sheet asset.
- * @param {number} [options.width] - frame width in original asset.  Default 50.
- * @param {number} [options.height] - frame height in original asset. Default 50.
+ * @param {!StudioSpriteSheet} spriteSheet - The source asset for this animation,
+ *        wrapped in necessary metadata.
  * @param {number} [options.renderScale] - Default 1.
  * @param {number} [options.opacity] - Opacity on a 0-1 scale.  Default 1.
  * @param {number} [options.animationRate] - How fast the animation should be
  *        played, in frames per second.  Default 20.
- * @param {number} [options.totalAnimations] - How many animations (columns)
- *        there are in the sprite sheet. Default 9.
- * @param {number} [options.frames] - How many frames (rows) there are per
- *        animation. Default 1.
  * @param {boolean} [options.loop] - Whether the animation should loop
  *        automatically.  Default false.
  */
 var StudioAnimation = module.exports = function (options) {
-  /** @type {string} image path */
-  this.image = options.image;
+  /** @private {StudioSpriteSheet} */
+  this.spriteSheet_ = options.spriteSheet;
 
-  /** @type {number} frame width */
-  this.width = utils.valueOr(options.width, 50); // TODO: Magic number
-
-  /** @type {number} frame height */
-  this.height = utils.valueOr(options.height, 50); // TODO: Magic number
-
-  /** @type {number} render scale */
-  this.renderScale = utils.valueOr(options.renderScale, 1);
+  /** @private {number} render scale */
+  this.renderScale_ = utils.valueOr(options.renderScale, 1);
 
   /** @private {number} opacity on a scale of 0 (transparent) to 1 (opaque) */
   this.opacity_ = utils.valueOr(options.opacity, 1);
-
-  /** @private {number} animations in sheet / width in frames of sprite sheet */
-  this.totalAnimations_ = utils.valueOr(options.totalAnimations, 9);
-
-  /** @private {number} frames per animation / height in frames of sprite sheet */
-  this.framesPerAnimation_ = utils.valueOr(options.frames, 1);
 
   /**
    * Which animation (which column in the sprite sheet) is currently playing.
@@ -80,8 +63,8 @@ var StudioAnimation = module.exports = function (options) {
   /** @private {SVGImageElement} */
   this.element_ = null;
 
-  /** @type {SVGElement} */
-  this.clipPath = null;
+  /** @private {SVGElement} */
+  this.clipPath_ = null;
 
   // Setting the animation rate here initializes the setInterval that keeps
   // the current frame changing at the framerate.
@@ -108,24 +91,24 @@ StudioAnimation.prototype.createElement = function (parentElement) {
   var nextId = (uniqueId++);
 
   // create our clipping path/rect
-  this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
+  this.clipPath_ = document.createElementNS(SVG_NS, 'clipPath');
   var clipId = 'studioanimation_clippath_' + nextId;
-  this.clipPath.setAttribute('id', clipId);
+  this.clipPath_.setAttribute('id', clipId);
   var rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttribute('width', this.width * this.renderScale);
-  rect.setAttribute('height', this.height * this.renderScale);
-  this.clipPath.appendChild(rect);
-  parentElement.appendChild(this.clipPath);
+  rect.setAttribute('width', this.spriteSheet_.frameWidth * this.renderScale_);
+  rect.setAttribute('height', this.spriteSheet_.frameHeight * this.renderScale_);
+  this.clipPath_.appendChild(rect);
+  parentElement.appendChild(this.clipPath_);
 
   var itemId = 'studioanimation_' + nextId;
   this.element_ = document.createElementNS(SVG_NS, 'image');
   this.element_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-     this.image);
+     this.spriteSheet_.assetPath);
   this.element_.setAttribute('id', itemId);
   this.element_.setAttribute('height',
-      this.height * this.framesPerAnimation_ * this.renderScale);
+      this.spriteSheet_.assetHeight() * this.renderScale_);
   this.element_.setAttribute('width',
-      this.width * this.totalAnimations_ * this.renderScale);
+      this.spriteSheet_.assetWidth() * this.renderScale_);
   parentElement.appendChild(this.element_);
 
   this.element_.setAttribute('clip-path', 'url(#' + clipId + ')');
@@ -142,9 +125,9 @@ StudioAnimation.prototype.removeElement = function() {
   }
 
   // remove clip path element
-  if (this.clipPath) {
-    this.clipPath.parentNode.removeChild(this.clipPath);
-    this.clipPath = null;
+  if (this.clipPath_) {
+    this.clipPath_.parentNode.removeChild(this.clipPath_);
+    this.clipPath_ = null;
   }
 
   if (this.animator_) {
@@ -156,18 +139,32 @@ StudioAnimation.prototype.removeElement = function() {
 /**
  * Display the current frame at the given location
  */
-StudioAnimation.prototype.redrawAt = function (topLeft) {
-  this.element_.setAttribute('x',
-      topLeft.x - this.width *
-      (this.currentAnimation_ * this.renderScale + (this.renderScale-1)/2));
-  this.element_.setAttribute('y',
-      topLeft.y - this.height *
-      (this.currentFrame_ * this.renderScale + (this.renderScale-1)));
+StudioAnimation.prototype.redrawCenteredAt = function (center) {
+  var frame = this.spriteSheet_.getFrame(this.currentAnimation_, this.currentFrame_);
+  var scale = this.renderScale_;
+
+  // Preserved behavior: When scaling a sprite up, we actually scale around the
+  //       bottom-center of the sprite (so feet stay planted in the same place)
+  //       rather than actually around its center.
+  //       That's what the (2 * scale - 1) bit is about; just change that to
+  //       (scale) if you want to scale about the sprite center again.
+  // TODO: Improve this by scaling around an explicitly encoded 'sprite center'
+  var topLeft = {
+    x: center.x - (frame.width / 2) * scale,
+    y: center.y - (frame.height / 2) * (2 * scale - 1)
+  };
+
+  // Offset the spritesheet DOM element by the inverse of the offset of the
+  // frame we want to display.
+  this.element_.setAttribute('x', topLeft.x - frame.left * scale);
+  this.element_.setAttribute('y', topLeft.y - frame.top * scale);
   this.element_.setAttribute('opacity', this.opacity_);
 
-  var clipRect = this.clipPath.childNodes[0];
-  clipRect.setAttribute('x', topLeft.x - this.width * (this.renderScale-1)/2);
-  clipRect.setAttribute('y', topLeft.y - this.height * (this.renderScale-1));
+  // Then set the clip rect to the position where we want to display it, so
+  // only the frame that's now positioned correctly is shown.
+  var clipRect = this.clipPath_.childNodes[0];
+  clipRect.setAttribute('x', topLeft.x);
+  clipRect.setAttribute('y', topLeft.y);
 };
 
 /**
@@ -189,8 +186,9 @@ StudioAnimation.prototype.setAnimationRate = function (framesPerSecond) {
     window.clearInterval(this.animator_);
   }
   this.animator_ = window.setInterval(function () {
-    if (this.loop_ || this.currentFrame_ + 1 < this.framesPerAnimation_) {
-      this.currentFrame_ = (this.currentFrame_ + 1) % this.framesPerAnimation_;
+    if (this.loop_ || this.currentFrame_ + 1 < this.spriteSheet_.framesPerAnimation) {
+      this.currentFrame_ = (this.currentFrame_ + 1) %
+          this.spriteSheet_.framesPerAnimation;
     }
   }.bind(this), Math.round(1000 / framesPerSecond));
 };
