@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,9 +126,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "# Greater and Less Than\r\nIn the last level we saw a simple if statement. If statements are just simple questions. The answer to questions in if statements are either True or False. This is just another place where we see binary in computer science. If the expressoin inside the if statement is true than the code inside the brackets excutes. If its false then it won't execute.\r\n\r\nBelow is an if statement. Can you change the expression to be true?\r\n\r\n**Remember:** A good trick for remembering how greater than and less than work is to think of it like a gator with its mouth open. The gator always wants to eat the bigger number.\r\n\r\n# Do This\r\n\r\n* Fix the expression inside the if statement to be true so the message will print",
     "start_blocks": "if (3 > 8) {\r\n  console.log(\"Hello\");\r\n}",
