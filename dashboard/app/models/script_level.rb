@@ -19,8 +19,6 @@
 #  index_script_levels_on_stage_id   (stage_id)
 #
 
-require 'levels_helper'
-
 # Joins a Script to a Level
 # A Script has one or more Levels, and a Level can belong to one or more Scripts
 class ScriptLevel < ActiveRecord::Base
