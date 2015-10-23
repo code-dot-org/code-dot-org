@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,9 +126,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "What happens after an if\r\n\r\ntry out the code below a bunch of times. what do you notice. when does the here print?\r\n\r\nvar dice = randomNumber(1,6)\r\nif(3 < dice){\r\n console.log(“Bigger”)\r\n}\r\nconsole.log(“Here”)",
     "start_blocks": "var dice = randomNumber(1,6)\r\nif(3 < dice){\r\n console.log(“Bigger”)\r\n}\r\nconsole.log(“Here”)",

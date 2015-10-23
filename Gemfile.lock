@@ -586,7 +586,7 @@ DEPENDENCIES
   selenium-webdriver (~> 2.41.0)
   sequel (~> 4.10.0)
   shotgun
-  simplecov
+  simplecov (~> 0.9)
   sinatra
   spring
   spring-commands-testunit

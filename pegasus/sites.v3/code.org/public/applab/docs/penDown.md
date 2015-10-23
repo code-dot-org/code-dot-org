@@ -65,7 +65,7 @@ ____________________________________________________
 
 <table>
 <tr>
-<td>
+<td style="border-style:none; width:90%; padding:0px">
 <pre>
 // Use penUp and penDown to have the turtle draw an 'X', returning the turtle to the starting point.
 penUp();
@@ -81,10 +81,8 @@ penUp();
 move(-100,100);
 </pre>
 </td>
-<td>
-
-<img src='https://images.code.org/146a196d93cc1520440ae1b1379d5c7f-image-1444486592202.gif' style='width: 150px;'> 
-
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/daa77ab1948749cd25db8d1022f1497d-image-1445602642474.gif'> 
 </td>
 </tr>
 </table>
@@ -119,7 +117,8 @@ No return value. Modifies turtle drawing only.
 [tips]
 
 ### Tips
-- [penUp()](/applab/docs/penUp) is often used with penDown. The default starting configuration for the turtle is with the pen down.
+- [penUp()](/applab/docs/penUp) is often used with penDown. 
+- The default starting configuration for the turtle is with the pen down.
 - The color and width of the turtle line can be changed using [penColor(color)](/applab/docs/penColor) and [penWidth(width)](/applab/docs/penWidth).
 - Turtle drawing commands are not effected by the [show()](/applab/docs/show) and [hide()](/applab/docs/hide) commands, which control if the turtle icon is displayed or not.
 - If you are not seeing the turtle's movement, slow the program execution down by adjusting the tortoise/hare slider bar in the Debug Console or by using the [speed()](/applab/docs/speed) command.
