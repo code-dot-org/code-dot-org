@@ -362,7 +362,7 @@ var drawMap = function () {
     }
   }
 
-  var pulseFilterId, shineFilterId;
+  var pulseFilterId, shineFilterId, glowFilterId;
   if (skin.goalEffect === 'pulse') {
     // <filter id="pulse-filter">
     //  <feComponentTransfer>
@@ -400,9 +400,7 @@ var drawMap = function () {
     feComponentTransfer.appendChild(feFuncB);
     pulseFilter.appendChild(feComponentTransfer);
     defs.appendChild(pulseFilter);
-  }
-
-  if (skin.goalEffect === 'shine') {
+  } else if (skin.goalEffect === 'shine') {
     /*
      <filter id="shine-filter">
        <!--Blur effect-->
@@ -427,10 +425,10 @@ var drawMap = function () {
     var shineFilter = document.createElementNS(SVG_NS, 'filter');
     shineFilter.setAttribute('id', shineFilterId);
 
-    var feGaussianBlur = document.createElementNS(SVG_NS, 'feGaussianBlur');
+    var blur = document.createElementNS(SVG_NS, 'feGaussianBlur');
     var blurId = shineFilterId + '-blur';
-    feGaussianBlur.setAttribute('stdDeviation', 6);
-    feGaussianBlur.setAttribute('result', blurId);
+    blur.setAttribute('stdDeviation', 6);
+    blur.setAttribute('result', blurId);
 
     var feSpecularLighting = document.createElementNS(SVG_NS, 'feSpecularLighting');
     var specularId = shineFilterId + '-specular';
@@ -474,11 +472,89 @@ var drawMap = function () {
     feCompositeLayer.setAttribute('in2', 'SourceGraphic');
 
 
-    shineFilter.appendChild(feGaussianBlur);
+    shineFilter.appendChild(blur);
     shineFilter.appendChild(feSpecularLighting);
     shineFilter.appendChild(feCompositeMask);
     shineFilter.appendChild(feCompositeLayer);
     defs.appendChild(shineFilter);
+  } else if (skin.goalEffect === 'glow') {
+    /*
+     <filter id="glow-filter">
+       <!-- Get white fill for glow -->
+       <feFlood flood-color="white" result="white" />
+       <!--Dilate goal silhouette-->
+       <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="expanded" />
+       <!-- Get silhouette in white -->
+       <feComposite in="white" operator="in" in2="expanded" result="whitemask" />
+       <!-- Blur expanded -->
+       <feGaussianBlur in="whitemask" stdDeviation="5" result="blurred" />
+       <!-- mask goal out of glow -->
+       <feComposite in="blurred" operator="out" in2="SourceAlpha" result="blurredmask" />
+       <!-- Put glow behind goal -->
+       <feComposite in="SourceGraphic" operator="arithmetic" in2="blurredmask" k1=0 k2=1 k3=1>
+        <animate attributeName="k3" values="0.2;1;0.2" dur="5s" repeatCount="indefinite" />
+       </feComposite>
+     </filter>
+     */
+
+    glowFilterId = 'glow-filter';
+    var glowFilter = document.createElementNS(SVG_NS, 'filter');
+    glowFilter.setAttribute('id', glowFilterId);
+
+    var feFloodWhite = document.createElementNS(SVG_NS, 'feFlood');
+    var feFloodWhiteId = glowFilterId + '-flood-white';
+    feFloodWhite.setAttribute('flood-color', 'white');
+    feFloodWhite.setAttribute('result', feFloodWhiteId);
+
+    var feMorphology = document.createElementNS(SVG_NS, 'feMorphology');
+    var feMorphologyId = glowFilterId + '-morphology';
+    feMorphology.setAttribute('in', 'SourceAlpha');
+    feMorphology.setAttribute('operator', 'dilate');
+    feMorphology.setAttribute('radius', 2);
+    feMorphology.setAttribute('result', feMorphologyId);
+
+    var feCompositeSilhouette = document.createElementNS(SVG_NS, 'feComposite');
+    var feCompositeSilhouetteId = glowFilterId + '-silhouette';
+    feCompositeSilhouette.setAttribute('in', feFloodWhiteId);
+    feCompositeSilhouette.setAttribute('operator', 'in');
+    feCompositeSilhouette.setAttribute('in2', feMorphologyId);
+    feCompositeSilhouette.setAttribute('result', feCompositeSilhouetteId);
+
+    var feGaussianBlur = document.createElementNS(SVG_NS, 'feGaussianBlur');
+    var feGaussianBlurId = glowFilterId + '-blur';
+    feGaussianBlur.setAttribute('in', feCompositeSilhouetteId);
+    feGaussianBlur.setAttribute('stdDeviation', 2);
+    feGaussianBlur.setAttribute('result', feGaussianBlurId);
+
+    var feCompositeMaskedGlow = document.createElementNS(SVG_NS, 'feComposite');
+    var feCompositeMaskedGlowId = glowFilterId + '-masked-glow';
+    feCompositeMaskedGlow.setAttribute('in', feGaussianBlurId);
+    feCompositeMaskedGlow.setAttribute('operator', 'out');
+    feCompositeMaskedGlow.setAttribute('in2', 'SourceAlpha');
+    feCompositeMaskedGlow.setAttribute('result', feCompositeMaskedGlowId);
+
+    var feCompositeLayers = document.createElementNS(SVG_NS, 'feComposite');
+    feCompositeLayers.setAttribute('in', 'SourceGraphic');
+    feCompositeLayers.setAttribute('operator', 'arithmetic');
+    feCompositeLayers.setAttribute('in2', feCompositeMaskedGlowId);
+    feCompositeLayers.setAttribute('k1', 0);
+    feCompositeLayers.setAttribute('k2', 1); // Always show 100% of original image
+    feCompositeLayers.setAttribute('k3', 0);
+    feCompositeLayers.setAttribute('k4', 0);
+    var glowAnimation = document.createElementNS(SVG_NS, 'animate');
+    glowAnimation.setAttribute('attributeName', 'k3');
+    glowAnimation.setAttribute('values', [0, 0.2, 1, 0.2, 0].join(';'));
+    glowAnimation.setAttribute('dur', '4s');
+    glowAnimation.setAttribute('repeatCount', 'indefinite');
+    feCompositeLayers.appendChild(glowAnimation);
+
+    glowFilter.appendChild(feFloodWhite);
+    glowFilter.appendChild(feMorphology);
+    glowFilter.appendChild(feCompositeSilhouette);
+    glowFilter.appendChild(feGaussianBlur);
+    glowFilter.appendChild(feCompositeMaskedGlow);
+    glowFilter.appendChild(feCompositeLayers);
+    defs.appendChild(glowFilter);
   }
 
   if (Studio.spriteGoals_) {
@@ -506,6 +582,8 @@ var drawMap = function () {
         spriteFinishMarker.setAttribute('filter', 'url(#' + pulseFilterId + ')');
       } else if (skin.goalEffect === 'shine') {
         spriteFinishMarker.setAttribute('filter', 'url(#' + shineFilterId + ')');
+      } else if (skin.goalEffect === 'glow') {
+        spriteFinishMarker.setAttribute('filter', 'url(#' + glowFilterId + ')');
       }
       svg.appendChild(spriteFinishMarker);
     }
