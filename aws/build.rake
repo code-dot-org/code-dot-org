@@ -263,28 +263,33 @@ $websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, A
     # Lint
     RakeUtils.system 'rake', 'lint' if CDO.lint
 
-    # Build myself
-    RakeUtils.system 'rake', 'build'
-
-    # If I'm daemon, do some additional work:
-    if CDO.daemon
-      if CDO.chef_managed
-        # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
-        Dir.chdir(cookbooks_dir) do
+    # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
+    if CDO.daemon && CDO.chef_managed
+      Dir.chdir(cookbooks_dir) do
+        old_gemfile = ENV['BUNDLE_GEMFILE']
+        ENV['BUNDLE_GEMFILE'] = File.join(cookbooks_dir, 'Gemfile')
+        begin
           RakeUtils.bundle_install
           RakeUtils.bundle_exec 'berks', 'install'
           RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
           RakeUtils.bundle_exec 'berks', 'apply', rack_env
+        ensure
+          ENV['BUNDLE_GEMFILE'] = old_gemfile
         end
       end
-      if rack_env?(:production)
-        # Update the front-end instances, in parallel, but not all at once. When the infrastructure is
-        # properly scaled we should be able to upgrade 20% of the front-ends at a time. Right now we're
-        # over-subscribed (have more resources than we need) so we're restarting 50% of the front-ends.
-        thread_count = 2
-        threaded_each CDO.app_servers.keys, thread_count do |name|
-          upgrade_frontend name, CDO.app_servers[name]
-        end
+    end
+
+    # Build myself
+    RakeUtils.system 'rake', 'build'
+
+    # If I'm daemon, do some additional work:
+    if CDO.daemon && rack_env?(:production)
+      # Update the front-end instances, in parallel, but not all at once. When the infrastructure is
+      # properly scaled we should be able to upgrade 20% of the front-ends at a time. Right now we're
+      # over-subscribed (have more resources than we need) so we're restarting 50% of the front-ends.
+      thread_count = 2
+      threaded_each CDO.app_servers.keys, thread_count do |name|
+        upgrade_frontend name, CDO.app_servers[name]
       end
     end
   end
