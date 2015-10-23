@@ -20,6 +20,25 @@ var SVG_NS = "http://www.w3.org/2000/svg";
 var uniqueId = 0;
 
 /**
+ * Base class for defining complex SVG <filter>s that can be applied to
+ * any number of elements in playlab, but are primarily designed for use with
+ * image/sprite elements.
+ *
+ * The filter behaviors are defined here in code, but are added dynamically to
+ * the DOM as late as possible to avoid adding them when they are not needed.
+ *
+ * Wrapping the filters this way also provides an easy place to dynamically
+ * manipulate their properties, generating filter animation.
+ *
+ * TODO: SVG filters are not supported in IE9.  This class should do a feature
+ *       check and convert itself into a no-op if we detect that filters are
+ *       not supported.
+ *
+ * TODO: Some of these filters are using SVG SMIL animation, which is deprecated
+ *       and not supported in any version of Internet Explorer.  They're going
+ *       in this way for now to facilitate demo videos.  Those declared
+ *       animations need to be replaced by modifying filter attributes in
+ *       an 'update' method or on some timer.
  *
  * @constructor
  * @param {!SVGSVGElement} svg - Every filter must belong to a single SVG
@@ -32,7 +51,7 @@ var ImageFilter = module.exports = function (svg) {
   this.svg_ = svg;
 
   /** @private {string} */
-  this.id_ = null;
+  this.id_ = 'image-filter-' + uniqueId++;
 };
 
 /**
@@ -45,9 +64,6 @@ ImageFilter.prototype.getFilterId = function () {
 };
 
 ImageFilter.prototype.createInDom = function () {
-  // Generate an ID
-  this.id_ = 'image-filter-' + uniqueId++;
-
   // Make a new filter element
   var filter = document.createElementNS(SVG_NS, 'filter');
   filter.setAttribute('id', this.id_);
@@ -108,36 +124,33 @@ ImageFilter.Pulse.inherits(ImageFilter);
  * @override
  */
 ImageFilter.Pulse.prototype.createFilterSteps_ = function () {
-  // <filter id="pulse-filter">
-  //  <feComponentTransfer>
+  // Only one step in this filter: Increase brightness of all channels to 100%.
+  //
+  // <feComponentTransfer>
   //   <feFuncR type="linear" slope="1" intercept="0"/>
   //   <feFuncG type="linear" slope="1" intercept="0"/>
   //   <feFuncB type="linear" slope="1" intercept="0"/>
-  //  </feComponentTransfer>
-  // </filter>
-  var feComponentTransfer = document.createElementNS(SVG_NS, 'feComponentTransfer');
+  // </feComponentTransfer>
+
+  // TODO: Replace this SMIL animation with a JS-driven one.
   var brightnessAnimation = document.createElementNS(SVG_NS, 'animate');
   brightnessAnimation.setAttribute('attributeName', 'intercept');
+  // This can be adjusted to change the curve of the pulse.
   brightnessAnimation.setAttribute('values', '0;0;0;0.1;0.25;1;0.25;0.1;0;0;0');
   brightnessAnimation.setAttribute('dur', '2s');
   brightnessAnimation.setAttribute('repeatCount', 'indefinite');
+
+  var feComponentTransfer = document.createElementNS(SVG_NS, 'feComponentTransfer');
   var feFuncR = document.createElementNS(SVG_NS, 'feFuncR');
-  feFuncR.setAttribute('type', 'linear');
-  feFuncR.setAttribute('slope', '1');
-  feFuncR.setAttribute('intercept', '1');
-  feFuncR.appendChild(brightnessAnimation.cloneNode());
   var feFuncG = document.createElementNS(SVG_NS, 'feFuncG');
-  feFuncG.setAttribute('type', 'linear');
-  feFuncG.setAttribute('slope', '1');
-  feFuncG.setAttribute('intercept', '1');
-  feFuncG.appendChild(brightnessAnimation.cloneNode());
   var feFuncB = document.createElementNS(SVG_NS, 'feFuncB');
-  feFuncB.setAttribute('type', 'linear');
-  feFuncB.setAttribute('slope', '1');
-  feFuncB.setAttribute('intercept', '1');
-  feFuncB.appendChild(brightnessAnimation.cloneNode());
-  feComponentTransfer.appendChild(feFuncR);
-  feComponentTransfer.appendChild(feFuncG);
-  feComponentTransfer.appendChild(feFuncB);
+  [feFuncR, feFuncG, feFuncB].forEach(function (feFunc) {
+    feFunc.setAttribute('type', 'linear');
+    feFunc.setAttribute('slope', '1');
+    feFunc.setAttribute('intercept', '1');
+    feFunc.appendChild(brightnessAnimation.cloneNode());
+    feComponentTransfer.appendChild(feFunc);
+  });
+
   return [feComponentTransfer];
 };
