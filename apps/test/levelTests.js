@@ -93,6 +93,7 @@ describe('Level tests', function() {
       project: {
         clearHtml: function() {},
         exceedsAbuseThreshold: function () { return false; },
+        getCurrentId: function () { return 'fake_id'; },
         isEditing: function () { return true; }
       }
     });
