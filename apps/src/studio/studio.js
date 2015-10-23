@@ -33,7 +33,7 @@ var Hammer = utils.getHammer();
 var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
-var ImageFilter = require('./ImageFilter');
+var ImageFilterFactory = require('./ImageFilterFactory');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -354,17 +354,8 @@ var drawMap = function () {
     numFrames = skin.animatedGoalFrames;
   }
 
-  var goalFilter;
-  if (skin.goalEffect === 'pulse') {
-    goalFilter = new ImageFilter.Pulse(svg);
-    goalFilter.createInDom();
-  } else if (skin.goalEffect === 'shine') {
-    goalFilter = new ImageFilter.Shine(svg);
-    goalFilter.createInDom();
-  } else if (skin.goalEffect === 'glow') {
-    goalFilter = new ImageFilter.Glow(svg);
-    goalFilter.createInDom();
-  }
+  /** @type {ImageFilter} */
+  var goalFilter = ImageFilterFactory.makeFilterOfType(skin.goalEffect, svg);
 
   if (Studio.spriteGoals_) {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
@@ -388,7 +379,7 @@ var drawMap = function () {
       spriteFinishMarker.setAttribute('height', height);
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
       if (goalFilter) {
-        spriteFinishMarker.setAttribute('filter', 'url(#' + goalFilter.getFilterId() + ')');
+        goalFilter.applyTo(spriteFinishMarker);
       }
       svg.appendChild(spriteFinishMarker);
     }
