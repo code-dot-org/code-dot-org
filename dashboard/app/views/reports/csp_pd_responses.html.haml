@@ -10,11 +10,13 @@
       %table
         %tr
         - @headers.each do |header|
-          %th= header
+          %th
+            %span= header
         - level_responses.each do |response|
           %tr
           - response.each do |field|
-            %td= field
+            %td
+              %span= field
     - else
       No data.
     %br
