@@ -57,7 +57,17 @@ class AssetsTest < Minitest::Test
     delete(@assets, channel_id, 'filename.jpg')
     assert @assets.last_response.successful?
 
-    # invalid files are not uploaded
+    # file extension case insensitivity
+    put(@assets, channel_id, 'filename.JPG', 'stub-contents', 'application/jpeg')
+    assert @assets.last_response.successful?
+    get(@assets, channel_id, 'filename.JPG')
+    assert @assets.last_response.successful?
+    get(@assets, channel_id, 'filename.jpg')
+    assert @assets.last_response.not_found?
+    delete(@assets, channel_id, 'filename.JPG')
+    assert @assets.last_response.successful?
+
+    # invalid files are not uploaded, and other added files were deleted
     file_infos = JSON.parse(list(@assets, channel_id))
     assert_equal 0, file_infos.length
 
