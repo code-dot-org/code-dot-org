@@ -131,6 +131,9 @@ var AUTO_HANDLER_MAP = {
   whenUp: 'when-up',
   whenLeft: 'when-left',
   whenRight: 'when-right',
+  whenGetCharacter: 'whenSpriteCollided-' +
+      (Studio.protagonistSpriteIndex || 0) +
+      '-any_item',
   whenTouchCharacter: 'whenSpriteCollided-' +
       (Studio.protagonistSpriteIndex || 0) +
       '-any_item',
@@ -138,6 +141,7 @@ var AUTO_HANDLER_MAP = {
       (Studio.protagonistSpriteIndex || 0) +
       '-wall',
   whenGetAllCharacters: 'whenGetAllItems',
+  whenTouchAllCharacters: 'whenGetAllItems',
   whenTouchGoal: 'whenTouchGoal',
   whenTouchAllGoals: 'whenTouchAllGoals',
   whenScore1000: 'whenScore1000',
@@ -363,10 +367,9 @@ var drawMap = function () {
     }
   }
 
+  var goalOverride = utils.valueOr(level.goalOverride, {});
   var numFrames = 1;
-  if (level.goalOverride && 
-      level.goalOverride.goalAnimation && 
-      skin.animatedGoalFrames) {
+  if (goalOverride.goalAnimation && skin.animatedGoalFrames) {
     numFrames = skin.animatedGoalFrames;
   }
 
@@ -374,11 +377,8 @@ var drawMap = function () {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
       // Add finish markers.
 
-      var width =
-        ((level.goalOverride && level.goalOverride.imageWidth) || Studio.MARKER_WIDTH);
-
-      var height = 
-        (level.goalOverride && level.goalOverride.imageHeight) || Studio.MARKER_HEIGHT;
+      var width = goalOverride.imageWidth || Studio.MARKER_WIDTH;
+      var height = goalOverride.imageHeight || Studio.MARKER_HEIGHT;
 
       var finishClipPath = document.createElementNS(SVG_NS, 'clipPath');
       finishClipPath.setAttribute('id', 'finishClipPath' + i);
@@ -389,15 +389,9 @@ var drawMap = function () {
       finishClipPath.appendChild(finishClipRect);
       svg.appendChild(finishClipPath);
 
-      width = numFrames * 
-        ((level.goalOverride && level.goalOverride.imageWidth) || Studio.MARKER_WIDTH);
-
-      height = 
-        (level.goalOverride && level.goalOverride.imageHeight) || Studio.MARKER_HEIGHT;
-
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
-      spriteFinishMarker.setAttribute('width', width);
+      spriteFinishMarker.setAttribute('width', numFrames * width);
       spriteFinishMarker.setAttribute('height', height);
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
       svg.appendChild(spriteFinishMarker);
@@ -718,6 +712,7 @@ Studio.initAutoHandlers = function (map) {
 /**
  * Performs movement on a list of Projectiles or Items. Removes items from the
  * list automatically when they move out of bounds
+ * @param {Item[]|Projectile[]} list
  */
 function performItemOrProjectileMoves (list) {
   for (var i = list.length - 1; i >= 0; i--) {
@@ -725,9 +720,18 @@ function performItemOrProjectileMoves (list) {
     if (list[i].outOfBounds()) {
       list[i].removeElement();
       list.splice(i, 1);
-    } else {
-      list[i].display();
     }
+  }
+}
+
+/**
+ * Triggers display update on a list of Projectiles or Items - for updating
+ * position and/or animation frames.
+ * @param {Item[]|Projectile[]} list
+ */
+function displayItemsOrProjectiles (list) {
+  for (var i = list.length - 1; i >= 0; i--) {
+    list[i].display();
   }
 }
 
@@ -748,8 +752,8 @@ function sortDrawOrder() {
   // Add items.
   for (var i = 0; i < Studio.items.length; i++) {
     var item = {};
-    item.element = Studio.items[i].element;
-    item.y = Studio.items[i].y + Studio.items[i].height/2;
+    item.element = Studio.items[i].getElement();
+    item.y = Studio.items[i].y + Studio.items[i].height/2 + Studio.items[i].renderOffset.y;
     itemsArray.push(item);
 
     Studio.drawDebugRect("itemLocation", Studio.items[i].x, Studio.items[i].y, 4, 4);
@@ -760,12 +764,12 @@ function sortDrawOrder() {
   for (i = 0; i < Studio.sprite.length; i++) {
     var sprite = {};
     sprite.element = document.getElementById('sprite' + i);
-    sprite.y = Studio.sprite[i].y + Studio.sprite[i].height;
+    sprite.y = Studio.sprite[i].displayY + Studio.sprite[i].height;
     itemsArray.push(sprite);
 
     sprite = {};
     sprite.element = document.getElementById('spriteWalk' + i);
-    sprite.y = Studio.sprite[i].y + Studio.sprite[i].height;
+    sprite.y = Studio.sprite[i].displayY + Studio.sprite[i].height;
     itemsArray.push(sprite);
 
     Studio.drawDebugRect("spriteBottom", Studio.sprite[i].x, sprite.y, 4, 4);
@@ -815,9 +819,10 @@ Studio.onTick = function() {
   Studio.tickCount++;
   var i;
 
-  Studio.clearDebugRects();
+  Studio.clearDebugElements();
 
-  var animationOnlyFrame = 0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor;
+  var animationOnlyFrame = Studio.midExecutionFailure ||
+      (0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor);
   Studio.yieldThisTick = false;
 
   if (Studio.customLogic) {
@@ -955,6 +960,8 @@ Studio.onTick = function() {
     performItemOrProjectileMoves(Studio.projectiles);
     performItemOrProjectileMoves(Studio.items);
   }
+  displayItemsOrProjectiles(Studio.projectiles);
+  displayItemsOrProjectiles(Studio.items);
 
   Studio.updateFloatingScore();
 
@@ -1636,12 +1643,12 @@ Studio.init = function(config) {
   config.dropIntoAceAtLineStart = true;
   config.unusedConfig = [];
   for (var prop in skin.AutohandlerTouchItems) {
-    AUTO_HANDLER_MAP[skin.AutohandlerTouchItems[prop]] =
+    AUTO_HANDLER_MAP[prop] =
         'whenSpriteCollided-' +
-        (Studio.protagonistSpriteIndex || 0) + '-' + prop;
+        (Studio.protagonistSpriteIndex || 0) + '-' + skin.AutohandlerTouchItems[prop];
   }
-  for (prop in skin.AutohandlerGetAllItems) {
-    AUTO_HANDLER_MAP[skin.AutohandlerGetAllItems[prop]] = 'whenGetAll-' + prop;
+  for (prop in skin.AutohandlerTouchAllItems) {
+    AUTO_HANDLER_MAP[prop] = 'whenGetAll-' + skin.AutohandlerTouchAllItems[prop];
   }
   for (prop in level.autohandlerOverrides) {
     AUTO_HANDLER_MAP[prop] = level.autohandlerOverrides[prop];
@@ -1783,6 +1790,7 @@ Studio.reset = function(first) {
   // True if we should fail before execution, even if freeplay
   Studio.preExecutionFailure = false;
   Studio.message = null;
+  Studio.midExecutionFailure = false;
 
   // Reset the score and title screen.
   Studio.playerScore = 0;
@@ -1866,7 +1874,7 @@ Studio.reset = function(first) {
     document.getElementById('speechBubble' + i)
       .setAttribute('visibility', 'hidden');
 
-    document.getElementById('sprite' + i).removeAttribute('opacity');
+    Studio.sprite[i].setOpacity(1);
 
     var explosion = document.getElementById('explosion' + i);
     if (explosion) {
@@ -1896,7 +1904,47 @@ Studio.reset = function(first) {
   for (i = 0; i < Studio.spriteCount; i++) {
     Studio.displaySprite(i);
   }
+  this.resetGoalSprites();
+  sortDrawOrder();
 
+  // A little flag for script-based code to consume.
+  Studio.levelRestarted = true;
+
+  // Reset whether level has succeeded.
+  Studio.succeededTime = null;
+};
+
+/**
+ * Move all goal sprites to their original positions, and reset their completion
+ * state, both visual and logical.
+ */
+Studio.resetGoalSprites = function () {
+  Studio.touchAllGoalsEventFired = false;
+  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
+    // Mark each finish as incomplete.
+    Studio.spriteGoals_[i].finished = false;
+    Studio.spriteGoals_[i].startFadeTime = null;
+
+    // Move the finish icons into position.
+    var goalOverride = utils.valueOr(level.goalOverride, {});
+    var offsetX = utils.valueOr(goalOverride.goalRenderOffsetX,
+        utils.valueOr(skin.goalRenderOffsetX, 0));
+    var offsetY = utils.valueOr(goalOverride.goalRenderOffsetY,
+        utils.valueOr(skin.goalRenderOffsetY, 0));
+    var spriteFinishIcon = document.getElementById('spriteFinish' + i);
+    spriteFinishIcon.setAttribute('x', Studio.spriteGoals_[i].x + offsetX);
+    spriteFinishIcon.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
+    spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
+        'xlink:href', Studio.getGoalAssetFromSkin());
+    spriteFinishIcon.setAttribute('opacity', 1);
+    var finishClipRect = document.getElementById('finishClipRect' + i);
+    finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x + offsetX);
+    finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
+  }
+};
+
+/** @returns {string} URL of the asset to use for goal objects */
+Studio.getGoalAssetFromSkin = function () {
   var goalAsset = skin.goal;
   if (level.goalOverride) {
     if (level.goalOverride.goalAnimation) {
@@ -1905,34 +1953,7 @@ Studio.reset = function(first) {
       goalAsset = skin[level.goalOverride.goalImage];
     }
   }
-
-  Studio.touchAllGoalsEventFired = false;
-  for (i = 0; i < Studio.spriteGoals_.length; i++) {
-    // Mark each finish as incomplete.
-    Studio.spriteGoals_[i].finished = false;
-    Studio.spriteGoals_[i].startFadeTime = null;
-
-    // Move the finish icons into position.
-    var offsetX = skin.goalRenderOffsetX || 0;
-    var offsetY = skin.goalRenderOffsetY || 0;
-    var spriteFinishIcon = document.getElementById('spriteFinish' + i);
-    spriteFinishIcon.setAttribute('x', Studio.spriteGoals_[i].x + offsetX);
-    spriteFinishIcon.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
-    spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
-      'xlink:href', goalAsset);
-    spriteFinishIcon.setAttribute('opacity', 1);
-    var finishClipRect = document.getElementById('finishClipRect' + i);
-    finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x + offsetX);
-    finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
-  }
-
-  sortDrawOrder();
-
-  // A little flag for script-based code to consume.
-  Studio.levelRestarted = true;
-
-  // Reset whether level has succeeded.
-  Studio.succeededTime = null;
+  return goalAsset;
 };
 
 /**
@@ -2573,6 +2594,36 @@ Studio.drawDebugRect = function(className, x, y, width, height) {
 };
 
 /**
+ * Draw a debug line from point to point using the given CSS class name.
+ * @param {string} className
+ * @param {number} x1
+ * @param {number} y1
+ * @param {number} x2
+ * @param {number} y2
+ * @param {string} [color] - defaults to black
+ */
+Studio.drawDebugLine = function(className, x1, y1, x2, y2, color) {
+  if (!showDebugInfo) {
+    return;
+  }
+
+  color = utils.valueOr(color, '#000000');
+
+  var svg = document.getElementById('svgStudio');
+  var group = document.createElementNS(SVG_NS, 'g');
+  group.setAttribute('class', className + " debugLine");
+  var line = document.createElementNS(SVG_NS, 'line');
+  line.setAttribute('x1', x1);
+  line.setAttribute('y1', y1);
+  line.setAttribute('x2', x2);
+  line.setAttribute('y2', y2);
+  line.setAttribute('stroke', color);
+  line.setAttribute('stroke-width', 2);
+  group.appendChild(line);
+  svg.appendChild(group);
+};
+
+/**
  * Draw a timeout rectangle across the bottom of the play area.
  * It doesn't appear until halfway through the level, and briefly fades in 
  * when first appearing.
@@ -2620,8 +2671,9 @@ Studio.drawTimeoutRect = function() {
  * Clear the debug rectangles.
  */
 
-Studio.clearDebugRects = function() {
+Studio.clearDebugElements = function() {
   $(".debugRect").remove();
+  $(".debugLine").remove();
 };
 
 Studio.drawWallTile = function (svg, wallVal, row, col) {
@@ -2714,20 +2766,12 @@ Studio.createLevelItems = function (svg) {
       var mapVal = Studio.map[row][col];
       for (var index = 0; index < skin.ItemClassNames.length; index++) {
         if (constants.squareHasItemClass(index, mapVal)) {
-          var className = skin.ItemClassNames[index];
           // Create item:
-          var itemOptions = {
-            frames: getFrameCount(className, skin.specialItemProperties, skin.itemFrames),
-            className: className,
-            dir: Direction.NONE,
-            image: skin[className],
-            speed: Studio.itemSpeed[className],
-            activity: Studio.itemActivity[className],
-            loop: true,
+          var classOptions = Studio.getItemOptionsForItemClass(skin.ItemClassNames[index]);
+          var itemOptions = $.extend({}, classOptions, {
             x: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col,
-            y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row,
-          };
-
+            y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row
+          });
           var item = new Item(itemOptions);
 
           item.createElement(svg);
@@ -3280,6 +3324,32 @@ Studio.playSound = function (opts) {
   Studio.playSoundCount++;
 };
 
+/**
+ * De-duplicated legwork of finding appropriate options for the given item
+ * class.  Does not set things like position and direction - those should
+ * be applied on top of the returned options object.
+ * @param {string} itemClass
+ * @returns {Object} options object that can be passed to item constructor.
+ */
+Studio.getItemOptionsForItemClass = function (itemClass) {
+  var classProperties = utils.valueOr(skin.specialItemProperties[itemClass], {});
+  return {
+    className: itemClass,
+    image: skin[itemClass],
+    frames: getFrameCount(itemClass, skin.specialItemProperties, skin.itemFrames),
+    loop: true,
+    width: classProperties.width,
+    height: classProperties.height,
+    dir: Direction.NONE,
+    speed: Studio.itemSpeed[itemClass],
+    activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
+    isHazard: classProperties.isHazard,
+    renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
+    renderScale: utils.valueOr(classProperties.scale, 1),
+    animationRate: classProperties.animationRate
+  };
+};
+
 Studio.addItem = function (opts) {
 
   if (typeof opts.className !== 'string') {
@@ -3334,31 +3404,14 @@ Studio.addItem = function (opts) {
     return pos;
   };
 
-  var direction = level.itemGridAlignedMovement ? Direction.NONE :
-                    directions[Math.floor(Math.random() * directions.length)];
   var pos = generateRandomItemPosition();
-
-  var renderScale = 1;
-  var properties = skin.specialItemProperties[itemClass];
-  if (properties) {
-    renderScale = utils.valueOr(properties.scale, renderScale);
-  }
-
-  var itemOptions = {
-    frames: getFrameCount(itemClass, skin.specialItemProperties, skin.itemFrames),
-    className: itemClass,
-    dir: direction,
-    image: skinItem,
-    loop: true,
+  var dir = level.itemGridAlignedMovement ? Direction.NONE :
+      directions[Math.floor(Math.random() * directions.length)];
+  var itemOptions = $.extend({}, Studio.getItemOptionsForItemClass(itemClass), {
     x: pos.x,
     y: pos.y,
-    speed: Studio.itemSpeed[itemClass],
-    activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
-    width: 100,
-    height: 100,
-    renderScale: renderScale,
-  };
-
+    dir: dir
+  });
   var item = new Item(itemOptions);
 
   if (level.blockMovingIntoWalls) {
@@ -4787,6 +4840,21 @@ Studio.checkRequiredForSuccess = function() {
   return { exists: true, achieved: true, message: null };
 };
 
+/**
+ * Trigger a manual failure, which stops the interpreter and ends the level
+ * prematurely.
+ *
+ * Note: Has certain known limitations at the moment.
+ * - In droplet, it's possible for the interpreter to run several instructions
+ *   before we return to the end of a tick and check this condition.
+ * - Does not yet work in blockly mode (with no interpreter)
+ *
+ * @param {string} [message] optional failure message text
+ */
+Studio.fail = function (message) {
+  Studio.message = utils.valueOr(message, null);
+  Studio.midExecutionFailure = true;
+};
 
 var checkFinished = function () {
 
@@ -4822,7 +4890,12 @@ var checkFinished = function () {
       // establish a custom error message.
       Studio.message = requiredForSuccess.message;
     }
-  } 
+  }
+
+  if (Studio.midExecutionFailure) {
+    Studio.result = ResultType.FAILURE;
+    return true;
+  }
 
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
     Studio.result = ResultType.FAILURE;
@@ -4858,175 +4931,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js":[function(require,module,exports){
-/** @file Actions that can be given to a playlab sprite to execute over a set time. */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
- eqeqeq: true,
-
- maxlen: 90,
- maxstatements: 200
- */
-'use strict';
-
-var constants = require('./constants');
-var Direction = constants.Direction;
-
-/**
- * Work/animation for a sprite to do that will require more than one tick/frame.
- *
- * See Collidable#queueAction and Collidable#updateActions for usage.
- *
- * Note: All sprite actions must, for now, be able to complete in a provided
- * number of steps/frames, instead of blocking until they complete.  The latter
- * is a larger change that we'll save until later.
- *
- * @interface SpriteAction
- */
-
-/**
- * Perform one tick/frame step of the action on the given sprite.
- *
- * @function
- * @name SpriteAction#update
- * @param {Collidable} sprite - the sprite the action is being performed on
- */
-
-/**
- * Perform one tick/frame step of the action on the given sprite.
- *
- * @function
- * @name SpriteAction#isDone
- * @returns {boolean} whether the action is finished running.
- */
-
-/**
- * Move sprite by a desired delta over a certain number of steps/ticks.
- * Used to provide discrete grid movement in playlab's continuous interpreted
- * environment.
- * @constructor
- * @implements {SpriteAction}
- * @param {number} towardDeltaX
- * @param {number} towardDeltaY
- * @param {number} totalSteps
- */
-exports.GridMove = function (towardDeltaX, towardDeltaY, totalSteps) {
-  this.towardDeltaX_ = towardDeltaX;
-  this.towardDeltaY_ = towardDeltaY;
-  this.totalSteps_ = totalSteps;
-  this.elapsedSteps_ = 0;
-
-  /** @private {number} How much of the full distance to travel. */
-  this.percentBeforeReverse_ = 0.3;
-};
-
-/**
- * Apply a single frame of change to the given sprite.
- * @param {Collidable} sprite
- */
-exports.GridMove.prototype.update = function (sprite) {
-  // Logically snap the sprite to its final position on the first frame,
-  // the interpolation is for display only.
-  if (this.elapsedSteps_ === 0) {
-    this.startX_ = sprite.x;
-    this.startY_ = sprite.y;
-    sprite.x += this.towardDeltaX_;
-    sprite.y += this.towardDeltaY_;
-  }
-  var normalizedProgress = (this.elapsedSteps_ + 1) / this.totalSteps_;
-  sprite.displayX = this.startX_ + this.towardDeltaX_ * normalizedProgress;
-  sprite.displayY = this.startY_ + this.towardDeltaY_ * normalizedProgress;
-  sprite.dir = getDirection(this.towardDeltaX_, this.towardDeltaY_);
-  this.elapsedSteps_++;
-};
-
-/**
- * @returns {boolean} whether the action is done; in this case, whether the
- *          animation is complete, based on the number of steps that have
- *          elapsed.
- */
-exports.GridMove.prototype.isDone = function () {
-  return this.elapsedSteps_ >= this.totalSteps_;
-};
-
-/**
- * Move sprite partway toward a desired destination position, but have it
- * stop and reverse to its original position after a moment, as if it was
- * bouncing off a wall.
- * @constructor
- * @implements {SpriteAction}
- * @param {number} towardDeltaX - the relative target X position, if the motion
- *        was completed instead of cancelled (e.g. one grid-space away).
- * @param {number} towardDeltaY - as above.
- * @param {number} totalSteps - the number of steps (or frames) to take for the
- *        animation.
- */
-exports.GridMoveAndCancel = function (towardDeltaX, towardDeltaY, totalSteps) {
-  this.towardDeltaX_ = towardDeltaX;
-  this.towardDeltaY_ = towardDeltaY;
-  this.totalSteps_ = totalSteps;
-  this.elapsedSteps_ = 0;
-
-  /** @private {number} How much of the full distance to travel. */
-  this.percentBeforeReverse_ = 0.3;
-};
-
-/**
- * Apply a single frame of change to the given sprite.
- * @param {Collidable} sprite
- */
-exports.GridMoveAndCancel.prototype.update = function (sprite) {
-  // Note: The sprite's logical position (sprite.x, sprite.y) never changes
-  //       for this action.
-  var normalizedProgress = (this.elapsedSteps_ + 1) / this.totalSteps_;
-  var percentOffset = (2 * this.percentBeforeReverse_) *
-      (normalizedProgress < 0.5 ? normalizedProgress : (1 - normalizedProgress));
-  sprite.displayX = sprite.x + this.towardDeltaX_ * percentOffset;
-  sprite.displayY = sprite.y + this.towardDeltaY_ * percentOffset;
-  sprite.dir = getDirection(this.towardDeltaX_, this.towardDeltaY_);
-  // Could do a forced reversal of animation here, depends on how it looks
-  // with the real assets.
-  this.elapsedSteps_++;
-};
-
-/**
- * @returns {boolean} whether the action is done; in this case, whether the
- *          animation is complete, based on the number of steps that have
- *          elapsed.
- */
-exports.GridMoveAndCancel.prototype.isDone = function () {
-  return this.elapsedSteps_ >= this.totalSteps_;
-};
-
-/**
- * Given a 2D vector (x and y) provides the approximate animation direction
- * given in our Direction enum.  Does not calculate 'closest' direction or
- * anything like that - you'll always get a diagonal if both x and y are nonzero.
- * @param {number} x
- * @param {number} y
- * @returns {Direction}
- */
-function getDirection(x, y) {
-  var dir = Direction.NONE;
-  if (x < 0) {
-    dir |= Direction.WEST;
-  } else if (x > 0) {
-    dir |= Direction.EAST;
-  }
-  if (y < 0) {
-    dir |= Direction.NORTH;
-  } else if (y > 0) {
-    dir |= Direction.SOUTH;
-  }
-  return dir;
-}
-
-
-},{"./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js":[function(require,module,exports){
+},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js":[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -5219,11 +5124,9 @@ module.exports = RocketHeightLogic;
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
-
-var SVG_NS = "http://www.w3.org/2000/svg";
-
-// uniqueId that increments by 1 each time an element is created
-var uniqueId = 0;
+var utils = require('../utils');
+var StudioAnimation = require('./StudioAnimation');
+var StudioSpriteSheet = require('./StudioSpriteSheet');
 
 // mapping of how much we should rotate based on direction
 var DIR_TO_ROTATION = {};
@@ -5314,6 +5217,7 @@ OFFSET_CENTER[Direction.NORTHWEST] = {
 /**
  * A Projectile is a type of Collidable.
  * Note: x/y represent x/y of center in gridspace
+ * @extends {Collidable}
  */
 var Projectile = function (options) {
   // call collidable constructor
@@ -5323,77 +5227,45 @@ var Projectile = function (options) {
   this.width = options.width || 50;
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
 
-  this.currentFrame_ = 0;
-  var self = this;
-  this.animator_ = window.setInterval(function () {
-    if (self.loop || self.currentFrame_ + 1 < self.frames) {
-      self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
-    }
-  }, 50);
-
   // origin is at an offset from sprite location
   this.x = options.spriteX + OFFSET_CENTER[options.dir].x +
             (options.spriteWidth * OFFSET_FROM_SPRITE[options.dir].x);
   this.y = options.spriteY + OFFSET_CENTER[options.dir].y +
             (options.spriteHeight * OFFSET_FROM_SPRITE[options.dir].y);
+
+  /** @private {StudioSpriteSheet} */
+  this.spriteSheet_ = new StudioSpriteSheet($.extend({}, options, {
+    width: options.spriteWidth,
+    height: options.spriteHeight,
+    horizontalAnimation: true,
+    totalAnimations: 1
+  }));
+
+  /** @private {StudioAnimation} */
+  this.animation_ = new StudioAnimation($.extend({}, options, {
+    spriteSheet: this.spriteSheet_
+  }));
 };
-
-// inherit from Collidable
-Projectile.prototype = new Collidable();
-
+Projectile.inherits(Collidable);
 module.exports = Projectile;
 
-/**
- * Test only function so that we can start our id count over.
- */
-Projectile.__resetIds = function () {
-  uniqueId = 0;
+/** @returns {SVGImageElement} */
+Projectile.prototype.getElement = function () {
+  return this.animation_.getElement();
 };
 
 /**
  * Create an image element with a clip path
  */
 Projectile.prototype.createElement = function (parentElement) {
-  // create our clipping path/rect
-  this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
-  var clipId = 'projectile_clippath_' + (uniqueId++);
-  this.clipPath.setAttribute('id', clipId);
-  var rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttribute('width', this.width);
-  rect.setAttribute('height', this.height);
-  this.clipPath.appendChild(rect);
-
-  parentElement.appendChild(this.clipPath);
-
-  this.element = document.createElementNS(SVG_NS, 'image');
-  this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    this.image);
-  this.element.setAttribute('height', this.height);
-  this.element.setAttribute('width', this.width * this.frames);
-  parentElement.appendChild(this.element);
-
-  this.element.setAttribute('clip-path', 'url(#' + clipId + ')');
+  this.animation_.createElement(parentElement);
 };
 
 /**
  * Remove our element/clipPath/animator
  */
 Projectile.prototype.removeElement = function () {
-  if (this.element) {
-    this.element.parentNode.removeChild(this.element);
-    this.element = null;
-  }
-
-  // remove clip path element
-  if (this.clipPath) {
-    this.clipPath.parentNode.removeChild(this.clipPath);
-    this.clipPath = null;
-  }
-
-  if (this.animator_) {
-    window.clearInterval(this.animator_);
-    this.animator_ = null;
-  }
+  this.animation_.removeElement();
 };
 
 /**
@@ -5405,15 +5277,13 @@ Projectile.prototype.display = function () {
     y: this.y - this.height / 2
   };
 
-  this.element.setAttribute('x', topLeft.x - this.width * this.currentFrame_);
-  this.element.setAttribute('y', topLeft.y);
+  this.animation_.redrawCenteredAt({
+    x: this.x,
+    y: this.y
+  });
 
-  var clipRect = this.clipPath.childNodes[0];
-  clipRect.setAttribute('x', topLeft.x);
-  clipRect.setAttribute('y', topLeft.y);
-
-  if (this.frames > 1) {
-    this.element.setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
+  if (this.spriteSheet_.framesPerAnimation > 1) {
+    this.getElement().setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
      ', ' + this.x + ', ' + this.y + ')');
   }
 };
@@ -5432,8 +5302,17 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
+/**
+ * Change visible opacity of this projectile.
+ * @param {number} newOpacity (between 0 and 1)
+ * @override
+ */
+Projectile.prototype.setOpacity = function (newOpacity) {
+  this.animation_.setOpacity(newOpacity);
+};
 
-},{"./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/skins.js":[function(require,module,exports){
+
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./StudioAnimation":"/home/ubuntu/staging/apps/build/js/studio/StudioAnimation.js","./StudioSpriteSheet":"/home/ubuntu/staging/apps/build/js/studio/StudioSpriteSheet.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/skins.js":[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -5650,33 +5529,47 @@ function loadHoc2015(skin, assetUrl) {
   ];
 
   skin.AutohandlerTouchItems = {
-    'pig': 'whenTouchPig',
-    'man': 'whenTouchMan',
-    'roo': 'whenTouchRoo',
-    'bird': 'whenTouchBird',
-    'spider': 'whenTouchSpider',
-    'mouse': 'whenTouchMouse',
-    'pilot': 'whenTouchPilot'
+    whenTouchPig: 'pig',
+    whenTouchMan: 'man',
+    whenTouchRoo: 'roo',
+    whenTouchBird: 'bird',
+    whenTouchSpider: 'spider',
+    whenTouchMouse: 'mouse',
+    whenTouchPilot: 'pilot',
+    whenGetPig: 'pig',
+    whenGetMan: 'man',
+    whenGetRoo: 'roo',
+    whenGetBird: 'bird',
+    whenGetSpider: 'spider',
+    whenGetMouse: 'mouse',
+    whenGetPilot: 'pilot',
   };
 
-  skin.AutohandlerGetAllItems = {
-    'pig': 'whenGetAllPigs',
-    'man': 'whenGetAllMen',
-    'roo': 'whenGetAllRoos',
-    'bird': 'whenGetAllBirds',
-    'spider': 'whenGetAllSpiders',
-    'mouse': 'whenGetAllMice',
-    'pilot': 'whenGetAllPilots'
+  skin.AutohandlerTouchAllItems = {
+    whenTouchAllPigs: 'pig',
+    whenTouchAllMen: 'man',
+    whenTouchAllRoos: 'roo',
+    whenTouchAllBirds: 'bird',
+    whenTouchAllSpiders: 'spider',
+    whenTouchAllMice: 'mouse',
+    whenTouchAllPilots: 'pilot',
+    whenGetAllPigs: 'pig',
+    whenGetAllMen: 'man',
+    whenGetAllRoos: 'roo',
+    whenGetAllBirds: 'bird',
+    whenGetAllSpiders: 'spider',
+    whenGetAllMice: 'mouse',
+    whenGetAllPilots: 'pilot',
   };
 
   skin.specialItemProperties = {
-    'pig':    { frames: 12, scale: 1,   activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
-    'man':    { frames: 12, scale: 1,   activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
-    'roo':    { frames: 15, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
-    'bird':   { frames:  8, scale: 1.6, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
-    'spider': { frames: 12, scale: 1.2, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW },
-    'mouse':  { frames:  1, scale: 0.6, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
-    'pilot':  { frames: 13, scale: 1,   activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
+    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
+    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
+    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -5965,16 +5858,18 @@ function loadHoc2015x(skin, assetUrl) {
   skin.ProjectileClassNames = [
   ];
 
-  // TODO: proper item class names
-  skin.ItemClassNames = [  ];
+  skin.ItemClassNames = [
+    'hazard'
+  ];
 
   skin.AutohandlerTouchItems = {
   };
 
-  skin.AutohandlerGetAllItems = {
+  skin.AutohandlerTouchAllItems = {
   };
 
   skin.specialItemProperties = {
+    'hazard': { frames: 13, animationRate: 5, width: 100, height: 100, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
   };
 
   // Spritesheet for animated goal.
@@ -6054,6 +5949,8 @@ function loadHoc2015x(skin, assetUrl) {
   skin.preventItemLoop = function (className) {
     return className === 'item_character1';
   };
+
+  skin.hazard = skin.assetUrl('hazard_idle.png');
 
   skin.main = {
     background: skin.assetUrl('background_background1.jpg'),
@@ -7990,14 +7887,14 @@ levels.js_hoc2015_move_right = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
     [[0x1020000, 0x1020000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
      [0x1020000, 0x1020000, 0x0000000, 0x0010000, 0x0020000, 0x0100000, 0x00, 0x0000000], 
      [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x0000000],  
+     [0x0000000, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x0000000],
      [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],   
      [0x0000000, 0x0000000, 0x0000000, 0x0100000, 0x0010000, 0x0120000, 0x00, 0x0000000], 
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],  
@@ -8055,7 +7952,7 @@ levels.js_hoc2015_move_right_down = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': 
@@ -8097,13 +7994,13 @@ levels.js_hoc2015_move_diagonal = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,  
   'map':
     [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000, 0x0000000],  
-     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000], 
+     [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000],
      [0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000, 0x0000000],   
      [0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
@@ -8139,7 +8036,7 @@ levels.js_hoc2015_move_backtrack = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': 
@@ -8148,7 +8045,7 @@ levels.js_hoc2015_move_backtrack = {
      [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00], 
      [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],  
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
-     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],   
+     [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
   'instructions': '"Go quickly, BOTX."',
@@ -8179,7 +8076,7 @@ levels.js_hoc2015_move_around = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -8187,7 +8084,7 @@ levels.js_hoc2015_move_around = {
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
      [0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000, 0x00],  
      [0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0140000, 0x0000000, 0x0000001, 0x0000000, 0x00],   
+     [0x0000000, 0x0000000, 0x20, 0x0140000, 0x0000000, 0x0000001, 0x0000000, 0x00],
      [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x00],  
      [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
@@ -8221,7 +8118,7 @@ levels.js_hoc2015_move_finale = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -8229,8 +8126,8 @@ levels.js_hoc2015_move_finale = {
      [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
      [0x0000000, 0x0000000, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000000, 0x0000000], 
      [0x0000000, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000000, 0x0000000],  
-     [0x0000000, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],   
+     [0x0000000, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
      [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],  
      [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000]],
   'embed': 'false',
@@ -8273,24 +8170,25 @@ levels.js_hoc2015_event_two_items = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 1,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 16, 0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 1,  0, 0, 0, 0]],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00]],
   'pinWorkspaceToBottom': 'true',
   'embed': 'false',
   'instructions': '"BOT1, I need you to get a critical message to the GOALs."',
   'instructions2': 'Make BOT1 move when you use the arrow keys.',
-  'timeoutFailureTick': 600,
+  'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
     'imageWidth': 100,
-    'imageHeight': 100
+    'imageHeight': 100,
+    'goalRenderOffsetX': 0
   },
   'callouts': [
     {
@@ -8368,18 +8266,18 @@ levels.js_hoc2015_event_four_items = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 1,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [1, 0, 0, 16, 0, 0, 0, 1], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 1,  0, 0, 0, 0]],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x01],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00]],
   'embed': 'false',
   'instructions': '"Get to all the GOALs as quickly as you can."',
   'instructions2': 'Move in all directions.',
-  'timeoutFailureTick': 600,
+  'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
@@ -8417,16 +8315,16 @@ levels.js_hoc2015_score =
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
-    'whenTouchPilot': 'whenTouchGoal'
+    'whenGetPilot': 'whenTouchGoal'
   },
   'codeFunctions': {
     'playSound': null,
     'addPoints': { params: ["100"] },
 
-    'whenTouchPilot': null
+    'whenGetPilot': null
   },
   'startBlocks': [
-    'function whenTouchPilot() {',
+    'function whenGetPilot() {',
     '  playSound("character1sound1");',
     '}',
     ].join('\n'),
@@ -8450,7 +8348,7 @@ levels.js_hoc2015_score =
   'instructions': '"Reach the GOAL!"',
   'instructions2': "Let's add points. Add 100 points when BOT1 gets the pilot.",
   'autoArrowSteer': true,
-  'timeoutFailureTick': 600,
+  'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
@@ -8501,19 +8399,11 @@ levels.js_hoc2015_win_lose = {
     'playSound': null,
     'addPoints': { params: ["100"] },
     'removePoints': { params: ["100"] },
-
-    'addCharacter': null,
-    'whenTouchPilot': null,
-    'whenTouchMan': null,
-    'whenTouchBird': null,
+    'whenGetPilot': null,
+    'whenGetMan': null,
+    'whenGetBird': null,
   },
-  'startBlocks': [
-    'addCharacter("pilot");', // temporary until auto-characters
-    'addCharacter("pilot");', // temporary until auto-characters
-    'addCharacter("man");',   // temporary until auto-characters
-    'addCharacter("man");',   // temporary until auto-characters
-    'addCharacter("bird");',
-    ''].join('\n'),
+  'startBlocks': [].join('\n'),
 
   'sortDrawOrder': true,
   'wallMapCollisions': true,
@@ -8523,19 +8413,19 @@ levels.js_hoc2015_win_lose = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0],
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 16, 0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0]],
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x040, 0x040, 0x000, 0x000, 0x000],
+    [0x800, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x800],
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x010, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
   'instructions': '"Watch out for the MAN."',
   'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN!',
   'autoArrowSteer': true,
-  'timeoutFailureTick': 600,
+  'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'callouts': [
     {
@@ -8573,13 +8463,13 @@ levels.js_hoc2015_add_characters = {
     'removePoints': { params: ["1000"] },
     'playSound': null,
 
-    'whenTouchPig': null,
+    'whenGetPig': null,
   },
   'startBlocks': [
     'playSound("character1sound1");',
     'addCharacter("pig");',
     '',
-    'function whenTouchPig() {',
+    'function whenGetPig() {',
     '  playSound("item1sound1");',
     '  addPoints(1000);',
     '}',
@@ -8604,7 +8494,7 @@ levels.js_hoc2015_add_characters = {
   'instructions': '"I\'m seeing signs of increased activity on this planet!"',
   'instructions2': 'Add 3 PIGs to the planet. Then, go get them.',
   'autoArrowSteer': true,
-  'timeoutFailureTick': 600,
+  'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'callouts': [
     {
@@ -8642,13 +8532,13 @@ levels.js_hoc2015_chain_characters = {
     'addPoints': null,
     'removePoints': null,
 
-    'whenTouchMouse': null,
+    'whenGetMouse': null,
   },
   'startBlocks': [
     'addCharacter("mouse");',
     'playSound("character1sound3");',
     '',
-    'function whenTouchMouse() {',
+    'function whenGetMouse() {',
     '  playSound("item3sound4");',
     '  addCharacter("mouse");',
     '  addCharacter("mouse");',
@@ -8666,7 +8556,7 @@ levels.js_hoc2015_chain_characters = {
   'instructions': '"They\'re multiplying!"',
   'instructions2': 'Add 100 points every time BOT1 gets a MOUSE. Can you get 800 points? ',
   'autoArrowSteer': true,
-  'timeoutFailureTick': 900,
+  'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
   'requiredForSuccess' : {
     'winGame': true
@@ -8684,24 +8574,24 @@ levels.js_hoc2015_chain_characters_2 = {
     'removePoints': null,
     'playSound': null,
 
-    'whenTouchRoo': null,
-    'whenTouchMouse': null
+    'whenGetRoo': null,
+    'whenGetMouse': null
   },
   'startBlocks': [
     'addCharacter("roo");',
     'addCharacter("roo");',
     '',
-    'function whenTouchRoo() {',
+    'function whenGetRoo() {',
     '  playSound("character1sound2");',
     '  addPoints(50);',
     '  addCharacter("bird");',
     '  addCharacter("bird");',
     '}',
     '',
-    'function whenTouchBird() {',
+    'function whenGetBird() {',
     '',
     '}',
-    'function whenTouchMouse() {',
+    'function whenGetMouse() {',
     '  playSound("character1sound3");',
     '  addPoints(100);',
     '  ',
@@ -8719,7 +8609,7 @@ levels.js_hoc2015_chain_characters_2 = {
   'instructions': '"It\'s up to you, BOT1!"',
   'instructions2': 'When you get a ROO, two BIRDs appear. Can you make two MICE appear when you get a BIRD? Then, get them all.',
   'autoArrowSteer': true,
-  'timeoutFailureTick': 900,
+  'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
   'requiredForSuccess' : {
     'scoreMinimum': 100
@@ -8742,7 +8632,7 @@ levels.js_hoc2015_change_setting = {
     'removePoints': { 'category': 'Commands' },
 
     'whenScore1000': { 'category': 'Events' },
-    'whenTouchPilot': { 'category': 'Events' },
+    'whenGetPilot': { 'category': 'Events' },
   },
   'startBlocks': [
     'addCharacter("pilot");',
@@ -8751,7 +8641,7 @@ levels.js_hoc2015_change_setting = {
     'playSound("character1sound4");',
     'setBot("bot1");',
     '',
-    'function whenTouchPilot() {',
+    'function whenGetPilot() {',
     '  addPoints(400);',
     '  setBackground("random");',
     '  ',
@@ -8773,7 +8663,7 @@ levels.js_hoc2015_change_setting = {
   'instructions': '"Time to visit another planet."',
   'instructions2': 'Use the new commands to change the background, map, BOT, and speed.',
   'autoArrowSteer': true,
-  'timeoutFailureTick': 600,
+  'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'callouts': [
     {
@@ -8819,14 +8709,14 @@ levels.js_hoc2015_event_free = {
     'removePoints': { 'category': 'Commands' },
 
     'whenTouchObstacle': { 'category': 'Events' },
-    'whenTouchMan': { 'category': 'Events' },
-    'whenTouchPilot': { 'category': 'Events' },
-    'whenTouchPig': { 'category': 'Events' },
-    'whenTouchBird': { 'category': 'Events' },
-    'whenTouchMouse': { 'category': 'Events' },
-    'whenTouchRoo': { 'category': 'Events' },
-    'whenTouchSpider': { 'category': 'Events' },
-    'whenTouchCharacter': { 'category': 'Events' }
+    'whenGetMan': { 'category': 'Events' },
+    'whenGetPilot': { 'category': 'Events' },
+    'whenGetPig': { 'category': 'Events' },
+    'whenGetBird': { 'category': 'Events' },
+    'whenGetMouse': { 'category': 'Events' },
+    'whenGetRoo': { 'category': 'Events' },
+    'whenGetSpider': { 'category': 'Events' },
+    'whenGetCharacter': { 'category': 'Events' }
   },
   'startBlocks': [
     'setBackground("forest");',
@@ -9040,8 +8930,10 @@ module.exports.blocks = [
   {func: 'moveFast', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'moveNormal', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'moveSlow', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
-  
+
+  {func: 'whenTouchAllCharacters', block: 'function whenTouchAllCharacters() {}', expansion: 'function whenTouchAllCharacters() {\n  __;\n}', category: '' },
   {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
+
   {func: 'whenGetAllMen', block: 'function whenGetAllMen() {}', expansion: 'function whenGetAllMen() {\n  __;\n}', category: '' },
   {func: 'whenGetAllPilots', block: 'function whenGetAllPilots() {}', expansion: 'function whenGetAllPilots() {\n  __;\n}', category: '' },
   {func: 'whenGetAllPigs', block: 'function whenGetAllPigs() {}', expansion: 'function whenGetAllPigs() {\n  __;\n}', category: '' },
@@ -9049,6 +8941,15 @@ module.exports.blocks = [
   {func: 'whenGetAllMice', block: 'function whenGetAllMice() {}', expansion: 'function whenGetAllMice() {\n  __;\n}', category: '' },
   {func: 'whenGetAllRoos', block: 'function whenGetAllRoos() {}', expansion: 'function whenGetAllRoos() {\n  __;\n}', category: '' },
   {func: 'whenGetAllSpiders', block: 'function whenGetAllSpiders() {}', expansion: 'function whenGetAllSpiders() {\n  __;\n}', category: '' },
+
+  {func: 'whenTouchAllMen', block: 'function whenTouchAllMen() {}', expansion: 'function whenTouchAllMen() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllPilots', block: 'function whenTouchAllPilots() {}', expansion: 'function whenTouchAllPilots() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllPigs', block: 'function whenTouchAllPigs() {}', expansion: 'function whenTouchAllPigs() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllBirds', block: 'function whenTouchAllBirds() {}', expansion: 'function whenTouchAllBirds() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllMice', block: 'function whenTouchAllMice() {}', expansion: 'function whenTouchAllMice() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllRoos', block: 'function whenTouchAllRoos() {}', expansion: 'function whenTouchAllRoos() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllSpiders', block: 'function whenTouchAllSpiders() {}', expansion: 'function whenTouchAllSpiders() {\n  __;\n}', category: '' },
+
   {func: 'whenTouchGoal', block: 'function whenTouchGoal() {}', expansion: 'function whenTouchGoal() {\n  __;\n}', category: '' },
   {func: 'whenTouchAllGoals', block: 'function whenTouchAllGoals() {}', expansion: 'function whenTouchAllGoals() {\n  __;\n}', category: '' },
   {func: 'whenScore1000', block: 'function whenScore1000() {}', expansion: 'function whenScore1000() {\n  __;\n}', category: '' },
@@ -9058,7 +8959,18 @@ module.exports.blocks = [
   {func: 'whenUp', block: 'function whenUp() {}', expansion: 'function whenUp() {\n  __;\n}', category: '' },
   {func: 'whenDown', block: 'function whenDown() {}', expansion: 'function whenDown() {\n  __;\n}', category: '' },
   {func: 'whenTouchObstacle', block: 'function whenTouchObstacle() {}', expansion: 'function whenTouchObstacle() {\n  __;\n}', category: '' },
+
+  {func: 'whenGetCharacter', block: 'function whenGetCharacter() {}', expansion: 'function whenGetCharacter() {\n  __;\n}', category: '' },
   {func: 'whenTouchCharacter', block: 'function whenTouchCharacter() {}', expansion: 'function whenTouchCharacter() {\n  __;\n}', category: '' },
+
+  {func: 'whenGetMan', block: 'function whenGetMan() {}', expansion: 'function whenGetMan() {\n  __;\n}', category: '' },
+  {func: 'whenGetPilot', block: 'function whenGetPilot() {}', expansion: 'function whenGetPilot() {\n  __;\n}', category: '' },
+  {func: 'whenGetPig', block: 'function whenGetPig() {}', expansion: 'function whenGetPig() {\n  __;\n}', category: '' },
+  {func: 'whenGetBird', block: 'function whenGetBird() {}', expansion: 'function whenGetBird() {\n  __;\n}', category: '' },
+  {func: 'whenGetMouse', block: 'function whenGetMouse() {}', expansion: 'function whenGetMouse() {\n  __;\n}', category: '' },
+  {func: 'whenGetRoo', block: 'function whenGetRoo() {}', expansion: 'function whenGetRoo() {\n  __;\n}', category: '' },
+  {func: 'whenGetSpider', block: 'function whenGetSpider() {}', expansion: 'function whenGetSpider() {\n  __;\n}', category: '' },
+
   {func: 'whenTouchMan', block: 'function whenTouchMan() {}', expansion: 'function whenTouchMan() {\n  __;\n}', category: '' },
   {func: 'whenTouchPilot', block: 'function whenTouchPilot() {}', expansion: 'function whenTouchPilot() {\n  __;\n}', category: '' },
   {func: 'whenTouchPig', block: 'function whenTouchPig() {}', expansion: 'function whenTouchPig() {\n  __;\n}', category: '' },
@@ -11309,13 +11221,7 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
 }
 
 
-},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../sharedFunctionalBlocks":"/home/ubuntu/staging/apps/build/js/sharedFunctionalBlocks.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js"}],"/home/ubuntu/staging/apps/build/js/studio/locale.js":[function(require,module,exports){
-// locale for studio
-
-module.exports = window.blockly.studio_locale;
-
-
-},{}],"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js":[function(require,module,exports){
+},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../sharedFunctionalBlocks":"/home/ubuntu/staging/apps/build/js/sharedFunctionalBlocks.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js"}],"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js":[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -12099,20 +12005,19 @@ exports.isKeyDown = function (keyCode) {
 },{"./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/Item.js":[function(require,module,exports){
 var Collidable = require('./collidable');
 var constants = require('./constants');
+var studioMsg = require('./locale');
+var spriteActions = require('./spriteActions');
 var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
-var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
-
-var SVG_NS = "http://www.w3.org/2000/svg";
-
-// uniqueId that increments by 1 each time an element is created
-var uniqueId = 0;
+var StudioAnimation = require('./StudioAnimation');
+var StudioSpriteSheet = require('./StudioSpriteSheet');
 
 /**
  * An Item is a type of Collidable.
  * Note: x/y represent x/y of center in gridspace
+ * @extends {Collidable}
  */
 var Item = function (options) {
   // call collidable constructor
@@ -12120,24 +12025,31 @@ var Item = function (options) {
 
   this.height = options.height || 50;
   this.width = options.width || 50;
+
+  /**
+   * Rendering offset for item animation vs display position - applied as
+   * late as possible.
+   * @type {{x: number, y: number}}
+   */
+  this.renderOffset = options.renderOffset || { x: 0, y: 0 };
+
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
-  this.renderScale = options.renderScale || 1;
   this.displayDir = Direction.SOUTH;
   this.startFadeTime = null;
   this.fadeTime = constants.ITEM_FADE_TIME;
 
-  this.currentFrame_ = 0;
-  this.animator_ = window.setInterval(function () {
-    if (this.loop || this.currentFrame_ + 1 < this.frames) {
-      this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
-    }
-  }.bind(this), 50);
+  /** @private {StudioAnimation} */
+  this.animation_ = new StudioAnimation($.extend({}, options, {
+    spriteSheet: new StudioSpriteSheet(options)
+  }));
 };
-
-// inherit from Collidable
-Item.prototype = new Collidable();
-
+Item.inherits(Collidable);
 module.exports = Item;
+
+/** @returns {SVGImageElement} */
+Item.prototype.getElement = function () {
+  return this.animation_.getElement();
+};
 
 /**
  * Returns the frame of the spritesheet for the current walking direction.
@@ -12157,40 +12069,10 @@ Item.prototype.getDirectionFrame = function() {
 };
 
 /**
- * Test only function so that we can start our id count over.
- */
-Item.__resetIds = function () {
-  uniqueId = 0;
-};
-
-/**
  * Create an image element with a clip path
  */
 Item.prototype.createElement = function (parentElement) {
-  var nextId = (uniqueId++);
-
-  var numFacingAngles = 9;
-
-  // create our clipping path/rect
-  this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
-  var clipId = 'item_clippath_' + nextId;
-  this.clipPath.setAttribute('id', clipId);
-  var rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttribute('width', this.width * this.renderScale);
-  rect.setAttribute('height', this.height * this.renderScale);
-  this.clipPath.appendChild(rect);
-
-  parentElement.appendChild(this.clipPath);
-  var itemId = 'item_' + nextId;
-  this.element = document.createElementNS(SVG_NS, 'image');
-  this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    this.image);
-  this.element.setAttribute('id', itemId);
-  this.element.setAttribute('height', this.height * this.frames * this.renderScale);
-  this.element.setAttribute('width', this.width * numFacingAngles * this.renderScale);
-  parentElement.appendChild(this.element);
-
-  this.element.setAttribute('clip-path', 'url(#' + clipId + ')');
+  this.animation_.createElement(parentElement);
 };
 
 
@@ -12217,6 +12099,12 @@ Item.prototype.update = function () {
 
   // Draw the item's current location.
   Studio.drawDebugRect("itemCenter", this.x, this.y, 3, 3);
+
+  // In this stationary activity case, we don't need to do any of this
+  // update logic (facing the actor is handled every frame in display())
+  if (this.activity === 'watchActor') {
+    return;
+  }
 
   if (this.destGridX !== undefined) {
     // Draw the item's destination grid square.
@@ -12369,6 +12257,35 @@ Item.prototype.update = function () {
 };
 
 /**
+ * Isolated update logic for "watchActor" activity where the "item" keeps
+ * turning to look at the actor with the given sprite index.
+ * @param {number} targetSpriteIndex
+ */
+Item.prototype.turnToFaceActor = function (targetSpriteIndex) {
+  // Pick a target direction closest to the relative direction toward the target.
+  var target = Studio.sprite[targetSpriteIndex];
+  if (!target) {
+    return;
+  }
+
+  // Actor positions are the top-left of their square (or their "feet" square
+  // in the 'isometric' case) - we should look at the middle of their square
+  var actorGroundCenterX = target.displayX + Studio.HALF_SQUARE;
+  var actorGroundCenterY = target.displayY + Studio.HALF_SQUARE;
+  var deltaX = actorGroundCenterX - this.x;
+  var deltaY = actorGroundCenterY - this.y;
+
+  // We shouldn't adjust our direction if the actor is sufficiently close that
+  // relative direction doesn't make much sense
+  // Basically, avoid thrashing when moving into their space.
+  var SQUARED_MINIMUM_DISTANCE = 25;
+  if (deltaX * deltaX + deltaY * deltaY > SQUARED_MINIMUM_DISTANCE) {
+    Studio.drawDebugLine("watchActor", this.x, this.y, actorGroundCenterX, actorGroundCenterY, '#ffff00');
+    this.dir = constants.getClosestDirection(deltaX, deltaY);
+  }
+};
+
+/**
  * Begin a fade out.
  */
 Item.prototype.beginRemoveElement = function () {
@@ -12379,23 +12296,7 @@ Item.prototype.beginRemoveElement = function () {
  * Remove our element/clipPath/animator
  */
 Item.prototype.removeElement = function() {
-
-  if (this.element) {
-    this.element.parentNode.removeChild(this.element);
-    this.element = null;
-  }
-
-  // remove clip path element
-  if (this.clipPath) {
-    this.clipPath.parentNode.removeChild(this.clipPath);
-    this.clipPath = null;
-  }
-
-  if (this.animator_) {
-    window.clearInterval(this.animator_);
-    this.animator_ = null;
-  }
-
+  this.animation_.removeElement();
   Studio.trackedBehavior.removedItemCount++;
 };
 
@@ -12422,33 +12323,37 @@ Item.prototype.hasCompletedFade = function() {
  * Display our item at its current location
  */
 Item.prototype.display = function () {
-  var topLeft = {
-    x: this.x - this.width / 2,
-    y: this.y - this.height / 2
-  };
-
   var currentTime = new Date().getTime();
   var opacity = 1;
   if (this.startFadeTime) {
     opacity = 1 - (currentTime - this.startFadeTime) / this.fadeTime;
     opacity = Math.max(opacity, 0);
+    this.animation_.setOpacity(opacity);
   }
 
-  var directionFrame = this.getDirectionFrame();
-  this.element.setAttribute('x', topLeft.x - this.width * (directionFrame * this.renderScale + (this.renderScale-1)/2));
-  this.element.setAttribute('y', topLeft.y - this.height * (this.currentFrame_ * this.renderScale + (this.renderScale-1)));
-  this.element.setAttribute('opacity', opacity);
+  // Watch behavior does not change logical position, should update every frame
+  if (this.activity === "watchActor") {
+    this.turnToFaceActor(Studio.protagonistSpriteIndex || 0);
+  }
 
-  var clipRect = this.clipPath.childNodes[0];
-  clipRect.setAttribute('x', topLeft.x - this.width * (this.renderScale-1)/2);
-  clipRect.setAttribute('y', topLeft.y - this.height * (this.renderScale-1));
+  this.animation_.setCurrentAnimation(this.getDirectionFrame());
+  this.animation_.redrawCenteredAt({
+    x: this.x + this.renderOffset.x,
+    y: this.y + this.renderOffset.y
+  });
 };
 
 Item.prototype.getNextPosition = function () {
   var unit = Direction.getUnitVector(this.dir);
+  var speed = this.speed;
+  // TODO: Better concept of which actions actually move the actor
+  // Projected position should not be in front of you if you are not moving!
+  if (this.activity === "none" || this.activity === "watchActor") {
+    speed = 0;
+  }
   return {
-    x: this.x + this.speed * unit.x,
-    y: this.y + this.speed * unit.y
+    x: this.x + speed * unit.x,
+    y: this.y + speed * unit.y
   };
 };
 
@@ -12458,8 +12363,306 @@ Item.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
+/**
+ * Mark that we're colliding with object represented by key.
+ * Here, override base implemention to special on-collision logic for certain
+ * item classes.
+ * @param key A unique key representing the object we're colliding with
+ * @returns {boolean} True if collision is started, false if we're already colliding
+ * @override
+ */
+Item.prototype.startCollision = function (key) {
+  var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
+  if (newCollisionStarted) {
+    if (this.isHazard) {
+      var actor = Studio.sprite[key];
+      if (actor) {
+        actor.addAction(new spriteActions.FadeActor(constants.TOUCH_HAZARD_FADE_TIME));
+        actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_FADE_TIME));
+        Studio.fail(studioMsg.failedAvoidHazard());
+      }
+    }
+  }
+  return newCollisionStarted;
+};
 
-},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/collidable.js":[function(require,module,exports){
+/**
+ * Change visible opacity of this item.
+ * @param {number} newOpacity (between 0 and 1)
+ * @override
+ */
+Item.prototype.setOpacity = function (newOpacity) {
+  this.animation_.setOpacity(newOpacity);
+};
+
+
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./StudioAnimation":"/home/ubuntu/staging/apps/build/js/studio/StudioAnimation.js","./StudioSpriteSheet":"/home/ubuntu/staging/apps/build/js/studio/StudioSpriteSheet.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js"}],"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js":[function(require,module,exports){
+/** @file Actions that can be given to a playlab sprite to execute over a set time. */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var utils = require('../utils');
+var constants = require('./constants');
+var Direction = constants.Direction;
+
+/**
+ * Work/animation for a sprite to do that will require more than one tick/frame.
+ *
+ * See Collidable#queueAction and Collidable#updateActions for usage.
+ *
+ * Note: All sprite actions must, for now, be able to complete in a provided
+ * number of steps/frames, instead of blocking until they complete.  The latter
+ * is a larger change that we'll save until later.
+ *
+ * @interface SpriteAction
+ */
+
+/**
+ * Perform one tick/frame step of the action on the given sprite.
+ *
+ * @function
+ * @name SpriteAction#update
+ * @param {Collidable} sprite - the sprite the action is being performed on
+ */
+
+/**
+ * Perform one tick/frame step of the action on the given sprite.
+ *
+ * @function
+ * @name SpriteAction#isDone
+ * @returns {boolean} whether the action is finished running.
+ */
+
+/**
+ * Move sprite by a desired delta over a certain number of steps/ticks.
+ * Used to provide discrete grid movement in playlab's continuous interpreted
+ * environment.
+ * @constructor
+ * @implements {SpriteAction}
+ * @param {number} towardDeltaX
+ * @param {number} towardDeltaY
+ * @param {number} totalSteps
+ */
+exports.GridMove = function (towardDeltaX, towardDeltaY, totalSteps) {
+  this.towardDeltaX_ = towardDeltaX;
+  this.towardDeltaY_ = towardDeltaY;
+  this.totalSteps_ = totalSteps;
+  this.elapsedSteps_ = 0;
+
+  /** @private {number} How much of the full distance to travel. */
+  this.percentBeforeReverse_ = 0.3;
+};
+
+/**
+ * Apply a single frame of change to the given sprite.
+ * @param {Collidable} sprite
+ */
+exports.GridMove.prototype.update = function (sprite) {
+  // Logically snap the sprite to its final position on the first frame,
+  // the interpolation is for display only.
+  if (this.elapsedSteps_ === 0) {
+    this.startX_ = sprite.x;
+    this.startY_ = sprite.y;
+    sprite.x += this.towardDeltaX_;
+    sprite.y += this.towardDeltaY_;
+  }
+  var normalizedProgress = (this.elapsedSteps_ + 1) / this.totalSteps_;
+  sprite.displayX = this.startX_ + this.towardDeltaX_ * normalizedProgress;
+  sprite.displayY = this.startY_ + this.towardDeltaY_ * normalizedProgress;
+  sprite.dir = getDirection(this.towardDeltaX_, this.towardDeltaY_);
+  this.elapsedSteps_++;
+};
+
+/**
+ * @returns {boolean} whether the action is done; in this case, whether the
+ *          animation is complete, based on the number of steps that have
+ *          elapsed.
+ */
+exports.GridMove.prototype.isDone = function () {
+  return this.elapsedSteps_ >= this.totalSteps_;
+};
+
+/**
+ * Move sprite partway toward a desired destination position, but have it
+ * stop and reverse to its original position after a moment, as if it was
+ * bouncing off a wall.
+ * @constructor
+ * @implements {SpriteAction}
+ * @param {number} towardDeltaX - the relative target X position, if the motion
+ *        was completed instead of cancelled (e.g. one grid-space away).
+ * @param {number} towardDeltaY - as above.
+ * @param {number} totalSteps - the number of steps (or frames) to take for the
+ *        animation.
+ */
+exports.GridMoveAndCancel = function (towardDeltaX, towardDeltaY, totalSteps) {
+  this.towardDeltaX_ = towardDeltaX;
+  this.towardDeltaY_ = towardDeltaY;
+  this.totalSteps_ = totalSteps;
+  this.elapsedSteps_ = 0;
+
+  /** @private {number} How much of the full distance to travel. */
+  this.percentBeforeReverse_ = 0.3;
+};
+
+/**
+ * Apply a single frame of change to the given sprite.
+ * @param {Collidable} sprite
+ */
+exports.GridMoveAndCancel.prototype.update = function (sprite) {
+  // Note: The sprite's logical position (sprite.x, sprite.y) never changes
+  //       for this action.
+  var normalizedProgress = (this.elapsedSteps_ + 1) / this.totalSteps_;
+  var percentOffset = (2 * this.percentBeforeReverse_) *
+      (normalizedProgress < 0.5 ? normalizedProgress : (1 - normalizedProgress));
+  sprite.displayX = sprite.x + this.towardDeltaX_ * percentOffset;
+  sprite.displayY = sprite.y + this.towardDeltaY_ * percentOffset;
+  sprite.dir = getDirection(this.towardDeltaX_, this.towardDeltaY_);
+  // Could do a forced reversal of animation here, depends on how it looks
+  // with the real assets.
+  this.elapsedSteps_++;
+};
+
+/**
+ * @returns {boolean} whether the action is done; in this case, whether the
+ *          animation is complete, based on the number of steps that have
+ *          elapsed.
+ */
+exports.GridMoveAndCancel.prototype.isDone = function () {
+  return this.elapsedSteps_ >= this.totalSteps_;
+};
+
+/**
+ * Given a 2D vector (x and y) provides the approximate animation direction
+ * given in our Direction enum.  Does not calculate 'closest' direction or
+ * anything like that - you'll always get a diagonal if both x and y are nonzero.
+ * @param {number} x
+ * @param {number} y
+ * @returns {Direction}
+ */
+function getDirection(x, y) {
+  var dir = Direction.NONE;
+  if (x < 0) {
+    dir |= Direction.WEST;
+  } else if (x > 0) {
+    dir |= Direction.EAST;
+  }
+  if (y < 0) {
+    dir |= Direction.NORTH;
+  } else if (y > 0) {
+    dir |= Direction.SOUTH;
+  }
+  return dir;
+}
+
+/**
+ * Fade an actor out to nothing.
+ * @param {number} [fadeDuration] how long it should take to fade out, in
+ *        milliseconds.  Default to 1 second.
+ * @constructor
+ * @implements {SpriteAction}
+ */
+exports.FadeActor = function (fadeDuration) {
+  /** @private {number} */
+  this.startFadeTime_ = null;
+
+  /** @private {number} */
+  this.fadeDurationMs_ = utils.valueOr(fadeDuration, constants.DEFAULT_ACTOR_FADE_TIME);
+};
+
+/**
+ * Apply a single frame of change to the given sprite.
+ * @param {Collidable} sprite
+ */
+exports.FadeActor.prototype.update = function (sprite) {
+  if (!this.startFadeTime_) {
+    // First frame of fade
+    this.startFadeTime_ = new Date().getTime();
+  }
+
+  var currentTime = new Date().getTime();
+  var opacity = 1 - (currentTime - this.startFadeTime_) / this.fadeDurationMs_;
+  opacity = Math.max(opacity, 0);
+  sprite.setOpacity(opacity);
+};
+
+/**
+ * @returns {boolean} whether the action is done; in this case, whether the
+ *          fade is complete, based on the elapsed time.
+ */
+exports.FadeActor.prototype.isDone = function () {
+  var currentTime = new Date().getTime();
+  return this.startFadeTime_ && currentTime > this.startFadeTime_ + this.fadeDurationMs_;
+};
+
+/**
+ * Shake an actor left and right for a moment.
+ * @param {number} [shakeDuration] how long it should take to fade out, in
+ *        milliseconds.  Default to 1 second.
+ * @constructor
+ * @implements {SpriteAction}
+ */
+exports.ShakeActor = function (shakeDuration) {
+  /** @private {number} */
+  this.startShakeTime_ = null;
+
+  /** @private {number} How long to shake, in milliseconds */
+  this.shakeDurationMs_ = utils.valueOr(shakeDuration,
+      constants.SHAKE_DEFAULT_DURATION);
+
+  /** @private {number} How many complete back-and-forth shakes occur */
+  this.cycleCount_ = constants.SHAKE_DEFAULT_CYCLES;
+
+  /** @private {number} max shake distance from real position */
+  this.amplitude_ = constants.SHAKE_DEFAULT_DISTANCE;
+
+  /** @private {number} precalculated angular frequency of sine wave equation. */
+  this.angularFrequency_ = 2 * Math.PI * (this.cycleCount_ / this.shakeDurationMs_);
+};
+
+/**
+ * Apply a single frame of change to the given sprite.
+ * @param {Collidable} sprite
+ */
+exports.ShakeActor.prototype.update = function (sprite) {
+  if (!this.startShakeTime_) {
+    // First frame of fade
+    this.startShakeTime_ = new Date().getTime();
+  }
+
+  var elapsedTime = new Date().getTime() - this.startShakeTime_;
+  var offset = this.amplitude_ * Math.sin(this.angularFrequency_ * elapsedTime);
+
+  sprite.displayX = sprite.x + offset;
+};
+
+/**
+ * @returns {boolean} whether the action is done; in this case, whether the
+ *          fade is complete, based on the elapsed time.
+ */
+exports.ShakeActor.prototype.isDone = function () {
+  var currentTime = new Date().getTime();
+  return this.startShakeTime_ &&
+      currentTime > this.startShakeTime_ +this.shakeDurationMs_;
+};
+
+
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/locale.js":[function(require,module,exports){
+// locale for studio
+
+module.exports = window.blockly.studio_locale;
+
+
+},{}],"/home/ubuntu/staging/apps/build/js/studio/collidable.js":[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -12631,8 +12834,328 @@ Collidable.prototype.updateActions = function () {
   }
 };
 
+/**
+ * Change visible opacity of this collidable sprite.
+ * @param {number} newOpacity (between 0 and 1)
+ */
+Collidable.prototype.setOpacity = function (newOpacity) {
+  var spriteIndex = Studio.sprite.indexOf(this);
+  if (spriteIndex < 0) {
+    return;
+  }
 
-},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/constants.js":[function(require,module,exports){
+  var spriteRegularIcon = document.getElementById('sprite' + spriteIndex);
+  var spriteWalkIcon = document.getElementById('spriteWalk' + spriteIndex);
+  if (spriteRegularIcon) {
+    spriteRegularIcon.setAttribute('opacity', newOpacity);
+  }
+  if (spriteWalkIcon) {
+    spriteWalkIcon.setAttribute('opacity', newOpacity);
+  }
+};
+
+
+},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/StudioSpriteSheet.js":[function(require,module,exports){
+/** @file A utility that can help find particular frames within a spritesheet,
+ * given certain metadata about that spritesheet */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var utils = require('../utils');
+
+/**
+ * Provider of metadata about a particular sprite sheet, to help find frames
+ * within it.
+ *
+ * Assumptions:
+ * All frames are the same size, and are arranged in a grid.
+ * All animations are the same number of frames.
+ * Each animation is a single column or a single row
+ *
+ * @constructor
+ * @param {!Object} options
+ * @param {!string} options.image - URL of the sprite sheet asset.
+ * @param {number} [options.width] - frame width in original asset.  Default 50.
+ * @param {number} [options.height] - frame height in original asset. Default 50.
+ * @param {number} [options.totalAnimations] - How many animations (columns)
+ *        there are in the sprite sheet. Default 9.
+ * @param {number} [options.frames] - How many frames (rows) there are per
+ *        animation. Default 1.
+ * @param {boolean} [options.horizontalAnimation] - If animation frames run in
+ *        rows instead of columns.
+ */
+var StudioSpriteSheet = module.exports = function (options) {
+  /** @type {string} spritesheet asset path */
+  this.assetPath = options.image;
+
+  /** @type {number} */
+  this.frameWidth = utils.valueOr(options.width, 50); // TODO: Magic Number
+
+  /** @type {number} */
+  this.frameHeight = utils.valueOr(options.height, 50); // TODO: Magic Number
+
+  /** @type {number} animations in sheet / width in frames of sprite sheet */
+  this.totalAnimations = utils.valueOr(options.totalAnimations, 9);
+
+  /** @type {number} frames per animation / height in frames of sprite sheet */
+  this.framesPerAnimation = utils.valueOr(options.frames, 1);
+
+  /** @type {boolean} Whether animation frames run in rows, not columns */
+  this.horizontalAnimation = utils.valueOr(options.horizontalAnimation, false);
+};
+
+/** @return {number} original height of the whole sprite sheet. */
+StudioSpriteSheet.prototype.assetWidth = function () {
+    return this.frameWidth * (this.horizontalAnimation ?
+            this.framesPerAnimation : this.totalAnimations);
+};
+
+/** @return {number} original width of the whole sprite sheet. */
+StudioSpriteSheet.prototype.assetHeight = function () {
+  return this.frameHeight * (this.horizontalAnimation ?
+          this.totalAnimations : this.framesPerAnimation);
+};
+
+/**
+ * Get the framing rect for a particular animation and frame within the
+ * sprite sheet.
+ * @param {number} animationIndex - Which animation to look up.
+ * @param {number} frameIndex - Which frame in the animation to look up.
+ * @returns {Object} a frame rect at spritesheet scale relative to the sheet's
+ *          top-left corner.
+ */
+StudioSpriteSheet.prototype.getFrame = function (animationIndex, frameIndex) {
+  var x = this.frameWidth * (this.horizontalAnimation ? frameIndex : animationIndex);
+  var y = this.frameHeight * (this.horizontalAnimation ? animationIndex : frameIndex);
+  return {
+    x: x,
+    y: y,
+    width: this.frameWidth,
+    height: this.frameHeight,
+    top: y,
+    left: x,
+    right: x + this.frameWidth,
+    bottom: y + this.frameHeight
+  };
+};
+
+
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/studio/StudioAnimation.js":[function(require,module,exports){
+/** @file An animated image, which handles frame counts, rates and offsets
+ * internally and exposes simple methods for rendering at the desired position. */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var constants = require('./constants');
+var utils = require('../utils');
+
+// The SVG namespace that must be applied to new SVG elements
+var SVG_NS = "http://www.w3.org/2000/svg";
+
+// Unique element ID that increments by 1 each time an element is created
+var uniqueId = 0;
+
+/**
+ * A StudioAnimation represents an animation asset that can be created,
+ * positioned and rendered by other code.  It tries to hide away all the
+ * details of actually rendering the correct frame at the correct offset
+ * and advancing frames at the correct rate.
+ * @constructor
+ * @param {!Object} options
+ * @param {!StudioSpriteSheet} spriteSheet - The source asset for this animation,
+ *        wrapped in necessary metadata.
+ * @param {number} [options.renderScale] - Default 1.
+ * @param {number} [options.opacity] - Opacity on a 0-1 scale.  Default 1.
+ * @param {number} [options.animationRate] - How fast the animation should be
+ *        played, in frames per second.  Default 20.
+ * @param {boolean} [options.loop] - Whether the animation should loop
+ *        automatically.  Default false.
+ */
+var StudioAnimation = module.exports = function (options) {
+  /** @private {StudioSpriteSheet} */
+  this.spriteSheet_ = options.spriteSheet;
+
+  /** @private {number} render scale */
+  this.renderScale_ = utils.valueOr(options.renderScale, 1);
+
+  /** @private {number} opacity on a scale of 0 (transparent) to 1 (opaque) */
+  this.opacity_ = utils.valueOr(options.opacity, 1);
+
+  /**
+   * Which animation (which column in the sprite sheet) is currently playing.
+   * @private {number}
+   */
+  this.currentAnimation_ = 0;
+
+  /** @private {number} index of current frame in the current animation. */
+  this.currentFrame_ = 0;
+
+  /** @private {boolean} whether the animation should loop automatically. */
+  this.loop_ = utils.valueOr(options.loop, false);
+
+  /** @private {SVGImageElement} */
+  this.element_ = null;
+
+  /** @private {SVGElement} */
+  this.clipPath_ = null;
+
+  // Setting the animation rate here initializes the setInterval that keeps
+  // the current frame changing at the framerate.
+  this.setAnimationRate(utils.valueOr(options.animationRate,
+      constants.DEFAULT_ANIMATION_RATE));
+};
+
+/**
+ * Test only function so that we can start our id count over.
+ */
+StudioAnimation.__resetIds = function () {
+  uniqueId = 0;
+};
+
+/** @returns {SVGImageElement} */
+StudioAnimation.prototype.getElement = function () {
+  return this.element_;
+};
+
+/**
+ * Create an image element with a clip path
+ */
+StudioAnimation.prototype.createElement = function (parentElement) {
+  var nextId = (uniqueId++);
+
+  // create our clipping path/rect
+  this.clipPath_ = document.createElementNS(SVG_NS, 'clipPath');
+  var clipId = 'studioanimation_clippath_' + nextId;
+  this.clipPath_.setAttribute('id', clipId);
+  var rect = document.createElementNS(SVG_NS, 'rect');
+  rect.setAttribute('width', this.spriteSheet_.frameWidth * this.renderScale_);
+  rect.setAttribute('height', this.spriteSheet_.frameHeight * this.renderScale_);
+  this.clipPath_.appendChild(rect);
+  parentElement.appendChild(this.clipPath_);
+
+  var itemId = 'studioanimation_' + nextId;
+  this.element_ = document.createElementNS(SVG_NS, 'image');
+  this.element_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+     this.spriteSheet_.assetPath);
+  this.element_.setAttribute('id', itemId);
+  this.element_.setAttribute('height',
+      this.spriteSheet_.assetHeight() * this.renderScale_);
+  this.element_.setAttribute('width',
+      this.spriteSheet_.assetWidth() * this.renderScale_);
+  parentElement.appendChild(this.element_);
+
+  this.element_.setAttribute('clip-path', 'url(#' + clipId + ')');
+};
+
+/**
+ * Remove our element/clipPath/animator
+ */
+StudioAnimation.prototype.removeElement = function() {
+
+  if (this.element_) {
+    this.element_.parentNode.removeChild(this.element_);
+    this.element_ = null;
+  }
+
+  // remove clip path element
+  if (this.clipPath_) {
+    this.clipPath_.parentNode.removeChild(this.clipPath_);
+    this.clipPath_ = null;
+  }
+
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+    this.animator_ = null;
+  }
+};
+
+/**
+ * Display the current frame at the given location
+ */
+StudioAnimation.prototype.redrawCenteredAt = function (center) {
+  var frame = this.spriteSheet_.getFrame(this.currentAnimation_, this.currentFrame_);
+  var scale = this.renderScale_;
+
+  // Preserved behavior: When scaling a sprite up, we actually scale around the
+  //       bottom-center of the sprite (so feet stay planted in the same place)
+  //       rather than actually around its center.
+  //       That's what the (2 * scale - 1) bit is about; just change that to
+  //       (scale) if you want to scale about the sprite center again.
+  // TODO: Improve this by scaling around an explicitly encoded 'sprite center'
+  var topLeft = {
+    x: center.x - (frame.width / 2) * scale,
+    y: center.y - (frame.height / 2) * (2 * scale - 1)
+  };
+
+  // Offset the spritesheet DOM element by the inverse of the offset of the
+  // frame we want to display.
+  this.element_.setAttribute('x', topLeft.x - frame.left * scale);
+  this.element_.setAttribute('y', topLeft.y - frame.top * scale);
+  this.element_.setAttribute('opacity', this.opacity_);
+
+  // Then set the clip rect to the position where we want to display it, so
+  // only the frame that's now positioned correctly is shown.
+  var clipRect = this.clipPath_.childNodes[0];
+  clipRect.setAttribute('x', topLeft.x);
+  clipRect.setAttribute('y', topLeft.y);
+};
+
+/**
+ * Sets which animation to play out of the sprite sheet.
+ * Animations are indexed by their position in the sprite sheet, where each
+ * animation is its own column and animation zero is the far-left column.
+ * @param {!number} animationIndex
+ */
+StudioAnimation.prototype.setCurrentAnimation = function (animationIndex) {
+  this.currentAnimation_ = animationIndex;
+};
+
+/**
+ * Set the animation rate for this item's sprite.
+ * @param {number} framesPerSecond
+ */
+StudioAnimation.prototype.setAnimationRate = function (framesPerSecond) {
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+  }
+  this.animator_ = window.setInterval(function () {
+    if (this.loop_ || this.currentFrame_ + 1 < this.spriteSheet_.framesPerAnimation) {
+      this.currentFrame_ = (this.currentFrame_ + 1) %
+          this.spriteSheet_.framesPerAnimation;
+    }
+  }.bind(this), Math.round(1000 / framesPerSecond));
+};
+
+/**
+ * Change visible opacity of this animation..
+ * @param {number} newOpacity (between 0 and 1)
+ */
+StudioAnimation.prototype.setOpacity = function (newOpacity) {
+  this.opacity_ = newOpacity;
+};
+
+
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/constants.js":[function(require,module,exports){
 'use strict';
 
 exports.SpriteSpeed = {
@@ -12667,6 +13190,37 @@ exports.Direction = {
 
 var Dir = exports.Direction;
 
+/**
+ * Mapping number of steps away from north to direction enum.
+ * @type {Direction[]}
+ */
+exports.ClockwiseDirectionsFromNorth = [
+  Dir.NORTH,
+  Dir.NORTHEAST,
+  Dir.EAST,
+  Dir.SOUTHEAST,
+  Dir.SOUTH,
+  Dir.SOUTHWEST,
+  Dir.WEST,
+  Dir.NORTHWEST
+];
+
+/**
+ * Given a 2D vector (x and y) provides the closest animation direction
+ * given in our Direction enum.
+ * @param {number} x
+ * @param {number} y
+ * @returns {Direction}
+ */
+exports.getClosestDirection = function (x, y) {
+  // Y is inverted between our playlab coordinate space and what atan2 expects.
+  var radiansFromNorth = Math.atan2(x, -y);
+  var stepRadians = Math.PI / 4;
+  // Snap positive index of nearest 45° where 0 is North, 1 is NE, etc...
+  var stepsFromNorth = (Math.round(radiansFromNorth / stepRadians) + 8) % 8;
+  // At this point we should have an int between 0 and 7
+  return exports.ClockwiseDirectionsFromNorth[stepsFromNorth];
+};
 
 var frameDirTable = {};
 frameDirTable[Dir.SOUTHEAST]  = 0;
@@ -12967,9 +13521,19 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
+/** @type {number} animation rate in frames per second. */
+exports.DEFAULT_ANIMATION_RATE = 20;
+
 // Fade durations (in milliseconds)
 exports.GOAL_FADE_TIME = 200;
 exports.ITEM_FADE_TIME = 200;
+exports.DEFAULT_ACTOR_FADE_TIME = 1000;
+exports.TOUCH_HAZARD_FADE_TIME = 2000;
+
+// Other defaults for actions
+exports.SHAKE_DEFAULT_DURATION = 1000;
+exports.SHAKE_DEFAULT_CYCLES = 8;
+exports.SHAKE_DEFAULT_DISTANCE = 5;
 
 
 },{}]},{},["/home/ubuntu/staging/apps/build/js/studio/main.js"]);

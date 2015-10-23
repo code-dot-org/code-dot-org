@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,9 +126,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": " Use one of the getTime() and getUserId() blocks to collect additional data. ",
     "markdown_instructions": "## Non-User Provided Data\r\n\r\nThere are ways to collect data without having a user enter data. Two ways to collect data not provided by the user are the getTime() and getUserId() blocks. Use one of these blocks to collect additional data. ",

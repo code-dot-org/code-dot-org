@@ -71,5 +71,10 @@ execute "build-pegasus" do
 end
 
 service 'pegasus' do
+  supports reload: true
+  reload_command '/etc/init.d/pegasus upgrade'
   action [:enable, :start]
+
+  # Restart Unicorn when Ruby is upgraded
+  subscribes :restart, "apt_package[ruby#{node['cdo-ruby']['version']}]", :delayed
 end
