@@ -353,6 +353,134 @@ var drawMap = function () {
     numFrames = skin.animatedGoalFrames;
   }
 
+  var defs;
+  if (skin.goalEffect) {
+    defs = svg.querySelector('defs');
+    if (!defs) {
+      defs = document.createElementNS(SVG_NS, 'defs');
+      svg.appendChild(defs);
+    }
+  }
+
+  var pulseFilterId, shineFilterId;
+  if (skin.goalEffect === 'pulse') {
+    // <filter id="pulse-filter">
+    //  <feComponentTransfer>
+    //   <feFuncR type="linear" slope="1" intercept="0"/>
+    //   <feFuncG type="linear" slope="1" intercept="0"/>
+    //   <feFuncB type="linear" slope="1" intercept="0"/>
+    //  </feComponentTransfer>
+    // </filter>
+    pulseFilterId = 'pusle-filter';
+    var pulseFilter = document.createElementNS(SVG_NS, 'filter');
+    pulseFilter.setAttribute('id', pulseFilterId);
+    var feComponentTransfer = document.createElementNS(SVG_NS, 'feComponentTransfer');
+    var brightnessAnimation = document.createElementNS(SVG_NS, 'animate');
+    brightnessAnimation.setAttribute('attributeName', 'intercept');
+    brightnessAnimation.setAttribute('values', '0;0;0;0.1;0.25;1;0.25;0.1;0;0;0');
+    brightnessAnimation.setAttribute('dur', '2s');
+    brightnessAnimation.setAttribute('repeatCount', 'indefinite');
+    var feFuncR = document.createElementNS(SVG_NS, 'feFuncR');
+    feFuncR.setAttribute('type', 'linear');
+    feFuncR.setAttribute('slope', '1');
+    feFuncR.setAttribute('intercept', '1');
+    feFuncR.appendChild(brightnessAnimation.cloneNode());
+    var feFuncG = document.createElementNS(SVG_NS, 'feFuncG');
+    feFuncG.setAttribute('type', 'linear');
+    feFuncG.setAttribute('slope', '1');
+    feFuncG.setAttribute('intercept', '1');
+    feFuncG.appendChild(brightnessAnimation.cloneNode());
+    var feFuncB = document.createElementNS(SVG_NS, 'feFuncB');
+    feFuncB.setAttribute('type', 'linear');
+    feFuncB.setAttribute('slope', '1');
+    feFuncB.setAttribute('intercept', '1');
+    feFuncB.appendChild(brightnessAnimation.cloneNode());
+    feComponentTransfer.appendChild(feFuncR);
+    feComponentTransfer.appendChild(feFuncG);
+    feComponentTransfer.appendChild(feFuncB);
+    pulseFilter.appendChild(feComponentTransfer);
+    defs.appendChild(pulseFilter);
+  }
+
+  if (skin.goalEffect === 'shine') {
+    /*
+     <filter id="shine-filter">
+       <!--Blur effect-->
+       <feGaussianBlur stdDeviation="6" result="blur1" />
+
+       <!--Lighting effect-->
+       <feSpecularLighting in="blur1" result="spec1" specularExponent="60" lighting-color="#ffffff">
+
+         <!--Light source effect-->
+         <fePointLight x="50" y="100" z="400">
+           <animate attributeName="x" values="-200;-200;600;600" dur="2s" repeatCount="indefinite"></animate>
+           <animate attributeName="y" values="-200;-200;600;600" dur="2s" repeatCount="indefinite"></animate>
+         </fePointLight>
+       </feSpecularLighting>
+
+       <feComposite in="spec1" in2="SourceGraphic" operator="in" result="makedSpecular" />
+       <feComposite in="maskedSpecular" in2="SourceGraphic" operator="over" />
+     </filter>
+     */
+
+    shineFilterId = 'shine-filter';
+    var shineFilter = document.createElementNS(SVG_NS, 'filter');
+    shineFilter.setAttribute('id', shineFilterId);
+
+    var feGaussianBlur = document.createElementNS(SVG_NS, 'feGaussianBlur');
+    var blurId = shineFilterId + '-blur';
+    feGaussianBlur.setAttribute('stdDeviation', 6);
+    feGaussianBlur.setAttribute('result', blurId);
+
+    var feSpecularLighting = document.createElementNS(SVG_NS, 'feSpecularLighting');
+    var specularId = shineFilterId + '-specular';
+    feSpecularLighting.setAttribute('in', blurId);
+    feSpecularLighting.setAttribute('specularExponent', 60);
+    feSpecularLighting.setAttribute('lighting-color', 'white');
+    feSpecularLighting.setAttribute('result', specularId);
+
+    var fePointLight = document.createElementNS(SVG_NS, 'fePointLight');
+    var pointLightZ = 200;
+    fePointLight.setAttribute('x', 0);
+    fePointLight.setAttribute('y', 0);
+    fePointLight.setAttribute('z', pointLightZ);
+    var xPositionAnimation = document.createElementNS(SVG_NS, 'animate');
+    xPositionAnimation.setAttribute('attributeName', 'x');
+    var values = [
+        -pointLightZ,
+        -pointLightZ,
+        Studio.MAZE_WIDTH + pointLightZ,
+        Studio.MAZE_WIDTH + pointLightZ
+    ];
+    xPositionAnimation.setAttribute('values', values.join(';'));
+    xPositionAnimation.setAttribute('dur', '2s');
+    xPositionAnimation.setAttribute('repeatCount', 'indefinite');
+    var yPositionAnimation = xPositionAnimation.cloneNode();
+    yPositionAnimation.setAttribute('attributeName', 'y');
+    fePointLight.appendChild(xPositionAnimation);
+    fePointLight.appendChild(yPositionAnimation);
+    feSpecularLighting.appendChild(fePointLight);
+
+    var feCompositeMask = document.createElementNS(SVG_NS, 'feComposite');
+    var maskedSpecularId = specularId + '-masked';
+    feCompositeMask.setAttribute('in', specularId);
+    feCompositeMask.setAttribute('operator', 'in');
+    feCompositeMask.setAttribute('in2', 'SourceGraphic');
+    feCompositeMask.setAttribute('result', maskedSpecularId);
+
+    var feCompositeLayer = document.createElementNS(SVG_NS, 'feComposite');
+    feCompositeLayer.setAttribute('in', maskedSpecularId);
+    feCompositeLayer.setAttribute('operator', 'over');
+    feCompositeLayer.setAttribute('in2', 'SourceGraphic');
+
+
+    shineFilter.appendChild(feGaussianBlur);
+    shineFilter.appendChild(feSpecularLighting);
+    shineFilter.appendChild(feCompositeMask);
+    shineFilter.appendChild(feCompositeLayer);
+    defs.appendChild(shineFilter);
+  }
+
   if (Studio.spriteGoals_) {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
       // Add finish markers.
@@ -374,6 +502,11 @@ var drawMap = function () {
       spriteFinishMarker.setAttribute('width', numFrames * width);
       spriteFinishMarker.setAttribute('height', height);
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
+      if (skin.goalEffect === 'pulse') {
+        spriteFinishMarker.setAttribute('filter', 'url(#' + pulseFilterId + ')');
+      } else if (skin.goalEffect === 'shine') {
+        spriteFinishMarker.setAttribute('filter', 'url(#' + shineFilterId + ')');
+      }
       svg.appendChild(spriteFinishMarker);
     }
   }
