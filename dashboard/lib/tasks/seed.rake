@@ -260,7 +260,6 @@ namespace :seed do
   task all: [:videos, :concepts, :scripts, :script_cache_to_cache, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
   task incremental: [:videos, :concepts, :scripts_incremental, :script_cache_to_cache, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
 
-  task test: [:videos, :games, :concepts, :trophies, :prize_providers, :secret_words, :secret_pictures]
   task script_cache_to_cache: :environment do
     Script.script_cache_to_cache
   end
