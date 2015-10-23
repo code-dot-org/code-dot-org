@@ -9,9 +9,6 @@ var _ = utils.getLodash();
 var StudioAnimation = require('./StudioAnimation');
 var StudioSpriteSheet = require('./StudioSpriteSheet');
 
-// uniqueId that increments by 1 each time an element is created
-var uniqueId = 0;
-
 /**
  * An Item is a type of Collidable.
  * Note: x/y represent x/y of center in gridspace
@@ -64,14 +61,6 @@ Item.prototype.getDirectionFrame = function() {
   }
 
   return constants.frameDirTableWalkingWithIdle[this.displayDir];
-};
-
-/**
- * Test only function so that we can start our id count over.
- */
-Item.__resetIds = function () {
-  StudioAnimation.__resetIds();
-  uniqueId = 0;
 };
 
 /**
