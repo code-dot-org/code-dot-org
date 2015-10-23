@@ -65,6 +65,11 @@ describe('generateDropletModeOptions', function () {
           "color": "#BB77C7",
           "title": "promptNum"
         },
+        "Math.random": {
+          "color": "#FFB74D",
+          "title": "Math.random",
+          "value": true
+        },
         "Math.round": {
           "value": true,
           "color": "#FFB74D",
@@ -644,6 +649,11 @@ describe('generateDropletModeOptions', function () {
           "value": true,
           "color": "#BB77C7",
           "title": "promptNum"
+        },
+        "Math.random": {
+          "color": "#FFB74D",
+          "title": "Math.random",
+          "value": true
         },
         "Math.round": {
           "value": true,
