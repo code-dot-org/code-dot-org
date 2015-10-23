@@ -8,6 +8,11 @@ var _ = utils.getLodash();
  * @property {Object} parent object within which this function is defined as a property, keyed by the func name
  * @property {String} category category within which to place the block
  * @property {String} type type of the block (e.g. value)
+ * @property {string[]} paletteParams
+ * @property {string[]} params
+ * @property {Object.<number, funciton>} dropdown
+ * @property {bool} dontMarshal
+ * @property {bool} noAutocomplete
  */
 
 /**
