@@ -74,6 +74,7 @@ class ProjectsController < ApplicationController
         readonly_workspace: sharing || readonly,
         full_width: true,
         callouts: [],
+        channel: params[:channel_id],
         no_padding: browser.mobile? && @game.share_mobile_fullscreen?,
         # for sharing pages, the app will display the footer inside the playspace instead
         no_footer: sharing && @game.owns_footer_for_share?,

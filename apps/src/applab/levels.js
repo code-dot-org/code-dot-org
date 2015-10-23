@@ -148,12 +148,12 @@ levels.custom = {
     "andOperator": null,
     "orOperator": null,
     "notOperator": null,
-    "randomNumber_max": null,
     "randomNumber_min_max": null,
     "mathRound": null,
     "mathAbs": null,
     "mathMax": null,
     "mathMin": null,
+    "mathRandom": null,
 
     // Variables
     "declareAssign_x": null,
@@ -181,6 +181,8 @@ levels.custom = {
     "callMyFunction_n": null,
     "return": null,
   },
+
+  // "randomNumber_max": null, // DEPRECATED
 };
 
 levels.ec_simple = utils.extend(levels.custom, {
