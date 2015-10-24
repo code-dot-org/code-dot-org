@@ -229,7 +229,7 @@ end
 #
 def upgrade_frontend(name, host)
   commands = [
-    'cd production',
+    "cd #{rack_env}",
     'git pull --ff-only',
     'rake build',
   ]
@@ -286,7 +286,7 @@ end
 # properly scaled we should be able to upgrade 20% of the front-ends at a time. Right now we're
 # over-subscribed (have more resources than we need) so we're restarting 50% of the front-ends.
 task :deploy do
-  if CDO.daemon && rack_env?(:production)
+  if CDO.daemon && CDO.app_servers.any?
     Dir.chdir(deploy_dir) do
       thread_count = 2
       threaded_each CDO.app_servers.keys, thread_count do |name|
