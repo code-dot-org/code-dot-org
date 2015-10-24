@@ -1637,28 +1637,30 @@ levels.js_hoc2015_move_right = {
   },
   "callouts": [
     {
-      "id": "playlab:js_hoc2015_move_right:placeCommandsHere",
-      "element_id": ".droplet-main-canvas",
-      "hide_target_selector": ".droplet-drag-cover",
+      "id": "playlab:js_hoc2015_move_right:runButton",
+      "element_id": "#runButton",
+      "hide_target_selector": "#runButton",
       "qtip_config": {
         "content": {
-          "text": msg.calloutPlaceCommandsHere(),
+          "text": msg.calloutRunButton(),
         },
         'hide': {
           'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top left',
-          'at': 'top left',
+          'at': 'bottom center',
           'adjust': {
-            'x': 10,
-            'y': 20
+            'x': 0,
+            'y': 0
           }
         }
       }
     }
   ],
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { 'success': true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
       result: { 'success': false, message: msg.failedHasAllGoals() } }
   ]
@@ -1703,6 +1705,8 @@ levels.js_hoc2015_move_right_down = {
     'imageHeight': 50
   },
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { 'success': true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
       result: { 'success': false, message: msg.failedHasAllGoals() } }
   ]
@@ -1750,8 +1754,33 @@ levels.js_hoc2015_move_diagonal = {
     'imageHeight': 50
   },
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { 'success': true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
       result: { 'success': false, message: msg.failedHasAllGoals() } }
+  ],
+  "callouts": [
+    {
+      'id': 'playlab:js_hoc2015_move_diagonal:placeCommandsHere',
+      'element_id': '#show-code-header',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutShowCodeToggle(),
+        },
+        'hide': {
+          'event': 'mouseup touchend',
+        },
+        'position': {
+          'my': 'top right',
+          'at': 'bottom left',
+          'adjust': {
+            'x': 0,
+            'y': 0
+          }
+        }
+      }
+    }
   ]
 };
 
@@ -1795,6 +1824,8 @@ levels.js_hoc2015_move_backtrack = {
     'imageHeight': 50
   },
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { 'success': true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
       result: { 'success': false, message: msg.failedHasAllGoals() } }
   ]
@@ -1840,6 +1871,8 @@ levels.js_hoc2015_move_around = {
     'imageHeight': 50
   },
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { 'success': true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
       result: { 'success': false, message: msg.failedHasAllGoals() } }
   ]
@@ -1886,6 +1919,8 @@ levels.js_hoc2015_move_finale = {
     'imageHeight': 50
   },
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { 'success': true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
       result: { 'success': false, message: msg.failedHasAllGoals() } }
   ]
@@ -1942,6 +1977,8 @@ levels.js_hoc2015_event_two_items = {
   },
 
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true }, 
+      result: { 'success': true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true }, 
       result: { 'success': false, message: msg.failedTwoItemsTimeout() } }
   ],
@@ -1949,21 +1986,21 @@ levels.js_hoc2015_event_two_items = {
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_event_two_items:placeCommandsHere',
-      'element_id': '.droplet-main-canvas',
+      'element_id': '.droplet-gutter-line:nth-of-type(2)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content': {
-          'text': msg.calloutPlaceCommandsHere(),
+          'text': msg.calloutShowPlaceGoUpHere(),
         },
         'hide': {
           'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top left',
-          'at': 'top left',
+          'at': 'bottom right',
           'adjust': {
-            'x': 10,
-            'y': 20
+            'x': 30,
+            'y': -10
           }
         }
       }
@@ -2042,30 +2079,11 @@ levels.js_hoc2015_event_four_items = {
   },
 
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true }, 
+      result: { 'success': true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true }, 
       result: { 'success': false, message: msg.failedFourItemsTimeout() } }
-  ],
-
-  'callouts': [
-    {
-      'id': 'playlab:js_hoc2015_event_four_items:typeCommandsHere',
-      'element_id': '.ace_scroller',
-      'qtip_config': {
-        'content' : {
-          'text': msg.calloutTypeCommandsHere(),
-        },
-        'event': 'click mousedown touchstart mouseup touchend',
-        'position': {
-          'my': 'center right',
-          'at': 'top left',
-          'adjust': {
-            'x': 25,
-            'y': 25
-          }
-        }
-      }
-    }
-  ],
+  ]
 };
 
 
@@ -2129,18 +2147,18 @@ levels.js_hoc2015_score =
     { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 }, 
       result: { 'success': false, message: msg.failedScoreGoals() } },
     { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 }, 
-      result: { 'success': true } }
+      result: { 'success': true, message: msg.successCharacter1() } }
   ],
 
   'completeOnSuccessConditionNotGoals': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_event_choose_character:placeCommandsAtTop',
-      'element_id': '.droplet-main-canvas',
+      'id': 'playlab:js_hoc2015_score:placeCommandsAtTop',
+      'element_id': '.droplet-gutter-line:nth-of-type(2)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content': {
-          'text': msg.calloutPlaceCommandsAtTop(),
+          'text': msg.calloutShowPlaySound(),
         },
         'hide': {
           'event': 'mouseup touchend',
@@ -2149,7 +2167,7 @@ levels.js_hoc2015_score =
           'my': 'top left',
           'at': 'top left',
           'adjust': {
-            'x': 10,
+            'x': 170,
             'y': 20
           }
         }
@@ -2199,17 +2217,18 @@ levels.js_hoc2015_win_lose = {
   'showTimeoutRect': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_win_lose:charactersMove',
-      'element_id': '#droplet_palette_block_setToFlee',
+      'id': 'playlab:js_hoc2015_win_lose:instructions',
+      'element_id': '#prompt-table',
+      'hide_target_selector': '#prompt-table',
       'qtip_config': {
         'content': {
-          'text': msg.calloutCharactersMove(),
+          'text': msg.calloutInstructions(),
         },
         'position': {
-          'my': 'center left',
-          'at': 'center right',
+          'my': 'bottom left',
+          'at': 'top right',
           'adjust': {
-            'x': 15,
+            'x': -40,
             'y': 0
           }
         }
@@ -2225,7 +2244,7 @@ levels.js_hoc2015_win_lose = {
     { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 }, 
       result: { 'success': false, message: msg.failedWinLoseGoals() } },
     { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 }, 
-      result: { 'success': true } }
+      result: { 'success': true, message: msg.successCharacter1() } }
   ]
 };
 
@@ -2294,7 +2313,7 @@ levels.js_hoc2015_add_characters = {
 
   'progressConditions' : [
     { required: { 'collectedItemsAtOrAbove': 3 }, 
-      result: { 'success': true } },
+      result: { 'success': true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 }, 
       result: { 'success': false, message: msg.failedAddCharactersTimeout() } }
   ]
@@ -2346,7 +2365,7 @@ levels.js_hoc2015_chain_characters = {
     { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsAtOrAbove': 800 }, 
       result: { 'success': false, message: msg.failedChainCharactersItems() } },
     { required: { 'collectedItemsAtOrAbove': 8, 'currentPointsAtOrAbove': 800 }, 
-      result: { 'success': true } }
+      result: { 'success': true, message: msg.successCharacter1() } }
   ]
 };
 
@@ -2402,7 +2421,28 @@ levels.js_hoc2015_chain_characters_2 = {
     { required: { 'timedOut': true, 'collectedItemsBelow': 14 }, 
       result: { 'success': false, message: msg.failedChainCharacters2Timeout() } },
     { required: { 'collectedItemsAtOrAbove': 14 }, 
-      result: { 'success': true } }
+      result: { 'success': true, message: msg.successCharacter1() } }
+  ],
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwo',
+      'element_id': '.droplet-gutter-line:nth-of-type(12)',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutPlaceTwo(),
+        },
+        'event': 'mouseup touchend',
+        'position': {
+          'my': 'top left',
+          'at': 'center right',
+          'adjust': {
+            'x': 40,
+            'y': 10
+          }
+        }
+      }
+    }
   ]
 };
 
@@ -2412,17 +2452,17 @@ levels.js_hoc2015_change_setting = {
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'setBot': { 'category': 'Commands' },
-    'setBackground': { 'category': 'Commands' },
-    'setBotSpeed': { 'category': 'Commands' },
-    'setMap': { 'category': 'Commands' },
-    'playSound': { 'category': 'Commands' },
-    'addCharacter': { 'category': 'Commands' },
-    'addPoints': { 'category': 'Commands' },
-    'removePoints': { 'category': 'Commands' },
+    'setBot': null,
+    'setBackground': null,
+    'setBotSpeed': null,
+    'setMap': null,
+    'playSound': null,
+    'addCharacter': null,
+    'addPoints': null,
+    'removePoints': null,
 
-    'whenScore1000': { 'category': 'Events' },
-    'whenGetPilot': { 'category': 'Events' },
+    'whenScore1000': null,
+    'whenGetPilot': null,
   },
   'startBlocks': [
     'addCharacter("pilot");',
@@ -2453,15 +2493,16 @@ levels.js_hoc2015_change_setting = {
   'showTimeoutRect': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_change_setting:clickCategory',
-      'element_id': '.droplet-palette-group-header.green',
+      'id': 'playlab:js_hoc2015_change_setting:setMap',
+      'element_id': '#droplet_palette_block_setMap',
+      'hide_target_selector': '#droplet_palette_block_setMap',
       'qtip_config': {
         'content' : {
-          'text': msg.calloutClickCategory(),
+          'text': msg.calloutSetMapAndSpeed(),
         },
         'position': {
-          'my': 'top center',
-          'at': 'bottom center',
+          'my': 'center left',
+          'at': 'center right',
         }
       }
     }
@@ -2469,7 +2510,7 @@ levels.js_hoc2015_change_setting = {
   'progressConditions' : [
     // Collected all the items and set the right properties?  Success.
     { required: { 'setMap': true, 'setBotSpeed': true, 'collectedItemsAtOrAbove': 3 },
-      result: { 'success': true } },
+      result: { 'success': true, message: msg.successGenericCharacter() } },
     // Special message for timing out when not enough items collected.
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
       result: { 'success': false, message: msg.failedChangeSettingTimeout() } },
@@ -2530,19 +2571,16 @@ levels.js_hoc2015_event_free = {
   'autoArrowSteer': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_event_free:tryOutNewCommands',
-      'element_id': '.droplet-palette-canvas',
+      'id': 'playlab:js_hoc2015_event_free:clickCategory',
+      'element_id': '.droplet-palette-group-header.green',
+      'hide_target_selector': '.droplet-palette-group-header.green',
       'qtip_config': {
-        'content': {
-          'text': msg.calloutTryOutNewCommands(),
+        'content' : {
+          'text': msg.calloutClickEvents(),
         },
         'position': {
-          'my': 'center left',
-          'at': 'center right',
-          'adjust': {
-            'x': -20,
-            'y': 0
-          }
+          'my': 'top center',
+          'at': 'bottom center',
         }
       }
     }

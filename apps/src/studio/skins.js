@@ -337,6 +337,9 @@ function loadHoc2015(skin, assetUrl) {
     return className === 'item_character1';
   };
 
+  // No failure avatar for this skin.
+  skin.failureAvatar = null;
+
   // TODO: Create actual item choices
   skin.pig = skin.assetUrl('walk_item1.png');
   skin.man = skin.assetUrl('walk_item2.png');
