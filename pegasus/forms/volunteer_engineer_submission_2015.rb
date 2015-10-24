@@ -16,9 +16,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     result[:description_s] = required data[:description_s]
     result[:email_s] = required email_address data[:email_s]
     result[:allow_contact_b] = required data[:allow_contact_b]
-    result[:unsubscribed_b] = default_if_empty data[:unsubscribed_b], false
-    result[:unsubscribe_reason_s] = nil_if_empty data[:unsubscribe_reason_s]
-    result[:unsubscribe_details_t] = nil_if_empty stripped data[:unsubscribe_details_t]
+    result[:unsubscribed_s] = nil_if_empty data[:unsubscribed_s]
 
     result
   end
@@ -55,7 +53,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   end
 
   def self.solr_query(params)
-    query = "kind_s:\"#{self.name}\" && allow_contact_b:true && unsubscribed_b:false"
+    query = "kind_s:\"#{self.name}\" && allow_contact_b:true && -unsubscribed_s"
 
     coordinates = params['coordinates']
     distance = 500
