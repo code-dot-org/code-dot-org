@@ -14,8 +14,6 @@ Dashboard::Application.configure do
   config.serve_static_files = true
   config.static_cache_control = "public, max-age=86400"
 
-  config.asset_host = 'adhoc-studio.code.org'
-
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
