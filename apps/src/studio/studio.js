@@ -4857,6 +4857,12 @@ var checkFinished = function () {
   var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
   var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
 
+  if (progressConditionResult) {
+    Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
+    Studio.message = utils.valueOr(progressConditionResult.message, null);
+    return true;
+  }
+
   // Levels with goals (usually images that need to be touched) can have an optional success
   // condition that can explicitly return false to prevent the level from completing.
   // In very rare cases, a level might have goals but not care whether they're touched or not
@@ -4869,12 +4875,6 @@ var checkFinished = function () {
       (hasGoals && level.completeOnSuccessConditionNotGoals && achievedRequiredSuccessCondition) ||
       (!hasGoals && achievedRequiredSuccessCondition)) {
     Studio.result = ResultType.SUCCESS;
-    return true;
-  }
-
-  if (progressConditionResult) {
-    Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
-    Studio.message = utils.valueOr(progressConditionResult.message, null);
     return true;
   }
 
