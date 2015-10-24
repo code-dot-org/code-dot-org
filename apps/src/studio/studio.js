@@ -4814,11 +4814,11 @@ Studio.conditionSatisfied = function(required) {
  * about the specific succeeding or failing criteria.
  *
  * @param {Array} conditions. 
- * @returns {ProgressConditionOutcome|false}
+ * @returns {ProgressConditionOutcome|null}
  */
 Studio.checkProgressConditions = function() {
   if (!level.progressConditions) {
-    return false;
+    return null;
   }
 
   for (var i = 0; i < level.progressConditions.length; i++) {
@@ -4829,7 +4829,7 @@ Studio.checkProgressConditions = function() {
     }
   }
 
-  return false;
+  return null;
 };
 
 /**
