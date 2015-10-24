@@ -239,6 +239,25 @@ class ApiControllerTest < ActionController::TestCase
     assert_select 'a[href="//test.code.org/teacher-dashboard"]', 0
   end
 
+  test 'should show sign in link for signed out user' do
+    sign_out :user
+    get :user_menu
+
+    assert_response :success
+    puts @response.body
+    assert_select 'a[href="http://test.host/users/sign_in"]', 'Sign in'
+  end
+
+  test 'should show sign out link for signed in user' do
+    student = create :student
+    sign_in student
+
+    get :user_menu
+    puts @response.body
+
+    assert_response :success
+    assert_select 'a[href="http://test.host/users/sign_out"]', 'Sign out'
+  end
 
   test 'api routing' do
     # /dashboardapi urls
