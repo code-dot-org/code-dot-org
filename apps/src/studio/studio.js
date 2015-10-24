@@ -2832,6 +2832,8 @@ Studio.displaySprite = function(i, isWalking) {
     return;
   }
 
+  // if iceage, handle sprites differently
+
   var spriteRegularIcon = document.getElementById('sprite' + i);
   var spriteWalkIcon = document.getElementById('spriteWalk' + i);
 
