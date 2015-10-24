@@ -228,6 +228,23 @@ class ApiControllerTest < ActionController::TestCase
     assert_select 'a[href="//test.code.org/teacher-dashboard"]', 'Teacher Home Page'
   end
 
+
+  test "do not show prize link if you don't have a prize" do
+    sign_in create(:teacher)
+
+    get :user_menu
+    assert_select 'a[href="http://test.host/redeemprizes"]', 0
+  end
+
+  test "do show prize link when you already have a prize" do
+    teacher = create(:teacher)
+    sign_in teacher
+    teacher.teacher_prize = TeacherPrize.create!(prize_provider_id: 8, code: 'fake')
+
+    get :user_menu
+    assert_select 'a[href="http://test.host/redeemprizes"]'
+  end
+
   test 'student does not see links to ops dashboard or teacher dashboard' do
     student = create :student
     sign_in student
@@ -244,7 +261,6 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert_response :success
-    puts @response.body
     assert_select 'a[href="http://test.host/users/sign_in"]', 'Sign in'
   end
 
@@ -253,7 +269,6 @@ class ApiControllerTest < ActionController::TestCase
     sign_in student
 
     get :user_menu
-    puts @response.body
 
     assert_response :success
     assert_select 'a[href="http://test.host/users/sign_out"]', 'Sign out'
