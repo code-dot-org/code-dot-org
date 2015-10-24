@@ -9,6 +9,7 @@ require 'active_support/core_ext/hash/except'
 # endpoints will accept the values provided.
 class TestCloudFront < Minitest::Test
   def setup
+    @old_stub_responses = Aws.config[:stub_responses]
     Aws.config[:stub_responses] = true
     Aws.config[:cloudfront] = {
       stub_responses: {
@@ -18,6 +19,9 @@ class TestCloudFront < Minitest::Test
           tap { |x| x[:distribution][:status] = 'Deployed' }
       }
     }
+  end
+  def teardown
+    Aws.config[:stub_responses] = @old_stub_responses
   end
 
   def distribution_list(items=[])
