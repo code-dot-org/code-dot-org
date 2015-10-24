@@ -1824,6 +1824,7 @@ Studio.reset = function(first) {
     removedItemCount: 0,
     setActivityRecord: null,
     hasSetBot: false,
+    hasSetBotSpeed: false,
     hasSetBackground: false,
     hasSetMap: false,
     hasAddedItem: false,
@@ -4773,71 +4774,82 @@ Studio.allGoalsVisited = function() {
 };
 
 /**
- * A level can provide zero or more requiredForSuccess criteria which are
- * special cases that a level requires for success.  This function evaluates
- * the state of these criteria.
- * @returns {Object} outcome
- * @returns {boolean} outcome.exists Whether the level even has any of these criteria.
- * @returns {boolean} outcome.achieved false if any of the criteria was required but not met.
- * @returns {string} outcome.message A custom message for the first of the failing criteria.
+ * Returns true if the specified criteria, provided as an Object, is satisfied.
  */
-Studio.checkRequiredForSuccess = function() {
-
-  if (!level.requiredForSuccess) {
-    return { exists: false, achieved: false, message: null };
-  }
-
-  var required = level.requiredForSuccess;
+Studio.conditionSatisfied = function(required) {
   var tracked = Studio.trackedBehavior;
+  var valueNames = Object.keys(required);
 
-  if (required.setSprite && !tracked.hasSetSprite) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetSprite() };
+  for (var k = 0; k < valueNames.length; k++) {
+    var valueName = valueNames[k];
+    var value = required[valueName];
+
+    if (valueName === 'timedOut' && Studio.timedOut() != value) {
+      return false;
+    }
+
+    if (valueName === 'collectedItemsAtOrAbove' && tracked.removedItemCount < value) {
+      return false;
+    }
+
+    if (valueName === 'collectedItemsBelow' && tracked.removedItemCount >= value) {
+      return false;
+    }
+
+    if (valueName === 'currentPointsAtOrAbove' && Studio.playerScore < value) {
+      return false;
+    }
+
+    if (valueName === 'currentPointsBelow' && Studio.playerScore >= value) {
+      return false;
+    }
+
+    if (valueName === 'allGoalsVisited' && Studio.allGoalsVisited() !== value) {
+      return false;
+    }
+
+    if (valueName === 'setMap' && tracked.hasSetMap !== value) {
+      return false;
+    }
+
+    if (valueName === 'setBotSpeed' && tracked.hasSetBotSpeed !== value) {
+      return false;
+    }
   }
 
-  if (required.setBotSpeed && !tracked.hasSetBotSpeed) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetBotSpeed() };
+  return true;
+};
+
+/**
+ * @typedef {Object} ProgressConditionOutcome
+ * @property {boolean} success
+ * @property {string} message
+ */
+
+/**
+ * A level can provide zero or more progress conditions which are special cases
+ * that we test to see if the level has succeeded or failed.  This function
+ * evaluates the state of these criteria.  It returns false if none of the
+ * criteria affects progress, otherwise an object that contains information
+ * about the specific succeeding or failing criteria.
+ *
+ * @param {Array} conditions. 
+ * @returns {ProgressConditionOutcome|null}
+ */
+Studio.checkProgressConditions = function() {
+  if (!level.progressConditions) {
+    return null;
   }
 
-  if (required.setBackground && !tracked.hasSetBackground) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetBackground() };
+  for (var i = 0; i < level.progressConditions.length; i++) {
+    var condition = level.progressConditions[i];
+
+    if (Studio.conditionSatisfied(condition.required)) {
+      return condition.result;
+    }
   }
 
-  if (required.setBotMap && !tracked.hasSetMap) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetMap() };
-  }
-
-  if (required.touchAllItems && Studio.items.length > 0) {
-    return { exists: true, achieved: false, message: studioMsg.failedTouchAllItems() };
-  }
-
-  if (required.scoreMinimum && Studio.playerScore < required.scoreMinimum) {
-    return { exists: true, achieved: false, message: studioMsg.failedScoreMinimum() };
-  }
-
-  if (required.addItem && !tracked.hasAddedItem) {
-    return { exists: true, achieved: false, message: studioMsg.failedAddItem() };
-  }
-
-  if (required.removedItemCount && tracked.removedItemCount < required.removedItemCount) {
-    return { exists: true, achieved: false, message: studioMsg.failedRemovedItemCount() };
-  }
-
-  if (required.winGame && ! tracked.hasWonGame) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasWonGame() };
-  }
-
-  if (required.lostGame && ! tracked.hasLostGame) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasLostGame() };
-  }
-
-  if (required.setActivity &&
-      !(tracked.setActivityRecord && 
-        tracked.setActivityRecord[required.setActivity.itemType] &&
-        tracked.setActivityRecord[required.setActivity.itemType][required.setActivity.activityType])) {
-    return { exists: true, achieved: false, message: studioMsg.failedSetActivity() };
-  }
-
-  return { exists: true, achieved: true, message: null };
+  return null;
 };
 
 /**
@@ -4860,7 +4872,7 @@ var checkFinished = function () {
 
   var hasGoals = Studio.spriteGoals_.length !== 0;
   var achievedGoals = Studio.allGoalsVisited();
-  var requiredForSuccess = Studio.checkRequiredForSuccess();
+  var progressConditionResult = Studio.checkProgressConditions();
   var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
   var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
   var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
@@ -4880,16 +4892,10 @@ var checkFinished = function () {
     return true;
   }
 
-  if (requiredForSuccess.exists) {
-    if (requiredForSuccess.achieved) {
-      Studio.message = null;
-      Studio.result = ResultType.SUCCESS;
-      return true;
-    } else {
-      // Not meeting these is not reason for immediate failure in itself, but they do
-      // establish a custom error message.
-      Studio.message = requiredForSuccess.message;
-    }
+  if (progressConditionResult) {
+    Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
+    Studio.message = utils.valueOr(progressConditionResult.message, null);
+    return true;
   }
 
   if (Studio.midExecutionFailure) {
@@ -7932,6 +7938,10 @@ levels.js_hoc2015_move_right = {
       }
     }
   ],
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { 'success': false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 levels.js_hoc2015_move_right_down = {
@@ -7971,7 +7981,11 @@ levels.js_hoc2015_move_right_down = {
     'goalImage': 'goal2',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { 'success': false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 
@@ -8014,7 +8028,11 @@ levels.js_hoc2015_move_diagonal = {
     'goalImage': 'goal1',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { 'success': false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 
@@ -8055,7 +8073,11 @@ levels.js_hoc2015_move_backtrack = {
     'goalImage': 'goal1',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { 'success': false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 levels.js_hoc2015_move_around = {
@@ -8096,7 +8118,11 @@ levels.js_hoc2015_move_around = {
     'goalImage': 'goal2',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { 'success': false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 
@@ -8138,7 +8164,11 @@ levels.js_hoc2015_move_finale = {
     'goalImage': 'goal2',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { 'success': false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 
@@ -8190,6 +8220,12 @@ levels.js_hoc2015_event_two_items = {
     'imageHeight': 100,
     'goalRenderOffsetX': 0
   },
+
+  'progressConditions' : [
+    { required: { 'timedOut': true }, 
+      result: { 'success': false, message: msg.failedTwoItemsTimeout() } }
+  ],
+
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_event_two_items:placeCommandsHere',
@@ -8284,6 +8320,12 @@ levels.js_hoc2015_event_four_items = {
     'imageWidth': 100,
     'imageHeight': 100
   },
+
+  'progressConditions' : [
+    { required: { 'timedOut': true }, 
+      result: { 'success': false, message: msg.failedFourItemsTimeout() } }
+  ],
+
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_event_four_items:typeCommandsHere',
@@ -8358,10 +8400,18 @@ levels.js_hoc2015_score =
   'goal': {
     successCondition: function () { return false; }
   },
-  'requiredForSuccess' : {
-    'touchAllItems': true,
-    'winGame': true
-  },
+
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 }, 
+      result: { 'success': false, message: msg.failedScoreTimeout() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 }, 
+      result: { 'success': false, message: msg.failedScoreScore() } },  
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 }, 
+      result: { 'success': false, message: msg.failedScoreGoals() } },
+    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 }, 
+      result: { 'success': true } }
+  ],
+
   'completeOnSuccessConditionNotGoals': true,
   'callouts': [
     {
@@ -8446,9 +8496,17 @@ levels.js_hoc2015_win_lose = {
       }
     }
   ],
-  'requiredForSuccess' : {
-    'winGame': true
-  },
+
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 }, 
+      result: { 'success': false, message: msg.failedWinLoseTimeout() } },
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 }, 
+      result: { 'success': false, message: msg.failedWinLoseScore() } },  
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 }, 
+      result: { 'success': false, message: msg.failedWinLoseGoals() } },
+    { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 }, 
+      result: { 'success': true } }
+  ]
 };
 
 
@@ -8514,10 +8572,12 @@ levels.js_hoc2015_add_characters = {
     }
   ],
 
-  'requiredForSuccess' : {
-    'removedItemCount': 3,
-    'winGame': true
-  }
+  'progressConditions' : [
+    { required: { 'collectedItemsAtOrAbove': 3 }, 
+      result: { 'success': true } },
+    { required: { 'timedOut': true, 'collectedItemsBelow': 3 }, 
+      result: { 'success': false, message: msg.failedAddCharactersTimeout() } }
+  ]
 };
 
 
@@ -8558,9 +8618,16 @@ levels.js_hoc2015_chain_characters = {
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
-  'requiredForSuccess' : {
-    'winGame': true
-  }
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsBelow': 800 }, 
+      result: { 'success': false, message: msg.failedChainCharactersTimeout() } },
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 8, 'currentPointsBelow': 800 }, 
+      result: { 'success': false, message: msg.failedChainCharactersScore() } },  
+    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsAtOrAbove': 800 }, 
+      result: { 'success': false, message: msg.failedChainCharactersItems() } },
+    { required: { 'collectedItemsAtOrAbove': 8, 'currentPointsAtOrAbove': 800 }, 
+      result: { 'success': true } }
+  ]
 };
 
 levels.js_hoc2015_chain_characters_2 = {
@@ -8611,9 +8678,12 @@ levels.js_hoc2015_chain_characters_2 = {
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
-  'requiredForSuccess' : {
-    'scoreMinimum': 100
-  }
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'collectedItemsBelow': 14 }, 
+      result: { 'success': false, message: msg.failedChainCharacters2Timeout() } },
+    { required: { 'collectedItemsAtOrAbove': 14 }, 
+      result: { 'success': true } }
+  ]
 };
 
 levels.js_hoc2015_change_setting = {
@@ -8646,10 +8716,6 @@ levels.js_hoc2015_change_setting = {
     '  setBackground("random");',
     '  ',
     '}',
-    'function whenGetAllCharacters() {',
-    '  endGame("win");',
-    '  ',
-    '}',
     ''].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
@@ -8680,13 +8746,19 @@ levels.js_hoc2015_change_setting = {
       }
     }
   ],
-  'requiredForSuccess' : {
-    'setSprite': true,
-    'setBotSpeed': true,
-    'setBackground': true,
-    'setMap': true,
-    'winGame': true
-  }
+  'progressConditions' : [
+    // Collected all the items and set the right properties?  Success.
+    { required: { 'setMap': true, 'setBotSpeed': true, 'collectedItemsAtOrAbove': 3 },
+      result: { 'success': true } },
+    // Special message for timing out when not enough items collected.
+    { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
+      result: { 'success': false, message: msg.failedChangeSettingTimeout() } },
+    // If all items are collected, but either property not set?  Failure.
+    { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 }, 
+      result: { 'success': false, message: msg.failedChangeSettingSettings() } },
+    { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 }, 
+      result: { 'success': false, message: msg.failedChangeSettingSettings() } }    
+  ]
 };
 
 levels.js_hoc2015_event_free = {
@@ -13246,8 +13318,8 @@ frameDirTableWalking[Dir.SOUTHWEST]  = 7;
 
 exports.frameDirTableWalking = frameDirTableWalking;
 
-
-// Normal for preview
+/*
+// Normal for placeholder
 var frameDirTableWalkingWithIdle = {};
 frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
 frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
@@ -13258,10 +13330,10 @@ frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
 frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 5;
 frameDirTableWalkingWithIdle[Dir.WEST]       = 6;
 frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 7;
-
+*/
 
 // Reversed for final
-/*
+
 var frameDirTableWalkingWithIdle = {};
 frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
 frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
@@ -13272,7 +13344,7 @@ frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
 frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 3;
 frameDirTableWalkingWithIdle[Dir.WEST]       = 2;
 frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 1;
-*/
+
 
 exports.frameDirTableWalkingWithIdle = frameDirTableWalkingWithIdle;
 
