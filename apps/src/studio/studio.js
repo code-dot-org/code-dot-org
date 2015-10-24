@@ -4764,41 +4764,47 @@ Studio.conditionSatisfied = function(required) {
     var valueName = valueNames[k];
     var value = required[valueName];
 
-    if (valueName == 'timedOut' && Studio.timedOut() != value) {
+    if (valueName === 'timedOut' && Studio.timedOut() != value) {
       return false;
     }
 
-    if (valueName == 'collectedItemsAtOrAbove' && tracked.removedItemCount < value) {
+    if (valueName === 'collectedItemsAtOrAbove' && tracked.removedItemCount < value) {
       return false;
     }
 
-    if (valueName == 'collectedItemsBelow' && tracked.removedItemCount >= value) {
+    if (valueName === 'collectedItemsBelow' && tracked.removedItemCount >= value) {
       return false;
     }
 
-    if (valueName == 'currentPointsAtOrAbove' && Studio.playerScore < value) {
+    if (valueName === 'currentPointsAtOrAbove' && Studio.playerScore < value) {
       return false;
     }
 
-    if (valueName == 'currentPointsBelow' && Studio.playerScore >= value) {
+    if (valueName === 'currentPointsBelow' && Studio.playerScore >= value) {
       return false;
     }
 
-    if (valueName == 'allGoalsVisited' && Studio.allGoalsVisited() != value) {
+    if (valueName === 'allGoalsVisited' && Studio.allGoalsVisited() !== value) {
       return false;
     }
 
-    if (valueName == 'setMap' && tracked.hasSetMap != value) {
+    if (valueName === 'setMap' && tracked.hasSetMap !== value) {
       return false;
     }
 
-    if (valueName == 'setBotSpeed' && tracked.hasSetBotSpeed != value) {
+    if (valueName === 'setBotSpeed' && tracked.hasSetBotSpeed !== value) {
       return false;
     }
   }
 
   return true;
 };
+
+/**
+ * @typedef {Object} ProgressConditionOutcome
+ * @property {boolean} success
+ * @property {string} message
+ */
 
 /**
  * A level can provide zero or more progress conditions which are special cases
@@ -4808,13 +4814,11 @@ Studio.conditionSatisfied = function(required) {
  * about the specific succeeding or failing criteria.
  *
  * @param {Array} conditions. 
- * @returns {Object|false} outcome
- * @returns {boolean} outcome.success Whether level has succeeded.
- * @returns {message} outcome.message Optional result message.
+ * @returns {ProgressConditionOutcome|false}
  */
 Studio.checkProgressConditions = function() {
   if (!level.progressConditions) {
-    return;
+    return false;
   }
 
   for (var i = 0; i < level.progressConditions.length; i++) {
