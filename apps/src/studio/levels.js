@@ -1659,6 +1659,8 @@ levels.js_hoc2015_move_right = {
     }
   ],
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { 'success': true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
       result: { 'success': false, message: msg.failedHasAllGoals() } }
   ]
@@ -1703,6 +1705,8 @@ levels.js_hoc2015_move_right_down = {
     'imageHeight': 50
   },
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { 'success': true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
       result: { 'success': false, message: msg.failedHasAllGoals() } }
   ]
@@ -1750,6 +1754,8 @@ levels.js_hoc2015_move_diagonal = {
     'imageHeight': 50
   },
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { 'success': true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
       result: { 'success': false, message: msg.failedHasAllGoals() } }
   ]
@@ -1795,6 +1801,8 @@ levels.js_hoc2015_move_backtrack = {
     'imageHeight': 50
   },
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { 'success': true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
       result: { 'success': false, message: msg.failedHasAllGoals() } }
   ]
@@ -1840,6 +1848,8 @@ levels.js_hoc2015_move_around = {
     'imageHeight': 50
   },
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { 'success': true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
       result: { 'success': false, message: msg.failedHasAllGoals() } }
   ]
@@ -1886,6 +1896,8 @@ levels.js_hoc2015_move_finale = {
     'imageHeight': 50
   },
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { 'success': true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
       result: { 'success': false, message: msg.failedHasAllGoals() } }
   ]
@@ -1942,6 +1954,8 @@ levels.js_hoc2015_event_two_items = {
   },
 
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true }, 
+      result: { 'success': true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true }, 
       result: { 'success': false, message: msg.failedTwoItemsTimeout() } }
   ],
@@ -2042,6 +2056,8 @@ levels.js_hoc2015_event_four_items = {
   },
 
   'progressConditions' : [
+    { required: { 'allGoalsVisited': true }, 
+      result: { 'success': true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true }, 
       result: { 'success': false, message: msg.failedFourItemsTimeout() } }
   ],
@@ -2129,7 +2145,7 @@ levels.js_hoc2015_score =
     { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 }, 
       result: { 'success': false, message: msg.failedScoreGoals() } },
     { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 }, 
-      result: { 'success': true } }
+      result: { 'success': true, message: msg.successCharacter1() } }
   ],
 
   'completeOnSuccessConditionNotGoals': true,
@@ -2225,7 +2241,7 @@ levels.js_hoc2015_win_lose = {
     { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 }, 
       result: { 'success': false, message: msg.failedWinLoseGoals() } },
     { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 }, 
-      result: { 'success': true } }
+      result: { 'success': true, message: msg.successCharacter1() } }
   ]
 };
 
@@ -2294,7 +2310,7 @@ levels.js_hoc2015_add_characters = {
 
   'progressConditions' : [
     { required: { 'collectedItemsAtOrAbove': 3 }, 
-      result: { 'success': true } },
+      result: { 'success': true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 }, 
       result: { 'success': false, message: msg.failedAddCharactersTimeout() } }
   ]
@@ -2346,7 +2362,7 @@ levels.js_hoc2015_chain_characters = {
     { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsAtOrAbove': 800 }, 
       result: { 'success': false, message: msg.failedChainCharactersItems() } },
     { required: { 'collectedItemsAtOrAbove': 8, 'currentPointsAtOrAbove': 800 }, 
-      result: { 'success': true } }
+      result: { 'success': true, message: msg.successCharacter1() } }
   ]
 };
 
@@ -2402,7 +2418,7 @@ levels.js_hoc2015_chain_characters_2 = {
     { required: { 'timedOut': true, 'collectedItemsBelow': 14 }, 
       result: { 'success': false, message: msg.failedChainCharacters2Timeout() } },
     { required: { 'collectedItemsAtOrAbove': 14 }, 
-      result: { 'success': true } }
+      result: { 'success': true, message: msg.successCharacter1() } }
   ]
 };
 
@@ -2469,7 +2485,7 @@ levels.js_hoc2015_change_setting = {
   'progressConditions' : [
     // Collected all the items and set the right properties?  Success.
     { required: { 'setMap': true, 'setBotSpeed': true, 'collectedItemsAtOrAbove': 3 },
-      result: { 'success': true } },
+      result: { 'success': true, message: msg.successGenericCharacter() } },
     // Special message for timing out when not enough items collected.
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
       result: { 'success': false, message: msg.failedChangeSettingTimeout() } },
