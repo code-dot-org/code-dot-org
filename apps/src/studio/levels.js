@@ -2293,6 +2293,8 @@ levels.js_hoc2015_add_characters = {
   ],
 
   'progressConditions' : [
+    { required: { 'collectedItemsAtOrAbove': 3 }, 
+      result: { 'success': true } },
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 }, 
       result: { 'success': false, message: msg.failedAddCharactersTimeout() } }
   ]
@@ -2475,11 +2477,7 @@ levels.js_hoc2015_change_setting = {
     { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 }, 
       result: { 'success': false, message: msg.failedChangeSettingSettings() } },
     { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 }, 
-      result: { 'success': false, message: msg.failedChangeSettingSettings() } },  
-    // If we fall through from here, then we've timed out with enough items but
-    // not all properties set.
-    { required: { 'timedOut': true }, 
-      result: { 'success': false, message: msg.failedChangeSettingSettings() } },      
+      result: { 'success': false, message: msg.failedChangeSettingSettings() } }    
   ]
 };
 
