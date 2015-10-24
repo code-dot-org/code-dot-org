@@ -2522,6 +2522,7 @@ levels.js_hoc2015_change_setting = {
   ]
 };
 
+
 levels.js_hoc2015_event_free = {
   'editCode': true,
   'freePlay': true,
@@ -2549,7 +2550,16 @@ levels.js_hoc2015_event_free = {
     'whenGetMouse': { 'category': 'Events' },
     'whenGetRoo': { 'category': 'Events' },
     'whenGetSpider': { 'category': 'Events' },
-    'whenGetCharacter': { 'category': 'Events' }
+    'whenGetCharacter': { 'category': 'Events' },
+
+    'whenGetAllMen': { 'category': 'Events' },
+    'whenGetAllPilots': { 'category': 'Events' },
+    'whenGetAllPigs': { 'category': 'Events' },
+    'whenGetAllBirds': { 'category': 'Events' },
+    'whenGetAllMice': { 'category': 'Events' },
+    'whenGetAllRoos': { 'category': 'Events' },
+    'whenGetAllSpiders': { 'category': 'Events' },
+    'whenGetAllCharacters': { 'category': 'Events' }
   },
   'startBlocks': [
     'setBackground("forest");',
