@@ -29,4 +29,6 @@ Dashboard::Application.configure do
 
   # Whether or not to display pretty shared js assets
   config.pretty_sharedjs = true
+
+  ActionController::Base.default_url_options[:host] = 'adhoc-studio.code.org'
 end
