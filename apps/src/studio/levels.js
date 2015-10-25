@@ -2624,7 +2624,7 @@ levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
   ],
 });
 
-levels.hoc2015_blockly_3 = utils.extend(levels.js_move_diagonal,  {
+levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_diagonal,  {
   editCode: false,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
