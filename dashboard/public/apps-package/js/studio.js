@@ -821,7 +821,7 @@ Studio.onTick = function() {
 
   Studio.clearDebugElements();
 
-  var animationOnlyFrame = Studio.midExecutionFailure ||
+  var animationOnlyFrame = Studio.pauseInterpreter ||
       (0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor);
   Studio.yieldThisTick = false;
 
@@ -1790,7 +1790,7 @@ Studio.reset = function(first) {
   // True if we should fail before execution, even if freeplay
   Studio.preExecutionFailure = false;
   Studio.message = null;
-  Studio.midExecutionFailure = false;
+  Studio.pauseInterpreter = false;
 
   // Reset the score and title screen.
   Studio.playerScore = 0;
@@ -1822,6 +1822,7 @@ Studio.reset = function(first) {
   // More things used to validate level completion.
   Studio.trackedBehavior = {
     removedItemCount: 0,
+    touchedHazardCount: 0,
     setActivityRecord: null,
     hasSetBot: false,
     hasSetBotSpeed: false,
@@ -4796,6 +4797,10 @@ Studio.conditionSatisfied = function(required) {
       return false;
     }
 
+    if (valueName === 'touchedHazardsAtOrAbove' && tracked.touchedHazardCount < value) {
+      return false;
+    }
+
     if (valueName === 'currentPointsAtOrAbove' && Studio.playerScore < value) {
       return false;
     }
@@ -4852,22 +4857,6 @@ Studio.checkProgressConditions = function() {
   return null;
 };
 
-/**
- * Trigger a manual failure, which stops the interpreter and ends the level
- * prematurely.
- *
- * Note: Has certain known limitations at the moment.
- * - In droplet, it's possible for the interpreter to run several instructions
- *   before we return to the end of a tick and check this condition.
- * - Does not yet work in blockly mode (with no interpreter)
- *
- * @param {string} [message] optional failure message text
- */
-Studio.fail = function (message) {
-  Studio.message = utils.valueOr(message, null);
-  Studio.midExecutionFailure = true;
-};
-
 var checkFinished = function () {
 
   var hasGoals = Studio.spriteGoals_.length !== 0;
@@ -4880,6 +4869,7 @@ var checkFinished = function () {
   if (progressConditionResult) {
     Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
     Studio.message = utils.valueOr(progressConditionResult.message, null);
+    Studio.pauseInterpreter = utils.valueOr(progressConditionResult.pauseInterpreter, false);
     return true;
   }
 
@@ -4895,11 +4885,6 @@ var checkFinished = function () {
       (hasGoals && level.completeOnSuccessConditionNotGoals && achievedRequiredSuccessCondition) ||
       (!hasGoals && achievedRequiredSuccessCondition)) {
     Studio.result = ResultType.SUCCESS;
-    return true;
-  }
-
-  if (Studio.midExecutionFailure) {
-    Studio.result = ResultType.FAILURE;
     return true;
   }
 
@@ -7943,9 +7928,9 @@ levels.js_hoc2015_move_right = {
   ],
   'progressConditions' : [
     { required: { 'allGoalsVisited': true },
-      result: { 'success': true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
-      result: { 'success': false, message: msg.failedHasAllGoals() } }
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
+      result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
 
@@ -7989,9 +7974,9 @@ levels.js_hoc2015_move_right_down = {
   },
   'progressConditions' : [
     { required: { 'allGoalsVisited': true },
-      result: { 'success': true, message: msg.successHasAllGoals() } },
+      result: { success: true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
-      result: { 'success': false, message: msg.failedHasAllGoals() } }
+      result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
 
@@ -8037,10 +8022,12 @@ levels.js_hoc2015_move_diagonal = {
     'imageHeight': 50
   },
   'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
-      result: { 'success': true, message: msg.successHasAllGoals() } },
+      result: { success: true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
-      result: { 'success': false, message: msg.failedHasAllGoals() } }
+      result: { success: false, message: msg.failedHasAllGoals() } }
   ],
   "callouts": [
     {
@@ -8107,10 +8094,12 @@ levels.js_hoc2015_move_backtrack = {
     'imageHeight': 50
   },
   'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
-      result: { 'success': true, message: msg.successHasAllGoals() } },
+      result: { success: true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
-      result: { 'success': false, message: msg.failedHasAllGoals() } }
+      result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
 
@@ -8154,10 +8143,12 @@ levels.js_hoc2015_move_around = {
     'imageHeight': 50
   },
   'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
-      result: { 'success': true, message: msg.successHasAllGoals() } },
+      result: { success: true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
-      result: { 'success': false, message: msg.failedHasAllGoals() } }
+      result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
 
@@ -8202,10 +8193,12 @@ levels.js_hoc2015_move_finale = {
     'imageHeight': 50
   },
   'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
-      result: { 'success': true, message: msg.successHasAllGoals() } },
+      result: { success: true, message: msg.successHasAllGoals() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false }, 
-      result: { 'success': false, message: msg.failedHasAllGoals() } }
+      result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
 
@@ -8261,9 +8254,9 @@ levels.js_hoc2015_event_two_items = {
 
   'progressConditions' : [
     { required: { 'allGoalsVisited': true }, 
-      result: { 'success': true, message: msg.successCharacter1() } },
+      result: { success: true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true }, 
-      result: { 'success': false, message: msg.failedTwoItemsTimeout() } }
+      result: { success: false, message: msg.failedTwoItemsTimeout() } }
   ],
 
   'callouts': [
@@ -8363,9 +8356,9 @@ levels.js_hoc2015_event_four_items = {
 
   'progressConditions' : [
     { required: { 'allGoalsVisited': true }, 
-      result: { 'success': true, message: msg.successCharacter1() } },
+      result: { success: true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true }, 
-      result: { 'success': false, message: msg.failedFourItemsTimeout() } }
+      result: { success: false, message: msg.failedFourItemsTimeout() } }
   ]
 };
 
@@ -8424,13 +8417,13 @@ levels.js_hoc2015_score =
 
   'progressConditions' : [
     { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 }, 
-      result: { 'success': false, message: msg.failedScoreTimeout() } },
+      result: { success: false, message: msg.failedScoreTimeout() } },
     { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 }, 
-      result: { 'success': false, message: msg.failedScoreScore() } },  
+      result: { success: false, message: msg.failedScoreScore() } },
     { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 }, 
-      result: { 'success': false, message: msg.failedScoreGoals() } },
+      result: { success: false, message: msg.failedScoreGoals() } },
     { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 }, 
-      result: { 'success': true, message: msg.successCharacter1() } }
+      result: { success: true, message: msg.successCharacter1() } }
   ],
 
   'completeOnSuccessConditionNotGoals': true,
@@ -8521,13 +8514,13 @@ levels.js_hoc2015_win_lose = {
 
   'progressConditions' : [
     { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 }, 
-      result: { 'success': false, message: msg.failedWinLoseTimeout() } },
+      result: { success: false, message: msg.failedWinLoseTimeout() } },
     { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 }, 
-      result: { 'success': false, message: msg.failedWinLoseScore() } },  
+      result: { success: false, message: msg.failedWinLoseScore() } },
     { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 }, 
-      result: { 'success': false, message: msg.failedWinLoseGoals() } },
+      result: { success: false, message: msg.failedWinLoseGoals() } },
     { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 }, 
-      result: { 'success': true, message: msg.successCharacter1() } }
+      result: { success: true, message: msg.successCharacter1() } }
   ]
 };
 
@@ -8596,9 +8589,9 @@ levels.js_hoc2015_add_characters = {
 
   'progressConditions' : [
     { required: { 'collectedItemsAtOrAbove': 3 }, 
-      result: { 'success': true, message: msg.successCharacter1() } },
+      result: { success: true, message: msg.successCharacter1() } },
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 }, 
-      result: { 'success': false, message: msg.failedAddCharactersTimeout() } }
+      result: { success: false, message: msg.failedAddCharactersTimeout() } }
   ]
 };
 
@@ -8642,13 +8635,13 @@ levels.js_hoc2015_chain_characters = {
   'showTimeoutRect': true,
   'progressConditions' : [
     { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsBelow': 800 }, 
-      result: { 'success': false, message: msg.failedChainCharactersTimeout() } },
+      result: { success: false, message: msg.failedChainCharactersTimeout() } },
     { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 8, 'currentPointsBelow': 800 }, 
-      result: { 'success': false, message: msg.failedChainCharactersScore() } },  
+      result: { success: false, message: msg.failedChainCharactersScore() } },
     { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsAtOrAbove': 800 }, 
-      result: { 'success': false, message: msg.failedChainCharactersItems() } },
+      result: { success: false, message: msg.failedChainCharactersItems() } },
     { required: { 'collectedItemsAtOrAbove': 8, 'currentPointsAtOrAbove': 800 }, 
-      result: { 'success': true, message: msg.successCharacter1() } }
+      result: { success: true, message: msg.successCharacter1() } }
   ]
 };
 
@@ -8702,9 +8695,9 @@ levels.js_hoc2015_chain_characters_2 = {
   'showTimeoutRect': true,
   'progressConditions' : [
     { required: { 'timedOut': true, 'collectedItemsBelow': 14 }, 
-      result: { 'success': false, message: msg.failedChainCharacters2Timeout() } },
+      result: { success: false, message: msg.failedChainCharacters2Timeout() } },
     { required: { 'collectedItemsAtOrAbove': 14 }, 
-      result: { 'success': true, message: msg.successCharacter1() } }
+      result: { success: true, message: msg.successCharacter1() } }
   ],
   'callouts': [
     {
@@ -8793,15 +8786,15 @@ levels.js_hoc2015_change_setting = {
   'progressConditions' : [
     // Collected all the items and set the right properties?  Success.
     { required: { 'setMap': true, 'setBotSpeed': true, 'collectedItemsAtOrAbove': 3 },
-      result: { 'success': true, message: msg.successGenericCharacter() } },
+      result: { success: true, message: msg.successGenericCharacter() } },
     // Special message for timing out when not enough items collected.
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
-      result: { 'success': false, message: msg.failedChangeSettingTimeout() } },
+      result: { success: false, message: msg.failedChangeSettingTimeout() } },
     // If all items are collected, but either property not set?  Failure.
     { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 }, 
-      result: { 'success': false, message: msg.failedChangeSettingSettings() } },
+      result: { success: false, message: msg.failedChangeSettingSettings() } },
     { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 }, 
-      result: { 'success': false, message: msg.failedChangeSettingSettings() } }    
+      result: { success: false, message: msg.failedChangeSettingSettings() } }
   ]
 };
 
@@ -8899,7 +8892,7 @@ levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
   ],
 });
 
-levels.hoc2015_blockly_3 = utils.extend(levels.js_move_diagonal,  {
+levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_diagonal,  {
   editCode: false,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
@@ -12497,12 +12490,12 @@ Item.prototype.moveToNextPosition = function () {
 Item.prototype.startCollision = function (key) {
   var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
   if (newCollisionStarted) {
-    if (this.isHazard) {
+    if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
+      Studio.trackedBehavior.touchedHazardCount++;
       var actor = Studio.sprite[key];
       if (actor) {
         actor.addAction(new spriteActions.FadeActor(constants.TOUCH_HAZARD_FADE_TIME));
         actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_FADE_TIME));
-        Studio.fail(studioMsg.failedAvoidHazard());
       }
     }
   }
