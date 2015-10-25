@@ -18,9 +18,13 @@ module.exports.blocks = [
     dropdown: { 0: [
       '"random"',
       '"character1sound1"', '"character1sound2"', '"character1sound3"', '"character1sound4"',
+      '"character1sound5"', '"character1sound6"', '"character1sound7"', '"character1sound8"',
       '"character2sound1"', '"character2sound2"', '"character2sound3"', '"character2sound4"',
       '"item1sound1"', '"item1sound2"', '"item1sound3"', '"item1sound4"',
       '"item3sound1"', '"item3sound2"', '"item3sound3"', '"item3sound4"',
+      '"item4sound1"', '"item4sound2"', '"item4sound3"',
+      '"item5sound1"', '"item5sound2"', '"item5sound3"',
+      '"item6sound1"', '"item6sound2"', '"item6sound3"',
       '"alert1"', '"alert2"', '"alert3"', '"alert4"',
       '"applause"'
       ] } },
