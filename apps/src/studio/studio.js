@@ -801,7 +801,7 @@ Studio.onTick = function() {
 
   Studio.clearDebugElements();
 
-  var animationOnlyFrame = Studio.midExecutionFailure ||
+  var animationOnlyFrame = Studio.pauseInterpreter ||
       (0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor);
   Studio.yieldThisTick = false;
 
@@ -1770,7 +1770,7 @@ Studio.reset = function(first) {
   // True if we should fail before execution, even if freeplay
   Studio.preExecutionFailure = false;
   Studio.message = null;
-  Studio.midExecutionFailure = false;
+  Studio.pauseInterpreter = false;
 
   // Reset the score and title screen.
   Studio.playerScore = 0;
@@ -1802,6 +1802,7 @@ Studio.reset = function(first) {
   // More things used to validate level completion.
   Studio.trackedBehavior = {
     removedItemCount: 0,
+    touchedHazardCount: 0,
     setActivityRecord: null,
     hasSetBot: false,
     hasSetBotSpeed: false,
@@ -4776,6 +4777,10 @@ Studio.conditionSatisfied = function(required) {
       return false;
     }
 
+    if (valueName === 'touchedHazardsAtOrAbove' && tracked.touchedHazardCount < value) {
+      return false;
+    }
+
     if (valueName === 'currentPointsAtOrAbove' && Studio.playerScore < value) {
       return false;
     }
@@ -4832,22 +4837,6 @@ Studio.checkProgressConditions = function() {
   return null;
 };
 
-/**
- * Trigger a manual failure, which stops the interpreter and ends the level
- * prematurely.
- *
- * Note: Has certain known limitations at the moment.
- * - In droplet, it's possible for the interpreter to run several instructions
- *   before we return to the end of a tick and check this condition.
- * - Does not yet work in blockly mode (with no interpreter)
- *
- * @param {string} [message] optional failure message text
- */
-Studio.fail = function (message) {
-  Studio.message = utils.valueOr(message, null);
-  Studio.midExecutionFailure = true;
-};
-
 var checkFinished = function () {
 
   var hasGoals = Studio.spriteGoals_.length !== 0;
@@ -4860,6 +4849,7 @@ var checkFinished = function () {
   if (progressConditionResult) {
     Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
     Studio.message = utils.valueOr(progressConditionResult.message, null);
+    Studio.pauseInterpreter = utils.valueOr(progressConditionResult.pauseInterpreter, false);
     return true;
   }
 
@@ -4875,11 +4865,6 @@ var checkFinished = function () {
       (hasGoals && level.completeOnSuccessConditionNotGoals && achievedRequiredSuccessCondition) ||
       (!hasGoals && achievedRequiredSuccessCondition)) {
     Studio.result = ResultType.SUCCESS;
-    return true;
-  }
-
-  if (Studio.midExecutionFailure) {
-    Studio.result = ResultType.FAILURE;
     return true;
   }
 
