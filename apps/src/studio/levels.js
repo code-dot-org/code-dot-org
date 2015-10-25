@@ -2144,9 +2144,10 @@ levels.js_hoc2015_score =
     'imageHeight': 100
   },
   'goal': {
+    // The level uses completeOnSuccessConditionNotGoals, so make sure this
+    // returns null  The progressConditions will take care of completion.
     successCondition: function () { return false; }
   },
-
   'progressConditions' : [
     { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 }, 
       result: { success: false, message: msg.failedScoreTimeout() } },
@@ -2157,7 +2158,6 @@ levels.js_hoc2015_score =
     { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 }, 
       result: { success: true, message: msg.successCharacter1() } }
   ],
-
   'completeOnSuccessConditionNotGoals': true,
   'callouts': [
     {
@@ -2346,7 +2346,7 @@ levels.js_hoc2015_chain_characters = {
     'playSound("character1sound3");',
     '',
     'function whenGetMouse() {',
-    '  playSound("item3sound4");',
+    '  playSound("item6sound2");',
     '  addCharacter("mouse");',
     '  addCharacter("mouse");',
     '}',
@@ -2396,17 +2396,18 @@ levels.js_hoc2015_chain_characters_2 = {
     'addCharacter("roo");',
     '',
     'function whenGetRoo() {',
-    '  playSound("character1sound2");',
+    '  playSound("item3sound4");',
     '  addPoints(50);',
     '  addCharacter("bird");',
     '  addCharacter("bird");',
     '}',
     '',
     'function whenGetBird() {',
+    '  playSound("item4sound1");',
     '',
     '}',
     'function whenGetMouse() {',
-    '  playSound("character1sound3");',
+    '  playSound("item6sound2");',
     '  addPoints(100);',
     '  ',
     '}',
