@@ -27,3 +27,4 @@
 /apps/build
 /apps/node_modules/
 /apps/npm-debug.log
+*.temp_json

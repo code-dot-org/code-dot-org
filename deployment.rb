@@ -58,6 +58,7 @@ def load_configuration()
     'db_writer'                   => 'mysql://root@localhost/',
     'reporting_db_reader'         => 'mysql://root@localhost/',
     'reporting_db_writer'         => 'mysql://root@localhost/',
+    'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
     'hip_chat_log_room'           => rack_env.to_s,
     'hip_chat_logging'            => false,
     'home_dir'                    => File.expand_path('~'),
