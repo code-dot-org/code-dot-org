@@ -15,7 +15,7 @@ use VarnishEnvironment
 
 if rack_env?(:development)
   require 'cdo/rack/whitelist_cookies'
-  require File.expand_path('../../../cdo-varnish/libraries/http_cache', __FILE__)
+  require File.expand_path('../../cookbooks/cdo-varnish/libraries/http_cache', __FILE__)
   use Rack::WhitelistCookies,
     HttpCache.config(rack_env)[:pegasus]
 end
