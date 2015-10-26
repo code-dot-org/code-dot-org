@@ -503,13 +503,9 @@ var projects = module.exports = {
   },
   delete: function(callback) {
     var channelId = current.id;
-    if (channelId) {
-      channels.delete(channelId, function(err, data) {
-        executeCallback(callback, data);
-      });
-    } else {
-      executeCallback(callback, false);
-    }
+    channels.delete(channelId, function(err, data) {
+      executeCallback(callback, data);
+    });
   },
   /**
    * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
