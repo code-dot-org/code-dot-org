@@ -199,8 +199,11 @@ function mergeFunctionsWithConfig(codeFunctions, dropletConfig, otherConfig) {
 function mergeCategoriesWithConfig(dropletConfig) {
   // Clone our merged categories so that as we mutate it, we're not mutating
   // our original config
-  return _.cloneDeep($.extend({}, standardConfig.categories,
-    dropletConfig && dropletConfig.categories));
+  var dropletCategories = dropletConfig && dropletConfig.categories;
+  // We include dropletCategories twice so that (a) it's ordering of categories
+  // gets preference and (b) it's value override anything in standardConfig
+  return _.cloneDeep($.extend({}, dropletCategories, standardConfig.categories,
+    dropletCategories));
 }
 
 /**
