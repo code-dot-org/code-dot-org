@@ -12,7 +12,7 @@
  */
 'use strict';
 
-var debugLogging = true;
+var debugLogging = false;
 function debug(msg) {
   if (debugLogging && console && console.info) {
     console.info('Audio: ' + msg);
