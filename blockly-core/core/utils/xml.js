@@ -276,7 +276,7 @@ Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
       // block absolutely using those values.
       if (!isNaN(blockX) || !isNaN(blockY)) {
         currentPosition = block.getRelativeToSurfaceXY();
-        blockX = isNaN(blockX) ? currentPosition.y : blockX;
+        blockX = isNaN(blockX) ? currentPosition.x : blockX;
         blockY = isNaN(blockY) ? currentPosition.y : blockY;
 
         blockX = Blockly.RTL ? -blockX : blockX;
