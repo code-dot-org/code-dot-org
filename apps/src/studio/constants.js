@@ -88,8 +88,8 @@ frameDirTableWalking[Dir.SOUTHWEST]  = 7;
 
 exports.frameDirTableWalking = frameDirTableWalking;
 
-
-// Normal for preview
+/*
+// Normal for placeholder
 var frameDirTableWalkingWithIdle = {};
 frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
 frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
@@ -100,10 +100,10 @@ frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
 frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 5;
 frameDirTableWalkingWithIdle[Dir.WEST]       = 6;
 frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 7;
-
+*/
 
 // Reversed for final
-/*
+
 var frameDirTableWalkingWithIdle = {};
 frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
 frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
@@ -114,7 +114,7 @@ frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
 frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 3;
 frameDirTableWalkingWithIdle[Dir.WEST]       = 2;
 frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 1;
-*/
+
 
 exports.frameDirTableWalkingWithIdle = frameDirTableWalkingWithIdle;
 
