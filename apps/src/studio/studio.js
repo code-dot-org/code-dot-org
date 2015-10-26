@@ -33,6 +33,7 @@ var Hammer = utils.getHammer();
 var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
+var ThreeSliceAudio = require('./ThreeSliceAudio');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -1529,6 +1530,15 @@ Studio.init = function(config) {
     skin.failureAvatar = null;
     skin.winAvatar = null;
   }
+
+  var moveSound = new ThreeSliceAudio(studioApp.cdoSounds, 'roll_begin', 'roll_loop', 'roll_end');
+  window.addEventListener('keydown', function () {
+    moveSound.on();
+  });
+
+  window.addEventListener('keyup', function () {
+    moveSound.off();
+  });
 
   window.addEventListener("keydown", Studio.onKey, false);
   window.addEventListener("keyup", Studio.onKey, false);
