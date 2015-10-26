@@ -14,14 +14,16 @@ Scenario: Attempt 2-3 Maze 1
   When I press "runButton"
   And I wait to see "#hint-request-button"
 
-  Then element "#hint-request-button" is visible
+  Then element ".congrats" is visible
+  And element ".congrats" has text "Not quite. You have to use a block you aren’t using yet."
+  And element "#hint-request-button" is visible
 
   When I press "hint-request-button"
   And I wait to see ".congrats"
   And I wait to see "#feedbackBlocks"
 
   Then element ".congrats" is visible
-  And element ".congrats" has text "Try one or more of the blocks below to solve this puzzle."
+  And element ".congrats" has text "Try using one of the blocks below:"
   And element "#feedbackBlocks" is visible
 
   # the second time, we see the hint right away
@@ -34,7 +36,7 @@ Scenario: Attempt 2-3 Maze 1
   And I wait to see "#feedbackBlocks"
 
   Then element ".congrats" is visible
-  And element ".congrats" has text "Try one or more of the blocks below to solve this puzzle."
+  And element ".congrats" has text "Not quite. You have to use a block you aren’t using yet."
   And element "#feedbackBlocks" is visible
 
   # after we fulfill the requirements of the hint, we see a different
@@ -49,6 +51,7 @@ Scenario: Attempt 2-3 Maze 1
 
   Then element ".congrats" is visible
   And element ".congrats" has text "You are using all of the necessary types of blocks, but try using more of these types of blocks to complete this puzzle."
+  And element "#hint-request-button" does not exist
   And element "#feedbackBlocks" does not exist
 
 Scenario: Solve without recommended blocks
@@ -59,10 +62,17 @@ Scenario: Solve without recommended blocks
 
   When I press "runButton"
   And I wait to see ".congrats"
+
+  Then element ".congrats" is visible
+  And element ".congrats" has text "Congratulations! You completed Puzzle 5. (But you could use a different block for stronger code.)"
+  And element "#hint-request-button" is visible
+
+  When I press "hint-request-button"
+  And I wait to see ".congrats"
   And I wait to see "#feedbackBlocks"
 
   Then element ".congrats" is visible
-  And element ".congrats" has text "Congratulations! You completed Puzzle 5. (Now try using one or more of the blocks below to do the same thing.)"
+  And element ".congrats" has text "Try using one of the blocks below:"
   And element "#feedbackBlocks" is visible
 
   # the second time, we replace the two moveforwards (#10 and #11) with
@@ -78,4 +88,4 @@ Scenario: Solve without recommended blocks
 
   Then element ".congrats" is visible
   And element ".congrats" has text "Congratulations! You completed Bee."
-  And element "#feedbackBlocks" does not exist
+  And element "#hint-request-button" does not exist
