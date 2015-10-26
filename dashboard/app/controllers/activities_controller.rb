@@ -4,6 +4,32 @@ require 'cdo/web_purify'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
+  before_filter :authenticate_user!, only: [:script_progress]
+
+  # Given a script_id return the current user's progress
+  # for each level in the script
+  #
+  # @param script_id [String] id of the script
+  # @return [JSON]
+  # {
+  #   'script_id': script_id,
+  #   'levels': {
+  #     101: 5,
+  #     ...
+  #   }
+  # }
+  def script_progress
+    script_id = params[:script_id].to_i
+    script = Script.get_from_cache(script_id)
+    raise ArgumentError, "Invalid script: #{script_id}" unless script
+
+    progress = UserProgress.script_progress(current_user, script)
+
+    render json: {
+      script_id: script_id,
+      levels: progress
+    }
+  end
 
   # The action below disables the default request forgery protection from
   # application controller. We don't do request forgery protection on the

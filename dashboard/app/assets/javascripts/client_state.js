@@ -180,4 +180,35 @@ function hasSeenVisualElement(visualElementType, visualElementId) {
   }
 }
 
+/**
+ * Queries the server for updated script progress for the current user and
+ * merges it into the current clientState.
+ *
+ * @param scriptId
+ * @returns jquery request object
+ */
+dashboard.clientState.refreshScriptProgressFromServer = function (scriptId) {
+  var req = $.post("/milestone/script_progress/" + scriptId);
+  req.done(function (responseJSON) {
+    mergeLevelProgress(responseJSON.levels);
+  });
+  return req;
+};
+
+/**
+ * Given an object mapping level_id to status, merge it into clientState.
+ * In the case that there is a conflict, take the better of the two status.
+ *
+ * @param levelProgress
+ */
+function mergeLevelProgress(newLevelProgress) {
+  var currentLevelProgress = dashboard.clientState.allLevelsProgress();
+
+  $.each(newLevelProgress, function (levelId, result) {
+    if(!currentLevelProgress[levelId] || currentLevelProgress[levelId] < result) {
+      setLevelProgress(levelId, result);
+    }
+  });
+}
+
 })(window, $);

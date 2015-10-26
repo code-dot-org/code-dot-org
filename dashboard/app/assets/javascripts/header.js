@@ -27,13 +27,9 @@ if (!window.dashboard) {
  *   }>
  * }}
  */
-dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId) {
+dashboard.buildHeader = function (stageData, currentLevelId, userId, sectionId) {
   stageData = stageData || {};
-  // Progress Data is only provided for signed in users. Otherwise, client gets progress data from cookie
-  if (progressData === null) {
-    progressData = getSummarizedProgressForAnonymousUser();
-  }
-
+  var progressData = getSummarizedProgress();
   var levelProgress = progressData.levels || {};
 
   $('.header_text').first().text(stageData.title);
@@ -411,10 +407,10 @@ dashboard.header.updateTimestamp = function () {
 };
 
 /**
- * Get the user progress for an anonymous user from the client side cookie
+ * Get the user progress from the client side cookie
  * @return Object that is a representation of the user's individual level progress
  */
-function getSummarizedProgressForAnonymousUser () {
+function getSummarizedProgress () {
   var summarizedProgress = {};
   var levelProgress = {};
 
