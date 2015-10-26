@@ -138,9 +138,9 @@ No return value. Rotates turtle only.
 ### Tips
 - You can specify a negative angle to rotate left, which makes the turtle turn right instead.
 - There are three ways to rotate the turtle in place
-	- turnRight(*angle*) - Rotates the turtle right by the specified angle. The turtle’s position remains the same.
-	- turnLeft(*angle*) - Rotates the turtle left by the specified angle. The turtle’s position remains the same.
-	- turnTo(*angle*) - Rotates the turtle to a specific angle. 0 is up, 90 is right, 180 is down, and 270 is left. The turtle’s position remains the same.
+	- turnRight(*angle*) - Rotates the turtle right **by** the specified angle relative to the current turtle direction. The turtle’s position remains the same.
+	- turnLeft(*angle*) - Rotates the turtle left **by** the specified angle relative to the current turtle direction. The turtle’s position remains the same.
+	- turnTo(*angle*) - Rotates the turtle **to** a specific angle. 0 is up, 90 is right, 180 is down, and 270 is left. The turtle’s position remains the same.
 
 [/tips]
 

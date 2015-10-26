@@ -821,7 +821,7 @@ Studio.onTick = function() {
 
   Studio.clearDebugElements();
 
-  var animationOnlyFrame = Studio.midExecutionFailure ||
+  var animationOnlyFrame = Studio.pauseInterpreter ||
       (0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor);
   Studio.yieldThisTick = false;
 
@@ -1790,7 +1790,7 @@ Studio.reset = function(first) {
   // True if we should fail before execution, even if freeplay
   Studio.preExecutionFailure = false;
   Studio.message = null;
-  Studio.midExecutionFailure = false;
+  Studio.pauseInterpreter = false;
 
   // Reset the score and title screen.
   Studio.playerScore = 0;
@@ -1822,8 +1822,10 @@ Studio.reset = function(first) {
   // More things used to validate level completion.
   Studio.trackedBehavior = {
     removedItemCount: 0,
+    touchedHazardCount: 0,
     setActivityRecord: null,
     hasSetBot: false,
+    hasSetBotSpeed: false,
     hasSetBackground: false,
     hasSetMap: false,
     hasAddedItem: false,
@@ -4773,97 +4775,103 @@ Studio.allGoalsVisited = function() {
 };
 
 /**
- * A level can provide zero or more requiredForSuccess criteria which are
- * special cases that a level requires for success.  This function evaluates
- * the state of these criteria.
- * @returns {Object} outcome
- * @returns {boolean} outcome.exists Whether the level even has any of these criteria.
- * @returns {boolean} outcome.achieved false if any of the criteria was required but not met.
- * @returns {string} outcome.message A custom message for the first of the failing criteria.
+ * Returns true if the specified criteria, provided as an Object, is satisfied.
  */
-Studio.checkRequiredForSuccess = function() {
-
-  if (!level.requiredForSuccess) {
-    return { exists: false, achieved: false, message: null };
-  }
-
-  var required = level.requiredForSuccess;
+Studio.conditionSatisfied = function(required) {
   var tracked = Studio.trackedBehavior;
+  var valueNames = Object.keys(required);
 
-  if (required.setSprite && !tracked.hasSetSprite) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetSprite() };
+  for (var k = 0; k < valueNames.length; k++) {
+    var valueName = valueNames[k];
+    var value = required[valueName];
+
+    if (valueName === 'timedOut' && Studio.timedOut() != value) {
+      return false;
+    }
+
+    if (valueName === 'collectedItemsAtOrAbove' && tracked.removedItemCount < value) {
+      return false;
+    }
+
+    if (valueName === 'collectedItemsBelow' && tracked.removedItemCount >= value) {
+      return false;
+    }
+
+    if (valueName === 'touchedHazardsAtOrAbove' && tracked.touchedHazardCount < value) {
+      return false;
+    }
+
+    if (valueName === 'currentPointsAtOrAbove' && Studio.playerScore < value) {
+      return false;
+    }
+
+    if (valueName === 'currentPointsBelow' && Studio.playerScore >= value) {
+      return false;
+    }
+
+    if (valueName === 'allGoalsVisited' && Studio.allGoalsVisited() !== value) {
+      return false;
+    }
+
+    if (valueName === 'setMap' && tracked.hasSetMap !== value) {
+      return false;
+    }
+
+    if (valueName === 'setBotSpeed' && tracked.hasSetBotSpeed !== value) {
+      return false;
+    }
   }
 
-  if (required.setBotSpeed && !tracked.hasSetBotSpeed) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetBotSpeed() };
-  }
-
-  if (required.setBackground && !tracked.hasSetBackground) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetBackground() };
-  }
-
-  if (required.setBotMap && !tracked.hasSetMap) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetMap() };
-  }
-
-  if (required.touchAllItems && Studio.items.length > 0) {
-    return { exists: true, achieved: false, message: studioMsg.failedTouchAllItems() };
-  }
-
-  if (required.scoreMinimum && Studio.playerScore < required.scoreMinimum) {
-    return { exists: true, achieved: false, message: studioMsg.failedScoreMinimum() };
-  }
-
-  if (required.addItem && !tracked.hasAddedItem) {
-    return { exists: true, achieved: false, message: studioMsg.failedAddItem() };
-  }
-
-  if (required.removedItemCount && tracked.removedItemCount < required.removedItemCount) {
-    return { exists: true, achieved: false, message: studioMsg.failedRemovedItemCount() };
-  }
-
-  if (required.winGame && ! tracked.hasWonGame) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasWonGame() };
-  }
-
-  if (required.lostGame && ! tracked.hasLostGame) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasLostGame() };
-  }
-
-  if (required.setActivity &&
-      !(tracked.setActivityRecord && 
-        tracked.setActivityRecord[required.setActivity.itemType] &&
-        tracked.setActivityRecord[required.setActivity.itemType][required.setActivity.activityType])) {
-    return { exists: true, achieved: false, message: studioMsg.failedSetActivity() };
-  }
-
-  return { exists: true, achieved: true, message: null };
+  return true;
 };
 
 /**
- * Trigger a manual failure, which stops the interpreter and ends the level
- * prematurely.
- *
- * Note: Has certain known limitations at the moment.
- * - In droplet, it's possible for the interpreter to run several instructions
- *   before we return to the end of a tick and check this condition.
- * - Does not yet work in blockly mode (with no interpreter)
- *
- * @param {string} [message] optional failure message text
+ * @typedef {Object} ProgressConditionOutcome
+ * @property {boolean} success
+ * @property {string} message
  */
-Studio.fail = function (message) {
-  Studio.message = utils.valueOr(message, null);
-  Studio.midExecutionFailure = true;
+
+/**
+ * A level can provide zero or more progress conditions which are special cases
+ * that we test to see if the level has succeeded or failed.  This function
+ * evaluates the state of these criteria.  It returns false if none of the
+ * criteria affects progress, otherwise an object that contains information
+ * about the specific succeeding or failing criteria.
+ *
+ * @param {Array} conditions. 
+ * @returns {ProgressConditionOutcome|null}
+ */
+Studio.checkProgressConditions = function() {
+  if (!level.progressConditions) {
+    return null;
+  }
+
+  for (var i = 0; i < level.progressConditions.length; i++) {
+    var condition = level.progressConditions[i];
+
+    if (Studio.conditionSatisfied(condition.required)) {
+      return condition.result;
+    }
+  }
+
+  return null;
 };
 
 var checkFinished = function () {
 
   var hasGoals = Studio.spriteGoals_.length !== 0;
   var achievedGoals = Studio.allGoalsVisited();
-  var requiredForSuccess = Studio.checkRequiredForSuccess();
+  var progressConditionResult = Studio.checkProgressConditions();
   var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
   var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
   var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
+
+  if (progressConditionResult) {
+    Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
+    Studio.message = utils.valueOr(progressConditionResult.message, null);
+    Studio.pauseInterpreter = utils.valueOr(progressConditionResult.pauseInterpreter, false);
+    return true;
+  }
 
   // Levels with goals (usually images that need to be touched) can have an optional success
   // condition that can explicitly return false to prevent the level from completing.
@@ -4877,23 +4885,6 @@ var checkFinished = function () {
       (hasGoals && level.completeOnSuccessConditionNotGoals && achievedRequiredSuccessCondition) ||
       (!hasGoals && achievedRequiredSuccessCondition)) {
     Studio.result = ResultType.SUCCESS;
-    return true;
-  }
-
-  if (requiredForSuccess.exists) {
-    if (requiredForSuccess.achieved) {
-      Studio.message = null;
-      Studio.result = ResultType.SUCCESS;
-      return true;
-    } else {
-      // Not meeting these is not reason for immediate failure in itself, but they do
-      // establish a custom error message.
-      Studio.message = requiredForSuccess.message;
-    }
-  }
-
-  if (Studio.midExecutionFailure) {
-    Studio.result = ResultType.FAILURE;
     return true;
   }
 
@@ -5652,6 +5643,9 @@ function loadHoc2015(skin, assetUrl) {
     return className === 'item_character1';
   };
 
+  // No failure avatar for this skin.
+  skin.failureAvatar = null;
+
   // TODO: Create actual item choices
   skin.pig = skin.assetUrl('walk_item1.png');
   skin.man = skin.assetUrl('walk_item2.png');
@@ -5785,6 +5779,9 @@ function loadHoc2015(skin, assetUrl) {
     'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
     'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
     'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
+    'item4sound1', 'item4sound2', 'item4sound3',
+    'item5sound1', 'item5sound2', 'item5sound3',
+    'item6sound1', 'item6sound2', 'item6sound3',
     'alert1', 'alert2', 'alert3', 'alert4',
     'applause',
     'start', 'win', 'failure', 'flag',
@@ -7911,27 +7908,33 @@ levels.js_hoc2015_move_right = {
   },
   "callouts": [
     {
-      "id": "playlab:js_hoc2015_move_right:placeCommandsHere",
-      "element_id": ".droplet-main-canvas",
-      "hide_target_selector": ".droplet-drag-cover",
+      "id": "playlab:js_hoc2015_move_right:runButton",
+      "element_id": "#runButton",
+      "hide_target_selector": "#runButton",
       "qtip_config": {
         "content": {
-          "text": msg.calloutPlaceCommandsHere(),
+          "text": msg.calloutRunButton(),
         },
         'hide': {
           'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top left',
-          'at': 'top left',
+          'at': 'bottom center',
           'adjust': {
-            'x': 10,
-            'y': 20
+            'x': 0,
+            'y': 0
           }
         }
       }
     }
   ],
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 levels.js_hoc2015_move_right_down = {
@@ -7971,7 +7974,13 @@ levels.js_hoc2015_move_right_down = {
     'goalImage': 'goal2',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 
@@ -8014,7 +8023,38 @@ levels.js_hoc2015_move_diagonal = {
     'goalImage': 'goal1',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ],
+  "callouts": [
+    {
+      'id': 'playlab:js_hoc2015_move_diagonal:placeCommandsHere',
+      'element_id': '#show-code-header',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutShowCodeToggle(),
+        },
+        'hide': {
+          'event': 'mouseup touchend',
+        },
+        'position': {
+          'my': 'top right',
+          'at': 'bottom left',
+          'adjust': {
+            'x': 0,
+            'y': 0
+          }
+        }
+      }
+    }
+  ]
 };
 
 
@@ -8055,7 +8095,15 @@ levels.js_hoc2015_move_backtrack = {
     'goalImage': 'goal1',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 levels.js_hoc2015_move_around = {
@@ -8096,7 +8144,15 @@ levels.js_hoc2015_move_around = {
     'goalImage': 'goal2',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 
@@ -8138,7 +8194,15 @@ levels.js_hoc2015_move_finale = {
     'goalImage': 'goal2',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 
@@ -8190,24 +8254,32 @@ levels.js_hoc2015_event_two_items = {
     'imageHeight': 100,
     'goalRenderOffsetX': 0
   },
+
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true }, 
+      result: { success: true, message: msg.successCharacter1() } },
+    { required: { 'timedOut': true }, 
+      result: { success: false, message: msg.failedTwoItemsTimeout() } }
+  ],
+
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_event_two_items:placeCommandsHere',
-      'element_id': '.droplet-main-canvas',
+      'element_id': '.droplet-gutter-line:nth-of-type(2)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content': {
-          'text': msg.calloutPlaceCommandsHere(),
+          'text': msg.calloutShowPlaceGoUpHere(),
         },
         'hide': {
           'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top left',
-          'at': 'top left',
+          'at': 'bottom right',
           'adjust': {
-            'x': 10,
-            'y': 20
+            'x': 30,
+            'y': -10
           }
         }
       }
@@ -8284,26 +8356,13 @@ levels.js_hoc2015_event_four_items = {
     'imageWidth': 100,
     'imageHeight': 100
   },
-  'callouts': [
-    {
-      'id': 'playlab:js_hoc2015_event_four_items:typeCommandsHere',
-      'element_id': '.ace_scroller',
-      'qtip_config': {
-        'content' : {
-          'text': msg.calloutTypeCommandsHere(),
-        },
-        'event': 'click mousedown touchstart mouseup touchend',
-        'position': {
-          'my': 'center right',
-          'at': 'top left',
-          'adjust': {
-            'x': 25,
-            'y': 25
-          }
-        }
-      }
-    }
-  ],
+
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true }, 
+      result: { success: true, message: msg.successCharacter1() } },
+    { required: { 'timedOut': true }, 
+      result: { success: false, message: msg.failedFourItemsTimeout() } }
+  ]
 };
 
 
@@ -8356,21 +8415,29 @@ levels.js_hoc2015_score =
     'imageHeight': 100
   },
   'goal': {
+    // The level uses completeOnSuccessConditionNotGoals, so make sure this
+    // returns null  The progressConditions will take care of completion.
     successCondition: function () { return false; }
   },
-  'requiredForSuccess' : {
-    'touchAllItems': true,
-    'winGame': true
-  },
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 }, 
+      result: { success: false, message: msg.failedScoreTimeout() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 }, 
+      result: { success: false, message: msg.failedScoreScore() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 }, 
+      result: { success: false, message: msg.failedScoreGoals() } },
+    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ],
   'completeOnSuccessConditionNotGoals': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_event_choose_character:placeCommandsAtTop',
-      'element_id': '.droplet-main-canvas',
+      'id': 'playlab:js_hoc2015_score:placeCommandsAtTop',
+      'element_id': '.droplet-gutter-line:nth-of-type(2)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content': {
-          'text': msg.calloutPlaceCommandsAtTop(),
+          'text': msg.calloutShowPlaySound(),
         },
         'hide': {
           'event': 'mouseup touchend',
@@ -8379,7 +8446,7 @@ levels.js_hoc2015_score =
           'my': 'top left',
           'at': 'top left',
           'adjust': {
-            'x': 10,
+            'x': 170,
             'y': 20
           }
         }
@@ -8429,26 +8496,35 @@ levels.js_hoc2015_win_lose = {
   'showTimeoutRect': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_win_lose:charactersMove',
-      'element_id': '#droplet_palette_block_setToFlee',
+      'id': 'playlab:js_hoc2015_win_lose:instructions',
+      'element_id': '#prompt-table',
+      'hide_target_selector': '#prompt-table',
       'qtip_config': {
         'content': {
-          'text': msg.calloutCharactersMove(),
+          'text': msg.calloutInstructions(),
         },
         'position': {
-          'my': 'center left',
-          'at': 'center right',
+          'my': 'bottom left',
+          'at': 'top right',
           'adjust': {
-            'x': 15,
+            'x': -40,
             'y': 0
           }
         }
       }
     }
   ],
-  'requiredForSuccess' : {
-    'winGame': true
-  },
+
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 }, 
+      result: { success: false, message: msg.failedWinLoseTimeout() } },
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 }, 
+      result: { success: false, message: msg.failedWinLoseScore() } },
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 }, 
+      result: { success: false, message: msg.failedWinLoseGoals() } },
+    { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ]
 };
 
 
@@ -8514,10 +8590,12 @@ levels.js_hoc2015_add_characters = {
     }
   ],
 
-  'requiredForSuccess' : {
-    'removedItemCount': 3,
-    'winGame': true
-  }
+  'progressConditions' : [
+    { required: { 'collectedItemsAtOrAbove': 3 }, 
+      result: { success: true, message: msg.successCharacter1() } },
+    { required: { 'timedOut': true, 'collectedItemsBelow': 3 }, 
+      result: { success: false, message: msg.failedAddCharactersTimeout() } }
+  ]
 };
 
 
@@ -8539,7 +8617,7 @@ levels.js_hoc2015_chain_characters = {
     'playSound("character1sound3");',
     '',
     'function whenGetMouse() {',
-    '  playSound("item3sound4");',
+    '  playSound("item6sound2");',
     '  addCharacter("mouse");',
     '  addCharacter("mouse");',
     '}',
@@ -8558,9 +8636,16 @@ levels.js_hoc2015_chain_characters = {
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
-  'requiredForSuccess' : {
-    'winGame': true
-  }
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsBelow': 800 }, 
+      result: { success: false, message: msg.failedChainCharactersTimeout() } },
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 8, 'currentPointsBelow': 800 }, 
+      result: { success: false, message: msg.failedChainCharactersScore() } },
+    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsAtOrAbove': 800 }, 
+      result: { success: false, message: msg.failedChainCharactersItems() } },
+    { required: { 'collectedItemsAtOrAbove': 8, 'currentPointsAtOrAbove': 800 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ]
 };
 
 levels.js_hoc2015_chain_characters_2 = {
@@ -8582,17 +8667,18 @@ levels.js_hoc2015_chain_characters_2 = {
     'addCharacter("roo");',
     '',
     'function whenGetRoo() {',
-    '  playSound("character1sound2");',
+    '  playSound("item3sound4");',
     '  addPoints(50);',
     '  addCharacter("bird");',
     '  addCharacter("bird");',
     '}',
     '',
     'function whenGetBird() {',
+    '  playSound("item4sound1");',
     '',
     '}',
     'function whenGetMouse() {',
-    '  playSound("character1sound3");',
+    '  playSound("item6sound2");',
     '  addPoints(100);',
     '  ',
     '}',
@@ -8611,9 +8697,33 @@ levels.js_hoc2015_chain_characters_2 = {
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
-  'requiredForSuccess' : {
-    'scoreMinimum': 100
-  }
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'collectedItemsBelow': 14 }, 
+      result: { success: false, message: msg.failedChainCharacters2Timeout() } },
+    { required: { 'collectedItemsAtOrAbove': 14 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ],
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwo',
+      'element_id': '.droplet-gutter-line:nth-of-type(12)',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutPlaceTwo(),
+        },
+        'event': 'mouseup touchend',
+        'position': {
+          'my': 'top left',
+          'at': 'center right',
+          'adjust': {
+            'x': 40,
+            'y': 10
+          }
+        }
+      }
+    }
+  ]
 };
 
 levels.js_hoc2015_change_setting = {
@@ -8622,17 +8732,17 @@ levels.js_hoc2015_change_setting = {
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'setBot': { 'category': 'Commands' },
-    'setBackground': { 'category': 'Commands' },
-    'setBotSpeed': { 'category': 'Commands' },
-    'setMap': { 'category': 'Commands' },
-    'playSound': { 'category': 'Commands' },
-    'addCharacter': { 'category': 'Commands' },
-    'addPoints': { 'category': 'Commands' },
-    'removePoints': { 'category': 'Commands' },
+    'setBot': null,
+    'setBackground': null,
+    'setBotSpeed': null,
+    'setMap': null,
+    'playSound': null,
+    'addCharacter': null,
+    'addPoints': null,
+    'removePoints': null,
 
-    'whenScore1000': { 'category': 'Events' },
-    'whenGetPilot': { 'category': 'Events' },
+    'whenScore1000': null,
+    'whenGetPilot': null,
   },
   'startBlocks': [
     'addCharacter("pilot");',
@@ -8644,10 +8754,6 @@ levels.js_hoc2015_change_setting = {
     'function whenGetPilot() {',
     '  addPoints(400);',
     '  setBackground("random");',
-    '  ',
-    '}',
-    'function whenGetAllCharacters() {',
-    '  endGame("win");',
     '  ',
     '}',
     ''].join('\n'),
@@ -8667,27 +8773,35 @@ levels.js_hoc2015_change_setting = {
   'showTimeoutRect': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_change_setting:clickCategory',
-      'element_id': '.droplet-palette-group-header.green',
+      'id': 'playlab:js_hoc2015_change_setting:setMap',
+      'element_id': '#droplet_palette_block_setMap',
+      'hide_target_selector': '#droplet_palette_block_setMap',
       'qtip_config': {
         'content' : {
-          'text': msg.calloutClickCategory(),
+          'text': msg.calloutSetMapAndSpeed(),
         },
         'position': {
-          'my': 'top center',
-          'at': 'bottom center',
+          'my': 'center left',
+          'at': 'center right',
         }
       }
     }
   ],
-  'requiredForSuccess' : {
-    'setSprite': true,
-    'setBotSpeed': true,
-    'setBackground': true,
-    'setMap': true,
-    'winGame': true
-  }
+  'progressConditions' : [
+    // Collected all the items and set the right properties?  Success.
+    { required: { 'setMap': true, 'setBotSpeed': true, 'collectedItemsAtOrAbove': 3 },
+      result: { success: true, message: msg.successGenericCharacter() } },
+    // Special message for timing out when not enough items collected.
+    { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
+      result: { success: false, message: msg.failedChangeSettingTimeout() } },
+    // If all items are collected, but either property not set?  Failure.
+    { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 }, 
+      result: { success: false, message: msg.failedChangeSettingSettings() } },
+    { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 }, 
+      result: { success: false, message: msg.failedChangeSettingSettings() } }
+  ]
 };
+
 
 levels.js_hoc2015_event_free = {
   'editCode': true,
@@ -8716,7 +8830,16 @@ levels.js_hoc2015_event_free = {
     'whenGetMouse': { 'category': 'Events' },
     'whenGetRoo': { 'category': 'Events' },
     'whenGetSpider': { 'category': 'Events' },
-    'whenGetCharacter': { 'category': 'Events' }
+    'whenGetCharacter': { 'category': 'Events' },
+
+    'whenGetAllMen': { 'category': 'Events' },
+    'whenGetAllPilots': { 'category': 'Events' },
+    'whenGetAllPigs': { 'category': 'Events' },
+    'whenGetAllBirds': { 'category': 'Events' },
+    'whenGetAllMice': { 'category': 'Events' },
+    'whenGetAllRoos': { 'category': 'Events' },
+    'whenGetAllSpiders': { 'category': 'Events' },
+    'whenGetAllCharacters': { 'category': 'Events' }
   },
   'startBlocks': [
     'setBackground("forest");',
@@ -8738,19 +8861,16 @@ levels.js_hoc2015_event_free = {
   'autoArrowSteer': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_event_free:tryOutNewCommands',
-      'element_id': '.droplet-palette-canvas',
+      'id': 'playlab:js_hoc2015_event_free:clickCategory',
+      'element_id': '.droplet-palette-group-header.green',
+      'hide_target_selector': '.droplet-palette-group-header.green',
       'qtip_config': {
-        'content': {
-          'text': msg.calloutTryOutNewCommands(),
+        'content' : {
+          'text': msg.calloutClickEvents(),
         },
         'position': {
-          'my': 'center left',
-          'at': 'center right',
-          'adjust': {
-            'x': -20,
-            'y': 0
-          }
+          'my': 'top center',
+          'at': 'bottom center',
         }
       }
     }
@@ -8776,7 +8896,7 @@ levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
   ],
 });
 
-levels.hoc2015_blockly_3 = utils.extend(levels.js_move_diagonal,  {
+levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_diagonal,  {
   editCode: false,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
@@ -8911,9 +9031,13 @@ module.exports.blocks = [
     dropdown: { 0: [
       '"random"',
       '"character1sound1"', '"character1sound2"', '"character1sound3"', '"character1sound4"',
+      '"character1sound5"', '"character1sound6"', '"character1sound7"', '"character1sound8"',
       '"character2sound1"', '"character2sound2"', '"character2sound3"', '"character2sound4"',
       '"item1sound1"', '"item1sound2"', '"item1sound3"', '"item1sound4"',
       '"item3sound1"', '"item3sound2"', '"item3sound3"', '"item3sound4"',
+      '"item4sound1"', '"item4sound2"', '"item4sound3"',
+      '"item5sound1"', '"item5sound2"', '"item5sound3"',
+      '"item6sound1"', '"item6sound2"', '"item6sound3"',
       '"alert1"', '"alert2"', '"alert3"', '"alert4"',
       '"applause"'
       ] } },
@@ -8930,25 +9054,6 @@ module.exports.blocks = [
   {func: 'moveFast', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'moveNormal', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'moveSlow', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
-
-  {func: 'whenTouchAllCharacters', block: 'function whenTouchAllCharacters() {}', expansion: 'function whenTouchAllCharacters() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
-
-  {func: 'whenGetAllMen', block: 'function whenGetAllMen() {}', expansion: 'function whenGetAllMen() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllPilots', block: 'function whenGetAllPilots() {}', expansion: 'function whenGetAllPilots() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllPigs', block: 'function whenGetAllPigs() {}', expansion: 'function whenGetAllPigs() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllBirds', block: 'function whenGetAllBirds() {}', expansion: 'function whenGetAllBirds() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllMice', block: 'function whenGetAllMice() {}', expansion: 'function whenGetAllMice() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllRoos', block: 'function whenGetAllRoos() {}', expansion: 'function whenGetAllRoos() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllSpiders', block: 'function whenGetAllSpiders() {}', expansion: 'function whenGetAllSpiders() {\n  __;\n}', category: '' },
-
-  {func: 'whenTouchAllMen', block: 'function whenTouchAllMen() {}', expansion: 'function whenTouchAllMen() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllPilots', block: 'function whenTouchAllPilots() {}', expansion: 'function whenTouchAllPilots() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllPigs', block: 'function whenTouchAllPigs() {}', expansion: 'function whenTouchAllPigs() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllBirds', block: 'function whenTouchAllBirds() {}', expansion: 'function whenTouchAllBirds() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllMice', block: 'function whenTouchAllMice() {}', expansion: 'function whenTouchAllMice() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllRoos', block: 'function whenTouchAllRoos() {}', expansion: 'function whenTouchAllRoos() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllSpiders', block: 'function whenTouchAllSpiders() {}', expansion: 'function whenTouchAllSpiders() {\n  __;\n}', category: '' },
 
   {func: 'whenTouchGoal', block: 'function whenTouchGoal() {}', expansion: 'function whenTouchGoal() {\n  __;\n}', category: '' },
   {func: 'whenTouchAllGoals', block: 'function whenTouchAllGoals() {}', expansion: 'function whenTouchAllGoals() {\n  __;\n}', category: '' },
@@ -8978,6 +9083,25 @@ module.exports.blocks = [
   {func: 'whenTouchMouse', block: 'function whenTouchMouse() {}', expansion: 'function whenTouchMouse() {\n  __;\n}', category: '' },
   {func: 'whenTouchRoo', block: 'function whenTouchRoo() {}', expansion: 'function whenTouchRoo() {\n  __;\n}', category: '' },
   {func: 'whenTouchSpider', block: 'function whenTouchSpider() {}', expansion: 'function whenTouchSpider() {\n  __;\n}', category: '' },
+
+  {func: 'whenTouchAllCharacters', block: 'function whenTouchAllCharacters() {}', expansion: 'function whenTouchAllCharacters() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
+
+  {func: 'whenGetAllMen', block: 'function whenGetAllMen() {}', expansion: 'function whenGetAllMen() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllPilots', block: 'function whenGetAllPilots() {}', expansion: 'function whenGetAllPilots() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllPigs', block: 'function whenGetAllPigs() {}', expansion: 'function whenGetAllPigs() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllBirds', block: 'function whenGetAllBirds() {}', expansion: 'function whenGetAllBirds() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllMice', block: 'function whenGetAllMice() {}', expansion: 'function whenGetAllMice() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllRoos', block: 'function whenGetAllRoos() {}', expansion: 'function whenGetAllRoos() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllSpiders', block: 'function whenGetAllSpiders() {}', expansion: 'function whenGetAllSpiders() {\n  __;\n}', category: '' },
+
+  {func: 'whenTouchAllMen', block: 'function whenTouchAllMen() {}', expansion: 'function whenTouchAllMen() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllPilots', block: 'function whenTouchAllPilots() {}', expansion: 'function whenTouchAllPilots() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllPigs', block: 'function whenTouchAllPigs() {}', expansion: 'function whenTouchAllPigs() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllBirds', block: 'function whenTouchAllBirds() {}', expansion: 'function whenTouchAllBirds() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllMice', block: 'function whenTouchAllMice() {}', expansion: 'function whenTouchAllMice() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllRoos', block: 'function whenTouchAllRoos() {}', expansion: 'function whenTouchAllRoos() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllSpiders', block: 'function whenTouchAllSpiders() {}', expansion: 'function whenTouchAllSpiders() {\n  __;\n}', category: '' },
 
   // Functions hidden from autocomplete - not used in hoc2015:
   {func: 'setSprite', parent: api, category: '', params: ['0', '"bot1"'], dropdown: { 1: [ '"random"', '"bot1"', '"bot2"' ] } },
@@ -12374,12 +12498,12 @@ Item.prototype.moveToNextPosition = function () {
 Item.prototype.startCollision = function (key) {
   var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
   if (newCollisionStarted) {
-    if (this.isHazard) {
+    if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
+      Studio.trackedBehavior.touchedHazardCount++;
       var actor = Studio.sprite[key];
       if (actor) {
         actor.addAction(new spriteActions.FadeActor(constants.TOUCH_HAZARD_FADE_TIME));
         actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_FADE_TIME));
-        Studio.fail(studioMsg.failedAvoidHazard());
       }
     }
   }
@@ -13246,8 +13370,8 @@ frameDirTableWalking[Dir.SOUTHWEST]  = 7;
 
 exports.frameDirTableWalking = frameDirTableWalking;
 
-
-// Normal for preview
+/*
+// Normal for placeholder
 var frameDirTableWalkingWithIdle = {};
 frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
 frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
@@ -13258,10 +13382,10 @@ frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
 frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 5;
 frameDirTableWalkingWithIdle[Dir.WEST]       = 6;
 frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 7;
-
+*/
 
 // Reversed for final
-/*
+
 var frameDirTableWalkingWithIdle = {};
 frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
 frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
@@ -13272,7 +13396,7 @@ frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
 frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 3;
 frameDirTableWalkingWithIdle[Dir.WEST]       = 2;
 frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 1;
-*/
+
 
 exports.frameDirTableWalkingWithIdle = frameDirTableWalkingWithIdle;
 

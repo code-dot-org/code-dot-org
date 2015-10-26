@@ -205,6 +205,7 @@ levels.custom = {
     "declareAssign_str_hello_world": null,
     "substring": null,
     "indexOf": null,
+    "includes": null,
     "length": null,
     "toUpperCase": null,
     "toLowerCase": null,
@@ -954,7 +955,7 @@ Applab.startSharedAppAfterWarnings = function () {
   // dashboard will redirect young signed in users
   var is13Plus = Applab.user.isSignedIn || localStorage.getItem('is13Plus') === "true";
   var showStoreDataAlert = Applab.hasDataStoreAPIs(Applab.getCode()) &&
-    !hasSeenDataAlert(AppStorage.getChannelId());
+    !hasSeenDataAlert(Applab.channelId);
 
   var modal = document.createElement('div');
   document.body.appendChild(modal);
@@ -969,7 +970,7 @@ Applab.startSharedAppAfterWarnings = function () {
       }
       // Only want to ask about storing data once per app.
       if (showStoreDataAlert) {
-        markSeenDataAlert(AppStorage.getChannelId());
+        markSeenDataAlert(Applab.channelId);
       }
       window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
     },
@@ -988,14 +989,14 @@ Applab.init = function(config) {
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
+  Applab.channelId = config.channel;
+
   // Pre-populate asset list
-  if (window.dashboard && dashboard.project.getCurrentId()) {
-    assetsApi.ajax('GET', '', function (xhr) {
-      assetListStore.reset(JSON.parse(xhr.responseText));
-    }, function () {
-      // Unable to load asset list
-    });
-  }
+  assetsApi.ajax('GET', '', function (xhr) {
+    assetListStore.reset(JSON.parse(xhr.responseText));
+  }, function () {
+    // Unable to load asset list
+  });
 
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -1510,11 +1511,8 @@ function clearDebugInput() {
   }
 }
 
-// TODO(dave): remove once channel id is passed in appOptions.
 /**
- * If channel id has not yet been loaded, delays calling of the callback
- * until the saveProject response comes back. Otherwise, calls the callback
- * directly.
+ * Save the app state and trigger any callouts, then call the callback.
  * @param callback {Function}
  */
 studioApp.runButtonClickWrapper = function (callback) {
@@ -1528,17 +1526,9 @@ studioApp.runButtonClickWrapper = function (callback) {
  */
 Applab.serializeAndSave = function (callback) {
   designMode.serializeToLevelHtml();
-  // Behave like other apps when not editing a project or channel id is present.
-  if (!window.dashboard || !window.dashboard.project.isEditing() ||
-      window.dashboard.project.getCurrentId()) {
-    $(window).trigger('appModeChanged');
-    if (callback) {
-      callback();
-    }
-  } else {
-    // Otherwise, makes sure we don't hit our callback until after we've created
-    // a channel
-    $(window).trigger('appModeChanged', callback);
+  $(window).trigger('appModeChanged');
+  if (callback) {
+    callback();
   }
 };
 
@@ -1793,7 +1783,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + AppStorage.getChannelId(),
+    '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + Applab.channelId,
     '_blank');
 };
 
@@ -1837,13 +1827,7 @@ Applab.maybeAddAssetPathPrefix = function (filename) {
     return filename;
   }
 
-  var channelId = dashboard && dashboard.project.getCurrentId();
-  // TODO(dave): remove this check once we always have a channel id.
-  if (!channelId) {
-    return filename;
-  }
-
-  return '/v3/assets/' + channelId + '/'  + filename;
+  return '/v3/assets/' + Applab.channelId + '/'  + filename;
 };
 
 Applab.showSubmitConfirmation = function() {
@@ -2459,7 +2443,6 @@ function getScreenIds() {
   return $.makeArray(ret);
 }
 
-
 module.exports.blocks = [
   {func: 'onEvent', parent: api, category: 'UI controls', paletteParams: ['id','type','callback'], params: ['"id"', '"click"', "function(event) {\n  \n}"], dropdown: { 0: function () { return Applab.getIdDropdown(); }, 1: [ '"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"' ] } },
   {func: 'button', parent: api, category: 'UI controls', paletteParams: ['id','text'], params: ['"id"', '"text"'] },
@@ -2547,11 +2530,12 @@ module.exports.blocks = [
 
   {func: 'console.log', parent: consoleApi, category: 'Variables', paletteParams: ['message'], params: ['"message"'] },
   {func: 'declareAssign_str_hello_world', block: 'var str = "Hello World";', category: 'Variables', noAutocomplete: true },
-  {func: 'substring', blockPrefix: 'str.substring', category: 'Variables', paletteParams: ['start','end'], params: ["6", "11"], 'modeOptionName': '*.substring', type: 'value' },
-  {func: 'indexOf', blockPrefix: 'str.indexOf', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], 'modeOptionName': '*.indexOf', type: 'value' },
-  {func: 'length', block: 'str.length', category: 'Variables', 'modeOptionName': '*.length' },
-  {func: 'toUpperCase', blockPrefix: 'str.toUpperCase', category: 'Variables', 'modeOptionName': '*.toUpperCase', type: 'value' },
-  {func: 'toLowerCase', blockPrefix: 'str.toLowerCase', category: 'Variables', 'modeOptionName': '*.toLowerCase', type: 'value' },
+  {func: 'substring', blockPrefix: 'str.substring', category: 'Variables', paletteParams: ['start','end'], params: ["6", "11"], modeOptionName: '*.substring', type: 'value' },
+  {func: 'indexOf', blockPrefix: 'str.indexOf', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.indexOf', type: 'value' },
+  {func: 'includes', blockPrefix: 'str.includes', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.includes', type: 'value' },
+  {func: 'length', block: 'str.length', category: 'Variables', modeOptionName: '*.length' },
+  {func: 'toUpperCase', blockPrefix: 'str.toUpperCase', category: 'Variables', modeOptionName: '*.toUpperCase', type: 'value' },
+  {func: 'toLowerCase', blockPrefix: 'str.toLowerCase', category: 'Variables', modeOptionName: '*.toLowerCase', type: 'value' },
   {func: 'declareAssign_list_abd', block: 'var list = ["a", "b", "d"];', category: 'Variables', noAutocomplete: true },
   {func: 'listLength', block: 'list.length', category: 'Variables', noAutocomplete: true },
   {func: 'insertItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','index','item'], params: ["list", "2", '"c"'], dontMarshal: true },
@@ -2600,7 +2584,6 @@ module.exports.categories = {
  * an 'Examples' link that opens documentation in a lightbox:
  */
 module.exports.showExamplesLink = true;
-
 
 
 },{"../applab/assetManagement/show.js":"/home/ubuntu/staging/apps/build/js/applab/assetManagement/show.js","./ChartApi":"/home/ubuntu/staging/apps/build/js/applab/ChartApi.js","./api":"/home/ubuntu/staging/apps/build/js/applab/api.js","./consoleApi":"/home/ubuntu/staging/apps/build/js/applab/consoleApi.js","./constants":"/home/ubuntu/staging/apps/build/js/applab/constants.js","./designElements/elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js","./dontMarshalApi":"/home/ubuntu/staging/apps/build/js/applab/dontMarshalApi.js"}],"/home/ubuntu/staging/apps/build/js/applab/consoleApi.js":[function(require,module,exports){
@@ -3007,7 +2990,6 @@ var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
-var _ = require('../utils').getLodash();
 var KeyCodes = require('../constants').KeyCodes;
 
 var designMode = module.exports;
@@ -3745,11 +3727,6 @@ designMode.changeScreen = function (screenId) {
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
-    // View Data must simulate a run button click, to load the channel id.
-    var viewDataClick = studioApp.runButtonClickWrapper.bind(
-        studioApp, Applab.onViewData);
-    var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
-
     React.render(
       React.createElement(DesignToggleRow, {
         hideToggle: Applab.hideDesignModeToggle(),
@@ -3759,7 +3736,7 @@ designMode.changeScreen = function (screenId) {
         screens: screenIds,
         onDesignModeButton: Applab.onDesignModeButton,
         onCodeModeButton: Applab.onCodeModeButton,
-        onViewDataButton: throttledViewDataClick,
+        onViewDataButton: Applab.onViewData,
         onScreenChange: designMode.changeScreen,
         onScreenCreate: designMode.createScreen
       }),
@@ -3876,7 +3853,7 @@ designMode.resetIds = function() {
 };
 
 
-},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./DesignToggleRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/DesignToggleRow.jsx","./DesignWorkspace.jsx":"/home/ubuntu/staging/apps/build/js/applab/DesignWorkspace.jsx","./assetManagement/show.js":"/home/ubuntu/staging/apps/build/js/applab/assetManagement/show.js","./designElements/elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js","./designElements/library":"/home/ubuntu/staging/apps/build/js/applab/designElements/library.js"}],"/home/ubuntu/staging/apps/build/js/applab/controls.html.ejs":[function(require,module,exports){
+},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","./DesignToggleRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/DesignToggleRow.jsx","./DesignWorkspace.jsx":"/home/ubuntu/staging/apps/build/js/applab/DesignWorkspace.jsx","./assetManagement/show.js":"/home/ubuntu/staging/apps/build/js/applab/assetManagement/show.js","./designElements/elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js","./designElements/library":"/home/ubuntu/staging/apps/build/js/applab/designElements/library.js"}],"/home/ubuntu/staging/apps/build/js/applab/controls.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10260,7 +10237,7 @@ var studioApp = require('../../StudioApp').singleton;
  * @param typeFilter {String} The type of assets to show and allow to be
  *   uploaded.
  */
-var showAssetManager = function(assetChosen, typeFilter) {
+module.exports = function(assetChosen, typeFilter) {
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
   var dialog = studioApp.createModalDialog({
@@ -10278,13 +10255,6 @@ var showAssetManager = function(assetChosen, typeFilter) {
   }), codeDiv);
 
   dialog.show();
-};
-
-/**
- * HACK: Ensure we have a channel ID. Remove after finishing Pivotal #90626454.
- */
-module.exports = function(assetChosen, typeFilter) {
-  studioApp.runButtonClickWrapper(showAssetManager.bind(null, assetChosen, typeFilter));
 };
 
 
@@ -11942,24 +11912,12 @@ ChartApi.inferColumnsFromRawData = function (rawData) {
 },{"./GoogleChart":"/home/ubuntu/staging/apps/build/js/applab/GoogleChart.js","./appStorage":"/home/ubuntu/staging/apps/build/js/applab/appStorage.js","es6-promise":"/home/ubuntu/staging/apps/node_modules/es6-promise/dist/es6-promise.js"}],"/home/ubuntu/staging/apps/build/js/applab/appStorage.js":[function(require,module,exports){
 'use strict';
 
-/* global dashboard */
+/* global Applab */
 
 /**
  * Namespace for app storage.
  */
 var AppStorage = module.exports;
-
-// TODO(dave): remove once all applab data levels are associated with
-// a project.
-AppStorage.tempChannelId =
-    window.location.hostname.split('.')[0] === 'localhost' ?
-        "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
-
-AppStorage.getChannelId = function() {
-  // TODO(dave): pull channel id directly from appOptions once available.
-  var id = dashboard && dashboard.project.getCurrentId();
-  return id || AppStorage.tempChannelId;
-};
 
 /**
  * Reads the value associated with the key, accessible to all users of the app.
@@ -11971,7 +11929,7 @@ AppStorage.getChannelId = function() {
 AppStorage.getKeyValue = function(key, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleGetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
+  var url = '/v3/shared-properties/' + Applab.channelId + '/' + key;
   req.open('GET', url, true);
   req.send();
 };
@@ -12003,7 +11961,7 @@ var handleGetKeyValue = function(onSuccess, onError) {
 AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleSetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
+  var url = '/v3/shared-properties/' + Applab.channelId + '/' + key;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   req.send(JSON.stringify(value));
@@ -12041,7 +11999,7 @@ AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleCreateRecord.bind(req, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
@@ -12080,7 +12038,7 @@ AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleReadRecords.bind(req,
       searchParams, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' + tableName;
   req.open('GET', url, true);
   req.send();
 
@@ -12129,7 +12087,7 @@ AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' +
       tableName + '/' + recordId;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -12174,7 +12132,7 @@ AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' +
       tableName + '/' + recordId + '/delete';
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -12216,7 +12174,7 @@ AppStorage.populateTable = function (jsonData, overwrite, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handlePopulateTable.bind(req, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId();
+  var url = '/v3/shared-tables/' + Applab.channelId;
   if (overwrite) {
     url += "?overwrite=1";
   }
@@ -12261,7 +12219,7 @@ AppStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onError)
   var req = new XMLHttpRequest();
 
   req.onreadystatechange = handlePopulateKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/shared-properties/' + AppStorage.getChannelId();
+  var url = '/v3/shared-properties/' + Applab.channelId;
 
   if (overwrite) {
     url += "?overwrite=1";
