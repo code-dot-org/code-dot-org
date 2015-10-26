@@ -511,6 +511,11 @@ describe('generateDropletModeOptions', function () {
           "color": "#BB77C7",
           "title": "*.substring"
         },
+        "*.includes": {
+          "color": "#BB77C7",
+          "title": "*.includes",
+          "value": true
+        },
         "*.indexOf": {
           "value": true,
           "color": "#BB77C7",
