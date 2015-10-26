@@ -479,7 +479,8 @@ function loadHoc2015(skin, assetUrl) {
     'alert1', 'alert2', 'alert3', 'alert4',
     'applause',
     'start', 'win', 'failure', 'flag',
-    'move1', 'move2', 'move3'
+    'move1', 'move2', 'move3',
+    'roll_begin', 'roll_loop', 'roll_end'
   ];
 
   // Normally the sound isn't played for the final goal, but this forces it
