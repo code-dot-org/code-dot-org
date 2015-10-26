@@ -318,12 +318,13 @@ function populateJSFunctions(interpreter) {
       interpreter.createNativeFunction(wrapper), false, true);
   }
 
-  // Add String.prototype.contains
+  // Add String.prototype.includes
   wrapper = function(searchStr) {
-    var str = this.toString();
-    return interpreter.createPrimitive(str.indexOf(searchStr) !== -1);
+    // Polyfill based off of https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+    return interpreter.createPrimitive(
+      String.prototype.indexOf.apply(this, arguments) !== -1);
   };
-  interpreter.setProperty(interpreter.STRING.properties.prototype, 'contains',
+  interpreter.setProperty(interpreter.STRING.properties.prototype, 'includes',
     interpreter.createNativeFunction(wrapper), false, true);
 }
 

@@ -196,7 +196,7 @@ class Applab < Blockly
         "declareAssign_str_hello_world": null,
         "substring": null,
         "indexOf": null,
-        "contains": null,
+        "includes": null,
         "length": null,
         "toUpperCase": null,
         "toLowerCase": null,
