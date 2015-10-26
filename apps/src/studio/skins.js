@@ -329,6 +329,14 @@ function loadHoc2015(skin, assetUrl) {
     };
   });
 
+  skin.bot1.movementAudio = [
+    { begin: 'roll_begin', loop: 'roll_loop', end: 'roll_end' }
+  ];
+  skin.bot2.movementAudio = [
+    { loop: 'bot2_move_loop', end: 'bot2_move_end' },
+    { loop: 'bot2_move2_loop', end: 'bot2_move2_end' }
+  ];
+
   skin.preventProjectileLoop = function (className) {
     return className === '';
   };
@@ -480,7 +488,9 @@ function loadHoc2015(skin, assetUrl) {
     'applause',
     'start', 'win', 'failure', 'flag',
     'move1', 'move2', 'move3',
-    'roll_begin', 'roll_loop', 'roll_end'
+    'roll_begin', 'roll_loop', 'roll_end',
+    'bot2_move_loop', 'bot2_move_end',
+    'bot2_move2_loop', 'bot2_move2_end'
   ];
 
   // Normally the sound isn't played for the final goal, but this forces it

@@ -912,6 +912,7 @@ Studio.onTick = function() {
     var ticksBeforeFaceSouth = utils.valueOr(level.ticksBeforeFaceSouth, Studio.ticksBeforeFaceSouth);
     if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].dir = Direction.SOUTH;
+      Studio.movementAudioOff();
       isWalking = false;
     }
 
@@ -1530,15 +1531,6 @@ Studio.init = function(config) {
     skin.failureAvatar = null;
     skin.winAvatar = null;
   }
-
-  var moveSound = new ThreeSliceAudio(studioApp.cdoSounds, 'roll_begin', 'roll_loop', 'roll_end');
-  window.addEventListener('keydown', function () {
-    moveSound.on();
-  });
-
-  window.addEventListener('keyup', function () {
-    moveSound.off();
-  });
 
   window.addEventListener("keydown", Studio.onKey, false);
   window.addEventListener("keyup", Studio.onKey, false);
@@ -3944,8 +3936,33 @@ Studio.setSprite = function (opts) {
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
+  // Set up movement audio for the selected sprite (should be preloaded)
+  Studio.movementAudioOptions = Studio.movementAudioOptions || {};
+  if (!Studio.movementAudioOptions[spriteValue] && skin.avatarList) {
+    var spriteSkin = skin[spriteValue] || {};
+    var audioConfig = spriteSkin.movementAudio || [];
+    Studio.movementAudioOptions[spriteValue] = audioConfig.map(function (audioOption) {
+      return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
+    });
+  }
+  Studio.currentMovementAudioOptions = Studio.movementAudioOptions[spriteValue];
+
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
+};
+
+
+Studio.movementAudioOn = function () {
+  Studio.movementAudioOff();
+  Studio.currentMovementAudio = Studio.currentMovementAudioOptions[
+      Math.floor(Math.random() * Studio.currentMovementAudioOptions.length)];
+  Studio.currentMovementAudio.on();
+};
+
+Studio.movementAudioOff = function () {
+  if (Studio.currentMovementAudio) {
+    Studio.currentMovementAudio.off();
+  }
 };
 
 var p = function (x,y) {
@@ -4592,9 +4609,13 @@ Studio.moveSingle = function (opts) {
 
   Studio.lastMoveSingleDir = opts.dir;
 
-  if (playSound && skin.moveSounds) {
+  if (false && playSound && skin.moveSounds) {
     var randomSoundIndex = Math.floor(Math.random() * skin.moveSounds.length);
     studioApp.playAudio(skin.moveSounds[randomSoundIndex]);
+  }
+
+  if (playSound) {
+    Studio.movementAudioOn();
   }
 };
 
