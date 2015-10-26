@@ -4590,20 +4590,27 @@ Studio.moveSingle = function (opts) {
     }
 
     playSound = true;
-  } else if (!wallCollision) {
-    if (playspaceEdgeCollision) {
-      var boundary = Studio.getPlayspaceBoundaries(sprite);
-      projectedX = Math.max(boundary.left, Math.min(boundary.right, projectedX));
-      projectedY = Math.max(boundary.top, Math.min(boundary.bottom, projectedY));
+  } else {
+    if (!wallCollision) {
+      if (playspaceEdgeCollision) {
+        var boundary = Studio.getPlayspaceBoundaries(sprite);
+        projectedX = Math.max(boundary.left, Math.min(boundary.right, projectedX));
+        projectedY = Math.max(boundary.top, Math.min(boundary.bottom, projectedY));
+      }
+      sprite.x = projectedX;
+      sprite.y = projectedY;
+
+      if (opts.dir !== Studio.lastMoveSingleDir &&
+          lastMove === Infinity || Studio.tickCount > lastMove + 1) {
+        // So long as there was no wall collision, a new direction, and we
+        // haven't already processed a move in the previous tick, then play a sound.
+        playSound = true;
+      }
     }
-    sprite.x = projectedX;
-    sprite.y = projectedY;
 
     if (opts.dir !== Studio.lastMoveSingleDir &&
         lastMove === Infinity || Studio.tickCount > lastMove + 1) {
-      // So long as there was no wall collision, a new direction, and we
-      // haven't already processed a move in the previous tick, then play a sound.
-      playSound = true;
+      Studio.movementAudioOn();
     }
   }
 
@@ -4612,10 +4619,6 @@ Studio.moveSingle = function (opts) {
   if (false && playSound && skin.moveSounds) {
     var randomSoundIndex = Math.floor(Math.random() * skin.moveSounds.length);
     studioApp.playAudio(skin.moveSounds[randomSoundIndex]);
-  }
-
-  if (playSound) {
-    Studio.movementAudioOn();
   }
 };
 
