@@ -1913,16 +1913,11 @@ en:
         'onEvent("id", "click", function() {...}):': 'onEvent("id", "click", function() {...}):'
         trigger: trigger
       U3L14 - Matching Events to Description:
-        Triggers once, the instant mouse hovers over the button: Triggers once, the instant mouse hovers over the button
         Triggers once, the instant the mouse hovers over the button: Triggers once, the instant the mouse hovers over the button
-        Triggers when mouse button is pressed: Triggers when mouse button is pressed
-        Triggers when mouse button is released: Triggers when mouse button is released
-        Triggers when mouse the button is clicked once: Triggers when mouse the button is clicked once
         Triggers when th mouse button is released: Triggers when th mouse button is released
         Triggers when the mouse button is clicked once: Triggers when the mouse button is clicked once
         Triggers when the mouse button is pressed: Triggers when the mouse button is pressed
         Triggers whenever the mouse moves: Triggers whenever the mouse moves
-        Triggers whenever the mouses moves: Triggers whenever the mouses moves
         click: click
         mousedown: mousedown
         mousemove: mousemove
