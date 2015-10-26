@@ -108,7 +108,8 @@ ____________________________________________________
 // Call functions to generate two die rolls and sum the result. Display the value on the console.
 console.log(rollDie() + rollDie());
 
-function rollDie() { // Define a function that uses randomNumber(1,6) to randomly generate a die roll, 1 to 6, and return the value.
+function rollDie() { 
+// Define a function that uses randomNumber(1,6) to randomly generate a die roll, 1 to 6, and return the value.
   var roll = randomNumber(1,6);
   return roll;
 }

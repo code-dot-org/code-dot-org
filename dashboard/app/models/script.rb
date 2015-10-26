@@ -34,7 +34,7 @@ class Script < ActiveRecord::Base
 
   include SerializedProperties
 
-  serialized_attrs %w(pd)
+  serialized_attrs %w(pd admin_required)
 
   # Names used throughout the code
   HOC_2013_NAME = 'Hour of Code' # this is the old (2013) hour of code
