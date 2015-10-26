@@ -728,7 +728,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "should not get show of admin script if signed in as not admin" do
     admin_script = create_admin_script
 
-    sign_in @not_admin
+    sign_in create(:student)
     get :show, script_id: admin_script.name, stage_id: 1, id: 1
     assert_response :forbidden
   end
@@ -736,7 +736,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "should get show of admin script if signed in as admin" do
     admin_script = create_admin_script
 
-    sign_in @admin
+    sign_in create(:admin)
     get :show, script_id: admin_script.name, stage_id: 1, id: 1
     assert_response :success
   end
