@@ -220,10 +220,10 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       // because it will still take up space.
       hintRequestButton.parentNode.removeChild(hintRequestButton);
     } else {
-      // Swap out the specific feedback message with a generic one.
-      var genericFeedback = this.getFeedbackMessage_({message: msg.genericFeedback()});
-      var parentNode = feedbackMessage.parentNode;
-      parentNode.replaceChild(genericFeedback, feedbackMessage);
+
+      // Generate a generic feedback message to display when we show the
+      // feedback block
+      var genericFeedback = this.getFeedbackMessage_({message: msg.tryBlocksBelowFeedback()});
 
       // If there are feedback blocks, temporarily remove them.
       // Get pointers to the parent and next sibling so we can re-insert
@@ -239,8 +239,9 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       // If the user requests the hint...
       dom.addClickTouchEvent(hintRequestButton, function () {
 
-        // Swap the specific feedback message back in.
-        parentNode.replaceChild(feedbackMessage, genericFeedback);
+        // Swap out the specific feedback message with a generic one.
+        var parentNode = feedbackMessage.parentNode;
+        parentNode.replaceChild(genericFeedback, feedbackMessage);
 
         // Remove "Show hint" button.  Making it invisible isn't enough,
         // because it will still take up space.
@@ -501,16 +502,24 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
       case TestResults.MISSING_BLOCK_UNFINISHED:
         /* fallthrough */
       case TestResults.MISSING_BLOCK_FINISHED:
-        message = options.level.missingBlocksErrorMsg ||
-            msg.missingBlocksErrorMsg();
+        message = options.level.missingRequiredBlocksErrorMsg ||
+            msg.missingRequiredBlocksErrorMsg();
         break;
       case TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED:
-        message = msg.missingBlocksErrorMsg();
+        message = msg.missingRecommendedBlocksErrorMsg();
         break;
       case TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED:
-        message = msg.completedWithoutRecommendedBlock({
-          puzzleNumber: options.level.puzzle_number || 0
-        });
+        var numEnabledBlocks = this.getNumCountableBlocks();
+        if (this.studioApp_.IDEAL_BLOCK_NUM && numEnabledBlocks > this.studioApp_.IDEAL_BLOCK_NUM) {
+          message = msg.numBlocksNeeded({
+            numBlocks: this.studioApp_.IDEAL_BLOCK_NUM,
+            puzzleNumber: options.level.puzzle_number || 0
+          });
+        } else {
+          message = msg.completedWithoutRecommendedBlock({
+            puzzleNumber: options.level.puzzle_number || 0
+          });
+        }
         break;
       case TestResults.NESTED_FOR_SAME_VARIABLE:
         message = msg.nestedForSameVariable();
@@ -777,7 +786,9 @@ FeedbackUtils.prototype.canContinueToNextLevel = function(feedbackType) {
  */
 FeedbackUtils.prototype.shouldPromptForHint = function(feedbackType) {
   return (feedbackType === TestResults.MISSING_BLOCK_UNFINISHED ||
-    feedbackType === TestResults.MISSING_BLOCK_FINISHED);
+    feedbackType === TestResults.MISSING_BLOCK_FINISHED ||
+    feedbackType === TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED ||
+    feedbackType === TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED);
 };
 
 /**
