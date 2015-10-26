@@ -11,7 +11,7 @@ var studioApp = require('../../StudioApp').singleton;
  * @param typeFilter {String} The type of assets to show and allow to be
  *   uploaded.
  */
-var showAssetManager = function(assetChosen, typeFilter) {
+module.exports = function(assetChosen, typeFilter) {
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
   var dialog = studioApp.createModalDialog({
@@ -29,11 +29,4 @@ var showAssetManager = function(assetChosen, typeFilter) {
   }), codeDiv);
 
   dialog.show();
-};
-
-/**
- * HACK: Ensure we have a channel ID. Remove after finishing Pivotal #90626454.
- */
-module.exports = function(assetChosen, typeFilter) {
-  studioApp.runButtonClickWrapper(showAssetManager.bind(null, assetChosen, typeFilter));
 };
