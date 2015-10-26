@@ -324,7 +324,7 @@ window.apps = {
         if (window.dashboard.isChrome34) {
           chrome34Fix.fixup();
         }
-        if (appOptions.level.projectTemplateLevelName) {
+        if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
           $('#clear-puzzle-header').hide();
           $('#versions-header').show();
         }
@@ -907,6 +907,10 @@ var projects = module.exports = {
     // `getLevelSource()` is expensive for Blockly so only call
     // after `workspaceChange` has fired
     if (!appOptions.droplet && !hasProjectChanged) {
+      return;
+    }
+
+    if ($('#designModeViz .ui-draggable-dragging').length !== 0) {
       return;
     }
 

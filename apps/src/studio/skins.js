@@ -36,10 +36,10 @@ function loadInfinity(skin, assetUrl) {
     'projectile_duck'
   ];
 
-  skin.specialProjectileFrames = {
-    'projectile_cherry': 13,
-    'projectile_ice': 12,
-    'projectile_duck': 12
+  skin.specialProjectileProperties = {
+    'projectile_cherry': { frames: 13 },
+    'projectile_ice': { frames: 12 },
+    'projectile_duck': { frames: 12 }
   };
 
   // TODO: proper item class names
@@ -54,10 +54,10 @@ function loadInfinity(skin, assetUrl) {
     'item_duck'
   ];
 
-  skin.specialItemFrames = {
-    'item_cherry': 13,
-    'item_ice': 12,
-    'item_duck': 12
+  skin.specialItemProperties = {
+    'item_cherry': { frames: 13 },
+    'item_ice': { frames: 12 },
+    'item_duck': { frames: 12 }
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -202,9 +202,6 @@ function loadHoc2015(skin, assetUrl) {
   skin.ProjectileClassNames = [
   ];
 
-  skin.specialProjectileFrames = {
-  };
-
   // TODO: proper item class names
   skin.ItemClassNames = [
     'pig',
@@ -217,33 +214,47 @@ function loadHoc2015(skin, assetUrl) {
   ];
 
   skin.AutohandlerTouchItems = {
-    'pig': 'whenTouchPig',
-    'man': 'whenTouchMan',
-    'roo': 'whenTouchRoo',
-    'bird': 'whenTouchBird',
-    'spider': 'whenTouchSpider',
-    'mouse': 'whenTouchMouse',
-    'pilot': 'whenTouchPilot'
+    whenTouchPig: 'pig',
+    whenTouchMan: 'man',
+    whenTouchRoo: 'roo',
+    whenTouchBird: 'bird',
+    whenTouchSpider: 'spider',
+    whenTouchMouse: 'mouse',
+    whenTouchPilot: 'pilot',
+    whenGetPig: 'pig',
+    whenGetMan: 'man',
+    whenGetRoo: 'roo',
+    whenGetBird: 'bird',
+    whenGetSpider: 'spider',
+    whenGetMouse: 'mouse',
+    whenGetPilot: 'pilot',
   };
 
-  skin.specialItemFrames = {
-    'pig': 12,
-    'man': 12,
-    'roo': 15,
-    'bird': 8,
-    'spider': 12,
-    'mouse': 1,
-    'pilot': 13
+  skin.AutohandlerTouchAllItems = {
+    whenTouchAllPigs: 'pig',
+    whenTouchAllMen: 'man',
+    whenTouchAllRoos: 'roo',
+    whenTouchAllBirds: 'bird',
+    whenTouchAllSpiders: 'spider',
+    whenTouchAllMice: 'mouse',
+    whenTouchAllPilots: 'pilot',
+    whenGetAllPigs: 'pig',
+    whenGetAllMen: 'man',
+    whenGetAllRoos: 'roo',
+    whenGetAllBirds: 'bird',
+    whenGetAllSpiders: 'spider',
+    whenGetAllMice: 'mouse',
+    whenGetAllPilots: 'pilot',
   };
 
-  skin.specialItemScale = {
-    'pig': 1,
-    'man': 1,
-    'roo': 1.6,
-    'bird': 1.6,
-    'spider': 1.2,
-    'mouse': 0.6,
-    'pilot': 1
+  skin.specialItemProperties = {
+    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
+    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
+    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -325,6 +336,9 @@ function loadHoc2015(skin, assetUrl) {
   skin.preventItemLoop = function (className) {
     return className === 'item_character1';
   };
+
+  // No failure avatar for this skin.
+  skin.failureAvatar = null;
 
   // TODO: Create actual item choices
   skin.pig = skin.assetUrl('walk_item1.png');
@@ -455,13 +469,24 @@ function loadHoc2015(skin, assetUrl) {
   // Sounds.
   skin.sounds = [
     'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
+    'character1sound5', 'character1sound6', 'character1sound7', 'character1sound8',
     'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
     'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
     'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
+    'item4sound1', 'item4sound2', 'item4sound3',
+    'item5sound1', 'item5sound2', 'item5sound3',
+    'item6sound1', 'item6sound2', 'item6sound3',
     'alert1', 'alert2', 'alert3', 'alert4',
     'applause',
-    'start', 'win', 'failure', 'flag'
+    'start', 'win', 'failure', 'flag',
+    'move1', 'move2', 'move3'
   ];
+
+  // Normally the sound isn't played for the final goal, but this forces it
+  // to be played.
+  skin.playFinalGoalSound = true;
+
+  skin.moveSounds = ['move1', 'move2', 'move3'];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes
@@ -470,7 +495,6 @@ function loadHoc2015(skin, assetUrl) {
     [msg.setMapRandom(), RANDOM_VALUE],
     [msg.setMapBlank(), '"blank"'],
     [msg.setMapCircle(), '"circle"'],
-    [msg.setMapCircle2(), '"circle2"'],
     [msg.setMapHorizontal(), '"horizontal"'],
     [msg.setMapGrid(), '"grid"'],
     [msg.setMapBlobs(), '"blobs"']
@@ -511,6 +535,168 @@ function loadHoc2015(skin, assetUrl) {
     [msg.itemRoo(), '"roo"'],
     [msg.itemSpider(), '"spider"'],
     [msg.itemRandom(), RANDOM_VALUE]];
+}
+
+function loadHoc2015x(skin, assetUrl) {
+  skin.preloadAssets = true;
+
+  skin.defaultBackground = 'main';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+  ];
+
+  skin.ItemClassNames = [
+    'hazard'
+  ];
+
+  skin.AutohandlerTouchItems = {
+  };
+
+  skin.AutohandlerTouchAllItems = {
+  };
+
+  skin.specialItemProperties = {
+    'hazard': { frames: 13, animationRate: 5, width: 100, height: 100, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
+  };
+
+  // Spritesheet for animated goal.
+  skin.goal1 = skin.assetUrl('goal1.png');
+  skin.goal2 = skin.assetUrl('goal2.png');
+
+  // How many frames in the animated goal spritesheet.
+  skin.animatedGoalFrames = 16;
+
+  // How long to show each frame of the optional goal animation.
+  skin.timePerGoalAnimationFrame = 100;
+
+  // For a smaller collision region on a goal.
+  skin.goalCollisionRectWidth = 50;
+  skin.goalCollisionRectHeight = 50;
+
+  // Whether that goal should fade out when touched.  If true, then the
+  // success image is never shown.
+  skin.fadeOutGoal = true;
+  skin.goalSuccess = null;
+
+  // Draw a goal an an offset to its usual location, useful for oversize goal
+  // images, such as a person standing taller than a single grid square whose
+  // feet should still be planted in that grid square.
+  skin.goalRenderOffsetX = 0;
+  skin.goalRenderOffsetY = 0;
+
+  // Dimensions of a rectangle in collidable center from which projectiles begin.
+  skin.projectileSpriteWidth  = 70;
+  skin.projectileSpriteHeight = 70;
+
+  // Dimensions of a rectangle in collidable center in which item collisions occur.
+  skin.itemCollisionRectWidth  = 50;
+  skin.itemCollisionRectHeight = 50;
+
+  // Dimensions of a rectangle in sprite center in which item collisions occur.
+  skin.spriteCollisionRectWidth  = 50;
+  skin.spriteCollisionRectHeight = 50;
+
+  // Offset & dimensions of a rectangle in collidable in which wall collisions occur.
+  // For isometric-style rendering, this would normally be the feet.
+  skin.wallCollisionRectOffsetX = 0;
+  skin.wallCollisionRectOffsetY = 24;
+  skin.wallCollisionRectWidth  = 30;
+  skin.wallCollisionRectHeight = 20;
+
+  // When movement is grid aligned, sprite coordinates are the top-left corner
+  // of the sprite, and match the top-left corner of the grid square in question.
+  // When we draw the sprites bigger, this means the sprite's "feet" will usually
+  // be too far to the right and below that square.  These offsets are a chance
+  // to move the rendering of the sprite up and to the left, when negative, so
+  // that the "feet" are planted at the bottom center of the grid square.
+  skin.gridSpriteRenderOffsetX = -20;
+  skin.gridSpriteRenderOffsetY = -40;
+
+  skin.avatarList = ['bot1'];
+  skin.avatarList.forEach(function (name) {
+    skin[name] = {
+      sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 8,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: 10
+      },
+      timePerFrame: 100
+    };
+  });
+
+  skin.preventProjectileLoop = function (className) {
+    return className === '';
+  };
+
+  skin.preventItemLoop = function (className) {
+    return className === 'item_character1';
+  };
+
+  skin.hazard = skin.assetUrl('hazard_idle.png');
+
+  skin.main = {
+    background: skin.assetUrl('background_background1.jpg'),
+    tiles: skin.assetUrl('tiles_background1.png')
+  };
+
+  // It's possible to enlarge the rendering of some wall tiles so that they
+  // overlap each other a little.  Define a bounding rectangle for the source
+  // tiles that get this treatment.
+
+  skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
+
+  // Sounds.
+  skin.sounds = [
+    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
+    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
+    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
+    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
+    'alert1', 'alert2', 'alert3', 'alert4',
+    'applause',
+    'start', 'win', 'failure', 'flag',
+    'move1', 'move2', 'move3', 'move4'
+  ];
+
+  // Normally the sound isn't played for the final goal, but this forces it
+  // to be played.
+  skin.playFinalGoalSound = true;
+
+  skin.moveSounds = ['move1', 'move2', 'move3', 'move4'];
+
+  // These are used by blocks.js to customize our dropdown blocks across skins
+  // NOTE: map names must have double quotes inside single quotes
+  // NOTE: first item must be RANDOM_VALUE
+  skin.mapChoices = [
+    ];
+
+  skin.backgroundChoices = [
+    ];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.backgroundChoicesK1 = [
+    ];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteBot1(), '"bot1"']];
+
+  skin.projectileChoices = [];
+
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.itemChoices = [
+    ];
 }
 
 function loadStudio(skin, assetUrl) {
@@ -763,6 +949,9 @@ exports.load = function(assetUrl, id) {
       break;
     case 'hoc2015':
       loadHoc2015(skin, assetUrl);
+      break;
+    case 'hoc2015x':
+      loadHoc2015x(skin, assetUrl);
       break;
     case 'studio':
       loadStudio(skin, assetUrl);

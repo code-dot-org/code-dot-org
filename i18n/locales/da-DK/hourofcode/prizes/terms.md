@@ -8,13 +8,13 @@ title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: prizes_nav
 
 # Præmier - vilkår og betingelser
 
-## Amazon.com or Microsoft’s Windows Store credit:
+## Amazon.com, iTunes and Windows Store credit:
 
-The Amazon.com and Microsoft’s Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Kun een præmie per arrangør.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Kun een præmie per arrangør.
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com or Microsoft’s Windows Store credit. Hvis hele skolen deltager i Hour of Code, skal hver lærer registrere sig som arrangør for at være kvalificeret til at modtage en præmie.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Hvis hele skolen deltager i Hour of Code, skal hver lærer registrere sig som arrangør for at være kvalificeret til at modtage en præmie.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com and Microsoft’s Windows Store credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
 

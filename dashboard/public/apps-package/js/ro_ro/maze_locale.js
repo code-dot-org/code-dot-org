@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Dacă există o cale de acces în direcţia specificată, atunci realizează unele acțiunii."},
 "ifelseTooltip":function(d){return "Dacă există o cale de acces în direcţia specificată, atunci realizează primul bloc de acţiuni. Altfel, execută al doilea bloc de acţiuni."},
 "ifFlowerTooltip":function(d){return "Dacă există o floare/un fagure de miere în direcţia specificată, atunci fă nişte acţiuni."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Dacă există o floare în direcţia specificată, atunci realizează unele acțiuni."},
 "ifelseFlowerTooltip":function(d){return "Dacă există o floare/un fagure de miere în direcţia specificată, atunci fă primul block de acţiuni. Altfel, fă al doilea bloc de acţiuni."},
 "insufficientHoney":function(d){return "Folosești toate blocurile corecte, dar trebuie să produci cantitatea necesară de miere."},
 "insufficientNectar":function(d){return "Folosești toate blocurile corecte, dar trebuie să aduni cantitatea necesară de nectar."},

@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,9 +126,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "User input\r\n\r\nvar x = prompt(“Enter number”)\r\nif( 3 < x){\r\n console.log(“Bigger”)\r\n}\r\n",
     "start_blocks": "var x = prompt(“Enter number”)\r\nif( 3 < x){\r\n console.log(“Bigger”)\r\n}",

@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -154,11 +153,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "encrypted_examples": [
-
-    ],
     "markdown_instructions": "** @Baker note: not sure what this level should be... was just playing around**\r\n\r\n# Variable Expression Assignment Practice\r\n\r\nOn the last level we saw how variables can be set to the value of an expression. A good thing to remember is that expressions can contain more than one symbol in them so we are going to practice some of that on this level with turle. \r\n\r\n# Do This\r\n\r\n* **Run the current program**\r\n\r\n* \r\n\r\n* ",
-    "instructions": "(click to see full)"
+    "instructions": "(click to see full)",
+    "start_blocks": "for (var i = 0; i < 4; i++) {\r\n  moveToNewBottomPosition();\r\n  draw4Dots();\r\n}\r\nfunction moveToNewBottomPosition() {\r\n  penUp();\r\n  var bottomYPosition = 400;\r\n  var bottomXPosition = 10 + randomNumber(0, 200);\r\n  moveTo(bottomXPosition, bottomYPosition);\r\n  penDown();\r\n}\r\nfunction draw4Dots() {\r\n  for (var i = 0; i < 4; i++) {\r\n    penUp();\r\n    var moveAmount = 100 - randomNumber(0, 100);\r\n    moveForward(moveAmount);\r\n    penDown();\r\n    var dotSize = randomNumber(1, 10);\r\n    dot(dotSize);\r\n  }\r\n}"
   }
 }]]></config>
   <blocks/>

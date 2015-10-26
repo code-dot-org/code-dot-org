@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Belirtilen yönde bir yol varsa, o zaman bazı işlemleri yap."},
 "ifelseTooltip":function(d){return "Belirtilen yönde bir yol varsa, o zaman ilk bloktaki işlemleri yap. Yoksa, ikinci bloktaki işlemleri yap."},
 "ifFlowerTooltip":function(d){return "Eğer çiçek/petek belirtilen yönde varsa birşeyler yap."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Belirtilen yönde bir yol varsa, o zaman bazı işlemleri yap."},
 "ifelseFlowerTooltip":function(d){return "Çiçek/petek belirtilen yönde ise, o zaman eylemlerin ilk bloğunu yap. Aksi takdirde, eylemlerin ikinci bloğunu yap."},
 "insufficientHoney":function(d){return "Gerekli tüm blokları kullanıyorsunuz ancak yeteri kadar bal toplamanız gerekiyor."},
 "insufficientNectar":function(d){return "Gerekli tüm blokları kullanıyorsunuz ancak yeteri kadar nektar toplamanız gerekiyor."},

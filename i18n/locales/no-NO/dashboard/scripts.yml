@@ -18,13 +18,13 @@
           "Artist 1: Intro": 'Kunstner 1: Intro'
           Artists 2: Kunstnere 2
           Spelling Bee: Stavekonkurranse
-          Spelling Bee not blockly: Stave Bie ikke blokker
+          Spelling Bee not blockly: Stavekonkurranse ikke Blockly
           "Bee 1: Intro": 'Bier 1: Introduksjon'
           "Maze 2: Loops": 'Labyrint 2: Løkker'
           "Bee 2: Loops": 'Bier 2: Løkker'
           Multi & Match: Flervalg og sammensetting
           K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy uten blokker
+          Flappy non blockly: Flappy ikke blockly
           title: Kurs 1
           Artist 2: Kunstner 2
           Happy Maps: Glade Kart
@@ -53,7 +53,7 @@
           "Studio: Create a Story": 'Spill-Lab: Lage en historie'
           Artist Loops: Kunstner løkker
           Bee Conditionals: Bie Betingelser
-          Flappy: Flappy
+          Flappy: Flakse
           title: Kurs 2
           Bee Loops: Bie løkker
           Artist Functions: Kunstner funksjoner
@@ -182,6 +182,7 @@
           Maze and Bee: Labyrint og Bie
           Artist Binary: Kunstner Binær
           description_audience: Alder 10+ (etter kurs 3)
+          Super Challenge - Variables: 'Super Challenge - Variables'
         Course4pre:
           title: Kurs 4 forkunnskaper
           description_short: Et kort sammendrag av prinsippene for elever som ikke har tatt kurs 2 og 3.
@@ -643,6 +644,11 @@
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
           Variables: Variabler
+          Looping and Random Numbers - Under the Sea: 'Looping and Random Numbers - Under the Sea'
+          Multi-screen App: Multi-screen App
+          Variables Conceptorial Fodder: Variables Conceptorial Fodder
+          "Variables: Create, Assign, and Read": 'Variables: Create, Assign, and Read'
+          "Variables: Increment, Decrement, Display, and Scope": 'Variables: Increment, Decrement, Display, and Scope'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -765,8 +771,8 @@
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: Lär ut funktionell programmering genom algebra
+          description_short: Lär ut funktionell programmering genom algebra
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -842,8 +848,8 @@
           Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: Lär ut funktionell programmering genom algebra
+          description_short: Lär ut funktionell programmering genom algebra
           Evaluation Blocks: Evalueringsblokker
           Strings and Images: Strenger og bilder
           Defining Variables: Definering av variabler
@@ -867,7 +873,7 @@
           Bee: Bier
           PlayLab: PlayLab
           Farmer: Farmer
-          Flappy: Flappy
+          Flappy: Flakse
           Bounce: sprett
           Multi: Multi
           Match: Kamp
@@ -890,8 +896,8 @@
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: Lär ut funktionell programmering genom algebra
+          description_short: Lär ut funktionell programmering genom algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -944,8 +950,8 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: Lär ut funktionell programmering genom algebra
+          description_short: Lär ut funktionell programmering genom algebra
           Welcome!: Velkommen!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -996,8 +1002,8 @@
           Hour of Code 2015: Kodetimen 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: Lär ut funktionell programmering genom algebra
+          description_short: Lär ut funktionell programmering genom algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1018,8 +1024,8 @@
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: Lär ut funktionell programmering genom algebra
+          description: Lär ut funktionell programmering genom algebra
           Welcome!: Velkommen!
           Wrap-Up: Oppsummering
           Review StarLogo Nova: Review StarLogo Nova
@@ -1035,8 +1041,8 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: Lär ut funktionell programmering genom algebra
+          description: Lär ut funktionell programmering genom algebra
           Welcome!: Velkommen!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1055,8 +1061,8 @@
         sciencePD2b-iZone:
           Welcome!: Velkommen!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: Lär ut funktionell programmering genom algebra
+          description: Lär ut funktionell programmering genom algebra
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1065,8 +1071,8 @@
           Wrap-Up: Oppsummering
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: Lär ut funktionell programmering genom algebra
+          description: Lär ut funktionell programmering genom algebra
           Welcome!: Velkommen!
           0: |
             Unit 1, Days 1-2
@@ -1084,8 +1090,8 @@
           Wrap-up: Oppsummering
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: Lär ut funktionell programmering genom algebra
+          description: Lär ut funktionell programmering genom algebra
           Welcome!: Velkommen!
           0: |
             Unit 1, Days 1-2
@@ -1326,3 +1332,16 @@
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        duino:
+          Experimenting with Arduino stuff: Experimenting with Arduino stuff
+          Basic Circuits: Basic Circuits
+        Special Fun:
+          title: Special Fun
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: Alder 10+ (etter kurs 3)
+          Halloween 2015: Halloween 2015
+        SpecialSeries:
+          title: Special Levels
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: Alder 10+ (etter kurs 3)
+          Halloween 2015: Halloween 2015

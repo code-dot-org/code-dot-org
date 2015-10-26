@@ -208,6 +208,23 @@ describe('getText/setText commands', function () {
         setInnerText(element, 'text with&nbsp;HTML &lt;escapes&gt;');
         assert.equal(element.innerHTML, 'text with&amp;nbsp;HTML &amp;lt;escapes&amp;gt;');
       });
+
+      it ('casts non-string arguments safely with toString', function () {
+        var numberArgument = 3.14;
+        setInnerText(element, numberArgument);
+        assert.equal(numberArgument.toString(), '3.14');
+        assert.equal(element.innerHTML, '3.14');
+
+        var objectArgument = {x: 1, y: 2};
+        setInnerText(element, objectArgument);
+        assert.equal(objectArgument.toString(), '[object Object]');
+        assert.equal(element.innerHTML, '[object Object]');
+
+        var arrayArgument = ['list', 'of', 'strings'];
+        setInnerText(element, arrayArgument);
+        assert.equal(arrayArgument.toString(), 'list,of,strings');
+        assert.equal(element.innerHTML, 'list,of,strings');
+      });
     });
 
     describe('round-trips', function () {
@@ -300,13 +317,8 @@ describe('startSharedAppAfterWarnings', function () {
     });
     originalState.dashboard = window.dashboard;
 
-    window.dashboard = {
-      project: {
-        getCurrentId: function () { return 'current_channel'; }
-      }
-    };
-
     Applab.user = {};
+    Applab.channelId = 'current_channel';
     Applab.getCode = function () {
       return 'createRecord'; // use data API
     };

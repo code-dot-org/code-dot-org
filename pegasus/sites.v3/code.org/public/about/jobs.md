@@ -9,12 +9,7 @@ nav: about_nav
 
 - [CS Curriculum Writer](#curric)
 - [Engineering Manager / Chief Architect](#eng)
-- [Operations Coordinator  (Events) ](#opscoord)
 - [Technical Product Manager](#techpm)
-
-**Internships at Code.org:**
-
-- [Education Team Intern/Part-Time Contractor](#edintern)
 
 **No current positions, but always accepting great resumes:**
 
@@ -94,31 +89,6 @@ In addition, candidates:
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="opscoord" href="#opscoord">Operations Coordinator (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is looking for an Operations Coordinator to join Code.org’s operations team. Our operations team is responsible for the success of Code.org professional development events across the U.S. This is a full time, exempt position based in our Seattle office. Duties of this role include: 
-
-- Coordinating event logistics (dates, location, travel, accommodations, catering); acting as primary logistics point-of-contact
-- Drafting communications to stakeholders, responding to requests for information, distributing materials externally
-- Updating and managing event attendee lists
-- Utilizing our customer service system to respond to professional development questions from teachers in a timely manner
-- Attending and participating in meetings and recording notes/follow-up items, as appropriate
-- Special projects (perform research, prepare documentation, develop templates, etc.)
-
-
-**Skills and Qualifications:**
-
-We are looking for a self-starter, skilled in event planning, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
-
-The ideal candidate has the following qualifications:
-
-- Has a bachelors degree (Computer Science background/experience not required)
-- Ability to travel 20% time 
-
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
 ## <a name="techpm"href="#techpm">Technical Product Manager (Seattle)</a>
 
 **Job Summary:**
@@ -143,45 +113,6 @@ The ideal candidate has the following qualifications:
 
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="edintern"href="#edinterncontractor">Education Team Intern/Part-Time Contractor (Seattle or Chicago, IL)</a>
-
-**Job Summary:**
-
-Code.org is looking for an intern/part-time contractor to work with and support the goals of Code.org’s Education team through the development of computer science curriculum. This person will work with a variety of program leaders across multiple projects, simultaneously performing a wide range of tasks. We need someone who has quick turnaround, is responsive, and can effectively organize their priorities and task list.
-
-Responsibilities of the position include: 
-
-- Working closely with the Education team to design, develop, write, and “go to market” with original curricular materials:
-	- lesson plans
-    - formative/summative assessments
-    - videos
-    - answer keys
-    - project exemplars 
-- using in-house content management tools to structure resources
-
-
-**Skills and Qualifications:**
-
-The ideal candidate has experience in computer science and a background or passion for education; has strong writing and communications skills; is a tech-savvy self-starter who is able to multi-task and excel under pressure. 
-
-The candidate should: 
-
-- Have basic to comprehensive knowledge of computer science 
-- Have prior curriculum writing experience / activity design 
-- Be proficient in working with Microsoft Office and Google Docs  
-- Be working toward or have obtained a Bachelor’s degree or higher in Education or Computer Science
-
-Additional preference for a candidate that: 
-
-- Has recent computer science or STEM teaching experience 
-- Has experience using the Understanding by Design curriculum framework  
-- Has experience/familiarity with the CS Principles Framework 
-- Experience/familiarity with Exploring Computer Science curriculum/PD 
-
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-Please include lesson plan samples that are your original work, and highlight relevant experience designing, developing, or writing implement curricular materials. 
 
 ## <a name="engineer" href="#engineer">Software Engineer (Seattle)</a>
 

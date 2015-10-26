@@ -27,10 +27,10 @@ uk-UA:
   hoc2014_everyone: Усі
   hoc2014_support: 'Підтримайте &#x25BE;'
   hoc2014_whatishoc: Що таке Година коду?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_header: 'Події # CSEdWeek та Години коду по всьому світу'
+  csedweek_map_signup: Зареєструйте свій захід
+  csedweek_map_search_placeholder: Пошук заходів Години коду
+  csedweek_map_search_search: Пошук
   csedweek_map_search_reset: Скидання
   cded_sign_up: Зареєструватися
   cded_try_it: Спробуйте
@@ -109,6 +109,7 @@ uk-UA:
   hoc_is_here: '#HourOfCode вже тут - подивіться, що там! @codeorg'
   just_did_hoc: 'Я щойно завершив #HourOfCode - подивіться, що це! @codeorg'
   twitter_teach_cs: Чому більше шкіл не викладають інформатику? Ми можемо це виправити. http://youtu.be/nKIu9yen5nc. Відвідайте http://code.org/ щоб дізнатися більше.
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: Вивчати Годину Коду
   beyond_hoc: Поза Годиною коду
   what_gender: Якої ви статі?
@@ -210,6 +211,8 @@ uk-UA:
   homepage_action_text_signpetition: Підписати петицію
   homepage_signpetition_dropdown: 'Підписати нашу петицію &#x25BE;'
   homepage_diversity_pledge: Приєднатись до петиції про різноманіття
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org та Рада коледжів утворили альянс для посилення різноманітності в інформатиці.
   homepage_banner_text_link: Дізнайтеся більше
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -219,6 +222,7 @@ uk-UA:
   homepage_slot_text_link_hoc: Спробуйте годину коду
   homepage_slot_text_link_host: Провести Годину Коду
   homepage_slot_text_link_hocserved: '# спробували'
+  homepage_solot_text_link_volunteer: Волонтер для Години коду
   homepage_slot_text_title_students: Учні
   homepage_slot_text_blurb_students: Пройдіть всі наші навчальні курси
   homepage_slot_text_link_codestudio: Спробуйте Студію Коду
@@ -276,9 +280,12 @@ uk-UA:
   class_submission_level_vocational: Професійна освіта
   class_submission_languages_other: Інші мови
   volunteer_engineer_submission_title: Волонтер для Години коду
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} вчителів підписались на Годину коду і потребують волонтера для допомоги.'
-  volunteer_engineer_submission_intro_paragraph: |-
-    Будь ласка, вкажіть наступну інформацію, якщо ви є студентом або фахівцем з інформатики, і бажаєте допомогти місцевим вчителям провести Годину коду. Поля, позначені <span class="form-required-field">*</span> є обов'язковими.
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: |-
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
   volunteer_engineer_submission_header_shared: Інформація доступна вчителям та волонтерам на карті
   volunteer_engineer_submission_field_name: Ім’я
   volunteer_engineer_submission_field_name_placeholder: "Повне ім'я"
@@ -341,6 +348,7 @@ uk-UA:
   dashboard_landing_progress_title: Прогрес класу
   dashboard_landing_progress_biggest: Це прогрес Вашої найбільшої групи.
   dashboard_landing_view_progress: 'Переглянути прогрес для %{biggest_section}'
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Доступні курси
   dashboard_landing_available_courses: Перелік курсів, які на даний момент доступні для Вас і Ваших учнів.
   dashboard_landing_more_tutorials: Хочите побачити більше уроків?

@@ -109,6 +109,7 @@ hu-HU:
   hoc_is_here: 'Elérkezett a #HourOfCode - nézd meg! @codeorg'
   just_did_hoc: 'Épp most csináltam végig a #HourOfCode -t - nézd meg! @codeorg'
   twitter_teach_cs: Miért nem tanítanak több iskolában programozást? Van megoldásunk. http://youtu.be/nKIu9yen5nc. Látogasd meg a http://code.org/ honlapot, hogy többet megtudj róla.
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: Ismerd meg a Kódolás Óráját
   beyond_hoc: Az első órán túl
   what_gender: Milyen nemű vagy?
@@ -201,6 +202,8 @@ hu-HU:
   homepage_action_text_signpetition: Írd alá a petíciót
   homepage_signpetition_dropdown: 'Írd alá a petíciót &#x25BE;'
   homepage_diversity_pledge: Take the diversity pledge
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: A Code.org és a felsőoktatás összefog az informatika sokszínűségének javítása érdekében.
   homepage_banner_text_link: Tudj meg többet
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -210,6 +213,7 @@ hu-HU:
   homepage_slot_text_link_hoc: Próbáld ki a Kódolás Óráját
   homepage_slot_text_link_host: Tarts egy Kódolás óráját
   homepage_slot_text_link_hocserved: '# fő már kipróbálta'
+  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Diákok
   homepage_slot_text_blurb_students: Tekintsd meg az összes gyakorlatunkat
   homepage_slot_text_link_codestudio: Próbáld ki a Kód stúdiót
@@ -267,8 +271,12 @@ hu-HU:
   class_submission_level_vocational: Szakmai
   class_submission_languages_other: Egyéb nyelv(ek)
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} teachers have signed up for the Hour of Code and would like a volunteer to help them.'
-  volunteer_engineer_submission_intro_paragraph: 'Please enter the following information if you are a computer science student or software professional, and you’re interested in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: |-
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: Név
   volunteer_engineer_submission_field_name_placeholder: Full Name
@@ -295,7 +303,7 @@ hu-HU:
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
   volunteer_engineer_submission_submit: Elküldés
-  volunteer_engineer_submission_thankyou: Thank you for submitting your information.
+  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn more here.</a>'
   volunteer_engineer_submission_commitment_uncertain: Bizonytalan
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 óra hetente
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 óra hetente
@@ -331,6 +339,7 @@ hu-HU:
   dashboard_landing_progress_title: Az elsődleges osztály fejlődése
   dashboard_landing_progress_biggest: Így fejlődik a legnagyobb szekciód.
   dashboard_landing_view_progress: 'Nézd meg a fejlődést a(z) %{biggest_section}'
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Elérhető kurzusok
   dashboard_landing_available_courses: Ezek a jelenleg elérhető kurzusok Neked és diákjaid számára.
   dashboard_landing_more_tutorials: Szeretnél még több gyakorlatot megnézni?
@@ -490,7 +499,7 @@ hu-HU:
   dashboard_faq_k5: K-5 Gyakran Ismételt Kérdések
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>September 30, 2015</b> - The Hour of Code 2015 is coming! Join classrooms worldwide for the largest learning event in history.'
+  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
   code_hoc_coming: 'Megkezdődött a Kódolás Órája - December 8-14.'
   code_sign_up: Jelentkezz, hogy részt vehess a programon a számítástechnika-oktatás hete keretében
   learn_more: Tudj meg többet
