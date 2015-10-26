@@ -1,19 +1,18 @@
 var Collidable = require('./collidable');
 var constants = require('./constants');
+var studioMsg = require('./locale');
+var spriteActions = require('./spriteActions');
 var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
-var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
-
-var SVG_NS = "http://www.w3.org/2000/svg";
-
-// uniqueId that increments by 1 each time an element is created
-var uniqueId = 0;
+var StudioAnimation = require('./StudioAnimation');
+var StudioSpriteSheet = require('./StudioSpriteSheet');
 
 /**
  * An Item is a type of Collidable.
  * Note: x/y represent x/y of center in gridspace
+ * @extends {Collidable}
  */
 var Item = function (options) {
   // call collidable constructor
@@ -21,24 +20,31 @@ var Item = function (options) {
 
   this.height = options.height || 50;
   this.width = options.width || 50;
+
+  /**
+   * Rendering offset for item animation vs display position - applied as
+   * late as possible.
+   * @type {{x: number, y: number}}
+   */
+  this.renderOffset = options.renderOffset || { x: 0, y: 0 };
+
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
-  this.renderScale = options.renderScale || 1;
   this.displayDir = Direction.SOUTH;
   this.startFadeTime = null;
   this.fadeTime = constants.ITEM_FADE_TIME;
 
-  this.currentFrame_ = 0;
-  this.animator_ = window.setInterval(function () {
-    if (this.loop || this.currentFrame_ + 1 < this.frames) {
-      this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
-    }
-  }.bind(this), 50);
+  /** @private {StudioAnimation} */
+  this.animation_ = new StudioAnimation($.extend({}, options, {
+    spriteSheet: new StudioSpriteSheet(options)
+  }));
 };
-
-// inherit from Collidable
-Item.prototype = new Collidable();
-
+Item.inherits(Collidable);
 module.exports = Item;
+
+/** @returns {SVGImageElement} */
+Item.prototype.getElement = function () {
+  return this.animation_.getElement();
+};
 
 /**
  * Returns the frame of the spritesheet for the current walking direction.
@@ -58,40 +64,10 @@ Item.prototype.getDirectionFrame = function() {
 };
 
 /**
- * Test only function so that we can start our id count over.
- */
-Item.__resetIds = function () {
-  uniqueId = 0;
-};
-
-/**
  * Create an image element with a clip path
  */
 Item.prototype.createElement = function (parentElement) {
-  var nextId = (uniqueId++);
-
-  var numFacingAngles = 9;
-
-  // create our clipping path/rect
-  this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
-  var clipId = 'item_clippath_' + nextId;
-  this.clipPath.setAttribute('id', clipId);
-  var rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttribute('width', this.width * this.renderScale);
-  rect.setAttribute('height', this.height * this.renderScale);
-  this.clipPath.appendChild(rect);
-
-  parentElement.appendChild(this.clipPath);
-  var itemId = 'item_' + nextId;
-  this.element = document.createElementNS(SVG_NS, 'image');
-  this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    this.image);
-  this.element.setAttribute('id', itemId);
-  this.element.setAttribute('height', this.height * this.frames * this.renderScale);
-  this.element.setAttribute('width', this.width * numFacingAngles * this.renderScale);
-  parentElement.appendChild(this.element);
-
-  this.element.setAttribute('clip-path', 'url(#' + clipId + ')');
+  this.animation_.createElement(parentElement);
 };
 
 
@@ -118,6 +94,12 @@ Item.prototype.update = function () {
 
   // Draw the item's current location.
   Studio.drawDebugRect("itemCenter", this.x, this.y, 3, 3);
+
+  // In this stationary activity case, we don't need to do any of this
+  // update logic (facing the actor is handled every frame in display())
+  if (this.activity === 'watchActor') {
+    return;
+  }
 
   if (this.destGridX !== undefined) {
     // Draw the item's destination grid square.
@@ -270,6 +252,35 @@ Item.prototype.update = function () {
 };
 
 /**
+ * Isolated update logic for "watchActor" activity where the "item" keeps
+ * turning to look at the actor with the given sprite index.
+ * @param {number} targetSpriteIndex
+ */
+Item.prototype.turnToFaceActor = function (targetSpriteIndex) {
+  // Pick a target direction closest to the relative direction toward the target.
+  var target = Studio.sprite[targetSpriteIndex];
+  if (!target) {
+    return;
+  }
+
+  // Actor positions are the top-left of their square (or their "feet" square
+  // in the 'isometric' case) - we should look at the middle of their square
+  var actorGroundCenterX = target.displayX + Studio.HALF_SQUARE;
+  var actorGroundCenterY = target.displayY + Studio.HALF_SQUARE;
+  var deltaX = actorGroundCenterX - this.x;
+  var deltaY = actorGroundCenterY - this.y;
+
+  // We shouldn't adjust our direction if the actor is sufficiently close that
+  // relative direction doesn't make much sense
+  // Basically, avoid thrashing when moving into their space.
+  var SQUARED_MINIMUM_DISTANCE = 25;
+  if (deltaX * deltaX + deltaY * deltaY > SQUARED_MINIMUM_DISTANCE) {
+    Studio.drawDebugLine("watchActor", this.x, this.y, actorGroundCenterX, actorGroundCenterY, '#ffff00');
+    this.dir = constants.getClosestDirection(deltaX, deltaY);
+  }
+};
+
+/**
  * Begin a fade out.
  */
 Item.prototype.beginRemoveElement = function () {
@@ -280,23 +291,7 @@ Item.prototype.beginRemoveElement = function () {
  * Remove our element/clipPath/animator
  */
 Item.prototype.removeElement = function() {
-
-  if (this.element) {
-    this.element.parentNode.removeChild(this.element);
-    this.element = null;
-  }
-
-  // remove clip path element
-  if (this.clipPath) {
-    this.clipPath.parentNode.removeChild(this.clipPath);
-    this.clipPath = null;
-  }
-
-  if (this.animator_) {
-    window.clearInterval(this.animator_);
-    this.animator_ = null;
-  }
-
+  this.animation_.removeElement();
   Studio.trackedBehavior.removedItemCount++;
 };
 
@@ -323,33 +318,37 @@ Item.prototype.hasCompletedFade = function() {
  * Display our item at its current location
  */
 Item.prototype.display = function () {
-  var topLeft = {
-    x: this.x - this.width / 2,
-    y: this.y - this.height / 2
-  };
-
   var currentTime = new Date().getTime();
   var opacity = 1;
   if (this.startFadeTime) {
     opacity = 1 - (currentTime - this.startFadeTime) / this.fadeTime;
     opacity = Math.max(opacity, 0);
+    this.animation_.setOpacity(opacity);
   }
 
-  var directionFrame = this.getDirectionFrame();
-  this.element.setAttribute('x', topLeft.x - this.width * (directionFrame * this.renderScale + (this.renderScale-1)/2));
-  this.element.setAttribute('y', topLeft.y - this.height * (this.currentFrame_ * this.renderScale + (this.renderScale-1)));
-  this.element.setAttribute('opacity', opacity);
+  // Watch behavior does not change logical position, should update every frame
+  if (this.activity === "watchActor") {
+    this.turnToFaceActor(Studio.protagonistSpriteIndex || 0);
+  }
 
-  var clipRect = this.clipPath.childNodes[0];
-  clipRect.setAttribute('x', topLeft.x - this.width * (this.renderScale-1)/2);
-  clipRect.setAttribute('y', topLeft.y - this.height * (this.renderScale-1));
+  this.animation_.setCurrentAnimation(this.getDirectionFrame());
+  this.animation_.redrawCenteredAt({
+    x: this.x + this.renderOffset.x,
+    y: this.y + this.renderOffset.y
+  });
 };
 
 Item.prototype.getNextPosition = function () {
   var unit = Direction.getUnitVector(this.dir);
+  var speed = this.speed;
+  // TODO: Better concept of which actions actually move the actor
+  // Projected position should not be in front of you if you are not moving!
+  if (this.activity === "none" || this.activity === "watchActor") {
+    speed = 0;
+  }
   return {
-    x: this.x + this.speed * unit.x,
-    y: this.y + this.speed * unit.y
+    x: this.x + speed * unit.x,
+    y: this.y + speed * unit.y
   };
 };
 
@@ -357,4 +356,36 @@ Item.prototype.moveToNextPosition = function () {
   var next = this.getNextPosition();
   this.x = next.x;
   this.y = next.y;
+};
+
+/**
+ * Mark that we're colliding with object represented by key.
+ * Here, override base implemention to special on-collision logic for certain
+ * item classes.
+ * @param key A unique key representing the object we're colliding with
+ * @returns {boolean} True if collision is started, false if we're already colliding
+ * @override
+ */
+Item.prototype.startCollision = function (key) {
+  var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
+  if (newCollisionStarted) {
+    if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
+      Studio.trackedBehavior.touchedHazardCount++;
+      var actor = Studio.sprite[key];
+      if (actor) {
+        actor.addAction(new spriteActions.FadeActor(constants.TOUCH_HAZARD_FADE_TIME));
+        actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_FADE_TIME));
+      }
+    }
+  }
+  return newCollisionStarted;
+};
+
+/**
+ * Change visible opacity of this item.
+ * @param {number} newOpacity (between 0 and 1)
+ * @override
+ */
+Item.prototype.setOpacity = function (newOpacity) {
+  this.animation_.setOpacity(newOpacity);
 };

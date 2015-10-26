@@ -23,7 +23,7 @@ Sets the speed for the app's execution, which includes the turtle's speed.
 
 [/short_description]
 
-Slowing down the speed of the turtle while drawing allows us to see the execuion of each command more easily. 
+Slowing down the speed of the turtle while drawing allows us to see the execution of each command more easily. 
 
 [/description]
 
@@ -48,12 +48,13 @@ ____________________________________________________
 
 <table>
 <tr>
-<td>
+<td style="border-style:none; width:90%; padding:0px">
 <pre>
-// Draw a square with the turtle moving at increasingly faster speeds (10, 20, 30, 40, 50, 60, 70, 80, 90, 100).
+// Draw a square with the turtle moving at increasingly faster speeds
+// (10, 20, 30, 40, 50, 60, 70, 80, 90, 100).
 textLabel("speed", "speed: 10");
-for (var i = 1; i <= 10; i++) {
-  for (var j = 0; j < 4; j++) {
+for (var i = 1; i &lt;= 10; i++) {
+  for (var j = 0; j &lt; 4; j++) {
     setText("speed", "speed: " + i * 10);
     speed(i*10);
     moveForward(100);
@@ -62,8 +63,8 @@ for (var i = 1; i <= 10; i++) {
 }
 </pre>
 </td>
-<td>
-<img src='https://images.code.org/a256d470562fb4ee20c893401860f60f-image-1445202062387.gif' style='width: 150px;'> 
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/5b3d4a5f9b27b99cfdebf0012a7f091e-image-1445619219090.gif'>
 </td>
 </tr>
 </table>
@@ -102,7 +103,7 @@ No return value. Alters execution speed only.
 [tips]
 
 ### Tips
-- The app execution speed can also be set by the tortoise-to-hare slider bar at the top of the Debug Console.
+- The app execution speed can also be set by the tortoise-to-hare slider bar at the top of the Debug Console. Using speed() in code is useful if you want your app to run at a specific speed. The tortoise-to-hare slider bar is not part of your program, but lets you set the execution speed in order to debug an app.
 
 [/tips]
 
