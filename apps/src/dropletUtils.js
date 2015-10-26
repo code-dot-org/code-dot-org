@@ -251,7 +251,7 @@ function buildFunctionPrototype(prefix, params) {
  * @param {function} dropletConfig.getBlocks
  * @param {object} dropletConfig.categories
  */
-exports.generateDropletPalette = function (codeFunctions, dropletConfig, useOrig) {
+exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
   var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig,
     standardConfig);
