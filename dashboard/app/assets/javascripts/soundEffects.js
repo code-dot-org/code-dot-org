@@ -188,6 +188,17 @@ Sound.prototype.play = function (options) {
 
   this.audioElement.volume = typeof options.volume === "undefined" ? 1 : options.volume;
   this.audioElement.loop = !!options.loop;
+  if (options.onEnded) {
+    var unregisterAndCallback = function () {
+      this.audioElement.removeEventListener('abort', unregisterAndCallback);
+      this.audioElement.removeEventListener('ended', unregisterAndCallback);
+      this.audioElement.removeEventListener('pause', unregisterAndCallback);
+      options.onEnded();
+    }.bind(this);
+    this.audioElement.addEventListener('abort', unregisterAndCallback);
+    this.audioElement.addEventListener('ended', unregisterAndCallback);
+    this.audioElement.addEventListener('pause', unregisterAndCallback);
+  }
   this.audioElement.play();
 };
 
