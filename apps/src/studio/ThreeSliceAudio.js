@@ -73,12 +73,9 @@ ThreeSliceAudio.prototype.on = function () {
  */
 ThreeSliceAudio.prototype.off = function () {
   debug('off');
-  if (this.state_ === PlaybackState.BEGIN) {
+  if (this.state_ === PlaybackState.BEGIN || this.state_ === PlaybackState.LOOP) {
     this.enterState_(PlaybackState.NONE);
-  } else if (this.state_ === PlaybackState.LOOP) {
-    this.enterState_(PlaybackState.END);
   }
-
 };
 
 ThreeSliceAudio.prototype.enterState_ = function (state) {
