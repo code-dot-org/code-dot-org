@@ -1,13 +1,12 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-10-07T19:16:00.000Z",
+  "created_at": "2015-10-26T14:41:54.000Z",
   "level_num": "custom",
-  "user_id": 13,
+  "user_id": 155,
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "button": null,
       "onEvent": {
         "params": [
           "\"id\"",
@@ -15,7 +14,7 @@
           "function(){\n\n}"
         ]
       },
-      "setPosition": null,
+      "button": null,
       "textLabel": {
         "params": [
           "\"id\"",
@@ -23,6 +22,9 @@
         ]
       },
       "image": null,
+      "playSound": null,
+      "setPosition": null,
+      "setScreen": null,
       "moveForward": null,
       "moveBackward": null,
       "move": null,
@@ -45,6 +47,7 @@
       "speed": null,
       "forLoop_i_0_4": null,
       "randomNumber_min_max": null,
+      "console.log": null,
       "functionParams_none": null,
       "functionParams_n": null,
       "callMyFunction": null,
@@ -52,10 +55,11 @@
       "return": null
     },
     "edit_code": true,
+    "encrypted_examples": "FwAFQH+MEbYxq4/EjyaM5XE9qRNxcBYqiMKgxiIAuKLVE2zWEo/Nc7wKvHQx\n2fVF\n",
     "embed": "false",
-    "instructions": "Create your own \"Chaser App\". (Click to see full instructions)",
     "is_k1": "false",
-    "skip_instructions_popup": "false",
+    "skip_instructions_popup": "true",
+    "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -64,28 +68,21 @@
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
+    "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "true",
+    "free_play": "false",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "true",
-    "app_width": "320",
-    "app_height": "480",
-    "markdown_instructions": "# Chaser Game\r\n\r\nYou now have all the skills you need to make a simple \"chaser\" game. A chaser game is just a game where an image runs away from your mouse.\r\n<img src=\"https://images.code.org/ed1e9852b33ca368cf8cd8e0b0159de7-image-1444336815528.gif\" style=\"float: right\">\r\n\r\n# Do This\r\n\r\n**Create a \"Chaser Game\"** which includes the following components:\r\n\r\n* **text** on the top of the screen with a title or instructions for what to do\r\n* **an image** that \"runs away\" (moves randomly) based on some mouse event\r\n\r\nOnce you have the basic functionality down feel free to spend time adding more features to your application.\r\n<br><br><br>\r\n\r\n",
-    "never_autoplay_video": "false",
-    "slider_speed": "1",
-    "examples_required": "false",
+    "autocomplete_palette_apis_only": "false",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
-    "hide_design_mode": "true",
-    "beginner_mode": "true",
-    "submittable": "true",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
     "hide_view_data_button": "true",
-    "encrypted_examples": "Wk3hzX9XIob7GjrQL7HolAbzNsZb03o+QBTNsk2Vc3AG733OFJ1Mc1uRjkWt\nIpqY\n",
-    "project_template_level_name": "U3L16 - projectTemplate",
-    "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "droplet_tooltips_disabled": "true",
+    "debugger_disabled": "false"
   }
 }]]></config>
   <blocks/>
