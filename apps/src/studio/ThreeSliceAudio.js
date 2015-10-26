@@ -82,6 +82,7 @@ ThreeSliceAudio.prototype.off = function () {
   } else if (this.state_ === PlaybackState.LOOP) {
     this.enterState_(PlaybackState.END);
   }
+
 };
 
 ThreeSliceAudio.prototype.enterState_ = function (state) {
@@ -90,20 +91,32 @@ ThreeSliceAudio.prototype.enterState_ = function (state) {
   this.state_ = state;
   var callback = this.whenSoundStopped_.bind(this, state);
   if (state === PlaybackState.BEGIN) {
-    this.audioPlayer_.play(this.beginClipName_, { onEnded: callback });
+    if (this.beginClipName_) {
+      this.audioPlayer_.play(this.beginClipName_, { onEnded: callback });
+    } else {
+      this.enterState_(PlaybackState.LOOP);
+    }
   } else if (state === PlaybackState.LOOP) {
-    this.audioPlayer_.play(this.loopClipName_, { loop: true, onEnded: callback });
+    if (this.loopClipName_) {
+      this.audioPlayer_.play(this.loopClipName_, { loop: true, onEnded: callback });
+    } else {
+      this.enterState_(PlaybackState.END);
+    }
   } else if (state === PlaybackState.END) {
-    this.audioPlayer_.play(this.endClipName_, { onEnded: callback });
+    if (this.endClipName_) {
+      this.audioPlayer_.play(this.endClipName_, { onEnded: callback });
+    } else {
+      this.enterState_(PlaybackState.NONE);
+    }
   }
 };
 
 ThreeSliceAudio.prototype.exitState_ = function (state) {
-  if (state === PlaybackState.BEGIN) {
+  if (state === PlaybackState.BEGIN && this.beginClipName_) {
     this.audioPlayer_.stopLoopingAudio(this.beginClipName_);
-  } else if (state === PlaybackState.LOOP) {
+  } else if (state === PlaybackState.LOOP && this.loopClipName_) {
     this.audioPlayer_.stopLoopingAudio(this.loopClipName_);
-  } else if (state === PlaybackState.END) {
+  } else if (state === PlaybackState.END && this.endClipName_) {
     this.audioPlayer_.stopLoopingAudio(this.endClipName_);
   }
 };
