@@ -34713,11 +34713,6 @@ var _ = utils.getLodash();
  * @property {Object} parent object within which this function is defined as a property, keyed by the func name
  * @property {String} category category within which to place the block
  * @property {String} type type of the block (e.g. value)
- * @property {string[]} paletteParams
- * @property {string[]} params
- * @property {Object.<number, funciton>} dropdown
- * @property {bool} dontMarshal
- * @property {bool} noAutocomplete
  */
 
 /**
@@ -34868,44 +34863,52 @@ standardConfig.categories = {
  * @returns {Array}
  */
 function mergeFunctionsWithConfig(codeFunctions, dropletConfig, otherConfig) {
-  if (!codeFunctions || !dropletConfig || !dropletConfig.blocks) {
-    return [];
-  }
-
   var merged = [];
 
-  var blockSets = [ dropletConfig.blocks ];
-  if (otherConfig) {
-    blockSets.splice(0, 0, otherConfig.blocks);
-  }
-
-  // codeFunctions is an object with named key/value pairs
-  //  key is a block name from dropletBlocks or standardBlocks
-  //  value is an object that can be used to override block defaults
-  for (var s = 0; s < blockSets.length; s++) {
-    var set = blockSets[s];
-    for (var i = 0; i < set.length; i++) {
-      var block = set[i];
-      if (block.func in codeFunctions) {
-        // We found this particular block, now override the defaults with extend
-        merged.push($.extend({}, block, codeFunctions[block.func]));
+  if (codeFunctions && dropletConfig && dropletConfig.blocks) {
+    var blockSets = [ dropletConfig.blocks ];
+    if (otherConfig) {
+      blockSets.splice(0, 0, otherConfig.blocks);
+    }
+    // codeFunctions is an object with named key/value pairs
+    //  key is a block name from dropletBlocks or standardBlocks
+    //  value is an object that can be used to override block defaults
+    for (var s = 0; s < blockSets.length; s++) {
+      var blocks = blockSets[s];
+      for (var i = 0; i < blocks.length; i++) {
+        var block = blocks[i];
+        if (blocks[i].func in codeFunctions) {
+          // We found this particular block, now override the defaults with extend
+          merged.push(utils.extend(blocks[i], codeFunctions[blocks[i].func]));
+        }
       }
     }
   }
-
   return merged;
 }
 
-/**
- * Return a new categories object with the categories from dropletConfig (app
- * specific configuration) merged with the ones in standardConfig (global
- * configuration). App configuration takes precendence
- */
+//
+// Return a new categories object with the categories from dropletConfig
+// merged with the ones in standardConfig
+//
+
 function mergeCategoriesWithConfig(dropletConfig) {
-  // Clone our merged categories so that as we mutate it, we're not mutating
-  // our original config
-  return _.cloneDeep($.extend({}, standardConfig.categories,
-    dropletConfig && dropletConfig.categories));
+  var merged = {};
+
+  if (dropletConfig && dropletConfig.categories) {
+    var categorySets = [ dropletConfig.categories, standardConfig.categories ];
+    for (var s = 0; s < categorySets.length; s++) {
+      var categories = categorySets[s];
+      for (var catName in categories) {
+        if (!(catName in merged)) {
+          merged[catName] = utils.shallowCopy(categories[catName]);
+        }
+      }
+    }
+  } else {
+    merged = standardConfig.categories;
+  }
+  return merged;
 }
 
 /**
@@ -34951,16 +34954,11 @@ function buildFunctionPrototype(prefix, params) {
 
 /**
  * Generate a palette for the droplet editor based on some level data.
- * @param {object} codeFunctions The set of functions we want to use for this level
- * @param {object} dropletConfig
- * @param {function} dropletConfig.getBlocks
- * @param {object} dropletConfig.categories
  */
 exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
   var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig,
     standardConfig);
-
   for (var i = 0; i < mergedFunctions.length; i++) {
     var funcInfo = mergedFunctions[i];
     var block = funcInfo.block;
@@ -35074,16 +35072,8 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   };
 };
 
-/**
- * Given a droplet config, create a mode option functions object
- * @param {object} config
- * @param {object[]} config.blocks
- * @param {object[]} config.categories
- */
-function getModeOptionFunctionsFromConfig(config) {
+function populateModeOptionsFromConfigBlocks(modeOptions, config) {
   var mergedCategories = mergeCategoriesWithConfig(config);
-
-  var modeOptionFunctions = {};
 
   for (var i = 0; i < config.blocks.length; i++) {
     var newFunc = {};
@@ -35103,11 +35093,15 @@ function getModeOptionFunctionsFromConfig(config) {
     newFunc.dropdown = config.blocks[i].dropdown;
 
     var modeOptionName = config.blocks[i].modeOptionName || config.blocks[i].func;
-    newFunc.title = modeOptionName;
 
-    modeOptionFunctions[modeOptionName] = newFunc;
+    modeOptions.functions[modeOptionName] = newFunc;
   }
-  return modeOptionFunctions;
+}
+
+function setTitlesToFuncNamesForDocumentedBlocks(modeOptions) {
+  Object.keys(modeOptions.functions).forEach(function (funcName) {
+    modeOptions.functions[funcName].title = funcName;
+  });
 }
 
 /**
@@ -35136,11 +35130,11 @@ exports.generateDropletModeOptions = function (dropletConfig, options) {
     }
   };
 
-  $.extend(modeOptions.functions,
-    getModeOptionFunctionsFromConfig({ blocks: exports.dropletGlobalConfigBlocks }),
-    getModeOptionFunctionsFromConfig({ blocks: exports.dropletBuiltinConfigBlocks }),
-    getModeOptionFunctionsFromConfig(dropletConfig)
-  );
+  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletGlobalConfigBlocks });
+  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletBuiltinConfigBlocks });
+  populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig);
+
+  setTitlesToFuncNamesForDocumentedBlocks(modeOptions);
 
   return modeOptions;
 };
@@ -35158,10 +35152,6 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
     .concat(exports.dropletBuiltinConfigBlocks)
     .concat(standardConfig.blocks)
     .concat(configuredBlocks);
-};
-
-exports.__TestInterface = {
-  mergeCategoriesWithConfig: mergeCategoriesWithConfig
 };
 
 },{"./utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/utils.js":[function(require,module,exports){
@@ -35214,7 +35204,6 @@ exports.cloneWithoutFunctions = function(object) {
 /**
  * Returns a new object with the properties from defaults overriden by any
  * properties in options. Leaves defaults and options unchanged.
- * NOTE: For new code, use $.extend({}, defaults, options) instead
  */
 exports.extend = function(defaults, options) {
   var finalOptions = exports.shallowCopy(defaults);
@@ -35518,7 +35507,7 @@ exports.parseElement = function(text) {
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,cloneDeep,isEqual,find,sortBy,throttle" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,isEqual,find,sortBy,throttle" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -37226,51 +37215,6 @@ exports.parseElement = function(text) {
   }
 
   /**
-   * Creates a deep clone of `value`. If a callback is provided it will be
-   * executed to produce the cloned values. If the callback returns `undefined`
-   * cloning will be handled by the method instead. The callback is bound to
-   * `thisArg` and invoked with one argument; (value).
-   *
-   * Note: This method is loosely based on the structured clone algorithm. Functions
-   * and DOM nodes are **not** cloned. The enumerable properties of `arguments` objects and
-   * objects created by constructors other than `Object` are cloned to plain `Object` objects.
-   * See http://www.w3.org/TR/html5/infrastructure.html#internal-structured-cloning-algorithm.
-   *
-   * @static
-   * @memberOf _
-   * @category Objects
-   * @param {*} value The value to deep clone.
-   * @param {Function} [callback] The function to customize cloning values.
-   * @param {*} [thisArg] The `this` binding of `callback`.
-   * @returns {*} Returns the deep cloned value.
-   * @example
-   *
-   * var characters = [
-   *   { 'name': 'barney', 'age': 36 },
-   *   { 'name': 'fred',   'age': 40 }
-   * ];
-   *
-   * var deep = _.cloneDeep(characters);
-   * deep[0] === characters[0];
-   * // => false
-   *
-   * var view = {
-   *   'label': 'docs',
-   *   'node': element
-   * };
-   *
-   * var clone = _.cloneDeep(view, function(value) {
-   *   return _.isElement(value) ? value.cloneNode(true) : undefined;
-   * });
-   *
-   * clone.node == view.node;
-   * // => false
-   */
-  function cloneDeep(value, callback, thisArg) {
-    return baseClone(value, true, typeof callback == 'function' && baseCreateCallback(callback, thisArg, 1));
-  }
-
-  /**
    * Creates an object that inherits from the given `prototype` object. If a
    * `properties` object is provided its own enumerable properties are assigned
    * to the created object.
@@ -38957,7 +38901,6 @@ exports.parseElement = function(text) {
 
   // add functions that return unwrapped values when chaining
   lodash.clone = clone;
-  lodash.cloneDeep = cloneDeep;
   lodash.contains = contains;
   lodash.find = find;
   lodash.identity = identity;
