@@ -49,6 +49,8 @@ service 'varnish' do
 end
 
 node.default['cdo-varnish']['config'] = HttpCache.config(node.chef_environment.to_s)
+$node_env = node.chef_environment.to_s
+$node_name = node.name
 
 template '/etc/default/varnish' do
   source 'config.erb'
