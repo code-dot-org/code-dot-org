@@ -1134,10 +1134,10 @@ en:
     C4_unplugged_madlibs:
       1:
         image: 'notes/C4_unplugged_madlibs_1.png'
-        text: "In this lesson, we'll be playing with some fill in the blank stories. Usually with fill in the blank stories you have a template that you can fill in to create similar stories that have very amusing differences."
+        text: "In this lesson, we'll be playing with some fill in the blank stories. You have a template that you can fill in to create similar stories that have very amusing differences."
       2:
         image: 'notes/C4_unplugged_madlibs_2.png'
-        text: "In this lesson, we also learned how to make an abstracted template from two stories that have already been created. Abstraction is the art of removing differences and details so that you can see how one solution might work for many different problems. It's very helpful in computer science because it allows us to create functions that may be useful in several different situations."      3:
+        text: "In this lesson, we also learned how to make an abstracted template from two stories that have already been created. Abstraction is the art of removing differences and details so that you can see how one solution might work for many different problems. It's very helpful in computer science because it allows us to create functions that may be useful in several different situations."
     C4_unplugged_parameters:
       1:
         image: 'notes/C4_unplugged_parameters_1.png'
