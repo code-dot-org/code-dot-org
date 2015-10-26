@@ -123,9 +123,6 @@ class ApplicationController < ActionController::Base
         response[:previous_level] = build_script_level_path(previous_level)
       end
 
-      response[:script_id] = script_level.script.id
-      response[:level_id] = script_level.level.id
-
       # if they solved it, figure out next level
       if options[:solved?]
         response[:total_lines] = options[:total_lines]
