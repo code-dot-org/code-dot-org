@@ -42,6 +42,9 @@ class ProjectsController < ApplicationController
   end
 
   def load
+    if STANDALONE_PROJECTS[params[:key]][:login_required]
+      authenticate_user!
+    end
     return if redirect_applab_under_13(@level)
     if current_user
       channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
