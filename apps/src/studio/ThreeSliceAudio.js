@@ -62,11 +62,7 @@ module.exports = ThreeSliceAudio;
 ThreeSliceAudio.prototype.on = function () {
   if (this.state_ === PlaybackState.NONE || this.state_ === PlaybackState.END) {
     debug('on');
-    if (this.beginClipName_) {
-      this.enterState_(PlaybackState.BEGIN);
-    } else if (this.loopClipName_) {
-      this.enterState_(PlaybackState.LOOP);
-    }
+    this.enterState_(PlaybackState.BEGIN);
   }
 };
 
