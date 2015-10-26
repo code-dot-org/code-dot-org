@@ -5,14 +5,16 @@ subject: Hour of Code Posters
 
 Dear UK Hour of Code organizer,
 
-Great news! We are now able to send Hour of Code posters to organizers in the United Kingdom, to help get students excited and make your Hour of Code the best it can be.
+Great news! We are now able to send Hour of Code posters to organizers in the United Kingdom. Decorate your hallways and help get students excited to learn an Hour of Code. 
 
 **[Request a poster](https://docs.google.com/a/code.org/forms/d/117rf_1OZBVS2tbKMkVMqVQyQv_SHA2hsoMkDwwU3L-c/viewform)**
 
 The first 1,500 UK organizers to complete the request form will receive one Hour of Code poster, a participation guide, and stickers for students in the mail. 
 
-There are 6 weeks before the Hour of Code.
+The Hour of Code is just six weeks away. Thank you for being part of this movement.
 
+Hadi Partovi<br />
+Founder, Code.org
 
 <hr>
 
