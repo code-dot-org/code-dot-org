@@ -10,31 +10,17 @@ class GatekeeperTest < ActiveSupport::TestCase
     assert_equal Gatekeeper.allows("MADE UP FEATURE NAME", default: true), true
   end
 
-  test "keys do not change given the same params" do
-    feature = "NOT A REAL FEATURE"
-    where = {
-      user_id: 10,
-      name: 'John'
-    }
-
-    first = Gatekeeper.key(feature, where: where)
-    second = Gatekeeper.key(feature, where: where)
-
-    assert_equal first, second
-
-    third = Gatekeeper.key(feature, where: {
-      name: 'John',
-      user_id: 10,
-    })
-    assert_equal first, third
-  end
-
   test "allows with no where clause" do
     feature = "test_feature"
 
     Gatekeeper.set(feature, value: true)
     assert_equal Gatekeeper.allows(feature), true
-    assert_equal Gatekeeper.allows(feature), true
+  end
+
+  test "order of where conditions doesn't matter" do
+    feature = "order test"
+    Gatekeeper.set(feature, where: { a: 2, b: 1 }, value: true)
+    assert_equal Gatekeeper.allows(feature, where: {b: 1, a: 2}, default: false), true
   end
 
   test "feature key matches when there is no where match" do
