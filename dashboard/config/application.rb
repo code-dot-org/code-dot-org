@@ -24,7 +24,7 @@ module Dashboard
 
     if Rails.env.development?
       require 'cdo/rack/whitelist_cookies'
-      require '../cookbooks/cdo-varnish/libraries/http_cache'
+      require_relative '../../cdo-varnish/libraries/http_cache'
       config.middleware.insert_before ActionDispatch::Cookies, Rack::WhitelistCookies,
         HttpCache.config(rack_env)[:dashboard]
     end
