@@ -7,7 +7,7 @@ class DatastoreCache
 
   # @param datastore [Object]
   # @param cache_expiration [int] seconds after which a cached entry expires
-  def initialize(datastore, cache_expiration: 5)
+  def initialize(datastore, cache_expiration: 30)
     @cache = {}
     @datastore = datastore
     @cache_expiration = cache_expiration

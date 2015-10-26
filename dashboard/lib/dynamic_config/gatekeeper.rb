@@ -1,12 +1,15 @@
+# A module that allows us to dynamically turn on and off
+# features without requiring a code push.
+
 require 'digest/sha1'
 require 'dynamic_config/datastore_cache'
 require 'dynamic_config/adapters/dynamodb_adapter'
 require 'dynamic_config/adapters/json_file_adapter'
 
 if CDO.use_dynamo_tables
-  adapter = DynamoDBAdapter.new(CDO.gatekeeper_table_name)
+  adapter = DynamoDBAdapter.new CDO.gatekeeper_table_name
 else
-  adapter = JSONFileDatastoreAdapter.new "gatekeeper_#{Rails.env}"
+  adapter = JSONFileDatastoreAdapter.new CDO.gatekeeper_table_name
 end
 
 $gatekeeper_cache = DatastoreCache.new adapter
