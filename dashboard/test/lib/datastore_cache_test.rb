@@ -42,6 +42,6 @@ class DatastoreCacheTest < ActiveSupport::TestCase
 
     @data_adapter.set(k, v)
     @data_adapter.expects(:all).returns({}).once
-    cache = DatastoreCache.new @data_adapter
+    DatastoreCache.new @data_adapter
   end
 end
