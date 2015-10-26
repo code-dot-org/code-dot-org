@@ -1,6 +1,6 @@
 * * *
 
-Заглавие: < % = hoc_s(:title_signup_thanks) %> оформление: широка nav: how_to_nav
+title: <%= hoc_s(:title_signup_thanks) %> layout: wide nav: how_to_nav
 
 Социално: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png" "og:image:width": 1440 "og:image:height": 900 "og:url": "http://<%=request.host%>"
 

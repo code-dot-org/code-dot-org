@@ -57,7 +57,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 **Alle Hour of Code øvelser:**
 
-  * Require minimal prep-time for organizers
+  * Kræver minimal forberedelsestid for arrangører
   * Er selvinstruerende og giver elever lov til at arbejde i deres eget tempo og et passende færdighedsniveau
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
