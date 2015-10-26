@@ -1241,6 +1241,8 @@ en:
           Close & Next Steps: Close & Next Steps
           Intro to Unit 3: Intro to Unit 3
           Unit 3 Challenge Preview: Unit 3 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
         ECSPD3-Unit4:
           title: 'Exploring Computer Science: Unit 4'
           description_short: Unit 4 of the version 5 Exploring Computer Science curriculum.
@@ -1362,3 +1364,4 @@ en:
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
           description_audience: Ages 10-18
           Halloween 2015: Halloween 2015
+          description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
