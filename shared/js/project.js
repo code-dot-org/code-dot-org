@@ -426,6 +426,10 @@ var projects = module.exports = {
       return;
     }
 
+    if ($('#designModeViz .ui-draggable-dragging').length !== 0) {
+      return;
+    }
+
     var source = this.sourceHandler.getLevelSource();
     var html = this.sourceHandler.getLevelHtml();
 

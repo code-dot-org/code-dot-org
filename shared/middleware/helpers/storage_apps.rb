@@ -116,7 +116,7 @@ class StorageApps
     row = @table.where(storage_id: @storage_id).exclude(state: 'deleted').order(Sequel.desc(:updated_at)).find do |i|
       begin
         parsed = JSON.parse(i[:value])
-        !parsed['hidden'] && parsed['level'].split('/').last == key
+        !parsed['hidden'] && !parsed['frozen'] && parsed['level'].split('/').last == key
       rescue
         # Malformed channel, or missing level.
       end

@@ -115,6 +115,9 @@ class ApplicationController < ActionController::Base
     script_level = options[:script_level]
 
     if script_level
+      response[:script_id] = script_level.script.id
+      response[:level_id] = script_level.level.id
+
       previous_level = script_level.previous_level
       if previous_level
         response[:previous_level] = build_script_level_path(previous_level)
@@ -147,19 +150,6 @@ class ApplicationController < ActionController::Base
       response[:share_failure] = options[:share_failure]
     end
 
-    # logged in users can:
-    if current_user
-      # save solved levels to a gallery (subject to
-      # additional logic in the blockly code because blockly owns
-      # which levels are worth saving)
-      if options[:level_source].try(:id) &&
-          options[:solved?] &&
-          options[:activity] &&
-          options[:level_source_image]
-        response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
-      end
-    end
-
     if HintViewRequest.enabled?
       if script_level && current_user && !options[:solved?]
         response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, script_level.level, current_user)
@@ -170,6 +160,19 @@ class ApplicationController < ActionController::Base
     if PuzzleRating.enabled?
       if script_level && PuzzleRating.can_rate?(script_level.script, script_level.level, current_user)
         response[:puzzle_rating_url] = puzzle_ratings_path
+      end
+    end
+
+    # logged in users can:
+    if current_user
+      # save solved levels to a gallery (subject to
+      # additional logic in the blockly code because blockly owns
+      # which levels are worth saving)
+      if options[:level_source].try(:id) &&
+          options[:solved?] &&
+          options[:activity] &&
+          options[:level_source_image]
+        response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
       end
     end
 

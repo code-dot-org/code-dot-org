@@ -198,6 +198,7 @@ assessment 'U3L21 Assessment Wrap Up'
 stage 'User Input and Strings'
 level 'U3L26 Student Lesson Introduction'
 level 'U3L16 - textInput getText write'
+level 'U3 - User Input - Save getText To Variable'
 level 'U3L16 - challenge say hi app'
 # need level for difference between string and num
 level 'U3L25 String Parsing 7'

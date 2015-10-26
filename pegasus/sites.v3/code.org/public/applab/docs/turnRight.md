@@ -84,19 +84,19 @@ ____________________________________________________
 
 <table>
 <tr>
-<td>
+<td style="border-style:none; width:90%; padding:0px">
 <pre>
 // Draw a 25 pointed star by first calculating the exterior angle turn necessary. 
 var points = 25;
 var exteriorAngle = 180.0 - (180.0 / points);
-for (var i = 0; i < points; i++) {
+for (var i = 0; i &lt; points; i++) {
   moveForward(200);
   turnRight(exteriorAngle);
 }
 </pre>
 </td>
-<td>
-<img src='https://images.code.org/2dea22af3117a9e56e6dea229018338d-image-1445097451846.gif' style='width: 150px;'> 
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/3fae81b2ff35c4dcfe7c784b186b39c9-image-1445619726798.gif'>
 </td>
 </tr>
 </table>
@@ -137,9 +137,9 @@ No return value. Rotates turtle only.
 ### Tips
 - You can specify a negative angle to turn right, which makes the turtle turn left instead.
 - There are three ways to rotate the turtle in place
-	- turnRight(*angle*) - Rotates the turtle right by the specified angle. The turtle’s position remains the same.
-	- turnLeft(*angle*) - Rotates the turtle left by the specified angle. The turtle’s position remains the same.
-	- turnTo(*angle*) - Rotates the turtle to a specific angle. 0 is up, 90 is right, 180 is down, and 270 is left. The turtle’s position remains the same.
+	- turnRight(*angle*) - Rotates the turtle right **by** the specified angle relative to the current turtle direction. The turtle’s position remains the same.
+	- turnLeft(*angle*) - Rotates the turtle left **by** the specified angle relative to the current turtle direction. The turtle’s position remains the same.
+	- turnTo(*angle*) - Rotates the turtle **to** a specific angle. 0 is up, 90 is right, 180 is down, and 270 is left. The turtle’s position remains the same.
 
 [/tips]
 

@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -154,9 +153,6 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "encrypted_examples": [
-
-    ],
     "markdown_instructions": "# Turtle Level for Expressions with variables",
     "instructions": "(click to see full instructions)"
   }
