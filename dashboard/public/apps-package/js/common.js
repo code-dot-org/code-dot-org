@@ -6475,8 +6475,12 @@ StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
       // look to see if we have a predefined arrangement for this type
       type = xmlChild.getAttribute('type');
       if (arrangement[type]) {
-        xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangement[type].x);
-        xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangement[type].y);
+        if (arrangement[type].x && !xmlChild.hasAttribute('x')) {
+          xmlChild.setAttribute('x', arrangement[type].x);
+        }
+        if (arrangement[type].y && !xmlChild.hasAttribute('y')) {
+          xmlChild.setAttribute('y', arrangement[type].y);
+        }
       }
     }
   }
