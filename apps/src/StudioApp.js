@@ -634,6 +634,9 @@ StudioApp.prototype.toggleRunReset = function(button) {
   run.disabled = !showRun;
   reset.style.display = !showRun ? 'inline-block' : 'none';
   reset.disabled = showRun;
+
+  // Toggle soft-buttons (all have the 'arrow' class set):
+  $('.arrow').prop("disabled", showRun);
 };
 
 /**
@@ -2044,7 +2047,7 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
  *   should display the error in.
  */
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
-  if (dashboard.project.exceedsAbuseThreshold()) {
+  if (window.dashboard && dashboard.project.exceedsAbuseThreshold()) {
     this.displayAlert(parentSelector, {
       body: React.createElement(dashboard.AbuseError, {
         i18n: {

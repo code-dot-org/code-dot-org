@@ -46,7 +46,6 @@
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "console.log": null,
       "functionParams_none": null,
@@ -79,9 +78,6 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "start_blocks": "var a = 3;\r\nvar b = 7;\r\na = b;\r\nb = a;",
-    "encrypted_examples": [
-
-    ],
     "markdown_instructions": "# Variable Reassignment\r\n\r\nWe can change the value of variables as the program runs. Sometimes we even set the value of a variable to value of another variable!\r\n\r\nWhen we assign values of variables remember: the variable on the left gets the value of the expression on the right side of the equal sign.\r\n\r\nExample ` foo = a;` <br>\r\n**Read foo GETS the value of a** <br>\r\n\r\n# Do This\r\n\r\n* **Make a prediction** about what will happen when you run the code. What will the values of a and b at the end of the program?\r\n\r\n* **Add console.log statements** at the end of the program to find out what the value of a and b are.\r\n\r\n* On the next level we will take a closer look at the why.",
     "never_autoplay_video": "false",
     "examples_required": "false",

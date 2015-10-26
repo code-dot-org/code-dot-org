@@ -46,7 +46,6 @@
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "console.log": null,
       "functionParams_none": null,
@@ -77,9 +76,6 @@
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
-    "encrypted_examples": [
-
-    ],
     "markdown_instructions": "# Incrementing Continued\r\n\r\nSometimes we don't just increment by a specific value but also by a variable value. It works the same way though. \r\n\r\nRemember: the variable on the left of the equal sign gets assigned to the value of the expression on the right.\r\n\r\n# Do This\r\n\r\n* ** Make a prediction **. You should have enough experience from the last couple levels to hopefully guess what this will do.\r\n\r\n* ** Add `console.log()` statements** to see the final values of a,b, and c\r\n\r\n* ** If you didn't get your guess correct** try retracing through to see if you can figure out what happened.\r\n\r\n* ** Add `console.log()` statements along the way** to see what is happening to the values of a,b, and c",
     "never_autoplay_video": "false",
     "examples_required": "false",

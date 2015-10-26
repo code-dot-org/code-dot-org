@@ -3,24 +3,22 @@ require 'test_helper'
 class HintViewRequestsControllerTest < ActionController::TestCase
 
   setup do
+    HintViewRequest.stubs(:enabled?).returns true
     @student = create :student
   end
 
   test 'creation requires current_user' do
-    HintViewRequest::ENABLED = true
     post :create, {}, format: :json
     assert_response :unauthorized
   end
 
   test 'creation requires params' do
-    HintViewRequest::ENABLED = true
     sign_in @student
     post :create, {}, format: :json
     assert_response :bad_request
   end
 
   test 'can be created' do
-    HintViewRequest::ENABLED = true
     sign_in @student
 
     params = {
@@ -38,7 +36,7 @@ class HintViewRequestsControllerTest < ActionController::TestCase
   end
 
   test 'can be disabled' do
-    HintViewRequest::ENABLED = false
+    HintViewRequest.stubs(:enabled?).returns false
     sign_in @student
 
     params = {
