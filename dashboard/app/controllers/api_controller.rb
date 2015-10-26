@@ -68,38 +68,24 @@ class ApiController < ApplicationController
     load_section
     load_script
 
-    data =  [
-      {
-        student: {
-          id: 1,
-          name: 'Student 1'
-        },
-        stage: 1,
-        puzzle: 5,
-        question: 'This is the question',
-        response: 'This is the response',
-      },
-      {
-        student: {
-          id: 2,
-          name: 'Student 2'
-        },
-        stage: 2,
-        puzzle: 5,
-        question: 'This is the question',
-        response: 'This is the response'
-      },
-      {
-        student: {
-          id: 2,
-          name: 'Student 2'
-        },
-        stage: 1,
-        puzzle: 6,
-        question: 'Another uestion',
-        response: 'This is the response'
-      }
-    ]
+    text_response_script_levels = @script.script_levels.includes(:level).where('levels.type' => TextMatch)
+
+    data = @section.students.map do |student|
+      student_hash = {id: student.id, name: student.name}
+
+      text_response_script_levels.map do |script_level|
+        last_attempt = student.last_attempt(script_level.level)
+        response = last_attempt.try(:level_source).try(:data)
+        next unless response
+        {
+          student: student_hash,
+          stage: script_level.stage.position,
+          puzzle: script_level.position,
+          question: script_level.level.properties['title'],
+          response: response
+        }
+      end.compact
+    end.flatten
 
     render json: data
   end

@@ -102,6 +102,11 @@ FactoryGirl.define do
     properties{{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text: 'test'}], options: {hide_submit: false}}}
   end
 
+  factory :text_match, :parent => Level, :class => TextMatch do
+    game {create(:game, app: "match")}
+    properties{{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text: 'test'}], options: {hide_submit: false}}}
+  end
+
   factory :artist, :parent => Level, :class => Artist do
   end
 
