@@ -1,93 +1,66 @@
 # A caching layer that sits in front of a datastore that
 # implements get and set
+
 class DatastoreCache
-
-  class ConcurrentRefreshError < StandardError
-  end
-
-  # @param datastore [Object]
+  # @param datastore [Object] a datastore adapter
   # @param cache_expiration [int] seconds after which a cached entry expires
   def initialize(datastore, cache_expiration: 30)
     @cache = {}
     @datastore = datastore
     @cache_expiration = cache_expiration
 
-    @global_lock = Mutex.new
-    @per_key_locks = {}
-
+    # Note we intentionally do this before spawning the background thread
+    # to make sure the cache is seeded successfully on init
     seed_cache
+    @update_thread = spawn_update_thread
   end
 
   # Gets the data associated with a given key
   # @param key [String]
-  # @returns [?] stored value
+  # @returns stored value
   def get(key)
-    if @cache.key? key
-      cached_value, inserted_at = @cache[key]
-      if Time.now.to_f - inserted_at < @cache_expiration
-        return cached_value
-      end
-    end
-
-    begin
-      return refresh(key)
-    rescue
-      return @cache[key][0] if @cache.key? key
-    end
-    nil
-  end
-
-  # Update the cached value from the datastore. This uses Mutex's to
-  # only allow one update per key at on time.
-  # @param key [String]
-  # @return value for key
-  def refresh(key)
-    lock = nil
-    @global_lock.synchronize do
-      if !@per_key_locks.key? key
-        @per_key_locks[key] = Mutex.new
-      end
-      lock = @per_key_locks[key]
-    end
-
-    begin
-      if lock.try_lock
-        begin
-          value = @datastore.get(key)
-          set_local(key, value)
-        ensure
-          @global_lock.synchronize do
-            @per_key_locks.delete key
-          end
-          lock.unlock
-        end
-      else
-        raise ConcurrentRefreshError
-      end
-    end
-
-    value
+    raise ArgumentError unless key.is_a? String
+    return @cache[key]
   end
 
   # Sets the given value for the key in both the local cache and datastore
   # @param key [String]
-  # @param value [Anything]
+  # @param value [JSONable]
   def set(key, value)
+    raise ArgumentError unless key.is_a? String
     @datastore.set(key, value)
     set_local(key, value)
   end
 
+  private
+
   # Sets the given value for the key in the local cache
   # @param key [String]
-  # @param value [Anything]
+  # @param value [String]
   def set_local(key, value)
-    @cache[key] = [value, Time.now.to_f]
+    @cache[key] = value
   end
 
   # Pulls all values from the datastore and populates the local cache
   def seed_cache
     @datastore.all.each do |k, v|
       set_local(k, v)
+    end
+  end
+
+  # Spawns a background thread that periodically updates the cached
+  # values from the persistent datastore
+  def spawn_update_thread
+    Thread.new do
+      loop do
+        sleep @cache_expiration
+
+        begin
+          seed_cache
+        rescue => exc
+          Honeybadger.notify(exc)
+        end
+      end
     end
   end
 end

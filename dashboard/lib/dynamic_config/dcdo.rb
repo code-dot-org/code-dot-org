@@ -1,6 +1,6 @@
 # A dynamic configuration module that allows us to update
 # config settings without pushing new code.
-
+require 'oj'
 require 'digest/sha1'
 require 'dynamic_config/datastore_cache'
 require 'dynamic_config/adapters/dynamodb_adapter'
@@ -29,7 +29,7 @@ module DCDO
     end
 
     if !value.nil?
-      return value
+      return Oj.load(value)
     end
 
     default
@@ -40,6 +40,6 @@ module DCDO
   # @param value [JSONable]
   def DCDO.set(key, value)
     raise ArgumentError unless key.is_a? String
-    $dcdo_cache.set(key, value)
+    $dcdo_cache.set(key, Oj.dump(value, :mode => :strict))
   end
 end

@@ -1,32 +1,41 @@
+# A DynamoDB adapter class that allows us to use
+# dynamodb as a persistent store with the datastore_cache
 require 'aws-sdk'
+require 'oj'
 
 class DynamoDBAdapter
+  # @param table_name [String] the name of the dynamodb table to use
   def initialize(table_name)
     @table_name = table_name
     @client = Aws::DynamoDB::Client.new
   end
 
+  # @param key [String]
+  # @returns [String]
   def get(key)
     resp = @client.get_item({
       table_name: @table_name,
       key: {
-        'data-key' => JSON.dump(key)
+        'data-key' => key
       }
     })
     return nil if resp.item.nil?
-    JSON.load(resp.item['data-value'])
+    Oj.load(resp.item['data-value'])
   end
 
+  # @param key [String]
+  # @param value [String]
   def set(key, value)
     @client.put_item({
       table_name: @table_name,
       item: {
-        'data-key' => JSON.dump(key),
-        'data-value' => JSON.dump(value)
+        'data-key' => key,
+        'data-value' => Oj.dump(value, :mode => :strict)
       }
     })
   end
 
+  # returns [Hash]
   def all
     result = {}
     last_evaluated = nil
@@ -37,8 +46,8 @@ class DynamoDBAdapter
       })
 
       resp.items.each do |item|
-        key = JSON.load(item['data-key'])
-        value = JSON.load(item['data-value'])
+        key = item['data-key']
+        value = Oj.load(item['data-value'])
         result[key] = value
       end
 
