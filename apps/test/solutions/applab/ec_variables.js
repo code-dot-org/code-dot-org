@@ -45,12 +45,12 @@ module.exports = {
       }
     },
     {
-      description: "str.contains",
+      description: "str.includes",
       editCode: true,
       xml:
         'var str = "Hello World";\n' +
-        'textInput("id1", str.contains("World"));\n' +
-        'textInput("id2", str.contains("NOPE"));\n',
+        'textInput("id1", str.includes("World"));\n' +
+        'textInput("id2", str.includes("NOPE"));\n',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
