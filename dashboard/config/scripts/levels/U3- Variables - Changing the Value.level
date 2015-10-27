@@ -46,7 +46,6 @@
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "console.log": null,
       "functionParams_none": null,
@@ -60,9 +59,6 @@
       "addOperator": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "# Variable Reassignment\r\n\r\nOur old friend Turtle is back! Turtle is going to allow us to easily play with some variables. \r\n\r\nIn the programs we have seen so far the value of the variable stays the same through the whole program. You don't have to keep a variable the same value for the whole program. We can change its value as the program runs.\r\n\r\n# Do This\r\n\r\n* ** Run the code** and see what happens.\r\n\r\n* ** Update the value of 'turnAmount' before each moveForward** so the turtle turns a different amount each time.",
     "is_k1": "false",

@@ -36,7 +36,7 @@ Check back often.  The video library is growing every week!
 
 <iframe src="https://www.youtube.com/embed/ZhEf7e4kopM" frameborder="0" allowfullscreen></iframe>
 
-<iframe src="https://www.youtube.com/embed/JJ1S9Y31vgQ" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/5o8CwafCxnU" frameborder="0" allowfullscreen></iframe>
 
 
 
@@ -45,7 +45,8 @@ Check back often.  The video library is growing every week!
 We have forums for educators to discuss and trade ideas about CSP and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).  For CSP there are two forums that are most useful:
 
 * [General CSP forum](http://forum.code.org/c/csp)
-* [Lesson-Specific Forums](http://forum.code.org/c/csp-feedback)
+* [Unit 1 Lesson-Specific Forums](http://forum.code.org/c/csp-unit1)
+* [Unit 2 Lesson-Specific Forums](http://forum.code.org/c/csp-unit2)
 	
 
 

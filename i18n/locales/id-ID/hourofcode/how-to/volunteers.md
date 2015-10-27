@@ -53,7 +53,7 @@ Most schools still don’t teach computer science. Most students don’t know th
 
 ## 6. Promote the Hour of Code in your community
 
-Ajak kelompok masayarakat — Pramuka, kelompok pengajian/gereja, unit mahasiswa, pensiunan atau serikat pekerja. Atau selenggarakan "hajatan" Hour of Code untuk masyarakat di lingkunganmu. [Send this email](https://hourofcode.com/promote/resources#email).
+Ajak kelompok masayarakat — Pramuka, kelompok pengajian/gereja, unit mahasiswa, pensiunan atau serikat pekerja. Atau selenggarakan "hajatan" Jam Kode untuk masyarakat di lingkunganmu. [Send this email](https://hourofcode.com/promote/resources#email).
 
 ## 7. Read the suggested agenda below so you know what to expect when you visit a classroom.
 

@@ -228,7 +228,7 @@ th:
   signup_event_location_label: สถานที่ร่วมกิจกรรม (ถ้ามี)
   signup_special_event_flag_label: Highlight my special event
   signup_special_event_details_label: รายละเอียดกิจกรรมพิเศษ
-  signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization'
+  signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization (US only)'
   signup_send_posters_address_label: Address of school or organization
   signup_whole_school_flag_label: กิจกรรมครั้งนี้มีสำหรับนักเรียนทุกคน
   signup_your_event: Sign up your event

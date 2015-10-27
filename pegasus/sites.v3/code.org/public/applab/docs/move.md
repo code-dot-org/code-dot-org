@@ -61,7 +61,7 @@ ____________________________________________________
 
 <table>
 <tr>
-<td>
+<td style="border-style:none; width:90%; padding:0px">
 <pre>
 // Draw a arrow pointing up from a random location on the screen.
 penUp();
@@ -73,8 +73,8 @@ move(50, 0);
 move(-25, -50);
 </pre>
 </td>
-<td>
-<img src='https://images.code.org/98d3a92e220a34260d308ae93033229d-image-1445199972715.gif' style='width: 150px;'> 
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/5b6a206fcd8c2bbc5433f11cbdae8d94-image-1445617661083.gif'>
 </td>
 </tr>
 </table>
@@ -115,11 +115,13 @@ No return value. Moves turtle only.
 
 ### Tips
 - Use [penUp()](/applab/docs/penUp) before calling move(x,y) to have the turtle not draw as it moves.
-- The screen default size is 320 pixels wide and 480 pixels high, but you can move the turtle off the screen by exceeding those dimensions.
+- The screen default size is 320 pixels wide and 450 pixels high, but you can move the turtle off the screen by exceeding those dimensions.
 - There are three ways to move the turtle in a straight line:
 	- Specify the number of pixels to move the turtle in the direction it is facing using [moveForward(pixels)](/applab/docs/moveForward) or [moveBackward(pixels)](/applab/docs/moveBackward).
 	- Specify a number of pixels in the x and y direction to move the turtle using move(x,y), regardless of direction that the turtle is facing.
 	- Specify an x and y pixel location on the screen to move the turtle to using [moveTo(x,y)](/applab/docs/moveTo), regardless of direction that the turtle is facing.
+
+<img src='https://images.code.org/7de9a1ac26ad8630ebcb92e608c3803c-image-1445616750775.jpg'>
 
 [/tips]
 

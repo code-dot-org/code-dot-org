@@ -229,7 +229,7 @@ end
 #
 def upgrade_frontend(name, host)
   commands = [
-    'cd production',
+    "cd #{rack_env}",
     'git pull --ff-only',
     'rake build',
   ]
@@ -255,22 +255,39 @@ def upgrade_frontend(name, host)
   puts IO.read log_path
 end
 
-#
-# The main build task (calls the top-level Rakefile)
-#
-$websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, APPS_COMMIT_TASK]) do
+# Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
+task :chef_update do
+  if CDO.daemon && CDO.chef_managed
+    Dir.chdir(cookbooks_dir) do
+      old_gemfile = ENV['BUNDLE_GEMFILE']
+      ENV['BUNDLE_GEMFILE'] = File.join(cookbooks_dir, 'Gemfile')
+      begin
+        RakeUtils.bundle_install
+        RakeUtils.bundle_exec 'berks', 'install'
+        RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
+        RakeUtils.bundle_exec 'berks', 'apply', rack_env
+      ensure
+        ENV['BUNDLE_GEMFILE'] = old_gemfile
+      end
+    end
+  end
+end
+
+# Perform a normal local build by calling the top-level Rakefile.
+# Additionally run the lint task if specified for the environment.
+task build: [:chef_update] do
   Dir.chdir(deploy_dir) do
-    # Lint
     RakeUtils.system 'rake', 'lint' if CDO.lint
-
-    # Build myself
     RakeUtils.system 'rake', 'build'
+  end
+end
 
-    # If I'm daemon, do some additional work:
-    if rack_env?(:production) && CDO.daemon
-      # Update the front-end instances, in parallel, but not all at once. When the infrstracture is
-      # properly scaled we should be able to upgrade 20% of the front-ends at a time. Right now we're
-      # over-subscribed (have more resources than we need) so we're restarting 50% of the front-ends.
+# Update the front-end instances, in parallel, but not all at once. When the infrastructure is
+# properly scaled we should be able to upgrade 20% of the front-ends at a time. Right now we're
+# over-subscribed (have more resources than we need) so we're restarting 50% of the front-ends.
+task :deploy do
+  if CDO.daemon && CDO.app_servers.any?
+    Dir.chdir(deploy_dir) do
       thread_count = 2
       threaded_each CDO.app_servers.keys, thread_count do |name|
         upgrade_frontend name, CDO.app_servers[name]
@@ -278,18 +295,9 @@ $websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, A
     end
   end
 end
+
+$websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, APPS_COMMIT_TASK, :build, :deploy])
 task 'websites' => [$websites] {}
-
-#
-# This is the build task when running on the test instance. It performs a normal local build
-# via the top-level Rakefile and then runs our tests.
-#
-
-task :build do
-  Dir.chdir(deploy_dir) do
-    RakeUtils.system 'rake', 'build'
-  end
-end
 
 task :pegasus_unit_tests do
   Dir.chdir(pegasus_dir) do
@@ -333,6 +341,7 @@ task :dashboard_unit_tests => [COVERAGE_SYMLINK] do
       RakeUtils.rake 'db:schema:load'
       RakeUtils.rake 'test', 'COVERAGE=1'
       log_coverage_results(name)
+      RakeUtils.rake "seed:all"
       RakeUtils.start_service CDO.dashboard_unicorn_name
     end
   end
@@ -385,6 +394,6 @@ end
 # do the eyes and browserstack ui tests in parallel
 multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack_ui_tests]
 
-$websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
+$websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
 
 task 'test-websites' => [$websites_test]

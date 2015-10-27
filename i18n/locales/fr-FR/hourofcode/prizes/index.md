@@ -22,13 +22,13 @@ title: <%= hoc_s(:title_prizes) %> layout: wide nav: prizes_nav
 
 # Prix pour chaque organisateur
 
-Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox space as a thank-you gift!
+Chaque éducateur qui organise Une Heure de Code pour des étudiants, reçoit 10 Go d'espace Dropbox comme cadeau de remerciement !
 
 <% else %>
 
 ## Des prix pour chaque organisateur
 
-**Every** educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com, iTunes or Windows Store** as a thank-you gift!
+**Chaque** éducateur qui organise Une Heure de Code peut recevoir **10 $ pour des achats sur Amazon.com ou Microsoft Windows Store** comme cadeau de remerciement !
 
 <img style="float:left;" src="/images/fit-130/amazon_giftcards.png" />
 
@@ -42,56 +42,56 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
 
 <% if @country == 'us' %>
 
-## 51 schools will win a class-set of laptops (or $10,000 for other technology)
+## 51 écoles gagneront un ensemble d'ordinateurs portables pour la classe (ou 10 000 $ pour des achats technologiques)
 
-One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](%= resolve_url('/prizes/hardware-signup') %) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners).
+Une école chanceuse dans *chaque* état américain (dont Washington D.C.) gagnera $ 10 000 o valoir sur l'achat de matériels technologiques. [Inscrivez-vous ici](%= resolve_url('/prizes/hardware-signup') %) pour être admissibles et [**découvrir les gagnants de l'an dernier**](http://codeorg.tumblr.com/post/104109522378/prize-winners).
 
 <% end %>
 
 # Foire aux questions
 
-## Who is eligible to receive the all organizer thank-you gift?
+## Est-ce que tous les organisateurs sont admissibles pour recevoir le cadeau de remerciement ?
 
-Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank-you gift. The $10K hardware prize is limited to US residents only.
+Les organisateurs américains et internationaux qui ne le sont pas sont admissibles pour recevoir le cadeau de remerciement. Cependant, les 10K $ de matériels informatiques sont limités aux résidents américains.
 
-## Is there a deadline to sign up to receive the all organizer thank-you gift?
+## Y a-t-il une date limite pour s'inscrire et recevoir le cadeau de remerciement pour les organisateurs ?
 
-You must sign up **before** <%= campaign_date('start_long') %> in order to be eligible to receive the all organizer thank-you gift.
+Vous devez vous inscrire **avant** < % = campaign_date('start_long') %> afin d'être admissible et recevoir le cadeau de remerciement pour les organisateurs.
 
-## When will I receive my thank-you gift?
+## Quand vais-je recevoir mon cadeau de remerciement ?
 
-We will contact you in December after Computer Science Education Week (<%= campaign_date('full') %>) with next steps on how to redeem your choice of thank-you gift.
+Nous vous contacterons en décembre après la semaine de l'éducation des sciences informatiques (< % = campaign_date('full') %>) avec les prochaines étapes sur la façon de choisir votre cadeau de remerciement.
 
-## Can I redeem all of the thank-you gift options?
+## Est-ce que je peux obtenir plusieurs cadeaux de remerciement ?
 
-No. Thank-you gifts are limited to one per organizer. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank-you gift.
+Non. Les cadeaux de remerciement sont limités à un par l'organisateur. Nous vous contacterons en décembre après La semaine d'éducation des sciences informatiques avec avec les prochaines étapes sur la façon d'acquérir votre cadeau de remerciement.
 
 <% if @country == 'us' %>
 
-## L'ensemble de votre école doit-elle participer pour remporter la somme de 10 000 $ en matériel ?
+## L'ensemble de votre école doit-il participer pour remporter la somme de 10 000 $ en matériel ?
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](%= resolve_url('/prizes/hardware-signup') %). Every teacher participating will need to [sign up](%= resolve_url('/') %) their classroom individually in order to receive the all organizer thank you gift.
+Oui. Toute votre école doit participer pour être éligible au tirage au sort, mais une seule inscription et formulaire de demande de prix de matériel suffisent [formulaire disponible ici](%= resolve_url('/prizes/hardware-signup') %). Chaque enseignant participant devra [inscrire](%= resolve_url('/prizes/hardware-signup') %) sa classe individuellement afin de recevoir le cadeau de remerciement dédié aux organisateurs.
 
-## Who is eligible to win the $10,000 in hardware?
+## Qui est admissible pour gagner la somme de 10 000 $ en matériel informatique ?
 
-Prix limité aux écoles publiques américaines. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Une école par états américains recevra un ensemble d'ordinateurs portables. Code.org sélectionnera et contactera les gagnants par courriel jusqu'au 1er décembre 2014.
+Prix limité aux écoles publiques américaines. Afin de participer, votre établissement scolaire doit s'enregistrer à Une Heure de Code, avant le 16 novembre 2015. Une école, par état américain, recevra un ensemble d'ordinateurs portables. Code.org sélectionnera et contactera les gagnants par courriel vers le 1er décembre 2015.
 
-## Pourquoi le prix de matériel de 10 000 $ est-il réservé aux écoles publiques ?
+## Pourquoi le prix de 10 000 $ d'achat de matériek est-il réservé aux écoles publiques ?
 
-We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
+Nous serions ravis d'aider de la même façon les enseignants dans les écoles publiques et privées, mais pour l'instant, nous sommes dépendants de considérations logistiques. Nous avons un partenariat avec [DonorsChoose.org](http://donorschoose.org) pour offrir les prix et celui n'inclut que les écoles publiques américaines. Selon DonorsChoose.org, l'organisation peut accèder à des données cohérentes et précises uniquement pour les écoles publiques.
 
-## Quelle est la date limite pour postuler au prix de matériel ?
+## Quelle est la date limite pour postuler au prix pour gagner du matériel ?
 
-To qualify, you must complete the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) by November 16, 2015. Une école par états américains recevra un ensemble d'ordinateurs portables. Code.org sélectionnera et contactera les gagnants par courriel jusqu'au 1er décembre 2014.
-
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (<%= campaign_date('short') %>), can I still qualify for prizes?
-
-Yes, in the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) include the dates that your whole school is participating.
+Pour être admissible, vous devez remplir le [formulaire de demande de matériel](%= resolve_url('/prizes/hardware-signup') %) avant le 16 novembre 2015. Une école, par état américain, recevra un ensemble d'ordinateurs portables. Code.org sélectionnera et contactera les gagnants par courriel vers le 1er décembre 2015.
 
 <% end %>
 
+## Si mon école ne peut pas faire l'Heure de Code au cours de la semaine de l'éducation des sciences informatiques (< % = campaign_date('short') %>), est-ce que je peux toujours être admissible pour les prix ?
+
+Yes, in the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) include the dates that your whole school is participating.
+
 ## Je ne suis pas aux États-Unis. Suis-je éligible pour les prix ?
 
-Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift. The $10K hardware prize is US only.
+Oui, tous les organisateurs, américains ou non, sont admissibles pour recevoir le cadeau de remerciement pour les organisateurs. Cependant, ce n'est pas le cas pour les 10K $ de prix pour l'achat de matériel.
 
 <% end %> <%= view :signup_button %>

@@ -282,7 +282,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_notOperator_signatureOverride":function(d){return "AND boolean operator"},
 "dropletBlock_orOperator_description":function(d){return "Logical OR of two booleans"},
 "dropletBlock_orOperator_signatureOverride":function(d){return "OR boolean operator"},
-"dropletBlock_randomNumber_max_description":function(d){return "Get a random number between 0 and the specified maximum value"},
+"dropletBlock_randomNumber_max_description":function(d){return "Returns a random number ranging from zero to max, including both zero and max in the range"},
 "dropletBlock_randomNumber_max_param0":function(d){return "max"},
 "dropletBlock_randomNumber_max_param0_description":function(d){return "The maximum number returned"},
 "dropletBlock_randomNumber_max_signatureOverride":function(d){return "randomNumber(max)"},
@@ -392,4 +392,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Переглянути відео"},
 "when":function(d){return "коли"},
 "whenRun":function(d){return "коли гра починається"},
-"workspaceHeaderShort":function(d){return "Робоча область: "}};
+"workspaceHeaderShort":function(d){return "Робоча область: "},
+"dropletBlock_mathRandom_description":function(d){return "Returns a random number ranging from 0 (inclusive) up to but not including 1 (exclusive)"},
+"dropletBlock_mathRandom_signatureOverride":function(d){return "Math.random()"},
+"dropletBlock_randomNumber_param0":function(d){return "min"},
+"dropletBlock_randomNumber_param0_description":function(d){return "The minimum number returned"},
+"dropletBlock_randomNumber_param1":function(d){return "max"},
+"dropletBlock_randomNumber_param1_description":function(d){return "The maximum number returned"},
+"dropletBlock_randomNumber_signatureOverride":function(d){return "randomNumber(min, max)"}};

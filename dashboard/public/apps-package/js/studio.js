@@ -53,6 +53,7 @@ var Hammer = utils.getHammer();
 var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
+var ThreeSliceAudio = require('./ThreeSliceAudio');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -752,7 +753,7 @@ function sortDrawOrder() {
   // Add items.
   for (var i = 0; i < Studio.items.length; i++) {
     var item = {};
-    item.element = Studio.items[i].element;
+    item.element = Studio.items[i].getElement();
     item.y = Studio.items[i].y + Studio.items[i].height/2 + Studio.items[i].renderOffset.y;
     itemsArray.push(item);
 
@@ -821,7 +822,7 @@ Studio.onTick = function() {
 
   Studio.clearDebugElements();
 
-  var animationOnlyFrame = Studio.midExecutionFailure ||
+  var animationOnlyFrame = Studio.pauseInterpreter ||
       (0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor);
   Studio.yieldThisTick = false;
 
@@ -931,6 +932,7 @@ Studio.onTick = function() {
     var ticksBeforeFaceSouth = utils.valueOr(level.ticksBeforeFaceSouth, Studio.ticksBeforeFaceSouth);
     if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].dir = Direction.SOUTH;
+      Studio.movementAudioOff();
       isWalking = false;
     }
 
@@ -1581,10 +1583,40 @@ Studio.init = function(config) {
   });
 
   config.loadAudio = function() {
+    var soundFileNames = [];
+    // We want to load the basic list of effects available in the skin
+    soundFileNames.push.apply(soundFileNames, skin.sounds);
+    // We also want to load the movement sounds used in hoc2015
+    soundFileNames.push.apply(soundFileNames, Studio.getMovementSoundFileNames(skin));
+    // No need to load anything twice, so de-dupe our list.
+    soundFileNames = _.uniq(soundFileNames);
+
     skin.soundFiles = {};
-    skin.sounds.forEach(function (sound) {
+    soundFileNames.forEach(function (sound) {
       skin.soundFiles[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl(sound + '.ogg')];
       studioApp.loadAudio(skin.soundFiles[sound], sound);
+    });
+  };
+
+  /**
+   * Get a flattened list of all the sound file names (sans extensions)
+   * specified in the skin for avatar movement (these may be omitted from the
+   * skin.sounds list because we don't want them accessible to the player).
+   * @param {Object} level skin from which to extract sound effect names.
+   * @returns {string[]} which may contain duplicates but will not have any
+   *          undefined entries.
+   */
+  Studio.getMovementSoundFileNames = function (fromSkin) {
+    var avatarList = fromSkin.avatarList || [];
+    return avatarList.map(function (avatarName) {
+      var movementAudio = fromSkin[avatarName].movementAudio || [];
+      return movementAudio.reduce(function (memo, nextOption) {
+        return memo.concat([nextOption.begin, nextOption.loop, nextOption.end]);
+      }, []);
+    }).reduce(function (memo, next) {
+      return memo.concat(next);
+    }, []).filter(function (fileName) {
+      return fileName !== undefined;
     });
   };
 
@@ -1790,7 +1822,7 @@ Studio.reset = function(first) {
   // True if we should fail before execution, even if freeplay
   Studio.preExecutionFailure = false;
   Studio.message = null;
-  Studio.midExecutionFailure = false;
+  Studio.pauseInterpreter = false;
 
   // Reset the score and title screen.
   Studio.playerScore = 0;
@@ -1822,8 +1854,10 @@ Studio.reset = function(first) {
   // More things used to validate level completion.
   Studio.trackedBehavior = {
     removedItemCount: 0,
+    touchedHazardCount: 0,
     setActivityRecord: null,
     hasSetBot: false,
+    hasSetBotSpeed: false,
     hasSetBackground: false,
     hasSetMap: false,
     hasAddedItem: false,
@@ -1912,6 +1946,9 @@ Studio.reset = function(first) {
 
   // Reset whether level has succeeded.
   Studio.succeededTime = null;
+
+  // Stop any current movement sounds
+  Studio.movementAudioOff();
 };
 
 /**
@@ -2422,6 +2459,7 @@ Studio.onPuzzleComplete = function() {
 
   // Stop everything on screen
   Studio.clearEventHandlersKillTickLoop();
+  Studio.movementAudioOff();
 
   // If we know they succeeded, mark levelComplete true
   var levelComplete = (Studio.result === ResultType.SUCCESS);
@@ -3344,8 +3382,10 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     speed: Studio.itemSpeed[itemClass],
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     isHazard: classProperties.isHazard,
+    spritesCounterclockwise: classProperties.spritesCounterclockwise,
     renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
-    renderScale: utils.valueOr(classProperties.scale, 1)
+    renderScale: utils.valueOr(classProperties.scale, 1),
+    animationRate: classProperties.animationRate
   };
 };
 
@@ -3951,8 +3991,35 @@ Studio.setSprite = function (opts) {
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
+  // Set up movement audio for the selected sprite (should be preloaded)
+  Studio.movementAudioOptions = Studio.movementAudioOptions || {};
+  if (!Studio.movementAudioOptions[spriteValue] && skin.avatarList) {
+    var spriteSkin = skin[spriteValue] || {};
+    var audioConfig = spriteSkin.movementAudio || [];
+    Studio.movementAudioOptions[spriteValue] = audioConfig.map(function (audioOption) {
+      return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
+    });
+  }
+  Studio.currentMovementAudioOptions = Studio.movementAudioOptions[spriteValue];
+
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
+};
+
+
+Studio.movementAudioOn = function () {
+  Studio.movementAudioOff();
+  Studio.currentMovementAudio = Studio.currentMovementAudioOptions[
+      Math.floor(Math.random() * Studio.currentMovementAudioOptions.length)];
+  if (Studio.currentMovementAudio) {
+    Studio.currentMovementAudio.on();
+  }
+};
+
+Studio.movementAudioOff = function () {
+  if (Studio.currentMovementAudio) {
+    Studio.currentMovementAudio.off();
+  }
 };
 
 var p = function (x,y) {
@@ -4529,7 +4596,6 @@ Studio.moveSingle = function (opts) {
   var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   var wallCollision = false;
   var playspaceEdgeCollision = false;
-  var playSound = false;
   var deltaX = 0, deltaY = 0;
 
   switch (opts.dir) {
@@ -4579,30 +4645,25 @@ Studio.moveSingle = function (opts) {
       Studio.JSInterpreter.yield();
     }
 
-    playSound = true;
-  } else if (!wallCollision) {
-    if (playspaceEdgeCollision) {
-      var boundary = Studio.getPlayspaceBoundaries(sprite);
-      projectedX = Math.max(boundary.left, Math.min(boundary.right, projectedX));
-      projectedY = Math.max(boundary.top, Math.min(boundary.bottom, projectedY));
+    Studio.movementAudioOn();
+  } else {
+    if (!wallCollision) {
+      if (playspaceEdgeCollision) {
+        var boundary = Studio.getPlayspaceBoundaries(sprite);
+        projectedX = Math.max(boundary.left, Math.min(boundary.right, projectedX));
+        projectedY = Math.max(boundary.top, Math.min(boundary.bottom, projectedY));
+      }
+      sprite.x = projectedX;
+      sprite.y = projectedY;
     }
-    sprite.x = projectedX;
-    sprite.y = projectedY;
 
     if (opts.dir !== Studio.lastMoveSingleDir &&
         lastMove === Infinity || Studio.tickCount > lastMove + 1) {
-      // So long as there was no wall collision, a new direction, and we
-      // haven't already processed a move in the previous tick, then play a sound.
-      playSound = true;
+      Studio.movementAudioOn();
     }
   }
 
   Studio.lastMoveSingleDir = opts.dir;
-
-  if (playSound && skin.moveSounds) {
-    var randomSoundIndex = Math.floor(Math.random() * skin.moveSounds.length);
-    studioApp.playAudio(skin.moveSounds[randomSoundIndex]);
-  }
 };
 
 Studio.moveDistance = function (opts) {
@@ -4772,97 +4833,103 @@ Studio.allGoalsVisited = function() {
 };
 
 /**
- * A level can provide zero or more requiredForSuccess criteria which are
- * special cases that a level requires for success.  This function evaluates
- * the state of these criteria.
- * @returns {Object} outcome
- * @returns {boolean} outcome.exists Whether the level even has any of these criteria.
- * @returns {boolean} outcome.achieved false if any of the criteria was required but not met.
- * @returns {string} outcome.message A custom message for the first of the failing criteria.
+ * Returns true if the specified criteria, provided as an Object, is satisfied.
  */
-Studio.checkRequiredForSuccess = function() {
-
-  if (!level.requiredForSuccess) {
-    return { exists: false, achieved: false, message: null };
-  }
-
-  var required = level.requiredForSuccess;
+Studio.conditionSatisfied = function(required) {
   var tracked = Studio.trackedBehavior;
+  var valueNames = Object.keys(required);
 
-  if (required.setSprite && !tracked.hasSetSprite) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetSprite() };
+  for (var k = 0; k < valueNames.length; k++) {
+    var valueName = valueNames[k];
+    var value = required[valueName];
+
+    if (valueName === 'timedOut' && Studio.timedOut() != value) {
+      return false;
+    }
+
+    if (valueName === 'collectedItemsAtOrAbove' && tracked.removedItemCount < value) {
+      return false;
+    }
+
+    if (valueName === 'collectedItemsBelow' && tracked.removedItemCount >= value) {
+      return false;
+    }
+
+    if (valueName === 'touchedHazardsAtOrAbove' && tracked.touchedHazardCount < value) {
+      return false;
+    }
+
+    if (valueName === 'currentPointsAtOrAbove' && Studio.playerScore < value) {
+      return false;
+    }
+
+    if (valueName === 'currentPointsBelow' && Studio.playerScore >= value) {
+      return false;
+    }
+
+    if (valueName === 'allGoalsVisited' && Studio.allGoalsVisited() !== value) {
+      return false;
+    }
+
+    if (valueName === 'setMap' && tracked.hasSetMap !== value) {
+      return false;
+    }
+
+    if (valueName === 'setBotSpeed' && tracked.hasSetBotSpeed !== value) {
+      return false;
+    }
   }
 
-  if (required.setBotSpeed && !tracked.hasSetBotSpeed) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetBotSpeed() };
-  }
-
-  if (required.setBackground && !tracked.hasSetBackground) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetBackground() };
-  }
-
-  if (required.setBotMap && !tracked.hasSetMap) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetMap() };
-  }
-
-  if (required.touchAllItems && Studio.items.length > 0) {
-    return { exists: true, achieved: false, message: studioMsg.failedTouchAllItems() };
-  }
-
-  if (required.scoreMinimum && Studio.playerScore < required.scoreMinimum) {
-    return { exists: true, achieved: false, message: studioMsg.failedScoreMinimum() };
-  }
-
-  if (required.addItem && !tracked.hasAddedItem) {
-    return { exists: true, achieved: false, message: studioMsg.failedAddItem() };
-  }
-
-  if (required.removedItemCount && tracked.removedItemCount < required.removedItemCount) {
-    return { exists: true, achieved: false, message: studioMsg.failedRemovedItemCount() };
-  }
-
-  if (required.winGame && ! tracked.hasWonGame) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasWonGame() };
-  }
-
-  if (required.lostGame && ! tracked.hasLostGame) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasLostGame() };
-  }
-
-  if (required.setActivity &&
-      !(tracked.setActivityRecord && 
-        tracked.setActivityRecord[required.setActivity.itemType] &&
-        tracked.setActivityRecord[required.setActivity.itemType][required.setActivity.activityType])) {
-    return { exists: true, achieved: false, message: studioMsg.failedSetActivity() };
-  }
-
-  return { exists: true, achieved: true, message: null };
+  return true;
 };
 
 /**
- * Trigger a manual failure, which stops the interpreter and ends the level
- * prematurely.
- *
- * Note: Has certain known limitations at the moment.
- * - In droplet, it's possible for the interpreter to run several instructions
- *   before we return to the end of a tick and check this condition.
- * - Does not yet work in blockly mode (with no interpreter)
- *
- * @param {string} [message] optional failure message text
+ * @typedef {Object} ProgressConditionOutcome
+ * @property {boolean} success
+ * @property {string} message
  */
-Studio.fail = function (message) {
-  Studio.message = utils.valueOr(message, null);
-  Studio.midExecutionFailure = true;
+
+/**
+ * A level can provide zero or more progress conditions which are special cases
+ * that we test to see if the level has succeeded or failed.  This function
+ * evaluates the state of these criteria.  It returns false if none of the
+ * criteria affects progress, otherwise an object that contains information
+ * about the specific succeeding or failing criteria.
+ *
+ * @param {Array} conditions. 
+ * @returns {ProgressConditionOutcome|null}
+ */
+Studio.checkProgressConditions = function() {
+  if (!level.progressConditions) {
+    return null;
+  }
+
+  for (var i = 0; i < level.progressConditions.length; i++) {
+    var condition = level.progressConditions[i];
+
+    if (Studio.conditionSatisfied(condition.required)) {
+      return condition.result;
+    }
+  }
+
+  return null;
 };
 
 var checkFinished = function () {
 
   var hasGoals = Studio.spriteGoals_.length !== 0;
   var achievedGoals = Studio.allGoalsVisited();
-  var requiredForSuccess = Studio.checkRequiredForSuccess();
+  var progressConditionResult = Studio.checkProgressConditions();
   var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
   var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
   var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
+
+  if (progressConditionResult) {
+    Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
+    Studio.message = utils.valueOr(progressConditionResult.message, null);
+    Studio.pauseInterpreter = utils.valueOr(progressConditionResult.pauseInterpreter, false);
+    return true;
+  }
 
   // Levels with goals (usually images that need to be touched) can have an optional success
   // condition that can explicitly return false to prevent the level from completing.
@@ -4876,23 +4943,6 @@ var checkFinished = function () {
       (hasGoals && level.completeOnSuccessConditionNotGoals && achievedRequiredSuccessCondition) ||
       (!hasGoals && achievedRequiredSuccessCondition)) {
     Studio.result = ResultType.SUCCESS;
-    return true;
-  }
-
-  if (requiredForSuccess.exists) {
-    if (requiredForSuccess.achieved) {
-      Studio.message = null;
-      Studio.result = ResultType.SUCCESS;
-      return true;
-    } else {
-      // Not meeting these is not reason for immediate failure in itself, but they do
-      // establish a custom error message.
-      Studio.message = requiredForSuccess.message;
-    }
-  }
-
-  if (Studio.midExecutionFailure) {
-    Studio.result = ResultType.FAILURE;
     return true;
   }
 
@@ -4910,7 +4960,7 @@ var checkFinished = function () {
 };
 
 
-},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
+},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./ThreeSliceAudio":"/home/ubuntu/staging/apps/build/js/studio/ThreeSliceAudio.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5123,12 +5173,9 @@ module.exports = RocketHeightLogic;
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
-require('../utils'); // Get Function.prototype.inherits
-
-var SVG_NS = "http://www.w3.org/2000/svg";
-
-// uniqueId that increments by 1 each time an element is created
-var uniqueId = 0;
+var utils = require('../utils');
+var StudioAnimation = require('./StudioAnimation');
+var StudioSpriteSheet = require('./StudioSpriteSheet');
 
 // mapping of how much we should rotate based on direction
 var DIR_TO_ROTATION = {};
@@ -5229,74 +5276,45 @@ var Projectile = function (options) {
   this.width = options.width || 50;
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
 
-  this.currentFrame_ = 0;
-  var self = this;
-  this.animator_ = window.setInterval(function () {
-    if (self.loop || self.currentFrame_ + 1 < self.frames) {
-      self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
-    }
-  }, 50);
-
   // origin is at an offset from sprite location
   this.x = options.spriteX + OFFSET_CENTER[options.dir].x +
             (options.spriteWidth * OFFSET_FROM_SPRITE[options.dir].x);
   this.y = options.spriteY + OFFSET_CENTER[options.dir].y +
             (options.spriteHeight * OFFSET_FROM_SPRITE[options.dir].y);
+
+  /** @private {StudioSpriteSheet} */
+  this.spriteSheet_ = new StudioSpriteSheet($.extend({}, options, {
+    width: options.spriteWidth,
+    height: options.spriteHeight,
+    horizontalAnimation: true,
+    totalAnimations: 1
+  }));
+
+  /** @private {StudioAnimation} */
+  this.animation_ = new StudioAnimation($.extend({}, options, {
+    spriteSheet: this.spriteSheet_
+  }));
 };
 Projectile.inherits(Collidable);
 module.exports = Projectile;
 
-/**
- * Test only function so that we can start our id count over.
- */
-Projectile.__resetIds = function () {
-  uniqueId = 0;
+/** @returns {SVGImageElement} */
+Projectile.prototype.getElement = function () {
+  return this.animation_.getElement();
 };
 
 /**
  * Create an image element with a clip path
  */
 Projectile.prototype.createElement = function (parentElement) {
-  // create our clipping path/rect
-  this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
-  var clipId = 'projectile_clippath_' + (uniqueId++);
-  this.clipPath.setAttribute('id', clipId);
-  var rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttribute('width', this.width);
-  rect.setAttribute('height', this.height);
-  this.clipPath.appendChild(rect);
-
-  parentElement.appendChild(this.clipPath);
-
-  this.element = document.createElementNS(SVG_NS, 'image');
-  this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    this.image);
-  this.element.setAttribute('height', this.height);
-  this.element.setAttribute('width', this.width * this.frames);
-  parentElement.appendChild(this.element);
-
-  this.element.setAttribute('clip-path', 'url(#' + clipId + ')');
+  this.animation_.createElement(parentElement);
 };
 
 /**
  * Remove our element/clipPath/animator
  */
 Projectile.prototype.removeElement = function () {
-  if (this.element) {
-    this.element.parentNode.removeChild(this.element);
-    this.element = null;
-  }
-
-  // remove clip path element
-  if (this.clipPath) {
-    this.clipPath.parentNode.removeChild(this.clipPath);
-    this.clipPath = null;
-  }
-
-  if (this.animator_) {
-    window.clearInterval(this.animator_);
-    this.animator_ = null;
-  }
+  this.animation_.removeElement();
 };
 
 /**
@@ -5308,15 +5326,13 @@ Projectile.prototype.display = function () {
     y: this.y - this.height / 2
   };
 
-  this.element.setAttribute('x', topLeft.x - this.width * this.currentFrame_);
-  this.element.setAttribute('y', topLeft.y);
+  this.animation_.redrawCenteredAt({
+    x: this.x,
+    y: this.y
+  });
 
-  var clipRect = this.clipPath.childNodes[0];
-  clipRect.setAttribute('x', topLeft.x);
-  clipRect.setAttribute('y', topLeft.y);
-
-  if (this.frames > 1) {
-    this.element.setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
+  if (this.spriteSheet_.framesPerAnimation > 1) {
+    this.getElement().setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
      ', ' + this.x + ', ' + this.y + ')');
   }
 };
@@ -5341,13 +5357,11 @@ Projectile.prototype.moveToNextPosition = function () {
  * @override
  */
 Projectile.prototype.setOpacity = function (newOpacity) {
-  if (this.element) {
-    this.element.setAttribute('opacity', newOpacity);
-  }
+  this.animation_.setOpacity(newOpacity);
 };
 
 
-},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/skins.js":[function(require,module,exports){
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./StudioAnimation":"/home/ubuntu/staging/apps/build/js/studio/StudioAnimation.js","./StudioSpriteSheet":"/home/ubuntu/staging/apps/build/js/studio/StudioSpriteSheet.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/skins.js":[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -5598,13 +5612,13 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
-    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
-    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
-    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
-    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW },
-    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
-    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
+    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
+    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
+    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -5679,6 +5693,15 @@ function loadHoc2015(skin, assetUrl) {
     };
   });
 
+  skin.bot1.movementAudio = [
+    { begin: 'bot1_move1_start', loop: 'bot1_move1_loop', end: 'bot1_move1_end' },
+    { begin: 'bot1_move2_start', loop: 'bot1_move2_loop', end: 'bot1_move2_end' },
+    { begin: 'bot1_move3_start', loop: 'bot1_move3_loop', end: 'bot1_move3_end' }
+  ];
+  skin.bot2.movementAudio = [
+    { loop: 'bot2_move_loop', end: 'bot2_move_end' }
+  ];
+
   skin.preventProjectileLoop = function (className) {
     return className === '';
   };
@@ -5686,6 +5709,9 @@ function loadHoc2015(skin, assetUrl) {
   skin.preventItemLoop = function (className) {
     return className === 'item_character1';
   };
+
+  // No failure avatar for this skin.
+  skin.failureAvatar = null;
 
   // TODO: Create actual item choices
   skin.pig = skin.assetUrl('walk_item1.png');
@@ -5817,9 +5843,13 @@ function loadHoc2015(skin, assetUrl) {
   skin.sounds = [
     'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
     'character1sound5', 'character1sound6', 'character1sound7', 'character1sound8',
+    'character1sound9',
     'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
     'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
     'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
+    'item4sound1', 'item4sound2', 'item4sound3',
+    'item5sound1', 'item5sound2', 'item5sound3',
+    'item6sound1', 'item6sound2', 'item6sound3',
     'alert1', 'alert2', 'alert3', 'alert4',
     'applause',
     'start', 'win', 'failure', 'flag',
@@ -5829,8 +5859,6 @@ function loadHoc2015(skin, assetUrl) {
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
   skin.playFinalGoalSound = true;
-
-  skin.moveSounds = ['move1', 'move2', 'move3'];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes
@@ -5904,7 +5932,7 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'hazard': { frames: 13, width: 100, height: 100, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
+    'hazard': { frames: 13, animationRate: 5, width: 100, height: 100, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
   };
 
   // Spritesheet for animated goal.
@@ -5967,15 +5995,21 @@ function loadHoc2015x(skin, assetUrl) {
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 8,
+        normal: 21,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: 10
+        walk: 19
       },
       timePerFrame: 100
     };
   });
+  skin.bot1.movementAudio = [
+    { begin: 'move1' },
+    { begin: 'move2' },
+    { begin: 'move3' },
+    { begin: 'move4' }
+  ];
 
   skin.preventProjectileLoop = function (className) {
     return className === '';
@@ -6000,12 +6034,6 @@ function loadHoc2015x(skin, assetUrl) {
 
   // Sounds.
   skin.sounds = [
-    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
-    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
-    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
-    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
-    'alert1', 'alert2', 'alert3', 'alert4',
-    'applause',
     'start', 'win', 'failure', 'flag',
     'move1', 'move2', 'move3', 'move4'
   ];
@@ -6013,8 +6041,6 @@ function loadHoc2015x(skin, assetUrl) {
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
   skin.playFinalGoalSound = true;
-
-  skin.moveSounds = ['move1', 'move2', 'move3', 'move4'];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes
@@ -7946,27 +7972,33 @@ levels.js_hoc2015_move_right = {
   },
   "callouts": [
     {
-      "id": "playlab:js_hoc2015_move_right:placeCommandsHere",
-      "element_id": ".droplet-main-canvas",
-      "hide_target_selector": ".droplet-drag-cover",
+      "id": "playlab:js_hoc2015_move_right:runButton",
+      "element_id": "#runButton",
+      "hide_target_selector": "#runButton",
       "qtip_config": {
         "content": {
-          "text": msg.calloutPlaceCommandsHere(),
+          "text": msg.calloutRunButton(),
         },
         'hide': {
           'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top left',
-          'at': 'top left',
+          'at': 'bottom center',
           'adjust': {
-            'x': 10,
-            'y': 20
+            'x': 0,
+            'y': 0
           }
         }
       }
     }
   ],
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 levels.js_hoc2015_move_right_down = {
@@ -8006,7 +8038,13 @@ levels.js_hoc2015_move_right_down = {
     'goalImage': 'goal2',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 
@@ -8049,7 +8087,38 @@ levels.js_hoc2015_move_diagonal = {
     'goalImage': 'goal1',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ],
+  "callouts": [
+    {
+      'id': 'playlab:js_hoc2015_move_diagonal:placeCommandsHere',
+      'element_id': '#show-code-header',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutShowCodeToggle(),
+        },
+        'hide': {
+          'event': 'mouseup touchend',
+        },
+        'position': {
+          'my': 'top right',
+          'at': 'bottom left',
+          'adjust': {
+            'x': 0,
+            'y': 0
+          }
+        }
+      }
+    }
+  ]
 };
 
 
@@ -8090,7 +8159,15 @@ levels.js_hoc2015_move_backtrack = {
     'goalImage': 'goal1',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 levels.js_hoc2015_move_around = {
@@ -8131,7 +8208,15 @@ levels.js_hoc2015_move_around = {
     'goalImage': 'goal2',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 
@@ -8173,7 +8258,15 @@ levels.js_hoc2015_move_finale = {
     'goalImage': 'goal2',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 
@@ -8225,24 +8318,32 @@ levels.js_hoc2015_event_two_items = {
     'imageHeight': 100,
     'goalRenderOffsetX': 0
   },
+
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true }, 
+      result: { success: true, message: msg.successCharacter1() } },
+    { required: { 'timedOut': true }, 
+      result: { success: false, message: msg.failedTwoItemsTimeout() } }
+  ],
+
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_event_two_items:placeCommandsHere',
-      'element_id': '.droplet-main-canvas',
+      'element_id': '.droplet-gutter-line:nth-of-type(2)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content': {
-          'text': msg.calloutPlaceCommandsHere(),
+          'text': msg.calloutShowPlaceGoUpHere(),
         },
         'hide': {
           'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top left',
-          'at': 'top left',
+          'at': 'bottom right',
           'adjust': {
-            'x': 10,
-            'y': 20
+            'x': 30,
+            'y': -10
           }
         }
       }
@@ -8319,26 +8420,13 @@ levels.js_hoc2015_event_four_items = {
     'imageWidth': 100,
     'imageHeight': 100
   },
-  'callouts': [
-    {
-      'id': 'playlab:js_hoc2015_event_four_items:typeCommandsHere',
-      'element_id': '.ace_scroller',
-      'qtip_config': {
-        'content' : {
-          'text': msg.calloutTypeCommandsHere(),
-        },
-        'event': 'click mousedown touchstart mouseup touchend',
-        'position': {
-          'my': 'center right',
-          'at': 'top left',
-          'adjust': {
-            'x': 25,
-            'y': 25
-          }
-        }
-      }
-    }
-  ],
+
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true }, 
+      result: { success: true, message: msg.successCharacter1() } },
+    { required: { 'timedOut': true }, 
+      result: { success: false, message: msg.failedFourItemsTimeout() } }
+  ]
 };
 
 
@@ -8391,21 +8479,29 @@ levels.js_hoc2015_score =
     'imageHeight': 100
   },
   'goal': {
+    // The level uses completeOnSuccessConditionNotGoals, so make sure this
+    // returns null  The progressConditions will take care of completion.
     successCondition: function () { return false; }
   },
-  'requiredForSuccess' : {
-    'touchAllItems': true,
-    'winGame': true
-  },
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 }, 
+      result: { success: false, message: msg.failedScoreTimeout() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 }, 
+      result: { success: false, message: msg.failedScoreScore() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 }, 
+      result: { success: false, message: msg.failedScoreGoals() } },
+    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ],
   'completeOnSuccessConditionNotGoals': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_event_choose_character:placeCommandsAtTop',
-      'element_id': '.droplet-main-canvas',
+      'id': 'playlab:js_hoc2015_score:placeCommandsAtTop',
+      'element_id': '.droplet-gutter-line:nth-of-type(2)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content': {
-          'text': msg.calloutPlaceCommandsAtTop(),
+          'text': msg.calloutShowPlaySound(),
         },
         'hide': {
           'event': 'mouseup touchend',
@@ -8414,7 +8510,7 @@ levels.js_hoc2015_score =
           'my': 'top left',
           'at': 'top left',
           'adjust': {
-            'x': 10,
+            'x': 170,
             'y': 20
           }
         }
@@ -8464,26 +8560,35 @@ levels.js_hoc2015_win_lose = {
   'showTimeoutRect': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_win_lose:charactersMove',
-      'element_id': '#droplet_palette_block_setToFlee',
+      'id': 'playlab:js_hoc2015_win_lose:instructions',
+      'element_id': '#prompt-table',
+      'hide_target_selector': '#prompt-table',
       'qtip_config': {
         'content': {
-          'text': msg.calloutCharactersMove(),
+          'text': msg.calloutInstructions(),
         },
         'position': {
-          'my': 'center left',
-          'at': 'center right',
+          'my': 'bottom left',
+          'at': 'top right',
           'adjust': {
-            'x': 15,
+            'x': -40,
             'y': 0
           }
         }
       }
     }
   ],
-  'requiredForSuccess' : {
-    'winGame': true
-  },
+
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 }, 
+      result: { success: false, message: msg.failedWinLoseTimeout() } },
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 }, 
+      result: { success: false, message: msg.failedWinLoseScore() } },
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 }, 
+      result: { success: false, message: msg.failedWinLoseGoals() } },
+    { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ]
 };
 
 
@@ -8549,10 +8654,12 @@ levels.js_hoc2015_add_characters = {
     }
   ],
 
-  'requiredForSuccess' : {
-    'removedItemCount': 3,
-    'winGame': true
-  }
+  'progressConditions' : [
+    { required: { 'collectedItemsAtOrAbove': 3 }, 
+      result: { success: true, message: msg.successCharacter1() } },
+    { required: { 'timedOut': true, 'collectedItemsBelow': 3 }, 
+      result: { success: false, message: msg.failedAddCharactersTimeout() } }
+  ]
 };
 
 
@@ -8574,7 +8681,7 @@ levels.js_hoc2015_chain_characters = {
     'playSound("character1sound3");',
     '',
     'function whenGetMouse() {',
-    '  playSound("item3sound4");',
+    '  playSound("item6sound2");',
     '  addCharacter("mouse");',
     '  addCharacter("mouse");',
     '}',
@@ -8593,9 +8700,16 @@ levels.js_hoc2015_chain_characters = {
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
-  'requiredForSuccess' : {
-    'winGame': true
-  }
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsBelow': 800 }, 
+      result: { success: false, message: msg.failedChainCharactersTimeout() } },
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 8, 'currentPointsBelow': 800 }, 
+      result: { success: false, message: msg.failedChainCharactersScore() } },
+    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsAtOrAbove': 800 }, 
+      result: { success: false, message: msg.failedChainCharactersItems() } },
+    { required: { 'collectedItemsAtOrAbove': 8, 'currentPointsAtOrAbove': 800 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ]
 };
 
 levels.js_hoc2015_chain_characters_2 = {
@@ -8617,17 +8731,18 @@ levels.js_hoc2015_chain_characters_2 = {
     'addCharacter("roo");',
     '',
     'function whenGetRoo() {',
-    '  playSound("character1sound2");',
+    '  playSound("item3sound4");',
     '  addPoints(50);',
     '  addCharacter("bird");',
     '  addCharacter("bird");',
     '}',
     '',
     'function whenGetBird() {',
+    '  playSound("item4sound1");',
     '',
     '}',
     'function whenGetMouse() {',
-    '  playSound("character1sound3");',
+    '  playSound("item6sound2");',
     '  addPoints(100);',
     '  ',
     '}',
@@ -8646,9 +8761,33 @@ levels.js_hoc2015_chain_characters_2 = {
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
-  'requiredForSuccess' : {
-    'scoreMinimum': 100
-  }
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'collectedItemsBelow': 14 }, 
+      result: { success: false, message: msg.failedChainCharacters2Timeout() } },
+    { required: { 'collectedItemsAtOrAbove': 14 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ],
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwo',
+      'element_id': '.droplet-gutter-line:nth-of-type(12)',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutPlaceTwo(),
+        },
+        'event': 'mouseup touchend',
+        'position': {
+          'my': 'top left',
+          'at': 'center right',
+          'adjust': {
+            'x': 40,
+            'y': 10
+          }
+        }
+      }
+    }
+  ]
 };
 
 levels.js_hoc2015_change_setting = {
@@ -8657,17 +8796,17 @@ levels.js_hoc2015_change_setting = {
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'setBot': { 'category': 'Commands' },
-    'setBackground': { 'category': 'Commands' },
-    'setBotSpeed': { 'category': 'Commands' },
-    'setMap': { 'category': 'Commands' },
-    'playSound': { 'category': 'Commands' },
-    'addCharacter': { 'category': 'Commands' },
-    'addPoints': { 'category': 'Commands' },
-    'removePoints': { 'category': 'Commands' },
+    'setBot': null,
+    'setBackground': null,
+    'setBotSpeed': null,
+    'setMap': null,
+    'playSound': null,
+    'addCharacter': null,
+    'addPoints': null,
+    'removePoints': null,
 
-    'whenScore1000': { 'category': 'Events' },
-    'whenGetPilot': { 'category': 'Events' },
+    'whenScore1000': null,
+    'whenGetPilot': null,
   },
   'startBlocks': [
     'addCharacter("pilot");',
@@ -8679,10 +8818,6 @@ levels.js_hoc2015_change_setting = {
     'function whenGetPilot() {',
     '  addPoints(400);',
     '  setBackground("random");',
-    '  ',
-    '}',
-    'function whenGetAllCharacters() {',
-    '  endGame("win");',
     '  ',
     '}',
     ''].join('\n'),
@@ -8702,27 +8837,35 @@ levels.js_hoc2015_change_setting = {
   'showTimeoutRect': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_change_setting:clickCategory',
-      'element_id': '.droplet-palette-group-header.green',
+      'id': 'playlab:js_hoc2015_change_setting:setMap',
+      'element_id': '#droplet_palette_block_setMap',
+      'hide_target_selector': '#droplet_palette_block_setMap',
       'qtip_config': {
         'content' : {
-          'text': msg.calloutClickCategory(),
+          'text': msg.calloutSetMapAndSpeed(),
         },
         'position': {
-          'my': 'top center',
-          'at': 'bottom center',
+          'my': 'center left',
+          'at': 'center right',
         }
       }
     }
   ],
-  'requiredForSuccess' : {
-    'setSprite': true,
-    'setBotSpeed': true,
-    'setBackground': true,
-    'setMap': true,
-    'winGame': true
-  }
+  'progressConditions' : [
+    // Collected all the items and set the right properties?  Success.
+    { required: { 'setMap': true, 'setBotSpeed': true, 'collectedItemsAtOrAbove': 3 },
+      result: { success: true, message: msg.successGenericCharacter() } },
+    // Special message for timing out when not enough items collected.
+    { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
+      result: { success: false, message: msg.failedChangeSettingTimeout() } },
+    // If all items are collected, but either property not set?  Failure.
+    { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 }, 
+      result: { success: false, message: msg.failedChangeSettingSettings() } },
+    { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 }, 
+      result: { success: false, message: msg.failedChangeSettingSettings() } }
+  ]
 };
+
 
 levels.js_hoc2015_event_free = {
   'editCode': true,
@@ -8751,7 +8894,16 @@ levels.js_hoc2015_event_free = {
     'whenGetMouse': { 'category': 'Events' },
     'whenGetRoo': { 'category': 'Events' },
     'whenGetSpider': { 'category': 'Events' },
-    'whenGetCharacter': { 'category': 'Events' }
+    'whenGetCharacter': { 'category': 'Events' },
+
+    'whenGetAllMen': { 'category': 'Events' },
+    'whenGetAllPilots': { 'category': 'Events' },
+    'whenGetAllPigs': { 'category': 'Events' },
+    'whenGetAllBirds': { 'category': 'Events' },
+    'whenGetAllMice': { 'category': 'Events' },
+    'whenGetAllRoos': { 'category': 'Events' },
+    'whenGetAllSpiders': { 'category': 'Events' },
+    'whenGetAllCharacters': { 'category': 'Events' }
   },
   'startBlocks': [
     'setBackground("forest");',
@@ -8773,19 +8925,16 @@ levels.js_hoc2015_event_free = {
   'autoArrowSteer': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_event_free:tryOutNewCommands',
-      'element_id': '.droplet-palette-canvas',
+      'id': 'playlab:js_hoc2015_event_free:clickCategory',
+      'element_id': '.droplet-palette-group-header.green',
+      'hide_target_selector': '.droplet-palette-group-header.green',
       'qtip_config': {
-        'content': {
-          'text': msg.calloutTryOutNewCommands(),
+        'content' : {
+          'text': msg.calloutClickEvents(),
         },
         'position': {
-          'my': 'center left',
-          'at': 'center right',
-          'adjust': {
-            'x': -20,
-            'y': 0
-          }
+          'my': 'top center',
+          'at': 'bottom center',
         }
       }
     }
@@ -8811,7 +8960,7 @@ levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
   ],
 });
 
-levels.hoc2015_blockly_3 = utils.extend(levels.js_move_diagonal,  {
+levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_diagonal,  {
   editCode: false,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
@@ -8946,9 +9095,14 @@ module.exports.blocks = [
     dropdown: { 0: [
       '"random"',
       '"character1sound1"', '"character1sound2"', '"character1sound3"', '"character1sound4"',
+      '"character1sound5"', '"character1sound6"', '"character1sound7"', '"character1sound8"',
+      '"character1sound9"',
       '"character2sound1"', '"character2sound2"', '"character2sound3"', '"character2sound4"',
       '"item1sound1"', '"item1sound2"', '"item1sound3"', '"item1sound4"',
       '"item3sound1"', '"item3sound2"', '"item3sound3"', '"item3sound4"',
+      '"item4sound1"', '"item4sound2"', '"item4sound3"',
+      '"item5sound1"', '"item5sound2"', '"item5sound3"',
+      '"item6sound1"', '"item6sound2"', '"item6sound3"',
       '"alert1"', '"alert2"', '"alert3"', '"alert4"',
       '"applause"'
       ] } },
@@ -8965,25 +9119,6 @@ module.exports.blocks = [
   {func: 'moveFast', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'moveNormal', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'moveSlow', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
-  
-  {func: 'whenTouchAllCharacters', block: 'function whenTouchAllCharacters() {}', expansion: 'function whenTouchAllCharacters() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
-
-  {func: 'whenGetAllMen', block: 'function whenGetAllMen() {}', expansion: 'function whenGetAllMen() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllPilots', block: 'function whenGetAllPilots() {}', expansion: 'function whenGetAllPilots() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllPigs', block: 'function whenGetAllPigs() {}', expansion: 'function whenGetAllPigs() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllBirds', block: 'function whenGetAllBirds() {}', expansion: 'function whenGetAllBirds() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllMice', block: 'function whenGetAllMice() {}', expansion: 'function whenGetAllMice() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllRoos', block: 'function whenGetAllRoos() {}', expansion: 'function whenGetAllRoos() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllSpiders', block: 'function whenGetAllSpiders() {}', expansion: 'function whenGetAllSpiders() {\n  __;\n}', category: '' },
-
-  {func: 'whenTouchAllMen', block: 'function whenTouchAllMen() {}', expansion: 'function whenTouchAllMen() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllPilots', block: 'function whenTouchAllPilots() {}', expansion: 'function whenTouchAllPilots() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllPigs', block: 'function whenTouchAllPigs() {}', expansion: 'function whenTouchAllPigs() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllBirds', block: 'function whenTouchAllBirds() {}', expansion: 'function whenTouchAllBirds() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllMice', block: 'function whenTouchAllMice() {}', expansion: 'function whenTouchAllMice() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllRoos', block: 'function whenTouchAllRoos() {}', expansion: 'function whenTouchAllRoos() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllSpiders', block: 'function whenTouchAllSpiders() {}', expansion: 'function whenTouchAllSpiders() {\n  __;\n}', category: '' },
 
   {func: 'whenTouchGoal', block: 'function whenTouchGoal() {}', expansion: 'function whenTouchGoal() {\n  __;\n}', category: '' },
   {func: 'whenTouchAllGoals', block: 'function whenTouchAllGoals() {}', expansion: 'function whenTouchAllGoals() {\n  __;\n}', category: '' },
@@ -9013,6 +9148,25 @@ module.exports.blocks = [
   {func: 'whenTouchMouse', block: 'function whenTouchMouse() {}', expansion: 'function whenTouchMouse() {\n  __;\n}', category: '' },
   {func: 'whenTouchRoo', block: 'function whenTouchRoo() {}', expansion: 'function whenTouchRoo() {\n  __;\n}', category: '' },
   {func: 'whenTouchSpider', block: 'function whenTouchSpider() {}', expansion: 'function whenTouchSpider() {\n  __;\n}', category: '' },
+
+  {func: 'whenTouchAllCharacters', block: 'function whenTouchAllCharacters() {}', expansion: 'function whenTouchAllCharacters() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
+
+  {func: 'whenGetAllMen', block: 'function whenGetAllMen() {}', expansion: 'function whenGetAllMen() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllPilots', block: 'function whenGetAllPilots() {}', expansion: 'function whenGetAllPilots() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllPigs', block: 'function whenGetAllPigs() {}', expansion: 'function whenGetAllPigs() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllBirds', block: 'function whenGetAllBirds() {}', expansion: 'function whenGetAllBirds() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllMice', block: 'function whenGetAllMice() {}', expansion: 'function whenGetAllMice() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllRoos', block: 'function whenGetAllRoos() {}', expansion: 'function whenGetAllRoos() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllSpiders', block: 'function whenGetAllSpiders() {}', expansion: 'function whenGetAllSpiders() {\n  __;\n}', category: '' },
+
+  {func: 'whenTouchAllMen', block: 'function whenTouchAllMen() {}', expansion: 'function whenTouchAllMen() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllPilots', block: 'function whenTouchAllPilots() {}', expansion: 'function whenTouchAllPilots() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllPigs', block: 'function whenTouchAllPigs() {}', expansion: 'function whenTouchAllPigs() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllBirds', block: 'function whenTouchAllBirds() {}', expansion: 'function whenTouchAllBirds() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllMice', block: 'function whenTouchAllMice() {}', expansion: 'function whenTouchAllMice() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllRoos', block: 'function whenTouchAllRoos() {}', expansion: 'function whenTouchAllRoos() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllSpiders', block: 'function whenTouchAllSpiders() {}', expansion: 'function whenTouchAllSpiders() {\n  __;\n}', category: '' },
 
   // Functions hidden from autocomplete - not used in hoc2015:
   {func: 'setSprite', parent: api, category: '', params: ['0', '"bot1"'], dropdown: { 1: [ '"random"', '"bot1"', '"bot2"' ] } },
@@ -12037,7 +12191,134 @@ exports.isKeyDown = function (keyCode) {
 };
 
 
-},{"./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/Item.js":[function(require,module,exports){
+},{"./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/ThreeSliceAudio.js":[function(require,module,exports){
+/** @file A three-part loopable audio effect (start-loop-end). */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var debugLogging = false;
+function debug(msg) {
+  if (debugLogging && console && console.info) {
+    console.info('Audio: ' + msg);
+  }
+}
+
+/** @enum {number} */
+var PlaybackState = {
+  NONE: 'none',
+  BEGIN: 'begin',
+  LOOP: 'loop',
+  END: 'end'
+};
+
+/**
+ * A loopable audio effect defined with three parts (start, middle, end) so that
+ * you can get a smooth start/finish effect.
+ *
+ * Assumes the audio clips in question have already been preloaded by another
+ * system.
+ *
+ * @param {AudioPlayer} audioPlayer
+ * @param {string} begin - Audio clip name for start of sound.
+ * @param {string} loop - Audio clip name for loopable part of sound.
+ * @param {string} end - Audio clip name for end of sound.
+ * @constructor
+ */
+var ThreeSliceAudio = function (audioPlayer, begin, loop, end) {
+  /** @private {PlaybackState} */
+  this.state_ = PlaybackState.NONE;
+  /** @private {AudioPlayer} */
+  this.audioPlayer_ = audioPlayer;
+  /** @private {string} */
+  this.beginClipName_ = begin;
+  /** @private {string} */
+  this.loopClipName_ = loop;
+  /** @private {string} */
+  this.endClipName_ = end;
+};
+module.exports = ThreeSliceAudio;
+
+/**
+ * Turn on the audio effect, causing it to begin and then transition to the loop.
+ * Will do nothing if the effect is already playing, so safe to call often (on
+ * a key-repeat, for example).
+ */
+ThreeSliceAudio.prototype.on = function () {
+  if (this.state_ === PlaybackState.NONE || this.state_ === PlaybackState.END) {
+    debug('on');
+    this.enterState_(PlaybackState.BEGIN);
+  }
+};
+
+/**
+ * Turn off the audio effect.  If the loop has not started yet (the sound is
+ * still starting up) then it will just stop immediately.  If the loop has
+ * started, the end effect will be played and then the audio will stop.
+ */
+ThreeSliceAudio.prototype.off = function () {
+  debug('off');
+  if (this.state_ === PlaybackState.BEGIN || this.state_ === PlaybackState.LOOP) {
+    this.enterState_(PlaybackState.END);
+  }
+};
+
+ThreeSliceAudio.prototype.enterState_ = function (state) {
+  this.exitState_(this.state_);
+  debug(this.state_ + ' -> ' + state);
+  this.state_ = state;
+  var callback = this.whenSoundStopped_.bind(this, state);
+  if (state === PlaybackState.BEGIN) {
+    if (this.beginClipName_) {
+      this.audioPlayer_.play(this.beginClipName_, { onEnded: callback });
+    } else {
+      this.enterState_(PlaybackState.LOOP);
+    }
+  } else if (state === PlaybackState.LOOP) {
+    if (this.loopClipName_) {
+      this.audioPlayer_.play(this.loopClipName_, { loop: true, onEnded: callback });
+    } else {
+      this.enterState_(PlaybackState.END);
+    }
+  } else if (state === PlaybackState.END) {
+    if (this.endClipName_) {
+      this.audioPlayer_.play(this.endClipName_, { onEnded: callback });
+    } else {
+      this.enterState_(PlaybackState.NONE);
+    }
+  }
+};
+
+ThreeSliceAudio.prototype.exitState_ = function (state) {
+  if (state === PlaybackState.BEGIN && this.beginClipName_) {
+    this.audioPlayer_.stopLoopingAudio(this.beginClipName_);
+  } else if (state === PlaybackState.LOOP && this.loopClipName_) {
+    this.audioPlayer_.stopLoopingAudio(this.loopClipName_);
+  } else if (state === PlaybackState.END && this.endClipName_) {
+    this.audioPlayer_.stopLoopingAudio(this.endClipName_);
+  }
+};
+
+ThreeSliceAudio.prototype.whenSoundStopped_ = function (stoppedState) {
+  debug('soundStopped (' + stoppedState + ')');
+  if (stoppedState === PlaybackState.BEGIN && this.state_ === PlaybackState.BEGIN) {
+    this.enterState_(PlaybackState.LOOP);
+  } else if (stoppedState === PlaybackState.END && this.state_ === PlaybackState.END) {
+    this.enterState_(PlaybackState.NONE);
+  }
+};
+
+
+},{}],"/home/ubuntu/staging/apps/build/js/studio/Item.js":[function(require,module,exports){
 var Collidable = require('./collidable');
 var constants = require('./constants');
 var studioMsg = require('./locale');
@@ -12046,11 +12327,8 @@ var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
 var utils = require('../utils');
 var _ = utils.getLodash();
-
-var SVG_NS = "http://www.w3.org/2000/svg";
-
-// uniqueId that increments by 1 each time an element is created
-var uniqueId = 0;
+var StudioAnimation = require('./StudioAnimation');
+var StudioSpriteSheet = require('./StudioSpriteSheet');
 
 /**
  * An Item is a type of Collidable.
@@ -12064,6 +12342,8 @@ var Item = function (options) {
   this.height = options.height || 50;
   this.width = options.width || 50;
 
+  this.spritesCounterclockwise = options.spritesCounterclockwise || false;
+
   /**
    * Rendering offset for item animation vs display position - applied as
    * late as possible.
@@ -12072,20 +12352,22 @@ var Item = function (options) {
   this.renderOffset = options.renderOffset || { x: 0, y: 0 };
 
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
-  this.renderScale = options.renderScale || 1;
   this.displayDir = Direction.SOUTH;
   this.startFadeTime = null;
   this.fadeTime = constants.ITEM_FADE_TIME;
 
-  this.currentFrame_ = 0;
-  this.animator_ = window.setInterval(function () {
-    if (this.loop || this.currentFrame_ + 1 < this.frames) {
-      this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
-    }
-  }.bind(this), 50);
+  /** @private {StudioAnimation} */
+  this.animation_ = new StudioAnimation($.extend({}, options, {
+    spriteSheet: new StudioSpriteSheet(options)
+  }));
 };
 Item.inherits(Collidable);
 module.exports = Item;
+
+/** @returns {SVGImageElement} */
+Item.prototype.getElement = function () {
+  return this.animation_.getElement();
+};
 
 /**
  * Returns the frame of the spritesheet for the current walking direction.
@@ -12101,44 +12383,18 @@ Item.prototype.getDirectionFrame = function() {
     }
   }
 
-  return constants.frameDirTableWalkingWithIdle[this.displayDir];
-};
+  var frameDirTable = this.spritesCounterclockwise ? 
+    constants.frameDirTableWalkingWithIdleCounterclockwise : 
+    constants.frameDirTableWalkingWithIdleClockwise;
 
-/**
- * Test only function so that we can start our id count over.
- */
-Item.__resetIds = function () {
-  uniqueId = 0;
+  return frameDirTable[this.displayDir];
 };
 
 /**
  * Create an image element with a clip path
  */
 Item.prototype.createElement = function (parentElement) {
-  var nextId = (uniqueId++);
-
-  var numFacingAngles = 9;
-
-  // create our clipping path/rect
-  this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
-  var clipId = 'item_clippath_' + nextId;
-  this.clipPath.setAttribute('id', clipId);
-  var rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttribute('width', this.width * this.renderScale);
-  rect.setAttribute('height', this.height * this.renderScale);
-  this.clipPath.appendChild(rect);
-
-  parentElement.appendChild(this.clipPath);
-  var itemId = 'item_' + nextId;
-  this.element = document.createElementNS(SVG_NS, 'image');
-  this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    this.image);
-  this.element.setAttribute('id', itemId);
-  this.element.setAttribute('height', this.height * this.frames * this.renderScale);
-  this.element.setAttribute('width', this.width * numFacingAngles * this.renderScale);
-  parentElement.appendChild(this.element);
-
-  this.element.setAttribute('clip-path', 'url(#' + clipId + ')');
+  this.animation_.createElement(parentElement);
 };
 
 
@@ -12362,23 +12618,7 @@ Item.prototype.beginRemoveElement = function () {
  * Remove our element/clipPath/animator
  */
 Item.prototype.removeElement = function() {
-
-  if (this.element) {
-    this.element.parentNode.removeChild(this.element);
-    this.element = null;
-  }
-
-  // remove clip path element
-  if (this.clipPath) {
-    this.clipPath.parentNode.removeChild(this.clipPath);
-    this.clipPath = null;
-  }
-
-  if (this.animator_) {
-    window.clearInterval(this.animator_);
-    this.animator_ = null;
-  }
-
+  this.animation_.removeElement();
   Studio.trackedBehavior.removedItemCount++;
 };
 
@@ -12405,16 +12645,12 @@ Item.prototype.hasCompletedFade = function() {
  * Display our item at its current location
  */
 Item.prototype.display = function () {
-  var topLeft = {
-    x: this.x + this.renderOffset.x - this.width / 2,
-    y: this.y + this.renderOffset.y - this.height / 2
-  };
-
   var currentTime = new Date().getTime();
   var opacity = 1;
   if (this.startFadeTime) {
     opacity = 1 - (currentTime - this.startFadeTime) / this.fadeTime;
     opacity = Math.max(opacity, 0);
+    this.animation_.setOpacity(opacity);
   }
 
   // Watch behavior does not change logical position, should update every frame
@@ -12422,14 +12658,11 @@ Item.prototype.display = function () {
     this.turnToFaceActor(Studio.protagonistSpriteIndex || 0);
   }
 
-  var directionFrame = this.getDirectionFrame();
-  this.element.setAttribute('x', topLeft.x - this.width * (directionFrame * this.renderScale + (this.renderScale-1)/2));
-  this.element.setAttribute('y', topLeft.y - this.height * (this.currentFrame_ * this.renderScale + (this.renderScale-1)));
-  this.element.setAttribute('opacity', opacity);
-
-  var clipRect = this.clipPath.childNodes[0];
-  clipRect.setAttribute('x', topLeft.x - this.width * (this.renderScale-1)/2);
-  clipRect.setAttribute('y', topLeft.y - this.height * (this.renderScale-1));
+  this.animation_.setCurrentAnimation(this.getDirectionFrame());
+  this.animation_.redrawCenteredAt({
+    x: this.x + this.renderOffset.x,
+    y: this.y + this.renderOffset.y
+  });
 };
 
 Item.prototype.getNextPosition = function () {
@@ -12463,12 +12696,12 @@ Item.prototype.moveToNextPosition = function () {
 Item.prototype.startCollision = function (key) {
   var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
   if (newCollisionStarted) {
-    if (this.isHazard) {
+    if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
+      Studio.trackedBehavior.touchedHazardCount++;
       var actor = Studio.sprite[key];
       if (actor) {
         actor.addAction(new spriteActions.FadeActor(constants.TOUCH_HAZARD_FADE_TIME));
         actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_FADE_TIME));
-        Studio.fail(studioMsg.failedAvoidHazard());
       }
     }
   }
@@ -12481,13 +12714,11 @@ Item.prototype.startCollision = function (key) {
  * @override
  */
 Item.prototype.setOpacity = function (newOpacity) {
-  if (this.element) {
-    this.element.setAttribute('opacity', newOpacity);
-  }
+  this.animation_.setOpacity(newOpacity);
 };
 
 
-},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js"}],"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js":[function(require,module,exports){
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./StudioAnimation":"/home/ubuntu/staging/apps/build/js/studio/StudioAnimation.js","./StudioSpriteSheet":"/home/ubuntu/staging/apps/build/js/studio/StudioSpriteSheet.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js"}],"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js":[function(require,module,exports){
 /** @file Actions that can be given to a playlab sprite to execute over a set time. */
 /* jshint
  funcscope: true,
@@ -12946,7 +13177,307 @@ Collidable.prototype.setOpacity = function (newOpacity) {
 };
 
 
-},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/constants.js":[function(require,module,exports){
+},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/StudioSpriteSheet.js":[function(require,module,exports){
+/** @file A utility that can help find particular frames within a spritesheet,
+ * given certain metadata about that spritesheet */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var utils = require('../utils');
+
+/**
+ * Provider of metadata about a particular sprite sheet, to help find frames
+ * within it.
+ *
+ * Assumptions:
+ * All frames are the same size, and are arranged in a grid.
+ * All animations are the same number of frames.
+ * Each animation is a single column or a single row
+ *
+ * @constructor
+ * @param {!Object} options
+ * @param {!string} options.image - URL of the sprite sheet asset.
+ * @param {number} [options.width] - frame width in original asset.  Default 50.
+ * @param {number} [options.height] - frame height in original asset. Default 50.
+ * @param {number} [options.totalAnimations] - How many animations (columns)
+ *        there are in the sprite sheet. Default 9.
+ * @param {number} [options.frames] - How many frames (rows) there are per
+ *        animation. Default 1.
+ * @param {boolean} [options.horizontalAnimation] - If animation frames run in
+ *        rows instead of columns.
+ */
+var StudioSpriteSheet = module.exports = function (options) {
+  /** @type {string} spritesheet asset path */
+  this.assetPath = options.image;
+
+  /** @type {number} */
+  this.frameWidth = utils.valueOr(options.width, 50); // TODO: Magic Number
+
+  /** @type {number} */
+  this.frameHeight = utils.valueOr(options.height, 50); // TODO: Magic Number
+
+  /** @type {number} animations in sheet / width in frames of sprite sheet */
+  this.totalAnimations = utils.valueOr(options.totalAnimations, 9);
+
+  /** @type {number} frames per animation / height in frames of sprite sheet */
+  this.framesPerAnimation = utils.valueOr(options.frames, 1);
+
+  /** @type {boolean} Whether animation frames run in rows, not columns */
+  this.horizontalAnimation = utils.valueOr(options.horizontalAnimation, false);
+};
+
+/** @return {number} original height of the whole sprite sheet. */
+StudioSpriteSheet.prototype.assetWidth = function () {
+    return this.frameWidth * (this.horizontalAnimation ?
+            this.framesPerAnimation : this.totalAnimations);
+};
+
+/** @return {number} original width of the whole sprite sheet. */
+StudioSpriteSheet.prototype.assetHeight = function () {
+  return this.frameHeight * (this.horizontalAnimation ?
+          this.totalAnimations : this.framesPerAnimation);
+};
+
+/**
+ * Get the framing rect for a particular animation and frame within the
+ * sprite sheet.
+ * @param {number} animationIndex - Which animation to look up.
+ * @param {number} frameIndex - Which frame in the animation to look up.
+ * @returns {Object} a frame rect at spritesheet scale relative to the sheet's
+ *          top-left corner.
+ */
+StudioSpriteSheet.prototype.getFrame = function (animationIndex, frameIndex) {
+  var x = this.frameWidth * (this.horizontalAnimation ? frameIndex : animationIndex);
+  var y = this.frameHeight * (this.horizontalAnimation ? animationIndex : frameIndex);
+  return {
+    x: x,
+    y: y,
+    width: this.frameWidth,
+    height: this.frameHeight,
+    top: y,
+    left: x,
+    right: x + this.frameWidth,
+    bottom: y + this.frameHeight
+  };
+};
+
+
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/studio/StudioAnimation.js":[function(require,module,exports){
+/** @file An animated image, which handles frame counts, rates and offsets
+ * internally and exposes simple methods for rendering at the desired position. */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var constants = require('./constants');
+var utils = require('../utils');
+
+// The SVG namespace that must be applied to new SVG elements
+var SVG_NS = "http://www.w3.org/2000/svg";
+
+// Unique element ID that increments by 1 each time an element is created
+var uniqueId = 0;
+
+/**
+ * A StudioAnimation represents an animation asset that can be created,
+ * positioned and rendered by other code.  It tries to hide away all the
+ * details of actually rendering the correct frame at the correct offset
+ * and advancing frames at the correct rate.
+ * @constructor
+ * @param {!Object} options
+ * @param {!StudioSpriteSheet} spriteSheet - The source asset for this animation,
+ *        wrapped in necessary metadata.
+ * @param {number} [options.renderScale] - Default 1.
+ * @param {number} [options.opacity] - Opacity on a 0-1 scale.  Default 1.
+ * @param {number} [options.animationRate] - How fast the animation should be
+ *        played, in frames per second.  Default 20.
+ * @param {boolean} [options.loop] - Whether the animation should loop
+ *        automatically.  Default false.
+ */
+var StudioAnimation = module.exports = function (options) {
+  /** @private {StudioSpriteSheet} */
+  this.spriteSheet_ = options.spriteSheet;
+
+  /** @private {number} render scale */
+  this.renderScale_ = utils.valueOr(options.renderScale, 1);
+
+  /** @private {number} opacity on a scale of 0 (transparent) to 1 (opaque) */
+  this.opacity_ = utils.valueOr(options.opacity, 1);
+
+  /**
+   * Which animation (which column in the sprite sheet) is currently playing.
+   * @private {number}
+   */
+  this.currentAnimation_ = 0;
+
+  /** @private {number} index of current frame in the current animation. */
+  this.currentFrame_ = 0;
+
+  /** @private {boolean} whether the animation should loop automatically. */
+  this.loop_ = utils.valueOr(options.loop, false);
+
+  /** @private {SVGImageElement} */
+  this.element_ = null;
+
+  /** @private {SVGElement} */
+  this.clipPath_ = null;
+
+  // Setting the animation rate here initializes the setInterval that keeps
+  // the current frame changing at the framerate.
+  this.setAnimationRate(utils.valueOr(options.animationRate,
+      constants.DEFAULT_ANIMATION_RATE));
+};
+
+/**
+ * Test only function so that we can start our id count over.
+ */
+StudioAnimation.__resetIds = function () {
+  uniqueId = 0;
+};
+
+/** @returns {SVGImageElement} */
+StudioAnimation.prototype.getElement = function () {
+  return this.element_;
+};
+
+/**
+ * Create an image element with a clip path
+ */
+StudioAnimation.prototype.createElement = function (parentElement) {
+  var nextId = (uniqueId++);
+
+  // create our clipping path/rect
+  this.clipPath_ = document.createElementNS(SVG_NS, 'clipPath');
+  var clipId = 'studioanimation_clippath_' + nextId;
+  this.clipPath_.setAttribute('id', clipId);
+  var rect = document.createElementNS(SVG_NS, 'rect');
+  rect.setAttribute('width', this.spriteSheet_.frameWidth * this.renderScale_);
+  rect.setAttribute('height', this.spriteSheet_.frameHeight * this.renderScale_);
+  this.clipPath_.appendChild(rect);
+  parentElement.appendChild(this.clipPath_);
+
+  var itemId = 'studioanimation_' + nextId;
+  this.element_ = document.createElementNS(SVG_NS, 'image');
+  this.element_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+     this.spriteSheet_.assetPath);
+  this.element_.setAttribute('id', itemId);
+  this.element_.setAttribute('height',
+      this.spriteSheet_.assetHeight() * this.renderScale_);
+  this.element_.setAttribute('width',
+      this.spriteSheet_.assetWidth() * this.renderScale_);
+  parentElement.appendChild(this.element_);
+
+  this.element_.setAttribute('clip-path', 'url(#' + clipId + ')');
+};
+
+/**
+ * Remove our element/clipPath/animator
+ */
+StudioAnimation.prototype.removeElement = function() {
+
+  if (this.element_) {
+    this.element_.parentNode.removeChild(this.element_);
+    this.element_ = null;
+  }
+
+  // remove clip path element
+  if (this.clipPath_) {
+    this.clipPath_.parentNode.removeChild(this.clipPath_);
+    this.clipPath_ = null;
+  }
+
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+    this.animator_ = null;
+  }
+};
+
+/**
+ * Display the current frame at the given location
+ */
+StudioAnimation.prototype.redrawCenteredAt = function (center) {
+  var frame = this.spriteSheet_.getFrame(this.currentAnimation_, this.currentFrame_);
+  var scale = this.renderScale_;
+
+  // Preserved behavior: When scaling a sprite up, we actually scale around the
+  //       bottom-center of the sprite (so feet stay planted in the same place)
+  //       rather than actually around its center.
+  //       That's what the (2 * scale - 1) bit is about; just change that to
+  //       (scale) if you want to scale about the sprite center again.
+  // TODO: Improve this by scaling around an explicitly encoded 'sprite center'
+  var topLeft = {
+    x: center.x - (frame.width / 2) * scale,
+    y: center.y - (frame.height / 2) * (2 * scale - 1)
+  };
+
+  // Offset the spritesheet DOM element by the inverse of the offset of the
+  // frame we want to display.
+  this.element_.setAttribute('x', topLeft.x - frame.left * scale);
+  this.element_.setAttribute('y', topLeft.y - frame.top * scale);
+  this.element_.setAttribute('opacity', this.opacity_);
+
+  // Then set the clip rect to the position where we want to display it, so
+  // only the frame that's now positioned correctly is shown.
+  var clipRect = this.clipPath_.childNodes[0];
+  clipRect.setAttribute('x', topLeft.x);
+  clipRect.setAttribute('y', topLeft.y);
+};
+
+/**
+ * Sets which animation to play out of the sprite sheet.
+ * Animations are indexed by their position in the sprite sheet, where each
+ * animation is its own column and animation zero is the far-left column.
+ * @param {!number} animationIndex
+ */
+StudioAnimation.prototype.setCurrentAnimation = function (animationIndex) {
+  this.currentAnimation_ = animationIndex;
+};
+
+/**
+ * Set the animation rate for this item's sprite.
+ * @param {number} framesPerSecond
+ */
+StudioAnimation.prototype.setAnimationRate = function (framesPerSecond) {
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+  }
+  this.animator_ = window.setInterval(function () {
+    if (this.loop_ || this.currentFrame_ + 1 < this.spriteSheet_.framesPerAnimation) {
+      this.currentFrame_ = (this.currentFrame_ + 1) %
+          this.spriteSheet_.framesPerAnimation;
+    }
+  }.bind(this), Math.round(1000 / framesPerSecond));
+};
+
+/**
+ * Change visible opacity of this animation..
+ * @param {number} newOpacity (between 0 and 1)
+ */
+StudioAnimation.prototype.setOpacity = function (newOpacity) {
+  this.opacity_ = newOpacity;
+};
+
+
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/constants.js":[function(require,module,exports){
 'use strict';
 
 exports.SpriteSpeed = {
@@ -13038,34 +13569,33 @@ frameDirTableWalking[Dir.SOUTHWEST]  = 7;
 exports.frameDirTableWalking = frameDirTableWalking;
 
 
-// Normal for preview
-var frameDirTableWalkingWithIdle = {};
-frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
-frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
-frameDirTableWalkingWithIdle[Dir.SOUTHEAST]  = 1;
-frameDirTableWalkingWithIdle[Dir.EAST]       = 2;
-frameDirTableWalkingWithIdle[Dir.NORTHEAST]  = 3;
-frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
-frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 5;
-frameDirTableWalkingWithIdle[Dir.WEST]       = 6;
-frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 7;
+// Forward-to-left (clockwise)
+var frameDirTableWalkingWithIdleClockwise = {};
+frameDirTableWalkingWithIdleClockwise[Dir.NONE]       = 8;
+frameDirTableWalkingWithIdleClockwise[Dir.SOUTH]      = 0;
+frameDirTableWalkingWithIdleClockwise[Dir.SOUTHEAST]  = 1;
+frameDirTableWalkingWithIdleClockwise[Dir.EAST]       = 2;
+frameDirTableWalkingWithIdleClockwise[Dir.NORTHEAST]  = 3;
+frameDirTableWalkingWithIdleClockwise[Dir.NORTH]      = 4;
+frameDirTableWalkingWithIdleClockwise[Dir.NORTHWEST]  = 5;
+frameDirTableWalkingWithIdleClockwise[Dir.WEST]       = 6;
+frameDirTableWalkingWithIdleClockwise[Dir.SOUTHWEST]  = 7;
 
+exports.frameDirTableWalkingWithIdleClockwise = frameDirTableWalkingWithIdleClockwise;
 
-// Reversed for final
-/*
-var frameDirTableWalkingWithIdle = {};
-frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
-frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
-frameDirTableWalkingWithIdle[Dir.SOUTHEAST]  = 7;
-frameDirTableWalkingWithIdle[Dir.EAST]       = 6;
-frameDirTableWalkingWithIdle[Dir.NORTHEAST]  = 5;
-frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
-frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 3;
-frameDirTableWalkingWithIdle[Dir.WEST]       = 2;
-frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 1;
-*/
+// Forward-to-right (counter-clockwise)
+var frameDirTableWalkingWithIdleCounterclockwise = {};
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NONE]       = 8;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTH]      = 0;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHEAST]  = 7;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.EAST]       = 6;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTHEAST]  = 5;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTH]      = 4;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTHWEST]  = 3;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.WEST]       = 2;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHWEST]  = 1;
 
-exports.frameDirTableWalkingWithIdle = frameDirTableWalkingWithIdle;
+exports.frameDirTableWalkingWithIdleCounterclockwise = frameDirTableWalkingWithIdleCounterclockwise;
 
 /**
  * Given a direction, returns the unit vector for it.
@@ -13311,6 +13841,9 @@ exports.RANDOM_VALUE = 'random';
 exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
+
+/** @type {number} animation rate in frames per second. */
+exports.DEFAULT_ANIMATION_RATE = 20;
 
 // Fade durations (in milliseconds)
 exports.GOAL_FADE_TIME = 200;
