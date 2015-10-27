@@ -3991,7 +3991,9 @@ Studio.movementAudioOn = function () {
   Studio.movementAudioOff();
   Studio.currentMovementAudio = Studio.currentMovementAudioOptions[
       Math.floor(Math.random() * Studio.currentMovementAudioOptions.length)];
-  Studio.currentMovementAudio.on();
+  if (Studio.currentMovementAudio) {
+    Studio.currentMovementAudio.on();
+  }
 };
 
 Studio.movementAudioOff = function () {
