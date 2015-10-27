@@ -69,6 +69,7 @@ function Sounds() {
  * @param {Array.<string>} soundPaths list of sound file URLs ending in their
  *                                   file format (.mp3|.ogg|.wav)
  * @param {string} soundID ID for sound
+ * @returns {Sound}
  */
 Sounds.prototype.registerByFilenamesAndID = function (soundPaths, soundID) {
   var soundRegistrationConfig = { id: soundID };
@@ -83,13 +84,18 @@ Sounds.prototype.registerByFilenamesAndID = function (soundPaths, soundID) {
       soundRegistrationConfig[extension] = soundFilePath;
     }
   }
-  this.register(soundRegistrationConfig);
+  return this.register(soundRegistrationConfig);
 };
 
+/**
+ * @param {Object} config
+ * @returns {Sound}
+ */
 Sounds.prototype.register = function (config) {
   var sound = new Sound(config, this.audioContext);
   this.soundsById[config.id] = sound;
   sound.preload();
+  return sound;
 };
 
 /**

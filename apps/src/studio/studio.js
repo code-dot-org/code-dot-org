@@ -1563,6 +1563,7 @@ Studio.init = function(config) {
     }
   });
 
+  Studio.musicController = new MusicController(studioApp.cdoSounds, skin.assetUrl, skin.music);
   config.loadAudio = function() {
     var soundFileNames = [];
     // We want to load the basic list of effects available in the skin
@@ -1578,10 +1579,16 @@ Studio.init = function(config) {
       studioApp.loadAudio(skin.soundFiles[sound], sound);
     });
 
-    // Handle music separately - the music controller does preloading, autoplaying,
-    Studio.musicController = new MusicController(studioApp.cdoSounds, skin.assetUrl, skin.music);
+    // Handle music separately - the music controller does its own preloading.
     Studio.musicController.preload();
   };
+
+  // Play music when the instructions are shown
+  var onInstructionsShown = function () {
+    Studio.musicController.play();
+    document.removeEventListener('instructionsShown', onInstructionsShown);
+  };
+  document.addEventListener('instructionsShown', onInstructionsShown);
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
