@@ -285,7 +285,6 @@ ActiveRecord::Schema.define(version: 20151022174100) do
 
   add_index "puzzle_ratings", ["script_id", "level_id"], name: "index_puzzle_ratings_on_script_id_and_level_id", using: :btree
   add_index "puzzle_ratings", ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
-  add_index "puzzle_ratings", ["user_id"], name: "index_puzzle_ratings_on_user_id", using: :btree
 
   create_table "script_levels", force: :cascade do |t|
     t.integer  "level_id",   limit: 4, null: false
