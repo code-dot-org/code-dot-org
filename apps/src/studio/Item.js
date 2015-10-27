@@ -21,6 +21,8 @@ var Item = function (options) {
   this.height = options.height || 50;
   this.width = options.width || 50;
 
+  this.spritesCounterclockwise = options.spritesCounterclockwise || false;
+
   /**
    * Rendering offset for item animation vs display position - applied as
    * late as possible.
@@ -60,7 +62,11 @@ Item.prototype.getDirectionFrame = function() {
     }
   }
 
-  return constants.frameDirTableWalkingWithIdle[this.displayDir];
+  var frameDirTable = this.spritesCounterclockwise ? 
+    constants.frameDirTableWalkingWithIdleCounterclockwise : 
+    constants.frameDirTableWalkingWithIdleClockwise;
+
+  return frameDirTable[this.displayDir];
 };
 
 /**
@@ -369,12 +375,12 @@ Item.prototype.moveToNextPosition = function () {
 Item.prototype.startCollision = function (key) {
   var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
   if (newCollisionStarted) {
-    if (this.isHazard) {
+    if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
+      Studio.trackedBehavior.touchedHazardCount++;
       var actor = Studio.sprite[key];
       if (actor) {
         actor.addAction(new spriteActions.FadeActor(constants.TOUCH_HAZARD_FADE_TIME));
         actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_FADE_TIME));
-        Studio.fail(studioMsg.failedAvoidHazard());
       }
     }
   }

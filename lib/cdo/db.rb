@@ -13,7 +13,7 @@ def sequel_connect(writer, reader)
 
   db.extension :server_block
 
-  #db.loggers << $log if rack_env?(:development)
+  db.loggers << $log if rack_env?(:development)
 
   db
 end
