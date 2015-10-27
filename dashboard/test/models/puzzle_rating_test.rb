@@ -13,7 +13,7 @@ class PuzzleRatingTest < ActiveSupport::TestCase
 
     assert_equal true, PuzzleRating.can_rate?(@script, @level, @student)
 
-    PuzzleRating.create(script: @script, level: @level, user: @student)
+    PuzzleRating.create(script: @script, level: @level, user: @student, rating: 0)
 
     assert_equal false, PuzzleRating.can_rate?(@script, @level, @student)
   end
@@ -23,7 +23,7 @@ class PuzzleRatingTest < ActiveSupport::TestCase
 
     assert_equal true, PuzzleRating.can_rate?(@script, @level, nil)
 
-    PuzzleRating.create(script: @script, level: @level, user: nil)
+    PuzzleRating.create(script: @script, level: @level, user: nil, rating: 0)
 
     assert_equal true, PuzzleRating.can_rate?(@script, @level, nil)
   end
