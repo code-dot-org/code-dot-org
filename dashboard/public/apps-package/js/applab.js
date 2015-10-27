@@ -403,6 +403,7 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var level;
 var skin;
 var copyrightStrings;
+var dropletConfigBlocks;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -1145,7 +1146,17 @@ Applab.init = function(config) {
   config.varsInGlobals = true;
   config.noButtonsBelowOnMobileShare = true;
 
-  config.dropletConfig = dropletConfig;
+  // filter blocks to exclude anything that isn't in code functions if
+  // autocompletePaletteApisOnly is true
+  dropletConfigBlocks = dropletConfig.blocks.filter(function (block) {
+    return !(config.level.executePaletteApisOnly &&
+      config.level.codeFunctions[block.func] === undefined);
+  });
+
+  config.dropletConfig = $.extend({}, dropletConfig, {
+    blocks: dropletConfigBlocks
+  });
+
   config.pinWorkspaceToBottom = true;
 
   config.vizAspectRatio = Applab.appWidth / Applab.footerlessAppHeight;
@@ -1656,25 +1667,26 @@ Applab.execute = function() {
     if (level.editCode) {
       // Use JS interpreter on editCode levels
       Applab.JSInterpreter = new JSInterpreter({
-          code: codeWhenRun,
-          blocks: dropletConfig.blocks,
-          enableEvents: true,
-          studioApp: studioApp,
-          shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
-          maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-          onNextStepChanged: Applab.updatePauseUIState,
-          onPause: Applab.onPauseContinueButton,
-          onExecutionError: handleExecutionError,
-          onExecutionWarning: outputApplabConsole
+        code: codeWhenRun,
+        blocks: dropletConfigBlocks,
+        enableEvents: true,
+        studioApp: studioApp,
+        shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
+        maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
+        onNextStepChanged: Applab.updatePauseUIState,
+        onPause: Applab.onPauseContinueButton,
+        onExecutionError: handleExecutionError,
+        onExecutionWarning: outputApplabConsole
       });
       if (!Applab.JSInterpreter.initialized()) {
-          return;
+        return;
       }
     } else {
       Applab.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
-                                          StudioApp: studioApp,
-                                          Applab: apiBlockly,
-                                          Globals: Applab.Globals } );
+        StudioApp: studioApp,
+        Applab: apiBlockly,
+        Globals: Applab.Globals
+      });
     }
   }
 
