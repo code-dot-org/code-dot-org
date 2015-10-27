@@ -34,6 +34,7 @@ var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
 var ThreeSliceAudio = require('./ThreeSliceAudio');
+var MusicController = require('./MusicController');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -1566,8 +1567,6 @@ Studio.init = function(config) {
     var soundFileNames = [];
     // We want to load the basic list of effects available in the skin
     soundFileNames.push.apply(soundFileNames, skin.sounds);
-    // Also the music, preload it (unless we later find a streaming solution)
-    soundFileNames.push.apply(soundFileNames, skin.music);
     // We also want to load the movement sounds used in hoc2015
     soundFileNames.push.apply(soundFileNames, Studio.getMovementSoundFileNames(skin));
     // No need to load anything twice, so de-dupe our list.
@@ -1579,16 +1578,9 @@ Studio.init = function(config) {
       studioApp.loadAudio(skin.soundFiles[sound], sound);
     });
 
-    // Set the first music sound to play on load
-    var firstMusic = skin.music[0];
-    if (firstMusic) {
-      var sound = studioApp.cdoSounds.get(firstMusic);
-      if (sound) {
-        sound.onLoad = function () {
-          sound.play({loop: true});
-        };
-      }
-    }
+    // Handle music separately - the music controller does preloading, autoplaying,
+    Studio.musicController = new MusicController(studioApp.cdoSounds, skin.assetUrl, skin.music);
+    Studio.musicController.preload();
   };
 
   config.afterInject = function() {
