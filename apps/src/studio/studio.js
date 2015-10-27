@@ -1566,6 +1566,8 @@ Studio.init = function(config) {
     var soundFileNames = [];
     // We want to load the basic list of effects available in the skin
     soundFileNames.push.apply(soundFileNames, skin.sounds);
+    // Also the music, preload it (unless we later find a streaming solution)
+    soundFileNames.push.apply(soundFileNames, skin.music);
     // We also want to load the movement sounds used in hoc2015
     soundFileNames.push.apply(soundFileNames, Studio.getMovementSoundFileNames(skin));
     // No need to load anything twice, so de-dupe our list.
@@ -1576,28 +1578,17 @@ Studio.init = function(config) {
       skin.soundFiles[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl(sound + '.ogg')];
       studioApp.loadAudio(skin.soundFiles[sound], sound);
     });
-  };
 
-  /**
-   * Get a flattened list of all the sound file names (sans extensions)
-   * specified in the skin for avatar movement (these may be omitted from the
-   * skin.sounds list because we don't want them accessible to the player).
-   * @param {Object} level skin from which to extract sound effect names.
-   * @returns {string[]} which may contain duplicates but will not have any
-   *          undefined entries.
-   */
-  Studio.getMovementSoundFileNames = function (fromSkin) {
-    var avatarList = fromSkin.avatarList || [];
-    return avatarList.map(function (avatarName) {
-      var movementAudio = fromSkin[avatarName].movementAudio || [];
-      return movementAudio.reduce(function (memo, nextOption) {
-        return memo.concat([nextOption.begin, nextOption.loop, nextOption.end]);
-      }, []);
-    }).reduce(function (memo, next) {
-      return memo.concat(next);
-    }, []).filter(function (fileName) {
-      return fileName !== undefined;
-    });
+    // Set the first music sound to play on load
+    var firstMusic = skin.music[0];
+    if (firstMusic) {
+      var sound = studioApp.cdoSounds.get(firstMusic);
+      if (sound) {
+        sound.onLoad = function () {
+          sound.play({loop: true});
+        };
+      }
+    }
   };
 
   config.afterInject = function() {
@@ -1688,6 +1679,28 @@ Studio.init = function(config) {
     preloadProjectileAndItemImages();
     preloadBackgroundImages();
   }
+};
+
+/**
+ * Get a flattened list of all the sound file names (sans extensions)
+ * specified in the skin for avatar movement (these may be omitted from the
+ * skin.sounds list because we don't want them accessible to the player).
+ * @param {Object} level skin from which to extract sound effect names.
+ * @returns {string[]} which may contain duplicates but will not have any
+ *          undefined entries.
+ */
+Studio.getMovementSoundFileNames = function (fromSkin) {
+  var avatarList = fromSkin.avatarList || [];
+  return avatarList.map(function (avatarName) {
+    var movementAudio = fromSkin[avatarName].movementAudio || [];
+    return movementAudio.reduce(function (memo, nextOption) {
+      return memo.concat([nextOption.begin, nextOption.loop, nextOption.end]);
+    }, []);
+  }).reduce(function (memo, next) {
+    return memo.concat(next);
+  }, []).filter(function (fileName) {
+    return fileName !== undefined;
+  });
 };
 
 var preloadImage = function(url) {
