@@ -151,6 +151,11 @@ module LevelsHelper
       # currently, all levels are Blockly or DSLDefined except for Unplugged
       @app_options = view_options.camelize_keys
     end
+
+    # Fix up app_options that are configured with a baseUrl with a host name but no leading '//'
+    base_url = @app_options[:baseUrl]
+    @app_options[:baseUrl] = "//#{base_url}" unless base_url.blank? || base_url.start_with?('/')
+
     @app_options
   end
 
