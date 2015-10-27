@@ -2,7 +2,7 @@
  * Copyright (c) 2015 Anthony Bau.
  * MIT License.
  *
- * Date: 2015-10-23
+ * Date: 2015-10-26
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Generated from C.g4 by ANTLR 4.5
@@ -64933,17 +64933,11 @@ hook('populate', 1, function() {
   pressedVKey = false;
   pressedXKey = false;
   this.copyPasteInput.addEventListener('keydown', function(event) {
+    pressedVKey = pressedXKey = false;
     if (event.keyCode === 86) {
       return pressedVKey = true;
     } else if (event.keyCode === 88) {
       return pressedXKey = true;
-    }
-  });
-  this.copyPasteInput.addEventListener('keyup', function(event) {
-    if (event.keyCode === 86) {
-      return pressedVKey = false;
-    } else if (event.keyCode === 88) {
-      return pressedXKey = false;
     }
   });
   return this.copyPasteInput.addEventListener('input', (function(_this) {
