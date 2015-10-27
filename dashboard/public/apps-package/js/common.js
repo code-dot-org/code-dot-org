@@ -6328,6 +6328,9 @@ StudioApp.prototype.toggleRunReset = function(button) {
   run.disabled = !showRun;
   reset.style.display = !showRun ? 'inline-block' : 'none';
   reset.disabled = showRun;
+
+  // Toggle soft-buttons (all have the 'arrow' class set):
+  $('.arrow').prop("disabled", showRun);
 };
 
 /**
@@ -6350,6 +6353,7 @@ StudioApp.prototype.loadAudio = function(filenames, name) {
  * @param {string} name sound ID
  * @param {Object} options for sound playback
  * @param {number} options.volume value between 0.0 and 1.0 specifying volume
+ * @param {function} [options.onEnded]
  */
 StudioApp.prototype.playAudio = function(name, options) {
   if (!this.cdoSounds) {
@@ -6472,8 +6476,12 @@ StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
       // look to see if we have a predefined arrangement for this type
       type = xmlChild.getAttribute('type');
       if (arrangement[type]) {
-        xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangement[type].x);
-        xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangement[type].y);
+        if (arrangement[type].x && !xmlChild.hasAttribute('x')) {
+          xmlChild.setAttribute('x', arrangement[type].x);
+        }
+        if (arrangement[type].y && !xmlChild.hasAttribute('y')) {
+          xmlChild.setAttribute('y', arrangement[type].y);
+        }
       }
     }
   }
@@ -7735,7 +7743,7 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
  *   should display the error in.
  */
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
-  if (dashboard.project.exceedsAbuseThreshold()) {
+  if (window.dashboard && dashboard.project.exceedsAbuseThreshold()) {
     this.displayAlert(parentSelector, {
       body: React.createElement(dashboard.AbuseError, {
         i18n: {
@@ -30876,8 +30884,8 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <link href="', escape((6,  assetUrl('css/common.css') )), '" media="all" rel="stylesheet">\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/manifest.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/blockly.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/' + options.locale + '/blockly_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((11,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((12,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((13,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');15; // delay to onload to fix IE9. 
-; buf.push('\n    window.onload = function() {\n      ', escape((17,  app )), 'Main(', (17,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body class="readonly">\n  <div id="codeWorkspace"></div>\n</body>\n</html>\n'); })();
+ buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <link href="', escape((6,  assetUrl('css/common.css') )), '" media="all" rel="stylesheet">\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/blockly.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/' + options.locale + '/blockly_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((11,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((12,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');14; // delay to onload to fix IE9. 
+; buf.push('\n    window.onload = function() {\n      ', escape((16,  app )), 'Main(', (16,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body class="readonly">\n  <div id="codeWorkspace"></div>\n</body>\n</html>\n'); })();
 } 
 return buf.join('');
 };
@@ -31415,6 +31423,7 @@ var dom = require('../dom');
  */
 var DropletBlockTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.showExamplesLink = dropletTooltipManager.dropletConfig.showExamplesLink;
   this.tooltipsEnabled = true;
 };
 
@@ -31468,6 +31477,9 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = f
       content: this.getTooltipHTML(funcName),
       offsetX: tooltipOffsetX,
       functionReady: function (_, contents) {
+        if (!this.showExamplesLink) {
+          return;
+        }
         var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
         // Important this binds to mouseDown/touchDown rather than click, needs to
         // happen before `blur` which triggers the ace editor completer popup
@@ -31505,7 +31517,7 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
+    showExamplesLink: this.showExamplesLink
   });
 };
 
@@ -31682,6 +31694,7 @@ var dom = require('../dom');
  */
 var DropletAutocompletePopupTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.showExamplesLink = dropletTooltipManager.dropletConfig.showExamplesLink;
   this.tooltipsEnabled = true;
 };
 
@@ -31772,6 +31785,9 @@ DropletAutocompletePopupTooltipManager.prototype.attachTooltipForFunction = func
   var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
     content: tooltipDOM,
     functionReady: function (_, contents) {
+      if (!this.showExamplesLink) {
+        return;
+      }
       var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
       // Important this binds to mouseDown/touchDown rather than click, needs to
       // happen before `blur` which triggers the ace editor completer popup
@@ -31802,7 +31818,7 @@ DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (func
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
+    showExamplesLink: this.showExamplesLink
   });
   return dropletFunctionTooltipMarkup;
 };
@@ -31834,7 +31850,7 @@ with (locals || {}) { (function(){
      * TODO(bjordan): would be nice to split the following line up, can't figure
      * out how to do so without inserting extraneous spaces between parameters.
      */
-   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('', (8,  parameters[i].name), '');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (functionShortDescription) { ; buf.push('<div>', escape((10,  functionShortDescription )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="javascript:void(0);">See examples</a>\n</div>\n'); })();
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('', (8,  parameters[i].name), '');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (functionShortDescription) { ; buf.push('<div>', escape((10,  functionShortDescription )), '</div>');10; } ; buf.push('\n');11; if (showExamplesLink) { ; buf.push('\n  <div class="tooltip-example-link">\n    <a href="javascript:void(0);">See examples</a>\n  </div>\n');15; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -31861,6 +31877,7 @@ var dom = require('../dom');
  */
 var DropletAutocompleteParameterTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.showExamplesLink = dropletTooltipManager.dropletConfig.showExamplesLink;
   this.showParamDropdowns = dropletTooltipManager.dropletConfig.showParamDropdowns;
   this.tooltipConfig = {
     interactive: true,
@@ -31985,11 +32002,13 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
   cursorTooltip.tooltipster('content', this.getTooltipHTML(tooltipInfo, currentParameterIndex));
   cursorTooltip.tooltipster('show');
 
-  var seeExamplesLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-example-link > a')[0];
-  dom.addClickTouchEvent(seeExamplesLink, function (event) {
-    this.dropletTooltipManager.showDocFor(functionName);
-    event.stopPropagation();
-  }.bind(this));
+  if (this.showExamplesLink) {
+    var seeExamplesLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-example-link > a')[0];
+    dom.addClickTouchEvent(seeExamplesLink, function (event) {
+      this.dropletTooltipManager.showDocFor(functionName);
+      event.stopPropagation();
+    }.bind(this));
+  }
 
   var chooseAsset = tooltipInfo.parameterInfos[currentParameterIndex].assetTooltip;
   if (chooseAsset) {
@@ -32022,7 +32041,7 @@ DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL(),
+    showExamplesLink : this.showExamplesLink,
     currentParameterIndex: currentParameterIndex
   });
 };
@@ -32330,7 +32349,7 @@ with (locals || {}) { (function(){
      * TODO(bjordan): would be nice to split the following line up, can't figure
      * out how to do so without inserting extraneous spaces between parameters.
      */
-   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n');11; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].assetTooltip) { ; buf.push('\n  <div class="tooltip-choose-link">\n    <a href="javascript:void(0);">Choose...</a>\n  </div>\n');15; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="javascript:void(0);">See examples</a>\n</div>\n'); })();
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n');11; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].assetTooltip) { ; buf.push('\n  <div class="tooltip-choose-link">\n    <a href="javascript:void(0);">Choose...</a>\n  </div>\n');15; } ; buf.push('\n');16; if (showExamplesLink) { ; buf.push('\n  <div class="tooltip-example-link">\n    <a href="javascript:void(0);">See examples</a>\n  </div>\n');20; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -34322,10 +34341,8 @@ exports.makeNativeMemberFunction = function (opts) {
     return function() {
       // Just call the native function and marshal the return value:
       var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, arguments);
-      return exports.marshalNativeToInterpreter(opts.interpreter,
-                                                nativeRetVal,
-                                                null,
-                                                opts.maxDepth);
+      return exports.marshalNativeToInterpreter(opts.interpreter, nativeRetVal,
+        null, opts.maxDepth);
     };
   } else {
     return function() {
@@ -34335,10 +34352,8 @@ exports.makeNativeMemberFunction = function (opts) {
         nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
       }
       var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, nativeArgs);
-      return exports.marshalNativeToInterpreter(opts.interpreter,
-                                                nativeRetVal,
-                                                null,
-                                                opts.maxDepth);
+      return exports.marshalNativeToInterpreter(opts.interpreter, nativeRetVal,
+        null, opts.maxDepth);
     };
   }
 };
@@ -34396,21 +34411,28 @@ function populateGlobalFunctions(interpreter, blocks, scope) {
 
 function populateJSFunctions(interpreter) {
   // The interpreter is missing some basic JS functions. Add them as needed:
+  var wrapper;
 
   // Add static methods from String:
   var functions = ['fromCharCode'];
   for (var i = 0; i < functions.length; i++) {
-    var wrapper = exports.makeNativeMemberFunction({
-        interpreter: interpreter,
-        nativeFunc: String[functions[i]],
-        nativeParentObj: String,
+    wrapper = exports.makeNativeMemberFunction({
+      interpreter: interpreter,
+      nativeFunc: String[functions[i]],
+      nativeParentObj: String,
     });
-    interpreter.setProperty(interpreter.STRING,
-                            functions[i],
-                            interpreter.createNativeFunction(wrapper),
-                            false,
-                            true);
+    interpreter.setProperty(interpreter.STRING, functions[i],
+      interpreter.createNativeFunction(wrapper), false, true);
   }
+
+  // Add String.prototype.includes
+  wrapper = function(searchStr) {
+    // Polyfill based off of https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+    return interpreter.createPrimitive(
+      String.prototype.indexOf.apply(this, arguments) !== -1);
+  };
+  interpreter.setProperty(interpreter.STRING.properties.prototype, 'includes',
+    interpreter.createNativeFunction(wrapper), false, true);
 }
 
 /**
@@ -34696,6 +34718,11 @@ var _ = utils.getLodash();
  * @property {Object} parent object within which this function is defined as a property, keyed by the func name
  * @property {String} category category within which to place the block
  * @property {String} type type of the block (e.g. value)
+ * @property {string[]} paletteParams
+ * @property {string[]} params
+ * @property {Object.<number, funciton>} dropdown
+ * @property {bool} dontMarshal
+ * @property {bool} noAutocomplete
  */
 
 /**
@@ -34758,6 +34785,7 @@ exports.dropletBuiltinConfigBlocks = [
   {func: 'Math.abs', category: 'Math', type: 'value' },
   {func: 'Math.max', category: 'Math', type: 'value' },
   {func: 'Math.min', category: 'Math', type: 'value' },
+  {func: 'Math.random', category: 'Math', type: 'value' }
 ];
 
 /**
@@ -34785,12 +34813,14 @@ standardConfig.blocks = [
   {func: 'andOperator', block: '__ && __', category: 'Math' },
   {func: 'orOperator', block: '__ || __', category: 'Math' },
   {func: 'notOperator', block: '!__', category: 'Math' },
-  {func: 'randomNumber_max', block: 'randomNumber(__)', category: 'Math' },
+  // randomNumber_max has been deprecated
+  // {func: 'randomNumber_max', block: 'randomNumber(__)', category: 'Math' },
   {func: 'randomNumber_min_max', block: 'randomNumber(__, __)', category: 'Math' },
   {func: 'mathRound', block: 'Math.round(__)', category: 'Math' },
   {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math' },
   {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },
   {func: 'mathMin', block: 'Math.min(__)', category: 'Math' },
+  {func: 'mathRandom', block: 'Math.random(__)', category: 'Math' },
 
   // Variables
   {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables' },
@@ -34843,52 +34873,47 @@ standardConfig.categories = {
  * @returns {Array}
  */
 function mergeFunctionsWithConfig(codeFunctions, dropletConfig, otherConfig) {
+  if (!codeFunctions || !dropletConfig || !dropletConfig.blocks) {
+    return [];
+  }
+
   var merged = [];
 
-  if (codeFunctions && dropletConfig && dropletConfig.blocks) {
-    var blockSets = [ dropletConfig.blocks ];
-    if (otherConfig) {
-      blockSets.splice(0, 0, otherConfig.blocks);
-    }
-    // codeFunctions is an object with named key/value pairs
-    //  key is a block name from dropletBlocks or standardBlocks
-    //  value is an object that can be used to override block defaults
-    for (var s = 0; s < blockSets.length; s++) {
-      var blocks = blockSets[s];
-      for (var i = 0; i < blocks.length; i++) {
-        var block = blocks[i];
-        if (blocks[i].func in codeFunctions) {
-          // We found this particular block, now override the defaults with extend
-          merged.push(utils.extend(blocks[i], codeFunctions[blocks[i].func]));
-        }
+  var blockSets = [ dropletConfig.blocks ];
+  if (otherConfig) {
+    blockSets.splice(0, 0, otherConfig.blocks);
+  }
+
+  // codeFunctions is an object with named key/value pairs
+  //  key is a block name from dropletBlocks or standardBlocks
+  //  value is an object that can be used to override block defaults
+  for (var s = 0; s < blockSets.length; s++) {
+    var set = blockSets[s];
+    for (var i = 0; i < set.length; i++) {
+      var block = set[i];
+      if (block.func in codeFunctions) {
+        // We found this particular block, now override the defaults with extend
+        merged.push($.extend({}, block, codeFunctions[block.func]));
       }
     }
   }
+
   return merged;
 }
 
-//
-// Return a new categories object with the categories from dropletConfig
-// merged with the ones in standardConfig
-//
-
+/**
+ * Return a new categories object with the categories from dropletConfig (app
+ * specific configuration) merged with the ones in standardConfig (global
+ * configuration). App configuration takes precendence
+ */
 function mergeCategoriesWithConfig(dropletConfig) {
-  var merged = {};
-
-  if (dropletConfig && dropletConfig.categories) {
-    var categorySets = [ dropletConfig.categories, standardConfig.categories ];
-    for (var s = 0; s < categorySets.length; s++) {
-      var categories = categorySets[s];
-      for (var catName in categories) {
-        if (!(catName in merged)) {
-          merged[catName] = utils.shallowCopy(categories[catName]);
-        }
-      }
-    }
-  } else {
-    merged = standardConfig.categories;
-  }
-  return merged;
+  // Clone our merged categories so that as we mutate it, we're not mutating
+  // our original config
+  var dropletCategories = dropletConfig && dropletConfig.categories;
+  // We include dropletCategories twice so that (a) it's ordering of categories
+  // gets preference and (b) it's value override anything in standardConfig
+  return _.cloneDeep($.extend({}, dropletCategories, standardConfig.categories,
+    dropletCategories));
 }
 
 /**
@@ -34934,25 +34959,29 @@ function buildFunctionPrototype(prefix, params) {
 
 /**
  * Generate a palette for the droplet editor based on some level data.
+ * @param {object} codeFunctions The set of functions we want to use for this level
+ * @param {object} dropletConfig
+ * @param {function} dropletConfig.getBlocks
+ * @param {object} dropletConfig.categories
  */
 exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions,
-                                                 dropletConfig,
-                                                 standardConfig);
+  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig,
+    standardConfig);
+
   for (var i = 0; i < mergedFunctions.length; i++) {
-    var cf = mergedFunctions[i];
-    var block = cf.block;
-    var expansion = cf.expansion;
+    var funcInfo = mergedFunctions[i];
+    var block = funcInfo.block;
+    var expansion = funcInfo.expansion;
     if (!block) {
-      var prefix = cf.blockPrefix || cf.func;
-      var paletteParams = cf.paletteParams || cf.params;
+      var prefix = funcInfo.blockPrefix || funcInfo.func;
+      var paletteParams = funcInfo.paletteParams || funcInfo.params;
       block = buildFunctionPrototype(prefix, paletteParams);
       if (paletteParams) {
         // If paletteParams were specified and used for the 'block', then use
         // the regular params for the 'expansion' which appears when the block
         // is dragged out of the palette:
-        expansion = buildFunctionPrototype(prefix, cf.params);
+        expansion = buildFunctionPrototype(prefix, funcInfo.params);
       }
     }
 
@@ -34963,9 +34992,9 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
     var blockPair = {
       block: block,
       expansion: expansion,
-      title: cf.func
+      title: funcInfo.func
     };
-    mergedCategories[cf.category].blocks.push(blockPair);
+    mergedCategories[funcInfo.category].blocks.push(blockPair);
   }
 
   // Convert to droplet's expected palette format:
@@ -35053,8 +35082,16 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   };
 };
 
-function populateModeOptionsFromConfigBlocks(modeOptions, config) {
+/**
+ * Given a droplet config, create a mode option functions object
+ * @param {object} config
+ * @param {object[]} config.blocks
+ * @param {object[]} config.categories
+ */
+function getModeOptionFunctionsFromConfig(config) {
   var mergedCategories = mergeCategoriesWithConfig(config);
+
+  var modeOptionFunctions = {};
 
   for (var i = 0; i < config.blocks.length; i++) {
     var newFunc = {};
@@ -35074,15 +35111,11 @@ function populateModeOptionsFromConfigBlocks(modeOptions, config) {
     newFunc.dropdown = config.blocks[i].dropdown;
 
     var modeOptionName = config.blocks[i].modeOptionName || config.blocks[i].func;
+    newFunc.title = modeOptionName;
 
-    modeOptions.functions[modeOptionName] = newFunc;
+    modeOptionFunctions[modeOptionName] = newFunc;
   }
-}
-
-function setTitlesToFuncNamesForDocumentedBlocks(modeOptions) {
-  Object.keys(modeOptions.functions).forEach(function (funcName) {
-    modeOptions.functions[funcName].title = funcName;
-  });
+  return modeOptionFunctions;
 }
 
 /**
@@ -35111,11 +35144,11 @@ exports.generateDropletModeOptions = function (dropletConfig, options) {
     }
   };
 
-  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletGlobalConfigBlocks });
-  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletBuiltinConfigBlocks });
-  populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig);
-
-  setTitlesToFuncNamesForDocumentedBlocks(modeOptions);
+  $.extend(modeOptions.functions,
+    getModeOptionFunctionsFromConfig({ blocks: exports.dropletGlobalConfigBlocks }),
+    getModeOptionFunctionsFromConfig({ blocks: exports.dropletBuiltinConfigBlocks }),
+    getModeOptionFunctionsFromConfig(dropletConfig)
+  );
 
   return modeOptions;
 };
@@ -35133,6 +35166,10 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
     .concat(exports.dropletBuiltinConfigBlocks)
     .concat(standardConfig.blocks)
     .concat(configuredBlocks);
+};
+
+exports.__TestInterface = {
+  mergeCategoriesWithConfig: mergeCategoriesWithConfig
 };
 
 },{"./utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/utils.js":[function(require,module,exports){
@@ -35185,6 +35222,7 @@ exports.cloneWithoutFunctions = function(object) {
 /**
  * Returns a new object with the properties from defaults overriden by any
  * properties in options. Leaves defaults and options unchanged.
+ * NOTE: For new code, use $.extend({}, defaults, options) instead
  */
 exports.extend = function(defaults, options) {
   var finalOptions = exports.shallowCopy(defaults);
@@ -35488,7 +35526,7 @@ exports.parseElement = function(text) {
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,isEqual,find,sortBy,throttle" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,cloneDeep,isEqual,find,sortBy,throttle,uniq" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -36798,6 +36836,53 @@ exports.parseElement = function(text) {
   }
 
   /**
+   * The base implementation of `_.uniq` without support for callback shorthands
+   * or `thisArg` binding.
+   *
+   * @private
+   * @param {Array} array The array to process.
+   * @param {boolean} [isSorted=false] A flag to indicate that `array` is sorted.
+   * @param {Function} [callback] The function called per iteration.
+   * @returns {Array} Returns a duplicate-value-free array.
+   */
+  function baseUniq(array, isSorted, callback) {
+    var index = -1,
+        indexOf = getIndexOf(),
+        length = array ? array.length : 0,
+        result = [];
+
+    var isLarge = !isSorted && length >= largeArraySize && indexOf === baseIndexOf,
+        seen = (callback || isLarge) ? getArray() : result;
+
+    if (isLarge) {
+      var cache = createCache(seen);
+      indexOf = cacheIndexOf;
+      seen = cache;
+    }
+    while (++index < length) {
+      var value = array[index],
+          computed = callback ? callback(value, index, array) : value;
+
+      if (isSorted
+            ? !index || seen[seen.length - 1] !== computed
+            : indexOf(seen, computed) < 0
+          ) {
+        if (callback || isLarge) {
+          seen.push(computed);
+        }
+        result.push(value);
+      }
+    }
+    if (isLarge) {
+      releaseArray(seen.array);
+      releaseObject(seen);
+    } else if (callback) {
+      releaseArray(seen);
+    }
+    return result;
+  }
+
+  /**
    * Creates a function that, when called, either curries or invokes `func`
    * with an optional `this` binding and partially applied arguments.
    *
@@ -37193,6 +37278,51 @@ exports.parseElement = function(text) {
       isDeep = false;
     }
     return baseClone(value, isDeep, typeof callback == 'function' && baseCreateCallback(callback, thisArg, 1));
+  }
+
+  /**
+   * Creates a deep clone of `value`. If a callback is provided it will be
+   * executed to produce the cloned values. If the callback returns `undefined`
+   * cloning will be handled by the method instead. The callback is bound to
+   * `thisArg` and invoked with one argument; (value).
+   *
+   * Note: This method is loosely based on the structured clone algorithm. Functions
+   * and DOM nodes are **not** cloned. The enumerable properties of `arguments` objects and
+   * objects created by constructors other than `Object` are cloned to plain `Object` objects.
+   * See http://www.w3.org/TR/html5/infrastructure.html#internal-structured-cloning-algorithm.
+   *
+   * @static
+   * @memberOf _
+   * @category Objects
+   * @param {*} value The value to deep clone.
+   * @param {Function} [callback] The function to customize cloning values.
+   * @param {*} [thisArg] The `this` binding of `callback`.
+   * @returns {*} Returns the deep cloned value.
+   * @example
+   *
+   * var characters = [
+   *   { 'name': 'barney', 'age': 36 },
+   *   { 'name': 'fred',   'age': 40 }
+   * ];
+   *
+   * var deep = _.cloneDeep(characters);
+   * deep[0] === characters[0];
+   * // => false
+   *
+   * var view = {
+   *   'label': 'docs',
+   *   'node': element
+   * };
+   *
+   * var clone = _.cloneDeep(view, function(value) {
+   *   return _.isElement(value) ? value.cloneNode(true) : undefined;
+   * });
+   *
+   * clone.node == view.node;
+   * // => false
+   */
+  function cloneDeep(value, callback, thisArg) {
+    return baseClone(value, true, typeof callback == 'function' && baseCreateCallback(callback, thisArg, 1));
   }
 
   /**
@@ -38262,6 +38392,63 @@ exports.parseElement = function(text) {
   }
 
   /**
+   * Creates a duplicate-value-free version of an array using strict equality
+   * for comparisons, i.e. `===`. If the array is sorted, providing
+   * `true` for `isSorted` will use a faster algorithm. If a callback is provided
+   * each element of `array` is passed through the callback before uniqueness
+   * is computed. The callback is bound to `thisArg` and invoked with three
+   * arguments; (value, index, array).
+   *
+   * If a property name is provided for `callback` the created "_.pluck" style
+   * callback will return the property value of the given element.
+   *
+   * If an object is provided for `callback` the created "_.where" style callback
+   * will return `true` for elements that have the properties of the given object,
+   * else `false`.
+   *
+   * @static
+   * @memberOf _
+   * @alias unique
+   * @category Arrays
+   * @param {Array} array The array to process.
+   * @param {boolean} [isSorted=false] A flag to indicate that `array` is sorted.
+   * @param {Function|Object|string} [callback=identity] The function called
+   *  per iteration. If a property name or object is provided it will be used
+   *  to create a "_.pluck" or "_.where" style callback, respectively.
+   * @param {*} [thisArg] The `this` binding of `callback`.
+   * @returns {Array} Returns a duplicate-value-free array.
+   * @example
+   *
+   * _.uniq([1, 2, 1, 3, 1]);
+   * // => [1, 2, 3]
+   *
+   * _.uniq([1, 1, 2, 2, 3], true);
+   * // => [1, 2, 3]
+   *
+   * _.uniq(['A', 'b', 'C', 'a', 'B', 'c'], function(letter) { return letter.toLowerCase(); });
+   * // => ['A', 'b', 'C']
+   *
+   * _.uniq([1, 2.5, 3, 1.5, 2, 3.5], function(num) { return this.floor(num); }, Math);
+   * // => [1, 2.5, 3]
+   *
+   * // using "_.pluck" callback shorthand
+   * _.uniq([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x');
+   * // => [{ 'x': 1 }, { 'x': 2 }]
+   */
+  function uniq(array, isSorted, callback, thisArg) {
+    // juggle arguments
+    if (typeof isSorted != 'boolean' && isSorted != null) {
+      thisArg = callback;
+      callback = (typeof isSorted != 'function' && thisArg && thisArg[isSorted] === array) ? null : isSorted;
+      isSorted = false;
+    }
+    if (callback != null) {
+      callback = lodash.createCallback(callback, thisArg, 3);
+    }
+    return baseUniq(array, isSorted, callback);
+  }
+
+  /**
    * Creates an array excluding all provided values using strict equality for
    * comparisons, i.e. `===`.
    *
@@ -38864,6 +39051,7 @@ exports.parseElement = function(text) {
   lodash.shuffle = shuffle;
   lodash.sortBy = sortBy;
   lodash.throttle = throttle;
+  lodash.uniq = uniq;
   lodash.values = values;
   lodash.without = without;
   lodash.wrap = wrap;
@@ -38874,6 +39062,7 @@ exports.parseElement = function(text) {
   lodash.extend = assign;
   lodash.methods = functions;
   lodash.select = filter;
+  lodash.unique = uniq;
 
   // add functions to `lodash.prototype`
   mixin(lodash);
@@ -38882,6 +39071,7 @@ exports.parseElement = function(text) {
 
   // add functions that return unwrapped values when chaining
   lodash.clone = clone;
+  lodash.cloneDeep = cloneDeep;
   lodash.contains = contains;
   lodash.find = find;
   lodash.identity = identity;

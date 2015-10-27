@@ -614,6 +614,9 @@ StudioApp.prototype.toggleRunReset = function(button) {
   run.disabled = !showRun;
   reset.style.display = !showRun ? 'inline-block' : 'none';
   reset.disabled = showRun;
+
+  // Toggle soft-buttons (all have the 'arrow' class set):
+  $('.arrow').prop("disabled", showRun);
 };
 
 /**
@@ -636,6 +639,7 @@ StudioApp.prototype.loadAudio = function(filenames, name) {
  * @param {string} name sound ID
  * @param {Object} options for sound playback
  * @param {number} options.volume value between 0.0 and 1.0 specifying volume
+ * @param {function} [options.onEnded]
  */
 StudioApp.prototype.playAudio = function(name, options) {
   if (!this.cdoSounds) {
@@ -758,8 +762,12 @@ StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
       // look to see if we have a predefined arrangement for this type
       type = xmlChild.getAttribute('type');
       if (arrangement[type]) {
-        xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangement[type].x);
-        xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangement[type].y);
+        if (arrangement[type].x && !xmlChild.hasAttribute('x')) {
+          xmlChild.setAttribute('x', arrangement[type].x);
+        }
+        if (arrangement[type].y && !xmlChild.hasAttribute('y')) {
+          xmlChild.setAttribute('y', arrangement[type].y);
+        }
       }
     }
   }
@@ -2021,7 +2029,7 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
  *   should display the error in.
  */
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
-  if (dashboard.project.exceedsAbuseThreshold()) {
+  if (window.dashboard && dashboard.project.exceedsAbuseThreshold()) {
     this.displayAlert(parentSelector, {
       body: React.createElement(dashboard.AbuseError, {
         i18n: {

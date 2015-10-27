@@ -1,4 +1,3 @@
-require File.expand_path('../boot', __FILE__)
 require File.expand_path('../deployment', __FILE__)
 require 'cdo/poste'
 require 'rails/all'
@@ -23,6 +22,12 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
 
+    if Rails.env.development?
+      require 'cdo/rack/whitelist_cookies'
+      require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
+      config.middleware.insert_before ActionDispatch::Cookies, Rack::WhitelistCookies,
+        HttpCache.config(rack_env)[:dashboard]
+    end
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
     config.middleware.insert_after VarnishEnvironment, FilesApi
     config.middleware.insert_after FilesApi, ChannelsApi
@@ -32,7 +37,7 @@ module Dashboard
     config.middleware.insert_after SharedResources, NetSimApi
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
-      config.middleware.insert_after SharedResources, PegasusSites
+      config.middleware.insert_after VarnishEnvironment, PegasusSites
     end
 
     require 'cdo/rack/upgrade_insecure_requests'

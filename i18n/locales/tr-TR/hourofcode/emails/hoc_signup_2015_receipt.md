@@ -8,30 +8,45 @@ gönderen: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&
 
 # Bir Kodlama Saatine ev sahipliği yapmak için kaydolduğunuz için teşekkürler!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> 5-11 Ekim tarihleri arasında Latin Amerika'daki öğrencilerin *dünyalarını değiştirecek* bir Kodlama Saati öğrenmelerini sağlıyorsunuz. <% else %> 7-13 Aralık tarihleri arasında tüm dünyadaki öğrencilerin *yaşamlarını değiştirecek* bir Kodlama Saati öğrenmelerini sağlıyorsunuz. <% end %>
+You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13.
 
-Ödüller, yeni öğreticiler ve diğer heyecan verici gelişmelerle ilgili önümüzdeki aylarda iletişim halinde olacağız. Peki, şimdi ne yapabilirsin?
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [Details](https://<%= hostname %>/prizes).
+
+#### We'll be in touch about new tutorials and other exciting updates. What can you do now?
 
 ## 1. Organizasyonu yayın
 
-Arkadaşlarınıza #KodlamaSaati 'ni anlatın.
+We need your help to reach 100,000 organizers worldwide. Arkadaşlarınıza #KodlamaSaati 'ni anlatın. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
+
+<% if international == 'true' %>
 
 ## 2. Tüm okulun bir Kodlama Saati talep etmesini sağlayın
 
-[Send this email](https://<%= hostname %>/resources#email) to your principal.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). <% else %>
+
+## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
+
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup). <% end %>
 
 ## 3. İşvereninizin de katılmasını rica edin
 
-[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
 
 ## 4. Kodlama Saati'ni çevrenize tanıtın
 
-Yerel bir grupla iletişime geçin - öğrenci kulüpleri, dernekler ve bu çeşit diğer organizasyonlara ulaşabilirsiniz. Veya, mahallenizde bir "Kodlama Saati Partisi" düzenleyebilirsiniz. [Send this email](https://<%= hostname %>/resources#email).
+Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
 
 ## 5. Yerel yönetim idarelerinden Kodlama Saatini desteklemelerini rica edin
 
 [Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
 
+Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
+
+Hadi Partovi  
+Founder, Code.org
+
 * * *
 
-Code.org 501c3 kar amacı gütmeyen bir organizasyondur. Adresimiz: 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Bu e-postaların gelmesini istemiyor musunuz? [Abonelikten çık](%= unsubscribe_link %).
+<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+
+![](<%= tracking_pixel %>)

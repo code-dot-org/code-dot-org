@@ -346,7 +346,8 @@ function renderFooterInSharedGame() {
     },
     {
       text: applabMsg.makeMyOwnApp(),
-      link: '/projects/applab'
+      link: '/projects/applab',
+      hideOnMobile: true
     },
     {
       text: commonMsg.openWorkspace(),
@@ -364,7 +365,9 @@ function renderFooterInSharedGame() {
     }
   ];
   if (dom.isMobile()) {
-    menuItems.splice(0, 1); // no make my own app on mobile
+    menuItems = menuItems.filter(function (item) {
+      return !item.hideOnMobile;
+    });
   }
 
   window.dashboard.footer.render(React, {
@@ -628,7 +631,7 @@ Applab.startSharedAppAfterWarnings = function () {
   // dashboard will redirect young signed in users
   var is13Plus = Applab.user.isSignedIn || localStorage.getItem('is13Plus') === "true";
   var showStoreDataAlert = Applab.hasDataStoreAPIs(Applab.getCode()) &&
-    !hasSeenDataAlert(AppStorage.getChannelId());
+    !hasSeenDataAlert(Applab.channelId);
 
   var modal = document.createElement('div');
   document.body.appendChild(modal);
@@ -643,7 +646,7 @@ Applab.startSharedAppAfterWarnings = function () {
       }
       // Only want to ask about storing data once per app.
       if (showStoreDataAlert) {
-        markSeenDataAlert(AppStorage.getChannelId());
+        markSeenDataAlert(Applab.channelId);
       }
       window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
     },
@@ -662,14 +665,14 @@ Applab.init = function(config) {
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
+  Applab.channelId = config.channel;
+
   // Pre-populate asset list
-  if (window.dashboard && dashboard.project.getCurrentId()) {
-    assetsApi.ajax('GET', '', function (xhr) {
-      assetListStore.reset(JSON.parse(xhr.responseText));
-    }, function () {
-      // Unable to load asset list
-    });
-  }
+  assetsApi.ajax('GET', '', function (xhr) {
+    assetListStore.reset(JSON.parse(xhr.responseText));
+  }, function () {
+    // Unable to load asset list
+  });
 
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -1184,11 +1187,8 @@ function clearDebugInput() {
   }
 }
 
-// TODO(dave): remove once channel id is passed in appOptions.
 /**
- * If channel id has not yet been loaded, delays calling of the callback
- * until the saveProject response comes back. Otherwise, calls the callback
- * directly.
+ * Save the app state and trigger any callouts, then call the callback.
  * @param callback {Function}
  */
 studioApp.runButtonClickWrapper = function (callback) {
@@ -1202,17 +1202,9 @@ studioApp.runButtonClickWrapper = function (callback) {
  */
 Applab.serializeAndSave = function (callback) {
   designMode.serializeToLevelHtml();
-  // Behave like other apps when not editing a project or channel id is present.
-  if (!window.dashboard || !window.dashboard.project.isEditing() ||
-      window.dashboard.project.getCurrentId()) {
-    $(window).trigger('appModeChanged');
-    if (callback) {
-      callback();
-    }
-  } else {
-    // Otherwise, makes sure we don't hit our callback until after we've created
-    // a channel
-    $(window).trigger('appModeChanged', callback);
+  $(window).trigger('appModeChanged');
+  if (callback) {
+    callback();
   }
 };
 
@@ -1467,7 +1459,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + AppStorage.getChannelId(),
+    '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + Applab.channelId,
     '_blank');
 };
 
@@ -1511,13 +1503,7 @@ Applab.maybeAddAssetPathPrefix = function (filename) {
     return filename;
   }
 
-  var channelId = dashboard && dashboard.project.getCurrentId();
-  // TODO(dave): remove this check once we always have a channel id.
-  if (!channelId) {
-    return filename;
-  }
-
-  return '/v3/assets/' + channelId + '/'  + filename;
+  return '/v3/assets/' + Applab.channelId + '/'  + filename;
 };
 
 Applab.showSubmitConfirmation = function() {

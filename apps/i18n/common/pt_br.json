@@ -237,5 +237,12 @@
   "watchVideo": "Assista ao vídeo",
   "when": "quando",
   "whenRun": "quando executar",
-  "workspaceHeaderShort": "Área de trabalho: "
+  "workspaceHeaderShort": "Área de trabalho: ",
+  "dropletBlock_mathRandom_description": "Returns a random number ranging from 0 (inclusive) up to but not including 1 (exclusive)",
+  "dropletBlock_mathRandom_signatureOverride": "Math.random()",
+  "dropletBlock_randomNumber_param0": "min",
+  "dropletBlock_randomNumber_param0_description": "The minimum number returned",
+  "dropletBlock_randomNumber_param1": "max",
+  "dropletBlock_randomNumber_param1_description": "The maximum number returned",
+  "dropletBlock_randomNumber_signatureOverride": "randomNumber(min, max)"
 }

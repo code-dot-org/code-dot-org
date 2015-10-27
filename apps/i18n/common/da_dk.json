@@ -127,7 +127,7 @@
   "dropletBlock_notOperator_signatureOverride": "OG boolesk operator",
   "dropletBlock_orOperator_description": "Returnerer sand, når begge udtryk er sande, og ellers falsk",
   "dropletBlock_orOperator_signatureOverride": "ELLER boolesk operator",
-  "dropletBlock_randomNumber_max_description": "Få et tilfældigt tal mellem 0 og den angivne maksimumværdi",
+  "dropletBlock_randomNumber_max_description": "Returns a random number ranging from zero to max, including both zero and max in the range",
   "dropletBlock_randomNumber_max_param0": "max",
   "dropletBlock_randomNumber_max_param0_description": "The maximum number returned",
   "dropletBlock_randomNumber_max_signatureOverride": "randomNumber(max)",
@@ -237,5 +237,12 @@
   "watchVideo": "Se videoen",
   "when": "når",
   "whenRun": "når programmet kører",
-  "workspaceHeaderShort": "Arbejdsområde: "
+  "workspaceHeaderShort": "Arbejdsområde: ",
+  "dropletBlock_mathRandom_description": "Returns a random number ranging from 0 (inclusive) up to but not including 1 (exclusive)",
+  "dropletBlock_mathRandom_signatureOverride": "Math.random()",
+  "dropletBlock_randomNumber_param0": "min",
+  "dropletBlock_randomNumber_param0_description": "The minimum number returned",
+  "dropletBlock_randomNumber_param1": "max",
+  "dropletBlock_randomNumber_param1_description": "The maximum number returned",
+  "dropletBlock_randomNumber_signatureOverride": "randomNumber(min, max)"
 }
