@@ -26,10 +26,10 @@ class Properties
 
   def self.get_user_metrics()
     self.get(:about_stats)||{
-      'percent_female'=>42,
+      'percent_female'=>48,
       'number_served'=>119410701,
-      'number_students'=>5035892,
-      'number_teachers'=>178289
+      'number_students'=>5420082,
+      'number_teachers'=>124291
     }
   end
 
