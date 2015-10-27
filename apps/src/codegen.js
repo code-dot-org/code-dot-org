@@ -234,10 +234,8 @@ exports.makeNativeMemberFunction = function (opts) {
     return function() {
       // Just call the native function and marshal the return value:
       var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, arguments);
-      return exports.marshalNativeToInterpreter(opts.interpreter,
-                                                nativeRetVal,
-                                                null,
-                                                opts.maxDepth);
+      return exports.marshalNativeToInterpreter(opts.interpreter, nativeRetVal,
+        null, opts.maxDepth);
     };
   } else {
     return function() {
@@ -247,10 +245,8 @@ exports.makeNativeMemberFunction = function (opts) {
         nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
       }
       var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, nativeArgs);
-      return exports.marshalNativeToInterpreter(opts.interpreter,
-                                                nativeRetVal,
-                                                null,
-                                                opts.maxDepth);
+      return exports.marshalNativeToInterpreter(opts.interpreter, nativeRetVal,
+        null, opts.maxDepth);
     };
   }
 };
@@ -308,21 +304,28 @@ function populateGlobalFunctions(interpreter, blocks, scope) {
 
 function populateJSFunctions(interpreter) {
   // The interpreter is missing some basic JS functions. Add them as needed:
+  var wrapper;
 
   // Add static methods from String:
   var functions = ['fromCharCode'];
   for (var i = 0; i < functions.length; i++) {
-    var wrapper = exports.makeNativeMemberFunction({
-        interpreter: interpreter,
-        nativeFunc: String[functions[i]],
-        nativeParentObj: String,
+    wrapper = exports.makeNativeMemberFunction({
+      interpreter: interpreter,
+      nativeFunc: String[functions[i]],
+      nativeParentObj: String,
     });
-    interpreter.setProperty(interpreter.STRING,
-                            functions[i],
-                            interpreter.createNativeFunction(wrapper),
-                            false,
-                            true);
+    interpreter.setProperty(interpreter.STRING, functions[i],
+      interpreter.createNativeFunction(wrapper), false, true);
   }
+
+  // Add String.prototype.includes
+  wrapper = function(searchStr) {
+    // Polyfill based off of https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+    return interpreter.createPrimitive(
+      String.prototype.indexOf.apply(this, arguments) !== -1);
+  };
+  interpreter.setProperty(interpreter.STRING.properties.prototype, 'includes',
+    interpreter.createNativeFunction(wrapper), false, true);
 }
 
 /**
