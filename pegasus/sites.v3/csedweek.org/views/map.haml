@@ -46,12 +46,12 @@
       styles: [{
         where: "col4 CONTAINS 'approved'",
         markerOptions: {
-          iconName: "orange_stars"
+          iconName: "blu_circle"
         }
       }, {
         where: "col4 DOES NOT CONTAIN 'approved'",
         markerOptions: {
-          iconName: "measle_turquoise"
+          iconName: "small_red"
         }
       }],
     });
@@ -60,9 +60,9 @@
     legend.id = 'legend';
 
     var content = [];
-    content.push('<div class="legend-title"></div>#{I18n.t(:csedweek_map_legend_title)}');
-    content.push('<div class="color turquoise"></div>#{I18n.t(:csedweek_map_legend_event)}');
-    content.push('<br><div class="color orange"></div>#{I18n.t(:csedweek_map_legend_cs_tech_jam)}');
+    content.push('<div class="legend-title">#{I18n.t(:csedweek_map_legend_title)}</div>');
+    content.push('<div class="color red"></div>#{I18n.t(:csedweek_map_legend_event)}');
+    content.push('<br><div class="color blue"></div>#{I18n.t(:csedweek_map_legend_cs_tech_jam)}');
     legend.innerHTML = content.join('');
     legend.index = 1;
 
