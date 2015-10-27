@@ -1,1 +1,1 @@
-../hoc-mailing-common/mailing-list-utils.rb
+../mailing-common/mailing-list-utils.rb
