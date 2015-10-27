@@ -1,6 +1,6 @@
 #hocmap
   %link{rel: "stylesheet", type: "text/css", href: "/css/map.css"}
-  -total_count = DB[:forms].where(kind:'HocSignup2015').select(:name, :email, :data).distinct.count
+  -total_count = DB[:forms].where(kind:'HocSignup2015').select(:name, :email).distinct.count
   .mapheader
     %a.float-left{:href=> "https://hourofcode.com/events"}
       %h2= I18n.t(:csedweek_map_header).gsub('#', format_integer_with_commas(total_count))
