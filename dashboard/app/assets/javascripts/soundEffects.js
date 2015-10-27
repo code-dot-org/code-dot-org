@@ -246,8 +246,7 @@ Sound.prototype.newPlayableBufferSource = function(buffer, options) {
   newSound.connect(this.gainNode);
   this.gainNode.connect(this.audioContext.destination);
   var startingVolume = typeof options.volume === "undefined" ? 1 : options.volume;
-  this.gainNode.gain.setValueAtTime(startingVolume, this.audioContext.currentTime);
-
+  this.gainNode.gain.value = startingVolume;
   return newSound;
 };
 
@@ -256,8 +255,14 @@ Sound.prototype.fadeToGain = function (gain, durationSeconds) {
     return;
   }
 
+  // Can't exponential ramp to zero, simulate by getting close.
+  if (gain === 0) {
+    gain = 0.01;
+  }
+
   var currTime = this.audioContext.currentTime;
-  this.gainNode.gain.linearRampToValueAtTime(gain, currTime + durationSeconds);
+  this.gainNode.gain.setValueAtTime(this.gainNode.gain.value, currTime);
+  this.gainNode.gain.exponentialRampToValueAtTime(gain, currTime + durationSeconds);
 
   // TODO (bbuchanan): Support fallback player
 };
