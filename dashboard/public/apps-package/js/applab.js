@@ -2379,7 +2379,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="divApplab" class="appModern" tabindex="1">\n</div>\n<div id="designModeViz" style="display:none;">\n</div>\n\n'); })();
+ buf.push('<div id="divApplab" class="appModern" tabindex="1">\n</div>\n<div id="designModeViz" class="appModern" style="display:none;">\n</div>\n'); })();
 } 
 return buf.join('');
 };
