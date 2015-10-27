@@ -193,6 +193,27 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
+    },
+    {
+      description: "Turn right block doesn't work",
+      editCode: true,
+      xml: 'turnRight()',
+      runBeforeClick: function () {
+        testUtils.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        var errorText = 'Unknown identifier: turnRight';
+
+        var debugOutput = document.getElementById('debug-output');
+        assert(debugOutput.textContent.indexOf(errorText) !== -1);
+        return true;
+      },
+      expected: {
+        result: false,
+        testResult: TestResults.RUNTIME_ERROR_FAIL
+      }
     }
   ]
 };
