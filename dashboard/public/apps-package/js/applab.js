@@ -3651,7 +3651,7 @@ function makeUndraggable(jqueryElements) {
 function highlightElement(element) {
   removeElementHighlights();
 
-  if ($(element).is('#designModeViz img,#designModeViz label')) {
+  if ($(element).is('#designModeViz img[src!=""], #designModeViz label')) {
     $(element).parent().css({
       outlineStyle: 'dashed',
       outlineWidth: '1px',
