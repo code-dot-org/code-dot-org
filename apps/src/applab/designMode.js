@@ -8,7 +8,6 @@ var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
-var _ = require('../utils').getLodash();
 var KeyCodes = require('../constants').KeyCodes;
 
 var designMode = module.exports;
@@ -665,7 +664,7 @@ function makeUndraggable(jqueryElements) {
 function highlightElement(element) {
   removeElementHighlights();
 
-  if ($(element).is('#designModeViz img,#designModeViz label')) {
+  if ($(element).is('#designModeViz img[src!=""], #designModeViz label')) {
     $(element).parent().css({
       outlineStyle: 'dashed',
       outlineWidth: '1px',
@@ -746,11 +745,6 @@ designMode.changeScreen = function (screenId) {
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
-    // View Data must simulate a run button click, to load the channel id.
-    var viewDataClick = studioApp.runButtonClickWrapper.bind(
-        studioApp, Applab.onViewData);
-    var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
-
     React.render(
       React.createElement(DesignToggleRow, {
         hideToggle: Applab.hideDesignModeToggle(),
@@ -760,7 +754,7 @@ designMode.changeScreen = function (screenId) {
         screens: screenIds,
         onDesignModeButton: Applab.onDesignModeButton,
         onCodeModeButton: Applab.onCodeModeButton,
-        onViewDataButton: throttledViewDataClick,
+        onViewDataButton: Applab.onViewData,
         onScreenChange: designMode.changeScreen,
         onScreenCreate: designMode.createScreen
       }),

@@ -197,14 +197,24 @@ assessment 'U3L21 Assessment Wrap Up'
 # 16
 stage 'User Input and Strings'
 level 'U3L26 Student Lesson Introduction'
+level 'U3L16 Mad Lib Demo'
+level 'U3L16 - introStrings'
+level 'U3L16 - doubleQuotes'
 level 'U3L16 - textInput getText write'
-level 'U3L16 - challenge say hi app'
+level 'U3L16 - intro getText'
+level 'U3 - User Input - Save getText To Variable'
+level 'U3L16 Mad Lib Student Setup'
+level 'U3L16 Mad Lib setText'
+level 'U3L16 Mad Lib getText'
+level 'U3L16 Mad Lib toUpper'
+level 'U3L16 Mad Lib Clear Input'
+# level 'U3L16 - challenge say hi app'
 # need level for difference between string and num
-level 'U3L25 String Parsing 7'
-level 'U3L25 String Parsing 3'
-level 'U3L25 Free Response 3'
-level 'U3L25 String Parsing 2'
-level 'U3L23 Chatbot Intro 4'
+# level 'U3L25 String Parsing 7'
+# level 'U3L25 String Parsing 3'
+assessment 'U3L25 Free Response 3'
+# level 'U3L25 String Parsing 2'
+# level 'U3L23 Chatbot Intro 4'
 
 # 17
 stage 'Introduction to Digital Assistant'
@@ -291,6 +301,42 @@ level 'U3L18 Controlling Memory and Program Flow 4'
 level 'U3L18 Controlling Memory and Program Flow 5'
 assessment 'U3L18 Free Response Wrap Up'
 
+stage 'While Loop Basics'
+level 'U3L28 Student Lesson Introduction'
+assessment 'U3L28 Free Response Getting Started'
+assessment 'U3L28 Free Response Wrap Up'
+
+stage 'While Loops_ Counting Flips'
+level 'U3L29 Student Lesson Introduction'
+assessment 'U3L29 Free Response Getting Started'
+assessment 'U3L29 Free Response Wrap Up'
+
+stage 'Arrays_ Intro'
+level 'U3L30 Student Lesson Introduction'
+assessment 'U3L30 Free Response Getting Started'
+assessment 'U3L30 Assessment1'
+assessment 'U3L30 Assessment2'
+assessment 'U3L30 Assessment3'
+assessment 'U3L30 Free Response Wrap Up'
+
+stage 'Arrays_ Photo Album'
+level 'U3L31 Student Lesson Introduction'
+assessment 'U3L31 Free Response Getting Started'
+assessment 'U3L31 Assessment1'
+assessment 'U3L31 Assessment2'
+assessment 'U3L31 Assessment3'
+
+stage 'Images are Arrays'
+level 'U3L32 Student Lesson Introduction'
+assessment 'U3L32 Free Response Getting Started'
+
+stage 'Arrays and Loops_ Altering Images'
+level 'U3L33 Student Lesson Introduction'
+assessment 'U3L33 Free Response Getting Started'
+
+stage 'Arrays and Loops_ Hidden Images'
+level 'U3L34 Student Lesson Introduction'
+assessment 'U3L34 Free Response Getting Started'
 
 # Keeping Until Conditional Stuff Finalized
 stage 'Conditional Basics'
@@ -379,44 +425,6 @@ level 'U3L26 Chatbot Compound Conditionals'
 assessment 'U3L24 Assessment 3'
 assessment 'U3L25 Assessment' 
 assessment 'U3L25 Free Response wrap up'
-
-stage 'While Loop Basics'
-level 'U3L28 Student Lesson Introduction'
-assessment 'U3L28 Free Response Getting Started'
-assessment 'U3L28 Free Response Wrap Up'
-
-stage 'While Loops_ Counting Flips'
-level 'U3L29 Student Lesson Introduction'
-assessment 'U3L29 Free Response Getting Started'
-assessment 'U3L29 Free Response Wrap Up'
-
-stage 'Arrays_ Intro'
-level 'U3L30 Student Lesson Introduction'
-assessment 'U3L30 Free Response Getting Started'
-assessment 'U3L30 Assessment1'
-assessment 'U3L30 Assessment2'
-assessment 'U3L30 Assessment3'
-assessment 'U3L30 Free Response Wrap Up'
-
-stage 'Arrays_ Photo Album'
-level 'U3L31 Student Lesson Introduction'
-assessment 'U3L31 Free Response Getting Started'
-assessment 'U3L31 Assessment1'
-assessment 'U3L31 Assessment2'
-assessment 'U3L31 Assessment3'
-
-stage 'Images are Arrays'
-level 'U3L32 Student Lesson Introduction'
-assessment 'U3L32 Free Response Getting Started'
-
-stage 'Arrays and Loops_ Altering Images'
-level 'U3L33 Student Lesson Introduction'
-assessment 'U3L33 Free Response Getting Started'
-
-stage 'Arrays and Loops_ Hidden Images'
-level 'U3L34 Student Lesson Introduction'
-assessment 'U3L34 Free Response Getting Started'
-
 
 ##TURDS DO NOT USE##
 stage 'Creating Procedures - Part 1'
