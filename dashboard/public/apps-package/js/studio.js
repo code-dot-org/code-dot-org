@@ -3346,6 +3346,7 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     speed: Studio.itemSpeed[itemClass],
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     isHazard: classProperties.isHazard,
+    spritesCounterclockwise: classProperties.spritesCounterclockwise,
     renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
     renderScale: utils.valueOr(classProperties.scale, 1),
     animationRate: classProperties.animationRate
@@ -5554,13 +5555,13 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
-    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
-    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
-    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
-    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW },
-    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
-    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
+    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
+    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
+    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -5929,11 +5930,11 @@ function loadHoc2015x(skin, assetUrl) {
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 8,
+        normal: 21,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: 10
+        walk: 19
       },
       timePerFrame: 100
     };
@@ -12150,6 +12151,8 @@ var Item = function (options) {
   this.height = options.height || 50;
   this.width = options.width || 50;
 
+  this.spritesCounterclockwise = options.spritesCounterclockwise || false;
+
   /**
    * Rendering offset for item animation vs display position - applied as
    * late as possible.
@@ -12189,7 +12192,11 @@ Item.prototype.getDirectionFrame = function() {
     }
   }
 
-  return constants.frameDirTableWalkingWithIdle[this.displayDir];
+  var frameDirTable = this.spritesCounterclockwise ? 
+    constants.frameDirTableWalkingWithIdleCounterclockwise : 
+    constants.frameDirTableWalkingWithIdleClockwise;
+
+  return frameDirTable[this.displayDir];
 };
 
 /**
@@ -13370,35 +13377,34 @@ frameDirTableWalking[Dir.SOUTHWEST]  = 7;
 
 exports.frameDirTableWalking = frameDirTableWalking;
 
-/*
-// Normal for placeholder
-var frameDirTableWalkingWithIdle = {};
-frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
-frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
-frameDirTableWalkingWithIdle[Dir.SOUTHEAST]  = 1;
-frameDirTableWalkingWithIdle[Dir.EAST]       = 2;
-frameDirTableWalkingWithIdle[Dir.NORTHEAST]  = 3;
-frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
-frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 5;
-frameDirTableWalkingWithIdle[Dir.WEST]       = 6;
-frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 7;
-*/
 
-// Reversed for final
+// Forward-to-left (clockwise)
+var frameDirTableWalkingWithIdleClockwise = {};
+frameDirTableWalkingWithIdleClockwise[Dir.NONE]       = 8;
+frameDirTableWalkingWithIdleClockwise[Dir.SOUTH]      = 0;
+frameDirTableWalkingWithIdleClockwise[Dir.SOUTHEAST]  = 1;
+frameDirTableWalkingWithIdleClockwise[Dir.EAST]       = 2;
+frameDirTableWalkingWithIdleClockwise[Dir.NORTHEAST]  = 3;
+frameDirTableWalkingWithIdleClockwise[Dir.NORTH]      = 4;
+frameDirTableWalkingWithIdleClockwise[Dir.NORTHWEST]  = 5;
+frameDirTableWalkingWithIdleClockwise[Dir.WEST]       = 6;
+frameDirTableWalkingWithIdleClockwise[Dir.SOUTHWEST]  = 7;
 
-var frameDirTableWalkingWithIdle = {};
-frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
-frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
-frameDirTableWalkingWithIdle[Dir.SOUTHEAST]  = 7;
-frameDirTableWalkingWithIdle[Dir.EAST]       = 6;
-frameDirTableWalkingWithIdle[Dir.NORTHEAST]  = 5;
-frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
-frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 3;
-frameDirTableWalkingWithIdle[Dir.WEST]       = 2;
-frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 1;
+exports.frameDirTableWalkingWithIdleClockwise = frameDirTableWalkingWithIdleClockwise;
 
+// Forward-to-right (counter-clockwise)
+var frameDirTableWalkingWithIdleCounterclockwise = {};
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NONE]       = 8;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTH]      = 0;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHEAST]  = 7;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.EAST]       = 6;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTHEAST]  = 5;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTH]      = 4;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTHWEST]  = 3;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.WEST]       = 2;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHWEST]  = 1;
 
-exports.frameDirTableWalkingWithIdle = frameDirTableWalkingWithIdle;
+exports.frameDirTableWalkingWithIdleCounterclockwise = frameDirTableWalkingWithIdleCounterclockwise;
 
 /**
  * Given a direction, returns the unit vector for it.
