@@ -1,20 +1,34 @@
+-# TODO(asher): Eliminate the need for the !important and move to a shareable
+-# location.
+:css
+  .radio {
+    margin: 0 10px !important
+  }
+
 %center
   %h1 Search for Teachers
 
 %br/
 
 %form{method: 'get'}
-  %table
+  %table.filters
     %tr
       %td
         Email Filter
       %td
-        %input{:name => "emailFilter", :id => "emailFilter"}
+        %input{name: "emailFilter", id: "emailFilter"}
     %tr
       %td
         Address Filter
       %td
-        %input{:name => "addressFilter", :id => "addressFilter"}
+        %input{name: "addressFilter", id: "addressFilter"}
+    %tr
+      %td
+        PD Filter
+      %td
+        %input.radio{type: "radio", name: "pd", id: "pd-all", value: "all", checked: true} All
+        %input.radio{type: "radio", name: "pd", id: "pd-pd", value: "pd"} PD
+        %input.radio{type: "radio", name: "pd", id: "pd-nopd", value: "nopd"} No PD
 
   %br/
 
@@ -25,11 +39,26 @@
 %br/
 
 %h2 Teachers
-%table.teachers
-  - @teachers.each do |teacher|
-    %tr
-      %td= teacher.id
-      %td= teacher.name
-      %td= teacher.email
-      %td= teacher.full_address
-      %td= teacher.num_students
+- if @teachers.size > 0
+  - if @teachers.size == @teacher_limit
+    -# This is actually not true if the there were exactly @response_limit
+    -# records.
+    WARNING: The results are sampled, there are additional records not being
+    displayed.
+    %br
+
+  #{link_to 'Download CSV', {:format => :csv}}
+
+  %br
+
+  %table.teachers
+    - if @headers
+      %th
+        - @headers.each do |field|
+          %td= field
+    - @teachers.each do |teacher|
+      %tr
+        - teacher.each do |field|
+          %td= field
+- else
+  No teachers met the specified search criteria.

@@ -31,8 +31,23 @@ end
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
   steps %q{
-    When I press "x-close"
+    When I wait to see ".x-close"
+    And I press "x-close"
     And I wait for 0.75 seconds
+  }
+end
+
+When /^I reset the puzzle to the starting version$/ do
+  steps %q{
+    Then I click selector "#versions-header"
+    And I wait to see a dialog titled "Version History"
+    And I close the dialog
+    And I wait for 3 seconds
+    Then I click selector "#versions-header"
+    And I wait until element "button:contains(Delete Progress)" is visible
+    And I click selector "button:contains(Delete Progress)"
+    And I click selector "#confirm-button"
+    Then I wait for 15 seconds
   }
 end
 
@@ -259,8 +274,7 @@ Then /^element "([^"]*)" is visible$/ do |selector|
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
-  instances = @browser.execute_script("return $('#{selector}')");
-  instances.should eq []
+  @browser.execute_script("return $('#{selector}').length").should eq 0
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|

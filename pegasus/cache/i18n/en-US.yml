@@ -27,7 +27,7 @@
   hoc2014_everyone: "Everyone"
   hoc2014_support: "Support it &#x25BE;"
   hoc2014_whatishoc: "What is the Hour of Code?"
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: "Sign up your event"
   csedweek_map_search_placeholder: "Search for Hour of Code events"
   csedweek_map_search_search: "Search"
@@ -46,7 +46,7 @@
   learn_cs_concepts: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then statements, and basic algorithms."
   all_ages: "All ages"
   beginner: "Beginner"
-  n_participants: '# participants'
+  n_participants: "# participants"
   go: "Go"
   thank_you_: "Thank you!"
   congratulations: "Congratulations!"
@@ -86,7 +86,7 @@
   beyond_an_hour: "Beyond an Hour of Code"
   get_started: "Start"
   i_agree: "I agree"
-  participant_select: '- Select -'
+  participant_select: "- Select -"
   participant_student: "Student"
   participant_parent: "Parent"
   participant_educator: "Educator"
@@ -121,7 +121,7 @@
   lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
   who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
   hoc_leaderboards: "The Hour of Code Leaderboards"
-  students_and_lines: '%{students} students have done the Hour of Code and written %{lines} lines of code.'
+  students_and_lines: "%{students} students have done the Hour of Code and written %{lines} lines of code."
   start_hoc: "Start the Hour of Code now"
   contact_form_topic_press: "Press/media (interview or speaking engagement)"
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
@@ -184,7 +184,7 @@
     engaged, involved and participating.&rdquo;
     Adam, teacher
   homepage_hero_text_stat_loc: "2.5 million girls are enrolled to learn on Code Studio"
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: "The Hour of Code"
   homepage_slot_text_frozen: "Frozen with Anna and Elsa"
@@ -199,8 +199,8 @@
   homepage_action_text_signpetition: "Sign the petition"
   homepage_signpetition_dropdown: "I agree &#x25BE;"
   homepage_diversity_pledge: "Take the diversity pledge"
-  homepage_banner_text_prizes: "The Hour of Code is coming again. Join the largest learning event in history."
-  homepage_banner_link_prizes: 'Join us. '
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: "Code.org and the College Board form an alliance to improve diversity in computer science."
   homepage_banner_text_link: "Learn more"
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
@@ -209,7 +209,7 @@
   homepage_slot_text_blurb_hoc: "Anybody can learn. Start today"
   homepage_slot_text_link_hoc: "Try the Hour of Code"
   homepage_slot_text_link_host: "Host an Hour of Code"
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: "Volunteer for the Hour of Code"
   homepage_slot_text_title_students: "Students"
   homepage_slot_text_blurb_students: "Explore all of our tutorials"
@@ -267,9 +267,9 @@
   class_submission_level_college: "College"
   class_submission_level_vocational: "Vocational"
   class_submission_languages_other: "Other language(s)"
-  volunteer_engineer_submission_title: "Volunteer for the Hour of Code"
+  volunteer_engineer_submission_title: "Are you technical? Inspire students and volunteer for the Hour of Code."
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers want technical volunteers to help with their Hour of Code this December.<br>Only %{num_volunteers} volunteers have signed up."
   volunteer_engineer_submission_intro_background: "The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13."
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you''re not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.'
   volunteer_engineer_submission_intro_signup: "Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class=\"form-required-field\">*</span> are required."
@@ -291,7 +291,7 @@
   volunteer_engineer_submission_field_facebook_placeholder: "https://www.facebook.com/your_name"
   volunteer_engineer_submission_field_description: "Description"
   volunteer_engineer_submission_field_description_desc: "Describe your computer science experience and how you would like to participate as a volunteer for local teachers."
-  volunteer_engineer_submission_field_description_placeholder: "Description of experience and/or participation"
+  volunteer_engineer_submission_field_description_placeholder: "Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here."
   volunteer_engineer_submission_header_private: "Information kept private and never shared"
   volunteer_engineer_submission_field_email: "Email address"
   volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
@@ -495,7 +495,7 @@
   dashboard_faq_k5: "K-5 Frequently Asked Questions"
   dashboard_announcements: "Announcements"
   dashboard_announce_view_all: "View all"
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+  dashboard_announce_hoc: "<b>October 26, 2015</b> - Looking for a fun classroom activity this October? Check out the three special Halloween-themed puzzles available on Code Studio!"
   code_hoc_coming: "The Hour of Code is here - December 8-14!"
   code_sign_up: "Sign up to participate during CS Education Week"
   learn_more: "Learn more"

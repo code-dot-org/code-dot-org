@@ -12,6 +12,8 @@ You probably have many ideas about how the quick double-clicker game could be mo
 # Vocab
 
 * **Variable:** In JavaScript (and most programming languages) the most primitive type of memory you can use is called a variable. It's called a variable because it's a piece of memory in which you can change what's stored - its value can vary.
+* **Increment**
+* **Decrement**
 
 # Lesson
 
@@ -20,7 +22,7 @@ You probably have many ideas about how the quick double-clicker game could be mo
 
 
 # Resources
-* Worksheet: <a href="https://docs.google.com/document/d/16Ds_Cpo8Dz5KVt52hg1Dk1WNiidx8WpllXmgirW5BiE" target="_blank">Q & A About Variables
+* Worksheet: <a href="https://docs.google.com/document/d/16Ds_Cpo8Dz5KVt52hg1Dk1WNiidx8WpllXmgirW5BiE" target="_blank"> OLD: Q & A About Variables
 </a>
 </a>
 

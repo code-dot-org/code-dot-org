@@ -7,7 +7,6 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "button": null,
       "onEvent": {
         "params": [
           "\"id\"",
@@ -15,18 +14,17 @@
           "function(){\n\n}"
         ]
       },
-      "setPosition": null,
+      "button": null,
       "textLabel": {
         "params": [
           "\"id\"",
           "\"text\""
         ]
       },
-      "addOperator": null,
       "image": null,
-      "textInput": null,
-      "write": null,
-      "getText": null,
+      "playSound": null,
+      "setPosition": null,
+      "setScreen": null,
       "moveForward": null,
       "moveBackward": null,
       "move": null,
@@ -48,17 +46,20 @@
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
+      "console.log": null,
       "functionParams_none": null,
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "declareAssign_x": null,
+      "assign_x": null,
+      "addOperator": null,
+      "getText": null
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Introducing textInput, getText and write.  First run the starter code several times.  Try to change what's written to the screen when the button is clicked. Then use getText to write to the screen what the user entered in the text box.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -73,12 +74,25 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "start_blocks": "textLabel(\"lbl\",\"Enter your name:\");\r\ntextInput(\"name\",\"\");\r\nbutton(\"done\", \"I'm Done!\");\r\nonEvent(\"done\", \"click\", function(){\r\n  write(\"Stop touching me!\");\r\n});\r\n",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "app_width": "320",
     "app_height": "480",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L16 - useGetText.gif"
+    "encrypted_examples": "KhJwFCIddMc1Si49VpP/48keF8PJoDA2+bhX0W/tvkCjrrOe5QjjghMLoQS2\nhiG3\n",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "markdown_instructions": "# Text Input\r\n\r\nIntroducing <img src=\"https://images.code.org/4436a3ba2a7596c7724380c7c82d5c29-image-1445533665376.36.19 PM.png\" style=\"width: 100px\"> ! We can now allow users to type things in the app.  \r\n\r\n<img src=\"https://images.code.org/0c6774f2b6d33f8107ec2936102b1a10-image-1445533677192.58.24 PM.png\" style=\"width: 150px; float: right\">\r\n\r\nWe can get the input a user types with a new command `getText()`.  `getText()` takes one parameter which is just the ID of the Text Input we want to get the text from. This is a function in which we are asking \"Can you give me the text that was input\" and the function says \"Sure!\" and hands us the information! Sweet!  \r\n\r\n# Do This\r\n\r\n* **Run the program.** Try entering a bunch of different names to see what happens\r\n\r\n* **Go to Design Mode** and add another label, and textInput for the users age. \r\n\r\n<img src=\"https://images.code.org/f2dc3113fcdd3a606c73c5807bc34f33-image-1445533686878.gif\" style=\"width: 350px\">\r\n\r\n* **Update the event handler to also** which pulls the age input by the user and log it into the `console.log()`.\r\n\r\n<img src=\"https://images.code.org/871c0a4050f9e98e2f071c5969d5618a-image-1445534234029.gif\" style=\"width: 350px\">\r\n\r\n* At the end your Debug Console should look like below.\r\n\r\n<img src=\"https://images.code.org/8ce6c921476b129f974bf4c4425d1f8e-image-1445533697533.06.11 PM.png\" style=\"width: 300px\">",
+    "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"designModeViz\" style=\"width: 320px; height: 450px;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\">\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); width: 49px; height: 19px; position: absolute; left: 20px; top: 45px;\" id=\"nameLabel\">Name:</label>\r\n    <button id=\"doneButton\" style=\"padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 110px; top: 270px; background-color: rgb(26, 188, 156);\">Done</button>\r\n    <input id=\"nameInput\" style=\"margin: 0px; width: 200px; height: 30px; color: rgb(0, 0, 0); position: absolute; left: 85px; top: 35px;\" placeholder=\"Enter your name\"/>\r\n  </div>\r\n</div>",
+    "start_blocks": "onEvent(\"doneButton\", \"click\", function(event) {\r\n  console.log(getText(\"nameInput\"));\r\n});",
+    "instructions": "Add an Text Input box for entering age. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

@@ -83,7 +83,7 @@ ____________________________________________________
 
 <table>
 <tr>
-<td>
+<td style="border-style:none; width:90%; padding:0px">
 <pre>
 // Draw a house with left turns only.
 turnLeft(45);
@@ -98,8 +98,8 @@ turnLeft(90);
 moveForward(75);
 </pre>
 </td>
-<td>
-<img src='https://images.code.org/ca17e64ad78403c93fabcb18dd08a66b-image-1444503308399.gif' style='width: 150px;'> 
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/db1170b1ee761ac5f4541a6aa8a72748-image-1445625001095.gif'>
 </td>
 </tr>
 </table>
@@ -138,9 +138,9 @@ No return value. Rotates turtle only.
 ### Tips
 - You can specify a negative angle to rotate left, which makes the turtle turn right instead.
 - There are three ways to rotate the turtle in place
-	- turnRight(*angle*) - Rotates the turtle right by the specified angle. The turtle’s position remains the same.
-	- turnLeft(*angle*) - Rotates the turtle left by the specified angle. The turtle’s position remains the same.
-	- turnTo(*angle*) - Rotates the turtle to a specific angle. 0 is up, 90 is right, 180 is down, and 270 is left. The turtle’s position remains the same.
+	- turnRight(*angle*) - Rotates the turtle right **by** the specified angle relative to the current turtle direction. The turtle’s position remains the same.
+	- turnLeft(*angle*) - Rotates the turtle left **by** the specified angle relative to the current turtle direction. The turtle’s position remains the same.
+	- turnTo(*angle*) - Rotates the turtle **to** a specific angle. 0 is up, 90 is right, 180 is down, and 270 is left. The turtle’s position remains the same.
 
 [/tips]
 

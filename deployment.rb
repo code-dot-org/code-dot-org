@@ -1,5 +1,10 @@
 $:.unshift File.expand_path('../lib', __FILE__)
 $:.unshift File.expand_path('../shared/middleware', __FILE__)
+
+# Set up gems listed in the Gemfile.
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __FILE__)
+require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
+
 require 'csv'
 require 'yaml'
 require 'cdo/erb'
@@ -59,9 +64,11 @@ def load_configuration()
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
     'localize_apps'               => false,
     'name'                        => hostname,
+    'newrelic_logging'            => rack_env == :production,
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
     'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
+    'partners'                    => %w(al ar br eu italia ro sg uk za),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
@@ -73,7 +80,7 @@ def load_configuration()
     'poste_secret'                => 'not a real secret',
     'proxy'                       => false, # If true, generated URLs will not include explicit port numbers in development
     'rack_env'                    => rack_env,
-    'rack_envs'                   => [:development, :production, :adhoc, :staging, :test, :levelbuilder],
+    'rack_envs'                   => [:development, :production, :adhoc, :staging, :test, :levelbuilder, :integration],
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
@@ -147,6 +154,14 @@ class CDOImpl < OpenStruct
     return "localhost#{sep}#{domain}" if rack_env?(:development)
     return "translate#{sep}#{domain}" if self.name == 'crowdin'
     "#{rack_env}#{sep}#{domain}"
+  end
+
+  def dashboard_hostname
+    canonical_hostname('studio.code.org')
+  end
+
+  def pegasus_hostname
+    canonical_hostname('code.org')
   end
 
   def site_url(domain, path = '', scheme = '')
@@ -262,6 +277,10 @@ end
 
 def blockly_core_dir(*dirs)
   deploy_dir('blockly-core', *dirs)
+end
+
+def cookbooks_dir(*dirs)
+  deploy_dir('cookbooks', *dirs)
 end
 
 def dashboard_dir(*dirs)

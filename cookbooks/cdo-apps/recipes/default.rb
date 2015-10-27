@@ -16,6 +16,7 @@ apt_package 'libsqlite3-dev'
 
 include_recipe 'cdo-apps::dashboard'
 include_recipe 'cdo-apps::pegasus'
+include_recipe 'cdo-apps::chef_credentials'
 
 template "/home/#{node[:current_user]}/#{node.chef_environment}/crontab" do
   source 'crontab.erb'
@@ -35,7 +36,7 @@ execute "install-aws-crontab" do
 end
 
 execute "precompile-assets" do
-  command "rake assets:precompile"
+  command "bundle exec rake assets:precompile"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
   environment ({
     'LC_ALL' => 'en_US.UTF-8', 'RAILS_ENV' => "#{node.chef_environment}"
@@ -43,12 +44,5 @@ execute "precompile-assets" do
   user node[:current_user]
   group node[:current_user]
   action :nothing
-  notifies :run, 'execute[upgrade-dashboard]', :immediately
-end
-
-execute "upgrade-dashboard" do
-  command "sudo service dashboard upgrade"
-  user node[:current_user]
-  group node[:current_user]
-  action :nothing
+  notifies :reload, 'service[dashboard]', :delayed
 end

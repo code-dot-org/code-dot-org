@@ -1,6 +1,10 @@
 @eyes
 Feature: Looking at a few things with Applitools Eyes
 
+Background:
+  Given I am on "http://learn.code.org/reset_session"
+  And execute JavaScript expression "window.localStorage.clear()"
+
 Scenario:
   When I open my eyes to test "bounce game"
   And I am on "http://learn.code.org/2014/1?noautoplay=true"
@@ -194,5 +198,5 @@ Scenario Outline: Simple page view without instructions dialog
   And I see no difference for "initial load"
   And I close my eyes
 Examples:
-  | url                                                                | test_name                 |
-  | http://learn.code.org/p/applab                                     | new applab project        |
+  | url                                                               | test_name                 |
+  | http://learn.code.org/projects/applab/new                         | new applab project        |

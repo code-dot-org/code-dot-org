@@ -862,7 +862,7 @@ applabCommands.getElementInnerText_ = function (element) {
  * @private
  */
 applabCommands.setElementInnerText_ = function (element, newText) {
-  var escapedText = newText;
+  var escapedText = newText.toString();
   escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
   escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
   escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >
@@ -1039,22 +1039,41 @@ applabCommands.setPosition = function (opts) {
     // (2) width/height already specified OR IMG element with width/height attributes
     if ((el.style.width.length > 0 && el.style.height.length > 0) ||
         (el.tagName === 'IMG' && el.width > 0 && el.height > 0)) {
-        if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
-            setWidthHeight = true;
-        }
-    } else {
+      if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
         setWidthHeight = true;
+      }
+    } else {
+      setWidthHeight = true;
     }
     if (setWidthHeight) {
-        apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
-        apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
-        el.style.width = opts.width + 'px';
-        el.style.height = opts.height + 'px';
+      apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
+      apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+      setSize_(opts.elementId, opts.width, opts.height);
     }
     return true;
   }
   return false;
 };
+
+applabCommands.setSize = function (opts) {
+  apiValidateType(opts, 'setSize', 'width', opts.width, 'number');
+  apiValidateType(opts, 'setSize', 'height', opts.height, 'number');
+  setSize_(opts.elementId, opts.width, opts.height);
+
+  return true;
+};
+
+/**
+ * Logic shared between setPosition and setSize for setting the size
+ */
+function setSize_(elementId, width, height) {
+  var element = document.getElementById(elementId);
+  var divApplab = document.getElementById('divApplab');
+  if (divApplab.contains(element)) {
+    element.style.width = width + 'px';
+    element.style.height = height + 'px';
+  }
+}
 
 applabCommands.getXPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');

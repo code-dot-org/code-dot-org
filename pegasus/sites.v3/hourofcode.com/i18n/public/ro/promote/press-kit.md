@@ -17,17 +17,17 @@ nav: promote_nav
   * Luați legătura cu mass-media prin e-mail cu doua săptamâni inainte de eveniment .
   * Adresați-vă unui membru al personalului școlii sau unui voluntar pentru a face fotografii pentru distribuire online sau trimitere catre presă.
   * Scrieți despre evenimentul Hour of Code pe prima pagină a site-ului dvs. și în ziarul școlii. Trimiteți detaliile despre eveniment și imagini cu activitățile studenților.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+  * Pe Facebook sau Twitter, distribuie noutati privind planurile tale, anunta evenimentele si posteaza fotografii din timpul saptamanii 7-13 decembrie. Foloseste hashtag-ul **#HourOfCode**astfel incat Code.org iti poate vedea fotografiile si promova evenimentul.
 
 ### Ghid pas cu pas:
 
 **1. Planifică-ti evenimentul**
 
   * Planifică o întâlnire pentru a începe evenimentul.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Trimite-le[o scrisoare](<%= resolve_url('/promote/resources#sample-emails') %>)parintilor. Spune-le sa raspandeasca vestea.
+  * Trimite-le [o scrisoare](<%= resolve_url('/promote/resources#sample-emails') %>) pentru a-i invita pe primarul orasului, congresmanul, guvernatorul sau persoanele influente din business pentru a lua parte la evenimentul tau si pentru a le vorbi elevilor.
   * Organizează activităţi de grup (cum ar fi o demonstraţie de activitate de programare "unplugged"), sau prezentați activităţi create şi conduse de elevi.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
+  * Arata-le vide-ul[Hour of Code al Code.org](<%= resolve_url('/') %>)sau unul dintre[acestea](<%= resolve_url('/promote/resources#videos') %>)pentru a-i inspira.
 
 **2. Identifică reporteri locali care se ocupă de evenimente locale despre educaţie.**
 
@@ -37,7 +37,7 @@ Caută online informațiile de contact ale reporterului. Dacă nu le găsești, 
 
 **3. Contactează media locală**
 
-Cel mai bun mod de a ajunge la ei este e-mail-ul. Ar trebui să fie scurt şi să comunice: de ce ar trebui să le pese altor persoane despre acest eveniment? Include informaţii de contact (inclusiv un număr de telefon mobil) pentru cine va accesa site-ul la eveniment. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
+Cel mai bun mod de a ajunge la ei este e-mail-ul. Ar trebui să fie scurt şi să comunice: de ce ar trebui să le pese altor persoane despre acest eveniment? Include informaţii de contact (inclusiv un număr de telefon mobil) pentru cine va accesa site-ul la eveniment. **Vezi un[plan simplu de abordare pentru media.](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Pregătește raspunsuri la întrebări despre evenimentul dumneavoastră. Iată câteva exemple:**
 
@@ -49,17 +49,17 @@ Sperăm că va trezi interesul elevilor si ca acestia vor continua învăţarea.
 
 *De ce este important acest lucru?*
 
-În China, fiecare elev studiaza la tehnologia computerelor pentru a absolvi liceul. În SUA, 90 la sută din şcoli nici macar nu o predau. Este timpul să prindem din urmă secolul 21. Ştim că indiferent ce fac elevii noştri atunci când cresc, indiferent dacă merg în medicină, afaceri, politică sau arte, trebuie sa stie cum să construiască tehnologie, le va da încrederea şi know-how-ul pentru a reuşi.
+În China, fiecare elev studiaza la tehnologia computerelor pentru a absolvi liceul. În SUA, 90% din şcoli nici macar nu o predau. Este timpul să prindem din urmă secolul 21. Ştim că indiferent ce fac elevii noştri atunci când cresc, indiferent dacă merg în medicină, afaceri, politică sau arte, trebuie sa stie cum să construiască tehnologie, le va da încrederea şi know-how-ul pentru a reuşi.
 
 **Mai multe detalii şi un citat pe care îl puteţi utiliza în materiale**
 
-"Hour of Code este proiectat să demitizeze programarea şi arată că tehnologia computerelor este o ştiinţă accesibilă, oricine ii poate învăţa elementele de bază", a spus Hadi Partovi, fondator şi CEO al Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+"Hour of Code este proiectat să demitizeze programarea şi arată că tehnologia computerelor este o ştiinţă accesibilă, oricine ii poate învăţa elementele de bază", a spus Hadi Partovi, fondator şi CEO al Code.org. "Peste 100 de milioane de elevi din întreaga lume au încercat o Oră de Programare. Cererile relevante ale secolului 21 sunt legate de tehnologia computerelor si programare. Ea intrece orice limita si nu are limite
 
 **Despre Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Viziunea sa este că fiecare student în fiecare şcoală ar trebui să aibă posibilitatea de a invata stiinta computerelor si programare. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. Pentru mai multe informaţii, vă rugăm să vizitaţi: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Code.org® este o organizație non-profit dedicată extinderii educației cu privire la tehnologia computerelor și programare, prin promovarea acesteia în școli și prin creșterea participării femeilor dar și a elevilor de culoare. Viziunea sa este că fiecare student în fiecare şcoală ar trebui să aibă posibilitatea de a invata stiinta computerelor si programare. După lansarea din 2013, Code.org a organizat campania Hour of Code – care a introdus peste 100 de milioane de studenţi in tainele informaticii pana in prezent – şi în parteneriat cu 70 districte reusesc la nivel naţional sa extinde programele de tehnologia computerelor si programare. Code.org este susţinută de donaţii filantropice din corporaţii, fundaţii şi persoane generoase, inclusiv Microsoft, Infosys Foundation, Statele Unite ale Americii, The Ballmer Family Giving, Rețeaua Omidyar şi altele. Pentru mai multe informaţii, vă rugăm să vizitaţi: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
-Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+Găsiţi mai multe resurse şi modele de e-mailuri [aici](<%= resolve_url('/promote') %>).
 
 <%= view :signup_button %>
