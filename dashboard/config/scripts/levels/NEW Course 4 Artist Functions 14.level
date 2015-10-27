@@ -159,6 +159,25 @@
           </block>
         </category>
         <category name="Brushes">
+          <block type="draw_width" inline="false">
+            <value name="WIDTH">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_colour" inline="true">
+            <value name="COLOUR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_colour" inline="true">
+            <value name="COLOUR">
+              <block type="colour_random"/>
+            </value>
+          </block>
           <block type="alpha" inline="true" id="alpha">
             <value name="VALUE">
               <block type="math_number_dropdown">
@@ -168,20 +187,22 @@
           </block>
           <block type="draw_colour" inline="true" id="draw-color">
             <value name="COLOUR">
-              <block type="colour_picker">
-                <title name="COLOUR">#ff0000</title>
-              </block>
-            </value>
-          </block>
-          <block type="draw_colour" inline="true" id="draw-color">
-            <value name="COLOUR">
-              <block type="colour_random"/>
-            </value>
-          </block>
-          <block type="draw_width" inline="false">
-            <value name="WIDTH">
-              <block type="math_number">
-                <title name="NUM">1</title>
+              <block type="colour_rgb" inline="false">
+                <value name="RED">
+                  <block type="math_number">
+                    <title name="NUM">255</title>
+                  </block>
+                </value>
+                <value name="GREEN">
+                  <block type="math_number">
+                    <title name="NUM">255</title>
+                  </block>
+                </value>
+                <value name="BLUE">
+                  <block type="math_number">
+                    <title name="NUM">255</title>
+                  </block>
+                </value>
               </block>
             </value>
           </block>
