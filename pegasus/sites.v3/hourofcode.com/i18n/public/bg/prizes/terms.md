@@ -10,13 +10,13 @@ nav: prizes_nav
 
 # Награди - правила и условия
 
-## Amazon.com, iTunes and Windows Store credit:
+## Кредити в Amazon.com, iTunes и Windows магазин:
 
-The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. 10 долара кредит ще се добави към съществуващ акаунт, а кредитът изтича след 1 година. Организаторът избира една от двете награди.
+Amazon.com, iTunes и Windows магазин кредитите са ограничени до К-12 преподаватели, възпитатели в клубове след училище и организации, свързани с образованието. 10 долара кредит ще се добави към съществуващ акаунт, а кредитът изтича след 1 година. Организаторът избира една от двете награди.
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Ако сте записали цялото училище в Часът на кодирането, всеки преподавател индивидуално трябва да се регистрира като организатор, за да участва в класацията.
+Всеки организатор трябва да се регистрира за Hour of Code, за да получи Amazon.com, iTunes или Windows Store кредит. Ако сте записали цялото училище в Часът на кодирането, всеки преподавател индивидуално трябва да се регистрира като организатор, за да участва в класацията.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
+Code.org ще се свърже с организаторите след Hour of Code (дек. 7-13), за да им предостави инструкции за активиране на Amazon.com, iTunes и Windows Store кредит.
 
 <% if @country == 'us' %>
 

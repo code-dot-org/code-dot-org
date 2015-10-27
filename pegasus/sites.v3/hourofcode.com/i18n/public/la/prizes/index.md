@@ -28,7 +28,7 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
 
 <% else %>
 
-## Prizes for EVERY organizer
+## Premios para CADA organizador
 
 **Every** educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com, iTunes or Windows Store** as a thank-you gift!
 
@@ -86,11 +86,11 @@ We would love to help teachers in public and private schools alike, but at this 
 
 To qualify, you must complete the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup') %>) by November 16, 2015. Una escuela en cada estado de Estados Unidos podrá ganar un conjunto de computadoras para toda una generación. Code.org seleccionará y notificará a los ganadores vía correo electrónico antes del 1ro de diciembre de 2014.
 
+<% end %>
+
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (<%= campaign_date('short') %>), can I still qualify for prizes?
 
 Yes, in the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup') %>) include the dates that your whole school is participating.
-
-<% end %>
 
 ## Estoy fuera de los Estados Unidos. ¿Puedo calificar para los premios?
 

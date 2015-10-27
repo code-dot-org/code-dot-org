@@ -346,7 +346,8 @@ function renderFooterInSharedGame() {
     },
     {
       text: applabMsg.makeMyOwnApp(),
-      link: '/projects/applab'
+      link: '/projects/applab',
+      hideOnMobile: true
     },
     {
       text: commonMsg.openWorkspace(),
@@ -364,7 +365,9 @@ function renderFooterInSharedGame() {
     }
   ];
   if (dom.isMobile()) {
-    menuItems.splice(0, 1); // no make my own app on mobile
+    menuItems = menuItems.filter(function (item) {
+      return !item.hideOnMobile;
+    });
   }
 
   window.dashboard.footer.render(React, {
