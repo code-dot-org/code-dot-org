@@ -137,7 +137,8 @@ def insert_form(kind, data, options={})
   row[:user_id] = dashboard_user[:id] if dashboard_user
 
   if kind == "HocSignup2015"
-    update_row = DB[:forms].where(email: row[:email], kind: kind, name: row[:name]).update(row)
+    update_row = DB[:forms].where(email: row[:email], kind: kind, name: row[:name], data: row[:data]).update(row)
+
     if update_row == 0
       row[:id] = DB[:forms].insert(row)
     end

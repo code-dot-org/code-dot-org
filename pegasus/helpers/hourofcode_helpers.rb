@@ -151,7 +151,7 @@ end
 
 def company_count
   company_count = 0;
-  DB[:forms].where(kind: 'HocSignup2015').each do |i|
+  DB[:forms].where(kind: 'HocSignup2015').select(:name, :email, :data).distinct.each do |i|
     data = JSON.parse(i[:data])
     if data['hoc_company_s'] == @company
       company_count += 1
@@ -162,7 +162,7 @@ end
 
 def country_count
   country_count = 0;
-  DB[:forms].where(kind: 'HocSignup2015').each do |i|
+  DB[:forms].where(kind: 'HocSignup2015').select(:name, :email, :data).distinct.each do |i|
     unless i[:processed_data].nil?
       data = JSON.parse(i[:processed_data])
       code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
@@ -181,4 +181,8 @@ end
 
 def country_full_name
   return HOC_COUNTRIES[@country]['full_name']
+end
+
+def total_hoc_count
+  return DB[:forms].where(kind: 'HocSignup2015').select(:name, :email, :data).distinct.count
 end
