@@ -639,6 +639,7 @@ StudioApp.prototype.loadAudio = function(filenames, name) {
  * @param {string} name sound ID
  * @param {Object} options for sound playback
  * @param {number} options.volume value between 0.0 and 1.0 specifying volume
+ * @param {function} [options.onEnded]
  */
 StudioApp.prototype.playAudio = function(name, options) {
   if (!this.cdoSounds) {

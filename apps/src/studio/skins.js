@@ -329,6 +329,14 @@ function loadHoc2015(skin, assetUrl) {
     };
   });
 
+  skin.bot1.movementAudio = [
+    { begin: 'roll_begin', loop: 'roll_loop', end: 'roll_end' }
+  ];
+  skin.bot2.movementAudio = [
+    { loop: 'bot2_move_loop', end: 'bot2_move_end' },
+    { loop: 'bot2_move2_loop', end: 'bot2_move2_end' }
+  ];
+
   skin.preventProjectileLoop = function (className) {
     return className === '';
   };
@@ -487,8 +495,6 @@ function loadHoc2015(skin, assetUrl) {
   // to be played.
   skin.playFinalGoalSound = true;
 
-  skin.moveSounds = ['move1', 'move2', 'move3'];
-
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes
   // NOTE: first item must be RANDOM_VALUE
@@ -633,6 +639,12 @@ function loadHoc2015x(skin, assetUrl) {
       timePerFrame: 100
     };
   });
+  skin.bot1.movementAudio = [
+    { begin: 'move1' },
+    { begin: 'move2' },
+    { begin: 'move3' },
+    { begin: 'move4' }
+  ];
 
   skin.preventProjectileLoop = function (className) {
     return className === '';
@@ -664,8 +676,6 @@ function loadHoc2015x(skin, assetUrl) {
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
   skin.playFinalGoalSound = true;
-
-  skin.moveSounds = ['move1', 'move2', 'move3', 'move4'];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes
