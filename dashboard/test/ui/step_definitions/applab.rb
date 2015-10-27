@@ -100,3 +100,12 @@ When /^I navigate to the shared version of my project$/ do
     And I navigate to the share URL
   }
 end
+
+Then(/^the palette has (\d+) blocks$/) do |numBlocks|
+  @browser.execute_script("return $('.droplet-palette-scroller-stuffing > .droplet-hover-div').length").should eq numBlocks.to_i
+end
+
+Then(/^the droplet code is "([^"]*)"$/) do |code|
+  code.gsub!("\\n", "\n")
+  @browser.execute_script("return Applab.getCode()").should eq code
+end
