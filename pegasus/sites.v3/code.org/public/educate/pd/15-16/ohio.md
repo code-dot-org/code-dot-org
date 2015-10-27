@@ -9,6 +9,7 @@ nav: pd2_nav
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
+- [I'm attending Administrator or Counselor PD](#counselor-admin)
 
 
 <a id="ecs"></a>
@@ -225,8 +226,8 @@ Tuesday, November 10, 2015 <br/>
 **Location**
 
 Microsoft Corporation<br/> 
-Scarlet Room<br/>
-8800 Lyra Drive, Suite 400<br/>
+Scarlet Room, Suite 400<br/>
+8800 Lyra Drive<br/>
 Columbus, OH 43240
 
 Free parking is available in three lots surrounding the building.

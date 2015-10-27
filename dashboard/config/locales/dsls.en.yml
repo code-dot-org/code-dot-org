@@ -190,6 +190,8 @@ en:
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
       ECS Phase 3 Overview: {}
+      ECS Phase 3 Unit 3 Overview: {}
+      ECS Phase 3 Unit3 Welcome: {}
       ECS Phase 3 Welcome: {}
       ECSPD 1 page template: {}
       ECSPD Challenge Intro: {}
@@ -290,6 +292,7 @@ en:
       ECSPD U2 Day 10-12 Forum Q: {}
       ECSPD U2 Day 13-14 Forum Q: {}
       ECSPD U2L1516 Sorting Video: {}
+      ECSPD U3 Challenges: {}
       ECSPD U3 D 1-2 Intro: {}
       ECSPD U3 D 11-13 Intro: {}
       ECSPD U3 D 14 Intro: {}
@@ -341,7 +344,17 @@ en:
       ECSPD Unit 2 Stage7: {}
       ECSPD Unit 2 Stage8: {}
       ECSPD Unit 2 Stage9: {}
+      ECSPD Unit 3 Challenge Preview: {}
+      ECSPD Unit 3 Expertise: {}
+      ECSPD Unit 3 Intro: {}
+      ECSPD Unit 3 Lesson Overview: {}
+      ECSPD Unit 3 Outline: {}
+      ECSPD Unit 3 Pick2: {}
+      ECSPD Unit 3 Stage 6 Overview: {}
+      ECSPD Unit 3 Stage4Review: {}
+      ECSPD Unit 3 Strategy Review: {}
       ECSPD Unit2 Connections: {}
+      ECSPD Unit3 Connections: {}
       ECSPD What Is Problem Solving: {}
       ECSPD What is the Challenge: {}
       ECSPD Why Binary - The Internet Video: {}
@@ -362,6 +375,7 @@ en:
         ECSPD impact vid1: ECSPD impact vid1
       ECSPD impact vid2:
         ECSPD impact vid2: ECSPD impact vid2
+      ECSPD jsfiddle: {}
       ECSPD meet facilitator:
         Meet your Facilitator!: Meet your Facilitator!
       ECSPD online U1D3-4 Forum:
@@ -1900,11 +1914,11 @@ en:
         'onEvent("id", "click", function() {...}):': 'onEvent("id", "click", function() {...}):'
         trigger: trigger
       U3L14 - Matching Events to Description:
-        Triggers once, the instant mouse hovers over the button: Triggers once, the instant mouse hovers over the button
-        Triggers when mouse button is pressed: Triggers when mouse button is pressed
-        Triggers when mouse button is released: Triggers when mouse button is released
-        Triggers when mouse the button is clicked once: Triggers when mouse the button is clicked once
-        Triggers whenever the mouses moves: Triggers whenever the mouses moves
+        Triggers once, the instant the mouse hovers over the button: Triggers once, the instant the mouse hovers over the button
+        Triggers when th mouse button is released: Triggers when th mouse button is released
+        Triggers when the mouse button is clicked once: Triggers when the mouse button is clicked once
+        Triggers when the mouse button is pressed: Triggers when the mouse button is pressed
+        Triggers whenever the mouse moves: Triggers whenever the mouse moves
         click: click
         mousedown: mousedown
         mousemove: mousemove

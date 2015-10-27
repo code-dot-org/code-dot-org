@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,9 +126,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "We want to improve the user experience. Once they have submitted their data for storage, it would be nice to clear the textbox.  Update your app to clear the textbox after the data is stored.",
     "markdown_instructions": "## Clear the Textbox\r\n\r\nWe want to improve the user experience. Once they have submitted their data for storage, it would be nice to clear the textbox.  Update your app to clear the textbox after the data is stored.",

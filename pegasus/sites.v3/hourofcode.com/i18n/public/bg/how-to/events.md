@@ -1,6 +1,7 @@
 ---
 
-Заглавие: < % = hoc_s(:title_how_to) %> оформление: широка
+title: <%= hoc_s(:title_how_to_events) %>
+layout: wide
 nav: how_to_nav
 
 ---
