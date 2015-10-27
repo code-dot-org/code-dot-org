@@ -95,6 +95,8 @@ level 'U3L16 - use images'
 level 'Applab test'
 level 'allthethings data blocks test'
 level 'allthethings design mode elements'
+level 'allthethings_template_backed1'
+level 'allthethings_template_backed2'
 
 stage 'Online PD'
 level 'PDK5 Intro C'

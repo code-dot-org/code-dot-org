@@ -103,7 +103,10 @@ class ScriptLevelsController < ApplicationController
       # load user's previous attempt at this puzzle.
       level_source = current_user.last_attempt(@level).try(:level_source)
 
-      if current_user.user_level_for(@script_level).try(:submitted?)
+      user_level = current_user.user_level_for(@script_level)
+      if user_level && user_level.submitted?
+        level_view_options(submitted: true)
+        level_view_options(unsubmit_url: url_for(user_level))
         readonly_view_options
       end
     end
