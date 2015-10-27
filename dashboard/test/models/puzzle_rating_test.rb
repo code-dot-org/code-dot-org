@@ -11,28 +11,28 @@ class PuzzleRatingTest < ActiveSupport::TestCase
   test "logged-in user can rate unless already rated" do
     PuzzleRating.stubs(:enabled?).returns(true)
 
-    assert_equal PuzzleRating.can_rate?(@script, @level, @student), true
+    assert_equal true, PuzzleRating.can_rate?(@script, @level, @student)
 
     PuzzleRating.create(script: @script, level: @level, user: @student)
 
-    assert_equal PuzzleRating.can_rate?(@script, @level, @student), false
+    assert_equal false, PuzzleRating.can_rate?(@script, @level, @student)
   end
 
   test "anonymous can always rate" do
     PuzzleRating.stubs(:enabled?).returns(true)
 
-    assert_equal PuzzleRating.can_rate?(@script, @level, nil), true
+    assert_equal true, PuzzleRating.can_rate?(@script, @level, nil)
 
     PuzzleRating.create(script: @script, level: @level, user: nil)
 
-    assert_equal PuzzleRating.can_rate?(@script, @level, nil), true
+    assert_equal true, PuzzleRating.can_rate?(@script, @level, nil)
   end
 
   test "can be disabled" do
     PuzzleRating.stubs(:enabled?).returns(false)
 
-    assert_equal PuzzleRating.exists?(script: @script, level: @level, user: @student), false
-    assert_equal PuzzleRating.can_rate?(@script, @level, @student), false
+    assert_equal false, PuzzleRating.exists?(script: @script, level: @level, user: @student)
+    assert_equal false, PuzzleRating.can_rate?(@script, @level, @student)
   end
 
 end
