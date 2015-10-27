@@ -252,6 +252,8 @@ Sound.prototype.fadeToGain = function (gain, durationSeconds) {
 
   var currTime = this.audioContext.currentTime;
   this.gainNode.gain.linearRampToValueAtTime(gain, currTime + durationSeconds);
+
+  // TODO (bbuchanan): Support fallback player
 };
 
 function isMobile() {
