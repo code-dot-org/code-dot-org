@@ -92,6 +92,10 @@ Sounds.prototype.register = function (config) {
   sound.preload();
 };
 
+/**
+ * @param {string} soundId - Name of the sound to play
+ * @param {function} [options.onEnded]
+ */
 Sounds.prototype.play = function (soundId, options) {
   var sound = this.soundsById[soundId];
   if (sound) {
@@ -150,6 +154,9 @@ function Sound(config, audioContext) {
   this.playableBuffer = null; // if Web Audio
 }
 
+/**
+ * @param {function} [options.onEnded]
+ */
 Sound.prototype.play = function (options) {
   options = options || {};
   if (!this.audioElement && !this.reusableBuffer) {
@@ -158,6 +165,13 @@ Sound.prototype.play = function (options) {
 
   if (this.reusableBuffer) {
     this.playableBuffer = this.newPlayableBufferSource(this.reusableBuffer, options);
+
+    // Hook up on-ended callback, although browser support may be limited.
+    // Don't make anything depend on this callback happening.
+    if (options.onEnded) {
+      this.playableBuffer.onended = options.onEnded;
+    }
+
     // Play sound, supporting older versions of the Web Audio API which used noteOn(Off).
     if (this.playableBuffer.start) {
       this.playableBuffer.start(0);
@@ -174,6 +188,17 @@ Sound.prototype.play = function (options) {
 
   this.audioElement.volume = typeof options.volume === "undefined" ? 1 : options.volume;
   this.audioElement.loop = !!options.loop;
+  if (options.onEnded) {
+    var unregisterAndCallback = function () {
+      this.audioElement.removeEventListener('abort', unregisterAndCallback);
+      this.audioElement.removeEventListener('ended', unregisterAndCallback);
+      this.audioElement.removeEventListener('pause', unregisterAndCallback);
+      options.onEnded();
+    }.bind(this);
+    this.audioElement.addEventListener('abort', unregisterAndCallback);
+    this.audioElement.addEventListener('ended', unregisterAndCallback);
+    this.audioElement.addEventListener('pause', unregisterAndCallback);
+  }
   this.audioElement.play();
 };
 

@@ -1,6 +1,7 @@
 ---
 
-Заглавие: < % = hoc_s(:title_how_to_promote) %> оформление: широка
+title: <%= hoc_s(:title_how_to_promote) %>
+layout: wide
 nav: promote_nav
 
 ---

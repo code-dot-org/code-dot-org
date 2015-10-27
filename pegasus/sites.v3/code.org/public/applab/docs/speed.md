@@ -50,7 +50,8 @@ ____________________________________________________
 <tr>
 <td style="border-style:none; width:90%; padding:0px">
 <pre>
-// Draw a square with the turtle moving at increasingly faster speeds (10, 20, 30, 40, 50, 60, 70, 80, 90, 100).
+// Draw a square with the turtle moving at increasingly faster speeds
+// (10, 20, 30, 40, 50, 60, 70, 80, 90, 100).
 textLabel("speed", "speed: 10");
 for (var i = 1; i &lt;= 10; i++) {
   for (var j = 0; j &lt; 4; j++) {

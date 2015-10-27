@@ -19,6 +19,7 @@ module.exports.blocks = [
       '"random"',
       '"character1sound1"', '"character1sound2"', '"character1sound3"', '"character1sound4"',
       '"character1sound5"', '"character1sound6"', '"character1sound7"', '"character1sound8"',
+      '"character1sound9"',
       '"character2sound1"', '"character2sound2"', '"character2sound3"', '"character2sound4"',
       '"item1sound1"', '"item1sound2"', '"item1sound3"', '"item1sound4"',
       '"item3sound1"', '"item3sound2"', '"item3sound3"', '"item3sound4"',

@@ -205,6 +205,7 @@ levels.custom = {
     "declareAssign_str_hello_world": null,
     "substring": null,
     "indexOf": null,
+    "includes": null,
     "length": null,
     "toUpperCase": null,
     "toLowerCase": null,
@@ -672,7 +673,8 @@ function renderFooterInSharedGame() {
     },
     {
       text: applabMsg.makeMyOwnApp(),
-      link: '/projects/applab'
+      link: '/projects/applab',
+      hideOnMobile: true
     },
     {
       text: commonMsg.openWorkspace(),
@@ -690,7 +692,9 @@ function renderFooterInSharedGame() {
     }
   ];
   if (dom.isMobile()) {
-    menuItems.splice(0, 1); // no make my own app on mobile
+    menuItems = menuItems.filter(function (item) {
+      return !item.hideOnMobile;
+    });
   }
 
   window.dashboard.footer.render(React, {
@@ -2378,7 +2382,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="divApplab" class="appModern" tabindex="1">\n</div>\n<div id="designModeViz" style="display:none;">\n</div>\n\n'); })();
+ buf.push('<div id="divApplab" class="appModern" tabindex="1">\n</div>\n<div id="designModeViz" class="appModern" style="display:none;">\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2398,7 +2402,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../locale') ; buf.push('\n');2; var applabMsg = require('./locale') ; buf.push('\n\n<div id="debug-area">\n  <div id="debugResizeBar" class="fa fa-ellipsis-h"></div>\n  <div id="debug-area-header">\n    <span class="header-text">', escape((7,  applabMsg.debugConsoleHeader() )), '</span>\n    <i id="show-hide-debug-icon" class="fa fa-chevron-circle-down"></i>\n    ');9; if (debugButtons) { ; buf.push('\n    <div id="debug-commands-header" class="workspace-header">\n      <i id="running-spinner" style="display: none;" class="fa fa-spinner fa-spin"></i>\n      <i id="paused-icon" style="display: none;" class="fa fa-pause"></i>\n      <span class="header-text">', escape((13,  applabMsg.debugCommandsHeaderWhenOpen() )), '</span>\n    </div>\n    <div id="clear-console-header" class="workspace-header workspace-header-button"><span><i class="fa fa-eraser"></i>Clear</span></div>\n    <div id="slider-cell">\n      <svg id="applab-slider"\n           xmlns="http://www.w3.org/2000/svg"\n           xmlns:svg="http://www.w3.org/2000/svg"\n           xmlns:xlink="http://www.w3.org/1999/xlink"\n           version="1.1"\n           width="150"\n           height="28">\n          <!-- Slow icon. -->\n          <clipPath id="slowClipPath">\n            <rect width=26 height=12 x=5 y=6 />\n          </clipPath>\n          <image xlink:href="', escape((28,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-18\n              clip-path="url(#slowClipPath)" />\n          <!-- Fast icon. -->\n          <clipPath id="fastClipPath">\n            <rect width=26 height=16 x=120 y=2 />\n          </clipPath>\n          <image xlink:href="', escape((34,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=120 y=-19\n              clip-path="url(#fastClipPath)" />\n      </svg>\n    </div>\n    ');38; } ; buf.push('\n  </div>\n\n  ');41; if (debugButtons) { ; buf.push('\n  <div id="debug-commands" class="debug-commands">\n    <div id="debug-buttons">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((45,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((46,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((49,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((50,  applabMsg.continue() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((53,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((54,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((57,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((58,  applabMsg.stepOut() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((61,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((62,  applabMsg.stepIn() )), '\n      </button>\n    </div>\n  </div>\n  ');66; } ; buf.push('\n  ');67; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console ', escape((68,  debugButtons ? '' : 'full' )), '">\n    <div id="debug-output" class="debug-output"></div>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable spellcheck="false" id="debug-input" class="debug-input"></div>\n  </div>\n  ');75; } ; buf.push('\n</div>\n'); })();
+ buf.push('');1; var msg = require('../locale') ; buf.push('\n');2; var applabMsg = require('./locale') ; buf.push('\n\n<div id="debug-area">\n  <div id="debugResizeBar" class="fa fa-ellipsis-h"></div>\n  <div id="debug-area-header">\n    <span class="header-text">', escape((7,  applabMsg.debugConsoleHeader() )), '</span>\n    <i id="show-hide-debug-icon" class="fa fa-chevron-circle-down"></i>\n    ');9; if (debugButtons) { ; buf.push('\n    <div id="debug-commands-header" class="workspace-header">\n      <i id="running-spinner" style="display: none;" class="fa fa-spinner fa-spin"></i>\n      <i id="paused-icon" style="display: none;" class="fa fa-pause"></i>\n      <span class="header-text">', escape((13,  applabMsg.debugCommandsHeaderWhenOpen() )), '</span>\n    </div>\n    <div id="clear-console-header" class="workspace-header workspace-header-button"><span><i class="fa fa-eraser"></i>Clear</span></div>\n    ');16; } ; buf.push('\n    <div id="slider-cell" style="margin-left: ', escape((17,  debugButtons ? 0 : 40 )), 'px">\n      <svg id="applab-slider"\n           xmlns="http://www.w3.org/2000/svg"\n           xmlns:svg="http://www.w3.org/2000/svg"\n           xmlns:xlink="http://www.w3.org/1999/xlink"\n           version="1.1"\n           width="150"\n           height="28">\n          <!-- Slow icon. -->\n          <clipPath id="slowClipPath">\n            <rect width=26 height=12 x=5 y=6 />\n          </clipPath>\n          <image xlink:href="', escape((29,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-18\n              clip-path="url(#slowClipPath)" />\n          <!-- Fast icon. -->\n          <clipPath id="fastClipPath">\n            <rect width=26 height=16 x=120 y=2 />\n          </clipPath>\n          <image xlink:href="', escape((35,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=120 y=-19\n              clip-path="url(#fastClipPath)" />\n      </svg>\n    </div>\n  </div>\n\n  ');41; if (debugButtons) { ; buf.push('\n  <div id="debug-commands" class="debug-commands">\n    <div id="debug-buttons">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((45,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((46,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((49,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((50,  applabMsg.continue() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((53,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((54,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((57,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((58,  applabMsg.stepOut() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((61,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((62,  applabMsg.stepIn() )), '\n      </button>\n    </div>\n  </div>\n  ');66; } ; buf.push('\n  ');67; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console ', escape((68,  debugButtons ? '' : 'full' )), '">\n    <div id="debug-output" class="debug-output"></div>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable spellcheck="false" id="debug-input" class="debug-input"></div>\n  </div>\n  ');75; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2441,7 +2445,6 @@ function getScreenIds() {
   // Convert from jQuery's array-like object to a true array
   return $.makeArray(ret);
 }
-
 
 module.exports.blocks = [
   {func: 'onEvent', parent: api, category: 'UI controls', paletteParams: ['id','type','callback'], params: ['"id"', '"click"', "function(event) {\n  \n}"], dropdown: { 0: function () { return Applab.getIdDropdown(); }, 1: [ '"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"' ] } },
@@ -2530,11 +2533,12 @@ module.exports.blocks = [
 
   {func: 'console.log', parent: consoleApi, category: 'Variables', paletteParams: ['message'], params: ['"message"'] },
   {func: 'declareAssign_str_hello_world', block: 'var str = "Hello World";', category: 'Variables', noAutocomplete: true },
-  {func: 'substring', blockPrefix: 'str.substring', category: 'Variables', paletteParams: ['start','end'], params: ["6", "11"], 'modeOptionName': '*.substring', type: 'value' },
-  {func: 'indexOf', blockPrefix: 'str.indexOf', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], 'modeOptionName': '*.indexOf', type: 'value' },
-  {func: 'length', block: 'str.length', category: 'Variables', 'modeOptionName': '*.length' },
-  {func: 'toUpperCase', blockPrefix: 'str.toUpperCase', category: 'Variables', 'modeOptionName': '*.toUpperCase', type: 'value' },
-  {func: 'toLowerCase', blockPrefix: 'str.toLowerCase', category: 'Variables', 'modeOptionName': '*.toLowerCase', type: 'value' },
+  {func: 'substring', blockPrefix: 'str.substring', category: 'Variables', paletteParams: ['start','end'], params: ["6", "11"], modeOptionName: '*.substring', type: 'value' },
+  {func: 'indexOf', blockPrefix: 'str.indexOf', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.indexOf', type: 'value' },
+  {func: 'includes', blockPrefix: 'str.includes', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.includes', type: 'value' },
+  {func: 'length', block: 'str.length', category: 'Variables', modeOptionName: '*.length' },
+  {func: 'toUpperCase', blockPrefix: 'str.toUpperCase', category: 'Variables', modeOptionName: '*.toUpperCase', type: 'value' },
+  {func: 'toLowerCase', blockPrefix: 'str.toLowerCase', category: 'Variables', modeOptionName: '*.toLowerCase', type: 'value' },
   {func: 'declareAssign_list_abd', block: 'var list = ["a", "b", "d"];', category: 'Variables', noAutocomplete: true },
   {func: 'listLength', block: 'list.length', category: 'Variables', noAutocomplete: true },
   {func: 'insertItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','index','item'], params: ["list", "2", '"c"'], dontMarshal: true },
@@ -2583,7 +2587,6 @@ module.exports.categories = {
  * an 'Examples' link that opens documentation in a lightbox:
  */
 module.exports.showExamplesLink = true;
-
 
 
 },{"../applab/assetManagement/show.js":"/home/ubuntu/staging/apps/build/js/applab/assetManagement/show.js","./ChartApi":"/home/ubuntu/staging/apps/build/js/applab/ChartApi.js","./api":"/home/ubuntu/staging/apps/build/js/applab/api.js","./consoleApi":"/home/ubuntu/staging/apps/build/js/applab/consoleApi.js","./constants":"/home/ubuntu/staging/apps/build/js/applab/constants.js","./designElements/elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js","./dontMarshalApi":"/home/ubuntu/staging/apps/build/js/applab/dontMarshalApi.js"}],"/home/ubuntu/staging/apps/build/js/applab/consoleApi.js":[function(require,module,exports){

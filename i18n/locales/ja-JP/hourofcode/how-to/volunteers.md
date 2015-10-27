@@ -53,7 +53,7 @@ Most schools still don’t teach computer science. Most students don’t know th
 
 ## 6. Promote the Hour of Code in your community
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://hourofcode.com/promote/resources#email).
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. もしくは、周囲に住む人と一緒にHour of Code"パーティ"をしてみても面白いでしょう。 [Send this email](https://hourofcode.com/promote/resources#email).
 
 ## 7. Read the suggested agenda below so you know what to expect when you visit a classroom.
 

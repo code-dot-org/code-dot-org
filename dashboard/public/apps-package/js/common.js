@@ -6353,6 +6353,7 @@ StudioApp.prototype.loadAudio = function(filenames, name) {
  * @param {string} name sound ID
  * @param {Object} options for sound playback
  * @param {number} options.volume value between 0.0 and 1.0 specifying volume
+ * @param {function} [options.onEnded]
  */
 StudioApp.prototype.playAudio = function(name, options) {
   if (!this.cdoSounds) {
@@ -6475,8 +6476,12 @@ StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
       // look to see if we have a predefined arrangement for this type
       type = xmlChild.getAttribute('type');
       if (arrangement[type]) {
-        xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangement[type].x);
-        xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangement[type].y);
+        if (arrangement[type].x && !xmlChild.hasAttribute('x')) {
+          xmlChild.setAttribute('x', arrangement[type].x);
+        }
+        if (arrangement[type].y && !xmlChild.hasAttribute('y')) {
+          xmlChild.setAttribute('y', arrangement[type].y);
+        }
       }
     }
   }
@@ -34336,10 +34341,8 @@ exports.makeNativeMemberFunction = function (opts) {
     return function() {
       // Just call the native function and marshal the return value:
       var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, arguments);
-      return exports.marshalNativeToInterpreter(opts.interpreter,
-                                                nativeRetVal,
-                                                null,
-                                                opts.maxDepth);
+      return exports.marshalNativeToInterpreter(opts.interpreter, nativeRetVal,
+        null, opts.maxDepth);
     };
   } else {
     return function() {
@@ -34349,10 +34352,8 @@ exports.makeNativeMemberFunction = function (opts) {
         nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
       }
       var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, nativeArgs);
-      return exports.marshalNativeToInterpreter(opts.interpreter,
-                                                nativeRetVal,
-                                                null,
-                                                opts.maxDepth);
+      return exports.marshalNativeToInterpreter(opts.interpreter, nativeRetVal,
+        null, opts.maxDepth);
     };
   }
 };
@@ -34410,21 +34411,28 @@ function populateGlobalFunctions(interpreter, blocks, scope) {
 
 function populateJSFunctions(interpreter) {
   // The interpreter is missing some basic JS functions. Add them as needed:
+  var wrapper;
 
   // Add static methods from String:
   var functions = ['fromCharCode'];
   for (var i = 0; i < functions.length; i++) {
-    var wrapper = exports.makeNativeMemberFunction({
-        interpreter: interpreter,
-        nativeFunc: String[functions[i]],
-        nativeParentObj: String,
+    wrapper = exports.makeNativeMemberFunction({
+      interpreter: interpreter,
+      nativeFunc: String[functions[i]],
+      nativeParentObj: String,
     });
-    interpreter.setProperty(interpreter.STRING,
-                            functions[i],
-                            interpreter.createNativeFunction(wrapper),
-                            false,
-                            true);
+    interpreter.setProperty(interpreter.STRING, functions[i],
+      interpreter.createNativeFunction(wrapper), false, true);
   }
+
+  // Add String.prototype.includes
+  wrapper = function(searchStr) {
+    // Polyfill based off of https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+    return interpreter.createPrimitive(
+      String.prototype.indexOf.apply(this, arguments) !== -1);
+  };
+  interpreter.setProperty(interpreter.STRING.properties.prototype, 'includes',
+    interpreter.createNativeFunction(wrapper), false, true);
 }
 
 /**
@@ -35504,7 +35512,7 @@ exports.parseElement = function(text) {
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,isEqual,find,sortBy,throttle" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,isEqual,find,sortBy,throttle,uniq" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -36811,6 +36819,53 @@ exports.parseElement = function(text) {
    */
   function baseRandom(min, max) {
     return min + floor(nativeRandom() * (max - min + 1));
+  }
+
+  /**
+   * The base implementation of `_.uniq` without support for callback shorthands
+   * or `thisArg` binding.
+   *
+   * @private
+   * @param {Array} array The array to process.
+   * @param {boolean} [isSorted=false] A flag to indicate that `array` is sorted.
+   * @param {Function} [callback] The function called per iteration.
+   * @returns {Array} Returns a duplicate-value-free array.
+   */
+  function baseUniq(array, isSorted, callback) {
+    var index = -1,
+        indexOf = getIndexOf(),
+        length = array ? array.length : 0,
+        result = [];
+
+    var isLarge = !isSorted && length >= largeArraySize && indexOf === baseIndexOf,
+        seen = (callback || isLarge) ? getArray() : result;
+
+    if (isLarge) {
+      var cache = createCache(seen);
+      indexOf = cacheIndexOf;
+      seen = cache;
+    }
+    while (++index < length) {
+      var value = array[index],
+          computed = callback ? callback(value, index, array) : value;
+
+      if (isSorted
+            ? !index || seen[seen.length - 1] !== computed
+            : indexOf(seen, computed) < 0
+          ) {
+        if (callback || isLarge) {
+          seen.push(computed);
+        }
+        result.push(value);
+      }
+    }
+    if (isLarge) {
+      releaseArray(seen.array);
+      releaseObject(seen);
+    } else if (callback) {
+      releaseArray(seen);
+    }
+    return result;
   }
 
   /**
@@ -38278,6 +38333,63 @@ exports.parseElement = function(text) {
   }
 
   /**
+   * Creates a duplicate-value-free version of an array using strict equality
+   * for comparisons, i.e. `===`. If the array is sorted, providing
+   * `true` for `isSorted` will use a faster algorithm. If a callback is provided
+   * each element of `array` is passed through the callback before uniqueness
+   * is computed. The callback is bound to `thisArg` and invoked with three
+   * arguments; (value, index, array).
+   *
+   * If a property name is provided for `callback` the created "_.pluck" style
+   * callback will return the property value of the given element.
+   *
+   * If an object is provided for `callback` the created "_.where" style callback
+   * will return `true` for elements that have the properties of the given object,
+   * else `false`.
+   *
+   * @static
+   * @memberOf _
+   * @alias unique
+   * @category Arrays
+   * @param {Array} array The array to process.
+   * @param {boolean} [isSorted=false] A flag to indicate that `array` is sorted.
+   * @param {Function|Object|string} [callback=identity] The function called
+   *  per iteration. If a property name or object is provided it will be used
+   *  to create a "_.pluck" or "_.where" style callback, respectively.
+   * @param {*} [thisArg] The `this` binding of `callback`.
+   * @returns {Array} Returns a duplicate-value-free array.
+   * @example
+   *
+   * _.uniq([1, 2, 1, 3, 1]);
+   * // => [1, 2, 3]
+   *
+   * _.uniq([1, 1, 2, 2, 3], true);
+   * // => [1, 2, 3]
+   *
+   * _.uniq(['A', 'b', 'C', 'a', 'B', 'c'], function(letter) { return letter.toLowerCase(); });
+   * // => ['A', 'b', 'C']
+   *
+   * _.uniq([1, 2.5, 3, 1.5, 2, 3.5], function(num) { return this.floor(num); }, Math);
+   * // => [1, 2.5, 3]
+   *
+   * // using "_.pluck" callback shorthand
+   * _.uniq([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x');
+   * // => [{ 'x': 1 }, { 'x': 2 }]
+   */
+  function uniq(array, isSorted, callback, thisArg) {
+    // juggle arguments
+    if (typeof isSorted != 'boolean' && isSorted != null) {
+      thisArg = callback;
+      callback = (typeof isSorted != 'function' && thisArg && thisArg[isSorted] === array) ? null : isSorted;
+      isSorted = false;
+    }
+    if (callback != null) {
+      callback = lodash.createCallback(callback, thisArg, 3);
+    }
+    return baseUniq(array, isSorted, callback);
+  }
+
+  /**
    * Creates an array excluding all provided values using strict equality for
    * comparisons, i.e. `===`.
    *
@@ -38880,6 +38992,7 @@ exports.parseElement = function(text) {
   lodash.shuffle = shuffle;
   lodash.sortBy = sortBy;
   lodash.throttle = throttle;
+  lodash.uniq = uniq;
   lodash.values = values;
   lodash.without = without;
   lodash.wrap = wrap;
@@ -38890,6 +39003,7 @@ exports.parseElement = function(text) {
   lodash.extend = assign;
   lodash.methods = functions;
   lodash.select = filter;
+  lodash.unique = uniq;
 
   // add functions to `lodash.prototype`
   mixin(lodash);
