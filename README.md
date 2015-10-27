@@ -19,8 +19,8 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. Add `if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi` to `~/.profile` or whatever profile gets sourced when you start your terminal. You should only have to do this once.
   1. source `~/.profile` or whatever you changed in the above step. You should only have to do this once.
   1. `git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build`
-  1. brew update
-  1. brew upgrade rbenv ruby-build
+  1. `brew update`
+  1. `brew upgrade rbenv ruby-build`
   1. `rbenv install 2.2.3`
   1. `rbenv global 2.2.3`
   1. `rbenv rehash`
