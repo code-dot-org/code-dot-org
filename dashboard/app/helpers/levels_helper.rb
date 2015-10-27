@@ -1,5 +1,4 @@
 require 'digest/sha1'
-require 'pp'
 
 module LevelsHelper
   include ApplicationHelper
@@ -157,8 +156,6 @@ module LevelsHelper
     # Fix up app_options that are configured with a baseUrl with a host name but no leading '//'
     base_url = @app_options[:baseUrl]
     @app_options[:baseUrl] = "//#{base_url}" unless base_url.blank? || base_url.start_with?('/')
-    pp @app_options
-    puts @app_options[:baseUrl]
 
     @app_options
   end
