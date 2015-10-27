@@ -4007,9 +4007,12 @@ Studio.setSprite = function (opts) {
   if (!Studio.movementAudioEffects[spriteValue] && skin.avatarList) {
     var spriteSkin = skin[spriteValue] || {};
     var audioConfig = spriteSkin.movementAudio || [];
-    Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
-      return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
-    });
+    Studio.movementAudioEffects[spriteValue] = [];
+    if (studioApp.cdoSounds) {
+      Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
+        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
+      });
+    }
   }
   Studio.currentSpriteMovementAudioEffects = Studio.movementAudioEffects[spriteValue];
 
