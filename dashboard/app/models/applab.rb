@@ -30,6 +30,7 @@ class Applab < Blockly
     free_play
     show_turtle_before_run
     autocomplete_palette_apis_only
+    execute_palette_apis_only
     text_mode_at_start
     design_mode_at_start
     hide_design_mode
