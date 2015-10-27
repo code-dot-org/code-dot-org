@@ -262,7 +262,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
             script_id: options.response.script_id,
             level_id: options.response.level_id,
             level_source_id: options.response.level_source_id,
-            rating: selectedRating.getAttribute('value')
+            rating: selectedRating.getAttribute('data-value')
           },
         });
       }
