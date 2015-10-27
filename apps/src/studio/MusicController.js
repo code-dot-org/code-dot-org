@@ -15,6 +15,21 @@
 
 var utils = require('../utils');
 
+var debugLogging = true;
+function debug(msg) {
+  if (debugLogging && console && console.info) {
+    console.info('MusicController: ' + msg);
+  }
+}
+
+/**
+ * @typedef {Object} MusicTrack
+ * @property {string} name
+ * @property {string[]} assetUrls
+ * @property {Sound} sound
+ * @property {boolean} isLoaded
+ */
+
 /**
  * A helper class that handles loading, choosing, playing and stopping
  * background music for Playlab.
@@ -22,11 +37,11 @@ var utils = require('../utils');
  * @param {AudioPlayer} audioPlayer - Reference to the Sounds object.
  * @param {function} assetUrl - Function for generating paths to static assets
  *        for the current skin.
- * @param {string[]} [musicFilenames] - List of music asset names (sans
+ * @param {string[]} [trackNames] - List of music asset names (sans
  *        extensions). Can be omitted if no music should be played.
  * @constructor
  */
-var MusicController = function (audioPlayer, assetUrl, musicFilenames) {
+var MusicController = function (audioPlayer, assetUrl, trackNames) {
   /** @private {AudioPlayer} */
   this.audioPlayer_ = audioPlayer;
 
@@ -34,15 +49,44 @@ var MusicController = function (audioPlayer, assetUrl, musicFilenames) {
   this.assetUrl_ = assetUrl;
 
   /** @private {string[]} */
-  this.musicNames_ = musicFilenames || [];
+  this.trackNames_ = trackNames || [];
 
-  /** @private {Object[]} */
-  this.musicFiles_ = {};
+  /** @private {Object} maps trackName => MusicTrack */
+  this.tracks_ = buildTrackMap(this.trackNames_, assetUrl);
 
   /** @private {string} */
   this.nowPlayingName_ = null;
+
+  this.playOnLoad_ = null;
+
+  debug('constructed');
+
+  $('.video-modal').on('shown.bs.modal', function() {
+    this.fadeOut();
+  }.bind(this));
 };
 module.exports = MusicController;
+
+/**
+ * Build up an initial map of trackName -> MusicTrack object, without doing
+ * any asset loading.
+ * @param {string{}} trackNames
+ * @param {function} assetUrl
+ */
+function buildTrackMap(trackNames, assetUrl) {
+  var tracks = trackNames.map(function (name) {
+    return {
+      name: name,
+      assetUrls: [ assetUrl(name + '.mp3'), assetUrl(name + '.ogg') ],
+      sound: null,
+      isLoaded: false
+    };
+  });
+  return tracks.reduce(function (memo, next) {
+    memo[next.name] = next;
+    return memo;
+  }, {});
+}
 
 /**
  * Preload all music assets,
@@ -52,39 +96,47 @@ MusicController.prototype.preload = function () {
     return;
   }
 
-  this.musicNames_.forEach(function (musicName) {
-    this.musicFiles_[musicName] = [
-      this.assetUrl_(musicName + '.mp3'),
-      this.assetUrl_(musicName + '.ogg')];
-    this.audioPlayer_.registerByFilenamesAndID(this.musicFiles_[musicName], musicName);
-  }, this);
-
-  // By default, set the first music sound to play on load
-  var firstMusic = this.musicNames_[0];
-  if (firstMusic) {
-    var sound = this.audioPlayer_.get(firstMusic);
-    if (sound) {
-      sound.onLoad = function () {
-        this.play(firstMusic);
-      }.bind(this);
-    }
-  }
+  this.trackNames_.forEach(function (name) {
+    this.tracks_[name].sound = this.audioPlayer_.registerByFilenamesAndID(
+        this.tracks_[name].assetUrls, name);
+    this.tracks_[name].sound.onLoad = function () {
+      debug('done loading ' + name);
+      this.tracks_[name].isLoaded = true;
+      if (this.playOnLoad_ === name) {
+        this.play(name);
+      }
+    }.bind(this);
+  }.bind(this));
 };
 
 /**
  * Begins playing a particular piece of music immediately.
- * @param {string} musicName
+ * @param {string} trackName
  */
-MusicController.prototype.play = function (musicName) {
+MusicController.prototype.play = function (trackName) {
+  debug('play ' + trackName);
   if (!this.audioPlayer_) {
     return;
   }
 
-  var sound = this.audioPlayer_.get(musicName);
-  if (sound) {
-    var callback = this.whenMusicStopped_.bind(this, musicName);
-    sound.play({ onEnded: callback });
-    this.nowPlaying_ = musicName;
+  if (!trackName) {
+    trackName = this.trackNames_[Math.floor(Math.random(this.trackNames_.length))];
+  }
+
+  var track = this.tracks_[trackName];
+  if (!track) {
+    // Not found - throw exception?
+    return;
+  }
+
+  if (track.sound && track.isLoaded) {
+    debug('playing now');
+    var callback = this.whenMusicStopped_.bind(this, trackName);
+    track.sound.play({ onEnded: callback });
+    this.nowPlaying_ = trackName;
+  } else {
+    debug('not done loading, playing after load');
+    this.playOnLoad_ = trackName;
   }
 };
 
