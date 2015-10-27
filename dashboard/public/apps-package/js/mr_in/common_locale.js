@@ -399,4 +399,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_randomNumber_param0_description":function(d){return "The minimum number returned"},
 "dropletBlock_randomNumber_param1":function(d){return "max"},
 "dropletBlock_randomNumber_param1_description":function(d){return "The maximum number returned"},
-"dropletBlock_randomNumber_signatureOverride":function(d){return "randomNumber(min, max)"}};
+"dropletBlock_randomNumber_signatureOverride":function(d){return "randomNumber(min, max)"},
+"unsubmit":function(d){return "Unsubmit"},
+"unsubmitYourProject":function(d){return "Unsubmit your project"},
+"unsubmitYourProjectConfirm":function(d){return "Unsubmitting your project will reset the submitted date, really unsubmit?"}};

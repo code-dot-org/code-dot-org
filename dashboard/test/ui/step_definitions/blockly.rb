@@ -130,6 +130,13 @@ And /^I've initialized the workspace with an auto\-positioned flappy puzzle with
   @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
 end
 
+And /^I've initialized the workspace with a manually\-positioned playlab puzzle$/ do
+  @browser.execute_script("Blockly.mainBlockSpace.clear();")
+  blocks_xml = '<xml><block type="studio_whenArrow" x="20"><title name="VALUE">up</title><next><block type="studio_move"><title name="DIR">1</title></block></next></block><block type="studio_whenArrow" y="20"><title name="VALUE">down</title><next><block type="studio_move"><title name="DIR">2</title></block></next></block><block type="studio_whenArrow" x="20" y="20"><title name="VALUE">left</title><next><block type="studio_move"><title name="DIR">4</title></block></next></block><block type="studio_whenArrow"><title name="VALUE">right</title><next><block type="studio_move"><title name="DIR">8</title></block></next></block></xml>'
+  arranged_blocks_xml = @browser.execute_script("return __TestInterface.arrangeBlockPosition('" + blocks_xml + "', {});")
+  @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
+end
+
 And /^I've initialized the workspace with the solution blocks$/ do
   @browser.execute_script("Blockly.mainBlockSpace.clear();")
   @browser.execute_script("__TestInterface.loadBlocks(appOptions.level.solutionBlocks);")
