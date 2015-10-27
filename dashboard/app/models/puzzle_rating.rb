@@ -13,7 +13,6 @@
 # Indexes
 #
 #  index_puzzle_ratings_on_script_id_and_level_id              (script_id,level_id)
-#  index_puzzle_ratings_on_user_id                             (user_id)
 #  index_puzzle_ratings_on_user_id_and_script_id_and_level_id  (user_id,script_id,level_id) UNIQUE
 #
 
@@ -24,6 +23,7 @@ class PuzzleRating < ActiveRecord::Base
 
   validates :script, :presence => true
   validates :level, :presence => true
+  validates :rating, :numericality => { only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 1 }
 
   validates_uniqueness_of :user_id, :scope => [:script_id, :level_id], :allow_nil => true
 
