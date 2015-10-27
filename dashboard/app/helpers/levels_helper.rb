@@ -321,7 +321,7 @@ module LevelsHelper
     app_options
   end
 
-  LevelViewOptions = Struct.new *%i(
+  LevelViewOptions = Struct.new(*%i(
     success_condition
     start_blocks
     toolbox_blocks
@@ -331,7 +331,9 @@ module LevelsHelper
     share
     hide_source
     script_level_id
-  )
+    submitted
+    unsubmit_url
+  ))
   # Sets custom level options to be used by the view layer. The option hash is frozen once read.
   def level_view_options(opts = nil)
     @level_view_options ||= LevelViewOptions.new
