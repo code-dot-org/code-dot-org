@@ -1039,7 +1039,8 @@ Applab.init = function(config) {
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
     finishButton: (!level.isProjectLevel && !level.submittable),
-    submitButton: level.submittable
+    submitButton: level.submittable && !level.submitted,
+    unsubmitButton: level.submittable && level.submitted
   });
   var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
@@ -1237,6 +1238,11 @@ Applab.init = function(config) {
   var submitButton = document.getElementById('submitButton');
   if (submitButton) {
     dom.addClickTouchEvent(submitButton, Applab.onPuzzleSubmit);
+  }
+
+  var unsubmitButton = document.getElementById('unsubmitButton');
+  if (unsubmitButton) {
+    dom.addClickTouchEvent(unsubmitButton, Applab.onPuzzleUnsubmit);
   }
 
   if (level.editCode) {
@@ -1845,10 +1851,21 @@ Applab.maybeAddAssetPathPrefix = function (filename) {
   return '/v3/assets/' + Applab.channelId + '/'  + filename;
 };
 
-Applab.showSubmitConfirmation = function() {
+/**
+ * Show a modal dialog with a title, text, and OK and Cancel buttons
+ * @param {title}
+ * @param {text}
+ * @param {callback} [onConfirm] what to do when the user clicks OK
+ * @param {string} [filterSelector] Optional selector to filter for.
+ */
+
+Applab.showConfirmationDialog = function(config) {
+  config.text = config.text || "";
+  config.title = config.title || "";
+
   var contentDiv = document.createElement('div');
-  contentDiv.innerHTML = '<p class="dialog-title">' + commonMsg.submitYourProject() + '</p>' +
-      '<p>' + commonMsg.submitYourProjectConfirm() + '</p>';
+  contentDiv.innerHTML = '<p class="dialog-title">' + config.title + '</p>' +
+      '<p>' + config.text + '</p>';
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('../templates/buttons.html.ejs')({
@@ -1875,7 +1892,9 @@ Applab.showSubmitConfirmation = function() {
   var confirmButton = buttons.querySelector('#confirm-button');
   if (confirmButton) {
     dom.addClickTouchEvent(confirmButton, function() {
-      Applab.onPuzzleComplete(true);
+      if (config.onConfirm) {
+        config.onConfirm();
+      }
       dialog.hide();
     });
   }
@@ -1884,7 +1903,31 @@ Applab.showSubmitConfirmation = function() {
 };
 
 Applab.onPuzzleSubmit = function() {
-  Applab.showSubmitConfirmation();
+  Applab.showConfirmationDialog({
+    title: commonMsg.submitYourProject(),
+    text: commonMsg.submitYourProjectConfirm(),
+    onConfirm: function() {
+      Applab.onPuzzleComplete(true);
+    }
+  });
+};
+
+Applab.unsubmit = function() {
+  $.post(level.unsubmitUrl,
+         {"_method": 'PUT', user_level: {best_result: 1}},
+         function( data ) {
+           location.reload();
+         });
+};
+
+Applab.onPuzzleUnsubmit = function() {
+  Applab.showConfirmationDialog({
+    title: commonMsg.unsubmitYourProject(),
+    text: commonMsg.unsubmitYourProjectConfirm(),
+    onConfirm: function() {
+      Applab.unsubmit();
+    }
+  });
 };
 
 Applab.onPuzzleFinish = function() {
@@ -3885,7 +3928,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../locale');
 ; buf.push('\n');4; // Comment so this file is not identical to studio/controls.html.ejs 
-; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" disabled=true class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" disabled=true class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" disabled=true class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" disabled=true class="arrow">\n    <img src="', escape((17,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');21; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((24,  assetUrl('media/1x1.gif') )), '">', escape((24,  msg.finish() )), '\n    </button>\n  </div>\n');27; } ; buf.push('\n\n');29; if (submitButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="submitButton" class="share">\n      <img src="', escape((32,  assetUrl('media/1x1.gif') )), '">', escape((32,  msg.submit() )), '\n    </button>\n  </div>\n');35; } ; buf.push('\n'); })();
+; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" disabled=true class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" disabled=true class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" disabled=true class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" disabled=true class="arrow">\n    <img src="', escape((17,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');21; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((24,  assetUrl('media/1x1.gif') )), '">', escape((24,  msg.finish() )), '\n    </button>\n  </div>\n');27; } ; buf.push('\n\n');29; if (submitButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="submitButton" class="share">\n      <img src="', escape((32,  assetUrl('media/1x1.gif') )), '">', escape((32,  msg.submit() )), '\n    </button>\n  </div>\n');35; } ; buf.push('\n\n');37; if (unsubmitButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-enabled">\n    <button id="unsubmitButton" class="share">\n      <img src="', escape((40,  assetUrl('media/1x1.gif') )), '">', escape((40,  msg.unsubmit() )), '\n    </button>\n  </div>\n');43; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
