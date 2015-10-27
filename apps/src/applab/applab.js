@@ -630,7 +630,7 @@ function markSeenDataAlert(channelId) {
 Applab.startSharedAppAfterWarnings = function () {
   // dashboard will redirect young signed in users
   var is13Plus = Applab.user.isSignedIn || localStorage.getItem('is13Plus') === "true";
-  var showStoreDataAlert = Applab.hasDataStoreAPIs(studioApp.getCode()) &&
+  var showStoreDataAlert = Applab.hasDataStoreAPIs(Applab.getCode()) &&
     !hasSeenDataAlert(Applab.channelId);
 
   var modal = document.createElement('div');
