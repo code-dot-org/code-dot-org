@@ -1,7 +1,7 @@
 class ScriptLevelsController < ApplicationController
 
   # Maximum age in seconds for cached content
-  HTTP_MAXAGE = 1.day
+  HTTP_MAXAGE = 1.minute
 
   check_authorization
   include LevelsHelper
@@ -151,7 +151,7 @@ class ScriptLevelsController < ApplicationController
 
     load_level_source
 
-    @callback = milestone_path(user_id: current_user.try(:id) || 0, script_level_id: @script_level.id)
+    @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level.id)
     view_options(
       full_width: true,
       small_footer: @game.uses_small_footer? || enable_scrolling?,
