@@ -1583,10 +1583,23 @@ Studio.init = function(config) {
     }
   });
 
+  /**
+   * Helper that handles music loading/playing/crossfading for the level.
+   * @type {MusicController}
+   */
   Studio.musicController = new MusicController(
       studioApp.cdoSounds,
       skin.assetUrl,
       utils.valueOr(level.music, skin.music));
+
+  /**
+   * Defines the set of possible movement sound effects for each playlab actor.
+   * Populated just-in-time by setSprite to avoid preparing audio for actors
+   * we never use.
+   * @type {Object}
+   */
+  Studio.movementAudioEffects = {};
+
   config.loadAudio = function() {
     var soundFileNames = [];
     // We want to load the basic list of effects available in the skin
@@ -4010,16 +4023,18 @@ Studio.setSprite = function (opts) {
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
-  // Set up movement audio for the selected sprite (should be preloaded)
-  Studio.movementAudioOptions = Studio.movementAudioOptions || {};
-  if (!Studio.movementAudioOptions[spriteValue] && skin.avatarList) {
+  // Set up movement audio for the selected sprite (clips should be preloaded)
+  if (!Studio.movementAudioEffects[spriteValue] && skin.avatarList) {
     var spriteSkin = skin[spriteValue] || {};
     var audioConfig = spriteSkin.movementAudio || [];
-    Studio.movementAudioOptions[spriteValue] = audioConfig.map(function (audioOption) {
-      return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
-    });
+    Studio.movementAudioEffects[spriteValue] = [];
+    if (studioApp.cdoSounds) {
+      Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
+        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
+      });
+    }
   }
-  Studio.currentMovementAudioOptions = Studio.movementAudioOptions[spriteValue];
+  Studio.currentSpriteMovementAudioEffects = Studio.movementAudioEffects[spriteValue];
 
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
@@ -4028,8 +4043,8 @@ Studio.setSprite = function (opts) {
 
 Studio.movementAudioOn = function () {
   Studio.movementAudioOff();
-  Studio.currentMovementAudio = Studio.currentMovementAudioOptions[
-      Math.floor(Math.random() * Studio.currentMovementAudioOptions.length)];
+  Studio.currentMovementAudio = Studio.currentSpriteMovementAudioEffects[
+      Math.floor(Math.random() * Studio.currentSpriteMovementAudioEffects.length)];
   if (Studio.currentMovementAudio) {
     Studio.currentMovementAudio.on();
   }
@@ -12374,7 +12389,7 @@ ThreeSliceAudio.prototype.whenSoundStopped_ = function (stoppedState) {
 
 var utils = require('../utils');
 
-var debugLogging = true;
+var debugLogging = false;
 function debug(msg) {
   if (debugLogging && console && console.info) {
     console.info('MusicController: ' + msg);
