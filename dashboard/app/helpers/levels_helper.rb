@@ -140,7 +140,6 @@ module LevelsHelper
     view_options(is_channel_backed: true) if @level.channel_backed?
 
     if @level.is_a? Blockly
-      puts 'blockly'
       @app_options = blockly_options
     elsif @level.is_a? DSLDefined
       @app_options = dsl_defined_options
