@@ -22,15 +22,6 @@ class DCDOTest < ActiveSupport::TestCase
     assert_equal DCDO.get(key, nil), to_store
   end
 
-  test 'returns default if fetching fails' do
-    $dcdo_cache.stubs(:get).throws(StandardError)
-
-    key = 'okay'
-    value = 'whatev'
-    DCDO.set(key, 12345)
-    assert_equal DCDO.get(key, value), value
-  end
-
   test 'storing a non-jsonable object fails' do
     class RandomClass
     end

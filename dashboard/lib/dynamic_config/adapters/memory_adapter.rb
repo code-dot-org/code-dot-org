@@ -23,4 +23,8 @@ class MemoryAdapter
     end
     ret
   end
+
+  def clear
+    @hash = {}
+  end
 end

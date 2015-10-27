@@ -32,6 +32,12 @@ class DatastoreCache
     set_local(key, value)
   end
 
+  # Clear the datastore
+  def clear
+    @cache = {}
+    @datastore.clear
+  end
+
   private
 
   # Sets the given value for the key in the local cache
