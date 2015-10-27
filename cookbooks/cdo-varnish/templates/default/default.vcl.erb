@@ -83,53 +83,6 @@ sub vcl_recv
       vcl_rewrite_accept_language(ctx);
   }C
 
-<<<<<<< HEAD
-  /*
-  ** Convert language cookie into X-Varnish-Accept-Language header
-  */
-<%
-i = 0
-node['cdo-apps']['i18n']['languages'].to_hash.keys.each do |language|
-  js = (i += 1) != 1 ? '  else ' : '  '
-  js.concat("if(req.http.Cookie ~ \"language_=#{language}\") {\n    set req.http.X-Varnish-Accept-Language = \"#{language}\";\n  }\n")
-%><%= js %><%
-end
-%>
-
-  # Ensure that we aggressively cache HOC levels.
-  # TODO: Make this general
-  if ((req.url ~ "^/hoc" || req.url ~ "^/s/hourofcode/" || req.url ~ "^/assets/")) {
-    unset req.http.Cookie;
-    unset req.http.max-age;
-    unset req.http.Accept;
-  }
-
-  if (req.http.host ~ "(dashboard|studio).code.org$" ||
-      req.http.host == "<%= canonical_hostname('studio.code.org') %>" ||
-      req.http.host == "code-dot-org.cartoonnetworkarabic.com")
-  {
-    if (req.url ~ "^/v2/")
-    {
-      set req.backend = default;
-      set req.http.host = "<%= canonical_hostname('code.org') %>";
-    }
-    else
-    {
-      set req.backend = dashboard;
-    }
-  }
-  else if (req.url ~ "^/dashboardapi/")
-  {
-    # Map /dashboardapi to studio.code.org/api
-    set req.backend = dashboard;
-    set req.http.host = "<%= canonical_hostname('studio.code.org') %>";
-    set req.url = regsub(req.url, "^/dashboardapi/", "/api/");
-    return(pass);
-  }
-  else
-  {
-    set req.backend = default;
-=======
 ### EXTRACT COOKIE HEADERS
 if(req.http.Cookie) {
   cookie.parse(req.http.Cookie);
@@ -137,7 +90,6 @@ if(req.http.Cookie) {
   if(cookie.isset("<%= cookie %>")) {
     set req.http.<%= header %> = cookie.get("<%= cookie %>");
     cookie.delete("<%= cookie %>");
->>>>>>> c79a57250b42c9ea31954c48a10a3fdbbf0fc242
   }
 <%end%>
 }
@@ -148,41 +100,11 @@ if(req.http.Cookie) {
     setup_behavior config, 'proxy' %>
 ###
 
-<<<<<<< HEAD
-  if (req.http.Cookie) {
-    if (req.url ~ "^/volunteers") {
-      cookie.filter_except("_fe_session,hour_of_code,NO_CACHE");
-    } else if (req.url ~ "^/auth") {
-      cookie.filter_except("cdo-private,hour_of_code,NO_CACHE");
-    } else if (
-        req.http.host ~ "(dashboard|studio).code.org$" ||
-        req.http.host == "<%= canonical_hostname('studio.code.org') %>" ||
-        req.http.host == "adhoc-studio.code.org" ||
-        req.url ~ "^/dashboardapi/" ||
-        req.url ~ "^/v2/" ||
-        req.url ~ "^/v3/" ||
-        req.url ~ "^/api/" ||
-        req.url == "/private" ||
-        req.url ~ "^/private/" ||
-        req.url ~ "^/create-company-profile" ||
-        req.url ~ "^/edit-company-profile" ||
-        req.url ~ "^/teacher-dashboard" ||
-        req.url ~ "^/manage-professional-development-workshops" ||
-        req.url ~ "^/professional-development-workshop-surveys/" ||
-        req.url ~ "^/ops-dashboard" ||
-        req.url ~ "^/poste"
-      ) {
-      cookie.filter_except("<%=[session_cookie,deprecated_storage_cookie,storage_id_cookie].join(',')%>,language_,progress,lines,scripts,videos_seen,callouts_seen,hour_of_code,NO_CACHE");
-    } else {
-      cookie.filter_except("NO_CACHE");
-    }
-=======
 ### REQUEST COOKIE FILTER
 if (req.http.Cookie) {
   # Only apply cookie filter to cached HTTP methods.
   if(req.method == "GET" || req.method == "HEAD") {
   <%= setup_behavior config, 'request' %>
->>>>>>> c79a57250b42c9ea31954c48a10a3fdbbf0fc242
     set req.http.Cookie = cookie.get_string();
     if (req.http.Cookie == "") {
       unset req.http.Cookie;
@@ -197,40 +119,12 @@ if (req.http.Cookie) {
 # beresp == Back-end response from the web server.
 sub vcl_backend_response {
 
-<<<<<<< HEAD
-  if (
-    req.url ~ "^/api/hour/begin/" ||
-    req.url ~ "^/api/hour/begin_" ||
-    req.url ~ "^/auth$" ||
-    req.url ~ "^/auth/"
-  ) {
-    # allow this route to always set cookies.
-  } else if (req.url ~ "(?i)\.(png|gif|jpeg|jpg|ico|swf|css|js)(\?[a-z0-9]+)?$") {
-    # Don't allow static files to set cookies.
-    # beresp == Back-end response from the web server.
-    unset beresp.http.set-cookie;
-  } else if (req.url ~ "^/hoc" || req.url ~ "^/s/hourofcode/" || req.url ~ "^/assets/") {
-    # Don't allow cached hoc files to set cookies.
-    # beresp == Back-end response from the web server.
-    unset beresp.http.set-cookie;
-    if (beresp.status == 301) {
-      set beresp.ttl = 4h;
-      unset beresp.http.set-cookie;
-      return(deliver);
-    }
-  }
-
-  else if (beresp.http.Cache-Control) {
-    unset beresp.http.Expires;
-  }
-=======
 ### RESPONSE COOKIE FILTER
 # Only apply cookie filter to cached HTTP methods.
 if(bereq.method == "GET" || bereq.method == "HEAD") {
 <%= setup_behavior config, 'response' %>
 }
 ###
->>>>>>> c79a57250b42c9ea31954c48a10a3fdbbf0fc242
 
   if (beresp.http.Cache-Control) {
     # Cache-Control: max-age directive overrides the Expires header.

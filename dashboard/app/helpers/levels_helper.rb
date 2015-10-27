@@ -1,4 +1,5 @@
 require 'digest/sha1'
+require 'pp'
 
 module LevelsHelper
   include ApplicationHelper
@@ -140,6 +141,7 @@ module LevelsHelper
     view_options(is_channel_backed: true) if @level.channel_backed?
 
     if @level.is_a? Blockly
+      puts 'blockly'
       @app_options = blockly_options
     elsif @level.is_a? DSLDefined
       @app_options = dsl_defined_options
@@ -151,10 +153,12 @@ module LevelsHelper
       # currently, all levels are Blockly or DSLDefined except for Unplugged
       @app_options = view_options.camelize_keys
     end
-    base_url = @app_options['baseUrl']
 
     # Fix up app_options that are configured with a baseUrl with a host name but no leading '//'
-    @app_options['baseUrl'] = "//#{baseUrl}" unless base_url.blank? || base_url.start_with?('/')
+    base_url = @app_options[:baseUrl]
+    @app_options[:baseUrl] = "//#{base_url}" unless base_url.blank? || base_url.start_with?('/')
+    pp @app_options
+    puts @app_options[:baseUrl]
 
     @app_options
   end
