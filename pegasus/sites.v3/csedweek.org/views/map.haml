@@ -60,9 +60,9 @@
     legend.id = 'legend';
 
     var content = [];
-    content.push('<div class="legend-title">Legend</div>');
-    content.push('<div class="color turquoise"></div>Hour of Code Event');
-    content.push('<br><div class="color orange"></div>CS Tech Jam');
+    content.push('<div class="legend-title"></div>#{I18n.t(:csedweek_map_legend_title)}');
+    content.push('<div class="color turquoise"></div>#{I18n.t(:csedweek_map_legend_event)}');
+    content.push('<br><div class="color orange"></div>#{I18n.t(:csedweek_map_legend_cs_tech_jam)}');
     legend.innerHTML = content.join('');
     legend.index = 1;
 
