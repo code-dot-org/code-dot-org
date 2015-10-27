@@ -1563,10 +1563,23 @@ Studio.init = function(config) {
     }
   });
 
+  /**
+   * Helper that handles music loading/playing/crossfading for the level.
+   * @type {MusicController}
+   */
   Studio.musicController = new MusicController(
       studioApp.cdoSounds,
       skin.assetUrl,
       utils.valueOr(level.music, skin.music));
+
+  /**
+   * Defines the set of possible movement sound effects for each playlab actor.
+   * Populated just-in-time by setSprite to avoid preparing audio for actors
+   * we never use.
+   * @type {Object}
+   */
+  Studio.movementAudioOptions = {};
+
   config.loadAudio = function() {
     var soundFileNames = [];
     // We want to load the basic list of effects available in the skin
@@ -3990,8 +4003,7 @@ Studio.setSprite = function (opts) {
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
-  // Set up movement audio for the selected sprite (should be preloaded)
-  Studio.movementAudioOptions = Studio.movementAudioOptions || {};
+  // Set up movement audio for the selected sprite (clips should be preloaded)
   if (!Studio.movementAudioOptions[spriteValue] && skin.avatarList) {
     var spriteSkin = skin[spriteValue] || {};
     var audioConfig = spriteSkin.movementAudio || [];
