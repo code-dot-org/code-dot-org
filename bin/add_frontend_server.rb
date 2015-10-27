@@ -128,6 +128,12 @@ def generate_instance_zone_and_name(ec2client, ssh_username, frontend_name = nil
   raise "Unable to find unique instance name"
 end
 
+def echo_and_run_command(cmd)
+  puts  "#{cmd}"
+  `#{cmd}`
+end
+
+
 
 options = {}
 
@@ -284,9 +290,12 @@ end
 
 cmd = "ssh gateway.code.org -t \"/bin/sh -c 'knife bootstrap #{private_dns_name} -x ubuntu --sudo -E #{environment} -N #{instance_name} -r role[#{role}]'\""
 puts "Bootstrapping #{environment} frontend, please be patient. This takes ~15 minutes."
-puts  "#{cmd}"
-result = `#{cmd}`
+echo_and_run_command cmd
+
 if $?.success?
+  puts 'Precompiling dashboard assets and restarting.'
+  puts `ssh gateway.code.org -t ssh #{private_dns_name} -t "/bin/sh -c 'cd #{environment} && bundle exec rake assets:precompile && sudo service dashboard restart'\"`
+  puts
   puts '--------------------------------------------------------'
   puts "Dashboard listening at: http://#{public_dns_name}:8080"
   puts "Pegasus listening at:   http://#{public_dns_name}:8081"
