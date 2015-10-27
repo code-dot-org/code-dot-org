@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../hoc-mailing-common/mailing-list-utils'
+require_relative '../mailing-common/mailing-list-utils'
 
 query = <<EOS
 kind_s:"HocSignup2015" && location_country_code_s: "GB"
