@@ -44,4 +44,9 @@ class DatastoreCacheTest < ActiveSupport::TestCase
     @data_adapter.expects(:all).returns({}).once
     DatastoreCache.new @data_adapter
   end
+
+  test 'datastore failure on init' do
+    @data_adapter.stubs(:all).throws(StandardError)
+    DatastoreCache.new @data_adapter
+  end
 end

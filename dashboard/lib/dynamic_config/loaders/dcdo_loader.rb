@@ -1,4 +1,12 @@
-# A script to update DCDO settings
+# A script to update DCDO settings from a yaml file in
+# the following format.
+#
+# Here's how a typical DCDO setting would be defined:
+#
+# <name>: <value>
+#
+# where name is a string and value can be anything
+# that is jsonable
 
 require 'yaml'
 require 'oj'
@@ -13,7 +21,7 @@ module DCDOLoader
   end
 
   # Takes in a yaml string and converts it to a list of
-  # commands to be sent to DCDO.set
+  # k,v pairs to be sent to DCDO.set
   # @param yaml [String]
   def self.yaml_to_commands(yaml)
     yaml = YAML.load(yaml)

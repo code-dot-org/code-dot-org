@@ -1,5 +1,20 @@
 # A module that allows us to dynamically turn on and off
 # features without requiring a code push.
+#
+# Basic usage:
+# if Gatekeeper.allows("new-tutorial", default: false)
+#   # shows the new tutorial
+# else
+#   # raise a 403
+# end
+#
+# Advanced usage:
+# You can also pass conditions that allow for more complex
+# configuration of access.  For example:
+#
+# if Gatekeeper.allows("feature-sharing", where: { script_id: @script.id }, default: false)
+#
+# This allows you to turn on feature-sharing for specific scripts
 
 require 'dynamic_config/datastore_cache'
 require 'dynamic_config/adapters/dynamodb_adapter'
