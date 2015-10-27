@@ -119,11 +119,11 @@ function test_blockSpaceAutoPositioning() {
 
   var expected_positions = [
     [16, 16], // first block goes at the top
-    [16, 86], // second block is hidden, so it goes below the others
+    [16, 191], // second block is hidden, so it goes below the others
     [16, 51], // third block goes after the first
-    [99, 16], // fourth was absolutely positioned with x=
-    [16, 199], // fifth was absolutely positioned with y=
-    [399, 499] // sixth was absolutely positioned with x= and y=
+    [99, 86], // fourth was relatively positioned with x=
+    [16, 199], // fifth was relatively positioned with y=
+    [399, 499] // sixth was relatively positioned with x= and y=
   ];
 
   var blockXML = '<xml>' + blocks.join('') + '</xml>';

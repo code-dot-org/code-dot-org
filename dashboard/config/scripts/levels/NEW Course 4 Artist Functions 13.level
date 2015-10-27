@@ -17,12 +17,12 @@
     "free_play": "false",
     "impressive": "true",
     "slider_speed": ".8",
-    "ideal": "19",
+    "ideal": "22",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\nCan you draw a star shape using the `draw a line of squares` function?  \r\n<br/>\r\n\r\n<h4 class=\"hint\">\r\n<details>\r\n<summary><b>Hints</b></summary>\r\n\t<br/><br/>\r\n\t<h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #1</b></summary>\r\n    \t<br/>\r\n    \tEach iteration after calling `draw a line of squares` multiple times, you'll have to move forward a certain number of pixels and turn 144 degrees.  \r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #2</b></summary>\r\n    \t<br/>\r\n    \tDon't forget to call `draw a line of squares` twice each time through!\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #3</b></summary>\r\n    \t<br/>\r\n    \tYou will need to jump by 60 pixels before you turn left 144 degrees.\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n\r\n</details>\r\n</h4>\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\nCan you draw a star shape using the `draw a line of squares` function?  \r\n<br/>\r\n\r\n<h4 class=\"hint\">\r\n<details>\r\n<summary><b>Hints</b></summary>\r\n\t<br/><br/>\r\n\t<h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #1</b></summary>\r\n    \t<br/>\r\n    \tEach iteration after calling `draw a line of squares` multiple times, you'll have to move forward a certain number of pixels and turn 144 degrees.  \r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #2</b></summary>\r\n    \t<br/>\r\n    \tDon't forget to call `draw a line of squares` twice each time through!\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #3</b></summary>\r\n    \t<br/>\r\n    \tEach iteration, you will need to move forward by 60 pixels before you turn left 144 degrees.\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n\r\n</details>\r\n</h4>\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -31,7 +31,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "permitted_errors": "0"
   }
 }]]></config>
   <blocks>
