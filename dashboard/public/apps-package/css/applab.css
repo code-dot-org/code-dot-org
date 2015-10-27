@@ -1,4 +1,3 @@
-@import url(colpick.css);
 #divApplab, .draggingParent {
   overflow: hidden;
   outline: none;
@@ -52,21 +51,21 @@
   visibility: visible;
   opacity: 0.3; }
 
-#divApplab.appModern, .draggingParent {
+#divApplab.appModern, #designModeViz.appModern, .draggingParent {
   color: #333; }
-  #divApplab.appModern button, .draggingParent button {
+  #divApplab.appModern button, #designModeViz.appModern button, .draggingParent button {
     border: 0;
     border-radius: 0; }
-    #divApplab.appModern button:hover, .draggingParent button:hover {
+    #divApplab.appModern button:hover, #designModeViz.appModern button:hover, .draggingParent button:hover {
       background-image: url("/blockly/media/applab/brighter.png");
       box-shadow: none; }
-    #divApplab.appModern button:active, .draggingParent button:active {
+    #divApplab.appModern button:active, #designModeViz.appModern button:active, .draggingParent button:active {
       background-image: url("/blockly/media/applab/darker.png");
       border: 0 !important; }
-  #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div[contenteditable=true], .draggingParent input[type=text], .draggingParent input:not([type]), .draggingParent div[contenteditable=true] {
+  #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div[contenteditable=true], #designModeViz.appModern input[type=text], #designModeViz.appModern input:not([type]), #designModeViz.appModern div[contenteditable=true], .draggingParent input[type=text], .draggingParent input:not([type]), .draggingParent div[contenteditable=true] {
     border: 1px solid #999;
     padding: 10px; }
-  #divApplab.appModern select, .draggingParent select {
+  #divApplab.appModern select, #designModeViz.appModern select, .draggingParent select {
     -webkit-appearance: none;
     -moz-appearance: none;
     border: 0;
@@ -74,15 +73,15 @@
     padding: 0 30px 0 10px;
     color: #fff;
     background: url("/blockly/media/applab/dropdown.png") no-repeat center right; }
-    #divApplab.appModern select::-ms-expand, .draggingParent select::-ms-expand {
+    #divApplab.appModern select::-ms-expand, #designModeViz.appModern select::-ms-expand, .draggingParent select::-ms-expand {
       display: none; }
-    #divApplab.appModern select:hover, .draggingParent select:hover {
+    #divApplab.appModern select:hover, #designModeViz.appModern select:hover, .draggingParent select:hover {
       background: url("/blockly/media/applab/dropdown.png") no-repeat center right, url("/blockly/media/applab/brighter.png"); }
-  #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern [contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent [contenteditable=true] {
+  #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern [contenteditable=true], #designModeViz.appModern button, #designModeViz.appModern select, #designModeViz.appModern input, #designModeViz.appModern [contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent [contenteditable=true] {
     outline: 0; }
-  #divApplab.appModern img[src=''], .draggingParent img[src=''] {
+  #divApplab.appModern img[src=''], #designModeViz.appModern img[src=''], .draggingParent img[src=''] {
     display: none; }
-  #divApplab.appModern .screen, .draggingParent .screen {
+  #divApplab.appModern .screen, #designModeViz.appModern .screen, .draggingParent .screen {
     outline: 0; }
 
 #designModeViz.appModern img[src=''], #designModeViz.appModern canvas, #designModeViz.appModern .chart, .draggingParent img[src=''], .draggingParent canvas, .draggingParent .chart {
@@ -509,48 +508,6 @@ img#turtleImage {
 .step-over-btn {
   background-position: 0px 21px;
   margin-right: 3px; }
-
-button.arrow {
-  border: 1px solid #FFA000;
-  background-color: #FFA000;
-  color: #fff;
-  margin-left: 5px;
-  margin-right: 0px;
-  display: none; }
-
-button.arrow > img {
-  opacity: 1;
-  vertical-align: text-bottom; }
-
-button.arrow:focus {
-  outline-style: none; }
-
-#soft-buttons {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: -5px; }
-  #soft-buttons.soft-buttons-none {
-    display: none; }
-
-.soft-buttons-1 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 51px; }
-
-.soft-buttons-2 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 102px; }
-
-.soft-buttons-3 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 153px; }
-
-.soft-buttons-4 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 204px; }
 
 #share-cell {
   display: inline-block;

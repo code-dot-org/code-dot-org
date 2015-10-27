@@ -70,11 +70,11 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
   * **Testeaza tutorialele pe computerele sau dispozitivele disponibile.** Asiguraţi-vă că acestea funcţionează corect (cu sunet şi video).
   * **Previzualizați pagina de felicitări** pentru a vedea ce văd elevii atunci când termină. 
-  * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **Ofera casti elevilor** sau spune-le sa isi aduca fiecare de acasa, in cazul in care tutorialul functioneaza mai bine cu sunet.
 
 ## 3) Plan ahead based on your technology available
 
-  * **Nu ai suficiente dispozitive?** Folosește [programarea in echipă](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
+  * **Nu ai suficiente dispozitive?** Folosește [programarea in echipă](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Cand participantii lucreaza in echipa, se ajuta unul pe altul şi se bazeaza mai putin pe profesor.
   * **Conexiune lentă la internet?** Proiectează videclipurile pentru toată clasa, astfel elevii nu vor mai descarca videoclipurile individual. Sau încercaţi tutorialele locale.
 
 ## 4) Inspire students - show them a video
@@ -89,7 +89,7 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <% else %>
 
-# Additional resources coming soon!
+# Resursele aditionale vor fi disponibile in curand!
 
 <% end %>
 

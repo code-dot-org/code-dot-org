@@ -55,9 +55,9 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
-**Tous les tutoriels Heure de Code:**
+**Tous les tutoriels Une Heure de Code:**
 
-  * Require minimal prep-time for organizers
+  * Nécessitent un minimum de préparation
   * Sont guidés, permettant aux élèves de travailler à leur rythme et à leur niveau
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
@@ -66,13 +66,13 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
-  * **Testez les tutoriels sur les ordinateurs ou matériel des élèves.** Assurez-vous que tout fonctionne correctement (avec son et vidéo).
-  * **Prévisualisez la page de félicitation** Pour voir ce que les élèves verront lorsqu'ils auront fini. 
-  * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **Testez les tutoriels sur les ordinateurs ou le matériel qu'utiliseront les élèves.** Assurez-vous que tout fonctionne correctement (avec son et vidéo).
+  * **Prévisualisez la page de félicitation** pour voir ce que les élèves verront lorsqu'ils auront fini. 
+  * **Fournissez des écouteurs à votre classe**, ou demandez à vos élèves de prendre les leurs, si le tutoriel que vous avez choisi fonctionne mieux avec du son.
 
 ## 3) Plan ahead based on your technology available
 
-  * **Vous n'avez pas assez de matériel ?** Faites de la [programmation en binôme](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
+  * **Vous n'avez pas assez de matériel ?** Faites de la [programmation en binôme](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Lorsque les participants travaillent en binôme, ils peuvent s'entraider et s'appuie moins sur l'enseignant.
   * **Vous avez une connexion internet lente ?** Prévoyez de montrer les vidéos devant toute la classe, ainsi, les élèves n'auront pas à les télécharger. Ou essayez les tutoriels sans connexion requise.
 
 ## 4) Inspire students - show them a video
@@ -87,7 +87,7 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <% else %>
 
-# Additional resources coming soon!
+# Ressources supplémentaires très bientôt disponibles !
 
 <% end %>
 

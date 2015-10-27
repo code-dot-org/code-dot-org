@@ -46,7 +46,6 @@
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "console.log": null,
       "functionParams_none": null,
@@ -58,9 +57,6 @@
       "assign_x": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "# What happened in the last level?\r\n\r\nIn the last level we saw the difference between a var name `foo` and one names `Foo`.  Variable names are ** case sensitive** meaning that capital letters are different than lower case letters. \r\n\r\n# Debugging Variables: Part 3\r\n\r\nSometimes you have lots of console log statments going on at once and its very difficult to tell which part of the code is printing each message. One strategy to deal with this is to name messages by putting some output in front of them. \r\n\r\n# Do This\r\n\r\n* **Run the program**. Check out what happens when you click Button 1 in comparison to the other buttons.\r\n\r\n* **Add `console.log()` statements** for the other buttons to identify where the value is coming from.",
     "is_k1": "false",

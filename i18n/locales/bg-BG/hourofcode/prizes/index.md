@@ -6,27 +6,15 @@ title: <%= hoc_s(:title_prizes) %> layout: wide nav: prizes_nav
 
 <%= view :signup_button %>
 
-# 2015 Hour of Code prizes
+# 2015 Hour of Code награди
 
-[col-33]
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize1.jpg" />
 
-![](/images/fill-275x200/prize1.jpg)
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize3.png" />
 
-[/col-33]
+<img styel="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize4.png" />
 
-[col-33]
-
-![](/images/fill-275x200/prize3.png)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fill-275x200/prize4.png)
-
-[/col-33]
-
-<p style="clear:both">
+<p style="clear:both; height: 0px;">
   &nbsp;
 </p>
 
@@ -34,25 +22,19 @@ title: <%= hoc_s(:title_prizes) %> layout: wide nav: prizes_nav
 
 # Награди за всеки организатор
 
-Всеки педагог, който е домакин на Час на кода събитие за ученици, получава 10 GB Dropbox пространство като подарък за благодарност!
+Всеки учител, който е домакин на Hour of Code събитие за ученици, получава 10 GB Dropbox пространство като подарък за благодарност!
 
 <% else %>
 
-## Prizes for EVERY organizer
+## Награди за всеки организатор
 
-Every educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com or Microsoft’s Windows Store** as a thank you gift!
+**Всеки** учител, който е домакин на Hour of Code има право да получr **$10 към Amazon.com, iTunes или Microsoft Windows Store** като благодарност!
 
-[col-33]
+<img style="float:left;" src="/images/fit-130/amazon_giftcards.png" />
 
-![](/images/fit-100/amazon_giftcards_crop.png)
+<img style="float:left;" src="/images/fit-130/apple_giftcards.png" />
 
-[/col-33]
-
-[col-33]
-
-![](/images/fit-100/microsoft_giftcards.png)
-
-[/col-33]
+<img styel="float:left;" src="/images/fit-130/microsoft_giftcards.png" />
 
 <p style="clear:both">
   &nbsp;
@@ -60,37 +42,37 @@ Every educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.
 
 <% if @country == 'us' %>
 
-## 51 schools will win a class-set of laptops (or $10,000 for other technology)
+## 51 щастливи училища ще спечелят набор от преносими компютри (или $10,000 за други технологии)
 
-One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](%= resolve_url('/prizes/hardware-signup') %) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners).
+Едно училище във *всеки* щат на Сащ (и Вашнгтон) ще спечели $10,000 за технологии. [ Регистрирайте се тук](%= resolve_url('/prizes/hardware-signup') %) да бъдете класирани и [ **вижте победителите от миналата година**](http://codeorg.tumblr.com/post/104109522378/prize-winners).
 
 <% end %>
 
 # ЧЕСТО ЗАДАВАНИ ВЪПРОСИ
 
-## Who is eligible to receive the all organizer thank you gift?
+## Кой има право да получи организаторски подаръци?
 
-Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank you gift. The $10K hardware prize is limited to US residents only.
+Организаторите на Hour of Code 2015 в САЩ и извън право да получат подарък. $10K хардуерната награда е ограничена до живеещи в САЩ.
 
-## Is there a deadline to sign up to receive the all organizer thank you gift?
+## Има ли краен срок за регистрация за да получи всички организатор благодарствен подарък?
 
-You must sign up **before** Dec 7th in order to be eligible to receive the all organizer thank you gift.
+Трябва да се регистрирате **преди** < % = campaign_date('start_long') %> за да получите организаторски благодарствен подарък.
 
-## When will I receive my thank you gift?
+## Кога ще получа моя подарък?
 
-We will contact you in December after Computer Science Education Week (Dec 7-11th) with next steps on how to redeem your choice of thank you gift.
+Ние ще се свържем с Вас през декември след SCEdWeek (< % = campaign_date('full') %>) с насочващи стъпки, за това как да осребрите Вашия подарък.
 
-## Can I receive both Amazon.com and Microsoft's Windows store credit?
+## Мога ли да взема всички опционални предлагани подаръци?
 
-No. Thank you gifts are limited to one per organizer. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank you gift.
+Не. Подаръците са ограничени до един на организатор. Ние ще се свържем с вас през декември след събитието с последващи стъпки за това, как да осребрите Вашия избор на подарък.
 
 <% if @country == 'us' %>
 
 ## Дали трябва да е регистрирано цялото училище за да спечели $10,000 за хардуер?
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](%= resolve_url('/prizes/hardware-signup') %). Every teacher participating will need to [sign up](%= resolve_url('/') %) their classroom individually in order to receive the all organizer thank you gift.
+Да. Цялото училище трябва да участва, за да бъдете допуснати за награда, но само един човек трябва да се регистрира и подаде формуляра за кандидатстване за хардуерна награда [ тук](%= resolve_url('/prizes/hardware-signup') %). Всеки учител, който участва ще трябва да [sign up](%= resolve_url('/') %) си регистрира отделно класната стая за получаване на организаторски подарък.
 
-## Who is eligible to win the $10,000 in hardware?
+## Кой има право да спечели $10,000 в хардуер?
 
 Наградата се ограничава само за публични училища К-12 САЩ. За да се класирате, цялото училище трябва да се регистрира за часът на кодирането до 16 ноември 2015 г. Едно училище във всеки щат на САЩ ще получи набор от компютри за един клас. Code.org ще избере и уведоми спечелилите по електронната поща до 1 декември 2015.
 
@@ -100,16 +82,16 @@ Yes. Your whole school has to participate to be eligible for the prize but only 
 
 ## Кога е крайният срок за кандидатстване за наградата за хардуер?
 
-To qualify, you must complete the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) by November 16, 2015. Едно училище във всеки щат на САЩ ще получи набор от компютри за един клас. Code.org ще избере и уведоми спечелилите по електронната поща до 1 декември 2015.
-
-## Ако моето училище не може да организира Час програмиране по време на Седмицата на образованието по Компютърни науки (8-14 декември), мога ли все пак да спечеля награда?
-
-Yes, in the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) include the dates that your whole school is participating.
+За да се класирате, трябва да попълните [ формуляр за кандидатстване за хардуерн награда](%= resolve_url('/prizes/hardware-signup') %) от 16 ноември 2015 г. Едно училище във всеки щат на САЩ ще получи набор от компютри за един клас. Code.org ще избере и уведоми спечелилите по електронната поща до 1 декември 2015.
 
 <% end %>
 
+## Ако цялото училище не може да направи Hour of Code по време на CSEdWeek(< % = campaign_date('short') %>), може ли да се класираме за награди?
+
+Yes, in the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) include the dates that your whole school is participating.
+
 ## Аз съм извън САЩ. Мога ли да спечеля награда?
 
-Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank you gift. The $10K hardware prize is US only.
+Да, всички организатори, както от САЩ, така и извън, имат право да получат организаторски подарък. $10K в хардуер е валидна само за САЩ.
 
 <% end %> <%= view :signup_button %>

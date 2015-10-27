@@ -23,7 +23,7 @@ Moves the turtle forward a given number of pixels in the current direction.
 
 [/short_description]
 
-moveForward() is the easiest way to move the turtle in s straight line in the direction it is facing. When used with turnLeft() and turnRight() you can navigate the turtle anywhere or draw any striaght line pictures. 
+moveForward() is the easiest way to move the turtle in a straight line in the direction it is facing. When used with turnLeft() and turnRight() you can navigate the turtle anywhere or draw any straight line pictures. 
 
 [/description]
 
@@ -43,10 +43,10 @@ ____________________________________________________
 
 [example]
 
-**Example: Letter L** Draw the letter L with left turns only.
+**Example: Letter L** Draw the letter L with moveForward() and turnLeft() only.
 
 ```
-// Draw the letter L with left turns only.
+// Draw the letter L with moveForward() and turnLeft() only.
 turnLeft();
 turnLeft();
 moveForward();
@@ -78,7 +78,7 @@ ____________________________________________________
 
 <table>
 <tr>
-<td>
+<td style="border-style:none; width:90%; padding:0px">
 <pre>
 // Draw a lemon popsicle by changing the pen color and width
 // and by specifing how many pixels the turtle should move in the direction forwards and backwards.
@@ -90,8 +90,8 @@ penColor("brown");
 moveForward(-200);
 </pre>
 </td>
-<td>
-<img src='https://images.code.org/9bbc8dc1d83ef8aa32029dab1237b6d5-image-1444559746146.gif' style='width: 150px;'> 
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/0d47dda8effd331957863ddbee33820a-image-1445603074466.gif'>
 </td>
 </tr>
 </table>
@@ -129,11 +129,11 @@ No return value. Moves turtle only.
 
 ### Tips
 - Use [penUp()](/applab/docs/penUp) before calling moveForward() to stop the turtle from drawing a line behind it as it moves.
-- The screen is 320 pixels wide and 480 pixels high, but you can move the turtle off the screen by exceeding those dimensions.
+- The screen default size is 320 pixels wide and 450 pixels high, but you can move the turtle off the screen by exceeding those dimensions.
 - There are three ways to move the turtle in a straight line:
 	- Specify the number of pixels to move the turtle in the direction it is facing using moveForward(pixels) or [moveBackward(pixels)](/applab/docs/moveBackward).
-	- Specify a number of pixels in the x and y direction to move the turtle, regardless of direction that the turtle is facing [move(x,y)](/applab/docs/move).
-	- Specify an x and y pixel location on the screen to move the turtle to, regardless of direction that the turtle is facing  [moveTo(x,y)](/applab/docs/moveTo).
+	- Specify a number of pixels in the x and y direction to move the turtle using [move(x,y)](/applab/docs/move), regardless of direction that the turtle is facing.
+	- Specify an x and y pixel location on the screen to move the turtle to using [moveTo(x,y)](/applab/docs/moveTo), regardless of direction that the turtle is facing.
 
 [/tips]
 

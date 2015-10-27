@@ -43,14 +43,14 @@
   - if data[:cs_standards_s] == "No"
     %i.fa.fa-times-circle
     &nbsp;
-    No CS curriculum standards
+    No CS K-12 curriculum standards
   - elsif data[:cs_standards_s] == "Yes"
     %i.fa.fa-check-circle
     &nbsp;
-    CS curriculum standards
+    CS K-12 curriculum standards
 
 -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
-  %span.download-fact-sheet<
+  %div.download-fact-sheet<
     %a{href: "/advocacy/state-facts/#{state}.pdf", target: '_blank'}<
       Download #{statename} fact-sheet
       %img{:src=>"/images/download.png", width: "35px", style: 'margin-top:-5px'}

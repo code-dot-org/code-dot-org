@@ -6,27 +6,15 @@ title: <%= hoc_s(:title_prizes) %> layout: wide nav: prizes_nav
 
 <%= view :signup_button %>
 
-# 2015 Hour of Code prizes
+# Premiile evenimentului Hour of Code 2015
 
-[col-33]
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize1.jpg" />
 
-![](/images/fill-275x200/prize1.jpg)
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize3.png" />
 
-[/col-33]
+<img styel="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize4.png" />
 
-[col-33]
-
-![](/images/fill-275x200/prize3.png)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fill-275x200/prize4.png)
-
-[/col-33]
-
-<p style="clear:both">
+<p style="clear:both; height: 0px;">
   &nbsp;
 </p>
 
@@ -34,25 +22,19 @@ title: <%= hoc_s(:title_prizes) %> layout: wide nav: prizes_nav
 
 # Premii pentru fiecare organizator
 
-Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox space as a thank you gift!
+Fiecare educator sau profesor ce va organiza un eveniment Hour of Code pentru elevii sai va primi 10 GB spațiu Dropbox ca un cadoul de multumire!
 
 <% else %>
 
 ## Premii pentru FIECARE organizator
 
-Every educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com or Microsoft’s Windows Store** as a thank you gift!
+**Fiecare** educator care găzduieşte o Ora de Programare este eligibil pentru a primi **$10 la Amazon.com, iTunes sau Windows Store** ca un cadou de mulţumire!
 
-[col-33]
+<img style="float:left;" src="/images/fit-130/amazon_giftcards.png" />
 
-![](/images/fit-100/amazon_giftcards_crop.png)
+<img style="float:left;" src="/images/fit-130/apple_giftcards.png" />
 
-[/col-33]
-
-[col-33]
-
-![](/images/fit-100/microsoft_giftcards.png)
-
-[/col-33]
+<img styel="float:left;" src="/images/fit-130/microsoft_giftcards.png" />
 
 <p style="clear:both">
   &nbsp;
@@ -60,56 +42,56 @@ Every educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.
 
 <% if @country == 'us' %>
 
-## 51 schools will win a class-set of laptops (or $10,000 for other technology)
+## 51 de şcoli vor primi un set de laptop-uri pentru fiecare clasa ( sau alte device-uri tehnologice in valoare de 10.000 de dolari)
 
-One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](%= resolve_url('/prizes/hardware-signup') %) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners).
+O scoala norocoasa din *fiecare* stat american (inclusiv Washington D.C) va castiga echipament tech in valoare de 10.000 de dolari. [Inregistreaza-te aici](%= resolve_url('/prizes/hardware-signup') %) pentru a fi eligibil si [**vezi castigatorii de anul trecut.**](http://codeorg.tumblr.com/post/104109522378/prize-winners).
 
 <% end %>
 
 # Întrebări frecvente
 
-## Who is eligible to receive the all organizer thank you gift?
+## Cine este eligibil pentru a primi cadourile de mulțumire destinate organizatorilor?
 
-Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank you gift. The $10K hardware prize is limited to US residents only.
+Ambele tipuri de şcoli - americane sau non-americane: toti organizatorii sunt eligibili si pot primi cadouri de multumire. Premiul de 10 000 de dolari in produse hardware este limitat doar in Statele Unite ale Americii.
 
-## Is there a deadline to sign up to receive the all organizer thank you gift?
+## Este vreun termen limita în a te inscrie pentru a primi premiul universal pentru organizatori?
 
-You must sign up **before** Dec 7th in order to be eligible to receive the all organizer thank you gift.
+Trebuie să te inregistrezi **înainte de** < % = campaign_date('start_long') %> pentru a fi eligibil sa primesti toate cadourile de multumire ale organizatorilor.
 
-## When will I receive my thank you gift?
+## Cand îmi voi primi cadoul de mulțumire?
 
-We will contact you in December after Computer Science Education Week (Dec 7-11th) with next steps on how to redeem your choice of thank you gift.
+Va vom contacta in decembrie după Saptamana Educatiei in tehnologia computerelor(< % = campaign_date('full') %>) cu următorii paşi pentru a intra in posesia premiilor de multumire.
 
-## Can I receive both Amazon.com and Microsoft's Windows store credit?
+## Pot intra in posesia tuturor variantelor de premii de multumire?
 
-No. Thank you gifts are limited to one per organizer. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank you gift.
+Nu. Cadourile de multumire sunt limitate - unul pentru fiecare organizator. Te vom contacta in decembrie, dupa Saptamana Educatiei in tehnologia computerelor si iti vom spune pasii ce trebuie urmati pentru a-ti revendica premiul.
 
 <% if @country == 'us' %>
 
 ## Intreaga şcoală trebuie sa participe pentru a câştiga 10.000 dolari în echipamente hardware?
 
-Da. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](%= resolve_url('/prizes/hardware-signup') %). Every teacher participating will need to [sign up](%= resolve_url('/') %) their classroom individually in order to receive the all organizer thank you gift.
+Da. Intreaga scoala ar trebui sa participe pentru a fi eligibila premiului insa doar o singura persoana trebuie sa o inregistreze si sa completeze formularul de aplicare pentru premiul hardware[aici](%= resolve_url('/prizes/hardware-signup') %). Fiecare profesor participant va trebui sa[isi inscrie](%= resolve_url('/') %)clasa individual cu scopul de a primi tot cadoul de multumire pentru organizator.
 
-## Who is eligible to win the $10,000 in hardware?
+## Cine este eligibil pentru a primi premiul de produse hardware in valoare de 10.000 de dolari?
 
-Premiul limitat numai pentru şcoli publice K-12 SUA. To qualify, your entire school must register for the Hour of Code by November 16, 2015. O şcoală în fiecare stat al SUA va primi un set de calculatoare pentru clasă. Code.org will select and notify winners via email by December 1, 2015.
+Premiul limitat numai pentru şcoli publice din Sua. Pentru a te califica, intreaga scoala trebuie sa fie inregistrata pentru evenimentul Hour of Code pana pe 16 noiembrie 2015. O şcoală din fiecare stat al Sua va primi un set de calculatoare pentru clasă. Code.org va selecta si anunta castigatorii prin e-mail pana pe 1 decembrie 2015.
 
-## De ce premiul de 10.000 dolari in tehnologie este disponibil numai pentru şcolile publice?
+## De ce premiul de 10.000 dolari in echipamente tehnologice este disponibil numai pentru şcolile publice?
 
-Ne-ar plăcea sa putem ajuta profesoriidin scolile publice şi şcolile private deopotrivă, dar în acest moment, este vorba doar de logistica. Avem un parteneriat cu [DonorsChoose.org](http://donorschoose.org) să administreze premii cu finanţarea în clasă, care funcţionează numai cu şcoli publice. Potrivit DonorsChoose.org, organizarea este mai în măsură să acceseze date consecvente şi exacte, care sunt disponibile pentru scolile publice.
+Ne-ar plăcea sa putem ajuta profesorii din scolile publice şi şcolile private deopotrivă, dar în acest moment, este vorba doar de logistica. Avem un parteneriat cu [DonorsChoose.org](http://donorschoose.org) ca să administreze premii cu finanţarea în clase, care funcţionează numai cu şcoli publice. Potrivit DonorsChoose.org, organizarea este mai în măsură să acceseze date consecvente şi exacte, care sunt disponibile pentru scolile publice.
 
-## Când este termenul limită pentru Premiul hardware?
+## Când este termenul limită pentru aplicarea la Premiul hardware?
 
-To qualify, you must complete the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) by November 16, 2015. O şcoală în fiecare stat al SUA va primi un set de calculatoare pentru clasă. Code.org will select and notify winners via email by December 1, 2015.
-
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
-
-Yes, in the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) include the dates that your whole school is participating.
+Pentru a te califica, trebuie sa completezi [formularul de aplicație pentru premiul hardware](%= resolve_url('/prizes/hardware-signup') %)pana pe 16 noiembrie, 2015. O şcoală din fiecare stat al Sua va primi un set de calculatoare pentru clasă. Code.org va selecta si anunta castigatorii prin e-mail pana pe 1 decembrie 2015.
 
 <% end %>
 
+## Dacă scoala mea nu va face in intregime evenimentul Hour of Code in cursul Saptamanii Educatiei in Tehnologia computerelor (<%= campaign_date('short') %>), ma pot califica pentru premii?
+
+Da, in [formularul de aplicare pentru premiul Hardware](%= resolve_url('/prizes/hardware-signup') %)sunt incluse datele in care toata scoala ta a participat.
+
 ## Eu sunt în afara Statelor Unite. Ma pot califica pentru premii?
 
-Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank you gift. The $10K hardware prize is US only.
+Da. Toti organizatorii, indiferent daca sunt din US sau nu, sunt eligibili pentru premiul de mulțumire al organizatorilor. Insa, premiul de 10000 de dolari in echipamente hardware este valabil numai pentru US.
 
 <% end %> <%= view :signup_button %>

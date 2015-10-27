@@ -48,4 +48,4 @@ Scenario: Attempt 2-3 Maze 1
   And I wait to see ".congrats"
 
   Then element ".congrats" is visible
-  And element ".congrats" has text "You are using all of the necessary types of blocks, but try using more  of these types of blocks to complete this puzzle."
+  And element ".congrats" has text "You are using all of the necessary types of blocks, but try using more of these types of blocks to complete this puzzle."

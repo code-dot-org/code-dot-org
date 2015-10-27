@@ -46,7 +46,7 @@ group :development, :test do
   # for unit testing
   gem 'factory_girl_rails'
   gem 'fakeweb'
-  gem 'simplecov', require: false
+  gem 'simplecov', '~> 0.9', require: false
   gem 'mocha', require: false
   gem "codeclimate-test-reporter", require: false
   gem 'sqlite3'
@@ -60,7 +60,6 @@ group :development, :test do
   gem 'colorize'
   gem 'spring'
   gem 'spring-commands-testunit'
-  gem "test-unit", "~> 3.0"
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
   gem 'eyes_selenium', '~> 2.5.0'

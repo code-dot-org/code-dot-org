@@ -10,25 +10,13 @@ nav: prizes_nav
 
 # 2015 Hour of Code prizes
 
-[col-33]
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize1.jpg" />
 
-![](/images/fill-275x200/prize1.jpg)
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize3.png" />
 
-[/col-33]
+<img styel="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize4.png" />
 
-[col-33]
-
-![](/images/fill-275x200/prize3.png)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fill-275x200/prize4.png)
-
-[/col-33]
-
-<p style="clear:both">
+<p style="clear:both; height: 0px;">
   &nbsp;
 </p>
 
@@ -36,25 +24,19 @@ nav: prizes_nav
 
 # Shpërblim për secilin organizator
 
-Çdo mësues që organizon një Orë Kodimi për studentët fiton 10 GB hapësirë në Dropbox si dhuratë falenderimi!
+Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox space as a thank-you gift!
 
 <% else %>
 
 ## Shpërblime për ÇDO organizues
 
-Every educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com or Microsoft’s Windows Store** as a thank you gift!
+**Every** educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com, iTunes or Windows Store** as a thank-you gift!
 
-[col-33]
+<img style="float:left;" src="/images/fit-130/amazon_giftcards.png" />
 
-![](/images/fit-100/amazon_giftcards_crop.png)
+<img style="float:left;" src="/images/fit-130/apple_giftcards.png" />
 
-[/col-33]
-
-[col-33]
-
-![](/images/fit-100/microsoft_giftcards.png)
-
-[/col-33]
+<img styel="float:left;" src="/images/fit-130/microsoft_giftcards.png" />
 
 <p style="clear:both">
   &nbsp;
@@ -70,27 +52,27 @@ One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 wo
 
 # Pyetje të Shpeshta (PESH)
 
-## Who is eligible to receive the all organizer thank you gift?
+## Who is eligible to receive the all organizer thank-you gift?
 
-Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank you gift. The $10K hardware prize is limited to US residents only.
+Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank-you gift. The $10K hardware prize is limited to US residents only.
 
-## Is there a deadline to sign up to receive the all organizer thank you gift?
+## Is there a deadline to sign up to receive the all organizer thank-you gift?
 
-You must sign up **before** Dec 7th in order to be eligible to receive the all organizer thank you gift.
+You must sign up **before** <%= campaign_date('start_long') %> in order to be eligible to receive the all organizer thank-you gift.
 
-## When will I receive my thank you gift?
+## When will I receive my thank-you gift?
 
-We will contact you in December after Computer Science Education Week (Dec 7-11th) with next steps on how to redeem your choice of thank you gift.
+We will contact you in December after Computer Science Education Week (<%= campaign_date('full') %>) with next steps on how to redeem your choice of thank-you gift.
 
-## Can I receive both Amazon.com and Microsoft's Windows store credit?
+## Can I redeem all of the thank-you gift options?
 
-No. Thank you gifts are limited to one per organizer. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank you gift.
+No. Thank-you gifts are limited to one per organizer. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank-you gift.
 
 <% if @country == 'us' %>
 
 ## A duhet e gjithë shkolla juaj të futet për të fituar $10,000 në hardware?
 
-Po. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= resolve_url('/prizes/hardware-signup') %>). Every teacher participating will need to [sign up](<%= resolve_url('/') %>) their classroom individually in order to receive the all organizer thank you gift.
+Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= resolve_url('/prizes/hardware-signup') %>). Every teacher participating will need to [sign up](<%= resolve_url('/') %>) their classroom individually in order to receive the all organizer thank you gift.
 
 ## Who is eligible to win the $10,000 in hardware?
 
@@ -98,20 +80,20 @@ Shpërblim i dedikuar vetëm për shkollat Amerikane deri në klasë të 12-të.
 
 ## Pse çmimi $10,000 për hardware është në dispozicion vetëm për shkollat publike?
 
-Ne duam të ndihmojmë mësuesit në shkollat publike dhe private njësoj, por në këtë kohë, nuk është e mundur përshkak të logjistikës. Ne kemi partneritet me [DonorsChoose.org ](http://donorschoose.org) për të administruar shpërblimet e financimit të klasës, e cila punon vetëm me publikun, shkollat K-12 në SHBA. Sipas DonorsChoose.org, organizata është më mirë në gjendje që të hyjë në të dhënat konsistente dhe të sakta që janë në dispozicion për shkollat publike.
+We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
 
 ## Kur është afati i fundit për të aplikuar për çmimin e hardware-it?
 
 To qualify, you must complete the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup') %>) by November 16, 2015. Një shkollë nga çdo shtet në ShBA do të marrë një set kompjuterash për klasa. Code.org do të përzgjedh dhe do të njoftojë fituesit përmes email-it, në 1 dhjetor 2015.
 
-## Nëse shkolla ime nuk mund të bëjë Orën e Kodimit gjatë Javës Edukative të Shkencave Kompjuterike (Dhj. 8-14), a mundemi të kualifikohemi për shpërblimet?
+<% end %>
+
+## If my whole school can’t do the Hour of Code during Computer Science Education Week (<%= campaign_date('short') %>), can I still qualify for prizes?
 
 Yes, in the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup') %>) include the dates that your whole school is participating.
 
-<% end %>
-
 ## Unë jam jashtë Shteteve të Bashkuara. A mund të kualifikohem për shpërblime?
 
-Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank you gift. The $10K hardware prize is US only.
+Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift. The $10K hardware prize is US only.
 
 <% end %> <%= view :signup_button %>

@@ -2,6 +2,10 @@ var constants = require('./constants');
 
 // API definitions for functions exposed for JavaScript (droplet/ace) levels:
 
+exports.endGame = function(value) {
+  Studio.queueCmd(null, 'endGame', {'value': value});
+};
+
 exports.setBackground = function (value) {
   Studio.queueCmd(null, 'setBackground', {'value': value});
 };
@@ -116,6 +120,35 @@ exports.moveUp = function() {
 
 exports.moveDown = function() {
   Studio.queueCmd(null, 'moveDown');
+};
+
+// goUp/Down/LeftRight are wrappers for moveUp/Down/Left/Right (used by hoc2015)
+exports.goRight = function() {
+  Studio.queueCmd(null, 'moveRight');
+};
+
+exports.goLeft = function() {
+  Studio.queueCmd(null, 'moveLeft');
+};
+
+exports.goUp = function() {
+  Studio.queueCmd(null, 'moveUp');
+};
+
+exports.goDown = function() {
+  Studio.queueCmd(null, 'moveDown');
+};
+
+// addPoints is a wrapper for changeScore (used by hoc2015)
+
+exports.addPoints = function(value) {
+  Studio.queueCmd(null, 'changeScore', {'value': value});
+};
+
+// removePoints is a wrapper for reduceScore (used by hoc2015)
+
+exports.removePoints = function(value) {
+  Studio.queueCmd(null, 'reduceScore', {'value': value});
 };
 
 exports.changeScore = function(value) {

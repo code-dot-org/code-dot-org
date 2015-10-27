@@ -40,22 +40,37 @@ exports.getTime = function() {
 };
 
 /**
+ * Use native window.prompt to ask for a value, but continue prompting until we
+ * get a numerical value.
+ * @returns {number} User value, converted to a number
+ */
+exports.promptNum = function (text) {
+  var val;
+  do {
+    val = parseInt(window.prompt(text), 10);
+  } while (isNaN(val));
+  return val;
+};
+
+/**
  * @type {DropletBlock[]}
  */
 exports.dropletGlobalConfigBlocks = [
-  {'func': 'getTime', 'parent': exports, 'category': 'Control', 'type': 'value' },
-  {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
-  {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
+  {func: 'getTime', parent: exports, category: 'Control', type: 'value' },
+  {func: 'randomNumber', parent: exports, category: 'Math', type: 'value' },
+  {func: 'prompt', parent: window, category: 'Variables', type: 'value' },
+  {func: 'promptNum', parent: exports, category: 'Variables', type: 'value' }
 ];
 
 /**
  * @type {DropletBlock[]}
  */
 exports.dropletBuiltinConfigBlocks = [
-  {'func': 'Math.round', 'category': 'Math', 'type': 'value' },
-  {'func': 'Math.abs', 'category': 'Math', 'type': 'value' },
-  {'func': 'Math.max', 'category': 'Math', 'type': 'value' },
-  {'func': 'Math.min', 'category': 'Math', 'type': 'value' },
+  {func: 'Math.round', category: 'Math', type: 'value' },
+  {func: 'Math.abs', category: 'Math', type: 'value' },
+  {func: 'Math.max', category: 'Math', type: 'value' },
+  {func: 'Math.min', category: 'Math', type: 'value' },
+  {func: 'Math.random', category: 'Math', type: 'value' }
 ];
 
 /**
@@ -65,66 +80,69 @@ var standardConfig = {};
 
 standardConfig.blocks = [
   // Control
-  {'func': 'forLoop_i_0_4', 'block': 'for (var i = 0; i < 4; i++) {\n  __;\n}', 'category': 'Control' },
-  {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'category': 'Control' },
-  {'func': 'ifBlock', 'block': 'if (__) {\n  __;\n}', 'category': 'Control' },
-  {'func': 'ifElseBlock', 'block': 'if (__) {\n  __;\n} else {\n  __;\n}', 'category': 'Control' },
-  {'func': 'getTime', 'block': 'getTime()', 'category': 'Control', type: 'value' },
+  {func: 'forLoop_i_0_4', block: 'for (var i = 0; i < 4; i++) {\n  __;\n}', category: 'Control' },
+  {func: 'whileBlock', block: 'while (__) {\n  __;\n}', category: 'Control' },
+  {func: 'ifBlock', block: 'if (__) {\n  __;\n}', category: 'Control' },
+  {func: 'ifElseBlock', block: 'if (__) {\n  __;\n} else {\n  __;\n}', category: 'Control' },
+  {func: 'getTime', block: 'getTime()', category: 'Control', type: 'value' },
 
   // Math
-  {'func': 'addOperator', 'block': '__ + __', 'category': 'Math' },
-  {'func': 'subtractOperator', 'block': '__ - __', 'category': 'Math' },
-  {'func': 'multiplyOperator', 'block': '__ * __', 'category': 'Math' },
-  {'func': 'divideOperator', 'block': '__ / __', 'category': 'Math' },
-  {'func': 'equalityOperator', 'block': '__ == __', 'category': 'Math' },
-  {'func': 'inequalityOperator', 'block': '__ != __', 'category': 'Math' },
-  {'func': 'greaterThanOperator', 'block': '__ > __', 'category': 'Math' },
-  {'func': 'lessThanOperator', 'block': '__ < __', 'category': 'Math' },
-  {'func': 'andOperator', 'block': '__ && __', 'category': 'Math' },
-  {'func': 'orOperator', 'block': '__ || __', 'category': 'Math' },
-  {'func': 'notOperator', 'block': '!__', 'category': 'Math' },
-  {'func': 'randomNumber_max', 'block': 'randomNumber(__)', 'category': 'Math' },
-  {'func': 'randomNumber_min_max', 'block': 'randomNumber(__, __)', 'category': 'Math' },
-  {'func': 'mathRound', 'block': 'Math.round(__)', 'category': 'Math' },
-  {'func': 'mathAbs', 'block': 'Math.abs(__)', 'category': 'Math' },
-  {'func': 'mathMax', 'block': 'Math.max(__)', 'category': 'Math' },
-  {'func': 'mathMin', 'block': 'Math.min(__)', 'category': 'Math' },
+  {func: 'addOperator', block: '__ + __', category: 'Math' },
+  {func: 'subtractOperator', block: '__ - __', category: 'Math' },
+  {func: 'multiplyOperator', block: '__ * __', category: 'Math' },
+  {func: 'divideOperator', block: '__ / __', category: 'Math' },
+  {func: 'equalityOperator', block: '__ == __', category: 'Math' },
+  {func: 'inequalityOperator', block: '__ != __', category: 'Math' },
+  {func: 'greaterThanOperator', block: '__ > __', category: 'Math' },
+  {func: 'lessThanOperator', block: '__ < __', category: 'Math' },
+  {func: 'andOperator', block: '__ && __', category: 'Math' },
+  {func: 'orOperator', block: '__ || __', category: 'Math' },
+  {func: 'notOperator', block: '!__', category: 'Math' },
+  // randomNumber_max has been deprecated
+  // {func: 'randomNumber_max', block: 'randomNumber(__)', category: 'Math' },
+  {func: 'randomNumber_min_max', block: 'randomNumber(__, __)', category: 'Math' },
+  {func: 'mathRound', block: 'Math.round(__)', category: 'Math' },
+  {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math' },
+  {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },
+  {func: 'mathMin', block: 'Math.min(__)', category: 'Math' },
+  {func: 'mathRandom', block: 'Math.random(__)', category: 'Math' },
 
   // Variables
-  {'func': 'declareAssign_x', 'block': 'var x = __;', 'category': 'Variables' },
-  {'func': 'declareNoAssign_x', 'block': 'var x;', 'category': 'Variables' },
-  {'func': 'assign_x', 'block': 'x = __;', 'category': 'Variables' },
-  {'func': 'declareAssign_x_array_1_4', 'block': 'var x = [1, 2, 3, 4];', 'category': 'Variables' },
-  {'func': 'declareAssign_x_prompt', 'block': 'var x = prompt("Enter a value");', 'category': 'Variables' },
+  {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables' },
+  {func: 'declareNoAssign_x', block: 'var x;', category: 'Variables' },
+  {func: 'assign_x', block: 'x = __;', category: 'Variables' },
+  {func: 'declareAssign_x_array_1_4', block: 'var x = [1, 2, 3, 4];', category: 'Variables' },
+  {func: 'declareAssign_x_prompt', block: 'var x = prompt("Enter a value");', category: 'Variables' },
+  {func: 'declareAssign_x_promptNum', block: 'var x = promptNum("Enter a value");', category: 'Variables' },
 
   // Functions
-  {'func': 'functionParams_none', 'block': 'function myFunction() {\n  __;\n}', 'category': 'Functions' },
-  {'func': 'functionParams_n', 'block': 'function myFunction(n) {\n  __;\n}', 'category': 'Functions' },
-  {'func': 'callMyFunction', 'block': 'myFunction()', 'category': 'Functions' },
-  {'func': 'callMyFunction_n', 'block': 'myFunction(n)', 'category': 'Functions' },
-  {'func': 'return', 'block': 'return __;', 'category': 'Functions' },
+  {func: 'functionParams_none', block: 'function myFunction() {\n  __;\n}', category: 'Functions' },
+  {func: 'functionParams_n', block: 'function myFunction(n) {\n  __;\n}', category: 'Functions' },
+  {func: 'callMyFunction', block: 'myFunction()', category: 'Functions' },
+  {func: 'callMyFunction_n', block: 'myFunction(n)', category: 'Functions' },
+  {func: 'return', block: 'return __;', category: 'Functions' },
 ];
 
 standardConfig.categories = {
-  'Control': {
-    'color': 'blue',
-    'rgb': COLOR_BLUE,
-    'blocks': []
+  Control: {
+    color: 'blue',
+    rgb: COLOR_BLUE,
+    blocks: []
   },
-  'Math': {
-    'color': 'orange',
-    'rgb': COLOR_ORANGE,
-    'blocks': []
+  Math: {
+    color: 'orange',
+    rgb: COLOR_ORANGE,
+    blocks: []
   },
-  'Variables': {
-    'color': 'purple',
-    'rgb': COLOR_PURPLE,
-    'blocks': []
+  Variables: {
+    color: 'purple',
+    rgb: COLOR_PURPLE,
+    blocks: []
   },
-  'Functions': {
-    'color': 'green',
-    'rgb': COLOR_GREEN,
-    'blocks': []
+  Functions: {
+    color: 'green',
+    rgb: COLOR_GREEN,
+    blocks: []
   },
   // create blank category in case level builders want to move all blocks here
   // (which will cause the palette header to disappear)
@@ -234,22 +252,21 @@ function buildFunctionPrototype(prefix, params) {
  */
 exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions,
-                                                 dropletConfig,
-                                                 standardConfig);
+  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig,
+    standardConfig);
   for (var i = 0; i < mergedFunctions.length; i++) {
-    var cf = mergedFunctions[i];
-    var block = cf.block;
-    var expansion = cf.expansion;
+    var funcInfo = mergedFunctions[i];
+    var block = funcInfo.block;
+    var expansion = funcInfo.expansion;
     if (!block) {
-      var prefix = cf.blockPrefix || cf.func;
-      var paletteParams = cf.paletteParams || cf.params;
+      var prefix = funcInfo.blockPrefix || funcInfo.func;
+      var paletteParams = funcInfo.paletteParams || funcInfo.params;
       block = buildFunctionPrototype(prefix, paletteParams);
       if (paletteParams) {
         // If paletteParams were specified and used for the 'block', then use
         // the regular params for the 'expansion' which appears when the block
         // is dragged out of the palette:
-        expansion = buildFunctionPrototype(prefix, cf.params);
+        expansion = buildFunctionPrototype(prefix, funcInfo.params);
       }
     }
 
@@ -260,9 +277,9 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
     var blockPair = {
       block: block,
       expansion: expansion,
-      title: cf.func
+      title: funcInfo.func
     };
-    mergedCategories[cf.category].blocks.push(blockPair);
+    mergedCategories[funcInfo.category].blocks.push(blockPair);
   }
 
   // Convert to droplet's expected palette format:

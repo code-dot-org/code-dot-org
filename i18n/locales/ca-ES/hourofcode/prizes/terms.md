@@ -8,13 +8,13 @@ title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: prizes_nav
 
 # Premis - termes i condicions
 
-## Amazon.com or Microsoft’s Windows Store credit:
+## Amazon.com, iTunes and Windows Store credit:
 
-The Amazon.com and Microsoft’s Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Límit d'un reemborsament per organitzador.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Límit d'un reemborsament per organitzador.
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com or Microsoft’s Windows Store credit. Si la teva escola sencera participa a l'Hora de Codi, cada educador s'ha de registrar individualment com a organitzador per qualificar-se.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Si la teva escola sencera participa a l'Hora de Codi, cada educador s'ha de registrar individualment com a organitzador per qualificar-se.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com and Microsoft’s Windows Store credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
 

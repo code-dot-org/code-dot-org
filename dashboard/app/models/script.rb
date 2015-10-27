@@ -34,7 +34,7 @@ class Script < ActiveRecord::Base
 
   include SerializedProperties
 
-  serialized_attrs %w(pd)
+  serialized_attrs %w(pd admin_required)
 
   # Names used throughout the code
   HOC_2013_NAME = 'Hour of Code' # this is the old (2013) hour of code
@@ -277,15 +277,16 @@ class Script < ActiveRecord::Base
         custom_i18n.deep_merge!(i18n)
         # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
         scripts_to_add << [{
+          id: script_data[:id],
           name: name,
           trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
-          properties: {
-            pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
-          },
           wrapup_video: script_data[:wrapup_video],
-          id: script_data[:id],
+          properties: {
+                       pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
+                       admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
+                      },
         }, stages.map{|stage| stage[:levels]}.flatten]
       end
 
@@ -406,11 +407,12 @@ class Script < ActiveRecord::Base
         Script.add_script({
           name: script_params[:name],
           trophies: script_data[:trophies],
-          hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
+          hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
           properties: {
-            pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
+                       pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
+                       admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
           }
         }, script_data[:stages].map { |stage| stage[:levels] }.flatten)
         Script.update_i18n(i18n)

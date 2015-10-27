@@ -13,7 +13,7 @@ template "/etc/init.d/dashboard" do
     user: node[:current_user],
     env: node.chef_environment,
   })
-  notifies :run, 'execute[install-dashboard]', :immediately
+  notifies :run, 'execute[bundle-install-dashboard]', :immediately
 end
 
 template "/etc/logrotate.d/dashboard" do
@@ -52,20 +52,17 @@ link "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/sha
   group node[:current_user]
 end
 
-execute "install-dashboard" do
-  command "bundle exec rake install:dashboard"
-  cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
-  environment ({
-    'LC_ALL' => 'en_US.UTF-8', 'RAILS_ENV' => "#{node.chef_environment}"
-  })
+execute "bundle-install-dashboard" do
+  command "sudo bundle install"
+  cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
   user node[:current_user]
   group node[:current_user]
   action :nothing
-  notifies :run, "execute[#{node['cdo-apps']['local_mysql'] ? 'create-dashboard-db' : 'build-dashboard'}]", :immediately
+  notifies :run, "execute[#{node['cdo-apps']['local_mysql'] ? 'setup-dashboard-db' : 'build-dashboard'}]", :immediately
 end
 
-execute "create-dashboard-db" do
-  command "rake db:setup_or_migrate"
+execute "setup-dashboard-db" do
+  command "rake dashboard:setup_db"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
   environment ({
     'LC_ALL' => 'en_US.UTF-8', 'RAILS_ENV' => "#{node.chef_environment}"
@@ -88,5 +85,10 @@ execute "build-dashboard" do
 end
 
 service 'dashboard' do
+  supports reload: true
+  reload_command '/etc/init.d/dashboard upgrade'
   action [:enable, :start]
+
+  # Restart Unicorn when Ruby is upgraded
+  subscribes :restart, "apt_package[ruby#{node['cdo-ruby']['version']}]", :delayed
 end

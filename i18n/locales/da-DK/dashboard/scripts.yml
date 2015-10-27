@@ -184,6 +184,7 @@ da:
           Maze and Bee: Labyrint og bi
           Artist Binary: Kunstner binære
           description_audience: Fra 10 år (efter kursus 3)
+          Super Challenge - Variables: 'Super Challenge - Variables'
         Course4pre:
           title: Kursus 4 forudsætninger
           description_short: En kort opsamling af koncepter for elever, der ikke har taget kursus 2 og 3.
@@ -645,6 +646,11 @@ da:
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
           Variables: Variabler
+          Looping and Random Numbers - Under the Sea: 'Looping and Random Numbers - Under the Sea'
+          Multi-screen App: Multi-screen App
+          Variables Conceptorial Fodder: Variables Conceptorial Fodder
+          "Variables: Create, Assign, and Read": 'Variables: Create, Assign, and Read'
+          "Variables: Increment, Decrement, Display, and Scope": 'Variables: Increment, Decrement, Display, and Scope'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1328,3 +1334,16 @@ da:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        duino:
+          Experimenting with Arduino stuff: Experimenting with Arduino stuff
+          Basic Circuits: Basic Circuits
+        Special Fun:
+          title: Special Fun
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: Fra 10 år (efter kursus 3)
+          Halloween 2015: Halloween 2015
+        SpecialSeries:
+          title: Special Levels
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: Fra 10 år (efter kursus 3)
+          Halloween 2015: Halloween 2015

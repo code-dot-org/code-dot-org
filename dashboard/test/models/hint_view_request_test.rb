@@ -10,7 +10,7 @@ class HintViewRequestTest < ActiveSupport::TestCase
   end
 
   test "can retrieve feedback for milestone request" do
-    HintViewRequest::ENABLED = true
+    HintViewRequest.stubs(:enabled?).returns(true)
 
     HintViewRequest.create(
       script: @script,
@@ -42,7 +42,7 @@ class HintViewRequestTest < ActiveSupport::TestCase
   end
 
   test "can be disabled" do
-    HintViewRequest::ENABLED = false
+    HintViewRequest.stubs(:enabled?).returns(false)
 
     HintViewRequest.create(
       script: @script,

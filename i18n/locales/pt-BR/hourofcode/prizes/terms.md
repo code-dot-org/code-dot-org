@@ -8,13 +8,13 @@ title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: prizes_nav
 
 # Prêmios - termos e condições
 
-## Amazon.com or Microsoft’s Windows Store credit:
+## Crédito na Amazon.com, no iTunes e na Windows Store:
 
-The Amazon.com and Microsoft’s Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Limite de um resgate por organizador.
+Os créditos na Amazon.com, no iTunes e na Windows Store limitam-se a professores do ensino fundamental e médio, educadores de clubes de programação e instituições de ensino. O crédito de US$10,00 deve ser adicionado a uma conta existente e expira depois de 1 ano. Limite de um resgate por organizador.
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com or Microsoft’s Windows Store credit. Caso sua escola inteira participe da Hora do Código, cada educador deve se cadastrar individualmente como organizador para se qualificar.
+Todos os organizadores devem se registrar na Hora do Código para receber os créditos da Amazon.com, do iTunes e da Windows Store. Caso sua escola inteira participe da Hora do Código, cada educador deve se cadastrar individualmente como organizador para se qualificar.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com and Microsoft’s Windows Store credit.
+A Code.org entrará em contato com os organizadores após a Hora do Código (de 7 a 13 dezembro), fornecendo instruções para o resgate dos créditos na Amazon.com, no iTunes e na Windows Store.
 
 <% if @country == 'us' %>
 

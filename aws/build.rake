@@ -22,17 +22,38 @@ require 'shellwords'
 # with dependencies. In short, it let's create blocks of Ruby code that are only invoked when one of
 # the dependent files changes.
 #
+
+def format_duration(total_seconds)
+  total_seconds = total_seconds.to_i
+  minutes = (total_seconds / 60).to_i
+  seconds = total_seconds - (minutes * 60)
+  "%.1d:%.2d minutes" % [minutes, seconds]
+end
+
+def with_hipchat_logging(name)
+  start_time = Time.now
+  HipChat.log "Running #{name}..."
+  yield if block_given?
+  HipChat.log "#{name} succeeded in #{format_duration(Time.now - start_time)}"
+
+rescue => e
+  # notify developers room and our own room
+  "<b>#{name}</b> failed in #{format_duration(Time.now - start_time)}".tap do |message|
+    HipChat.log message, color: 'red', notify: 1
+    HipChat.developers message, color: 'red', notify: 1
+  end
+  # log detailed error information in our own room
+  HipChat.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'
+  raise
+end
+
 def build_task(name, dependencies=[], params={})
   path = aws_dir(".#{name}-built")
 
   file path => dependencies do
-    begin
+    with_hipchat_logging(name) do
       yield if block_given?
       touch path
-    rescue => e
-      HipChat.log "<b>#{name}</b> FAILED!", color: 'red', notify: 1
-      HipChat.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'
-      raise
     end
   end
 
@@ -208,7 +229,7 @@ end
 #
 def upgrade_frontend(name, host)
   commands = [
-    'cd production',
+    "cd #{rack_env}",
     'git pull --ff-only',
     'rake build',
   ]
@@ -218,33 +239,55 @@ def upgrade_frontend(name, host)
 
   log_path = aws_dir "deploy-#{name}.log"
 
+  # Stop the frontend before running the commands so that the git pull doesn't modify files
+  # out from under a running instance. The rake build command will restart the instance.
+  stop_frontend name, host, log_path
+
   begin
     RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>', log_path
     #HipChat.log "Upgraded <b>#{name}</b> (#{host})."
   rescue
     HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, removing from rotation.", color: 'red'
+    # The frontend is in indeterminate state, so make sure it is stopped.
     stop_frontend name, host, log_path
   end
 
   puts IO.read log_path
 end
 
-#
-# The main build task (calls the top-level Rakefile)
-#
-$websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, APPS_COMMIT_TASK]) do
+# Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
+task :chef_update do
+  if CDO.daemon && CDO.chef_managed
+    Dir.chdir(cookbooks_dir) do
+      old_gemfile = ENV['BUNDLE_GEMFILE']
+      ENV['BUNDLE_GEMFILE'] = File.join(cookbooks_dir, 'Gemfile')
+      begin
+        RakeUtils.bundle_install
+        RakeUtils.bundle_exec 'berks', 'install'
+        RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
+        RakeUtils.bundle_exec 'berks', 'apply', rack_env
+      ensure
+        ENV['BUNDLE_GEMFILE'] = old_gemfile
+      end
+    end
+  end
+end
+
+# Perform a normal local build by calling the top-level Rakefile.
+# Additionally run the lint task if specified for the environment.
+task build: [:chef_update] do
   Dir.chdir(deploy_dir) do
-    # Lint
     RakeUtils.system 'rake', 'lint' if CDO.lint
-
-    # Build myself
     RakeUtils.system 'rake', 'build'
+  end
+end
 
-    # If I'm daemon, do some additional work:
-    if rack_env?(:production) && CDO.daemon
-      # Update the front-end instances, in parallel, but not all at once. When the infrstracture is
-      # properly scaled we should be able to upgrade 20% of the front-ends at a time. Right now we're
-      # over-subscribed (have more resources than we need) so we're restarting 50% of the front-ends.
+# Update the front-end instances, in parallel, but not all at once. When the infrastructure is
+# properly scaled we should be able to upgrade 20% of the front-ends at a time. Right now we're
+# over-subscribed (have more resources than we need) so we're restarting 50% of the front-ends.
+task :deploy do
+  if CDO.daemon && CDO.app_servers.any?
+    Dir.chdir(deploy_dir) do
       thread_count = 2
       threaded_each CDO.app_servers.keys, thread_count do |name|
         upgrade_frontend name, CDO.app_servers[name]
@@ -252,65 +295,66 @@ $websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, A
     end
   end
 end
+
+$websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, APPS_COMMIT_TASK, :build, :deploy])
 task 'websites' => [$websites] {}
-
-#
-# This is the build task when running on the test instance. It performs a normal local build
-# via the top-level Rakefile and then runs our tests.
-#
-
-task :build do
-  Dir.chdir(deploy_dir) do
-    RakeUtils.system 'rake', 'build'
-  end
-end
 
 task :pegasus_unit_tests do
   Dir.chdir(pegasus_dir) do
-    HipChat.log 'Running <b>pegasus</b> unit tests...'
-    begin
+    with_hipchat_logging("pegasus ruby unit tests") do
       RakeUtils.rake 'test'
-    rescue
-      HipChat.log 'Unit tests for <b>pegasus</b> failed.', color: 'red'
-      HipChat.developers 'Unit tests for <b>pegasus</b> failed.', color: 'red', notify: 1
-      raise
     end
   end
 end
 
 task :shared_unit_tests do
   Dir.chdir(shared_dir) do
-    HipChat.log 'Running <b>shared</b> unit tests...'
-    begin
+    with_hipchat_logging("shared ruby unit tests") do
       RakeUtils.rake 'test'
-    rescue
-      HipChat.log 'Unit tests for <b>shared</b> failed.', color: 'red'
-      HipChat.developers 'Unit tests for <b>shared</b> failed.', color: 'red', notify: 1
-      raise
     end
   end
 end
 
-task :dashboard_unit_tests do
+# currently this is only implemented for dashboard ruby unit tests but
+# maybe in the future it will work for other types of tests
+def log_coverage_results(name)
+  results_file = dashboard_dir('coverage/.last_run.json')
+  results = JSON.parse(File.read(results_file))
+  HipChat.log "<b>#{name}</b> coverage: #{results["result"]["covered_percent"]}%. Details: https:#{CDO.studio_url('coverage/index.html')}", color: 'green'
+rescue Exception => e
+  HipChat.log "Couldn't read test coverage results at #{results_file}: #{e.message}\n#{e.backtrace.join("\n")}"
+end
+
+COVERAGE_SYMLINK = dashboard_dir 'public/coverage'
+file COVERAGE_SYMLINK do
+  Dir.chdir(dashboard_dir('public')) do
+    RakeUtils.system_ 'ln', '-s', '../coverage', 'coverage'
+  end
+end
+
+task :dashboard_unit_tests => [COVERAGE_SYMLINK] do
   Dir.chdir(dashboard_dir) do
-    # Unit tests mess with the database so stop the service before running them and
-    # reset the database afterward.
-    RakeUtils.stop_service CDO.dashboard_unicorn_name
-    HipChat.log "Resetting <b>dashboard</b> database..."
-    RakeUtils.rake 'db:schema:load'
-    HipChat.log 'Running <b>dashboard</b> unit tests...'
-    begin
-      RakeUtils.rake 'test'
-    rescue
-      HipChat.log 'Unit tests for <b>dashboard</b> failed.', color: 'red'
-      HipChat.developers 'Unit tests for <b>dashboard</b> failed.', color: 'red', notify: 1
-      raise
+    name = "dashboard ruby unit tests"
+    with_hipchat_logging(name) do
+      # Unit tests mess with the database so stop the service before running them
+      RakeUtils.stop_service CDO.dashboard_unicorn_name
+      RakeUtils.rake 'db:schema:load'
+      RakeUtils.rake 'test', 'COVERAGE=1'
+      log_coverage_results(name)
+      RakeUtils.rake "seed:all"
+      RakeUtils.start_service CDO.dashboard_unicorn_name
     end
-    RakeUtils.start_service CDO.dashboard_unicorn_name
   end
 end
 
-task :dashboard_browserstack_ui_tests do
+UI_TEST_SYMLINK = dashboard_dir 'public/ui_test'
+file UI_TEST_SYMLINK do
+  Dir.chdir(dashboard_dir('public')) do
+    RakeUtils.system_ 'ln', '-s', '../test/ui', 'ui_test'
+  end
+end
+
+task :dashboard_browserstack_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
@@ -328,7 +372,7 @@ task :dashboard_browserstack_ui_tests do
   end
 end
 
-task :dashboard_eyes_ui_tests do
+task :dashboard_eyes_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI visual tests...'
@@ -350,6 +394,6 @@ end
 # do the eyes and browserstack ui tests in parallel
 multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack_ui_tests]
 
-$websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
+$websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
 
 task 'test-websites' => [$websites_test]

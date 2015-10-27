@@ -60,9 +60,48 @@ SQL
     authorize! :read, :reports
 
     email_filter = "%#{params[:emailFilter]}%"
-    address_filter = "#{params[:addressFilter]}%"
+    address_filter = "%#{params[:addressFilter]}%"
 
-    @teachers = User.limit(100).where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id').pluck(:id, :name, :email, :full_address, 'COUNT(followers.id) AS num_students')
+    # TODO(asher): Determine whether we should be doing an inner join or a left
+    # outer join.
+    @teachers = User.where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id')
+
+    # If requested, join with the workshop_attendance table to filter out based
+    # on PD attendance.
+    if params[:pd] == "pd"
+      @teachers = @teachers.joins("INNER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").distinct
+    elsif params[:pd] == "nopd"
+      @teachers = @teachers.joins("LEFT OUTER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").where("workshop_attendance.teacher_id IS NULL").distinct
+    end
+
+    # Prune the set of fields to those that will be displayed.
+    @teacher_limit = 100
+    @headers = ['ID', 'Name', 'Email', 'Address', 'Num Students']
+    @teachers = @teachers.limit(@teacher_limit).pluck('id', 'name', 'email', 'full_address', 'COUNT(followers.id) AS num_students')
+  end
+
+  def csp_pd_responses
+    authorize! :read, :reports
+
+    @headers = ['Level ID', 'ID', 'Data']
+    @response_limit = 100
+    @responses = {}
+    [3911, 3909, 3910, 3907].each do |level_id|
+      # Regardless of the level type, query the DB for teacher repsonses.
+      @responses[level_id] = LevelSource.limit(@response_limit).where(level_id: level_id).pluck(:level_id, :id, :data)
+
+      # If the level type is multiple choice, get the text answers and replace
+      # the numerical responses stored with the corresponding text.
+      if [3911, 3909, 3910].include? level_id
+        level_properties = Level.where(id: level_id).pluck(:properties)
+        if level_properties.length > 0
+          level_answers = level_properties[0]["answers"]
+          @responses[level_id].each do |response|
+            response[2] = level_answers[response[2].to_i]["text"]
+          end
+        end
+      end
+    end
   end
 
   def admin_stats
