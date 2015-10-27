@@ -73,7 +73,6 @@ var outputApplabConsole = errorHandler.outputApplabConsole;
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 
-// TODO : should we just be exposing config?
 var level;
 var skin;
 var copyrightStrings;
@@ -823,7 +822,7 @@ Applab.init = function(config) {
   // filter blocks to exclude anything that isn't in code functions if
   // autocompletePaletteApisOnly is true
   dropletConfigBlocks = dropletConfig.blocks.filter(function (block) {
-    return !(config.level.autocompletePaletteApisOnly &&
+    return !(config.level.executePaletteApisOnly &&
       config.level.codeFunctions[block.func] === undefined);
   });
 

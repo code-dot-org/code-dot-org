@@ -44,6 +44,7 @@ var levelDefinition = {
   "aniGifURL": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-rightSquare.png",
   "showTurtleBeforeRun": true,
   "autocompletePaletteApisOnly": true,
+  "executePaletteApisOnly": true,
   "textModeAtStart": false,
   "designModeAtStart": false,
   "hideDesignMode": true,
@@ -104,12 +105,15 @@ function getColoredPixels(imageData, width, height) {
 module.exports = {
   app: "applab",
   skinId: "applab",
-  levelDefinition: levelDefinition,
+  // levelDefinition: levelDefinition,
   tests: [
     {
       description: "Expected solution.",
       editCode: true,
       xml: '',
+      delayLoadLevelDefinition: function () {
+        return levelDefinition;
+      },
       runBeforeClick: function (assert) {
         // Paramaterless moveForward. Moves 25 pixels by default
         var moveForward = 0;
@@ -195,9 +199,12 @@ module.exports = {
       },
     },
     {
-      description: "Turn right block doesn't work",
+      description: "Turn right block doesn't work if executePaletteApisOnly is true",
       editCode: true,
       xml: 'turnRight()',
+      delayLoadLevelDefinition: function () {
+        return levelDefinition;
+      },
       runBeforeClick: function () {
         testUtils.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
@@ -213,6 +220,31 @@ module.exports = {
       expected: {
         result: false,
         testResult: TestResults.RUNTIME_ERROR_FAIL
+      }
+    },
+    {
+      description: "Turn right block does work if executePaletteApisOnly is false",
+      editCode: true,
+      xml: 'turnRight()',
+      delayLoadLevelDefinition: function () {
+        // override executePaletteApisOnly
+        return $.extend({}, levelDefinition, {
+          executePaletteApisOnly: false
+        });
+      },
+      runBeforeClick: function () {
+        testUtils.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, '');
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
       }
     }
   ]
