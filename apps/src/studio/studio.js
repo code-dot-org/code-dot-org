@@ -3326,6 +3326,7 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     speed: Studio.itemSpeed[itemClass],
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     isHazard: classProperties.isHazard,
+    spritesCounterclockwise: classProperties.spritesCounterclockwise,
     renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
     renderScale: utils.valueOr(classProperties.scale, 1),
     animationRate: classProperties.animationRate
