@@ -8,30 +8,45 @@
 
 # Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> Δίνεις τη δυνατότητα σε μαθητές από όλη τη Λατινική Αμερική να μάθουν μια Ώρα Κώδικα η οποία μπορεί * να τους αλλάξει τη ζωή τους * τον Οκτώβριο. 5-11. <% αλλιώς %> Δίνεις τη δυνατότητα σε μαθητές από όλο τον κόσμο να μάθουν μία Ώρα Κώδικα η οποία μπορεί να τους αλλάξει την υπόλοιπη ζωή τους, μεταξύ Δεκ. 7-13. <% end %>
+You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13.
 
-Θα είμαστε σε επαφή για βραβεία, νέα σεμινάρια και άλλες συναρπαστικές ενημερώσεις το φθινόπωρο. Έτσι, τι μπορείς να κάνεις τώρα;
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [Details](https://<%= hostname %>/prizes).
 
-## 1. Διάδωσέ το
+#### We'll be in touch about new tutorials and other exciting updates. What can you do now?
 
-Πες στους φίλους σου για την Ώρα του Κώδικα (#HourOfCode).
+## 1. Διαδώστε το
 
-## 2. Ask your whole school to offer an Hour of Code
+We need your help to reach 100,000 organizers worldwide. Πες στους φίλους σου για την Ώρα του Κώδικα (#HourOfCode). [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-[Send this email](https://<%= hostname %>/resources#email) to your principal.
+<% if international == 'true' %>
+
+## Ζήτησε από όλο το σχολείο σου να προσφέρει την Ώρα του Κώδικα
+
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). <% else %>
+
+## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
+
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup). <% end %>
 
 ## Ζήτησε από τον εργοδότη σου να συμμετάσχει
 
-[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
 
 ## 4. Προώθησε την Ώρα του Κώδικα στην κοινότητά σου
 
-Προσκάλεσε να αναμειχθούν μια τοπική ομάδα - αγόρια/κορίτσια πρόσκοποι, την Εκκλησία, μια πανεπιστημιακή ομάδα, μια ομάδα ατόμων τρίτης ηλικίας ή ένα σωματείο εργαζομένων. Ή φιλοξένησε μια Ώρα του Κώδικα "διασκέδασης με block" για τη γειτονιά σου. [Send this email](https://<%= hostname %>/resources#email).
+Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
 
 ## 5. Ζήτα από έναν τοπικό άρχοντα να υποστηρίξει την Ώρα του Κώδικα
 
-[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Στείλε αυτό το email](https://<%= hostname %>/resources#politicians) στον Δήμαρχο της πόλης σου, στο Δημοτικό Συμβούλιο, ή στη σχολική επιτροπή και κάλεσέ τους να επισκεφτούν το σχολείο σου.
+
+Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
+
+Hadi Partovi  
+Founder, Code.org
 
 * * *
 
-Η Code.org είναι μία εταιρία 501c3 μη κερδοσκοπικού χαρακτήρα. Η διεύθυνσή μας είναι is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Δεν σας αρέσουν αυτά τα μηνύματα; [Διαγραφή](%= unsubscribe_link %).
+<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+
+![](<%= tracking_pixel %>)

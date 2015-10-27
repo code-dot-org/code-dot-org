@@ -3371,6 +3371,7 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     speed: Studio.itemSpeed[itemClass],
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     isHazard: classProperties.isHazard,
+    spritesCounterclockwise: classProperties.spritesCounterclockwise,
     renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
     renderScale: utils.valueOr(classProperties.scale, 1),
     animationRate: classProperties.animationRate
@@ -3999,7 +4000,9 @@ Studio.movementAudioOn = function () {
   Studio.movementAudioOff();
   Studio.currentMovementAudio = Studio.currentMovementAudioOptions[
       Math.floor(Math.random() * Studio.currentMovementAudioOptions.length)];
-  Studio.currentMovementAudio.on();
+  if (Studio.currentMovementAudio) {
+    Studio.currentMovementAudio.on();
+  }
 };
 
 Studio.movementAudioOff = function () {

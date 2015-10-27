@@ -53,6 +53,7 @@ var Hammer = utils.getHammer();
 var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
+var ThreeSliceAudio = require('./ThreeSliceAudio');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -931,6 +932,7 @@ Studio.onTick = function() {
     var ticksBeforeFaceSouth = utils.valueOr(level.ticksBeforeFaceSouth, Studio.ticksBeforeFaceSouth);
     if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].dir = Direction.SOUTH;
+      Studio.movementAudioOff();
       isWalking = false;
     }
 
@@ -1581,10 +1583,40 @@ Studio.init = function(config) {
   });
 
   config.loadAudio = function() {
+    var soundFileNames = [];
+    // We want to load the basic list of effects available in the skin
+    soundFileNames.push.apply(soundFileNames, skin.sounds);
+    // We also want to load the movement sounds used in hoc2015
+    soundFileNames.push.apply(soundFileNames, Studio.getMovementSoundFileNames(skin));
+    // No need to load anything twice, so de-dupe our list.
+    soundFileNames = _.uniq(soundFileNames);
+
     skin.soundFiles = {};
-    skin.sounds.forEach(function (sound) {
+    soundFileNames.forEach(function (sound) {
       skin.soundFiles[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl(sound + '.ogg')];
       studioApp.loadAudio(skin.soundFiles[sound], sound);
+    });
+  };
+
+  /**
+   * Get a flattened list of all the sound file names (sans extensions)
+   * specified in the skin for avatar movement (these may be omitted from the
+   * skin.sounds list because we don't want them accessible to the player).
+   * @param {Object} level skin from which to extract sound effect names.
+   * @returns {string[]} which may contain duplicates but will not have any
+   *          undefined entries.
+   */
+  Studio.getMovementSoundFileNames = function (fromSkin) {
+    var avatarList = fromSkin.avatarList || [];
+    return avatarList.map(function (avatarName) {
+      var movementAudio = fromSkin[avatarName].movementAudio || [];
+      return movementAudio.reduce(function (memo, nextOption) {
+        return memo.concat([nextOption.begin, nextOption.loop, nextOption.end]);
+      }, []);
+    }).reduce(function (memo, next) {
+      return memo.concat(next);
+    }, []).filter(function (fileName) {
+      return fileName !== undefined;
     });
   };
 
@@ -1914,6 +1946,9 @@ Studio.reset = function(first) {
 
   // Reset whether level has succeeded.
   Studio.succeededTime = null;
+
+  // Stop any current movement sounds
+  Studio.movementAudioOff();
 };
 
 /**
@@ -2424,6 +2459,7 @@ Studio.onPuzzleComplete = function() {
 
   // Stop everything on screen
   Studio.clearEventHandlersKillTickLoop();
+  Studio.movementAudioOff();
 
   // If we know they succeeded, mark levelComplete true
   var levelComplete = (Studio.result === ResultType.SUCCESS);
@@ -3346,6 +3382,7 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     speed: Studio.itemSpeed[itemClass],
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     isHazard: classProperties.isHazard,
+    spritesCounterclockwise: classProperties.spritesCounterclockwise,
     renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
     renderScale: utils.valueOr(classProperties.scale, 1),
     animationRate: classProperties.animationRate
@@ -3954,8 +3991,35 @@ Studio.setSprite = function (opts) {
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
+  // Set up movement audio for the selected sprite (should be preloaded)
+  Studio.movementAudioOptions = Studio.movementAudioOptions || {};
+  if (!Studio.movementAudioOptions[spriteValue] && skin.avatarList) {
+    var spriteSkin = skin[spriteValue] || {};
+    var audioConfig = spriteSkin.movementAudio || [];
+    Studio.movementAudioOptions[spriteValue] = audioConfig.map(function (audioOption) {
+      return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
+    });
+  }
+  Studio.currentMovementAudioOptions = Studio.movementAudioOptions[spriteValue];
+
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
+};
+
+
+Studio.movementAudioOn = function () {
+  Studio.movementAudioOff();
+  Studio.currentMovementAudio = Studio.currentMovementAudioOptions[
+      Math.floor(Math.random() * Studio.currentMovementAudioOptions.length)];
+  if (Studio.currentMovementAudio) {
+    Studio.currentMovementAudio.on();
+  }
+};
+
+Studio.movementAudioOff = function () {
+  if (Studio.currentMovementAudio) {
+    Studio.currentMovementAudio.off();
+  }
 };
 
 var p = function (x,y) {
@@ -4532,7 +4596,6 @@ Studio.moveSingle = function (opts) {
   var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   var wallCollision = false;
   var playspaceEdgeCollision = false;
-  var playSound = false;
   var deltaX = 0, deltaY = 0;
 
   switch (opts.dir) {
@@ -4582,30 +4645,25 @@ Studio.moveSingle = function (opts) {
       Studio.JSInterpreter.yield();
     }
 
-    playSound = true;
-  } else if (!wallCollision) {
-    if (playspaceEdgeCollision) {
-      var boundary = Studio.getPlayspaceBoundaries(sprite);
-      projectedX = Math.max(boundary.left, Math.min(boundary.right, projectedX));
-      projectedY = Math.max(boundary.top, Math.min(boundary.bottom, projectedY));
+    Studio.movementAudioOn();
+  } else {
+    if (!wallCollision) {
+      if (playspaceEdgeCollision) {
+        var boundary = Studio.getPlayspaceBoundaries(sprite);
+        projectedX = Math.max(boundary.left, Math.min(boundary.right, projectedX));
+        projectedY = Math.max(boundary.top, Math.min(boundary.bottom, projectedY));
+      }
+      sprite.x = projectedX;
+      sprite.y = projectedY;
     }
-    sprite.x = projectedX;
-    sprite.y = projectedY;
 
     if (opts.dir !== Studio.lastMoveSingleDir &&
         lastMove === Infinity || Studio.tickCount > lastMove + 1) {
-      // So long as there was no wall collision, a new direction, and we
-      // haven't already processed a move in the previous tick, then play a sound.
-      playSound = true;
+      Studio.movementAudioOn();
     }
   }
 
   Studio.lastMoveSingleDir = opts.dir;
-
-  if (playSound && skin.moveSounds) {
-    var randomSoundIndex = Math.floor(Math.random() * skin.moveSounds.length);
-    studioApp.playAudio(skin.moveSounds[randomSoundIndex]);
-  }
 };
 
 Studio.moveDistance = function (opts) {
@@ -4902,7 +4960,7 @@ var checkFinished = function () {
 };
 
 
-},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
+},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./ThreeSliceAudio":"/home/ubuntu/staging/apps/build/js/studio/ThreeSliceAudio.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5554,13 +5612,13 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
-    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
-    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
-    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
-    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW },
-    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
-    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
+    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
+    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
+    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -5634,6 +5692,14 @@ function loadHoc2015(skin, assetUrl) {
       timePerFrame: 100
     };
   });
+
+  skin.bot1.movementAudio = [
+    { begin: 'roll_begin', loop: 'roll_loop', end: 'roll_end' }
+  ];
+  skin.bot2.movementAudio = [
+    { loop: 'bot2_move_loop', end: 'bot2_move_end' },
+    { loop: 'bot2_move2_loop', end: 'bot2_move2_end' }
+  ];
 
   skin.preventProjectileLoop = function (className) {
     return className === '';
@@ -5776,6 +5842,7 @@ function loadHoc2015(skin, assetUrl) {
   skin.sounds = [
     'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
     'character1sound5', 'character1sound6', 'character1sound7', 'character1sound8',
+    'character1sound9',
     'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
     'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
     'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
@@ -5791,8 +5858,6 @@ function loadHoc2015(skin, assetUrl) {
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
   skin.playFinalGoalSound = true;
-
-  skin.moveSounds = ['move1', 'move2', 'move3'];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes
@@ -5929,15 +5994,21 @@ function loadHoc2015x(skin, assetUrl) {
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 8,
+        normal: 21,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: 10
+        walk: 19
       },
       timePerFrame: 100
     };
   });
+  skin.bot1.movementAudio = [
+    { begin: 'move1' },
+    { begin: 'move2' },
+    { begin: 'move3' },
+    { begin: 'move4' }
+  ];
 
   skin.preventProjectileLoop = function (className) {
     return className === '';
@@ -5962,12 +6033,6 @@ function loadHoc2015x(skin, assetUrl) {
 
   // Sounds.
   skin.sounds = [
-    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
-    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
-    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
-    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
-    'alert1', 'alert2', 'alert3', 'alert4',
-    'applause',
     'start', 'win', 'failure', 'flag',
     'move1', 'move2', 'move3', 'move4'
   ];
@@ -5975,8 +6040,6 @@ function loadHoc2015x(skin, assetUrl) {
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
   skin.playFinalGoalSound = true;
-
-  skin.moveSounds = ['move1', 'move2', 'move3', 'move4'];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes
@@ -9032,6 +9095,7 @@ module.exports.blocks = [
       '"random"',
       '"character1sound1"', '"character1sound2"', '"character1sound3"', '"character1sound4"',
       '"character1sound5"', '"character1sound6"', '"character1sound7"', '"character1sound8"',
+      '"character1sound9"',
       '"character2sound1"', '"character2sound2"', '"character2sound3"', '"character2sound4"',
       '"item1sound1"', '"item1sound2"', '"item1sound3"', '"item1sound4"',
       '"item3sound1"', '"item3sound2"', '"item3sound3"', '"item3sound4"',
@@ -12126,7 +12190,134 @@ exports.isKeyDown = function (keyCode) {
 };
 
 
-},{"./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/Item.js":[function(require,module,exports){
+},{"./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/ThreeSliceAudio.js":[function(require,module,exports){
+/** @file A three-part loopable audio effect (start-loop-end). */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var debugLogging = false;
+function debug(msg) {
+  if (debugLogging && console && console.info) {
+    console.info('Audio: ' + msg);
+  }
+}
+
+/** @enum {number} */
+var PlaybackState = {
+  NONE: 'none',
+  BEGIN: 'begin',
+  LOOP: 'loop',
+  END: 'end'
+};
+
+/**
+ * A loopable audio effect defined with three parts (start, middle, end) so that
+ * you can get a smooth start/finish effect.
+ *
+ * Assumes the audio clips in question have already been preloaded by another
+ * system.
+ *
+ * @param {AudioPlayer} audioPlayer
+ * @param {string} begin - Audio clip name for start of sound.
+ * @param {string} loop - Audio clip name for loopable part of sound.
+ * @param {string} end - Audio clip name for end of sound.
+ * @constructor
+ */
+var ThreeSliceAudio = function (audioPlayer, begin, loop, end) {
+  /** @private {PlaybackState} */
+  this.state_ = PlaybackState.NONE;
+  /** @private {AudioPlayer} */
+  this.audioPlayer_ = audioPlayer;
+  /** @private {string} */
+  this.beginClipName_ = begin;
+  /** @private {string} */
+  this.loopClipName_ = loop;
+  /** @private {string} */
+  this.endClipName_ = end;
+};
+module.exports = ThreeSliceAudio;
+
+/**
+ * Turn on the audio effect, causing it to begin and then transition to the loop.
+ * Will do nothing if the effect is already playing, so safe to call often (on
+ * a key-repeat, for example).
+ */
+ThreeSliceAudio.prototype.on = function () {
+  if (this.state_ === PlaybackState.NONE || this.state_ === PlaybackState.END) {
+    debug('on');
+    this.enterState_(PlaybackState.BEGIN);
+  }
+};
+
+/**
+ * Turn off the audio effect.  If the loop has not started yet (the sound is
+ * still starting up) then it will just stop immediately.  If the loop has
+ * started, the end effect will be played and then the audio will stop.
+ */
+ThreeSliceAudio.prototype.off = function () {
+  debug('off');
+  if (this.state_ === PlaybackState.BEGIN || this.state_ === PlaybackState.LOOP) {
+    this.enterState_(PlaybackState.NONE);
+  }
+};
+
+ThreeSliceAudio.prototype.enterState_ = function (state) {
+  this.exitState_(this.state_);
+  debug(this.state_ + ' -> ' + state);
+  this.state_ = state;
+  var callback = this.whenSoundStopped_.bind(this, state);
+  if (state === PlaybackState.BEGIN) {
+    if (this.beginClipName_) {
+      this.audioPlayer_.play(this.beginClipName_, { onEnded: callback });
+    } else {
+      this.enterState_(PlaybackState.LOOP);
+    }
+  } else if (state === PlaybackState.LOOP) {
+    if (this.loopClipName_) {
+      this.audioPlayer_.play(this.loopClipName_, { loop: true, onEnded: callback });
+    } else {
+      this.enterState_(PlaybackState.END);
+    }
+  } else if (state === PlaybackState.END) {
+    if (this.endClipName_) {
+      this.audioPlayer_.play(this.endClipName_, { onEnded: callback });
+    } else {
+      this.enterState_(PlaybackState.NONE);
+    }
+  }
+};
+
+ThreeSliceAudio.prototype.exitState_ = function (state) {
+  if (state === PlaybackState.BEGIN && this.beginClipName_) {
+    this.audioPlayer_.stopLoopingAudio(this.beginClipName_);
+  } else if (state === PlaybackState.LOOP && this.loopClipName_) {
+    this.audioPlayer_.stopLoopingAudio(this.loopClipName_);
+  } else if (state === PlaybackState.END && this.endClipName_) {
+    this.audioPlayer_.stopLoopingAudio(this.endClipName_);
+  }
+};
+
+ThreeSliceAudio.prototype.whenSoundStopped_ = function (stoppedState) {
+  debug('soundStopped (' + stoppedState + ')');
+  if (stoppedState === PlaybackState.BEGIN && this.state_ === PlaybackState.BEGIN) {
+    this.enterState_(PlaybackState.LOOP);
+  } else if (stoppedState === PlaybackState.END && this.state_ === PlaybackState.END) {
+    this.enterState_(PlaybackState.NONE);
+  }
+};
+
+
+},{}],"/home/ubuntu/staging/apps/build/js/studio/Item.js":[function(require,module,exports){
 var Collidable = require('./collidable');
 var constants = require('./constants');
 var studioMsg = require('./locale');
@@ -12149,6 +12340,8 @@ var Item = function (options) {
 
   this.height = options.height || 50;
   this.width = options.width || 50;
+
+  this.spritesCounterclockwise = options.spritesCounterclockwise || false;
 
   /**
    * Rendering offset for item animation vs display position - applied as
@@ -12189,7 +12382,11 @@ Item.prototype.getDirectionFrame = function() {
     }
   }
 
-  return constants.frameDirTableWalkingWithIdle[this.displayDir];
+  var frameDirTable = this.spritesCounterclockwise ? 
+    constants.frameDirTableWalkingWithIdleCounterclockwise : 
+    constants.frameDirTableWalkingWithIdleClockwise;
+
+  return frameDirTable[this.displayDir];
 };
 
 /**
@@ -13370,35 +13567,34 @@ frameDirTableWalking[Dir.SOUTHWEST]  = 7;
 
 exports.frameDirTableWalking = frameDirTableWalking;
 
-/*
-// Normal for placeholder
-var frameDirTableWalkingWithIdle = {};
-frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
-frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
-frameDirTableWalkingWithIdle[Dir.SOUTHEAST]  = 1;
-frameDirTableWalkingWithIdle[Dir.EAST]       = 2;
-frameDirTableWalkingWithIdle[Dir.NORTHEAST]  = 3;
-frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
-frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 5;
-frameDirTableWalkingWithIdle[Dir.WEST]       = 6;
-frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 7;
-*/
 
-// Reversed for final
+// Forward-to-left (clockwise)
+var frameDirTableWalkingWithIdleClockwise = {};
+frameDirTableWalkingWithIdleClockwise[Dir.NONE]       = 8;
+frameDirTableWalkingWithIdleClockwise[Dir.SOUTH]      = 0;
+frameDirTableWalkingWithIdleClockwise[Dir.SOUTHEAST]  = 1;
+frameDirTableWalkingWithIdleClockwise[Dir.EAST]       = 2;
+frameDirTableWalkingWithIdleClockwise[Dir.NORTHEAST]  = 3;
+frameDirTableWalkingWithIdleClockwise[Dir.NORTH]      = 4;
+frameDirTableWalkingWithIdleClockwise[Dir.NORTHWEST]  = 5;
+frameDirTableWalkingWithIdleClockwise[Dir.WEST]       = 6;
+frameDirTableWalkingWithIdleClockwise[Dir.SOUTHWEST]  = 7;
 
-var frameDirTableWalkingWithIdle = {};
-frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
-frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
-frameDirTableWalkingWithIdle[Dir.SOUTHEAST]  = 7;
-frameDirTableWalkingWithIdle[Dir.EAST]       = 6;
-frameDirTableWalkingWithIdle[Dir.NORTHEAST]  = 5;
-frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
-frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 3;
-frameDirTableWalkingWithIdle[Dir.WEST]       = 2;
-frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 1;
+exports.frameDirTableWalkingWithIdleClockwise = frameDirTableWalkingWithIdleClockwise;
 
+// Forward-to-right (counter-clockwise)
+var frameDirTableWalkingWithIdleCounterclockwise = {};
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NONE]       = 8;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTH]      = 0;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHEAST]  = 7;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.EAST]       = 6;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTHEAST]  = 5;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTH]      = 4;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTHWEST]  = 3;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.WEST]       = 2;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHWEST]  = 1;
 
-exports.frameDirTableWalkingWithIdle = frameDirTableWalkingWithIdle;
+exports.frameDirTableWalkingWithIdleCounterclockwise = frameDirTableWalkingWithIdleCounterclockwise;
 
 /**
  * Given a direction, returns the unit vector for it.
