@@ -44,4 +44,8 @@ class JSONFileDatastoreAdapter
       f.write(JSON.dump(@hash))
     end
   end
+
+  def clear
+    raise NotImplementedError, "JSONFileDatastoreAdapter does not support clear"
+  end
 end

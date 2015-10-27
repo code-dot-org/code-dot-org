@@ -57,4 +57,8 @@ class DynamoDBAdapter
 
     result
   end
+
+  def clear
+    raise NotImplementedError, "DynamoDBAdapter does not support clear"
+  end
 end
