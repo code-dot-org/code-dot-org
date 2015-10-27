@@ -82,15 +82,15 @@ class HttpCache
       dashboard: {
         behaviors: [
           {
+            path: '/v3/assets/*',
+            headers: LANGUAGE_HEADER,
+            cookies: whitelisted_cookies
+          },
+          {
             # For static-asset paths, don't forward any cookies or additional headers.
             path: STATIC_ASSET_EXTENSION_PATHS + %w(/assets/* /blockly/media/*),
             headers: [],
             cookies: 'none'
-          },
-          {
-            path: '/v3/assets/*',
-            headers: LANGUAGE_HEADER,
-            cookies: whitelisted_cookies
           },
           {
             path: '/api/*',
