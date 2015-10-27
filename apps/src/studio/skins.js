@@ -657,12 +657,6 @@ function loadHoc2015x(skin, assetUrl) {
 
   // Sounds.
   skin.sounds = [
-    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
-    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
-    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
-    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
-    'alert1', 'alert2', 'alert3', 'alert4',
-    'applause',
     'start', 'win', 'failure', 'flag',
     'move1', 'move2', 'move3', 'move4'
   ];
