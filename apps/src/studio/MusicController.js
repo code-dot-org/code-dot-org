@@ -26,13 +26,20 @@
  * @constructor
  */
 var MusicController = function (audioPlayer, assetUrl, musicFilenames) {
+  /** @private {AudioPlayer} */
   this.audioPlayer_ = audioPlayer;
+
+  /** @private {function} */
   this.assetUrl_ = assetUrl;
 
   /** @private {string[]} */
   this.musicNames_ = musicFilenames || [];
 
+  /** @private {Object[]} */
   this.musicFiles_ = {};
+
+  /** @private {string} */
+  this.nowPlayingName_ = null;
 };
 module.exports = MusicController;
 
@@ -40,6 +47,10 @@ module.exports = MusicController;
  * Preload all music assets,
  */
 MusicController.prototype.preload = function () {
+  if (!this.audioPlayer_) {
+    return;
+  }
+
   this.musicNames_.forEach(function (musicName) {
     this.musicFiles_[musicName] = [
       this.assetUrl_(musicName + '.mp3'),
@@ -53,8 +64,51 @@ MusicController.prototype.preload = function () {
     var sound = this.audioPlayer_.get(firstMusic);
     if (sound) {
       sound.onLoad = function () {
-        sound.play({loop: true});
-      };
+        this.play(firstMusic);
+      }.bind(this);
     }
+  }
+};
+
+/**
+ * Begins playing a particular piece of music immediately.
+ * @param {string} musicName
+ */
+MusicController.prototype.play = function (musicName) {
+  if (!this.audioPlayer_) {
+    return;
+  }
+
+  var sound = this.audioPlayer_.get(musicName);
+  if (sound) {
+    var callback = this.whenMusicStopped_.bind(this, musicName);
+    sound.play({ onEnded: callback });
+    this.nowPlaying_ = musicName;
+  }
+};
+
+/**
+ * Stops playing whatever music is currently playing, immediately.
+ */
+MusicController.prototype.stop = function () {
+  if (!this.nowPlaying_) {
+    return;
+  }
+
+  var sound = this.audioPlayer_.get(this.nowPlaying_);
+  if (sound) {
+    sound.stop();
+  }
+};
+
+/**
+ * Callback for when music stops, to update internal state.
+ * @param {string} musicName that was playing.  Should be bound when music
+ *        is started.
+ * @private
+ */
+MusicController.prototype.whenMusicStopped_ = function (musicName) {
+  if (this.nowPlaying_ === musicName) {
+    this.nowPlaying_ = null;
   }
 };

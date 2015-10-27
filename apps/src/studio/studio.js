@@ -2022,6 +2022,10 @@ Studio.runButtonClick = function() {
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
+
+  // Stop the music the first time the run button is pressed (hoc2015)
+  Studio.musicController.stop();
+
   studioApp.reset(false);
   studioApp.attempts++;
   Studio.startTime = new Date();
