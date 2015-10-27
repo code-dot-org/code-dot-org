@@ -15,7 +15,7 @@
 
 var utils = require('../utils');
 
-var debugLogging = true;
+var debugLogging = false;
 function debug(msg) {
   if (debugLogging && console && console.info) {
     console.info('MusicController: ' + msg);
