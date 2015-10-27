@@ -61,22 +61,46 @@
 
     var layer = new google.maps.FusionTablesLayer({
       query: {
+        select: 'col4',
         from: '164RLDWEyPij3-Z9O0791ta_a8RfuCdGUkWRFcnBD'
-        // from: '1_j3ovhuqhh_vRAiO91gOx25j7Q4I9__9hNdZLq_C'
       },
       styles: [{
+        where: "col4 CONTAINS 'approved'",
         markerOptions: {
-          iconName: "small_red"
+          iconName: "orange_stars"
+        }
+      }, {
+        where: "col4 DOES NOT CONTAIN 'approved'",
+        markerOptions: {
+          iconName: "measle_turquoise"
         }
       }],
-      map: gmap
     });
+
+    var legend = document.createElement('div');
+    legend.id = 'legend';
+    legend.width = '150px';
+    legend.height = '100px';
+
+    var content = [];
+    content.push('<div class="legend-title">Legend</div>');
+    content.push('<div class="color orange"></div>CS Tech Jam');
+    content.push('<br><div class="color turquoise"></div>Hour of Code Event');
+    legend.innerHTML = content.join('');
+    legend.index = 1;
+
+    gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+
+    layer.setMap(gmap);
 
     google.maps.event.addListener(layer, 'click', function(event) {
       enableDrag();
       event.infoWindowHtml = event.row['organization_name'].value;
       if (event.row['city'].value.length > 0) {
         event.infoWindowHtml += ' (' + event.row['city'].value + ')';
+      }
+      if (event.row['col4'].value == 'approved') {
+        event.infoWindowHtml += '<br>' + event.row['col5'].value;
       }
       event.infoWindowHtml += '<br>';
     });
