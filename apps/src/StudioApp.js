@@ -99,7 +99,7 @@ var StudioApp = function () {
   /**
   * The ideal number of blocks to solve this level.  Users only get 2
   * stars if they use more than this number.
-  * @type {!number=}
+  * @type {number}
   */
   this.IDEAL_BLOCK_NUM = undefined;
 
@@ -133,7 +133,7 @@ var StudioApp = function () {
   /**
   * The number of required blocks to give hints about at any one time.
   * Set this to Infinity to show all.
-  * @type {!number=}
+  * @type {number}
   */
   this.maxRequiredBlocksToFlag_ = 1;
 
@@ -145,7 +145,7 @@ var StudioApp = function () {
   /**
   * The number of recommended blocks to give hints about at any one time.
   * Set this to Infinity to show all.
-  * @type {!number=}
+  * @type {number}
   */
   this.maxRecommendedBlocksToFlag_ = 1;
 
