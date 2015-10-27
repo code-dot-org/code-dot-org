@@ -119,6 +119,12 @@ function showVideoDialog(options, forceShowVideo) {
 
   dialog.show();
 
+  // Raise an event that the dialog has been shown, in case anything needs to
+  // pause/respond to it.
+  var event = document.createEvent('Event');
+  event.initEvent('videoShown', true, true);
+  document.dispatchEvent(event);
+
   // Don't add fallback player if a video modal has closed
   var shouldStillAdd = true;
   $('.video-modal').one('hidden.bs.modal', function(){

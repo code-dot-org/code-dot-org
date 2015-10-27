@@ -59,11 +59,11 @@ var MusicController = function (audioPlayer, assetUrl, trackNames) {
 
   this.playOnLoad_ = null;
 
-  debug('constructed');
-
-  $('.video-modal').on('shown.bs.modal', function() {
+  document.addEventListener('videoShown', function () {
     this.fadeOut();
   }.bind(this));
+
+  debug('constructed');
 };
 module.exports = MusicController;
 
