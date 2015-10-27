@@ -105,7 +105,6 @@ function getColoredPixels(imageData, width, height) {
 module.exports = {
   app: "applab",
   skinId: "applab",
-  // levelDefinition: levelDefinition,
   tests: [
     {
       description: "Expected solution.",
