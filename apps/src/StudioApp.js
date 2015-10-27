@@ -866,6 +866,12 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     // process <details> tags with polyfill jQuery plugin
     $('details').details();
   }
+
+  // Fire a custom event on the document so that other code can respond
+  // to instructions being shown.
+  var event = document.createEvent('Event');
+  event.initEvent('instructionsShown', true, true);
+  document.dispatchEvent(event);
 };
 
 /**

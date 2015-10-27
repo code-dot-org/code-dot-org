@@ -244,5 +244,8 @@
   "dropletBlock_randomNumber_param0_description": "The minimum number returned",
   "dropletBlock_randomNumber_param1": "max",
   "dropletBlock_randomNumber_param1_description": "The maximum number returned",
-  "dropletBlock_randomNumber_signatureOverride": "randomNumber(min, max)"
+  "dropletBlock_randomNumber_signatureOverride": "randomNumber(min, max)",
+  "unsubmit": "Unsubmit",
+  "unsubmitYourProject": "Unsubmit your project",
+  "unsubmitYourProjectConfirm": "Unsubmitting your project will reset the submitted date, really unsubmit?"
 }

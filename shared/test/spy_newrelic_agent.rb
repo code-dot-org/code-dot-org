@@ -9,9 +9,9 @@ class NewRelic
     def self.events
       @@events
     end
-    def self.increment_metric(metric)
+    def self.record_metric(metric, value)
       @@metrics ||= []
-      @@metrics.push(metric)
+      @@metrics.push([metric, value])
     end
     def self.record_custom_event(event, opts)
       @@events ||= []

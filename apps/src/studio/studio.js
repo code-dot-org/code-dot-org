@@ -34,6 +34,7 @@ var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
 var ThreeSliceAudio = require('./ThreeSliceAudio');
+var MusicController = require('./MusicController');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -1562,6 +1563,23 @@ Studio.init = function(config) {
     }
   });
 
+  /**
+   * Helper that handles music loading/playing/crossfading for the level.
+   * @type {MusicController}
+   */
+  Studio.musicController = new MusicController(
+      studioApp.cdoSounds,
+      skin.assetUrl,
+      utils.valueOr(level.music, skin.music));
+
+  /**
+   * Defines the set of possible movement sound effects for each playlab actor.
+   * Populated just-in-time by setSprite to avoid preparing audio for actors
+   * we never use.
+   * @type {Object}
+   */
+  Studio.movementAudioEffects = {};
+
   config.loadAudio = function() {
     var soundFileNames = [];
     // We want to load the basic list of effects available in the skin
@@ -1576,29 +1594,17 @@ Studio.init = function(config) {
       skin.soundFiles[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl(sound + '.ogg')];
       studioApp.loadAudio(skin.soundFiles[sound], sound);
     });
+
+    // Handle music separately - the music controller does its own preloading.
+    Studio.musicController.preload();
   };
 
-  /**
-   * Get a flattened list of all the sound file names (sans extensions)
-   * specified in the skin for avatar movement (these may be omitted from the
-   * skin.sounds list because we don't want them accessible to the player).
-   * @param {Object} level skin from which to extract sound effect names.
-   * @returns {string[]} which may contain duplicates but will not have any
-   *          undefined entries.
-   */
-  Studio.getMovementSoundFileNames = function (fromSkin) {
-    var avatarList = fromSkin.avatarList || [];
-    return avatarList.map(function (avatarName) {
-      var movementAudio = fromSkin[avatarName].movementAudio || [];
-      return movementAudio.reduce(function (memo, nextOption) {
-        return memo.concat([nextOption.begin, nextOption.loop, nextOption.end]);
-      }, []);
-    }).reduce(function (memo, next) {
-      return memo.concat(next);
-    }, []).filter(function (fileName) {
-      return fileName !== undefined;
-    });
+  // Play music when the instructions are shown
+  var onInstructionsShown = function () {
+    Studio.musicController.play();
+    document.removeEventListener('instructionsShown', onInstructionsShown);
   };
+  document.addEventListener('instructionsShown', onInstructionsShown);
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1688,6 +1694,28 @@ Studio.init = function(config) {
     preloadProjectileAndItemImages();
     preloadBackgroundImages();
   }
+};
+
+/**
+ * Get a flattened list of all the sound file names (sans extensions)
+ * specified in the skin for avatar movement (these may be omitted from the
+ * skin.sounds list because we don't want them accessible to the player).
+ * @param {Object} level skin from which to extract sound effect names.
+ * @returns {string[]} which may contain duplicates but will not have any
+ *          undefined entries.
+ */
+Studio.getMovementSoundFileNames = function (fromSkin) {
+  var avatarList = fromSkin.avatarList || [];
+  return avatarList.map(function (avatarName) {
+    var movementAudio = fromSkin[avatarName].movementAudio || [];
+    return movementAudio.reduce(function (memo, nextOption) {
+      return memo.concat([nextOption.begin, nextOption.loop, nextOption.end]);
+    }, []);
+  }).reduce(function (memo, next) {
+    return memo.concat(next);
+  }, []).filter(function (fileName) {
+    return fileName !== undefined;
+  });
 };
 
 var preloadImage = function(url) {
@@ -2017,6 +2045,10 @@ Studio.runButtonClick = function() {
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
+
+  // Stop the music the first time the run button is pressed (hoc2015)
+  Studio.musicController.fadeOut();
+
   studioApp.reset(false);
   studioApp.attempts++;
   Studio.startTime = new Date();
@@ -3971,16 +4003,18 @@ Studio.setSprite = function (opts) {
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
-  // Set up movement audio for the selected sprite (should be preloaded)
-  Studio.movementAudioOptions = Studio.movementAudioOptions || {};
-  if (!Studio.movementAudioOptions[spriteValue] && skin.avatarList) {
+  // Set up movement audio for the selected sprite (clips should be preloaded)
+  if (!Studio.movementAudioEffects[spriteValue] && skin.avatarList) {
     var spriteSkin = skin[spriteValue] || {};
     var audioConfig = spriteSkin.movementAudio || [];
-    Studio.movementAudioOptions[spriteValue] = audioConfig.map(function (audioOption) {
-      return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
-    });
+    Studio.movementAudioEffects[spriteValue] = [];
+    if (studioApp.cdoSounds) {
+      Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
+        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
+      });
+    }
   }
-  Studio.currentMovementAudioOptions = Studio.movementAudioOptions[spriteValue];
+  Studio.currentSpriteMovementAudioEffects = Studio.movementAudioEffects[spriteValue];
 
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
@@ -3989,8 +4023,8 @@ Studio.setSprite = function (opts) {
 
 Studio.movementAudioOn = function () {
   Studio.movementAudioOff();
-  Studio.currentMovementAudio = Studio.currentMovementAudioOptions[
-      Math.floor(Math.random() * Studio.currentMovementAudioOptions.length)];
+  Studio.currentMovementAudio = Studio.currentSpriteMovementAudioEffects[
+      Math.floor(Math.random() * Studio.currentSpriteMovementAudioEffects.length)];
   if (Studio.currentMovementAudio) {
     Studio.currentMovementAudio.on();
   }

@@ -6580,6 +6580,12 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     // process <details> tags with polyfill jQuery plugin
     $('details').details();
   }
+
+  // Fire a custom event on the document so that other code can respond
+  // to instructions being shown.
+  var event = document.createEvent('Event');
+  event.initEvent('instructionsShown', true, true);
+  document.dispatchEvent(event);
 };
 
 /**
@@ -34820,7 +34826,7 @@ standardConfig.blocks = [
   {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math' },
   {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },
   {func: 'mathMin', block: 'Math.min(__)', category: 'Math' },
-  {func: 'mathRandom', block: 'Math.random(__)', category: 'Math' },
+  {func: 'mathRandom', block: 'Math.random()', category: 'Math' },
 
   // Variables
   {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables' },

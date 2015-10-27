@@ -515,6 +515,16 @@ img#turtleImage {
   #share-cell.share-cell-none {
     display: none; }
 
+#submitButton {
+  border-color: #7665a0;
+  background-color: #7665a0;
+  color: white; }
+
+#unsubmitButton {
+  border-color: #a69bc1;
+  background-color: #a69bc1;
+  color: white; }
+
 #manageAssetsModal {
   width: 800px;
   margin-left: -400px; }
