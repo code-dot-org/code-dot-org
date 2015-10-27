@@ -1,4 +1,4 @@
-if Rails.env.development?
+if Rails.env.development? || Rails.env.adhoc?
   require 'rack-mini-profiler'
 
   # Configure the rack mini-profiler, which displays a on-page breakdown of the
