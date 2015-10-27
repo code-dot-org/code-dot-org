@@ -11,7 +11,7 @@ class DatastoreCache
 
     # Note we intentionally do this before spawning the background thread
     # to make sure the cache is seeded successfully on init
-    seed_cache
+    update_cache
     @update_thread = spawn_update_thread
   end
 
@@ -48,10 +48,12 @@ class DatastoreCache
   end
 
   # Pulls all values from the datastore and populates the local cache
-  def seed_cache
+  def update_cache
     @datastore.all.each do |k, v|
       set_local(k, v)
     end
+  rescue => exc
+    Honeybadger.notify(exc)
   end
 
   # Spawns a background thread that periodically updates the cached
@@ -60,12 +62,7 @@ class DatastoreCache
     Thread.new do
       loop do
         sleep @cache_expiration
-
-        begin
-          seed_cache
-        rescue => exc
-          Honeybadger.notify(exc)
-        end
+        update_cache
       end
     end
   end
