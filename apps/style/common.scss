@@ -826,6 +826,15 @@ input[type="radio"] {
 }
 
 #puzzleRatingButtons {
+
+  $red: #FF3014;
+  $dark_red: #7F150A;
+  $blue: #0094CA;
+  $dark_blue: #00647F;
+  $gray: #333333;
+  $dark_gray: #4D4D4D;
+  // $light_gray comes from shared colors
+
   hr {
     border-top: 2px solid #ccc;
   }
@@ -843,25 +852,25 @@ input[type="radio"] {
 
     &#like {
       &:hover {
-        fill: #333333;
+        fill: $gray;
       }
       &.enabled {
-        fill: #FF3014;
+        fill: $red;
       }
       &.enabled:hover {
-        fill: #7F150A;
+        fill: $dark_red;
       }
     }
 
     &#dislike {
       &:hover {
-        fill: #4D4D4D;
+        fill: $dark_gray;
       }
       &.enabled {
-        fill: #0094CA;
+        fill: $blue;
       }
       &.enabled:hover {
-        fill: #00647F;
+        fill: $dark_blue;
       }
     }
   }
