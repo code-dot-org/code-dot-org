@@ -1578,7 +1578,7 @@ Studio.init = function(config) {
    * we never use.
    * @type {Object}
    */
-  Studio.movementAudioOptions = {};
+  Studio.movementAudioEffects = {};
 
   config.loadAudio = function() {
     var soundFileNames = [];
@@ -4004,14 +4004,14 @@ Studio.setSprite = function (opts) {
   }
 
   // Set up movement audio for the selected sprite (clips should be preloaded)
-  if (!Studio.movementAudioOptions[spriteValue] && skin.avatarList) {
+  if (!Studio.movementAudioEffects[spriteValue] && skin.avatarList) {
     var spriteSkin = skin[spriteValue] || {};
     var audioConfig = spriteSkin.movementAudio || [];
-    Studio.movementAudioOptions[spriteValue] = audioConfig.map(function (audioOption) {
+    Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
       return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
     });
   }
-  Studio.currentMovementAudioOptions = Studio.movementAudioOptions[spriteValue];
+  Studio.currentSpriteMovementAudioEffects = Studio.movementAudioEffects[spriteValue];
 
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
@@ -4020,8 +4020,8 @@ Studio.setSprite = function (opts) {
 
 Studio.movementAudioOn = function () {
   Studio.movementAudioOff();
-  Studio.currentMovementAudio = Studio.currentMovementAudioOptions[
-      Math.floor(Math.random() * Studio.currentMovementAudioOptions.length)];
+  Studio.currentMovementAudio = Studio.currentSpriteMovementAudioEffects[
+      Math.floor(Math.random() * Studio.currentSpriteMovementAudioEffects.length)];
   if (Studio.currentMovementAudio) {
     Studio.currentMovementAudio.on();
   }
