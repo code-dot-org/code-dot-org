@@ -61,16 +61,16 @@
 
     var layer = new google.maps.FusionTablesLayer({
       query: {
-        select: 'col4',
+        select: 'review',
         from: '164RLDWEyPij3-Z9O0791ta_a8RfuCdGUkWRFcnBD'
       },
       styles: [{
-        where: "col4 CONTAINS 'approved'",
+        where: "review CONTAINS 'approved'",
         markerOptions: {
           iconName: "orange_stars"
         }
       }, {
-        where: "col4 DOES NOT CONTAIN 'approved'",
+        where: "review DOES NOT CONTAIN 'approved'",
         markerOptions: {
           iconName: "measle_turquoise"
         }
@@ -97,8 +97,8 @@
       if (event.row['city'].value.length > 0) {
         event.infoWindowHtml += ' (' + event.row['city'].value + ')';
       }
-      if (event.row['col4'].value == 'approved') {
-        event.infoWindowHtml += '<br>' + event.row['col5'].value;
+      if (event.row['review'].value == 'approved') {
+        event.infoWindowHtml += '<br>' + event.row['description'].value;
       }
       event.infoWindowHtml += '<br>';
     });
