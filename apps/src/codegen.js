@@ -496,6 +496,9 @@ function highlightAceLines (aceEditor, className, startRow, endRow) {
  * to highlight where an error has occurred.
  */
 exports.selectEditorRowColError = function (editor, row, col) {
+  if (!editor) {
+    return;
+  }
   if (editor.currentlyUsingBlocks) {
     var style = {color: '#FFFF22'};
     editor.clearLineMarks();
