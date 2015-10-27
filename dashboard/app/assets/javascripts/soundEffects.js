@@ -319,6 +319,9 @@ Sound.prototype.onSoundLoaded = function () {
   if (this.config.playAfterLoad) {
     this.play(this.config.playAfterLoadOptions);
   }
+  if (this.onLoad) {
+    this.onLoad();
+  }
 };
 
 Sound.prototype.preloadViaWebAudio = function (filename, onPreloadedCallback) {

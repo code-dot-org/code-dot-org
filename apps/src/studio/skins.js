@@ -490,6 +490,8 @@ function loadHoc2015(skin, assetUrl) {
     'move1', 'move2', 'move3'
   ];
 
+  skin.music = [ 'music_loop_holst' ];
+
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
   skin.playFinalGoalSound = true;
