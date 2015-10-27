@@ -1563,7 +1563,10 @@ Studio.init = function(config) {
     }
   });
 
-  Studio.musicController = new MusicController(studioApp.cdoSounds, skin.assetUrl, skin.music);
+  Studio.musicController = new MusicController(
+      studioApp.cdoSounds,
+      skin.assetUrl,
+      utils.valueOr(level.music, skin.music));
   config.loadAudio = function() {
     var soundFileNames = [];
     // We want to load the basic list of effects available in the skin
