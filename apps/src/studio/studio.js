@@ -2024,7 +2024,7 @@ Studio.runButtonClick = function() {
   }
 
   // Stop the music the first time the run button is pressed (hoc2015)
-  Studio.musicController.stop();
+  Studio.musicController.fadeOut();
 
   studioApp.reset(false);
   studioApp.attempts++;

@@ -227,22 +227,31 @@ Sound.prototype.newPlayableBufferSource = function(buffer, options) {
   var newSound = this.audioContext.createBufferSource();
 
   // Older versions of chrome call this createGainNode instead of createGain
-  var gainNode;
   if (this.audioContext.createGain) {
-    gainNode = this.audioContext.createGain();
+    this.gainNode = this.audioContext.createGain();
   } else if (this.audioContext.createGainNode) {
-    gainNode = this.audioContext.createGainNode();
+    this.gainNode = this.audioContext.createGainNode();
   } else {
     return null;
   }
 
   newSound.buffer = buffer;
   newSound.loop = !!options.loop;
-  newSound.connect(gainNode);
-  gainNode.connect(this.audioContext.destination);
-  gainNode.gain.value = typeof options.volume === "undefined" ? 1 : options.volume;
+  newSound.connect(this.gainNode);
+  this.gainNode.connect(this.audioContext.destination);
+  var startingVolume = typeof options.volume === "undefined" ? 1 : options.volume;
+  this.gainNode.gain.setValueAtTime(startingVolume, this.audioContext.currentTime);
 
   return newSound;
+};
+
+Sound.prototype.fadeToGain = function (gain, durationSeconds) {
+  if (!this.gainNode) {
+    return;
+  }
+
+  var currTime = this.audioContext.currentTime;
+  this.gainNode.gain.linearRampToValueAtTime(gain, currTime + durationSeconds);
 };
 
 function isMobile() {

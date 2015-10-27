@@ -13,6 +13,7 @@
  */
 'use strict';
 
+var utils = require('../utils');
 
 /**
  * A helper class that handles loading, choosing, playing and stopping
@@ -99,6 +100,29 @@ MusicController.prototype.stop = function () {
   if (sound) {
     sound.stop();
   }
+};
+
+/**
+ * Fades music to nothing, then stops it.
+ * @param {number} [durationSeconds] in seconds.  Default 3.
+ */
+MusicController.prototype.fadeOut = function (durationSeconds) {
+  if (!this.nowPlaying_) {
+    return;
+  }
+
+  durationSeconds = utils.valueOr(durationSeconds, 3);
+
+  // Trigger a fade
+  var sound = this.audioPlayer_.get(this.nowPlaying_);
+  if (sound) {
+    sound.fadeToGain(0, durationSeconds);
+  }
+
+  // Stop the audio after the fade.
+  setTimeout(function () {
+    this.stop();
+  }.bind(this), 1000 * durationSeconds);
 };
 
 /**
