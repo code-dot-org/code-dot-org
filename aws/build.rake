@@ -277,8 +277,11 @@ end
 # Additionally run the lint task if specified for the environment.
 task build: [:chef_update] do
   Dir.chdir(deploy_dir) do
+  with_hipchat_logging("rake lint") do
     RakeUtils.system 'rake', 'lint' if CDO.lint
-    RakeUtils.system 'rake', 'build'
+  end
+  with_hipchat_logging("rake build") do
+      RakeUtils.system 'rake', 'build'
   end
 end
 
@@ -286,11 +289,13 @@ end
 # properly scaled we should be able to upgrade 20% of the front-ends at a time. Right now we're
 # over-subscribed (have more resources than we need) so we're restarting 50% of the front-ends.
 task :deploy do
-  if CDO.daemon && CDO.app_servers.any?
-    Dir.chdir(deploy_dir) do
-      thread_count = 2
-      threaded_each CDO.app_servers.keys, thread_count do |name|
-        upgrade_frontend name, CDO.app_servers[name]
+  with_hipchat_logging("deploy frontends") do
+    if CDO.daemon && CDO.app_servers.any?
+      Dir.chdir(deploy_dir) do
+        thread_count = 2
+        threaded_each CDO.app_servers.keys, thread_count do |name|
+          upgrade_frontend name, CDO.app_servers[name]
+        end
       end
     end
   end
