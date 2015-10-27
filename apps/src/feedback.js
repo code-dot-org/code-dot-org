@@ -355,14 +355,14 @@ FeedbackUtils.prototype.buildPuzzleRatingButtons_ = function () {
 
   var buttons = buttonContainer.querySelectorAll('.puzzle-rating-btn');
   var buttonClickHandler = function () {
-    for (var _ = 0, button; (button = buttons[_]); _++) {
+    for (var i = 0, button; (button = buttons[i]); i++) {
       if (button != this) {
-        button.classList.remove('enabled');
+        $(button).removeClass('enabled');
       }
     }
-    this.classList.toggle('enabled');
+    $(this).toggleClass('enabled');
   };
-  for (var _ = 0, button; (button = buttons[_]); _++) {
+  for (var i = 0, button; (button = buttons[i]); i++) {
     dom.addClickTouchEvent(button, buttonClickHandler);
   }
 
