@@ -14,12 +14,15 @@ class MemoryAdapter
 
   def get(key)
     Oj.load(@hash[key])
+  rescue => exc
+    Honeybadger.notify(exc)
+    nil
   end
 
   def all
     ret = {}
     @hash.each do |k, v|
-      ret[k] = Oj.load(v)
+      ret[k] = get(k)
     end
     ret
   end

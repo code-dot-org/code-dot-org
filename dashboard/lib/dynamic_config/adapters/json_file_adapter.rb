@@ -18,16 +18,25 @@ class JSONFileDatastoreAdapter
   end
 
   # @param key [String]
-  # @returns [String]
+  # @returns [JSONable Object] or nil if key doesn't exist
   def get(key)
     Oj.load(@hash[key])
+  rescue => exc
+    Honeybadger.notify(exc)
+    nil
   end
 
   # @returns [Hash]
   def all
     ret = {}
     @hash.each do |k, v|
-      ret[k] = Oj.load(v)
+      begin
+        value = Oj.load(v)
+      rescue => exc
+        Honeybadger.notify(exc)
+        nil
+      end
+      ret[k] = value
     end
     ret
   end

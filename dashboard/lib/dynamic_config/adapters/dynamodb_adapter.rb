@@ -1,5 +1,5 @@
 # A DynamoDB adapter class that allows us to use
-# dynamodb as a persistent store with the datastore_cache
+# dynamodb as a persistent store with the datastore_cache.
 require 'aws-sdk'
 require 'oj'
 
@@ -11,7 +11,7 @@ class DynamoDBAdapter
   end
 
   # @param key [String]
-  # @returns [String]
+  # @returns [Object] or nil if the key doesnt exist
   def get(key)
     resp = @client.get_item({
       table_name: @table_name,
@@ -20,11 +20,18 @@ class DynamoDBAdapter
       }
     })
     return nil if resp.item.nil?
-    Oj.load(resp.item['data-value'])
+    begin
+      value = Oj.load(resp.item['data-value'])
+    rescue => exc
+      Honeybadger.notify(exc)
+      value = nil
+    end
+    value
   end
 
   # @param key [String]
-  # @param value [String]
+  # @param value [JSONable object]
+  # @raise if DynamoDB is unavailable
   def set(key, value)
     @client.put_item({
       table_name: @table_name,
@@ -35,7 +42,8 @@ class DynamoDBAdapter
     })
   end
 
-  # returns [Hash]
+  # @returns [Hash]
+  # @raise if DynamoDB is unavailable
   def all
     result = {}
     last_evaluated = nil
@@ -47,7 +55,12 @@ class DynamoDBAdapter
 
       resp.items.each do |item|
         key = item['data-key']
-        value = Oj.load(item['data-value'])
+        begin
+          value = Oj.load(item['data-value'])
+        rescue => exc
+          Honeybadger.notify(exc)
+          value = nil
+        end
         result[key] = value
       end
 

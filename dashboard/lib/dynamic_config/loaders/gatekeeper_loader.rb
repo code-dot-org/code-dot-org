@@ -1,5 +1,27 @@
-# A script to update the Gatekeeper settings
-
+# A script to update the Gatekeeper settings from a yaml file.  The
+# structure of the yaml file is as follows
+#
+# <feature name>:
+# # Comment describing what the rule intends
+# - rule:
+#    where: (optional)
+#      user_id: 2
+#      script_id: 2
+#    value: <boolean>
+#
+# So for example if I wanted to turn the "milestone" feature
+# off for all scripts except for script_id 38 I would do the following
+#
+# milestone:
+    # Turn off for all users
+#   - rule:
+#     value: false
+    # Turn on for script 38
+#   - rule:
+#     where:
+#       script_id: 38
+#     value: true
+#
 require 'yaml'
 require 'dynamic_config/gatekeeper'
 

@@ -1,35 +1,11 @@
-# This yaml file describes the configuration for
-# gatekeeper.  Here is how a typical feature would
-# be defined:
-#
-# <feature name>:
-# - rule: <descripion of what rule does>
-#    where: (optional)
-#      user_id: 2
-#      script_id: 2
-#    value: <boolean>
-#
-# So for example if I wanted to turn the "milestone" feature
-# off for all scripts except for script_id 38 I would do the following
-#
-# milestone:
-#   - rule: Turn off for all users
-#     value: false
-#   - rule: Turn on for Trevor
-#     where:
-#       script_id: 38
-#     value: true
-#
-#
-
 milestone:
-  - rule: Turn off for all users
-  - rule: Turn on for Trevor
+  - rule:
+  - rule:
     where:
       script_id: 38
     value: true
 
 feature2:
-  - rule: Turn on for all users
+  - rule:
     value: true
 
