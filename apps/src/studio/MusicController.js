@@ -77,7 +77,7 @@ function buildTrackMap(trackNames, assetUrl) {
   var tracks = trackNames.map(function (name) {
     return {
       name: name,
-      assetUrls: [ assetUrl(name + '.mp3'), assetUrl(name + '.ogg') ],
+      assetUrls: [ assetUrl(name + '.mp3') ],
       sound: null,
       isLoaded: false
     };
