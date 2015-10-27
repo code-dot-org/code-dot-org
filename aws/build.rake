@@ -101,7 +101,7 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   BLOCKLY_CORE_PRODUCT_FILES = Dir.glob(blockly_core_dir('build-output', '**/*'))
   BLOCKLY_CORE_SOURCE_FILES = Dir.glob(blockly_core_dir('**/*')) - BLOCKLY_CORE_PRODUCT_FILES
   BLOCKLY_CORE_TASK = build_task('blockly-core', BLOCKLY_CORE_DEPENDENCIES + BLOCKLY_CORE_SOURCE_FILES) do
-    RakeUtils.system 'rake', '--rakefile', deploy_dir('Rakefile'), 'build:blockly_core'
+    RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:blockly_core'
   end
 
   #
@@ -113,7 +113,7 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   APPS_SOURCE_FILES = Dir.glob(apps_dir('**/*')) - APPS_NODE_MODULES - APPS_BUILD_PRODUCTS
   APPS_TASK = build_task('apps', APPS_DEPENDENCIES + APPS_SOURCE_FILES) do
     RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-apps')
-    RakeUtils.system 'rake', '--rakefile', deploy_dir('Rakefile'), 'build:apps'
+    RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:apps'
     RakeUtils.system 'rm', '-rf', dashboard_dir('public/apps-package')
     RakeUtils.system 'cp', '-R', apps_dir('build/package'), dashboard_dir('public/apps-package')
   end
@@ -126,7 +126,7 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   SHARED_SOURCE_FILES = Dir.glob(shared_js_dir('**/*')) - SHARED_NODE_MODULES - SHARED_BUILD_PRODUCTS
   SHARED_TASK = build_task('shared', SHARED_SOURCE_FILES) do
     RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-shared')
-    RakeUtils.system 'rake', '--rakefile', deploy_dir('Rakefile'), 'build:shared'
+    RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:shared'
     RakeUtils.system 'rm', '-rf', dashboard_dir('public/shared-package')
     RakeUtils.system 'cp', '-R', shared_js_dir('build/package'), dashboard_dir('public/shared-package')
   end
@@ -277,11 +277,12 @@ end
 # Additionally run the lint task if specified for the environment.
 task build: [:chef_update] do
   Dir.chdir(deploy_dir) do
-  with_hipchat_logging("rake lint") do
-    RakeUtils.system 'rake', 'lint' if CDO.lint
-  end
-  with_hipchat_logging("rake build") do
-      RakeUtils.system 'rake', 'build'
+    with_hipchat_logging("rake lint") do
+      RakeUtils.rake 'lint' if CDO.lint
+    end
+    with_hipchat_logging("rake build") do
+      RakeUtils.rake 'build'
+    end
   end
 end
 
