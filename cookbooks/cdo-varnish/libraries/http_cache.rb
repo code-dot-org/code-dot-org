@@ -87,15 +87,15 @@ class HttpCache
             cookies: whitelisted_cookies
           },
           {
+            path: '/api/*',
+            headers: LANGUAGE_HEADER,
+            cookies: whitelisted_cookies
+          },
+          {
             # For static-asset paths, don't forward any cookies or additional headers.
             path: STATIC_ASSET_EXTENSION_PATHS + %w(/assets/* /blockly/media/*),
             headers: [],
             cookies: 'none'
-          },
-          {
-            path: '/api/*',
-            headers: LANGUAGE_HEADER,
-            cookies: whitelisted_cookies
           },
           {
             path: '/v2/*',
