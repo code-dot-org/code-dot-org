@@ -53,6 +53,10 @@ var ImageFilter = function (svg) {
 
   /** @private {number} how many elements are currently using this filter. */
   this.applyCount_ = 0;
+
+  /** @private {?} setInterval key */
+  this.intervalId_ = null;
+
 };
 module.exports = ImageFilter;
 
@@ -83,6 +87,19 @@ ImageFilter.prototype.removeFrom = function (svgElement) {
   }
 };
 
+/* jshint unused: false */
+/**
+ * Update this effect's animation for the current time.
+ * Called by effect's own interval (not Studio.onTick) so that we can run
+ * effects even when the studio simulation is not running.
+ * @param {number} timeMs
+ */
+ImageFilter.prototype.update = function (timeMs) {
+  // No default operation here.  Subclasses may override this to implement
+  // animation.
+};
+/* jshint unused: true */
+
 /**
  * Generates the necessary elements and adds this filter to the parent SVG
  * under the <defs> tag.
@@ -107,6 +124,13 @@ ImageFilter.prototype.createInDom_ = function () {
   // Put the filter in the SVG Defs node.
   var defs = this.getDefsNode_();
   defs.appendChild(filter);
+
+  // Establish 30FPS update interval
+  if (!this.intervalId_) {
+    this.intervalId_ = window.setInterval(function () {
+      this.update(new Date().getTime());
+    }.bind(this), 1000/30);
+  }
 };
 
 /**
@@ -114,6 +138,11 @@ ImageFilter.prototype.createInDom_ = function () {
  * @private
  */
 ImageFilter.prototype.removeFromDom_ = function () {
+  if (this.intervalId_) {
+    window.clearInterval(this.intervalId_);
+    this.intervalId_ = null;
+  }
+
   var filter = document.getElementById(this.id_);
   if (filter) {
     filter.parentNode.removeChild(filter);

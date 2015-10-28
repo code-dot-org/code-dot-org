@@ -12,9 +12,12 @@
  */
 'use strict';
 
-require('../utils');
+var utils = require('../utils');
 var SVG_NS = require('../constants').SVG_NS;
 var ImageFilter = require('./ImageFilter');
+
+/** @const {number} determines "height" of light above play area */
+var POINT_LIGHT_Z = 200;
 
 /**
  * Runs a specular spotlight across the image from top-left to bottom-right,
@@ -25,6 +28,13 @@ var ImageFilter = require('./ImageFilter');
  */
 var ShineFilter = function (svg) {
   ImageFilter.call(this, svg);
+
+  /** @private {SVGElement} */
+  this.fePointLight_ = null;
+
+  // TODO: Find a way to not depend on the Studio global.
+  /** @private {function} */
+  this.curve_ = makeOscillation(2000, -POINT_LIGHT_Z, Studio.MAZE_WIDTH + POINT_LIGHT_Z);
 };
 ShineFilter.inherits(ImageFilter);
 module.exports = ShineFilter;
@@ -54,33 +64,11 @@ ShineFilter.prototype.createFilterSteps_ = function () {
   feSpecularLighting.setAttribute('lighting-color', 'white');
   feSpecularLighting.setAttribute('result', specularResult);
 
-  var fePointLight = document.createElementNS(SVG_NS, 'fePointLight');
-  var pointLightZ = 200;
-  fePointLight.setAttribute('x', 0);
-  fePointLight.setAttribute('y', 0);
-  fePointLight.setAttribute('z', pointLightZ);
-
-  // TODO: Replace this SMIL animation with a JS-driven one.
-  var xPositionAnimation = document.createElementNS(SVG_NS, 'animate');
-  xPositionAnimation.setAttribute('attributeName', 'x');
-  // TODO: Find a way to not depend on the Studio global.
-  var values = [
-    -pointLightZ,
-    -pointLightZ,
-    Studio.MAZE_WIDTH + pointLightZ,
-    Studio.MAZE_WIDTH + pointLightZ
-  ];
-  xPositionAnimation.setAttribute('values', values.join(';'));
-  xPositionAnimation.setAttribute('dur', '2s');
-  xPositionAnimation.setAttribute('repeatCount', 'indefinite');
-
-  var yPositionAnimation = xPositionAnimation.cloneNode();
-  yPositionAnimation.setAttribute('attributeName', 'y');
-
-  fePointLight.appendChild(xPositionAnimation);
-  fePointLight.appendChild(yPositionAnimation);
-
-  feSpecularLighting.appendChild(fePointLight);
+  this.fePointLight_ = document.createElementNS(SVG_NS, 'fePointLight');
+  this.fePointLight_.setAttribute('x', 0);
+  this.fePointLight_.setAttribute('y', 0);
+  this.fePointLight_.setAttribute('z', POINT_LIGHT_Z);
+  feSpecularLighting.appendChild(this.fePointLight_);
 
   var feCompositeMask = document.createElementNS(SVG_NS, 'feComposite');
   var maskedSpecularId = specularResult + '-masked';
@@ -102,3 +90,38 @@ ShineFilter.prototype.createFilterSteps_ = function () {
     feCompositeLayer
   ];
 };
+
+/**
+ * Update this effect's animation for the current time.
+ * @param {number} timeMs
+ * @override
+ */
+ShineFilter.prototype.update = function (timeMs) {
+  if (this.fePointLight_) {
+    var newValue = this.curve_(timeMs);
+    this.fePointLight_.setAttribute('x', newValue);
+    this.fePointLight_.setAttribute('y', newValue);
+  }
+};
+
+/**
+ * Function for a repeating pattern as follows:
+ *  * Spend the first 1/3 of the period at {min}
+ *  * Spend the second 1/3 of the period doing a linear interpolation from
+ *    {min} to {max}
+ *  * Spend the final 1/3 of the period at {max}
+ *
+ * @param {number} period - time units before this pattern repeats
+ * @param {number} [min] - Lowest value, default zero
+ * @param {number} [max] - Highest value, default one
+ */
+function makeOscillation(period, min, max) {
+  min = utils.valueOr(min, 0);
+  max = utils.valueOr(max, 1);
+
+  var slope = 3 * (max - min) / period;
+  var intercept = 2 * min - max;
+  return function (t) {
+    return Math.min(max, Math.max(min, slope * (t % period) + intercept));
+  };
+}
