@@ -377,11 +377,6 @@ Item.prototype.startCollision = function (key) {
   if (newCollisionStarted) {
     if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
       Studio.trackedBehavior.touchedHazardCount++;
-      var actor = Studio.sprite[key];
-      if (actor) {
-        actor.addAction(new spriteActions.FadeActor(constants.TOUCH_HAZARD_FADE_TIME));
-        actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_FADE_TIME));
-      }
     }
   }
   return newCollisionStarted;
