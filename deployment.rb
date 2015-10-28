@@ -45,6 +45,7 @@ def load_configuration()
     'build_dashboard'             => true,
     'build_pegasus'               => true,
     'build_shared_js'             => [:development, :adhoc, :staging].include?(rack_env),
+    'dcdo_table_name'             => "dcdo_#{rack_env}",
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
     'dashboard_secret_key_base'   => 'not a secret',
@@ -58,6 +59,7 @@ def load_configuration()
     'db_writer'                   => 'mysql://root@localhost/',
     'reporting_db_reader'         => 'mysql://root@localhost/',
     'reporting_db_writer'         => 'mysql://root@localhost/',
+    'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
     'hip_chat_log_room'           => rack_env.to_s,
     'hip_chat_logging'            => false,
     'home_dir'                    => File.expand_path('~'),
@@ -68,6 +70,7 @@ def load_configuration()
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
     'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
+    'partners'                    => %w(al ar br eu italia ro sg uk za),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
@@ -79,7 +82,7 @@ def load_configuration()
     'poste_secret'                => 'not a real secret',
     'proxy'                       => false, # If true, generated URLs will not include explicit port numbers in development
     'rack_env'                    => rack_env,
-    'rack_envs'                   => [:development, :production, :adhoc, :staging, :test, :levelbuilder],
+    'rack_envs'                   => [:development, :production, :adhoc, :staging, :test, :levelbuilder, :integration],
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
@@ -153,6 +156,14 @@ class CDOImpl < OpenStruct
     return "localhost#{sep}#{domain}" if rack_env?(:development)
     return "translate#{sep}#{domain}" if self.name == 'crowdin'
     "#{rack_env}#{sep}#{domain}"
+  end
+
+  def dashboard_hostname
+    canonical_hostname('studio.code.org')
+  end
+
+  def pegasus_hostname
+    canonical_hostname('code.org')
   end
 
   def site_url(domain, path = '', scheme = '')

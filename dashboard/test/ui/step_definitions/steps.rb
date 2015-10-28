@@ -183,6 +183,12 @@ When /^I press a button with xpath "([^"]*)"$/ do |xpath|
 end
 
 When /^I click selector "([^"]*)"$/ do |jquery_selector|
+  # normal a href links can only be clicked this way
+  @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+end
+
+When /^I send click events to selector "([^"]*)"$/ do |jquery_selector|
+  # svg elements can only be clicked this way
   @browser.execute_script("$(\"#{jquery_selector}\").click();")
 end
 
@@ -383,6 +389,22 @@ Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
   @parent_item.should eq @actual_parent_item
 end
 
+And(/^I set the language cookie$/) do
+  params = {
+    name: "_language",
+    value: 'en'
+  }
+
+  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
+      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
+    params[:domain] = '.code.org' # top level domain cookie
+  end
+
+  @browser.manage.add_cookie params
+
+  debug_cookies(@browser.manage.all_cookies)
+end
+
 def encrypted_cookie(user)
   key_generator = ActiveSupport::KeyGenerator.new(CDO.dashboard_secret_key_base, iterations: 1000)
 
@@ -418,24 +440,34 @@ def log_in_as(user)
   debug_cookies(@browser.manage.all_cookies)
 end
 
-Given(/^I am a teacher$/) do
-  @teacher = User.find_or_create_by!(email: "teacher#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |teacher|
-    teacher.name = "TestTeacher Teacher"
-    teacher.password = SecureRandom.base64
-    teacher.user_type = 'teacher'
-    teacher.age = 40
-  end
-  log_in_as(@teacher)
+Given(/^I sign in as "([^"]*)"/) do |name|
+  log_in_as(@users[name])
 end
 
-Given(/^I am a student$/) do
-  @student = User.find_or_create_by!(email: "student#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |user|
-    user.name = "TestStudent Student"
-    user.password = SecureRandom.base64
-    user.user_type = 'student'
-    user.age = 16
+Given(/^I am a (student|teacher)$/) do |user_type|
+  random_name = "Test#{user_type.capitalize} " + SecureRandom.base64
+  steps %Q{
+    And I create a #{user_type} named "#{random_name}"
+    And I sign in as "#{random_name}"
+  }
+end
+
+And(/^I create a (student|teacher) named "([^"]*)"$/) do |user_type, name|
+  @users ||= {}
+  @users[name] = User.find_or_create_by!(email: "user#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |user|
+    user.name = name
+    user.password = name + "password" # hack
+    user.user_type = user_type
+    user.age = user_type == 'student' ? 16 : 21
+    user.confirmed_at = Time.now
   end
-  log_in_as(@student)
+end
+
+And(/I fill in username and password for "([^"]*)"$/) do |name|
+  steps %Q{
+    And I type "#{@users[name].email}" into "#user_login"
+    And I type "#{name}password" into "#user_password"
+  }
 end
 
 Given(/^I sign in as a (student|teacher)$/) do |user_type|

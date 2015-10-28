@@ -18,6 +18,8 @@ Feature: App Lab Scenarios
 
     When I navigate to the shared version of my project
     And I wait until element "#divApplab > .screen > button#hello" is visible
+    Then evaluate JavaScript expression "typeof window.ace === 'undefined'"
+    Then evaluate JavaScript expression "typeof window.droplet === 'undefined'"
 
     Then element "#divApplab > .screen > button#hello" contains text "world"
     And element "#codeModeButton" is hidden
