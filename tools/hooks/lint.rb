@@ -19,7 +19,7 @@ def filter_rubocop(modified_files)
   end
   modified_ruby_scripts = modified_files.select do |f|
     first_line = File.open(f).first
-    first_line.ascii_only? && first_line.match(/#!.*ruby/)
+    first_line && first_line.ascii_only? && first_line.match(/#!.*ruby/)
   end
   modified_ruby_scripts + modified_rb_rake_files
 end

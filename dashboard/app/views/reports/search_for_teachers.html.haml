@@ -53,12 +53,14 @@
 
   %table.teachers
     - if @headers
-      %th
+      %tr
         - @headers.each do |field|
-          %td= field
+          %th
+            %span= field
     - @teachers.each do |teacher|
       %tr
         - teacher.each do |field|
-          %td= field
+          %td
+            %span= field
 - else
   No teachers met the specified search criteria.

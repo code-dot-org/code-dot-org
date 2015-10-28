@@ -69,6 +69,7 @@ function Sounds() {
  * @param {Array.<string>} soundPaths list of sound file URLs ending in their
  *                                   file format (.mp3|.ogg|.wav)
  * @param {string} soundID ID for sound
+ * @returns {Sound}
  */
 Sounds.prototype.registerByFilenamesAndID = function (soundPaths, soundID) {
   var soundRegistrationConfig = { id: soundID };
@@ -83,13 +84,18 @@ Sounds.prototype.registerByFilenamesAndID = function (soundPaths, soundID) {
       soundRegistrationConfig[extension] = soundFilePath;
     }
   }
-  this.register(soundRegistrationConfig);
+  return this.register(soundRegistrationConfig);
 };
 
+/**
+ * @param {Object} config
+ * @returns {Sound}
+ */
 Sounds.prototype.register = function (config) {
   var sound = new Sound(config, this.audioContext);
   this.soundsById[config.id] = sound;
   sound.preload();
+  return sound;
 };
 
 /**
@@ -227,22 +233,38 @@ Sound.prototype.newPlayableBufferSource = function(buffer, options) {
   var newSound = this.audioContext.createBufferSource();
 
   // Older versions of chrome call this createGainNode instead of createGain
-  var gainNode;
   if (this.audioContext.createGain) {
-    gainNode = this.audioContext.createGain();
+    this.gainNode = this.audioContext.createGain();
   } else if (this.audioContext.createGainNode) {
-    gainNode = this.audioContext.createGainNode();
+    this.gainNode = this.audioContext.createGainNode();
   } else {
     return null;
   }
 
   newSound.buffer = buffer;
   newSound.loop = !!options.loop;
-  newSound.connect(gainNode);
-  gainNode.connect(this.audioContext.destination);
-  gainNode.gain.value = typeof options.volume === "undefined" ? 1 : options.volume;
-
+  newSound.connect(this.gainNode);
+  this.gainNode.connect(this.audioContext.destination);
+  var startingVolume = typeof options.volume === "undefined" ? 1 : options.volume;
+  this.gainNode.gain.value = startingVolume;
   return newSound;
+};
+
+Sound.prototype.fadeToGain = function (gain, durationSeconds) {
+  if (!this.gainNode) {
+    return;
+  }
+
+  // Can't exponential ramp to zero, simulate by getting close.
+  if (gain === 0) {
+    gain = 0.01;
+  }
+
+  var currTime = this.audioContext.currentTime;
+  this.gainNode.gain.setValueAtTime(this.gainNode.gain.value, currTime);
+  this.gainNode.gain.exponentialRampToValueAtTime(gain, currTime + durationSeconds);
+
+  // TODO (bbuchanan): Support fallback player
 };
 
 function isMobile() {
@@ -318,6 +340,9 @@ Sound.prototype.preload = function () {
 Sound.prototype.onSoundLoaded = function () {
   if (this.config.playAfterLoad) {
     this.play(this.config.playAfterLoadOptions);
+  }
+  if (this.onLoad) {
+    this.onLoad();
   }
 };
 

@@ -32,6 +32,12 @@
 .row
   .col-xs-10.col-sm-12
     #gmap.full-width
+#belowmaplegend.legend{style: "display: none;"}
+  .legend-title= hoc_s(:map_legend_title)
+  .color.turquoise
+  = hoc_s(:map_legend_hoc_events)
+  .color.orange
+  = hoc_s(:map_legend_cs_tech_jam)
 
 :javascript
   var gmap;
@@ -61,22 +67,45 @@
 
     var layer = new google.maps.FusionTablesLayer({
       query: {
+        select: 'review',
         from: '164RLDWEyPij3-Z9O0791ta_a8RfuCdGUkWRFcnBD'
-        // from: '1_j3ovhuqhh_vRAiO91gOx25j7Q4I9__9hNdZLq_C'
       },
       styles: [{
+        where: "review CONTAINS 'approved'",
         markerOptions: {
-          iconName: "small_red"
+          iconName: "orange_stars"
+        }
+      }, {
+        where: "review DOES NOT CONTAIN 'approved'",
+        markerOptions: {
+          iconName: "measle_turquoise"
         }
       }],
-      map: gmap
     });
+
+    var legend = document.createElement('div');
+    legend.id = 'inmaplegend';
+    legend.className = 'legend'
+
+    var content = [];
+    content.push('<div class="legend-title">#{hoc_s(:map_legend_title)}</div>');
+    content.push('<div class="color turquoise"></div>#{hoc_s(:map_legend_hoc_events)}');
+    content.push('<br><div class="color orange"></div>#{hoc_s(:map_legend_cs_tech_jam)}');
+    legend.innerHTML = content.join('');
+    legend.index = 1;
+
+    // gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+
+    layer.setMap(gmap);
 
     google.maps.event.addListener(layer, 'click', function(event) {
       enableDrag();
       event.infoWindowHtml = event.row['organization_name'].value;
       if (event.row['city'].value.length > 0) {
         event.infoWindowHtml += ' (' + event.row['city'].value + ')';
+      }
+      if (event.row['review'].value == 'approved') {
+        event.infoWindowHtml += '<br>' + event.row['description'].value;
       }
       event.infoWindowHtml += '<br>';
     });
