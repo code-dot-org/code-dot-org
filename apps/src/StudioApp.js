@@ -205,7 +205,7 @@ StudioApp.prototype.configure = function (options) {
 };
 
 StudioApp.prototype.hasInstructionsToShow = function (config) {
-  return Boolean(config.level.instructions || config.level.aniGifURL);
+  return !!(config.level.instructions || config.level.aniGifURL);
 };
 
 /**
@@ -852,9 +852,9 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   });
 
   if (autoClose) {
-    setTimeout(function() {
+    setTimeout(_.bind(function() {
       this.instructionsDialog.hide();
-    }, 32000);
+    }, this), 32000);
   }
 
   var okayButton = buttons.querySelector('#ok-button');
@@ -1614,7 +1614,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // droplet may now be in code mode if it couldn't parse the code into
   // blocks, so update the UI based on the current state (don't autofocus
   // if we have already created an instructionsDialog at this stage of init)
-  this.onDropletToggle_(!!this.instructionsDialog);
+  this.onDropletToggle_(!this.instructionsDialog);
 
   this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
 
@@ -1791,10 +1791,11 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
 /**
  * Handle updates after a droplet toggle between blocks/code has taken place
  */
-StudioApp.prototype.onDropletToggle_ = function (dontAutofocus) {
+StudioApp.prototype.onDropletToggle_ = function (autoFocus) {
+  autoFocus = utils.valueOr(autoFocus, true);
   this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
   if (!this.editor.currentlyUsingBlocks) {
-    if (!dontAutofocus) {
+    if (autoFocus) {
       this.editor.aceEditor.focus();
     }
     this.dropletTooltipManager.registerDropletTextModeHandlers(this.editor);
