@@ -184,6 +184,11 @@ en:
       CSPPD3-u2 tips for prep: {}
       CSPPD3-u2 unit 2 overview: {}
       CSPPD3-u2 what is a challenge: {}
+      CSPPD3-u3 Welcome: {}
+      CSPPD3-u3 overview: {}
+      CSPPD3-u3 pause and reflect: {}
+      CSPPD3-u3 tips for prep: {}
+      CSPPD3-u3 unit 3 overview: {}
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
@@ -1455,6 +1460,7 @@ en:
         uses electricity, is pretty cheap: uses electricity, is pretty cheap
         uses light, is expensive: uses light, is expensive
         uses radio waves, cannot travel very far: uses radio waves, cannot travel very far
+      CSPPD3-u3 chunk 5 checkin: {}
       Coordinate Matching:
         "(250, 400)": "(250, 400)"
         "(320, 240)": "(320, 240)"
@@ -2338,6 +2344,26 @@ en:
         I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
         My understanding of these lessons has not changed: My understanding of these lessons has not changed
       CSPPD3-u2 unit overview checkin:
+        I feel like I could teach this right now: I feel like I could teach this right now
+        I feel like I need to do A LOT of review of lessons, content, etc before I teach this: I feel like I need to do A LOT of review of lessons, content, etc before I teach this
+        I feel like I need to do SOME review of lessons, content, etc before I teach this: I feel like I need to do SOME review of lessons, content, etc before I teach this
+      CSPPD3-u3 chunk 1 checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u3 chunk 2 checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u3 chunk 3 checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u3 chunk 4 checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u3 unit overview checkin:
         I feel like I could teach this right now: I feel like I could teach this right now
         I feel like I need to do A LOT of review of lessons, content, etc before I teach this: I feel like I need to do A LOT of review of lessons, content, etc before I teach this
         I feel like I need to do SOME review of lessons, content, etc before I teach this: I feel like I need to do SOME review of lessons, content, etc before I teach this
@@ -3261,6 +3287,33 @@ en:
         Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.: Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.
         Yes, the button, with its ID, must appear in the code AFTER the event handler.: Yes, the button, with its ID, must appear in the code AFTER the event handler.
         Yes, the button, with its ID, must appear in the code BEFORE the event handler.: Yes, the button, with its ID, must appear in the code BEFORE the event handler.
+      U3L14 - MC variable reassignment:
+        Code does not execute due to error: Code does not execute due to error
+        Variable Check In: Variable Check In
+        'What are the values of the variables a, b and c after all of the code below has executed? ': 'What are the values of the variables a, b and c after all of the code below has executed? '
+        'What will be displayed in the console? ': 'What will be displayed in the console? '
+        'What will be displayed on the screen after all of the code shown has executed? ': 'What will be displayed on the screen after all of the code shown has executed? '
+        a:10    b:10    c:10: a:10    b:10    c:10
+        a:10 &nbsp; b:10 &nbsp;  c:20: a:10 &nbsp; b:10 &nbsp;  c:20
+        a:10 &nbsp; b:10 &nbsp; c:10: a:10 &nbsp; b:10 &nbsp; c:10
+        a:10 &nbsp; b:17 &nbsp;  c:17: a:10 &nbsp; b:17 &nbsp;  c:17
+        a:10 &nbsp; b:17 &nbsp;  c:27: a:10 &nbsp; b:17 &nbsp;  c:27
+        a:10 b:10 c:10: a:10 b:10 c:10
+        a:10 b:10 c:20: a:10 b:10 c:20
+        a:10 b:17 c:17: a:10 b:17 c:17
+        a:10 b:17 c:27: a:10 b:17 c:27
+        a:10&nbsp; &nbsp; b:10    c:10: a:10&nbsp; &nbsp; b:10    c:10
+        a:3  b:7  c:10: a:3  b:7  c:10
+        a:3 &nbsp; &nbsp;b:7&nbsp; &nbsp; c:10: a:3 &nbsp; &nbsp;b:7&nbsp; &nbsp; c:10
+        a:3 &nbsp; b:7 &nbsp; c:10: a:3 &nbsp; b:7 &nbsp; c:10
+        a:3 b:7 c:10: a:3 b:7 c:10
+        a:3<br>b:7  c:10: a:3<br>b:7  c:10
+        a=10, b=3, c=7: a=10, b=3, c=7
+        a=13, b =16, c=29: a=13, b =16, c=29
+        a=13, b=13, c=13: a=13, b=13, c=13
+        a=13, b=16, c=13: a=13, b=16, c=13
+        a=3, b=3, c=3: a=3, b=3, c=3
+        description here: description here
       U3L18 Controlling Memory and Program Flow:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
         Keep track of time: Keep track of time
@@ -3310,6 +3363,7 @@ en:
         a=13, b=13, c=13: a=13, b=13, c=13
         a=13, b=16, c=13: a=13, b=16, c=13
         a=3, b=3, c=3: a=3, b=3, c=3
+        foo foo: foo foo
       U3L20 Assessment1:
         Conditional Basics Question 1: Conditional Basics Question 1
         Which two of the following programming statements did you use when you wrote turtle drawing programs?: Which two of the following programming statements did you use when you wrote turtle drawing programs?
@@ -4159,6 +4213,7 @@ en:
       CSPPD2 share protocol: {}
       CSPPD3-u2 pick a challenge: {}
       CSPPD3-u2 submit forum link: {}
+      CSPPD3-u3 chunk 1 checkin: {}
       ECSPD Fence post Q1: {}
       ECSPD Handshake Q1: {}
       ECSPD Online U1D1-2 Assessment 1:
@@ -4621,6 +4676,7 @@ en:
       U3L22 Reflection:
         The Clicker Game with Permanent Data Storage: The Clicker Game with Permanent Data Storage
       U3L23 Free Response Getting Started:
+        'Getting Started: A look at Siri': 'Getting Started: A look at Siri'
         NLP Getting Started: NLP Getting Started
       U3L23 Free Response Wrap Up:
         Natural Language Processing: Natural Language Processing
