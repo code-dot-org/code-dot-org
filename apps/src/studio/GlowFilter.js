@@ -65,7 +65,7 @@ GlowFilter.prototype.createFilterSteps_ = function () {
   var feGaussianBlur = document.createElementNS(SVG_NS, 'feGaussianBlur');
   var feGaussianBlurResult = this.id_ + '-blur';
   feGaussianBlur.setAttribute('in', feCompositeSilhouetteResult);
-  feGaussianBlur.setAttribute('stdDeviation', 2);
+  feGaussianBlur.setAttribute('stdDeviation', 1);
   feGaussianBlur.setAttribute('result', feGaussianBlurResult);
 
   var feCompositeMaskedGlow = document.createElementNS(SVG_NS, 'feComposite');
@@ -88,7 +88,7 @@ GlowFilter.prototype.createFilterSteps_ = function () {
   var glowAnimation = document.createElementNS(SVG_NS, 'animate');
   glowAnimation.setAttribute('attributeName', 'k3');
   glowAnimation.setAttribute('values', [0, 0.2, 1, 0.2, 0].join(';'));
-  glowAnimation.setAttribute('dur', '4s');
+  glowAnimation.setAttribute('dur', '3s');
   glowAnimation.setAttribute('repeatCount', 'indefinite');
   feCompositeLayers.appendChild(glowAnimation);
 
