@@ -429,9 +429,10 @@ exports.generateDropletModeOptions = function (dropletConfig, options) {
       containers: { color: COLOR_PURPLE },
       value: { color: COLOR_PURPLE },
       command: { color: COLOR_GREEN },
-      assignments: { color: COLOR_PURPLE },
+      assignments: { color: COLOR_PURPLE }
       // errors: { },
-    }
+    },
+    zeroParamFunctions: options.zeroParamFunctions
   };
 
   $.extend(modeOptions.functions,
