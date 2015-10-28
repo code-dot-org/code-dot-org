@@ -1,12 +1,16 @@
 @dashboard_db_access
+@chrome
 
 Feature: Signing in and signing out
 
+# student signin from code.org
 Scenario:
   Given I am on "http://code.org/"
   And I set the language cookie
   And I create a student named "Bob"
   Given I am on "http://code.org/"
+  And I reload the page
+  Then I wait for 2 seconds
   Then I wait to see ".header_user"
   Then I click selector "#signin_button"
   And I wait to see ".new_user"
@@ -15,12 +19,19 @@ Scenario:
   And I wait to see ".header_user"
   Then check that I am on "http://studio.code.org/"
   Then element ".user_menu span:first" has text "Hi Bob"
+  Then I click selector ".user_menu span:first"
+  Then I click selector ".user_menu a:last"
+  Then I wait for 2 seconds
+  Then I wait to see ".header_user"
 
+# student signin from studio.code.org
 Scenario:
   Given I am on "http://studio.code.org/"
   And I set the language cookie
   And I create a student named "Alice"
-  Given I am on "http://code.org/"
+  Given I am on "http://studio.code.org/"
+  And I reload the page
+  Then I wait for 2 seconds
   Then I wait to see ".header_user"
   Then I click selector "#signin_button"
   And I wait to see ".new_user"
@@ -29,12 +40,19 @@ Scenario:
   And I wait to see ".header_user"
   Then check that I am on "http://studio.code.org/"
   Then element ".user_menu span:first" has text "Hi Alice"
+  Then I click selector ".user_menu span:first"
+  Then I click selector ".user_menu a:last"
+  Then I wait for 2 seconds
+  Then I wait to see ".header_user"
 
+# teacher sign in
 Scenario:
   Given I am on "http://studio.code.org/"
   And I set the language cookie
   And I create a teacher named "Casey"
   Given I am on "http://code.org/"
+  And I reload the page
+  Then I wait for 2 seconds
   Then I wait to see ".header_user"
   Then I click selector "#signin_button"
   And I wait to see ".new_user"
@@ -43,3 +61,7 @@ Scenario:
   And I wait to see ".header_user"
   Then check that I am on "http://code.org/teacher-dashboard#/"
   Then element ".user_menu span:first" has text "Hi Casey"
+  Then I click selector ".user_menu span:first"
+  Then I click selector ".user_menu a:last"
+  Then I wait for 2 seconds
+  Then I wait to see ".header_user"
