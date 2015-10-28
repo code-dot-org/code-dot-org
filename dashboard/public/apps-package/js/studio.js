@@ -54,6 +54,7 @@ var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
 var ThreeSliceAudio = require('./ThreeSliceAudio');
+var MusicController = require('./MusicController');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -794,11 +795,19 @@ function sortDrawOrder() {
   }
 
   // Now sort everything by y.
-
   itemsArray = _.sortBy(itemsArray, 'y');
 
-  for (i = 0; i < itemsArray.length; ++i) {
-    spriteLayer.appendChild(itemsArray[i].element);
+  // Carefully place the elements back in the DOM starting at the end of the
+  // spriteLayer and, one by one, insert them before the previous one
+  // (this prevents flashing in Safari vs. an in-order appendChild() loop)
+  var prevNode;
+  for (i = itemsArray.length - 1; i >= 0; i--) {
+    if (prevNode) {
+      spriteLayer.insertBefore(itemsArray[i].element, prevNode);
+    } else {
+      spriteLayer.appendChild(itemsArray[i].element);
+    }
+    prevNode = itemsArray[i].element;
   }
 }
 
@@ -1582,6 +1591,23 @@ Studio.init = function(config) {
     }
   });
 
+  /**
+   * Helper that handles music loading/playing/crossfading for the level.
+   * @type {MusicController}
+   */
+  Studio.musicController = new MusicController(
+      studioApp.cdoSounds,
+      skin.assetUrl,
+      utils.valueOr(level.music, skin.music));
+
+  /**
+   * Defines the set of possible movement sound effects for each playlab actor.
+   * Populated just-in-time by setSprite to avoid preparing audio for actors
+   * we never use.
+   * @type {Object}
+   */
+  Studio.movementAudioEffects = {};
+
   config.loadAudio = function() {
     var soundFileNames = [];
     // We want to load the basic list of effects available in the skin
@@ -1596,29 +1622,17 @@ Studio.init = function(config) {
       skin.soundFiles[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl(sound + '.ogg')];
       studioApp.loadAudio(skin.soundFiles[sound], sound);
     });
+
+    // Handle music separately - the music controller does its own preloading.
+    Studio.musicController.preload();
   };
 
-  /**
-   * Get a flattened list of all the sound file names (sans extensions)
-   * specified in the skin for avatar movement (these may be omitted from the
-   * skin.sounds list because we don't want them accessible to the player).
-   * @param {Object} level skin from which to extract sound effect names.
-   * @returns {string[]} which may contain duplicates but will not have any
-   *          undefined entries.
-   */
-  Studio.getMovementSoundFileNames = function (fromSkin) {
-    var avatarList = fromSkin.avatarList || [];
-    return avatarList.map(function (avatarName) {
-      var movementAudio = fromSkin[avatarName].movementAudio || [];
-      return movementAudio.reduce(function (memo, nextOption) {
-        return memo.concat([nextOption.begin, nextOption.loop, nextOption.end]);
-      }, []);
-    }).reduce(function (memo, next) {
-      return memo.concat(next);
-    }, []).filter(function (fileName) {
-      return fileName !== undefined;
-    });
+  // Play music when the instructions are shown
+  var onInstructionsShown = function () {
+    Studio.musicController.play();
+    document.removeEventListener('instructionsShown', onInstructionsShown);
   };
+  document.addEventListener('instructionsShown', onInstructionsShown);
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1708,6 +1722,28 @@ Studio.init = function(config) {
     preloadProjectileAndItemImages();
     preloadBackgroundImages();
   }
+};
+
+/**
+ * Get a flattened list of all the sound file names (sans extensions)
+ * specified in the skin for avatar movement (these may be omitted from the
+ * skin.sounds list because we don't want them accessible to the player).
+ * @param {Object} level skin from which to extract sound effect names.
+ * @returns {string[]} which may contain duplicates but will not have any
+ *          undefined entries.
+ */
+Studio.getMovementSoundFileNames = function (fromSkin) {
+  var avatarList = fromSkin.avatarList || [];
+  return avatarList.map(function (avatarName) {
+    var movementAudio = fromSkin[avatarName].movementAudio || [];
+    return movementAudio.reduce(function (memo, nextOption) {
+      return memo.concat([nextOption.begin, nextOption.loop, nextOption.end]);
+    }, []);
+  }).reduce(function (memo, next) {
+    return memo.concat(next);
+  }, []).filter(function (fileName) {
+    return fileName !== undefined;
+  });
 };
 
 var preloadImage = function(url) {
@@ -2037,6 +2073,10 @@ Studio.runButtonClick = function() {
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
+
+  // Stop the music the first time the run button is pressed (hoc2015)
+  Studio.musicController.fadeOut();
+
   studioApp.reset(false);
   studioApp.attempts++;
   Studio.startTime = new Date();
@@ -2415,11 +2455,13 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = studioApp.editor.getValue();
-    // Our ace worker also calls attachToSession, but it won't run on IE9:
-    var session = studioApp.editor.aceEditor.getSession();
-    annotationList.attachToSession(session, studioApp.editor);
-    annotationList.clearRuntimeAnnotations();
+    var codeWhenRun = studioApp.getCode();
+    if (!studioApp.hideSource) {
+      // Our ace worker also calls attachToSession, but it won't run on IE9:
+      var session = studioApp.editor.aceEditor.getSession();
+      annotationList.attachToSession(session, studioApp.editor);
+      annotationList.clearRuntimeAnnotations();
+    }
     Studio.JSInterpreter = new JSInterpreter({
       code: codeWhenRun,
       blocks: dropletConfig.blocks,
@@ -2486,7 +2528,7 @@ Studio.onPuzzleComplete = function() {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = studioApp.editor.getValue();
+    program = studioApp.getCode();
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
@@ -3991,16 +4033,18 @@ Studio.setSprite = function (opts) {
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
-  // Set up movement audio for the selected sprite (should be preloaded)
-  Studio.movementAudioOptions = Studio.movementAudioOptions || {};
-  if (!Studio.movementAudioOptions[spriteValue] && skin.avatarList) {
+  // Set up movement audio for the selected sprite (clips should be preloaded)
+  if (!Studio.movementAudioEffects[spriteValue] && skin.avatarList) {
     var spriteSkin = skin[spriteValue] || {};
     var audioConfig = spriteSkin.movementAudio || [];
-    Studio.movementAudioOptions[spriteValue] = audioConfig.map(function (audioOption) {
-      return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
-    });
+    Studio.movementAudioEffects[spriteValue] = [];
+    if (studioApp.cdoSounds) {
+      Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
+        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
+      });
+    }
   }
-  Studio.currentMovementAudioOptions = Studio.movementAudioOptions[spriteValue];
+  Studio.currentSpriteMovementAudioEffects = Studio.movementAudioEffects[spriteValue];
 
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
@@ -4009,8 +4053,8 @@ Studio.setSprite = function (opts) {
 
 Studio.movementAudioOn = function () {
   Studio.movementAudioOff();
-  Studio.currentMovementAudio = Studio.currentMovementAudioOptions[
-      Math.floor(Math.random() * Studio.currentMovementAudioOptions.length)];
+  Studio.currentMovementAudio = Studio.currentSpriteMovementAudioEffects[
+      Math.floor(Math.random() * Studio.currentSpriteMovementAudioEffects.length)];
   if (Studio.currentMovementAudio) {
     Studio.currentMovementAudio.on();
   }
@@ -4960,7 +5004,7 @@ var checkFinished = function () {
 };
 
 
-},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./ThreeSliceAudio":"/home/ubuntu/staging/apps/build/js/studio/ThreeSliceAudio.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
+},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./MusicController":"/home/ubuntu/staging/apps/build/js/studio/MusicController.js","./ThreeSliceAudio":"/home/ubuntu/staging/apps/build/js/studio/ThreeSliceAudio.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5856,6 +5900,8 @@ function loadHoc2015(skin, assetUrl) {
     'move1', 'move2', 'move3'
   ];
 
+  skin.music = [ 'song1' ];
+
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
   skin.playFinalGoalSound = true;
@@ -6037,6 +6083,8 @@ function loadHoc2015x(skin, assetUrl) {
     'start', 'win', 'failure', 'flag',
     'move1', 'move2', 'move3', 'move4'
   ];
+
+  skin.music = [ 'song1' ];
 
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
@@ -7933,6 +7981,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
 levels.js_hoc2015_move_right = {
   'editCode': true,
   'background': 'main',
+  'music': [ 'song1' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -8004,6 +8053,7 @@ levels.js_hoc2015_move_right = {
 levels.js_hoc2015_move_right_down = {
   'editCode': true,
   'background': 'main',
+  'music': [ 'song2' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -8052,6 +8102,7 @@ levels.js_hoc2015_move_diagonal = {
   'editCode': true,
   'textModeAtStart': true,
   'background': 'main',
+  'music': [ 'song3' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -8125,6 +8176,7 @@ levels.js_hoc2015_move_diagonal = {
 levels.js_hoc2015_move_backtrack = {
   'editCode': true,
   'background': 'main',
+  'music': [ 'song4' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -8173,6 +8225,7 @@ levels.js_hoc2015_move_backtrack = {
 levels.js_hoc2015_move_around = {
   'editCode': true,
   'background': 'main',
+  'music': [ 'song5' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -8223,6 +8276,7 @@ levels.js_hoc2015_move_around = {
 levels.js_hoc2015_move_finale = {
   'editCode': true,
   'background': 'main',
+  'music': [ 'song6' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -8275,6 +8329,7 @@ levels.js_hoc2015_move_finale = {
 levels.js_hoc2015_event_two_items = {
   'editCode': true,
   'background': 'snow',
+  'music': [ 'song7' ],
   'wallMap': 'blank',
   'softButtons': ['downButton', 'upButton'],
   'codeFunctions': {
@@ -8375,6 +8430,7 @@ levels.js_hoc2015_event_two_items = {
 levels.js_hoc2015_event_four_items = {
   'editCode': true,
   'background': 'snow',
+  'music': [ 'song8' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -8435,6 +8491,7 @@ levels.js_hoc2015_score =
   'avatarList': ['bot1'],
   'editCode': true,
   'background': 'snow',
+  'music': [ 'song9' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
@@ -8524,6 +8581,7 @@ levels.js_hoc2015_score =
 levels.js_hoc2015_win_lose = {
   'editCode': true,
   'background': 'forest',
+  'music': [ 'song10' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -8595,6 +8653,7 @@ levels.js_hoc2015_win_lose = {
 levels.js_hoc2015_add_characters = {
   'editCode': true,
   'background': 'forest',
+  'music': [ 'song11' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -8666,6 +8725,7 @@ levels.js_hoc2015_add_characters = {
 levels.js_hoc2015_chain_characters = {
   'editCode': true,
   'background': 'ship',
+  'music': [ 'song12' ],
   'wallMap': 'grid',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -8715,6 +8775,7 @@ levels.js_hoc2015_chain_characters = {
 levels.js_hoc2015_chain_characters_2 = {
   'editCode': true,
   'background': 'ship',
+  'music': [ 'song13' ],
   'wallMap': 'horizontal',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -8793,6 +8854,7 @@ levels.js_hoc2015_chain_characters_2 = {
 levels.js_hoc2015_change_setting = {
   'editCode': true,
   'background': 'ship',
+  'music': [ 'song14' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -8871,6 +8933,7 @@ levels.js_hoc2015_event_free = {
   'editCode': true,
   'freePlay': true,
   'background': 'forest',
+  'music': [ 'song15' ],
   'wallMap': 'blank',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -12318,7 +12381,200 @@ ThreeSliceAudio.prototype.whenSoundStopped_ = function (stoppedState) {
 };
 
 
-},{}],"/home/ubuntu/staging/apps/build/js/studio/Item.js":[function(require,module,exports){
+},{}],"/home/ubuntu/staging/apps/build/js/studio/MusicController.js":[function(require,module,exports){
+/** @file The maestro! Helper that knows which music tracks can be played, and
+ *        which one is playing now, and selects and plays them appropriately. */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var utils = require('../utils');
+
+var debugLogging = false;
+function debug(msg) {
+  if (debugLogging && console && console.info) {
+    console.info('MusicController: ' + msg);
+  }
+}
+
+/**
+ * @typedef {Object} MusicTrack
+ * @property {string} name
+ * @property {string[]} assetUrls
+ * @property {Sound} sound
+ * @property {boolean} isLoaded
+ */
+
+/**
+ * A helper class that handles loading, choosing, playing and stopping
+ * background music for Playlab.
+ *
+ * @param {AudioPlayer} audioPlayer - Reference to the Sounds object.
+ * @param {function} assetUrl - Function for generating paths to static assets
+ *        for the current skin.
+ * @param {string[]} [trackNames] - List of music asset names (sans
+ *        extensions). Can be omitted if no music should be played.
+ * @constructor
+ */
+var MusicController = function (audioPlayer, assetUrl, trackNames) {
+  /** @private {AudioPlayer} */
+  this.audioPlayer_ = audioPlayer;
+
+  /** @private {function} */
+  this.assetUrl_ = assetUrl;
+
+  /** @private {string[]} */
+  this.trackNames_ = trackNames || [];
+
+  /** @private {Object} maps trackName => MusicTrack */
+  this.tracks_ = buildTrackMap(this.trackNames_, assetUrl);
+
+  /** @private {string} */
+  this.nowPlayingName_ = null;
+
+  this.playOnLoad_ = null;
+
+  document.addEventListener('videoShown', function () {
+    this.fadeOut();
+  }.bind(this));
+
+  debug('constructed');
+};
+module.exports = MusicController;
+
+/**
+ * Build up an initial map of trackName -> MusicTrack object, without doing
+ * any asset loading.
+ * @param {string{}} trackNames
+ * @param {function} assetUrl
+ */
+function buildTrackMap(trackNames, assetUrl) {
+  var tracks = trackNames.map(function (name) {
+    return {
+      name: name,
+      assetUrls: [ assetUrl(name + '.mp3') ],
+      sound: null,
+      isLoaded: false
+    };
+  });
+  return tracks.reduce(function (memo, next) {
+    memo[next.name] = next;
+    return memo;
+  }, {});
+}
+
+/**
+ * Preload all music assets,
+ */
+MusicController.prototype.preload = function () {
+  if (!this.audioPlayer_) {
+    return;
+  }
+
+  this.trackNames_.forEach(function (name) {
+    this.tracks_[name].sound = this.audioPlayer_.registerByFilenamesAndID(
+        this.tracks_[name].assetUrls, name);
+    this.tracks_[name].sound.onLoad = function () {
+      debug('done loading ' + name);
+      this.tracks_[name].isLoaded = true;
+      if (this.playOnLoad_ === name) {
+        this.play(name);
+      }
+    }.bind(this);
+  }.bind(this));
+};
+
+/**
+ * Begins playing a particular piece of music immediately.
+ * @param {string} trackName
+ */
+MusicController.prototype.play = function (trackName) {
+  debug('play ' + trackName);
+  if (!this.audioPlayer_) {
+    return;
+  }
+
+  if (!trackName) {
+    trackName = this.trackNames_[Math.floor(Math.random(this.trackNames_.length))];
+  }
+
+  var track = this.tracks_[trackName];
+  if (!track) {
+    // Not found - throw exception?
+    return;
+  }
+
+  if (track.sound && track.isLoaded) {
+    debug('playing now');
+    var callback = this.whenMusicStopped_.bind(this, trackName);
+    track.sound.play({ onEnded: callback });
+    this.nowPlaying_ = trackName;
+  } else {
+    debug('not done loading, playing after load');
+    this.playOnLoad_ = trackName;
+  }
+};
+
+/**
+ * Stops playing whatever music is currently playing, immediately.
+ */
+MusicController.prototype.stop = function () {
+  if (!this.nowPlaying_) {
+    return;
+  }
+
+  var sound = this.audioPlayer_.get(this.nowPlaying_);
+  if (sound) {
+    sound.stop();
+  }
+};
+
+/**
+ * Fades music to nothing, then stops it.
+ * @param {number} [durationSeconds] in seconds.  Default 3.
+ */
+MusicController.prototype.fadeOut = function (durationSeconds) {
+  if (!this.nowPlaying_) {
+    return;
+  }
+
+  durationSeconds = utils.valueOr(durationSeconds, 3);
+
+  // Trigger a fade
+  var sound = this.audioPlayer_.get(this.nowPlaying_);
+  if (sound) {
+    sound.fadeToGain(0, durationSeconds);
+  }
+
+  // Stop the audio after the fade.
+  setTimeout(function () {
+    this.stop();
+  }.bind(this), 1000 * durationSeconds);
+};
+
+/**
+ * Callback for when music stops, to update internal state.
+ * @param {string} musicName that was playing.  Should be bound when music
+ *        is started.
+ * @private
+ */
+MusicController.prototype.whenMusicStopped_ = function (musicName) {
+  if (this.nowPlaying_ === musicName) {
+    this.nowPlaying_ = null;
+  }
+};
+
+
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/studio/Item.js":[function(require,module,exports){
 var Collidable = require('./collidable');
 var constants = require('./constants');
 var studioMsg = require('./locale');

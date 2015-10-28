@@ -19,7 +19,7 @@ class UserLevelsControllerTest < ActionController::TestCase
     assert_equal Activity::FREE_PLAY_RESULT, user_level.best_result
   end
 
-  test "student cannot unsubmit own user level" do
+  test "student can unsubmit own user level" do
     follower = create :follower
     student = follower.student_user
 
@@ -29,11 +29,11 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     @request.headers['Accept'] = 'application/json'
     post :update, id: user_level.id, user_level: {best_result: Activity::FREE_PLAY_RESULT}
-    assert_response :forbidden
+    assert_response :success
 
     user_level.reload
 
-    assert_equal Activity::SUBMITTED_RESULT, user_level.best_result
+    assert_equal Activity::FREE_PLAY_RESULT, user_level.best_result
   end
 
 
