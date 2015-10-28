@@ -85,22 +85,16 @@ class Ability
       end
     end
 
-    if user.id && user.admin?
+    if user.id
       can :read, Script
       can :read, ScriptLevel
-    elsif user.id # logged in, not admin
+    else
+      # not logged in
       can :read, Script do |script|
-        !script.admin_required?
+        !script.login_required?
       end
       can :read, ScriptLevel do |script_level|
-        !script_level.script.admin_required?
-      end
-    else # not logged in
-      can :read, Script do |script|
-        !script.admin_required? && !script.login_required?
-      end
-      can :read, ScriptLevel do |script_level|
-        !script_level.script.login_required? && !script_level.script.admin_required?
+        !script_level.script.login_required?
       end
     end
 

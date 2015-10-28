@@ -5,21 +5,7 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Controlling Memory - Other ways to store values
 
-## Tip: Stop staying "equal" and start saying "gets"
-
-Because the `=` sign in JavaScript is **not** a statement of equality like it is in math class, in order to avoid confusion many programmers don't say the word "equal" when they see a single `=` sign.  Instead they read a statement like this:
-
-`var score = 0;` as: "**The variable score *gets* the value 0**" or maybe just **"score *gets* 0"** to be brief.  
-
-As we're about to see there are other ways to store values in variables besides just hard-coding single numbers.  But in all cases even when it's more complicated **using the word "gets"** when you see a single `=` sign will help your mental model of what's happening.
-
-`var num1 = 10 + num2 * 7` --> "num1 *gets* 10 plus num2 times 7
-
-In the next several levels we're going to see how to:
-
 * Assign the result of an arithmetic expression
 * Assign the value returned by `randomNumber`
 * Assign a value given by the user through `promptNum`
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

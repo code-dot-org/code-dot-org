@@ -6014,24 +6014,25 @@ Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
     block.moveBy(cursor.x, cursor.y);
     cursor.y += block.getHeightWidth().height + Blockly.BlockSvg.SEP_SPACE_Y
   };
-  var block, blockX, blockY, currentPosition;
+  var block, xmlChild, blockX, blockY;
   var hiddenBlocks = [];
-  for(var i = 0, xmlChild;xmlChild = xml.childNodes[i];i++) {
+  for(var i = 0;i < xml.childNodes.length;i++) {
+    xmlChild = xml.childNodes[i];
     if(xmlChild.nodeName.toLowerCase() === "block") {
       block = Blockly.Xml.domToBlock(blockSpace, xmlChild);
-      if(block.isVisible()) {
-        positionBlock(block)
-      }else {
-        hiddenBlocks.push(block)
-      }
       blockX = parseInt(xmlChild.getAttribute("x"), 10);
       blockY = parseInt(xmlChild.getAttribute("y"), 10);
       if(!isNaN(blockX) || !isNaN(blockY)) {
-        currentPosition = block.getRelativeToSurfaceXY();
-        blockX = isNaN(blockX) ? currentPosition.x : blockX;
-        blockY = isNaN(blockY) ? currentPosition.y : blockY;
-        blockX = Blockly.RTL ? -blockX : blockX;
-        block.moveTo(blockX, blockY)
+        blockX = isNaN(blockX) ? paddingLeft : blockX;
+        blockY = isNaN(blockY) ? paddingTop : blockY;
+        blockX = Blockly.RTL ? width - blockX : blockX;
+        block.moveBy(blockX, blockY)
+      }else {
+        if(block.isVisible()) {
+          positionBlock(block)
+        }else {
+          hiddenBlocks.push(block)
+        }
       }
     }
   }

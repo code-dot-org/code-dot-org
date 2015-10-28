@@ -41,7 +41,7 @@ Une expérience Une Heure de Code enrichissante nécessite des ordinateurs conne
 **Montrez une vidéo inspirante :**
 
   * La vidéo originale du lancement de Code.org, avec Bill Gates, Mark Zuckerberg et la star du NBA Chris Bosh (Il y a une version [d'1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [de 5 minutes](https://www.youtube.com/watch?v=nKIu9yen5nc), et [de 9 minutes](https://www.youtube.com/watch?v=dU1xS07N-FA) )
-  * La [vidéo de lancement de Une Heure de Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou le <% if @country == 'uk' %> [la vidéo Une Heure de Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Une Heure de Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * La [vidéo de lancement de Une Heure de Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou le < % si @country == 'uk' %> [la vidéo Une Heure de Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) < % d'autre %> [Une Heure de Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Le président Obama fait appel à tous les étudiants pour apprendre l'informatique](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Trouvez plus de vidéos inspirantes [ici](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

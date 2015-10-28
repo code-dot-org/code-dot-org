@@ -27,7 +27,7 @@ nav: how_to_nav
   * Promote your [Hour of Code](<%= resolve_url('/promote') %>) event and encourage others to host.
   * Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
 
-## 1) Bu təlimat videosuna baxın <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Choose a tutorial:
 
 We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)

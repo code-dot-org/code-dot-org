@@ -94,7 +94,7 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**November 14th Location**<br/>
+**November 4th Location**<br/>
 <i><b>Group 1</i></b><br/>
 Microsoft<br/>
 Music Box 5411<br/>

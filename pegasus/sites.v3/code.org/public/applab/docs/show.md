@@ -47,7 +47,7 @@ ____________________________________________________
 
 <table>
 <tr>
-<td style="border-style:none; width:90%; padding:0px">
+<td>
 <pre>
 // Use buttons to hide and show the turtle.
 button("hide-turtle", "hide");
@@ -60,8 +60,8 @@ onEvent("show-turtle", "click", function() {
 });
 </pre>
 </td>
-<td style="border-style:none; width:10%; padding:0px">
-<img src='https://images.code.org/99cedd17901bdcc94aa9cbfbc340ba34-image-1445615881120.gif'>
+<td>
+<img src='https://images.code.org/484f7e8b701e3da1ae581adfd05371f9-image-1445110723991.gif' style='width: 150px;'> 
 </td>
 </tr>
 </table>

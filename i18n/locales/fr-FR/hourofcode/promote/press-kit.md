@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 <%= view :signup_button %>
 
-## Comment attirer les médias à votre évènement Une Heure de Code ?
+## Comment attirer les médias à votre évènement Une Heure de Code
 
 *Pour toutes demandes de la presse, veuillez contacter <press@code.org>*
 

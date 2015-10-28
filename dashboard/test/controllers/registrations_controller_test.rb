@@ -251,7 +251,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test 'edit shows alert for unconfirmed email for teachers' do
-    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
+    user = create :teacher, email: 'my_email@test.xx'
 
     sign_in user
     get :edit
@@ -264,7 +264,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
 
   test 'edit does not show alert for unconfirmed email for students' do
-    user = create :student, email: 'my_email@test.xx', confirmed_at: nil
+    user = create :student, email: 'my_email@test.xx'
 
     sign_in user
     get :edit

@@ -14,14 +14,6 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-<% if @country == 'ac' %>
-
-# Africa Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
-
-<% end %>
-
 <% if @country == 'au' %>
 
 # Australia Partners
@@ -35,14 +27,6 @@ title: <%= hoc_s(:title_partners) %>
 # Indonesia Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
-
-<% end %>
-
-<% if @country == 'in' %>
-
-# India Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
 <% end %>
 
@@ -70,7 +54,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-# Κύριοι Συνεργάτες και Εταιρικοί Υποστηρικτές
+# Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
@@ -82,25 +66,25 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-# Διεθνής Εταίροι
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Συνεργάτες Σεναρίων
+# Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Συνεργάτες Υλικοτεχνικής Υποδομής και Εργαλείων
+# Infrastructure partners and tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 ---
 
-# Άλλοι Συνεργάτες
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

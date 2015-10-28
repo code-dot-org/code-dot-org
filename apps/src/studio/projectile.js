@@ -2,8 +2,11 @@ var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
 var utils = require('../utils');
-var StudioAnimation = require('./StudioAnimation');
-var StudioSpriteSheet = require('./StudioSpriteSheet');
+
+var SVG_NS = "http://www.w3.org/2000/svg";
+
+// uniqueId that increments by 1 each time an element is created
+var uniqueId = 0;
 
 // mapping of how much we should rotate based on direction
 var DIR_TO_ROTATION = {};
@@ -104,45 +107,85 @@ var Projectile = function (options) {
   this.width = options.width || 50;
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
 
+  this.currentFrame_ = 0;
+  this.setAnimationRate(utils.valueOr(options.animationRate,
+      constants.DEFAULT_PROJECTILE_FRAME_RATE));
+
   // origin is at an offset from sprite location
   this.x = options.spriteX + OFFSET_CENTER[options.dir].x +
             (options.spriteWidth * OFFSET_FROM_SPRITE[options.dir].x);
   this.y = options.spriteY + OFFSET_CENTER[options.dir].y +
             (options.spriteHeight * OFFSET_FROM_SPRITE[options.dir].y);
-
-  /** @private {StudioSpriteSheet} */
-  this.spriteSheet_ = new StudioSpriteSheet($.extend({}, options, {
-    width: options.spriteWidth,
-    height: options.spriteHeight,
-    horizontalAnimation: true,
-    totalAnimations: 1
-  }));
-
-  /** @private {StudioAnimation} */
-  this.animation_ = new StudioAnimation($.extend({}, options, {
-    spriteSheet: this.spriteSheet_
-  }));
 };
 Projectile.inherits(Collidable);
 module.exports = Projectile;
 
-/** @returns {SVGImageElement} */
-Projectile.prototype.getElement = function () {
-  return this.animation_.getElement();
+/**
+ * Set the animation rate for this projectile's sprite.
+ * @param {number} framesPerSecond
+ */
+Projectile.prototype.setAnimationRate = function (framesPerSecond) {
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+  }
+  this.animator_ = window.setInterval(function () {
+    if (this.loop || this.currentFrame_ + 1 < this.frames) {
+      this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
+    }
+  }.bind(this), Math.round(1000 / framesPerSecond));
+};
+
+/**
+ * Test only function so that we can start our id count over.
+ */
+Projectile.__resetIds = function () {
+  uniqueId = 0;
 };
 
 /**
  * Create an image element with a clip path
  */
 Projectile.prototype.createElement = function (parentElement) {
-  this.animation_.createElement(parentElement);
+  // create our clipping path/rect
+  this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
+  var clipId = 'projectile_clippath_' + (uniqueId++);
+  this.clipPath.setAttribute('id', clipId);
+  var rect = document.createElementNS(SVG_NS, 'rect');
+  rect.setAttribute('width', this.width);
+  rect.setAttribute('height', this.height);
+  this.clipPath.appendChild(rect);
+
+  parentElement.appendChild(this.clipPath);
+
+  this.element = document.createElementNS(SVG_NS, 'image');
+  this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+    this.image);
+  this.element.setAttribute('height', this.height);
+  this.element.setAttribute('width', this.width * this.frames);
+  parentElement.appendChild(this.element);
+
+  this.element.setAttribute('clip-path', 'url(#' + clipId + ')');
 };
 
 /**
  * Remove our element/clipPath/animator
  */
 Projectile.prototype.removeElement = function () {
-  this.animation_.removeElement();
+  if (this.element) {
+    this.element.parentNode.removeChild(this.element);
+    this.element = null;
+  }
+
+  // remove clip path element
+  if (this.clipPath) {
+    this.clipPath.parentNode.removeChild(this.clipPath);
+    this.clipPath = null;
+  }
+
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+    this.animator_ = null;
+  }
 };
 
 /**
@@ -154,13 +197,15 @@ Projectile.prototype.display = function () {
     y: this.y - this.height / 2
   };
 
-  this.animation_.redrawCenteredAt({
-    x: this.x,
-    y: this.y
-  });
+  this.element.setAttribute('x', topLeft.x - this.width * this.currentFrame_);
+  this.element.setAttribute('y', topLeft.y);
 
-  if (this.spriteSheet_.framesPerAnimation > 1) {
-    this.getElement().setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
+  var clipRect = this.clipPath.childNodes[0];
+  clipRect.setAttribute('x', topLeft.x);
+  clipRect.setAttribute('y', topLeft.y);
+
+  if (this.frames > 1) {
+    this.element.setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
      ', ' + this.x + ', ' + this.y + ')');
   }
 };
@@ -185,5 +230,7 @@ Projectile.prototype.moveToNextPosition = function () {
  * @override
  */
 Projectile.prototype.setOpacity = function (newOpacity) {
-  this.animation_.setOpacity(newOpacity);
+  if (this.element) {
+    this.element.setAttribute('opacity', newOpacity);
+  }
 };

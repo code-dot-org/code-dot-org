@@ -1,4 +1,4 @@
-partner_sites = CDO.partners.map{|x|x + '.code.org'}
+partner_sites = %w(al ar br eu italia ro sg uk za).map{|x|x + '.code.org'}
 
 get '/:short_code' do |short_code|
   only_for ['code.org', 'csedweek.org', 'hourofcode.com', partner_sites].flatten

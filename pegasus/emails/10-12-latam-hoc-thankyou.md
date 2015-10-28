@@ -3,26 +3,14 @@ from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
 subject: "Your thank you gift"
 ---
 
-Thank you for hosting an Hour of Code! Over 3,500 organizers participated in Latin America, introducing thousands of students to skills that can change the rest of their lives.
-<br />
-<br />
-**Your Gift**
+Thank you for hosting an Hour of Code. Nearly 25 million students tried an Hour of Code last week ― coding a few lines (or a few dozen) that are the beginning of new skills and new open doors.
 
-Of course, we promised 10 GB of Dropbox space as a thank you. **Note:** if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* Dropbox account.
+**Your Gift:**
+Of course, we promised Dropbox space or Skype credit as a thank you. After your Hour of Code event, we also want to know how it went. If you did an unplugged or shared-screen activity, we want to count your participation. **Complete this survey by Jan 31 to claim your gift.**
 
-**Your Dropbox Redemption Code:**
+At the end of your survey, please choose between 10 GB of Dropbox space or $10 of Skype credit and your unique code will be emailed to you. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
-**Beyond an Hour of Code**
-
-If you enjoyed your Hour of Code, participate in the global Hour of Code celebration taking place December 7-13th! Exciting new tutorials are coming soon.
-
-Or, keep going with full introductory computer science courses on [Code Studio](https://studio.code.org/). 
-
-Thank you for being part of this movement,
-
-Hadi Partovi
-
-Founder, Code.org
+Hadi Partovi, Code.org
 
 <p>
 <hr/>

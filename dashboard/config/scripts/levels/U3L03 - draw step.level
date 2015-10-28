@@ -152,11 +152,10 @@
     "beginner_mode": "false",
     "instructions": "Write the drawStep function. (Click to see full instructions)",
     "project_template_level_name": "U3L03 - drawDiamond Template",
-    "droplet_tooltips_disabled": "true",
+    "droplet_tooltips_disabled": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "true",
-    "encrypted_examples": "sv+cT4Ho4R7UZgY0nia0mqa1psOtCcWcFh7btyiDRAXgXaGmWPczWPhI69Zz\n2A30\n"
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

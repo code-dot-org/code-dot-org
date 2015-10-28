@@ -190,8 +190,6 @@ en:
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
       ECS Phase 3 Overview: {}
-      ECS Phase 3 Unit 3 Overview: {}
-      ECS Phase 3 Unit3 Welcome: {}
       ECS Phase 3 Welcome: {}
       ECSPD 1 page template: {}
       ECSPD Challenge Intro: {}
@@ -292,7 +290,6 @@ en:
       ECSPD U2 Day 10-12 Forum Q: {}
       ECSPD U2 Day 13-14 Forum Q: {}
       ECSPD U2L1516 Sorting Video: {}
-      ECSPD U3 Challenges: {}
       ECSPD U3 D 1-2 Intro: {}
       ECSPD U3 D 11-13 Intro: {}
       ECSPD U3 D 14 Intro: {}
@@ -344,17 +341,7 @@ en:
       ECSPD Unit 2 Stage7: {}
       ECSPD Unit 2 Stage8: {}
       ECSPD Unit 2 Stage9: {}
-      ECSPD Unit 3 Challenge Preview: {}
-      ECSPD Unit 3 Expertise: {}
-      ECSPD Unit 3 Intro: {}
-      ECSPD Unit 3 Lesson Overview: {}
-      ECSPD Unit 3 Outline: {}
-      ECSPD Unit 3 Pick2: {}
-      ECSPD Unit 3 Stage 6 Overview: {}
-      ECSPD Unit 3 Stage4Review: {}
-      ECSPD Unit 3 Strategy Review: {}
       ECSPD Unit2 Connections: {}
-      ECSPD Unit3 Connections: {}
       ECSPD What Is Problem Solving: {}
       ECSPD What is the Challenge: {}
       ECSPD Why Binary - The Internet Video: {}
@@ -375,7 +362,6 @@ en:
         ECSPD impact vid1: ECSPD impact vid1
       ECSPD impact vid2:
         ECSPD impact vid2: ECSPD impact vid2
-      ECSPD jsfiddle: {}
       ECSPD meet facilitator:
         Meet your Facilitator!: Meet your Facilitator!
       ECSPD online U1D3-4 Forum:
@@ -1263,156 +1249,156 @@ en:
         Scratch Jr: Scratch Jr
     match:
       2-3 Big Event Match 1:
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
+        /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_a4.png: /script_assets/k_1_images/unplugged_images/big_event_1_a4.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
         Match the button combination to the dance moves.: Match the button combination to the dance moves.
         Matching: Matching
       2-3 Binary Match 1:
-        "/script_assets/2-3_images/unplugged/binary_1_a1.png": "/script_assets/2-3_images/unplugged/binary_1_a1.png"
-        "/script_assets/2-3_images/unplugged/binary_1_a2.png": "/script_assets/2-3_images/unplugged/binary_1_a2.png"
-        "/script_assets/2-3_images/unplugged/binary_1_a3.png": "/script_assets/2-3_images/unplugged/binary_1_a3.png"
-        "/script_assets/2-3_images/unplugged/binary_1_a4.png": "/script_assets/2-3_images/unplugged/binary_1_a4.png"
-        "/script_assets/2-3_images/unplugged/binary_1_q.png, 250": "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
-        "<strong>N</strong>": "<strong>N</strong>"
-        "<strong>O</strong>": "<strong>O</strong>"
-        "<strong>P</strong>": "<strong>P</strong>"
-        "<strong>Q</strong>": "<strong>Q</strong>"
+        /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
+        /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
+        /script_assets/2-3_images/unplugged/binary_1_a3.png: /script_assets/2-3_images/unplugged/binary_1_a3.png
+        /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
+        /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
+        <strong>N</strong>: <strong>N</strong>
+        <strong>O</strong>: <strong>O</strong>
+        <strong>P</strong>: <strong>P</strong>
+        <strong>Q</strong>: <strong>Q</strong>
         Matching: Matching
         Use the key to match each code to its letter: Use the key to match each code to its letter
       2-3 Graph Paper Match 1:
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
+        /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
+        /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
+        /script_assets/2-3_images/unplugged/graph_paper_2_a3.png: /script_assets/2-3_images/unplugged/graph_paper_2_a3.png
+        /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
+        /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
+        /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
         Match the grid to the program.: Match the grid to the program.
         Matching: Matching
       2-3 Maze Match 2:
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
+        /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
+        /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
+        /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png
+        /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
+        /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
+        /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png
+        /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Drag the blocks to match.
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
       2-3 Relay Programming Match 1:
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
+        /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
+        /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
+        /script_assets/2-3_images/unplugged/graph_paper_2_a3.png: /script_assets/2-3_images/unplugged/graph_paper_2_a3.png
+        /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
+        /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
+        /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
         Match the grid to the program: Match the grid to the program
         Matching: Matching
       2-3 artist loops match 1:
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
+        /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
+        /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png
+        /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png
+        /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png
+        /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png
+        /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
+        /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
+        /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: Artist Loops Matching One
         Match the loop to the shape: Match the loop to the shape
       2-3 artist match 1:
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
+        /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
+        /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
+        /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png
+        /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
+        /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png
+        /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
+        /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
+        /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png
         Artist Matching: Artist Matching
         Match the shape with the blocks that complete it.: Match the shape with the blocks that complete it.
       2-3 bounce match 1:
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png"
+        /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png
+        /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png
+        /script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png
+        /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png
+        /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
+        /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
+        /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png
+        /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
+        /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
+        /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
         Bounce Matching: Bounce Matching
         Match the events with the actions: Match the events with the actions
         Matching: Matching
       2-3 flappy match 1:
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png"
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png"
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png"
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png"
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png"
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png"
+        /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png
+        /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
+        /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
+        /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
+        /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
+        /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
         Flappy Matching One: Flappy Matching One
         Match the events with the actions: Match the events with the actions
         Matching: Matching
       2-3 maze match 1:
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
+        /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png
+        /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
+        /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
+        /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
+        /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
+        /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match One: Maze Match One
       4-5 Algorithms Match 1:
-        "<h4>1)</h4>": "<h4>1)</h4>"
-        "<h4>2)</h4>": "<h4>2)</h4>"
-        "<h4>3)</h4>": "<h4>3)</h4>"
-        "<h4>4)</h4>": "<h4>4)</h4>"
-        "<h4>Add Player 1 roll to total score</h4>": "<h4>Add Player 1 roll to total score</h4>"
-        "<h4>Compare player scores to see who wins</h4>": "<h4>Compare player scores to see who wins</h4>"
-        "<h4>Player 1 rolls die</h4>": "<h4>Player 1 rolls die</h4>"
-        "<h4>Set Player 1 score to 0</h4>": "<h4>Set Player 1 score to 0</h4>"
+        <h4>1)</h4>: <h4>1)</h4>
+        <h4>2)</h4>: <h4>2)</h4>
+        <h4>3)</h4>: <h4>3)</h4>
+        <h4>4)</h4>: <h4>4)</h4>
+        <h4>Add Player 1 roll to total score</h4>: <h4>Add Player 1 roll to total score</h4>
+        <h4>Compare player scores to see who wins</h4>: <h4>Compare player scores to see who wins</h4>
+        <h4>Player 1 rolls die</h4>: <h4>Player 1 rolls die</h4>
+        <h4>Set Player 1 score to 0</h4>: <h4>Set Player 1 score to 0</h4>
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match the steps in the Dice Race game to the order that they should appear in the algorithm.
         Matching: Matching
       4-5 Computational Thinking Match 1:
-        "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
-        "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
-        "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
-        "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>"
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>"
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
+        '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>': '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>': '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>': '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
+        '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.
         Matching: Matching
       4-5 Suncatchers Match 1:
-        "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
-        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
-        "<h4>STACK</h4>": "<h4>STACK</h4>"
-        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
-        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
+        <h4>RAMP</h4>: <h4>RAMP</h4>
+        <h4>STACK</h4>: <h4>STACK</h4>
+        <h4>STAMP</h4>: <h4>STAMP</h4>
+        <h4>STAR</h4>: <h4>STAR</h4>
         Match each program to the word it makes, using the provided group of skills.: Match each program to the word it makes, using the provided group of skills.
         Matching: Matching
       4-5 maze match 1:
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
+        /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
+        /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
+        /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
+        /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
+        /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
+        /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png
+        /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Drag the blocks to match.
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
@@ -1456,11 +1442,11 @@ en:
         uses light, is expensive: uses light, is expensive
         uses radio waves, cannot travel very far: uses radio waves, cannot travel very far
       Coordinate Matching:
-        "(250, 400)": "(250, 400)"
-        "(320, 240)": "(320, 240)"
-        "(480, 100)": "(480, 100)"
-        "(500, 240)": "(500, 240)"
-        "/script_assets/msm/Unit 1/exercise_3_ninjacat.png": "/script_assets/msm/Unit 1/exercise_3_ninjacat.png"
+        (250, 400): (250, 400)
+        (320, 240): (320, 240)
+        (480, 100): (480, 100)
+        (500, 240): (500, 240)
+        /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
         Cloud: Cloud
         Coordinates of Ninjacat: Coordinates of Ninjacat
         Dog: Dog
@@ -1552,123 +1538,123 @@ en:
         use computing to manage and interpret data: use computing to manage and interpret data
         website development and design: website development and design
       K-1 Artist 2 Match 1:
-        "/script_assets/k_1_images/artist_images/square_above_ball.png": "/script_assets/k_1_images/artist_images/square_above_ball.png"
-        "/script_assets/k_1_images/artist_images/square_below_ball.png": "/script_assets/k_1_images/artist_images/square_below_ball.png"
-        "/script_assets/k_1_images/artist_images/square_next_ball.png": "/script_assets/k_1_images/artist_images/square_next_ball.png"
-        "<br/><br/>above": "<br/><br/>above"
-        "<br/><br/>below": "<br/><br/>below"
-        "<br/><br/>next to": "<br/><br/>next to"
+        /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
+        /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
+        /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
+        <br/><br/>above: <br/><br/>above
+        <br/><br/>below: <br/><br/>below
+        <br/><br/>next to: <br/><br/>next to
         Is the square next to, above, or below the ball?: Is the square next to, above, or below the ball?
         Matching: Matching
       K-1 Artist 2 Match 2:
-        "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
-        "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
-        "/script_assets/k_1_images/artist_images/large_triangle.png": "/script_assets/k_1_images/artist_images/large_triangle.png"
-        "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
-        "/script_assets/k_1_images/artist_images/medium_rectangle.png": "/script_assets/k_1_images/artist_images/medium_rectangle.png"
-        "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
-        "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
-        "/script_assets/k_1_images/artist_images/small_triangle.png": "/script_assets/k_1_images/artist_images/small_triangle.png"
+        /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
+        /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
+        /script_assets/k_1_images/artist_images/large_triangle.png: /script_assets/k_1_images/artist_images/large_triangle.png
+        /script_assets/k_1_images/artist_images/medium_circle.png: /script_assets/k_1_images/artist_images/medium_circle.png
+        /script_assets/k_1_images/artist_images/medium_rectangle.png: /script_assets/k_1_images/artist_images/medium_rectangle.png
+        /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
+        /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
+        /script_assets/k_1_images/artist_images/small_triangle.png: /script_assets/k_1_images/artist_images/small_triangle.png
         Match the shapes based on type.: Match the shapes based on type.
         Matching: Matching
       K-1 Artist 2 Match 3:
-        "/script_assets/k_1_images/artist_images/large_circle.png": "/script_assets/k_1_images/artist_images/large_circle.png"
-        "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
-        "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
-        "/script_assets/k_1_images/artist_images/large_triangle2.png": "/script_assets/k_1_images/artist_images/large_triangle2.png"
-        "/script_assets/k_1_images/artist_images/medium_triangle.png": "/script_assets/k_1_images/artist_images/medium_triangle.png"
-        "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
-        "/script_assets/k_1_images/artist_images/small_rectangle2.png": "/script_assets/k_1_images/artist_images/small_rectangle2.png"
-        "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
+        /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
+        /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
+        /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
+        /script_assets/k_1_images/artist_images/large_triangle2.png: /script_assets/k_1_images/artist_images/large_triangle2.png
+        /script_assets/k_1_images/artist_images/medium_triangle.png: /script_assets/k_1_images/artist_images/medium_triangle.png
+        /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
+        /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
+        /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         Match the shapes based on type.: Match the shapes based on type.
         Matching: Matching
       K-1 Artist Loops Match 1:
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png"
+        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png
+        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png
+        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png
+        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
+        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
+        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
         Match the code to the stairs it draws.: Match the code to the stairs it draws.
         Matching: Matching
       K-1 Bee Loops Match 1:
-        "/script_assets/k_1_images/bee_images/4_gnectar.png": "/script_assets/k_1_images/bee_images/4_gnectar.png"
-        "/script_assets/k_1_images/bee_images/5_ghoney.png": "/script_assets/k_1_images/bee_images/5_ghoney.png"
-        "/script_assets/k_1_images/bee_images/r4_gnectar.png": "/script_assets/k_1_images/bee_images/r4_gnectar.png"
-        "/script_assets/k_1_images/bee_images/r5_ghoney.png": "/script_assets/k_1_images/bee_images/r5_ghoney.png"
-        "/script_assets/k_1_images/move_blocks/EEEEE.png": "/script_assets/k_1_images/move_blocks/EEEEE.png"
-        "/script_assets/k_1_images/move_blocks/NNN.png": "/script_assets/k_1_images/move_blocks/NNN.png"
-        "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
-        "/script_assets/k_1_images/move_blocks/r5_E.png": "/script_assets/k_1_images/move_blocks/r5_E.png"
+        /script_assets/k_1_images/bee_images/4_gnectar.png: /script_assets/k_1_images/bee_images/4_gnectar.png
+        /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
+        /script_assets/k_1_images/bee_images/r4_gnectar.png: /script_assets/k_1_images/bee_images/r4_gnectar.png
+        /script_assets/k_1_images/bee_images/r5_ghoney.png: /script_assets/k_1_images/bee_images/r5_ghoney.png
+        /script_assets/k_1_images/move_blocks/EEEEE.png: /script_assets/k_1_images/move_blocks/EEEEE.png
+        /script_assets/k_1_images/move_blocks/NNN.png: /script_assets/k_1_images/move_blocks/NNN.png
+        /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
+        /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
         Match the blocks: Match the blocks
         Matching: Matching
       K-1 Big Event Match 1:
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
+        /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         Match the button combination to the dance moves.: Match the button combination to the dance moves.
         Matching: Matching
       K-1 Flappy Match 1:
-        "/script_assets/k_1_images/flappy_images/click.png": "/script_assets/k_1_images/flappy_images/click.png"
-        "/script_assets/k_1_images/flappy_images/end.png": "/script_assets/k_1_images/flappy_images/end.png"
-        "/script_assets/k_1_images/flappy_images/flap.png": "/script_assets/k_1_images/flappy_images/flap.png"
-        "/script_assets/k_1_images/flappy_images/hit_ground.png": "/script_assets/k_1_images/flappy_images/hit_ground.png"
-        "/script_assets/k_1_images/flappy_images/pass_obstacle.png": "/script_assets/k_1_images/flappy_images/pass_obstacle.png"
-        "/script_assets/k_1_images/flappy_images/score.png": "/script_assets/k_1_images/flappy_images/score.png"
+        /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
+        /script_assets/k_1_images/flappy_images/end.png: /script_assets/k_1_images/flappy_images/end.png
+        /script_assets/k_1_images/flappy_images/flap.png: /script_assets/k_1_images/flappy_images/flap.png
+        /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
+        /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
+        /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
         Match the blocks: Match the blocks
         Matching: Matching
       K-1 Happy Maps Match 1:
-        "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png"
-        "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png"
-        "/script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png"
-        "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
-        "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
-        "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
+        /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
+        /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
+        /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png
+        /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
+        /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
+        /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
         Match the Map to the arrow that gets the Flurb to the treasure: Match the Map to the arrow that gets the Flurb to the treasure
         Matching: Matching
       K-1 Maze Match 1:
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
-        "/script_assets/k_1_images/maze_images/maze_ENE.png": "/script_assets/k_1_images/maze_images/maze_ENE.png"
-        "/script_assets/k_1_images/maze_images/maze_WSS.png": "/script_assets/k_1_images/maze_images/maze_WSS.png"
-        "/script_assets/k_1_images/maze_images/maze_WW.png": "/script_assets/k_1_images/maze_images/maze_WW.png"
-        "/script_assets/k_1_images/move_blocks/EN.png": "/script_assets/k_1_images/move_blocks/EN.png"
-        "/script_assets/k_1_images/move_blocks/ENE.png": "/script_assets/k_1_images/move_blocks/ENE.png"
-        "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
-        "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
+        /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
+        /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
+        /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png
+        /script_assets/k_1_images/maze_images/maze_WSS.png: /script_assets/k_1_images/maze_images/maze_WSS.png
+        /script_assets/k_1_images/maze_images/maze_WW.png: /script_assets/k_1_images/maze_images/maze_WW.png
+        /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
+        /script_assets/k_1_images/move_blocks/ENE.png: /script_assets/k_1_images/move_blocks/ENE.png
+        /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
+        /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         Drag the blocks to match.: Drag the blocks to match.
         Instructions: Instructions
         Match the puzzles and blocks: Match the puzzles and blocks
         Matching: Matching
       K-1 Move It Match 1:
-        "/script_assets/k_1_images/unplugged_images/leftup.png": "/script_assets/k_1_images/unplugged_images/leftup.png"
-        "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png"
-        "/script_assets/k_1_images/unplugged_images/move_it_2_q2.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q2.png"
-        "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png"
-        "/script_assets/k_1_images/unplugged_images/rightdown.png": "/script_assets/k_1_images/unplugged_images/rightdown.png"
-        "/script_assets/k_1_images/unplugged_images/rightrightup.png": "/script_assets/k_1_images/unplugged_images/rightrightup.png"
+        /script_assets/k_1_images/unplugged_images/leftup.png: /script_assets/k_1_images/unplugged_images/leftup.png
+        /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
+        /script_assets/k_1_images/unplugged_images/move_it_2_q2.png: /script_assets/k_1_images/unplugged_images/move_it_2_q2.png
+        /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
+        /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
+        /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         Match the Map to the algorithm that gets the Flurb to the flowers.: Match the Map to the algorithm that gets the Flurb to the flowers.
         Matching: Matching
       Match circles to code:
-        "(+ (- (/ 4 7) 9) 3)": "(+ (- (/ 4 7) 9) 3)"
-        "(+ (- 9 3) (* 4 7))": "(+ (- 9 3) (* 4 7))"
-        "(+ 3 (/ 4 7))": "(+ 3 (/ 4 7))"
-        "(/ (+ 4 7) 3)": "(/ (+ 4 7) 3)"
-        "/script_assets/msm/Unit 1/Exercise_5_question_1.png": "/script_assets/msm/Unit 1/Exercise_5_question_1.png"
-        "/script_assets/msm/Unit 1/Exercise_5_question_2.png": "/script_assets/msm/Unit 1/Exercise_5_question_2.png"
-        "/script_assets/msm/Unit 1/Exercise_5_question_3.png": "/script_assets/msm/Unit 1/Exercise_5_question_3.png"
-        "/script_assets/msm/Unit 1/Exercise_5_question_4.png": "/script_assets/msm/Unit 1/Exercise_5_question_4.png"
+        (+ (- (/ 4 7) 9) 3): (+ (- (/ 4 7) 9) 3)
+        (+ (- 9 3) (* 4 7)): (+ (- 9 3) (* 4 7))
+        (+ 3 (/ 4 7)): (+ 3 (/ 4 7))
+        (/ (+ 4 7) 3): (/ (+ 4 7) 3)
+        /script_assets/msm/Unit 1/Exercise_5_question_1.png: /script_assets/msm/Unit 1/Exercise_5_question_1.png
+        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit 1/Exercise_5_question_2.png
+        /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
+        /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
         Converting Circles to Code: Converting Circles to Code
         Match each circle of evaluation with the correct code!: Match each circle of evaluation with the correct code!
       Match example to contract:
         (big-string? "gigantic" 5): (big-string? "gigantic" 5)
         (bigger-string "big" "little"): (bigger-string "big" "little")
         (find-price "cheese"): (find-price "cheese")
-        "(find-price 4)": "(find-price 4)"
+        (find-price 4): (find-price 4)
         (small-star "blue"): (small-star "blue")
         (small-star "solid"): (small-star "solid")
         Contracts of Functions: Contracts of Functions
@@ -1679,21 +1665,21 @@ en:
         'find-price: string -> number': 'find-price: string -> number'
         'small-star: string -> image': 'small-star: string -> image'
       Match math to circles:
-        "(2 + 3 * 5) / 2": "(2 + 3 * 5) / 2"
-        "(2 + 3) * 5 / 2": "(2 + 3) * 5 / 2"
-        "/script_assets/msm/Unit 1/Exercise_4_question_1.png": "/script_assets/msm/Unit 1/Exercise_4_question_1.png"
-        "/script_assets/msm/Unit 1/Exercise_4_question_2.png": "/script_assets/msm/Unit 1/Exercise_4_question_2.png"
-        "/script_assets/msm/Unit 1/Exercise_4_question_3.png": "/script_assets/msm/Unit 1/Exercise_4_question_3.png"
-        "/script_assets/msm/Unit 1/Exercise_4_question_4.png": "/script_assets/msm/Unit 1/Exercise_4_question_4.png"
+        (2 + 3 * 5) / 2: (2 + 3 * 5) / 2
+        (2 + 3) * 5 / 2: (2 + 3) * 5 / 2
+        /script_assets/msm/Unit 1/Exercise_4_question_1.png: /script_assets/msm/Unit 1/Exercise_4_question_1.png
+        /script_assets/msm/Unit 1/Exercise_4_question_2.png: /script_assets/msm/Unit 1/Exercise_4_question_2.png
+        /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit 1/Exercise_4_question_3.png
+        /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit 1/Exercise_4_question_4.png
         2 + 3 * (5 / 2): 2 + 3 * (5 / 2)
         Converting Math to Circles of Evaluation: Converting Math to Circles of Evaluation
         Match each mathematical expression with the correct circle of evaluation!: Match each mathematical expression with the correct circle of evaluation!
       Match math to code:
-        "(* (+ 15 3) (- 72 19))": "(* (+ 15 3) (- 72 19))"
-        "(+ (- (* 3 15) 72) 19)": "(+ (- (* 3 15) 72) 19)"
-        "(+ (3 x 15) (- 72 19))": "(+ (3 x 15) (- 72 19))"
-        "(- (+ 72 3) (* 19 15))": "(- (+ 72 3) (* 19 15))"
-        "(15 + 3) x (72 - 19)": "(15 + 3) x (72 - 19)"
+        (* (+ 15 3) (- 72 19)): (* (+ 15 3) (- 72 19))
+        (+ (- (* 3 15) 72) 19): (+ (- (* 3 15) 72) 19)
+        (+ (3 x 15) (- 72 19)): (+ (3 x 15) (- 72 19))
+        (- (+ 72 3) (* 19 15)): (- (+ 72 3) (* 19 15))
+        (15 + 3) x (72 - 19): (15 + 3) x (72 - 19)
         3 x 15 + (- 72 19): 3 x 15 + (- 72 19)
         3 x 15 - 72 + 19: 3 x 15 - 72 + 19
         72 + 3 - 19 x 15: 72 + 3 - 19 x 15
@@ -1853,10 +1839,10 @@ en:
         TEMVVU WIITAQIQTHRLY: TEMVVU WIITAQIQTHRLY
         Vigenere Cipher: Vigenere Cipher
       U2L17 - Vocabulary matching:
-        " <br>Brute force": " <br>Brute force"
-        "<br>Computationally hard": "<br>Computationally hard"
-        "<br>Heuristic": "<br>Heuristic"
-        "<br>One Way Function": "<br>One Way Function"
+        ' <br>Brute force': ' <br>Brute force'
+        <br>Computationally hard: <br>Computationally hard
+        <br>Heuristic: <br>Heuristic
+        <br>One Way Function: <br>One Way Function
         A problem that requires an unreasonable amount of time to solve, even for many computers: A problem that requires an unreasonable amount of time to solve, even for many computers
         An algorithm that is easy to run but results in output that is hard or impossible to reverse: An algorithm that is easy to run but results in output that is hard or impossible to reverse
         Assessment 2 - Matching: Assessment 2 - Matching
@@ -1914,11 +1900,11 @@ en:
         'onEvent("id", "click", function() {...}):': 'onEvent("id", "click", function() {...}):'
         trigger: trigger
       U3L14 - Matching Events to Description:
-        Triggers once, the instant the mouse hovers over the button: Triggers once, the instant the mouse hovers over the button
-        Triggers when th mouse button is released: Triggers when th mouse button is released
-        Triggers when the mouse button is clicked once: Triggers when the mouse button is clicked once
-        Triggers when the mouse button is pressed: Triggers when the mouse button is pressed
-        Triggers whenever the mouse moves: Triggers whenever the mouse moves
+        Triggers once, the instant mouse hovers over the button: Triggers once, the instant mouse hovers over the button
+        Triggers when mouse button is pressed: Triggers when mouse button is pressed
+        Triggers when mouse button is released: Triggers when mouse button is released
+        Triggers when mouse the button is clicked once: Triggers when mouse the button is clicked once
+        Triggers whenever the mouses moves: Triggers whenever the mouses moves
         click: click
         mousedown: mousedown
         mousemove: mousemove
@@ -1983,15 +1969,15 @@ en:
         Phase 3: Phase 3
         Program Commitment Matching Question: Program Commitment Matching Question
       test matching image:
-        "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
-        "/script_assets/matches/images/a2.jpg": "/script_assets/matches/images/a2.jpg"
-        "/script_assets/matches/images/a3.jpg": "/script_assets/matches/images/a3.jpg"
-        "/script_assets/matches/images/a4.jpg": "/script_assets/matches/images/a4.jpg"
-        "/script_assets/matches/images/head.jpg,300": "/script_assets/matches/images/head.jpg,300"
-        "/script_assets/matches/images/q1.jpg": "/script_assets/matches/images/q1.jpg"
-        "/script_assets/matches/images/q2.jpg": "/script_assets/matches/images/q2.jpg"
-        "/script_assets/matches/images/q3.jpg": "/script_assets/matches/images/q3.jpg"
-        "/script_assets/matches/images/q4.jpg": "/script_assets/matches/images/q4.jpg"
+        /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
+        /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
+        /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
+        /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
+        /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
+        /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
+        /script_assets/matches/images/q2.jpg: /script_assets/matches/images/q2.jpg
+        /script_assets/matches/images/q3.jpg: /script_assets/matches/images/q3.jpg
+        /script_assets/matches/images/q4.jpg: /script_assets/matches/images/q4.jpg
         Drag the images from right to center.: Drag the images from right to center.
         Instructions: Instructions
         Match up all the flowers by colour!: Match up all the flowers by colour!
@@ -2009,7 +1995,7 @@ en:
         salt: salt
     multi:
       2-3 Algorithms Multi 1:
-        "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
+        /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
         Choose an algorithm for the image provided.: Choose an algorithm for the image provided.
         Multiple Choice: Multiple Choice
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram
@@ -2018,132 +2004,132 @@ en:
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram
         : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram
       2-3 Algorithms Multi 2:
-        "/script_assets/2-3_images/unplugged/algorithms_2_a1.png": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
-        "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
-        "/script_assets/2-3_images/unplugged/algorithms_2_a3.png": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
-        "/script_assets/2-3_images/unplugged/algorithms_2_a4.png": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
+        /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
+        /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
+        /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
+        /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
         Multiple Choice: Multiple Choice
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square
         Which image does <em>not</em> follow this algorithm?: Which image does <em>not</em> follow this algorithm?
       2-3 Binary Multi 1:
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
+        /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
+        /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
+        /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
+        /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Multiple Choice: Multiple Choice
         Which program makes this image?: Which program makes this image?
       2-3 Conditionals Multi 1:
-        "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_a4.png": "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
+        /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
+        /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
+        /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
+        /script_assets/2-3_images/unplugged/conditionals_1_a4.png: /script_assets/2-3_images/unplugged/conditionals_1_a4.png
+        /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
         According to the rules of the game, which set of cards is scored correctly?: According to the rules of the game, which set of cards is scored correctly?
         Multiple Choice: Multiple Choice
       2-3 Getting Loopy Multi 1:
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
+        /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png
+        /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png
+        /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
+        /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png
+        /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
         How would you simplify this sequence with loops?: How would you simplify this sequence with loops?
         Multiple Choice: Multiple Choice
       2-3 Graph Paper Multi 1:
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
+        /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
+        /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
+        /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
+        /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Multiple Choice: Multiple Choice
         Which program makes this image?: Which program makes this image?
       2-3 Maze Multi 2:
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
+        /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
+        /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png
+        /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png
+        /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png
+        /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500
         Maze Multiple Choice: Maze Multiple Choice
         Which blocks work?: Which blocks work?
       2-3 Relay Programming Multi 1:
-        "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
+        /script_assets/2-3_images/unplugged/relay_programming_1_a1.png: /script_assets/2-3_images/unplugged/relay_programming_1_a1.png
+        /script_assets/2-3_images/unplugged/relay_programming_1_a2.png: /script_assets/2-3_images/unplugged/relay_programming_1_a2.png
+        /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
+        /script_assets/2-3_images/unplugged/relay_programming_1_q.png: /script_assets/2-3_images/unplugged/relay_programming_1_q.png
         Multiple Choice: Multiple Choice
         Which program does not create this image?: Which program does not create this image?
       2-3 Relay Programming Multi 2:
-        "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
+        /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
+        /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
+        /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
         Multiple Choice: Multiple Choice
         Which image-program combo does not contain mistakes?: Which image-program combo does not contain mistakes?
       2-3 artist debug multi 1:
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700"
+        /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
+        /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
+        /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png
+        /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
+        /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700
         Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
         Why won't this circle go all the way around?: Why won't this circle go all the way around?
       2-3 artist functions multi 1:
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500"
+        /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png
+        /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
+        /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
+        /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500
         Artist Functions Multiple Choice One: Artist Functions Multiple Choice One
         Pick the correct blocks to draw this image using the given functions: Pick the correct blocks to draw this image using the given functions
       2-3 artist loops multi 1:
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
         Artist Loops Multiple Choice: Artist Loops Multiple Choice
         Which shape is made by this loop?: Which shape is made by this loop?
       2-3 artist loops multi 2:
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
         Artist Loops Multiple Choice: Artist Loops Multiple Choice
         Which shape is made by this program?: Which shape is made by this program?
       2-3 bee conditionals multi 1:
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png
         Bee Conditionals Multiple Choice One: Bee Conditionals Multiple Choice One
         Which comparison below is true?: Which comparison below is true?
       2-3 bee conditionals multi 2:
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500"
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500
         Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
         Choose the best blocks.: Choose the best blocks.
       2-3 bee conditionals multi 3:
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500"
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
         Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
         Choose the best blocks.: Choose the best blocks.
       2-3 bee loops multi 1:
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
+        /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png
+        /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png
+        /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png
+        /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png
+        /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500
         Bee Loops Multiple Choice One: Bee Loops Multiple Choice One
         Which blocks collect all of the nectar?: Which blocks collect all of the nectar?
       2-3 maze multi 1:
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
+        /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
+        /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png
+        /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
+        /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
+        /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
         Maze Multiple Choice One: Maze Multiple Choice One
         Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
       4-5 Algorithms Multi 1:
@@ -2163,8 +2149,8 @@ en:
         _____ is _____ a _____.: _____ is _____ a _____.
         _____ is a _____ city.: _____ is a _____ city.
       4-5 Crowdsourcing Multi 1:
-        "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
-        "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+        /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
+        /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
         Multiple Choice: Multiple Choice
         Which of these pictures best represents crowdsourcing?: Which of these pictures best represents crowdsourcing?
       4-5 Crowdsourcing Multi 2:
@@ -2182,7 +2168,7 @@ en:
         Your favorite food: Your favorite food
         Your parent's credit card number: Your parent's credit card number
       4-5 Internet Multi 1:
-        "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
+        /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         23.23.224.106: 23.23.224.106
         54.209.61.132: 54.209.61.132
         54.243.71.82: 54.243.71.82
@@ -2190,7 +2176,7 @@ en:
         Multiple Choice: Multiple Choice
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: When you try to log on to code.org, which IP address is the DNS most likely to take you to?
       4-5 Internet Multi 2:
-        "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
+        /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?
         Multiple Choice: Multiple Choice
         code.org: code.org
@@ -2198,7 +2184,7 @@ en:
         khanacademy.org: khanacademy.org
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
-        "/script_assets/4-5_images/unplugged/songwriting_1_q.png": "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
+        /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
         ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.
         : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
@@ -2209,98 +2195,98 @@ en:
         ? What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
         : What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
-        "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_2_q.png": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
+        /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
+        /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
+        /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+        /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
         Multiple Choice: Multiple Choice
         Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Which of the programs below <em>does not</em> make the exact same sequence as Program 1?
       4-5 artist functions multi 1:
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png"
-        "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500"
+        /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
+        /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
+        /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png
+        /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png
+        /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500
         Artist Functions Multiple Choice: Artist Functions Multiple Choice
         Which function creates a rectangle that can change its size?: Which function creates a rectangle that can change its size?
       4-5 artist loops multi 1:
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500"
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500
         Artist Loops Multiple Choice: Artist Loops Multiple Choice
         Which blocks will create the design?: Which blocks will create the design?
       4-5 artist loops multi 2:
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png"
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
         Artist Functions Multiple Choice: Artist Functions Multiple Choice
         'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
       4-5 artist multi 1:
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
+        /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png
+        /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
+        /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png
+        /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
         Artist Multiple Choice: Artist Multiple Choice
         Which blocks draw a rectangle with a perimeter of 100?: Which blocks draw a rectangle with a perimeter of 100?
       4-5 artist multi 2:
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
+        /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
+        /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png
+        /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png
+        /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png
         Artist Multiple Choice: Artist Multiple Choice
         Which drawing is symmetric?: Which drawing is symmetric?
       4-5 bee conditionals multi 1:
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
+        /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
+        /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
+        /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
+        /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
+        /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
         ? A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?
         : A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?
         Bee Conditionals Multiple Choice: Bee Conditionals Multiple Choice
         Choose the best blocks.: Choose the best blocks.
       4-5 bee debug multi 1:
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
+        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
+        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png
+        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png
+        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png
+        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
+        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
         Bee Debug Multiple Choice: Bee Debug Multiple Choice
         Which version of the function will work?: Which version of the function will work?
       4-5 bee loops multi 1:
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
+        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
+        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png
+        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
+        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png
+        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
         Bee Loops Multiple Choice: Bee Loops Multiple Choice
         Which blocks will solve the puzzle?: Which blocks will solve the puzzle?
       4-5 farmer loops multi 1:
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png"
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png"
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png"
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png"
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500"
+        /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
+        /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png
+        /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png
+        /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png
+        /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500
         Famer Loops Multiple Choice: Famer Loops Multiple Choice
         Which blocks solve the puzzle?: Which blocks solve the puzzle?
       4-5 maze conditionals multi 1:
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500"
+        /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
+        /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
+        /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
+        /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png
+        /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500
         Maze Conditionals Multiple Choice: Maze Conditionals Multiple Choice
         Which blocks solve the puzzle?: Which blocks solve the puzzle?
       4-5 maze multi 1:
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
+        /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
+        /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png
+        /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
+        /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png
+        /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500
         Maze Multiple Choice: Maze Multiple Choice
         Which blocks solve the puzzle?: Which blocks solve the puzzle?
       Baker test of multi can delete:
@@ -2323,7 +2309,7 @@ en:
         three: three
         two: two
       CSPPD2 pixel video 2:
-        " Monitor 1 has higher density than Monitor 2.": " Monitor 1 has higher density than Monitor 2."
+        ' Monitor 1 has higher density than Monitor 2.': ' Monitor 1 has higher density than Monitor 2.'
         ? Monitor 1 and Monitor 2 are standard RGB monitors. Monitor 1 has a higher resolution than Monitor 2. Which of the following is true?
         : Monitor 1 and Monitor 2 are standard RGB monitors. Monitor 1 has a higher resolution than Monitor 2. Which of the following is true?
         Monitor 1 has the same density as Monitor 2.: Monitor 1 has the same density as Monitor 2.
@@ -2348,11 +2334,11 @@ en:
         Line 5: Line 5
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers
       Circle to code:
-        "(+ (* (- 8 6) 4) 5) ": "(+ (* (- 8 6) 4) 5) "
-        "(+ 5 (* (- 6 8) 4))": "(+ 5 (* (- 6 8) 4))"
-        "(+ 5 (* (- 8 6) 4))": "(+ 5 (* (- 8 6) 4))"
-        "(+ 5 (* 4 (- 8 6)))": "(+ 5 (* 4 (- 8 6)))"
-        "/script_assets/msm/Unit%202/exercise_1.png": "/script_assets/msm/Unit%202/exercise_1.png"
+        '(+ (* (- 8 6) 4) 5) ': '(+ (* (- 8 6) 4) 5) '
+        (+ 5 (* (- 6 8) 4)): (+ 5 (* (- 6 8) 4))
+        (+ 5 (* (- 8 6) 4)): (+ 5 (* (- 8 6) 4))
+        (+ 5 (* 4 (- 8 6))): (+ 5 (* 4 (- 8 6)))
+        /script_assets/msm/Unit%202/exercise_1.png: /script_assets/msm/Unit%202/exercise_1.png
         Code from Circle: Code from Circle
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
       Coordinates Multi 1:
@@ -2431,182 +2417,182 @@ en:
         title: title
         wrong answer: wrong answer
       K-1 Artist 1 Multi 1:
-        "/script_assets/k_1_images/artist_images/E-S-S.png": "/script_assets/k_1_images/artist_images/E-S-S.png"
-        "/script_assets/k_1_images/artist_images/E-S.png": "/script_assets/k_1_images/artist_images/E-S.png"
-        "/script_assets/k_1_images/artist_images/S-E-E.png": "/script_assets/k_1_images/artist_images/S-E-E.png"
-        "/script_assets/k_1_images/artist_images/W-S-S.png": "/script_assets/k_1_images/artist_images/W-S-S.png"
-        "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
+        /script_assets/k_1_images/artist_images/E-S-S.png: /script_assets/k_1_images/artist_images/E-S-S.png
+        /script_assets/k_1_images/artist_images/E-S.png: /script_assets/k_1_images/artist_images/E-S.png
+        /script_assets/k_1_images/artist_images/S-E-E.png: /script_assets/k_1_images/artist_images/S-E-E.png
+        /script_assets/k_1_images/artist_images/W-S-S.png: /script_assets/k_1_images/artist_images/W-S-S.png
+        /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
         Multiple Choice: Multiple Choice
         Which blocks solve this puzzle?: Which blocks solve this puzzle?
       K-1 Artist 1 Multi 2:
-        "/script_assets/k_1_images/artist_images/E-S-W-N.png": "/script_assets/k_1_images/artist_images/E-S-W-N.png"
-        "/script_assets/k_1_images/artist_images/N-E-S-W.png": "/script_assets/k_1_images/artist_images/N-E-S-W.png"
-        "/script_assets/k_1_images/artist_images/N-S-E-W.png": "/script_assets/k_1_images/artist_images/N-S-E-W.png"
-        "/script_assets/k_1_images/artist_images/N-W-S-E.png": "/script_assets/k_1_images/artist_images/N-W-S-E.png"
-        "/script_assets/k_1_images/artist_images/square.png, 500": "/script_assets/k_1_images/artist_images/square.png, 500"
+        /script_assets/k_1_images/artist_images/E-S-W-N.png: /script_assets/k_1_images/artist_images/E-S-W-N.png
+        /script_assets/k_1_images/artist_images/N-E-S-W.png: /script_assets/k_1_images/artist_images/N-E-S-W.png
+        /script_assets/k_1_images/artist_images/N-S-E-W.png: /script_assets/k_1_images/artist_images/N-S-E-W.png
+        /script_assets/k_1_images/artist_images/N-W-S-E.png: /script_assets/k_1_images/artist_images/N-W-S-E.png
+        /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png, 500
         Multiple Choice: Multiple Choice
         Which blocks draw the square?: Which blocks draw the square?
       K-1 Artist 2 Multi 1:
-        "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
-        "/script_assets/k_1_images/artist_images/medium_square.png": "/script_assets/k_1_images/artist_images/medium_square.png"
-        "/script_assets/k_1_images/artist_images/medium_triangle.png": "/script_assets/k_1_images/artist_images/medium_triangle.png"
-        "/script_assets/k_1_images/artist_images/small_rectangle.png": "/script_assets/k_1_images/artist_images/small_rectangle.png"
-        "/script_assets/k_1_images/artist_images/sq+sq.png, 500": "/script_assets/k_1_images/artist_images/sq+sq.png, 500"
+        /script_assets/k_1_images/artist_images/medium_circle.png: /script_assets/k_1_images/artist_images/medium_circle.png
+        /script_assets/k_1_images/artist_images/medium_square.png: /script_assets/k_1_images/artist_images/medium_square.png
+        /script_assets/k_1_images/artist_images/medium_triangle.png: /script_assets/k_1_images/artist_images/medium_triangle.png
+        /script_assets/k_1_images/artist_images/small_rectangle.png: /script_assets/k_1_images/artist_images/small_rectangle.png
+        /script_assets/k_1_images/artist_images/sq+sq.png, 500: /script_assets/k_1_images/artist_images/sq+sq.png, 500
         Multiple Choice: Multiple Choice
         Which shape do these squares combine to make?: Which shape do these squares combine to make?
       K-1 Artist Loops Multi 1:
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300"
+        /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png
+        /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png
+        /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png
+        /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png
+        /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300
         Multiple Choice: Multiple Choice
         Which blocks create this picture?: Which blocks create this picture?
       K-1 Bee 1 Multi 1:
-        "/script_assets/k_1_images/bee_images/1nectar+2nectar.png": "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
-        "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
-        "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
-        "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
-        "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
+        /script_assets/k_1_images/bee_images/1nectar+2nectar.png: /script_assets/k_1_images/bee_images/1nectar+2nectar.png
+        /script_assets/k_1_images/bee_images/2nectar.png: /script_assets/k_1_images/bee_images/2nectar.png
+        /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
+        /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
+        /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
         How many nectars is this?: How many nectars is this?
         Multiple Choice: Multiple Choice
       K-1 Bee 1 Multi 2:
-        "/script_assets/k_1_images/bee_images/2nectar+2nectar.png": "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
-        "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
-        "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
-        "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
-        "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
+        /script_assets/k_1_images/bee_images/2nectar+2nectar.png: /script_assets/k_1_images/bee_images/2nectar+2nectar.png
+        /script_assets/k_1_images/bee_images/2nectar.png: /script_assets/k_1_images/bee_images/2nectar.png
+        /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
+        /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
+        /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
         How many nectars is this?: How many nectars is this?
         Multiple Choice: Multiple Choice
       K-1 Digital Footprint Multi 1:
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
+        /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png
+        /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png
+        /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
+        /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
         Multiple Choice: Multiple Choice
         Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?
       K-1 Getting Loopy Multi 1:
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
+        /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
+        /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
+        /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
+        /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
         How would you simplify this sequence with loops?: How would you simplify this sequence with loops?
         Multiple Choice: Multiple Choice
       K-1 Happy Maps Multi 1:
-        "/script_assets/k_1_images/unplugged_images/down.png": "/script_assets/k_1_images/unplugged_images/down.png"
-        "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
-        "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
-        "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
-        "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
+        /script_assets/k_1_images/unplugged_images/down.png: /script_assets/k_1_images/unplugged_images/down.png
+        /script_assets/k_1_images/unplugged_images/happy_maps_1q.png: /script_assets/k_1_images/unplugged_images/happy_maps_1q.png
+        /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
+        /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
+        /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
         Multiple Choice: Multiple Choice
         Which arrow gets the Flurb to the treasure?: Which arrow gets the Flurb to the treasure?
       K-1 Keep it Private Multi 1:
-        "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
+        /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png
+        /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
+        /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
         Multiple Choice: Multiple Choice
         Which information should you <strong>not</strong> share online?: Which information should you <strong>not</strong> share online?
       K-1 Maze Debugging Multi 1:
-        "/script_assets/k_1_images/maze_images/EESq.png, 700": "/script_assets/k_1_images/maze_images/EESq.png, 700"
-        "/script_assets/k_1_images/move_blocks/E.png": "/script_assets/k_1_images/move_blocks/E.png"
-        "/script_assets/k_1_images/move_blocks/N.png": "/script_assets/k_1_images/move_blocks/N.png"
-        "/script_assets/k_1_images/move_blocks/S.png": "/script_assets/k_1_images/move_blocks/S.png"
-        "/script_assets/k_1_images/move_blocks/W.png": "/script_assets/k_1_images/move_blocks/W.png"
+        /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png, 700
+        /script_assets/k_1_images/move_blocks/E.png: /script_assets/k_1_images/move_blocks/E.png
+        /script_assets/k_1_images/move_blocks/N.png: /script_assets/k_1_images/move_blocks/N.png
+        /script_assets/k_1_images/move_blocks/S.png: /script_assets/k_1_images/move_blocks/S.png
+        /script_assets/k_1_images/move_blocks/W.png: /script_assets/k_1_images/move_blocks/W.png
         Multiple Choice: Multiple Choice
         Which choice should be the final block?: Which choice should be the final block?
       K-1 Maze Loops Multi 1:
-        "/script_assets/k_1_images/move_blocks/NNNequals.png, 300": "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
-        "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
-        "/script_assets/k_1_images/move_blocks/r3_NN.png": "/script_assets/k_1_images/move_blocks/r3_NN.png"
-        "/script_assets/k_1_images/move_blocks/r4_N.png": "/script_assets/k_1_images/move_blocks/r4_N.png"
+        /script_assets/k_1_images/move_blocks/NNNequals.png, 300: /script_assets/k_1_images/move_blocks/NNNequals.png, 300
+        /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
+        /script_assets/k_1_images/move_blocks/r3_NN.png: /script_assets/k_1_images/move_blocks/r3_NN.png
+        /script_assets/k_1_images/move_blocks/r4_N.png: /script_assets/k_1_images/move_blocks/r4_N.png
         Multiple Choice: Multiple Choice
         Which repeat block is the same?: Which repeat block is the same?
       K-1 Maze Loops Multi 2:
-        "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240": "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
-        "/script_assets/k_1_images/move_blocks/r3_ES.png": "/script_assets/k_1_images/move_blocks/r3_ES.png"
-        "/script_assets/k_1_images/move_blocks/r3_S.png": "/script_assets/k_1_images/move_blocks/r3_S.png"
-        "/script_assets/k_1_images/move_blocks/r3_SE.png": "/script_assets/k_1_images/move_blocks/r3_SE.png"
+        /script_assets/k_1_images/move_blocks/SESESEequals.png, 240: /script_assets/k_1_images/move_blocks/SESESEequals.png, 240
+        /script_assets/k_1_images/move_blocks/r3_ES.png: /script_assets/k_1_images/move_blocks/r3_ES.png
+        /script_assets/k_1_images/move_blocks/r3_S.png: /script_assets/k_1_images/move_blocks/r3_S.png
+        /script_assets/k_1_images/move_blocks/r3_SE.png: /script_assets/k_1_images/move_blocks/r3_SE.png
         Multiple Choice: Multiple Choice
         Pick the correct repeat block.: Pick the correct repeat block.
       K-1 Maze Multiple Choice 2:
-        "/script_assets/k_1_images/maze_images/maze_WS.png, 500": "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
-        "/script_assets/k_1_images/move_blocks/EN.png": "/script_assets/k_1_images/move_blocks/EN.png"
-        "/script_assets/k_1_images/move_blocks/ES.png": "/script_assets/k_1_images/move_blocks/ES.png"
-        "/script_assets/k_1_images/move_blocks/WN.png": "/script_assets/k_1_images/move_blocks/WN.png"
-        "/script_assets/k_1_images/move_blocks/WS.png": "/script_assets/k_1_images/move_blocks/WS.png"
+        /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png, 500
+        /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
+        /script_assets/k_1_images/move_blocks/ES.png: /script_assets/k_1_images/move_blocks/ES.png
+        /script_assets/k_1_images/move_blocks/WN.png: /script_assets/k_1_images/move_blocks/WN.png
+        /script_assets/k_1_images/move_blocks/WS.png: /script_assets/k_1_images/move_blocks/WS.png
         Maze: Maze
         Which answer solves this level?: Which answer solves this level?
       K-1 Move It Multi 1:
-        "/script_assets/k_1_images/unplugged_images/leftdown.png": "/script_assets/k_1_images/unplugged_images/leftdown.png"
-        "/script_assets/k_1_images/unplugged_images/leftleft.png": "/script_assets/k_1_images/unplugged_images/leftleft.png"
-        "/script_assets/k_1_images/unplugged_images/move_it_1_q.png": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
-        "/script_assets/k_1_images/unplugged_images/rightright.png": "/script_assets/k_1_images/unplugged_images/rightright.png"
-        "/script_assets/k_1_images/unplugged_images/upleft.png": "/script_assets/k_1_images/unplugged_images/upleft.png"
+        /script_assets/k_1_images/unplugged_images/leftdown.png: /script_assets/k_1_images/unplugged_images/leftdown.png
+        /script_assets/k_1_images/unplugged_images/leftleft.png: /script_assets/k_1_images/unplugged_images/leftleft.png
+        /script_assets/k_1_images/unplugged_images/move_it_1_q.png: /script_assets/k_1_images/unplugged_images/move_it_1_q.png
+        /script_assets/k_1_images/unplugged_images/rightright.png: /script_assets/k_1_images/unplugged_images/rightright.png
+        /script_assets/k_1_images/unplugged_images/upleft.png: /script_assets/k_1_images/unplugged_images/upleft.png
         Multiple Choice: Multiple Choice
         Which algorithm gets the Flurb to the flowers?: Which algorithm gets the Flurb to the flowers?
       K-1 Plant a Seed Multi 1:
-        "/script_assets/k_1_images/unplugged_images/dirty-teeth.png": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
-        "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
-        "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
-        "/script_assets/k_1_images/unplugged_images/poke-hole.png": "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        /script_assets/k_1_images/unplugged_images/dirty-teeth.png: /script_assets/k_1_images/unplugged_images/dirty-teeth.png
+        /script_assets/k_1_images/unplugged_images/foot-in-shoe.png: /script_assets/k_1_images/unplugged_images/foot-in-shoe.png
+        /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png
+        /script_assets/k_1_images/unplugged_images/poke-hole.png: /script_assets/k_1_images/unplugged_images/poke-hole.png
         Multiple Choice: Multiple Choice
         Which step should go at the beginning of this algorithm?: Which step should go at the beginning of this algorithm?
       K-1 Plant a Seed Multi 2:
-        "/script_assets/k_1_images/unplugged_images/brush-teeth.png": "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
-        "/script_assets/k_1_images/unplugged_images/cover-seed.png": "/script_assets/k_1_images/unplugged_images/cover-seed.png"
-        "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
-        "/script_assets/k_1_images/unplugged_images/water-pot.png": "/script_assets/k_1_images/unplugged_images/water-pot.png"
+        /script_assets/k_1_images/unplugged_images/brush-teeth.png: /script_assets/k_1_images/unplugged_images/brush-teeth.png
+        /script_assets/k_1_images/unplugged_images/cover-seed.png: /script_assets/k_1_images/unplugged_images/cover-seed.png
+        /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png
+        /script_assets/k_1_images/unplugged_images/water-pot.png: /script_assets/k_1_images/unplugged_images/water-pot.png
         Multiple Choice: Multiple Choice
         Which step should fill in the blank for this algorithm?: Which step should fill in the blank for this algorithm?
       K-1 Word Search Multi 1:
-        "/script_assets/k_1_images/move_blocks/EEES.png": "/script_assets/k_1_images/move_blocks/EEES.png"
-        "/script_assets/k_1_images/move_blocks/EESS.png": "/script_assets/k_1_images/move_blocks/EESS.png"
-        "/script_assets/k_1_images/move_blocks/ESSS.png": "/script_assets/k_1_images/move_blocks/ESSS.png"
-        "/script_assets/k_1_images/search_images/move.png, 450": "/script_assets/k_1_images/search_images/move.png, 450"
+        /script_assets/k_1_images/move_blocks/EEES.png: /script_assets/k_1_images/move_blocks/EEES.png
+        /script_assets/k_1_images/move_blocks/EESS.png: /script_assets/k_1_images/move_blocks/EESS.png
+        /script_assets/k_1_images/move_blocks/ESSS.png: /script_assets/k_1_images/move_blocks/ESSS.png
+        /script_assets/k_1_images/search_images/move.png, 450: /script_assets/k_1_images/search_images/move.png, 450
         Multiple Choice: Multiple Choice
         Which blocks spell "MOVE"?: Which blocks spell "MOVE"?
       K-1 Word Search Multi 2:
-        "/script_assets/k_1_images/move_blocks/EENN.png": "/script_assets/k_1_images/move_blocks/EENN.png"
-        "/script_assets/k_1_images/move_blocks/NENE.png": "/script_assets/k_1_images/move_blocks/NENE.png"
-        "/script_assets/k_1_images/move_blocks/NNEE.png": "/script_assets/k_1_images/move_blocks/NNEE.png"
-        "/script_assets/k_1_images/search_images/jump.png, 450": "/script_assets/k_1_images/search_images/jump.png, 450"
+        /script_assets/k_1_images/move_blocks/EENN.png: /script_assets/k_1_images/move_blocks/EENN.png
+        /script_assets/k_1_images/move_blocks/NENE.png: /script_assets/k_1_images/move_blocks/NENE.png
+        /script_assets/k_1_images/move_blocks/NNEE.png: /script_assets/k_1_images/move_blocks/NNEE.png
+        /script_assets/k_1_images/search_images/jump.png, 450: /script_assets/k_1_images/search_images/jump.png, 450
         Multiple Choice: Multiple Choice
         Which blocks spell "JUMP"?: Which blocks spell "JUMP"?
       K-1 Word Search Multi 3:
-        "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png, 700"
+        /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png, 700
         Multiple Choice: Multiple Choice
         SET: SET
         SOUTH: SOUTH
         SQUARE: SQUARE
         Which word is spelled?: Which word is spelled?
       K-1 multi 4:
-        "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
-        "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
-        "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
+        /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
+        /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
+        /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: Driver and Helper
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.
         Which boy is the <large>helper</large>?: Which boy is the <large>helper</large>?
       K-1 multi 5:
-        "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
-        "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
-        "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
+        /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
+        /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
+        /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: Driver and Helper
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.
         This time, which boy is the <large>driver</large>?: This time, which boy is the <large>driver</large>?
       Math to Code 1:
-        "(* (+ 5 6) (/ 8 2))": "(* (+ 5 6) (/ 8 2))"
-        "(/ (* (+ 5 6) 8) 2)": "(/ (* (+ 5 6) 8) 2)"
-        "(/ (* 8 2) (+ 5 6))": "(/ (* 8 2) (+ 5 6))"
-        "(/ (+ 5 6) (* 8 2))": "(/ (+ 5 6) (* 8 2))"
-        "(5 + 6) * 8 / 2": "(5 + 6) * 8 / 2"
+        (* (+ 5 6) (/ 8 2)): (* (+ 5 6) (/ 8 2))
+        (/ (* (+ 5 6) 8) 2): (/ (* (+ 5 6) 8) 2)
+        (/ (* 8 2) (+ 5 6)): (/ (* 8 2) (+ 5 6))
+        (/ (+ 5 6) (* 8 2)): (/ (+ 5 6) (* 8 2))
+        (5 + 6) * 8 / 2: (5 + 6) * 8 / 2
         ? Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!
         : Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!
         Racket Code for Math Expressions: Racket Code for Math Expressions
       Math to Code 2:
-        "(+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6))": "(+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6))"
-        "(+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2)": "(+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2)"
-        "(+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2)": "(+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2)"
-        "(+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))": "(+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))"
+        (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6)): (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6))
+        (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2)
+        (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2)
+        (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))
         4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 x 3 x 7 + 2
         ? Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!
         : Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!
@@ -3332,16 +3318,16 @@ en:
         function calls: function calls
         sequential statements: sequential statements
       U3L20 Assessment9:
-        " !=": " !="
-        "<=": "<="
-        "=": "="
-        ">": ">"
+        ' !=': ' !='
+        <=: <=
+        =: =
+        '>': '>'
         Conditional Basics Question 9: Conditional Basics Question 9
         Which of the following are not valid operators in Boolean expressions?: Which of the following are not valid operators in Boolean expressions?
-        "||": "||"
+        '||': '||'
       U3L21 Assessment 1:
-        "''101''": "''101''"
-        "'4 * 7'": "'4 * 7'"
+        '''''101''''': '''''101'''''
+        '''4 * 7''': '''4 * 7'''
         56*61\3+2: 56*61\3+2
         More Variables Question 1: More Variables Question 1
         NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?: NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?
@@ -3472,15 +3458,15 @@ en:
         table: table
         variable: variable
       U4L06 Assessment 2:
-        " Each record of data is kept in its own": " Each record of data is kept in its own"
+        ' Each record of data is kept in its own': ' Each record of data is kept in its own'
         column: column
         row: row
       U4L06 Assessment 3:
-        " Each attribute for a record of data is kept in a": " Each attribute for a record of data is kept in a"
+        ' Each attribute for a record of data is kept in a': ' Each attribute for a record of data is kept in a'
         column: column
         row: row
       U4L06 Assessment 4:
-        "  In AppLab, when inserting a new row in a table a callback function is used:": "  In AppLab, when inserting a new row in a table a callback function is used:"
+        '  In AppLab, when inserting a new row in a table a callback function is used:': '  In AppLab, when inserting a new row in a table a callback function is used:'
         to allow for corrections in the inserted row.: to allow for corrections in the inserted row.
         to identify the user of the app.: to identify the user of the app.
         to notify when the data has been stored.: to notify when the data has been stored.
@@ -3781,10 +3767,10 @@ en:
         top, left, right: top, left, right
       image code from circle:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
-        "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid red)"
+        (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solid red)
         (rectangle (10) (2) "solid" "red"): (rectangle (10) (2) "solid" "red")
         (rectangle 10 2 "solid" "red"): (rectangle 10 2 "solid" "red")
-        "/script_assets/msm/Unit%202/exercise_5.png": "/script_assets/msm/Unit%202/exercise_5.png"
+        /script_assets/msm/Unit%202/exercise_5.png: /script_assets/msm/Unit%202/exercise_5.png
         Code from Circle: Code from Circle
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
       msm variables multi 1:
@@ -3794,25 +3780,25 @@ en:
         x: x
         x = 15<br>a = 2<br>b = 6: x = 15<br>a = 2<br>b = 6
       msm variables multi 10:
-        "/script_assets/msm/define_f.png, 300": "/script_assets/msm/define_f.png, 300"
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
         '17': '17'
         What is the name of the function?: What is the name of the function?
         f: f
         x: x
       msm variables multi 11:
-        "/script_assets/msm/define_f.png, 300": "/script_assets/msm/define_f.png, 300"
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
         '17': '17'
         What is the name of the parameter?: What is the name of the parameter?
         f: f
         x: x
       msm variables multi 12:
-        "(define (f x) (*x 17))": "(define (f x) (*x 17))"
+        (define (f x) (*x 17)): (define (f x) (*x 17))
         '17': '17'
         What is the name of the variable?: What is the name of the variable?
         f: f
         x: x
       msm variables multi 13:
-        "/script_assets/msm/define_f.png, 300": "/script_assets/msm/define_f.png, 300"
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
         '117': '117'
         '17': '17'
         What should f(1) produce?: What should f(1) produce?
@@ -3830,20 +3816,20 @@ en:
         x: x
         x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
       msm variables multi 4:
-        "/script_assets/msm/define_xpq.png, 600": "/script_assets/msm/define_xpq.png, 600"
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
         '15': '15'
         '3': '3'
         '8': '8'
         What is the value of x?: What is the value of x?
         string: string
       msm variables multi 5:
-        "/script_assets/msm/define_xpq.png, 600": "/script_assets/msm/define_xpq.png, 600"
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
         '3': '3'
         '5': '5'
         What is the value of (p - x)?: What is the value of (p - x)?
         q: q
       msm variables multi 6:
-        "/script_assets/msm/define_xpq.png, 600": "/script_assets/msm/define_xpq.png, 600"
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
         '1': '1'
         '5': '5'
         What is the value of string-length(q)?: What is the value of string-length(q)?
@@ -3994,110 +3980,110 @@ en:
         'circle: size style color -> image': 'circle: size style color -> image'
     text_match:
       Blocks to Bools 1:
-        "((4+5) > 9)": "((4+5) > 9)"
-        "(4+5) > 9": "(4+5) > 9"
-        "/script_assets/msm/unit6/blockstomath1.png, 300": "/script_assets/msm/unit6/blockstomath1.png, 300"
+        ((4+5) > 9): ((4+5) > 9)
+        (4+5) > 9: (4+5) > 9
+        /script_assets/msm/unit6/blockstomath1.png, 300: /script_assets/msm/unit6/blockstomath1.png, 300
         4+5 > 9: 4+5 > 9
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Bools 2:
-        "(10 > 11) OR (7 <= 9)": "(10 > 11) OR (7 <= 9)"
-        "(10 > 11) or (7 <= 9)": "(10 > 11) or (7 <= 9)"
-        "(10 > 11) || (7 <= 9)": "(10 > 11) || (7 <= 9)"
-        "/script_assets/msm/unit6/blockstomath2.png, 500": "/script_assets/msm/unit6/blockstomath2.png, 500"
+        (10 > 11) OR (7 <= 9): (10 > 11) OR (7 <= 9)
+        (10 > 11) or (7 <= 9): (10 > 11) or (7 <= 9)
+        (10 > 11) || (7 <= 9): (10 > 11) || (7 <= 9)
+        /script_assets/msm/unit6/blockstomath2.png, 500: /script_assets/msm/unit6/blockstomath2.png, 500
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Bools 3:
-        "((5 < 10 < 15))": "((5 < 10 < 15))"
-        "((5 < 10) & (10 < 15))": "((5 < 10) & (10 < 15))"
-        "((5 < 10) && (10 < 15))": "((5 < 10) && (10 < 15))"
-        "((5 < 10) AND (10 < 15))": "((5 < 10) AND (10 < 15))"
-        "((5 < 10) And (10 < 15))": "((5 < 10) And (10 < 15))"
-        "((5 < 10) and (10 < 15))": "((5 < 10) and (10 < 15))"
-        "(5 < 10 < 15)": "(5 < 10 < 15)"
-        "(5 < 10) & (10 < 15)": "(5 < 10) & (10 < 15)"
-        "(5 < 10) && (10 < 15)": "(5 < 10) && (10 < 15)"
-        "(5 < 10) AND (10 < 15)": "(5 < 10) AND (10 < 15)"
-        "(5 < 10) And (10 < 15)": "(5 < 10) And (10 < 15)"
-        "(5 < 10) and (10 < 15)": "(5 < 10) and (10 < 15)"
-        "/script_assets/msm/unit6/blockstomath3.png, 500": "/script_assets/msm/unit6/blockstomath3.png, 500"
+        ((5 < 10 < 15)): ((5 < 10 < 15))
+        ((5 < 10) & (10 < 15)): ((5 < 10) & (10 < 15))
+        ((5 < 10) && (10 < 15)): ((5 < 10) && (10 < 15))
+        ((5 < 10) AND (10 < 15)): ((5 < 10) AND (10 < 15))
+        ((5 < 10) And (10 < 15)): ((5 < 10) And (10 < 15))
+        ((5 < 10) and (10 < 15)): ((5 < 10) and (10 < 15))
+        (5 < 10 < 15): (5 < 10 < 15)
+        (5 < 10) & (10 < 15): (5 < 10) & (10 < 15)
+        (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
+        (5 < 10) AND (10 < 15): (5 < 10) AND (10 < 15)
+        (5 < 10) And (10 < 15): (5 < 10) And (10 < 15)
+        (5 < 10) and (10 < 15): (5 < 10) and (10 < 15)
+        /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png, 500
         5 < 10 < 15: 5 < 10 < 15
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Bools 4:
-        "(((1 < X) & (X < 5)) || ((8 < X) & (X < 10)))": "(((1 < X) & (X < 5)) || ((8 < X) & (X < 10)))"
-        "(((1 < X) && (X < 5)) || ((8 < X) && (X < 10)))": "(((1 < X) && (X < 5)) || ((8 < X) && (X < 10)))"
-        "(((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10)))": "(((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10)))"
-        "(((1 < X) And (X < 5)) Or ((8 < X) And (X < 10)))": "(((1 < X) And (X < 5)) Or ((8 < X) And (X < 10)))"
-        "(((1 < X) and (X < 5)) or ((8 < X) and (X < 10)))": "(((1 < X) and (X < 5)) or ((8 < X) and (X < 10)))"
-        "(((1 < x) & (x < 5)) || ((8 < x) & (x < 10)))": "(((1 < x) & (x < 5)) || ((8 < x) & (x < 10)))"
-        "(((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))": "(((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))"
-        "(((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)))": "(((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)))"
-        "(((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)))": "(((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)))"
-        "(((1 < x) and (x < 5)) or ((8 < x) and (x < 10)))": "(((1 < x) and (x < 5)) or ((8 < x) and (x < 10)))"
-        "((1 < X) & (X < 5) || (8 < X) & (X < 10))": "((1 < X) & (X < 5) || (8 < X) & (X < 10))"
-        "((1 < X) & (X < 5)) || ((8 < X) & (X < 10))": "((1 < X) & (X < 5)) || ((8 < X) & (X < 10))"
-        "((1 < X) && (X < 5) || (8 < X) && (X < 10))": "((1 < X) && (X < 5) || (8 < X) && (X < 10))"
-        "((1 < X) && (X < 5)) || ((8 < X) && (X < 10))": "((1 < X) && (X < 5)) || ((8 < X) && (X < 10))"
-        "((1 < X) AND (X < 5) OR (8 < X) AND (X < 10))": "((1 < X) AND (X < 5) OR (8 < X) AND (X < 10))"
-        "((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10))": "((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10))"
-        "((1 < X) And (X < 5) Or (8 < X) And (X < 10))": "((1 < X) And (X < 5) Or (8 < X) And (X < 10))"
-        "((1 < X) And (X < 5)) Or ((8 < X) And (X < 10))": "((1 < X) And (X < 5)) Or ((8 < X) And (X < 10))"
-        "((1 < X) and (X < 5) or (8 < X) and (X < 10))": "((1 < X) and (X < 5) or (8 < X) and (X < 10))"
-        "((1 < X) and (X < 5)) or ((8 < X) and (X < 10))": "((1 < X) and (X < 5)) or ((8 < X) and (X < 10))"
-        "((1 < x) & (x < 5) || (8 < x) & (x < 10))": "((1 < x) & (x < 5) || (8 < x) & (x < 10))"
-        "((1 < x) & (x < 5)) || ((8 < x) & (x < 10))": "((1 < x) & (x < 5)) || ((8 < x) & (x < 10))"
-        "((1 < x) && (x < 5) || (8 < x) && (x < 10))": "((1 < x) && (x < 5) || (8 < x) && (x < 10))"
-        "((1 < x) && (x < 5)) || ((8 < x) && (x < 10))": "((1 < x) && (x < 5)) || ((8 < x) && (x < 10))"
-        "((1 < x) AND (x < 5) OR (8 < x) AND (x < 10))": "((1 < x) AND (x < 5) OR (8 < x) AND (x < 10))"
-        "((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))": "((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))"
-        "((1 < x) And (x < 5) Or (8 < x) And (x < 10))": "((1 < x) And (x < 5) Or (8 < x) And (x < 10))"
-        "((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))": "((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))"
-        "((1 < x) and (x < 5) or (8 < x) and (x < 10))": "((1 < x) and (x < 5) or (8 < x) and (x < 10))"
-        "((1 < x) and (x < 5)) or ((8 < x) and (x < 10))": "((1 < x) and (x < 5)) or ((8 < x) and (x < 10))"
-        "(1 < X < 5) OR (8 < X < 10)": "(1 < X < 5) OR (8 < X < 10)"
-        "(1 < X < 5) Or (8 < X < 10)": "(1 < X < 5) Or (8 < X < 10)"
-        "(1 < X < 5) or (8 < X < 10)": "(1 < X < 5) or (8 < X < 10)"
-        "(1 < X < 5) || (8 < X < 10)": "(1 < X < 5) || (8 < X < 10)"
-        "(1 < X) & (X < 5) || (8 < X) & (X < 10)": "(1 < X) & (X < 5) || (8 < X) & (X < 10)"
-        "(1 < X) && (X < 5) || (8 < X) && (X < 10)": "(1 < X) && (X < 5) || (8 < X) && (X < 10)"
-        "(1 < X) AND (X < 5) OR (8 < X) AND (X < 10)": "(1 < X) AND (X < 5) OR (8 < X) AND (X < 10)"
-        "(1 < X) And (X < 5) Or (8 < X) And (X < 10)": "(1 < X) And (X < 5) Or (8 < X) And (X < 10)"
-        "(1 < X) and (X < 5) or (8 < X) and (X < 10)": "(1 < X) and (X < 5) or (8 < X) and (X < 10)"
-        "(1 < x < 5) OR (8 < x < 10)": "(1 < x < 5) OR (8 < x < 10)"
-        "(1 < x < 5) Or (8 < x < 10)": "(1 < x < 5) Or (8 < x < 10)"
-        "(1 < x < 5) or (8 < x < 10)": "(1 < x < 5) or (8 < x < 10)"
-        "(1 < x < 5) || (8 < x < 10)": "(1 < x < 5) || (8 < x < 10)"
-        "(1 < x) & (x < 5) || (8 < x) & (x < 10)": "(1 < x) & (x < 5) || (8 < x) & (x < 10)"
-        "(1 < x) && (x < 5) || (8 < x) && (x < 10)": "(1 < x) && (x < 5) || (8 < x) && (x < 10)"
-        "(1 < x) AND (x < 5) OR (8 < x) AND (x < 10)": "(1 < x) AND (x < 5) OR (8 < x) AND (x < 10)"
-        "(1 < x) And (x < 5) Or (8 < x) And (x < 10)": "(1 < x) And (x < 5) Or (8 < x) And (x < 10)"
-        "(1 < x) and (x < 5) or (8 < x) and (x < 10)": "(1 < x) and (x < 5) or (8 < x) and (x < 10)"
-        "/script_assets/msm/unit6/blockstomath4.png, 500": "/script_assets/msm/unit6/blockstomath4.png, 500"
+        (((1 < X) & (X < 5)) || ((8 < X) & (X < 10))): (((1 < X) & (X < 5)) || ((8 < X) & (X < 10)))
+        (((1 < X) && (X < 5)) || ((8 < X) && (X < 10))): (((1 < X) && (X < 5)) || ((8 < X) && (X < 10)))
+        (((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10))): (((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10)))
+        (((1 < X) And (X < 5)) Or ((8 < X) And (X < 10))): (((1 < X) And (X < 5)) Or ((8 < X) And (X < 10)))
+        (((1 < X) and (X < 5)) or ((8 < X) and (X < 10))): (((1 < X) and (X < 5)) or ((8 < X) and (X < 10)))
+        (((1 < x) & (x < 5)) || ((8 < x) & (x < 10))): (((1 < x) & (x < 5)) || ((8 < x) & (x < 10)))
+        (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): (((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))
+        (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)))
+        (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)))
+        (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5)) or ((8 < x) and (x < 10)))
+        ((1 < X) & (X < 5) || (8 < X) & (X < 10)): ((1 < X) & (X < 5) || (8 < X) & (X < 10))
+        ((1 < X) & (X < 5)) || ((8 < X) & (X < 10)): ((1 < X) & (X < 5)) || ((8 < X) & (X < 10))
+        ((1 < X) && (X < 5) || (8 < X) && (X < 10)): ((1 < X) && (X < 5) || (8 < X) && (X < 10))
+        ((1 < X) && (X < 5)) || ((8 < X) && (X < 10)): ((1 < X) && (X < 5)) || ((8 < X) && (X < 10))
+        ((1 < X) AND (X < 5) OR (8 < X) AND (X < 10)): ((1 < X) AND (X < 5) OR (8 < X) AND (X < 10))
+        ((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10)): ((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10))
+        ((1 < X) And (X < 5) Or (8 < X) And (X < 10)): ((1 < X) And (X < 5) Or (8 < X) And (X < 10))
+        ((1 < X) And (X < 5)) Or ((8 < X) And (X < 10)): ((1 < X) And (X < 5)) Or ((8 < X) And (X < 10))
+        ((1 < X) and (X < 5) or (8 < X) and (X < 10)): ((1 < X) and (X < 5) or (8 < X) and (X < 10))
+        ((1 < X) and (X < 5)) or ((8 < X) and (X < 10)): ((1 < X) and (X < 5)) or ((8 < X) and (X < 10))
+        ((1 < x) & (x < 5) || (8 < x) & (x < 10)): ((1 < x) & (x < 5) || (8 < x) & (x < 10))
+        ((1 < x) & (x < 5)) || ((8 < x) & (x < 10)): ((1 < x) & (x < 5)) || ((8 < x) & (x < 10))
+        ((1 < x) && (x < 5) || (8 < x) && (x < 10)): ((1 < x) && (x < 5) || (8 < x) && (x < 10))
+        ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8 < x) && (x < 10))
+        ((1 < x) AND (x < 5) OR (8 < x) AND (x < 10)): ((1 < x) AND (x < 5) OR (8 < x) AND (x < 10))
+        ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))
+        ((1 < x) And (x < 5) Or (8 < x) And (x < 10)): ((1 < x) And (x < 5) Or (8 < x) And (x < 10))
+        ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))
+        ((1 < x) and (x < 5) or (8 < x) and (x < 10)): ((1 < x) and (x < 5) or (8 < x) and (x < 10))
+        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or ((8 < x) and (x < 10))
+        (1 < X < 5) OR (8 < X < 10): (1 < X < 5) OR (8 < X < 10)
+        (1 < X < 5) Or (8 < X < 10): (1 < X < 5) Or (8 < X < 10)
+        (1 < X < 5) or (8 < X < 10): (1 < X < 5) or (8 < X < 10)
+        (1 < X < 5) || (8 < X < 10): (1 < X < 5) || (8 < X < 10)
+        (1 < X) & (X < 5) || (8 < X) & (X < 10): (1 < X) & (X < 5) || (8 < X) & (X < 10)
+        (1 < X) && (X < 5) || (8 < X) && (X < 10): (1 < X) && (X < 5) || (8 < X) && (X < 10)
+        (1 < X) AND (X < 5) OR (8 < X) AND (X < 10): (1 < X) AND (X < 5) OR (8 < X) AND (X < 10)
+        (1 < X) And (X < 5) Or (8 < X) And (X < 10): (1 < X) And (X < 5) Or (8 < X) And (X < 10)
+        (1 < X) and (X < 5) or (8 < X) and (X < 10): (1 < X) and (X < 5) or (8 < X) and (X < 10)
+        (1 < x < 5) OR (8 < x < 10): (1 < x < 5) OR (8 < x < 10)
+        (1 < x < 5) Or (8 < x < 10): (1 < x < 5) Or (8 < x < 10)
+        (1 < x < 5) or (8 < x < 10): (1 < x < 5) or (8 < x < 10)
+        (1 < x < 5) || (8 < x < 10): (1 < x < 5) || (8 < x < 10)
+        (1 < x) & (x < 5) || (8 < x) & (x < 10): (1 < x) & (x < 5) || (8 < x) & (x < 10)
+        (1 < x) && (x < 5) || (8 < x) && (x < 10): (1 < x) && (x < 5) || (8 < x) && (x < 10)
+        (1 < x) AND (x < 5) OR (8 < x) AND (x < 10): (1 < x) AND (x < 5) OR (8 < x) AND (x < 10)
+        (1 < x) And (x < 5) Or (8 < x) And (x < 10): (1 < x) And (x < 5) Or (8 < x) And (x < 10)
+        (1 < x) and (x < 5) or (8 < x) and (x < 10): (1 < x) and (x < 5) or (8 < x) and (x < 10)
+        /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png, 500
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Math 1:
-        "(4+5)": "(4+5)"
+        (4+5): (4+5)
         4 + 5: 4 + 5
         Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks, 200
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Math 2:
-        "(7 * 6)": "(7 * 6)"
+        (7 * 6): (7 * 6)
         7 * 6: 7 * 6
         Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks, 200
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Math 3:
-        "((2 * 3) - (1 + 0))": "((2 * 3) - (1 + 0))"
-        "(2 * 3) - (1 + 0)": "(2 * 3) - (1 + 0)"
-        "(2 * 3) - 1 + 0": "(2 * 3) - 1 + 0"
+        ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
+        (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
+        (2 * 3) - 1 + 0: (2 * 3) - 1 + 0
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
         2 * 3 - 1 + 0: 2 * 3 - 1 + 0
         Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
@@ -4105,33 +4091,33 @@ en:
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Math 4:
-        "((5 + 8) - 12)": "((5 + 8) - 12)"
-        "(5 + 8) - 12": "(5 + 8) - 12"
+        ((5 + 8) - 12): ((5 + 8) - 12)
+        (5 + 8) - 12: (5 + 8) - 12
         5 + 8 - 12: 5 + 8 - 12
         Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Math 5:
-        "((-2) * (-6))": "((-2) * (-6))"
-        "(-2) * (-6)": "(-2) * (-6)"
-        "-2 * -6": "-2 * -6"
+        ((-2) * (-6)): ((-2) * (-6))
+        (-2) * (-6): (-2) * (-6)
+        -2 * -6: -2 * -6
         Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Math 6:
-        "((4 - 1) * (-2)) + 12": "((4 - 1) * (-2)) + 12"
-        "((4 - 1) * (-2)) + 12)": "((4 - 1) * (-2)) + 12)"
-        "((4 - 1) * -2) + 12": "((4 - 1) * -2) + 12"
-        "(4 - 1) * (-2) + 12": "(4 - 1) * (-2) + 12"
-        "(4 - 1) * -2 + 12": "(4 - 1) * -2 + 12"
+        ((4 - 1) * (-2)) + 12: ((4 - 1) * (-2)) + 12
+        ((4 - 1) * (-2)) + 12): ((4 - 1) * (-2)) + 12)
+        ((4 - 1) * -2) + 12: ((4 - 1) * -2) + 12
+        (4 - 1) * (-2) + 12: (4 - 1) * (-2) + 12
+        (4 - 1) * -2 + 12: (4 - 1) * -2 + 12
         Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Math 7:
-        "(10 / (2 * (3 + 1))": "(10 / (2 * (3 + 1))"
+        (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
         Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
         Convert Blocks to Math: Convert Blocks to Math
@@ -4729,9 +4715,9 @@ en:
       U4LXX Free Response:
         'Free Response: Short description here': 'Free Response: Short description here'
       text match test:
-        "(9-3)+(4*7)": "(9-3)+(4*7)"
-        "(9-3)+4*7": "(9-3)+4*7"
-        "/script_assets/msm/Unit 1/Exercise_5_question_2.png": "/script_assets/msm/Unit 1/Exercise_5_question_2.png"
+        (9-3)+(4*7): (9-3)+(4*7)
+        (9-3)+4*7: (9-3)+4*7
+        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit 1/Exercise_5_question_2.png
         9-3+4*7: 9-3+4*7
         Mathematical Expression Assessment: Mathematical Expression Assessment
         Type out the arithmetic expression that this circle of evaluation evaluates to: Type out the arithmetic expression that this circle of evaluation evaluates to

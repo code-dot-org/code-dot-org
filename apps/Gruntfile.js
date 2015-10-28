@@ -213,9 +213,7 @@ config.lodash = {
       'include': [
         'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
         'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'contains',
-        'last', 'clone', 'cloneDeep', 'isEqual', 'find', 'sortBy', 'throttle',
-        'uniq'
-      ]
+        'last', 'clone', 'isEqual', 'find', 'sortBy', 'throttle']
     }
   }
 };

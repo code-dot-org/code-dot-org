@@ -856,15 +856,23 @@ var projects = module.exports = {
     current.levelHtml = sourceAndHtml.html;
     current.level = this.appToProjectUrl();
 
-    var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
-    sources.put(channelId, packSourceFile(), filename, function (err, response) {
-      currentSourceVersionId = response.versionId;
-      current.migratedToS3 = true;
-      channels.update(channelId, current, function (err, data) {
-        this.updateCurrentData_(err, data, false);
+    if (channelId && current.isOwner) {
+      var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
+      sources.put(channelId, packSourceFile(), filename, function (err, response) {
+        currentSourceVersionId = response.versionId;
+        current.migratedToS3 = true;
+        channels.update(channelId, current, function (err, data) {
+          this.updateCurrentData_(err, data, false);
+          executeCallback(callback, data);
+        }.bind(this));
+      }.bind(this));
+    } else {
+      // TODO: remove once the server is providing the channel ID (/c/ remix uses `copy`)
+      channels.create(current, function (err, data) {
+        this.updateCurrentData_(err, data, true);
         executeCallback(callback, data);
       }.bind(this));
-    }.bind(this));
+    }
   },
   updateCurrentData_: function (err, data, isNewChannel) {
     if (err) {
@@ -899,10 +907,6 @@ var projects = module.exports = {
     // `getLevelSource()` is expensive for Blockly so only call
     // after `workspaceChange` has fired
     if (!appOptions.droplet && !hasProjectChanged) {
-      return;
-    }
-
-    if ($('#designModeViz .ui-draggable-dragging').length !== 0) {
       return;
     }
 
@@ -987,9 +991,13 @@ var projects = module.exports = {
   },
   delete: function(callback) {
     var channelId = current.id;
-    channels.delete(channelId, function(err, data) {
-      executeCallback(callback, data);
-    });
+    if (channelId) {
+      channels.delete(channelId, function(err, data) {
+        executeCallback(callback, data);
+      });
+    } else {
+      executeCallback(callback, false);
+    }
   },
   /**
    * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.

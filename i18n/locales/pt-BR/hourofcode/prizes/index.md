@@ -28,7 +28,7 @@ Todos os educadores que sediarem uma Hora do Código para estudantes recebem 10 
 
 ## Prêmios para TODOS os organizadores
 
-**Cada** educador que sedia uma Hora do Código pode concorrer para receber **US$10,00 na Amazon.com, no iTunes ou na Windows Store** como agradecimento!
+**Every** educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com, iTunes or Windows Store** as a thank-you gift!
 
 <img style="float:left;" src="/images/fit-130/amazon_giftcards.png" />
 
@@ -52,19 +52,19 @@ Uma escola sorteada de *cada* Estado dos EUA (e de Washington D.C.) ganhará o e
 
 ## Quem pode receber os presentes de agradecimento?
 
-Todos os organizadores da Hora do Código de 2015, dentro e fora dos Estados Unidos, podem receber os presentes de agradecimento, Contudo, o prêmio de US$10.000 em hardware é limitado aos que residem nos Estados Unidos.
+Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank-you gift. The $10K hardware prize is limited to US residents only.
 
 ## Existe um prazo-limite de inscrição para receber todos os presentes de agradecimento?
 
-Você deve se inscrever **antes** de <%= campaign_date('start_long') %> para poder receber os presentes de agradecimento.
+You must sign up **before** <%= campaign_date('start_long') %> in order to be eligible to receive the all organizer thank-you gift.
 
 ## Quando vou receber meu presente de agradecimento?
 
-Entraremos em contato em dezembro, após a Semana da Educação em Ciência da Computação (<%= campaign_date('full') %>), para informar os próximos passos para você resgatar seu presente.
+We will contact you in December after Computer Science Education Week (<%= campaign_date('full') %>) with next steps on how to redeem your choice of thank-you gift.
 
-## Posso resgatar todas as opções de presentes?
+## Can I redeem all of the thank-you gift options?
 
-Não. Os presentes se limitam a um por organizador. Vamos entrar em contato em dezembro, após a Semana da Educação em Ciência da Computação, para informar os próximos passos para você resgatar seu presente.
+No. Thank-you gifts are limited to one per organizer. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank-you gift.
 
 <% if @country == 'us' %>
 
@@ -84,14 +84,14 @@ Nós adoraríamos ajudar tanto os professores das escolas públicas quanto os da
 
 Para concorrer, você precisa preencher o [formulário de solicitação de hardware](%= resolve_url('/prizes/hardware-signup') %) até 16 de novembro de 2015. Uma escola de cada Estado dos EUA receberá um conjunto de computadores para a sala de aula. A Code.org vai selecionar e notificar os vencedores por e-mail, em 1º de dezembro de 2015.
 
+## If my whole school can’t do the Hour of Code during Computer Science Education Week (<%= campaign_date('short') %>), can I still qualify for prizes?
+
+Yes, in the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) include the dates that your whole school is participating.
+
 <% end %>
-
-## Se apenas parte da minha escola conseguir fazer a Hora do Código durante a Semana da Educação em Ciência da Computação (<%= campaign_date('short') %>), ainda poderei concorrer aos prêmios?
-
-Sim, no [formulário de solicitação de hardware](%= resolve_url('/prizes/hardware-signup') %) estão as datas de participação de toda sua escola.
 
 ## Eu não estou nos Estados Unidos. Posso concorrer aos prêmios?
 
-Sim, todos os organizadores, dentro e fora dos Estados Unidos, podem receber os presentes de agradecimento, Contudo, o prêmio de US$10.000 em hardware é limitado aos Estados Unidos.
+Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift. The $10K hardware prize is US only.
 
 <% end %> <%= view :signup_button %>

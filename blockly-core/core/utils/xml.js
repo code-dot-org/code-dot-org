@@ -252,36 +252,36 @@ Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
     cursor.y += block.getHeightWidth().height + Blockly.BlockSvg.SEP_SPACE_Y;
   };
 
-  var block, blockX, blockY, currentPosition;
+  var block, xmlChild, blockX, blockY;
 
   // Two passes. First pass positions the visible blocks and caches the
   // hidden, second pass positions the hidden
   var hiddenBlocks = [];
 
-  for (var i = 0, xmlChild; (xmlChild = xml.childNodes[i]); i++) {
+  for (var i = 0; i < xml.childNodes.length; i++) {
+    xmlChild = xml.childNodes[i];
     if (xmlChild.nodeName.toLowerCase() === 'block') {
       block = Blockly.Xml.domToBlock(blockSpace, xmlChild);
-
-      // Position the blocks relative to each other
-      if (block.isVisible()) {
-        positionBlock(block);
-      } else {
-        hiddenBlocks.push(block);
-      }
 
       blockX = parseInt(xmlChild.getAttribute('x'), 10);
       blockY = parseInt(xmlChild.getAttribute('y'), 10);
 
       // If the XML specifies an X or Y (or both) value, position the
-      // block absolutely using those values.
+      // block absolutely using those. Otherwise, position the block
+      // relative to the other relative blocks.
       if (!isNaN(blockX) || !isNaN(blockY)) {
-        currentPosition = block.getRelativeToSurfaceXY();
-        blockX = isNaN(blockX) ? currentPosition.x : blockX;
-        blockY = isNaN(blockY) ? currentPosition.y : blockY;
+        blockX = isNaN(blockX) ? paddingLeft : blockX;
+        blockY = isNaN(blockY) ? paddingTop : blockY;
 
-        blockX = Blockly.RTL ? -blockX : blockX;
+        blockX = Blockly.RTL ? width - blockX : blockX;
 
-        block.moveTo(blockX, blockY);
+        block.moveBy(blockX, blockY);
+      } else {
+        if (block.isVisible()) {
+          positionBlock(block);
+        } else {
+          hiddenBlocks.push(block);
+        }
       }
     }
   }

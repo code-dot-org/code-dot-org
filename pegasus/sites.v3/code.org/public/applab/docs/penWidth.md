@@ -70,7 +70,7 @@ ____________________________________________________
 
 <table>
 <tr>
-<td style="border-style:none; width:90%; padding:0px">
+<td>
 <pre>
 // Draws horizontal lines with thickness 10 pixels to 90 pixels, counting by 10.
 penUp();
@@ -88,8 +88,8 @@ for (var i = 1; i &lt; 10; i++) {
 }
 </pre>
 </td>
-<td style="border-style:none; width:10%; padding:0px">
-<img src='https://images.code.org/03cfbdabcc8ad16e00d8fac04b6965f6-image-1445170155057.gif'>
+<td>
+<img src='https://images.code.org/03cfbdabcc8ad16e00d8fac04b6965f6-image-1445170155057.gif' style='width: 150px;'> 
 </td>
 </tr>
 </table>

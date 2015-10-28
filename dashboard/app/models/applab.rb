@@ -179,12 +179,12 @@ class Applab < Blockly
         "andOperator": null,
         "orOperator": null,
         "notOperator": null,
+        "randomNumber_max": null,
         "randomNumber_min_max": null,
         "mathRound": null,
         "mathAbs": null,
         "mathMax": null,
         "mathMin": null,
-        "mathRandom": null,
 
         // Variables
         "declareAssign_x": null,
@@ -196,7 +196,6 @@ class Applab < Blockly
         "declareAssign_str_hello_world": null,
         "substring": null,
         "indexOf": null,
-        "includes": null,
         "length": null,
         "toUpperCase": null,
         "toLowerCase": null,

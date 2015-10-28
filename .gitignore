@@ -4,7 +4,7 @@
 .DS_Store
 .dropbox
 .idea/
-**/.bundle
+/.bundle
 /.gdrive_session
 /crontab
 /dashboard/public/blockly

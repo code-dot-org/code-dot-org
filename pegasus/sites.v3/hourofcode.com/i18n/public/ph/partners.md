@@ -14,14 +14,6 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-<% if @country == 'ac' %>
-
-# Africa Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
-
-<% end %>
-
 <% if @country == 'au' %>
 
 # Australia Partners
@@ -35,14 +27,6 @@ title: <%= hoc_s(:title_partners) %>
 # Indonesia Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
-
-<% end %>
-
-<% if @country == 'in' %>
-
-# India Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
 <% end %>
 
@@ -70,37 +54,37 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-# Major Kasosyo at mga tagasuporta Corporate
+# Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 ---
 
-# Major Kasosyo Pang-promosyon
+# Major Promotional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 ---
 
-# International na Mga Kasosyo
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Kasosyo sa Tutorial
+# Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Mga kasosyo sa imprastraktura at mga gamit
+# Infrastructure partners and tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 ---
 
-# Karagdagang Mga Kasosyo
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

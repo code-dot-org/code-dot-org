@@ -6,7 +6,7 @@ nav: how_to_nav
 
 ---
 
-# Könüllülər üçün təlimat
+# How-to Guide for Volunteers
 
 ## 1. Sign up to volunteer
 
@@ -19,7 +19,7 @@ We'll be hosting two webinars to explain what a typical volunteer experience wil
 | Date        | Time                  |
 | ----------- | --------------------- |
 | November 16 | 1:00pm - 1:30pm PST   |
-| 3 dekabr    | 11:00am - 11:30am PST |
+| December 3  | 11:00am - 11:30am PST |
 
 ## 3. Spend 30 minutes trying the tutorials beforehand
 

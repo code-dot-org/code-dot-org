@@ -16,7 +16,6 @@ apt_package 'libsqlite3-dev'
 
 include_recipe 'cdo-apps::dashboard'
 include_recipe 'cdo-apps::pegasus'
-include_recipe 'cdo-apps::chef_credentials'
 
 template "/home/#{node[:current_user]}/#{node.chef_environment}/crontab" do
   source 'crontab.erb'

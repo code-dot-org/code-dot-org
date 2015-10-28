@@ -198,5 +198,5 @@ Scenario Outline: Simple page view without instructions dialog
   And I see no difference for "initial load"
   And I close my eyes
 Examples:
-  | url                                                               | test_name                 |
-  | http://learn.code.org/projects/applab/new                         | new applab project        |
+  | url                                                                | test_name                 |
+  | http://learn.code.org/p/applab                                     | new applab project        |

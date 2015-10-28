@@ -14,14 +14,6 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-<% if @country == 'ac' %>
-
-# Africa Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
-
-<% end %>
-
 <% if @country == 'au' %>
 
 # Australia Partners
@@ -35,14 +27,6 @@ title: <%= hoc_s(:title_partners) %>
 # Indonesia Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
-
-<% end %>
-
-<% if @country == 'in' %>
-
-# India Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
 <% end %>
 
@@ -70,37 +54,37 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-# 主要合作夥伴和企業的贊助者
+# Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# 宣傳的主要夥伴
+# Major Promotional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# 國際夥伴
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# 教案的夥伴
+# Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# 基礎設施的合作夥伴和工具
+# Infrastructure partners and tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 * * *
 
-# 更多的夥伴
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

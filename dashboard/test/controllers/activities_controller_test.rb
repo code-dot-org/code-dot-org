@@ -101,26 +101,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal @script_level.script, UserLevel.last.script
   end
 
-  test "successful milestone does not require script_level_id" do
-    params = @milestone_params
-    params[:script_level_id] = nil
-    params[:level_id] = @script_level.level.id
-    params[:result] = 'true'
-
-    post :milestone, params
-    assert_response :success
-  end
-
-  test "unsuccessful milestone does not require script_level_id" do
-    params = @milestone_params
-    params[:script_level_id] = nil
-    params[:level_id] = @script_level.level.id
-    params[:result] = 'false'
-
-    post :milestone, params
-    assert_response :success
-  end
-
   test "logged in milestone with existing userlevel with script" do
     # do all the logging
     @controller.expects :log_milestone

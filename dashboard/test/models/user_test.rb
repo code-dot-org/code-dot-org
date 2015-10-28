@@ -890,13 +890,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'email confirmation required for teachers' do
-    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
+    user = create :teacher, email: 'my_email@test.xx'
     assert user.confirmation_required?
     assert !user.confirmed_at
   end
 
   test 'email confirmation not required for students' do
-    user = create :student, email: 'my_email@test.xx', confirmed_at: nil
+    user = create :student, email: 'my_email@test.xx'
     assert !user.confirmation_required?
     assert !user.confirmed_at
   end

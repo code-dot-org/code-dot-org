@@ -14,14 +14,6 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-<% if @country == 'ac' %>
-
-# Africa Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
-
-<% end %>
-
 <% if @country == 'au' %>
 
 # Australia Partners
@@ -35,14 +27,6 @@ title: <%= hoc_s(:title_partners) %>
 # Indonesia Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
-
-<% end %>
-
-<% if @country == 'in' %>
-
-# India Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
 <% end %>
 
@@ -70,19 +54,19 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-# 주요 파트너와 기업 서포터즈
+# Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# 주요 지원 파트너
+# Major Promotional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# 국제 파트너
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
@@ -94,7 +78,7 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-# 인프라구축 파트너 및 도구
+# Infrastructure partners and tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

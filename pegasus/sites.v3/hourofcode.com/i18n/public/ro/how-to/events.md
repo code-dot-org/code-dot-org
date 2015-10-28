@@ -10,7 +10,7 @@ nav: how_to_nav
 
 # Cum sa organizezi un eveniment Hour of Code
 
-Organizeaza un eveniment Hour of Code in timpul Saptamanii Mondiale a Educatiei in Stiinta Computerelor (<%= campaign_date('short') %>) pentru a celebra tehnologia computerelor si programarea si pentru a inspira cat mai multi elevi sa o incerce. Oricine, oriunde poate organiza un eveniment Hour of Code.
+Organizeaza un eveniment Hour of Code in timpul Saptamanii Mondiale a Educatiei (<%= campaign_date('short') %>) pentru a celebra tehnologia computerelor si programarea si pentru a inspira cat mai multi elevi sa o incerce. Oricine, oriunde poate organiza un eveniment Hour of Code.
 
 ## 1) Pregăteşte-te pentru eveniment
 

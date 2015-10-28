@@ -1,7 +1,6 @@
 ---
 
-title: <%= hoc_s(:title_how_to_districts) %>
-layout: wide
+Заглавие: < % = hoc_s(:title_how_to) %> оформление: широка
 nav: how_to_nav
 
 ---

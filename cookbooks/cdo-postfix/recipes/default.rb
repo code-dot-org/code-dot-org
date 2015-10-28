@@ -29,9 +29,7 @@ end
   "virtual",
   "virtual.db",
 ].each do |file|
-  path = "/etc/postfix/#{file}"
-  cookbook_file path do
-    not_if { File.exists? path }
+  cookbook_file "/etc/postfix/#{file}" do
     source file
     owner "postfix"
     group "postfix"
@@ -44,9 +42,7 @@ end
   "post-install",
   "postfix-script",
 ].each do |file|
-  path = "/etc/postfix/#{file}"
-  cookbook_file path do
-    not_if { File.exists? path }
+  cookbook_file "/etc/postfix/#{file}" do
     source file
     owner "postfix"
     group "postfix"
@@ -60,9 +56,7 @@ end
   "aliases",
   "aliases.db",
 ].each do |file|
-  path = "/etc/#{file}"
-  cookbook_file path do
-    not_if { File.exists? path }
+  cookbook_file "/etc/#{file}" do
     source file
     owner "root"
     group "root"

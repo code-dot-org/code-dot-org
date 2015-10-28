@@ -8,23 +8,15 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'la' %>
 
-# Parteneri din America Latină
+# Latin America Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
 <% end %>
 
-<% if @country == 'ac' %>
-
-# Africa Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
-
-<% end %>
-
 <% if @country == 'au' %>
 
-# Parteneri din Australia
+# Australia Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -32,23 +24,15 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'id' %>
 
-# Parteneri din Indonesia
+# Indonesia Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
 <% end %>
 
-<% if @country == 'in' %>
-
-# India Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
-
-<% end %>
-
 <% if @country == 'jp' %>
 
-# Parteneri din Japonia
+# Japan Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -56,7 +40,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'uk' %>
 
-# Parteneri din Marea Britanie
+# United Kingdom Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -64,43 +48,43 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'ca' %>
 
-# Parteneri din Canada
+# Canada Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
 <% end %>
 
-# Sponsori majori si susținători Corporate
+# Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 ---
 
-# Parteneri promotionali importanți
+# Major Promotional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 ---
 
-# Parteneri Internationali
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Parteneri pentru Tutoriale
+# Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Parteneri de infrastructură şi instrumente
+# Infrastructure partners and tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 ---
 
-# Alți parteneri
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

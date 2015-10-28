@@ -42,9 +42,6 @@ class ProjectsController < ApplicationController
   end
 
   def load
-    if STANDALONE_PROJECTS[params[:key]][:login_required]
-      authenticate_user!
-    end
     return if redirect_applab_under_13(@level)
     if current_user
       channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
@@ -77,7 +74,6 @@ class ProjectsController < ApplicationController
         readonly_workspace: sharing || readonly,
         full_width: true,
         callouts: [],
-        channel: params[:channel_id],
         no_padding: browser.mobile? && @game.share_mobile_fullscreen?,
         # for sharing pages, the app will display the footer inside the playspace instead
         no_footer: sharing && @game.owns_footer_for_share?,

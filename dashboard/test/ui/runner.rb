@@ -320,7 +320,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     end
     short_message = message
 
-    message += "<br/><i>rerun: bundle exec ./runner.rb -c #{browser_name} -f #{feature} #{'--eyes' if $options.run_eyes_tests} --html</i>"
+    message += "<br/><i>rerun: bundle exec ./runner.rb -c #{browser_name} -f #{feature} --html</i>"
     HipChat.log message, color: 'red'
     HipChat.developers short_message, color: 'red' if Rails.env.test?
   end

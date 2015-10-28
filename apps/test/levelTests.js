@@ -92,8 +92,8 @@ describe('Level tests', function() {
       // file from shared here.
       project: {
         clearHtml: function() {},
-        exceedsAbuseThreshold: function () { return false; },
         getCurrentId: function () { return 'fake_id'; },
+        exceedsAbuseThreshold: function () { return false; },
         isEditing: function () { return true; }
       }
     });
@@ -133,8 +133,10 @@ describe('Level tests', function() {
     };
 
     if (window.Studio) {
-      var StudioAnimation = require('@cdo/apps/studio/StudioAnimation');
-      StudioAnimation.__resetIds();
+      var Projectile = require('@cdo/apps/studio/projectile');
+      Projectile.__resetIds();
+      var Item = require('@cdo/apps/studio/Item');
+      Item.__resetIds();
       Studio.JSInterpreter = undefined;
     }
 

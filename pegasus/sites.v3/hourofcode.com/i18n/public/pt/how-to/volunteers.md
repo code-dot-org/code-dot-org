@@ -14,7 +14,7 @@ Visite uma sala de aula da sua região e inspire os alunos a continuar aprendend
 
 ## 2. Participe de um webinar para treinamento de voluntários
 
-Vamos sediar dois webinars para explicar como será uma típica experiência de voluntariado. Vamos discutir como coordenar com os professores antes de seu evento da Hora do Código e o que você deve fazer no dia do evento para se preparar. Traga suas perguntas! Esses webinars serão organizados via Hangouts, então se você por acaso perder algum, você pode assistir à sessão gravada depois.
+We'll be hosting two webinars to explain what a typical volunteer experience will be like. We'll discuss how to coordinate with teachers before their Hour of Code event and also what you should do the day of the event to prepare. Please come with your questions! These webinars will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later.
 
 | Data           | Hora                                |
 | -------------- | ----------------------------------- |
@@ -31,23 +31,23 @@ Conte aos seus amigos e colegas sobre a Hora do Código. Temos milhares de profe
 
 **Modelo de e-mail:**
 
-**Linha de assunto**: Junte-se a mim no voluntariado da Hora do Código
+**Subject line**: Join me in volunteering for the Hour of Code
 
-Se você se lembra de sua primeira linha de código, você sabe que ela moldou o resto da sua vida.
+If you remember your very first line of code, you know it shaped the rest of your life.
 
-É disso que se trata a Hora do Código. Nos últimos dois anos, o movimento quebrou estereótipos de como é programar e ajudar mais de 100 milhões de alunos em 180 países a experimentar a ciência da computação pela primeira vez.
+That’s what the Hour of Code is all about. In the last two years, the movement has shattered stereotypes of what it’s like to code and helped more than 100 million students in 180 countries try computer science for the first time.
 
-**Eu me cadastrei como voluntário em uma sala de aula da região**   
-7.098 professores já pediram ajuda. A Code.org está correspondendo salas de aula a voluntários como você, que podem ajudar os alunos e os professores em sua primeira Hora do Código.
+**I signed up to volunteer in local classroom**   
+7,098 teachers have already asked for help. Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
 
-Seja [voluntário por uma hora](https://code.org/volunteer/engineer). Depois de se cadastrar, os professores da região poderão entrar em contato com você pedindo ajuda por meio de um formulário de segurança.* Você não pode se voluntariar? [Ajude a divulgar a Hora do Código](https://hourofcode.com/promote).
+Please [volunteer for an hour](https://code.org/volunteer/engineer). After you sign up, local teachers will be able to contact you for help using a secure form.* Can’t volunteer? [Help spread the word about the Hour of Code](https://hourofcode.com/promote).
 
-**Sua experiência é importante**  
-A maioria das escolas ainda não ensina ciência da computação. A maioria dos alunos não sabe que ela resolve grandes problemas e conecta as pessoas. Essa é uma chance de inspirar pelo menos um jovem da sua região.
+**Your experience matters**  
+Most schools still don’t teach computer science. Most students don’t know that it’s about solving big problems and connecting us all closer together. This is a chance to inspire at least one young person in your area.
 
-**[Cadastre-se como voluntário](https://code.org/volunteer/engineer)**
+**[Sign up to volunteer](https://code.org/volunteer/engineer)**
 
-*Seu endereço de e-mail jamais será compartilhado com os professores.
+*Your email address will never be shared with teachers.
 
 ## 5. Peça para seu empregador participar
 
@@ -63,10 +63,10 @@ Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de ve
 
 ### 1. Cadastre-se na escola e conheça o professor. Confirme o cronograma combinado e discuta quaisquer assuntos.
 
-### 2. Traga materiais da sua empresa, como adesivos. As crianças adoram qualquer coisa com a qual elas podem interagir.
+### 2. Bring stuff from your company like stickers. Kids love anything they can interact with.
 
-### 3. Fale sobre a ciência da computação por 5 ou 10 minutos: qual o impacto que ela teve em sua vida e qual é a importância dela para o mundo todo. Responda a perguntas dos alunos.
+### 3. Spend 5-10 minutes talking about computer science: how it impacted you personally and how it has broad, worldwide impact. Answer any questions from students.
 
-### 4. Passe o [vídeo da Hora do Código](https://www.youtube.com/watch?v=2DxWIxec6yo)
+### 4. Play the [Hour of Code video](https://www.youtube.com/watch?v=2DxWIxec6yo)
 
-### 5. Deixe os alunos fazerem os tutoriais. Ande pela sala, responda a perguntas e oriente os alunos em seus desafios. Tente não dar a solução definitiva. Ao invés disso, faça perguntas para que eles mesmos possam responder o que deu errado.
+### 5. Let the students dive into the tutorials. Walk around the classroom answering any questions and guiding them through tough puzzles. Try not to give students the solution outright. Instead try asking them questions so they can answer themselves what went wrong.

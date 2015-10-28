@@ -1,12 +1,10 @@
 machine:
   ruby:
-    version: 2.2.3
-  services:
-    - docker
+    version: 2.0.0-p647
 dependencies:
   cache_directories:
     - "apps/node_modules"
-    - "~/.rvm/gems/ruby-2.2.3"
+    - "~/.rvm/gems/ruby-2.0.0-p647"
   override:
     - sudo apt-get install libicu-dev
     - bundle install
@@ -34,12 +32,9 @@ test:
         - bundle exec rake test:
             pwd:
                 shared
-        - for i in 1 2; do grunt test && break; done:
+        - grunt test:
             pwd:
                 apps
         - bundle exec rake konacha:run:
             pwd:
                 dashboard
-        - ./test.sh:
-            pwd:
-                cookbooks

@@ -172,7 +172,7 @@ pt:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Prêmios para todos os educadores
   prizes_10k: Uma escola pública de cada Estado dos EUA (e Washington D.C.) ganhará US$10 mil em tecnologia
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
+  prizes_gift_cards: Todos os organizadores vão receber um cartão de presente com créditos na Amazon.com ou na loja da Microsoft.
   whats_next_header: O que vem depois?
   whats_next_description: "Enviaremos materiais e dicas para seu evento. Novos tutoriais para 2015 estarão disponíveis em breve para qualquer navegador, smartphone ou até mesmo para fazer offline! <a href='http://code.org/learn'>Experimente nossos tutoriais</a>"
   whats_next_how_to: "<a href='/how-to'>Como fazer uma Hora do Código</a>"
@@ -228,7 +228,7 @@ pt:
   signup_event_location_label: Local do evento (opcional)
   signup_special_event_flag_label: Destaque meu evento especial
   signup_special_event_details_label: Detalhes do evento especial
-  signup_send_posters_flag_label: 'Enviar <a href= "/resources#posters">posters</a> para a minha escola ou organização'
+  signup_send_posters_flag_label: 'Envie <a href= "/resources/promote#posters">cartazes</a> para minha escola ou organização'
   signup_send_posters_address_label: Endereço da escola ou organização
   signup_whole_school_flag_label: Este evento é para a escola inteira
   signup_your_event: Registre seu evento

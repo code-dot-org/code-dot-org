@@ -13,8 +13,7 @@
       <span class="header-text"><%= applabMsg.debugCommandsHeaderWhenOpen() %></span>
     </div>
     <div id="clear-console-header" class="workspace-header workspace-header-button"><span><i class="fa fa-eraser"></i>Clear</span></div>
-    <% } %>
-    <div id="slider-cell" style="margin-left: <%= debugButtons ? 0 : 40 %>px">
+    <div id="slider-cell">
       <svg id="applab-slider"
            xmlns="http://www.w3.org/2000/svg"
            xmlns:svg="http://www.w3.org/2000/svg"
@@ -36,6 +35,7 @@
               clip-path="url(#fastClipPath)" />
       </svg>
     </div>
+    <% } %>
   </div>
 
   <% if (debugButtons) { %>

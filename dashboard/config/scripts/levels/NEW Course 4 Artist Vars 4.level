@@ -30,8 +30,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "ideal": "17",
-    "never_autoplay_video": "false"
+    "ideal": "17"
   }
 }]]></config>
   <blocks>
@@ -39,48 +38,48 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="variables_set" inline="false" deletable="false" movable="false">
+            <block type="variables_set" inline="false" deletable="false">
               <title name="VAR">length</title>
               <next>
-                <block type="controls_repeat_ext" inline="true" deletable="false" movable="false">
+                <block type="controls_repeat_ext" inline="true" deletable="false">
                   <value name="TIMES">
-                    <block type="math_number" deletable="true" movable="true" editable="true">
+                    <block type="math_number" deletable="false">
                       <title name="NUM">6</title>
                     </block>
                   </value>
                   <statement name="DO">
-                    <block type="draw_colour" inline="true" deletable="false" movable="false">
+                    <block type="draw_colour" inline="true" deletable="false">
                       <value name="COLOUR">
-                        <block type="colour_random"/>
+                        <block type="colour_random" deletable="false"/>
                       </value>
                       <next>
-                        <block type="controls_repeat_ext" inline="true" deletable="false" movable="false">
+                        <block type="controls_repeat_ext" inline="true" deletable="false">
                           <value name="TIMES">
-                            <block type="math_number" deletable="true" movable="true" editable="true">
+                            <block type="math_number" deletable="false">
                               <title name="NUM">6</title>
                             </block>
                           </value>
                           <statement name="DO">
-                            <block type="draw_move" inline="true" deletable="false" movable="false">
+                            <block type="draw_move" inline="true" deletable="false">
                               <title name="DIR">moveForward</title>
                               <value name="VALUE">
-                                <block type="variables_get">
+                                <block type="variables_get" deletable="false">
                                   <title name="VAR">length</title>
                                 </block>
                               </value>
                               <next>
-                                <block type="draw_turn" inline="true" deletable="false" movable="false">
+                                <block type="draw_turn" inline="true" deletable="false">
                                   <title name="DIR">turnLeft</title>
                                   <value name="VALUE">
-                                    <block type="math_arithmetic" inline="true" deletable="false" movable="false">
+                                    <block type="math_arithmetic" inline="true" deletable="false">
                                       <title name="OP">DIVIDE</title>
                                       <value name="A">
-                                        <block type="math_number" deletable="true" movable="true" editable="true">
+                                        <block type="math_number" deletable="false">
                                           <title name="NUM">360</title>
                                         </block>
                                       </value>
                                       <value name="B">
-                                        <block type="math_number" deletable="true" movable="true" editable="true">
+                                        <block type="math_number" deletable="false">
                                           <title name="NUM">6</title>
                                         </block>
                                       </value>
@@ -91,10 +90,10 @@
                             </block>
                           </statement>
                           <next>
-                            <block type="draw_turn" inline="true" deletable="false" movable="false">
+                            <block type="draw_turn" inline="true" deletable="false">
                               <title name="DIR">turnLeft</title>
                               <value name="VALUE">
-                                <block type="math_number" deletable="true" movable="true" editable="true">
+                                <block type="math_number" deletable="false">
                                   <title name="NUM">60</title>
                                 </block>
                               </value>
@@ -116,13 +115,6 @@
         <block type="math_number">
           <title name="NUM">???</title>
         </block>
-        <block type="variables_get">
-          <title name="VAR">length</title>
-        </block>
-        <block type="colour_picker">
-          <title name="COLOUR">#ff0000</title>
-        </block>
-        <block type="colour_random"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>

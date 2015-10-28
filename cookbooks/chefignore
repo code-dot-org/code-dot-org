@@ -63,5 +63,3 @@ $RECYCLE.BIN/
 .hg/*
 */.hg/*
 .hgignore
-
-.env

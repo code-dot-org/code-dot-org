@@ -112,10 +112,11 @@ class WorkshopTest < ActiveSupport::TestCase
   test "send automated emails" do
     Workshop.send_automated_emails
 
-    assert_equal 4, ActionMailer::Base.deliveries.count
+    assert_equal 11, ActionMailer::Base.deliveries.count
 
     subjects = ActionMailer::Base.deliveries.map(&:subject)
 
+    assert_equal 7, subjects.grep(/confirmation instructions/).count
     assert_equal 1, subjects.grep(/Important: Your workshop is coming up in 14 days/).count
     assert_equal 1, subjects.grep(/Important: Your workshop is coming up in 3 days/).count
     assert_equal 2, subjects.grep(/Feedback requested for your Code.org PD workshop/).count

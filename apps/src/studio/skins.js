@@ -248,13 +248,13 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
-    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
-    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
+    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
+    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
+    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
+    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -329,15 +329,6 @@ function loadHoc2015(skin, assetUrl) {
     };
   });
 
-  skin.bot1.movementAudio = [
-    { begin: 'bot1_move1_start', loop: 'bot1_move1_loop', end: 'bot1_move1_end' },
-    { begin: 'bot1_move2_start', loop: 'bot1_move2_loop', end: 'bot1_move2_end' },
-    { begin: 'bot1_move3_start', loop: 'bot1_move3_loop', end: 'bot1_move3_end' }
-  ];
-  skin.bot2.movementAudio = [
-    { loop: 'bot2_move_loop', end: 'bot2_move_end' }
-  ];
-
   skin.preventProjectileLoop = function (className) {
     return className === '';
   };
@@ -345,9 +336,6 @@ function loadHoc2015(skin, assetUrl) {
   skin.preventItemLoop = function (className) {
     return className === 'item_character1';
   };
-
-  // No failure avatar for this skin.
-  skin.failureAvatar = null;
 
   // TODO: Create actual item choices
   skin.pig = skin.assetUrl('walk_item1.png');
@@ -479,13 +467,9 @@ function loadHoc2015(skin, assetUrl) {
   skin.sounds = [
     'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
     'character1sound5', 'character1sound6', 'character1sound7', 'character1sound8',
-    'character1sound9',
     'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
     'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
     'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
-    'item4sound1', 'item4sound2', 'item4sound3',
-    'item5sound1', 'item5sound2', 'item5sound3',
-    'item6sound1', 'item6sound2', 'item6sound3',
     'alert1', 'alert2', 'alert3', 'alert4',
     'applause',
     'start', 'win', 'failure', 'flag',
@@ -495,6 +479,8 @@ function loadHoc2015(skin, assetUrl) {
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
   skin.playFinalGoalSound = true;
+
+  skin.moveSounds = ['move1', 'move2', 'move3'];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes
@@ -631,21 +617,15 @@ function loadHoc2015x(skin, assetUrl) {
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 21,
+        normal: 8,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: 19
+        walk: 10
       },
       timePerFrame: 100
     };
   });
-  skin.bot1.movementAudio = [
-    { begin: 'move1' },
-    { begin: 'move2' },
-    { begin: 'move3' },
-    { begin: 'move4' }
-  ];
 
   skin.preventProjectileLoop = function (className) {
     return className === '';
@@ -670,6 +650,12 @@ function loadHoc2015x(skin, assetUrl) {
 
   // Sounds.
   skin.sounds = [
+    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
+    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
+    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
+    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
+    'alert1', 'alert2', 'alert3', 'alert4',
+    'applause',
     'start', 'win', 'failure', 'flag',
     'move1', 'move2', 'move3', 'move4'
   ];
@@ -677,6 +663,8 @@ function loadHoc2015x(skin, assetUrl) {
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
   skin.playFinalGoalSound = true;
+
+  skin.moveSounds = ['move1', 'move2', 'move3', 'move4'];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes

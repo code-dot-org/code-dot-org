@@ -89,33 +89,34 @@ frameDirTableWalking[Dir.SOUTHWEST]  = 7;
 exports.frameDirTableWalking = frameDirTableWalking;
 
 
-// Forward-to-left (clockwise)
-var frameDirTableWalkingWithIdleClockwise = {};
-frameDirTableWalkingWithIdleClockwise[Dir.NONE]       = 8;
-frameDirTableWalkingWithIdleClockwise[Dir.SOUTH]      = 0;
-frameDirTableWalkingWithIdleClockwise[Dir.SOUTHEAST]  = 1;
-frameDirTableWalkingWithIdleClockwise[Dir.EAST]       = 2;
-frameDirTableWalkingWithIdleClockwise[Dir.NORTHEAST]  = 3;
-frameDirTableWalkingWithIdleClockwise[Dir.NORTH]      = 4;
-frameDirTableWalkingWithIdleClockwise[Dir.NORTHWEST]  = 5;
-frameDirTableWalkingWithIdleClockwise[Dir.WEST]       = 6;
-frameDirTableWalkingWithIdleClockwise[Dir.SOUTHWEST]  = 7;
+// Normal for preview
+var frameDirTableWalkingWithIdle = {};
+frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
+frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
+frameDirTableWalkingWithIdle[Dir.SOUTHEAST]  = 1;
+frameDirTableWalkingWithIdle[Dir.EAST]       = 2;
+frameDirTableWalkingWithIdle[Dir.NORTHEAST]  = 3;
+frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
+frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 5;
+frameDirTableWalkingWithIdle[Dir.WEST]       = 6;
+frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 7;
 
-exports.frameDirTableWalkingWithIdleClockwise = frameDirTableWalkingWithIdleClockwise;
 
-// Forward-to-right (counter-clockwise)
-var frameDirTableWalkingWithIdleCounterclockwise = {};
-frameDirTableWalkingWithIdleCounterclockwise[Dir.NONE]       = 8;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTH]      = 0;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHEAST]  = 7;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.EAST]       = 6;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTHEAST]  = 5;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTH]      = 4;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTHWEST]  = 3;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.WEST]       = 2;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHWEST]  = 1;
+// Reversed for final
+/*
+var frameDirTableWalkingWithIdle = {};
+frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
+frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
+frameDirTableWalkingWithIdle[Dir.SOUTHEAST]  = 7;
+frameDirTableWalkingWithIdle[Dir.EAST]       = 6;
+frameDirTableWalkingWithIdle[Dir.NORTHEAST]  = 5;
+frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
+frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 3;
+frameDirTableWalkingWithIdle[Dir.WEST]       = 2;
+frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 1;
+*/
 
-exports.frameDirTableWalkingWithIdleCounterclockwise = frameDirTableWalkingWithIdleCounterclockwise;
+exports.frameDirTableWalkingWithIdle = frameDirTableWalkingWithIdle;
 
 /**
  * Given a direction, returns the unit vector for it.
@@ -362,8 +363,8 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-/** @type {number} animation rate in frames per second. */
-exports.DEFAULT_ANIMATION_RATE = 20;
+exports.DEFAULT_ITEM_FRAME_RATE = 20;
+exports.DEFAULT_PROJECTILE_FRAME_RATE = 20;
 
 // Fade durations (in milliseconds)
 exports.GOAL_FADE_TIME = 200;

@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# Cum poti aduce Hour of Code in scolile din cartierul tau.
+# Cum poti aduce Hour of Code in scoala din cartierul tau.
 
 ## Implică fiecare școală in eveniment, fiecare elev trebuie sa invete!
 

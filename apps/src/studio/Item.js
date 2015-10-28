@@ -6,8 +6,11 @@ var Direction = constants.Direction;
 var NextTurn = constants.NextTurn;
 var utils = require('../utils');
 var _ = utils.getLodash();
-var StudioAnimation = require('./StudioAnimation');
-var StudioSpriteSheet = require('./StudioSpriteSheet');
+
+var SVG_NS = "http://www.w3.org/2000/svg";
+
+// uniqueId that increments by 1 each time an element is created
+var uniqueId = 0;
 
 /**
  * An Item is a type of Collidable.
@@ -21,8 +24,6 @@ var Item = function (options) {
   this.height = options.height || 50;
   this.width = options.width || 50;
 
-  this.spritesCounterclockwise = options.spritesCounterclockwise || false;
-
   /**
    * Rendering offset for item animation vs display position - applied as
    * late as possible.
@@ -31,21 +32,31 @@ var Item = function (options) {
   this.renderOffset = options.renderOffset || { x: 0, y: 0 };
 
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
+  this.renderScale = options.renderScale || 1;
   this.displayDir = Direction.SOUTH;
   this.startFadeTime = null;
   this.fadeTime = constants.ITEM_FADE_TIME;
 
-  /** @private {StudioAnimation} */
-  this.animation_ = new StudioAnimation($.extend({}, options, {
-    spriteSheet: new StudioSpriteSheet(options)
-  }));
+  this.currentFrame_ = 0;
+  this.setAnimationRate(
+      utils.valueOr(options.animationRate, constants.DEFAULT_ITEM_FRAME_RATE));
 };
 Item.inherits(Collidable);
 module.exports = Item;
 
-/** @returns {SVGImageElement} */
-Item.prototype.getElement = function () {
-  return this.animation_.getElement();
+/**
+ * Set the animation rate for this item's sprite.
+ * @param {number} framesPerSecond
+ */
+Item.prototype.setAnimationRate = function (framesPerSecond) {
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+  }
+  this.animator_ = window.setInterval(function () {
+    if (this.loop || this.currentFrame_ + 1 < this.frames) {
+      this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
+    }
+  }.bind(this), Math.round(1000 / framesPerSecond));
 };
 
 /**
@@ -62,18 +73,44 @@ Item.prototype.getDirectionFrame = function() {
     }
   }
 
-  var frameDirTable = this.spritesCounterclockwise ? 
-    constants.frameDirTableWalkingWithIdleCounterclockwise : 
-    constants.frameDirTableWalkingWithIdleClockwise;
+  return constants.frameDirTableWalkingWithIdle[this.displayDir];
+};
 
-  return frameDirTable[this.displayDir];
+/**
+ * Test only function so that we can start our id count over.
+ */
+Item.__resetIds = function () {
+  uniqueId = 0;
 };
 
 /**
  * Create an image element with a clip path
  */
 Item.prototype.createElement = function (parentElement) {
-  this.animation_.createElement(parentElement);
+  var nextId = (uniqueId++);
+
+  var numFacingAngles = 9;
+
+  // create our clipping path/rect
+  this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
+  var clipId = 'item_clippath_' + nextId;
+  this.clipPath.setAttribute('id', clipId);
+  var rect = document.createElementNS(SVG_NS, 'rect');
+  rect.setAttribute('width', this.width * this.renderScale);
+  rect.setAttribute('height', this.height * this.renderScale);
+  this.clipPath.appendChild(rect);
+
+  parentElement.appendChild(this.clipPath);
+  var itemId = 'item_' + nextId;
+  this.element = document.createElementNS(SVG_NS, 'image');
+  this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+    this.image);
+  this.element.setAttribute('id', itemId);
+  this.element.setAttribute('height', this.height * this.frames * this.renderScale);
+  this.element.setAttribute('width', this.width * numFacingAngles * this.renderScale);
+  parentElement.appendChild(this.element);
+
+  this.element.setAttribute('clip-path', 'url(#' + clipId + ')');
 };
 
 
@@ -297,7 +334,23 @@ Item.prototype.beginRemoveElement = function () {
  * Remove our element/clipPath/animator
  */
 Item.prototype.removeElement = function() {
-  this.animation_.removeElement();
+
+  if (this.element) {
+    this.element.parentNode.removeChild(this.element);
+    this.element = null;
+  }
+
+  // remove clip path element
+  if (this.clipPath) {
+    this.clipPath.parentNode.removeChild(this.clipPath);
+    this.clipPath = null;
+  }
+
+  if (this.animator_) {
+    window.clearInterval(this.animator_);
+    this.animator_ = null;
+  }
+
   Studio.trackedBehavior.removedItemCount++;
 };
 
@@ -324,12 +377,16 @@ Item.prototype.hasCompletedFade = function() {
  * Display our item at its current location
  */
 Item.prototype.display = function () {
+  var topLeft = {
+    x: this.x + this.renderOffset.x - this.width / 2,
+    y: this.y + this.renderOffset.y - this.height / 2
+  };
+
   var currentTime = new Date().getTime();
   var opacity = 1;
   if (this.startFadeTime) {
     opacity = 1 - (currentTime - this.startFadeTime) / this.fadeTime;
     opacity = Math.max(opacity, 0);
-    this.animation_.setOpacity(opacity);
   }
 
   // Watch behavior does not change logical position, should update every frame
@@ -337,11 +394,14 @@ Item.prototype.display = function () {
     this.turnToFaceActor(Studio.protagonistSpriteIndex || 0);
   }
 
-  this.animation_.setCurrentAnimation(this.getDirectionFrame());
-  this.animation_.redrawCenteredAt({
-    x: this.x + this.renderOffset.x,
-    y: this.y + this.renderOffset.y
-  });
+  var directionFrame = this.getDirectionFrame();
+  this.element.setAttribute('x', topLeft.x - this.width * (directionFrame * this.renderScale + (this.renderScale-1)/2));
+  this.element.setAttribute('y', topLeft.y - this.height * (this.currentFrame_ * this.renderScale + (this.renderScale-1)));
+  this.element.setAttribute('opacity', opacity);
+
+  var clipRect = this.clipPath.childNodes[0];
+  clipRect.setAttribute('x', topLeft.x - this.width * (this.renderScale-1)/2);
+  clipRect.setAttribute('y', topLeft.y - this.height * (this.renderScale-1));
 };
 
 Item.prototype.getNextPosition = function () {
@@ -375,12 +435,12 @@ Item.prototype.moveToNextPosition = function () {
 Item.prototype.startCollision = function (key) {
   var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
   if (newCollisionStarted) {
-    if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
-      Studio.trackedBehavior.touchedHazardCount++;
+    if (this.isHazard) {
       var actor = Studio.sprite[key];
       if (actor) {
         actor.addAction(new spriteActions.FadeActor(constants.TOUCH_HAZARD_FADE_TIME));
         actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_FADE_TIME));
+        Studio.fail(studioMsg.failedAvoidHazard());
       }
     }
   }
@@ -393,5 +453,7 @@ Item.prototype.startCollision = function (key) {
  * @override
  */
 Item.prototype.setOpacity = function (newOpacity) {
-  this.animation_.setOpacity(newOpacity);
+  if (this.element) {
+    this.element.setAttribute('opacity', newOpacity);
+  }
 };

@@ -162,7 +162,7 @@ gem 'haml_lint', require: false, group: [:development, :staging]
 gem 'lograge'
 
 # Enforce SSL
-gem 'rack-ssl-enforcer'
+gem 'rack-ssl-enforcer', group: [:development, :staging, :test, :levelbuilder]
 
 # PubSub for NetSim
 gem 'pusher', '~> 0.14.5'

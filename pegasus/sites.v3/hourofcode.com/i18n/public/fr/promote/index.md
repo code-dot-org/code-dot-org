@@ -13,33 +13,33 @@ twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '
 
 # Comment s'impliquer ?
 
-## 1. Inscrivez-vous pour organiser Une Heure de Code
+## 1. Sign up to host an Hour of Code
 
-N'importe qui, où qu'il se trouve, peut organiser Une Heure de Code. [inscrivez-vous](<%= resolve_url('/promote/resources#sample-emails') %>) pour recevoir les dernières informations et vous qualifier pour recevoir des prix.   
+Anyone, anywhere can host an Hour of Code. [Sign up](<%= resolve_url('/') %>) to receive updates and qualify for prizes.   
 
 
 [<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
 
-## 1. Partagez l'information autour de vous
+## 2. Spread the word
 
-Parlez-en à vos amis en utilisant **#HourOfCode**!
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Proposez à votre école de participer à Une Heure de Code
+## 3. Ask your whole school to offer an Hour of Code
 
-[Envoyez cet email](<%= resolve_url('/promote/resources#sample-emails') %>) à votre principal ou au directeur de votre école et proposez à chaque professeur de s'inscrire. Pour cela, c'est simple ! <% if @country == 'us' %> [Inscrivez-vous ici](<%= resolve_url('/prizes/hardware-signup') %>) pour être admissibles. <% end %>
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. Pour cela, c'est simple ! [Inscrivez-vous ici](<%= resolve_url('/prizes/hardware-signup') %>) pour être admissibles. <% end %>
 
 ## 4. Demandez à votre employeur de s'impliquer
 
-[Envoyez cet email](<%= resolve_url('/promote/resources#sample-emails') %>) à votre PDG ou au gérant de votre société.
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
 
-## 4. Faite la promotion de votre Heure de Code au sein de votre communauté
+## 5. Promote Hour of Code in your community
 
-[Recrutez un groupe local](<%= resolve_url('/promote/resources#sample-emails') %>) — associations, club de scouts, église, Université, groupe d'anciens combattants, syndicat ou tout simplement vos amis. Pas besoin d'être à l'école pour apprendre de nouvelles compétences. Utilisez ces [affiches, banderoles, autocollants, vidéos et plus encore](<%= resolve_url('/promote/resources') %>) pour votre évènement.
+[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Pas besoin d'être à l'école pour apprendre de nouvelles compétences. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
 
-## 6. Demandez à un élu local de soutenir Une Heure de Code
+## 6. Demandez à un élu local d'appuyer l'heure de Code
 
-[Envoyez cet email](<%= resolve_url('/promote/resources#sample-emails') %>) à vos représentants locaux, Conseil municipal ou Commission scolaire et invitez-les à visiter votre école durant votre Heure de Code. Ça pourrait aider à agrandir le groupe des amoureux d'informatique de votre région au-delà du projet d'une heure.
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Ça pourrait aider à agrandir le groupe des amoureux d'informatique de votre région au-delà du projet d'une heure.
 
 <%= view :signup_button %>

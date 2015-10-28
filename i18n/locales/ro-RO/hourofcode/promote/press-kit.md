@@ -25,7 +25,7 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
   * Trimite-le[o scrisoare](%= resolve_url('/promote/resources#sample-emails') %)parintilor. Spune-le sa raspandeasca vestea.
   * Trimite-le [o scrisoare](%= resolve_url('/promote/resources#sample-emails') %) pentru a-i invita pe primarul orasului, congresmanul, guvernatorul sau persoanele influente din business pentru a lua parte la evenimentul tau si pentru a le vorbi elevilor.
   * Organizează activităţi de grup (cum ar fi o demonstraţie de activitate de programare "unplugged"), sau prezentați activităţi create şi conduse de elevi.
-  * Arata-le vide-ul[Hour of Code al Code.org](%= resolve_url('/') %)sau unul dintre[acestea](%= resolve_url('/promote/resources#videos') %)pentru a-i inspira.
+  * Arata-le vide-ul[Hour od Code al Code.org](%= resolve_url('/') %)sau unul dintre[acestea](%= resolve_url('/promote/resources#videos') %)pentru a-i inspira.
 
 **2. Identifică reporteri locali care se ocupă de evenimente locale despre educaţie.**
 
@@ -47,7 +47,7 @@ Sperăm că va trezi interesul elevilor si ca acestia vor continua învăţarea.
 
 *De ce este important acest lucru?*
 
-În China, fiecare elev studiaza la tehnologia computerelor pentru a absolvi liceul. În SUA, 90% din şcoli nici macar nu o predau. Este timpul să prindem din urmă secolul 21. Ştim că indiferent ce fac elevii noştri atunci când cresc, indiferent dacă merg în medicină, afaceri, politică sau arte, trebuie sa stie cum să construiască tehnologie, le va da încrederea şi know-how-ul pentru a reuşi.
+În China, fiecare elev studiaza la tehnologia computerelor pentru a absolvi liceul. În SUA, 90 la sută din şcoli nici macar nu o predau. Este timpul să prindem din urmă secolul 21. Ştim că indiferent ce fac elevii noştri atunci când cresc, indiferent dacă merg în medicină, afaceri, politică sau arte, trebuie sa stie cum să construiască tehnologie, le va da încrederea şi know-how-ul pentru a reuşi.
 
 **Mai multe detalii şi un citat pe care îl puteţi utiliza în materiale**
 

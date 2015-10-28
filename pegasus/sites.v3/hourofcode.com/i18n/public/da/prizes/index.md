@@ -76,7 +76,7 @@ Yes. Your whole school has to participate to be eligible for the prize but only 
 
 ## Who is eligible to win the $10,000 in hardware?
 
-Præmien er desværre begrænset til offentlige K-12 amerikanske skoler. For at blive kvalificeret, skal hele din skole tilmeldes Hour of Code inden d. 16. November 2015. En skole, fra hver af de amerikanske stater, vil modtage en klassesæt computere. Code.org vil udvælge og underrette vinderne via e-mail d. 1. december 2015.
+Præmien er desværre begrænset til offentlige K-12 amerikanske skoler. To qualify, your entire school must register for the Hour of Code by November 16, 2015. En skole, fra hver af de amerikanske stater, vil modtage en klassesæt computere. Code.org will select and notify winners via email by December 1, 2015.
 
 ## Hvorfor kan præmien på $10.000 hardware kun vindes af offentlige skoler i USA?
 
@@ -84,13 +84,13 @@ We would love to help teachers in public and private schools alike, but at this 
 
 ## Hvornår er fristen for at tilmelde sig hardware-prisen?
 
-To qualify, you must complete the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup') %>) by November 16, 2015. En skole, fra hver af de amerikanske stater, vil modtage en klassesæt computere. Code.org vil udvælge og underrette vinderne via e-mail d. 1. december 2015.
-
-<% end %>
+To qualify, you must complete the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup') %>) by November 16, 2015. En skole, fra hver af de amerikanske stater, vil modtage en klassesæt computere. Code.org will select and notify winners via email by December 1, 2015.
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (<%= campaign_date('short') %>), can I still qualify for prizes?
 
 Yes, in the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup') %>) include the dates that your whole school is participating.
+
+<% end %>
 
 ## Jeg bor uden for USA. Kan jeg vinde nogen af præmierne?
 

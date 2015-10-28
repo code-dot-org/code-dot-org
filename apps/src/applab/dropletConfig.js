@@ -33,7 +33,6 @@ function getScreenIds() {
   return $.makeArray(ret);
 }
 
-// NOTE : format of blocks detailed at top of apps/src/dropletUtils.js
 
 module.exports.blocks = [
   {func: 'onEvent', parent: api, category: 'UI controls', paletteParams: ['id','type','callback'], params: ['"id"', '"click"', "function(event) {\n  \n}"], dropdown: { 0: function () { return Applab.getIdDropdown(); }, 1: [ '"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"' ] } },
@@ -122,12 +121,11 @@ module.exports.blocks = [
 
   {func: 'console.log', parent: consoleApi, category: 'Variables', paletteParams: ['message'], params: ['"message"'] },
   {func: 'declareAssign_str_hello_world', block: 'var str = "Hello World";', category: 'Variables', noAutocomplete: true },
-  {func: 'substring', blockPrefix: 'str.substring', category: 'Variables', paletteParams: ['start','end'], params: ["6", "11"], modeOptionName: '*.substring', type: 'value' },
-  {func: 'indexOf', blockPrefix: 'str.indexOf', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.indexOf', type: 'value' },
-  {func: 'includes', blockPrefix: 'str.includes', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.includes', type: 'value' },
-  {func: 'length', block: 'str.length', category: 'Variables', modeOptionName: '*.length' },
-  {func: 'toUpperCase', blockPrefix: 'str.toUpperCase', category: 'Variables', modeOptionName: '*.toUpperCase', type: 'value' },
-  {func: 'toLowerCase', blockPrefix: 'str.toLowerCase', category: 'Variables', modeOptionName: '*.toLowerCase', type: 'value' },
+  {func: 'substring', blockPrefix: 'str.substring', category: 'Variables', paletteParams: ['start','end'], params: ["6", "11"], 'modeOptionName': '*.substring', type: 'value' },
+  {func: 'indexOf', blockPrefix: 'str.indexOf', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], 'modeOptionName': '*.indexOf', type: 'value' },
+  {func: 'length', block: 'str.length', category: 'Variables', 'modeOptionName': '*.length' },
+  {func: 'toUpperCase', blockPrefix: 'str.toUpperCase', category: 'Variables', 'modeOptionName': '*.toUpperCase', type: 'value' },
+  {func: 'toLowerCase', blockPrefix: 'str.toLowerCase', category: 'Variables', 'modeOptionName': '*.toLowerCase', type: 'value' },
   {func: 'declareAssign_list_abd', block: 'var list = ["a", "b", "d"];', category: 'Variables', noAutocomplete: true },
   {func: 'listLength', block: 'list.length', category: 'Variables', noAutocomplete: true },
   {func: 'insertItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','index','item'], params: ["list", "2", '"c"'], dontMarshal: true },
@@ -176,3 +174,4 @@ module.exports.categories = {
  * an 'Examples' link that opens documentation in a lightbox:
  */
 module.exports.showExamplesLink = true;
+

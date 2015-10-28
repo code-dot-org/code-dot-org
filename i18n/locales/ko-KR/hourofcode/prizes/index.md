@@ -84,11 +84,11 @@ We would love to help teachers in public and private schools alike, but at this 
 
 To qualify, you must complete the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) by November 16, 2015. 미국의 학교들 중, 주별로 한 학교씩 1학급 분량의 컴퓨터들을 받게 될 것입니다. Code.org will select and notify winners via email by December 1, 2015.
 
-<% end %>
-
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (<%= campaign_date('short') %>), can I still qualify for prizes?
 
 Yes, in the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) include the dates that your whole school is participating.
+
+<% end %>
 
 ## 저는 미국 밖에 있습니다. 저도 상품들에 응모할 수 있나요?
 

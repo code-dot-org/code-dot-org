@@ -36,15 +36,6 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     )
   end
 
-  def self.experiences()
-    @experiences ||= experiences_with_i18n_labels(
-      'unspecified',
-      'tech_company',
-      'university_student_or_researcher',
-      'software_professional',
-    )
-  end
-
   def self.locations_with_i18n_labels(*locations)
     results = {}
     locations.each do |location|

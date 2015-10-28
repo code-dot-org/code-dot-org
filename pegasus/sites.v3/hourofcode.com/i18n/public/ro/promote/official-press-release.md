@@ -32,7 +32,7 @@ Contact: [**Informatii de contact**]
 “Scoala elementara Daniels Run a tinut, la nivel de scoala, un eveniment Hour of Code pentru a le expune elevilor stiinta calculatorului. Mai mult de 700 de elevi din toate clasele au participat la cel putin o Ora de Programare. Si cativa parinti si voluntari din comunitate au ajutat in aceasta zi, aducand copii impreuna pentru a le arata de ce stiinta computer-ului conteaza atat de mult in viata unui elev
 
 [**TEXT ESANTION PENTRU CONTEXT:**]  
-Computerele sunt peste tot, dar mai putine scoli predau acum stiinta computerului decat cu 10 ani in urma. Fetele si elevii de culoare sunt grav subestimate. Vestea buna e ca noi facem aceasta schimbare in bine. Hour of Code este o poarta a elevilor spre accesarea informatiilor de calitate despre stiinta calculatorului.
+Computerele sunt peste tot, dar mai putine scoli predau acum stiinta computerului decat cu 10 ani in urma. Fetele si elevii de culoare sunt grav subestimati. Vestea buna e ca noi facem aceasta schimbare in bine. Hour of Code este o poarta a elevilor spre accesarea informatiilor de calitate despre stiinta calculatorului.
 
 Peste 100 de milioane de studenţi din întreaga lume au încercat deja o Ora de Programare. Multumita Hour of Code, tehnologia computerelor a fost vizibila pe site-urile Google, MSN, Yahoo! și Disney. Președintele Obama, Shakira și Ashton Kutcher au susținut cu toții Ora de Programare cu secvențe video. S-au adunat peste 100 de parteneri pentru a susține această mișcare.
 

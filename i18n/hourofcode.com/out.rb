@@ -67,7 +67,6 @@ languages = {
   'Turkish' => ['tr-TR', 'tr'],
   'Ukrainian' => ['uk-UA', 'uk'],
   'Urdu (Pakistan)' => ['ur-PK', 'ur'],
-  'Uzbek' => ['uz-UZ', 'uz'],
   'Vietnamese' => ['vi-VN', 'vi']
 }
 

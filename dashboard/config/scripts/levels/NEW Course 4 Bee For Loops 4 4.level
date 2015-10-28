@@ -69,6 +69,7 @@
             </block>
           </next>
         </block>
+        <block type="controls_repeat_ext" inline="true"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

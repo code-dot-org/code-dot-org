@@ -1,6 +1,6 @@
 ---
 
-Заглавие: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners) %>
 
 ---
 
@@ -14,14 +14,6 @@
 
 <% end %>
 
-<% if @country == 'ac' %>
-
-# Africa Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
-
-<% end %>
-
 <% if @country == 'au' %>
 
 # Партньори от Австралия
@@ -32,23 +24,15 @@
 
 <% if @country == 'id' %>
 
-# Партньори от Индонезия
+# Indonesia Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
 <% end %>
 
-<% if @country == 'in' %>
-
-# India Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
-
-<% end %>
-
 <% if @country == 'jp' %>
 
-# Партньори от Япония
+# Japan Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -56,7 +40,7 @@
 
 <% if @country == 'uk' %>
 
-# Партньори от Обединеното кралство
+# United Kingdom Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -64,43 +48,43 @@
 
 <% if @country == 'ca' %>
 
-# Партньори от Канада
+# Canada Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
 <% end %>
 
-# Основни партньори и корпоративни поддръжници
+# Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 ---
 
-# Основни рекламни партньори
+# Major Promotional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 ---
 
-# Международни партньори
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Партньори в създаването на уроци
+# Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Инфраструктурни партньори и инструменти
+# Infrastructure partners and tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 ---
 
-# Допълнителни партньори
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 
