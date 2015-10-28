@@ -252,7 +252,7 @@ class Blockly < Level
   def self.base_url
     "#{Blockly.asset_host_prefix}/blockly/"
   end
-  
+
   def self.asset_host_prefix
     host = ActionController::Base.asset_host
     (host.blank?) ? "" : "//#{host}"
