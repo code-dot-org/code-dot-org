@@ -84,24 +84,27 @@
       #blankspaceleftdesktop.desktop-feature
       #blankspaceleftmobile.mobile-feature
 
-    #actions.col-33  
+    #actions.col-33
       - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
       - actions.each_with_index do |entry, index|
         - display = entry[:active_s] == "hide" ? "none" : "block"
         .action{style: "display: #{display}; opacity: 0"}
-          - if entry[:param1_s] == "video"
-            %img#playimage{src: "/shared/images/play-button.png", width:"40", onclick: "return showVideo_mainvideo();"}
-            %span#playtext{onclick: "return showVideo_mainvideo();"}
-              = I18n.t(entry[:text1_s])
-          - elsif entry[:param1_s] == "learn"
-            %a#herolearnlink{href: "/learn"}
-              %button#herolearnbutton
-                = I18n.t(entry[:text1_s])
-          -# elsif entry[:param1_s] == "petition"
-            %span#petitionaction{onclick: "expandPetition(); adjustScroll('petitionblock');"}
-              = I18n.t(entry[:text1_s])
-          .actiongap
-            &nbsp;
+          - if entry[:param1_s] == "hoc_title"
+            #title= I18n.t(entry[:text1_s])
+          - elsif entry[:param1_s] == "num_served"
+            #subtitle.students-served= I18n.t(entry[:text1_s]).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+          - elsif entry[:param1_s] == "sign_up"
+            %a{href: "https://hourofcode.com"}
+              %button#herohocbutton= I18n.t(entry[:text1_s])
+          - elsif entry[:param1_s] == "try_it"
+            %a{href: "/learn"}
+              %button#herohocbutton= I18n.t(entry[:text1_s])
+          - elsif entry[:param1_s] == "video"
+            %span#playtext{onclick: "return showVideo_mainvideo();"}= I18n.t(entry[:text1_s])
+            %img#playimage{src: "/shared/images/play-button.png", width:"25", onclick: "return showVideo_mainvideo();"}
+          - elsif entry[:param1_s] == "volunteers"
+            %a{href: "/volunteer"}
+              #subtitle= I18n.t(entry[:text1_s])
 
 :javascript
   var petition;
@@ -140,7 +143,7 @@
       $(lastImageId + " .caption3").animate({opacity:0}, { duration: 2000 });
     }
 
-    if (nextImageId !== null) 
+    if (nextImageId !== null)
     {
       var nextImageId = "#captionarea" + nextImage;
       //console.log("showing", nextImageId);
