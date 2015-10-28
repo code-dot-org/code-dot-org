@@ -28,6 +28,9 @@ var GlowFilter = function (svg) {
   /** @private {SVGElement} */
   this.feCompositeLayers_ = null;
 
+  /** @private {?} setInterval key */
+  this.intervalId_ = null;
+
   /** @private {function} */
   this.curve_ = makeNormalOscillation(3000, 3, 0.1, 1.0);
 };
@@ -91,11 +94,6 @@ GlowFilter.prototype.createFilterSteps_ = function () {
   feCompositeLayers.setAttribute('k4', 0);
   this.feCompositeLayers_ = feCompositeLayers;
 
-  // Establish 30FPS update interval
-  this.intervalId_ = window.setInterval(function () {
-    this.update(new Date().getTime());
-  }.bind(this), 1000/30);
-
   return [
     feFloodWhite,
     feMorphology,
@@ -107,13 +105,38 @@ GlowFilter.prototype.createFilterSteps_ = function () {
 };
 
 /**
- * Update animated filter effect.
- * @param {number} t - simulation time value
+ * In addition to adding the filter definition to the DOM, starts this filter's
+ * animation interval.
+ * @private
+ * @override
  */
-GlowFilter.prototype.update = function (t) {
-  if (this.feCompositeLayers_) {
-    this.feCompositeLayers_.setAttribute('k3', this.curve_(t));
+GlowFilter.prototype.createInDom_ = function () {
+  GlowFilter.superPrototype.createInDom_.call(this);
+
+  // Establish 30FPS update interval
+  if (!this.intervalId_) {
+    this.intervalId_ = window.setInterval(function () {
+      if (this.feCompositeLayers_) {
+        var now = new Date().getTime();
+        this.feCompositeLayers_.setAttribute('k3', this.curve_(now));
+      }
+    }.bind(this), 1000/30);
   }
+};
+
+/**
+ * In addition to removing the filter definition from the DOM, stops this
+ * filter's animation interval.
+ * @private
+ * @override
+ */
+GlowFilter.prototype.removeFromDom_ = function () {
+  if (this.intervalId_) {
+    window.clearInterval(this.intervalId_);
+    this.intervalId_ = null;
+  }
+
+  GlowFilter.superPrototype.removeFromDom_.call(this);
 };
 
 /**
