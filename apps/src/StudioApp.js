@@ -204,6 +204,10 @@ StudioApp.prototype.configure = function (options) {
   this.assetUrl = _.bind(this.assetUrl_, this);
 };
 
+StudioApp.prototype.hasInstructionsToShow = function (config) {
+  return !!(config.level.instructions || config.level.aniGifURL);
+};
+
 /**
  * Common startup tasks for all apps. Happens after configure.
  */
@@ -347,7 +351,7 @@ StudioApp.prototype.init = function(config) {
     $(prompt2Div).show();
   }
 
-  if (config.level.instructions || config.level.aniGifURL) {
+  if (this.hasInstructionsToShow(config)) {
     var promptIcon = document.getElementById('prompt-icon');
     if (this.smallIcon) {
       promptIcon.src = this.smallIcon;
@@ -370,21 +374,7 @@ StudioApp.prototype.init = function(config) {
   }
 
   if (this.editCode) {
-    this.handleEditCode_({
-      codeFunctions: config.level.codeFunctions,
-      dropletConfig: config.dropletConfig,
-      unusedConfig: config.unusedConfig,
-      categoryInfo: config.level.categoryInfo,
-      startBlocks: config.level.lastAttempt || config.level.startBlocks,
-      afterEditorReady: config.afterEditorReady,
-      afterInject: config.afterInject,
-      readOnly: config.readonlyWorkspace,
-      textModeAtStart: config.level.textModeAtStart,
-      beginnerMode: config.level.beginnerMode,
-      dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
-      autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly,
-      dropletTooltipsDisabled: config.level.dropletTooltipsDisabled
-    });
+    this.handleEditCode_(config);
   }
 
   if (this.isUsingBlockly()) {
@@ -831,23 +821,28 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   // If there is an instructions block on the screen, we want the instructions dialog to
   // shrink down to that instructions block when it's dismissed.
   // We then want to flash the instructions block.
-  var hideFn = null;
   var hideOptions = null;
   var endTargetSelector = "#bubble";
 
   if ($(endTargetSelector).length) {
     hideOptions = {};
     hideOptions.endTarget = endTargetSelector;
+  }
 
+  var hideFn = _.bind(function() {
     // Momentarily flash the instruction block white then back to regular.
-    hideFn = function() {
+    if ($(endTargetSelector).length) {
       $(endTargetSelector).css({"background-color":"rgba(255,255,255,1)"})
         .delay(500)
         .animate({"background-color":"rgba(0,0,0,0)"},1000);
-    };
-  }
+    }
+    // Set focus to ace editor when instructions close:
+    if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
+      this.editor.aceEditor.focus();
+    }
+  }, this);
 
-  var dialog = this.createModalDialog({
+  this.instructionsDialog = this.createModalDialog({
     contentDiv: instructionsDiv,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
@@ -858,21 +853,21 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   });
 
   if (autoClose) {
-    setTimeout(function() {
-      dialog.hide();
-    }, 32000);
+    setTimeout(_.bind(function() {
+      this.instructionsDialog.hide();
+    }, this), 32000);
   }
 
   var okayButton = buttons.querySelector('#ok-button');
   if (okayButton) {
-    dom.addClickTouchEvent(okayButton, function() {
-      if (dialog) {
-        dialog.hide();
+    dom.addClickTouchEvent(okayButton, _.bind(function() {
+      if (this.instructionsDialog) {
+        this.instructionsDialog.hide();
       }
-    });
+    }, this));
   }
 
-  dialog.show({hideOptions: hideOptions});
+  this.instructionsDialog.show({hideOptions: hideOptions});
 
   if (renderedMarkdown) {
     // process <details> tags with polyfill jQuery plugin
@@ -1508,12 +1503,12 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   }
 };
 
-StudioApp.prototype.handleEditCode_ = function (options) {
+StudioApp.prototype.handleEditCode_ = function (config) {
 
   if (this.hideSource) {
     // In hide source mode, just call afterInject and exit immediately
-    if (options.afterInject) {
-      options.afterInject();
+    if (config.afterInject) {
+      config.afterInject();
     }
     return;
   }
@@ -1528,33 +1523,33 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   /* jshint ignore:end */
 
   var fullDropletPalette = dropletUtils.generateDropletPalette(
-    options.codeFunctions, options.dropletConfig);
+    config.level.codeFunctions, config.dropletConfig);
   this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
     mode: 'javascript',
-    modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig, options),
+    modeOptions: dropletUtils.generateDropletModeOptions(config),
     palette: fullDropletPalette,
     showPaletteInTextMode: true,
-    dropIntoAceAtLineStart: options.dropIntoAceAtLineStart,
-    enablePaletteAtStart: !options.readOnly,
-    textModeAtStart: options.textModeAtStart
+    dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
+    enablePaletteAtStart: !config.readonlyWorkspace,
+    textModeAtStart: config.level.textModeAtStart
   });
 
   this.editor.aceEditor.setShowPrintMargin(false);
 
   // Init and define our custom ace mode:
-  aceMode.defineForAce(options.dropletConfig, options.unusedConfig, this.editor);
+  aceMode.defineForAce(config.dropletConfig, config.unusedConfig, this.editor);
   // Now set the editor to that mode:
   this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
   // Add an ace completer for the API functions exposed for this level
-  if (options.dropletConfig) {
+  if (config.dropletConfig) {
     var functionsFilter = null;
-    if (options.autocompletePaletteApisOnly) {
-       functionsFilter = options.codeFunctions;
+    if (config.level.autocompletePaletteApisOnly) {
+       functionsFilter = config.level.codeFunctions;
     }
     var langTools = window.ace.require("ace/ext/language_tools");
     langTools.addCompleter(
-      dropletUtils.generateAceApiCompleter(functionsFilter, options.dropletConfig));
+      dropletUtils.generateAceApiCompleter(functionsFilter, config.dropletConfig));
   }
 
   this.editor.aceEditor.setOptions({
@@ -1562,12 +1557,12 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     enableLiveAutocompletion: true
   });
 
-  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg, options.dropletConfig);
-  if (options.dropletTooltipsDisabled) {
+  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg, config.dropletConfig);
+  if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);
   }
   this.dropletTooltipManager.registerBlocksFromList(
-    dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
+    dropletUtils.getAllAvailableDropletBlocks(config.dropletConfig));
 
   // Bind listener to palette/toolbox 'Hide' and 'Show' links
   var hideToolboxHeader = document.getElementById('toolbox-header');
@@ -1592,11 +1587,12 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
   this.resizeToolboxHeader();
 
-  if (options.startBlocks) {
+  var startBlocks = config.level.lastAttempt || config.level.startBlocks;
+  if (startBlocks) {
 
     try {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
-      this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
+      this.editor.setValue(startBlocks.replace(/\r\n/g, '\n'));
     } catch (err) {
       // catch errors without blowing up entirely. we may still not be in a
       // great state
@@ -1609,7 +1605,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     this.editor.aceEditor.getSession().setUndoManager(new UndoManager());
   }
 
-  if (options.readOnly) {
+  if (config.readonlyWorkspace) {
     // When in readOnly mode, show source, but do not allow editing,
     // disable the palette, and hide the UI to show the palette:
     this.editor.setReadOnly(true);
@@ -1617,8 +1613,9 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   }
 
   // droplet may now be in code mode if it couldn't parse the code into
-  // blocks, so update the UI based on the current state:
-  this.onDropletToggle_();
+  // blocks, so update the UI based on the current state (don't autofocus
+  // if we have already created an instructionsDialog at this stage of init)
+  this.onDropletToggle_(!this.instructionsDialog);
 
   this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
 
@@ -1627,12 +1624,18 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     $('.cdo-qtips').qtip('reposition', null, false);
   });
 
-  if (options.afterEditorReady) {
-    options.afterEditorReady();
+  if (this.instructionsDialog) {
+    // Initializing the droplet editor in text mode (ace) can steal the focus
+    // from our visible instructions dialog. Restore focus where it belongs:
+    this.instructionsDialog.focus();
   }
 
-  if (options.afterInject) {
-    options.afterInject();
+  if (config.afterEditorReady) {
+    config.afterEditorReady();
+  }
+
+  if (config.afterInject) {
+    config.afterInject();
   }
 };
 
@@ -1789,10 +1792,13 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
 /**
  * Handle updates after a droplet toggle between blocks/code has taken place
  */
-StudioApp.prototype.onDropletToggle_ = function () {
+StudioApp.prototype.onDropletToggle_ = function (autoFocus) {
+  autoFocus = utils.valueOr(autoFocus, true);
   this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
   if (!this.editor.currentlyUsingBlocks) {
-    this.editor.aceEditor.focus();
+    if (autoFocus) {
+      this.editor.aceEditor.focus();
+    }
     this.dropletTooltipManager.registerDropletTextModeHandlers(this.editor);
   }
 };
