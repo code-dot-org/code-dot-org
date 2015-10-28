@@ -173,3 +173,5 @@ gem 'net-ssh'
 gem 'net-scp'
 gem 'httparty'
 gem 'jquery-cookie-rails'
+gem 'oj'
+
