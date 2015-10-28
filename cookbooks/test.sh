@@ -2,7 +2,7 @@
 
 # Run cookbook integration tests using Chef Kitchen.
 # `cut -c7-` removes './cdo-' from start of name
-TEST_COOKBOOKS=$(dirname `find -name .kitchen.yml` | cut -c7-)
+TEST_COOKBOOKS=$(find -name .kitchen.yml | cut -c7- | xargs dirname)
 
 # Only run 'kitchen verify' on cookbooks matching part of the current branch name.
 for i in ${TEST_COOKBOOKS}; do
