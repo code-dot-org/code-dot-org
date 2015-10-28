@@ -1627,7 +1627,7 @@ levels.js_hoc2015_move_right = {
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],  
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000]],
 
-  'instructions': '"We need that scrap metal. BOTX, can you get it?"',
+  'instructions': '"We need that scrap metal. BB-8, can you get it?"',
   'ticksBeforeFaceSouth': 9,
   'timeoutFailureTick': 100,
   'timeoutAfterWhenRun': true,
@@ -1748,7 +1748,7 @@ levels.js_hoc2015_move_diagonal = {
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000],   
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000]],
   'embed': 'false',
-  'instructions': '"Watch out for the GUY!"',
+  'instructions': '"Watch out for the thug!"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -1821,7 +1821,7 @@ levels.js_hoc2015_move_backtrack = {
      [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
-  'instructions': '"Go quickly, BOTX."',
+  'instructions': '"Go quickly, BB-8."',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -1871,7 +1871,7 @@ levels.js_hoc2015_move_around = {
      [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
   'embed': 'false',
-  'instructions': '"It\'s up to you, BOTX!"',
+  'instructions': '"It\'s up to you, BB-8!"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -1980,8 +1980,8 @@ levels.js_hoc2015_event_two_items = {
     [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00]],
   'pinWorkspaceToBottom': 'true',
   'embed': 'false',
-  'instructions': '"BOT1, I need you to get a critical message to the rebel pilots."',
-  'instructions2': 'Make BOT1 move when you use the arrow keys.',
+  'instructions': '"R2-D2, I need you to get a critical message to the rebel pilots."',
+  'instructions2': 'Make R2-D2 move when you use the arrow keys.',
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
   'goalOverride': {
@@ -2105,7 +2105,7 @@ levels.js_hoc2015_event_four_items = {
 
 levels.js_hoc2015_score =
 {
-  'avatarList': ['bot1'],
+  'avatarList': ['r2-d2'],
   'editCode': true,
   'background': 'snow',
   'music': [ 'song9' ],
@@ -2122,7 +2122,7 @@ levels.js_hoc2015_score =
   },
   'startBlocks': [
     'function whenGetRebelPilot() {',
-    '  playSound("character1sound1");',
+    '  playSound("r2-d2sound1");',
     '}',
     ].join('\n'),
   'sortDrawOrder': true,
@@ -2143,7 +2143,7 @@ levels.js_hoc2015_score =
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 1,  0, 0, 0, 0]],
   'instructions': '"Reach the rebel pilot!"',
-  'instructions2': "Let's add points. Add 100 points when BOT1 gets the rebel pilot.",
+  'instructions2': "Let's add points. Add 100 points when R2-D2 gets the rebel pilot.",
   'autoArrowSteer': true,
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
@@ -2229,7 +2229,7 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
   'instructions': '"Watch out for the stormtrooper."',
-  'instructions2': 'Add 100 points when BOT1 gets the rebel pilot.  Remove 100 points when he gets a stormtrooper.  Now, avoid the stormtrooper!',
+  'instructions2': 'Add 100 points when R2-D2 gets the rebel pilot.  Remove 100 points when he gets a stormtrooper.  Now, avoid the stormtrooper!',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2282,7 +2282,7 @@ levels.js_hoc2015_add_characters = {
     'whenGetPufferPig': null,
   },
   'startBlocks': [
-    'playSound("character1sound1");',
+    'playSound("r2-d2sound1");',
     'addCharacter("pufferpig");',
     '',
     'function whenGetPufferPig() {',
@@ -2355,7 +2355,7 @@ levels.js_hoc2015_chain_characters = {
   },
   'startBlocks': [
     'addCharacter("mousedroid");',
-    'playSound("character1sound3");',
+    'playSound("r2-d2sound3");',
     '',
     'function whenGetMouseDroid() {',
     '  playSound("mousedroidsound2");',
@@ -2373,7 +2373,7 @@ levels.js_hoc2015_chain_characters = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"They\'re multiplying!"',
-  'instructions2': 'Add 100 points every time BOT1 gets a mouse droid. Can you get 800 points? ',
+  'instructions2': 'Add 100 points every time R2-D2 gets a mouse droid. Can you get 800 points? ',
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
@@ -2434,7 +2434,7 @@ levels.js_hoc2015_chain_characters_2 = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"It\'s up to you, BOT1!"',
+  'instructions': '"It\'s up to you, R2-D2!"',
   'instructions2': 'When you get a tauntaun, two mynocks appear. Can you make two mouse droids appear when you get a mynock? Then, get them all.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
@@ -2475,9 +2475,9 @@ levels.js_hoc2015_change_setting = {
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'setBot': null,
+    'setDroid': null,
     'setBackground': null,
-    'setBotSpeed': null,
+    'setDroidSpeed': null,
     'setMap': null,
     'playSound': null,
     'addCharacter': null,
@@ -2491,8 +2491,8 @@ levels.js_hoc2015_change_setting = {
     'addCharacter("rebelpilot");',
     'addCharacter("rebelpilot");',
     'addCharacter("rebelpilot");',
-    'playSound("character1sound4");',
-    'setBot("bot1");',
+    'playSound("r2-d2sound4");',
+    'setDroid("r2-d2");',
     '',
     'function whenGetRebelPilot() {',
     '  addPoints(400);',
@@ -2510,7 +2510,7 @@ levels.js_hoc2015_change_setting = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"Time to visit another planet."',
-  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.',
+  'instructions2': 'Use the new commands to change the background, map, droid, and speed.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2532,7 +2532,7 @@ levels.js_hoc2015_change_setting = {
   ],
   'progressConditions' : [
     // Collected all the items and set the right properties?  Success.
-    { required: { 'setMap': true, 'setBotSpeed': true, 'collectedItemsAtOrAbove': 3 },
+    { required: { 'setMap': true, 'setDroidSpeed': true, 'collectedItemsAtOrAbove': 3 },
       result: { success: true, message: msg.successGenericCharacter() } },
     // Special message for timing out when not enough items collected.
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
@@ -2540,7 +2540,7 @@ levels.js_hoc2015_change_setting = {
     // If all items are collected, but either property not set?  Failure.
     { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 }, 
       result: { success: false, message: msg.failedChangeSettingSettings() } },
-    { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 }, 
+    { required: { 'setDroidSpeed': false, 'collectedItemsAtOrAbove': 3 }, 
       result: { success: false, message: msg.failedChangeSettingSettings() } }
   ]
 };
@@ -2554,9 +2554,9 @@ levels.js_hoc2015_event_free = {
   'wallMap': 'blank',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'setBot': { 'category': 'Commands' },
+    'setDroid': { 'category': 'Commands' },
     'setBackground': { 'category': 'Commands' },
-    'setBotSpeed': { 'category': 'Commands' },
+    'setDroidSpeed': { 'category': 'Commands' },
     'setMap': { 'category': 'Commands' },
     'playSound': { 'category': 'Commands' },
     'addCharacter': { 'category': 'Commands' },
@@ -2588,9 +2588,9 @@ levels.js_hoc2015_event_free = {
   'startBlocks': [
     'setBackground("forest");',
     'setMap("circle");',
-    'setBot("bot1");',
-    'setBotSpeed("normal");',
-    'playSound("character1sound5");',
+    'setDroid("r2-d2");',
+    'setDroidSpeed("normal");',
+    'playSound("r2-d2sound5");',
     ''].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
@@ -2601,7 +2601,7 @@ levels.js_hoc2015_event_free = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"You\'re on your own now, BOT1."',
+  'instructions': '"You\'re on your own now, R2-D2."',
   'autoArrowSteer': true,
   'callouts': [
     {

@@ -311,30 +311,30 @@ function loadHoc2015(skin, assetUrl) {
   skin.gridSpriteRenderOffsetX = -30;
   skin.gridSpriteRenderOffsetY = -40;
 
-  skin.avatarList = ['bot1', 'bot2'];
+  skin.avatarList = ['r2-d2', 'c-3po'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: name == 'bot1' ? 14 : 16,
+        normal: name == 'r2-d2' ? 14 : 16,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: name == 'bot1' ? 14 : 8
+        walk: name == 'r2-d2' ? 14 : 8
       },
       timePerFrame: 100
     };
   });
 
-  skin.bot1.movementAudio = [
-    { begin: 'bot1_move1_start', loop: 'bot1_move1_loop', end: 'bot1_move1_end' },
-    { begin: 'bot1_move2_start', loop: 'bot1_move2_loop', end: 'bot1_move2_end' },
-    { begin: 'bot1_move3_start', loop: 'bot1_move3_loop', end: 'bot1_move3_end' }
+  skin['r2-d2'].movementAudio = [
+    { begin: 'r2-d2_move1_start', loop: 'r2-d2_move1_loop', end: 'r2-d2_move1_end' },
+    { begin: 'r2-d2_move2_start', loop: 'r2-d2_move2_loop', end: 'r2-d2_move2_end' },
+    { begin: 'r2-d2_move3_start', loop: 'r2-d2_move3_loop', end: 'r2-d2_move3_end' }
   ];
-  skin.bot2.movementAudio = [
-    { loop: 'bot2_move_loop', end: 'bot2_move_end' }
+  skin['c-3po'].movementAudio = [
+    { loop: 'c-3po_move_loop', end: 'c-3po_move_end' }
   ];
 
   skin.preventProjectileLoop = function (className) {
@@ -476,10 +476,10 @@ function loadHoc2015(skin, assetUrl) {
 
   // Sounds.
   skin.sounds = [
-    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
-    'character1sound5', 'character1sound6', 'character1sound7', 'character1sound8',
-    'character1sound9',
-    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
+    'r2-d2sound1', 'r2-d2sound2', 'r2-d2sound3', 'r2-d2sound4',
+    'r2-d2sound5', 'r2-d2sound6', 'r2-d2sound7', 'r2-d2sound8',
+    'r2-d2sound9',
+    'c-3posound1', 'c-3posound2', 'c-3posound3', 'c-3posound4',
     'pufferpigsound1', 'pufferpigsound2', 'pufferpigsound3', 'pufferpigsound4',
     'tauntaunsound1', 'tauntaunsound2', 'tauntaunsound3', 'tauntaunsound4',
     'mynocksound1', 'mynocksound2', 'mynocksound3',
@@ -528,8 +528,8 @@ function loadHoc2015(skin, assetUrl) {
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
     [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteBot1(), '"bot1"'],
-    [msg.setSpriteBot2(), '"bot2"']];
+    [msg.setSpriteR2D2(), '"r2-d2"'],
+    [msg.setSpriteC3PO(), '"c-3po"']];
 
   skin.projectileChoices = [];
 
@@ -625,7 +625,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.gridSpriteRenderOffsetX = -20;
   skin.gridSpriteRenderOffsetY = -40;
 
-  skin.avatarList = ['bot1'];
+  skin.avatarList = ['bb-8'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
@@ -641,7 +641,7 @@ function loadHoc2015x(skin, assetUrl) {
       timePerFrame: 100
     };
   });
-  skin.bot1.movementAudio = [
+  skin['bb-8'].movementAudio = [
     { begin: 'move1' },
     { begin: 'move2' },
     { begin: 'move3' },
@@ -698,7 +698,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
     [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteBot1(), '"bot1"']];
+    [msg.setSpriteBB8(), '"bb-8"']];
 
   skin.projectileChoices = [];
 
