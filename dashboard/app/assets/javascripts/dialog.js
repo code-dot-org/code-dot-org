@@ -175,6 +175,12 @@ Dialog.prototype.hide = function() {
   $(this.div).modal('hide');
 };
 
+Dialog.prototype.focus = function() {
+  if (this.isVisible) {
+    $(this.div).focus();
+  }
+};
+
 /**
  * This processes optional hideOptions that were provided to show().
  * At the moment it will play an animation of the dialog moving and resizing to

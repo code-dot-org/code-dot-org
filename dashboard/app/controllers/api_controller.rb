@@ -64,6 +64,32 @@ class ApiController < ApplicationController
     render json: data
   end
 
+  def section_text_responses
+    load_section
+    load_script
+
+    text_response_script_levels = @script.script_levels.includes(:level).where('levels.type' => TextMatch)
+
+    data = @section.students.map do |student|
+      student_hash = {id: student.id, name: student.name}
+
+      text_response_script_levels.map do |script_level|
+        last_attempt = student.last_attempt(script_level.level)
+        response = last_attempt.try(:level_source).try(:data)
+        next unless response
+        {
+          student: student_hash,
+          stage: script_level.stage.position,
+          puzzle: script_level.position,
+          question: script_level.level.properties['title'],
+          response: response
+        }
+      end.compact
+    end.flatten
+
+    render json: data
+  end
+
   private
 
   def load_student
