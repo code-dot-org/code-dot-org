@@ -581,7 +581,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.animatedGoalFrames = 16;
 
   // Special effect applied to goal sprites
-  skin.goalEffect = 'shine';
+  skin.goalEffect = 'glow';
 
   // How long to show each frame of the optional goal animation.
   skin.timePerGoalAnimationFrame = 100;

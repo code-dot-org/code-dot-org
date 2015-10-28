@@ -70,6 +70,16 @@ ImageFilter.prototype.applyTo = function (svgElement) {
 };
 
 /**
+ * If the passed element is using this filter, removes the filter.
+ * @param {SVGElement} svgElement
+ */
+ImageFilter.prototype.removeFrom = function (svgElement) {
+  if (svgElement.getAttribute('filter') === 'url(#' + this.id_ + ')') {
+    svgElement.removeAttribute('filter');
+  }
+};
+
+/**
  * Generates the necessary elements and adds this filter to the parent SVG
  * under the <defs> tag.
  * @private
