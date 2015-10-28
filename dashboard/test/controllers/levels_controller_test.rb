@@ -289,7 +289,7 @@ class LevelsControllerTest < ActionController::TestCase
     # Level update now uses AJAX callback, returns a 200 JSON response instead of redirect
     assert_response :unprocessable_entity
 
-    expected = {'code_functions' => ["757: unexpected token at '{,}'"]}
+    expected = {'code_functions' => ["JSON::ParserError: 757: unexpected token at '{,}'"]}
     assert_equal expected, JSON.parse(@response.body)
   end
 
