@@ -1230,6 +1230,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
  * @param {HTMLElement} options.contentDiv
  * @param {string} options.defaultBtnSelector
  * @param {boolean} options.scrollContent
+ * @param {boolean} options.scrollableSelector
  * @param {function} options.onHidden
  * @param {string} options.id
  * @param {HTMLElement} options.header
@@ -1264,7 +1265,8 @@ FeedbackUtils.prototype.createModalDialog = function(options) {
     }
   };
 
-  var elementToScroll = options.scrollContent ? '.modal-content' : null;
+  var scrollableSelector = options.scrollableSelector || '.modal-content';
+  var elementToScroll = options.scrollContent ? scrollableSelector : null;
   return new options.Dialog({
     body: modalBody,
     onHidden: options.onHidden,
