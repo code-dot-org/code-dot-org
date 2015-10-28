@@ -1519,7 +1519,11 @@ Applab.maybeAddAssetPathPrefix = function (filename) {
   }
 
   filename = filename || '';
-  if (filename.indexOf('/') !== -1 || filename.length === 0) {
+  if (filename.length === 0) {
+    return '/blockly/media/1x1.gif';
+  }
+
+  if (filename.indexOf('/') !== -1) {
     return filename;
   }
 
