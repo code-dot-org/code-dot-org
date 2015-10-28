@@ -2,8 +2,8 @@ var msg = require('./locale');
 var api = require('./apiJavascript.js');
 
 module.exports.blocks = [
-  {func: 'setBot', parent: api, category: '', params: ['"bot1"'], dropdown: { 0: [ '"random"', '"bot1"', '"bot2"' ] } },
-  {func: 'setBotSpeed', parent: api, category: '', params: ['"fast"'], dropdown: { 0: [ '"random"', '"slow"', '"normal"', '"fast"' ] } },
+  {func: 'setDroid', parent: api, category: '', params: ['"r2-d2"'], dropdown: { 0: [ '"random"', '"r2-d2"', '"c-3po"' ] } },
+  {func: 'setDroidSpeed', parent: api, category: '', params: ['"fast"'], dropdown: { 0: [ '"random"', '"slow"', '"normal"', '"fast"' ] } },
   {func: 'setBackground', parent: api, category: '', params: ['"snow"'], dropdown: { 0: [ '"random"', '"forest"', '"snow"', '"ship"' ] } },
   {func: 'setMap', parent: api, category: '', params: ['"blank"'], dropdown: { 0: [ '"random"', '"blank"', '"circle"', '"horizontal"', '"grid"', '"blobs"'] } },
   {func: 'moveRight', parent: api, category: '', },
@@ -14,13 +14,13 @@ module.exports.blocks = [
   {func: 'goLeft', parent: api, category: '', },
   {func: 'goUp', parent: api, category: '', },
   {func: 'goDown', parent: api, category: '', },
-  {func: 'playSound', parent: api, category: '', params: ['"character1sound1"'],
+  {func: 'playSound', parent: api, category: '', params: ['"r2-d2sound1"'],
     dropdown: { 0: [
       '"random"',
-      '"character1sound1"', '"character1sound2"', '"character1sound3"', '"character1sound4"',
-      '"character1sound5"', '"character1sound6"', '"character1sound7"', '"character1sound8"',
-      '"character1sound9"',
-      '"character2sound1"', '"character2sound2"', '"character2sound3"', '"character2sound4"',
+      '"r2-d2sound1"', '"r2-d2sound2"', '"r2-d2sound3"', '"r2-d2sound4"',
+      '"r2-d2sound5"', '"r2-d2sound6"', '"r2-d2sound7"', '"r2-d2sound8"',
+      '"r2-d2sound9"',
+      '"c-3posound1"', '"c-3posound2"', '"c-3posound3"', '"c-3posound4"',
       '"pufferpigsound1"', '"pufferpigsound2"', '"pufferpigsound3"', '"pufferpigsound4"',
       '"tauntaunsound1"', '"tauntaunsound2"', '"tauntaunsound3"', '"tauntaunsound4"',
       '"mynocksound1"', '"mynocksound2"', '"mynocksound3"',
@@ -92,7 +92,7 @@ module.exports.blocks = [
   {func: 'whenTouchAllViperProbeDroids', block: 'function whenTouchAllViperProbeDroids() {}', expansion: 'function whenTouchAllViperProbeDroids() {\n  __;\n}', category: '' },
 
   // Functions hidden from autocomplete - not used in hoc2015:
-  {func: 'setSprite', parent: api, category: '', params: ['0', '"bot1"'], dropdown: { 1: [ '"random"', '"bot1"', '"bot2"' ] } },
+  {func: 'setSprite', parent: api, category: '', params: ['0', '"r2-d2"'], dropdown: { 1: [ '"random"', '"r2-d2"', '"c-3po"' ] } },
   {func: 'setSpritePosition', parent: api, category: '', params: ["0", "7"], noAutocomplete: true },
   {func: 'setSpriteSpeed', parent: api, category: '', params: ["0", "8"], noAutocomplete: true },
   {func: 'setSpriteEmotion', parent: api, category: '', params: ["0", "1"], noAutocomplete: true },

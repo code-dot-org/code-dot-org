@@ -1872,8 +1872,8 @@ Studio.reset = function(first) {
     removedItemCount: 0,
     touchedHazardCount: 0,
     setActivityRecord: null,
-    hasSetBot: false,
-    hasSetBotSpeed: false,
+    hasSetDroid: false,
+    hasSetDroidSpeed: false,
     hasSetBackground: false,
     hasSetMap: false,
     hasAddedItem: false,
@@ -3238,10 +3238,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setSpriteSpeed(cmd.opts);
       break;
-    case 'setBotSpeed':
+    case 'setDroidSpeed':
       studioApp.highlight(cmd.id);
-      Studio.setBotSpeed(cmd.opts);
-      Studio.trackedBehavior.hasSetBotSpeed = true;
+      Studio.setDroidSpeed(cmd.opts);
+      Studio.trackedBehavior.hasSetDroidSpeed = true;
       break;
     case 'setSpriteSize':
       studioApp.highlight(cmd.id);
@@ -3663,13 +3663,13 @@ Studio.setSpriteSpeed = function (opts) {
   Studio.sprite[opts.spriteIndex].speed = speed;
 };
 
-var BOT_SPEEDS = {
+var DROID_SPEEDS = {
   slow: constants.SpriteSpeed.SLOW,
   normal: constants.SpriteSpeed.NORMAL,
   fast: constants.SpriteSpeed.VERY_FAST
 };
 
-Studio.setBotSpeed = function (opts) {
+Studio.setDroidSpeed = function (opts) {
 
   if (typeof opts.value !== 'string') {
     throw new TypeError("Incorrect parameter: " + opts.value);
@@ -3678,10 +3678,10 @@ Studio.setBotSpeed = function (opts) {
   var speedValue = opts.value.toLowerCase().trim();
 
   if (speedValue === constants.RANDOM_VALUE) {
-    speedValue = utils.randomKey(BOT_SPEEDS);
+    speedValue = utils.randomKey(DROID_SPEEDS);
   }
 
-  var speedNumericVal = BOT_SPEEDS[speedValue];
+  var speedNumericVal = DROID_SPEEDS[speedValue];
   if (typeof speedNumericVal === 'undefined') {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
@@ -4899,7 +4899,7 @@ Studio.conditionSatisfied = function(required) {
       return false;
     }
 
-    if (valueName === 'setBotSpeed' && tracked.hasSetBotSpeed !== value) {
+    if (valueName === 'setDroidSpeed' && tracked.hasSetDroidSpeed !== value) {
       return false;
     }
   }
