@@ -1519,7 +1519,7 @@ Applab.maybeAddAssetPathPrefix = function (filename) {
   }
 
   filename = filename || '';
-  if (filename.indexOf('/') !== -1) {
+  if (filename.indexOf('/') !== -1 || filename.length === 0) {
     return filename;
   }
 
