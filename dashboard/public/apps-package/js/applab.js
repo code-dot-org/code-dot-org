@@ -674,7 +674,7 @@ function renderFooterInSharedGame() {
     },
     {
       text: applabMsg.makeMyOwnApp(),
-      link: '/projects/applab',
+      link: '/projects/applab/new',
       hideOnMobile: true
     },
     {
