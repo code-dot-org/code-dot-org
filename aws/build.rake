@@ -231,6 +231,7 @@ def upgrade_frontend(name, host)
   commands = [
     "cd #{rack_env}",
     'git pull --ff-only',
+    'sudo bundle install',
     'rake build',
   ]
   command = commands.join(' && ')
