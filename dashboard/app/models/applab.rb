@@ -69,6 +69,9 @@ class Applab < Blockly
     if self.code_functions.present? && self.code_functions.is_a?(String)
       self.code_functions = JSON.parse(self.code_functions)
     end
+  rescue JSON::ParserError => e
+    errors.add(:code_functions, e.message)
+    return false
   end
 
   def self.palette
