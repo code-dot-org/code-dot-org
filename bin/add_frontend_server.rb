@@ -128,13 +128,6 @@ def generate_instance_zone_and_name(ec2client, ssh_username, frontend_name = nil
   raise "Unable to find unique instance name"
 end
 
-def echo_and_run_command(cmd)
-  puts  "#{cmd}"
-  `#{cmd}`
-end
-
-
-
 options = {}
 
 OptionParser.new do |opts|
