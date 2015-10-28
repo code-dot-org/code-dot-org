@@ -44,7 +44,7 @@ execute "bundle-install-pegasus" do
   user node[:current_user]
   group node[:current_user]
   action :nothing
-  notifies :run, 'execute[setup-pegasus-db]', :immediately
+  notifies :run, "execute[#{node['cdo-apps']['local_mysql'] ? 'setup-pegasus-db' : 'build-pegasus'}]", :immediately
 end
 
 execute "setup-pegasus-db" do
