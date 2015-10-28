@@ -13,6 +13,7 @@
 'use strict';
 
 var SVG_NS = require('../constants').SVG_NS;
+var utils = require('../utils');
 
 // Unique element ID that increments by 1 each time an element is created
 var uniqueId = 0;
@@ -31,12 +32,6 @@ var uniqueId = 0;
  * TODO: SVG filters are not supported in IE9.  This class should do a feature
  *       check and convert itself into a no-op if we detect that filters are
  *       not supported.
- *
- * TODO: Some of these filters are using SVG SMIL animation, which is deprecated
- *       and not supported in any version of Internet Explorer.  They're going
- *       in this way for now to facilitate demo videos.  Those declared
- *       animations need to be replaced by modifying filter attributes in
- *       an 'update' method or on some timer.
  *
  * @constructor
  * @param {!SVGSVGElement} svg - Every filter must belong to a single SVG
@@ -171,4 +166,55 @@ ImageFilter.prototype.getDefsNode_ = function () {
     this.svg_.appendChild(defs);
   }
   return defs;
+};
+
+/**
+ * Generates a function that given a time value "t" will produce a number
+ * between zero and one (inclusive) following a given curve between them.
+ *
+ * @param {number} period - the t-value for one complete cycle, from max to
+ *        min and back to max.  Must be nonzero.
+ * @param {number} [exponent] - Determines the sharpness of the curve in the
+ *        oscillation.
+ *        2 (default) gives a traditional bell curve.
+ *        1 gives a triangle wave (no curve, just linear interpolation).
+ *        0-1 gives a curve that spends more time above halfway than below it.
+ *        1+ gives a curve that spends more time below halfway than above it
+ *             (like a repeated y=x*x curve).
+ *        May not work well for certain values of curve - make sure to test!
+ * @param {number} [min] - Smallest value of oscillation, default 0
+ * @param {number} [max] - Largest value of oscillation, default 1
+ */
+ImageFilter.makeBellCurveOscillation = function (period, exponent, min, max) {
+  exponent = utils.valueOr(exponent, 2);
+  min = utils.valueOr(min, 0);
+  max = utils.valueOr(max, 1);
+  var delta = max - min;
+  var coefficient = delta * Math.pow(2 / period, exponent);
+  var halfPeriod = period / 2;
+  return function (t) {
+    return min + coefficient * Math.abs(Math.pow((t % period) - halfPeriod, exponent));
+  };
+};
+
+/**
+ * Generates a function for a repeating pattern as follows:
+ *  * Spend the first 1/3 of the period at {min}
+ *  * Spend the second 1/3 of the period doing a linear interpolation from
+ *    {min} to {max}
+ *  * Spend the final 1/3 of the period at {max}
+ *
+ * @param {number} period - time units before this pattern repeats
+ * @param {number} [min] - Lowest value, default zero
+ * @param {number} [max] - Highest value, default one
+ */
+ImageFilter.makeRepeatingOneThirdLinearInterpolation = function (period, min, max) {
+  min = utils.valueOr(min, 0);
+  max = utils.valueOr(max, 1);
+
+  var slope = 3 * (max - min) / period;
+  var intercept = 2 * min - max;
+  return function (t) {
+    return Math.min(max, Math.max(min, slope * (t % period) + intercept));
+  };
 };
