@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+ENV['RACK_ENV'] = 'test'
+
 require 'mocha/mini_test'
 require 'minitest/autorun'
 require 'rack/test'
@@ -6,8 +9,6 @@ require File.expand_path '../../middleware/files_api', __FILE__
 require File.expand_path '../../middleware/channels_api', __FILE__
 require File.expand_path '../../middleware/helpers/asset_bucket', __FILE__
 require File.expand_path '../spy_newrelic_agent', __FILE__
-
-ENV['RACK_ENV'] = 'test'
 
 class AssetsTest < Minitest::Test
 
