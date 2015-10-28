@@ -4,8 +4,7 @@ to: <%= volunteer_name_s + " <" + volunteer_email_s + ">" %>
 subject: "A teacher is requesting your help for the Hour of Code"
 ---
 
-<% stop_this_year = "http://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/unsubscribe/until2016/#{form.secret}/" %>
-<% stop_forever = "http://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/unsubscribe/forever/#{form.secret}/" %>
+<% update_preferences = "http://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{form.secret}/" %>
 
 ### The following teacher is requesting your help for the Hour of Code
 
@@ -24,8 +23,7 @@ Product Manager, Code.org
 
 Getting too many email requests?
 
-- [Stop sending me teacher requests *for this year*](<%= stop_this_year %>)
-- [Stop sending me teacher requests forever](<%= stop_forever %>)
-- [Stop sending me *any* emails forever](<%= unsubscribe_link %>)
+- [Update my email preferences](<%= update_preferences %>)
+- [Unsubscribe from all emails](<%= unsubscribe_link %>)
 
 ![](<%= tracking_pixel %>)

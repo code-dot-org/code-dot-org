@@ -53,7 +53,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   end
 
   def self.solr_query(params)
-    query = "kind_s:\"#{self.name}\" && allow_contact_b:true && -unsubscribed_s"
+    query = "kind_s:\"#{self.name}\" && allow_contact_b:true && -unsubscribed_s:\"unil2016\" && -unsubscribed_s:\"forever\""
 
     coordinates = params['coordinates']
     distance = 500
