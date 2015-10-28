@@ -6194,6 +6194,17 @@ StudioApp.prototype.init = function(config) {
   }
 };
 
+StudioApp.prototype.getCode = function () {
+  if (!this.editCode) {
+    throw "getCode() requires editCode";
+  }
+  if (this.hideSource) {
+    return this.startBlocks_;
+  } else {
+    return this.editor.getValue();
+  }
+};
+
 StudioApp.prototype.handleClearPuzzle = function (config) {
   if (this.isUsingBlockly()) {
     if (Blockly.functionEditor) {
@@ -7034,6 +7045,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
+  this.startBlocks_ = config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || MAX_VISUALIZATION_WIDTH;
 
@@ -7210,6 +7222,15 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 };
 
 StudioApp.prototype.handleEditCode_ = function (options) {
+
+  if (this.hideSource) {
+    // In hide source mode, just call afterInject and exit immediately
+    if (options.afterInject) {
+      options.afterInject();
+    }
+    return;
+  }
+
   var displayMessage, examplePrograms, messageElement, onChange, startingText;
 
   // Ensure global ace variable is the same as window.ace
@@ -33666,11 +33687,13 @@ var JSInterpreter = module.exports = function (options) {
   this.maxValidCallExpressionDepth = 0;
   this.callExpressionSeenAtDepth = [];
 
-  this.codeInfo = {};
-  this.codeInfo.userCodeStartOffset = 0;
-  this.codeInfo.userCodeLength = options.code.length;
-  var session = this.studioApp.editor.aceEditor.getSession();
-  this.codeInfo.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+  if (!this.studioApp.hideSource) {
+    this.codeInfo = {};
+    this.codeInfo.userCodeStartOffset = 0;
+    this.codeInfo.userCodeLength = options.code.length;
+    var session = this.studioApp.editor.aceEditor.getSession();
+    this.codeInfo.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+  }
 
   if (options.enableEvents) {
     this.eventQueue = [];
@@ -33849,7 +33872,10 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
   var unwindingAfterStep = false;
   var inUserCode;
   var userCodeRow;
-  var session = this.studioApp.editor.aceEditor.getSession();
+  var session;
+  if (!this.studioApp.hideSource) {
+    session = this.studioApp.editor.aceEditor.getSession();
+  }
 
   // In each tick, we will step the interpreter multiple times in a tight
   // loop as long as we are interpreting code that the user can't see
@@ -34036,6 +34062,9 @@ JSInterpreter.prototype.createPrimitive = function (data) {
  * because it is outside of the userCode area, the return value is -1
  */
 JSInterpreter.prototype.selectCurrentCode = function (highlightClass) {
+  if (this.studioApp.hideSource) {
+    return -1;
+  }
   return codegen.selectCurrentCode(this.interpreter,
                                    this.codeInfo.cumulativeLength,
                                    this.codeInfo.userCodeStartOffset,
@@ -34051,6 +34080,9 @@ JSInterpreter.prototype.selectCurrentCode = function (highlightClass) {
  * of the userCode area, the return value is -1
  */
 JSInterpreter.prototype.getUserCodeLine = function () {
+  if (this.studioApp.hideSource) {
+    return -1;
+  }
   var userCodeRow = -1;
   if (this.interpreter.stateStack[0]) {
     var node = this.interpreter.stateStack[0].node;
@@ -34077,6 +34109,9 @@ JSInterpreter.prototype.getUserCodeLine = function () {
  * not currently in the user code area.
  */
 JSInterpreter.prototype.getNearestUserCodeLine = function () {
+  if (this.studioApp.hideSource) {
+    return -1;
+  }
   var userCodeRow = -1;
   for (var i = 0; i < this.interpreter.stateStack.length; i++) {
     var node = this.interpreter.stateStack[i].node;
@@ -34563,6 +34598,9 @@ exports.aceFindRow = function (cumulativeLength, rows, rowe, pos) {
 };
 
 exports.isAceBreakpointRow = function (session, userCodeRow) {
+  if (!session) {
+    return false;
+  }
   var bps = session.getBreakpoints();
   return Boolean(bps[userCodeRow]);
 };
@@ -34606,6 +34644,9 @@ function highlightAceLines (aceEditor, className, startRow, endRow) {
  * to highlight where an error has occurred.
  */
 exports.selectEditorRowColError = function (editor, row, col) {
+  if (!editor) {
+    return;
+  }
   if (editor.currentlyUsingBlocks) {
     var style = {color: '#FFFF22'};
     editor.clearLineMarks();
