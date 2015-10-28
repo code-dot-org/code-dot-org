@@ -65,8 +65,7 @@ ImageFilter.prototype.applyTo = function (svgElement) {
   if (!this.addedToDom_) {
     this.createInDom_();
   }
-
-  svgElement.setAttribute('filter', 'url(#' + this.id_ + ')');
+  svgElement.setAttribute('filter', 'url("#' + this.id_ + '")');
 };
 
 /**
@@ -74,7 +73,7 @@ ImageFilter.prototype.applyTo = function (svgElement) {
  * @param {SVGElement} svgElement
  */
 ImageFilter.prototype.removeFrom = function (svgElement) {
-  if (svgElement.getAttribute('filter') === 'url(#' + this.id_ + ')') {
+  if (svgElement.getAttribute('filter') === 'url("#' + this.id_ + '")') {
     svgElement.removeAttribute('filter');
   }
 };
