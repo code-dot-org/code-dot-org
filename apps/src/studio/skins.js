@@ -93,7 +93,8 @@ function loadIceAge(skin, assetUrl) {
         turns: 8,
         emotions: 0,
         walk: 12,
-        emotionCycles: 3
+        emotionCycles: 0,
+        extraEmotions: 3
       },
       timePerFrame: 100
     };
