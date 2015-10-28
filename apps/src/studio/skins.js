@@ -202,59 +202,58 @@ function loadHoc2015(skin, assetUrl) {
   skin.ProjectileClassNames = [
   ];
 
-  // TODO: proper item class names
   skin.ItemClassNames = [
-    'pig',
-    'man',
-    'roo',
-    'bird',
-    'spider',
-    'mouse',
-    'pilot'
+    'pufferpig',
+    'stormtrooper',
+    'tauntaun',
+    'mynock',
+    'viperprobedroid',
+    'mousedroid',
+    'rebelpilot'
   ];
 
   skin.AutohandlerTouchItems = {
-    whenTouchPig: 'pig',
-    whenTouchMan: 'man',
-    whenTouchRoo: 'roo',
-    whenTouchBird: 'bird',
-    whenTouchSpider: 'spider',
-    whenTouchMouse: 'mouse',
-    whenTouchPilot: 'pilot',
-    whenGetPig: 'pig',
-    whenGetMan: 'man',
-    whenGetRoo: 'roo',
-    whenGetBird: 'bird',
-    whenGetSpider: 'spider',
-    whenGetMouse: 'mouse',
-    whenGetPilot: 'pilot',
+    whenTouchPufferPig: 'pufferpig',
+    whenTouchStormtrooper: 'stormtrooper',
+    whenTouchTauntaun: 'tauntaun',
+    whenTouchMynock: 'mynock',
+    whenTouchViperProbeDroid: 'viperprobedroid',
+    whenTouchMouseDroid: 'mousedroid',
+    whenTouchRebelPilot: 'rebelpilot',
+    whenGetPufferPig: 'pufferpig',
+    whenGetStormtrooper: 'stormtrooper',
+    whenGetTauntaun: 'tauntaun',
+    whenGetMynock: 'mynock',
+    whenGetViperProbeDroid: 'viperprobedroid',
+    whenGetMouseDroid: 'mousedroid',
+    whenGetRebelPilot: 'rebelpilot',
   };
 
   skin.AutohandlerTouchAllItems = {
-    whenTouchAllPigs: 'pig',
-    whenTouchAllMen: 'man',
-    whenTouchAllRoos: 'roo',
-    whenTouchAllBirds: 'bird',
-    whenTouchAllSpiders: 'spider',
-    whenTouchAllMice: 'mouse',
-    whenTouchAllPilots: 'pilot',
-    whenGetAllPigs: 'pig',
-    whenGetAllMen: 'man',
-    whenGetAllRoos: 'roo',
-    whenGetAllBirds: 'bird',
-    whenGetAllSpiders: 'spider',
-    whenGetAllMice: 'mouse',
-    whenGetAllPilots: 'pilot',
+    whenTouchAllPufferPigs: 'pufferpig',
+    whenTouchAllStormtroopers: 'stormtrooper',
+    whenTouchAllTauntauns: 'tauntaun',
+    whenTouchAllMynocks: 'mynock',
+    whenTouchAllViperProbeDroids: 'viperprobedroid',
+    whenTouchAllMouseDroids: 'mousedroid',
+    whenTouchAllRebelPilots: 'rebelpilot',
+    whenGetAllPufferPigs: 'pufferpig',
+    whenGetAllStormtroopers: 'stormtrooper',
+    whenGetAllTauntauns: 'tauntaun',
+    whenGetAllMynocks: 'mynock',
+    whenGetAllViperProbeDroids: 'viperprobedroid',
+    whenGetAllMouseDroids: 'mousedroid',
+    whenGetAllRebelPilots: 'rebelpilot',
   };
 
   skin.specialItemProperties = {
-    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
-    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
-    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'pufferpig':       { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
+    'stormtrooper':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
+    'tauntaun':        { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'mynock':          { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'viperprobedroid': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'mousedroid':      { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'rebelpilot':      { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -343,20 +342,20 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   skin.preventItemLoop = function (className) {
-    return className === 'item_character1';
+    return className === '';
   };
 
   // No failure avatar for this skin.
   skin.failureAvatar = null;
 
   // TODO: Create actual item choices
-  skin.pig = skin.assetUrl('walk_item1.png');
-  skin.man = skin.assetUrl('walk_item2.png');
-  skin.roo = skin.assetUrl('walk_item3.png');
-  skin.bird = skin.assetUrl('walk_item4.png');
-  skin.spider = skin.assetUrl('walk_item5.png');
-  skin.mouse = skin.assetUrl('walk_item6.png');
-  skin.pilot = skin.assetUrl('walk_item7.png');
+  skin.pufferpig = skin.assetUrl('walk_pufferpig.png');
+  skin.stormtrooper = skin.assetUrl('walk_stormtrooper.png');
+  skin.tauntaun = skin.assetUrl('walk_tauntaun.png');
+  skin.mynock = skin.assetUrl('walk_mynock.png');
+  skin.viperprobedroid = skin.assetUrl('walk_viperprobedroid.png');
+  skin.mousedroid = skin.assetUrl('walk_mousedroid.png');
+  skin.rebelpilot = skin.assetUrl('walk_rebelpilot.png');
 
   skin.forest = {
     background: skin.assetUrl('background_background1.jpg'),
@@ -481,11 +480,11 @@ function loadHoc2015(skin, assetUrl) {
     'character1sound5', 'character1sound6', 'character1sound7', 'character1sound8',
     'character1sound9',
     'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
-    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
-    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
-    'item4sound1', 'item4sound2', 'item4sound3',
-    'item5sound1', 'item5sound2', 'item5sound3',
-    'item6sound1', 'item6sound2', 'item6sound3',
+    'pufferpigsound1', 'pufferpigsound2', 'pufferpigsound3', 'pufferpigsound4',
+    'tauntaunsound1', 'tauntaunsound2', 'tauntaunsound3', 'tauntaunsound4',
+    'mynocksound1', 'mynocksound2', 'mynocksound3',
+    'viperprobedroidsound1', 'viperprobedroidsound2', 'viperprobedroidsound3',
+    'mousedroidsound1', 'mousedroidsound2', 'mousedroidsound3',
     'alert1', 'alert2', 'alert3', 'alert4',
     'applause',
     'start', 'win', 'failure', 'flag',
@@ -537,13 +536,13 @@ function loadHoc2015(skin, assetUrl) {
   // NOTE: item names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
-    [msg.itemMan(), '"man"'],
-    [msg.itemPilot(), '"pilot"'],
-    [msg.itemPig(), '"pig"'],
-    [msg.itemBird(), '"bird"'],
-    [msg.itemMouse(), '"mouse"'],
-    [msg.itemRoo(), '"roo"'],
-    [msg.itemSpider(), '"spider"'],
+    [msg.itemStormtrooper(), '"stormtrooper"'],
+    [msg.itemRebelPilot(), '"rebelpilot"'],
+    [msg.itemPufferPig(), '"pufferpig"'],
+    [msg.itemMynock(), '"mynock"'],
+    [msg.itemMouseDroid(), '"mousedroid"'],
+    [msg.itemTauntaun(), '"tauntaun"'],
+    [msg.itemViperProbeDroid(), '"viperprobedroid"'],
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
@@ -654,7 +653,7 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.preventItemLoop = function (className) {
-    return className === 'item_character1';
+    return className === '';
   };
 
   skin.hazard = skin.assetUrl('hazard_idle.png');
