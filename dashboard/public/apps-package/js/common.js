@@ -29554,8 +29554,28 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   }
 
   if (continueButton) {
-    dom.addClickTouchEvent(continueButton, function() {
+
+    if (options.response && options.response.puzzle_rating_url) {
+      feedback.appendChild(this.buildPuzzleRatingButtons_());
+    }
+
+    dom.addClickTouchEvent(continueButton, function () {
       feedbackDialog.hide();
+
+      // Submit Puzzle Rating
+      var selectedRating = feedback.querySelector('.puzzle-rating-btn.enabled');
+      if (options.response && options.response.puzzle_rating_url && selectedRating) {
+        $.ajax({
+          url: options.response.puzzle_rating_url,
+          type: 'POST',
+          data: {
+            script_id: options.response.script_id,
+            level_id: options.response.level_id,
+            level_source_id: options.response.level_source_id,
+            rating: selectedRating.getAttribute('data-value')
+          },
+        });
+      }
       // onContinue will fire already if there was only a continue button
       if (!onlyContinue) {
         options.onContinue();
@@ -29636,6 +29656,27 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
     return codeLines;
   }
   return this.getCountableBlocks_().length;
+};
+
+FeedbackUtils.prototype.buildPuzzleRatingButtons_ = function () {
+  var buttonContainer = document.createElement('div');
+  buttonContainer.id = 'puzzleRatingButtons';
+  buttonContainer.innerHTML = require('./templates/puzzleRating.html.ejs')();
+
+  var buttons = buttonContainer.querySelectorAll('.puzzle-rating-btn');
+  var buttonClickHandler = function () {
+    for (var i = 0, button; (button = buttons[i]); i++) {
+      if (button != this) {
+        $(button).removeClass('enabled');
+      }
+    }
+    $(this).toggleClass('enabled');
+  };
+  for (var i = 0, button; (button = buttons[i]); i++) {
+    dom.addClickTouchEvent(button, buttonClickHandler);
+  }
+
+  return buttonContainer;
 };
 
 /**
@@ -30646,7 +30687,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"./codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","./constants":"/home/ubuntu/staging/apps/build/js/constants.js","./dom":"/home/ubuntu/staging/apps/build/js/dom.js","./feedbackBlocks":"/home/ubuntu/staging/apps/build/js/feedbackBlocks.js","./locale":"/home/ubuntu/staging/apps/build/js/locale.js","./templates/buttons.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/buttons.html.ejs","./templates/code.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/code.html.ejs","./templates/shareFailure.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/shareFailure.html.ejs","./templates/sharing.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/sharing.html.ejs","./templates/showCode.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/showCode.html.ejs","./templates/trophy.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/trophy.html.ejs","./utils":"/home/ubuntu/staging/apps/build/js/utils.js","./xml":"/home/ubuntu/staging/apps/build/js/xml.js"}],"/home/ubuntu/staging/apps/build/js/templates/trophy.html.ejs":[function(require,module,exports){
+},{"./codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","./constants":"/home/ubuntu/staging/apps/build/js/constants.js","./dom":"/home/ubuntu/staging/apps/build/js/dom.js","./feedbackBlocks":"/home/ubuntu/staging/apps/build/js/feedbackBlocks.js","./locale":"/home/ubuntu/staging/apps/build/js/locale.js","./templates/buttons.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/buttons.html.ejs","./templates/code.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/code.html.ejs","./templates/puzzleRating.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/puzzleRating.html.ejs","./templates/shareFailure.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/shareFailure.html.ejs","./templates/sharing.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/sharing.html.ejs","./templates/showCode.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/showCode.html.ejs","./templates/trophy.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/trophy.html.ejs","./utils":"/home/ubuntu/staging/apps/build/js/utils.js","./xml":"/home/ubuntu/staging/apps/build/js/xml.js"}],"/home/ubuntu/staging/apps/build/js/templates/trophy.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -30719,6 +30760,26 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('<p id="share-fail-explanation">', escape((1,  shareFailure.message )), '</p>\n\n');3; if (shareFailure.contents) { ; buf.push('\n  <div class="share-fail-excerpt">\n    <pre class="generatedCode">', escape((5,  shareFailure.contents )), '</pre>\n  </div>\n');7; } ; buf.push('\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/puzzleRating.html.ejs":[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<hr>\n<p>Did you like this puzzle?</p>\n\n<span class="puzzle-rating-btn" id="like" data-value="1">\n  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n      width="27px" height="27px" viewBox="0 0 26.055 21.058" enable-background="new 0 0 26.055 21.058" xml:space="preserve" value="1">\n    <path d="M14.426,2.5c0.986-1.348,2.83-2.5,5.092-2.5c3.613,0,6.537,3.044,6.537,6.537\n        c0,2.357-1.076,3.709-1.894,4.525c-0.941,0.941-8.082,8.082-9.113,9.113c-1.244,1.243-3.019,1.137-4.246-0.09\n        c-1.314-1.314-7.158-7.158-9.131-9.131C0.408,9.693,0,8.113,0,6.537C0,2.926,3.197,0,6.537,0c2.451,0,4.438,1.508,5.188,2.535\n        C12.4,3.459,13.643,3.564,14.426,2.5z"/>\n  </svg>\n</span>\n\n<span class="puzzle-rating-btn" id="dislike" data-value="0">\n  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n      width="27px" height="27px" viewBox="382.321 292.82 26.37 26.371" enable-background="new 382.321 292.82 26.37 26.371"\n      xml:space="preserve">\n    <path d="M395.506,292.82c-7.282,0.002-13.184,5.904-13.185,13.185c0.001,7.283,5.902,13.184,13.185,13.186\n        c7.281-0.002,13.183-5.902,13.185-13.186C408.689,298.725,402.787,292.822,395.506,292.82z M402.5,313\n        c-1.795,1.793-4.257,2.896-6.994,2.898c-2.737-0.002-5.199-1.105-6.994-2.898c-1.794-1.795-2.897-4.258-2.897-6.994\n        s1.103-5.199,2.897-6.994c1.795-1.793,4.257-2.897,6.994-2.897s5.199,1.104,6.994,2.897c1.792,1.795,2.896,4.258,2.896,6.994\n        S404.292,311.205,402.5,313z M391.317,304.951c1.054,0,1.907-0.854,1.907-1.906c0-1.053-0.854-1.906-1.907-1.906\n        c-1.054,0-1.907,0.854-1.907,1.906C389.41,304.098,390.264,304.951,391.317,304.951z M399.691,304.951\n        c1.053,0,1.906-0.854,1.906-1.906c0-1.053-0.853-1.906-1.906-1.906s-1.907,0.854-1.907,1.906\n        C397.784,304.098,398.639,304.951,399.691,304.951z M391.773,311.928c1.037-1.035,2.379-1.543,3.739-1.545\n        c1.352,0.002,2.689,0.512,3.724,1.545c0.642,0.643,1.685,0.643,2.328,0c0.645-0.643,0.645-1.686,0-2.33\n        c-1.665-1.666-3.864-2.51-6.052-2.508h-0.008c-2.185,0-4.39,0.838-6.06,2.51c-0.642,0.643-0.643,1.686,0,2.328\n        C390.088,312.571,391.131,312.571,391.773,311.928z"/>\n  </svg>\n</span>\n'); })();
 } 
 return buf.join('');
 };
