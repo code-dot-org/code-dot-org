@@ -803,7 +803,7 @@ describe('mergeCategoriesWithConfig', function () {
     // this result so that it will match our expected
     var normalizedResult = JSON.parse(JSON.stringify(result));
     assert.deepEqual(normalizedResult, expected);
-    // assert.deepEqual(Object.keys(expected), Object.keys(normalizedResult));
+    assert.deepEqual(Object.keys(expected), Object.keys(normalizedResult));
   });
 
   it('returns cloned categories', function () {

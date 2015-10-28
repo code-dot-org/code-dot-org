@@ -21,6 +21,8 @@ var Item = function (options) {
   this.height = options.height || 50;
   this.width = options.width || 50;
 
+  this.spritesCounterclockwise = options.spritesCounterclockwise || false;
+
   /**
    * Rendering offset for item animation vs display position - applied as
    * late as possible.
@@ -60,7 +62,11 @@ Item.prototype.getDirectionFrame = function() {
     }
   }
 
-  return constants.frameDirTableWalkingWithIdle[this.displayDir];
+  var frameDirTable = this.spritesCounterclockwise ? 
+    constants.frameDirTableWalkingWithIdleCounterclockwise : 
+    constants.frameDirTableWalkingWithIdleClockwise;
+
+  return frameDirTable[this.displayDir];
 };
 
 /**

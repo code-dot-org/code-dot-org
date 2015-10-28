@@ -20,13 +20,13 @@ Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide i
 
 ## Et klassesæt af bærbare computere (eller for $10.000 anden teknologi):
 
-Præmien er desværre begrænset til offentlige K-12 amerikanske skoler. To qualify, your entire school must register for the Hour of Code by November 16, 2015. En skole, fra hver af de amerikanske stater, vil modtage en klassesæt computere. Code.org will select and notify winners via email by December 1, 2015.
+Præmien er desværre begrænset til offentlige K-12 amerikanske skoler. For at blive kvalificeret, skal hele din skole tilmeldes Hour of Code inden d. 16. November 2015. En skole, fra hver af de amerikanske stater, vil modtage en klassesæt computere. Code.org vil udvælge og underrette vinderne via e-mail d. 1. december 2015.
 
 For lige at præcisere, så er dette ikke et lotteri eller en konkurrence, der involverer at man tager nogle chancer.
 
-1) der er ingen finansielle indsats eller risiko forbundet med at deltage - alle skole eller klasser kan deltage, uden nogen form for betaling til Code.org eller nogen anden organisation
+1) der er ingen finansiel ydelse eller risiko forbundet med at deltage - alle skole eller klasser kan deltage, uden nogen form for betaling til Code.org eller andre organisationer
 
-2) vinderne bliver kun valgt blandt skoler, hvor hele klassen (eller skolen) deltager i Hour of Code, som omfatter en test af elevernes og lærernes kollektive færdigheder.
+2) Vinderne bliver kun valgt blandt skoler, hvor hele klassen (eller skolen) deltager i Hour of Code, som omfatter en test af elevernes og lærernes kollektive færdigheder.
 
 <% end %>
 

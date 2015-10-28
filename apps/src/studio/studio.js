@@ -33,6 +33,8 @@ var Hammer = utils.getHammer();
 var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
+var ThreeSliceAudio = require('./ThreeSliceAudio');
+var MusicController = require('./MusicController');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -773,11 +775,19 @@ function sortDrawOrder() {
   }
 
   // Now sort everything by y.
-
   itemsArray = _.sortBy(itemsArray, 'y');
 
-  for (i = 0; i < itemsArray.length; ++i) {
-    spriteLayer.appendChild(itemsArray[i].element);
+  // Carefully place the elements back in the DOM starting at the end of the
+  // spriteLayer and, one by one, insert them before the previous one
+  // (this prevents flashing in Safari vs. an in-order appendChild() loop)
+  var prevNode;
+  for (i = itemsArray.length - 1; i >= 0; i--) {
+    if (prevNode) {
+      spriteLayer.insertBefore(itemsArray[i].element, prevNode);
+    } else {
+      spriteLayer.appendChild(itemsArray[i].element);
+    }
+    prevNode = itemsArray[i].element;
   }
 }
 
@@ -911,6 +921,7 @@ Studio.onTick = function() {
     var ticksBeforeFaceSouth = utils.valueOr(level.ticksBeforeFaceSouth, Studio.ticksBeforeFaceSouth);
     if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].dir = Direction.SOUTH;
+      Studio.movementAudioOff();
       isWalking = false;
     }
 
@@ -1560,13 +1571,48 @@ Studio.init = function(config) {
     }
   });
 
+  /**
+   * Helper that handles music loading/playing/crossfading for the level.
+   * @type {MusicController}
+   */
+  Studio.musicController = new MusicController(
+      studioApp.cdoSounds,
+      skin.assetUrl,
+      utils.valueOr(level.music, skin.music));
+
+  /**
+   * Defines the set of possible movement sound effects for each playlab actor.
+   * Populated just-in-time by setSprite to avoid preparing audio for actors
+   * we never use.
+   * @type {Object}
+   */
+  Studio.movementAudioEffects = {};
+
   config.loadAudio = function() {
+    var soundFileNames = [];
+    // We want to load the basic list of effects available in the skin
+    soundFileNames.push.apply(soundFileNames, skin.sounds);
+    // We also want to load the movement sounds used in hoc2015
+    soundFileNames.push.apply(soundFileNames, Studio.getMovementSoundFileNames(skin));
+    // No need to load anything twice, so de-dupe our list.
+    soundFileNames = _.uniq(soundFileNames);
+
     skin.soundFiles = {};
-    skin.sounds.forEach(function (sound) {
+    soundFileNames.forEach(function (sound) {
       skin.soundFiles[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl(sound + '.ogg')];
       studioApp.loadAudio(skin.soundFiles[sound], sound);
     });
+
+    // Handle music separately - the music controller does its own preloading.
+    Studio.musicController.preload();
   };
+
+  // Play music when the instructions are shown
+  var onInstructionsShown = function () {
+    Studio.musicController.play();
+    document.removeEventListener('instructionsShown', onInstructionsShown);
+  };
+  document.addEventListener('instructionsShown', onInstructionsShown);
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1656,6 +1702,28 @@ Studio.init = function(config) {
     preloadProjectileAndItemImages();
     preloadBackgroundImages();
   }
+};
+
+/**
+ * Get a flattened list of all the sound file names (sans extensions)
+ * specified in the skin for avatar movement (these may be omitted from the
+ * skin.sounds list because we don't want them accessible to the player).
+ * @param {Object} level skin from which to extract sound effect names.
+ * @returns {string[]} which may contain duplicates but will not have any
+ *          undefined entries.
+ */
+Studio.getMovementSoundFileNames = function (fromSkin) {
+  var avatarList = fromSkin.avatarList || [];
+  return avatarList.map(function (avatarName) {
+    var movementAudio = fromSkin[avatarName].movementAudio || [];
+    return movementAudio.reduce(function (memo, nextOption) {
+      return memo.concat([nextOption.begin, nextOption.loop, nextOption.end]);
+    }, []);
+  }).reduce(function (memo, next) {
+    return memo.concat(next);
+  }, []).filter(function (fileName) {
+    return fileName !== undefined;
+  });
 };
 
 var preloadImage = function(url) {
@@ -1894,6 +1962,9 @@ Studio.reset = function(first) {
 
   // Reset whether level has succeeded.
   Studio.succeededTime = null;
+
+  // Stop any current movement sounds
+  Studio.movementAudioOff();
 };
 
 /**
@@ -1982,6 +2053,10 @@ Studio.runButtonClick = function() {
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
+
+  // Stop the music the first time the run button is pressed (hoc2015)
+  Studio.musicController.fadeOut();
+
   studioApp.reset(false);
   studioApp.attempts++;
   Studio.startTime = new Date();
@@ -2360,11 +2435,13 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = studioApp.editor.getValue();
-    // Our ace worker also calls attachToSession, but it won't run on IE9:
-    var session = studioApp.editor.aceEditor.getSession();
-    annotationList.attachToSession(session, studioApp.editor);
-    annotationList.clearRuntimeAnnotations();
+    var codeWhenRun = studioApp.getCode();
+    if (!studioApp.hideSource) {
+      // Our ace worker also calls attachToSession, but it won't run on IE9:
+      var session = studioApp.editor.aceEditor.getSession();
+      annotationList.attachToSession(session, studioApp.editor);
+      annotationList.clearRuntimeAnnotations();
+    }
     Studio.JSInterpreter = new JSInterpreter({
       code: codeWhenRun,
       blocks: dropletConfig.blocks,
@@ -2404,6 +2481,7 @@ Studio.onPuzzleComplete = function() {
 
   // Stop everything on screen
   Studio.clearEventHandlersKillTickLoop();
+  Studio.movementAudioOff();
 
   // If we know they succeeded, mark levelComplete true
   var levelComplete = (Studio.result === ResultType.SUCCESS);
@@ -2430,7 +2508,7 @@ Studio.onPuzzleComplete = function() {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = studioApp.editor.getValue();
+    program = studioApp.getCode();
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
@@ -3326,6 +3404,7 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     speed: Studio.itemSpeed[itemClass],
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     isHazard: classProperties.isHazard,
+    spritesCounterclockwise: classProperties.spritesCounterclockwise,
     renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
     renderScale: utils.valueOr(classProperties.scale, 1),
     animationRate: classProperties.animationRate
@@ -3934,8 +4013,37 @@ Studio.setSprite = function (opts) {
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
+  // Set up movement audio for the selected sprite (clips should be preloaded)
+  if (!Studio.movementAudioEffects[spriteValue] && skin.avatarList) {
+    var spriteSkin = skin[spriteValue] || {};
+    var audioConfig = spriteSkin.movementAudio || [];
+    Studio.movementAudioEffects[spriteValue] = [];
+    if (studioApp.cdoSounds) {
+      Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
+        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
+      });
+    }
+  }
+  Studio.currentSpriteMovementAudioEffects = Studio.movementAudioEffects[spriteValue];
+
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
+};
+
+
+Studio.movementAudioOn = function () {
+  Studio.movementAudioOff();
+  Studio.currentMovementAudio = Studio.currentSpriteMovementAudioEffects[
+      Math.floor(Math.random() * Studio.currentSpriteMovementAudioEffects.length)];
+  if (Studio.currentMovementAudio) {
+    Studio.currentMovementAudio.on();
+  }
+};
+
+Studio.movementAudioOff = function () {
+  if (Studio.currentMovementAudio) {
+    Studio.currentMovementAudio.off();
+  }
 };
 
 var p = function (x,y) {
@@ -4512,7 +4620,6 @@ Studio.moveSingle = function (opts) {
   var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   var wallCollision = false;
   var playspaceEdgeCollision = false;
-  var playSound = false;
   var deltaX = 0, deltaY = 0;
 
   switch (opts.dir) {
@@ -4562,30 +4669,25 @@ Studio.moveSingle = function (opts) {
       Studio.JSInterpreter.yield();
     }
 
-    playSound = true;
-  } else if (!wallCollision) {
-    if (playspaceEdgeCollision) {
-      var boundary = Studio.getPlayspaceBoundaries(sprite);
-      projectedX = Math.max(boundary.left, Math.min(boundary.right, projectedX));
-      projectedY = Math.max(boundary.top, Math.min(boundary.bottom, projectedY));
+    Studio.movementAudioOn();
+  } else {
+    if (!wallCollision) {
+      if (playspaceEdgeCollision) {
+        var boundary = Studio.getPlayspaceBoundaries(sprite);
+        projectedX = Math.max(boundary.left, Math.min(boundary.right, projectedX));
+        projectedY = Math.max(boundary.top, Math.min(boundary.bottom, projectedY));
+      }
+      sprite.x = projectedX;
+      sprite.y = projectedY;
     }
-    sprite.x = projectedX;
-    sprite.y = projectedY;
 
     if (opts.dir !== Studio.lastMoveSingleDir &&
         lastMove === Infinity || Studio.tickCount > lastMove + 1) {
-      // So long as there was no wall collision, a new direction, and we
-      // haven't already processed a move in the previous tick, then play a sound.
-      playSound = true;
+      Studio.movementAudioOn();
     }
   }
 
   Studio.lastMoveSingleDir = opts.dir;
-
-  if (playSound && skin.moveSounds) {
-    var randomSoundIndex = Math.floor(Math.random() * skin.moveSounds.length);
-    studioApp.playAudio(skin.moveSounds[randomSoundIndex]);
-  }
 };
 
 Studio.moveDistance = function (opts) {

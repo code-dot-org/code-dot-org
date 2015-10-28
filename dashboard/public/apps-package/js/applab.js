@@ -403,6 +403,7 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var level;
 var skin;
 var copyrightStrings;
+var dropletConfigBlocks;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -673,7 +674,8 @@ function renderFooterInSharedGame() {
     },
     {
       text: applabMsg.makeMyOwnApp(),
-      link: '/projects/applab'
+      link: '/projects/applab',
+      hideOnMobile: true
     },
     {
       text: commonMsg.openWorkspace(),
@@ -691,7 +693,9 @@ function renderFooterInSharedGame() {
     }
   ];
   if (dom.isMobile()) {
-    menuItems.splice(0, 1); // no make my own app on mobile
+    menuItems = menuItems.filter(function (item) {
+      return !item.hideOnMobile;
+    });
   }
 
   window.dashboard.footer.render(React, {
@@ -852,7 +856,7 @@ function handleExecutionError(err, lineNumber) {
 }
 
 Applab.getCode = function () {
-  return studioApp.editor.getValue();
+  return studioApp.getCode();
 };
 
 Applab.getHtml = function () {
@@ -1035,7 +1039,8 @@ Applab.init = function(config) {
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
     finishButton: (!level.isProjectLevel && !level.submittable),
-    submitButton: level.submittable
+    submitButton: level.submittable && !level.submitted,
+    unsubmitButton: level.submittable && level.submitted
   });
   var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
@@ -1100,6 +1105,10 @@ Applab.init = function(config) {
     if (!utils.browserSupportsCssMedia()) {
       studioApp.resizeVisualization(300);
     }
+
+    if (studioApp.share) {
+      Applab.startSharedAppAfterWarnings();
+    }
   };
 
   config.afterEditorReady = function() {
@@ -1116,10 +1125,6 @@ Applab.init = function(config) {
           studioApp.editor.setBreakpoint(e.line);
         }
       });
-    }
-
-    if (studioApp.share) {
-      Applab.startSharedAppAfterWarnings();
     }
   };
 
@@ -1142,7 +1147,17 @@ Applab.init = function(config) {
   config.varsInGlobals = true;
   config.noButtonsBelowOnMobileShare = true;
 
-  config.dropletConfig = dropletConfig;
+  // filter blocks to exclude anything that isn't in code functions if
+  // autocompletePaletteApisOnly is true
+  dropletConfigBlocks = dropletConfig.blocks.filter(function (block) {
+    return !(config.level.executePaletteApisOnly &&
+      config.level.codeFunctions[block.func] === undefined);
+  });
+
+  config.dropletConfig = $.extend({}, dropletConfig, {
+    blocks: dropletConfigBlocks
+  });
+
   config.pinWorkspaceToBottom = true;
 
   config.vizAspectRatio = Applab.appWidth / Applab.footerlessAppHeight;
@@ -1223,6 +1238,11 @@ Applab.init = function(config) {
   var submitButton = document.getElementById('submitButton');
   if (submitButton) {
     dom.addClickTouchEvent(submitButton, Applab.onPuzzleSubmit);
+  }
+
+  var unsubmitButton = document.getElementById('unsubmitButton');
+  if (unsubmitButton) {
+    dom.addClickTouchEvent(unsubmitButton, Applab.onPuzzleUnsubmit);
   }
 
   if (level.editCode) {
@@ -1629,11 +1649,13 @@ Applab.execute = function() {
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = studioApp.editor.getValue();
-    // Our ace worker also calls attachToSession, but it won't run on IE9:
-    var session = studioApp.editor.aceEditor.getSession();
-    annotationList.attachToSession(session, studioApp.editor);
-    annotationList.clearRuntimeAnnotations();
+    codeWhenRun = studioApp.getCode();
+    if (!studioApp.hideSource) {
+      // Our ace worker also calls attachToSession, but it won't run on IE9:
+      var session = studioApp.editor.aceEditor.getSession();
+      annotationList.attachToSession(session, studioApp.editor);
+      annotationList.clearRuntimeAnnotations();
+    }
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Applab.Globals namespace)
@@ -1653,25 +1675,26 @@ Applab.execute = function() {
     if (level.editCode) {
       // Use JS interpreter on editCode levels
       Applab.JSInterpreter = new JSInterpreter({
-          code: codeWhenRun,
-          blocks: dropletConfig.blocks,
-          enableEvents: true,
-          studioApp: studioApp,
-          shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
-          maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-          onNextStepChanged: Applab.updatePauseUIState,
-          onPause: Applab.onPauseContinueButton,
-          onExecutionError: handleExecutionError,
-          onExecutionWarning: outputApplabConsole
+        code: codeWhenRun,
+        blocks: dropletConfigBlocks,
+        enableEvents: true,
+        studioApp: studioApp,
+        shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
+        maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
+        onNextStepChanged: Applab.updatePauseUIState,
+        onPause: Applab.onPauseContinueButton,
+        onExecutionError: handleExecutionError,
+        onExecutionWarning: outputApplabConsole
       });
       if (!Applab.JSInterpreter.initialized()) {
-          return;
+        return;
       }
     } else {
       Applab.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
-                                          StudioApp: studioApp,
-                                          Applab: apiBlockly,
-                                          Globals: Applab.Globals } );
+        StudioApp: studioApp,
+        Applab: apiBlockly,
+        Globals: Applab.Globals
+      });
     }
   }
 
@@ -1830,10 +1853,21 @@ Applab.maybeAddAssetPathPrefix = function (filename) {
   return '/v3/assets/' + Applab.channelId + '/'  + filename;
 };
 
-Applab.showSubmitConfirmation = function() {
+/**
+ * Show a modal dialog with a title, text, and OK and Cancel buttons
+ * @param {title}
+ * @param {text}
+ * @param {callback} [onConfirm] what to do when the user clicks OK
+ * @param {string} [filterSelector] Optional selector to filter for.
+ */
+
+Applab.showConfirmationDialog = function(config) {
+  config.text = config.text || "";
+  config.title = config.title || "";
+
   var contentDiv = document.createElement('div');
-  contentDiv.innerHTML = '<p class="dialog-title">' + commonMsg.submitYourProject() + '</p>' +
-      '<p>' + commonMsg.submitYourProjectConfirm() + '</p>';
+  contentDiv.innerHTML = '<p class="dialog-title">' + config.title + '</p>' +
+      '<p>' + config.text + '</p>';
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('../templates/buttons.html.ejs')({
@@ -1860,7 +1894,9 @@ Applab.showSubmitConfirmation = function() {
   var confirmButton = buttons.querySelector('#confirm-button');
   if (confirmButton) {
     dom.addClickTouchEvent(confirmButton, function() {
-      Applab.onPuzzleComplete(true);
+      if (config.onConfirm) {
+        config.onConfirm();
+      }
       dialog.hide();
     });
   }
@@ -1869,7 +1905,31 @@ Applab.showSubmitConfirmation = function() {
 };
 
 Applab.onPuzzleSubmit = function() {
-  Applab.showSubmitConfirmation();
+  Applab.showConfirmationDialog({
+    title: commonMsg.submitYourProject(),
+    text: commonMsg.submitYourProjectConfirm(),
+    onConfirm: function() {
+      Applab.onPuzzleComplete(true);
+    }
+  });
+};
+
+Applab.unsubmit = function() {
+  $.post(level.unsubmitUrl,
+         {"_method": 'PUT', user_level: {best_result: 1}},
+         function( data ) {
+           location.reload();
+         });
+};
+
+Applab.onPuzzleUnsubmit = function() {
+  Applab.showConfirmationDialog({
+    title: commonMsg.unsubmitYourProject(),
+    text: commonMsg.unsubmitYourProjectConfirm(),
+    onConfirm: function() {
+      Applab.unsubmit();
+    }
+  });
 };
 
 Applab.onPuzzleFinish = function() {
@@ -1917,7 +1977,7 @@ Applab.onPuzzleComplete = function(submit) {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = studioApp.editor.getValue();
+    program = studioApp.getCode();
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
@@ -2379,7 +2439,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="divApplab" class="appModern" tabindex="1">\n</div>\n<div id="designModeViz" style="display:none;">\n</div>\n\n'); })();
+ buf.push('<div id="divApplab" class="appModern" tabindex="1">\n</div>\n<div id="designModeViz" class="appModern" style="display:none;">\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2399,7 +2459,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../locale') ; buf.push('\n');2; var applabMsg = require('./locale') ; buf.push('\n\n<div id="debug-area">\n  <div id="debugResizeBar" class="fa fa-ellipsis-h"></div>\n  <div id="debug-area-header">\n    <span class="header-text">', escape((7,  applabMsg.debugConsoleHeader() )), '</span>\n    <i id="show-hide-debug-icon" class="fa fa-chevron-circle-down"></i>\n    ');9; if (debugButtons) { ; buf.push('\n    <div id="debug-commands-header" class="workspace-header">\n      <i id="running-spinner" style="display: none;" class="fa fa-spinner fa-spin"></i>\n      <i id="paused-icon" style="display: none;" class="fa fa-pause"></i>\n      <span class="header-text">', escape((13,  applabMsg.debugCommandsHeaderWhenOpen() )), '</span>\n    </div>\n    <div id="clear-console-header" class="workspace-header workspace-header-button"><span><i class="fa fa-eraser"></i>Clear</span></div>\n    <div id="slider-cell">\n      <svg id="applab-slider"\n           xmlns="http://www.w3.org/2000/svg"\n           xmlns:svg="http://www.w3.org/2000/svg"\n           xmlns:xlink="http://www.w3.org/1999/xlink"\n           version="1.1"\n           width="150"\n           height="28">\n          <!-- Slow icon. -->\n          <clipPath id="slowClipPath">\n            <rect width=26 height=12 x=5 y=6 />\n          </clipPath>\n          <image xlink:href="', escape((28,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-18\n              clip-path="url(#slowClipPath)" />\n          <!-- Fast icon. -->\n          <clipPath id="fastClipPath">\n            <rect width=26 height=16 x=120 y=2 />\n          </clipPath>\n          <image xlink:href="', escape((34,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=120 y=-19\n              clip-path="url(#fastClipPath)" />\n      </svg>\n    </div>\n    ');38; } ; buf.push('\n  </div>\n\n  ');41; if (debugButtons) { ; buf.push('\n  <div id="debug-commands" class="debug-commands">\n    <div id="debug-buttons">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((45,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((46,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((49,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((50,  applabMsg.continue() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((53,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((54,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((57,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((58,  applabMsg.stepOut() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((61,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((62,  applabMsg.stepIn() )), '\n      </button>\n    </div>\n  </div>\n  ');66; } ; buf.push('\n  ');67; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console ', escape((68,  debugButtons ? '' : 'full' )), '">\n    <div id="debug-output" class="debug-output"></div>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable spellcheck="false" id="debug-input" class="debug-input"></div>\n  </div>\n  ');75; } ; buf.push('\n</div>\n'); })();
+ buf.push('');1; var msg = require('../locale') ; buf.push('\n');2; var applabMsg = require('./locale') ; buf.push('\n\n<div id="debug-area">\n  <div id="debugResizeBar" class="fa fa-ellipsis-h"></div>\n  <div id="debug-area-header">\n    <span class="header-text">', escape((7,  applabMsg.debugConsoleHeader() )), '</span>\n    <i id="show-hide-debug-icon" class="fa fa-chevron-circle-down"></i>\n    ');9; if (debugButtons) { ; buf.push('\n    <div id="debug-commands-header" class="workspace-header">\n      <i id="running-spinner" style="display: none;" class="fa fa-spinner fa-spin"></i>\n      <i id="paused-icon" style="display: none;" class="fa fa-pause"></i>\n      <span class="header-text">', escape((13,  applabMsg.debugCommandsHeaderWhenOpen() )), '</span>\n    </div>\n    <div id="clear-console-header" class="workspace-header workspace-header-button"><span><i class="fa fa-eraser"></i>Clear</span></div>\n    ');16; } ; buf.push('\n    <div id="slider-cell" style="margin-left: ', escape((17,  debugButtons ? 0 : 40 )), 'px">\n      <svg id="applab-slider"\n           xmlns="http://www.w3.org/2000/svg"\n           xmlns:svg="http://www.w3.org/2000/svg"\n           xmlns:xlink="http://www.w3.org/1999/xlink"\n           version="1.1"\n           width="150"\n           height="28">\n          <!-- Slow icon. -->\n          <clipPath id="slowClipPath">\n            <rect width=26 height=12 x=5 y=6 />\n          </clipPath>\n          <image xlink:href="', escape((29,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-18\n              clip-path="url(#slowClipPath)" />\n          <!-- Fast icon. -->\n          <clipPath id="fastClipPath">\n            <rect width=26 height=16 x=120 y=2 />\n          </clipPath>\n          <image xlink:href="', escape((35,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=120 y=-19\n              clip-path="url(#fastClipPath)" />\n      </svg>\n    </div>\n  </div>\n\n  ');41; if (debugButtons) { ; buf.push('\n  <div id="debug-commands" class="debug-commands">\n    <div id="debug-buttons">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((45,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((46,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((49,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((50,  applabMsg.continue() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((53,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((54,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((57,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((58,  applabMsg.stepOut() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((61,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((62,  applabMsg.stepIn() )), '\n      </button>\n    </div>\n  </div>\n  ');66; } ; buf.push('\n  ');67; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console ', escape((68,  debugButtons ? '' : 'full' )), '">\n    <div id="debug-output" class="debug-output"></div>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable spellcheck="false" id="debug-input" class="debug-input"></div>\n  </div>\n  ');75; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -3648,7 +3708,7 @@ function makeUndraggable(jqueryElements) {
 function highlightElement(element) {
   removeElementHighlights();
 
-  if ($(element).is('#designModeViz img,#designModeViz label')) {
+  if ($(element).is('#designModeViz img[src!=""], #designModeViz label')) {
     $(element).parent().css({
       outlineStyle: 'dashed',
       outlineWidth: '1px',
@@ -3870,7 +3930,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../locale');
 ; buf.push('\n');4; // Comment so this file is not identical to studio/controls.html.ejs 
-; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" disabled=true class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" disabled=true class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" disabled=true class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" disabled=true class="arrow">\n    <img src="', escape((17,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');21; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((24,  assetUrl('media/1x1.gif') )), '">', escape((24,  msg.finish() )), '\n    </button>\n  </div>\n');27; } ; buf.push('\n\n');29; if (submitButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="submitButton" class="share">\n      <img src="', escape((32,  assetUrl('media/1x1.gif') )), '">', escape((32,  msg.submit() )), '\n    </button>\n  </div>\n');35; } ; buf.push('\n'); })();
+; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" disabled=true class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" disabled=true class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" disabled=true class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" disabled=true class="arrow">\n    <img src="', escape((17,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');21; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((24,  assetUrl('media/1x1.gif') )), '">', escape((24,  msg.finish() )), '\n    </button>\n  </div>\n');27; } ; buf.push('\n\n');29; if (submitButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="submitButton" class="share">\n      <img src="', escape((32,  assetUrl('media/1x1.gif') )), '">', escape((32,  msg.submit() )), '\n    </button>\n  </div>\n');35; } ; buf.push('\n\n');37; if (unsubmitButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-enabled">\n    <button id="unsubmitButton" class="share">\n      <img src="', escape((40,  assetUrl('media/1x1.gif') )), '">', escape((40,  msg.unsubmit() )), '\n    </button>\n  </div>\n');43; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };

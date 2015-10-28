@@ -6194,6 +6194,17 @@ StudioApp.prototype.init = function(config) {
   }
 };
 
+StudioApp.prototype.getCode = function () {
+  if (!this.editCode) {
+    throw "getCode() requires editCode";
+  }
+  if (this.hideSource) {
+    return this.startBlocks_;
+  } else {
+    return this.editor.getValue();
+  }
+};
+
 StudioApp.prototype.handleClearPuzzle = function (config) {
   if (this.isUsingBlockly()) {
     if (Blockly.functionEditor) {
@@ -6353,6 +6364,7 @@ StudioApp.prototype.loadAudio = function(filenames, name) {
  * @param {string} name sound ID
  * @param {Object} options for sound playback
  * @param {number} options.volume value between 0.0 and 1.0 specifying volume
+ * @param {function} [options.onEnded]
  */
 StudioApp.prototype.playAudio = function(name, options) {
   if (!this.cdoSounds) {
@@ -6475,8 +6487,12 @@ StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
       // look to see if we have a predefined arrangement for this type
       type = xmlChild.getAttribute('type');
       if (arrangement[type]) {
-        xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangement[type].x);
-        xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangement[type].y);
+        if (arrangement[type].x && !xmlChild.hasAttribute('x')) {
+          xmlChild.setAttribute('x', arrangement[type].x);
+        }
+        if (arrangement[type].y && !xmlChild.hasAttribute('y')) {
+          xmlChild.setAttribute('y', arrangement[type].y);
+        }
       }
     }
   }
@@ -6575,6 +6591,12 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     // process <details> tags with polyfill jQuery plugin
     $('details').details();
   }
+
+  // Fire a custom event on the document so that other code can respond
+  // to instructions being shown.
+  var event = document.createEvent('Event');
+  event.initEvent('instructionsShown', true, true);
+  document.dispatchEvent(event);
 };
 
 /**
@@ -7023,6 +7045,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
+  this.startBlocks_ = config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || MAX_VISUALIZATION_WIDTH;
 
@@ -7199,6 +7222,15 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 };
 
 StudioApp.prototype.handleEditCode_ = function (options) {
+
+  if (this.hideSource) {
+    // In hide source mode, just call afterInject and exit immediately
+    if (options.afterInject) {
+      options.afterInject();
+    }
+    return;
+  }
+
   var displayMessage, examplePrograms, messageElement, onChange, startingText;
 
   // Ensure global ace variable is the same as window.ace
@@ -33655,11 +33687,13 @@ var JSInterpreter = module.exports = function (options) {
   this.maxValidCallExpressionDepth = 0;
   this.callExpressionSeenAtDepth = [];
 
-  this.codeInfo = {};
-  this.codeInfo.userCodeStartOffset = 0;
-  this.codeInfo.userCodeLength = options.code.length;
-  var session = this.studioApp.editor.aceEditor.getSession();
-  this.codeInfo.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+  if (!this.studioApp.hideSource) {
+    this.codeInfo = {};
+    this.codeInfo.userCodeStartOffset = 0;
+    this.codeInfo.userCodeLength = options.code.length;
+    var session = this.studioApp.editor.aceEditor.getSession();
+    this.codeInfo.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+  }
 
   if (options.enableEvents) {
     this.eventQueue = [];
@@ -33838,7 +33872,10 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
   var unwindingAfterStep = false;
   var inUserCode;
   var userCodeRow;
-  var session = this.studioApp.editor.aceEditor.getSession();
+  var session;
+  if (!this.studioApp.hideSource) {
+    session = this.studioApp.editor.aceEditor.getSession();
+  }
 
   // In each tick, we will step the interpreter multiple times in a tight
   // loop as long as we are interpreting code that the user can't see
@@ -34025,6 +34062,9 @@ JSInterpreter.prototype.createPrimitive = function (data) {
  * because it is outside of the userCode area, the return value is -1
  */
 JSInterpreter.prototype.selectCurrentCode = function (highlightClass) {
+  if (this.studioApp.hideSource) {
+    return -1;
+  }
   return codegen.selectCurrentCode(this.interpreter,
                                    this.codeInfo.cumulativeLength,
                                    this.codeInfo.userCodeStartOffset,
@@ -34040,6 +34080,9 @@ JSInterpreter.prototype.selectCurrentCode = function (highlightClass) {
  * of the userCode area, the return value is -1
  */
 JSInterpreter.prototype.getUserCodeLine = function () {
+  if (this.studioApp.hideSource) {
+    return -1;
+  }
   var userCodeRow = -1;
   if (this.interpreter.stateStack[0]) {
     var node = this.interpreter.stateStack[0].node;
@@ -34066,6 +34109,9 @@ JSInterpreter.prototype.getUserCodeLine = function () {
  * not currently in the user code area.
  */
 JSInterpreter.prototype.getNearestUserCodeLine = function () {
+  if (this.studioApp.hideSource) {
+    return -1;
+  }
   var userCodeRow = -1;
   for (var i = 0; i < this.interpreter.stateStack.length; i++) {
     var node = this.interpreter.stateStack[i].node;
@@ -34100,7 +34146,7 @@ JSInterpreter.prototype.findGlobalFunction = function (funcName) {
 };
 
 },{"./codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","./utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/codegen.js":[function(require,module,exports){
-/* global Interpreter */
+/* global Interpreter, CanvasPixelArray */
 
 var dropletUtils = require('./dropletUtils');
 
@@ -34245,10 +34291,18 @@ function marshalNativeToInterpreterObject(interpreter, nativeObject, maxDepth) {
   return retVal;
 }
 
+function isCanvasImageData(nativeVar) {
+  // IE 9/10 don't know about Uint8ClampedArray and call it CanvasPixelArray instead
+  if (typeof(Uint8ClampedArray) !== "undefined") {
+    return nativeVar instanceof Uint8ClampedArray;
+  }
+  return nativeVar instanceof CanvasPixelArray;
+}
+
+
 //
 // Droplet/JavaScript/Interpreter codegen functions:
 //
-
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
   if (typeof nativeVar === 'undefined') {
     return interpreter.UNDEFINED;
@@ -34264,12 +34318,10 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     retVal = interpreter.createObject(interpreter.ARRAY);
     for (i = 0; i < nativeVar.length; i++) {
       retVal.properties[i] = exports.marshalNativeToInterpreter(interpreter,
-                                                                nativeVar[i],
-                                                                null,
-                                                                maxDepth - 1);
+        nativeVar[i], null, maxDepth - 1);
     }
     retVal.length = nativeVar.length;
-  } else if (nativeVar instanceof Uint8ClampedArray) {
+  } else if (isCanvasImageData(nativeVar)) {
     // Special case for canvas image data - could expand to support TypedArray
     retVal = interpreter.createObject(interpreter.ARRAY);
     for (i = 0; i < nativeVar.length; i++) {
@@ -34552,6 +34604,9 @@ exports.aceFindRow = function (cumulativeLength, rows, rowe, pos) {
 };
 
 exports.isAceBreakpointRow = function (session, userCodeRow) {
+  if (!session) {
+    return false;
+  }
   var bps = session.getBreakpoints();
   return Boolean(bps[userCodeRow]);
 };
@@ -34595,6 +34650,9 @@ function highlightAceLines (aceEditor, className, startRow, endRow) {
  * to highlight where an error has occurred.
  */
 exports.selectEditorRowColError = function (editor, row, col) {
+  if (!editor) {
+    return;
+  }
   if (editor.currentlyUsingBlocks) {
     var style = {color: '#FFFF22'};
     editor.clearLineMarks();
@@ -34815,7 +34873,7 @@ standardConfig.blocks = [
   {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math' },
   {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },
   {func: 'mathMin', block: 'Math.min(__)', category: 'Math' },
-  {func: 'mathRandom', block: 'Math.random(__)', category: 'Math' },
+  {func: 'mathRandom', block: 'Math.random()', category: 'Math' },
 
   // Variables
   {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables' },
@@ -34904,8 +34962,11 @@ function mergeFunctionsWithConfig(codeFunctions, dropletConfig, otherConfig) {
 function mergeCategoriesWithConfig(dropletConfig) {
   // Clone our merged categories so that as we mutate it, we're not mutating
   // our original config
-  return _.cloneDeep($.extend({}, standardConfig.categories,
-    dropletConfig && dropletConfig.categories));
+  var dropletCategories = dropletConfig && dropletConfig.categories;
+  // We include dropletCategories twice so that (a) it's ordering of categories
+  // gets preference and (b) it's value override anything in standardConfig
+  return _.cloneDeep($.extend({}, dropletCategories, standardConfig.categories,
+    dropletCategories));
 }
 
 /**
@@ -35518,7 +35579,7 @@ exports.parseElement = function(text) {
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,cloneDeep,isEqual,find,sortBy,throttle" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind,contains,last,clone,cloneDeep,isEqual,find,sortBy,throttle,uniq" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -36825,6 +36886,53 @@ exports.parseElement = function(text) {
    */
   function baseRandom(min, max) {
     return min + floor(nativeRandom() * (max - min + 1));
+  }
+
+  /**
+   * The base implementation of `_.uniq` without support for callback shorthands
+   * or `thisArg` binding.
+   *
+   * @private
+   * @param {Array} array The array to process.
+   * @param {boolean} [isSorted=false] A flag to indicate that `array` is sorted.
+   * @param {Function} [callback] The function called per iteration.
+   * @returns {Array} Returns a duplicate-value-free array.
+   */
+  function baseUniq(array, isSorted, callback) {
+    var index = -1,
+        indexOf = getIndexOf(),
+        length = array ? array.length : 0,
+        result = [];
+
+    var isLarge = !isSorted && length >= largeArraySize && indexOf === baseIndexOf,
+        seen = (callback || isLarge) ? getArray() : result;
+
+    if (isLarge) {
+      var cache = createCache(seen);
+      indexOf = cacheIndexOf;
+      seen = cache;
+    }
+    while (++index < length) {
+      var value = array[index],
+          computed = callback ? callback(value, index, array) : value;
+
+      if (isSorted
+            ? !index || seen[seen.length - 1] !== computed
+            : indexOf(seen, computed) < 0
+          ) {
+        if (callback || isLarge) {
+          seen.push(computed);
+        }
+        result.push(value);
+      }
+    }
+    if (isLarge) {
+      releaseArray(seen.array);
+      releaseObject(seen);
+    } else if (callback) {
+      releaseArray(seen);
+    }
+    return result;
   }
 
   /**
@@ -38337,6 +38445,63 @@ exports.parseElement = function(text) {
   }
 
   /**
+   * Creates a duplicate-value-free version of an array using strict equality
+   * for comparisons, i.e. `===`. If the array is sorted, providing
+   * `true` for `isSorted` will use a faster algorithm. If a callback is provided
+   * each element of `array` is passed through the callback before uniqueness
+   * is computed. The callback is bound to `thisArg` and invoked with three
+   * arguments; (value, index, array).
+   *
+   * If a property name is provided for `callback` the created "_.pluck" style
+   * callback will return the property value of the given element.
+   *
+   * If an object is provided for `callback` the created "_.where" style callback
+   * will return `true` for elements that have the properties of the given object,
+   * else `false`.
+   *
+   * @static
+   * @memberOf _
+   * @alias unique
+   * @category Arrays
+   * @param {Array} array The array to process.
+   * @param {boolean} [isSorted=false] A flag to indicate that `array` is sorted.
+   * @param {Function|Object|string} [callback=identity] The function called
+   *  per iteration. If a property name or object is provided it will be used
+   *  to create a "_.pluck" or "_.where" style callback, respectively.
+   * @param {*} [thisArg] The `this` binding of `callback`.
+   * @returns {Array} Returns a duplicate-value-free array.
+   * @example
+   *
+   * _.uniq([1, 2, 1, 3, 1]);
+   * // => [1, 2, 3]
+   *
+   * _.uniq([1, 1, 2, 2, 3], true);
+   * // => [1, 2, 3]
+   *
+   * _.uniq(['A', 'b', 'C', 'a', 'B', 'c'], function(letter) { return letter.toLowerCase(); });
+   * // => ['A', 'b', 'C']
+   *
+   * _.uniq([1, 2.5, 3, 1.5, 2, 3.5], function(num) { return this.floor(num); }, Math);
+   * // => [1, 2.5, 3]
+   *
+   * // using "_.pluck" callback shorthand
+   * _.uniq([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x');
+   * // => [{ 'x': 1 }, { 'x': 2 }]
+   */
+  function uniq(array, isSorted, callback, thisArg) {
+    // juggle arguments
+    if (typeof isSorted != 'boolean' && isSorted != null) {
+      thisArg = callback;
+      callback = (typeof isSorted != 'function' && thisArg && thisArg[isSorted] === array) ? null : isSorted;
+      isSorted = false;
+    }
+    if (callback != null) {
+      callback = lodash.createCallback(callback, thisArg, 3);
+    }
+    return baseUniq(array, isSorted, callback);
+  }
+
+  /**
    * Creates an array excluding all provided values using strict equality for
    * comparisons, i.e. `===`.
    *
@@ -38939,6 +39104,7 @@ exports.parseElement = function(text) {
   lodash.shuffle = shuffle;
   lodash.sortBy = sortBy;
   lodash.throttle = throttle;
+  lodash.uniq = uniq;
   lodash.values = values;
   lodash.without = without;
   lodash.wrap = wrap;
@@ -38949,6 +39115,7 @@ exports.parseElement = function(text) {
   lodash.extend = assign;
   lodash.methods = functions;
   lodash.select = filter;
+  lodash.unique = uniq;
 
   // add functions to `lodash.prototype`
   mixin(lodash);
