@@ -204,7 +204,7 @@ StudioApp.prototype.configure = function (options) {
   this.assetUrl = _.bind(this.assetUrl_, this);
 };
 
-StudioApp.prototype.shouldShowInstructionsOnLoad = function (config) {
+StudioApp.prototype.hasInstructionsToShow = function (config) {
   return Boolean(config.level.instructions || config.level.aniGifURL);
 };
 
@@ -351,7 +351,7 @@ StudioApp.prototype.init = function(config) {
     $(prompt2Div).show();
   }
 
-  if (this.shouldShowInstructionsOnLoad(config)) {
+  if (this.hasInstructionsToShow(config)) {
     var promptIcon = document.getElementById('prompt-icon');
     if (this.smallIcon) {
       promptIcon.src = this.smallIcon;
@@ -1612,8 +1612,9 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   }
 
   // droplet may now be in code mode if it couldn't parse the code into
-  // blocks, so update the UI based on the current state:
-  this.onDropletToggle_(this.shouldShowInstructionsOnLoad(config));
+  // blocks, so update the UI based on the current state (don't autofocus
+  // if we have already created an instructionsDialog at this stage of init)
+  this.onDropletToggle_(!!this.instructionsDialog);
 
   this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
 
