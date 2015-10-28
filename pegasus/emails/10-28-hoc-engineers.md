@@ -1,15 +1,17 @@
 ---
 from: 'Hadi Partovi <hadi_partovi@code.org>'
-subject: We need you this year
+subject: Join our volunteers
 ---
 
-### 12,376 teachers want technical volunteers to help with their Hour of Code in December.
+### 13,000 teachers want technical volunteers to help with their Hour of Code in December.
 
-### Only 3,245 volunteers have signed up. Please join them.
+### Only 3,295 volunteers have signed up. Please join them.
 
-Our schools and teachers need you to help or inspire their classrooms as they try computer science for the first time. We’ve launched a new volunteer-match program to help teachers introduce students to their first Hour of Code during December 7-13. 
+We’ve launched a new volunteer-match program to help teachers introduce students to their first Hour of Code during December 7-13. Our schools and teachers need you to help or inspire their students as they try computer science for the first time.
 
 #### [Please, sign up to volunteer for one hour.](https://code.org/engineer)
+
+[![image](https://code.org/images/email/fit-400/class.jpg)](https://code.org/engineer)
 
 After you sign up, local teachers will be able to find you and ask for help (we’ll never share your contact information). You can [check out our Hour of Code tutorials](https://code.org/learn) for all ages to see what students will be learning, but keep in mind: our most exciting lessons yet are coming in a few weeks!
 
