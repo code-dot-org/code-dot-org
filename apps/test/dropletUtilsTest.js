@@ -622,7 +622,11 @@ describe('generateDropletModeOptions', function () {
         }
       }
     };
-    var result = dropletUtils.generateDropletModeOptions(applabDropletConfig, {});
+    var config = {
+      dropletConfig: applabDropletConfig,
+      level: {}
+    };
+    var result = dropletUtils.generateDropletModeOptions(config);
 
     // I got our expected result by running this code and doing a JSON.parse on
     // the result. This does some things like ignore fields set to undefined.
@@ -730,7 +734,11 @@ describe('generateDropletModeOptions', function () {
         }
       }
     };
-    var result = dropletUtils.generateDropletModeOptions(mazeDropletConfig, {});
+    var config = {
+      dropletConfig: mazeDropletConfig,
+      level: {}
+    };
+    var result = dropletUtils.generateDropletModeOptions(config);
 
     // I got our expected result by running this code and doing a JSON.parse on
     // the result. This does some things like ignore fields set to undefined.
