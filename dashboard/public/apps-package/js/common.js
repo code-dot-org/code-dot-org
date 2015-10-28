@@ -6505,6 +6505,7 @@ StudioApp.prototype.createModalDialog = function(options) {
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
   var renderedMarkdown;
+  var scrollableSelector;
   var headerElement;
 
   var puzzleTitle = msg.puzzleTitle({
@@ -6514,6 +6515,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 
   if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
     renderedMarkdown = marked(level.markdownInstructions);
+    scrollableSelector = '.instructions-markdown';
     instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
@@ -6565,6 +6567,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     defaultBtnSelector: '#ok-button',
     onHidden: hideFn,
     scrollContent: !!renderedMarkdown,
+    scrollableSelector: scrollableSelector,
     header: headerElement
   });
 
@@ -30540,6 +30543,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
  * @param {HTMLElement} options.contentDiv
  * @param {string} options.defaultBtnSelector
  * @param {boolean} options.scrollContent
+ * @param {boolean} options.scrollableSelector
  * @param {function} options.onHidden
  * @param {string} options.id
  * @param {HTMLElement} options.header
@@ -30574,7 +30578,8 @@ FeedbackUtils.prototype.createModalDialog = function(options) {
     }
   };
 
-  var elementToScroll = options.scrollContent ? '.modal-content' : null;
+  var scrollableSelector = options.scrollableSelector || '.modal-content';
+  var elementToScroll = options.scrollContent ? scrollableSelector : null;
   return new options.Dialog({
     body: modalBody,
     onHidden: options.onHidden,
