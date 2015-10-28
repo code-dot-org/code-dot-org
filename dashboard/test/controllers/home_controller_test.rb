@@ -210,22 +210,6 @@ class HomeControllerTest < ActionController::TestCase
 #    assert_response 400
 #  end
 
-  test "do not show prize link if you don't have a prize" do
-    sign_in create(:teacher)
-
-    get :index
-    assert_select 'a[href="http://test.host/redeemprizes"]', 0
-  end
-
-  test "do show prize link when you already have a prize" do
-    teacher = create(:teacher)
-    sign_in teacher
-    teacher.teacher_prize = TeacherPrize.create!(prize_provider_id: 8, code: 'fake')
-
-    get :index
-    assert_select 'a[href="http://test.host/redeemprizes"]'
-  end
-
   test 'health_check sets no cookies' do
     get :health_check
     # this stuff is not really a hash but it pretends to be
@@ -262,28 +246,6 @@ class HomeControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_select '.alert', 0
-  end
-
-  test 'show teacher-dashboard link when a teacher' do
-    teacher = create :teacher
-    sign_in teacher
-
-    get :index
-
-    assert_response :success
-    assert_select 'a[href="//test.code.org/teacher-dashboard"]', 'Teacher Home Page'
-  end
-
-
-  test 'student does not see links to ops dashbord or teacher dashboard' do
-    student = create :student
-    sign_in student
-
-    get :index
-
-    assert_response :success
-    assert_select 'a[href="//test.code.org/ops-dashboard"]', 0
-    assert_select 'a[href="//test.code.org/teacher-dashboard"]', 0
   end
 
 end
