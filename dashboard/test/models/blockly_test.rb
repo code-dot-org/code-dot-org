@@ -119,19 +119,14 @@ XML
   end
 
   test 'Block base url is correct with blank and specified asset_host' do
-    old_host = ActionController::Base.asset_host
-    begin
-      ActionController::Base.asset_host = nil
-      assert_equal '/blockly/', Blockly.base_url
+    ActionController::Base.stubs(:asset_host).returns(nil)
+    assert_equal '/blockly/', Blockly.base_url
 
-      ActionController::Base.asset_host = ''
-      assert_equal '/blockly/', Blockly.base_url
+    ActionController::Base.stubs(:asset_host).returns('')
+    assert_equal '/blockly/', Blockly.base_url
 
-      ActionController::Base.asset_host = 'test-studio.code.org'
-      assert_equal '//test-studio.code.org/blockly/', Blockly.base_url
-    ensure
-      ActionController::Base.asset_host = old_host
-    end
+    ActionController::Base.stubs(:asset_host).returns('test-studio.code.org')
+    assert_equal '//test-studio.code.org/blockly/', Blockly.base_url
   end
 
   test 'converts from and to XML level format' do
