@@ -34,14 +34,15 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommended
       return;
     }
   } else if (missingRequiredBlocks.blocksToDisplay.length) {
-    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
-    if (missingRequiredBlocks.message) {
-      options.message = missingRequiredBlocks.message;
-    }
+    handleMissingBlocks(missingRequiredBlocks);
   } else {
-    blocksToDisplay = missingRecommendedBlocks.blocksToDisplay;
-    if (missingRecommendedBlocks.message) {
-      options.message = missingRecommendedBlocks.message;
+    handleMissingBlocks(missingRecommendedBlocks);
+  }
+
+  function handleMissingBlocks(blocks) {
+    blocksToDisplay = blocks.blocksToDisplay;
+    if (blocks.message) {
+      options.message = blocks.message;
     }
   }
 
