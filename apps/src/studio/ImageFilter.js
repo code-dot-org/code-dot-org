@@ -51,8 +51,8 @@ var ImageFilter = function (svg) {
   /** @private {string} */
   this.id_ = 'image-filter-' + uniqueId++;
 
-  /** @private {boolean} Whether this filter is in the DOM ready to use yet. */
-  this.addedToDom_ = false;
+  /** @private {number} how many elements are currently using this filter. */
+  this.applyCount_ = 0;
 };
 module.exports = ImageFilter;
 
@@ -62,10 +62,11 @@ module.exports = ImageFilter;
  * @param {SVGElement} svgElement
  */
 ImageFilter.prototype.applyTo = function (svgElement) {
-  if (!this.addedToDom_) {
+  if (this.applyCount_ === 0) {
     this.createInDom_();
   }
   svgElement.setAttribute('filter', 'url("#' + this.id_ + '")');
+  this.applyCount_++;
 };
 
 /**
@@ -76,6 +77,10 @@ ImageFilter.prototype.removeFrom = function (svgElement) {
   if (svgElement.getAttribute('filter') === 'url("#' + this.id_ + '")') {
     svgElement.removeAttribute('filter');
   }
+  this.applyCount_--;
+  if (this.applyCount_ === 0) {
+    this.removeFromDom_();
+  }
 };
 
 /**
@@ -84,12 +89,13 @@ ImageFilter.prototype.removeFrom = function (svgElement) {
  * @private
  */
 ImageFilter.prototype.createInDom_ = function () {
-  if (this.addedToDom_) {
+  var filter = document.getElementById(this.id_);
+  if (filter) {
     return;
   }
 
   // Make a new filter element
-  var filter = document.createElementNS(SVG_NS, 'filter');
+  filter = document.createElementNS(SVG_NS, 'filter');
   filter.setAttribute('id', this.id_);
 
   // Add the filter steps (expected to be different for each filter type)
@@ -101,8 +107,17 @@ ImageFilter.prototype.createInDom_ = function () {
   // Put the filter in the SVG Defs node.
   var defs = this.getDefsNode_();
   defs.appendChild(filter);
+};
 
-  this.addedToDom_ = true;
+/**
+ * Removes this SVG filter from the <defs> tag.
+ * @private
+ */
+ImageFilter.prototype.removeFromDom_ = function () {
+  var filter = document.getElementById(this.id_);
+  if (filter) {
+    filter.parentNode.removeChild(filter);
+  }
 };
 
 /**
