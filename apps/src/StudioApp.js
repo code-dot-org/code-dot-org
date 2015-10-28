@@ -351,10 +351,8 @@ StudioApp.prototype.init = function(config) {
     var promptIcon = document.getElementById('prompt-icon');
     if (this.smallIcon) {
       promptIcon.src = this.smallIcon;
-    } else {
-      $('#prompt-icon-cell').hide();
+      $('#prompt-icon-cell').show();
     }
-
     var bubble = document.getElementById('bubble');
     dom.addClickTouchEvent(bubble, _.bind(function() {
       this.showInstructions_(config.level, false);
