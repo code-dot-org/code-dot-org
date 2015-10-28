@@ -53,6 +53,8 @@ var Hammer = utils.getHammer();
 var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
+var ThreeSliceAudio = require('./ThreeSliceAudio');
+var MusicController = require('./MusicController');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -793,11 +795,19 @@ function sortDrawOrder() {
   }
 
   // Now sort everything by y.
-
   itemsArray = _.sortBy(itemsArray, 'y');
 
-  for (i = 0; i < itemsArray.length; ++i) {
-    spriteLayer.appendChild(itemsArray[i].element);
+  // Carefully place the elements back in the DOM starting at the end of the
+  // spriteLayer and, one by one, insert them before the previous one
+  // (this prevents flashing in Safari vs. an in-order appendChild() loop)
+  var prevNode;
+  for (i = itemsArray.length - 1; i >= 0; i--) {
+    if (prevNode) {
+      spriteLayer.insertBefore(itemsArray[i].element, prevNode);
+    } else {
+      spriteLayer.appendChild(itemsArray[i].element);
+    }
+    prevNode = itemsArray[i].element;
   }
 }
 
@@ -821,7 +831,7 @@ Studio.onTick = function() {
 
   Studio.clearDebugElements();
 
-  var animationOnlyFrame = Studio.midExecutionFailure ||
+  var animationOnlyFrame = Studio.pauseInterpreter ||
       (0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor);
   Studio.yieldThisTick = false;
 
@@ -931,6 +941,7 @@ Studio.onTick = function() {
     var ticksBeforeFaceSouth = utils.valueOr(level.ticksBeforeFaceSouth, Studio.ticksBeforeFaceSouth);
     if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].dir = Direction.SOUTH;
+      Studio.movementAudioOff();
       isWalking = false;
     }
 
@@ -1580,13 +1591,48 @@ Studio.init = function(config) {
     }
   });
 
+  /**
+   * Helper that handles music loading/playing/crossfading for the level.
+   * @type {MusicController}
+   */
+  Studio.musicController = new MusicController(
+      studioApp.cdoSounds,
+      skin.assetUrl,
+      utils.valueOr(level.music, skin.music));
+
+  /**
+   * Defines the set of possible movement sound effects for each playlab actor.
+   * Populated just-in-time by setSprite to avoid preparing audio for actors
+   * we never use.
+   * @type {Object}
+   */
+  Studio.movementAudioEffects = {};
+
   config.loadAudio = function() {
+    var soundFileNames = [];
+    // We want to load the basic list of effects available in the skin
+    soundFileNames.push.apply(soundFileNames, skin.sounds);
+    // We also want to load the movement sounds used in hoc2015
+    soundFileNames.push.apply(soundFileNames, Studio.getMovementSoundFileNames(skin));
+    // No need to load anything twice, so de-dupe our list.
+    soundFileNames = _.uniq(soundFileNames);
+
     skin.soundFiles = {};
-    skin.sounds.forEach(function (sound) {
+    soundFileNames.forEach(function (sound) {
       skin.soundFiles[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl(sound + '.ogg')];
       studioApp.loadAudio(skin.soundFiles[sound], sound);
     });
+
+    // Handle music separately - the music controller does its own preloading.
+    Studio.musicController.preload();
   };
+
+  // Play music when the instructions are shown
+  var onInstructionsShown = function () {
+    Studio.musicController.play();
+    document.removeEventListener('instructionsShown', onInstructionsShown);
+  };
+  document.addEventListener('instructionsShown', onInstructionsShown);
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1676,6 +1722,28 @@ Studio.init = function(config) {
     preloadProjectileAndItemImages();
     preloadBackgroundImages();
   }
+};
+
+/**
+ * Get a flattened list of all the sound file names (sans extensions)
+ * specified in the skin for avatar movement (these may be omitted from the
+ * skin.sounds list because we don't want them accessible to the player).
+ * @param {Object} level skin from which to extract sound effect names.
+ * @returns {string[]} which may contain duplicates but will not have any
+ *          undefined entries.
+ */
+Studio.getMovementSoundFileNames = function (fromSkin) {
+  var avatarList = fromSkin.avatarList || [];
+  return avatarList.map(function (avatarName) {
+    var movementAudio = fromSkin[avatarName].movementAudio || [];
+    return movementAudio.reduce(function (memo, nextOption) {
+      return memo.concat([nextOption.begin, nextOption.loop, nextOption.end]);
+    }, []);
+  }).reduce(function (memo, next) {
+    return memo.concat(next);
+  }, []).filter(function (fileName) {
+    return fileName !== undefined;
+  });
 };
 
 var preloadImage = function(url) {
@@ -1790,7 +1858,7 @@ Studio.reset = function(first) {
   // True if we should fail before execution, even if freeplay
   Studio.preExecutionFailure = false;
   Studio.message = null;
-  Studio.midExecutionFailure = false;
+  Studio.pauseInterpreter = false;
 
   // Reset the score and title screen.
   Studio.playerScore = 0;
@@ -1822,8 +1890,10 @@ Studio.reset = function(first) {
   // More things used to validate level completion.
   Studio.trackedBehavior = {
     removedItemCount: 0,
+    touchedHazardCount: 0,
     setActivityRecord: null,
     hasSetBot: false,
+    hasSetBotSpeed: false,
     hasSetBackground: false,
     hasSetMap: false,
     hasAddedItem: false,
@@ -1912,6 +1982,9 @@ Studio.reset = function(first) {
 
   // Reset whether level has succeeded.
   Studio.succeededTime = null;
+
+  // Stop any current movement sounds
+  Studio.movementAudioOff();
 };
 
 /**
@@ -2000,6 +2073,10 @@ Studio.runButtonClick = function() {
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
+
+  // Stop the music the first time the run button is pressed (hoc2015)
+  Studio.musicController.fadeOut();
+
   studioApp.reset(false);
   studioApp.attempts++;
   Studio.startTime = new Date();
@@ -2378,11 +2455,13 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = studioApp.editor.getValue();
-    // Our ace worker also calls attachToSession, but it won't run on IE9:
-    var session = studioApp.editor.aceEditor.getSession();
-    annotationList.attachToSession(session, studioApp.editor);
-    annotationList.clearRuntimeAnnotations();
+    var codeWhenRun = studioApp.getCode();
+    if (!studioApp.hideSource) {
+      // Our ace worker also calls attachToSession, but it won't run on IE9:
+      var session = studioApp.editor.aceEditor.getSession();
+      annotationList.attachToSession(session, studioApp.editor);
+      annotationList.clearRuntimeAnnotations();
+    }
     Studio.JSInterpreter = new JSInterpreter({
       code: codeWhenRun,
       blocks: dropletConfig.blocks,
@@ -2422,6 +2501,7 @@ Studio.onPuzzleComplete = function() {
 
   // Stop everything on screen
   Studio.clearEventHandlersKillTickLoop();
+  Studio.movementAudioOff();
 
   // If we know they succeeded, mark levelComplete true
   var levelComplete = (Studio.result === ResultType.SUCCESS);
@@ -2448,7 +2528,7 @@ Studio.onPuzzleComplete = function() {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = studioApp.editor.getValue();
+    program = studioApp.getCode();
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
@@ -3344,6 +3424,7 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     speed: Studio.itemSpeed[itemClass],
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     isHazard: classProperties.isHazard,
+    spritesCounterclockwise: classProperties.spritesCounterclockwise,
     renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
     renderScale: utils.valueOr(classProperties.scale, 1),
     animationRate: classProperties.animationRate
@@ -3952,8 +4033,37 @@ Studio.setSprite = function (opts) {
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
+  // Set up movement audio for the selected sprite (clips should be preloaded)
+  if (!Studio.movementAudioEffects[spriteValue] && skin.avatarList) {
+    var spriteSkin = skin[spriteValue] || {};
+    var audioConfig = spriteSkin.movementAudio || [];
+    Studio.movementAudioEffects[spriteValue] = [];
+    if (studioApp.cdoSounds) {
+      Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
+        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
+      });
+    }
+  }
+  Studio.currentSpriteMovementAudioEffects = Studio.movementAudioEffects[spriteValue];
+
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
+};
+
+
+Studio.movementAudioOn = function () {
+  Studio.movementAudioOff();
+  Studio.currentMovementAudio = Studio.currentSpriteMovementAudioEffects[
+      Math.floor(Math.random() * Studio.currentSpriteMovementAudioEffects.length)];
+  if (Studio.currentMovementAudio) {
+    Studio.currentMovementAudio.on();
+  }
+};
+
+Studio.movementAudioOff = function () {
+  if (Studio.currentMovementAudio) {
+    Studio.currentMovementAudio.off();
+  }
 };
 
 var p = function (x,y) {
@@ -4530,7 +4640,6 @@ Studio.moveSingle = function (opts) {
   var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   var wallCollision = false;
   var playspaceEdgeCollision = false;
-  var playSound = false;
   var deltaX = 0, deltaY = 0;
 
   switch (opts.dir) {
@@ -4580,30 +4689,25 @@ Studio.moveSingle = function (opts) {
       Studio.JSInterpreter.yield();
     }
 
-    playSound = true;
-  } else if (!wallCollision) {
-    if (playspaceEdgeCollision) {
-      var boundary = Studio.getPlayspaceBoundaries(sprite);
-      projectedX = Math.max(boundary.left, Math.min(boundary.right, projectedX));
-      projectedY = Math.max(boundary.top, Math.min(boundary.bottom, projectedY));
+    Studio.movementAudioOn();
+  } else {
+    if (!wallCollision) {
+      if (playspaceEdgeCollision) {
+        var boundary = Studio.getPlayspaceBoundaries(sprite);
+        projectedX = Math.max(boundary.left, Math.min(boundary.right, projectedX));
+        projectedY = Math.max(boundary.top, Math.min(boundary.bottom, projectedY));
+      }
+      sprite.x = projectedX;
+      sprite.y = projectedY;
     }
-    sprite.x = projectedX;
-    sprite.y = projectedY;
 
     if (opts.dir !== Studio.lastMoveSingleDir &&
         lastMove === Infinity || Studio.tickCount > lastMove + 1) {
-      // So long as there was no wall collision, a new direction, and we
-      // haven't already processed a move in the previous tick, then play a sound.
-      playSound = true;
+      Studio.movementAudioOn();
     }
   }
 
   Studio.lastMoveSingleDir = opts.dir;
-
-  if (playSound && skin.moveSounds) {
-    var randomSoundIndex = Math.floor(Math.random() * skin.moveSounds.length);
-    studioApp.playAudio(skin.moveSounds[randomSoundIndex]);
-  }
 };
 
 Studio.moveDistance = function (opts) {
@@ -4773,97 +4877,103 @@ Studio.allGoalsVisited = function() {
 };
 
 /**
- * A level can provide zero or more requiredForSuccess criteria which are
- * special cases that a level requires for success.  This function evaluates
- * the state of these criteria.
- * @returns {Object} outcome
- * @returns {boolean} outcome.exists Whether the level even has any of these criteria.
- * @returns {boolean} outcome.achieved false if any of the criteria was required but not met.
- * @returns {string} outcome.message A custom message for the first of the failing criteria.
+ * Returns true if the specified criteria, provided as an Object, is satisfied.
  */
-Studio.checkRequiredForSuccess = function() {
-
-  if (!level.requiredForSuccess) {
-    return { exists: false, achieved: false, message: null };
-  }
-
-  var required = level.requiredForSuccess;
+Studio.conditionSatisfied = function(required) {
   var tracked = Studio.trackedBehavior;
+  var valueNames = Object.keys(required);
 
-  if (required.setSprite && !tracked.hasSetSprite) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetSprite() };
+  for (var k = 0; k < valueNames.length; k++) {
+    var valueName = valueNames[k];
+    var value = required[valueName];
+
+    if (valueName === 'timedOut' && Studio.timedOut() != value) {
+      return false;
+    }
+
+    if (valueName === 'collectedItemsAtOrAbove' && tracked.removedItemCount < value) {
+      return false;
+    }
+
+    if (valueName === 'collectedItemsBelow' && tracked.removedItemCount >= value) {
+      return false;
+    }
+
+    if (valueName === 'touchedHazardsAtOrAbove' && tracked.touchedHazardCount < value) {
+      return false;
+    }
+
+    if (valueName === 'currentPointsAtOrAbove' && Studio.playerScore < value) {
+      return false;
+    }
+
+    if (valueName === 'currentPointsBelow' && Studio.playerScore >= value) {
+      return false;
+    }
+
+    if (valueName === 'allGoalsVisited' && Studio.allGoalsVisited() !== value) {
+      return false;
+    }
+
+    if (valueName === 'setMap' && tracked.hasSetMap !== value) {
+      return false;
+    }
+
+    if (valueName === 'setBotSpeed' && tracked.hasSetBotSpeed !== value) {
+      return false;
+    }
   }
 
-  if (required.setBotSpeed && !tracked.hasSetBotSpeed) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetBotSpeed() };
-  }
-
-  if (required.setBackground && !tracked.hasSetBackground) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetBackground() };
-  }
-
-  if (required.setBotMap && !tracked.hasSetMap) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetMap() };
-  }
-
-  if (required.touchAllItems && Studio.items.length > 0) {
-    return { exists: true, achieved: false, message: studioMsg.failedTouchAllItems() };
-  }
-
-  if (required.scoreMinimum && Studio.playerScore < required.scoreMinimum) {
-    return { exists: true, achieved: false, message: studioMsg.failedScoreMinimum() };
-  }
-
-  if (required.addItem && !tracked.hasAddedItem) {
-    return { exists: true, achieved: false, message: studioMsg.failedAddItem() };
-  }
-
-  if (required.removedItemCount && tracked.removedItemCount < required.removedItemCount) {
-    return { exists: true, achieved: false, message: studioMsg.failedRemovedItemCount() };
-  }
-
-  if (required.winGame && ! tracked.hasWonGame) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasWonGame() };
-  }
-
-  if (required.lostGame && ! tracked.hasLostGame) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasLostGame() };
-  }
-
-  if (required.setActivity &&
-      !(tracked.setActivityRecord && 
-        tracked.setActivityRecord[required.setActivity.itemType] &&
-        tracked.setActivityRecord[required.setActivity.itemType][required.setActivity.activityType])) {
-    return { exists: true, achieved: false, message: studioMsg.failedSetActivity() };
-  }
-
-  return { exists: true, achieved: true, message: null };
+  return true;
 };
 
 /**
- * Trigger a manual failure, which stops the interpreter and ends the level
- * prematurely.
- *
- * Note: Has certain known limitations at the moment.
- * - In droplet, it's possible for the interpreter to run several instructions
- *   before we return to the end of a tick and check this condition.
- * - Does not yet work in blockly mode (with no interpreter)
- *
- * @param {string} [message] optional failure message text
+ * @typedef {Object} ProgressConditionOutcome
+ * @property {boolean} success
+ * @property {string} message
  */
-Studio.fail = function (message) {
-  Studio.message = utils.valueOr(message, null);
-  Studio.midExecutionFailure = true;
+
+/**
+ * A level can provide zero or more progress conditions which are special cases
+ * that we test to see if the level has succeeded or failed.  This function
+ * evaluates the state of these criteria.  It returns false if none of the
+ * criteria affects progress, otherwise an object that contains information
+ * about the specific succeeding or failing criteria.
+ *
+ * @param {Array} conditions. 
+ * @returns {ProgressConditionOutcome|null}
+ */
+Studio.checkProgressConditions = function() {
+  if (!level.progressConditions) {
+    return null;
+  }
+
+  for (var i = 0; i < level.progressConditions.length; i++) {
+    var condition = level.progressConditions[i];
+
+    if (Studio.conditionSatisfied(condition.required)) {
+      return condition.result;
+    }
+  }
+
+  return null;
 };
 
 var checkFinished = function () {
 
   var hasGoals = Studio.spriteGoals_.length !== 0;
   var achievedGoals = Studio.allGoalsVisited();
-  var requiredForSuccess = Studio.checkRequiredForSuccess();
+  var progressConditionResult = Studio.checkProgressConditions();
   var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
   var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
   var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
+
+  if (progressConditionResult) {
+    Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
+    Studio.message = utils.valueOr(progressConditionResult.message, null);
+    Studio.pauseInterpreter = utils.valueOr(progressConditionResult.pauseInterpreter, false);
+    return true;
+  }
 
   // Levels with goals (usually images that need to be touched) can have an optional success
   // condition that can explicitly return false to prevent the level from completing.
@@ -4877,23 +4987,6 @@ var checkFinished = function () {
       (hasGoals && level.completeOnSuccessConditionNotGoals && achievedRequiredSuccessCondition) ||
       (!hasGoals && achievedRequiredSuccessCondition)) {
     Studio.result = ResultType.SUCCESS;
-    return true;
-  }
-
-  if (requiredForSuccess.exists) {
-    if (requiredForSuccess.achieved) {
-      Studio.message = null;
-      Studio.result = ResultType.SUCCESS;
-      return true;
-    } else {
-      // Not meeting these is not reason for immediate failure in itself, but they do
-      // establish a custom error message.
-      Studio.message = requiredForSuccess.message;
-    }
-  }
-
-  if (Studio.midExecutionFailure) {
-    Studio.result = ResultType.FAILURE;
     return true;
   }
 
@@ -4911,7 +5004,7 @@ var checkFinished = function () {
 };
 
 
-},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
+},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./MusicController":"/home/ubuntu/staging/apps/build/js/studio/MusicController.js","./ThreeSliceAudio":"/home/ubuntu/staging/apps/build/js/studio/ThreeSliceAudio.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5563,13 +5656,13 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW },
-    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW  },
-    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
-    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW },
-    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW },
-    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW },
-    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW },
+    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
+    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
+    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -5644,6 +5737,15 @@ function loadHoc2015(skin, assetUrl) {
     };
   });
 
+  skin.bot1.movementAudio = [
+    { begin: 'bot1_move1_start', loop: 'bot1_move1_loop', end: 'bot1_move1_end' },
+    { begin: 'bot1_move2_start', loop: 'bot1_move2_loop', end: 'bot1_move2_end' },
+    { begin: 'bot1_move3_start', loop: 'bot1_move3_loop', end: 'bot1_move3_end' }
+  ];
+  skin.bot2.movementAudio = [
+    { loop: 'bot2_move_loop', end: 'bot2_move_end' }
+  ];
+
   skin.preventProjectileLoop = function (className) {
     return className === '';
   };
@@ -5651,6 +5753,9 @@ function loadHoc2015(skin, assetUrl) {
   skin.preventItemLoop = function (className) {
     return className === 'item_character1';
   };
+
+  // No failure avatar for this skin.
+  skin.failureAvatar = null;
 
   // TODO: Create actual item choices
   skin.pig = skin.assetUrl('walk_item1.png');
@@ -5782,20 +5887,24 @@ function loadHoc2015(skin, assetUrl) {
   skin.sounds = [
     'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
     'character1sound5', 'character1sound6', 'character1sound7', 'character1sound8',
+    'character1sound9',
     'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
     'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
     'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
+    'item4sound1', 'item4sound2', 'item4sound3',
+    'item5sound1', 'item5sound2', 'item5sound3',
+    'item6sound1', 'item6sound2', 'item6sound3',
     'alert1', 'alert2', 'alert3', 'alert4',
     'applause',
     'start', 'win', 'failure', 'flag',
     'move1', 'move2', 'move3'
   ];
 
+  skin.music = [ 'song1' ];
+
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
   skin.playFinalGoalSound = true;
-
-  skin.moveSounds = ['move1', 'move2', 'move3'];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes
@@ -5932,15 +6041,21 @@ function loadHoc2015x(skin, assetUrl) {
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 8,
+        normal: 21,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: 10
+        walk: 19
       },
       timePerFrame: 100
     };
   });
+  skin.bot1.movementAudio = [
+    { begin: 'move1' },
+    { begin: 'move2' },
+    { begin: 'move3' },
+    { begin: 'move4' }
+  ];
 
   skin.preventProjectileLoop = function (className) {
     return className === '';
@@ -5965,21 +6080,15 @@ function loadHoc2015x(skin, assetUrl) {
 
   // Sounds.
   skin.sounds = [
-    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
-    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
-    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
-    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
-    'alert1', 'alert2', 'alert3', 'alert4',
-    'applause',
     'start', 'win', 'failure', 'flag',
     'move1', 'move2', 'move3', 'move4'
   ];
 
+  skin.music = [ 'song1' ];
+
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
   skin.playFinalGoalSound = true;
-
-  skin.moveSounds = ['move1', 'move2', 'move3', 'move4'];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   // NOTE: map names must have double quotes inside single quotes
@@ -7872,6 +7981,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
 levels.js_hoc2015_move_right = {
   'editCode': true,
   'background': 'main',
+  'music': [ 'song1' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -7911,32 +8021,39 @@ levels.js_hoc2015_move_right = {
   },
   "callouts": [
     {
-      "id": "playlab:js_hoc2015_move_right:placeCommandsHere",
-      "element_id": ".droplet-main-canvas",
-      "hide_target_selector": ".droplet-drag-cover",
+      "id": "playlab:js_hoc2015_move_right:runButton",
+      "element_id": "#runButton",
+      "hide_target_selector": "#runButton",
       "qtip_config": {
         "content": {
-          "text": msg.calloutPlaceCommandsHere(),
+          "text": msg.calloutRunButton(),
         },
         'hide': {
           'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top left',
-          'at': 'top left',
+          'at': 'bottom center',
           'adjust': {
-            'x': 10,
-            'y': 20
+            'x': 0,
+            'y': 0
           }
         }
       }
     }
   ],
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 levels.js_hoc2015_move_right_down = {
   'editCode': true,
   'background': 'main',
+  'music': [ 'song2' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -7971,7 +8088,13 @@ levels.js_hoc2015_move_right_down = {
     'goalImage': 'goal2',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 
@@ -7979,6 +8102,7 @@ levels.js_hoc2015_move_diagonal = {
   'editCode': true,
   'textModeAtStart': true,
   'background': 'main',
+  'music': [ 'song3' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -8014,13 +8138,45 @@ levels.js_hoc2015_move_diagonal = {
     'goalImage': 'goal1',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ],
+  "callouts": [
+    {
+      'id': 'playlab:js_hoc2015_move_diagonal:placeCommandsHere',
+      'element_id': '#show-code-header',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutShowCodeToggle(),
+        },
+        'hide': {
+          'event': 'mouseup touchend',
+        },
+        'position': {
+          'my': 'top right',
+          'at': 'bottom left',
+          'adjust': {
+            'x': 0,
+            'y': 0
+          }
+        }
+      }
+    }
+  ]
 };
 
 
 levels.js_hoc2015_move_backtrack = {
   'editCode': true,
   'background': 'main',
+  'music': [ 'song4' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -8055,12 +8211,21 @@ levels.js_hoc2015_move_backtrack = {
     'goalImage': 'goal1',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 levels.js_hoc2015_move_around = {
   'editCode': true,
   'background': 'main',
+  'music': [ 'song5' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -8096,13 +8261,22 @@ levels.js_hoc2015_move_around = {
     'goalImage': 'goal2',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 
 levels.js_hoc2015_move_finale = {
   'editCode': true,
   'background': 'main',
+  'music': [ 'song6' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -8138,7 +8312,15 @@ levels.js_hoc2015_move_finale = {
     'goalImage': 'goal2',
     'imageWidth': 50,
     'imageHeight': 50
-  }
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 
@@ -8147,6 +8329,7 @@ levels.js_hoc2015_move_finale = {
 levels.js_hoc2015_event_two_items = {
   'editCode': true,
   'background': 'snow',
+  'music': [ 'song7' ],
   'wallMap': 'blank',
   'softButtons': ['downButton', 'upButton'],
   'codeFunctions': {
@@ -8190,24 +8373,32 @@ levels.js_hoc2015_event_two_items = {
     'imageHeight': 100,
     'goalRenderOffsetX': 0
   },
+
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true }, 
+      result: { success: true, message: msg.successCharacter1() } },
+    { required: { 'timedOut': true }, 
+      result: { success: false, message: msg.failedTwoItemsTimeout() } }
+  ],
+
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_event_two_items:placeCommandsHere',
-      'element_id': '.droplet-main-canvas',
+      'element_id': '.droplet-gutter-line:nth-of-type(2)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content': {
-          'text': msg.calloutPlaceCommandsHere(),
+          'text': msg.calloutShowPlaceGoUpHere(),
         },
         'hide': {
           'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top left',
-          'at': 'top left',
+          'at': 'bottom right',
           'adjust': {
-            'x': 10,
-            'y': 20
+            'x': 30,
+            'y': -10
           }
         }
       }
@@ -8239,6 +8430,7 @@ levels.js_hoc2015_event_two_items = {
 levels.js_hoc2015_event_four_items = {
   'editCode': true,
   'background': 'snow',
+  'music': [ 'song8' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -8284,26 +8476,13 @@ levels.js_hoc2015_event_four_items = {
     'imageWidth': 100,
     'imageHeight': 100
   },
-  'callouts': [
-    {
-      'id': 'playlab:js_hoc2015_event_four_items:typeCommandsHere',
-      'element_id': '.ace_scroller',
-      'qtip_config': {
-        'content' : {
-          'text': msg.calloutTypeCommandsHere(),
-        },
-        'event': 'click mousedown touchstart mouseup touchend',
-        'position': {
-          'my': 'center right',
-          'at': 'top left',
-          'adjust': {
-            'x': 25,
-            'y': 25
-          }
-        }
-      }
-    }
-  ],
+
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true }, 
+      result: { success: true, message: msg.successCharacter1() } },
+    { required: { 'timedOut': true }, 
+      result: { success: false, message: msg.failedFourItemsTimeout() } }
+  ]
 };
 
 
@@ -8312,6 +8491,7 @@ levels.js_hoc2015_score =
   'avatarList': ['bot1'],
   'editCode': true,
   'background': 'snow',
+  'music': [ 'song9' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
@@ -8356,21 +8536,29 @@ levels.js_hoc2015_score =
     'imageHeight': 100
   },
   'goal': {
+    // The level uses completeOnSuccessConditionNotGoals, so make sure this
+    // returns null  The progressConditions will take care of completion.
     successCondition: function () { return false; }
   },
-  'requiredForSuccess' : {
-    'touchAllItems': true,
-    'winGame': true
-  },
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 }, 
+      result: { success: false, message: msg.failedScoreTimeout() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 }, 
+      result: { success: false, message: msg.failedScoreScore() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 }, 
+      result: { success: false, message: msg.failedScoreGoals() } },
+    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ],
   'completeOnSuccessConditionNotGoals': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_event_choose_character:placeCommandsAtTop',
-      'element_id': '.droplet-main-canvas',
+      'id': 'playlab:js_hoc2015_score:placeCommandsAtTop',
+      'element_id': '.droplet-gutter-line:nth-of-type(2)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content': {
-          'text': msg.calloutPlaceCommandsAtTop(),
+          'text': msg.calloutShowPlaySound(),
         },
         'hide': {
           'event': 'mouseup touchend',
@@ -8379,7 +8567,7 @@ levels.js_hoc2015_score =
           'my': 'top left',
           'at': 'top left',
           'adjust': {
-            'x': 10,
+            'x': 170,
             'y': 20
           }
         }
@@ -8393,6 +8581,7 @@ levels.js_hoc2015_score =
 levels.js_hoc2015_win_lose = {
   'editCode': true,
   'background': 'forest',
+  'music': [ 'song10' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -8429,32 +8618,42 @@ levels.js_hoc2015_win_lose = {
   'showTimeoutRect': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_win_lose:charactersMove',
-      'element_id': '#droplet_palette_block_setToFlee',
+      'id': 'playlab:js_hoc2015_win_lose:instructions',
+      'element_id': '#prompt-table',
+      'hide_target_selector': '#prompt-table',
       'qtip_config': {
         'content': {
-          'text': msg.calloutCharactersMove(),
+          'text': msg.calloutInstructions(),
         },
         'position': {
-          'my': 'center left',
-          'at': 'center right',
+          'my': 'bottom left',
+          'at': 'top right',
           'adjust': {
-            'x': 15,
+            'x': -40,
             'y': 0
           }
         }
       }
     }
   ],
-  'requiredForSuccess' : {
-    'winGame': true
-  },
+
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 }, 
+      result: { success: false, message: msg.failedWinLoseTimeout() } },
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 }, 
+      result: { success: false, message: msg.failedWinLoseScore() } },
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 }, 
+      result: { success: false, message: msg.failedWinLoseGoals() } },
+    { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ]
 };
 
 
 levels.js_hoc2015_add_characters = {
   'editCode': true,
   'background': 'forest',
+  'music': [ 'song11' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -8514,16 +8713,19 @@ levels.js_hoc2015_add_characters = {
     }
   ],
 
-  'requiredForSuccess' : {
-    'removedItemCount': 3,
-    'winGame': true
-  }
+  'progressConditions' : [
+    { required: { 'collectedItemsAtOrAbove': 3 }, 
+      result: { success: true, message: msg.successCharacter1() } },
+    { required: { 'timedOut': true, 'collectedItemsBelow': 3 }, 
+      result: { success: false, message: msg.failedAddCharactersTimeout() } }
+  ]
 };
 
 
 levels.js_hoc2015_chain_characters = {
   'editCode': true,
   'background': 'ship',
+  'music': [ 'song12' ],
   'wallMap': 'grid',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -8539,7 +8741,7 @@ levels.js_hoc2015_chain_characters = {
     'playSound("character1sound3");',
     '',
     'function whenGetMouse() {',
-    '  playSound("item3sound4");',
+    '  playSound("item6sound2");',
     '  addCharacter("mouse");',
     '  addCharacter("mouse");',
     '}',
@@ -8558,14 +8760,22 @@ levels.js_hoc2015_chain_characters = {
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
-  'requiredForSuccess' : {
-    'winGame': true
-  }
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsBelow': 800 }, 
+      result: { success: false, message: msg.failedChainCharactersTimeout() } },
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 8, 'currentPointsBelow': 800 }, 
+      result: { success: false, message: msg.failedChainCharactersScore() } },
+    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsAtOrAbove': 800 }, 
+      result: { success: false, message: msg.failedChainCharactersItems() } },
+    { required: { 'collectedItemsAtOrAbove': 8, 'currentPointsAtOrAbove': 800 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ]
 };
 
 levels.js_hoc2015_chain_characters_2 = {
   'editCode': true,
   'background': 'ship',
+  'music': [ 'song13' ],
   'wallMap': 'horizontal',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -8582,17 +8792,18 @@ levels.js_hoc2015_chain_characters_2 = {
     'addCharacter("roo");',
     '',
     'function whenGetRoo() {',
-    '  playSound("character1sound2");',
+    '  playSound("item3sound4");',
     '  addPoints(50);',
     '  addCharacter("bird");',
     '  addCharacter("bird");',
     '}',
     '',
     'function whenGetBird() {',
+    '  playSound("item4sound1");',
     '',
     '}',
     'function whenGetMouse() {',
-    '  playSound("character1sound3");',
+    '  playSound("item6sound2");',
     '  addPoints(100);',
     '  ',
     '}',
@@ -8611,28 +8822,53 @@ levels.js_hoc2015_chain_characters_2 = {
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
-  'requiredForSuccess' : {
-    'scoreMinimum': 100
-  }
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'collectedItemsBelow': 14 }, 
+      result: { success: false, message: msg.failedChainCharacters2Timeout() } },
+    { required: { 'collectedItemsAtOrAbove': 14 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ],
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwo',
+      'element_id': '.droplet-gutter-line:nth-of-type(12)',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutPlaceTwo(),
+        },
+        'event': 'mouseup touchend',
+        'position': {
+          'my': 'top left',
+          'at': 'center right',
+          'adjust': {
+            'x': 40,
+            'y': 10
+          }
+        }
+      }
+    }
+  ]
 };
 
 levels.js_hoc2015_change_setting = {
   'editCode': true,
   'background': 'ship',
+  'music': [ 'song14' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'setBot': { 'category': 'Commands' },
-    'setBackground': { 'category': 'Commands' },
-    'setBotSpeed': { 'category': 'Commands' },
-    'setMap': { 'category': 'Commands' },
-    'playSound': { 'category': 'Commands' },
-    'addCharacter': { 'category': 'Commands' },
-    'addPoints': { 'category': 'Commands' },
-    'removePoints': { 'category': 'Commands' },
+    'setBot': null,
+    'setBackground': null,
+    'setBotSpeed': null,
+    'setMap': null,
+    'playSound': null,
+    'addCharacter': null,
+    'addPoints': null,
+    'removePoints': null,
 
-    'whenScore1000': { 'category': 'Events' },
-    'whenGetPilot': { 'category': 'Events' },
+    'whenScore1000': null,
+    'whenGetPilot': null,
   },
   'startBlocks': [
     'addCharacter("pilot");',
@@ -8644,10 +8880,6 @@ levels.js_hoc2015_change_setting = {
     'function whenGetPilot() {',
     '  addPoints(400);',
     '  setBackground("random");',
-    '  ',
-    '}',
-    'function whenGetAllCharacters() {',
-    '  endGame("win");',
     '  ',
     '}',
     ''].join('\n'),
@@ -8667,32 +8899,41 @@ levels.js_hoc2015_change_setting = {
   'showTimeoutRect': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_change_setting:clickCategory',
-      'element_id': '.droplet-palette-group-header.green',
+      'id': 'playlab:js_hoc2015_change_setting:setMap',
+      'element_id': '#droplet_palette_block_setMap',
+      'hide_target_selector': '#droplet_palette_block_setMap',
       'qtip_config': {
         'content' : {
-          'text': msg.calloutClickCategory(),
+          'text': msg.calloutSetMapAndSpeed(),
         },
         'position': {
-          'my': 'top center',
-          'at': 'bottom center',
+          'my': 'center left',
+          'at': 'center right',
         }
       }
     }
   ],
-  'requiredForSuccess' : {
-    'setSprite': true,
-    'setBotSpeed': true,
-    'setBackground': true,
-    'setMap': true,
-    'winGame': true
-  }
+  'progressConditions' : [
+    // Collected all the items and set the right properties?  Success.
+    { required: { 'setMap': true, 'setBotSpeed': true, 'collectedItemsAtOrAbove': 3 },
+      result: { success: true, message: msg.successGenericCharacter() } },
+    // Special message for timing out when not enough items collected.
+    { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
+      result: { success: false, message: msg.failedChangeSettingTimeout() } },
+    // If all items are collected, but either property not set?  Failure.
+    { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 }, 
+      result: { success: false, message: msg.failedChangeSettingSettings() } },
+    { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 }, 
+      result: { success: false, message: msg.failedChangeSettingSettings() } }
+  ]
 };
+
 
 levels.js_hoc2015_event_free = {
   'editCode': true,
   'freePlay': true,
   'background': 'forest',
+  'music': [ 'song15' ],
   'wallMap': 'blank',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -8716,7 +8957,16 @@ levels.js_hoc2015_event_free = {
     'whenGetMouse': { 'category': 'Events' },
     'whenGetRoo': { 'category': 'Events' },
     'whenGetSpider': { 'category': 'Events' },
-    'whenGetCharacter': { 'category': 'Events' }
+    'whenGetCharacter': { 'category': 'Events' },
+
+    'whenGetAllMen': { 'category': 'Events' },
+    'whenGetAllPilots': { 'category': 'Events' },
+    'whenGetAllPigs': { 'category': 'Events' },
+    'whenGetAllBirds': { 'category': 'Events' },
+    'whenGetAllMice': { 'category': 'Events' },
+    'whenGetAllRoos': { 'category': 'Events' },
+    'whenGetAllSpiders': { 'category': 'Events' },
+    'whenGetAllCharacters': { 'category': 'Events' }
   },
   'startBlocks': [
     'setBackground("forest");',
@@ -8738,19 +8988,16 @@ levels.js_hoc2015_event_free = {
   'autoArrowSteer': true,
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_event_free:tryOutNewCommands',
-      'element_id': '.droplet-palette-canvas',
+      'id': 'playlab:js_hoc2015_event_free:clickCategory',
+      'element_id': '.droplet-palette-group-header.green',
+      'hide_target_selector': '.droplet-palette-group-header.green',
       'qtip_config': {
-        'content': {
-          'text': msg.calloutTryOutNewCommands(),
+        'content' : {
+          'text': msg.calloutClickEvents(),
         },
         'position': {
-          'my': 'center left',
-          'at': 'center right',
-          'adjust': {
-            'x': -20,
-            'y': 0
-          }
+          'my': 'top center',
+          'at': 'bottom center',
         }
       }
     }
@@ -8776,7 +9023,7 @@ levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
   ],
 });
 
-levels.hoc2015_blockly_3 = utils.extend(levels.js_move_diagonal,  {
+levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_diagonal,  {
   editCode: false,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
@@ -8911,9 +9158,14 @@ module.exports.blocks = [
     dropdown: { 0: [
       '"random"',
       '"character1sound1"', '"character1sound2"', '"character1sound3"', '"character1sound4"',
+      '"character1sound5"', '"character1sound6"', '"character1sound7"', '"character1sound8"',
+      '"character1sound9"',
       '"character2sound1"', '"character2sound2"', '"character2sound3"', '"character2sound4"',
       '"item1sound1"', '"item1sound2"', '"item1sound3"', '"item1sound4"',
       '"item3sound1"', '"item3sound2"', '"item3sound3"', '"item3sound4"',
+      '"item4sound1"', '"item4sound2"', '"item4sound3"',
+      '"item5sound1"', '"item5sound2"', '"item5sound3"',
+      '"item6sound1"', '"item6sound2"', '"item6sound3"',
       '"alert1"', '"alert2"', '"alert3"', '"alert4"',
       '"applause"'
       ] } },
@@ -8930,25 +9182,6 @@ module.exports.blocks = [
   {func: 'moveFast', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'moveNormal', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
   {func: 'moveSlow', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
-
-  {func: 'whenTouchAllCharacters', block: 'function whenTouchAllCharacters() {}', expansion: 'function whenTouchAllCharacters() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
-
-  {func: 'whenGetAllMen', block: 'function whenGetAllMen() {}', expansion: 'function whenGetAllMen() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllPilots', block: 'function whenGetAllPilots() {}', expansion: 'function whenGetAllPilots() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllPigs', block: 'function whenGetAllPigs() {}', expansion: 'function whenGetAllPigs() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllBirds', block: 'function whenGetAllBirds() {}', expansion: 'function whenGetAllBirds() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllMice', block: 'function whenGetAllMice() {}', expansion: 'function whenGetAllMice() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllRoos', block: 'function whenGetAllRoos() {}', expansion: 'function whenGetAllRoos() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllSpiders', block: 'function whenGetAllSpiders() {}', expansion: 'function whenGetAllSpiders() {\n  __;\n}', category: '' },
-
-  {func: 'whenTouchAllMen', block: 'function whenTouchAllMen() {}', expansion: 'function whenTouchAllMen() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllPilots', block: 'function whenTouchAllPilots() {}', expansion: 'function whenTouchAllPilots() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllPigs', block: 'function whenTouchAllPigs() {}', expansion: 'function whenTouchAllPigs() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllBirds', block: 'function whenTouchAllBirds() {}', expansion: 'function whenTouchAllBirds() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllMice', block: 'function whenTouchAllMice() {}', expansion: 'function whenTouchAllMice() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllRoos', block: 'function whenTouchAllRoos() {}', expansion: 'function whenTouchAllRoos() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllSpiders', block: 'function whenTouchAllSpiders() {}', expansion: 'function whenTouchAllSpiders() {\n  __;\n}', category: '' },
 
   {func: 'whenTouchGoal', block: 'function whenTouchGoal() {}', expansion: 'function whenTouchGoal() {\n  __;\n}', category: '' },
   {func: 'whenTouchAllGoals', block: 'function whenTouchAllGoals() {}', expansion: 'function whenTouchAllGoals() {\n  __;\n}', category: '' },
@@ -8978,6 +9211,25 @@ module.exports.blocks = [
   {func: 'whenTouchMouse', block: 'function whenTouchMouse() {}', expansion: 'function whenTouchMouse() {\n  __;\n}', category: '' },
   {func: 'whenTouchRoo', block: 'function whenTouchRoo() {}', expansion: 'function whenTouchRoo() {\n  __;\n}', category: '' },
   {func: 'whenTouchSpider', block: 'function whenTouchSpider() {}', expansion: 'function whenTouchSpider() {\n  __;\n}', category: '' },
+
+  {func: 'whenTouchAllCharacters', block: 'function whenTouchAllCharacters() {}', expansion: 'function whenTouchAllCharacters() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
+
+  {func: 'whenGetAllMen', block: 'function whenGetAllMen() {}', expansion: 'function whenGetAllMen() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllPilots', block: 'function whenGetAllPilots() {}', expansion: 'function whenGetAllPilots() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllPigs', block: 'function whenGetAllPigs() {}', expansion: 'function whenGetAllPigs() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllBirds', block: 'function whenGetAllBirds() {}', expansion: 'function whenGetAllBirds() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllMice', block: 'function whenGetAllMice() {}', expansion: 'function whenGetAllMice() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllRoos', block: 'function whenGetAllRoos() {}', expansion: 'function whenGetAllRoos() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllSpiders', block: 'function whenGetAllSpiders() {}', expansion: 'function whenGetAllSpiders() {\n  __;\n}', category: '' },
+
+  {func: 'whenTouchAllMen', block: 'function whenTouchAllMen() {}', expansion: 'function whenTouchAllMen() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllPilots', block: 'function whenTouchAllPilots() {}', expansion: 'function whenTouchAllPilots() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllPigs', block: 'function whenTouchAllPigs() {}', expansion: 'function whenTouchAllPigs() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllBirds', block: 'function whenTouchAllBirds() {}', expansion: 'function whenTouchAllBirds() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllMice', block: 'function whenTouchAllMice() {}', expansion: 'function whenTouchAllMice() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllRoos', block: 'function whenTouchAllRoos() {}', expansion: 'function whenTouchAllRoos() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllSpiders', block: 'function whenTouchAllSpiders() {}', expansion: 'function whenTouchAllSpiders() {\n  __;\n}', category: '' },
 
   // Functions hidden from autocomplete - not used in hoc2015:
   {func: 'setSprite', parent: api, category: '', params: ['0', '"bot1"'], dropdown: { 1: [ '"random"', '"bot1"', '"bot2"' ] } },
@@ -12002,7 +12254,327 @@ exports.isKeyDown = function (keyCode) {
 };
 
 
-},{"./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/Item.js":[function(require,module,exports){
+},{"./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/ThreeSliceAudio.js":[function(require,module,exports){
+/** @file A three-part loopable audio effect (start-loop-end). */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var debugLogging = false;
+function debug(msg) {
+  if (debugLogging && console && console.info) {
+    console.info('Audio: ' + msg);
+  }
+}
+
+/** @enum {number} */
+var PlaybackState = {
+  NONE: 'none',
+  BEGIN: 'begin',
+  LOOP: 'loop',
+  END: 'end'
+};
+
+/**
+ * A loopable audio effect defined with three parts (start, middle, end) so that
+ * you can get a smooth start/finish effect.
+ *
+ * Assumes the audio clips in question have already been preloaded by another
+ * system.
+ *
+ * @param {AudioPlayer} audioPlayer
+ * @param {string} begin - Audio clip name for start of sound.
+ * @param {string} loop - Audio clip name for loopable part of sound.
+ * @param {string} end - Audio clip name for end of sound.
+ * @constructor
+ */
+var ThreeSliceAudio = function (audioPlayer, begin, loop, end) {
+  /** @private {PlaybackState} */
+  this.state_ = PlaybackState.NONE;
+  /** @private {AudioPlayer} */
+  this.audioPlayer_ = audioPlayer;
+  /** @private {string} */
+  this.beginClipName_ = begin;
+  /** @private {string} */
+  this.loopClipName_ = loop;
+  /** @private {string} */
+  this.endClipName_ = end;
+};
+module.exports = ThreeSliceAudio;
+
+/**
+ * Turn on the audio effect, causing it to begin and then transition to the loop.
+ * Will do nothing if the effect is already playing, so safe to call often (on
+ * a key-repeat, for example).
+ */
+ThreeSliceAudio.prototype.on = function () {
+  if (this.state_ === PlaybackState.NONE || this.state_ === PlaybackState.END) {
+    debug('on');
+    this.enterState_(PlaybackState.BEGIN);
+  }
+};
+
+/**
+ * Turn off the audio effect.  If the loop has not started yet (the sound is
+ * still starting up) then it will just stop immediately.  If the loop has
+ * started, the end effect will be played and then the audio will stop.
+ */
+ThreeSliceAudio.prototype.off = function () {
+  debug('off');
+  if (this.state_ === PlaybackState.BEGIN || this.state_ === PlaybackState.LOOP) {
+    this.enterState_(PlaybackState.END);
+  }
+};
+
+ThreeSliceAudio.prototype.enterState_ = function (state) {
+  this.exitState_(this.state_);
+  debug(this.state_ + ' -> ' + state);
+  this.state_ = state;
+  var callback = this.whenSoundStopped_.bind(this, state);
+  if (state === PlaybackState.BEGIN) {
+    if (this.beginClipName_) {
+      this.audioPlayer_.play(this.beginClipName_, { onEnded: callback });
+    } else {
+      this.enterState_(PlaybackState.LOOP);
+    }
+  } else if (state === PlaybackState.LOOP) {
+    if (this.loopClipName_) {
+      this.audioPlayer_.play(this.loopClipName_, { loop: true, onEnded: callback });
+    } else {
+      this.enterState_(PlaybackState.END);
+    }
+  } else if (state === PlaybackState.END) {
+    if (this.endClipName_) {
+      this.audioPlayer_.play(this.endClipName_, { onEnded: callback });
+    } else {
+      this.enterState_(PlaybackState.NONE);
+    }
+  }
+};
+
+ThreeSliceAudio.prototype.exitState_ = function (state) {
+  if (state === PlaybackState.BEGIN && this.beginClipName_) {
+    this.audioPlayer_.stopLoopingAudio(this.beginClipName_);
+  } else if (state === PlaybackState.LOOP && this.loopClipName_) {
+    this.audioPlayer_.stopLoopingAudio(this.loopClipName_);
+  } else if (state === PlaybackState.END && this.endClipName_) {
+    this.audioPlayer_.stopLoopingAudio(this.endClipName_);
+  }
+};
+
+ThreeSliceAudio.prototype.whenSoundStopped_ = function (stoppedState) {
+  debug('soundStopped (' + stoppedState + ')');
+  if (stoppedState === PlaybackState.BEGIN && this.state_ === PlaybackState.BEGIN) {
+    this.enterState_(PlaybackState.LOOP);
+  } else if (stoppedState === PlaybackState.END && this.state_ === PlaybackState.END) {
+    this.enterState_(PlaybackState.NONE);
+  }
+};
+
+
+},{}],"/home/ubuntu/staging/apps/build/js/studio/MusicController.js":[function(require,module,exports){
+/** @file The maestro! Helper that knows which music tracks can be played, and
+ *        which one is playing now, and selects and plays them appropriately. */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var utils = require('../utils');
+
+var debugLogging = false;
+function debug(msg) {
+  if (debugLogging && console && console.info) {
+    console.info('MusicController: ' + msg);
+  }
+}
+
+/**
+ * @typedef {Object} MusicTrack
+ * @property {string} name
+ * @property {string[]} assetUrls
+ * @property {Sound} sound
+ * @property {boolean} isLoaded
+ */
+
+/**
+ * A helper class that handles loading, choosing, playing and stopping
+ * background music for Playlab.
+ *
+ * @param {AudioPlayer} audioPlayer - Reference to the Sounds object.
+ * @param {function} assetUrl - Function for generating paths to static assets
+ *        for the current skin.
+ * @param {string[]} [trackNames] - List of music asset names (sans
+ *        extensions). Can be omitted if no music should be played.
+ * @constructor
+ */
+var MusicController = function (audioPlayer, assetUrl, trackNames) {
+  /** @private {AudioPlayer} */
+  this.audioPlayer_ = audioPlayer;
+
+  /** @private {function} */
+  this.assetUrl_ = assetUrl;
+
+  /** @private {string[]} */
+  this.trackNames_ = trackNames || [];
+
+  /** @private {Object} maps trackName => MusicTrack */
+  this.tracks_ = buildTrackMap(this.trackNames_, assetUrl);
+
+  /** @private {string} */
+  this.nowPlayingName_ = null;
+
+  this.playOnLoad_ = null;
+
+  document.addEventListener('videoShown', function () {
+    this.fadeOut();
+  }.bind(this));
+
+  debug('constructed');
+};
+module.exports = MusicController;
+
+/**
+ * Build up an initial map of trackName -> MusicTrack object, without doing
+ * any asset loading.
+ * @param {string{}} trackNames
+ * @param {function} assetUrl
+ */
+function buildTrackMap(trackNames, assetUrl) {
+  var tracks = trackNames.map(function (name) {
+    return {
+      name: name,
+      assetUrls: [ assetUrl(name + '.mp3') ],
+      sound: null,
+      isLoaded: false
+    };
+  });
+  return tracks.reduce(function (memo, next) {
+    memo[next.name] = next;
+    return memo;
+  }, {});
+}
+
+/**
+ * Preload all music assets,
+ */
+MusicController.prototype.preload = function () {
+  if (!this.audioPlayer_) {
+    return;
+  }
+
+  this.trackNames_.forEach(function (name) {
+    this.tracks_[name].sound = this.audioPlayer_.registerByFilenamesAndID(
+        this.tracks_[name].assetUrls, name);
+    this.tracks_[name].sound.onLoad = function () {
+      debug('done loading ' + name);
+      this.tracks_[name].isLoaded = true;
+      if (this.playOnLoad_ === name) {
+        this.play(name);
+      }
+    }.bind(this);
+  }.bind(this));
+};
+
+/**
+ * Begins playing a particular piece of music immediately.
+ * @param {string} trackName
+ */
+MusicController.prototype.play = function (trackName) {
+  debug('play ' + trackName);
+  if (!this.audioPlayer_) {
+    return;
+  }
+
+  if (!trackName) {
+    trackName = this.trackNames_[Math.floor(Math.random(this.trackNames_.length))];
+  }
+
+  var track = this.tracks_[trackName];
+  if (!track) {
+    // Not found - throw exception?
+    return;
+  }
+
+  if (track.sound && track.isLoaded) {
+    debug('playing now');
+    var callback = this.whenMusicStopped_.bind(this, trackName);
+    track.sound.play({ onEnded: callback });
+    this.nowPlaying_ = trackName;
+  } else {
+    debug('not done loading, playing after load');
+    this.playOnLoad_ = trackName;
+  }
+};
+
+/**
+ * Stops playing whatever music is currently playing, immediately.
+ */
+MusicController.prototype.stop = function () {
+  if (!this.nowPlaying_) {
+    return;
+  }
+
+  var sound = this.audioPlayer_.get(this.nowPlaying_);
+  if (sound) {
+    sound.stop();
+  }
+};
+
+/**
+ * Fades music to nothing, then stops it.
+ * @param {number} [durationSeconds] in seconds.  Default 3.
+ */
+MusicController.prototype.fadeOut = function (durationSeconds) {
+  if (!this.nowPlaying_) {
+    return;
+  }
+
+  durationSeconds = utils.valueOr(durationSeconds, 3);
+
+  // Trigger a fade
+  var sound = this.audioPlayer_.get(this.nowPlaying_);
+  if (sound) {
+    sound.fadeToGain(0, durationSeconds);
+  }
+
+  // Stop the audio after the fade.
+  setTimeout(function () {
+    this.stop();
+  }.bind(this), 1000 * durationSeconds);
+};
+
+/**
+ * Callback for when music stops, to update internal state.
+ * @param {string} musicName that was playing.  Should be bound when music
+ *        is started.
+ * @private
+ */
+MusicController.prototype.whenMusicStopped_ = function (musicName) {
+  if (this.nowPlaying_ === musicName) {
+    this.nowPlaying_ = null;
+  }
+};
+
+
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/studio/Item.js":[function(require,module,exports){
 var Collidable = require('./collidable');
 var constants = require('./constants');
 var studioMsg = require('./locale');
@@ -12025,6 +12597,8 @@ var Item = function (options) {
 
   this.height = options.height || 50;
   this.width = options.width || 50;
+
+  this.spritesCounterclockwise = options.spritesCounterclockwise || false;
 
   /**
    * Rendering offset for item animation vs display position - applied as
@@ -12065,7 +12639,11 @@ Item.prototype.getDirectionFrame = function() {
     }
   }
 
-  return constants.frameDirTableWalkingWithIdle[this.displayDir];
+  var frameDirTable = this.spritesCounterclockwise ? 
+    constants.frameDirTableWalkingWithIdleCounterclockwise : 
+    constants.frameDirTableWalkingWithIdleClockwise;
+
+  return frameDirTable[this.displayDir];
 };
 
 /**
@@ -12374,12 +12952,12 @@ Item.prototype.moveToNextPosition = function () {
 Item.prototype.startCollision = function (key) {
   var newCollisionStarted = Item.superPrototype.startCollision.call(this, key);
   if (newCollisionStarted) {
-    if (this.isHazard) {
+    if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
+      Studio.trackedBehavior.touchedHazardCount++;
       var actor = Studio.sprite[key];
       if (actor) {
         actor.addAction(new spriteActions.FadeActor(constants.TOUCH_HAZARD_FADE_TIME));
         actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_FADE_TIME));
-        Studio.fail(studioMsg.failedAvoidHazard());
       }
     }
   }
@@ -13247,34 +13825,33 @@ frameDirTableWalking[Dir.SOUTHWEST]  = 7;
 exports.frameDirTableWalking = frameDirTableWalking;
 
 
-// Normal for preview
-var frameDirTableWalkingWithIdle = {};
-frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
-frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
-frameDirTableWalkingWithIdle[Dir.SOUTHEAST]  = 1;
-frameDirTableWalkingWithIdle[Dir.EAST]       = 2;
-frameDirTableWalkingWithIdle[Dir.NORTHEAST]  = 3;
-frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
-frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 5;
-frameDirTableWalkingWithIdle[Dir.WEST]       = 6;
-frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 7;
+// Forward-to-left (clockwise)
+var frameDirTableWalkingWithIdleClockwise = {};
+frameDirTableWalkingWithIdleClockwise[Dir.NONE]       = 8;
+frameDirTableWalkingWithIdleClockwise[Dir.SOUTH]      = 0;
+frameDirTableWalkingWithIdleClockwise[Dir.SOUTHEAST]  = 1;
+frameDirTableWalkingWithIdleClockwise[Dir.EAST]       = 2;
+frameDirTableWalkingWithIdleClockwise[Dir.NORTHEAST]  = 3;
+frameDirTableWalkingWithIdleClockwise[Dir.NORTH]      = 4;
+frameDirTableWalkingWithIdleClockwise[Dir.NORTHWEST]  = 5;
+frameDirTableWalkingWithIdleClockwise[Dir.WEST]       = 6;
+frameDirTableWalkingWithIdleClockwise[Dir.SOUTHWEST]  = 7;
 
+exports.frameDirTableWalkingWithIdleClockwise = frameDirTableWalkingWithIdleClockwise;
 
-// Reversed for final
-/*
-var frameDirTableWalkingWithIdle = {};
-frameDirTableWalkingWithIdle[Dir.NONE]       = 8;
-frameDirTableWalkingWithIdle[Dir.SOUTH]      = 0;
-frameDirTableWalkingWithIdle[Dir.SOUTHEAST]  = 7;
-frameDirTableWalkingWithIdle[Dir.EAST]       = 6;
-frameDirTableWalkingWithIdle[Dir.NORTHEAST]  = 5;
-frameDirTableWalkingWithIdle[Dir.NORTH]      = 4;
-frameDirTableWalkingWithIdle[Dir.NORTHWEST]  = 3;
-frameDirTableWalkingWithIdle[Dir.WEST]       = 2;
-frameDirTableWalkingWithIdle[Dir.SOUTHWEST]  = 1;
-*/
+// Forward-to-right (counter-clockwise)
+var frameDirTableWalkingWithIdleCounterclockwise = {};
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NONE]       = 8;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTH]      = 0;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHEAST]  = 7;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.EAST]       = 6;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTHEAST]  = 5;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTH]      = 4;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTHWEST]  = 3;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.WEST]       = 2;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHWEST]  = 1;
 
-exports.frameDirTableWalkingWithIdle = frameDirTableWalkingWithIdle;
+exports.frameDirTableWalkingWithIdleCounterclockwise = frameDirTableWalkingWithIdleCounterclockwise;
 
 /**
  * Given a direction, returns the unit vector for it.

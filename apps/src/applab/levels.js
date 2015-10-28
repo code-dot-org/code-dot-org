@@ -165,6 +165,7 @@ levels.custom = {
     "declareAssign_str_hello_world": null,
     "substring": null,
     "indexOf": null,
+    "includes": null,
     "length": null,
     "toUpperCase": null,
     "toLowerCase": null,

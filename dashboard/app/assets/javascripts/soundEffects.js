@@ -69,6 +69,7 @@ function Sounds() {
  * @param {Array.<string>} soundPaths list of sound file URLs ending in their
  *                                   file format (.mp3|.ogg|.wav)
  * @param {string} soundID ID for sound
+ * @returns {Sound}
  */
 Sounds.prototype.registerByFilenamesAndID = function (soundPaths, soundID) {
   var soundRegistrationConfig = { id: soundID };
@@ -83,15 +84,24 @@ Sounds.prototype.registerByFilenamesAndID = function (soundPaths, soundID) {
       soundRegistrationConfig[extension] = soundFilePath;
     }
   }
-  this.register(soundRegistrationConfig);
+  return this.register(soundRegistrationConfig);
 };
 
+/**
+ * @param {Object} config
+ * @returns {Sound}
+ */
 Sounds.prototype.register = function (config) {
   var sound = new Sound(config, this.audioContext);
   this.soundsById[config.id] = sound;
   sound.preload();
+  return sound;
 };
 
+/**
+ * @param {string} soundId - Name of the sound to play
+ * @param {function} [options.onEnded]
+ */
 Sounds.prototype.play = function (soundId, options) {
   var sound = this.soundsById[soundId];
   if (sound) {
@@ -150,6 +160,9 @@ function Sound(config, audioContext) {
   this.playableBuffer = null; // if Web Audio
 }
 
+/**
+ * @param {function} [options.onEnded]
+ */
 Sound.prototype.play = function (options) {
   options = options || {};
   if (!this.audioElement && !this.reusableBuffer) {
@@ -158,6 +171,13 @@ Sound.prototype.play = function (options) {
 
   if (this.reusableBuffer) {
     this.playableBuffer = this.newPlayableBufferSource(this.reusableBuffer, options);
+
+    // Hook up on-ended callback, although browser support may be limited.
+    // Don't make anything depend on this callback happening.
+    if (options.onEnded) {
+      this.playableBuffer.onended = options.onEnded;
+    }
+
     // Play sound, supporting older versions of the Web Audio API which used noteOn(Off).
     if (this.playableBuffer.start) {
       this.playableBuffer.start(0);
@@ -174,6 +194,17 @@ Sound.prototype.play = function (options) {
 
   this.audioElement.volume = typeof options.volume === "undefined" ? 1 : options.volume;
   this.audioElement.loop = !!options.loop;
+  if (options.onEnded) {
+    var unregisterAndCallback = function () {
+      this.audioElement.removeEventListener('abort', unregisterAndCallback);
+      this.audioElement.removeEventListener('ended', unregisterAndCallback);
+      this.audioElement.removeEventListener('pause', unregisterAndCallback);
+      options.onEnded();
+    }.bind(this);
+    this.audioElement.addEventListener('abort', unregisterAndCallback);
+    this.audioElement.addEventListener('ended', unregisterAndCallback);
+    this.audioElement.addEventListener('pause', unregisterAndCallback);
+  }
   this.audioElement.play();
 };
 
@@ -202,22 +233,38 @@ Sound.prototype.newPlayableBufferSource = function(buffer, options) {
   var newSound = this.audioContext.createBufferSource();
 
   // Older versions of chrome call this createGainNode instead of createGain
-  var gainNode;
   if (this.audioContext.createGain) {
-    gainNode = this.audioContext.createGain();
+    this.gainNode = this.audioContext.createGain();
   } else if (this.audioContext.createGainNode) {
-    gainNode = this.audioContext.createGainNode();
+    this.gainNode = this.audioContext.createGainNode();
   } else {
     return null;
   }
 
   newSound.buffer = buffer;
   newSound.loop = !!options.loop;
-  newSound.connect(gainNode);
-  gainNode.connect(this.audioContext.destination);
-  gainNode.gain.value = typeof options.volume === "undefined" ? 1 : options.volume;
-
+  newSound.connect(this.gainNode);
+  this.gainNode.connect(this.audioContext.destination);
+  var startingVolume = typeof options.volume === "undefined" ? 1 : options.volume;
+  this.gainNode.gain.value = startingVolume;
   return newSound;
+};
+
+Sound.prototype.fadeToGain = function (gain, durationSeconds) {
+  if (!this.gainNode) {
+    return;
+  }
+
+  // Can't exponential ramp to zero, simulate by getting close.
+  if (gain === 0) {
+    gain = 0.01;
+  }
+
+  var currTime = this.audioContext.currentTime;
+  this.gainNode.gain.setValueAtTime(this.gainNode.gain.value, currTime);
+  this.gainNode.gain.exponentialRampToValueAtTime(gain, currTime + durationSeconds);
+
+  // TODO (bbuchanan): Support fallback player
 };
 
 function isMobile() {
@@ -293,6 +340,9 @@ Sound.prototype.preload = function () {
 Sound.prototype.onSoundLoaded = function () {
   if (this.config.playAfterLoad) {
     this.play(this.config.playAfterLoadOptions);
+  }
+  if (this.onLoad) {
+    this.onLoad();
   }
 };
 

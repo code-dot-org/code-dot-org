@@ -33,6 +33,8 @@ var Hammer = utils.getHammer();
 var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
+var ThreeSliceAudio = require('./ThreeSliceAudio');
+var MusicController = require('./MusicController');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -773,11 +775,19 @@ function sortDrawOrder() {
   }
 
   // Now sort everything by y.
-
   itemsArray = _.sortBy(itemsArray, 'y');
 
-  for (i = 0; i < itemsArray.length; ++i) {
-    spriteLayer.appendChild(itemsArray[i].element);
+  // Carefully place the elements back in the DOM starting at the end of the
+  // spriteLayer and, one by one, insert them before the previous one
+  // (this prevents flashing in Safari vs. an in-order appendChild() loop)
+  var prevNode;
+  for (i = itemsArray.length - 1; i >= 0; i--) {
+    if (prevNode) {
+      spriteLayer.insertBefore(itemsArray[i].element, prevNode);
+    } else {
+      spriteLayer.appendChild(itemsArray[i].element);
+    }
+    prevNode = itemsArray[i].element;
   }
 }
 
@@ -801,7 +811,7 @@ Studio.onTick = function() {
 
   Studio.clearDebugElements();
 
-  var animationOnlyFrame = Studio.midExecutionFailure ||
+  var animationOnlyFrame = Studio.pauseInterpreter ||
       (0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor);
   Studio.yieldThisTick = false;
 
@@ -911,6 +921,7 @@ Studio.onTick = function() {
     var ticksBeforeFaceSouth = utils.valueOr(level.ticksBeforeFaceSouth, Studio.ticksBeforeFaceSouth);
     if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].dir = Direction.SOUTH;
+      Studio.movementAudioOff();
       isWalking = false;
     }
 
@@ -1560,13 +1571,48 @@ Studio.init = function(config) {
     }
   });
 
+  /**
+   * Helper that handles music loading/playing/crossfading for the level.
+   * @type {MusicController}
+   */
+  Studio.musicController = new MusicController(
+      studioApp.cdoSounds,
+      skin.assetUrl,
+      utils.valueOr(level.music, skin.music));
+
+  /**
+   * Defines the set of possible movement sound effects for each playlab actor.
+   * Populated just-in-time by setSprite to avoid preparing audio for actors
+   * we never use.
+   * @type {Object}
+   */
+  Studio.movementAudioEffects = {};
+
   config.loadAudio = function() {
+    var soundFileNames = [];
+    // We want to load the basic list of effects available in the skin
+    soundFileNames.push.apply(soundFileNames, skin.sounds);
+    // We also want to load the movement sounds used in hoc2015
+    soundFileNames.push.apply(soundFileNames, Studio.getMovementSoundFileNames(skin));
+    // No need to load anything twice, so de-dupe our list.
+    soundFileNames = _.uniq(soundFileNames);
+
     skin.soundFiles = {};
-    skin.sounds.forEach(function (sound) {
+    soundFileNames.forEach(function (sound) {
       skin.soundFiles[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl(sound + '.ogg')];
       studioApp.loadAudio(skin.soundFiles[sound], sound);
     });
+
+    // Handle music separately - the music controller does its own preloading.
+    Studio.musicController.preload();
   };
+
+  // Play music when the instructions are shown
+  var onInstructionsShown = function () {
+    Studio.musicController.play();
+    document.removeEventListener('instructionsShown', onInstructionsShown);
+  };
+  document.addEventListener('instructionsShown', onInstructionsShown);
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
@@ -1656,6 +1702,28 @@ Studio.init = function(config) {
     preloadProjectileAndItemImages();
     preloadBackgroundImages();
   }
+};
+
+/**
+ * Get a flattened list of all the sound file names (sans extensions)
+ * specified in the skin for avatar movement (these may be omitted from the
+ * skin.sounds list because we don't want them accessible to the player).
+ * @param {Object} level skin from which to extract sound effect names.
+ * @returns {string[]} which may contain duplicates but will not have any
+ *          undefined entries.
+ */
+Studio.getMovementSoundFileNames = function (fromSkin) {
+  var avatarList = fromSkin.avatarList || [];
+  return avatarList.map(function (avatarName) {
+    var movementAudio = fromSkin[avatarName].movementAudio || [];
+    return movementAudio.reduce(function (memo, nextOption) {
+      return memo.concat([nextOption.begin, nextOption.loop, nextOption.end]);
+    }, []);
+  }).reduce(function (memo, next) {
+    return memo.concat(next);
+  }, []).filter(function (fileName) {
+    return fileName !== undefined;
+  });
 };
 
 var preloadImage = function(url) {
@@ -1770,7 +1838,7 @@ Studio.reset = function(first) {
   // True if we should fail before execution, even if freeplay
   Studio.preExecutionFailure = false;
   Studio.message = null;
-  Studio.midExecutionFailure = false;
+  Studio.pauseInterpreter = false;
 
   // Reset the score and title screen.
   Studio.playerScore = 0;
@@ -1802,8 +1870,10 @@ Studio.reset = function(first) {
   // More things used to validate level completion.
   Studio.trackedBehavior = {
     removedItemCount: 0,
+    touchedHazardCount: 0,
     setActivityRecord: null,
     hasSetBot: false,
+    hasSetBotSpeed: false,
     hasSetBackground: false,
     hasSetMap: false,
     hasAddedItem: false,
@@ -1892,6 +1962,9 @@ Studio.reset = function(first) {
 
   // Reset whether level has succeeded.
   Studio.succeededTime = null;
+
+  // Stop any current movement sounds
+  Studio.movementAudioOff();
 };
 
 /**
@@ -1980,6 +2053,10 @@ Studio.runButtonClick = function() {
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
+
+  // Stop the music the first time the run button is pressed (hoc2015)
+  Studio.musicController.fadeOut();
+
   studioApp.reset(false);
   studioApp.attempts++;
   Studio.startTime = new Date();
@@ -2358,11 +2435,13 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = studioApp.editor.getValue();
-    // Our ace worker also calls attachToSession, but it won't run on IE9:
-    var session = studioApp.editor.aceEditor.getSession();
-    annotationList.attachToSession(session, studioApp.editor);
-    annotationList.clearRuntimeAnnotations();
+    var codeWhenRun = studioApp.getCode();
+    if (!studioApp.hideSource) {
+      // Our ace worker also calls attachToSession, but it won't run on IE9:
+      var session = studioApp.editor.aceEditor.getSession();
+      annotationList.attachToSession(session, studioApp.editor);
+      annotationList.clearRuntimeAnnotations();
+    }
     Studio.JSInterpreter = new JSInterpreter({
       code: codeWhenRun,
       blocks: dropletConfig.blocks,
@@ -2402,6 +2481,7 @@ Studio.onPuzzleComplete = function() {
 
   // Stop everything on screen
   Studio.clearEventHandlersKillTickLoop();
+  Studio.movementAudioOff();
 
   // If we know they succeeded, mark levelComplete true
   var levelComplete = (Studio.result === ResultType.SUCCESS);
@@ -2428,7 +2508,7 @@ Studio.onPuzzleComplete = function() {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = studioApp.editor.getValue();
+    program = studioApp.getCode();
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
@@ -3326,6 +3406,7 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     speed: Studio.itemSpeed[itemClass],
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     isHazard: classProperties.isHazard,
+    spritesCounterclockwise: classProperties.spritesCounterclockwise,
     renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
     renderScale: utils.valueOr(classProperties.scale, 1),
     animationRate: classProperties.animationRate
@@ -3934,8 +4015,37 @@ Studio.setSprite = function (opts) {
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
+  // Set up movement audio for the selected sprite (clips should be preloaded)
+  if (!Studio.movementAudioEffects[spriteValue] && skin.avatarList) {
+    var spriteSkin = skin[spriteValue] || {};
+    var audioConfig = spriteSkin.movementAudio || [];
+    Studio.movementAudioEffects[spriteValue] = [];
+    if (studioApp.cdoSounds) {
+      Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
+        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
+      });
+    }
+  }
+  Studio.currentSpriteMovementAudioEffects = Studio.movementAudioEffects[spriteValue];
+
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
+};
+
+
+Studio.movementAudioOn = function () {
+  Studio.movementAudioOff();
+  Studio.currentMovementAudio = Studio.currentSpriteMovementAudioEffects[
+      Math.floor(Math.random() * Studio.currentSpriteMovementAudioEffects.length)];
+  if (Studio.currentMovementAudio) {
+    Studio.currentMovementAudio.on();
+  }
+};
+
+Studio.movementAudioOff = function () {
+  if (Studio.currentMovementAudio) {
+    Studio.currentMovementAudio.off();
+  }
 };
 
 var p = function (x,y) {
@@ -4512,7 +4622,6 @@ Studio.moveSingle = function (opts) {
   var distance = level.gridAlignedMovement ? Studio.SQUARE_SIZE : sprite.speed;
   var wallCollision = false;
   var playspaceEdgeCollision = false;
-  var playSound = false;
   var deltaX = 0, deltaY = 0;
 
   switch (opts.dir) {
@@ -4562,30 +4671,25 @@ Studio.moveSingle = function (opts) {
       Studio.JSInterpreter.yield();
     }
 
-    playSound = true;
-  } else if (!wallCollision) {
-    if (playspaceEdgeCollision) {
-      var boundary = Studio.getPlayspaceBoundaries(sprite);
-      projectedX = Math.max(boundary.left, Math.min(boundary.right, projectedX));
-      projectedY = Math.max(boundary.top, Math.min(boundary.bottom, projectedY));
+    Studio.movementAudioOn();
+  } else {
+    if (!wallCollision) {
+      if (playspaceEdgeCollision) {
+        var boundary = Studio.getPlayspaceBoundaries(sprite);
+        projectedX = Math.max(boundary.left, Math.min(boundary.right, projectedX));
+        projectedY = Math.max(boundary.top, Math.min(boundary.bottom, projectedY));
+      }
+      sprite.x = projectedX;
+      sprite.y = projectedY;
     }
-    sprite.x = projectedX;
-    sprite.y = projectedY;
 
     if (opts.dir !== Studio.lastMoveSingleDir &&
         lastMove === Infinity || Studio.tickCount > lastMove + 1) {
-      // So long as there was no wall collision, a new direction, and we
-      // haven't already processed a move in the previous tick, then play a sound.
-      playSound = true;
+      Studio.movementAudioOn();
     }
   }
 
   Studio.lastMoveSingleDir = opts.dir;
-
-  if (playSound && skin.moveSounds) {
-    var randomSoundIndex = Math.floor(Math.random() * skin.moveSounds.length);
-    studioApp.playAudio(skin.moveSounds[randomSoundIndex]);
-  }
 };
 
 Studio.moveDistance = function (opts) {
@@ -4755,97 +4859,103 @@ Studio.allGoalsVisited = function() {
 };
 
 /**
- * A level can provide zero or more requiredForSuccess criteria which are
- * special cases that a level requires for success.  This function evaluates
- * the state of these criteria.
- * @returns {Object} outcome
- * @returns {boolean} outcome.exists Whether the level even has any of these criteria.
- * @returns {boolean} outcome.achieved false if any of the criteria was required but not met.
- * @returns {string} outcome.message A custom message for the first of the failing criteria.
+ * Returns true if the specified criteria, provided as an Object, is satisfied.
  */
-Studio.checkRequiredForSuccess = function() {
-
-  if (!level.requiredForSuccess) {
-    return { exists: false, achieved: false, message: null };
-  }
-
-  var required = level.requiredForSuccess;
+Studio.conditionSatisfied = function(required) {
   var tracked = Studio.trackedBehavior;
+  var valueNames = Object.keys(required);
 
-  if (required.setSprite && !tracked.hasSetSprite) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetSprite() };
+  for (var k = 0; k < valueNames.length; k++) {
+    var valueName = valueNames[k];
+    var value = required[valueName];
+
+    if (valueName === 'timedOut' && Studio.timedOut() != value) {
+      return false;
+    }
+
+    if (valueName === 'collectedItemsAtOrAbove' && tracked.removedItemCount < value) {
+      return false;
+    }
+
+    if (valueName === 'collectedItemsBelow' && tracked.removedItemCount >= value) {
+      return false;
+    }
+
+    if (valueName === 'touchedHazardsAtOrAbove' && tracked.touchedHazardCount < value) {
+      return false;
+    }
+
+    if (valueName === 'currentPointsAtOrAbove' && Studio.playerScore < value) {
+      return false;
+    }
+
+    if (valueName === 'currentPointsBelow' && Studio.playerScore >= value) {
+      return false;
+    }
+
+    if (valueName === 'allGoalsVisited' && Studio.allGoalsVisited() !== value) {
+      return false;
+    }
+
+    if (valueName === 'setMap' && tracked.hasSetMap !== value) {
+      return false;
+    }
+
+    if (valueName === 'setBotSpeed' && tracked.hasSetBotSpeed !== value) {
+      return false;
+    }
   }
 
-  if (required.setBotSpeed && !tracked.hasSetBotSpeed) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetBotSpeed() };
-  }
-
-  if (required.setBackground && !tracked.hasSetBackground) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetBackground() };
-  }
-
-  if (required.setBotMap && !tracked.hasSetMap) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasSetMap() };
-  }
-
-  if (required.touchAllItems && Studio.items.length > 0) {
-    return { exists: true, achieved: false, message: studioMsg.failedTouchAllItems() };
-  }
-
-  if (required.scoreMinimum && Studio.playerScore < required.scoreMinimum) {
-    return { exists: true, achieved: false, message: studioMsg.failedScoreMinimum() };
-  }
-
-  if (required.addItem && !tracked.hasAddedItem) {
-    return { exists: true, achieved: false, message: studioMsg.failedAddItem() };
-  }
-
-  if (required.removedItemCount && tracked.removedItemCount < required.removedItemCount) {
-    return { exists: true, achieved: false, message: studioMsg.failedRemovedItemCount() };
-  }
-
-  if (required.winGame && ! tracked.hasWonGame) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasWonGame() };
-  }
-
-  if (required.lostGame && ! tracked.hasLostGame) {
-    return { exists: true, achieved: false, message: studioMsg.failedHasLostGame() };
-  }
-
-  if (required.setActivity &&
-      !(tracked.setActivityRecord && 
-        tracked.setActivityRecord[required.setActivity.itemType] &&
-        tracked.setActivityRecord[required.setActivity.itemType][required.setActivity.activityType])) {
-    return { exists: true, achieved: false, message: studioMsg.failedSetActivity() };
-  }
-
-  return { exists: true, achieved: true, message: null };
+  return true;
 };
 
 /**
- * Trigger a manual failure, which stops the interpreter and ends the level
- * prematurely.
- *
- * Note: Has certain known limitations at the moment.
- * - In droplet, it's possible for the interpreter to run several instructions
- *   before we return to the end of a tick and check this condition.
- * - Does not yet work in blockly mode (with no interpreter)
- *
- * @param {string} [message] optional failure message text
+ * @typedef {Object} ProgressConditionOutcome
+ * @property {boolean} success
+ * @property {string} message
  */
-Studio.fail = function (message) {
-  Studio.message = utils.valueOr(message, null);
-  Studio.midExecutionFailure = true;
+
+/**
+ * A level can provide zero or more progress conditions which are special cases
+ * that we test to see if the level has succeeded or failed.  This function
+ * evaluates the state of these criteria.  It returns false if none of the
+ * criteria affects progress, otherwise an object that contains information
+ * about the specific succeeding or failing criteria.
+ *
+ * @param {Array} conditions. 
+ * @returns {ProgressConditionOutcome|null}
+ */
+Studio.checkProgressConditions = function() {
+  if (!level.progressConditions) {
+    return null;
+  }
+
+  for (var i = 0; i < level.progressConditions.length; i++) {
+    var condition = level.progressConditions[i];
+
+    if (Studio.conditionSatisfied(condition.required)) {
+      return condition.result;
+    }
+  }
+
+  return null;
 };
 
 var checkFinished = function () {
 
   var hasGoals = Studio.spriteGoals_.length !== 0;
   var achievedGoals = Studio.allGoalsVisited();
-  var requiredForSuccess = Studio.checkRequiredForSuccess();
+  var progressConditionResult = Studio.checkProgressConditions();
   var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
   var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
   var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
+
+  if (progressConditionResult) {
+    Studio.result = progressConditionResult.success ? ResultType.SUCCESS : ResultType.FAILURE;
+    Studio.message = utils.valueOr(progressConditionResult.message, null);
+    Studio.pauseInterpreter = utils.valueOr(progressConditionResult.pauseInterpreter, false);
+    return true;
+  }
 
   // Levels with goals (usually images that need to be touched) can have an optional success
   // condition that can explicitly return false to prevent the level from completing.
@@ -4859,23 +4969,6 @@ var checkFinished = function () {
       (hasGoals && level.completeOnSuccessConditionNotGoals && achievedRequiredSuccessCondition) ||
       (!hasGoals && achievedRequiredSuccessCondition)) {
     Studio.result = ResultType.SUCCESS;
-    return true;
-  }
-
-  if (requiredForSuccess.exists) {
-    if (requiredForSuccess.achieved) {
-      Studio.message = null;
-      Studio.result = ResultType.SUCCESS;
-      return true;
-    } else {
-      // Not meeting these is not reason for immediate failure in itself, but they do
-      // establish a custom error message.
-      Studio.message = requiredForSuccess.message;
-    }
-  }
-
-  if (Studio.midExecutionFailure) {
-    Studio.result = ResultType.FAILURE;
     return true;
   }
 

@@ -4,7 +4,7 @@ title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 * * *
 
-# How-to Guide for Volunteers
+# Könüllülər üçün təlimat
 
 ## 1. Sign up to volunteer
 
@@ -17,7 +17,7 @@ We'll be hosting two webinars to explain what a typical volunteer experience wil
 | Date        | Time                  |
 | ----------- | --------------------- |
 | November 16 | 1:00pm - 1:30pm PST   |
-| December 3  | 11:00am - 11:30am PST |
+| 3 dekabr    | 11:00am - 11:30am PST |
 
 ## 3. Spend 30 minutes trying the tutorials beforehand
 

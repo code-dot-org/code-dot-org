@@ -33,7 +33,7 @@ var Actor = function (options) {
   this.spriteSheet_ = new StudioSpriteSheet($.extend({}, options, {
     width: options.spriteWidth,
     height: options.spriteHeight,
-    horizontalAnimation: true,
+    horizontalAnimation: false,
     totalAnimations: 1
   }));
 

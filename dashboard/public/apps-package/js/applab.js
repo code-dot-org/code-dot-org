@@ -205,6 +205,7 @@ levels.custom = {
     "declareAssign_str_hello_world": null,
     "substring": null,
     "indexOf": null,
+    "includes": null,
     "length": null,
     "toUpperCase": null,
     "toLowerCase": null,
@@ -402,6 +403,7 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var level;
 var skin;
 var copyrightStrings;
+var dropletConfigBlocks;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -672,7 +674,8 @@ function renderFooterInSharedGame() {
     },
     {
       text: applabMsg.makeMyOwnApp(),
-      link: '/projects/applab'
+      link: '/projects/applab',
+      hideOnMobile: true
     },
     {
       text: commonMsg.openWorkspace(),
@@ -690,7 +693,9 @@ function renderFooterInSharedGame() {
     }
   ];
   if (dom.isMobile()) {
-    menuItems.splice(0, 1); // no make my own app on mobile
+    menuItems = menuItems.filter(function (item) {
+      return !item.hideOnMobile;
+    });
   }
 
   window.dashboard.footer.render(React, {
@@ -851,7 +856,7 @@ function handleExecutionError(err, lineNumber) {
 }
 
 Applab.getCode = function () {
-  return studioApp.editor.getValue();
+  return studioApp.getCode();
 };
 
 Applab.getHtml = function () {
@@ -954,7 +959,7 @@ Applab.startSharedAppAfterWarnings = function () {
   // dashboard will redirect young signed in users
   var is13Plus = Applab.user.isSignedIn || localStorage.getItem('is13Plus') === "true";
   var showStoreDataAlert = Applab.hasDataStoreAPIs(Applab.getCode()) &&
-    !hasSeenDataAlert(AppStorage.getChannelId());
+    !hasSeenDataAlert(Applab.channelId);
 
   var modal = document.createElement('div');
   document.body.appendChild(modal);
@@ -969,7 +974,7 @@ Applab.startSharedAppAfterWarnings = function () {
       }
       // Only want to ask about storing data once per app.
       if (showStoreDataAlert) {
-        markSeenDataAlert(AppStorage.getChannelId());
+        markSeenDataAlert(Applab.channelId);
       }
       window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
     },
@@ -988,14 +993,14 @@ Applab.init = function(config) {
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
+  Applab.channelId = config.channel;
+
   // Pre-populate asset list
-  if (window.dashboard && dashboard.project.getCurrentId()) {
-    assetsApi.ajax('GET', '', function (xhr) {
-      assetListStore.reset(JSON.parse(xhr.responseText));
-    }, function () {
-      // Unable to load asset list
-    });
-  }
+  assetsApi.ajax('GET', '', function (xhr) {
+    assetListStore.reset(JSON.parse(xhr.responseText));
+  }, function () {
+    // Unable to load asset list
+  });
 
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -1034,7 +1039,8 @@ Applab.init = function(config) {
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
     finishButton: (!level.isProjectLevel && !level.submittable),
-    submitButton: level.submittable
+    submitButton: level.submittable && !level.submitted,
+    unsubmitButton: level.submittable && level.submitted
   });
   var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
@@ -1099,6 +1105,10 @@ Applab.init = function(config) {
     if (!utils.browserSupportsCssMedia()) {
       studioApp.resizeVisualization(300);
     }
+
+    if (studioApp.share) {
+      Applab.startSharedAppAfterWarnings();
+    }
   };
 
   config.afterEditorReady = function() {
@@ -1115,10 +1125,6 @@ Applab.init = function(config) {
           studioApp.editor.setBreakpoint(e.line);
         }
       });
-    }
-
-    if (studioApp.share) {
-      Applab.startSharedAppAfterWarnings();
     }
   };
 
@@ -1141,7 +1147,17 @@ Applab.init = function(config) {
   config.varsInGlobals = true;
   config.noButtonsBelowOnMobileShare = true;
 
-  config.dropletConfig = dropletConfig;
+  // filter blocks to exclude anything that isn't in code functions if
+  // autocompletePaletteApisOnly is true
+  dropletConfigBlocks = dropletConfig.blocks.filter(function (block) {
+    return !(config.level.executePaletteApisOnly &&
+      config.level.codeFunctions[block.func] === undefined);
+  });
+
+  config.dropletConfig = $.extend({}, dropletConfig, {
+    blocks: dropletConfigBlocks
+  });
+
   config.pinWorkspaceToBottom = true;
 
   config.vizAspectRatio = Applab.appWidth / Applab.footerlessAppHeight;
@@ -1222,6 +1238,11 @@ Applab.init = function(config) {
   var submitButton = document.getElementById('submitButton');
   if (submitButton) {
     dom.addClickTouchEvent(submitButton, Applab.onPuzzleSubmit);
+  }
+
+  var unsubmitButton = document.getElementById('unsubmitButton');
+  if (unsubmitButton) {
+    dom.addClickTouchEvent(unsubmitButton, Applab.onPuzzleUnsubmit);
   }
 
   if (level.editCode) {
@@ -1510,11 +1531,8 @@ function clearDebugInput() {
   }
 }
 
-// TODO(dave): remove once channel id is passed in appOptions.
 /**
- * If channel id has not yet been loaded, delays calling of the callback
- * until the saveProject response comes back. Otherwise, calls the callback
- * directly.
+ * Save the app state and trigger any callouts, then call the callback.
  * @param callback {Function}
  */
 studioApp.runButtonClickWrapper = function (callback) {
@@ -1528,17 +1546,9 @@ studioApp.runButtonClickWrapper = function (callback) {
  */
 Applab.serializeAndSave = function (callback) {
   designMode.serializeToLevelHtml();
-  // Behave like other apps when not editing a project or channel id is present.
-  if (!window.dashboard || !window.dashboard.project.isEditing() ||
-      window.dashboard.project.getCurrentId()) {
-    $(window).trigger('appModeChanged');
-    if (callback) {
-      callback();
-    }
-  } else {
-    // Otherwise, makes sure we don't hit our callback until after we've created
-    // a channel
-    $(window).trigger('appModeChanged', callback);
+  $(window).trigger('appModeChanged');
+  if (callback) {
+    callback();
   }
 };
 
@@ -1639,11 +1649,13 @@ Applab.execute = function() {
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = studioApp.editor.getValue();
-    // Our ace worker also calls attachToSession, but it won't run on IE9:
-    var session = studioApp.editor.aceEditor.getSession();
-    annotationList.attachToSession(session, studioApp.editor);
-    annotationList.clearRuntimeAnnotations();
+    codeWhenRun = studioApp.getCode();
+    if (!studioApp.hideSource) {
+      // Our ace worker also calls attachToSession, but it won't run on IE9:
+      var session = studioApp.editor.aceEditor.getSession();
+      annotationList.attachToSession(session, studioApp.editor);
+      annotationList.clearRuntimeAnnotations();
+    }
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Applab.Globals namespace)
@@ -1663,25 +1675,26 @@ Applab.execute = function() {
     if (level.editCode) {
       // Use JS interpreter on editCode levels
       Applab.JSInterpreter = new JSInterpreter({
-          code: codeWhenRun,
-          blocks: dropletConfig.blocks,
-          enableEvents: true,
-          studioApp: studioApp,
-          shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
-          maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-          onNextStepChanged: Applab.updatePauseUIState,
-          onPause: Applab.onPauseContinueButton,
-          onExecutionError: handleExecutionError,
-          onExecutionWarning: outputApplabConsole
+        code: codeWhenRun,
+        blocks: dropletConfigBlocks,
+        enableEvents: true,
+        studioApp: studioApp,
+        shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
+        maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
+        onNextStepChanged: Applab.updatePauseUIState,
+        onPause: Applab.onPauseContinueButton,
+        onExecutionError: handleExecutionError,
+        onExecutionWarning: outputApplabConsole
       });
       if (!Applab.JSInterpreter.initialized()) {
-          return;
+        return;
       }
     } else {
       Applab.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
-                                          StudioApp: studioApp,
-                                          Applab: apiBlockly,
-                                          Globals: Applab.Globals } );
+        StudioApp: studioApp,
+        Applab: apiBlockly,
+        Globals: Applab.Globals
+      });
     }
   }
 
@@ -1793,7 +1806,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + AppStorage.getChannelId(),
+    '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + Applab.channelId,
     '_blank');
 };
 
@@ -1837,19 +1850,24 @@ Applab.maybeAddAssetPathPrefix = function (filename) {
     return filename;
   }
 
-  var channelId = dashboard && dashboard.project.getCurrentId();
-  // TODO(dave): remove this check once we always have a channel id.
-  if (!channelId) {
-    return filename;
-  }
-
-  return '/v3/assets/' + channelId + '/'  + filename;
+  return '/v3/assets/' + Applab.channelId + '/'  + filename;
 };
 
-Applab.showSubmitConfirmation = function() {
+/**
+ * Show a modal dialog with a title, text, and OK and Cancel buttons
+ * @param {title}
+ * @param {text}
+ * @param {callback} [onConfirm] what to do when the user clicks OK
+ * @param {string} [filterSelector] Optional selector to filter for.
+ */
+
+Applab.showConfirmationDialog = function(config) {
+  config.text = config.text || "";
+  config.title = config.title || "";
+
   var contentDiv = document.createElement('div');
-  contentDiv.innerHTML = '<p class="dialog-title">' + commonMsg.submitYourProject() + '</p>' +
-      '<p>' + commonMsg.submitYourProjectConfirm() + '</p>';
+  contentDiv.innerHTML = '<p class="dialog-title">' + config.title + '</p>' +
+      '<p>' + config.text + '</p>';
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('../templates/buttons.html.ejs')({
@@ -1876,7 +1894,9 @@ Applab.showSubmitConfirmation = function() {
   var confirmButton = buttons.querySelector('#confirm-button');
   if (confirmButton) {
     dom.addClickTouchEvent(confirmButton, function() {
-      Applab.onPuzzleComplete(true);
+      if (config.onConfirm) {
+        config.onConfirm();
+      }
       dialog.hide();
     });
   }
@@ -1885,7 +1905,31 @@ Applab.showSubmitConfirmation = function() {
 };
 
 Applab.onPuzzleSubmit = function() {
-  Applab.showSubmitConfirmation();
+  Applab.showConfirmationDialog({
+    title: commonMsg.submitYourProject(),
+    text: commonMsg.submitYourProjectConfirm(),
+    onConfirm: function() {
+      Applab.onPuzzleComplete(true);
+    }
+  });
+};
+
+Applab.unsubmit = function() {
+  $.post(level.unsubmitUrl,
+         {"_method": 'PUT', user_level: {best_result: 1}},
+         function( data ) {
+           location.reload();
+         });
+};
+
+Applab.onPuzzleUnsubmit = function() {
+  Applab.showConfirmationDialog({
+    title: commonMsg.unsubmitYourProject(),
+    text: commonMsg.unsubmitYourProjectConfirm(),
+    onConfirm: function() {
+      Applab.unsubmit();
+    }
+  });
 };
 
 Applab.onPuzzleFinish = function() {
@@ -1933,7 +1977,7 @@ Applab.onPuzzleComplete = function(submit) {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = studioApp.editor.getValue();
+    program = studioApp.getCode();
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
@@ -2395,7 +2439,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="divApplab" class="appModern" tabindex="1">\n</div>\n<div id="designModeViz" style="display:none;">\n</div>\n\n'); })();
+ buf.push('<div id="divApplab" class="appModern" tabindex="1">\n</div>\n<div id="designModeViz" class="appModern" style="display:none;">\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2415,7 +2459,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../locale') ; buf.push('\n');2; var applabMsg = require('./locale') ; buf.push('\n\n<div id="debug-area">\n  <div id="debugResizeBar" class="fa fa-ellipsis-h"></div>\n  <div id="debug-area-header">\n    <span class="header-text">', escape((7,  applabMsg.debugConsoleHeader() )), '</span>\n    <i id="show-hide-debug-icon" class="fa fa-chevron-circle-down"></i>\n    ');9; if (debugButtons) { ; buf.push('\n    <div id="debug-commands-header" class="workspace-header">\n      <i id="running-spinner" style="display: none;" class="fa fa-spinner fa-spin"></i>\n      <i id="paused-icon" style="display: none;" class="fa fa-pause"></i>\n      <span class="header-text">', escape((13,  applabMsg.debugCommandsHeaderWhenOpen() )), '</span>\n    </div>\n    <div id="clear-console-header" class="workspace-header workspace-header-button"><span><i class="fa fa-eraser"></i>Clear</span></div>\n    <div id="slider-cell">\n      <svg id="applab-slider"\n           xmlns="http://www.w3.org/2000/svg"\n           xmlns:svg="http://www.w3.org/2000/svg"\n           xmlns:xlink="http://www.w3.org/1999/xlink"\n           version="1.1"\n           width="150"\n           height="28">\n          <!-- Slow icon. -->\n          <clipPath id="slowClipPath">\n            <rect width=26 height=12 x=5 y=6 />\n          </clipPath>\n          <image xlink:href="', escape((28,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-18\n              clip-path="url(#slowClipPath)" />\n          <!-- Fast icon. -->\n          <clipPath id="fastClipPath">\n            <rect width=26 height=16 x=120 y=2 />\n          </clipPath>\n          <image xlink:href="', escape((34,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=120 y=-19\n              clip-path="url(#fastClipPath)" />\n      </svg>\n    </div>\n    ');38; } ; buf.push('\n  </div>\n\n  ');41; if (debugButtons) { ; buf.push('\n  <div id="debug-commands" class="debug-commands">\n    <div id="debug-buttons">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((45,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((46,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((49,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((50,  applabMsg.continue() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((53,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((54,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((57,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((58,  applabMsg.stepOut() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((61,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((62,  applabMsg.stepIn() )), '\n      </button>\n    </div>\n  </div>\n  ');66; } ; buf.push('\n  ');67; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console ', escape((68,  debugButtons ? '' : 'full' )), '">\n    <div id="debug-output" class="debug-output"></div>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable spellcheck="false" id="debug-input" class="debug-input"></div>\n  </div>\n  ');75; } ; buf.push('\n</div>\n'); })();
+ buf.push('');1; var msg = require('../locale') ; buf.push('\n');2; var applabMsg = require('./locale') ; buf.push('\n\n<div id="debug-area">\n  <div id="debugResizeBar" class="fa fa-ellipsis-h"></div>\n  <div id="debug-area-header">\n    <span class="header-text">', escape((7,  applabMsg.debugConsoleHeader() )), '</span>\n    <i id="show-hide-debug-icon" class="fa fa-chevron-circle-down"></i>\n    ');9; if (debugButtons) { ; buf.push('\n    <div id="debug-commands-header" class="workspace-header">\n      <i id="running-spinner" style="display: none;" class="fa fa-spinner fa-spin"></i>\n      <i id="paused-icon" style="display: none;" class="fa fa-pause"></i>\n      <span class="header-text">', escape((13,  applabMsg.debugCommandsHeaderWhenOpen() )), '</span>\n    </div>\n    <div id="clear-console-header" class="workspace-header workspace-header-button"><span><i class="fa fa-eraser"></i>Clear</span></div>\n    ');16; } ; buf.push('\n    <div id="slider-cell" style="margin-left: ', escape((17,  debugButtons ? 0 : 40 )), 'px">\n      <svg id="applab-slider"\n           xmlns="http://www.w3.org/2000/svg"\n           xmlns:svg="http://www.w3.org/2000/svg"\n           xmlns:xlink="http://www.w3.org/1999/xlink"\n           version="1.1"\n           width="150"\n           height="28">\n          <!-- Slow icon. -->\n          <clipPath id="slowClipPath">\n            <rect width=26 height=12 x=5 y=6 />\n          </clipPath>\n          <image xlink:href="', escape((29,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-18\n              clip-path="url(#slowClipPath)" />\n          <!-- Fast icon. -->\n          <clipPath id="fastClipPath">\n            <rect width=26 height=16 x=120 y=2 />\n          </clipPath>\n          <image xlink:href="', escape((35,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=120 y=-19\n              clip-path="url(#fastClipPath)" />\n      </svg>\n    </div>\n  </div>\n\n  ');41; if (debugButtons) { ; buf.push('\n  <div id="debug-commands" class="debug-commands">\n    <div id="debug-buttons">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((45,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((46,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((49,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((50,  applabMsg.continue() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((53,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((54,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((57,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((58,  applabMsg.stepOut() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((61,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((62,  applabMsg.stepIn() )), '\n      </button>\n    </div>\n  </div>\n  ');66; } ; buf.push('\n  ');67; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console ', escape((68,  debugButtons ? '' : 'full' )), '">\n    <div id="debug-output" class="debug-output"></div>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable spellcheck="false" id="debug-input" class="debug-input"></div>\n  </div>\n  ');75; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2459,6 +2503,7 @@ function getScreenIds() {
   return $.makeArray(ret);
 }
 
+// NOTE : format of blocks detailed at top of apps/src/dropletUtils.js
 
 module.exports.blocks = [
   {func: 'onEvent', parent: api, category: 'UI controls', paletteParams: ['id','type','callback'], params: ['"id"', '"click"', "function(event) {\n  \n}"], dropdown: { 0: function () { return Applab.getIdDropdown(); }, 1: [ '"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"' ] } },
@@ -2547,11 +2592,12 @@ module.exports.blocks = [
 
   {func: 'console.log', parent: consoleApi, category: 'Variables', paletteParams: ['message'], params: ['"message"'] },
   {func: 'declareAssign_str_hello_world', block: 'var str = "Hello World";', category: 'Variables', noAutocomplete: true },
-  {func: 'substring', blockPrefix: 'str.substring', category: 'Variables', paletteParams: ['start','end'], params: ["6", "11"], 'modeOptionName': '*.substring', type: 'value' },
-  {func: 'indexOf', blockPrefix: 'str.indexOf', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], 'modeOptionName': '*.indexOf', type: 'value' },
-  {func: 'length', block: 'str.length', category: 'Variables', 'modeOptionName': '*.length' },
-  {func: 'toUpperCase', blockPrefix: 'str.toUpperCase', category: 'Variables', 'modeOptionName': '*.toUpperCase', type: 'value' },
-  {func: 'toLowerCase', blockPrefix: 'str.toLowerCase', category: 'Variables', 'modeOptionName': '*.toLowerCase', type: 'value' },
+  {func: 'substring', blockPrefix: 'str.substring', category: 'Variables', paletteParams: ['start','end'], params: ["6", "11"], modeOptionName: '*.substring', type: 'value' },
+  {func: 'indexOf', blockPrefix: 'str.indexOf', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.indexOf', type: 'value' },
+  {func: 'includes', blockPrefix: 'str.includes', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.includes', type: 'value' },
+  {func: 'length', block: 'str.length', category: 'Variables', modeOptionName: '*.length' },
+  {func: 'toUpperCase', blockPrefix: 'str.toUpperCase', category: 'Variables', modeOptionName: '*.toUpperCase', type: 'value' },
+  {func: 'toLowerCase', blockPrefix: 'str.toLowerCase', category: 'Variables', modeOptionName: '*.toLowerCase', type: 'value' },
   {func: 'declareAssign_list_abd', block: 'var list = ["a", "b", "d"];', category: 'Variables', noAutocomplete: true },
   {func: 'listLength', block: 'list.length', category: 'Variables', noAutocomplete: true },
   {func: 'insertItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','index','item'], params: ["list", "2", '"c"'], dontMarshal: true },
@@ -2600,7 +2646,6 @@ module.exports.categories = {
  * an 'Examples' link that opens documentation in a lightbox:
  */
 module.exports.showExamplesLink = true;
-
 
 
 },{"../applab/assetManagement/show.js":"/home/ubuntu/staging/apps/build/js/applab/assetManagement/show.js","./ChartApi":"/home/ubuntu/staging/apps/build/js/applab/ChartApi.js","./api":"/home/ubuntu/staging/apps/build/js/applab/api.js","./consoleApi":"/home/ubuntu/staging/apps/build/js/applab/consoleApi.js","./constants":"/home/ubuntu/staging/apps/build/js/applab/constants.js","./designElements/elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js","./dontMarshalApi":"/home/ubuntu/staging/apps/build/js/applab/dontMarshalApi.js"}],"/home/ubuntu/staging/apps/build/js/applab/consoleApi.js":[function(require,module,exports){
@@ -3007,7 +3052,6 @@ var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
-var _ = require('../utils').getLodash();
 var KeyCodes = require('../constants').KeyCodes;
 
 var designMode = module.exports;
@@ -3664,7 +3708,7 @@ function makeUndraggable(jqueryElements) {
 function highlightElement(element) {
   removeElementHighlights();
 
-  if ($(element).is('#designModeViz img,#designModeViz label')) {
+  if ($(element).is('#designModeViz img[src!=""], #designModeViz label')) {
     $(element).parent().css({
       outlineStyle: 'dashed',
       outlineWidth: '1px',
@@ -3745,11 +3789,6 @@ designMode.changeScreen = function (screenId) {
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
-    // View Data must simulate a run button click, to load the channel id.
-    var viewDataClick = studioApp.runButtonClickWrapper.bind(
-        studioApp, Applab.onViewData);
-    var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
-
     React.render(
       React.createElement(DesignToggleRow, {
         hideToggle: Applab.hideDesignModeToggle(),
@@ -3759,7 +3798,7 @@ designMode.changeScreen = function (screenId) {
         screens: screenIds,
         onDesignModeButton: Applab.onDesignModeButton,
         onCodeModeButton: Applab.onCodeModeButton,
-        onViewDataButton: throttledViewDataClick,
+        onViewDataButton: Applab.onViewData,
         onScreenChange: designMode.changeScreen,
         onScreenCreate: designMode.createScreen
       }),
@@ -3876,7 +3915,7 @@ designMode.resetIds = function() {
 };
 
 
-},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./DesignToggleRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/DesignToggleRow.jsx","./DesignWorkspace.jsx":"/home/ubuntu/staging/apps/build/js/applab/DesignWorkspace.jsx","./assetManagement/show.js":"/home/ubuntu/staging/apps/build/js/applab/assetManagement/show.js","./designElements/elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js","./designElements/library":"/home/ubuntu/staging/apps/build/js/applab/designElements/library.js"}],"/home/ubuntu/staging/apps/build/js/applab/controls.html.ejs":[function(require,module,exports){
+},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","./DesignToggleRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/DesignToggleRow.jsx","./DesignWorkspace.jsx":"/home/ubuntu/staging/apps/build/js/applab/DesignWorkspace.jsx","./assetManagement/show.js":"/home/ubuntu/staging/apps/build/js/applab/assetManagement/show.js","./designElements/elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js","./designElements/library":"/home/ubuntu/staging/apps/build/js/applab/designElements/library.js"}],"/home/ubuntu/staging/apps/build/js/applab/controls.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3891,7 +3930,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../locale');
 ; buf.push('\n');4; // Comment so this file is not identical to studio/controls.html.ejs 
-; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" disabled=true class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" disabled=true class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" disabled=true class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" disabled=true class="arrow">\n    <img src="', escape((17,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');21; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((24,  assetUrl('media/1x1.gif') )), '">', escape((24,  msg.finish() )), '\n    </button>\n  </div>\n');27; } ; buf.push('\n\n');29; if (submitButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="submitButton" class="share">\n      <img src="', escape((32,  assetUrl('media/1x1.gif') )), '">', escape((32,  msg.submit() )), '\n    </button>\n  </div>\n');35; } ; buf.push('\n'); })();
+; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" disabled=true class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" disabled=true class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" disabled=true class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" disabled=true class="arrow">\n    <img src="', escape((17,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');21; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((24,  assetUrl('media/1x1.gif') )), '">', escape((24,  msg.finish() )), '\n    </button>\n  </div>\n');27; } ; buf.push('\n\n');29; if (submitButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="submitButton" class="share">\n      <img src="', escape((32,  assetUrl('media/1x1.gif') )), '">', escape((32,  msg.submit() )), '\n    </button>\n  </div>\n');35; } ; buf.push('\n\n');37; if (unsubmitButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-enabled">\n    <button id="unsubmitButton" class="share">\n      <img src="', escape((40,  assetUrl('media/1x1.gif') )), '">', escape((40,  msg.unsubmit() )), '\n    </button>\n  </div>\n');43; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -10260,7 +10299,7 @@ var studioApp = require('../../StudioApp').singleton;
  * @param typeFilter {String} The type of assets to show and allow to be
  *   uploaded.
  */
-var showAssetManager = function(assetChosen, typeFilter) {
+module.exports = function(assetChosen, typeFilter) {
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
   var dialog = studioApp.createModalDialog({
@@ -10278,13 +10317,6 @@ var showAssetManager = function(assetChosen, typeFilter) {
   }), codeDiv);
 
   dialog.show();
-};
-
-/**
- * HACK: Ensure we have a channel ID. Remove after finishing Pivotal #90626454.
- */
-module.exports = function(assetChosen, typeFilter) {
-  studioApp.runButtonClickWrapper(showAssetManager.bind(null, assetChosen, typeFilter));
 };
 
 
@@ -11942,24 +11974,12 @@ ChartApi.inferColumnsFromRawData = function (rawData) {
 },{"./GoogleChart":"/home/ubuntu/staging/apps/build/js/applab/GoogleChart.js","./appStorage":"/home/ubuntu/staging/apps/build/js/applab/appStorage.js","es6-promise":"/home/ubuntu/staging/apps/node_modules/es6-promise/dist/es6-promise.js"}],"/home/ubuntu/staging/apps/build/js/applab/appStorage.js":[function(require,module,exports){
 'use strict';
 
-/* global dashboard */
+/* global Applab */
 
 /**
  * Namespace for app storage.
  */
 var AppStorage = module.exports;
-
-// TODO(dave): remove once all applab data levels are associated with
-// a project.
-AppStorage.tempChannelId =
-    window.location.hostname.split('.')[0] === 'localhost' ?
-        "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
-
-AppStorage.getChannelId = function() {
-  // TODO(dave): pull channel id directly from appOptions once available.
-  var id = dashboard && dashboard.project.getCurrentId();
-  return id || AppStorage.tempChannelId;
-};
 
 /**
  * Reads the value associated with the key, accessible to all users of the app.
@@ -11971,7 +11991,7 @@ AppStorage.getChannelId = function() {
 AppStorage.getKeyValue = function(key, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleGetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
+  var url = '/v3/shared-properties/' + Applab.channelId + '/' + key;
   req.open('GET', url, true);
   req.send();
 };
@@ -12003,7 +12023,7 @@ var handleGetKeyValue = function(onSuccess, onError) {
 AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleSetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
+  var url = '/v3/shared-properties/' + Applab.channelId + '/' + key;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   req.send(JSON.stringify(value));
@@ -12041,7 +12061,7 @@ AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleCreateRecord.bind(req, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
@@ -12080,7 +12100,7 @@ AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleReadRecords.bind(req,
       searchParams, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' + tableName;
   req.open('GET', url, true);
   req.send();
 
@@ -12129,7 +12149,7 @@ AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' +
       tableName + '/' + recordId;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -12174,7 +12194,7 @@ AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' +
       tableName + '/' + recordId + '/delete';
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -12216,7 +12236,7 @@ AppStorage.populateTable = function (jsonData, overwrite, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handlePopulateTable.bind(req, onSuccess, onError);
-  var url = '/v3/shared-tables/' + AppStorage.getChannelId();
+  var url = '/v3/shared-tables/' + Applab.channelId;
   if (overwrite) {
     url += "?overwrite=1";
   }
@@ -12261,7 +12281,7 @@ AppStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onError)
   var req = new XMLHttpRequest();
 
   req.onreadystatechange = handlePopulateKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/shared-properties/' + AppStorage.getChannelId();
+  var url = '/v3/shared-properties/' + Applab.channelId;
 
   if (overwrite) {
     url += "?overwrite=1";

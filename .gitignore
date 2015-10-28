@@ -4,7 +4,7 @@
 .DS_Store
 .dropbox
 .idea/
-/.bundle
+**/.bundle
 /.gdrive_session
 /crontab
 /dashboard/public/blockly
@@ -27,3 +27,4 @@
 /apps/build
 /apps/node_modules/
 /apps/npm-debug.log
+*_temp.json
