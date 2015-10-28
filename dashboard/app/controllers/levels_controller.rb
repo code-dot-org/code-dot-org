@@ -186,7 +186,7 @@ class LevelsController < ApplicationController
         app: level.game.app,
         readonly: true,
         locale: js_locale,
-        baseUrl: "#{ActionController::Base.asset_host}/blockly/",
+        baseUrl: Blockly.base_url,
         blocks: level.blocks_to_embed(level.properties[block_type])
     }
     render :embed_blocks, layout: false, locals: options
