@@ -82,7 +82,8 @@ class ApiController < ApplicationController
           stage: script_level.stage.position,
           puzzle: script_level.position,
           question: script_level.level.properties['title'],
-          response: response
+          response: response,
+          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
         }
       end.compact
     end.flatten
