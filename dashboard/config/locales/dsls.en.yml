@@ -4227,7 +4227,8 @@ en:
         In my classroom, I want to...: In my classroom, I want to...
       PDAlg DR Text 1:
         Here's the same contract from the last page. What could you ask this student to help them identify and correct their error?: Here's the same contract from the last page. What could you ask this student to help them identify and correct their error?
-      PDAlg Prep on Paper: {}
+      PDAlg Prep on Paper:
+        LESSON PREP > Thinking on paper: LESSON PREP > Thinking on paper
       PDAlg course goals:
         Documenting Your Course Goals: Documenting Your Course Goals
       PDK5 Challenges:
@@ -4286,7 +4287,8 @@ en:
         Enter title here: Enter title here
       Trent Test Level:
         Enter title here: Enter title here
-      U1L1 - FR computer science word association: {}
+      U1L1 - FR computer science word association:
+        'Word Association: Computer Science Principles': 'Word Association: Computer Science Principles'
       U1L10 Assessment Free Response:
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
       U1L10 Journal Free Response:
