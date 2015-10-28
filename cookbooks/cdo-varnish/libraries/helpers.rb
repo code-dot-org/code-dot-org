@@ -1,5 +1,31 @@
 # Various Ruby helper methods to generate Varnish VCL from the base configuration.
 
+# TODO Find a better way of passing node configuration to Chef config helpers.
+$node_env = 'development'
+$node_name = 'default'
+
+# Keep these hostname helper methods in sync with deployment.rb.
+# TODO Find a better way to reuse existing application configuration in Chef config helpers.
+def canonical_hostname(domain)
+  return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?($node_name)
+  return domain if $node_env == 'production'
+
+  # our HTTPS wildcard certificate only supports *.code.org
+  # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
+  sep = (domain.include?('.code.org')) ? '-' : '.'
+  return "localhost#{sep}#{domain}" if $node_env == 'development'
+  return "translate#{sep}#{domain}" if $node_name == 'crowdin'
+  "#{$node_env}#{sep}#{domain}"
+end
+
+def dashboard_hostname
+  canonical_hostname('studio.code.org')
+end
+
+def pegasus_hostname
+  canonical_hostname('code.org')
+end
+
 # Basic regex matcher for the optional query part of a URL.
 QUERY_REGEX = "(\\?.*)?$"
 
@@ -95,7 +121,7 @@ end
 # Generates the logic string for the specified behavior.
 def process_behavior(behavior, app, section)
   if section == 'proxy'
-    process_proxy(behavior[:proxy] || app)
+    process_proxy(behavior[:proxy] || app, app)
   else
     process_cookies(behavior[:cookies], section)
   end
@@ -115,8 +141,18 @@ def process_cookies(cookies, section)
 end
 
 # Returns the backend-redirect string for a given proxy.
-def process_proxy(proxy)
-  "set req.backend_hint = #{proxy}.backend();"
+# 'pegasus' or 'dashboard' are the only supported values.
+def process_proxy(proxy, app)
+  proxy = proxy.to_s
+  unless %w(pegasus dashboard).include? proxy
+    raise ArgumentError.new("Invalid proxy: #{proxy}")
+  end
+  hostname = proxy == 'pegasus' ? pegasus_hostname : dashboard_hostname
+  out = "set req.backend_hint = #{proxy}.backend();"
+  if proxy != app.to_s
+    out << "\nset req.http.host = \"#{hostname}\";"
+  end
+  out
 end
 
 # Returns the hostname-specific conditional expression for the app provided.

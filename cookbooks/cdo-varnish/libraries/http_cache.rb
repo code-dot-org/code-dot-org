@@ -2,14 +2,11 @@
 #
 # See cdo-varnish/README.md for more information on the configuration format.
 class HttpCache
-  STATIC_ASSETS = {
-    # For static-asset extensions, don't forward any cookies or additional headers.
-    path: %w(cur pdf png gif jpeg jpg ico mp3 swf css js ttf woff woff2).map{|ext| "/*.#{ext}"},
-    headers: [],
-    cookies: 'none'
-  }
 
-# Language header and cookie are needed to separately cache language-specific pages.
+  # Paths for files that are always cached based on their extension.
+  STATIC_ASSET_EXTENSION_PATHS = %w(css js mp3 jpg png).map{|ext| "/*.#{ext}"}
+
+  # Language header and cookie are needed to separately cache language-specific pages.
   LANGUAGE_HEADER = %w(Accept-Language)
   LANGUAGE_COOKIE = %w(language_)
 
@@ -41,7 +38,12 @@ class HttpCache
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
-          STATIC_ASSETS,
+          # For static-asset paths, don't forward any cookies or additional headers.
+          {
+            path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /assets/* /fonts/* ),
+            headers: [],
+            cookies: 'none'
+          },
           # Dashboard-based API paths in Pegasus are session-specific, whitelist all session cookies and language header.
           {
             path: %w(
@@ -87,7 +89,12 @@ class HttpCache
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
-          STATIC_ASSETS,
+          {
+            # For static-asset paths, don't forward any cookies or additional headers.
+            path: STATIC_ASSET_EXTENSION_PATHS + %w(/assets/* /blockly/media/*),
+            headers: [],
+            cookies: 'none'
+          },
           {
             path: '/v2/*',
             proxy: 'pegasus',
