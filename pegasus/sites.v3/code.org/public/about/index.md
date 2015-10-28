@@ -54,8 +54,8 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 | Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(stats['number_served']) %> served. 48% female) |
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org). |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled. |
-| Prep new CS teachers | We've prepared 15,000 new teachers to teach CS across grades K-12. Learn about our [professional development programs](/educate/professional-development).|
-| Change school district curriculum | We've partnered with [70+ of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a district partner](/educate/districts).|
+| Prep new CS teachers | We've prepared 16,000 new teachers to teach CS across grades K-12. Learn about our [professional development programs](/educate/professional-development).|
+| Change school district curriculum | We've partnered with [90 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a district partner](/educate/districts).|
 | Set up policies to support CS | Policy changed in [16 states](/action) including CA, NY, FL, IL, OH.|
 | Go global | Our courses are available in 40+ languages, used in all 180+ countries. |
 
