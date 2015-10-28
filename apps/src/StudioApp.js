@@ -385,7 +385,8 @@ StudioApp.prototype.init = function(config) {
       beginnerMode: config.level.beginnerMode,
       dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
       autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly,
-      dropletTooltipsDisabled: config.level.dropletTooltipsDisabled
+      dropletTooltipsDisabled: config.level.dropletTooltipsDisabled,
+      zeroParamFunctions: config.level.dropletZeroParamFunctions
     });
   }
 
