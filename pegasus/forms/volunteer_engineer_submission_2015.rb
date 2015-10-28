@@ -1,6 +1,10 @@
 require pegasus_dir 'forms/volunteer_engineer_submission'
 
 class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
+
+  UNSUBSCRIBE_2016 = "until2016"
+  UNSUBSCRIBE_FOREVER = "forever"
+
   def self.normalize(data)
     result = {}
 
@@ -53,7 +57,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   end
 
   def self.solr_query(params)
-    query = "kind_s:\"#{self.name}\" && allow_contact_b:true && -unsubscribed_s:\"unil2016\" && -unsubscribed_s:\"forever\""
+    query = "kind_s:\"#{self.name}\" && allow_contact_b:true && -unsubscribed_s:\"#{UNSUBSCRIBE_2016}\" && -unsubscribed_s:\"#{UNSUBSCRIBE_FOREVER}\""
 
     coordinates = params['coordinates']
     distance = 500
