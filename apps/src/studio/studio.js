@@ -356,9 +356,6 @@ var drawMap = function () {
     numFrames = skin.animatedGoalFrames;
   }
 
-  /** @type {ImageFilter} */
-  var goalFilter = ImageFilterFactory.makeFilterOfType(skin.goalEffect, svg);
-
   if (Studio.spriteGoals_) {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
       // Add finish markers.
@@ -380,12 +377,10 @@ var drawMap = function () {
       spriteFinishMarker.setAttribute('width', numFrames * width);
       spriteFinishMarker.setAttribute('height', height);
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
-      if (goalFilter) {
-        goalFilter.applyTo(spriteFinishMarker);
-      }
       svg.appendChild(spriteFinishMarker);
     }
   }
+  Studio.applyGoalEffect();
 
   var score = document.createElementNS(SVG_NS, 'text');
   score.setAttribute('id', 'score');
@@ -452,6 +447,48 @@ function collisionTest(x1, x2, xVariance, y1, y2, yVariance) {
 function overlappingTest(x1, x2, xVariance, y1, y2, yVariance) {
   return (Math.abs(x1 - x2) < xVariance) && (Math.abs(y1 - y2) < yVariance);
 }
+
+/** @type {ImageFilter} */
+var goalFilterEffect = null;
+
+/**
+ * Apply the effect specified in skin.goalEffect to all of the goal objects
+ * in the level.
+ */
+Studio.applyGoalEffect = function () {
+  if (!Studio.spriteGoals_) {
+    return;
+  }
+
+  if (!goalFilterEffect) {
+    var svg = document.getElementById('svgStudio');
+    goalFilterEffect = ImageFilterFactory.makeFilterOfType(skin.goalEffect, svg);
+  }
+
+  var spriteFinishMarker;
+  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
+    spriteFinishMarker = document.getElementById('spriteFinish' + i);
+    if (goalFilterEffect) {
+      goalFilterEffect.applyTo(spriteFinishMarker);
+    }
+  }
+};
+
+/**
+ * Remove the effect specified in skin.goalEffect from all of the goal objects
+ * in the level.
+ */
+Studio.removeGoalEffect = function () {
+  if (!Studio.spriteGoals_ || !goalFilterEffect) {
+    return;
+  }
+
+  var spriteFinishMarker;
+  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
+    spriteFinishMarker = document.getElementById('spriteFinish' + i);
+    goalFilterEffect.removeFrom(spriteFinishMarker);
+  }
+};
 
 /**
  * @param scope Object :  The scope in which to execute the delegated function.
@@ -2055,6 +2092,8 @@ Studio.runButtonClick = function() {
 
   // Stop the music the first time the run button is pressed (hoc2015)
   Studio.musicController.fadeOut();
+  // Remove goal filter effects the first time the run button is pressed
+  Studio.removeGoalEffect();
 
   studioApp.reset(false);
   studioApp.attempts++;
