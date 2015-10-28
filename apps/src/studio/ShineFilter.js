@@ -12,7 +12,7 @@
  */
 'use strict';
 
-var utils = require('../utils');
+require('../utils');
 var SVG_NS = require('../constants').SVG_NS;
 var ImageFilter = require('./ImageFilter');
 
@@ -34,7 +34,8 @@ var ShineFilter = function (svg) {
 
   // TODO: Find a way to not depend on the Studio global.
   /** @private {function} */
-  this.curve_ = makeOscillation(2000, -POINT_LIGHT_Z, Studio.MAZE_WIDTH + POINT_LIGHT_Z);
+  this.curve_ = ImageFilter.makeRepeatingOneThirdLinearInterpolation(
+      2000, -POINT_LIGHT_Z, Studio.MAZE_WIDTH + POINT_LIGHT_Z);
 };
 ShineFilter.inherits(ImageFilter);
 module.exports = ShineFilter;
@@ -103,25 +104,3 @@ ShineFilter.prototype.update = function (timeMs) {
     this.fePointLight_.setAttribute('y', newValue);
   }
 };
-
-/**
- * Function for a repeating pattern as follows:
- *  * Spend the first 1/3 of the period at {min}
- *  * Spend the second 1/3 of the period doing a linear interpolation from
- *    {min} to {max}
- *  * Spend the final 1/3 of the period at {max}
- *
- * @param {number} period - time units before this pattern repeats
- * @param {number} [min] - Lowest value, default zero
- * @param {number} [max] - Highest value, default one
- */
-function makeOscillation(period, min, max) {
-  min = utils.valueOr(min, 0);
-  max = utils.valueOr(max, 1);
-
-  var slope = 3 * (max - min) / period;
-  var intercept = 2 * min - max;
-  return function (t) {
-    return Math.min(max, Math.max(min, slope * (t % period) + intercept));
-  };
-}
