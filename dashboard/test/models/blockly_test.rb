@@ -118,6 +118,22 @@ XML
       Nokogiri::XML.parse(level.start_blocks, &:noblanks).serialize(save_with: Blockly::XML_OPTIONS)
   end
 
+  test 'Block base url is correct with blank and specified asset_host' do
+    old_host = ActionController::Base.asset_host
+    begin
+      ActionController::Base.asset_host = nil
+      assert_equal '/blockly/', Blockly.base_url
+
+      ActionController::Base.asset_host = ''
+      assert_equal '/blockly/', Blockly.base_url
+
+      ActionController::Base.asset_host = 'test-studio.code.org'
+      assert_equal '//test-studio.code.org/blockly/', Blockly.base_url
+    ensure
+      ActionController::Base.asset_host = old_host
+    end
+  end
+
   test 'converts from and to XML level format' do
     name = 'Test level convert'
     level = LevelLoader.load_custom_level_xml(File.read(File.join(self.class.fixture_path, 'test_level.xml')), Level.new(name: name))
