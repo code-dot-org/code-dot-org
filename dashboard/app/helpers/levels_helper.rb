@@ -159,13 +159,17 @@ module LevelsHelper
   def render_app_dependencies
     use_droplet = app_options[:droplet]
     use_netsim = @level.game == Game.netsim
+    use_applab = @level.game == Game.applab
     use_blockly = !use_droplet && !use_netsim
+    hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
            locals: {
                app: app_options[:app],
                use_droplet: use_droplet,
                use_netsim: use_netsim,
                use_blockly: use_blockly,
+               use_applab: use_applab,
+               hide_source: hide_source,
                static_asset_base_path: app_options[:baseUrl]
            }
   end
