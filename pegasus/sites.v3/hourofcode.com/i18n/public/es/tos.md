@@ -6,9 +6,9 @@ Título: Términos del servicio
 
 ### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
 
-# Términos y Condiciones del servicio
+# Condiciones del servicio
 
-Last Revised: December 5, 2014
+Última revisión: 05 de diciembre de 2014
 
 Code.org es una organización sin fines de lucro 501 (c)(3)("Code.org"). Nuestra misión es darle a cada estudiante la oportunidad de aprender informática. Como parte de esa misión, Code.org opera los sitios web ubicado en <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, otros sitios web, información, texto, programas, videos, gráficos, fotos, APIs, notificaciones por correo electrónico y otros materiales y productos relacionados y servicios (los "**servicios**"), incluyendo la plataforma tutorial en <http://studio.code.org> ("**Código Studio**").
 

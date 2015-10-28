@@ -33,7 +33,7 @@ apt_package 'varnish' do
   version '4.0.3-1~trusty'
   options '--force-yes'
   # Overwrite existing config files on upgrade (templates will be reapplied afterwards)
-  options '-o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew"'
+  options '-o Dpkg::Options::="--force-confnew"'
 end
 apt_package 'libvmod-cookie' do
   version '1.03+4.0.3-4~trusty'
@@ -49,6 +49,8 @@ service 'varnish' do
 end
 
 node.default['cdo-varnish']['config'] = HttpCache.config(node.chef_environment.to_s)
+$node_env = node.chef_environment.to_s
+$node_name = node.name
 
 template '/etc/default/varnish' do
   source 'config.erb'

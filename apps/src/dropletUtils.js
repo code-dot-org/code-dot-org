@@ -110,7 +110,7 @@ standardConfig.blocks = [
   {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math' },
   {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },
   {func: 'mathMin', block: 'Math.min(__)', category: 'Math' },
-  {func: 'mathRandom', block: 'Math.random(__)', category: 'Math' },
+  {func: 'mathRandom', block: 'Math.random()', category: 'Math' },
 
   // Variables
   {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables' },
@@ -199,8 +199,11 @@ function mergeFunctionsWithConfig(codeFunctions, dropletConfig, otherConfig) {
 function mergeCategoriesWithConfig(dropletConfig) {
   // Clone our merged categories so that as we mutate it, we're not mutating
   // our original config
-  return _.cloneDeep($.extend({}, standardConfig.categories,
-    dropletConfig && dropletConfig.categories));
+  var dropletCategories = dropletConfig && dropletConfig.categories;
+  // We include dropletCategories twice so that (a) it's ordering of categories
+  // gets preference and (b) it's value override anything in standardConfig
+  return _.cloneDeep($.extend({}, dropletCategories, standardConfig.categories,
+    dropletCategories));
 }
 
 /**

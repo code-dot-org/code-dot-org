@@ -32,9 +32,11 @@ title: Review Hour of Code special events
 -results = []
 -events = []
 
--DB[:forms].where(kind:'HocSignup2015', review:nil).each do |i|
+-DB[:forms].where(kind:'HocSignup2015', review:nil).select(:name, :email, :data, :processed_data).distinct.each do |i|
   -if i[:processed_data]
-    -results << JSON.parse(i[:data]).merge(secret: i[:secret]).merge(JSON.parse(i[:processed_data]))
+    -event_data = JSON.parse(i[:data]).merge(JSON.parse(i[:processed_data]))
+    -event_secret = DB[:forms].where(kind: 'HocSignup2015', name: i[:name], email: i[:email], data: i[:data], processed_data: i[:processed_data]).select(:secret).first
+    -results << event_data.merge(secret: event_secret[:secret])
 
 -if country == 'us' && state_code
   -results.each do |result|
