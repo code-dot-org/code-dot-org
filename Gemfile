@@ -162,7 +162,7 @@ gem 'haml_lint', require: false, group: [:development, :staging]
 gem 'lograge'
 
 # Enforce SSL
-gem 'rack-ssl-enforcer', group: [:development, :staging, :test, :levelbuilder]
+gem 'rack-ssl-enforcer'
 
 # PubSub for NetSim
 gem 'pusher', '~> 0.14.5'
@@ -173,3 +173,4 @@ gem 'net-ssh'
 gem 'net-scp'
 gem 'httparty'
 gem 'jquery-cookie-rails'
+gem 'oj'

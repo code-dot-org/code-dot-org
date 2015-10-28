@@ -51,21 +51,21 @@
   visibility: visible;
   opacity: 0.3; }
 
-#divApplab.appModern, .draggingParent {
+#divApplab.appModern, #designModeViz.appModern, .draggingParent {
   color: #333; }
-  #divApplab.appModern button, .draggingParent button {
+  #divApplab.appModern button, #designModeViz.appModern button, .draggingParent button {
     border: 0;
     border-radius: 0; }
-    #divApplab.appModern button:hover, .draggingParent button:hover {
+    #divApplab.appModern button:hover, #designModeViz.appModern button:hover, .draggingParent button:hover {
       background-image: url("/blockly/media/applab/brighter.png");
       box-shadow: none; }
-    #divApplab.appModern button:active, .draggingParent button:active {
+    #divApplab.appModern button:active, #designModeViz.appModern button:active, .draggingParent button:active {
       background-image: url("/blockly/media/applab/darker.png");
       border: 0 !important; }
-  #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div[contenteditable=true], .draggingParent input[type=text], .draggingParent input:not([type]), .draggingParent div[contenteditable=true] {
+  #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div[contenteditable=true], #designModeViz.appModern input[type=text], #designModeViz.appModern input:not([type]), #designModeViz.appModern div[contenteditable=true], .draggingParent input[type=text], .draggingParent input:not([type]), .draggingParent div[contenteditable=true] {
     border: 1px solid #999;
     padding: 10px; }
-  #divApplab.appModern select, .draggingParent select {
+  #divApplab.appModern select, #designModeViz.appModern select, .draggingParent select {
     -webkit-appearance: none;
     -moz-appearance: none;
     border: 0;
@@ -73,15 +73,15 @@
     padding: 0 30px 0 10px;
     color: #fff;
     background: url("/blockly/media/applab/dropdown.png") no-repeat center right; }
-    #divApplab.appModern select::-ms-expand, .draggingParent select::-ms-expand {
+    #divApplab.appModern select::-ms-expand, #designModeViz.appModern select::-ms-expand, .draggingParent select::-ms-expand {
       display: none; }
-    #divApplab.appModern select:hover, .draggingParent select:hover {
+    #divApplab.appModern select:hover, #designModeViz.appModern select:hover, .draggingParent select:hover {
       background: url("/blockly/media/applab/dropdown.png") no-repeat center right, url("/blockly/media/applab/brighter.png"); }
-  #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern [contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent [contenteditable=true] {
+  #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern [contenteditable=true], #designModeViz.appModern button, #designModeViz.appModern select, #designModeViz.appModern input, #designModeViz.appModern [contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent [contenteditable=true] {
     outline: 0; }
-  #divApplab.appModern img[src=''], .draggingParent img[src=''] {
+  #divApplab.appModern img[src=''], #designModeViz.appModern img[src=''], .draggingParent img[src=''] {
     display: none; }
-  #divApplab.appModern .screen, .draggingParent .screen {
+  #divApplab.appModern .screen, #designModeViz.appModern .screen, .draggingParent .screen {
     outline: 0; }
 
 #designModeViz.appModern img[src=''], #designModeViz.appModern canvas, #designModeViz.appModern .chart, .draggingParent img[src=''], .draggingParent canvas, .draggingParent .chart {
@@ -514,6 +514,16 @@ img#turtleImage {
   vertical-align: top; }
   #share-cell.share-cell-none {
     display: none; }
+
+#submitButton {
+  border-color: #7665a0;
+  background-color: #7665a0;
+  color: white; }
+
+#unsubmitButton {
+  border-color: #a69bc1;
+  background-color: #a69bc1;
+  color: white; }
 
 #manageAssetsModal {
   width: 800px;

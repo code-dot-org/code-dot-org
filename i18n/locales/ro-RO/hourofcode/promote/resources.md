@@ -35,7 +35,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <a id="logo"></a>
 
-## Utilizati logo-ul Hour of Cide pentru a răspândi vestea
+## Utilizati logo-ul Hour of Code pentru a răspândi vestea
 
 [![imagine](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
@@ -116,11 +116,11 @@ Cu stimă,
 
 Stimate [numele primarului/consilierului/senatorului]:
 
-Ştiaţi că în economia de astăzi, numărul locurilor de muncă din programare este mai mare de 3-la-1 decât numărul absolvenților în domeniu ? Şi informatica este fundamentală pentru *fiecare* industrie de astăzi. Dar cele mai multe dintre şcoli nu o predau. La [numele şcolii], încercăm să schimbăm asta.
+Ştiaţi că în economia de astăzi, numărul locurilor de muncă din programare este mai mare de 3-la-1 decât numărul absolvenților în domeniu ? Şi tehnologia computerului este fundamentală pentru *fiecare* industrie de astăzi. Dar cele mai multe dintre şcoli nu o predau. La [numele şcolii], încercăm să schimbăm asta.
 
-Acesta este motivul pentru care întraga noastră școală se alătură celui mai amplu eveniment educațional din istorie: Ora de Programare, pe parcursul Săptămânii Informaticii în Educație 7-13). Peste 100 milioane de elevi din toata lumea au încercat deja o Ora de Programare.
+Acesta este motivul pentru care întraga noastră școală se alătură celui mai amplu eveniment educațional din istorie: Ora de Programare, pe parcursul Săptămânii Educatiei in Tehnologia Computerelor. 7-13). Peste 100 milioane de elevi din toata lumea au încercat deja o Ora de Programare.
 
-Vă scriu pentru a vă invita să luați parte la evenimentul nostru Ora de Programare și pentru a vorbi despre impactul acestei reuniuni. Acesta va avea loc pe [data, ora, locul] şi va face o declaraţie puternică, că [nume de stat sau un oraş] este gata să le formeze elevilor noştri abilităţi esențiale pentru secolul 21. Vrem să se asigură că elevii noştri sunt în primul plan prvind crearea tehnologiei de viitor--nu doar consumatorii ei.
+Vă scriu pentru a vă invita să luați parte la evenimentul nostru Ora de Programare și pentru a vorbi despre impactul acestei reuniuni. Acesta va avea loc pe [data, ora, locul] şi va face o declaraţie puternică, că [nume de stat sau un oraş] este gata să le formeze elevilor noştri abilităţi esențiale pentru secolul 21. Vrem să ne asiguram că elevii noştri sunt în primul plan prvind crearea tehnologiei de viitor--nu doar consumatorii ei.
 
 Vă rugăm să mă contactaţi la [telefon număr sau adresă de E-mail]. Aştept cu nerăbdare răspunsul dumneavoastră.
 

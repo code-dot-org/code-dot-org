@@ -7,13 +7,13 @@ markdown <<MARKDOWN
 
 # Background
 
-Designing modern applications entails both creating the user interface (UI) and defining how it will behave when the user interacts with it. Since user interface design is largely a visual process, it is much easier to complete this portion of application using a visual tool. This lesson introduces Design Mode as an easy way to add and modify elements in your application. In this lesson, we will learn the basics of Design Mode and recreate the game from last lesson with the addition of multiple screens.
+Designing modern applications entails both creating the user interface (UI) and defining how it will behave when the user interacts with it. Since user interface design is largely a visual process, it is much easier to complete this portion of an application using a visual tool. This lesson introduces Design Mode as an easy way to add and modify elements in your application. In this lesson, we will learn the basics of Design Mode and recreate the game from the last lesson with the addition of multiple screens.
 
 # Lesson
 * Setting up a button using Design Mode
 * Setting up an image using Design Mode
 * Creating multi-screen apps using Design Mode
-* Improve the 'Chaser Game' with addition of multiple screens and sound
+* Improving the "Chaser Game" with addition of multiple screens and sound
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
