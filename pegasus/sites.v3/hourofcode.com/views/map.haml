@@ -32,6 +32,12 @@
 .row
   .col-xs-10.col-sm-12
     #gmap.full-width
+#belowmaplegend.legend
+  .legend-title= hoc_s(:map_legend_title)
+  .color.turquoise
+  = hoc_s(:map_legend_hoc_events)
+  .color.orange
+  = hoc_s(:map_legend_cs_tech_jam)
 
 :javascript
   var gmap;
@@ -78,7 +84,8 @@
     });
 
     var legend = document.createElement('div');
-    legend.id = 'legend';
+    legend.id = 'inmaplegend';
+    legend.className = 'legend'
 
     var content = [];
     content.push('<div class="legend-title">#{hoc_s(:map_legend_title)}</div>');
