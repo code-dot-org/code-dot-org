@@ -5,9 +5,9 @@ subject: Hour of Code Posters
 
 Dear UK Hour of Code organizer,
 
-Great news! We are now able to send Hour of Code posters to organizers in the United Kingdom. Decorate your hallways and help get students excited to learn an Hour of Code. 
+Great news! We are now able to send Hour of Code posters to organizers in the United Kingdom. If you'd like one, to help excite students and promote your event, let us know. 
 
-**[Request a poster](https://docs.google.com/a/code.org/forms/d/117rf_1OZBVS2tbKMkVMqVQyQv_SHA2hsoMkDwwU3L-c/viewform)**
+**[Request an inspirational poster](https://docs.google.com/a/code.org/forms/d/117rf_1OZBVS2tbKMkVMqVQyQv_SHA2hsoMkDwwU3L-c/viewform)**
 
 The first 1,500 UK organizers to complete the request form will receive one Hour of Code poster, a participation guide, and stickers for students in the mail. 
 

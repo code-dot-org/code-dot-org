@@ -37,12 +37,12 @@ class Ability
     if user.id
       can :manage, user
 
-      # TODO a bunch of these should probably be limited by user_id
-      can :create, Activity
+      can :create, Activity, user_id: user.id
       can :save_to_gallery, Activity, user_id: user.id
       can :create, GalleryActivity, user_id: user.id
       can :destroy, GalleryActivity, user_id: user.id
-      can :create, UserLevel
+      can :create, UserLevel, user_id: user.id
+      can :update, UserLevel, user_id: user.id
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower, student_user_id: user.id
 

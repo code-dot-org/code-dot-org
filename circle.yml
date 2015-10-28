@@ -34,7 +34,7 @@ test:
         - bundle exec rake test:
             pwd:
                 shared
-        - grunt test:
+        - for i in 1 2; do grunt test && break; done:
             pwd:
                 apps
         - bundle exec rake konacha:run:
