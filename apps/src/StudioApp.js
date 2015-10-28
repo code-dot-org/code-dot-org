@@ -351,10 +351,8 @@ StudioApp.prototype.init = function(config) {
     var promptIcon = document.getElementById('prompt-icon');
     if (this.smallIcon) {
       promptIcon.src = this.smallIcon;
-    } else {
-      $('#prompt-icon-cell').hide();
+      $('#prompt-icon-cell').show();
     }
-
     var bubble = document.getElementById('bubble');
     dom.addClickTouchEvent(bubble, _.bind(function() {
       this.showInstructions_(config.level, false);
@@ -793,6 +791,7 @@ StudioApp.prototype.createModalDialog = function(options) {
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
   var renderedMarkdown;
+  var scrollableSelector;
   var headerElement;
 
   var puzzleTitle = msg.puzzleTitle({
@@ -802,6 +801,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 
   if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
     renderedMarkdown = marked(level.markdownInstructions);
+    scrollableSelector = '.instructions-markdown';
     instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
@@ -853,6 +853,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     defaultBtnSelector: '#ok-button',
     onHidden: hideFn,
     scrollContent: !!renderedMarkdown,
+    scrollableSelector: scrollableSelector,
     header: headerElement
   });
 
