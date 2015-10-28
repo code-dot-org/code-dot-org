@@ -4002,7 +4002,8 @@ Studio.setSprite = function (opts) {
 
   spriteIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.sprite);
   spriteIcon.setAttribute('width', sprite.drawWidth * spriteTotalFrames(spriteIndex));
-  var extraHeight = sprite.frameCounts.extraEmotions * sprite.drawHeight;
+  //if extra emotions is a number
+  var extraHeight = (sprite.frameCounts.extraEmotions || 0) * sprite.drawHeight;
   spriteIcon.setAttribute('height', sprite.drawHeight + extraHeight);
 
   if (spriteWalk) {
@@ -4013,7 +4014,8 @@ Studio.setSprite = function (opts) {
 
     spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.walk);
 
-    var extraWidth = sprite.frameCounts.extraEmotions * sprite.drawWidth;
+    //if extraemotions is a number
+    var extraWidth = (sprite.frameCounts.extraEmotions || 0) * sprite.drawWidth;
     spriteWalk.setAttribute('width', extraWidth + sprite.drawWidth * sprite.frameCounts.turns); // 800
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
