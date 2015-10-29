@@ -47,7 +47,7 @@ start_varnishd() {
     log_daemon_msg "Starting $DESC" "$NAME"
     output=$(/bin/tempfile -s.varnish)
     if start-stop-daemon \
-        --start --quiet --pidfile ${PIDFILE} --exec ${DAEMON} -- \
+        --oknodo --start --quiet --pidfile ${PIDFILE} --exec ${DAEMON} -- \
         -P ${PIDFILE} ${DAEMON_OPTS} > ${output} 2>&1; then
         log_end_msg 0
     else
@@ -67,7 +67,7 @@ disabled_varnishd() {
 stop_varnishd() {
     log_daemon_msg "Stopping $DESC" "$NAME"
     if start-stop-daemon \
-        --stop --quiet --pidfile $PIDFILE --retry 10 \
+        --oknodo --stop --quiet --pidfile $PIDFILE --retry 10 \
         --exec $DAEMON; then
         log_end_msg 0
     else
