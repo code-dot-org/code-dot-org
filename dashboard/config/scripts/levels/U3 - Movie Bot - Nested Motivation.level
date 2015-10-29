@@ -137,7 +137,7 @@
 
     ],
     "embed": "false",
-    "markdown_instructions": "Nested Motivation",
+    "markdown_instructions": "# Checking for a Question\r\n\r\nIt would be good to find out if they asked a question or just made a statement. If they ask, \"What comedy movie should I watch?\" I should give an answer. However if they say \"I like comedy movies\" they probably don't need my help.\r\n\r\nYou can detect if they asked a question by looking for the ? symbol. Add another set of if statements to check if they asked a question.\r\n\r\n**Note: ** Check out the flow chart below to see the logic we are trying to add.\r\n\r\n# Do This\r\n\r\n* **Add a seperate set of if statements to check for a ? in the input**. \r\n\t* If its a question print \"Thats a good question\"\r\n    * Otherwise print \"Interesting. Did  you have a question for me?\"\r\n\r\n* **Test out a couple sentences with your keywords** to make sure the change worked\r\n\r\n<img src=\"https://images.code.org/e32fd89b6e03b9d49c94e39e79120c03-image-1446072381510.png\" style=\"width: 100%\">\r\n\r\n<a src=\"https://images.code.org/e32fd89b6e03b9d49c94e39e79120c03-image-1446072381510.png\" target=\"_blank\">Click to open in separate window.</a>",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -154,16 +154,19 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "droplet_tooltips_disabled": "false",
-    "free_play": "false",
+    "free_play": "true",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false",
+    "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "project_template_level_name": "U3 - Movie Bot - Template",
+    "execute_palette_apis_only": "false",
+    "instructions": "Add a seperate set of if statements to check for a ? in the input. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>
