@@ -2,6 +2,7 @@ require 'client_state'
 require 'nokogiri'
 require 'cdo/user_agent_parser'
 require 'cdo/graphics/certificate_image'
+require 'dynamic_config/gatekeeper'
 
 module ApplicationHelper
 
@@ -192,4 +193,14 @@ module ApplicationHelper
     @client_state ||= ClientState.new(session, cookies)
   end
 
+  # Check to see if we disabled signin from Gatekeeper
+  def signin_button_enabled
+    script_name = @script.try(:name)
+    is_script = !@script.nil?
+
+    disabled_for_script = Gatekeeper.allows('signin-button-disabled', where: { script_name: script_name }, default: false)
+    disabled_for_all_scripts = Gatekeeper.allows('signin-button-disabled', where: { is_script: is_script }, default: false)
+
+    return !(disabled_for_script or disabled_for_all_scripts)
+  end
 end
