@@ -163,7 +163,8 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "markdown_instructions": "# OR Operator\r\n\r\nThe OR operator can be used to check two conditions in one if statement. **If either or both statements are true, the OR operator (`||`) will evaluate to true. If both are false, the `||` will evaluate to false.** You can chain multiple OR operators together in one conditional statement. \r\n\r\n# Do This"
   }
 }]]></config>
   <blocks/>
