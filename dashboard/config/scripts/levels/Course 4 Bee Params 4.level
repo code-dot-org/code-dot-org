@@ -31,14 +31,13 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
-    "callout_json": "[]",
-    "maze_data": null
+    "callout_json": "[]"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false" y="-5">
+        <block type="when_run" deletable="false" movable="false" uservisible="false">
           <next>
             <block type="variables_set" inline="false" uservisible="false">
               <title name="VAR">left</title>
@@ -55,6 +54,21 @@
                       <title name="NUM">1</title>
                     </block>
                   </value>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">5</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
@@ -201,12 +215,23 @@
             <mutation name="get 3 nectar"/>
           </block>
         </category>
-        <category name="Variables">
-          <block type="variables_get">
+        <category name="Variables" custom="VARIABLE">
+          <block type="variables_set" inline="false">
             <title name="VAR">left</title>
           </block>
           <block type="variables_get">
+            <title name="VAR">left</title>
+          </block>
+          <block type="variables_set" inline="false">
             <title name="VAR">right</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">right</title>
+          </block>
+        </category>
+        <category name="Math">
+          <block type="math_number">
+            <title name="NUM">1</title>
           </block>
         </category>
       </xml>

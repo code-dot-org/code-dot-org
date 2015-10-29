@@ -8,7 +8,7 @@ MAX_CONNECT_RETRIES = 3
 
 def local_browser
   browser = Selenium::WebDriver.for :chrome, url: "http://127.0.0.1:9515"
-  if ENV['MAXIMIZE_LOCAL'] == 'true'
+  if ENV['MAXIMIZE_LOCAL']
     max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")
     browser.manage.window.resize_to(max_width, max_height)
   end

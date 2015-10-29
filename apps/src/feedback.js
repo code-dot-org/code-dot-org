@@ -35,14 +35,40 @@ var TestResults = constants.TestResults;
 var KeyCodes = constants.KeyCodes;
 
 /**
+ * @typedef {Object} TestableBlock
+ * @property {string|function} test - A test whether the block is
+ *           present, either:
+ *           - A string, in which case the string is searched for in
+ *             the generated code.
+ *           - A single-argument function is called on each user-added
+ *             block individually.  If any call returns true, the block
+ *             is deemed present.  "User-added" blocks are ones that are
+ *             neither disabled or undeletable.
+ * @property {string} type - The type of block to be produced for
+ *           display to the user if the test failed.
+ * @property {Object} [titles] - A dictionary, where, for each
+ *           KEY-VALUE pair, this is added to the block definition:
+ *           <title name="KEY">VALUE</title>.
+ * @property {Object} [value] - A dictionary, where, for each
+ *           KEY-VALUE pair, this is added to the block definition:
+ *           <value name="KEY">VALUE</value>
+ * @property {string} [extra] - A string that should be blacked
+ *           between the "block" start and end tags.
+ */
+
+/**
  * @param {Object} options
- * @param {!Array} requiredBlocks The blocks that are required to be used in
+ * @param {!TestableBlock[]} requiredBlocks The blocks that are required to be used in
  *   the solution to this level.
  * @param {number} maxRequiredBlocksToFlag The number of required blocks to
  *   give hints about at any one time.  Set this to Infinity to show all.
+ * @param {!TestableBlock[]} recommendedBlocks The blocks that are recommended to be used in
+ *   the solution to this level.
+ * @param {number} maxRecommendedBlocksToFlag The number of recommended blocks to
+ *   give hints about at any one time.  Set this to Infinity to show all.
  */
 FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
-    maxRequiredBlocksToFlag) {
+    maxRequiredBlocksToFlag, recommendedBlocks, maxRecommendedBlocksToFlag) {
 
   options.level = options.level || {};
   options.numTrophies = this.numTrophiesEarned_(options);
@@ -68,7 +94,8 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   if (this.studioApp_.isUsingBlockly()) {
     feedbackBlocks = new FeedbackBlocks(
         options,
-        this.getMissingRequiredBlocks_(requiredBlocks, maxRequiredBlocksToFlag),
+        this.getMissingBlocks_(requiredBlocks, maxRequiredBlocksToFlag),
+        this.getMissingBlocks_(recommendedBlocks, maxRecommendedBlocksToFlag),
         this.studioApp_);
   }
   // feedbackMessage must be initialized after feedbackBlocks
@@ -193,10 +220,10 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       // because it will still take up space.
       hintRequestButton.parentNode.removeChild(hintRequestButton);
     } else {
-      // Swap out the specific feedback message with a generic one.
-      var genericFeedback = this.getFeedbackMessage_({message: msg.genericFeedback()});
-      var parentNode = feedbackMessage.parentNode;
-      parentNode.replaceChild(genericFeedback, feedbackMessage);
+
+      // Generate a generic feedback message to display when we show the
+      // feedback block
+      var genericFeedback = this.getFeedbackMessage_({message: msg.tryBlocksBelowFeedback()});
 
       // If there are feedback blocks, temporarily remove them.
       // Get pointers to the parent and next sibling so we can re-insert
@@ -212,8 +239,9 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       // If the user requests the hint...
       dom.addClickTouchEvent(hintRequestButton, function () {
 
-        // Swap the specific feedback message back in.
-        parentNode.replaceChild(feedbackMessage, genericFeedback);
+        // Swap out the specific feedback message with a generic one.
+        var parentNode = feedbackMessage.parentNode;
+        parentNode.replaceChild(genericFeedback, feedbackMessage);
 
         // Remove "Show hint" button.  Making it invisible isn't enough,
         // because it will still take up space.
@@ -244,8 +272,28 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   }
 
   if (continueButton) {
-    dom.addClickTouchEvent(continueButton, function() {
+
+    if (options.response && options.response.puzzle_rating_url) {
+      feedback.appendChild(this.buildPuzzleRatingButtons_());
+    }
+
+    dom.addClickTouchEvent(continueButton, function () {
       feedbackDialog.hide();
+
+      // Submit Puzzle Rating
+      var selectedRating = feedback.querySelector('.puzzle-rating-btn.enabled');
+      if (options.response && options.response.puzzle_rating_url && selectedRating) {
+        $.ajax({
+          url: options.response.puzzle_rating_url,
+          type: 'POST',
+          data: {
+            script_id: options.response.script_id,
+            level_id: options.response.level_id,
+            level_source_id: options.response.level_source_id,
+            rating: selectedRating.getAttribute('data-value')
+          },
+        });
+      }
       // onContinue will fire already if there was only a continue button
       if (!onlyContinue) {
         options.onContinue();
@@ -326,6 +374,27 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
     return codeLines;
   }
   return this.getCountableBlocks_().length;
+};
+
+FeedbackUtils.prototype.buildPuzzleRatingButtons_ = function () {
+  var buttonContainer = document.createElement('div');
+  buttonContainer.id = 'puzzleRatingButtons';
+  buttonContainer.innerHTML = require('./templates/puzzleRating.html.ejs')();
+
+  var buttons = buttonContainer.querySelectorAll('.puzzle-rating-btn');
+  var buttonClickHandler = function () {
+    for (var i = 0, button; (button = buttons[i]); i++) {
+      if (button != this) {
+        $(button).removeClass('enabled');
+      }
+    }
+    $(this).toggleClass('enabled');
+  };
+  for (var i = 0, button; (button = buttons[i]); i++) {
+    button.addEventListener('click', buttonClickHandler);
+  }
+
+  return buttonContainer;
 };
 
 /**
@@ -474,8 +543,24 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
       case TestResults.MISSING_BLOCK_UNFINISHED:
         /* fallthrough */
       case TestResults.MISSING_BLOCK_FINISHED:
-        message = options.level.missingBlocksErrorMsg ||
-            msg.missingBlocksErrorMsg();
+        message = options.level.missingRequiredBlocksErrorMsg ||
+            msg.missingRequiredBlocksErrorMsg();
+        break;
+      case TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED:
+        message = msg.missingRecommendedBlocksErrorMsg();
+        break;
+      case TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED:
+        var numEnabledBlocks = this.getNumCountableBlocks();
+        if (this.studioApp_.IDEAL_BLOCK_NUM && numEnabledBlocks > this.studioApp_.IDEAL_BLOCK_NUM) {
+          message = msg.numBlocksNeeded({
+            numBlocks: this.studioApp_.IDEAL_BLOCK_NUM,
+            puzzleNumber: options.level.puzzle_number || 0
+          });
+        } else {
+          message = msg.completedWithoutRecommendedBlock({
+            puzzleNumber: options.level.puzzle_number || 0
+          });
+        }
         break;
       case TestResults.NESTED_FOR_SAME_VARIABLE:
         message = msg.nestedForSameVariable();
@@ -729,6 +814,7 @@ FeedbackUtils.prototype.canContinueToNextLevel = function(feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
     feedbackType === TestResults.TOO_MANY_BLOCKS_FAIL ||
     feedbackType ===  TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL ||
+    feedbackType ===  TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED ||
     feedbackType ===  TestResults.FREE_PLAY);
 };
 
@@ -741,7 +827,9 @@ FeedbackUtils.prototype.canContinueToNextLevel = function(feedbackType) {
  */
 FeedbackUtils.prototype.shouldPromptForHint = function(feedbackType) {
   return (feedbackType === TestResults.MISSING_BLOCK_UNFINISHED ||
-    feedbackType === TestResults.MISSING_BLOCK_FINISHED);
+    feedbackType === TestResults.MISSING_BLOCK_FINISHED ||
+    feedbackType === TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED ||
+    feedbackType === TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED);
 };
 
 /**
@@ -975,22 +1063,21 @@ FeedbackUtils.prototype.throwOnInvalidExampleBlocks = function (callBlock,
 };
 
 /**
- * Check whether the user code has all the blocks required for the level.
- * @param {!Array} requiredBlocks The blocks that are required to be used in
- *   the solution to this level.
+ * Check whether the user code has all the given blocks
+ * @param {!TestableBlock[]} blocks
  * @return {boolean} true if all blocks are present, false otherwise.
  */
-FeedbackUtils.prototype.hasAllRequiredBlocks_ = function(requiredBlocks) {
+FeedbackUtils.prototype.hasAllBlocks_ = function(blocks) {
   // It's okay (maybe faster) to pass 1 for maxBlocksToFlag, since in the end
   // we want to check that there are zero blocks missing.
   var maxBlocksToFlag = 1;
-  return this.getMissingRequiredBlocks_(requiredBlocks, maxBlocksToFlag).blocksToDisplay.length === 0;
+  return this.getMissingBlocks_(blocks, maxBlocksToFlag).blocksToDisplay.length === 0;
 };
 
 /**
- * Get blocks that the user intends in the program. These are the blocks that
- * are used when checking for required blocks and when determining lines of code
- * written.
+ * Get blocks that the user intends in the program. These are the blocks
+ * that are used when checking for required and recommended blocks and
+ * when determining lines of code written.
  * @return {Array<Object>} The blocks.
  */
 FeedbackUtils.prototype.getUserBlocks_ = function() {
@@ -1016,60 +1103,59 @@ FeedbackUtils.prototype.getCountableBlocks_ = function() {
 };
 
 /**
- * Check to see if the user's code contains the required blocks for a level.
- * @param {!Array} requiredBlocks The blocks that are required to be used in
- *   the solution to this level.
- * @param {number} maxBlocksToFlag The maximum number of blocks to return.
+ * Check to see if the user's code contains the given blocks for a level.
+ * @param {!TestableBlock[]} blocks
+ * @param {number} maxBlocksToFlag The maximum number of blocks to
+ *   return. We most often only care about a single block at a time
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
  *   array of array of strings where each array of strings is a set of blocks
  *   that at least one of them should be used. Each block is represented as the
  *   prefix of an id in the corresponding template.soy. 'message' is an
  *   optional message to override the default error text.
  */
-FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (requiredBlocks,
-    maxBlocksToFlag) {
+FeedbackUtils.prototype.getMissingBlocks_ = function (blocks, maxBlocksToFlag) {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
-  if (requiredBlocks && requiredBlocks.length) {
+  if (blocks && blocks.length) {
     var userBlocks = this.getUserBlocks_();
-    // For each list of required blocks
+    // For each list of blocks
     // Keep track of the number of the missing block lists. It should not be
     // bigger than the maxBlocksToFlag param.
     var missingBlockNum = 0;
     for (var i = 0;
-         i < requiredBlocks.length &&
+         i < blocks.length &&
              missingBlockNum < maxBlocksToFlag;
          i++) {
-      var requiredBlock = requiredBlocks[i];
+      var block = blocks[i];
       // For each of the test
-      // If at least one of the tests succeeded, we consider the required block
+      // If at least one of the tests succeeded, we consider the block
       // is used
-      var usedRequiredBlock = false;
-      for (var testId = 0; testId < requiredBlock.length; testId++) {
-        var test = requiredBlock[testId].test;
+      var usedBlock = false;
+      for (var testId = 0; testId < block.length; testId++) {
+        var test = block[testId].test;
         if (typeof test === 'string') {
           code = code || Blockly.Generator.blockSpaceToCode('JavaScript');
           if (code.indexOf(test) !== -1) {
             // Succeeded, moving to the next list of tests
-            usedRequiredBlock = true;
+            usedBlock = true;
             break;
           }
         } else if (typeof test === 'function') {
           if (userBlocks.some(test)) {
             // Succeeded, moving to the next list of tests
-            usedRequiredBlock = true;
+            usedBlock = true;
             break;
           } else {
-            customMessage = requiredBlock[testId].message || customMessage;
+            customMessage = block[testId].message || customMessage;
           }
         } else {
           throw new Error('Bad test: ' + test);
         }
       }
-      if (!usedRequiredBlock) {
+      if (!usedBlock) {
         missingBlockNum++;
-        missingBlocks = missingBlocks.concat(requiredBlocks[i][0]);
+        missingBlocks = missingBlocks.concat(blocks[i][0]);
       }
     }
   }
@@ -1109,15 +1195,17 @@ FeedbackUtils.prototype.hasExtraTopBlocks = function () {
 /**
  * Runs the tests and returns results.
  * @param {boolean} levelComplete Did the user successfully complete the level?
- * @param {!Array} requiredBlocks The blocks that are required to be used in
- *   the solution to this level.
+ * @param {!TestableBlock[]} requiredBlocks The blocks that are required
+ *   to be used in the solution to this level.
+ * @param {!TestableBlock[]} recommendedBlocks The blocks that are
+ *   recommended to be used in the solution to this level.
  * @param {boolean} shouldCheckForEmptyBlocks Whether empty blocks should cause
  *   a test fail result.
  * @param {Object} options
  * @return {number} The appropriate property of TestResults.
  */
 FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
-    shouldCheckForEmptyBlocks, options) {
+    recommendedBlocks, shouldCheckForEmptyBlocks, options) {
   options = options || {};
   if (this.studioApp_.editCode) {
     if (levelComplete) {
@@ -1159,10 +1247,15 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
   if (this.hasQuestionMarksInNumberField()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
-  if (!this.hasAllRequiredBlocks_(requiredBlocks)) {
+  if (!this.hasAllBlocks_(requiredBlocks)) {
     return levelComplete ?
         TestResults.MISSING_BLOCK_FINISHED :
         TestResults.MISSING_BLOCK_UNFINISHED;
+  }
+  if (!this.hasAllBlocks_(recommendedBlocks)) {
+    return levelComplete ?
+        TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED :
+        TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED;
   }
   var numEnabledBlocks = this.getNumCountableBlocks();
   if (!levelComplete) {
@@ -1189,6 +1282,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
  * @param {HTMLElement} options.contentDiv
  * @param {string} options.defaultBtnSelector
  * @param {boolean} options.scrollContent
+ * @param {boolean} options.scrollableSelector
  * @param {function} options.onHidden
  * @param {string} options.id
  * @param {HTMLElement} options.header
@@ -1223,7 +1317,8 @@ FeedbackUtils.prototype.createModalDialog = function(options) {
     }
   };
 
-  var elementToScroll = options.scrollContent ? '.modal-content' : null;
+  var scrollableSelector = options.scrollableSelector || '.modal-content';
+  var elementToScroll = options.scrollContent ? scrollableSelector : null;
   return new options.Dialog({
     body: modalBody,
     onHidden: options.onHidden,
