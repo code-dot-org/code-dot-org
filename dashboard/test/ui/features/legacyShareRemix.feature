@@ -1,3 +1,4 @@
+@no_mobile
 Feature: Legacy Share Remix
 
   Background:
