@@ -2505,13 +2505,13 @@ Studio.execute = function() {
                                     ['left', 'right', 'up', 'down']);
     registerHandlers(handlers, 'studio_repeatForever', 'repeatForever');
     registerHandlers(handlers,
-                     'studio_whenTouchItem',
+                     'studio_whenTouchCharacter',
                      'whenSpriteCollided-' +
                        (Studio.protagonistSpriteIndex || 0) +
                        '-any_item');
     if (level.wallMapCollisions) {
       registerHandlers(handlers,
-                       'studio_whenTouchWall',
+                       'studio_whenTouchObstacle',
                        'whenSpriteCollided-' +
                          (Studio.protagonistSpriteIndex || 0) +
                          '-wall');
