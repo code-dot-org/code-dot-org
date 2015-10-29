@@ -110,7 +110,7 @@ standardConfig.blocks = [
   {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math' },
   {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },
   {func: 'mathMin', block: 'Math.min(__)', category: 'Math' },
-  {func: 'mathRandom', block: 'Math.random(__)', category: 'Math' },
+  {func: 'mathRandom', block: 'Math.random()', category: 'Math' },
 
   // Variables
   {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables' },
@@ -411,7 +411,7 @@ function getModeOptionFunctionsFromConfig(config) {
 /**
  * Generate modeOptions for the droplet editor based on some level data.
  */
-exports.generateDropletModeOptions = function (dropletConfig, options) {
+exports.generateDropletModeOptions = function (config) {
   var modeOptions = {
     functions: {
     },
@@ -421,7 +421,7 @@ exports.generateDropletModeOptions = function (dropletConfig, options) {
       conditionals: { color: COLOR_BLUE },
       loops: {
         color: COLOR_BLUE,
-        beginner: options.beginnerMode || false
+        beginner: config.level.beginnerMode || false
       },
       functions: { color: COLOR_GREEN },
       returns: { color: COLOR_BLUE },
@@ -437,7 +437,7 @@ exports.generateDropletModeOptions = function (dropletConfig, options) {
   $.extend(modeOptions.functions,
     getModeOptionFunctionsFromConfig({ blocks: exports.dropletGlobalConfigBlocks }),
     getModeOptionFunctionsFromConfig({ blocks: exports.dropletBuiltinConfigBlocks }),
-    getModeOptionFunctionsFromConfig(dropletConfig)
+    getModeOptionFunctionsFromConfig(config.dropletConfig)
   );
 
   return modeOptions;

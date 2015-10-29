@@ -155,28 +155,31 @@ level 'U3L13 - Project'
 
 # 14
 stage 'Variables: Create, Assign, and Read'
-level 'U3L19 Student Lesson Intro' # 1
-level 'U3L19 - three basic ops of variables’ #2
-level 'U3- Variables - Create And Assign' #3
+level 'U3L19 Student Lesson Intro'
+level 'U3L14 - Message - basic mechanics of variables'
+level 'U3L19 - three basic ops of variables’
+level 'U3L19 - fix the var name syntax error’
+level 'U3L19 - write var and string with same name’
+level 'U3- Variables - Create And Assign'
 level 'U3- Variables - Text Mode'
-level 'U3- Variables - Assign Random For Turtle Draw'
-level 'U3 - Variables - Read Using Turtle' #4 
-level 'U3L19 - write var and string with same name’ # 5
-level 'U3L19 - fix the var name syntax error’ #6
-level 'U3 - Variables - Debugging with Turtle' #7
-level 'U3 - Variables - Reassigning Variables with Console.log' #8
-level 'U3- Variables - Changing the Value' #9
-level 'U3L19 - test reassignment of two vars’ #10
-level 'U3L19 - Debugging with consoleLog’ #11
-level 'U3-Variables-Memory Breakdown' #12
-level 'U3 - Variables - Set to Expression' #13
-level 'U3 - Variables - Set to Expression with Turtle' #14
-level 'U3 - Variables - Set to Expression with Other Variables' #15
-level 'U3 - Variables - Set to Expression with Other Variables and Turtle' #16
-level 'U3 - Variables - Increment'
-level 'U3 - Variables - Incrementing Variables'
-level 'U3L19 - variable reassignment challenge pt2’
-assessment 'U3L19 - MC what are values of abc'
+level 'U3L14 - Message - Other ways to assign values'
+level 'U3 - Variables - Set to Expression' 
+level 'U3 - Variables - Set to Expression with Other Variables'
+level 'U3L14 - concatenate simple'
+level 'U3L14 - Assigning Random Value'
+level 'U3L14 - Mini Calculator embed'
+level 'U3L14 - User Input Division calculator'
+level 'U3L19 - test reassignment of two vars'
+level 'U3L14 - Variable ReAssignment pt2'
+level 'U3-Variables-Memory Breakdown'
+level 'U3L14 - moving memory challenge1'
+level 'U3L14 - moving memory challenge2'
+level 'U3L14 - moving memory challenge3'
+level 'U3L14 - moving memory challenge4'
+level 'U3L14 - moving memory challenge5'
+level 'U3L14 - moving memory challenge6'
+level 'U3L19 - variable reassignment challenge pt2'
+assessment 'U3L14 - MC variable reassignment'
 
 # 15
 stage 'Variables: Increment, Decrement, Display, and Scope'
@@ -203,71 +206,52 @@ level 'U3L16 - doubleQuotes'
 level 'U3L16 - textInput getText write'
 level 'U3L16 - intro getText'
 level 'U3 - User Input - Save getText To Variable'
+level 'U3L16 - outputWithTextArea'
+level 'U3L16 - toUpper'
 level 'U3L16 Mad Lib Student Setup'
 level 'U3L16 Mad Lib setText'
 level 'U3L16 Mad Lib getText'
 level 'U3L16 Mad Lib toUpper'
 level 'U3L16 Mad Lib Clear Input'
-# level 'U3L16 - challenge say hi app'
-# need level for difference between string and num
-# level 'U3L25 String Parsing 7'
-# level 'U3L25 String Parsing 3'
 assessment 'U3L25 Free Response 3'
-# level 'U3L25 String Parsing 2'
-# level 'U3L23 Chatbot Intro 4'
+
 
 # 17
 stage 'Introduction to Digital Assistant'
 level 'U3L23 Student Lesson Introduction'
 level 'U3L23 Free Response Getting Started'
-# need level for motivator for digital assistant
-level 'U3L23 Chatbot Intro'
-level 'U3L23 Digital Assistant 1'
-level 'U3L23 Digital Assistant 2'
-level 'U3L23 Digital Assistant 3'
-level 'U3L23 Digital Assistant 5'
-# variables with DA
-# functions with DA
-assessment 'U3L23 Free Response Wrap Up 2'
+level 'U3 Digital Assistant Target'
+level 'U3L16 - challenge say hi app'
+level 'U3 Digital Assistant Design'
+level 'U3 Digital Assistant Set Text'
 assessment 'U3L23 Free Response Wrap Up'
 
 #18
-stage 'Improving Digital Assistant: Conditionals'
+stage 'Conditional Basics'
 level 'U3L20 Student Lesson Introduction'
-level 'U3 - Basic Conditionals - 5'
 level 'U3 - Conditional Basics - 6'
-level 'U3L23 Chatbot Conditionals 1'
-level 'U3L25 Chatbot Strings'
-level 'U3L26 AND operator'
-level 'U3L26 OR operator'
-level 'U3L26 NOT operator'
-# intro else
 level 'U3L24 Nested Conditionals Bugs'
-level 'U3L24 Chatbot Conditionals 2'
-# practice if and else
-level 'U3L24 Chatbot Conditionals 3'
+
+#19
+stage 'Conditionals with Movie Bot'
+level 'U3L24 Student Lesson Introduction'
+level 'U3L23 Chatbot Conditionals 1'
+level 'U3 - Movie Bot - toLowerCase'
+level 'U3L24 introIncludes'
+level 'U3L24 Nested Conditionals 1'
+level 'U3 - Movie Bot - Nested Motivation'
+level 'U3L24 Nested Conditionals 2'
+
+# 20
+stage 'Improving Digital Assistant with Conditionals'
+level 'U3L25 Student Lesson Introduction'
+level 'U3L26 OR operator'
+level 'U3 - Movie Bot - Multiple If Sequences'
+level 'U3L26 AND operator'
+level 'U3L24 Nested Conditionals Bugs'
 level 'U3L24 Nested Conditionals Bugs 2'
 level 'U3L24 Nested Conditionals Bugs 3'
 level 'U3L24 Chatbot Basic Conditionals'
-# Tracking your Keywords
-
-# 19
-stage 'Improving Digital Assistant: Functions with Return'
-
-# 20
-stage 'Improving Digital Assistant: Complex Conditionals'
-level 'U3L24 Student Lesson Introduction'
-level 'U3L24 Warm-up Quiz 1'
-level 'U3L24 Warm-up Quiz 2'
-level 'U3L24 Warm-up Quiz 3'
-# nested if statements
-# nested vs compound conditionals level
-level 'U3L24 Nested Conditionals 2'
-# find out if they asked a question level
-level 'U3L24 Chatbot Nested Conditionals'
-assessment 'U3L24 Assessment 3'
-assessment 'U3L25 Assessment' 
-assessment 'U3L25 Free Response wrap up'
 
 # 21
 stage 'Digital Assistant Challenge'
@@ -278,6 +262,51 @@ assessment 'U3L24 Assessment 3'
 assessment 'u3L27 Assessment1'
 assessment 'u3L27 Assessment2'
 assessment 'u3L27 Assessment3'
+
+#22
+stage 'While Loop Basics'
+level 'U3L28 Student Lesson Introduction'
+assessment 'U3L28 Free Response Getting Started'
+assessment 'U3L28 Free Response Wrap Up'
+
+#23
+stage 'While Loops_ Counting Flips'
+level 'U3L29 Student Lesson Introduction'
+assessment 'U3L29 Free Response Getting Started'
+assessment 'U3L29 Free Response Wrap Up'
+
+#24
+stage 'Arrays_ Intro'
+level 'U3L30 Student Lesson Introduction'
+assessment 'U3L30 Free Response Getting Started'
+assessment 'U3L30 Assessment1'
+assessment 'U3L30 Assessment2'
+assessment 'U3L30 Assessment3'
+assessment 'U3L30 Free Response Wrap Up'
+
+#25
+stage 'Arrays_ Photo Album'
+level 'U3L31 Student Lesson Introduction'
+assessment 'U3L31 Free Response Getting Started'
+assessment 'U3L31 Assessment1'
+assessment 'U3L31 Assessment2'
+assessment 'U3L31 Assessment3'
+
+#26
+stage 'Images are Arrays'
+level 'U3L32 Student Lesson Introduction'
+assessment 'U3L32 Free Response Getting Started'
+
+#27
+stage 'Arrays and Loops_ Altering Images'
+level 'U3L33 Student Lesson Introduction'
+assessment 'U3L33 Free Response Getting Started'
+
+#28
+stage 'Arrays and Loops_ Hidden Images'
+level 'U3L34 Student Lesson Introduction'
+assessment 'U3L34 Free Response Getting Started'
+
 
 # probably going to Unit 4
 stage 'Permanent Data Storage and Clicker Completion'
@@ -300,43 +329,6 @@ level 'U3L18 Controlling Memory and Program Flow 3'
 level 'U3L18 Controlling Memory and Program Flow 4'
 level 'U3L18 Controlling Memory and Program Flow 5'
 assessment 'U3L18 Free Response Wrap Up'
-
-stage 'While Loop Basics'
-level 'U3L28 Student Lesson Introduction'
-assessment 'U3L28 Free Response Getting Started'
-assessment 'U3L28 Free Response Wrap Up'
-
-stage 'While Loops_ Counting Flips'
-level 'U3L29 Student Lesson Introduction'
-assessment 'U3L29 Free Response Getting Started'
-assessment 'U3L29 Free Response Wrap Up'
-
-stage 'Arrays_ Intro'
-level 'U3L30 Student Lesson Introduction'
-assessment 'U3L30 Free Response Getting Started'
-assessment 'U3L30 Assessment1'
-assessment 'U3L30 Assessment2'
-assessment 'U3L30 Assessment3'
-assessment 'U3L30 Free Response Wrap Up'
-
-stage 'Arrays_ Photo Album'
-level 'U3L31 Student Lesson Introduction'
-assessment 'U3L31 Free Response Getting Started'
-assessment 'U3L31 Assessment1'
-assessment 'U3L31 Assessment2'
-assessment 'U3L31 Assessment3'
-
-stage 'Images are Arrays'
-level 'U3L32 Student Lesson Introduction'
-assessment 'U3L32 Free Response Getting Started'
-
-stage 'Arrays and Loops_ Altering Images'
-level 'U3L33 Student Lesson Introduction'
-assessment 'U3L33 Free Response Getting Started'
-
-stage 'Arrays and Loops_ Hidden Images'
-level 'U3L34 Student Lesson Introduction'
-assessment 'U3L34 Free Response Getting Started'
 
 # Keeping Until Conditional Stuff Finalized
 stage 'Conditional Basics'
@@ -444,20 +436,6 @@ stage 'More Variables (2 days)'
 stage 'Variables'
 stage 'Variables Conceptorial Fodder'
 stage 'Getting User Input'
-# level 'U3L19 - Target Clicker App'
-# level 'U3L19 - Intro to variables’
-# level 'U3L19 - explanation diff between string and var name'
-# level 'U3L19 - variable breakdown intro'
-# level 'U3L19 - variable breakdown - declaration'
-# level 'U3L19 - variable breakdown - Assigning a value’
-# level 'U3L19 - variable breakdown - common mistake - declaring twice'
-# level 'U3L19 - variable breakdown - ways to read pt1'
-# level 'U3L19 - misconception variable assignment order pt1’
-# level 'U3L19 - misconception variable assignment order pt2’
-# level 'U3L19 - Arithmetic v Concatenation’
-# level ‘AppLab Level U3L19 - variable re-assignment challenge pt1'
-# level 'U3L19 - variable breakdown - setText in label'
-# level 'U3L19 - variable scope explanation’
-# level 'U3L19 - variable scope explanation pt2’
-# level 'U3L19 - variable scope explanation pt3’
-# level 'U3L19 - done with variables finally'
+stage 'Improving Digital Assistant: Conditionals'
+stage 'Improving Digital Assistant: Functions with Return'
+stage 'Improving Digital Assistant: Complex Conditionals'

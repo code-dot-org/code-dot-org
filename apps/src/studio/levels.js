@@ -252,6 +252,11 @@ levels.playlab_1 = utils.extend(levels.dog_hello, {
   ]
 });
 
+levels.iceage_1 = utils.extend(levels.playlab_1, {
+  background: 'icy',
+  firstSpriteIndex: 0, // manny
+});
+
 // Can you make the dog say something and then have the cat say something afterwards?
 levels.dog_and_cat_hello =  {
   'ideal': 3,
@@ -328,6 +333,10 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
+});
+levels.iceage_2 = utils.extend(levels.playlab_2, {
+  background: 'leafy',
+  firstSpriteIndex: 3, // diego
 });
 
 
@@ -412,6 +421,10 @@ levels.playlab_3 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ]
 };
+levels.iceage_3 = utils.extend(levels.playlab_3, {
+  background: 'grassy',
+  firstSpriteIndex: 2, // scrat
+});
 
 
 // Can you write a program that makes the dog move to the cat, and have the cat
@@ -530,6 +543,10 @@ levels.playlab_4 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 };
+levels.iceage_4 = utils.extend(levels.playlab_4, {
+  background: 'grassy',
+  avatarList: ['scrat', 'granny']
+});
 
 // Can you write a program to make the octopus say "hello" when it is clicked?
 levels.click_hello =  {
@@ -579,6 +596,10 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
+});
+levels.iceage_5 = utils.extend(levels.playlab_5, {
+  background: 'icy',
+  firstSpriteIndex: 1, // sid
 });
 
 levels.octopus_happy =  {
@@ -729,6 +750,15 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 });
+levels.iceage_6 = utils.extend(levels.playlab_6, {
+  background: 'tile',
+  firstSpriteIndex: 3, // diego
+  goalOverride: {
+    goal: 'ia_projectile_1',
+    success: 'ia_projectile_1',
+    imageWidth: 800
+  }
+});
 
 // The "repeat forever" block allows you to run code continuously. Can you
 // attach blocks to move this dinosaur up and down repeatedly?
@@ -848,6 +878,10 @@ levels.playlab_7 = {
     }]
   ],
 };
+levels.iceage_7 = utils.extend(levels.playlab_7, {
+  background: 'icy',
+  firstSpriteIndex: 1, // sid
+});
 
 // Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into
 // the dinosaur, and then move him with the arrows to make that happen?
@@ -1069,6 +1103,10 @@ levels.playlab_8 = {
     '</next></block>'
 
 };
+levels.iceage_8 = utils.extend(levels.playlab_8, {
+  background: 'icy',
+  avatarList: ['manny', 'sid']
+});
 
 // Can you add blocks to change the background and the speed of the penguin, and
 // then move him with the arrows until you score?
@@ -1252,6 +1290,19 @@ levels.playlab_9 = {
     '</block>'
 };
 
+levels.iceage_9 = utils.extend(levels.playlab_9, {
+  background: 'flower',
+  requiredBlocks: [
+    [{test: 'setBackground',
+      type: 'studio_setBackground',
+      titles: {VALUE: '"grassy"'}}],
+    [{test: 'setSpriteSpeed',
+      type: 'studio_setSpriteSpeed',
+      titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
+  ],
+  avatarList: ['sid', 'granny']
+});
+
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
 levels.sandbox =  {
   'ideal': Infinity,
@@ -1309,6 +1360,7 @@ levels.sandbox =  {
 levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
 levels.playlab_10 = utils.extend(levels.sandbox, {});
+levels.iceage_10 = utils.extend(levels.playlab_10, {});
 
 // Create your own story! Move around the cat and dog, and make them say things.
 levels.k1_6 = {
@@ -1598,6 +1650,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
 levels.js_hoc2015_move_right = {
   'editCode': true,
   'background': 'main',
+  'music': [ 'song1' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -1613,7 +1666,7 @@ levels.js_hoc2015_move_right = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -1639,13 +1692,9 @@ levels.js_hoc2015_move_right = {
     {
       "id": "playlab:js_hoc2015_move_right:runButton",
       "element_id": "#runButton",
-      "hide_target_selector": "#runButton",
       "qtip_config": {
         "content": {
           "text": msg.calloutRunButton(),
-        },
-        'hide': {
-          'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top left',
@@ -1669,6 +1718,7 @@ levels.js_hoc2015_move_right = {
 levels.js_hoc2015_move_right_down = {
   'editCode': true,
   'background': 'main',
+  'music': [ 'song2' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -1684,7 +1734,7 @@ levels.js_hoc2015_move_right_down = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': 
@@ -1717,6 +1767,7 @@ levels.js_hoc2015_move_diagonal = {
   'editCode': true,
   'textModeAtStart': true,
   'background': 'main',
+  'music': [ 'song3' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -1732,7 +1783,7 @@ levels.js_hoc2015_move_diagonal = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,  
   'map':
@@ -1790,6 +1841,7 @@ levels.js_hoc2015_move_diagonal = {
 levels.js_hoc2015_move_backtrack = {
   'editCode': true,
   'background': 'main',
+  'music': [ 'song4' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -1805,7 +1857,7 @@ levels.js_hoc2015_move_backtrack = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': 
@@ -1838,6 +1890,7 @@ levels.js_hoc2015_move_backtrack = {
 levels.js_hoc2015_move_around = {
   'editCode': true,
   'background': 'main',
+  'music': [ 'song5' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -1853,7 +1906,7 @@ levels.js_hoc2015_move_around = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -1888,6 +1941,7 @@ levels.js_hoc2015_move_around = {
 levels.js_hoc2015_move_finale = {
   'editCode': true,
   'background': 'main',
+  'music': [ 'song6' ],
   'codeFunctions': {
     'moveRight': null,
     'moveLeft': null,
@@ -1903,7 +1957,7 @@ levels.js_hoc2015_move_finale = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -1940,6 +1994,7 @@ levels.js_hoc2015_move_finale = {
 levels.js_hoc2015_event_two_items = {
   'editCode': true,
   'background': 'snow',
+  'music': [ 'song7' ],
   'wallMap': 'blank',
   'softButtons': ['downButton', 'upButton'],
   'codeFunctions': {
@@ -2021,9 +2076,6 @@ levels.js_hoc2015_event_two_items = {
         'content': {
           'text': msg.calloutUseArrowButtons(),
         },
-        'hide': {
-          'event': 'mouseup touchend',
-        },
         'position': {
           'my': 'top left',
           'at': 'bottom left',
@@ -2040,6 +2092,7 @@ levels.js_hoc2015_event_two_items = {
 levels.js_hoc2015_event_four_items = {
   'editCode': true,
   'background': 'snow',
+  'music': [ 'song8' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -2100,6 +2153,7 @@ levels.js_hoc2015_score =
   'avatarList': ['bot1'],
   'editCode': true,
   'background': 'snow',
+  'music': [ 'song9' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
@@ -2172,11 +2226,11 @@ levels.js_hoc2015_score =
           'event': 'mouseup touchend',
         },
         'position': {
-          'my': 'top left',
-          'at': 'top left',
+          'my': 'top center',
+          'at': 'bottom center',
           'adjust': {
             'x': 170,
-            'y': 20
+            'y': 0
           }
         }
       }
@@ -2189,6 +2243,7 @@ levels.js_hoc2015_score =
 levels.js_hoc2015_win_lose = {
   'editCode': true,
   'background': 'forest',
+  'music': [ 'song10' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -2227,7 +2282,6 @@ levels.js_hoc2015_win_lose = {
     {
       'id': 'playlab:js_hoc2015_win_lose:instructions',
       'element_id': '#prompt-table',
-      'hide_target_selector': '#prompt-table',
       'qtip_config': {
         'content': {
           'text': msg.calloutInstructions(),
@@ -2260,6 +2314,7 @@ levels.js_hoc2015_win_lose = {
 levels.js_hoc2015_add_characters = {
   'editCode': true,
   'background': 'forest',
+  'music': [ 'song11' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -2331,6 +2386,7 @@ levels.js_hoc2015_add_characters = {
 levels.js_hoc2015_chain_characters = {
   'editCode': true,
   'background': 'ship',
+  'music': [ 'song12' ],
   'wallMap': 'grid',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -2380,6 +2436,7 @@ levels.js_hoc2015_chain_characters = {
 levels.js_hoc2015_chain_characters_2 = {
   'editCode': true,
   'background': 'ship',
+  'music': [ 'song13' ],
   'wallMap': 'horizontal',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -2458,6 +2515,7 @@ levels.js_hoc2015_chain_characters_2 = {
 levels.js_hoc2015_change_setting = {
   'editCode': true,
   'background': 'ship',
+  'music': [ 'song14' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -2504,7 +2562,6 @@ levels.js_hoc2015_change_setting = {
     {
       'id': 'playlab:js_hoc2015_change_setting:setMap',
       'element_id': '#droplet_palette_block_setMap',
-      'hide_target_selector': '#droplet_palette_block_setMap',
       'qtip_config': {
         'content' : {
           'text': msg.calloutSetMapAndSpeed(),
@@ -2536,6 +2593,7 @@ levels.js_hoc2015_event_free = {
   'editCode': true,
   'freePlay': true,
   'background': 'forest',
+  'music': [ 'song15' ],
   'wallMap': 'blank',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
@@ -2592,7 +2650,6 @@ levels.js_hoc2015_event_free = {
     {
       'id': 'playlab:js_hoc2015_event_free:clickCategory',
       'element_id': '.droplet-palette-group-header.green',
-      'hide_target_selector': '.droplet-palette-group-header.green',
       'qtip_config': {
         'content' : {
           'text': msg.calloutClickEvents(),
