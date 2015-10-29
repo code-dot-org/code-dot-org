@@ -74,3 +74,27 @@ def query_subscribed_contacts(params)
     ALL.merge! results
   end
 end
+
+EMAIL = 'Email Address'
+NAME = 'Name'
+COUNTRY_CODE = 'CC'
+COUNTRY_CODE_US = 'US'
+
+def include_mailchimp_engineers(results)
+  # read the mailchimp engineers csv and include new contacts in results
+
+  # headers:
+  # "Email Address",Name,"ZIP code","Help time",Country,UNSUB_CAMPAIGN_ID,UNSUB_REASON,UNSUB_TIME,UNSUB_CAMPAIGN_TITLE,UNSUB_CAMPAIGN_ID,UNSUB_REASON,UNSUB_REASON_OTHER,"MailChimp Integration",Languages,"Help Location",MEMBER_RATING,OPTIN_TIME,OPTIN_IP,CONFIRM_TIME,CONFIRM_IP,LATITUDE,LONGITUDE,GMTOFF,DSTOFF,TIMEZONE,CC,REGION,LAST_CHANGED,LEID,EUID,NOTES
+
+  # example rows:
+  # rick@alchemydes.com,"Rick Hawkins",98110,,,,,,,,,,,"JavaScript, Perl, PHP","On-site at a school",2,,,"2013-06-25 17:38:27",,47.6614000,-122.2930000,-8,-7,America/Los_Angeles,US,WA,"2013-06-27 12:11:50",44877845,c2cb0681af,
+  # hadipartovi@gmail.com,"hadi partovi test",,5hr/wk,Chile,,,,,,,,,"Java, C++, JavaScript, Perl, PHP, Python, Ruby, Scratch, Alice","On-site at a school, Mentoring students remotely, Developing curriculum or exercises",2,,,"2013-06-25 18:29:10",,33.7767000,-118.1460000,-8,-7,America/Los_Angeles,US,CA,"2013-06-27 12:13:08",44965861,77fd352c33,
+
+  CSV.foreach("mailchimp_engineers.csv", headers: true) do |row|
+    international = !(row[COUNTRY_CODE] && row[COUNTRY_CODE] != '' && row[COUNTRY_CODE] == COUNTRY_CODE_US)
+    email = row[EMAIL]
+    processed = {email: row[EMAIL], name: row[NAME], international: international.to_s}
+
+    results[email] ||= processed unless UNSUBSCRIBERS[email]
+  end
+end
