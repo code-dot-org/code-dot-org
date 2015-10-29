@@ -1,0 +1,45 @@
+---
+layout: none
+theme: none
+content-type: text/ng-template
+---
+
+%br/
+
+.loading{'ng-hide' => 'progressLoadedFirst'}
+  = I18n.t('dashboard_landing_loading')
+
+%div{'ng-show' => 'progressLoadedFirst'}
+  View progress in:
+  %select{"ng-model" => "course_id", "ng-options"=>"k*1 as v for (k, v) in course_list", 'ng-change' => 'changeCourse(course_id)'}
+
+%br/
+
+%div{style: "padding-left:20px"}
+  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'section.students.length > 0', "ng-form" => "allForm"}
+    %colgroup
+      %col{width: "200"}/
+      %col{width: "100"}/
+      %col{width: "100"}/
+    %tr
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'stage'"}= I18n.t('dashboard_stage')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'puzzle'"}= I18n.t('dashboard_puzzle')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'question'"}= I18n.t('dashboard_question')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'response'"}= I18n.t('dashboard_response')
+    %tr{"ng-repeat" => "response in responses | orderBy:order", "ng-form" => "form"}
+      %td
+        %a{"ng-href" => "#/sections/{{section.id}}/student/{{response.student.id}}"} {{response.student.name}}
+      %td
+        {{response.stage}}
+      %td
+        {{response.puzzle}}
+      %td
+        {{response.question}}
+      %td
+        {{response.response}}

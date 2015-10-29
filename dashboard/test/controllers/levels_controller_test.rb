@@ -282,6 +282,17 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "update sends JSON::ParserError to user" do
+    level = create(:applab)
+    invalid_json = "{,}"
+    patch :update, id: level, level: {"code_functions" => invalid_json}
+    # Level update now uses AJAX callback, returns a 200 JSON response instead of redirect
+    assert_response :unprocessable_entity
+
+    expected = {'code_functions' => ["JSON::ParserError: 757: unexpected token at '{,}'"]}
+    assert_equal expected, JSON.parse(@response.body)
+  end
+
   test "should destroy level" do
     assert_difference('Level.count', -1) do
       delete :destroy, id: @level

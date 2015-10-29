@@ -1,6 +1,7 @@
 ---
 layout: none
 theme: none
+content-type: text/ng-template
 ---
 
 #nav{"ng-show"=>"section.id"}
@@ -9,7 +10,7 @@ theme: none
     %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
     %a{href: '/teacher-dashboard#/sections'}= I18n.t('dashboard_navigation_all_sections')
     %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
-    %b{style: "color: #ff8b02;"}= I18n.t('dashboard_navigation_section', section_name: '{{section.name}}') 
+    %b{style: "color: #ff8b02;"}= I18n.t('dashboard_navigation_section', section_name: '{{section.name}}')
 
   .section-select{style: "float:right"}
     = I18n.t('dashboard_sections_switch_section')
@@ -25,12 +26,19 @@ theme: none
       %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
           'ng-class' => 'tab == "progress" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/progress"}= I18n.t('dashboard_navigation_view_progress')
+
+      %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
+          'ng-class' => 'tab == "responses" ? "active tab" : "tab"'}
+        %a{'ng-href' => "#/sections/{{section.id}}/responses"}= I18n.t('dashboard_navigation_view_text_responses')
+
       %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
           'ng-class' => 'tab == "stats" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/stats"}= I18n.t('dashboard_navigation_view_stats')
+
       %li{'ng-show' => 'section && ! editingAll(section.students)',
           'ng-class' => 'tab == "manage" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/manage"}= I18n.t('dashboard_navigation_manage_students')
+
       %div{'ng-show' => 'section && editingAll(section.students)', style: "height:40px"}
         -# Just an invisible element for some padding to keep things looking good when we're not showing tabs.
         &nbsp;

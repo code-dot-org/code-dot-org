@@ -70,7 +70,7 @@ CAMERON DOC NEEDED
 - Broward County Public Schools (FL)
 - Houston Independent School District (TX)
 - Montgomery County Public Schools (MD)
-- [See all 70+ partner districts](/educate/partner-districts)
+- [See all 90 partner districts](/educate/partner-districts)
 
 [/col-50]
 
