@@ -36,7 +36,7 @@ Scenario: Losing the first level
   And I press "runButton"
   And element "#resetButton" is visible
   Then I wait until element ".congrats" is visible
-  And element ".congrats" has text "Not quite; this level requires specific blocks."
+  And element ".congrats" has text "Not quite. You have to use a block you aren’t using yet."
   And there's an image "farmer/failure_avatar.png"
   And I press "again-button"
   And I press "resetButton"

@@ -23,7 +23,7 @@ Feature: Complete a simple maze level
     And I wait until element ".congrats" is visible
     Then element "#runButton" is hidden
     And element "#resetButton" is visible
-    And element ".congrats" has text "Not quite; this level requires specific blocks."
+    And element ".congrats" has text "Not quite. You have to use a block you aren’t using yet."
     # Checking for "show hints" button
     And I wait to see "#hint-request-button"
     Then element "#hint-request-button" is visible
