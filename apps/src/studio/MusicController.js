@@ -28,7 +28,7 @@ function debug(msg) {
  * External track representation, used to define track info in skins.js.
  *
  * @property {string} name - corresponds to music filenames
- * @property {number} maxVolume - on a 0..1 scale
+ * @property {number} volume - on a 0..1 scale
  */
 
 /**
@@ -38,7 +38,7 @@ function debug(msg) {
  *
  * @property {string} name
  * @property {string[]} assetUrls
- * @property {number} maxVolume
+ * @property {number} volume
  * @property {Sound} sound
  * @property {boolean} isLoaded
  */
@@ -92,7 +92,7 @@ function buildTrackData(trackDefinitions, assetUrl) {
     return {
       name: trackDef.name,
       assetUrls: [ assetUrl(trackDef.name + '.mp3') ],
-      maxVolume: utils.valueOr(trackDef.maxVolume, 1),
+      volume: utils.valueOr(trackDef.volume, 1),
       sound: null,
       isLoaded: false
     };
@@ -145,7 +145,7 @@ MusicController.prototype.play = function (trackName) {
   if (track.sound && track.isLoaded) {
     debug('playing now');
     var callback = this.whenMusicStopped_.bind(this, track.name);
-    track.sound.play({ volume: track.maxVolume, onEnded: callback });
+    track.sound.play({ volume: track.volume, onEnded: callback });
     this.nowPlaying_ = track.name;
   } else {
     debug('not done loading, playing after load');
