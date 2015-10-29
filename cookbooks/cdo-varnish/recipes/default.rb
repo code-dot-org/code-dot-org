@@ -56,7 +56,7 @@ template '/etc/init.d/varnish' do
   source 'init.sh.erb'
   user 'root'
   group 'root'
-  mode '0644'
+  mode '0755'
   notifies :restart, 'service[varnish]', :delayed
 end
 
