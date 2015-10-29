@@ -252,22 +252,9 @@ levels.playlab_1 = utils.extend(levels.dog_hello, {
   ]
 });
 
-levels.iceage_1 = utils.extend(levels.dog_hello, {
+levels.iceage_1 = utils.extend(levels.playlab_1, {
   background: 'icy',
-  timeoutFailureTick: null,
-  timeoutAfterWhenRun: true,
   firstSpriteIndex: 0, // manny
-  goal: {
-    successCondition: function () {
-      return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 0;
-    }
-  },
-  // difference is we say hello instead of hello world
-  requiredBlocks: [
-    saySpriteRequiredBlock({
-      requiredText: msg.hello()
-    }),
-  ]
 });
 
 // Can you make the dog say something and then have the cat say something afterwards?
@@ -347,38 +334,9 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 });
-levels.iceage_2 = utils.extend(levels.dog_and_cat_hello, {
+levels.iceage_2 = utils.extend(levels.playlab_2, {
   background: 'leafy',
   firstSpriteIndex: 3, // diego
-  timeoutFailureTick: null,
-  timeoutAfterWhenRun: true,
-  defaultEmotion: Emotions.HAPPY,
-  goal: {
-    successCondition: function () {
-      return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
-    }
-  },
-  requiredBlocks: [
-    // make sure each sprite says something
-    saySpriteRequiredBlock({
-      sprite: "0",
-      requiredText: msg.hello()
-    }),
-    saySpriteRequiredBlock({
-      sprite: "1",
-      requiredText: msg.hello()
-    })
-  ],
-  map: [
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0,16, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0,16, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ],
 });
 
 
@@ -463,41 +421,10 @@ levels.playlab_3 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ]
 };
-levels.iceage_3 = {
+levels.iceage_3 = utils.extend(levels.playlab_3, {
   background: 'grassy',
-  ideal: 2,
-  requiredBlocks: [
-    [{
-      test: 'moveDistance',
-      type: 'studio_moveDistance',
-      titles: { DIR: '2', DISTANCE: '200'}
-    }]
-  ],
-  timeoutFailureTick: null,
-  timeoutAfterWhenRun: true,
-  scale: {
-    snapRadius: 2
-  },
   firstSpriteIndex: 2, // scrat
-  toolbox:
-    tb(
-      '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">200</title></block>' +
-      '<block type="studio_moveDistance"><title name="DIR">2</title><title name="DISTANCE">200</title></block>' +
-      '<block type="studio_moveDistance"><title name="DIR">4</title><title name="DISTANCE">200</title></block>' +
-      '<block type="studio_moveDistance"><title name="DIR">8</title><title name="DISTANCE">200</title></block>'
-       ),
-  startBlocks: '<block type="when_run" deletable="false" x="20" y="20"></block>',
-  map: [
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0,16, 0, 0, 0, 1, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ]
-};
+});
 
 
 // Can you write a program that makes the dog move to the cat, and have the cat
@@ -616,56 +543,10 @@ levels.playlab_4 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 };
-levels.iceage_4 = {
+levels.iceage_4 = utils.extend(levels.playlab_4, {
   background: 'grassy',
-  ideal: 4,
-  scale: {
-    snapRadius: 2
-  },
-  avatarList: ['scrat', 'granny'],
-  defaultEmotion: Emotions.SAD,
-  requiredBlocks: [
-    [{
-      test: 'moveDistance',
-      type: 'studio_moveDistance',
-      titles: { DIR: '4', DISTANCE: '200'}
-    }],
-    [{
-      test: 'playSound',
-      type: 'studio_playSound',
-      titles: { SOUND: 'goal1'}
-    }]
-  ],
-  // timeout when we've hit 100 OR we had only when run commands and finished them
-  timeoutFailureTick: 100,
-  timeoutAfterWhenRun: true,
-  goal: {
-    successCondition: function () {
-      return Studio.playSoundCount > 0 && Studio.sprite[0].isCollidingWith(1);
-    }
-  },
-  toolbox:
-    tb(
-      '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">200</title></block>' +
-      '<block type="studio_moveDistance"><title name="DIR">2</title><title name="DISTANCE">200</title></block>' +
-      '<block type="studio_moveDistance"><title name="DIR">4</title><title name="DISTANCE">200</title></block>' +
-      '<block type="studio_moveDistance"><title name="DIR">8</title><title name="DISTANCE">200</title></block>' +
-      '<block type="studio_playSound"><title name="SOUND">goal1</title></block>'
-       ),
-  startBlocks:
-    '<block type="when_run" deletable="false" x="20" y="20"></block>' +
-    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="120"></block>',
-  map: [
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0,16, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0,16, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ],
-};
+  avatarList: ['scrat', 'granny']
+});
 
 // Can you write a program to make the octopus say "hello" when it is clicked?
 levels.click_hello =  {
@@ -716,14 +597,9 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
 });
-levels.iceage_5 = utils.extend(levels.click_hello, {
+levels.iceage_5 = utils.extend(levels.playlab_5, {
   background: 'icy',
   firstSpriteIndex: 1, // sid
-  timeoutAfterWhenRun: true,
-  defaultEmotion: Emotions.HAPPY,
-  toolbox: tb(blockOfType('studio_saySprite')),
-  startBlocks:
-   '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
 });
 
 levels.octopus_happy =  {
@@ -874,32 +750,14 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 });
-levels.iceage_6 = utils.extend(levels.move_penguin, {
+levels.iceage_6 = utils.extend(levels.playlab_6, {
   background: 'tile',
   firstSpriteIndex: 3, // diego
   goalOverride: {
     goal: 'ia_projectile_1',
     success: 'ia_projectile_1',
     imageWidth: 800
-  },
-  defaultEmotion: Emotions.ANGRY,
-  toolbox:
-    tb(
-      blockOfType('studio_move', {DIR: 8}) +
-      blockOfType('studio_move', {DIR: 2}) +
-      blockOfType('studio_move', {DIR: 1}) +
-      blockOfType('studio_move', {DIR: 4})
-    ),
-  map: [
-    [1, 0, 0, 0, 0, 0, 1, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 16,0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [1, 0, 0, 0, 0, 0, 1, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ],
+  }
 });
 
 // The "repeat forever" block allows you to run code continuously. Can you
@@ -1020,64 +878,10 @@ levels.playlab_7 = {
     }]
   ],
 };
-levels.iceage_7 = {
-  ideal: 3,
+levels.iceage_7 = utils.extend(levels.playlab_7, {
   background: 'icy',
   firstSpriteIndex: 1, // sid
-  scale: {
-    snapRadius: 2
-  },
-  softButtons: [
-    'leftButton',
-    'rightButton',
-    'downButton',
-    'upButton'
-  ],
-  defaultEmotion: Emotions.HAPPY,
-  map: [
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [16, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ],
-  goal: {
-    successCondition: function () {
-      // successful after a given period of time as long as we've used all
-      // required blocks. this number has us go back and forth twice, and end
-      // facing forward
-      return Studio.tickCount === 252;
-    },
-  },
-  timeoutFailureTick: 253,
-  minWorkspaceHeight: 800,
-  toolbox: tb(
-    '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">400</title></block>' +
-    '<block type="studio_moveDistance"><title name="DIR">2</title><title name="DISTANCE">400</title></block>' +
-    '<block type="studio_moveDistance"><title name="DIR">4</title><title name="DISTANCE">400</title></block>' +
-    '<block type="studio_moveDistance"><title name="DIR">8</title><title name="DISTANCE">400</title></block>'
-  ),
-  startBlocks: '<block type="studio_repeatForever" deletable="false" x="20" y="20"></block>',
-  requiredBlocks: [
-    [{
-      test: function (b) {
-        return b.type === 'studio_moveDistance' && b.getTitleValue('DIR') === '2';
-      },
-      type: 'studio_moveDistance',
-      titles: {DIR: 2, DISTANCE: '400'}
-    }],
-    [{
-      test: function (b) {
-        return b.type === 'studio_moveDistance' && b.getTitleValue('DIR') === '8';
-      },
-      type: 'studio_moveDistance',
-      titles: {DIR: 8, DISTANCE: '400'}
-    }]
-  ],
-};
+});
 
 // Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into
 // the dinosaur, and then move him with the arrows to make that happen?
@@ -1299,70 +1103,10 @@ levels.playlab_8 = {
     '</next></block>'
 
 };
-levels.iceage_8 = {
+levels.iceage_8 = utils.extend(levels.playlab_8, {
   background: 'icy',
-  ideal: 16,
-  requiredBlocks: [
-    [{test: 'changeScore', type: 'studio_changeScore'}],
-    [{test: 'playSound', type: 'studio_playSound', titles: {SOUND: 'winpoint'}}]
-  ],
-  scale: {
-    snapRadius: 2
-  },
-  softButtons: [
-    'leftButton',
-    'rightButton',
-    'downButton',
-    'upButton'
-  ],
-  map: [
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0,16, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [16, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ],
-  avatarList: ['manny', 'sid'],
-  defaultEmotion: Emotions.HAPPY,
-  goal: {
-    successCondition: function () {
-      return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
-    },
-    failureCondition: function () {
-      return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore !== 1;
-    }
-  },
-  timeoutFailureTick: 600,
-  toolbox: tb(
-    blockOfType('studio_changeScore') +
-    '<block type="studio_playSound"><title name="SOUND">winpoint</title></block>'
-  ),
-  startBlocks:
-    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="20"></block>' +
-    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
-      '<statement name="DO">' +
-        blockUtils.blockWithNext('studio_moveDistance', { SPRITE: 1, DIR: 2, DISTANCE: 400},
-          blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 8, DISTANCE: 400})
-        ) +
-      '</statement>' +
-    '</block>' +
-    '<block type="studio_whenLeft" deletable="false" x="20" y="300"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 8}) +
-    '</next></block>' +
-    '<block type="studio_whenRight" deletable="false" x="20" y="400"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 2}) +
-    '</next></block>' +
-    '<block type="studio_whenUp" deletable="false" x="20" y="500"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 1}) +
-    '</next></block>' +
-    '<block type="studio_whenDown" deletable="false" x="20" y="600"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 4}) +
-    '</next></block>'
-
-};
+  avatarList: ['manny', 'sid']
+});
 
 // Can you add blocks to change the background and the speed of the penguin, and
 // then move him with the arrows until you score?
@@ -1546,7 +1290,7 @@ levels.playlab_9 = {
     '</block>'
 };
 
-levels.iceage_9 = {
+levels.iceage_9 = utils.extend(levels.playlab_9, {
   background: 'flower',
   requiredBlocks: [
     [{test: 'setBackground',
@@ -1556,82 +1300,8 @@ levels.iceage_9 = {
       type: 'studio_setSpriteSpeed',
       titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
   ],
-  timeoutFailureTick: 400,
-  scale: {
-    snapRadius: 2
-  },
-  defaultEmotion: Emotions.ANGRY,
-  softButtons: [
-    'leftButton',
-    'rightButton',
-    'downButton',
-    'upButton'
-  ],
-  avatarList: ['sid', 'granny'],
-  goal: {
-    successCondition: function () {
-      return Studio.sprite[0].isCollidingWith(1);
-    }
-  },
-  map: [
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [16,0, 0, 0, 0, 0,16, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ],
-  toolbox:
-    tb(
-      blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
-      blockOfType('studio_setBackground', {VALUE: '"space"'}) +
-      blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
-      blockOfType('studio_saySprite') +
-      blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
-      blockOfType('studio_changeScore')
-    ),
-  minWorkspaceHeight: 1250,
-  startBlocks:
-    '<block type="when_run" deletable="false" x="20" y="20"></block>' +
-    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
-      '<statement name="DO">' +
-        blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
-          blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
-        ) +
-      '</statement>' +
-    '</block>' +
-    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="290">' +
-      '<title name="SPRITE2">0</title>' +
-      '<title name="SPRITE2">1</title>' +
-      '<next>' +
-        blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
-          blockOfType('studio_saySprite', {TEXT: msg.alienInvasion()})
-        ) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenLeft" deletable="false" x="20" y="410">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 8}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenRight" deletable="false" x="20" y="510">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 2}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenUp" deletable="false" x="20" y="610">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 1}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenDown" deletable="false" x="20" y="710">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 4}) +
-      '</next>' +
-    '</block>'
-};
+  avatarList: ['sid', 'granny']
+});
 
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
 levels.sandbox =  {
@@ -1690,7 +1360,7 @@ levels.sandbox =  {
 levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
 levels.playlab_10 = utils.extend(levels.sandbox, {});
-levels.iceage_10 = utils.extend(levels.sandbox, {});
+levels.iceage_10 = utils.extend(levels.playlab_10, {});
 
 // Create your own story! Move around the cat and dog, and make them say things.
 levels.k1_6 = {
