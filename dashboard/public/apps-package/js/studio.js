@@ -4066,7 +4066,8 @@ Studio.setSprite = function (opts) {
 
   spriteIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.sprite);
   spriteIcon.setAttribute('width', sprite.drawWidth * spriteTotalFrames(spriteIndex));
-  spriteIcon.setAttribute('height', sprite.drawHeight);
+  var extraHeight = (sprite.frameCounts.extraEmotions || 0) * sprite.drawHeight;
+  spriteIcon.setAttribute('height', sprite.drawHeight + extraHeight);
 
   if (spriteWalk) {
     // And set up the cliprect so we can show the right item from the spritesheet.
@@ -4075,7 +4076,9 @@ Studio.setSprite = function (opts) {
     spriteWalkClipRect.setAttribute('height', sprite.drawHeight);
 
     spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.walk);
-    spriteWalk.setAttribute('width', sprite.drawWidth * sprite.frameCounts.turns); // 800
+
+    var extraWidth = (sprite.frameCounts.extraEmotions || 0) * sprite.drawWidth;
+    spriteWalk.setAttribute('width', extraWidth + sprite.drawWidth * sprite.frameCounts.turns); // 800
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
@@ -5470,6 +5473,138 @@ var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 
+function loadIceAge(skin, assetUrl) {
+  skin.defaultBackground = 'icy';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'ia_projectile_1',
+    'ia_projectile_2',
+    'ia_projectile_3',
+    'ia_projectile_4',
+    'ia_projectile_5',
+  ];
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_ia_projectile_1',
+    'item_ia_projectile_2',
+    'item_ia_projectile_3',
+    'item_ia_projectile_4',
+    'item_ia_projectile_5',
+  ];
+
+  // Images
+  skin.ia_projectile_1 = skin.assetUrl('ia_projectile_1.png');
+  skin.ia_projectile_2 = skin.assetUrl('ia_projectile_2.png');
+  skin.ia_projectile_3 = skin.assetUrl('ia_projectile_3.png');
+  skin.ia_projectile_4 = skin.assetUrl('ia_projectile_4.png');
+  skin.ia_projectile_5 = skin.assetUrl('ia_projectile_5.png');
+
+  // TODO: proper item class names
+  skin.item_ia_projectile_1 = skin.assetUrl('ia_projectile_1.png');
+  skin.item_ia_projectile_2 = skin.assetUrl('ia_projectile_2.png');
+  skin.item_ia_projectile_3 = skin.assetUrl('ia_projectile_3.png');
+  skin.item_ia_projectile_4 = skin.assetUrl('ia_projectile_4.png');
+  skin.item_ia_projectile_5 = skin.assetUrl('ia_projectile_5.png');
+
+  skin.explosion = skin.assetUrl('explosion.png');
+  skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
+  skin.explosionFrames = 17;
+  skin.fadeExplosion = false;
+  skin.timePerExplosionFrame = 40;
+
+  skin.grassy = {
+    background: skin.assetUrl('background.jpg'),
+  };
+  skin.tile = {
+    background: skin.assetUrl('background_tile.jpg'),
+  };
+  skin.leafy = {
+    background: skin.assetUrl('background_leafy.jpg'),
+  };
+  skin.icy = {
+    background: skin.assetUrl('background_icy.jpg'),
+  };
+  skin.flower = {
+    background: skin.assetUrl('background_flower.jpg'),
+  };
+
+  skin.avatarList = ["manny", "sid", "scrat", "diego", "granny"];
+
+  /**
+   * Sprite thumbs generated with:
+   * `brew install graphicsmagick`
+   * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
+   */
+  skin.avatarList.forEach(function (name) {
+    skin[name] = {
+      sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 19,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: 12,
+        emotionCycles: 0,
+        extraEmotions: 3
+      },
+      timePerFrame: 100
+    };
+  });
+
+
+  skin.backgroundChoices = [
+    [msg.setBackgroundRandom(), RANDOM_VALUE],
+    [msg.setBackgroundGrassy(), '"grassy"'],
+    [msg.setBackgroundTile(), '"tile"'],
+    [msg.setBackgroundLeafy(), '"leafy"'],
+    [msg.setBackgroundIcy(), '"icy"'],
+    [msg.setBackgroundFlower(), '"flower"']];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.backgroundChoicesK1 = [
+    [skin.grassy.background, '"grassy"'],
+    [skin.tile.background, '"tile"'],
+    [skin.leafy.background, '"leafy"'],
+    [skin.icy.background, '"icy"'],
+    [skin.flower.background, '"flower"'],
+    [skin.randomPurpleIcon, RANDOM_VALUE]];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteManny(), '"manny"'],
+    [msg.setSpriteSid(), '"sid"'],
+    [msg.setSpriteScrat(), '"scrat"'],
+    [msg.setSpriteDiego(), '"diego"'],
+    [msg.setSpriteGranny(), '"granny"']];
+
+  skin.projectileChoices = [
+    [msg.projectileIAProjectile1(), '"ia_projectile_1"'],
+    [msg.projectileIAProjectile2(), '"ia_projectile_2"'],
+    [msg.projectileIAProjectile3(), '"ia_projectile_3"'],
+    [msg.projectileIAProjectile4(), '"ia_projectile_4"'],
+    [msg.projectileIAProjectile5(), '"ia_projectile_5"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.itemChoices = [
+    [msg.itemIAProjectile1(), '"item_ia_projectile_1"'],
+    [msg.itemIAProjectile2(), '"item_ia_projectile_2"'],
+    [msg.itemIAProjectile3(), '"item_ia_projectile_3"'],
+    [msg.itemIAProjectile4(), '"item_ia_projectile_4"'],
+    [msg.itemIAProjectile5(), '"item_ia_projectile_5"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
+}
+
 function loadInfinity(skin, assetUrl) {
   skin.preloadAssets = true;
 
@@ -6411,6 +6546,9 @@ exports.load = function(assetUrl, id) {
 
   // take care of items specific to skins
   switch (skin.id) {
+    case 'iceage':
+      loadIceAge(skin, assetUrl);
+      break;
     case 'infinity':
       loadInfinity(skin, assetUrl);
       break;
@@ -6684,6 +6822,11 @@ levels.playlab_1 = utils.extend(levels.dog_hello, {
   ]
 });
 
+levels.iceage_1 = utils.extend(levels.playlab_1, {
+  background: 'icy',
+  firstSpriteIndex: 0, // manny
+});
+
 // Can you make the dog say something and then have the cat say something afterwards?
 levels.dog_and_cat_hello =  {
   'ideal': 3,
@@ -6760,6 +6903,10 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
+});
+levels.iceage_2 = utils.extend(levels.playlab_2, {
+  background: 'leafy',
+  firstSpriteIndex: 3, // diego
 });
 
 
@@ -6844,6 +6991,10 @@ levels.playlab_3 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ]
 };
+levels.iceage_3 = utils.extend(levels.playlab_3, {
+  background: 'grassy',
+  firstSpriteIndex: 2, // scrat
+});
 
 
 // Can you write a program that makes the dog move to the cat, and have the cat
@@ -6962,6 +7113,10 @@ levels.playlab_4 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 };
+levels.iceage_4 = utils.extend(levels.playlab_4, {
+  background: 'grassy',
+  avatarList: ['scrat', 'granny']
+});
 
 // Can you write a program to make the octopus say "hello" when it is clicked?
 levels.click_hello =  {
@@ -7011,6 +7166,10 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
+});
+levels.iceage_5 = utils.extend(levels.playlab_5, {
+  background: 'icy',
+  firstSpriteIndex: 1, // sid
 });
 
 levels.octopus_happy =  {
@@ -7161,6 +7320,15 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 });
+levels.iceage_6 = utils.extend(levels.playlab_6, {
+  background: 'tile',
+  firstSpriteIndex: 3, // diego
+  goalOverride: {
+    goal: 'ia_projectile_1',
+    success: 'ia_projectile_1',
+    imageWidth: 800
+  }
+});
 
 // The "repeat forever" block allows you to run code continuously. Can you
 // attach blocks to move this dinosaur up and down repeatedly?
@@ -7280,6 +7448,10 @@ levels.playlab_7 = {
     }]
   ],
 };
+levels.iceage_7 = utils.extend(levels.playlab_7, {
+  background: 'icy',
+  firstSpriteIndex: 1, // sid
+});
 
 // Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into
 // the dinosaur, and then move him with the arrows to make that happen?
@@ -7501,6 +7673,10 @@ levels.playlab_8 = {
     '</next></block>'
 
 };
+levels.iceage_8 = utils.extend(levels.playlab_8, {
+  background: 'icy',
+  avatarList: ['manny', 'sid']
+});
 
 // Can you add blocks to change the background and the speed of the penguin, and
 // then move him with the arrows until you score?
@@ -7684,6 +7860,19 @@ levels.playlab_9 = {
     '</block>'
 };
 
+levels.iceage_9 = utils.extend(levels.playlab_9, {
+  background: 'flower',
+  requiredBlocks: [
+    [{test: 'setBackground',
+      type: 'studio_setBackground',
+      titles: {VALUE: '"grassy"'}}],
+    [{test: 'setSpriteSpeed',
+      type: 'studio_setSpriteSpeed',
+      titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
+  ],
+  avatarList: ['sid', 'granny']
+});
+
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
 levels.sandbox =  {
   'ideal': Infinity,
@@ -7741,6 +7930,7 @@ levels.sandbox =  {
 levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
 levels.playlab_10 = utils.extend(levels.sandbox, {});
+levels.iceage_10 = utils.extend(levels.playlab_10, {});
 
 // Create your own story! Move around the cat and dog, and make them say things.
 levels.k1_6 = {
