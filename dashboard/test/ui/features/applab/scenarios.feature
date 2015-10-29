@@ -1,16 +1,16 @@
-@no_ie
+@no_ie9
 @no_mobile
 @dashboard_db_access
 Feature: App Lab Scenarios
 
   Background:
-    Given I sign in as a student
+    Given I manually sign in as "ApplabStudent"
     And I start a new Applab project
 
   Scenario: App Lab Http Image
     # Create an app with an http image.
     When I switch to text mode
-    And I press keys "image('test123', 'http://example.com')" for element ".ace_text-input"
+    And I append text to droplet "image('test123', 'http://example.com')"
     And I press "runButton"
     And I wait until element "#divApplab > .screen > img#test123" is visible
     And element "#divApplab > .screen > img#test123" has attribute "src" equal to "//studio.code.org/media?u=http%3A%2F%2Fexample.com"
@@ -26,9 +26,9 @@ Feature: App Lab Scenarios
 
   Scenario: Can read and set button text
     Given I switch to text mode
-    And I press keys "button('testButton1', 'Peanut Butter');\n" for element ".ace_text-input"
-    And I press keys "button('testButton2', 'Jelly');\n" for element ".ace_text-input"
-    And I press keys "setText('testButton1', getText('testButton2'));\n" for element ".ace_text-input"
+    And I append text to droplet "button('testButton1', 'Peanut Butter');\n"
+    And I append text to droplet "button('testButton2', 'Jelly');\n"
+    And I append text to droplet "setText('testButton1', getText('testButton2'));\n"
     When I press "runButton"
     And I wait until element "#divApplab > .screen > button#testButton2" is visible
     Then element "#testButton1" contains text "Jelly"
@@ -39,13 +39,12 @@ Feature: App Lab Scenarios
     And I drag a TEXT_AREA into the app
     Then I switch to code mode
     And I switch to text mode
-    And I press keys "setText('text_area1', 'Line 1\\nLine 2\\n\\nLine3');\n" for element ".ace_text-input"
-    And I press keys "for (var i = 0; i < 100; i++) { setText('text_area1', getText('text_area1')); }" for element ".ace_text-input"
+    And I append text to droplet "setText('text_area1', 'Line 1\\nLine 2\\n\\nLine3');\n"
+    And I append text to droplet "for (var i = 0; i < 100; i++) { setText('text_area1', getText('text_area1')); }"
     When I press "runButton"
     And I wait until element "#divApplab > .screen > div#text_area1" is visible
     Then element "div#text_area1" has html "Line 1<div>Line 2</div><div><br></div><div>Line3</div>"
 
-  @no_mobile
   @no_safari
   Scenario: Upload Image Asset
     When I press "designModeButton"
