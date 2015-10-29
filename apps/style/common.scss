@@ -849,6 +849,7 @@ input[type="radio"] {
   .puzzle-rating-btn {
     fill: $light-gray;
     padding: 0 5px;
+    cursor: pointer;
 
     &#like {
       &:hover {
