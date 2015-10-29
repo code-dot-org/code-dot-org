@@ -297,6 +297,7 @@ en:
       ECSPD U2 Day 10-12 Forum Q: {}
       ECSPD U2 Day 13-14 Forum Q: {}
       ECSPD U2L1516 Sorting Video: {}
+      ECSPD U3 Challenge Decision: {}
       ECSPD U3 Challenges: {}
       ECSPD U3 D 1-2 Intro: {}
       ECSPD U3 D 11-13 Intro: {}
@@ -358,6 +359,7 @@ en:
       ECSPD Unit 3 Stage 6 Overview: {}
       ECSPD Unit 3 Stage4Review: {}
       ECSPD Unit 3 Strategy Review: {}
+      ECSPD Unit 3 Survey: {}
       ECSPD Unit2 Connections: {}
       ECSPD Unit3 Connections: {}
       ECSPD What Is Problem Solving: {}
@@ -1013,6 +1015,7 @@ en:
       U4L24 Student Lesson Introduction:
         description here: description here
         title: title
+      Unit 3 Survey 2: {}
       a bit about pixels:
         kevin systrom pixel video: kevin systrom pixel video
         pixel video: pixel video
@@ -4250,6 +4253,7 @@ en:
       ECSPD your goals:
         Documenting Your Goals: Documenting Your Goals
       ECSU2 Challenge Submission: {}
+      ECSU3 Challenge Submission: {}
       Glossary O:
         ? 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
         : 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
@@ -4621,6 +4625,10 @@ en:
       U3L14 - Journal Favorite Event:
         Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.
         'Reflection: Events': 'Reflection: Events'
+      U3L15 spot the difference variable debugging:
+        Enter prompt here: Enter prompt here
+        'Free response: Spot and fix the bug': 'Free response: Spot and fix the bug'
+        'Free response: Variable bug': 'Free response: Variable bug'
       U3L16 Assessment Free Response:
         'Beyond Buttons: Assessment': 'Beyond Buttons: Assessment'
       U3L16 Free Response Getting Started:

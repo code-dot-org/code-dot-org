@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-07-28T23:09:40.000Z",
+  "created_at": "2015-10-29T16:11:16.000Z",
   "level_num": "custom",
   "user_id": 112,
   "properties": {
@@ -74,24 +74,23 @@
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "true",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
-    "beginner_mode": "false",
-    "instructions": "Nest your movie genre if statements inside the if statements to check for a ? in the input. ",
-    "markdown_instructions": "# Nested Conditionals\r\n\r\nYou may have noticed on the last level that if a user made a statement and not a question we still answered them. We only want to answer questions. So we want to check if they asked a question and only then provide answers. You can use a **nested if statement** to do this. \r\n\r\n**Reminder:** A nested if statement is created by putting one if statement inside another. \r\n\r\n**Note: ** Check out the flow chart below to see the logic we are trying to change.\r\n\r\n# Do This\r\n\r\n* **Nest your movie genre if statements** inside the if statements to check for a ? in the input. \r\n\r\n* **Test out a couple sentences with your keywords** to make sure the change worked.\r\n\t* Good things to test would be \"I like comedy movies\" vs \"What is a good comedy movie?\"\r\n\r\n<img src=\"https://images.code.org/c319d7ba43112451a6b25aa9475cacb5-image-1446074593924.png\" style=\"width: 100%\">\r\n\r\n<a src=\"https://images.code.org/c319d7ba43112451a6b25aa9475cacb5-image-1446074593924.png\" target=\"_blank\">Click to open in separate window.</a>",
-    "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"divApplab\" class=\"appModern\" tabindex=\"1\" style=\"width: 320px; height: 480px;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; height: 480px; background-color: rgb(84, 0, 84);\">\r\n    <input id=\"text_input\" style=\"margin: 0px; color: rgb(0, 0, 0); left: 20px; top: 50px; width: 275px; height: 50px; font-size: 18px; position: absolute;\"/>\r\n    <div contenteditable=\"true\" id=\"text_area\" style=\"font-size: 18px; color: rgb(255, 255, 255); left: 20px; top: 115px; margin: 0px; width: 275px; height: 340px; position: absolute;\"/>\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 22px; overflow: hidden; word-wrap: break-word; color: rgb(255, 255, 255); width: 179px; height: 27px; left: 20px; top: 15px; position: absolute;\" id=\"label\">Chef's Assistant</label>\r\n  </div>\r\n</div>",
+    "beginner_mode": "true",
+    "instructions": "Change all of the boolean expressions to use includes instead of ==. (Click to see full instructions)",
+    "markdown_instructions": "# Includes\r\n<img src=\"https://images.code.org/7373ad2ad98b0d815ce0b8196c2ec177-image-1446070324010.11.43 PM.png\" style=\"width: 250px; float:right\">\r\n\r\nWe're going to explore a new function called `includes`. This function can be used to check if one string appears anywhere inside of another. Just like `toUpperCase` and `toLowerCase` this function is called using **dot notation**.\r\n\r\n# Includes Returns a Boolean\r\n**`includes` is a function that returns a boolean.** In other words, when the function runs it will **evaulate to either `true` or `false`**. This function can be used **anywhere you would normally use a boolean expression**.\r\n\r\nYou've actually **seen a few functions that return a value before this**. `randomNumber` is a function that returns a number and `getText` is a function that returns a string. In every case we've used these functions **as if they were the data type they return (or evaulate to)**. Notice that in block mode these functions don't have the connectors that other commands do since they will be used as a piece of data within another function.\r\n\r\n# Do This\r\n\r\n* **Read the documentation** for `includes`\r\n* **Starter code** has been provided which shows one instance where a string does include a `searchValue` and one where it does not\r\n* **Replicate the style** of these commands to check the rest of questions provided\r\n* **Create three statements of your own using `includes`** making use of the `console.log` statements provided\r\n* **Once you're comfortable with this command move on**",
+    "start_blocks": "var colors = \"Red Orange Yellow Green Blue Purple\";\r\nvar numbers = \"123 456 789\";\r\n\r\nconsole.log(\"Colors includes Red: \" + colors.includes(\"Red\"));\r\nconsole.log(\"Colors includes red: \" + colors.includes(\"red\"));\r\nconsole.log(\"Colors includes low: \");\r\nconsole.log(\"Numbers includes 123: \");\r\nconsole.log(\"Numbers includes 9: \");\r\nconsole.log(\"Numbers includes 34: \");\r\n\r\n//Use these console.log statements to test out includes for yourself.\r\n\r\nconsole.log( );\r\nconsole.log( );\r\nconsole.log( );",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
+    "execute_palette_apis_only": "false",
     "encrypted_examples": [
 
-    ],
-    "project_template_level_name": "U3 - Movie Bot - Template",
-    "execute_palette_apis_only": "false"
+    ]
   }
 }]]></config>
   <blocks/>
