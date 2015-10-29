@@ -192,7 +192,7 @@ function runTestCollection (item) {
 
       // todo - maybe change the name of expected to make it clear what type of
       // test is being run, since we're using the same JSON files for these
-      // and our getMissingRequiredBlocks tests (and likely also other things
+      // and our getMissingBlocks tests (and likely also other things
       // in the future)
       if (testData.expected) {
         it(testData.description, function (done) {
