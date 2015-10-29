@@ -2912,8 +2912,6 @@ Studio.displaySprite = function(i, isWalking) {
     return;
   }
 
-  // if iceage, handle sprites differently
-
   var spriteRegularIcon = document.getElementById('sprite' + i);
   var spriteWalkIcon = document.getElementById('spriteWalk' + i);
 
@@ -4002,7 +4000,6 @@ Studio.setSprite = function (opts) {
 
   spriteIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.sprite);
   spriteIcon.setAttribute('width', sprite.drawWidth * spriteTotalFrames(spriteIndex));
-  //if extra emotions is a number
   var extraHeight = (sprite.frameCounts.extraEmotions || 0) * sprite.drawHeight;
   spriteIcon.setAttribute('height', sprite.drawHeight + extraHeight);
 
@@ -4014,7 +4011,6 @@ Studio.setSprite = function (opts) {
 
     spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.walk);
 
-    //if extraemotions is a number
     var extraWidth = (sprite.frameCounts.extraEmotions || 0) * sprite.drawWidth;
     spriteWalk.setAttribute('width', extraWidth + sprite.drawWidth * sprite.frameCounts.turns); // 800
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
