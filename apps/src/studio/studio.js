@@ -356,26 +356,43 @@ var drawMap = function () {
     numFrames = skin.animatedGoalFrames;
   }
 
+  // Calculate the dimensions of the spritesheet & the sprite itself that's rendered
+  // out of it.  Precedence order is skin.goalSpriteWidth/Height, goalOverride.imageWidth/Height, 
+  // and then Studio.MARKER_WIDTH/HEIGHT.
+  //
+  // Legacy levels might specify goalOverride.imageWidth/Height which are dimensions
+  // of the entire spritesheet, and rely upon studio's default MARKER_WIDTH/HEIGHT which
+  // are dimensions of the sprite itself.
+  // Newer levels might specify skin.goalSpriteWith/Height which are the dimensions of the
+  // sprite itself.  The dimensions of the spritesheet are calculated using skin.animatedGoalFrames.
+  // The fallback dimensions of both spritesheet and sprite are studio's default
+  // MARKER_WIDTH/HEIGHT.
+
+  var spritesheetWidth = skin.goalSpriteWidth ? (skin.goalSpriteWidth * numFrames) :
+    utils.valueOr(goalOverride.imageWidth, Studio.MARKER_WIDTH);
+  var spritesheetHeight = skin.goalSpriteHeight ? skin.goalSpriteHeight :
+    utils.valueOr(goalOverride.imageHeight, Studio.MARKER_HEIGHT);
+
+  var spriteWidth = utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH);
+  var spriteHeight = utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT);
+
   if (Studio.spriteGoals_) {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
       // Add finish markers.
-
-      var width = goalOverride.imageWidth || Studio.MARKER_WIDTH;
-      var height = goalOverride.imageHeight || Studio.MARKER_HEIGHT;
 
       var finishClipPath = document.createElementNS(SVG_NS, 'clipPath');
       finishClipPath.setAttribute('id', 'finishClipPath' + i);
       var finishClipRect = document.createElementNS(SVG_NS, 'rect');
       finishClipRect.setAttribute('id', 'finishClipRect' + i);
-      finishClipRect.setAttribute('width', width);
-      finishClipRect.setAttribute('height', height);
+      finishClipRect.setAttribute('width', spriteWidth);
+      finishClipRect.setAttribute('height', spriteHeight);
       finishClipPath.appendChild(finishClipRect);
       svg.appendChild(finishClipPath);
 
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
-      spriteFinishMarker.setAttribute('width', numFrames * width);
-      spriteFinishMarker.setAttribute('height', height);
+      spriteFinishMarker.setAttribute('width', spritesheetWidth);
+      spriteFinishMarker.setAttribute('height', spritesheetHeight);
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
       svg.appendChild(spriteFinishMarker);
     }
@@ -3109,7 +3126,7 @@ Studio.animateGoals = function() {
     elapsed = currentTime - Studio.startTime;
     numFrames = skin.animatedGoalFrames;
     frameDuration = skin.timePerGoalAnimationFrame;
-    frameWidth = level.goalOverride.imageWidth;
+    frameWidth = skin.goalSpriteWidth;
   }
 
   for (var i = 0; i < Studio.spriteGoals_.length; i++) {
@@ -4885,8 +4902,8 @@ Studio.allGoalsVisited = function() {
       if (skin.goalSuccess) {
         // Change the finish icon to goalSuccess.
         var successAsset = skin.goalSuccess;
-        if (level.goalOverride && level.goalOverride.success) {
-          successAsset = skin[level.goalOverride.success];
+        if (level.goalOverride && level.goalOverride.successImage) {
+          successAsset = skin[level.goalOverride.successImage];
         }
         var spriteFinishIcon = document.getElementById('spriteFinish' + i);
         spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
