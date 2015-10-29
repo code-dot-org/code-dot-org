@@ -87,17 +87,20 @@ class ApiControllerTest < ActionController::TestCase
         'stage' => 1,
         'puzzle' => 1,
         'question' => 'Text Match 1',
-        'response' => 'Here is the answer'},
+        'response' => 'Here is the answer',
+        'url' => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}"},
        {'student' => {'id' => @student_1.id, 'name' => @student_1.name},
         'stage' => 1,
         'puzzle' => 1,
         'question' => 'Text Match 2',
-        'response' => 'another answer'},
+        'response' => 'another answer',
+        'url' => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}"},
        {'student' => {'id' => @student_2.id, 'name' => @student_2.name},
         'stage' => 1,
         'puzzle' => 1,
         'question' => 'Text Match 1',
-        'response' => 'answer for student 2'}
+        'response' => 'answer for student 2',
+        'url' => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_2.id}"},
       ]
     assert_equal expected_response, JSON.parse(@response.body)
   end
