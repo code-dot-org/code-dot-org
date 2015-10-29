@@ -14,6 +14,7 @@
 'use strict';
 
 var utils = require('../utils');
+var _ = utils.getLodash();
 
 var debugLogging = false;
 function debug(msg) {
@@ -23,9 +24,21 @@ function debug(msg) {
 }
 
 /**
+ * @typedef {Object} MusicTrackDefinition
+ * External track representation, used to define track info in skins.js.
+ *
+ * @property {string} name - corresponds to music filenames
+ * @property {number} maxVolume - on a 0..1 scale
+ */
+
+/**
  * @typedef {Object} MusicTrack
+ * Internal track representation, includes track metadata and references to
+ * loaded sound object.
+ *
  * @property {string} name
  * @property {string[]} assetUrls
+ * @property {number} maxVolume
  * @property {Sound} sound
  * @property {boolean} isLoaded
  */
@@ -37,28 +50,28 @@ function debug(msg) {
  * @param {AudioPlayer} audioPlayer - Reference to the Sounds object.
  * @param {function} assetUrl - Function for generating paths to static assets
  *        for the current skin.
- * @param {string[]} [trackNames] - List of music asset names (sans
- *        extensions). Can be omitted if no music should be played.
+ * @param {MusicTrackDefinition[]} [trackDefinitions] - List of music assets and
+ *        general info about how they should be played. Can be omitted or empty
+ *        if no music should be played.
  * @constructor
  */
-var MusicController = function (audioPlayer, assetUrl, trackNames) {
+var MusicController = function (audioPlayer, assetUrl, trackDefinitions) {
   /** @private {AudioPlayer} */
   this.audioPlayer_ = audioPlayer;
 
   /** @private {function} */
   this.assetUrl_ = assetUrl;
 
-  /** @private {string[]} */
-  this.trackNames_ = trackNames || [];
-
-  /** @private {Object} maps trackName => MusicTrack */
-  this.tracks_ = buildTrackMap(this.trackNames_, assetUrl);
+  /** @private {MusicTrack[]} */
+  this.trackList_ = buildTrackData(trackDefinitions, assetUrl);
 
   /** @private {string} */
-  this.nowPlayingName_ = null;
+  this.nowPlaying_ = null;
 
+  /** @private {string} Name of track to play on load */
   this.playOnLoad_ = null;
 
+  // If the video player gets pulled up, make sure we stop the music.
   document.addEventListener('videoShown', function () {
     this.fadeOut();
   }.bind(this));
@@ -68,24 +81,22 @@ var MusicController = function (audioPlayer, assetUrl, trackNames) {
 module.exports = MusicController;
 
 /**
- * Build up an initial map of trackName -> MusicTrack object, without doing
- * any asset loading.
- * @param {string{}} trackNames
+ * Build up initial internal track metadata.
+ * @param {MusicTrackDefinition[]} trackDefinitions
  * @param {function} assetUrl
+ * @return {MusicTrack[]}
  */
-function buildTrackMap(trackNames, assetUrl) {
-  var tracks = trackNames.map(function (name) {
+function buildTrackData(trackDefinitions, assetUrl) {
+  trackDefinitions = utils.valueOr(trackDefinitions, []);
+  return trackDefinitions.map(function (trackDef) {
     return {
-      name: name,
-      assetUrls: [ assetUrl(name + '.mp3') ],
+      name: trackDef.name,
+      assetUrls: [ assetUrl(trackDef.name + '.mp3') ],
+      maxVolume: utils.valueOr(trackDef.maxVolume, 1),
       sound: null,
       isLoaded: false
     };
   });
-  return tracks.reduce(function (memo, next) {
-    memo[next.name] = next;
-    return memo;
-  }, {});
 }
 
 /**
@@ -96,17 +107,17 @@ MusicController.prototype.preload = function () {
     return;
   }
 
-  this.trackNames_.forEach(function (name) {
-    this.tracks_[name].sound = this.audioPlayer_.registerByFilenamesAndID(
-        this.tracks_[name].assetUrls, name);
-    this.tracks_[name].sound.onLoad = function () {
-      debug('done loading ' + name);
-      this.tracks_[name].isLoaded = true;
-      if (this.playOnLoad_ === name) {
-        this.play(name);
+  this.trackList_.forEach(function (track) {
+    track.sound = this.audioPlayer_.registerByFilenamesAndID(
+        track.assetUrls, track.name);
+    track.sound.onLoad = function () {
+      debug('done loading ' + track.name);
+      track.isLoaded = true;
+      if (this.playOnLoad_ === track.name) {
+        this.play(track.name);
       }
     }.bind(this);
-  }.bind(this));
+  }, this);
 };
 
 /**
@@ -119,24 +130,26 @@ MusicController.prototype.play = function (trackName) {
     return;
   }
 
-  if (!trackName) {
-    trackName = this.trackNames_[Math.floor(Math.random(this.trackNames_.length))];
+  var track;
+  if (trackName) {
+    track = this.getTrackByName_(trackName);
+  } else {
+    track = this.getRandomTrack_();
   }
 
-  var track = this.tracks_[trackName];
   if (!track) {
-    // Not found - throw exception?
+    // No track to play - throw an exception?
     return;
   }
 
   if (track.sound && track.isLoaded) {
     debug('playing now');
-    var callback = this.whenMusicStopped_.bind(this, trackName);
+    var callback = this.whenMusicStopped_.bind(this, track.name);
     track.sound.play({ onEnded: callback });
-    this.nowPlaying_ = trackName;
+    this.nowPlaying_ = track.name;
   } else {
     debug('not done loading, playing after load');
-    this.playOnLoad_ = trackName;
+    this.playOnLoad_ = track.name;
   }
 };
 
@@ -187,4 +200,23 @@ MusicController.prototype.whenMusicStopped_ = function (musicName) {
   if (this.nowPlaying_ === musicName) {
     this.nowPlaying_ = null;
   }
+};
+
+/**
+ * @param {string} name
+ * @returns {MusicTrack|undefined}
+ * @private
+ */
+MusicController.prototype.getTrackByName_ = function (name) {
+  return _.find(this.trackList_, function (track) {
+    return track.name === name;
+  });
+};
+
+/**
+ * @returns {MusicTrack|undefined}
+ * @private
+ */
+MusicController.prototype.getRandomTrack_ = function () {
+  return this.trackList_[Math.floor(Math.random(this.trackList_.length))];
 };

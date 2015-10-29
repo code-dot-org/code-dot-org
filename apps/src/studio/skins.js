@@ -492,7 +492,7 @@ function loadHoc2015(skin, assetUrl) {
     'move1', 'move2', 'move3'
   ];
 
-  skin.music = [ 'song1' ];
+  skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
@@ -679,7 +679,7 @@ function loadHoc2015x(skin, assetUrl) {
     'move1', 'move2', 'move3', 'move4'
   ];
 
-  skin.music = [ 'song1' ];
+  skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
@@ -711,6 +711,29 @@ function loadHoc2015x(skin, assetUrl) {
   skin.itemChoices = [
     ];
 }
+
+/**
+ * Music tracks and associated metadata for both hoc2015 and hoc2015x tutorials.
+ * Individual levels don't load all of these, only the subset they request.
+ * @const {MusicTrackDefinition[]}
+ */
+var HOC2015_MUSIC_METADATA = [
+  { name: 'song1', maxVolume: 1 },
+  { name: 'song2', maxVolume: 1 },
+  { name: 'song3', maxVolume: 1 },
+  { name: 'song4', maxVolume: 1 },
+  { name: 'song5', maxVolume: 1 },
+  { name: 'song6', maxVolume: 1 },
+  { name: 'song7', maxVolume: 1 },
+  { name: 'song8', maxVolume: 1 },
+  { name: 'song9', maxVolume: 1 },
+  { name: 'song10', maxVolume: 1 },
+  { name: 'song11', maxVolume: 1 },
+  { name: 'song12', maxVolume: 1 },
+  { name: 'song13', maxVolume: 1 },
+  { name: 'song14', maxVolume: 1 },
+  { name: 'song15', maxVolume: 1 }
+];
 
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
