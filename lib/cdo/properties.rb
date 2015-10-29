@@ -27,12 +27,12 @@ class Properties
   def self.get_user_metrics()
     self.get(:about_stats)||{
       # The percentage of users with user_type = 'student' and last_sign_in_at != null and
-      # gender != null that have gender = 'f'.
+      # gender != null that have gender = 'f' (circa Oct 2015).
       'percent_female'=>42,
       'number_served'=>119410701,
-      # The number of users with user_type = 'student' and last_sign_in_at != null.
+      # The number of users with user_type = 'student' and last_sign_in_at != null (circa Oct 2015).
       'number_students'=>5035892,
-      # The number of users with user_type = 'teacher' and last_sign_in_at != null.
+      # The number of users with user_type = 'teacher' and last_sign_in_at != null (circa Oct 2015).
       'number_teachers'=>178289
     }
   end
