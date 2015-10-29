@@ -2573,7 +2573,7 @@ levels.js_hoc2015_event_free = {
     'whenGetMynock': { 'category': 'Events' },
     'whenGetMouseDroid': { 'category': 'Events' },
     'whenGetTauntaun': { 'category': 'Events' },
-    'whenGetViperProbeDroid': { 'category': 'Events' },
+    'whenGetProbot': { 'category': 'Events' },
     'whenGetCharacter': { 'category': 'Events' },
 
     'whenGetAllStormtroopers': { 'category': 'Events' },
@@ -2582,7 +2582,7 @@ levels.js_hoc2015_event_free = {
     'whenGetAllMynocks': { 'category': 'Events' },
     'whenGetAllMouseDroids': { 'category': 'Events' },
     'whenGetAllTauntauns': { 'category': 'Events' },
-    'whenGetAllViperProbeDroids': { 'category': 'Events' },
+    'whenGetAllProbots': { 'category': 'Events' },
     'whenGetAllCharacters': { 'category': 'Events' }
   },
   'startBlocks': [
