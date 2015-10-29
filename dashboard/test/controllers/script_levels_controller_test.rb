@@ -79,6 +79,27 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal '<xml/>', app_options[:level]['startBlocks']
   end
 
+  test 'project template level sets start html' do
+    template_level = create :applab
+    template_level.start_html = '<div><label id="label1">expected html</label></div>'
+    template_level.save!
+
+    real_level = create :applab
+    real_level.project_template_level_name = template_level.name
+    real_level.start_html = '<div><label id="label1">wrong html</label></div>'
+    real_level.save!
+
+    sl = create :script_level, level: real_level
+    get :show, script_id: sl.script, stage_id: '1', id: '1'
+
+    assert_response :success
+    # start html comes from project_level not real_level
+    app_options = assigns(:level).blockly_options
+    assert_equal '<div><label id="label1">expected html</label></div>', app_options[:level]['startHtml']
+  end
+
+
+
   test 'project template level sets toolbox blocks' do
     template_level = create :level
     template_level.toolbox_blocks = '<xml><toolbox/></xml>'
