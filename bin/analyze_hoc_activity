@@ -1,13 +1,16 @@
 #!/usr/bin/env ruby
 #
-# This script analyzes the activity the is launched from code.org/learn. We track outgoing clicks,
+# This script analyzes the activity that is launched from code.org/learn. We track outgoing clicks,
 # hidden image calls at the beginning and end of [3rd party] tutorials, and visits to our finish
 # page.
 #
-# There is a lot of data so, for performance, the script caches the totals for each day and only
+# There is a lot of HOC data so, for performance, the script caches the totals for each day and only
 # performs analysis on the remaining days. Deleting the cached results is an effective way to do
 # a complete re-count. EXCEPT for HourOfActivity_Totals_2014-12-05.json which is a summary of all
 # results for the year leading up to 12/05/2014.
+#
+# This script also caches values for the "about_stats" key in the Properties table. Unlike the HOC
+# data, it is computed from scratch every time.
 #
 require File.expand_path('../../pegasus/src/env', __FILE__)
 require 'cdo/hip_chat'
@@ -172,15 +175,14 @@ def main()
     lines_of_code:            lines_of_code, #JSON.parse(Net::HTTP.get(URI('http://archive.learn.code.org/line_data.json')))['all'],
   }
 
-  total_females = DASHBOARD_DB[:users].where(gender: 'f').count;
-  total_males = DASHBOARD_DB[:users].where(gender: 'm').count;
-  total_with_gender = total_females + total_males
-  total_with_gender = 1 if total_with_gender == 0
+  total_females = DASHBOARD_DB[:users].where(gender: 'f').exclude(last_sign_in_at: nil).count
+  total_males = DASHBOARD_DB[:users].where(gender: 'm').exclude(last_sign_in_at: nil).count
+  total_with_gender = [1, total_females + total_males].max
 
   Properties.set :about_stats, {
     number_served: total_started,
-    number_students: DASHBOARD_DB[:users].where(user_type: 'student').count,
-    number_teachers: DASHBOARD_DB[:users].where(user_type: 'teacher').count,
+    number_students: DASHBOARD_DB[:users].where(user_type: 'student').exclude(last_sign_in_at: nil).count,
+    number_teachers: DASHBOARD_DB[:users].where(user_type: 'teacher').exclude(last_sign_in_at: nil).count,
     percent_female: ((100 * total_females) / total_with_gender).to_i,
   }
 end

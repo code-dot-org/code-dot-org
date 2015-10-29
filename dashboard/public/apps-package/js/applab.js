@@ -674,7 +674,7 @@ function renderFooterInSharedGame() {
     },
     {
       text: applabMsg.makeMyOwnApp(),
-      link: '/projects/applab',
+      link: '/projects/applab/new',
       hideOnMobile: true
     },
     {
@@ -1846,6 +1846,10 @@ Applab.maybeAddAssetPathPrefix = function (filename) {
   }
 
   filename = filename || '';
+  if (filename.length === 0) {
+    return '/blockly/media/1x1.gif';
+  }
+
   if (filename.indexOf('/') !== -1) {
     return filename;
   }
