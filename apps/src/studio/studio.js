@@ -1615,14 +1615,19 @@ Studio.init = function(config) {
     }
   });
 
+  var levelTracks = [];
+  if (level.music && skin.musicMetadata) {
+    levelTracks = skin.musicMetadata.filter(function(trackMetadata) {
+      return level.music.indexOf(trackMetadata.name) !== -1;
+    });
+  }
+
   /**
    * Helper that handles music loading/playing/crossfading for the level.
    * @type {MusicController}
    */
   Studio.musicController = new MusicController(
-      studioApp.cdoSounds,
-      skin.assetUrl,
-      utils.valueOr(level.music, skin.music));
+      studioApp.cdoSounds, skin.assetUrl, levelTracks);
 
   /**
    * Defines the set of possible movement sound effects for each playlab actor.
