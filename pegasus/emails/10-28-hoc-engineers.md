@@ -5,7 +5,7 @@ subject: Join our volunteers
 
 ### 13,000 teachers want technical volunteers to help with their Hour of Code in December.
 
-### Only 3,295 volunteers have signed up. Please join them.
+### Only 3,372 volunteers have signed up. Please join them.
 
 We’ve launched a new volunteer-match program to help teachers introduce students to their first Hour of Code during December 7-13. Our schools and teachers need you to help or inspire their students as they try computer science for the first time.
 
