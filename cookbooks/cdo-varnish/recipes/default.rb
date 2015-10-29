@@ -52,6 +52,14 @@ node.default['cdo-varnish']['config'] = HttpCache.config(node.chef_environment.t
 $node_env = node.chef_environment.to_s
 $node_name = node.name
 
+template '/etc/init.d/varnish' do
+  source 'init.sh.erb'
+  user 'root'
+  group 'root'
+  mode '0644'
+  notifies :restart, 'service[varnish]', :delayed
+end
+
 template '/etc/default/varnish' do
   source 'config.erb'
   user 'root'
