@@ -33,7 +33,12 @@
   hoc2014_everyone: Guztiok
   hoc2014_support: Babestu &#x25BE;
   hoc2014_whatishoc: Zer da kode ordua?
-  cded_sign_up: Sign up
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Leheneratu
+  cded_sign_up: Eman izena
   cded_try_it: Saiatu
   twentyhours_trynow: Saiatu orain
   california_heading: Eskatu zure eskolan konputazio zientziak irakasteko
@@ -127,6 +132,8 @@
   just_did_hoc: 'Oraintxe #KodeOrdua egin dut - Probatu! @codeorg'
   twitter_teach_cs: Zergatik ez dute ikastetxe gehiago informatika erakusten? Hau
     konpondu dezakegu. http://youtu.be/nKIu9yen5nc. Gehiago ikasteko ikusi http://code.org/.
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
   learn_hoc: Ikasi kode ordu bat
   beyond_hoc: Ordubetetik haratago
   what_gender: Neska ala mutila zara?
@@ -215,6 +222,8 @@
   homepage_action_text_signpetition: Sinatu eskaera
   homepage_signpetition_dropdown: Ados nago &#x25BE;
   homepage_diversity_pledge: Aniztasunarekin konpromisoa
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org eta the College Board elkartauta daude aniztasuna
     hobetzeko informatika munduan.
   homepage_banner_text_link: Ikasi gehiago
@@ -226,6 +235,7 @@
   homepage_slot_text_link_hoc: Probatu Kode Ordua
   homepage_slot_text_link_host: Bultzatu ezazu "kodigoaren ordua"
   homepage_slot_text_link_hocserved: '# served'
+  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Ikasleak
   homepage_slot_text_blurb_students: Aztertu gure gida-liburu guztiak
   homepage_slot_text_link_codestudio: Saiatu Code Studio-rekin
@@ -286,12 +296,25 @@
   class_submission_level_vocational: Bokazioanala
   class_submission_languages_other: Beste hizkuntza(k)
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} teachers have signed
-    up for the Hour of Code and would like a volunteer to help them.'
-  volunteer_engineer_submission_intro_paragraph: Please enter the following information
-    if you are a computer science student or software professional, and you’re interested
-    in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span>
-    are required.
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
+    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
+    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
+    have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
+    to try an hour introduction to computer science, reaching tens of millions of
+    students in 180+ countries. Please get involved during Computer Science Education
+    Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
+    who can help in the classroom, or for somebody who can <span style="font-family:
+    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
+    breadth of possibilities with computer science (which could be done through a
+    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
+    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_signup: Please enter the following information
+    if you are a computer science student or software professional. Fields marked
+    with a <span class="form-required-field">*</span> are required.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Izena
@@ -374,6 +397,7 @@
   dashboard_landing_progress_title: Main class progress
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
   dashboard_landing_view_progress: View Progress for %{biggest_section}
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Available courses
   dashboard_landing_available_courses: Here are the courses currently available for
     you and your students.
@@ -420,7 +444,7 @@
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: Loading...
-  dashboard_action_edit: Edit
+  dashboard_action_edit: Editatu
   dashboard_action_save: Save
   dashboard_action_save_all: Save all
   dashboard_action_cancel: Ezeztatu
@@ -585,7 +609,7 @@
   learn_more: Gehiago ikasi
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
-  learn_sign_up_button: Sign up
+  learn_sign_up_button: Eman izena
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how

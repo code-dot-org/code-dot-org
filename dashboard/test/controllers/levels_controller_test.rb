@@ -258,10 +258,14 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should load file contents when editing a dsl defined level" do
+    level_path = 'config/scripts/test_demo_level.external'
+    data, _ = External.parse_file level_path
+    External.setup data
+
     level = Level.find_by_name 'Test Demo Level'
     get :edit, id: level.id
 
-    assert_equal 'config/scripts/test_demo_level.external', assigns(:level).filename
+    assert_equal level_path, assigns(:level).filename
     assert_equal "name 'test demo level'", assigns(:level).dsl_text.split("\n").first
   end
 
@@ -279,6 +283,17 @@ class LevelsControllerTest < ActionController::TestCase
     patch :update, id: @level, level: {  }
     # Level update now uses AJAX callback, returns a 200 JSON response instead of redirect
     assert_response :success
+  end
+
+  test "update sends JSON::ParserError to user" do
+    level = create(:applab)
+    invalid_json = "{,}"
+    patch :update, id: level, level: {"code_functions" => invalid_json}
+    # Level update now uses AJAX callback, returns a 200 JSON response instead of redirect
+    assert_response :unprocessable_entity
+
+    expected = {'code_functions' => ["JSON::ParserError: 757: unexpected token at '{,}'"]}
+    assert_equal expected, JSON.parse(@response.body)
   end
 
   test "should destroy level" do

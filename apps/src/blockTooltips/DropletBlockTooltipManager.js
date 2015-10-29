@@ -13,6 +13,8 @@ var dom = require('../dom');
  */
 var DropletBlockTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.showExamplesLink = dropletTooltipManager.dropletConfig.showExamplesLink;
+  this.tooltipsEnabled = true;
 };
 
 var DEFAULT_TOOLTIP_CONFIG = {
@@ -44,6 +46,10 @@ DropletBlockTooltipManager.prototype.installTooltipsIfNotInstalled = function ()
 };
 
 DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = function () {
+  if (!this.tooltipsEnabled) {
+    return;
+  }
+
   $('.droplet-hover-div').each(function (_, blockHoverDiv) {
     if ($(blockHoverDiv).hasClass('tooltipstered')) {
       return;
@@ -61,6 +67,9 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = f
       content: this.getTooltipHTML(funcName),
       offsetX: tooltipOffsetX,
       functionReady: function (_, contents) {
+        if (!this.showExamplesLink) {
+          return;
+        }
         var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
         // Important this binds to mouseDown/touchDown rather than click, needs to
         // happen before `blur` which triggers the ace editor completer popup
@@ -72,6 +81,8 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = f
       }.bind(this)
     });
 
+    // Store the title/funcName as a block id so we can attach callouts later:
+    $(blockHoverDiv).attr('id', 'droplet_palette_block_' + funcName);
     $(blockHoverDiv).tooltipster(configuration);
   }.bind(this));
 };
@@ -96,8 +107,16 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
+    showExamplesLink: this.showExamplesLink
   });
+};
+
+/**
+ * @param {boolean} enabled if tooltips should be enabled
+ */
+
+DropletBlockTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
+  this.tooltipsEnabled = !!enabled;
 };
 
 module.exports = DropletBlockTooltipManager;

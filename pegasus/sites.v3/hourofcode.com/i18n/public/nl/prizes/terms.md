@@ -10,19 +10,15 @@ nav: prizes_nav
 
 # Prijzen - voorwaarden
 
-## Dropbox-ruimte of Skype-credit:
+## Amazon.com, iTunes and Windows Store credit:
 
-De 10GB Dropbox-ruimte of $10 Skype-credit zijn alleen beschikbaar voor staf van basis- en middelbare scholen, onderwijzers van naschoolse clubs en onderwijsinstellingen. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Beperkt tot één prijs per organisator. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Beperkt tot één prijs per organisator.
 
-Iedere organisator moet zich voor het Uur Code registreren om de Dropbox-ruimte of het Skype-credit te krijgen. Wanneer je hele school meedoet met het Uur Code, moet iedere onderwijzer individueel registeren als organisator om aanspraak te maken.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Wanneer je hele school meedoet met het Uur Code, moet iedere onderwijzer individueel registeren als organisator om aanspraak te maken.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
-
-## Video-chat met een gastspreker:
-
-Prijs beperkt tot K-12 klaslokalen in de VS en Canada alleen. To qualify, sign up your classroom by November 2, 2015. Code.org zal winnende scholen willekeurig selecteren, een timeslot kiezen voor de webchat, en samenwerken met de betreffende leraar om de technische details op te zetten. Niet uw hele school hoeft zich aan te melden om in aanmerking te komen voor deze prijs. Zowel de publieke als de particuliere scholen komen in aanmerking om te winnen.
 
 ## Laptops voor de hele klas (of $10.000 voor andere technologie):
 

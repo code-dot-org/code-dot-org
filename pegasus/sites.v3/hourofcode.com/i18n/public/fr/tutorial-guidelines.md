@@ -7,24 +7,24 @@ layout: wide
 
 <%= view :signup_button %>
 
-# Directives pour Hour of Code™ et Computer Science Education Week
+# Directives pour Hour of Code™ et la semaine de l'apprentissage des sciences informatiques
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
+Code.org hébergera de nombreuses d'activités Une Heure de Code sur les sites Code.org, Hour of Code et CSEdWeek. La liste actuelle est disponible sur [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
-Nous aimerions offrir un large panel d'ateliers attractifs, mais le but premier est d'offrir la meilleure approche pour les étudiants et les professeurs qui débutent en informatique. Veuillez utiliser ce guide pour la création de votre atelier, destiné aux usagers qui n'ont pas d'expérience en programmation ou informatique.
+Nous aimerions offrir un large panel d'ateliers attractifs, mais le but premier est d'offrir la meilleure approche pour les étudiants et les professeurs qui débutent en informatique. Veuillez utiliser ce guide pour la création de votre atelier, destiné à des personnes qui n'ont pas d'expérience en programmation ou en informatique.
 
   
 
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
+**Après avoir lu ces directives, vous pouvez soumettre votre tutoriel sur notre page de soumission d'activités [ Hour of Code ™](https://goo.gl/kNrV3l).**
 
-**NOUVEAU :** Contrairement à ces dernières années, nous pensons introduire un nouveau format pour les activités Hour of Code « dirigées par des enseignants ». Celles-ci seront listées en-dessous des activités autoguidées dans les pages et les courriels orienté étudiant. Details below.
+**NOUVEAU :** Contrairement aux années précédentes, nous pensons introduire un nouveau format pour les activités Une Heure de Code « dirigées par des enseignants ». Ceux-ci seront listés sous les activités autoguidées dans les pages et les courriels pour les étudiants. Détails ci-dessous.
 
 <a id="top"></a>
 
 ## Index :
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [Information sur la création d'une activité Une Heure de Code](#guidelines)
   * [Comment les tutoriels seront évalués avant d'être inclus](#inclusion)
   * [How to submit (Due 10/15/2015)](#submit)
   * [Suggestions pour construire votre activité](#design)
@@ -35,11 +35,11 @@ Nous aimerions offrir un large panel d'ateliers attractifs, mais le but premier 
 
 <a id="guidelines"></a>
 
-## New for 2015: two formats of activities: self-guided or *lesson-plan*
+## Nouveauté 2015 : deux formats d'activités : autoduidé ou *plan de cours*
 
-Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
+Maintenant que des dizaines de milliers d'éducateurs ont essayé Une Heure de Code, beaucoup de classes sont prêtes pour des activités plus créatives, moins uniforme qui permettent d'apprendre les rudiments de l'informatique. Pour aider les enseignants à trouver l'inspiration, nous aimerions recueillir et centraliser des leçons et des activités « dirigées par des enseignants » d'une heure pour les vétérans d'Une Heure de Code. Nous continuerons aussi à promouvoir le format "auto-guidé".
 
-**Submit a Teacher-Led Lesson Plan, ideally for different subject areas *(NEW)***: Do you have an engaging or unique idea for an Hour of Code lesson? Some educators may prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We would love to collect **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+**Soumettre un Plan de cours réalisé par des professeurs, idéalement pour différents domaines *(NOUVEAU)*** : avez-vous une idée motivante ou unique pour une leçon Une Heure de Code ? Certains éducateurs préfèrent organiser des activités Une Heure de Code qui suivent un format traditionnel plutôt qu'une expérience basée sur des énigmes et des jeux. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We would love to collect **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
 
 You can start with this [empty template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) for your lesson plan.
 

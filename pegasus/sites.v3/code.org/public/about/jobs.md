@@ -8,13 +8,8 @@ nav: about_nav
 **We are currently hiring for:**
 
 - [CS Curriculum Writer](#curric)
-- [Evaluation Manager](#Eval)
-- [Operations Coordinator  (Events) ](#opscoord)
+- [Engineering Manager / Chief Architect](#eng)
 - [Technical Product Manager](#techpm)
-
-**Internships at Code.org:**
-
-- [Education Team Intern/Part-Time Contractor](#edintern)
 
 **No current positions, but always accepting great resumes:**
 
@@ -58,58 +53,41 @@ Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code
 
 Please include lesson plan samples that are your original work, and highlight relevant experience designing, developing, or writing implement curricular materials. 
 
-
-## <a name="Eval"href="#Eval">Evaluation Manager (Seattle,WA or Chicago,IL preferred)</a>
+## <a name="eng" href="#eng">Engineering Manager / Chief Architect (Seattle, WA)</a>
 
 **Job Summary:**
 
-The Evaluation Manager plays a critical role in managing and directing the evaluation of Code.org programs including the relationship with Code.org’s external evaluator. Candidates considered for this role must have direct experience in evaluation of a high-scale K-12 educational program. Responsibilities of the position include:
+Code.org is recruiting for an experienced Head of Engineering / Chief Architect. Full-time, salaried. Responsibilities of the position include:
 
-- Collaborating with cross-organizational teams to develop a comprehensive organizational strategy for K-12 program evaluation and identify key programmatic and strategic questions for evaluation design
-- Advising the Education team on program improvements as a result of evaluation results
-Act as liaison between Code.org and all external evaluation projects and organizations
-- Developing evaluation reports, analyzing and summarizing key findings to share with internal and external parties (funders, districts, educators)
-- Designing and implementing data collection instruments to measure and improve the K-12 professional development programs and student learning outcomes, such as pre/post-tests, surveys, assessments, interview guides, and focus group protocols
-- Working closely with the Data Engineer to develop questions and reports for automation
-- Working closely with Code.org’s fundraising team to provide outcome information for proposal writing and author text for evaluation plans
-- Promoting a culture of reflection, learning, and data-based decision making among Code.org staff and affiliates
+- Partnering with the Head of Product/Marketing to build a curriculum platform that reaches tens of millions of students and hundreds of thousands of classrooms
+- Set architectural direction for how Code.org's web site, services, and tutorial platform is built, and be accountable for scalability + uptime
+- Manage the Code.org engineering team (team of 12+ software engineers)
+- Hiring, career development, and mentorship of new engineers
+
+
 
 **Skills and Qualifications:**
 
 The ideal candidate has the following qualifications:
 
-- A Bachelor’s degree (Master’s preferred) in Education or a related field that includes a background in research and evaluation, outcome measurement, or statistics; deep familiarity with computer science, math, or science K-12 evaluation strongly preferred. 
-- Minimum of 5 years of experience in formal K-12 program evaluation 
-- Professional demeanor, possessing excellent communication, organizational, project management and interpersonal skills
-- Must be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. 
-- A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must, especially spreadsheets.
+- Bachelor’s degree with a major in Computer Science
+- 10+ years as a software engineer or manager of software engineers
+- 5+ years as a manager of software engineers; past experience managing a team of at least 7 engineers
+- Full stack Web engineering experience, i.e. databases, application, front-end
+- DEEP knowledge and experience in either JavaScript OR Ruby
+- Experienced in what it takes to scale a large back-end; scalability, analytics, particularly the modern tools of the trade
+- Experience building and running a large scale consumer-focused Web service, with at least 1M users
+- Mobile development experience (iOS, Android) desired but not required
+- Experience in a fast growth start-up environment desired
+
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="opscoord" href="#opscoord">Operations Coordinator (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is looking for an Operations Coordinator to join Code.org’s operations team. Our operations team is responsible for the success of Code.org professional development events across the U.S. This is a full time, exempt position based in our Seattle office. Duties of this role include: 
-
-- Coordinating event logistics (dates, location, travel, accommodations, catering); acting as primary logistics point-of-contact
-- Drafting communications to stakeholders, responding to requests for information, distributing materials externally
-- Updating and managing event attendee lists
-- Utilizing our customer service system to respond to professional development questions from teachers in a timely manner
-- Attending and participating in meetings and recording notes/follow-up items, as appropriate
-- Special projects (perform research, prepare documentation, develop templates, etc.)
-
-
-**Skills and Qualifications:**
-
-We are looking for a self-starter, skilled in event planning, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
-
-The ideal candidate has the following qualifications:
-
-- Has a bachelors degree (Computer Science background/experience not required)
-- Ability to travel 20% time 
-
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="techpm"href="#techpm">Technical Product Manager (Seattle)</a>
 
@@ -135,45 +113,6 @@ The ideal candidate has the following qualifications:
 
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="edintern"href="#edinterncontractor">Education Team Intern/Part-Time Contractor (Seattle or Chicago, IL)</a>
-
-**Job Summary:**
-
-Code.org is looking for an intern/part-time contractor to work with and support the goals of Code.org’s Education team through the development of computer science curriculum. This person will work with a variety of program leaders across multiple projects, simultaneously performing a wide range of tasks. We need someone who has quick turnaround, is responsive, and can effectively organize their priorities and task list.
-
-Responsibilities of the position include: 
-
-- Working closely with the Education team to design, develop, write, and “go to market” with original curricular materials:
-	- lesson plans
-    - formative/summative assessments
-    - videos
-    - answer keys
-    - project exemplars 
-- using in-house content management tools to structure resources
-
-
-**Skills and Qualifications:**
-
-The ideal candidate has experience in computer science and a background or passion for education; has strong writing and communications skills; is a tech-savvy self-starter who is able to multi-task and excel under pressure. 
-
-The candidate should: 
-
-- Have basic to comprehensive knowledge of computer science 
-- Have prior curriculum writing experience / activity design 
-- Be proficient in working with Microsoft Office and Google Docs  
-- Be working toward or have obtained a Bachelor’s degree or higher in Education or Computer Science
-
-Additional preference for a candidate that: 
-
-- Has recent computer science or STEM teaching experience 
-- Has experience using the Understanding by Design curriculum framework  
-- Has experience/familiarity with the CS Principles Framework 
-- Experience/familiarity with Exploring Computer Science curriculum/PD 
-
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-Please include lesson plan samples that are your original work, and highlight relevant experience designing, developing, or writing implement curricular materials. 
 
 ## <a name="engineer" href="#engineer">Software Engineer (Seattle)</a>
 

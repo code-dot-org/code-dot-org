@@ -37,18 +37,18 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 
 ## 2. 여러분의 모든 학교에 Hour of Code 이벤트 행사를 열어달라고 요청하세요.
 
-[Send this email](<%= resolve_url('/resources/promote#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
 
 ## 3. 여러분의 직장 상사에게 함께 참여하도록 요청해 보세요.
 
-[Send this email](<%= resolve_url('/resources/promote#sample-emails') %>) to your manager or company's CEO.
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
 
 ## 4. Promote Hour of Code in your community
 
-[Recruit a local group](<%= resolve_url('/resources/promote#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/resources/promote') %>) for your own event.
+[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
 
-## 5. 지역 의원 등에게 Hour of Code 를 지원해달라고 요청하세요.
+## 5. 지역 의원들에게 Hour of Code 를 지원해달라고 요청하세요.
 
-[Send this email](<%= resolve_url('/resources/promote#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
 
 <%= view 'popup_window.js' %>

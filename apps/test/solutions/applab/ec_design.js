@@ -47,17 +47,16 @@ function assertPropertyRowExists(index, label, assert) {
 // We don't load our style sheets in mochaTests, so we instead depend
 // on checking classes.
 // An element will be set to opacity 0.3 if it has the class
-// design-mode-hidden and divApplab does not have the class
-// divApplabDesignMode
+// design-mode-hidden and divApplab is hidden
 var isFaded = function (selector) {
-  var element = $(selector);
-  return element.hasClass('design-mode-hidden') &&
-      $('#divApplab').hasClass('divApplabDesignMode');
+  var rootEl = $('#designModeViz');
+  var element = rootEl.find(selector);
+  return rootEl.is(':visible') && element.hasClass('design-mode-hidden');
 };
 var isHidden = function (selector) {
-  var element = $(selector);
-  return element.hasClass('design-mode-hidden') &&
-      !$('#divApplab').hasClass('divApplabDesignMode');
+  var rootEl = $('#divApplab');
+  var element = rootEl.find(selector);
+  return rootEl.is(':visible') && element.hasClass('design-mode-hidden');
 };
 
 module.exports = {
@@ -86,7 +85,7 @@ module.exports = {
           target: { value: assetUrl }
         });
 
-        var buttonElement = $("#button1")[0];
+        var buttonElement = $("#design_button1")[0];
 
         // wait until image has loaded to do validation
         var img = new Image();
@@ -123,10 +122,11 @@ module.exports = {
         var shouldBeResizable = function () {
           var rootDiv, screen1, resizable, button;
 
-          rootDiv = $('#divApplab');
+          rootDiv = $('#designModeViz');
+          assert.equal(rootDiv.is(':visible'), true, 'designModeViz is visible');
           assert.equal(rootDiv.children().length, 1);
           screen1 = rootDiv.children().first();
-          assert.equal(screen1.attr('id'), 'screen1');
+          assert.equal(screen1.attr('id'), 'design_screen1');
           assert.equal(screen1.children().length, 1);
           resizable = screen1.children().first();
           assert.equal(resizable.hasClass('ui-resizable'), true, 'is resizable');
@@ -146,6 +146,7 @@ module.exports = {
           var rootDiv, screen1, resizable, button;
 
           rootDiv = $('#divApplab');
+          assert.equal(rootDiv.is(':visible'), true, 'divApplab is visible');
           assert.equal(rootDiv.children().length, 1);
           screen1 = rootDiv.children().first();
           assert.equal(screen1.attr('id'), 'screen1');
@@ -192,32 +193,32 @@ module.exports = {
         assertPropertyRowValue(0, 'id', 'button1', assert);
         var toggleHidden = $('.custom-checkbox')[0];
 
-        assert.equal(isFaded('#button1'), false);
+        assert.equal(isFaded('#design_button1'), false);
         assert.equal(isHidden('#button1'), false);
 
         ReactTestUtils.Simulate.click(toggleHidden);
 
         assert.equal($(toggleHidden).hasClass('fa-check-square-o'), true);
-        assert.equal(isFaded('#button1'), true);
+        assert.equal(isFaded('#design_button1'), true);
         assert.equal(isHidden('#button1'), false);
 
         // Enter code mode
         $("#codeModeButton").click();
-        assert.equal(isFaded('#button1'), false);
+        assert.equal(isFaded('#design_button1'), false);
         assert.equal(isHidden('#button1'), true);
 
         // Back to design mode
         $("#designModeButton").click();
-        assert.equal(isFaded('#button1'), true);
+        assert.equal(isFaded('#design_button1'), true);
         assert.equal(isHidden('#button1'), false);
 
         // Enter run mode
         $("#runButton").click();
-        assert.equal(isFaded('#button1'), false);
+        assert.equal(isFaded('#design_button1'), false);
         assert.equal(isHidden('#button1'), true);
 
         $("#resetButton").click();
-        assert.equal(isFaded('#button1'), true);
+        assert.equal(isFaded('#design_button1'), true);
         assert.equal(isHidden('#button1'), false);
 
         Applab.onPuzzleComplete();
@@ -239,7 +240,34 @@ module.exports = {
           $("#designModeButton").click();
 
           assert.equal($('#my_button').length, 0, 'API created element should be gone');
+          assert.equal($('#design_my_button').length, 0, 'API created element should not appear in design mode');
+          assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible when designing');
 
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "design mode box dims when running in design mode",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        $("#designModeButton").click();
+        assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible when designing');
+
+        $("#runButton").click();
+        assert.equal($('#design-mode-dimmed').length, 1, 'transparency layer visible when running in design mode');
+
+        $("#resetButton").click();
+        assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible after resetting');
+
+        testUtils.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -261,8 +289,8 @@ module.exports = {
 
         // Add a chart
         testUtils.dragToVisualization('CHART', 0, 0);
-        var divApplab = $('#divApplab');
-        var newChart = divApplab.find('.chart');
+        var designModeViz = $('#designModeViz');
+        var newChart = designModeViz.find('.chart');
         assert.equal(newChart.length, 1);
 
         // Validate property rows and some default values
@@ -283,21 +311,21 @@ module.exports = {
 
         // Hide/show the chart
         var toggleHidden = $('.custom-checkbox')[0];
-        assert.isFalse(isFaded('#chart1'));
+        assert.isFalse(isFaded('#design_chart1'));
         assert.isFalse(isHidden('#chart1'));
 
         ReactTestUtils.Simulate.click(toggleHidden);
-        assert.isTrue(isFaded('#chart1'));
+        assert.isTrue(isFaded('#design_chart1'));
         assert.isFalse(isHidden('#chart1'));
 
         ReactTestUtils.Simulate.click(toggleHidden);
-        assert.isFalse(isFaded('#chart1'));
+        assert.isFalse(isFaded('#design_chart1'));
         assert.isFalse(isHidden('#chart1'));
 
         // Delete the chart
         var deleteButton = $('#designWorkspaceBody').find('button:contains(Delete)')[0];
         ReactTestUtils.Simulate.click(deleteButton);
-        assert.equal(divApplab.find('.chart').length, 0);
+        assert.equal(designModeViz.find('.chart').length, 0);
 
         Applab.onPuzzleComplete();
       },

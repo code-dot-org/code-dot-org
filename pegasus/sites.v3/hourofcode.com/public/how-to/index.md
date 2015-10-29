@@ -8,7 +8,7 @@ nav: how_to_nav
 
 ## 1) Sign up
 - Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
-- Promote your [Hour of Code](<%= resolve_url('/resources') %>) and encourage others to host.
+- Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
 
 ## 2) Watch this how-to video
 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
@@ -48,7 +48,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - As a class, list things that use code in everyday life.
-- See tips for getting girls interested in computer science <a href="<%= resolve_url('https://code.org/girls') %>">here</a>.
+- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 **Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
@@ -90,7 +90,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 	
 ## 7) Celebrate
 - [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
-- [Print "I did an Hour of Code!"](<%= resolve_url('/resources/promote#stickers') %>) stickers for your students.
+- [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]

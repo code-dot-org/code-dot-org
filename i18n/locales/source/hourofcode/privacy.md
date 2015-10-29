@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 ---
-### The binding legal language is in EN, and can be found <a href='https://code.org/privacy'>here</a>. Below is a translation.
+### The binding legal language is in English, and can be found <a href='https://code.org/privacy'>here</a>. Below is a translation.
 
 # Privacy Policy
 Date of Last Revision: August 3, 2015 
@@ -222,4 +222,4 @@ Please contact Code.org with any questions or comments about this Privacy Notice
 <br />
 <br />
 <br />
-[![image](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![image](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

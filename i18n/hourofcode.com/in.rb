@@ -15,7 +15,7 @@ loc_dir = "../locales/source/hourofcode"
 orig_file = "../../pegasus/sites.v3/code.org/public/privacy.md"
 FileUtils.cp(orig_file, loc_dir)
 
-header = "---\ntitle: Privacy Policy\n---\n### The binding legal language is in EN, and can be found <a href='https://code.org/privacy'>here</a>. Below is a translation.\n"
+header = "---\ntitle: Privacy Policy\n---\n### The binding legal language is in English, and can be found <a href='https://code.org/privacy'>here</a>. Below is a translation.\n"
 Dir.glob("../locales/source/hourofcode/privacy.md").each do |file|
   File.write(file, File.read(file).gsub(/---\ntitle: Privacy Policy\n---\n/m, ""))
   File.write(file, header + File.read(file))

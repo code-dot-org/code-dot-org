@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,9 +126,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "Print the sentence using the first JSON object in the array\r\n\r\n",
     "markdown_instructions": "Print the sentence using the first JSON object in the array.\r\n\r\n** Hint: ** Delete the for loop - dont forget the closing brace! See what happens.",

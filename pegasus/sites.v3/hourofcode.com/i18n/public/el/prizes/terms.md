@@ -10,19 +10,15 @@ nav: prizes_nav
 
 # Δώρα - όροι και προϋποθέσεις
 
-## Χώρος στο Dropbox ή μονάδες Skype:
+## Amazon.com, iTunes and Windows Store credit:
 
-Τα 10GB χώρου στο Dropbox ή τα 10$ μονάδων στο Skype προσφέρονται σε σχολεία πρωτοβάθμιας εκπαίδευσης (K-12), τμήματα που λειτούργησαν εκτός του σχολικού ωραρίου, και εκπαιδευτικούς οργανισμούς. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Υπάρχει περιορισμός ενός δώρου ανα διοργανωτή. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Υπάρχει περιορισμός ενός δώρου ανα διοργανωτή.
 
-Κάθε διοργανωτής πρέπει πρώτα να εγγραφεί στην Ώρα του Κώδικα για να μπορέσει να λάβει το δώρο του από το Dropbox ή το Skype. Εάν όλο το σχολείο συμμετάσχει στην Ώρα του Κώδικα, τότε κάθε εκπαιδευτικός που συμμετείχε πρέπει να εγγραφεί για να αποκτήσει δικαίωμα στα δώρα.
+Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Εάν όλο το σχολείο συμμετάσχει στην Ώρα του Κώδικα, τότε κάθε εκπαιδευτικός που συμμετείχε πρέπει να εγγραφεί για να αποκτήσει δικαίωμα στα δώρα.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
 
 <% if @country == 'us' %>
-
-## Βίνετο συνομιλία με διακεκριμένο ομιλητή:
-
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Φορητοί υπολογιστές (ή 10.000$ για άλλο τεχνολογικό εξοπλισμό):
 

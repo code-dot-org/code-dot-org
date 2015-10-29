@@ -12,6 +12,8 @@ var dom = require('../dom');
  */
 var DropletAutocompletePopupTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.showExamplesLink = dropletTooltipManager.dropletConfig.showExamplesLink;
+  this.tooltipsEnabled = true;
 };
 
 var DEFAULT_TOOLTIP_CONFIG = {
@@ -74,7 +76,7 @@ DropletAutocompletePopupTooltipManager.prototype.setupForEditorPopup_ = function
 };
 
 DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip = function (aceEditor) {
-  if (!aceEditor.completer.completions) {
+  if (!this.tooltipsEnabled || !aceEditor.completer.completions) {
     return;
   }
 
@@ -101,6 +103,9 @@ DropletAutocompletePopupTooltipManager.prototype.attachTooltipForFunction = func
   var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
     content: tooltipDOM,
     functionReady: function (_, contents) {
+      if (!this.showExamplesLink) {
+        return;
+      }
       var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
       // Important this binds to mouseDown/touchDown rather than click, needs to
       // happen before `blur` which triggers the ace editor completer popup
@@ -131,9 +136,17 @@ DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (func
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
+    showExamplesLink: this.showExamplesLink
   });
   return dropletFunctionTooltipMarkup;
+};
+
+/**
+ * @param {boolean} enabled if tooltips are enabled
+ */
+
+DropletAutocompletePopupTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
+  this.tooltipsEnabled = !!enabled;
 };
 
 module.exports = DropletAutocompletePopupTooltipManager;

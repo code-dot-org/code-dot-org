@@ -23,7 +23,7 @@ var LabelProperties = React.createClass({
       <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true} />
         <PropertyRow
@@ -91,7 +91,7 @@ var LabelEvents = React.createClass({
   },
 
   getClickEventCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
       '  console.log("' + id + ' clicked!");\n' +
@@ -112,7 +112,7 @@ var LabelEvents = React.createClass({
       <div id='eventRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
         <EventHeaderRow/>
@@ -138,8 +138,9 @@ module.exports = {
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
     element.textContent = 'text';
-    element.style.color = '#000000';
+    element.style.color = '#333333';
     element.style.backgroundColor = '';
+    element.style.maxWidth = Applab.appWidth + 'px';
 
     this.resizeToFitText(element);
     return element;
@@ -150,13 +151,15 @@ module.exports = {
       position: 'absolute',
       visibility: 'hidden',
       width: 'auto',
-      height: 'auto'
+      height: 'auto',
+      maxWidth: (Applab.appWidth - parseInt(element.style.left, 10)) + 'px',
     }).appendTo($(document.body));
 
     var padding = parseInt(element.style.padding, 10);
 
     if ($(element).data('lock-width') !== PropertyRow.LockState.LOCKED) {
-      element.style.width = clone.width() + 1 + 2 * padding + 'px';
+      //Truncate the width before it runs off the edge of the screen
+      element.style.width = Math.min(clone.width() + 1 + 2 * padding, Applab.appWidth - clone.position().left) + 'px';
     }
     if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
       element.style.height = clone.height() + 1 + 2 * padding + 'px';

@@ -2,58 +2,123 @@ var msg = require('./locale');
 var api = require('./apiJavascript.js');
 
 module.exports.blocks = [
-  {func: 'setCharacter', parent: api, category: '', params: ['"character1"'], dropdown: { 0: [ '"character1"', '"character2"' ] } },
-  {func: 'setCharacterSpeed', parent: api, category: '', params: ["8"], dropdown: { 0: [ "2", "3", "5", "8", "12" ] } },
-  {func: 'setBackground', parent: api, category: '', params: ['"background3"'], dropdown: { 0: [ '"background1"', '"background2"', '"background3"' ] } },
-  {func: 'setWalls', parent: api, category: '', params: ['"blank"'], dropdown: { 0: [ '"blank"', '"circle"', '"circle2"', '"horizontal"', '"grid"', '"blobs"'] } },
-  {func: 'moveEast', parent: api, category: '', },
-  {func: 'moveWest', parent: api, category: '', },
-  {func: 'moveNorth', parent: api, category: '', },
-  {func: 'moveSouth', parent: api, category: '', },
-  {func: 'playSound', parent: api, category: '', params: ['"slap"'], dropdown: { 0: [ '"hit"', '"wood"', '"retro"', '"slap"', '"rubber"', '"crunch"', '"winpoint"', '"winpoint2"', '"losepoint"', '"losepoint2"', '"goal1"', '"goal2"' ] } },
+  {func: 'setBot', parent: api, category: '', params: ['"bot1"'], dropdown: { 0: [ '"random"', '"bot1"', '"bot2"' ] } },
+  {func: 'setBotSpeed', parent: api, category: '', params: ['"fast"'], dropdown: { 0: [ '"random"', '"slow"', '"normal"', '"fast"' ] } },
+  {func: 'setBackground', parent: api, category: '', params: ['"snow"'], dropdown: { 0: [ '"random"', '"forest"', '"snow"', '"ship"' ] } },
+  {func: 'setMap', parent: api, category: '', params: ['"blank"'], dropdown: { 0: [ '"random"', '"blank"', '"circle"', '"horizontal"', '"grid"', '"blobs"'] } },
+  {func: 'moveRight', parent: api, category: '', },
+  {func: 'moveLeft', parent: api, category: '', },
+  {func: 'moveUp', parent: api, category: '', },
+  {func: 'moveDown', parent: api, category: '', },
+  {func: 'goRight', parent: api, category: '', },
+  {func: 'goLeft', parent: api, category: '', },
+  {func: 'goUp', parent: api, category: '', },
+  {func: 'goDown', parent: api, category: '', },
+  {func: 'playSound', parent: api, category: '', params: ['"character1sound1"'],
+    dropdown: { 0: [
+      '"random"',
+      '"character1sound1"', '"character1sound2"', '"character1sound3"', '"character1sound4"',
+      '"character1sound5"', '"character1sound6"', '"character1sound7"', '"character1sound8"',
+      '"character1sound9"',
+      '"character2sound1"', '"character2sound2"', '"character2sound3"', '"character2sound4"',
+      '"item1sound1"', '"item1sound2"', '"item1sound3"', '"item1sound4"',
+      '"item3sound1"', '"item3sound2"', '"item3sound3"', '"item3sound4"',
+      '"item4sound1"', '"item4sound2"', '"item4sound3"',
+      '"item5sound1"', '"item5sound2"', '"item5sound3"',
+      '"item6sound1"', '"item6sound2"', '"item6sound3"',
+      '"alert1"', '"alert2"', '"alert3"', '"alert4"',
+      '"applause"'
+      ] } },
+
+  {func: 'endGame', parent: api, category: '', params: ['"win"'], dropdown: { 0: ['"win"', '"lose"' ] } },
+  {func: 'addPoints', parent: api, category: '', params: ["100"] },
+  {func: 'removePoints', parent: api, category: '', params: ["100"] },
   {func: 'changeScore', parent: api, category: '', params: ["1"] },
-  {func: 'addItemsToScene', parent: api, category: '', params: ['"item_walk_item4"', "5"], dropdown: { 0: [ '"item_walk_item1"', '"item_walk_item2"', '"item_walk_item3"', '"item_walk_item4"', '"item_walk_item5"', '"item_walk_item6"' ] } },
-  {func: 'setItemActivity', parent: api, category: '', params: ['"item_walk_item4"', '"chase"'], dropdown: { 0: [ '"item_walk_item1"', '"item_walk_item2"', '"item_walk_item3"', '"item_walk_item4"', '"item_walk_item5"', '"item_walk_item6"' ], 1: [ '"chase"', '"flee"', '"patrol"', '"none"' ] } },
-  {func: 'setItemSpeed', parent: api, category: '', params: ['"item_walk_item4"', "5"], dropdown: { 0: [ '"item_walk_item1"', '"item_walk_item2"', '"item_walk_item3"', '"item_walk_item4"', '"item_walk_item5"', '"item_walk_item6"' ], 1: [ "2", "3", "5", "8", "12" ] } },
+  {func: 'addCharacter', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
+  {func: 'setToChase', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
+  {func: 'setToFlee', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
+  {func: 'setToRoam', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
+  {func: 'setToStop', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
+  {func: 'moveFast', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
+  {func: 'moveNormal', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
+  {func: 'moveSlow', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
+
+  {func: 'whenTouchGoal', block: 'function whenTouchGoal() {}', expansion: 'function whenTouchGoal() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllGoals', block: 'function whenTouchAllGoals() {}', expansion: 'function whenTouchAllGoals() {\n  __;\n}', category: '' },
+  {func: 'whenScore1000', block: 'function whenScore1000() {}', expansion: 'function whenScore1000() {\n  __;\n}', category: '' },
+
   {func: 'whenLeft', block: 'function whenLeft() {}', expansion: 'function whenLeft() {\n  __;\n}', category: '' },
   {func: 'whenRight', block: 'function whenRight() {}', expansion: 'function whenRight() {\n  __;\n}', category: '' },
   {func: 'whenUp', block: 'function whenUp() {}', expansion: 'function whenUp() {\n  __;\n}', category: '' },
   {func: 'whenDown', block: 'function whenDown() {}', expansion: 'function whenDown() {\n  __;\n}', category: '' },
-  {func: 'whenTouchWall', block: 'function whenTouchWall() {}', expansion: 'function whenTouchWall() {\n  __;\n}', category: '' },
-  {func: 'whenTouchItem', block: 'function whenTouchItem() {}', expansion: 'function whenTouchItem() {\n  __;\n}', category: '' },
-  {func: 'whenTouchWalkItem1', block: 'function whenTouchWalkItem1() {}', expansion: 'function whenTouchWalkItem1() {\n  __;\n}', category: '' },
-  {func: 'whenTouchWalkItem2', block: 'function whenTouchWalkItem2() {}', expansion: 'function whenTouchWalkItem2() {\n  __;\n}', category: '' },
-  {func: 'whenTouchWalkItem3', block: 'function whenTouchWalkItem3() {}', expansion: 'function whenTouchWalkItem3() {\n  __;\n}', category: '' },
-  {func: 'whenTouchWalkItem4', block: 'function whenTouchWalkItem4() {}', expansion: 'function whenTouchWalkItem4() {\n  __;\n}', category: '' },
+  {func: 'whenTouchObstacle', block: 'function whenTouchObstacle() {}', expansion: 'function whenTouchObstacle() {\n  __;\n}', category: '' },
+
+  {func: 'whenGetCharacter', block: 'function whenGetCharacter() {}', expansion: 'function whenGetCharacter() {\n  __;\n}', category: '' },
+  {func: 'whenTouchCharacter', block: 'function whenTouchCharacter() {}', expansion: 'function whenTouchCharacter() {\n  __;\n}', category: '' },
+
+  {func: 'whenGetMan', block: 'function whenGetMan() {}', expansion: 'function whenGetMan() {\n  __;\n}', category: '' },
+  {func: 'whenGetPilot', block: 'function whenGetPilot() {}', expansion: 'function whenGetPilot() {\n  __;\n}', category: '' },
+  {func: 'whenGetPig', block: 'function whenGetPig() {}', expansion: 'function whenGetPig() {\n  __;\n}', category: '' },
+  {func: 'whenGetBird', block: 'function whenGetBird() {}', expansion: 'function whenGetBird() {\n  __;\n}', category: '' },
+  {func: 'whenGetMouse', block: 'function whenGetMouse() {}', expansion: 'function whenGetMouse() {\n  __;\n}', category: '' },
+  {func: 'whenGetRoo', block: 'function whenGetRoo() {}', expansion: 'function whenGetRoo() {\n  __;\n}', category: '' },
+  {func: 'whenGetSpider', block: 'function whenGetSpider() {}', expansion: 'function whenGetSpider() {\n  __;\n}', category: '' },
+
+  {func: 'whenTouchMan', block: 'function whenTouchMan() {}', expansion: 'function whenTouchMan() {\n  __;\n}', category: '' },
+  {func: 'whenTouchPilot', block: 'function whenTouchPilot() {}', expansion: 'function whenTouchPilot() {\n  __;\n}', category: '' },
+  {func: 'whenTouchPig', block: 'function whenTouchPig() {}', expansion: 'function whenTouchPig() {\n  __;\n}', category: '' },
+  {func: 'whenTouchBird', block: 'function whenTouchBird() {}', expansion: 'function whenTouchBird() {\n  __;\n}', category: '' },
+  {func: 'whenTouchMouse', block: 'function whenTouchMouse() {}', expansion: 'function whenTouchMouse() {\n  __;\n}', category: '' },
+  {func: 'whenTouchRoo', block: 'function whenTouchRoo() {}', expansion: 'function whenTouchRoo() {\n  __;\n}', category: '' },
+  {func: 'whenTouchSpider', block: 'function whenTouchSpider() {}', expansion: 'function whenTouchSpider() {\n  __;\n}', category: '' },
+
+  {func: 'whenTouchAllCharacters', block: 'function whenTouchAllCharacters() {}', expansion: 'function whenTouchAllCharacters() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
+
+  {func: 'whenGetAllMen', block: 'function whenGetAllMen() {}', expansion: 'function whenGetAllMen() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllPilots', block: 'function whenGetAllPilots() {}', expansion: 'function whenGetAllPilots() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllPigs', block: 'function whenGetAllPigs() {}', expansion: 'function whenGetAllPigs() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllBirds', block: 'function whenGetAllBirds() {}', expansion: 'function whenGetAllBirds() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllMice', block: 'function whenGetAllMice() {}', expansion: 'function whenGetAllMice() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllRoos', block: 'function whenGetAllRoos() {}', expansion: 'function whenGetAllRoos() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllSpiders', block: 'function whenGetAllSpiders() {}', expansion: 'function whenGetAllSpiders() {\n  __;\n}', category: '' },
+
+  {func: 'whenTouchAllMen', block: 'function whenTouchAllMen() {}', expansion: 'function whenTouchAllMen() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllPilots', block: 'function whenTouchAllPilots() {}', expansion: 'function whenTouchAllPilots() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllPigs', block: 'function whenTouchAllPigs() {}', expansion: 'function whenTouchAllPigs() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllBirds', block: 'function whenTouchAllBirds() {}', expansion: 'function whenTouchAllBirds() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllMice', block: 'function whenTouchAllMice() {}', expansion: 'function whenTouchAllMice() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllRoos', block: 'function whenTouchAllRoos() {}', expansion: 'function whenTouchAllRoos() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllSpiders', block: 'function whenTouchAllSpiders() {}', expansion: 'function whenTouchAllSpiders() {\n  __;\n}', category: '' },
 
   // Functions hidden from autocomplete - not used in hoc2015:
-  {func: 'setSprite', parent: api, category: '', params: ['0', '"character1"'], dropdown: { 1: [ '"character1"', '"character2"' ] } },
-  {func: 'setSpritePosition', parent: api, category: '', params: ["0", "7"], 'noAutocomplete': true },
-  {func: 'setSpriteSpeed', parent: api, category: '', params: ["0", "8"], 'noAutocomplete': true },
-  {func: 'setSpriteEmotion', parent: api, category: '', params: ["0", "1"], 'noAutocomplete': true },
-  {func: 'throwProjectile', parent: api, category: '', params: ["0", "1", '"blue_fireball"'], 'noAutocomplete': true },
-  {func: 'vanish', parent: api, category: '', params: ["0"], 'noAutocomplete': true },
-  {func: 'move', parent: api, category: '', params: ["0", "1"], 'noAutocomplete': true },
-  {func: 'showDebugInfo', parent: api, category: '', params: ["false"], 'noAutocomplete': true },
-  {func: 'onEvent', parent: api, category: '', params: ["'when-left'", "function() {\n  \n}"], 'noAutocomplete': true },
+  {func: 'setSprite', parent: api, category: '', params: ['0', '"bot1"'], dropdown: { 1: [ '"random"', '"bot1"', '"bot2"' ] } },
+  {func: 'setSpritePosition', parent: api, category: '', params: ["0", "7"], noAutocomplete: true },
+  {func: 'setSpriteSpeed', parent: api, category: '', params: ["0", "8"], noAutocomplete: true },
+  {func: 'setSpriteEmotion', parent: api, category: '', params: ["0", "1"], noAutocomplete: true },
+  {func: 'throwProjectile', parent: api, category: '', params: ["0", "1", '"blue_fireball"'], noAutocomplete: true },
+  {func: 'vanish', parent: api, category: '', params: ["0"], noAutocomplete: true },
+  {func: 'move', parent: api, category: '', params: ["0", "1"], noAutocomplete: true },
+  {func: 'showDebugInfo', parent: api, category: '', params: ["false"], noAutocomplete: true },
+  {func: 'onEvent', parent: api, category: '', params: ["'when-left'", "function() {\n  \n}"], noAutocomplete: true },
 ];
 
 module.exports.categories = {
   '': {
-    'color': 'red',
-    'blocks': []
+    color: 'red',
+    blocks: []
   },
   'Play Lab': {
-    'color': 'red',
-    'blocks': []
+    color: 'red',
+    blocks: []
   },
-  'Commands': {
-    'color': 'red',
-    'blocks': []
+  Commands: {
+    color: 'red',
+    blocks: []
   },
-  'Events': {
-    'color': 'green',
-    'blocks': []
+  Events: {
+    color: 'green',
+    blocks: []
   },
 };
 

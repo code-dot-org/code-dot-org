@@ -33,6 +33,10 @@
     overflow: hidden;
   }
 
+  div[contenteditable=true] {
+    overflow: auto;
+  }
+
   button {
     padding: 7px 12px;
     margin: 2px;
@@ -60,7 +64,7 @@
   }
 }
 
-#divApplab.divApplabDesignMode, .draggingParent {
+#designModeViz, .draggingParent {
 
   canvas {
     background-color: #eee;

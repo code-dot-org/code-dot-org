@@ -6,6 +6,7 @@ FactoryGirl.define do
     locale 'en-US'
     sequence(:name) { |n| "User#{n} Codeberg" }
     user_type User::TYPE_STUDENT
+    confirmed_at Time.now
 
     # Child of :user factory, since it's in the `factory :user` block
     factory :admin do
@@ -100,6 +101,11 @@ FactoryGirl.define do
   factory :match, :parent => Level, :class => Match do
     game {create(:game, app: "match")}
     properties{{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text: 'test'}], options: {hide_submit: false}}}
+  end
+
+  factory :text_match, :parent => Level, :class => TextMatch do
+    game {create(:game, app: "textmatch")}
+    properties{{title: 'title', questions: [{text: 'test'}], options: {hide_submit: false}}}
   end
 
   factory :artist, :parent => Level, :class => Artist do
@@ -250,7 +256,7 @@ FactoryGirl.define do
   end
 
   factory :workshop do
-    name 'My Workshop'
+    sequence(:name) { |n| "My Workshop #{n}" }
     program_type '1'
     location 'Somewhere, USA'
     instructions 'Test workshop instructions.'

@@ -32,18 +32,18 @@ Fortell vennene dine om #Kodetimen.
 
 ## 2. Spør hele skolen din om å tilby en Kodetime
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your principal.
+[Send this email](<%= resolve_url('/promote/resources#email') %>) to your principal.
 
 ## 3. Spør arbeidsgiveren din om å bidra
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your manager, or the CEO.
+[Send this email](<%= resolve_url('/promote/resources#email') %>) to your manager, or the CEO.
 
 ## 4. Reklamer for Hour of Code i nærmiljøet ditt
 
-Rekrutter en lokal klubb eller gruppe - Speidere, Universitet og Høgskoler, Fagforeninger osv. Eller arranger en Hour of Code i nabolaget ditt. [Send this email](<%= resolve_url('/resources#email') %>).
+Rekrutter en lokal klubb eller gruppe - Speidere, Universitet og Høgskoler, Fagforeninger osv. Eller arranger en Hour of Code i nabolaget ditt. [Send this email](<%= resolve_url('/promote/resources#email') %>).
 
 ## 5. Spør en lokalpolitiker om å støtte Kodetimen
 
-[Send this email](<%= resolve_url('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](<%= resolve_url('/promote/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
 
 <%= view :signup_button %>

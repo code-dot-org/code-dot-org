@@ -30,7 +30,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "scrollbars": "false",
-    "examples_required": "false"
+    "examples_required": "false",
+    "never_autoplay_video": "false"
   }
 }]]></config>
   <blocks>
@@ -41,53 +42,32 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move" inline="true">
+        <block type="draw_move_by_constant">
           <title name="DIR">moveForward</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">???</title>
-            </block>
-          </value>
+          <title name="VALUE">???</title>
         </block>
-        <block type="draw_move" inline="true">
+        <block type="draw_move_by_constant">
           <title name="DIR">moveBackward</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">???</title>
-            </block>
-          </value>
+          <title name="VALUE">???</title>
         </block>
-        <block type="draw_turn" inline="true">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnRight</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">???</title>
-            </block>
-          </value>
+          <title name="VALUE">???</title>
         </block>
-        <block type="draw_turn" inline="true">
+        <block type="draw_turn_by_constant">
           <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">???</title>
-            </block>
-          </value>
+          <title name="VALUE">???</title>
         </block>
-        <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">???</title>
-            </block>
-          </value>
-        </block>
-        <block type="jump" inline="true">
+        <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">???</title>
-            </block>
-          </value>
+          <title name="VALUE">???</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpBackward</title>
+          <title name="VALUE">???</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
         </block>
         <block type="draw_width" inline="false">
           <value name="WIDTH">
@@ -107,9 +87,6 @@
           <value name="COLOUR">
             <block type="colour_random"/>
           </value>
-        </block>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
         </block>
       </xml>
     </toolbox_blocks>

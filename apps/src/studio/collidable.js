@@ -11,8 +11,6 @@ var studioApp = require('../StudioApp').singleton;
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
 var SquareType = constants.SquareType;
-var utils = require('../utils');
-var _ = utils.getLodash();
 
 //
 // Collidable constructor
@@ -43,6 +41,9 @@ var Collidable = function (opts) {
 
   // default num frames is 1
   this.frames = this.frames || 1;
+
+  /** @private {SpriteAction[]} */
+  this.actions_ = [];
 };
 
 module.exports = Collidable;
@@ -122,177 +123,6 @@ Collidable.prototype.setActivity = function(type) {
 };
 
 /**
- * This function should be called every frame, and moves the item around.
- * It moves the item smoothly, but between fixed points on the grid.
- * Each time the item reaches its destination fixed point, it reevaluates
- * its next destination location based on the type of movement specified.
- * It generally evalutes all possible destination locations, prioritizes
- * the best possible moves, and chooses randomly between evenly-scored
- * options.
- */
-Collidable.prototype.update = function () {
-
-  if (this.activity === 'none') {
-    return;
-  }
-  
-  // Do we have an active location in grid coords?  If not, determine it.
-  if (this.gridX === undefined) {
-    this.gridX = Math.floor(this.x / Studio.SQUARE_SIZE);
-    this.gridY = Math.floor(this.y / Studio.SQUARE_SIZE);
-  }
-
-  // Have we reached the destination grid position?
-  // If not, we're still sliding towards it.
-  var reachedDestinationGridPosition = false;
-
-  // Draw the item's current location.
-  Studio.drawDebugRect("itemCenter", this.x, this.y, 3, 3);
-
-  if (this.destGridX !== undefined) {
-    // Draw the item's destination grid square.
-    Studio.drawDebugRect(
-      "roamGridDest", 
-      this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-      this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-      Studio.SQUARE_SIZE, 
-      Studio.SQUARE_SIZE);
-  }
-
-  // Has the item reached its destination grid position?
-  // (There is a small margin of error to allow for per-update movements greater
-  // than a single pixel.)
-  var speed = utils.valueOr(this.speed, 0);
-  if (this.destGridX !== undefined &&
-      (Math.abs(this.x - (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE)) <= speed &&
-       Math.abs(this.y - (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE)) <= speed)) {
-    this.gridX = this.destGridX;
-    this.gridY = this.destGridY;
-    reachedDestinationGridPosition = true;
-  }
-
-  // Are we missing a destination location in grid coords?
-  // Or have we already reached our prior destination location in grid coords?
-  // If not, determine it.
-  if (this.destGridX === undefined || reachedDestinationGridPosition) {
-
-    var sprite = Studio.sprite[0];
-
-    var spriteX = sprite.x + sprite.width/2;
-    var spriteY = sprite.y + sprite.height/2;
-
-    // let's try scoring each square
-    var candidates = [];
-
-    var bufferDistance = 60;
-
-    // The item can just go up/down/left/right.. no diagonals.
-    var candidateGridLocations = [ 
-      {row: -1, col: 0}, 
-      {row: +1, col: 0},
-      {row: 0, col: -1}, 
-      {row: 0, col: +1}];
-
-    for (var candidateIndex = 0; candidateIndex < candidateGridLocations.length; candidateIndex++) {
-      var candidateX = this.gridX + candidateGridLocations[candidateIndex].col;
-      var candidateY = this.gridY + candidateGridLocations[candidateIndex].row;
-
-      candidate = {gridX: candidateX, gridY: candidateY};
-      candidate.score = 0;
-
-      if (this.activity === "patrol") {
-        candidate.score ++;
-      } else if (this.activity === "chase") {
-        if (candidateY == this.gridY - 1 && spriteY < this.y - bufferDistance) {
-          candidate.score += 2;
-        } else if (candidateY == this.gridY + 1 && spriteY > this.y + bufferDistance) {
-          candidate.score += 2;
-        }
-        else {
-          candidate.score += 1;
-        }
-
-        if (candidateX == this.gridX - 1 && spriteX < this.x - bufferDistance) {
-          candidate.score ++;
-        } else if (candidateX == this.gridX + 1 && spriteX > this.x + bufferDistance) {
-          candidate.score ++;
-        }
-      } else if (this.activity === "flee") {
-        candidate.score = 1;
-        if (candidateY == this.gridY - 1 && spriteY > this.y - bufferDistance) {
-          candidate.score ++;
-        } else if (candidateY == this.gridY + 1 && spriteY < this.y + bufferDistance) {
-          candidate.score ++;
-        }
-
-        if (candidateX == this.gridX - 1 && spriteX > this.x - bufferDistance) {
-          candidate.score ++;
-        } else if (candidateX == this.gridX + 1 && spriteX < this.x + bufferDistance) {
-          candidate.score ++;
-        }
-      }
-
-      if (candidate.score > 0) {
-        Studio.drawDebugRect(
-          "roamGridPossibleDest", 
-          candidateX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-          candidateY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-          Studio.SQUARE_SIZE, 
-          Studio.SQUARE_SIZE);
-      }
-      candidates.push(candidate);
-    }
-
-    // cull candidates that won't be possible
-    for (var i = candidates.length-1; i >= 0; i--) {
-      var candidate = candidates[i];
-      var atEdge = candidate.gridX < 0 || candidate.gridX >= Studio.COLS ||
-                   candidate.gridY < 0 || candidate.gridY >= Studio.ROWS;
-      var hasWall = !atEdge && Studio.getWallValue(candidate.gridY, candidate.gridX);
-      if (atEdge || hasWall || candidate.score === 0) {
-        candidates.splice(i, 1);
-      }
-    }
-
-    if (candidates.length > 0) {
-      // shuffle everything (so that even scored items are shuffled, even after the sort)
-      candidates = _.shuffle(candidates);
-
-      // then sort everything based on score.
-      candidates.sort(function (a, b) {
-        return b.score - a.score;
-      });
-
-      this.destGridX = candidates[0].gridX;
-      this.destGridY = candidates[0].gridY;
-
-      // update towards the next location
-      if (this.destGridX > this.gridX && this.destGridY > this.gridY) {
-        this.dir = Direction.SOUTHEAST;
-      } else if (this.destGridX > this.gridX && this.destGridY < this.gridY) {
-        this.dir = Direction.NORTHEAST;
-      } else if (this.destGridX < this.gridX && this.destGridY > this.gridY) {
-        this.dir = Direction.SOUTHWEST;
-      } else if (this.destGridX < this.gridX && this.destGridY < this.gridY) {
-        this.dir = Direction.NORTHWEST;
-      } else if (this.destGridX > this.gridX) {
-        this.dir = Direction.EAST;
-      } else if (this.destGridX < this.gridX) {
-        this.dir = Direction.WEST;
-      } else if (this.destGridY > this.gridY) {
-        this.dir = Direction.SOUTH;
-      } else if (this.destGridY < this.gridY) {
-        this.dir = Direction.NORTH;
-      } else {
-        this.dir = Direction.NONE;
-      }
-    } else {
-      this.dir = Direction.NONE;
-    }
-  }
-};
-
-/**
  * Assumes x/y are center coords (true for projectiles and items)
  * outOfBounds() returns true if the object is entirely "off screen"
  */
@@ -301,4 +131,60 @@ Collidable.prototype.outOfBounds = function () {
          (this.x > studioApp.MAZE_WIDTH + (this.width / 2)) ||
          (this.y < -(this.height / 2)) ||
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
+};
+
+/**
+ * Add an action (probably an animation) for this sprite to run.
+ * Note: This is a 'sprouted' new system for updating sprites, separate from
+ *       how older playlab stuff works.  For now it's driving the discrete
+ *       movement hoc2015 levels.
+ * @param {SpriteAction} action
+ */
+Collidable.prototype.addAction = function (action) {
+  this.actions_.push(action);
+};
+
+/**
+ * @returns {boolean} whether this sprite is currently running any actions.
+ */
+Collidable.prototype.hasActions = function () {
+  return this.actions_.length > 0;
+};
+
+/**
+ * Causes this sprite to update all actions it's currently running, and then
+ * remove any that are complete.
+ */
+Collidable.prototype.updateActions = function () {
+  this.actions_.forEach(function (action) {
+    action.update(this);
+  }, this);
+
+  // Splice completed actions out of the current action list, iterating
+  // backwards so we don't skip anything.
+  for (var i = this.actions_.length - 1; i >= 0; i--) {
+    if (this.actions_[i].isDone()) {
+      this.actions_.splice(i, 1);
+    }
+  }
+};
+
+/**
+ * Change visible opacity of this collidable sprite.
+ * @param {number} newOpacity (between 0 and 1)
+ */
+Collidable.prototype.setOpacity = function (newOpacity) {
+  var spriteIndex = Studio.sprite.indexOf(this);
+  if (spriteIndex < 0) {
+    return;
+  }
+
+  var spriteRegularIcon = document.getElementById('sprite' + spriteIndex);
+  var spriteWalkIcon = document.getElementById('spriteWalk' + spriteIndex);
+  if (spriteRegularIcon) {
+    spriteRegularIcon.setAttribute('opacity', newOpacity);
+  }
+  if (spriteWalkIcon) {
+    spriteWalkIcon.setAttribute('opacity', newOpacity);
+  }
 };

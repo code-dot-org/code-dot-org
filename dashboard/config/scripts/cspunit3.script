@@ -75,8 +75,8 @@ level 'U3L08 - freePlay'
 assessment 'U3L08 Assessment1'
 assessment 'U3L08 Assessment2'
 
-#7 
-stage 'Looping and Random Numbers'
+#7
+stage 'Looping and Random Numbers - Under the Sea'
 level 'U3L07 Student Lesson Introduction'
 level 'U3L07 - introSquare'
 level 'U3L07 - randomSquare'
@@ -101,13 +101,14 @@ level 'U3L08 - digitalScene'
 
 ######
 
+#9
 stage 'Events Unplugged’
 level 'U3L12 - Student Introduction 1'
 
-stage 'Buttons on the Screen'
+# 10
+stage 'Event-Driven Programming and Debugging'
 level 'U3L13 Student Lesson Introduction'
 level 'U3L13 - Turtle move with button'
-level 'U3L13 - Explanation of Ids'
 level 'U313 drag Two Buttons'
 level 'U3L13 eventsDetails'
 level 'U313 Two Buttons with Ids'
@@ -116,34 +117,210 @@ level 'U3L13 - Debugging 1'
 level 'U3L13 - Debugging 2'
 level 'U3L13 - Debugging 3'
 level 'U3L13 - Turtle Driver Project'
+assessment 'U3L13 debugging Multi'
 assessment 'U3L13 Free Response Reflection'
-assessment 'U3L13 Assessment Matching'
-
-stage 'Unfortunate Events'
-level 'U3L14 - Student Intro Page'
-level 'U3L14 - Unfortunate Events Free Play'
-assessment 'U3L14 - Matching Events to Description'
 assessment 'U3L14 - MC order of button and onEvent'
 assessment 'U3L14 - MC Duplicate Ids'
-assessment 'U3L14 - Journal Favorite Event'
 
+# 11
 stage 'Beyond Buttons Toward Apps'
 level 'U3L16 Student Lesson Introduction'
-level 'U3L16 Free Response Getting Started'
-level 'U3L16 - setupMoveToRandom'
+level 'U3L16 - singleSetPosition'
+level 'U3L16 - introSetPosition'
 level 'U3L16 - setPosition to move button'
+level 'U3L16 - newEventTypes'
+assessment 'U3L14 - Matching Events to Description'
 level 'U3L16 - text labels'
 level 'U3L16 - use images'
+level 'U3L16 - chooseImages'
+level 'U3L16 - chaserApp'
+
+# 12
+stage 'Introducing Design Mode'
+level 'U3- L12 -Design Mode SFLP'
+level 'U3 - Design Mode 1'
+level 'U3-Design Mode-ID and Event Handler'
+level 'U3 - Design Mode - WTF Console Log'
+level 'U3 - Design Mode - Console Log'
+level 'U3 - Design Mode - Layers and Delete'
+level 'U3-Design Mode-Image'
+level 'U3 - Design Mode - Multi Screens'
+level 'U3 - Design Mode - Multi Screens 2'
+level 'U3 - Design Mode -Recreate Beyond Buttons'
+
+# 13
+stage 'Multi-screen App'
+level 'U3L13 Student Facing Lesson Plan'
+level 'U3L13 - Project'
+
+# 14
+stage 'Variables: Create, Assign, and Read'
+level 'U3L19 Student Lesson Intro'
+level 'U3L14 - Message - basic mechanics of variables'
+level 'U3L19 - three basic ops of variables’
+level 'U3L19 - fix the var name syntax error’
+level 'U3L19 - write var and string with same name’
+level 'U3- Variables - Create And Assign'
+level 'U3- Variables - Text Mode'
+level 'U3L14 - Message - Other ways to assign values'
+level 'U3 - Variables - Set to Expression' 
+level 'U3 - Variables - Set to Expression with Other Variables'
+level 'U3L14 - concatenate simple'
+level 'U3L14 - Assigning Random Value'
+level 'U3L14 - Mini Calculator embed'
+level 'U3L14 - User Input Division calculator'
+level 'U3L19 - test reassignment of two vars'
+level 'U3L14 - Variable ReAssignment pt2'
+level 'U3-Variables-Memory Breakdown'
+level 'U3L14 - moving memory challenge1'
+level 'U3L14 - moving memory challenge2'
+level 'U3L14 - moving memory challenge3'
+level 'U3L14 - moving memory challenge4'
+level 'U3L14 - moving memory challenge5'
+level 'U3L14 - moving memory challenge6'
+level 'U3L19 - variable reassignment challenge pt2'
+assessment 'U3L14 - MC variable reassignment'
+
+# 15
+stage 'Variables: Increment, Decrement, Display, and Scope'
+level 'U3-Variables 2 - SFLP'
+level 'U3L19 - Target Clicker App'
+level 'U3L19 - practice with setText’
+level 'U3 - Variables - Debug Scope'
+level 'U3L19 - DEMO up down count practice app’
+level 'U3L19 - up down count practice app’
+level 'U3L19 - variable scoping problem debugging’
+level 'U3L19 - variable scope problem 2’
+level 'U3 - Variables - Clicker Game'
+assessment 'U3L19 - final prompt'
+assessment 'U3L21 Assessment 1'
+assessment 'U3L21 Assessment 2'
+assessment 'U3L21 Assessment Wrap Up'
+
+# 16
+stage 'User Input and Strings'
+level 'U3L26 Student Lesson Introduction'
+level 'U3L16 Mad Lib Demo'
+level 'U3L16 - introStrings'
+level 'U3L16 - doubleQuotes'
 level 'U3L16 - textInput getText write'
-level 'U3L16 - hideAndShowPractice'
+level 'U3L16 - intro getText'
+level 'U3 - User Input - Save getText To Variable'
+level 'U3L16 - outputWithTextArea'
+level 'U3L16 - toUpper'
+level 'U3L16 Mad Lib Student Setup'
+level 'U3L16 Mad Lib setText'
+level 'U3L16 Mad Lib getText'
+level 'U3L16 Mad Lib toUpper'
+level 'U3L16 Mad Lib Clear Input'
+assessment 'U3L25 Free Response 3'
+
+
+# 17
+stage 'Introduction to Digital Assistant'
+level 'U3L23 Student Lesson Introduction'
+level 'U3L23 Free Response Getting Started'
+level 'U3 Digital Assistant Target'
 level 'U3L16 - challenge say hi app'
-level 'U3L16 - quick double click'
-assessment 'U3L16 Assessment Free Response'
-assessment 'U3L16 Free Response Wrap Up'
+level 'U3 Digital Assistant Design'
+level 'U3 Digital Assistant Set Text'
+assessment 'U3L23 Free Response Wrap Up'
 
-stage 'Cookie Clicker'
-level 'U1L1 Student Lesson Introduction'
+#18
+stage 'Conditional Basics'
+level 'U3L20 Student Lesson Introduction'
+level 'U3 - Conditional Basics - 6'
+level 'U3L24 Nested Conditionals Bugs'
 
+#19
+stage 'Conditionals with Movie Bot'
+level 'U3L24 Student Lesson Introduction'
+level 'U3L24 Student Lesson Introduction'
+level 'U3L23 Chatbot Conditionals 1'
+level 'U3 - Movie Bot - toLowerCase'
+level 'U3L24 Nested Conditionals 1'
+level 'U3 - Movie Bot - Nested Motivation'
+level 'U3L24 Nested Conditionals 2'
+
+# 20
+stage 'Improving Digital Assistant with Conditionals'
+level 'U3L25 Student Lesson Introduction'
+level 'U3L26 OR operator'
+level 'U3 - Movie Bot - Multiple If Sequences'
+level 'U3L26 AND operator'
+level 'U3L24 Nested Conditionals Bugs'
+level 'U3L24 Nested Conditionals Bugs 2'
+level 'U3L24 Nested Conditionals Bugs 3'
+level 'U3L24 Chatbot Basic Conditionals'
+
+# 21
+stage 'Digital Assistant Challenge'
+level 'U3L27 Student Lesson Introduction'
+assessment 'U3L27 Free Response Getting Started'
+level 'U3L27 Chatbot Final'
+assessment 'U3L24 Assessment 3'
+assessment 'u3L27 Assessment1'
+assessment 'u3L27 Assessment2'
+assessment 'u3L27 Assessment3'
+
+#22
+stage 'While Loop Basics'
+level 'U3L28 Student Lesson Introduction'
+assessment 'U3L28 Free Response Getting Started'
+assessment 'U3L28 Free Response Wrap Up'
+
+#23
+stage 'While Loops_ Counting Flips'
+level 'U3L29 Student Lesson Introduction'
+assessment 'U3L29 Free Response Getting Started'
+assessment 'U3L29 Free Response Wrap Up'
+
+#24
+stage 'Arrays_ Intro'
+level 'U3L30 Student Lesson Introduction'
+assessment 'U3L30 Free Response Getting Started'
+assessment 'U3L30 Assessment1'
+assessment 'U3L30 Assessment2'
+assessment 'U3L30 Assessment3'
+assessment 'U3L30 Free Response Wrap Up'
+
+#25
+stage 'Arrays_ Photo Album'
+level 'U3L31 Student Lesson Introduction'
+assessment 'U3L31 Free Response Getting Started'
+assessment 'U3L31 Assessment1'
+assessment 'U3L31 Assessment2'
+assessment 'U3L31 Assessment3'
+
+#26
+stage 'Images are Arrays'
+level 'U3L32 Student Lesson Introduction'
+assessment 'U3L32 Free Response Getting Started'
+
+#27
+stage 'Arrays and Loops_ Altering Images'
+level 'U3L33 Student Lesson Introduction'
+assessment 'U3L33 Free Response Getting Started'
+
+#28
+stage 'Arrays and Loops_ Hidden Images'
+level 'U3L34 Student Lesson Introduction'
+assessment 'U3L34 Free Response Getting Started'
+
+
+# probably going to Unit 4
+stage 'Permanent Data Storage and Clicker Completion'
+level 'U3L22 Student Lesson Introduction'
+level 'U3L17 - introKeyValue'
+level 'U3L17 - setKeyValue'
+level 'U3L17 - twoSetKeyValue'
+level 'U3L17 - introCallbacks'
+level 'U3L17 - getKeyValue'
+assessment 'U3L22 Free Response Getting Started'
+assessment 'U3L22 Assessment'
+assessment 'U3L22 Reflection'
+
+# We think this stage_lesson goes away-Keeping for posterity
 stage 'Improving the Clicker Game'
 level 'U3L18 Student Lesson Introduction'
 level 'U3L18 Controlling Memory and Program Flow'
@@ -153,71 +330,26 @@ level 'U3L18 Controlling Memory and Program Flow 4'
 level 'U3L18 Controlling Memory and Program Flow 5'
 assessment 'U3L18 Free Response Wrap Up'
 
-stage 'Variable Basics DEPRECIATED'
-level 'U1L1 Student Lesson Introduction'
-
-stage 'Clicker Variable Basics'
-level 'U3L19 Student Lesson Intro'
-level 'U3L19 - Target Clicker App'
-level 'U3L19 - Intro to variables’
-level 'U3L19 - three basic ops of variables’
-level 'U3L19 - write var and string with same name’
-level 'U3L19 - explanation diff between string and var name'
-level 'U3L19 - fix the var name syntax error’
-level 'U3L19 - concatenate string with var'
-level 'U3L19 - do concatenate string with var’
-level 'U3L19 - variable breakdown intro'
-level 'U3L19 - variable breakdown - declaration'
-level 'U3L19 - variable breakdown - Assigning a value’
-level 'U3L19 - variable breakdown - common mistake - declaring twice'
-level 'U3L19 - variable breakdown - ways to read pt1'
-level 'U3L19 - try out console log’
-level 'U3L19 - misconception variable assignment order pt1’
-level 'U3L19 - test reassignment of two vars’
-level 'U3L19 - misconception variable assignment order pt2’
-level 'U3L19 - Debugging with consoleLog’
-level 'U3L19 - Arithmetic v Concatenation’
-level ‘AppLab Level U3L19 - variable re-assignment challenge pt1'
-level 'U3L19 - variable reassignment challenge pt2’
-assessment 'U3L19 - MC what are values of abc'
-level 'U3L19 - variable breakdown - setText in label'
-level 'U3L19 - practice with setText’
-level 'U3L19 - DEMO up down count practice app’
-level 'U3L19 - up down count practice app’
-level 'U3L19 - variable scope explanation’
-level 'U3L19 - variable scoping problem debugging’
-level 'U3L19 - variable scope explanation pt2’
-level 'U3L19 - variable scope problem 2’
-level 'U3L19 - variable scope explanation pt3’
-level 'U3L19 - done with variables finally'
-level 'U3L19 - improve your clicker game'
-assessment 'U3L19 - final prompt'
-
+# Keeping Until Conditional Stuff Finalized
 stage 'Conditional Basics'
 level 'U3L20 Student Lesson Introduction'
+level 'U3 - Basic Conditionals - 1'
+level 'U3 - Basic Conditionals - 2'
+level 'U3 - Basic Conditionals - 3'
+level 'U3 - Basic Conditionals - 4'
+level 'U3 - Basic Conditionals - 5'
+level 'U3 - Conditional Basics - 6'
 assessment 'U3L20 Free Response Getting Started'
-level 'U3L20 Assessment1'
-level 'U3L20 Assessment2'
-level 'U3L20 Assessment3'
-level 'U3L20 Assessment4'
-level 'U3L20 Assessment5'
-level 'U3L20 Assessment6'
-level 'U3L20 Assessment7'
-level 'U3L20 Assessment8'
-level 'U3L20 Assessment9'
+assessment 'U3L20 Assessment1'
+assessment 'U3L20 Assessment2'
+assessment 'U3L20 Assessment3'
+assessment 'U3L20 Assessment4'
+assessment 'U3L20 Assessment5'
+assessment 'U3L20 Assessment6'
+assessment 'U3L20 Assessment7'
+assessment 'U3L20 Assessment8'
+assessment 'U3L20 Assessment9'
 assessment 'U3L20 Free Response Wrap Up' 
-
-stage 'More Variables (2 days)'
-level 'U3L21 Student Lesson Introduction'
-assessment 'U3L21 Assessment 1'
-assessment 'U3L21 Assessment 2'
-assessment 'U3L21 Assessment Wrap Up'
-
-stage 'Permanent Data Storage and Clicker Completion'
-level 'U3L22 Student Lesson Introduction'
-assessment 'U3L22 Free Response Getting Started'
-assessment 'U3L22 Assessment'
-assessment 'U3L22 Reflection'
 
 stage 'Natural Language Processing'
 level 'U3L23 Student Lesson Introduction'
@@ -286,53 +418,6 @@ assessment 'U3L24 Assessment 3'
 assessment 'U3L25 Assessment' 
 assessment 'U3L25 Free Response wrap up'
 
-stage 'Digital Assistant Challenge'
-level 'U3L27 Student Lesson Introduction'
-assessment 'U3L27 Free Response Getting Started'
-level 'U3L27 Chatbot Final'
-assessment 'U3L24 Assessment 3'
-assessment 'u3L27 Assessment1'
-assessment 'u3L27 Assessment2'
-assessment 'u3L27 Assessment3'
-
-stage 'While Loop Basics'
-level 'U3L28 Student Lesson Introduction'
-assessment 'U3L28 Free Response Getting Started'
-assessment 'U3L28 Free Response Wrap Up'
-
-stage 'While Loops_ Counting Flips'
-level 'U3L29 Student Lesson Introduction'
-assessment 'U3L29 Free Response Getting Started'
-assessment 'U3L29 Free Response Wrap Up'
-
-stage 'Arrays_ Intro'
-level 'U3L30 Student Lesson Introduction'
-assessment 'U3L30 Free Response Getting Started'
-assessment 'U3L30 Assessment1'
-assessment 'U3L30 Assessment2'
-assessment 'U3L30 Assessment3'
-assessment 'U3L30 Free Response Wrap Up'
-
-stage 'Arrays_ Photo Album'
-level 'U3L31 Student Lesson Introduction'
-assessment 'U3L31 Free Response Getting Started'
-assessment 'U3L31 Assessment1'
-assessment 'U3L31 Assessment2'
-assessment 'U3L31 Assessment3'
-
-stage 'Images are Arrays'
-level 'U3L32 Student Lesson Introduction'
-assessment 'U3L32 Free Response Getting Started'
-
-stage 'Arrays and Loops_ Altering Images'
-level 'U3L33 Student Lesson Introduction'
-assessment 'U3L33 Free Response Getting Started'
-
-stage 'Arrays and Loops_ Hidden Images'
-level 'U3L34 Student Lesson Introduction'
-assessment 'U3L34 Free Response Getting Started'
-
-
 ##TURDS DO NOT USE##
 stage 'Creating Procedures - Part 1'
 stage 'Creating Procedures - Part 2'
@@ -340,3 +425,17 @@ stage 'Layers of Abstraction and Programming Efficiency'
 stage 'Scene Design Part 1: Plan'
 stage 'Scene Design Part 2: Code'
 stage 'Scene Design Part 3: Reflect'
+stage 'Buttons on the Screen'
+stage 'Unfortunate Events'
+stage 'Cookie Clicker'
+stage 'Variable Basics DEPRECIATED'
+stage 'Clicker Variable Basics'
+stage 'Looping and Random Numbers'
+stage 'Clicker Game'
+stage 'More Variables (2 days)'
+stage 'Variables'
+stage 'Variables Conceptorial Fodder'
+stage 'Getting User Input'
+stage 'Improving Digital Assistant: Conditionals'
+stage 'Improving Digital Assistant: Functions with Return'
+stage 'Improving Digital Assistant: Complex Conditionals'

@@ -36,7 +36,6 @@
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "functionParams_none": null,
       "functionParams_n": null,
@@ -61,20 +60,19 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "encrypted_examples": [
-
-    ],
-    "markdown_instructions": "# Create a turtle driver app\r\n\r\nAt this point you know enough about buttons and event handlers to be able to **build your own \"turtle-driver\" app**. Start out by adding simple driving commands, but feel free to make use of the rest of the turtle commands if you have more time.\r\n\r\n# Do This\r\n\r\n**Create ** an application with **three buttons**, one for moving the turtle forward and one each for turning left and right\r\n\r\n**Use descriptive and meaningful ids** for your buttons and ensure your event handlers work as you intend.\r\n\r\n**If you have extra time** add more buttons that use other turtle commands you'd like to include.",
+    "markdown_instructions": "# Create a turtle driver app!\r\n\r\nAt this point you know enough about buttons and event handlers, and how to debug some common issues that arise to be able to **build your own \"turtle-driver\" app** from scratch. \r\n\r\n**Build up the program bit by bit**. Don't try to write all the code at once.  Add a button with an event handler, make sure it works, debug any problems, and then move on to the next part.\r\n\r\n# Do This\r\n\r\n**Create ** an application with **four buttons**, one for moving the turtle forward and one each for turning left and right.  The fourth button should do whatever you like.\r\n\r\n**Use descriptive and meaningful IDs** for your buttons and ensure your event handlers work as you intend.\r\n\r\n**If you have extra time** add more buttons that use other turtle commands you'd like to include.  You can also use colors, and different line widths, dots, etc. ",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "show_turtle_before_run": "false",
+    "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "submittable": "true",
-    "hide_view_data_button": "true"
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

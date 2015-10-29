@@ -1,6 +1,9 @@
 -#Disabled so the Google Maps API doesn't get included twice, which can cause unexpected errors.
 -#%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
 
+-SOLR = Solr::Server.new(host:CDO.solr_server)
+-events = SOLR.query(q:"*:*", fq:["kind_s:HocSignup2015", "send_posters_flag_b:true", "location_country_code_s:US"])
+
 #signupform
   %h2= hoc_s(:signup_header).gsub(/%{campaign_date}/, campaign_date("full"))
   %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
@@ -40,7 +43,7 @@
           %input#hoc-entire-school-flag{name: "entire_school_flag_b", type: "checkbox", value: "1"}/
           =hoc_s(:signup_event_entire_school_label)
 
-    - if @country == 'us'
+    - if @country == 'us' && events.count < 15000
       .form-group
         .checkbox
           %label
@@ -63,12 +66,11 @@
       %div
         %textarea#hoc-special-event-details.form-control{name: "special_event_details_s", placeholder: hoc_s(:signup_special_event_details_placeholder), style: "height: 5em;"}
 
-    - if @country == 'us'
-      .form-group
-        .checkbox
-          %label
-            %input#hoc-match-volunteer-flag{name: "match_volunteer_flag_b", type: "checkbox", value: "1"}/
-            =hoc_s(:signup_match_volunteer)
+    .form-group
+      .checkbox
+        %label
+          %input#hoc-match-volunteer-flag{name: "match_volunteer_flag_b", type: "checkbox", value: "1"}/
+          =hoc_s(:signup_match_volunteer)
 
     %input{name:'hoc_country_s', type:'hidden', value:@country}
     %input{name:'hoc_company_s', type:'hidden', value:@company}
@@ -114,7 +116,7 @@
 
   function signupFormComplete(data)
   {
-    window.location = 'thanks';
+    window.location = "#{resolve_url('thanks')}";
   }
 
   function signupFormError(data)

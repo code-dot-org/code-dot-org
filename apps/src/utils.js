@@ -47,6 +47,7 @@ exports.cloneWithoutFunctions = function(object) {
 /**
  * Returns a new object with the properties from defaults overriden by any
  * properties in options. Leaves defaults and options unchanged.
+ * NOTE: For new code, use $.extend({}, defaults, options) instead
  */
 exports.extend = function(defaults, options) {
   var finalOptions = exports.shallowCopy(defaults);
@@ -138,6 +139,17 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
     }
     return numVal(text);
   };
+};
+
+/**
+ * Return a random key name from an object.
+ *
+ * Slightly modified from: http://stackoverflow.com/a/15106541
+ */
+
+exports.randomKey = function (obj) {
+  var keys = Object.keys(obj);
+  return keys[keys.length * Math.random() << 0];
 };
 
 /**
@@ -285,4 +297,23 @@ exports.getPegasusHost = function() {
           return null;
       }
   }
+};
+
+/**
+ * IE9 throws an exception when trying to access the media field of a stylesheet
+ */
+exports.browserSupportsCssMedia = function () {
+  var styleSheets = document.styleSheets;
+  for (var i = 0; i < styleSheets.length; i++) {
+    var rules = styleSheets[i].cssRules || styleSheets[i].rules;
+    try {
+      if (rules.length > 0) {
+        // see if we can access media
+        var media = rules[0].media;
+      }
+    } catch (e) {
+      return false;
+    }
+  }
+  return true;
 };

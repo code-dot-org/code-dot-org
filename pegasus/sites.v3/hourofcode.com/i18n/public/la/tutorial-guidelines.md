@@ -75,9 +75,9 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 
 Un comité de educadores en Ciencias de la Computación evaluarán las propuestas con base en medidas cualitativas y cuantitativas, incluyendo resultados de encuestas hechas a un grupo más amplio de educadores.
 
-**Los tutoriales aparecerán en posiciones más altas si:**
+**Los tutoriales aparecerán en las posiciones más altas si:**
 
-  * Alta calidad
+  * alta calidad
   * designed for beginners - among students AND teachers
   * están diseñadas para actividad de 1 hora aproximádamente
   * no requieren de registro
@@ -86,11 +86,11 @@ Un comité de educadores en Ciencias de la Computación evaluarán las propuesta
   * funcionan en diversas plataformas de sistemas operativos, incluso en tabletas y móviles
   * funcionan en múltiples idiomas
   * promueven aprendizaje en todos los grupos demográficos (especialmente los grupos marginados)
-  * no se centran solamente en diseño web HTML+CSS - (nuestra meta es la ciencia computacional, no sólo codificación en HTML)
+  * no se centran solamente en diseño web HTML+CSS - (nuestra meta es las Ciencias de la Computación, no sólo codificación en HTML)
 
 **Los tutoriales aparecerán más abajo si son:**
 
-  * tienen baja calidad
+  * baja calidad
   * tienen un nivel más avanzado de enseñanza (no para principiantes)
   * tienen un soporte limitado de plataformas de sistemas operativos - para plataformas basadas en Web se debe tratar de soportar todo lo siguiente: IE9+, y la ultima versión de Chrome, Firefox y Safari
   * funcionan sólo en inglés
@@ -100,8 +100,8 @@ Un comité de educadores en Ciencias de la Computación evaluarán las propuesta
 **Los tutoriales NO serán listados si:**
 
   * no estan diseñados para ser actividades de aproximadamente una hora
-  * requieren de registro 
-  * requieren de pago
+  * requieren registro 
+  * requieren pago
   * require installation (other than mobile apps)
   * se centran solamente en diseño web HTML+CSS
   * se envían después de la fecha límite, o con información incompleta (vea más abajo)

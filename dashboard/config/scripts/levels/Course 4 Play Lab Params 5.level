@@ -39,19 +39,41 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "maze_data": null
+    "maze_data": null,
+    "min_workspace_height": "600"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
+        <block type="studio_repeatForever">
+          <statement name="DO">
+            <block type="procedures_callnoreturn">
+              <mutation name="patrol"/>
+            </block>
+          </statement>
+        </block>
+        <block type="studio_repeatForever">
+          <statement name="DO">
+            <block type="procedures_callnoreturn">
+              <mutation name="patrol"/>
+            </block>
+          </statement>
+        </block>
+        <block type="studio_repeatForever">
+          <statement name="DO">
+            <block type="procedures_callnoreturn">
+              <mutation name="patrol"/>
+            </block>
+          </statement>
+        </block>
         <block type="procedures_defnoreturn" editable="false">
           <mutation>
             <description>Move a certain sprite up and down, using the "actor" parameter</description>
           </mutation>
           <title name="NAME">patrol</title>
           <statement name="STACK">
-            <block type="studio_moveDistanceParamsSprite" inline="true">
+            <block type="studio_moveDistanceParamsSprite" inline="true" deletable="false">
               <title name="DIR">1</title>
               <value name="SPRITE">
                 <block type="math_number">
@@ -64,7 +86,7 @@
                 </block>
               </value>
               <next>
-                <block type="studio_moveDistanceParamsSprite" inline="true">
+                <block type="studio_moveDistanceParamsSprite" inline="true" deletable="false">
                   <title name="DIR">4</title>
                   <value name="SPRITE">
                     <block type="math_number">
@@ -81,26 +103,10 @@
             </block>
           </statement>
         </block>
-        <block type="studio_repeatForever">
-          <statement name="DO">
-            <block type="procedures_callnoreturn">
-              <mutation name="patrol"/>
-            </block>
-          </statement>
-        </block>
-        <block type="math_number" id="fill_in_actor_qtip">
-          <title name="NUM">???</title>
-        </block>
-        <block type="studio_repeatForever">
-          <statement name="DO">
-            <block type="procedures_callnoreturn">
-              <mutation name="patrol"/>
-            </block>
-          </statement>
-        </block>
-        <block type="math_number">
-          <title name="NUM">???</title>
-        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
         <block type="studio_repeatForever">
           <statement name="DO">
             <block type="procedures_callnoreturn">
@@ -112,10 +118,6 @@
           <title name="NUM">???</title>
         </block>
       </xml>
-    </start_blocks>
-    <toolbox_blocks>
-      <xml>
-</xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>

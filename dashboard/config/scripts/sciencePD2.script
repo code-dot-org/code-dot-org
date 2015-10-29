@@ -6,6 +6,7 @@ description_short 'Phase 2 Online Blended Summer Study'
 stage 'Welcome'
 level 'sciPD p2 intro'
 level 'sciPD logistics 1'
+level 'PD check your progress'
 
 stage 'Curricular Modules'
 level 'sciPD2 resource module1'

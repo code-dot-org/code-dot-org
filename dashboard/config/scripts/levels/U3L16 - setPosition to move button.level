@@ -15,7 +15,6 @@
           "function(){\n\n}"
         ]
       },
-      "setPosition": null,
       "moveForward": null,
       "moveBackward": null,
       "move": null,
@@ -26,24 +25,33 @@
       "turnTo": null,
       "arcRight": null,
       "arcLeft": null,
-      "getX": null,
-      "getY": null,
-      "getDirection": null,
       "penUp": null,
       "penDown": null,
       "penWidth": null,
       "penColor": null,
+      "penRGB": {
+        "params": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "paletteParams": [
+          "r",
+          "g",
+          "b",
+          "a"
+        ]
+      },
       "show": null,
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "functionParams_none": null,
       "functionParams_n": null,
       "callMyFunction": null,
-      "callMyFunction_n": null,
-      "return": null
+      "callMyFunction_n": null
     },
     "edit_code": true,
     "embed": "false",
@@ -62,9 +70,22 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "start_blocks": "button(\"moveBtn\", \"move me\");\r\nonEvent(\"moveBtn\", \"click\", function(){\r\n  moveTo(randomNumber(320), randomNumber(480));\r\n});\r\n",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false"
+    "autocomplete_palette_apis_only": "true",
+    "encrypted_examples": "6dccbu4XDgsKwxtTGb8vO7XtATuCqkNkIK1+EVRGmf6yUcucrJUgUNmZPS4U\nzHDe\n",
+    "markdown_instructions": "# New Elements and Events: Moving Buttons with Events\r\n\r\nOver the next few exerises we will be exploring several new user interface elements and event types. Your code will be pulled forward as you progress through the exercises.\r\n\r\n**Moving Past Turtle:** We've been using buttons to move the turtle. For example, in the program you're about to see a button that moves the turtle to a random location on the screen. We're going to alter this program ** so that the button itself moves every time you click it**.\r\n\r\n**Notice** that this means that event handlers can affect the elements they are attached to, not just other elements!  This is an interesting technique for apps.  Now you're going to try it...\r\n\r\n# Do This\r\n* **Change the ID** of the button to something descriptive and meaningful.\r\n* **Modify** your event handler so that **it no longer moves the turtle** but instead sets the position of the button itself to a random location on the screen.\r\n\t* TIP: add `setPosition` to the event handler, and just move the `randomNumber` calls from the turtle.\r\n\t* Recall the screen is **320 by 450 pixels**.\r\n\r\n**Before** | **After**\r\n---|---\r\n![](https://images.code.org/a4172e43b6707a3170e4eaf54a2a7b1d-image-1444335577799.gif) | <img src=\"https://images.code.org/4e17b077bd8fbdd43f960d26bb3d252d-image-1444335766972.gif\" style=\"width: 150px\">\r\n\r\n\r\n",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "project_template_level_name": "U3L16 - projectTemplate",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

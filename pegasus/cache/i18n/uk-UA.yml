@@ -35,6 +35,11 @@
   hoc2014_everyone: Усі
   hoc2014_support: Підтримайте &#x25BE;
   hoc2014_whatishoc: Що таке Година коду?
+  csedweek_map_header: 'Події # CSEdWeek та Години коду по всьому світу'
+  csedweek_map_signup: Зареєструйте свій захід
+  csedweek_map_search_placeholder: Пошук заходів Години коду
+  csedweek_map_search_search: Пошук
+  csedweek_map_search_reset: Скидання
   cded_sign_up: Зареєструватися
   cded_try_it: Спробуйте
   twentyhours_trynow: Спробувати
@@ -130,6 +135,8 @@
   just_did_hoc: 'Я щойно завершив #HourOfCode - подивіться, що це! @codeorg'
   twitter_teach_cs: Чому більше шкіл не викладають інформатику? Ми можемо це виправити.
     http://youtu.be/nKIu9yen5nc. Відвідайте http://code.org/ щоб дізнатися більше.
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
   learn_hoc: Вивчати Годину Коду
   beyond_hoc: Поза Годиною коду
   what_gender: Якої ви статі?
@@ -229,6 +236,8 @@
   homepage_action_text_signpetition: Підписати петицію
   homepage_signpetition_dropdown: Підписати нашу петицію &#x25BE;
   homepage_diversity_pledge: Приєднатись до петиції про різноманіття
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org та Рада коледжів утворили альянс для посилення
     різноманітності в інформатиці.
   homepage_banner_text_link: Дізнайтеся більше
@@ -240,6 +249,7 @@
   homepage_slot_text_link_hoc: Спробуйте годину коду
   homepage_slot_text_link_host: Провести Годину Коду
   homepage_slot_text_link_hocserved: '# спробували'
+  homepage_solot_text_link_volunteer: Волонтер для Години коду
   homepage_slot_text_title_students: Учні
   homepage_slot_text_blurb_students: Пройдіть всі наші навчальні курси
   homepage_slot_text_link_codestudio: Спробуйте Студію Коду
@@ -298,62 +308,77 @@
   class_submission_level_college: Коледж
   class_submission_level_vocational: Професійна освіта
   class_submission_languages_other: Інші мови
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} teachers have signed
-    up for the Hour of Code and would like a volunteer to help them.'
-  volunteer_engineer_submission_intro_paragraph: Please enter the following information
-    if you are a computer science student or software professional, and you’re interested
-    in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span>
-    are required.
-  volunteer_engineer_submission_header_shared: Information shared with teachers on
-    volunteer map
+  volunteer_engineer_submission_title: Волонтер для Години коду
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
+    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
+    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
+    have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
+    to try an hour introduction to computer science, reaching tens of millions of
+    students in 180+ countries. Please get involved during Computer Science Education
+    Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
+    who can help in the classroom, or for somebody who can <span style="font-family:
+    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
+    breadth of possibilities with computer science (which could be done through a
+    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
+    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_signup: Please enter the following information
+    if you are a computer science student or software professional. Fields marked
+    with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_header_shared: Інформація доступна вчителям та волонтерам
+    на карті
   volunteer_engineer_submission_field_name: Ім’я
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: If you enter your exact address
-    we won't share it, just show you as a pin on map.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
-    or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the
-    Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
-    after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
-    of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_field_name_placeholder: Повне ім'я
+  volunteer_engineer_submission_field_company: Компанія (або університет)
+  volunteer_engineer_submission_field_company_placeholder: Компанія (або університет)
+  volunteer_engineer_submission_field_experience_level: Рівень досвіду
+  volunteer_engineer_submission_field_location: Місце знаходження
+  volunteer_engineer_submission_field_location_desc: Якщо ви вкажете свою точну адресу,
+    ми не будемо її показувати, просто поставимо мітку на карті.
+  volunteer_engineer_submission_field_location_placeholder: Поштовий індекс, місто
+    та країна, або поштова адреса
+  volunteer_engineer_submission_field_location_flexibility: Я можу допомогти в проведенні
+    Години коду... (вкажіть все, що підходить)
+  volunteer_engineer_submission_checkbox_after_hoc: Мене цікавить волонтерство після
+    Години коду
+  volunteer_engineer_submission_field_time_commitment: Часові зобов'язання після Години
+    коду
+  volunteer_engineer_submission_field_linkedin: профіль LinkedIn
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook: профіль Facebook
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Опис
-  volunteer_engineer_submission_field_description_desc: Describe your computer science
-    experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never
-    shared
+  volunteer_engineer_submission_field_description_desc: Опишіть свій досвід в інформатиці
+    та вкажіть, чому Ви бажаєте допомогти місцевим вчителям.
+  volunteer_engineer_submission_field_description_placeholder: Опис досвіду та/або
+    участі
+  volunteer_engineer_submission_header_private: Інформація зберігається приватно і
+    ніколи не поширюється
   volunteer_engineer_submission_field_email: Адреса електронної пошти
-  volunteer_engineer_submission_field_email_desc: Your email address will never be
-    shared, but we'll send you requests from teachers.
+  volunteer_engineer_submission_field_email_desc: Ваша адреса електронної пошти ніколи
+    не передаватиметься, але ми надішлемо вам запити від учителів.
   volunteer_engineer_submission_field_email_placeholder: Адреса електронної пошти
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
-    teachers to contact you for the Hour of Code or other volunteer opportunities.
-    Your email and exact address will NEVER be shared by us. But the other information
-    (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
-    me for volunteer opportunities (Note: your email address won''t be shared)'
+  volunteer_engineer_submission_final_paragraph: Ви з'явитесь на карті, щоб місцеві
+    вчителі могли зв'язатися з Вами для Години коду чи інших волонтерських заходів.
+    Ваша адреса електронної пошти чи поштова адреса НІКОЛИ не буде оприлюднена. Але
+    інша інформація (включаючи приблизне розташування) буде публічно доступною місцевим
+    вчителям.
+  volunteer_engineer_submission_checkbox_contact: 'Я погоджуюсь, що вчителі можуть
+    зв''язуватися зі мною для волонтерських заходів (Примітка: ваша адреса електронної
+    пошти не повідомлятиметься)'
   volunteer_engineer_submission_submit: Надіслати
-  volunteer_engineer_submission_thankyou: Thank you for submitting your information.
+  volunteer_engineer_submission_thankyou: Дякуємо за подання вашої інформації.
   volunteer_engineer_submission_commitment_uncertain: Невизначено
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 година на тиждень
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 години на тиждень
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 годин на тиждень
   volunteer_engineer_submission_commitment_now_and_then: Час від часу
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: 2 - 3 рази на рік
+  volunteer_engineer_submission_commitment_monthly: Кілька годин на місяць
+  volunteer_engineer_submission_commitment_weekly: Кілька годин на тиждень
   volunteer_engineer_submission_commitment_more: Більше
   volunteer_engineer_submission_location_flexibility_onsite: На території школи
   volunteer_engineer_submission_location_flexibility_remote: Віддалене навчання (вчителі
@@ -391,6 +416,7 @@
   dashboard_landing_progress_title: Прогрес класу
   dashboard_landing_progress_biggest: Це прогрес Вашої найбільшої групи.
   dashboard_landing_view_progress: Переглянути прогрес для %{biggest_section}
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Доступні курси
   dashboard_landing_available_courses: Перелік курсів, які на даний момент доступні
     для Вас і Ваших учнів.
@@ -461,7 +487,7 @@
   dashboard_navigation_section_speakers: Запрошені гості <br/> з галузі інформатики
   dashboard_navigation_all_sections: Облікові записи учнів та їх прогрес
   dashboard_navigation_view_progress: Перегляд прогресу
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: Переглянути тексти відповідей
   dashboard_navigation_add_students: Додати учнів
   dashboard_navigation_manage_students: Керування учнями
   dashboard_navigation_lesson_plans_resources: Плани уроків та ресурси
@@ -575,8 +601,8 @@
   dashboard_progress_furthest_level_attempted: останній відкритий рівень
   dashboard_stage: етап
   dashboard_puzzle: Завдання
-  dashboard_question: Question
-  dashboard_response: Response
+  dashboard_question: Питання
+  dashboard_response: Відповідь
   stats_hoc_2013_heading: 'Неймовірна статистика з минулорічної Години коду. Лише
     за тиждень:'
   stats_hoc_2013_image_alt: Статистика Години коду 2013 року
@@ -597,10 +623,10 @@
     групи.
   dashboard_faq: Запитання й відповіді
   dashboard_faq_k5: K-5 запитання й відповіді
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
-  dashboard_announce_hoc: <b>September 30, 2015</b> - The Hour of Code 2015 is coming!
-    Join classrooms worldwide for the largest learning event in history.
+  dashboard_announcements: Оголошення
+  dashboard_announce_view_all: Переглянути всі
+  dashboard_announce_hoc: <b>30 вересня 2015</b> - Наближається Година коду 2015!
+    Приєднуйтесь до класів по всьому світу для найбільшої навчальної події в історії.
   code_hoc_coming: Година коду вже тут - 8-14 грудня!
   code_sign_up: Зареєструватися для участі протягом тижня інформатики
   learn_more: Дізнатися більше
@@ -609,8 +635,8 @@
   learn_sign_up_button: Зареєструватися
   learn_educator_resources_description: Дізнайтесь як викладати Годину коду
   learn_educator_resources_button: Ресурси для вчителів
-  learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
-    to teach an Hour of Code</a>
+  learn_are_you_educator: Ви педагог? Дізнайтеся, <a href="http://hourofcode.com/resources/how-to">як
+    провести Годину коду</a>
   hoc2014_try_new_tutorials: Спробуйте наш новий підручник Години коду
   hoc2014_try_new_tutorial: Спробуйте новий підручник Години коду в бета-версії
   hoc2014_try_scrat: Angry Birds, PvZ та Scrat
@@ -674,7 +700,7 @@
   robomindnl_name: Програмування віртуального робота
   flappy_name: Створіть гру Пурха
   bitsbox_name: Bitsbox - створимо гру
-  makeschool_name: Build an iPhone game in your browser!
+  makeschool_name: Створіть гру для iPhone у браузері!
   touchdevelop_name: TouchDevelop
   appinventor_name: Година коду від AppInventor
   blockly_name: Блоклі
@@ -800,8 +826,8 @@
   flappy_shortdescription: Створіть власну гру - Пурха, Акулу чи Підводного човна
   bitsbox_shortdescription: Створіть набір програм мовою JavaScript, у які можна грати
     та поділитися з іншими.
-  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach
-    your monster new moves!
+  makeschool_shortdescription: Створіть гру для iPhone! Дізнайтесь, як написати код,
+    котрий навчить монстра новим рухам!
   touchdevelop_shortdescription: 'Розв''язуйте задачки, створюйте ігри та вчіться
     програмувати за допомогою свого телефону. '
   appinventor_shortdescription: Розробіть власну програму! (лише Android)
@@ -918,10 +944,10 @@
   bitsbox_longdescription: За допомогою власного віртуального планшету можна створити
     кілька ігрових програм та поділитися ними. Прості інструкції дозволяють дітям
     вивчити справжній Javascript, і чим краще ви вчитеся, тим більшого досягнете.
-  makeschool_longdescription: Learn to code by making an iPhone game using a brand
-    new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
-    action game and write code to teach your monster new moves. You will learn how
-    to use variables, methods, and objects to help your monster win!
+  makeschool_longdescription: Навчіться програмувати, створюючи гру для iPhone за
+    допомогою нової мови програмування для початківців - Swift! Створюйте гру, натхненну
+    покемонами - пишіть код, щоб навчити монстриків виконувати нові рухи. Ви навчитеся
+    використовувати змінні, методи та об'єкти, щоб привести персонажів до перемоги!
   touchdevelop_longdescription: 'Сенсорний редактор допоможе створити піксельну графіку,
     розв''язувати ведмежі задачки чи розробити власну гру зі стрибаючим птахом. '
   appinventor_longdescription: Розважальні, швидкі відео-уроки поетапного створення
@@ -963,7 +989,7 @@
   groklearning_beyond_name: Вивчайте програмування на Python
   hacketyhack_beyond_name: Вивчайте Ruby
   robomind_beyond_name: Програмування віртуального робота
-  makeschool_beyond_name: Build an iPhone game in your browser!
+  makeschool_beyond_name: Створіть гру для iPhone у браузері!
   appinventor_beyond_name: Година коду від AppInventor
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Навчання програмуванню з собакою Карел
@@ -1078,7 +1104,7 @@
   groklearning_beyond_shortdescription: Базовий вступ до програмування на Python
   hacketyhack_beyond_shortdescription: Вивчайте Ruby з самого початку
   robomind_beyond_shortdescription: Напишіть код для віртуального робота
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
+  makeschool_beyond_shortdescription: Навчіться створювати гру для iPhone за годину
   appinventor_beyond_shortdescription: Розробіть власну програму! (лише Android)
   touchdevelop_beyond_shortdescription: Створіть мобільну програму прямо на телефоні,
     планшеті чи ноутбуці
@@ -1156,11 +1182,11 @@
     власного віртуального робота. Цей онлайновий курс повністю самодостатній, і містить
     короткі презентації, відео-ролики, тести та автоматизовані підказки, котрі допоможуть
     виконати завдання з програмування. '
-  makeschool_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
-    game in an hour! We'll guide you through the process, to code, test, and play
-    your game entirely in the browser and then share it on Facebook for friends to
-    try! No prior iPhone development experience is required. You must understand what
-    variables, methods, and objects are.
+  makeschool_beyond_longdescription: Вже знаєте трохи ObjectiveC? Тоді навчіться створювати
+    гру для iPhone за одну годину! Ми покажемо, як можна спроектувати, запрограмувати,
+    протестувати та пограти у гру в своєму браузері, а потім поділитись нею з друзями
+    на Facebook! Попередній досвід розробки для iPhone не потрібен. Потрібне розуміння
+    змінних, методів та об'єктів.
   appinventor_beyond_longdescription: Розважальні, швидкі відео-уроки поетапного створення
     трьох простих додатків телефону або планшета на Android. Призначені як для новачків,
     так досвідчених учнів, ці уроки Години коду допоможуть розпочати програмування
