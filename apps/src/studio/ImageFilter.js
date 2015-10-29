@@ -61,6 +61,10 @@ module.exports = ImageFilter;
  * @param {SVGElement} svgElement
  */
 ImageFilter.prototype.applyTo = function (svgElement) {
+  if (!this.checkBrowserSupport_()) {
+    return;
+  }
+
   if (this.applyCount_ === 0) {
     this.createInDom_();
   }
@@ -166,6 +170,18 @@ ImageFilter.prototype.getDefsNode_ = function () {
     this.svg_.appendChild(defs);
   }
   return defs;
+};
+
+/**
+ * Check whether the current browser is likely to support SVG filter effects.
+ * Can be overridden by subclasses needing specific support.
+ * @returns {boolean}
+ * @private
+ */
+ImageFilter.prototype.checkBrowserSupport_ = function () {
+  // Check suggested by http://stackoverflow.com/a/9771153/5000129
+  return typeof window.SVGFEColorMatrixElement !== 'undefined' &&
+      SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_SATURATE === 2;
 };
 
 /**
