@@ -204,6 +204,7 @@ designMode.updateProperty = function(element, name, value) {
       backgroundImage.src = Applab.maybeAddAssetPathPrefix(value);
       element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
       element.setAttribute('data-canonical-image-url', value);
+      // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
         backgroundImage.onload = function() {
           element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
@@ -231,7 +232,7 @@ designMode.updateProperty = function(element, name, value) {
       originalValue = element.getAttribute('data-canonical-image-url');
       element.src = Applab.maybeAddAssetPathPrefix(value);
       element.setAttribute('data-canonical-image-url', value);
-
+      // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
         element.onload = function () {
           // naturalWidth/Height aren't populated until image has loaded.
