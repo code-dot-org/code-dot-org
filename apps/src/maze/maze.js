@@ -51,7 +51,7 @@ var TurnDirection = tiles.TurnDirection;
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
-var SVG_NS = "http://www.w3.org/2000/svg";
+var SVG_NS = require('../constants').SVG_NS;
 
 /**
  * Create a namespace for the application.
