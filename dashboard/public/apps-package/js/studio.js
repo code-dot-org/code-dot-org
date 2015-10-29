@@ -7997,7 +7997,7 @@ levels.js_hoc2015_move_right = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -8023,13 +8023,9 @@ levels.js_hoc2015_move_right = {
     {
       "id": "playlab:js_hoc2015_move_right:runButton",
       "element_id": "#runButton",
-      "hide_target_selector": "#runButton",
       "qtip_config": {
         "content": {
           "text": msg.calloutRunButton(),
-        },
-        'hide': {
-          'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top left',
@@ -8069,7 +8065,7 @@ levels.js_hoc2015_move_right_down = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': 
@@ -8118,7 +8114,7 @@ levels.js_hoc2015_move_diagonal = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,  
   'map':
@@ -8192,7 +8188,7 @@ levels.js_hoc2015_move_backtrack = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': 
@@ -8241,7 +8237,7 @@ levels.js_hoc2015_move_around = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -8292,7 +8288,7 @@ levels.js_hoc2015_move_finale = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -8410,9 +8406,6 @@ levels.js_hoc2015_event_two_items = {
       'qtip_config': {
         'content': {
           'text': msg.calloutUseArrowButtons(),
-        },
-        'hide': {
-          'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top left',
@@ -8564,11 +8557,11 @@ levels.js_hoc2015_score =
           'event': 'mouseup touchend',
         },
         'position': {
-          'my': 'top left',
-          'at': 'top left',
+          'my': 'top center',
+          'at': 'bottom center',
           'adjust': {
             'x': 170,
-            'y': 20
+            'y': 0
           }
         }
       }
@@ -8620,7 +8613,6 @@ levels.js_hoc2015_win_lose = {
     {
       'id': 'playlab:js_hoc2015_win_lose:instructions',
       'element_id': '#prompt-table',
-      'hide_target_selector': '#prompt-table',
       'qtip_config': {
         'content': {
           'text': msg.calloutInstructions(),
@@ -8901,7 +8893,6 @@ levels.js_hoc2015_change_setting = {
     {
       'id': 'playlab:js_hoc2015_change_setting:setMap',
       'element_id': '#droplet_palette_block_setMap',
-      'hide_target_selector': '#droplet_palette_block_setMap',
       'qtip_config': {
         'content' : {
           'text': msg.calloutSetMapAndSpeed(),
@@ -8990,7 +8981,6 @@ levels.js_hoc2015_event_free = {
     {
       'id': 'playlab:js_hoc2015_event_free:clickCategory',
       'element_id': '.droplet-palette-group-header.green',
-      'hide_target_selector': '.droplet-palette-group-header.green',
       'qtip_config': {
         'content' : {
           'text': msg.calloutClickEvents(),
@@ -12954,11 +12944,6 @@ Item.prototype.startCollision = function (key) {
   if (newCollisionStarted) {
     if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
       Studio.trackedBehavior.touchedHazardCount++;
-      var actor = Studio.sprite[key];
-      if (actor) {
-        actor.addAction(new spriteActions.FadeActor(constants.TOUCH_HAZARD_FADE_TIME));
-        actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_FADE_TIME));
-      }
     }
   }
   return newCollisionStarted;
