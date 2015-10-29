@@ -659,6 +659,8 @@ en:
           'Improving Digital Assistant: Conditionals': 'Improving Digital Assistant: Conditionals'
           'Improving Digital Assistant: Functions with Return': 'Improving Digital Assistant: Functions with Return'
           'Improving Digital Assistant: Complex Conditionals': 'Improving Digital Assistant: Complex Conditionals'
+          Conditionals with Movie Bot: Conditionals with Movie Bot
+          Improving Digital Assistant with Conditionals: Improving Digital Assistant with Conditionals
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1370,3 +1372,9 @@ en:
           description_short: Create a story or make a game with Ice Age Play Lab!
           description: Create a story or make a game with Ice Age Play Lab!
           Ice Age Play Lab: Ice Age Play Lab
+        CSPPD3-Unit3:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview

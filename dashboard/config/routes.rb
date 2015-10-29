@@ -18,6 +18,7 @@ Dashboard::Application.routes.draw do
   end
   resources :activity_hints, only: [:update]
   resources :hint_view_requests, only: [:create]
+  resources :puzzle_ratings, only: [:create]
   resources :callouts
   resources :videos do
     collection do
@@ -247,6 +248,7 @@ Dashboard::Application.routes.draw do
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
+  get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
 

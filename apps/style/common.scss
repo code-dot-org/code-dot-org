@@ -825,6 +825,59 @@ input[type="radio"] {
   font-size: large;
 }
 
+#puzzleRatingButtons {
+
+  $red: #FF3014;
+  $dark-red: #7F150A;
+  $blue: #0094CA;
+  $dark-blue: #00647F;
+  $gray: #333333;
+  $dark-gray: #4D4D4D;
+  $light-gray: $light_gray;
+
+  hr {
+    border-top: 2px solid #ccc;
+  }
+
+  p {
+    float: left;
+    font-size: 16px;
+    color: $light-gray;
+    margin-right: 10px;
+  }
+
+  .puzzle-rating-btn {
+    fill: $light-gray;
+    padding: 0 5px;
+    cursor: pointer;
+
+    &#like {
+      &:hover {
+        fill: $gray;
+      }
+      &.enabled {
+        fill: $red;
+      }
+      &.enabled:hover {
+        fill: $dark-red;
+      }
+    }
+
+    &#dislike {
+      &:hover {
+        fill: $dark-gray;
+      }
+      &.enabled {
+        fill: $blue;
+      }
+      &.enabled:hover {
+        fill: $dark-blue;
+      }
+    }
+  }
+
+}
+
 /* Instructions. */
 #bubble {
   color: $black;

@@ -478,6 +478,27 @@ Given(/^I sign in as a (student|teacher)$/) do |user_type|
   }
 end
 
+# Signs in as name by filling in username/password fields. If name does not
+# already exist, creates a new student account for name in the db first.
+Given(/^I manually sign in as "([^"]*)"$/) do |name|
+  steps %Q{
+    Given I am on "http://studio.code.org/reset_session"
+    And execute JavaScript expression "window.localStorage.clear()"
+    Then I am on "http://studio.code.org/"
+    And I set the language cookie
+    And I create a student named "#{name}"
+    Then I am on "http://studio.code.org/"
+    And I reload the page
+    Then I wait for 2 seconds
+    Then I wait to see ".header_user"
+    Then I click selector "#signin_button"
+    And I wait to see ".new_user"
+    And I fill in username and password for "#{name}"
+    And I click selector "input[type=submit][value='Sign in']"
+    And I wait to see ".header_user"
+  }
+end
+
 When(/^I debug cookies$/) do
   puts "DEBUG: url=#{CGI::escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
