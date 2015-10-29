@@ -994,6 +994,9 @@ Applab.init = function(config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   Applab.channelId = config.channel;
+  if (config.assetPathPrefix) {
+    Applab.assetPathPrefix = config.assetPathPrefix;
+  }
 
   // Pre-populate asset list
   assetsApi.ajax('GET', '', function (xhr) {
@@ -1830,6 +1833,9 @@ Applab.onCodeModeButton = function() {
 
 var HTTP_REGEXP = new RegExp('^http://');
 
+// Exposed for testing
+Applab.assetPathPrefix = "/v3/assets/";
+
 /**
  * If the filename is relative (contains no slashes), then prepend
  * the path to the assets directory for this project to the filename.
@@ -1854,7 +1860,7 @@ Applab.maybeAddAssetPathPrefix = function (filename) {
     return filename;
   }
 
-  return '/v3/assets/' + Applab.channelId + '/'  + filename;
+  return Applab.assetPathPrefix + Applab.channelId + '/'  + filename;
 };
 
 /**
@@ -3247,18 +3253,14 @@ designMode.updateProperty = function(element, name, value) {
       break;
 
     case 'image':
-      var image = new Image();
       var backgroundImage = new Image();
-      var originalImage = element.style.backgroundImage;
+      var originalValue = element.getAttribute('data-canonical-image-url');
       backgroundImage.src = Applab.maybeAddAssetPathPrefix(value);
+      element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
       element.setAttribute('data-canonical-image-url', value);
-      if (backgroundImage.src !== originalImage) {
+      // do not resize if only the asset path has changed (e.g. on remix).
+      if (value !== originalValue) {
         backgroundImage.onload = function() {
-          // remove loader so that API calls dont hit this
-          element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
-          if (originalImage === element.style.backgroundImage) {
-            return;
-          }
           element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
             backgroundImage.naturalHeight + 'px';
           element.style.width = backgroundImage.naturalWidth + 'px';
@@ -3281,11 +3283,11 @@ designMode.updateProperty = function(element, name, value) {
       break;
 
     case 'picture':
-      var originalSrc = element.src;
+      originalValue = element.getAttribute('data-canonical-image-url');
       element.src = Applab.maybeAddAssetPathPrefix(value);
       element.setAttribute('data-canonical-image-url', value);
-
-      if (element.src !== originalSrc) {
+      // do not resize if only the asset path has changed (e.g. on remix).
+      if (value !== originalValue) {
         element.onload = function () {
           // naturalWidth/Height aren't populated until image has loaded.
           element.style.width = element.naturalWidth + 'px';
@@ -3502,7 +3504,8 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
     elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
   });
   children.children().each(function() {
-    elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
+    var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
+    elementLibrary.onDeserialize(element, designMode.updateProperty.bind(element));
   });
 };
 
