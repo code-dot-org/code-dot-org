@@ -495,13 +495,6 @@ module.exports = {
         img.onerror = function (err) {
           assert(false, err.message);
         };
-
-
-        testUtils.runOnAppTick(Applab, 1, function () {
-          Applab.onPuzzleComplete();
-        });
-
-
       },
       expected: {
         result: true,
