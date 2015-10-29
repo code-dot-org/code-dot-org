@@ -30,9 +30,6 @@ module.exports = function(testCollection, testData, dataItem, done) {
   // Override start blocks to load the solution;
   level.startBlocks = testData.xml;
   level.levelHtml = testData.levelHtml;
-  if (testData.assetPathPrefix) {
-    level.testAssetPathPrefix = testData.assetPathPrefix;
-  }
 
   // Validate successful solution.
   var validateResult = function (report) {
@@ -122,6 +119,7 @@ function runLevel (app, skinId, level, onAttempt, testData) {
     level: level,
     baseUrl: '/', // Doesn't matter
     channel: 'applab-channel-id',
+    testAssetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
     Dialog: StubDialog,
     isAdmin: true,

@@ -44,6 +44,10 @@ var example = {
       // xml to be used for startBlocks. set to string 'startBlocks' if you want
       // to use the xml from the level itself
       xml: '',
+      // Prefix to add to the names of image and sound assets in applab instead of
+      // "/v3/assets/". Set this to "//localhost:8001/apps/test/assets/" and add
+      // files to apps/test/assets if you need requests for assets to succeed.
+      assetPathPrefix: '',
       customValidator: function (assert) {
         // optional function called at puzzle finish (i.e. when BlocklyApps.report
         // is called.

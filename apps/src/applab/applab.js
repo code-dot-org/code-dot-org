@@ -667,8 +667,8 @@ Applab.init = function(config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   Applab.channelId = config.channel;
-  if (config.level.testAssetPathPrefix) {
-    Applab.assetPathPrefix = config.level.testAssetPathPrefix;
+  if (config.testAssetPathPrefix) {
+    Applab.assetPathPrefix = config.testAssetPathPrefix;
   }
 
   // Pre-populate asset list
