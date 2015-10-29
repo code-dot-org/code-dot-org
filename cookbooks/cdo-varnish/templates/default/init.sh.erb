@@ -1,0 +1,146 @@
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides:          varnish
+# Required-Start:    $local_fs $remote_fs $network
+# Required-Stop:     $local_fs $remote_fs $network
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start HTTP accelerator
+# Description:       This script provides a server-side cache
+#                    to be run in front of a httpd and should
+#                    listen on port 80 on a properly configured
+#                    system
+### END INIT INFO
+
+# Source function library
+. /lib/lsb/init-functions
+
+NAME=varnishd
+DESC="HTTP accelerator"
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+DAEMON=/usr/sbin/varnishd
+PIDFILE=/run/$NAME.pid
+
+test -x $DAEMON || exit 0
+
+# Include varnish defaults if available
+if [ -f /etc/default/varnish ] ; then
+        . /etc/default/varnish
+fi
+
+# Open files (usually 1024, which is way too small for varnish)
+ulimit -n ${NFILES:-131072}
+
+# Maxiumum locked memory size for shared memory log
+ulimit -l ${MEMLOCK:-82000}
+
+# If $DAEMON_OPTS is not set at all in /etc/default/varnish, use minimal useful
+# defaults (Backend at localhost:8080, a common place to put a locally
+# installed application server.)
+DAEMON_OPTS=${DAEMON_OPTS:--b localhost}
+
+# Ensure we have a PATH
+export PATH="${PATH:+$PATH:}/usr/sbin:/usr/bin:/sbin:/bin"
+
+start_varnishd() {
+    log_daemon_msg "Starting $DESC" "$NAME"
+    output=$(/bin/tempfile -s.varnish)
+    if start-stop-daemon \
+        --start --quiet --pidfile ${PIDFILE} --exec ${DAEMON} -- \
+        -P ${PIDFILE} ${DAEMON_OPTS} > ${output} 2>&1; then
+        log_end_msg 0
+    else
+        log_end_msg 1
+        cat $output
+        exit 1
+    fi
+    rm $output
+}
+
+disabled_varnishd() {
+    log_daemon_msg "Not starting $DESC" "$NAME"
+    log_progress_msg "disabled in /etc/default/varnish"
+    log_end_msg 0
+}
+
+stop_varnishd() {
+    log_daemon_msg "Stopping $DESC" "$NAME"
+    if start-stop-daemon \
+        --stop --quiet --pidfile $PIDFILE --retry 10 \
+        --exec $DAEMON; then
+        log_end_msg 0
+    else
+        log_end_msg 1
+    fi
+
+    if test -r $PIDFILE; then
+        read -r PID < $PIDFILE
+        if test ! -d /proc/$PID ; then
+            # stale pidfile
+            unset PID
+            rm -f $PIDFILE
+        fi
+    fi
+}
+
+reload_varnishd() {
+    log_daemon_msg "Reloading $DESC" "$NAME"
+    if /usr/share/varnish/reload-vcl -q; then
+        log_end_msg 0
+    else
+        log_end_msg 1
+    fi
+}
+
+status_varnishd() {
+    start-stop-daemon \
+        --status --quiet --pidfile $PIDFILE \
+        --exec $DAEMON
+    exit $?
+}
+
+configtest() {
+    $DAEMON ${DAEMON_OPTS} -C -n /tmp > /dev/null
+}
+
+
+
+case "$1" in
+    start)
+        case "${START:-}" in
+            [Yy]es|[Yy]|1|[Tt]|[Tt]rue)
+                start_varnishd
+                ;;
+            *)
+                disabled_varnishd
+                ;;
+        esac
+        ;;
+    stop)
+        stop_varnishd
+        ;;
+    reload)
+        reload_varnishd
+        ;;
+    status)
+        status_varnishd
+        ;;
+    restart|force-reload)
+	if status_of_proc -p "${PIDFILE}" "${DAEMON}" "${NAME}" 1>/dev/null; then
+	    if ! configtest; then
+		log_failure_msg "Syntax check failed, not restarting"
+		exit 1
+	    fi
+	fi
+        $0 stop
+        $0 start
+        ;;
+    configtest)
+        configtest && log_success_msg "Syntax ok"
+        ;;
+    *)
+        log_success_msg "Usage: $0 {start|stop|restart|reload|force-reload|configtest}"
+        exit 1
+        ;;
+esac
