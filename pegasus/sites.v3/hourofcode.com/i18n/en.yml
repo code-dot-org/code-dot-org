@@ -247,7 +247,7 @@
   signup_whole_school_flag_label: 'This event is for a whole school'
   signup_your_event: 'Sign up your event'
   signup_match_volunteer: 'Help me find a local software engineer to inspire my students'
-  signup_multiple_event_warning: "* If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
+  signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
 
   signup_name_placeholder: 'Your Name'
   signup_email_placeholder: 'you@example.com'

@@ -78,7 +78,9 @@
 
     %input{name:'hoc_country_s', type:'hidden', value:@country}
     %input{name:'hoc_company_s', type:'hidden', value:@company}
-    %p.multiple-event-warning= hoc_s(:signup_multiple_event_warning)
+    %p.multiple-event-warning
+      *
+      = hoc_s(:signup_multiple_event_warning)
     .form-group.submit-btn
       %div
         %button{type: "submit"}= hoc_s(:signup_submit_label)
