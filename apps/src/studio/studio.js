@@ -4046,7 +4046,8 @@ Studio.setSprite = function (opts) {
 
   spriteIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.sprite);
   spriteIcon.setAttribute('width', sprite.drawWidth * spriteTotalFrames(spriteIndex));
-  spriteIcon.setAttribute('height', sprite.drawHeight);
+  var extraHeight = (sprite.frameCounts.extraEmotions || 0) * sprite.drawHeight;
+  spriteIcon.setAttribute('height', sprite.drawHeight + extraHeight);
 
   if (spriteWalk) {
     // And set up the cliprect so we can show the right item from the spritesheet.
@@ -4055,7 +4056,9 @@ Studio.setSprite = function (opts) {
     spriteWalkClipRect.setAttribute('height', sprite.drawHeight);
 
     spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.walk);
-    spriteWalk.setAttribute('width', sprite.drawWidth * sprite.frameCounts.turns); // 800
+
+    var extraWidth = (sprite.frameCounts.extraEmotions || 0) * sprite.drawWidth;
+    spriteWalk.setAttribute('width', extraWidth + sprite.drawWidth * sprite.frameCounts.turns); // 800
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
