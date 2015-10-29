@@ -244,8 +244,28 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   }
 
   if (continueButton) {
-    dom.addClickTouchEvent(continueButton, function() {
+
+    if (options.response && options.response.puzzle_rating_url) {
+      feedback.appendChild(this.buildPuzzleRatingButtons_());
+    }
+
+    dom.addClickTouchEvent(continueButton, function () {
       feedbackDialog.hide();
+
+      // Submit Puzzle Rating
+      var selectedRating = feedback.querySelector('.puzzle-rating-btn.enabled');
+      if (options.response && options.response.puzzle_rating_url && selectedRating) {
+        $.ajax({
+          url: options.response.puzzle_rating_url,
+          type: 'POST',
+          data: {
+            script_id: options.response.script_id,
+            level_id: options.response.level_id,
+            level_source_id: options.response.level_source_id,
+            rating: selectedRating.getAttribute('data-value')
+          },
+        });
+      }
       // onContinue will fire already if there was only a continue button
       if (!onlyContinue) {
         options.onContinue();
@@ -326,6 +346,27 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
     return codeLines;
   }
   return this.getCountableBlocks_().length;
+};
+
+FeedbackUtils.prototype.buildPuzzleRatingButtons_ = function () {
+  var buttonContainer = document.createElement('div');
+  buttonContainer.id = 'puzzleRatingButtons';
+  buttonContainer.innerHTML = require('./templates/puzzleRating.html.ejs')();
+
+  var buttons = buttonContainer.querySelectorAll('.puzzle-rating-btn');
+  var buttonClickHandler = function () {
+    for (var i = 0, button; (button = buttons[i]); i++) {
+      if (button != this) {
+        $(button).removeClass('enabled');
+      }
+    }
+    $(this).toggleClass('enabled');
+  };
+  for (var i = 0, button; (button = buttons[i]); i++) {
+    dom.addClickTouchEvent(button, buttonClickHandler);
+  }
+
+  return buttonContainer;
 };
 
 /**
@@ -1189,6 +1230,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
  * @param {HTMLElement} options.contentDiv
  * @param {string} options.defaultBtnSelector
  * @param {boolean} options.scrollContent
+ * @param {boolean} options.scrollableSelector
  * @param {function} options.onHidden
  * @param {string} options.id
  * @param {HTMLElement} options.header
@@ -1223,7 +1265,8 @@ FeedbackUtils.prototype.createModalDialog = function(options) {
     }
   };
 
-  var elementToScroll = options.scrollContent ? '.modal-content' : null;
+  var scrollableSelector = options.scrollableSelector || '.modal-content';
+  var elementToScroll = options.scrollContent ? scrollableSelector : null;
   return new options.Dialog({
     body: modalBody,
     onHidden: options.onHidden,

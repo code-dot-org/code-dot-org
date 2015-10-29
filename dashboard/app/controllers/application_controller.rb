@@ -154,6 +154,12 @@ class ApplicationController < ActionController::Base
       end
     end
 
+    if PuzzleRating.enabled?
+      if script_level && PuzzleRating.can_rate?(script_level.script, script_level.level, current_user)
+        response[:puzzle_rating_url] = puzzle_ratings_path
+      end
+    end
+
     # logged in users can:
     if current_user
       # save solved levels to a gallery (subject to

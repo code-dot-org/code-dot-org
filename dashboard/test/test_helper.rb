@@ -41,6 +41,9 @@ require 'mocha/mini_test'
 # Raise exceptions instead of rendering exception templates.
 Dashboard::Application.config.action_dispatch.show_exceptions = false
 
+require 'dynamic_config/gatekeeper'
+require 'dynamic_config/dcdo'
+
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
@@ -58,6 +61,9 @@ class ActiveSupport::TestCase
 
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
+
+    Gatekeeper.clear
+    DCDO.clear
   end
 
   teardown do

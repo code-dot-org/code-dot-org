@@ -1,0 +1,15 @@
+pd 'true'
+title 'Computer Science Principles: Unit 3 PD'
+description 'Online Exploration of CSP Unit 3'
+description_short 'Online Exploration of CSP Unit 3'
+login_required 'true'
+
+stage 'Getting Started'
+level 'CSPPD3-u3 Welcome'
+level 'CSPPD3-u3 overview'
+level 'PD check your progress'
+level 'CSPPD3-u3 tips for prep'
+level 'CSPPD3-u2 plan'
+
+stage 'Unit 3 Overview' 
+level 'CSPPD3-u3 unit 3 overview'

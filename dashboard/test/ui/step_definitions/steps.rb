@@ -183,7 +183,13 @@ When /^I press a button with xpath "([^"]*)"$/ do |xpath|
 end
 
 When /^I click selector "([^"]*)"$/ do |jquery_selector|
+  # normal a href links can only be clicked this way
   @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+end
+
+When /^I send click events to selector "([^"]*)"$/ do |jquery_selector|
+  # svg elements can only be clicked this way
+  @browser.execute_script("$(\"#{jquery_selector}\").click();")
 end
 
 When /^I press delete$/ do
@@ -453,6 +459,7 @@ And(/^I create a (student|teacher) named "([^"]*)"$/) do |user_type, name|
     user.password = name + "password" # hack
     user.user_type = user_type
     user.age = user_type == 'student' ? 16 : 21
+    user.confirmed_at = Time.now
   end
 end
 
