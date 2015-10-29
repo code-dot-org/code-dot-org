@@ -199,18 +199,13 @@ designMode.updateProperty = function(element, name, value) {
       break;
 
     case 'image':
-      var image = new Image();
       var backgroundImage = new Image();
-      var originalImage = element.style.backgroundImage;
+      var originalValue = element.getAttribute('data-canonical-image-url');
       backgroundImage.src = Applab.maybeAddAssetPathPrefix(value);
+      element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
       element.setAttribute('data-canonical-image-url', value);
-      if (backgroundImage.src !== originalImage) {
+      if (value !== originalValue) {
         backgroundImage.onload = function() {
-          // remove loader so that API calls dont hit this
-          element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
-          if (originalImage === element.style.backgroundImage) {
-            return;
-          }
           element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
             backgroundImage.naturalHeight + 'px';
           element.style.width = backgroundImage.naturalWidth + 'px';
@@ -233,11 +228,11 @@ designMode.updateProperty = function(element, name, value) {
       break;
 
     case 'picture':
-      var originalSrc = element.src;
+      originalValue = element.getAttribute('data-canonical-image-url');
       element.src = Applab.maybeAddAssetPathPrefix(value);
       element.setAttribute('data-canonical-image-url', value);
 
-      if (element.src !== originalSrc) {
+      if (value !== originalValue) {
         element.onload = function () {
           // naturalWidth/Height aren't populated until image has loaded.
           element.style.width = element.naturalWidth + 'px';
@@ -454,7 +449,8 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
     elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
   });
   children.children().each(function() {
-    elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
+    var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
+    elementLibrary.onDeserialize(element, designMode.updateProperty.bind(element));
   });
 };
 
