@@ -252,6 +252,11 @@ levels.playlab_1 = utils.extend(levels.dog_hello, {
   ]
 });
 
+levels.iceage_1 = utils.extend(levels.playlab_1, {
+  background: 'icy',
+  firstSpriteIndex: 0, // manny
+});
+
 // Can you make the dog say something and then have the cat say something afterwards?
 levels.dog_and_cat_hello =  {
   'ideal': 3,
@@ -328,6 +333,10 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
+});
+levels.iceage_2 = utils.extend(levels.playlab_2, {
+  background: 'leafy',
+  firstSpriteIndex: 3, // diego
 });
 
 
@@ -412,6 +421,10 @@ levels.playlab_3 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ]
 };
+levels.iceage_3 = utils.extend(levels.playlab_3, {
+  background: 'grassy',
+  firstSpriteIndex: 2, // scrat
+});
 
 
 // Can you write a program that makes the dog move to the cat, and have the cat
@@ -530,6 +543,10 @@ levels.playlab_4 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 };
+levels.iceage_4 = utils.extend(levels.playlab_4, {
+  background: 'grassy',
+  avatarList: ['scrat', 'granny']
+});
 
 // Can you write a program to make the octopus say "hello" when it is clicked?
 levels.click_hello =  {
@@ -579,6 +596,10 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
+});
+levels.iceage_5 = utils.extend(levels.playlab_5, {
+  background: 'icy',
+  firstSpriteIndex: 1, // sid
 });
 
 levels.octopus_happy =  {
@@ -729,6 +750,15 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 });
+levels.iceage_6 = utils.extend(levels.playlab_6, {
+  background: 'tile',
+  firstSpriteIndex: 3, // diego
+  goalOverride: {
+    goal: 'ia_projectile_1',
+    success: 'ia_projectile_1',
+    imageWidth: 800
+  }
+});
 
 // The "repeat forever" block allows you to run code continuously. Can you
 // attach blocks to move this dinosaur up and down repeatedly?
@@ -848,6 +878,10 @@ levels.playlab_7 = {
     }]
   ],
 };
+levels.iceage_7 = utils.extend(levels.playlab_7, {
+  background: 'icy',
+  firstSpriteIndex: 1, // sid
+});
 
 // Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into
 // the dinosaur, and then move him with the arrows to make that happen?
@@ -1069,6 +1103,10 @@ levels.playlab_8 = {
     '</next></block>'
 
 };
+levels.iceage_8 = utils.extend(levels.playlab_8, {
+  background: 'icy',
+  avatarList: ['manny', 'sid']
+});
 
 // Can you add blocks to change the background and the speed of the penguin, and
 // then move him with the arrows until you score?
@@ -1252,6 +1290,19 @@ levels.playlab_9 = {
     '</block>'
 };
 
+levels.iceage_9 = utils.extend(levels.playlab_9, {
+  background: 'flower',
+  requiredBlocks: [
+    [{test: 'setBackground',
+      type: 'studio_setBackground',
+      titles: {VALUE: '"grassy"'}}],
+    [{test: 'setSpriteSpeed',
+      type: 'studio_setSpriteSpeed',
+      titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
+  ],
+  avatarList: ['sid', 'granny']
+});
+
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
 levels.sandbox =  {
   'ideal': Infinity,
@@ -1309,6 +1360,7 @@ levels.sandbox =  {
 levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
 levels.playlab_10 = utils.extend(levels.sandbox, {});
+levels.iceage_10 = utils.extend(levels.playlab_10, {});
 
 // Create your own story! Move around the cat and dog, and make them say things.
 levels.k1_6 = {

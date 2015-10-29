@@ -25,4 +25,4 @@ Scenario: Auto-placing blocks with XML positioning
   Then block "17" is at offset "20, 16"
   And block "19" is at offset "16, 20"
   And block "21" is at offset "20, 20"
-  And block "23" is at offset "16, 211"
+  And block "23" is at offset "16, 81"
