@@ -44,9 +44,9 @@ class DCDOBase
     if Rails.env.test?
       adapter = MemoryAdapter.new
     elsif Rails.env.development
-      adapter = JSONFileDatastoreAdapter.new CDO.gatekeeper_table_name
+      adapter = JSONFileDatastoreAdapter.new CDO.dcdo_table_name
     else
-      adapter = DynamoDBAdapter.new CDO.gatekeeper_table_name
+      adapter = DynamoDBAdapter.new CDO.dcdo_table_name
     end
 
     datastore_cache = DatastoreCache.new adapter
