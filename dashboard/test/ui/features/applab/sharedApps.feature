@@ -91,7 +91,9 @@ Feature: App Lab Scenarios
   # Known limitation of Selenium's Safari driver: Cannot use sendKeys to simulate
   # typing into a contenteditable div (which is what our Applab textareas are)
   # See https://code.google.com/p/selenium/issues/detail?id=4467
+  # Also doesnt seem to be working for ie10
   @no_safari
+  @no_ie10
   Scenario: Can type in textarea on share page
     Given I switch to design mode
     And I drag a TEXT_AREA into the app
