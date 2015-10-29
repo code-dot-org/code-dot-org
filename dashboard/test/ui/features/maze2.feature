@@ -28,7 +28,7 @@ Feature: Complete a simple maze level
     And I wait to see "#hint-request-button"
     Then element "#hint-request-button" is visible
     Then I press "hint-request-button"
-    And element ".congrats" has text "Try one or more of the blocks below to solve this puzzle."
+    And element ".congrats" has text "Try using one of the blocks below:"
     And element ".modal-content div:nth-child(2) iframe:nth-child(1)" is visible
     And element ".modal-content div:nth-child(2) iframe:nth-child(1)" has id "feedbackBlocks"
     Then I press "again-button"
