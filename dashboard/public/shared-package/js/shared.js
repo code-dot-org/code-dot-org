@@ -320,11 +320,11 @@ window.apps = {
       cdoSounds: CDOSounds,
       position: {blockYCoordinateInterval: 25},
       onInitialize: function() {
-        dashboard.createCallouts(this.callouts);
+        dashboard.createCallouts(this.level.callouts || this.callouts);
         if (window.dashboard.isChrome34) {
           chrome34Fix.fixup();
         }
-        if (appOptions.level.projectTemplateLevelName) {
+        if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
           $('#clear-puzzle-header').hide();
           $('#versions-header').show();
         }
@@ -459,50 +459,6 @@ window.apps = {
 
 var renderAbusive = require('./renderAbusive');
 
-// Attempts to lookup the name in the digest hash, or returns the name if not found.
-function tryDigest(name) {
-  return (window.digestManifest || {})[name] || name;
-}
-
-/**
- * Returns a function which returns a $.Deferred instance. When executed, the
- * function loads the given app script.
- * @param name The name of the module to load.
- * @param cacheBust{Boolean?} If true, append a random query string to bypass the
- *   cache.
- * @returns {Function}
- */
-function loadSource(name, cacheBust) {
-  return function () {
-    var deferred = new $.Deferred();
-    var param = cacheBust ? '?' + Math.random() : '';
-    document.body.appendChild($('<script>', {
-      src: appOptions.baseUrl + tryDigest('js/' + name + '.js') + param
-    }).on('load', function () {
-      deferred.resolve();
-    })[0]);
-    return deferred;
-  };
-}
-
-/**
- * Returns a function which returns a $.Deferred instance. When executed, the
- * function loads the given app script.
- * @param sourceUrl The URL of the CDN script resource to load.
- * @returns {Function}
- */
-function loadExternalSource(sourceUrl, cacheBust) {
-  return function () {
-    var deferred = new $.Deferred();
-    document.body.appendChild($('<script>', {
-      src: sourceUrl
-    }).on('load', function () {
-      deferred.resolve();
-    })[0]);
-    return deferred;
-  };
-}
-
 // Loads the given app stylesheet.
 function loadStyle(name) {
   $('body').append($('<link>', {
@@ -513,41 +469,16 @@ function loadStyle(name) {
 }
 
 module.exports = function (callback) {
-  loadStyle('common');
-  loadStyle(appOptions.app);
-  var promise = loadSource('manifest', true)();
-  if (appOptions.droplet) {
-    loadStyle('droplet/droplet.min');
-    loadStyle('tooltipster/tooltipster.min');
-    promise = promise.then(loadSource('jsinterpreter/acorn_interpreter'))
-        .then(loadSource('marked/marked'))
-        .then(loadSource('ace/ace'))
-        .then(loadSource('ace/mode-javascript'))
-        .then(loadSource('ace/ext-language_tools'))
-        .then(loadSource('droplet/droplet-full'))
-        .then(loadSource('tooltipster/jquery.tooltipster'))
-        .then(loadExternalSource('https://www.google.com/jsapi'));
-  } else {
-    promise = promise.then(loadSource('blockly'))
-        .then(loadSource('marked/marked'))
-        .then(loadSource(appOptions.locale + '/blockly_locale'));
-  }
-
   if (window.dashboard && dashboard.project) {
-    promise = promise.then(dashboard.project.load)
-        .then(function () {
-          if (dashboard.project.hideBecauseAbusive()) {
-            renderAbusive();
-            return $.Deferred().reject();
-          }
-        });
+    dashboard.project.load().then(function () {
+      if (dashboard.project.hideBecauseAbusive()) {
+        renderAbusive();
+        return $.Deferred().reject();
+      }
+    }).then(callback);
+  } else {
+    callback();
   }
-
-  promise.then(loadSource('common' + appOptions.pretty))
-      .then(loadSource(appOptions.locale + '/common_locale'))
-      .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
-      .then(loadSource(appOptions.app + appOptions.pretty))
-      .then(callback);
 };
 
 },{"./renderAbusive":6}],5:[function(require,module,exports){
@@ -925,23 +856,15 @@ var projects = module.exports = {
     current.levelHtml = sourceAndHtml.html;
     current.level = this.appToProjectUrl();
 
-    if (channelId && current.isOwner) {
-      var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
-      sources.put(channelId, packSourceFile(), filename, function (err, response) {
-        currentSourceVersionId = response.versionId;
-        current.migratedToS3 = true;
-        channels.update(channelId, current, function (err, data) {
-          this.updateCurrentData_(err, data, false);
-          executeCallback(callback, data);
-        }.bind(this));
-      }.bind(this));
-    } else {
-      // TODO: remove once the server is providing the channel ID (/c/ remix uses `copy`)
-      channels.create(current, function (err, data) {
-        this.updateCurrentData_(err, data, true);
+    var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
+    sources.put(channelId, packSourceFile(), filename, function (err, response) {
+      currentSourceVersionId = response.versionId;
+      current.migratedToS3 = true;
+      channels.update(channelId, current, function (err, data) {
+        this.updateCurrentData_(err, data, false);
         executeCallback(callback, data);
       }.bind(this));
-    }
+    }.bind(this));
   },
   updateCurrentData_: function (err, data, isNewChannel) {
     if (err) {
@@ -976,6 +899,10 @@ var projects = module.exports = {
     // `getLevelSource()` is expensive for Blockly so only call
     // after `workspaceChange` has fired
     if (!appOptions.droplet && !hasProjectChanged) {
+      return;
+    }
+
+    if ($('#designModeViz .ui-draggable-dragging').length !== 0) {
       return;
     }
 
@@ -1019,7 +946,10 @@ var projects = module.exports = {
     delete current.id;
     delete current.hidden;
     current.name = newName;
-    this.save(wrappedCallback);
+    channels.create(current, function (err, data) {
+      this.updateCurrentData_(err, data, true);
+      this.save(wrappedCallback);
+    }.bind(this));
   },
   copyAssets: function (srcChannel, callback) {
     if (!srcChannel) {
@@ -1053,24 +983,26 @@ var projects = module.exports = {
       redirectToRemix();
     }
   },
+  createNew: function() {
+    projects.save(function () {
+      location.href = projects.appToProjectUrl() + '/new';
+    });
+  },
   delete: function(callback) {
     var channelId = current.id;
-    if (channelId) {
-      channels.delete(channelId, function(err, data) {
-        executeCallback(callback, data);
-      });
-    } else {
-      executeCallback(callback, false);
-    }
+    channels.delete(channelId, function(err, data) {
+      executeCallback(callback, data);
+    });
   },
   /**
    * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
    */
   load: function () {
-    var deferred;
+    var deferred = new $.Deferred();
     if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
-        return;
+        deferred.resolve();
+        return deferred;
       }
       var pathInfo = parsePath();
 
@@ -1082,7 +1014,6 @@ var projects = module.exports = {
         }
 
         // Load the project ID, if one exists
-        deferred = new $.Deferred();
         channels.fetch(pathInfo.channelId, function (err, data) {
           if (err) {
             // Project not found, redirect to the new project experience.
@@ -1099,13 +1030,12 @@ var projects = module.exports = {
             });
           }
         });
-        return deferred;
       } else {
         isEditing = true;
+        deferred.resolve();
       }
     } else if (appOptions.isChannelBacked) {
       isEditing = true;
-      deferred = new $.Deferred();
       channels.fetch(appOptions.channel, function(err, data) {
         if (err) {
           deferred.reject();
@@ -1118,8 +1048,10 @@ var projects = module.exports = {
           });
         }
       });
-      return deferred;
+    } else {
+      deferred.resolve();
     }
+    return deferred;
   },
 
   getPathName: function (action) {

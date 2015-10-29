@@ -5,9 +5,11 @@ require 'cdo/web_purify'
 class ActivitiesController < ApplicationController
   include LevelsHelper
 
-  # TODO: milestone is the only action so the below lines essentially do nothing. commenting out bc
-  # the TODO is to figure out why (forgery protection is useful -- why can't we use it? blockly?)
-  # protect_from_forgery except: :milestone
+  # The action below disables the default request forgery protection from
+  # application controller. We don't do request forgery protection on the
+  # milestone action to permit the aggressive public caching we plan to do
+  # for some script level pages.
+  protect_from_forgery except: :milestone
 
   MAX_INT_MILESTONE = 2147483647
   USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"']
@@ -160,15 +162,6 @@ class ActivitiesController < ApplicationController
     # hash of level_id => test_result
     test_result = params[:testResult].to_i
     old_result = client_state.level_progress(@level.id)
-    if test_result > old_result
-      client_state.set_level_progress(@level.id, test_result)
-    end
-
-    # Update count of total lines written if they passed the test.
-    lines = params[:lines].to_i
-    if lines > 0 && Activity.passing?(test_result)
-      client_state.add_lines(lines)
-    end
 
     @new_level_completed = true if !Activity.passing?(old_result) && Activity.passing?(test_result)
 

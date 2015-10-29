@@ -39,7 +39,6 @@
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "functionParams_none": null,
       "functionParams_n": null,
@@ -47,9 +46,6 @@
       "callMyFunction_n": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "Create the functions you were assigned as part of your digital scene. (Click to see full instructions)",
     "markdown_instructions": "# Design Your Component\r\n\r\nWith your **group** you should have already identified and assigned the high-level functions that should be used to create your digital scene. \r\n\r\n# Do This\r\nUse the space here to design your functions. Once you're done you can **share** this project with your groupmates.",
@@ -77,7 +73,9 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "submittable": "true",
-    "hide_view_data_button": "true"
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

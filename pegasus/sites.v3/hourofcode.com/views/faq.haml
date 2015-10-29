@@ -15,20 +15,20 @@
 %div= hoc_s(:hoc_faq_why_cs_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org')).gsub(/%{partner_url}/, resolve_url('code.org'))
 
 %h2= hoc_s(:hoc_faq_how_participate_q)
-%div= hoc_s(:hoc_faq_how_participate_a).gsub('/resources/how-to', resolve_url('/resources/how-to')).gsub(/%{campaign_date}/, campaign_date('start-short'))
+%div= hoc_s(:hoc_faq_how_participate_a).gsub('/how-to', resolve_url('/how-to')).gsub(/%{campaign_date}/, campaign_date('start-short'))
 
 %h2= hoc_s(:hoc_faq_behind_hoc_q)
 %div= hoc_s(:hoc_faq_behind_hoc_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
 
 %h2= hoc_s(:hoc_faq_host_q)
-%div= hoc_s(:hoc_faq_host_a).gsub('/resources/how-to', resolve_url('/resources/how-to')).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
+%div= hoc_s(:hoc_faq_host_a).gsub('/how-to', resolve_url('/how-to')).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
 
 %h2= hoc_s(:hoc_faq_need_computers_q)
 %div= hoc_s(:hoc_faq_need_computers_a)
 
 -if @country != 'us'
   %h2= hoc_s(:hoc_faq_international_q).gsub(/<country>/, HOC_COUNTRIES[@country]['full_name'])
-  %div= hoc_s(:hoc_faq_international_a).gsub('/resources', resolve_url('/resources'))
+  %div= hoc_s(:hoc_faq_international_a).gsub('/promote', resolve_url('/promote'))
 
 %h2= hoc_s(:hoc_faq_tutorial_q)
 %div= hoc_s(:hoc_faq_tutorial_a).gsub('/tutorial-guidelines', resolve_url('/tutorial-guidelines'))

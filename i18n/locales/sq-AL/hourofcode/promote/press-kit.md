@@ -22,10 +22,10 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 **1. Planifiko eventin tënd**
 
   * Planifiko një takim të përgjithshëm për të nisur Orën e Kodimit.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organizoni aktivitete grupi (siç është prezantimi i ndonjë programimi 'unplugged'), apo aktivitete të nxitura e të drejtuara nga nxënësit/studentët.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote#videos') %) to inspire.
+  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. Identifiko gazetarë specifik lokale që mbulojnë arsimin apo ngjarjet lokale.**
 
@@ -35,7 +35,7 @@ Kërko online për të gjetur informacionin e kontaktit për një reporter. Nës
 
 **3. Kontakto mediat lokale**
 
-Mënyra më e mirë për të kontaktuar është përmes email-it. Duhet të jetë shkurt dhe të komunikojë: pse duhet njerëzit e tjerë të interesohen për këtë event? Përfshi informacionet e kontaktit (pershirë një numër telefoni) për atë që do jetë në faqen e eventit. **See a [sample pitch to media](%= resolve_url('/promote#sample-emails') %):**
+Mënyra më e mirë për të kontaktuar është përmes email-it. Duhet të jetë shkurt dhe të komunikojë: pse duhet njerëzit e tjerë të interesohen për këtë event? Përfshi informacionet e kontaktit (pershirë një numër telefoni) për atë që do jetë në faqen e eventit. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %):**
 
 **4. Përgatitu për pyetjet për ngjarjen tënde të shkollës. Këtu janë disa shembuj:**
 

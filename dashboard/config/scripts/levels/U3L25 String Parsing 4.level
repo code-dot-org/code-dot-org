@@ -35,7 +35,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -80,7 +79,13 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "instructions": "You are given the string \"Wisdom begins with wonder.\" Use the string.substring(begin, end) function to print \"begin\" and \"nder\" to the console.",
-    "markdown_instructions": "## Challenge 3\r\n\r\nYou are given the string <samp>\"Wisdom begins with wonder.\"</samp> Use the <samp>string.substring(begin, end)</samp> function to print \"begin\" and \"nder\" to the console."
+    "markdown_instructions": "## Challenge 3\r\n\r\nYou are given the string <samp>\"Wisdom begins with wonder.\"</samp> Use the <samp>string.substring(begin, end)</samp> function to print \"begin\" and \"nder\" to the console.",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

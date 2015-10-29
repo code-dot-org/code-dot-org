@@ -90,6 +90,9 @@ function initProjects() {
       options.saveProject = dashboard.project.save.bind(dashboard.project);
       options.projectChanged = dashboard.project.projectChanged;
       window.dashboard.project.init(sourceHandler);
+
+      // Complete project initialization sequence.
+      $(document).trigger('appInitialized');
     }).always(function() {
       pixelationDisplay();
     });

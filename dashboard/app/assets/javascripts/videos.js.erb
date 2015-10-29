@@ -23,7 +23,15 @@ function createVideo(options) {
 //   key - an uid.
 //   name - a string.
 //   redirect - the redirect page after the video is dismissed.
-function showVideoDialog(options) {
+function showVideoDialog(options, forceShowVideo) {
+  if (forceShowVideo === undefined) {
+    forceShowVideo = false;
+  }
+
+  if (dashboard.clientState.hasSeenVideo(options.key) && forceShowVideo === false) {
+    return;
+  }
+
   upgradeInsecureOptions(options);
   var widthRatio = .8;
   var heightRatio = .8;
@@ -44,6 +52,12 @@ function showVideoDialog(options) {
   var dialog = new Dialog({ body: body, redirect : options.redirect });
   $div = $(dialog.div);
   $div.addClass('video-modal');
+
+  $('.video-modal').on("remove", function () {
+    dashboard.clientState.recordVideoSeen(options.key);
+  });
+
+
 
   var tabHandler = function(event, ui) {
     var tab = ui.tab || ui.newTab;  // Depends on event.
@@ -104,6 +118,12 @@ function showVideoDialog(options) {
   notesDiv.height(divHeight);
 
   dialog.show();
+
+  // Raise an event that the dialog has been shown, in case anything needs to
+  // pause/respond to it.
+  var event = document.createEvent('Event');
+  event.initEvent('videoShown', true, true);
+  document.dispatchEvent(event);
 
   // Don't add fallback player if a video modal has closed
   var shouldStillAdd = true;

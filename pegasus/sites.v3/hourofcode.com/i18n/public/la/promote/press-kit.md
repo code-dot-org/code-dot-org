@@ -24,10 +24,10 @@ nav: promote_nav
 **1. Planifica tu evento**
 
   * Haz una reunión para iniciar la Hora de Código.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organiza actividades grupales (como una demostración de una actividad de programación 'fuera de línea'), o muestra lo que han hecho los estudiantes y guía las actividades.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote#videos') %>) to inspire.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Identifica a los reporteros locales que cubren notas escolares o eventos locales.**
 
@@ -37,7 +37,7 @@ Busca en línea la información de contacto de un reportero. Si no puedes encont
 
 **3. Contacta a medios locales**
 
-La mejor forma es por correo electrónico. Debe ser corto y debe responder a la siguiente pregunta: ¿por qué les debe importar a las personas este evento? Incluye información de contacto (sobre todo un número de teléfono móvil) para quien esté en el sitio del evento. **See a [sample pitch to media](<%= resolve_url('/promote#sample-emails') %>):**
+La mejor forma es por correo electrónico. Debe ser corto y debe responder a la siguiente pregunta: ¿por qué les debe importar a las personas este evento? Incluye información de contacto (sobre todo un número de teléfono móvil) para quien esté en el sitio del evento. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Prepárate para las preguntas que te hagan acerca de tu evento escolar. Aquí hay unos ejemplos:**
 

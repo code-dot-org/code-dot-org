@@ -4,7 +4,7 @@ title: Politika zasebnosti
 
 ---
 
-### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Politika zasebnosti
 
@@ -245,4 +245,4 @@ Osebnih podatkov ne razkrivamo zunanjim partnerjem za namene oglaševanja. Za do
 Prosimo, da kontaktirate Code.org z vprašanji ali komentarji o tej opombi o zasebnosti, o vaših osebnih podatkih ali o praksah razkritja zunanjih partnerjev ali o naših izbirah glede strinjanja, tako da nam pišete na <http://code.org/contact> or at 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.   
   
   
-[![image](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![image](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

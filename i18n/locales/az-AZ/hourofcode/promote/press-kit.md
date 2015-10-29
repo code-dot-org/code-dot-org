@@ -22,10 +22,10 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 **1. Tədbirinizi planlaşdırın**
 
   * Kod Saatəna başlamaq üçün yığıncaq təşkil edin.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Qrup məşğələləri təşkil edin (məsələn, proqramlaşdırma məşğələsini avadalıq olmadan necə keçirmək mümkün olduğunu göstərin), yaxud şagirdlərin yaratdığı və təşkil etdiyi çalışmaları nümayiş etdirin.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote#videos') %) to inspire.
+  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. Təhsil və yerli tədbirlər barədə yazan müxbirləri müəyyən edin.**
 
@@ -35,7 +35,7 @@ Müxbirlə əlaqə üçün onlayn axtarış edin. Əgər tapa bilməsəniz, reda
 
 **3. Yerli media ilə əlaqə saxlayın**
 
-Əlaqə üçün ən yaxşı vasitə e-məktubdur. Məktub qısa və dolğun olmalıdır: niyə insanlarbu tədbirlə maraqlanmalıdırlar? Tədbirə gələnlər üçün əlaqə vasitəsi göstərin (mobil telefon nömrəsi də daxil olmaqla). **See a [sample pitch to media](%= resolve_url('/promote#sample-emails') %):**
+Əlaqə üçün ən yaxşı vasitə e-məktubdur. Məktub qısa və dolğun olmalıdır: niyə insanlarbu tədbirlə maraqlanmalıdırlar? Tədbirə gələnlər üçün əlaqə vasitəsi göstərin (mobil telefon nömrəsi də daxil olmaqla). **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %):**
 
 **4. Məktəb tədbiri haqqında suallar hazırlayın. Bəzi nümunələri təqdim edirik:**
 

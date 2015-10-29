@@ -8,41 +8,41 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in After-school
+# Πώς να διδάξεις την Ώρα του Κώδικα
 
-## 1) Sign up
+## 1) Εγγραφή
 
-  * Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
-  * Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
+  * Εγγραφείτε για να φιλοξενήσετε μια [Ώρα του κώδικα](<%= resolve_url('/') %>) για την περίοδο <%= campaign_date('short') %>.
+  * Προωθήστε τη δική σας [Ώρα του κώδικα](<%= resolve_url('/promote') %>) και ενθαρρύνετε κι άλλους.
 
-## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Choose a tutorial:
+## 2) Δες το επεξηγηματικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 3) Επέλεξε ένα φροντιστήριο:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)
+Θα φιλοξενούμε μια ποικιλία από [διασκεδαστικά, ωριαία φροντιστήρια](<%= resolve_url('https://code.org/learn') %>) για τους συμμετέχοντες όλων των ηλικιών, που έχουν δημιουργηθεί από μια ποικιλία εταίρων. *Έρχονται νέα σεμιναρια για την έναρξη της Ώρας του Κώδικα πριν από <%= campaign_date('full') %>.* [Δοκιμάστε τα τρέχοντα φροντιστήρια.](<%= resolve_url("https://code.org/learn") %>)
 
 **Όλοι οι εκπαιδευτικοί οδηγοί για την Ώρα του Κώδικα:**
 
   * Απαιτούν ελάχιστο χρόνο προετοιμασίας από τους διοργανωτές
-  * Are self-guided - allowing kids to work at their own pace and skill-level
+  * Είναι αυτο-καθοδηγούμενοι - επιτρέποντας στους μαθητές να δουλεύουν με τον δικό τους ρυθμό και σύμφωνα με τις ικανότητές τους
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 4) Plan your technology needs - computers are optional
+## 4) Σχεδίασε τις τεχνολογικές σου ανάγκες - οι υπολογιστές είναι προαιρετικοί
 
-The best Hour of Code experience will be with Internet-connected computers. You **don’t** need a computer for every child, and can even do the Hour of Code without a computer at all.
+Η καλύτερη εμπειρία στην Ώρα του Κώδικα θα δημιουργηθεί με υπολογιστές που έχουν πρόσβαση στο Διαδίκτυο. **Δεν** χρειάζεστε όμως έναν υπολογιστή για κάθε παιδί, και μπορεί η εκδήλωση για την Ώρα του Κώδικα να πραγματοποιηθεί ακόμα και χωρίς καθόλου υπολογιστές.
 
-  * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When kids partner up, they help each other and rely less on the organizer. Καταλαβαίνουν επίσης ότι η Επιστήμη των Υπολογιστών είναι κοινωνική και συνεργατική.
-  * **Have low bandwidth?** Plan to project videos onto a big screen, so everyone isn't downloading their own videos. Or try the unplugged / offline tutorials.
+  * Δοκίμασε τα φροντιστήρια σε υπολογιστές ή άλλες συσκευές. Βεβαιώσου ότι δουλεύουν σωστά σε προγράμματα περιήγησης με ήχο και βίντεο.
+  * Προμήθευσε ακουστικά για το μάθημα, ή ζήτησε από τους συμμετέχοντες να φέρουν μόνοι τους, αν το φροντιστήριο που έχεις επιλέξει λειτουργεί καλύτερα με ήχο.
+  * **Δεν έχεις αρκετές συσκευές;** Χρησιμοποίησε τον [προγραμματισμό σε ζευγάρια](https://www.youtube.com/watch?v=vgkahOzFH2Q). Όταν τα παιδιά συνεργάζονται, βοηθούν το ένα το άλλο και βασίζονται λιγότερο στον διοργανωτή. Καταλαβαίνουν επίσης ότι η Επιστήμη των Υπολογιστών είναι κοινωνική και συνεργατική.
+  * **Έχεις σύνδεση χαμηλού εύρους ζώνης;** Σχεδίασε την προβολή βίντεο επάνω σε μια μεγάλη οθόνη, έτσι δεν χρειάζεται να κατεβάζει ο καθένας το δικό του βίντεο. Ή δοκίμασε τα σεμινάρια που δεν απαιτείται σύνδεσημε το δίκτυο.
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Inspire participants to start your Hour of Code
+## 5) Δώσε έμπνευση στους συμμετέχοντες να αρχίσουν την Ώρα του Κώδικα σας
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
+Ξεκινήστε την Ώρα του Κώδικά σας δίνοντας έμπνευση στους συμμετέχοντες και συζητώντας πώς η επιστήμη των υπολογιστών επηρεάζει κάθε μέρος της ζωής μας.
 
-**Show an inspirational video:**
+**Δείξε ένα εμπνευστικό βίντεο:**
 
   * Το αρχικό βίντεο του Code.org, με τον Bill Gates, τον Mark Zuckerberg και τον παίχτη του ΝΒΑ Chris Bosh (Υπάρχουν εκδόσεις [1 λεπτού](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 λεπτών](https://www.youtube.com/watch?v=nKIu9yen5nc) και [9 λεπτών](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
@@ -95,7 +95,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 ## 7) Celebrate
 
   * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
-  * [Print "I did an Hour of Code!"](<%= resolve_url('/resources/promote#stickers') %>) stickers.
+  * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
   * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]

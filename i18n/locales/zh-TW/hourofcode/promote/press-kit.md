@@ -22,10 +22,10 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 **1.規畫您的活動**
 
   * 規劃如何揭開Hour of Code序幕。
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * 組織系列活動 (如示範不插電的程式設計活動)，或展示學生創建和領導的活動。
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote#videos') %) to inspire.
+  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2.確定具體涵蓋教育或本地事件的當地記者。**
 
@@ -35,7 +35,7 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 **3.聯繫當地媒體**
 
-最好的聯繫方法是透過電子郵件。 信件應該簡短明確： 為甚麼其他人應該關心此活動？ 包括為誰在事件現場的聯繫資訊 (包括手機號碼)。 **See a [sample pitch to media](%= resolve_url('/promote#sample-emails') %):**
+最好的聯繫方法是透過電子郵件。 信件應該簡短明確： 為甚麼其他人應該關心此活動？ 包括為誰在事件現場的聯繫資訊 (包括手機號碼)。 **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %):**
 
 **4.準備學校辦理此活動相關問題的現場提問稿。這裡有一些例子：**
 

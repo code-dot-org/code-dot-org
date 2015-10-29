@@ -18,7 +18,7 @@ Through our professional development efforts, we are helping a large, diverse au
 
  To study the effectiveness of our professional development, we worked with [Outlier](http://outlier.uchicago.edu) to conduct surveys and interviews studying attitudes, PD satisfaction, and classroom implementation. The results of those studies follow, broken down by grade-level band.
 
-### Table: Overall Participation and Satisfaction in Code.org Professional Development, June 1 2014 - June 15 2015
+### Table: Overall Participation and Satisfaction in Code.org Professional Development, June 1 2014 - June 15 2015, disaggregated by training model
 
 |  | Affiliate-Trained Teachers | Code.org-Trained Teachers |
 |---|--------|-----|
@@ -28,9 +28,18 @@ Through our professional development efforts, we are helping a large, diverse au
 | I feel prepared to teach CS   | 94% | 88% |
 *Source: Affiliate-trained teacher data from Code.org Survey. Code.org-trained teacher data from Outlier survey.*
 
-<br/>
-<br/>
-* *Note: In the 2014-15 teacher cohort, we trained approximately 10,000 teachers. We trained an additional 1,000 teachers for the 2015-16 school year.*
+### Table: Overall Participation and Satisfaction in Code.org Professional Development, June 1 2014 - June 15 2015, disaggregated by grade level
+
+|  | K-5 Affiliate-Trained Teachers | K-5 Code.org-Trained Teachers | MS Science | MS Algebra | HS |
+|---|--------|-----|-------|------|------|
+| Number of teachers trained   | 9,290 | 176 | 89 | 85 | 316 |
+| I would recommend the PD to others   | 98% | 96% | 85% | 98% | 82% |
+| This was the best PD ever   | 66% | 55% | 50% | 82% | 57% |
+| I feel prepared to teach CS   | 94% | 82% | 45% | 76% | 57% |
+*Source: Affiliate-trained teacher data from Code.org Survey. Code.org-trained teacher data from Outlier survey.*
+<br><br>
+
+<em>* Note: In the 2014-15 teacher cohort, we trained approximately 10,000 teachers. We trained an additional 1,000 teachers for the 2015-16 school year.</em>
 
 ---
 

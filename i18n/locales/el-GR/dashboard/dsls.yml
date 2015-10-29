@@ -434,7 +434,7 @@ el:
         1: ': Εδώ είναι τρεις προτάσεις. Ποιο από τα παρακάτω πρότυπα είναι κατάλληλα αφαιρετικό ώστε και οι τρεις να ταιριάζουν με το ίδιο μοτίβο όπως το πρότυπο;'
         Multiple Choice: Πολλαπλή Επιλογή
         Seattle _____ a _____ _____.: Seattle _____ μια _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Το Σιάτλ είναι μια μεγάλη πόλη. <br/> Eugene είναι μια πόλη μεσαίου <br/> Hillview είναι μια μικρή πόλη.'
         _____ is _____ a _____.: _____ είναι μια _____ _____.
         _____ is a _____ city.: _____ είναι μια _____ πόλη.
       4-5 Crowdsourcing Multi 1:
@@ -479,7 +479,7 @@ el:
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Πάμε στη Λου, αγάπη μου.'
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Πολλαπλή Επιλογή
-        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: Ποιο είναι το μεγαλύτερο τμήμα αυτού του τραγουδιού που μπορείς να ορίσεις ως χορωδία, ώστε η χορωδία να επαναλαμβάνεται ακριβώς μία φορά κάθε φορά που καλείται;
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png

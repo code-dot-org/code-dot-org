@@ -4,8 +4,8 @@ title: <%= hoc_s(:title_hardware_prize_form) %> layout: wide nav: prizes_nav
 
 * * *
 
-# Enter to win $10,000 worth of technology for your school
+# तपाई $१०००० बराबरको प्रबधि जित्न सक्नु आफ्नो विद्यालयको लागि
 
-If you plan for every student at your school to learn an Hour of Code, you can qualify to win $10,000 worth of technology to keep learning beyond one hour! One public, K-12 school will win in every US state. Complete the form below to be eligible.
+यदि तपाई योजना गर्दै हुनुन्छ प्रतेक विद्यार्थीले Hour of Code सिकोस,तपाईपनि सफल हुनुहुन सक्नुहुन्छ $१०००० को प्रबधि! यो खुल्ला, k -१२ बिद्यालयले जित्न सक्छ प्रतेक US राज्य. दाबेदारको लागि तलको फारम पुरा रुपमा भर्नुहोस्.
 
 <%= view :hardware_prizes_form %>

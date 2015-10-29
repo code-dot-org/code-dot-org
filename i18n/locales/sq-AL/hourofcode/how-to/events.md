@@ -14,12 +14,12 @@ Organizo eventin Ora e Kodimit gjatë Javës Edukative të Shkencave Kompjuterik
 
   * Përcakto një vend, datë dhe kohë
   * Dërgo [një letër](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) për të ftuar kryetarin e Bashkisë, deputetët, qeveritarët, ose persona me ndikim në biznes për të folur.
-  * Fto mediat/shtypin. p.sh stacionin lokal të lajmeve, gazeta, blogerët e edukimit/teknologjisë. Shiko [ mjetet e shtypit](<%= hoc_uri('/resources/press-kit') %>) për ndihmë.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/promote/press-kit') %) for help.
 
 ## 2) Gjatë eventit tënd
 
-  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote#videos') %).
-  * Jep një hyrje të përgjithshme për rëndësinë e shkencave kompjuterike, duke përdorur këto [ statistika dhe diagrame](<%= hoc_uri('/resources/stats') %>).   
+  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/promote/stats') %).   
       
     
   * Ide të tjera për eventin: 
@@ -50,8 +50,8 @@ Organizo eventin Ora e Kodimit gjatë Javës Edukative të Shkencave Kompjuterik
 
 | Koha                   | Veprimet                                                                                                                                                      |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 paradite | Open with one of our [inspirational videos](%= resolve_url('/promote#videos') %)                                                                              |
-| 10:05 - 10:15 paradite | Drejtori jep një hyrje që e pasqyron rëndësinë e shkencave kompjuterike. Përdor këto [ statistika dhe diagrame](%= resolve_url('/resources/stats') %)         |
+| 10:00 - 10:05 paradite | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %)                                                                    |
+| 10:05 - 10:15 paradite | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %)               |
 | 10:15 - 10:30 paradite | Të ftuar special që do flasin për njohuritë e tyre dhe se si teknologjia dhe shkencat kompjuterike luajnë një rol të rëndësishëm në çdo ditë të jetë së tyre. |
 | 10:30 - 10:40 paradite | Studentët bëjnë një demonstrim të Orës së Kodimit për shkollën. Argëtim- kanë mësuar drejtorin, politikan ose studentë të tjerë.                              |
 | 10:40 - 11:00 paradite | Studentët demonstrojnë një aktivitet e shkëputura dhe se si shkenca kompjuterike mund të mësohet pa përdorimin e kompjuterave.                                |

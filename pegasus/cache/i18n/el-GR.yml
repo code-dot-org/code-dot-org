@@ -37,6 +37,11 @@
   hoc2014_everyone: Όλοι
   hoc2014_support: Υποστηρίξτε την &#x25BE;
   hoc2014_whatishoc: Τι είναι η  Ώρα του Κώδικα;
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Επαναφορά
   cded_sign_up: Εγγραφή
   cded_try_it: Δοκιμάστε το
   twentyhours_trynow: Δοκιμάστε τώρα
@@ -64,7 +69,7 @@
   thank_you_: Ευχαριστούμε!
   congratulations: Συγχαρητήρια!
   congratulations_on_completing_hoc: Συγχαρητήρια για τη συμπλήρωση του "Μια ώρα κώδικα"
-  course_name_accelerated: Accelerated Course
+  course_name_accelerated: Επιταχυνόμενη πορεία μάθησης
   course_name_course1: Μάθημα 1
   course_name_course2: Μάθημα 2
   course_name_course3: Μάθημα 3
@@ -133,6 +138,8 @@
   twitter_teach_cs: Γιατί δεν διδάσκουν περισσότερα σχολεία Επιστήμη των Υπολογιστών;
     Αυτό μπορούμε να το διορθώσουμε.  http://youtu.be/nKIu9yen5nc. Επισκεφτείτε την
     σελίδα http://code.org/ για να μάθετε περισσότερα.
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
   learn_hoc: Μάθε την Ώρα του Κώδικα
   beyond_hoc: Πέρα από Μία Ώρα
   what_gender: Ποιο είναι το φύλο σου;
@@ -217,6 +224,8 @@
     Υπογράψτε την συλλογή υπογραφών
   homepage_signpetition_dropdown: Υπογράψτε την δική μας συλλογή υπογραφών &#x25BE;
   homepage_diversity_pledge: Take the diversity pledge
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Το Code.org και το Συμβούλιο Κολλεγίων σχηματίζουν μία
     συμμαχία για τη βελτίωση της ποικιλομορφίας στην επιστήμη των υπολογιστών.
   homepage_banner_text_link: Μάθετε περισσότερα
@@ -228,6 +237,7 @@
   homepage_slot_text_link_hoc: Δοκίμασε την Ώρα του Κώδικα
   homepage_slot_text_link_host: Φιλοξενήστε μια ώρα του κώδικα
   homepage_slot_text_link_hocserved: '# ΕχουνΕξυπηρετηθεί'
+  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Μαθητές
   homepage_slot_text_blurb_students: Διερευνήστε όλα τα σεμινάρια μας
   homepage_slot_text_link_codestudio: Δοκιμάστε το Studio κώδικα
@@ -289,12 +299,25 @@
   class_submission_level_vocational: Επαγγελματικά
   class_submission_languages_other: Άλλες γλώσσες
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} teachers have signed
-    up for the Hour of Code and would like a volunteer to help them.'
-  volunteer_engineer_submission_intro_paragraph: Please enter the following information
-    if you are a computer science student or software professional, and you’re interested
-    in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span>
-    are required.
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
+    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
+    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
+    have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
+    to try an hour introduction to computer science, reaching tens of millions of
+    students in 180+ countries. Please get involved during Computer Science Education
+    Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
+    who can help in the classroom, or for somebody who can <span style="font-family:
+    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
+    breadth of possibilities with computer science (which could be done through a
+    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
+    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_signup: Please enter the following information
+    if you are a computer science student or software professional. Fields marked
+    with a <span class="form-required-field">*</span> are required.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Όνομα
@@ -382,6 +405,7 @@
   dashboard_landing_progress_biggest: Αυτή είναι η πρόοδος για το μεγαλύτερο τμήμα
     σας.
   dashboard_landing_view_progress: Προβολή προόδου για %{biggest_section}
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Διαθέσιμα μαθήματα
   dashboard_landing_available_courses: Εδώ είναι τα μαθήματα που είναι διαθέσιμα σήμερα
     για εσάς και τους μαθητές σας.

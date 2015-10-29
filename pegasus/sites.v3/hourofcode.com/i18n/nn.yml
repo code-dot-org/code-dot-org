@@ -19,6 +19,7 @@ nn:
   header_menu_promote: Promote
   company_4-H: 4-H ungdoms utvikling
   company_asa: Sambandet for skulefritidsordningar
+  company_asos: ASOS
   company_bgca: 'Gute- og jente-klubbar i USA'
   company_bsusa: Gute-speidarar i USA
   company_cgcs: Council of the Great City Schools
@@ -124,6 +125,7 @@ nn:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -145,15 +147,6 @@ nn:
   prizes_brilliant: Ein skule i kvar provins og territorie vil motta $2000 for et brilliant prosjekt (Kun i UK)
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
   prizes_details: Detaljar
-  prizes_nav_dc: Mystery trip to Washington D.C.
-  prizes_nav_technology: $10,000 of technology for your school
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Terms and conditions
-  prizes_nav_faq: Spørsmål og svar
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -164,14 +157,27 @@ nn:
   how_to_nav_organizations: For organizations
   how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
+  how_to_nav_volunteers: For volunteers
   prizes_nav_title: Premiar
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Terms and conditions
+  prizes_nav_faq: Spørsmål og svar
+  prizes_nav_dc: Mystery trip to Washington D.C.
+  prizes_nav_technology: $10,000 of technology for your school
+  prizes_nav_video_chat: Video chat with a tech titan
+  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
+  prizes_nav_brilliant: $2,000 Brilliant Labs project
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Korleis gjennomføre ein Kodetime</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Reklamer for Kodetimen</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
@@ -242,6 +248,7 @@ nn:
   map_header: Talet på Kodetime-arrangementer over heile verda
   see_all_events: See all events
   map_header_company: '# by company organizers'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Search for Hour of Code events
   map_search_search: Search
   map_search_reset: Reset
@@ -281,15 +288,15 @@ nn:
   hoc_faq_why_cs_q: Kvifor datavitskap?
   hoc_faq_why_cs_a: '<i>Alle</i> studentar burde ha mogelegheita til å lære datavitskap. Det fostrar problemløysingseigenskaper, logikk og kreativitet. Ved å byrje tidleg får elevane eit grunnlag for suksess i kva som helst karrieresti for det 21. århundret. Sjå meir statistikk på <a href="http://code.org">Code.org</a>.'
   hoc_faq_how_participate_q: Korleis deltek eg i ein Kodetime?
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Kven står bak Kodetimen?
   hoc_faq_behind_hoc_a: "Kodetimen er organisert av  <a href='http://code.org'>Code.org</a>, ein non-profittorganisasjon som søkjer å utvide deltaking i datavitskap ved å gjere den tilgjengeleg i fleire skular, og ved å auke deltakinga blant kvinner og minoritetselevar. Ei <a href='http://code.org/about/partners'>stor gruppe bedrifter</a> har gått saman for å støtte Kodetimen &mdash; inkludert Microsoft, Apple, Amazon, Boys and Girls Clubs of America og College Board."
   hoc_faq_host_q: Eg veit ingenting om koding. Kan eg framleis vere vert for ein Kodetime?
-  hoc_faq_host_a: "Sjølvsagt! Kodetime-aktivitetar er brukarstyrte. Alt du treng er å <a href='http://code.org/learn'>sjå på våre noverande veiledningar</a>, plukke den du ynskjer, og velgje ein &mdash; me gjer resten. Me har også val for alle aldre og erfaringsnivå, frå barnehagen og opp. Start hendingsplanleggjinga ved å lese vår <a href='target-resources-how-to'>veiledning</a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Treng eg datamaskiner til kvar deltakar?
   hoc_faq_need_computers_a: "Nei. Me har Kodetime-veiledningar som fungerar på PC, smarttelefonar, nettbrett og nokre som ikkje treng datamaskiner i det heile teke. Du kan delta uansett kvar du er, med det du har. <p><i>Her er nokre val:</i><br><ul><li><b>Arbeid i par.</b> Forsking viser at elevar lærer best ved <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>parprogrammering</a>, ved å dele ei datamaskin og arbeide saman. Oppfordre elevane til å gå i par.</li><li><b>Bruk ei videokanon.</b> Om du har ein prosjektør og ein skjerm for ei datamaskin tilknytta internett, kan heile gruppa gjere ein Kodetime saman. Sjå videoar saman og ta runder der kvar og ein løyser gåter eller svarer på spørsmål</li><li><b>Heilt utan straum.</b> Me har også veiledningar som ikkje krev datamaskiner i det heile teke.</li></ul>"
   hoc_faq_international_q: 'Eg er i <country>. Korleis kan eg delta internasjonalt?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Korleis kan eg lage ei veiledning for Kodetimen?
   hoc_faq_tutorial_a: "Om du er interessert i å bli ein veiledningspartner, <a href='target-tutorial-guidelines'>sjå våre retningslinjer og instruksjonar</a>. Me ynskjer å skape mange ulike mogelegheiter, men primærmålet er å optimalisere erfaringa for elevane og lærarane som er nye innan datavitskap."
   hoc_faq_more_questions_q: Har du framleis fleire spørsmål?
@@ -359,6 +366,7 @@ nn:
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
   title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: How-to guide for offentlige tjenestemenn
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code

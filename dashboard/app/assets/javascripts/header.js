@@ -58,7 +58,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   stageData.levels.forEach(function(level, index, levels) {
     var status = (levelProgress[level.id] || {}).status || 'not_tried';
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
-    var href = "/s/" + stageData.script_name + "/stage/" + stageData.position + "/puzzle/" + level.position;
+    var href = level.url;
     if (userId) {
       href += '?user_id=' + userId;
     }
@@ -315,12 +315,6 @@ dashboard.header.showProjectHeader = function () {
     $('.project_edit').replaceWith($('<div class="project_save header_button header_button_light">').text(dashboard.i18n.t('project.save')));
   }
 
-  var moreButton = dashboard.i18n.t('project.more') +
-      ' <span class="project_more_glyph">&#x25BC;</span>' +
-      '<div class="project_more_popup" style="position: absolute;">' +
-      '<a href="#" class="project_delete">' + dashboard.i18n.t('project.delete') + '</a><br>' +
-      '<a href="#" class="project_new">' + dashboard.i18n.t('project.new') + '</a></div>';
-
   var nameAndUpdated = $('<div class="project_name_wrapper header_text">') // content will be added by projectNameShow
       .append($('<div class="project_name header_text">'))
       .append($('<div class="project_updated_at header_text">'));
@@ -329,7 +323,7 @@ dashboard.header.showProjectHeader = function () {
       .append($('<div class="project_edit header_button header_button_light">').text(dashboard.i18n.t('project.rename')))
       .append($('<div class="project_share header_button header_button_light">').text(dashboard.i18n.t('project.share')))
       .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')))
-      .append($('<div class="project_more header_button header_button_light" style="position: relative;">').html(moreButton));
+      .append($('<div class="project_new header_button header_button_light">').text(dashboard.i18n.t('project.new')));
 
   // TODO: Remove this (and the related style) when Applab is no longer in beta.
   if ('applab' === appOptions.app) {
@@ -398,17 +392,7 @@ dashboard.header.showProjectHeader = function () {
     });
   });
 
-  $('.project_new').click(function (e) {
-    e.preventDefault(); // Don't change the hash.
-    // Save the project if one exists (i.e. isn't just the default one) then navigate.
-    if (dashboard.project.getCurrentId()) {
-      dashboard.project.save(function () {
-        location.href = dashboard.project.appToProjectUrl();
-      });
-    } else {
-      location.href = dashboard.project.appToProjectUrl();
-    }
-  });
+  $('.project_new').click(dashboard.project.createNew);
 
   $(document).on('click', '.project_list', function () {
     location.href = '/projects';

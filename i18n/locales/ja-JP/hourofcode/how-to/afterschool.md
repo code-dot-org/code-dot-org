@@ -43,7 +43,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 **以下の映像を見せることも非常に効果的です:**
 
   * オリジナルのCode.orgはビル・ゲイツ、マーク・ザッカーバーグ、NBAスターのクリス・ボッシュが出演されているビデオをリリースしています。 (それらは [1 分](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 分](https://www.youtube.com/watch?v=nKIu9yen5nc), そして[9分](https://www.youtube.com/watch?v=dU1xS07N-FA) バージョンがあります。)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * [Hour of Code 2015年度版のビデオ](https://www.youtube.com/watch?v=7L97YMYqLHc)か、<% if @country == 'uk' %> [2013年度版のビデオ](https://www.youtube.com/watch?v=FC5FbmsH4fw)をみる。 <% else %> <% end %>
   * [アメリカのオバマ大統領が生徒たちにコンピュータサイエンスを学ぶよう呼びかけてる映像もあります。](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * その他の映像は[こちら](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -93,7 +93,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 ## 7) 祝う
 
   * [認定書](%= resolve_url('https://code.org/certificates') %)を印刷して、配布しましょう。
-  * [Print "I did an Hour of Code!"](%= resolve_url('/resources/promote#stickers') %) stickers.
+  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
   * Hour of Codeのイベントの様子を撮影した写真や映像をソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグを使って、 @codeorgに連絡をすれば、あなたの取り組みをハイライトすることができます！
 
 [col-33]

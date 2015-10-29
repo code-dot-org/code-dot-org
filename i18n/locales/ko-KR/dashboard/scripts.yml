@@ -182,6 +182,7 @@ ko:
           Maze and Bee: 미로와 꿀벌
           Artist Binary: 2진 예술가
           description_audience: 나이 10세-13세
+          Super Challenge - Variables: 'Super Challenge - Variables'
         Course4pre:
           title: 과정4 준비조건
           description_short: 과정2와 과정3을 이미 완료한 학생들을 위한 간단한 개념 확장
@@ -638,6 +639,16 @@ ko:
           Creating Functions: 함수 만들기
           Functions and Top-Down Design: Functions and Top-Down Design
           Design a Digital Scene: Design a Digital Scene
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Introducing Design Mode: Introducing Design Mode
+          Clicker Game: Clicker Game
+          Getting User Input: Getting User Input
+          Variables: 변수
+          Looping and Random Numbers - Under the Sea: 'Looping and Random Numbers - Under the Sea'
+          Multi-screen App: Multi-screen App
+          Variables Conceptorial Fodder: Variables Conceptorial Fodder
+          "Variables: Create, Assign, and Read": 'Variables: Create, Assign, and Read'
+          "Variables: Increment, Decrement, Display, and Scope": 'Variables: Increment, Decrement, Display, and Scope'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -833,6 +844,8 @@ ko:
           The Need for Encryption: The Need for Encryption
           Keys and Passwords: Keys and Passwords
           Public Key Encryption: Public Key Encryption
+          Practice PT - The Internet and Society: 'Practice PT - The Internet and Society'
+          Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: '단계 2 온라인: 혼합된 여름 공부'
@@ -1167,7 +1180,7 @@ ko:
         ECSPD3-Unit2:
           title: 'Exploring Computer Science: Unit 2'
           description_short: Unit 2 of the Exploring Computer Science curriculum
-          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the Exploring Computer Science curriculum.
+          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the version 5 Exploring Computer Science curriculum.
           Welcome!: 환영합니다.
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
@@ -1319,3 +1332,16 @@ ko:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        duino:
+          Experimenting with Arduino stuff: Experimenting with Arduino stuff
+          Basic Circuits: Basic Circuits
+        Special Fun:
+          title: Special Fun
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: 나이 10세-13세
+          Halloween 2015: Halloween 2015
+        SpecialSeries:
+          title: Special Levels
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: 나이 10세-13세
+          Halloween 2015: Halloween 2015

@@ -22,10 +22,10 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 **1. Planera ditt event**
 
   * Plan an assembly to kick off the Hour of Code.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organize group activities (like a demonstration of an ‘unplugged’ programming activity), or show off student-created and led activities.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote#videos') %) to inspire.
+  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. Identify specific local reporters that cover education or local events.**
 
@@ -35,7 +35,7 @@ Look online to find reporter contact information. If you can't find it, call the
 
 **3.0 Kontakta lokala medier**
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](%= resolve_url('/promote#sample-emails') %):**
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %):**
 
 **4. Prepare to field questions about your school event. Here are some examples:**
 

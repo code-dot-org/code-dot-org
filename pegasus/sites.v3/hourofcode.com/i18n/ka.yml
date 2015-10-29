@@ -19,6 +19,7 @@ ka:
   header_menu_promote: გაუკეთეთ რეკლამა
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -124,6 +125,7 @@ ka:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -145,15 +147,6 @@ ka:
   prizes_brilliant: თითო სკოლა ყოველ ოლქში მიღღებს 2, 000 დოლარს საუკეთესო პროექტისთვის
   prizes_actua: კანადაში 15 სკოლა მიიღებს საჩუქრად ორ-ორ სემინარს Actua-ს წევრის ხელმძღვანელობით
   prizes_details: დეტალები
-  prizes_nav_dc: იდუმალი მოგზაურობა ვაშინგტონის ოლქში.
-  prizes_nav_technology: 10,000 დოლარის ღირებულების ტექნიკა თქვენი სკოლისთვის
-  prizes_nav_video_chat: ვიდეო ჩატი ტექნოლოგიების ტიტანებთან
-  prizes_nav_skype_dropbox: Skype კრედიტები ან Dropbox სივრცე ყოველი ორგანიზატორისთვის
-  prizes_nav_brilliant: 2,000 დოლარი საუკეთესო პროექტებს
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: წესები და პირობები
-  prizes_nav_faq: ხშირად დასმული კითხვები
   nav_back_to_resources: რესურსებში დაბრუნება
   how_to_nav_educators: მასწავლებლებისთვის
   how_to_nav_after_school: სკოლის შემდგომი აქტივობისთვის
@@ -164,14 +157,27 @@ ka:
   how_to_nav_organizations: ორგანიზატორებისთვის
   how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
+  how_to_nav_volunteers: For volunteers
   prizes_nav_title: პრიზები
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: წესები და პირობები
+  prizes_nav_faq: ხშირად დასმული კითხვები
+  prizes_nav_dc: იდუმალი მოგზაურობა ვაშინგტონის ოლქში.
+  prizes_nav_technology: 10,000 დოლარის ღირებულების ტექნიკა თქვენი სკოლისთვის
+  prizes_nav_video_chat: ვიდეო ჩატი ტექნოლოგიების ტიტანებთან
+  prizes_nav_skype_dropbox: Skype კრედიტები ან Dropbox სივრცე ყოველი ორგანიზატორისთვის
+  prizes_nav_brilliant: 2,000 დოლარი საუკეთესო პროექტებს
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
   whats_next_header: და შემდეგ?
   whats_next_description: "თქვენი ღონისძიებისთვის ჩვენ გამოგიგზავნით დამხმარე მასალებსა და სასარგებლო რჩევებს. 2015 წლის ახალი ტუტორიალები მალე დაიდება - და მათი გავლა შესაძლებელი იქნება ნებისმიერ ბრაუზერში, სმარტფონში - ან ყოველგვარი მოწყობილობის გარეშე! <a href='http://code.org/learn'>ნახეთ მიმდინარე ტუტორიალები</a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>როგორ ჩავატაროთ კოდის ერთი საათი</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>გაავრცელეთ ინფორმაცია კოდის ერთი საათის შესახებ</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>როგორ გავუწიოთ პოპულარიზაცია კოდის ერთ საათს</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>სცადეთ გაკვეთილები</a>"
   whats_next_try_button: სცადეთ გაკვეთილები
@@ -242,6 +248,7 @@ ka:
   map_header: '#კოდის ერთი საათის ღონისძიებები მთელ მსოფლიოში'
   see_all_events: ყველა ღონისძიება
   map_header_company: '# by company organizers'
+  map_header_country: '# in %{country}'
   map_search_placeholder: კოდის ერთი საათის ღონისძიებების ძიება
   map_search_search: ძებნა
   map_search_reset: გადატვირთვა
@@ -281,15 +288,15 @@ ka:
   hoc_faq_why_cs_q: რატომ კომპიუტერული მეცნიერება?
   hoc_faq_why_cs_a: "<i>ყოველ</i>მოსწავლეს უნდა ჰქონდეს შესაძლებლობა ისწავლოს ინფორმატიკა. ინფორმატიკის სწავლა ავითარებს პრობლემების გადაჭრის უნარს, ლოგიკასა და შემოქმედებით უნარს. სწავლის ადრე დაწყება უზრუნველყოფს მოსწავლეების წარმატებას 21-ე საუკუნის ნებისმიერ პროფესიაში. გაეცანით სტატისტიკას აქ <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: როგორ მივიღო მონაწილეობა კოდის ერთ საათში?
-  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>დაიწყეთ თქვენი გეგმა აქ</a> ჩვენი ინსტრუქციების გაცნობით. კოდის ერთი საათის ორგანიზება შეგიძლიათ თქვენს სკოლაში ან ნებისმიერ გაერთიანებაში&mdash; დამატებითი აქტივობის წრეში, არასამეწრამეო ორგანიზაციაში ან სამსახურში. ან სცადეთ გამოუკიდებლად 7 დეკემბერს."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: ვინ დგას კოდის ერთი საათის მიღმა?
   hoc_faq_behind_hoc_a: "კოდის ერთი საათი ორგანიზებულია <a href='http://code.org'>Code.org</a>-ის მიერ. Coge.org არის არამომგებიანი ორგანიზაცია, რომლის მიზანია ინფორმატიკის სწავლება მეტ სკოლაში გახდეს შესაძლებელი, გაიზარდოს ქალებისა და ფერადკანიანების წილი პროგრამირების მოსწავლეებს შორის. კოდის ერთი საათის ირგვლივ გაერთიანებულია <a href='http://code.org/about/partners'>უამრავი პარტნიორი</a>, მაგალითად Microsoft, Apple, Amazon, Boys and Girls Clubs of America და College Board."
   hoc_faq_host_q: პროგრამირების შესახებ არაფერი არ ვიცი. შეიძლება, რომ მაინც ვიყო ორგანიზატორი?
-  hoc_faq_host_a: "რა თქმა უნდა, კოდის ერთი საათის აქტივობების გავლა დამოუკიდებლადაც შეიძლება. ერთადერთი, რაც უნდა გააკეთოთ: <a href='http://code.org/learn'>სცადოთ მიმდინარე ტუტორიალები</a>, აირჩიოთ, რომელიც მოგეწონებათ, აირჩიოთ საათი&mdash; ჩვენ მივხედავთ ყველაფერ დანარჩენს. თვენი ღონისძიების დასასგეგმა გაეცანით ჩვენს <a href='target-resources-how-to'>ინსტრუქციებს</a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: მჭირდება თუ არა კომპიუტერი ყოველი მონაწილისთვის?
   hoc_faq_need_computers_a: "არა. ჩვენ გვაქვს კოდის ერთი საათის ისეთი ტუტორიალები, რომლებიც მუშაობენ პერსონალურ კომპიუტერებე, სმარტფონებზე, პლანშეტებზე, ზოგს კი საერთოდ არ სჭირდება არანაირი მოწყობილობა! არა აქვს მნიშვნელობა სად ხართ და რა გაქვთ. <p><i> აი, რამდენიმე იდეა: </i> <br> <ul> <li><b>იმუშავეთ წყვილებად.</b>კვლევები გვაჩვენებს, რომ მოსწავლეები უკეთ სწავლობენ <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> თუ წყვილში წერენ კოდს</a> ერთი კომპიუტერის გამოყენებით. დაყავით თქვენი მოსწავლეები ორ-ორად. <li><b>გამოიყენეთ პროექტორი.</b> თუ გაქვთ წვდომა ინტერნეტზე და პროექტორი, კოდის ერთი საათის გავლა მთელ ჯგუფს ერთად შეუძლია. უყურეთ ვიდეოებს ერთად, ამოცანები კი რიგ-რიგობით გააკეთეთ.<li><b> ისწავლეთ ოფლაინ.</b> ჩვენ გვაქვს ისეთი ტუტორიალები, რომელთა გასავლელად საერთოდ არ არის საჭირო არანაირი მოწყობილობა.</ul>"
   hoc_faq_international_q: 'მე ვარ <country>ში. როგორ მივიღო მონაწილეობა?'
-  hoc_faq_international_a: "კოდის ერთი საათის ღონისძიების ჩატარება შეუზლია ყველას და ყველგან. შარშანაც მოსწავლეები მთელი მსოფლიოს მასშტაბით გაერთიანდნენ კოდის ერთი საათის ფარგლებში. გაიგეთ მეტი <a href='/resources'>აქ</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: როგორ შევქმნა კოდის ერთი საათის ტუტორიალი?
   hoc_faq_tutorial_a: "თუ გინდათ გახდეთ ჩვენი პარტნიორი და შექმნათ ტუტორიალი,<a href='target-tutorial-guidelines'>გაეცანით ჩვენს რჩევებსა და ინსტრუქციებს</a>. ჩვენ სიამოვნებით მივიღებდით სხვადასხვა ფორმატის ტუტორიალებს, მაგრამ ჩვენი ძირითადი მიზანია მაქსიმალურად მარტივი და საინტერესო გავხადოთ სწავლა იმათთვის, ვინც პროგრამირებას პირველად კოდის ერთი საათის ფარგლებში შეეხება."
   hoc_faq_more_questions_q: კიდევ გაქვთ კითხვები?
@@ -359,6 +366,7 @@ ka:
   title_how_to_organizations: 'როგორ მოვაწყოთ კოდის ერთი საათი - ორგანიზაციებს'
   title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: სახელმძღვანელო საჯარო პირებისთვის
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: ინსტრუქციები
   title_press_release: კოდის ერთი საათის პრეს-რელიზი
   title_op_ed: კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეული და კოდის ერთი საათის მისაწვდომობის მხარდამჭერი განცხადების ტექსტი

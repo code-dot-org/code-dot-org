@@ -184,6 +184,7 @@ sq:
           Maze and Bee: Maze dhe Bletë
           Artist Binary: Artist Binar
           description_audience: Moshat 10-18
+          Super Challenge - Variables: 'Super Challenge - Variables'
         Course4pre:
           title: Kushtet paraprake të Kursit 4
           description_short: Një përmbledhje e shkurtër e koncepteve për studentët që nuk kanë bërë Kurset 2 dhe 3.
@@ -642,6 +643,16 @@ sq:
           Creating Functions: Krijimi i Funksioneve
           Functions and Top-Down Design: Functions and Top-Down Design
           Design a Digital Scene: Design a Digital Scene
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Introducing Design Mode: Introducing Design Mode
+          Clicker Game: Clicker Game
+          Getting User Input: Getting User Input
+          Variables: variabla
+          Looping and Random Numbers - Under the Sea: 'Looping and Random Numbers - Under the Sea'
+          Multi-screen App: Multi-screen App
+          Variables Conceptorial Fodder: Variables Conceptorial Fodder
+          "Variables: Create, Assign, and Read": 'Variables: Create, Assign, and Read'
+          "Variables: Increment, Decrement, Display, and Scope": 'Variables: Increment, Decrement, Display, and Scope'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -837,6 +848,8 @@ sq:
           The Need for Encryption: The Need for Encryption
           Keys and Passwords: Keys and Passwords
           Public Key Encryption: Public Key Encryption
+          Practice PT - The Internet and Society: 'Practice PT - The Internet and Society'
+          Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
@@ -1171,7 +1184,7 @@ sq:
         ECSPD3-Unit2:
           title: 'Exploring Computer Science: Unit 2'
           description_short: Unit 2 of the Exploring Computer Science curriculum
-          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the Exploring Computer Science curriculum.
+          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the version 5 Exploring Computer Science curriculum.
           Welcome!: Mirë se vini!
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
@@ -1323,3 +1336,16 @@ sq:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        duino:
+          Experimenting with Arduino stuff: Experimenting with Arduino stuff
+          Basic Circuits: Basic Circuits
+        Special Fun:
+          title: Special Fun
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: Moshat 10-18
+          Halloween 2015: Halloween 2015
+        SpecialSeries:
+          title: Special Levels
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: Moshat 10-18
+          Halloween 2015: Halloween 2015

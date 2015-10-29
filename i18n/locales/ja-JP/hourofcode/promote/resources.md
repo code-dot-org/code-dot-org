@@ -9,7 +9,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 # Hour of Codeを多くの人に知ってもらうには
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Hour of Code を開催するには [ガイド](<%= resolve_url('/how-to') %>)を見て下さい。
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -31,21 +31,21 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 [![画像](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![画像](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+<%= view :social_posters %>
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## 以下のロゴをHour of Codeを広めるために使ってください。
 
 [![画像](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[高解像度のバージョンをダウンロード](http://images.code.org/share/hour-of-code-logo.zip)
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## ステッカーを印刷して生徒に配布
 
-(Stickers are 1" diameter, 63 per sheet)  
+(ステッカーは直径 1 インチ、1 枚 あたり63個)  
 [![画像](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
@@ -104,7 +104,7 @@ Hour of Code は[学校名] が21世紀を生きるご子息の皆様に必須�
 
 [市町村名]の教育の未来を変えるチャンスです。
 
-詳細は、http://hourofcode.com/<%= @country %>をご覧ください。
+詳細は、http://hourofcode.com/<%= @country %> をご覧ください。
 
 敬具
 

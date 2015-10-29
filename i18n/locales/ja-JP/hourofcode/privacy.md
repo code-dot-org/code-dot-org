@@ -4,7 +4,7 @@ title: Privacy Policy
 
 * * *
 
-### この法的文書は英語で書かれた[こちらの文書](https://code.org/privacy)の翻訳版です。
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # プライバシーポリシー
 
@@ -244,4 +244,4 @@ If you choose to visit Code.org, your visit and any dispute over privacy is subj
 個人情報保護方針、個人情報の扱い、サードパーティへの開示の内容、あなたの同意内容に関するお問い合わせ、コメントは、 <http://code.org/contact> or at 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101のCode.orgまでご連絡ください。   
   
   
-[![画像](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![画像](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

@@ -1,5 +1,4 @@
 @import "color";
-@import "colpick.css";
 @import "style-constants";
 @import "skins/base.scss";
 @import "skins/modern.scss";
@@ -214,7 +213,8 @@ div#visualizationResizeBar {
   max-width: none !important;
   width: 352px;
   height: 612px;
-  margin: 20px auto;
+  margin: 0 auto;
+  padding: 20px 0;
 
   #designToggleRow, #gameButtons {
     display: none;
@@ -233,7 +233,7 @@ div#visualizationResizeBar {
   }
 }
 
-#divApplab {
+#divApplab, #designModeViz {
   overflow: hidden;
   outline: none;
   position: relative;
@@ -247,7 +247,7 @@ div#visualizationResizeBar {
   user-select: none;
 }
 
-#divApplab canvas {
+#divApplab canvas, #designModeViz canvas {
   position: absolute;
   overflow: hidden;
   top: 0px;
@@ -362,6 +362,19 @@ $debug-area-initial-height: 120px;
     -ms-user-select: none;
     user-select: none;
   }
+  #show-hide-debug-icon {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    margin: 0;
+    line-height: $workspace-headers-height;
+    font-size: 18px;
+
+    &:hover {
+      cursor: pointer;
+      color: white;
+    }
+  }
 }
 
 $debug-commands-column-width: 270px;
@@ -373,22 +386,6 @@ $debug-commands-column-width: 270px;
 
   .fa {
     margin: 0 0.25em;
-  }
-
-  #show-hide-debug-icon {
-    position: absolute;
-    top: 0;
-    left: 8px;
-    margin: 0;
-    line-height: $workspace-headers-height;
-  }
-
-  &.js-hover-hack {
-    cursor: pointer;
-
-    #show-hide-debug-icon {
-      color: white;
-    }
   }
 }
 
@@ -408,6 +405,9 @@ $debug-commands-column-width: 270px;
 }
 
 .debug-console {
+  &.full {
+    left: 0;
+  }
   left: $debug-commands-column-width;
   right: 0;
 }
@@ -544,56 +544,24 @@ $debug-input-height: 16px;
   margin-right: 3px;
 }
 
-button.arrow {
-  border: 1px solid #FFA000;
-  background-color: #FFA000;
-  color: #fff;
-  margin-left: 5px;
-  margin-right: 0px;
-  display: none;
-}
-button.arrow>img {
-  opacity: 1;
-  vertical-align: text-bottom;
-}
-button.arrow:focus {
-  outline-style: none;
-}
-#soft-buttons {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: -5px;
-  &.soft-buttons-none {
-    display: none;
-  }
-}
-.soft-buttons-1 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 51px;
-}
-.soft-buttons-2 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 102px;
-}
-.soft-buttons-3 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 153px;
-}
-.soft-buttons-4 {
-  display: table-cell;
-  vertical-align: top;
-  min-width: 204px;
-}
-
 #share-cell {
   display: inline-block;
   vertical-align: top;
   &.share-cell-none {
     display: none;
   }
+}
+
+#submitButton {
+  border-color: $purple;
+  background-color: $purple;
+  color: white;
+}
+
+#unsubmitButton {
+  border-color: $light_purple;
+  background-color: $light_purple;
+  color: white;
 }
 
 #manageAssetsModal {

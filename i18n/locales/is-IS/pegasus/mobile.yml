@@ -27,6 +27,11 @@ is-IS:
   hoc2014_everyone: Allir
   hoc2014_support: 'Styðjið þetta &#x25BE;'
   hoc2014_whatishoc: Hvað er Klukkustund kóðunar?
+  csedweek_map_header: '# CSEdWeek / Klukkustundir kóðunar um allan heim'
+  csedweek_map_signup: Skráðu þinn viðburð
+  csedweek_map_search_placeholder: Leita að Klukkustundum kóðunar
+  csedweek_map_search_search: Leit
+  csedweek_map_search_reset: Endurstilla
   cded_sign_up: Skráning
   cded_try_it: Prófið hana
   twentyhours_trynow: Prófa núna
@@ -106,6 +111,7 @@ is-IS:
   hoc_is_here: '#HourOfCode er hér - kíktu á það! @codeorg'
   just_did_hoc: 'Ég var að klára #HourOfCode - kíktu á það! @codeorg'
   twitter_teach_cs: Af hverju kenna ekki fleiri skólar tölvunarfræði? Við getum bætt úr því. http://youtu.be/nKIu9yen5nc. Heimsæktu http://code.org/ til að fræðast nánar.
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: Lærðu í Klukkustund kóðunar
   beyond_hoc: Umfram Klukkustund
   what_gender: Ertu stelpa eða strákur?
@@ -197,6 +203,8 @@ is-IS:
   homepage_action_text_signpetition: Skrifaðu undir áskorunina
   homepage_signpetition_dropdown: 'Skrifaðu undir áskorun okkar &#x25BE;'
   homepage_diversity_pledge: Vinna fjölbreytniheitið
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org og College Board vinna saman að því að auka fjölbreytni í tölvunarfræði.
   homepage_banner_text_link: Læra meira
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -206,6 +214,7 @@ is-IS:
   homepage_slot_text_link_hoc: Prófa Klukkustund kóðunar
   homepage_slot_text_link_host: Haltu Klukkustund kóðunar
   homepage_slot_text_link_hocserved: '# þjónað'
+  homepage_solot_text_link_volunteer: Hjálpaðu við Klukkustund kóðunar
   homepage_slot_text_title_students: Nemendur
   homepage_slot_text_blurb_students: Skoða allt kennsluefni okkar
   homepage_slot_text_link_codestudio: Prófa Kóðastúdíóið
@@ -262,44 +271,48 @@ is-IS:
   class_submission_level_college: Háskólastig
   class_submission_level_vocational: Starfsmenntun
   class_submission_languages_other: Önnur tungumál
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} teachers have signed up for the Hour of Code and would like a volunteer to help them.'
-  volunteer_engineer_submission_intro_paragraph: 'Please enter the following information if you are a computer science student or software professional, and you’re interested in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
+  volunteer_engineer_submission_title: Hjálpaðu við Klukkustund kóðunar
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: |-
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_header_shared: Upplýsingar sem deildar eru með kennurum á korti sjálfboðaliða
   volunteer_engineer_submission_field_name: Nafn
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: "If you enter your exact address we won't share it, just show you as a pin on map."
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country, or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_field_name_placeholder: Fullt nafn
+  volunteer_engineer_submission_field_company: Fyrirtæki (eða stofnun)
+  volunteer_engineer_submission_field_company_placeholder: Fyrirtæki (eða stofnun)
+  volunteer_engineer_submission_field_experience_level: Kunnáttustig
+  volunteer_engineer_submission_field_location: Staður
+  volunteer_engineer_submission_field_location_desc: Ef þú setur nákvæmt heimilisfang munum við ekki deila því, aðeins sýna pinna á korti.
+  volunteer_engineer_submission_field_location_placeholder: Póstnúmer, bær og fylki/land, eða götunúmer
+  volunteer_engineer_submission_field_location_flexibility: Ég get hjálpað við Klukkustund kóðunar með... (veldu allt sem við á)
+  volunteer_engineer_submission_checkbox_after_hoc: Ég hef áhuga á að vera sjálfboðaliði eftir Klukkustund kóðunar
+  volunteer_engineer_submission_field_time_commitment: Tímaskuldbinding eftir Klukkustund kóðunar
+  volunteer_engineer_submission_field_linkedin: Linkedin upplýsingar
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook: Facebook upplýsingar
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Lýsing
-  volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never shared
+  volunteer_engineer_submission_field_description_desc: Lýstu reynslu þinni af tölvunarfræði og hvernig þú mundir vilja taka þátt sem sjálfboðaliði fyrir kennara á svæðinu.
+  volunteer_engineer_submission_field_description_placeholder: Lýsing á reynslu og/eða þátttöku
+  volunteer_engineer_submission_header_private: Upplýsingar varðveittar sem einkamál og aldrei deildar
   volunteer_engineer_submission_field_email: Netfang
-  volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
+  volunteer_engineer_submission_field_email_desc: Netfangi þínu verður aldrei deilt, en við munum senda þér beiðnir frá kennurum.
   volunteer_engineer_submission_field_email_placeholder: Netfang
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
+  volunteer_engineer_submission_final_paragraph: Þú verður sýndur á korti fyrir kennara á svæðinu að hafa samband í tengslum við Klukkustund kóðunar eða önnur tækifæri til sjálfboðaliðastarfa. Netfangi þitt og nákvæmu heimilisfangi verður ALDREI deilt af okkur. En hinar upplýsingarnar (þ. á m. lausleg staðsetning) verða sýnilegar kennurum á svæðinu.
+  volunteer_engineer_submission_checkbox_contact: Ég samþykki að kennarar megi hafa samband við mig vegna mögulegra sjálfboðaliðastarfa (Ath. netfangi þínu verður ekki deilt)
   volunteer_engineer_submission_submit: Senda inn
-  volunteer_engineer_submission_thankyou: Thank you for submitting your information.
+  volunteer_engineer_submission_thankyou: Takk fyrir að senda inn upplýsingar um þig.
   volunteer_engineer_submission_commitment_uncertain: Óvíst
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 klst. á viku
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 klst. á viku
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 klst. á viku
   volunteer_engineer_submission_commitment_now_and_then: Af og til
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: 2-3svar á ári
+  volunteer_engineer_submission_commitment_monthly: Tvo tíma í mánuði
+  volunteer_engineer_submission_commitment_weekly: Tvo tíma í viku
   volunteer_engineer_submission_commitment_more: Meira
   volunteer_engineer_submission_location_flexibility_onsite: Á staðnum í skóla
   volunteer_engineer_submission_location_flexibility_remote: Leiðsögn úr fjarlægð (kennarar eða nemendur)
@@ -327,6 +340,7 @@ is-IS:
   dashboard_landing_progress_title: Framvinda aðalhóps
   dashboard_landing_progress_biggest: Þetta er framvinda stærsta hópsins þíns.
   dashboard_landing_view_progress: 'Skoða framvindu fyrir %{biggest_section}'
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Tiltæk námskeið
   dashboard_landing_available_courses: Þetta eru námskeiðin sem eru nú tiltæk fyrir þig og nemendur þína.
   dashboard_landing_more_tutorials: Viltu sjá enn meira kennsluefni?
@@ -372,7 +386,7 @@ is-IS:
     í Tölvunarfræði
   dashboard_navigation_all_sections: Reikningar og árangur nemenda
   dashboard_navigation_view_progress: Skoða framvindu
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: Skoða textasvör
   dashboard_navigation_add_students: Bæta við nemendum
   dashboard_navigation_manage_students: Umsjón nemenda
   dashboard_navigation_lesson_plans_resources: Kennsluáætlanir og tilföng
@@ -468,8 +482,8 @@ is-IS:
   dashboard_progress_furthest_level_attempted: hæsti unninn áfangi
   dashboard_stage: áfangi
   dashboard_puzzle: Þraut
-  dashboard_question: Question
-  dashboard_response: Response
+  dashboard_question: Spurning
+  dashboard_response: Svar
   stats_hoc_2013_heading: 'Ótrúlegar tölur frá síðasta ári um Klukkustund kóðunar. Á aðeins einni viku:'
   stats_hoc_2013_image_alt: Um Klukkustund kóðunar árið 2013
   dashboard_teacher: Kennari
@@ -486,9 +500,9 @@ is-IS:
   dashboard_sections_login_type_explanation: 'Þessi tafla á að hjálpa þér að velja hvernig aðgang þú vilt nota fyrir hóp: <b>mynd, orð eða netfang</b>.'
   dashboard_faq: Algengar spurningar
   dashboard_faq_k5: Algengar spurningar grunnskólastigs
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>September 30, 2015</b> - The Hour of Code 2015 is coming! Join classrooms worldwide for the largest learning event in history.'
+  dashboard_announcements: Tilkynningar
+  dashboard_announce_view_all: Skoða allt
+  dashboard_announce_hoc: '<b>30. september 2015</b> - Klukkustund kóðunar 2015 er á næsta leiti! Slástu í hóp með skólastofum um allan heim í stærsta námsátaki sögunnar.'
   code_hoc_coming: 'Klukkustund kóðunar er komin - 8. - 14. desember!'
   code_sign_up: Skráðu þig til að taka þátt í viku menntunarátaks í tölvunarfræði
   learn_more: Nánar
@@ -496,7 +510,7 @@ is-IS:
   learn_sign_up_button: Skráning
   learn_educator_resources_description: Lærðu að kenna Klukkustund kóðunar
   learn_educator_resources_button: Efni fyrir fræðara
-  learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
+  learn_are_you_educator: 'Ertu fræðari? Lærðu <a href="http://hourofcode.com/resources/how-to">hvernig á að kenna Klukkustund kóðunar</a>'
   hoc2014_try_new_tutorials: Prófaðu nýja kennsluefnið fyrir Klukkustund kóðunar
   hoc2014_try_new_tutorial: Prófaðu nýjustu Klukkustund kóðunar (beta)
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
@@ -556,7 +570,7 @@ is-IS:
   robomindnl_name: Forrita sýndarvélmenni
   flappy_name: Búðu til Flappy leik
   bitsbox_name: 'Bitsbox - búa til leik'
-  makeschool_name: Build an iPhone game in your browser!
+  makeschool_name: Búðu til iPhone leik í vafranum þínum!
   touchdevelop_name: TouchDevelop
   appinventor_name: Klukkustund kóðunar með AppInventor
   blockly_name: Blockly
@@ -675,7 +689,7 @@ is-IS:
   robomindnl_shortdescription: Skrifaðu kóða fyrir sýndarvélmenni
   flappy_shortdescription: 'Búðu til eigin leik - Flappy Bird, Flappy hákarl eða Flappy kafbátur'
   bitsbox_shortdescription: Forritaðu röð af öppum til að spila og deila, með alvöru JavaScript.
-  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach your monster new moves!
+  makeschool_shortdescription: Búðu til iPhone leik! Lærðu með því að skrifa kóða sem gefur skrímslinu þínu nýja eiginleika!
   touchdevelop_shortdescription: 'Leystu þrautir, búðu til leiki og lærðu forritun og allt í símanum. '
   appinventor_shortdescription: Búðu til eigið app! (Aðeins fyrir Android)
   blockly_shortdescription: Halaðu niður ZIP skrá til að læra án nettengingar
@@ -715,7 +729,7 @@ is-IS:
   robomindnl_longdescription: 'Nemendur læra grunnatriði forritunar með því að stjórna eigin sýndarvélmenni. Allt efni námskeiðsins er á netinu og samanstendur af stuttum kynningum, myndskeiðum, spurningum og sjálfvirkri leiðsögn/vísbendingum sem hjálpa við forritunarverkefnin. '
   flappy_longdescription: Notaðu kubbaforritun til að búa til eigin Flappy Bird leik og sérhannaðu útlitið á honum (hafðu til dæmis Flappy hákarl eða Flappy jólasvein). Settu leikinn í símann þinn með einum smelli.
   bitsbox_longdescription: Sérstilltu þína eigin sýndarspjaldtölvu og forritaðu síðan röð leikja til að spila og deila. Einföld leiðsögn sem gerir mögulegt fyrir jafnvel ung börn að forrita með raunverulegu JavaScript. Því færari sem þú ert því lengra kemstu.
-  makeschool_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
+  makeschool_longdescription: 'Lærðu að forrita með því að búa til iPhone leik með splunkunýju og byrjendavænu forritunarmáli sem nefnist Swift! Búðu til hasarleik sem er innblásinn af Pok&eacute;mon og skrifaðu kóða til að kenna skrímslinu þínu nýjar hreyfingar. Þú lærir að nota breytur, aðferðir og hluti til að hjálpa skrímslinu þínu að sigra!'
   touchdevelop_longdescription: 'Þetta snertivæna vinnuumhverfi mun hjálpa þér að skapa punktamyndir, leysa bjarnarþrautina eða búa til þinn eigin hoppufuglsleik. '
   appinventor_longdescription: Stutt og skemmtileg kennslumyndskeið leiðbeina við gerð þriggja einfaldra appa fyrir Android síma eða spjaldtölvur. Þessi klukkustund kóðunar hentar bæði byrjendum og kunnáttusömum og áður en þú veist af getur þú farið að búa til þín eigin öpp. Ekki slæmt að geta deilt eigin sköpunarverkum með vinum! Þessi verkefni henta fyrir sjálfsnám eða fyrir kennara í bekkjakennslu.
   blockly_longdescription: 'Er ekkert eða hægvirkt internet samband? Halaðu niður Blockly kennsluefninu sem var undanfari Code.org kennsluefnisins - þetta er stök 3MB ZIP skrá sem kemst fyrir á hvaða tölvu sem er eða á minniskubbi'
@@ -738,7 +752,7 @@ is-IS:
   groklearning_beyond_name: Lærðu Python forritun
   hacketyhack_beyond_name: Lærðu Ruby
   robomind_beyond_name: Forrita sýndarvélmenni
-  makeschool_beyond_name: Build an iPhone game in your browser!
+  makeschool_beyond_name: Búðu til iPhone leik í vafranum þínum!
   appinventor_beyond_name: Klukkustund kóðunar með AppInventor
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Lærðu að kóða með hundinum Karel
@@ -849,7 +863,7 @@ is-IS:
   groklearning_beyond_shortdescription: Grunnur í Python forritun
   hacketyhack_beyond_shortdescription: Læra Ruby frá grunni
   robomind_beyond_shortdescription: Skrifaðu kóða fyrir sýndarvélmenni
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
+  makeschool_beyond_shortdescription: Lærðu að búa til iPhone leik á klukkutíma
   appinventor_beyond_shortdescription: Búðu til eigið app! (Aðeins fyrir Android)
   touchdevelop_beyond_shortdescription: Notaðu símann, spjaldtölvu eða fartölvu til að kóða símaapp
   codehs_beyond_shortdescription: Lærðu JavaScript forritun í skemmtilegu, myndrænu umhverfi
@@ -886,7 +900,7 @@ is-IS:
   groklearning_beyond_longdescription: Kynningarnámskeið sem notar forritunarmálið Python fyrir fólk með enga reynslu af forritun. Einstök blanda okkar af byrjendaefni og áskorunum mun gefa þér rækilegan skilning á Python og forritun sem slíkri. Við höfum kennt þetta efni ólíkum aldurshópum nemenda með ólíkan bakgrunn og við erum viss um að það mun henta þér líka.
   hacketyhack_beyond_longdescription: 'Hackety Hack mun kenna þér algjör undirstöðuatriði í forritun frá grunni. Þú þarft ekki að hafa neina fyrri reynslu af forritun! Með Hackety Hack munt þú læra forritunarmálið Ruby. Ruby er notað í alls konar forritum, þar á meðal venjulegum tölvuforritum og á vefsvæðum. [Til athugunar: Þarf að setja upp á tölvu]'
   robomind_beyond_longdescription: 'Nemendur læra grunnatriði forritunar með því að stjórna eigin sýndarvélmenni. Allt efni námskeiðsins er á netinu og samanstendur af stuttum kynningum, myndskeiðum, spurningum og sjálfvirkri leiðsögn/vísbendingum sem hjálpa við forritunarverkefnin. '
-  makeschool_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
+  makeschool_beyond_longdescription: Kanntu eitthvað í ObjectiveC? Lærðu að búa til iPhone leik á klukkutíma! Við leiðum þig gegnum það að kóða, prófa og spila leikinn að öllu leyti í vafra og síðan deila honum á Facebook svo vinir geti prófað hann! Engin forkunnátta í að þróa fyrir iPhone er nauðsynleg. Þú verður þó að skilja hvað breytur (variables), aðferðir (methods) og hlutir (objects) eru.
   appinventor_beyond_longdescription: Stutt og skemmtileg kennslumyndskeið leiðbeina við gerð þriggja einfaldra appa fyrir Android síma eða spjaldtölvur. Þessi klukkustund kóðunar hentar bæði byrjendum og kunnáttusömum og áður en þú veist af getur þú farið að búa til þín eigin öpp. Ekki slæmt að geta deilt eigin sköpunarverkum með vinum! Þessi verkefni henta fyrir sjálfsnám eða fyrir kennara í bekkjakennslu.
   touchdevelop_beyond_longdescription: Með TouchDevelop getur þú búið til öpp á iPad, iPhone, Android, PC, Mac, Windows Phone. Í snertivæna vinnuumhverfinu okkar verður forritun skemmtileg, jafnvel á síma eða spjaldtölvu!
   codehs_beyond_longdescription: Lærðu grunnatriði forritunar með hundinum Karel. Þetta er skemmtileg, aðgengileg og sjónræn kynning á forritun, þar sem tölvunni eru gefnar skipanir líkt og hún væri hundur. Kennsluefnið hentar vel fyrir handleiðslu kennara, en er einnig hægt að nota á eigin spýtur

@@ -35,10 +35,14 @@ def main()
     RakeUtils.git_pull if count > 0
     count = [1, count].max
 
-    log = `git log -n #{count}`
+    log = `git log --pretty=format:"%h %s (%an)" -n #{count}`
     IO.write(deploy_dir('rebuild'), log)
 
     HipChat.log "https://github.com/code-dot-org/code-dot-org/commit/#{`git rev-parse HEAD`}", message_format: 'text', color: 'purple'
+
+    # Run `sudo chef-client` to ensure that the deploy respect updates to the Chef config
+    # (e.g. the cdo-servers attribute describing which servers to deploy).
+    RakeUtils.system 'sudo', 'chef-client'
 
     status = 1
     Dir.chdir(aws_dir) do

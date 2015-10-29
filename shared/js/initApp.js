@@ -29,11 +29,11 @@ window.apps = {
       cdoSounds: CDOSounds,
       position: {blockYCoordinateInterval: 25},
       onInitialize: function() {
-        dashboard.createCallouts(this.callouts);
+        dashboard.createCallouts(this.level.callouts || this.callouts);
         if (window.dashboard.isChrome34) {
           chrome34Fix.fixup();
         }
-        if (appOptions.level.projectTemplateLevelName) {
+        if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
           $('#clear-puzzle-header').hide();
           $('#versions-header').show();
         }

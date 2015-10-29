@@ -54,6 +54,91 @@ function saySpriteRequiredBlock(options) {
 }
 
 /**
+ * Constructs a required block definition to match "move [sprite] [dir]" blocks
+ * @param {string} [options.sprite] zero-indexed string ID of sprite, e.g., "1"
+ * @param {string} [options.dir] string of Direction constant. We show
+ *        the direction in feedback blocks
+ * @returns {Array} test definition suitable for getMissingRequiredBlocks
+ *          required block processing
+ * @see FeedbackUtils#getMissingRequiredBlocks
+ */
+function moveRequiredBlock(options) {
+  var titles = {};
+  if (options.sprite) {
+    titles.SPRITE = options.sprite;
+  }
+  if (options.dir) {
+    titles.DIR = options.dir;
+  }
+
+  return [
+    {
+      test: function (block) {
+        if (block.type !== 'studio_move') {
+          return false;
+        }
+        if (options.sprite && block.getTitleValue("SPRITE") !== options.sprite) {
+          return false;
+        }
+        if (options.dir && block.getTitleValue("DIR") !== options.dir) {
+          return false;
+        }
+
+        return true;
+      },
+      type: 'studio_move',
+      titles: titles
+    }
+  ];
+}
+
+function moveNorthRequiredBlock() {
+  return moveRequiredBlock({ dir: '1' });
+}
+
+function moveSouthRequiredBlock() {
+  return moveRequiredBlock({ dir: '4' });
+}
+
+function moveEastRequiredBlock() {
+  return moveRequiredBlock({ dir: '2' });
+}
+
+function moveWestRequiredBlock() {
+  return moveRequiredBlock({ dir: '8' });
+}
+
+/**
+ * Hoc2015 blockly helpers. We base hoc2015 blockly levels off of hoc2015 droplet
+ * levels, marking them as editCode=false and overriding the startBlocks,
+ * requiredBlocks and toolboxes as appropriate for the blockly progression
+ */
+
+var hocMoveNSEW = '<block type="studio_move"><title name="DIR">1</title></block> \
+  <block type="studio_move"><title name="DIR">4</title></block> \
+  <block type="studio_move"><title name="DIR">8</title></block> \
+  <block type="studio_move"><title name="DIR">2</title></block>';
+
+var hocMoveNS = '<block type="studio_move"><title name="DIR">1</title></block> \
+  <block type="studio_move"><title name="DIR">4</title></block>';
+
+var whenRunMoveEast = '<block type="when_run"><next> \
+  <block type="studio_move"><title name="DIR">2</title></block></next> \
+  </block>';
+
+var whenRunMoveSouth = '<block type="when_run"><next> \
+  <block type="studio_move"><title name="DIR">4</title></block></next> \
+  </block>';
+
+var whenUpDown = '<block type="studio_whenUp" deletable="false" x="20" y="20"></block> \
+  <block type="studio_whenDown" deletable="false" x="20" y="150"></block>';
+
+var whenUpDownLeftRight = '<block type="studio_whenUp" deletable="false" x="20" y="20"></block> \
+  <block type="studio_whenDown" deletable="false" x="20" y="150"></block> \
+  <block type="studio_whenLeft" deletable="false" x="20" y="280"></block> \
+  <block type="studio_whenRight" deletable="false" x="20" y="410"></block>';
+
+/**
  * K1 helpers. We base k1 levels off of existing non-k1 levels, marking them as isK1 and
  * overriding the requiredBlocks and toolboxes as appropriate for the k1 progression
  */
@@ -1339,7 +1424,7 @@ levels.full_sandbox =  {
                         <value name="TEXT"><block type="text"></block> \
                         </value></block>' +
                         blockOfType('studio_setSpritePosition') +
-                        blockOfType('studio_addItems') +
+                        blockOfType('studio_addCharacter') +
                         blockOfType('studio_throw') +
                         blockOfType('studio_makeProjectile') +
                         blockOfType('studio_setSpriteSpeed') +
@@ -1445,7 +1530,7 @@ levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
   'map': [
-    [0,16, 0, 0, 0,16, 0,32],
+    [0,16, 0, 0, 0,16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0,16, 0, 0, 0,16, 0, 0],
@@ -1508,633 +1593,1132 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-levels.hoc2015_1 = {
-  'editCode': true,
-  'map': [
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4,16, 0,256,1, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4]
-  ],
-  'avatarList': [ 'character1' ],
-  'wallMapCollisions': true,
-  'blockMovingIntoWalls': true,
-  'gridAlignedMovement': true,
-  'removeItemsWhenActorCollides': true,
-  'slowJsExecutionFactor': 10,
-  'markerHeight': 50,
-  'markerWidth': 50,
-  'codeFunctions': {
-    // Play Lab
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
-  },
-};
+/* ******* Hour of Code 2015 ********/
 
-levels.hoc2015_2 = {
+levels.js_hoc2015_move_right = {
   'editCode': true,
-  'map': [
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 4, 4, 4, 4, 4, 0],
-    [0, 0, 4, 0, 0,256,4, 0],
-    [0, 0, 4, 0, 4, 0, 4, 0],
-    [0, 0, 4, 1,16,256,4, 0],
-    [0, 0, 4, 4, 4, 4, 4, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ],
-  'avatarList': [ 'character1' ],
+  'background': 'main',
+  'music': [ 'song1' ],
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
+  },
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
-  'removeItemsWhenActorCollides': true,
+  'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'markerHeight': 50,
-  'markerWidth': 50,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map':
+    [[0x1020000, 0x1020000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
+     [0x1020000, 0x1020000, 0x0000000, 0x0010000, 0x0020000, 0x0100000, 0x00, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],   
+     [0x0000000, 0x0000000, 0x0000000, 0x0100000, 0x0010000, 0x0120000, 0x00, 0x0000000], 
+     [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],  
+     [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000]],
+
+  'instructions': '"We need that scrap metal. BOTX, can you get it?"',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutFailureTick': 100,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal1',
+    'imageWidth': 50,
+    'imageHeight': 50
+  },
+  "callouts": [
+    {
+      "id": "playlab:js_hoc2015_move_right:runButton",
+      "element_id": "#runButton",
+      "qtip_config": {
+        "content": {
+          "text": msg.calloutRunButton(),
+        },
+        'position': {
+          'my': 'top left',
+          'at': 'bottom center',
+          'adjust': {
+            'x': 0,
+            'y': 0
+          }
+        }
+      }
+    }
+  ],
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
+};
+
+levels.js_hoc2015_move_right_down = {
+  'editCode': true,
+  'background': 'main',
+  'music': [ 'song2' ],
   'codeFunctions': {
-    // Play Lab
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': 
+    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x1100000, 0x1100000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x1100000, 0x1100000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0000000, 0x00],  
+     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],   
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],  
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
+  'instructions': '"We need more scrap metal. Can you get all the metal on this planet?"',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal2',
+    'imageWidth': 50,
+    'imageHeight': 50
+  },
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 
-/* ******* Hour of Code 2015 ********/
-
-
-levels.js_hoc2015_move_right = {
-  "editCode": true,
-  "background": "background1",
-  "codeFunctions": {
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null
+levels.js_hoc2015_move_diagonal = {
+  'editCode': true,
+  'textModeAtStart': true,
+  'background': 'main',
+  'music': [ 'song3' ],
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "moveEast();",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 16, 0, 1, 4,0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "instructions": "Help me program the character to get the item and bring it to the destination. Stack a couple moveEast(); commands and then hit Run to make him go.",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'moveDown();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,  
+  'map':
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000, 0x0000000],  
+     [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000],
+     [0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000, 0x0000000],   
+     [0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
+     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000],   
+     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000]],
+  'embed': 'false',
+  'instructions': '"Watch out for the GUY!"',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal1',
+    'imageWidth': 50,
+    'imageHeight': 50
   },
-};
-
-levels.js_hoc2015_move_two_items = {
-  "editCode": true,
-  "background": "background1",
-  "codeFunctions": {
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null
-  },
-  //"startBlocks": "moveEast();\nmoveNorth();",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
-  "delayCompletion": 2000,
-  "floating_score": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 4, 0, 0, 0, 4,0, 0], [0, 4, 0, 4, 0, 4, 0, 0], [0, 4, 1, 16, 0, 4, 0, 0], [0, 4, 4, 4, 4, 4, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "instructions": "We need the items. Help me get them all!",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
-  }
-};
-
-levels.js_hoc2015_move_item_destination = {
-  "editCode": true,
-  "background": "background1",
-  "codeFunctions": {
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null
-  },
-  "startBlocks": "moveEast();\nmoveEast();",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 4, 4, 4, 4, 0, 0], [0, 4,  4, 4, 4, 4, 4, 0], [0, 4,  0, 4, 4,256, 4, 0], [0, 4,1,16, 0, 0, 4, 0], [0, 4, 4, 4,  4, 4, 4, 0], [0, 0, 0, 0,  0, 0, 0, 0], [0, 0, 0, 0,  0, 0, 0, 0]],
-  "instructions": "I see another item behind that obstacle. Can you bring it back to the destination?",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
-  }
-};
-
-levels.js_hoc2015_move_item_destination_2 = {
- "editCode": true,
-  "background": "background2",
-  "textModeAtStart": true,
-  "codeFunctions": {
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null
-  },
-  "startBlocks": "moveSouth();",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 0, 0,  4, 0, 0], [0, 4,  4, 4, 4,  0, 4, 0], [0, 4,  4,16, 0,  0, 4, 0], [0, 4,  0, 0, 4,  4, 4, 0], [0, 4,  1, 256, 0,  4, 4, 0], [0, 4,  4, 0, 4,  0, 0, 0], [0, 0,  4, 4, 4,  0, 0, 0]],
-  "embed": "false",
-  "instructions": "Drag the code blocks into the workspace to help the character reach the destination.",
-};
-
-levels.js_hoc2015_move_item_destination_3 = {
-  "editCode": true,
-  "background": "background2",
-  "textModeAtStart": true,
-  "codeFunctions": {
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null
-  },
-  "startBlocks": "moveEast();",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
-  "delayCompletion": 2000,
-  "floating_score": true,  
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  4, 4, 4,  4, 4, 0], [0, 0, 4,  0, 0, 1,  4, 0], [0, 0,  4,0, 256,  4, 4, 0], [0, 4,  0, 16, 0,  0, 4, 0], [0, 4, 4, 4, 4,  0, 4, 0], [0, 0,  0, 0, 4,  4, 4, 0], [0, 0,  0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "Try typing the commands to get the item to our destination. Don’t forget to end with ();",
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ],
+  "callouts": [
+    {
+      'id': 'playlab:js_hoc2015_move_diagonal:placeCommandsHere',
+      'element_id': '#show-code-header',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutShowCodeToggle(),
+        },
+        'hide': {
+          'event': 'mouseup touchend',
+        },
+        'position': {
+          'my': 'top right',
+          'at': 'bottom left',
+          'adjust': {
+            'x': 0,
+            'y': 0
+          }
+        }
+      }
+    }
+  ]
 };
 
 
-levels.js_hoc2015_move_cross = {
-  "editCode": true,
-  "background": "background2",
-  "textModeAtStart": true,
-  "codeFunctions": {
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null
+levels.js_hoc2015_move_backtrack = {
+  'editCode': true,
+  'background': 'main',
+  'music': [ 'song4' ],
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
   },
-  "startBlocks": "moveNorth();",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": true,
-  "itemGridAlignedMovement": true,
-  "slowJsExecutionFactor": 10,
-  "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0,  0, 0, 0,  0, 0, 0], [0, 0,  0, 4, 0, 0, 0, 0], [0, 0, 4,  1, 4, 0, 0, 0], [0, 4, 256, 0, 256, 4, 0, 0], [0, 0,  4, 16, 4,  0, 0, 0], [0, 0, 0, 4, 0, 0, 0, 0], [0, 0,  0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "Type or drag the blocks to get both items to the destination.",
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': 
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00], 
+     [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],  
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+     [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
+  'instructions': '"Go quickly, BOTX."',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal1',
+    'imageWidth': 50,
+    'imageHeight': 50
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
+};
+
+levels.js_hoc2015_move_around = {
+  'editCode': true,
+  'background': 'main',
+  'music': [ 'song5' ],
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
+  },
+  'startBlocks': [
+    'moveRight();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map':
+    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000, 0x00],  
+     [0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x20, 0x0140000, 0x0000000, 0x0000001, 0x0000000, 0x00],
+     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x00],  
+     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
+  'embed': 'false',
+  'instructions': '"It\'s up to you, BOTX!"',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal2',
+    'imageWidth': 50,
+    'imageHeight': 50
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
+};
+
+
+levels.js_hoc2015_move_finale = {
+  'editCode': true,
+  'background': 'main',
+  'music': [ 'song6' ],
+  'codeFunctions': {
+    'moveRight': null,
+    'moveLeft': null,
+    'moveUp': null,
+    'moveDown': null,
+  },
+  'startBlocks': [
+    'moveDown();',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'gridAlignedMovement': true,
+  'itemGridAlignedMovement': true,
+  'slowJsExecutionFactor': 10,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map':
+    [[0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000000, 0x0000000], 
+     [0x0000000, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000000, 0x0000000],  
+     [0x0000000, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
+     [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],  
+     [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000]],
+  'embed': 'false',
+  'instructions': '"We need 4 more pieces of metal. Can you find them?"',
+  'ticksBeforeFaceSouth': 9,
+  'timeoutAfterWhenRun': true,
+  'goalOverride': {
+    'goalImage': 'goal2',
+    'imageWidth': 50,
+    'imageHeight': 50
+  },
+  'progressConditions' : [
+    { required: { 'touchedHazardsAtOrAbove': 1 },
+      result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
+    { required: { 'allGoalsVisited': true },
+      result: { success: true, message: msg.successHasAllGoals() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+      result: { success: false, message: msg.failedHasAllGoals() } }
+  ]
 };
 
 
 /* ** level 7 ** */
 
 levels.js_hoc2015_event_two_items = {
-  "editCode": true,
-  "background": "background1",
-  "walls": "blank",
-  "softButtons": ["downButton", "upButton"],
-  "codeFunctions": {
-    "moveNorth": null,
-    "moveSouth": null,
-    "whenUp": null,
-    "whenDown": null
+  'editCode': true,
+  'background': 'snow',
+  'music': [ 'song7' ],
+  'wallMap': 'blank',
+  'softButtons': ['downButton', 'upButton'],
+  'codeFunctions': {
+    'goUp': null,
+    'goDown': null,
+
+    'whenUp': null,
+    'whenDown': null
   },
-  //"startBlocks": "function whenUp() {\n  __;\n}\nfunction whenDown() {\n  __;\n}",
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
-  "itemGridAlignedMovement": false,
-  "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
-  "pinWorkspaceToBottom": "true",
-  "embed": "false",
-  "instructions": "\"Bot1, I need you to get a critical message to the goals.\"",
-  "instructions2": "Use functions to make Bot1 move when you hit the arrow keys.",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
+  'startBlocks': [
+    'function whenUp() {', 
+    '  ',
+    '}',
+    'function whenDown() {',
+    '  ',
+    '}'].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00]],
+  'pinWorkspaceToBottom': 'true',
+  'embed': 'false',
+  'instructions': '"BOT1, I need you to get a critical message to the GOALs."',
+  'instructions2': 'Make BOT1 move when you use the arrow keys.',
+  'timeoutFailureTick': 600, // 20 seconds
+  'showTimeoutRect': true,
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100,
+    'goalRenderOffsetX': 0
   },
+
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true }, 
+      result: { success: true, message: msg.successCharacter1() } },
+    { required: { 'timedOut': true }, 
+      result: { success: false, message: msg.failedTwoItemsTimeout() } }
+  ],
+
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_event_two_items:placeCommandsHere',
+      'element_id': '.droplet-gutter-line:nth-of-type(2)',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutShowPlaceGoUpHere(),
+        },
+        'hide': {
+          'event': 'mouseup touchend',
+        },
+        'position': {
+          'my': 'top left',
+          'at': 'bottom right',
+          'adjust': {
+            'x': 30,
+            'y': -10
+          }
+        }
+      }
+    },
+    {
+      'id': 'arrowsCallout',
+      'element_id': '#upButton',
+      'hide_target_selector': '#soft-buttons',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutUseArrowButtons(),
+        },
+        'position': {
+          'my': 'top left',
+          'at': 'bottom left',
+          'adjust': {
+            'x': 30,
+            'y': 0
+          }
+        }
+      }
+    }
+  ]
 };
 
 levels.js_hoc2015_event_four_items = {
-  "editCode": true,
-  "background": "background1",
-  "walls": "blobs",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+  'editCode': true,
+  'background': 'snow',
+  'music': [ 'song8' ],
+  'wallMap': 'blobs',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'goRight': null,
+    'goLeft': null,
+    'goUp': null,
+    'goDown': null,
+
+    'whenLeft': null,
+    'whenRight': null,
+    'whenUp': null,
+    'whenDown': null
   },
-  "startBlocks": "function whenLeft() {\n  __;\n}\nfunction whenRight() {\n  __;\n}\nfunction whenUp() {\n  __;\n}\nfunction whenDown() {\n  __;\n}",
+  'startBlocks': [
+    'function whenUp() {',
+    '  ',
+    '}',
+    'function whenDown() {',
+    '  ',
+    '}'].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x01],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    [0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00]],
+  'embed': 'false',
+  'instructions': '"Get to all the GOALs as quickly as you can."',
+  'instructions2': 'Move in all directions.',
+  'timeoutFailureTick': 900, // 30 seconds
+  'showTimeoutRect': true,
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
+  },
 
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
-  "itemGridAlignedMovement": false,
-  "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 16, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]],
-
-  "embed": "false",
-  "instructions": "\"Get to all the goals as quickly as you can.\"",
-  "instructions2": "Move in all directions.",
-  "goalOverride": {
-    "goalAnimation": "animatedGoal",
-    "imageWidth": 100,
-    "imageHeight": 100
-  }
+  'progressConditions' : [
+    { required: { 'allGoalsVisited': true }, 
+      result: { success: true, message: msg.successCharacter1() } },
+    { required: { 'timedOut': true }, 
+      result: { success: false, message: msg.failedFourItemsTimeout() } }
+  ]
 };
 
 
-levels.js_hoc2015_event_choose_character =
+levels.js_hoc2015_score =
 {
-  "avatarList": ["character1"],
-  "editCode": true,
-  "background": "background1",
-  "walls": "blank",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "setCharacter": null,
-    "setBackground": null,
-    "setWalls": null,
-    "playSound": null,
-
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+  'avatarList': ['bot1'],
+  'editCode': true,
+  'background': 'snow',
+  'music': [ 'song9' ],
+  'wallMap': 'circle',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'autohandlerOverrides': {
+    'whenGetPilot': 'whenTouchGoal'
   },
-  "startBlocks": "function whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}",
+  'codeFunctions': {
+    'playSound': null,
+    'addPoints': { params: ["100"] },
 
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  "edgeCollisions": "true",
-
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-
-  "instructions": "\"Time to visit another planet.\"",
-  "instructions2": "Use the setBackgound(); command to change the background and change your bot to Bot2.",
+    'whenGetPilot': null
+  },
+  'startBlocks': [
+    'function whenGetPilot() {',
+    '  playSound("character1sound1");',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'edgeCollisions': 'true',
+  'map': [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [1, 0, 0, 16, 0, 0, 0, 1],
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 1,  0, 0, 0, 0]],
+  'instructions': '"Reach the GOAL!"',
+  'instructions2': "Let's add points. Add 100 points when BOT1 gets the pilot.",
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 600, // 20 seconds
+  'showTimeoutRect': true,
+  'goalOverride': {
+    'goalAnimation': 'animatedGoal',
+    'imageWidth': 100,
+    'imageHeight': 100
+  },
+  'goal': {
+    // The level uses completeOnSuccessConditionNotGoals, so make sure this
+    // returns null  The progressConditions will take care of completion.
+    successCondition: function () { return false; }
+  },
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 }, 
+      result: { success: false, message: msg.failedScoreTimeout() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 }, 
+      result: { success: false, message: msg.failedScoreScore() } },
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 }, 
+      result: { success: false, message: msg.failedScoreGoals() } },
+    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ],
+  'completeOnSuccessConditionNotGoals': true,
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_score:placeCommandsAtTop',
+      'element_id': '.droplet-gutter-line:nth-of-type(2)',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutShowPlaySound(),
+        },
+        'hide': {
+          'event': 'mouseup touchend',
+        },
+        'position': {
+          'my': 'top center',
+          'at': 'bottom center',
+          'adjust': {
+            'x': 170,
+            'y': 0
+          }
+        }
+      }
+    }
+  ],
 };
 
 
-levels.js_hoc2015_event_add_items = {
-  "editCode": true,
-  "protagonistSpriteIndex": 0,
-  "background": "background2",
-  "walls": "horizontal",
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "addItemsToScene": null,
 
-    "setCharacter": null,
-    "setBackground": null,
-    "setWalls": null,
-    "playSound": null,
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+levels.js_hoc2015_win_lose = {
+  'editCode': true,
+  'background': 'forest',
+  'music': [ 'song10' ],
+  'wallMap': 'blobs',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'playSound': null,
+    'addPoints': { params: ["100"] },
+    'removePoints': { params: ["100"] },
+    'whenGetPilot': null,
+    'whenGetMan': null,
+    'whenGetBird': null,
   },
-  "startBlocks": "function whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}",
+  'startBlocks': [].join('\n'),
 
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
-  "delayCompletion": 2000,
-  "floatingScore": true,
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x040, 0x040, 0x000, 0x000, 0x000],
+    [0x800, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x800],
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x010, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
+    [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
+  'embed': 'false',
+  'instructions': '"Watch out for the MAN."',
+  'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN!',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 900, // 30 seconds
+  'showTimeoutRect': true,
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_win_lose:instructions',
+      'element_id': '#prompt-table',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutInstructions(),
+        },
+        'position': {
+          'my': 'bottom left',
+          'at': 'top right',
+          'adjust': {
+            'x': -40,
+            'y': 0
+          }
+        }
+      }
+    }
+  ],
 
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"I’m seeing signs of increased activity on this planet.\"",
-  "instructions2": "Let’s do the same thing in text mode. Type, \"addItem(\"Character1\");\" at the top of your program to add a Character1. Can you add another Character? Then get them all.", 
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 }, 
+      result: { success: false, message: msg.failedWinLoseTimeout() } },
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 }, 
+      result: { success: false, message: msg.failedWinLoseScore() } },
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 }, 
+      result: { success: false, message: msg.failedWinLoseGoals() } },
+    { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ]
 };
 
 
-levels.js_hoc2015_event_item_behavior = {
-  "editCode": true,
-  "protagonistSpriteIndex": 0,
-  "background": "background2",
-  "walls": "blobs",
-  "textModeAtStart": true,
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "setItemActivity": null,
-    "setItemSpeed": null,
+levels.js_hoc2015_add_characters = {
+  'editCode': true,
+  'background': 'forest',
+  'music': [ 'song11' ],
+  'wallMap': 'circle',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'addCharacter': { params: ['"pig"'] },
+    'addPoints': { params: ["1000"] },
+    'removePoints': { params: ["1000"] },
+    'playSound': null,
 
-    "addItemsToScene": null,
-    "setCharacter": null,
-    "setBackground": null,
-    "setWalls": null,
-    "playSound": null,
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+    'whenGetPig': null,
   },
-  "startBlocks": "addItemsToScene('item_walk_item2', 1);\n\nfunction whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}",
+  'startBlocks': [
+    'playSound("character1sound1");',
+    'addCharacter("pig");',
+    '',
+    'function whenGetPig() {',
+    '  playSound("item1sound1");',
+    '  addPoints(1000);',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 16, 0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"I\'m seeing signs of increased activity on this planet!"',
+  'instructions2': 'Add 3 PIGs to the planet. Then, go get them.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 900, // 30 seconds
+  'showTimeoutRect': true,
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_add_characters:calloutPutCommandsHereRunStart',
+      'element_id': '.droplet-gutter-line:nth-of-type(2)',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutPutCommandsHereRunStart(),
+        },
+        'event': 'mouseup touchend',
+        'position': {
+          'my': 'top left',
+          'at': 'center right',
+        }
+      }
+    }
+  ],
 
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
-  "delayCompletion": 2000,
-  "floatingFcore": true,
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"It’s up to you Bot2.\"",
-  "instructions2": "Make the Creature2s flee by using \"setToFlee\" and then get them all."
+  'progressConditions' : [
+    { required: { 'collectedItemsAtOrAbove': 3 }, 
+      result: { success: true, message: msg.successCharacter1() } },
+    { required: { 'timedOut': true, 'collectedItemsBelow': 3 }, 
+      result: { success: false, message: msg.failedAddCharactersTimeout() } }
+  ]
 };
 
-levels.js_hoc2015_event_touch_items = {
-  "editCode": true,
-  "protagonistSpriteIndex": 0,
-  "background": "background2",
-  "walls": "circle",
-  "textModeAtStart": true,
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "whenTouchItem": null,
 
-    "setItemActivity": null,
-    "setItemSpeed": null,
-    "addItemsToScene": null,
-    "setCharacter": null,
-    "setBackground": null,
-    "setWalls": null,
-    "playSound": null,
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+levels.js_hoc2015_chain_characters = {
+  'editCode': true,
+  'background': 'ship',
+  'music': [ 'song12' ],
+  'wallMap': 'grid',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'addCharacter': null,
+    'playSound': null,
+    'addPoints': null,
+    'removePoints': null,
+
+    'whenGetMouse': null,
   },
-  "startBlocks": "addItemsToScene('item_walk_item4', 3);\n\nfunction whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}",
-
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-
-  "embed": "false",
-  "instructions": "\"Be careful, they might be behind you.\"",
-  "instructions2": "Every time you get a character, add a new random character to the scene.",
+  'startBlocks': [
+    'addCharacter("mouse");',
+    'playSound("character1sound3");',
+    '',
+    'function whenGetMouse() {',
+    '  playSound("item6sound2");',
+    '  addCharacter("mouse");',
+    '  addCharacter("mouse");',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"They\'re multiplying!"',
+  'instructions2': 'Add 100 points every time BOT1 gets a MOUSE. Can you get 800 points? ',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 1350, // 45 seconds
+  'showTimeoutRect': true,
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsBelow': 800 }, 
+      result: { success: false, message: msg.failedChainCharactersTimeout() } },
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 8, 'currentPointsBelow': 800 }, 
+      result: { success: false, message: msg.failedChainCharactersScore() } },
+    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsAtOrAbove': 800 }, 
+      result: { success: false, message: msg.failedChainCharactersItems() } },
+    { required: { 'collectedItemsAtOrAbove': 8, 'currentPointsAtOrAbove': 800 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ]
 };
 
-levels.js_hoc2015_event_points = {
-  "editCode": true,
-  "background": "background3",
-  "walls": "horizontal",
-  "textModeAtStart": true,
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "changeScore": null,
+levels.js_hoc2015_chain_characters_2 = {
+  'editCode': true,
+  'background': 'ship',
+  'music': [ 'song13' ],
+  'wallMap': 'horizontal',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'addCharacter': { params: ['"mouse"'] },
+    'addPoints': null,
+    'removePoints': null,
+    'playSound': null,
 
-    "whenTouchItem": null,
-    "setItemActivity": null,
-    "setItemSpeed": null,
-    "addItemsToScene": null,
-    "setCharacter": null,
-    "setBackground": null,
-    "setWalls": null,
-    "playSound": null,
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+    'whenGetRoo': null,
+    'whenGetMouse': null
   },
-  "startBlocks": "addItemsToScene('item_walk_item3', 3);\nfunction whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}\nfunction whenTouchItem() {\n  \n}",
-
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-
-  "embed": "false",
-  "instructions": "\"I’m counting on you, Bot1!\"",
-  "instructions2": "Change your score when you touch a character. Can you reach 100 points?",
+  'startBlocks': [
+    'addCharacter("roo");',
+    'addCharacter("roo");',
+    '',
+    'function whenGetRoo() {',
+    '  playSound("item3sound4");',
+    '  addPoints(50);',
+    '  addCharacter("bird");',
+    '  addCharacter("bird");',
+    '}',
+    '',
+    'function whenGetBird() {',
+    '  playSound("item4sound1");',
+    '',
+    '}',
+    'function whenGetMouse() {',
+    '  playSound("item6sound2");',
+    '  addPoints(100);',
+    '  ',
+    '}',
+    ].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"It\'s up to you, BOT1!"',
+  'instructions2': 'When you get a ROO, two BIRDs appear. Can you make two MICE appear when you get a BIRD? Then, get them all.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 1350, // 45 seconds
+  'showTimeoutRect': true,
+  'progressConditions' : [
+    { required: { 'timedOut': true, 'collectedItemsBelow': 14 }, 
+      result: { success: false, message: msg.failedChainCharacters2Timeout() } },
+    { required: { 'collectedItemsAtOrAbove': 14 }, 
+      result: { success: true, message: msg.successCharacter1() } }
+  ],
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwo',
+      'element_id': '.droplet-gutter-line:nth-of-type(12)',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutPlaceTwo(),
+        },
+        'event': 'mouseup touchend',
+        'position': {
+          'my': 'top left',
+          'at': 'center right',
+          'adjust': {
+            'x': 40,
+            'y': 10
+          }
+        }
+      }
+    }
+  ]
 };
 
-levels.js_hoc2015_event_random_items = {
-  "editCode": true,
-  "background": "background3",
-  "walls": "blobs",
-  "textModeAtStart": true,
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "setSpriteSpeed": null,
+levels.js_hoc2015_change_setting = {
+  'editCode': true,
+  'background': 'ship',
+  'music': [ 'song14' ],
+  'wallMap': 'blobs',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'setBot': null,
+    'setBackground': null,
+    'setBotSpeed': null,
+    'setMap': null,
+    'playSound': null,
+    'addCharacter': null,
+    'addPoints': null,
+    'removePoints': null,
 
-    "changeScore": null,
-    "whenTouchItem": null,
-    "setItemActivity": null,
-    "setItemSpeed": null,
-    "addItemsToScene": null,
-    "setCharacter": null,
-    "setBackground": null,
-    "setWalls": null,
-    "playSound": null,
-    "moveEast": null,
-    "moveWest": null,
-    "moveNorth": null,
-    "moveSouth": null,
-    "whenLeft": null,
-    "whenRight": null,
-    "whenUp": null,
-    "whenDown": null
+    'whenScore1000': null,
+    'whenGetPilot': null,
   },
-  "startBlocks": "addItemsToScene('item_walk_item3', 3);\nfunction whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}\nfunction whenTouchItem() {\n  changeScore(1);\n  \n}",
-
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-  
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"Quick! They’re moving faster!\"",
-  "instructions2": "Ready to move faster? Increase your speed when you touch a Character3 and slow down when you hit a Character4.",
+  'startBlocks': [
+    'addCharacter("pilot");',
+    'addCharacter("pilot");',
+    'addCharacter("pilot");',
+    'playSound("character1sound4");',
+    'setBot("bot1");',
+    '',
+    'function whenGetPilot() {',
+    '  addPoints(400);',
+    '  setBackground("random");',
+    '  ',
+    '}',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"Time to visit another planet."',
+  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.',
+  'autoArrowSteer': true,
+  'timeoutFailureTick': 900, // 30 seconds
+  'showTimeoutRect': true,
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_change_setting:setMap',
+      'element_id': '#droplet_palette_block_setMap',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutSetMapAndSpeed(),
+        },
+        'position': {
+          'my': 'center left',
+          'at': 'center right',
+        }
+      }
+    }
+  ],
+  'progressConditions' : [
+    // Collected all the items and set the right properties?  Success.
+    { required: { 'setMap': true, 'setBotSpeed': true, 'collectedItemsAtOrAbove': 3 },
+      result: { success: true, message: msg.successGenericCharacter() } },
+    // Special message for timing out when not enough items collected.
+    { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
+      result: { success: false, message: msg.failedChangeSettingTimeout() } },
+    // If all items are collected, but either property not set?  Failure.
+    { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 }, 
+      result: { success: false, message: msg.failedChangeSettingSettings() } },
+    { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 }, 
+      result: { success: false, message: msg.failedChangeSettingSettings() } }
+  ]
 };
+
 
 levels.js_hoc2015_event_free = {
-  "editCode": true,
-  "background": "background1",
-  "walls": "circle",
-  "textModeAtStart": true,
-  "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
-  "codeFunctions": {
-    "setCharacter": { "category": "Commands" },
-    "setBackground": { "category": "Commands" },
-    "setCharacterSpeed": { "category": "Commands" },
-    "setWalls": { "category": "Commands" },
-    "playSound": { "category": "Commands" },
-    "addItemsToScene": { "category": "Commands" },
-    "setItemActivity": { "category": "Commands" },
-    "setItemSpeed": { "category": "Commands" },
-    "changeScore": { "category": "Commands" },
+  'editCode': true,
+  'freePlay': true,
+  'background': 'forest',
+  'music': [ 'song15' ],
+  'wallMap': 'blank',
+  'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
+  'codeFunctions': {
+    'setBot': { 'category': 'Commands' },
+    'setBackground': { 'category': 'Commands' },
+    'setBotSpeed': { 'category': 'Commands' },
+    'setMap': { 'category': 'Commands' },
+    'playSound': { 'category': 'Commands' },
+    'addCharacter': { 'category': 'Commands' },
+    'moveSlow': { 'category': 'Commands' },
+    'moveNormal': { 'category': 'Commands' },
+    'moveFast': { 'category': 'Commands' },
+    'addPoints': { 'category': 'Commands' },
+    'removePoints': { 'category': 'Commands' },
 
-    "moveEast": { "category": "Commands" },
-    "moveWest": { "category": "Commands" },
-    "moveNorth": { "category": "Commands" },
-    "moveSouth": { "category": "Commands" },
-    "whenLeft": { "category": "Events" },
-    "whenRight": { "category": "Events" },
-    "whenUp": { "category": "Events" },
-    "whenDown": { "category": "Events" },
-    "whenTouchWall": { "category": "Events" },
-    "whenTouchWalkItem1": { "category": "Events" },
-    "whenTouchWalkItem2": { "category": "Events" },
-    "whenTouchWalkItem3": { "category": "Events" },
-    "whenTouchWalkItem4": { "category": "Events" },
-    "whenTouchItem": { "category": "Events" }
+    'whenTouchObstacle': { 'category': 'Events' },
+    'whenGetMan': { 'category': 'Events' },
+    'whenGetPilot': { 'category': 'Events' },
+    'whenGetPig': { 'category': 'Events' },
+    'whenGetBird': { 'category': 'Events' },
+    'whenGetMouse': { 'category': 'Events' },
+    'whenGetRoo': { 'category': 'Events' },
+    'whenGetSpider': { 'category': 'Events' },
+    'whenGetCharacter': { 'category': 'Events' },
+
+    'whenGetAllMen': { 'category': 'Events' },
+    'whenGetAllPilots': { 'category': 'Events' },
+    'whenGetAllPigs': { 'category': 'Events' },
+    'whenGetAllBirds': { 'category': 'Events' },
+    'whenGetAllMice': { 'category': 'Events' },
+    'whenGetAllRoos': { 'category': 'Events' },
+    'whenGetAllSpiders': { 'category': 'Events' },
+    'whenGetAllCharacters': { 'category': 'Events' }
   },
-  "startBlocks": "function whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}",
-
-  "sortDrawOrder": true,
-  "wallMapCollisions": true,
-  "blockMovingIntoWalls": true,
-  "gridAlignedMovement": false,
-  "itemGridAlignedMovement": true,
-  "removeItemsWhenActorCollides": true,
-  "markerHeight": 50,
-  "markerWidth": 50,
-  "delayCompletion": 2000,
-  "floatingScore": true,
-
-  "map": [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
-  "embed": "false",
-  "instructions": "\"You’re on your own now Bot1.\"",
+  'startBlocks': [
+    'setBackground("forest");',
+    'setMap("circle");',
+    'setBot("bot1");',
+    'setBotSpeed("normal");',
+    'playSound("character1sound5");',
+    ''].join('\n'),
+  'sortDrawOrder': true,
+  'wallMapCollisions': true,
+  'blockMovingIntoWalls': true,
+  'itemGridAlignedMovement': true,
+  'removeItemsWhenActorCollides': true,
+  'delayCompletion': 2000,
+  'floatingScore': true,
+  'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
+  'embed': 'false',
+  'instructions': '"You\'re on your own now, BOT1."',
+  'autoArrowSteer': true,
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_event_free:clickCategory',
+      'element_id': '.droplet-palette-group-header.green',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutClickEvents(),
+        },
+        'position': {
+          'my': 'top center',
+          'at': 'bottom center',
+        }
+      }
+    }
+  ],
 };
 
+levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
+  editCode: false,
+  startBlocks: whenRunMoveEast,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveEastRequiredBlock(),
+  ],
+});
 
+levels.hoc2015_blockly_2 = utils.extend(levels.js_hoc2015_move_right_down,  {
+  editCode: false,
+  startBlocks: whenRunMoveEast,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveEastRequiredBlock(),
+    moveSouthRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_3 = utils.extend(levels.js_hoc2015_move_diagonal,  {
+  editCode: false,
+  startBlocks: whenRunMoveSouth,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveSouthRequiredBlock(),
+    moveWestRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_4 = utils.extend(levels.js_hoc2015_move_backtrack,  {
+  editCode: false,
+  startBlocks: whenRunMoveEast,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveEastRequiredBlock(),
+    moveNorthRequiredBlock(),
+    moveSouthRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_5 = utils.extend(levels.js_hoc2015_move_around,  {
+  editCode: false,
+  startBlocks: whenRunMoveEast,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveEastRequiredBlock(),
+    moveSouthRequiredBlock(),
+    moveWestRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_finale,  {
+  editCode: false,
+  startBlocks: whenRunMoveSouth,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveNorthRequiredBlock(),
+    moveSouthRequiredBlock(),
+    moveWestRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_7 = utils.extend(levels.js_hoc2015_event_two_items,  {
+  editCode: false,
+  startBlocks: whenUpDown,
+  toolbox: tb(hocMoveNS),
+  requiredBlocks: [
+    moveNorthRequiredBlock(),
+    moveSouthRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_8 = utils.extend(levels.js_hoc2015_event_four_items,  {
+  editCode: false,
+  startBlocks: whenUpDownLeftRight,
+  toolbox: tb(hocMoveNSEW),
+  requiredBlocks: [
+    moveNorthRequiredBlock(),
+    moveSouthRequiredBlock(),
+    moveEastRequiredBlock(),
+    moveWestRequiredBlock(),
+  ],
+});
+
+levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
+  editCode: false,
+});
+
+levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
+  editCode: false,
+});

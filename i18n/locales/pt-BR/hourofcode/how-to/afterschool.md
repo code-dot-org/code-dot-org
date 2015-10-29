@@ -38,12 +38,12 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 
 ## 5) Comece a Hora do Código inspirando os participantes
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
+Comece seu evento da Hora do Código inspirando os participantes e discutindo sobre o impacto da ciência da computação em cada situação de suas vidas.
 
 **Mostre um vídeo inspirador:**
 
   * O vídeo original de lançamento da Code.org, com a participação de Bill Gates, Mark Zuckerberg e o astro da NBA, Chris Bosh (há versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * O [vídeo de lançamento da Hora do Código de 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou o <% if @country == 'uk' %> [vídeo da Hora do Código de 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [vídeo da Hora do Código de 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [O vídeo do presidente Obama convidando todos os alunos a aprender ciência da computação](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Encontre outros vídeos inspiradores [aqui](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -93,7 +93,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 ## 7) Comemore
 
   * [Imprima certificados](<%= resolve_url('https://code.org/certificates') %>) para seus alunos.
-  * Imprima adesivos com a mensagem ["Eu participei da Hora do Código!"](%= resolve_url('/resources/promote#stickers') %).
+  * Imprima adesivos com a mensagem ["Eu participei da Hora do Código!"](%= resolve_url('/promote/resources#stickers') %)
   * Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso, também!
 
 [col-33]
@@ -120,7 +120,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## Outros recursos da Hora do Código para educadores:
 
-  * Use esse [modelo de plano de aula](/files/AfterschoolEducatorLessonPlanOutline.docx) para organizar a Hora do Código.
+  * Use este [modelo de plano de aula](/files/AfterschoolEducatorLessonPlanOutline.docx) para organizar a Hora do Código.
   * Confira as [melhores práticas](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) dos organizadores que já trabalharam na Hora do Código. 
   * Participe do nosso webinar [Guia da Hora do Código para Educadores](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
   * Visite o [Fórum da Hora do Código](http://forum.code.org/c/plc/hour-of-code) para conseguir conselhos, ideias e apoio de outros organizadores. <% if @country == 'us' %>

@@ -16,18 +16,18 @@ Thuaji shokëve të tu për #HourOfCode.
 
 ## 2. Pyesni gjithë shkollën që të ofrojë një Orë Kodimi
 
-[Send this email](%= resolve_url('/resources#email') %) to your principal.
+[Send this email](%= resolve_url('/promote/resources#email') %) to your principal.
 
 ## 3. Pyesni punëdhënsin tuaj, që të arrish të përfshihesh
 
-[Send this email](%= resolve_url('/resources#email') %) to your manager, or the CEO.
+[Send this email](%= resolve_url('/promote/resources#email') %) to your manager, or the CEO.
 
 ## 4. Promovoni Orën e Kodimit në komunitetin tuaj
 
-Rekruto një grup lokal — universiteti, klubi i futbollit, teatri. Ose organizo një "festë ne lagje" me Orën e Kodimit. [Send this email](%= resolve_url('/resources#email') %).
+Rekruto një grup lokal — universiteti, klubi i futbollit, teatri. Ose organizo një "festë ne lagje" me Orën e Kodimit. [Send this email](%= resolve_url('/promote/resources#email') %).
 
 ## 5. Pyet një zyrtar të zgjedhur për të përkrahur Orën e Kodimit
 
-[Send this email](%= resolve_url('/resources#politicians') %) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](%= resolve_url('/promote/resources#politicians') %) to your mayor, city council, or school board and invite them to visit your school.
 
 <%= view :signup_button %>

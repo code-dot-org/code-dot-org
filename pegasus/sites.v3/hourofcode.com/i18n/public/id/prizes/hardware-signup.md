@@ -6,8 +6,8 @@ nav: prizes_nav
 
 ---
 
-# Enter to win $10,000 worth of technology for your school
+# Masuk untuk memenangkan teknologi senilai $10.000 untuk sekolah Anda
 
-If you plan for every student at your school to learn an Hour of Code, you can qualify to win $10,000 worth of technology to keep learning beyond one hour! One public, K-12 school will win in every US state. Complete the form below to be eligible.
+Jika Anda merencanakan setiap siswa di sekolah Anda untuk mengikuti Hour of Code, Anda memenuhi syarat untuk memenangkan teknologi senilai $10.000 untuk tetap belajar melampaui satu jam Hour of Code! Sebuah sekolah K-12 publik akan menang di setiap negara bagian AS. Lengkapi formulir di bawah ini untuk dapat memenuhi syarat.
 
 <%= view :hardware_prizes_form %>

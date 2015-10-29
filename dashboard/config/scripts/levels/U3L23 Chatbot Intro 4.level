@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -150,7 +149,13 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "markdown_instructions": "Congrats! You've made a basic personal assistant!\r\n\r\nUse this level to continue to make your personal assistant look and work better. \r\n\r\n#### Some things you can do\r\n\r\n* Required: Add a comment before each of your functions describing what they do\r\n* Change the coloring of each object\r\n* Change the text color\r\n* Update the prompt and default response to seem more conversational\r\n\r\nIn the next lesson, we will start to make your personal assistant smarter.",
-    "instructions": "Use this level to make your chatbot look and work better!"
+    "instructions": "Use this level to make your chatbot look and work better!",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

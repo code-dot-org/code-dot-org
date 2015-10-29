@@ -27,6 +27,11 @@ pt-BR:
   hoc2014_everyone: Todos
   hoc2014_support: 'Apoie &#x25BE;'
   hoc2014_whatishoc: O que é a Hora do Código?
+  csedweek_map_header: '# Semana de Educação em Ciência da Computação / Hora do Código ao redor do mundo'
+  csedweek_map_signup: Registre seu evento
+  csedweek_map_search_placeholder: Pesquisar eventos da Hora do Código
+  csedweek_map_search_search: Pesquisar
+  csedweek_map_search_reset: Recomeçar
   cded_sign_up: Inscreva-se
   cded_try_it: Experimente
   twentyhours_trynow: Experimente agora
@@ -104,6 +109,7 @@ pt-BR:
   hoc_is_here: 'A #HourOfCode é aqui - Confira! @codeorg'
   just_did_hoc: 'Acabei de concluir a #HourOfCode - Confira! @codeorg'
   twitter_teach_cs: Por que mais escolas não ensinam ciência da computação? Podemos dar um jeito nisso. http://youtu.be/nKIu9yen5nc. Acesse http://code.org/ para saber mais.
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: Aprenda programação com a Hora do Código
   beyond_hoc: Além da Hora do Código
   what_gender: Você é menino ou menina?
@@ -204,6 +210,8 @@ pt-BR:
   homepage_action_text_signpetition: Assine a petição
   homepage_signpetition_dropdown: 'Assinar nossa petição &#x25BE;'
   homepage_diversity_pledge: Abrace a causa em favor da diversidade
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: A Code.org e a College Board formam uma aliança para aumentar a diversidade na ciência da computação.
   homepage_banner_text_link: Saiba mais
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -213,6 +221,7 @@ pt-BR:
   homepage_slot_text_link_hoc: Tente a Hora do Código
   homepage_slot_text_link_host: Organize um evento da Hora do Código
   homepage_slot_text_link_hocserved: '# served'
+  homepage_solot_text_link_volunteer: Voluntário da Hora do Código
   homepage_slot_text_title_students: Alunos
   homepage_slot_text_blurb_students: Explore todos os nossos tutoriais
   homepage_slot_text_link_codestudio: Experimente o Code Studio
@@ -269,50 +278,54 @@ pt-BR:
   class_submission_level_college: Faculdade
   class_submission_level_vocational: Profissional
   class_submission_languages_other: Outro(s) idioma(s)
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} teachers have signed up for the Hour of Code and would like a volunteer to help them.'
-  volunteer_engineer_submission_intro_paragraph: 'Please enter the following information if you are a computer science student or software professional, and you’re interested in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
+  volunteer_engineer_submission_title: Voluntário da Hora do Código
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: |-
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_header_shared: Informações compartilhadas com professores no mapa de voluntários
   volunteer_engineer_submission_field_name: Nome
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: "If you enter your exact address we won't share it, just show you as a pin on map."
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country, or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_field_name_placeholder: Nome completo
+  volunteer_engineer_submission_field_company: Empresa (ou universidade)
+  volunteer_engineer_submission_field_company_placeholder: Empresa (ou universidade)
+  volunteer_engineer_submission_field_experience_level: Nível de experiência
+  volunteer_engineer_submission_field_location: Localização
+  volunteer_engineer_submission_field_location_desc: Se você digitar seu endereço exato, não vamos compartilhá-lo, vamos apenas mostrar você como um ponto no mapa.
+  volunteer_engineer_submission_field_location_placeholder: CEP, cidade e Estado/país, ou nome da rua
+  volunteer_engineer_submission_field_location_flexibility: Eu posso ajudar durante a Hora do Código... (selecione todas as opções aplicáveis)
+  volunteer_engineer_submission_checkbox_after_hoc: Quero ser voluntário após a Hora do Código
+  volunteer_engineer_submission_field_time_commitment: Tempo de comprometimento após a Hora do Código
+  volunteer_engineer_submission_field_linkedin: Perfil no LinkedIn
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook: Perfil no Facebook
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Descrição
-  volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never shared
+  volunteer_engineer_submission_field_description_desc: Descreva sua experiência em ciência da computação e como você gostaria de participar como um voluntário para ajudar os professores da região.
+  volunteer_engineer_submission_field_description_placeholder: Descrição da experiência e/ou participação
+  volunteer_engineer_submission_header_private: As informações são privadas e nunca compartilhadas
   volunteer_engineer_submission_field_email: Endereço de email
-  volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
+  volunteer_engineer_submission_field_email_desc: Seu endereço de e-mail nunca será compartilhado, mas enviaremos solicitações dos professores.
   volunteer_engineer_submission_field_email_placeholder: Endereço de email
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
+  volunteer_engineer_submission_final_paragraph: Você será listado em um mapa para que professores da região entrem em contato com você para a Hora do Código ou para outras oportunidades de voluntariado. Seu e-mail e endereço exatos NUNCA serão compartilhados. Mas as outras informações (incluindo a localização aproximada) será publicamente vista pelos professores da região.
+  volunteer_engineer_submission_checkbox_contact: 'Eu concordo que os professores possam entrar em contato comigo para oportunidades de voluntariado. (Observação: seu endereço de e-mail não será compartilhado)'
   volunteer_engineer_submission_submit: Enviar
-  volunteer_engineer_submission_thankyou: Thank you for submitting your information.
+  volunteer_engineer_submission_thankyou: Obrigado por enviar suas informações.
   volunteer_engineer_submission_commitment_uncertain: Incerto
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 hora por semana
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 horas por semana
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 horas por semana
   volunteer_engineer_submission_commitment_now_and_then: De vez em quando
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: 2-3 vezes por ano
+  volunteer_engineer_submission_commitment_monthly: Algumas horas por mês
+  volunteer_engineer_submission_commitment_weekly: Algumas horas por semana
   volunteer_engineer_submission_commitment_more: Mais
-  volunteer_engineer_submission_location_flexibility_onsite: Na escola
-  volunteer_engineer_submission_location_flexibility_remote: Monitoria remota (professores ou alunos)
-  volunteer_engineer_submission_location_flexibility_curriculum: Ajuda em projetos de código fonte aberto
+  volunteer_engineer_submission_location_flexibility_onsite: visitar uma escola (1-2 horas em uma sala de aula ou assembleia da escola)
+  volunteer_engineer_submission_location_flexibility_remote: fazer um bate-papo com perguntas e respostas com alunos remotamente (via videoconferência)
+  volunteer_engineer_submission_location_flexibility_curriculum: contribuir com o currículo de projetos de código aberto
   volunteer_engineer_submission_experience_unspecified: Não especificado
-  volunteer_engineer_submission_experience_university_student_or_researcher: Aluno de universidade (ou pesquisador)
+  volunteer_engineer_submission_experience_university_student_or_researcher: Estudante universitário de ciência da computação
   volunteer_engineer_submission_experience_software_professional: Profissional na área de software
   petition_age: Idade
   dashboard_landing_title: Página inicial do professor
@@ -334,6 +347,7 @@ pt-BR:
   dashboard_landing_progress_title: Progresso da turma principal
   dashboard_landing_progress_biggest: Esse é o progresso para sua maior turma.
   dashboard_landing_view_progress: 'Visualizar progresso de %{biggest_section}'
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Cursos disponíveis
   dashboard_landing_available_courses: Estes são os cursos atualmente disponíveis para você e seus alunos.
   dashboard_landing_more_tutorials: Quer ver ainda mais tutoriais?
@@ -377,7 +391,7 @@ pt-BR:
   dashboard_navigation_section_speakers: 'Ciência da computação <br/> Palestrantes convidados'
   dashboard_navigation_all_sections: Contas e progresso do aluno
   dashboard_navigation_view_progress: Exibir progresso
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: Ver respostas dissertativas
   dashboard_navigation_add_students: Adicionar alunos
   dashboard_navigation_manage_students: Gerenciar alunos
   dashboard_navigation_lesson_plans_resources: Planos e recursos da aula
@@ -473,8 +487,8 @@ pt-BR:
   dashboard_progress_furthest_level_attempted: tentativa para o nível mais avançado
   dashboard_stage: fase
   dashboard_puzzle: Quebra-cabeça
-  dashboard_question: Question
-  dashboard_response: Response
+  dashboard_question: Pergunta
+  dashboard_response: Resposta
   stats_hoc_2013_heading: 'Estatísticas incríveis da Hora do Código do ano passado. Em apenas uma semana:'
   stats_hoc_2013_image_alt: Estatísticas da Hora do Código de 2013
   dashboard_teacher: Professor
@@ -491,9 +505,9 @@ pt-BR:
   dashboard_sections_login_type_explanation: 'Esta tabela ajuda a explicar qual desses tipos de login, <b>imagem, palavra ou e-mail</b>, você vai querer escolher para uma seção.'
   dashboard_faq: Tire suas dúvidas
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>September 30, 2015</b> - The Hour of Code 2015 is coming! Join classrooms worldwide for the largest learning event in history.'
+  dashboard_announcements: Anúncios
+  dashboard_announce_view_all: Ver todos
+  dashboard_announce_hoc: '<b>30 de setembro de 2015</b> - A Hora do Código 2015 está chegando! Junte-se a salas de aula do mundo todo para o maior evento de aprendizagem da história.'
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência da Computação
   learn_more: Saiba Mais
@@ -501,7 +515,7 @@ pt-BR:
   learn_sign_up_button: Inscreva-se
   learn_educator_resources_description: Aprenda como ensinar uma Hora do Código
   learn_educator_resources_button: Recursos para educadores
-  learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
+  learn_are_you_educator: 'Você é um educador? Saiba <a href="http://hourofcode.com/resources/how-to">como ensinar uma Hora do Código</a>'
   hoc2014_try_new_tutorials: Experimente nossos novos tutoriais da Hora do Código
   hoc2014_try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão beta
   hoc2014_try_scrat: Angry Birds, PvZ e Scrat

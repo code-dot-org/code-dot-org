@@ -2,6 +2,7 @@ Feature: Callouts
 
   Background:
     Given I am on "http://learn.code.org/reset_session"
+    And execute JavaScript expression "window.localStorage.clear()"
 
   Scenario Outline: Callouts having correct content and being dismissable via the target element
     Given I am on "<url>"
@@ -9,7 +10,7 @@ Feature: Callouts
     And I press "x-close"
     And callout "<callout_id>" is visible
     And callout "<callout_id>" has text: <text>
-    And I click selector "<close_target>"
+    And I send click events to selector "<close_target>"
     And callout "<callout_id>" is hidden
   Examples:
     | url                                                | callout_id | text                                                                     | close_target      |

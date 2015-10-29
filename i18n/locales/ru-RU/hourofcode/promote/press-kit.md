@@ -22,10 +22,10 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 **Спланируйте ваше событие**
 
   * Спланируйте собрание принимающих участие, для старта "Часа программирования".
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
+  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Организуйте деятельность группы (например продемонстрировать «оффлайн» программирование), или покажите что-то созданное учениками.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote#videos') %) to inspire.
+  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. Узнайте конкретных местных журналистов, которые освещают темы образования или местные события.**
 
@@ -35,7 +35,7 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 **3. Обратитесь в местные средства массовой информации**
 
-Лучший способ это сделать - электронная почта. Письмо должно быть коротким и простым: почему другие люди должны быть заинтересованы в этом событии? Включать контактную информацию (в том числе номер мобильного телефона) тех, кто будет на месте проведения мероприятии. **See a [sample pitch to media](%= resolve_url('/promote#sample-emails') %):**
+Лучший способ это сделать - электронная почта. Письмо должно быть коротким и простым: почему другие люди должны быть заинтересованы в этом событии? Включать контактную информацию (в том числе номер мобильного телефона) тех, кто будет на месте проведения мероприятии. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %):**
 
 **4. Приготовьтесь ответить на вопросы о вашем школьном событии. Вот несколько примеров:**
 

@@ -27,6 +27,11 @@ cs-CZ:
   hoc2014_everyone: Kdokoli
   hoc2014_support: 'Podpořte ji &#x25BE;'
   hoc2014_whatishoc: Co to je Hodina kódu?
+  csedweek_map_header: '# CSEdWeek / Hodina kódu událost ve světě'
+  csedweek_map_signup: Přihlaste svoji událost
+  csedweek_map_search_placeholder: Vyhledejte události Hodina kódu
+  csedweek_map_search_search: Hledat
+  csedweek_map_search_reset: Obnovit
   cded_sign_up: Registrace
   cded_try_it: Zkuste to
   twentyhours_trynow: Vyzkoušej hned
@@ -51,9 +56,9 @@ cs-CZ:
   course_name_course2: Kurz 2
   course_name_course3: Course 3
   course_name_course4: Course 4
-  congratulations_on_completing_course: 'Congratulations on completing %{course}'
-  congrats_next_tutorials_title: Try these tutorials next
-  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
+  congratulations_on_completing_course: 'Gratulujeme k dokončení %{course}'
+  congrats_next_tutorials_title: Dále vyzkoušejte tyto výukové programy
+  congrats_next_tutorials_desc: 'Vyzkoušejte tyto kratší, jednohodinovou výuku nebo zkuste <a href="%{current_path}/next"> partnerská výuka</a>.'
   get_a_certificate_of_achievement: Získej osvědčení o účasti
   enter_valid_age: Vyberte validní věk
   enter_valid_email: Prosím zadej platnou emailovou adresu
@@ -104,6 +109,7 @@ cs-CZ:
   hoc_is_here: '#HourOfCode je tady - podívejte! @codeorg'
   just_did_hoc: 'Právě jsem dokončil #HourOfCode - vyzkoušej to! @codeorg'
   twitter_teach_cs: Proč více škol nevyučuje informatiku? Můžeme to napravit. http://youtu.be/nKIu9yen5nc. Navštivte http://code.org/ a dozvíte se víc.
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: Učte se s Hodinou Kódu
   beyond_hoc: Po Jedné Hodině
   what_gender: Jakého jsi pohlaví?
@@ -140,61 +146,87 @@ cs-CZ:
   homepage_hero_text_malala: |
     „Vyzývám děvčata každé země, aby se naučila jednu Hodinu kódu“ 
     Malala, držitelka Nobely ceny míru
-  homepage_hero_text_susan: '"Můžete-li změnit technologie, můžete změnit svět." Susan, CEO z YouTube'
+  homepage_hero_text_susan: |
+    &ldquo;umíte-li změnit technologie,
+    umíte změnit svět.&rdquo;
+    Susan, CEO of YouTube
   homepage_hero_text_fistbump: '"Se svým telefonem si pouze nehraj - programuj ho" prezident Barack Obama'
-  homepage_hero_text_sheryl: '"Naše děti &mdash; včetně dívek &mdash; potřebují příležitost učit se informatiku." Sheryl, COO z Facebooku'
-  homepage_hero_text_satya: '"Informatika může odemknout nejlepší příležitosti na světě." Lucie, CEO společnosti Microsoft'
-  homepage_hero_text_bosh: '"Když programuješ, můžeš si vybrat průběh svého života." Chris Bosh'
+  homepage_hero_text_sheryl: |
+    &ldquo;Naše děti &mdash; včetně dívek &mdash;
+    potřebují dostat příležitost učit se informatiku.&rdquo;
+    Sheryl, COO z Facebooku
+  homepage_hero_text_satya: |
+    &ldquo;Informatika je schopná otevřít ty nejlepší příležitosti ve světě.&rdquo;
+    Satya, CEO Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;Když programuješ, můžeš si vybrat a zvolit směr svého života.&rdquo;
+    Chris Bosh
   homepage_hero_text_student1: '"Tyto dovednosti změnily moji budoucnost. Nemluvě o tom, že je to prostě zábava." Luna, sedmá třída'
-  homepage_hero_text_student2: '"Nikdy, nikdy jsem neviděl své děti tak nadšené z učení." Michael, učitel'
-  homepage_hero_text_student3: '"O informatice nemůžete vědět, jestli se vám líbí nebo ne, dokud si ji nevyzkoušíte." Jackson, 6. třída'
-  homepage_hero_text_student4: '"V programování dokážeš udělat, cokoliv tvoje mysl chce." Maya, 2. třída'
-  homepage_hero_text_student5: '"Informatika není pro někoho jiného. Je pro tebe, tady, teď." Geraldo, učitel'
-  homepage_hero_text_teacher1: '"Programování rozvíjí tvořivost, inspiraci a inovaci &mdash; všechno toto je v každé kariéře zásadní." Floresa, učitel'
-  homepage_hero_text_teacher2: '"Tento program zaujal 100 % mých žáků tak, že se zapojili a zúčastnili se." Adam, učitel'
-  homepage_hero_text_stat_loc: '#loc řádků programu napsaných žáky'
-  homepage_hero_text_stat_students: '#student_count studentských účtů na Studiu kódu'
-  homepage_hero_text_stat_served: 'Hodina kódu: #served si vyzkoušelo'
+  homepage_hero_text_student2: |
+    &ldquo;Nikdy před tím jsem neviděl děti tak nadšené z učení.&rdquo;
+    Michael, učitel
+  homepage_hero_text_student3: |
+    &ldquo;Informatika je oblast, o které nevíte, zda ji máte nebo nemáte rádi, dokud si ji nevyzkoušíte it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;Cokoliv co tvůj rozum chce, můžeš naprogramovat.&rdquo; 
+    Maya, 2. třída
+  homepage_hero_text_student5: |
+    &ldquo;Informatika není pro někoho jiného. Je zde pro tebe a hned.&rdquo; 
+    Geraldo, učitel
+  homepage_hero_text_teacher1: |
+    &ldquo;Programování podněcuje kreativitu, inspiraci a inovaci &mdash; 
+    všechno toto je nezbytné pro jakoukoliv kariéru.&rdquo;
+    Floresa, učitel
+  homepage_hero_text_teacher2: |
+    &ldquo;Tento program zaujal 100% mých studentů tak, že zapojili a zúčastnili.&rdquo;
+    Adam, učitel
+  homepage_hero_text_stat_loc: 2.5 milionů dívek se zapsalo na výuku v Code Studiu
+  homepage_hero_text_stat_students: '#student_count studentských účtů v Code Studiu'
+  homepage_hero_text_stat_served: 'Hour of Code: #served si vyzkoušelo'
   homepage_slot_text_hoc: Hodina kódu
-  homepage_slot_text_frozen: Frozen, s Annou a Elsou
+  homepage_slot_text_frozen: Zmrazené s Annou a Elsa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: Všechny naše kurzy
+  homepage_slot_text_studio: Všechny naše výukové programy
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Obchod
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_codevideo: Shlédni Video
-  homepage_action_text_teachervideo: Shlédni Video
-  homepage_action_text_learn: Start výuky
-  homepage_action_text_signpetition: Podepiš petici
+  homepage_action_text_codevideo: Podívejte se na video
+  homepage_action_text_teachervideo: Podívejte se na video
+  homepage_action_text_learn: Zahájení výuky
+  homepage_action_text_signpetition: Podepište petici
   homepage_signpetition_dropdown: 'Souhlasím &#x25BE;'
-  homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_main: Code.org a College Board tvoří alianci pro zvýšení rozmanitosti v informatice.
+  homepage_diversity_pledge: Zajistěte rozmanitost
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_banner_text_main: Code.org a College Board vytváří alianci, aby se zlepšila rozmanitost v informatice.
   homepage_banner_text_link: Zjisti více
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Další informace
   homepage_slot_text_title_hoc: Hodina kódu
   homepage_slot_text_blurb_hoc: Každý se to může naučit. Začni dnes
   homepage_slot_text_link_hoc: Vyzkoušej Hodinu Programování
-  homepage_slot_text_link_host: Hostit Hodinu kódu
+  homepage_slot_text_link_host: Uspořádejte Hodinu kódu
   homepage_slot_text_link_hocserved: '# si vyzkoušelo'
+  homepage_solot_text_link_volunteer: Dobrovolník v Hodině kódu
   homepage_slot_text_title_students: Studenti
-  homepage_slot_text_blurb_students: Prohlédni si všechny naše kurzy
-  homepage_slot_text_link_codestudio: Vyzkoušej Studio kódu
-  homepage_slot_text_link_local: Najdi místní třídu
+  homepage_slot_text_blurb_students: Prohlédnětesi všechny naše výukové programy
+  homepage_slot_text_link_codestudio: Vyzkoušejte Code studio
+  homepage_slot_text_link_local: Najděte si třídu v místě
   homepage_slot_text_link_othercourses: Další on-line kurzy
   homepage_slot_text_title_educators: Pedagogové
-  homepage_slot_text_blurb_educators: Uč své žáky
+  homepage_slot_text_blurb_educators: Učte žáky
   homepage_slot_text_link_k5: Kurzy pro 1. stupeň ZŠ
-  homepage_slot_text_link_fullcurriculum: Prohlédni si naše kurikulum
+  homepage_slot_text_link_fullcurriculum: Prohlédněte si naše kurikulum
   homepage_slot_text_link_pd: Profesní rozvoj
-  homepage_slot_text_title_advocates: Zastánci
-  homepage_slot_text_blurb_advocates: Podpoř naši práci
-  homepage_slot_text_link_stats: Shlédni statistiky
-  homepage_slot_text_link_buy: Zapoj se
-  homepage_slot_text_link_donate: Přispěj
-  homepage_header_codestudio: 'Studio kódu -  žákovská díla'
+  homepage_slot_text_title_advocates: Propagátoři
+  homepage_slot_text_blurb_advocates: Podpořte rozmanitost ve výpočetní technice
+  homepage_slot_text_link_stats: Viz statistiky
+  homepage_slot_text_link_buy: Zapojte se
+  homepage_slot_text_link_donate: Přispějte
+  homepage_header_codestudio: Studentská tvorba v Code studiu
   homepage_header_donors: Code.org děkuje svým příznivcům
-  homepage_donors_seall: Zobraz vše
+  homepage_donors_seall: Podívejte se na všechny
   homepage_donors_donate: Přispějte
   contact_form_topic_student: Jsem student
   contact_form_topic_parent: Jsem rodič
@@ -233,9 +265,13 @@ cs-CZ:
   class_submission_level_college: Vysoká škola
   class_submission_level_vocational: Odborné
   class_submission_languages_other: Ostatní jazyky
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} teachers have signed up for the Hour of Code and would like a volunteer to help them.'
-  volunteer_engineer_submission_intro_paragraph: 'Please enter the following information if you are a computer science student or software professional, and you’re interested in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_title: Dobrovolník v Hodině kódu
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: |-
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: Jméno
   volunteer_engineer_submission_field_name_placeholder: Full Name
@@ -262,7 +298,7 @@ cs-CZ:
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
   volunteer_engineer_submission_submit: Odeslat
-  volunteer_engineer_submission_thankyou: Thank you for submitting your information.
+  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn more here.</a>'
   volunteer_engineer_submission_commitment_uncertain: Nejasné
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 hodina týdně
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hodiny týdně
@@ -293,11 +329,12 @@ cs-CZ:
   dashboard_landing_office_hours: Zeptej se osobně! Navštivte naše měsíční video úřední hodiny.
   dashboard_landing_print_certificates: Vytisknout certifikáty pro studenty, kteří dokončili tento kurz
   dashboard_landing_educator_blog: Přečti si o novinkách a aktualizacích našich materiálů na našem blogu Educator
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
-  dashboard_landing_video_player: Test our new video player at your school
+  dashboard_landing_smart_hints: Prosím, pomozte nám s přidáním chytrých tipů na Code.org výukové programy
+  dashboard_landing_video_player: Vyzkoušejte náš nový video přehrávač ve vaší škole
   dashboard_landing_progress_title: Hlavní postup ve třídě
   dashboard_landing_progress_biggest: To je postup pro váš největší oddíl.
   dashboard_landing_view_progress: 'Zobrazit průběh pro %{biggest_section}'
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Dostupné kurzy
   dashboard_landing_available_courses: Zde jsou kurzy v současnosti dostupné pro vás a vaše studenty.
   dashboard_landing_more_tutorials: Chcete vidět ještě další tutoriály?
@@ -350,7 +387,7 @@ cs-CZ:
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: Nová sekce
   dashboard_sections_jumbotron_instruction: Vytvoř nové oddíly a přidejte do nich studenty. Sekce pomáhají organizovat studenty do menších skupin, můžete sledovat jejich postup a spravovat jejich účty.
-  dashboard_sections_table_section: Section
+  dashboard_sections_table_section: Sekce
   dashboard_sections_table_secret: Způsob přihlášení
   dashboard_sections_table_grade: Stupeň
   dashboard_sections_table_course: Kurz
@@ -457,7 +494,7 @@ cs-CZ:
   dashboard_faq_k5: K-5, nejčastější dotazy
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: '<b>September 30, 2015</b> - The Hour of Code 2015 is coming! Join classrooms worldwide for the largest learning event in history.'
+  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
   code_hoc_coming: 'Hodina kód je zde - prosinec 8-14!'
   code_sign_up: Přihlaste se k účasti během týdne vzdělávání CS
   learn_more: Další informace

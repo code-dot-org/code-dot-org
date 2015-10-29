@@ -1,13 +1,15 @@
 name 'U3L23 Free Response Getting Started'
-title 'NLP Getting Started'
+title 'Getting Started: A look at Siri'
 
 
 markdown <<MARKDOWN
-Watch the advertisement for Siri, below.
+Siri is a digital assistant built into Apple's iOS devices, including iPhones and iPads. Watch the advertisement for Siri, below. 
 
-<iframe width="850" height="500" src="https://www.youtube.com/embed/8ciagGASro0" frameborder="0" allowfullscreen></iframe>
+<iframe width="637px" height="375px" src="https://www.youtube.com/embed/8ciagGASro0" frameborder="0" allowfullscreen></iframe>
 
 <br/>
+__Reflect on the prompts below:__ 
 
-As the first step in Think-Pair-Share activity, think about, and record in the space below, the types of actions and processes that would be necessary steps in the Siri algorithm.
+- What types of information does Siri respond to in the video?
+- What do you think Siri is paying attention to in order to create these answers?
 MARKDOWN

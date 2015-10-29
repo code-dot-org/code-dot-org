@@ -16,18 +16,18 @@ Dì ai tuoi amici de L'Ora del Codice con #HourOfCode.
 
 ## Proponi a tutta la tua scuola di offrire ai vostri studenti un'Ora del Codice
 
-[Send this email](%= resolve_url('/resources#email') %) to your principal.
+[Send this email](%= resolve_url('/promote/resources#email') %) to your principal.
 
 ## 3. Proponi al tuo datore di lavoro di essere coinvolti
 
-[Send this email](%= resolve_url('/resources#email') %) to your manager, or the CEO.
+[Send this email](%= resolve_url('/promote/resources#email') %) to your manager, or the CEO.
 
 ## Promuovi un'Ora di Codice nella tua comunità
 
-Ingaggia un gruppo di persone: boy-scout, parrocchia, università, gruppo di esperti o sindacato. Oppure ospita un "block party" dell'Ora di Codice per il tuo quartiere. [Send this email](%= resolve_url('/resources#email') %).
+Ingaggia un gruppo di persone: boy-scout, parrocchia, università, gruppo di esperti o sindacato. Oppure ospita un "block party" dell'Ora di Codice per il tuo quartiere. [Send this email](%= resolve_url('/promote/resources#email') %).
 
 ## 5. Proponi ad un funzionario locale di sostenere L'Ora del Codice
 
-[Send this email](%= resolve_url('/resources#politicians') %) to your mayor, city council, or school board and invite them to visit your school.
+[Send this email](%= resolve_url('/promote/resources#politicians') %) to your mayor, city council, or school board and invite them to visit your school.
 
 <%= view :signup_button %>

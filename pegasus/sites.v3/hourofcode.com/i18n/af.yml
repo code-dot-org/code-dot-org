@@ -19,6 +19,7 @@ af:
   header_menu_promote: Promote
   company_4-H: توسعه جوانان 4-H
   company_asa: اتحاد پس از مدرسه‌ای
+  company_asos: ASOS
   company_bgca: باشگاه پسران و دختران آمریکا
   company_bsusa: پسران پیشاهنگ آمریکا
   company_cgcs: شورای مدارس بزرگ شهر
@@ -124,6 +125,7 @@ af:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -145,15 +147,6 @@ af:
   prizes_brilliant: یک مدرسه در هر استان و ناحیه 2000 دلار برای یک پروژه عالی دریافت خواهد کرد
   prizes_actua: 15 مدرسه در کانادا 2 کارگاه عملی پایه از یکی از اعضای Actua دریافت خواهند کرد
   prizes_details: جزئيات
-  prizes_nav_dc: Mystery trip to Washington D.C.
-  prizes_nav_technology: $10,000 of technology for your school
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Terms and conditions
-  prizes_nav_faq: پرسش و پاسخ
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -164,14 +157,27 @@ af:
   how_to_nav_organizations: For organizations
   how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
+  how_to_nav_volunteers: For volunteers
   prizes_nav_title: جوایز
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Terms and conditions
+  prizes_nav_faq: پرسش و پاسخ
+  prizes_nav_dc: Mystery trip to Washington D.C.
+  prizes_nav_technology: $10,000 of technology for your school
+  prizes_nav_video_chat: Video chat with a tech titan
+  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
+  prizes_nav_brilliant: $2,000 Brilliant Labs project
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> چگونه یک ساعت کدزدن را برگزار کنیم </a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'> یک ساعت کدزدن را ارتقا دهید </a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
@@ -242,6 +248,7 @@ af:
   map_header: 'تعداد رويدادهاي "ساعت كدنويسي" در سراسر دنيا'
   see_all_events: See all events
   map_header_company: '# بوسیله ی سازماندهان شرکتی'
+  map_header_country: '# in %{country}'
   map_search_placeholder: برای رویدادهای ساعت کدنویسی جستجو کن
   map_search_search: جستجو کن
   map_search_reset: راه اندازی مجدد
@@ -281,16 +288,15 @@ af:
   hoc_faq_why_cs_q: چرا کمپیوتر ساینس؟
   hoc_faq_why_cs_a: "<i>هر</i> دانش آموزي باید فرصت یادگیری کمپیوتر ساینس را داشته باشد تا به پرورش مهارت‌هاي حل مسئله، منطق و خلاقيت كمك كند. دانش آموزان هر چه زودتر شروع كنند، پايه قوي تري را براي موفقيت در مسير شغلي قرن 21 خواهند داشت. براي آمار بیشتر <a href='http://code.org'> Code.org</a> را ببینید."
   hoc_faq_how_participate_q: 'چگونه مي توانم در "ساعت كد نويسي" شركت كنم؟'
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: 'چه کسی پشتيبان "ساعت کدنويسي" است؟'
   hoc_faq_behind_hoc_a: "ساعت کدنويسي را <a href='http://code.org'> Code.org</a> سازماندهي كرده است، كد يك سازمان غيرانتفاعي از نوع c3 501 با هدف گسترش مشارکت در علوم کمپیوتر و در دسترس قرار دادن آن در مکتب های بيش‌تري و نيز افزایش مشارکت زنان و حذف تبعيض‌هاي نژادي در اين زمينه است. <a href='http://code.org/about/partners'> ائتلافي بی سابقه </a> از همكاران گرد آمده اند و ساعت کدنويسي را حمايت مي‌كنند &mdash; از جمله مایکروسافت، اپل، آمازون، باشگاه‌هاي پسران و دختران امریکا و هیئت مدیره کالج‌ها."
   hoc_faq_host_q: من چيزي درباره كد نويسي نمي دانم. آيا همچنان مي توانم ميزبان چنين رويدادي باشم؟
-  hoc_faq_host_a: |-
-    البته. فعاليت هاي "ساعت كد نويسي" خود-رهبر هستند. تنها كاري كه بايد انجام دهيد <a href='http://code.org/learn'> ديدن آموزش هاي كنوني ما</a>، انتخاب آموزشي كه مي خواهيد، و انتخاب يك ساعت مشخص است &mdash; بقيه كار به عهده ماست. همچنين گزينه هايي براي تمامي سنين و سطوح از مهد كودك به بالا وجود دارد. با خواندن <a href='/resources/how-to'>چگونگي رهبري</a> شروع به برنامه ريزي براي اين رويداد كنيد.
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: آيا هر شركت‌كننده يك کمپیوتر نياز دارد؟
   hoc_faq_need_computers_a: "خير. آموزش‌هاي ساعت کدنويسي روی کمپیوتر های شخصی، تلفن‌هاي هوشمند، تبلت‌ها قابل استفاده‌اند و بعضي از آن‌ها به هيچ کمپیوتری نیاز ندارند! <p><i>چند گزینه:</i> <br><ul><li><b>كار گروهي </b> تحقیقات نشان می‌دهد كه كه بهترين يادگيري دانش‌آموزان در <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> گروه‌هاي برنامه‌نويسي اتفاق مي‌افتد</a> با به اشتراک‌گذاری رايانه و کار گروهي. دانش‌آموزان خود را به تشكيل گروه‌هاي دو نفره تشويق كنيد. <li><b>از پروژكتور استفاده كنيد</b> اگر شما یک پروژکتور و کمپیوتر متصل به وب داريد، كل گروه مي‌توانند ساعت كدنويسي را با هم انجام دهند. بخش‌هاي ويديويي را با هم ببينيد و به نوبت معماها را حل كنيد و به سوالات پاسخ دهيد.<li><b>بدون کمپیوتر.</b> ما آموزش‌هايي را ارائه مي‌دهيم كه هيچ نيازي به رايانه ندارند. </ul>"
   hoc_faq_international_q: 'که من در آن هستم <country>. چگونه بین المللی شرکت کنم?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: چگونه میتوانم يك آموزش ساعت كدنويسي را ايجاد كنم؟
   hoc_faq_tutorial_a: "اگر مشتاق به همكاري در آموزش‌ها هستيد <a href='target-tutorial-guidelines'> راهنماها و دستورالعمل‌های ما را ببينيد</a>. ما از ميزباني هر گزينه‌اي براي همكاري استقبال مي‌كنيم، ولي هدف اصلي ما بهبود تجربه براي دانش‌آموزان و معلماني است كه با کمپیوتر ساینس تازه آشنا مي‌شوند."
   hoc_faq_more_questions_q: هنوز سوالات بیشتری دارید؟
@@ -360,6 +366,7 @@ af:
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
   title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: نحوه‌ی راهنمایی برای راهنمایی مقامات دولتی
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code

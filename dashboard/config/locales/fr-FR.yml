@@ -370,8 +370,8 @@
       section: Section
       example: Exemple de Solution
       example_with_number: Exemple Solution %{solution_number}
-      submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
+      submitted_on: Présenté le %{date}
+      unsubmit: Ne plus soumettre le travail
   user:
     email_confirm_needed: 'L''adresse email n''a pas été confirmée :'
     email_confirm_needed_required: 'Votre addresse email %{email} n''a pas été confirmée
@@ -485,7 +485,7 @@
     tos: Conditions
     privacy: Politique de confidentialité
     secure: Version sécurisée
-    report_abuse: Report Abuse
+    report_abuse: Signaler un abus
   reference_area:
     title: Besoin d'aide ?
     subtitle: Voir ces vidéos et conseils
@@ -744,25 +744,28 @@
         contactez-nous.</a> s'il vous plaît
       go_to_code_studio: Aller au Studio du Code
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: Si vous avez rencontré un contenu offensant, des menaces, de l'intimidation,
+          du harcèlement ou que vous possédez des droits d'auteur pour le contenu
+          créé à l'aide d'applications construites sur Code Studio, veuillez remplir
+          le formulaire ci-dessous. Nous étudierons votre rapport avec sérieux pour
+          prendre les mesures appropriées.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: S'il vous plaît donnez une adresse e-mail
+          age: Merci de donner votre âge
+          abuse_type: S'il vous plaît, précisez comment ce contenu viole les conditions
+            du Service
+          abuse_detail: Veuillez donner des précisions au sujet du contenu que vous
+            signalez
+        abusive_url: URL du contenu signalé
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: Pourquoi ce contenu ne viole pas la %{link_start}Terms de Service%{link_end}
+            ?
+          harassment: Menaces, intimidation, harcèlement
+          offensive: Contenu offensant
+          infringement: Violation du droit d'auteur
           other: Autres
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
-        acknowledge: By submitting this information, you acknowledge it will be handled
-          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+        detail: Veuillez fournir autant de détails que possible au sujet du contenu
+          que vous signalez.
+        acknowledge: En soumettant ces informations, vous reconnaissez qu'il est traitée
+          selon les termes de la %{link_start_privacy}Privacy Policy%{link_end} and
+          the %{link_start_tos}Terms of Service%{link_end}

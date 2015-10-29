@@ -154,14 +154,7 @@ applabCommands.setScreen = function (opts) {
     return;
   }
 
-  // toggle all screens to be visible if equal to given id, hidden otherwise
-  $('.screen').each(function () {
-    $(this).toggle(this.id === opts.screenId);
-    if (this.id === opts.screenId) {
-      // Allow the active screen to receive keyboard events.
-      this.focus();
-    }
-  });
+  Applab.changeScreen(opts.screenId);
 };
 
 applabCommands.container = function (opts) {
@@ -189,6 +182,8 @@ applabCommands.button = function (opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
+  newButton.style.color = '#fff';
+  newButton.style.backgroundColor = '#1abc9c';
 
   return Boolean(newButton.appendChild(textNode) &&
     Applab.activeScreen().appendChild(newButton));
@@ -683,6 +678,8 @@ applabCommands.textInput = function (opts) {
   newInput.value = opts.text;
   newInput.id = opts.elementId;
   newInput.style.position = 'relative';
+  newInput.style.height = '30px';
+  newInput.style.width = '200px';
 
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };
@@ -753,6 +750,8 @@ applabCommands.dropdown = function (opts) {
   }
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
+  newSelect.style.color = '#fff';
+  newSelect.style.backgroundColor = '#1abc9c';
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
@@ -791,7 +790,7 @@ applabCommands.getText = function (opts) {
     } else if (element.tagName === 'IMG') {
       return String(element.alt);
     } else {
-      return element.innerText;
+      return applabCommands.getElementInnerText_(element);
     }
   }
   return false;
@@ -809,11 +808,72 @@ applabCommands.setText = function (opts) {
     } else if (element.tagName === 'IMG') {
       element.alt = opts.text;
     } else {
-      element.innerText = opts.text;
+      applabCommands.setElementInnerText_(element, opts.text);
     }
     return true;
   }
   return false;
+};
+
+/**
+ * Attempts to emulate Chrome's version of innerText by way of innerHTML, only
+ * for the simplified case of plain text content (in, for example, a
+ * contentEditable div).
+ * @param {Element} element
+ * @private
+ */
+applabCommands.getElementInnerText_ = function (element) {
+  var cleanedText = element.innerHTML;
+  cleanedText = cleanedText.replace(/<div>/gi, '\n'); // Divs generate newlines
+  cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
+
+  // This next step requires some explanation
+  // In multiline text it's possible for the first line to render wrapped or unwrapped.
+  //     Line 1
+  //     Line 2
+  //   Can render as either of:
+  //     Line 1<div>Line 2</div>
+  //     <div>Line 1</div><div>Line 2</div>
+  //
+  // But leading blank lines will always render wrapped and should be preserved
+  //
+  //     Line 2
+  //     Line 3
+  //   Renders as
+  //    <div><br></div><div>Line 2</div><div>Line 3</div>
+  //
+  // To handle this behavior we strip leading newlines UNLESS they are followed
+  // by another newline, using a negative lookahead (?!)
+  cleanedText = cleanedText.replace(/^\n(?!\n)/, ''); // Strip leading nondoubled newline
+
+  cleanedText = cleanedText.replace(/&nbsp;/gi, ' '); // Unescape nonbreaking spaces
+  cleanedText = cleanedText.replace(/&gt;/gi, '>');   // Unescape >
+  cleanedText = cleanedText.replace(/&lt;/gi, '<');   // Unescape <
+  cleanedText = cleanedText.replace(/&amp;/gi, '&');  // Unescape & (must happen last!)
+  return cleanedText;
+};
+
+/**
+ * Attempts to emulate Chrome's version of innerText by way of innerHTML, only
+ * for the simplified case of plain text content (in, for example, a
+ * contentEditable div).
+ * @param {Element} element
+ * @param {string} newText
+ * @private
+ */
+applabCommands.setElementInnerText_ = function (element, newText) {
+  var escapedText = newText.toString();
+  escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
+  escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
+  escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >
+  escapedText = escapedText.replace(/  /g,' &nbsp;'); // Escape doubled spaces
+
+  // Now wrap each line except the first line in a <div>,
+  // replacing blank lines with <div><br><div>
+  var lines = escapedText.split('\n');
+  element.innerHTML = lines[0] + lines.slice(1).map(function (line) {
+    return '<div>' + (line.length ? line : '<br>') + '</div>';
+  }).join('');
 };
 
 applabCommands.getChecked = function (opts) {
@@ -979,22 +1039,41 @@ applabCommands.setPosition = function (opts) {
     // (2) width/height already specified OR IMG element with width/height attributes
     if ((el.style.width.length > 0 && el.style.height.length > 0) ||
         (el.tagName === 'IMG' && el.width > 0 && el.height > 0)) {
-        if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
-            setWidthHeight = true;
-        }
-    } else {
+      if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
         setWidthHeight = true;
+      }
+    } else {
+      setWidthHeight = true;
     }
     if (setWidthHeight) {
-        apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
-        apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
-        el.style.width = opts.width + 'px';
-        el.style.height = opts.height + 'px';
+      apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
+      apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+      setSize_(opts.elementId, opts.width, opts.height);
     }
     return true;
   }
   return false;
 };
+
+applabCommands.setSize = function (opts) {
+  apiValidateType(opts, 'setSize', 'width', opts.width, 'number');
+  apiValidateType(opts, 'setSize', 'height', opts.height, 'number');
+  setSize_(opts.elementId, opts.width, opts.height);
+
+  return true;
+};
+
+/**
+ * Logic shared between setPosition and setSize for setting the size
+ */
+function setSize_(elementId, width, height) {
+  var element = document.getElementById(elementId);
+  var divApplab = document.getElementById('divApplab');
+  if (divApplab.contains(element)) {
+    element.style.width = width + 'px';
+    element.style.height = height + 'px';
+  }
+}
 
 applabCommands.getXPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');

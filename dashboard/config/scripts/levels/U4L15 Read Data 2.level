@@ -99,7 +99,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -127,9 +126,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "Student should create a sentence which puts together all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old and like <<Food>>",
     "markdown_instructions": "Student should create a sentence which puts together all the pieces from a record\r\n\r\n**Name** is **Age** years old and like **Food**",

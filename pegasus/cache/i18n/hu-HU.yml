@@ -37,6 +37,11 @@
   hoc2014_everyone: Mindenki
   hoc2014_support: Támogasd &#x25BE;
   hoc2014_whatishoc: Mi az a Kódolás Órája?
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Visszaállítás
   cded_sign_up: Regisztrálás
   cded_try_it: Próbáld ki
   twentyhours_trynow: Próbálja ki most
@@ -130,6 +135,8 @@
   twitter_teach_cs: Miért nem tanítanak több iskolában programozást? Van megoldásunk.
     http://youtu.be/nKIu9yen5nc. Látogasd meg a http://code.org/ honlapot, hogy többet
     megtudj róla.
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
   learn_hoc: Ismerd meg a Kódolás Óráját
   beyond_hoc: Az első órán túl
   what_gender: Milyen nemű vagy?
@@ -224,6 +231,8 @@
   homepage_action_text_signpetition: Írd alá a petíciót
   homepage_signpetition_dropdown: Írd alá a petíciót &#x25BE;
   homepage_diversity_pledge: Take the diversity pledge
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: A Code.org és a felsőoktatás összefog az informatika
     sokszínűségének javítása érdekében.
   homepage_banner_text_link: Tudj meg többet
@@ -235,6 +244,7 @@
   homepage_slot_text_link_hoc: Próbáld ki a Kódolás Óráját
   homepage_slot_text_link_host: Tarts egy Kódolás óráját
   homepage_slot_text_link_hocserved: '# fő már kipróbálta'
+  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Diákok
   homepage_slot_text_blurb_students: Tekintsd meg az összes gyakorlatunkat
   homepage_slot_text_link_codestudio: Próbáld ki a Kód stúdiót
@@ -293,12 +303,25 @@
   class_submission_level_vocational: Szakmai
   class_submission_languages_other: Egyéb nyelv(ek)
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} teachers have signed
-    up for the Hour of Code and would like a volunteer to help them.'
-  volunteer_engineer_submission_intro_paragraph: Please enter the following information
-    if you are a computer science student or software professional, and you’re interested
-    in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span>
-    are required.
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
+    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
+    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
+    have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
+    to try an hour introduction to computer science, reaching tens of millions of
+    students in 180+ countries. Please get involved during Computer Science Education
+    Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
+    who can help in the classroom, or for somebody who can <span style="font-family:
+    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
+    breadth of possibilities with computer science (which could be done through a
+    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
+    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_signup: Please enter the following information
+    if you are a computer science student or software professional. Fields marked
+    with a <span class="form-required-field">*</span> are required.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Név
@@ -382,6 +405,7 @@
   dashboard_landing_progress_title: Az elsődleges osztály fejlődése
   dashboard_landing_progress_biggest: Így fejlődik a legnagyobb szekciód.
   dashboard_landing_view_progress: Nézd meg a fejlődést a(z) %{biggest_section}
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Elérhető kurzusok
   dashboard_landing_available_courses: Ezek a jelenleg elérhető kurzusok Neked és
     diákjaid számára.

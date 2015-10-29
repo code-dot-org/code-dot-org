@@ -24,10 +24,10 @@ nav: promote_nav
 **1-التخطيط للحدث الذي ستنظمه**
 
   * نظم اجتماع لاطلاق الحدث.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * قم بتنظيم أنشطة للفرق (مثل الانشطة الغير موصولة)، أو عرض اهم الأنشطة التي أنشأها الطلاب.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote#videos') %>) to inspire.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. قم بتحديد الصحفيين المحليين الذين يغطون مجال التعليم أو الأحداث الجهوية.**
 
@@ -37,7 +37,7 @@ nav: promote_nav
 
 **3-الاتصال بوسائل الإعلام المحلية**
 
-أفضل وسيلة للتواصل تكون عن طريق البريد الإلكتروني. ينبغي أن يكون الاتصال قصيرا ومعبرا: لماذا يجب أن يهتم الآخرون بهذا الحدث؟ و ارفق كيفية الاتصال بك (بما في ذلك رقم الهاتف المحمول) للذين سوف يكون موجودين خلال هذا الحدث. **See a [sample pitch to media](<%= resolve_url('/promote#sample-emails') %>):**
+أفضل وسيلة للتواصل تكون عن طريق البريد الإلكتروني. ينبغي أن يكون الاتصال قصيرا ومعبرا: لماذا يجب أن يهتم الآخرون بهذا الحدث؟ و ارفق كيفية الاتصال بك (بما في ذلك رقم الهاتف المحمول) للذين سوف يكون موجودين خلال هذا الحدث. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4-إعداد الأسئلة الميدانية حول الحدث. وإليك بعض الأمثلة:**
 

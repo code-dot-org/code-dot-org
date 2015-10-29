@@ -34,7 +34,7 @@ it:
           Getting Loopy: Diventare Ripetitivi
           The Big Event: Il Grande Evento
           Going Places Safely: Visitare Luoghi in Modo Sicuro
-          description: Il Corso 1 è rivolto a studenti che stanno iniziando a leggere. Gli studenti creano programmi che sviluppano la capacità di risolvere problemi e di perseverare su problemi difficili, e permettono loro di collaborare con altri. Alla fine del corso gli studenti creano i loro giochi o le loro storie, che possono condividere. Il corso è raccomandato per la prima elementare.
+          description: Il Corso 1 è rivolto a studenti che stanno iniziando a leggere. Gli studenti creano programmi che sviluppano la capacità di risolvere problemi e di perseverare su problemi difficili, e permettono loro di collaborare con altri. Alla fine del corso gli studenti creano i loro giochi o le loro storie, che possono condividere. Il corso è raccomandato per la prima e la seconda elementare.
           "Bee: Sequence": 'Ape: Sequenze'
           "Artist: Sequence": 'Artista: Sequenze'
           "Artist: Shapes": 'Artista: Forme'
@@ -69,7 +69,7 @@ it:
           Binary Bracelets: Braccialetti Binari
           The Big Event: Il Grande Evento
           Your Digital Footprint: La tua Impronta Digitale
-          description: Il Corso 2 è rivolto a studenti delle scuole elementari che hanno già imparato a leggere e non hanno precedenti esperienze di programmazione. Nel corso gli studenti creano programmi per risolvere problemi e sviluppare giochi interattivi o storie da condividere. Il corso è raccomandato dalla seconda alla quinta elementare.
+          description: Il Corso 2 è rivolto a studenti delle scuole elementari che hanno già imparato a leggere e non hanno precedenti esperienze di programmazione. Nel corso gli studenti creano programmi per risolvere problemi e sviluppare giochi interattivi o storie da condividere. Il corso è raccomandato dalla terza elementare.
           "Maze: Sequence": 'Labirinto: Sequenze'
           "Artist: Sequence": 'Artista: Sequenze'
           "Maze: Loops": 'Labirinto: Cicli'
@@ -182,6 +182,7 @@ it:
           Maze and Bee: "Il Labirinto e l'Ape: Sequenze, Cicli, Istruzioni Condizionali"
           Artist Binary: 'Artista: Binario'
           description_audience: Da 10 anni in su (dopo il Corso 3)
+          Super Challenge - Variables: 'Super Challenge - Variables'
         Course4pre:
           title: Prerequisiti del Corso 4
           description_short: Una breve presentazione dei concetti importanti per gli studenti che non hanno svolto i Corsi 2 e 3.
@@ -363,13 +364,13 @@ it:
           Eval: Eval
         flappy:
           title: Flappy
-          description: 'Vuoi creare il tuo gioco in meno di 10 minuti? Prova il corso sul Codice di "Flappy"!'
+          description: 'Vuoi creare la tua versione del gioco "Flappy" in meno di 10 minuti? Prova questo corso!'
           description_short: Scrivi il tuo gioco Flappy in meno di 10 minuti!
           Flappy Code: Flappy
         jigsaw:
           title: Puzzle
-          description: Prova il nostro tutorial di Jigsaw
-          description_short: Prova il nostro tutorial di Jigsaw
+          description: 'Esercitazione introduttiva per imparare come "trascinare e rilasciare" (drag and drop)'
+          description_short: 'Esercitazione introduttiva per imparare come "trascinare e rilasciare" (drag and drop)'
           Jigsaw: Puzzle
         step:
           title: Fai un passo
@@ -378,7 +379,7 @@ it:
           Step: Fai un passo
         Hour of Code:
           title: "L'Ora del Codice 2013"
-          description: Prova i fondamenti di informatica con i personaggi di Angry Birds e di Plant vs. Zombi!
+          description: "Prova i fondamenti dell'informatica con i personaggi di Angry Birds e di Plants vs. Zombies!"
           description_short: "Prova i fondamenti dell'informatica insieme a tanti personaggi divertenti!"
           Hour of Code 2013: "L'Ora del Codice 2013"
         Code Studio Puzzle Challenge:
@@ -640,6 +641,16 @@ it:
           Creating Functions: Creazione di funzioni
           Functions and Top-Down Design: Functions and Top-Down Design
           Design a Digital Scene: Design a Digital Scene
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Introducing Design Mode: Introducing Design Mode
+          Clicker Game: Clicker Game
+          Getting User Input: Getting User Input
+          Variables: Variabili
+          Looping and Random Numbers - Under the Sea: 'Looping and Random Numbers - Under the Sea'
+          Multi-screen App: Multi-screen App
+          Variables Conceptorial Fodder: Variables Conceptorial Fodder
+          "Variables: Create, Assign, and Read": 'Variables: Create, Assign, and Read'
+          "Variables: Increment, Decrement, Display, and Scope": 'Variables: Increment, Decrement, Display, and Scope'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -835,6 +846,8 @@ it:
           The Need for Encryption: The Need for Encryption
           Keys and Passwords: Keys and Passwords
           Public Key Encryption: Public Key Encryption
+          Practice PT - The Internet and Society: 'Practice PT - The Internet and Society'
+          Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
@@ -985,8 +998,8 @@ it:
           Equity PD: Equity PD
         hoc2015:
           title: "L'Ora del Codice 2015"
-          description_short: Utilizza il laboratorio Play Lab per creare una storia o un gioco.
-          description: Utilizza il laboratorio Play Lab per creare una storia o un gioco.
+          description_short: Utilizza il Laboratorio per creare una storia o un gioco.
+          description: Utilizza il Laboratorio per creare una storia o un gioco.
           Hour of Code: "L'Ora del Codice"
           Hour of Code 2015: "L'Ora del Codice 2015"
         algebraPD2:
@@ -1169,7 +1182,7 @@ it:
         ECSPD3-Unit2:
           title: 'Exploring Computer Science: Unit 2'
           description_short: Unit 2 of the Exploring Computer Science curriculum
-          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the Exploring Computer Science curriculum.
+          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the version 5 Exploring Computer Science curriculum.
           Welcome!: Benvenuti!
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
@@ -1321,3 +1334,16 @@ it:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        duino:
+          Experimenting with Arduino stuff: Experimenting with Arduino stuff
+          Basic Circuits: Basic Circuits
+        Special Fun:
+          title: Special Fun
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: Da 10 anni in su (dopo il Corso 3)
+          Halloween 2015: Halloween 2015
+        SpecialSeries:
+          title: Special Levels
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: Da 10 anni in su (dopo il Corso 3)
+          Halloween 2015: Halloween 2015

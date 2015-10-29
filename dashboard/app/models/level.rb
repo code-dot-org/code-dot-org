@@ -28,6 +28,7 @@ class Level < ActiveRecord::Base
   belongs_to :ideal_level_source, :class_name => "LevelSource" # "see the solution" link uses this
   belongs_to :user
   has_many :level_sources
+  has_many :hint_view_requests
 
   before_validation :strip_name
 
@@ -214,6 +215,7 @@ class Level < ActiveRecord::Base
   # be passed to the client, typically to save and load user progress
   # on that level.
   def channel_backed?
+    return false if self.try(:is_project_level)
     self.project_template_level || self.game == Game.applab || self.is_a?(Pixelation)
   end
 

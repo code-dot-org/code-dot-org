@@ -35,6 +35,11 @@
   hoc2014_everyone: Everyone
   hoc2014_support: Support it &#x25BE;
   hoc2014_whatishoc: What is the Hour of Code?
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_signup: Sign up your event
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_search: Search
+  csedweek_map_search_reset: Reset
   cded_sign_up: Sign up
   cded_try_it: Try it
   twentyhours_trynow: Try now
@@ -127,6 +132,8 @@
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
   twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
     http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
   learn_hoc: Learn an Hour of Code
   beyond_hoc: Beyond One Hour
   what_gender: What gender are you?
@@ -224,6 +231,8 @@
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: Sign our petition &#x25BE;
   homepage_diversity_pledge: Take the diversity pledge
+  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in computer science.
   homepage_banner_text_link: Learn more
@@ -235,6 +244,7 @@
   homepage_slot_text_link_hoc: Try the Hour of Code
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: '# served'
+  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Students
   homepage_slot_text_blurb_students: Explore all of our tutorials
   homepage_slot_text_link_codestudio: Try Code Studio
@@ -293,12 +303,25 @@
   class_submission_level_vocational: Vocational
   class_submission_languages_other: Other language(s)
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_num_teachers: '%{num_teachers} teachers have signed
-    up for the Hour of Code and would like a volunteer to help them.'
-  volunteer_engineer_submission_intro_paragraph: Please enter the following information
-    if you are a computer science student or software professional, and you’re interested
-    in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span>
-    are required.
+  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
+    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
+    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
+    have signed up.'
+  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
+    to try an hour introduction to computer science, reaching tens of millions of
+    students in 180+ countries. Please get involved during Computer Science Education
+    Week, December 7-13.
+  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
+    who can help in the classroom, or for somebody who can <span style="font-family:
+    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
+    breadth of possibilities with computer science (which could be done through a
+    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
+    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_signup: Please enter the following information
+    if you are a computer science student or software professional. Fields marked
+    with a <span class="form-required-field">*</span> are required.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: नाव
@@ -381,6 +404,7 @@
   dashboard_landing_progress_title: Main class progress
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
   dashboard_landing_view_progress: View Progress for %{biggest_section}
+  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Available courses
   dashboard_landing_available_courses: Here are the courses currently available for
     you and your students.

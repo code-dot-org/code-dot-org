@@ -19,6 +19,7 @@ hr:
   header_menu_promote: Promote
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -124,6 +125,7 @@ hr:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -145,15 +147,6 @@ hr:
   prizes_brilliant: Jedna škola u svakoj pokrajini i teritoriju će primiti $2000 za Briljantan projekt
   prizes_actua: 15 škola diljem Kanade dobivaju 2 hands-on STEM radionice od jednog od članova Actua grupe
   prizes_details: Detalji
-  prizes_nav_dc: Mystery trip to Washington D.C.
-  prizes_nav_technology: $10,000 of technology for your school
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
-  prizes_nav_actua: Actua workshop
-  prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Terms and conditions
-  prizes_nav_faq: često postavljana pitanja
   nav_back_to_resources: Back to Resources
   how_to_nav_educators: For educators
   how_to_nav_after_school: For after school
@@ -164,14 +157,27 @@ hr:
   how_to_nav_organizations: For organizations
   how_to_nav_companies: For companies
   how_to_nav_afterschool_educators: For after-school educators
+  how_to_nav_volunteers: For volunteers
   prizes_nav_title: Nagrade
   prizes_nav_home: All prizes
   prizes_nav_hardware: Hardware prize signup
+  prizes_nav_terms: Terms and conditions
+  prizes_nav_faq: često postavljana pitanja
+  prizes_nav_dc: Mystery trip to Washington D.C.
+  prizes_nav_technology: $10,000 of technology for your school
+  prizes_nav_video_chat: Video chat with a tech titan
+  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
+  prizes_nav_brilliant: $2,000 Brilliant Labs project
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_header: Prizes for every educator
+  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Kako voditi Sat Kodiranja</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'> Promovirajte Sat Kodiranja</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: Try tutorials
@@ -242,6 +248,7 @@ hr:
   map_header: '# Sat Kodiranja događanja diljem svijeta'
   see_all_events: See all events
   map_header_company: '# Organizirano od strane firme'
+  map_header_country: '# in %{country}'
   map_search_placeholder: Search for Hour of Code events
   map_search_search: Search
   map_search_reset: Reset
@@ -281,15 +288,15 @@ hr:
   hoc_faq_why_cs_q: Zašto informatika?
   hoc_faq_why_cs_a: "<i>Svaki</i> učenik trebao bi imati priliku naučiti informatiku. To pomaže njegovanju vještine rješavanja problema, logike i kreativnosti. Počevši rano, učenici će imati temelj za uspjeh u karijeri u 21-om stoljeću. Pogledajte dodatne statistike na <a href='http://code.org'> Code.org</a>."
   hoc_faq_how_participate_q: Kako mogu sudjelovati u Satu kodiranja?
-  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Tko stoji iza sata Kodiranja?
   hoc_faq_behind_hoc_a: "Sat kodiranja organiziran je od strane <a href='http://code.org'> Code.org</a>, javne 501 c 3 neprofitne organizacije posvećene širenju informatike tako što omogućuju dostupnost u sve više škola, i povećano sudjelovanje žena i manje zastupljenih učenika pripadnika manjina. <a href='http://code.org/about/partners'> Besprimjerna koalicija partnera</a>ujedinjeno podržava Sat Kodiranja&mdash; uključujući Microsoft, Apple, Amazon, Boys and Girls Clubs of America i Uprave Sveučilišta."
   hoc_faq_host_q: Ne znam ništa o kodiranju. Mogu li ipak biti domaćin događaja?
-  hoc_faq_host_a: "Naravno. Aktivnosti Sata Kodiranja imaju smjernice. Sve što morate učiniti je <a href='http://code.org/learn'>probati naš aktuelni vodič</a>, odabrati lekciju koju želite i sat svoga vremena &mdash; mi ćemo se pobrinuti za ostalo. Također imamo opcije za svaku dob i nivo iskustva, od vrtića na gore. Počnite planirati svoj događaj čitajući <a href='/resources/how-to'> kako voditi</a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Trebam li računalo za svakog sudionika?
   hoc_faq_need_computers_a: "Ne. Mi imamo vodiče Sata Kodiranja koji rade na računalima, pametnim telefonima, tabletima, kao i neke za koje uopće ne trebate računalo! Možete pristupiti gdje god se nalazili, uz bilo što što imate. <p><i>Evo nekoliko mogućnosti:</i> <br><ul><li><b>Rad u parovima.</b> Istraživanja pokazuju da učenici najbolje uče <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programiranjem u parovima</a> dijeljenjem računala i zajedničkim radom. Potaknite svoje učenike da  dijele. <li><b>Koristite projektor.</b> Ako imate projektor i zaslon za računalo povezano na internet, cijela grupa mođe učiti Sat Kodiranja zajedno. Pogledajte video zapise zajedno i naizmjence rješavajte zagonetke i odgovarajte na pitanja. <li><b>Učite bez upotrebe elektronike.</b> Nudimo vodiče za koje uopće ne trebate računalo. </ul>"
   hoc_faq_international_q: 'Ja sam u <country>. Kako međunarodno sudjelovati?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Kako napraviti vodič za Sat Kodiranja?
   hoc_faq_tutorial_a: "Ako ste zainteresirani postati suradnikom u izradi vodiča, <a href='/tutorial-guidelines'> pogledajte naše smjernice i upute</a>. Htjeli bismo omogućiti razne opcije, ali primarni cilj je optimizirati iskustvo za učenike i učitelje kojima je informatika nepoznata."
   hoc_faq_more_questions_q: Imate još pitanja?
@@ -359,6 +366,7 @@ hr:
   title_how_to_organizations: 'How to host an Hour of Code - Organizations'
   title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: Kako-da vodič za javne dužnosnike
+  title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to: How-to Guide
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code

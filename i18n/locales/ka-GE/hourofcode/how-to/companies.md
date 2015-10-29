@@ -10,16 +10,20 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 **There are many ways companies can participate in the Hour of Code and help expand participation in computer science. Consider:**
 
-  * Asking your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](%= resolve_url('/resources/promote#sample-emails') %).
+  * Use our [marketing toolkit](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %) to create a communications timeline and share promotional content.
+  * Asking your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](%= resolve_url('/promote/resources#sample-emails') %).
   * Hosting an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('https://code.org/learn') %).
   * Inviting a local classroom of students or other non profits you partner with to do an Hour of Code at your company’s office.
+  * Encouraging **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= resolve_url('https://code.org/volunteer/engineer') %) to be connected with a classroom.
+  * For more instructions on connecting your employees with classrooms, use our [guide for corporate partners](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %)
 
 ## How to host an Hour of Code event
 
 ## 1) დარეგისტრირდით
 
   * Register your [Hour of Code](%= resolve_url('/') %) during <%= campaign_date('short') %> event.
-  * Promote your [Hour of Code](%= resolve_url('/resources') %) event and encourage others to host.
+  * Promote your [Hour of Code](%= resolve_url('/promote') %) event and encourage others to host.
+  * Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= resolve_url('https://code.org/volunteer/engineer') %) to be connected with a classroom.
 
 ## 2) უყურეთ ამ "როგორ უნდა" ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) აირჩიეთ ტუტორიალი:
@@ -94,7 +98,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 ## 7) აღნიშნეთ
 
   * [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/resources/promote#stickers') %) stickers.
+  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
   * გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
 
 [col-33]

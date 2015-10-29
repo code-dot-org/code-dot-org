@@ -182,6 +182,7 @@ bg:
           Maze and Bee: Лабиринт и Пчела
           Artist Binary: 'Художник: Бинарен код'
           description_audience: Възраст 10 + (след курс 3)
+          Super Challenge - Variables: 'Super Challenge - Variables'
         Course4pre:
           title: Курс 4 предпоставка (необходимо условие)
           description_short: Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.
@@ -638,6 +639,16 @@ bg:
           Creating Functions: Създаване на функции
           Functions and Top-Down Design: Functions and Top-Down Design
           Design a Digital Scene: 'Дизайн на сцена: част 1 - план'
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Introducing Design Mode: Introducing Design Mode
+          Clicker Game: Clicker Game
+          Getting User Input: Getting User Input
+          Variables: Променливи
+          Looping and Random Numbers - Under the Sea: 'Looping and Random Numbers - Under the Sea'
+          Multi-screen App: Multi-screen App
+          Variables Conceptorial Fodder: Variables Conceptorial Fodder
+          "Variables: Create, Assign, and Read": 'Variables: Create, Assign, and Read'
+          "Variables: Increment, Decrement, Display, and Scope": 'Variables: Increment, Decrement, Display, and Scope'
         algebraPD3:
           title: Фаза 3 PD
           description: Научи алгебра чрез блок базирано функционално програмиране
@@ -833,6 +844,8 @@ bg:
           The Need for Encryption: The Need for Encryption
           Keys and Passwords: Keys and Passwords
           Public Key Encryption: Public Key Encryption
+          Practice PT - The Internet and Society: 'Practice PT - The Internet and Society'
+          Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
         algebraPD2a:
           title: Компютърни науки в алгебрата
           description: 'Фаза 2 онлайн: Смесено лятно учене'
@@ -1167,7 +1180,7 @@ bg:
         ECSPD3-Unit2:
           title: 'Exploring Computer Science: Unit 2'
           description_short: Unit 2 of the Exploring Computer Science curriculum
-          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the Exploring Computer Science curriculum.
+          description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the version 5 Exploring Computer Science curriculum.
           Welcome!: Добре дошли!
           Teaching Strategies: Стратегии за преподаване
           Unit 2 Overview: Unit 2 Overview
@@ -1319,3 +1332,16 @@ bg:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        duino:
+          Experimenting with Arduino stuff: Experimenting with Arduino stuff
+          Basic Circuits: Basic Circuits
+        Special Fun:
+          title: Special Fun
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: Възраст 10 + (след курс 3)
+          Halloween 2015: Halloween 2015
+        SpecialSeries:
+          title: Special Levels
+          description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          description_audience: Възраст 10 + (след курс 3)
+          Halloween 2015: Halloween 2015

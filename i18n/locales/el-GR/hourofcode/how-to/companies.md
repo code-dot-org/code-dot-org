@@ -8,23 +8,27 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 # How to bring the Hour of Code to your company
 
-**There are many ways companies can participate in the Hour of Code and help expand participation in computer science. Consider:**
+**Υπάρχουν πολλοί τρόποι για εταιρείες να συμμετέχουν στην Ώρα του Κώδικα και να συμβάλουν στη διεύρυνση της συμμετοχής στην επιστήμη των υπολογιστών. Σκεφτείτε να:**
 
-  * Asking your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](%= resolve_url('/resources/promote#sample-emails') %).
+  * Use our [marketing toolkit](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %) to create a communications timeline and share promotional content.
+  * Asking your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](%= resolve_url('/promote/resources#sample-emails') %).
   * Hosting an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('https://code.org/learn') %).
   * Inviting a local classroom of students or other non profits you partner with to do an Hour of Code at your company’s office.
+  * Encouraging **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= resolve_url('https://code.org/volunteer/engineer') %) to be connected with a classroom.
+  * For more instructions on connecting your employees with classrooms, use our [guide for corporate partners](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %)
 
 ## How to host an Hour of Code event
 
-## 1) Sign up
+## 1) Εγγραφή
 
   * Register your [Hour of Code](%= resolve_url('/') %) during <%= campaign_date('short') %> event.
-  * Promote your [Hour of Code](%= resolve_url('/resources') %) event and encourage others to host.
+  * Promote your [Hour of Code](%= resolve_url('/promote') %) event and encourage others to host.
+  * Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= resolve_url('https://code.org/volunteer/engineer') %) to be connected with a classroom.
 
-## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Choose a tutorial:
+## 2) Δες το επεξηγηματικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 3) Επέλεξε ένα φροντιστήριο:
 
-We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](%= resolve_url("https://code.org/learn") %)
+We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants of all ages, created by a variety of partners. *Έρχονται νέα σεμιναρια για την έναρξη της Ώρας του Κώδικα πριν από <%= campaign_date('full') %>.* [Δοκιμάστε τα τρέχοντα φροντιστήρια.](%= resolve_url("https://code.org/learn") %)
 
 **Όλοι οι εκπαιδευτικοί οδηγοί για την Ώρα του Κώδικα:**
 
@@ -33,22 +37,22 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
-## 4) Plan your technology needs - computers are optional
+## 4) Σχεδίασε τις τεχνολογικές σου ανάγκες - οι υπολογιστές είναι προαιρετικοί
 
 Η καλύτερη εμπειρία της Ώρας του Κώδικα θα είναι με υπολογιστές συνδεδεμένους στο Internet. You **don’t** need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
   * Test tutorials on the devices you plan to use. Make sure they work properly on browsers with sound and video.
   * If the tutorial you choose works best with sound you may want to consider providing headphones.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Have participants partner with each other. Καταλαβαίνουν επίσης ότι η Επιστήμη των Υπολογιστών είναι κοινωνική και συνεργατική.
+  * **Δεν έχεις αρκετές συσκευές;** Χρησιμοποίησε τον [προγραμματισμό σε ζευγάρια](https://www.youtube.com/watch?v=vgkahOzFH2Q). Have participants partner with each other. Καταλαβαίνουν επίσης ότι η Επιστήμη των Υπολογιστών είναι κοινωνική και συνεργατική.
   * Or try the [unplugged / offline tutorials](%= resolve_url('https://code.org/learn') %). These require no computers and is a great way to get participants up and moving. 
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Inspire participants to start your Hour of Code
+## 5) Δώσε έμπνευση στους συμμετέχοντες να αρχίσουν την Ώρα του Κώδικα σας
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives. Share more about what inspired you to pursue computer science and your role at your company.
+Ξεκινήστε την Ώρα του Κώδικά σας δίνοντας έμπνευση στους συμμετέχοντες και συζητώντας πώς η επιστήμη των υπολογιστών επηρεάζει κάθε μέρος της ζωής μας. Share more about what inspired you to pursue computer science and your role at your company.
 
-**Show an inspirational video:**
+**Δείξε ένα εμπνευστικό βίντεο:**
 
   * Το αρχικό βίντεο του Code.org, με τον Bill Gates, τον Mark Zuckerberg και τον παίχτη του ΝΒΑ Chris Bosh (Υπάρχουν εκδόσεις [1 λεπτού](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 λεπτών](https://www.youtube.com/watch?v=nKIu9yen5nc) και [9 λεπτών](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
@@ -94,7 +98,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 ## 7) Celebrate
 
   * [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/resources/promote#stickers') %) stickers.
+  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
   * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]

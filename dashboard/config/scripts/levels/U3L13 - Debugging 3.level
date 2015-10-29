@@ -50,7 +50,6 @@
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "functionParams_none": null,
       "functionParams_n": null,
@@ -60,7 +59,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Debug the program by fixing the logical error within the program. (Click to see full instructions)",
-    "start_blocks": "button(\"fwdBtn\",\"Go Forth!\");\r\nbutton(\"leftBtn\",\"Turn Left!\");\r\n\r\nonEvent(\"fwdBtn\", \"click\", function(){\r\n  turnRight();\r\n});\r\nonEvent(\"leftBtn\", \"click\", function(){\r\n  moveForward();\r\n});",
+    "start_blocks": "button(\"fwdBtn\",\"Go Forth!\");\r\nbutton(\"leftBtn\",\"Turn Left!\");\r\n\r\nonEvent(\"fwdBtn\", \"click\", function(){\r\n  turnRight(25);\r\n});\r\nonEvent(\"leftBtn\", \"click\", function(){\r\n  moveForward(25);\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -75,10 +74,10 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "markdown_instructions": "# Debugging event-driven programs: Logical Errors\r\n\r\n**Logical Errors: ** Sometimes you can write a program that generates no errors but does not work as you intend. This is the result of **logical errors** in your code. These can be tricky to catch without knowing what your program is supposed to do in the first place, and will still require careful testing of its functionality.\r\n\r\n**Target Application:** Just like the last exercise, the target application has two buttons, one for moving forward and one for turning left.\r\n\r\n# Do This\r\n\r\n**Debug ** this program so that it works as intended.\r\n\r\n**Run the program ** and try both buttons to make sure they have the intended functionality.",
+    "markdown_instructions": "# Debugging event-driven programs: Logical Errors\r\nYou're getting good at debugging now!\r\n\r\n**Logical Errors: ** Sometimes you can write a program that generates no errors but does not work as you intend. This is the result of **logical errors** in your code. These can be tricky to catch without knowing what your program is supposed to do in the first place, and usually are only found with careful testing of your app's functionality.\r\n<img src=\"https://images.code.org/b5d00d8027dae463eebb7f1c079cb2e2-image-1444156708725.gif\" style=\"float: right; width: 150px\">\r\n\r\n**Target Application:** Just as in the last exercise, you'll try to make an app that has two buttons, one for moving forward and one for turning left.\r\n\r\nOnce again we've introduced an error or two (a logical error this time) for you to debug.\r\n\r\n# Do This\r\n**Run the program ** and experiment to see what's wrong.\r\n\r\n**Debug ** this program so that it works as intended.\r\n\r\n**Run the program ** and try both buttons to make sure they have the intended functionality.",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "show_turtle_before_run": "false",
+    "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
@@ -86,10 +85,9 @@
     "beginner_mode": "true",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "encrypted_examples": [
-
-    ],
-    "slider_speed": "1.0"
+    "slider_speed": "1.0",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>
