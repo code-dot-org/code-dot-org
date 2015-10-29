@@ -1374,6 +1374,11 @@ en:
           description_audience: Ages 10-18
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+        iceage:
+          title: Ice Age Play Lab
+          description_short: Create a story or make a game with Ice Age Play Lab!
+          description: Create a story or make a game with Ice Age Play Lab!
+          Ice Age Play Lab: Ice Age Play Lab
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
