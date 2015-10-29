@@ -207,7 +207,7 @@ function loadHoc2015(skin, assetUrl) {
     'stormtrooper',
     'tauntaun',
     'mynock',
-    'viperprobedroid',
+    'probot',
     'mousedroid',
     'rebelpilot'
   ];
@@ -217,14 +217,14 @@ function loadHoc2015(skin, assetUrl) {
     whenTouchStormtrooper: 'stormtrooper',
     whenTouchTauntaun: 'tauntaun',
     whenTouchMynock: 'mynock',
-    whenTouchViperProbeDroid: 'viperprobedroid',
+    whenTouchProbot: 'probot',
     whenTouchMouseDroid: 'mousedroid',
     whenTouchRebelPilot: 'rebelpilot',
     whenGetPufferPig: 'pufferpig',
     whenGetStormtrooper: 'stormtrooper',
     whenGetTauntaun: 'tauntaun',
     whenGetMynock: 'mynock',
-    whenGetViperProbeDroid: 'viperprobedroid',
+    whenGetProbot: 'probot',
     whenGetMouseDroid: 'mousedroid',
     whenGetRebelPilot: 'rebelpilot',
   };
@@ -234,14 +234,14 @@ function loadHoc2015(skin, assetUrl) {
     whenTouchAllStormtroopers: 'stormtrooper',
     whenTouchAllTauntauns: 'tauntaun',
     whenTouchAllMynocks: 'mynock',
-    whenTouchAllViperProbeDroids: 'viperprobedroid',
+    whenTouchAllProbots: 'probot',
     whenTouchAllMouseDroids: 'mousedroid',
     whenTouchAllRebelPilots: 'rebelpilot',
     whenGetAllPufferPigs: 'pufferpig',
     whenGetAllStormtroopers: 'stormtrooper',
     whenGetAllTauntauns: 'tauntaun',
     whenGetAllMynocks: 'mynock',
-    whenGetAllViperProbeDroids: 'viperprobedroid',
+    whenGetAllProbots: 'probot',
     whenGetAllMouseDroids: 'mousedroid',
     whenGetAllRebelPilots: 'rebelpilot',
   };
@@ -251,7 +251,7 @@ function loadHoc2015(skin, assetUrl) {
     'stormtrooper':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
     'tauntaun':        { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
     'mynock':          { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'viperprobedroid': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'probot': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
     'mousedroid':      { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
     'rebelpilot':      { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
   };
@@ -353,7 +353,7 @@ function loadHoc2015(skin, assetUrl) {
   skin.stormtrooper = skin.assetUrl('walk_stormtrooper.png');
   skin.tauntaun = skin.assetUrl('walk_tauntaun.png');
   skin.mynock = skin.assetUrl('walk_mynock.png');
-  skin.viperprobedroid = skin.assetUrl('walk_viperprobedroid.png');
+  skin.probot = skin.assetUrl('walk_probot.png');
   skin.mousedroid = skin.assetUrl('walk_mousedroid.png');
   skin.rebelpilot = skin.assetUrl('walk_rebelpilot.png');
 
@@ -483,7 +483,7 @@ function loadHoc2015(skin, assetUrl) {
     'pufferpigsound1', 'pufferpigsound2', 'pufferpigsound3', 'pufferpigsound4',
     'tauntaunsound1', 'tauntaunsound2', 'tauntaunsound3', 'tauntaunsound4',
     'mynocksound1', 'mynocksound2', 'mynocksound3',
-    'viperprobedroidsound1', 'viperprobedroidsound2', 'viperprobedroidsound3',
+    'probotsound1', 'probotsound2', 'probotsound3',
     'mousedroidsound1', 'mousedroidsound2', 'mousedroidsound3',
     'alert1', 'alert2', 'alert3', 'alert4',
     'applause',
@@ -542,7 +542,7 @@ function loadHoc2015(skin, assetUrl) {
     [msg.itemMynock(), '"mynock"'],
     [msg.itemMouseDroid(), '"mousedroid"'],
     [msg.itemTauntaun(), '"tauntaun"'],
-    [msg.itemViperProbeDroid(), '"viperprobedroid"'],
+    [msg.itemProbot(), '"probot"'],
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 

@@ -24,7 +24,7 @@ module.exports.blocks = [
       '"pufferpigsound1"', '"pufferpigsound2"', '"pufferpigsound3"', '"pufferpigsound4"',
       '"tauntaunsound1"', '"tauntaunsound2"', '"tauntaunsound3"', '"tauntaunsound4"',
       '"mynocksound1"', '"mynocksound2"', '"mynocksound3"',
-      '"viperprobedroidsound1"', '"viperprobedroidsound2"', '"viperprobedroidsound3"',
+      '"probotsound1"', '"probotsound2"', '"probotsound3"',
       '"mousedroidsound1"', '"mousedroidsound2"', '"mousedroidsound3"',
       '"alert1"', '"alert2"', '"alert3"', '"alert4"',
       '"applause"'
@@ -34,14 +34,14 @@ module.exports.blocks = [
   {func: 'addPoints', parent: api, category: '', params: ["100"] },
   {func: 'removePoints', parent: api, category: '', params: ["100"] },
   {func: 'changeScore', parent: api, category: '', params: ["1"] },
-  {func: 'addCharacter', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"viperprobedroid"' ] } },
-  {func: 'setToChase', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"viperprobedroid"' ] } },
-  {func: 'setToFlee', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"viperprobedroid"' ] } },
-  {func: 'setToRoam', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"viperprobedroid"' ] } },
-  {func: 'setToStop', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"viperprobedroid"' ] } },
-  {func: 'moveFast', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"viperprobedroid"' ] } },
-  {func: 'moveNormal', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"viperprobedroid"' ] } },
-  {func: 'moveSlow', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"viperprobedroid"' ] } },
+  {func: 'addCharacter', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
+  {func: 'setToChase', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
+  {func: 'setToFlee', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
+  {func: 'setToRoam', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
+  {func: 'setToStop', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
+  {func: 'moveFast', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
+  {func: 'moveNormal', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
+  {func: 'moveSlow', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
 
   {func: 'whenTouchGoal', block: 'function whenTouchGoal() {}', expansion: 'function whenTouchGoal() {\n  __;\n}', category: '' },
   {func: 'whenTouchAllGoals', block: 'function whenTouchAllGoals() {}', expansion: 'function whenTouchAllGoals() {\n  __;\n}', category: '' },
@@ -62,7 +62,7 @@ module.exports.blocks = [
   {func: 'whenGetMynock', block: 'function whenGetMynock() {}', expansion: 'function whenGetMynock() {\n  __;\n}', category: '' },
   {func: 'whenGetMouseDroid', block: 'function whenGetMouseDroid() {}', expansion: 'function whenGetMouseDroid() {\n  __;\n}', category: '' },
   {func: 'whenGetTauntaun', block: 'function whenGetTauntaun() {}', expansion: 'function whenGetTauntaun() {\n  __;\n}', category: '' },
-  {func: 'whenGetViperProbeDroid', block: 'function whenGetViperProbeDroid() {}', expansion: 'function whenGetViperProbeDroid() {\n  __;\n}', category: '' },
+  {func: 'whenGetProbot', block: 'function whenGetProbot() {}', expansion: 'function whenGetProbot() {\n  __;\n}', category: '' },
 
   {func: 'whenTouchStormtrooper', block: 'function whenTouchStormtrooper() {}', expansion: 'function whenTouchStormtrooper() {\n  __;\n}', category: '' },
   {func: 'whenTouchRebelPilot', block: 'function whenTouchRebelPilot() {}', expansion: 'function whenTouchRebelPilot() {\n  __;\n}', category: '' },
@@ -70,7 +70,7 @@ module.exports.blocks = [
   {func: 'whenTouchMynock', block: 'function whenTouchMynock() {}', expansion: 'function whenTouchMynock() {\n  __;\n}', category: '' },
   {func: 'whenTouchMouseDroid', block: 'function whenTouchMouseDroid() {}', expansion: 'function whenTouchMouseDroid() {\n  __;\n}', category: '' },
   {func: 'whenTouchTauntaun', block: 'function whenTouchTauntaun() {}', expansion: 'function whenTouchTauntaun() {\n  __;\n}', category: '' },
-  {func: 'whenTouchViperProbeDroid', block: 'function whenTouchViperProbeDroid() {}', expansion: 'function whenTouchViperProbeDroid() {\n  __;\n}', category: '' },
+  {func: 'whenTouchProbot', block: 'function whenTouchProbot() {}', expansion: 'function whenTouchProbot() {\n  __;\n}', category: '' },
 
   {func: 'whenTouchAllCharacters', block: 'function whenTouchAllCharacters() {}', expansion: 'function whenTouchAllCharacters() {\n  __;\n}', category: '' },
   {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
@@ -81,7 +81,7 @@ module.exports.blocks = [
   {func: 'whenGetAllMynocks', block: 'function whenGetAllMynocks() {}', expansion: 'function whenGetAllMynocks() {\n  __;\n}', category: '' },
   {func: 'whenGetAllMouseDroids', block: 'function whenGetAllMouseDroids() {}', expansion: 'function whenGetAllMouseDroids() {\n  __;\n}', category: '' },
   {func: 'whenGetAllTauntauns', block: 'function whenGetAllTauntauns() {}', expansion: 'function whenGetAllTauntauns() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllViperProbeDroids', block: 'function whenGetAllViperProbeDroids() {}', expansion: 'function whenGetAllViperProbeDroids() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllProbots', block: 'function whenGetAllProbots() {}', expansion: 'function whenGetAllProbots() {\n  __;\n}', category: '' },
 
   {func: 'whenTouchAllStormtroopers', block: 'function whenTouchAllStormtroopers() {}', expansion: 'function whenTouchAllStormtroopers() {\n  __;\n}', category: '' },
   {func: 'whenTouchAllRebelPilots', block: 'function whenTouchAllRebelPilots() {}', expansion: 'function whenTouchAllRebelPilots() {\n  __;\n}', category: '' },
@@ -89,7 +89,7 @@ module.exports.blocks = [
   {func: 'whenTouchAllMynocks', block: 'function whenTouchAllMynocks() {}', expansion: 'function whenTouchAllMynocks() {\n  __;\n}', category: '' },
   {func: 'whenTouchAllMouseDroids', block: 'function whenTouchAllMouseDroids() {}', expansion: 'function whenTouchAllMouseDroids() {\n  __;\n}', category: '' },
   {func: 'whenTouchAllTauntauns', block: 'function whenTouchAllTauntauns() {}', expansion: 'function whenTouchAllTauntauns() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllViperProbeDroids', block: 'function whenTouchAllViperProbeDroids() {}', expansion: 'function whenTouchAllViperProbeDroids() {\n  __;\n}', category: '' },
+  {func: 'whenTouchAllProbots', block: 'function whenTouchAllProbots() {}', expansion: 'function whenTouchAllProbots() {\n  __;\n}', category: '' },
 
   // Functions hidden from autocomplete - not used in hoc2015:
   {func: 'setSprite', parent: api, category: '', params: ['0', '"r2-d2"'], dropdown: { 1: [ '"random"', '"r2-d2"', '"c-3po"' ] } },
