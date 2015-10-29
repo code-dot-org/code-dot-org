@@ -13,11 +13,12 @@ function outputApplabConsole(output) {
   // then put it in the applab console visible to the user:
   var debugOutput = document.getElementById('debug-output');
   if (debugOutput) {
-    if (debugOutput.textContent.length > 0) {
-      debugOutput.textContent += '\n' + output;
-    } else {
-      debugOutput.textContent = String(output);
-    }
+    var span  = document.createElement("SPAN");
+    var text  = document.createTextNode(output);
+    var br    = document.createElement("BR");
+    span.appendChild(text);
+    span.appendChild(br);
+    debugOutput.appendChild(span);
     debugOutput.scrollTop = debugOutput.scrollHeight;
   }
 }
