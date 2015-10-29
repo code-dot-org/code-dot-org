@@ -145,7 +145,7 @@ MusicController.prototype.play = function (trackName) {
   if (track.sound && track.isLoaded) {
     debug('playing now');
     var callback = this.whenMusicStopped_.bind(this, track.name);
-    track.sound.play({ onEnded: callback });
+    track.sound.play({ volume: track.maxVolume, onEnded: callback });
     this.nowPlaying_ = track.name;
   } else {
     debug('not done loading, playing after load');

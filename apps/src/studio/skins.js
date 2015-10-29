@@ -718,21 +718,21 @@ function loadHoc2015x(skin, assetUrl) {
  * @const {MusicTrackDefinition[]}
  */
 var HOC2015_MUSIC_METADATA = [
-  { name: 'song1', maxVolume: 1 },
-  { name: 'song2', maxVolume: 1 },
-  { name: 'song3', maxVolume: 1 },
-  { name: 'song4', maxVolume: 1 },
-  { name: 'song5', maxVolume: 1 },
-  { name: 'song6', maxVolume: 1 },
-  { name: 'song7', maxVolume: 1 },
-  { name: 'song8', maxVolume: 1 },
-  { name: 'song9', maxVolume: 1 },
-  { name: 'song10', maxVolume: 1 },
-  { name: 'song11', maxVolume: 1 },
-  { name: 'song12', maxVolume: 1 },
-  { name: 'song13', maxVolume: 1 },
-  { name: 'song14', maxVolume: 1 },
-  { name: 'song15', maxVolume: 1 }
+  { name: 'song1' },
+  { name: 'song2' },
+  { name: 'song3' },
+  { name: 'song4', maxVolume: 0.85 },
+  { name: 'song5' },
+  { name: 'song6' },
+  { name: 'song7' },
+  { name: 'song8', maxVolume: 0.85 },
+  { name: 'song9', maxVolume: 0.85 },
+  { name: 'song10' },
+  { name: 'song11', maxVolume: 0.85 },
+  { name: 'song12', maxVolume: 0.85 },
+  { name: 'song13' },
+  { name: 'song14' },
+  { name: 'song15' }
 ];
 
 function loadStudio(skin, assetUrl) {
