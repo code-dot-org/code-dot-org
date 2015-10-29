@@ -219,6 +219,7 @@ def local_environment?
 end
 
 def install_npm
+  return if RakeUtils.system_('which npm') == 0
   if OS.linux?
     RakeUtils.system 'sudo apt-get install -y nodejs npm'
     RakeUtils.system 'sudo ln -s -f /usr/bin/nodejs /usr/bin/node'
