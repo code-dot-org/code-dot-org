@@ -10,12 +10,16 @@
     #error_message
 
     .form-group
-      %label.control-label{for: "hoc-name"}= hoc_s(:signup_name_label)
+      %label.control-label{for: "hoc-name"}
+        = hoc_s(:signup_name_label)
+        *
       %div
         %input#hoc-name.form-control{name: "name_s", placeholder: hoc_s(:signup_name_placeholder), required: true, type: "text"}/
 
     .form-group
-      %label.control-label{for: "hoc-email"}= hoc_s(:signup_email_label)
+      %label.control-label{for: "hoc-email"}
+        = hoc_s(:signup_email_label)
+        *
       %div
         %input#hoc-email.form-control{name: "email_s", placeholder: hoc_s(:signup_email_placeholder), type: "text", required: true}/
 
@@ -74,7 +78,7 @@
 
     %input{name:'hoc_country_s', type:'hidden', value:@country}
     %input{name:'hoc_company_s', type:'hidden', value:@company}
-
+    %p.multiple-event-warning= hoc_s(:signup_multiple_event_warning)
     .form-group.submit-btn
       %div
         %button{type: "submit"}= hoc_s(:signup_submit_label)
