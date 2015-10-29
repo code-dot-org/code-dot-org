@@ -590,21 +590,33 @@ angular: teacherDashboard
     );
 
     $scope.responsesLoaded = false;
+    $scope.stages = [];
 
     $scope.course_list = #{DashboardSection::valid_courses.to_json};
 
     // wait until we have both the students and the student progress
     $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function(){
       $scope.responsesLoaded = true;
+      $scope.findStages();
     });
 
     $scope.changeScript = function(scriptId) {
       $scope.responsesLoaded = false;
+      $scope.stages = [];
 
       $scope.responses = sectionsService.responses({id: $routeParams.id, script_id: scriptId});
 
-      $scope.progress.$promise.then(function(){
+      $scope.responses.$promise.then(function(){
         $scope.responsesLoaded = true;
+        scope.findStages();
       });
     };
+
+    $scope.findStages = function() {
+      $scope.stages = $.map($scope.responses, function(row) {
+        return row.stage;
+      }).filter(function(item, i, array) { // uniquify
+        return array.indexOf(item) == i;
+      });
+    }
   }]);

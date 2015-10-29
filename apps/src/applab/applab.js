@@ -667,6 +667,9 @@ Applab.init = function(config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   Applab.channelId = config.channel;
+  if (config.assetPathPrefix) {
+    Applab.assetPathPrefix = config.assetPathPrefix;
+  }
 
   // Pre-populate asset list
   assetsApi.ajax('GET', '', function (xhr) {
@@ -1503,6 +1506,9 @@ Applab.onCodeModeButton = function() {
 
 var HTTP_REGEXP = new RegExp('^http://');
 
+// Exposed for testing
+Applab.assetPathPrefix = "/v3/assets/";
+
 /**
  * If the filename is relative (contains no slashes), then prepend
  * the path to the assets directory for this project to the filename.
@@ -1527,7 +1533,7 @@ Applab.maybeAddAssetPathPrefix = function (filename) {
     return filename;
   }
 
-  return '/v3/assets/' + Applab.channelId + '/'  + filename;
+  return Applab.assetPathPrefix + Applab.channelId + '/'  + filename;
 };
 
 /**

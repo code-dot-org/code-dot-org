@@ -1,12 +1,10 @@
 %link{rel: "stylesheet", type: "text/css", href: "/css/map.css"}
-
--total_count = DB[:forms].where(kind:'HocSignup2015').count
 -if @company
   -company_name = hoc_s("company_" + @company)
   -company_total = format_integer_with_commas(company_count)
   %h2.mapheader
     %a{href: resolve_url('/events/all')}
-      = hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count)) + ","
+      = hoc_s(:map_header).gsub('#', format_integer_with_commas(total_hoc_count)) + ","
       = hoc_s(:map_header_company).gsub('#', company_total).gsub('company', company_name)
     %a{href: resolve_url("/#join")}
       %button.signup-button
@@ -15,7 +13,7 @@
   -country_total = format_integer_with_commas(country_count)
   %h2.mapheader
     %a{href: resolve_url("/events/all")}
-      = hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count)) + ","
+      = hoc_s(:map_header).gsub('#', format_integer_with_commas(total_hoc_count)) + ","
     %a{href: resolve_url("/events/all/#{solr_country_code}")}
       = hoc_s(:map_header_country).gsub('#', format_integer_with_commas(country_total)).gsub('%{country}', country_full_name)
     %a{href: resolve_url("/#join")}
@@ -24,7 +22,7 @@
 -else
   %h2.mapheader
     %a{href: resolve_url("/events/all")}
-      = hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))
+      = hoc_s(:map_header).gsub('#', format_integer_with_commas(total_hoc_count))
     %a{href: resolve_url("/#join")}
       %button.signup-button
         = hoc_s(:signup_your_event)
