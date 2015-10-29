@@ -203,6 +203,10 @@ class Blockly < Level
         level_prop['codeFunctions'] = level.try(:project_template_level).try(:code_functions) || level.code_functions
       end
 
+      if level.is_a? Applab
+        level_prop['startHtml'] = level.try(:project_template_level).try(:start_html) || level.start_html
+      end
+
       if level.is_a?(Maze) && level.step_mode
         step_mode = JSONValue.value(level.step_mode)
         level_prop['step'] = step_mode == 1 || step_mode == 2
