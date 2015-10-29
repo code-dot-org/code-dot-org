@@ -726,11 +726,6 @@ levels.c3_game_2 = utils.extend(levels.move_penguin, {});
 levels.playlab_6 = utils.extend(levels.move_penguin, {
   background: 'cave',
   firstSpriteIndex: 5, // witch
-  goalOverride: {
-    goal: 'red_fireball',
-    success: 'blue_fireball',
-    imageWidth: 800
-  },
   defaultEmotion: Emotions.ANGRY,
   toolbox:
     tb(
@@ -753,11 +748,6 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
 levels.iceage_6 = utils.extend(levels.playlab_6, {
   background: 'tile',
   firstSpriteIndex: 3, // diego
-  goalOverride: {
-    goal: 'ia_projectile_1',
-    success: 'ia_projectile_1',
-    imageWidth: 800
-  }
 });
 
 // The "repeat forever" block allows you to run code continuously. Can you
