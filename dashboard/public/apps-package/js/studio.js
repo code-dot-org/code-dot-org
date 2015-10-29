@@ -53,6 +53,7 @@ var Hammer = utils.getHammer();
 var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
+var ImageFilterFactory = require('./ImageFilterFactory');
 var ThreeSliceAudio = require('./ThreeSliceAudio');
 var MusicController = require('./MusicController');
 
@@ -76,7 +77,7 @@ var KeyCodes = sharedConstants.KeyCodes;
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
-var SVG_NS = "http://www.w3.org/2000/svg";
+var SVG_NS = sharedConstants.SVG_NS;
 
 // Whether we are showing debug information
 var showDebugInfo = false;
@@ -399,6 +400,7 @@ var drawMap = function () {
       svg.appendChild(spriteFinishMarker);
     }
   }
+  Studio.applyGoalEffect();
 
   var score = document.createElementNS(SVG_NS, 'text');
   score.setAttribute('id', 'score');
@@ -465,6 +467,48 @@ function collisionTest(x1, x2, xVariance, y1, y2, yVariance) {
 function overlappingTest(x1, x2, xVariance, y1, y2, yVariance) {
   return (Math.abs(x1 - x2) < xVariance) && (Math.abs(y1 - y2) < yVariance);
 }
+
+/** @type {ImageFilter} */
+var goalFilterEffect = null;
+
+/**
+ * Apply the effect specified in skin.goalEffect to all of the goal objects
+ * in the level.
+ */
+Studio.applyGoalEffect = function () {
+  if (!Studio.spriteGoals_) {
+    return;
+  }
+
+  if (!goalFilterEffect) {
+    var svg = document.getElementById('svgStudio');
+    goalFilterEffect = ImageFilterFactory.makeFilterOfType(skin.goalEffect, svg);
+  }
+
+  var spriteFinishMarker;
+  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
+    spriteFinishMarker = document.getElementById('spriteFinish' + i);
+    if (goalFilterEffect) {
+      goalFilterEffect.applyTo(spriteFinishMarker);
+    }
+  }
+};
+
+/**
+ * Remove the effect specified in skin.goalEffect from all of the goal objects
+ * in the level.
+ */
+Studio.removeGoalEffect = function () {
+  if (!Studio.spriteGoals_ || !goalFilterEffect) {
+    return;
+  }
+
+  var spriteFinishMarker;
+  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
+    spriteFinishMarker = document.getElementById('spriteFinish' + i);
+    goalFilterEffect.removeFrom(spriteFinishMarker);
+  }
+};
 
 /**
  * @param scope Object :  The scope in which to execute the delegated function.
@@ -2076,6 +2120,8 @@ Studio.runButtonClick = function() {
 
   // Stop the music the first time the run button is pressed (hoc2015)
   Studio.musicController.fadeOut();
+  // Remove goal filter effects the first time the run button is pressed
+  Studio.removeGoalEffect();
 
   studioApp.reset(false);
   studioApp.attempts++;
@@ -5004,7 +5050,7 @@ var checkFinished = function () {
 };
 
 
-},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./MusicController":"/home/ubuntu/staging/apps/build/js/studio/MusicController.js","./ThreeSliceAudio":"/home/ubuntu/staging/apps/build/js/studio/ThreeSliceAudio.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
+},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./ImageFilterFactory":"/home/ubuntu/staging/apps/build/js/studio/ImageFilterFactory.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./MusicController":"/home/ubuntu/staging/apps/build/js/studio/MusicController.js","./ThreeSliceAudio":"/home/ubuntu/staging/apps/build/js/studio/ThreeSliceAudio.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5987,6 +6033,9 @@ function loadHoc2015x(skin, assetUrl) {
 
   // How many frames in the animated goal spritesheet.
   skin.animatedGoalFrames = 16;
+
+  // Special effect applied to goal sprites
+  skin.goalEffect = 'glow';
 
   // How long to show each frame of the optional goal animation.
   skin.timePerGoalAnimationFrame = 100;
@@ -13529,11 +13578,9 @@ StudioSpriteSheet.prototype.getFrame = function (animationIndex, frameIndex) {
  */
 'use strict';
 
-var constants = require('./constants');
 var utils = require('../utils');
-
-// The SVG namespace that must be applied to new SVG elements
-var SVG_NS = "http://www.w3.org/2000/svg";
+var SVG_NS = require('../constants').SVG_NS;
+var constants = require('./constants');
 
 // Unique element ID that increments by 1 each time an element is created
 var uniqueId = 0;
@@ -13718,7 +13765,7 @@ StudioAnimation.prototype.setOpacity = function (newOpacity) {
 };
 
 
-},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/constants.js":[function(require,module,exports){
+},{"../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/constants.js":[function(require,module,exports){
 'use strict';
 
 exports.SpriteSpeed = {
@@ -14098,4 +14145,593 @@ exports.SHAKE_DEFAULT_CYCLES = 8;
 exports.SHAKE_DEFAULT_DISTANCE = 5;
 
 
-},{}]},{},["/home/ubuntu/staging/apps/build/js/studio/main.js"]);
+},{}],"/home/ubuntu/staging/apps/build/js/studio/ImageFilterFactory.js":[function(require,module,exports){
+/** @file Helper for getting or creating image filters by name (so we can
+ *        specify them in plain level definitions or skins) */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var GlowFilter = require('./GlowFilter');
+var PulseFilter = require('./PulseFilter');
+var ShineFilter = require('./ShineFilter');
+
+/**
+ * Given a type name, constructs and returns a filter of the given type.
+ * @param {!string} filterTypeName
+ * @param {!SVGSVGElement} svg
+ * @returns {ImageFilter} or null if the type name is not found.
+ */
+exports.makeFilterOfType = function (filterTypeName, svg) {
+  if (filterTypeName === 'pulse') {
+    return new PulseFilter(svg);
+  }
+
+  if (filterTypeName === 'shine') {
+    return new ShineFilter(svg);
+  }
+
+  if (filterTypeName === 'glow') {
+    return new GlowFilter(svg);
+  }
+
+  return null;
+};
+
+
+},{"./GlowFilter":"/home/ubuntu/staging/apps/build/js/studio/GlowFilter.js","./PulseFilter":"/home/ubuntu/staging/apps/build/js/studio/PulseFilter.js","./ShineFilter":"/home/ubuntu/staging/apps/build/js/studio/ShineFilter.js"}],"/home/ubuntu/staging/apps/build/js/studio/ShineFilter.js":[function(require,module,exports){
+/** @file Runs a specular spotlight across the image from top-left to bottom-right. */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var SVG_NS = require('../constants').SVG_NS;
+var ImageFilter = require('./ImageFilter');
+
+/** @const {number} determines "height" of light above play area */
+var POINT_LIGHT_Z = 200;
+
+/**
+ * Runs a specular spotlight across the image from top-left to bottom-right,
+ * not hitting alpha'd areas, generating a looping "shine" effect.
+ * @param {SVGSVGElement} svg
+ * @constructor
+ * @extends {ImageFilter}
+ */
+var ShineFilter = function (svg) {
+  ImageFilter.call(this, svg);
+
+  /** @private {SVGElement} */
+  this.fePointLight_ = null;
+
+  // TODO: Find a way to not depend on the Studio global.
+  /** @private {function} */
+  this.curve_ = ImageFilter.makeRepeatingOneThirdLinearInterpolation(
+      2000, -POINT_LIGHT_Z, Studio.MAZE_WIDTH + POINT_LIGHT_Z);
+};
+ShineFilter.inherits(ImageFilter);
+module.exports = ShineFilter;
+
+/**
+ * Build an ordered set of filter operations that define the behavior of this
+ * filter type.
+ * @returns {SVGElement[]}
+ * @private
+ * @override
+ */
+ShineFilter.prototype.createFilterSteps_ = function () {
+  // 1. Blur the source image to get softer light
+  // 2. Generate a specular point light
+  // 3. Mask out specular light that doesn't fall atop the original alpha mask.
+  // 4. Composite the specular light over the original image
+
+  var feGaussianBlur = document.createElementNS(SVG_NS, 'feGaussianBlur');
+  var blurResult = this.id_ + '-blur';
+  feGaussianBlur.setAttribute('stdDeviation', 6);
+  feGaussianBlur.setAttribute('result', blurResult);
+
+  var feSpecularLighting = document.createElementNS(SVG_NS, 'feSpecularLighting');
+  var specularResult = this.id_ + '-specular';
+  feSpecularLighting.setAttribute('in', blurResult);
+  feSpecularLighting.setAttribute('specularExponent', 60);
+  feSpecularLighting.setAttribute('lighting-color', 'white');
+  feSpecularLighting.setAttribute('result', specularResult);
+
+  this.fePointLight_ = document.createElementNS(SVG_NS, 'fePointLight');
+  this.fePointLight_.setAttribute('x', 0);
+  this.fePointLight_.setAttribute('y', 0);
+  this.fePointLight_.setAttribute('z', POINT_LIGHT_Z);
+  feSpecularLighting.appendChild(this.fePointLight_);
+
+  var feCompositeMask = document.createElementNS(SVG_NS, 'feComposite');
+  var maskedSpecularId = specularResult + '-masked';
+  feCompositeMask.setAttribute('in', specularResult);
+  feCompositeMask.setAttribute('operator', 'in');
+  feCompositeMask.setAttribute('in2', 'SourceAlpha');
+  feCompositeMask.setAttribute('result', maskedSpecularId);
+
+  var feCompositeLayer = document.createElementNS(SVG_NS, 'feComposite');
+  feCompositeLayer.setAttribute('in', maskedSpecularId);
+  feCompositeLayer.setAttribute('operator', 'over');
+  feCompositeLayer.setAttribute('in2', 'SourceGraphic');
+
+
+  return [
+    feGaussianBlur,
+    feSpecularLighting,
+    feCompositeMask,
+    feCompositeLayer
+  ];
+};
+
+/**
+ * Update this effect's animation for the current time.
+ * @param {number} timeMs
+ * @override
+ */
+ShineFilter.prototype.update = function (timeMs) {
+  if (this.fePointLight_) {
+    var newValue = this.curve_(timeMs);
+    this.fePointLight_.setAttribute('x', newValue);
+    this.fePointLight_.setAttribute('y', newValue);
+  }
+};
+
+
+},{"../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./ImageFilter":"/home/ubuntu/staging/apps/build/js/studio/ImageFilter.js"}],"/home/ubuntu/staging/apps/build/js/studio/PulseFilter.js":[function(require,module,exports){
+/** @file Increases the brightness of the image up to pure white and back. */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var SVG_NS = require('../constants').SVG_NS;
+var ImageFilter = require('./ImageFilter');
+
+/**
+ * Increases the brightness of the image up to pure white (still respecting
+ * the alpha channel) then decreases it back to normal.
+ * @param {SVGSVGElement} svg
+ * @constructor
+ * @extends {ImageFilter}
+ */
+var PulseFilter = function (svg) {
+  ImageFilter.call(this, svg);
+
+  /** @private {SVGElement} */
+  this.feFuncR_ = null;
+
+  /** @private {SVGElement} */
+  this.feFuncG_ = null;
+
+  /** @private {SVGElement} */
+  this.feFuncB_ = null;
+
+  /** @private {function} */
+  this.curve_ = ImageFilter.makeBellCurveOscillation(2000, 2, 0, 0.5);
+};
+PulseFilter.inherits(ImageFilter);
+module.exports = PulseFilter;
+
+/**
+ * Build an ordered set of filter operations that define the behavior of this
+ * filter type.
+ * @returns {SVGElement[]}
+ * @private
+ * @override
+ */
+PulseFilter.prototype.createFilterSteps_ = function () {
+  // Only one step in this filter: Increase brightness of all channels.
+  var feComponentTransfer = document.createElementNS(SVG_NS, 'feComponentTransfer');
+  this.feFuncR_ = document.createElementNS(SVG_NS, 'feFuncR');
+  this.feFuncG_ = document.createElementNS(SVG_NS, 'feFuncG');
+  this.feFuncB_ = document.createElementNS(SVG_NS, 'feFuncB');
+  [this.feFuncR_, this.feFuncG_, this.feFuncB_].forEach(function (feFunc) {
+    feFunc.setAttribute('type', 'linear');
+    feFunc.setAttribute('slope', '1');
+    feFunc.setAttribute('intercept', '0');
+    feComponentTransfer.appendChild(feFunc);
+  });
+
+  return [feComponentTransfer];
+};
+
+/**
+ * Update this effect's animation for the current time.
+ * @param {number} timeMs
+ * @override
+ */
+PulseFilter.prototype.update = function (timeMs) {
+  var newValue = this.curve_(timeMs);
+  [this.feFuncR_, this.feFuncG_, this.feFuncB_].forEach(function (feFunc) {
+    if (feFunc) {
+      feFunc.setAttribute('intercept', newValue);
+    }
+  });
+};
+
+
+},{"../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./ImageFilter":"/home/ubuntu/staging/apps/build/js/studio/ImageFilter.js"}],"/home/ubuntu/staging/apps/build/js/studio/GlowFilter.js":[function(require,module,exports){
+/** @file Filter that adds a white glowing outline to an image. */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var SVG_NS = require('../constants').SVG_NS;
+var ImageFilter = require('./ImageFilter');
+
+/**
+ * Adds a white glowing outline to the image.
+ * @param {SVGSVGElement} svg
+ * @constructor
+ * @extends {ImageFilter}
+ */
+var GlowFilter = function (svg) {
+  ImageFilter.call(this, svg);
+
+  /** @private {SVGElement} */
+  this.feCompositeLayers_ = null;
+
+  /** @private {function} */
+  this.curve_ = ImageFilter.makeBellCurveOscillation(3000, 3, 0.1, 1.0);
+};
+GlowFilter.inherits(ImageFilter);
+module.exports = GlowFilter;
+
+/**
+ * Build an ordered set of filter operations that define the behavior of this
+ * filter type.
+ * @returns {SVGElement[]}
+ * @private
+ * @override
+ */
+GlowFilter.prototype.createFilterSteps_ = function () {
+  // 1. Flood-fill the glow color (white)
+  // 2. Dilate (grow) the source alpha mask
+  // 3. Combine to get a silhouette in the correct color
+  // 4. Blur the silhouette for a soft glow
+  // 5. Mask out the object's original alpha channel
+  // 6. Composite the glow and original image, with varying glow alpha
+
+  var feFloodWhite = document.createElementNS(SVG_NS, 'feFlood');
+  var feFloodWhiteResult = this.id_ + '-flood-white';
+  feFloodWhite.setAttribute('flood-color', 'white');
+  feFloodWhite.setAttribute('result', feFloodWhiteResult);
+
+  var feMorphology = document.createElementNS(SVG_NS, 'feMorphology');
+  var feMorphologyResult = this.id_ + '-morphology';
+  feMorphology.setAttribute('in', 'SourceAlpha');
+  feMorphology.setAttribute('operator', 'dilate');
+  feMorphology.setAttribute('radius', 2);
+  feMorphology.setAttribute('result', feMorphologyResult);
+
+  var feCompositeSilhouette = document.createElementNS(SVG_NS, 'feComposite');
+  var feCompositeSilhouetteResult = this.id_ + '-silhouette';
+  feCompositeSilhouette.setAttribute('in', feFloodWhiteResult);
+  feCompositeSilhouette.setAttribute('operator', 'in');
+  feCompositeSilhouette.setAttribute('in2', feMorphologyResult);
+  feCompositeSilhouette.setAttribute('result', feCompositeSilhouetteResult);
+
+  var feGaussianBlur = document.createElementNS(SVG_NS, 'feGaussianBlur');
+  var feGaussianBlurResult = this.id_ + '-blur';
+  feGaussianBlur.setAttribute('in', feCompositeSilhouetteResult);
+  feGaussianBlur.setAttribute('stdDeviation', 1);
+  feGaussianBlur.setAttribute('result', feGaussianBlurResult);
+
+  var feCompositeMaskedGlow = document.createElementNS(SVG_NS, 'feComposite');
+  var feCompositeMaskedGlowResult = this.id_ + '-masked-glow';
+  feCompositeMaskedGlow.setAttribute('in', feGaussianBlurResult);
+  feCompositeMaskedGlow.setAttribute('operator', 'out');
+  feCompositeMaskedGlow.setAttribute('in2', 'SourceAlpha');
+  feCompositeMaskedGlow.setAttribute('result', feCompositeMaskedGlowResult);
+
+  var feCompositeLayers = document.createElementNS(SVG_NS, 'feComposite');
+  feCompositeLayers.setAttribute('in', 'SourceGraphic');
+  feCompositeLayers.setAttribute('operator', 'arithmetic');
+  feCompositeLayers.setAttribute('in2', feCompositeMaskedGlowResult);
+  feCompositeLayers.setAttribute('k1', 0);
+  feCompositeLayers.setAttribute('k2', 1); // Always show 100% of original image
+  feCompositeLayers.setAttribute('k3', 0);
+  feCompositeLayers.setAttribute('k4', 0);
+  this.feCompositeLayers_ = feCompositeLayers;
+
+  return [
+    feFloodWhite,
+    feMorphology,
+    feCompositeSilhouette,
+    feGaussianBlur,
+    feCompositeMaskedGlow,
+    feCompositeLayers
+  ];
+};
+
+/**
+ * Update this effect's animation for the current time.
+ * @param {number} timeMs
+ * @override
+ */
+GlowFilter.prototype.update = function (timeMs) {
+  if (this.feCompositeLayers_) {
+    this.feCompositeLayers_.setAttribute('k3', this.curve_(timeMs));
+  }
+};
+
+
+},{"../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./ImageFilter":"/home/ubuntu/staging/apps/build/js/studio/ImageFilter.js"}],"/home/ubuntu/staging/apps/build/js/studio/ImageFilter.js":[function(require,module,exports){
+/** @file Wrapper for an SVG filter definition with animation capabilities */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var SVG_NS = require('../constants').SVG_NS;
+var utils = require('../utils');
+
+// Unique element ID that increments by 1 each time an element is created
+var uniqueId = 0;
+
+/**
+ * Base class for defining complex SVG <filter>s that can be applied to
+ * any number of elements in playlab, but are primarily designed for use with
+ * image/sprite elements.
+ *
+ * The filter behaviors are defined here in code, but are added dynamically to
+ * the DOM as late as possible to avoid adding them when they are not needed.
+ *
+ * Wrapping the filters this way also provides an easy place to dynamically
+ * manipulate their properties, generating filter animation.
+ *
+ * TODO: SVG filters are not supported in IE9.  This class should do a feature
+ *       check and convert itself into a no-op if we detect that filters are
+ *       not supported.
+ *
+ * @constructor
+ * @param {!SVGSVGElement} svg - Every filter must belong to a single SVG
+ *        root element, because it gets defined inside that SVG's defs tag.
+ *        Note: The filter is not created right away, but we hold the SVG
+ *        reference so we can late-create the filter when it's needed.
+ */
+var ImageFilter = function (svg) {
+  /** @private {SVGSVGElement} */
+  this.svg_ = svg;
+
+  /** @private {string} */
+  this.id_ = 'image-filter-' + uniqueId++;
+
+  /** @private {number} how many elements are currently using this filter. */
+  this.applyCount_ = 0;
+
+  /** @private {?} setInterval key */
+  this.intervalId_ = null;
+
+};
+module.exports = ImageFilter;
+
+/**
+ * Set the passed element to use this filter (replaces other filters it may
+ * be using.)
+ * @param {SVGElement} svgElement
+ */
+ImageFilter.prototype.applyTo = function (svgElement) {
+  if (!this.checkBrowserSupport_()) {
+    return;
+  }
+
+  if (this.applyCount_ === 0) {
+    this.createInDom_();
+  }
+  svgElement.setAttribute('filter', 'url("#' + this.id_ + '")');
+  this.applyCount_++;
+};
+
+/**
+ * If the passed element is using this filter, removes the filter.
+ * @param {SVGElement} svgElement
+ */
+ImageFilter.prototype.removeFrom = function (svgElement) {
+  if (svgElement.getAttribute('filter') === 'url("#' + this.id_ + '")') {
+    svgElement.removeAttribute('filter');
+  }
+  this.applyCount_--;
+  if (this.applyCount_ === 0) {
+    this.removeFromDom_();
+  }
+};
+
+/* jshint unused: false */
+/**
+ * Update this effect's animation for the current time.
+ * Called by effect's own interval (not Studio.onTick) so that we can run
+ * effects even when the studio simulation is not running.
+ * @param {number} timeMs
+ */
+ImageFilter.prototype.update = function (timeMs) {
+  // No default operation here.  Subclasses may override this to implement
+  // animation.
+};
+/* jshint unused: true */
+
+/**
+ * Generates the necessary elements and adds this filter to the parent SVG
+ * under the <defs> tag.
+ * @private
+ */
+ImageFilter.prototype.createInDom_ = function () {
+  var filter = document.getElementById(this.id_);
+  if (filter) {
+    return;
+  }
+
+  // Make a new filter element
+  filter = document.createElementNS(SVG_NS, 'filter');
+  filter.setAttribute('id', this.id_);
+
+  // Add the filter steps (expected to be different for each filter type)
+  var steps = this.createFilterSteps_();
+  steps.forEach(function (step) {
+    filter.appendChild(step);
+  });
+
+  // Put the filter in the SVG Defs node.
+  var defs = this.getDefsNode_();
+  defs.appendChild(filter);
+
+  // Establish 30FPS update interval
+  if (!this.intervalId_) {
+    this.intervalId_ = window.setInterval(function () {
+      this.update(new Date().getTime());
+    }.bind(this), 1000/30);
+  }
+};
+
+/**
+ * Removes this SVG filter from the <defs> tag.
+ * @private
+ */
+ImageFilter.prototype.removeFromDom_ = function () {
+  if (this.intervalId_) {
+    window.clearInterval(this.intervalId_);
+    this.intervalId_ = null;
+  }
+
+  var filter = document.getElementById(this.id_);
+  if (filter) {
+    filter.parentNode.removeChild(filter);
+  }
+};
+
+/**
+ * Build an ordered set of filter operations that define the behavior of this
+ * filter type.
+ * @returns {SVGElement[]}
+ * @private
+ */
+ImageFilter.prototype.createFilterSteps_ = function () {
+  return [];
+};
+
+/**
+ * Get the Defs tag for our SVG, creating it if it doesn't exist.
+ * @returns {SVGDefsElement}
+ * @private
+ */
+ImageFilter.prototype.getDefsNode_ = function () {
+  var defs = this.svg_.querySelector('defs');
+  if (!defs) {
+    defs = document.createElementNS(SVG_NS, 'defs');
+    this.svg_.appendChild(defs);
+  }
+  return defs;
+};
+
+/**
+ * Check whether the current browser is likely to support SVG filter effects.
+ * Can be overridden by subclasses needing specific support.
+ * @returns {boolean}
+ * @private
+ */
+ImageFilter.prototype.checkBrowserSupport_ = function () {
+  // Check suggested by http://stackoverflow.com/a/9771153/5000129
+  return typeof window.SVGFEColorMatrixElement !== 'undefined' &&
+      SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_SATURATE === 2;
+};
+
+/**
+ * Generates a function that given a time value "t" will produce a number
+ * between zero and one (inclusive) following a given curve between them.
+ *
+ * @param {number} period - the t-value for one complete cycle, from max to
+ *        min and back to max.  Must be nonzero.
+ * @param {number} [exponent] - Determines the sharpness of the curve in the
+ *        oscillation.
+ *        2 (default) gives a traditional bell curve.
+ *        1 gives a triangle wave (no curve, just linear interpolation).
+ *        0-1 gives a curve that spends more time above halfway than below it.
+ *        1+ gives a curve that spends more time below halfway than above it
+ *             (like a repeated y=x*x curve).
+ *        May not work well for certain values of curve - make sure to test!
+ * @param {number} [min] - Smallest value of oscillation, default 0
+ * @param {number} [max] - Largest value of oscillation, default 1
+ */
+ImageFilter.makeBellCurveOscillation = function (period, exponent, min, max) {
+  exponent = utils.valueOr(exponent, 2);
+  min = utils.valueOr(min, 0);
+  max = utils.valueOr(max, 1);
+  var delta = max - min;
+  var coefficient = delta * Math.pow(2 / period, exponent);
+  var halfPeriod = period / 2;
+  return function (t) {
+    return min + coefficient * Math.abs(Math.pow((t % period) - halfPeriod, exponent));
+  };
+};
+
+/**
+ * Generates a function for a repeating pattern as follows:
+ *  * Spend the first 1/3 of the period at {min}
+ *  * Spend the second 1/3 of the period doing a linear interpolation from
+ *    {min} to {max}
+ *  * Spend the final 1/3 of the period at {max}
+ *
+ * @param {number} period - time units before this pattern repeats
+ * @param {number} [min] - Lowest value, default zero
+ * @param {number} [max] - Highest value, default one
+ */
+ImageFilter.makeRepeatingOneThirdLinearInterpolation = function (period, min, max) {
+  min = utils.valueOr(min, 0);
+  max = utils.valueOr(max, 1);
+
+  var slope = 3 * (max - min) / period;
+  var intercept = 2 * min - max;
+  return function (t) {
+    return Math.min(max, Math.max(min, slope * (t % period) + intercept));
+  };
+};
+
+
+},{"../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js"}]},{},["/home/ubuntu/staging/apps/build/js/studio/main.js"]);
