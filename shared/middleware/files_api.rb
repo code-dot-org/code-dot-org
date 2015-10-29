@@ -53,7 +53,7 @@ class FilesApi < Sinatra::Base
 
   def file_too_large(quota_type)
     # Don't record a custom event since these events may be very common.
-    increment_metric('FileTooLarge', quota_type)
+    record_metric('FileTooLarge', quota_type)
     too_large
   end
 
@@ -63,21 +63,21 @@ class FilesApi < Sinatra::Base
 
   def quota_crossed_half_used(quota_type, encrypted_channel_id)
     quota_event_type = 'QuotaCrossedHalfUsed'
-    increment_metric(quota_event_type, quota_type)
+    record_metric(quota_event_type, quota_type)
     record_event(quota_event_type, quota_type, encrypted_channel_id)
   end
 
   def quota_exceeded(quota_type, encrypted_channel_id)
     quota_event_type = 'QuotaExceeded'
-    increment_metric(quota_event_type, quota_type)
+    record_metric(quota_event_type, quota_type)
     record_event(quota_event_type, quota_type, encrypted_channel_id)
     forbidden
   end
 
-  def increment_metric(quota_event_type, quota_type)
+  def record_metric(quota_event_type, quota_type, value = 1)
     return if !CDO.newrelic_logging
 
-    NewRelic::Agent.increment_metric("Custom/FilesApi/#{quota_event_type}_#{quota_type}")
+    NewRelic::Agent.record_metric("Custom/FilesApi/#{quota_event_type}_#{quota_type}", value)
   end
 
   def record_event(quota_event_type, quota_type, encrypted_channel_id)

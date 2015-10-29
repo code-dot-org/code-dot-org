@@ -79,6 +79,27 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal '<xml/>', app_options[:level]['startBlocks']
   end
 
+  test 'project template level sets start html' do
+    template_level = create :applab
+    template_level.start_html = '<div><label id="label1">expected html</label></div>'
+    template_level.save!
+
+    real_level = create :applab
+    real_level.project_template_level_name = template_level.name
+    real_level.start_html = '<div><label id="label1">wrong html</label></div>'
+    real_level.save!
+
+    sl = create :script_level, level: real_level
+    get :show, script_id: sl.script, stage_id: '1', id: '1'
+
+    assert_response :success
+    # start html comes from project_level not real_level
+    app_options = assigns(:level).blockly_options
+    assert_equal '<div><label id="label1">expected html</label></div>', app_options[:level]['startHtml']
+  end
+
+
+
   test 'project template level sets toolbox blocks' do
     template_level = create :level
     template_level.toolbox_blocks = '<xml><toolbox/></xml>'
@@ -203,7 +224,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
     assert_equal '/s/20-hour/stage/2/puzzle/2', build_script_level_path(sl)
     assert_routing({method: "get", path: build_script_level_path(sl)},
-        {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, stage_id: sl.stage.id.to_s, id: sl.position.to_s})
+        {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, stage_id: sl.stage.to_param, id: sl.to_param})
   end
 
   test "chapter based routing" do
@@ -710,6 +731,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: sl.script, stage_id: sl.stage, id: sl
 
     assert_response :success
+  end
+
+  test 'submitted view option if submitted' do
+    sign_in @student
+
+    last_attempt_data = 'test'
+    level = create(:applab, submittable: true)
+    script_level = create(:script_level, level: level)
+    Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
+    ul = UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::SUBMITTED_RESULT)
+
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level
+    assert_response :success
+
+    assert_equal true, assigns(:level_view_options)[:submitted]
+    assert_equal "http://test.host/user_levels/#{ul.id}", assigns(:level_view_options)[:unsubmit_url]
   end
 
   def create_admin_script

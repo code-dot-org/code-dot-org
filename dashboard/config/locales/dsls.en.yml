@@ -184,6 +184,11 @@ en:
       CSPPD3-u2 tips for prep: {}
       CSPPD3-u2 unit 2 overview: {}
       CSPPD3-u2 what is a challenge: {}
+      CSPPD3-u3 Welcome: {}
+      CSPPD3-u3 overview: {}
+      CSPPD3-u3 pause and reflect: {}
+      CSPPD3-u3 tips for prep: {}
+      CSPPD3-u3 unit 3 overview: {}
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
@@ -292,6 +297,7 @@ en:
       ECSPD U2 Day 10-12 Forum Q: {}
       ECSPD U2 Day 13-14 Forum Q: {}
       ECSPD U2L1516 Sorting Video: {}
+      ECSPD U3 Challenge Decision: {}
       ECSPD U3 Challenges: {}
       ECSPD U3 D 1-2 Intro: {}
       ECSPD U3 D 11-13 Intro: {}
@@ -353,6 +359,7 @@ en:
       ECSPD Unit 3 Stage 6 Overview: {}
       ECSPD Unit 3 Stage4Review: {}
       ECSPD Unit 3 Strategy Review: {}
+      ECSPD Unit 3 Survey: {}
       ECSPD Unit2 Connections: {}
       ECSPD Unit3 Connections: {}
       ECSPD What Is Problem Solving: {}
@@ -1008,6 +1015,7 @@ en:
       U4L24 Student Lesson Introduction:
         description here: description here
         title: title
+      Unit 3 Survey 2: {}
       a bit about pixels:
         kevin systrom pixel video: kevin systrom pixel video
         pixel video: pixel video
@@ -1455,6 +1463,7 @@ en:
         uses electricity, is pretty cheap: uses electricity, is pretty cheap
         uses light, is expensive: uses light, is expensive
         uses radio waves, cannot travel very far: uses radio waves, cannot travel very far
+      CSPPD3-u3 chunk 5 checkin: {}
       Coordinate Matching:
         "(250, 400)": "(250, 400)"
         "(320, 240)": "(320, 240)"
@@ -2338,6 +2347,26 @@ en:
         I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
         My understanding of these lessons has not changed: My understanding of these lessons has not changed
       CSPPD3-u2 unit overview checkin:
+        I feel like I could teach this right now: I feel like I could teach this right now
+        I feel like I need to do A LOT of review of lessons, content, etc before I teach this: I feel like I need to do A LOT of review of lessons, content, etc before I teach this
+        I feel like I need to do SOME review of lessons, content, etc before I teach this: I feel like I need to do SOME review of lessons, content, etc before I teach this
+      CSPPD3-u3 chunk 1 checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u3 chunk 2 checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u3 chunk 3 checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u3 chunk 4 checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u3 unit overview checkin:
         I feel like I could teach this right now: I feel like I could teach this right now
         I feel like I need to do A LOT of review of lessons, content, etc before I teach this: I feel like I need to do A LOT of review of lessons, content, etc before I teach this
         I feel like I need to do SOME review of lessons, content, etc before I teach this: I feel like I need to do SOME review of lessons, content, etc before I teach this
@@ -3261,6 +3290,15 @@ en:
         Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.: Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.
         Yes, the button, with its ID, must appear in the code AFTER the event handler.: Yes, the button, with its ID, must appear in the code AFTER the event handler.
         Yes, the button, with its ID, must appear in the code BEFORE the event handler.: Yes, the button, with its ID, must appear in the code BEFORE the event handler.
+      U3L14 - MC variable reassignment:
+        Code does not execute due to error: Code does not execute due to error
+        Variable Check In: Variable Check In
+        'What will be displayed in the console? ': 'What will be displayed in the console? '
+        a:10 &nbsp; b:10 &nbsp;  c:20: a:10 &nbsp; b:10 &nbsp;  c:20
+        a:10 &nbsp; b:10 &nbsp; c:10: a:10 &nbsp; b:10 &nbsp; c:10
+        a:10 &nbsp; b:17 &nbsp;  c:17: a:10 &nbsp; b:17 &nbsp;  c:17
+        a:10 &nbsp; b:17 &nbsp;  c:27: a:10 &nbsp; b:17 &nbsp;  c:27
+        a:3 &nbsp; b:7 &nbsp; c:10: a:3 &nbsp; b:7 &nbsp; c:10
       U3L18 Controlling Memory and Program Flow:
         Controlling Memory and Control Quiz: Controlling Memory and Control Quiz
         Keep track of time: Keep track of time
@@ -3310,6 +3348,7 @@ en:
         a=13, b=13, c=13: a=13, b=13, c=13
         a=13, b=16, c=13: a=13, b=16, c=13
         a=3, b=3, c=3: a=3, b=3, c=3
+        foo foo: foo foo
       U3L20 Assessment1:
         Conditional Basics Question 1: Conditional Basics Question 1
         Which two of the following programming statements did you use when you wrote turtle drawing programs?: Which two of the following programming statements did you use when you wrote turtle drawing programs?
@@ -4214,6 +4253,7 @@ en:
       ECSPD your goals:
         Documenting Your Goals: Documenting Your Goals
       ECSU2 Challenge Submission: {}
+      ECSU3 Challenge Submission: {}
       Glossary O:
         ? 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
         : 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
@@ -4227,7 +4267,8 @@ en:
         In my classroom, I want to...: In my classroom, I want to...
       PDAlg DR Text 1:
         Here's the same contract from the last page. What could you ask this student to help them identify and correct their error?: Here's the same contract from the last page. What could you ask this student to help them identify and correct their error?
-      PDAlg Prep on Paper: {}
+      PDAlg Prep on Paper:
+        LESSON PREP > Thinking on paper: LESSON PREP > Thinking on paper
       PDAlg course goals:
         Documenting Your Course Goals: Documenting Your Course Goals
       PDK5 Challenges:
@@ -4286,7 +4327,8 @@ en:
         Enter title here: Enter title here
       Trent Test Level:
         Enter title here: Enter title here
-      U1L1 - FR computer science word association: {}
+      U1L1 - FR computer science word association:
+        'Word Association: Computer Science Principles': 'Word Association: Computer Science Principles'
       U1L10 Assessment Free Response:
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
       U1L10 Journal Free Response:
@@ -4585,6 +4627,8 @@ en:
       U3L14 - Journal Favorite Event:
         Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.
         'Reflection: Events': 'Reflection: Events'
+      U3L15 spot the difference variable debugging:
+        'Free response: Spot and fix the bug': 'Free response: Spot and fix the bug'
       U3L16 Assessment Free Response:
         'Beyond Buttons: Assessment': 'Beyond Buttons: Assessment'
       U3L16 Free Response Getting Started:
@@ -4621,7 +4665,7 @@ en:
       U3L22 Reflection:
         The Clicker Game with Permanent Data Storage: The Clicker Game with Permanent Data Storage
       U3L23 Free Response Getting Started:
-        NLP Getting Started: NLP Getting Started
+        'Getting Started: A look at Siri': 'Getting Started: A look at Siri'
       U3L23 Free Response Wrap Up:
         Natural Language Processing: Natural Language Processing
       U3L23 Free Response Wrap Up 2:

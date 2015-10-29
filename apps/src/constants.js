@@ -88,3 +88,6 @@ exports.KeyCodes = {
   DOWN: 40,
   DELETE: 127
 };
+
+/** @const {string} SVG element namespace */
+exports.SVG_NS = 'http://www.w3.org/2000/svg';

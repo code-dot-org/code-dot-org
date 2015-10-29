@@ -946,7 +946,10 @@ var projects = module.exports = {
     delete current.id;
     delete current.hidden;
     current.name = newName;
-    this.save(wrappedCallback);
+    channels.create(current, function (err, data) {
+      this.updateCurrentData_(err, data, true);
+      this.save(wrappedCallback);
+    }.bind(this));
   },
   copyAssets: function (srcChannel, callback) {
     if (!srcChannel) {

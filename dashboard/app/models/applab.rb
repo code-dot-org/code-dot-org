@@ -30,6 +30,7 @@ class Applab < Blockly
     free_play
     show_turtle_before_run
     autocomplete_palette_apis_only
+    execute_palette_apis_only
     text_mode_at_start
     design_mode_at_start
     hide_design_mode
@@ -68,6 +69,9 @@ class Applab < Blockly
     if self.code_functions.present? && self.code_functions.is_a?(String)
       self.code_functions = JSON.parse(self.code_functions)
     end
+  rescue JSON::ParserError => e
+    errors.add(:code_functions, "#{e.class.name}: #{e.message}")
+    return false
   end
 
   def self.palette

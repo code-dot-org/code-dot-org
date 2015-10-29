@@ -170,7 +170,7 @@ class Blockly < Level
 
   # Return a Blockly-formatted 'appOptions' hash derived from the level contents
   def blockly_options
-    options = Rails.cache.fetch("#{cache_key}/blockly_level_options") do
+    options = Rails.cache.fetch("#{cache_key}/blockly_level_options/v2") do
       level = self
       level_prop = {}
 
@@ -201,6 +201,10 @@ class Blockly < Level
         level_prop['startBlocks'] = level.try(:project_template_level).try(:start_blocks) || level.start_blocks
         level_prop['toolbox'] = level.try(:project_template_level).try(:toolbox_blocks) || level.toolbox_blocks
         level_prop['codeFunctions'] = level.try(:project_template_level).try(:code_functions) || level.code_functions
+      end
+
+      if level.is_a? Applab
+        level_prop['startHtml'] = level.try(:project_template_level).try(:start_html) || level.start_html
       end
 
       if level.is_a?(Maze) && level.step_mode
@@ -236,7 +240,7 @@ class Blockly < Level
       # Set some values that Blockly expects on the root of its options string
       non_nil_level_prop = level_prop.reject!{|_, value| value.nil?}
       app_options.merge!({
-                             baseUrl: "#{ActionController::Base.asset_host}/blockly/",
+                             baseUrl: Blockly.base_url,
                              app: level.game.try(:app),
                              levelId: level.level_num,
                              level: non_nil_level_prop,
@@ -247,6 +251,15 @@ class Blockly < Level
     end
     options[:level].freeze
     options.freeze
+  end
+
+  def self.base_url
+    "#{Blockly.asset_host_prefix}/blockly/"
+  end
+
+  def self.asset_host_prefix
+    host = ActionController::Base.asset_host
+    (host.blank?) ? "" : "//#{host}"
   end
 
   # XXX Since Blockly doesn't play nice with the asset pipeline, a query param

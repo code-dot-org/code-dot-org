@@ -1,0 +1,48 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-29T16:05:46.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Add code to update the score when the apple is clicked. (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "markdown_instructions": "# Using global variables\r\n\r\nYou'll now look at a version of the clicker game. We've set up the basic functionality to move the apple around the screen, and have __created a global variable to keep track of the score.__\r\n\r\n# Do this\r\n__Add code to update the score when the apple is clicked.__ Remember that you'll have to update both the global variable _and_ the label text!\r\n\r\n<img src=\"https://images.code.org/001640fd24fc487af534ab769ed196e2-image-1446136596261.gif\" style=\"width:200px\">",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "slider_speed": "1.0",
+    "execute_palette_apis_only": "false",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "U3L15 mini clicker template"
+  }
+}]]></config>
+  <blocks/>
+</Applab>
