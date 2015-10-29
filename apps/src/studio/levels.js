@@ -2187,8 +2187,8 @@ levels.js_hoc2015_score =
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 1,  0, 0, 0, 0]],
-  'instructions': '"Reach the GOAL!"',
-  'instructions2': "Let's add points. Add 100 points when BOT1 gets the pilot.",
+  'instructions': '"Reach the GOALs!"',
+  'instructions2': "Let's add points. Add 100 points when BOT1 gets each pilot.",
   'autoArrowSteer': true,
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
@@ -2351,7 +2351,7 @@ levels.js_hoc2015_add_characters = {
     [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"I\'m seeing signs of increased activity on this planet!"',
+  'instructions': '"I\'m seeing signs of increased activity on this planet."',
   'instructions2': 'Add 3 PIGs to the planet. Then, go get them.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
@@ -2528,7 +2528,6 @@ levels.js_hoc2015_change_setting = {
     'addPoints': null,
     'removePoints': null,
 
-    'whenScore1000': null,
     'whenGetPilot': null,
   },
   'startBlocks': [
