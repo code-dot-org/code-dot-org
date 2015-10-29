@@ -148,11 +148,17 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "text_mode_at_start": "false",
-    "design_mode_at_start": "true",
+    "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "submittable": "false",
-    "hide_view_data_button": "false"
+    "hide_view_data_button": "false",
+    "encrypted_examples": [
+
+    ],
+    "droplet_tooltips_disabled": "false",
+    "execute_palette_apis_only": "false",
+    "debugger_disabled": "false"
   }
 }]]></config>
   <blocks/>
