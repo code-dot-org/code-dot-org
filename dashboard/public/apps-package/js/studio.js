@@ -1635,14 +1635,19 @@ Studio.init = function(config) {
     }
   });
 
+  var levelTracks = [];
+  if (level.music && skin.musicMetadata) {
+    levelTracks = skin.musicMetadata.filter(function(trackMetadata) {
+      return level.music.indexOf(trackMetadata.name) !== -1;
+    });
+  }
+
   /**
    * Helper that handles music loading/playing/crossfading for the level.
    * @type {MusicController}
    */
   Studio.musicController = new MusicController(
-      studioApp.cdoSounds,
-      skin.assetUrl,
-      utils.valueOr(level.music, skin.music));
+      studioApp.cdoSounds, skin.assetUrl, levelTracks);
 
   /**
    * Defines the set of possible movement sound effects for each playlab actor.
@@ -6081,7 +6086,7 @@ function loadHoc2015(skin, assetUrl) {
     'move1', 'move2', 'move3'
   ];
 
-  skin.music = [ 'song1' ];
+  skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
@@ -6268,7 +6273,7 @@ function loadHoc2015x(skin, assetUrl) {
     'move1', 'move2', 'move3', 'move4'
   ];
 
-  skin.music = [ 'song1' ];
+  skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
@@ -6300,6 +6305,29 @@ function loadHoc2015x(skin, assetUrl) {
   skin.itemChoices = [
     ];
 }
+
+/**
+ * Music tracks and associated metadata for both hoc2015 and hoc2015x tutorials.
+ * Individual levels don't load all of these, only the subset they request.
+ * @const {MusicTrackDefinition[]}
+ */
+var HOC2015_MUSIC_METADATA = [
+  { name: 'song1' },
+  { name: 'song2' },
+  { name: 'song3' },
+  { name: 'song4', volume: 0.85 },
+  { name: 'song5' },
+  { name: 'song6' },
+  { name: 'song7' },
+  { name: 'song8', volume: 0.85 },
+  { name: 'song9', volume: 0.85 },
+  { name: 'song10' },
+  { name: 'song11', volume: 0.85 },
+  { name: 'song12', volume: 0.85 },
+  { name: 'song13' },
+  { name: 'song14' },
+  { name: 'song15' }
+];
 
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
@@ -12626,6 +12654,7 @@ ThreeSliceAudio.prototype.whenSoundStopped_ = function (stoppedState) {
 'use strict';
 
 var utils = require('../utils');
+var _ = utils.getLodash();
 
 var debugLogging = false;
 function debug(msg) {
@@ -12635,9 +12664,21 @@ function debug(msg) {
 }
 
 /**
+ * @typedef {Object} MusicTrackDefinition
+ * External track representation, used to define track info in skins.js.
+ *
+ * @property {string} name - corresponds to music filenames
+ * @property {number} volume - on a 0..1 scale
+ */
+
+/**
  * @typedef {Object} MusicTrack
+ * Internal track representation, includes track metadata and references to
+ * loaded sound object.
+ *
  * @property {string} name
  * @property {string[]} assetUrls
+ * @property {number} volume
  * @property {Sound} sound
  * @property {boolean} isLoaded
  */
@@ -12649,28 +12690,28 @@ function debug(msg) {
  * @param {AudioPlayer} audioPlayer - Reference to the Sounds object.
  * @param {function} assetUrl - Function for generating paths to static assets
  *        for the current skin.
- * @param {string[]} [trackNames] - List of music asset names (sans
- *        extensions). Can be omitted if no music should be played.
+ * @param {MusicTrackDefinition[]} [trackDefinitions] - List of music assets and
+ *        general info about how they should be played. Can be omitted or empty
+ *        if no music should be played.
  * @constructor
  */
-var MusicController = function (audioPlayer, assetUrl, trackNames) {
+var MusicController = function (audioPlayer, assetUrl, trackDefinitions) {
   /** @private {AudioPlayer} */
   this.audioPlayer_ = audioPlayer;
 
   /** @private {function} */
   this.assetUrl_ = assetUrl;
 
-  /** @private {string[]} */
-  this.trackNames_ = trackNames || [];
-
-  /** @private {Object} maps trackName => MusicTrack */
-  this.tracks_ = buildTrackMap(this.trackNames_, assetUrl);
+  /** @private {MusicTrack[]} */
+  this.trackList_ = buildTrackData(trackDefinitions, assetUrl);
 
   /** @private {string} */
-  this.nowPlayingName_ = null;
+  this.nowPlaying_ = null;
 
+  /** @private {string} Name of track to play on load */
   this.playOnLoad_ = null;
 
+  // If the video player gets pulled up, make sure we stop the music.
   document.addEventListener('videoShown', function () {
     this.fadeOut();
   }.bind(this));
@@ -12680,24 +12721,22 @@ var MusicController = function (audioPlayer, assetUrl, trackNames) {
 module.exports = MusicController;
 
 /**
- * Build up an initial map of trackName -> MusicTrack object, without doing
- * any asset loading.
- * @param {string{}} trackNames
+ * Build up initial internal track metadata.
+ * @param {MusicTrackDefinition[]} trackDefinitions
  * @param {function} assetUrl
+ * @return {MusicTrack[]}
  */
-function buildTrackMap(trackNames, assetUrl) {
-  var tracks = trackNames.map(function (name) {
+function buildTrackData(trackDefinitions, assetUrl) {
+  trackDefinitions = utils.valueOr(trackDefinitions, []);
+  return trackDefinitions.map(function (trackDef) {
     return {
-      name: name,
-      assetUrls: [ assetUrl(name + '.mp3') ],
+      name: trackDef.name,
+      assetUrls: [ assetUrl(trackDef.name + '.mp3') ],
+      volume: utils.valueOr(trackDef.volume, 1),
       sound: null,
       isLoaded: false
     };
   });
-  return tracks.reduce(function (memo, next) {
-    memo[next.name] = next;
-    return memo;
-  }, {});
 }
 
 /**
@@ -12708,17 +12747,17 @@ MusicController.prototype.preload = function () {
     return;
   }
 
-  this.trackNames_.forEach(function (name) {
-    this.tracks_[name].sound = this.audioPlayer_.registerByFilenamesAndID(
-        this.tracks_[name].assetUrls, name);
-    this.tracks_[name].sound.onLoad = function () {
-      debug('done loading ' + name);
-      this.tracks_[name].isLoaded = true;
-      if (this.playOnLoad_ === name) {
-        this.play(name);
+  this.trackList_.forEach(function (track) {
+    track.sound = this.audioPlayer_.registerByFilenamesAndID(
+        track.assetUrls, track.name);
+    track.sound.onLoad = function () {
+      debug('done loading ' + track.name);
+      track.isLoaded = true;
+      if (this.playOnLoad_ === track.name) {
+        this.play(track.name);
       }
     }.bind(this);
-  }.bind(this));
+  }, this);
 };
 
 /**
@@ -12731,24 +12770,26 @@ MusicController.prototype.play = function (trackName) {
     return;
   }
 
-  if (!trackName) {
-    trackName = this.trackNames_[Math.floor(Math.random(this.trackNames_.length))];
+  var track;
+  if (trackName) {
+    track = this.getTrackByName_(trackName);
+  } else {
+    track = this.getRandomTrack_();
   }
 
-  var track = this.tracks_[trackName];
   if (!track) {
-    // Not found - throw exception?
+    // No track to play - throw an exception?
     return;
   }
 
   if (track.sound && track.isLoaded) {
     debug('playing now');
-    var callback = this.whenMusicStopped_.bind(this, trackName);
-    track.sound.play({ onEnded: callback });
-    this.nowPlaying_ = trackName;
+    var callback = this.whenMusicStopped_.bind(this, track.name);
+    track.sound.play({ volume: track.volume, onEnded: callback });
+    this.nowPlaying_ = track.name;
   } else {
     debug('not done loading, playing after load');
-    this.playOnLoad_ = trackName;
+    this.playOnLoad_ = track.name;
   }
 };
 
@@ -12799,6 +12840,25 @@ MusicController.prototype.whenMusicStopped_ = function (musicName) {
   if (this.nowPlaying_ === musicName) {
     this.nowPlaying_ = null;
   }
+};
+
+/**
+ * @param {string} name
+ * @returns {MusicTrack|undefined}
+ * @private
+ */
+MusicController.prototype.getTrackByName_ = function (name) {
+  return _.find(this.trackList_, function (track) {
+    return track.name === name;
+  });
+};
+
+/**
+ * @returns {MusicTrack|undefined}
+ * @private
+ */
+MusicController.prototype.getRandomTrack_ = function () {
+  return this.trackList_[Math.floor(Math.random(this.trackList_.length))];
 };
 
 
