@@ -29682,7 +29682,7 @@ FeedbackUtils.prototype.buildPuzzleRatingButtons_ = function () {
     $(this).toggleClass('enabled');
   };
   for (var i = 0, button; (button = buttons[i]); i++) {
-    dom.addClickTouchEvent(button, buttonClickHandler);
+    button.addEventListener('click', buttonClickHandler);
   }
 
   return buttonContainer;

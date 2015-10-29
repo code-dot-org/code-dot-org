@@ -652,7 +652,8 @@ input[type="radio"] {
 
 #puzzleRatingButtons .puzzle-rating-btn {
   fill: #949ca2;
-  padding: 0 5px; }
+  padding: 0 5px;
+  cursor: pointer; }
   #puzzleRatingButtons .puzzle-rating-btn#like:hover {
     fill: #333333; }
   #puzzleRatingButtons .puzzle-rating-btn#like.enabled {
