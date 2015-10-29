@@ -34,4 +34,4 @@ Scenario: Failing puzzle 2
   And I press "runButton"
   Then evaluate JavaScript expression "Flappy.onMouseDown(), true;"
   Then I wait to see ".modal"
-  And element ".modal .congrats" contains text "Not quite; this level requires specific blocks."
+  And element ".modal .congrats" contains text "Not quite. You have to use a block you aren’t using yet."

@@ -238,11 +238,18 @@
   "when": "quando",
   "whenRun": "quando executar",
   "workspaceHeaderShort": "Área de trabalho: ",
+  "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
   "dropletBlock_mathRandom_description": "Returns a random number ranging from 0 (inclusive) up to but not including 1 (exclusive)",
   "dropletBlock_mathRandom_signatureOverride": "Math.random()",
   "dropletBlock_randomNumber_param0": "min",
   "dropletBlock_randomNumber_param0_description": "The minimum number returned",
   "dropletBlock_randomNumber_param1": "max",
   "dropletBlock_randomNumber_param1_description": "The maximum number returned",
-  "dropletBlock_randomNumber_signatureOverride": "randomNumber(min, max)"
+  "dropletBlock_randomNumber_signatureOverride": "randomNumber(min, max)",
+  "missingRecommendedBlocksErrorMsg": "Not quite. Try using a block you aren’t using yet.",
+  "missingRequiredBlocksErrorMsg": "Not quite. You have to use a block you aren’t using yet.",
+  "unsubmit": "Unsubmit",
+  "unsubmitYourProject": "Unsubmit your project",
+  "unsubmitYourProjectConfirm": "Unsubmitting your project will reset the submitted date, really unsubmit?",
+  "tryBlocksBelowFeedback": "Try using one of the blocks below:"
 }

@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+ENV['RACK_ENV'] = 'test'
+
 require 'mocha/mini_test'
 require 'minitest/autorun'
 require 'rack/test'
@@ -6,8 +9,6 @@ require File.expand_path '../../middleware/files_api', __FILE__
 require File.expand_path '../../middleware/channels_api', __FILE__
 require File.expand_path '../../middleware/helpers/asset_bucket', __FILE__
 require File.expand_path '../spy_newrelic_agent', __FILE__
-
-ENV['RACK_ENV'] = 'test'
 
 class AssetsTest < Minitest::Test
 
@@ -285,7 +286,8 @@ class AssetsTest < Minitest::Test
           assert @assets.last_response.client_error?, "Error when file is larger than max file size."
 
           assert NewRelic::Agent.metrics.length == 1, 'one custom metric recorded'
-          assert NewRelic::Agent.metrics[0] == 'Custom/FilesApi/FileTooLarge_assets'
+          assert NewRelic::Agent.metrics[0].first == 'Custom/FilesApi/FileTooLarge_assets', 'FileTooLarge metric recorded'
+          assert NewRelic::Agent.metrics[0].last == 1, 'FileTooLarge metric value 1'
 
           put(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
           assert @assets.last_response.successful?, "First small file upload is successful."
@@ -296,7 +298,8 @@ class AssetsTest < Minitest::Test
           assert @assets.last_response.successful?, "Second small file upload is successful."
 
           assert NewRelic::Agent.metrics.length == 2, 'two custom metrics recorded'
-          assert NewRelic::Agent.metrics[1] == 'Custom/FilesApi/QuotaCrossedHalfUsed_assets', 'QuotaCrossedHalfUsed metric recorded'
+          assert NewRelic::Agent.metrics[1].first == 'Custom/FilesApi/QuotaCrossedHalfUsed_assets', 'QuotaCrossedHalfUsed metric recorded'
+          assert NewRelic::Agent.metrics[1].last == 1, 'QuotaCrossedHalfUsed metric value 1'
           assert NewRelic::Agent.events.length == 1, 'one custom event recorded'
           assert NewRelic::Agent.events[0].first == 'FilesApiQuotaCrossedHalfUsed', 'QuotaCrossedHalfUsed event recorded'
 
@@ -304,7 +307,8 @@ class AssetsTest < Minitest::Test
           assert @assets.last_response.client_error?, "Error when exceeding max app size."
 
           assert NewRelic::Agent.metrics.length == 3, 'three custom metrics recorded'
-          assert NewRelic::Agent.metrics[2] == 'Custom/FilesApi/QuotaExceeded_assets', 'QuotaExceeded metric recorded'
+          assert NewRelic::Agent.metrics[2].first == 'Custom/FilesApi/QuotaExceeded_assets', 'QuotaExceeded metric recorded'
+          assert NewRelic::Agent.metrics[2].last == 1, 'QuotaExceeded metric value 1'
           assert NewRelic::Agent.events.length == 2, 'two custom events recorded'
           assert NewRelic::Agent.events[1].first == 'FilesApiQuotaExceeded', 'QuotaExceeded event recorded'
 
