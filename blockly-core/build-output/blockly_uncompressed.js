@@ -6007,35 +6007,34 @@ Blockly.Xml.textToDom = function(text) {
 Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
   var metrics = blockSpace.getMetrics();
   var width = metrics ? metrics.viewWidth : 0;
-  var paddingTop = Blockly.BlockSpace.AUTO_LAYOUT_PADDING_TOP;
-  var paddingLeft = Blockly.BlockSpace.AUTO_LAYOUT_PADDING_LEFT;
-  var cursor = {x:Blockly.RTL ? width - paddingLeft : paddingLeft, y:paddingTop};
+  var cursor = {x:Blockly.RTL ? width - Blockly.BlockSpace.AUTO_LAYOUT_PADDING_LEFT : Blockly.BlockSpace.AUTO_LAYOUT_PADDING_LEFT, y:Blockly.BlockSpace.AUTO_LAYOUT_PADDING_TOP};
   var positionBlock = function(block) {
-    block.moveBy(cursor.x, cursor.y);
-    cursor.y += block.getHeightWidth().height + Blockly.BlockSvg.SEP_SPACE_Y
+    if(isNaN(block.x)) {
+      block.x = cursor.x
+    }else {
+      block.x = Blockly.RTL ? width - block.x : block.x
+    }
+    if(isNaN(block.y)) {
+      block.y = cursor.y;
+      cursor.y += block.blockly_block.getHeightWidth().height + Blockly.BlockSvg.SEP_SPACE_Y
+    }
+    block.blockly_block.moveBy(block.x, block.y)
   };
-  var block, blockX, blockY, currentPosition;
-  var hiddenBlocks = [];
+  var blocks = [];
   for(var i = 0, xmlChild;xmlChild = xml.childNodes[i];i++) {
     if(xmlChild.nodeName.toLowerCase() === "block") {
-      block = Blockly.Xml.domToBlock(blockSpace, xmlChild);
-      if(block.isVisible()) {
-        positionBlock(block)
-      }else {
-        hiddenBlocks.push(block)
-      }
-      blockX = parseInt(xmlChild.getAttribute("x"), 10);
-      blockY = parseInt(xmlChild.getAttribute("y"), 10);
-      if(!isNaN(blockX) || !isNaN(blockY)) {
-        currentPosition = block.getRelativeToSurfaceXY();
-        blockX = isNaN(blockX) ? currentPosition.x : blockX;
-        blockY = isNaN(blockY) ? currentPosition.y : blockY;
-        blockX = Blockly.RTL ? -blockX : blockX;
-        block.moveTo(blockX, blockY)
-      }
+      var blockly_block = Blockly.Xml.domToBlock(blockSpace, xmlChild);
+      var x = parseInt(xmlChild.getAttribute("x"), 10);
+      var y = parseInt(xmlChild.getAttribute("y"), 10);
+      blocks.push({blockly_block:blockly_block, x:x, y:y})
     }
   }
-  hiddenBlocks.forEach(positionBlock.bind(this));
+  blocks.filter(function(block) {
+    return block.blockly_block.isVisible()
+  }).forEach(positionBlock);
+  blocks.filter(function(block) {
+    return!block.blockly_block.isVisible()
+  }).forEach(positionBlock);
   blockSpace.events.dispatchEvent(Blockly.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED)
 };
 Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {

@@ -11,6 +11,12 @@
   .row
     .col-xs-10.col-sm-12
       #gmap.full-width
+  #belowmaplegend.legend{style: "display: none;"}
+    .legend-title= I18n.t(:csedweek_map_legend_title)
+    .color.blue
+    = I18n.t(:csedweek_map_legend_event)
+    .color.red
+    = I18n.t(:csedweek_map_legend_cs_tech_jam)
 
 :javascript
   var gmap;
@@ -57,7 +63,8 @@
     });
 
     var legend = document.createElement('div');
-    legend.id = 'legend';
+    legend.id = 'inmaplegend';
+    legend.className = 'legend'
 
     var content = [];
     content.push('<div class="legend-title">#{I18n.t(:csedweek_map_legend_title)}</div>');
@@ -66,7 +73,7 @@
     legend.innerHTML = content.join('');
     legend.index = 1;
 
-    gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+    // gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 
     layer.setMap(gmap);
 

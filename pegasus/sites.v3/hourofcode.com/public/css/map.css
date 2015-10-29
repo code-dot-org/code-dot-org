@@ -14,7 +14,19 @@
   width: 100%;
 }
 
-#legend {
+@media only screen and (max-width: 760px) {
+  #inmaplegend {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  #belowmaplegend {
+    display: none;
+  }
+}
+
+.legend {
   background: #FFF;
   padding: 10px;
   margin: 5px;
