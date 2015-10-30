@@ -3,7 +3,6 @@ description_short "Use Play Lab to create a story or game."
 description "Use Play Lab to create a story or game."
 wrapup_video 'hoc2015_preview_conclusion'
 hidden 'true'
-admin_required 'true'
 
 stage 'Hour of Code 2015'
 
