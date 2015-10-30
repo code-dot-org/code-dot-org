@@ -1,10 +1,10 @@
-ENV['RACK_ENV'] = 'test'
-
 require 'minitest/autorun'
 require 'rack/test'
 require File.expand_path '../../../deployment', __FILE__
 require File.expand_path '../../middleware/channels_api', __FILE__
 require File.expand_path '../../middleware/properties_api', __FILE__
+
+ENV['RACK_ENV'] = 'test'
 
 class PropertiesTest < Minitest::Test
   def setup
