@@ -2158,6 +2158,15 @@ var displayFeedback = function() {
     tryAgainText = commonMsg.tryAgain();
   }
 
+  // Let the level override feedback dialog strings.
+  var stringFunctions = $.extend({
+    reinfFeedbackMsg: studioMsg.reinfFeedbackMsg,
+    sharingText: studioMsg.shareGame
+  }, level.appStringsFunctions);
+  var appStrings = {
+    reinfFeedbackMsg: stringFunctions.reinfFeedbackMsg({backButton: tryAgainText}),
+    sharingText: stringFunctions.sharingText()
+  };
 
   if (!Studio.waitingForReport) {
     studioApp.displayFeedback({
@@ -2176,10 +2185,7 @@ var displayFeedback = function() {
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       message: Studio.message,
-      appStrings: {
-        reinfFeedbackMsg: studioMsg.reinfFeedbackMsg({backButton: tryAgainText}),
-        sharingText: studioMsg.shareGame()
-      }
+      appStrings: appStrings
     });
   }
 };

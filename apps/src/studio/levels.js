@@ -2745,6 +2745,10 @@ levels.js_hoc2015_event_free = {
       }
     }
   ],
+  appStringsFunctions: {
+    reinfFeedbackMsg: msg.hoc2015_reinfFeedbackMsg,
+    sharingText: msg.hoc2015_shareGame
+  }
 };
 
 levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
