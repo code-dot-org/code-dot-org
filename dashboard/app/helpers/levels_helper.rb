@@ -1,4 +1,5 @@
 require 'digest/sha1'
+require 'dynamic_config/gatekeeper'
 
 module LevelsHelper
   include ApplicationHelper
@@ -232,6 +233,7 @@ module LevelsHelper
     # Script-dependent option
     script = @script
     app_options[:scriptId] = script.id if script
+    app_options[:scriptName] = script.name if script
 
     # ScriptLevel-dependent option
     script_level = @script_level
@@ -298,6 +300,9 @@ module LevelsHelper
         fallback_response: @fallback_response,
         callback: @callback,
     }
+
+    app_options[:postMilestone] = Gatekeeper.allows('postMilestone', where: {script_name: app_options[:scriptName]}, default: true)
+
     level_options[:lastAttempt] = @last_attempt
 
     if current_user.nil? || current_user.teachers.empty?

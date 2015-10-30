@@ -3,7 +3,7 @@ title 'Conditional Basics'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 20 - Conditional Basics
+## Unit 3: Lesson 18 - Conditional Basics
 
 # Background
 
@@ -13,7 +13,7 @@ Making decisions based upon accurate information is important in computer games 
 
 * Translate English comparisons from English to Boolean expressions.
 * Determine the truthfulness of Boolean expressions. 
-* Add a decision to your Clicker game. 
+* Create a dice game using conditionals 
 
 
 # Resources

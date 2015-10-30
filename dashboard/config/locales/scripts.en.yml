@@ -661,6 +661,9 @@ en:
           'Improving Digital Assistant: Complex Conditionals': 'Improving Digital Assistant: Complex Conditionals'
           Conditionals with Movie Bot: Conditionals with Movie Bot
           Improving Digital Assistant with Conditionals: Improving Digital Assistant with Conditionals
+          Chained and Nested Conditionals with Movie Bot: Chained and Nested Conditionals with Movie Bot
+          Compound Conditionals with Movie Bot: Compound Conditionals with Movie Bot
+          'Practice PT: Digital Assistant': 'Practice PT: Digital Assistant'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1328,6 +1331,7 @@ en:
           'Data App Part 8: Visualize Data': 'Data App Part 8: Visualize Data'
           'Data App Part 9: Reflect': 'Data App Part 9: Reflect'
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
