@@ -245,7 +245,7 @@ end
 #########################################################################################
 
 def compare_files
-  Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/pt/promote/*.md").each do |i18n_file|
+  Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |i18n_file|
     pattern = /..\/..\/pegasus\/sites.v3\/hourofcode.com\/i18n\/public\/[a-z][a-z]/
     source_file = i18n_file.gsub(pattern, "../locales/source/hourofcode")
 
