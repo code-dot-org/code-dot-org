@@ -7,7 +7,7 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "includes": null
+      "ifElseBlock": null
     },
     "edit_code": true,
     "encrypted_examples": [

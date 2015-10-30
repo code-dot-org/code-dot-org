@@ -101,7 +101,7 @@
 
     ],
     "embed": "false",
-    "instructions": "hi",
+    "instructions": "hi hi",
     "markdown_instructions": "hi",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -129,7 +129,10 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "data_properties": "{\r\n  \"sarah\": \"hi\"\r\n}",
-    "start_blocks": "//this is some starting code"
+    "start_blocks": "//this is some starting code",
+    "droplet_tooltips_disabled": "false",
+    "execute_palette_apis_only": "false",
+    "debugger_disabled": "false"
   }
 }]]></config>
   <blocks/>
