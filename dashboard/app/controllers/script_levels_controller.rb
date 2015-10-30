@@ -1,3 +1,4 @@
+require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 
 class ScriptLevelsController < ApplicationController
