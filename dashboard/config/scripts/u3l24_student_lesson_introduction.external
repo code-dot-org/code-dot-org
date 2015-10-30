@@ -6,12 +6,13 @@ markdown <<MARKDOWN
 ## Unit 3: Lesson 24 - Conditionals with Movie Bot
 
 # Background
-To make your digital assistant respond to user input, you must evaluate keywords within the input using conditionals (also known as selection). More complex conditionals add nested if-statements - will enable your digital assistant to generate unique responses to a specific set of keywords. Once your digital assistant is able to respond to multiple different inputs, you need to prove it works correctly.
+To make your digital assistant respond to user input, you must evaluate keywords within the input using conditionals (also known as selection). More complex conditional logic liked chained and nested if-statements will enable your digital assistant to generate unique responses to a specific set of keywords. Use this practice of adding conditional logic to Movie Bot to brainstorm ways you could use conditional logic within your own digital assistant.
 
 # Lesson
 
-* Use boolean expressions within an if statement to direct the logical flow of a program
-* Add nested conditionals to the digital assistant project
+* Add conditional logic to the Movie Bot to make it respond differently to user input
+* Introduction to the includes command
+* Brainstorm ideas for digital assistant project
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
