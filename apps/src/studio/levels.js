@@ -1694,7 +1694,7 @@ levels.js_hoc2015_move_right = {
       "element_id": "#runButton",
       "qtip_config": {
         "content": {
-          "text": msg.calloutRunButton(),
+          "text": msg.calloutMoveRightRunButton(),
         },
         'position': {
           'my': 'top left',
@@ -1746,7 +1746,7 @@ levels.js_hoc2015_move_right_down = {
      [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],   
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],  
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
-  'instructions': '"We need more scrap metal. Can you get all the metal on this planet?"',
+  'instructions': '"We need more scrap metal. Can you get all the metal in this area?"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -2274,7 +2274,7 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
   'instructions': '"Watch out for the MAN."',
-  'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN!',
+  'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN and get all the pilots!',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2553,7 +2553,7 @@ levels.js_hoc2015_change_setting = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"Time to visit another planet."',
-  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.',
+  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.  Then, get the pilots.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2608,6 +2608,16 @@ levels.js_hoc2015_event_free = {
     'addPoints': { 'category': 'Commands' },
     'removePoints': { 'category': 'Commands' },
 
+    'goRight': { 'category': 'Commands' },
+    'goLeft': { 'category': 'Commands' },
+    'goUp': { 'category': 'Commands' },
+    'goDown': { 'category': 'Commands' },
+
+    'whenLeft': { 'category': 'Events' },
+    'whenRight': { 'category': 'Events' },
+    'whenUp': { 'category': 'Events' },
+    'whenDown': { 'category': 'Events' },
+
     'whenTouchObstacle': { 'category': 'Events' },
     'whenGetMan': { 'category': 'Events' },
     'whenGetPilot': { 'category': 'Events' },
@@ -2633,6 +2643,18 @@ levels.js_hoc2015_event_free = {
     'setBot("bot1");',
     'setBotSpeed("normal");',
     'playSound("character1sound5");',
+    'function whenUp() {',
+    '  ',
+    '}',
+    'function whenDown() {',
+    '  ',
+    '}',
+    'function whenLeft() {',
+    '  ',
+    '}',
+    'function whenRight() {',
+    '  ',
+    '}',
     ''].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
@@ -2644,7 +2666,6 @@ levels.js_hoc2015_event_free = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"You\'re on your own now, BOT1."',
-  'autoArrowSteer': true,
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_event_free:clickCategory',
