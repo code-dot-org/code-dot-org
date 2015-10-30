@@ -9,4 +9,3 @@ results = query_subscribed_contacts(q: query)
 puts "#{results.count} uk posters"
 
 export_contacts_to_csv results, "uk-posters.csv"
-

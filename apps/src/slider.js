@@ -22,6 +22,7 @@
  * @author fraser@google.com (Neil Fraser)
  */
 'use strict';
+var SVG_NS = require('./constants').SVG_NS;
 var dom = require('./dom');
 
 /**
@@ -51,7 +52,7 @@ var Slider = function(x, y, width, svgParent, opt_changeFunc) {
       transform="translate(67, 23)"
       d="m 8,0 l -8,8 v 12 h 16 v -12 z" />
   */
-  var track = document.createElementNS(Slider.SVG_NS_, 'line');
+  var track = document.createElementNS(SVG_NS, 'line');
   track.setAttribute('class', 'sliderTrack');
   track.setAttribute('x1', x);
   track.setAttribute('y1', y);
@@ -59,7 +60,7 @@ var Slider = function(x, y, width, svgParent, opt_changeFunc) {
   track.setAttribute('y2', y);
   svgParent.appendChild(track);
   this.track_ = track;
-  var knob = document.createElementNS(Slider.SVG_NS_, 'path');
+  var knob = document.createElementNS(SVG_NS, 'path');
   knob.setAttribute('class', 'sliderKnob');
   knob.setAttribute('d', 'm 0,0 l -8,8 v 12 h 16 v -12 z');
   svgParent.appendChild(knob);
@@ -87,8 +88,6 @@ var Slider = function(x, y, width, svgParent, opt_changeFunc) {
   // touchmove target moves above or below the SVG element.
   Slider.bindEvent_(document, 'mouseover', Slider.mouseOver_);
 };
-
-Slider.SVG_NS_ = 'http://www.w3.org/2000/svg';
 
 Slider.activeSlider_ = null;
 Slider.startMouseX_ = 0;

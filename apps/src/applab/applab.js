@@ -347,7 +347,7 @@ function renderFooterInSharedGame() {
     },
     {
       text: applabMsg.makeMyOwnApp(),
-      link: '/projects/applab',
+      link: '/projects/applab/new',
       hideOnMobile: true
     },
     {
@@ -529,7 +529,7 @@ function handleExecutionError(err, lineNumber) {
 }
 
 Applab.getCode = function () {
-  return studioApp.editor.getValue();
+  return studioApp.getCode();
 };
 
 Applab.getHtml = function () {
@@ -667,6 +667,9 @@ Applab.init = function(config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   Applab.channelId = config.channel;
+  if (config.assetPathPrefix) {
+    Applab.assetPathPrefix = config.assetPathPrefix;
+  }
 
   // Pre-populate asset list
   assetsApi.ajax('GET', '', function (xhr) {
@@ -778,6 +781,10 @@ Applab.init = function(config) {
     if (!utils.browserSupportsCssMedia()) {
       studioApp.resizeVisualization(300);
     }
+
+    if (studioApp.share) {
+      Applab.startSharedAppAfterWarnings();
+    }
   };
 
   config.afterEditorReady = function() {
@@ -794,10 +801,6 @@ Applab.init = function(config) {
           studioApp.editor.setBreakpoint(e.line);
         }
       });
-    }
-
-    if (studioApp.share) {
-      Applab.startSharedAppAfterWarnings();
     }
   };
 
@@ -1322,11 +1325,13 @@ Applab.execute = function() {
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = studioApp.editor.getValue();
-    // Our ace worker also calls attachToSession, but it won't run on IE9:
-    var session = studioApp.editor.aceEditor.getSession();
-    annotationList.attachToSession(session, studioApp.editor);
-    annotationList.clearRuntimeAnnotations();
+    codeWhenRun = studioApp.getCode();
+    if (!studioApp.hideSource) {
+      // Our ace worker also calls attachToSession, but it won't run on IE9:
+      var session = studioApp.editor.aceEditor.getSession();
+      annotationList.attachToSession(session, studioApp.editor);
+      annotationList.clearRuntimeAnnotations();
+    }
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Applab.Globals namespace)
@@ -1501,6 +1506,9 @@ Applab.onCodeModeButton = function() {
 
 var HTTP_REGEXP = new RegExp('^http://');
 
+// Exposed for testing
+Applab.assetPathPrefix = "/v3/assets/";
+
 /**
  * If the filename is relative (contains no slashes), then prepend
  * the path to the assets directory for this project to the filename.
@@ -1517,11 +1525,15 @@ Applab.maybeAddAssetPathPrefix = function (filename) {
   }
 
   filename = filename || '';
+  if (filename.length === 0) {
+    return '/blockly/media/1x1.gif';
+  }
+
   if (filename.indexOf('/') !== -1) {
     return filename;
   }
 
-  return '/v3/assets/' + Applab.channelId + '/'  + filename;
+  return Applab.assetPathPrefix + Applab.channelId + '/'  + filename;
 };
 
 /**
@@ -1648,7 +1660,7 @@ Applab.onPuzzleComplete = function(submit) {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = studioApp.editor.getValue();
+    program = studioApp.getCode();
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);

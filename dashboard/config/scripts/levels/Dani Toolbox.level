@@ -7,7 +7,7 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "getText": null
+      "ifElseBlock": null
     },
     "edit_code": true,
     "encrypted_examples": [
@@ -39,7 +39,8 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

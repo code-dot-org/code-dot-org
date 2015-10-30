@@ -1,4 +1,5 @@
 require 'digest/sha1'
+require 'dynamic_config/gatekeeper'
 
 module LevelsHelper
   include ApplicationHelper
@@ -159,13 +160,17 @@ module LevelsHelper
   def render_app_dependencies
     use_droplet = app_options[:droplet]
     use_netsim = @level.game == Game.netsim
+    use_applab = @level.game == Game.applab
     use_blockly = !use_droplet && !use_netsim
+    hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
            locals: {
                app: app_options[:app],
                use_droplet: use_droplet,
                use_netsim: use_netsim,
                use_blockly: use_blockly,
+               use_applab: use_applab,
+               hide_source: hide_source,
                static_asset_base_path: app_options[:baseUrl]
            }
   end
@@ -228,6 +233,7 @@ module LevelsHelper
     # Script-dependent option
     script = @script
     app_options[:scriptId] = script.id if script
+    app_options[:scriptName] = script.name if script
 
     # ScriptLevel-dependent option
     script_level = @script_level
@@ -294,6 +300,9 @@ module LevelsHelper
         fallback_response: @fallback_response,
         callback: @callback,
     }
+
+    app_options[:postMilestone] = Gatekeeper.allows('postMilestone', where: {script_name: app_options[:scriptName]}, default: true)
+
     level_options[:lastAttempt] = @last_attempt
 
     if current_user.nil? || current_user.teachers.empty?

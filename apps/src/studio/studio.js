@@ -33,6 +33,7 @@ var Hammer = utils.getHammer();
 var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
+var ImageFilterFactory = require('./ImageFilterFactory');
 var ThreeSliceAudio = require('./ThreeSliceAudio');
 var MusicController = require('./MusicController');
 
@@ -56,7 +57,7 @@ var KeyCodes = sharedConstants.KeyCodes;
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
-var SVG_NS = "http://www.w3.org/2000/svg";
+var SVG_NS = sharedConstants.SVG_NS;
 
 // Whether we are showing debug information
 var showDebugInfo = false;
@@ -355,30 +356,48 @@ var drawMap = function () {
     numFrames = skin.animatedGoalFrames;
   }
 
+  // Calculate the dimensions of the spritesheet & the sprite itself that's rendered
+  // out of it.  Precedence order is skin.goalSpriteWidth/Height, goalOverride.imageWidth/Height,
+  // and then Studio.MARKER_WIDTH/HEIGHT.
+  //
+  // Legacy levels might specify goalOverride.imageWidth/Height which are dimensions
+  // of the entire spritesheet, and rely upon studio's default MARKER_WIDTH/HEIGHT which
+  // are dimensions of the sprite itself.
+  // Newer levels might specify skin.goalSpriteWith/Height which are the dimensions of the
+  // sprite itself.  The dimensions of the spritesheet are calculated using skin.animatedGoalFrames.
+  // The fallback dimensions of both spritesheet and sprite are studio's default
+  // MARKER_WIDTH/HEIGHT.
+
+  var spritesheetWidth = skin.goalSpriteWidth ? (skin.goalSpriteWidth * numFrames) :
+    utils.valueOr(goalOverride.imageWidth, Studio.MARKER_WIDTH);
+  var spritesheetHeight = skin.goalSpriteHeight ? skin.goalSpriteHeight :
+    utils.valueOr(goalOverride.imageHeight, Studio.MARKER_HEIGHT);
+
+  var spriteWidth = utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH);
+  var spriteHeight = utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT);
+
   if (Studio.spriteGoals_) {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
       // Add finish markers.
-
-      var width = goalOverride.imageWidth || Studio.MARKER_WIDTH;
-      var height = goalOverride.imageHeight || Studio.MARKER_HEIGHT;
 
       var finishClipPath = document.createElementNS(SVG_NS, 'clipPath');
       finishClipPath.setAttribute('id', 'finishClipPath' + i);
       var finishClipRect = document.createElementNS(SVG_NS, 'rect');
       finishClipRect.setAttribute('id', 'finishClipRect' + i);
-      finishClipRect.setAttribute('width', width);
-      finishClipRect.setAttribute('height', height);
+      finishClipRect.setAttribute('width', spriteWidth);
+      finishClipRect.setAttribute('height', spriteHeight);
       finishClipPath.appendChild(finishClipRect);
       svg.appendChild(finishClipPath);
 
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
-      spriteFinishMarker.setAttribute('width', numFrames * width);
-      spriteFinishMarker.setAttribute('height', height);
+      spriteFinishMarker.setAttribute('width', spritesheetWidth);
+      spriteFinishMarker.setAttribute('height', spritesheetHeight);
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
       svg.appendChild(spriteFinishMarker);
     }
   }
+  Studio.applyGoalEffect();
 
   var score = document.createElementNS(SVG_NS, 'text');
   score.setAttribute('id', 'score');
@@ -445,6 +464,48 @@ function collisionTest(x1, x2, xVariance, y1, y2, yVariance) {
 function overlappingTest(x1, x2, xVariance, y1, y2, yVariance) {
   return (Math.abs(x1 - x2) < xVariance) && (Math.abs(y1 - y2) < yVariance);
 }
+
+/** @type {ImageFilter} */
+var goalFilterEffect = null;
+
+/**
+ * Apply the effect specified in skin.goalEffect to all of the goal objects
+ * in the level.
+ */
+Studio.applyGoalEffect = function () {
+  if (!Studio.spriteGoals_) {
+    return;
+  }
+
+  if (!goalFilterEffect) {
+    var svg = document.getElementById('svgStudio');
+    goalFilterEffect = ImageFilterFactory.makeFilterOfType(skin.goalEffect, svg);
+  }
+
+  var spriteFinishMarker;
+  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
+    spriteFinishMarker = document.getElementById('spriteFinish' + i);
+    if (goalFilterEffect) {
+      goalFilterEffect.applyTo(spriteFinishMarker);
+    }
+  }
+};
+
+/**
+ * Remove the effect specified in skin.goalEffect from all of the goal objects
+ * in the level.
+ */
+Studio.removeGoalEffect = function () {
+  if (!Studio.spriteGoals_ || !goalFilterEffect) {
+    return;
+  }
+
+  var spriteFinishMarker;
+  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
+    spriteFinishMarker = document.getElementById('spriteFinish' + i);
+    goalFilterEffect.removeFrom(spriteFinishMarker);
+  }
+};
 
 /**
  * @param scope Object :  The scope in which to execute the delegated function.
@@ -775,11 +836,19 @@ function sortDrawOrder() {
   }
 
   // Now sort everything by y.
-
   itemsArray = _.sortBy(itemsArray, 'y');
 
-  for (i = 0; i < itemsArray.length; ++i) {
-    spriteLayer.appendChild(itemsArray[i].element);
+  // Carefully place the elements back in the DOM starting at the end of the
+  // spriteLayer and, one by one, insert them before the previous one
+  // (this prevents flashing in Safari vs. an in-order appendChild() loop)
+  var prevNode;
+  for (i = itemsArray.length - 1; i >= 0; i--) {
+    if (prevNode) {
+      spriteLayer.insertBefore(itemsArray[i].element, prevNode);
+    } else {
+      spriteLayer.appendChild(itemsArray[i].element);
+    }
+    prevNode = itemsArray[i].element;
   }
 }
 
@@ -953,13 +1022,13 @@ Studio.onTick = function() {
   sortDrawOrder();
 
   var currentTime = new Date().getTime();
- 
+
   if (!Studio.succeededTime && checkFinished()) {
     Studio.succeededTime = currentTime;
   }
 
-  if (Studio.succeededTime && 
-      !spritesNeedMoreAnimationFrames && 
+  if (Studio.succeededTime &&
+      !spritesNeedMoreAnimationFrames &&
       (!level.delayCompletion || currentTime > Studio.succeededTime + level.delayCompletion)) {
     Studio.onPuzzleComplete();
   }
@@ -1061,7 +1130,7 @@ function handleActorCollisionsWithCollidableList (
         if (autoDisappear) {
           if (list.length === 1 && list === Studio.items) {
             // NOTE: we do this only for the Item list (not projectiles)
-            
+
             // NOTE: if items are allowed to move outOfBounds(), this may never
             // be called because the last item may not be removed here.
             callHandler('whenGetAllItems');
@@ -1563,14 +1632,19 @@ Studio.init = function(config) {
     }
   });
 
+  var levelTracks = [];
+  if (level.music && skin.musicMetadata) {
+    levelTracks = skin.musicMetadata.filter(function(trackMetadata) {
+      return level.music.indexOf(trackMetadata.name) !== -1;
+    });
+  }
+
   /**
    * Helper that handles music loading/playing/crossfading for the level.
    * @type {MusicController}
    */
   Studio.musicController = new MusicController(
-      studioApp.cdoSounds,
-      skin.assetUrl,
-      utils.valueOr(level.music, skin.music));
+      studioApp.cdoSounds, skin.assetUrl, levelTracks);
 
   /**
    * Defines the set of possible movement sound effects for each playlab actor.
@@ -2048,6 +2122,8 @@ Studio.runButtonClick = function() {
 
   // Stop the music the first time the run button is pressed (hoc2015)
   Studio.musicController.fadeOut();
+  // Remove goal filter effects the first time the run button is pressed
+  Studio.removeGoalEffect();
 
   studioApp.reset(false);
   studioApp.attempts++;
@@ -2427,11 +2503,13 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = studioApp.editor.getValue();
-    // Our ace worker also calls attachToSession, but it won't run on IE9:
-    var session = studioApp.editor.aceEditor.getSession();
-    annotationList.attachToSession(session, studioApp.editor);
-    annotationList.clearRuntimeAnnotations();
+    var codeWhenRun = studioApp.getCode();
+    if (!studioApp.hideSource) {
+      // Our ace worker also calls attachToSession, but it won't run on IE9:
+      var session = studioApp.editor.aceEditor.getSession();
+      annotationList.attachToSession(session, studioApp.editor);
+      annotationList.clearRuntimeAnnotations();
+    }
     Studio.JSInterpreter = new JSInterpreter({
       code: codeWhenRun,
       blocks: dropletConfig.blocks,
@@ -2498,7 +2576,7 @@ Studio.onPuzzleComplete = function() {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = studioApp.editor.getValue();
+    program = studioApp.getCode();
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
@@ -2675,7 +2753,7 @@ Studio.drawDebugLine = function(className, x1, y1, x2, y2, color) {
 
 /**
  * Draw a timeout rectangle across the bottom of the play area.
- * It doesn't appear until halfway through the level, and briefly fades in 
+ * It doesn't appear until halfway through the level, and briefly fades in
  * when first appearing.
  */
 Studio.drawTimeoutRect = function() {
@@ -2694,7 +2772,7 @@ Studio.drawTimeoutRect = function() {
   var currentFraction = timeRemaining / Studio.timeoutFailureTick;
 
   if (currentFraction <= startFadeInAt) {
-    var opacity = currentFraction < endFadeInAt ? 1 : 
+    var opacity = currentFraction < endFadeInAt ? 1 :
       1 - (currentFraction - endFadeInAt) / (startFadeInAt - endFadeInAt);
 
     var width = timeRemaining * Studio.MAZE_WIDTH / (Studio.timeoutFailureTick * startFadeInAt);
@@ -2799,7 +2877,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   tile.setAttribute('width', numSrcCols * tileSize);
   tile.setAttribute('height', numSrcRows * tileSize);
   tile.setAttribute('x', col * Studio.SQUARE_SIZE - srcCol * tileSize + addOffset);
-  tile.setAttribute('y', row * Studio.SQUARE_SIZE - srcRow * tileSize + addOffset); 
+  tile.setAttribute('y', row * Studio.SQUARE_SIZE - srcRow * tileSize + addOffset);
   tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', tiles);
   svg.appendChild(tile);
 
@@ -2807,7 +2885,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
 
   var tileEntry = {};
   tileEntry.bottomY = row * Studio.SQUARE_SIZE + addOffset + tileSize;
-  Studio.tiles.push(tileEntry);  
+  Studio.tiles.push(tileEntry);
 };
 
 Studio.createLevelItems = function (svg) {
@@ -2871,7 +2949,7 @@ Studio.drawMapTiles = function (svg) {
           tilesDrawn[row][col] = true;
           tilesDrawn[row][col+1] = true;
           tilesDrawn[row+1][col] = true;
-          tilesDrawn[row+1][col+1] = true;          
+          tilesDrawn[row+1][col+1] = true;
         }
 
         Studio.drawWallTile(spriteLayer, wallVal, row, col);
@@ -3053,7 +3131,7 @@ Studio.animateGoals = function() {
     elapsed = currentTime - Studio.startTime;
     numFrames = skin.animatedGoalFrames;
     frameDuration = skin.timePerGoalAnimationFrame;
-    frameWidth = level.goalOverride.imageWidth;
+    frameWidth = skin.goalSpriteWidth;
   }
 
   for (var i = 0; i < Studio.spriteGoals_.length; i++) {
@@ -3066,7 +3144,7 @@ Studio.animateGoals = function() {
       if (animate) {
         var baseX = parseInt(goalClipRect.getAttribute('x'), 10);
         var frame = Math.floor(elapsed / frameDuration) % numFrames;
-    
+
         goalSprite.setAttribute('x', baseX - frame * frameWidth);
       }
 
@@ -3080,7 +3158,7 @@ Studio.animateGoals = function() {
             opacity = 0;
             goal.startFadeTime = null;
           }
-          
+
           goalSprite.setAttribute('opacity', opacity);
         }
       }
@@ -3107,7 +3185,7 @@ Studio.displayFloatingScore = function(changeValue) {
   floatingScore.setAttribute('x', sprite.x + sprite.width/2);
   floatingScore.setAttribute('y', sprite.y + sprite.height/2);
   floatingScore.setAttribute('opacity', 1);
-  floatingScore.setAttribute('visibility', 'visible');  
+  floatingScore.setAttribute('visibility', 'visible');
 };
 
 Studio.updateFloatingScore = function() {
@@ -3743,7 +3821,7 @@ Studio.endGame = function(opts) {
     Studio.setScoreText({text: studioMsg.winMessage()});
   } else if (winValue== "lose") {
     Studio.trackedBehavior.hasLostGame = true;
-    Studio.setScoreText({text: studioMsg.loseMessage()});  
+    Studio.setScoreText({text: studioMsg.loseMessage()});
   } else {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
@@ -3896,7 +3974,7 @@ Studio.fixSpriteLocation = function () {
         for (var col = minCol; col <= maxCol; col++) {
           if (! Studio.getWallValue(row, col)) {
 
-            sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2 - 
+            sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2 -
               skin.wallCollisionRectOffsetX;
             sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 -
               skin.wallCollisionRectOffsetY;
@@ -3990,7 +4068,8 @@ Studio.setSprite = function (opts) {
 
   spriteIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.sprite);
   spriteIcon.setAttribute('width', sprite.drawWidth * spriteTotalFrames(spriteIndex));
-  spriteIcon.setAttribute('height', sprite.drawHeight);
+  var extraHeight = (sprite.frameCounts.extraEmotions || 0) * sprite.drawHeight;
+  spriteIcon.setAttribute('height', sprite.drawHeight + extraHeight);
 
   if (spriteWalk) {
     // And set up the cliprect so we can show the right item from the spritesheet.
@@ -3999,18 +4078,22 @@ Studio.setSprite = function (opts) {
     spriteWalkClipRect.setAttribute('height', sprite.drawHeight);
 
     spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.walk);
-    spriteWalk.setAttribute('width', sprite.drawWidth * sprite.frameCounts.turns); // 800
+
+    var extraWidth = (sprite.frameCounts.extraEmotions || 0) * sprite.drawWidth;
+    spriteWalk.setAttribute('width', extraWidth + sprite.drawWidth * sprite.frameCounts.turns); // 800
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
   // Set up movement audio for the selected sprite (clips should be preloaded)
+  // First, stop any movement audio for the current character.
+  Studio.movementAudioOff();
   if (!Studio.movementAudioEffects[spriteValue] && skin.avatarList) {
     var spriteSkin = skin[spriteValue] || {};
     var audioConfig = spriteSkin.movementAudio || [];
     Studio.movementAudioEffects[spriteValue] = [];
     if (studioApp.cdoSounds) {
       Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
-        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
+        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption);
       });
     }
   }
@@ -4020,6 +4103,10 @@ Studio.setSprite = function (opts) {
   Studio.displaySprite(spriteIndex);
 };
 
+var moveAudioState = false;
+Studio.isMovementAudioOn = function () {
+  return moveAudioState;
+};
 
 Studio.movementAudioOn = function () {
   Studio.movementAudioOff();
@@ -4028,12 +4115,14 @@ Studio.movementAudioOn = function () {
   if (Studio.currentMovementAudio) {
     Studio.currentMovementAudio.on();
   }
+  moveAudioState = true;
 };
 
 Studio.movementAudioOff = function () {
   if (Studio.currentMovementAudio) {
     Studio.currentMovementAudio.off();
   }
+  moveAudioState = false;
 };
 
 var p = function (x,y) {
@@ -4671,8 +4760,7 @@ Studio.moveSingle = function (opts) {
       sprite.y = projectedY;
     }
 
-    if (opts.dir !== Studio.lastMoveSingleDir &&
-        lastMove === Infinity || Studio.tickCount > lastMove + 1) {
+    if (!Studio.isMovementAudioOn()) {
       Studio.movementAudioOn();
     }
   }
@@ -4804,7 +4892,7 @@ Studio.allGoalsVisited = function() {
               goal.startFadeTime = new Date().getTime();
             }
 
-            callHandler('whenTouchGoal');  
+            callHandler('whenTouchGoal');
 
             break;
           }
@@ -4818,7 +4906,7 @@ Studio.allGoalsVisited = function() {
 
       // Play a sound unless we've hit the last flag (though that can be
       // overridden by the skin)
-      if (playSound && 
+      if (playSound &&
           (finishedGoals !== Studio.spriteGoals_.length || skin.playFinalGoalSound)) {
         studioApp.playAudio('flag');
       }
@@ -4826,8 +4914,8 @@ Studio.allGoalsVisited = function() {
       if (skin.goalSuccess) {
         // Change the finish icon to goalSuccess.
         var successAsset = skin.goalSuccess;
-        if (level.goalOverride && level.goalOverride.success) {
-          successAsset = skin[level.goalOverride.success];
+        if (level.goalOverride && level.goalOverride.successImage) {
+          successAsset = skin[level.goalOverride.successImage];
         }
         var spriteFinishIcon = document.getElementById('spriteFinish' + i);
         spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
@@ -4910,7 +4998,7 @@ Studio.conditionSatisfied = function(required) {
  * criteria affects progress, otherwise an object that contains information
  * about the specific succeeding or failing criteria.
  *
- * @param {Array} conditions. 
+ * @param {Array} conditions.
  * @returns {ProgressConditionOutcome|null}
  */
 Studio.checkProgressConditions = function() {

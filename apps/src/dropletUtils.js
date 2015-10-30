@@ -99,7 +99,9 @@ standardConfig.blocks = [
   {func: 'equalityOperator', block: '__ == __', category: 'Math' },
   {func: 'inequalityOperator', block: '__ != __', category: 'Math' },
   {func: 'greaterThanOperator', block: '__ > __', category: 'Math' },
+  {func: 'greaterThanOrEqualOperator', block: '__ >= __', category: 'Math' },
   {func: 'lessThanOperator', block: '__ < __', category: 'Math' },
+  {func: 'lessThanOrEqualOperator', block: '__ <= __', category: 'Math' },
   {func: 'andOperator', block: '__ && __', category: 'Math' },
   {func: 'orOperator', block: '__ || __', category: 'Math' },
   {func: 'notOperator', block: '!__', category: 'Math' },
@@ -411,7 +413,7 @@ function getModeOptionFunctionsFromConfig(config) {
 /**
  * Generate modeOptions for the droplet editor based on some level data.
  */
-exports.generateDropletModeOptions = function (dropletConfig, options) {
+exports.generateDropletModeOptions = function (config) {
   var modeOptions = {
     functions: {
     },
@@ -421,7 +423,7 @@ exports.generateDropletModeOptions = function (dropletConfig, options) {
       conditionals: { color: COLOR_BLUE },
       loops: {
         color: COLOR_BLUE,
-        beginner: options.beginnerMode || false
+        beginner: config.level.beginnerMode || false
       },
       functions: { color: COLOR_GREEN },
       returns: { color: COLOR_BLUE },
@@ -437,7 +439,7 @@ exports.generateDropletModeOptions = function (dropletConfig, options) {
   $.extend(modeOptions.functions,
     getModeOptionFunctionsFromConfig({ blocks: exports.dropletGlobalConfigBlocks }),
     getModeOptionFunctionsFromConfig({ blocks: exports.dropletBuiltinConfigBlocks }),
-    getModeOptionFunctionsFromConfig(dropletConfig)
+    getModeOptionFunctionsFromConfig(config.dropletConfig)
   );
 
   return modeOptions;
