@@ -2172,6 +2172,7 @@ var displayFeedback = function() {
     studioApp.displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
+      hideIcon: skin.hideIconInClearPuzzle,
       feedbackType: Studio.testResults,
       executionError: Studio.executionError,
       tryAgainText: tryAgainText,
