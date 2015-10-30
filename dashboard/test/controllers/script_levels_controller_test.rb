@@ -26,9 +26,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @custom_s2_l2 = create(:script_level, script: @custom_script,
                            stage: @custom_stage_2, :position => 2)
     client_state.reset
-
-    Gatekeeper.clear
-    DCDO.clear
   end
 
   test 'should show script level for twenty hour' do
