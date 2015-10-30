@@ -26,9 +26,10 @@ module LevelsHelper
   # @param [Hash] data Data to store in the channel.
   # @param [String] src Optional source channel to copy data from, instead of
   #   using the value from the `data` param.
-  def create_channel(data = {}, src = nil)
-
-    storage_app = StorageApps.new(storage_id('user'))
+  # @param [User] user Optional user to own the new channel.
+  def create_channel(data = {}, src = nil, user = nil)
+    owner_storage_id = user ? storage_id_for_user(user.id) : storage_id('user')
+    storage_app = StorageApps.new(owner_storage_id)
     if src
       data = storage_app.get(src)
       data['name'] = "Remix: #{data['name']}"
@@ -59,7 +60,10 @@ module LevelsHelper
       # set_level_source to load answers when looking at another user,
       # we have to load the channel here.
 
-      channel_token = ChannelToken.find_by(level: host_level, user: @user)
+      channel_token = ChannelToken.find_or_create_by!(level: host_level, user: @user) do |ct|
+        # Get a new channel_id.
+        ct.channel = create_channel({hidden: true}, nil, @user)
+      end
       readonly_view_options
     else
       # If `create` fails because it was beat by a competing request, a second
