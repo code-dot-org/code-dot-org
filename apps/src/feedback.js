@@ -898,16 +898,18 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
 
 /**
  * Display the "Clear Puzzle" confirmation dialog.  Calls `callback` if the user
- * confirms they want to clear the puzzle.
+ * confirms they want to clear the puzzle.  Takes optional parameter to hide the
+ * icon.
  */
-FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback) {
+FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback, hideIcon) {
   this.showSimpleDialog(Dialog, {
     headerText: msg.clearPuzzleConfirmHeader(),
     bodyText: msg.clearPuzzleConfirm(),
     confirmText: msg.clearPuzzle(),
     cancelText: msg.dialogCancel(),
     onConfirm: callback,
-    onCancel: null
+    onCancel: null,
+    hideIcon: hideIcon
   });
 };
 
@@ -919,6 +921,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback)
  * @param {string} bodyText Text for body portion
  * @param {string} cancelText Text for cancel button
  * @param {string} confirmText Text for confirm button
+ * @param {boolean} hideIcon Whether to hide the icon
  * @param {function} [onConfirm] Function to be called after clicking confirm
  * @param {function} [onCancel] Function to be called after clicking cancel
  */
@@ -945,7 +948,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   var dialog = this.createModalDialog({
     Dialog: Dialog,
     contentDiv: contentDiv,
-    icon: this.studioApp_.icon,
+    icon: options.hideIcon ? null : this.studioApp_.icon,
     defaultBtnSelector: '#again-button'
   });
 
