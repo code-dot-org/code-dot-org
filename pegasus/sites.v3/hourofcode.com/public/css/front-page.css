@@ -104,7 +104,7 @@
 
 .prizes-header {
   margin-top: 25px;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .giftcard {
@@ -118,4 +118,8 @@
 .multiple-event-warning {
   font-size: 12px;
   line-height: 14px;
+}
+
+.ast {
+  color: #008b9a;
 }
