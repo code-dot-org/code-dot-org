@@ -444,9 +444,9 @@ StudioApp.prototype.init = function(config) {
   var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
   if (clearPuzzleHeader) {
     dom.addClickTouchEvent(clearPuzzleHeader, (function() {
-      this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
+      this.feedback_.showClearPuzzleConfirmation(this.Dialog, hideIcon, (function() {
         this.handleClearPuzzle(config);
-      }).bind(this), hideIcon);
+      }).bind(this));
     }).bind(this));
   }
 
