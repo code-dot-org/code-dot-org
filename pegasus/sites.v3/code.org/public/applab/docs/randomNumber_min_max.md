@@ -81,7 +81,7 @@ for (var i = 0; i &lt; 50; i++) {
 </pre>
 </td>
 <td style="border-style:none; width:10%; padding:0px">
-<img src='https://images.code.org/0f1b4d2c99d4f541db7ba20fcea58baf-image-1445879305056.gif'>
+<img src='https://images.code.org/b3f96418d84bf7ebe1977070d7d745d2-image-1446232619392.gif'>
 </td>
 </tr>
 </table>
