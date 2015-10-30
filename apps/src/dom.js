@@ -31,7 +31,7 @@ var addEvent = function(element, eventName, handler) {
   if (touchEvent) {
     element.addEventListener(touchEvent, function(e) {
       e.preventDefault();  // Stop mouse events.
-      handler(e);
+      handler.call(this, e);
     }, false);
   }
 };

@@ -14,7 +14,7 @@ Organizeaza un eveniment Hour of Code in timpul Saptamanii Mondiale a Educatiei 
 
   * Stabileste un loc, o dată şi o ora
   * Trimite-i[o scrisoare](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) prin care il inviti pe primar, un congressman, guvernator sau business man sa tina un discurs.
-  * Invită mass-media şi presa locală, ziaristi sau bloggeri tech/educatie. Pentru ajutor, vedeti [ kit-ul de presă](<%= hoc_uri('/resources/press-kit') %>).
+  * Invită mass-media şi presa locală, ziaristi sau bloggeri tech/educatie. Pentru ajutor, vedeti [kit-ul de presă](%= resolve_url('/promote/press-kit') %).
 
 ## 2) In timpul evenimentului dumneavoastra
 

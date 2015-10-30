@@ -8,45 +8,45 @@ from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x7
 
 # Dziękujemy za rejestrację jako organizator Hour of Code!
 
-You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13.
+Umożliwiasz uczniom na całym świecie odbycie jednej Godziny Kodowania, która może zmienić resztę ich życia i która odbędzie się w tygodniu 7-13 grudnia.
 
-*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [Details](https://<%= hostname %>/prizes).
+*Każdy* organizator Godziny Kodowania na świecie otrzyma kartę podarunkową do sklepu Amazon, iTunes lub Windows jako dowód wdzięczności. [Szczegóły](https://<%= hostname %>/prizes).
 
-#### We'll be in touch about new tutorials and other exciting updates. What can you do now?
+#### Pozostaniemy w kontakcie w sprawie nowych samouczków i inny ekscytujących wiadomości. Co możesz zrobić teraz?
 
 ## 1. Nagłaśniaj sprawę
 
-We need your help to reach 100,000 organizers worldwide. Opowiedz swoim znajomym o #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
+Potrzebujemy Twojej pomocy, aby dotrzeć do 100.000 organizatorów na całym świecie. Opowiedz swoim znajomym o #HourOfCode. [Użyj tych pomocnych zasobów](https://<%= hostname %>/promote/resources), aby promować swoje wydarzenie.
 
 <% if international == 'true' %>
 
 ## 2. Poproś swoją szkołę o zorganizowanie Godziny Kodowania
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). <% else %>
+[Wyślij ten email](https://<%= hostname %>/promote/resources#sample-emails) do swojego dyrektora szkoły lub [rozdaj te ulotki](https://<%= hostname %>/promote/resources). <% else %>
 
 ## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup). <% end %>
+[Wyślij ten email](https://<%= hostname %>/promote/resources#sample-emails) do swojego dyrektora szkoły lub [rozdaj te ulotki](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup). <% end %>
 
 ## 3. Poproś swojego pracodawcę o przyłączenie się do akcji
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
+[Wyślij ten email](https://<%= hostname %>/promote/resources#sample-emails) do swojego przełożonego lub prezesa firmy.
 
 ## 4. Promuj Godzinę Kodowania w swojej społeczności
 
-Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
+Zwerbuj lokalną grupę lub nawet kilku znajomych. [Wyślij ten email](https://<%= hostname %>/resources#sample-emails).
 
 ## 6. Poproś władze lokalne o udzielenie wsparcia akcji "Godzina Kodowania"
 
-[Wyślij ten list](https://<%= hostname %>/resources#politicians) do swojego burmistrza, rady miasta lub rady rodziców i zaproś, ich aby odwiedzili Twoją szkołę.
+[Wyślij ten list](https://<%= hostname %>/resources#politicians) do swojego burmistrza, rady miasta lub rady rodziców i zaproś ich, aby odwiedzili Twoją szkołę.
 
-Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
+Dziękuję za prowadzenie ruchu pozwalającego dać każdemu uczniowy szansę nauczenia się podstawowych umiejętności informatycznych.
 
-Hadi Partovi  
-Founder, Code.org
+Hadi Partovi   
+Założyciel, Code.org
 
 * * *
 
-<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+<small> Otrzymujesz tę wiadomość, ponieważ zarejestrowałeś się na Godzinę Kodowania, wspieraną przez ponad 200 partnerów i organizowaną przez Code.org. Code.org jest organizacją 501c 3 non-profit. Nasz adres to 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Nie chcesz otrzymywać tych emaili? <a href="%= unsubscribe_link %">Wyrejestruj się</a>. </small>
 
 ![](<%= tracking_pixel %>)

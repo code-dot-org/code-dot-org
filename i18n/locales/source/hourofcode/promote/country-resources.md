@@ -43,7 +43,7 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 # How-to Guide for Organizations
 
 ## Use this handout to recruit corporations
-<a href="<%= localized_file('/files/corporations.pdf') %>"><img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>"></a>
+[<%= localized_image('/images/fit-500x300/corporations.png') %>](<%= localized_file('/files/corporations.pdf') %>)
 
 ## 1) Try the tutorials:
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.

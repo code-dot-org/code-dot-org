@@ -23,8 +23,11 @@ function AudioPlayer() {}
  *
  * @function
  * @name AudioPlayer#play
- * @param {Object} options
- * @param {number} volume volume for sound playback (between 0.0 and 1.0)
+ * @param {string} soundId - Name of the sound to play
+ * @param {Object} [options]
+ * @param {number} [options.volume] default 1.0, which is "no change"
+ * @param {boolean} [options.loop] default false
+ * @param {function} [options.onEnded]
  */
 
 /**
@@ -100,6 +103,9 @@ Sounds.prototype.register = function (config) {
 
 /**
  * @param {string} soundId - Name of the sound to play
+ * @param {Object} [options]
+ * @param {number} [options.volume] default 1.0, which is "no change"
+ * @param {boolean} [options.loop] default false
  * @param {function} [options.onEnded]
  */
 Sounds.prototype.play = function (soundId, options) {
@@ -161,6 +167,9 @@ function Sound(config, audioContext) {
 }
 
 /**
+ * @param {Object} [options]
+ * @param {number} [options.volume] default 1.0, which is "no change"
+ * @param {boolean} [options.loop] default false
  * @param {function} [options.onEnded]
  */
 Sound.prototype.play = function (options) {

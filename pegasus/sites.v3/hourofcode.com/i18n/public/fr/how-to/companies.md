@@ -23,14 +23,14 @@ nav: how_to_nav
 
 ## 1) Inscrivez-vous
 
-  * Enregistrez votre [Heure de Code](<%= resolve_url('/') %>) durant < % campaign_date('short') = %> l'événement.
+  * Enregistrez votre [Heure de Code](<%= resolve_url('/') %>) durant <%= campaign_date('short') %> l'événement.
   * Promouvoir votre [Heure de Code](<%= resolve_url('/promote') %>) et encouragez les autres à en organiser.
   * Encouragez les **ingénieurs logiciel** de votre entreprise à visiter une salle de classe pour aider les élèves à réaliser Une Heure de Code et leur donner envie d'étudier l'informatique. Ils peuvent [s'inscrire](<%= resolve_url('https://code.org/volunteer/engineer') %>) pour être mis en relation avec une salle de classe ou une école.
 
-## 2) Regardez cette vidéo explicative <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Regardez cette vidéo de présentation <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Choisissez un tutoriel :
 
-Nous allons proposer de nombreux [tutoriels amusants, d'une heure](<%= resolve_url('https://code.org/learn') %>) pour les participants de tout âge, créé par divers partenaires. *de nouveaux tutoriels seront disponibles pour débuter Une Heure de Code < % = campaign_date('full') %>.* [Essayez les tutoriels actuellement disponibles.](<%= resolve_url("https://code.org/learn") %>)
+Nous allons proposer de nombreux [tutoriels amusants, d'une heure](<%= resolve_url('https://code.org/learn') %>) pour les participants de tout âge, créé par divers partenaires. *de nouveaux tutoriels seront disponibles pour débuter Une Heure de Code <%= campaign_date('full') %>.* [Essayez les tutoriels actuellement disponibles.](<%= resolve_url("https://code.org/learn") %>)
 
 **Tous les tutoriels Heure de Code:**
 
@@ -45,7 +45,7 @@ Une meilleure expérience Une Heure de Code implique d'être munis d'ordinateurs
 
   * Testez les tutoriels sur les appareils que vous comptez utiliser. Assurez-vous qu'ils fonctionnent correctement sur les navigateurs internet avec le son et la vidéo.
   * Si le tutoriel que vous choisissez fonctionne mieux avec le son, vous pouvez envisager de fournir des écouteurs.
-  * **Vous n'avez pas suffisamment de materiel informatique ?** Utilisez la [paire de programmation](https://www.youtube.com/watch?v=vgkahOzFH2Q). Invitez les participants à travailler en binôme. Ils verront ainsi que l'informatique est une discipline sociale et collaborative.
+  * **Vous n'avez pas suffisamment de materiel informatique ?** Mettez en place [des binômes pour la programmation](https://www.youtube.com/watch?v=vgkahOzFH2Q). Invitez les participants à travailler en binôme. Ils verront ainsi que l'informatique est une discipline sociale et collaborative.
   * Ou essayez les [tutoriels hors ligne](<%= resolve_url('https://code.org/learn') %>). Ceux-ci ne nécessitent aucun ordinateur et sont d'excellents moyens d'obtenir que plus de participants soient actifs. 
 
 ![](/images/fit-350/group_ipad.jpg)
@@ -57,11 +57,11 @@ Lancez le coup d'envoi de votre Heure de Code en inspirant les participants et e
 **Montrez une vidéo inspirante :**
 
   * La vidéo originale du lancement de Code.org, avec Bill Gates, Mark Zuckerberg et la star du NBA Chris Bosh (Il y a une version [d'1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [de 5 minutes](https://www.youtube.com/watch?v=nKIu9yen5nc), et [de 9 minutes](https://www.youtube.com/watch?v=dU1xS07N-FA) )
-  * La [vidéo de lancement de Une Heure de Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou le < % si @country == 'uk' %> [la vidéo Une Heure de Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) < % d'autre %> [Une Heure de Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * La [vidéo de lancement de Une Heure de Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou le <% if @country == 'uk' %> [la vidéo Une Heure de Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Une Heure de Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Le président Obama fait appel à tous les étudiants pour apprendre l'informatique](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Trouvez plus de vidéos inspirantes [ici](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Quelques idées pour présenter votre Heure de Code :** - Expliquez la manière dont la technologie a eu un impact sur nos vies, avec des exemples pour que les garçons et les filles soient intéressés (parler de la technologie qui consiste à sauver des vies, à aider les gens ou à les connecter). - Si vous êtes une entreprise spécialisée dans les nouvelles technologies, montrer des démonstrations, des produits innovants sur lesquels votre entreprise travaille. - Si vous n'êtes pas dans une entreprise spécialisée dans la technologie, discutez de la façon dont votre entreprise utilise la technologie pour résoudre des problèmes et atteindre ses objectifs. - Inviter les ingénieurs logiciel de votre entreprise à parler. Qu'ils expliquent pourquoi ils ont décidé d'étudier l'informatique et les projets sur lesquels ils travaillent. Consultez les conseils pour intéresser les jeunes filles à l'informatique["> ici](<%= resolve_url('https://code.org/girls') %>).
+**Quelques idées pour présenter votre Heure de Code :** - Expliquez la manière dont la technologie a eu un impact sur nos vies, avec des exemples pour que les garçons et les filles soient intéressés (parler de la technologie qui consiste à sauver des vies, à aider les gens ou à les connecter). - Si vous êtes une entreprise spécialisée dans les nouvelles technologies, montrer des démonstrations, des produits innovants sur lesquels votre entreprise travaille. - Si vous n'êtes pas dans une entreprise spécialisée dans la technologie, discutez de la façon dont votre entreprise utilise la technologie pour résoudre des problèmes et atteindre ses objectifs. - Inviter les ingénieurs logiciel de votre entreprise à parler. Qu'ils expliquent pourquoi ils ont décidé d'étudier l'informatique et les projets sur lesquels ils travaillent. - See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 ## 6) code !
 

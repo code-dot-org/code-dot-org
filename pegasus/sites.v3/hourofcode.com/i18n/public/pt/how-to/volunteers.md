@@ -31,14 +31,14 @@ Conte aos seus amigos e colegas sobre a Hora do Código. Temos milhares de profe
 
 **Modelo de e-mail:**
 
-**Linha de assunto**: Junte-se a mim no voluntariado da Hora do Código
+**Linha de assunto**: Junte-se a mim e seja voluntário na Hora do Código você também!
 
-Se você se lembra de sua primeira linha de código, você sabe que ela moldou o resto da sua vida.
+Se você se lembra de sua primeira linha de código, você sabe que ela foi responsável por tudo o que aconteceu no resto da sua vida.
 
 É disso que se trata a Hora do Código. Nos últimos dois anos, o movimento quebrou estereótipos de como é programar e ajudar mais de 100 milhões de alunos em 180 países a experimentar a ciência da computação pela primeira vez.
 
 **Eu me cadastrei como voluntário em uma sala de aula da região**   
-7.098 professores já pediram ajuda. A Code.org está correspondendo salas de aula a voluntários como você, que podem ajudar os alunos e os professores em sua primeira Hora do Código.
+7.098 professores já pediram ajuda. A Code.org está colocando as salas de aula em contato com voluntários como você, que podem ajudar os alunos e os professores em sua primeira Hora do Código.
 
 Seja [voluntário por uma hora](https://code.org/volunteer/engineer). Depois de se cadastrar, os professores da região poderão entrar em contato com você pedindo ajuda por meio de um formulário de segurança.* Você não pode se voluntariar? [Ajude a divulgar a Hora do Código](https://hourofcode.com/promote).
 
@@ -47,7 +47,7 @@ A maioria das escolas ainda não ensina ciência da computação. A maioria dos 
 
 **[Cadastre-se como voluntário](https://code.org/volunteer/engineer)**
 
-*Seu endereço de e-mail jamais será compartilhado com os professores.
+*Seu endereço de e-mail jamais será divulgado para os professores.
 
 ## 5. Peça para seu empregador participar
 

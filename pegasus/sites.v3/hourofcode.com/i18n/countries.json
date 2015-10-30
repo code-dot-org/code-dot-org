@@ -174,10 +174,10 @@
     "full_name": "France",
     "default_language": "fr",
     "partner_page": "code.org",
-    "campaign_date_start_short": "Dec. 7",
-    "campaign_date_start_long": "December 7",
-    "campaign_date_short": "Dec. 7-13",
-    "campaign_date_full": "December 7-13"
+    "campaign_date_start_short": "7 déc",
+    "campaign_date_start_long": "7 décembre",
+    "campaign_date_short": "7 au 13 déc",
+    "campaign_date_full": "7 au 13 décembre"
   },
   "gr": {
     "full_name": "Greece",

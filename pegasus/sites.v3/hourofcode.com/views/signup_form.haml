@@ -1,21 +1,22 @@
 -#Disabled so the Google Maps API doesn't get included twice, which can cause unexpected errors.
 -#%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
 
--SOLR = Solr::Server.new(host:CDO.solr_server)
--events = SOLR.query(q:"*:*", fq:["kind_s:HocSignup2015", "send_posters_flag_b:true", "location_country_code_s:US"])
-
 #signupform
   %h2= hoc_s(:signup_header).gsub(/%{campaign_date}/, campaign_date("full"))
   %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
     #error_message
 
     .form-group
-      %label.control-label{for: "hoc-name"}= hoc_s(:signup_name_label)
+      %label.control-label{for: "hoc-name"}
+        = hoc_s(:signup_name_label)
+        %span.required-asterisk *
       %div
         %input#hoc-name.form-control{name: "name_s", placeholder: hoc_s(:signup_name_placeholder), required: true, type: "text"}/
 
     .form-group
-      %label.control-label{for: "hoc-email"}= hoc_s(:signup_email_label)
+      %label.control-label{for: "hoc-email"}
+        = hoc_s(:signup_email_label)
+        %span.required-asterisk *
       %div
         %input#hoc-email.form-control{name: "email_s", placeholder: hoc_s(:signup_email_placeholder), type: "text", required: true}/
 
@@ -43,7 +44,7 @@
           %input#hoc-entire-school-flag{name: "entire_school_flag_b", type: "checkbox", value: "1"}/
           =hoc_s(:signup_event_entire_school_label)
 
-    - if @country == 'us' && events.count < 15000
+    - if @country == 'us'
       .form-group
         .checkbox
           %label
@@ -74,7 +75,9 @@
 
     %input{name:'hoc_country_s', type:'hidden', value:@country}
     %input{name:'hoc_company_s', type:'hidden', value:@company}
-
+    %p.multiple-event-warning
+      %span.required-asterisk *
+      = hoc_s(:signup_multiple_event_warning)
     .form-group.submit-btn
       %div
         %button{type: "submit"}= hoc_s(:signup_submit_label)

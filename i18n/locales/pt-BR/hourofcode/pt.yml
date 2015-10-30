@@ -172,7 +172,7 @@ pt:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Prêmios para todos os educadores
   prizes_10k: Uma escola pública de cada Estado dos EUA (e Washington D.C.) ganhará US$10 mil em tecnologia
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
+  prizes_gift_cards: '<i>Cada</i> organizador vai receber <b>US$10,00 na Amazon.com, no iTunes ou na Windows Store</b> como presente de agradecimento!'
   whats_next_header: O que vem depois?
   whats_next_description: "Enviaremos materiais e dicas para seu evento. Novos tutoriais para 2015 estarão disponíveis em breve para qualquer navegador, smartphone ou até mesmo para fazer offline! <a href='http://code.org/learn'>Experimente nossos tutoriais</a>"
   whats_next_how_to: "<a href='/how-to'>Como fazer uma Hora do Código</a>"
@@ -228,7 +228,7 @@ pt:
   signup_event_location_label: Local do evento (opcional)
   signup_special_event_flag_label: Destaque meu evento especial
   signup_special_event_details_label: Detalhes do evento especial
-  signup_send_posters_flag_label: 'Enviar <a href= "/resources#posters">posters</a> para a minha escola ou organização'
+  signup_send_posters_flag_label: 'Envie <a href= "/resources/promote#posters">cartazes</a> para a minha escola ou organização (válido somente para os EUA)'
   signup_send_posters_address_label: Endereço da escola ou organização
   signup_whole_school_flag_label: Este evento é para a escola inteira
   signup_your_event: Registre seu evento
@@ -252,6 +252,9 @@ pt:
   map_search_placeholder: Pesquisar eventos da Hora do Código
   map_search_search: Pesquisar
   map_search_reset: Redefinir
+  map_legend_title: Lenda
+  map_legend_hoc_events: Evento da Hora do Código
+  map_legend_cs_tech_jam: Evento especial
   meta_tag_og_title: A Hora do Código chegou!
   meta_tag_og_description: A Hora do Código é um movimento global que atinge dezenas de milhões de estudantes em mais de 180 países e mais de 40 idiomas. Podem participar pessoas com idades entre 4 e 104 anos.
   meta_tag_twitter_title: A Hora do Código chegou!

@@ -27,7 +27,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Set up nvm
   1. These steps are now necessary because of problems with the newest versions of node. We want to be on node 0.12.4 and npm 2.10.1.
   1. Install node version manager `brew install nvm` 
-    1. follow the instructions in the output of the previous command to finish installing nvm
+    1. follow the instructions in the output of the previous command to finish installing nvm. It should be something like this: `echo "source $(brew --prefix nvm)/nvm.sh" >> ~/.bashrc`
   1. Install the right version of node `nvm install v0.12.4`
   1. Make that your default version `nvm alias default v0.12.4`
   1. reinstall node_modules `cd apps; rm -rf node_modules && npm install; cd ..` (can be skipped if your version of node did not just change)

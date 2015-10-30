@@ -9,12 +9,12 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 1) Регистрирай се
 
   * Регистрирай се за да домакин на[ Hour of Code](%= resolve_url('/') %) по време на <%= campaign_date('short') %>.
-  * Рекламирай своя [ Hour of Code](%= resolve_url('/resources') %) и насърчи другите да се включат.
+  * Рекламирай своя [Hour of Code](%= resolve_url('/promote') %) и насърчи другите да се включат.
 
 ## 1) Гледай видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Избери урок:
 
-Ние ще качим разнообразие от [ забавни, дълги около час уроци](%= resolve_url('https://code.org/learn') %) за ученици от всички възрасти, създадени от различни партньори. *Нови уроци идват за началото на Hour of Code< % = campaign_date('full') % >.* [Опитайте текущите уроци.](%= resolve_url("https://code.org/learn") %)
+Ние ще качим разнообразие от [ забавни, дълги около час уроци](%= resolve_url('https://code.org/learn') %) за ученици от всички възрасти, създадени от различни партньори. *Нови уроци идват за началото на Hour of Code <%= campaign_date('full') %>.* [Опитайте текущите уроци.](%= resolve_url("https://code.org/learn") %)
 
 **Всички уроци на Hour of Code:**
 
@@ -41,7 +41,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 **Покажи вдъхновяващо видео:**
 
   * Оригиналният стартиращ Code.org клип, с участието на Бил Гейтс, Марк Зукерберг и НБА звезда Крис Бош (има версии за [ 1 минута](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5 минути](https://www.youtube.com/watch?v=nKIu9yen5nc) и [ 9 минути](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * Видео[ клипът на първия Hour of Code от 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), или < % ако @country == 'uk' %> [ клипът за часът на кода 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) < % else %> [ Hour of Code 2015 видео](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * Видео[ клипът на първия Hour of Code от 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), или <% if @country == 'uk' %> [ клипът за часът на кода 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [ Hour of Code 2015 видео](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Президентът Обама призовава всички ученици да учат компютърни науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Намери още вдъхновяващи видео клипове [ тук](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -49,7 +49,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
   * Обяснете начина как технологията въздейства на живота ни, с примери, които ще впечатлят момчета и момичета (спасяване на живот, помощ за хората, свързване на хора и др.).
   * В клас направете списък на нещата, които използват код в ежедневния живот.
-  * Вижте съвети за въвличане на момичета в компютърните науки <a href = "< % = resolve_url ('https://code.org/girls') % >" > тук</a>.
+  * See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
 **Нуждаете се от повече насоки?** Изтеглете този [ шаблон на план на урок](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
