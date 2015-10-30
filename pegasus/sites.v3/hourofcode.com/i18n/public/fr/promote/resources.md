@@ -11,7 +11,7 @@ nav: promote_nav
 
 # Promouvoir Une Heure du Code
 
-## Vous voulez organiser Une heure du Code ? [See the how-to guide](<%= resolve_url('/how-to') %>)Voir le guide pratique</0>
+## Vous voulez organiser Une heure du Code ? [Voir le guide pratique](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
