@@ -57,9 +57,10 @@ class ScriptLevelsController < ApplicationController
 
   private
 
-  # Prevent caching for the current page, unless the Gatekeeper configuration for 'script' specifies
-  # that it is publicly cachable, in which case the max-age and s-max-age headers are set based
-  # the 'public-max-age' DCDO configuration value.
+  # Configure http caching for the given script. Caching is disabled unless the
+  # Gatekeeper configuration for 'script' specifies that it is publicly
+  # cachable, in which case the max-age and s-max-age headers are set based the
+  # 'public-max-age' DCDO configuration value.
   def configure_caching(script)
     if script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
       max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_MAX_AGE)
