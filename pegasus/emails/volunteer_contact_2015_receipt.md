@@ -1,6 +1,12 @@
 ---
+<%
+def format_email_address(email, name='')
+  name = "\"#{name.gsub('"', '\"').gsub("'","\\'")}\"" if name =~ /[;,\"\'\(\)]/
+  "#{name} <#{email}>".strip
+end
+%>
+to: '<%= format_email_address(volunteer_email_s, volunteer_name_s) %>'
 from: '"Tanya Parker (Code.org)" <tanya_parker@code.org>'
-to: <%= volunteer_name_s + " <" + volunteer_email_s + ">" %>
 subject: "A teacher is requesting your help for the Hour of Code"
 ---
 
