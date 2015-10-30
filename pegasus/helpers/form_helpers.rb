@@ -148,7 +148,8 @@ def update_form(kind, secret, data)
     data[:name_s] ||= dashboard_user[:name]
   end
 
-  data = validate_form(kind, data)
+  prev_data = JSON.parse(form[:data], :symbolize_names=>true)
+  data = validate_form(kind, prev_data.merge(data))
 
   form[:user_id] = dashboard_user[:id] if dashboard_user && !dashboard_user[:admin]
   form[:email] = data[:email_s].to_s.strip.downcase if data.has_key?(:email_s)
