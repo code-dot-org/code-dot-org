@@ -509,8 +509,7 @@ And(/^I ctrl-([^"]*)$/) do |key|
   @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
 end
 
-And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
-  element = @browser.find_element(:css, selector)
+def press_keys(element, key)
   if key.start_with?(':')
     element.send_keys(make_symbol_if_colon(key))
   else
@@ -527,6 +526,11 @@ And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
       end
     end
   end
+end
+
+And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
+  element = @browser.find_element(:css, selector)
+  press_keys(element, key)
 end
 
 def make_symbol_if_colon(key)
