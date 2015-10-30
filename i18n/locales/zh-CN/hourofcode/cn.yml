@@ -254,6 +254,9 @@ cn:
   map_search_placeholder: 搜索《编程一小时》事件
   map_search_search: 搜索
   map_search_reset: 重置
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: 《编程一小时》在这里
   meta_tag_og_description: 编程一小时活动是一个全球性的活动，在全球180多个国家，有使用30多种语言的数千万学生参与了这个活动。参与者的年龄可以从4岁到104岁。
   meta_tag_twitter_title: 《编程一小时》在这里

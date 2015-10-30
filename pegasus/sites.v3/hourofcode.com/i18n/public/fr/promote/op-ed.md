@@ -13,7 +13,7 @@ nav: promote_nav
   
 
 
-Allez dans [< % = resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) pour trouver des informations sur l'informatique.
+Allez dans [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) pour trouver des informations sur l'informatique.
 
 **Titre : Informatique... Où sont les emplois ?**
 
@@ -45,6 +45,6 @@ Nous devons recruter plus d'enseignants en sciences informatiques et encourager 
 
 Selon l'organisme américain, Bureau of Labor Statistics, d'ici à 2020, il y aura 9,2 millions d'emplois dans les domaines du STEM (Science, Technologie, Ingénierie et mathématiques). La moitié de ces emplois — 4,6 millions — sera dans le secteur de l'informatique ou des technologies de l'information. L'informatique étant le fondement des connaissances du XXIe siècle. Si nos enfants n'ont pas la possibilité d'acquérir les compétences nécessaires, qui prendra ces emplois ?
 
-Cette semaine, <%= campaign_date('full') %>, est la semaine d'éducation des sciences informatiques. Dans les écoles de **[REGION/ACADEMIE]**, nos étudiants participeront à la campagne nationale Une Heure de Code. Notre objectif est de démystifier le sujet de l'informatique et nous l'espérons aiguiser l'appétit des élèves pour en apprendre plus. Je me joindrai à eux, et vous invite à participer également. Tout le monde devrait apprendre à coder. Visitez https://hourofcode.com/ < % = le @country %> pour en savoir plus et vous lancer. Soutenez nos initiatives pour introduire l'informatique dans nos écoles à **[REGION/ACADEMIE]**.
+Cette semaine, <%= campaign_date('full') %>, est la semaine d'éducation des sciences informatiques. Dans les écoles de **[REGION/ACADEMIE]**, nos étudiants participeront à la campagne nationale Une Heure de Code. Notre objectif est de démystifier le sujet de l'informatique et nous l'espérons aiguiser l'appétit des élèves pour en apprendre plus. Je me joindrai à eux, et vous invite à participer également. Tout le monde devrait apprendre à coder. Visitez https://hourofcode.com/<%= @country %> pour en savoir plus et vous lancer. Soutenez nos initiatives pour introduire l'informatique dans nos écoles à **[REGION/ACADEMIE]**.
 
 <%= view :signup_button %>

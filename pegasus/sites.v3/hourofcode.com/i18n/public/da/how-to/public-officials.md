@@ -36,7 +36,7 @@ nav: how_to_nav
 
   1. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/prizes') %>) and in **each state**, one participating school will win **$10,000 in technology**!
 
-  2. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/how-to-event') %>) for a sample run of show, media outreach kit and other event-planning resources. At være vært for et event er en fantastisk måde at promovere Hour of Code og derved øge deltagelsen.
+  2. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/event') %>) for a sample run of show, media outreach kit and other event-planning resources. At være vært for et event er en fantastisk måde at promovere Hour of Code og derved øge deltagelsen.
 
   3. **Attend an event during Computer Science Education Week (<%= campaign_date('short') %>).** [Find classrooms and schools](<%= resolve_url('/events') %>) participating in your district, city or state.
 

@@ -34,7 +34,7 @@ title: <%= hoc_s(:title_how_to_officials) %> layout: wide nav: how_to_nav
 
   1. **Recruter des écoles locales et les municipalités.** Utilisez [cet email](%= resolve_url('/promote/resources#sample-emails') %) ou [ce texte de présentation](%= resolve_url('/promote/stats') %) comme point de départ et jetez un oeil à ce [guide](%= resolve_url('/how-to') %) pour les écoles et les municipalités. Informez-les**que chaque** éducateur participant recevra[un cadeau de remerciement](%= resolve_url('/prizes') %) et dans**chaque état**, une école participante recevra**10 000$ en biens technologiques**!
 
-  2. **Accueillez un événement Une Heure de Code.** Consultez notre[guide d'organisation d'événement](%= resolve_url('/how-to/how-to-event') %) pour un exemple de déroulé d'événements, un dossier de presse ainsi que d'autres ressources. Accueillir un événement est un excellent moyen de promotion d'Une Heure de Code et d'en augmenter la participation.
+  2. **Host an Hour of Code event.** See our [event how-to guide](%= resolve_url('/how-to/event') %) for a sample run of show, media outreach kit and other event-planning resources. Accueillir un événement est un excellent moyen de promotion d'Une Heure de Code et d'en augmenter la participation.
 
   3. **Participez à un événement pendant la Semaine de l'éducation en informatique (<%= campaign_date('short') %>).** [Trouvez des classes et des écoles](%= resolve_url('/events') %) dans votre arrondissement, votre ville ou département.
 

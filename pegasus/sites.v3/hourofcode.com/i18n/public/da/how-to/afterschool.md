@@ -53,7 +53,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
   * Forklare hvordan teknologi påvirker vores liv, med eksempler som både drenge og piger kan være interesseret i. (snak om apps og teknologi, der bruges til at redde liv, hjælpe folk, forbinde mennesker osv).
   * Fortæl om ting fra hverdagen, der indeholder programmer/kode.
-  * Tips til hvordan pigers interesse for programmering vækkes, kan findes [her](<%= resolve_url('https://code.org/girls') %>).
+  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 

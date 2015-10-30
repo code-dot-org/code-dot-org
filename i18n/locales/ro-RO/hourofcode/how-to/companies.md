@@ -28,7 +28,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 ## 2) Priviți acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Alegeti un tutorial:
 
-Vom găzdui o varietate de tutoriale[distractive, de o ora,](%= resolve_url('https://code.org/learn') %) pentru participanţii de toate vârstele, create de o varietate de parteneri. *Tutoriale noi vin să faca din evenimentul Hour of Code 2015 un succes! < % = campaign_date('full') % >.* [Încercaţi tutoriale curente.](%= resolve_url("https://code.org/learn") %)
+Vom găzdui o varietate de tutoriale[distractive, de o ora,](%= resolve_url('https://code.org/learn') %) pentru participanţii de toate vârstele, create de o varietate de parteneri. *Tutoriale noi vin să faca din evenimentul Hour of Code 2015 un succes! <%= campaign_date('full') %>.* [Încercaţi tutoriale curente.](%= resolve_url("https://code.org/learn") %)
 
 **Toate tutorialele Hour of Code:**
 
@@ -59,7 +59,7 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
   * [Videoclipul în care președintele Obama îndeamnă toți elevii să învețe tehnologia computerelor și programare](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Găsiti mai multe video-uri inspirationale [aici](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Idei pentru a prezenta activitatea Hour of Code:** - Explica-le modurile in care tehnologia are impact asupra vietii noaste, cu exemple pe care atat baietii cat si fetele le vor intelege si considera importante (vorbeste despre tehnologia ce salveaza vieti, ce ii ajuta si ii conecteaza pe oameni). - Daca sunteti o companie Tech, faceti demonstratii distractive cu produsele la care compania dvs lucreaza in prezent. - Daca nu sunteti o companie tech, discutati modurile in care compania foloseste tehnologia pentru a rezolva problemele cu care se confrunta in drumul catre succes. 0 Invita ingineri software din compania ta sa vorbeasca despre motivele pentru care au inceput sa studieze tehnologia computerelor si programarea si proiectele la care lucreaza in prezent. Vezi tips-uri pentru a le starni fetelor interesul in tehnologia computerelor si programare. [aici](<%= resolve_url('https://code.org/girls') %).
+**Idei pentru a prezenta activitatea Hour of Code:** - Explica-le modurile in care tehnologia are impact asupra vietii noaste, cu exemple pe care atat baietii cat si fetele le vor intelege si considera importante (vorbeste despre tehnologia ce salveaza vieti, ce ii ajuta si ii conecteaza pe oameni). - Daca sunteti o companie Tech, faceti demonstratii distractive cu produsele la care compania dvs lucreaza in prezent. - Daca nu sunteti o companie tech, discutati modurile in care compania foloseste tehnologia pentru a rezolva problemele cu care se confrunta in drumul catre succes. 0 Invita ingineri software din compania ta sa vorbeasca despre motivele pentru care au inceput sa studieze tehnologia computerelor si programarea si proiectele la care lucreaza in prezent. Vezi tips-uri pentru a le starni fetelor interesul in tehnologia computerelor si programare. [aici](%= resolve_url('https://code.org/girls') %).
 
 ## 6) Programati!
 

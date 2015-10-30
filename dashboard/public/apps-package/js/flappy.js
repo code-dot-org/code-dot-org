@@ -1780,7 +1780,8 @@ var checkFinished = function () {
 
 },{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./api":"/home/ubuntu/staging/apps/build/js/flappy/api.js","./constants":"/home/ubuntu/staging/apps/build/js/flappy/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/flappy/controls.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/flappy/locale.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/flappy/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/flappy/visualization.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -1800,7 +1801,8 @@ return buf.join('');
 }());
 },{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/flappy/controls.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')

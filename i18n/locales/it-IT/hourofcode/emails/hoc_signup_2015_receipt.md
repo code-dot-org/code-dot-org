@@ -8,15 +8,15 @@ da: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#
 
 # Grazie per esserti iscritto per ospitare un evento dell'Ora del Codice!
 
-You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13.
+Stai facendo sì che gli studenti di tutto il mondo possano imparare un'Ora del Codice che può cambiare il resto delle loro vite, dal 7 al 13 dicembre.
 
-*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [Details](https://<%= hostname %>/prizes).
+*Ogni* organizzatore di un'Ora del Codice riceverà **un buono acquisto per Amazon. com, iTunes o Microsoft's Windows Store** come regalo di ringraziamento.[Dettagli](https://<%= hostname %>/prizes).
 
-#### We'll be in touch about new tutorials and other exciting updates. What can you do now?
+#### Saremo in contatto per le nuove lezioni e altri aggiornamenti interessanti. Cosa puoi fare ora?
 
 ## 1. Diffondi la notizia
 
-We need your help to reach 100,000 organizers worldwide. Dì ai tuoi amici de L'Ora del Codice con #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
+Abbiamo bisogno del tuo aiuto per raggiungere i 100.000 organizzatori in tutto il mondo. Dì ai tuoi amici de L'Ora del Codice con #HourOfCode. [ Usa queste utili risorse](https://<%= hostname %>/promote/resources) per promuover il tuo evento.
 
 <% if international == 'true' %>
 

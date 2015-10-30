@@ -219,7 +219,7 @@ ro:
   front_join_us_more_info: "Esti din Romania? Te rugam sa vizitezi <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: Pentru mai multe informaţii, vă rugăm vizitaţi code.org
   front_join_us_n_students_served: '# efectuate'
-  signup_header: 'Organizeaza un eveniment Hour of Code in perioada %{campaign_date}, şi înregistreaza-l aici.'
+  signup_header: 'Organizeaza un eveniment Hour of Code in perioada %{campaign_date} şi înregistreaza-l aici.'
   signup_name_label: Numele tău
   signup_email_label: Adresa de email
   signup_organization_name_label: Numele școlii sau organizaţia
@@ -252,6 +252,9 @@ ro:
   map_search_placeholder: Cauta evenimente Hour of Code
   map_search_search: Cautare
   map_search_reset: Resetare
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Hour of Code este aici
   meta_tag_og_description: Hour of Code este o mişcare globală care ajunge la zeci de milioane de elevi si studenţi din peste 180 de ţări şi peste 30 de limbi vorbite. Vârstele de la 4 la 104 ani.
   meta_tag_twitter_title: Hour of Code este aici

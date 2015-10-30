@@ -43,7 +43,7 @@ Alors que la semaine de <%= campaign_date('start-long') %>, en l'honneur de l'an
 
 Résolu, que le [Assemblée Nationale ou Sénat, État, région, ville ou Commission scolaire]--
 
-(1) soutient la désignation de la semaine d'éducation des sciences informatiques (< % = campaign_date('full') %>) ;
+(1) soutient la désignation de la semaine d'éducation des sciences informatiques (<%= campaign_date('full') %>) ;
 
 (2) encourage les écoles, les éducateurs, les parents et les décideurs à participer à La Semaine d'éducation des sciences informatiques en permettant à leurs étudiants de participer à Une Heure de Code ;
 

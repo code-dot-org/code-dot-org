@@ -8,7 +8,7 @@ nav: prizes_nav
 
 <%= view :signup_button %>
 
-# 2015 Hour of Code prizes
+# Shpërblimet e Orës së Kodimit 2015
 
 <img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize1.jpg" />
 
@@ -24,7 +24,7 @@ nav: prizes_nav
 
 # Shpërblim për secilin organizator
 
-Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox space as a thank-you gift!
+Çdo mësues që organizon një Orë Kodimi për studentët fiton 10 GB hapësirë në Dropbox si dhuratë falenderimi!
 
 <% else %>
 

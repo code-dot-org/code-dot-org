@@ -314,7 +314,8 @@ Jigsaw.onPuzzleComplete = function() {
 
 },{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/jigsaw/controls.html.ejs"}],"/home/ubuntu/staging/apps/build/js/jigsaw/controls.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
