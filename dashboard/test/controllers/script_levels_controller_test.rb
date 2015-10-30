@@ -26,15 +26,71 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @custom_s2_l2 = create(:script_level, script: @custom_script,
                            stage: @custom_stage_2, :position => 2)
     client_state.reset
+
+    Gatekeeper.clear
+    DCDO.clear
   end
 
   test 'should show script level for twenty hour' do
     @controller.expects :slog
 
-    get :show, script_id: @script, stage_id: @script_level.stage.position, id: @script_level.position
+    get_show_script_level_page(@script, @script_level)
+    assert_response :success
+    assert_equal @script_level, assigns(:script_level)
+  end
+
+  test 'should make script level pages uncachable by default' do
+    get_show_script_level_page(@script, @script_level)
+
+    # Make sure the content is not cachable by default
     assert_response :success
 
-    assert_equal @script_level, assigns(:script_level)
+    assert_caching_disabled response.headers['Cache-Control']
+  end
+
+  test 'should make script level pages cachable if configured' do
+    Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
+
+    # Verify the default max age is used if none is specifically configured.
+    get_show_script_level_page(@script, @script_level)
+    assert_caching_enabled response.headers['Cache-Control'], ScriptLevelsController::DEFAULT_PUBLIC_MAX_AGE
+  end
+
+  test 'should make script level pages uncachable if disabled' do
+    # Enable and disable public caching and make sure we're back to uncached.
+    Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
+    Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: false)
+    get_show_script_level_page(@script, @script_level)
+    assert_caching_disabled response.headers['Cache-Control']
+  end
+
+  def get_show_script_level_page(script, script_level)
+    get :show, script_id: @script, stage_id: @script_level.stage.position, id: @script_level.position
+  end
+
+  # Asserts that each expected directive is contained in the cache-control header,
+  # delimited by commas and optional whitespace
+  def assert_cache_control_match(expected_directives, cache_control_header)
+    expected_directives.each do |directive|
+      assert_match(/(^|,)\s*#{directive}\s*(,|$)/, cache_control_header)
+    end
+  end
+
+  def assert_caching_disabled(cache_control_header)
+    expected_directives = [
+        'no-cache',
+        'no-store',
+        'must-revalidate',
+        'max-age=0']
+    assert_cache_control_match expected_directives, cache_control_header
+  end
+
+  def assert_caching_enabled(cache_control_header, max_age)
+    expected_directives = [
+        'public',
+        "max-age=#{max_age}",
+        "s-maxage=#{max_age}"]
+    assert_cache_control_match expected_directives, cache_control_header
   end
 
   test 'should not log an activity monitor start for netsim' do
