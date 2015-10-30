@@ -126,5 +126,15 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
     font-size: 24px;
     color: $purple;
   }
+
+  details.hoc2015 {
+    & > summary:focus {
+      outline: none;
+    }
+
+    & > p {
+      margin-left: 1em;
+    }
+  }
 }
 
