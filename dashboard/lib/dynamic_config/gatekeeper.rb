@@ -22,7 +22,6 @@ require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
 
 class GatekeeperBase
-  attr_reader :datastore_cache
 
   def initialize(datastore_cache)
     @datastore_cache = datastore_cache
@@ -94,6 +93,31 @@ class GatekeeperBase
 
     datastore_cache = DatastoreCache.new adapter, cache_expiration: cache_expiration
     GatekeeperBase.new datastore_cache
+  end
+
+  # Converts the current config state to a yaml string
+  # @returns [String]
+  def to_yaml
+    gatekeeper = {}
+
+    @datastore_cache.all.each do |feature, rules|
+      gatekeeper[feature] = feature_details = []
+      rules.each do |conditions, value|
+        rule = {"rule" => nil}
+
+        conditions = JSON.load(conditions)
+        if !conditions.empty?
+          where_clause = {}
+          rule['where'] = where_clause
+          conditions.each do |property, value|
+            where_clause[property] = value
+          end
+        end
+        rule['value'] = value
+        feature_details << rule
+      end
+    end
+    YAML.dump(gatekeeper)
   end
 end
 
