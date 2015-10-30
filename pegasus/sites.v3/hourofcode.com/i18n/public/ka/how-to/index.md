@@ -51,7 +51,7 @@ nav: how_to_nav
 
   * ახსენი როგორ გავლენას ახდენს ტექნოლოგია ჩვენს ცხოვრებაზე, ისეთი მაგალითების მოიშველიეთ, რომლებიც გოგონებისთვის და ბიჭებისთვის ერთნაირად საინტერესო იქნება ( ესეუბრეთ სიცოცხლის გადარჩენაზე, ადამიანების დახმარებაზე, ადამიანების ერთმანეთთან დაკავშირებაზე და ა. შ.).
   * კლასთან ერთად ჩამოწერეთ ყოველდღიური გამოყენების საგნები, რომლებიც იყენებენ პროგრამირებას.
-  * რჩევები გოგოების კომპიუტერულ მეცნიერებაში დასაინტერესებლად იხილეთ [აქ](<%= resolve_url('https://code.org/girls') %>).
+  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 **Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
 

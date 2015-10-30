@@ -16,7 +16,7 @@ nav: how_to_nav
 ## 2) Priviți acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Alegeti un tutorial:
 
-Vom găzdui o varietate de tutoriale[distractive, de o ora,](<%= resolve_url('https://code.org/learn') %>) pentru participanţii de toate vârstele, create de o varietate de parteneri. *Tutoriale noi vin să faca din evenimentul Hour of Code 2015 un succes! < % = campaign_date('full') % >.* [Încercaţi tutoriale curente.](<%= resolve_url("https://code.org/learn") %>)
+Vom găzdui o varietate de tutoriale[distractive, de o ora,](<%= resolve_url('https://code.org/learn') %>) pentru participanţii de toate vârstele, create de o varietate de parteneri. *Tutoriale noi vin să faca din evenimentul Hour of Code 2015 un succes! <%= campaign_date('full') %>.* [Încercaţi tutoriale curente.](<%= resolve_url("https://code.org/learn") %>)
 
 **Toate tutorialele Hour of Code:**
 
@@ -51,7 +51,7 @@ Cea mai buna experienta Hour of Code va fi cu un calculator conectat la internet
 
   * Explica-le elevilor modurile in care tehnologia are impact asupra vietilor noastre, cu exemple pe care atat baietii cat si fetele le vor intelege(salvarea vietilor, ajutarea oamenilor, conectarea lor etc.).
   * Faceti o lista cu lucrurile la care folositi programarea in fiecare zi.
-  * Vezi tips-uri pentru a le starni fetelor interesul in tehnologia computerelor si programare. [aici](<%= resolve_url('https://code.org/girls') %).
+  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 **Aveti nevoie de indrumari suplimentare?** Descarcati acest [plan de lectie](/files/EducatorHourofCodeLessonPlanOutline.docx).
 

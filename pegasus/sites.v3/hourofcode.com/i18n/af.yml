@@ -252,6 +252,9 @@ af:
   map_search_placeholder: برای رویدادهای ساعت کدنویسی جستجو کن
   map_search_search: جستجو کن
   map_search_reset: راه اندازی مجدد
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: ساعت کد اینجا است
   meta_tag_og_description: ساعت کد جنبش جهانی رسیدن به ده ها میلیون نفر از دانش آموزان در اضافه تر از 180 کشور و بیش از 30 زبان است. سنین 4-104.
   meta_tag_twitter_title: ساعت کد اینجا است

@@ -252,6 +252,9 @@ ka:
   map_search_placeholder: კოდის ერთი საათის ღონისძიებების ძიება
   map_search_search: ძებნა
   map_search_reset: გადატვირთვა
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: კოდის საათი აქაა
   meta_tag_og_description: 'კოდის ერთი საათი არის გლობალური მოძრაობა რომელის აერთიანებს ათობით მილიონ სტუდენტს 180+ ქვეყნიდან, 40 ენაზე მისაწვდომი ტუტორიალებით. ასაკი: 4-დან 104-მდე.'
   meta_tag_twitter_title: კოდის საათი აქაა

@@ -252,6 +252,9 @@ hi:
   map_search_placeholder: Search for Hour of Code events
   map_search_search: Search
   map_search_reset: Reset
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: The Hour of Code is coming
   meta_tag_og_description: एक घंटा कोड का ये एक जागतिक आंदोलन है जो १८० से भी ज्यादा देशोंके आयु ४ से १०४ के करोडो लोगोसे बानी हुई है
   meta_tag_twitter_title: The Hour of Code is coming

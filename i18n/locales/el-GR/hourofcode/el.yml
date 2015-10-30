@@ -252,6 +252,9 @@ el:
   map_search_placeholder: Αναζήτηση εκδηλώσεων για την Ώρα του Κώδικα
   map_search_search: Αναζήτηση
   map_search_reset: Επαναφορά
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Η Ώρα του Κώδικα είναι εδώ
   meta_tag_og_description: Η Ώρα του Κώδικα είναι ένα παγκόσμιο κίνημα που φτάνει σε δεκάδες εκατομμύρια μαθητές σε 200 χώρες και σε πάνω από 30 γλώσσες. Για ηλικίες 4 έως 104.
   meta_tag_twitter_title: Η Ώρα του Κώδικα είναι εδώ
