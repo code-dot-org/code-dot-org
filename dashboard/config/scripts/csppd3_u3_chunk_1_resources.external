@@ -1,0 +1,28 @@
+name 'CSPPD3-u3 chunk 1 resources'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Unit 3 Overview > Introduction to Functions: Resources
+
+Here are a few resources to help you get started with understanding these CS concepts. Please share any resources you find in the <a href=“http://forum.code.org/c/csp-unit3” target=_blank>forum!</a>
+
+#### Using and Making Simple Functions
+- <a href="https://en.wikipedia.org/wiki/Logo_(programming_language)" target=_blank>History of Turtle Programming</a>
+- <a href="http://www.cs.utah.edu/~germain/PPS/Topics/functions.html" target=_blank>What is a function? (read sections under 'functions' and 'why do we write functions'</a>
+<br>
+
+#### Using and Making Functions with Parameters
+<a href="http://www.w3schools.com/js/js_function_parameters.asp" target=_blank>Functions with parameters</a>
+<br>
+
+#### Simple Looping and Random Numbers
+- <a href="http://www.w3schools.com/jsref/jsref_random.asp" target=_blank>Random function</a>
+- <a href="http://fareedsiddiqui.expertscolumn.com/article/importance-loops-computer-programming-0" target=_blank>Why are loops useful in programming?</a>
+
+
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

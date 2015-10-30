@@ -1,0 +1,28 @@
+name 'CSPPD3-u3 breakdown of u3 chunks'
+css 'unplugged'
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+### Unit 3 Overview > Breaking Down into Lesson Chunks
+<br/>
+
+#### What’s in Unit 3?
+
+In Unit 3, students move through 5 projects in order to construct an understanding of core programming concepts. The chunks of the Unit are: 
+
+- Introduction to Functions
+- Introduction to Events and Apps
+- Introduction to Variables and Strings
+- Introduction to Conditionals
+- Introduction to Loops and Arrays
+- Practice Performance Task
+
+> Students will program in AppLab, with a series of prebuilt levels for each lesson. These levels include student-facing instructions for completing each of the activities, and the toolbox in applab will be scoped to only include the commands needed to complete the activity. See below for an example of how App Lab is set up for Unit 3, including the instructions for students and the contents of the toolbox. 
+
+<br>
+![](https://images.code.org/233c0a3a3dd81edf0218a4edd0594290-image-1446216853248.gif)
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN
