@@ -34,14 +34,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should show script level for twenty hour' do
     @controller.expects :slog
 
-    get_show_script_level_page(@script, @script_level)
+    get_show_script_level_page(@script_level)
     assert_response :success
 
     assert_equal @script_level, assigns(:script_level)
   end
 
   test 'should make script level pages uncachable by default' do
-    get_show_script_level_page(@script, @script_level)
+    get_show_script_level_page(@script_level)
 
     # Make sure the content is not cachable by default
     assert_response :success
@@ -53,7 +53,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
 
     # Verify the default max age is used if none is specifically configured.
-    get_show_script_level_page(@script, @script_level)
+    get_show_script_level_page(@script_level)
     assert_caching_enabled response.headers['Cache-Control'], ScriptLevelsController::DEFAULT_PUBLIC_MAX_AGE
   end
 
@@ -61,12 +61,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # Enable and disable public caching and make sure we're back to uncached.
     Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
     Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: false)
-    get_show_script_level_page(@script, @script_level)
+    get_show_script_level_page(@script_level)
     assert_caching_disabled response.headers['Cache-Control']
   end
 
-  def get_show_script_level_page(script, script_level)
-    get :show, script_id: @script, stage_id: @script_level.stage.position, id: @script_level.position
+  def get_show_script_level_page(script_level)
+    get :show, script_id: script_level.script, stage_id: script_level.stage.position, id: script_level.position
   end
 
   # Asserts that each expected directive is contained in the cache-control header,
