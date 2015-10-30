@@ -84,6 +84,12 @@ class HttpCache
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
+          # Ignore all cookies on publicly cachable hour of code levels.
+          {
+            path: "/s/hoc2015/stage/1/puzzle/*",
+            headers: LANGUAGE_HEADER,
+            cookies: 'none',
+          },
           {
             path: '/api/*',
             headers: LANGUAGE_HEADER,
