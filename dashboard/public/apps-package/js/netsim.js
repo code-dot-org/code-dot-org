@@ -1368,7 +1368,8 @@ NetSim.prototype.resetShard = function () {
 
 },{"../ObservableEvent":"/home/ubuntu/staging/apps/build/js/ObservableEvent.js","../RunLoop":"/home/ubuntu/staging/apps/build/js/RunLoop.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./DashboardUser":"/home/ubuntu/staging/apps/build/js/netsim/DashboardUser.js","./NetSimAlert":"/home/ubuntu/staging/apps/build/js/netsim/NetSimAlert.js","./NetSimBitLogPanel":"/home/ubuntu/staging/apps/build/js/netsim/NetSimBitLogPanel.js","./NetSimConstants":"/home/ubuntu/staging/apps/build/js/netsim/NetSimConstants.js","./NetSimGlobals":"/home/ubuntu/staging/apps/build/js/netsim/NetSimGlobals.js","./NetSimLobby":"/home/ubuntu/staging/apps/build/js/netsim/NetSimLobby.js","./NetSimLocalClientNode":"/home/ubuntu/staging/apps/build/js/netsim/NetSimLocalClientNode.js","./NetSimLogPanel":"/home/ubuntu/staging/apps/build/js/netsim/NetSimLogPanel.js","./NetSimLogger":"/home/ubuntu/staging/apps/build/js/netsim/NetSimLogger.js","./NetSimRouterLogModal":"/home/ubuntu/staging/apps/build/js/netsim/NetSimRouterLogModal.js","./NetSimRouterNode":"/home/ubuntu/staging/apps/build/js/netsim/NetSimRouterNode.js","./NetSimSendPanel":"/home/ubuntu/staging/apps/build/js/netsim/NetSimSendPanel.js","./NetSimShard":"/home/ubuntu/staging/apps/build/js/netsim/NetSimShard.js","./NetSimStatusPanel":"/home/ubuntu/staging/apps/build/js/netsim/NetSimStatusPanel.js","./NetSimTabsComponent":"/home/ubuntu/staging/apps/build/js/netsim/NetSimTabsComponent.js","./NetSimUtils":"/home/ubuntu/staging/apps/build/js/netsim/NetSimUtils.js","./NetSimVisualization":"/home/ubuntu/staging/apps/build/js/netsim/NetSimVisualization.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/controls.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/netsim/locale.js","./page.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/page.html.ejs"}],"/home/ubuntu/staging/apps/build/js/netsim/page.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -1707,7 +1708,8 @@ levels.playground = {
 
 },{"./NetSimConstants":"/home/ubuntu/staging/apps/build/js/netsim/NetSimConstants.js","./Packet":"/home/ubuntu/staging/apps/build/js/netsim/Packet.js"}],"/home/ubuntu/staging/apps/build/js/netsim/controls.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -4147,7 +4149,8 @@ exports.DoAfterDelay.prototype.tick = function (clock) {
 
 },{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimVisualization.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -4471,7 +4474,8 @@ NetSimTabsComponent.prototype.setRouterLogData = function (logData) {
 
 },{"./NetSimConstants":"/home/ubuntu/staging/apps/build/js/netsim/NetSimConstants.js","./NetSimDnsTab":"/home/ubuntu/staging/apps/build/js/netsim/NetSimDnsTab.js","./NetSimGlobals":"/home/ubuntu/staging/apps/build/js/netsim/NetSimGlobals.js","./NetSimMyDeviceTab":"/home/ubuntu/staging/apps/build/js/netsim/NetSimMyDeviceTab.js","./NetSimRouterTab":"/home/ubuntu/staging/apps/build/js/netsim/NetSimRouterTab.js","./NetSimTabsComponent.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimTabsComponent.html.ejs","./NetSimUtils":"/home/ubuntu/staging/apps/build/js/netsim/NetSimUtils.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimTabsComponent.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -4586,7 +4590,8 @@ NetSimStatusPanel.prototype.render = function (data) {
 
 },{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./NetSimPanel.js":"/home/ubuntu/staging/apps/build/js/netsim/NetSimPanel.js","./NetSimStatusPanel.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimStatusPanel.html.ejs","./NetSimUtils":"/home/ubuntu/staging/apps/build/js/netsim/NetSimUtils.js","./locale":"/home/ubuntu/staging/apps/build/js/netsim/locale.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimStatusPanel.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -6187,7 +6192,8 @@ NetSimSendPanel.prototype.onMinimizerClick_ = function () {
 
 },{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./DataConverters":"/home/ubuntu/staging/apps/build/js/netsim/DataConverters.js","./NetSimConstants":"/home/ubuntu/staging/apps/build/js/netsim/NetSimConstants.js","./NetSimGlobals":"/home/ubuntu/staging/apps/build/js/netsim/NetSimGlobals.js","./NetSimLogger":"/home/ubuntu/staging/apps/build/js/netsim/NetSimLogger.js","./NetSimPacketEditor":"/home/ubuntu/staging/apps/build/js/netsim/NetSimPacketEditor.js","./NetSimPacketSizeControl":"/home/ubuntu/staging/apps/build/js/netsim/NetSimPacketSizeControl.js","./NetSimPanel":"/home/ubuntu/staging/apps/build/js/netsim/NetSimPanel.js","./NetSimSendPanel.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimSendPanel.html.ejs","./Packet":"/home/ubuntu/staging/apps/build/js/netsim/Packet.js","./locale":"/home/ubuntu/staging/apps/build/js/netsim/locale.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimSendPanel.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -6394,7 +6400,8 @@ NetSimRouterTab.prototype.setDataRate = function (dataRateBitsPerSecond) {
 
 },{"./NetSimBandwidthControl":"/home/ubuntu/staging/apps/build/js/netsim/NetSimBandwidthControl.js","./NetSimGlobals":"/home/ubuntu/staging/apps/build/js/netsim/NetSimGlobals.js","./NetSimMemoryControl":"/home/ubuntu/staging/apps/build/js/netsim/NetSimMemoryControl.js","./NetSimRouterStatsTable":"/home/ubuntu/staging/apps/build/js/netsim/NetSimRouterStatsTable.js","./NetSimRouterTab.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimRouterTab.html.ejs"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimRouterTab.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -6708,7 +6715,8 @@ NetSimRouterStatsTable.prototype.setDataRate = function (dataRateBitsPerSecond) 
 
 },{"./NetSimLogEntry":"/home/ubuntu/staging/apps/build/js/netsim/NetSimLogEntry.js","./NetSimRouterStatsTable.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimRouterStatsTable.html.ejs","./NetSimUtils":"/home/ubuntu/staging/apps/build/js/netsim/NetSimUtils.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimRouterStatsTable.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -7248,7 +7256,8 @@ NetSimRouterLogModal.prototype.onLogTableChange_ = function () {
 
 },{"./NetSimGlobals":"/home/ubuntu/staging/apps/build/js/netsim/NetSimGlobals.js","./NetSimLogEntry":"/home/ubuntu/staging/apps/build/js/netsim/NetSimLogEntry.js","./NetSimRouterLogModal.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimRouterLogModal.html.ejs","./Packet":"/home/ubuntu/staging/apps/build/js/netsim/Packet.js","./locale":"/home/ubuntu/staging/apps/build/js/netsim/locale.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimRouterLogModal.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -8632,7 +8641,8 @@ NetSimPacketEditor.prototype.consumeFirstBit = function () {
 
 },{"../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./DataConverters":"/home/ubuntu/staging/apps/build/js/netsim/DataConverters.js","./NetSimConstants":"/home/ubuntu/staging/apps/build/js/netsim/NetSimConstants.js","./NetSimEncodingControl":"/home/ubuntu/staging/apps/build/js/netsim/NetSimEncodingControl.js","./NetSimGlobals":"/home/ubuntu/staging/apps/build/js/netsim/NetSimGlobals.js","./NetSimLogPanel":"/home/ubuntu/staging/apps/build/js/netsim/NetSimLogPanel.js","./NetSimPacketEditor.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimPacketEditor.html.ejs","./Packet":"/home/ubuntu/staging/apps/build/js/netsim/Packet.js","./locale":"/home/ubuntu/staging/apps/build/js/netsim/locale.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimPacketEditor.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -8998,7 +9008,8 @@ NetSimPulseRateControl.prototype.valueToShortLabel = function (val) {
 
 },{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./NetSimSlider":"/home/ubuntu/staging/apps/build/js/netsim/NetSimSlider.js","./locale":"/home/ubuntu/staging/apps/build/js/netsim/locale.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimMyDeviceTab.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -9135,7 +9146,8 @@ NetSimMetronome.prototype.setFrequency = function (pulsesPerSecond) {
 
 },{"./NetSimMetronome.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimMetronome.html.ejs"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimMetronome.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -9791,7 +9803,8 @@ NetSimLogPanel.prototype.onMinimizerClick_ = function () {
 
 },{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./NetSimEncodingControl":"/home/ubuntu/staging/apps/build/js/netsim/NetSimEncodingControl.js","./NetSimGlobals":"/home/ubuntu/staging/apps/build/js/netsim/NetSimGlobals.js","./NetSimLogPacket.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimLogPacket.html.ejs","./NetSimLogPanel.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimLogPanel.html.ejs","./NetSimPanel":"/home/ubuntu/staging/apps/build/js/netsim/NetSimPanel.js","./Packet":"/home/ubuntu/staging/apps/build/js/netsim/Packet.js","./locale":"/home/ubuntu/staging/apps/build/js/netsim/locale.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimLogPanel.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -9811,7 +9824,8 @@ return buf.join('');
 }());
 },{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimLogPacket.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -11451,7 +11465,8 @@ NetSimShardSelectionPanel.prototype.setShardButtonClick_ = function () {
 
 },{"../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./NetSimPanel":"/home/ubuntu/staging/apps/build/js/netsim/NetSimPanel.js","./NetSimShardSelectionPanel.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimShardSelectionPanel.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/netsim/locale.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimShardSelectionPanel.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -11877,7 +11892,8 @@ NetSimRemoteNodeSelectionPanel.prototype.enableEverything = function () {
 
 },{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./NetSimConstants":"/home/ubuntu/staging/apps/build/js/netsim/NetSimConstants.js","./NetSimGlobals":"/home/ubuntu/staging/apps/build/js/netsim/NetSimGlobals.js","./NetSimPanel":"/home/ubuntu/staging/apps/build/js/netsim/NetSimPanel.js","./NetSimRemoteNodeSelectionPanel.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimRemoteNodeSelectionPanel.html.ejs","./NetSimRouterNode":"/home/ubuntu/staging/apps/build/js/netsim/NetSimRouterNode.js","./NetSimUtils":"/home/ubuntu/staging/apps/build/js/netsim/NetSimUtils.js","./locale":"/home/ubuntu/staging/apps/build/js/netsim/locale.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimRemoteNodeSelectionPanel.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -18239,7 +18255,8 @@ NetSimDnsTable.prototype.setDnsTableContents = function (tableContents) {
 
 },{"./NetSimConstants":"/home/ubuntu/staging/apps/build/js/netsim/NetSimConstants.js","./NetSimDnsTable.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimDnsTable.html.ejs"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimDnsTable.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -18282,7 +18299,8 @@ return buf.join('');
 }());
 },{"./NetSimConstants":"/home/ubuntu/staging/apps/build/js/netsim/NetSimConstants.js","ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimDnsTab.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -18392,7 +18410,8 @@ NetSimDnsModeControl.prototype.setDnsMode = function (newDnsMode) {
 
 },{"./NetSimConstants":"/home/ubuntu/staging/apps/build/js/netsim/NetSimConstants.js","./NetSimDnsModeControl.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimDnsModeControl.html.ejs"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimDnsModeControl.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -18492,7 +18511,8 @@ NetSimDnsManualControl.prototype.setIsDnsNode = function (isDnsNode) {
 
 },{"./NetSimDnsManualControl.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimDnsManualControl.html.ejs"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimDnsManualControl.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -19717,7 +19737,8 @@ NetSimPanel.prototype.getBody = function () {
 
 },{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./ArgumentUtils":"/home/ubuntu/staging/apps/build/js/netsim/ArgumentUtils.js","./NetSimPanel.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimPanel.html.ejs"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimPanel.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -19878,7 +19899,8 @@ NetSimEncodingControl.encodingsAsHash = function (encodings) {
 
 },{"./NetSimConstants":"/home/ubuntu/staging/apps/build/js/netsim/NetSimConstants.js","./NetSimEncodingControl.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimEncodingControl.html.ejs"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimEncodingControl.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -19913,7 +19935,8 @@ return buf.join('');
 }());
 },{"./NetSimConstants":"/home/ubuntu/staging/apps/build/js/netsim/NetSimConstants.js","./locale":"/home/ubuntu/staging/apps/build/js/netsim/locale.js","ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimBitLogPanel.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -20518,7 +20541,8 @@ NetSimSlider.LogarithmicSlider.prototype.sliderPositionToValue = function (pos) 
 
 },{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./NetSimSlider.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimSlider.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/netsim/locale.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimSlider.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -20977,7 +21001,8 @@ NetSimAlert.success = function (body, options) {
 
 },{"./ArgumentUtils":"/home/ubuntu/staging/apps/build/js/netsim/ArgumentUtils.js","./NetSimAlert.html.ejs":"/home/ubuntu/staging/apps/build/js/netsim/NetSimAlert.html.ejs","./NetSimLogger":"/home/ubuntu/staging/apps/build/js/netsim/NetSimLogger.js"}],"/home/ubuntu/staging/apps/build/js/netsim/NetSimAlert.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -22647,25 +22672,23 @@ if ((typeof module) == 'object' && module.exports) {
 );
 
 },{"crypto":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/index.js":[function(require,module,exports){
-'use strict';
+'use strict'
 
 exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = require('randombytes')
-
 exports.createHash = exports.Hash = require('create-hash')
-
 exports.createHmac = exports.Hmac = require('create-hmac')
 
 var hashes = ['sha1', 'sha224', 'sha256', 'sha384', 'sha512', 'md5', 'rmd160'].concat(Object.keys(require('browserify-sign/algos')))
 exports.getHashes = function () {
-  return hashes;
+  return hashes
 }
 
 var p = require('pbkdf2')
 exports.pbkdf2 = p.pbkdf2
 exports.pbkdf2Sync = p.pbkdf2Sync
 
-var aes = require('browserify-aes');
-[
+var aes = require('browserify-cipher')
+;[
   'Cipher',
   'createCipher',
   'Cipheriv',
@@ -22677,41 +22700,41 @@ var aes = require('browserify-aes');
   'getCiphers',
   'listCiphers'
 ].forEach(function (key) {
-  exports[key] = aes[key];
+  exports[key] = aes[key]
 })
 
-var dh = require('diffie-hellman');
-[
+var dh = require('diffie-hellman')
+;[
   'DiffieHellmanGroup',
   'createDiffieHellmanGroup',
   'getDiffieHellman',
   'createDiffieHellman',
   'DiffieHellman'
 ].forEach(function (key) {
-  exports[key] = dh[key];
+  exports[key] = dh[key]
 })
 
-var sign = require('browserify-sign');
-[
+var sign = require('browserify-sign')
+;[
   'createSign',
   'Sign',
   'createVerify',
   'Verify'
 ].forEach(function (key) {
-  exports[key] = sign[key];
+  exports[key] = sign[key]
 })
 
 exports.createECDH = require('create-ecdh')
 
-var publicEncrypt = require('public-encrypt');
+var publicEncrypt = require('public-encrypt')
 
-[
+;[
   'publicEncrypt',
   'privateEncrypt',
   'publicDecrypt',
   'privateDecrypt'
 ].forEach(function (key) {
-  exports[key] = publicEncrypt[key];
+  exports[key] = publicEncrypt[key]
 })
 
 // the least I can do is make error messages for the rest of the node.js/crypto api.
@@ -22723,11 +22746,11 @@ var publicEncrypt = require('public-encrypt');
       'sorry, ' + name + ' is not implemented yet',
       'we accept pull requests',
       'https://github.com/crypto-browserify/crypto-browserify'
-    ].join('\n'));
+    ].join('\n'))
   }
 })
 
-},{"browserify-aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/browser.js","browserify-sign":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/browser.js","browserify-sign/algos":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/algos.js","create-ecdh":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/index.js","create-hash":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/browser.js","create-hmac":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hmac/browser.js","diffie-hellman":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/browser.js","pbkdf2":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/pbkdf2/browser.js","public-encrypt":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/browser.js","randombytes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/randombytes/browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/browser.js":[function(require,module,exports){
+},{"browserify-cipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/browser.js","browserify-sign":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/browser.js","browserify-sign/algos":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/algos.js","create-ecdh":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/browser.js","create-hash":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/browser.js","create-hmac":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hmac/browser.js","diffie-hellman":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/browser.js","pbkdf2":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/pbkdf2/browser.js","public-encrypt":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/browser.js","randombytes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/randombytes/browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/browser.js":[function(require,module,exports){
 exports.publicEncrypt = require('./publicEncrypt');
 exports.privateDecrypt = require('./privateDecrypt');
 
@@ -22971,11 +22994,45 @@ module.exports = withPublic;
 }).call(this,require("buffer").Buffer)
 },{"bn.js":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/bn.js/lib/bn.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/index.js":[function(require,module,exports){
 arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/index.js"][0].apply(exports,arguments)
-},{"./aesid.json":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/aesid.json","./asn1":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/asn1.js","./fixProc":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/fixProc.js","browserify-aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/browser.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","pbkdf2":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/pbkdf2/browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/fixProc.js":[function(require,module,exports){
+},{"./aesid.json":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/aesid.json","./asn1":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/asn1.js","./fixProc":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/fixProc.js","browserify-aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/browser.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","pbkdf2":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/pbkdf2/browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/fixProc.js":[function(require,module,exports){
 arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/fixProc.js"][0].apply(exports,arguments)
-},{"./EVP_BytesToKey":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/EVP_BytesToKey.js","browserify-aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/browser.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/EVP_BytesToKey.js":[function(require,module,exports){
-arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/EVP_BytesToKey.js"][0].apply(exports,arguments)
-},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","create-hash":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/asn1.js":[function(require,module,exports){
+},{"browserify-aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/browser.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","evp_bytestokey":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/evp_bytestokey/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/browser.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/browser.js"][0].apply(exports,arguments)
+},{"./decrypter":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/decrypter.js","./encrypter":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/encrypter.js","./modes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/encrypter.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/encrypter.js"][0].apply(exports,arguments)
+},{"./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/aes.js","./authCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/authCipher.js","./modes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes.js","./modes/cbc":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cbc.js","./modes/cfb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb.js","./modes/cfb1":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb1.js","./modes/cfb8":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb8.js","./modes/ctr":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/ctr.js","./modes/ecb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/ecb.js","./modes/ofb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/ofb.js","./streamCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/streamCipher.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","cipher-base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/cipher-base/index.js","evp_bytestokey":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/evp_bytestokey/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/decrypter.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/decrypter.js"][0].apply(exports,arguments)
+},{"./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/aes.js","./authCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/authCipher.js","./modes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes.js","./modes/cbc":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cbc.js","./modes/cfb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb.js","./modes/cfb1":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb1.js","./modes/cfb8":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb8.js","./modes/ctr":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/ctr.js","./modes/ecb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/ecb.js","./modes/ofb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/ofb.js","./streamCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/streamCipher.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","cipher-base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/cipher-base/index.js","evp_bytestokey":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/evp_bytestokey/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/evp_bytestokey/index.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/evp_bytestokey/index.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","create-hash/md5":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/md5.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/streamCipher.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/streamCipher.js"][0].apply(exports,arguments)
+},{"./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/aes.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","cipher-base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/cipher-base/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/ofb.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ofb.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/ecb.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ecb.js"][0].apply(exports,arguments)
+},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/ctr.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ctr.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb8.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb8.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb1.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb1.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes/cbc.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cbc.js"][0].apply(exports,arguments)
+},{"buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/modes.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes.js"][0].apply(exports,arguments)
+},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/authCipher.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/authCipher.js"][0].apply(exports,arguments)
+},{"./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/aes.js","./ghash":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/ghash.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor/index.js","cipher-base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/cipher-base/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/cipher-base/index.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/cipher-base/index.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js","stream":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/stream-browserify/index.js","string_decoder":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/string_decoder/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor/index.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/buffer-xor/index.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/ghash.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/ghash.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/browserify-aes/aes.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/aes.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/asn1.js":[function(require,module,exports){
 arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/asn1.js"][0].apply(exports,arguments)
 },{"asn1.js":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1.js":[function(require,module,exports){
 arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1.js"][0].apply(exports,arguments)
@@ -23002,7 +23059,7 @@ arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/cry
 },{"inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/node.js":[function(require,module,exports){
 arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/node.js"][0].apply(exports,arguments)
 },{"../base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/index.js","minimalistic-assert":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/node_modules/minimalistic-assert/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/node_modules/minimalistic-assert/index.js":[function(require,module,exports){
-arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/node_modules/minimalistic-assert/index.js"][0].apply(exports,arguments)
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/node_modules/minimalistic-assert/index.js"][0].apply(exports,arguments)
 },{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/buffer.js":[function(require,module,exports){
 arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/buffer.js"][0].apply(exports,arguments)
 },{"../base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/index.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/public-encrypt/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/api.js":[function(require,module,exports){
@@ -23529,2420 +23586,11 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
   return false;
 };
 
-},{"bn.js":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/miller-rabin/node_modules/bn.js/lib/bn.js","brorand":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/miller-rabin/node_modules/brorand/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/miller-rabin/node_modules/brorand/index.js":[function(require,module,exports){
+},{"bn.js":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/bn.js/lib/bn.js","brorand":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/miller-rabin/node_modules/brorand/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/miller-rabin/node_modules/brorand/index.js":[function(require,module,exports){
 arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/node_modules/brorand/index.js"][0].apply(exports,arguments)
-},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/miller-rabin/node_modules/bn.js/lib/bn.js":[function(require,module,exports){
-(function (module, exports) {
-
-'use strict';
-
-// Utils
-
-function assert(val, msg) {
-  if (!val)
-    throw new Error(msg || 'Assertion failed');
-}
-
-// Could use `inherits` module, but don't want to move from single file
-// architecture yet.
-function inherits(ctor, superCtor) {
-  ctor.super_ = superCtor;
-  var TempCtor = function () {};
-  TempCtor.prototype = superCtor.prototype;
-  ctor.prototype = new TempCtor();
-  ctor.prototype.constructor = ctor;
-}
-
-// BN
-
-function BN(number, base, endian) {
-  // May be `new BN(bn)` ?
-  if (number !== null &&
-      typeof number === 'object' &&
-      Array.isArray(number.words)) {
-    return number;
-  }
-
-  this.sign = false;
-  this.words = null;
-  this.length = 0;
-
-  // Reduction context
-  this.red = null;
-
-  if (base === 'le' || base === 'be') {
-    endian = base;
-    base = 10;
-  }
-
-  if (number !== null)
-    this._init(number || 0, base || 10, endian || 'be');
-}
-if (typeof module === 'object')
-  module.exports = BN;
-else
-  exports.BN = BN;
-
-BN.BN = BN;
-BN.wordSize = 26;
-
-BN.prototype._init = function init(number, base, endian) {
-  if (typeof number === 'number') {
-    return this._initNumber(number, base, endian);
-  } else if (typeof number === 'object') {
-    return this._initArray(number, base, endian);
-  }
-  if (base === 'hex')
-    base = 16;
-  assert(base === (base | 0) && base >= 2 && base <= 36);
-
-  number = number.toString().replace(/\s+/g, '');
-  var start = 0;
-  if (number[0] === '-')
-    start++;
-
-  if (base === 16)
-    this._parseHex(number, start);
-  else
-    this._parseBase(number, base, start);
-
-  if (number[0] === '-')
-    this.sign = true;
-
-  this.strip();
-
-  if (endian !== 'le')
-    return;
-
-  this._initArray(this.toArray(), base, endian);
-};
-
-BN.prototype._initNumber = function _initNumber(number, base, endian) {
-  if (number < 0) {
-    this.sign = true;
-    number = -number;
-  }
-  if (number < 0x4000000) {
-    this.words = [ number & 0x3ffffff ];
-    this.length = 1;
-  } else if (number < 0x10000000000000) {
-    this.words = [
-      number & 0x3ffffff,
-      (number / 0x4000000) & 0x3ffffff
-    ];
-    this.length = 2;
-  } else {
-    assert(number < 0x20000000000000); // 2 ^ 53 (unsafe)
-    this.words = [
-      number & 0x3ffffff,
-      (number / 0x4000000) & 0x3ffffff,
-      1
-    ];
-    this.length = 3;
-  }
-
-  if (endian !== 'le')
-    return;
-
-  // Reverse the bytes
-  this._initArray(this.toArray(), base, endian);
-};
-
-BN.prototype._initArray = function _initArray(number, base, endian) {
-  // Perhaps a Uint8Array
-  assert(typeof number.length === 'number');
-  if (number.length <= 0) {
-    this.words = [ 0 ];
-    this.length = 1;
-    return this;
-  }
-
-  this.length = Math.ceil(number.length / 3);
-  this.words = new Array(this.length);
-  for (var i = 0; i < this.length; i++)
-    this.words[i] = 0;
-
-  var off = 0;
-  if (endian === 'be') {
-    for (var i = number.length - 1, j = 0; i >= 0; i -= 3) {
-      var w = number[i] | (number[i - 1] << 8) | (number[i - 2] << 16);
-      this.words[j] |= (w << off) & 0x3ffffff;
-      this.words[j + 1] = (w >>> (26 - off)) & 0x3ffffff;
-      off += 24;
-      if (off >= 26) {
-        off -= 26;
-        j++;
-      }
-    }
-  } else if (endian === 'le') {
-    for (var i = 0, j = 0; i < number.length; i += 3) {
-      var w = number[i] | (number[i + 1] << 8) | (number[i + 2] << 16);
-      this.words[j] |= (w << off) & 0x3ffffff;
-      this.words[j + 1] = (w >>> (26 - off)) & 0x3ffffff;
-      off += 24;
-      if (off >= 26) {
-        off -= 26;
-        j++;
-      }
-    }
-  }
-  return this.strip();
-};
-
-function parseHex(str, start, end) {
-  var r = 0;
-  var len = Math.min(str.length, end);
-  for (var i = start; i < len; i++) {
-    var c = str.charCodeAt(i) - 48;
-
-    r <<= 4;
-
-    // 'a' - 'f'
-    if (c >= 49 && c <= 54)
-      r |= c - 49 + 0xa;
-
-    // 'A' - 'F'
-    else if (c >= 17 && c <= 22)
-      r |= c - 17 + 0xa;
-
-    // '0' - '9'
-    else
-      r |= c & 0xf;
-  }
-  return r;
-}
-
-BN.prototype._parseHex = function _parseHex(number, start) {
-  // Create possibly bigger array to ensure that it fits the number
-  this.length = Math.ceil((number.length - start) / 6);
-  this.words = new Array(this.length);
-  for (var i = 0; i < this.length; i++)
-    this.words[i] = 0;
-
-  // Scan 24-bit chunks and add them to the number
-  var off = 0;
-  for (var i = number.length - 6, j = 0; i >= start; i -= 6) {
-    var w = parseHex(number, i, i + 6);
-    this.words[j] |= (w << off) & 0x3ffffff;
-    this.words[j + 1] |= w >>> (26 - off) & 0x3fffff;
-    off += 24;
-    if (off >= 26) {
-      off -= 26;
-      j++;
-    }
-  }
-  if (i + 6 !== start) {
-    var w = parseHex(number, start, i + 6);
-    this.words[j] |= (w << off) & 0x3ffffff;
-    this.words[j + 1] |= w >>> (26 - off) & 0x3fffff;
-  }
-  this.strip();
-};
-
-function parseBase(str, start, end, mul) {
-  var r = 0;
-  var len = Math.min(str.length, end);
-  for (var i = start; i < len; i++) {
-    var c = str.charCodeAt(i) - 48;
-
-    r *= mul;
-
-    // 'a'
-    if (c >= 49)
-      r += c - 49 + 0xa;
-
-    // 'A'
-    else if (c >= 17)
-      r += c - 17 + 0xa;
-
-    // '0' - '9'
-    else
-      r += c;
-  }
-  return r;
-}
-
-BN.prototype._parseBase = function _parseBase(number, base, start) {
-  // Initialize as zero
-  this.words = [ 0 ];
-  this.length = 1;
-
-  // Find length of limb in base
-  for (var limbLen = 0, limbPow = 1; limbPow <= 0x3ffffff; limbPow *= base)
-    limbLen++;
-  limbLen--;
-  limbPow = (limbPow / base) | 0;
-
-  var total = number.length - start;
-  var mod = total % limbLen;
-  var end = Math.min(total, total - mod) + start;
-
-  var word = 0;
-  for (var i = start; i < end; i += limbLen) {
-    word = parseBase(number, i, i + limbLen, base);
-
-    this.imuln(limbPow);
-    if (this.words[0] + word < 0x4000000)
-      this.words[0] += word;
-    else
-      this._iaddn(word);
-  }
-
-  if (mod !== 0) {
-    var pow = 1;
-    var word = parseBase(number, i, number.length, base);
-
-    for (var i = 0; i < mod; i++)
-      pow *= base;
-    this.imuln(pow);
-    if (this.words[0] + word < 0x4000000)
-      this.words[0] += word;
-    else
-      this._iaddn(word);
-  }
-};
-
-BN.prototype.copy = function copy(dest) {
-  dest.words = new Array(this.length);
-  for (var i = 0; i < this.length; i++)
-    dest.words[i] = this.words[i];
-  dest.length = this.length;
-  dest.sign = this.sign;
-  dest.red = this.red;
-};
-
-BN.prototype.clone = function clone() {
-  var r = new BN(null);
-  this.copy(r);
-  return r;
-};
-
-// Remove leading `0` from `this`
-BN.prototype.strip = function strip() {
-  while (this.length > 1 && this.words[this.length - 1] === 0)
-    this.length--;
-  return this._normSign();
-};
-
-BN.prototype._normSign = function _normSign() {
-  // -0 = 0
-  if (this.length === 1 && this.words[0] === 0)
-    this.sign = false;
-  return this;
-};
-
-BN.prototype.inspect = function inspect() {
-  return (this.red ? '<BN-R: ' : '<BN: ') + this.toString(16) + '>';
-};
-
-/*
-
-var zeros = [];
-var groupSizes = [];
-var groupBases = [];
-
-var s = '';
-var i = -1;
-while (++i < BN.wordSize) {
-  zeros[i] = s;
-  s += '0';
-}
-groupSizes[0] = 0;
-groupSizes[1] = 0;
-groupBases[0] = 0;
-groupBases[1] = 0;
-var base = 2 - 1;
-while (++base < 36 + 1) {
-  var groupSize = 0;
-  var groupBase = 1;
-  while (groupBase < (1 << BN.wordSize) / base) {
-    groupBase *= base;
-    groupSize += 1;
-  }
-  groupSizes[base] = groupSize;
-  groupBases[base] = groupBase;
-}
-
-*/
-
-var zeros = [
-  '',
-  '0',
-  '00',
-  '000',
-  '0000',
-  '00000',
-  '000000',
-  '0000000',
-  '00000000',
-  '000000000',
-  '0000000000',
-  '00000000000',
-  '000000000000',
-  '0000000000000',
-  '00000000000000',
-  '000000000000000',
-  '0000000000000000',
-  '00000000000000000',
-  '000000000000000000',
-  '0000000000000000000',
-  '00000000000000000000',
-  '000000000000000000000',
-  '0000000000000000000000',
-  '00000000000000000000000',
-  '000000000000000000000000',
-  '0000000000000000000000000'
-];
-
-var groupSizes = [
-  0, 0,
-  25, 16, 12, 11, 10, 9, 8,
-  8, 7, 7, 7, 7, 6, 6,
-  6, 6, 6, 6, 6, 5, 5,
-  5, 5, 5, 5, 5, 5, 5,
-  5, 5, 5, 5, 5, 5, 5
-];
-
-var groupBases = [
-  0, 0,
-  33554432, 43046721, 16777216, 48828125, 60466176, 40353607, 16777216,
-  43046721, 10000000, 19487171, 35831808, 62748517, 7529536, 11390625,
-  16777216, 24137569, 34012224, 47045881, 64000000, 4084101, 5153632,
-  6436343, 7962624, 9765625, 11881376, 14348907, 17210368, 20511149,
-  24300000, 28629151, 33554432, 39135393, 45435424, 52521875, 60466176
-];
-
-BN.prototype.toString = function toString(base, padding) {
-  base = base || 10;
-  if (base === 16 || base === 'hex') {
-    var out = '';
-    var off = 0;
-    var padding = padding | 0 || 1;
-    var carry = 0;
-    for (var i = 0; i < this.length; i++) {
-      var w = this.words[i];
-      var word = (((w << off) | carry) & 0xffffff).toString(16);
-      carry = (w >>> (24 - off)) & 0xffffff;
-      if (carry !== 0 || i !== this.length - 1)
-        out = zeros[6 - word.length] + word + out;
-      else
-        out = word + out;
-      off += 2;
-      if (off >= 26) {
-        off -= 26;
-        i--;
-      }
-    }
-    if (carry !== 0)
-      out = carry.toString(16) + out;
-    while (out.length % padding !== 0)
-      out = '0' + out;
-    if (this.sign)
-      out = '-' + out;
-    return out;
-  } else if (base === (base | 0) && base >= 2 && base <= 36) {
-    // var groupSize = Math.floor(BN.wordSize * Math.LN2 / Math.log(base));
-    var groupSize = groupSizes[base];
-    // var groupBase = Math.pow(base, groupSize);
-    var groupBase = groupBases[base];
-    var out = '';
-    var c = this.clone();
-    c.sign = false;
-    while (c.cmpn(0) !== 0) {
-      var r = c.modn(groupBase).toString(base);
-      c = c.idivn(groupBase);
-
-      if (c.cmpn(0) !== 0)
-        out = zeros[groupSize - r.length] + r + out;
-      else
-        out = r + out;
-    }
-    if (this.cmpn(0) === 0)
-      out = '0' + out;
-    if (this.sign)
-      out = '-' + out;
-    return out;
-  } else {
-    assert(false, 'Base should be between 2 and 36');
-  }
-};
-
-BN.prototype.toJSON = function toJSON() {
-  return this.toString(16);
-};
-
-BN.prototype.toArray = function toArray(endian, length) {
-  this.strip();
-  var littleEndian = endian === 'le';
-  var res = new Array(this.byteLength());
-  res[0] = 0;
-
-  var q = this.clone();
-  if (!littleEndian) {
-    // Assume big-endian
-    for (var i = 0; q.cmpn(0) !== 0; i++) {
-      var b = q.andln(0xff);
-      q.iushrn(8);
-
-      res[res.length - i - 1] = b;
-    }
-  } else {
-    for (var i = 0; q.cmpn(0) !== 0; i++) {
-      var b = q.andln(0xff);
-      q.iushrn(8);
-
-      res[i] = b;
-    }
-  }
-
-  if (length) {
-    assert(res.length <= length, 'byte array longer than desired length');
-
-    while (res.length < length) {
-      if (littleEndian)
-        res.push(0);
-      else
-        res.unshift(0);
-    }
-  }
-
-  return res;
-};
-
-if (Math.clz32) {
-  BN.prototype._countBits = function _countBits(w) {
-    return 32 - Math.clz32(w);
-  };
-} else {
-  BN.prototype._countBits = function _countBits(w) {
-    var t = w;
-    var r = 0;
-    if (t >= 0x1000) {
-      r += 13;
-      t >>>= 13;
-    }
-    if (t >= 0x40) {
-      r += 7;
-      t >>>= 7;
-    }
-    if (t >= 0x8) {
-      r += 4;
-      t >>>= 4;
-    }
-    if (t >= 0x02) {
-      r += 2;
-      t >>>= 2;
-    }
-    return r + t;
-  };
-}
-
-BN.prototype._zeroBits = function _zeroBits(w) {
-  // Short-cut
-  if (w === 0)
-    return 26;
-
-  var t = w;
-  var r = 0;
-  if ((t & 0x1fff) === 0) {
-    r += 13;
-    t >>>= 13;
-  }
-  if ((t & 0x7f) === 0) {
-    r += 7;
-    t >>>= 7;
-  }
-  if ((t & 0xf) === 0) {
-    r += 4;
-    t >>>= 4;
-  }
-  if ((t & 0x3) === 0) {
-    r += 2;
-    t >>>= 2;
-  }
-  if ((t & 0x1) === 0)
-    r++;
-  return r;
-};
-
-// Return number of used bits in a BN
-BN.prototype.bitLength = function bitLength() {
-  var hi = 0;
-  var w = this.words[this.length - 1];
-  var hi = this._countBits(w);
-  return (this.length - 1) * 26 + hi;
-};
-
-// Number of trailing zero bits
-BN.prototype.zeroBits = function zeroBits() {
-  if (this.cmpn(0) === 0)
-    return 0;
-
-  var r = 0;
-  for (var i = 0; i < this.length; i++) {
-    var b = this._zeroBits(this.words[i]);
-    r += b;
-    if (b !== 26)
-      break;
-  }
-  return r;
-};
-
-BN.prototype.byteLength = function byteLength() {
-  return Math.ceil(this.bitLength() / 8);
-};
-
-// Return negative clone of `this`
-BN.prototype.neg = function neg() {
-  if (this.cmpn(0) === 0)
-    return this.clone();
-
-  var r = this.clone();
-  r.sign = !this.sign;
-  return r;
-};
-
-
-// Or `num` with `this` in-place
-BN.prototype.iuor = function iuor(num) {
-  while (this.length < num.length)
-    this.words[this.length++] = 0;
-
-  for (var i = 0; i < num.length; i++)
-    this.words[i] = this.words[i] | num.words[i];
-
-  return this.strip();
-};
-
-BN.prototype.ior = function ior(num) {
-  assert(!this.sign && !num.sign);
-  return this.iuor(num);
-};
-
-
-// Or `num` with `this`
-BN.prototype.or = function or(num) {
-  if (this.length > num.length)
-    return this.clone().ior(num);
-  else
-    return num.clone().ior(this);
-};
-
-BN.prototype.uor = function uor(num) {
-  if (this.length > num.length)
-    return this.clone().iuor(num);
-  else
-    return num.clone().iuor(this);
-};
-
-
-// And `num` with `this` in-place
-BN.prototype.iuand = function iuand(num) {
-  // b = min-length(num, this)
-  var b;
-  if (this.length > num.length)
-    b = num;
-  else
-    b = this;
-
-  for (var i = 0; i < b.length; i++)
-    this.words[i] = this.words[i] & num.words[i];
-
-  this.length = b.length;
-
-  return this.strip();
-};
-
-BN.prototype.iand = function iand(num) {
-  assert(!this.sign && !num.sign);
-  return this.iuand(num);
-};
-
-
-// And `num` with `this`
-BN.prototype.and = function and(num) {
-  if (this.length > num.length)
-    return this.clone().iand(num);
-  else
-    return num.clone().iand(this);
-};
-
-BN.prototype.uand = function uand(num) {
-  if (this.length > num.length)
-    return this.clone().iuand(num);
-  else
-    return num.clone().iuand(this);
-};
-
-
-// Xor `num` with `this` in-place
-BN.prototype.iuxor = function iuxor(num) {
-  // a.length > b.length
-  var a;
-  var b;
-  if (this.length > num.length) {
-    a = this;
-    b = num;
-  } else {
-    a = num;
-    b = this;
-  }
-
-  for (var i = 0; i < b.length; i++)
-    this.words[i] = a.words[i] ^ b.words[i];
-
-  if (this !== a)
-    for (; i < a.length; i++)
-      this.words[i] = a.words[i];
-
-  this.length = a.length;
-
-  return this.strip();
-};
-
-BN.prototype.ixor = function ixor(num) {
-  assert(!this.sign && !num.sign);
-  return this.iuxor(num);
-};
-
-
-// Xor `num` with `this`
-BN.prototype.xor = function xor(num) {
-  if (this.length > num.length)
-    return this.clone().ixor(num);
-  else
-    return num.clone().ixor(this);
-};
-
-BN.prototype.uxor = function uxor(num) {
-  if (this.length > num.length)
-    return this.clone().iuxor(num);
-  else
-    return num.clone().iuxor(this);
-};
-
-
-// Set `bit` of `this`
-BN.prototype.setn = function setn(bit, val) {
-  assert(typeof bit === 'number' && bit >= 0);
-
-  var off = (bit / 26) | 0;
-  var wbit = bit % 26;
-
-  while (this.length <= off)
-    this.words[this.length++] = 0;
-
-  if (val)
-    this.words[off] = this.words[off] | (1 << wbit);
-  else
-    this.words[off] = this.words[off] & ~(1 << wbit);
-
-  return this.strip();
-};
-
-
-// Add `num` to `this` in-place
-BN.prototype.iadd = function iadd(num) {
-  // negative + positive
-  if (this.sign && !num.sign) {
-    this.sign = false;
-    var r = this.isub(num);
-    this.sign = !this.sign;
-    return this._normSign();
-
-  // positive + negative
-  } else if (!this.sign && num.sign) {
-    num.sign = false;
-    var r = this.isub(num);
-    num.sign = true;
-    return r._normSign();
-  }
-
-  // a.length > b.length
-  var a;
-  var b;
-  if (this.length > num.length) {
-    a = this;
-    b = num;
-  } else {
-    a = num;
-    b = this;
-  }
-
-  var carry = 0;
-  for (var i = 0; i < b.length; i++) {
-    var r = a.words[i] + b.words[i] + carry;
-    this.words[i] = r & 0x3ffffff;
-    carry = r >>> 26;
-  }
-  for (; carry !== 0 && i < a.length; i++) {
-    var r = a.words[i] + carry;
-    this.words[i] = r & 0x3ffffff;
-    carry = r >>> 26;
-  }
-
-  this.length = a.length;
-  if (carry !== 0) {
-    this.words[this.length] = carry;
-    this.length++;
-  // Copy the rest of the words
-  } else if (a !== this) {
-    for (; i < a.length; i++)
-      this.words[i] = a.words[i];
-  }
-
-  return this;
-};
-
-// Add `num` to `this`
-BN.prototype.add = function add(num) {
-  if (num.sign && !this.sign) {
-    num.sign = false;
-    var res = this.sub(num);
-    num.sign = true;
-    return res;
-  } else if (!num.sign && this.sign) {
-    this.sign = false;
-    var res = num.sub(this);
-    this.sign = true;
-    return res;
-  }
-
-  if (this.length > num.length)
-    return this.clone().iadd(num);
-  else
-    return num.clone().iadd(this);
-};
-
-// Subtract `num` from `this` in-place
-BN.prototype.isub = function isub(num) {
-  // this - (-num) = this + num
-  if (num.sign) {
-    num.sign = false;
-    var r = this.iadd(num);
-    num.sign = true;
-    return r._normSign();
-
-  // -this - num = -(this + num)
-  } else if (this.sign) {
-    this.sign = false;
-    this.iadd(num);
-    this.sign = true;
-    return this._normSign();
-  }
-
-  // At this point both numbers are positive
-  var cmp = this.cmp(num);
-
-  // Optimization - zeroify
-  if (cmp === 0) {
-    this.sign = false;
-    this.length = 1;
-    this.words[0] = 0;
-    return this;
-  }
-
-  // a > b
-  var a;
-  var b;
-  if (cmp > 0) {
-    a = this;
-    b = num;
-  } else {
-    a = num;
-    b = this;
-  }
-
-  var carry = 0;
-  for (var i = 0; i < b.length; i++) {
-    var r = a.words[i] - b.words[i] + carry;
-    carry = r >> 26;
-    this.words[i] = r & 0x3ffffff;
-  }
-  for (; carry !== 0 && i < a.length; i++) {
-    var r = a.words[i] + carry;
-    carry = r >> 26;
-    this.words[i] = r & 0x3ffffff;
-  }
-
-  // Copy rest of the words
-  if (carry === 0 && i < a.length && a !== this)
-    for (; i < a.length; i++)
-      this.words[i] = a.words[i];
-  this.length = Math.max(this.length, i);
-
-  if (a !== this)
-    this.sign = true;
-
-  return this.strip();
-};
-
-// Subtract `num` from `this`
-BN.prototype.sub = function sub(num) {
-  return this.clone().isub(num);
-};
-
-/*
-// NOTE: This could be potentionally used to generate loop-less multiplications
-function _genCombMulTo(alen, blen) {
-  var len = alen + blen - 1;
-  var src = [
-    'var a = this.words, b = num.words, o = out.words, c = 0, w, ' +
-        'mask = 0x3ffffff, shift = 0x4000000;',
-    'out.length = ' + len + ';'
-  ];
-  for (var k = 0; k < len; k++) {
-    var minJ = Math.max(0, k - alen + 1);
-    var maxJ = Math.min(k, blen - 1);
-
-    for (var j = minJ; j <= maxJ; j++) {
-      var i = k - j;
-      var mul = 'a[' + i + '] * b[' + j + ']';
-
-      if (j === minJ) {
-        src.push('w = ' + mul + ' + c;');
-        src.push('c = (w / shift) | 0;');
-      } else {
-        src.push('w += ' + mul + ';');
-        src.push('c += (w / shift) | 0;');
-      }
-      src.push('w &= mask;');
-    }
-    src.push('o[' + k + '] = w;');
-  }
-  src.push('if (c !== 0) {',
-           '  o[' + k + '] = c;',
-           '  out.length++;',
-           '}',
-           'return out;');
-
-  return src.join('\n');
-}
-*/
-
-BN.prototype._smallMulTo = function _smallMulTo(num, out) {
-  out.sign = num.sign !== this.sign;
-  out.length = this.length + num.length;
-
-  var carry = 0;
-  for (var k = 0; k < out.length - 1; k++) {
-    // Sum all words with the same `i + j = k` and accumulate `ncarry`,
-    // note that ncarry could be >= 0x3ffffff
-    var ncarry = carry >>> 26;
-    var rword = carry & 0x3ffffff;
-    var maxJ = Math.min(k, num.length - 1);
-    for (var j = Math.max(0, k - this.length + 1); j <= maxJ; j++) {
-      var i = k - j;
-      var a = this.words[i] | 0;
-      var b = num.words[j] | 0;
-      var r = a * b;
-
-      var lo = r & 0x3ffffff;
-      ncarry = (ncarry + ((r / 0x4000000) | 0)) | 0;
-      lo = (lo + rword) | 0;
-      rword = lo & 0x3ffffff;
-      ncarry = (ncarry + (lo >>> 26)) | 0;
-    }
-    out.words[k] = rword;
-    carry = ncarry;
-  }
-  if (carry !== 0) {
-    out.words[k] = carry;
-  } else {
-    out.length--;
-  }
-
-  return out.strip();
-};
-
-BN.prototype._bigMulTo = function _bigMulTo(num, out) {
-  out.sign = num.sign !== this.sign;
-  out.length = this.length + num.length;
-
-  var carry = 0;
-  var hncarry = 0;
-  for (var k = 0; k < out.length - 1; k++) {
-    // Sum all words with the same `i + j = k` and accumulate `ncarry`,
-    // note that ncarry could be >= 0x3ffffff
-    var ncarry = hncarry;
-    hncarry = 0;
-    var rword = carry & 0x3ffffff;
-    var maxJ = Math.min(k, num.length - 1);
-    for (var j = Math.max(0, k - this.length + 1); j <= maxJ; j++) {
-      var i = k - j;
-      var a = this.words[i] | 0;
-      var b = num.words[j] | 0;
-      var r = a * b;
-
-      var lo = r & 0x3ffffff;
-      ncarry = (ncarry + ((r / 0x4000000) | 0)) | 0;
-      lo = (lo + rword) | 0;
-      rword = lo & 0x3ffffff;
-      ncarry = (ncarry + (lo >>> 26)) | 0;
-
-      hncarry += ncarry >>> 26;
-      ncarry &= 0x3ffffff;
-    }
-    out.words[k] = rword;
-    carry = ncarry;
-    ncarry = hncarry;
-  }
-  if (carry !== 0) {
-    out.words[k] = carry;
-  } else {
-    out.length--;
-  }
-
-  return out.strip();
-};
-
-BN.prototype.mulTo = function mulTo(num, out) {
-  var res;
-  if (this.length + num.length < 63)
-    res = this._smallMulTo(num, out);
-  else
-    res = this._bigMulTo(num, out);
-  return res;
-};
-
-// Multiply `this` by `num`
-BN.prototype.mul = function mul(num) {
-  var out = new BN(null);
-  out.words = new Array(this.length + num.length);
-  return this.mulTo(num, out);
-};
-
-// In-place Multiplication
-BN.prototype.imul = function imul(num) {
-  if (this.cmpn(0) === 0 || num.cmpn(0) === 0) {
-    this.words[0] = 0;
-    this.length = 1;
-    return this;
-  }
-
-  var tlen = this.length;
-  var nlen = num.length;
-
-  this.sign = num.sign !== this.sign;
-  this.length = this.length + num.length;
-  this.words[this.length - 1] = 0;
-
-  for (var k = this.length - 2; k >= 0; k--) {
-    // Sum all words with the same `i + j = k` and accumulate `carry`,
-    // note that carry could be >= 0x3ffffff
-    var carry = 0;
-    var rword = 0;
-    var maxJ = Math.min(k, nlen - 1);
-    for (var j = Math.max(0, k - tlen + 1); j <= maxJ; j++) {
-      var i = k - j;
-      var a = this.words[i];
-      var b = num.words[j];
-      var r = a * b;
-
-      var lo = r & 0x3ffffff;
-      carry += (r / 0x4000000) | 0;
-      lo += rword;
-      rword = lo & 0x3ffffff;
-      carry += lo >>> 26;
-    }
-    this.words[k] = rword;
-    this.words[k + 1] += carry;
-    carry = 0;
-  }
-
-  // Propagate overflows
-  var carry = 0;
-  for (var i = 1; i < this.length; i++) {
-    var w = this.words[i] + carry;
-    this.words[i] = w & 0x3ffffff;
-    carry = w >>> 26;
-  }
-
-  return this.strip();
-};
-
-BN.prototype.imuln = function imuln(num) {
-  assert(typeof num === 'number');
-
-  // Carry
-  var carry = 0;
-  for (var i = 0; i < this.length; i++) {
-    var w = this.words[i] * num;
-    var lo = (w & 0x3ffffff) + (carry & 0x3ffffff);
-    carry >>= 26;
-    carry += (w / 0x4000000) | 0;
-    // NOTE: lo is 27bit maximum
-    carry += lo >>> 26;
-    this.words[i] = lo & 0x3ffffff;
-  }
-
-  if (carry !== 0) {
-    this.words[i] = carry;
-    this.length++;
-  }
-
-  return this;
-};
-
-BN.prototype.muln = function muln(num) {
-  return this.clone().imuln(num);
-};
-
-// `this` * `this`
-BN.prototype.sqr = function sqr() {
-  return this.mul(this);
-};
-
-// `this` * `this` in-place
-BN.prototype.isqr = function isqr() {
-  return this.mul(this);
-};
-
-// Shift-left in-place
-BN.prototype.iushln = function iushln(bits) {
-  assert(typeof bits === 'number' && bits >= 0);
-  var r = bits % 26;
-  var s = (bits - r) / 26;
-  var carryMask = (0x3ffffff >>> (26 - r)) << (26 - r);
-
-  if (r !== 0) {
-    var carry = 0;
-    for (var i = 0; i < this.length; i++) {
-      var newCarry = this.words[i] & carryMask;
-      var c = (this.words[i] - newCarry) << r;
-      this.words[i] = c | carry;
-      carry = newCarry >>> (26 - r);
-    }
-    if (carry) {
-      this.words[i] = carry;
-      this.length++;
-    }
-  }
-
-  if (s !== 0) {
-    for (var i = this.length - 1; i >= 0; i--)
-      this.words[i + s] = this.words[i];
-    for (var i = 0; i < s; i++)
-      this.words[i] = 0;
-    this.length += s;
-  }
-
-  return this.strip();
-};
-
-BN.prototype.ishln = function ishln(bits) {
-  // TODO(indutny): implement me
-  assert(!this.sign);
-  return this.iushln(bits);
-};
-
-// Shift-right in-place
-// NOTE: `hint` is a lowest bit before trailing zeroes
-// NOTE: if `extended` is present - it will be filled with destroyed bits
-BN.prototype.iushrn = function iushrn(bits, hint, extended) {
-  assert(typeof bits === 'number' && bits >= 0);
-  var h;
-  if (hint)
-    h = (hint - (hint % 26)) / 26;
-  else
-    h = 0;
-
-  var r = bits % 26;
-  var s = Math.min((bits - r) / 26, this.length);
-  var mask = 0x3ffffff ^ ((0x3ffffff >>> r) << r);
-  var maskedWords = extended;
-
-  h -= s;
-  h = Math.max(0, h);
-
-  // Extended mode, copy masked part
-  if (maskedWords) {
-    for (var i = 0; i < s; i++)
-      maskedWords.words[i] = this.words[i];
-    maskedWords.length = s;
-  }
-
-  if (s === 0) {
-    // No-op, we should not move anything at all
-  } else if (this.length > s) {
-    this.length -= s;
-    for (var i = 0; i < this.length; i++)
-      this.words[i] = this.words[i + s];
-  } else {
-    this.words[0] = 0;
-    this.length = 1;
-  }
-
-  var carry = 0;
-  for (var i = this.length - 1; i >= 0 && (carry !== 0 || i >= h); i--) {
-    var word = this.words[i];
-    this.words[i] = (carry << (26 - r)) | (word >>> r);
-    carry = word & mask;
-  }
-
-  // Push carried bits as a mask
-  if (maskedWords && carry !== 0)
-    maskedWords.words[maskedWords.length++] = carry;
-
-  if (this.length === 0) {
-    this.words[0] = 0;
-    this.length = 1;
-  }
-
-  this.strip();
-
-  return this;
-};
-
-BN.prototype.ishrn = function ishrn(bits, hint, extended) {
-  // TODO(indutny): implement me
-  assert(!this.sign);
-  return this.iushrn(bits, hint, extended);
-};
-
-// Shift-left
-BN.prototype.shln = function shln(bits) {
-  return this.clone().ishln(bits);
-};
-
-BN.prototype.ushln = function ushln(bits) {
-  return this.clone().iushln(bits);
-};
-
-// Shift-right
-BN.prototype.shrn = function shrn(bits) {
-  return this.clone().ishrn(bits);
-};
-
-BN.prototype.ushrn = function ushrn(bits) {
-  return this.clone().iushrn(bits);
-};
-
-// Test if n bit is set
-BN.prototype.testn = function testn(bit) {
-  assert(typeof bit === 'number' && bit >= 0);
-  var r = bit % 26;
-  var s = (bit - r) / 26;
-  var q = 1 << r;
-
-  // Fast case: bit is much higher than all existing words
-  if (this.length <= s) {
-    return false;
-  }
-
-  // Check bit and return
-  var w = this.words[s];
-
-  return !!(w & q);
-};
-
-// Return only lowers bits of number (in-place)
-BN.prototype.imaskn = function imaskn(bits) {
-  assert(typeof bits === 'number' && bits >= 0);
-  var r = bits % 26;
-  var s = (bits - r) / 26;
-
-  assert(!this.sign, 'imaskn works only with positive numbers');
-
-  if (r !== 0)
-    s++;
-  this.length = Math.min(s, this.length);
-
-  if (r !== 0) {
-    var mask = 0x3ffffff ^ ((0x3ffffff >>> r) << r);
-    this.words[this.length - 1] &= mask;
-  }
-
-  return this.strip();
-};
-
-// Return only lowers bits of number
-BN.prototype.maskn = function maskn(bits) {
-  return this.clone().imaskn(bits);
-};
-
-// Add plain number `num` to `this`
-BN.prototype.iaddn = function iaddn(num) {
-  assert(typeof num === 'number');
-  if (num < 0)
-    return this.isubn(-num);
-
-  // Possible sign change
-  if (this.sign) {
-    if (this.length === 1 && this.words[0] < num) {
-      this.words[0] = num - this.words[0];
-      this.sign = false;
-      return this;
-    }
-
-    this.sign = false;
-    this.isubn(num);
-    this.sign = true;
-    return this;
-  }
-
-  // Add without checks
-  return this._iaddn(num);
-};
-
-BN.prototype._iaddn = function _iaddn(num) {
-  this.words[0] += num;
-
-  // Carry
-  for (var i = 0; i < this.length && this.words[i] >= 0x4000000; i++) {
-    this.words[i] -= 0x4000000;
-    if (i === this.length - 1)
-      this.words[i + 1] = 1;
-    else
-      this.words[i + 1]++;
-  }
-  this.length = Math.max(this.length, i + 1);
-
-  return this;
-};
-
-// Subtract plain number `num` from `this`
-BN.prototype.isubn = function isubn(num) {
-  assert(typeof num === 'number');
-  if (num < 0)
-    return this.iaddn(-num);
-
-  if (this.sign) {
-    this.sign = false;
-    this.iaddn(num);
-    this.sign = true;
-    return this;
-  }
-
-  this.words[0] -= num;
-
-  // Carry
-  for (var i = 0; i < this.length && this.words[i] < 0; i++) {
-    this.words[i] += 0x4000000;
-    this.words[i + 1] -= 1;
-  }
-
-  return this.strip();
-};
-
-BN.prototype.addn = function addn(num) {
-  return this.clone().iaddn(num);
-};
-
-BN.prototype.subn = function subn(num) {
-  return this.clone().isubn(num);
-};
-
-BN.prototype.iabs = function iabs() {
-  this.sign = false;
-
-  return this;
-};
-
-BN.prototype.abs = function abs() {
-  return this.clone().iabs();
-};
-
-BN.prototype._ishlnsubmul = function _ishlnsubmul(num, mul, shift) {
-  // Bigger storage is needed
-  var len = num.length + shift;
-  var i;
-  if (this.words.length < len) {
-    var t = new Array(len);
-    for (var i = 0; i < this.length; i++)
-      t[i] = this.words[i];
-    this.words = t;
-  } else {
-    i = this.length;
-  }
-
-  // Zeroify rest
-  this.length = Math.max(this.length, len);
-  for (; i < this.length; i++)
-    this.words[i] = 0;
-
-  var carry = 0;
-  for (var i = 0; i < num.length; i++) {
-    var w = this.words[i + shift] + carry;
-    var right = num.words[i] * mul;
-    w -= right & 0x3ffffff;
-    carry = (w >> 26) - ((right / 0x4000000) | 0);
-    this.words[i + shift] = w & 0x3ffffff;
-  }
-  for (; i < this.length - shift; i++) {
-    var w = this.words[i + shift] + carry;
-    carry = w >> 26;
-    this.words[i + shift] = w & 0x3ffffff;
-  }
-
-  if (carry === 0)
-    return this.strip();
-
-  // Subtraction overflow
-  assert(carry === -1);
-  carry = 0;
-  for (var i = 0; i < this.length; i++) {
-    var w = -this.words[i] + carry;
-    carry = w >> 26;
-    this.words[i] = w & 0x3ffffff;
-  }
-  this.sign = true;
-
-  return this.strip();
-};
-
-BN.prototype._wordDiv = function _wordDiv(num, mode) {
-  var shift = this.length - num.length;
-
-  var a = this.clone();
-  var b = num;
-
-  // Normalize
-  var bhi = b.words[b.length - 1];
-  var bhiBits = this._countBits(bhi);
-  shift = 26 - bhiBits;
-  if (shift !== 0) {
-    b = b.ushln(shift);
-    a.iushln(shift);
-    bhi = b.words[b.length - 1];
-  }
-
-  // Initialize quotient
-  var m = a.length - b.length;
-  var q;
-
-  if (mode !== 'mod') {
-    q = new BN(null);
-    q.length = m + 1;
-    q.words = new Array(q.length);
-    for (var i = 0; i < q.length; i++)
-      q.words[i] = 0;
-  }
-
-  var diff = a.clone()._ishlnsubmul(b, 1, m);
-  if (!diff.sign) {
-    a = diff;
-    if (q)
-      q.words[m] = 1;
-  }
-
-  for (var j = m - 1; j >= 0; j--) {
-    var qj = a.words[b.length + j] * 0x4000000 + a.words[b.length + j - 1];
-
-    // NOTE: (qj / bhi) is (0x3ffffff * 0x4000000 + 0x3ffffff) / 0x2000000 max
-    // (0x7ffffff)
-    qj = Math.min((qj / bhi) | 0, 0x3ffffff);
-
-    a._ishlnsubmul(b, qj, j);
-    while (a.sign) {
-      qj--;
-      a.sign = false;
-      a._ishlnsubmul(b, 1, j);
-      if (a.cmpn(0) !== 0)
-        a.sign = !a.sign;
-    }
-    if (q)
-      q.words[j] = qj;
-  }
-  if (q)
-    q.strip();
-  a.strip();
-
-  // Denormalize
-  if (mode !== 'div' && shift !== 0)
-    a.iushrn(shift);
-  return { div: q ? q : null, mod: a };
-};
-
-BN.prototype.divmod = function divmod(num, mode, positive) {
-  assert(num.cmpn(0) !== 0);
-
-  if (this.sign && !num.sign) {
-    var res = this.neg().divmod(num, mode);
-    var div;
-    var mod;
-    if (mode !== 'mod')
-      div = res.div.neg();
-    if (mode !== 'div') {
-      mod = res.mod.neg();
-      if (positive && mod.neg)
-        mod = mod.add(num);
-    }
-    return {
-      div: div,
-      mod: mod
-    };
-  } else if (!this.sign && num.sign) {
-    var res = this.divmod(num.neg(), mode);
-    var div;
-    if (mode !== 'mod')
-      div = res.div.neg();
-    return { div: div, mod: res.mod };
-  } else if (this.sign && num.sign) {
-    var res = this.neg().divmod(num.neg(), mode);
-    var mod;
-    if (mode !== 'div') {
-      mod = res.mod.neg();
-      if (positive && mod.neg)
-        mod = mod.isub(num);
-    }
-    return {
-      div: res.div,
-      mod: mod
-    };
-  }
-
-  // Both numbers are positive at this point
-
-  // Strip both numbers to approximate shift value
-  if (num.length > this.length || this.cmp(num) < 0)
-    return { div: new BN(0), mod: this };
-
-  // Very short reduction
-  if (num.length === 1) {
-    if (mode === 'div')
-      return { div: this.divn(num.words[0]), mod: null };
-    else if (mode === 'mod')
-      return { div: null, mod: new BN(this.modn(num.words[0])) };
-    return {
-      div: this.divn(num.words[0]),
-      mod: new BN(this.modn(num.words[0]))
-    };
-  }
-
-  return this._wordDiv(num, mode);
-};
-
-// Find `this` / `num`
-BN.prototype.div = function div(num) {
-  return this.divmod(num, 'div', false).div;
-};
-
-// Find `this` % `num`
-BN.prototype.mod = function mod(num) {
-  return this.divmod(num, 'mod', false).mod;
-};
-
-BN.prototype.umod = function umod(num) {
-  return this.divmod(num, 'mod', true).mod;
-};
-
-// Find Round(`this` / `num`)
-BN.prototype.divRound = function divRound(num) {
-  var dm = this.divmod(num);
-
-  // Fast case - exact division
-  if (dm.mod.cmpn(0) === 0)
-    return dm.div;
-
-  var mod = dm.div.sign ? dm.mod.isub(num) : dm.mod;
-
-  var half = num.ushrn(1);
-  var r2 = num.andln(1);
-  var cmp = mod.cmp(half);
-
-  // Round down
-  if (cmp < 0 || r2 === 1 && cmp === 0)
-    return dm.div;
-
-  // Round up
-  return dm.div.sign ? dm.div.isubn(1) : dm.div.iaddn(1);
-};
-
-BN.prototype.modn = function modn(num) {
-  assert(num <= 0x3ffffff);
-  var p = (1 << 26) % num;
-
-  var acc = 0;
-  for (var i = this.length - 1; i >= 0; i--)
-    acc = (p * acc + this.words[i]) % num;
-
-  return acc;
-};
-
-// In-place division by number
-BN.prototype.idivn = function idivn(num) {
-  assert(num <= 0x3ffffff);
-
-  var carry = 0;
-  for (var i = this.length - 1; i >= 0; i--) {
-    var w = this.words[i] + carry * 0x4000000;
-    this.words[i] = (w / num) | 0;
-    carry = w % num;
-  }
-
-  return this.strip();
-};
-
-BN.prototype.divn = function divn(num) {
-  return this.clone().idivn(num);
-};
-
-BN.prototype.egcd = function egcd(p) {
-  assert(!p.sign);
-  assert(p.cmpn(0) !== 0);
-
-  var x = this;
-  var y = p.clone();
-
-  if (x.sign)
-    x = x.umod(p);
-  else
-    x = x.clone();
-
-  // A * x + B * y = x
-  var A = new BN(1);
-  var B = new BN(0);
-
-  // C * x + D * y = y
-  var C = new BN(0);
-  var D = new BN(1);
-
-  var g = 0;
-
-  while (x.isEven() && y.isEven()) {
-    x.iushrn(1);
-    y.iushrn(1);
-    ++g;
-  }
-
-  var yp = y.clone();
-  var xp = x.clone();
-
-  while (x.cmpn(0) !== 0) {
-    while (x.isEven()) {
-      x.iushrn(1);
-      if (A.isEven() && B.isEven()) {
-        A.iushrn(1);
-        B.iushrn(1);
-      } else {
-        A.iadd(yp).iushrn(1);
-        B.isub(xp).iushrn(1);
-      }
-    }
-
-    while (y.isEven()) {
-      y.iushrn(1);
-      if (C.isEven() && D.isEven()) {
-        C.iushrn(1);
-        D.iushrn(1);
-      } else {
-        C.iadd(yp).iushrn(1);
-        D.isub(xp).iushrn(1);
-      }
-    }
-
-    if (x.cmp(y) >= 0) {
-      x.isub(y);
-      A.isub(C);
-      B.isub(D);
-    } else {
-      y.isub(x);
-      C.isub(A);
-      D.isub(B);
-    }
-  }
-
-  return {
-    a: C,
-    b: D,
-    gcd: y.iushln(g)
-  };
-};
-
-// This is reduced incarnation of the binary EEA
-// above, designated to invert members of the
-// _prime_ fields F(p) at a maximal speed
-BN.prototype._invmp = function _invmp(p) {
-  assert(!p.sign);
-  assert(p.cmpn(0) !== 0);
-
-  var a = this;
-  var b = p.clone();
-
-  if (a.sign)
-    a = a.umod(p);
-  else
-    a = a.clone();
-
-  var x1 = new BN(1);
-  var x2 = new BN(0);
-
-  var delta = b.clone();
-
-  while (a.cmpn(1) > 0 && b.cmpn(1) > 0) {
-    while (a.isEven()) {
-      a.iushrn(1);
-      if (x1.isEven())
-        x1.iushrn(1);
-      else
-        x1.iadd(delta).iushrn(1);
-    }
-    while (b.isEven()) {
-      b.iushrn(1);
-      if (x2.isEven())
-        x2.iushrn(1);
-      else
-        x2.iadd(delta).iushrn(1);
-    }
-    if (a.cmp(b) >= 0) {
-      a.isub(b);
-      x1.isub(x2);
-    } else {
-      b.isub(a);
-      x2.isub(x1);
-    }
-  }
-
-  var res;
-  if (a.cmpn(1) === 0)
-    res = x1;
-  else
-    res = x2;
-
-  if (res.cmpn(0) < 0)
-    res.iadd(p);
-
-  return res;
-};
-
-BN.prototype.gcd = function gcd(num) {
-  if (this.cmpn(0) === 0)
-    return num.clone();
-  if (num.cmpn(0) === 0)
-    return this.clone();
-
-  var a = this.clone();
-  var b = num.clone();
-  a.sign = false;
-  b.sign = false;
-
-  // Remove common factor of two
-  for (var shift = 0; a.isEven() && b.isEven(); shift++) {
-    a.iushrn(1);
-    b.iushrn(1);
-  }
-
-  do {
-    while (a.isEven())
-      a.iushrn(1);
-    while (b.isEven())
-      b.iushrn(1);
-
-    var r = a.cmp(b);
-    if (r < 0) {
-      // Swap `a` and `b` to make `a` always bigger than `b`
-      var t = a;
-      a = b;
-      b = t;
-    } else if (r === 0 || b.cmpn(1) === 0) {
-      break;
-    }
-
-    a.isub(b);
-  } while (true);
-
-  return b.iushln(shift);
-};
-
-// Invert number in the field F(num)
-BN.prototype.invm = function invm(num) {
-  return this.egcd(num).a.umod(num);
-};
-
-BN.prototype.isEven = function isEven() {
-  return (this.words[0] & 1) === 0;
-};
-
-BN.prototype.isOdd = function isOdd() {
-  return (this.words[0] & 1) === 1;
-};
-
-// And first word and num
-BN.prototype.andln = function andln(num) {
-  return this.words[0] & num;
-};
-
-// Increment at the bit position in-line
-BN.prototype.bincn = function bincn(bit) {
-  assert(typeof bit === 'number');
-  var r = bit % 26;
-  var s = (bit - r) / 26;
-  var q = 1 << r;
-
-  // Fast case: bit is much higher than all existing words
-  if (this.length <= s) {
-    for (var i = this.length; i < s + 1; i++)
-      this.words[i] = 0;
-    this.words[s] |= q;
-    this.length = s + 1;
-    return this;
-  }
-
-  // Add bit and propagate, if needed
-  var carry = q;
-  for (var i = s; carry !== 0 && i < this.length; i++) {
-    var w = this.words[i];
-    w += carry;
-    carry = w >>> 26;
-    w &= 0x3ffffff;
-    this.words[i] = w;
-  }
-  if (carry !== 0) {
-    this.words[i] = carry;
-    this.length++;
-  }
-  return this;
-};
-
-BN.prototype.cmpn = function cmpn(num) {
-  var sign = num < 0;
-  if (sign)
-    num = -num;
-
-  if (this.sign && !sign)
-    return -1;
-  else if (!this.sign && sign)
-    return 1;
-
-  num &= 0x3ffffff;
-  this.strip();
-
-  var res;
-  if (this.length > 1) {
-    res = 1;
-  } else {
-    var w = this.words[0];
-    res = w === num ? 0 : w < num ? -1 : 1;
-  }
-  if (this.sign)
-    res = -res;
-  return res;
-};
-
-// Compare two numbers and return:
-// 1 - if `this` > `num`
-// 0 - if `this` == `num`
-// -1 - if `this` < `num`
-BN.prototype.cmp = function cmp(num) {
-  if (this.sign && !num.sign)
-    return -1;
-  else if (!this.sign && num.sign)
-    return 1;
-
-  var res = this.ucmp(num);
-  if (this.sign)
-    return -res;
-  else
-    return res;
-};
-
-// Unsigned comparison
-BN.prototype.ucmp = function ucmp(num) {
-  // At this point both numbers have the same sign
-  if (this.length > num.length)
-    return 1;
-  else if (this.length < num.length)
-    return -1;
-
-  var res = 0;
-  for (var i = this.length - 1; i >= 0; i--) {
-    var a = this.words[i];
-    var b = num.words[i];
-
-    if (a === b)
-      continue;
-    if (a < b)
-      res = -1;
-    else if (a > b)
-      res = 1;
-    break;
-  }
-  return res;
-};
-
-//
-// A reduce context, could be using montgomery or something better, depending
-// on the `m` itself.
-//
-BN.red = function red(num) {
-  return new Red(num);
-};
-
-BN.prototype.toRed = function toRed(ctx) {
-  assert(!this.red, 'Already a number in reduction context');
-  assert(!this.sign, 'red works only with positives');
-  return ctx.convertTo(this)._forceRed(ctx);
-};
-
-BN.prototype.fromRed = function fromRed() {
-  assert(this.red, 'fromRed works only with numbers in reduction context');
-  return this.red.convertFrom(this);
-};
-
-BN.prototype._forceRed = function _forceRed(ctx) {
-  this.red = ctx;
-  return this;
-};
-
-BN.prototype.forceRed = function forceRed(ctx) {
-  assert(!this.red, 'Already a number in reduction context');
-  return this._forceRed(ctx);
-};
-
-BN.prototype.redAdd = function redAdd(num) {
-  assert(this.red, 'redAdd works only with red numbers');
-  return this.red.add(this, num);
-};
-
-BN.prototype.redIAdd = function redIAdd(num) {
-  assert(this.red, 'redIAdd works only with red numbers');
-  return this.red.iadd(this, num);
-};
-
-BN.prototype.redSub = function redSub(num) {
-  assert(this.red, 'redSub works only with red numbers');
-  return this.red.sub(this, num);
-};
-
-BN.prototype.redISub = function redISub(num) {
-  assert(this.red, 'redISub works only with red numbers');
-  return this.red.isub(this, num);
-};
-
-BN.prototype.redShl = function redShl(num) {
-  assert(this.red, 'redShl works only with red numbers');
-  return this.red.ushl(this, num);
-};
-
-BN.prototype.redMul = function redMul(num) {
-  assert(this.red, 'redMul works only with red numbers');
-  this.red._verify2(this, num);
-  return this.red.mul(this, num);
-};
-
-BN.prototype.redIMul = function redIMul(num) {
-  assert(this.red, 'redMul works only with red numbers');
-  this.red._verify2(this, num);
-  return this.red.imul(this, num);
-};
-
-BN.prototype.redSqr = function redSqr() {
-  assert(this.red, 'redSqr works only with red numbers');
-  this.red._verify1(this);
-  return this.red.sqr(this);
-};
-
-BN.prototype.redISqr = function redISqr() {
-  assert(this.red, 'redISqr works only with red numbers');
-  this.red._verify1(this);
-  return this.red.isqr(this);
-};
-
-// Square root over p
-BN.prototype.redSqrt = function redSqrt() {
-  assert(this.red, 'redSqrt works only with red numbers');
-  this.red._verify1(this);
-  return this.red.sqrt(this);
-};
-
-BN.prototype.redInvm = function redInvm() {
-  assert(this.red, 'redInvm works only with red numbers');
-  this.red._verify1(this);
-  return this.red.invm(this);
-};
-
-// Return negative clone of `this` % `red modulo`
-BN.prototype.redNeg = function redNeg() {
-  assert(this.red, 'redNeg works only with red numbers');
-  this.red._verify1(this);
-  return this.red.neg(this);
-};
-
-BN.prototype.redPow = function redPow(num) {
-  assert(this.red && !num.red, 'redPow(normalNum)');
-  this.red._verify1(this);
-  return this.red.pow(this, num);
-};
-
-// Prime numbers with efficient reduction
-var primes = {
-  k256: null,
-  p224: null,
-  p192: null,
-  p25519: null
-};
-
-// Pseudo-Mersenne prime
-function MPrime(name, p) {
-  // P = 2 ^ N - K
-  this.name = name;
-  this.p = new BN(p, 16);
-  this.n = this.p.bitLength();
-  this.k = new BN(1).iushln(this.n).isub(this.p);
-
-  this.tmp = this._tmp();
-}
-
-MPrime.prototype._tmp = function _tmp() {
-  var tmp = new BN(null);
-  tmp.words = new Array(Math.ceil(this.n / 13));
-  return tmp;
-};
-
-MPrime.prototype.ireduce = function ireduce(num) {
-  // Assumes that `num` is less than `P^2`
-  // num = HI * (2 ^ N - K) + HI * K + LO = HI * K + LO (mod P)
-  var r = num;
-  var rlen;
-
-  do {
-    this.split(r, this.tmp);
-    r = this.imulK(r);
-    r = r.iadd(this.tmp);
-    rlen = r.bitLength();
-  } while (rlen > this.n);
-
-  var cmp = rlen < this.n ? -1 : r.ucmp(this.p);
-  if (cmp === 0) {
-    r.words[0] = 0;
-    r.length = 1;
-  } else if (cmp > 0) {
-    r.isub(this.p);
-  } else {
-    r.strip();
-  }
-
-  return r;
-};
-
-MPrime.prototype.split = function split(input, out) {
-  input.iushrn(this.n, 0, out);
-};
-
-MPrime.prototype.imulK = function imulK(num) {
-  return num.imul(this.k);
-};
-
-function K256() {
-  MPrime.call(
-    this,
-    'k256',
-    'ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff fffffffe fffffc2f');
-}
-inherits(K256, MPrime);
-
-K256.prototype.split = function split(input, output) {
-  // 256 = 9 * 26 + 22
-  var mask = 0x3fffff;
-
-  var outLen = Math.min(input.length, 9);
-  for (var i = 0; i < outLen; i++)
-    output.words[i] = input.words[i];
-  output.length = outLen;
-
-  if (input.length <= 9) {
-    input.words[0] = 0;
-    input.length = 1;
-    return;
-  }
-
-  // Shift by 9 limbs
-  var prev = input.words[9];
-  output.words[output.length++] = prev & mask;
-
-  for (var i = 10; i < input.length; i++) {
-    var next = input.words[i];
-    input.words[i - 10] = ((next & mask) << 4) | (prev >>> 22);
-    prev = next;
-  }
-  input.words[i - 10] = prev >>> 22;
-  input.length -= 9;
-};
-
-K256.prototype.imulK = function imulK(num) {
-  // K = 0x1000003d1 = [ 0x40, 0x3d1 ]
-  num.words[num.length] = 0;
-  num.words[num.length + 1] = 0;
-  num.length += 2;
-
-  // bounded at: 0x40 * 0x3ffffff + 0x3d0 = 0x100000390
-  var hi;
-  var lo = 0;
-  for (var i = 0; i < num.length; i++) {
-    var w = num.words[i];
-    hi = w * 0x40;
-    lo += w * 0x3d1;
-    hi += (lo / 0x4000000) | 0;
-    lo &= 0x3ffffff;
-
-    num.words[i] = lo;
-
-    lo = hi;
-  }
-
-  // Fast length reduction
-  if (num.words[num.length - 1] === 0) {
-    num.length--;
-    if (num.words[num.length - 1] === 0)
-      num.length--;
-  }
-  return num;
-};
-
-function P224() {
-  MPrime.call(
-    this,
-    'p224',
-    'ffffffff ffffffff ffffffff ffffffff 00000000 00000000 00000001');
-}
-inherits(P224, MPrime);
-
-function P192() {
-  MPrime.call(
-    this,
-    'p192',
-    'ffffffff ffffffff ffffffff fffffffe ffffffff ffffffff');
-}
-inherits(P192, MPrime);
-
-function P25519() {
-  // 2 ^ 255 - 19
-  MPrime.call(
-    this,
-    '25519',
-    '7fffffffffffffff ffffffffffffffff ffffffffffffffff ffffffffffffffed');
-}
-inherits(P25519, MPrime);
-
-P25519.prototype.imulK = function imulK(num) {
-  // K = 0x13
-  var carry = 0;
-  for (var i = 0; i < num.length; i++) {
-    var hi = num.words[i] * 0x13 + carry;
-    var lo = hi & 0x3ffffff;
-    hi >>>= 26;
-
-    num.words[i] = lo;
-    carry = hi;
-  }
-  if (carry !== 0)
-    num.words[num.length++] = carry;
-  return num;
-};
-
-// Exported mostly for testing purposes, use plain name instead
-BN._prime = function prime(name) {
-  // Cached version of prime
-  if (primes[name])
-    return primes[name];
-
-  var prime;
-  if (name === 'k256')
-    prime = new K256();
-  else if (name === 'p224')
-    prime = new P224();
-  else if (name === 'p192')
-    prime = new P192();
-  else if (name === 'p25519')
-    prime = new P25519();
-  else
-    throw new Error('Unknown prime ' + name);
-  primes[name] = prime;
-
-  return prime;
-};
-
-//
-// Base reduction engine
-//
-function Red(m) {
-  if (typeof m === 'string') {
-    var prime = BN._prime(m);
-    this.m = prime.p;
-    this.prime = prime;
-  } else {
-    this.m = m;
-    this.prime = null;
-  }
-}
-
-Red.prototype._verify1 = function _verify1(a) {
-  assert(!a.sign, 'red works only with positives');
-  assert(a.red, 'red works only with red numbers');
-};
-
-Red.prototype._verify2 = function _verify2(a, b) {
-  assert(!a.sign && !b.sign, 'red works only with positives');
-  assert(a.red && a.red === b.red,
-         'red works only with red numbers');
-};
-
-Red.prototype.imod = function imod(a) {
-  if (this.prime)
-    return this.prime.ireduce(a)._forceRed(this);
-  return a.umod(this.m)._forceRed(this);
-};
-
-Red.prototype.neg = function neg(a) {
-  var r = a.clone();
-  r.sign = !r.sign;
-  return r.iadd(this.m)._forceRed(this);
-};
-
-Red.prototype.add = function add(a, b) {
-  this._verify2(a, b);
-
-  var res = a.add(b);
-  if (res.cmp(this.m) >= 0)
-    res.isub(this.m);
-  return res._forceRed(this);
-};
-
-Red.prototype.iadd = function iadd(a, b) {
-  this._verify2(a, b);
-
-  var res = a.iadd(b);
-  if (res.cmp(this.m) >= 0)
-    res.isub(this.m);
-  return res;
-};
-
-Red.prototype.sub = function sub(a, b) {
-  this._verify2(a, b);
-
-  var res = a.sub(b);
-  if (res.cmpn(0) < 0)
-    res.iadd(this.m);
-  return res._forceRed(this);
-};
-
-Red.prototype.isub = function isub(a, b) {
-  this._verify2(a, b);
-
-  var res = a.isub(b);
-  if (res.cmpn(0) < 0)
-    res.iadd(this.m);
-  return res;
-};
-
-Red.prototype.shl = function shl(a, num) {
-  this._verify1(a);
-  return this.imod(a.ushln(num));
-};
-
-Red.prototype.imul = function imul(a, b) {
-  this._verify2(a, b);
-  return this.imod(a.imul(b));
-};
-
-Red.prototype.mul = function mul(a, b) {
-  this._verify2(a, b);
-  return this.imod(a.mul(b));
-};
-
-Red.prototype.isqr = function isqr(a) {
-  return this.imul(a, a);
-};
-
-Red.prototype.sqr = function sqr(a) {
-  return this.mul(a, a);
-};
-
-Red.prototype.sqrt = function sqrt(a) {
-  if (a.cmpn(0) === 0)
-    return a.clone();
-
-  var mod3 = this.m.andln(3);
-  assert(mod3 % 2 === 1);
-
-  // Fast case
-  if (mod3 === 3) {
-    var pow = this.m.add(new BN(1)).iushrn(2);
-    var r = this.pow(a, pow);
-    return r;
-  }
-
-  // Tonelli-Shanks algorithm (Totally unoptimized and slow)
-  //
-  // Find Q and S, that Q * 2 ^ S = (P - 1)
-  var q = this.m.subn(1);
-  var s = 0;
-  while (q.cmpn(0) !== 0 && q.andln(1) === 0) {
-    s++;
-    q.iushrn(1);
-  }
-  assert(q.cmpn(0) !== 0);
-
-  var one = new BN(1).toRed(this);
-  var nOne = one.redNeg();
-
-  // Find quadratic non-residue
-  // NOTE: Max is such because of generalized Riemann hypothesis.
-  var lpow = this.m.subn(1).iushrn(1);
-  var z = this.m.bitLength();
-  z = new BN(2 * z * z).toRed(this);
-  while (this.pow(z, lpow).cmp(nOne) !== 0)
-    z.redIAdd(nOne);
-
-  var c = this.pow(z, q);
-  var r = this.pow(a, q.addn(1).iushrn(1));
-  var t = this.pow(a, q);
-  var m = s;
-  while (t.cmp(one) !== 0) {
-    var tmp = t;
-    for (var i = 0; tmp.cmp(one) !== 0; i++)
-      tmp = tmp.redSqr();
-    assert(i < m);
-    var b = this.pow(c, new BN(1).iushln(m - i - 1));
-
-    r = r.redMul(b);
-    c = b.redSqr();
-    t = t.redMul(c);
-    m = i;
-  }
-
-  return r;
-};
-
-Red.prototype.invm = function invm(a) {
-  var inv = a._invmp(this.m);
-  if (inv.sign) {
-    inv.sign = false;
-    return this.imod(inv).redNeg();
-  } else {
-    return this.imod(inv);
-  }
-};
-
-Red.prototype.pow = function pow(a, num) {
-  var w = [];
-
-  if (num.cmpn(0) === 0)
-    return new BN(1);
-
-  var q = num.clone();
-
-  while (q.cmpn(0) !== 0) {
-    w.push(q.andln(1));
-    q.iushrn(1);
-  }
-
-  // Skip leading zeroes
-  var res = a;
-  for (var i = 0; i < w.length; i++, res = this.sqr(res))
-    if (w[i] !== 0)
-      break;
-
-  if (++i < w.length) {
-    for (var q = this.sqr(res); i < w.length; i++, q = this.sqr(q)) {
-      if (w[i] === 0)
-        continue;
-      res = this.mul(res, q);
-    }
-  }
-
-  return res;
-};
-
-Red.prototype.convertTo = function convertTo(num) {
-  var r = num.umod(this.m);
-  if (r === num)
-    return r.clone();
-  else
-    return r;
-};
-
-Red.prototype.convertFrom = function convertFrom(num) {
-  var res = num.clone();
-  res.red = null;
-  return res;
-};
-
-//
-// Montgomery method engine
-//
-
-BN.mont = function mont(num) {
-  return new Mont(num);
-};
-
-function Mont(m) {
-  Red.call(this, m);
-
-  this.shift = this.m.bitLength();
-  if (this.shift % 26 !== 0)
-    this.shift += 26 - (this.shift % 26);
-  this.r = new BN(1).iushln(this.shift);
-  this.r2 = this.imod(this.r.sqr());
-  this.rinv = this.r._invmp(this.m);
-
-  this.minv = this.rinv.mul(this.r).isubn(1).div(this.m);
-  this.minv = this.minv.umod(this.r);
-  this.minv = this.r.sub(this.minv);
-}
-inherits(Mont, Red);
-
-Mont.prototype.convertTo = function convertTo(num) {
-  return this.imod(num.ushln(this.shift));
-};
-
-Mont.prototype.convertFrom = function convertFrom(num) {
-  var r = this.imod(num.mul(this.rinv));
-  r.red = null;
-  return r;
-};
-
-Mont.prototype.imul = function imul(a, b) {
-  if (a.cmpn(0) === 0 || b.cmpn(0) === 0) {
-    a.words[0] = 0;
-    a.length = 1;
-    return a;
-  }
-
-  var t = a.imul(b);
-  var c = t.maskn(this.shift).mul(this.minv).imaskn(this.shift).mul(this.m);
-  var u = t.isub(c).iushrn(this.shift);
-  var res = u;
-  if (u.cmp(this.m) >= 0)
-    res = u.isub(this.m);
-  else if (u.cmpn(0) < 0)
-    res = u.iadd(this.m);
-
-  return res._forceRed(this);
-};
-
-Mont.prototype.mul = function mul(a, b) {
-  if (a.cmpn(0) === 0 || b.cmpn(0) === 0)
-    return new BN(0)._forceRed(this);
-
-  var t = a.mul(b);
-  var c = t.maskn(this.shift).mul(this.minv).imaskn(this.shift).mul(this.m);
-  var u = t.isub(c).iushrn(this.shift);
-  var res = u;
-  if (u.cmp(this.m) >= 0)
-    res = u.isub(this.m);
-  else if (u.cmpn(0) < 0)
-    res = u.iadd(this.m);
-
-  return res._forceRed(this);
-};
-
-Mont.prototype.invm = function invm(a) {
-  // (AR)^-1 * R^2 = (A^-1 * R^-1) * R^2 = A^-1 * R
-  var res = this.imod(a._invmp(this.m).mul(this.r2));
-  return res._forceRed(this);
-};
-
-})(typeof module === 'undefined' || module, this);
-
 },{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/diffie-hellman/node_modules/bn.js/lib/bn.js":[function(require,module,exports){
 arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/bn.js/lib/bn.js"][0].apply(exports,arguments)
-},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/index.js":[function(require,module,exports){
-var createECDH = require('crypto').createECDH;
-
-module.exports = createECDH || require('./browser');
-},{"./browser":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/browser.js","crypto":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/browser.js":[function(require,module,exports){
+},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-ecdh/browser.js":[function(require,module,exports){
 (function (Buffer){
 var elliptic = require('elliptic');
 var BN = require('bn.js');
@@ -26104,43 +23752,32 @@ arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/cry
 arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/bn.js/lib/bn.js"][0].apply(exports,arguments)
 },{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/browser.js":[function(require,module,exports){
 (function (Buffer){
-'use strict'
-var sign = require('./sign')
-var verify = require('./verify')
-var stream = require('stream')
-var inherits = require('inherits')
 var _algos = require('./algos')
 var createHash = require('create-hash')
+var inherits = require('inherits')
+var sign = require('./sign')
+var stream = require('stream')
+var verify = require('./verify')
+
 var algos = {}
 Object.keys(_algos).forEach(function (key) {
   algos[key] = algos[key.toLowerCase()] = _algos[key]
 })
 
-exports.createSign = exports.Sign = createSign
-
-function createSign (algorithm) {
-  return new Sign(algorithm)
-}
-
-exports.createVerify = exports.Verify = createVerify
-
-function createVerify (algorithm) {
-  return new Verify(algorithm)
-}
-
-inherits(Sign, stream.Writable)
-
 function Sign (algorithm) {
   stream.Writable.call(this)
+
   var data = algos[algorithm]
-  if (!data)
+  if (!data) {
     throw new Error('Unknown message digest')
+  }
 
   this._hashType = data.hash
   this._hash = createHash(data.hash)
   this._tag = data.id
   this._signType = data.sign
 }
+inherits(Sign, stream.Writable)
 
 Sign.prototype._write = function _write (data, _, done) {
   this._hash.update(data)
@@ -26148,8 +23785,10 @@ Sign.prototype._write = function _write (data, _, done) {
 }
 
 Sign.prototype.update = function update (data, enc) {
-  if (typeof data === 'string')
+  if (typeof data === 'string') {
     data = new Buffer(data, enc)
+  }
+
   this._hash.update(data)
   return this
 }
@@ -26158,56 +23797,75 @@ Sign.prototype.sign = function signMethod (key, enc) {
   this.end()
   var hash = this._hash.digest()
   var sig = sign(Buffer.concat([this._tag, hash]), key, this._hashType, this._signType)
-  if (enc) {
-    sig = sig.toString(enc)
-  }
-  return sig
+
+  return enc ? sig.toString(enc) : sig
 }
 
-inherits(Verify, stream.Writable)
 function Verify (algorithm) {
   stream.Writable.call(this)
+
   var data = algos[algorithm]
-  if (!data)
+  if (!data) {
     throw new Error('Unknown message digest')
+  }
 
   this._hash = createHash(data.hash)
   this._tag = data.id
   this._signType = data.sign
 }
+inherits(Verify, stream.Writable)
 
 Verify.prototype._write = function _write (data, _, done) {
   this._hash.update(data)
+
   done()
 }
 
 Verify.prototype.update = function update (data, enc) {
-  if (typeof data === 'string')
+  if (typeof data === 'string') {
     data = new Buffer(data, enc)
+  }
 
   this._hash.update(data)
   return this
 }
 
 Verify.prototype.verify = function verifyMethod (key, sig, enc) {
+  if (typeof sig === 'string') {
+    sig = new Buffer(sig, enc)
+  }
+
   this.end()
   var hash = this._hash.digest()
-  if (typeof sig === 'string')
-    sig = new Buffer(sig, enc)
 
   return verify(sig, Buffer.concat([this._tag, hash]), key, this._signType)
+}
+
+function createSign (algorithm) {
+  return new Sign(algorithm)
+}
+
+function createVerify (algorithm) {
+  return new Verify(algorithm)
+}
+
+module.exports = {
+  Sign: createSign,
+  Verify: createVerify,
+  createSign: createSign,
+  createVerify: createVerify
 }
 
 }).call(this,require("buffer").Buffer)
 },{"./algos":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/algos.js","./sign":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/sign.js","./verify":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/verify.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","create-hash":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/browser.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js","stream":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/stream-browserify/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/verify.js":[function(require,module,exports){
 (function (Buffer){
-'use strict'
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
-var parseKeys = require('parse-asn1')
-var elliptic = require('elliptic')
 var curves = require('./curves')
+var elliptic = require('elliptic')
+var parseKeys = require('parse-asn1')
+
 var BN = require('bn.js')
-module.exports = verify
+var EC = elliptic.ec
 
 function verify (sig, hash, key, signType) {
   var pub = parseKeys(key)
@@ -26260,16 +23918,17 @@ function verify (sig, hash, key, signType) {
   }
   return out === 0
 }
+
 function ecVerify (sig, hash, pub) {
   var curveId = curves[pub.data.algorithm.curve.join('.')]
-  if (!curveId)
-    throw new Error('unknown curve ' + pub.data.algorithm.curve.join('.'))
+  if (!curveId) throw new Error('unknown curve ' + pub.data.algorithm.curve.join('.'))
 
-  var curve = new elliptic.ec(curveId)
-
+  var curve = new EC(curveId)
   var pubkey = pub.data.subjectPrivateKey.data
+
   return curve.verify(hash, sig, pubkey)
 }
+
 function dsaVerify (sig, hash, pub) {
   var p = pub.data.p
   var q = pub.data.q
@@ -26280,19 +23939,19 @@ function dsaVerify (sig, hash, pub) {
   var r = unpacked.r
   checkValue(s, q)
   checkValue(r, q)
-  var montq = BN.mont(q)
   var montp = BN.mont(p)
-  var w =  s.invm(q)
+  var w = s.invm(q)
   var v = g.toRed(montp)
-  .redPow(new BN(hash).mul(w).mod(q))
-  .fromRed()
-  .mul(
-    y.toRed(montp)
-    .redPow(r.mul(w).mod(q))
+    .redPow(new BN(hash).mul(w).mod(q))
     .fromRed()
+    .mul(
+      y.toRed(montp)
+        .redPow(r.mul(w).mod(q))
+        .fromRed()
   ).mod(p).mod(q)
   return !v.cmp(r)
 }
+
 function checkValue (b, q) {
   if (b.cmpn(0) <= 0) {
     throw new Error('invalid sig')
@@ -26302,35 +23961,36 @@ function checkValue (b, q) {
   }
 }
 
+module.exports = verify
+
 }).call(this,require("buffer").Buffer)
 },{"./curves":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/curves.js","bn.js":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/bn.js/lib/bn.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","elliptic":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic.js","parse-asn1":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/sign.js":[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
-var parseKeys = require('parse-asn1')
-var BN = require('bn.js')
-var elliptic = require('elliptic')
-var crt = require('browserify-rsa')
 var createHmac = require('create-hmac')
+var crt = require('browserify-rsa')
 var curves = require('./curves')
+var elliptic = require('elliptic')
+var parseKeys = require('parse-asn1')
 
-module.exports = sign
+var BN = require('bn.js')
+var EC = elliptic.ec
+
 function sign (hash, key, hashType, signType) {
   var priv = parseKeys(key)
   if (priv.curve) {
-    if (signType !== 'ecdsa') {
-      throw new Error('wrong private key type')
-    }
+    if (signType !== 'ecdsa') throw new Error('wrong private key type')
+
     return ecSign(hash, priv)
   } else if (priv.type === 'dsa') {
-    return dsaSign(hash, priv, hashType)
     if (signType !== 'dsa') {
       throw new Error('wrong private key type')
     }
+    return dsaSign(hash, priv, hashType)
   } else {
-    if (signType !== 'rsa') {
-      throw new Error('wrong private key type')
-    }
+    if (signType !== 'rsa') throw new Error('wrong private key type')
   }
+
   var len = priv.modulus.byteLength()
   var pad = [ 0, 1 ]
   while (hash.length + pad.length + 1 < len) {
@@ -26345,23 +24005,24 @@ function sign (hash, key, hashType, signType) {
   var out = crt(pad, priv)
   return out
 }
+
 function ecSign (hash, priv) {
   var curveId = curves[priv.curve.join('.')]
-  if (!curveId)
-    throw new Error('unknown curve ' + priv.curve.join('.'))
+  if (!curveId) throw new Error('unknown curve ' + priv.curve.join('.'))
 
-  var curve = new elliptic.ec(curveId)
-
+  var curve = new EC(curveId)
   var key = curve.genKeyPair()
+
   key._importPrivate(priv.privateKey)
   var out = key.sign(hash)
+
   return new Buffer(out.toDER())
 }
+
 function dsaSign (hash, priv, algo) {
   var x = priv.params.priv_key
   var p = priv.params.p
   var q = priv.params.q
-  var montq = BN.mont(q)
   var g = priv.params.g
   var r = new BN(0)
   var k
@@ -26379,23 +24040,26 @@ function dsaSign (hash, priv, algo) {
   }
   return toDER(r, s)
 }
+
 function toDER (r, s) {
   r = r.toArray()
   s = s.toArray()
 
   // Pad values
-  if (r[0] & 0x80)
+  if (r[0] & 0x80) {
     r = [ 0 ].concat(r)
+  }
   // Pad values
-  if (s[0] & 0x80)
+  if (s[0] & 0x80) {
     s = [0].concat(s)
+  }
 
   var total = r.length + s.length + 4
   var res = [ 0x30, total, 0x02, r.length ]
   res = res.concat(r, [ 0x02, s.length ], s)
   return new Buffer(res)
 }
-module.exports.getKey = getKey
+
 function getKey (x, q, hash, algo) {
   x = new Buffer(x.toArray())
   if (x.length < q.byteLength()) {
@@ -26432,6 +24096,7 @@ function getKey (x, q, hash, algo) {
     v: v
   }
 }
+
 function bits2int (obits, q) {
   var bits = new BN(obits)
   var shift = (obits.length << 3) - q.bitLength()
@@ -26440,6 +24105,7 @@ function bits2int (obits, q) {
   }
   return bits
 }
+
 function bits2octets (bits, q) {
   bits = bits2int(bits, q)
   bits = bits.mod(q)
@@ -26451,142 +24117,148 @@ function bits2octets (bits, q) {
   }
   return out
 }
-module.exports.makeKey = makeKey
+
 function makeKey (q, kv, algo) {
-  var t
-  var k
-  while (true) {
+  var t, k
+
+  do {
     t = new Buffer('')
+
     while (t.length * 8 < q.bitLength()) {
       kv.v = createHmac(algo, kv.k)
         .update(kv.v)
         .digest()
       t = Buffer.concat([t, kv.v])
     }
+
     k = bits2int(t, q)
-    kv.k =  createHmac(algo, kv.k)
-        .update(kv.v)
-        .update(new Buffer([0]))
-        .digest()
+    kv.k = createHmac(algo, kv.k)
+      .update(kv.v)
+      .update(new Buffer([0]))
+      .digest()
     kv.v = createHmac(algo, kv.k)
-        .update(kv.v)
-        .digest()
-    if (k.cmp(q) === -1) {
-      return k
-    }
-  }
+      .update(kv.v)
+      .digest()
+  } while (k.cmp(q) !== -1)
+
+  return k
 }
+
 function makeR (g, k, p, q) {
   return g.toRed(BN.mont(p)).redPow(k).fromRed().mod(q)
 }
 
+module.exports = sign
+module.exports.getKey = getKey
+module.exports.makeKey = makeKey
+
 }).call(this,require("buffer").Buffer)
 },{"./curves":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/curves.js","bn.js":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/bn.js/lib/bn.js","browserify-rsa":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/browserify-rsa/index.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","create-hmac":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hmac/browser.js","elliptic":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/elliptic/lib/elliptic.js","parse-asn1":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/index.js":[function(require,module,exports){
 (function (Buffer){
-var asn1 = require('./asn1');
-var aesid = require('./aesid.json');
-var fixProc = require('./fixProc');
-var ciphers = require('browserify-aes');
-var compat = require('pbkdf2');
-module.exports = parseKeys;
+var asn1 = require('./asn1')
+var aesid = require('./aesid.json')
+var fixProc = require('./fixProc')
+var ciphers = require('browserify-aes')
+var compat = require('pbkdf2')
+module.exports = parseKeys
 
-function parseKeys(buffer) {
-  var password;
+function parseKeys (buffer) {
+  var password
   if (typeof buffer === 'object' && !Buffer.isBuffer(buffer)) {
-    password = buffer.passphrase;
-    buffer = buffer.key;
+    password = buffer.passphrase
+    buffer = buffer.key
   }
   if (typeof buffer === 'string') {
-    buffer = new Buffer(buffer);
+    buffer = new Buffer(buffer)
   }
 
-  var stripped = fixProc(buffer, password);
+  var stripped = fixProc(buffer, password)
 
-  var type = stripped.tag;
-  var data = stripped.data;
-  var subtype,ndata;
+  var type = stripped.tag
+  var data = stripped.data
+  var subtype, ndata
   switch (type) {
     case 'PUBLIC KEY':
-      ndata = asn1.PublicKey.decode(data, 'der');
-      subtype = ndata.algorithm.algorithm.join('.');
-      switch(subtype) {
+      ndata = asn1.PublicKey.decode(data, 'der')
+      subtype = ndata.algorithm.algorithm.join('.')
+      switch (subtype) {
         case '1.2.840.113549.1.1.1':
-          return asn1.RSAPublicKey.decode(ndata.subjectPublicKey.data, 'der');
+          return asn1.RSAPublicKey.decode(ndata.subjectPublicKey.data, 'der')
         case '1.2.840.10045.2.1':
-        ndata.subjectPrivateKey = ndata.subjectPublicKey;
+          ndata.subjectPrivateKey = ndata.subjectPublicKey
           return {
             type: 'ec',
-            data:  ndata
-          };
+            data: ndata
+          }
         case '1.2.840.10040.4.1':
-          ndata.algorithm.params.pub_key = asn1.DSAparam.decode(ndata.subjectPublicKey.data, 'der');
+          ndata.algorithm.params.pub_key = asn1.DSAparam.decode(ndata.subjectPublicKey.data, 'der')
           return {
             type: 'dsa',
             data: ndata.algorithm.params
-          };
-        default: throw new Error('unknown key id ' +  subtype);
+          }
+        default: throw new Error('unknown key id ' + subtype)
       }
-      throw new Error('unknown key type ' +  type);
+      throw new Error('unknown key type ' + type)
     case 'ENCRYPTED PRIVATE KEY':
-      data = asn1.EncryptedPrivateKey.decode(data, 'der');
-      data = decrypt(data, password);
-      //falling through
+      data = asn1.EncryptedPrivateKey.decode(data, 'der')
+      data = decrypt(data, password)
+      // falls through
     case 'PRIVATE KEY':
-      ndata = asn1.PrivateKey.decode(data, 'der');
-      subtype = ndata.algorithm.algorithm.join('.');
-      switch(subtype) {
+      ndata = asn1.PrivateKey.decode(data, 'der')
+      subtype = ndata.algorithm.algorithm.join('.')
+      switch (subtype) {
         case '1.2.840.113549.1.1.1':
-          return asn1.RSAPrivateKey.decode(ndata.subjectPrivateKey, 'der');
+          return asn1.RSAPrivateKey.decode(ndata.subjectPrivateKey, 'der')
         case '1.2.840.10045.2.1':
           return {
             curve: ndata.algorithm.curve,
             privateKey: asn1.ECPrivateKey.decode(ndata.subjectPrivateKey, 'der').privateKey
-          };
+          }
         case '1.2.840.10040.4.1':
-          ndata.algorithm.params.priv_key = asn1.DSAparam.decode(ndata.subjectPrivateKey, 'der');
+          ndata.algorithm.params.priv_key = asn1.DSAparam.decode(ndata.subjectPrivateKey, 'der')
           return {
             type: 'dsa',
             params: ndata.algorithm.params
-          };
-        default: throw new Error('unknown key id ' +  subtype);
+          }
+        default: throw new Error('unknown key id ' + subtype)
       }
-      throw new Error('unknown key type ' +  type);
+      throw new Error('unknown key type ' + type)
     case 'RSA PUBLIC KEY':
-      return asn1.RSAPublicKey.decode(data, 'der');
+      return asn1.RSAPublicKey.decode(data, 'der')
     case 'RSA PRIVATE KEY':
-      return asn1.RSAPrivateKey.decode(data, 'der');
+      return asn1.RSAPrivateKey.decode(data, 'der')
     case 'DSA PRIVATE KEY':
       return {
         type: 'dsa',
         params: asn1.DSAPrivateKey.decode(data, 'der')
-      };
+      }
     case 'EC PRIVATE KEY':
-      data = asn1.ECPrivateKey.decode(data, 'der');
+      data = asn1.ECPrivateKey.decode(data, 'der')
       return {
         curve: data.parameters.value,
         privateKey: data.privateKey
-      };
-    default: throw new Error('unknown key type ' +  type);
+      }
+    default: throw new Error('unknown key type ' + type)
   }
 }
-parseKeys.signature = asn1.signature;
-function decrypt(data, password) {
-  var salt = data.algorithm.decrypt.kde.kdeparams.salt;
-  var iters = parseInt(data.algorithm.decrypt.kde.kdeparams.iters.toString(), 10);
-  var algo = aesid[data.algorithm.decrypt.cipher.algo.join('.')];
-  var iv = data.algorithm.decrypt.cipher.iv;
-  var cipherText = data.subjectPrivateKey;
-  var keylen = parseInt(algo.split('-')[1], 10)/8;
-  var key = compat.pbkdf2Sync(password, salt, iters, keylen);
-  var cipher = ciphers.createDecipheriv(algo, key, iv);
-  var out = [];
-  out.push(cipher.update(cipherText));
-  out.push(cipher.final());
-  return Buffer.concat(out);
+parseKeys.signature = asn1.signature
+function decrypt (data, password) {
+  var salt = data.algorithm.decrypt.kde.kdeparams.salt
+  var iters = parseInt(data.algorithm.decrypt.kde.kdeparams.iters.toString(), 10)
+  var algo = aesid[data.algorithm.decrypt.cipher.algo.join('.')]
+  var iv = data.algorithm.decrypt.cipher.iv
+  var cipherText = data.subjectPrivateKey
+  var keylen = parseInt(algo.split('-')[1], 10) / 8
+  var key = compat.pbkdf2Sync(password, salt, iters, keylen)
+  var cipher = ciphers.createDecipheriv(algo, key, iv)
+  var out = []
+  out.push(cipher.update(cipherText))
+  out.push(cipher.final())
+  return Buffer.concat(out)
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aesid.json":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/aesid.json","./asn1":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/asn1.js","./fixProc":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/fixProc.js","browserify-aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/browser.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","pbkdf2":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/pbkdf2/browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/pbkdf2/browser.js":[function(require,module,exports){
+},{"./aesid.json":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/aesid.json","./asn1":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/asn1.js","./fixProc":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/fixProc.js","browserify-aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/browser.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","pbkdf2":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/pbkdf2/browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/pbkdf2/browser.js":[function(require,module,exports){
 (function (Buffer){
 var createHmac = require('create-hmac')
 var MAX_ALLOC = Math.pow(2, 30) - 1 // default in iojs
@@ -26683,7 +24355,7 @@ ZEROS.fill(0)
 
 function Hmac(alg, key) {
   Transform.call(this)
-
+  alg = alg.toLowerCase()
   if (typeof key === 'string') {
     key = new Buffer(key)
   }
@@ -26742,93 +24414,7 @@ module.exports = function createHmac(alg, key) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","create-hash/browser":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/browser.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js","stream":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/stream-browserify/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/fixProc.js":[function(require,module,exports){
-(function (Buffer){
-// adapted from https://github.com/apatil/pemstrip
-var findProc = /Proc-Type: 4,ENCRYPTED\r?\nDEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)\r?\n\r?\n([0-9A-z\n\r\+\/\=]+)\r?\n/m;
-var startRegex =/^-----BEGIN (.*) KEY-----\r?\n/m;
-var fullRegex = /^-----BEGIN (.*) KEY-----\r?\n([0-9A-z\n\r\+\/\=]+)\r?\n-----END \1 KEY-----$/m;
-var evp = require('./EVP_BytesToKey');
-var ciphers = require('browserify-aes');
-module.exports = function (okey, password) {
-  var key = okey.toString();
-  var match = key.match(findProc);
-  var decrypted;
-  if (!match) {
-    var match2 = key.match(fullRegex);
-    decrypted = new Buffer(match2[2].replace(/\r?\n/g, ''), 'base64');
-  } else {
-    var suite = 'aes' + match[1];
-    var iv = new Buffer(match[2], 'hex');
-    var cipherText = new Buffer(match[3].replace(/\r?\n/g, ''), 'base64');
-    var cipherKey = evp(password, iv.slice(0,8), parseInt(match[1]));
-    var out = [];
-    var cipher = ciphers.createDecipheriv(suite, cipherKey, iv);
-    out.push(cipher.update(cipherText));
-    out.push(cipher.final());
-    decrypted = Buffer.concat(out);
-  }
-  var tag = key.match(startRegex)[1] + ' KEY';
-  return {
-    tag: tag,
-    data: decrypted
-  };
-};
-
-// http://stackoverflow.com/a/7033705
-function wrap (str) {
-  var chunks = []
-
-  for (var i = 0; i < str.length; i += 64) {
-    chunks.push(str.slice(i, i + 64))
-  }
-  return chunks.join("\n")
-}
-
-}).call(this,require("buffer").Buffer)
-},{"./EVP_BytesToKey":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/EVP_BytesToKey.js","browserify-aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/browser.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/EVP_BytesToKey.js":[function(require,module,exports){
-(function (Buffer){
-var createHash = require('create-hash');
-module.exports = function evp(password, salt, keyLen) {
-  keyLen = keyLen/8;
-  var ki = 0;
-  var ii = 0;
-  var key = new Buffer(keyLen);
-  var addmd = 0;
-  var md, md_buf;
-  var i;
-  while (true) {
-    md = createHash('md5');
-    if(addmd++ > 0) {
-       md.update(md_buf);
-    }
-    md.update(password);
-    md.update(salt);
-    md_buf = md.digest();
-    i = 0;
-    if(keyLen > 0) {
-      while(true) {
-        if(keyLen === 0) {
-          break;
-        }
-        if(i === md_buf.length) {
-          break;
-        }
-        key[ki++] = md_buf[i++];
-        keyLen--;
-       }
-    }
-   if(keyLen === 0) {
-      break;
-    }
-  }
-  for(i=0;i<md_buf.length;i++) {
-    md_buf[i] = 0;
-  }
-  return key;
-};
-}).call(this,require("buffer").Buffer)
-},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","create-hash":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/browser.js":[function(require,module,exports){
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","create-hash/browser":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/browser.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js","stream":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/stream-browserify/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/browser.js":[function(require,module,exports){
 (function (Buffer){
 'use strict';
 var inherits = require('inherits')
@@ -26836,92 +24422,55 @@ var md5 = require('./md5')
 var rmd160 = require('ripemd160')
 var sha = require('sha.js')
 
-var Transform = require('stream').Transform
+var Base = require('cipher-base')
 
 function HashNoConstructor(hash) {
-  Transform.call(this)
+  Base.call(this, 'digest')
 
   this._hash = hash
   this.buffers = []
 }
 
-inherits(HashNoConstructor, Transform)
+inherits(HashNoConstructor, Base)
 
-HashNoConstructor.prototype._transform = function (data, _, next) {
+HashNoConstructor.prototype._update = function (data) {
   this.buffers.push(data)
-
-  next()
 }
 
-HashNoConstructor.prototype._flush = function (next) {
-  this.push(this.digest())
-  next()
-}
-
-HashNoConstructor.prototype.update = function (data, enc) {
-  if (typeof data === 'string') {
-    data = new Buffer(data, enc)
-  }
-
-  this.buffers.push(data)
-  return this
-}
-
-HashNoConstructor.prototype.digest = function (enc) {
+HashNoConstructor.prototype._final = function () {
   var buf = Buffer.concat(this.buffers)
   var r = this._hash(buf)
   this.buffers = null
 
-  return enc ? r.toString(enc) : r
+  return r
 }
 
 function Hash(hash) {
-  Transform.call(this)
+  Base.call(this, 'digest')
 
   this._hash = hash
 }
 
-inherits(Hash, Transform)
+inherits(Hash, Base)
 
-Hash.prototype._transform = function (data, enc, next) {
-  if (enc) data = new Buffer(data, enc)
-
+Hash.prototype._update = function (data) {
   this._hash.update(data)
-
-  next()
 }
 
-Hash.prototype._flush = function (next) {
-  this.push(this._hash.digest())
-  this._hash = null
-
-  next()
-}
-
-Hash.prototype.update = function (data, enc) {
-  if (typeof data === 'string') {
-    data = new Buffer(data, enc)
-  }
-
-  this._hash.update(data)
-  return this
-}
-
-Hash.prototype.digest = function (enc) {
-  var outData = this._hash.digest()
-
-  return enc ? outData.toString(enc) : outData
+Hash.prototype._final = function () {
+  return this._hash.digest()
 }
 
 module.exports = function createHash (alg) {
+  alg = alg.toLowerCase()
   if ('md5' === alg) return new HashNoConstructor(md5)
-  if ('rmd160' === alg) return new HashNoConstructor(rmd160)
+  if ('rmd160' === alg || 'ripemd160' === alg) return new HashNoConstructor(rmd160)
 
   return new Hash(sha(alg))
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./md5":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/md5.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js","ripemd160":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/ripemd160/lib/ripemd160.js","sha.js":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js/index.js","stream":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/stream-browserify/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js/index.js":[function(require,module,exports){
+},{"./md5":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/md5.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","cipher-base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/cipher-base/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js","ripemd160":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/ripemd160/lib/ripemd160.js","sha.js":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/sha.js/index.js":[function(require,module,exports){
 var exports = module.exports = function SHA (algorithm) {
   algorithm = algorithm.toLowerCase()
 
@@ -27079,16 +24628,36 @@ Sha512.prototype.init = function () {
   return this
 }
 
-function S (X, Xl, n) {
-  return (X >>> n) | (Xl << (32 - n))
-}
-
 function Ch (x, y, z) {
-  return ((x & y) ^ ((~x) & z))
+  return z ^ (x & (y ^ z))
 }
 
 function Maj (x, y, z) {
-  return ((x & y) ^ (x & z) ^ (y & z))
+  return (x & y) | (z & (x | y))
+}
+
+function Sigma0 (x, xl) {
+  return (x >>> 28 | xl << 4) ^ (xl >>> 2 | x << 30) ^ (xl >>> 7 | x << 25)
+}
+
+function Sigma1 (x, xl) {
+  return (x >>> 14 | xl << 18) ^ (x >>> 18 | xl << 14) ^ (xl >>> 9 | x << 23)
+}
+
+function Gamma0 (x, xl) {
+  return (x >>> 1 | xl << 31) ^ (x >>> 8 | xl << 24) ^ (x >>> 7)
+}
+
+function Gamma0l (x, xl) {
+  return (x >>> 1 | xl << 31) ^ (x >>> 8 | xl << 24) ^ (x >>> 7 | xl << 25)
+}
+
+function Gamma1 (x, xl) {
+  return (x >>> 19 | xl << 13) ^ (xl >>> 29 | x << 3) ^ (x >>> 6)
+}
+
+function Gamma1l (x, xl) {
+  return (x >>> 19 | xl << 13) ^ (xl >>> 29 | x << 3) ^ (x >>> 6 | xl << 26)
 }
 
 Sha512.prototype._update = function (M) {
@@ -27112,18 +24681,19 @@ Sha512.prototype._update = function (M) {
   var gl = this._gl | 0
   var hl = this._hl | 0
 
-  var i = 0, j = 0
+  var i = 0
+  var j = 0
   var Wi, Wil
   function calcW () {
     var x = W[j - 15 * 2]
     var xl = W[j - 15 * 2 + 1]
-    var gamma0 = S(x, xl, 1) ^ S(x, xl, 8) ^ (x >>> 7)
-    var gamma0l = S(xl, x, 1) ^ S(xl, x, 8) ^ S(xl, x, 7)
+    var gamma0 = Gamma0(x, xl)
+    var gamma0l = Gamma0l(xl, x)
 
     x = W[j - 2 * 2]
     xl = W[j - 2 * 2 + 1]
-    var gamma1 = S(x, xl, 19) ^ S(xl, x, 29) ^ (x >>> 6)
-    var gamma1l = S(xl, x, 19) ^ S(x, xl, 29) ^ S(xl, x, 6)
+    var gamma1 = Gamma1(x, xl)
+    var gamma1l = Gamma1l(xl, x)
 
     // W[i] = gamma0 + W[i - 7] + gamma1 + W[i - 16]
     var Wi7 = W[j - 7 * 2]
@@ -27147,10 +24717,10 @@ Sha512.prototype._update = function (M) {
     var maj = Maj(a, b, c)
     var majl = Maj(al, bl, cl)
 
-    var sigma0h = S(a, al, 28) ^ S(al, a, 2) ^ S(al, a, 7)
-    var sigma0l = S(al, a, 28) ^ S(a, al, 2) ^ S(a, al, 7)
-    var sigma1h = S(e, el, 14) ^ S(e, el, 18) ^ S(el, e, 9)
-    var sigma1l = S(el, e, 14) ^ S(el, e, 18) ^ S(e, el, 9)
+    var sigma0h = Sigma0(a, al)
+    var sigma0l = Sigma0(al, a)
+    var sigma1h = Sigma1(e, el)
+    var sigma1l = Sigma1(el, e)
 
     // t1 = h + sigma1 + ch + K[i] + W[i]
     var Ki = K[j]
@@ -27360,36 +24930,28 @@ Sha256.prototype.init = function () {
   return this
 }
 
-function S (X, n) {
-  return (X >>> n) | (X << (32 - n))
-}
-
-function R (X, n) {
-  return (X >>> n)
-}
-
 function Ch (x, y, z) {
-  return ((x & y) ^ ((~x) & z))
+  return z ^ (x & (y ^ z))
 }
 
 function Maj (x, y, z) {
-  return ((x & y) ^ (x & z) ^ (y & z))
+  return (x & y) | (z & (x | y))
 }
 
-function Sigma0256 (x) {
-  return (S(x, 2) ^ S(x, 13) ^ S(x, 22))
+function Sigma0 (x) {
+  return (x >>> 2 | x << 30) ^ (x >>> 13 | x << 19) ^ (x >>> 22 | x << 10)
 }
 
-function Sigma1256 (x) {
-  return (S(x, 6) ^ S(x, 11) ^ S(x, 25))
+function Sigma1 (x) {
+  return (x >>> 6 | x << 26) ^ (x >>> 11 | x << 21) ^ (x >>> 25 | x << 7)
 }
 
-function Gamma0256 (x) {
-  return (S(x, 7) ^ S(x, 18) ^ R(x, 3))
+function Gamma0 (x) {
+  return (x >>> 7 | x << 25) ^ (x >>> 18 | x << 14) ^ (x >>> 3)
 }
 
-function Gamma1256 (x) {
-  return (S(x, 17) ^ S(x, 19) ^ R(x, 10))
+function Gamma1 (x) {
+  return (x >>> 17 | x << 15) ^ (x >>> 19 | x << 13) ^ (x >>> 10)
 }
 
 Sha256.prototype._update = function (M) {
@@ -27406,12 +24968,12 @@ Sha256.prototype._update = function (M) {
 
   var j = 0
 
-  function calcW () { return Gamma1256(W[j - 2]) + W[j - 7] + Gamma0256(W[j - 15]) + W[j - 16] }
+  function calcW () { return Gamma1(W[j - 2]) + W[j - 7] + Gamma0(W[j - 15]) + W[j - 16] }
   function loop (w) {
     W[j] = w
 
-    var T1 = h + Sigma1256(e) + Ch(e, f, g) + K[j] + w
-    var T2 = Sigma0256(a) + Maj(a, b, c)
+    var T1 = h + Sigma1(e) + Ch(e, f, g) + K[j] + w
+    var T2 = Sigma0(a) + Maj(a, b, c)
 
     h = g
     g = f
@@ -27507,7 +25069,8 @@ Sha1.prototype._update = function (M) {
   var d = this._d
   var e = this._e
 
-  var j = 0, k
+  var j = 0
+  var k
 
   function calcW () { return rol(W[j - 3] ^ W[j - 8] ^ W[j - 14] ^ W[j - 16], 1) }
   function loop (w, f) {
@@ -27605,7 +25168,8 @@ Sha.prototype._update = function (M) {
   var d = this._d
   var e = this._e
 
-  var j = 0, k
+  var j = 0
+  var k
 
   /*
    * SHA-1 has a bitwise rotate left operation. But, SHA is not
@@ -27945,13 +25509,85 @@ function ripemd160 (message) {
 module.exports = ripemd160
 
 }).call(this,require("buffer").Buffer)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/node_modules/cipher-base/index.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/cipher-base/index.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js","stream":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/stream-browserify/index.js","string_decoder":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/string_decoder/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/fixProc.js":[function(require,module,exports){
+(function (Buffer){
+// adapted from https://github.com/apatil/pemstrip
+var findProc = /Proc-Type: 4,ENCRYPTED\r?\nDEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)\r?\n\r?\n([0-9A-z\n\r\+\/\=]+)\r?\n/m
+var startRegex = /^-----BEGIN (.*) KEY-----\r?\n/m
+var fullRegex = /^-----BEGIN (.*) KEY-----\r?\n([0-9A-z\n\r\+\/\=]+)\r?\n-----END \1 KEY-----$/m
+var evp = require('evp_bytestokey')
+var ciphers = require('browserify-aes')
+module.exports = function (okey, password) {
+  var key = okey.toString()
+  var match = key.match(findProc)
+  var decrypted
+  if (!match) {
+    var match2 = key.match(fullRegex)
+    decrypted = new Buffer(match2[2].replace(/\r?\n/g, ''), 'base64')
+  } else {
+    var suite = 'aes' + match[1]
+    var iv = new Buffer(match[2], 'hex')
+    var cipherText = new Buffer(match[3].replace(/\r?\n/g, ''), 'base64')
+    var cipherKey = evp(password, iv.slice(0, 8), parseInt(match[1], 10)).key
+    var out = []
+    var cipher = ciphers.createDecipheriv(suite, cipherKey, iv)
+    out.push(cipher.update(cipherText))
+    out.push(cipher.final())
+    decrypted = Buffer.concat(out)
+  }
+  var tag = key.match(startRegex)[1] + ' KEY'
+  return {
+    tag: tag,
+    data: decrypted
+  }
+}
+
+}).call(this,require("buffer").Buffer)
+},{"browserify-aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/browser.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","evp_bytestokey":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/evp_bytestokey/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/browser.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/browser.js"][0].apply(exports,arguments)
+},{"./decrypter":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/decrypter.js","./encrypter":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/encrypter.js","./modes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/encrypter.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/encrypter.js"][0].apply(exports,arguments)
+},{"./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/aes.js","./authCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/authCipher.js","./modes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes.js","./modes/cbc":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cbc.js","./modes/cfb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb.js","./modes/cfb1":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb1.js","./modes/cfb8":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb8.js","./modes/ctr":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/ctr.js","./modes/ecb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/ecb.js","./modes/ofb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/ofb.js","./streamCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/streamCipher.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","cipher-base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/cipher-base/index.js","evp_bytestokey":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/evp_bytestokey/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/decrypter.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/decrypter.js"][0].apply(exports,arguments)
+},{"./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/aes.js","./authCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/authCipher.js","./modes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes.js","./modes/cbc":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cbc.js","./modes/cfb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb.js","./modes/cfb1":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb1.js","./modes/cfb8":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb8.js","./modes/ctr":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/ctr.js","./modes/ecb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/ecb.js","./modes/ofb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/ofb.js","./streamCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/streamCipher.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","cipher-base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/cipher-base/index.js","evp_bytestokey":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/evp_bytestokey/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/evp_bytestokey/index.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/evp_bytestokey/index.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","create-hash/md5":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/md5.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/streamCipher.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/streamCipher.js"][0].apply(exports,arguments)
+},{"./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/aes.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","cipher-base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/cipher-base/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/ofb.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ofb.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/ecb.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ecb.js"][0].apply(exports,arguments)
+},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/ctr.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ctr.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb8.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb8.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb1.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb1.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cfb.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes/cbc.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cbc.js"][0].apply(exports,arguments)
+},{"buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/modes.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes.js"][0].apply(exports,arguments)
+},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/authCipher.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/authCipher.js"][0].apply(exports,arguments)
+},{"./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/aes.js","./ghash":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/ghash.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor/index.js","cipher-base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/cipher-base/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/cipher-base/index.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/cipher-base/index.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js","stream":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/stream-browserify/index.js","string_decoder":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/string_decoder/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/node_modules/buffer-xor/index.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/buffer-xor/index.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/ghash.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/ghash.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/browserify-aes/aes.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/aes.js"][0].apply(exports,arguments)
 },{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/asn1.js":[function(require,module,exports){
 // from https://github.com/indutny/self-signed/blob/gh-pages/lib/asn1.js
 // Fedor, you are amazing.
 
-var asn1 = require('asn1.js');
+var asn1 = require('asn1.js')
 
-var RSAPrivateKey = asn1.define('RSAPrivateKey', function() {
+var RSAPrivateKey = asn1.define('RSAPrivateKey', function () {
   this.seq().obj(
     this.key('version').int(),
     this.key('modulus').int(),
@@ -27962,48 +25598,48 @@ var RSAPrivateKey = asn1.define('RSAPrivateKey', function() {
     this.key('exponent1').int(),
     this.key('exponent2').int(),
     this.key('coefficient').int()
-  );
-});
-exports.RSAPrivateKey = RSAPrivateKey;
+  )
+})
+exports.RSAPrivateKey = RSAPrivateKey
 
-var RSAPublicKey = asn1.define('RSAPublicKey', function() {
+var RSAPublicKey = asn1.define('RSAPublicKey', function () {
   this.seq().obj(
     this.key('modulus').int(),
     this.key('publicExponent').int()
-  );
-});
-exports.RSAPublicKey = RSAPublicKey;
+  )
+})
+exports.RSAPublicKey = RSAPublicKey
 
-var PublicKey = asn1.define('SubjectPublicKeyInfo', function() {
+var PublicKey = asn1.define('SubjectPublicKeyInfo', function () {
   this.seq().obj(
     this.key('algorithm').use(AlgorithmIdentifier),
     this.key('subjectPublicKey').bitstr()
-  );
-});
-exports.PublicKey = PublicKey;
+  )
+})
+exports.PublicKey = PublicKey
 
-var AlgorithmIdentifier = asn1.define('AlgorithmIdentifier', function() {
+var AlgorithmIdentifier = asn1.define('AlgorithmIdentifier', function () {
   this.seq().obj(
     this.key('algorithm').objid(),
     this.key('none').null_().optional(),
     this.key('curve').objid().optional(),
     this.key('params').seq().obj(
-        this.key('p').int(),
-        this.key('q').int(),
-        this.key('g').int()
-      ).optional()
-  );
-});
+      this.key('p').int(),
+      this.key('q').int(),
+      this.key('g').int()
+    ).optional()
+  )
+})
 
-var PrivateKeyInfo = asn1.define('PrivateKeyInfo', function() {
+var PrivateKeyInfo = asn1.define('PrivateKeyInfo', function () {
   this.seq().obj(
     this.key('version').int(),
     this.key('algorithm').use(AlgorithmIdentifier),
     this.key('subjectPrivateKey').octstr()
-  );
-});
-exports.PrivateKey = PrivateKeyInfo;
-var EncryptedPrivateKeyInfo = asn1.define('EncryptedPrivateKeyInfo', function() {
+  )
+})
+exports.PrivateKey = PrivateKeyInfo
+var EncryptedPrivateKeyInfo = asn1.define('EncryptedPrivateKeyInfo', function () {
   this.seq().obj(
     this.key('algorithm').seq().obj(
       this.key('id').objid(),
@@ -28022,12 +25658,12 @@ var EncryptedPrivateKeyInfo = asn1.define('EncryptedPrivateKeyInfo', function() 
       )
     ),
     this.key('subjectPrivateKey').octstr()
-  );
-});
+  )
+})
 
-exports.EncryptedPrivateKey = EncryptedPrivateKeyInfo;
+exports.EncryptedPrivateKey = EncryptedPrivateKeyInfo
 
-var DSAPrivateKey = asn1.define('DSAPrivateKey', function() {
+var DSAPrivateKey = asn1.define('DSAPrivateKey', function () {
   this.seq().obj(
     this.key('version').int(),
     this.key('p').int(),
@@ -28035,34 +25671,34 @@ var DSAPrivateKey = asn1.define('DSAPrivateKey', function() {
     this.key('g').int(),
     this.key('pub_key').int(),
     this.key('priv_key').int()
-  );
-});
-exports.DSAPrivateKey = DSAPrivateKey;
+  )
+})
+exports.DSAPrivateKey = DSAPrivateKey
 
 exports.DSAparam = asn1.define('DSAparam', function () {
-  this.int();
-});
-var ECPrivateKey = asn1.define('ECPrivateKey', function() {
+  this.int()
+})
+var ECPrivateKey = asn1.define('ECPrivateKey', function () {
   this.seq().obj(
     this.key('version').int(),
     this.key('privateKey').octstr(),
     this.key('parameters').optional().explicit(0).use(ECParameters),
     this.key('publicKey').optional().explicit(1).bitstr()
-  );
-});
-exports.ECPrivateKey = ECPrivateKey;
-var ECParameters = asn1.define('ECParameters', function() {
+  )
+})
+exports.ECPrivateKey = ECPrivateKey
+var ECParameters = asn1.define('ECParameters', function () {
   this.choice({
     namedCurve: this.objid()
-  });
-});
+  })
+})
 
-exports.signature = asn1.define('signature', function() {
+exports.signature = asn1.define('signature', function () {
   this.seq().obj(
     this.key('r').int(),
     this.key('s').int()
-  );
-});
+  )
+})
 
 },{"asn1.js":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1.js":[function(require,module,exports){
 var asn1 = exports;
@@ -28174,7 +25810,7 @@ DERNode.prototype._encodeStr = function encodeStr(str, tag) {
     return this._createEncoderBuffer(str);
   else if (tag === 'bitstr')
     return this._createEncoderBuffer([ str.unused | 0, str.data ]);
-  else if (tag === 'ia5str')
+  else if (tag === 'ia5str' || tag === 'utf8str')
     return this._createEncoderBuffer(str);
   return this.reporter.error('Encoding of string type: ' + tag +
                              ' unsupported');
@@ -28512,14 +26148,16 @@ DERNode.prototype._decodeTag = function decodeTag(buffer, tag, any) {
     return buffer.skip(len, 'Failed to match body of: "' + tag + '"');
 
   // Indefinite length... find END tag
-  var state = buffer.start();
+  var state = buffer.save();
   var res = this._skipUntilEnd(
       buffer,
       'Failed to skip indefinite length body: "' + this.tag + '"');
   if (buffer.isError(res))
     return res;
 
-  return buffer.cut(state);
+  len = buffer.offset - state.offset;
+  buffer.restore(state);
+  return buffer.skip(len, 'Failed to match body of: "' + tag + '"');
 };
 
 DERNode.prototype._skipUntilEnd = function skipUntilEnd(buffer, fail) {
@@ -28570,7 +26208,7 @@ DERNode.prototype._decodeStr = function decodeStr(buffer, tag) {
       return unused;
 
     return { unused: unused, data: buffer.raw() };
-  } else if (tag === 'ia5str') {
+  } else if (tag === 'ia5str' || tag === 'utf8str') {
     return buffer.raw().toString();
   } else {
     return this.error('Decoding of string type: ' + tag + ' unsupported');
@@ -28914,7 +26552,7 @@ var assert = require('minimalistic-assert');
 // Supported tags
 var tags = [
   'seq', 'seqof', 'set', 'setof', 'octstr', 'bitstr', 'objid', 'bool',
-  'gentime', 'utctime', 'null_', 'enum', 'int', 'ia5str'
+  'gentime', 'utctime', 'null_', 'enum', 'int', 'ia5str', 'utf8str'
 ];
 
 // Public methods list
@@ -29282,7 +26920,9 @@ Node.prototype._decodeGeneric = function decodeGeneric(tag, input) {
     return null;
   if (tag === 'seqof' || tag === 'setof')
     return this._decodeList(input, tag, state.args[0]);
-  else if (tag === 'octstr' || tag === 'bitstr' || tag === 'ia5str')
+  else if (tag === 'octstr' || tag === 'bitstr')
+    return this._decodeStr(input, tag);
+  else if (tag === 'ia5str' || tag === 'utf8str')
     return this._decodeStr(input, tag);
   else if (tag === 'objid' && state.args)
     return this._decodeObjid(input, state.args[0], state.args[1]);
@@ -29486,6 +27126,8 @@ Node.prototype._encodePrimitive = function encodePrimitive(tag, data) {
 
   if (tag === 'octstr' || tag === 'bitstr' || tag === 'ia5str')
     return this._encodeStr(data, tag);
+  else if (tag === 'utf8str')
+    return this._encodeStr(data, tag);
   else if (tag === 'objid' && state.args)
     return this._encodeObjid(data, state.reverseArgs[0], state.args[1]);
   else if (tag === 'objid')
@@ -29503,18 +27145,7 @@ Node.prototype._encodePrimitive = function encodePrimitive(tag, data) {
 };
 
 },{"../base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/index.js","minimalistic-assert":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/node_modules/minimalistic-assert/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/node_modules/minimalistic-assert/index.js":[function(require,module,exports){
-module.exports = assert;
-
-function assert(val, msg) {
-  if (!val)
-    throw new Error(msg || 'Assertion failed');
-}
-
-assert.equal = function assertEqual(l, r, msg) {
-  if (l != r)
-    throw new Error(msg || ('Assertion failed: ' + l + ' != ' + r));
-};
-
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/node_modules/minimalistic-assert/index.js"][0].apply(exports,arguments)
 },{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-sign/node_modules/parse-asn1/node_modules/asn1.js/lib/asn1/base/buffer.js":[function(require,module,exports){
 var inherits = require('inherits');
 var Reporter = require('../base').Reporter;
@@ -36981,14 +34612,14 @@ exports['RSA-SHA512'] = exports.sha512WithRSAEncryption = {
   id: new Buffer('3051300d060960864801650304020305000440', 'hex')
 }
 exports['RSA-SHA1'] = {
-	sign: 'rsa',
-	hash: 'sha1',
-	id: new Buffer('3021300906052b0e03021a05000414', 'hex')
+  sign: 'rsa',
+  hash: 'sha1',
+  id: new Buffer('3021300906052b0e03021a05000414', 'hex')
 }
 exports['ecdsa-with-SHA1'] = {
-	sign: 'ecdsa',
-	hash: 'sha1',
-	id: new Buffer('', 'hex')
+  sign: 'ecdsa',
+  hash: 'sha1',
+  id: new Buffer('', 'hex')
 }
 exports.DSA = exports['DSA-SHA1'] = exports['DSA-SHA'] = {
   sign: 'dsa',
@@ -37032,7 +34663,849 @@ exports['RSA-MD5'] = exports.md5WithRSAEncryption = {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/browser.js":[function(require,module,exports){
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/browser.js":[function(require,module,exports){
+var ebtk = require('evp_bytestokey')
+var aes = require('browserify-aes/browser')
+var DES = require('browserify-des')
+var desModes = require('browserify-des/modes')
+var aesModes = require('browserify-aes/modes')
+function createCipher (suite, password) {
+  var keyLen, ivLen
+  suite = suite.toLowerCase()
+  if (aesModes[suite]) {
+    keyLen = aesModes[suite].key
+    ivLen = aesModes[suite].iv
+  } else if (desModes[suite]) {
+    keyLen = desModes[suite].key * 8
+    ivLen = desModes[suite].iv
+  } else {
+    throw new TypeError('invalid suite type')
+  }
+  var keys = ebtk(password, false, keyLen, ivLen)
+  return createCipheriv(suite, keys.key, keys.iv)
+}
+function createDecipher (suite, password) {
+  var keyLen, ivLen
+  suite = suite.toLowerCase()
+  if (aesModes[suite]) {
+    keyLen = aesModes[suite].key
+    ivLen = aesModes[suite].iv
+  } else if (desModes[suite]) {
+    keyLen = desModes[suite].key * 8
+    ivLen = desModes[suite].iv
+  } else {
+    throw new TypeError('invalid suite type')
+  }
+  var keys = ebtk(password, false, keyLen, ivLen)
+  return createDecipheriv(suite, keys.key, keys.iv)
+}
+
+function createCipheriv (suite, key, iv) {
+  suite = suite.toLowerCase()
+  if (aesModes[suite]) {
+    return aes.createCipheriv(suite, key, iv)
+  } else if (desModes[suite]) {
+    return new DES({
+      key: key,
+      iv: iv,
+      mode: suite
+    })
+  } else {
+    throw new TypeError('invalid suite type')
+  }
+}
+function createDecipheriv (suite, key, iv) {
+  suite = suite.toLowerCase()
+  if (aesModes[suite]) {
+    return aes.createDecipheriv(suite, key, iv)
+  } else if (desModes[suite]) {
+    return new DES({
+      key: key,
+      iv: iv,
+      mode: suite,
+      decrypt: true
+    })
+  } else {
+    throw new TypeError('invalid suite type')
+  }
+}
+exports.createCipher = exports.Cipher = createCipher
+exports.createCipheriv = exports.Cipheriv = createCipheriv
+exports.createDecipher = exports.Decipher = createDecipher
+exports.createDecipheriv = exports.Decipheriv = createDecipheriv
+function getCiphers () {
+  return Object.keys(desModes).concat(aes.getCiphers())
+}
+exports.listCiphers = exports.getCiphers = getCiphers
+
+},{"browserify-aes/browser":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/browser.js","browserify-aes/modes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes.js","browserify-des":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/index.js","browserify-des/modes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/modes.js","evp_bytestokey":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/evp_bytestokey/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/modes.js":[function(require,module,exports){
+exports['des-ecb'] = {
+  key: 8,
+  iv: 0
+}
+exports['des-cbc'] = exports.des = {
+  key: 8,
+  iv: 8
+}
+exports['des-ede3-cbc'] = exports.des3 = {
+  key: 24,
+  iv: 8
+}
+exports['des-ede3'] = {
+  key: 24,
+  iv: 0
+}
+exports['des-ede-cbc'] = {
+  key: 16,
+  iv: 8
+}
+exports['des-ede'] = {
+  key: 16,
+  iv: 0
+}
+
+},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/index.js":[function(require,module,exports){
+(function (Buffer){
+var CipherBase = require('cipher-base')
+var des = require('des.js')
+var inherits = require('inherits')
+
+var modes = {
+  'des-ede3-cbc': des.CBC.instantiate(des.EDE),
+  'des-ede3': des.EDE,
+  'des-ede-cbc': des.CBC.instantiate(des.EDE),
+  'des-ede': des.EDE,
+  'des-cbc': des.CBC.instantiate(des.DES),
+  'des-ecb': des.DES
+}
+modes.des = modes['des-cbc']
+modes.des3 = modes['des-ede3-cbc']
+module.exports = DES
+inherits(DES, CipherBase)
+function DES (opts) {
+  CipherBase.call(this)
+  var modeName = opts.mode.toLowerCase()
+  var mode = modes[modeName]
+  var type
+  if (opts.decrypt) {
+    type = 'decrypt'
+  } else {
+    type = 'encrypt'
+  }
+  var key = opts.key
+  if (modeName === 'des-ede' || modeName === 'des-ede-cbc') {
+    key = Buffer.concat([key, key.slice(0, 8)])
+  }
+  var iv = opts.iv
+  this._des = mode.create({
+    key: key,
+    iv: iv,
+    type: type
+  })
+}
+DES.prototype._update = function (data) {
+  return new Buffer(this._des.update(data))
+}
+DES.prototype._final = function () {
+  return new Buffer(this._des.final())
+}
+
+}).call(this,require("buffer").Buffer)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","cipher-base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/cipher-base/index.js","des.js":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des.js":[function(require,module,exports){
+'use strict';
+
+exports.utils = require('./des/utils');
+exports.Cipher = require('./des/cipher');
+exports.DES = require('./des/des');
+exports.CBC = require('./des/cbc');
+exports.EDE = require('./des/ede');
+
+},{"./des/cbc":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des/cbc.js","./des/cipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des/cipher.js","./des/des":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des/des.js","./des/ede":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des/ede.js","./des/utils":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des/utils.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des/utils.js":[function(require,module,exports){
+'use strict';
+
+exports.readUInt32BE = function readUInt32BE(bytes, off) {
+  var res =  (bytes[0 + off] << 24) |
+             (bytes[1 + off] << 16) |
+             (bytes[2 + off] << 8) |
+             bytes[3 + off];
+  return res >>> 0;
+};
+
+exports.writeUInt32BE = function writeUInt32BE(bytes, value, off) {
+  bytes[0 + off] = value >>> 24;
+  bytes[1 + off] = (value >>> 16) & 0xff;
+  bytes[2 + off] = (value >>> 8) & 0xff;
+  bytes[3 + off] = value & 0xff;
+};
+
+exports.ip = function ip(inL, inR, out, off) {
+  var outL = 0;
+  var outR = 0;
+
+  for (var i = 6; i >= 0; i -= 2) {
+    for (var j = 0; j <= 24; j += 8) {
+      outL <<= 1;
+      outL |= (inR >>> (j + i)) & 1;
+    }
+    for (var j = 0; j <= 24; j += 8) {
+      outL <<= 1;
+      outL |= (inL >>> (j + i)) & 1;
+    }
+  }
+
+  for (var i = 6; i >= 0; i -= 2) {
+    for (var j = 1; j <= 25; j += 8) {
+      outR <<= 1;
+      outR |= (inR >>> (j + i)) & 1;
+    }
+    for (var j = 1; j <= 25; j += 8) {
+      outR <<= 1;
+      outR |= (inL >>> (j + i)) & 1;
+    }
+  }
+
+  out[off + 0] = outL >>> 0;
+  out[off + 1] = outR >>> 0;
+};
+
+exports.rip = function rip(inL, inR, out, off) {
+  var outL = 0;
+  var outR = 0;
+
+  for (var i = 0; i < 4; i++) {
+    for (var j = 24; j >= 0; j -= 8) {
+      outL <<= 1;
+      outL |= (inR >>> (j + i)) & 1;
+      outL <<= 1;
+      outL |= (inL >>> (j + i)) & 1;
+    }
+  }
+  for (var i = 4; i < 8; i++) {
+    for (var j = 24; j >= 0; j -= 8) {
+      outR <<= 1;
+      outR |= (inR >>> (j + i)) & 1;
+      outR <<= 1;
+      outR |= (inL >>> (j + i)) & 1;
+    }
+  }
+
+  out[off + 0] = outL >>> 0;
+  out[off + 1] = outR >>> 0;
+};
+
+exports.pc1 = function pc1(inL, inR, out, off) {
+  var outL = 0;
+  var outR = 0;
+
+  // 7, 15, 23, 31, 39, 47, 55, 63
+  // 6, 14, 22, 30, 39, 47, 55, 63
+  // 5, 13, 21, 29, 39, 47, 55, 63
+  // 4, 12, 20, 28
+  for (var i = 7; i >= 5; i--) {
+    for (var j = 0; j <= 24; j += 8) {
+      outL <<= 1;
+      outL |= (inR >> (j + i)) & 1;
+    }
+    for (var j = 0; j <= 24; j += 8) {
+      outL <<= 1;
+      outL |= (inL >> (j + i)) & 1;
+    }
+  }
+  for (var j = 0; j <= 24; j += 8) {
+    outL <<= 1;
+    outL |= (inR >> (j + i)) & 1;
+  }
+
+  // 1, 9, 17, 25, 33, 41, 49, 57
+  // 2, 10, 18, 26, 34, 42, 50, 58
+  // 3, 11, 19, 27, 35, 43, 51, 59
+  // 36, 44, 52, 60
+  for (var i = 1; i <= 3; i++) {
+    for (var j = 0; j <= 24; j += 8) {
+      outR <<= 1;
+      outR |= (inR >> (j + i)) & 1;
+    }
+    for (var j = 0; j <= 24; j += 8) {
+      outR <<= 1;
+      outR |= (inL >> (j + i)) & 1;
+    }
+  }
+  for (var j = 0; j <= 24; j += 8) {
+    outR <<= 1;
+    outR |= (inL >> (j + i)) & 1;
+  }
+
+  out[off + 0] = outL >>> 0;
+  out[off + 1] = outR >>> 0;
+};
+
+exports.r28shl = function r28shl(num, shift) {
+  return ((num << shift) & 0xfffffff) | (num >>> (28 - shift));
+};
+
+var pc2table = [
+  // inL => outL
+  14, 11, 17, 4, 27, 23, 25, 0,
+  13, 22, 7, 18, 5, 9, 16, 24,
+  2, 20, 12, 21, 1, 8, 15, 26,
+
+  // inR => outR
+  15, 4, 25, 19, 9, 1, 26, 16,
+  5, 11, 23, 8, 12, 7, 17, 0,
+  22, 3, 10, 14, 6, 20, 27, 24
+];
+
+exports.pc2 = function pc2(inL, inR, out, off) {
+  var outL = 0;
+  var outR = 0;
+
+  var len = pc2table.length >>> 1;
+  for (var i = 0; i < len; i++) {
+    outL <<= 1;
+    outL |= (inL >>> pc2table[i]) & 0x1;
+  }
+  for (var i = len; i < pc2table.length; i++) {
+    outR <<= 1;
+    outR |= (inR >>> pc2table[i]) & 0x1;
+  }
+
+  out[off + 0] = outL >>> 0;
+  out[off + 1] = outR >>> 0;
+};
+
+exports.expand = function expand(r, out, off) {
+  var outL = 0;
+  var outR = 0;
+
+  outL = ((r & 1) << 5) | (r >>> 27);
+  for (var i = 23; i >= 15; i -= 4) {
+    outL <<= 6;
+    outL |= (r >>> i) & 0x3f;
+  }
+  for (var i = 11; i >= 3; i -= 4) {
+    outR |= (r >>> i) & 0x3f;
+    outR <<= 6;
+  }
+  outR |= ((r & 0x1f) << 1) | (r >>> 31);
+
+  out[off + 0] = outL >>> 0;
+  out[off + 1] = outR >>> 0;
+};
+
+var sTable = [
+  14, 0, 4, 15, 13, 7, 1, 4, 2, 14, 15, 2, 11, 13, 8, 1,
+  3, 10, 10, 6, 6, 12, 12, 11, 5, 9, 9, 5, 0, 3, 7, 8,
+  4, 15, 1, 12, 14, 8, 8, 2, 13, 4, 6, 9, 2, 1, 11, 7,
+  15, 5, 12, 11, 9, 3, 7, 14, 3, 10, 10, 0, 5, 6, 0, 13,
+
+  15, 3, 1, 13, 8, 4, 14, 7, 6, 15, 11, 2, 3, 8, 4, 14,
+  9, 12, 7, 0, 2, 1, 13, 10, 12, 6, 0, 9, 5, 11, 10, 5,
+  0, 13, 14, 8, 7, 10, 11, 1, 10, 3, 4, 15, 13, 4, 1, 2,
+  5, 11, 8, 6, 12, 7, 6, 12, 9, 0, 3, 5, 2, 14, 15, 9,
+
+  10, 13, 0, 7, 9, 0, 14, 9, 6, 3, 3, 4, 15, 6, 5, 10,
+  1, 2, 13, 8, 12, 5, 7, 14, 11, 12, 4, 11, 2, 15, 8, 1,
+  13, 1, 6, 10, 4, 13, 9, 0, 8, 6, 15, 9, 3, 8, 0, 7,
+  11, 4, 1, 15, 2, 14, 12, 3, 5, 11, 10, 5, 14, 2, 7, 12,
+
+  7, 13, 13, 8, 14, 11, 3, 5, 0, 6, 6, 15, 9, 0, 10, 3,
+  1, 4, 2, 7, 8, 2, 5, 12, 11, 1, 12, 10, 4, 14, 15, 9,
+  10, 3, 6, 15, 9, 0, 0, 6, 12, 10, 11, 1, 7, 13, 13, 8,
+  15, 9, 1, 4, 3, 5, 14, 11, 5, 12, 2, 7, 8, 2, 4, 14,
+
+  2, 14, 12, 11, 4, 2, 1, 12, 7, 4, 10, 7, 11, 13, 6, 1,
+  8, 5, 5, 0, 3, 15, 15, 10, 13, 3, 0, 9, 14, 8, 9, 6,
+  4, 11, 2, 8, 1, 12, 11, 7, 10, 1, 13, 14, 7, 2, 8, 13,
+  15, 6, 9, 15, 12, 0, 5, 9, 6, 10, 3, 4, 0, 5, 14, 3,
+
+  12, 10, 1, 15, 10, 4, 15, 2, 9, 7, 2, 12, 6, 9, 8, 5,
+  0, 6, 13, 1, 3, 13, 4, 14, 14, 0, 7, 11, 5, 3, 11, 8,
+  9, 4, 14, 3, 15, 2, 5, 12, 2, 9, 8, 5, 12, 15, 3, 10,
+  7, 11, 0, 14, 4, 1, 10, 7, 1, 6, 13, 0, 11, 8, 6, 13,
+
+  4, 13, 11, 0, 2, 11, 14, 7, 15, 4, 0, 9, 8, 1, 13, 10,
+  3, 14, 12, 3, 9, 5, 7, 12, 5, 2, 10, 15, 6, 8, 1, 6,
+  1, 6, 4, 11, 11, 13, 13, 8, 12, 1, 3, 4, 7, 10, 14, 7,
+  10, 9, 15, 5, 6, 0, 8, 15, 0, 14, 5, 2, 9, 3, 2, 12,
+
+  13, 1, 2, 15, 8, 13, 4, 8, 6, 10, 15, 3, 11, 7, 1, 4,
+  10, 12, 9, 5, 3, 6, 14, 11, 5, 0, 0, 14, 12, 9, 7, 2,
+  7, 2, 11, 1, 4, 14, 1, 7, 9, 4, 12, 10, 14, 8, 2, 13,
+  0, 15, 6, 12, 10, 9, 13, 0, 15, 3, 3, 5, 5, 6, 8, 11
+];
+
+exports.substitute = function substitute(inL, inR) {
+  var out = 0;
+  for (var i = 0; i < 4; i++) {
+    var b = (inL >>> (18 - i * 6)) & 0x3f;
+    var sb = sTable[i * 0x40 + b];
+
+    out <<= 4;
+    out |= sb;
+  }
+  for (var i = 0; i < 4; i++) {
+    var b = (inR >>> (18 - i * 6)) & 0x3f;
+    var sb = sTable[4 * 0x40 + i * 0x40 + b];
+
+    out <<= 4;
+    out |= sb;
+  }
+  return out >>> 0;
+};
+
+var permuteTable = [
+  16, 25, 12, 11, 3, 20, 4, 15, 31, 17, 9, 6, 27, 14, 1, 22,
+  30, 24, 8, 18, 0, 5, 29, 23, 13, 19, 2, 26, 10, 21, 28, 7
+];
+
+exports.permute = function permute(num) {
+  var out = 0;
+  for (var i = 0; i < permuteTable.length; i++) {
+    out <<= 1;
+    out |= (num >>> permuteTable[i]) & 0x1;
+  }
+  return out >>> 0;
+};
+
+exports.padSplit = function padSplit(num, size, group) {
+  var str = num.toString(2);
+  while (str.length < size)
+    str = '0' + str;
+
+  var out = [];
+  for (var i = 0; i < size; i += group)
+    out.push(str.slice(i, i + group));
+  return out.join(' ');
+};
+
+},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des/ede.js":[function(require,module,exports){
+'use strict';
+
+var assert = require('minimalistic-assert');
+var inherits = require('inherits');
+
+var des = require('../des');
+var Cipher = des.Cipher;
+var DES = des.DES;
+
+function EDEState(type, key) {
+  assert.equal(key.length, 24, 'Invalid key length');
+
+  var k1 = key.slice(0, 8);
+  var k2 = key.slice(8, 16);
+  var k3 = key.slice(16, 24);
+
+  if (type === 'encrypt') {
+    this.ciphers = [
+      DES.create({ type: 'encrypt', key: k1 }),
+      DES.create({ type: 'decrypt', key: k2 }),
+      DES.create({ type: 'encrypt', key: k3 })
+    ];
+  } else {
+    this.ciphers = [
+      DES.create({ type: 'decrypt', key: k3 }),
+      DES.create({ type: 'encrypt', key: k2 }),
+      DES.create({ type: 'decrypt', key: k1 })
+    ];
+  }
+}
+
+function EDE(options) {
+  Cipher.call(this, options);
+
+  var state = new EDEState(this.type, this.options.key);
+  this._edeState = state;
+}
+inherits(EDE, Cipher);
+
+module.exports = EDE;
+
+EDE.create = function create(options) {
+  return new EDE(options);
+};
+
+EDE.prototype._update = function _update(inp, inOff, out, outOff) {
+  var state = this._edeState;
+
+  state.ciphers[0]._update(inp, inOff, out, outOff);
+  state.ciphers[1]._update(out, outOff, out, outOff);
+  state.ciphers[2]._update(out, outOff, out, outOff);
+};
+
+EDE.prototype._pad = DES.prototype._pad;
+EDE.prototype._unpad = DES.prototype._unpad;
+
+},{"../des":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js","minimalistic-assert":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/node_modules/minimalistic-assert/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des/des.js":[function(require,module,exports){
+'use strict';
+
+var assert = require('minimalistic-assert');
+var inherits = require('inherits');
+
+var des = require('../des');
+var utils = des.utils;
+var Cipher = des.Cipher;
+
+function DESState() {
+  this.tmp = new Array(2);
+  this.keys = null;
+}
+
+function DES(options) {
+  Cipher.call(this, options);
+
+  var state = new DESState();
+  this._desState = state;
+
+  this.deriveKeys(state, options.key);
+}
+inherits(DES, Cipher);
+module.exports = DES;
+
+DES.create = function create(options) {
+  return new DES(options);
+};
+
+var shiftTable = [
+  1, 1, 2, 2, 2, 2, 2, 2,
+  1, 2, 2, 2, 2, 2, 2, 1
+];
+
+DES.prototype.deriveKeys = function deriveKeys(state, key) {
+  state.keys = new Array(16 * 2);
+
+  assert.equal(key.length, this.blockSize, 'Invalid key length');
+
+  var kL = utils.readUInt32BE(key, 0);
+  var kR = utils.readUInt32BE(key, 4);
+
+  utils.pc1(kL, kR, state.tmp, 0);
+  kL = state.tmp[0];
+  kR = state.tmp[1];
+  for (var i = 0; i < state.keys.length; i += 2) {
+    var shift = shiftTable[i >>> 1];
+    kL = utils.r28shl(kL, shift);
+    kR = utils.r28shl(kR, shift);
+    utils.pc2(kL, kR, state.keys, i);
+  }
+};
+
+DES.prototype._update = function _update(inp, inOff, out, outOff) {
+  var state = this._desState;
+
+  var l = utils.readUInt32BE(inp, inOff);
+  var r = utils.readUInt32BE(inp, inOff + 4);
+
+  // Initial Permutation
+  utils.ip(l, r, state.tmp, 0);
+  l = state.tmp[0];
+  r = state.tmp[1];
+
+  if (this.type === 'encrypt')
+    this._encrypt(state, l, r, state.tmp, 0);
+  else
+    this._decrypt(state, l, r, state.tmp, 0);
+
+  l = state.tmp[0];
+  r = state.tmp[1];
+
+  utils.writeUInt32BE(out, l, outOff);
+  utils.writeUInt32BE(out, r, outOff + 4);
+};
+
+DES.prototype._pad = function _pad(buffer, off) {
+  var value = buffer.length - off;
+  for (var i = off; i < buffer.length; i++)
+    buffer[i] = value;
+
+  return true;
+};
+
+DES.prototype._unpad = function _unpad(buffer) {
+  var pad = buffer[buffer.length - 1];
+  for (var i = buffer.length - pad; i < buffer.length; i++)
+    assert.equal(buffer[i], pad);
+
+  return buffer.slice(0, buffer.length - pad);
+};
+
+DES.prototype._encrypt = function _encrypt(state, lStart, rStart, out, off) {
+  var l = lStart;
+  var r = rStart;
+
+  // Apply f() x16 times
+  for (var i = 0; i < state.keys.length; i += 2) {
+    var keyL = state.keys[i];
+    var keyR = state.keys[i + 1];
+
+    // f(r, k)
+    utils.expand(r, state.tmp, 0);
+
+    keyL ^= state.tmp[0];
+    keyR ^= state.tmp[1];
+    var s = utils.substitute(keyL, keyR);
+    var f = utils.permute(s);
+
+    var t = r;
+    r = (l ^ f) >>> 0;
+    l = t;
+  }
+
+  // Reverse Initial Permutation
+  utils.rip(r, l, out, off);
+};
+
+DES.prototype._decrypt = function _decrypt(state, lStart, rStart, out, off) {
+  var l = rStart;
+  var r = lStart;
+
+  // Apply f() x16 times
+  for (var i = state.keys.length - 2; i >= 0; i -= 2) {
+    var keyL = state.keys[i];
+    var keyR = state.keys[i + 1];
+
+    // f(r, k)
+    utils.expand(l, state.tmp, 0);
+
+    keyL ^= state.tmp[0];
+    keyR ^= state.tmp[1];
+    var s = utils.substitute(keyL, keyR);
+    var f = utils.permute(s);
+
+    var t = l;
+    l = (r ^ f) >>> 0;
+    r = t;
+  }
+
+  // Reverse Initial Permutation
+  utils.rip(l, r, out, off);
+};
+
+},{"../des":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js","minimalistic-assert":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/node_modules/minimalistic-assert/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des/cipher.js":[function(require,module,exports){
+'use strict';
+
+var assert = require('minimalistic-assert');
+
+function Cipher(options) {
+  this.options = options;
+
+  this.type = this.options.type;
+  this.blockSize = 8;
+  this._init();
+
+  this.buffer = new Array(this.blockSize);
+  this.bufferOff = 0;
+}
+module.exports = Cipher;
+
+Cipher.prototype._init = function _init() {
+  // Might be overrided
+};
+
+Cipher.prototype.update = function update(data) {
+  if (data.length === 0)
+    return [];
+
+  if (this.type === 'decrypt')
+    return this._updateDecrypt(data);
+  else
+    return this._updateEncrypt(data);
+};
+
+Cipher.prototype._buffer = function _buffer(data, off) {
+  // Append data to buffer
+  var min = Math.min(this.buffer.length - this.bufferOff, data.length - off);
+  for (var i = 0; i < min; i++)
+    this.buffer[this.bufferOff + i] = data[off + i];
+  this.bufferOff += min;
+
+  // Shift next
+  return min;
+};
+
+Cipher.prototype._flushBuffer = function _flushBuffer(out, off) {
+  this._update(this.buffer, 0, out, off);
+  this.bufferOff = 0;
+  return this.blockSize;
+};
+
+Cipher.prototype._updateEncrypt = function _updateEncrypt(data) {
+  var inputOff = 0;
+  var outputOff = 0;
+
+  var count = ((this.bufferOff + data.length) / this.blockSize) | 0;
+  var out = new Array(count * this.blockSize);
+
+  if (this.bufferOff !== 0) {
+    inputOff += this._buffer(data, inputOff);
+
+    if (this.bufferOff === this.buffer.length)
+      outputOff += this._flushBuffer(out, outputOff);
+  }
+
+  // Write blocks
+  var max = data.length - ((data.length - inputOff) % this.blockSize);
+  for (; inputOff < max; inputOff += this.blockSize) {
+    this._update(data, inputOff, out, outputOff);
+    outputOff += this.blockSize;
+  }
+
+  // Queue rest
+  for (; inputOff < data.length; inputOff++, this.bufferOff++)
+    this.buffer[this.bufferOff] = data[inputOff];
+
+  return out;
+};
+
+Cipher.prototype._updateDecrypt = function _updateDecrypt(data) {
+  var inputOff = 0;
+  var outputOff = 0;
+
+  var count = Math.ceil((this.bufferOff + data.length) / this.blockSize) - 1;
+  var out = new Array(count * this.blockSize);
+
+  // TODO(indutny): optimize it, this is far from optimal
+  for (; count > 0; count--) {
+    inputOff += this._buffer(data, inputOff);
+    outputOff += this._flushBuffer(out, outputOff);
+  }
+
+  // Buffer rest of the input
+  inputOff += this._buffer(data, inputOff);
+
+  return out;
+};
+
+Cipher.prototype.final = function final(buffer) {
+  var first;
+  if (buffer)
+    first = this.update(buffer);
+
+  var last;
+  if (this.type === 'encrypt')
+    last = this._finalEncrypt();
+  else
+    last = this._finalDecrypt();
+
+  if (first)
+    return first.concat(last);
+  else
+    return last;
+};
+
+Cipher.prototype._pad = function _pad(buffer, off) {
+  if (off === 0)
+    return false;
+
+  while (off < buffer.length)
+    buffer[off++] = 0;
+
+  return true;
+};
+
+Cipher.prototype._finalEncrypt = function _finalEncrypt() {
+  if (!this._pad(this.buffer, this.bufferOff))
+    return [];
+
+  var out = new Array(this.blockSize);
+  this._update(this.buffer, 0, out, 0);
+  return out;
+};
+
+Cipher.prototype._unpad = function _unpad(buffer) {
+  return buffer;
+};
+
+Cipher.prototype._finalDecrypt = function _finalDecrypt() {
+  assert.equal(this.bufferOff, this.blockSize, 'Not enough data to decrypt');
+  var out = new Array(this.blockSize);
+  this._flushBuffer(out, 0);
+
+  return this._unpad(out);
+};
+
+},{"minimalistic-assert":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/node_modules/minimalistic-assert/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/lib/des/cbc.js":[function(require,module,exports){
+'use strict';
+
+var assert = require('minimalistic-assert');
+var inherits = require('inherits');
+
+var proto = {};
+
+function CBCState(iv) {
+  assert.equal(iv.length, 8, 'Invalid IV length');
+
+  this.iv = new Array(8);
+  for (var i = 0; i < this.iv.length; i++)
+    this.iv[i] = iv[i];
+}
+
+function instantiate(Base) {
+  function CBC(options) {
+    Base.call(this, options);
+    this._cbcInit();
+  }
+  inherits(CBC, Base);
+
+  var keys = Object.keys(proto);
+  for (var i = 0; i < keys.length; i++) {
+    var key = keys[i];
+    CBC.prototype[key] = proto[key];
+  }
+
+  CBC.create = function create(options) {
+    return new CBC(options);
+  };
+
+  return CBC;
+}
+
+exports.instantiate = instantiate;
+
+proto._cbcInit = function _cbcInit() {
+  var state = new CBCState(this.options.iv);
+  this._cbcState = state;
+};
+
+proto._update = function _update(inp, inOff, out, outOff) {
+  var state = this._cbcState;
+  var superProto = this.constructor.super_.prototype;
+
+  var iv = state.iv;
+  if (this.type === 'encrypt') {
+    for (var i = 0; i < this.blockSize; i++)
+      iv[i] ^= inp[inOff + i];
+
+    superProto._update.call(this, iv, 0, out, outOff);
+
+    for (var i = 0; i < this.blockSize; i++)
+      iv[i] = out[outOff + i];
+  } else {
+    superProto._update.call(this, inp, inOff, out, outOff);
+
+    for (var i = 0; i < this.blockSize; i++)
+      out[outOff + i] ^= iv[i];
+
+    for (var i = 0; i < this.blockSize; i++)
+      iv[i] = inp[inOff + i];
+  }
+};
+
+},{"inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js","minimalistic-assert":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/node_modules/minimalistic-assert/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/des.js/node_modules/minimalistic-assert/index.js":[function(require,module,exports){
+module.exports = assert;
+
+function assert(val, msg) {
+  if (!val)
+    throw new Error(msg || 'Assertion failed');
+}
+
+assert.equal = function assertEqual(l, r, msg) {
+  if (l != r)
+    throw new Error(msg || ('Assertion failed: ' + l + ' != ' + r));
+};
+
+},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-des/node_modules/cipher-base/index.js":[function(require,module,exports){
+arguments[4]["/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/cipher-base/index.js"][0].apply(exports,arguments)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js","stream":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/stream-browserify/index.js","string_decoder":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/string_decoder/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/browser.js":[function(require,module,exports){
 var ciphers = require('./encrypter')
 exports.createCipher = exports.Cipher = ciphers.createCipher
 exports.createCipheriv = exports.Cipheriv = ciphers.createCipheriv
@@ -37045,13 +35518,13 @@ function getCiphers () {
 }
 exports.listCiphers = exports.getCiphers = getCiphers
 
-},{"./decrypter":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/decrypter.js","./encrypter":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/encrypter.js","./modes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/encrypter.js":[function(require,module,exports){
+},{"./decrypter":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/decrypter.js","./encrypter":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/encrypter.js","./modes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/encrypter.js":[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
-var Transform = require('./cipherBase')
+var Transform = require('cipher-base')
 var inherits = require('inherits')
 var modes = require('./modes')
-var ebtk = require('./EVP_BytesToKey')
+var ebtk = require('evp_bytestokey')
 var StreamCipher = require('./streamCipher')
 var AuthCipher = require('./authCipher')
 inherits(Cipher, Transform)
@@ -37162,7 +35635,7 @@ function createCipher (suite, password) {
   if (!config) {
     throw new TypeError('invalid suite type')
   }
-  var keys = ebtk(password, config.key, config.iv)
+  var keys = ebtk(password, false, config.key, config.iv)
   return createCipheriv(suite, keys.key, keys.iv)
 }
 
@@ -37170,15 +35643,15 @@ exports.createCipheriv = createCipheriv
 exports.createCipher = createCipher
 
 }).call(this,require("buffer").Buffer)
-},{"./EVP_BytesToKey":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/EVP_BytesToKey.js","./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/aes.js","./authCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/authCipher.js","./cipherBase":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/cipherBase.js","./modes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes.js","./modes/cbc":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/cbc.js","./modes/cfb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/cfb.js","./modes/cfb1":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/cfb1.js","./modes/cfb8":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/cfb8.js","./modes/ctr":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/ctr.js","./modes/ecb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/ecb.js","./modes/ofb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/ofb.js","./streamCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/streamCipher.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/decrypter.js":[function(require,module,exports){
+},{"./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/aes.js","./authCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/authCipher.js","./modes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes.js","./modes/cbc":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cbc.js","./modes/cfb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb.js","./modes/cfb1":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb1.js","./modes/cfb8":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb8.js","./modes/ctr":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ctr.js","./modes/ecb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ecb.js","./modes/ofb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ofb.js","./streamCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/streamCipher.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","cipher-base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/cipher-base/index.js","evp_bytestokey":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/evp_bytestokey/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/decrypter.js":[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
-var Transform = require('./cipherBase')
+var Transform = require('cipher-base')
 var inherits = require('inherits')
 var modes = require('./modes')
 var StreamCipher = require('./streamCipher')
 var AuthCipher = require('./authCipher')
-var ebtk = require('./EVP_BytesToKey')
+var ebtk = require('evp_bytestokey')
 
 inherits(Decipher, Transform)
 function Decipher (mode, key, iv) {
@@ -37303,17 +35776,283 @@ function createDecipher (suite, password) {
   if (!config) {
     throw new TypeError('invalid suite type')
   }
-  var keys = ebtk(password, config.key, config.iv)
+  var keys = ebtk(password, false, config.key, config.iv)
   return createDecipheriv(suite, keys.key, keys.iv)
 }
 exports.createDecipher = createDecipher
 exports.createDecipheriv = createDecipheriv
 
 }).call(this,require("buffer").Buffer)
-},{"./EVP_BytesToKey":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/EVP_BytesToKey.js","./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/aes.js","./authCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/authCipher.js","./cipherBase":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/cipherBase.js","./modes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes.js","./modes/cbc":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/cbc.js","./modes/cfb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/cfb.js","./modes/cfb1":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/cfb1.js","./modes/cfb8":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/cfb8.js","./modes/ctr":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/ctr.js","./modes/ecb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/ecb.js","./modes/ofb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/ofb.js","./streamCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/streamCipher.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/streamCipher.js":[function(require,module,exports){
+},{"./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/aes.js","./authCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/authCipher.js","./modes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes.js","./modes/cbc":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cbc.js","./modes/cfb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb.js","./modes/cfb1":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb1.js","./modes/cfb8":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb8.js","./modes/ctr":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ctr.js","./modes/ecb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ecb.js","./modes/ofb":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ofb.js","./streamCipher":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/streamCipher.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","cipher-base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/cipher-base/index.js","evp_bytestokey":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/evp_bytestokey/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/evp_bytestokey/index.js":[function(require,module,exports){
+(function (Buffer){
+var md5 = require('create-hash/md5')
+module.exports = EVP_BytesToKey
+function EVP_BytesToKey (password, salt, keyLen, ivLen) {
+  if (!Buffer.isBuffer(password)) {
+    password = new Buffer(password, 'binary')
+  }
+  if (salt && !Buffer.isBuffer(salt)) {
+    salt = new Buffer(salt, 'binary')
+  }
+  keyLen = keyLen / 8
+  ivLen = ivLen || 0
+  var ki = 0
+  var ii = 0
+  var key = new Buffer(keyLen)
+  var iv = new Buffer(ivLen)
+  var addmd = 0
+  var md_buf
+  var i
+  var bufs = []
+  while (true) {
+    if (addmd++ > 0) {
+      bufs.push(md_buf)
+    }
+    bufs.push(password)
+    if (salt) {
+      bufs.push(salt)
+    }
+    md_buf = md5(Buffer.concat(bufs))
+    bufs = []
+    i = 0
+    if (keyLen > 0) {
+      while (true) {
+        if (keyLen === 0) {
+          break
+        }
+        if (i === md_buf.length) {
+          break
+        }
+        key[ki++] = md_buf[i]
+        keyLen--
+        i++
+      }
+    }
+    if (ivLen > 0 && i !== md_buf.length) {
+      while (true) {
+        if (ivLen === 0) {
+          break
+        }
+        if (i === md_buf.length) {
+          break
+        }
+        iv[ii++] = md_buf[i]
+        ivLen--
+        i++
+      }
+    }
+    if (keyLen === 0 && ivLen === 0) {
+      break
+    }
+  }
+  for (i = 0; i < md_buf.length; i++) {
+    md_buf[i] = 0
+  }
+  return {
+    key: key,
+    iv: iv
+  }
+}
+
+}).call(this,require("buffer").Buffer)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","create-hash/md5":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/md5.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/md5.js":[function(require,module,exports){
+'use strict';
+/*
+ * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
+ * Digest Algorithm, as defined in RFC 1321.
+ * Version 2.1 Copyright (C) Paul Johnston 1999 - 2002.
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ * Distributed under the BSD License
+ * See http://pajhome.org.uk/crypt/md5 for more info.
+ */
+
+var helpers = require('./helpers');
+
+/*
+ * Calculate the MD5 of an array of little-endian words, and a bit length
+ */
+function core_md5(x, len)
+{
+  /* append padding */
+  x[len >> 5] |= 0x80 << ((len) % 32);
+  x[(((len + 64) >>> 9) << 4) + 14] = len;
+
+  var a =  1732584193;
+  var b = -271733879;
+  var c = -1732584194;
+  var d =  271733878;
+
+  for(var i = 0; i < x.length; i += 16)
+  {
+    var olda = a;
+    var oldb = b;
+    var oldc = c;
+    var oldd = d;
+
+    a = md5_ff(a, b, c, d, x[i+ 0], 7 , -680876936);
+    d = md5_ff(d, a, b, c, x[i+ 1], 12, -389564586);
+    c = md5_ff(c, d, a, b, x[i+ 2], 17,  606105819);
+    b = md5_ff(b, c, d, a, x[i+ 3], 22, -1044525330);
+    a = md5_ff(a, b, c, d, x[i+ 4], 7 , -176418897);
+    d = md5_ff(d, a, b, c, x[i+ 5], 12,  1200080426);
+    c = md5_ff(c, d, a, b, x[i+ 6], 17, -1473231341);
+    b = md5_ff(b, c, d, a, x[i+ 7], 22, -45705983);
+    a = md5_ff(a, b, c, d, x[i+ 8], 7 ,  1770035416);
+    d = md5_ff(d, a, b, c, x[i+ 9], 12, -1958414417);
+    c = md5_ff(c, d, a, b, x[i+10], 17, -42063);
+    b = md5_ff(b, c, d, a, x[i+11], 22, -1990404162);
+    a = md5_ff(a, b, c, d, x[i+12], 7 ,  1804603682);
+    d = md5_ff(d, a, b, c, x[i+13], 12, -40341101);
+    c = md5_ff(c, d, a, b, x[i+14], 17, -1502002290);
+    b = md5_ff(b, c, d, a, x[i+15], 22,  1236535329);
+
+    a = md5_gg(a, b, c, d, x[i+ 1], 5 , -165796510);
+    d = md5_gg(d, a, b, c, x[i+ 6], 9 , -1069501632);
+    c = md5_gg(c, d, a, b, x[i+11], 14,  643717713);
+    b = md5_gg(b, c, d, a, x[i+ 0], 20, -373897302);
+    a = md5_gg(a, b, c, d, x[i+ 5], 5 , -701558691);
+    d = md5_gg(d, a, b, c, x[i+10], 9 ,  38016083);
+    c = md5_gg(c, d, a, b, x[i+15], 14, -660478335);
+    b = md5_gg(b, c, d, a, x[i+ 4], 20, -405537848);
+    a = md5_gg(a, b, c, d, x[i+ 9], 5 ,  568446438);
+    d = md5_gg(d, a, b, c, x[i+14], 9 , -1019803690);
+    c = md5_gg(c, d, a, b, x[i+ 3], 14, -187363961);
+    b = md5_gg(b, c, d, a, x[i+ 8], 20,  1163531501);
+    a = md5_gg(a, b, c, d, x[i+13], 5 , -1444681467);
+    d = md5_gg(d, a, b, c, x[i+ 2], 9 , -51403784);
+    c = md5_gg(c, d, a, b, x[i+ 7], 14,  1735328473);
+    b = md5_gg(b, c, d, a, x[i+12], 20, -1926607734);
+
+    a = md5_hh(a, b, c, d, x[i+ 5], 4 , -378558);
+    d = md5_hh(d, a, b, c, x[i+ 8], 11, -2022574463);
+    c = md5_hh(c, d, a, b, x[i+11], 16,  1839030562);
+    b = md5_hh(b, c, d, a, x[i+14], 23, -35309556);
+    a = md5_hh(a, b, c, d, x[i+ 1], 4 , -1530992060);
+    d = md5_hh(d, a, b, c, x[i+ 4], 11,  1272893353);
+    c = md5_hh(c, d, a, b, x[i+ 7], 16, -155497632);
+    b = md5_hh(b, c, d, a, x[i+10], 23, -1094730640);
+    a = md5_hh(a, b, c, d, x[i+13], 4 ,  681279174);
+    d = md5_hh(d, a, b, c, x[i+ 0], 11, -358537222);
+    c = md5_hh(c, d, a, b, x[i+ 3], 16, -722521979);
+    b = md5_hh(b, c, d, a, x[i+ 6], 23,  76029189);
+    a = md5_hh(a, b, c, d, x[i+ 9], 4 , -640364487);
+    d = md5_hh(d, a, b, c, x[i+12], 11, -421815835);
+    c = md5_hh(c, d, a, b, x[i+15], 16,  530742520);
+    b = md5_hh(b, c, d, a, x[i+ 2], 23, -995338651);
+
+    a = md5_ii(a, b, c, d, x[i+ 0], 6 , -198630844);
+    d = md5_ii(d, a, b, c, x[i+ 7], 10,  1126891415);
+    c = md5_ii(c, d, a, b, x[i+14], 15, -1416354905);
+    b = md5_ii(b, c, d, a, x[i+ 5], 21, -57434055);
+    a = md5_ii(a, b, c, d, x[i+12], 6 ,  1700485571);
+    d = md5_ii(d, a, b, c, x[i+ 3], 10, -1894986606);
+    c = md5_ii(c, d, a, b, x[i+10], 15, -1051523);
+    b = md5_ii(b, c, d, a, x[i+ 1], 21, -2054922799);
+    a = md5_ii(a, b, c, d, x[i+ 8], 6 ,  1873313359);
+    d = md5_ii(d, a, b, c, x[i+15], 10, -30611744);
+    c = md5_ii(c, d, a, b, x[i+ 6], 15, -1560198380);
+    b = md5_ii(b, c, d, a, x[i+13], 21,  1309151649);
+    a = md5_ii(a, b, c, d, x[i+ 4], 6 , -145523070);
+    d = md5_ii(d, a, b, c, x[i+11], 10, -1120210379);
+    c = md5_ii(c, d, a, b, x[i+ 2], 15,  718787259);
+    b = md5_ii(b, c, d, a, x[i+ 9], 21, -343485551);
+
+    a = safe_add(a, olda);
+    b = safe_add(b, oldb);
+    c = safe_add(c, oldc);
+    d = safe_add(d, oldd);
+  }
+  return Array(a, b, c, d);
+
+}
+
+/*
+ * These functions implement the four basic operations the algorithm uses.
+ */
+function md5_cmn(q, a, b, x, s, t)
+{
+  return safe_add(bit_rol(safe_add(safe_add(a, q), safe_add(x, t)), s),b);
+}
+function md5_ff(a, b, c, d, x, s, t)
+{
+  return md5_cmn((b & c) | ((~b) & d), a, b, x, s, t);
+}
+function md5_gg(a, b, c, d, x, s, t)
+{
+  return md5_cmn((b & d) | (c & (~d)), a, b, x, s, t);
+}
+function md5_hh(a, b, c, d, x, s, t)
+{
+  return md5_cmn(b ^ c ^ d, a, b, x, s, t);
+}
+function md5_ii(a, b, c, d, x, s, t)
+{
+  return md5_cmn(c ^ (b | (~d)), a, b, x, s, t);
+}
+
+/*
+ * Add integers, wrapping at 2^32. This uses 16-bit operations internally
+ * to work around bugs in some JS interpreters.
+ */
+function safe_add(x, y)
+{
+  var lsw = (x & 0xFFFF) + (y & 0xFFFF);
+  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+  return (msw << 16) | (lsw & 0xFFFF);
+}
+
+/*
+ * Bitwise rotate a 32-bit number to the left.
+ */
+function bit_rol(num, cnt)
+{
+  return (num << cnt) | (num >>> (32 - cnt));
+}
+
+module.exports = function md5(buf) {
+  return helpers.hash(buf, core_md5, 16);
+};
+},{"./helpers":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/helpers.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/helpers.js":[function(require,module,exports){
+(function (Buffer){
+'use strict';
+var intSize = 4;
+var zeroBuffer = new Buffer(intSize); zeroBuffer.fill(0);
+var chrsz = 8;
+
+function toArray(buf, bigEndian) {
+  if ((buf.length % intSize) !== 0) {
+    var len = buf.length + (intSize - (buf.length % intSize));
+    buf = Buffer.concat([buf, zeroBuffer], len);
+  }
+
+  var arr = [];
+  var fn = bigEndian ? buf.readInt32BE : buf.readInt32LE;
+  for (var i = 0; i < buf.length; i += intSize) {
+    arr.push(fn.call(buf, i));
+  }
+  return arr;
+}
+
+function toBuffer(arr, size, bigEndian) {
+  var buf = new Buffer(size);
+  var fn = bigEndian ? buf.writeInt32BE : buf.writeInt32LE;
+  for (var i = 0; i < arr.length; i++) {
+    fn.call(buf, arr[i], i * 4, true);
+  }
+  return buf;
+}
+
+function hash(buf, fn, hashSize, bigEndian) {
+  if (!Buffer.isBuffer(buf)) buf = new Buffer(buf);
+  var arr = fn(toArray(buf, bigEndian), buf.length * chrsz);
+  return toBuffer(arr, hashSize, bigEndian);
+}
+exports.hash = hash;
+}).call(this,require("buffer").Buffer)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/streamCipher.js":[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
-var Transform = require('./cipherBase')
+var Transform = require('cipher-base')
 var inherits = require('inherits')
 
 inherits(StreamCipher, Transform)
@@ -37339,7 +36078,7 @@ StreamCipher.prototype._final = function () {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/aes.js","./cipherBase":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/cipherBase.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/ofb.js":[function(require,module,exports){
+},{"./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/aes.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","cipher-base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/cipher-base/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ofb.js":[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -37359,7 +36098,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/ecb.js":[function(require,module,exports){
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ecb.js":[function(require,module,exports){
 exports.encrypt = function (self, block) {
   return self._cipher.encryptBlock(block)
 }
@@ -37367,7 +36106,7 @@ exports.decrypt = function (self, block) {
   return self._cipher.decryptBlock(block)
 }
 
-},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/ctr.js":[function(require,module,exports){
+},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/ctr.js":[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -37402,7 +36141,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/cfb8.js":[function(require,module,exports){
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb8.js":[function(require,module,exports){
 (function (Buffer){
 function encryptByte (self, byteParam, decrypt) {
   var pad = self._cipher.encryptBlock(self._prev)
@@ -37421,7 +36160,7 @@ exports.encrypt = function (self, chunk, decrypt) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/cfb1.js":[function(require,module,exports){
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb1.js":[function(require,module,exports){
 (function (Buffer){
 function encryptByte (self, byteParam, decrypt) {
   var pad
@@ -37459,7 +36198,7 @@ function shiftIn (buffer, value) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/cfb.js":[function(require,module,exports){
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cfb.js":[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -37494,7 +36233,7 @@ function encryptStart (self, data, decrypt) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes/cbc.js":[function(require,module,exports){
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes/cbc.js":[function(require,module,exports){
 var xor = require('buffer-xor')
 
 exports.encrypt = function (self, block) {
@@ -37513,7 +36252,7 @@ exports.decrypt = function (self, block) {
   return xor(out, pad)
 }
 
-},{"buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/modes.js":[function(require,module,exports){
+},{"buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/buffer-xor/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/modes.js":[function(require,module,exports){
 exports['aes-128-ecb'] = {
   cipher: 'AES',
   key: 128,
@@ -37686,10 +36425,10 @@ exports['aes-256-gcm'] = {
   type: 'auth'
 }
 
-},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/authCipher.js":[function(require,module,exports){
+},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/authCipher.js":[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
-var Transform = require('./cipherBase')
+var Transform = require('cipher-base')
 var inherits = require('inherits')
 var GHASH = require('./ghash')
 var xor = require('buffer-xor')
@@ -37787,156 +36526,77 @@ function xorTest (a, b) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/aes.js","./cipherBase":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/cipherBase.js","./ghash":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/ghash.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/node_modules/buffer-xor/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/node_modules/buffer-xor/index.js":[function(require,module,exports){
-(function (Buffer){
-module.exports = function xor (a, b) {
-  var length = Math.min(a.length, b.length)
-  var buffer = new Buffer(length)
-
-  for (var i = 0; i < length; ++i) {
-    buffer[i] = a[i] ^ b[i]
-  }
-
-  return buffer
-}
-
-}).call(this,require("buffer").Buffer)
-},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/ghash.js":[function(require,module,exports){
-(function (Buffer){
-var zeros = new Buffer(16)
-zeros.fill(0)
-module.exports = GHASH
-function GHASH (key) {
-  this.h = key
-  this.state = new Buffer(16)
-  this.state.fill(0)
-  this.cache = new Buffer('')
-}
-// from http://bitwiseshiftleft.github.io/sjcl/doc/symbols/src/core_gcm.js.html
-// by Juho Vähä-Herttua
-GHASH.prototype.ghash = function (block) {
-  var i = -1
-  while (++i < block.length) {
-    this.state[i] ^= block[i]
-  }
-  this._multiply()
-}
-
-GHASH.prototype._multiply = function () {
-  var Vi = toArray(this.h)
-  var Zi = [0, 0, 0, 0]
-  var j, xi, lsb_Vi
-  var i = -1
-  while (++i < 128) {
-    xi = (this.state[~~(i / 8)] & (1 << (7 - i % 8))) !== 0
-    if (xi) {
-      // Z_i+1 = Z_i ^ V_i
-      Zi = xor(Zi, Vi)
-    }
-
-    // Store the value of LSB(V_i)
-    lsb_Vi = (Vi[3] & 1) !== 0
-
-    // V_i+1 = V_i >> 1
-    for (j = 3; j > 0; j--) {
-      Vi[j] = (Vi[j] >>> 1) | ((Vi[j - 1] & 1) << 31)
-    }
-    Vi[0] = Vi[0] >>> 1
-
-    // If LSB(V_i) is 1, V_i+1 = (V_i >> 1) ^ R
-    if (lsb_Vi) {
-      Vi[0] = Vi[0] ^ (0xe1 << 24)
-    }
-  }
-  this.state = fromArray(Zi)
-}
-GHASH.prototype.update = function (buf) {
-  this.cache = Buffer.concat([this.cache, buf])
-  var chunk
-  while (this.cache.length >= 16) {
-    chunk = this.cache.slice(0, 16)
-    this.cache = this.cache.slice(16)
-    this.ghash(chunk)
-  }
-}
-GHASH.prototype.final = function (abl, bl) {
-  if (this.cache.length) {
-    this.ghash(Buffer.concat([this.cache, zeros], 16))
-  }
-  this.ghash(fromArray([
-    0, abl,
-    0, bl
-  ]))
-  return this.state
-}
-
-function toArray (buf) {
-  return [
-    buf.readUInt32BE(0),
-    buf.readUInt32BE(4),
-    buf.readUInt32BE(8),
-    buf.readUInt32BE(12)
-  ]
-}
-function fromArray (out) {
-  out = out.map(fixup_uint32)
-  var buf = new Buffer(16)
-  buf.writeUInt32BE(out[0], 0)
-  buf.writeUInt32BE(out[1], 4)
-  buf.writeUInt32BE(out[2], 8)
-  buf.writeUInt32BE(out[3], 12)
-  return buf
-}
-var uint_max = Math.pow(2, 32)
-function fixup_uint32 (x) {
-  var ret, x_pos
-  ret = x > uint_max || x < 0 ? (x_pos = Math.abs(x) % uint_max, x < 0 ? uint_max - x_pos : x_pos) : x
-  return ret
-}
-function xor (a, b) {
-  return [
-    a[0] ^ b[0],
-    a[1] ^ b[1],
-    a[2] ^ b[2],
-    a[3] ^ b[3]
-  ]
-}
-
-}).call(this,require("buffer").Buffer)
-},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/cipherBase.js":[function(require,module,exports){
+},{"./aes":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/aes.js","./ghash":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/ghash.js","buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","buffer-xor":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/buffer-xor/index.js","cipher-base":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/cipher-base/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/cipher-base/index.js":[function(require,module,exports){
 (function (Buffer){
 var Transform = require('stream').Transform
 var inherits = require('inherits')
-
+var StringDecoder = require('string_decoder').StringDecoder
 module.exports = CipherBase
 inherits(CipherBase, Transform)
-function CipherBase () {
+function CipherBase (hashMode) {
   Transform.call(this)
-  this._base64Cache = new Buffer('')
+  this.hashMode = typeof hashMode === 'string'
+  if (this.hashMode) {
+    this[hashMode] = this._finalOrDigest
+  } else {
+    this.final = this._finalOrDigest
+  }
+  this._decoder = null
+  this._encoding = null
 }
 CipherBase.prototype.update = function (data, inputEnc, outputEnc) {
   if (typeof data === 'string') {
     data = new Buffer(data, inputEnc)
   }
   var outData = this._update(data)
+  if (this.hashMode) {
+    return this
+  }
   if (outputEnc) {
     outData = this._toString(outData, outputEnc)
   }
   return outData
 }
-CipherBase.prototype._transform = function (data, _, next) {
-  this.push(this._update(data))
-  next()
+
+CipherBase.prototype.setAutoPadding = function () {}
+
+CipherBase.prototype.getAuthTag = function () {
+  throw new Error('trying to get auth tag in unsupported state')
 }
-CipherBase.prototype._flush = function (next) {
+
+CipherBase.prototype.setAuthTag = function () {
+  throw new Error('trying to set auth tag in unsupported state')
+}
+
+CipherBase.prototype.setAAD = function () {
+  throw new Error('trying to set aad in unsupported state')
+}
+
+CipherBase.prototype._transform = function (data, _, next) {
+  var err
+  try {
+    if (this.hashMode) {
+      this._update(data)
+    } else {
+      this.push(this._update(data))
+    }
+  } catch (e) {
+    err = e
+  } finally {
+    next(err)
+  }
+}
+CipherBase.prototype._flush = function (done) {
+  var err
   try {
     this.push(this._final())
-  } catch(e) {
-    return next(e)
+  } catch (e) {
+    err = e
+  } finally {
+    done(err)
   }
-  next()
 }
-CipherBase.prototype.final = function (outputEnc) {
+CipherBase.prototype._finalOrDigest = function (outputEnc) {
   var outData = this._final() || new Buffer('')
   if (outputEnc) {
     outData = this._toString(outData, outputEnc, true)
@@ -37945,35 +36605,22 @@ CipherBase.prototype.final = function (outputEnc) {
 }
 
 CipherBase.prototype._toString = function (value, enc, final) {
-  if (enc !== 'base64') {
-    return value.toString(enc)
+  if (!this._decoder) {
+    this._decoder = new StringDecoder(enc)
+    this._encoding = enc
   }
-  this._base64Cache = Buffer.concat([this._base64Cache, value])
-  var out
+  if (this._encoding !== enc) {
+    throw new Error('can\'t switch encodings')
+  }
+  var out = this._decoder.write(value)
   if (final) {
-    out = this._base64Cache
-    this._base64Cache = null
-    return out.toString('base64')
+    out += this._decoder.end()
   }
-  var len = this._base64Cache.length
-  var overhang = len % 3
-  if (!overhang) {
-    out = this._base64Cache
-    this._base64Cache = new Buffer('')
-    return out.toString('base64')
-  }
-  var newLen = len - overhang
-  if (!newLen) {
-    return ''
-  }
-
-  out = this._base64Cache.slice(0, newLen)
-  this._base64Cache = this._base64Cache.slice(-overhang)
-  return out.toString('base64')
+  return out
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js","stream":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/stream-browserify/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/stream-browserify/index.js":[function(require,module,exports){
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","inherits":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/inherits/inherits_browser.js","stream":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/stream-browserify/index.js","string_decoder":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/string_decoder/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/stream-browserify/index.js":[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -40243,8 +38890,27 @@ exports.isBuffer = isBuffer;
 function objectToString(o) {
   return Object.prototype.toString.call(o);
 }
-}).call(this,require("buffer").Buffer)
-},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/isarray/index.js":[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../insert-module-globals/node_modules/is-buffer/index.js")})
+},{"../../../../insert-module-globals/node_modules/is-buffer/index.js":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/insert-module-globals/node_modules/is-buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/insert-module-globals/node_modules/is-buffer/index.js":[function(require,module,exports){
+/**
+ * Determine if an object is Buffer
+ *
+ * Author:   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
+ * License:  MIT
+ *
+ * `npm install is-buffer`
+ */
+
+module.exports = function (obj) {
+  return !!(obj != null &&
+    (obj._isBuffer || // For Safari 5-7 (missing Object.prototype.constructor)
+      (obj.constructor &&
+      typeof obj.constructor.isBuffer === 'function' &&
+      obj.constructor.isBuffer(obj))
+    ))
+}
+
+},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/isarray/index.js":[function(require,module,exports){
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
@@ -40579,7 +39245,123 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/aes.js":[function(require,module,exports){
+},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/node_modules/buffer-xor/index.js":[function(require,module,exports){
+(function (Buffer){
+module.exports = function xor (a, b) {
+  var length = Math.min(a.length, b.length)
+  var buffer = new Buffer(length)
+
+  for (var i = 0; i < length; ++i) {
+    buffer[i] = a[i] ^ b[i]
+  }
+
+  return buffer
+}
+
+}).call(this,require("buffer").Buffer)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/ghash.js":[function(require,module,exports){
+(function (Buffer){
+var zeros = new Buffer(16)
+zeros.fill(0)
+module.exports = GHASH
+function GHASH (key) {
+  this.h = key
+  this.state = new Buffer(16)
+  this.state.fill(0)
+  this.cache = new Buffer('')
+}
+// from http://bitwiseshiftleft.github.io/sjcl/doc/symbols/src/core_gcm.js.html
+// by Juho Vähä-Herttua
+GHASH.prototype.ghash = function (block) {
+  var i = -1
+  while (++i < block.length) {
+    this.state[i] ^= block[i]
+  }
+  this._multiply()
+}
+
+GHASH.prototype._multiply = function () {
+  var Vi = toArray(this.h)
+  var Zi = [0, 0, 0, 0]
+  var j, xi, lsb_Vi
+  var i = -1
+  while (++i < 128) {
+    xi = (this.state[~~(i / 8)] & (1 << (7 - i % 8))) !== 0
+    if (xi) {
+      // Z_i+1 = Z_i ^ V_i
+      Zi = xor(Zi, Vi)
+    }
+
+    // Store the value of LSB(V_i)
+    lsb_Vi = (Vi[3] & 1) !== 0
+
+    // V_i+1 = V_i >> 1
+    for (j = 3; j > 0; j--) {
+      Vi[j] = (Vi[j] >>> 1) | ((Vi[j - 1] & 1) << 31)
+    }
+    Vi[0] = Vi[0] >>> 1
+
+    // If LSB(V_i) is 1, V_i+1 = (V_i >> 1) ^ R
+    if (lsb_Vi) {
+      Vi[0] = Vi[0] ^ (0xe1 << 24)
+    }
+  }
+  this.state = fromArray(Zi)
+}
+GHASH.prototype.update = function (buf) {
+  this.cache = Buffer.concat([this.cache, buf])
+  var chunk
+  while (this.cache.length >= 16) {
+    chunk = this.cache.slice(0, 16)
+    this.cache = this.cache.slice(16)
+    this.ghash(chunk)
+  }
+}
+GHASH.prototype.final = function (abl, bl) {
+  if (this.cache.length) {
+    this.ghash(Buffer.concat([this.cache, zeros], 16))
+  }
+  this.ghash(fromArray([
+    0, abl,
+    0, bl
+  ]))
+  return this.state
+}
+
+function toArray (buf) {
+  return [
+    buf.readUInt32BE(0),
+    buf.readUInt32BE(4),
+    buf.readUInt32BE(8),
+    buf.readUInt32BE(12)
+  ]
+}
+function fromArray (out) {
+  out = out.map(fixup_uint32)
+  var buf = new Buffer(16)
+  buf.writeUInt32BE(out[0], 0)
+  buf.writeUInt32BE(out[1], 4)
+  buf.writeUInt32BE(out[2], 8)
+  buf.writeUInt32BE(out[3], 12)
+  return buf
+}
+var uint_max = Math.pow(2, 32)
+function fixup_uint32 (x) {
+  var ret, x_pos
+  ret = x > uint_max || x < 0 ? (x_pos = Math.abs(x) % uint_max, x < 0 ? uint_max - x_pos : x_pos) : x
+  return ret
+}
+function xor (a, b) {
+  return [
+    a[0] ^ b[0],
+    a[1] ^ b[1],
+    a[2] ^ b[2],
+    a[3] ^ b[3]
+  ]
+}
+
+}).call(this,require("buffer").Buffer)
+},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-cipher/node_modules/browserify-aes/aes.js":[function(require,module,exports){
 (function (Buffer){
 // based on the aes implimentation in triple sec
 // https://github.com/keybase/triplesec
@@ -40760,273 +39542,15 @@ AES.prototype._doCryptBlock = function (M, keySchedule, SUB_MIX, SBOX) {
 exports.AES = AES
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/browserify-aes/EVP_BytesToKey.js":[function(require,module,exports){
-(function (Buffer){
-var md5 = require('create-hash/md5')
-module.exports = EVP_BytesToKey
-function EVP_BytesToKey (password, keyLen, ivLen) {
-  if (!Buffer.isBuffer(password)) {
-    password = new Buffer(password, 'binary')
-  }
-  keyLen = keyLen / 8
-  ivLen = ivLen || 0
-  var ki = 0
-  var ii = 0
-  var key = new Buffer(keyLen)
-  var iv = new Buffer(ivLen)
-  var addmd = 0
-  var md_buf
-  var i
-  var bufs = []
-  while (true) {
-    if (addmd++ > 0) {
-      bufs.push(md_buf)
-    }
-    bufs.push(password)
-    md_buf = md5(Buffer.concat(bufs))
-    bufs = []
-    i = 0
-    if (keyLen > 0) {
-      while (true) {
-        if (keyLen === 0) {
-          break
-        }
-        if (i === md_buf.length) {
-          break
-        }
-        key[ki++] = md_buf[i]
-        keyLen--
-        i++
-      }
-    }
-    if (ivLen > 0 && i !== md_buf.length) {
-      while (true) {
-        if (ivLen === 0) {
-          break
-        }
-        if (i === md_buf.length) {
-          break
-        }
-        iv[ii++] = md_buf[i]
-        ivLen--
-        i++
-      }
-    }
-    if (keyLen === 0 && ivLen === 0) {
-      break
-    }
-  }
-  for (i = 0; i < md_buf.length; i++) {
-    md_buf[i] = 0
-  }
-  return {
-    key: key,
-    iv: iv
-  }
-}
-
-}).call(this,require("buffer").Buffer)
-},{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js","create-hash/md5":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/md5.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/md5.js":[function(require,module,exports){
-'use strict';
-/*
- * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
- * Digest Algorithm, as defined in RFC 1321.
- * Version 2.1 Copyright (C) Paul Johnston 1999 - 2002.
- * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
- * Distributed under the BSD License
- * See http://pajhome.org.uk/crypt/md5 for more info.
- */
-
-var helpers = require('./helpers');
-
-/*
- * Calculate the MD5 of an array of little-endian words, and a bit length
- */
-function core_md5(x, len)
-{
-  /* append padding */
-  x[len >> 5] |= 0x80 << ((len) % 32);
-  x[(((len + 64) >>> 9) << 4) + 14] = len;
-
-  var a =  1732584193;
-  var b = -271733879;
-  var c = -1732584194;
-  var d =  271733878;
-
-  for(var i = 0; i < x.length; i += 16)
-  {
-    var olda = a;
-    var oldb = b;
-    var oldc = c;
-    var oldd = d;
-
-    a = md5_ff(a, b, c, d, x[i+ 0], 7 , -680876936);
-    d = md5_ff(d, a, b, c, x[i+ 1], 12, -389564586);
-    c = md5_ff(c, d, a, b, x[i+ 2], 17,  606105819);
-    b = md5_ff(b, c, d, a, x[i+ 3], 22, -1044525330);
-    a = md5_ff(a, b, c, d, x[i+ 4], 7 , -176418897);
-    d = md5_ff(d, a, b, c, x[i+ 5], 12,  1200080426);
-    c = md5_ff(c, d, a, b, x[i+ 6], 17, -1473231341);
-    b = md5_ff(b, c, d, a, x[i+ 7], 22, -45705983);
-    a = md5_ff(a, b, c, d, x[i+ 8], 7 ,  1770035416);
-    d = md5_ff(d, a, b, c, x[i+ 9], 12, -1958414417);
-    c = md5_ff(c, d, a, b, x[i+10], 17, -42063);
-    b = md5_ff(b, c, d, a, x[i+11], 22, -1990404162);
-    a = md5_ff(a, b, c, d, x[i+12], 7 ,  1804603682);
-    d = md5_ff(d, a, b, c, x[i+13], 12, -40341101);
-    c = md5_ff(c, d, a, b, x[i+14], 17, -1502002290);
-    b = md5_ff(b, c, d, a, x[i+15], 22,  1236535329);
-
-    a = md5_gg(a, b, c, d, x[i+ 1], 5 , -165796510);
-    d = md5_gg(d, a, b, c, x[i+ 6], 9 , -1069501632);
-    c = md5_gg(c, d, a, b, x[i+11], 14,  643717713);
-    b = md5_gg(b, c, d, a, x[i+ 0], 20, -373897302);
-    a = md5_gg(a, b, c, d, x[i+ 5], 5 , -701558691);
-    d = md5_gg(d, a, b, c, x[i+10], 9 ,  38016083);
-    c = md5_gg(c, d, a, b, x[i+15], 14, -660478335);
-    b = md5_gg(b, c, d, a, x[i+ 4], 20, -405537848);
-    a = md5_gg(a, b, c, d, x[i+ 9], 5 ,  568446438);
-    d = md5_gg(d, a, b, c, x[i+14], 9 , -1019803690);
-    c = md5_gg(c, d, a, b, x[i+ 3], 14, -187363961);
-    b = md5_gg(b, c, d, a, x[i+ 8], 20,  1163531501);
-    a = md5_gg(a, b, c, d, x[i+13], 5 , -1444681467);
-    d = md5_gg(d, a, b, c, x[i+ 2], 9 , -51403784);
-    c = md5_gg(c, d, a, b, x[i+ 7], 14,  1735328473);
-    b = md5_gg(b, c, d, a, x[i+12], 20, -1926607734);
-
-    a = md5_hh(a, b, c, d, x[i+ 5], 4 , -378558);
-    d = md5_hh(d, a, b, c, x[i+ 8], 11, -2022574463);
-    c = md5_hh(c, d, a, b, x[i+11], 16,  1839030562);
-    b = md5_hh(b, c, d, a, x[i+14], 23, -35309556);
-    a = md5_hh(a, b, c, d, x[i+ 1], 4 , -1530992060);
-    d = md5_hh(d, a, b, c, x[i+ 4], 11,  1272893353);
-    c = md5_hh(c, d, a, b, x[i+ 7], 16, -155497632);
-    b = md5_hh(b, c, d, a, x[i+10], 23, -1094730640);
-    a = md5_hh(a, b, c, d, x[i+13], 4 ,  681279174);
-    d = md5_hh(d, a, b, c, x[i+ 0], 11, -358537222);
-    c = md5_hh(c, d, a, b, x[i+ 3], 16, -722521979);
-    b = md5_hh(b, c, d, a, x[i+ 6], 23,  76029189);
-    a = md5_hh(a, b, c, d, x[i+ 9], 4 , -640364487);
-    d = md5_hh(d, a, b, c, x[i+12], 11, -421815835);
-    c = md5_hh(c, d, a, b, x[i+15], 16,  530742520);
-    b = md5_hh(b, c, d, a, x[i+ 2], 23, -995338651);
-
-    a = md5_ii(a, b, c, d, x[i+ 0], 6 , -198630844);
-    d = md5_ii(d, a, b, c, x[i+ 7], 10,  1126891415);
-    c = md5_ii(c, d, a, b, x[i+14], 15, -1416354905);
-    b = md5_ii(b, c, d, a, x[i+ 5], 21, -57434055);
-    a = md5_ii(a, b, c, d, x[i+12], 6 ,  1700485571);
-    d = md5_ii(d, a, b, c, x[i+ 3], 10, -1894986606);
-    c = md5_ii(c, d, a, b, x[i+10], 15, -1051523);
-    b = md5_ii(b, c, d, a, x[i+ 1], 21, -2054922799);
-    a = md5_ii(a, b, c, d, x[i+ 8], 6 ,  1873313359);
-    d = md5_ii(d, a, b, c, x[i+15], 10, -30611744);
-    c = md5_ii(c, d, a, b, x[i+ 6], 15, -1560198380);
-    b = md5_ii(b, c, d, a, x[i+13], 21,  1309151649);
-    a = md5_ii(a, b, c, d, x[i+ 4], 6 , -145523070);
-    d = md5_ii(d, a, b, c, x[i+11], 10, -1120210379);
-    c = md5_ii(c, d, a, b, x[i+ 2], 15,  718787259);
-    b = md5_ii(b, c, d, a, x[i+ 9], 21, -343485551);
-
-    a = safe_add(a, olda);
-    b = safe_add(b, oldb);
-    c = safe_add(c, oldc);
-    d = safe_add(d, oldd);
-  }
-  return Array(a, b, c, d);
-
-}
-
-/*
- * These functions implement the four basic operations the algorithm uses.
- */
-function md5_cmn(q, a, b, x, s, t)
-{
-  return safe_add(bit_rol(safe_add(safe_add(a, q), safe_add(x, t)), s),b);
-}
-function md5_ff(a, b, c, d, x, s, t)
-{
-  return md5_cmn((b & c) | ((~b) & d), a, b, x, s, t);
-}
-function md5_gg(a, b, c, d, x, s, t)
-{
-  return md5_cmn((b & d) | (c & (~d)), a, b, x, s, t);
-}
-function md5_hh(a, b, c, d, x, s, t)
-{
-  return md5_cmn(b ^ c ^ d, a, b, x, s, t);
-}
-function md5_ii(a, b, c, d, x, s, t)
-{
-  return md5_cmn(c ^ (b | (~d)), a, b, x, s, t);
-}
-
-/*
- * Add integers, wrapping at 2^32. This uses 16-bit operations internally
- * to work around bugs in some JS interpreters.
- */
-function safe_add(x, y)
-{
-  var lsw = (x & 0xFFFF) + (y & 0xFFFF);
-  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
-  return (msw << 16) | (lsw & 0xFFFF);
-}
-
-/*
- * Bitwise rotate a 32-bit number to the left.
- */
-function bit_rol(num, cnt)
-{
-  return (num << cnt) | (num >>> (32 - cnt));
-}
-
-module.exports = function md5(buf) {
-  return helpers.hash(buf, core_md5, 16);
-};
-},{"./helpers":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/helpers.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/crypto-browserify/node_modules/create-hash/helpers.js":[function(require,module,exports){
-(function (Buffer){
-'use strict';
-var intSize = 4;
-var zeroBuffer = new Buffer(intSize); zeroBuffer.fill(0);
-var chrsz = 8;
-
-function toArray(buf, bigEndian) {
-  if ((buf.length % intSize) !== 0) {
-    var len = buf.length + (intSize - (buf.length % intSize));
-    buf = Buffer.concat([buf, zeroBuffer], len);
-  }
-
-  var arr = [];
-  var fn = bigEndian ? buf.readInt32BE : buf.readInt32LE;
-  for (var i = 0; i < buf.length; i += intSize) {
-    arr.push(fn.call(buf, i));
-  }
-  return arr;
-}
-
-function toBuffer(arr, size, bigEndian) {
-  var buf = new Buffer(size);
-  var fn = bigEndian ? buf.writeInt32BE : buf.writeInt32LE;
-  for (var i = 0; i < arr.length; i++) {
-    fn.call(buf, arr[i], i * 4, true);
-  }
-  return buf;
-}
-
-function hash(buf, fn, hashSize, bigEndian) {
-  if (!Buffer.isBuffer(buf)) buf = new Buffer(buf);
-  var arr = fn(toArray(buf, bigEndian), buf.length * chrsz);
-  return toBuffer(arr, hashSize, bigEndian);
-}
-exports.hash = hash;
-}).call(this,require("buffer").Buffer)
 },{"buffer":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/index.js":[function(require,module,exports){
+(function (global){
 /*!
  * The buffer module from node.js, for the browser.
  *
  * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
  * @license  MIT
  */
+/* eslint-disable no-proto */
 
 var base64 = require('base64-js')
 var ieee754 = require('ieee754')
@@ -41066,7 +39590,11 @@ var rootParent = {}
  * We detect these buggy browsers and set `Buffer.TYPED_ARRAY_SUPPORT` to `false` so they
  * get the Object implementation, which is slower but behaves correctly.
  */
-Buffer.TYPED_ARRAY_SUPPORT = (function () {
+Buffer.TYPED_ARRAY_SUPPORT = global.TYPED_ARRAY_SUPPORT !== undefined
+  ? global.TYPED_ARRAY_SUPPORT
+  : typedArraySupport()
+
+function typedArraySupport () {
   function Bar () {}
   try {
     var arr = new Uint8Array(1)
@@ -41079,7 +39607,7 @@ Buffer.TYPED_ARRAY_SUPPORT = (function () {
   } catch (e) {
     return false
   }
-})()
+}
 
 function kMaxLength () {
   return Buffer.TYPED_ARRAY_SUPPORT
@@ -41235,10 +39763,16 @@ function fromJsonObject (that, object) {
   return that
 }
 
+if (Buffer.TYPED_ARRAY_SUPPORT) {
+  Buffer.prototype.__proto__ = Uint8Array.prototype
+  Buffer.__proto__ = Uint8Array
+}
+
 function allocate (that, length) {
   if (Buffer.TYPED_ARRAY_SUPPORT) {
     // Return an augmented `Uint8Array` instance, for best performance
     that = Buffer._augment(new Uint8Array(length))
+    that.__proto__ = Buffer.prototype
   } else {
     // Fallback: Return an object instance of the Buffer class
     that.length = length
@@ -41646,20 +40180,99 @@ function base64Slice (buf, start, end) {
 }
 
 function utf8Slice (buf, start, end) {
-  var res = ''
-  var tmp = ''
   end = Math.min(buf.length, end)
+  var res = []
 
-  for (var i = start; i < end; i++) {
-    if (buf[i] <= 0x7F) {
-      res += decodeUtf8Char(tmp) + String.fromCharCode(buf[i])
-      tmp = ''
-    } else {
-      tmp += '%' + buf[i].toString(16)
+  var i = start
+  while (i < end) {
+    var firstByte = buf[i]
+    var codePoint = null
+    var bytesPerSequence = (firstByte > 0xEF) ? 4
+      : (firstByte > 0xDF) ? 3
+      : (firstByte > 0xBF) ? 2
+      : 1
+
+    if (i + bytesPerSequence <= end) {
+      var secondByte, thirdByte, fourthByte, tempCodePoint
+
+      switch (bytesPerSequence) {
+        case 1:
+          if (firstByte < 0x80) {
+            codePoint = firstByte
+          }
+          break
+        case 2:
+          secondByte = buf[i + 1]
+          if ((secondByte & 0xC0) === 0x80) {
+            tempCodePoint = (firstByte & 0x1F) << 0x6 | (secondByte & 0x3F)
+            if (tempCodePoint > 0x7F) {
+              codePoint = tempCodePoint
+            }
+          }
+          break
+        case 3:
+          secondByte = buf[i + 1]
+          thirdByte = buf[i + 2]
+          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80) {
+            tempCodePoint = (firstByte & 0xF) << 0xC | (secondByte & 0x3F) << 0x6 | (thirdByte & 0x3F)
+            if (tempCodePoint > 0x7FF && (tempCodePoint < 0xD800 || tempCodePoint > 0xDFFF)) {
+              codePoint = tempCodePoint
+            }
+          }
+          break
+        case 4:
+          secondByte = buf[i + 1]
+          thirdByte = buf[i + 2]
+          fourthByte = buf[i + 3]
+          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80 && (fourthByte & 0xC0) === 0x80) {
+            tempCodePoint = (firstByte & 0xF) << 0x12 | (secondByte & 0x3F) << 0xC | (thirdByte & 0x3F) << 0x6 | (fourthByte & 0x3F)
+            if (tempCodePoint > 0xFFFF && tempCodePoint < 0x110000) {
+              codePoint = tempCodePoint
+            }
+          }
+      }
     }
+
+    if (codePoint === null) {
+      // we did not generate a valid codePoint so insert a
+      // replacement char (U+FFFD) and advance only 1 byte
+      codePoint = 0xFFFD
+      bytesPerSequence = 1
+    } else if (codePoint > 0xFFFF) {
+      // encode to utf16 (surrogate pair dance)
+      codePoint -= 0x10000
+      res.push(codePoint >>> 10 & 0x3FF | 0xD800)
+      codePoint = 0xDC00 | codePoint & 0x3FF
+    }
+
+    res.push(codePoint)
+    i += bytesPerSequence
   }
 
-  return res + decodeUtf8Char(tmp)
+  return decodeCodePointsArray(res)
+}
+
+// Based on http://stackoverflow.com/a/22747272/680742, the browser with
+// the lowest limit is Chrome, with 0x10000 args.
+// We go 1 magnitude less, for safety
+var MAX_ARGUMENTS_LENGTH = 0x1000
+
+function decodeCodePointsArray (codePoints) {
+  var len = codePoints.length
+  if (len <= MAX_ARGUMENTS_LENGTH) {
+    return String.fromCharCode.apply(String, codePoints) // avoid extra slice()
+  }
+
+  // Decode in chunks to avoid "call stack size exceeded".
+  var res = ''
+  var i = 0
+  while (i < len) {
+    res += String.fromCharCode.apply(
+      String,
+      codePoints.slice(i, i += MAX_ARGUMENTS_LENGTH)
+    )
+  }
+  return res
 }
 
 function asciiSlice (buf, start, end) {
@@ -41948,7 +40561,7 @@ Buffer.prototype.writeUInt8 = function writeUInt8 (value, offset, noAssert) {
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 1, 0xff, 0)
   if (!Buffer.TYPED_ARRAY_SUPPORT) value = Math.floor(value)
-  this[offset] = value
+  this[offset] = (value & 0xff)
   return offset + 1
 }
 
@@ -41965,7 +40578,7 @@ Buffer.prototype.writeUInt16LE = function writeUInt16LE (value, offset, noAssert
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
   if (Buffer.TYPED_ARRAY_SUPPORT) {
-    this[offset] = value
+    this[offset] = (value & 0xff)
     this[offset + 1] = (value >>> 8)
   } else {
     objectWriteUInt16(this, value, offset, true)
@@ -41979,7 +40592,7 @@ Buffer.prototype.writeUInt16BE = function writeUInt16BE (value, offset, noAssert
   if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
   if (Buffer.TYPED_ARRAY_SUPPORT) {
     this[offset] = (value >>> 8)
-    this[offset + 1] = value
+    this[offset + 1] = (value & 0xff)
   } else {
     objectWriteUInt16(this, value, offset, false)
   }
@@ -42001,7 +40614,7 @@ Buffer.prototype.writeUInt32LE = function writeUInt32LE (value, offset, noAssert
     this[offset + 3] = (value >>> 24)
     this[offset + 2] = (value >>> 16)
     this[offset + 1] = (value >>> 8)
-    this[offset] = value
+    this[offset] = (value & 0xff)
   } else {
     objectWriteUInt32(this, value, offset, true)
   }
@@ -42016,7 +40629,7 @@ Buffer.prototype.writeUInt32BE = function writeUInt32BE (value, offset, noAssert
     this[offset] = (value >>> 24)
     this[offset + 1] = (value >>> 16)
     this[offset + 2] = (value >>> 8)
-    this[offset + 3] = value
+    this[offset + 3] = (value & 0xff)
   } else {
     objectWriteUInt32(this, value, offset, false)
   }
@@ -42069,7 +40682,7 @@ Buffer.prototype.writeInt8 = function writeInt8 (value, offset, noAssert) {
   if (!noAssert) checkInt(this, value, offset, 1, 0x7f, -0x80)
   if (!Buffer.TYPED_ARRAY_SUPPORT) value = Math.floor(value)
   if (value < 0) value = 0xff + value + 1
-  this[offset] = value
+  this[offset] = (value & 0xff)
   return offset + 1
 }
 
@@ -42078,7 +40691,7 @@ Buffer.prototype.writeInt16LE = function writeInt16LE (value, offset, noAssert) 
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
   if (Buffer.TYPED_ARRAY_SUPPORT) {
-    this[offset] = value
+    this[offset] = (value & 0xff)
     this[offset + 1] = (value >>> 8)
   } else {
     objectWriteUInt16(this, value, offset, true)
@@ -42092,7 +40705,7 @@ Buffer.prototype.writeInt16BE = function writeInt16BE (value, offset, noAssert) 
   if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
   if (Buffer.TYPED_ARRAY_SUPPORT) {
     this[offset] = (value >>> 8)
-    this[offset + 1] = value
+    this[offset + 1] = (value & 0xff)
   } else {
     objectWriteUInt16(this, value, offset, false)
   }
@@ -42104,7 +40717,7 @@ Buffer.prototype.writeInt32LE = function writeInt32LE (value, offset, noAssert) 
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
   if (Buffer.TYPED_ARRAY_SUPPORT) {
-    this[offset] = value
+    this[offset] = (value & 0xff)
     this[offset + 1] = (value >>> 8)
     this[offset + 2] = (value >>> 16)
     this[offset + 3] = (value >>> 24)
@@ -42123,7 +40736,7 @@ Buffer.prototype.writeInt32BE = function writeInt32BE (value, offset, noAssert) 
     this[offset] = (value >>> 24)
     this[offset + 1] = (value >>> 16)
     this[offset + 2] = (value >>> 8)
-    this[offset + 3] = value
+    this[offset + 3] = (value & 0xff)
   } else {
     objectWriteUInt32(this, value, offset, false)
   }
@@ -42365,28 +40978,15 @@ function utf8ToBytes (string, units) {
   var length = string.length
   var leadSurrogate = null
   var bytes = []
-  var i = 0
 
-  for (; i < length; i++) {
+  for (var i = 0; i < length; i++) {
     codePoint = string.charCodeAt(i)
 
     // is surrogate component
     if (codePoint > 0xD7FF && codePoint < 0xE000) {
       // last char was a lead
-      if (leadSurrogate) {
-        // 2 leads in a row
-        if (codePoint < 0xDC00) {
-          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-          leadSurrogate = codePoint
-          continue
-        } else {
-          // valid surrogate pair
-          codePoint = leadSurrogate - 0xD800 << 10 | codePoint - 0xDC00 | 0x10000
-          leadSurrogate = null
-        }
-      } else {
+      if (!leadSurrogate) {
         // no lead yet
-
         if (codePoint > 0xDBFF) {
           // unexpected trail
           if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
@@ -42395,17 +40995,29 @@ function utf8ToBytes (string, units) {
           // unpaired lead
           if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
           continue
-        } else {
-          // valid lead
-          leadSurrogate = codePoint
-          continue
         }
+
+        // valid lead
+        leadSurrogate = codePoint
+
+        continue
       }
+
+      // 2 leads in a row
+      if (codePoint < 0xDC00) {
+        if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
+        leadSurrogate = codePoint
+        continue
+      }
+
+      // valid surrogate pair
+      codePoint = leadSurrogate - 0xD800 << 10 | codePoint - 0xDC00 | 0x10000
     } else if (leadSurrogate) {
       // valid bmp char, but last char was a lead
       if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-      leadSurrogate = null
     }
+
+    leadSurrogate = null
 
     // encode utf8
     if (codePoint < 0x80) {
@@ -42424,7 +41036,7 @@ function utf8ToBytes (string, units) {
         codePoint >> 0x6 & 0x3F | 0x80,
         codePoint & 0x3F | 0x80
       )
-    } else if (codePoint < 0x200000) {
+    } else if (codePoint < 0x110000) {
       if ((units -= 4) < 0) break
       bytes.push(
         codePoint >> 0x12 | 0xF0,
@@ -42477,14 +41089,7 @@ function blitBuffer (src, dst, offset, length) {
   return i
 }
 
-function decodeUtf8Char (str) {
-  try {
-    return decodeURIComponent(str)
-  } catch (err) {
-    return String.fromCharCode(0xFFFD) // UTF 8 invalid char
-  }
-}
-
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"base64-js":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/node_modules/base64-js/lib/b64.js","ieee754":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/node_modules/ieee754/index.js","is-array":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/node_modules/is-array/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/buffer/node_modules/is-array/index.js":[function(require,module,exports){
 
 /**

@@ -2439,7 +2439,8 @@ module.exports = {
 
 },{}],"/home/ubuntu/staging/apps/build/js/applab/visualization.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -2459,7 +2460,8 @@ return buf.join('');
 }());
 },{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/applab/extraControlRows.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -3924,7 +3926,8 @@ designMode.resetIds = function() {
 
 },{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","./DesignToggleRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/DesignToggleRow.jsx","./DesignWorkspace.jsx":"/home/ubuntu/staging/apps/build/js/applab/DesignWorkspace.jsx","./assetManagement/show.js":"/home/ubuntu/staging/apps/build/js/applab/assetManagement/show.js","./designElements/elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js","./designElements/library":"/home/ubuntu/staging/apps/build/js/applab/designElements/library.js"}],"/home/ubuntu/staging/apps/build/js/applab/controls.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
