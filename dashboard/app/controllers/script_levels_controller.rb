@@ -25,14 +25,14 @@ class ScriptLevelsController < ApplicationController
   def next
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
-    prevent_caching_unless_enabled_for_script(@script)
+    configure_caching(@script)
     redirect_to(build_script_level_path(next_script_level)) and return
   end
 
   def show
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
-    prevent_caching_unless_enabled_for_script(@script)
+    configure_caching(@script)
     load_script_level
 
     if request.path != (canonical_path = build_script_level_path(@script_level))
@@ -55,12 +55,12 @@ class ScriptLevelsController < ApplicationController
          locale: locale) if @script_level.level.finishable?
   end
 
-  protected
+  private
 
   # Prevent caching for the current page, unless the Gatekeeper configuration for 'script' specifies
   # that it is publicly cachable, in which case the max-age and s-max-age headers are set based
   # the 'public-max-age' DCDO configuration value.
-  def prevent_caching_unless_enabled_for_script(script)
+  def configure_caching(script)
     if script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
       max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_MAX_AGE)
       response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{max_age}"
@@ -68,8 +68,6 @@ class ScriptLevelsController < ApplicationController
       prevent_caching
     end
   end
-
-  private
 
   def next_script_level
     user_or_session_level || @script.starting_level
