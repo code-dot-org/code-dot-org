@@ -391,7 +391,7 @@ FeedbackUtils.prototype.buildPuzzleRatingButtons_ = function () {
     $(this).toggleClass('enabled');
   };
   for (var i = 0, button; (button = buttons[i]); i++) {
-    button.addEventListener('click', buttonClickHandler);
+    dom.addClickTouchEvent(button, buttonClickHandler);
   }
 
   return buttonContainer;
