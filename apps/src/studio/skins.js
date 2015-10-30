@@ -468,12 +468,12 @@ function loadHoc2015(skin, assetUrl) {
   });
 
   skin.bot1.movementAudio = [
-    { begin: 'bot1_move1_start', loop: 'bot1_move1_loop', end: 'bot1_move1_end' },
-    { begin: 'bot1_move2_start', loop: 'bot1_move2_loop', end: 'bot1_move2_end' },
-    { begin: 'bot1_move3_start', loop: 'bot1_move3_loop', end: 'bot1_move3_end' }
+    { begin: 'bot1_move1_start', loop: 'bot1_move1_loop', end: 'bot1_move1_end', volume: 2.2 },
+    { begin: 'bot1_move2_start', loop: 'bot1_move2_loop', end: 'bot1_move2_end', volume: 2.2 },
+    { begin: 'bot1_move3_start', loop: 'bot1_move3_loop', end: 'bot1_move3_end', volume: 2.2 }
   ];
   skin.bot2.movementAudio = [
-    { loop: 'bot2_move_loop', end: 'bot2_move_end' }
+    { loop: 'bot2_move_loop', end: 'bot2_move_end', volume: 0.8 }
   ];
 
   skin.preventProjectileLoop = function (className) {

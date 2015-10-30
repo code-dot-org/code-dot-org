@@ -4085,13 +4085,15 @@ Studio.setSprite = function (opts) {
   }
 
   // Set up movement audio for the selected sprite (clips should be preloaded)
+  // First, stop any movement audio for the current character.
+  Studio.movementAudioOff();
   if (!Studio.movementAudioEffects[spriteValue] && skin.avatarList) {
     var spriteSkin = skin[spriteValue] || {};
     var audioConfig = spriteSkin.movementAudio || [];
     Studio.movementAudioEffects[spriteValue] = [];
     if (studioApp.cdoSounds) {
       Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
-        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
+        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption);
       });
     }
   }
@@ -4101,6 +4103,10 @@ Studio.setSprite = function (opts) {
   Studio.displaySprite(spriteIndex);
 };
 
+var moveAudioState = false;
+Studio.isMovementAudioOn = function () {
+  return moveAudioState;
+};
 
 Studio.movementAudioOn = function () {
   Studio.movementAudioOff();
@@ -4109,12 +4115,14 @@ Studio.movementAudioOn = function () {
   if (Studio.currentMovementAudio) {
     Studio.currentMovementAudio.on();
   }
+  moveAudioState = true;
 };
 
 Studio.movementAudioOff = function () {
   if (Studio.currentMovementAudio) {
     Studio.currentMovementAudio.off();
   }
+  moveAudioState = false;
 };
 
 var p = function (x,y) {
@@ -4752,8 +4760,7 @@ Studio.moveSingle = function (opts) {
       sprite.y = projectedY;
     }
 
-    if (opts.dir !== Studio.lastMoveSingleDir &&
-        lastMove === Infinity || Studio.tickCount > lastMove + 1) {
+    if (!Studio.isMovementAudioOn()) {
       Studio.movementAudioOn();
     }
   }
