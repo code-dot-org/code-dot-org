@@ -1,8 +1,8 @@
-ENV['RACK_ENV'] = 'test'
-
 require 'minitest/autorun'
 require 'rack/test'
 require_relative '../../deployment'
+
+ENV['RACK_ENV'] = 'test'
 
 class LogTest < Minitest::Test
   def setup
