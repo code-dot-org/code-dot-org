@@ -1,4 +1,6 @@
 ---
+transport:
+  name: ssh_tgz
 driver:
   name: docker
   use_sudo: false
@@ -18,3 +20,9 @@ suites:
   - name: default
     run_list:
       - recipe[cdo-nodejs]
+  - name: upgrade
+    steps:
+      - run_list:
+        - recipe[nodejs_test::old]
+      - run_list:
+        - recipe[cdo-nodejs]
