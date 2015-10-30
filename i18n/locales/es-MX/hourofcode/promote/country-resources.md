@@ -49,7 +49,7 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 ## Use this handout to recruit corporations
 
-[<img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
+[<%= localized_image('/images/fit-500x300/corporations.png') %>](%= localized_file('/files/corporations.pdf') %)
 
 ## 1) Try the tutorials:
 
@@ -58,7 +58,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 **Todos los tutoriales de la Hora de Código:**
 
   * Require minimal prep-time for organizers
-  * Son de auto aprendizaje, lo que permite a los estudiantes trabajar a su propio ritmo y habilidad
+  * Son de auto aprendizaje, lo que permite a los estudiantes trabajar a su propio ritmo y según su habilidad
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
@@ -73,7 +73,7 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 ## 3) Plan ahead based on your technology available
 
   * **¿No tiene dispositivos suficientes?** use [programación en parejas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
-  * **¿Tiene un ancho de banda limitado?** Muestre los videos al frente del salón de clase, para evitar que cada estudiante descargue el video. O pruebe con los tutoriales desconectados/fuera de línea.
+  * **¿Tiene un ancho de banda limitado?** Muestre los videos con el proyector de clase, para evitar que cada estudiante descargue el video. O pruebe con los tutoriales sin conexión/fuera de línea.
 
 ## 4) Inspire students - show them a video
 

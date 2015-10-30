@@ -15,10 +15,10 @@ nav: how_to_nav
   * Inscrivez-vous pour organiser un évènement [Une Heure de Code](<%= resolve_url('/') %>) en tant qu'hôte <%= campaign_date('short') %>.
   * Promouvoir votre [Heure de Code](<%= resolve_url('/promote') %>) et encouragez les autres à en organiser.
 
-## 2) Regardez cette vidéo explicative <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Regardez cette vidéo de présentation <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Choisissez un tutoriel :
 
-Nous allons proposer une série de [tutoriels amusants, d'une heure](<%= resolve_url('https://code.org/learn') %>) pour les participants de tout âge, créé par nos partenaires. *de nouveaux tutoriels seront disponibles pour débuter Une Heure de Code < % = campaign_date('full') %>.* [Essayez les tutoriels actuellement disponibles.](<%= resolve_url("https://code.org/learn") %>)
+Nous allons proposer une série de [tutoriels amusants, d'une heure](<%= resolve_url('https://code.org/learn') %>) pour les participants de tout âge, créé par nos partenaires. *De nouveaux tutoriels seront disponibles pour débuter Une Heure de Code avant <%= campaign_date('full') %>.* [Essayez les tutoriels actuellement disponibles.](<%= resolve_url("https://code.org/learn") %>)
 
 **Tous les tutoriels Une Heure de Code:**
 
@@ -33,7 +33,7 @@ Une expérience Une Heure de Code enrichissante nécessite des ordinateurs conne
 
   * Testez les tutoriels sur les ordinateurs ou appareils à votre disposition. Assurez-vous qu'ils fonctionnent correctement sur les navigateurs avec le son et la vidéo.
   * Fournissez des écouteurs, ou demandez aux participants d'apporter les leur, si le tutoriel que vous choisissez fonctionne mieux avec le son.
-  * **Vous n'avez pas suffisamment de materiel informatique ?** Utilisez la [paire de programmation](https://www.youtube.com/watch?v=vgkahOzFH2Q). Lorsque les enfants travaillent ensemble, ils s'entraident et s'appuient moins sur l'organisateur. Ils verront ainsi que l'informatique est une discipline sociale et collaborative.
+  * **Vous n'avez pas suffisamment de materiel informatique ?** Mettez en place [des binômes pour la programmation](https://www.youtube.com/watch?v=vgkahOzFH2Q). Lorsque les enfants travaillent ensemble, ils s'entraident et s'appuient moins sur l'organisateur ou le professeur. Ils verront ainsi que l'informatique est une discipline sociale et collaborative.
   * **Votre bande passante est faible ?** Planifiez de passer des vidéos de projet sur grand écran, que tout le monde n'ait pas à télécharger ses propres vidéos. Ou essayez les tutoriels hors ligne.
 
 ![](/images/fit-350/group_ipad.jpg)
@@ -45,7 +45,7 @@ Lancez le coup d'envoi de votre Heure de Code en inspirant les participants et e
 **Montrez une vidéo inspirante :**
 
   * La vidéo originale du lancement de Code.org, avec Bill Gates, Mark Zuckerberg et la star de la NBA Chris Bosh (Il y a une version [d'1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [de 5 minutes](https://www.youtube.com/watch?v=nKIu9yen5nc), et [de 9 minutes](https://www.youtube.com/watch?v=dU1xS07N-FA) disponible )
-  * La [vidéo de lancement de Une Heure de Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou le < % si @country == 'uk' %> [la vidéo Une Heure de Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) < % d'autre %> [Une Heure de Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * La [vidéo de lancement de Une Heure de Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou le <% if @country == 'uk' %> [la vidéo Une Heure de Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Une Heure de Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Le président Obama a lancé un appel, invitant tous les étudiants à apprendre l'informatique](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Trouvez plus de vidéos inspirantes [ici](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -53,7 +53,7 @@ Lancez le coup d'envoi de votre Heure de Code en inspirant les participants et e
 
   * Expliquez l'impact des nouvelles technologies sur nos vies, avec des exemples qui toucheront les garçons et les filles (parler des applications et technologies qui permettent de sauver des vies, aider les gens, les connecter etc.).
   * Choisir des exemples concrets qui nécessitent du code dans la vie quotidienne.
-  * Consultez les conseils pour intéresser les jeunes filles à l'informatique[ ici](<%= resolve_url('https://code.org/girls') %>).
+  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 **Besoin de plus de conseils ?** Téléchargez ce [plan d'actions](/files/AfterschoolEducatorLessonPlanOutline.docx).
 

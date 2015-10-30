@@ -15,7 +15,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 Allir, alls staðar geta haldið Klukkustund kóðunar. [Skráðu þig](%= resolve_url('/') %) til að fá tilkynningar og eiga rétt á verðlaunum.   
 
 
-[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
+[<button><%= hoc_s(:signup_your_event) %></button>](%= resolve_url('/') %)
 
 ## 2. Láttu aðra vita
 

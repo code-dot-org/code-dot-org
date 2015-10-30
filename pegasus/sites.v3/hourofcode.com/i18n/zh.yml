@@ -252,6 +252,9 @@ zh:
   map_search_placeholder: 搜尋Hour of Code活動
   map_search_search: 搜尋
   map_search_reset: 清除
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Hour of Code在此處
   meta_tag_og_description: 一小時程式設計是一個全球性的活動，觸及數千萬個來自180多個國家，30多種語言，由4歲到104 歲的學生。
   meta_tag_twitter_title: Hour of Code在此處

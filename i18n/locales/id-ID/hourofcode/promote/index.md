@@ -15,7 +15,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 Siapaun, dimanapun dapat mengadakan Hour of Code. [Daftar](%= resolve_url('/') %) untuk mendapatkan update dan memenuhi syarat untuk hadiah.   
 
 
-[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
+[<button><%= hoc_s(:signup_your_event) %></button>](%= resolve_url('/') %)
 
 ## 2. Sebarkan berita ini
 
@@ -25,7 +25,7 @@ Beritahukan teman mengenai **#HourOfCode**!
 
 ## 3. Minta seluruh isi sekolah untuk mengikuti Hour of Code
 
-[Kirim email ini](%= resolve_url('/promote/resources#sample-emails') %) kepada kepala sekolah dan tantang setiap kelas di sekolah Anda untuk mendaftar. < % jika @country == 'us' %> Salah satu sekolah yang beruntung di *setiap* negara Amerika (dan Washington Dc) akan memenangkan teknolgi senilai $10,000. [Daftar di sini](%= resolve_url('/prizes/hardware-signup') %) untuk menjadi layak dan [**lihat pemenang tahun lalu**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Kirim email ini](%= resolve_url('/promote/resources#sample-emails') %) kepada kepala sekolah dan tantang setiap kelas di sekolah Anda untuk mendaftar. <% if @country == 'us' %> Salah satu sekolah yang beruntung di *setiap* negara Amerika (dan Washington Dc) akan memenangkan teknolgi senilai $10,000. [Daftar di sini](%= resolve_url('/prizes/hardware-signup') %) untuk menjadi layak dan [**lihat pemenang tahun lalu**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
 
 ## Tanyakan pada bos anda untuk ikut terlibat
 
