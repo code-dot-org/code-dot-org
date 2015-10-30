@@ -128,8 +128,12 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
   }
 
   details.hoc2015 {
-    & > summary:focus {
-      outline: none;
+    & > summary {
+      margin: 1em 0;
+
+      &:focus {
+        outline: none;
+      }
     }
 
     & > p {
