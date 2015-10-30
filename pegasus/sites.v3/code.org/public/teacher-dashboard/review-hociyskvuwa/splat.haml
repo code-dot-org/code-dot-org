@@ -32,7 +32,7 @@ title: Review Hour of Code special events
 -results = []
 -events = []
 
--DB[:forms].where(kind:'HocSignup2015', review:nil).each do |i|
+-DB[:forms].where(kind: 'HocSignup2015', review:nil).group(:name, :email).select(:name, :email, :processed_data, :data, :secret).each do |i|
   -if i[:processed_data]
     -results << JSON.parse(i[:data]).merge(secret: i[:secret]).merge(JSON.parse(i[:processed_data]))
 
