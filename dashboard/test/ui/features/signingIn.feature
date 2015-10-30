@@ -1,5 +1,6 @@
 @dashboard_db_access
-@chrome
+@no_mobile
+@no_ie9
 
 Feature: Signing in and signing out
 
@@ -58,8 +59,10 @@ Scenario:
   And I wait to see ".new_user"
   And I fill in username and password for "Casey"
   And I click selector "input[type=submit][value='Sign in']"
+  Then I wait for 2 seconds
   And I wait to see ".header_user"
-  Then check that I am on "http://code.org/teacher-dashboard#/"
+  Then I wait for 2 seconds
+  Then check that the url contains "teacher-dashboard"
   Then element ".user_menu span:first" has text "Hi Casey"
   Then I click selector ".user_menu span:first"
   Then I click selector ".user_menu a:last"
