@@ -37,6 +37,7 @@ languages = {
   'Irish' => ['ga-IE', 'ga'],
   'Italian' => ['it-IT', 'it'],
   'Japanese' => ['ja-JP', 'ja'],
+  'Kazakh' => ['kk-KZ', 'kk'],
   'Khmer' => ['km-KH', 'km'],
   'Korean' => ['ko-KR', 'ko'],
   'Kurdish' => ['ku-IQ', 'ku'],
