@@ -727,8 +727,8 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
   background: 'cave',
   firstSpriteIndex: 5, // witch
   goalOverride: {
-    goal: 'red_fireball',
-    success: 'blue_fireball',
+    goalImage: 'red_fireball',
+    successImage: 'blue_fireball',
     imageWidth: 800
   },
   defaultEmotion: Emotions.ANGRY,
@@ -1684,9 +1684,7 @@ levels.js_hoc2015_move_right = {
   'timeoutFailureTick': 100,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal1'
   },
   "callouts": [
     {
@@ -1750,9 +1748,7 @@ levels.js_hoc2015_move_right_down = {
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal2'
   },
   'progressConditions' : [
     { required: { 'allGoalsVisited': true },
@@ -1800,9 +1796,7 @@ levels.js_hoc2015_move_diagonal = {
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal1'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
@@ -1873,9 +1867,7 @@ levels.js_hoc2015_move_backtrack = {
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal1'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
@@ -1923,9 +1915,7 @@ levels.js_hoc2015_move_around = {
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal2'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
@@ -1974,9 +1964,7 @@ levels.js_hoc2015_move_finale = {
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal2'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
@@ -2034,8 +2022,6 @@ levels.js_hoc2015_event_two_items = {
   'showTimeoutRect': true,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100,
     'goalRenderOffsetX': 0
   },
 
@@ -2134,9 +2120,7 @@ levels.js_hoc2015_event_four_items = {
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalAnimation': 'animatedGoal'
   },
 
   'progressConditions' : [
@@ -2193,9 +2177,7 @@ levels.js_hoc2015_score =
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalAnimation': 'animatedGoal'
   },
   'goal': {
     // The level uses completeOnSuccessConditionNotGoals, so make sure this
