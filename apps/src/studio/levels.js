@@ -2661,12 +2661,11 @@ var js_hoc2015_event_free_markdown = [
   '',
   '<span class="instructions2">' + js_hoc2015_event_free_ooc_instructions + '</span>',
   '',
-  '<details>',
+  '<details class="hoc2015">',
   '<summary>Example project ideas</summary>',
   '<p>**Example 1**',
   '<br />Add 5 random characters in the scene, and play a different sound each time BOT1 collides with one of them.</p>',
   '',
-
   '<p>**Example 2**',
   '<br />Add 10 MANs to chase BOT2. See if you can outrun them by running at high speed.</p>',
   '',
@@ -2674,7 +2673,7 @@ var js_hoc2015_event_free_markdown = [
   '<br />Add 5 PIGs that are running away from BOT1. Make him scream each time he catches one.</p>',
   '',
   '</details>',
-  '<details>',
+  '<details class="hoc2015">',
   '<summary>Extra credit project ideas</summary>',
   '',
   '<p>**Example 1**',
@@ -2683,7 +2682,7 @@ var js_hoc2015_event_free_markdown = [
       'MAN catches BOT1.</p>',
   '',
   '</details>',
-  '<details>',
+  '<details class="hoc2015">',
   '<summary>For JavaScript programmers</summary>',
   '<p>You can create more complex JavaScript programs if you program in “text” mode. ' +
       'Feel free to use `for` loops, `if` statements, variables, or other JavaScript ' +
