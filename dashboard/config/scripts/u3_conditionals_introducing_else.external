@@ -1,0 +1,25 @@
+name 'U3 - Conditionals - Introducing Else'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Else
+
+On the last level we were trying to figure out what happens after an if statement. You may have noticed that the program executes the code after the if statement whether the if condition was true or false. So what if we want to tell the user they were wrong? How can we do that? 
+
+<table>
+  <tr>
+    <th> What Happened</th>
+    <th>What We Want</th>
+  </tr>
+  <tr>
+    <td><img src="https://images.code.org/171826eb82aeb62313254b346533adf6-image-1446168575073.png" style="width: 200px; height: 350px; float: right; border: solid 1px black"></td>
+    <td><img src="https://images.code.org/3bf3ce903141f4e6a6dad3d02d973f71-image-1446168572265.png" style="width: 225px; height: 350px; float: right; border: solid 1px black"></td>
+  </tr>
+</table>
+
+We can use an `else` statement. An `else` statement executes when the boolean condition in the if statement is false. Sometimes its easier to think of else as meaning 'otherwise'. You could read an if and else statement as "if the guess is the secret number say you got it, otherwise say you got it wrong". 
+
+
+<img src="https://images.code.org/b7942d778a54465ad6f9f19fbab8d1ef-image-1446237289306.34.23 PM.png" style="width: 150px; float: right">
+
+You can create an `else` statement by hitting the <img src="https://images.code.org/f762344bc839dd8385730bb7d909657f-image-1446237096776.31.12 PM.png" style="width: 40px"> at the bottom of an if statement.  There is also an if - else block in the toolbox. 
+MARKDOWN
