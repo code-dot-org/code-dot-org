@@ -79,7 +79,7 @@ var sendReport = function(report) {
     //is done posting. There is logic that says "don't show the dialog if we are animating" but if milestone posting
     //is disabled then we might show the dialog before the animation starts. Putting a 1-sec delay works around this
     setTimeout(function () {
-      reportComplete(report, getFallbackResponse(report))
+      reportComplete(report, getFallbackResponse(report));
     }, 1000);
   }
 
