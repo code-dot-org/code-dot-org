@@ -33,10 +33,6 @@ rightbar: blank
         %input#unsubscribe-volunteer-annual{name: "unsubscribed_s", type: "radio", required: true, value: "resubscribe"}/
         Send me teacher requests again
 
-  - form.data.each do |key, value|
-    - unless key == 'unsubscribed_s'
-      %input{name: key, type:'hidden', required: true, value: value}
-
   #volunteer-secret{style: 'display: none'}= secret
   %button.btn-submit Confirm
 
