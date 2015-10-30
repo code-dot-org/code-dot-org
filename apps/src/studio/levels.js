@@ -1291,7 +1291,7 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
   toolbox:
     tb(
       blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
-      blockOfType('studio_setBackground', {VALUE: '"ice"'}) +
+      blockOfType('studio_setBackground', {VALUE: '"icy"'}) +
       blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
       blockOfType('studio_saySprite') +
       blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
