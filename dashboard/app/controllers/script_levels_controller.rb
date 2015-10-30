@@ -71,7 +71,6 @@ class ScriptLevelsController < ApplicationController
 
   private
 
-
   def next_script_level
     user_or_session_level || @script.starting_level
   end
