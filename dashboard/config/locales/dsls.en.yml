@@ -1954,7 +1954,6 @@ en:
         mouseover: mouseover
         mouseup: mouseup
       U3L18 Matching:
-        "'dice != 5": "'dice != 5"
         Is the value of the variable 'blue' equal to the string blue?: Is the value of the variable 'blue' equal to the string blue?
         Is the value of the variable 'dice' not equal to 5?: Is the value of the variable 'dice' not equal to 5?
         Is x less than 3?: Is x less than 3?
@@ -1963,7 +1962,6 @@ en:
         blue == 'blue': blue == 'blue'
         dice != 5: dice != 5
         x&lt;3: x&lt;3
-        x<3: x<3
       U3L19 - MATCH what are values of abc:
         '10': '10'
         '12': '12'
