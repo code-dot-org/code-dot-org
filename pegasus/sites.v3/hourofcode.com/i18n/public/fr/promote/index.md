@@ -6,16 +6,18 @@ nav: promote_nav
 
 ---
 
-<% facebook = {:u=>"http://#{request.host}/us"}
+<%
+  facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
+  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+%>
 
 # Comment s'impliquer ?
 
 ## 1. Inscrivez-vous pour organiser Une Heure de Code
 
-N'importe qui, où qu'il se trouve, peut organiser Une Heure de Code. [inscrivez-vous](<%= resolve_url('/promote/resources#sample-emails') %>) pour recevoir les dernières informations et vous qualifier pour recevoir des prix.   
+N'importe qui, où qu'il se trouve, peut organiser Une Heure de Code. [inscrivez-vous](<%= resolve_url('/') %>) pour recevoir les dernières informations et vous qualifier pour recevoir des prix.   
 
 
 [<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
@@ -28,7 +30,7 @@ Parlez-en à vos amis en utilisant **#HourOfCode**!
 
 ## 2. Proposez à votre école de participer à Une Heure de Code
 
-[Envoyez cet email](<%= resolve_url('/promote/resources#sample-emails') %>) à votre principal ou au directeur de votre école et proposez à chaque professeur de s'inscrire. Pour cela, c'est simple ! <% if @country == 'us' %> [Inscrivez-vous ici](<%= resolve_url('/prizes/hardware-signup') %>) pour être admissibles. <% end %>
+[Envoyez cet email](<%= resolve_url('/promote/resources#sample-emails') %>) à votre principal ou au directeur de votre école et proposez à chaque professeur de s'inscrire. <% if @country == 'us' %> Pour cela, c'est simple ! [Inscrivez-vous ici](<%= resolve_url('/prizes/hardware-signup') %>) pour être admissibles. <% end %>
 
 ## 4. Demandez à votre employeur de s'impliquer
 
