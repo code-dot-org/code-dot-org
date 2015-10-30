@@ -325,6 +325,8 @@ function loadInfinity(skin, assetUrl) {
 function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
+  skin.hideIconInClearPuzzle = true;
+
   skin.defaultBackground = 'forest';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
@@ -681,6 +683,8 @@ function loadHoc2015(skin, assetUrl) {
 
 function loadHoc2015x(skin, assetUrl) {
   skin.preloadAssets = true;
+
+  skin.hideIconInClearPuzzle = true;
 
   skin.defaultBackground = 'main';
   skin.projectileFrames = 10;
