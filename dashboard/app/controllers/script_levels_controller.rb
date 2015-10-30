@@ -1,3 +1,5 @@
+require 'dynamic_config/gatekeeper'
+
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
