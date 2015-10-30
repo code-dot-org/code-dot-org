@@ -7,6 +7,8 @@ require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
 
 class DCDOBase
+  attr_reader :datastore_cache
+
   def initialize(datastore_cache)
     @datastore_cache = datastore_cache
   end

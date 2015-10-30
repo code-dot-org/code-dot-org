@@ -32,6 +32,11 @@ class DatastoreCache
     set_local(key, value)
   end
 
+  # Return all cached elements
+  def all
+    @cache
+  end
+
   # Clear the datastore
   def clear
     @cache = {}
