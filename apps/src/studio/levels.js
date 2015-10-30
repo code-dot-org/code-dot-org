@@ -2652,13 +2652,44 @@ levels.js_hoc2015_change_setting = {
 };
 
 var js_hoc2015_event_free_character_instructions = '"You\'re on your own now, BOT1."';
-var js_hoc2015_event_free_ooc_instructions = 'Go build something.';
+var js_hoc2015_event_free_ooc_instructions = "You have all the tools you need " +
+    "now to create your own level. Feel free to explore and play with all " +
+    "the different Commands and Events. When you're done, press the Finish " +
+    "button to continue.";
 var js_hoc2015_event_free_markdown = [
   '<span class="character-text">' + js_hoc2015_event_free_character_instructions + '</span>',
   '',
   '<span class="instructions2">' + js_hoc2015_event_free_ooc_instructions + '</span>',
   '',
   '<details>',
+  '<summary>Example project ideas</summary>',
+  '<p>**Example 1**',
+  '<br />Add 5 random characters in the scene, and play a different sound each time BOT1 collides with one of them.</p>',
+  '',
+
+  '<p>**Example 2**',
+  '<br />Add 10 MANs to chase BOT2. See if you can outrun them by running at high speed.</p>',
+  '',
+  '<p>**Example 3**',
+  '<br />Add 5 PIGs that are running away from BOT1. Make him scream each time he catches one.</p>',
+  '',
+  '</details>',
+  '<details>',
+  '<summary>Extra credit project ideas</summary>',
+  '',
+  '<p>**Example 1**',
+  '<br />Add a MOUSE and a MAN. Every time BOT1 catches a MOUSE, score some ' +
+      'points and then add another MOUSE and another MAN.  End the game if a ' +
+      'MAN catches BOT1.</p>',
+  '',
+  '</details>',
+  '<details>',
+  '<summary>For JavaScript programmers</summary>',
+  '<p>You can create more complex JavaScript programs if you program in “text” mode. ' +
+      'Feel free to use `for` loops, `if` statements, variables, or other JavaScript ' +
+      'commands to make much more complex games. And _please_: document and share ' +
+      'the code you wrote for others to learn too!</p>',
+  '',
   '</details>'
 ].join('\r\n');
 
