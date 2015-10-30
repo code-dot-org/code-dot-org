@@ -2,6 +2,7 @@ require 'client_state'
 require 'nokogiri'
 require 'cdo/user_agent_parser'
 require 'cdo/graphics/certificate_image'
+require 'dynamic_config/gatekeeper'
 
 module ApplicationHelper
 
@@ -192,4 +193,9 @@ module ApplicationHelper
     @client_state ||= ClientState.new(session, cookies)
   end
 
+  # Check to see if we disabled signin from Gatekeeper
+  def signin_button_enabled
+    return true if @script.nil?
+    !Gatekeeper.allows('public_caching_for_script', where: { script_name: @script.name })
+  end
 end
