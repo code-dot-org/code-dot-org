@@ -53,7 +53,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
   * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
   * List things that use code in everyday life.
-  * 女の子にコンピュータサイエンスに対する興味を持たせる方法を、<a
+  * 女の子にコンピュータサイエンスに対する興味を持たせる方法を、[こちら](<%= resolve_url('https://code.org/girls') %>)から見てみましょう。.
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
