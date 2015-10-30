@@ -2069,7 +2069,7 @@ levels.js_hoc2015_event_two_items = {
       }
     },
     {
-      'id': 'arrowsCallout',
+      'id': 'playlab:js_hoc2015_event_two_items:arrowsCallout',
       'element_id': '#upButton',
       'hide_target_selector': '#soft-buttons',
       'qtip_config': {
@@ -2214,6 +2214,24 @@ levels.js_hoc2015_score =
   ],
   'completeOnSuccessConditionNotGoals': true,
   'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_score:arrowsAutoSteerCallout',
+      'element_id': '#upButton',
+      'hide_target_selector': '#soft-buttons',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutUseArrowButtonsAutoSteer(),
+        },
+        'position': {
+          'my': 'top left',
+          'at': 'bottom left',
+          'adjust': {
+            'x': 30,
+            'y': 0
+          }
+        }
+      }
+    },
     {
       'id': 'playlab:js_hoc2015_score:placeCommandsAtTop',
       'element_id': '.droplet-gutter-line:nth-of-type(2)',

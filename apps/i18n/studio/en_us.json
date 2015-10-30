@@ -25,6 +25,7 @@
   "calloutClickEvents": "Click on the events header to see event function blocks.",
   "calloutTryOutNewCommands": "Try out all the new commands you’ve unlocked",
   "calloutUseArrowButtons": "Hold down these buttons or the arrow keys on your keyboard to trigger the move events",
+  "calloutUseArrowButtonsAutoSteer": "You can still use these buttons or the arrow keys on your keyboard to move",
   "calloutMoveRightRunButton": "Add a second moveRight command to your code and then click here to run it",
   "calloutShowCodeToggle": "Click here to switch between block and text mode",
   "calloutShowPlaceGoUpHere": "Place goUp command here to move up",
