@@ -7,7 +7,6 @@ require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
 
 class DCDOBase
-  attr_reader :datastore_cache
 
   def initialize(datastore_cache)
     @datastore_cache = datastore_cache
@@ -38,6 +37,12 @@ class DCDOBase
   # Clear all stored settings
   def clear
     @datastore_cache.clear
+  end
+
+  # Returns the current dcdo config state as yaml
+  # @returns [String]
+  def to_yaml
+    YAML.dump(@datastore_cache.all)
   end
 
   # Factory method for creating DCDOBase objects
