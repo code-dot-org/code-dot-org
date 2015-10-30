@@ -1,12 +1,18 @@
+require 'dynamic_config/dcdo'
+require 'dynamic_config/gatekeeper'
+
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
 
-  before_filter :prevent_caching
+  # Default max age to use for script level pages which are configured as
+  # publicly cacheable.  Used if the DCDO.public_max_age is not defined.
+  DEFAULT_PUBLIC_MAX_AGE = 5.minutes
 
   def reset
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
+    prevent_caching
 
     # delete the client state and other session state if the user is not signed in
     # and start them at the beginning of the script.
@@ -22,14 +28,14 @@ class ScriptLevelsController < ApplicationController
   def next
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
-
+    configure_caching(@script)
     redirect_to(build_script_level_path(next_script_level)) and return
   end
 
   def show
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
-
+    configure_caching(@script)
     load_script_level
 
     if request.path != (canonical_path = build_script_level_path(@script_level))
@@ -53,6 +59,19 @@ class ScriptLevelsController < ApplicationController
   end
 
   private
+
+  # Configure http caching for the given script. Caching is disabled unless the
+  # Gatekeeper configuration for 'script' specifies that it is publicly
+  # cachable, in which case the max-age and s-max-age headers are set based the
+  # 'public-max-age' DCDO configuration value.
+  def configure_caching(script)
+    if script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
+      max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_MAX_AGE)
+      response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{max_age}"
+    else
+      prevent_caching
+    end
+  end
 
   def next_script_level
     user_or_session_level || @script.starting_level
