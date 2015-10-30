@@ -753,7 +753,7 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
 levels.iceage_6 = utils.extend(levels.playlab_6, {
   background: 'tile',
   firstSpriteIndex: 3, // diego
-  goalOverride: {}
+  goalOverride: {} // This prevents the override from original playlab from being used
 });
 
 // The "repeat forever" block allows you to run code continuously. Can you
