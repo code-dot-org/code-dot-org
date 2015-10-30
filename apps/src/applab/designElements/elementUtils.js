@@ -63,7 +63,7 @@ function checkId(element, prefix) {
  * @param prefix {string} Optional. Defaults to DESIGN_ELEMENT_ID_PREFIX.
  * @returns {Element}
  */
-module.exports.getPrefixedElementById = function(elementId, prefix) {
+var getPrefixedElementById = module.exports.getPrefixedElementById = function(elementId, prefix) {
   prefix = prefix === undefined ? constants.DESIGN_ELEMENT_ID_PREFIX : prefix;
   return document.getElementById(prefix + elementId);
 };
@@ -86,4 +86,38 @@ module.exports.addIdPrefix = function (element, prefix) {
  */
 module.exports.removeIdPrefix = function (element) {
   element.setAttribute('id', getId(element));
+};
+
+/**
+ * Returns true if newId is available and won't collide with
+ * other elements in design mode or the rest of applab.
+ * @param {string} newId The id to evaluate.
+ * @param {string} originalId The original id of this element.
+ *     This will always be a valid value for newId.
+ * @returns {boolean}
+ */
+module.exports.isIdAvailable = function(newId, originalId) {
+  if (!newId) {
+    return false;
+  }
+  if (newId === originalId) {
+    return true;
+  }
+
+  // Don't allow if any other element in design mode has this prefixed id.
+  if (getPrefixedElementById(newId)) {
+    return false;
+  }
+
+  // Don't allow if any element outside of divApplab has this id.
+  //
+  // Elements in divApplab must be ignored since divApplab may be stale
+  // with respect to what's in design mode, and we already caught any
+  // collisions with design mode elements in the previous condition.
+  var element = document.getElementById(newId);
+  if (element && !$('#divApplab').find(element)[0]) {
+    return false;
+  }
+
+  return true;
 };
