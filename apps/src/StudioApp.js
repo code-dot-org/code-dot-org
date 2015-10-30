@@ -440,10 +440,11 @@ StudioApp.prototype.init = function(config) {
   }
 
   // Bind listener to 'Clear Puzzle' button
+  var hideIcon = utils.valueOr(config.skin.hideIconInClearPuzzle, false);
   var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
   if (clearPuzzleHeader) {
     dom.addClickTouchEvent(clearPuzzleHeader, (function() {
-      this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
+      this.feedback_.showClearPuzzleConfirmation(this.Dialog, hideIcon, (function() {
         this.handleClearPuzzle(config);
       }).bind(this));
     }).bind(this));
