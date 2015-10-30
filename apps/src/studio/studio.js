@@ -2185,7 +2185,8 @@ var displayFeedback = function() {
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       message: Studio.message,
-      appStrings: appStrings
+      appStrings: appStrings,
+      disablePrinting: level.disablePrinting
     });
   }
 };
