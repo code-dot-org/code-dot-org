@@ -223,7 +223,11 @@ html[dir='rtl'] #codeWorkspace {
   border: none;
   border-top: 1px solid #ddd; }
 
-#codeWorkspace.readonly .blocklySvg, #codeWorkspace.readonly .droplet-main-scroller, #codeWorkspace.readonly .ace_scroller, #codeWorkspace.dimmed .blocklySvg, #codeWorkspace.dimmed .droplet-main-scroller, #codeWorkspace.dimmed .ace_scroller {
+#codeWorkspace.readonly .blocklySvg,
+#codeWorkspace.readonly .droplet-main-scroller,
+#codeWorkspace.readonly .ace_scroller, #codeWorkspace.dimmed .blocklySvg,
+#codeWorkspace.dimmed .droplet-main-scroller,
+#codeWorkspace.dimmed .ace_scroller {
   background-color: rgba(0, 0, 0, 0.1); }
 
 .ace-chrome .ace_marker-layer .ace_error {
@@ -650,10 +654,14 @@ input[type="radio"] {
   color: #949ca2;
   margin-right: 10px; }
 
+#puzzleRatingButtons svg {
+  pointer-events: none; }
+
 #puzzleRatingButtons .puzzle-rating-btn {
   fill: #949ca2;
   padding: 0 5px;
-  cursor: pointer; }
+  cursor: pointer;
+  display: inline-block; }
   #puzzleRatingButtons .puzzle-rating-btn#like:hover {
     fill: #333333; }
   #puzzleRatingButtons .puzzle-rating-btn#like.enabled {

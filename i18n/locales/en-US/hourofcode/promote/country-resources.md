@@ -49,7 +49,7 @@ crwdns50516:0crwdne50516:0
 
 ## crwdns50518:0crwdne50518:0
 
-[<img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
+[<%= localized_image('/images/fit-500x300/corporations.png') %>](%= localized_file('/files/corporations.pdf') %)
 
 ## crwdns50519:0crwdne50519:0
 

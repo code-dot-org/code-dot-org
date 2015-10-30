@@ -51,7 +51,7 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 
   * Explique de que forma a tecnologia interfere em nossas vidas, use exemplos que sensibilizem tanto meninos como meninas (fale sobre apps e tecnologias que são usados para salvar vidas, mudar o mundo, conectar as pessoas etc.).
   * Monte uma lista com as coisas que usam a programação na vida cotidiana.
-  * Veja algumas dicas para deixar as meninas interessadas em ciência da computação [aqui](<%= resolve_url('https://code.org/girls') %>).
+  * Veja algumas dicas para deixar as meninas interessadas em ciência da computação [aqui](%= resolve_url('https://code.org/girls') %).
 
 **Precisa de mais orientação?** Baixe esse [modelo de plano de aula](/files/AfterschoolEducatorLessonPlanOutline.docx).
 

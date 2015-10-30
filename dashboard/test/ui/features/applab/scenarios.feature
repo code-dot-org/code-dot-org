@@ -1,4 +1,3 @@
-@no_ie9
 @no_mobile
 @dashboard_db_access
 Feature: App Lab Scenarios
@@ -46,6 +45,7 @@ Feature: App Lab Scenarios
     Then element "div#text_area1" has html "Line 1<div>Line 2</div><div><br></div><div>Line3</div>"
 
   @no_safari
+  @no_ie9
   Scenario: Upload Image Asset
     When I press "designModeButton"
     And I press "manage-assets-button"

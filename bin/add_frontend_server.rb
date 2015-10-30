@@ -128,7 +128,6 @@ def generate_instance_zone_and_name(ec2client, ssh_username, frontend_name = nil
   raise "Unable to find unique instance name"
 end
 
-
 options = {}
 
 OptionParser.new do |opts|
@@ -284,18 +283,30 @@ end
 
 cmd = "ssh gateway.code.org -t \"/bin/sh -c 'knife bootstrap #{private_dns_name} -x ubuntu --sudo -E #{environment} -N #{instance_name} -r role[#{role}]'\""
 puts "Bootstrapping #{environment} frontend, please be patient. This takes ~15 minutes."
-puts  "#{cmd}"
-result = `#{cmd}`
+puts cmd
+bootstrap_result = `#{cmd}`
+
 if $?.success?
-  puts '--------------------------------------------------------'
-  puts "Dashboard listening at: http://#{public_dns_name}:8080"
-  puts "Pegasus listening at:   http://#{public_dns_name}:8081"
-  puts "To ssh to server:       ssh gateway.code.org -t ssh #{private_dns_name}"
-  puts
-  puts 'Updating production-daemon chef config with new node.'
-  `ssh gateway -t "ssh production-daemon -t sudo chef-client"`
-  puts "Done"
+  puts 'Precompiling dashboard assets and upgrading.'
+  precompile_cmd = "cd #{environment}/dashboard; bundle exec rake assets:precompile; sudo service dashboard upgrade"
+  ssh_cmd = "ssh gateway.code.org -t \"ssh #{private_dns_name} -t '#{precompile_cmd}'\""
+  puts ssh_cmd
+  precompile_result = `#{ssh_cmd}`
+  if $?.success?
+    puts
+    puts '--------------------------------------------------------'
+    puts "Dashboard listening at: http://#{public_dns_name}:8080"
+    puts "Pegasus listening at:   http://#{public_dns_name}:8081"
+    puts "To ssh to server:       ssh gateway.code.org -t ssh #{private_dns_name}"
+    puts
+    puts 'Updating production-daemon chef config with new node.'
+    `ssh gateway -t "ssh production-daemon -t sudo chef-client"`
+    puts "Done"
+  else
+    puts 'Error precompiling assets'
+    puts precompile_result
+  end
 else
   puts 'Error bootstrapping server'
-  puts result
+  puts bootstrap_result
 end

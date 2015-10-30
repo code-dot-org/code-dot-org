@@ -4721,7 +4721,8 @@ function installCondForType(blockly, generator, type) {
 
 },{"./locale":"/home/ubuntu/staging/apps/build/js/locale.js","./utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -5181,6 +5182,10 @@ module.exports = function(app, levels, options) {
     if (options.level.levelBuilderRequiredBlocks) {
       level.requiredBlocks = requiredBlockUtils.makeTestsFromBuilderRequiredBlocks(
           options.level.levelBuilderRequiredBlocks);
+    }
+    if (options.level.levelBuilderRecommendedBlocks) {
+      level.recommendedBlocks = requiredBlockUtils.makeTestsFromBuilderRequiredBlocks(
+          options.level.levelBuilderRecommendedBlocks);
     }
 
     options.level = level;
@@ -5812,35 +5817,55 @@ var StudioApp = function () {
   /**
   * The ideal number of blocks to solve this level.  Users only get 2
   * stars if they use more than this number.
-  * @type {!number=}
+  * @type {number}
   */
   this.IDEAL_BLOCK_NUM = undefined;
 
   /**
-  * An array of dictionaries representing required blocks.  Keys are:
-  * - test (required): A test whether the block is present, either:
-  *   - A string, in which case the string is searched for in the generated code.
-  *   - A single-argument function is called on each user-added block
-  *     individually.  If any call returns true, the block is deemed present.
-  *     "User-added" blocks are ones that are neither disabled or undeletable.
-  * - type (required): The type of block to be produced for display to the user
-  *   if the test failed.
-  * - titles (optional): A dictionary, where, for each KEY-VALUE pair, this is
-  *   added to the block definition: <title name="KEY">VALUE</title>.
-  * - value (optional): A dictionary, where, for each KEY-VALUE pair, this is
-  *   added to the block definition: <value name="KEY">VALUE</value>
-  * - extra (optional): A string that should be blacked between the "block"
-  *   start and end tags.
-  * @type {!Array=}
+   * @typedef {Object} TestableBlock
+   * @property {string|function} test - A test whether the block is
+   *           present, either:
+   *           - A string, in which case the string is searched for in
+   *             the generated code.
+   *           - A single-argument function is called on each user-added
+   *             block individually.  If any call returns true, the block
+   *             is deemed present.  "User-added" blocks are ones that are
+   *             neither disabled or undeletable.
+   * @property {string} type - The type of block to be produced for
+   *           display to the user if the test failed.
+   * @property {Object} [titles] - A dictionary, where, for each
+   *           KEY-VALUE pair, this is added to the block definition:
+   *           <title name="KEY">VALUE</title>.
+   * @property {Object} [value] - A dictionary, where, for each
+   *           KEY-VALUE pair, this is added to the block definition:
+   *           <value name="KEY">VALUE</value>
+   * @property {string} [extra] - A string that should be blacked
+   *           between the "block" start and end tags.
+   */
+
+  /**
+  * @type {!TestableBlock[]}
   */
   this.requiredBlocks_ = [];
 
   /**
   * The number of required blocks to give hints about at any one time.
   * Set this to Infinity to show all.
-  * @type {!number=}
+  * @type {number}
   */
   this.maxRequiredBlocksToFlag_ = 1;
+
+  /**
+  * @type {!TestableBlock[]}
+  */
+  this.recommendedBlocks_ = [];
+
+  /**
+  * The number of recommended blocks to give hints about at any one time.
+  * Set this to Infinity to show all.
+  * @type {number}
+  */
+  this.maxRecommendedBlocksToFlag_ = 1;
 
   /**
   * The number of attempts (how many times the run button has been pressed)
@@ -6133,10 +6158,11 @@ StudioApp.prototype.init = function(config) {
   }
 
   // Bind listener to 'Clear Puzzle' button
+  var hideIcon = utils.valueOr(config.skin.hideIconInClearPuzzle, false);
   var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
   if (clearPuzzleHeader) {
     dom.addClickTouchEvent(clearPuzzleHeader, (function() {
-      this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
+      this.feedback_.showClearPuzzleConfirmation(this.Dialog, hideIcon, (function() {
         this.handleClearPuzzle(config);
       }).bind(this));
     }).bind(this));
@@ -6850,7 +6876,8 @@ StudioApp.prototype.displayFeedback = function(options) {
   }
 
   this.feedback_.displayFeedback(options, this.requiredBlocks_,
-      this.maxRequiredBlocksToFlag_);
+      this.maxRequiredBlocksToFlag_, this.recommendedBlocks_,
+      this.maxRecommendedBlocksToFlag_);
 };
 
 /**
@@ -6861,7 +6888,7 @@ StudioApp.prototype.displayFeedback = function(options) {
  */
 StudioApp.prototype.getTestResults = function(levelComplete, options) {
   return this.feedback_.getTestResults(levelComplete,
-      this.requiredBlocks_, this.checkForEmptyBlocks_, options);
+      this.requiredBlocks_, this.recommendedBlocks_, this.checkForEmptyBlocks_, options);
 };
 
 // Builds the dom to get more info from the user. After user enters info
@@ -7040,6 +7067,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
+  this.recommendedBlocks_ = config.level.recommendedBlocks || [];
   this.startBlocks_ = config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || MAX_VISUALIZATION_WIDTH;
@@ -7417,8 +7445,9 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   if (config.level.edit_blocks) {
     this.checkForEmptyBlocks_ = false;
     if (config.level.edit_blocks === 'required_blocks' ||
-      config.level.edit_blocks === 'toolbox_blocks') {
-      // Don't show when run block for toolbox/required block editing
+        config.level.edit_blocks === 'toolbox_blocks' ||
+        config.level.edit_blocks === 'recommended_blocks') {
+      // Don't show when run block for toolbox/required/recommended block editing
       config.forceInsertTopBlock = null;
     }
   }
@@ -28970,7 +28999,8 @@ var isArray = Array.isArray || function (xs) {
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],"/home/ubuntu/staging/apps/build/js/templates/makeYourOwn.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -28990,7 +29020,8 @@ return buf.join('');
 }());
 },{"../locale":"/home/ubuntu/staging/apps/build/js/locale.js","ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/learn.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -29012,7 +29043,8 @@ return buf.join('');
 }());
 },{"../locale":"/home/ubuntu/staging/apps/build/js/locale.js","ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/instructions.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -29032,7 +29064,8 @@ return buf.join('');
 }());
 },{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/builder.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -29353,14 +29386,40 @@ var TestResults = constants.TestResults;
 var KeyCodes = constants.KeyCodes;
 
 /**
+ * @typedef {Object} TestableBlock
+ * @property {string|function} test - A test whether the block is
+ *           present, either:
+ *           - A string, in which case the string is searched for in
+ *             the generated code.
+ *           - A single-argument function is called on each user-added
+ *             block individually.  If any call returns true, the block
+ *             is deemed present.  "User-added" blocks are ones that are
+ *             neither disabled or undeletable.
+ * @property {string} type - The type of block to be produced for
+ *           display to the user if the test failed.
+ * @property {Object} [titles] - A dictionary, where, for each
+ *           KEY-VALUE pair, this is added to the block definition:
+ *           <title name="KEY">VALUE</title>.
+ * @property {Object} [value] - A dictionary, where, for each
+ *           KEY-VALUE pair, this is added to the block definition:
+ *           <value name="KEY">VALUE</value>
+ * @property {string} [extra] - A string that should be blacked
+ *           between the "block" start and end tags.
+ */
+
+/**
  * @param {Object} options
- * @param {!Array} requiredBlocks The blocks that are required to be used in
+ * @param {!TestableBlock[]} requiredBlocks The blocks that are required to be used in
  *   the solution to this level.
  * @param {number} maxRequiredBlocksToFlag The number of required blocks to
  *   give hints about at any one time.  Set this to Infinity to show all.
+ * @param {!TestableBlock[]} recommendedBlocks The blocks that are recommended to be used in
+ *   the solution to this level.
+ * @param {number} maxRecommendedBlocksToFlag The number of recommended blocks to
+ *   give hints about at any one time.  Set this to Infinity to show all.
  */
 FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
-    maxRequiredBlocksToFlag) {
+    maxRequiredBlocksToFlag, recommendedBlocks, maxRecommendedBlocksToFlag) {
 
   options.level = options.level || {};
   options.numTrophies = this.numTrophiesEarned_(options);
@@ -29386,7 +29445,8 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   if (this.studioApp_.isUsingBlockly()) {
     feedbackBlocks = new FeedbackBlocks(
         options,
-        this.getMissingRequiredBlocks_(requiredBlocks, maxRequiredBlocksToFlag),
+        this.getMissingBlocks_(requiredBlocks, maxRequiredBlocksToFlag),
+        this.getMissingBlocks_(recommendedBlocks, maxRecommendedBlocksToFlag),
         this.studioApp_);
   }
   // feedbackMessage must be initialized after feedbackBlocks
@@ -29511,10 +29571,10 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       // because it will still take up space.
       hintRequestButton.parentNode.removeChild(hintRequestButton);
     } else {
-      // Swap out the specific feedback message with a generic one.
-      var genericFeedback = this.getFeedbackMessage_({message: msg.genericFeedback()});
-      var parentNode = feedbackMessage.parentNode;
-      parentNode.replaceChild(genericFeedback, feedbackMessage);
+
+      // Generate a generic feedback message to display when we show the
+      // feedback block
+      var genericFeedback = this.getFeedbackMessage_({message: msg.tryBlocksBelowFeedback()});
 
       // If there are feedback blocks, temporarily remove them.
       // Get pointers to the parent and next sibling so we can re-insert
@@ -29530,8 +29590,9 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       // If the user requests the hint...
       dom.addClickTouchEvent(hintRequestButton, function () {
 
-        // Swap the specific feedback message back in.
-        parentNode.replaceChild(feedbackMessage, genericFeedback);
+        // Swap out the specific feedback message with a generic one.
+        var parentNode = feedbackMessage.parentNode;
+        parentNode.replaceChild(genericFeedback, feedbackMessage);
 
         // Remove "Show hint" button.  Making it invisible isn't enough,
         // because it will still take up space.
@@ -29681,7 +29742,7 @@ FeedbackUtils.prototype.buildPuzzleRatingButtons_ = function () {
     $(this).toggleClass('enabled');
   };
   for (var i = 0, button; (button = buttons[i]); i++) {
-    button.addEventListener('click', buttonClickHandler);
+    dom.addClickTouchEvent(button, buttonClickHandler);
   }
 
   return buttonContainer;
@@ -29833,8 +29894,24 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
       case TestResults.MISSING_BLOCK_UNFINISHED:
         /* fallthrough */
       case TestResults.MISSING_BLOCK_FINISHED:
-        message = options.level.missingBlocksErrorMsg ||
-            msg.missingBlocksErrorMsg();
+        message = options.level.missingRequiredBlocksErrorMsg ||
+            msg.missingRequiredBlocksErrorMsg();
+        break;
+      case TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED:
+        message = msg.missingRecommendedBlocksErrorMsg();
+        break;
+      case TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED:
+        var numEnabledBlocks = this.getNumCountableBlocks();
+        if (this.studioApp_.IDEAL_BLOCK_NUM && numEnabledBlocks > this.studioApp_.IDEAL_BLOCK_NUM) {
+          message = msg.numBlocksNeeded({
+            numBlocks: this.studioApp_.IDEAL_BLOCK_NUM,
+            puzzleNumber: options.level.puzzle_number || 0
+          });
+        } else {
+          message = msg.completedWithoutRecommendedBlock({
+            puzzleNumber: options.level.puzzle_number || 0
+          });
+        }
         break;
       case TestResults.NESTED_FOR_SAME_VARIABLE:
         message = msg.nestedForSameVariable();
@@ -30088,6 +30165,7 @@ FeedbackUtils.prototype.canContinueToNextLevel = function(feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
     feedbackType === TestResults.TOO_MANY_BLOCKS_FAIL ||
     feedbackType ===  TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL ||
+    feedbackType ===  TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED ||
     feedbackType ===  TestResults.FREE_PLAY);
 };
 
@@ -30100,7 +30178,9 @@ FeedbackUtils.prototype.canContinueToNextLevel = function(feedbackType) {
  */
 FeedbackUtils.prototype.shouldPromptForHint = function(feedbackType) {
   return (feedbackType === TestResults.MISSING_BLOCK_UNFINISHED ||
-    feedbackType === TestResults.MISSING_BLOCK_FINISHED);
+    feedbackType === TestResults.MISSING_BLOCK_FINISHED ||
+    feedbackType === TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED ||
+    feedbackType === TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED);
 };
 
 /**
@@ -30168,17 +30248,18 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
 };
 
 /**
- * Display the "Clear Puzzle" confirmation dialog.  Calls `callback` if the user
- * confirms they want to clear the puzzle.
+ * Display the "Clear Puzzle" confirmation dialog.  Takes a parameter to hide
+ * the icon.  Calls `callback` if the user confirms they want to clear the puzzle.
  */
-FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback) {
+FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, hideIcon, callback) {
   this.showSimpleDialog(Dialog, {
     headerText: msg.clearPuzzleConfirmHeader(),
     bodyText: msg.clearPuzzleConfirm(),
     confirmText: msg.clearPuzzle(),
     cancelText: msg.dialogCancel(),
     onConfirm: callback,
-    onCancel: null
+    onCancel: null,
+    hideIcon: hideIcon
   });
 };
 
@@ -30190,6 +30271,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback)
  * @param {string} bodyText Text for body portion
  * @param {string} cancelText Text for cancel button
  * @param {string} confirmText Text for confirm button
+ * @param {boolean} hideIcon Whether to hide the icon
  * @param {function} [onConfirm] Function to be called after clicking confirm
  * @param {function} [onCancel] Function to be called after clicking cancel
  */
@@ -30216,7 +30298,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   var dialog = this.createModalDialog({
     Dialog: Dialog,
     contentDiv: contentDiv,
-    icon: this.studioApp_.icon,
+    icon: options.hideIcon ? null : this.studioApp_.icon,
     defaultBtnSelector: '#again-button'
   });
 
@@ -30334,22 +30416,21 @@ FeedbackUtils.prototype.throwOnInvalidExampleBlocks = function (callBlock,
 };
 
 /**
- * Check whether the user code has all the blocks required for the level.
- * @param {!Array} requiredBlocks The blocks that are required to be used in
- *   the solution to this level.
+ * Check whether the user code has all the given blocks
+ * @param {!TestableBlock[]} blocks
  * @return {boolean} true if all blocks are present, false otherwise.
  */
-FeedbackUtils.prototype.hasAllRequiredBlocks_ = function(requiredBlocks) {
+FeedbackUtils.prototype.hasAllBlocks_ = function(blocks) {
   // It's okay (maybe faster) to pass 1 for maxBlocksToFlag, since in the end
   // we want to check that there are zero blocks missing.
   var maxBlocksToFlag = 1;
-  return this.getMissingRequiredBlocks_(requiredBlocks, maxBlocksToFlag).blocksToDisplay.length === 0;
+  return this.getMissingBlocks_(blocks, maxBlocksToFlag).blocksToDisplay.length === 0;
 };
 
 /**
- * Get blocks that the user intends in the program. These are the blocks that
- * are used when checking for required blocks and when determining lines of code
- * written.
+ * Get blocks that the user intends in the program. These are the blocks
+ * that are used when checking for required and recommended blocks and
+ * when determining lines of code written.
  * @return {Array<Object>} The blocks.
  */
 FeedbackUtils.prototype.getUserBlocks_ = function() {
@@ -30375,60 +30456,59 @@ FeedbackUtils.prototype.getCountableBlocks_ = function() {
 };
 
 /**
- * Check to see if the user's code contains the required blocks for a level.
- * @param {!Array} requiredBlocks The blocks that are required to be used in
- *   the solution to this level.
- * @param {number} maxBlocksToFlag The maximum number of blocks to return.
+ * Check to see if the user's code contains the given blocks for a level.
+ * @param {!TestableBlock[]} blocks
+ * @param {number} maxBlocksToFlag The maximum number of blocks to
+ *   return. We most often only care about a single block at a time
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
  *   array of array of strings where each array of strings is a set of blocks
  *   that at least one of them should be used. Each block is represented as the
  *   prefix of an id in the corresponding template.soy. 'message' is an
  *   optional message to override the default error text.
  */
-FeedbackUtils.prototype.getMissingRequiredBlocks_ = function (requiredBlocks,
-    maxBlocksToFlag) {
+FeedbackUtils.prototype.getMissingBlocks_ = function (blocks, maxBlocksToFlag) {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
-  if (requiredBlocks && requiredBlocks.length) {
+  if (blocks && blocks.length) {
     var userBlocks = this.getUserBlocks_();
-    // For each list of required blocks
+    // For each list of blocks
     // Keep track of the number of the missing block lists. It should not be
     // bigger than the maxBlocksToFlag param.
     var missingBlockNum = 0;
     for (var i = 0;
-         i < requiredBlocks.length &&
+         i < blocks.length &&
              missingBlockNum < maxBlocksToFlag;
          i++) {
-      var requiredBlock = requiredBlocks[i];
+      var block = blocks[i];
       // For each of the test
-      // If at least one of the tests succeeded, we consider the required block
+      // If at least one of the tests succeeded, we consider the block
       // is used
-      var usedRequiredBlock = false;
-      for (var testId = 0; testId < requiredBlock.length; testId++) {
-        var test = requiredBlock[testId].test;
+      var usedBlock = false;
+      for (var testId = 0; testId < block.length; testId++) {
+        var test = block[testId].test;
         if (typeof test === 'string') {
           code = code || Blockly.Generator.blockSpaceToCode('JavaScript');
           if (code.indexOf(test) !== -1) {
             // Succeeded, moving to the next list of tests
-            usedRequiredBlock = true;
+            usedBlock = true;
             break;
           }
         } else if (typeof test === 'function') {
           if (userBlocks.some(test)) {
             // Succeeded, moving to the next list of tests
-            usedRequiredBlock = true;
+            usedBlock = true;
             break;
           } else {
-            customMessage = requiredBlock[testId].message || customMessage;
+            customMessage = block[testId].message || customMessage;
           }
         } else {
           throw new Error('Bad test: ' + test);
         }
       }
-      if (!usedRequiredBlock) {
+      if (!usedBlock) {
         missingBlockNum++;
-        missingBlocks = missingBlocks.concat(requiredBlocks[i][0]);
+        missingBlocks = missingBlocks.concat(blocks[i][0]);
       }
     }
   }
@@ -30468,15 +30548,17 @@ FeedbackUtils.prototype.hasExtraTopBlocks = function () {
 /**
  * Runs the tests and returns results.
  * @param {boolean} levelComplete Did the user successfully complete the level?
- * @param {!Array} requiredBlocks The blocks that are required to be used in
- *   the solution to this level.
+ * @param {!TestableBlock[]} requiredBlocks The blocks that are required
+ *   to be used in the solution to this level.
+ * @param {!TestableBlock[]} recommendedBlocks The blocks that are
+ *   recommended to be used in the solution to this level.
  * @param {boolean} shouldCheckForEmptyBlocks Whether empty blocks should cause
  *   a test fail result.
  * @param {Object} options
  * @return {number} The appropriate property of TestResults.
  */
 FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
-    shouldCheckForEmptyBlocks, options) {
+    recommendedBlocks, shouldCheckForEmptyBlocks, options) {
   options = options || {};
   if (this.studioApp_.editCode) {
     if (levelComplete) {
@@ -30518,10 +30600,15 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
   if (this.hasQuestionMarksInNumberField()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
-  if (!this.hasAllRequiredBlocks_(requiredBlocks)) {
+  if (!this.hasAllBlocks_(requiredBlocks)) {
     return levelComplete ?
         TestResults.MISSING_BLOCK_FINISHED :
         TestResults.MISSING_BLOCK_UNFINISHED;
+  }
+  if (!this.hasAllBlocks_(recommendedBlocks)) {
+    return levelComplete ?
+        TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED :
+        TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED;
   }
   var numEnabledBlocks = this.getNumCountableBlocks();
   if (!levelComplete) {
@@ -30699,7 +30786,8 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
 
 },{"./codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","./constants":"/home/ubuntu/staging/apps/build/js/constants.js","./dom":"/home/ubuntu/staging/apps/build/js/dom.js","./feedbackBlocks":"/home/ubuntu/staging/apps/build/js/feedbackBlocks.js","./locale":"/home/ubuntu/staging/apps/build/js/locale.js","./templates/buttons.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/buttons.html.ejs","./templates/code.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/code.html.ejs","./templates/puzzleRating.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/puzzleRating.html.ejs","./templates/shareFailure.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/shareFailure.html.ejs","./templates/sharing.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/sharing.html.ejs","./templates/showCode.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/showCode.html.ejs","./templates/trophy.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/trophy.html.ejs","./utils":"/home/ubuntu/staging/apps/build/js/utils.js","./xml":"/home/ubuntu/staging/apps/build/js/xml.js"}],"/home/ubuntu/staging/apps/build/js/templates/trophy.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -30719,7 +30807,8 @@ return buf.join('');
 }());
 },{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/showCode.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -30739,7 +30828,8 @@ return buf.join('');
 }());
 },{"../locale":"/home/ubuntu/staging/apps/build/js/locale.js","ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/sharing.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -30759,7 +30849,8 @@ return buf.join('');
 }());
 },{"../locale":"/home/ubuntu/staging/apps/build/js/locale.js","ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/shareFailure.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -30779,7 +30870,8 @@ return buf.join('');
 }());
 },{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/puzzleRating.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -30789,7 +30881,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<hr>\n<p>Did you like this puzzle?</p>\n\n<span class="puzzle-rating-btn" id="like" data-value="1">\n  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n      width="27px" height="27px" viewBox="0 0 26.055 21.058" enable-background="new 0 0 26.055 21.058" xml:space="preserve" value="1">\n    <path d="M14.426,2.5c0.986-1.348,2.83-2.5,5.092-2.5c3.613,0,6.537,3.044,6.537,6.537\n        c0,2.357-1.076,3.709-1.894,4.525c-0.941,0.941-8.082,8.082-9.113,9.113c-1.244,1.243-3.019,1.137-4.246-0.09\n        c-1.314-1.314-7.158-7.158-9.131-9.131C0.408,9.693,0,8.113,0,6.537C0,2.926,3.197,0,6.537,0c2.451,0,4.438,1.508,5.188,2.535\n        C12.4,3.459,13.643,3.564,14.426,2.5z"/>\n  </svg>\n</span>\n\n<span class="puzzle-rating-btn" id="dislike" data-value="0">\n  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n      width="27px" height="27px" viewBox="382.321 292.82 26.37 26.371" enable-background="new 382.321 292.82 26.37 26.371"\n      xml:space="preserve">\n    <path d="M395.506,292.82c-7.282,0.002-13.184,5.904-13.185,13.185c0.001,7.283,5.902,13.184,13.185,13.186\n        c7.281-0.002,13.183-5.902,13.185-13.186C408.689,298.725,402.787,292.822,395.506,292.82z M402.5,313\n        c-1.795,1.793-4.257,2.896-6.994,2.898c-2.737-0.002-5.199-1.105-6.994-2.898c-1.794-1.795-2.897-4.258-2.897-6.994\n        s1.103-5.199,2.897-6.994c1.795-1.793,4.257-2.897,6.994-2.897s5.199,1.104,6.994,2.897c1.792,1.795,2.896,4.258,2.896,6.994\n        S404.292,311.205,402.5,313z M391.317,304.951c1.054,0,1.907-0.854,1.907-1.906c0-1.053-0.854-1.906-1.907-1.906\n        c-1.054,0-1.907,0.854-1.907,1.906C389.41,304.098,390.264,304.951,391.317,304.951z M399.691,304.951\n        c1.053,0,1.906-0.854,1.906-1.906c0-1.053-0.853-1.906-1.906-1.906s-1.907,0.854-1.907,1.906\n        C397.784,304.098,398.639,304.951,399.691,304.951z M391.773,311.928c1.037-1.035,2.379-1.543,3.739-1.545\n        c1.352,0.002,2.689,0.512,3.724,1.545c0.642,0.643,1.685,0.643,2.328,0c0.645-0.643,0.645-1.686,0-2.33\n        c-1.665-1.666-3.864-2.51-6.052-2.508h-0.008c-2.185,0-4.39,0.838-6.06,2.51c-0.642,0.643-0.643,1.686,0,2.328\n        C390.088,312.571,391.131,312.571,391.773,311.928z"/>\n  </svg>\n</span>\n'); })();
+ buf.push('<hr>\n<p>Did you like this puzzle?</p>\n\n<a class="puzzle-rating-btn" id="like" data-value="1">\n  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n      width="27px" height="27px" viewBox="0 0 26.055 21.058" enable-background="new 0 0 26.055 21.058" xml:space="preserve" value="1">\n    <path d="M14.426,2.5c0.986-1.348,2.83-2.5,5.092-2.5c3.613,0,6.537,3.044,6.537,6.537\n        c0,2.357-1.076,3.709-1.894,4.525c-0.941,0.941-8.082,8.082-9.113,9.113c-1.244,1.243-3.019,1.137-4.246-0.09\n        c-1.314-1.314-7.158-7.158-9.131-9.131C0.408,9.693,0,8.113,0,6.537C0,2.926,3.197,0,6.537,0c2.451,0,4.438,1.508,5.188,2.535\n        C12.4,3.459,13.643,3.564,14.426,2.5z"/>\n  </svg>\n</a>\n\n<a class="puzzle-rating-btn" id="dislike" data-value="0">\n  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n      width="27px" height="27px" viewBox="382.321 292.82 26.37 26.371" enable-background="new 382.321 292.82 26.37 26.371"\n      xml:space="preserve">\n    <path d="M395.506,292.82c-7.282,0.002-13.184,5.904-13.185,13.185c0.001,7.283,5.902,13.184,13.185,13.186\n        c7.281-0.002,13.183-5.902,13.185-13.186C408.689,298.725,402.787,292.822,395.506,292.82z M402.5,313\n        c-1.795,1.793-4.257,2.896-6.994,2.898c-2.737-0.002-5.199-1.105-6.994-2.898c-1.794-1.795-2.897-4.258-2.897-6.994\n        s1.103-5.199,2.897-6.994c1.795-1.793,4.257-2.897,6.994-2.897s5.199,1.104,6.994,2.897c1.792,1.795,2.896,4.258,2.896,6.994\n        S404.292,311.205,402.5,313z M391.317,304.951c1.054,0,1.907-0.854,1.907-1.906c0-1.053-0.854-1.906-1.907-1.906\n        c-1.054,0-1.907,0.854-1.907,1.906C389.41,304.098,390.264,304.951,391.317,304.951z M399.691,304.951\n        c1.053,0,1.906-0.854,1.906-1.906c0-1.053-0.853-1.906-1.906-1.906s-1.907,0.854-1.907,1.906\n        C397.784,304.098,398.639,304.951,399.691,304.951z M391.773,311.928c1.037-1.035,2.379-1.543,3.739-1.545\n        c1.352,0.002,2.689,0.512,3.724,1.545c0.642,0.643,1.685,0.643,2.328,0c0.645-0.643,0.645-1.686,0-2.33\n        c-1.665-1.666-3.864-2.51-6.052-2.508h-0.008c-2.185,0-4.39,0.838-6.06,2.51c-0.642,0.643-0.643,1.686,0,2.328\n        C390.088,312.571,391.131,312.571,391.773,311.928z"/>\n  </svg>\n</a>\n'); })();
 } 
 return buf.join('');
 };
@@ -30799,7 +30891,8 @@ return buf.join('');
 }());
 },{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/code.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -30819,7 +30912,8 @@ return buf.join('');
 }());
 },{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/buttons.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -30844,14 +30938,16 @@ var readonly = require('./templates/readonly.html.ejs');
 var TestResults = constants.TestResults;
 
 // TODO (br-pair): can we not pass in the studioApp
-var FeedbackBlocks = function(options, missingRequiredBlocks, studioApp) {
+var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommendedBlocks, studioApp) {
   // Check whether blocks are embedded in the hint returned from dashboard.
   // See below comment for format.
   var embeddedBlocks = options.response && options.response.hint &&
       options.response.hint.indexOf("[{") !== 0;
   if (!embeddedBlocks &&
       options.feedbackType !== TestResults.MISSING_BLOCK_UNFINISHED &&
-      options.feedbackType !== TestResults.MISSING_BLOCK_FINISHED) {
+      options.feedbackType !== TestResults.MISSING_BLOCK_FINISHED &&
+      options.feedbackType !== TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED &&
+      options.feedbackType !== TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED) {
     return;
   }
 
@@ -30871,10 +30967,16 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, studioApp) {
       // The blocks could not be parsed.  Ignore them.
       return;
     }
+  } else if (missingRequiredBlocks.blocksToDisplay.length) {
+    handleMissingBlocks(missingRequiredBlocks);
   } else {
-    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
-    if (missingRequiredBlocks.message) {
-      options.message = missingRequiredBlocks.message;
+    handleMissingBlocks(missingRecommendedBlocks);
+  }
+
+  function handleMissingBlocks(blocks) {
+    blocksToDisplay = blocks.blocksToDisplay;
+    if (blocks.message) {
+      options.message = blocks.message;
     }
   }
 
@@ -30970,7 +31072,8 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
 
 },{"./constants":"/home/ubuntu/staging/apps/build/js/constants.js","./templates/readonly.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/readonly.html.ejs"}],"/home/ubuntu/staging/apps/build/js/templates/readonly.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -31018,36 +31121,38 @@ exports.TestResults = {
   NO_TESTS_RUN: -1,
 
   // The level was not solved.
-  EMPTY_BLOCK_FAIL: 1,           // An "if" or "repeat" block was empty.
-  TOO_FEW_BLOCKS_FAIL: 2,        // Fewer than the ideal number of blocks used.
-  LEVEL_INCOMPLETE_FAIL: 3,      // Default failure to complete a level.
-  MISSING_BLOCK_UNFINISHED: 4,   // A required block was not used.
-  EXTRA_TOP_BLOCKS_FAIL: 5,      // There was more than one top-level block.
-  RUNTIME_ERROR_FAIL: 6,         // There was a runtime error in the program.
-  SYNTAX_ERROR_FAIL: 7,          // There was a syntax error in the program.
-  MISSING_BLOCK_FINISHED: 10,    // The level was solved without required block.
-  APP_SPECIFIC_FAIL: 11,         // Application-specific failure.
-  EMPTY_FUNCTION_BLOCK_FAIL: 12, // A "function" block was empty
-  UNUSED_PARAM: 13,              // Param declared but not used in function.
-  UNUSED_FUNCTION: 14,           // Function declared but not used in workspace.
-  PARAM_INPUT_UNATTACHED: 15,    // Function not called with enough params.
-  INCOMPLETE_BLOCK_IN_FUNCTION: 16, // Incomplete block inside a function.
+  EMPTY_BLOCK_FAIL: 1,                // An "if" or "repeat" block was empty.
+  TOO_FEW_BLOCKS_FAIL: 2,             // Fewer than the ideal number of blocks used.
+  LEVEL_INCOMPLETE_FAIL: 3,           // Default failure to complete a level.
+  MISSING_BLOCK_UNFINISHED: 4,        // A required block was not used.
+  EXTRA_TOP_BLOCKS_FAIL: 5,           // There was more than one top-level block.
+  RUNTIME_ERROR_FAIL: 6,              // There was a runtime error in the program.
+  SYNTAX_ERROR_FAIL: 7,               // There was a syntax error in the program.
+  MISSING_BLOCK_FINISHED: 10,         // The level was solved without required block.
+  APP_SPECIFIC_FAIL: 11,              // Application-specific failure.
+  EMPTY_FUNCTION_BLOCK_FAIL: 12,      // A "function" block was empty
+  UNUSED_PARAM: 13,                   // Param declared but not used in function.
+  UNUSED_FUNCTION: 14,                // Function declared but not used in workspace.
+  PARAM_INPUT_UNATTACHED: 15,         // Function not called with enough params.
+  INCOMPLETE_BLOCK_IN_FUNCTION: 16,   // Incomplete block inside a function.
   QUESTION_MARKS_IN_NUMBER_FIELD: 17, // Block has ??? instead of a value.
-  EMPTY_FUNCTIONAL_BLOCK: 18,    // There's a functional block with an open input
-  EXAMPLE_FAILED: 19,            // One of our examples didn't match the definition
+  EMPTY_FUNCTIONAL_BLOCK: 18,         // There's a functional block with an open input
+  EXAMPLE_FAILED: 19,                 // One of our examples didn't match the definition
 
   // start using negative values, since we consider >= 20 to be "solved"
-  NESTED_FOR_SAME_VARIABLE: -2,
+  NESTED_FOR_SAME_VARIABLE: -2, // We have nested for loops each using the same counter variable
   // NOTE: for smoe period of time, this was -1 and conflicted with NO_TESTS_RUN
-  EMPTY_FUNCTION_NAME: -3,       // We have a variable or function with the name ""
+  EMPTY_FUNCTION_NAME: -3,                  // We have a variable or function with the name ""
+  MISSING_RECOMMENDED_BLOCK_UNFINISHED: -4, // The level was attempted but not solved without a recommended block
 
   // The level was solved in a non-optimal way.  User may advance or retry.
-  TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
-  APP_SPECIFIC_ACCEPTABLE_FAIL: 21,  // Application-specific acceptable failure.
+  TOO_MANY_BLOCKS_FAIL: 20,               // More than the ideal number of blocks were used.
+  APP_SPECIFIC_ACCEPTABLE_FAIL: 21,       // Application-specific acceptable failure.
+  MISSING_RECOMMENDED_BLOCK_FINISHED: 22, // The level was solved without a recommended block
 
   // Other.
-  FREE_PLAY: 30,              // The user is in free-play mode.
-  EDIT_BLOCKS: 70,            // The user is creating/editing a new level.
+  FREE_PLAY: 30,   // The user is in free-play mode.
+  EDIT_BLOCKS: 70, // The user is creating/editing a new level.
 
   // The level was solved in the ideal manner.
   ALL_PASS: 100,
@@ -31934,7 +32039,8 @@ module.exports = DropletAutocompletePopupTooltipManager;
 
 },{"../dom":"/home/ubuntu/staging/apps/build/js/dom.js","./DropletFunctionTooltip.html.ejs":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletFunctionTooltip.html.ejs"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletFunctionTooltip.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -32223,7 +32329,7 @@ var addEvent = function(element, eventName, handler) {
   if (touchEvent) {
     element.addEventListener(touchEvent, function(e) {
       e.preventDefault();  // Stop mouse events.
-      handler(e);
+      handler.call(this, e);
     }, false);
   }
 };
@@ -32433,7 +32539,8 @@ exports.findFunctionAndParamNumber = function (editor, position) {
 
 },{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletParameterTooltip.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -33295,7 +33402,9 @@ function drainQueue() {
         currentQueue = queue;
         queue = [];
         while (++queueIndex < len) {
-            currentQueue[queueIndex].run();
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
         }
         queueIndex = -1;
         len = queue.length;
@@ -33347,7 +33456,6 @@ process.binding = function (name) {
     throw new Error('process.binding is not supported');
 };
 
-// TODO(shtylman)
 process.cwd = function () { return '/' };
 process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');

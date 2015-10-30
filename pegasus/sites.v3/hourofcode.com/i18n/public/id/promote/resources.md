@@ -106,7 +106,7 @@ Hour of Code kami adalah pernyataan bahwa [nama sekolah] sudah siap untuk mengaj
 
 Ini adalah kesempatan untuk mengubah masa depan pendidikan di [TOWN/CITY NAME].
 
-Lihat http://hourofcode.com/ < % = @country %> untuk rincian, dan bantuan untuk menyebarkan berita.
+Lihat http://hourofcode.com/<%= @country %> untuk rincian, dan bantuan untuk menyebarkan berita.
 
 Dengan Hormat,
 

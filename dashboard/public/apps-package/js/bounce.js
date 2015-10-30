@@ -1967,7 +1967,8 @@ var checkFinished = function () {
 
 },{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../hammer":"/home/ubuntu/staging/apps/build/js/hammer.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../timeoutList":"/home/ubuntu/staging/apps/build/js/timeoutList.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./api":"/home/ubuntu/staging/apps/build/js/bounce/api.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/bounce/controls.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/bounce/locale.js","./tiles":"/home/ubuntu/staging/apps/build/js/bounce/tiles.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/bounce/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/bounce/visualization.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -1987,7 +1988,8 @@ return buf.join('');
 }());
 },{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/bounce/controls.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')

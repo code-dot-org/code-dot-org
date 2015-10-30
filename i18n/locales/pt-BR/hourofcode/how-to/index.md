@@ -49,7 +49,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 
   * Explique de que forma a tecnologia interfere em nossas vidas, use exemplos que sensibilizem tanto meninos como meninas (por exemplo, salvar vidas, ajudar as pessoas, conectar as pessoas etc.).
   * Em uma atividade com a turma toda, monte uma lista com as coisas que usam a programação na vida cotidiana.
-  * Veja algumas dicas para deixar as meninas interessadas em ciência da computação [aqui](<%= resolve_url('https://code.org/girls') %>).
+  * Veja algumas dicas para deixar as meninas interessadas em ciência da computação [aqui](%= resolve_url('https://code.org/girls') %).
 
 **Precisa de mais orientação?** Baixe este [modelo de plano de aula](/files/EducatorHourofCodeLessonPlanOutline.docx).
 

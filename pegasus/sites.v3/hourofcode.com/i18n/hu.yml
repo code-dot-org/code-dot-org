@@ -252,6 +252,9 @@ hu:
   map_search_placeholder: Kódolás órája események keresése
   map_search_search: Keresés
   map_search_reset: Visszaállít
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: A kódolás órája elérkezett
   meta_tag_og_description: |
     A Kódolás Órája egy több mint 30 nyelven zajló, 180+ országban diákok tízmillióit elérő globális mozgalom. 

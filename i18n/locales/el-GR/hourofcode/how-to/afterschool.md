@@ -51,7 +51,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
   * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
   * List things that use code in everyday life.
-  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+  * See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 

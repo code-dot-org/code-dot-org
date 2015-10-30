@@ -252,6 +252,9 @@ da:
   map_search_placeholder: Søg efter et Hour of Code arrangement
   map_search_search: Søg
   map_search_reset: Nulstil
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Hour of Code er her
   meta_tag_og_description: Hour of Code er en global bevægelse som når millioner af elever i 180+ lande og på mere end 30 sprog. Fra 4 til 104 år.
   meta_tag_twitter_title: Hour of Code er her

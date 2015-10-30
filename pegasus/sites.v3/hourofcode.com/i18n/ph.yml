@@ -252,6 +252,9 @@ ph:
   map_search_placeholder: Maghanap ng mga event ng Hour of Code
   map_search_search: Maghanap
   map_search_reset: I-reset
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Ang Hour of Code ay andito na
   meta_tag_og_description: Ang Hour of Code ay isang pandaigdigang kilusan na umaabot sa halos sampung milyong mag-aaral sa 180+ na bansa at sa 30 mga wika. Edad 4-104.
   meta_tag_twitter_title: Ang Hour of Code ay andito na

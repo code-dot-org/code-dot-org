@@ -252,6 +252,9 @@ ar:
   map_search_placeholder: Search for Hour of Code events
   map_search_search: Search
   map_search_reset: Reset
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: The Hour of Code is coming
   meta_tag_og_description: ساعة البرمجة حركة عالمية تضم عشرات ملايين طلاب في 200 دولة وما يزيد على 30 لغة. تتراوح الأعمارهم من 4 إلى 104.
   meta_tag_twitter_title: The Hour of Code is coming

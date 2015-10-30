@@ -252,6 +252,9 @@ id:
   map_search_placeholder: Carilah acara Hour of Code
   map_search_search: Cari
   map_search_reset: Reset
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Hour of Code telah hadir
   meta_tag_og_description: Hour of Code adalah gerakan mendunia yang mencapai sepuluh juta pelajar dari lebih 180+ negara dan lebih dari 30 bahasa. Dari umur 4 sampai 104.
   meta_tag_twitter_title: Hour of Code telah hadir

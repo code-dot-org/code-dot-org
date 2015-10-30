@@ -393,6 +393,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "when":function(d){return "当"},
 "whenRun":function(d){return "当运行时"},
 "workspaceHeaderShort":function(d){return "工作区域"},
+"completedWithoutRecommendedBlock":function(d){return "Congratulations! You completed Puzzle "+common_locale.v(d,"puzzleNumber")+". (But you could use a different block for stronger code.)"},
 "dropletBlock_mathRandom_description":function(d){return "Returns a random number ranging from 0 (inclusive) up to but not including 1 (exclusive)"},
 "dropletBlock_mathRandom_signatureOverride":function(d){return "Math.random()"},
 "dropletBlock_randomNumber_param0":function(d){return "min"},
@@ -400,6 +401,9 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_randomNumber_param1":function(d){return "max"},
 "dropletBlock_randomNumber_param1_description":function(d){return "The maximum number returned"},
 "dropletBlock_randomNumber_signatureOverride":function(d){return "randomNumber(min, max)"},
+"missingRecommendedBlocksErrorMsg":function(d){return "Not quite. Try using a block you aren’t using yet."},
+"missingRequiredBlocksErrorMsg":function(d){return "Not quite. You have to use a block you aren’t using yet."},
 "unsubmit":function(d){return "Unsubmit"},
 "unsubmitYourProject":function(d){return "Unsubmit your project"},
-"unsubmitYourProjectConfirm":function(d){return "Unsubmitting your project will reset the submitted date, really unsubmit?"}};
+"unsubmitYourProjectConfirm":function(d){return "Unsubmitting your project will reset the submitted date, really unsubmit?"},
+"tryBlocksBelowFeedback":function(d){return "Try using one of the blocks below:"}};

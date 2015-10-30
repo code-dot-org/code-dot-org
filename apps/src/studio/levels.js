@@ -17,7 +17,7 @@ var createCategory = blockUtils.createCategory;
  *          notDefaultText (boolean): require changing the text from the default
  *          requiredText (string): text must change from default. we show
  *            requiredText in feedback blocks
- * @returns test definition suitable for feedback.js::getMissingRequiredBlocks
+ * @returns test definition suitable for feedback.js::getMissingBlocks
  *          required block processing
  */
 function saySpriteRequiredBlock(options) {
@@ -727,8 +727,8 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
   background: 'cave',
   firstSpriteIndex: 5, // witch
   goalOverride: {
-    goal: 'red_fireball',
-    success: 'blue_fireball',
+    goalImage: 'red_fireball',
+    successImage: 'blue_fireball',
     imageWidth: 800
   },
   defaultEmotion: Emotions.ANGRY,
@@ -753,11 +753,7 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
 levels.iceage_6 = utils.extend(levels.playlab_6, {
   background: 'tile',
   firstSpriteIndex: 3, // diego
-  goalOverride: {
-    goal: 'ia_projectile_1',
-    success: 'ia_projectile_1',
-    imageWidth: 800
-  }
+  goalOverride: {} // This prevents the override from original playlab from being used
 });
 
 // The "repeat forever" block allows you to run code continuously. Can you
@@ -1292,6 +1288,15 @@ levels.playlab_9 = {
 
 levels.iceage_9 = utils.extend(levels.playlab_9, {
   background: 'flower',
+  toolbox:
+    tb(
+      blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
+      blockOfType('studio_setBackground', {VALUE: '"ice"'}) +
+      blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
+      blockOfType('studio_saySprite') +
+      blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
+      blockOfType('studio_changeScore')
+    ),
   requiredBlocks: [
     [{test: 'setBackground',
       type: 'studio_setBackground',
@@ -1300,7 +1305,45 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
       type: 'studio_setSpriteSpeed',
       titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
   ],
-  avatarList: ['sid', 'granny']
+  avatarList: ['sid', 'granny'],
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
+      '<statement name="DO">' +
+        blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
+          blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
+        ) +
+      '</statement>' +
+    '</block>' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="290">' +
+      '<title name="SPRITE2">0</title>' +
+      '<title name="SPRITE2">1</title>' +
+      '<next>' +
+        blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
+          blockOfType('studio_saySprite', {TEXT: msg.iceAge()})
+        ) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="410">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 8}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="510">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 2}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="610">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 1}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="710">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 4}) +
+      '</next>' +
+    '</block>'
 });
 
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
@@ -1670,13 +1713,13 @@ levels.js_hoc2015_move_right = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
-    [[0x1020000, 0x1020000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
-     [0x1020000, 0x1020000, 0x0000000, 0x0010000, 0x0020000, 0x0100000, 0x00, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
+    [[0x1020000, 0x1020000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],
+     [0x1020000, 0x1020000, 0x0000000, 0x0010000, 0x0020000, 0x0100000, 0x00, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],
      [0x0000000, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x0000000],
-     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],   
-     [0x0000000, 0x0000000, 0x0000000, 0x0100000, 0x0010000, 0x0120000, 0x00, 0x0000000], 
-     [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],  
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0100000, 0x0010000, 0x0120000, 0x00, 0x0000000],
+     [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000]],
 
   'instructions': '"We need that scrap metal. BOTX, can you get it?"',
@@ -1684,9 +1727,7 @@ levels.js_hoc2015_move_right = {
   'timeoutFailureTick': 100,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal1'
   },
   "callouts": [
     {
@@ -1694,7 +1735,7 @@ levels.js_hoc2015_move_right = {
       "element_id": "#runButton",
       "qtip_config": {
         "content": {
-          "text": msg.calloutRunButton(),
+          "text": msg.calloutMoveRightRunButton(),
         },
         'position': {
           'my': 'top left',
@@ -1737,27 +1778,25 @@ levels.js_hoc2015_move_right_down = {
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
-  'map': 
-    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x1100000, 0x1100000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x1100000, 0x1100000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0000000, 0x00],  
-     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],   
-     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],  
+  'map':
+    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x1100000, 0x1100000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x1100000, 0x1100000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
-  'instructions': '"We need more scrap metal. Can you get all the metal on this planet?"',
+  'instructions': '"We need more scrap metal. Can you get all the metal in this area?"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal2'
   },
   'progressConditions' : [
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
@@ -1785,31 +1824,29 @@ levels.js_hoc2015_move_diagonal = {
   'slowJsExecutionFactor': 10,
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
-  'floatingScore': true,  
+  'floatingScore': true,
   'map':
-    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000, 0x0000000],  
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000, 0x0000000],
      [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000],
-     [0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000, 0x0000000],   
+     [0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000, 0x0000000],
      [0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
-     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000],   
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000],
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000]],
   'embed': 'false',
   'instructions': '"Watch out for the GUY!"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal1'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
       result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
   ],
   "callouts": [
@@ -1860,29 +1897,27 @@ levels.js_hoc2015_move_backtrack = {
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
-  'map': 
-    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
-     [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00], 
-     [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],  
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+  'map':
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
-     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
   'instructions': '"Go quickly, BOTX."',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal1'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
       result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
@@ -1910,29 +1945,27 @@ levels.js_hoc2015_move_around = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
-    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000, 0x00],  
-     [0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0000000, 0x00], 
+    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000000, 0x20, 0x0140000, 0x0000000, 0x0000001, 0x0000000, 0x00],
-     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x00],  
-     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x00],
+     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
   'embed': 'false',
   'instructions': '"It\'s up to you, BOTX!"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal2'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
       result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
@@ -1961,29 +1994,27 @@ levels.js_hoc2015_move_finale = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
-    [[0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000000, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000000, 0x0000000],  
+    [[0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000000, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000000, 0x0000000],
      [0x0000000, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
      [0x0000000, 0x0000000, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
-     [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],  
+     [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
      [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000]],
   'embed': 'false',
   'instructions': '"We need 4 more pieces of metal. Can you find them?"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal2'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
       result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
@@ -2005,7 +2036,7 @@ levels.js_hoc2015_event_two_items = {
     'whenDown': null
   },
   'startBlocks': [
-    'function whenUp() {', 
+    'function whenUp() {',
     '  ',
     '}',
     'function whenDown() {',
@@ -2034,15 +2065,13 @@ levels.js_hoc2015_event_two_items = {
   'showTimeoutRect': true,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100,
     'goalRenderOffsetX': 0
   },
 
   'progressConditions' : [
-    { required: { 'allGoalsVisited': true }, 
+    { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successCharacter1() } },
-    { required: { 'timedOut': true }, 
+    { required: { 'timedOut': true },
       result: { success: false, message: msg.failedTwoItemsTimeout() } }
   ],
 
@@ -2069,7 +2098,7 @@ levels.js_hoc2015_event_two_items = {
       }
     },
     {
-      'id': 'arrowsCallout',
+      'id': 'playlab:js_hoc2015_event_two_items:arrowsCallout',
       'element_id': '#upButton',
       'hide_target_selector': '#soft-buttons',
       'qtip_config': {
@@ -2134,15 +2163,13 @@ levels.js_hoc2015_event_four_items = {
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalAnimation': 'animatedGoal'
   },
 
   'progressConditions' : [
-    { required: { 'allGoalsVisited': true }, 
+    { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successCharacter1() } },
-    { required: { 'timedOut': true }, 
+    { required: { 'timedOut': true },
       result: { success: false, message: msg.failedFourItemsTimeout() } }
   ]
 };
@@ -2179,23 +2206,21 @@ levels.js_hoc2015_score =
   'floatingScore': true,
   'edgeCollisions': 'true',
   'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
     [1, 0, 0, 16, 0, 0, 0, 1],
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 1,  0, 0, 0, 0]],
-  'instructions': '"Reach the GOAL!"',
-  'instructions2': "Let's add points. Add 100 points when BOT1 gets the pilot.",
+  'instructions': '"Reach the GOALs!"',
+  'instructions2': "Let's add points. Add 100 points when BOT1 gets each pilot.",
   'autoArrowSteer': true,
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalAnimation': 'animatedGoal'
   },
   'goal': {
     // The level uses completeOnSuccessConditionNotGoals, so make sure this
@@ -2203,17 +2228,35 @@ levels.js_hoc2015_score =
     successCondition: function () { return false; }
   },
   'progressConditions' : [
-    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 },
       result: { success: false, message: msg.failedScoreTimeout() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 },
       result: { success: false, message: msg.failedScoreScore() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 },
       result: { success: false, message: msg.failedScoreGoals() } },
-    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 }, 
+    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 },
       result: { success: true, message: msg.successCharacter1() } }
   ],
   'completeOnSuccessConditionNotGoals': true,
   'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_score:arrowsAutoSteerCallout',
+      'element_id': '#upButton',
+      'hide_target_selector': '#soft-buttons',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutUseArrowButtonsAutoSteer(),
+        },
+        'position': {
+          'my': 'top left',
+          'at': 'bottom left',
+          'adjust': {
+            'x': 30,
+            'y': 0
+          }
+        }
+      }
+    },
     {
       'id': 'playlab:js_hoc2015_score:placeCommandsAtTop',
       'element_id': '.droplet-gutter-line:nth-of-type(2)',
@@ -2274,7 +2317,7 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
   'instructions': '"Watch out for the MAN."',
-  'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN!',
+  'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN and get all the pilots!',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2299,13 +2342,13 @@ levels.js_hoc2015_win_lose = {
   ],
 
   'progressConditions' : [
-    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 },
       result: { success: false, message: msg.failedWinLoseTimeout() } },
-    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 }, 
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 },
       result: { success: false, message: msg.failedWinLoseScore() } },
-    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 },
       result: { success: false, message: msg.failedWinLoseGoals() } },
-    { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 }, 
+    { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 },
       result: { success: true, message: msg.successCharacter1() } }
   ]
 };
@@ -2342,16 +2385,16 @@ levels.js_hoc2015_add_characters = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0],
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 16, 0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 0,  0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"I\'m seeing signs of increased activity on this planet!"',
+  'instructions': '"I\'m seeing signs of increased activity on this planet."',
   'instructions2': 'Add 3 PIGs to the planet. Then, go get them.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
@@ -2375,9 +2418,9 @@ levels.js_hoc2015_add_characters = {
   ],
 
   'progressConditions' : [
-    { required: { 'collectedItemsAtOrAbove': 3 }, 
+    { required: { 'collectedItemsAtOrAbove': 3 },
       result: { success: true, message: msg.successCharacter1() } },
-    { required: { 'timedOut': true, 'collectedItemsBelow': 3 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
       result: { success: false, message: msg.failedAddCharactersTimeout() } }
   ]
 };
@@ -2390,7 +2433,7 @@ levels.js_hoc2015_chain_characters = {
   'wallMap': 'grid',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': null,
+    'addCharacter': { params: ['"mouse"'] },
     'playSound': null,
     'addPoints': null,
     'removePoints': null,
@@ -2403,8 +2446,8 @@ levels.js_hoc2015_chain_characters = {
     '',
     'function whenGetMouse() {',
     '  playSound("item6sound2");',
-    '  addCharacter("mouse");',
-    '  addCharacter("mouse");',
+    '  addPoints(100);',
+    '',
     '}',
     ].join('\n'),
   'sortDrawOrder': true,
@@ -2417,19 +2460,40 @@ levels.js_hoc2015_chain_characters = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"They\'re multiplying!"',
-  'instructions2': 'Add 100 points every time BOT1 gets a MOUSE. Can you get 800 points? ',
+  'instructions2': 'Can you make two MOUSEs appear every time BOT1 gets one MOUSE?  Get 20 MOUSEs and score 2000 points.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
   'progressConditions' : [
-    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsBelow': 800 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 20, 'currentPointsBelow': 2000 },
       result: { success: false, message: msg.failedChainCharactersTimeout() } },
-    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 8, 'currentPointsBelow': 800 }, 
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 20, 'currentPointsBelow': 2000 },
       result: { success: false, message: msg.failedChainCharactersScore() } },
-    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsAtOrAbove': 800 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 20, 'currentPointsAtOrAbove': 2000 },
       result: { success: false, message: msg.failedChainCharactersItems() } },
-    { required: { 'collectedItemsAtOrAbove': 8, 'currentPointsAtOrAbove': 800 }, 
+    { required: { 'collectedItemsAtOrAbove': 20, 'currentPointsAtOrAbove': 2000 },
       result: { success: true, message: msg.successCharacter1() } }
+  ],
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_chain_characters:calloutPlaceTwo',
+      'element_id': '.droplet-gutter-line:nth-of-type(7)',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutPlaceTwo(),
+        },
+        'event': 'mouseup touchend',
+        'position': {
+          'my': 'top left',
+          'at': 'center right',
+          'adjust': {
+            'x': 40,
+            'y': 10
+          }
+        }
+      }
+    }
   ]
 };
 
@@ -2484,19 +2548,19 @@ levels.js_hoc2015_chain_characters_2 = {
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
   'progressConditions' : [
-    { required: { 'timedOut': true, 'collectedItemsBelow': 14 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 14 },
       result: { success: false, message: msg.failedChainCharacters2Timeout() } },
-    { required: { 'collectedItemsAtOrAbove': 14 }, 
+    { required: { 'collectedItemsAtOrAbove': 14 },
       result: { success: true, message: msg.successCharacter1() } }
   ],
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwo',
+      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwoWhenBird',
       'element_id': '.droplet-gutter-line:nth-of-type(12)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content' : {
-          'text': msg.calloutPlaceTwo(),
+          'text': msg.calloutPlaceTwoWhenBird(),
         },
         'event': 'mouseup touchend',
         'position': {
@@ -2528,7 +2592,6 @@ levels.js_hoc2015_change_setting = {
     'addPoints': null,
     'removePoints': null,
 
-    'whenScore1000': null,
     'whenGetPilot': null,
   },
   'startBlocks': [
@@ -2554,7 +2617,7 @@ levels.js_hoc2015_change_setting = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"Time to visit another planet."',
-  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.',
+  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.  Then, get the pilots.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2581,9 +2644,9 @@ levels.js_hoc2015_change_setting = {
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
       result: { success: false, message: msg.failedChangeSettingTimeout() } },
     // If all items are collected, but either property not set?  Failure.
-    { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 }, 
+    { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 },
       result: { success: false, message: msg.failedChangeSettingSettings() } },
-    { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 }, 
+    { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 },
       result: { success: false, message: msg.failedChangeSettingSettings() } }
   ]
 };
@@ -2608,6 +2671,16 @@ levels.js_hoc2015_event_free = {
     'moveFast': { 'category': 'Commands' },
     'addPoints': { 'category': 'Commands' },
     'removePoints': { 'category': 'Commands' },
+
+    'goRight': { 'category': 'Commands' },
+    'goLeft': { 'category': 'Commands' },
+    'goUp': { 'category': 'Commands' },
+    'goDown': { 'category': 'Commands' },
+
+    'whenLeft': { 'category': 'Events' },
+    'whenRight': { 'category': 'Events' },
+    'whenUp': { 'category': 'Events' },
+    'whenDown': { 'category': 'Events' },
 
     'whenTouchObstacle': { 'category': 'Events' },
     'whenGetMan': { 'category': 'Events' },
@@ -2634,6 +2707,18 @@ levels.js_hoc2015_event_free = {
     'setBot("bot1");',
     'setBotSpeed("normal");',
     'playSound("character1sound5");',
+    'function whenUp() {',
+    '  ',
+    '}',
+    'function whenDown() {',
+    '  ',
+    '}',
+    'function whenLeft() {',
+    '  ',
+    '}',
+    'function whenRight() {',
+    '  ',
+    '}',
     ''].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
@@ -2645,7 +2730,6 @@ levels.js_hoc2015_event_free = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"You\'re on your own now, BOT1."',
-  'autoArrowSteer': true,
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_event_free:clickCategory',
