@@ -36,6 +36,7 @@ locales = {
   'Irish' => 'ga-IE',
   'Italian' => 'it-IT',
   'Japanese' => 'ja-JP',
+  'Kazakh' => 'kk-KZ',
   'Khmer' => 'km-KH',
   'Korean' => 'ko-KR',
   'Kurdish' => 'ku-IQ',
