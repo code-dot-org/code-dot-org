@@ -105,7 +105,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   function hideHeaderPopup() {
     $('.header_popup').hide();
     $('.header_popup_link_glyph').html('&#x25BC;');
-    $('.header_popup_link_text').text(dashboard.i18n.t('less'));
+    $('.header_popup_link_text').text(dashboard.i18n.t('more'));
     $(document).off('click', hideHeaderPopup);
     isHeaderPopupVisible = false;
   }

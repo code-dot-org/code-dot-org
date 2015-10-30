@@ -500,6 +500,104 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
+    },
+
+    {
+      description: "element ids are validated",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        // Switch to design mode
+        var designModeButton = $('#designModeButton');
+        designModeButton.click();
+
+        // Add two buttons
+        testUtils.dragToVisualization('BUTTON', 0, 0);
+        testUtils.dragToVisualization('BUTTON', 100, 100);
+        var designModeViz = $('#designModeViz');
+        var buttons = designModeViz.find('button');
+        assert.equal(buttons.length, 2, "there are two buttons in design mode");
+        var firstButton = buttons[0];
+        var targetButton = buttons[1];
+        assert.equal(firstButton.id, "design_button1", "first button is design_button1");
+        assert.equal(targetButton.id, "design_button2", "second button is design_button2");
+        assertPropertyRowValue(0, 'id', 'button2', assert, "button2 is selected property tab");
+
+        $('#runButton').click();
+        $('#resetButton').click();
+        assert($('#divApplab #button1'), "button1 appears in divApplab after Run/Reset");
+        assert($('#divApplab #button2'), "button2 appears in divApplab after Run/Reset");
+        assertPropertyRowValue(0, 'id', 'button2', assert, "button2 is still selected in property tab");
+
+        // Renaming to 'button' succeeds.
+        var idInput = $("#propertyRowContainer input")[0];
+        ReactTestUtils.Simulate.change(idInput, { target: { value: 'button' } });
+        assert.equal(targetButton.id, "design_button", "target button has id 'design_button'");
+        assert(!idInput.style.backgroundColor, "id input 'button' has no background color");
+
+        // Renaming to button3 succeeds.
+        ReactTestUtils.Simulate.change(idInput, { target: { value: 'button3' } });
+        assert.equal(targetButton.id, "design_button3", "target button has id 'design_button3'");
+        assert(!idInput.style.backgroundColor, "id input 'button3' has no background color");
+
+        // Renaming to button2 succeeds, even though button2 exists inside divApplab.
+        assert($('#divApplab #button2'), "button2 still appears inside divApplab");
+        ReactTestUtils.Simulate.change(idInput, { target: { value: 'button2' } });
+        assert.equal(targetButton.id, "design_button2", "target button has id 'design_button2'");
+        assert(!idInput.style.backgroundColor, "id input 'button2' has no background color");
+
+        // Renaming to duplicate id 'button1' fails.
+        ReactTestUtils.Simulate.change(idInput, { target: { value: 'button1' } });
+        assert.equal(targetButton.id, 'design_button2', "target button still has id 'design_button2'");
+        assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "duplicate id input 'button1' has light red background color");
+
+        // idInput reverts to previous value on blur.
+        ReactTestUtils.Simulate.blur(idInput);
+        assert.equal(idInput.value, "button2", "id input reverts to 'button2'");
+        assert(!idInput.style.backgroundColor, "id input has no background color after losing focus");
+
+        // Renaming to button4 succeeds.
+        ReactTestUtils.Simulate.change(idInput, { target: { value: 'button4' } });
+        assert.equal(targetButton.id, "design_button4", "target button has id 'design_button4'");
+        assert(!idInput.style.backgroundColor, "id input 'button4' has no background color");
+
+        // Renaming to divApplab fails.
+        ReactTestUtils.Simulate.change(idInput, { target: { value: 'divApplab' } });
+        assert.equal(targetButton.id, "design_button4", "target button still has id 'design_button4'");
+        assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "invalid id input 'divApplab' has light red background color");
+
+        // Renaming to button5 succeeds.
+        ReactTestUtils.Simulate.change(idInput, { target: { value: 'button5' } });
+        assert.equal(targetButton.id, "design_button5", "target button has id 'design_button4'");
+        assert(!idInput.style.backgroundColor, "id input 'button5' has no background color");
+
+        // Renaming to runButton fails.
+        ReactTestUtils.Simulate.change(idInput, { target: { value: 'runButton' } });
+        assert.equal(targetButton.id, "design_button5", "target button still has id 'design_button5'");
+        assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "invalid id input 'runButton' has light red background color");
+
+        // Make sure it works for screens too.
+        testUtils.dragToVisualization('SCREEN', 100, 100);
+        var screens = designModeViz.find('.screen');
+        assert.equal(screens.length, 2, "there are two screens in design mode");
+        var firstScreen = screens[0];
+        var targetScreen = screens[1];
+        assert.equal(firstScreen.id, "design_screen1", "first screen is design_screen1");
+        assert.equal(targetScreen.id, "design_screen2", "second screen is design_screen2");
+
+        // Renaming to duplicate id 'screen1' fails.
+        idInput = $("#propertyRowContainer input")[0];
+        ReactTestUtils.Simulate.change(idInput, { target: { value: 'screen1' } });
+        assert.equal(targetScreen.id, "design_screen2", "target screen still has id 'design_screen2'");
+        assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "duplicate id input 'screen1' has light red background color");
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
     }
   ]
 };
