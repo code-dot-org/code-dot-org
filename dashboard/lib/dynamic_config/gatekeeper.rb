@@ -84,7 +84,7 @@ class GatekeeperBase
     cache_expiration = 30
     if Rails.env.test?
       adapter = MemoryAdapter.new
-    elsif Rails.env.development?
+    elsif Rails.env.development? || Rails.env.adhoc?
       cache_expiration = 5
       adapter = JSONFileDatastoreAdapter.new CDO.gatekeeper_table_name
     else
