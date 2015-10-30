@@ -2651,6 +2651,16 @@ levels.js_hoc2015_change_setting = {
   ]
 };
 
+var js_hoc2015_event_free_character_instructions = '"You\'re on your own now, BOT1."';
+var js_hoc2015_event_free_ooc_instructions = 'Go build something.';
+var js_hoc2015_event_free_markdown = [
+  '<span class="character-text">' + js_hoc2015_event_free_character_instructions + '</span>',
+  '',
+  '<span class="instructions2">' + js_hoc2015_event_free_ooc_instructions + '</span>',
+  '',
+  '<details>',
+  '</details>'
+].join('\r\n');
 
 levels.js_hoc2015_event_free = {
   'editCode': true,
@@ -2729,7 +2739,10 @@ levels.js_hoc2015_event_free = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"You\'re on your own now, BOT1."',
+  'instructions': js_hoc2015_event_free_character_instructions,
+  'instructions2': js_hoc2015_event_free_ooc_instructions,
+  'markdownInstructions': js_hoc2015_event_free_markdown,
+  'markdownInstructionsWithClassicMargins': true,
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_event_free:clickCategory',
