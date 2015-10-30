@@ -44,8 +44,8 @@ var sendReport = function(report) {
   dashboard.clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.level.scriptLevelId);
 
   //Post milestone iff the server tells us, or if we are on the last level and have passed
-  if (appOptions.postMilestone || appOptions.level.puzzle_number === appOptions.level.stage_total && report.pass) {
-    console.log('posting milestone');
+  if (appOptions.postMilestone || (appOptions.level.puzzle_number === appOptions.level.stage_total && report.pass)) {
+
     var thisAjax = jQuery.ajax({
       type: 'POST',
       url: report.callback,
@@ -75,7 +75,9 @@ var sendReport = function(report) {
 
     lastAjaxRequest = thisAjax;
   } else {
-    console.log('skipping post');
+    //There's a potential race condition here - we show the dialog after animation completion, but also after the report
+    //is done posting. There is logic that says "don't show the dialog if we are animating" but if milestone posting
+    //is disabled then we might show the dialog before the animation starts. Putting a 1-sec delay works around this
     setTimeout(function () {
       reportComplete(report, getFallbackResponse(report))
     }, 1000);
