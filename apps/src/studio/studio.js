@@ -2151,7 +2151,7 @@ Studio.runButtonClick = function() {
 var displayFeedback = function() {
   var tryAgainText;
   // For free play, show keep playing, unless it's a big game level
-  if (level.freePlay && !Studio.customLogic instanceof BigGameLogic) {
+  if (level.freePlay && !(Studio.customLogic instanceof BigGameLogic)) {
     tryAgainText = commonMsg.keepPlaying();
   }
   else {
