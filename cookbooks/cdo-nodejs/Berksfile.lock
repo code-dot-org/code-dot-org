@@ -2,6 +2,8 @@ DEPENDENCIES
   cdo-nodejs
     path: .
     metadata: true
+  nodejs_test
+    path: test/cookbooks/nodejs_test
 
 GRAPH
   7-zip (1.0.2)
@@ -11,7 +13,7 @@ GRAPH
     7-zip (>= 0.0.0)
     windows (>= 0.0.0)
   build-essential (2.2.3)
-  cdo-nodejs (0.1.0)
+  cdo-nodejs (0.2.1)
     nodejs (>= 0.0.0)
   chef_handler (1.2.0)
   homebrew (1.13.0)
@@ -22,6 +24,7 @@ GRAPH
     build-essential (>= 0.0.0)
     homebrew (>= 0.0.0)
     yum-epel (>= 0.0.0)
+  nodejs_test (0.0.0)
   windows (1.38.2)
     chef_handler (>= 0.0.0)
   yum (3.7.1)
