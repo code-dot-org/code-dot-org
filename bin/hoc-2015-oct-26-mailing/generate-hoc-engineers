@@ -15,11 +15,9 @@ kind_s:HelpUs2013 || kind_s:VolunteerEngineerSubmission || (kind_s: Petition && 
 EOS
 
 engineers = query_subscribed_contacts(q: engineer_query)
-puts "#{engineers.count} hoc-engineers (initial query)"
+puts "#{engineers.count} hoc-engineers (initial query, minus hoc-engineers-volunteers)"
 
 include_mailchimp_engineers engineers
 puts "#{engineers.count} including mailchimp engineers"
 
-engineers.reject! {|email| volunteers.has_key? email}
-puts "#{engineers.count} hoc-engineers (excluding volunteers)"
 export_contacts_to_csv engineers, "hoc-engineers.csv"
