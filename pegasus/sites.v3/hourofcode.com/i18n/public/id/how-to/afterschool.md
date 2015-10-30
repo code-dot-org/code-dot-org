@@ -18,7 +18,7 @@ nav: how_to_nav
 ## 2) Lihat video how-to ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Pilih tutorial:
 
-Kita akan menyelenggarakan berbagai [tutorial satu jam yang menyenangkan](<%= resolve_url('https://code.org/learn') %>) bagi siswa dari segala usia, yang dibuat oleh berbagai mitra. *Tutorial baru datang untuk memulai Hour of Code sebelum < % = campaign_date('full') % >.* [Coba tutorial yang ada saat ini.](<%= resolve_url("https://code.org/learn") %>)
+Kita akan menyelenggarakan berbagai [tutorial satu jam yang menyenangkan](<%= resolve_url('https://code.org/learn') %>) bagi siswa dari segala usia, yang dibuat oleh berbagai mitra. *Tutorial baru datang untuk memulai Hour of Code sebelum <%= campaign_date('full') %>.* [Coba tutorial yang ada saat ini.](<%= resolve_url("https://code.org/learn") %>)
 
 **Semua tutorial Hour of Code:**
 
@@ -45,7 +45,7 @@ Mulai Hour of Code Anda dengan menginspirasi siswa dan diskusikan bagaimana ilmu
 **Tampilkan video inspiratif:**
 
   * Video orginal peluncuran Code.org, yang menampilkan Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (Ada versi [1 menit](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 menit](https://www.youtube.com/watch?v=nKIu9yen5nc), dan [9 menit](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * [Video peluncuran Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), atau < % if @country == 'uk' %> [Video Hour of Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) < % else %> [Video Hour of Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * [Video peluncuran Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), atau <% if @country == 'uk' %> [Video Hour of Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Video Hour of Code 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Presiden Obama menyerukan semua pelajar untuk belajar ilmu komputer](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Temukan lebih banyak video inspiratif [di sini](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -53,7 +53,7 @@ Mulai Hour of Code Anda dengan menginspirasi siswa dan diskusikan bagaimana ilmu
 
   * Jelaskan cara teknologi memberi dampak pada kehidupan kita, dengan contoh-contoh yang diminati oleh anak-anak (Bicarakan tentang apps dan teknologi yang digunakan untuk menyelamatkan nyawa, membantu orang, menghubungkan orang dll).
   * Daftarkan hal yang menggunakan kode dalam kehidupan sehari-hari.
-  * Lihat tips untuk mendapatkan gadis tertarik dalam ilmu komputer [ di sini](<%= resolve_url('https://code.org/girls') %>).
+  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 **Butuh bimbingan lebih lanjut?** Download [template rencana pembelajaran ini](/files/AfterschoolEducatorLessonPlanOutline.docx).
 

@@ -1,33 +1,34 @@
 ---
 title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
+nav: how_to_nav
+
 social:
-'og:title': '<%= hoc_s(:meta_tag_og_title) %>'
-'og:description': '<%= hoc_s(:meta_tag_og_description) %>'
-'og:image': 'http://<%=request.host%>/images/code-video-thumbnail.jpg'
-'og:image:width': 1705
-'og:image:height': 949
-'og:url': 'http://<%=request.host%>'
-'og:video': 'https://youtube.googleapis.com/v/rH7AjDMz_dc'
-'twitter:card': player
-'twitter:site': '@codeorg'
-'twitter:url': 'http://<%=request.host%>'
-'twitter:title': '<%= hoc_s(:meta_tag_twitter_title) %>'
-'twitter:description': '<%= hoc_s(:meta_tag_twitter_description) %>'
-'twitter:image:src': 'http://<%=request.host%>/images/code-video-thumbnail.jpg'
-'twitter:player': 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
-'twitter:player:width': 1920
-'twitter:player:height': 1080
+  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  "og:image:width": 1440
+  "og:image:height": 900
+  "og:url": "http://<%=request.host%>"
+
+  "twitter:card": player
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://<%=request.host%>"
+  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
 
-<% facebook = {:u=>"http://#{request.host}/us"}
+<%
+  facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
+  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+%>
 
 # Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
 
-Anda memungkinkan siswa di seluruh dunia untuk belajar Hour of Code yang dapat *mengubah seluruh hidup mereka*, selama < % = campaign_date('full') % >. Kami akan menghubungi tentang hadiah, tutorial baru dan update menarik lainnya. Apa yang dapat Anda lakukan sekarang?
+Anda memungkinkan siswa di seluruh dunia untuk belajar Hour of Code yang dapat *mengubah seluruh hidup mereka*, selama <%= campaign_date('full') %>. Kami akan menghubungi tentang hadiah, tutorial baru dan update menarik lainnya. Apa yang dapat Anda lakukan sekarang?
 
 ## 1. Sebarkan berita
 
@@ -37,7 +38,7 @@ Anda hanya bergabung dengan gerakan Hour of Code. Beritahu teman Anda dengan **#
 
 ## 2. Tawarkan pada seluruh isi sekolah anda untuk mengikuti Hour of Code
 
-[Kirim email ini](<%= resolve_url('/promote/resources#sample-emails') %>) kepada kepala sekolah dan tantang setiap kelas di sekolah Anda untuk mendaftar. < % jika @country == 'us' %> Salah satu sekolah yang beruntung di *setiap* negara Amerika (dan Washington Dc) akan memenangkan teknolgi senilai $10,000. [Daftar di sini](<%= resolve_url('/prizes/hardware-signup') %>) untuk menjadi layak dan [**lihat pemenang tahun lalu**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Kirim email ini](<%= resolve_url('/promote/resources#sample-emails') %>) kepada kepala sekolah dan tantang setiap kelas di sekolah Anda untuk mendaftar. <% if @country == 'us' %> Salah satu sekolah yang beruntung di *setiap* negara Amerika (dan Washington Dc) akan memenangkan teknolgi senilai $10,000. [Daftar di sini](<%= resolve_url('/prizes/hardware-signup') %>) untuk menjadi layak dan [**lihat pemenang tahun lalu**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
 
 ## 3. Tanyakanlah kepada bos anda untuk terlibat
 

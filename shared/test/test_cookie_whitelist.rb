@@ -1,9 +1,9 @@
-ENV['RACK_ENV'] = 'test'
-
 require 'minitest/autorun'
 require 'rack/test'
 require_relative '../../deployment'
 require 'cdo/rack/whitelist_cookies'
+
+ENV['RACK_ENV'] = 'test'
 
 class CookieWhitelistTest < Minitest::Test
   include Rack::Test::Methods

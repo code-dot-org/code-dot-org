@@ -52,6 +52,16 @@ node.default['cdo-varnish']['config'] = HttpCache.config(node.chef_environment.t
 $node_env = node.chef_environment.to_s
 $node_name = node.name
 
+ruby_block 'update_service' do
+  block do
+    file = Chef::Util::FileEdit.new('/etc/init.d/varnish')
+    %w(stop start).map do |cmd|
+      file.search_file_replace(/(?<!--oknodo )--#{cmd}/, "--oknodo --#{cmd}")
+    end
+    file.write_file
+  end
+end
+
 template '/etc/default/varnish' do
   source 'config.erb'
   user 'root'
