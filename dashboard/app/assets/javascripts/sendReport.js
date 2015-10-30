@@ -43,34 +43,44 @@ var sendReport = function(report) {
 
   dashboard.clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.level.scriptLevelId);
 
-  var thisAjax = jQuery.ajax({
-    type: 'POST',
-    url: report.callback,
-    contentType: 'application/x-www-form-urlencoded',
-    // Set a timeout of fifteen seconds so the user will get the fallback
-    // response even if the server is hung and unresponsive.
-    timeout: 15000,
-    data: queryString,
-    dataType: 'json',
-    beforeSend: function(xhr) {
-      xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
-    },
-    success: function (response) {
-      if (thisAjax !== lastAjaxRequest) {
-        return;
+  //Post milestone iff the server tells us, or if we are on the last level and have passed
+  if (appOptions.postMilestone || appOptions.level.puzzle_number === appOptions.level.stage_total && report.pass) {
+    console.log('posting milestone');
+    var thisAjax = jQuery.ajax({
+      type: 'POST',
+      url: report.callback,
+      contentType: 'application/x-www-form-urlencoded',
+      // Set a timeout of fifteen seconds so the user will get the fallback
+      // response even if the server is hung and unresponsive.
+      timeout: 15000,
+      data: queryString,
+      dataType: 'json',
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+      },
+      success: function (response) {
+        if (thisAjax !== lastAjaxRequest) {
+          return;
+        }
+        reportComplete(report, response);
+      },
+      error: function (xhr, textStatus, thrownError) {
+        if (thisAjax !== lastAjaxRequest) {
+          return;
+        }
+        report.error = xhr.responseText;
+        reportComplete(report, getFallbackResponse(report));
       }
-      reportComplete(report, response);
-    },
-    error: function (xhr, textStatus, thrownError) {
-      if (thisAjax !== lastAjaxRequest) {
-        return;
-      }
-      report.error = xhr.responseText;
-      reportComplete(report, getFallbackResponse(report));
-    }
-  });
+    });
 
-  lastAjaxRequest = thisAjax;
+    lastAjaxRequest = thisAjax;
+  } else {
+    console.log('skipping post');
+    setTimeout(function () {
+      reportComplete(report, getFallbackResponse(report))
+    }, 1000);
+  }
+
 };
 
 var cancelReport = function() {

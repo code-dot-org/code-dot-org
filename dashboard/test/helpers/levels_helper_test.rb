@@ -267,4 +267,22 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal false, app_options[:level]['submittable']
   end
 
+  test 'Milestone posting is disabled if Gatekeeper flag is set' do
+    @level = create(:level, :blockly)
+    @script = create :script
+
+    Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
+    app_options = self.app_options
+    assert_equal false, app_options[:postMilestone]
+  end
+
+  test 'Milestone posting is enabled for other levels' do
+    @level = create(:level, :blockly)
+    @script = create :script
+
+    Gatekeeper.set('postMilestone', where: {script_name: 'Not the level name'}, value: false)
+    app_options = self.app_options
+    assert_equal true, app_options[:postMilestone]
+  end
+
 end
