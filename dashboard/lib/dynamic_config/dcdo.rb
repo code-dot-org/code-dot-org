@@ -7,6 +7,8 @@ require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
 
 class DCDOBase
+  attr_reader :datastore_cache
+
   def initialize(datastore_cache)
     @datastore_cache = datastore_cache
   end
@@ -43,10 +45,10 @@ class DCDOBase
   def self.create
     if Rails.env.test?
       adapter = MemoryAdapter.new
-    elsif Rails.env.development
-      adapter = JSONFileDatastoreAdapter.new CDO.gatekeeper_table_name
+    elsif Rails.env.development?
+      adapter = JSONFileDatastoreAdapter.new CDO.dcdo_table_name
     else
-      adapter = DynamoDBAdapter.new CDO.gatekeeper_table_name
+      adapter = DynamoDBAdapter.new CDO.dcdo_table_name
     end
 
     datastore_cache = DatastoreCache.new adapter

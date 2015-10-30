@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Merci de vous être inscrit(e) pour organiser Une Heure de Code !
 
-Grâce à vous, des étudiants du monde entier vont pouvoir apprendre en faisant Une Heure de Code, moment qui pourrait *changer le reste de leur vie*, au cours de < % = campaign_date('full') % &gt. Nous prendrons contact avec vous concernant les prix, les nouveaux tutoriels et les nouvelles mises à jour qui pourraient vous intéresser. Que pouvez-vous faire maintenant ?
+Grâce à vous, des étudiants du monde entier vont pouvoir apprendre en faisant Une Heure de Code, moment qui pourrait *changer le reste de leur vie*, au cours de <%= campaign_date('full') %>. Nous prendrons contact avec vous concernant les prix, les nouveaux tutoriels et les nouvelles mises à jour qui pourraient vous intéresser. Que pouvez-vous faire maintenant ?
 
 ## 1. Parlez-en autour de vous
 
@@ -24,7 +24,7 @@ Vous venez de rejoindre le mouvement Une Heure de Code. Parlez-en à vos amis av
 
 ## 2. Proposez à votre école de participer à Une Heure de Code
 
-[Envoyez cet email](%= resolve_url('/promote/resources#sample-emails') %) à votre principal ou au directeur de votre école et proposez à chaque professeur de s'inscrire. Pour cela, c'est simple ! [Inscrivez-vous ici](%= resolve_url('/prizes/hardware-signup') %) pour être admissibles. <% end %>
+[Envoyez cet email](%= resolve_url('/promote/resources#sample-emails') %) à votre principal ou au directeur de votre école et proposez à chaque professeur de s'inscrire. <% if @country == 'us' %> Pour cela, c'est simple ! [Inscrivez-vous ici](%= resolve_url('/prizes/hardware-signup') %) pour être admissibles. <% end %>
 
 ## 3. Invitez votre employeur à s'impliquer
 

@@ -104,7 +104,7 @@ La nostre Hora del Codi és una declaració de que [nom de l'escola] està dispo
 
 Aquesta és una oportunitat per canviar el futur de l'educació a [NOM CIUTAT/POBLE].
 
-Mira http://hourofcode.com/es/ca per a més detalls, i ajuda a córrer la veu.
+Mira http://hourofcode.com/<%= @country %>/ca per a més detalls, i ajuda a córrer la veu.
 
 Atentament,
 

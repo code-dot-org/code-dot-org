@@ -48,7 +48,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - As a class, list things that use code in everyday life.
-- See tips for getting girls interested in computer science <a href="<%= resolve_url('https://code.org/girls') %>">here</a>.
+- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 **Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
 

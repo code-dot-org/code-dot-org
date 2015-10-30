@@ -376,26 +376,43 @@ var drawMap = function () {
     numFrames = skin.animatedGoalFrames;
   }
 
+  // Calculate the dimensions of the spritesheet & the sprite itself that's rendered
+  // out of it.  Precedence order is skin.goalSpriteWidth/Height, goalOverride.imageWidth/Height, 
+  // and then Studio.MARKER_WIDTH/HEIGHT.
+  //
+  // Legacy levels might specify goalOverride.imageWidth/Height which are dimensions
+  // of the entire spritesheet, and rely upon studio's default MARKER_WIDTH/HEIGHT which
+  // are dimensions of the sprite itself.
+  // Newer levels might specify skin.goalSpriteWith/Height which are the dimensions of the
+  // sprite itself.  The dimensions of the spritesheet are calculated using skin.animatedGoalFrames.
+  // The fallback dimensions of both spritesheet and sprite are studio's default
+  // MARKER_WIDTH/HEIGHT.
+
+  var spritesheetWidth = skin.goalSpriteWidth ? (skin.goalSpriteWidth * numFrames) :
+    utils.valueOr(goalOverride.imageWidth, Studio.MARKER_WIDTH);
+  var spritesheetHeight = skin.goalSpriteHeight ? skin.goalSpriteHeight :
+    utils.valueOr(goalOverride.imageHeight, Studio.MARKER_HEIGHT);
+
+  var spriteWidth = utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH);
+  var spriteHeight = utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT);
+
   if (Studio.spriteGoals_) {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
       // Add finish markers.
-
-      var width = goalOverride.imageWidth || Studio.MARKER_WIDTH;
-      var height = goalOverride.imageHeight || Studio.MARKER_HEIGHT;
 
       var finishClipPath = document.createElementNS(SVG_NS, 'clipPath');
       finishClipPath.setAttribute('id', 'finishClipPath' + i);
       var finishClipRect = document.createElementNS(SVG_NS, 'rect');
       finishClipRect.setAttribute('id', 'finishClipRect' + i);
-      finishClipRect.setAttribute('width', width);
-      finishClipRect.setAttribute('height', height);
+      finishClipRect.setAttribute('width', spriteWidth);
+      finishClipRect.setAttribute('height', spriteHeight);
       finishClipPath.appendChild(finishClipRect);
       svg.appendChild(finishClipPath);
 
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
-      spriteFinishMarker.setAttribute('width', numFrames * width);
-      spriteFinishMarker.setAttribute('height', height);
+      spriteFinishMarker.setAttribute('width', spritesheetWidth);
+      spriteFinishMarker.setAttribute('height', spritesheetHeight);
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
       svg.appendChild(spriteFinishMarker);
     }
@@ -3134,7 +3151,7 @@ Studio.animateGoals = function() {
     elapsed = currentTime - Studio.startTime;
     numFrames = skin.animatedGoalFrames;
     frameDuration = skin.timePerGoalAnimationFrame;
-    frameWidth = level.goalOverride.imageWidth;
+    frameWidth = skin.goalSpriteWidth;
   }
 
   for (var i = 0; i < Studio.spriteGoals_.length; i++) {
@@ -4910,8 +4927,8 @@ Studio.allGoalsVisited = function() {
       if (skin.goalSuccess) {
         // Change the finish icon to goalSuccess.
         var successAsset = skin.goalSuccess;
-        if (level.goalOverride && level.goalOverride.success) {
-          successAsset = skin[level.goalOverride.success];
+        if (level.goalOverride && level.goalOverride.successImage) {
+          successAsset = skin[level.goalOverride.successImage];
         }
         var spriteFinishIcon = document.getElementById('spriteFinish' + i);
         spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
@@ -5060,7 +5077,8 @@ var checkFinished = function () {
 
 },{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./ImageFilterFactory":"/home/ubuntu/staging/apps/build/js/studio/ImageFilterFactory.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./MusicController":"/home/ubuntu/staging/apps/build/js/studio/MusicController.js","./ThreeSliceAudio":"/home/ubuntu/staging/apps/build/js/studio/ThreeSliceAudio.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -5787,6 +5805,8 @@ function loadInfinity(skin, assetUrl) {
 function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
+  skin.hideIconInClearPuzzle = true;
+
   skin.defaultBackground = 'forest';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
@@ -5856,6 +5876,10 @@ function loadHoc2015(skin, assetUrl) {
 
   // Spritesheet for animated goal.
   skin.animatedGoal = skin.assetUrl('goal_idle.png');
+
+  // Dimensions of the goal sprite.
+  skin.goalSpriteWidth = 100;
+  skin.goalSpriteHeight = 100;
 
   // How many frames in the animated goal spritesheet.
   skin.animatedGoalFrames = 16;
@@ -6144,6 +6168,8 @@ function loadHoc2015(skin, assetUrl) {
 function loadHoc2015x(skin, assetUrl) {
   skin.preloadAssets = true;
 
+  skin.hideIconInClearPuzzle = true;
+
   skin.defaultBackground = 'main';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
@@ -6170,6 +6196,10 @@ function loadHoc2015x(skin, assetUrl) {
   // Spritesheet for animated goal.
   skin.goal1 = skin.assetUrl('goal1.png');
   skin.goal2 = skin.assetUrl('goal2.png');
+
+  // Dimensions of the goal sprite.
+  skin.goalSpriteWidth = 50;
+  skin.goalSpriteHeight = 50;
 
   // How many frames in the animated goal spritesheet.
   skin.animatedGoalFrames = 16;
@@ -7325,8 +7355,8 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
   background: 'cave',
   firstSpriteIndex: 5, // witch
   goalOverride: {
-    goal: 'red_fireball',
-    success: 'blue_fireball',
+    goalImage: 'red_fireball',
+    successImage: 'blue_fireball',
     imageWidth: 800
   },
   defaultEmotion: Emotions.ANGRY,
@@ -8282,9 +8312,7 @@ levels.js_hoc2015_move_right = {
   'timeoutFailureTick': 100,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal1'
   },
   "callouts": [
     {
@@ -8292,7 +8320,7 @@ levels.js_hoc2015_move_right = {
       "element_id": "#runButton",
       "qtip_config": {
         "content": {
-          "text": msg.calloutRunButton(),
+          "text": msg.calloutMoveRightRunButton(),
         },
         'position': {
           'my': 'top left',
@@ -8344,13 +8372,11 @@ levels.js_hoc2015_move_right_down = {
      [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],   
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],  
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
-  'instructions': '"We need more scrap metal. Can you get all the metal on this planet?"',
+  'instructions': '"We need more scrap metal. Can you get all the metal in this area?"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal2'
   },
   'progressConditions' : [
     { required: { 'allGoalsVisited': true },
@@ -8398,9 +8424,7 @@ levels.js_hoc2015_move_diagonal = {
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal1'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
@@ -8471,9 +8495,7 @@ levels.js_hoc2015_move_backtrack = {
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal1'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
@@ -8521,9 +8543,7 @@ levels.js_hoc2015_move_around = {
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal2'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
@@ -8572,9 +8592,7 @@ levels.js_hoc2015_move_finale = {
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal2'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
@@ -8632,8 +8650,6 @@ levels.js_hoc2015_event_two_items = {
   'showTimeoutRect': true,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100,
     'goalRenderOffsetX': 0
   },
 
@@ -8667,7 +8683,7 @@ levels.js_hoc2015_event_two_items = {
       }
     },
     {
-      'id': 'arrowsCallout',
+      'id': 'playlab:js_hoc2015_event_two_items:arrowsCallout',
       'element_id': '#upButton',
       'hide_target_selector': '#soft-buttons',
       'qtip_config': {
@@ -8732,9 +8748,7 @@ levels.js_hoc2015_event_four_items = {
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalAnimation': 'animatedGoal'
   },
 
   'progressConditions' : [
@@ -8791,9 +8805,7 @@ levels.js_hoc2015_score =
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalAnimation': 'animatedGoal'
   },
   'goal': {
     // The level uses completeOnSuccessConditionNotGoals, so make sure this
@@ -8812,6 +8824,24 @@ levels.js_hoc2015_score =
   ],
   'completeOnSuccessConditionNotGoals': true,
   'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_score:arrowsAutoSteerCallout',
+      'element_id': '#upButton',
+      'hide_target_selector': '#soft-buttons',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutUseArrowButtonsAutoSteer(),
+        },
+        'position': {
+          'my': 'top left',
+          'at': 'bottom left',
+          'adjust': {
+            'x': 30,
+            'y': 0
+          }
+        }
+      }
+    },
     {
       'id': 'playlab:js_hoc2015_score:placeCommandsAtTop',
       'element_id': '.droplet-gutter-line:nth-of-type(2)',
@@ -8872,7 +8902,7 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
   'instructions': '"Watch out for the MAN."',
-  'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN!',
+  'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN and get all the pilots!',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -8988,7 +9018,7 @@ levels.js_hoc2015_chain_characters = {
   'wallMap': 'grid',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': null,
+    'addCharacter': { params: ['"mouse"'] },
     'playSound': null,
     'addPoints': null,
     'removePoints': null,
@@ -9001,8 +9031,8 @@ levels.js_hoc2015_chain_characters = {
     '',
     'function whenGetMouse() {',
     '  playSound("item6sound2");',
-    '  addCharacter("mouse");',
-    '  addCharacter("mouse");',
+    '  addPoints(100);',
+    '',
     '}',
     ].join('\n'),
   'sortDrawOrder': true,
@@ -9015,19 +9045,40 @@ levels.js_hoc2015_chain_characters = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"They\'re multiplying!"',
-  'instructions2': 'Add 100 points every time BOT1 gets a MOUSE. Can you get 800 points? ',
+  'instructions2': 'Can you make two MOUSEs appear every time BOT1 gets one MOUSE?  Get 20 MOUSEs and score 2000 points.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
   'progressConditions' : [
-    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsBelow': 800 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 20, 'currentPointsBelow': 2000 }, 
       result: { success: false, message: msg.failedChainCharactersTimeout() } },
-    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 8, 'currentPointsBelow': 800 }, 
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 20, 'currentPointsBelow': 2000 }, 
       result: { success: false, message: msg.failedChainCharactersScore() } },
-    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsAtOrAbove': 800 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 20, 'currentPointsAtOrAbove': 2000 }, 
       result: { success: false, message: msg.failedChainCharactersItems() } },
-    { required: { 'collectedItemsAtOrAbove': 8, 'currentPointsAtOrAbove': 800 }, 
+    { required: { 'collectedItemsAtOrAbove': 20, 'currentPointsAtOrAbove': 2000 }, 
       result: { success: true, message: msg.successCharacter1() } }
+  ],
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_chain_characters:calloutPlaceTwo',
+      'element_id': '.droplet-gutter-line:nth-of-type(7)',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutPlaceTwo(),
+        },
+        'event': 'mouseup touchend',
+        'position': {
+          'my': 'top left',
+          'at': 'center right',
+          'adjust': {
+            'x': 40,
+            'y': 10
+          }
+        }
+      }
+    }
   ]
 };
 
@@ -9089,12 +9140,12 @@ levels.js_hoc2015_chain_characters_2 = {
   ],
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwo',
+      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwoWhenBird',
       'element_id': '.droplet-gutter-line:nth-of-type(12)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content' : {
-          'text': msg.calloutPlaceTwo(),
+          'text': msg.calloutPlaceTwoWhenBird(),
         },
         'event': 'mouseup touchend',
         'position': {
@@ -9151,7 +9202,7 @@ levels.js_hoc2015_change_setting = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"Time to visit another planet."',
-  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.',
+  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.  Then, get the pilots.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -9206,6 +9257,16 @@ levels.js_hoc2015_event_free = {
     'addPoints': { 'category': 'Commands' },
     'removePoints': { 'category': 'Commands' },
 
+    'goRight': { 'category': 'Commands' },
+    'goLeft': { 'category': 'Commands' },
+    'goUp': { 'category': 'Commands' },
+    'goDown': { 'category': 'Commands' },
+
+    'whenLeft': { 'category': 'Events' },
+    'whenRight': { 'category': 'Events' },
+    'whenUp': { 'category': 'Events' },
+    'whenDown': { 'category': 'Events' },
+
     'whenTouchObstacle': { 'category': 'Events' },
     'whenGetMan': { 'category': 'Events' },
     'whenGetPilot': { 'category': 'Events' },
@@ -9231,6 +9292,18 @@ levels.js_hoc2015_event_free = {
     'setBot("bot1");',
     'setBotSpeed("normal");',
     'playSound("character1sound5");',
+    'function whenUp() {',
+    '  ',
+    '}',
+    'function whenDown() {',
+    '  ',
+    '}',
+    'function whenLeft() {',
+    '  ',
+    '}',
+    'function whenRight() {',
+    '  ',
+    '}',
     ''].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
@@ -9242,7 +9315,6 @@ levels.js_hoc2015_event_free = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"You\'re on your own now, BOT1."',
-  'autoArrowSteer': true,
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_event_free:clickCategory',
@@ -9375,7 +9447,8 @@ levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
 
 },{"../block_utils":"/home/ubuntu/staging/apps/build/js/block_utils.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js"}],"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -9525,7 +9598,8 @@ module.exports.showParamDropdowns = true;
 
 },{"./apiJavascript.js":"/home/ubuntu/staging/apps/build/js/studio/apiJavascript.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js"}],"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')

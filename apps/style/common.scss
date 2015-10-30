@@ -846,10 +846,15 @@ input[type="radio"] {
     margin-right: 10px;
   }
 
+  svg {
+    pointer-events: none;
+  }
+
   .puzzle-rating-btn {
     fill: $light-gray;
     padding: 0 5px;
     cursor: pointer;
+    display: inline-block;
 
     &#like {
       &:hover {

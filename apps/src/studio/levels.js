@@ -727,8 +727,8 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
   background: 'cave',
   firstSpriteIndex: 5, // witch
   goalOverride: {
-    goal: 'red_fireball',
-    success: 'blue_fireball',
+    goalImage: 'red_fireball',
+    successImage: 'blue_fireball',
     imageWidth: 800
   },
   defaultEmotion: Emotions.ANGRY,
@@ -1684,9 +1684,7 @@ levels.js_hoc2015_move_right = {
   'timeoutFailureTick': 100,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal1'
   },
   "callouts": [
     {
@@ -1694,7 +1692,7 @@ levels.js_hoc2015_move_right = {
       "element_id": "#runButton",
       "qtip_config": {
         "content": {
-          "text": msg.calloutRunButton(),
+          "text": msg.calloutMoveRightRunButton(),
         },
         'position': {
           'my': 'top left',
@@ -1746,13 +1744,11 @@ levels.js_hoc2015_move_right_down = {
      [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],   
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],  
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
-  'instructions': '"We need more scrap metal. Can you get all the metal on this planet?"',
+  'instructions': '"We need more scrap metal. Can you get all the metal in this area?"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal2'
   },
   'progressConditions' : [
     { required: { 'allGoalsVisited': true },
@@ -1800,9 +1796,7 @@ levels.js_hoc2015_move_diagonal = {
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal1'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
@@ -1873,9 +1867,7 @@ levels.js_hoc2015_move_backtrack = {
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal1'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
@@ -1923,9 +1915,7 @@ levels.js_hoc2015_move_around = {
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal2'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
@@ -1974,9 +1964,7 @@ levels.js_hoc2015_move_finale = {
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal2'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
@@ -2034,8 +2022,6 @@ levels.js_hoc2015_event_two_items = {
   'showTimeoutRect': true,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100,
     'goalRenderOffsetX': 0
   },
 
@@ -2069,7 +2055,7 @@ levels.js_hoc2015_event_two_items = {
       }
     },
     {
-      'id': 'arrowsCallout',
+      'id': 'playlab:js_hoc2015_event_two_items:arrowsCallout',
       'element_id': '#upButton',
       'hide_target_selector': '#soft-buttons',
       'qtip_config': {
@@ -2134,9 +2120,7 @@ levels.js_hoc2015_event_four_items = {
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalAnimation': 'animatedGoal'
   },
 
   'progressConditions' : [
@@ -2193,9 +2177,7 @@ levels.js_hoc2015_score =
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalAnimation': 'animatedGoal'
   },
   'goal': {
     // The level uses completeOnSuccessConditionNotGoals, so make sure this
@@ -2214,6 +2196,24 @@ levels.js_hoc2015_score =
   ],
   'completeOnSuccessConditionNotGoals': true,
   'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_score:arrowsAutoSteerCallout',
+      'element_id': '#upButton',
+      'hide_target_selector': '#soft-buttons',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutUseArrowButtonsAutoSteer(),
+        },
+        'position': {
+          'my': 'top left',
+          'at': 'bottom left',
+          'adjust': {
+            'x': 30,
+            'y': 0
+          }
+        }
+      }
+    },
     {
       'id': 'playlab:js_hoc2015_score:placeCommandsAtTop',
       'element_id': '.droplet-gutter-line:nth-of-type(2)',
@@ -2274,7 +2274,7 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
   'instructions': '"Watch out for the MAN."',
-  'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN!',
+  'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN and get all the pilots!',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2390,7 +2390,7 @@ levels.js_hoc2015_chain_characters = {
   'wallMap': 'grid',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': null,
+    'addCharacter': { params: ['"mouse"'] },
     'playSound': null,
     'addPoints': null,
     'removePoints': null,
@@ -2403,8 +2403,8 @@ levels.js_hoc2015_chain_characters = {
     '',
     'function whenGetMouse() {',
     '  playSound("item6sound2");',
-    '  addCharacter("mouse");',
-    '  addCharacter("mouse");',
+    '  addPoints(100);',
+    '',
     '}',
     ].join('\n'),
   'sortDrawOrder': true,
@@ -2417,19 +2417,40 @@ levels.js_hoc2015_chain_characters = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"They\'re multiplying!"',
-  'instructions2': 'Add 100 points every time BOT1 gets a MOUSE. Can you get 800 points? ',
+  'instructions2': 'Can you make two MOUSEs appear every time BOT1 gets one MOUSE?  Get 20 MOUSEs and score 2000 points.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
   'progressConditions' : [
-    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsBelow': 800 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 20, 'currentPointsBelow': 2000 }, 
       result: { success: false, message: msg.failedChainCharactersTimeout() } },
-    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 8, 'currentPointsBelow': 800 }, 
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 20, 'currentPointsBelow': 2000 }, 
       result: { success: false, message: msg.failedChainCharactersScore() } },
-    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsAtOrAbove': 800 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 20, 'currentPointsAtOrAbove': 2000 }, 
       result: { success: false, message: msg.failedChainCharactersItems() } },
-    { required: { 'collectedItemsAtOrAbove': 8, 'currentPointsAtOrAbove': 800 }, 
+    { required: { 'collectedItemsAtOrAbove': 20, 'currentPointsAtOrAbove': 2000 }, 
       result: { success: true, message: msg.successCharacter1() } }
+  ],
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_chain_characters:calloutPlaceTwo',
+      'element_id': '.droplet-gutter-line:nth-of-type(7)',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutPlaceTwo(),
+        },
+        'event': 'mouseup touchend',
+        'position': {
+          'my': 'top left',
+          'at': 'center right',
+          'adjust': {
+            'x': 40,
+            'y': 10
+          }
+        }
+      }
+    }
   ]
 };
 
@@ -2491,12 +2512,12 @@ levels.js_hoc2015_chain_characters_2 = {
   ],
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwo',
+      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwoWhenBird',
       'element_id': '.droplet-gutter-line:nth-of-type(12)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content' : {
-          'text': msg.calloutPlaceTwo(),
+          'text': msg.calloutPlaceTwoWhenBird(),
         },
         'event': 'mouseup touchend',
         'position': {
@@ -2553,7 +2574,7 @@ levels.js_hoc2015_change_setting = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"Time to visit another planet."',
-  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.',
+  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.  Then, get the pilots.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2608,6 +2629,16 @@ levels.js_hoc2015_event_free = {
     'addPoints': { 'category': 'Commands' },
     'removePoints': { 'category': 'Commands' },
 
+    'goRight': { 'category': 'Commands' },
+    'goLeft': { 'category': 'Commands' },
+    'goUp': { 'category': 'Commands' },
+    'goDown': { 'category': 'Commands' },
+
+    'whenLeft': { 'category': 'Events' },
+    'whenRight': { 'category': 'Events' },
+    'whenUp': { 'category': 'Events' },
+    'whenDown': { 'category': 'Events' },
+
     'whenTouchObstacle': { 'category': 'Events' },
     'whenGetMan': { 'category': 'Events' },
     'whenGetPilot': { 'category': 'Events' },
@@ -2633,6 +2664,18 @@ levels.js_hoc2015_event_free = {
     'setBot("bot1");',
     'setBotSpeed("normal");',
     'playSound("character1sound5");',
+    'function whenUp() {',
+    '  ',
+    '}',
+    'function whenDown() {',
+    '  ',
+    '}',
+    'function whenLeft() {',
+    '  ',
+    '}',
+    'function whenRight() {',
+    '  ',
+    '}',
     ''].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
@@ -2644,7 +2687,6 @@ levels.js_hoc2015_event_free = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"You\'re on your own now, BOT1."',
-  'autoArrowSteer': true,
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_event_free:clickCategory',
