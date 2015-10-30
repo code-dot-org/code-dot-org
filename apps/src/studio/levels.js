@@ -753,11 +753,7 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
 levels.iceage_6 = utils.extend(levels.playlab_6, {
   background: 'tile',
   firstSpriteIndex: 3, // diego
-  goalOverride: {
-    goal: 'ia_projectile_1',
-    success: 'ia_projectile_1',
-    imageWidth: 800
-  }
+  goalOverride: {}
 });
 
 // The "repeat forever" block allows you to run code continuously. Can you
@@ -1292,6 +1288,15 @@ levels.playlab_9 = {
 
 levels.iceage_9 = utils.extend(levels.playlab_9, {
   background: 'flower',
+  toolbox:
+    tb(
+      blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
+      blockOfType('studio_setBackground', {VALUE: '"ice"'}) +
+      blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
+      blockOfType('studio_saySprite') +
+      blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
+      blockOfType('studio_changeScore')
+    ),
   requiredBlocks: [
     [{test: 'setBackground',
       type: 'studio_setBackground',
@@ -1300,7 +1305,45 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
       type: 'studio_setSpriteSpeed',
       titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
   ],
-  avatarList: ['sid', 'granny']
+  avatarList: ['sid', 'granny'],
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
+      '<statement name="DO">' +
+        blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
+          blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
+        ) +
+      '</statement>' +
+    '</block>' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="290">' +
+      '<title name="SPRITE2">0</title>' +
+      '<title name="SPRITE2">1</title>' +
+      '<next>' +
+        blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
+          blockOfType('studio_saySprite', {TEXT: msg.iceAge()})
+        ) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="410">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 8}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="510">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 2}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="610">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 1}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="710">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 4}) +
+      '</next>' +
+    '</block>'
 });
 
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
@@ -1670,13 +1713,13 @@ levels.js_hoc2015_move_right = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
-    [[0x1020000, 0x1020000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
-     [0x1020000, 0x1020000, 0x0000000, 0x0010000, 0x0020000, 0x0100000, 0x00, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
+    [[0x1020000, 0x1020000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],
+     [0x1020000, 0x1020000, 0x0000000, 0x0010000, 0x0020000, 0x0100000, 0x00, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],
      [0x0000000, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x0000000],
-     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],   
-     [0x0000000, 0x0000000, 0x0000000, 0x0100000, 0x0010000, 0x0120000, 0x00, 0x0000000], 
-     [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],  
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0100000, 0x0010000, 0x0120000, 0x00, 0x0000000],
+     [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000]],
 
   'instructions': '"We need that scrap metal. BOTX, can you get it?"',
@@ -1735,14 +1778,14 @@ levels.js_hoc2015_move_right_down = {
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
-  'map': 
-    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x1100000, 0x1100000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x1100000, 0x1100000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0000000, 0x00],  
-     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],   
-     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],  
+  'map':
+    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x1100000, 0x1100000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x1100000, 0x1100000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
   'instructions': '"We need more scrap metal. Can you get all the metal on this planet?"',
   'ticksBeforeFaceSouth': 9,
@@ -1753,7 +1796,7 @@ levels.js_hoc2015_move_right_down = {
   'progressConditions' : [
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
@@ -1781,15 +1824,15 @@ levels.js_hoc2015_move_diagonal = {
   'slowJsExecutionFactor': 10,
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
-  'floatingScore': true,  
+  'floatingScore': true,
   'map':
-    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000, 0x0000000],  
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000, 0x0000000],
      [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000],
-     [0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000, 0x0000000],   
+     [0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000, 0x0000000],
      [0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
-     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000],   
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000],
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000]],
   'embed': 'false',
   'instructions': '"Watch out for the GUY!"',
@@ -1803,7 +1846,7 @@ levels.js_hoc2015_move_diagonal = {
       result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
   ],
   "callouts": [
@@ -1854,14 +1897,14 @@ levels.js_hoc2015_move_backtrack = {
   'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
-  'map': 
-    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
-     [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00], 
-     [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],  
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+  'map':
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
-     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
   'instructions': '"Go quickly, BOTX."',
   'ticksBeforeFaceSouth': 9,
@@ -1874,7 +1917,7 @@ levels.js_hoc2015_move_backtrack = {
       result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
@@ -1902,13 +1945,13 @@ levels.js_hoc2015_move_around = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
-    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000, 0x00],  
-     [0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0000000, 0x00], 
+    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000000, 0x20, 0x0140000, 0x0000000, 0x0000001, 0x0000000, 0x00],
-     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x00],  
-     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x00],
+     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
   'embed': 'false',
   'instructions': '"It\'s up to you, BOTX!"',
@@ -1922,7 +1965,7 @@ levels.js_hoc2015_move_around = {
       result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
@@ -1951,13 +1994,13 @@ levels.js_hoc2015_move_finale = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
-    [[0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000000, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000000, 0x0000000],  
+    [[0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000000, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000000, 0x0000000],
      [0x0000000, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
      [0x0000000, 0x0000000, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
-     [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],  
+     [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
      [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000]],
   'embed': 'false',
   'instructions': '"We need 4 more pieces of metal. Can you find them?"',
@@ -1971,7 +2014,7 @@ levels.js_hoc2015_move_finale = {
       result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
@@ -1993,7 +2036,7 @@ levels.js_hoc2015_event_two_items = {
     'whenDown': null
   },
   'startBlocks': [
-    'function whenUp() {', 
+    'function whenUp() {',
     '  ',
     '}',
     'function whenDown() {',
@@ -2026,9 +2069,9 @@ levels.js_hoc2015_event_two_items = {
   },
 
   'progressConditions' : [
-    { required: { 'allGoalsVisited': true }, 
+    { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successCharacter1() } },
-    { required: { 'timedOut': true }, 
+    { required: { 'timedOut': true },
       result: { success: false, message: msg.failedTwoItemsTimeout() } }
   ],
 
@@ -2124,9 +2167,9 @@ levels.js_hoc2015_event_four_items = {
   },
 
   'progressConditions' : [
-    { required: { 'allGoalsVisited': true }, 
+    { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successCharacter1() } },
-    { required: { 'timedOut': true }, 
+    { required: { 'timedOut': true },
       result: { success: false, message: msg.failedFourItemsTimeout() } }
   ]
 };
@@ -2163,13 +2206,13 @@ levels.js_hoc2015_score =
   'floatingScore': true,
   'edgeCollisions': 'true',
   'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
     [1, 0, 0, 16, 0, 0, 0, 1],
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 1,  0, 0, 0, 0]],
   'instructions': '"Reach the GOALs!"',
   'instructions2': "Let's add points. Add 100 points when BOT1 gets each pilot.",
@@ -2185,13 +2228,13 @@ levels.js_hoc2015_score =
     successCondition: function () { return false; }
   },
   'progressConditions' : [
-    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 },
       result: { success: false, message: msg.failedScoreTimeout() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 },
       result: { success: false, message: msg.failedScoreScore() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 },
       result: { success: false, message: msg.failedScoreGoals() } },
-    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 }, 
+    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 },
       result: { success: true, message: msg.successCharacter1() } }
   ],
   'completeOnSuccessConditionNotGoals': true,
@@ -2281,13 +2324,13 @@ levels.js_hoc2015_win_lose = {
   ],
 
   'progressConditions' : [
-    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 },
       result: { success: false, message: msg.failedWinLoseTimeout() } },
-    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 }, 
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 },
       result: { success: false, message: msg.failedWinLoseScore() } },
-    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 },
       result: { success: false, message: msg.failedWinLoseGoals() } },
-    { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 }, 
+    { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 },
       result: { success: true, message: msg.successCharacter1() } }
   ]
 };
@@ -2324,13 +2367,13 @@ levels.js_hoc2015_add_characters = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0],
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 16, 0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 0,  0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"I\'m seeing signs of increased activity on this planet."',
@@ -2357,9 +2400,9 @@ levels.js_hoc2015_add_characters = {
   ],
 
   'progressConditions' : [
-    { required: { 'collectedItemsAtOrAbove': 3 }, 
+    { required: { 'collectedItemsAtOrAbove': 3 },
       result: { success: true, message: msg.successCharacter1() } },
-    { required: { 'timedOut': true, 'collectedItemsBelow': 3 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
       result: { success: false, message: msg.failedAddCharactersTimeout() } }
   ]
 };
@@ -2404,13 +2447,13 @@ levels.js_hoc2015_chain_characters = {
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
   'progressConditions' : [
-    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsBelow': 800 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsBelow': 800 },
       result: { success: false, message: msg.failedChainCharactersTimeout() } },
-    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 8, 'currentPointsBelow': 800 }, 
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 8, 'currentPointsBelow': 800 },
       result: { success: false, message: msg.failedChainCharactersScore() } },
-    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsAtOrAbove': 800 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsAtOrAbove': 800 },
       result: { success: false, message: msg.failedChainCharactersItems() } },
-    { required: { 'collectedItemsAtOrAbove': 8, 'currentPointsAtOrAbove': 800 }, 
+    { required: { 'collectedItemsAtOrAbove': 8, 'currentPointsAtOrAbove': 800 },
       result: { success: true, message: msg.successCharacter1() } }
   ]
 };
@@ -2466,9 +2509,9 @@ levels.js_hoc2015_chain_characters_2 = {
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
   'progressConditions' : [
-    { required: { 'timedOut': true, 'collectedItemsBelow': 14 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 14 },
       result: { success: false, message: msg.failedChainCharacters2Timeout() } },
-    { required: { 'collectedItemsAtOrAbove': 14 }, 
+    { required: { 'collectedItemsAtOrAbove': 14 },
       result: { success: true, message: msg.successCharacter1() } }
   ],
   'callouts': [
@@ -2562,9 +2605,9 @@ levels.js_hoc2015_change_setting = {
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
       result: { success: false, message: msg.failedChangeSettingTimeout() } },
     // If all items are collected, but either property not set?  Failure.
-    { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 }, 
+    { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 },
       result: { success: false, message: msg.failedChangeSettingSettings() } },
-    { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 }, 
+    { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 },
       result: { success: false, message: msg.failedChangeSettingSettings() } }
   ]
 };
