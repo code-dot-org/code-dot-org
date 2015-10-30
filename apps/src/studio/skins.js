@@ -395,6 +395,10 @@ function loadHoc2015(skin, assetUrl) {
   // Spritesheet for animated goal.
   skin.animatedGoal = skin.assetUrl('goal_idle.png');
 
+  // Dimensions of the goal sprite.
+  skin.goalSpriteWidth = 100;
+  skin.goalSpriteHeight = 100;
+
   // How many frames in the animated goal spritesheet.
   skin.animatedGoalFrames = 16;
 
@@ -708,6 +712,10 @@ function loadHoc2015x(skin, assetUrl) {
   // Spritesheet for animated goal.
   skin.goal1 = skin.assetUrl('goal1.png');
   skin.goal2 = skin.assetUrl('goal2.png');
+
+  // Dimensions of the goal sprite.
+  skin.goalSpriteWidth = 50;
+  skin.goalSpriteHeight = 50;
 
   // How many frames in the animated goal spritesheet.
   skin.animatedGoalFrames = 16;
