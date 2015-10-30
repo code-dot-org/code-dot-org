@@ -36,6 +36,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     get_show_script_level_page(@script, @script_level)
     assert_response :success
+
     assert_equal @script_level, assigns(:script_level)
   end
 
