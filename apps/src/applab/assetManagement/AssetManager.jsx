@@ -1,5 +1,6 @@
 var assetsApi = require('../../clientApi').assets;
 var AssetRow = require('./AssetRow.jsx');
+var AssetUploader = require('./AssetUploader.jsx');
 var assetListStore = require('./assetListStore');
 
 var errorMessages = {
@@ -60,20 +61,11 @@ module.exports = React.createClass({
   },
 
   /**
-   * We've hidden the <input type="file"/> and replaced it with a big button.
-   * Forward clicks on the button to the hidden file input.
-   */
-  fileUploadClicked: function () {
-    var uploader = React.findDOMNode(this.refs.uploader);
-    uploader.click();
-  },
-
-  /**
    * Uploads the current file selected by the user.
    * TODO: HTML5 File API isn't available in IE9, need a fallback.
    */
-  upload: function () {
-    var file = React.findDOMNode(this.refs.uploader).files[0];
+  upload: function (uploader) {
+    var file = React.findDOMNode(uploader).files[0];
     if (file.type && this.props.typeFilter) {
       var type = file.type.split('/')[0];
       if (type !== this.props.typeFilter) {
@@ -106,27 +98,15 @@ module.exports = React.createClass({
   },
 
   render: function () {
-    var uploadButton = (
-      <div>
-        <input
-            ref="uploader"
-            type="file"
-            accept={(this.props.typeFilter || '*') + '/*'}
-            style={{display: 'none'}}
-            onChange={this.upload} />
-        <button
-            onClick={this.fileUploadClicked}
-            className="share"
-            id="upload-asset"
-            disabled={!this.props.uploadsEnabled}>
-          <i className="fa fa-upload"></i>
-          &nbsp;Upload File
-        </button>
-        <span style={{margin: '0 10px'}} id="manage-asset-status">
-          {this.state.statusMessage}
-        </span>
-      </div>
-    );
+    var uploadButton = <div>
+      <AssetUploader
+        uploadsEnabled={this.props.uploadsEnabled}
+        typeFilter={this.props.typeFilter}
+        onUpload={this.upload}/>
+      <span style={{margin: '0 10px'}} id="manage-asset-status">
+        {this.state.statusMessage}
+      </span>
+    </div>;
 
     var assetList;
     // If `this.state.assets` is null, the asset list is still loading. If it's
