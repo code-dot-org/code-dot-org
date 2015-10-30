@@ -21,7 +21,6 @@ nav: how_to_nav
 - Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 
-
 ## How to host an Hour of Code event
 
 ## 1) Sign up
