@@ -79,7 +79,7 @@ class ApiController < ApplicationController
         next unless response
         {
           student: student_hash,
-          stage: script_level.stage.position,
+          stage: script_level.stage.localized_title,
           puzzle: script_level.position,
           question: script_level.level.properties['title'],
           response: response,

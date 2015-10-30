@@ -28,6 +28,7 @@ class Blockly < Level
     start_blocks
     toolbox_blocks
     required_blocks
+    recommended_blocks
     ani_gif_url
     is_k1
     skip_instructions_popup
@@ -65,7 +66,7 @@ class Blockly < Level
 
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
-    %w(start_blocks toolbox_blocks required_blocks)
+    %w(start_blocks toolbox_blocks required_blocks recommended_blocks)
   end
 
   def to_xml(options={})
@@ -179,6 +180,7 @@ class Blockly < Level
       # To override the default camelization add an entry to this hash.
       overrides = {
         required_blocks: 'levelBuilderRequiredBlocks',
+        recommended_blocks: 'levelBuilderRecommendedBlocks',
         toolbox_blocks: 'toolbox',
         x: 'initialX',
         y: 'initialY',
@@ -201,6 +203,10 @@ class Blockly < Level
         level_prop['startBlocks'] = level.try(:project_template_level).try(:start_blocks) || level.start_blocks
         level_prop['toolbox'] = level.try(:project_template_level).try(:toolbox_blocks) || level.toolbox_blocks
         level_prop['codeFunctions'] = level.try(:project_template_level).try(:code_functions) || level.code_functions
+      end
+
+      if level.is_a? Applab
+        level_prop['startHtml'] = level.try(:project_template_level).try(:start_html) || level.start_html
       end
 
       if level.is_a?(Maze) && level.step_mode

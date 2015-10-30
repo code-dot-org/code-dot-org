@@ -22,4 +22,12 @@ nav: how_to_nav
 
 6. **More [prizes](<%= resolve_url('/prizes') %>) for EVERY organizer.** Every participating educator will receive thank you gifts. And in each state, one participating school will win $10,000 in technology for their school! 
 
+## What comes after the Hour of Code?
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+- The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey: 
+
+- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+- [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+
+
 <%= view :signup_button %>

@@ -5,7 +5,7 @@ subject: Can you get another volunteer?
 
 You’re one of the first engineers to sign up for the Hour of Code — **thank you**.
 
-### 3,295 volunteers have signed up.
+### 3,372 volunteers have signed up.
 
 ### But 13,000 teachers want technical volunteers to help with their Hour of Code in December.
 

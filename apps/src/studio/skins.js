@@ -16,6 +16,138 @@ var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 
+function loadIceAge(skin, assetUrl) {
+  skin.defaultBackground = 'icy';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'ia_projectile_1',
+    'ia_projectile_2',
+    'ia_projectile_3',
+    'ia_projectile_4',
+    'ia_projectile_5',
+  ];
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_ia_projectile_1',
+    'item_ia_projectile_2',
+    'item_ia_projectile_3',
+    'item_ia_projectile_4',
+    'item_ia_projectile_5',
+  ];
+
+  // Images
+  skin.ia_projectile_1 = skin.assetUrl('ia_projectile_1.png');
+  skin.ia_projectile_2 = skin.assetUrl('ia_projectile_2.png');
+  skin.ia_projectile_3 = skin.assetUrl('ia_projectile_3.png');
+  skin.ia_projectile_4 = skin.assetUrl('ia_projectile_4.png');
+  skin.ia_projectile_5 = skin.assetUrl('ia_projectile_5.png');
+
+  // TODO: proper item class names
+  skin.item_ia_projectile_1 = skin.assetUrl('ia_projectile_1.png');
+  skin.item_ia_projectile_2 = skin.assetUrl('ia_projectile_2.png');
+  skin.item_ia_projectile_3 = skin.assetUrl('ia_projectile_3.png');
+  skin.item_ia_projectile_4 = skin.assetUrl('ia_projectile_4.png');
+  skin.item_ia_projectile_5 = skin.assetUrl('ia_projectile_5.png');
+
+  skin.explosion = skin.assetUrl('explosion.png');
+  skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
+  skin.explosionFrames = 17;
+  skin.fadeExplosion = false;
+  skin.timePerExplosionFrame = 40;
+
+  skin.grassy = {
+    background: skin.assetUrl('background.jpg'),
+  };
+  skin.tile = {
+    background: skin.assetUrl('background_tile.jpg'),
+  };
+  skin.leafy = {
+    background: skin.assetUrl('background_leafy.jpg'),
+  };
+  skin.icy = {
+    background: skin.assetUrl('background_icy.jpg'),
+  };
+  skin.flower = {
+    background: skin.assetUrl('background_flower.jpg'),
+  };
+
+  skin.avatarList = ["manny", "sid", "scrat", "diego", "granny"];
+
+  /**
+   * Sprite thumbs generated with:
+   * `brew install graphicsmagick`
+   * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
+   */
+  skin.avatarList.forEach(function (name) {
+    skin[name] = {
+      sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 19,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: 12,
+        emotionCycles: 0,
+        extraEmotions: 3
+      },
+      timePerFrame: 100
+    };
+  });
+
+
+  skin.backgroundChoices = [
+    [msg.setBackgroundRandom(), RANDOM_VALUE],
+    [msg.setBackgroundGrassy(), '"grassy"'],
+    [msg.setBackgroundTile(), '"tile"'],
+    [msg.setBackgroundLeafy(), '"leafy"'],
+    [msg.setBackgroundIcy(), '"icy"'],
+    [msg.setBackgroundFlower(), '"flower"']];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.backgroundChoicesK1 = [
+    [skin.grassy.background, '"grassy"'],
+    [skin.tile.background, '"tile"'],
+    [skin.leafy.background, '"leafy"'],
+    [skin.icy.background, '"icy"'],
+    [skin.flower.background, '"flower"'],
+    [skin.randomPurpleIcon, RANDOM_VALUE]];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteManny(), '"manny"'],
+    [msg.setSpriteSid(), '"sid"'],
+    [msg.setSpriteScrat(), '"scrat"'],
+    [msg.setSpriteDiego(), '"diego"'],
+    [msg.setSpriteGranny(), '"granny"']];
+
+  skin.projectileChoices = [
+    [msg.projectileIAProjectile1(), '"ia_projectile_1"'],
+    [msg.projectileIAProjectile2(), '"ia_projectile_2"'],
+    [msg.projectileIAProjectile3(), '"ia_projectile_3"'],
+    [msg.projectileIAProjectile4(), '"ia_projectile_4"'],
+    [msg.projectileIAProjectile5(), '"ia_projectile_5"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.itemChoices = [
+    [msg.itemIAProjectile1(), '"item_ia_projectile_1"'],
+    [msg.itemIAProjectile2(), '"item_ia_projectile_2"'],
+    [msg.itemIAProjectile3(), '"item_ia_projectile_3"'],
+    [msg.itemIAProjectile4(), '"item_ia_projectile_4"'],
+    [msg.itemIAProjectile5(), '"item_ia_projectile_5"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
+}
+
 function loadInfinity(skin, assetUrl) {
   skin.preloadAssets = true;
 
@@ -492,7 +624,7 @@ function loadHoc2015(skin, assetUrl) {
     'move1', 'move2', 'move3'
   ];
 
-  skin.music = [ 'song1' ];
+  skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
@@ -579,6 +711,9 @@ function loadHoc2015x(skin, assetUrl) {
 
   // How many frames in the animated goal spritesheet.
   skin.animatedGoalFrames = 16;
+
+  // Special effect applied to goal sprites
+  skin.goalEffect = 'glow';
 
   // How long to show each frame of the optional goal animation.
   skin.timePerGoalAnimationFrame = 100;
@@ -676,7 +811,7 @@ function loadHoc2015x(skin, assetUrl) {
     'move1', 'move2', 'move3', 'move4'
   ];
 
-  skin.music = [ 'song1' ];
+  skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
@@ -708,6 +843,29 @@ function loadHoc2015x(skin, assetUrl) {
   skin.itemChoices = [
     ];
 }
+
+/**
+ * Music tracks and associated metadata for both hoc2015 and hoc2015x tutorials.
+ * Individual levels don't load all of these, only the subset they request.
+ * @const {MusicTrackDefinition[]}
+ */
+var HOC2015_MUSIC_METADATA = [
+  { name: 'song1' },
+  { name: 'song2' },
+  { name: 'song3' },
+  { name: 'song4', volume: 0.85 },
+  { name: 'song5' },
+  { name: 'song6' },
+  { name: 'song7' },
+  { name: 'song8', volume: 0.85 },
+  { name: 'song9', volume: 0.85 },
+  { name: 'song10' },
+  { name: 'song11', volume: 0.85 },
+  { name: 'song12', volume: 0.85 },
+  { name: 'song13' },
+  { name: 'song14' },
+  { name: 'song15' }
+];
 
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
@@ -954,6 +1112,9 @@ exports.load = function(assetUrl, id) {
 
   // take care of items specific to skins
   switch (skin.id) {
+    case 'iceage':
+      loadIceAge(skin, assetUrl);
+      break;
     case 'infinity':
       loadInfinity(skin, assetUrl);
       break;

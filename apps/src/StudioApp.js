@@ -99,35 +99,55 @@ var StudioApp = function () {
   /**
   * The ideal number of blocks to solve this level.  Users only get 2
   * stars if they use more than this number.
-  * @type {!number=}
+  * @type {number}
   */
   this.IDEAL_BLOCK_NUM = undefined;
 
   /**
-  * An array of dictionaries representing required blocks.  Keys are:
-  * - test (required): A test whether the block is present, either:
-  *   - A string, in which case the string is searched for in the generated code.
-  *   - A single-argument function is called on each user-added block
-  *     individually.  If any call returns true, the block is deemed present.
-  *     "User-added" blocks are ones that are neither disabled or undeletable.
-  * - type (required): The type of block to be produced for display to the user
-  *   if the test failed.
-  * - titles (optional): A dictionary, where, for each KEY-VALUE pair, this is
-  *   added to the block definition: <title name="KEY">VALUE</title>.
-  * - value (optional): A dictionary, where, for each KEY-VALUE pair, this is
-  *   added to the block definition: <value name="KEY">VALUE</value>
-  * - extra (optional): A string that should be blacked between the "block"
-  *   start and end tags.
-  * @type {!Array=}
+   * @typedef {Object} TestableBlock
+   * @property {string|function} test - A test whether the block is
+   *           present, either:
+   *           - A string, in which case the string is searched for in
+   *             the generated code.
+   *           - A single-argument function is called on each user-added
+   *             block individually.  If any call returns true, the block
+   *             is deemed present.  "User-added" blocks are ones that are
+   *             neither disabled or undeletable.
+   * @property {string} type - The type of block to be produced for
+   *           display to the user if the test failed.
+   * @property {Object} [titles] - A dictionary, where, for each
+   *           KEY-VALUE pair, this is added to the block definition:
+   *           <title name="KEY">VALUE</title>.
+   * @property {Object} [value] - A dictionary, where, for each
+   *           KEY-VALUE pair, this is added to the block definition:
+   *           <value name="KEY">VALUE</value>
+   * @property {string} [extra] - A string that should be blacked
+   *           between the "block" start and end tags.
+   */
+
+  /**
+  * @type {!TestableBlock[]}
   */
   this.requiredBlocks_ = [];
 
   /**
   * The number of required blocks to give hints about at any one time.
   * Set this to Infinity to show all.
-  * @type {!number=}
+  * @type {number}
   */
   this.maxRequiredBlocksToFlag_ = 1;
+
+  /**
+  * @type {!TestableBlock[]}
+  */
+  this.recommendedBlocks_ = [];
+
+  /**
+  * The number of recommended blocks to give hints about at any one time.
+  * Set this to Infinity to show all.
+  * @type {number}
+  */
+  this.maxRecommendedBlocksToFlag_ = 1;
 
   /**
   * The number of attempts (how many times the run button has been pressed)
@@ -1137,7 +1157,8 @@ StudioApp.prototype.displayFeedback = function(options) {
   }
 
   this.feedback_.displayFeedback(options, this.requiredBlocks_,
-      this.maxRequiredBlocksToFlag_);
+      this.maxRequiredBlocksToFlag_, this.recommendedBlocks_,
+      this.maxRecommendedBlocksToFlag_);
 };
 
 /**
@@ -1148,7 +1169,7 @@ StudioApp.prototype.displayFeedback = function(options) {
  */
 StudioApp.prototype.getTestResults = function(levelComplete, options) {
   return this.feedback_.getTestResults(levelComplete,
-      this.requiredBlocks_, this.checkForEmptyBlocks_, options);
+      this.requiredBlocks_, this.recommendedBlocks_, this.checkForEmptyBlocks_, options);
 };
 
 // Builds the dom to get more info from the user. After user enters info
@@ -1327,6 +1348,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
+  this.recommendedBlocks_ = config.level.recommendedBlocks || [];
   this.startBlocks_ = config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || MAX_VISUALIZATION_WIDTH;
@@ -1704,8 +1726,9 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   if (config.level.edit_blocks) {
     this.checkForEmptyBlocks_ = false;
     if (config.level.edit_blocks === 'required_blocks' ||
-      config.level.edit_blocks === 'toolbox_blocks') {
-      // Don't show when run block for toolbox/required block editing
+        config.level.edit_blocks === 'toolbox_blocks' ||
+        config.level.edit_blocks === 'recommended_blocks') {
+      // Don't show when run block for toolbox/required/recommended block editing
       config.forceInsertTopBlock = null;
     }
   }
