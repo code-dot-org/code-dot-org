@@ -94,6 +94,6 @@ Dashboard::Application.configure do
   config.react.variant = :production
   config.lograge.enabled = true
 
-  # don't act like a levelbuilder
-  config.levelbuilder_mode = false
+  # don't act like a levelbuilder by default
+  config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 end

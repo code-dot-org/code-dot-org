@@ -83,6 +83,6 @@ Dashboard::Application.configure do
   # Whether or not to display pretty shared js assets
   config.pretty_sharedjs = true
 
-  # don't act like a levelbuilder
-  config.levelbuilder_mode = false
+  # don't act like a levelbuilder by default
+  config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 end

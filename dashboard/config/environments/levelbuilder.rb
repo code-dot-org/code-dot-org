@@ -5,6 +5,6 @@ Dashboard::Application.configure do
   # Show full error reports
   config.consider_all_requests_local = true
 
-  # act like a levelbuilder
-  config.levelbuilder_mode = true
+  # don't act like a levelbuilder by default
+  config.levelbuilder_mode = CDO.with_default(true).levelbuilder_mode
 end
