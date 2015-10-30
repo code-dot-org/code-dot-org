@@ -43,7 +43,7 @@ class DCDOBase
   def self.create
     if Rails.env.test?
       adapter = MemoryAdapter.new
-    elsif Rails.env.development
+    elsif Rails.env.development?
       adapter = JSONFileDatastoreAdapter.new CDO.dcdo_table_name
     else
       adapter = DynamoDBAdapter.new CDO.dcdo_table_name
