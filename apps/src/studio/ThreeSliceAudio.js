@@ -12,6 +12,8 @@
  */
 'use strict';
 
+var utils = require('../utils');
+
 var debugLogging = false;
 function debug(msg) {
   if (debugLogging && console && console.info) {
@@ -35,22 +37,33 @@ var PlaybackState = {
  * system.
  *
  * @param {AudioPlayer} audioPlayer
- * @param {string} begin - Audio clip name for start of sound.
- * @param {string} loop - Audio clip name for loopable part of sound.
- * @param {string} end - Audio clip name for end of sound.
+ * @param {Object} options
+ * @param {string} [options.begin] - Audio clip name for start of sound.
+ * @param {string} [options.loop] - Audio clip name for loopable part of sound.
+ * @param {string} [options.end] - Audio clip name for end of sound.
+ * @param {number} [options.volume] - Playback volume for the whole effect
+ *        (applied to each individual clip), default to 1 which is normal gain.
  * @constructor
  */
-var ThreeSliceAudio = function (audioPlayer, begin, loop, end) {
+var ThreeSliceAudio = function (audioPlayer, options) {
+  options = utils.valueOr(options, {});
   /** @private {PlaybackState} */
   this.state_ = PlaybackState.NONE;
+
   /** @private {AudioPlayer} */
   this.audioPlayer_ = audioPlayer;
+
   /** @private {string} */
-  this.beginClipName_ = begin;
+  this.beginClipName_ = options.begin;
+
   /** @private {string} */
-  this.loopClipName_ = loop;
+  this.loopClipName_ = options.loop;
+
   /** @private {string} */
-  this.endClipName_ = end;
+  this.endClipName_ = options.end;
+
+  /** @private {number} */
+  this.volume_ = utils.valueOr(options.volume, 1);
 };
 module.exports = ThreeSliceAudio;
 
@@ -85,19 +98,29 @@ ThreeSliceAudio.prototype.enterState_ = function (state) {
   var callback = this.whenSoundStopped_.bind(this, state);
   if (state === PlaybackState.BEGIN) {
     if (this.beginClipName_) {
-      this.audioPlayer_.play(this.beginClipName_, { onEnded: callback });
+      this.audioPlayer_.play(this.beginClipName_, {
+        volume: this.volume_,
+        onEnded: callback
+      });
     } else {
       this.enterState_(PlaybackState.LOOP);
     }
   } else if (state === PlaybackState.LOOP) {
     if (this.loopClipName_) {
-      this.audioPlayer_.play(this.loopClipName_, { loop: true, onEnded: callback });
+      this.audioPlayer_.play(this.loopClipName_, {
+        volume: this.volume_,
+        loop: true,
+        onEnded: callback
+      });
     } else {
       this.enterState_(PlaybackState.END);
     }
   } else if (state === PlaybackState.END) {
     if (this.endClipName_) {
-      this.audioPlayer_.play(this.endClipName_, { onEnded: callback });
+      this.audioPlayer_.play(this.endClipName_, {
+        volume: this.volume_,
+        onEnded: callback
+      });
     } else {
       this.enterState_(PlaybackState.NONE);
     }

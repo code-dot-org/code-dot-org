@@ -4091,7 +4091,7 @@ Studio.setSprite = function (opts) {
     Studio.movementAudioEffects[spriteValue] = [];
     if (studioApp.cdoSounds) {
       Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
-        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
+        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption);
       });
     }
   }
