@@ -4105,13 +4105,15 @@ Studio.setSprite = function (opts) {
   }
 
   // Set up movement audio for the selected sprite (clips should be preloaded)
+  // First, stop any movement audio for the current character.
+  Studio.movementAudioOff();
   if (!Studio.movementAudioEffects[spriteValue] && skin.avatarList) {
     var spriteSkin = skin[spriteValue] || {};
     var audioConfig = spriteSkin.movementAudio || [];
     Studio.movementAudioEffects[spriteValue] = [];
     if (studioApp.cdoSounds) {
       Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
-        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
+        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption);
       });
     }
   }
@@ -4121,6 +4123,10 @@ Studio.setSprite = function (opts) {
   Studio.displaySprite(spriteIndex);
 };
 
+var moveAudioState = false;
+Studio.isMovementAudioOn = function () {
+  return moveAudioState;
+};
 
 Studio.movementAudioOn = function () {
   Studio.movementAudioOff();
@@ -4129,12 +4135,14 @@ Studio.movementAudioOn = function () {
   if (Studio.currentMovementAudio) {
     Studio.currentMovementAudio.on();
   }
+  moveAudioState = true;
 };
 
 Studio.movementAudioOff = function () {
   if (Studio.currentMovementAudio) {
     Studio.currentMovementAudio.off();
   }
+  moveAudioState = false;
 };
 
 var p = function (x,y) {
@@ -4772,8 +4780,7 @@ Studio.moveSingle = function (opts) {
       sprite.y = projectedY;
     }
 
-    if (opts.dir !== Studio.lastMoveSingleDir &&
-        lastMove === Infinity || Studio.tickCount > lastMove + 1) {
+    if (!Studio.isMovementAudioOn()) {
       Studio.movementAudioOn();
     }
   }
@@ -5948,12 +5955,12 @@ function loadHoc2015(skin, assetUrl) {
   });
 
   skin.bot1.movementAudio = [
-    { begin: 'bot1_move1_start', loop: 'bot1_move1_loop', end: 'bot1_move1_end' },
-    { begin: 'bot1_move2_start', loop: 'bot1_move2_loop', end: 'bot1_move2_end' },
-    { begin: 'bot1_move3_start', loop: 'bot1_move3_loop', end: 'bot1_move3_end' }
+    { begin: 'bot1_move1_start', loop: 'bot1_move1_loop', end: 'bot1_move1_end', volume: 2.2 },
+    { begin: 'bot1_move2_start', loop: 'bot1_move2_loop', end: 'bot1_move2_end', volume: 2.2 },
+    { begin: 'bot1_move3_start', loop: 'bot1_move3_loop', end: 'bot1_move3_end', volume: 2.2 }
   ];
   skin.bot2.movementAudio = [
-    { loop: 'bot2_move_loop', end: 'bot2_move_end' }
+    { loop: 'bot2_move_loop', end: 'bot2_move_end', volume: 0.8 }
   ];
 
   skin.preventProjectileLoop = function (className) {
@@ -12642,6 +12649,8 @@ exports.isKeyDown = function (keyCode) {
  */
 'use strict';
 
+var utils = require('../utils');
+
 var debugLogging = false;
 function debug(msg) {
   if (debugLogging && console && console.info) {
@@ -12665,22 +12674,33 @@ var PlaybackState = {
  * system.
  *
  * @param {AudioPlayer} audioPlayer
- * @param {string} begin - Audio clip name for start of sound.
- * @param {string} loop - Audio clip name for loopable part of sound.
- * @param {string} end - Audio clip name for end of sound.
+ * @param {Object} options
+ * @param {string} [options.begin] - Audio clip name for start of sound.
+ * @param {string} [options.loop] - Audio clip name for loopable part of sound.
+ * @param {string} [options.end] - Audio clip name for end of sound.
+ * @param {number} [options.volume] - Playback volume for the whole effect
+ *        (applied to each individual clip), default to 1 which is normal gain.
  * @constructor
  */
-var ThreeSliceAudio = function (audioPlayer, begin, loop, end) {
+var ThreeSliceAudio = function (audioPlayer, options) {
+  options = utils.valueOr(options, {});
   /** @private {PlaybackState} */
   this.state_ = PlaybackState.NONE;
+
   /** @private {AudioPlayer} */
   this.audioPlayer_ = audioPlayer;
+
   /** @private {string} */
-  this.beginClipName_ = begin;
+  this.beginClipName_ = options.begin;
+
   /** @private {string} */
-  this.loopClipName_ = loop;
+  this.loopClipName_ = options.loop;
+
   /** @private {string} */
-  this.endClipName_ = end;
+  this.endClipName_ = options.end;
+
+  /** @private {number} */
+  this.volume_ = utils.valueOr(options.volume, 1);
 };
 module.exports = ThreeSliceAudio;
 
@@ -12715,19 +12735,29 @@ ThreeSliceAudio.prototype.enterState_ = function (state) {
   var callback = this.whenSoundStopped_.bind(this, state);
   if (state === PlaybackState.BEGIN) {
     if (this.beginClipName_) {
-      this.audioPlayer_.play(this.beginClipName_, { onEnded: callback });
+      this.audioPlayer_.play(this.beginClipName_, {
+        volume: this.volume_,
+        onEnded: callback
+      });
     } else {
       this.enterState_(PlaybackState.LOOP);
     }
   } else if (state === PlaybackState.LOOP) {
     if (this.loopClipName_) {
-      this.audioPlayer_.play(this.loopClipName_, { loop: true, onEnded: callback });
+      this.audioPlayer_.play(this.loopClipName_, {
+        volume: this.volume_,
+        loop: true,
+        onEnded: callback
+      });
     } else {
       this.enterState_(PlaybackState.END);
     }
   } else if (state === PlaybackState.END) {
     if (this.endClipName_) {
-      this.audioPlayer_.play(this.endClipName_, { onEnded: callback });
+      this.audioPlayer_.play(this.endClipName_, {
+        volume: this.volume_,
+        onEnded: callback
+      });
     } else {
       this.enterState_(PlaybackState.NONE);
     }
@@ -12754,7 +12784,7 @@ ThreeSliceAudio.prototype.whenSoundStopped_ = function (stoppedState) {
 };
 
 
-},{}],"/home/ubuntu/staging/apps/build/js/studio/MusicController.js":[function(require,module,exports){
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/studio/MusicController.js":[function(require,module,exports){
 /** @file The maestro! Helper that knows which music tracks can be played, and
  *        which one is playing now, and selects and plays them appropriately. */
 /* jshint
