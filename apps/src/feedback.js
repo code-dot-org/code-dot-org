@@ -897,11 +897,10 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
 };
 
 /**
- * Display the "Clear Puzzle" confirmation dialog.  Calls `callback` if the user
- * confirms they want to clear the puzzle.  Takes optional parameter to hide the
- * icon.
+ * Display the "Clear Puzzle" confirmation dialog.  Takes a parameter to hide
+ * the icon.  Calls `callback` if the user confirms they want to clear the puzzle.
  */
-FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback, hideIcon) {
+FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, hideIcon, callback) {
   this.showSimpleDialog(Dialog, {
     headerText: msg.clearPuzzleConfirmHeader(),
     bodyText: msg.clearPuzzleConfirm(),
