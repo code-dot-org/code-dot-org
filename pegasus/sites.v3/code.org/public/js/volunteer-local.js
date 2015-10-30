@@ -314,8 +314,9 @@ function sendEmail(data)
 function i18n(token) {
   var labels = {
     'unspecified': 'Unspecified',
-    'university_student_or_researcher': 'University Computer Science Student',
-    'software_professional': 'Software Professional',
+    'tech_company': 'Non-technical',
+    'university_student_or_researcher': 'University CS Student',
+    'software_professional': 'Technical Professional',
     'location_onsite': 'Classroom visit',
     'location_remote': 'Remotely'
   };
