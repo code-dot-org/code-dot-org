@@ -15,7 +15,7 @@ Organizar el evento "Hora de Código" durante la Semana de la Educación de Cien
 ## 1) Prepárate para tu evento.
 
   * Determina un lugar, fecha y hora
-  * Envía [una carta](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) invitando al alcalde, diputado, presidente autonómico o empresario influyente para que de una charla.
+  * Envía [una carta](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) invitando al alcalde, diputado, presidente autonómico o empresario influyente para que de una charla.
   * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
 
 ## 2) Durante tu evento

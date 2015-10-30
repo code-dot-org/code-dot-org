@@ -26,6 +26,8 @@ angular: teacherDashboard
   angular.module('teacherDashboard', [
     'ngRoute',
     'ngResource',
+    'ngSanitize',
+    'ngCsv',
     'teacherDashboard.controllers',
     'teacherDashboard.services',
     'teacherDashboard.directives',
@@ -559,8 +561,8 @@ angular: teacherDashboard
     }
   }]);
 
-  app.controller('SectionResponsesController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService',
-                                             function($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
+  app.controller('SectionResponsesController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
+                                             function($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.tab = 'responses';
@@ -590,21 +592,33 @@ angular: teacherDashboard
     );
 
     $scope.responsesLoaded = false;
+    $scope.stages = [];
 
     $scope.course_list = #{DashboardSection::valid_courses.to_json};
 
     // wait until we have both the students and the student progress
     $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function(){
       $scope.responsesLoaded = true;
+      $scope.findStages();
     });
 
     $scope.changeScript = function(scriptId) {
       $scope.responsesLoaded = false;
+      $scope.stages = [];
 
       $scope.responses = sectionsService.responses({id: $routeParams.id, script_id: scriptId});
 
-      $scope.progress.$promise.then(function(){
+      $scope.responses.$promise.then(function(){
         $scope.responsesLoaded = true;
+        scope.findStages();
       });
     };
+
+    $scope.findStages = function() {
+      $scope.stages = $.map($scope.responses, function(row) {
+        return row.stage;
+      }).filter(function(item, i, array) { // uniquify
+        return array.indexOf(item) == i;
+      });
+    }
   }]);

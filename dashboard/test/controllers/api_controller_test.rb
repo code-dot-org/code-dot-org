@@ -81,22 +81,24 @@ class ApiControllerTest < ActionController::TestCase
 
     assert_equal script, assigns(:script)
 
+    # all these are translation missing because we don't actually generate i18n files in tests
+
     expected_response =
       [
        {'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 1,
+        'stage' => "Stage 1: translation missing: en-us.data.script.name.#{script.name}.#{script.stages[0].name}",
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer',
         'url' => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}"},
        {'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => 1,
+        'stage' => "Stage 2: translation missing: en-us.data.script.name.#{script.name}.#{script.stages[1].name}",
         'puzzle' => 1,
         'question' => 'Text Match 2',
         'response' => 'another answer',
-        'url' => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}"},
+        'url' => "http://test.host/s/#{script.name}/stage/2/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}"},
        {'student' => {'id' => @student_2.id, 'name' => @student_2.name},
-        'stage' => 1,
+        'stage' => "Stage 1: translation missing: en-us.data.script.name.#{script.name}.#{script.stages[0].name}",
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'answer for student 2',
