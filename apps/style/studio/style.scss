@@ -137,6 +137,7 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
     }
 
     & > p {
+      color: $charcoal;
       margin-left: 1em;
     }
   }
