@@ -22,7 +22,6 @@ require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
 
 class GatekeeperBase
-
   def initialize(datastore_cache)
     @datastore_cache = datastore_cache
   end
@@ -93,6 +92,11 @@ class GatekeeperBase
 
     datastore_cache = DatastoreCache.new adapter, cache_expiration: cache_expiration
     GatekeeperBase.new datastore_cache
+  end
+
+  # We need to reinitialize the update thread after fork
+  def after_fork
+    @datastore_cache.after_fork
   end
 
   # Converts the current config state to a yaml string
