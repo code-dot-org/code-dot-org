@@ -14,8 +14,8 @@ subject: "A teacher is requesting your help for the Hour of Code"
 
 ### The following teacher is requesting your help for the Hour of Code
 
-- Name: <%= teacher_name_s %>
-- Email address: [<%= teacher_email_s %>](<%= "mailto:" + teacher_email_s %>)
+- Name: <%= name_s %>
+- Email address: [<%= email_s %>](<%= "mailto:" + email_s %>)
 - School name: <%= school_name_s %>
 - School location: <%= school_location_s %>
 - Message: <%= email_message_s %>
