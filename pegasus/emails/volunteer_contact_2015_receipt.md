@@ -10,15 +10,15 @@ from: '"Tanya Parker (Code.org)" <tanya_parker@code.org>'
 subject: "A teacher is requesting your help for the Hour of Code"
 ---
 
-<% update_preferences = "http://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{form.secret}/" %>
+<% update_preferences = "http://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{volunteer_secret_s}/" %>
 
 ### The following teacher is requesting your help for the Hour of Code
 
-- Name: <%= name_s %>
-- Email address: [<%= email_s %>](<%= "mailto:" + email_s %>)
-- School name: <%= school_name_s %>
-- School location: <%= school_location_s %>
-- Message: <%= email_message_s %>
+- **Name:** <%= name_s %>
+- **Email address:** [<%= email_s %>](<%= "mailto:" + email_s %>)
+- **School name:** <%= school_name_s %>
+- **School location:** <%= school_location_s %>
+- **Message:** <%= email_message_s %>
 
 Most schools still don’t teach computer science. Most students don’t know that it’s about solving big problems and connecting us all closer together. This is your chance to inspire at least one young person in your area. If you are available to volunteer with this teacher, **please contact the teacher directly with the above information**.
 
