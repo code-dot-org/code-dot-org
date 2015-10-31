@@ -16,9 +16,9 @@ class VolunteerContact2015
     form = DB[:forms].where(kind: "VolunteerEngineerSubmission2015", id: data[:volunteer_id_i]).first
     volunteer = JSON.parse(form[:data])
 
-    result[:volunteer_name_s] = volunteer["name_s"]
-    result[:volunteer_email_s] = volunteer["email_s"]
-    result[:volunteer_secret_s] = form[:secret]
+    result[:volunteer_name_s] = required volunteer["name_s"]
+    result[:volunteer_email_s] = required volunteer["email_s"]
+    result[:volunteer_secret_s] = required form[:secret]
 
     result
   end
