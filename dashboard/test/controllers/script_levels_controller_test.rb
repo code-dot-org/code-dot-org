@@ -26,6 +26,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @custom_s2_l2 = create(:script_level, script: @custom_script,
                            stage: @custom_stage_2, :position => 2)
     client_state.reset
+
+    Gatekeeper.clear
   end
 
   test 'should show script level for twenty hour' do
@@ -831,5 +833,18 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: admin_script.name, stage_id: 1, id: 1
     assert_response :success
   end
+
+  test "should have milestone posting disabled if Milestone is set" do
+    Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
+    get_show_script_level_page @script_level
+    assert_equal false, assigns(:view_options)[:post_milestone]
+  end
+
+  test "should not have milestone posting disabled if Milestone is not set" do
+    Gatekeeper.set('postMilestone', where: {script_name: 'Some other level'}, value: false)
+    get_show_script_level_page(@script_level)
+    assert_equal true, assigns(:view_options)[:post_milestone]
+  end
+
 
 end
