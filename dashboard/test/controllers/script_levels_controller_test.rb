@@ -846,5 +846,4 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal true, assigns(:view_options)[:post_milestone]
   end
 
-
 end
