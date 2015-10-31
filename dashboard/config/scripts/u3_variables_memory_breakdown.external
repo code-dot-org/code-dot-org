@@ -3,7 +3,7 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Variables -- The Mental Model
 
-<img src="https://images.code.org/af52f10dffc8980e9b291b42057d9f8c-image-1445006639426.png" style="width: 120px; border: solid 1px black; float: left; margin: 5px"> A piece of code like the one to the left can cause confusion to early programmers (but not you!). Below we show you a technique you can use to trace out what's happening in memory as you mentally go through the code line by line.  Even pros do this to verify for themselves that the code is doing what they think it will.  This is also a form of <strong>making a prediction</strong>strong> which really helps you see and learn what's happening faster.
+<img src="https://images.code.org/af52f10dffc8980e9b291b42057d9f8c-image-1445006639426.png" style="width: 120px; border: solid 1px black; float: left; margin: 5px"> A piece of code like the one to the left can cause confusion to early programmers (but not you!). Below we show you a technique you can use to trace out what's happening in memory as you mentally go through the code line by line.  Even pros do this to verify for themselves that the code is doing what they think it will.  This is also a form of <strong>making a prediction</strong> which really helps you see and learn what's happening faster.
 
 Here's what you do.  You know that the code involves two variables (or two chunks of memory) so on a piece of paper make two boxes to represent the containers for values, then fill in the containers with values as you trace out each line of code.
 <br><br>

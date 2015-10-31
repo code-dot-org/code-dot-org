@@ -49,7 +49,9 @@
     "debugger_disabled": "true",
     "encrypted_examples": [
 
-    ]
+    ],
+    "instructions": "Write a program that acts as a simple calculator. (click to see full instructions)",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

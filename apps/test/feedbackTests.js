@@ -227,21 +227,22 @@ describe("throwOnInvalidExampleBlocks", function () {
 
 /**
  * Loads options.startBlocks into the workspace, then calls
- * getMissingRequiredBlocks and validates that the result matches the
+ * getMissingBlocks and validates that the result matches the
  * options.expectedResult
  */
-describe("getMissingRequiredBlocks_ tests", function () {
+describe("getMissingBlocks_ tests", function () {
   var studioApp;
 
   /**
-   * getMissingRequiredBlocks_ will return us an array of requiredBlocks.  We
-   * can't validate these using a simple assert.deepEqual because some blocks
-   * contain a members generated functions.  These functions are the same in
-   * terms of contents, but do not share the same space in memory, and thus
-   * will report as not equal when we want them to report as equal.  This method
-   * exists to validate equality in a way that treats those functions as equal.
+   * getMissingBlocks_ will return us an array of blocks.  We can't
+   * validate these using a simple assert.deepEqual because some blocks
+   * contain a members generated functions.  These functions are the
+   * same in terms of contents, but do not share the same space in
+   * memory, and thus will report as not equal when we want them to
+   * report as equal.  This method exists to validate equality in a way
+   * that treats those functions as equal.
    */
-  function validateMissingRequiredBlocks(result, expectedResult) {
+  function validateMissingBlocks(result, expectedResult) {
     var block, expectedBlock;
 
     if (result.length !== expectedResult.length) {
@@ -291,9 +292,9 @@ describe("getMissingRequiredBlocks_ tests", function () {
     assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
       "or we did, and we loaded something");
 
-    var missing = studioApp.feedback_.getMissingRequiredBlocks_(
+    var missing = studioApp.feedback_.getMissingBlocks_(
         options.requiredBlocks, options.numToFlag);
-    validateMissingRequiredBlocks(missing.blocksToDisplay, options.expectedResult);
+    validateMissingBlocks(missing.blocksToDisplay, options.expectedResult);
   }
 
   // create our environment

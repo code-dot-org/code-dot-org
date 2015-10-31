@@ -1,0 +1,53 @@
+name 'CSPPD3-u3 chunk 1 concepts'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Unit 3 Overview > Introduction to Events and Apps: Concepts
+
+<br/>
+<img src="" width="550" style="float:right; margin-left:30px">
+<br><br>
+We spend lessons 9 - 13 shifting gears to event-driven programming, which means students will 
+
+<br><br>
+
+#### Variables
+
+<br>
+These lessons help students understand how to control the computer programmatically while using very basic commands. 
+
+<br><br>
+>**CS Concepts:** How do I control the computer programmatically?
+
+>- using basic, built-in functions
+- building functions helps prevent the need to repeate code.
+
+#### Using and Making Functions with Parameters
+Now that students have a sense of why it's useful to create their own functions, they move one step further and build functions that are more generally useful and accept parameters. For example: App Lab has a built-in function called moveForward("parameter"), which lets us move the turtle any distance-- moveForward(5) and moveForward(500) both use the same function, but move the turtle 5 steps and 500 steps, respectively. 
+<br><br>
+By having functions that are more general, we reduce the duplication of code across our programs.  
+<br>
+>**CS Concepts:** How do I make functions even more useful?
+
+>- generalized functions that accept parameters
+
+#### Simple Looping and Random Numbers
+Students use loops and the built-in random number function to draw a random number of things that are randomly different sizes. These tools are applied to build a digital drawing that looks slightly different every time the program is run, because placement of items is randomly assigned based on the number that is generated. 
+<br><br>
+>**CS Concepts:** How do I avoid repeating code with loops?
+
+>- loops are used in a program to simplify the expression of repeated tasks
+- random can be used to create a program that behaves differently each time it is executed
+
+
+#### Practice PT
+Students work together to apply what they’ve learned about functions and simple loops to create a "digital scene" that is made up of functions that were written by different members of the group and were brought together to create the final product.
+
+
+
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

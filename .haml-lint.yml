@@ -43,6 +43,7 @@ linters:
 
   TrailingWhitespace:
     exclude:
+      - '/**/pegasus/**/*.haml'
       - 'pegasus/**/*.haml'
 
   UnnecessaryInterpolation:

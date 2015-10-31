@@ -77,7 +77,7 @@ Then /^check that I am on "([^"]*)"$/ do |url|
   @browser.current_url.should eq url
 end
 
-Then /^check that the URL contains "([^"]*)"$/ do |url|
+Then /^check that the URL contains "([^"]*)"$/i do |url|
   url = replace_hostname(url)
   @browser.current_url.should include url
 end
@@ -183,7 +183,13 @@ When /^I press a button with xpath "([^"]*)"$/ do |xpath|
 end
 
 When /^I click selector "([^"]*)"$/ do |jquery_selector|
+  # normal a href links can only be clicked this way
   @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+end
+
+When /^I send click events to selector "([^"]*)"$/ do |jquery_selector|
+  # svg elements can only be clicked this way
+  @browser.execute_script("$(\"#{jquery_selector}\").click();")
 end
 
 When /^I press delete$/ do
@@ -453,6 +459,7 @@ And(/^I create a (student|teacher) named "([^"]*)"$/) do |user_type, name|
     user.password = name + "password" # hack
     user.user_type = user_type
     user.age = user_type == 'student' ? 16 : 21
+    user.confirmed_at = Time.now
   end
 end
 
@@ -468,6 +475,27 @@ Given(/^I sign in as a (student|teacher)$/) do |user_type|
     Given I am on "http://learn.code.org/"
     And I am a #{user_type}
     And I am on "http://learn.code.org/users/sign_in"
+  }
+end
+
+# Signs in as name by filling in username/password fields. If name does not
+# already exist, creates a new student account for name in the db first.
+Given(/^I manually sign in as "([^"]*)"$/) do |name|
+  steps %Q{
+    Given I am on "http://studio.code.org/reset_session"
+    And execute JavaScript expression "window.localStorage.clear()"
+    Then I am on "http://studio.code.org/"
+    And I set the language cookie
+    And I create a student named "#{name}"
+    Then I am on "http://studio.code.org/"
+    And I reload the page
+    Then I wait for 2 seconds
+    Then I wait to see ".header_user"
+    Then I click selector "#signin_button"
+    And I wait to see ".new_user"
+    And I fill in username and password for "#{name}"
+    And I click selector "input[type=submit][value='Sign in']"
+    And I wait to see ".header_user"
   }
 end
 

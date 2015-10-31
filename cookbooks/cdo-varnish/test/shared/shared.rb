@@ -56,6 +56,10 @@ describe 'varnish' do
   it 'is running' do
     assert_equal 0, (`service varnish status` && $?.exitstatus)
   end
+
+  it 'handles service start when running' do
+    assert_equal 0, (`service varnish start` && $?.exitstatus)
+  end
 end
 
 # Returns the number of times the specified URL missed all proxy caches and was served by the mock server.
