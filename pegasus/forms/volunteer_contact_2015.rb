@@ -18,6 +18,7 @@ class VolunteerContact2015
 
     result[:volunteer_name_s] = volunteer["name_s"]
     result[:volunteer_email_s] = volunteer["email_s"]
+    result[:volunteer_secret_s] = form[:secret]
 
     result
   end
