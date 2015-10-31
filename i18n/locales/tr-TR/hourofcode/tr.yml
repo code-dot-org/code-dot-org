@@ -252,6 +252,9 @@ tr:
   map_search_placeholder: Kod Saati etkinlikleri ara
   map_search_search: Ara
   map_search_reset: Temizle
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Kod Saati burada
   meta_tag_og_description: "Kodlama Saati 180'den fazla ülkede gerçekleşen 10 milyonlarca öğrenciye ulaşmış küresel bir harekettir. 4'ten 104 yaşına kadar herkes için."
   meta_tag_twitter_title: Kod Saati burada

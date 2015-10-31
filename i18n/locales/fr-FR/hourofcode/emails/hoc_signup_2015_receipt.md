@@ -8,45 +8,45 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 # Merci de vous être inscrit(e) pour organiser Une Heure de Code !
 
-You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13.
+Vous permettez à des étudiants du monde entier d'apprendre Une Heure de Code du 7 au 13 décembre. Activité qui pourrait changer le reste de leur vie.
 
-*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [Details](https://<%= hostname %>/prizes).
+*Chaque* organisateur d'Une Heure de Code dans le monde entier recevra une carte-cadeau Amazon, iTunes ou Windows Store comme cadeau de remerciement. [ détails](https://<%= hostname %>/ des prix).
 
-#### We'll be in touch about new tutorials and other exciting updates. What can you do now?
+#### Nous partagerons les nouveaux tutoriels et mises à jour significatives avec vous. Mais, que pouvez-vous faire maintenant ?
 
 ## 1. Parlez-en autour de vous
 
-We need your help to reach 100,000 organizers worldwide. Parlez de #HourOfCode à vos amis. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
+Nous avons besoin de votre aide pour atteindre notre objectif de 100 000 organisateurs dans le monde. Parlez de #HourOfCode à vos amis. [ utilisez ces ressources utiles](https://<%= hostname %>/promouvoir/ressources) pour promouvoir votre évènement.
 
 <% if international == 'true' %>
 
 ## 2. Proposez à votre école de participer à Une Heure de Code
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). <% else %>
+[ Envoyez cet e-mail](https://<%= hostname %>/promouvoir/ressources #sample-courriels) à votre principal ou [ partagez ces documents](https://<%= hostname %>/promouvoir/ressources). <% else %>
 
-## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
+## 2. Recrutez toute votre école pour participer à Une Heure de Code et qualifiez votre école pour gagner 10 000 $
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup). <% end %>
+[ Envoyez cet e-mail](https://<%= hostname %>/promouvoir/ressources #sample-courriels) à votre principal ou [ partagez ces documents](https://<%= hostname %>/promouvoir/ressources). Tentez de faire participer chaque étudiant dans votre école et tentez de gagner 10 000 $ en matériel technologique pour votre école. [ Remplissez ce formulaire pour tentez vote chance](https://<%= hostname %>/prix/matériel-signup). <% end %>
 
 ## 3. Invitez votre employeur à s'impliquer
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
+[ Envoyez cet e-mail](https://<%= hostname %>/promouvoir/ressources #sample-courriels) à votre manager ou directeur général.
 
 ## 4. Faites la promotion d'une Heure de Code dans votre communauté
 
-Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
+Recruter une association locale ou des amis. [ Envoyez cet email](https://<%= hostname %>/ ressources #sample-courriels).
 
 ## 5. Demandez à un élu local de soutenir l'initiative Une Heure de Code
 
-[Envoyer ce mail](http://<%= hostname %>/resources#politicians) à votre maire, au conseil municipal et invitez-les à visiter votre école.
+[Envoyez ce mail](http://<%= hostname %>/resources#politicians) à votre maire, au conseil municipal et invitez-les à visiter votre école.
 
-Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
+Je vous remercie de conduire le mouvement et donner à chaque élève la possibilité d'apprendre des compétences fondamentales en sciences informatiques.
 
-Hadi Partovi  
-Founder, Code.org
+Hadi Partovi   
+fondateur de Code.org
 
 * * *
 
-<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+<small> Vous recevez cet e-mail parce que vous avez adhéré à Une Heure de Code, projet soutenu par plus de 200 partenaires et organisé par Code.org. Code.org est une association 501c3 à but non lucratif. Notre adresse est 1301 5th Ave, Suite 1225, Seattle, WA, 98101, USA. Vous ne voulez pas recevoir nos e-mails ? <a href="%= unsubscribe_link %">Se désabonner</a>. </small>
 
 ![](<%= tracking_pixel %>)

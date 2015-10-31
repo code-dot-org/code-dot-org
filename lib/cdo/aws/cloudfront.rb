@@ -158,7 +158,7 @@ module AWS
           iam_certificate_id: Aws::IAM::Client.new.
             get_server_certificate(server_certificate_name: ssl_cert).
             server_certificate.server_certificate_metadata.server_certificate_id,
-          ssl_support_method: 'sni-only', # accepts sni-only, vip
+          ssl_support_method: 'vip', # accepts sni-only, vip
           minimum_protocol_version: 'TLSv1', # accepts SSLv3, TLSv1
           cloud_front_default_certificate: false
         } : {

@@ -118,6 +118,8 @@ function runLevel (app, skinId, level, onAttempt, testData) {
     skinId: skinId,
     level: level,
     baseUrl: '/', // Doesn't matter
+    channel: 'applab-channel-id',
+    assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
     Dialog: StubDialog,
     isAdmin: true,

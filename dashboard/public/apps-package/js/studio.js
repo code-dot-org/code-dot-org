@@ -53,6 +53,7 @@ var Hammer = utils.getHammer();
 var JSInterpreter = require('../JSInterpreter');
 var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
+var ImageFilterFactory = require('./ImageFilterFactory');
 var ThreeSliceAudio = require('./ThreeSliceAudio');
 var MusicController = require('./MusicController');
 
@@ -76,7 +77,7 @@ var KeyCodes = sharedConstants.KeyCodes;
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
-var SVG_NS = "http://www.w3.org/2000/svg";
+var SVG_NS = sharedConstants.SVG_NS;
 
 // Whether we are showing debug information
 var showDebugInfo = false;
@@ -375,30 +376,48 @@ var drawMap = function () {
     numFrames = skin.animatedGoalFrames;
   }
 
+  // Calculate the dimensions of the spritesheet & the sprite itself that's rendered
+  // out of it.  Precedence order is skin.goalSpriteWidth/Height, goalOverride.imageWidth/Height,
+  // and then Studio.MARKER_WIDTH/HEIGHT.
+  //
+  // Legacy levels might specify goalOverride.imageWidth/Height which are dimensions
+  // of the entire spritesheet, and rely upon studio's default MARKER_WIDTH/HEIGHT which
+  // are dimensions of the sprite itself.
+  // Newer levels might specify skin.goalSpriteWith/Height which are the dimensions of the
+  // sprite itself.  The dimensions of the spritesheet are calculated using skin.animatedGoalFrames.
+  // The fallback dimensions of both spritesheet and sprite are studio's default
+  // MARKER_WIDTH/HEIGHT.
+
+  var spritesheetWidth = skin.goalSpriteWidth ? (skin.goalSpriteWidth * numFrames) :
+    utils.valueOr(goalOverride.imageWidth, Studio.MARKER_WIDTH);
+  var spritesheetHeight = skin.goalSpriteHeight ? skin.goalSpriteHeight :
+    utils.valueOr(goalOverride.imageHeight, Studio.MARKER_HEIGHT);
+
+  var spriteWidth = utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH);
+  var spriteHeight = utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT);
+
   if (Studio.spriteGoals_) {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
       // Add finish markers.
-
-      var width = goalOverride.imageWidth || Studio.MARKER_WIDTH;
-      var height = goalOverride.imageHeight || Studio.MARKER_HEIGHT;
 
       var finishClipPath = document.createElementNS(SVG_NS, 'clipPath');
       finishClipPath.setAttribute('id', 'finishClipPath' + i);
       var finishClipRect = document.createElementNS(SVG_NS, 'rect');
       finishClipRect.setAttribute('id', 'finishClipRect' + i);
-      finishClipRect.setAttribute('width', width);
-      finishClipRect.setAttribute('height', height);
+      finishClipRect.setAttribute('width', spriteWidth);
+      finishClipRect.setAttribute('height', spriteHeight);
       finishClipPath.appendChild(finishClipRect);
       svg.appendChild(finishClipPath);
 
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
-      spriteFinishMarker.setAttribute('width', numFrames * width);
-      spriteFinishMarker.setAttribute('height', height);
+      spriteFinishMarker.setAttribute('width', spritesheetWidth);
+      spriteFinishMarker.setAttribute('height', spritesheetHeight);
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
       svg.appendChild(spriteFinishMarker);
     }
   }
+  Studio.applyGoalEffect();
 
   var score = document.createElementNS(SVG_NS, 'text');
   score.setAttribute('id', 'score');
@@ -465,6 +484,48 @@ function collisionTest(x1, x2, xVariance, y1, y2, yVariance) {
 function overlappingTest(x1, x2, xVariance, y1, y2, yVariance) {
   return (Math.abs(x1 - x2) < xVariance) && (Math.abs(y1 - y2) < yVariance);
 }
+
+/** @type {ImageFilter} */
+var goalFilterEffect = null;
+
+/**
+ * Apply the effect specified in skin.goalEffect to all of the goal objects
+ * in the level.
+ */
+Studio.applyGoalEffect = function () {
+  if (!Studio.spriteGoals_) {
+    return;
+  }
+
+  if (!goalFilterEffect) {
+    var svg = document.getElementById('svgStudio');
+    goalFilterEffect = ImageFilterFactory.makeFilterOfType(skin.goalEffect, svg);
+  }
+
+  var spriteFinishMarker;
+  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
+    spriteFinishMarker = document.getElementById('spriteFinish' + i);
+    if (goalFilterEffect) {
+      goalFilterEffect.applyTo(spriteFinishMarker);
+    }
+  }
+};
+
+/**
+ * Remove the effect specified in skin.goalEffect from all of the goal objects
+ * in the level.
+ */
+Studio.removeGoalEffect = function () {
+  if (!Studio.spriteGoals_ || !goalFilterEffect) {
+    return;
+  }
+
+  var spriteFinishMarker;
+  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
+    spriteFinishMarker = document.getElementById('spriteFinish' + i);
+    goalFilterEffect.removeFrom(spriteFinishMarker);
+  }
+};
 
 /**
  * @param scope Object :  The scope in which to execute the delegated function.
@@ -795,11 +856,19 @@ function sortDrawOrder() {
   }
 
   // Now sort everything by y.
-
   itemsArray = _.sortBy(itemsArray, 'y');
 
-  for (i = 0; i < itemsArray.length; ++i) {
-    spriteLayer.appendChild(itemsArray[i].element);
+  // Carefully place the elements back in the DOM starting at the end of the
+  // spriteLayer and, one by one, insert them before the previous one
+  // (this prevents flashing in Safari vs. an in-order appendChild() loop)
+  var prevNode;
+  for (i = itemsArray.length - 1; i >= 0; i--) {
+    if (prevNode) {
+      spriteLayer.insertBefore(itemsArray[i].element, prevNode);
+    } else {
+      spriteLayer.appendChild(itemsArray[i].element);
+    }
+    prevNode = itemsArray[i].element;
   }
 }
 
@@ -973,13 +1042,13 @@ Studio.onTick = function() {
   sortDrawOrder();
 
   var currentTime = new Date().getTime();
- 
+
   if (!Studio.succeededTime && checkFinished()) {
     Studio.succeededTime = currentTime;
   }
 
-  if (Studio.succeededTime && 
-      !spritesNeedMoreAnimationFrames && 
+  if (Studio.succeededTime &&
+      !spritesNeedMoreAnimationFrames &&
       (!level.delayCompletion || currentTime > Studio.succeededTime + level.delayCompletion)) {
     Studio.onPuzzleComplete();
   }
@@ -1081,7 +1150,7 @@ function handleActorCollisionsWithCollidableList (
         if (autoDisappear) {
           if (list.length === 1 && list === Studio.items) {
             // NOTE: we do this only for the Item list (not projectiles)
-            
+
             // NOTE: if items are allowed to move outOfBounds(), this may never
             // be called because the last item may not be removed here.
             callHandler('whenGetAllItems');
@@ -1583,14 +1652,19 @@ Studio.init = function(config) {
     }
   });
 
+  var levelTracks = [];
+  if (level.music && skin.musicMetadata) {
+    levelTracks = skin.musicMetadata.filter(function(trackMetadata) {
+      return level.music.indexOf(trackMetadata.name) !== -1;
+    });
+  }
+
   /**
    * Helper that handles music loading/playing/crossfading for the level.
    * @type {MusicController}
    */
   Studio.musicController = new MusicController(
-      studioApp.cdoSounds,
-      skin.assetUrl,
-      utils.valueOr(level.music, skin.music));
+      studioApp.cdoSounds, skin.assetUrl, levelTracks);
 
   /**
    * Defines the set of possible movement sound effects for each playlab actor.
@@ -2068,6 +2142,8 @@ Studio.runButtonClick = function() {
 
   // Stop the music the first time the run button is pressed (hoc2015)
   Studio.musicController.fadeOut();
+  // Remove goal filter effects the first time the run button is pressed
+  Studio.removeGoalEffect();
 
   studioApp.reset(false);
   studioApp.attempts++;
@@ -2095,7 +2171,7 @@ Studio.runButtonClick = function() {
 var displayFeedback = function() {
   var tryAgainText;
   // For free play, show keep playing, unless it's a big game level
-  if (level.freePlay && !Studio.customLogic instanceof BigGameLogic) {
+  if (level.freePlay && !(Studio.customLogic instanceof BigGameLogic)) {
     tryAgainText = commonMsg.keepPlaying();
   }
   else {
@@ -2697,7 +2773,7 @@ Studio.drawDebugLine = function(className, x1, y1, x2, y2, color) {
 
 /**
  * Draw a timeout rectangle across the bottom of the play area.
- * It doesn't appear until halfway through the level, and briefly fades in 
+ * It doesn't appear until halfway through the level, and briefly fades in
  * when first appearing.
  */
 Studio.drawTimeoutRect = function() {
@@ -2716,7 +2792,7 @@ Studio.drawTimeoutRect = function() {
   var currentFraction = timeRemaining / Studio.timeoutFailureTick;
 
   if (currentFraction <= startFadeInAt) {
-    var opacity = currentFraction < endFadeInAt ? 1 : 
+    var opacity = currentFraction < endFadeInAt ? 1 :
       1 - (currentFraction - endFadeInAt) / (startFadeInAt - endFadeInAt);
 
     var width = timeRemaining * Studio.MAZE_WIDTH / (Studio.timeoutFailureTick * startFadeInAt);
@@ -2821,7 +2897,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   tile.setAttribute('width', numSrcCols * tileSize);
   tile.setAttribute('height', numSrcRows * tileSize);
   tile.setAttribute('x', col * Studio.SQUARE_SIZE - srcCol * tileSize + addOffset);
-  tile.setAttribute('y', row * Studio.SQUARE_SIZE - srcRow * tileSize + addOffset); 
+  tile.setAttribute('y', row * Studio.SQUARE_SIZE - srcRow * tileSize + addOffset);
   tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', tiles);
   svg.appendChild(tile);
 
@@ -2829,7 +2905,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
 
   var tileEntry = {};
   tileEntry.bottomY = row * Studio.SQUARE_SIZE + addOffset + tileSize;
-  Studio.tiles.push(tileEntry);  
+  Studio.tiles.push(tileEntry);
 };
 
 Studio.createLevelItems = function (svg) {
@@ -2893,7 +2969,7 @@ Studio.drawMapTiles = function (svg) {
           tilesDrawn[row][col] = true;
           tilesDrawn[row][col+1] = true;
           tilesDrawn[row+1][col] = true;
-          tilesDrawn[row+1][col+1] = true;          
+          tilesDrawn[row+1][col+1] = true;
         }
 
         Studio.drawWallTile(spriteLayer, wallVal, row, col);
@@ -3075,7 +3151,7 @@ Studio.animateGoals = function() {
     elapsed = currentTime - Studio.startTime;
     numFrames = skin.animatedGoalFrames;
     frameDuration = skin.timePerGoalAnimationFrame;
-    frameWidth = level.goalOverride.imageWidth;
+    frameWidth = skin.goalSpriteWidth;
   }
 
   for (var i = 0; i < Studio.spriteGoals_.length; i++) {
@@ -3088,7 +3164,7 @@ Studio.animateGoals = function() {
       if (animate) {
         var baseX = parseInt(goalClipRect.getAttribute('x'), 10);
         var frame = Math.floor(elapsed / frameDuration) % numFrames;
-    
+
         goalSprite.setAttribute('x', baseX - frame * frameWidth);
       }
 
@@ -3102,7 +3178,7 @@ Studio.animateGoals = function() {
             opacity = 0;
             goal.startFadeTime = null;
           }
-          
+
           goalSprite.setAttribute('opacity', opacity);
         }
       }
@@ -3129,7 +3205,7 @@ Studio.displayFloatingScore = function(changeValue) {
   floatingScore.setAttribute('x', sprite.x + sprite.width/2);
   floatingScore.setAttribute('y', sprite.y + sprite.height/2);
   floatingScore.setAttribute('opacity', 1);
-  floatingScore.setAttribute('visibility', 'visible');  
+  floatingScore.setAttribute('visibility', 'visible');
 };
 
 Studio.updateFloatingScore = function() {
@@ -3765,7 +3841,7 @@ Studio.endGame = function(opts) {
     Studio.setScoreText({text: studioMsg.winMessage()});
   } else if (winValue== "lose") {
     Studio.trackedBehavior.hasLostGame = true;
-    Studio.setScoreText({text: studioMsg.loseMessage()});  
+    Studio.setScoreText({text: studioMsg.loseMessage()});
   } else {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
@@ -3918,7 +3994,7 @@ Studio.fixSpriteLocation = function () {
         for (var col = minCol; col <= maxCol; col++) {
           if (! Studio.getWallValue(row, col)) {
 
-            sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2 - 
+            sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2 -
               skin.wallCollisionRectOffsetX;
             sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 -
               skin.wallCollisionRectOffsetY;
@@ -4012,7 +4088,8 @@ Studio.setSprite = function (opts) {
 
   spriteIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.sprite);
   spriteIcon.setAttribute('width', sprite.drawWidth * spriteTotalFrames(spriteIndex));
-  spriteIcon.setAttribute('height', sprite.drawHeight);
+  var extraHeight = (sprite.frameCounts.extraEmotions || 0) * sprite.drawHeight;
+  spriteIcon.setAttribute('height', sprite.drawHeight + extraHeight);
 
   if (spriteWalk) {
     // And set up the cliprect so we can show the right item from the spritesheet.
@@ -4021,18 +4098,22 @@ Studio.setSprite = function (opts) {
     spriteWalkClipRect.setAttribute('height', sprite.drawHeight);
 
     spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.walk);
-    spriteWalk.setAttribute('width', sprite.drawWidth * sprite.frameCounts.turns); // 800
+
+    var extraWidth = (sprite.frameCounts.extraEmotions || 0) * sprite.drawWidth;
+    spriteWalk.setAttribute('width', extraWidth + sprite.drawWidth * sprite.frameCounts.turns); // 800
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
   // Set up movement audio for the selected sprite (clips should be preloaded)
+  // First, stop any movement audio for the current character.
+  Studio.movementAudioOff();
   if (!Studio.movementAudioEffects[spriteValue] && skin.avatarList) {
     var spriteSkin = skin[spriteValue] || {};
     var audioConfig = spriteSkin.movementAudio || [];
     Studio.movementAudioEffects[spriteValue] = [];
     if (studioApp.cdoSounds) {
       Studio.movementAudioEffects[spriteValue] = audioConfig.map(function (audioOption) {
-        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption.begin, audioOption.loop, audioOption.end);
+        return new ThreeSliceAudio(studioApp.cdoSounds, audioOption);
       });
     }
   }
@@ -4042,6 +4123,10 @@ Studio.setSprite = function (opts) {
   Studio.displaySprite(spriteIndex);
 };
 
+var moveAudioState = false;
+Studio.isMovementAudioOn = function () {
+  return moveAudioState;
+};
 
 Studio.movementAudioOn = function () {
   Studio.movementAudioOff();
@@ -4050,12 +4135,14 @@ Studio.movementAudioOn = function () {
   if (Studio.currentMovementAudio) {
     Studio.currentMovementAudio.on();
   }
+  moveAudioState = true;
 };
 
 Studio.movementAudioOff = function () {
   if (Studio.currentMovementAudio) {
     Studio.currentMovementAudio.off();
   }
+  moveAudioState = false;
 };
 
 var p = function (x,y) {
@@ -4693,8 +4780,7 @@ Studio.moveSingle = function (opts) {
       sprite.y = projectedY;
     }
 
-    if (opts.dir !== Studio.lastMoveSingleDir &&
-        lastMove === Infinity || Studio.tickCount > lastMove + 1) {
+    if (!Studio.isMovementAudioOn()) {
       Studio.movementAudioOn();
     }
   }
@@ -4826,7 +4912,7 @@ Studio.allGoalsVisited = function() {
               goal.startFadeTime = new Date().getTime();
             }
 
-            callHandler('whenTouchGoal');  
+            callHandler('whenTouchGoal');
 
             break;
           }
@@ -4840,7 +4926,7 @@ Studio.allGoalsVisited = function() {
 
       // Play a sound unless we've hit the last flag (though that can be
       // overridden by the skin)
-      if (playSound && 
+      if (playSound &&
           (finishedGoals !== Studio.spriteGoals_.length || skin.playFinalGoalSound)) {
         studioApp.playAudio('flag');
       }
@@ -4848,8 +4934,8 @@ Studio.allGoalsVisited = function() {
       if (skin.goalSuccess) {
         // Change the finish icon to goalSuccess.
         var successAsset = skin.goalSuccess;
-        if (level.goalOverride && level.goalOverride.success) {
-          successAsset = skin[level.goalOverride.success];
+        if (level.goalOverride && level.goalOverride.successImage) {
+          successAsset = skin[level.goalOverride.successImage];
         }
         var spriteFinishIcon = document.getElementById('spriteFinish' + i);
         spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
@@ -4932,7 +5018,7 @@ Studio.conditionSatisfied = function(required) {
  * criteria affects progress, otherwise an object that contains information
  * about the specific succeeding or failing criteria.
  *
- * @param {Array} conditions. 
+ * @param {Array} conditions.
  * @returns {ProgressConditionOutcome|null}
  */
 Studio.checkProgressConditions = function() {
@@ -4996,9 +5082,10 @@ var checkFinished = function () {
 };
 
 
-},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./MusicController":"/home/ubuntu/staging/apps/build/js/studio/MusicController.js","./ThreeSliceAudio":"/home/ubuntu/staging/apps/build/js/studio/ThreeSliceAudio.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
+},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./ImageFilterFactory":"/home/ubuntu/staging/apps/build/js/studio/ImageFilterFactory.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./MusicController":"/home/ubuntu/staging/apps/build/js/studio/MusicController.js","./ThreeSliceAudio":"/home/ubuntu/staging/apps/build/js/studio/ThreeSliceAudio.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -5416,6 +5503,138 @@ var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 
+function loadIceAge(skin, assetUrl) {
+  skin.defaultBackground = 'icy';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'ia_projectile_1',
+    'ia_projectile_2',
+    'ia_projectile_3',
+    'ia_projectile_4',
+    'ia_projectile_5',
+  ];
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_ia_projectile_1',
+    'item_ia_projectile_2',
+    'item_ia_projectile_3',
+    'item_ia_projectile_4',
+    'item_ia_projectile_5',
+  ];
+
+  // Images
+  skin.ia_projectile_1 = skin.assetUrl('ia_projectile_1.png');
+  skin.ia_projectile_2 = skin.assetUrl('ia_projectile_2.png');
+  skin.ia_projectile_3 = skin.assetUrl('ia_projectile_3.png');
+  skin.ia_projectile_4 = skin.assetUrl('ia_projectile_4.png');
+  skin.ia_projectile_5 = skin.assetUrl('ia_projectile_5.png');
+
+  // TODO: proper item class names
+  skin.item_ia_projectile_1 = skin.assetUrl('ia_projectile_1.png');
+  skin.item_ia_projectile_2 = skin.assetUrl('ia_projectile_2.png');
+  skin.item_ia_projectile_3 = skin.assetUrl('ia_projectile_3.png');
+  skin.item_ia_projectile_4 = skin.assetUrl('ia_projectile_4.png');
+  skin.item_ia_projectile_5 = skin.assetUrl('ia_projectile_5.png');
+
+  skin.explosion = skin.assetUrl('explosion.png');
+  skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
+  skin.explosionFrames = 17;
+  skin.fadeExplosion = false;
+  skin.timePerExplosionFrame = 40;
+
+  skin.grassy = {
+    background: skin.assetUrl('background.jpg'),
+  };
+  skin.tile = {
+    background: skin.assetUrl('background_tile.jpg'),
+  };
+  skin.leafy = {
+    background: skin.assetUrl('background_leafy.jpg'),
+  };
+  skin.icy = {
+    background: skin.assetUrl('background_icy.jpg'),
+  };
+  skin.flower = {
+    background: skin.assetUrl('background_flower.jpg'),
+  };
+
+  skin.avatarList = ["manny", "sid", "scrat", "diego", "granny"];
+
+  /**
+   * Sprite thumbs generated with:
+   * `brew install graphicsmagick`
+   * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
+   */
+  skin.avatarList.forEach(function (name) {
+    skin[name] = {
+      sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 19,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: 12,
+        emotionCycles: 0,
+        extraEmotions: 3
+      },
+      timePerFrame: 100
+    };
+  });
+
+
+  skin.backgroundChoices = [
+    [msg.setBackgroundRandom(), RANDOM_VALUE],
+    [msg.setBackgroundGrassy(), '"grassy"'],
+    [msg.setBackgroundTile(), '"tile"'],
+    [msg.setBackgroundLeafy(), '"leafy"'],
+    [msg.setBackgroundIcy(), '"icy"'],
+    [msg.setBackgroundFlower(), '"flower"']];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.backgroundChoicesK1 = [
+    [skin.grassy.background, '"grassy"'],
+    [skin.tile.background, '"tile"'],
+    [skin.leafy.background, '"leafy"'],
+    [skin.icy.background, '"icy"'],
+    [skin.flower.background, '"flower"'],
+    [skin.randomPurpleIcon, RANDOM_VALUE]];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteManny(), '"manny"'],
+    [msg.setSpriteSid(), '"sid"'],
+    [msg.setSpriteScrat(), '"scrat"'],
+    [msg.setSpriteDiego(), '"diego"'],
+    [msg.setSpriteGranny(), '"granny"']];
+
+  skin.projectileChoices = [
+    [msg.projectileIAProjectile1(), '"ia_projectile_1"'],
+    [msg.projectileIAProjectile2(), '"ia_projectile_2"'],
+    [msg.projectileIAProjectile3(), '"ia_projectile_3"'],
+    [msg.projectileIAProjectile4(), '"ia_projectile_4"'],
+    [msg.projectileIAProjectile5(), '"ia_projectile_5"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.itemChoices = [
+    [msg.itemIAProjectile1(), '"item_ia_projectile_1"'],
+    [msg.itemIAProjectile2(), '"item_ia_projectile_2"'],
+    [msg.itemIAProjectile3(), '"item_ia_projectile_3"'],
+    [msg.itemIAProjectile4(), '"item_ia_projectile_4"'],
+    [msg.itemIAProjectile5(), '"item_ia_projectile_5"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
+}
+
 function loadInfinity(skin, assetUrl) {
   skin.preloadAssets = true;
 
@@ -5593,6 +5812,8 @@ function loadInfinity(skin, assetUrl) {
 function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
+  skin.hideIconInClearPuzzle = true;
+
   skin.defaultBackground = 'forest';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
@@ -5649,11 +5870,11 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.specialItemProperties = {
     'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
-    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
+    'man':    { frames: 12, width: 100, height: 100, scale: 1.1, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
     'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'bird':   { frames:  8, width: 100, height: 100, scale: 0.9, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
     'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.5, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
     'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
   };
 
@@ -5662,6 +5883,10 @@ function loadHoc2015(skin, assetUrl) {
 
   // Spritesheet for animated goal.
   skin.animatedGoal = skin.assetUrl('goal_idle.png');
+
+  // Dimensions of the goal sprite.
+  skin.goalSpriteWidth = 100;
+  skin.goalSpriteHeight = 100;
 
   // How many frames in the animated goal spritesheet.
   skin.animatedGoalFrames = 16;
@@ -5730,12 +5955,12 @@ function loadHoc2015(skin, assetUrl) {
   });
 
   skin.bot1.movementAudio = [
-    { begin: 'bot1_move1_start', loop: 'bot1_move1_loop', end: 'bot1_move1_end' },
-    { begin: 'bot1_move2_start', loop: 'bot1_move2_loop', end: 'bot1_move2_end' },
-    { begin: 'bot1_move3_start', loop: 'bot1_move3_loop', end: 'bot1_move3_end' }
+    { begin: 'bot1_move1_start', loop: 'bot1_move1_loop', end: 'bot1_move1_end', volume: 2.2 },
+    { begin: 'bot1_move2_start', loop: 'bot1_move2_loop', end: 'bot1_move2_end', volume: 2.2 },
+    { begin: 'bot1_move3_start', loop: 'bot1_move3_loop', end: 'bot1_move3_end', volume: 2.2 }
   ];
   skin.bot2.movementAudio = [
-    { loop: 'bot2_move_loop', end: 'bot2_move_end' }
+    { loop: 'bot2_move_loop', end: 'bot2_move_end', volume: 0.8 }
   ];
 
   skin.preventProjectileLoop = function (className) {
@@ -5805,74 +6030,74 @@ function loadHoc2015(skin, assetUrl) {
     }
   };
 
-  skin.blank = 
-    [[0,  0,  0,  0,  0,  0,  0,  0], 
-     [0,  0,  0,  0,  0,  0,  0,  0], 
-     [0,  0,  0,  0,  0,  0,  0,  0], 
-     [0,  0,  0,  0,  0,  0,  0,  0],  
-     [0,  0,  0,  0,  0,  0,  0,  0], 
-     [0,  0,  0,  0,  0,  0,  0,  0],   
-     [0,  0,  0,  0,  0,  0,  0,  0],  
+  skin.blank =
+    [[0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
      [0,  0,  0,  0,  0,  0,  0,  0]];
 
-  skin.circle_nonjumbo = 
-    [[0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00], 
-     [0x00, 0x11, 0x02, 0x03,  0x00,  0x44, 0x45, 0x00], 
-     [0x00, 0x04, 0x00, 0x00,  0x00,  0x00, 0x03, 0x00], 
+  skin.circle_nonjumbo =
+    [[0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00],
+     [0x00, 0x11, 0x02, 0x03,  0x00,  0x44, 0x45, 0x00],
+     [0x00, 0x04, 0x00, 0x00,  0x00,  0x00, 0x03, 0x00],
      [0x00, 0x14, 0x00, 0x121, 0x121, 0x00, 0x05, 0x00],
-     [0x00, 0x02, 0x00, 0x121, 0x121, 0x00, 0x15, 0x00], 
-     [0x00, 0x03, 0x00, 0x00,  0x00,  0x00, 0x02, 0x00], 
-     [0x00, 0x24, 0x25, 0x02,  0x00,  0x34, 0x35, 0x00], 
+     [0x00, 0x02, 0x00, 0x121, 0x121, 0x00, 0x15, 0x00],
+     [0x00, 0x03, 0x00, 0x00,  0x00,  0x00, 0x02, 0x00],
+     [0x00, 0x24, 0x25, 0x02,  0x00,  0x34, 0x35, 0x00],
      [0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00]];
 
-  skin.circle = 
-    [[0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
-     [0x00, 0x200, 0x213, 0x213, 0x00,  0x213, 0x201, 0x00], 
-     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00], 
+  skin.circle =
+    [[0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
+     [0x00, 0x200, 0x213, 0x213, 0x00,  0x213, 0x201, 0x00],
+     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00],
      [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00],
-     [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00], 
-     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00], 
-     [0x00, 0x202, 0x213, 0x213, 0x00,  0x213, 0x203, 0x00], 
+     [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00],
+     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00],
+     [0x00, 0x202, 0x213, 0x213, 0x00,  0x213, 0x203, 0x00],
      [0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00]];
 
-  skin.horizontal_nonjumbo = 
-    [[0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
-     [0, 0x02, 0x03, 0x04, 0x00, 0x24, 0x25, 0x00], 
-     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+  skin.horizontal_nonjumbo =
+    [[0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0, 0x02, 0x03, 0x04, 0x00, 0x24, 0x25, 0x00],
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0, 0x10, 0x00, 0x34, 0x35, 0x20, 0x23, 0x00],
-     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
-     [0, 0x03, 0x02, 0x22, 0x20, 0x21, 0x00, 0x00], 
-     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0, 0x03, 0x02, 0x22, 0x20, 0x21, 0x00, 0x00],
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]];
 
-  skin.horizontal = 
-    [[0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
-     [0, 0x213, 0x213, 0x213, 0x00,  0x213, 0x213, 0x00], 
-     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+  skin.horizontal =
+    [[0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
+     [0, 0x213, 0x213, 0x213, 0x00,  0x213, 0x213, 0x00],
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
      [0, 0x10,  0x00,  0x213, 0x213, 0x213, 0x213, 0x00],
-     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
-     [0, 0x213, 0x213, 0x213, 0x213, 0x213, 0x00,  0x00], 
-     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
+     [0, 0x213, 0x213, 0x213, 0x213, 0x213, 0x00,  0x00],
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
      [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00]];
 
-  skin.grid = 
-    [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
-     [0x00, 0x21, 0x00, 0x10, 0x00, 0x20, 0x00, 0x03], 
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+  skin.grid =
+    [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0x00, 0x21, 0x00, 0x10, 0x00, 0x20, 0x00, 0x03],
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0x00, 0x02, 0x00, 0x11, 0x00, 0x21, 0x00, 0x02],
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0x00, 0x03, 0x00, 0x20, 0x00, 0x22, 0x00, 0x11],
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0x00, 0x10, 0x00, 0x21, 0x00, 0x23, 0x00, 0x10]];
 
-  skin.blobs = 
-    [[0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00], 
-     [0x00, 0x103, 0x103, 0x00,  0x00, 0x00,  0x22,  0x00], 
-     [0x00, 0x103, 0x103, 0x00,  0x00, 0x110, 0x110, 0x00], 
-     [0x00, 0x00,  0x00,  0x00,  0x00, 0x110, 0x110, 0x00],  
-     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x00], 
-     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x23],   
-     [0x00, 0x00,  0x03,  0x00,  0x00, 0x00,  0x121, 0x121],  
+  skin.blobs =
+    [[0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00],
+     [0x00, 0x103, 0x103, 0x00,  0x00, 0x00,  0x22,  0x00],
+     [0x00, 0x103, 0x103, 0x00,  0x00, 0x110, 0x110, 0x00],
+     [0x00, 0x00,  0x00,  0x00,  0x00, 0x110, 0x110, 0x00],
+     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x00],
+     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x23],
+     [0x00, 0x00,  0x03,  0x00,  0x00, 0x00,  0x121, 0x121],
      [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x121, 0x121]];
 
   // Sounds.
@@ -5892,7 +6117,7 @@ function loadHoc2015(skin, assetUrl) {
     'move1', 'move2', 'move3'
   ];
 
-  skin.music = [ 'song1' ];
+  skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
@@ -5950,6 +6175,8 @@ function loadHoc2015(skin, assetUrl) {
 function loadHoc2015x(skin, assetUrl) {
   skin.preloadAssets = true;
 
+  skin.hideIconInClearPuzzle = true;
+
   skin.defaultBackground = 'main';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
@@ -5970,15 +6197,22 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'hazard': { frames: 13, animationRate: 5, width: 100, height: 100, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
+    'hazard': { frames: 13, animationRate: 5, width: 100, height: 100, scale: 1.3, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
   };
 
   // Spritesheet for animated goal.
   skin.goal1 = skin.assetUrl('goal1.png');
   skin.goal2 = skin.assetUrl('goal2.png');
 
+  // Dimensions of the goal sprite.
+  skin.goalSpriteWidth = 50;
+  skin.goalSpriteHeight = 50;
+
   // How many frames in the animated goal spritesheet.
   skin.animatedGoalFrames = 16;
+
+  // Special effect applied to goal sprites
+  skin.goalEffect = 'glow';
 
   // How long to show each frame of the optional goal animation.
   skin.timePerGoalAnimationFrame = 100;
@@ -6076,7 +6310,7 @@ function loadHoc2015x(skin, assetUrl) {
     'move1', 'move2', 'move3', 'move4'
   ];
 
-  skin.music = [ 'song1' ];
+  skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
@@ -6108,6 +6342,29 @@ function loadHoc2015x(skin, assetUrl) {
   skin.itemChoices = [
     ];
 }
+
+/**
+ * Music tracks and associated metadata for both hoc2015 and hoc2015x tutorials.
+ * Individual levels don't load all of these, only the subset they request.
+ * @const {MusicTrackDefinition[]}
+ */
+var HOC2015_MUSIC_METADATA = [
+  { name: 'song1' },
+  { name: 'song2' },
+  { name: 'song3' },
+  { name: 'song4', volume: 0.85 },
+  { name: 'song5' },
+  { name: 'song6' },
+  { name: 'song7' },
+  { name: 'song8', volume: 0.85 },
+  { name: 'song9', volume: 0.85 },
+  { name: 'song10' },
+  { name: 'song11', volume: 0.85 },
+  { name: 'song12', volume: 0.85 },
+  { name: 'song13' },
+  { name: 'song14' },
+  { name: 'song15' }
+];
 
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
@@ -6354,6 +6611,9 @@ exports.load = function(assetUrl, id) {
 
   // take care of items specific to skins
   switch (skin.id) {
+    case 'iceage':
+      loadIceAge(skin, assetUrl);
+      break;
     case 'infinity':
       loadInfinity(skin, assetUrl);
       break;
@@ -6392,7 +6652,7 @@ var createCategory = blockUtils.createCategory;
  *          notDefaultText (boolean): require changing the text from the default
  *          requiredText (string): text must change from default. we show
  *            requiredText in feedback blocks
- * @returns test definition suitable for feedback.js::getMissingRequiredBlocks
+ * @returns test definition suitable for feedback.js::getMissingBlocks
  *          required block processing
  */
 function saySpriteRequiredBlock(options) {
@@ -6627,6 +6887,11 @@ levels.playlab_1 = utils.extend(levels.dog_hello, {
   ]
 });
 
+levels.iceage_1 = utils.extend(levels.playlab_1, {
+  background: 'icy',
+  firstSpriteIndex: 0, // manny
+});
+
 // Can you make the dog say something and then have the cat say something afterwards?
 levels.dog_and_cat_hello =  {
   'ideal': 3,
@@ -6703,6 +6968,10 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
+});
+levels.iceage_2 = utils.extend(levels.playlab_2, {
+  background: 'leafy',
+  firstSpriteIndex: 3, // diego
 });
 
 
@@ -6787,6 +7056,10 @@ levels.playlab_3 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ]
 };
+levels.iceage_3 = utils.extend(levels.playlab_3, {
+  background: 'grassy',
+  firstSpriteIndex: 2, // scrat
+});
 
 
 // Can you write a program that makes the dog move to the cat, and have the cat
@@ -6905,6 +7178,10 @@ levels.playlab_4 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
 };
+levels.iceage_4 = utils.extend(levels.playlab_4, {
+  background: 'grassy',
+  avatarList: ['scrat', 'granny']
+});
 
 // Can you write a program to make the octopus say "hello" when it is clicked?
 levels.click_hello =  {
@@ -6954,6 +7231,10 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
+});
+levels.iceage_5 = utils.extend(levels.playlab_5, {
+  background: 'icy',
+  firstSpriteIndex: 1, // sid
 });
 
 levels.octopus_happy =  {
@@ -7081,8 +7362,8 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
   background: 'cave',
   firstSpriteIndex: 5, // witch
   goalOverride: {
-    goal: 'red_fireball',
-    success: 'blue_fireball',
+    goalImage: 'red_fireball',
+    successImage: 'blue_fireball',
     imageWidth: 800
   },
   defaultEmotion: Emotions.ANGRY,
@@ -7103,6 +7384,11 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     [1, 0, 0, 0, 0, 0, 1, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
+});
+levels.iceage_6 = utils.extend(levels.playlab_6, {
+  background: 'tile',
+  firstSpriteIndex: 3, // diego
+  goalOverride: {} // This prevents the override from original playlab from being used
 });
 
 // The "repeat forever" block allows you to run code continuously. Can you
@@ -7223,6 +7509,10 @@ levels.playlab_7 = {
     }]
   ],
 };
+levels.iceage_7 = utils.extend(levels.playlab_7, {
+  background: 'icy',
+  firstSpriteIndex: 1, // sid
+});
 
 // Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into
 // the dinosaur, and then move him with the arrows to make that happen?
@@ -7444,6 +7734,10 @@ levels.playlab_8 = {
     '</next></block>'
 
 };
+levels.iceage_8 = utils.extend(levels.playlab_8, {
+  background: 'icy',
+  avatarList: ['manny', 'sid']
+});
 
 // Can you add blocks to change the background and the speed of the penguin, and
 // then move him with the arrows until you score?
@@ -7627,6 +7921,66 @@ levels.playlab_9 = {
     '</block>'
 };
 
+levels.iceage_9 = utils.extend(levels.playlab_9, {
+  background: 'flower',
+  toolbox:
+    tb(
+      blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
+      blockOfType('studio_setBackground', {VALUE: '"ice"'}) +
+      blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
+      blockOfType('studio_saySprite') +
+      blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
+      blockOfType('studio_changeScore')
+    ),
+  requiredBlocks: [
+    [{test: 'setBackground',
+      type: 'studio_setBackground',
+      titles: {VALUE: '"grassy"'}}],
+    [{test: 'setSpriteSpeed',
+      type: 'studio_setSpriteSpeed',
+      titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
+  ],
+  avatarList: ['sid', 'granny'],
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
+      '<statement name="DO">' +
+        blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
+          blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
+        ) +
+      '</statement>' +
+    '</block>' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="290">' +
+      '<title name="SPRITE2">0</title>' +
+      '<title name="SPRITE2">1</title>' +
+      '<next>' +
+        blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
+          blockOfType('studio_saySprite', {TEXT: msg.iceAge()})
+        ) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="410">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 8}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="510">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 2}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="610">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 1}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="710">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 4}) +
+      '</next>' +
+    '</block>'
+});
+
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
 levels.sandbox =  {
   'ideal': Infinity,
@@ -7684,6 +8038,7 @@ levels.sandbox =  {
 levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
 levels.playlab_10 = utils.extend(levels.sandbox, {});
+levels.iceage_10 = utils.extend(levels.playlab_10, {});
 
 // Create your own story! Move around the cat and dog, and make them say things.
 levels.k1_6 = {
@@ -7989,17 +8344,17 @@ levels.js_hoc2015_move_right = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
-    [[0x1020000, 0x1020000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
-     [0x1020000, 0x1020000, 0x0000000, 0x0010000, 0x0020000, 0x0100000, 0x00, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000], 
+    [[0x1020000, 0x1020000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],
+     [0x1020000, 0x1020000, 0x0000000, 0x0010000, 0x0020000, 0x0100000, 0x00, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],
      [0x0000000, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x0000000],
-     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],   
-     [0x0000000, 0x0000000, 0x0000000, 0x0100000, 0x0010000, 0x0120000, 0x00, 0x0000000], 
-     [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],  
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0100000, 0x0010000, 0x0120000, 0x00, 0x0000000],
+     [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000]],
 
   'instructions': '"We need that scrap metal. BOTX, can you get it?"',
@@ -8007,21 +8362,15 @@ levels.js_hoc2015_move_right = {
   'timeoutFailureTick': 100,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal1'
   },
   "callouts": [
     {
       "id": "playlab:js_hoc2015_move_right:runButton",
       "element_id": "#runButton",
-      "hide_target_selector": "#runButton",
       "qtip_config": {
         "content": {
-          "text": msg.calloutRunButton(),
-        },
-        'hide': {
-          'event': 'mouseup touchend',
+          "text": msg.calloutMoveRightRunButton(),
         },
         'position': {
           'my': 'top left',
@@ -8061,30 +8410,28 @@ levels.js_hoc2015_move_right_down = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
-  'map': 
-    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x1100000, 0x1100000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x1100000, 0x1100000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0000000, 0x00],  
-     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],   
-     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],  
+  'map':
+    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x1100000, 0x1100000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x1100000, 0x1100000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
-  'instructions': '"We need more scrap metal. Can you get all the metal on this planet?"',
+  'instructions': '"We need more scrap metal. Can you get all the metal in this area?"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal2'
   },
   'progressConditions' : [
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
@@ -8110,33 +8457,31 @@ levels.js_hoc2015_move_diagonal = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
-  'floatingScore': true,  
+  'floatingScore': true,
   'map':
-    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000, 0x0000000],  
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000, 0x0000000],
      [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000],
-     [0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000, 0x0000000],   
+     [0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000, 0x0000000],
      [0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
-     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000],   
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000],
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000]],
   'embed': 'false',
   'instructions': '"Watch out for the GUY!"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal1'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
       result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
   ],
   "callouts": [
@@ -8184,32 +8529,30 @@ levels.js_hoc2015_move_backtrack = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
-  'map': 
-    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
-     [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00], 
-     [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],  
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00], 
+  'map':
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
-     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],  
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
   'instructions': '"Go quickly, BOTX."',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal1',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal1'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
       result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
@@ -8233,33 +8576,31 @@ levels.js_hoc2015_move_around = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
-    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
-     [0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000, 0x00],  
-     [0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0000000, 0x00], 
+    [[0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000, 0x00],
+     [0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000000, 0x20, 0x0140000, 0x0000000, 0x0000001, 0x0000000, 0x00],
-     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x00],  
-     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00], 
+     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x00],
+     [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
   'embed': 'false',
   'instructions': '"It\'s up to you, BOTX!"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal2'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
       result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
@@ -8284,33 +8625,31 @@ levels.js_hoc2015_move_finale = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': false,
+  'removeItemsWhenActorCollides': true,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
-    [[0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000000, 0x0000000], 
-     [0x0000000, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000000, 0x0000000],  
+    [[0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000000, 0x0000000],
+     [0x0000000, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000000, 0x0000000],
      [0x0000000, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
      [0x0000000, 0x0000000, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
-     [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],  
+     [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
      [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000]],
   'embed': 'false',
   'instructions': '"We need 4 more pieces of metal. Can you find them?"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
-    'goalImage': 'goal2',
-    'imageWidth': 50,
-    'imageHeight': 50
+    'goalImage': 'goal2'
   },
   'progressConditions' : [
     { required: { 'touchedHazardsAtOrAbove': 1 },
       result: { success: false, message: msg.failedAvoidHazard(), pauseInterpreter: true } },
     { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successHasAllGoals() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false },
       result: { success: false, message: msg.failedHasAllGoals() } }
   ]
 };
@@ -8332,7 +8671,7 @@ levels.js_hoc2015_event_two_items = {
     'whenDown': null
   },
   'startBlocks': [
-    'function whenUp() {', 
+    'function whenUp() {',
     '  ',
     '}',
     'function whenDown() {',
@@ -8361,15 +8700,13 @@ levels.js_hoc2015_event_two_items = {
   'showTimeoutRect': true,
   'goalOverride': {
     'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100,
     'goalRenderOffsetX': 0
   },
 
   'progressConditions' : [
-    { required: { 'allGoalsVisited': true }, 
+    { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successCharacter1() } },
-    { required: { 'timedOut': true }, 
+    { required: { 'timedOut': true },
       result: { success: false, message: msg.failedTwoItemsTimeout() } }
   ],
 
@@ -8396,15 +8733,12 @@ levels.js_hoc2015_event_two_items = {
       }
     },
     {
-      'id': 'arrowsCallout',
+      'id': 'playlab:js_hoc2015_event_two_items:arrowsCallout',
       'element_id': '#upButton',
       'hide_target_selector': '#soft-buttons',
       'qtip_config': {
         'content': {
           'text': msg.calloutUseArrowButtons(),
-        },
-        'hide': {
-          'event': 'mouseup touchend',
         },
         'position': {
           'my': 'top left',
@@ -8464,15 +8798,13 @@ levels.js_hoc2015_event_four_items = {
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalAnimation': 'animatedGoal'
   },
 
   'progressConditions' : [
-    { required: { 'allGoalsVisited': true }, 
+    { required: { 'allGoalsVisited': true },
       result: { success: true, message: msg.successCharacter1() } },
-    { required: { 'timedOut': true }, 
+    { required: { 'timedOut': true },
       result: { success: false, message: msg.failedFourItemsTimeout() } }
   ]
 };
@@ -8509,23 +8841,21 @@ levels.js_hoc2015_score =
   'floatingScore': true,
   'edgeCollisions': 'true',
   'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
     [1, 0, 0, 16, 0, 0, 0, 1],
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 1,  0, 0, 0, 0]],
-  'instructions': '"Reach the GOAL!"',
-  'instructions2': "Let's add points. Add 100 points when BOT1 gets the pilot.",
+  'instructions': '"Reach the GOALs!"',
+  'instructions2': "Let's add points. Add 100 points when BOT1 gets each pilot.",
   'autoArrowSteer': true,
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
   'goalOverride': {
-    'goalAnimation': 'animatedGoal',
-    'imageWidth': 100,
-    'imageHeight': 100
+    'goalAnimation': 'animatedGoal'
   },
   'goal': {
     // The level uses completeOnSuccessConditionNotGoals, so make sure this
@@ -8533,17 +8863,35 @@ levels.js_hoc2015_score =
     successCondition: function () { return false; }
   },
   'progressConditions' : [
-    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsBelow': 300 },
       result: { success: false, message: msg.failedScoreTimeout() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': true, 'currentPointsBelow': 300 },
       result: { success: false, message: msg.failedScoreScore() } },
-    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 }, 
+    { required: { 'timedOut': true, 'allGoalsVisited': false, 'currentPointsAtOrAbove': 300 },
       result: { success: false, message: msg.failedScoreGoals() } },
-    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 }, 
+    { required: { 'allGoalsVisited': true, 'currentPointsAtOrAbove': 300 },
       result: { success: true, message: msg.successCharacter1() } }
   ],
   'completeOnSuccessConditionNotGoals': true,
   'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_score:arrowsAutoSteerCallout',
+      'element_id': '#upButton',
+      'hide_target_selector': '#soft-buttons',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutUseArrowButtonsAutoSteer(),
+        },
+        'position': {
+          'my': 'top left',
+          'at': 'bottom left',
+          'adjust': {
+            'x': 30,
+            'y': 0
+          }
+        }
+      }
+    },
     {
       'id': 'playlab:js_hoc2015_score:placeCommandsAtTop',
       'element_id': '.droplet-gutter-line:nth-of-type(2)',
@@ -8556,11 +8904,11 @@ levels.js_hoc2015_score =
           'event': 'mouseup touchend',
         },
         'position': {
-          'my': 'top left',
-          'at': 'top left',
+          'my': 'top center',
+          'at': 'bottom center',
           'adjust': {
             'x': 170,
-            'y': 20
+            'y': 0
           }
         }
       }
@@ -8604,7 +8952,7 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
   'instructions': '"Watch out for the MAN."',
-  'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN!',
+  'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN and get all the pilots!',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -8612,7 +8960,6 @@ levels.js_hoc2015_win_lose = {
     {
       'id': 'playlab:js_hoc2015_win_lose:instructions',
       'element_id': '#prompt-table',
-      'hide_target_selector': '#prompt-table',
       'qtip_config': {
         'content': {
           'text': msg.calloutInstructions(),
@@ -8630,13 +8977,13 @@ levels.js_hoc2015_win_lose = {
   ],
 
   'progressConditions' : [
-    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsBelow': 200 },
       result: { success: false, message: msg.failedWinLoseTimeout() } },
-    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 }, 
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 2, 'currentPointsBelow': 200 },
       result: { success: false, message: msg.failedWinLoseScore() } },
-    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 2, 'currentPointsAtOrAbove': 200 },
       result: { success: false, message: msg.failedWinLoseGoals() } },
-    { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 }, 
+    { required: { 'collectedItemsAtOrAbove': 2, 'currentPointsAtOrAbove': 200 },
       result: { success: true, message: msg.successCharacter1() } }
   ]
 };
@@ -8673,16 +9020,16 @@ levels.js_hoc2015_add_characters = {
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': [
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
     [0, 0, 0, 0,  0, 0, 0, 0],
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 16, 0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
-    [0, 0, 0, 0,  0, 0, 0, 0], 
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 16, 0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
+    [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 0,  0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"I\'m seeing signs of increased activity on this planet!"',
+  'instructions': '"I\'m seeing signs of increased activity on this planet."',
   'instructions2': 'Add 3 PIGs to the planet. Then, go get them.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
@@ -8706,9 +9053,9 @@ levels.js_hoc2015_add_characters = {
   ],
 
   'progressConditions' : [
-    { required: { 'collectedItemsAtOrAbove': 3 }, 
+    { required: { 'collectedItemsAtOrAbove': 3 },
       result: { success: true, message: msg.successCharacter1() } },
-    { required: { 'timedOut': true, 'collectedItemsBelow': 3 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
       result: { success: false, message: msg.failedAddCharactersTimeout() } }
   ]
 };
@@ -8721,7 +9068,7 @@ levels.js_hoc2015_chain_characters = {
   'wallMap': 'grid',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': null,
+    'addCharacter': { params: ['"mouse"'] },
     'playSound': null,
     'addPoints': null,
     'removePoints': null,
@@ -8734,8 +9081,8 @@ levels.js_hoc2015_chain_characters = {
     '',
     'function whenGetMouse() {',
     '  playSound("item6sound2");',
-    '  addCharacter("mouse");',
-    '  addCharacter("mouse");',
+    '  addPoints(100);',
+    '',
     '}',
     ].join('\n'),
   'sortDrawOrder': true,
@@ -8748,19 +9095,40 @@ levels.js_hoc2015_chain_characters = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"They\'re multiplying!"',
-  'instructions2': 'Add 100 points every time BOT1 gets a MOUSE. Can you get 800 points? ',
+  'instructions2': 'Can you make two MOUSEs appear every time BOT1 gets one MOUSE?  Get 20 MOUSEs and score 2000 points.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
   'progressConditions' : [
-    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsBelow': 800 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 20, 'currentPointsBelow': 2000 },
       result: { success: false, message: msg.failedChainCharactersTimeout() } },
-    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 8, 'currentPointsBelow': 800 }, 
+    { required: { 'timedOut': true, 'collectedItemsAtOrAbove': 20, 'currentPointsBelow': 2000 },
       result: { success: false, message: msg.failedChainCharactersScore() } },
-    { required: { 'timedOut': true, 'collectedItemsBelow': 8, 'currentPointsAtOrAbove': 800 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 20, 'currentPointsAtOrAbove': 2000 },
       result: { success: false, message: msg.failedChainCharactersItems() } },
-    { required: { 'collectedItemsAtOrAbove': 8, 'currentPointsAtOrAbove': 800 }, 
+    { required: { 'collectedItemsAtOrAbove': 20, 'currentPointsAtOrAbove': 2000 },
       result: { success: true, message: msg.successCharacter1() } }
+  ],
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_chain_characters:calloutPlaceTwo',
+      'element_id': '.droplet-gutter-line:nth-of-type(7)',
+      'hide_target_selector': '.droplet-drag-cover',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutPlaceTwo(),
+        },
+        'event': 'mouseup touchend',
+        'position': {
+          'my': 'top left',
+          'at': 'center right',
+          'adjust': {
+            'x': 40,
+            'y': 10
+          }
+        }
+      }
+    }
   ]
 };
 
@@ -8815,19 +9183,19 @@ levels.js_hoc2015_chain_characters_2 = {
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
   'progressConditions' : [
-    { required: { 'timedOut': true, 'collectedItemsBelow': 14 }, 
+    { required: { 'timedOut': true, 'collectedItemsBelow': 14 },
       result: { success: false, message: msg.failedChainCharacters2Timeout() } },
-    { required: { 'collectedItemsAtOrAbove': 14 }, 
+    { required: { 'collectedItemsAtOrAbove': 14 },
       result: { success: true, message: msg.successCharacter1() } }
   ],
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwo',
+      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwoWhenBird',
       'element_id': '.droplet-gutter-line:nth-of-type(12)',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content' : {
-          'text': msg.calloutPlaceTwo(),
+          'text': msg.calloutPlaceTwoWhenBird(),
         },
         'event': 'mouseup touchend',
         'position': {
@@ -8859,7 +9227,6 @@ levels.js_hoc2015_change_setting = {
     'addPoints': null,
     'removePoints': null,
 
-    'whenScore1000': null,
     'whenGetPilot': null,
   },
   'startBlocks': [
@@ -8885,7 +9252,7 @@ levels.js_hoc2015_change_setting = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"Time to visit another planet."',
-  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.',
+  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.  Then, get the pilots.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -8893,7 +9260,6 @@ levels.js_hoc2015_change_setting = {
     {
       'id': 'playlab:js_hoc2015_change_setting:setMap',
       'element_id': '#droplet_palette_block_setMap',
-      'hide_target_selector': '#droplet_palette_block_setMap',
       'qtip_config': {
         'content' : {
           'text': msg.calloutSetMapAndSpeed(),
@@ -8913,9 +9279,9 @@ levels.js_hoc2015_change_setting = {
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
       result: { success: false, message: msg.failedChangeSettingTimeout() } },
     // If all items are collected, but either property not set?  Failure.
-    { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 }, 
+    { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 },
       result: { success: false, message: msg.failedChangeSettingSettings() } },
-    { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 }, 
+    { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 },
       result: { success: false, message: msg.failedChangeSettingSettings() } }
   ]
 };
@@ -8940,6 +9306,16 @@ levels.js_hoc2015_event_free = {
     'moveFast': { 'category': 'Commands' },
     'addPoints': { 'category': 'Commands' },
     'removePoints': { 'category': 'Commands' },
+
+    'goRight': { 'category': 'Commands' },
+    'goLeft': { 'category': 'Commands' },
+    'goUp': { 'category': 'Commands' },
+    'goDown': { 'category': 'Commands' },
+
+    'whenLeft': { 'category': 'Events' },
+    'whenRight': { 'category': 'Events' },
+    'whenUp': { 'category': 'Events' },
+    'whenDown': { 'category': 'Events' },
 
     'whenTouchObstacle': { 'category': 'Events' },
     'whenGetMan': { 'category': 'Events' },
@@ -8966,6 +9342,18 @@ levels.js_hoc2015_event_free = {
     'setBot("bot1");',
     'setBotSpeed("normal");',
     'playSound("character1sound5");',
+    'function whenUp() {',
+    '  ',
+    '}',
+    'function whenDown() {',
+    '  ',
+    '}',
+    'function whenLeft() {',
+    '  ',
+    '}',
+    'function whenRight() {',
+    '  ',
+    '}',
     ''].join('\n'),
   'sortDrawOrder': true,
   'wallMapCollisions': true,
@@ -8977,12 +9365,10 @@ levels.js_hoc2015_event_free = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"You\'re on your own now, BOT1."',
-  'autoArrowSteer': true,
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_event_free:clickCategory',
       'element_id': '.droplet-palette-group-header.green',
-      'hide_target_selector': '.droplet-palette-group-header.green',
       'qtip_config': {
         'content' : {
           'text': msg.calloutClickEvents(),
@@ -9111,7 +9497,8 @@ levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
 
 },{"../block_utils":"/home/ubuntu/staging/apps/build/js/block_utils.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js"}],"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -9261,7 +9648,8 @@ module.exports.showParamDropdowns = true;
 
 },{"./apiJavascript.js":"/home/ubuntu/staging/apps/build/js/studio/apiJavascript.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js"}],"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -12261,6 +12649,8 @@ exports.isKeyDown = function (keyCode) {
  */
 'use strict';
 
+var utils = require('../utils');
+
 var debugLogging = false;
 function debug(msg) {
   if (debugLogging && console && console.info) {
@@ -12284,22 +12674,33 @@ var PlaybackState = {
  * system.
  *
  * @param {AudioPlayer} audioPlayer
- * @param {string} begin - Audio clip name for start of sound.
- * @param {string} loop - Audio clip name for loopable part of sound.
- * @param {string} end - Audio clip name for end of sound.
+ * @param {Object} options
+ * @param {string} [options.begin] - Audio clip name for start of sound.
+ * @param {string} [options.loop] - Audio clip name for loopable part of sound.
+ * @param {string} [options.end] - Audio clip name for end of sound.
+ * @param {number} [options.volume] - Playback volume for the whole effect
+ *        (applied to each individual clip), default to 1 which is normal gain.
  * @constructor
  */
-var ThreeSliceAudio = function (audioPlayer, begin, loop, end) {
+var ThreeSliceAudio = function (audioPlayer, options) {
+  options = utils.valueOr(options, {});
   /** @private {PlaybackState} */
   this.state_ = PlaybackState.NONE;
+
   /** @private {AudioPlayer} */
   this.audioPlayer_ = audioPlayer;
+
   /** @private {string} */
-  this.beginClipName_ = begin;
+  this.beginClipName_ = options.begin;
+
   /** @private {string} */
-  this.loopClipName_ = loop;
+  this.loopClipName_ = options.loop;
+
   /** @private {string} */
-  this.endClipName_ = end;
+  this.endClipName_ = options.end;
+
+  /** @private {number} */
+  this.volume_ = utils.valueOr(options.volume, 1);
 };
 module.exports = ThreeSliceAudio;
 
@@ -12334,19 +12735,29 @@ ThreeSliceAudio.prototype.enterState_ = function (state) {
   var callback = this.whenSoundStopped_.bind(this, state);
   if (state === PlaybackState.BEGIN) {
     if (this.beginClipName_) {
-      this.audioPlayer_.play(this.beginClipName_, { onEnded: callback });
+      this.audioPlayer_.play(this.beginClipName_, {
+        volume: this.volume_,
+        onEnded: callback
+      });
     } else {
       this.enterState_(PlaybackState.LOOP);
     }
   } else if (state === PlaybackState.LOOP) {
     if (this.loopClipName_) {
-      this.audioPlayer_.play(this.loopClipName_, { loop: true, onEnded: callback });
+      this.audioPlayer_.play(this.loopClipName_, {
+        volume: this.volume_,
+        loop: true,
+        onEnded: callback
+      });
     } else {
       this.enterState_(PlaybackState.END);
     }
   } else if (state === PlaybackState.END) {
     if (this.endClipName_) {
-      this.audioPlayer_.play(this.endClipName_, { onEnded: callback });
+      this.audioPlayer_.play(this.endClipName_, {
+        volume: this.volume_,
+        onEnded: callback
+      });
     } else {
       this.enterState_(PlaybackState.NONE);
     }
@@ -12373,7 +12784,7 @@ ThreeSliceAudio.prototype.whenSoundStopped_ = function (stoppedState) {
 };
 
 
-},{}],"/home/ubuntu/staging/apps/build/js/studio/MusicController.js":[function(require,module,exports){
+},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/studio/MusicController.js":[function(require,module,exports){
 /** @file The maestro! Helper that knows which music tracks can be played, and
  *        which one is playing now, and selects and plays them appropriately. */
 /* jshint
@@ -12390,6 +12801,7 @@ ThreeSliceAudio.prototype.whenSoundStopped_ = function (stoppedState) {
 'use strict';
 
 var utils = require('../utils');
+var _ = utils.getLodash();
 
 var debugLogging = false;
 function debug(msg) {
@@ -12399,9 +12811,21 @@ function debug(msg) {
 }
 
 /**
+ * @typedef {Object} MusicTrackDefinition
+ * External track representation, used to define track info in skins.js.
+ *
+ * @property {string} name - corresponds to music filenames
+ * @property {number} volume - on a 0..1 scale
+ */
+
+/**
  * @typedef {Object} MusicTrack
+ * Internal track representation, includes track metadata and references to
+ * loaded sound object.
+ *
  * @property {string} name
  * @property {string[]} assetUrls
+ * @property {number} volume
  * @property {Sound} sound
  * @property {boolean} isLoaded
  */
@@ -12413,28 +12837,28 @@ function debug(msg) {
  * @param {AudioPlayer} audioPlayer - Reference to the Sounds object.
  * @param {function} assetUrl - Function for generating paths to static assets
  *        for the current skin.
- * @param {string[]} [trackNames] - List of music asset names (sans
- *        extensions). Can be omitted if no music should be played.
+ * @param {MusicTrackDefinition[]} [trackDefinitions] - List of music assets and
+ *        general info about how they should be played. Can be omitted or empty
+ *        if no music should be played.
  * @constructor
  */
-var MusicController = function (audioPlayer, assetUrl, trackNames) {
+var MusicController = function (audioPlayer, assetUrl, trackDefinitions) {
   /** @private {AudioPlayer} */
   this.audioPlayer_ = audioPlayer;
 
   /** @private {function} */
   this.assetUrl_ = assetUrl;
 
-  /** @private {string[]} */
-  this.trackNames_ = trackNames || [];
-
-  /** @private {Object} maps trackName => MusicTrack */
-  this.tracks_ = buildTrackMap(this.trackNames_, assetUrl);
+  /** @private {MusicTrack[]} */
+  this.trackList_ = buildTrackData(trackDefinitions, assetUrl);
 
   /** @private {string} */
-  this.nowPlayingName_ = null;
+  this.nowPlaying_ = null;
 
+  /** @private {string} Name of track to play on load */
   this.playOnLoad_ = null;
 
+  // If the video player gets pulled up, make sure we stop the music.
   document.addEventListener('videoShown', function () {
     this.fadeOut();
   }.bind(this));
@@ -12444,24 +12868,22 @@ var MusicController = function (audioPlayer, assetUrl, trackNames) {
 module.exports = MusicController;
 
 /**
- * Build up an initial map of trackName -> MusicTrack object, without doing
- * any asset loading.
- * @param {string{}} trackNames
+ * Build up initial internal track metadata.
+ * @param {MusicTrackDefinition[]} trackDefinitions
  * @param {function} assetUrl
+ * @return {MusicTrack[]}
  */
-function buildTrackMap(trackNames, assetUrl) {
-  var tracks = trackNames.map(function (name) {
+function buildTrackData(trackDefinitions, assetUrl) {
+  trackDefinitions = utils.valueOr(trackDefinitions, []);
+  return trackDefinitions.map(function (trackDef) {
     return {
-      name: name,
-      assetUrls: [ assetUrl(name + '.mp3') ],
+      name: trackDef.name,
+      assetUrls: [ assetUrl(trackDef.name + '.mp3') ],
+      volume: utils.valueOr(trackDef.volume, 1),
       sound: null,
       isLoaded: false
     };
   });
-  return tracks.reduce(function (memo, next) {
-    memo[next.name] = next;
-    return memo;
-  }, {});
 }
 
 /**
@@ -12472,17 +12894,17 @@ MusicController.prototype.preload = function () {
     return;
   }
 
-  this.trackNames_.forEach(function (name) {
-    this.tracks_[name].sound = this.audioPlayer_.registerByFilenamesAndID(
-        this.tracks_[name].assetUrls, name);
-    this.tracks_[name].sound.onLoad = function () {
-      debug('done loading ' + name);
-      this.tracks_[name].isLoaded = true;
-      if (this.playOnLoad_ === name) {
-        this.play(name);
+  this.trackList_.forEach(function (track) {
+    track.sound = this.audioPlayer_.registerByFilenamesAndID(
+        track.assetUrls, track.name);
+    track.sound.onLoad = function () {
+      debug('done loading ' + track.name);
+      track.isLoaded = true;
+      if (this.playOnLoad_ === track.name) {
+        this.play(track.name);
       }
     }.bind(this);
-  }.bind(this));
+  }, this);
 };
 
 /**
@@ -12495,24 +12917,26 @@ MusicController.prototype.play = function (trackName) {
     return;
   }
 
-  if (!trackName) {
-    trackName = this.trackNames_[Math.floor(Math.random(this.trackNames_.length))];
+  var track;
+  if (trackName) {
+    track = this.getTrackByName_(trackName);
+  } else {
+    track = this.getRandomTrack_();
   }
 
-  var track = this.tracks_[trackName];
   if (!track) {
-    // Not found - throw exception?
+    // No track to play - throw an exception?
     return;
   }
 
   if (track.sound && track.isLoaded) {
     debug('playing now');
-    var callback = this.whenMusicStopped_.bind(this, trackName);
-    track.sound.play({ onEnded: callback });
-    this.nowPlaying_ = trackName;
+    var callback = this.whenMusicStopped_.bind(this, track.name);
+    track.sound.play({ volume: track.volume, onEnded: callback });
+    this.nowPlaying_ = track.name;
   } else {
     debug('not done loading, playing after load');
-    this.playOnLoad_ = trackName;
+    this.playOnLoad_ = track.name;
   }
 };
 
@@ -12563,6 +12987,25 @@ MusicController.prototype.whenMusicStopped_ = function (musicName) {
   if (this.nowPlaying_ === musicName) {
     this.nowPlaying_ = null;
   }
+};
+
+/**
+ * @param {string} name
+ * @returns {MusicTrack|undefined}
+ * @private
+ */
+MusicController.prototype.getTrackByName_ = function (name) {
+  return _.find(this.trackList_, function (track) {
+    return track.name === name;
+  });
+};
+
+/**
+ * @returns {MusicTrack|undefined}
+ * @private
+ */
+MusicController.prototype.getRandomTrack_ = function () {
+  return this.trackList_[Math.floor(Math.random(this.trackList_.length))];
 };
 
 
@@ -12946,11 +13389,6 @@ Item.prototype.startCollision = function (key) {
   if (newCollisionStarted) {
     if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
       Studio.trackedBehavior.touchedHazardCount++;
-      var actor = Studio.sprite[key];
-      if (actor) {
-        actor.addAction(new spriteActions.FadeActor(constants.TOUCH_HAZARD_FADE_TIME));
-        actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_FADE_TIME));
-      }
     }
   }
   return newCollisionStarted;
@@ -13536,11 +13974,9 @@ StudioSpriteSheet.prototype.getFrame = function (animationIndex, frameIndex) {
  */
 'use strict';
 
-var constants = require('./constants');
 var utils = require('../utils');
-
-// The SVG namespace that must be applied to new SVG elements
-var SVG_NS = "http://www.w3.org/2000/svg";
+var SVG_NS = require('../constants').SVG_NS;
+var constants = require('./constants');
 
 // Unique element ID that increments by 1 each time an element is created
 var uniqueId = 0;
@@ -13725,7 +14161,7 @@ StudioAnimation.prototype.setOpacity = function (newOpacity) {
 };
 
 
-},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/constants.js":[function(require,module,exports){
+},{"../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js"}],"/home/ubuntu/staging/apps/build/js/studio/constants.js":[function(require,module,exports){
 'use strict';
 
 exports.SpriteSpeed = {
@@ -14105,4 +14541,593 @@ exports.SHAKE_DEFAULT_CYCLES = 8;
 exports.SHAKE_DEFAULT_DISTANCE = 5;
 
 
-},{}]},{},["/home/ubuntu/staging/apps/build/js/studio/main.js"]);
+},{}],"/home/ubuntu/staging/apps/build/js/studio/ImageFilterFactory.js":[function(require,module,exports){
+/** @file Helper for getting or creating image filters by name (so we can
+ *        specify them in plain level definitions or skins) */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var GlowFilter = require('./GlowFilter');
+var PulseFilter = require('./PulseFilter');
+var ShineFilter = require('./ShineFilter');
+
+/**
+ * Given a type name, constructs and returns a filter of the given type.
+ * @param {!string} filterTypeName
+ * @param {!SVGSVGElement} svg
+ * @returns {ImageFilter} or null if the type name is not found.
+ */
+exports.makeFilterOfType = function (filterTypeName, svg) {
+  if (filterTypeName === 'pulse') {
+    return new PulseFilter(svg);
+  }
+
+  if (filterTypeName === 'shine') {
+    return new ShineFilter(svg);
+  }
+
+  if (filterTypeName === 'glow') {
+    return new GlowFilter(svg);
+  }
+
+  return null;
+};
+
+
+},{"./GlowFilter":"/home/ubuntu/staging/apps/build/js/studio/GlowFilter.js","./PulseFilter":"/home/ubuntu/staging/apps/build/js/studio/PulseFilter.js","./ShineFilter":"/home/ubuntu/staging/apps/build/js/studio/ShineFilter.js"}],"/home/ubuntu/staging/apps/build/js/studio/ShineFilter.js":[function(require,module,exports){
+/** @file Runs a specular spotlight across the image from top-left to bottom-right. */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var SVG_NS = require('../constants').SVG_NS;
+var ImageFilter = require('./ImageFilter');
+
+/** @const {number} determines "height" of light above play area */
+var POINT_LIGHT_Z = 200;
+
+/**
+ * Runs a specular spotlight across the image from top-left to bottom-right,
+ * not hitting alpha'd areas, generating a looping "shine" effect.
+ * @param {SVGSVGElement} svg
+ * @constructor
+ * @extends {ImageFilter}
+ */
+var ShineFilter = function (svg) {
+  ImageFilter.call(this, svg);
+
+  /** @private {SVGElement} */
+  this.fePointLight_ = null;
+
+  // TODO: Find a way to not depend on the Studio global.
+  /** @private {function} */
+  this.curve_ = ImageFilter.makeRepeatingOneThirdLinearInterpolation(
+      2000, -POINT_LIGHT_Z, Studio.MAZE_WIDTH + POINT_LIGHT_Z);
+};
+ShineFilter.inherits(ImageFilter);
+module.exports = ShineFilter;
+
+/**
+ * Build an ordered set of filter operations that define the behavior of this
+ * filter type.
+ * @returns {SVGElement[]}
+ * @private
+ * @override
+ */
+ShineFilter.prototype.createFilterSteps_ = function () {
+  // 1. Blur the source image to get softer light
+  // 2. Generate a specular point light
+  // 3. Mask out specular light that doesn't fall atop the original alpha mask.
+  // 4. Composite the specular light over the original image
+
+  var feGaussianBlur = document.createElementNS(SVG_NS, 'feGaussianBlur');
+  var blurResult = this.id_ + '-blur';
+  feGaussianBlur.setAttribute('stdDeviation', 6);
+  feGaussianBlur.setAttribute('result', blurResult);
+
+  var feSpecularLighting = document.createElementNS(SVG_NS, 'feSpecularLighting');
+  var specularResult = this.id_ + '-specular';
+  feSpecularLighting.setAttribute('in', blurResult);
+  feSpecularLighting.setAttribute('specularExponent', 60);
+  feSpecularLighting.setAttribute('lighting-color', 'white');
+  feSpecularLighting.setAttribute('result', specularResult);
+
+  this.fePointLight_ = document.createElementNS(SVG_NS, 'fePointLight');
+  this.fePointLight_.setAttribute('x', 0);
+  this.fePointLight_.setAttribute('y', 0);
+  this.fePointLight_.setAttribute('z', POINT_LIGHT_Z);
+  feSpecularLighting.appendChild(this.fePointLight_);
+
+  var feCompositeMask = document.createElementNS(SVG_NS, 'feComposite');
+  var maskedSpecularId = specularResult + '-masked';
+  feCompositeMask.setAttribute('in', specularResult);
+  feCompositeMask.setAttribute('operator', 'in');
+  feCompositeMask.setAttribute('in2', 'SourceAlpha');
+  feCompositeMask.setAttribute('result', maskedSpecularId);
+
+  var feCompositeLayer = document.createElementNS(SVG_NS, 'feComposite');
+  feCompositeLayer.setAttribute('in', maskedSpecularId);
+  feCompositeLayer.setAttribute('operator', 'over');
+  feCompositeLayer.setAttribute('in2', 'SourceGraphic');
+
+
+  return [
+    feGaussianBlur,
+    feSpecularLighting,
+    feCompositeMask,
+    feCompositeLayer
+  ];
+};
+
+/**
+ * Update this effect's animation for the current time.
+ * @param {number} timeMs
+ * @override
+ */
+ShineFilter.prototype.update = function (timeMs) {
+  if (this.fePointLight_) {
+    var newValue = this.curve_(timeMs);
+    this.fePointLight_.setAttribute('x', newValue);
+    this.fePointLight_.setAttribute('y', newValue);
+  }
+};
+
+
+},{"../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./ImageFilter":"/home/ubuntu/staging/apps/build/js/studio/ImageFilter.js"}],"/home/ubuntu/staging/apps/build/js/studio/PulseFilter.js":[function(require,module,exports){
+/** @file Increases the brightness of the image up to pure white and back. */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var SVG_NS = require('../constants').SVG_NS;
+var ImageFilter = require('./ImageFilter');
+
+/**
+ * Increases the brightness of the image up to pure white (still respecting
+ * the alpha channel) then decreases it back to normal.
+ * @param {SVGSVGElement} svg
+ * @constructor
+ * @extends {ImageFilter}
+ */
+var PulseFilter = function (svg) {
+  ImageFilter.call(this, svg);
+
+  /** @private {SVGElement} */
+  this.feFuncR_ = null;
+
+  /** @private {SVGElement} */
+  this.feFuncG_ = null;
+
+  /** @private {SVGElement} */
+  this.feFuncB_ = null;
+
+  /** @private {function} */
+  this.curve_ = ImageFilter.makeBellCurveOscillation(2000, 2, 0, 0.5);
+};
+PulseFilter.inherits(ImageFilter);
+module.exports = PulseFilter;
+
+/**
+ * Build an ordered set of filter operations that define the behavior of this
+ * filter type.
+ * @returns {SVGElement[]}
+ * @private
+ * @override
+ */
+PulseFilter.prototype.createFilterSteps_ = function () {
+  // Only one step in this filter: Increase brightness of all channels.
+  var feComponentTransfer = document.createElementNS(SVG_NS, 'feComponentTransfer');
+  this.feFuncR_ = document.createElementNS(SVG_NS, 'feFuncR');
+  this.feFuncG_ = document.createElementNS(SVG_NS, 'feFuncG');
+  this.feFuncB_ = document.createElementNS(SVG_NS, 'feFuncB');
+  [this.feFuncR_, this.feFuncG_, this.feFuncB_].forEach(function (feFunc) {
+    feFunc.setAttribute('type', 'linear');
+    feFunc.setAttribute('slope', '1');
+    feFunc.setAttribute('intercept', '0');
+    feComponentTransfer.appendChild(feFunc);
+  });
+
+  return [feComponentTransfer];
+};
+
+/**
+ * Update this effect's animation for the current time.
+ * @param {number} timeMs
+ * @override
+ */
+PulseFilter.prototype.update = function (timeMs) {
+  var newValue = this.curve_(timeMs);
+  [this.feFuncR_, this.feFuncG_, this.feFuncB_].forEach(function (feFunc) {
+    if (feFunc) {
+      feFunc.setAttribute('intercept', newValue);
+    }
+  });
+};
+
+
+},{"../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./ImageFilter":"/home/ubuntu/staging/apps/build/js/studio/ImageFilter.js"}],"/home/ubuntu/staging/apps/build/js/studio/GlowFilter.js":[function(require,module,exports){
+/** @file Filter that adds a white glowing outline to an image. */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+require('../utils');
+var SVG_NS = require('../constants').SVG_NS;
+var ImageFilter = require('./ImageFilter');
+
+/**
+ * Adds a white glowing outline to the image.
+ * @param {SVGSVGElement} svg
+ * @constructor
+ * @extends {ImageFilter}
+ */
+var GlowFilter = function (svg) {
+  ImageFilter.call(this, svg);
+
+  /** @private {SVGElement} */
+  this.feCompositeLayers_ = null;
+
+  /** @private {function} */
+  this.curve_ = ImageFilter.makeBellCurveOscillation(3000, 3, 0.1, 1.0);
+};
+GlowFilter.inherits(ImageFilter);
+module.exports = GlowFilter;
+
+/**
+ * Build an ordered set of filter operations that define the behavior of this
+ * filter type.
+ * @returns {SVGElement[]}
+ * @private
+ * @override
+ */
+GlowFilter.prototype.createFilterSteps_ = function () {
+  // 1. Flood-fill the glow color (white)
+  // 2. Dilate (grow) the source alpha mask
+  // 3. Combine to get a silhouette in the correct color
+  // 4. Blur the silhouette for a soft glow
+  // 5. Mask out the object's original alpha channel
+  // 6. Composite the glow and original image, with varying glow alpha
+
+  var feFloodWhite = document.createElementNS(SVG_NS, 'feFlood');
+  var feFloodWhiteResult = this.id_ + '-flood-white';
+  feFloodWhite.setAttribute('flood-color', 'white');
+  feFloodWhite.setAttribute('result', feFloodWhiteResult);
+
+  var feMorphology = document.createElementNS(SVG_NS, 'feMorphology');
+  var feMorphologyResult = this.id_ + '-morphology';
+  feMorphology.setAttribute('in', 'SourceAlpha');
+  feMorphology.setAttribute('operator', 'dilate');
+  feMorphology.setAttribute('radius', 2);
+  feMorphology.setAttribute('result', feMorphologyResult);
+
+  var feCompositeSilhouette = document.createElementNS(SVG_NS, 'feComposite');
+  var feCompositeSilhouetteResult = this.id_ + '-silhouette';
+  feCompositeSilhouette.setAttribute('in', feFloodWhiteResult);
+  feCompositeSilhouette.setAttribute('operator', 'in');
+  feCompositeSilhouette.setAttribute('in2', feMorphologyResult);
+  feCompositeSilhouette.setAttribute('result', feCompositeSilhouetteResult);
+
+  var feGaussianBlur = document.createElementNS(SVG_NS, 'feGaussianBlur');
+  var feGaussianBlurResult = this.id_ + '-blur';
+  feGaussianBlur.setAttribute('in', feCompositeSilhouetteResult);
+  feGaussianBlur.setAttribute('stdDeviation', 1);
+  feGaussianBlur.setAttribute('result', feGaussianBlurResult);
+
+  var feCompositeMaskedGlow = document.createElementNS(SVG_NS, 'feComposite');
+  var feCompositeMaskedGlowResult = this.id_ + '-masked-glow';
+  feCompositeMaskedGlow.setAttribute('in', feGaussianBlurResult);
+  feCompositeMaskedGlow.setAttribute('operator', 'out');
+  feCompositeMaskedGlow.setAttribute('in2', 'SourceAlpha');
+  feCompositeMaskedGlow.setAttribute('result', feCompositeMaskedGlowResult);
+
+  var feCompositeLayers = document.createElementNS(SVG_NS, 'feComposite');
+  feCompositeLayers.setAttribute('in', 'SourceGraphic');
+  feCompositeLayers.setAttribute('operator', 'arithmetic');
+  feCompositeLayers.setAttribute('in2', feCompositeMaskedGlowResult);
+  feCompositeLayers.setAttribute('k1', 0);
+  feCompositeLayers.setAttribute('k2', 1); // Always show 100% of original image
+  feCompositeLayers.setAttribute('k3', 0);
+  feCompositeLayers.setAttribute('k4', 0);
+  this.feCompositeLayers_ = feCompositeLayers;
+
+  return [
+    feFloodWhite,
+    feMorphology,
+    feCompositeSilhouette,
+    feGaussianBlur,
+    feCompositeMaskedGlow,
+    feCompositeLayers
+  ];
+};
+
+/**
+ * Update this effect's animation for the current time.
+ * @param {number} timeMs
+ * @override
+ */
+GlowFilter.prototype.update = function (timeMs) {
+  if (this.feCompositeLayers_) {
+    this.feCompositeLayers_.setAttribute('k3', this.curve_(timeMs));
+  }
+};
+
+
+},{"../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./ImageFilter":"/home/ubuntu/staging/apps/build/js/studio/ImageFilter.js"}],"/home/ubuntu/staging/apps/build/js/studio/ImageFilter.js":[function(require,module,exports){
+/** @file Wrapper for an SVG filter definition with animation capabilities */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true,
+
+ maxlen: 90,
+ maxstatements: 200
+ */
+'use strict';
+
+var SVG_NS = require('../constants').SVG_NS;
+var utils = require('../utils');
+
+// Unique element ID that increments by 1 each time an element is created
+var uniqueId = 0;
+
+/**
+ * Base class for defining complex SVG <filter>s that can be applied to
+ * any number of elements in playlab, but are primarily designed for use with
+ * image/sprite elements.
+ *
+ * The filter behaviors are defined here in code, but are added dynamically to
+ * the DOM as late as possible to avoid adding them when they are not needed.
+ *
+ * Wrapping the filters this way also provides an easy place to dynamically
+ * manipulate their properties, generating filter animation.
+ *
+ * TODO: SVG filters are not supported in IE9.  This class should do a feature
+ *       check and convert itself into a no-op if we detect that filters are
+ *       not supported.
+ *
+ * @constructor
+ * @param {!SVGSVGElement} svg - Every filter must belong to a single SVG
+ *        root element, because it gets defined inside that SVG's defs tag.
+ *        Note: The filter is not created right away, but we hold the SVG
+ *        reference so we can late-create the filter when it's needed.
+ */
+var ImageFilter = function (svg) {
+  /** @private {SVGSVGElement} */
+  this.svg_ = svg;
+
+  /** @private {string} */
+  this.id_ = 'image-filter-' + uniqueId++;
+
+  /** @private {number} how many elements are currently using this filter. */
+  this.applyCount_ = 0;
+
+  /** @private {?} setInterval key */
+  this.intervalId_ = null;
+
+};
+module.exports = ImageFilter;
+
+/**
+ * Set the passed element to use this filter (replaces other filters it may
+ * be using.)
+ * @param {SVGElement} svgElement
+ */
+ImageFilter.prototype.applyTo = function (svgElement) {
+  if (!this.checkBrowserSupport_()) {
+    return;
+  }
+
+  if (this.applyCount_ === 0) {
+    this.createInDom_();
+  }
+  svgElement.setAttribute('filter', 'url("#' + this.id_ + '")');
+  this.applyCount_++;
+};
+
+/**
+ * If the passed element is using this filter, removes the filter.
+ * @param {SVGElement} svgElement
+ */
+ImageFilter.prototype.removeFrom = function (svgElement) {
+  if (svgElement.getAttribute('filter') === 'url("#' + this.id_ + '")') {
+    svgElement.removeAttribute('filter');
+  }
+  this.applyCount_--;
+  if (this.applyCount_ === 0) {
+    this.removeFromDom_();
+  }
+};
+
+/* jshint unused: false */
+/**
+ * Update this effect's animation for the current time.
+ * Called by effect's own interval (not Studio.onTick) so that we can run
+ * effects even when the studio simulation is not running.
+ * @param {number} timeMs
+ */
+ImageFilter.prototype.update = function (timeMs) {
+  // No default operation here.  Subclasses may override this to implement
+  // animation.
+};
+/* jshint unused: true */
+
+/**
+ * Generates the necessary elements and adds this filter to the parent SVG
+ * under the <defs> tag.
+ * @private
+ */
+ImageFilter.prototype.createInDom_ = function () {
+  var filter = document.getElementById(this.id_);
+  if (filter) {
+    return;
+  }
+
+  // Make a new filter element
+  filter = document.createElementNS(SVG_NS, 'filter');
+  filter.setAttribute('id', this.id_);
+
+  // Add the filter steps (expected to be different for each filter type)
+  var steps = this.createFilterSteps_();
+  steps.forEach(function (step) {
+    filter.appendChild(step);
+  });
+
+  // Put the filter in the SVG Defs node.
+  var defs = this.getDefsNode_();
+  defs.appendChild(filter);
+
+  // Establish 30FPS update interval
+  if (!this.intervalId_) {
+    this.intervalId_ = window.setInterval(function () {
+      this.update(new Date().getTime());
+    }.bind(this), 1000/30);
+  }
+};
+
+/**
+ * Removes this SVG filter from the <defs> tag.
+ * @private
+ */
+ImageFilter.prototype.removeFromDom_ = function () {
+  if (this.intervalId_) {
+    window.clearInterval(this.intervalId_);
+    this.intervalId_ = null;
+  }
+
+  var filter = document.getElementById(this.id_);
+  if (filter) {
+    filter.parentNode.removeChild(filter);
+  }
+};
+
+/**
+ * Build an ordered set of filter operations that define the behavior of this
+ * filter type.
+ * @returns {SVGElement[]}
+ * @private
+ */
+ImageFilter.prototype.createFilterSteps_ = function () {
+  return [];
+};
+
+/**
+ * Get the Defs tag for our SVG, creating it if it doesn't exist.
+ * @returns {SVGDefsElement}
+ * @private
+ */
+ImageFilter.prototype.getDefsNode_ = function () {
+  var defs = this.svg_.querySelector('defs');
+  if (!defs) {
+    defs = document.createElementNS(SVG_NS, 'defs');
+    this.svg_.appendChild(defs);
+  }
+  return defs;
+};
+
+/**
+ * Check whether the current browser is likely to support SVG filter effects.
+ * Can be overridden by subclasses needing specific support.
+ * @returns {boolean}
+ * @private
+ */
+ImageFilter.prototype.checkBrowserSupport_ = function () {
+  // Check suggested by http://stackoverflow.com/a/9771153/5000129
+  return typeof window.SVGFEColorMatrixElement !== 'undefined' &&
+      SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_SATURATE === 2;
+};
+
+/**
+ * Generates a function that given a time value "t" will produce a number
+ * between zero and one (inclusive) following a given curve between them.
+ *
+ * @param {number} period - the t-value for one complete cycle, from max to
+ *        min and back to max.  Must be nonzero.
+ * @param {number} [exponent] - Determines the sharpness of the curve in the
+ *        oscillation.
+ *        2 (default) gives a traditional bell curve.
+ *        1 gives a triangle wave (no curve, just linear interpolation).
+ *        0-1 gives a curve that spends more time above halfway than below it.
+ *        1+ gives a curve that spends more time below halfway than above it
+ *             (like a repeated y=x*x curve).
+ *        May not work well for certain values of curve - make sure to test!
+ * @param {number} [min] - Smallest value of oscillation, default 0
+ * @param {number} [max] - Largest value of oscillation, default 1
+ */
+ImageFilter.makeBellCurveOscillation = function (period, exponent, min, max) {
+  exponent = utils.valueOr(exponent, 2);
+  min = utils.valueOr(min, 0);
+  max = utils.valueOr(max, 1);
+  var delta = max - min;
+  var coefficient = delta * Math.pow(2 / period, exponent);
+  var halfPeriod = period / 2;
+  return function (t) {
+    return min + coefficient * Math.abs(Math.pow((t % period) - halfPeriod, exponent));
+  };
+};
+
+/**
+ * Generates a function for a repeating pattern as follows:
+ *  * Spend the first 1/3 of the period at {min}
+ *  * Spend the second 1/3 of the period doing a linear interpolation from
+ *    {min} to {max}
+ *  * Spend the final 1/3 of the period at {max}
+ *
+ * @param {number} period - time units before this pattern repeats
+ * @param {number} [min] - Lowest value, default zero
+ * @param {number} [max] - Highest value, default one
+ */
+ImageFilter.makeRepeatingOneThirdLinearInterpolation = function (period, min, max) {
+  min = utils.valueOr(min, 0);
+  max = utils.valueOr(max, 1);
+
+  var slope = 3 * (max - min) / period;
+  var intercept = 2 * min - max;
+  return function (t) {
+    return Math.min(max, Math.max(min, slope * (t % period) + intercept));
+  };
+};
+
+
+},{"../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js"}]},{},["/home/ubuntu/staging/apps/build/js/studio/main.js"]);

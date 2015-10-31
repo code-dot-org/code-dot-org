@@ -252,6 +252,9 @@ uz:
   map_search_placeholder: Search for Hour of Code events
   map_search_search: Search
   map_search_reset: Reset
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: The Hour of Code is coming
   meta_tag_og_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.
   meta_tag_twitter_title: The Hour of Code is coming

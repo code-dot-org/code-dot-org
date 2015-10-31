@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
 
-Anda memungkinkan siswa di seluruh dunia untuk belajar Hour of Code yang dapat *mengubah seluruh hidup mereka*, selama < % = campaign_date('full') % >. Kami akan menghubungi tentang hadiah, tutorial baru dan update menarik lainnya. Apa yang dapat Anda lakukan sekarang?
+Anda memungkinkan siswa di seluruh dunia untuk belajar Hour of Code yang dapat *mengubah seluruh hidup mereka*, selama <%= campaign_date('full') %>. Kami akan menghubungi tentang hadiah, tutorial baru dan update menarik lainnya. Apa yang dapat Anda lakukan sekarang?
 
 ## 1. Sebarkan berita
 
@@ -24,7 +24,7 @@ Anda hanya bergabung dengan gerakan Hour of Code. Beritahu teman Anda dengan **#
 
 ## 2. Tawarkan pada seluruh isi sekolah anda untuk mengikuti Hour of Code
 
-[Kirim email ini](%= resolve_url('/promote/resources#sample-emails') %) kepada kepala sekolah dan tantang setiap kelas di sekolah Anda untuk mendaftar. < % jika @country == 'us' %> Salah satu sekolah yang beruntung di *setiap* negara Amerika (dan Washington Dc) akan memenangkan teknolgi senilai $10,000. [Daftar di sini](%= resolve_url('/prizes/hardware-signup') %) untuk menjadi layak dan [**lihat pemenang tahun lalu**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Kirim email ini](%= resolve_url('/promote/resources#sample-emails') %) kepada kepala sekolah dan tantang setiap kelas di sekolah Anda untuk mendaftar. <% if @country == 'us' %> Salah satu sekolah yang beruntung di *setiap* negara Amerika (dan Washington Dc) akan memenangkan teknolgi senilai $10,000. [Daftar di sini](%= resolve_url('/prizes/hardware-signup') %) untuk menjadi layak dan [**lihat pemenang tahun lalu**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
 
 ## 3. Tanyakanlah kepada bos anda untuk terlibat
 

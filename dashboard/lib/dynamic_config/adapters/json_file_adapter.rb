@@ -13,6 +13,7 @@ class JSONFileDatastoreAdapter
   # @param key [String]
   # @param value [String]
   def set(key, value)
+    load_from_file
     @hash[key] = Oj.dump(value, :mode => :strict)
     write_to_file()
   end
@@ -20,14 +21,18 @@ class JSONFileDatastoreAdapter
   # @param key [String]
   # @returns [JSONable Object] or nil if key doesn't exist
   def get(key)
-    Oj.load(@hash[key])
-  rescue => exc
-    Honeybadger.notify(exc)
+    load_from_file
+    begin
+      return Oj.load(@hash[key])
+    rescue => exc
+      Honeybadger.notify(exc)
+    end
     nil
   end
 
   # @returns [Hash]
   def all
+    load_from_file
     ret = {}
     @hash.each do |k, v|
       begin
@@ -42,10 +47,16 @@ class JSONFileDatastoreAdapter
   end
 
   def load_from_file
-    File.open(@file_path, "w+") do |f|
-      contents = f.read()
-      @hash = JSON.load(contents) || {}
+    begin
+      File.open(@file_path, "r") do |f|
+        contents = f.read()
+        @hash = JSON.load(contents)
+        @hash = {} if @hash.nil?
+      end
+    rescue
+      @hash = {}
     end
+    raise StandardError unless !@hash.nil?
   end
 
   def write_to_file

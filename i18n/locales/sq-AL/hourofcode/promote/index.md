@@ -15,7 +15,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 Anyone, anywhere can host an Hour of Code. [Sign up](%= resolve_url('/') %) to receive updates and qualify for prizes.   
 
 
-[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
+[<button><%= hoc_s(:signup_your_event) %></button>](%= resolve_url('/') %)
 
 ## 1. Përhap fjalën
 

@@ -1,4 +1,4 @@
-/* global Interpreter */
+/* global Interpreter, CanvasPixelArray */
 
 var dropletUtils = require('./dropletUtils');
 
@@ -143,10 +143,18 @@ function marshalNativeToInterpreterObject(interpreter, nativeObject, maxDepth) {
   return retVal;
 }
 
+function isCanvasImageData(nativeVar) {
+  // IE 9/10 don't know about Uint8ClampedArray and call it CanvasPixelArray instead
+  if (typeof(Uint8ClampedArray) !== "undefined") {
+    return nativeVar instanceof Uint8ClampedArray;
+  }
+  return nativeVar instanceof CanvasPixelArray;
+}
+
+
 //
 // Droplet/JavaScript/Interpreter codegen functions:
 //
-
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
   if (typeof nativeVar === 'undefined') {
     return interpreter.UNDEFINED;
@@ -162,12 +170,10 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     retVal = interpreter.createObject(interpreter.ARRAY);
     for (i = 0; i < nativeVar.length; i++) {
       retVal.properties[i] = exports.marshalNativeToInterpreter(interpreter,
-                                                                nativeVar[i],
-                                                                null,
-                                                                maxDepth - 1);
+        nativeVar[i], null, maxDepth - 1);
     }
     retVal.length = nativeVar.length;
-  } else if (nativeVar instanceof Uint8ClampedArray) {
+  } else if (isCanvasImageData(nativeVar)) {
     // Special case for canvas image data - could expand to support TypedArray
     retVal = interpreter.createObject(interpreter.ARRAY);
     for (i = 0; i < nativeVar.length; i++) {

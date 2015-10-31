@@ -52,7 +52,7 @@ Uma escola sorteada de *cada* Estado dos EUA (e de Washington D.C.) ganhará o e
 
 ## Quem pode receber os presentes de agradecimento?
 
-Todos os organizadores da Hora do Código de 2015, dentro e fora dos Estados Unidos, podem receber os presentes de agradecimento, Contudo, o prêmio de US$10.000 em hardware é limitado aos que residem nos Estados Unidos.
+Todos os organizadores da Hora do Código de 2015, dentro e fora dos Estados Unidos, podem receber os presentes de agradecimento. Contudo, o prêmio de US$10.000 em hardware é limitado aos que residem nos Estados Unidos.
 
 ## Existe um prazo-limite de inscrição para receber todos os presentes de agradecimento?
 
@@ -92,6 +92,6 @@ Sim, no [formulário de solicitação de hardware](%= resolve_url('/prizes/hardw
 
 ## Eu não estou nos Estados Unidos. Posso concorrer aos prêmios?
 
-Sim, todos os organizadores, dentro e fora dos Estados Unidos, podem receber os presentes de agradecimento, Contudo, o prêmio de US$10.000 em hardware é limitado aos Estados Unidos.
+Sim, todos os organizadores, dentro e fora dos Estados Unidos, podem receber os presentes de agradecimento. Contudo, o prêmio de US$10.000 em hardware é limitado aos Estados Unidos.
 
 <% end %> <%= view :signup_button %>

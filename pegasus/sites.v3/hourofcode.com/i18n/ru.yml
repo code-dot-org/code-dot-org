@@ -252,6 +252,9 @@ ru:
   map_search_placeholder: Искать мероприятия, посвященные Часу Кода
   map_search_search: Найти
   map_search_reset: Очистить
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Час Программирования начался
   meta_tag_og_description: 'Час Кода - это глобальное движение, охватывающее десятки миллионов учеников в более чем 180 странах и более чем на 30 языках. В возрасте от 4 до 104.'
   meta_tag_twitter_title: Час Программирования начался
