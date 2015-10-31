@@ -2746,6 +2746,7 @@ levels.js_hoc2015_event_free = {
     }
   ],
   appStringsFunctions: {
+    continueText: msg.hoc2015_lastLevel_continueText,
     reinfFeedbackMsg: msg.hoc2015_reinfFeedbackMsg,
     sharingText: msg.hoc2015_shareGame
   },
