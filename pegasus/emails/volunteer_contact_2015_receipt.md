@@ -10,7 +10,7 @@ from: '"Tanya Parker (Code.org)" <tanya_parker@code.org>'
 subject: "A teacher is requesting your help for the Hour of Code"
 ---
 
-<% update_preferences = "http://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{form.secret}/" %>
+<% update_preferences = "http://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{volunteer_secret_s}/" %>
 
 ### The following teacher is requesting your help for the Hour of Code
 
