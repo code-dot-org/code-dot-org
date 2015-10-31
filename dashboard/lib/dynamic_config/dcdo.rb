@@ -48,15 +48,17 @@ class DCDOBase
   # Factory method for creating DCDOBase objects
   # @returns [DCDOBase]
   def self.create
+    cache_expiration = 5
     if Rails.env.test?
       adapter = MemoryAdapter.new
-    elsif Rails.env.development?
-      adapter = JSONFileDatastoreAdapter.new CDO.dcdo_table_name
-    else
+    elsif Rails.env.production?
+      cache_expiration = 30
       adapter = DynamoDBAdapter.new CDO.dcdo_table_name
+    else
+      adapter = JSONFileDatastoreAdapter.new CDO.dcdo_table_name
     end
 
-    datastore_cache = DatastoreCache.new adapter
+    datastore_cache = DatastoreCache.new adapter, cache_expiration: cache_expiration
     DCDOBase.new datastore_cache
   end
 end

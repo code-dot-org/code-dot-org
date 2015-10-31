@@ -81,14 +81,14 @@ class GatekeeperBase
   # Factory method for creating GatekeeperBase objects
   # @returns [GatekeeperBase]
   def self.create
-    cache_expiration = 30
+    cache_expiration = 5
     if Rails.env.test?
       adapter = MemoryAdapter.new
-    elsif Rails.env.development? || Rails.env.adhoc?
-      cache_expiration = 5
-      adapter = JSONFileDatastoreAdapter.new CDO.gatekeeper_table_name
-    else
+    elsif Rails.env.production?
+      cache_expiration = 30
       adapter = DynamoDBAdapter.new CDO.gatekeeper_table_name
+    else
+      adapter = JSONFileDatastoreAdapter.new CDO.gatekeeper_table_name
     end
 
     datastore_cache = DatastoreCache.new adapter, cache_expiration: cache_expiration
