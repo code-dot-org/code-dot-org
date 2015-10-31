@@ -2160,10 +2160,12 @@ var displayFeedback = function() {
 
   // Let the level override feedback dialog strings.
   var stringFunctions = $.extend({
+    continueText: level.freePlay ? commonMsg.nextPuzzle : function () {},
     reinfFeedbackMsg: studioMsg.reinfFeedbackMsg,
     sharingText: studioMsg.shareGame
   }, level.appStringsFunctions);
   var appStrings = {
+    continueText: stringFunctions.continueText(),
     reinfFeedbackMsg: stringFunctions.reinfFeedbackMsg({backButton: tryAgainText}),
     sharingText: stringFunctions.sharingText()
   };
@@ -2176,7 +2178,7 @@ var displayFeedback = function() {
       feedbackType: Studio.testResults,
       executionError: Studio.executionError,
       tryAgainText: tryAgainText,
-      continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
+      continueText: appStrings.continueText,
       response: Studio.response,
       level: level,
       showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure &&
