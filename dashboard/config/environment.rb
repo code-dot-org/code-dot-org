@@ -12,7 +12,7 @@ Dashboard::Application.configure do
 
   # By default, Rails applies a SAMEORIGIN policy to iframes (ie. only Code.org pages can
   # frame our content.)  If the CDO.allowed_iframe_ancestors configuration variable is
-  # defined, override that policy allow the specified source list (as described in
+  # defined, override that policy to allow the specified source list (as described in
   # http://w3c.github.io/webappsec-csp/#source-lists) to frame our content.
   if CDO.allowed_iframe_ancestors
     iframe_policy = "frame-ancestors 'self' #{CDO.allowed_iframe_ancestors}"
