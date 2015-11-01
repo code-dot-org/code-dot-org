@@ -58,7 +58,7 @@ class Blockly < Level
     code_functions
     failure_message_override
     droplet_tooltips_disabled
-    droplet_zero_param_functions
+    lock_zero_param_functions
   )
 
   before_validation {
