@@ -2149,6 +2149,12 @@ Studio.runButtonClick = function() {
     if (shareCell.className !== 'share-cell-enabled') {
       shareCell.className = 'share-cell-enabled';
       studioApp.onResize();
+
+      // Fire a custom event on the document so that other code can respond
+      // to the finish button being shown.
+      var event = document.createEvent('Event');
+      event.initEvent('finishButtonShown', true, true);
+      document.dispatchEvent(event);
     }
   }
 
