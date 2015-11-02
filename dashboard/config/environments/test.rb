@@ -56,4 +56,7 @@ Dashboard::Application.configure do
   # Explicitly set legacy test-order behavior in Rails 4.2
   # See http://guides.rubyonrails.org/upgrading_ruby_on_rails.html#ordering-of-test-cases
   config.active_support.test_order = :sorted
+
+  # don't act like a levelbuilder by default
+  config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 end

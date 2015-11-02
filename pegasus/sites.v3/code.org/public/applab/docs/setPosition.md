@@ -42,7 +42,6 @@ onEvent("id", "mouseover", function(event){
 
 [/example]
 ____________________________________________________
-
 [example]
 
 **Example: Harder Gingerbread Capture** Vary both the location and size of the image. 
@@ -58,7 +57,46 @@ onEvent("id", "mouseover", function(event){
 
 [/example]
 ____________________________________________________
+[example]
 
+**Example: Find the Gingerbread Man** Play find the gingerbread man by placing images at specific locations. 
+
+<table>
+<tr>
+<td style="border-style:none; width:90%; padding:0px">
+<pre>
+// Play find the gingerbread man by placing images at specific locations.
+image("id", "gingerbread-man-running.jpg");
+var randomXPosition=randomNumber(0,2)*100;
+setPosition("id", randomXPosition+10, 170);
+image("id1", "codeorg.jpg");
+setPosition("id1", 10, 175);
+image("id2", "codeorg.jpg");
+setPosition("id2", 110, 175);
+image("id3", "codeorg.jpg");
+setPosition("id3", 210, 175);
+
+onEvent("id1", "click", function(event){
+  hideElement("id1");
+});
+
+onEvent("id2", "click", function(event){
+  hideElement("id2");
+});
+
+onEvent("id3", "click", function(event){
+  hideElement("id3");
+});
+</pre>
+</td>
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/58f0652068840389f12799f842414cc4-image-1446488807780.gif'>
+</td>
+</tr>
+</table>
+
+[/example]
+____________________________________________________
 
 [syntax]
 
@@ -95,7 +133,7 @@ No return value. Modifies display only.
 
 ### Tips
 
-- the upper left corner of the UI element is placed at the (x,y) coordinate location.
+- The upper left corner of the UI element is placed at the (x,y) coordinate location.
 - The screen default size is 320 pixels wide and 450 pixels high, but you can move a UI element off the screen by exceeding those dimensions.
 
 <img src='https://images.code.org/7de9a1ac26ad8630ebcb92e608c3803c-image-1445616750775.jpg'>

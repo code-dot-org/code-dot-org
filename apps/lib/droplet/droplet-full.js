@@ -2,7 +2,7 @@
  * Copyright (c) 2015 Anthony Bau.
  * MIT License.
  *
- * Date: 2015-10-30
+ * Date: 2015-11-01
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
@@ -11587,7 +11587,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
             classes: ['no-drop'],
             empty: ''
           });
-        } else if (this.opts.zeroParamFunctions) {
+        } else if (!this.opts.lockZeroParamFunctions) {
           nodeBoundsStart = this.getBounds(node.id).end;
           match = this.lines[nodeBoundsStart.line].slice(nodeBoundsStart.column).match(/^(\s*\()(\s*)\)/);
           if (match != null) {
@@ -11629,7 +11629,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
             classes: ['no-drop'],
             empty: ''
           });
-        } else if (this.opts.zeroParamFunctions) {
+        } else if (!this.opts.lockZeroParamFunctions) {
           if (node.id != null) {
             nodeBoundsStart = this.getBounds(node.id).end;
             match = this.lines[nodeBoundsStart.line].slice(nodeBoundsStart.column).match(/^(\s*\()(\s*)\)/);
@@ -11772,7 +11772,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
           argument = ref5[i];
           this.jsSocketAndMark(indentDepth, argument, depth + 1, NEVER_PAREN, null, null, known != null ? (ref6 = known.fn) != null ? (ref7 = ref6.dropdown) != null ? ref7[i] : void 0 : void 0 : void 0, (i === 0 && node["arguments"].length === 1 ? '' : void 0));
         }
-        if (!known && node["arguments"].length === 0) {
+        if (!known && node["arguments"].length === 0 && !this.opts.lockZeroParamFunctions) {
           position = {
             line: node.callee.loc.end.line,
             column: node.callee.loc.end.column

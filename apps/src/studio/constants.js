@@ -342,7 +342,7 @@ exports.WallTypeMask     = 0x0F000000;
 exports.WallCoordRowMask = 0x00F00000;
 exports.WallCoordColMask = 0x000F0000;
 
-exports.WallCoordsMask = 
+exports.WallCoordsMask =
   exports.WallTypeMask | exports.WallCoordRowMask | exports.WallCoordColMask;
 exports.WallCoordsShift = 16;
 exports.WallCoordColShift  = exports.WallCoordsShift;
@@ -375,3 +375,6 @@ exports.TOUCH_HAZARD_FADE_TIME = 2000;
 exports.SHAKE_DEFAULT_DURATION = 1000;
 exports.SHAKE_DEFAULT_CYCLES = 8;
 exports.SHAKE_DEFAULT_DISTANCE = 5;
+
+// How many clouds to display.
+exports.NUM_CLOUDS = 2;

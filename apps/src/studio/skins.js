@@ -503,7 +503,8 @@ function loadHoc2015(skin, assetUrl) {
     jumboTilesAddOffset: -5,
     jumboTilesSize: 60,
     jumboTilesRows: 4,
-    jumboTilesCols: 4
+    jumboTilesCols: 4,
+    clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
   };
   skin.snow = {
     background: skin.assetUrl('background_background2.jpg'),
@@ -512,7 +513,8 @@ function loadHoc2015(skin, assetUrl) {
     jumboTilesAddOffset: -5,
     jumboTilesSize: 60,
     jumboTilesRows: 4,
-    jumboTilesCols: 4
+    jumboTilesCols: 4,
+    clouds: [skin.assetUrl('cloud_dark.png'), skin.assetUrl('cloud_dark2.png')]
   };
   skin.ship = {
     background: skin.assetUrl('background_background3.jpg'),
@@ -808,7 +810,8 @@ function loadHoc2015x(skin, assetUrl) {
 
   skin.main = {
     background: skin.assetUrl('background_background1.jpg'),
-    tiles: skin.assetUrl('tiles_background1.png')
+    tiles: skin.assetUrl('tiles_background1.png'),
+    clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
   };
 
   // It's possible to enlarge the rendering of some wall tiles so that they
