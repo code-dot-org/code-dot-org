@@ -82,12 +82,12 @@ title: Review Hour of Code special events
   $(function() {
     $('.btn-approve').click(function() {
       var secret=$(this).closest('td').find('.event-secret').text();
-      var row = $(this).closest('td');
+      var row = $(this).closest('tr');
       submitReview(secret, 'approved', row);
     });
     $('.btn-reject').click(function() {
       var secret=$(this).closest('td').find('.event-secret').text();
-      var row = $(this).closest('td');
+      var row = $(this).closest('tr');
       submitReview(secret, 'rejected', row);
     });
   });
