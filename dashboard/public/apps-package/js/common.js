@@ -6545,6 +6545,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     instructions: level.instructions,
     instructions2: level.instructions2,
     renderedMarkdown: renderedMarkdown,
+    markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
     aniGifURL: level.aniGifURL
   });
 
@@ -29054,7 +29055,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; if (!locals.renderedMarkdown) { /** if md, rendered in header instead */; buf.push('  <p class=\'dialog-title\'>', escape((1,  locals.puzzleTitle )), '</p>\n');2; }; buf.push('');2; if (locals.renderedMarkdown) {; buf.push('<div class=\'instructions-markdown\'>', (2,  locals.renderedMarkdown ), '</div>\n');3; } else if (locals.instructions) {; buf.push('  <p>', escape((3,  locals.instructions )), '</p>\n');4; }; buf.push('');4; if (locals.instructions2) {; buf.push('  <p class="instructions2">', escape((4,  locals.instructions2 )), '</p>\n');5; }; buf.push('');5; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((5,  locals.aniGifURL )), '\'/>\n');6; }; buf.push(''); })();
+ buf.push('');1; if (!locals.renderedMarkdown) { /** if md, rendered in header instead */; buf.push('  <p class=\'dialog-title\'>', escape((1,  locals.puzzleTitle )), '</p>\n');2; }; buf.push('');2; if (locals.renderedMarkdown) {; buf.push('  <div class=\'instructions-markdown');2; if (locals.markdownClassicMargins) {; buf.push(' classic-margins');2; }; buf.push('\'>', (2,  locals.renderedMarkdown ), '</div>');2; } else {; buf.push('  ');2; if (locals.instructions) {; buf.push('    <p>', escape((2,  locals.instructions )), '</p>\n  ');3; }; buf.push('  ');3; if (locals.instructions2) {; buf.push('    <p class="instructions2">', escape((3,  locals.instructions2 )), '</p>\n  ');4; }; buf.push('');4; }; buf.push('');4; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((4,  locals.aniGifURL )), '\'/>\n');5; }; buf.push(''); })();
 } 
 return buf.join('');
 };
