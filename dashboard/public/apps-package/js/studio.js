@@ -2178,15 +2178,27 @@ var displayFeedback = function() {
     tryAgainText = commonMsg.tryAgain();
   }
 
+  // Let the level override feedback dialog strings.
+  var stringFunctions = $.extend({
+    continueText: level.freePlay ? commonMsg.nextPuzzle : function () {},
+    reinfFeedbackMsg: studioMsg.reinfFeedbackMsg,
+    sharingText: studioMsg.shareGame
+  }, level.appStringsFunctions);
+  var appStrings = {
+    continueText: stringFunctions.continueText(),
+    reinfFeedbackMsg: stringFunctions.reinfFeedbackMsg({backButton: tryAgainText}),
+    sharingText: stringFunctions.sharingText()
+  };
 
   if (!Studio.waitingForReport) {
     studioApp.displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
+      hideIcon: skin.hideIconInClearPuzzle,
       feedbackType: Studio.testResults,
       executionError: Studio.executionError,
       tryAgainText: tryAgainText,
-      continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
+      continueText: appStrings.continueText,
       response: Studio.response,
       level: level,
       showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure &&
@@ -2196,10 +2208,8 @@ var displayFeedback = function() {
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       message: Studio.message,
-      appStrings: {
-        reinfFeedbackMsg: studioMsg.reinfFeedbackMsg({backButton: tryAgainText}),
-        sharingText: studioMsg.shareGame()
-      }
+      appStrings: appStrings,
+      disablePrinting: level.disablePrinting
     });
   }
 };
@@ -9286,6 +9296,46 @@ levels.js_hoc2015_change_setting = {
   ]
 };
 
+var js_hoc2015_event_free_character_instructions = '"You\'re on your own now, BOT1."';
+var js_hoc2015_event_free_ooc_instructions = "You have all the tools you need " +
+    "now to create your own level. Feel free to explore and play with all " +
+    "the different Commands and Events. When you're done, press the Finish " +
+    "button to continue.";
+var js_hoc2015_event_free_markdown = [
+  '<span class="character-text">' + js_hoc2015_event_free_character_instructions + '</span>',
+  '',
+  '<span class="instructions2">' + js_hoc2015_event_free_ooc_instructions + '</span>',
+  '',
+  '<details class="hoc2015">',
+  '<summary>Example project ideas</summary>',
+  '<p>**Example 1**',
+  '<br />Add 5 random characters in the scene, and play a different sound each time BOT1 collides with one of them.</p>',
+  '',
+  '<p>**Example 2**',
+  '<br />Add 10 MANs to chase BOT2. See if you can outrun them by running at high speed.</p>',
+  '',
+  '<p>**Example 3**',
+  '<br />Add 5 PIGs that are running away from BOT1. Make him scream each time he catches one.</p>',
+  '',
+  '</details>',
+  '<details class="hoc2015">',
+  '<summary>Extra credit project ideas</summary>',
+  '',
+  '<p>**Example 1**',
+  '<br />Add a MOUSE and a MAN. Every time BOT1 catches a MOUSE, score some ' +
+      'points and then add another MOUSE and another MAN.  End the game if a ' +
+      'MAN catches BOT1.</p>',
+  '',
+  '</details>',
+  '<details class="hoc2015">',
+  '<summary>For JavaScript programmers</summary>',
+  '<p>You can create more complex JavaScript programs if you program in “text” mode. ' +
+      'Feel free to use `for` loops, `if` statements, variables, or other JavaScript ' +
+      'commands to make much more complex games. And _please_: document and share ' +
+      'the code you wrote for others to learn too!</p>',
+  '',
+  '</details>'
+].join('\r\n');
 
 levels.js_hoc2015_event_free = {
   'editCode': true,
@@ -9364,7 +9414,10 @@ levels.js_hoc2015_event_free = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"You\'re on your own now, BOT1."',
+  'instructions': js_hoc2015_event_free_character_instructions,
+  'instructions2': js_hoc2015_event_free_ooc_instructions,
+  'markdownInstructions': js_hoc2015_event_free_markdown,
+  'markdownInstructionsWithClassicMargins': true,
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_event_free:clickCategory',
@@ -9380,6 +9433,12 @@ levels.js_hoc2015_event_free = {
       }
     }
   ],
+  appStringsFunctions: {
+    continueText: msg.hoc2015_lastLevel_continueText,
+    reinfFeedbackMsg: msg.hoc2015_reinfFeedbackMsg,
+    sharingText: msg.hoc2015_shareGame
+  },
+  disablePrinting: true
 };
 
 levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
