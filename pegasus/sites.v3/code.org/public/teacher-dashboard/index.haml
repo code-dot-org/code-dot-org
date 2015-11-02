@@ -26,6 +26,8 @@ angular: teacherDashboard
   angular.module('teacherDashboard', [
     'ngRoute',
     'ngResource',
+    'ngSanitize',
+    'ngCsv',
     'teacherDashboard.controllers',
     'teacherDashboard.services',
     'teacherDashboard.directives',
@@ -559,8 +561,8 @@ angular: teacherDashboard
     }
   }]);
 
-  app.controller('SectionResponsesController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService',
-                                             function($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
+  app.controller('SectionResponsesController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
+                                             function($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.tab = 'responses';

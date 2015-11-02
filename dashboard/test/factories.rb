@@ -92,6 +92,10 @@ FactoryGirl.define do
         level.save!
       end
     end
+
+    trait :script do
+      create(:script_level)
+    end
   end
 
   factory :unplugged, :parent => Level, :class => Unplugged do

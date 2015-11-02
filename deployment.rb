@@ -246,6 +246,23 @@ class CDOImpl < OpenStruct
     backtrace.join("\n")
   end
 
+  class DelegateWithDefault < SimpleDelegator
+    def initialize(target, default_value)
+      @default_value = default_value
+      super(target)
+    end
+
+    def method_missing(*args)
+      return @default_value if !__getobj__.respond_to? args.first
+      value = super
+      return @default_value if value.nil?
+      value
+    end
+  end
+
+  def with_default(default_value)
+    DelegateWithDefault.new(self, default_value)
+  end
 end
 
 CDO ||= CDOImpl.new

@@ -99,7 +99,9 @@ standardConfig.blocks = [
   {func: 'equalityOperator', block: '__ == __', category: 'Math' },
   {func: 'inequalityOperator', block: '__ != __', category: 'Math' },
   {func: 'greaterThanOperator', block: '__ > __', category: 'Math' },
+  {func: 'greaterThanOrEqualOperator', block: '__ >= __', category: 'Math' },
   {func: 'lessThanOperator', block: '__ < __', category: 'Math' },
+  {func: 'lessThanOrEqualOperator', block: '__ <= __', category: 'Math' },
   {func: 'andOperator', block: '__ && __', category: 'Math' },
   {func: 'orOperator', block: '__ || __', category: 'Math' },
   {func: 'notOperator', block: '!__', category: 'Math' },
@@ -429,9 +431,10 @@ exports.generateDropletModeOptions = function (config) {
       containers: { color: COLOR_PURPLE },
       value: { color: COLOR_PURPLE },
       command: { color: COLOR_GREEN },
-      assignments: { color: COLOR_PURPLE },
+      assignments: { color: COLOR_PURPLE }
       // errors: { },
-    }
+    },
+    lockZeroParamFunctions: config.level.lockZeroParamFunctions
   };
 
   $.extend(modeOptions.functions,

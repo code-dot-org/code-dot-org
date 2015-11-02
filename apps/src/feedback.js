@@ -165,7 +165,10 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var onlyContinue = continueButton && !againButton && !previousLevelButton;
 
   var onHidden = onlyContinue ? options.onContinue : null;
-  var icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
+  var icon;
+  if (!options.hideIcon) {
+    icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
+  }
   var defaultBtnSelector = onlyContinue ? '#continue-button' : '#again-button';
 
   var feedbackDialog = this.createModalDialog({
