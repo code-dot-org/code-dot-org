@@ -268,7 +268,7 @@ var drawMap = function () {
   backgroundLayer.setAttribute('id', 'backgroundLayer');
   svg.appendChild(backgroundLayer);
 
-  if (skin.background) {
+  if (Studio.background && skin[Studio.background].background) {
     var tile = document.createElementNS(SVG_NS, 'image');
     tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
                         skin[Studio.background].background);
@@ -398,6 +398,15 @@ var drawMap = function () {
     }
   }
   Studio.applyGoalEffect();
+
+  // Create cloud elements.
+  if (Studio.background && skin[Studio.background].clouds) {
+    for (i = 0; i < constants.NUM_CLOUDS; i++) {
+      var cloud = document.createElementNS(SVG_NS, 'image');
+      cloud.setAttribute('id', 'cloud' + i);
+      svg.appendChild(cloud);
+    }
+  }
 
   var score = document.createElementNS(SVG_NS, 'text');
   score.setAttribute('id', 'score');
@@ -999,6 +1008,9 @@ Studio.onTick = function() {
 
     // Animate goals
     Studio.animateGoals();
+
+    // Animate clouds
+    Studio.animateClouds();
 
     var sprite = Studio.sprite[i];
     if (sprite.hasActions()) {
@@ -3166,6 +3178,59 @@ Studio.animateGoals = function() {
   }
 };
 
+/**
+ * Load clouds for the current background if it features them.
+ */
+Studio.loadClouds = function() {
+  var showClouds = Studio.background && skin[Studio.background].clouds;
+
+  var width, height;
+  width = height = 300;
+
+  for (var i = 0; i < constants.NUM_CLOUDS; i++) {
+    // Start with clouds hidden.
+    var cloud = document.getElementById('cloud' + i);
+    cloud.setAttribute('x', -width);
+    cloud.setAttribute('y', -height);
+
+    // If we aren't showing clouds for this background, do nothing more.
+    if (!showClouds) {
+      continue;
+    }
+
+    // Clouds are showing, so set up the right ones for this background.
+    cloud.setAttribute('width', width);
+    cloud.setAttribute('height', height);
+    cloud.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+      skin[Studio.background].clouds[i]);
+    cloud.setAttribute('opacity', 0.7);
+  }
+};
+
+/**
+ * Animate clouds if the current background features them.
+ */
+Studio.animateClouds = function() {
+  var showClouds = Studio.background && skin[Studio.background].clouds;
+  if (!showClouds) {
+    return;
+  }
+
+  for (var i = 0; i < constants.NUM_CLOUDS; i++) {
+    var cloud = document.getElementById('cloud' + i);
+
+    var intervals = [ 50, 60 ];   // how many milliseconds to move a pixel
+    var distance = 700;           // how many pixels a cloud covers
+
+    var xOffset = new Date().getTime() / intervals[i] % distance;
+    var x = i === 0 ? xOffset - 100 : 400 - xOffset;
+    var y = i === 0 ? x - 200 : x + 200;
+
+    cloud.setAttribute('x', x);
+    cloud.setAttribute('y', y);
+  }
+};
+
 
 /**
  * Start showing an upwards-floating score at the location of sprite 0.
@@ -3867,6 +3932,8 @@ Studio.setBackground = function (opts) {
         Studio.setMap({value: Studio.wallMapRequested, forceRedraw: true});
       }
     }
+
+    Studio.loadClouds();
   }
 };
 
