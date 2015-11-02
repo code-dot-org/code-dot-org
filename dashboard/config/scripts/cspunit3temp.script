@@ -1,0 +1,48 @@
+title 'CSP Unit 3 - Temp'
+description 'This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.'
+description_short 'Programming'
+login_required 'true'
+
+#22
+stage 'While Loop Basics'
+level 'U3L28 Student Lesson Introduction'
+assessment 'U3L28 Free Response Getting Started'
+assessment 'U3L28 Free Response Wrap Up'
+
+#23
+stage 'While Loops_ Counting Flips'
+level 'U3L29 Student Lesson Introduction'
+assessment 'U3L29 Free Response Getting Started'
+assessment 'U3L29 Free Response Wrap Up'
+
+#24
+stage 'Arrays_ Intro'
+level 'U3L30 Student Lesson Introduction'
+assessment 'U3L30 Free Response Getting Started'
+assessment 'U3L30 Assessment1'
+assessment 'U3L30 Assessment2'
+assessment 'U3L30 Assessment3'
+assessment 'U3L30 Free Response Wrap Up'
+
+#25
+stage 'Arrays_ Photo Album'
+level 'U3L31 Student Lesson Introduction'
+assessment 'U3L31 Free Response Getting Started'
+assessment 'U3L31 Assessment1'
+assessment 'U3L31 Assessment2'
+assessment 'U3L31 Assessment3'
+
+#26
+stage 'Images are Arrays'
+level 'U3L32 Student Lesson Introduction'
+assessment 'U3L32 Free Response Getting Started'
+
+#27
+stage 'Arrays and Loops_ Altering Images'
+level 'U3L33 Student Lesson Introduction'
+assessment 'U3L33 Free Response Getting Started'
+
+#28
+stage 'Arrays and Loops_ Hidden Images'
+level 'U3L34 Student Lesson Introduction'
+assessment 'U3L34 Free Response Getting Started'
