@@ -434,7 +434,7 @@ exports.generateDropletModeOptions = function (config) {
       assignments: { color: COLOR_PURPLE }
       // errors: { },
     },
-    lockZeroParamFunctions: options.lockZeroParamFunctions
+    lockZeroParamFunctions: config.level.lockZeroParamFunctions
   };
 
   $.extend(modeOptions.functions,
