@@ -61,7 +61,7 @@ end
 
 review '/v2/forms/:kind/:secret' do |kind, secret|
   dont_cache
-  forbidden! unless dashboard_user && dashboard_user[:admin]
+  forbidden! unless dashboard_user
   forbidden! if settings.read_only
   unsupported_media_type! unless payload = request.json_body
 
