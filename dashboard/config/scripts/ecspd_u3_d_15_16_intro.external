@@ -19,7 +19,7 @@ First, let's explore the eighth lesson in the curriculum. To begin, find your EC
 
 #### Common Difficulties
 
-Before presenting this lesson you will need to go the tutorials listed in the lesson ( [http://www.georgebenainous.com/web](http://www.georgebenainous.com/web)  html/css—tables, styled lists, page layout, menus),  and be prepared to demonstrate how to create a table, how to add rows and columns and how to add css styling to table, row, and column elements, as well as creating ordered and unordered list, how to add css styling to list elements, div positioning  using css and how to create menus for the students to be able to have a discussions on predicting what results might be prior to seeing what you've applied.
+Before presenting this lesson you will need to go the tutorials listed in the lesson ( [http://www.georgebenainous.com/web](http://www.georgebenainous.com/web) html/css---tables, styled lists, page layout, menus), and be prepared to demonstrate: tables in an html page and how to add css styling, ordered and unordered list and how to add css styling to list elements, in addition to , div positioning using css and how to create menus.  The tutorials will help you prepare you for a discussion with the students on predicting what changes may look like on a web page before they actually apply them (this may remind them of storyboarding or using the problem solving process - common things a computer scientist must do often).
 
 You will also need to think of data that lends itself to be in a table on a website, in addition to examples of menus someone may want to add.
 
@@ -34,7 +34,7 @@ You will also need to think of data that lends itself to be in a table on a webs
 
 #### Supplies
 
-* [George Benainous.com](http://www.georgebenainous.com/web html/css—tables)
+* [GeorgeBenainous.com](http://www.georgebenainous.com/web)
 * w3schools.com - website layout - [http://www.w3schools.com/html/html\_layout.asp](http://www.w3schools.com/html/html_layout.asp)
 * [Khan Academy - Tables](https://www.khanacademy.org/computing/computer-programming/html-css/html-tags-continued/p/html-tables)
 * [CodeCademy - Ordered Lists] (https://www.codecademy.com/courses/web-beginner-en-y2Yjd/0/3?curriculum_id=50579fb998b470000202dc8b)

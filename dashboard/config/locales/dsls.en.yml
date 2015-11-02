@@ -186,10 +186,20 @@ en:
       CSPPD3-u2 what is a challenge: {}
       CSPPD3-u3 Welcome: {}
       CSPPD3-u3 breakdown of u3 chunks: {}
+      CSPPD3-u3 challenge overview: {}
       CSPPD3-u3 chunk 1 concepts: {}
       CSPPD3-u3 chunk 1 resources: {}
+      CSPPD3-u3 chunk 2 concepts: {}
+      CSPPD3-u3 chunk 2 resources: {}
+      CSPPD3-u3 chunk 3 concepts: {}
+      CSPPD3-u3 chunk 3 resources: {}
+      CSPPD3-u3 chunk 4 concepts: {}
+      CSPPD3-u3 chunk 4 resources: {}
+      CSPPD3-u3 chunk 5 concepts: {}
+      CSPPD3-u3 chunk 5 resources: {}
       CSPPD3-u3 overview: {}
       CSPPD3-u3 pause and reflect: {}
+      CSPPD3-u3 practice PT: {}
       CSPPD3-u3 tips for prep: {}
       CSPPD3-u3 unit 3 overview: {}
       CSPStudentLessonPlanTemplate:
@@ -370,6 +380,7 @@ en:
       ECSPD Unit 4 Lesson Overview: {}
       ECSPD Unit 4 Manage: {}
       ECSPD Unit 4 Outline: {}
+      ECSPD Unit 4 Pick2: {}
       ECSPD Unit 4 Stage 6 Overview: {}
       ECSPD Unit 4 Stage4Review: {}
       ECSPD Unit 4 Strategy Review: {}
@@ -414,6 +425,7 @@ en:
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
+      ECSU4 Challenge Submission: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
       Equity About: {}
@@ -869,6 +881,9 @@ en:
         description here: description here
         title: title
       U3L15 - explanation of IF and =v==:
+        description here: description here
+        title: title
+      U3L15 Student Lesson Intro - new:
         description here: description here
         title: title
       U3L16 Student Lesson Introduction:
@@ -4271,6 +4286,7 @@ en:
       ECSPD PD goals:
         Documenting Your PD Goals: Documenting Your PD Goals
       ECSPD Personal Problem Solving Strategies: {}
+      ECSPD U4 Challenge Decision: {}
       ECSPD course goals:
         Documenting Your Course Goals: Documenting Your Course Goals
       ECSPD impact in program:
@@ -4283,6 +4299,10 @@ en:
         Documenting Your Goals: Documenting Your Goals
       ECSU2 Challenge Submission: {}
       ECSU3 Challenge Submission: {}
+      ECSU4 Challenge Submission fin:
+        Enter answer here: Enter answer here
+        Enter prompt here: Enter prompt here
+        Enter title here: Enter title here
       Glossary O:
         ? 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
         : 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
