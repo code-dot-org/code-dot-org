@@ -74,23 +74,20 @@
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "true",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "true",
-    "markdown_instructions": "# OR Operator in Movie Bot\r\n\r\nLet's try to check for the question words (who, what, where, when, why, and how) in addition to the ? to decide if they asked a question. You could do this with else if statements, but it would not be very efficient. \r\n\r\nInstead lets **use OR operator(`||`) to check if who, what, where, when, why, how or ? show up in the user input**. Remember you can chain together multiple OR conditions in one boolean expression.\r\n\r\n**Note: ** Check out the flow chart below to see the logic we are trying to add.\r\n\r\n# Do This\r\n\r\n* **Update the ? if statement** to check if **? OR who OR what OR where OR when OR why OR how** have been typed in the user input.\r\n\r\n* **Test out a couple sentences with your keywords** to make sure the change worked.\r\n\r\n<img src=\"https://images.code.org/04d562ed3fe21bc64478618a44c0b5da-image-1446138642563.png\" style=\"width: 100%\">\r\n\r\n<a src=\"https://images.code.org/04d562ed3fe21bc64478618a44c0b5da-image-1446138642563.png\" target=\"_blank\">Click to open in separate window.</a>",
+    "markdown_instructions": "# OR Operator in Movie Bot\r\n\r\nLet's try to check for the keywords realated to questions (\"who\", \"what\", \"where\", \"when\", \"why\", \"how\", and \"?\") to decide if the user asked a question. You could do this with a chain of if-else-if statements, but it would not be very efficient. \r\n\r\nInstead let's use a **series of OR operators (`||`)** to check whether \"who\", \"what\", \"where\", \"when\", \"why\", \"how\" or \"?\" show up in the user input. \r\n\r\n**Note: ** We've updated the the flow chart below to show the logic we are trying to add to the initial question.\r\n\r\n# Do This\r\n\r\n* **Update the if statement** to check if **\"who\" OR \"what\" OR \"where\" OR \"when\" OR \"why\" OR \"how\" OR \"?\"** have been typed in by the user.\r\n\r\n* **Test out a couple sentences with your keywords** to make sure the change worked.\r\n\r\n<img src=\"https://images.code.org/6104c7fd0ecd31010d12be79bc350831-image-1446495141539.png\" style=\"width: 500px\">\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "encrypted_examples": [
-
-    ],
     "project_template_level_name": "U3 - Movie Bot - Template",
     "execute_palette_apis_only": "false",
-    "instructions": "Update the ? if statement to check if ?, who, what, where, when, why, or how have been typed in the user input. (Click to see full instructions)"
+    "instructions": "Update the if statement to use an OR to check for a '?' as well as who, what, where, when, why, in the user input. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>
