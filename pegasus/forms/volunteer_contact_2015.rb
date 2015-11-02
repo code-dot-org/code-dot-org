@@ -3,8 +3,8 @@ class VolunteerContact2015
   def self.normalize(data)
     result = {}
 
-    result[:teacher_name_s] = required stripped data[:teacher_name_s]
-    result[:teacher_email_s] = required email_address data[:teacher_email_s]
+    result[:name_s] = required stripped data[:teacher_name_s]
+    result[:email_s] = required email_address data[:teacher_email_s]
     result[:school_name_s] = required stripped data[:school_name_s]
     result[:school_location_s] = required stripped data[:school_location_s]
     result[:email_message_s] = required stripped data[:email_message_s]
@@ -16,8 +16,9 @@ class VolunteerContact2015
     form = DB[:forms].where(kind: "VolunteerEngineerSubmission2015", id: data[:volunteer_id_i]).first
     volunteer = JSON.parse(form[:data])
 
-    result[:volunteer_name_s] = volunteer["name_s"]
-    result[:volunteer_email_s] = volunteer["email_s"]
+    result[:volunteer_name_s] = required volunteer["name_s"]
+    result[:volunteer_email_s] = required volunteer["email_s"]
+    result[:volunteer_secret_s] = required form[:secret]
 
     result
   end

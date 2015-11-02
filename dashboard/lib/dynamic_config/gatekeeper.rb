@@ -22,7 +22,6 @@ require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
 
 class GatekeeperBase
-
   def initialize(datastore_cache)
     @datastore_cache = datastore_cache
   end
@@ -81,18 +80,23 @@ class GatekeeperBase
   # Factory method for creating GatekeeperBase objects
   # @returns [GatekeeperBase]
   def self.create
-    cache_expiration = 30
+    cache_expiration = 5
     if Rails.env.test?
       adapter = MemoryAdapter.new
-    elsif Rails.env.development? || Rails.env.adhoc?
-      cache_expiration = 5
-      adapter = JSONFileDatastoreAdapter.new CDO.gatekeeper_table_name
-    else
+    elsif Rails.env.production?
+      cache_expiration = 30
       adapter = DynamoDBAdapter.new CDO.gatekeeper_table_name
+    else
+      adapter = JSONFileDatastoreAdapter.new CDO.gatekeeper_table_name
     end
 
     datastore_cache = DatastoreCache.new adapter, cache_expiration: cache_expiration
     GatekeeperBase.new datastore_cache
+  end
+
+  # We need to reinitialize the update thread after fork
+  def after_fork
+    @datastore_cache.after_fork
   end
 
   # Converts the current config state to a yaml string
