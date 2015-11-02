@@ -1,4 +1,5 @@
 name 'CSPPD3-u3 unit 3 overview'
+css 'unplugged' 
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 

@@ -272,7 +272,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
   if !succeeded && $options.auto_retry
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
-    HipChat.log "<pre>#{output_stderr}</pre>"
+    # Since output_stderr is empty, we do not log it to HipChat.
     HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}), retrying..."
 
     second_time_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''

@@ -32332,7 +32332,10 @@ var addEvent = function(element, eventName, handler) {
   var touchEvent = exports.getTouchEventName(eventName);
   if (touchEvent) {
     element.addEventListener(touchEvent, function(e) {
-      e.preventDefault();  // Stop mouse events.
+      // Stop mouse events and suppress default event handler to prevent
+      // unintentional double-clicking
+      e.preventDefault();
+      element.removeEventListener(eventName, handler);
       handler.call(this, e);
     }, false);
   }
@@ -35378,9 +35381,10 @@ exports.generateDropletModeOptions = function (config) {
       containers: { color: COLOR_PURPLE },
       value: { color: COLOR_PURPLE },
       command: { color: COLOR_GREEN },
-      assignments: { color: COLOR_PURPLE },
+      assignments: { color: COLOR_PURPLE }
       // errors: { },
-    }
+    },
+    lockZeroParamFunctions: config.level.lockZeroParamFunctions
   };
 
   $.extend(modeOptions.functions,
