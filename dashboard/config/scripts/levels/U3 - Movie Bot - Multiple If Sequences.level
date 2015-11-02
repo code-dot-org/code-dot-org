@@ -163,10 +163,7 @@
     "debugger_disabled": "true",
     "project_template_level_name": "U3 - Movie Bot - Template",
     "execute_palette_apis_only": "false",
-    "instructions": "Add another set of if, else if, and else statements insides the question if statement to check for keywords for movies ratings (G, PG, PG-13, and R). (Click to see full instructions)",
-    "encrypted_examples": [
-
-    ]
+    "instructions": "Add another set of if, else if, and else statements insides the question if statement to check for keywords for movies ratings (G, PG, PG-13, and R). (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

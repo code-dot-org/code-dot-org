@@ -92,10 +92,7 @@
     "submittable": "true",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "slider_speed": "1.0",
-    "encrypted_examples": [
-
-    ]
+    "slider_speed": "1.0"
   }
 }]]></config>
   <blocks/>
