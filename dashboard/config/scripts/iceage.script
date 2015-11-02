@@ -1,7 +1,8 @@
 title 'Ice Age Play Lab'
 description_short "Create a story or make a game with Ice Age Play Lab!"
 description "Create a story or make a game with Ice Age Play Lab!"
-hidden 'false'
+hidden 'true'
+login_required 'true'
 
 stage 'Ice Age Play Lab'
 skin 'iceage'

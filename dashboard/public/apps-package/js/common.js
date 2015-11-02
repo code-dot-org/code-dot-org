@@ -6545,6 +6545,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     instructions: level.instructions,
     instructions2: level.instructions2,
     renderedMarkdown: renderedMarkdown,
+    markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
     aniGifURL: level.aniGifURL
   });
 
@@ -29054,7 +29055,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; if (!locals.renderedMarkdown) { /** if md, rendered in header instead */; buf.push('  <p class=\'dialog-title\'>', escape((1,  locals.puzzleTitle )), '</p>\n');2; }; buf.push('');2; if (locals.renderedMarkdown) {; buf.push('<div class=\'instructions-markdown\'>', (2,  locals.renderedMarkdown ), '</div>\n');3; } else if (locals.instructions) {; buf.push('  <p>', escape((3,  locals.instructions )), '</p>\n');4; }; buf.push('');4; if (locals.instructions2) {; buf.push('  <p class="instructions2">', escape((4,  locals.instructions2 )), '</p>\n');5; }; buf.push('');5; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((5,  locals.aniGifURL )), '\'/>\n');6; }; buf.push(''); })();
+ buf.push('');1; if (!locals.renderedMarkdown) { /** if md, rendered in header instead */; buf.push('  <p class=\'dialog-title\'>', escape((1,  locals.puzzleTitle )), '</p>\n');2; }; buf.push('');2; if (locals.renderedMarkdown) {; buf.push('  <div class=\'instructions-markdown');2; if (locals.markdownClassicMargins) {; buf.push(' classic-margins');2; }; buf.push('\'>', (2,  locals.renderedMarkdown ), '</div>');2; } else {; buf.push('  ');2; if (locals.instructions) {; buf.push('    <p>', escape((2,  locals.instructions )), '</p>\n  ');3; }; buf.push('  ');3; if (locals.instructions2) {; buf.push('    <p class="instructions2">', escape((3,  locals.instructions2 )), '</p>\n  ');4; }; buf.push('');4; }; buf.push('');4; if (locals.aniGifURL) {; buf.push('  <img class="aniGif example-image" src=\'', escape((4,  locals.aniGifURL )), '\'/>\n');5; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -29516,7 +29517,10 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var onlyContinue = continueButton && !againButton && !previousLevelButton;
 
   var onHidden = onlyContinue ? options.onContinue : null;
-  var icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
+  var icon;
+  if (!options.hideIcon) {
+    icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
+  }
   var defaultBtnSelector = onlyContinue ? '#continue-button' : '#again-button';
 
   var feedbackDialog = this.createModalDialog({
@@ -30839,7 +30843,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../locale'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  options.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  options.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  options.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  options.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="window.open(\'', escape((60,  options.level.shapewaysUrl )), '\', \'_blank\')">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../locale'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage && !options.disablePrinting) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  options.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  options.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  options.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  options.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="window.open(\'', escape((60,  options.level.shapewaysUrl )), '\', \'_blank\')">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -32328,7 +32332,10 @@ var addEvent = function(element, eventName, handler) {
   var touchEvent = exports.getTouchEventName(eventName);
   if (touchEvent) {
     element.addEventListener(touchEvent, function(e) {
-      e.preventDefault();  // Stop mouse events.
+      // Stop mouse events and suppress default event handler to prevent
+      // unintentional double-clicking
+      e.preventDefault();
+      element.removeEventListener(eventName, handler);
       handler.call(this, e);
     }, false);
   }
@@ -35042,7 +35049,9 @@ standardConfig.blocks = [
   {func: 'equalityOperator', block: '__ == __', category: 'Math' },
   {func: 'inequalityOperator', block: '__ != __', category: 'Math' },
   {func: 'greaterThanOperator', block: '__ > __', category: 'Math' },
+  {func: 'greaterThanOrEqualOperator', block: '__ >= __', category: 'Math' },
   {func: 'lessThanOperator', block: '__ < __', category: 'Math' },
+  {func: 'lessThanOrEqualOperator', block: '__ <= __', category: 'Math' },
   {func: 'andOperator', block: '__ && __', category: 'Math' },
   {func: 'orOperator', block: '__ || __', category: 'Math' },
   {func: 'notOperator', block: '!__', category: 'Math' },
@@ -35372,9 +35381,10 @@ exports.generateDropletModeOptions = function (config) {
       containers: { color: COLOR_PURPLE },
       value: { color: COLOR_PURPLE },
       command: { color: COLOR_GREEN },
-      assignments: { color: COLOR_PURPLE },
+      assignments: { color: COLOR_PURPLE }
       // errors: { },
-    }
+    },
+    lockZeroParamFunctions: config.level.lockZeroParamFunctions
   };
 
   $.extend(modeOptions.functions,

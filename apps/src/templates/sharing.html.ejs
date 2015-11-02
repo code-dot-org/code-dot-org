@@ -7,7 +7,7 @@
 
 <div class="sharing">
   <div class="social-buttons">
-  <% if (!options.onMainPage) { %>
+  <% if (!options.onMainPage && !options.disablePrinting) { %>
     <button id="print-button">
       <%= msg.print() %>
     </button>

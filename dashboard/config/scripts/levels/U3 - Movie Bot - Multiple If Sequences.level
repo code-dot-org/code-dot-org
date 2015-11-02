@@ -133,11 +133,8 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
-    "markdown_instructions": "# Adding Rating to Keyword\r\n\r\nWe were pretty restrictive before about what was a question. Sometimes people dont use punctionation, but there are other words to signify a question.  Let's try to check for the question words (who, what, where, when, why, and how) in addition to the ? to decide if they asked a question. We could do this by adding else if statements and nesting the same code currently inside the ? if statement to check each question word individually. However there is an easier, more efficient way! \r\n\r\nThe OR operator can be used to check two conditions in one if statement. **If either or both statements are true, the OR operator (`||`) will evaluate to true. If both are false, the `||` will evaluate to false.** You can chain multiple OR operators together in one conditional statement. \r\n\r\n# Do This\r\n\r\n* **Update the ? if statement** to check if **? OR who OR what OR where OR when OR why OR how** have been typed in the user input.\r\n\r\n* **Test out a couple sentences with your keywords** to make sure the change worked.\r\n\r\n<img src=\"https://images.code.org/04d562ed3fe21bc64478618a44c0b5da-image-1446138642563.png\" style=\"width: 100%\">\r\n\r\n<a src=\"https://images.code.org/04d562ed3fe21bc64478618a44c0b5da-image-1446138642563.png\" target=\"_blank\">Click to open in separate window.</a>",
+    "markdown_instructions": "# Adding Rating to Keywords\r\n\r\nUp until now our movies suggestions have just been based on genre. Let's now also look for keywords related to the moving rating like \"G\", \"PG\", \"PG-13\", and \"R\" so we can give movie suggestions based on both genre and rating.\r\n \r\n**Note: ** We've updated the flow chart below ( highlighted in yellow) to see the logic we are trying to add.\r\n\r\n# Do This\r\n\r\n* **Add another set of if, else if, and else statements** insides the question if statement to **check for keywords for movies ratings (G, PG, PG-13, and R).**\r\n\r\n* **Hint:** When checking for \"G\" and \"R\" you need to be a little clever. Those are letters that will show up in lots of words. We want to check for \"g\" with spaces on either side. So make sure to use `\" g \"` where there is a space on either side of g instead of \"g\". \r\n\r\n* **Test out a couple sentences with your keywords** to make sure the change worked.\r\n\r\n<img src=\"https://images.code.org/d9442e07506f645128514eee71dce44d-image-1446144974350.png\" style=\"width: 100%\">\r\n\r\n<a src=\"https://images.code.org/d9442e07506f645128514eee71dce44d-image-1446144974350.png\" target=\"_blank\">Click to open in separate window.</a>",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -160,12 +157,13 @@
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
-    "beginner_mode": "false",
+    "beginner_mode": "true",
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "project_template_level_name": "U3 - Movie Bot - Template",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "instructions": "Add another set of if, else if, and else statements insides the question if statement to check for keywords for movies ratings (G, PG, PG-13, and R). (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

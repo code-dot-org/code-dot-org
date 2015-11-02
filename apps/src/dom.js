@@ -30,7 +30,10 @@ var addEvent = function(element, eventName, handler) {
   var touchEvent = exports.getTouchEventName(eventName);
   if (touchEvent) {
     element.addEventListener(touchEvent, function(e) {
-      e.preventDefault();  // Stop mouse events.
+      // Stop mouse events and suppress default event handler to prevent
+      // unintentional double-clicking
+      e.preventDefault();
+      element.removeEventListener(eventName, handler);
       handler.call(this, e);
     }, false);
   }
