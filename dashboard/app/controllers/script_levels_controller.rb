@@ -168,10 +168,12 @@ class ScriptLevelsController < ApplicationController
     load_level_source
 
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level.id)
+
     view_options(
       full_width: true,
       small_footer: @game.uses_small_footer? || enable_scrolling?,
-      has_i18n: @game.has_i18n?
+      has_i18n: @game.has_i18n?,
+      post_milestone: Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true)
     )
 
     level_view_options(

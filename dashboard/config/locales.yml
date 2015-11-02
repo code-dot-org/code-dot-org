@@ -213,6 +213,13 @@
   native: "한국어"
   webfonts: false  
 
+"kk": "kk-KZ"
+"kk-KZ":
+  english: "Kazakh"
+  native: "Қазақ Tілі"
+  webfonts: false
+  debug: true
+
 "km": "km-KH"
 "km-KH":
   english: "Khmer"

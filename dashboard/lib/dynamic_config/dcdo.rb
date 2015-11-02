@@ -39,6 +39,12 @@ class DCDOBase
     @datastore_cache.clear
   end
 
+  # The datastore needs to restart the update thread
+  # after a fork.
+  def after_fork
+    @datastore_cache.after_fork
+  end
+
   # Returns the current dcdo config state as yaml
   # @returns [String]
   def to_yaml
@@ -48,15 +54,17 @@ class DCDOBase
   # Factory method for creating DCDOBase objects
   # @returns [DCDOBase]
   def self.create
+    cache_expiration = 5
     if Rails.env.test?
       adapter = MemoryAdapter.new
-    elsif Rails.env.development?
-      adapter = JSONFileDatastoreAdapter.new CDO.dcdo_table_name
-    else
+    elsif Rails.env.production?
+      cache_expiration = 30
       adapter = DynamoDBAdapter.new CDO.dcdo_table_name
+    else
+      adapter = JSONFileDatastoreAdapter.new CDO.dcdo_table_name
     end
 
-    datastore_cache = DatastoreCache.new adapter
+    datastore_cache = DatastoreCache.new adapter, cache_expiration: cache_expiration
     DCDOBase.new datastore_cache
   end
 end
