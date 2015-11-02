@@ -29,6 +29,12 @@ title: Review Hour of Code special events
 
 %h1 Review Hour of Code special events
 
+%h3
+  Don't forget to follow
+  %a{href: "https://docs.google.com/document/d/1cwUdqdPW7CF0d7DfWTqmCkMjjylfZ5sdrLS6-jGgPzY/edit?usp=sharing"}
+    this rubric
+  for approving events.
+
 -results = []
 -events = []
 
@@ -47,6 +53,10 @@ title: Review Hour of Code special events
   %p There are no Hour of Code special events available for review
 
 -else
+  %h3
+    There are
+    = events.count
+    events left to review on this page (max 100). If there are 100 or more, reviewing events and refreshing the page will load more events.
   %table#hoc-events-review-table
     %tr
       %th Name
