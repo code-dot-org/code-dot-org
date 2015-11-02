@@ -1320,8 +1320,8 @@ Applab.appendToEditor = function(newCode) {
 
 Applab.onMouseDownDebugResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
-
-  if (event.srcElement.id === 'debugResizeBar') {
+  var eventSourceElm = event.srcElement || event.target;
+  if (eventSourceElm.id === 'debugResizeBar') {
     Applab.draggingDebugResizeBar = true;
     document.body.addEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
     Applab.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');

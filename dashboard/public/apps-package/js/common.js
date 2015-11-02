@@ -35378,9 +35378,10 @@ exports.generateDropletModeOptions = function (config) {
       containers: { color: COLOR_PURPLE },
       value: { color: COLOR_PURPLE },
       command: { color: COLOR_GREEN },
-      assignments: { color: COLOR_PURPLE },
+      assignments: { color: COLOR_PURPLE }
       // errors: { },
-    }
+    },
+    lockZeroParamFunctions: config.level.lockZeroParamFunctions
   };
 
   $.extend(modeOptions.functions,
