@@ -82,8 +82,8 @@ title: Review Hour of Code special events
 
   function submitReview(secret, review) {
     $.ajax({
-      url: "/v2/forms/HocSignup2015/" + secret,
-      type: "review",
+      url: "/v2/forms/HocSignup2015/" + secret + "/review",
+      type: "post",
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify( { review: review } )
     });
