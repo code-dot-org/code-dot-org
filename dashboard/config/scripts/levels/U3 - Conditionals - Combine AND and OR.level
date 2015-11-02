@@ -1,0 +1,66 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-11-02T17:13:53.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "write": null,
+      "ifBlock": null,
+      "ifElseBlock": null,
+      "equalityOperator": null,
+      "inequalityOperator": null,
+      "greaterThanOperator": null,
+      "lessThanOperator": null,
+      "andOperator": null,
+      "orOperator": null,
+      "notOperator": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "declareAssign_x_prompt": null,
+      "declareAssign_x_promptNum": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "markdown_instructions": "# Combining AND and OR\r\n\r\nYou can express more complex conditions by combining **AND** and **OR** in one statement.  You should use parentheses to group expressions together to make it clear which expressions are being \"and-ed\" or \"or-ed\" together. \r\n\r\nFor example: this statement will evaluate to true if the day is Tuesday or Thursday AND their age is 15 or 16.\r\n\r\n![](https://images.code.org/33681e68bc0e321aeba7483034ba048c-image-1446485973724.png)\r\n\r\n# Misconception Alert - using incomplete expressions with boolean operators\r\n\r\nMany beginning programmers make a mistake (which reasonable but wrong) while trying to write the expression above. Notice the subtle difference between the correct code above and this version...\r\n\r\n![](https://images.code.org/a7bf3004b3902db217e8694752016e9a-image-1446486624001.png)\r\n\r\nAn expression like: `(day == \"Tuesday\" || \"Thursday\")` is incorrect because unfortunately the computer cannot assume or infer that you are trying to compare \"Thursday\" to the value that is in the variable **day**.  \r\n\r\nBecause the string \"Thursday\" by itself isn't an expression that evaluates to true or false it *should not* be used as an expression in a boolean operator.\r\n\r\nHowever unfortunately, <code>(day == \"Tuesday\" || \"Thursday\")</code> **doesn't do what you might think**...it turns out it will run without error and it will *always* be true. \r\n\r\n\r\n\r\n<p></p>\r\n<details>\r\n<summary><strong>(optional) Read more about using single values in if statements</strong> (click to expand)</summary>\r\n\r\nIn JavaScript a value on its own, when used in an if statement is *always true*.  For example: <code>if(\"Thursday\")</code> is true. <code>if(15)</code>...<code>if(23423)</code> both true.  This means that <code>if( day==\"Tuesday\" || \"Thursday\")</code> is also always true.  \r\n<p></p>\r\nSome single values such as <code>0</code> and the empty string <code>\"\"</code> evaluate to <strong>false</strong> inside an if statement.\r\n<p></p>\r\nThere are other examples of bizarre expressions that evaluate to true or false when used inside an if statement but almost none of them are used intentionally.\r\n</details>\r\n<p></p>\r\n\r\n<img src=\"https://images.code.org/addc9f770e5f25d3be4d656acabfd1f8-image-1446485780702.png\" style=\"width: 250px; float: right\">\r\n\r\nJust remember to follow the rules of boolean operators...\r\n\r\nThe boolean operators **OR** and **AND** *require* that there be an expression that *evaluates to true or false* on **both sides** of the operator.\r\n\r\nMost of the time you're going to use an expression that uses one of the comparison operators `< > == !=` or function that returns a true/false value.\r\n\r\nLet's now try using an **AND** and an **OR** in one combined expression... \r\n\r\n\r\n# Do This\r\nWe've provided you with starting code that prompts the user to enter a **day** and their **age** and store it in variables.\r\n\r\n**Add an if statement that uses both AND and OR operators**\r\n\r\n * The app should write \"Time for school!\" if it's not a weekend and the user is under 18.\r\n * Otherwise it should write \"Time to go to work!\"\r\n\r\n",
+    "start_blocks": "var day = prompt(\"Enter a day of the week.\");\r\nvar age = promptNum(\"Enter your age.\");\r\nwrite(\"Day is: \"+day);\r\nwrite(\"Age is: \"+age);\r\n//write your code here\r\n",
+    "instructions": "Write an if statement that uses AND and OR to display \"Time to go to school!\" if it's not the weekend and the user is under 18. (Click to see full instrucitons.",
+    "encrypted_examples": [
+
+    ],
+    "slider_speed": "1.0"
+  }
+}]]></config>
+  <blocks/>
+</Applab>
