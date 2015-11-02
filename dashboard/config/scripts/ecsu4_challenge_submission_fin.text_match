@@ -1,7 +1,5 @@
 name 'ECSU4 Challenge Submission fin'
-title 'Enter title here'
-content1 'Enter prompt here'
-answer 'Enter answer here'
+skip_sound true
 
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
