@@ -5,10 +5,9 @@ embedded_layout: simple_embedded
 
 [name]
 
-## textLabel(labelId, text, forId)
+## textLabel(labelId, text, *forId*)
 
 [/name]
-
 
 [category]
 
@@ -39,12 +38,10 @@ textInput("YourName","");
 ```
 
 [/example]
-
 ____________________________________________________
-
 [example]
 
-**Demonstrate a label for each of the input types**
+**Example Demonstrate a label for each of the input types**
 
 ```
 textLabel("textInputLabel","Text Input:", "textInputCtrl");
@@ -67,9 +64,7 @@ textLabel("radioLabel3","Radio 3","radioCtrl3");
 ```
 
 [/example]
-
 ____________________________________________________
-
 [syntax]
 
 ### Syntax
@@ -80,16 +75,15 @@ textLabel(labelId, text, forId)
 
 [/syntax]
 
-
 [parameters]
 
 ### Parameters
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| labelId | string | yes | A unique identifier for the label control. The id is used for referencing the created label. For example, to assign event handlers. |
-| text | string | yes | The value to display for the label. |
-| forId | string | yes | The id to associate the label with. Clicking the label is the same as clicking on the control. |
+| labelId | string | Yes | A unique identifier for the label control. The id is used for referencing the created label. For example, to assign event handlers. |
+| text | string | Yes | The value to display for the label. |
+| forId | string | No | The id to associate the label with. Clicking the label is the same as clicking on the control. |
 [/parameters]
 
 [returns]
