@@ -140,7 +140,7 @@ class Level < ActiveRecord::Base
   end
 
   def write_custom_level_file
-    if write_to_file?
+    if changed? && write_to_file?
       file_path = LevelLoader.level_file_path(name)
       File.write(file_path, self.to_xml)
       file_path
@@ -242,6 +242,6 @@ class Level < ActiveRecord::Base
   private
 
   def write_to_file?
-    custom? && !is_a?(DSLDefined) && Rails.env.levelbuilder? && !ENV['FORCE_CUSTOM_LEVELS']
+    custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
   end
 end
