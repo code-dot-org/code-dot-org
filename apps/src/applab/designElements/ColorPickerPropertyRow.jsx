@@ -1,5 +1,6 @@
 /* global $ */
 var rowStyle = require('./rowStyle');
+var colors = require('../../sharedJsxStyles').colors;
 
 var colorPicker = require('../colpick');
 
@@ -51,7 +52,7 @@ var ColorPickerPropertyRow = React.createClass({
 
   render: function() {
     var buttonStyle = {
-      backgroundColor: this.state.value,
+      backgroundColor: this.state.value  || colors.teal,
       verticalAlign: 'top'
     };
     return (
