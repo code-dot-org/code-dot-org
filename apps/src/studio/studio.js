@@ -400,12 +400,10 @@ var drawMap = function () {
   Studio.applyGoalEffect();
 
   // Create cloud elements.
-  if (Studio.background && skin[Studio.background].clouds) {
-    for (i = 0; i < constants.NUM_CLOUDS; i++) {
-      var cloud = document.createElementNS(SVG_NS, 'image');
-      cloud.setAttribute('id', 'cloud' + i);
-      svg.appendChild(cloud);
-    }
+  for (i = 0; i < constants.NUM_CLOUDS; i++) {
+    var cloud = document.createElementNS(SVG_NS, 'image');
+    cloud.setAttribute('id', 'cloud' + i);
+    svg.appendChild(cloud);
   }
 
   var score = document.createElementNS(SVG_NS, 'text');
