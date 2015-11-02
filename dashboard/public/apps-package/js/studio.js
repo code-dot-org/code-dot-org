@@ -377,7 +377,7 @@ var drawMap = function () {
   }
 
   // Calculate the dimensions of the spritesheet & the sprite itself that's rendered
-  // out of it.  Precedence order is skin.goalSpriteWidth/Height, goalOverride.imageWidth/Height, 
+  // out of it.  Precedence order is skin.goalSpriteWidth/Height, goalOverride.imageWidth/Height,
   // and then Studio.MARKER_WIDTH/HEIGHT.
   //
   // Legacy levels might specify goalOverride.imageWidth/Height which are dimensions
@@ -1042,13 +1042,13 @@ Studio.onTick = function() {
   sortDrawOrder();
 
   var currentTime = new Date().getTime();
- 
+
   if (!Studio.succeededTime && checkFinished()) {
     Studio.succeededTime = currentTime;
   }
 
-  if (Studio.succeededTime && 
-      !spritesNeedMoreAnimationFrames && 
+  if (Studio.succeededTime &&
+      !spritesNeedMoreAnimationFrames &&
       (!level.delayCompletion || currentTime > Studio.succeededTime + level.delayCompletion)) {
     Studio.onPuzzleComplete();
   }
@@ -1150,7 +1150,7 @@ function handleActorCollisionsWithCollidableList (
         if (autoDisappear) {
           if (list.length === 1 && list === Studio.items) {
             // NOTE: we do this only for the Item list (not projectiles)
-            
+
             // NOTE: if items are allowed to move outOfBounds(), this may never
             // be called because the last item may not be removed here.
             callHandler('whenGetAllItems');
@@ -2171,7 +2171,7 @@ Studio.runButtonClick = function() {
 var displayFeedback = function() {
   var tryAgainText;
   // For free play, show keep playing, unless it's a big game level
-  if (level.freePlay && !Studio.customLogic instanceof BigGameLogic) {
+  if (level.freePlay && !(Studio.customLogic instanceof BigGameLogic)) {
     tryAgainText = commonMsg.keepPlaying();
   }
   else {
@@ -2773,7 +2773,7 @@ Studio.drawDebugLine = function(className, x1, y1, x2, y2, color) {
 
 /**
  * Draw a timeout rectangle across the bottom of the play area.
- * It doesn't appear until halfway through the level, and briefly fades in 
+ * It doesn't appear until halfway through the level, and briefly fades in
  * when first appearing.
  */
 Studio.drawTimeoutRect = function() {
@@ -2792,7 +2792,7 @@ Studio.drawTimeoutRect = function() {
   var currentFraction = timeRemaining / Studio.timeoutFailureTick;
 
   if (currentFraction <= startFadeInAt) {
-    var opacity = currentFraction < endFadeInAt ? 1 : 
+    var opacity = currentFraction < endFadeInAt ? 1 :
       1 - (currentFraction - endFadeInAt) / (startFadeInAt - endFadeInAt);
 
     var width = timeRemaining * Studio.MAZE_WIDTH / (Studio.timeoutFailureTick * startFadeInAt);
@@ -2897,7 +2897,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   tile.setAttribute('width', numSrcCols * tileSize);
   tile.setAttribute('height', numSrcRows * tileSize);
   tile.setAttribute('x', col * Studio.SQUARE_SIZE - srcCol * tileSize + addOffset);
-  tile.setAttribute('y', row * Studio.SQUARE_SIZE - srcRow * tileSize + addOffset); 
+  tile.setAttribute('y', row * Studio.SQUARE_SIZE - srcRow * tileSize + addOffset);
   tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', tiles);
   svg.appendChild(tile);
 
@@ -2905,7 +2905,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
 
   var tileEntry = {};
   tileEntry.bottomY = row * Studio.SQUARE_SIZE + addOffset + tileSize;
-  Studio.tiles.push(tileEntry);  
+  Studio.tiles.push(tileEntry);
 };
 
 Studio.createLevelItems = function (svg) {
@@ -2969,7 +2969,7 @@ Studio.drawMapTiles = function (svg) {
           tilesDrawn[row][col] = true;
           tilesDrawn[row][col+1] = true;
           tilesDrawn[row+1][col] = true;
-          tilesDrawn[row+1][col+1] = true;          
+          tilesDrawn[row+1][col+1] = true;
         }
 
         Studio.drawWallTile(spriteLayer, wallVal, row, col);
@@ -3164,7 +3164,7 @@ Studio.animateGoals = function() {
       if (animate) {
         var baseX = parseInt(goalClipRect.getAttribute('x'), 10);
         var frame = Math.floor(elapsed / frameDuration) % numFrames;
-    
+
         goalSprite.setAttribute('x', baseX - frame * frameWidth);
       }
 
@@ -3178,7 +3178,7 @@ Studio.animateGoals = function() {
             opacity = 0;
             goal.startFadeTime = null;
           }
-          
+
           goalSprite.setAttribute('opacity', opacity);
         }
       }
@@ -3205,7 +3205,7 @@ Studio.displayFloatingScore = function(changeValue) {
   floatingScore.setAttribute('x', sprite.x + sprite.width/2);
   floatingScore.setAttribute('y', sprite.y + sprite.height/2);
   floatingScore.setAttribute('opacity', 1);
-  floatingScore.setAttribute('visibility', 'visible');  
+  floatingScore.setAttribute('visibility', 'visible');
 };
 
 Studio.updateFloatingScore = function() {
@@ -3841,7 +3841,7 @@ Studio.endGame = function(opts) {
     Studio.setScoreText({text: studioMsg.winMessage()});
   } else if (winValue== "lose") {
     Studio.trackedBehavior.hasLostGame = true;
-    Studio.setScoreText({text: studioMsg.loseMessage()});  
+    Studio.setScoreText({text: studioMsg.loseMessage()});
   } else {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
@@ -3994,7 +3994,7 @@ Studio.fixSpriteLocation = function () {
         for (var col = minCol; col <= maxCol; col++) {
           if (! Studio.getWallValue(row, col)) {
 
-            sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2 - 
+            sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2 -
               skin.wallCollisionRectOffsetX;
             sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 -
               skin.wallCollisionRectOffsetY;
@@ -4912,7 +4912,7 @@ Studio.allGoalsVisited = function() {
               goal.startFadeTime = new Date().getTime();
             }
 
-            callHandler('whenTouchGoal');  
+            callHandler('whenTouchGoal');
 
             break;
           }
@@ -4926,7 +4926,7 @@ Studio.allGoalsVisited = function() {
 
       // Play a sound unless we've hit the last flag (though that can be
       // overridden by the skin)
-      if (playSound && 
+      if (playSound &&
           (finishedGoals !== Studio.spriteGoals_.length || skin.playFinalGoalSound)) {
         studioApp.playAudio('flag');
       }
@@ -5018,7 +5018,7 @@ Studio.conditionSatisfied = function(required) {
  * criteria affects progress, otherwise an object that contains information
  * about the specific succeeding or failing criteria.
  *
- * @param {Array} conditions. 
+ * @param {Array} conditions.
  * @returns {ProgressConditionOutcome|null}
  */
 Studio.checkProgressConditions = function() {
@@ -5870,11 +5870,11 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.specialItemProperties = {
     'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
-    'man':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
+    'man':    { frames: 12, width: 100, height: 100, scale: 1.1, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
     'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'bird':   { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'bird':   { frames:  8, width: 100, height: 100, scale: 0.9, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
     'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.5, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
     'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
   };
 
@@ -6030,74 +6030,74 @@ function loadHoc2015(skin, assetUrl) {
     }
   };
 
-  skin.blank = 
-    [[0,  0,  0,  0,  0,  0,  0,  0], 
-     [0,  0,  0,  0,  0,  0,  0,  0], 
-     [0,  0,  0,  0,  0,  0,  0,  0], 
-     [0,  0,  0,  0,  0,  0,  0,  0],  
-     [0,  0,  0,  0,  0,  0,  0,  0], 
-     [0,  0,  0,  0,  0,  0,  0,  0],   
-     [0,  0,  0,  0,  0,  0,  0,  0],  
+  skin.blank =
+    [[0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
      [0,  0,  0,  0,  0,  0,  0,  0]];
 
-  skin.circle_nonjumbo = 
-    [[0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00], 
-     [0x00, 0x11, 0x02, 0x03,  0x00,  0x44, 0x45, 0x00], 
-     [0x00, 0x04, 0x00, 0x00,  0x00,  0x00, 0x03, 0x00], 
+  skin.circle_nonjumbo =
+    [[0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00],
+     [0x00, 0x11, 0x02, 0x03,  0x00,  0x44, 0x45, 0x00],
+     [0x00, 0x04, 0x00, 0x00,  0x00,  0x00, 0x03, 0x00],
      [0x00, 0x14, 0x00, 0x121, 0x121, 0x00, 0x05, 0x00],
-     [0x00, 0x02, 0x00, 0x121, 0x121, 0x00, 0x15, 0x00], 
-     [0x00, 0x03, 0x00, 0x00,  0x00,  0x00, 0x02, 0x00], 
-     [0x00, 0x24, 0x25, 0x02,  0x00,  0x34, 0x35, 0x00], 
+     [0x00, 0x02, 0x00, 0x121, 0x121, 0x00, 0x15, 0x00],
+     [0x00, 0x03, 0x00, 0x00,  0x00,  0x00, 0x02, 0x00],
+     [0x00, 0x24, 0x25, 0x02,  0x00,  0x34, 0x35, 0x00],
      [0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00]];
 
-  skin.circle = 
-    [[0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
-     [0x00, 0x200, 0x213, 0x213, 0x00,  0x213, 0x201, 0x00], 
-     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00], 
+  skin.circle =
+    [[0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
+     [0x00, 0x200, 0x213, 0x213, 0x00,  0x213, 0x201, 0x00],
+     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00],
      [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00],
-     [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00], 
-     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00], 
-     [0x00, 0x202, 0x213, 0x213, 0x00,  0x213, 0x203, 0x00], 
+     [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00],
+     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00],
+     [0x00, 0x202, 0x213, 0x213, 0x00,  0x213, 0x203, 0x00],
      [0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00]];
 
-  skin.horizontal_nonjumbo = 
-    [[0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
-     [0, 0x02, 0x03, 0x04, 0x00, 0x24, 0x25, 0x00], 
-     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+  skin.horizontal_nonjumbo =
+    [[0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0, 0x02, 0x03, 0x04, 0x00, 0x24, 0x25, 0x00],
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0, 0x10, 0x00, 0x34, 0x35, 0x20, 0x23, 0x00],
-     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
-     [0, 0x03, 0x02, 0x22, 0x20, 0x21, 0x00, 0x00], 
-     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0, 0x03, 0x02, 0x22, 0x20, 0x21, 0x00, 0x00],
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]];
 
-  skin.horizontal = 
-    [[0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
-     [0, 0x213, 0x213, 0x213, 0x00,  0x213, 0x213, 0x00], 
-     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+  skin.horizontal =
+    [[0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
+     [0, 0x213, 0x213, 0x213, 0x00,  0x213, 0x213, 0x00],
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
      [0, 0x10,  0x00,  0x213, 0x213, 0x213, 0x213, 0x00],
-     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
-     [0, 0x213, 0x213, 0x213, 0x213, 0x213, 0x00,  0x00], 
-     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
+     [0, 0x213, 0x213, 0x213, 0x213, 0x213, 0x00,  0x00],
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
      [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00]];
 
-  skin.grid = 
-    [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
-     [0x00, 0x21, 0x00, 0x10, 0x00, 0x20, 0x00, 0x03], 
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+  skin.grid =
+    [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0x00, 0x21, 0x00, 0x10, 0x00, 0x20, 0x00, 0x03],
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0x00, 0x02, 0x00, 0x11, 0x00, 0x21, 0x00, 0x02],
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0x00, 0x03, 0x00, 0x20, 0x00, 0x22, 0x00, 0x11],
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0x00, 0x10, 0x00, 0x21, 0x00, 0x23, 0x00, 0x10]];
 
-  skin.blobs = 
-    [[0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00], 
-     [0x00, 0x103, 0x103, 0x00,  0x00, 0x00,  0x22,  0x00], 
-     [0x00, 0x103, 0x103, 0x00,  0x00, 0x110, 0x110, 0x00], 
-     [0x00, 0x00,  0x00,  0x00,  0x00, 0x110, 0x110, 0x00],  
-     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x00], 
-     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x23],   
-     [0x00, 0x00,  0x03,  0x00,  0x00, 0x00,  0x121, 0x121],  
+  skin.blobs =
+    [[0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00],
+     [0x00, 0x103, 0x103, 0x00,  0x00, 0x00,  0x22,  0x00],
+     [0x00, 0x103, 0x103, 0x00,  0x00, 0x110, 0x110, 0x00],
+     [0x00, 0x00,  0x00,  0x00,  0x00, 0x110, 0x110, 0x00],
+     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x00],
+     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x23],
+     [0x00, 0x00,  0x03,  0x00,  0x00, 0x00,  0x121, 0x121],
      [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x121, 0x121]];
 
   // Sounds.
@@ -6197,7 +6197,7 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'hazard': { frames: 13, animationRate: 5, width: 100, height: 100, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
+    'hazard': { frames: 13, animationRate: 5, width: 100, height: 100, scale: 1.3, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
   };
 
   // Spritesheet for animated goal.

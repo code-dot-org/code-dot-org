@@ -4,47 +4,88 @@ description 'description here'
 
 
 markdown <<MARKDOWN
-## Creating variables in the right place
-
-### Understanding variable scope
+# Creating variables in the right place
 
 In the previous page the problem with code was the line **var count = count + 1**.  To fix it you need to remove the word **var**.
 
-You already know the main reason this caused a problem and why:
+You already know the main reason this caused a problem and why: The code `var count` is like saying: "create a new variable called count." 
 
-* Using **var count** is like saying "create a new variable called count." In this case you didn't want to create a new variable - you wanted to reference the one created at the top of the program.
+In this case you didn't want to create a new variable - you wanted to reference the one created at the top of the program.
 
-But there is something else we can now tell you....
+# Where you decide to *create* variables in your code **matters**.  
 
-### Variables created inside functions go away once the function has completed execution.
+You have two choices: 
+1. Create a variable outside of any function
+2. Create a variable inside a function
 
-You can think of variables created inside functions as temporary - they only live to serve the running of one call to the function.  
+You saw examples of both of these in the previous two apps.  
 
-Example: A variable is created inside a button click event.
+# Understanding variable scope
+The term for this concept is called **"variable scope"** Javascript has two scopes: **global** and **local**.  Global and local refer to which parts of your code can access and modify variables at any given time. 
+
+Here's the difference...
+
+<hr>
+<strong style="font-size: 20px; color: #00adbc">Global Variables</strong><br>
+
+[Insert diagram]
+
+A variable created outside of any function is called a **global variable** and it is accessible and modifiable throughout your program, by any code in any function.
+
+**Uses of global variables**
+
+Global variables are useful for keeping track of data over the lifetime of the program that's running.  
+
+If you want to keep track of some data between events, or between function calls, you want a global variable.
+
+**Where to create global variables**
+
+By convention global variables are created and initialized in the **very first lines of code** in a program.  
+
+**Common pitfalls with global variables**
+
+Because you can create a global variable *anywhere* in your code that is outside of a function definition, you can get yourself into trouble if you have variable declarations scattered throughout a large program.  You might accidently re-create or create a new variable for a purpose you've already made a variable for.  
+
+**ADVICE** Stick to the convention: if you need a global variable in your program, create it and give it an initial value at the very top of your program.  Keep all global variables in a group at the top where you can look up them.
+ 
+<hr>
+
+<strong style="font-size: 20px; color: #00adbc">Local Variables</strong><br>
+[insert diagram of local variables in play with visibility]
+
+A variable that is created inside a function definition is called a <strong>local variable</strong>. It is created and destroyed <i>every time the function is executed</i> and it cannot be accessed by any code outside the function.
+
+**Uses of local variables**
+
+Local variables are useful temporary placeholders for data that you need to perform a computation of some kind.
+
+They are useful because often a program might have several functions that perform different but related tasks and you'd like to reuse variable names.
+
+The best example of this is **function parameters**.  Function parameters are a form of local variable - they get created and initialized when a function is called, and they get used once while the function runs, and then destroyed.
+
+Imagine if all we had were global variables.  Then you could not write these two functions:
+
 <pre style=“display: inline-block”>
-onEvent("myButton", "click", function(){
+function drawSquare(size){
    ...
-   <strong> var count = 0; </strong>
+}
+function drawTriangle(size){
    ...
-});
+}
 </pre>
 
-You may also be wondering:
+Because the **size** variable is **local** to the function, we can re-use this handy variable name.  If all variables had to be global we'd have to invent deferent variable names for every function parameter in the entire language.
 
-* Does that mean that a new variable is created every time the button is clicked?
+**Common pitfalls with local variables**
 
-* Where do all these variables go?  Can I see them?
+The most common mistake is something you just experienced: **accidentally re-creating a variable inside a function when you intended to reference a global variable**.
 
-* Is it possible for many variables to have the same name?
+When you create a variable inside a function that happens to have the same name as a global variable the **local variable takes precedence** and the function will try to use the local variable first.  
 
-Well, the answer is yes, a new variable is created each time, but *only* the code inside the function can see it.  Both the variable and its value are lost once the function is done running.
+# Moving on...
+Now let's practice a little bit more with variables.  
 
-Here is an example of this in action...
+For our programs coming up we're particularly interested in global variables since that gives us the ability to remember data like the score of a game over the life of a program.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue to see example</a>
-
-   
-
-
-
+<a >Continue</a>
 MARKDOWN
