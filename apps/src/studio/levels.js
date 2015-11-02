@@ -2786,6 +2786,20 @@ levels.js_hoc2015_event_free = {
           'at': 'bottom center',
         }
       }
+    },
+    {
+      'id': 'playlab:js_hoc2015_event_free:finishButton',
+      'element_id': '#finishButton',
+      'on': 'finishButtonShown',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutFinishButton(),
+        },
+        'position': {
+          'my': 'top left',
+          'at': 'bottom right',
+        }
+      }
     }
   ],
   appStringsFunctions: {
