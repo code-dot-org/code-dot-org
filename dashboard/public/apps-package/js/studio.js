@@ -288,7 +288,7 @@ var drawMap = function () {
   backgroundLayer.setAttribute('id', 'backgroundLayer');
   svg.appendChild(backgroundLayer);
 
-  if (skin.background) {
+  if (Studio.background && skin[Studio.background].background) {
     var tile = document.createElementNS(SVG_NS, 'image');
     tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
                         skin[Studio.background].background);
@@ -418,6 +418,16 @@ var drawMap = function () {
     }
   }
   Studio.applyGoalEffect();
+
+  // Create cloud elements.
+  var cloudGroup = document.createElementNS(SVG_NS, 'g');
+  cloudGroup.setAttribute('id', 'cloudLayer');
+  for (i = 0; i < constants.NUM_CLOUDS; i++) {
+    var cloud = document.createElementNS(SVG_NS, 'image');
+    cloud.setAttribute('id', 'cloud' + i);
+    cloudGroup.appendChild(cloud);
+  }
+  svg.appendChild(cloudGroup);
 
   var score = document.createElementNS(SVG_NS, 'text');
   score.setAttribute('id', 'score');
@@ -1019,6 +1029,9 @@ Studio.onTick = function() {
 
     // Animate goals
     Studio.animateGoals();
+
+    // Animate clouds
+    Studio.animateClouds();
 
     var sprite = Studio.sprite[i];
     if (sprite.hasActions()) {
@@ -3196,6 +3209,59 @@ Studio.animateGoals = function() {
   }
 };
 
+/**
+ * Load clouds for the current background if it features them.
+ */
+Studio.loadClouds = function() {
+  var showClouds = Studio.background && skin[Studio.background].clouds;
+
+  var width, height;
+  width = height = 300;
+
+  for (var i = 0; i < constants.NUM_CLOUDS; i++) {
+    // Start with clouds hidden.
+    var cloud = document.getElementById('cloud' + i);
+    cloud.setAttribute('x', -width);
+    cloud.setAttribute('y', -height);
+
+    // If we aren't showing clouds for this background, do nothing more.
+    if (!showClouds) {
+      continue;
+    }
+
+    // Clouds are showing, so set up the right ones for this background.
+    cloud.setAttribute('width', width);
+    cloud.setAttribute('height', height);
+    cloud.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+      skin[Studio.background].clouds[i]);
+    cloud.setAttribute('opacity', 0.7);
+  }
+};
+
+/**
+ * Animate clouds if the current background features them.
+ */
+Studio.animateClouds = function() {
+  var showClouds = Studio.background && skin[Studio.background].clouds;
+  if (!showClouds) {
+    return;
+  }
+
+  for (var i = 0; i < constants.NUM_CLOUDS; i++) {
+    var cloud = document.getElementById('cloud' + i);
+
+    var intervals = [ 50, 60 ];   // how many milliseconds to move a pixel
+    var distance = 700;           // how many pixels a cloud covers
+
+    var xOffset = new Date().getTime() / intervals[i] % distance;
+    var x = i === 0 ? xOffset - 100 : 400 - xOffset;
+    var y = i === 0 ? x - 200 : x + 200;
+
+    cloud.setAttribute('x', x);
+    cloud.setAttribute('y', y);
+  }
+};
+
 
 /**
  * Start showing an upwards-floating score at the location of sprite 0.
@@ -3897,6 +3963,8 @@ Studio.setBackground = function (opts) {
         Studio.setMap({value: Studio.wallMapRequested, forceRedraw: true});
       }
     }
+
+    Studio.loadClouds();
   }
 };
 
@@ -6000,7 +6068,8 @@ function loadHoc2015(skin, assetUrl) {
     jumboTilesAddOffset: -5,
     jumboTilesSize: 60,
     jumboTilesRows: 4,
-    jumboTilesCols: 4
+    jumboTilesCols: 4,
+    clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
   };
   skin.snow = {
     background: skin.assetUrl('background_background2.jpg'),
@@ -6009,7 +6078,8 @@ function loadHoc2015(skin, assetUrl) {
     jumboTilesAddOffset: -5,
     jumboTilesSize: 60,
     jumboTilesRows: 4,
-    jumboTilesCols: 4
+    jumboTilesCols: 4,
+    clouds: [skin.assetUrl('cloud_dark.png'), skin.assetUrl('cloud_dark2.png')]
   };
   skin.ship = {
     background: skin.assetUrl('background_background3.jpg'),
@@ -6305,7 +6375,8 @@ function loadHoc2015x(skin, assetUrl) {
 
   skin.main = {
     background: skin.assetUrl('background_background1.jpg'),
-    tiles: skin.assetUrl('tiles_background1.png')
+    tiles: skin.assetUrl('tiles_background1.png'),
+    clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
   };
 
   // It's possible to enlarge the rendering of some wall tiles so that they
@@ -14565,7 +14636,7 @@ exports.WallTypeMask     = 0x0F000000;
 exports.WallCoordRowMask = 0x00F00000;
 exports.WallCoordColMask = 0x000F0000;
 
-exports.WallCoordsMask = 
+exports.WallCoordsMask =
   exports.WallTypeMask | exports.WallCoordRowMask | exports.WallCoordColMask;
 exports.WallCoordsShift = 16;
 exports.WallCoordColShift  = exports.WallCoordsShift;
@@ -14598,6 +14669,9 @@ exports.TOUCH_HAZARD_FADE_TIME = 2000;
 exports.SHAKE_DEFAULT_DURATION = 1000;
 exports.SHAKE_DEFAULT_CYCLES = 8;
 exports.SHAKE_DEFAULT_DISTANCE = 5;
+
+// How many clouds to display.
+exports.NUM_CLOUDS = 2;
 
 
 },{}],"/home/ubuntu/staging/apps/build/js/studio/ImageFilterFactory.js":[function(require,module,exports){
