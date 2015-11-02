@@ -2788,6 +2788,12 @@ levels.js_hoc2015_event_free = {
       }
     }
   ],
+  appStringsFunctions: {
+    continueText: msg.hoc2015_lastLevel_continueText,
+    reinfFeedbackMsg: msg.hoc2015_reinfFeedbackMsg,
+    sharingText: msg.hoc2015_shareGame
+  },
+  disablePrinting: true
 };
 
 levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
