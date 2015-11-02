@@ -827,6 +827,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     instructions: level.instructions,
     instructions2: level.instructions2,
     renderedMarkdown: renderedMarkdown,
+    markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
     aniGifURL: level.aniGifURL
   });
 
