@@ -3,6 +3,7 @@ var AssetRow = require('./AssetRow.jsx');
 var assetListStore = require('./assetListStore');
 
 var errorMessages = {
+  401: 'You don\'t have permission to add or remove files.',
   403: 'Quota exceeded. Please delete some files and try again.',
   413: 'The file is too large.',
   415: 'This type of file is not supported.',
