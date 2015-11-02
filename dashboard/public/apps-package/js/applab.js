@@ -3594,8 +3594,8 @@ function makeDraggable (jqueryElements) {
           widthProperty = 'width';
           heightProperty = 'height';
         }
-        designMode.updateProperty(element, widthProperty, element.style.width);
-        designMode.updateProperty(element, heightProperty, element.style.height);
+        designMode.onPropertyChange(element, widthProperty, element.style.width);
+        designMode.onPropertyChange(element, heightProperty, element.style.height);
 
         highlightElement(elm[0]);
       }
