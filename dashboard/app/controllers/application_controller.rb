@@ -202,4 +202,10 @@ class ApplicationController < ActionController::Base
   def set_locale_cookie(locale)
     cookies[:language_] = { value: locale, domain: :all, expires: 10.years.from_now}
   end
+
+  def require_levelbuilder_mode
+    unless Rails.application.config.levelbuilder_mode
+      raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
+    end
+  end
 end
