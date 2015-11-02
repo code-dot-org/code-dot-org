@@ -178,7 +178,7 @@ Our general rule is you will not go through PD unless you are teaching the cours
 
 ### How do I navigate my Online PD? How do I check my progress?
 
-Your Online PD course appears in your Code Studio (see image 1). To get to this page, click on the orange button in the top right corner. Select Code Studio from the dropdown. Select your online PD course - that brings you to your progress page (see image 2). Pay attention to the name of the course you are completing!
+Your Online PD courses live in Code Studio, our learning platform (see image 1 below). To get to this page, click on the orange button in the top right corner. Select Code Studio from the dropdown. Select your online PD course - that brings you to your progress page (see image 2). Pay attention to the name of the course you are completing!
 
 [**Back to the top**](#top)
 <br/>
