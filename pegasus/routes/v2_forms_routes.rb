@@ -61,7 +61,12 @@ end
 
 review '/v2/forms/:kind/:secret' do |kind, secret|
   dont_cache
-  forbidden! unless dashboard_user && dashboard_user[:admin]
+  case kind
+  when "HocSignup2015"
+    forbidden! unless dashboard_user && dashboard_user[:user_type] == 'teacher'
+  else
+    forbidden! unless dashboard_user && dashboard_user[:admin]
+  end
   forbidden! if settings.read_only
   unsupported_media_type! unless payload = request.json_body
 
