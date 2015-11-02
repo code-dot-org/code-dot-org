@@ -2151,22 +2151,34 @@ Studio.runButtonClick = function() {
 var displayFeedback = function() {
   var tryAgainText;
   // For free play, show keep playing, unless it's a big game level
-  if (level.freePlay && !Studio.customLogic instanceof BigGameLogic) {
+  if (level.freePlay && !(Studio.customLogic instanceof BigGameLogic)) {
     tryAgainText = commonMsg.keepPlaying();
   }
   else {
     tryAgainText = commonMsg.tryAgain();
   }
 
+  // Let the level override feedback dialog strings.
+  var stringFunctions = $.extend({
+    continueText: level.freePlay ? commonMsg.nextPuzzle : function () {},
+    reinfFeedbackMsg: studioMsg.reinfFeedbackMsg,
+    sharingText: studioMsg.shareGame
+  }, level.appStringsFunctions);
+  var appStrings = {
+    continueText: stringFunctions.continueText(),
+    reinfFeedbackMsg: stringFunctions.reinfFeedbackMsg({backButton: tryAgainText}),
+    sharingText: stringFunctions.sharingText()
+  };
 
   if (!Studio.waitingForReport) {
     studioApp.displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
+      hideIcon: skin.hideIconInClearPuzzle,
       feedbackType: Studio.testResults,
       executionError: Studio.executionError,
       tryAgainText: tryAgainText,
-      continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
+      continueText: appStrings.continueText,
       response: Studio.response,
       level: level,
       showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure &&
@@ -2176,10 +2188,8 @@ var displayFeedback = function() {
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       message: Studio.message,
-      appStrings: {
-        reinfFeedbackMsg: studioMsg.reinfFeedbackMsg({backButton: tryAgainText}),
-        sharingText: studioMsg.shareGame()
-      }
+      appStrings: appStrings,
+      disablePrinting: level.disablePrinting
     });
   }
 };
