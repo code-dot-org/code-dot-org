@@ -422,7 +422,6 @@ en:
       ECSPD scratch: {}
       ECSPD teaching strategies video:
         ECSPD teaching strategies video: ECSPD teaching strategies video
-      ECSPD unit 2 Pick Challenge: {}
       ECSPD unit 3 Pick Challenge: {}
       ECSPD unit 4 Pick Challenge: {}
       ECSPD what is growth mindset:
@@ -4305,10 +4304,7 @@ en:
         Documenting Your Goals: Documenting Your Goals
       ECSU2 Challenge Submission: {}
       ECSU3 Challenge Submission: {}
-      ECSU4 Challenge Submission fin:
-        Enter answer here: Enter answer here
-        Enter prompt here: Enter prompt here
-        Enter title here: Enter title here
+      ECSU4 Challenge Submission fin: {}
       Glossary O:
         ? 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
         : 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
