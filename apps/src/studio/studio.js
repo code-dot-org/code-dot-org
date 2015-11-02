@@ -400,11 +400,14 @@ var drawMap = function () {
   Studio.applyGoalEffect();
 
   // Create cloud elements.
+  var cloudGroup = document.createElementNS(SVG_NS, 'g');
+  cloudGroup.setAttribute('id', 'cloudLayer');
   for (i = 0; i < constants.NUM_CLOUDS; i++) {
     var cloud = document.createElementNS(SVG_NS, 'image');
     cloud.setAttribute('id', 'cloud' + i);
-    svg.appendChild(cloud);
+    cloudGroup.appendChild(cloud);
   }
+  svg.appendChild(cloudGroup);
 
   var score = document.createElementNS(SVG_NS, 'text');
   score.setAttribute('id', 'score');
