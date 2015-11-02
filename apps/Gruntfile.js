@@ -198,6 +198,12 @@ config.copy = {
       },
       {
         expand: true,
+        cwd: 'lib/fileupload',
+        src: ['*.js'],
+        dest: 'build/package/js/fileupload/'
+      },
+      {
+        expand: true,
         cwd: 'lib/jsinterpreter',
         src: ['*.js'],
         dest: 'build/package/js/jsinterpreter/'

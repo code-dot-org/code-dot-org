@@ -9,6 +9,26 @@ module.exports = React.createClass({
     uploadsEnabled: React.PropTypes.bool.isRequired
   },
 
+  componentDidMount: function () {
+    $(React.findDOMNode(this.refs.uploader)).fileupload({
+        dataType: 'json',
+        // prevent fileupload from replacing the input DOM element, which
+        // React does not like
+        replaceFileInput: false,
+        done: function (e, data) {
+          console.log('done');
+          // $.each(data.result.files, function (index, file) {
+          //     $('<p/>').text(file.name).appendTo(document.body);
+          // });
+        }
+    });
+  },
+
+  componentWillUnmount: function () {
+    // TODO - test open/closing dialog. make sure we do the right thing
+    $(React.findDOMNode(this.refs.uploader)).fileupload('destroy');
+  },
+
   upload: function () {
     this.props.onUpload(this.refs.uploader);
   },
@@ -23,11 +43,17 @@ module.exports = React.createClass({
   },
 
   render: function () {
+    // TODO - channelId as prop?
+    var dataUrl = '/v3/assets/' + Applab.channelId + '/new';
+    // return <input ref="fileupload" id="fileupload" type="file" name="files[]" data-url={dataUrl} multiple/>;
+    // TODO - do i need "multiple"?
     return (
-      <div>
+      <span>
         <input
             ref="uploader"
+            data-url={dataUrl}
             type="file"
+            multiple={true}
             accept={(this.props.typeFilter || '*') + '/*'}
             style={{display: 'none'}}
             onChange={this.upload} />
@@ -39,7 +65,7 @@ module.exports = React.createClass({
           <i className="fa fa-upload"></i>
           &nbsp;Upload File
         </button>
-      </div>
+      </span>
     );
   }
 });

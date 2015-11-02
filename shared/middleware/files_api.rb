@@ -141,20 +141,7 @@ class FilesApi < Sinatra::Base
     result[:body]
   end
 
-  #
-  # PUT /v3/(assets|sources)/<channel-id>/<filename>?version=<version-id>
-  #
-  # Create or replace a file. Optionally overwrite a specific version.
-  #
-  put %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
-    dont_cache
-
-    # read the entire request before considering rejecting it, otherwise varnish
-    # may return a 503 instead of whatever status code we specify. Unfortunately
-    # this prevents us from rejecting large files based on the Content-Length
-    # header.
-    body = request.body.read
-
+  def put_file(endpoint, encrypted_channel_id, filename, body)
     not_authorized unless owns_channel?(encrypted_channel_id)
 
     file_too_large(endpoint) unless body.length < FilesApi::max_file_size
@@ -177,6 +164,40 @@ class FilesApi < Sinatra::Base
     content_type :json
     category = mime_type.split('/').first
     {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
+  end
+
+  #
+  # PUT /v3/(assets|sources)/<channel-id>/<filename>?version=<version-id>
+  #
+  # Create or replace a file. Optionally overwrite a specific version.
+  #
+  put %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+    dont_cache
+
+    # read the entire request before considering rejecting it, otherwise varnish
+    # may return a 503 instead of whatever status code we specify. Unfortunately
+    # this prevents us from rejecting large files based on the Content-Length
+    # header.
+    body = request.body.read
+
+    put_file(endpoint, encrypted_channel_id, filename, body)
+  end
+
+  # POST /v3/assets/<channel-id>/<filename>?version=<version-id>
+  #
+  # TODO
+  #
+  post %r{/v3/assets/([^/]+)/new$} do |encrypted_channel_id|
+    # TODO - what sort of validation needs to be done?
+    file = request.POST['files'][0]
+    put_file('assets', encrypted_channel_id, file[:filename], file[:tempfile].read)
+    # rack_input = env["rack.input"].read
+    # foo = env['rack.input'].gets
+    # body = request.body.read
+
+    # put_file('assets', encrypted_channel_id, filename)
+    # body
+    # rack_input
   end
 
   #
