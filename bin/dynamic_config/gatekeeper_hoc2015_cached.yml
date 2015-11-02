@@ -1,0 +1,14 @@
+public_caching_for_script:
+  - rule:
+    where:
+      script_name: hoc2015
+    value: true
+  - rule:
+    value: false
+postMilestone:
+  - rule:
+    where:
+      script_name: hoc2015
+    value: false
+  - rule:
+    value: true
