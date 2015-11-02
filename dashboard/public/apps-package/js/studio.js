@@ -2169,6 +2169,12 @@ Studio.runButtonClick = function() {
     if (shareCell.className !== 'share-cell-enabled') {
       shareCell.className = 'share-cell-enabled';
       studioApp.onResize();
+
+      // Fire a custom event on the document so that other code can respond
+      // to the finish button being shown.
+      var event = document.createEvent('Event');
+      event.initEvent('finishButtonShown', true, true);
+      document.dispatchEvent(event);
     }
   }
 
@@ -9500,6 +9506,20 @@ levels.js_hoc2015_event_free = {
         'position': {
           'my': 'top center',
           'at': 'bottom center',
+        }
+      }
+    },
+    {
+      'id': 'playlab:js_hoc2015_event_free:finishButton',
+      'element_id': '#finishButton',
+      'on': 'finishButtonShown',
+      'qtip_config': {
+        'content' : {
+          'text': msg.calloutFinishButton(),
+        },
+        'position': {
+          'my': 'top left',
+          'at': 'bottom right',
         }
       }
     }
