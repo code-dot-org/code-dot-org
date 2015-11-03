@@ -77,7 +77,7 @@ Then /^check that I am on "([^"]*)"$/ do |url|
   @browser.current_url.should eq url
 end
 
-Then /^check that the URL contains "([^"]*)"$/ do |url|
+Then /^check that the URL contains "([^"]*)"$/i do |url|
   url = replace_hostname(url)
   @browser.current_url.should include url
 end
@@ -478,6 +478,27 @@ Given(/^I sign in as a (student|teacher)$/) do |user_type|
   }
 end
 
+# Signs in as name by filling in username/password fields. If name does not
+# already exist, creates a new student account for name in the db first.
+Given(/^I manually sign in as "([^"]*)"$/) do |name|
+  steps %Q{
+    Given I am on "http://studio.code.org/reset_session"
+    And execute JavaScript expression "window.localStorage.clear()"
+    Then I am on "http://studio.code.org/"
+    And I set the language cookie
+    And I create a student named "#{name}"
+    Then I am on "http://studio.code.org/"
+    And I reload the page
+    Then I wait for 2 seconds
+    Then I wait to see ".header_user"
+    Then I click selector "#signin_button"
+    And I wait to see ".new_user"
+    And I fill in username and password for "#{name}"
+    And I click selector "input[type=submit][value='Sign in']"
+    And I wait to see ".header_user"
+  }
+end
+
 When(/^I debug cookies$/) do
   puts "DEBUG: url=#{CGI::escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
@@ -488,8 +509,7 @@ And(/^I ctrl-([^"]*)$/) do |key|
   @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
 end
 
-And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
-  element = @browser.find_element(:css, selector)
+def press_keys(element, key)
   if key.start_with?(':')
     element.send_keys(make_symbol_if_colon(key))
   else
@@ -506,6 +526,11 @@ And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
       end
     end
   end
+end
+
+And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
+  element = @browser.find_element(:css, selector)
+  press_keys(element, key)
 end
 
 def make_symbol_if_colon(key)

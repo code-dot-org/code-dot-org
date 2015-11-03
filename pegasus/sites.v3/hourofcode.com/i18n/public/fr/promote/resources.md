@@ -11,7 +11,7 @@ nav: promote_nav
 
 # Promouvoir Une Heure du Code
 
-## Organiser Une heure du Code ? [Voir le guide pratique](<%= resolve_url('/how-to') %>)
+## Vous voulez organiser Une heure du Code ? [Voir le guide pratique](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -41,11 +41,11 @@ nav: promote_nav
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Télécharger les versions haute résolution](http://images.code.org/share/hour-of-code-logo.zip)
+[Téléchargez les versions haute résolution](http://images.code.org/share/hour-of-code-logo.zip)
 
 <a id="stickers"></a>
 
-## Imprimer ces autocollants pour les donner à vos élèves
+## Imprimez ces autocollants pour les donner à vos élèves
 
 (Les autocollants font 1" diamètre, il y en a 63 par feuille)  
 [![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
@@ -106,7 +106,7 @@ Notre heure de Code est une affirmation que [nom de l'école] est prête à ense
 
 C'est une opportunité de changer l'avenir de l'éducation à [nom de la ville].
 
-Voir http://hourofcode.com/ < % = le @country %> pour plus de détails et vous aider à diffuser l'information.
+Voir http://hourofcode.com/<%= @country %> pour plus de détails et vous aider à diffuser l'information.
 
 Bien cordialement,
 

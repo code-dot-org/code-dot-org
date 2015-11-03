@@ -28,16 +28,18 @@ class ActivitiesController < ApplicationController
       @level = Level.find(params[:level_id].to_i)
     end
 
-    if params[:program]
+    @sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: params[:scriptName]}, default: true)
+
+    if params[:program] && @sharing_allowed
       begin
         share_failure = find_share_failure(params[:program])
-      rescue OpenURI::HTTPError => share_checking_error
+      rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
         # If WebPurify fails, the program will be allowed
       end
 
       unless share_failure
         @level_source = LevelSource.find_identical_or_create(@level, params[:program])
-        slog(tag: 'share_checking_error', error: "#{share_checking_error}", level_source_id: @level_source.id) if share_checking_error
+        slog(tag: 'share_checking_error', error: "#{share_checking_error.class.name}: #{share_checking_error}", level_source_id: @level_source.id) if share_checking_error
       end
     end
 

@@ -1,17 +1,18 @@
 name 'Forum-ECSPD-Unit 4-Teaching Practice'
-
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## Forum for 
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-Take a few minutes to respond to this forum (link below). This is a place for you to share teaching strategies and resources with other teachers. Check back here when teaching your lesson to see what other resources and ideas have been posted.
+## Teaching Strategies > Overview
+For each unit in ECS, your online PD courses (like this one) will introduce you to teaching strategies that are relevant to the content of that unit. 
+<br><br>
+> The teaching strategy introduced in this online PD may be something you have seen before. If that is the case, your challenge is to come up with ideas of how best to implement it in these new lessons. If the practice is new to you, we encourage you to give it a try.
 
-> Question: 
+For Unit 4, as you teach web design lessons, there is one teaching strategy we will explore:
 
-### <strong><a href="https://forum.code.org" target="_blank">Forum >></a></strong>
+- Managing collaboration in the plugged classroom  
 
-</br>
-After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
-
+<br><br>
+Let’s get started! Click “Continue” below.
+<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

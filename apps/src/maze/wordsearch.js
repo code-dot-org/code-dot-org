@@ -4,7 +4,7 @@ var cellId = require('./mazeUtils').cellId;
 
 var SquareType = require('./tiles').SquareType;
 
-var SVG_NS = "http://www.w3.org/2000/svg";
+var SVG_NS = require('../constants').SVG_NS;
 
 /**
  * Create a new WordSearch.

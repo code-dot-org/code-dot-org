@@ -2,48 +2,48 @@ name 'ECSPD U4 D 20-23 Intro'
 
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## Unit 4 Day 20-23: 
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-First, let's explore the first lesson in the curriculum. To begin, find your ECS your curriculum and open to page ???.
+## Day 20-23 Scratch -- Timing Game
 
-<a href="LINK" target="_blank">Access a Digital Copy of the Lesson >></a>
+First, let's explore the thirteenth lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 176-177.
 
+[Access a Digital Copy of the lesson>>](http://code.org/ecs#page=176)
 
 #### Key Concepts
 
-1. Key Concept (<i>example</i>)
-
-1. Key Concept 2 (<i>example</i>)
+- Students will create their own timing game and participate in an Arcade Day where they will have the opportunity to share their game with their peers.
 
 #### Common Difficulties
 
-Explain common difficulties
-
-#### PD Outline
-
-The following outline lists the topics covered on each level of this stage. <i>This online PD is intended to be a companion to the ECS curriculum. Have your book open as you go through the levels of this stage.</i>
-
-1. Overview
-
-1. Companion Media Resource
-
-1. Suggested Assessment
-
-1. Additional Resources
-
-1. Teaching Strategies
-
-1. Forum
-
->**Note:** This activity was led by one of your facilitators on the first day of the workshop, but it was not planned by one of the participant teaching groups. 
+Students may want to create an elaborate game that you might not know how to help them with.  Remember that you may want to review the problem solving process, writing a storyboard for their game and then having them write the algorithm for their program to get started. You can also have them get help from other students.
+<br><br>
+It would be best to have students start with at basic idea or prototype for their game and then work on adding extensions as they can see success and time allows.
 
 #### All Resources for This Lesson
 
-* <a href="LINK" target="_blank">NAME</a>
+**Teacher Supports:**
 
+- [U4 D](http://code.org/ecs#page=176) [ay 20-23 Lesson](http://code.org/ecs#page=176)
+- [U4 Day 20-23 Resource Folder](https://drive.google.com/a/nicolescourse.com/folderview?id=0B2UNlnU_5Vg4fmJqeXh6bGFTcG4xa0NWbnR2bU5iaDVWNEtfQUExeDhMZ2NWQTFJeDFmVTA&usp=drive_web&tid=0B2UNlnU_5Vg4fmFpUGlWakFZYW95Rzh3aGd6akJiWS0zUS1XR1dIcXVFM3hPSUNyNC1XRzQ)
+- [U4 Day 20-23 General Q and A Forum](http://forum.code.org/t/u4-day-20-23-general-q-a/1876)
+- [U4 Day 20-23 PD Discussion Topic Forum](http://forum.code.org/t/u4-day-20-23-pd-discussion-topic/1901)
+- [U4 Day 20-23 Lesson Resources Forum](http://forum.code.org/t/u4-day-20-23-lesson-resources/1856)
+- [U4 Day 20-23 Assessment Forum](http://forum.code.org/t/u4-day-20-23-assessment/1871)
 
-Let's examine some important sections of this lesson. To get started, click "Continue" below. 
+**Supplies:**
 
+- [Timing Game Sample Rubric](http://code.org/ecs#page=175)
+- [Peer Grading](http://code.org/ecs#page=161)
+- [http://scratch.mit.edu](http://scratch.mit.edu/)
+
+### PD Discussion Forum
+
+No specific discussion prompt for today, but please head over to the forum and discuss anything relevant to this PD that you like.
+
+[<button>Discuss in the forum >></button>](http://forum.code.org/t/u4-day-20-23-pd-discussion-topic/1901)
+<br><br>
+After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
+<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

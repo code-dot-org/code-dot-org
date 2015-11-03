@@ -79,11 +79,11 @@ When /^I drag a (\w+) into the app$/ do |element_type|
       pageY: screenOffset.top
     });
     var drag = $.Event("mousemove", {
-      pageX: $("#visualization").offset().left,
+      pageX: $("#visualization").offset().left + 15,
       pageY: $("#visualization").offset().top
     });
     var mouseup = $.Event('mouseup', {
-      pageX: $("#visualization").offset().left,
+      pageX: $("#visualization").offset().left + 15,
       pageY: $("#visualization").offset().top
     });
     element.trigger(mousedown);
@@ -99,4 +99,60 @@ When /^I navigate to the shared version of my project$/ do
     And I wait to see a dialog titled "Share your project"
     And I navigate to the share URL
   }
+end
+
+Then(/^the palette has (\d+) blocks$/) do |numBlocks|
+  @browser.execute_script("return $('.droplet-palette-scroller-stuffing > .droplet-hover-div').length").should eq numBlocks.to_i
+end
+
+Then(/^the droplet code is "([^"]*)"$/) do |code|
+  code.gsub!("\\n", "\n")
+  @browser.execute_script("return Applab.getCode()").should eq code
+end
+
+And /^I append text to droplet "([^"]*)"$/ do |text|
+  script = %Q{
+    var aceEditor = window.__TestInterface.getDroplet().aceEditor;
+    aceEditor.textInput.focus();
+    aceEditor.onTextInput("#{text}");
+  }
+  @browser.execute_script(script)
+end
+
+def set_nth_input(n, value)
+  elements = @browser.find_elements(:css, '#design-properties input')
+  press_keys(elements[n], ":delete")
+  press_keys(elements[n], ":delete")
+  press_keys(elements[n], ":delete")
+  press_keys(elements[n], ":delete")
+  press_keys(elements[n], value)
+end
+
+And /^I set input "([^"]*)" to "([^"]*)"$/ do |type, value|
+  case type
+  when 'xpos'
+    # first key press will just clear the current value
+    set_nth_input(3, value)
+  when 'ypos'
+    set_nth_input(4, value)
+  else
+    raise 'Unknown type'
+  end
+end
+
+And /^I set groupable input "([^"]*)" to "([^"]*)"$/ do |type, value|
+  case type
+  when 'xpos'
+    # first key press will just clear the current value
+    set_nth_input(4, value)
+  when 'ypos'
+    set_nth_input(5, value)
+  else
+    raise 'Unknown type'
+  end
+end
+
+And /^I delete the current design mode element$/ do
+  elements = @browser.find_elements(:css, '#design-properties button')
+  elements[-1].click
 end

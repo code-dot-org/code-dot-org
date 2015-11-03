@@ -2,48 +2,50 @@ name 'ECSPD U4 D 16-17 Intro'
 
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## Unit 4 Day 16-17: 
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-First, let's explore the first lesson in the curriculum. To begin, find your ECS your curriculum and open to page ???.
+## Day 16-17 Scratch -- AND OR and Randomness
 
-<a href="LINK" target="_blank">Access a Digital Copy of the Lesson >></a>
+First, let's explore the tenth lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 167-169.
 
+[Access a Digital Copy of the lesson>>](http://code.org/ecs#page=167)
 
 #### Key Concepts
 
-1. Key Concept (<i>example</i>)
-
-1. Key Concept 2 (<i>example</i>)
+- Students will use conditionals with the "and" block, "or" block and "pick random\_to\_" block to write a grade program and a dice program.
 
 #### Common Difficulties
 
-Explain common difficulties
-
-#### PD Outline
-
-The following outline lists the topics covered on each level of this stage. <i>This online PD is intended to be a companion to the ECS curriculum. Have your book open as you go through the levels of this stage.</i>
-
-1. Overview
-
-1. Companion Media Resource
-
-1. Suggested Assessment
-
-1. Additional Resources
-
-1. Teaching Strategies
-
-1. Forum
-
->**Note:** This activity was led by one of your facilitators on the first day of the workshop, but it was not planned by one of the participant teaching groups. 
+This lesson introduces the "and" block,  "or" block and "random" block. It might be helpful to do an unplugged activity to help students grasp the concept of And/Or.  Truth tables can also be a helpful way to teach more complicated conditionals.
 
 #### All Resources for This Lesson
 
-* <a href="LINK" target="_blank">NAME</a>
+**Teacher Supports:**
 
+- [U4 Day 16-17 Lesson](http://code.org/ecs#page=167)
+- [U4 Day 16-17 Resource Folder](https://drive.google.com/a/nicolescourse.com/folderview?id=0B2UNlnU_5Vg4fmpDLXpDQ3hEbFNPZ2NnWDh0OG9TZ2tnVXF1UkxYWDBSSWxYemNBenk2cGs&usp=drive_web&tid=0B2UNlnU_5Vg4fmFpUGlWakFZYW95Rzh3aGd6akJiWS0zUS1XR1dIcXVFM3hPSUNyNC1XRzQ)
+- [U4 Day 16-17 General Q and A Forum](http://forum.code.org/t/u4-day-16-17-general-q-a/1879)
+- [U4 Day 16-17 PD Discussion Topic Forum](http://forum.code.org/t/u4-day-16-17-pd-discussion-topic/1898)
+- [U4 Day 16-17 Lesson Resources Forum](http://forum.code.org/t/u4-day-16-17-lesson-resources/1853)
+- [U4 Day 16-17 Assessment Forum](http://forum.code.org/t/u4-day-16-17-assessment/1868)
 
-Let's examine some important sections of this lesson. To get started, click "Continue" below. 
+**Supplies:**
 
+- [Grades Project](http://code.org/ecs#page169)
+- [grades solution.sb](http://www.exploringcs.org/curriculum)
+- [dice.sb](http://www.exploringcs.org/curriculum)
+- [dice solution.sb](http://www.exploringcs.org/curriculum)
+- A pair of dice (for randomness activity)
+- [http://scratch.mit.edu](http://scratch.mit.edu/)
+
+#### PD Discussion Forum
+
+No specific discussion prompt for today, but head to the forum and discuss anything relevant to this PD that you like.
+
+[<button>Discuss in the forum >></button>](http://forum.code.org/t/u4-day-16-17-pd-discussion-topic/1898)
+<br><br>
+After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
+<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
 MARKDOWN

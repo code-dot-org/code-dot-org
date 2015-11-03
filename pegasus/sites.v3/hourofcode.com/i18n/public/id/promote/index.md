@@ -6,10 +6,12 @@ nav: promote_nav
 
 ---
 
-<% facebook = {:u=>"http://#{request.host}/us"}
+<%
+  facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
+  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+%>
 
 # Bagaimana cara untuk terlibat
 
@@ -28,7 +30,7 @@ Beritahukan teman mengenai **#HourOfCode**!
 
 ## 3. Minta seluruh isi sekolah untuk mengikuti Hour of Code
 
-[Kirim email ini](<%= resolve_url('/promote/resources#sample-emails') %>) kepada kepala sekolah dan tantang setiap kelas di sekolah Anda untuk mendaftar. < % jika @country == 'us' %> Salah satu sekolah yang beruntung di *setiap* negara Amerika (dan Washington Dc) akan memenangkan teknolgi senilai $10,000. [Daftar di sini](<%= resolve_url('/prizes/hardware-signup') %>) untuk menjadi layak dan [**lihat pemenang tahun lalu**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Kirim email ini](<%= resolve_url('/promote/resources#sample-emails') %>) kepada kepala sekolah dan tantang setiap kelas di sekolah Anda untuk mendaftar. <% if @country == 'us' %> Salah satu sekolah yang beruntung di *setiap* negara Amerika (dan Washington Dc) akan memenangkan teknolgi senilai $10,000. [Daftar di sini](<%= resolve_url('/prizes/hardware-signup') %>) untuk menjadi layak dan [**lihat pemenang tahun lalu**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
 
 ## Tanyakan pada bos anda untuk ikut terlibat
 

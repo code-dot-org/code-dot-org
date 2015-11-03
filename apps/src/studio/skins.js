@@ -16,6 +16,138 @@ var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 
+function loadIceAge(skin, assetUrl) {
+  skin.defaultBackground = 'icy';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'ia_projectile_1',
+    'ia_projectile_2',
+    'ia_projectile_3',
+    'ia_projectile_4',
+    'ia_projectile_5',
+  ];
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_ia_projectile_1',
+    'item_ia_projectile_2',
+    'item_ia_projectile_3',
+    'item_ia_projectile_4',
+    'item_ia_projectile_5',
+  ];
+
+  // Images
+  skin.ia_projectile_1 = skin.assetUrl('ia_projectile_1.png');
+  skin.ia_projectile_2 = skin.assetUrl('ia_projectile_2.png');
+  skin.ia_projectile_3 = skin.assetUrl('ia_projectile_3.png');
+  skin.ia_projectile_4 = skin.assetUrl('ia_projectile_4.png');
+  skin.ia_projectile_5 = skin.assetUrl('ia_projectile_5.png');
+
+  // TODO: proper item class names
+  skin.item_ia_projectile_1 = skin.assetUrl('ia_projectile_1.png');
+  skin.item_ia_projectile_2 = skin.assetUrl('ia_projectile_2.png');
+  skin.item_ia_projectile_3 = skin.assetUrl('ia_projectile_3.png');
+  skin.item_ia_projectile_4 = skin.assetUrl('ia_projectile_4.png');
+  skin.item_ia_projectile_5 = skin.assetUrl('ia_projectile_5.png');
+
+  skin.explosion = skin.assetUrl('explosion.png');
+  skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
+  skin.explosionFrames = 17;
+  skin.fadeExplosion = false;
+  skin.timePerExplosionFrame = 40;
+
+  skin.grassy = {
+    background: skin.assetUrl('background.jpg'),
+  };
+  skin.tile = {
+    background: skin.assetUrl('background_tile.jpg'),
+  };
+  skin.leafy = {
+    background: skin.assetUrl('background_leafy.jpg'),
+  };
+  skin.icy = {
+    background: skin.assetUrl('background_icy.jpg'),
+  };
+  skin.flower = {
+    background: skin.assetUrl('background_flower.jpg'),
+  };
+
+  skin.avatarList = ["manny", "sid", "scrat", "diego", "granny"];
+
+  /**
+   * Sprite thumbs generated with:
+   * `brew install graphicsmagick`
+   * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
+   */
+  skin.avatarList.forEach(function (name) {
+    skin[name] = {
+      sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 19,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: 12,
+        emotionCycles: 0,
+        extraEmotions: 3
+      },
+      timePerFrame: 100
+    };
+  });
+
+
+  skin.backgroundChoices = [
+    [msg.setBackgroundRandom(), RANDOM_VALUE],
+    [msg.setBackgroundGrassy(), '"grassy"'],
+    [msg.setBackgroundTile(), '"tile"'],
+    [msg.setBackgroundLeafy(), '"leafy"'],
+    [msg.setBackgroundIcy(), '"icy"'],
+    [msg.setBackgroundFlower(), '"flower"']];
+
+  // NOTE: background names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.backgroundChoicesK1 = [
+    [skin.grassy.background, '"grassy"'],
+    [skin.tile.background, '"tile"'],
+    [skin.leafy.background, '"leafy"'],
+    [skin.icy.background, '"icy"'],
+    [skin.flower.background, '"flower"'],
+    [skin.randomPurpleIcon, RANDOM_VALUE]];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteManny(), '"manny"'],
+    [msg.setSpriteSid(), '"sid"'],
+    [msg.setSpriteScrat(), '"scrat"'],
+    [msg.setSpriteDiego(), '"diego"'],
+    [msg.setSpriteGranny(), '"granny"']];
+
+  skin.projectileChoices = [
+    [msg.projectileIAProjectile1(), '"ia_projectile_1"'],
+    [msg.projectileIAProjectile2(), '"ia_projectile_2"'],
+    [msg.projectileIAProjectile3(), '"ia_projectile_3"'],
+    [msg.projectileIAProjectile4(), '"ia_projectile_4"'],
+    [msg.projectileIAProjectile5(), '"ia_projectile_5"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  // NOTE: item names must have double quotes inside single quotes
+  // NOTE: last item must be RANDOM_VALUE
+  skin.itemChoices = [
+    [msg.itemIAProjectile1(), '"item_ia_projectile_1"'],
+    [msg.itemIAProjectile2(), '"item_ia_projectile_2"'],
+    [msg.itemIAProjectile3(), '"item_ia_projectile_3"'],
+    [msg.itemIAProjectile4(), '"item_ia_projectile_4"'],
+    [msg.itemIAProjectile5(), '"item_ia_projectile_5"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
+}
+
 function loadInfinity(skin, assetUrl) {
   skin.preloadAssets = true;
 
@@ -193,6 +325,8 @@ function loadInfinity(skin, assetUrl) {
 function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
+  skin.hideIconInClearPuzzle = true;
+
   skin.defaultBackground = 'forest';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
@@ -248,11 +382,11 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.specialItemProperties = {
     'pufferpig':       { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
-    'stormtrooper':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
+    'stormtrooper':    { frames: 12, width: 100, height: 100, scale: 1.1, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
     'tauntaun':        { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'mynock':          { frames:  8, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'probot': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'mousedroid':      { frames:  1, width: 100, height: 100, scale: 0.6, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'mynock':          { frames:  8, width: 100, height: 100, scale: 0.9, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'probot':          { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'mousedroid':      { frames:  1, width: 100, height: 100, scale: 0.5, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
     'rebelpilot':      { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
   };
 
@@ -261,6 +395,10 @@ function loadHoc2015(skin, assetUrl) {
 
   // Spritesheet for animated goal.
   skin.animatedGoal = skin.assetUrl('goal_idle.png');
+
+  // Dimensions of the goal sprite.
+  skin.goalSpriteWidth = 100;
+  skin.goalSpriteHeight = 100;
 
   // How many frames in the animated goal spritesheet.
   skin.animatedGoalFrames = 16;
@@ -329,12 +467,12 @@ function loadHoc2015(skin, assetUrl) {
   });
 
   skin['r2-d2'].movementAudio = [
-    { begin: 'r2-d2_move1_start', loop: 'r2-d2_move1_loop', end: 'r2-d2_move1_end' },
-    { begin: 'r2-d2_move2_start', loop: 'r2-d2_move2_loop', end: 'r2-d2_move2_end' },
-    { begin: 'r2-d2_move3_start', loop: 'r2-d2_move3_loop', end: 'r2-d2_move3_end' }
+    { begin: 'r2-d2_move1_start', loop: 'r2-d2_move1_loop', end: 'r2-d2_move1_end', volume: 2.2 },
+    { begin: 'r2-d2_move2_start', loop: 'r2-d2_move2_loop', end: 'r2-d2_move2_end', volume: 2.2 },
+    { begin: 'r2-d2_move3_start', loop: 'r2-d2_move3_loop', end: 'r2-d2_move3_end', volume: 2.2 }
   ];
   skin['c-3po'].movementAudio = [
-    { loop: 'c-3po_move_loop', end: 'c-3po_move_end' }
+    { loop: 'c-3po_move_loop', end: 'c-3po_move_end', volume: 0.8 }
   ];
 
   skin.preventProjectileLoop = function (className) {
@@ -364,7 +502,8 @@ function loadHoc2015(skin, assetUrl) {
     jumboTilesAddOffset: -5,
     jumboTilesSize: 60,
     jumboTilesRows: 4,
-    jumboTilesCols: 4
+    jumboTilesCols: 4,
+    clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
   };
   skin.snow = {
     background: skin.assetUrl('background_background2.jpg'),
@@ -373,7 +512,8 @@ function loadHoc2015(skin, assetUrl) {
     jumboTilesAddOffset: -5,
     jumboTilesSize: 60,
     jumboTilesRows: 4,
-    jumboTilesCols: 4
+    jumboTilesCols: 4,
+    clouds: [skin.assetUrl('cloud_dark.png'), skin.assetUrl('cloud_dark2.png')]
   };
   skin.ship = {
     background: skin.assetUrl('background_background3.jpg'),
@@ -404,74 +544,74 @@ function loadHoc2015(skin, assetUrl) {
     }
   };
 
-  skin.blank = 
-    [[0,  0,  0,  0,  0,  0,  0,  0], 
-     [0,  0,  0,  0,  0,  0,  0,  0], 
-     [0,  0,  0,  0,  0,  0,  0,  0], 
-     [0,  0,  0,  0,  0,  0,  0,  0],  
-     [0,  0,  0,  0,  0,  0,  0,  0], 
-     [0,  0,  0,  0,  0,  0,  0,  0],   
-     [0,  0,  0,  0,  0,  0,  0,  0],  
+  skin.blank =
+    [[0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
+     [0,  0,  0,  0,  0,  0,  0,  0],
      [0,  0,  0,  0,  0,  0,  0,  0]];
 
-  skin.circle_nonjumbo = 
-    [[0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00], 
-     [0x00, 0x11, 0x02, 0x03,  0x00,  0x44, 0x45, 0x00], 
-     [0x00, 0x04, 0x00, 0x00,  0x00,  0x00, 0x03, 0x00], 
+  skin.circle_nonjumbo =
+    [[0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00],
+     [0x00, 0x11, 0x02, 0x03,  0x00,  0x44, 0x45, 0x00],
+     [0x00, 0x04, 0x00, 0x00,  0x00,  0x00, 0x03, 0x00],
      [0x00, 0x14, 0x00, 0x121, 0x121, 0x00, 0x05, 0x00],
-     [0x00, 0x02, 0x00, 0x121, 0x121, 0x00, 0x15, 0x00], 
-     [0x00, 0x03, 0x00, 0x00,  0x00,  0x00, 0x02, 0x00], 
-     [0x00, 0x24, 0x25, 0x02,  0x00,  0x34, 0x35, 0x00], 
+     [0x00, 0x02, 0x00, 0x121, 0x121, 0x00, 0x15, 0x00],
+     [0x00, 0x03, 0x00, 0x00,  0x00,  0x00, 0x02, 0x00],
+     [0x00, 0x24, 0x25, 0x02,  0x00,  0x34, 0x35, 0x00],
      [0x00, 0x00, 0x00, 0x00,  0x00,  0x00, 0x00, 0x00]];
 
-  skin.circle = 
-    [[0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
-     [0x00, 0x200, 0x213, 0x213, 0x00,  0x213, 0x201, 0x00], 
-     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00], 
+  skin.circle =
+    [[0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
+     [0x00, 0x200, 0x213, 0x213, 0x00,  0x213, 0x201, 0x00],
+     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00],
      [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00],
-     [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00], 
-     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00], 
-     [0x00, 0x202, 0x213, 0x213, 0x00,  0x213, 0x203, 0x00], 
+     [0x00, 0x212, 0x00,  0x121, 0x121, 0x00,  0x212, 0x00],
+     [0x00, 0x212, 0x00,  0x00,  0x00,  0x00,  0x212, 0x00],
+     [0x00, 0x202, 0x213, 0x213, 0x00,  0x213, 0x203, 0x00],
      [0x00, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00]];
 
-  skin.horizontal_nonjumbo = 
-    [[0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
-     [0, 0x02, 0x03, 0x04, 0x00, 0x24, 0x25, 0x00], 
-     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+  skin.horizontal_nonjumbo =
+    [[0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0, 0x02, 0x03, 0x04, 0x00, 0x24, 0x25, 0x00],
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0, 0x10, 0x00, 0x34, 0x35, 0x20, 0x23, 0x00],
-     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
-     [0, 0x03, 0x02, 0x22, 0x20, 0x21, 0x00, 0x00], 
-     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0, 0x03, 0x02, 0x22, 0x20, 0x21, 0x00, 0x00],
+     [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]];
 
-  skin.horizontal = 
-    [[0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
-     [0, 0x213, 0x213, 0x213, 0x00,  0x213, 0x213, 0x00], 
-     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+  skin.horizontal =
+    [[0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
+     [0, 0x213, 0x213, 0x213, 0x00,  0x213, 0x213, 0x00],
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
      [0, 0x10,  0x00,  0x213, 0x213, 0x213, 0x213, 0x00],
-     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
-     [0, 0x213, 0x213, 0x213, 0x213, 0x213, 0x00,  0x00], 
-     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00], 
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
+     [0, 0x213, 0x213, 0x213, 0x213, 0x213, 0x00,  0x00],
+     [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
      [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00]];
 
-  skin.grid = 
-    [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
-     [0x00, 0x21, 0x00, 0x10, 0x00, 0x20, 0x00, 0x03], 
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+  skin.grid =
+    [[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+     [0x00, 0x21, 0x00, 0x10, 0x00, 0x20, 0x00, 0x03],
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0x00, 0x02, 0x00, 0x11, 0x00, 0x21, 0x00, 0x02],
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0x00, 0x03, 0x00, 0x20, 0x00, 0x22, 0x00, 0x11],
-     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00], 
+     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0x00, 0x10, 0x00, 0x21, 0x00, 0x23, 0x00, 0x10]];
 
-  skin.blobs = 
-    [[0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00], 
-     [0x00, 0x103, 0x103, 0x00,  0x00, 0x00,  0x22,  0x00], 
-     [0x00, 0x103, 0x103, 0x00,  0x00, 0x110, 0x110, 0x00], 
-     [0x00, 0x00,  0x00,  0x00,  0x00, 0x110, 0x110, 0x00],  
-     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x00], 
-     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x23],   
-     [0x00, 0x00,  0x03,  0x00,  0x00, 0x00,  0x121, 0x121],  
+  skin.blobs =
+    [[0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x00,  0x00],
+     [0x00, 0x103, 0x103, 0x00,  0x00, 0x00,  0x22,  0x00],
+     [0x00, 0x103, 0x103, 0x00,  0x00, 0x110, 0x110, 0x00],
+     [0x00, 0x00,  0x00,  0x00,  0x00, 0x110, 0x110, 0x00],
+     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x00],
+     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x23],
+     [0x00, 0x00,  0x03,  0x00,  0x00, 0x00,  0x121, 0x121],
      [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x121, 0x121]];
 
   // Sounds.
@@ -491,7 +631,7 @@ function loadHoc2015(skin, assetUrl) {
     'move1', 'move2', 'move3'
   ];
 
-  skin.music = [ 'song1' ];
+  skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
@@ -549,6 +689,8 @@ function loadHoc2015(skin, assetUrl) {
 function loadHoc2015x(skin, assetUrl) {
   skin.preloadAssets = true;
 
+  skin.hideIconInClearPuzzle = true;
+
   skin.defaultBackground = 'main';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
@@ -569,15 +711,22 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'hazard': { frames: 13, animationRate: 5, width: 100, height: 100, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
+    'hazard': { frames: 13, animationRate: 5, width: 100, height: 100, scale: 1.3, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
   };
 
   // Spritesheet for animated goal.
   skin.goal1 = skin.assetUrl('goal1.png');
   skin.goal2 = skin.assetUrl('goal2.png');
 
+  // Dimensions of the goal sprite.
+  skin.goalSpriteWidth = 50;
+  skin.goalSpriteHeight = 50;
+
   // How many frames in the animated goal spritesheet.
   skin.animatedGoalFrames = 16;
+
+  // Special effect applied to goal sprites
+  skin.goalEffect = 'glow';
 
   // How long to show each frame of the optional goal animation.
   skin.timePerGoalAnimationFrame = 100;
@@ -660,7 +809,8 @@ function loadHoc2015x(skin, assetUrl) {
 
   skin.main = {
     background: skin.assetUrl('background_background1.jpg'),
-    tiles: skin.assetUrl('tiles_background1.png')
+    tiles: skin.assetUrl('tiles_background1.png'),
+    clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
   };
 
   // It's possible to enlarge the rendering of some wall tiles so that they
@@ -675,7 +825,7 @@ function loadHoc2015x(skin, assetUrl) {
     'move1', 'move2', 'move3', 'move4'
   ];
 
-  skin.music = [ 'song1' ];
+  skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
   // Normally the sound isn't played for the final goal, but this forces it
   // to be played.
@@ -707,6 +857,29 @@ function loadHoc2015x(skin, assetUrl) {
   skin.itemChoices = [
     ];
 }
+
+/**
+ * Music tracks and associated metadata for both hoc2015 and hoc2015x tutorials.
+ * Individual levels don't load all of these, only the subset they request.
+ * @const {MusicTrackDefinition[]}
+ */
+var HOC2015_MUSIC_METADATA = [
+  { name: 'song1' },
+  { name: 'song2' },
+  { name: 'song3' },
+  { name: 'song4', volume: 0.85 },
+  { name: 'song5' },
+  { name: 'song6' },
+  { name: 'song7' },
+  { name: 'song8', volume: 0.85 },
+  { name: 'song9', volume: 0.85 },
+  { name: 'song10' },
+  { name: 'song11', volume: 0.85 },
+  { name: 'song12', volume: 0.85 },
+  { name: 'song13' },
+  { name: 'song14' },
+  { name: 'song15' }
+];
 
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
@@ -953,6 +1126,9 @@ exports.load = function(assetUrl, id) {
 
   // take care of items specific to skins
   switch (skin.id) {
+    case 'iceage':
+      loadIceAge(skin, assetUrl);
+      break;
     case 'infinity':
       loadInfinity(skin, assetUrl);
       break;

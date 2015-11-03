@@ -18,7 +18,7 @@ nav: how_to_nav
 ## 2) Priviți acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Alegeti un tutorial:
 
-Vom găzdui o varietate de tutoriale[distractive, de o ora,](<%= resolve_url('https://code.org/learn') %>) pentru participanţii la toate vârstele, create de o varietate de parteneri. *Tutoriale noi vin să faca din evenimentul Hour of Code 2015 un succes! < % = campaign_date('full') % >.* [Încercaţi tutoriale curente.](<%= resolve_url("https://code.org/learn") %>)
+Vom găzdui o varietate de tutoriale[distractive, de o ora,](<%= resolve_url('https://code.org/learn') %>) pentru participanţii la toate vârstele, create de o varietate de parteneri. *Tutoriale noi vin să faca din evenimentul Hour of Code 2015 un succes! <%= campaign_date('full') %>.* [Încercaţi tutoriale curente.](<%= resolve_url("https://code.org/learn") %>)
 
 **Toate tutorialele Hour of Code:**
 
@@ -53,7 +53,7 @@ Puteti spori succesul evenimentului tau Hour of Code inspirandu-i pe participant
 
   * Explicati-le modurile in care tehnologia are impact asupra vietii noatre, cu exemple de care atat fetele cat si baietii le pot intelege (discutati despre aplicatii si tehnologii care sunt folosite pentru a salva vieti, pentru a ajuta sau conecta oameni, etc.).
   * Faceti o lista cu toate lucrurile ce necesita programare din viata de zi cu zi.
-  * Vezi tips-uri pentru a le starni fetelor interesul in tehnologia computerelor si programare. [aici](<%= resolve_url('https://code.org/girls') %).
+  * Vezi tips-uri pentru a le starni fetelor interesul in tehnologia computerelor si programare. [aici](<%= resolve_url('https://code.org/girls') %>).
 
 **Ai nevoie de mai multe informatii?** Descarca acest[tmodel de plan de lectie](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
