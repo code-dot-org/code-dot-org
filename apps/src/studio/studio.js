@@ -495,20 +495,6 @@ var drawMap = function () {
   titleScreenTextGroup.appendChild(titleScreenTextRect);
   titleScreenTextGroup.appendChild(titleScreenText);
   svg.appendChild(titleScreenTextGroup);
-
-  // Clear rectangle to pick up click events on the visualization
-  var clickRect = document.createElementNS(SVG_NS, 'rect');
-  clickRect.setAttribute('width', Studio.MAZE_WIDTH);
-  clickRect.setAttribute('height', Studio.MAZE_HEIGHT);
-  clickRect.setAttribute('fill-opacity', 0);
-  clickRect.addEventListener('touchstart', function (e) {
-    Studio.onMouseDown(e);
-    e.preventDefault(); // don't want to see mouse down
-  });
-  clickRect.addEventListener('mousedown', function (e) {
-    Studio.onMouseDown(e);
-  });
-  svg.appendChild(clickRect);
 };
 
 function collisionTest(x1, x2, xVariance, y1, y2, yVariance) {
@@ -1530,8 +1516,12 @@ Studio.onSpriteClicked = function(e, spriteIndex) {
 };
 
 Studio.onSvgClicked = function(e) {
-  // If we are "running", check the cmdQueues.
-  if (Studio.tickCount > 0){
+  if (level.tapSvgToRunAndReset && Studio.gameState === Studio.GameStates.WAITING) {
+    Studio.runButtonClick();
+  } else if (level.tapSvgToRunAndReset && Studio.gameState === Studio.GameStates.OVER) {
+    studioApp.resetButtonClick();
+  } else if (Studio.tickCount > 0) {
+    // If we are "running", check the cmdQueues.
     // Check the first command in all of the cmdQueues to see if there is a
     // pending "wait for click" command
     Studio.eventHandlers.forEach(function (handler) {
@@ -3975,18 +3965,6 @@ Studio.endGame = function(opts) {
   }
 
   Studio.gameState = Studio.GameStates.OVER;
-};
-
-Studio.onMouseDown = function (e) {
-  if (Studio.gameState === Studio.GameStates.WAITING) {
-    Studio.runButtonClick();
-  } else if (Studio.gameState === Studio.GameStates.OVER) {
-    // do a reset
-    var resetButton = document.getElementById('resetButton');
-    if (resetButton) {
-      resetButton.click();
-    }
-  }
 };
 
 Studio.setBackground = function (opts) {
