@@ -9,9 +9,9 @@ markdown <<MARKDOWN
 
 #### What’s in Unit 3?
 
-In Unit 3, students move through 5 chunks where they explore and construct an understanding of core programming concepts, then they apply this new knowledge in a culminating practice PT. The core concepts in each chunk of the Unit are: 
+In Unit 3, students move through 5 chunks of lessons where they construct an understanding of core programming concepts and then apply this new knowledge in a culminating practice PT. The core concepts in each chunk of the Unit are: 
 
-- **Chunk 1:** programming primitives, building and using functions, building and using functions with parameters, simple repeat loops, the role of random in programming.
+- **Chunk 1:** programming primitives, building and using functions, building and using functions with parameters, simple repeat loops, the role of random in programming
 - **Chunk 2:** event-driven programming 
 - **Chunk 3:** variables and strings
 - **Chunk 4:** conditionals
@@ -25,7 +25,7 @@ Students will program in AppLab, with a series of prebuilt levels for each lesso
 
 <br><br>
 #### Philosophy of Programming in Unit 3
-The setup of App Lab shown above is very intentional, and it’s part of our philosophy of programming in Unit 3. Since students are just being introduced to programming (in some cases for the first time), we strive to reduce the extraneous cognitive load— or the stuff that could serve as a distraction or make it harder for the learner to access the material that is actually being taught. This is why we scope the toolbox, for example. When students are just getting started with a concept, we don’t want them to have to hunt for the right blocks or to get caught up with the syntax— instead we want them to be able to focus on the primary task of learning the new concept. 
+The setup of App Lab shown above is very intentional, and it’s part of our philosophy of programming in Unit 3. Since students are just being introduced to programming (in some cases for the first time), we strive to reduce the extraneous cognitive load - the stuff that could serve as a distraction or make it harder for the learner to access the material that is actually being taught. This is why we scope the toolbox, for example. When students are just getting started with a concept, we don’t want them to have to hunt for the right blocks or to get caught up with the syntax; instead we want them to be able to focus on the primary task of learning the new concept. 
 <br><br>
 After students have a basic understanding of how the concept works and is implemented, then we shift focus and begin to build open-ended projects that allow them to apply the knowledge in novel contexts. 
 <br><br>
