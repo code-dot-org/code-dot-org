@@ -6,7 +6,7 @@ subject: What you need to know to volunteer
 You’re signed up to volunteer for the Hour of Code. What should you do now? Join an upcoming info session to learn everything you need to know to volunteer.
 
 **Date:** Monday, Nov. 16 <br/>
-**Time:** 1:00 – 1:30pm PST <br/>
+**Time:** 1:00pm – 1:30pm PST <br/>
 [Join here](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0)
 
 **Date:** Thursday, Dec. 3 <br/>
@@ -20,7 +20,7 @@ You’re signed up to volunteer for the Hour of Code. What should you do now? Jo
 - What to do during your classroom visit, step-by-step.
 - How to help further by engaging your company or friends.
 
-Follow the above links when the info sessions begin to watch live and ask your questions. Anyone can join, but you’ll need to be logged in to a Google account to post questions through Google Hangouts on Air.
+Join the live info sessions with the above links and ask your questions. Anyone can join, but you’ll need to be logged in to a Google account to post your questions.
 
 In the meantime, review this [how-to guide](https://hourofcode.com/how-to/volunteers). Can’t make the live info session? Watch the recording of the session later at the same links above, or find them on [Code.org’s YouTube channel](https://www.youtube.com/user/CodeOrg) after they air.
 
