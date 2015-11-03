@@ -2684,7 +2684,14 @@ function spriteFrameNumber (index, opts) {
   var elapsed = currentTime - Studio.startTime;
 
   if (opts && opts.walkDirection) {
-    return constants.frameDirTableWalking[sprite.displayDir];
+    var direction = constants.frameDirTableWalking[sprite.displayDir];
+
+    // If there are extra emotions sprites, and the actor is facing forward,
+    // use the emotion sprites (last columns of the walking sprite sheet).
+    if (direction === 0 && sprite.frameCounts.extraEmotions > 0 && sprite.emotion !== 0) {
+      return sprite.frameCounts.turns + sprite.emotion - 1;
+    }
+    return direction;
   }
   else if (opts && opts.walkFrame && sprite.timePerFrame) {
     return Math.floor(elapsed / sprite.timePerFrame) % sprite.frameCounts.walk;
@@ -2721,6 +2728,7 @@ function spriteFrameNumber (index, opts) {
     frameNum = sprite.frameCounts.normal + sprite.frameCounts.animation +
       sprite.frameCounts.turns + (sprite.emotion - 1);
   }
+
   return frameNum;
 }
 
@@ -3062,7 +3070,14 @@ Studio.displaySprite = function(i, isWalking) {
     spriteWalkIcon.setAttribute('visibility', 'hidden');
 
     xOffset = sprite.drawWidth * spriteFrameNumber(i);
-    yOffset = 0;
+
+    // For new versions of sprites (iceage/gumball), there are additional rows of
+    // idle animations for each emotion.
+    if (sprite.frameCounts.extraEmotions > 0) {
+      yOffset = sprite.drawHeight * sprite.emotion;
+    } else {
+      yOffset = 0;
+    }
 
     spriteIcon = spriteRegularIcon;
     spriteClipRect = document.getElementById('spriteClipRect' + i);
@@ -8013,7 +8028,7 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
   toolbox:
     tb(
       blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
-      blockOfType('studio_setBackground', {VALUE: '"ice"'}) +
+      blockOfType('studio_setBackground', {VALUE: '"icy"'}) +
       blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
       blockOfType('studio_saySprite') +
       blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
