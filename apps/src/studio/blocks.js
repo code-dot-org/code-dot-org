@@ -306,7 +306,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.studio_whenSpriteClicked = generator.studio_eventHandlerPrologue;
 
   blockly.Blocks.studio_whenTouchCharacter = {
-    // Block to handle event when sprite touches item.
+    // Block to handle event when sprite touches an item.
     helpUrl: '',
     init: function() {
       this.setHSV(140, 1.00, 0.74);
@@ -321,7 +321,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.studio_whenTouchCharacter = generator.studio_eventHandlerPrologue;
 
   blockly.Blocks.studio_whenTouchObstacle = {
-    // Block to handle event when sprite touches wall.
+    // Block to handle event when sprite touches a wall.
     helpUrl: '',
     init: function() {
       this.setHSV(140, 1.00, 0.74);
@@ -334,6 +334,21 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.studio_whenTouchObstacle = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenTouchGoal = {
+    // Block to handle event when sprite touches a goal.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.whenTouchGoal());
+      this.setPreviousStatement(false);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenTouchGoalTooltip());
+    }
+  };
+
+  generator.studio_whenTouchGoal = generator.studio_eventHandlerPrologue;
 
   blockly.Blocks.studio_whenSpriteCollided = {
     // Block to handle event when sprite collides with another sprite.
