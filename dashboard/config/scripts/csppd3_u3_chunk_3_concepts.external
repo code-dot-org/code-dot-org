@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 
 In the previous two chunks, students explored functions and event-driven programming. The third chunk picks up after students have created their own games that respond to the mouse, and introduces the concept of **variables** in the form a score tracker in a game. 
 <br><br>
-Variables are one way we control the computer’s memory in a program. They can store different types of data, including numbers (which is what we’ll look at in these early lessons).  In fact, we can do more than just store numbers for later use in the program— we can actually do calculations and use the value stored in a variable to help make decisions!
+Variables are one way we control the computer’s memory in a program. They can store different types of data, including numbers (which is what we’ll look at in these early lessons).  In fact, we can do more than just store numbers for later use - we can actually do calculations and use the value stored in a variable to help make decisions!
 <br><br>
 By introducing variables into an app, we can begin to keep track of how many times a particular action occurs. For example, we could keep track of how many times a button is clicked by setting up a counter variable and increasing the value by one each time the button event handler is run. Students learn here that the value of a variable can change as the game is played, and you can even perform different actions based on the value of the variable. In this lesson we use a **very simple if-statement** to check to see if a particular score threshold has been reached to end the game (for example: you might win the game after accruing 25 points). 
 <br><br>
@@ -26,7 +26,7 @@ In this chunk of lessons students work on two projects— the first one helps in
 
 <img src="https://images.code.org/c0906418ae1dfacbf550c3b901fb794e-image-1446471147148.gif" width=“175px” style="float:right; margin-left:30px">
 <br><br>
-The second App students build in this chunk is focused on teaching how to use strings, which is another type of variable that can be implemented in JavaScript programs. This project is based on Mad Libs, which prompts users to input a word that is a specific part of speech, and puts the user-inputs into a pre-written statement to make a silly phrase. In this project students learn how to concatenate, or join together, two strings. Check out a demo app on the right. 
+The second App students build in this chunk is focused on teaching how to use strings, which is another type of variable that can be implemented in JavaScript programs. This project is based on Mad Libs, which prompts users to input a word that is a specific part of speech, and puts the users' input into a pre-written statement to make a silly phrase. In this project students learn how to concatenate, or join together, two strings. Check out a demo app on the right. 
 <br><br>
 
 ##### Introduction to Variables
@@ -37,7 +37,7 @@ In these two lessons, students learn how to use variables to control the compute
 >**CS Concepts:** What are variables and how are they used? 
 
 >- **Variables** can be used in a program to store information like numeric values 
-- Variables can be used to store the value returned by a function (for example: randomNumber, promptNum), values inputted by the user, specific values set manually the code (for example: x = 5), or the result of an operation carried out in the program (for example x = 5+7) 
+- Variables can be used to store the value returned by a function (for example: randomNumber, promptNum), values inputted by the user, specific values set manually in the code (for example: x = 5), or the result of an operation carried out in the program (for example x = 5+7) 
 - The value stored in a variable can change, or be **reassigned**, as the program runs 
 - The data stored in a variable is available in different parts of the program depending on where the variable is declared (this is called **scope**)
 - In programming a variable is assigned a value using the “**=**“ operator
@@ -52,7 +52,7 @@ In this lesson students develop a program that collects string input from the us
 
 >**CS Concepts:** What are strings and how are they used? 
 
->- **Strings** are a data type made up of sequence of ASCII characters 
+>- **Strings** are a data type made up of a sequence of ASCII characters 
 - Variables can be assigned strings
 - Strings can be **manipulated** in a program to generate **dynamic output**
 

@@ -13,13 +13,13 @@ Unit three kicks off with students learning about the building blocks of program
 <br><br>
 Working with a constrained toolbox of commands motivates students to **write functions of their own** which are constructed by combining a set of actions you want to perform and assigning those actions a name. Students build their own functions because it helps reduce the amount of repeating needed to carry out a task multiple times. For example, if a student wanted to write a program to draw the American Flag, a simple `drawStar` function could be written that draws a single star, and that function could be called 50 times to draw all of the stars on the flag. 
 <br><br>
-Next, students learn about the documentation, or **API** that is used to help a programmer understand what commands can be used in a given programming language. Students check out the App Lab API in order to get a better sense of what other turtle commands are supported. Reading the documentation is generally important because it gives the programmer details about how different commands are supposed to be used. In fact, it’s not important that students memorize all of the commands of a language— there are way too many to remember the specifics of each one off the top of your head. The important thing is that a student know where to look it up! 
+Next, students learn about the documentation, or **API** that is used to help a programmer understand what commands can be used in a given programming language. Students check out the App Lab API in order to get a better sense of what other turtle commands are supported. Reading the documentation is generally important because it gives the programmer details about how different commands are supposed to be used. In fact, it’s not important that students memorize all of the commands of a language - there are way too many to remember the specifics of each one off the top of your head. The important thing is that a student know where to look it up! 
 <br><br>
 Students then learn about **functions with parameters**, which accept input when they are called. Parameters allow us to build functions that are generally useful, with the details passed in when the function is called. For example, a student might want to build a program that draws the Chinese Flag, which has stars of two different sizes. Rather than building two different star functions(`drawBigStar()` and `drawSmallStar()`), a general `drawStar(size)` function could be written that take a `size` parameter when it’s called. 
 <br><br>
-Next, students learn about simple **repeat loops** and random numbers in order to build programs that produce different output each time they’re run. Note that in these lessons, students won’t learn the specifics of how a loop works, instead they’ll just use an abstracted loop which only has one input— the number of times the loop repeats. This repeat loop along with a random number is a great way to experiment with programs that produce different outcomes each time they’re run. 
+Next, students learn about simple **repeat loops** and random numbers in order to build programs that produce different output each time they’re run. Note that in these lessons, students won’t learn the specifics of how a loop works; instead, they’ll just use an abstracted loop which only has one input - the number of times the loop repeats. This repeat loop along with a random number is a great way to experiment with programs that produce different outcomes each time they’re run. 
 <br><br>
-The chunk ends with a practice performance task, where students apply their knowledge, creating their own functions, looping, and random in order to create a programmatically drawn digital scene.
+The chunk ends with a practice performance task, in which students apply their knowledge to create their own functions, loops, and random numbers in order to create a programmatically drawn digital scene.
 <br><br>
 
 #### What it looks like
@@ -47,7 +47,7 @@ Students begin programming with simple primitive commands, which move a “turtl
 - There are often many approaches to solving to a programming challenge, but programmers usually try to think about how to solve problems **efficiently**.
 
 ##### Using and Making Functions with Parameters
-Now that students have a sense of why it's useful to create their own functions, they move one step further and build functions that are more generally useful and accept parameters. For example: App Lab has a built-in function called `moveForward(distance)`, which lets us move the turtle any distance-- moveForward(5) and moveForward(500) both use the same function, but move the turtle 5 steps and 500 steps, respectively. 
+Now that students have a sense of why it's useful to create their own functions, they move one step further and build functions that are more generally useful and accept parameters. For example: App Lab has a built-in function called `moveForward(distance)`, which lets us move the turtle any distance - moveForward(5) and moveForward(500) both use the same function, but move the turtle 5 steps and 500 steps, respectively. 
 
 <br><br>
 >**CS Concepts:** 
@@ -59,7 +59,7 @@ Now that students have a sense of why it's useful to create their own functions,
 <br>
 <img src="https://images.code.org/1968b12a0e767a2b5d4834a0441001f7-image-1446476221350.55.54 PM.png" width=“100” style="float:right; margin-left:10px">
 ##### Altering Program Outcome with Random
-Students use loops and the built-in random number function to draw a random number of things that are randomly different sizes. These tools are applied to build a digital drawing that looks slightly different every time the program is run, because placement of items is randomly assigned based on the number that is generated. 
+Students use loops and the built-in random number function to draw a random number of things of a random size. These tools are applied to build a digital drawing that looks slightly different every time the program is run, because placement of items is randomly assigned based on the number that is generated. 
 
 
 <br><br>
