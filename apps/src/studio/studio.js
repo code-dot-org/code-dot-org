@@ -417,6 +417,10 @@ var drawMap = function () {
   }
   svg.appendChild(cloudGroup);
 
+  var gameTextGroup = document.createElementNS(SVG_NS, 'g');
+  gameTextGroup.setAttribute('id', 'gameTextGroup');
+  svg.appendChild(gameTextGroup);
+
   var score = document.createElementNS(SVG_NS, 'text');
   score.setAttribute('id', 'score');
   score.setAttribute('class', 'studio-score');
@@ -424,7 +428,7 @@ var drawMap = function () {
   score.setAttribute('y', SCORE_TEXT_Y_POSITION);
   score.appendChild(document.createTextNode(''));
   score.setAttribute('visibility', 'hidden');
-  svg.appendChild(score);
+  gameTextGroup.appendChild(score);
 
   var victoryText = document.createElementNS(SVG_NS, 'text');
   victoryText.setAttribute('id', 'victoryText');
@@ -433,7 +437,7 @@ var drawMap = function () {
   victoryText.setAttribute('y', VICTORY_TEXT_Y_POSITION);
   victoryText.appendChild(document.createTextNode(''));
   victoryText.setAttribute('visibility', 'hidden');
-  svg.appendChild(victoryText);
+  gameTextGroup.appendChild(victoryText);
 
   var resetText = document.createElementNS(SVG_NS, 'text');
   resetText.setAttribute('id', 'resetText');
@@ -442,7 +446,7 @@ var drawMap = function () {
   resetText.setAttribute('y', RESET_TEXT_Y_POSITION);
   resetText.appendChild(document.createTextNode(''));
   resetText.setAttribute('visibility', 'hidden');
-  svg.appendChild(resetText);
+  gameTextGroup.appendChild(resetText);
 
   if (level.floatingScore) {
     var floatingScore = document.createElementNS(SVG_NS, 'text');
