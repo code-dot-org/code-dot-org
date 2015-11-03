@@ -74,7 +74,8 @@ Here is a breakdown of the meaning the individual statements of a `for` loop:
 - <a href="http://www.w3schools.com/js/js_loop_for.asp" target=_blank>JavaScript For Loop- W3Schools</a>
 - <a href="http://www.w3schools.com/js/js_arrays.asp" target=_blank>JavaScript Arrays- W3Schools</a>
 - <a href="https://en.wikipedia.org/wiki/Array_data_type" target=_blank>Array data type- Wikipedia</a>
-- <a href="https://youtu.be/MAukAy9m9Sg" target=_blank>Video: For Loop- (Code Studio video from other courses)</a> Note that these videos reference the block-only environment used by our Intro to Computer Science courses intended for younger students, but still describe the basic concept of a loop, which is shared across all programming languages. 
+- <a href ="https://youtu.be/G8hfAk4PfOM" target=_blank>Video: For Loops in App Lab (from the curriculum)</a>
+
 
 #### Image Data in Arrays
 
