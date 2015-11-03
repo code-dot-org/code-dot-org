@@ -169,9 +169,9 @@ var SPEECH_BUBBLE_WIDTH = 180;
 var SPEECH_BUBBLE_HEIGHT = 20 +
       (SPEECH_BUBBLE_MAX_LINES * SPEECH_BUBBLE_LINE_HEIGHT);
 
-var SCORE_TEXT_Y_POSITION = 60; // bottom of text
-var VICTORY_TEXT_Y_POSITION = 90;
-var RESET_TEXT_Y_POSITION = 350;
+var SCORE_TEXT_Y_POSITION = 30; // bottom of text
+var VICTORY_TEXT_Y_POSITION = 130;
+var RESET_TEXT_Y_POSITION = 380;
 
 var MIN_TIME_BETWEEN_PROJECTILES = 500; // time in ms
 
@@ -444,8 +444,8 @@ var drawMap = function () {
   resetText.setAttribute('class', 'studio-reset-text');
   resetText.setAttribute('x', Studio.MAZE_WIDTH / 2);
   resetText.setAttribute('y', RESET_TEXT_Y_POSITION);
-  resetText.appendChild(document.createTextNode(''));
-  resetText.setAttribute('visibility', 'hidden');
+  resetText.appendChild(document.createTextNode(studioMsg.tapOrClickToReset()));
+  resetText.setAttribute('visibility', 'visible');
   gameTextGroup.appendChild(resetText);
 
   if (level.floatingScore) {
@@ -1963,8 +1963,13 @@ Studio.reset = function(first) {
     .setAttribute('visibility', 'hidden');
   document.getElementById('victoryText')
     .setAttribute('visibility', 'hidden');
-  document.getElementById('resetText')
-    .setAttribute('visibility', 'hidden');
+  var resetText = document.getElementById('resetText');
+  if (level.tapSvgToRunAndReset) {
+    resetText.textContent = studioMsg.tapOrClickToPlay();
+    resetText.setAttribute('visibility', 'visible');
+  } else {
+    resetText.setAttribute('visibility', 'hidden');
+  }
   if (level.floatingScore) {
     document.getElementById('floatingScore')
       .setAttribute('visibility', 'hidden');
@@ -2603,6 +2608,9 @@ Studio.execute = function() {
     // Set event handlers and start the onTick timer
     Studio.eventHandlers = handlers;
   }
+
+  var resetText = document.getElementById('resetText');
+  resetText.setAttribute('visibility', 'hidden');
 
   Studio.perExecutionTimeouts = [];
   Studio.tickIntervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
