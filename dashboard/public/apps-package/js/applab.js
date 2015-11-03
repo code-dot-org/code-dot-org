@@ -2423,22 +2423,6 @@ module.exports = React.createClass({displayName: "exports",
 });
 
 
-},{}],"/home/ubuntu/staging/apps/build/js/sharedJsxStyles.js":[function(require,module,exports){
-/**
- * A place to share styles for use in inline jsx. There may be value in keeping
- * this in sync with some of our .scss files, in particular when it comes to
- * colors
- */
-
-module.exports = {
-  colors: {
-    green: '#b9bf15',
-    white: 'white',
-    orange: '#ffa400'
-  }
-};
-
-
 },{}],"/home/ubuntu/staging/apps/build/js/applab/visualization.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
@@ -3594,8 +3578,8 @@ function makeDraggable (jqueryElements) {
           widthProperty = 'width';
           heightProperty = 'height';
         }
-        designMode.updateProperty(element, widthProperty, element.style.width);
-        designMode.updateProperty(element, heightProperty, element.style.height);
+        designMode.onPropertyChange(element, widthProperty, element.style.width);
+        designMode.onPropertyChange(element, heightProperty, element.style.height);
 
         highlightElement(elm[0]);
       }
@@ -4094,6 +4078,7 @@ var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var applabTurtle = require('./applabTurtle');
 var ChangeEventHandler = require('./ChangeEventHandler');
+var colors = require('../sharedJsxStyles').colors;
 
 var OPTIONAL = true;
 
@@ -4264,8 +4249,8 @@ applabCommands.button = function (opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
-  newButton.style.color = '#fff';
-  newButton.style.backgroundColor = '#1abc9c';
+  newButton.style.color = colors.white;
+  newButton.style.backgroundColor = colors.teal;
 
   return Boolean(newButton.appendChild(textNode) &&
     Applab.activeScreen().appendChild(newButton));
@@ -4832,8 +4817,8 @@ applabCommands.dropdown = function (opts) {
   }
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
-  newSelect.style.color = '#fff';
-  newSelect.style.backgroundColor = '#1abc9c';
+  newSelect.style.color = colors.white;
+  newSelect.style.backgroundColor = colors.teal;
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
@@ -5679,7 +5664,7 @@ var getCurrentLineNumber = function (jsInterpreter) {
 };
 
 
-},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../timeoutList":"/home/ubuntu/staging/apps/build/js/timeoutList.js","./ChangeEventHandler":"/home/ubuntu/staging/apps/build/js/applab/ChangeEventHandler.js","./ChartApi":"/home/ubuntu/staging/apps/build/js/applab/ChartApi.js","./appStorage":"/home/ubuntu/staging/apps/build/js/applab/appStorage.js","./applabTurtle":"/home/ubuntu/staging/apps/build/js/applab/applabTurtle.js","./errorHandler":"/home/ubuntu/staging/apps/build/js/applab/errorHandler.js","./keyEvent":"/home/ubuntu/staging/apps/build/js/applab/keyEvent.js","./rgbcolor.js":"/home/ubuntu/staging/apps/build/js/applab/rgbcolor.js"}],"/home/ubuntu/staging/apps/build/js/applab/rgbcolor.js":[function(require,module,exports){
+},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../sharedJsxStyles":"/home/ubuntu/staging/apps/build/js/sharedJsxStyles.js","../timeoutList":"/home/ubuntu/staging/apps/build/js/timeoutList.js","./ChangeEventHandler":"/home/ubuntu/staging/apps/build/js/applab/ChangeEventHandler.js","./ChartApi":"/home/ubuntu/staging/apps/build/js/applab/ChartApi.js","./appStorage":"/home/ubuntu/staging/apps/build/js/applab/appStorage.js","./applabTurtle":"/home/ubuntu/staging/apps/build/js/applab/applabTurtle.js","./errorHandler":"/home/ubuntu/staging/apps/build/js/applab/errorHandler.js","./keyEvent":"/home/ubuntu/staging/apps/build/js/applab/keyEvent.js","./rgbcolor.js":"/home/ubuntu/staging/apps/build/js/applab/rgbcolor.js"}],"/home/ubuntu/staging/apps/build/js/applab/rgbcolor.js":[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -9230,6 +9215,7 @@ var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
 var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
+var colors = require('../../sharedJsxStyles').colors;
 
 var elementUtils = require('./elementUtils');
 
@@ -9355,8 +9341,8 @@ module.exports = {
     element.style.height = '30px';
     element.style.fontSize = '14px';
     element.style.margin = '0';
-    element.style.color = '#fff';
-    element.style.backgroundColor = '#1abc9c';
+    element.style.color = colors.white;
+    element.style.backgroundColor = colors.teal;
 
     var option1 = document.createElement('option');
     option1.innerHTML = 'Option 1';
@@ -9371,7 +9357,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/BooleanPropertyRow.jsx","./ColorPickerPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ColorPickerPropertyRow.jsx","./EventHeaderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventHeaderRow.jsx","./EventRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventRow.jsx","./OptionsSelectRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/OptionsSelectRow.jsx","./PropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/PropertyRow.jsx","./ZOrderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ZOrderRow.jsx","./elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js"}],"/home/ubuntu/staging/apps/build/js/applab/designElements/OptionsSelectRow.jsx":[function(require,module,exports){
+},{"../../sharedJsxStyles":"/home/ubuntu/staging/apps/build/js/sharedJsxStyles.js","./BooleanPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/BooleanPropertyRow.jsx","./ColorPickerPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ColorPickerPropertyRow.jsx","./EventHeaderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventHeaderRow.jsx","./EventRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventRow.jsx","./OptionsSelectRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/OptionsSelectRow.jsx","./PropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/PropertyRow.jsx","./ZOrderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ZOrderRow.jsx","./elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js"}],"/home/ubuntu/staging/apps/build/js/applab/designElements/OptionsSelectRow.jsx":[function(require,module,exports){
 /* global $ */
 var rowStyle = require('./rowStyle');
 
@@ -9811,6 +9797,7 @@ var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
 var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
+var colors = require('../../sharedJsxStyles').colors;
 
 var elementUtils = require('./elementUtils');
 
@@ -9942,8 +9929,8 @@ module.exports = {
     element.style.height = '30px';
     element.style.width = '80px';
     element.style.fontSize = '14px';
-    element.style.color = '#fff';
-    element.style.backgroundColor = '#1abc9c';
+    element.style.color = colors.white;
+    element.style.backgroundColor = colors.teal;
 
     return element;
   },
@@ -9956,7 +9943,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/BooleanPropertyRow.jsx","./ColorPickerPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ColorPickerPropertyRow.jsx","./EventHeaderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventHeaderRow.jsx","./EventRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventRow.jsx","./ImagePickerPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ImagePickerPropertyRow.jsx","./PropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/PropertyRow.jsx","./ZOrderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ZOrderRow.jsx","./elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js"}],"/home/ubuntu/staging/apps/build/js/applab/designElements/ZOrderRow.jsx":[function(require,module,exports){
+},{"../../sharedJsxStyles":"/home/ubuntu/staging/apps/build/js/sharedJsxStyles.js","./BooleanPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/BooleanPropertyRow.jsx","./ColorPickerPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ColorPickerPropertyRow.jsx","./EventHeaderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventHeaderRow.jsx","./EventRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventRow.jsx","./ImagePickerPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ImagePickerPropertyRow.jsx","./PropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/PropertyRow.jsx","./ZOrderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ZOrderRow.jsx","./elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js"}],"/home/ubuntu/staging/apps/build/js/applab/designElements/ZOrderRow.jsx":[function(require,module,exports){
 var rowStyle = require('./rowStyle');
 
 var ZOrderRow = React.createClass({displayName: "ZOrderRow",
@@ -10846,6 +10833,7 @@ var EventHeaderRow = module.exports = React.createClass({displayName: "exports",
 },{"../locale":"/home/ubuntu/staging/apps/build/js/applab/locale.js","./rowStyle":"/home/ubuntu/staging/apps/build/js/applab/designElements/rowStyle.js"}],"/home/ubuntu/staging/apps/build/js/applab/designElements/ColorPickerPropertyRow.jsx":[function(require,module,exports){
 /* global $ */
 var rowStyle = require('./rowStyle');
+var colors = require('../../sharedJsxStyles').colors;
 
 var colorPicker = require('../colpick');
 
@@ -10900,6 +10888,7 @@ var ColorPickerPropertyRow = React.createClass({displayName: "ColorPickerPropert
       backgroundColor: this.state.value,
       verticalAlign: 'top'
     };
+
     return (
       React.createElement("div", {style: rowStyle.container}, 
         React.createElement("div", {style: rowStyle.description}, this.props.desc), 
@@ -10908,7 +10897,11 @@ var ColorPickerPropertyRow = React.createClass({displayName: "ColorPickerPropert
             value: this.state.value, 
             onChange: this.handleChangeInternal, 
             style: rowStyle.input}), 
-          React.createElement("button", {style: buttonStyle, ref: "colorPicker"})
+          React.createElement("button", {
+            className: this.state.value === '' ? 'rainbow-gradient' : undefined, 
+            style: buttonStyle, 
+            ref: "colorPicker"}
+          )
         )
       )
     );
@@ -10918,7 +10911,24 @@ var ColorPickerPropertyRow = React.createClass({displayName: "ColorPickerPropert
 module.exports = ColorPickerPropertyRow;
 
 
-},{"../colpick":"/home/ubuntu/staging/apps/build/js/applab/colpick.js","./rowStyle":"/home/ubuntu/staging/apps/build/js/applab/designElements/rowStyle.js"}],"/home/ubuntu/staging/apps/build/js/applab/colpick.js":[function(require,module,exports){
+},{"../../sharedJsxStyles":"/home/ubuntu/staging/apps/build/js/sharedJsxStyles.js","../colpick":"/home/ubuntu/staging/apps/build/js/applab/colpick.js","./rowStyle":"/home/ubuntu/staging/apps/build/js/applab/designElements/rowStyle.js"}],"/home/ubuntu/staging/apps/build/js/sharedJsxStyles.js":[function(require,module,exports){
+/**
+ * A place to share styles for use in inline jsx. There may be value in keeping
+ * this in sync with some of our .scss files, in particular when it comes to
+ * colors
+ */
+
+module.exports = {
+  colors: {
+    green: '#b9bf15',
+    white: '#fff',
+    orange: '#ffa400',
+    teal: '#1abc9c'
+  }
+};
+
+
+},{}],"/home/ubuntu/staging/apps/build/js/applab/colpick.js":[function(require,module,exports){
 /*
 colpick Color Picker
 Copyright 2013 Jose Vargas. Licensed under GPL license. Based on Stefan Petre's Color Picker www.eyecon.ro, dual licensed under the MIT and GPL licenses

@@ -27,13 +27,13 @@ In english: “while the coin is flip turns up to heads, continue flipping and r
 ##### External Resources 
 
 - <a href="http://www.w3schools.com/js/js_loop_while.asp" target=_blank>JavaScript While Loop- W3Schools</a>
-- <a href="https://youtu.be/F8H-41bpJ6E" target=_blank>Video: While Loop - (Code Studio video from other courses) </a> Note that this videos reference the block-only environment used by our Intro to Computer Science courses intended for younger students, but still describe the basic concept of a loop, which is shared across all programming languages. 
+- <a href="https://youtu.be/F8H-41bpJ6E" target=_blank>Video: While Loop - (Code Studio video from other courses) </a> Note that this video references the block-only environment used by our Intro to Computer Science courses intended for younger students, but still describes the basic concept of a loop, which is shared across all programming languages. 
   
 #### Introduction to Arrays
 
 ##### Vocabulary
 
-- **Array**: a data type that hold a list of items. An array can be used in a similar way as any other variable, and like the variables we’ve seen already in this unit, it gives us the ability to store information for use in while the program is running. In fact, with an array we can keep track of lots of pieces of information all under one name. 
+- **Array**: a data type that holds a list of items. An array can be used like any other variable and gives us the ability to store information for use while the program is running. With an array we can keep track of lots of pieces of information all under one name. 
 <br><br>
 When declaring an array we need to set some initial values. for example, if we wanted to do something similar to the coin flipping simulation described above, we could start with `var coinFaces = ["heads","tails”];`
 <br><br>
@@ -47,7 +47,7 @@ Let’s looks at an example in code. Imagine we’re back to flipping the coin f
 <br><br>
 We can **reassign the value of an element of an array** by referencing a specific index and giving that index a new value. For example, `coinFaces[0]=“face of the coin”;` This line would change the value of `coinFaces[0]`from “heads” to “face of the coin” 
 <br><br>
-We can also **add elements** to the array by using the gets operator (‘=‘) with an index that is one greater than the current size of the array. For example, if we wanted to add another element to our `coinFaces` array, we might do this:`coinFaces[2] = “neither— the coin landed on its edge!”;` After adding this line of code, coinFaces would have three elements, “heads”, “tales”, “neither— the coin landed on its edge!”
+We can also **add elements** to the array by using the gets operator (‘=‘) with an index that is one greater than the current size of the array. For example, if we wanted to add another element to our `coinFaces` array, we might do this:`coinFaces[2] = “neither - the coin landed on its edge!”;` After adding this line of code, coinFaces would have three elements, “heads”, “tales”, “neither - the coin landed on its edge!”
 
 - **For Loop**: a looping structure that is used when you know how often you’ll loop. The `for` loop repeats statements like a `while` loop, but adds an initialization and final expression step, like this:
 <br><br>
@@ -61,7 +61,7 @@ Here is a breakdown of the meaning the individual statements of a `for` loop:
 
   - **Statement 1:** “initialization” (for example, `var i = 0;` —>  "Create a variable called i and set it to 0”) -- creates the counter variable and initializes the value. This piece is executed before the loop starts
   - **Statement 2: ** “condition” (for example, `i < 10;` —> “While i is less than 10”) -- condition for continuing to run the loop
-  - **Statement 3: ** “incrementing value” (for example, `i++` —>  "Increase (increment) i by 1”) -- increment the counter by some value. This piece is executed each time after the last line of code in the loop is run, before the condition is checked again.
+  - **Statement 3: ** “incrementing value” (for example, `i++` —>  "Increase (increment) i by 1”) -- increment the counter by some value. This piece is executed each time after the last line of code in the loop is run, before the condition is checked again
 
 
 
@@ -74,7 +74,8 @@ Here is a breakdown of the meaning the individual statements of a `for` loop:
 - <a href="http://www.w3schools.com/js/js_loop_for.asp" target=_blank>JavaScript For Loop- W3Schools</a>
 - <a href="http://www.w3schools.com/js/js_arrays.asp" target=_blank>JavaScript Arrays- W3Schools</a>
 - <a href="https://en.wikipedia.org/wiki/Array_data_type" target=_blank>Array data type- Wikipedia</a>
-- <a href="https://youtu.be/MAukAy9m9Sg" target=_blank>Video: For Loop- (Code Studio video from other courses)</a> Note that these videos reference the block-only environment used by our Intro to Computer Science courses intended for younger students, but still describe the basic concept of a loop, which is shared across all programming languages. 
+- <a href ="https://youtu.be/G8hfAk4PfOM" target=_blank>Video: For Loops in App Lab (from the curriculum)</a>
+
 
 #### Image Data in Arrays
 
