@@ -100,7 +100,7 @@ body.modal-open .supreme-container{
 }
 
 #homepage #caption_container #blankspaceleftmobile {
-  height: 120px;
+  height: 100px;
 }
 
 #homepage #actions {
@@ -108,6 +108,12 @@ body.modal-open .supreme-container{
   padding: 20px; 
   margin-top: 40px; 
   text-align: center
+}
+
+@media screen and (max-width: 970px)  {
+  #homepage #actions {
+    margin-top: 300px;
+  }
 }
 
 #homepage #actions a {
