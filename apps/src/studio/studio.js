@@ -83,6 +83,12 @@ var ArrowIds = {
   DOWN: 'downButton'
 };
 
+Studio.GameStates = {
+  WAITING: 0,
+  ACTIVE: 1,
+  OVER: 2
+};
+
 var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
 
 // NOTE: all class names should be unique. eventhandler naming won't work
@@ -164,6 +170,8 @@ var SPEECH_BUBBLE_HEIGHT = 20 +
       (SPEECH_BUBBLE_MAX_LINES * SPEECH_BUBBLE_LINE_HEIGHT);
 
 var SCORE_TEXT_Y_POSITION = 60; // bottom of text
+var VICTORY_TEXT_Y_POSITION = 90;
+var RESET_TEXT_Y_POSITION = 350;
 
 var MIN_TIME_BETWEEN_PROJECTILES = 500; // time in ms
 
@@ -418,6 +426,24 @@ var drawMap = function () {
   score.setAttribute('visibility', 'hidden');
   svg.appendChild(score);
 
+  var victoryText = document.createElementNS(SVG_NS, 'text');
+  victoryText.setAttribute('id', 'victoryText');
+  victoryText.setAttribute('class', 'studio-victory-text');
+  victoryText.setAttribute('x', Studio.MAZE_WIDTH / 2);
+  victoryText.setAttribute('y', VICTORY_TEXT_Y_POSITION);
+  victoryText.appendChild(document.createTextNode(''));
+  victoryText.setAttribute('visibility', 'hidden');
+  svg.appendChild(victoryText);
+
+  var resetText = document.createElementNS(SVG_NS, 'text');
+  resetText.setAttribute('id', 'resetText');
+  resetText.setAttribute('class', 'studio-reset-text');
+  resetText.setAttribute('x', Studio.MAZE_WIDTH / 2);
+  resetText.setAttribute('y', RESET_TEXT_Y_POSITION);
+  resetText.appendChild(document.createTextNode(''));
+  resetText.setAttribute('visibility', 'hidden');
+  svg.appendChild(resetText);
+
   if (level.floatingScore) {
     var floatingScore = document.createElementNS(SVG_NS, 'text');
     floatingScore.setAttribute('id', 'floatingScore');
@@ -465,6 +491,20 @@ var drawMap = function () {
   titleScreenTextGroup.appendChild(titleScreenTextRect);
   titleScreenTextGroup.appendChild(titleScreenText);
   svg.appendChild(titleScreenTextGroup);
+
+  // Clear rectangle to pick up click events on the visualization
+  var clickRect = document.createElementNS(SVG_NS, 'rect');
+  clickRect.setAttribute('width', Studio.MAZE_WIDTH);
+  clickRect.setAttribute('height', Studio.MAZE_HEIGHT);
+  clickRect.setAttribute('fill-opacity', 0);
+  clickRect.addEventListener('touchstart', function (e) {
+    Studio.onMouseDown(e);
+    e.preventDefault(); // don't want to see mouse down
+  });
+  clickRect.addEventListener('mousedown', function (e) {
+    Studio.onMouseDown(e);
+  });
+  svg.appendChild(clickRect);
 };
 
 function collisionTest(x1, x2, xVariance, y1, y2, yVariance) {
@@ -1897,6 +1937,8 @@ function getDefaultMapName() {
 Studio.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
+  Studio.gameState = Studio.GameStates.WAITING;
+
   var svg = document.getElementById('svgStudio');
 
   if (Studio.customLogic) {
@@ -1922,7 +1964,12 @@ Studio.reset = function(first) {
   // Reset the score and title screen.
   Studio.playerScore = 0;
   Studio.scoreText = null;
+  Studio.victoryText = '';
   document.getElementById('score')
+    .setAttribute('visibility', 'hidden');
+  document.getElementById('victoryText')
+    .setAttribute('visibility', 'hidden');
+  document.getElementById('resetText')
     .setAttribute('visibility', 'hidden');
   if (level.floatingScore) {
     document.getElementById('floatingScore')
@@ -2142,6 +2189,7 @@ Studio.runButtonClick = function() {
   studioApp.attempts++;
   Studio.startTime = new Date();
   Studio.execute();
+  Studio.gameState = Studio.GameStates.ACTIVE;
 
   if (level.freePlay && !level.isProjectLevel &&
       (!studioApp.hideSource || level.showFinish)) {
@@ -3148,6 +3196,15 @@ Studio.displayScore = function() {
   score.setAttribute('visibility', 'visible');
 };
 
+Studio.displayVictoryText = function() {
+  var victoryText = document.getElementById('victoryText');
+  victoryText.textContent = Studio.victoryText;
+  victoryText.setAttribute('visibility', 'visible');
+  var resetText = document.getElementById('resetText');
+  resetText.textContent = studioMsg.clickToReset();
+  resetText.setAttribute('visibility', 'visible');
+};
+
 Studio.animateGoals = function() {
   var currentTime = new Date();
 
@@ -3891,6 +3948,11 @@ Studio.setScoreText = function (opts) {
   Studio.displayScore();
 };
 
+Studio.setVictoryText = function (opts) {
+  Studio.victoryText = opts.text;
+  Studio.displayVictoryText();
+};
+
 Studio.endGame = function(opts) {
   if (typeof opts.value !== 'string') {
     throw new TypeError("Incorrect parameter: " + opts.value);
@@ -3900,12 +3962,26 @@ Studio.endGame = function(opts) {
 
   if (winValue == "win") {
     Studio.trackedBehavior.hasWonGame = true;
-    Studio.setScoreText({text: studioMsg.winMessage()});
+    Studio.setVictoryText({text: studioMsg.winMessage()});
   } else if (winValue== "lose") {
     Studio.trackedBehavior.hasLostGame = true;
-    Studio.setScoreText({text: studioMsg.loseMessage()});
+    Studio.setVictoryText({text: studioMsg.loseMessage()});
   } else {
     throw new RangeError("Incorrect parameter: " + opts.value);
+  }
+
+  Studio.gameState = Studio.GameStates.OVER;
+};
+
+Studio.onMouseDown = function (e) {
+  if (Studio.gameState === Studio.GameStates.WAITING) {
+    Studio.runButtonClick();
+  } else if (Studio.gameState === Studio.GameStates.OVER) {
+    // do a reset
+    var resetButton = document.getElementById('resetButton');
+    if (resetButton) {
+      resetButton.click();
+    }
   }
 };
 

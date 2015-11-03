@@ -63,7 +63,7 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
   stroke-width: 3;
   opacity: 0.9;
 }
-.studio-score {
+.studio-score, .studio-victory-text, .studio-reset-text {
   text-anchor: middle;
   font-size: xx-large;
   font-family: $gotham-extra-bold;
