@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 
 ## Day 9: Scratch – Broadcasting Role Play
 
-First, let's explore the sixth lesson in the curriculum. To begin, find your ECS Version 5 curriculum and open to page 149-157.
+First, let's explore the sixth lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 149-157.
 
 [Access a Digital Copy of the lesson>>](http://code.org/ecs#page=149)
 
@@ -16,10 +16,10 @@ First, let's explore the sixth lesson in the curriculum. To begin, find your ECS
 - They will use the switch to costume" block, "say" block, "broadcast" block, "when I receive" block, "show" block, "hide" block, and "switch background" block.
 - Students will need to finish the [Summer Story Project](http://code.org/ecs#page=156) using the new blocks.
 
- #### Common Difficulties
+#### Common Difficulties
 
 This lesson presents some blocks that can be hard to use, "switch to costume" block, "broadcast" block, "when I receive" block, "show" block, "hide" block, "switch background" block.
-
+<br><br>
 This lesson has multiple things happening on and off the screen at the same time.  You will need to keep track of 1 main sprite, three additional sprites showing or hiding, three backgrounds to be switched out with the particular character and conversation.
 
 #### All Resources for This Lesson
@@ -46,15 +46,16 @@ This lesson has multiple things happening on and off the screen at the same time
 
 - Take a few minutes to watch the video below about Broadcasting and how it is used with other blocks in the program.
 - Change Backgrouds with Broadcasting - [https://www.youtube.com/watch?v=MwrLkyg8nis](https://www.youtube.com/watch?v=MwrLkyg8nis)
-After viewing the video, consider: how was the broadcasting block used? What other blocks are necessary when you use the broadcasting block?
+
+**After viewing the video, consider:** how was the broadcasting block used? What other blocks are necessary when you use the broadcasting block?
 
 #### PD Forum Discussion
 
 What are you going to do to prepare yourself to be ready to teach this lesson that can uses some difficult blocks so that students will not only understand the use of the blocks but be not lose interest?
 
 [<button>Discuss in the forum >></button>](http://forum.code.org/t/u4-day-9-pd-discussion-topic/1894)
-
+<br><br>
 After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
-
+<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
