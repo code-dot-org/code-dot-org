@@ -32,7 +32,9 @@ A function definition can be provided anywhere in your code - in some ways the f
 
 - <a href="https://en.wikipedia.org/wiki/Logo_(programming_language)" target=_blank>History of Turtle Programming- Wikipedia</a>
 - <a href="http://www.cs.utah.edu/~germain/PPS/Topics/functions.html" target=_blank>What is a function? (read sections under 'functions' and 'why do we write functions')</a>
-- <a href="https://youtu.be/8T5acEwfJbw" target=_blank>Video: Functions - (Code Studio video from other courses) </a> Note that this video references the block-only environment used by our Intro to Computer Science courses intended for younger students, but still describes the basic concept of a function, which is shared across all programming languages. 
+- <a href="https://youtu.be/i2KHYUhtOlM" target=_blank>Video: Turtle Programming (from the curriculum) </a>
+<br>
+- <a href="https://youtu.be/yPWQfa4CHbw" target=_blank>Video: Functions in App Lab (from the curriculum) </a>
 <br>
 
 #### Using and Making Functions with Parameters
@@ -56,7 +58,7 @@ Just like functions without parameters, the order of the function declaration an
 ##### External Resources 
 
 - <a href="http://www.w3schools.com/js/js_function_parameters.asp" target=_blank>JavaScript Functions with parameters- W3Schools</a>
-- <a href="https://youtu.be/e9qjXKaeDHg" target=_blank>Video: Functions with Paramters - (Code Studio video from other courses) </a> Note that this videos reference the block-only environment used by our Intro to Computer Science courses intended for younger students, but still describe the basic concept of a function with a parameter, which is shared across all programming languages. 
+- <a href="https://youtu.be/e9qjXKaeDHg" target=_blank>Video: Functions with Parameters - (Code Studio video from other courses) </a> Note that this videos reference the block-only environment used by our Intro to Computer Science courses intended for younger students, but still describe the basic concept of a function with a parameter, which is shared across all programming languages. 
 <br>
 
 #### Simple Looping and Random Numbers
