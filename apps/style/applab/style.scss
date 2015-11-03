@@ -630,3 +630,10 @@ $debug-input-height: 16px;
 .design-element-image {
   width: 72px; // 60% of 120px, which is the original image width.
 }
+
+.rainbow-gradient {
+  background: -webkit-linear-gradient(to bottom right, red, orange, yellow, green, blue); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(to bottom right, red, orange, yellow, green, blue); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(to bottom right, red, orange, yellow, green, blue); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, red, orange, yellow, green, blue); /* Standard syntax */
+}
