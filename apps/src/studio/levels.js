@@ -2766,6 +2766,7 @@ levels.js_hoc2015_event_free = {
   'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
+  'tapSvgToRunAndReset': true,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
