@@ -558,6 +558,14 @@ Blockly.Block.prototype.getBox = function() {
 };
 
 /**
+ * Returns the padding of the SVG or null if none exists
+ * @return {Object} object with padding values for top, bottom, left, and right
+ */
+Blockly.Block.prototype.getSvgPadding = function() {
+  return this.svg_ && this.svg_.getPadding();
+};
+
+/**
  * Returns a bounding box describing the dimensions of this block.
  * @return {!Object} Object with height and width properties.
  */
@@ -1316,7 +1324,7 @@ Blockly.Block.prototype.setParent = function(newParent) {
   if (this.parentBlock_) {
     // Remove this block from the old parent's child list.
     var children = this.parentBlock_.childBlocks_;
-    for (var child, x = 0; child = children[x]; x++) {
+    for (var child, x = 0; (child = children[x]); x++) {
       if (child == this) {
         children.splice(x, 1);
         break;

@@ -308,6 +308,20 @@ BS.INNER_BOTTOM_LEFT_CORNER_HIGHLIGHT_LTR =
     (BS.DISTANCE_45_OUTSIDE + 1);
 
 /**
+ * Returns the padding of this SVG. Default block SVG has no padding;
+ * framed blocks override this method to add padding for the frame
+ * @return {Object} object with padding values for top, bottom, left, and right
+ */
+Blockly.BlockSvg.prototype.getPadding = function() {
+  return {
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0
+  };
+};
+
+/**
  * HACK:
  * WebKit bug 67298 causes control points to be included in the reported
  * bounding box.  Add 5px control point to the top of the path.
