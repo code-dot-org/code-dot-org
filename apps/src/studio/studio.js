@@ -1040,6 +1040,10 @@ Studio.onTick = function() {
     Studio.succeededTime = currentTime;
   }
 
+  if (!animationOnlyFrame) {
+    Studio.executeQueue('whenTouchGoal');
+  }
+
   if (Studio.succeededTime &&
       !spritesNeedMoreAnimationFrames &&
       (!level.delayCompletion || currentTime > Studio.succeededTime + level.delayCompletion)) {
@@ -2509,6 +2513,7 @@ Studio.execute = function() {
                      'whenSpriteCollided-' +
                        (Studio.protagonistSpriteIndex || 0) +
                        '-any_item');
+    registerHandlers(handlers, 'studio_whenTouchGoal', 'whenTouchGoal');
     if (level.wallMapCollisions) {
       registerHandlers(handlers,
                        'studio_whenTouchObstacle',
@@ -3305,7 +3310,7 @@ Studio.queueCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  if (studioApp.isUsingBlockly()) {
+  if (studioApp.isUsingBlockly() && Studio.currentCmdQueue) {
     if (Studio.currentEventParams) {
       for (var prop in Studio.currentEventParams) {
         cmd.opts[prop] = Studio.currentEventParams[prop];
@@ -3313,7 +3318,8 @@ Studio.queueCmd = function (id, name, opts) {
     }
     Studio.currentCmdQueue.push(cmd);
   } else {
-    // in editCode/interpreter mode, all commands are executed immediately:
+    // in editCode/interpreter mode or if we don't have a current cmdQueue
+    // (e.g. move from autoArrowSteer), commands are executed immediately:
     Studio.callCmd(cmd);
   }
 };
