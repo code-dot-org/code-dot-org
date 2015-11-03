@@ -10,6 +10,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   setup do
     client_state.reset
+    Gatekeeper.clear
 
     LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
     CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
@@ -847,6 +848,15 @@ class ActivitiesControllerTest < ActionController::TestCase
         }
     }
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+  end
+
+  test 'sharing when gatekeeper has disabled sharing does not work' do
+    Gatekeeper.set('sharingEnabled', where: {script_name: @script.name}, value: false)
+
+    response = post :milestone, @milestone_params
+
+    assert_nil response['share_failure']
+    assert_nil response['level_source']
   end
 
   test 'milestone changes to next stage in default script' do
