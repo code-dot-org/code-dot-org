@@ -34,6 +34,7 @@
   "calloutPlaceTwo": "Can you make two MOUSEs appear when you get one MOUSE?",
   "calloutPlaceTwoWhenBird": "Can you make two MOUSEs appear when you get a BIRD?",
   "calloutSetMapAndSpeed": "Set the map and your speed.",
+  "calloutFinishButton": "Click here when you are ready to share your game.",
   "catActions": "Actions",
   "catControl": "Loops",
   "catEvents": "Events",

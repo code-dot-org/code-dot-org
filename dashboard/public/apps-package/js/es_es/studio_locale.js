@@ -657,6 +657,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "calloutPlaceTwo":function(d){return "Can you make two MOUSEs appear when you get one MOUSE?"},
 "calloutPlaceTwoWhenBird":function(d){return "Can you make two MOUSEs appear when you get a BIRD?"},
 "calloutSetMapAndSpeed":function(d){return "Set the map and your speed."},
+"calloutFinishButton":function(d){return "Click here when you are ready to share your game."},
 "dropletBlock_addPoints_description":function(d){return "Add points to the score."},
 "dropletBlock_addPoints_param0":function(d){return "score"},
 "dropletBlock_addPoints_param0_description":function(d){return "The value to add to the score."},

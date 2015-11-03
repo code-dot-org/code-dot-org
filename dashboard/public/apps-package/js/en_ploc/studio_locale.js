@@ -189,6 +189,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "calloutPlaceTwo":function(d){return "!!-Can you make two MOUSEs appear when you get one MOUSE?-!!"},
 "calloutPlaceTwoWhenBird":function(d){return "!!-Can you make two MOUSEs appear when you get a BIRD?-!!"},
 "calloutSetMapAndSpeed":function(d){return "!!-Set the map and your speed.-!!"},
+"calloutFinishButton":function(d){return "!!-Click here when you are ready to share your game.-!!"},
 "catActions":function(d){return "!!-Actions-!!"},
 "catControl":function(d){return "!!-Loops-!!"},
 "catEvents":function(d){return "!!-Events-!!"},
