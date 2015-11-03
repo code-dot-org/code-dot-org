@@ -28,7 +28,7 @@ class PuzzleRating < ActiveRecord::Base
   validates_uniqueness_of :user_id, :scope => [:script_id, :level_id], :allow_nil => true
 
   def PuzzleRating.enabled?
-    true
+    false
   end
 
   # If PuzzleRating is disabled, no one can rate
