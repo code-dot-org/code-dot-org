@@ -83,6 +83,12 @@ var ArrowIds = {
   DOWN: 'downButton'
 };
 
+Studio.GameStates = {
+  WAITING: 0,
+  ACTIVE: 1,
+  OVER: 2
+};
+
 var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
 
 // NOTE: all class names should be unique. eventhandler naming won't work
@@ -163,7 +169,9 @@ var SPEECH_BUBBLE_WIDTH = 180;
 var SPEECH_BUBBLE_HEIGHT = 20 +
       (SPEECH_BUBBLE_MAX_LINES * SPEECH_BUBBLE_LINE_HEIGHT);
 
-var SCORE_TEXT_Y_POSITION = 60; // bottom of text
+var SCORE_TEXT_Y_POSITION = 30; // bottom of text
+var VICTORY_TEXT_Y_POSITION = 130;
+var RESET_TEXT_Y_POSITION = 380;
 
 var MIN_TIME_BETWEEN_PROJECTILES = 500; // time in ms
 
@@ -409,6 +417,10 @@ var drawMap = function () {
   }
   svg.appendChild(cloudGroup);
 
+  var gameTextGroup = document.createElementNS(SVG_NS, 'g');
+  gameTextGroup.setAttribute('id', 'gameTextGroup');
+  svg.appendChild(gameTextGroup);
+
   var score = document.createElementNS(SVG_NS, 'text');
   score.setAttribute('id', 'score');
   score.setAttribute('class', 'studio-score');
@@ -416,7 +428,25 @@ var drawMap = function () {
   score.setAttribute('y', SCORE_TEXT_Y_POSITION);
   score.appendChild(document.createTextNode(''));
   score.setAttribute('visibility', 'hidden');
-  svg.appendChild(score);
+  gameTextGroup.appendChild(score);
+
+  var victoryText = document.createElementNS(SVG_NS, 'text');
+  victoryText.setAttribute('id', 'victoryText');
+  victoryText.setAttribute('class', 'studio-victory-text');
+  victoryText.setAttribute('x', Studio.MAZE_WIDTH / 2);
+  victoryText.setAttribute('y', VICTORY_TEXT_Y_POSITION);
+  victoryText.appendChild(document.createTextNode(''));
+  victoryText.setAttribute('visibility', 'hidden');
+  gameTextGroup.appendChild(victoryText);
+
+  var resetText = document.createElementNS(SVG_NS, 'text');
+  resetText.setAttribute('id', 'resetText');
+  resetText.setAttribute('class', 'studio-reset-text');
+  resetText.setAttribute('x', Studio.MAZE_WIDTH / 2);
+  resetText.setAttribute('y', RESET_TEXT_Y_POSITION);
+  resetText.appendChild(document.createTextNode(studioMsg.tapOrClickToReset()));
+  resetText.setAttribute('visibility', 'visible');
+  gameTextGroup.appendChild(resetText);
 
   if (level.floatingScore) {
     var floatingScore = document.createElementNS(SVG_NS, 'text');
@@ -1486,8 +1516,12 @@ Studio.onSpriteClicked = function(e, spriteIndex) {
 };
 
 Studio.onSvgClicked = function(e) {
-  // If we are "running", check the cmdQueues.
-  if (Studio.tickCount > 0){
+  if (level.tapSvgToRunAndReset && Studio.gameState === Studio.GameStates.WAITING) {
+    Studio.runButtonClick();
+  } else if (level.tapSvgToRunAndReset && Studio.gameState === Studio.GameStates.OVER) {
+    studioApp.resetButtonClick();
+  } else if (Studio.tickCount > 0) {
+    // If we are "running", check the cmdQueues.
     // Check the first command in all of the cmdQueues to see if there is a
     // pending "wait for click" command
     Studio.eventHandlers.forEach(function (handler) {
@@ -1897,6 +1931,8 @@ function getDefaultMapName() {
 Studio.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
+  Studio.gameState = Studio.GameStates.WAITING;
+
   var svg = document.getElementById('svgStudio');
 
   if (Studio.customLogic) {
@@ -1922,8 +1958,18 @@ Studio.reset = function(first) {
   // Reset the score and title screen.
   Studio.playerScore = 0;
   Studio.scoreText = null;
+  Studio.victoryText = '';
   document.getElementById('score')
     .setAttribute('visibility', 'hidden');
+  document.getElementById('victoryText')
+    .setAttribute('visibility', 'hidden');
+  var resetText = document.getElementById('resetText');
+  if (level.tapSvgToRunAndReset) {
+    resetText.textContent = studioMsg.tapOrClickToPlay();
+    resetText.setAttribute('visibility', 'visible');
+  } else {
+    resetText.setAttribute('visibility', 'hidden');
+  }
   if (level.floatingScore) {
     document.getElementById('floatingScore')
       .setAttribute('visibility', 'hidden');
@@ -2142,6 +2188,7 @@ Studio.runButtonClick = function() {
   studioApp.attempts++;
   Studio.startTime = new Date();
   Studio.execute();
+  Studio.gameState = Studio.GameStates.ACTIVE;
 
   if (level.freePlay && !level.isProjectLevel &&
       (!studioApp.hideSource || level.showFinish)) {
@@ -2561,6 +2608,9 @@ Studio.execute = function() {
     // Set event handlers and start the onTick timer
     Studio.eventHandlers = handlers;
   }
+
+  var resetText = document.getElementById('resetText');
+  resetText.setAttribute('visibility', 'hidden');
 
   Studio.perExecutionTimeouts = [];
   Studio.tickIntervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
@@ -3161,6 +3211,15 @@ Studio.displayScore = function() {
     });
   }
   score.setAttribute('visibility', 'visible');
+};
+
+Studio.displayVictoryText = function() {
+  var victoryText = document.getElementById('victoryText');
+  victoryText.textContent = Studio.victoryText;
+  victoryText.setAttribute('visibility', 'visible');
+  var resetText = document.getElementById('resetText');
+  resetText.textContent = studioMsg.tapOrClickToReset();
+  resetText.setAttribute('visibility', 'visible');
 };
 
 Studio.animateGoals = function() {
@@ -3906,6 +3965,11 @@ Studio.setScoreText = function (opts) {
   Studio.displayScore();
 };
 
+Studio.setVictoryText = function (opts) {
+  Studio.victoryText = opts.text;
+  Studio.displayVictoryText();
+};
+
 Studio.endGame = function(opts) {
   if (typeof opts.value !== 'string') {
     throw new TypeError("Incorrect parameter: " + opts.value);
@@ -3915,13 +3979,15 @@ Studio.endGame = function(opts) {
 
   if (winValue == "win") {
     Studio.trackedBehavior.hasWonGame = true;
-    Studio.setScoreText({text: studioMsg.winMessage()});
+    Studio.setVictoryText({text: studioMsg.winMessage()});
   } else if (winValue== "lose") {
     Studio.trackedBehavior.hasLostGame = true;
-    Studio.setScoreText({text: studioMsg.loseMessage()});
+    Studio.setVictoryText({text: studioMsg.loseMessage()});
   } else {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
+
+  Studio.gameState = Studio.GameStates.OVER;
 };
 
 Studio.setBackground = function (opts) {
