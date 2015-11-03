@@ -16,7 +16,7 @@ Here are a few resources to help you get started with understanding these CS con
 
 ##### Lessons in Code Studio
 
-- [Stage 17: Introduction to Digital Assistant Project](studio.code.org/s/cspunit3/stage/17/puzzle/1)
+- [Stage 17: Introduction to Digital Assistant Project](https://studio.code.org/s/cspunit3/stage/17/puzzle/1)
 
 
 ##### External Resources 
@@ -39,7 +39,7 @@ then the code inside the if-statement will always run, which is not very interes
 <img src="https://images.code.org/e172350177512fcb9056772cded70272-image-1446430205647.09.35.png" style="width:250px;margin-left:100px;">
 
 - **Comparison operators:**
-The symbols used in boolean expressions to compare two things. Note that there is always question implied -- the statement 4 < 3 simply evaluates to the boolean `False` and is not meant to melt your mathematical brain, which of course knows that 4 is not less than 3!
+The symbols used in boolean expressions to compare two things. Note that there is always question implied - the statement 4 < 3 simply evaluates to the boolean `False` and is not meant to melt your mathematical brain, which of course knows that 4 is not less than 3!
      - Is less than? `<`
      - Is less than or equal to? `<=`
      - Is greater than? `>`
@@ -55,16 +55,16 @@ The simple words `AND`, `OR`, and `NOT`, which are represented with the symbols 
 
 ##### Lessons in Code Studio
 
-- [Stage 18: Understanding Program Flow and Logic](studio.code.org/s/cspunit3/stage/18/puzzle/1)
-- [Stage 19: Introduction to Conditioal Logic](studio.code.org/s/cspunit3/stage/19/puzzle/1)
-- [Stage 20: Compound Conditional Logic](studio.code.org/s/cspunit3/stage/20/puzzle/1)
-- [Stage 21: Digital Assistant Project](studio.code.org/s/cspunit3/stage/21/puzzle/1)
+- [Stage 18: Understanding Program Flow and Logic](https://studio.code.org/s/cspunit3/stage/18/puzzle/1)
+- [Stage 19: Introduction to Conditioal Logic](https://studio.code.org/s/cspunit3/stage/19/puzzle/1)
+- [Stage 20: Compound Conditional Logic](https://studio.code.org/s/cspunit3/stage/20/puzzle/1)
+- [Stage 21: Digital Assistant Project](https://studio.code.org/s/cspunit3/stage/21/puzzle/1)
 
 ##### External Resources 
 
 - <a href="http://www.w3schools.com/js/js_if_else.asp" target=_blank>JavaScript Conditionals - W3Schools</a>
 - <a href="http://www.w3schools.com/js/js_comparisons.asp" target=_blank>Comparison Operators - W3Schools</a>
-- <a href="https://www.cs.cmu.edu/~mrmiller/15-110/Handouts/conditionals-4.pdf" target=_blank>Conditionals - Carnegie Melon University: </a> Note that this resource is for Java, not JavaScript, but the concepts are the same, and this resource calls out some common mistakse.
+- <a href="https://www.cs.cmu.edu/~mrmiller/15-110/Handouts/conditionals-4.pdf" target=_blank>Conditionals - Carnegie Melon University: </a> Note that this resource is for Java, not JavaScript, but the concepts are the same, and this resource calls out some common mistakes.
 - <a href="https://www.quora.com/Python-programming-language-1/What-is-the-difference-between-chained-conditionals-and-nested-conditionals" target=_blank>What is the difference between chained conditionals and nested conditionals? - Quora</a>
 
 <br><br>
