@@ -142,13 +142,30 @@ body.modal-open .supreme-container{
   font-size: 20px
 }
 
-#homepage #actions #herohocbutton {
+#homepage #actions .buttongroup {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+#homepage #actions .herohocbutton {
   font-weight: 500; 
   font-size: 18px; 
   height: 40px;
-  float: left;
   padding: 0 30px;
-  margin: 0 10px 20px 10px;
+}
+
+#homepage #actions #volunteeraction {
+  font-family: 'Gotham 4r', sans-serif;
+  font-size: 16px;
+  color: white;
+  margin-top: 30px;
+}
+
+#homepage #actions #volunteeraction a {
+  font-family: 'Gotham 4r', sans-serif;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
 }
 
 #homepage #actions #petitionaction {
