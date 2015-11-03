@@ -38,16 +38,17 @@
           %br/
           !="&copy; Code.org, #{Time.now.year}"
 
-- if DCDO.get('hoc_secret')
+- if DCDO.get('hoc_secret', nil)
+  // Set secret
   - # If enabled, set a client-side secret that allows admins to access the HOC 2015 levels.
   - # This is a temporary measure that will be removed shortly.
-  - if current_user.try(:admin?)
+  - if current_user && current_user.admin?
     :javascript
-    //<![CDATA[
-    localStorage.setItem('hoc_secret', '#{DCDO.get("hoc_secret")}');
-    //]]>
+      //<![CDATA[
+      localStorage.setItem('hoc_secret', '#{DCDO.get("hoc_secret", nil)}');
+      //]]>
   - else
     :javascript
-    //<![CDATA[
-    localStorage.removeItem('hoc2015');
-    //]]>
+      //<![CDATA[
+      localStorage.removeItem('hoc_secret');
+      //]]>
