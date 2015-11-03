@@ -344,7 +344,7 @@ config.concurrent = {
 
 config.watch = {
   js: {
-    files: ['src/**/*.js'],
+    files: ['src/**/*.{js,jsx}'],
     tasks: ['newer:copy:src']
   },
   style: {

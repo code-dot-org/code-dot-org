@@ -48,11 +48,11 @@ Breakfast and lunch will be served.
 **November 7th Location**
 
 Orange County Department of Education<br/>
-Board Room<br/>
+Building A: Board Room<br/>
 200 Kalmus Dr<br/>
 Costa Mesa, CA 92626
 
-For a campus map and parking information, [click here](code.org/files/OCDEmap.pdf)
+Note: you will be in a different building that the 10/3/15 PD. For a campus map and parking information, [click here](code.org/files/OCDEmap.pdf)
 
 **What to bring to Phase 3 quarterly sessions:**
 
