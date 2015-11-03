@@ -45,6 +45,8 @@
   "catVariables": "Variables",
   "changeScoreTooltip" : "Add or remove a point to the score.",
   "changeScoreTooltipK1" : "Add a point to the score.",
+  "tapOrClickToPlay" : "Tap or click to play",
+  "tapOrClickToReset" : "Tap or click to reset",
   "continue": "Continue",
   "decrementPlayerScore" : "remove point",
   "defaultSayText": "type here",

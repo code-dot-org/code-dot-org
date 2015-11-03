@@ -200,6 +200,8 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catVariables":function(d){return "Variables"},
 "changeScoreTooltip":function(d){return "Add or remove a point to the score."},
 "changeScoreTooltipK1":function(d){return "Add a point to the score."},
+"tapOrClickToPlay":function(d){return "Tap or click to play"},
+"tapOrClickToReset":function(d){return "Tap or click to reset"},
 "continue":function(d){return "Continue"},
 "decrementPlayerScore":function(d){return "remove point"},
 "defaultSayText":function(d){return "type here"},

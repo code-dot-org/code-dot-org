@@ -503,6 +503,8 @@
   "calloutPlaceTwoWhenBird": "Can you make two MOUSEs appear when you get a BIRD?",
   "calloutSetMapAndSpeed": "Set the map and your speed.",
   "calloutFinishButton": "Click here when you are ready to share your game.",
+  "tapOrClickToPlay": "Tap or click to play",
+  "tapOrClickToReset": "Tap or click to reset",
   "dropletBlock_addPoints_description": "Add points to the score.",
   "dropletBlock_addPoints_param0": "score",
   "dropletBlock_addPoints_param0_description": "The value to add to the score.",
