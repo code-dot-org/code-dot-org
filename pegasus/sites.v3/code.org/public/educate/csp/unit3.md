@@ -39,6 +39,9 @@ nav: educate_nav
 
 <ul>
 <li> If you're a teacher, you can apply for Code Studio access to protected, teacher-only materials (answer keys, etc) through <strong><a href = "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong> </li>
+<li>
+<a href="https://studio.code.org/s/CSP-Unit3-Support">Teacher support for Unit 3: </a> Want to understand more about how the unit is organized and what CS content is covered in each section? This overview is a great resource to get you acquainted with the unit and better prepared to teacher it.
+</li>
 </ul>
 
 <br/><br/>
@@ -72,7 +75,9 @@ nav: educate_nav
 |**Lesson 19 - Introduction to Conditional Logic** Having explored the basics of conditional statements in the previous lesson students return to the Movie Bot digital assistant example in order to improve its functionality with conditional logic.  | [![lesson 19](images/thumb_lesson1.png)](https://code.org/curriculum/cspunit3/19/Teacher) |
 |**Lesson 20 - Compound Conditional Logic** Students are introduced to the logic operators NOT, AND, and OR as tools for simplifying the expression of complex boolean conditions. Students learn how to improve nested or chained conditionals through the use of these logical operations and then use them to make additions to the functionality of the Movie Bot. | [![lesson 20](images/thumb_lesson1.png)](https://code.org/curriculum/cspunit3/20/Teacher) |
 |**Lesson 21 - Digital Assistant Project** In this lesson, students complete the digital assistant project in which they synthesize their abilities to write string functions and complex conditionals. This lesson is designed to allow students to hone their programming skills through the lens of creativity and innovation. Students continue to work on their digital assistant and analyze their work and reflect using questions similar to those of the create performance task.| [![lesson 21](images/thumb_lesson1.png)](https://code.org/curriculum/cspunit3/22/Teacher) |
+
 <br>
+
 | Lesson Description| Lesson Plan | 
 | ------------------|:-----------:|
 | **Lesson 22 - Introduction to While Loops** |(Coming mid-November)  |
@@ -85,5 +90,5 @@ nav: educate_nav
 | **Lesson 29 - Image Filter Project** |(Coming mid-November) | 
 
 Unit 3 Assessment 2 of 2 | Lesson Plan |
-| ------------------|:-----------:| :-----------:|
-| **Lesson 30 - Practice PT - Create** |(Coming mid-November) |
+| ------------------|:-----------:|
+| **Lesson 30 - Practice PT - Create PT** |(Coming mid-November) |
