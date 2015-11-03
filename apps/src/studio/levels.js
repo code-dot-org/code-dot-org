@@ -2651,7 +2651,7 @@ levels.js_hoc2015_change_setting = {
   ]
 };
 
-var js_hoc2015_event_free_character_instructions = '"You\'re on your own now, BOT1."';
+var js_hoc2015_event_free_character_instructions = '"You\'re on your own now, R2-D2."';
 var js_hoc2015_event_free_ooc_instructions = "You have all the tools you need " +
     "now to create your own level. Feel free to explore and play with all " +
     "the different Commands and Events. When you're done, press the Finish " +
@@ -2664,22 +2664,22 @@ var js_hoc2015_event_free_markdown = [
   '<details class="hoc2015">',
   '<summary>Example project ideas</summary>',
   '<p>**Example 1**',
-  '<br />Add 5 random characters in the scene, and play a different sound each time BOT1 collides with one of them.</p>',
+  '<br />Add five random characters in the scene, and play a different sound each time R2-D2 collides with one of them.</p>',
   '',
   '<p>**Example 2**',
-  '<br />Add 10 MANs to chase BOT2. See if you can outrun them by running at high speed.</p>',
+  '<br />Add ten stormtroopers to chase C-3PO. See if you can outrun them by running at high speed.</p>',
   '',
   '<p>**Example 3**',
-  '<br />Add 5 PIGs that are running away from BOT1. Make him scream each time he catches one.</p>',
+  '<br />Add five puffer pigs that are running away from R2-D2. Make him scream each time he catches one.</p>',
   '',
   '</details>',
   '<details class="hoc2015">',
   '<summary>Extra credit project ideas</summary>',
   '',
   '<p>**Example 1**',
-  '<br />Add a MOUSE and a MAN. Every time BOT1 catches a MOUSE, score some ' +
-      'points and then add another MOUSE and another MAN.  End the game if a ' +
-      'MAN catches BOT1.</p>',
+  '<br />Add a mouse droid and a stormtrooper. Every time R2-D2 catches a mouse droid, score some ' +
+      'points and then add another mouse droid and another stormtrooper.  End the game if a ' +
+      'stormtrooper catches R2-D2.</p>',
   '',
   '</details>',
   '<details class="hoc2015">',
