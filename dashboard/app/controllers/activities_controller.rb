@@ -28,7 +28,9 @@ class ActivitiesController < ApplicationController
       @level = Level.find(params[:level_id].to_i)
     end
 
-    if params[:program]
+    @sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: params[:scriptName]}, default: true)
+
+    if params[:program] && @sharing_allowed
       begin
         share_failure = find_share_failure(params[:program])
       rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
