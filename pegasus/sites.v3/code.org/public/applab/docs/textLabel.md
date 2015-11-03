@@ -19,9 +19,11 @@ Category: UI controls
 
 [short_description]
 
-Creates and displays a text label. The text label is used to display a description for the following input controls: radio buttons, check boxes, text inputs, and dropdown lists. You associate a text label with the input control by specifying the input control's id in the for argument. You can also reference the input control by the specified id.
+Create a text label on the screen displaying the *text* provided and referenced by the given *labelId* at default location (0,0).
 
 [/short_description]
+
+Your apps will sometimes need titles on a screen, or words next to other UI elements like radio buttons, check boxes, text inputs, and dropdown lists. If you want the text label to also trigger the events with a different UI element, you can reference that id using the optional third parameter *forId*.
 
 [/description]
 
@@ -32,7 +34,18 @@ ____________________________________________________
 
 
 ```
-// Create a label for the text box
+// Create a label for a screen title.
+textLabel("screenTitle","My App");
+```
+
+[/example]
+____________________________________________________
+[example]
+
+**Example: Label for a Test Input Box** Create a label and associate it with a text input box.
+
+```
+// Create a label and associate it with a text input box.
 textLabel("YourNameLabel","Enter your name:", "YourName");
 textInput("YourName","");
 ```
@@ -81,24 +94,27 @@ textLabel(labelId, text, forId)
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| labelId | string | Yes | A unique identifier for the label control. The id is used for referencing the created label. For example, to assign event handlers. |
-| text | string | Yes | The value to display for the label. |
-| forId | string | No | The id to associate the label with. Clicking the label is the same as clicking on the control. |
+| labelId | string | Yes | The unique identifier for the text label. The labelId is used for referencing the text label in event handlers or other UI element modification functions. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |
+| text | string | Yes | The text displayed within the text label. |
+| forId | string | No | The id of the other UI element to associate the label with. |
+
 [/parameters]
 
 [returns]
 
 ### Returns
-No Return Value
+No return value. Modifies screen only.
 
 [/returns]
 
 [tips]
 
 ### Tips
-You should always provide a label for your text input, radio button, check box, and drop down controls
-
-The textLabel can also be used in design mode.
+- If there is another UI element at location (0,0) the text label is placed at the next available position to the right or below.
+- There are various UI element modification functions available: [setText()](/applab/docs/setText), [showElement()](/applab/docs/showElement), [hideElement()](/applab/docs/hideElement), [deleteElement()](/applab/docs/deleteElement), [setPosition()](/applab/docs/setPosition), [setSize()](/applab/docs/setSize). 
+- There are various UI element query functions available: [getText()](/applab/docs/getText), [getXPosition()](/applab/docs/getXPosition), [getYPosition()](/applab/docs/getYPosition).
+- You should always provide a label for your text input, radio button, check box, and drop down controls
+- Text labels can also be created and initialized in Design mode.
 
 [/tips]
 
@@ -109,3 +125,4 @@ Found a bug in the documentation? Let us know at documentation@code.org
 [/bug]
 
 <%= view :applab_docs_common %>
+	
