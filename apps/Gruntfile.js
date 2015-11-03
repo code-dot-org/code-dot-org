@@ -344,7 +344,7 @@ config.concurrent = {
 
 config.watch = {
   js: {
-    files: ['src/**/*.js'],
+    files: ['src/**/*.{js,jsx}'],
     tasks: ['newer:copy:src']
   },
   style: {
@@ -445,7 +445,16 @@ module.exports = function(grunt) {
     });
   });
 
+  // Checks the size of Droplet to ensure it's built with LANGUAGE=javascript
+  grunt.registerTask('checkDropletSize', function () {
+    var bytes = fs.statSync('lib/droplet/droplet-full.min.js').size;
+    if (bytes > 500 * 1000) {
+      grunt.warn('"droplet-full.min.js" is larger than 500kb. Did you build with LANGUAGE=javascript?');
+    }
+  });
+
   grunt.registerTask('prebuild', [
+    'checkDropletSize',
     'pseudoloc',
     'newer:messages',
     'newer:copy:src',

@@ -14,9 +14,10 @@
 - if use_droplet && !hide_source
   %link{href: asset_path('css/droplet/droplet.min.css'), rel: 'stylesheet', type: 'text/css'}
   %link{href: asset_path('css/tooltipster/tooltipster.min.css'), rel: 'stylesheet', type: 'text/css'}
--# Applab style dependencies (only when design mode is possible)
-- if use_applab && !hide_source
-  %link{href: asset_path('css/colpick.css'), rel: 'stylesheet', type: 'text/css'}
+
+-# Might be possible to not load this on share pages, but right now we get some
+-# weird display issues when we do that. Good news is this is < 10kb
+%link{href: asset_path('css/colpick.css'), rel: 'stylesheet', type: 'text/css'}
 
 -# Droplet script dependencies (all editCode - regardless of editor)
 - if use_droplet

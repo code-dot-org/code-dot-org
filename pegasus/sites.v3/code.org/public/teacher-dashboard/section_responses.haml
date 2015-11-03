@@ -1,0 +1,67 @@
+---
+layout: none
+theme: none
+content-type: text/ng-template
+---
+
+%br/
+
+.loading{'ng-hide' => 'responsesLoaded'}
+  = I18n.t('dashboard_landing_loading')
+
+%div{'ng-show' => 'responsesLoaded'}
+  View text responses in:
+  %select{"ng-model" => "course_id", "ng-options"=>"k*1 as v for (k, v) in course_list", 'ng-change' => 'changeCourse(course_id)'}
+
+%br/
+
+:ruby
+  responses_filtered = "responses | orderBy:order | filter:(stageFilter && {stage: stageFilter}):true"
+
+%div{style: "padding-left:20px", 'ng-show' => '!responses.length'}
+  No text responses
+%div{style: "padding-left:20px", 'ng-show' => 'responses.length'}
+  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'section.students.length > 0', "ng-form" => "allForm"}
+    %colgroup
+      %col{width: "200"}/
+      %col{width: "175"}/
+      %col{width: "75"}/
+      %col{width: "175"}/
+      %col{width: "300"}/
+    %tr
+      %th.manage-th{colspan: 5}
+        %div{'ng-show' => 'stages && stages.length > 1', style: 'float: left; line-height: 35px'}
+          Filter by stage:
+          %select{'ng-model' => 'stageFilter', "ng-options" => "stage for stage in stages", "ng-show" => 'stages'}
+            %option{value: ""} All
+        %button.btn.btn-white{'ng-csv' => responses_filtered,
+                filename: "responses.csv",
+                'csv-header' => "['Name', 'Stage', 'Puzzle', 'Question', 'Response']",
+                'csv-column-order' => "['student.name', 'stage', 'puzzle', 'question', 'response']",
+                style: 'float: right'}
+          %i.fa.fa-download
+          Download CSV
+
+    %tr
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'stage'"}= I18n.t('dashboard_stage')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'puzzle'"}= I18n.t('dashboard_puzzle')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'question'"}= I18n.t('dashboard_question')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'response'"}= I18n.t('dashboard_response')
+    %tr{"ng-repeat" => "response in #{responses_filtered}", "ng-form" => "form"}
+      %td
+        %a{"ng-href" => "#/sections/{{section.id}}/student/{{response.student.id}}"} {{response.student.name}}
+      %td
+        {{response.stage}}
+      %td
+        {{response.puzzle}}
+      %td
+        {{response.question}}
+      %td
+        {{response.response | limitTo:100}}
+        %a{'ng-href' => '{{response.url}}', 'ng-show' => 'response.response.length > 100'} ... see full answer

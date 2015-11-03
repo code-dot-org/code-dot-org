@@ -15,15 +15,6 @@ Dashboard::Application.configure do
   # Show full error reports
   config.consider_all_requests_local       = true
 
-  config.action_controller.perform_caching = true
-  if CDO.memcached_hosts.present?
-    config.cache_store = :mem_cache_store, CDO.memcached_hosts, {
-      value_max_bytes: 1024 * 1024 * 64
-    }
-  else
-    config.cache_store = :memory_store, { size: 64.megabytes }
-  end
-
   config.action_mailer.delivery_method = Poste2::DeliveryMethod
 
   # if you don't want to send mail in development. Messages will be logged in
@@ -65,4 +56,8 @@ Dashboard::Application.configure do
 
   # see stack traces around sql queries in the log
   # ActiveRecordQueryTrace.enabled = true
+
+  # don't act like a levelbuilder by default
+  # set "levelbuilder_mode: true" in locals.yml if you want to be able to create levels or test levelbuilder functionality
+  config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 end

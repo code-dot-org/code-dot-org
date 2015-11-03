@@ -83,12 +83,12 @@ SQL
   def csp_pd_responses
     authorize! :read, :reports
 
-    @headers = ['Level ID', 'ID', 'Data']
+    @headers = ['Level ID', 'User Email', 'Data']
     @response_limit = 100
     @responses = {}
     [3911, 3909, 3910, 3907].each do |level_id|
       # Regardless of the level type, query the DB for teacher repsonses.
-      @responses[level_id] = LevelSource.limit(@response_limit).where(level_id: level_id).pluck(:level_id, :id, :data)
+      @responses[level_id] = LevelSource.limit(@response_limit).where(level_id: level_id).joins(:activities).joins("INNER JOIN users ON activities.user_id = users.id").pluck(:level_id, :email, :data)
 
       # If the level type is multiple choice, get the text answers and replace
       # the numerical responses stored with the corresponding text.
