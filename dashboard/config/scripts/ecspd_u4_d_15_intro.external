@@ -4,20 +4,22 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-## Day 15 Scratch - Conditionals
+## Day 15 Scratch -- Conditionals
 
-First, let's explore the ninth lesson in the curriculum. To begin, find your ECS Version 5 curriculum and open to page 164-165.
+First, let's explore the ninth lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 164-165.
 
 [Access a Digital Copy of the lesson>>](http://code.org/ecs#page=164)
 
 #### Key Concepts
 
 - Students will be introduced to conditionals, using the "if" block and "or" block, and how to use them to enhance a variable program.
-- Students will need files: [age.sb](http://www.exploringcs.org/curriculum), [age solution.sb](http://www.exploringcs.org/curriculum), [age-greater-equal.sb](http://www.exploringcs.org/curriculum).
 
 #### Common Difficulties
 
 The difference between if and else can be confusing for students. In addition creating the conditions for conditionals is probably the trickiest thing for students. Using real world examples and demoing the thought process of creating conditionals will likely be helpful to students.
+<br><br>
+Students will need files: [age.sb](http://www.exploringcs.org/curriculum), [age solution.sb](http://www.exploringcs.org/curriculum), [age-greater-equal.sb](http://www.exploringcs.org/curriculum).
+
 
 #### All Resources for This Lesson
 
@@ -48,8 +50,8 @@ The difference between if and else can be confusing for students. In addition cr
 What examples of conditionals can you come up with from everyday life ?
 
 [<button>Discuss in the forum >></button>](http://forum.code.org/t/u4-day-15-pd-discussion-topic/1897)
-
+<br><br>
 After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
-
+<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
