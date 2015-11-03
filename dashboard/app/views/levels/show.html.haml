@@ -1,6 +1,6 @@
 - @page_title = level_title
 
-- if @script.name == Script::HOC2015_NAME && Gatekeeper.allows('requires_hoc_secret', where: {script_name: @script.name})
+- if @script && @script.name == Script::HOC2015_NAME && Gatekeeper.allows('requires_hoc_secret', where: {script_name: @script.name})
   :javascript
     //<![CDATA[
     console.log(localStorage.getItem('hoc_secret'));
