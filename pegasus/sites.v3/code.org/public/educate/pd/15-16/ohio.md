@@ -221,7 +221,7 @@ Water
 **Save the date**
 
 Tuesday, November 10, 2015 <br/>
-8:30am - 10:00am
+8:00am - 10:00am
 
 **Location**
 

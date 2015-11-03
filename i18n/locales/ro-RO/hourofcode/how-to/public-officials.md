@@ -34,7 +34,7 @@ title: <%= hoc_s(:title_how_to_officials) %> layout: wide nav: how_to_nav
 
   1. **Recruteaza scolile locale si districtele.** Foloseste [acest e-mail](%= resolve_url('/promote/resources#sample-emails') %) sau [acest rezumat](%= resolve_url('/promote/stats') %)ca un punct de plecare si arunca o privire la asta[ghiduri](%= resolve_url('/how-to') %) pentru scoli si comunitati. Aduceti-le la cunostinta **fiecarui** profesor participant ca exista [un cadou de multumire](%= resolve_url('/prizes') %) si in **fiecare stat**, o scoala participanta va castiga **$10,000 in echipamente technologice**!
 
-  2. **Organizati un eveniment Hour of Code.** Vedeti [ghidul nostru](%= resolve_url('/how-to/how-to-event') %) pentru o privire de ansamblu, kit-ul pentru media si alte resurse de organizare a evenimentului. Gazduind un eveniment este un mod extraordinar de a promova Hour of Code si de a creste rata participantilor.
+  2. **Host an Hour of Code event.** See our [event how-to guide](%= resolve_url('/how-to/event') %) for a sample run of show, media outreach kit and other event-planning resources. Gazduind un eveniment este un mod extraordinar de a promova Hour of Code si de a creste rata participantilor.
 
   3. **Participa la un eveniment în timpul săptămânii educatiei in tehnologia computerelor**[Găsiti săli de clasă şi şcoli](%= resolve_url('/events') %) participante în cartier, oras sau stat.</p></li> 
     

@@ -184,7 +184,9 @@ levels.custom = {
     "equalityOperator": null,
     "inequalityOperator": null,
     "greaterThanOperator": null,
+    "greaterThanOrEqualOperator": null,
     "lessThanOperator": null,
+    "lessThanOrEqualOperator": null,
     "andOperator": null,
     "orOperator": null,
     "notOperator": null,
@@ -674,7 +676,7 @@ function renderFooterInSharedGame() {
     },
     {
       text: applabMsg.makeMyOwnApp(),
-      link: '/projects/applab',
+      link: '/projects/applab/new',
       hideOnMobile: true
     },
     {
@@ -994,6 +996,9 @@ Applab.init = function(config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   Applab.channelId = config.channel;
+  if (config.assetPathPrefix) {
+    Applab.assetPathPrefix = config.assetPathPrefix;
+  }
 
   // Pre-populate asset list
   assetsApi.ajax('GET', '', function (xhr) {
@@ -1315,8 +1320,8 @@ Applab.appendToEditor = function(newCode) {
 
 Applab.onMouseDownDebugResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
-
-  if (event.srcElement.id === 'debugResizeBar') {
+  var eventSourceElm = event.srcElement || event.target;
+  if (eventSourceElm.id === 'debugResizeBar') {
     Applab.draggingDebugResizeBar = true;
     document.body.addEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
     Applab.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
@@ -1830,6 +1835,9 @@ Applab.onCodeModeButton = function() {
 
 var HTTP_REGEXP = new RegExp('^http://');
 
+// Exposed for testing
+Applab.assetPathPrefix = "/v3/assets/";
+
 /**
  * If the filename is relative (contains no slashes), then prepend
  * the path to the assets directory for this project to the filename.
@@ -1846,11 +1854,15 @@ Applab.maybeAddAssetPathPrefix = function (filename) {
   }
 
   filename = filename || '';
+  if (filename.length === 0) {
+    return '/blockly/media/1x1.gif';
+  }
+
   if (filename.indexOf('/') !== -1) {
     return filename;
   }
 
-  return '/v3/assets/' + Applab.channelId + '/'  + filename;
+  return Applab.assetPathPrefix + Applab.channelId + '/'  + filename;
 };
 
 /**
@@ -2429,7 +2441,8 @@ module.exports = {
 
 },{}],"/home/ubuntu/staging/apps/build/js/applab/visualization.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -2449,7 +2462,8 @@ return buf.join('');
 }());
 },{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/applab/extraControlRows.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -3243,18 +3257,14 @@ designMode.updateProperty = function(element, name, value) {
       break;
 
     case 'image':
-      var image = new Image();
       var backgroundImage = new Image();
-      var originalImage = element.style.backgroundImage;
+      var originalValue = element.getAttribute('data-canonical-image-url');
       backgroundImage.src = Applab.maybeAddAssetPathPrefix(value);
+      element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
       element.setAttribute('data-canonical-image-url', value);
-      if (backgroundImage.src !== originalImage) {
+      // do not resize if only the asset path has changed (e.g. on remix).
+      if (value !== originalValue) {
         backgroundImage.onload = function() {
-          // remove loader so that API calls dont hit this
-          element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
-          if (originalImage === element.style.backgroundImage) {
-            return;
-          }
           element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
             backgroundImage.naturalHeight + 'px';
           element.style.width = backgroundImage.naturalWidth + 'px';
@@ -3277,11 +3287,11 @@ designMode.updateProperty = function(element, name, value) {
       break;
 
     case 'picture':
-      var originalSrc = element.src;
+      originalValue = element.getAttribute('data-canonical-image-url');
       element.src = Applab.maybeAddAssetPathPrefix(value);
       element.setAttribute('data-canonical-image-url', value);
-
-      if (element.src !== originalSrc) {
+      // do not resize if only the asset path has changed (e.g. on remix).
+      if (value !== originalValue) {
         element.onload = function () {
           // naturalWidth/Height aren't populated until image has loaded.
           element.style.width = element.naturalWidth + 'px';
@@ -3498,7 +3508,8 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
     elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
   });
   children.children().each(function() {
-    elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
+    var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
+    elementLibrary.onDeserialize(element, designMode.updateProperty.bind(element));
   });
 };
 
@@ -3583,8 +3594,8 @@ function makeDraggable (jqueryElements) {
           widthProperty = 'width';
           heightProperty = 'height';
         }
-        designMode.updateProperty(element, widthProperty, element.style.width);
-        designMode.updateProperty(element, heightProperty, element.style.height);
+        designMode.onPropertyChange(element, widthProperty, element.style.width);
+        designMode.onPropertyChange(element, heightProperty, element.style.height);
 
         highlightElement(elm[0]);
       }
@@ -3917,7 +3928,8 @@ designMode.resetIds = function() {
 
 },{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","./DesignToggleRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/DesignToggleRow.jsx","./DesignWorkspace.jsx":"/home/ubuntu/staging/apps/build/js/applab/DesignWorkspace.jsx","./assetManagement/show.js":"/home/ubuntu/staging/apps/build/js/applab/assetManagement/show.js","./designElements/elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js","./designElements/library":"/home/ubuntu/staging/apps/build/js/applab/designElements/library.js"}],"/home/ubuntu/staging/apps/build/js/applab/controls.html.ejs":[function(require,module,exports){
 module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
+  var t = function anonymous(locals, filters, escape
+/**/) {
 escape = escape || function (html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -9944,106 +9956,7 @@ module.exports = {
 };
 
 
-},{"./BooleanPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/BooleanPropertyRow.jsx","./ColorPickerPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ColorPickerPropertyRow.jsx","./EventHeaderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventHeaderRow.jsx","./EventRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventRow.jsx","./ImagePickerPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ImagePickerPropertyRow.jsx","./PropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/PropertyRow.jsx","./ZOrderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ZOrderRow.jsx","./elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js"}],"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js":[function(require,module,exports){
-var constants = require('../constants');
-var utils = require('../../utils');
-
-// Taken from http://stackoverflow.com/a/3627747/2506748
-module.exports.rgb2hex = function (rgb) {
-  if (rgb === '') {
-    return rgb;
-  }
-  var parsed = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-  if (parsed === null) {
-    return rgb;
-  }
-  function hex(x) {
-    return ("0" + parseInt(x).toString(16)).slice(-2);
-  }
-  return "#" + hex(parsed[1]) + hex(parsed[2]) + hex(parsed[3]);
-};
-
-/**
- * Gets the element's id, stripping the prefix.
- * @param element {Element}
- * @param prefix {string} Optional. Defaults to DESIGN_ELEMENT_ID_PREFIX.
- * @returns {string} The element id with prefix stripped, or null if it had no id.
- */
-var getId = module.exports.getId = function (element, prefix) {
-  var elementId = element.getAttribute('id');
-  if (elementId === null) {
-    return null;
-  }
-  prefix = utils.valueOr(prefix, constants.DESIGN_ELEMENT_ID_PREFIX);
-  checkId(element, prefix);
-  return elementId.substr(prefix.length);
-};
-
-/**
- * Sets the element's id, adding the prefix.
- * @param element {Element}
- * @param value (string)
- * @param prefix {string} Optional. Defaults to DESIGN_ELEMENT_ID_PREFIX.
- */
-var setId = module.exports.setId = function (element, value, prefix) {
-  if (value === null) {
-    return;
-  }
-  prefix = utils.valueOr(prefix, constants.DESIGN_ELEMENT_ID_PREFIX);
-  element.setAttribute('id', prefix + value);
-};
-
-/**
- * Throws an error if the element's id does not start with the prefix.
- * @param element {Element}
- * @param prefix {string}
- */
-function checkId(element, prefix) {
-  if (element.id.substr(0, prefix.length) !== prefix) {
-    throw new Error('element.id "' + element.id + '" does not start with prefix "' + prefix + '".');
-  }
-}
-
-/**
- * Add the prefix to the elementId and returns the element with that id.
- * @param elementId {string}
- * @param prefix {string} Optional. Defaults to DESIGN_ELEMENT_ID_PREFIX.
- * @returns {Element}
- */
-module.exports.getPrefixedElementById = function(elementId, prefix) {
-  prefix = prefix === undefined ? constants.DESIGN_ELEMENT_ID_PREFIX : prefix;
-  return document.getElementById(prefix + elementId);
-};
-
-/**
- * Adds the prefix to the element's id.
- * @param element {Element}
- * @param prefix {string} Optional prefix to add. Defaults to ''.
- * @returns {Element}
- */
-module.exports.addIdPrefix = function (element, prefix) {
-  prefix = utils.valueOr(prefix, '');
-  setId(element, element.getAttribute('id'), prefix);
-};
-
-/**
- * Removes the DESIGN_ELEMENT_ID_PREFIX from the element's id.
- * @param element {Element}
- * @returns {Element}
- */
-module.exports.removeIdPrefix = function (element) {
-  element.setAttribute('id', getId(element));
-};
-
-
-},{"../../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../constants":"/home/ubuntu/staging/apps/build/js/applab/constants.js"}],"/home/ubuntu/staging/apps/build/js/applab/constants.js":[function(require,module,exports){
-module.exports = {
-  FOOTER_HEIGHT: 30,
-  DESIGN_ELEMENT_ID_PREFIX: 'design_'
-};
-
-
-},{}],"/home/ubuntu/staging/apps/build/js/applab/designElements/ZOrderRow.jsx":[function(require,module,exports){
+},{"./BooleanPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/BooleanPropertyRow.jsx","./ColorPickerPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ColorPickerPropertyRow.jsx","./EventHeaderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventHeaderRow.jsx","./EventRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/EventRow.jsx","./ImagePickerPropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ImagePickerPropertyRow.jsx","./PropertyRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/PropertyRow.jsx","./ZOrderRow.jsx":"/home/ubuntu/staging/apps/build/js/applab/designElements/ZOrderRow.jsx","./elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js"}],"/home/ubuntu/staging/apps/build/js/applab/designElements/ZOrderRow.jsx":[function(require,module,exports){
 var rowStyle = require('./rowStyle');
 
 var ZOrderRow = React.createClass({displayName: "ZOrderRow",
@@ -10132,6 +10045,8 @@ module.exports = ZOrderRow;
 },{"./rowStyle":"/home/ubuntu/staging/apps/build/js/applab/designElements/rowStyle.js"}],"/home/ubuntu/staging/apps/build/js/applab/designElements/PropertyRow.jsx":[function(require,module,exports){
 /* global $ */
 var rowStyle = require('./rowStyle');
+var elementUtils = require('./elementUtils');
+var utils = require('../../utils');
 
 var LockState = {
   LOCKED: 'LOCKED',
@@ -10155,18 +10070,39 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
 
   getInitialState: function () {
     return {
-      value: this.props.initialValue
+      value: this.props.initialValue,
+      isValidValue: true
     };
   },
 
   componentWillReceiveProps: function (newProps) {
-    this.setState({value: newProps.initialValue});
+    this.setState({
+      value: newProps.initialValue,
+      isValidValue: true
+    });
   },
 
   handleChangeInternal: function(event) {
     var value = event.target.value;
-    this.props.handleChange(value);
-    this.setState({value: value});
+    var isValidValue = !this.props.isIdRow || elementUtils.isIdAvailable(value, this.props.initialValue);
+    this.setValue(value, isValidValue);
+  },
+
+  /**
+   * Updates this component's state, and calls the change handler
+   * only if the new value is valid.
+   * @param value {string} The new value of the property row.
+   * @param isValidValue {boolean} Whether the value is valid. Default: true.
+   */
+  setValue: function (value, isValidValue) {
+    isValidValue = utils.valueOr(isValidValue, true);
+    this.setState({
+      value: value,
+      isValidValue: isValidValue
+    });
+    if (isValidValue) {
+      this.props.handleChange(value);
+    }
   },
 
   handleClickLock: function () {
@@ -10177,10 +10113,20 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
     }
   },
 
+  onIdRowBlur: function() {
+    if (!this.state.isValidValue) {
+      var value = this.props.initialValue;
+      this.setValue(value);
+    }
+  },
+
   render: function() {
     var idRowStyle = $.extend({}, rowStyle.container, rowStyle.maxWidth, {
       backgroundColor: '#a69bc1',
       paddingBottom: 10
+    });
+    var inputStyle = $.extend({}, rowStyle.input, {
+      backgroundColor: this.state.isValidValue ? null : "#ffcccc"
     });
 
     var inputElement;
@@ -10193,7 +10139,8 @@ var PropertyRow = React.createClass({displayName: "PropertyRow",
         type: this.props.isNumber ? 'number' : undefined, 
         value: this.state.value, 
         onChange: this.handleChangeInternal, 
-        style: rowStyle.input});
+        onBlur: this.props.isIdRow ? this.onIdRowBlur : null, 
+        style: inputStyle});
     }
 
     var lockStyle = {
@@ -10228,7 +10175,139 @@ PropertyRow.LockState = LockState;
 module.exports = PropertyRow;
 
 
-},{"./rowStyle":"/home/ubuntu/staging/apps/build/js/applab/designElements/rowStyle.js"}],"/home/ubuntu/staging/apps/build/js/applab/designElements/ImagePickerPropertyRow.jsx":[function(require,module,exports){
+},{"../../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./elementUtils":"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js","./rowStyle":"/home/ubuntu/staging/apps/build/js/applab/designElements/rowStyle.js"}],"/home/ubuntu/staging/apps/build/js/applab/designElements/elementUtils.js":[function(require,module,exports){
+var constants = require('../constants');
+var utils = require('../../utils');
+
+// Taken from http://stackoverflow.com/a/3627747/2506748
+module.exports.rgb2hex = function (rgb) {
+  if (rgb === '') {
+    return rgb;
+  }
+  var parsed = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+  if (parsed === null) {
+    return rgb;
+  }
+  function hex(x) {
+    return ("0" + parseInt(x).toString(16)).slice(-2);
+  }
+  return "#" + hex(parsed[1]) + hex(parsed[2]) + hex(parsed[3]);
+};
+
+/**
+ * Gets the element's id, stripping the prefix.
+ * @param element {Element}
+ * @param prefix {string} Optional. Defaults to DESIGN_ELEMENT_ID_PREFIX.
+ * @returns {string} The element id with prefix stripped, or null if it had no id.
+ */
+var getId = module.exports.getId = function (element, prefix) {
+  var elementId = element.getAttribute('id');
+  if (elementId === null) {
+    return null;
+  }
+  prefix = utils.valueOr(prefix, constants.DESIGN_ELEMENT_ID_PREFIX);
+  checkId(element, prefix);
+  return elementId.substr(prefix.length);
+};
+
+/**
+ * Sets the element's id, adding the prefix.
+ * @param element {Element}
+ * @param value (string)
+ * @param prefix {string} Optional. Defaults to DESIGN_ELEMENT_ID_PREFIX.
+ */
+var setId = module.exports.setId = function (element, value, prefix) {
+  if (value === null) {
+    return;
+  }
+  prefix = utils.valueOr(prefix, constants.DESIGN_ELEMENT_ID_PREFIX);
+  element.setAttribute('id', prefix + value);
+};
+
+/**
+ * Throws an error if the element's id does not start with the prefix.
+ * @param element {Element}
+ * @param prefix {string}
+ */
+function checkId(element, prefix) {
+  if (element.id.substr(0, prefix.length) !== prefix) {
+    throw new Error('element.id "' + element.id + '" does not start with prefix "' + prefix + '".');
+  }
+}
+
+/**
+ * Add the prefix to the elementId and returns the element with that id.
+ * @param elementId {string}
+ * @param prefix {string} Optional. Defaults to DESIGN_ELEMENT_ID_PREFIX.
+ * @returns {Element}
+ */
+var getPrefixedElementById = module.exports.getPrefixedElementById = function(elementId, prefix) {
+  prefix = prefix === undefined ? constants.DESIGN_ELEMENT_ID_PREFIX : prefix;
+  return document.getElementById(prefix + elementId);
+};
+
+/**
+ * Adds the prefix to the element's id.
+ * @param element {Element}
+ * @param prefix {string} Optional prefix to add. Defaults to ''.
+ * @returns {Element}
+ */
+module.exports.addIdPrefix = function (element, prefix) {
+  prefix = utils.valueOr(prefix, '');
+  setId(element, element.getAttribute('id'), prefix);
+};
+
+/**
+ * Removes the DESIGN_ELEMENT_ID_PREFIX from the element's id.
+ * @param element {Element}
+ * @returns {Element}
+ */
+module.exports.removeIdPrefix = function (element) {
+  element.setAttribute('id', getId(element));
+};
+
+/**
+ * Returns true if newId is available and won't collide with
+ * other elements in design mode or the rest of applab.
+ * @param {string} newId The id to evaluate.
+ * @param {string} originalId The original id of this element.
+ *     This will always be a valid value for newId.
+ * @returns {boolean}
+ */
+module.exports.isIdAvailable = function(newId, originalId) {
+  if (!newId) {
+    return false;
+  }
+  if (newId === originalId) {
+    return true;
+  }
+
+  // Don't allow if any other element in design mode has this prefixed id.
+  if (getPrefixedElementById(newId)) {
+    return false;
+  }
+
+  // Don't allow if any element outside of divApplab has this id.
+  //
+  // Elements in divApplab must be ignored since divApplab may be stale
+  // with respect to what's in design mode, and we already caught any
+  // collisions with design mode elements in the previous condition.
+  var element = document.getElementById(newId);
+  if (element && !$('#divApplab').find(element)[0]) {
+    return false;
+  }
+
+  return true;
+};
+
+},{"../../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../constants":"/home/ubuntu/staging/apps/build/js/applab/constants.js"}],"/home/ubuntu/staging/apps/build/js/applab/constants.js":[function(require,module,exports){
+module.exports = {
+  FOOTER_HEIGHT: 30,
+  DESIGN_ELEMENT_ID_PREFIX: 'design_'
+};
+
+
+},{}],"/home/ubuntu/staging/apps/build/js/applab/designElements/ImagePickerPropertyRow.jsx":[function(require,module,exports){
 var showAssetManager = require('../assetManagement/show.js');
 var rowStyle = require('./rowStyle');
 

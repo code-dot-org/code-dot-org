@@ -58,11 +58,11 @@ Ambele tipuri de şcoli - americane sau non-americane: toti organizatorii sunt e
 
 ## Este vreun termen limita în a te inscrie pentru a primi premiul universal pentru organizatori?
 
-Trebuie să te inregistrezi **înainte de** < % = campaign_date('start_long') %> pentru a fi eligibil sa primesti toate cadourile de multumire ale organizatorilor.
+Trebuie să te inregistrezi **înainte de** <%= campaign_date('start_long') %> pentru a fi eligibil sa primesti toate cadourile de multumire ale organizatorilor.
 
 ## Cand îmi voi primi cadoul de mulțumire?
 
-Va vom contacta in decembrie după Saptamana Educatiei in tehnologia computerelor(< % = campaign_date('full') %>) cu următorii paşi pentru a intra in posesia premiilor de multumire.
+Va vom contacta in decembrie după Saptamana Educatiei in tehnologia computerelor(<%= campaign_date('full') %>) cu următorii paşi pentru a intra in posesia premiilor de multumire.
 
 ## Pot intra in posesia tuturor variantelor de premii de multumire?
 

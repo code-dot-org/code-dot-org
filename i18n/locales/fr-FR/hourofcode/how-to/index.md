@@ -11,10 +11,10 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
   * Inscrivez-vous pour organiser un évènement [Une Heure de Code](%= resolve_url('/') %) en tant qu'hôte <%= campaign_date('short') %>.
   * Promouvoir votre [Heure de Code](%= resolve_url('/promote') %) et encouragez les autres à en organiser.
 
-## 2) Regardez cette vidéo explicative <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Regardez cette vidéo de présentation <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Choisissez un tutoriel :
 
-Nous proposerons de nombreux [tutoriels amusants, d'une heure](%= resolve_url('https://code.org/learn') %) pour les participants de tout âge, grâce à nos partenaires. *de nouveaux tutoriels seront disponibles pour débuter Une Heure de Code < % = campaign_date('full') %>.* [Essayez les tutoriels actuellement disponibles.](%= resolve_url("https://code.org/learn") %)</p> 
+Nous proposerons de nombreux [tutoriels amusants, d'une heure](%= resolve_url('https://code.org/learn') %) pour les participants de tout âge, grâce à nos partenaires. *De nouveaux tutoriels seront disponibles pour débuter Une Heure de Code avant <%= campaign_date('full') %>.* [Essayez les tutoriels actuellement disponibles.](%= resolve_url("https://code.org/learn") %)</p> 
 
 **Tous les tutoriels Heure de Code:**
 
@@ -29,7 +29,7 @@ Une expérience Une Heure de Code enrichissante nécessite des ordinateurs conne
 
   * Testez les tutoriels sur les ordinateurs ou appareils mis à votre disposition. Assurez-vous qu'ils fonctionnent correctement sur les navigateurs, notamment le son et la vidéo.
   * Fournir des écouteurs dans votre classe, ou demandez aux élèves d'apporter les leurs, si le tutoriel que vous choisissez fonctionne mieux avec le son.
-  * **Vous n'avez pas suffisamment de materiel informatique ?** Utilisez la [paire de programmation](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quand les élèves sont en équipe, ils s'entraident et sollicitent moins leur enseignant. Ils verront ainsi que l'informatique est une discipline sociale et collaborative.
+  * **Vous n'avez pas suffisamment de materiel informatique ?** Mettez en place [des binômes pour la programmation](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quand les élèves sont en équipe, ils s'entraident et sollicitent moins leur enseignant. Ils verront ainsi que l'informatique est une discipline sociale et collaborative.
   * **Vous avez une connexion internet lente ?** Prévoyez de montrer les vidéos devant toute la classe, ainsi, les élèves n'auront pas à les télécharger. Autrement, essayez les tutoriels qui ne requièrent pas de connexion.
 
 ![](/images/fit-350/group_ipad.jpg)
@@ -49,7 +49,7 @@ Une expérience Une Heure de Code enrichissante nécessite des ordinateurs conne
 
   * Expliquez la manière dont les nouvelles technologies impactent notre vie, avec des exemples qui parleront aux garçons et aux filles (parlez des technologies qui permettent de sauver des vies, d'aider les gens, ou de relier les personnes entre elles, etc..).
   * En classe, effectuer une liste des choses qui requièrent du code dans la vie quotidienne.
-  * Consultez les conseils pour intéresser les jeunes filles à l'informatique[ ici](<%= resolve_url('https://code.org/girls') %>).
+  * See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
 **Besoin de plus de conseils ?** Téléchargez ce [cet exemple de leçon](/files/EducatorHourofCodeLessonPlanOutline.docx).
 

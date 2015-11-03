@@ -9,7 +9,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 # Насърчаване на Часът на кода
 
-## Домакинли сте на часът на кода? <a href = "< % = resolve_url('/how-to') % >" > Вижте помощното ръководство</a>
+## Домакинли сте на часът на кода? <a
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 

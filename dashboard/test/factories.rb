@@ -92,6 +92,10 @@ FactoryGirl.define do
         level.save!
       end
     end
+
+    trait :script do
+      create(:script_level)
+    end
   end
 
   factory :unplugged, :parent => Level, :class => Unplugged do
@@ -145,9 +149,10 @@ FactoryGirl.define do
   end
 
   factory :script_level do
-    stage
-    script do |script_level|
-      script_level.stage.script
+    script
+
+    stage do |script_level|
+      create(:stage, script: script_level.script)
     end
 
     trait :with_autoplay_video do

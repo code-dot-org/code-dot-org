@@ -149,9 +149,13 @@ def campaign_date(format)
   end
 end
 
+def all_unique_events
+  DB[:forms].where(kind: 'HocSignup2015').group(:name, :email).select(:name, :email, :processed_data, :data)
+end
+
 def company_count
   company_count = 0;
-  DB[:forms].where(kind: 'HocSignup2015').each do |i|
+  all_unique_events.each do |i|
     data = JSON.parse(i[:data])
     if data['hoc_company_s'] == @company
       company_count += 1
@@ -162,7 +166,7 @@ end
 
 def country_count
   country_count = 0;
-  DB[:forms].where(kind: 'HocSignup2015').each do |i|
+  all_unique_events.each do |i|
     unless i[:processed_data].nil?
       data = JSON.parse(i[:processed_data])
       code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
@@ -181,4 +185,8 @@ end
 
 def country_full_name
   return HOC_COUNTRIES[@country]['full_name']
+end
+
+def total_hoc_count
+  all_unique_events.count
 end

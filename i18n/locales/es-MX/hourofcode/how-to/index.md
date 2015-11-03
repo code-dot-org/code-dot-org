@@ -19,7 +19,7 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 **Todos los tutoriales de la Hora de Código:**
 
   * Requieren un tiempo de preparación mínimo para los profesores
-  * Son de auto aprendizaje, lo que permite a los estudiantes trabajar a su propio ritmo y habilidad
+  * Son de auto aprendizaje, lo que permite a los estudiantes trabajar a su propio ritmo y según su habilidad
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
@@ -30,7 +30,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
   * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
   * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
   * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Cuando los estudiantes trabajan en pares, se ayudan el uno al otro y dependen menos del profesor. Además se dan cuenta de que la informática es una actividad social y colaborativa.
-  * **¿Tiene un ancho de banda limitado?** Muestre los videos al frente del salón de clase, para evitar que cada estudiante descargue el video. O pruebe con los tutoriales desconectados/fuera de línea.
+  * **¿Tiene un ancho de banda limitado?** Muestre los videos con el proyector de clase, para evitar que cada estudiante descargue el video. O pruebe con los tutoriales sin conexión/fuera de línea.
 
 ![](/images/fit-350/group_ipad.jpg)
 
@@ -49,7 +49,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
   * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
   * As a class, list things that use code in everyday life.
-  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+  * See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
 **Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
 

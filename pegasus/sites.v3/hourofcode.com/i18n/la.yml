@@ -228,7 +228,7 @@ la:
   signup_event_location_label: Lugar del evento (opcional)
   signup_special_event_flag_label: Destaca mi evento especial
   signup_special_event_details_label: Detalles del evento destacado
-  signup_send_posters_flag_label: 'Envía <a href= "/resources#posters">carteles</a> a mi colegio, instituto u organización'
+  signup_send_posters_flag_label: 'Envía <a href= "/resources#posters">carteles</a> a mi colegio, instituto u organización (sólo EEUU)'
   signup_send_posters_address_label: Dirección de la escuela u organización
   signup_whole_school_flag_label: Este evento es para toda la escuela
   signup_your_event: Registra tu evento
@@ -252,6 +252,9 @@ la:
   map_search_placeholder: Buscar eventos de la Hora del Código
   map_search_search: Buscar
   map_search_reset: Reestablecer
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: La Hora del Código está aquí
   meta_tag_og_description: La Hora del Código es un movimiento global en el que participan decenas de millones de estudiantes en más de 180 países y en más de 40 idiomas, con edades comprendidas entre 4 y 104 años.
   meta_tag_twitter_title: La Hora del Código está aquí
@@ -310,13 +313,13 @@ la:
   hoc_faq_frozen_a: "Ahora está disponible en <a href='http://code.org/learn'>Code.org/learn</a>. ¡Esperamos que lo disfruten!"
   hoc_faq_high_school_q: ¿Qué actividad puedo hacer con estudiantes de secundaria?
   hoc_faq_high_school_a: "Independientemente de la edad, recomendamos hacer uno de los tutoriales para principiantes en <a href='http://code.org/learn'>Code.org/learn</a> para empezar, como el tutorial con Angry Birds o el de Elsa y Anna. Un estudiante de secundaris debería ser capaz de terminar uno de estos en 30 minutos y puede luego probar tutoriales más avanzados en JavaScript, como Khan Academy o CodeHS."
-  hoc_faq_scratch_q: Enseño Scratch para la Hora del Código, pero ¿qué pasa si mis estudiantes usan iPads en lugar de laptops?
+  hoc_faq_scratch_q: Enseño Scratch para la Hora del Código, pero ¿qué pasa si mis estudiantes usan iPads en lugar de ordenadores portátiles?
   hoc_faq_scratch_a: "Scratch no funciona en tabletas. Si tus estudiantes son jóvenes, puden usar la aplicación ScratchJR para iPad. Si buscas en los tutoriales en <a href='http://code.org/learn'>Code.org/learn</a>, puedes encontrar otros que funcionan en iPads - de Code.org, Tynker, Lightbot o CodeSpark."
   hoc_faq_count_hoc_q: ¿Cómo se cuentan las Horas del Código?
   hoc_faq_count_hoc_a: "El seguimiento de la Hora del Código no es una medición exacta del uso. No contamos las identificaciones únicas de los estudiantes con precisión cuando hacemos seguimiento de la participación en la Hora del Código, sobre todo porque no requerimos que los estudiantes inicien sesión o se registren. Como resultado, no podemos contar el número de participantes que trabajan al mismo tiempo. Conoce todos los detalles <a href='http://code.org/loc'> aquí</a>."
   stats_hoc_2013_image_alt: Estadísticas de la Hora del Código de 2013
-  stats_growth: Fue el más rápido para llegar a 15 millones de usuarios.
-  stats_i18n: Los estudiantes están aprendiendo en más de 30 idiomas
+  stats_growth: Fue el más rápido alcanzando 15 millones de usuarios.
+  stats_i18n: Los estudiantes están aprendiendo en 40 idiomas
   stats_tumblr: 'Tumblr: 3.5 años'
   stats_facebook: 'Facebook: 3 años'
   stats_twitter: 'Twitter: 2.5 años'
@@ -341,9 +344,9 @@ la:
   resources_emails: Correos electrónicos de muestra
   resources_logo: 'Logo "La Hora del código"'
   resources_stats: Estadísticas útiles y viñetas
-  resources_press_kit: Juego de prensa
+  resources_press_kit: Paquete de prensa
   resources_social: Social
-  resources_country_resources: Recursos
+  resources_country_resources: Recursos para países específicos
   resources_stickers: Pegatinas
   resources_how_to_guides: Guías y ayuda
   resources_promote: Promueve
@@ -363,7 +366,7 @@ la:
   videos_hoc_2014: 'La Hora del Código ha llegado - Todo el mundo puede aprender'
   videos_obama_cs: Presidente Obama en las ciencias de la computación
   videos_anybody_can_learn: Todo el mundo puede aprender (1 min)
-  title_country_resources: Recursos
+  title_country_resources: Recursos para países específicos
   title_how_to_districts: Guía de la Hora de código para los distritos
   title_how_to_events: Como organizar un evento de la Hora del código
   title_how_to_organizations: 'Cómo hospedar un hora de código - organizaciones'
@@ -373,9 +376,9 @@ la:
   title_how_to: Guías rápidas
   title_press_release: Versión de prensa de la hora del código para funcionarios electos
   title_op_ed: Ejemplo de apoyo a la Semana de Educación para las Ciencias de la Computación y la Hora del Código
-  title_press_kit: Juego de prensa
+  title_press_kit: Paquete de prensa
   title_proclamation: Resolución de ejemplo de soporte a la Semana de la Educación de las Ciencias de la Computación y la Hora del Código
-  title_stats: Extractos y estadísticas
+  title_stats: Publicidad y estadísticas
   title_partners: Socios
   title_prizes_faq: Preguntas frecuentes sobre los Premios
   title_prizes_terms: Términos de premios

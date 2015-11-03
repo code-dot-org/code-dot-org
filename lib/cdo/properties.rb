@@ -26,10 +26,14 @@ class Properties
 
   def self.get_user_metrics()
     self.get(:about_stats)||{
-      'percent_female'=>48,
+      # The percentage of users with user_type = 'student' and last_sign_in_at != null and
+      # gender != null that have gender = 'f' (circa Oct 2015).
+      'percent_female'=>42,
       'number_served'=>119410701,
-      'number_students'=>5420082,
-      'number_teachers'=>124291
+      # The number of users with user_type = 'student' and last_sign_in_at != null (circa Oct 2015).
+      'number_students'=>5035892,
+      # The number of users with user_type = 'teacher' and last_sign_in_at != null (circa Oct 2015).
+      'number_teachers'=>178289
     }
   end
 
@@ -57,6 +61,8 @@ def fetch_hoc_metrics()
     'cities'=>{'Seattle'=>0},
     'countries'=>{'United States'=>0},
   }
+  # Increase the 'started' metric by 409K to reflect participant count from surveys, circa
+  # February 2014.
   metrics['started'] += 409216
   metrics
 end

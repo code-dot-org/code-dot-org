@@ -154,6 +154,12 @@ class ApplicationController < ActionController::Base
       end
     end
 
+    if PuzzleRating.enabled?
+      if script_level && PuzzleRating.can_rate?(script_level.script, script_level.level, current_user)
+        response[:puzzle_rating_url] = puzzle_ratings_path
+      end
+    end
+
     # logged in users can:
     if current_user
       # save solved levels to a gallery (subject to
@@ -195,5 +201,11 @@ class ApplicationController < ActionController::Base
 
   def set_locale_cookie(locale)
     cookies[:language_] = { value: locale, domain: :all, expires: 10.years.from_now}
+  end
+
+  def require_levelbuilder_mode
+    unless Rails.application.config.levelbuilder_mode
+      raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
+    end
   end
 end

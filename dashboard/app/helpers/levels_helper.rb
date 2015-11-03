@@ -232,6 +232,7 @@ module LevelsHelper
     # Script-dependent option
     script = @script
     app_options[:scriptId] = script.id if script
+    app_options[:scriptName] = script.name if script
 
     # ScriptLevel-dependent option
     script_level = @script_level
@@ -298,6 +299,7 @@ module LevelsHelper
         fallback_response: @fallback_response,
         callback: @callback,
     }
+
     level_options[:lastAttempt] = @last_attempt
 
     if current_user.nil? || current_user.teachers.empty?

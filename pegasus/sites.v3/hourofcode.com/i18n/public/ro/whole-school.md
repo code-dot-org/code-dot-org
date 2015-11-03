@@ -1,7 +1,7 @@
 ---
 
-titlu: < % = hoc_s(:title_whole_school) %>
-aspect: largă
+title: <%= hoc_s(:title_whole_school) %>
+layout: wide
 
 ---
 

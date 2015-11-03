@@ -32,10 +32,21 @@ class DatastoreCache
     set_local(key, value)
   end
 
+  # Return all cached elements
+  def all
+    @cache
+  end
+
   # Clear the datastore
   def clear
     @cache = {}
     @datastore.clear
+  end
+
+  # When unicorn preload the app and then forks worker processes the update_thread
+  # doesn't make it to the other processes.  Restart it here
+  def after_fork
+    @update_thread = spawn_update_thread unless @update_thread && @update_thread.alive?
   end
 
   private

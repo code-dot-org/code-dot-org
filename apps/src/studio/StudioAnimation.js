@@ -13,11 +13,9 @@
  */
 'use strict';
 
-var constants = require('./constants');
 var utils = require('../utils');
-
-// The SVG namespace that must be applied to new SVG elements
-var SVG_NS = "http://www.w3.org/2000/svg";
+var SVG_NS = require('../constants').SVG_NS;
+var constants = require('./constants');
 
 // Unique element ID that increments by 1 each time an element is created
 var uniqueId = 0;

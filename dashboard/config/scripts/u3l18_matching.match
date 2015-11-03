@@ -1,0 +1,10 @@
+name 'U3L18 Matching'
+title 'Matching: Comparison Operators'
+description 'Match the boolean expression using comparison operators to the English description'
+question 'Is x less than 3?'
+answer 'x&lt;3'
+question "Is the value of the variable 'blue' equal to the string blue?"
+answer "blue == 'blue'"
+question "Is the value of the variable 'dice' not equal to 5?"
+answer "dice != 5"
+

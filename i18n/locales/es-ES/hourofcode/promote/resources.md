@@ -104,7 +104,7 @@ Nuestra hora de código es una declaración que [nombre de la escuela] está lis
 
 Esta es una oportunidad para cambiar el futuro de la educación en [nombre de la ciudad].
 
-Ver http://hourofcode.com/ < % = @country %> para más detalles y ayudar a difundir la palabra.
+Ver http://hourofcode.com/ <%= @country %> para más detalles y ayudar a difundir la palabra.
 
 Atentamente,
 

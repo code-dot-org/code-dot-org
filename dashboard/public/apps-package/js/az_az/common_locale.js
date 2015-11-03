@@ -322,7 +322,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "finalStageTrophies":function(d){return "Təbriklər! Siz sonuncu mərhələni tamamladınız və "+common_locale.p(d,"numTrophies",0,"en",{"one":"bir kubok","other":common_locale.n(d,"numTrophies")+" kubok"})+" qazandınız."},
 "finish":function(d){return "Son"},
 "generatedCodeInfo":function(d){return "Even top universities teach block-based coding (e.g., "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"},
-"genericFeedback":function(d){return "See how you ended up, and try to fix your program."},
+"genericFeedback":function(d){return "Not quite; this level requires specific blocks."},
 "hashError":function(d){return "Təəssüf ki, '%1' yaddaşa verilmiş heç bir proqramla uyğunlaşmır."},
 "help":function(d){return "Kömək"},
 "hideToolbox":function(d){return "(Hide)"},
@@ -393,6 +393,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "when":function(d){return "nə zaman"},
 "whenRun":function(d){return "icra etdikdə"},
 "workspaceHeaderShort":function(d){return "iş sahəsi: "},
+"completedWithoutRecommendedBlock":function(d){return "Congratulations! You completed Puzzle "+common_locale.v(d,"puzzleNumber")+". (But you could use a different block for stronger code.)"},
 "dropletBlock_mathRandom_description":function(d){return "Returns a random number ranging from 0 (inclusive) up to but not including 1 (exclusive)"},
 "dropletBlock_mathRandom_signatureOverride":function(d){return "Math.random()"},
 "dropletBlock_randomNumber_param0":function(d){return "min"},
@@ -400,6 +401,9 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_randomNumber_param1":function(d){return "max"},
 "dropletBlock_randomNumber_param1_description":function(d){return "The maximum number returned"},
 "dropletBlock_randomNumber_signatureOverride":function(d){return "randomNumber(min, max)"},
+"missingRecommendedBlocksErrorMsg":function(d){return "Not quite. Try using a block you aren’t using yet."},
+"missingRequiredBlocksErrorMsg":function(d){return "Not quite. You have to use a block you aren’t using yet."},
 "unsubmit":function(d){return "Unsubmit"},
 "unsubmitYourProject":function(d){return "Unsubmit your project"},
-"unsubmitYourProjectConfirm":function(d){return "Unsubmitting your project will reset the submitted date, really unsubmit?"}};
+"unsubmitYourProjectConfirm":function(d){return "Unsubmitting your project will reset the submitted date, really unsubmit?"},
+"tryBlocksBelowFeedback":function(d){return "Try using one of the blocks below:"}};

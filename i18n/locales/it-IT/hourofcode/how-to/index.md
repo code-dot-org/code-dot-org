@@ -4,11 +4,11 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 * * *
 
-# Come insegnare un'Ora di Codice
+# Come insegnare un'Ora del Codice
 
 ## 1) Sign up
 
-  * Sign up to host an [Hour of Code](%= resolve_url('/') %) during <%= campaign_date('short') %>.
+  * Iscriviti per organizzare un'[Ora del Codice](%= resolve_url('/') %) <%= campaign_date('short') %>.
   * Promote your [Hour of Code](%= resolve_url('/promote') %) and encourage others to host.
 
 ## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
@@ -49,7 +49,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
   * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
   * As a class, list things that use code in everyday life.
-  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+  * See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
 **Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
