@@ -2636,6 +2636,9 @@ function spriteFrameNumber (index, opts) {
 
   if (opts && opts.walkDirection) {
     var direction = constants.frameDirTableWalking[sprite.displayDir];
+
+    // If there are extra emotions sprites, and the actor is facing forward,
+    // use the emotion sprites (last columns of the walking sprite sheet).
     if (direction === 0 && sprite.frameCounts.extraEmotions > 0 && sprite.emotion !== 0) {
       return sprite.frameCounts.turns + sprite.emotion - 1;
     }
@@ -3019,7 +3022,8 @@ Studio.displaySprite = function(i, isWalking) {
 
     xOffset = sprite.drawWidth * spriteFrameNumber(i);
 
-    // For new versions of sprites (iceage/gumball), a yoffset is required for emotions
+    // For new versions of sprites (iceage/gumball), there are additional rows of
+    // idle animations for each emotion.
     if (sprite.frameCounts.extraEmotions > 0) {
       yOffset = sprite.drawHeight * sprite.emotion;
     } else {
