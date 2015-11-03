@@ -38,3 +38,29 @@ Scenario: App Lab UI elements from initial code and html
   And I wait until element "#runButton" is visible
   Then I see no difference for "design mode elements in design mode"
   And I close my eyes
+
+Scenario: Text area with multiple lines, radio button, checkbox
+  Given I manually sign in as "ApplabStudent"
+  And I start a new Applab project
+  And I rotate to landscape
+  And I switch to design mode
+  And I open my eyes to test "applab design mode"
+
+  Then I drag a TEXT_AREA into the app
+  And I press keys "This is a lot of text that should wrap onto a second line" for element "#design-properties textarea"
+  And I set input "xpos" to "0"
+  And I set input "ypos" to "0"
+  Then I see no difference for "text area in upper left"
+  Then I delete the current design mode element
+
+  Then I drag a RADIO_BUTTON into the app
+  And I set groupable input "xpos" to "0"
+  And I set groupable input "ypos" to "0"
+  Then I see no difference for "radio button in upper left"
+  Then I delete the current design mode element
+
+  Then I drag a CHECKBOX into the app
+  And I set input "xpos" to "0"
+  And I set input "ypos" to "0"
+  Then I see no difference for "checkbox in upper left"
+  Then I delete the current design mode element

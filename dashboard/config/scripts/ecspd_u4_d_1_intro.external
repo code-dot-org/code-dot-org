@@ -4,9 +4,9 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-## Day 1 Scratch - Intro
+## Day 1 Scratch -- Intro
 
-First, let's explore the first lesson in the curriculum. To begin, find your ECS Version 5 curriculum and open to page 136-138.
+First, let's explore the first lesson in the unit. To begin, find your ECS Version 5 curriculum and open to page 136-138.
 
 [Access a Digital Copy of the lesson>>](http://code.org/ecs#page=136)
 
@@ -18,9 +18,9 @@ First, let's explore the first lesson in the curriculum. To begin, find your ECS
 
 This lesson was one that was presented at the in person workshop. It connects students back to writing algorithms, the problem solving process and storyboarding.
 <br><br>
-Many students have worked in Scratch previously or have seen it.  They may feel like it is an environment for younger students and that they are not really programming.  This is not true.  They are getting experience to writing algorithms that the computer will need to understand, with a language that is more equitable to all students, especially students new to computer science.
+Many students have worked in Scratch previously or have seen it.  They may feel like it is an environment for younger students and that they are not really programming.  This is not true.  They are gaining experience writing algorithms that the computer will need to understand, with a language that is more equitable to all students, especially students new to computer science.
 <br><br>
-Remind students that using a drag and drop language allows them to move their focus away from syntax and allow for them to do more "tinkering" and modifications quickly.  They are also able to have a more visual product that can be gratifying.
+Remind students that using a drag and drop language allows them to shift their focus away from syntax and allows them to do more "tinkering" and modification quickly.  They are also able to have a more visual product which can be gratifying.
 <br><br>
 You will need to download the Scratch files ahead of time to demo them and make them available to your students.
 <br><br>
@@ -53,14 +53,14 @@ If using Scratch is new for you, there are many resources included in these onli
 - Changing Color for a Sprite - Changing Color for a Sprite - [https://vimeo.com/79039159](https://vimeo.com/79039159)
 
 #### PD Discussion
-Take a few minutes to respond to this forum (link below). This is a place for you to share teaching strategies and resources with other teachers. Check back here when teaching your lesson to see what other resources and ideas have been posted.
-
+Take a few minutes to respond to the question below in the forum (link below).
+<br><br>
 Question:  What kind of activity could you do to help the students get familiar with the Scratch environment? Especially - the Scripts Tab (block types ), Costumes Tab, Sound Tab and Stage.
-
+<br><br>
 [<button>Discuss in the forum >></button>](http://forum.code.org/t/u4-day-1-pd-discussion-topic/1889)
-
+<br><br>
 After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
-
+<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
 MARKDOWN
