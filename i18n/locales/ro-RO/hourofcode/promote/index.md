@@ -15,7 +15,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 Oricine, oriunde poate gazdui o Oră de Preogramare[ Înscrieţi-vă](%= resolve_url('/') %) pentru a primi actualizări şi a beneficia de premii.   
 
 
-[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
+[<button><%= hoc_s(:signup_your_event) %></button>](%= resolve_url('/') %)
 
 ## 1. Răspândește vestea
 

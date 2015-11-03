@@ -1,9 +1,8 @@
 #hocmap
   %link{rel: "stylesheet", type: "text/css", href: "/css/map.css"}
-  -total_count = DB[:forms].where(kind:'HocSignup2015').count
   %h2.mapheader
     %a{:href=> "https://hourofcode.com/events"}
-      = I18n.t(:csedweek_map_header).gsub('#', format_integer_with_commas(total_count))
+      = I18n.t(:csedweek_map_header).gsub('#', format_integer_with_commas(total_hoc_count))
     %a{:href=> "https://hourofcode.com/#join"}
       %button.signup-button
         = I18n.t(:csedweek_map_signup)
@@ -11,7 +10,7 @@
   .row
     .col-xs-10.col-sm-12
       #gmap.full-width
-  #belowmaplegend.legend
+  #belowmaplegend.legend{style: "display: none;"}
     .legend-title= I18n.t(:csedweek_map_legend_title)
     .color.blue
     = I18n.t(:csedweek_map_legend_event)
@@ -73,7 +72,7 @@
     legend.innerHTML = content.join('');
     legend.index = 1;
 
-    gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+    // gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 
     layer.setMap(gmap);
 

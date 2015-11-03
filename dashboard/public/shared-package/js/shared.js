@@ -340,6 +340,7 @@ window.apps = {
           delete report.program;
           delete report.image;
         }
+        report.scriptName = appOptions.scriptName;
         report.fallbackResponse = appOptions.report.fallback_response;
         report.callback = appOptions.report.callback;
         // Track puzzle attempt event
@@ -946,7 +947,10 @@ var projects = module.exports = {
     delete current.id;
     delete current.hidden;
     current.name = newName;
-    this.save(wrappedCallback);
+    channels.create(current, function (err, data) {
+      this.updateCurrentData_(err, data, true);
+      this.save(wrappedCallback);
+    }.bind(this));
   },
   copyAssets: function (srcChannel, callback) {
     if (!srcChannel) {

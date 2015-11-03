@@ -136,6 +136,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.script_cache
+    return nil if Rails.application.config.levelbuilder_mode # cache disabled when building levels
     @@script_cache ||=
       script_cache_from_cache || script_cache_from_db
   end
@@ -144,17 +145,19 @@ class Script < ActiveRecord::Base
     self.class.get_from_cache(id)
   end
 
-  def self.get_from_cache(id)
-    if !Rails.env.levelbuilder? && self.script_cache[id.to_s]
-      self.script_cache[id.to_s]
-    else
-      # a bit of trickery so we support both ids which are numbers and
-      # names which are strings that may contain numbers (eg. 2-3)
-      find_by = (id.to_i.to_s == id.to_s) ? :id : :name
-      Script.find_by(find_by => id).tap do |s|
-        raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id}") unless s
-      end
+  def self.get_without_cache(id)
+    # a bit of trickery so we support both ids which are numbers and
+    # names which are strings that may contain numbers (eg. 2-3)
+    find_by = (id.to_i.to_s == id.to_s) ? :id : :name
+    Script.find_by(find_by => id).tap do |s|
+      raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id}") unless s
     end
+  end
+
+  def self.get_from_cache(id)
+    return get_without_cache(id) if Rails.application.config.levelbuilder_mode # cache disabled when building levels
+
+    self.script_cache[id.to_s] || get_without_cache(id)
   end
 
   def to_param
@@ -172,7 +175,7 @@ class Script < ActiveRecord::Base
 
   def hoc?
     # Note that now multiple scripts can be an 'hour of code' script.
-    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME].include? self.name
+    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME, HOC2015_NAME].include? self.name
   end
 
   def flappy?

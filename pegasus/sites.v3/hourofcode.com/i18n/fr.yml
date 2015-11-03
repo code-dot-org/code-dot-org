@@ -252,6 +252,9 @@ fr:
   map_search_placeholder: Recherchez les évènements Une Heure de Code
   map_search_search: Rechercher
   map_search_reset: Réinitialiser
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Une Heure de Code arrive
   meta_tag_og_description: Une Heure de Code est un mouvement mondial qui touche des dizaines de millions d’élèves dans plus de 180 pays et plus de 30 langues. De 4 à 104 ans.
   meta_tag_twitter_title: Une Heure de Code arrive
@@ -363,7 +366,7 @@ fr:
   videos_obama_cs: "Le président Obama sur l'informatique"
   videos_anybody_can_learn: "N'importe qui peut apprendre (1 min)"
   title_country_resources: Ressources spécifiques sur le pays
-  title_how_to_districts: "Une Heure de Code : Guide d'utilisation pour les mairies, régions et départements"
+  title_how_to_districts: "Une Heure de Code Guide d'utilisation pour les mairies, régions et départements"
   title_how_to_events: Une Heure de Code comment faire ?
   title_how_to_organizations: "Guide de l'organisateur Une Heure de Code"
   title_how_to_companies: 'Comment héberger Une Heure de Code - Entreprises'

@@ -58,11 +58,11 @@ Les organisateurs américains et internationaux qui ne le sont pas sont admissib
 
 ## Y a-t-il une date limite pour s'inscrire et recevoir le cadeau de remerciement pour les organisateurs ?
 
-Vous devez vous inscrire **avant** < % = campaign_date('start_long') %> afin d'être admissible et recevoir le cadeau de remerciement pour les organisateurs.
+Vous devez vous inscrire **avant** <%= campaign_date('start_long') %> afin d'être admissible et recevoir le cadeau de remerciement pour les organisateurs.
 
 ## Quand vais-je recevoir mon cadeau de remerciement ?
 
-Nous vous contacterons en décembre après la semaine de l'éducation des sciences informatiques (< % = campaign_date('full') %>) avec les prochaines étapes sur la façon de choisir votre cadeau de remerciement.
+Nous vous contacterons en décembre après la semaine de l'éducation des sciences informatiques (<%= campaign_date('full') %>) avec les prochaines étapes sur la façon de choisir votre cadeau de remerciement.
 
 ## Est-ce que je peux obtenir plusieurs cadeaux de remerciement ?
 
@@ -72,7 +72,7 @@ Non. Les cadeaux de remerciement sont limités à un par l'organisateur. Nous vo
 
 ## L'ensemble de votre école doit-il participer pour remporter la somme de 10 000 $ en matériel ?
 
-Oui. Toute votre école doit participer pour être éligible au tirage au sort, mais une seule inscription et formulaire de demande de prix de matériel suffisent [formulaire disponible ici](<%= resolve_url('/prizes/hardware-signup') %>). Chaque enseignant participant devra [inscrire](<%= resolve_url('/prizes/hardware-signup') %>) sa classe individuellement afin de recevoir le cadeau de remerciement dédié aux organisateurs.
+Oui. Toute votre école doit participer pour être éligible au tirage au sort, mais une seule inscription et formulaire de demande de prix de matériel suffisent [formulaire disponible ici](<%= resolve_url('/prizes/hardware-signup') %>). Chaque enseignant participant devra [inscrire](<%= resolve_url('/') %>) sa classe individuellement afin de recevoir le cadeau de remerciement dédié aux organisateurs.
 
 ## Qui est admissible pour gagner la somme de 10 000 $ en matériel informatique ?
 
@@ -88,9 +88,9 @@ Pour être admissible, vous devez remplir le [formulaire de demande de matériel
 
 <% end %>
 
-## Si mon école ne peut pas faire l'Heure de Code au cours de la semaine de l'éducation des sciences informatiques (< % = campaign_date('short') %>), est-ce que je peux toujours être admissible pour les prix ?
+## Si mon école ne peut pas faire l'Heure de Code au cours de la semaine de l'éducation des sciences informatiques (<%= campaign_date('short') %>), est-ce que je peux toujours être admissible pour les prix ?
 
-Yes, in the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup') %>) include the dates that your whole school is participating.
+Oui, dans le [formulaire de demande de matériel](<%= resolve_url('/prizes/hardware-signup') %>) incluez les dates auxquelles toute votre école participera.
 
 ## Je ne suis pas aux États-Unis. Suis-je éligible pour les prix ?
 

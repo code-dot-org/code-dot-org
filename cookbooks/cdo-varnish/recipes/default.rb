@@ -36,7 +36,7 @@ apt_package 'varnish' do
   options '-o Dpkg::Options::="--force-confnew"'
 end
 apt_package 'libvmod-cookie' do
-  version '1.03+4.0.3-4~trusty'
+  version '1.03+4.0.3-5~trusty'
   options '--force-yes'
 end
 apt_package 'libvmod-header' do
@@ -51,6 +51,16 @@ end
 node.default['cdo-varnish']['config'] = HttpCache.config(node.chef_environment.to_s)
 $node_env = node.chef_environment.to_s
 $node_name = node.name
+
+ruby_block 'update_service' do
+  block do
+    file = Chef::Util::FileEdit.new('/etc/init.d/varnish')
+    %w(stop start).map do |cmd|
+      file.search_file_replace(/(?<!--oknodo )--#{cmd}/, "--oknodo --#{cmd}")
+    end
+    file.write_file
+  end
+end
 
 template '/etc/default/varnish' do
   source 'config.erb'

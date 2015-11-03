@@ -99,3 +99,21 @@
 .wall-letter {
   line-height: 120%;
   cursor: default; }
+
+.instructions-markdown.classic-margins {
+  padding-top: 0;
+  margin-left: 90px; }
+
+.instructions-markdown .character-text {
+  line-height: 27px;
+  font-size: 24px;
+  color: #7665a0; }
+
+.instructions-markdown details.hoc2015 > summary {
+  margin: 1em 0; }
+  .instructions-markdown details.hoc2015 > summary:focus {
+    outline: none; }
+
+.instructions-markdown details.hoc2015 > p {
+  color: #5b6770;
+  margin-left: 1em; }

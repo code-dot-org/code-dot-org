@@ -252,6 +252,9 @@ sr:
   map_search_placeholder: Претражи Hour of Code окупљања
   map_search_search: Тражи
   map_search_reset: Поново покрени
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Hour of Code је стигао
   meta_tag_og_description: Hour of Code је глобални покрет који досеже милионе ученика у 180+ земаља и на преко 30 језика. Узраста од 4 до 104.
   meta_tag_twitter_title: Hour of Code је стигао

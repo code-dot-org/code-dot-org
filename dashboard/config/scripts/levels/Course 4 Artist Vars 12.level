@@ -164,6 +164,17 @@
         <block type="variables_get">
           <title name="VAR">sides</title>
         </block>
+        <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="variables_get">
+          <title name="VAR">length</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>

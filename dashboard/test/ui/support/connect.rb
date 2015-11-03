@@ -15,6 +15,10 @@ def local_browser
   browser
 end
 
+def slow_browser?
+  ['iPhone', 'iPad'].include? ENV['BROWSER_CONFIG']
+end
+
 def saucelabs_browser
   if CDO.saucelabs_username.blank?
     raise "Please define CDO.saucelabs_username"
@@ -83,10 +87,16 @@ end
 browser = nil
 
 Before do
-  puts "DEBUG: browser == #{CGI::escapeHTML browser.inspect} @browser == #{CGI::escapeHTML @browser.inspect}"
+  puts "DEBUG: @browser == #{CGI::escapeHTML @browser.inspect}"
 
-  browser ||= get_browser
-  @browser = browser
+  if slow_browser?
+    browser ||= get_browser
+    p 'slow browser, using existing'
+    @browser ||= browser
+  else
+    p 'fast browser, getting a new one'
+    @browser = get_browser
+  end
   @browser.manage.delete_all_cookies
 
   debug_cookies(@browser.manage.all_cookies) if @browser
@@ -119,6 +129,8 @@ all_passed = true
 After do |scenario|
   all_passed = all_passed && scenario.passed?
   log_result all_passed
+
+  @browser.quit unless @browser.nil? || slow_browser?
 end
 
 at_exit do

@@ -252,6 +252,9 @@ de:
   map_search_placeholder: Suche nach Hour of Code Veranstaltungen
   map_search_search: Suche
   map_search_reset: Zurücksetzen
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Die Hour of Code ist hier
   meta_tag_og_description: Die Hour of Code ist eine weltweite Bewegung, die Millionen von Schülern in über 180 Ländern mit über 30 Sprachen erreicht. Alter von 4 bis 104 Jahre.
   meta_tag_twitter_title: Die Hour of Code ist hier

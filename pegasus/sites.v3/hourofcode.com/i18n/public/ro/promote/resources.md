@@ -11,7 +11,7 @@ nav: promote_nav
 
 # Promoveaza evenimentul Hour of Code
 
-## Organizezi o Ora de Programare?<a
+## Organizezi o Ora de Programare? [Iata ghidul cu indrumari](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 

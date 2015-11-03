@@ -4,7 +4,7 @@ title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
 
 * * *
 
-< % facebook = {: u => "за http://#{request.host}/us"}
+<% facebook = {:u=>"http://#{request.host}/us"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
@@ -15,7 +15,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 Всеки, навсякъде може да бъде домакин на Hour of Code. [ Регистрирайте се,](%= resolve_url('/') %) за да получите актуализации и да се класирате за награди.   
 
 
-[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
+[<button><%= hoc_s(:signup_your_event) %></button>](%= resolve_url('/') %)
 
 ## Разпространете новината
 
@@ -25,7 +25,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 2. Попитайте във Вашето училище, дали се предлага участие в Hour of Code
 
-[ Изпратете този имейл](%= resolve_url('/promote/resources#sample-emails') %) на директора и предизвикайте всяка класна стая в училището да се регистрира. < % ако @country == "нас" %> Едно училище от *всеки* щат на Сащ (и Вашингтон) ще спечели $10,000 за технологии. [ Регистрирайте се тук](%= resolve_url('/prizes/hardware-signup') %) да бъдете класирани и [ **вижте победителите от миналата година**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[ Изпратете този имейл](%= resolve_url('/promote/resources#sample-emails') %) на директора и предизвикайте всяка класна стая в училището да се регистрира. <% if @country == 'us' %> Едно училище от *всеки* щат на Сащ (и Вашингтон) ще спечели $10,000 за технологии. [ Регистрирайте се тук](%= resolve_url('/prizes/hardware-signup') %) да бъдете класирани и [ **вижте победителите от миналата година**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
 
 ## 3. Посъветвайте се с Вашия работодател за възможно включване
 

@@ -252,6 +252,9 @@ ko:
   map_search_placeholder: Hour of Code 행사 검색
   map_search_search: 검색
   map_search_reset: 다시 설정
+  map_legend_title: Legend
+  map_legend_hoc_events: Hour of Code Event
+  map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: 검색된 Hour of Code 행사
   meta_tag_og_description: Hour of Code 행사는 전세계적으로 진행되며 180개국 이상에서 30개 이상의 언어로 4세부터 104세까지 수천만 명의 학생들과 함께하려고 합니다.
   meta_tag_twitter_title: 검색된 Hour of Code 행사

@@ -104,7 +104,7 @@ That’s why every one of the [X number] students at [SCHOOL NAME] are joining i
 
 这是一个改变未来教育的机会在[镇/城市名称]。
 
-更多细节和宣传见http://hourofcode.com/
+更多细节和宣传见http://hourofcode.com/<%= @country %>
 
 尊敬的，
 

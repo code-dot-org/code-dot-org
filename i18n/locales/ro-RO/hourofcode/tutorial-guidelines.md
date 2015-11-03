@@ -1,6 +1,6 @@
 * * *
 
-titlu: < % = hoc_s(:title_tutorial_guidelines) %> aspect: largă
+title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
@@ -154,7 +154,7 @@ Vizitaţi [pagina Hour of Code™ Prezentarea Activitatii](https://goo.gl/kNrV3l
           * Share-uiasca pe rețelele sociale că au finalizat Hour of Code
           * Primească un certificat de participare/finalizare a Hour of Code
           * Vezi clasamentele cu țările/orașele cea mai mare rată de participare în activităţi Hour of Code
-          * Pentru utilizatorii care petrece o oră activitatea şi nu vor termina, vă rugăm să includeţi un buton activitatea care spune că "Am terminat Ora mea Programare" care leagă înapoi la [< % = resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %), de asemenea. 
+          * Pentru utilizatorii care petrece o oră activitatea şi nu vor termina, vă rugăm să includeţi un buton activitatea care spune că "Am terminat Ora mea Programare" care leagă înapoi la [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %), de asemenea. 
   * *(Opţional)* Vom face un follow-up cu un formular/sondaj online solicitând un raport de activitate pentru săptămâna 8 decembrie, 12:01 am pana pe 14 decembrie, 11:59 pm) 
       * Pentru activităţile online (în special aplicații smartphone/tablete): 
           * Numărul de utilizatori
