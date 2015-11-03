@@ -4,7 +4,7 @@ var api = require('./apiJavascript.js');
 module.exports.blocks = [
   {func: 'setDroid', parent: api, category: '', params: ['"r2-d2"'], dropdown: { 0: [ '"random"', '"r2-d2"', '"c-3po"' ] } },
   {func: 'setDroidSpeed', parent: api, category: '', params: ['"fast"'], dropdown: { 0: [ '"random"', '"slow"', '"normal"', '"fast"' ] } },
-  {func: 'setBackground', parent: api, category: '', params: ['"snow"'], dropdown: { 0: [ '"random"', '"forest"', '"snow"', '"ship"' ] } },
+  {func: 'setBackground', parent: api, category: '', params: ['"hoth"'], dropdown: { 0: [ '"random"', '"endor"', '"hoth"', '"starship"' ] } },
   {func: 'setMap', parent: api, category: '', params: ['"blank"'], dropdown: { 0: [ '"random"', '"blank"', '"circle"', '"horizontal"', '"grid"', '"blobs"'] } },
   {func: 'moveRight', parent: api, category: '', },
   {func: 'moveLeft', parent: api, category: '', },

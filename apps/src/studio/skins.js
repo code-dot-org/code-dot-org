@@ -327,7 +327,7 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.hideIconInClearPuzzle = true;
 
-  skin.defaultBackground = 'forest';
+  skin.defaultBackground = 'endor';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
@@ -495,30 +495,30 @@ function loadHoc2015(skin, assetUrl) {
   skin.mousedroid = skin.assetUrl('walk_mousedroid.png');
   skin.rebelpilot = skin.assetUrl('walk_rebelpilot.png');
 
-  skin.forest = {
-    background: skin.assetUrl('background_background1.jpg'),
-    tiles: skin.assetUrl('tiles_background1.png'),
-    jumboTiles: skin.assetUrl('jumbotiles_background1.png'),
+  skin.endor = {
+    background: skin.assetUrl('background_endor.jpg'),
+    tiles: skin.assetUrl('tiles_endor.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_endor.png'),
     jumboTilesAddOffset: -5,
     jumboTilesSize: 60,
     jumboTilesRows: 4,
     jumboTilesCols: 4,
     clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
   };
-  skin.snow = {
-    background: skin.assetUrl('background_background2.jpg'),
-    tiles: skin.assetUrl('tiles_background2.png'),
-    jumboTiles: skin.assetUrl('jumbotiles_background2.png'),
+  skin.hoth = {
+    background: skin.assetUrl('background_hoth.jpg'),
+    tiles: skin.assetUrl('tiles_hoth.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_hoth.png'),
     jumboTilesAddOffset: -5,
     jumboTilesSize: 60,
     jumboTilesRows: 4,
     jumboTilesCols: 4,
     clouds: [skin.assetUrl('cloud_dark.png'), skin.assetUrl('cloud_dark2.png')]
   };
-  skin.ship = {
-    background: skin.assetUrl('background_background3.jpg'),
-    tiles: skin.assetUrl('tiles_background3.png'),
-    jumboTiles: skin.assetUrl('jumbotiles_background3.png'),
+  skin.starship = {
+    background: skin.assetUrl('background_starship.jpg'),
+    tiles: skin.assetUrl('tiles_starship.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_starship.png'),
     jumboTilesAddOffset: -5,
     jumboTilesSize: 60,
     jumboTilesRows: 4,
@@ -531,12 +531,12 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
 
-  // Since we don't have jumbo tiles for our "snow" background, in the case
+  // Since we don't have jumbo tiles for our "hoth" background, in the case
   // of the two maps that use jumbo pieces ("circle" and "horizontal") we
   // return a special version of the map that just uses regular tile pieces.
 
   skin.getMap = function(background, map) {
-    if (background == "snow" && (map == "circle" || map == "horizontal")) {
+    if (background == "hoth" && (map == "circle" || map == "horizontal")) {
       return map + "_nonjumbo";
     }
     else {
@@ -651,17 +651,17 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    [msg.setBackgroundForest(), '"forest"'],
-    [msg.setBackgroundSnow(), '"snow"'],
-    [msg.setBackgroundShip(), '"ship"']
+    [msg.setBackgroundEndor(), '"endor"'],
+    [msg.setBackgroundHoth(), '"hoth"'],
+    [msg.setBackgroundStarship(), '"starship"']
     ];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
-    [skin.forest.background, '"forest"'],
-    [skin.snow.background, '"snow"'],
-    [skin.ship.background, '"ship"'],
+    [skin.endor.background, '"endor"'],
+    [skin.hoth.background, '"hoth"'],
+    [skin.starship.background, '"starship"'],
     [skin.randomPurpleIcon, RANDOM_VALUE],
     ];
 
@@ -808,8 +808,8 @@ function loadHoc2015x(skin, assetUrl) {
   skin.hazard = skin.assetUrl('hazard_idle.png');
 
   skin.main = {
-    background: skin.assetUrl('background_background1.jpg'),
-    tiles: skin.assetUrl('tiles_background1.png'),
+    background: skin.assetUrl('background_endor.jpg'),
+    tiles: skin.assetUrl('tiles_endor.png'),
     clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
   };
 

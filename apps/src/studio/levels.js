@@ -2024,7 +2024,7 @@ levels.js_hoc2015_move_finale = {
 
 levels.js_hoc2015_event_two_items = {
   'editCode': true,
-  'background': 'snow',
+  'background': 'hoth',
   'music': [ 'song7' ],
   'wallMap': 'blank',
   'softButtons': ['downButton', 'upButton'],
@@ -2120,7 +2120,7 @@ levels.js_hoc2015_event_two_items = {
 
 levels.js_hoc2015_event_four_items = {
   'editCode': true,
-  'background': 'snow',
+  'background': 'hoth',
   'music': [ 'song8' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
@@ -2179,7 +2179,7 @@ levels.js_hoc2015_score =
 {
   'avatarList': ['r2-d2'],
   'editCode': true,
-  'background': 'snow',
+  'background': 'hoth',
   'music': [ 'song9' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
@@ -2285,7 +2285,7 @@ levels.js_hoc2015_score =
 
 levels.js_hoc2015_win_lose = {
   'editCode': true,
-  'background': 'forest',
+  'background': 'endor',
   'music': [ 'song10' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
@@ -2356,7 +2356,7 @@ levels.js_hoc2015_win_lose = {
 
 levels.js_hoc2015_add_characters = {
   'editCode': true,
-  'background': 'forest',
+  'background': 'endor',
   'music': [ 'song11' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
@@ -2428,7 +2428,7 @@ levels.js_hoc2015_add_characters = {
 
 levels.js_hoc2015_chain_characters = {
   'editCode': true,
-  'background': 'ship',
+  'background': 'starship',
   'music': [ 'song12' ],
   'wallMap': 'grid',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
@@ -2499,7 +2499,7 @@ levels.js_hoc2015_chain_characters = {
 
 levels.js_hoc2015_chain_characters_2 = {
   'editCode': true,
-  'background': 'ship',
+  'background': 'starship',
   'music': [ 'song13' ],
   'wallMap': 'horizontal',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
@@ -2578,7 +2578,7 @@ levels.js_hoc2015_chain_characters_2 = {
 
 levels.js_hoc2015_change_setting = {
   'editCode': true,
-  'background': 'ship',
+  'background': 'starship',
   'music': [ 'song14' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
@@ -2695,7 +2695,7 @@ var js_hoc2015_event_free_markdown = [
 levels.js_hoc2015_event_free = {
   'editCode': true,
   'freePlay': true,
-  'background': 'forest',
+  'background': 'endor',
   'music': [ 'song15' ],
   'wallMap': 'blank',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
@@ -2742,7 +2742,7 @@ levels.js_hoc2015_event_free = {
     'whenGetAllCharacters': { 'category': 'Events' }
   },
   'startBlocks': [
-    'setBackground("forest");',
+    'setBackground("endor");',
     'setMap("circle");',
     'setDroid("r2-d2");',
     'setDroidSpeed("normal");',
