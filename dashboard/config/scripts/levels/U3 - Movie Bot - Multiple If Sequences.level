@@ -164,9 +164,6 @@
     "project_template_level_name": "U3 - Movie Bot - Template",
     "execute_palette_apis_only": "false",
     "instructions": "Add another set of if, else if, and else statements insides the question if statement to check for keywords for movies ratings (G, PG, PG-13, and R). (Click to see full instructions)",
-    "encrypted_examples": [
-
-    ],
     "step_speed": "1.0",
     "slider_speed": "1.0",
     "lock_zero_param_functions": "false"

@@ -52,9 +52,6 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "instructions": "Use `console.log` to print out the different boolean expressions below to see what information they return. (Click to see full instructions)",
-    "encrypted_examples": [
-
-    ],
     "lock_zero_param_functions": "false"
   }
 }]]></config>
