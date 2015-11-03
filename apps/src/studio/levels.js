@@ -2711,6 +2711,7 @@ levels.js_hoc2015_event_free = {
     'moveFast': { 'category': 'Commands' },
     'addPoints': { 'category': 'Commands' },
     'removePoints': { 'category': 'Commands' },
+    'endGame': { 'category': 'Commands' },
 
     'goRight': { 'category': 'Commands' },
     'goLeft': { 'category': 'Commands' },
