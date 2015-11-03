@@ -42,7 +42,7 @@ textLabel("screenTitle","My App");
 ____________________________________________________
 [example]
 
-**Example: Label for a Test Input Box** Create a label and associate it with a text input box.
+**Example: Label for a Text Input Box** Create a label and associate it with a text input box.
 
 ```
 // Create a label and associate it with a text input box.
@@ -54,26 +54,24 @@ textInput("YourName","");
 ____________________________________________________
 [example]
 
-**Example Demonstrate a label for each of the input types**
+**Example Opinion Survey** Demonstrate a label for each of the user input screen elements. No event handlers have been defined yet.
 
 ```
-textLabel("textInputLabel","Text Input:", "textInputCtrl");
-textInput("textInputCtrl","");
+// Demonstrate a label for each of the user input screen elements. No event handlers have been defined yet.
+textLabel("textInputLabel","Name:", "textInputName");
+textInput("textInputName","");
 write("<br>");
-checkbox("checkBoxCtrl",false);
-textLabel("checkBoxLabel","Ok?", "checkBoxCtrl");
+textLabel("dropdownLabel","Year In School","dropdownYear");
+dropdown("dropdownYear","Freshman","Sophomore","Junior","Senior");
 write("<br>");
-textLabel("dropdownLabel","dropdown List ","dropdownCtrl");
-dropdown("dropdownCtrl","Option 1","Option 2","Option 3");
+textLabel("radioTitleLabel", "Gender");
+radioButton("radioFemale","false","genderGroup");
+textLabel("radioFemaleLabel","Female","radioFemale");
+radioButton("radioMale","false","genderGroup");
+textLabel("radioMaleLabel","Male","radioMale");
 write("<br>");
-radioButton("radioCtrl1","true","radioGroup");
-textLabel("radioLabel1","Radio 1","radioCtrl1");
-write("<br>");
-radioButton("radioCtrl2","false","radioGroup");
-textLabel("radioLabel2","Radio 2","radioCtrl2");
-write("<br>");
-radioButton("radioCtrl3","false","radioGroup");
-textLabel("radioLabel3","Radio 3","radioCtrl3");
+textLabel("checkBoxLabel","Excited about programming?", "checkBoxProgramming");
+checkbox("checkBoxProgramming",false);
 ```
 
 [/example]
