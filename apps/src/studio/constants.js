@@ -378,3 +378,6 @@ exports.SHAKE_DEFAULT_DISTANCE = 5;
 
 // How many clouds to display.
 exports.NUM_CLOUDS = 2;
+
+// How many milliseconds to throttle between playing sounds.
+exports.SOUND_THROTTLE_TIME = 200;
