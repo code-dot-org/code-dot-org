@@ -3201,7 +3201,7 @@ Studio.displayVictoryText = function() {
   victoryText.textContent = Studio.victoryText;
   victoryText.setAttribute('visibility', 'visible');
   var resetText = document.getElementById('resetText');
-  resetText.textContent = studioMsg.clickToReset();
+  resetText.textContent = studioMsg.tapOrClickToReset();
   resetText.setAttribute('visibility', 'visible');
 };
 
