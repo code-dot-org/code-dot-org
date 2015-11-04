@@ -72,33 +72,32 @@ def storage_id_cookie_name()
   name
 end
 
-def storage_id_for_user(user_id = nil)
-  user_id ||= request.user_id
-  return nil unless user_id
+def storage_id_for_user()
+  return nil unless request.user_id
 
   # Return the user's storage-id, if it exists.
-  if row = user_storage_ids_table.where(user_id: user_id).first
+  if row = user_storage_ids_table.where(user_id: request.user_id).first
     return row[:id]
   end
 
-  # Take ownership of cookie storage, if it exists and belongs to the user.
-  if  (user_id == request.user_id) && (storage_id = storage_id_from_cookie)
+  # Take ownership of cookie storage, if it exists.
+  if storage_id = storage_id_from_cookie
     # Delete the cookie that was tracking this storage id
     response.delete_cookie(storage_id_cookie_name)
 
     # Only take ownership if the storage id doesn't already have an owner - it shouldn't but
     # there is a race condition (addressed below)
-    rows_updated = user_storage_ids_table.where(id: storage_id,user_id: nil).update(user_id: user_id)
+    rows_updated = user_storage_ids_table.where(id: storage_id,user_id: nil).update(user_id: request.user_id)
     return storage_id if rows_updated > 0
 
     # We couldn't claim the storage. The most likely cause is that another request (by this
     # user) beat us to the punch so we'll re-check to see if we own it. Otherwise the storage
     # id is either invalid or it belongs to another user (both addressed below)
-    return storage_id if user_storage_ids_table.where(id: storage_id,user_id: user_id).first
+    return storage_id if user_storage_ids_table.where(id: storage_id,user_id: request.user_id).first
   end
 
   # We don't have any existing storage id we can associate with this user, so create a new one
-  user_storage_ids_table.insert(user_id: user_id)
+  user_storage_ids_table.insert(user_id: request.user_id)
 end
 
 def storage_id_from_cookie()
