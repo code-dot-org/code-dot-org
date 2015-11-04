@@ -60,34 +60,17 @@ module.exports = React.createClass({
         getErrorMessage(xhr.status)});
   },
 
-  /**
-   * Uploads the current file selected by the user.
-   * TODO: HTML5 File API isn't available in IE9, need a fallback.
-   */
-  upload: function (uploader) {
-    var file = React.findDOMNode(uploader).files[0];
-    if (file.type && this.props.typeFilter) {
-      var type = file.type.split('/')[0];
-      if (type !== this.props.typeFilter) {
-        this.setState({statusMessage: 'Only ' + this.props.typeFilter +
-          ' assets can be used here.'});
-        return;
-      }
-    }
-
-    // TODO: Use Dave's client api when it's finished.
-    assetsApi.ajax('PUT', file.name, function (xhr) {
-      assetListStore.add(JSON.parse(xhr.responseText));
-      this.setState({
-        assets: assetListStore.list(this.props.typeFilter),
-        statusMessage: 'File "' + file.name + '" successfully uploaded!'
-      });
-    }.bind(this), function (xhr) {
-      this.setState({statusMessage: 'Error uploading file: ' +
-          getErrorMessage(xhr.status)});
-    }.bind(this), file);
-
+  onUploadStart: function () {
     this.setState({statusMessage: 'Uploading...'});
+  },
+
+  onUploadDone: function (result) {
+    // TODO - error states?
+    assetListStore.add(result);
+    this.setState({
+      assets: assetListStore.list(this.props.typeFilter),
+      statusMessage: 'File "' + result.filename + '" successfully uploaded!'
+    });
   },
 
   deleteAssetRow: function (name) {
@@ -102,7 +85,8 @@ module.exports = React.createClass({
       <AssetUploader
         uploadsEnabled={this.props.uploadsEnabled}
         typeFilter={this.props.typeFilter}
-        onUpload={this.upload}/>
+        onUploadStart={this.onUploadStart}
+        onUploadDone={this.onUploadDone}/>
       <span style={{margin: '0 10px'}} id="manage-asset-status">
         {this.state.statusMessage}
       </span>

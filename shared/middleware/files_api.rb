@@ -161,7 +161,6 @@ class FilesApi < Sinatra::Base
     quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 
-    content_type :json
     category = mime_type.split('/').first
     {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
   end
@@ -173,6 +172,7 @@ class FilesApi < Sinatra::Base
   #
   put %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
+    content_type :json
 
     # read the entire request before considering rejecting it, otherwise varnish
     # may return a 503 instead of whatever status code we specify. Unfortunately
@@ -188,16 +188,16 @@ class FilesApi < Sinatra::Base
   # TODO
   #
   post %r{/v3/assets/([^/]+)/new$} do |encrypted_channel_id|
+    dont_cache
+    # though this is JSON data, we're doing making the POST request via iframe
+    # form submission. IE9 will try to download the response if we have
+    # content_type json
+    content_type 'text/plain'
+
     # TODO - what sort of validation needs to be done?
     file = request.POST['files'][0]
-    put_file('assets', encrypted_channel_id, file[:filename], file[:tempfile].read)
-    # rack_input = env["rack.input"].read
-    # foo = env['rack.input'].gets
-    # body = request.body.read
 
-    # put_file('assets', encrypted_channel_id, filename)
-    # body
-    # rack_input
+    put_file('assets', encrypted_channel_id, file[:filename], file[:tempfile].read)
   end
 
   #
