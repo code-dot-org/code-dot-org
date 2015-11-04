@@ -20,7 +20,9 @@ theme: responsive
   %script{src: "/js/es5-shim.min.js"}
 
 #volunteer-map
+  %a{id: "volunteer-map"}
   = view :volunteer_map
 
-#volunteer-contact{:style=>"display: none; margin: 0 150px;"}
+#volunteer-contact{:style=>"display: none;"}
+  %a{id: "volunteer-contact"}
   = view :volunteer_contact

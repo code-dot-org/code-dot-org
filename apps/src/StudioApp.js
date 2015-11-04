@@ -938,11 +938,16 @@ function resizePinnedBelowVisualizationArea() {
     return;
   }
 
+  var designToggleRow = document.getElementById('designToggleRow');
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
+  if (designToggleRow) {
+    top += $(designToggleRow).outerHeight(true);
+  }
+  
   if (visualization) {
     top += $(visualization).outerHeight(true);
   }

@@ -1,3 +1,6 @@
+require 'dynamic_config/dcdo'
+require 'dynamic_config/gatekeeper'
+
 class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
@@ -52,7 +55,7 @@ class ApplicationController < ActionController::Base
   def reset_session_endpoint
     client_state.reset
     reset_session
-    render text: "OK"
+    render text: 'OK <script>localStorage.clear()</script>'
   end
 
   rescue_from CanCan::AccessDenied do

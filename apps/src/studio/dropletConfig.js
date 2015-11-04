@@ -1,5 +1,6 @@
 var msg = require('./locale');
 var api = require('./apiJavascript.js');
+var paramLists = require('./paramLists.js');
 
 module.exports.blocks = [
   {func: 'setDroid', parent: api, category: '', params: ['"r2-d2"'], dropdown: { 0: [ '"random"', '"r2-d2"', '"c-3po"' ] } },
@@ -14,21 +15,7 @@ module.exports.blocks = [
   {func: 'goLeft', parent: api, category: '', },
   {func: 'goUp', parent: api, category: '', },
   {func: 'goDown', parent: api, category: '', },
-  {func: 'playSound', parent: api, category: '', params: ['"r2-d2sound1"'],
-    dropdown: { 0: [
-      '"random"',
-      '"r2-d2sound1"', '"r2-d2sound2"', '"r2-d2sound3"', '"r2-d2sound4"',
-      '"r2-d2sound5"', '"r2-d2sound6"', '"r2-d2sound7"', '"r2-d2sound8"',
-      '"r2-d2sound9"',
-      '"c-3posound1"', '"c-3posound2"', '"c-3posound3"', '"c-3posound4"',
-      '"pufferpigsound1"', '"pufferpigsound2"', '"pufferpigsound3"', '"pufferpigsound4"',
-      '"tauntaunsound1"', '"tauntaunsound2"', '"tauntaunsound3"', '"tauntaunsound4"',
-      '"mynocksound1"', '"mynocksound2"', '"mynocksound3"',
-      '"probotsound1"', '"probotsound2"', '"probotsound3"',
-      '"mousedroidsound1"', '"mousedroidsound2"', '"mousedroidsound3"',
-      '"alert1"', '"alert2"', '"alert3"', '"alert4"',
-      '"applause"'
-      ] } },
+  {func: 'playSound', parent: api, category: '', params: ['"r2-d2sound1"'], dropdown: { 0: paramLists.playSoundDropdown } },
 
   {func: 'endGame', parent: api, category: '', params: ['"win"'], dropdown: { 0: ['"win"', '"lose"' ] } },
   {func: 'addPoints', parent: api, category: '', params: ["100"] },
