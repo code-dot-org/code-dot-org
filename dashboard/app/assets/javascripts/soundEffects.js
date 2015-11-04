@@ -201,7 +201,9 @@ Sound.prototype.play = function (options) {
     return;
   }
 
-  this.audioElement.volume = typeof options.volume === "undefined" ? 1 : options.volume;
+  var volume = (typeof options.volume === "undefined") ? 1 : 
+      Math.max(0, Math.min(1, options.volume));
+  this.audioElement.volume = volume;
   this.audioElement.loop = !!options.loop;
   if (options.onEnded) {
     var unregisterAndCallback = function () {
