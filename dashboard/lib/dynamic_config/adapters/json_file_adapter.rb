@@ -4,8 +4,8 @@
 require 'oj'
 
 class JSONFileDatastoreAdapter
-  def initialize(name)
-    @file_path = "#{name}_data_temp.json"
+  def initialize(file_path)
+    @file_path = file_path
     @hash = {}
     load_from_file()
   end
