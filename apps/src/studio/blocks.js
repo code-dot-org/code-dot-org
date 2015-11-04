@@ -350,6 +350,31 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.studio_whenTouchGoal = generator.studio_eventHandlerPrologue;
 
+  blockly.Blocks.studio_whenGetCharacter = {
+    // Block to handle event when the primary sprite gets a character.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      this.setPreviousStatement(false);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenGetCharacterTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_whenGetCharacter.VALUES =
+      [[msg.whenGetCharacterPIG(),    'pig'],
+       [msg.whenGetCharacterMAN(),    'man'],
+       [msg.whenGetCharacterROO(),    'roo'],
+       [msg.whenGetCharacterBIRD(),   'bird'],
+       [msg.whenGetCharacterSPIDER(), 'spider'],
+       [msg.whenGetCharacterMOUSE(),  'mouse'],
+       [msg.whenGetCharacterPILOT(),  'pilot']];
+
+  generator.studio_whenGetCharacter = generator.studio_eventHandlerPrologue;
+
   blockly.Blocks.studio_whenSpriteCollided = {
     // Block to handle event when sprite collides with another sprite.
     helpUrl: '',

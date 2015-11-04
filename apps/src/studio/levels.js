@@ -2910,6 +2910,17 @@ levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
 
 levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
   editCode: false,
+  startBlocks: '',
+  toolbox:
+    tb('<block type="studio_playSound"></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">pilot</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">man</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">bird</title></block>'),
+  requiredBlocks: [
+    // TODO: addPoints, removePoints, whenGetPilot, whenGetMan
+  ],
 });
 
 levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
