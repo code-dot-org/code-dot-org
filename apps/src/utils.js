@@ -281,7 +281,6 @@ exports.getPegasusHost = function() {
       var name = window.location.hostname.split('.')[0];
       switch(name) {
         case 'localhost':
-        case 'localhost-studio':
           return 'localhost.code.org:3000';
         case 'development':
         case 'staging':
