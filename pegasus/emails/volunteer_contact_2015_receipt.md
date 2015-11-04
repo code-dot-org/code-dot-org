@@ -15,12 +15,20 @@ subject: "A teacher is requesting your help for the Hour of Code"
 
 Hi <%= volunteer_name_s %>,
 
-<%= name_s %> is a teacher at <%= school_name_s %>. S/he found you on the Hour of Code site and after reviewing your profile specifically requested if you could help their class with the Hour of Code this year. S/he wrote this message to you:
+<%= name_s %> is a teacher at <%= school_name_s %>. S/he found you on the Hour of Code site and after reviewing your profile specifically requested if you could help their class with the Hour of Code this year. S/he would like it if you could:
 
 ***
 
-<%= email_message_s %>
-
+<% type_task_ss.each do |task| %>
+  <% if task == 'onsite' %>
+    * visit the classroom for technical help and inspiration
+  <% elsif task == 'remote' %>
+    * Skype into the classroom to say a few words of inspiration to the kids
+  <% elsif task == 'mentor' %>
+    * be a mentor to help prepare him/her for coding with his/her students 
+  <% end %>
+<% end %>
+  
 ***
 
 We won't release your email directly to a teacher, so s/he's waiting for you to write back. 
@@ -30,13 +38,11 @@ Most schools still don’t teach computer science. Most students don’t know th
 Tanya Parker<br>
 Product Manager, Code.org
 
-Full information from teacher:
+Contact information from teacher:
 - **Teacher Name:** <%= name_s %>
 - **Email address:** [<%= email_s %>](<%= "mailto:" + email_s %>)
 - **School name:** <%= school_name_s %>
 - **School location:** <%= school_location_s %>
-- **Message:** <%= email_message_s %>
-
 
 <hr/>
 

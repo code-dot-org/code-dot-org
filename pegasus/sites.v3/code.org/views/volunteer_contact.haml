@@ -1,3 +1,5 @@
+-type_task_ss ||=nil
+
 %h1 Contact a Volunteer
 
 #addressees
@@ -31,10 +33,12 @@
       %input#volunteer-contact-school-location.form-control{name: "school_location_s", placeholder: "School address", required: true, type: "text"}
 
   .form-group
-    %label.control-label{for: "email-message"} Your message
-    %p Describe your Hour of Code event and how the volunteer can participate.
+    %label.control-label{for: "type-task"} Select all of the following ways that you'd like this volunteer to help you.
     %div
-      %textarea#volunteer-contact-email-message.form-control{name: "email_message_s", placeholder: "I would like to invite you to our Hour of Code event...  [If your school/district has background check requirements that need to be completed before a potential volunteer can attend an event, be sure to let the volunteer know by telling them about it here.]", required: true, style: "height: 10em;"}
+      %select#volunteer-type-task.form-control{name: "type_task_ss[]", type: "select", required: true, multiple: true}
+        %option{selected: type_task_ss.nil_or_empty?, value: ""}
+        -VolunteerContact2015.type_tasks.each_pair do |key,label|
+          %option{value: key, selected: (type_task_ss||[]).include?(key)}= label
 
 
   %p{style: 'color: #00adbc; font-size: 1.125em;'} IMPORTANT: Code.org has performed no references or background checks on these potential volunteers and neither recommends nor certifies any volunteer.

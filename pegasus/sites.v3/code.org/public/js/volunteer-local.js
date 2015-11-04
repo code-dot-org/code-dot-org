@@ -1,6 +1,12 @@
 var gmap;
 var gmap_loc;
 
+$(document).ready(function() {
+  $('#contact-volunteer-form select').selectize({
+    plugins: ['fast_click']
+  });
+});
+
 $(function() {
   selectize = $('#volunteer-search-facets select').selectize({
     plugins: ['fast_click']
