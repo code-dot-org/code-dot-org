@@ -60,6 +60,7 @@ def fetch_hoc_metrics()
     'tutorials'=>{'codeorg'=>0},
     'cities'=>{'Seattle'=>0},
     'countries'=>{'United States'=>0},
+    'total_hoc_count'=>0,
   }
   # Increase the 'started' metric by 409K to reflect participant count from surveys, circa
   # February 2014.

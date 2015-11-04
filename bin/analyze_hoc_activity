@@ -157,6 +157,7 @@ def main()
     cities: total_cities,
     states: total_states,
     countries: total_countries,
+    total_hoc_count: DB[:forms].where(kind: 'HocSignup2015').group(:name, :email).select(:name, :email, :processed_data, :data).count,
   }
 
   #HipChat.log 'Calculating lines of code...' if rack_env?(:production)
