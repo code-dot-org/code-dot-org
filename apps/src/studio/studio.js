@@ -2513,6 +2513,12 @@ Studio.execute = function() {
                      'whenSpriteCollided-' +
                        (Studio.protagonistSpriteIndex || 0) +
                        '-any_item');
+    registerHandlersWithTitleParam(handlers,
+                                   'studio_whenGetCharacter',
+                                   'whenSpriteCollided-' +
+                                     (Studio.protagonistSpriteIndex || 0),
+                                   'VALUE',
+                                   skin.ItemClassNames);
     registerHandlers(handlers, 'studio_whenTouchGoal', 'whenTouchGoal');
     if (level.wallMapCollisions) {
       registerHandlers(handlers,
