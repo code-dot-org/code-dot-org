@@ -1,8 +1,8 @@
 -search_location ||= nil
 -experience_s ||= nil
 -location_flexibility_ss ||= nil
--distance ||=nil
--num_volunteers ||=nil
+-distance ||= nil
+-num_volunteers ||= nil
 
 %h1 Find a local volunteer for the Hour of Code
 
@@ -16,14 +16,14 @@
   to be included on this map.
 
 %form#volunteer-search-form{role: "form", onsubmit: "event.preventDefault();"}
-  .form-section.row
-    .form-group.col-xs-6
-      %div
-        %input#location.form-control.input-lg{name: "location", placeholder: "Search my location", type: "text", value: search_location}
-    .form-group.submit-btn
-      %button#btn-submit.btn.btn-default.input-lg{type: "submit"} Search
-  #volunteer-search-facets.form-section.row.display-none
+  #volunteer-search-facets.form-section.row
     %h3.col-xs-12.top-margin Narrow your search
+    .form-section.row.no-margin
+      .form-group.col-xs-4
+        %input#location.form-control{name: "location", placeholder: "Search my location", type: "text", value: search_location}
+      .form-group.col-xs-2.submit-btn
+        %button#btn-submit.btn.btn-default{type: "submit"} Search
+
     .form-group.col-xs-4
       %label.control-label.small{for: "location-flexibility"} How a volunteer can help
       %div
@@ -54,10 +54,9 @@
             %option{value: key, selected: (num_volunteers||[]).include?(key.to_s)}= value
 
 
-#volunteer-search-results.row.display-none.top-margin
+#volunteer-search-results.row.top-margin
   #volunteer-search-controls.col-xs-5
     #controls
-    %br
   #volunteer-search-map.col-xs-7
     #gmap
 .row
