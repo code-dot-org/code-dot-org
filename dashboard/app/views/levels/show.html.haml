@@ -1,6 +1,6 @@
 - @page_title = level_title
 
-- if @script && @script.name == Script::HOC2015_NAME && Gatekeeper.allows('requires_hoc_secret', where: {script_name: @script.name})
+- if @script && @script.name == Script::HOC2015_NAME && DCDO.get("hoc_secret", nil) && Gatekeeper.allows('requires_hoc_secret', where: {script_name: @script.name})
   :javascript
     //<![CDATA[
     if (CryptoJS.MD5(localStorage.getItem('hoc_secret')).toString() !=
