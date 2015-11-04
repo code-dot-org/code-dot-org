@@ -46,7 +46,7 @@ Contact information from teacher:
 
 <hr/>
 
-Getting too many email requests and/or already signed up to help a class?
+Getting too many email requests? It means there aren't enough volunteers in your region. Please recruit a friend to help out too. :-)
 
 - [Unsubscribe from additional teacher requests **this year**](<%= update_preferences %>)
 - [Unsubscribe from teacher requests **forever**](<%= update_preferences %>)
