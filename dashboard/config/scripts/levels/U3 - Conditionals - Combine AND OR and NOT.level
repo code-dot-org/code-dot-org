@@ -57,9 +57,6 @@
     "start_blocks": "var day = prompt(\"Enter a day of the week.\");\r\nvar age = promptNum(\"Enter your age.\");\r\nwrite(\"Day is: \"+day);\r\nwrite(\"Age is: \"+age);\r\n//write your code here\r\n",
     "instructions": "Write an if statement that uses AND and OR to display \"Time to go to school!\" if it's not the weekend and the user is under 18. (Click to see full instrucitons.",
     "slider_speed": "1.0",
-    "encrypted_examples": [
-
-    ],
     "lock_zero_param_functions": "false"
   }
 }]]></config>
