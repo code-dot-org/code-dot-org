@@ -1686,6 +1686,8 @@ Studio.init = function(config) {
     });
   }
 
+  Studio.makeThrottledPlaySound();
+
   /**
    * Helper that handles music loading/playing/crossfading for the level.
    * @type {MusicController}
@@ -3588,6 +3590,11 @@ Studio.callCmd = function (cmd) {
   return true;
 };
 
+Studio.makeThrottledPlaySound = function() {
+  Studio.throttledPlaySound = _.throttle(studioApp.playAudio.bind(studioApp),
+    constants.SOUND_THROTTLE_TIME);
+};
+
 Studio.playSound = function (opts) {
 
   if (typeof opts.soundName !== 'string') {
@@ -3604,7 +3611,7 @@ Studio.playSound = function (opts) {
     throw new RangeError("Incorrect parameter: " + opts.soundName);
   }
 
-  studioApp.playAudio(soundVal, { volume: 1.0 });
+  Studio.throttledPlaySound(soundVal, { volume: 1.0 });
   Studio.playSoundCount++;
 };
 
