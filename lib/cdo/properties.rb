@@ -41,26 +41,61 @@ end
 
 def fetch_metrics()
   Properties.get(:metrics)||{
-    'created_at'=>"2013-12-31T23:59:59+00:00",
-    'created_on'=>"2013-12-31",
-    'csedweek_organizers'=>0,
-    'csedweek_teachers'=>0,
-    'csedweek_entire_schools'=>0,
-    'csedweek_students'=>0,
-    'csedweek_countries'=>0,
-    'petition_signatures'=>0,
-    'lines_of_code'=>0,
+    'created_at'=>"2015-11-04T21:11:40+00:00",
+    'created_on'=>"2015-11-04",
+    'csedweek_organizers'=>38236,
+    'csedweek_teachers'=>24025,
+    'csedweek_entire_schools'=>12754,
+    'csedweek_students'=>4875091,
+    'csedweek_countries'=>356,
+    'petition_signatures'=>1922485,
+    'lines_of_code'=>8412317091,
   }
 end
 
 def fetch_hoc_metrics()
+  # Include stale default values as of 2015-11-04 so we never show 0.
   metrics = Properties.get(:hoc_metrics)||{
-    'started'=>0,
-    'finished'=>0,
-    'tutorials'=>{'codeorg'=>0},
-    'cities'=>{'Seattle'=>0},
-    'countries'=>{'United States'=>0},
-    'total_hoc_count'=>0,
+    'started'=>136340020,
+    'finished'=>23600234,
+    'tutorials'=>{
+      'codeorg'=>30269786,
+      'tynker'=>27389293,
+      'frozen'=>13924711,
+      'flappy'=>11551220,
+      'hourofcode'=>8398186,
+      'codecombat'=>5117384,
+      'lightbot'=>4754226,
+      'tynkerapp'=>4155265,
+      'khan'=>3656629,
+      'scratch'=>3585379,
+      'playlab'=>2943026,
+      'makegameswithus'=>1905887,
+      'touchdevelop'=>1385722,
+      'codecademy'=>1224969,
+      },
+    'cities'=>{
+      "Seattle"=>3041726,
+      "Woodbridge"=>1929529,
+      "San Jose"=>1069716,
+      "Columbia"=>740828,
+      "Los Angeles"=>665964,
+      "Raleigh"=>648910,
+      "Houston"=>637847,
+      "Chicago"=>629701,
+      },
+    'countries'=>{
+      "United States"=>84295301,
+      "United Kingdom"=>8198056,
+      "Canada"=>2460307,
+      "Australia"=>1485507,
+      "Ireland"=>1276825,
+      "Brazil"=>1231030,
+      "Turkey"=>1204962,
+      "India"=>1162559,
+      "Mexico"=>967736,
+      },
+    'total_hoc_count'=>71132,
   }
   # Increase the 'started' metric by 409K to reflect participant count from surveys, circa
   # February 2014.
