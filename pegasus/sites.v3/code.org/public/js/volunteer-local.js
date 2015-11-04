@@ -261,19 +261,19 @@ function setContactTrigger(index, location, marker) {
 
 function contactVolunteer()
 {
-  $('#volunteer-map').hide();
   $('#name').show();
   $('#volunteer-contact').show();
-  $('body').scrollTop(0);
+  $('#success-message').hide();
+  $('#error-message').hide();
+  adjustScroll('volunteer-contact');
 
   return false;
 }
 
 function processResponse(data)
 {
-  $('#contact-volunteer-form').hide();
-  $('#before-contact').hide();
-  $('#after-contact').show();
+  $('#error-message').hide();
+  $('#success-message').show();
 }
 
 function processError(data)
@@ -289,18 +289,13 @@ function processError(data)
     $(error_id).parents('.form-group').addClass('has-error');
   }
   
-  $('#error_message').html('<font color="#a94442">An error occurred. Please check that all required fields have been filled out properly.</font>').show();
-  
-  $('body').scrollTop(0);
-  $("#contact-submit-btn").prop('disabled', false);
-  $("#contact-submit-btn").removeClass("button_disabled").addClass("button_enabled");
+  var error = '<font color="#a94442">An error occurred. Please check that all required fields have been filled out properly.</font>';
+  $('#error-message').html(error).show();
+  $('#success-message').hide();
 }
 
 function sendEmail(data)
 {
-  $("#contact-submit-btn").prop('disabled', true);
-  $("#contact-submit-btn").removeClass("button_enabled").addClass("button_disabled");
-
   $.ajax({
     url: "/forms/VolunteerContact2015",
     type: "post",
@@ -309,6 +304,13 @@ function sendEmail(data)
   }).done(processResponse).fail(processError);
 
   return false;
+}
+
+function adjustScroll(destination)
+{
+  $('html, body').animate({
+    scrollTop: $("#" + destination).offset().top
+  }, 1000);
 }
 
 function i18n(token) {

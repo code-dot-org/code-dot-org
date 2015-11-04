@@ -3,19 +3,11 @@
 #addressees
   #before-contact
     %p You are contacting the following volunteer:
-  #after-contact{:style=>"display: none;"}
-    %p You've successfully contacted this volunteer:
-  #name{:style=>"display: none;"}
-  #allnames{:style=>"display: none;"}
-  %br
-    Want to contact different volunteers?
-    %a{href: "/private/volunteer/local"}
-      Search here
-    for volunteers near your school.
+  #name{style: "display: none; font-family: 'Gotham 5r', sans-serif;"}
+  #allnames{style: "display: none;"}
 
 %br
 %form#contact-volunteer-form{role: "form", onsubmit: "return sendEmail()"}
-  #error_message{style: 'display: none'}
 
   .form-group
     %label.control-label{for: "teacher-name"} Your name
@@ -58,3 +50,11 @@
 
   .form-group#contact-submit-btn
     %button{type: "submit"} Send
+
+  #error-message{style: "display: none;"}
+  #success-message{style: "display: none; color: #00adbc;"}
+    %p 
+      You've successfully contacted this volunteer. 
+      %a{onclick: "adjustScroll('volunteer-map');"} 
+        Scroll to the top
+      to contact another volunteer. 
