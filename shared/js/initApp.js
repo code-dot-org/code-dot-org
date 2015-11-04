@@ -49,6 +49,7 @@ window.apps = {
           delete report.program;
           delete report.image;
         }
+        report.scriptName = appOptions.scriptName;
         report.fallbackResponse = appOptions.report.fallback_response;
         report.callback = appOptions.report.callback;
         // Track puzzle attempt event

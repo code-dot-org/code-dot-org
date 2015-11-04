@@ -175,7 +175,7 @@ class Script < ActiveRecord::Base
 
   def hoc?
     # Note that now multiple scripts can be an 'hour of code' script.
-    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME].include? self.name
+    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME, HOC2015_NAME].include? self.name
   end
 
   def flappy?
@@ -218,7 +218,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'course4' || name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3'
+    name == 'course4' || name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3' || name == 'hoc2015'
   end
 
   def is_k1?
