@@ -626,9 +626,7 @@ function loadHoc2015(skin, assetUrl) {
     'probotsound1', 'probotsound2', 'probotsound3',
     'mousedroidsound1', 'mousedroidsound2', 'mousedroidsound3',
     'alert1', 'alert2', 'alert3', 'alert4',
-    'applause',
-    'start', 'win', 'failure', 'flag',
-    'move1', 'move2', 'move3'
+    'applause'
   ];
 
   skin.musicMetadata = HOC2015_MUSIC_METADATA;
@@ -820,10 +818,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
 
   // Sounds.
-  skin.sounds = [
-    'start', 'win', 'failure', 'flag',
-    'move1', 'move2', 'move3', 'move4'
-  ];
+  skin.sounds = [ 'move1', 'move2', 'move3', 'move4' ];
 
   skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
@@ -1102,10 +1097,10 @@ exports.load = function(assetUrl, id) {
   skin.goalSuccess = skin.assetUrl('goal_success.png');
 
   // Sounds
+  skin.builtinSounds = [ 'start', 'win', 'failure', 'flag' ];
   skin.sounds = [
     'rubber', 'crunch', 'goal1', 'goal2', 'wood', 'retro', 'slap', 'hit',
-    'winpoint', 'winpoint2', 'losepoint', 'losepoint2',
-    'start', 'win', 'failure', 'flag'
+    'winpoint', 'winpoint2', 'losepoint', 'losepoint2'
   ];
 
   // Settings
