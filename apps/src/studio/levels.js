@@ -1291,7 +1291,7 @@ levels.iceage_9 = utils.extend(levels.playlab_9, {
   toolbox:
     tb(
       blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
-      blockOfType('studio_setBackground', {VALUE: '"ice"'}) +
+      blockOfType('studio_setBackground', {VALUE: '"icy"'}) +
       blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
       blockOfType('studio_saySprite') +
       blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
@@ -1709,7 +1709,7 @@ levels.js_hoc2015_move_right = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -1775,7 +1775,7 @@ levels.js_hoc2015_move_right_down = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -1822,18 +1822,18 @@ levels.js_hoc2015_move_diagonal = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
-    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000, 0x0000000],
-     [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000],
-     [0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000, 0x0000000],
-     [0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
-     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000],
-     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x0000000]],
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000, 0x00],
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x00],
+     [0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000, 0x00],
+     [0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
+     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x20],
+     [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x00]],
   'embed': 'false',
   'instructions': '"Watch out for the GUY!"',
   'ticksBeforeFaceSouth': 9,
@@ -1894,7 +1894,7 @@ levels.js_hoc2015_move_backtrack = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -1903,9 +1903,9 @@ levels.js_hoc2015_move_backtrack = {
      [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00],
      [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
-     [0x20, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
-     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
+     [0x00, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
   'instructions': '"Go quickly, BOTX."',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
@@ -1941,7 +1941,7 @@ levels.js_hoc2015_move_around = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -1952,7 +1952,7 @@ levels.js_hoc2015_move_around = {
      [0x0000000, 0x0000000, 0x20, 0x0140000, 0x0000000, 0x0000001, 0x0000000, 0x00],
      [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000, 0x00],
      [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
-     [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
+     [0x0000000, 0x0000020, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
   'embed': 'false',
   'instructions': '"It\'s up to you, BOTX!"',
   'ticksBeforeFaceSouth': 9,
@@ -1990,18 +1990,18 @@ levels.js_hoc2015_move_finale = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
-    [[0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
-     [0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
-     [0x0000000, 0x0000000, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000000, 0x0000000],
-     [0x0000000, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000000, 0x0000000],
-     [0x0000000, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
-     [0x0000000, 0x0000000, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
-     [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
-     [0x0000000, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000]],
+    [[0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x00, 0x0000000, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000020, 0x0000000],
+     [0x00, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000000, 0x0000000],
+     [0x00, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000, 0x0000000],
+     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
+     [0x00, 0x1010000, 0x1010000, 0x0000020, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
+     [0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000]],
   'embed': 'false',
   'instructions': '"We need 4 more pieces of metal. Can you find them?"',
   'ticksBeforeFaceSouth': 9,
@@ -2197,6 +2197,16 @@ levels.js_hoc2015_score =
     '  playSound("character1sound1");',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      random: true,
+      character1sound1: true,
+      character1sound2: true,
+      character1sound3: true,
+      character1sound4: true,
+      character1sound5: true,
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -2711,6 +2721,7 @@ levels.js_hoc2015_event_free = {
     'moveFast': { 'category': 'Commands' },
     'addPoints': { 'category': 'Commands' },
     'removePoints': { 'category': 'Commands' },
+    'endGame': { 'category': 'Commands' },
 
     'goRight': { 'category': 'Commands' },
     'goLeft': { 'category': 'Commands' },
@@ -2765,6 +2776,7 @@ levels.js_hoc2015_event_free = {
   'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
+  'tapSvgToRunAndReset': true,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
@@ -2896,18 +2908,97 @@ levels.hoc2015_blockly_8 = utils.extend(levels.js_hoc2015_event_four_items,  {
 
 levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   editCode: false,
+  startBlocks:
+    '<block type="studio_whenTouchGoal" deletable="false"> \
+      <next><block type="studio_playSound"><title name="SOUND">character1sound1</title></block> \
+      </next></block>',
+  toolbox:
+    tb('<block type="studio_playSound"></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block>'),
+  requiredBlocks: [
+    // TODO: addPoints
+  ],
 });
 
 levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
   editCode: false,
+  startBlocks: '',
+  toolbox:
+    tb('<block type="studio_playSound"></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">pilot</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">man</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">bird</title></block>'),
+  requiredBlocks: [
+    // TODO: addPoints, removePoints, whenGetPilot, whenGetMan
+  ],
 });
 
 levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">character1sound1</title> \
+        <next> \
+         <block type="studio_addCharacter"><title name="VALUE">"pig"</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
+      <title name="VALUE">pig</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">item1sound1</title> \
+        <next> \
+         <block type="studio_addPoints"><title name="VALUE">1000</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>',
+  toolbox:
+    tb('<block type="studio_addCharacter"><title name="VALUE">"pig"</title></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_playSound"></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">pig</title></block>'),
+  requiredBlocks: [
+    // TODO: addCharacter
+  ],
 });
 
 levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_addCharacter"><title name="VALUE">"mouse"</title> \
+        <next> \
+         <block type="studio_playSound"><title name="SOUND">character1sound3</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
+      <title name="VALUE">mouse</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">item6sound2</title> \
+        <next> \
+         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>',
+  toolbox:
+    tb('<block type="studio_addCharacter"><title name="VALUE">"mouse"</title></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_playSound"></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">mouse</title></block>'),
+  requiredBlocks: [
+    // TODO: addCharacter, addPoints
+  ],
 });
 
 levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  {

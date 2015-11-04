@@ -1,4 +1,13 @@
 - @page_title = level_title
+
+- if @script && @script.name == Script::HOC2015_NAME && Gatekeeper.allows('requires_hoc_secret', where: {script_name: @script.name})
+  :javascript
+    //<![CDATA[
+    if (CryptoJS.MD5(localStorage.getItem('hoc_secret')).toString() !=
+        '#{Digest::MD5.hexdigest(DCDO.get("hoc_secret", nil))}') {
+      document.location = '/';
+    }
+    //]]>
 = render partial: 'shared/sharing_meta_tags'
 
 - if params[:share] && @game.share_mobile_fullscreen? && browser.safari?

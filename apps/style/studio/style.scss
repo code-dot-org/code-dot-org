@@ -63,24 +63,27 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
   stroke-width: 3;
   opacity: 0.9;
 }
-.studio-score {
-  text-anchor: middle;
-  font-size: xx-large;
-  font-family: $gotham-extra-bold;
-  fill: white;
-  stroke: black;
-  stroke-width: 2;
-  cursor: default;
-}
+.studio-score,
+.studio-victory-text,
+.studio-reset-text,
 .studio-floating-score {
   text-anchor: middle;
-  font-size: x-large;
   font-family: $gotham-extra-bold;
   fill: white;
-  stroke: black;
-  stroke-width: 2;
+  stroke: $black;
   cursor: default;
 }
+.studio-score,
+.studio-reset-text,
+.studio-floating-score {
+  font-size: x-large;
+  stroke-width: 1;
+}
+.studio-victory-text {
+  font-size: xx-large;
+  stroke-width: 2;
+}
+
 .studio-ts-title {
   text-anchor: middle;
   font-size: xx-large;

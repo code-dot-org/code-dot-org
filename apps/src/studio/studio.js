@@ -36,6 +36,7 @@ var spriteActions = require('./spriteActions');
 var ImageFilterFactory = require('./ImageFilterFactory');
 var ThreeSliceAudio = require('./ThreeSliceAudio');
 var MusicController = require('./MusicController');
+var paramLists = require('./paramLists.js');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -81,6 +82,12 @@ var ArrowIds = {
   UP: 'upButton',
   RIGHT: 'rightButton',
   DOWN: 'downButton'
+};
+
+Studio.GameStates = {
+  WAITING: 0,
+  ACTIVE: 1,
+  OVER: 2
 };
 
 var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
@@ -163,7 +170,9 @@ var SPEECH_BUBBLE_WIDTH = 180;
 var SPEECH_BUBBLE_HEIGHT = 20 +
       (SPEECH_BUBBLE_MAX_LINES * SPEECH_BUBBLE_LINE_HEIGHT);
 
-var SCORE_TEXT_Y_POSITION = 60; // bottom of text
+var SCORE_TEXT_Y_POSITION = 30; // bottom of text
+var VICTORY_TEXT_Y_POSITION = 130;
+var RESET_TEXT_Y_POSITION = 380;
 
 var MIN_TIME_BETWEEN_PROJECTILES = 500; // time in ms
 
@@ -409,6 +418,10 @@ var drawMap = function () {
   }
   svg.appendChild(cloudGroup);
 
+  var gameTextGroup = document.createElementNS(SVG_NS, 'g');
+  gameTextGroup.setAttribute('id', 'gameTextGroup');
+  svg.appendChild(gameTextGroup);
+
   var score = document.createElementNS(SVG_NS, 'text');
   score.setAttribute('id', 'score');
   score.setAttribute('class', 'studio-score');
@@ -416,7 +429,25 @@ var drawMap = function () {
   score.setAttribute('y', SCORE_TEXT_Y_POSITION);
   score.appendChild(document.createTextNode(''));
   score.setAttribute('visibility', 'hidden');
-  svg.appendChild(score);
+  gameTextGroup.appendChild(score);
+
+  var victoryText = document.createElementNS(SVG_NS, 'text');
+  victoryText.setAttribute('id', 'victoryText');
+  victoryText.setAttribute('class', 'studio-victory-text');
+  victoryText.setAttribute('x', Studio.MAZE_WIDTH / 2);
+  victoryText.setAttribute('y', VICTORY_TEXT_Y_POSITION);
+  victoryText.appendChild(document.createTextNode(''));
+  victoryText.setAttribute('visibility', 'hidden');
+  gameTextGroup.appendChild(victoryText);
+
+  var resetText = document.createElementNS(SVG_NS, 'text');
+  resetText.setAttribute('id', 'resetText');
+  resetText.setAttribute('class', 'studio-reset-text');
+  resetText.setAttribute('x', Studio.MAZE_WIDTH / 2);
+  resetText.setAttribute('y', RESET_TEXT_Y_POSITION);
+  resetText.appendChild(document.createTextNode(studioMsg.tapOrClickToReset()));
+  resetText.setAttribute('visibility', 'visible');
+  gameTextGroup.appendChild(resetText);
 
   if (level.floatingScore) {
     var floatingScore = document.createElementNS(SVG_NS, 'text');
@@ -1040,6 +1071,10 @@ Studio.onTick = function() {
     Studio.succeededTime = currentTime;
   }
 
+  if (!animationOnlyFrame) {
+    Studio.executeQueue('whenTouchGoal');
+  }
+
   if (Studio.succeededTime &&
       !spritesNeedMoreAnimationFrames &&
       (!level.delayCompletion || currentTime > Studio.succeededTime + level.delayCompletion)) {
@@ -1486,8 +1521,12 @@ Studio.onSpriteClicked = function(e, spriteIndex) {
 };
 
 Studio.onSvgClicked = function(e) {
-  // If we are "running", check the cmdQueues.
-  if (Studio.tickCount > 0){
+  if (level.tapSvgToRunAndReset && Studio.gameState === Studio.GameStates.WAITING) {
+    Studio.runButtonClick();
+  } else if (level.tapSvgToRunAndReset && Studio.gameState === Studio.GameStates.OVER) {
+    studioApp.resetButtonClick();
+  } else if (Studio.tickCount > 0) {
+    // If we are "running", check the cmdQueues.
     // Check the first command in all of the cmdQueues to see if there is a
     // pending "wait for click" command
     Studio.eventHandlers.forEach(function (handler) {
@@ -1598,6 +1637,9 @@ Studio.init = function(config) {
   skin = config.skin;
   level = config.level;
 
+  // Initialize paramLists with skin and level data:
+  paramLists.initWithSkinAndLevel(skin, level);
+
   // In our Algebra course, we want to gray out undeletable blocks. I'm not sure
   // whether or not that's desired in our other courses.
   var isAlgebraLevel = !!level.useContractEditor;
@@ -1652,6 +1694,8 @@ Studio.init = function(config) {
     });
   }
 
+  Studio.makeThrottledPlaySound();
+
   /**
    * Helper that handles music loading/playing/crossfading for the level.
    * @type {MusicController}
@@ -1669,7 +1713,9 @@ Studio.init = function(config) {
 
   config.loadAudio = function() {
     var soundFileNames = [];
-    // We want to load the basic list of effects available in the skin
+    // We want to load the built-in sounds in the skin
+    soundFileNames.push.apply(soundFileNames, skin.builtinSounds);
+    // We also want to load the student accessible list of effects available in the skin
     soundFileNames.push.apply(soundFileNames, skin.sounds);
     // We also want to load the movement sounds used in hoc2015
     soundFileNames.push.apply(soundFileNames, Studio.getMovementSoundFileNames(skin));
@@ -1897,6 +1943,8 @@ function getDefaultMapName() {
 Studio.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
+  Studio.gameState = Studio.GameStates.WAITING;
+
   var svg = document.getElementById('svgStudio');
 
   if (Studio.customLogic) {
@@ -1922,8 +1970,18 @@ Studio.reset = function(first) {
   // Reset the score and title screen.
   Studio.playerScore = 0;
   Studio.scoreText = null;
+  Studio.victoryText = '';
   document.getElementById('score')
     .setAttribute('visibility', 'hidden');
+  document.getElementById('victoryText')
+    .setAttribute('visibility', 'hidden');
+  var resetText = document.getElementById('resetText');
+  if (level.tapSvgToRunAndReset) {
+    resetText.textContent = studioMsg.tapOrClickToPlay();
+    resetText.setAttribute('visibility', 'visible');
+  } else {
+    resetText.setAttribute('visibility', 'hidden');
+  }
   if (level.floatingScore) {
     document.getElementById('floatingScore')
       .setAttribute('visibility', 'hidden');
@@ -2142,6 +2200,7 @@ Studio.runButtonClick = function() {
   studioApp.attempts++;
   Studio.startTime = new Date();
   Studio.execute();
+  Studio.gameState = Studio.GameStates.ACTIVE;
 
   if (level.freePlay && !level.isProjectLevel &&
       (!studioApp.hideSource || level.showFinish)) {
@@ -2505,13 +2564,20 @@ Studio.execute = function() {
                                     ['left', 'right', 'up', 'down']);
     registerHandlers(handlers, 'studio_repeatForever', 'repeatForever');
     registerHandlers(handlers,
-                     'studio_whenTouchItem',
+                     'studio_whenTouchCharacter',
                      'whenSpriteCollided-' +
                        (Studio.protagonistSpriteIndex || 0) +
                        '-any_item');
+    registerHandlersWithTitleParam(handlers,
+                                   'studio_whenGetCharacter',
+                                   'whenSpriteCollided-' +
+                                     (Studio.protagonistSpriteIndex || 0),
+                                   'VALUE',
+                                   skin.ItemClassNames);
+    registerHandlers(handlers, 'studio_whenTouchGoal', 'whenTouchGoal');
     if (level.wallMapCollisions) {
       registerHandlers(handlers,
-                       'studio_whenTouchWall',
+                       'studio_whenTouchObstacle',
                        'whenSpriteCollided-' +
                          (Studio.protagonistSpriteIndex || 0) +
                          '-wall');
@@ -2561,6 +2627,9 @@ Studio.execute = function() {
     // Set event handlers and start the onTick timer
     Studio.eventHandlers = handlers;
   }
+
+  var resetText = document.getElementById('resetText');
+  resetText.setAttribute('visibility', 'hidden');
 
   Studio.perExecutionTimeouts = [];
   Studio.tickIntervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
@@ -2664,7 +2733,14 @@ function spriteFrameNumber (index, opts) {
   var elapsed = currentTime - Studio.startTime;
 
   if (opts && opts.walkDirection) {
-    return constants.frameDirTableWalking[sprite.displayDir];
+    var direction = constants.frameDirTableWalking[sprite.displayDir];
+
+    // If there are extra emotions sprites, and the actor is facing forward,
+    // use the emotion sprites (last columns of the walking sprite sheet).
+    if (direction === 0 && sprite.frameCounts.extraEmotions > 0 && sprite.emotion !== 0) {
+      return sprite.frameCounts.turns + sprite.emotion - 1;
+    }
+    return direction;
   }
   else if (opts && opts.walkFrame && sprite.timePerFrame) {
     return Math.floor(elapsed / sprite.timePerFrame) % sprite.frameCounts.walk;
@@ -2701,6 +2777,7 @@ function spriteFrameNumber (index, opts) {
     frameNum = sprite.frameCounts.normal + sprite.frameCounts.animation +
       sprite.frameCounts.turns + (sprite.emotion - 1);
   }
+
   return frameNum;
 }
 
@@ -3042,7 +3119,14 @@ Studio.displaySprite = function(i, isWalking) {
     spriteWalkIcon.setAttribute('visibility', 'hidden');
 
     xOffset = sprite.drawWidth * spriteFrameNumber(i);
-    yOffset = 0;
+
+    // For new versions of sprites (iceage/gumball), there are additional rows of
+    // idle animations for each emotion.
+    if (sprite.frameCounts.extraEmotions > 0) {
+      yOffset = sprite.drawHeight * sprite.emotion;
+    } else {
+      yOffset = 0;
+    }
 
     spriteIcon = spriteRegularIcon;
     spriteClipRect = document.getElementById('spriteClipRect' + i);
@@ -3146,6 +3230,15 @@ Studio.displayScore = function() {
     });
   }
   score.setAttribute('visibility', 'visible');
+};
+
+Studio.displayVictoryText = function() {
+  var victoryText = document.getElementById('victoryText');
+  victoryText.textContent = Studio.victoryText;
+  victoryText.setAttribute('visibility', 'visible');
+  var resetText = document.getElementById('resetText');
+  resetText.textContent = studioMsg.tapOrClickToReset();
+  resetText.setAttribute('visibility', 'visible');
 };
 
 Studio.animateGoals = function() {
@@ -3305,7 +3398,7 @@ Studio.queueCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  if (studioApp.isUsingBlockly()) {
+  if (studioApp.isUsingBlockly() && Studio.currentCmdQueue) {
     if (Studio.currentEventParams) {
       for (var prop in Studio.currentEventParams) {
         cmd.opts[prop] = Studio.currentEventParams[prop];
@@ -3313,7 +3406,8 @@ Studio.queueCmd = function (id, name, opts) {
     }
     Studio.currentCmdQueue.push(cmd);
   } else {
-    // in editCode/interpreter mode, all commands are executed immediately:
+    // in editCode/interpreter mode or if we don't have a current cmdQueue
+    // (e.g. move from autoArrowSteer), commands are executed immediately:
     Studio.callCmd(cmd);
   }
 };
@@ -3514,6 +3608,11 @@ Studio.callCmd = function (cmd) {
   return true;
 };
 
+Studio.makeThrottledPlaySound = function() {
+  Studio.throttledPlaySound = _.throttle(studioApp.playAudio.bind(studioApp),
+    constants.SOUND_THROTTLE_TIME);
+};
+
 Studio.playSound = function (opts) {
 
   if (typeof opts.soundName !== 'string') {
@@ -3523,14 +3622,16 @@ Studio.playSound = function (opts) {
   var soundVal = opts.soundName.toLowerCase().trim();
 
   if (soundVal === constants.RANDOM_VALUE) {
-    soundVal = skin.sounds[Math.floor(Math.random() * skin.sounds.length)];
+    // Get all non-random values and choose one at random:
+    var allValues = paramLists.getPlaySoundValues(false);
+    soundVal = allValues[Math.floor(Math.random() * allValues.length)];
   }
 
   if (!skin.soundFiles[soundVal]) {
     throw new RangeError("Incorrect parameter: " + opts.soundName);
   }
 
-  studioApp.playAudio(soundVal, { volume: 1.0 });
+  Studio.throttledPlaySound(soundVal, { volume: 1.0 });
   Studio.playSoundCount++;
 };
 
@@ -3891,6 +3992,11 @@ Studio.setScoreText = function (opts) {
   Studio.displayScore();
 };
 
+Studio.setVictoryText = function (opts) {
+  Studio.victoryText = opts.text;
+  Studio.displayVictoryText();
+};
+
 Studio.endGame = function(opts) {
   if (typeof opts.value !== 'string') {
     throw new TypeError("Incorrect parameter: " + opts.value);
@@ -3900,13 +4006,15 @@ Studio.endGame = function(opts) {
 
   if (winValue == "win") {
     Studio.trackedBehavior.hasWonGame = true;
-    Studio.setScoreText({text: studioMsg.winMessage()});
+    Studio.setVictoryText({text: studioMsg.winMessage()});
   } else if (winValue== "lose") {
     Studio.trackedBehavior.hasLostGame = true;
-    Studio.setScoreText({text: studioMsg.loseMessage()});
+    Studio.setVictoryText({text: studioMsg.loseMessage()});
   } else {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
+
+  Studio.gameState = Studio.GameStates.OVER;
 };
 
 Studio.setBackground = function (opts) {
