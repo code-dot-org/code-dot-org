@@ -6656,11 +6656,16 @@ function resizePinnedBelowVisualizationArea() {
     return;
   }
 
+  var designToggleRow = document.getElementById('designToggleRow');
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
+  if (designToggleRow) {
+    top += $(designToggleRow).outerHeight(true);
+  }
+  
   if (visualization) {
     top += $(visualization).outerHeight(true);
   }
@@ -32160,7 +32165,11 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
   var dropdownList;
   this.dropletTooltipManager.dropletConfig.blocks.forEach(function (block) {
     if (block.func === paramInfo.funcName && block.dropdown) {
-      dropdownList = block.dropdown[paramInfo.currentParameterIndex];
+      if (typeof block.dropdown[paramInfo.currentParameterIndex] === 'function') {
+        dropdownList = block.dropdown[paramInfo.currentParameterIndex]();
+      } else {
+        dropdownList = block.dropdown[paramInfo.currentParameterIndex];
+      }
     }
   });
 
@@ -32178,9 +32187,16 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
     // autocomplete only:
     var dropdownCompletions = [];
     dropdownList.forEach(function (listValue) {
+      var valString;
+      if (typeof listValue === 'string') {
+        valString = listValue;
+      } else {
+        // Support the { text: x, display: x } form, but ignore the display field
+        valString = listValue.text;
+      }
       dropdownCompletions.push({
         name: 'dropdown',
-        value: listValue
+        value: valString
       });
     });
     editor.completer.overrideCompleter = {
