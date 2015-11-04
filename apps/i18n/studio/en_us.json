@@ -576,7 +576,7 @@
   "successCharacter1": "\"Well done, R2-D2!\"",
   "successGenericCharacter": "\"Congratulations.  You did it!\"",
   "failedTwoItemsTimeout": "You need to get the rebel pilots before time runs out. To move, put the goUp and goDown commands inside the whenUp and whenDown functions. Then, press and hold the arrow keys on your keyboard (or screen) to move quickly.",
-  "failedFourItemsTimeout": "To pass this level, you'll need to put goLeft, goRight, goUp and go Down into the right functions. If your code looks correct, but you can't get there fast enough, try pressing and holding the arrow keys on your keyboard (or screen).",
+  "failedFourItemsTimeout": "To pass this level, you'll need to put goLeft, goRight, goUp and goDown into the right functions. If your code looks correct, but you can't get there fast enough, try pressing and holding the arrow keys on your keyboard (or screen).",
   "failedScoreTimeout": "Try to reach all the rebel pilots before time runs out. To move faster, press and hold the arrow keys on your keyboard (or screen).",
   "failedScoreScore": "You got the rebel pilots, but you still don't have enough points to pass the level. Use the addPoints command to add 100 points when you get a rebel pilot.",
   "failedScoreGoals": "You used the addPoints command, but not in the right place. Can you put it inside the whenGetRebelPilot function so R2-D2 can't get points until he gets a rebel pilot?",
