@@ -20,7 +20,7 @@ exports.getPlaySoundValues = function (withRandom) {
     });
   }
   return names;
-}
+};
 
 exports.playSoundDropdown = function () {
   return exports.getPlaySoundValues(true).map(function (sound) {
