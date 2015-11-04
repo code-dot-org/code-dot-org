@@ -54,9 +54,6 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "encrypted_examples": [
-
-    ],
     "instructions": "Change the if statement to a while loop so the program will run until it rolls a 6. (Click to see full instructions)",
     "markdown_instructions": "# Changing If to While\r\n\r\n** How many times we would have to roll a die before it comes up as a 6.** Lets set up some code that allows us to do some experiments. \r\n\r\n# Do This\r\n\r\n** Starter Code: ** Right now the code is set up to re-roll once if the first roll is not a 6. \r\n\r\n* **Change the if statement to a while loop** so the program will run until the randomNumber comes up as a 6 **Hint:** The easiest way to do this is to change the text from if to while.\r\n\r\n* Run the program to test out the change.",
     "start_blocks": "var num = randomNumber(1,6);\r\nwrite(\"Number is \"+num)\r\n\r\nif(num != 6){ //change this to while\r\n  write(\"Nope. Not 6. Roll again.\")\r\n  num = randomNumber(1,6);\r\n  write(\"New number is: \"+num)\r\n}\r\nwrite(\"Done.\");"

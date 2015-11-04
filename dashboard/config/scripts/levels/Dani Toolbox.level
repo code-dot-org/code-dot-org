@@ -38,9 +38,6 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "execute_palette_apis_only": "false",
-    "encrypted_examples": [
-
-    ],
     "lock_zero_param_functions": "false"
   }
 }]]></config>

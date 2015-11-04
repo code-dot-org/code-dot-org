@@ -114,10 +114,7 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "true",
-    "encrypted_examples": [
-
-    ]
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>
