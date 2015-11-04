@@ -1,7 +1,13 @@
 require 'rmagick'
 require 'cdo/graphics/certificate_image'
+require 'dynamic_config/gatekeeper'
+
+def hoc_activity_writes_disabled
+  Gatekeeper.allows('hoc_activity_writes_disabled')
+end
 
 def create_session_row(row)
+  puts "WRITING!"
   retries = 3
 
   begin
@@ -35,7 +41,7 @@ def set_hour_of_code_cookie_for_row(row)
 end
 
 def complete_tutorial(tutorial={})
-  unless settings.read_only
+  unless settings.read_only || hoc_activity_writes_disabled
     row = DB[:hoc_activity].where(session: request.cookies['hour_of_code']).first
     if row
       DB[:hoc_activity].where(id: row[:id]).update(
@@ -60,7 +66,7 @@ def complete_tutorial(tutorial={})
 end
 
 def complete_tutorial_pixel(tutorial={})
-  unless settings.read_only
+  unless settings.read_only || hoc_activity_writes_disabled
     row = DB[:hoc_activity].where(session: request.cookies['hour_of_code']).first
     if row && !row[:pixel_finished_at] && !row[:finished_at]
       DB[:hoc_activity].where(id: row[:id]).update(
@@ -83,7 +89,7 @@ def complete_tutorial_pixel(tutorial={})
 end
 
 def launch_tutorial(tutorial,params={})
-  unless settings.read_only
+  unless settings.read_only || hoc_activity_writes_disabled
     row = create_session_row(
       referer: request.referer_site_with_port,
       tutorial: tutorial[:code],
@@ -99,7 +105,7 @@ def launch_tutorial(tutorial,params={})
 end
 
 def launch_tutorial_pixel(tutorial)
-  unless settings.read_only
+  unless settings.read_only || hoc_activity_writes_disabled
     row = DB[:hoc_activity].where(session: request.cookies['hour_of_code']).first
     if row && !row[:pixel_started_at] && !row[:pixel_finished_at] && !row[:finished_at]
       DB[:hoc_activity].where(id: row[:id]).update(

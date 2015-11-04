@@ -55,9 +55,9 @@ class DCDOBase
   # @returns [DCDOBase]
   def self.create
     cache_expiration = 5
-    if Rails.env.test?
+    if rack_env?(:test)
       adapter = MemoryAdapter.new
-    elsif Rails.env.production?
+    elsif rack_env?(:production)
       cache_expiration = 30
       adapter = DynamoDBAdapter.new CDO.dcdo_table_name
     else
