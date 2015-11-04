@@ -305,35 +305,75 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.studio_whenSpriteClicked = generator.studio_eventHandlerPrologue;
 
-  blockly.Blocks.studio_whenTouchItem = {
-    // Block to handle event when sprite touches item.
+  blockly.Blocks.studio_whenTouchCharacter = {
+    // Block to handle event when sprite touches an item.
     helpUrl: '',
     init: function() {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
-        .appendTitle(msg.whenTouchItem());
+        .appendTitle(msg.whenTouchCharacter());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
-      this.setTooltip(msg.whenTouchItemTooltip());
+      this.setTooltip(msg.whenTouchCharacterTooltip());
     }
   };
 
-  generator.studio_whenTouchItem = generator.studio_eventHandlerPrologue;
+  generator.studio_whenTouchCharacter = generator.studio_eventHandlerPrologue;
 
-  blockly.Blocks.studio_whenTouchWall = {
-    // Block to handle event when sprite touches wall.
+  blockly.Blocks.studio_whenTouchObstacle = {
+    // Block to handle event when sprite touches a wall.
     helpUrl: '',
     init: function() {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
-        .appendTitle(msg.whenTouchWall());
+        .appendTitle(msg.whenTouchObstacle());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
-      this.setTooltip(msg.whenTouchWallTooltip());
+      this.setTooltip(msg.whenTouchObstacleTooltip());
     }
   };
 
-  generator.studio_whenTouchWall = generator.studio_eventHandlerPrologue;
+  generator.studio_whenTouchObstacle = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenTouchGoal = {
+    // Block to handle event when sprite touches a goal.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.whenTouchGoal());
+      this.setPreviousStatement(false);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenTouchGoalTooltip());
+    }
+  };
+
+  generator.studio_whenTouchGoal = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenGetCharacter = {
+    // Block to handle event when the primary sprite gets a character.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      this.setPreviousStatement(false);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenGetCharacterTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_whenGetCharacter.VALUES =
+      [[msg.whenGetCharacterPIG(),    'pig'],
+       [msg.whenGetCharacterMAN(),    'man'],
+       [msg.whenGetCharacterROO(),    'roo'],
+       [msg.whenGetCharacterBIRD(),   'bird'],
+       [msg.whenGetCharacterSPIDER(), 'spider'],
+       [msg.whenGetCharacterMOUSE(),  'mouse'],
+       [msg.whenGetCharacterPILOT(),  'pilot']];
+
+  generator.studio_whenGetCharacter = generator.studio_eventHandlerPrologue;
 
   blockly.Blocks.studio_whenSpriteCollided = {
     // Block to handle event when sprite collides with another sprite.
@@ -479,7 +519,7 @@ exports.install = function(blockly, blockInstallOptions) {
       valParam = 'Studio.random([' + allValues + '])';
     }
 
-    return 'Studio.addItem(\'block_id_' + this.id + '\', ' + valParam + ');\n';
+    return 'Studio.addCharacter(\'block_id_' + this.id + '\', ' + valParam + ');\n';
   };
 
   blockly.Blocks.studio_setItemActivity = {
@@ -1152,6 +1192,58 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.studio_changeScore = function() {
     // Generate JavaScript for changing the score.
     return 'Studio.changeScore(\'block_id_' + this.id + '\', \'' +
+                (this.getTitleValue('VALUE') || '1') + '\');\n';
+  };
+
+  blockly.Blocks.studio_addPoints = {
+    // Block for adding points.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.addPointsTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_addPoints.VALUES =
+      [[msg.addPoints10(),   '10'],
+       [msg.addPoints50(),   '50'],
+       [msg.addPoints100(),  '100'],
+       [msg.addPoints400(),  '400'],
+       [msg.addPoints1000(), '1000']];
+
+  generator.studio_addPoints = function() {
+    // Generate JavaScript for adding points.
+    return 'Studio.addPoints(\'block_id_' + this.id + '\', \'' +
+                (this.getTitleValue('VALUE') || '1') + '\');\n';
+  };
+
+  blockly.Blocks.studio_removePoints = {
+    // Block for removing points.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.removePointsTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_removePoints.VALUES =
+      [[msg.removePoints10(),   '10'],
+       [msg.removePoints50(),   '50'],
+       [msg.removePoints100(),  '100'],
+       [msg.removePoints400(),  '400'],
+       [msg.removePoints1000(), '1000']];
+
+  generator.studio_removePoints = function() {
+    // Generate JavaScript for removing points.
+    return 'Studio.removePoints(\'block_id_' + this.id + '\', \'' +
                 (this.getTitleValue('VALUE') || '1') + '\');\n';
   };
 

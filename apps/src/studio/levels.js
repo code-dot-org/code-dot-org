@@ -2898,14 +2898,63 @@ levels.hoc2015_blockly_8 = utils.extend(levels.js_hoc2015_event_four_items,  {
 
 levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   editCode: false,
+  startBlocks:
+    '<block type="studio_whenTouchGoal" deletable="false"> \
+      <next><block type="studio_playSound"><title name="SOUND">character1sound1</title></block> \
+      </next></block>',
+  toolbox:
+    tb('<block type="studio_playSound"></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block>'),
+  requiredBlocks: [
+    // TODO: addPoints
+  ],
 });
 
 levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
   editCode: false,
+  startBlocks: '',
+  toolbox:
+    tb('<block type="studio_playSound"></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">pilot</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">man</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">bird</title></block>'),
+  requiredBlocks: [
+    // TODO: addPoints, removePoints, whenGetPilot, whenGetMan
+  ],
 });
 
 levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">character1sound1</title> \
+        <next> \
+         <block type="studio_addCharacter"><title name="VALUE">"pig"</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">item1sound1</title> \
+        <next> \
+         <block type="studio_addPoints"><title name="VALUE">1000</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>',
+  toolbox:
+    tb('<block type="studio_addCharacter"><title name="VALUE">"pig"</title></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_playSound"></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">"pig"</title></block>'),
+  requiredBlocks: [
+    // TODO: addCharacter
+  ],
 });
 
 levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
