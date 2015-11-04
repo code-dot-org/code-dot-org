@@ -519,7 +519,7 @@ exports.install = function(blockly, blockInstallOptions) {
       valParam = 'Studio.random([' + allValues + '])';
     }
 
-    return 'Studio.addItem(\'block_id_' + this.id + '\', ' + valParam + ');\n';
+    return 'Studio.addCharacter(\'block_id_' + this.id + '\', ' + valParam + ');\n';
   };
 
   blockly.Blocks.studio_setItemActivity = {
