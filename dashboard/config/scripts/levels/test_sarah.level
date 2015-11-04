@@ -97,9 +97,6 @@
       "greaterThanOperator": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "hi hi",
     "markdown_instructions": "hi",
@@ -132,7 +129,12 @@
     "start_blocks": "//this is some starting code",
     "droplet_tooltips_disabled": "false",
     "execute_palette_apis_only": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "encrypted_examples": [
+
+    ],
+    "lock_zero_param_functions": "false",
+    "data_tables": "{\r\n  \"table_name\": [{ \"name\": \"Dave\", \"age\": 30 }, { \"name\": \"Melissa\", \"age\": 72}],\r\n  \"table_name2\": [{ \"city\": \"Seattle\", \"state\": \"WA\" }, { \"city\": \"Chicago\", \"state\": \"IL\"}]\r\n}"
   }
 }]]></config>
   <blocks/>
