@@ -1070,6 +1070,10 @@ Studio.onTick = function() {
     Studio.succeededTime = currentTime;
   }
 
+  if (!animationOnlyFrame) {
+    Studio.executeQueue('whenTouchGoal');
+  }
+
   if (Studio.succeededTime &&
       !spritesNeedMoreAnimationFrames &&
       (!level.delayCompletion || currentTime > Studio.succeededTime + level.delayCompletion)) {
@@ -1685,6 +1689,8 @@ Studio.init = function(config) {
       return level.music.indexOf(trackMetadata.name) !== -1;
     });
   }
+
+  Studio.makeThrottledPlaySound();
 
   /**
    * Helper that handles music loading/playing/crossfading for the level.
@@ -2552,13 +2558,20 @@ Studio.execute = function() {
                                     ['left', 'right', 'up', 'down']);
     registerHandlers(handlers, 'studio_repeatForever', 'repeatForever');
     registerHandlers(handlers,
-                     'studio_whenTouchItem',
+                     'studio_whenTouchCharacter',
                      'whenSpriteCollided-' +
                        (Studio.protagonistSpriteIndex || 0) +
                        '-any_item');
+    registerHandlersWithTitleParam(handlers,
+                                   'studio_whenGetCharacter',
+                                   'whenSpriteCollided-' +
+                                     (Studio.protagonistSpriteIndex || 0),
+                                   'VALUE',
+                                   skin.ItemClassNames);
+    registerHandlers(handlers, 'studio_whenTouchGoal', 'whenTouchGoal');
     if (level.wallMapCollisions) {
       registerHandlers(handlers,
-                       'studio_whenTouchWall',
+                       'studio_whenTouchObstacle',
                        'whenSpriteCollided-' +
                          (Studio.protagonistSpriteIndex || 0) +
                          '-wall');
@@ -3379,7 +3392,7 @@ Studio.queueCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  if (studioApp.isUsingBlockly()) {
+  if (studioApp.isUsingBlockly() && Studio.currentCmdQueue) {
     if (Studio.currentEventParams) {
       for (var prop in Studio.currentEventParams) {
         cmd.opts[prop] = Studio.currentEventParams[prop];
@@ -3387,7 +3400,8 @@ Studio.queueCmd = function (id, name, opts) {
     }
     Studio.currentCmdQueue.push(cmd);
   } else {
-    // in editCode/interpreter mode, all commands are executed immediately:
+    // in editCode/interpreter mode or if we don't have a current cmdQueue
+    // (e.g. move from autoArrowSteer), commands are executed immediately:
     Studio.callCmd(cmd);
   }
 };
@@ -3588,6 +3602,11 @@ Studio.callCmd = function (cmd) {
   return true;
 };
 
+Studio.makeThrottledPlaySound = function() {
+  Studio.throttledPlaySound = _.throttle(studioApp.playAudio.bind(studioApp),
+    constants.SOUND_THROTTLE_TIME);
+};
+
 Studio.playSound = function (opts) {
 
   if (typeof opts.soundName !== 'string') {
@@ -3604,7 +3623,7 @@ Studio.playSound = function (opts) {
     throw new RangeError("Incorrect parameter: " + opts.soundName);
   }
 
-  studioApp.playAudio(soundVal, { volume: 1.0 });
+  Studio.throttledPlaySound(soundVal, { volume: 1.0 });
   Studio.playSoundCount++;
 };
 

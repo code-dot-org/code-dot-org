@@ -1090,6 +1090,10 @@ Studio.onTick = function() {
     Studio.succeededTime = currentTime;
   }
 
+  if (!animationOnlyFrame) {
+    Studio.executeQueue('whenTouchGoal');
+  }
+
   if (Studio.succeededTime &&
       !spritesNeedMoreAnimationFrames &&
       (!level.delayCompletion || currentTime > Studio.succeededTime + level.delayCompletion)) {
@@ -1705,6 +1709,8 @@ Studio.init = function(config) {
       return level.music.indexOf(trackMetadata.name) !== -1;
     });
   }
+
+  Studio.makeThrottledPlaySound();
 
   /**
    * Helper that handles music loading/playing/crossfading for the level.
@@ -2572,13 +2578,20 @@ Studio.execute = function() {
                                     ['left', 'right', 'up', 'down']);
     registerHandlers(handlers, 'studio_repeatForever', 'repeatForever');
     registerHandlers(handlers,
-                     'studio_whenTouchItem',
+                     'studio_whenTouchCharacter',
                      'whenSpriteCollided-' +
                        (Studio.protagonistSpriteIndex || 0) +
                        '-any_item');
+    registerHandlersWithTitleParam(handlers,
+                                   'studio_whenGetCharacter',
+                                   'whenSpriteCollided-' +
+                                     (Studio.protagonistSpriteIndex || 0),
+                                   'VALUE',
+                                   skin.ItemClassNames);
+    registerHandlers(handlers, 'studio_whenTouchGoal', 'whenTouchGoal');
     if (level.wallMapCollisions) {
       registerHandlers(handlers,
-                       'studio_whenTouchWall',
+                       'studio_whenTouchObstacle',
                        'whenSpriteCollided-' +
                          (Studio.protagonistSpriteIndex || 0) +
                          '-wall');
@@ -3399,7 +3412,7 @@ Studio.queueCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  if (studioApp.isUsingBlockly()) {
+  if (studioApp.isUsingBlockly() && Studio.currentCmdQueue) {
     if (Studio.currentEventParams) {
       for (var prop in Studio.currentEventParams) {
         cmd.opts[prop] = Studio.currentEventParams[prop];
@@ -3407,7 +3420,8 @@ Studio.queueCmd = function (id, name, opts) {
     }
     Studio.currentCmdQueue.push(cmd);
   } else {
-    // in editCode/interpreter mode, all commands are executed immediately:
+    // in editCode/interpreter mode or if we don't have a current cmdQueue
+    // (e.g. move from autoArrowSteer), commands are executed immediately:
     Studio.callCmd(cmd);
   }
 };
@@ -3608,6 +3622,11 @@ Studio.callCmd = function (cmd) {
   return true;
 };
 
+Studio.makeThrottledPlaySound = function() {
+  Studio.throttledPlaySound = _.throttle(studioApp.playAudio.bind(studioApp),
+    constants.SOUND_THROTTLE_TIME);
+};
+
 Studio.playSound = function (opts) {
 
   if (typeof opts.soundName !== 'string') {
@@ -3624,7 +3643,7 @@ Studio.playSound = function (opts) {
     throw new RangeError("Incorrect parameter: " + opts.soundName);
   }
 
-  studioApp.playAudio(soundVal, { volume: 1.0 });
+  Studio.throttledPlaySound(soundVal, { volume: 1.0 });
   Studio.playSoundCount++;
 };
 
@@ -9701,14 +9720,63 @@ levels.hoc2015_blockly_8 = utils.extend(levels.js_hoc2015_event_four_items,  {
 
 levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   editCode: false,
+  startBlocks:
+    '<block type="studio_whenTouchGoal" deletable="false"> \
+      <next><block type="studio_playSound"><title name="SOUND">character1sound1</title></block> \
+      </next></block>',
+  toolbox:
+    tb('<block type="studio_playSound"></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block>'),
+  requiredBlocks: [
+    // TODO: addPoints
+  ],
 });
 
 levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
   editCode: false,
+  startBlocks: '',
+  toolbox:
+    tb('<block type="studio_playSound"></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">pilot</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">man</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">bird</title></block>'),
+  requiredBlocks: [
+    // TODO: addPoints, removePoints, whenGetPilot, whenGetMan
+  ],
 });
 
 levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">character1sound1</title> \
+        <next> \
+         <block type="studio_addCharacter"><title name="VALUE">"pig"</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">item1sound1</title> \
+        <next> \
+         <block type="studio_addPoints"><title name="VALUE">1000</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>',
+  toolbox:
+    tb('<block type="studio_addCharacter"><title name="VALUE">"pig"</title></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_playSound"></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">"pig"</title></block>'),
+  requiredBlocks: [
+    // TODO: addCharacter
+  ],
 });
 
 levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
@@ -10208,35 +10276,75 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.studio_whenSpriteClicked = generator.studio_eventHandlerPrologue;
 
-  blockly.Blocks.studio_whenTouchItem = {
-    // Block to handle event when sprite touches item.
+  blockly.Blocks.studio_whenTouchCharacter = {
+    // Block to handle event when sprite touches an item.
     helpUrl: '',
     init: function() {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
-        .appendTitle(msg.whenTouchItem());
+        .appendTitle(msg.whenTouchCharacter());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
-      this.setTooltip(msg.whenTouchItemTooltip());
+      this.setTooltip(msg.whenTouchCharacterTooltip());
     }
   };
 
-  generator.studio_whenTouchItem = generator.studio_eventHandlerPrologue;
+  generator.studio_whenTouchCharacter = generator.studio_eventHandlerPrologue;
 
-  blockly.Blocks.studio_whenTouchWall = {
-    // Block to handle event when sprite touches wall.
+  blockly.Blocks.studio_whenTouchObstacle = {
+    // Block to handle event when sprite touches a wall.
     helpUrl: '',
     init: function() {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
-        .appendTitle(msg.whenTouchWall());
+        .appendTitle(msg.whenTouchObstacle());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
-      this.setTooltip(msg.whenTouchWallTooltip());
+      this.setTooltip(msg.whenTouchObstacleTooltip());
     }
   };
 
-  generator.studio_whenTouchWall = generator.studio_eventHandlerPrologue;
+  generator.studio_whenTouchObstacle = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenTouchGoal = {
+    // Block to handle event when sprite touches a goal.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.whenTouchGoal());
+      this.setPreviousStatement(false);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenTouchGoalTooltip());
+    }
+  };
+
+  generator.studio_whenTouchGoal = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenGetCharacter = {
+    // Block to handle event when the primary sprite gets a character.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      this.setPreviousStatement(false);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenGetCharacterTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_whenGetCharacter.VALUES =
+      [[msg.whenGetCharacterPIG(),    'pig'],
+       [msg.whenGetCharacterMAN(),    'man'],
+       [msg.whenGetCharacterROO(),    'roo'],
+       [msg.whenGetCharacterBIRD(),   'bird'],
+       [msg.whenGetCharacterSPIDER(), 'spider'],
+       [msg.whenGetCharacterMOUSE(),  'mouse'],
+       [msg.whenGetCharacterPILOT(),  'pilot']];
+
+  generator.studio_whenGetCharacter = generator.studio_eventHandlerPrologue;
 
   blockly.Blocks.studio_whenSpriteCollided = {
     // Block to handle event when sprite collides with another sprite.
@@ -10382,7 +10490,7 @@ exports.install = function(blockly, blockInstallOptions) {
       valParam = 'Studio.random([' + allValues + '])';
     }
 
-    return 'Studio.addItem(\'block_id_' + this.id + '\', ' + valParam + ');\n';
+    return 'Studio.addCharacter(\'block_id_' + this.id + '\', ' + valParam + ');\n';
   };
 
   blockly.Blocks.studio_setItemActivity = {
@@ -11055,6 +11163,58 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.studio_changeScore = function() {
     // Generate JavaScript for changing the score.
     return 'Studio.changeScore(\'block_id_' + this.id + '\', \'' +
+                (this.getTitleValue('VALUE') || '1') + '\');\n';
+  };
+
+  blockly.Blocks.studio_addPoints = {
+    // Block for adding points.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.addPointsTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_addPoints.VALUES =
+      [[msg.addPoints10(),   '10'],
+       [msg.addPoints50(),   '50'],
+       [msg.addPoints100(),  '100'],
+       [msg.addPoints400(),  '400'],
+       [msg.addPoints1000(), '1000']];
+
+  generator.studio_addPoints = function() {
+    // Generate JavaScript for adding points.
+    return 'Studio.addPoints(\'block_id_' + this.id + '\', \'' +
+                (this.getTitleValue('VALUE') || '1') + '\');\n';
+  };
+
+  blockly.Blocks.studio_removePoints = {
+    // Block for removing points.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.removePointsTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_removePoints.VALUES =
+      [[msg.removePoints10(),   '10'],
+       [msg.removePoints50(),   '50'],
+       [msg.removePoints100(),  '100'],
+       [msg.removePoints400(),  '400'],
+       [msg.removePoints1000(), '1000']];
+
+  generator.studio_removePoints = function() {
+    // Generate JavaScript for removing points.
+    return 'Studio.removePoints(\'block_id_' + this.id + '\', \'' +
                 (this.getTitleValue('VALUE') || '1') + '\');\n';
   };
 
@@ -12782,6 +12942,18 @@ exports.moveDistance = function(id, spriteIndex, dir, distance) {
     'dir': dir,
     'distance': distance
   });
+};
+
+// addPoints is a wrapper for changeScore (used by hoc2015)
+
+exports.addPoints = function(id, value) {
+  Studio.queueCmd(id, 'changeScore', {'value': value});
+};
+
+// removePoints is a wrapper for reduceScore (used by hoc2015)
+
+exports.removePoints = function(id, value) {
+  Studio.queueCmd(id, 'reduceScore', {'value': value});
 };
 
 exports.changeScore = function(id, value) {
@@ -14779,6 +14951,9 @@ exports.SHAKE_DEFAULT_DISTANCE = 5;
 
 // How many clouds to display.
 exports.NUM_CLOUDS = 2;
+
+// How many milliseconds to throttle between playing sounds.
+exports.SOUND_THROTTLE_TIME = 200;
 
 
 },{}],"/home/ubuntu/staging/apps/build/js/studio/ImageFilterFactory.js":[function(require,module,exports){
