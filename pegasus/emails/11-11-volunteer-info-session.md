@@ -3,7 +3,7 @@ from: 'Tanya Parker <tanya_parker@code.org>'
 subject: What you need to know to volunteer
 ---
 
-You’re signed up to volunteer for the Hour of Code. What should you do now? Join an upcoming info session to learn everything you need to know to volunteer.
+You’re signed up to volunteer for the [Hour of Code](https://hourofcode.com/). So, what should you do now? Join an upcoming info session to learn everything you need to know to volunteer during December 7-13.
 
 **Date:** Monday, Nov. 16 <br/>
 **Time:** 1:00pm – 1:30pm PST <br/>
@@ -22,7 +22,7 @@ You’re signed up to volunteer for the Hour of Code. What should you do now? Jo
 
 Join the live info sessions with the above links and ask your questions. Anyone can join, but you’ll need to be logged in to a Google account to post your questions.
 
-In the meantime, review this [how-to guide](https://hourofcode.com/how-to/volunteers). Can’t make the live info session? Watch the recording of the session later at the same links above, or find them on [Code.org’s YouTube channel](https://www.youtube.com/user/CodeOrg) after they air.
+In the meantime, review this [how-to guide](https://hourofcode.com/how-to/volunteers). Can’t make a live info session? Watch a recording of the session later at the same links above, or find them on [Code.org’s YouTube channel](https://www.youtube.com/user/CodeOrg) after they air.
 
 Thank you for your support,
 
