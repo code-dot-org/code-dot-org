@@ -2,7 +2,6 @@ Feature: Hour of Code progress is saved on client side when puzzles are solved a
 
 Background:
   Given I am on "http://studio.code.org/hoc/reset"
-  And execute JavaScript expression "window.localStorage.clear()"
 
 Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appears as solved
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"

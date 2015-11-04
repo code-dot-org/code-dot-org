@@ -483,7 +483,6 @@ end
 Given(/^I manually sign in as "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
-    And execute JavaScript expression "window.localStorage.clear()"
     Then I am on "http://studio.code.org/"
     And I set the language cookie
     And I create a student named "#{name}"
