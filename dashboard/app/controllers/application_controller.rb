@@ -55,7 +55,7 @@ class ApplicationController < ActionController::Base
   def reset_session_endpoint
     client_state.reset
     reset_session
-    render text: "OK"
+    render text: 'OK <script>localStorage.clear()</script>'
   end
 
   rescue_from CanCan::AccessDenied do
