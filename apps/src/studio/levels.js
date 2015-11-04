@@ -1709,7 +1709,7 @@ levels.js_hoc2015_move_right = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -1775,7 +1775,7 @@ levels.js_hoc2015_move_right_down = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -1822,7 +1822,7 @@ levels.js_hoc2015_move_diagonal = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -1894,7 +1894,7 @@ levels.js_hoc2015_move_backtrack = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -1941,7 +1941,7 @@ levels.js_hoc2015_move_around = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -1990,7 +1990,7 @@ levels.js_hoc2015_move_finale = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
