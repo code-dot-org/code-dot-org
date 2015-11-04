@@ -8512,7 +8512,7 @@ levels.js_hoc2015_move_right = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -8578,7 +8578,7 @@ levels.js_hoc2015_move_right_down = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -8625,7 +8625,7 @@ levels.js_hoc2015_move_diagonal = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -8697,7 +8697,7 @@ levels.js_hoc2015_move_backtrack = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -8744,7 +8744,7 @@ levels.js_hoc2015_move_around = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -8793,7 +8793,7 @@ levels.js_hoc2015_move_finale = {
   'gridAlignedMovement': true,
   'itemGridAlignedMovement': true,
   'slowJsExecutionFactor': 10,
-  'removeItemsWhenActorCollides': true,
+  'removeItemsWhenActorCollides': false,
   'delayCompletion': 2000,
   'floatingScore': true,
   'map':
@@ -13622,6 +13622,10 @@ Item.prototype.startCollision = function (key) {
   if (newCollisionStarted) {
     if (this.isHazard && key === (Studio.protagonistSpriteIndex || 0)) {
       Studio.trackedBehavior.touchedHazardCount++;
+      var actor = Studio.sprite[key];
+      if (actor) {
+        actor.addAction(new spriteActions.ShakeActor(constants.TOUCH_HAZARD_EFFECT_TIME));
+      }
     }
   }
   return newCollisionStarted;
@@ -14766,11 +14770,11 @@ exports.DEFAULT_ANIMATION_RATE = 20;
 exports.GOAL_FADE_TIME = 200;
 exports.ITEM_FADE_TIME = 200;
 exports.DEFAULT_ACTOR_FADE_TIME = 1000;
-exports.TOUCH_HAZARD_FADE_TIME = 2000;
+exports.TOUCH_HAZARD_EFFECT_TIME = 1500;
 
 // Other defaults for actions
 exports.SHAKE_DEFAULT_DURATION = 1000;
-exports.SHAKE_DEFAULT_CYCLES = 8;
+exports.SHAKE_DEFAULT_CYCLES = 6;
 exports.SHAKE_DEFAULT_DISTANCE = 5;
 
 // How many clouds to display.
