@@ -1,6 +1,13 @@
 var gmap;
 var gmap_loc;
 
+$(document).ready(function() {
+  initializeMap();
+  $('#contact-volunteer-form select').selectize({
+    plugins: ['fast_click']
+  });
+});
+
 $(function() {
   selectize = $('#volunteer-search-facets select').selectize({
     plugins: ['fast_click']
@@ -11,29 +18,20 @@ $(function() {
       var loc = result.geometry.location;
       gmap_loc = loc.lat() + ',' + loc.lng();
       resetFacets();
-      submitForm();
+      initializeMap();
     });
-
-  // Make the map sticky.
-  $("#gmap").sticky({topSpacing:0});
 
   // Trigger query when a facet is changed.
   $('#volunteer-search-facets').find('select').change(function() {
-    submitForm();
+    initializeMap();
   });
 });
 
-function submitForm() {
+function initializeMap() {
   var form_data = $('#volunteer-search-form').serializeArray();
 
   // Clear the location details.
   $('#location-details').html('');
-
-  // If we still don't have coordinates, display an error.
-  if (!gmap_loc) {
-    displayQueryError();
-    return;
-  }
 
   var params = getParams(form_data);
   sendQuery(params);
@@ -55,6 +53,21 @@ function getLatLng(address) {
 
 function getParams(form_data) {
   var params = [];
+
+  // Default showing US results
+  if (!gmap_loc) {
+    gmap_loc = '37.6,-95.665';
+
+    params.push({
+      name: 'distance',
+      value: 3000
+    });
+
+    params.push({
+      name: 'num_volunteers',
+      value: 5000
+    });
+  }
 
   params.push({
     name: 'coordinates',
@@ -81,12 +94,10 @@ function sendQuery(params) {
 
 function updateResults(locations) {
   if (locations.length > 0) {
-    $('#volunteer-search-facets').show();
     $('#controls').html('');
   } else {
     displayNoResults();
   }
-  $('#volunteer-search-results').show();
 
   loadMap(locations);
 }
@@ -139,20 +150,15 @@ function updateFacets(results) {
 function displayNoResults() {
   $('#controls').html('<p>No results were found.</p>');
 
-  // Hide the facets by default.
-  $('#volunteer-search-facets').hide();
-
   // If a facet has a value, show the facets.
   var form_data = $('#volunteer-search-form').serializeArray();
   $.each(form_data, function(key, field) {
     if (field.name != 'location' && field.value) {
-      $('#volunteer-search-facets').show();
     }
   });
 }
 
 function displayQueryError() {
-  $('#volunteer-search-facets').hide();
   $('#volunteer-search-results').hide();
   $('#volunteer-search-error').html('<p>An error occurred. Please try your search again.</p>').show();
 }
@@ -261,19 +267,19 @@ function setContactTrigger(index, location, marker) {
 
 function contactVolunteer()
 {
-  $('#volunteer-map').hide();
   $('#name').show();
   $('#volunteer-contact').show();
-  $('body').scrollTop(0);
+  $('#success-message').hide();
+  $('#error-message').hide();
+  adjustScroll('volunteer-contact');
 
   return false;
 }
 
 function processResponse(data)
 {
-  $('#contact-volunteer-form').hide();
-  $('#before-contact').hide();
-  $('#after-contact').show();
+  $('#error-message').hide();
+  $('#success-message').show();
 }
 
 function processError(data)
@@ -289,18 +295,13 @@ function processError(data)
     $(error_id).parents('.form-group').addClass('has-error');
   }
   
-  $('#error_message').html('<font color="#a94442">An error occurred. Please check that all required fields have been filled out properly.</font>').show();
-  
-  $('body').scrollTop(0);
-  $("#contact-submit-btn").prop('disabled', false);
-  $("#contact-submit-btn").removeClass("button_disabled").addClass("button_enabled");
+  var error = '<font color="#a94442">An error occurred. Please check that all required fields have been filled out properly.</font>';
+  $('#error-message').html(error).show();
+  $('#success-message').hide();
 }
 
 function sendEmail(data)
 {
-  $("#contact-submit-btn").prop('disabled', true);
-  $("#contact-submit-btn").removeClass("button_enabled").addClass("button_disabled");
-
   $.ajax({
     url: "/forms/VolunteerContact2015",
     type: "post",
@@ -309,6 +310,13 @@ function sendEmail(data)
   }).done(processResponse).fail(processError);
 
   return false;
+}
+
+function adjustScroll(destination)
+{
+  $('html, body').animate({
+    scrollTop: $("#" + destination).offset().top
+  }, 1000);
 }
 
 function i18n(token) {
