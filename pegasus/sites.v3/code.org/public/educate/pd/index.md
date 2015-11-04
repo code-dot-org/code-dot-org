@@ -21,7 +21,7 @@ title: Code.org Professional Development
 
 [col-50]
 
-Congradulations on completing Code.org professional development!
+Congratulations on completing Code.org professional development!
 
 [/col-50]
 
