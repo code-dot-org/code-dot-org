@@ -87,7 +87,7 @@ class GatekeeperBase
       cache_expiration = 30
       adapter = DynamoDBAdapter.new CDO.gatekeeper_table_name
     else
-      adapter = JSONFileDatastoreAdapter.new CDO.gatekeeper_table_name
+      adapter = JSONFileDatastoreAdapter.new("#{dashboard_dir(CDO.gatekeeper_table_name)}_temp.json")
     end
 
     datastore_cache = DatastoreCache.new adapter, cache_expiration: cache_expiration
