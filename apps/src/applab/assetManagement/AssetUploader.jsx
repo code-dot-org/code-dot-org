@@ -4,33 +4,34 @@
  */
 module.exports = React.createClass({
   propTypes: {
-    onUpload: React.PropTypes.func.isRequired,
+    onUploadStart: React.PropTypes.func.isRequired,
+    onUploadDone: React.PropTypes.func.isRequired,
     typeFilter: React.PropTypes.string,
     uploadsEnabled: React.PropTypes.bool.isRequired
   },
 
   componentDidMount: function () {
+    var props = this.props;
+
     $(React.findDOMNode(this.refs.uploader)).fileupload({
-        dataType: 'json',
-        // prevent fileupload from replacing the input DOM element, which
-        // React does not like
-        replaceFileInput: false,
-        done: function (e, data) {
-          console.log('done');
-          // $.each(data.result.files, function (index, file) {
-          //     $('<p/>').text(file.name).appendTo(document.body);
-          // });
-        }
+      dataType: 'json',
+      url: '/v3/assets/' + Applab.channelId + '/new',
+      // prevent fileupload from replacing the input DOM element, which
+      // React does not like
+      replaceFileInput: false,
+      add: function (e, data) {
+        props.onUploadStart();
+        data.submit();
+      },
+      done: function (e, data) {
+        props.onUploadDone(data.result);
+      }
     });
   },
 
   componentWillUnmount: function () {
     // TODO - test open/closing dialog. make sure we do the right thing
     $(React.findDOMNode(this.refs.uploader)).fileupload('destroy');
-  },
-
-  upload: function () {
-    this.props.onUpload(this.refs.uploader);
   },
 
   /**
@@ -44,19 +45,15 @@ module.exports = React.createClass({
 
   render: function () {
     // TODO - channelId as prop?
-    var dataUrl = '/v3/assets/' + Applab.channelId + '/new';
-    // return <input ref="fileupload" id="fileupload" type="file" name="files[]" data-url={dataUrl} multiple/>;
-    // TODO - do i need "multiple"?
+    // NOTE: IE9 will ignore accept, which means on this browser we can end
+    // up uploading files that dont match typeFilter
     return (
       <span>
         <input
             ref="uploader"
-            data-url={dataUrl}
             type="file"
-            multiple={true}
-            accept={(this.props.typeFilter || '*') + '/*'}
             style={{display: 'none'}}
-            onChange={this.upload} />
+            accept={(this.props.typeFilter || '*') + '/*'}/>
         <button
             onClick={this.fileUploadClicked}
             className="share"
