@@ -365,13 +365,13 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_whenGetCharacter.VALUES =
-      [[msg.whenGetCharacterPIG(),    'pig'],
-       [msg.whenGetCharacterMAN(),    'man'],
-       [msg.whenGetCharacterROO(),    'roo'],
-       [msg.whenGetCharacterBIRD(),   'bird'],
-       [msg.whenGetCharacterSPIDER(), 'spider'],
-       [msg.whenGetCharacterMOUSE(),  'mouse'],
-       [msg.whenGetCharacterPILOT(),  'pilot']];
+      [[msg.whenGetCharacterPufferPig(),    'pufferpig'],
+       [msg.whenGetCharacterStormtrooper(), 'stormtrooper'],
+       [msg.whenGetCharacterTauntaun(),     'tauntaun'],
+       [msg.whenGetCharacterMynock(),       'mynock'],
+       [msg.whenGetCharacterProbot(),       'probot'],
+       [msg.whenGetCharacterMouseDroid(),   'mousedroid'],
+       [msg.whenGetCharacterRebelPilot(),   'rebelpilot']];
 
   generator.studio_whenGetCharacter = generator.studio_eventHandlerPrologue;
 
