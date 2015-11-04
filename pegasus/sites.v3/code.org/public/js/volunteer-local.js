@@ -2,7 +2,7 @@ var gmap;
 var gmap_loc;
 
 $(document).ready(function() {
-  submitForm();
+  initializeMap();
   $('#contact-volunteer-form select').selectize({
     plugins: ['fast_click']
   });
@@ -18,16 +18,16 @@ $(function() {
       var loc = result.geometry.location;
       gmap_loc = loc.lat() + ',' + loc.lng();
       resetFacets();
-      submitForm();
+      initializeMap();
     });
 
   // Trigger query when a facet is changed.
   $('#volunteer-search-facets').find('select').change(function() {
-    submitForm();
+    initializeMap();
   });
 });
 
-function submitForm() {
+function initializeMap() {
   var form_data = $('#volunteer-search-form').serializeArray();
 
   // Clear the location details.
