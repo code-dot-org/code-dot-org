@@ -7,7 +7,6 @@ def hoc_activity_writes_disabled
 end
 
 def create_session_row(row)
-  puts "WRITING!"
   retries = 3
 
   begin
