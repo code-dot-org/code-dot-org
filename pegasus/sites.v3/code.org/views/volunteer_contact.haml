@@ -34,12 +34,10 @@
 
   .form-group
     %label.control-label{for: "type-task"} Select all of the following ways that you'd like this volunteer to help you.
-    %div
-      %select#volunteer-type-task.form-control{name: "type_task_ss[]", type: "select", required: true, multiple: true}
-        %option{selected: type_task_ss.nil_or_empty?, value: ""}
-        -VolunteerContact2015.type_tasks.each_pair do |key,label|
-          %option{value: key, selected: (type_task_ss||[]).include?(key)}= label
-
+    #volunteer-type-task{style: "margin-left: 20px;"}
+      -VolunteerContact2015.type_tasks.each_pair do |key,label|
+        .checkbox
+          %input{name: "type_task_#{key}_b", type: "checkbox", value: "1", required: false}= label
 
   %p{style: 'color: #00adbc; font-size: 1.125em;'} IMPORTANT: Code.org has performed no references or background checks on these potential volunteers and neither recommends nor certifies any volunteer.
   %p It is entirely your responsibility to thoroughly check references or perform any background checks required by your school or district. Code.org provides no warranty, guarantees of suitability, or information other than the ability to contact these potential volunteers, and all liability in any use of volunteers rests only with you. Under no circumstances is Code.org responsible for any loss or damage resulting from any person's reliance on this potential volunteer.
