@@ -39,10 +39,10 @@ Dashboard::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = false
+  config.assets.debug = true
 
   # Whether or not to display pretty apps (formerly called blockly).
-  config.pretty_apps = false
+  config.pretty_apps = true
 
   # Whether or not to display pretty shared js assets
   config.pretty_sharedjs = true

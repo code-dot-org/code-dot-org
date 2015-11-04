@@ -170,7 +170,7 @@ class FilesApi < Sinatra::Base
   #
   # Create or replace a file. Optionally overwrite a specific version.
   #
-  put %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  put %r{/v3/sources/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
@@ -180,12 +180,13 @@ class FilesApi < Sinatra::Base
     # header.
     body = request.body.read
 
-    put_file(endpoint, encrypted_channel_id, filename, body)
+    put_file('sources', encrypted_channel_id, filename, body)
   end
 
   # POST /v3/assets/<channel-id>/<filename>?version=<version-id>
   #
-  # TODO
+  # Upload a new file. We use this method so that IE9 can still upload by
+  # posting to an iframe.
   #
   post %r{/v3/assets/([^/]+)/new$} do |encrypted_channel_id|
     dont_cache
@@ -194,8 +195,11 @@ class FilesApi < Sinatra::Base
     # content_type json
     content_type 'text/plain'
 
-    # TODO - what sort of validation needs to be done?
+    bad_request unless request.POST['files'] && request.POST['files'][0]
+
     file = request.POST['files'][0]
+
+    bad_request unless file[:filename] && file[:tempfile]
 
     put_file('assets', encrypted_channel_id, file[:filename], file[:tempfile].read)
   end

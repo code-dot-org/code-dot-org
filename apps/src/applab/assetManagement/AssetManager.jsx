@@ -25,6 +25,7 @@ module.exports = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
     typeFilter: React.PropTypes.string,
+    channelId: React.PropTypes.string.isRequired,
     uploadsEnabled: React.PropTypes.bool.isRequired
   },
 
@@ -65,12 +66,16 @@ module.exports = React.createClass({
   },
 
   onUploadDone: function (result) {
-    // TODO - error states?
     assetListStore.add(result);
     this.setState({
       assets: assetListStore.list(this.props.typeFilter),
       statusMessage: 'File "' + result.filename + '" successfully uploaded!'
     });
+  },
+
+  onUploadError: function (status) {
+     this.setState({statusMessage: 'Error uploading file: ' +
+      getErrorMessage(status)});
   },
 
   deleteAssetRow: function (name) {
@@ -85,8 +90,10 @@ module.exports = React.createClass({
       <AssetUploader
         uploadsEnabled={this.props.uploadsEnabled}
         typeFilter={this.props.typeFilter}
+        channelId={this.props.channelId}
         onUploadStart={this.onUploadStart}
-        onUploadDone={this.onUploadDone}/>
+        onUploadDone={this.onUploadDone}
+        onUploadError={this.onUploadError}/>
       <span style={{margin: '0 10px'}} id="manage-asset-status">
         {this.state.statusMessage}
       </span>

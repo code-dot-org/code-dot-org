@@ -6,6 +6,7 @@ module.exports = React.createClass({
   propTypes: {
     onUploadStart: React.PropTypes.func.isRequired,
     onUploadDone: React.PropTypes.func.isRequired,
+    channelId: React.PropTypes.string.isRequired,
     typeFilter: React.PropTypes.string,
     uploadsEnabled: React.PropTypes.bool.isRequired
   },
@@ -15,7 +16,7 @@ module.exports = React.createClass({
 
     $(React.findDOMNode(this.refs.uploader)).fileupload({
       dataType: 'json',
-      url: '/v3/assets/' + Applab.channelId + '/new',
+      url: '/v3/assets/' + props.channelId + '/new',
       // prevent fileupload from replacing the input DOM element, which
       // React does not like
       replaceFileInput: false,
@@ -25,12 +26,14 @@ module.exports = React.createClass({
       },
       done: function (e, data) {
         props.onUploadDone(data.result);
+      },
+      error: function (e, data) {
+        props.onUploadError(e.status);
       }
     });
   },
 
   componentWillUnmount: function () {
-    // TODO - test open/closing dialog. make sure we do the right thing
     $(React.findDOMNode(this.refs.uploader)).fileupload('destroy');
   },
 
@@ -44,7 +47,6 @@ module.exports = React.createClass({
   },
 
   render: function () {
-    // TODO - channelId as prop?
     // NOTE: IE9 will ignore accept, which means on this browser we can end
     // up uploading files that dont match typeFilter
     return (
