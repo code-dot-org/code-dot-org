@@ -100,7 +100,7 @@ body.modal-open .supreme-container{
 }
 
 #homepage #caption_container #blankspaceleftmobile {
-  height: 120px;
+  height: 100px;
 }
 
 #homepage #actions {
@@ -110,13 +110,37 @@ body.modal-open .supreme-container{
   text-align: center
 }
 
+@media screen and (max-width: 970px)  {
+  #homepage #actions {
+    margin-top: 300px;
+  }
+}
+
+#homepage #actions a {
+  text-decoration: none;
+}
+
+#homepage #actions #title {
+  font-family: 'Gotham 5r', sans-serif;
+  font-size: 26px;
+  color: white;
+  line-height: 30px;
+}
+
+#homepage #actions #subtitle {
+  font-family: 'Gotham 4r', sans-serif;
+  font-size: 16px;
+  color: white;
+  margin: 15px 0 5px 0;
+}
+
 #homepage #actions #playimage {
-  cursor: pointer
+  cursor: pointer;
 }
 
 #homepage #actions #playtext {
-  font-size: 20px; 
-  cursor: pointer
+  font-size: 16px; 
+  cursor: pointer;
 }
 
 #homepage #actions #herolearnlink {
@@ -124,10 +148,31 @@ body.modal-open .supreme-container{
   font-size: 20px
 }
 
-#homepage #actions #herolearnbutton {
+#homepage #actions .buttongroup {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+#homepage #actions .herohocbutton {
   font-weight: 500; 
-  font-size: 20px; 
-  height: 50px
+  font-size: 18px; 
+  height: 40px;
+  padding: 0 30px;
+  margin: 10px 5px 0 0;
+}
+
+#homepage #actions #volunteeraction {
+  font-family: 'Gotham 4r', sans-serif;
+  font-size: 16px;
+  color: white;
+  margin-top: 30px;
+}
+
+#homepage #actions #volunteeraction a {
+  font-family: 'Gotham 4r', sans-serif;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
 }
 
 #homepage #actions #petitionaction {
@@ -136,10 +181,6 @@ body.modal-open .supreme-container{
   font-size: 14px; 
   height: 50px; 
   cursor: pointer
-}
-
-#homepage #actions .actiongap {
-  height: 40px
 }
 
 #homepage .quarterslot {

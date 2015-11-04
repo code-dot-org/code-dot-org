@@ -538,10 +538,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Script.find_by_name(Script::HOC_NAME)))
   end
 
-
   test 'post script redirect is frozen endpoint' do
     self.stubs(:current_user).returns(nil)
     assert_equal('//test.code.org/api/hour/finish/frozen', script_completion_redirect(Script.find_by_name(Script::FROZEN_NAME)))
+  end
+
+  test 'post script redirect is hoc2015 endpoint' do
+    self.stubs(:current_user).returns(nil)
+    assert_equal('//test.code.org/api/hour/finish/hoc2015', script_completion_redirect(Script.find_by_name(Script::HOC2015_NAME)))
   end
 
   test 'end of HoC for logged in user works' do
