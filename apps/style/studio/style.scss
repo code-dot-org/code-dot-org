@@ -63,14 +63,19 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
   stroke-width: 3;
   opacity: 0.9;
 }
-.studio-score, .studio-victory-text, .studio-reset-text {
+.studio-score,
+.studio-victory-text,
+.studio-reset-text,
+.studio-floating-score {
   text-anchor: middle;
   font-family: $gotham-extra-bold;
   fill: white;
-  stroke: $charcoal;
+  stroke: $black;
   cursor: default;
 }
-.studio-score, .studio-reset-text {
+.studio-score,
+.studio-reset-text,
+.studio-floating-score {
   font-size: x-large;
   stroke-width: 1;
 }
@@ -79,15 +84,6 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
   stroke-width: 2;
 }
 
-.studio-floating-score {
-  text-anchor: middle;
-  font-size: x-large;
-  font-family: $gotham-extra-bold;
-  fill: white;
-  stroke: black;
-  stroke-width: 2;
-  cursor: default;
-}
 .studio-ts-title {
   text-anchor: middle;
   font-size: xx-large;
