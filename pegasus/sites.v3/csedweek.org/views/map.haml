@@ -2,7 +2,7 @@
   %link{rel: "stylesheet", type: "text/css", href: "/css/map.css"}
   %h2.mapheader
     %a{:href=> "https://hourofcode.com/events"}
-      = I18n.t(:csedweek_map_header).gsub('#', format_integer_with_commas(total_hoc_count))
+      = I18n.t(:csedweek_map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
     %a{:href=> "https://hourofcode.com/#join"}
       %button.signup-button
         = I18n.t(:csedweek_map_signup)
