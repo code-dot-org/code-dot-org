@@ -18,6 +18,7 @@ And(/^there is a Tooltipster tooltip with text "([^"]*)"$/) do |tooltip_text|
   wait.until { @browser.execute_script("return $('.tooltipster-content :contains(#{tooltip_text})').length > 0;") }
 end
 
+# This doesn't work in IE or on mobile yet, not sure why.
 When /^I drag droplet block "([^"]*)" to line (\d+)$/ do |blockName, lineNumber|
   code = %{
     var block = $("#droplet_palette_block_#{blockName}");
