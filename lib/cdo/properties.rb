@@ -25,7 +25,7 @@ class Properties
   end
 
   def self.get_user_metrics()
-    self.get(:about_stats)||{
+    self.get(:about_stats) || {
       # The percentage of users with user_type = 'student' and last_sign_in_at != null and
       # gender != null that have gender = 'f' (circa Oct 2015).
       'percent_female'=>42,
@@ -40,7 +40,7 @@ class Properties
 end
 
 def fetch_metrics()
-  Properties.get(:metrics)||{
+  Properties.get(:metrics) || {
     'created_at'=>"2015-11-04T21:11:40+00:00",
     'created_on'=>"2015-11-04",
     'csedweek_organizers'=>38236,
@@ -55,7 +55,7 @@ end
 
 def fetch_hoc_metrics()
   # Include stale default values as of 2015-11-04 so we never show 0.
-  metrics = Properties.get(:hoc_metrics)||{
+  metrics = Properties.get(:hoc_metrics) || {
     'started'=>136340020,
     'finished'=>23600234,
     'tutorials'=>{
