@@ -139,6 +139,13 @@ Projectile.prototype.createElement = function (parentElement) {
 };
 
 /**
+ * Stop our animations
+ */
+Projectile.prototype.stopAnimations = function() {
+  this.animation_.stopAnimator();
+};
+
+/**
  * Remove our element/clipPath/animator
  */
 Projectile.prototype.removeElement = function () {
