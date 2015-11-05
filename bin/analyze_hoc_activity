@@ -150,6 +150,7 @@ def main()
     day += 1
   end
 
+  # Compute the number of hoc events (the grand total and broken down by company and country).
   hoc_country_totals = {}
   hoc_company_totals = {}
   unique_hoc_events = DB[:forms].where(kind: 'HocSignup2015').group(:name, :email).select(:name, :email, :processed_data, :data)
