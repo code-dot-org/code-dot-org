@@ -295,19 +295,26 @@ function processError(data)
     $(error_id).parents('.form-group').addClass('has-error');
   }
   
-  var error = '<font color="#a94442">An error occurred. Please check that all required fields have been filled out properly.</font>';
+  var error = '<font color="#a94442">An error occurred. All fields are required Please check that all fields have been filled out properly.</font>';
   $('#error-message').html(error).show();
   $('#success-message').hide();
 }
 
 function sendEmail(data)
 {
-  $.ajax({
-    url: "/forms/VolunteerContact2015",
-    type: "post",
-    dataType: "json",
-    data: $('#contact-volunteer-form').serialize()
-  }).done(processResponse).fail(processError);
+  var typeTaskSelected = $('#volunteer-type-task input:checked').length > 0;
+  if (typeTaskSelected) {
+    $.ajax({
+      url: "/forms/VolunteerContact2015",
+      type: "post",
+      dataType: "json",
+      data: $('#contact-volunteer-form').serialize()
+    }).done(processResponse).fail(processError);
+  }
+  else {
+    var error = '<font color="#a94442">Please select at least one way for the volunteer to help.</font>';
+    $('#error-message').html(error).show();
+  }
 
   return false;
 }
