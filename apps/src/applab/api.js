@@ -169,7 +169,7 @@ exports.drawImageURL = function (url, x, y, width, height, callback) {
     x = undefined;
   }
   return Applab.executeCmd(null,
-                          'drawImageUrl',
+                          'drawImageURL',
                           {'url': url,
                            'x': x,
                            'y': y,
