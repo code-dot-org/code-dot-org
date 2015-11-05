@@ -15,7 +15,7 @@ module.exports.blocks = [
   {func: 'goLeft', parent: api, category: '', },
   {func: 'goUp', parent: api, category: '', },
   {func: 'goDown', parent: api, category: '', },
-  {func: 'playSound', parent: api, category: '', params: ['"r2-d2sound1"'], dropdown: { 0: paramLists.playSoundDropdown } },
+  {func: 'playSound', parent: api, category: '', params: ['"R2-D2sound1"'], dropdown: { 0: paramLists.playSoundDropdown } },
 
   {func: 'endGame', parent: api, category: '', params: ['"win"'], dropdown: { 0: ['"win"', '"lose"' ] } },
   {func: 'addPoints', parent: api, category: '', params: ["100"] },
