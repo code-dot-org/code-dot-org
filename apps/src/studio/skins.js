@@ -531,7 +531,7 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
 
-  // Since we don't have jumbo tiles for our "hoth" background, in the case
+  // Since we don't have jumbo tiles for our "Hoth" background, in the case
   // of the two maps that use jumbo pieces ("circle" and "horizontal") we
   // return a special version of the map that just uses regular tile pieces.
 
@@ -806,8 +806,8 @@ function loadHoc2015x(skin, assetUrl) {
   skin.hazard = skin.assetUrl('hazard_idle.png');
 
   skin.main = {
-    background: skin.assetUrl('background_endor.jpg'),
-    tiles: skin.assetUrl('tiles_endor.png'),
+    background: skin.assetUrl('background_tatooine.jpg'),
+    tiles: skin.assetUrl('tiles_tatooine.png'),
     clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
   };
 
@@ -843,7 +843,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
     [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteBB8(), '"bb-8"']];
+    [msg.setSpriteBB8(), '"BB-8"']];
 
   skin.projectileChoices = [];
 
