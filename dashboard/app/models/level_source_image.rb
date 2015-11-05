@@ -25,6 +25,12 @@ class LevelSourceImage < ActiveRecord::Base
     return false if CDO.disable_s3_image_uploads
     return false if image.blank?
 
+    begin
+      image = ImageLib::to_png(image)
+    rescue MiniMagick::Invalid, MiniMagick::Error # something wrong with the image or runtime error.
+      return false
+    end
+
     return false unless upload_original_image(image)
 
     if level_source.level.game.app == Game::ARTIST
