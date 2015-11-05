@@ -35,18 +35,18 @@ exports.setSpriteSpeed = function (spriteIndex, value) {
   });
 };
 
-// setBot and setBotSpeed are wrappers to setSprite and
+// setDroid and setDroidSpeed are wrappers to setSprite and
 // setSpriteSpeed that always pass 0 for the spriteIndex (used by hoc2015)
 
-exports.setBot = function (value) {
+exports.setDroid = function (value) {
   Studio.queueCmd(null, 'setSprite', {
     'spriteIndex': 0,
     'value': value
   });
 };
 
-exports.setBotSpeed = function (value) {
-  Studio.queueCmd(null, 'setBotSpeed', {
+exports.setDroidSpeed = function (value) {
+  Studio.queueCmd(null, 'setDroidSpeed', {
     'spriteIndex': 0,
     'value': value
   });
