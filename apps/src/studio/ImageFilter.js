@@ -142,7 +142,10 @@ ImageFilter.prototype.removeFromDom_ = function () {
     this.intervalId_ = null;
   }
 
-  filter.parentNode.removeChild(filter);
+  var filter = document.getElementById(this.id_);
+  if (filter) {
+    filter.parentNode.removeChild(filter);
+  }
 };
 
 /**
