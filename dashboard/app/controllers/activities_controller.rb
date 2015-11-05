@@ -118,7 +118,7 @@ class ActivitiesController < ApplicationController
       return {message: t('share_code.email_not_allowed'), contents: email, type: 'email'}
     elsif hit_external_services && street_address = Geocoder.find_potential_street_address(program_tags_removed)
       return {message: t('share_code.address_not_allowed'), contents: street_address, type: 'address'}
-    elsiif phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
+    elsif phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
       return {message: t('share_code.phone_number_not_allowed'), contents: phone_number, type: 'phone'}
     elsif hit_external_services && WebPurify.find_potential_profanity(program_tags_removed, ['en', locale])
       return {message: t('share_code.profanity_not_allowed'), type: 'profanity'}
