@@ -1835,7 +1835,7 @@ levels.js_hoc2015_move_diagonal = {
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x20],
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x00]],
   'embed': 'false',
-  'instructions': '"Watch out for the thug!"',
+  'instructions': '"Watch out for the Thug!"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -1903,6 +1903,7 @@ levels.js_hoc2015_move_backtrack = {
      [0x00, 0x0000000, 0x0000000, 0x0010000, 0x0000001, 0x0020000, 0x00, 0x00],
      [0x00, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00, 0x00],
      [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
+     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
   'instructions': '"Go quickly, BB-8."',
@@ -2058,7 +2059,7 @@ levels.js_hoc2015_event_two_items = {
     [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00]],
   'pinWorkspaceToBottom': 'true',
   'embed': 'false',
-  'instructions': '"R2-D2, I need you to get a critical message to the rebel pilots."',
+  'instructions': '"R2-D2, I need you to get a critical message to the Rebel Pilots."',
   'instructions2': 'Make R2-D2 move when you use the arrow keys.',
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
@@ -2157,7 +2158,7 @@ levels.js_hoc2015_event_four_items = {
     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
     [0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00]],
   'embed': 'false',
-  'instructions': '"Get to all of the rebel pilots as quickly as you can."',
+  'instructions': '"Get to all of the Rebel Pilots as quickly as you can."',
   'instructions2': 'Move in all directions.',
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2176,7 +2177,7 @@ levels.js_hoc2015_event_four_items = {
 
 levels.js_hoc2015_score =
 {
-  'avatarList': ['r2-d2'],
+  'avatarList': ['R2-D2'],
   'editCode': true,
   'background': 'hoth',
   'music': [ 'song9' ],
@@ -2223,8 +2224,8 @@ levels.js_hoc2015_score =
     [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 1,  0, 0, 0, 0]],
-  'instructions': '"Reach the rebel pilots!"',
-  'instructions2': "Let's add points. Add 100 points when R2-D2 gets each rebel pilot.",
+  'instructions': '"Reach the Rebel Pilots!"',
+  'instructions2': "Let's add points. Add 100 points when R2-D2 gets each Rebel Pilot.",
   'autoArrowSteer': true,
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
@@ -2325,8 +2326,8 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
     [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
-  'instructions': '"Watch out for the stormtrooper."',
-  'instructions2': 'Add 100 points when R2-D2 gets the rebel pilot.  Remove 100 points when he gets a stormtrooper.  Now, avoid the stormtrooper and get all the rebel pilots!',
+  'instructions': '"Watch out for the Stormtrooper."',
+  'instructions2': 'Add 100 points when R2-D2 gets the Rebel Pilot.  Remove 100 points when he gets a Stormtrooper.  Now, avoid the Stormtrooper and get all the Rebel Pilots!',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2370,7 +2371,7 @@ levels.js_hoc2015_add_characters = {
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': { params: ['"pufferpig"'] },
+    'addCharacter': { params: ['"PufferPig"'] },
     'addPoints': { params: ["1000"] },
     'removePoints': { params: ["1000"] },
     'playSound': null,
@@ -2379,7 +2380,7 @@ levels.js_hoc2015_add_characters = {
   },
   'startBlocks': [
     'playSound("r2-d2sound1");',
-    'addCharacter("pufferpig");',
+    'addCharacter("PufferPig");',
     '',
     'function whenGetPufferPig() {',
     '  playSound("pufferpigsound1");',
@@ -2404,7 +2405,7 @@ levels.js_hoc2015_add_characters = {
     [0, 0, 0, 0,  0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"I\'m seeing signs of increased activity on this planet."',
-  'instructions2': 'Add three puffer pigs to the planet. Then, go get them.',
+  'instructions2': 'Add three Puffer Pigs to the planet. Then, go get them.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2450,7 +2451,7 @@ levels.js_hoc2015_chain_characters = {
     'whenGetMouseDroid': null,
   },
   'startBlocks': [
-    'addCharacter("mousedroid");',
+    'addCharacter("MouseDroid");',
     'playSound("r2-d2sound3");',
     '',
     'function whenGetMouseDroid() {',
@@ -2469,7 +2470,7 @@ levels.js_hoc2015_chain_characters = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"They\'re multiplying!"',
-  'instructions2': 'Can you make two mouse droids appear every time R2-D2 gets one mouse droid?  Get 20 mouse droids and score 2000 points.',
+  'instructions2': 'Can you make two Mouse Droids appear every time R2-D2 gets one Mouse Droid?  Get 20 Mouse Droids and score 2000 points.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
@@ -2513,7 +2514,7 @@ levels.js_hoc2015_chain_characters_2 = {
   'wallMap': 'horizontal',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': { params: ['"mousedroid"'] },
+    'addCharacter': { params: ['"MouseDroid"'] },
     'addPoints': null,
     'removePoints': null,
     'playSound': null,
@@ -2522,14 +2523,14 @@ levels.js_hoc2015_chain_characters_2 = {
     'whenGetMouseDroid': null
   },
   'startBlocks': [
-    'addCharacter("tauntaun");',
-    'addCharacter("tauntaun");',
+    'addCharacter("Tauntaun");',
+    'addCharacter("Tauntaun");',
     '',
     'function whenGetTauntaun() {',
     '  playSound("tauntaunsound4");',
     '  addPoints(50);',
-    '  addCharacter("mynock");',
-    '  addCharacter("mynock");',
+    '  addCharacter("Mynock");',
+    '  addCharacter("Mynock");',
     '}',
     '',
     'function whenGetMynock() {',
@@ -2552,7 +2553,7 @@ levels.js_hoc2015_chain_characters_2 = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"It\'s up to you, R2-D2!"',
-  'instructions2': 'When you get a tauntaun, two mynocks appear. Can you make two mouse droids appear when you get a mynock? Then, get them all.',
+  'instructions2': 'When you get a Tauntaun, two mynocks appear. Can you make two Mouse Droids appear when you get a Mynock? Then, get them all.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
@@ -2604,11 +2605,11 @@ levels.js_hoc2015_change_setting = {
     'whenGetRebelPilot': null,
   },
   'startBlocks': [
-    'addCharacter("rebelpilot");',
-    'addCharacter("rebelpilot");',
-    'addCharacter("rebelpilot");',
+    'addCharacter("RebelPilot");',
+    'addCharacter("RebelPilot");',
+    'addCharacter("RebelPilot");',
     'playSound("r2-d2sound4");',
-    'setDroid("r2-d2");',
+    'setDroid("R2-D2");',
     '',
     'function whenGetRebelPilot() {',
     '  addPoints(400);',
@@ -2679,16 +2680,16 @@ var js_hoc2015_event_free_markdown = [
   '<br />Add ten stormtroopers to chase C-3PO. See if you can outrun them by running at high speed.</p>',
   '',
   '<p>**Example 3**',
-  '<br />Add five puffer pigs that are running away from R2-D2. Make him scream each time he catches one.</p>',
+  '<br />Add five Puffer Pigs that are running away from R2-D2. Make him scream each time he catches one.</p>',
   '',
   '</details>',
   '<details class="hoc2015">',
   '<summary>Extra credit project ideas</summary>',
   '',
   '<p>**Example 1**',
-  '<br />Add a mouse droid and a stormtrooper. Every time R2-D2 catches a mouse droid, score some ' +
-      'points and then add another mouse droid and another stormtrooper.  End the game if a ' +
-      'stormtrooper catches R2-D2.</p>',
+  '<br />Add a Mouse Droid and a Stormtrooper. Every time R2-D2 catches a Mouse Droid, score some ' +
+      'points and then add another Mouse Droid and another Stormtrooper.  End the game if a ' +
+      'Stormtrooper catches R2-D2.</p>',
   '',
   '</details>',
   '<details class="hoc2015">',
@@ -2752,9 +2753,9 @@ levels.js_hoc2015_event_free = {
     'whenGetAllCharacters': { 'category': 'Events' }
   },
   'startBlocks': [
-    'setBackground("endor");',
+    'setBackground("Endor");',
     'setMap("circle");',
-    'setDroid("r2-d2");',
+    'setDroid("R2-D2");',
     'setDroidSpeed("normal");',
     'playSound("r2-d2sound5");',
     'function whenUp() {',
@@ -2926,9 +2927,9 @@ levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
     tb('<block type="studio_playSound"></block> \
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">rebelpilot</title></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">stormtrooper</title></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">mynock</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">RebelPilot</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">Stormtrooper</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">Mynock</title></block>'),
   requiredBlocks: [
     // TODO: addPoints, removePoints, whenGetPilot, whenGetMan
   ],
@@ -2941,13 +2942,13 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
       <next> \
        <block type="studio_playSound"><title name="SOUND">r2-d2sound1</title> \
         <next> \
-         <block type="studio_addCharacter"><title name="VALUE">"pufferpig"</title></block> \
+         <block type="studio_addCharacter"><title name="VALUE">"PufferPig"</title></block> \
         </next> \
        </block> \
       </next> \
      </block> \
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
-      <title name="VALUE">pufferpig</title> \
+      <title name="VALUE">PufferPig</title> \
       <next> \
        <block type="studio_playSound"><title name="SOUND">pufferpigsound1</title> \
         <next> \
@@ -2957,11 +2958,11 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
       </next> \
      </block>',
   toolbox:
-    tb('<block type="studio_addCharacter"><title name="VALUE">"pufferpig"</title></block> \
+    tb('<block type="studio_addCharacter"><title name="VALUE">"PufferPig"</title></block> \
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
         <block type="studio_playSound"></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">pufferpig</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">PufferPig</title></block>'),
   requiredBlocks: [
     // TODO: addCharacter
   ],
@@ -2972,7 +2973,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
-       <block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title> \
+       <block type="studio_addCharacter"><title name="VALUE">"MouseDroid"</title> \
         <next> \
          <block type="studio_playSound"><title name="SOUND">r2-d2sound3</title></block> \
         </next> \
@@ -2980,7 +2981,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
       </next> \
      </block> \
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
-      <title name="VALUE">mousedroid</title> \
+      <title name="VALUE">MouseDroid</title> \
       <next> \
        <block type="studio_playSound"><title name="SOUND">mousedroidsound2</title> \
         <next> \
@@ -2990,11 +2991,11 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
       </next> \
      </block>',
   toolbox:
-    tb('<block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
+    tb('<block type="studio_addCharacter"><title name="VALUE">"MouseDroid"</title></block> \
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
         <block type="studio_playSound"></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">mousedroid</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">MouseDroid</title></block>'),
   requiredBlocks: [
     // TODO: addCharacter, addPoints
   ],

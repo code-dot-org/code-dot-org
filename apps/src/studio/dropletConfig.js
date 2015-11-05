@@ -3,9 +3,9 @@ var api = require('./apiJavascript.js');
 var paramLists = require('./paramLists.js');
 
 module.exports.blocks = [
-  {func: 'setDroid', parent: api, category: '', params: ['"r2-d2"'], dropdown: { 0: [ '"random"', '"r2-d2"', '"c-3po"' ] } },
+  {func: 'setDroid', parent: api, category: '', params: ['"R2-D2"'], dropdown: { 0: [ '"random"', '"R2-D2"', '"C-3PO"' ] } },
   {func: 'setDroidSpeed', parent: api, category: '', params: ['"fast"'], dropdown: { 0: [ '"random"', '"slow"', '"normal"', '"fast"' ] } },
-  {func: 'setBackground', parent: api, category: '', params: ['"hoth"'], dropdown: { 0: [ '"random"', '"endor"', '"hoth"', '"starship"' ] } },
+  {func: 'setBackground', parent: api, category: '', params: ['"Hoth"'], dropdown: { 0: [ '"random"', '"Endor"', '"Hoth"', '"Starship"' ] } },
   {func: 'setMap', parent: api, category: '', params: ['"blank"'], dropdown: { 0: [ '"random"', '"blank"', '"circle"', '"horizontal"', '"grid"', '"blobs"'] } },
   {func: 'moveRight', parent: api, category: '', },
   {func: 'moveLeft', parent: api, category: '', },
@@ -21,14 +21,14 @@ module.exports.blocks = [
   {func: 'addPoints', parent: api, category: '', params: ["100"] },
   {func: 'removePoints', parent: api, category: '', params: ["100"] },
   {func: 'changeScore', parent: api, category: '', params: ["1"] },
-  {func: 'addCharacter', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
-  {func: 'setToChase', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
-  {func: 'setToFlee', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
-  {func: 'setToRoam', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
-  {func: 'setToStop', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
-  {func: 'moveFast', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
-  {func: 'moveNormal', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
-  {func: 'moveSlow', parent: api, category: '', params: ['"pufferpig"'], dropdown: { 0: [ '"random"', '"stormtrooper"', '"rebelpilot"', '"pufferpig"', '"mynock"', '"mousedroid"', '"tauntaun"', '"probot"' ] } },
+  {func: 'addCharacter', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
+  {func: 'setToChase', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
+  {func: 'setToFlee', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
+  {func: 'setToRoam', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
+  {func: 'setToStop', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
+  {func: 'moveFast', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
+  {func: 'moveNormal', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
+  {func: 'moveSlow', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
 
   {func: 'whenTouchGoal', block: 'function whenTouchGoal() {}', expansion: 'function whenTouchGoal() {\n  __;\n}', category: '' },
   {func: 'whenTouchAllGoals', block: 'function whenTouchAllGoals() {}', expansion: 'function whenTouchAllGoals() {\n  __;\n}', category: '' },
@@ -79,7 +79,7 @@ module.exports.blocks = [
   {func: 'whenTouchAllProbots', block: 'function whenTouchAllProbots() {}', expansion: 'function whenTouchAllProbots() {\n  __;\n}', category: '' },
 
   // Functions hidden from autocomplete - not used in hoc2015:
-  {func: 'setSprite', parent: api, category: '', params: ['0', '"r2-d2"'], dropdown: { 1: [ '"random"', '"r2-d2"', '"c-3po"' ] } },
+  {func: 'setSprite', parent: api, category: '', params: ['0', '"R2-D2"'], dropdown: { 1: [ '"random"', '"R2-D2"', '"C-3PO"' ] } },
   {func: 'setSpritePosition', parent: api, category: '', params: ["0", "7"], noAutocomplete: true },
   {func: 'setSpriteSpeed', parent: api, category: '', params: ["0", "8"], noAutocomplete: true },
   {func: 'setSpriteEmotion', parent: api, category: '', params: ["0", "1"], noAutocomplete: true },
