@@ -58,7 +58,7 @@ module.exports = React.createClass({
    */
   onAssetListFailure: function (xhr) {
     this.setState({statusMessage: 'Error loading asset list: ' +
-        getErrorMessage(xhr.status)});
+      getErrorMessage(xhr.status)});
   },
 
   onUploadStart: function () {
@@ -74,7 +74,7 @@ module.exports = React.createClass({
   },
 
   onUploadError: function (status) {
-     this.setState({statusMessage: 'Error uploading file: ' +
+    this.setState({statusMessage: 'Error uploading file: ' +
       getErrorMessage(status)});
   },
 
