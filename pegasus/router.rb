@@ -15,6 +15,7 @@ require 'json'
 require 'uri'
 require 'cdo/rack/upgrade_insecure_requests'
 require_relative 'helper_modules/dashboard'
+require 'dynamic_config/dcdo'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -30,6 +31,10 @@ def http_vary_add_type(vary,type)
   types = vary.to_s.split(',').map(&:strip)
   return vary if types.include?('*') || types.include?(type)
   types.push(type).join(',')
+end
+
+def document_max_age
+  rack_env?(:staging) ? 0 : DCDO.get('pegasus_document_max_age', 3600)
 end
 
 class Documents < Sinatra::Base
@@ -68,7 +73,6 @@ class Documents < Sinatra::Base
     set :launched_at, Time.now
     set :configs, load_configs_in(dir)
     set :views, dir
-    set :document_max_age, rack_env?(:staging) ? 0 : 3600
     set :image_extnames, ['.png','.jpeg','.jpg','.gif']
     set :exclude_extnames, ['.collate']
     set :image_max_age, rack_env?(:staging) ? 0 : 36000
@@ -366,7 +370,7 @@ class Documents < Sinatra::Base
       if @header['max_age']
         cache_control :public, :must_revalidate, max_age: @header['max_age']
       else
-        cache_control :public, :must_revalidate, max_age: settings.document_max_age
+        cache_control :public, :must_revalidate, max_age: document_max_age
       end
 
       response.headers['X-Pegasus-Version'] = '3'

@@ -156,7 +156,9 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "encrypted_examples": "sv+cT4Ho4R7UZgY0nia0mqa1psOtCcWcFh7btyiDRAXgXaGmWPczWPhI69Zz\n2A30\n"
+    "encrypted_examples": "zkDI0HDKHo5c8J74y03IKljJJN88FpvWCVjolNR18sIy18c5dx0tu25snUyX\nRtR7\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>
