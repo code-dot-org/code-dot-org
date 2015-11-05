@@ -1184,6 +1184,20 @@ function handleActorCollisionsWithCollidableList (
             callHandler('whenGetAllItems');
           }
 
+          if (list == Studio.items) {
+            var className = collidable.className;
+            var itemCount = 0;
+            for (var j = 0; j < list.length; j++) {
+              if (className == list[j].className) {
+                itemCount++;
+              }
+            }
+
+            if (itemCount == 1) {
+              callHandler('whenGetAll-' + className);
+            }
+          }
+
           if (collidable.beginRemoveElement) {
             collidable.beginRemoveElement();
           } else {
