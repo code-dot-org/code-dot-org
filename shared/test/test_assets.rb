@@ -20,17 +20,17 @@ class AssetsTest < Minitest::Test
 
     ensure_aws_credentials(channel_id)
 
-    image_filename = 'dog.jpg'
     image_body = 'stub-image-contents'
+    response, image_filename = post_file(@assets, channel_id, 'dog.jpg', image_body, 'image/jpeg')
 
-    actual_image_info = JSON.parse(put(@assets, channel_id, image_filename, image_body, 'image/jpeg'))
+    actual_image_info = JSON.parse(response)
     expected_image_info = {'filename' => image_filename, 'category' => 'image', 'size' => image_body.length}
     assert_fileinfo_equal(expected_image_info, actual_image_info)
 
-    sound_filename = 'woof.mp3'
     sound_body = 'stub-sound-contents'
+    response, sound_filename = post_file(@assets, channel_id, 'woof.mp3', sound_body, 'audio/mpeg')
 
-    actual_sound_info = JSON.parse(put(@assets, channel_id, sound_filename, sound_body, 'audio/mpeg'))
+    actual_sound_info = JSON.parse(response)
     expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
     assert_fileinfo_equal(expected_sound_info, actual_sound_info)
 
@@ -48,23 +48,23 @@ class AssetsTest < Minitest::Test
     assert @assets.last_response.successful?
 
     # unsupported media type
-    put(@assets, channel_id, 'filename.exe', 'stub-contents', 'application/x-msdownload')
+    post_file(@assets, channel_id, 'filename.exe', 'stub-contents', 'application/x-msdownload')
     assert_equal 415, @assets.last_response.status
 
     # mismatched file extension and mime type
-    put(@assets, channel_id, 'filename.jpg', 'stub-contents', 'application/gif')
+    _, mismatched_filename = post_file(@assets, channel_id, 'filename.jpg', 'stub-contents', 'application/gif')
     assert @assets.last_response.successful?
-    delete(@assets, channel_id, 'filename.jpg')
+    delete(@assets, channel_id, mismatched_filename)
     assert @assets.last_response.successful?
 
     # file extension case insensitivity
-    put(@assets, channel_id, 'filename.JPG', 'stub-contents', 'application/jpeg')
+    _, filename = post_file(@assets, channel_id, 'filename.JPG', 'stub-contents', 'application/jpeg')
     assert @assets.last_response.successful?
-    get(@assets, channel_id, 'filename.JPG')
+    get(@assets, channel_id, filename)
     assert @assets.last_response.successful?
-    get(@assets, channel_id, 'filename.jpg')
+    get(@assets, channel_id, filename.gsub(/JPG$/, 'jpg'))
     assert @assets.last_response.not_found?
-    delete(@assets, channel_id, 'filename.JPG')
+    delete(@assets, channel_id, filename)
     assert @assets.last_response.successful?
 
     # invalid files are not uploaded, and other added files were deleted
@@ -84,12 +84,9 @@ class AssetsTest < Minitest::Test
     channel_id = create_channel(@channels)
     asset_bucket = AssetBucket.new
 
-    first_asset = 'asset1.jpg'
-    second_asset = 'asset2.jpg'
-
     # create a couple assets without an abuse score
-    put(@assets, channel_id, first_asset, 'stub-image-contents', 'image/jpeg')
-    put(@assets, channel_id, second_asset, 'stub-image-contents', 'image/jpeg')
+    _, first_asset = post_file(@assets, channel_id, 'asset1.jpg', 'stub-image-contents', 'image/jpeg')
+    _, second_asset = post_file(@assets, channel_id, 'asset2.jpg', 'stub-image-contents', 'image/jpeg')
 
     result = get(@assets, channel_id, first_asset)
     assert_equal 'stub-image-contents', result
@@ -144,9 +141,7 @@ class AssetsTest < Minitest::Test
     _, non_owner_assets = init_apis
     channel_id = create_channel(@channels)
 
-    asset_name = 'abusive_asset.jpg'
-
-    put(@assets, channel_id, asset_name, 'stub-image-contents', 'image/jpeg')
+    _, asset_name = post_file(@assets, channel_id, 'abusive_asset.jpg', 'stub-image-contents', 'image/jpeg')
 
     # owner can view
     get(@assets, channel_id, asset_name)
@@ -189,25 +184,28 @@ class AssetsTest < Minitest::Test
 
     image_filename = URI.encode 'çat.jpg'
     image_body = 'stub-image-contents'
-    expected_image_info = {'filename' =>  'çat.jpg', 'category' =>  'image', 'size' =>  image_body.length}
+
     sound_filename = 'woof.mp3'
     sound_body = 'stub-sound-contents'
-    expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
 
-    put(@assets, src_channel_id, image_filename, image_body, 'image/jpeg')
-    put(@assets, src_channel_id, sound_filename, sound_body, 'audio/mpeg')
+    _, image_filename = post_file(@assets, src_channel_id, image_filename, image_body, 'image/jpeg')
+    _, sound_filename = post_file(@assets, src_channel_id, sound_filename, sound_body, 'audio/mpeg')
     patch_abuse(@assets, src_channel_id, 10)
+
+    expected_image_info = {'filename' =>  image_filename, 'category' =>  'image', 'size' =>  image_body.length}
+    expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
 
     copy_file_infos = JSON.parse(copy_all(src_channel_id, dest_channel_id))
     dest_file_infos = JSON.parse(list(@assets, dest_channel_id))
 
-    assert_fileinfo_equal(expected_image_info, copy_file_infos[1])
-    assert_fileinfo_equal(expected_sound_info, copy_file_infos[0])
-    assert_fileinfo_equal(expected_image_info, dest_file_infos[1])
-    assert_fileinfo_equal(expected_sound_info, dest_file_infos[0])
+    # TODO - the ordering got switched. not sure why/if we care?
+    assert_fileinfo_equal(expected_image_info, copy_file_infos[0])
+    assert_fileinfo_equal(expected_sound_info, copy_file_infos[1])
+    assert_fileinfo_equal(expected_image_info, dest_file_infos[0])
+    assert_fileinfo_equal(expected_sound_info, dest_file_infos[1])
 
     # abuse score didn't carry over
-    assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, 'çat.jpg')
+    assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, image_filename)
     assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, sound_filename)
 
     delete(@assets, src_channel_id, image_filename)
@@ -223,17 +221,20 @@ class AssetsTest < Minitest::Test
 
     _, non_owner_assets = init_apis
 
-    filename = 'dog.jpg'
+    basename = 'dog.jpg'
     body = 'stub-image-contents'
     content_type = 'image/jpeg'
 
-    put(@assets, owner_channel_id, filename, body, content_type)
+    # post_file create a new file/temp filename, so we post twice using the same file here instead
+    file, filename = create_uploaded_file(basename, body, content_type)
+
+    post(@assets, owner_channel_id, file)
     assert @assets.last_response.successful?, 'Owner can add a file'
 
     get(non_owner_assets, owner_channel_id, filename)
     assert non_owner_assets.last_response.successful?, 'Non-owner can read a file'
 
-    put(non_owner_assets, owner_channel_id, filename, body, content_type)
+    post(non_owner_assets, owner_channel_id, file)
     assert non_owner_assets.last_response.client_error?, 'Non-owner cannot write a file'
 
     delete(non_owner_assets, owner_channel_id, filename)
@@ -253,20 +254,20 @@ class AssetsTest < Minitest::Test
       FilesApi.stub(:max_app_size, 10) do
         channel_id = create_channel(@channels)
 
-        put(@assets, channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
+        post_file(@assets, channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
         assert @assets.last_response.client_error?, "Error when file is larger than max file size."
 
-        put(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
+        _, added_filename1 = post_file(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
         assert @assets.last_response.successful?, "First small file upload is successful."
 
-        put(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
+        _, added_filename2 = post_file(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
         assert @assets.last_response.successful?, "Second small file upload is successful."
 
-        put(@assets, channel_id, "file4.jpg", "ABCD", 'image/jpeg')
+        post_file(@assets, channel_id, "file4.jpg", "ABCD", 'image/jpeg')
         assert @assets.last_response.client_error?, "Error when exceeding max app size."
 
-        delete(@assets, channel_id, "file2.jpg")
-        delete(@assets, channel_id, "file3.jpg")
+        delete(@assets, channel_id, added_filename1)
+        delete(@assets, channel_id, added_filename2)
 
         assert (JSON.parse(list(@assets, channel_id)).length == 0), "No unexpected assets were written to storage."
 
@@ -281,19 +282,19 @@ class AssetsTest < Minitest::Test
         CDO.stub(:newrelic_logging, true) do
           channel_id = create_channel(@channels)
 
-          put(@assets, channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
+          post_file(@assets, channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
           assert @assets.last_response.client_error?, "Error when file is larger than max file size."
 
           assert NewRelic::Agent.metrics.length == 1, 'one custom metric recorded'
           assert NewRelic::Agent.metrics[0].first == 'Custom/FilesApi/FileTooLarge_assets', 'FileTooLarge metric recorded'
           assert NewRelic::Agent.metrics[0].last == 1, 'FileTooLarge metric value 1'
 
-          put(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
+          _, filetodelete1 = post_file(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
           assert @assets.last_response.successful?, "First small file upload is successful."
 
           assert NewRelic::Agent.metrics.length == 1, 'still only one custom metric recorded'
 
-          put(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
+          _, filetodelete2 = post_file(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
           assert @assets.last_response.successful?, "Second small file upload is successful."
 
           assert NewRelic::Agent.metrics.length == 2, 'two custom metrics recorded'
@@ -302,7 +303,7 @@ class AssetsTest < Minitest::Test
           assert NewRelic::Agent.events.length == 1, 'one custom event recorded'
           assert NewRelic::Agent.events[0].first == 'FilesApiQuotaCrossedHalfUsed', 'QuotaCrossedHalfUsed event recorded'
 
-          put(@assets, channel_id, "file4.jpg", "ABCD", 'image/jpeg')
+          post_file(@assets, channel_id, "file4.jpg", "ABCD", 'image/jpeg')
           assert @assets.last_response.client_error?, "Error when exceeding max app size."
 
           assert NewRelic::Agent.metrics.length == 3, 'three custom metrics recorded'
@@ -311,8 +312,8 @@ class AssetsTest < Minitest::Test
           assert NewRelic::Agent.events.length == 2, 'two custom events recorded'
           assert NewRelic::Agent.events[1].first == 'FilesApiQuotaExceeded', 'QuotaExceeded event recorded'
 
-          delete(@assets, channel_id, "file2.jpg")
-          delete(@assets, channel_id, "file3.jpg")
+          delete(@assets, channel_id, filetodelete1)
+          delete(@assets, channel_id, filetodelete2)
 
           assert (JSON.parse(list(@assets, channel_id)).length == 0), "No unexpected assets were written to storage."
           delete_channel(@channels, channel_id)
@@ -324,18 +325,20 @@ class AssetsTest < Minitest::Test
   def test_asset_last_modified
     channel = create_channel(@channels)
 
-    put @assets, channel, 'test.png', 'version 1', 'image/png'
-    get @assets, channel, 'test.png'
+    file, filename = create_uploaded_file('test.png', 'version 1', 'image/png')
+
+    post @assets, channel, file
+    get @assets, channel, filename
     v1_last_modified = @assets.last_response.headers['Last-Modified']
 
     sleep 1
 
-    put @assets, channel, 'test.png', 'version 2', 'image/png'
-    get @assets, channel, 'test.png', '', 'HTTP_IF_MODIFIED_SINCE' => v1_last_modified
+    post @assets, channel, file
+    get @assets, channel, filename, '', 'HTTP_IF_MODIFIED_SINCE' => v1_last_modified
     assert_equal 200, @assets.last_response.status
     v2_last_modified = @assets.last_response.headers['Last-Modified']
 
-    get @assets, channel, 'test.png', '', 'HTTP_IF_MODIFIED_SINCE' => v2_last_modified
+    get @assets, channel, filename, '', 'HTTP_IF_MODIFIED_SINCE' => v2_last_modified
     assert_equal 304, @assets.last_response.status
   end
 
@@ -385,6 +388,11 @@ class AssetsTest < Minitest::Test
     assets.put("/v3/assets/#{channel_id}/#{filename}", body, 'CONTENT_TYPE' => content_type).body
   end
 
+  def post(assets, channel_id, uploaded_file)
+    body = { files: [uploaded_file] }
+    assets.post("/v3/assets/#{channel_id}/new", body, 'CONTENT_TYPE' => 'multipart/form-data').body
+  end
+
   def patch_abuse(assets, channel_id, abuse_score)
     assets.patch("/v3/assets/#{channel_id}/?abuse_score=#{abuse_score}").body
   end
@@ -409,4 +417,17 @@ class AssetsTest < Minitest::Test
     assert_equal(expected['size'], actual['size'])
   end
 
+  def create_uploaded_file(filename, contents, content_type)
+    basename = [filename.split('.')[0], '.' + filename.split('.')[1]]
+    tmp = Tempfile.new(basename)
+    tmp.write(contents)
+    tmp.rewind
+    [Rack::Test::UploadedFile.new(tmp.path, content_type),  ::File.basename(tmp.path)]
+  end
+
+  def post_file(assets, channel_id, filename, contents, content_type)
+    file, tmp_filename = create_uploaded_file(filename, contents, content_type)
+    response = post(assets, channel_id, file)
+    [response, tmp_filename]
+  end
 end
