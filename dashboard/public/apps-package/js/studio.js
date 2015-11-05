@@ -2719,7 +2719,7 @@ Studio.onPuzzleComplete = function() {
   if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') {
     sendReport();
   } else {
-    document.getElementById('svgStudio').toDataURL("image/png", {
+    document.getElementById('svgStudio').toDataURL("image/jpeg", {
       callback: function(pngDataUrl) {
         Studio.feedbackImage = pngDataUrl;
         Studio.encodedFeedbackImage = encodeURIComponent(Studio.feedbackImage.split(',')[1]);
@@ -9452,7 +9452,7 @@ levels.js_hoc2015_change_setting = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"Time to visit another planet."',
-  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.  Then, get the pilots.',
+  'instructions2': 'Use the new commands to change the map and speed.  Then, get the pilots.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -15448,10 +15448,15 @@ ImageFilter.prototype.applyTo = function (svgElement) {
  * @param {SVGElement} svgElement
  */
 ImageFilter.prototype.removeFrom = function (svgElement) {
-  if (svgElement.getAttribute('filter') === 'url("#' + this.id_ + '")') {
+  // Different browsers clean the filter attribute differently
+  // This matches
+  //   url(#filter-id)
+  //   url("#filter-id")
+  var regex = new RegExp("url\\([\"']?#" + this.id_ + "[\"']?\\)", 'i');
+  if (regex.test(svgElement.getAttribute('filter'))) {
     svgElement.removeAttribute('filter');
+    this.applyCount_--;
   }
-  this.applyCount_--;
   if (this.applyCount_ === 0) {
     this.removeFromDom_();
   }

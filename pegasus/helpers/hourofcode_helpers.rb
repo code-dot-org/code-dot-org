@@ -154,28 +154,12 @@ def all_unique_events
 end
 
 def company_count
-  company_count = 0;
-  all_unique_events.each do |i|
-    data = JSON.parse(i[:data])
-    if data['hoc_company_s'] == @company
-      company_count += 1
-    end
-  end
-  return company_count
+  return fetch_hoc_metrics['hoc_company_totals'][@company]
 end
 
 def country_count
-  country_count = 0;
-  all_unique_events.each do |i|
-    unless i[:processed_data].nil?
-      data = JSON.parse(i[:processed_data])
-      code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
-      if data['location_country_code_s'] == code.upcase
-        country_count += 1
-      end
-    end
-  end
-  return country_count
+  code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
+  return fetch_hoc_metrics['hoc_country_totals'][code.upcase]
 end
 
 def solr_country_code
