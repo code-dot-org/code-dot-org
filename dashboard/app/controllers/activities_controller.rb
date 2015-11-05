@@ -34,7 +34,7 @@ class ActivitiesController < ApplicationController
       begin
         # See if the script can be safely shared. Hit external web services to help
         # validate the script only if this is not high-scale, cached page.
-        hit_external_services = !Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
+        hit_external_services = !Gatekeeper.allows('public_caching_for_script', where: {script_name: params[:scriptName]})
         share_failure = find_share_failure(params[:program], hit_external_services)
       rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
         # If WebPurify fails, the program will be allowed
