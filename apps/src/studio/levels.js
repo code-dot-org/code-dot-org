@@ -3003,6 +3003,60 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
 
 levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_addCharacter"><title name="VALUE">"roo"</title> \
+        <next> \
+         <block type="studio_addCharacter"><title name="VALUE">"roo"</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="130"> \
+      <title name="VALUE">roo</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">item3sound4</title> \
+        <next> \
+         <block type="studio_addPoints"><title name="VALUE">50</title> \
+          <next> \
+           <block type="studio_addCharacter"><title name="VALUE">"bird"</title> \
+            <next> \
+             <block type="studio_addCharacter"><title name="VALUE">"bird"</title></block> \
+            </next> \
+           </block> \
+          </next> \
+         </block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="300"> \
+      <title name="VALUE">bird</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">item3sound4</title></block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="460"> \
+      <title name="VALUE">mouse</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">item6sound2</title> \
+        <next> \
+         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>',
+  toolbox:
+    tb('<block type="studio_addCharacter"><title name="VALUE">"mouse"</title></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_playSound"></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">roo</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">mouse</title></block>'),
+  requiredBlocks: [
+    // TODO: addCharacter (check for mouse param?), addPoints
+  ],
 });
 
 levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
