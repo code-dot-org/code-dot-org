@@ -69,7 +69,7 @@ class GatekeeperBase
   # @param where [Hash]
   # returns [String]
   def where_key(where)
-    Oj.dump(where.stringify_keys.sort, :mode => :strict)
+    Oj.dump(stringify_keys(where).sort, :mode => :strict)
   end
 
   # Clear all stored settings
@@ -81,9 +81,9 @@ class GatekeeperBase
   # @returns [GatekeeperBase]
   def self.create
     cache_expiration = 5
-    if Rails.env.test?
+    if rack_env?(:test)
       adapter = MemoryAdapter.new
-    elsif Rails.env.production?
+    elsif rack_env?(:production)
       cache_expiration = 30
       adapter = DynamoDBAdapter.new CDO.gatekeeper_table_name
     else
@@ -122,6 +122,15 @@ class GatekeeperBase
       end
     end
     YAML.dump(gatekeeper)
+  end
+
+  private
+
+  def stringify_keys(hsh)
+    hsh.inject({}) do |hash, pair|
+      hash[pair[0].to_s] = pair[1]
+      hash
+    end
   end
 end
 
