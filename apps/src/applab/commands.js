@@ -648,16 +648,16 @@ applabCommands.drawImage = function (opts) {
  * drawImageURL(url, [callback])
  * drawImaegURL(url, x, y, width, height, [calback])
  */
-applabCommands.drawImageUrl = function (opts) {
+applabCommands.drawImageURL = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
-  apiValidateActiveCanvas(opts, 'drawImageUrl');
-  apiValidateType(opts, 'drawImageUrl', 'url', opts.url, 'string');
-  apiValidateType(opts, 'drawImageUrl', 'x', opts.x, 'number', OPTIONAL);
-  apiValidateType(opts, 'drawImageUrl', 'y', opts.y, 'number', OPTIONAL);
-  apiValidateType(opts, 'drawImageUrl', 'width', opts.width, 'number', OPTIONAL);
-  apiValidateType(opts, 'drawImageUrl', 'height', opts.height, 'number', OPTIONAL);
-  apiValidateType(opts, 'drawImageUrl', 'callback', opts.callback, 'function', OPTIONAL);
+  apiValidateActiveCanvas(opts, 'drawImageURL');
+  apiValidateType(opts, 'drawImageURL', 'url', opts.url, 'string');
+  apiValidateType(opts, 'drawImageURL', 'x', opts.x, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'y', opts.y, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'width', opts.width, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'height', opts.height, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'callback', opts.callback, 'function', OPTIONAL);
 
   var jsInterpreter = Applab.JSInterpreter;
   var callback = function (success) {
