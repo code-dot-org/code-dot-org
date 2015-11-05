@@ -1722,7 +1722,7 @@ levels.js_hoc2015_move_right = {
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000]],
 
-  'instructions': '"We need that scrap metal. BOTX, can you get it?"',
+  'instructions': '"We need that scrap metal. BB-8, can you get it?"',
   'ticksBeforeFaceSouth': 9,
   'timeoutFailureTick': 100,
   'timeoutAfterWhenRun': true,
@@ -1835,7 +1835,7 @@ levels.js_hoc2015_move_diagonal = {
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x20],
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x00]],
   'embed': 'false',
-  'instructions': '"Watch out for the GUY!"',
+  'instructions': '"Watch out for the Bandit!"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -1906,7 +1906,7 @@ levels.js_hoc2015_move_backtrack = {
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
-  'instructions': '"Go quickly, BOTX."',
+  'instructions': '"Go quickly, BB-8."',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -1954,7 +1954,7 @@ levels.js_hoc2015_move_around = {
      [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000020, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
   'embed': 'false',
-  'instructions': '"It\'s up to you, BOTX!"',
+  'instructions': '"It\'s up to you, BB-8!"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -2024,7 +2024,7 @@ levels.js_hoc2015_move_finale = {
 
 levels.js_hoc2015_event_two_items = {
   'editCode': true,
-  'background': 'snow',
+  'background': 'hoth',
   'music': [ 'song7' ],
   'wallMap': 'blank',
   'softButtons': ['downButton', 'upButton'],
@@ -2059,8 +2059,8 @@ levels.js_hoc2015_event_two_items = {
     [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00]],
   'pinWorkspaceToBottom': 'true',
   'embed': 'false',
-  'instructions': '"BOT1, I need you to get a critical message to the GOALs."',
-  'instructions2': 'Make BOT1 move when you use the arrow keys.',
+  'instructions': '"R2-D2, I need you to get a critical message to the Rebel Pilots."',
+  'instructions2': 'Make R2-D2 move when you use the arrow keys.',
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
   'goalOverride': {
@@ -2120,7 +2120,7 @@ levels.js_hoc2015_event_two_items = {
 
 levels.js_hoc2015_event_four_items = {
   'editCode': true,
-  'background': 'snow',
+  'background': 'hoth',
   'music': [ 'song8' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
@@ -2158,7 +2158,7 @@ levels.js_hoc2015_event_four_items = {
     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
     [0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00]],
   'embed': 'false',
-  'instructions': '"Get to all the GOALs as quickly as you can."',
+  'instructions': '"Get to all of the Rebel Pilots as quickly as you can."',
   'instructions2': 'Move in all directions.',
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2177,34 +2177,34 @@ levels.js_hoc2015_event_four_items = {
 
 levels.js_hoc2015_score =
 {
-  'avatarList': ['bot1'],
+  'avatarList': ['R2-D2'],
   'editCode': true,
-  'background': 'snow',
+  'background': 'hoth',
   'music': [ 'song9' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
-    'whenGetPilot': 'whenTouchGoal'
+    'whenGetRebelPilot': 'whenTouchGoal'
   },
   'codeFunctions': {
     'playSound': null,
     'addPoints': { params: ["100"] },
 
-    'whenGetPilot': null
+    'whenGetRebelPilot': null
   },
   'startBlocks': [
-    'function whenGetPilot() {',
-    '  playSound("character1sound1");',
+    'function whenGetRebelPilot() {',
+    '  playSound("R2-D2sound1");',
     '}',
     ].join('\n'),
   paramRestrictions: {
     playSound: {
-      random: true,
-      character1sound1: true,
-      character1sound2: true,
-      character1sound3: true,
-      character1sound4: true,
-      character1sound5: true,
+      'random': true,
+      'r2-d2sound1': true,
+      'r2-d2sound2': true,
+      'r2-d2sound3': true,
+      'r2-d2sound4': true,
+      'r2-d2sound5': true,
     }
   },
   'sortDrawOrder': true,
@@ -2224,8 +2224,8 @@ levels.js_hoc2015_score =
     [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 1,  0, 0, 0, 0]],
-  'instructions': '"Reach the GOALs!"',
-  'instructions2': "Let's add points. Add 100 points when BOT1 gets each pilot.",
+  'instructions': '"Reach the Rebel Pilots!"',
+  'instructions2': "Let's add points. Add 100 points when R2-D2 gets each Rebel Pilot.",
   'autoArrowSteer': true,
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
@@ -2295,7 +2295,7 @@ levels.js_hoc2015_score =
 
 levels.js_hoc2015_win_lose = {
   'editCode': true,
-  'background': 'forest',
+  'background': 'endor',
   'music': [ 'song10' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
@@ -2303,9 +2303,9 @@ levels.js_hoc2015_win_lose = {
     'playSound': null,
     'addPoints': { params: ["100"] },
     'removePoints': { params: ["100"] },
-    'whenGetPilot': null,
-    'whenGetMan': null,
-    'whenGetBird': null,
+    'whenGetRebelPilot': null,
+    'whenGetStormtrooper': null,
+    'whenGetMynock': null,
   },
   'startBlocks': [].join('\n'),
 
@@ -2326,8 +2326,8 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
     [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
-  'instructions': '"Watch out for the MAN."',
-  'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN and get all the pilots!',
+  'instructions': '"Watch out for the Stormtrooper."',
+  'instructions2': 'Add 100 points when R2-D2 gets the Rebel Pilot.  Remove 100 points when he gets a Stormtrooper.  Now, avoid the Stormtrooper and get all the Rebel Pilots!',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2366,24 +2366,24 @@ levels.js_hoc2015_win_lose = {
 
 levels.js_hoc2015_add_characters = {
   'editCode': true,
-  'background': 'forest',
+  'background': 'endor',
   'music': [ 'song11' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': { params: ['"pig"'] },
+    'addCharacter': { params: ['"PufferPig"'] },
     'addPoints': { params: ["1000"] },
     'removePoints': { params: ["1000"] },
     'playSound': null,
 
-    'whenGetPig': null,
+    'whenGetPufferPig': null,
   },
   'startBlocks': [
-    'playSound("character1sound1");',
-    'addCharacter("pig");',
+    'playSound("R2-D2sound1");',
+    'addCharacter("PufferPig");',
     '',
-    'function whenGetPig() {',
-    '  playSound("item1sound1");',
+    'function whenGetPufferPig() {',
+    '  playSound("PufferPigSound1");',
     '  addPoints(1000);',
     '}',
     ].join('\n'),
@@ -2405,7 +2405,7 @@ levels.js_hoc2015_add_characters = {
     [0, 0, 0, 0,  0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"I\'m seeing signs of increased activity on this planet."',
-  'instructions2': 'Add 3 PIGs to the planet. Then, go get them.',
+  'instructions2': 'Add three Puffer Pigs to the planet. Then, go get them.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2438,24 +2438,24 @@ levels.js_hoc2015_add_characters = {
 
 levels.js_hoc2015_chain_characters = {
   'editCode': true,
-  'background': 'ship',
+  'background': 'starship',
   'music': [ 'song12' ],
   'wallMap': 'grid',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': { params: ['"mouse"'] },
+    'addCharacter': { params: ['"MouseDroid"'] },
     'playSound': null,
     'addPoints': null,
     'removePoints': null,
 
-    'whenGetMouse': null,
+    'whenGetMouseDroid': null,
   },
   'startBlocks': [
-    'addCharacter("mouse");',
-    'playSound("character1sound3");',
+    'addCharacter("MouseDroid");',
+    'playSound("R2-D2sound3");',
     '',
-    'function whenGetMouse() {',
-    '  playSound("item6sound2");',
+    'function whenGetMouseDroid() {',
+    '  playSound("MouseDroidSound2");',
     '  addPoints(100);',
     '',
     '}',
@@ -2470,7 +2470,7 @@ levels.js_hoc2015_chain_characters = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"They\'re multiplying!"',
-  'instructions2': 'Can you make two MOUSEs appear every time BOT1 gets one MOUSE?  Get 20 MOUSEs and score 2000 points.',
+  'instructions2': 'Can you make two Mouse Droids appear every time R2-D2 gets one Mouse Droid?  Get 20 Mouse Droids and score 2000 points.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
@@ -2509,36 +2509,36 @@ levels.js_hoc2015_chain_characters = {
 
 levels.js_hoc2015_chain_characters_2 = {
   'editCode': true,
-  'background': 'ship',
+  'background': 'starship',
   'music': [ 'song13' ],
   'wallMap': 'horizontal',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': { params: ['"mouse"'] },
+    'addCharacter': { params: ['"MouseDroid"'] },
     'addPoints': null,
     'removePoints': null,
     'playSound': null,
 
-    'whenGetRoo': null,
-    'whenGetMouse': null
+    'whenGetTauntaun': null,
+    'whenGetMouseDroid': null
   },
   'startBlocks': [
-    'addCharacter("roo");',
-    'addCharacter("roo");',
+    'addCharacter("Tauntaun");',
+    'addCharacter("Tauntaun");',
     '',
-    'function whenGetRoo() {',
-    '  playSound("item3sound4");',
+    'function whenGetTauntaun() {',
+    '  playSound("TauntaunSound4");',
     '  addPoints(50);',
-    '  addCharacter("bird");',
-    '  addCharacter("bird");',
+    '  addCharacter("Mynock");',
+    '  addCharacter("Mynock");',
     '}',
     '',
-    'function whenGetBird() {',
-    '  playSound("item4sound1");',
+    'function whenGetMynock() {',
+    '  playSound("MynockSound1");',
     '',
     '}',
-    'function whenGetMouse() {',
-    '  playSound("item6sound2");',
+    'function whenGetMouseDroid() {',
+    '  playSound("MouseDroidSound2");',
     '  addPoints(100);',
     '  ',
     '}',
@@ -2552,8 +2552,8 @@ levels.js_hoc2015_chain_characters_2 = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"It\'s up to you, BOT1!"',
-  'instructions2': 'When you get a ROO, two BIRDs appear. Can you make two MICE appear when you get a BIRD? Then, get them all.',
+  'instructions': '"It\'s up to you, R2-D2!"',
+  'instructions2': 'When you get a Tauntaun, two Mynocks appear. Can you make two Mouse Droids appear when you get a Mynock? Then, get them all.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
@@ -2588,30 +2588,30 @@ levels.js_hoc2015_chain_characters_2 = {
 
 levels.js_hoc2015_change_setting = {
   'editCode': true,
-  'background': 'ship',
+  'background': 'starship',
   'music': [ 'song14' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'setBot': null,
+    'setDroid': null,
     'setBackground': null,
-    'setBotSpeed': null,
+    'setDroidSpeed': null,
     'setMap': null,
     'playSound': null,
     'addCharacter': null,
     'addPoints': null,
     'removePoints': null,
 
-    'whenGetPilot': null,
+    'whenGetRebelPilot': null,
   },
   'startBlocks': [
-    'addCharacter("pilot");',
-    'addCharacter("pilot");',
-    'addCharacter("pilot");',
-    'playSound("character1sound4");',
-    'setBot("bot1");',
+    'addCharacter("RebelPilot");',
+    'addCharacter("RebelPilot");',
+    'addCharacter("RebelPilot");',
+    'playSound("R2-D2sound4");',
+    'setDroid("R2-D2");',
     '',
-    'function whenGetPilot() {',
+    'function whenGetRebelPilot() {',
     '  addPoints(400);',
     '  setBackground("random");',
     '  ',
@@ -2627,7 +2627,7 @@ levels.js_hoc2015_change_setting = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"Time to visit another planet."',
-  'instructions2': 'Use the new commands to change the map and speed.  Then, get the pilots.',
+  'instructions2': 'Use the new commands to change the map and speed.  Then, get the Rebel Pilots.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2648,7 +2648,7 @@ levels.js_hoc2015_change_setting = {
   ],
   'progressConditions' : [
     // Collected all the items and set the right properties?  Success.
-    { required: { 'setMap': true, 'setBotSpeed': true, 'collectedItemsAtOrAbove': 3 },
+    { required: { 'setMap': true, 'setDroidSpeed': true, 'collectedItemsAtOrAbove': 3 },
       result: { success: true, message: msg.successGenericCharacter() } },
     // Special message for timing out when not enough items collected.
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
@@ -2656,12 +2656,12 @@ levels.js_hoc2015_change_setting = {
     // If all items are collected, but either property not set?  Failure.
     { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 },
       result: { success: false, message: msg.failedChangeSettingSettings() } },
-    { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 },
+    { required: { 'setDroidSpeed': false, 'collectedItemsAtOrAbove': 3 },
       result: { success: false, message: msg.failedChangeSettingSettings() } }
   ]
 };
 
-var js_hoc2015_event_free_character_instructions = '"You\'re on your own now, BOT1."';
+var js_hoc2015_event_free_character_instructions = '"You\'re on your own now, R2-D2."';
 var js_hoc2015_event_free_ooc_instructions = "You have all the tools you need " +
     "now to create your own level. Feel free to explore and play with all " +
     "the different Commands and Events. When you're done, press the Finish " +
@@ -2674,22 +2674,22 @@ var js_hoc2015_event_free_markdown = [
   '<details class="hoc2015">',
   '<summary>Example project ideas</summary>',
   '<p>**Example 1**',
-  '<br />Add 5 random characters in the scene, and play a different sound each time BOT1 collides with one of them.</p>',
+  '<br />Add five random characters in the scene, and play a different sound each time R2-D2 collides with one of them.</p>',
   '',
   '<p>**Example 2**',
-  '<br />Add 10 MANs to chase BOT2. See if you can outrun them by running at high speed.</p>',
+  '<br />Add ten Stormtroopers to chase C-3PO. See if you can outrun them by running at high speed.</p>',
   '',
   '<p>**Example 3**',
-  '<br />Add 5 PIGs that are running away from BOT1. Make him scream each time he catches one.</p>',
+  '<br />Add five Puffer Pigs that are running away from R2-D2. Make him scream each time he catches one.</p>',
   '',
   '</details>',
   '<details class="hoc2015">',
   '<summary>Extra credit project ideas</summary>',
   '',
   '<p>**Example 1**',
-  '<br />Add a MOUSE and a MAN. Every time BOT1 catches a MOUSE, score some ' +
-      'points and then add another MOUSE and another MAN.  End the game if a ' +
-      'MAN catches BOT1.</p>',
+  '<br />Add a Mouse Droid and a Stormtrooper. Every time R2-D2 catches a Mouse Droid, score some ' +
+      'points and then add another Mouse Droid and another Stormtrooper.  End the game if a ' +
+      'Stormtrooper catches R2-D2.</p>',
   '',
   '</details>',
   '<details class="hoc2015">',
@@ -2705,14 +2705,14 @@ var js_hoc2015_event_free_markdown = [
 levels.js_hoc2015_event_free = {
   'editCode': true,
   'freePlay': true,
-  'background': 'forest',
+  'background': 'endor',
   'music': [ 'song15' ],
   'wallMap': 'blank',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'setBot': { 'category': 'Commands' },
+    'setDroid': { 'category': 'Commands' },
     'setBackground': { 'category': 'Commands' },
-    'setBotSpeed': { 'category': 'Commands' },
+    'setDroidSpeed': { 'category': 'Commands' },
     'setMap': { 'category': 'Commands' },
     'playSound': { 'category': 'Commands' },
     'addCharacter': { 'category': 'Commands' },
@@ -2734,30 +2734,30 @@ levels.js_hoc2015_event_free = {
     'whenDown': { 'category': 'Events' },
 
     'whenTouchObstacle': { 'category': 'Events' },
-    'whenGetMan': { 'category': 'Events' },
-    'whenGetPilot': { 'category': 'Events' },
-    'whenGetPig': { 'category': 'Events' },
-    'whenGetBird': { 'category': 'Events' },
-    'whenGetMouse': { 'category': 'Events' },
-    'whenGetRoo': { 'category': 'Events' },
-    'whenGetSpider': { 'category': 'Events' },
+    'whenGetStormtrooper': { 'category': 'Events' },
+    'whenGetRebelPilot': { 'category': 'Events' },
+    'whenGetPufferPig': { 'category': 'Events' },
+    'whenGetMynock': { 'category': 'Events' },
+    'whenGetMouseDroid': { 'category': 'Events' },
+    'whenGetTauntaun': { 'category': 'Events' },
+    'whenGetProbot': { 'category': 'Events' },
     'whenGetCharacter': { 'category': 'Events' },
 
-    'whenGetAllMen': { 'category': 'Events' },
-    'whenGetAllPilots': { 'category': 'Events' },
-    'whenGetAllPigs': { 'category': 'Events' },
-    'whenGetAllBirds': { 'category': 'Events' },
-    'whenGetAllMice': { 'category': 'Events' },
-    'whenGetAllRoos': { 'category': 'Events' },
-    'whenGetAllSpiders': { 'category': 'Events' },
+    'whenGetAllStormtroopers': { 'category': 'Events' },
+    'whenGetAllRebelPilots': { 'category': 'Events' },
+    'whenGetAllPufferPigs': { 'category': 'Events' },
+    'whenGetAllMynocks': { 'category': 'Events' },
+    'whenGetAllMouseDroids': { 'category': 'Events' },
+    'whenGetAllTauntauns': { 'category': 'Events' },
+    'whenGetAllProbots': { 'category': 'Events' },
     'whenGetAllCharacters': { 'category': 'Events' }
   },
   'startBlocks': [
-    'setBackground("forest");',
+    'setBackground("Endor");',
     'setMap("circle");',
-    'setBot("bot1");',
-    'setBotSpeed("normal");',
-    'playSound("character1sound5");',
+    'setDroid("R2-D2");',
+    'setDroidSpeed("normal");',
+    'playSound("R2-D2sound5");',
     'function whenUp() {',
     '  ',
     '}',
@@ -2910,7 +2910,7 @@ levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   editCode: false,
   startBlocks:
     '<block type="studio_whenTouchGoal" deletable="false"> \
-      <next><block type="studio_playSound"><title name="SOUND">character1sound1</title></block> \
+      <next><block type="studio_playSound"><title name="SOUND">r2-d2sound1</title></block> \
       </next></block>',
   toolbox:
     tb('<block type="studio_playSound"></block> \
@@ -2927,9 +2927,9 @@ levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
     tb('<block type="studio_playSound"></block> \
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">pilot</title></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">man</title></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">bird</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">rebelpilot</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">stormtrooper</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">mynock</title></block>'),
   requiredBlocks: [
     // TODO: addPoints, removePoints, whenGetPilot, whenGetMan
   ],
@@ -2940,17 +2940,17 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">character1sound1</title> \
+       <block type="studio_playSound"><title name="SOUND">r2-d2sound1</title> \
         <next> \
-         <block type="studio_addCharacter"><title name="VALUE">"pig"</title></block> \
+         <block type="studio_addCharacter"><title name="VALUE">"pufferpig"</title></block> \
         </next> \
        </block> \
       </next> \
      </block> \
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
-      <title name="VALUE">pig</title> \
+      <title name="VALUE">pufferpig</title> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">item1sound1</title> \
+       <block type="studio_playSound"><title name="SOUND">pufferpigsound1</title> \
         <next> \
          <block type="studio_addPoints"><title name="VALUE">1000</title></block> \
         </next> \
@@ -2958,11 +2958,11 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
       </next> \
      </block>',
   toolbox:
-    tb('<block type="studio_addCharacter"><title name="VALUE">"pig"</title></block> \
+    tb('<block type="studio_addCharacter"><title name="VALUE">"pufferpig"</title></block> \
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
         <block type="studio_playSound"></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">pig</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">pufferpig</title></block>'),
   requiredBlocks: [
     // TODO: addCharacter
   ],
@@ -2973,17 +2973,17 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
-       <block type="studio_addCharacter"><title name="VALUE">"mouse"</title> \
+       <block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title> \
         <next> \
-         <block type="studio_playSound"><title name="SOUND">character1sound3</title></block> \
+         <block type="studio_playSound"><title name="SOUND">r2-d2sound3</title></block> \
         </next> \
        </block> \
       </next> \
      </block> \
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
-      <title name="VALUE">mouse</title> \
+      <title name="VALUE">mousedroid</title> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">item6sound2</title> \
+       <block type="studio_playSound"><title name="SOUND">mousedroidsound2</title> \
         <next> \
          <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         </next> \
@@ -2991,11 +2991,11 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
       </next> \
      </block>',
   toolbox:
-    tb('<block type="studio_addCharacter"><title name="VALUE">"mouse"</title></block> \
+    tb('<block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
         <block type="studio_playSound"></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">mouse</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">mousedroid</title></block>'),
   requiredBlocks: [
     // TODO: addCharacter, addPoints
   ],
@@ -3003,10 +3003,111 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
 
 levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_addCharacter"><title name="VALUE">"tauntaun"</title> \
+        <next> \
+         <block type="studio_addCharacter"><title name="VALUE">"tauntaun"</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="130"> \
+      <title name="VALUE">tauntaun</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">TauntaunSound4</title> \
+        <next> \
+         <block type="studio_addPoints"><title name="VALUE">50</title> \
+          <next> \
+           <block type="studio_addCharacter"><title name="VALUE">"mynock"</title> \
+            <next> \
+             <block type="studio_addCharacter"><title name="VALUE">"mynock"</title></block> \
+            </next> \
+           </block> \
+          </next> \
+         </block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="300"> \
+      <title name="VALUE">mynock</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">TauntaunSound4</title></block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="460"> \
+      <title name="VALUE">mousedroid</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">MouseDroidSound2</title> \
+        <next> \
+         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>',
+  toolbox:
+    tb('<block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_playSound"></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">tauntaun</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">mousedroid</title></block>'),
+  requiredBlocks: [
+    // TODO: addCharacter (check for mouse param?), addPoints
+  ],
 });
 
 levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_addCharacter"><title name="VALUE">"rebelpilot"</title> \
+        <next> \
+         <block type="studio_addCharacter"><title name="VALUE">"rebelpilot"</title> \
+          <next> \
+           <block type="studio_addCharacter"><title name="VALUE">"rebelpilot"</title> \
+            <next> \
+             <block type="studio_playSound"><title name="SOUND">R2-D2sound4</title> \
+              <next> \
+               <block type="studio_setSprite"><title name="VALUE">"r2-d2"</title></block> \
+              </next> \
+             </block> \
+            </next> \
+           </block> \
+          </next> \
+         </block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="300"> \
+      <title name="VALUE">rebelpilot</title> \
+      <next> \
+       <block type="studio_addPoints"><title name="VALUE">400</title> \
+        <next> \
+         <block type="studio_setBackground"><title name="VALUE">random</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>',
+  // TODO: create setDroid block to improve the readability of the block?
+  // TODO: skin override of playSound dropdown (with paramsList filtering & random)
+  toolbox:
+    tb('<block type="studio_setSprite"></block> \
+        <block type="studio_setBackground"></block> \
+        <block type="studio_setDroidSpeed"></block> \
+        <block type="studio_setMap"></block> \
+        <block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_playSound"></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">rebelpilot</title></block>'),
+  requiredBlocks: [
+    // TODO: setMap, setDroidSpeed
+  ],
 });
 
 levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {

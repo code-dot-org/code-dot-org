@@ -132,3 +132,33 @@ Feature: Hour of Code 2015 tutorial is completable
     And I wait to see ".modal"
     Then element "#again-button" is visible
     And element "#continue-button" is not visible
+
+  @no_ie @no_mobile
+  Scenario: Using the "Start Over" button in block mode
+    Given I am on "http://learn.code.org/s/hoc2015/reset"
+    And execute JavaScript expression "window.localStorage.clear()"
+    And I am on "http://learn.code.org/s/hoc2015/stage/1/puzzle/1?noautoplay=true"
+    And I rotate to landscape
+    And I wait to see a dialog titled "Puzzle 1 of 15"
+    And I close the dialog
+    When I drag droplet block "moveUp" to line 2
+    And I drag droplet block "moveLeft" to line 3
+    And I drag droplet block "moveDown" to line 4
+    And I press "clear-puzzle-header"
+    And I press "confirm-button"
+    Then the Droplet ACE text is "moveRight();\n"
+
+  Scenario: Using the "Start Over" button in text mode
+    Given I am on "http://learn.code.org/s/hoc2015/reset"
+    And execute JavaScript expression "window.localStorage.clear()"
+    And I am on "http://learn.code.org/s/hoc2015/stage/1/puzzle/1?noautoplay=true"
+    And I rotate to landscape
+    And I wait to see a dialog titled "Puzzle 1 of 15"
+    And I close the dialog
+    When I switch to text mode
+    And I append text to droplet "moveUp();\n"
+    And I append text to droplet "moveLeft();\n"
+    And I append text to droplet "moveDown();\n"
+    And I press "clear-puzzle-header"
+    And I press "confirm-button"
+    Then the Droplet ACE text is "moveRight();\n"
