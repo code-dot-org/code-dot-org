@@ -1933,7 +1933,6 @@ Studio.clearEventHandlersKillTickLoop = function() {
   }
   // Reset the projectiles and items (they include animation timers)
   resetItemOrProjectileList(Studio.projectiles);
-  resetItemOrProjectileList(Studio.items);
 };
 
 
@@ -2094,6 +2093,7 @@ Studio.reset = function(first) {
     Studio.itemActivity[className] = skin.specialItemProperties[className].activity;
   }
   // Create Items that are specified on the map:
+  resetItemOrProjectileList(Studio.items);
   Studio.createLevelItems(svg);
 
   // Now that sprites are in place, we can set up a map, which might move
