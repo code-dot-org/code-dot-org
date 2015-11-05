@@ -1906,6 +1906,15 @@ function resetItemOrProjectileList (list) {
 }
 
 /**
+ * Freeze a list of Items or Projectiles by telling them to stop animating.
+ */
+function freezeItemOrProjectileList (list) {
+  for (var i = 0; i < list.length; i++) {
+    list[i].stopAnimations();
+  }
+}
+
+/**
  * Clear the event handlers and stop the onTick timer.
  */
 Studio.clearEventHandlersKillTickLoop = function() {
@@ -1931,9 +1940,9 @@ Studio.clearEventHandlersKillTickLoop = function() {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
     }
   }
-  // Reset the projectiles and items (they include animation timers)
-  resetItemOrProjectileList(Studio.projectiles);
-  resetItemOrProjectileList(Studio.items);
+  // Freeze the projectiles and items (stop the animation timers)
+  freezeItemOrProjectileList(Studio.projectiles);
+  freezeItemOrProjectileList(Studio.items);
 };
 
 
@@ -1960,6 +1969,9 @@ Studio.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
   Studio.gameState = Studio.GameStates.WAITING;
+
+  resetItemOrProjectileList(Studio.projectiles);
+  resetItemOrProjectileList(Studio.items);
 
   var svg = document.getElementById('svgStudio');
 
