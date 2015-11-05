@@ -1926,6 +1926,15 @@ function resetItemOrProjectileList (list) {
 }
 
 /**
+ * Freeze a list of Items or Projectiles by telling them to stop animating.
+ */
+function freezeItemOrProjectileList (list) {
+  for (var i = 0; i < list.length; i++) {
+    list[i].stopAnimations();
+  }
+}
+
+/**
  * Clear the event handlers and stop the onTick timer.
  */
 Studio.clearEventHandlersKillTickLoop = function() {
@@ -1951,9 +1960,9 @@ Studio.clearEventHandlersKillTickLoop = function() {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
     }
   }
-  // Reset the projectiles and items (they include animation timers)
-  resetItemOrProjectileList(Studio.projectiles);
-  resetItemOrProjectileList(Studio.items);
+  // Freeze the projectiles and items (stop the animation timers)
+  freezeItemOrProjectileList(Studio.projectiles);
+  freezeItemOrProjectileList(Studio.items);
 };
 
 
@@ -1980,6 +1989,9 @@ Studio.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
   Studio.gameState = Studio.GameStates.WAITING;
+
+  resetItemOrProjectileList(Studio.projectiles);
+  resetItemOrProjectileList(Studio.items);
 
   var svg = document.getElementById('svgStudio');
 
@@ -5640,6 +5652,13 @@ Projectile.prototype.getElement = function () {
  */
 Projectile.prototype.createElement = function (parentElement) {
   this.animation_.createElement(parentElement);
+};
+
+/**
+ * Stop our animations
+ */
+Projectile.prototype.stopAnimations = function() {
+  this.animation_.stopAnimator();
 };
 
 /**
@@ -13939,6 +13958,12 @@ Item.prototype.removeElement = function() {
   Studio.trackedBehavior.removedItemCount++;
 };
 
+/**
+ * Stop our animations
+ */
+Item.prototype.stopAnimations = function() {
+  this.animation_.stopAnimator();
+};
 
 /**
  * Returns true if the item is currently fading away.
@@ -14719,6 +14744,13 @@ StudioAnimation.prototype.removeElement = function() {
     this.clipPath_ = null;
   }
 
+  this.stopAnimator();
+};
+
+/**
+ * Stop the animator (used when we freeze in onPuzzleComplete)
+ */
+StudioAnimation.prototype.stopAnimator = function() {
   if (this.animator_) {
     window.clearInterval(this.animator_);
     this.animator_ = null;
