@@ -32,7 +32,10 @@ class ActivitiesController < ApplicationController
 
     if params[:program] && @sharing_allowed
       begin
-        share_failure = find_share_failure(params[:program])
+        # See if the script can be safely shared. Hit external web services to help
+        # validate the script only if this is not high-scale, cached page.
+        hit_external_services = !Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
+        share_failure = find_share_failure(params[:program], hit_external_services)
       rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
         # If WebPurify fails, the program will be allowed
       end
@@ -95,7 +98,17 @@ class ActivitiesController < ApplicationController
 
   private
 
-  def find_share_failure(program)
+  # Verifies that program can be safely shared.
+  # Returns a hash describing the sharing failure or nil if there are no failures.
+  #
+  # @param {String} program the Source code of the program.
+  # @param  {boolean} hit_external_servicesWhether to hit external web services to verify
+  #   that the code contains no profanity or street addresses. This is true by default but
+  #   may be set to false for levels which see extremely high scale and which do not allow
+  #   arbitrary user-generated code.
+  # @returns nil or a hash describing the sharing failure
+  #   (e.g. {message: t('share_code.email_not_allowed'), contents: email, type: 'email'})
+  def find_share_failure(program, hit_external_services = true)
     return nil unless program.match /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
 
     xml_tag_regexp = /<[^>]*>/
@@ -103,11 +116,11 @@ class ActivitiesController < ApplicationController
 
     if email = RegexpUtils.find_potential_email(program_tags_removed)
       return {message: t('share_code.email_not_allowed'), contents: email, type: 'email'}
-    elsif street_address = Geocoder.find_potential_street_address(program_tags_removed)
+    elsif hit_external_services && street_address = Geocoder.find_potential_street_address(program_tags_removed)
       return {message: t('share_code.address_not_allowed'), contents: street_address, type: 'address'}
-    elsif phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
+    elsiif phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
       return {message: t('share_code.phone_number_not_allowed'), contents: phone_number, type: 'phone'}
-    elsif WebPurify.find_potential_profanity(program_tags_removed, ['en', locale])
+    elsif hit_external_services && WebPurify.find_potential_profanity(program_tags_removed, ['en', locale])
       return {message: t('share_code.profanity_not_allowed'), type: 'profanity'}
     end
     nil
