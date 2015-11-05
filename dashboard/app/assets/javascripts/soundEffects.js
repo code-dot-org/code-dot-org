@@ -344,7 +344,15 @@ Sound.prototype.preload = function () {
       audioElement.pause();
     }
     this.audioElement = audioElement;
-    this.onSoundLoaded();
+
+    // Fire onLoad as soon as enough of the sound is loaded to play it
+    // all the way through.
+    var loadEventName = 'canplaythrough';
+    var eventListener = function () {
+      this.onSoundLoaded();
+      audioElement.removeEventListener(loadEventName, eventListener);
+    }.bind(this);
+    audioElement.addEventListener(loadEventName, eventListener);
   }
 };
 

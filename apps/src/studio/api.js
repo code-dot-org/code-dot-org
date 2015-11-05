@@ -57,6 +57,22 @@ exports.setSpriteSpeed = function (id, spriteIndex, value) {
   });
 };
 
+// setDroid is a wrapper to setSprite that always passes 0 for the spriteIndex
+// (used by hoc2015)
+
+exports.setDroid = function (id, value) {
+  Studio.queueCmd(id, 'setSprite', {
+    'spriteIndex': 0,
+    'value': value
+  });
+};
+
+exports.setDroidSpeed = function (id, value) {
+  Studio.queueCmd(id, 'setDroidSpeed', {
+    'value': value
+  });
+};
+
 exports.setSpriteSize = function (id, spriteIndex, value) {
   Studio.queueCmd(id, 'setSpriteSize', {
     'spriteIndex': spriteIndex,

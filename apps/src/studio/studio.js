@@ -1176,12 +1176,27 @@ function handleActorCollisionsWithCollidableList (
         // Make the projectile/item disappear automatically if this parameter
         // is set:
         if (autoDisappear) {
-          if (list.length === 1 && list === Studio.items) {
+          if (list === Studio.items) {
             // NOTE: we do this only for the Item list (not projectiles)
 
             // NOTE: if items are allowed to move outOfBounds(), this may never
             // be called because the last item may not be removed here.
-            callHandler('whenGetAllItems');
+
+            if (list.length === 1) {
+              callHandler('whenGetAllItems');
+            }
+
+            var className = collidable.className;
+            var itemCount = 0;
+            for (var j = 0; j < list.length; j++) {
+              if (className === list[j].className) {
+                itemCount++;
+              }
+            }
+
+            if (itemCount === 1) {
+              callHandler('whenGetAll-' + className);
+            }
           }
 
           if (collidable.beginRemoveElement) {
@@ -1724,6 +1739,7 @@ Studio.init = function(config) {
 
     skin.soundFiles = {};
     soundFileNames.forEach(function (sound) {
+      sound = sound.toLowerCase();
       skin.soundFiles[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl(sound + '.ogg')];
       studioApp.loadAudio(skin.soundFiles[sound], sound);
     });
@@ -1890,6 +1906,15 @@ function resetItemOrProjectileList (list) {
 }
 
 /**
+ * Freeze a list of Items or Projectiles by telling them to stop animating.
+ */
+function freezeItemOrProjectileList (list) {
+  for (var i = 0; i < list.length; i++) {
+    list[i].stopAnimations();
+  }
+}
+
+/**
  * Clear the event handlers and stop the onTick timer.
  */
 Studio.clearEventHandlersKillTickLoop = function() {
@@ -1915,9 +1940,9 @@ Studio.clearEventHandlersKillTickLoop = function() {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
     }
   }
-  // Reset the projectiles and items (they include animation timers)
-  resetItemOrProjectileList(Studio.projectiles);
-  resetItemOrProjectileList(Studio.items);
+  // Freeze the projectiles and items (stop the animation timers)
+  freezeItemOrProjectileList(Studio.projectiles);
+  freezeItemOrProjectileList(Studio.items);
 };
 
 
@@ -1933,7 +1958,7 @@ function getDefaultBackgroundName() {
 }
 
 function getDefaultMapName() {
-  return level.wallMapCollisions ? (level.wallMap || skin.defaultWallMap) : undefined;
+  return level.wallMapCollisions ? level.wallMap : undefined;
 }
 
 /**
@@ -1944,6 +1969,9 @@ Studio.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
   Studio.gameState = Studio.GameStates.WAITING;
+
+  resetItemOrProjectileList(Studio.projectiles);
+  resetItemOrProjectileList(Studio.items);
 
   var svg = document.getElementById('svgStudio');
 
@@ -2009,8 +2037,8 @@ Studio.reset = function(first) {
     removedItemCount: 0,
     touchedHazardCount: 0,
     setActivityRecord: null,
-    hasSetBot: false,
-    hasSetBotSpeed: false,
+    hasSetDroid: false,
+    hasSetDroidSpeed: false,
     hasSetBackground: false,
     hasSetMap: false,
     hasAddedItem: false,
@@ -3482,10 +3510,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setSpriteSpeed(cmd.opts);
       break;
-    case 'setBotSpeed':
+    case 'setDroidSpeed':
       studioApp.highlight(cmd.id);
-      Studio.setBotSpeed(cmd.opts);
-      Studio.trackedBehavior.hasSetBotSpeed = true;
+      Studio.setDroidSpeed(cmd.opts);
+      Studio.trackedBehavior.hasSetDroidSpeed = true;
       break;
     case 'setSpriteSize':
       studioApp.highlight(cmd.id);
@@ -3624,7 +3652,7 @@ Studio.playSound = function (opts) {
   if (soundVal === constants.RANDOM_VALUE) {
     // Get all non-random values and choose one at random:
     var allValues = paramLists.getPlaySoundValues(false);
-    soundVal = allValues[Math.floor(Math.random() * allValues.length)];
+    soundVal = allValues[Math.floor(Math.random() * allValues.length)].toLowerCase();
   }
 
   if (!skin.soundFiles[soundVal]) {
@@ -3914,13 +3942,13 @@ Studio.setSpriteSpeed = function (opts) {
   Studio.sprite[opts.spriteIndex].speed = speed;
 };
 
-var BOT_SPEEDS = {
+var DROID_SPEEDS = {
   slow: constants.SpriteSpeed.SLOW,
   normal: constants.SpriteSpeed.NORMAL,
   fast: constants.SpriteSpeed.VERY_FAST
 };
 
-Studio.setBotSpeed = function (opts) {
+Studio.setDroidSpeed = function (opts) {
 
   if (typeof opts.value !== 'string') {
     throw new TypeError("Incorrect parameter: " + opts.value);
@@ -3929,15 +3957,16 @@ Studio.setBotSpeed = function (opts) {
   var speedValue = opts.value.toLowerCase().trim();
 
   if (speedValue === constants.RANDOM_VALUE) {
-    speedValue = utils.randomKey(BOT_SPEEDS);
+    speedValue = utils.randomKey(DROID_SPEEDS);
   }
 
-  var speedNumericVal = BOT_SPEEDS[speedValue];
+  var speedNumericVal = DROID_SPEEDS[speedValue];
   if (typeof speedNumericVal === 'undefined') {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
 
   opts.value = speedNumericVal;
+  opts.spriteIndex = Studio.protaganistSpriteIndex || 0;
   Studio.setSpriteSpeed(opts);
 };
 
@@ -5169,7 +5198,7 @@ Studio.conditionSatisfied = function(required) {
       return false;
     }
 
-    if (valueName === 'setBotSpeed' && tracked.hasSetBotSpeed !== value) {
+    if (valueName === 'setDroidSpeed' && tracked.hasSetDroidSpeed !== value) {
       return false;
     }
   }
