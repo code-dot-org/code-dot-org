@@ -111,10 +111,17 @@
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
-    "beginner_mode": "false",
+    "beginner_mode": "true",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "true"
+    "debugger_disabled": "false",
+    "encrypted_examples": [
+
+    ],
+    "instructions": "Add functionality that counts the length of your streaks. (Click to see full instructions)\r\n",
+    "markdown_instructions": "# Streaks of Heads\r\n\r\nWe've counted how many heads we've flipped in total, but now we want to tackle a more nuanced problem, **counting streaks of heads**. In order to do this we're going to need to create a new variable that keeps track of the number of heads we've seen in the current streak. Below is psuedocode showing one way to keep track of this information.\r\n\r\n**Pseudocode**\r\n* headsCount <-- 0\r\n* WHILE(fewer than 10 flips)\r\n\t* IF (flip is a heads)\r\n\t\t* headsCount <-- headsCount + 1\r\n\t* ELSE\r\n\t\t* headsCount <-- 0\r\n\t* DISPLAY (The current flip)\r\n\t* DISPLAY (The value of headsCount)\r\n\r\n# Do This\r\n\r\n* Add functionality to your simulation that **prints the length of each streak of heads** by implementing the logic described above.\r\n* The example below shows sample output from your program.\r\n\r\n![](https://images.code.org/22f1a29e9b6abd558198f4704e437498-image-1446751547621.25.07 PM.png)",
+    "slider_speed": "1.0",
+    "project_template_level_name": "U3 - Simulation - Template"
   }
 }]]></config>
   <blocks/>

@@ -61,7 +61,7 @@
     "debugger_disabled": "true",
     "video_key": "csp_applab_turtle",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "true"
   }
 }]]></config>
   <blocks/>

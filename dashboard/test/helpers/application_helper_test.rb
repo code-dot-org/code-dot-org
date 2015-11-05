@@ -177,6 +177,36 @@ class ApplicationHelperTest < ActionView::TestCase
                  'Should be able to overwrite invalid cookie state'
   end
 
+  test 'meta_image_url for level' do
+    assert_equal '/sharing_drawing.png', meta_image_url(level: Artist.first)
+    assert_equal '/studio_sharing_drawing.png', meta_image_url(level: Studio.first)
+    assert_equal '/bounce_sharing_drawing.png', meta_image_url(level: Game.find_by_app('Bounce').levels.first)
+    assert_equal '/flappy_sharing_drawing.png', meta_image_url(level: Game.find_by_app('Flappy').levels.first)
+  end
+
+  test 'meta_image_url for level_source without image' do
+    assert_equal '/sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: Artist.first))
+    assert_equal '/studio_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: Studio.first))
+    assert_equal '/bounce_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: Game.find_by_app('Bounce').levels.first))
+    assert_equal '/flappy_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: Game.find_by_app('Flappy').levels.first))
+  end
+
+  test 'meta_image_url for level_source with image' do
+    CDO.stubs(:disable_s3_image_uploads).returns false
+
+    assert_match(/cloudfront.net.*png/, meta_image_url(level_source: create(:level_source_image).level_source))
+
+    artist_level_source = create(:level_source, level: Artist.first)
+    create(:level_source_image, level_source: artist_level_source)
+    assert_match(/cloudfront.net.*framed.*png/, meta_image_url(level_source: artist_level_source.reload))
+  end
+
+  test 'meta_image_url for level_source with image with s3 disabled' do
+    CDO.stubs(:disable_s3_image_uploads).returns true
+    assert_equal 'http://code.org/images/logo.png', meta_image_url(level_source: create(:level_source_image).level_source)
+  end
+
+
   private
   def assert_equal_unordered(array1, array2)
     Set.new(array1) == Set.new(array2)
