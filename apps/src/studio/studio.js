@@ -3292,7 +3292,8 @@ Studio.animateGoals = function() {
 
 
 /**
- * Load clouds for the current background if it features them.
+ * Load clouds for the current background if it features them, or hide
+ * them if they shouldn't currently be shown.
  */
 Studio.loadClouds = function() {
   var cloud, i;
@@ -3336,16 +3337,23 @@ Studio.animateClouds = function() {
   }
 
   for (var i = 0; i < constants.NUM_CLOUDS; i++) {
-    var cloud = document.getElementById('cloud' + i);
     Studio.cloudStep++;
     var location = Studio.getCloudLocation(i);
+    var cloud = document.getElementById('cloud' + i);
     cloud.setAttribute('x', location.x);
     cloud.setAttribute('y', location.y);
   }
 };
 
+
+/** Gets the current location of a specified cloud.
+ * @param {number} cloudIndex
+ * @returns {Object} location
+ * @returns {number} location.x
+ * @returns {number} location.y
+ */
 Studio.getCloudLocation = function(cloudIndex) {
-  var intervals = [ 50, 60 ];   // how many milliseconds to move a pixel
+  var intervals = [ 100, 120 ]; // how many milliseconds to move one pixel
   var distance = 700;           // how many pixels a cloud covers
 
   var totalTime = Studio.cloudStep * 30;
@@ -3355,6 +3363,7 @@ Studio.getCloudLocation = function(cloudIndex) {
 
   return { x: x, y: y };
 };
+
 
 /**
  * Start showing an upwards-floating score at the location of sprite 0.
