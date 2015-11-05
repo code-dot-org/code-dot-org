@@ -2443,7 +2443,7 @@ levels.js_hoc2015_chain_characters = {
   'wallMap': 'grid',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': { params: ['"mouse"'] },
+    'addCharacter': { params: ['"MouseDroid"'] },
     'playSound': null,
     'addPoints': null,
     'removePoints': null,
