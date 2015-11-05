@@ -54,7 +54,8 @@
     "debugger_disabled": "true",
     "video_key": "csp_applab_functions_parameters",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "encrypted_examples": "5Ot7bDDuTK/42jNXiOS6k1KbwZ/hGrzwv0mbeXY0VsI7ks2fAd/vL4U+oWDZ\nycgZ\n"
   }
 }]]></config>
   <blocks/>

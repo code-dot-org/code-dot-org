@@ -31,8 +31,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
-    "callout_json": "[]",
-    "maze_data": null
+    "callout_json": "[]"
   }
 }]]></config>
   <blocks>
