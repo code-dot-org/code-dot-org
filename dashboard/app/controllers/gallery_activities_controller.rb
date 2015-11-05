@@ -42,10 +42,10 @@ class GalleryActivitiesController < ApplicationController
 
       respond_to do |format|
         if @gallery_activity.save
-          format.json { render action: 'show', status: :created, location: @gallery_activity }
+          format.any { render action: 'show', status: :created, location: @gallery_activity }
         else
           # right now this never happens because we end up raising an exception in one of the authorization checks
-          format.json { render json: @gallery_activity.errors, status: :unprocessable_entity }
+          format.any { render json: @gallery_activity.errors, status: :unprocessable_entity }
         end
       end
     end
@@ -56,7 +56,7 @@ class GalleryActivitiesController < ApplicationController
   def destroy
     @gallery_activity.destroy
     respond_to do |format|
-      format.json { head :no_content }
+      format.any { head :no_content }
     end
   end
 
