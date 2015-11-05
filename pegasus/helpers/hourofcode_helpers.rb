@@ -150,7 +150,7 @@ def campaign_date(format)
 end
 
 def all_unique_events
-  DB[:forms].where(kind: 'HocSignup2015').group(:name, :email).select(:name, :email, :processed_data, :data)
+  DB[:forms].where(kind: 'HocSignup2015').group(:email, :name).select(:name, :email, :processed_data, :data)
 end
 
 def company_count
@@ -172,5 +172,5 @@ def country_full_name
 end
 
 def total_hoc_count
-  all_unique_events.count
+  DB[:forms].where(kind: 'HocSignup2015').group(:email, :name).select(:email, :name).count
 end
