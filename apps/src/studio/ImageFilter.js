@@ -77,10 +77,15 @@ ImageFilter.prototype.applyTo = function (svgElement) {
  * @param {SVGElement} svgElement
  */
 ImageFilter.prototype.removeFrom = function (svgElement) {
-  if (svgElement.getAttribute('filter') === 'url("#' + this.id_ + '")') {
+  // Different browsers clean the filter attribute differently
+  // This matches
+  //   url(#filter-id)
+  //   url("#filter-id")
+  var regex = new RegExp("url\\([\"']?#" + this.id_ + "[\"']?\\)", 'i');
+  if (regex.test(svgElement.getAttribute('filter'))) {
     svgElement.removeAttribute('filter');
+    this.applyCount_--;
   }
-  this.applyCount_--;
   if (this.applyCount_ === 0) {
     this.removeFromDom_();
   }
