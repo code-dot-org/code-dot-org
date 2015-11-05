@@ -182,7 +182,7 @@ class AssetsTest < Minitest::Test
     src_channel_id = create_channel(@channels)
     dest_channel_id = create_channel(@channels)
 
-    image_filename = URI.encode 'çat.jpg'
+    image_filename = 'çat.jpg'
     image_body = 'stub-image-contents'
 
     sound_filename = 'woof.mp3'
@@ -198,19 +198,18 @@ class AssetsTest < Minitest::Test
     copy_file_infos = JSON.parse(copy_all(src_channel_id, dest_channel_id))
     dest_file_infos = JSON.parse(list(@assets, dest_channel_id))
 
-    # TODO - the ordering got switched. not sure why/if we care?
-    assert_fileinfo_equal(expected_image_info, copy_file_infos[0])
-    assert_fileinfo_equal(expected_sound_info, copy_file_infos[1])
-    assert_fileinfo_equal(expected_image_info, dest_file_infos[0])
-    assert_fileinfo_equal(expected_sound_info, dest_file_infos[1])
+    assert_fileinfo_equal(expected_image_info, copy_file_infos[1])
+    assert_fileinfo_equal(expected_sound_info, copy_file_infos[0])
+    assert_fileinfo_equal(expected_image_info, dest_file_infos[1])
+    assert_fileinfo_equal(expected_sound_info, dest_file_infos[0])
 
     # abuse score didn't carry over
     assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, image_filename)
     assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, sound_filename)
 
-    delete(@assets, src_channel_id, image_filename)
+    delete(@assets, src_channel_id, URI.encode(image_filename))
     delete(@assets, src_channel_id, sound_filename)
-    delete(@assets, dest_channel_id, image_filename)
+    delete(@assets, dest_channel_id, URI.encode(image_filename))
     delete(@assets, dest_channel_id, sound_filename)
     delete_channel(@channels, src_channel_id)
     delete_channel(@channels, dest_channel_id)
