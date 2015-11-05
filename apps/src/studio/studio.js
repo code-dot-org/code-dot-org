@@ -1176,24 +1176,25 @@ function handleActorCollisionsWithCollidableList (
         // Make the projectile/item disappear automatically if this parameter
         // is set:
         if (autoDisappear) {
-          if (list.length === 1 && list === Studio.items) {
+          if (list === Studio.items) {
             // NOTE: we do this only for the Item list (not projectiles)
 
             // NOTE: if items are allowed to move outOfBounds(), this may never
             // be called because the last item may not be removed here.
-            callHandler('whenGetAllItems');
-          }
 
-          if (list == Studio.items) {
+            if (list.length === 1) {
+              callHandler('whenGetAllItems');
+            }
+
             var className = collidable.className;
             var itemCount = 0;
             for (var j = 0; j < list.length; j++) {
-              if (className == list[j].className) {
+              if (className === list[j].className) {
                 itemCount++;
               }
             }
 
-            if (itemCount == 1) {
+            if (itemCount === 1) {
               callHandler('whenGetAll-' + className);
             }
           }
