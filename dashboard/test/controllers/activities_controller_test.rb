@@ -33,6 +33,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @blank_image = File.read('test/fixtures/artist_image_blank.png', binmode: true)
     @good_image = File.read('test/fixtures/artist_image_1.png', binmode: true)
     @another_good_image = File.read('test/fixtures/artist_image_2.png', binmode: true)
+    @jpg_image = File.read('test/fixtures/playlab_image.jpg', binmode: true)
     @milestone_params = {user_id: @user, script_level_id: @script_level.id, lines: 20, attempt: '1', result: 'true', testResult: '100', time: '1000', app: 'test', program: '<hey>'}
   end
 
@@ -297,6 +298,32 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel, GalleryActivity, LevelSourceImage) do
       assert_difference('@user.reload.total_lines', 20) do # update total lines
         post :milestone, @milestone_params.merge(save_to_gallery: 'true', image: Base64.encode64(@good_image))
+      end
+    end
+
+    assert_response :success
+
+    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+
+    # csoreated gallery activity and activity for user
+    assert_equal @user, Activity.last.user
+    assert_equal @user, GalleryActivity.last.user
+    assert_equal Activity.last, GalleryActivity.last.activity
+  end
+
+  test "logged in milestone should save to gallery when passing an impressive level with a jpg image" do
+    # do all the logging
+    @controller.expects :log_milestone
+    @controller.expects :slog
+
+    @controller.expects(:trophy_check).with(@user)
+
+    expect_s3_upload
+
+    assert_creates(LevelSource, Activity, UserLevel, GalleryActivity, LevelSourceImage) do
+      assert_difference('@user.reload.total_lines', 20) do # update total lines
+        post :milestone, @milestone_params.merge(save_to_gallery: 'true', image: Base64.encode64(@jpg_image), image_type: 'jpg')
       end
     end
 

@@ -129,7 +129,7 @@ module ApplicationHelper
     app = opts[:level_source].try(:level).try(:game).try(:app) || opts[:level].try(:game).try(:app)
 
     # playlab/studio and artist/turtle can have images
-    if opts[:level_source].try(:level_source_image).try(:image)
+    if opts[:level_source].try(:level_source_image)
       level_source = opts[:level_source]
       if level_source.level_source_image
         if app == Game::ARTIST
