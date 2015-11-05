@@ -3315,25 +3315,22 @@ Studio.loadClouds = function() {
   var cloud, i;
   var showClouds = Studio.background && skin[Studio.background].clouds;
 
-  var width, height;
-  width = height = 300;
-
   if (!showClouds) {
     // Hide the clouds offscreen.
     for (i = 0; i < constants.MAX_NUM_CLOUDS; i++) {
       cloud = document.getElementById('cloud' + i);
-      cloud.setAttribute('x', -width);
-      cloud.setAttribute('y', -height);
+      cloud.setAttribute('x', -constants.CLOUD_SIZE);
+      cloud.setAttribute('y', -constants.CLOUD_SIZE);
     }
   } else {
     // Set up the right clouds.
     for (i = 0; i < skin[Studio.background].clouds.length; i++) {
       cloud = document.getElementById('cloud' + i);
-      cloud.setAttribute('width', width);
-      cloud.setAttribute('height', height);
+      cloud.setAttribute('width', constants.CLOUD_SIZE);
+      cloud.setAttribute('height', constants.CLOUD_SIZE);
       cloud.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
         skin[Studio.background].clouds[i]);
-      cloud.setAttribute('opacity', 0.7);
+      cloud.setAttribute('opacity', constants.CLOUD_OPACITY);
 
       var location = Studio.getCloudLocation(i);
       cloud.setAttribute('x', location.x);
@@ -3377,7 +3374,7 @@ Studio.getCloudLocation = function(cloudIndex) {
   // How many pixels a cloud moves before it loops.  This value is big enough to
   // make a cloud move entirely aross the game area, looping when completely
   // out of view.
-  var distance = 700;
+  var distance = Studio.MAZE_WIDTH + constants.CLOUD_SIZE;
 
   var totalTime = Studio.cloudStep * 30;
   var xOffset = totalTime / intervals[cloudIndex] % distance;
@@ -3387,13 +3384,13 @@ Studio.getCloudLocation = function(cloudIndex) {
   if (cloudIndex === 0) {
     // The first cloud animates from top-left to bottom-right, in the upper-right
     // half of the screen.
-    x = xOffset - 100;
-    y = x - 200;
+    x = xOffset - Studio.MAZE_WIDTH/4;
+    y = x - Studio.MAZE_HEIGHT/2;
   } else {
     // The second cloud animates from bottom-right to top-left, in the lower-left
     // half of the screen.
-    x = 400 - xOffset;
-    y = x + 200;
+    x = Studio.MAZE_WIDTH - xOffset;
+    y = x + Studio.MAZE_HEIGHT/2;
   }
 
   return { x: x, y: y };
