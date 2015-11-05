@@ -4,7 +4,7 @@
   -company_total = format_integer_with_commas(company_count)
   %h2.mapheader
     %a{href: resolve_url('/events/all')}
-      = hoc_s(:map_header).gsub('#', format_integer_with_commas(total_hoc_count)) + ","
+      = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count'])) + ","
       = hoc_s(:map_header_company).gsub('#', company_total).gsub('company', company_name)
     %a{href: resolve_url("/#join")}
       %button.signup-button
@@ -13,7 +13,7 @@
   -country_total = format_integer_with_commas(country_count)
   %h2.mapheader
     %a{href: resolve_url("/events/all")}
-      = hoc_s(:map_header).gsub('#', format_integer_with_commas(total_hoc_count)) + ","
+      = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count'])) + ","
     %a{href: resolve_url("/events/all/#{solr_country_code}")}
       = hoc_s(:map_header_country).gsub('#', format_integer_with_commas(country_total)).gsub('%{country}', country_full_name)
     %a{href: resolve_url("/#join")}
@@ -22,7 +22,7 @@
 -else
   %h2.mapheader
     %a{href: resolve_url("/events/all")}
-      = hoc_s(:map_header).gsub('#', format_integer_with_commas(total_hoc_count))
+      = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
     %a{href: resolve_url("/#join")}
       %button.signup-button
         = hoc_s(:signup_your_event)
@@ -86,7 +86,7 @@
     legend.className = 'legend';
     legend.index = 1;
     $("#belowmaplegend div").clone().appendTo(legend);
-    
+
     //gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 
     layer.setMap(gmap);
