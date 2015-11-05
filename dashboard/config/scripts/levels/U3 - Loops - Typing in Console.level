@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-11-04T19:19:45.000Z",
+  "created_at": "2015-11-05T18:18:32.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -52,11 +52,12 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
+    "markdown_instructions": "# Debug Console: Variable Values\r\n\r\nUp until now if we wanted to find out the value of a variable at somepoint in the execution of a program we used `console.log`. That is still going to be a great strategy but its always good to have other options too! \r\n\r\nWe can also check the value of a variable by typing in the Debug Console. If you type the name of a variable in the console and hit enter it will print the value of the variable for you. \r\n\r\n# Do This\r\n\r\n* **Run the program.**\r\n\r\n* Use console to **check the ending value of num**. You can do this by typing num in the Debug Console and hitting enter!\r\n\r\n<img src=\"https://images.code.org/d29b1e0625815974d4ac508a052be352-image-1446747932724.gif\" style=\"width: 350px\">",
+    "start_blocks": "var num = randomNumber(1,6);\r\nwrite(\"Number is \"+num);\r\nwhile(num != 6){\r\n  write(\"Nope. Not 6. Roll again.\");\r\n  num = randomNumber(1,6);\r\n  write(\"New number is: \"+num);\r\n}\r\nwrite(\"Done.\");",
+    "instructions": "Use the debugging tools to trace out the execution of the while loop by checking the value of num as you step through the program. (Click to see full instructions)",
     "encrypted_examples": [
 
-    ],
-    "markdown_instructions": "# Starting Condition\r\n\r\nWe have seen that loops can run infinitely. There is also the chance that they never run at all! If the condition for the while loop starts out false then the loop will never run. \r\n\r\nAs programmers if we want to make sure the program runs the loop at least once we need to make sure the starting value of the variable used in our boolean expression is going to always lead to a true result. It is often helpful to initialize the variable to a value we know will be true. We should pick a dummy value that would not come up as a real value for the variale. If you ever see the dummy value printed out, you know something went wrong. It is okay to use this dummy variable as the first thing we do when entering the loop is change it so it is just guaranteeing we make it in the loop.\r\n\r\n# Do This\r\n\r\n* **Run** the program to see what happens.\r\n\r\n* **Debug** why the code is not running.\r\n\r\n* **Fix** the problem so the loop will run at least once. Change the initial value of num to a dummy value such as -1.",
-    "start_blocks": "var num = 1;\r\nwhile(num != 1){\r\n  write(\"Nope. Not 6. Roll again.\");\r\n  num = randomNumber(1,6);\r\n  write(\"new number is \"+num);\r\n}\r\nwrite(\"Done.\");"
+    ]
   }
 }]]></config>
   <blocks/>
