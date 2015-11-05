@@ -199,8 +199,15 @@ config.copy = {
       {
         expand: true,
         cwd: 'lib/fileupload',
-        src: ['*.js'],
-        dest: 'build/package/js/fileupload/'
+        src: [
+          'jquery.fileupload' + dotMinIfNotDev + '.js',
+          'jquery.iframe-transport' + dotMinIfNotDev + '.js'
+        ],
+        dest: 'build/package/js/fileupload/',
+        rename: function (src, dest) {
+          // dest name should be the same, whether or not minified
+          return src + dest.replace(/\.min.js$/, '.js');
+        }
       },
       {
         expand: true,
