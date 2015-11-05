@@ -806,8 +806,8 @@ function loadHoc2015x(skin, assetUrl) {
   skin.hazard = skin.assetUrl('hazard_idle.png');
 
   skin.main = {
-    background: skin.assetUrl('background_tatooine.jpg'),
-    tiles: skin.assetUrl('tiles_tatooine.png'),
+    background: skin.assetUrl('background_background1.jpg'),
+    tiles: skin.assetUrl('tiles_background1.png'),
     clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
   };
 
