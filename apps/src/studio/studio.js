@@ -411,7 +411,7 @@ var drawMap = function () {
   // Create cloud elements.
   var cloudGroup = document.createElementNS(SVG_NS, 'g');
   cloudGroup.setAttribute('id', 'cloudLayer');
-  for (i = 0; i < constants.NUM_CLOUDS; i++) {
+  for (i = 0; i < constants.MAX_NUM_CLOUDS; i++) {
     var cloud = document.createElementNS(SVG_NS, 'image');
     cloud.setAttribute('id', 'cloud' + i);
     cloudGroup.appendChild(cloud);
@@ -3320,14 +3320,14 @@ Studio.loadClouds = function() {
 
   if (!showClouds) {
     // Hide the clouds offscreen.
-    for (i = 0; i < constants.NUM_CLOUDS; i++) {
+    for (i = 0; i < constants.MAX_NUM_CLOUDS; i++) {
       cloud = document.getElementById('cloud' + i);
       cloud.setAttribute('x', -width);
       cloud.setAttribute('y', -height);
     }
   } else {
     // Set up the right clouds.
-    for (i = 0; i < constants.NUM_CLOUDS; i++) {
+    for (i = 0; i < skin[Studio.background].clouds.length; i++) {
       cloud = document.getElementById('cloud' + i);
       cloud.setAttribute('width', width);
       cloud.setAttribute('height', height);
@@ -3352,8 +3352,9 @@ Studio.animateClouds = function() {
     return;
   }
 
-  for (var i = 0; i < constants.NUM_CLOUDS; i++) {
-    Studio.cloudStep++;
+  Studio.cloudStep++;
+
+  for (var i = 0; i < skin[Studio.background].clouds.length; i++) {
     var location = Studio.getCloudLocation(i);
     var cloud = document.getElementById('cloud' + i);
     cloud.setAttribute('x', location.x);
@@ -3369,13 +3370,31 @@ Studio.animateClouds = function() {
  * @returns {number} location.y
  */
 Studio.getCloudLocation = function(cloudIndex) {
-  var intervals = [ 100, 120 ]; // how many milliseconds to move one pixel
-  var distance = 700;           // how many pixels a cloud covers
+  // How many milliseconds to move one pixel.  Higher values mean slower clouds,
+  // and making them different causes the clouds to animate out of sync.
+  var intervals = [ 50, 60 ];
+
+  // How many pixels a cloud moves before it loops.  This value is big enough to
+  // make a cloud move entirely aross the game area, looping when completely
+  // out of view.
+  var distance = 700;
 
   var totalTime = Studio.cloudStep * 30;
   var xOffset = totalTime / intervals[cloudIndex] % distance;
-  var x = cloudIndex === 0 ? xOffset - 100 : 400 - xOffset;
-  var y = cloudIndex === 0 ? x - 200 : x + 200;
+
+  var x, y;
+
+  if (cloudIndex === 0) {
+    // The first cloud animates from top-left to bottom-right, in the upper-right
+    // half of the screen.
+    x = xOffset - 100;
+    y = x - 200;
+  } else {
+    // The second cloud animates from bottom-right to top-left, in the lower-left
+    // half of the screen.
+    x = 400 - xOffset;
+    y = x + 200;
+  }
 
   return { x: x, y: y };
 };
