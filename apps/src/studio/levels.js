@@ -2677,7 +2677,7 @@ var js_hoc2015_event_free_markdown = [
   '<br />Add five random characters in the scene, and play a different sound each time R2-D2 collides with one of them.</p>',
   '',
   '<p>**Example 2**',
-  '<br />Add ten stormtroopers to chase C-3PO. See if you can outrun them by running at high speed.</p>',
+  '<br />Add ten Stormtroopers to chase C-3PO. See if you can outrun them by running at high speed.</p>',
   '',
   '<p>**Example 3**',
   '<br />Add five Puffer Pigs that are running away from R2-D2. Make him scream each time he catches one.</p>',
