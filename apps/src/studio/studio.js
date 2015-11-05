@@ -36,6 +36,7 @@ var spriteActions = require('./spriteActions');
 var ImageFilterFactory = require('./ImageFilterFactory');
 var ThreeSliceAudio = require('./ThreeSliceAudio');
 var MusicController = require('./MusicController');
+var paramLists = require('./paramLists.js');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -1636,6 +1637,9 @@ Studio.init = function(config) {
   skin = config.skin;
   level = config.level;
 
+  // Initialize paramLists with skin and level data:
+  paramLists.initWithSkinAndLevel(skin, level);
+
   // In our Algebra course, we want to gray out undeletable blocks. I'm not sure
   // whether or not that's desired in our other courses.
   var isAlgebraLevel = !!level.useContractEditor;
@@ -1709,7 +1713,9 @@ Studio.init = function(config) {
 
   config.loadAudio = function() {
     var soundFileNames = [];
-    // We want to load the basic list of effects available in the skin
+    // We want to load the built-in sounds in the skin
+    soundFileNames.push.apply(soundFileNames, skin.builtinSounds);
+    // We also want to load the student accessible list of effects available in the skin
     soundFileNames.push.apply(soundFileNames, skin.sounds);
     // We also want to load the movement sounds used in hoc2015
     soundFileNames.push.apply(soundFileNames, Studio.getMovementSoundFileNames(skin));
@@ -3616,7 +3622,9 @@ Studio.playSound = function (opts) {
   var soundVal = opts.soundName.toLowerCase().trim();
 
   if (soundVal === constants.RANDOM_VALUE) {
-    soundVal = skin.sounds[Math.floor(Math.random() * skin.sounds.length)];
+    // Get all non-random values and choose one at random:
+    var allValues = paramLists.getPlaySoundValues(false);
+    soundVal = allValues[Math.floor(Math.random() * allValues.length)];
   }
 
   if (!skin.soundFiles[soundVal]) {

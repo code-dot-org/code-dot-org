@@ -56,6 +56,7 @@ var spriteActions = require('./spriteActions');
 var ImageFilterFactory = require('./ImageFilterFactory');
 var ThreeSliceAudio = require('./ThreeSliceAudio');
 var MusicController = require('./MusicController');
+var paramLists = require('./paramLists.js');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -1656,6 +1657,9 @@ Studio.init = function(config) {
   skin = config.skin;
   level = config.level;
 
+  // Initialize paramLists with skin and level data:
+  paramLists.initWithSkinAndLevel(skin, level);
+
   // In our Algebra course, we want to gray out undeletable blocks. I'm not sure
   // whether or not that's desired in our other courses.
   var isAlgebraLevel = !!level.useContractEditor;
@@ -1729,7 +1733,9 @@ Studio.init = function(config) {
 
   config.loadAudio = function() {
     var soundFileNames = [];
-    // We want to load the basic list of effects available in the skin
+    // We want to load the built-in sounds in the skin
+    soundFileNames.push.apply(soundFileNames, skin.builtinSounds);
+    // We also want to load the student accessible list of effects available in the skin
     soundFileNames.push.apply(soundFileNames, skin.sounds);
     // We also want to load the movement sounds used in hoc2015
     soundFileNames.push.apply(soundFileNames, Studio.getMovementSoundFileNames(skin));
@@ -3636,7 +3642,9 @@ Studio.playSound = function (opts) {
   var soundVal = opts.soundName.toLowerCase().trim();
 
   if (soundVal === constants.RANDOM_VALUE) {
-    soundVal = skin.sounds[Math.floor(Math.random() * skin.sounds.length)];
+    // Get all non-random values and choose one at random:
+    var allValues = paramLists.getPlaySoundValues(false);
+    soundVal = allValues[Math.floor(Math.random() * allValues.length)];
   }
 
   if (!skin.soundFiles[soundVal]) {
@@ -5266,7 +5274,7 @@ var checkFinished = function () {
 };
 
 
-},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./ImageFilterFactory":"/home/ubuntu/staging/apps/build/js/studio/ImageFilterFactory.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./MusicController":"/home/ubuntu/staging/apps/build/js/studio/MusicController.js","./ThreeSliceAudio":"/home/ubuntu/staging/apps/build/js/studio/ThreeSliceAudio.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
+},{"../JSInterpreter":"/home/ubuntu/staging/apps/build/js/JSInterpreter.js","../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../acemode/annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js","../canvg/StackBlur.js":"/home/ubuntu/staging/apps/build/js/canvg/StackBlur.js","../canvg/canvg.js":"/home/ubuntu/staging/apps/build/js/canvg/canvg.js","../canvg/rgbcolor.js":"/home/ubuntu/staging/apps/build/js/canvg/rgbcolor.js","../canvg/svg_todataurl":"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../constants":"/home/ubuntu/staging/apps/build/js/constants.js","../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../skins":"/home/ubuntu/staging/apps/build/js/skins.js","../templates/page.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","../xml":"/home/ubuntu/staging/apps/build/js/xml.js","./ImageFilterFactory":"/home/ubuntu/staging/apps/build/js/studio/ImageFilterFactory.js","./Item":"/home/ubuntu/staging/apps/build/js/studio/Item.js","./MusicController":"/home/ubuntu/staging/apps/build/js/studio/MusicController.js","./ThreeSliceAudio":"/home/ubuntu/staging/apps/build/js/studio/ThreeSliceAudio.js","./api":"/home/ubuntu/staging/apps/build/js/studio/api.js","./bigGameLogic":"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js","./blocks":"/home/ubuntu/staging/apps/build/js/studio/blocks.js","./collidable":"/home/ubuntu/staging/apps/build/js/studio/collidable.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./controls.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs","./dropletConfig":"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js","./extraControlRows.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/extraControlRows.html.ejs","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./paramLists.js":"/home/ubuntu/staging/apps/build/js/studio/paramLists.js","./projectile":"/home/ubuntu/staging/apps/build/js/studio/projectile.js","./rocketHeightLogic":"/home/ubuntu/staging/apps/build/js/studio/rocketHeightLogic.js","./samBatLogic":"/home/ubuntu/staging/apps/build/js/studio/samBatLogic.js","./spriteActions":"/home/ubuntu/staging/apps/build/js/studio/spriteActions.js","./visualization.html.ejs":"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs"}],"/home/ubuntu/staging/apps/build/js/studio/visualization.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -6298,9 +6306,7 @@ function loadHoc2015(skin, assetUrl) {
     'item5sound1', 'item5sound2', 'item5sound3',
     'item6sound1', 'item6sound2', 'item6sound3',
     'alert1', 'alert2', 'alert3', 'alert4',
-    'applause',
-    'start', 'win', 'failure', 'flag',
-    'move1', 'move2', 'move3'
+    'applause'
   ];
 
   skin.musicMetadata = HOC2015_MUSIC_METADATA;
@@ -6492,10 +6498,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
 
   // Sounds.
-  skin.sounds = [
-    'start', 'win', 'failure', 'flag',
-    'move1', 'move2', 'move3', 'move4'
-  ];
+  skin.sounds = [ 'move1', 'move2', 'move3', 'move4' ];
 
   skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
@@ -6774,10 +6777,10 @@ exports.load = function(assetUrl, id) {
   skin.goalSuccess = skin.assetUrl('goal_success.png');
 
   // Sounds
+  skin.builtinSounds = [ 'start', 'win', 'failure', 'flag' ];
   skin.sounds = [
     'rubber', 'crunch', 'goal1', 'goal2', 'wood', 'retro', 'slap', 'hit',
-    'winpoint', 'winpoint2', 'losepoint', 'losepoint2',
-    'start', 'win', 'failure', 'flag'
+    'winpoint', 'winpoint2', 'losepoint', 'losepoint2'
   ];
 
   // Settings
@@ -9019,6 +9022,16 @@ levels.js_hoc2015_score =
     '  playSound("character1sound1");',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      random: true,
+      character1sound1: true,
+      character1sound2: true,
+      character1sound3: true,
+      character1sound4: true,
+      character1sound5: true,
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -9760,6 +9773,7 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
       </next> \
      </block> \
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
+      <title name="VALUE">pig</title> \
       <next> \
        <block type="studio_playSound"><title name="SOUND">item1sound1</title> \
         <next> \
@@ -9773,7 +9787,7 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
         <block type="studio_playSound"></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">"pig"</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">pig</title></block>'),
   requiredBlocks: [
     // TODO: addCharacter
   ],
@@ -9781,6 +9795,35 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
 
 levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_addCharacter"><title name="VALUE">"mouse"</title> \
+        <next> \
+         <block type="studio_playSound"><title name="SOUND">character1sound3</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
+      <title name="VALUE">mouse</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">item6sound2</title> \
+        <next> \
+         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>',
+  toolbox:
+    tb('<block type="studio_addCharacter"><title name="VALUE">"mouse"</title></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_playSound"></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">mouse</title></block>'),
+  requiredBlocks: [
+    // TODO: addCharacter, addPoints
+  ],
 });
 
 levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  {
@@ -9820,6 +9863,7 @@ return buf.join('');
 },{"../locale":"/home/ubuntu/staging/apps/build/js/locale.js","ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/studio/dropletConfig.js":[function(require,module,exports){
 var msg = require('./locale');
 var api = require('./apiJavascript.js');
+var paramLists = require('./paramLists.js');
 
 module.exports.blocks = [
   {func: 'setBot', parent: api, category: '', params: ['"bot1"'], dropdown: { 0: [ '"random"', '"bot1"', '"bot2"' ] } },
@@ -9834,21 +9878,7 @@ module.exports.blocks = [
   {func: 'goLeft', parent: api, category: '', },
   {func: 'goUp', parent: api, category: '', },
   {func: 'goDown', parent: api, category: '', },
-  {func: 'playSound', parent: api, category: '', params: ['"character1sound1"'],
-    dropdown: { 0: [
-      '"random"',
-      '"character1sound1"', '"character1sound2"', '"character1sound3"', '"character1sound4"',
-      '"character1sound5"', '"character1sound6"', '"character1sound7"', '"character1sound8"',
-      '"character1sound9"',
-      '"character2sound1"', '"character2sound2"', '"character2sound3"', '"character2sound4"',
-      '"item1sound1"', '"item1sound2"', '"item1sound3"', '"item1sound4"',
-      '"item3sound1"', '"item3sound2"', '"item3sound3"', '"item3sound4"',
-      '"item4sound1"', '"item4sound2"', '"item4sound3"',
-      '"item5sound1"', '"item5sound2"', '"item5sound3"',
-      '"item6sound1"', '"item6sound2"', '"item6sound3"',
-      '"alert1"', '"alert2"', '"alert3"', '"alert4"',
-      '"applause"'
-      ] } },
+  {func: 'playSound', parent: api, category: '', params: ['"character1sound1"'], dropdown: { 0: paramLists.playSoundDropdown } },
 
   {func: 'endGame', parent: api, category: '', params: ['"win"'], dropdown: { 0: ['"win"', '"lose"' ] } },
   {func: 'addPoints', parent: api, category: '', params: ["100"] },
@@ -9947,7 +9977,39 @@ module.exports.autocompleteFunctionsWithParens = true;
 module.exports.showParamDropdowns = true;
 
 
-},{"./apiJavascript.js":"/home/ubuntu/staging/apps/build/js/studio/apiJavascript.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js"}],"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs":[function(require,module,exports){
+},{"./apiJavascript.js":"/home/ubuntu/staging/apps/build/js/studio/apiJavascript.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./paramLists.js":"/home/ubuntu/staging/apps/build/js/studio/paramLists.js"}],"/home/ubuntu/staging/apps/build/js/studio/paramLists.js":[function(require,module,exports){
+var skin, level;
+
+exports.initWithSkinAndLevel = function (skinData, levelData) {
+  skin = skinData;
+  level = levelData;
+};
+
+exports.getPlaySoundValues = function (withRandom) {
+  var names;
+  if (withRandom) {
+    names = ['random'];
+  } else {
+    names = [];
+  }
+  names = names.concat(skin.sounds);
+  var restrictions = level.paramRestrictions && level.paramRestrictions.playSound;
+  if (restrictions) {
+    names = names.filter(function(name) {
+      return restrictions[name];
+    });
+  }
+  return names;
+};
+
+exports.playSoundDropdown = function () {
+  return exports.getPlaySoundValues(true).map(function (sound) {
+    return '"' + sound + '"';
+  });
+};
+
+
+},{}],"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
