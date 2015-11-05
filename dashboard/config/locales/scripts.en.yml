@@ -1430,3 +1430,8 @@ en:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+        gumball:
+          title: Gumball Play Lab
+          description_short: Create a story or make a game with Gumball Play Lab!
+          description: Create a story or make a game with Gumball Play Lab!
+          Gumball Play Lab: Gumball Play Lab
