@@ -2719,7 +2719,7 @@ Studio.onPuzzleComplete = function() {
   if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') {
     sendReport();
   } else {
-    document.getElementById('svgStudio').toDataURL("image/png", {
+    document.getElementById('svgStudio').toDataURL("image/jpeg", {
       callback: function(pngDataUrl) {
         Studio.feedbackImage = pngDataUrl;
         Studio.encodedFeedbackImage = encodeURIComponent(Studio.feedbackImage.split(',')[1]);
