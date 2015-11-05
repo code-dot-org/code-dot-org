@@ -96,6 +96,8 @@ def fetch_hoc_metrics()
       "Mexico"=>967736,
       },
     'total_hoc_count'=>71132,
+    'hoc_country_totals'=>{},
+    'hoc_company_totals'=>{},
   }
   # Increase the 'started' metric by 409K to reflect participant count from surveys, circa
   # February 2014.
