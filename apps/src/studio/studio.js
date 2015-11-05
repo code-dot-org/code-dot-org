@@ -1949,7 +1949,7 @@ function getDefaultBackgroundName() {
 }
 
 function getDefaultMapName() {
-  return level.wallMapCollisions ? (level.wallMap || skin.defaultWallMap) : undefined;
+  return level.wallMapCollisions ? level.wallMap : undefined;
 }
 
 /**
@@ -3954,6 +3954,7 @@ Studio.setDroidSpeed = function (opts) {
   }
 
   opts.value = speedNumericVal;
+  opts.spriteIndex = Studio.protaganistSpriteIndex || 0;
   Studio.setSpriteSpeed(opts);
 };
 

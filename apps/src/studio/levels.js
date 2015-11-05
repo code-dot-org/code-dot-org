@@ -1835,7 +1835,7 @@ levels.js_hoc2015_move_diagonal = {
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x20],
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x00]],
   'embed': 'false',
-  'instructions': '"Watch out for the Thug!"',
+  'instructions': '"Watch out for the Bandit!"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -2553,7 +2553,7 @@ levels.js_hoc2015_chain_characters_2 = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"It\'s up to you, R2-D2!"',
-  'instructions2': 'When you get a Tauntaun, two mynocks appear. Can you make two Mouse Droids appear when you get a Mynock? Then, get them all.',
+  'instructions2': 'When you get a Tauntaun, two Mynocks appear. Can you make two Mouse Droids appear when you get a Mynock? Then, get them all.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
@@ -2927,9 +2927,9 @@ levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
     tb('<block type="studio_playSound"></block> \
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">RebelPilot</title></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">Stormtrooper</title></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">Mynock</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">rebelpilot</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">stormtrooper</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">mynock</title></block>'),
   requiredBlocks: [
     // TODO: addPoints, removePoints, whenGetPilot, whenGetMan
   ],
@@ -2942,13 +2942,13 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
       <next> \
        <block type="studio_playSound"><title name="SOUND">r2-d2sound1</title> \
         <next> \
-         <block type="studio_addCharacter"><title name="VALUE">"PufferPig"</title></block> \
+         <block type="studio_addCharacter"><title name="VALUE">"pufferpig"</title></block> \
         </next> \
        </block> \
       </next> \
      </block> \
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
-      <title name="VALUE">PufferPig</title> \
+      <title name="VALUE">pufferpig</title> \
       <next> \
        <block type="studio_playSound"><title name="SOUND">pufferpigsound1</title> \
         <next> \
@@ -2958,11 +2958,11 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
       </next> \
      </block>',
   toolbox:
-    tb('<block type="studio_addCharacter"><title name="VALUE">"PufferPig"</title></block> \
+    tb('<block type="studio_addCharacter"><title name="VALUE">"pufferpig"</title></block> \
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
         <block type="studio_playSound"></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">PufferPig</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">pufferpig</title></block>'),
   requiredBlocks: [
     // TODO: addCharacter
   ],
@@ -2973,7 +2973,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
-       <block type="studio_addCharacter"><title name="VALUE">"MouseDroid"</title> \
+       <block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title> \
         <next> \
          <block type="studio_playSound"><title name="SOUND">r2-d2sound3</title></block> \
         </next> \
@@ -2981,7 +2981,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
       </next> \
      </block> \
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
-      <title name="VALUE">MouseDroid</title> \
+      <title name="VALUE">mousedroid</title> \
       <next> \
        <block type="studio_playSound"><title name="SOUND">mousedroidsound2</title> \
         <next> \
@@ -2991,11 +2991,11 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
       </next> \
      </block>',
   toolbox:
-    tb('<block type="studio_addCharacter"><title name="VALUE">"MouseDroid"</title></block> \
+    tb('<block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
         <block type="studio_playSound"></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">MouseDroid</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">mousedroid</title></block>'),
   requiredBlocks: [
     // TODO: addCharacter, addPoints
   ],
@@ -3003,10 +3003,111 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
 
 levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_addCharacter"><title name="VALUE">"tauntaun"</title> \
+        <next> \
+         <block type="studio_addCharacter"><title name="VALUE">"tauntaun"</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="130"> \
+      <title name="VALUE">tauntaun</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">TauntaunSound4</title> \
+        <next> \
+         <block type="studio_addPoints"><title name="VALUE">50</title> \
+          <next> \
+           <block type="studio_addCharacter"><title name="VALUE">"mynock"</title> \
+            <next> \
+             <block type="studio_addCharacter"><title name="VALUE">"mynock"</title></block> \
+            </next> \
+           </block> \
+          </next> \
+         </block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="300"> \
+      <title name="VALUE">mynock</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">TauntaunSound4</title></block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="460"> \
+      <title name="VALUE">mousedroid</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">MouseDroidSound2</title> \
+        <next> \
+         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>',
+  toolbox:
+    tb('<block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_playSound"></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">tauntaun</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">mousedroid</title></block>'),
+  requiredBlocks: [
+    // TODO: addCharacter (check for mouse param?), addPoints
+  ],
 });
 
 levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_addCharacter"><title name="VALUE">"rebelpilot"</title> \
+        <next> \
+         <block type="studio_addCharacter"><title name="VALUE">"rebelpilot"</title> \
+          <next> \
+           <block type="studio_addCharacter"><title name="VALUE">"rebelpilot"</title> \
+            <next> \
+             <block type="studio_playSound"><title name="SOUND">R2-D2sound4</title> \
+              <next> \
+               <block type="studio_setSprite"><title name="VALUE">"r2-d2"</title></block> \
+              </next> \
+             </block> \
+            </next> \
+           </block> \
+          </next> \
+         </block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="300"> \
+      <title name="VALUE">rebelpilot</title> \
+      <next> \
+       <block type="studio_addPoints"><title name="VALUE">400</title> \
+        <next> \
+         <block type="studio_setBackground"><title name="VALUE">random</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>',
+  // TODO: create setDroid block to improve the readability of the block?
+  // TODO: skin override of playSound dropdown (with paramsList filtering & random)
+  toolbox:
+    tb('<block type="studio_setSprite"></block> \
+        <block type="studio_setBackground"></block> \
+        <block type="studio_setDroidSpeed"></block> \
+        <block type="studio_setMap"></block> \
+        <block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_playSound"></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">rebelpilot</title></block>'),
+  requiredBlocks: [
+    // TODO: setMap, setDroidSpeed
+  ],
 });
 
 levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
