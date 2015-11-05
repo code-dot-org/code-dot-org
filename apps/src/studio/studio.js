@@ -1724,6 +1724,7 @@ Studio.init = function(config) {
 
     skin.soundFiles = {};
     soundFileNames.forEach(function (sound) {
+      sound = sound.toLowerCase();
       skin.soundFiles[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl(sound + '.ogg')];
       studioApp.loadAudio(skin.soundFiles[sound], sound);
     });
@@ -3624,7 +3625,7 @@ Studio.playSound = function (opts) {
   if (soundVal === constants.RANDOM_VALUE) {
     // Get all non-random values and choose one at random:
     var allValues = paramLists.getPlaySoundValues(false);
-    soundVal = allValues[Math.floor(Math.random() * allValues.length)];
+    soundVal = allValues[Math.floor(Math.random() * allValues.length)].toLowerCase();
   }
 
   if (!skin.soundFiles[soundVal]) {

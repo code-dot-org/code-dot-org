@@ -616,15 +616,15 @@ function loadHoc2015(skin, assetUrl) {
 
   // Sounds.
   skin.sounds = [
-    'r2-d2sound1', 'r2-d2sound2', 'r2-d2sound3', 'r2-d2sound4',
-    'r2-d2sound5', 'r2-d2sound6', 'r2-d2sound7', 'r2-d2sound8',
-    'r2-d2sound9',
-    'c-3posound1', 'c-3posound2', 'c-3posound3', 'c-3posound4',
-    'pufferpigsound1', 'pufferpigsound2', 'pufferpigsound3', 'pufferpigsound4',
-    'tauntaunsound1', 'tauntaunsound2', 'tauntaunsound3', 'tauntaunsound4',
-    'mynocksound1', 'mynocksound2', 'mynocksound3',
-    'probotsound1', 'probotsound2', 'probotsound3',
-    'mousedroidsound1', 'mousedroidsound2', 'mousedroidsound3',
+    'R2-D2sound1', 'R2-D2sound2', 'R2-D2sound3', 'R2-D2sound4',
+    'R2-D2sound5', 'R2-D2sound6', 'R2-D2sound7', 'R2-D2sound8',
+    'R2-D2sound9',
+    'C-3POsound1', 'C-3POsound2', 'C-3POsound3', 'C-3POsound4',
+    'PufferPigSound1', 'PufferPigSound2', 'PufferPigSound3', 'PufferPigSound4',
+    'TauntaunSound1', 'TauntaunSound2', 'TauntaunSound3', 'TauntaunSound4',
+    'MynockSound1', 'MynockSound2', 'MynockSound3',
+    'ProbotSound1', 'ProbotSound2', 'ProbotSound3',
+    'MouseDroidSound1', 'MouseDroidSound2', 'MouseDroidSound3',
     'alert1', 'alert2', 'alert3', 'alert4',
     'applause'
   ];
