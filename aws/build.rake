@@ -293,7 +293,7 @@ task :deploy do
   with_hipchat_logging("deploy frontends") do
     if CDO.daemon && CDO.app_servers.any?
       Dir.chdir(deploy_dir) do
-        thread_count = (CDO.app_servers.keys.length  * 0.20).to_i
+        thread_count = (CDO.app_servers.keys.length * 0.20).ceil
         threaded_each CDO.app_servers.keys, thread_count do |name|
           upgrade_frontend name, CDO.app_servers[name]
         end
