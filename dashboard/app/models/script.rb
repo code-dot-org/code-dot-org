@@ -145,7 +145,7 @@ class Script < ActiveRecord::Base
   def self.script_level_cache
     @@script_level_cache ||= {}.tap do |cache|
       script_cache.values.each do |script|
-        cache.merge!(script.levels.index_by(&:id))
+        cache.merge!(script.script_levels.index_by(&:id))
       end
     end
   end
