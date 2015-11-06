@@ -136,7 +136,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.script_cache
-    return nil if Rails.application.config.levelbuilder_mode # cache disabled when building levels
+    return nil if Rails.application.config.levelbuilder_mode
     @@script_cache ||=
       script_cache_from_cache || script_cache_from_db
   end
@@ -151,7 +151,8 @@ class Script < ActiveRecord::Base
   end
 
   def self.cache_find_script_level(level_id)
-    if Rails.application.config.levelbuilder_mode # cache disabled when building levels
+    if Rails.application.config.levelbuilder_mode
+      # Disable the cache when building levels.
       ScriptLevel.find(level_id)
     else
       script_level_cache[level_id]
