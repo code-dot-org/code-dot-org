@@ -2195,8 +2195,7 @@ levels.js_hoc2015_score =
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
-      'R2-D2sound4': true,
-      'R2-D2sound5': true,
+      'R2-D2sound4': true
     }
   },
   'sortDrawOrder': true,
@@ -2300,7 +2299,15 @@ levels.js_hoc2015_win_lose = {
     'whenGetMynock': null,
   },
   'startBlocks': [].join('\n'),
-
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -2318,8 +2325,8 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
     [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
-  'instructions': '"Watch out for the Stormtrooper."',
-  'instructions2': 'Add 100 points when R2-D2 gets the Rebel Pilot.  Remove 100 points when he gets a Stormtrooper.  Now, avoid the Stormtrooper and get all the Rebel Pilots!',
+  'instructions': '"Watch out for the Stormtroopers."',
+  'instructions2': 'Add 100 points when R2-D2 gets the Rebel Pilot.  Remove 100 points when he gets a Stormtrooper.  Now, avoid the Stormtroopers and get all the Rebel Pilots!',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2379,6 +2386,17 @@ levels.js_hoc2015_add_characters = {
     '  addPoints(1000);',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'PufferPigSound1': true,
+      'PufferPigSound2': true
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -2452,6 +2470,18 @@ levels.js_hoc2015_chain_characters = {
     '',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -2535,6 +2565,24 @@ levels.js_hoc2015_chain_characters_2 = {
     '  ',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'TauntaunSound1': true,
+      'TauntaunSound2': true,
+      'TauntaunSound3': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true,
+      'MynockSound1': true,
+      'MynockSound2': true,
+      'MynockSound3': true,
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -2609,6 +2657,34 @@ levels.js_hoc2015_change_setting = {
     '  ',
     '}',
     ''].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'C-3POsound1': true,
+      'C-3POsound2': true,
+      'C-3POsound3': true,
+      'C-3POsound4': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'PufferPigSound1': true,
+      'PufferPigSound2': true,
+      'PufferPigSound3': true,
+      'TauntaunSound1': true,
+      'TauntaunSound2': true,
+      'TauntaunSound3': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true,
+      'MynockSound1': true,
+      'MynockSound2': true,
+      'MynockSound3': true,
+      'ProbotSound1': true,
+      'ProbotSound2': true,
+      'ProbotSound3': true,
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
