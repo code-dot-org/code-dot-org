@@ -63,6 +63,10 @@ class Script < ActiveRecord::Base
     Script.get_from_cache(Script::HOC_NAME)
   end
 
+  def Script.starwars_script
+    Script.get_from_cache(Script::STARWARS_NAME)
+  end
+
   def Script.frozen_script
     Script.get_from_cache(Script::FROZEN_NAME)
   end
