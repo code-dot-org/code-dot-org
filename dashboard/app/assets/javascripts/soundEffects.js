@@ -268,11 +268,6 @@ Sound.prototype.newPlayableBufferSource = function(buffer, options) {
  * @param {number} durationSeconds
  */
 Sound.prototype.fadeToGain = function (gain, durationSeconds) {
-  // Can't exponential ramp to zero, simulate by getting close.
-  if (gain === 0) {
-    gain = 0.01;
-  }
-
   if (this.gainNode) {
     this.fadeToGainWebAudio_(gain, durationSeconds);
   } else if (this.audioElement) {
@@ -291,6 +286,11 @@ Sound.prototype.fadeToGain = function (gain, durationSeconds) {
 Sound.prototype.fadeToGainWebAudio_ = function (gain, durationSeconds) {
   if (!this.gainNode) {
     return;
+  }
+
+  // Can't exponential ramp to zero, simulate by getting close.
+  if (gain === 0) {
+    gain = 0.01;
   }
 
   var currTime = this.audioContext.currentTime;
