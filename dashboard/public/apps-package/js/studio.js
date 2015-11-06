@@ -1365,6 +1365,12 @@ function checkForCollisions() {
     }
     for (j = 0; j < skin.ItemClassNames.length; j++) {
       executeCollision(i, skin.ItemClassNames[j]);
+      if (level.removeItemsWhenActorCollides) {
+        Studio.executeQueue('whenGetAllCharacterClass-' + skin.ItemClassNames[j]);
+      }
+    }
+    if (level.removeItemsWhenActorCollides) {
+      Studio.executeQueue('whenGetAllCharacters');
     }
   }
 }
@@ -2617,12 +2623,20 @@ Studio.execute = function() {
                      'whenSpriteCollided-' +
                        (Studio.protagonistSpriteIndex || 0) +
                        '-any_item');
+    registerHandlers(handlers,
+                     'studio_whenGetAllCharacters',
+                     'whenGetAllItems');
+    registerHandlersWithTitleParam(handlers,
+                                   'studio_whenGetAllCharacterClass',
+                                   'whenGetAll',
+                                   'VALUE',
+                                   skin.ItemClassNames);
     registerHandlersWithTitleParam(handlers,
                                    'studio_whenGetCharacter',
                                    'whenSpriteCollided-' +
                                      (Studio.protagonistSpriteIndex || 0),
                                    'VALUE',
-                                   skin.ItemClassNames);
+                                   ['any_item'].concat(skin.ItemClassNames));
     registerHandlers(handlers, 'studio_whenTouchGoal', 'whenTouchGoal');
     if (level.wallMapCollisions) {
       registerHandlers(handlers,
@@ -10100,29 +10114,15 @@ levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
                     blockOfType('studio_addPoints') +
                     blockOfType('studio_removePoints') +
                     blockOfType('studio_endGame')) +
-//    'whenGetStormtrooper': { 'category': 'Events' },
-//    'whenGetRebelPilot': { 'category': 'Events' },
-//    'whenGetPufferPig': { 'category': 'Events' },
-//    'whenGetMynock': { 'category': 'Events' },
-//    'whenGetMouseDroid': { 'category': 'Events' },
-//    'whenGetTauntaun': { 'category': 'Events' },
-//    'whenGetProbot': { 'category': 'Events' },
-//    'whenGetCharacter': { 'category': 'Events' },
-//
-//    'whenGetAllStormtroopers': { 'category': 'Events' },
-//    'whenGetAllRebelPilots': { 'category': 'Events' },
-//    'whenGetAllPufferPigs': { 'category': 'Events' },
-//    'whenGetAllMynocks': { 'category': 'Events' },
-//    'whenGetAllMouseDroids': { 'category': 'Events' },
-//    'whenGetAllTauntauns': { 'category': 'Events' },
-//    'whenGetAllProbots': { 'category': 'Events' },
-//    'whenGetAllCharacters': { 'category': 'Events' }
     createCategory(msg.catEvents(),
                     blockOfType('when_run') +
                     blockOfType('studio_whenUp') +
                     blockOfType('studio_whenDown') +
                     blockOfType('studio_whenLeft') +
                     blockOfType('studio_whenRight') +
+                    blockOfType('studio_whenGetCharacter') +
+                    blockOfType('studio_whenGetAllCharacters') +
+                    blockOfType('studio_whenGetAllCharacterClass') +
                     blockOfType('studio_whenTouchObstacle'))),
 
 });
@@ -10678,7 +10678,8 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_whenGetCharacter.VALUES =
-      [[msg.whenGetCharacterPufferPig(),    'pufferpig'],
+      [[msg.whenGetCharacterAnyItem(),      'any_item'],
+       [msg.whenGetCharacterPufferPig(),    'pufferpig'],
        [msg.whenGetCharacterStormtrooper(), 'stormtrooper'],
        [msg.whenGetCharacterTauntaun(),     'tauntaun'],
        [msg.whenGetCharacterMynock(),       'mynock'],
@@ -10687,6 +10688,47 @@ exports.install = function(blockly, blockInstallOptions) {
        [msg.whenGetCharacterRebelPilot(),   'rebelpilot']];
 
   generator.studio_whenGetCharacter = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenGetAllCharacters = {
+    // Block to handle event when the primary sprite gets all characters.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.whenGetAllCharacters());
+      this.setPreviousStatement(false);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenGetAllCharactersTooltip());
+    }
+  };
+
+  generator.studio_whenGetAllCharacters = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenGetAllCharacterClass = {
+    // Block to handle event when the primary sprite gets all characters of a class.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      this.setPreviousStatement(false);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenGetAllCharacterClassTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_whenGetAllCharacterClass.VALUES =
+      [[msg.whenGetAllCharacterPufferPig(),    'pufferpig'],
+       [msg.whenGetAllCharacterStormtrooper(), 'stormtrooper'],
+       [msg.whenGetAllCharacterTauntaun(),     'tauntaun'],
+       [msg.whenGetAllCharacterMynock(),       'mynock'],
+       [msg.whenGetAllCharacterProbot(),       'probot'],
+       [msg.whenGetAllCharacterMouseDroid(),   'mousedroid'],
+       [msg.whenGetAllCharacterRebelPilot(),   'rebelpilot']];
+
+  generator.studio_whenGetAllCharacterClass = generator.studio_eventHandlerPrologue;
 
   blockly.Blocks.studio_whenSpriteCollided = {
     // Block to handle event when sprite collides with another sprite.
