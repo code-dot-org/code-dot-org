@@ -17,7 +17,7 @@ max_age: 60
 
 -facebook = {:u=>"#{share_link}"}
 
--twitter = {:url=>"#{share_link}", :related=>'codeorg', :hashtags=>'', :text=>'Join the largest learning event in history, Dec 8-14, 2014'}
+-twitter = {:url=>"#{share_link}", :related=>'codeorg', :hashtags=>'', :text=>'Join the largest learning event in history, Dec 7-13, 2015'}
 -twitter[:hashtags] = 'HourOfCode'
 
 -pass unless form = DB[:forms].where(kind:'CompanyProfile', name:request.splat_path_info[1..-1]).first
@@ -68,11 +68,6 @@ max_age: 60
         %a{:href=>"/api/hour/begin_company/#{company['name_s']}"}
           %button.btn.btn-default.ee_button
             Start now
-      %br
-      %a.ee_link{:href=>"http://hourofcode.com/"} Host an Hour of Code
-      %br
-      %a.ee_link{:href=>"http://code.org/donate/#{company['name_s']}"} Support the campaign
-   
 
   #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
     -unless company['video_key_s']
@@ -82,8 +77,8 @@ max_age: 60
   -if company['intro_bottom_copy_t']
     =TextRender.safe_markdown company['intro_bottom_copy_t']
   -else
-    =view :company_profile_intro_bottom
+    =view :company_profile_additional_actions
 
 .row
   .col-xs-12
-    =view :stats_hoc_2013
+    =view :stats_hoc_2015
