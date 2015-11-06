@@ -144,7 +144,7 @@ class Script < ActiveRecord::Base
   # Returns a cached map from script level id to id.
   def self.script_level_cache
     @@script_level_cache ||= {}.tap do |cache|
-      for script in script_cache.values
+      script_cache.values.each do |script|
         cache.merge!(script.levels.index_by(&:id))
       end
     end
