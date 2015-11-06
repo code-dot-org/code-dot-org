@@ -5,7 +5,6 @@ module Ops
     API = ::OPS::API
 
     setup do
-      @request.headers['Accept'] = 'application/json'
       @admin = create :admin
       @cohorts_district = create(:cohorts_district)
       @cohort = @cohorts_district.cohort
