@@ -185,6 +185,7 @@ class ScriptLevelsController < ApplicationController
       success: milestone_response(script_level: @script_level, solved?: true),
       failure: milestone_response(script_level: @script_level, solved?: false)
     }
+    Rails.logger.info "@fallback_response"
     render 'levels/show', formats: [:html]
   end
 end
