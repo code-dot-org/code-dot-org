@@ -18,6 +18,10 @@ dependencies:
     - bash build_with_core.sh:
         pwd:
             apps
+  post:
+    - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
+    - tar -xzf sc-latest-linux.tar.gz
+
 database:
     override:
       - bundle exec rake db:create:
@@ -43,3 +47,17 @@ test:
         - ./test.sh:
             pwd:
                 cookbooks
+        - cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY:
+            background: true
+        - bin/dashboard-server
+            background: true
+        # Wait for app to be ready
+        # Wait for tunnel to be ready
+        #- while [ ! -e ~/sauce_is_ready ]; do sleep 1; done
+        - sleep 60
+        - curl --retry 10 --retry-delay 2 -v http://localhost:3000
+        - bundle exec ./runner.rb -d localhost-studio.code.org:3000 --parallel 16 --auto_retry --html
+            pwd:
+                dashboard/test/ui
+    post:
+        - killall --wait sc  # wait for Sauce Connect to close the tunnel
