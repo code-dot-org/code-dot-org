@@ -133,30 +133,8 @@ class ScriptLevel < ActiveRecord::Base
     summary
   end
 
-  SCRIPT_LEVEL_CACHE_KEY = 'script-level-cache'
-
-  def self.script_level_cache_to_cache
-    Rails.cache.write(SCRIPT_LEVEL_CACHE_KEY, script_level_cache_from_db)
-  end
-
-  def self.script_level_cache_from_cache
-    ScriptLevel.connection
-    [ScriptLevel, Level, Game, Concept, Callout, Video,
-     Artist, Blockly].each(&:new) # make sure all possible loaded objects are completely loaded
-    Rails.cache.read SCRIPT_LEVEL_CACHE_KEY
-  end
-
-  def self.script_level_cache_from_db
-    ScriptLevel.includes([{level: [:game, :concepts]}, :script]).index_by(&:id)
-  end
-
-  def self.script_level_map
-    @@script_level_map ||=
-        script_level_cache_from_cache || script_level_cache_from_db
-  end
-
   def self.cache_find(id)
-    script_level_map[id]
+     Script.cache_find_script_level(id)
   end
 
   def to_param

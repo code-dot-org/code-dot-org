@@ -141,6 +141,23 @@ class Script < ActiveRecord::Base
       script_cache_from_cache || script_cache_from_db
   end
 
+  # Returns a cached map from script level id to id.
+  def self.script_level_cache
+    @@script_level_cache ||= {}.tap do |cache|
+      for script in script_cache.values
+        cache.merge!(script.levels.index_by(&:id))
+      end
+    end
+  end
+
+  def self.cache_find_script_level(level_id)
+    if Rails.application.config.levelbuilder_mode # cache disabled when building levels
+      ScriptLevel.find(level_id)
+    else
+      script_level_cache[level_id]
+    end
+  end
+
   def cached
     self.class.get_from_cache(id)
   end
