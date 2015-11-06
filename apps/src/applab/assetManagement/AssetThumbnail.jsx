@@ -12,7 +12,6 @@ var assetThumbnailStyle = {
   maxWidth: '100%',
   height: 'auto',
   maxHeight: '100%',
-  zoom: 2,
   marginTop: '50%',
   transform: 'translateY(-50%)',
   msTransform: 'translateY(-50%)',
