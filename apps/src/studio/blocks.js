@@ -572,7 +572,7 @@ exports.install = function(blockly, blockInstallOptions) {
         .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'CLASS');
 
       var dropdown = new blockly.FieldDropdown(this.VALUES);
-      dropdown.setValue(this.VALUES[2][1]); // default to slow
+      dropdown.setValue(this.VALUES[1][1]); // default to slow
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
 
       this.setInputsInline(true);
@@ -584,11 +584,9 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.studio_setItemSpeed.VALUES =
       [[msg.setSpriteSpeedRandom(), RANDOM_VALUE],
-       [msg.setSpriteSpeedVerySlow(), 'Studio.SpriteSpeed.VERY_SLOW'],
-       [msg.setSpriteSpeedSlow(), 'Studio.SpriteSpeed.SLOW'],
-       [msg.setSpriteSpeedNormal(), 'Studio.SpriteSpeed.NORMAL'],
-       [msg.setSpriteSpeedFast(), 'Studio.SpriteSpeed.FAST'],
-       [msg.setSpriteSpeedVeryFast(), 'Studio.SpriteSpeed.VERY_FAST']];
+       [msg.setSpriteSpeedSlow(), 'Studio.SpriteSpeed.VERY_SLOW'],
+       [msg.setSpriteSpeedNormal(), 'Studio.SpriteSpeed.SLOW'],
+       [msg.setSpriteSpeedFast(), 'Studio.SpriteSpeed.FAST']];
 
   generator.studio_setItemSpeed = function () {
     return generateSetterCode({
@@ -1979,6 +1977,30 @@ exports.install = function(blockly, blockInstallOptions) {
         Blockly.JavaScript.ORDER_NONE) || '0';
     return 'Studio.wait(\'block_id_' + this.id +
         '\', (' + valueParam + ' * 1000));\n';
+  };
+
+  blockly.Blocks.studio_endGame = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      dropdown.setValue(this.VALUES[0][1]); // default to win
+      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.endGameTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_endGame.VALUES =
+    [[msg.endGameWin(), 'win'],
+     [msg.endGameLose(), 'lose']];
+
+  generator.studio_endGame = function() {
+    // Generate JavaScript for ending the game.
+    return 'Studio.endGame(\'block_id_' + this.id + '\',\'' +
+      this.getTitleValue('VALUE') + '\');\n';
   };
 
   //

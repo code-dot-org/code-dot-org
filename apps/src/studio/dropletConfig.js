@@ -59,7 +59,6 @@ module.exports.blocks = [
   {func: 'whenTouchTauntaun', block: 'function whenTouchTauntaun() {}', expansion: 'function whenTouchTauntaun() {\n  __;\n}', category: '' },
   {func: 'whenTouchProbot', block: 'function whenTouchProbot() {}', expansion: 'function whenTouchProbot() {\n  __;\n}', category: '' },
 
-  {func: 'whenTouchAllCharacters', block: 'function whenTouchAllCharacters() {}', expansion: 'function whenTouchAllCharacters() {\n  __;\n}', category: '' },
   {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
 
   {func: 'whenGetAllStormtroopers', block: 'function whenGetAllStormtroopers() {}', expansion: 'function whenGetAllStormtroopers() {\n  __;\n}', category: '' },
@@ -69,14 +68,6 @@ module.exports.blocks = [
   {func: 'whenGetAllMouseDroids', block: 'function whenGetAllMouseDroids() {}', expansion: 'function whenGetAllMouseDroids() {\n  __;\n}', category: '' },
   {func: 'whenGetAllTauntauns', block: 'function whenGetAllTauntauns() {}', expansion: 'function whenGetAllTauntauns() {\n  __;\n}', category: '' },
   {func: 'whenGetAllProbots', block: 'function whenGetAllProbots() {}', expansion: 'function whenGetAllProbots() {\n  __;\n}', category: '' },
-
-  {func: 'whenTouchAllStormtroopers', block: 'function whenTouchAllStormtroopers() {}', expansion: 'function whenTouchAllStormtroopers() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllRebelPilots', block: 'function whenTouchAllRebelPilots() {}', expansion: 'function whenTouchAllRebelPilots() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllPufferPigs', block: 'function whenTouchAllPufferPigs() {}', expansion: 'function whenTouchAllPufferPigs() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllMynocks', block: 'function whenTouchAllMynocks() {}', expansion: 'function whenTouchAllMynocks() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllMouseDroids', block: 'function whenTouchAllMouseDroids() {}', expansion: 'function whenTouchAllMouseDroids() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllTauntauns', block: 'function whenTouchAllTauntauns() {}', expansion: 'function whenTouchAllTauntauns() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllProbots', block: 'function whenTouchAllProbots() {}', expansion: 'function whenTouchAllProbots() {\n  __;\n}', category: '' },
 
   // Functions hidden from autocomplete - not used in hoc2015:
   {func: 'setSprite', parent: api, category: '', params: ['0', '"R2-D2"'], dropdown: { 1: [ '"random"', '"R2-D2"', '"C-3PO"' ] } },
