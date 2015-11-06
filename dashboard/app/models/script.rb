@@ -42,7 +42,7 @@ class Script < ActiveRecord::Base
   TWENTY_FOURTEEN_NAME = 'events'
   JIGSAW_NAME = 'jigsaw'
   HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
-  HOC2015_NAME = 'hoc2015' # name of the 2015 hour of code script
+  STARWARS_NAME = 'starwars'
   FROZEN_NAME = 'frozen'
   PLAYLAB_NAME = 'playlab'
   INFINITY_NAME = 'infinity'
@@ -175,7 +175,7 @@ class Script < ActiveRecord::Base
 
   def hoc?
     # Note that now multiple scripts can be an 'hour of code' script.
-    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME, HOC2015_NAME].include? self.name
+    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME, STARWARS_NAME].include? self.name
   end
 
   def flappy?
@@ -218,7 +218,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'course4' || name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3' || name == 'hoc2015'
+    name == 'course4' || name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3' || name == 'starwars'
   end
 
   def is_k1?
