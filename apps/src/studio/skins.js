@@ -363,14 +363,7 @@ function loadHoc2015(skin, assetUrl) {
     whenGetRebelPilot: 'rebelpilot',
   };
 
-  skin.AutohandlerTouchAllItems = {
-    whenTouchAllPufferPigs: 'pufferpig',
-    whenTouchAllStormtroopers: 'stormtrooper',
-    whenTouchAllTauntauns: 'tauntaun',
-    whenTouchAllMynocks: 'mynock',
-    whenTouchAllProbots: 'probot',
-    whenTouchAllMouseDroids: 'mousedroid',
-    whenTouchAllRebelPilots: 'rebelpilot',
+  skin.AutohandlerGetAllItems = {
     whenGetAllPufferPigs: 'pufferpig',
     whenGetAllStormtroopers: 'stormtrooper',
     whenGetAllTauntauns: 'tauntaun',
@@ -486,7 +479,6 @@ function loadHoc2015(skin, assetUrl) {
   // No failure avatar for this skin.
   skin.failureAvatar = null;
 
-  // TODO: Create actual item choices
   skin.pufferpig = skin.assetUrl('walk_pufferpig.png');
   skin.stormtrooper = skin.assetUrl('walk_stormtrooper.png');
   skin.tauntaun = skin.assetUrl('walk_tauntaun.png');
@@ -705,7 +697,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.AutohandlerTouchItems = {
   };
 
-  skin.AutohandlerTouchAllItems = {
+  skin.AutohandlerGetAllItems = {
   };
 
   skin.specialItemProperties = {

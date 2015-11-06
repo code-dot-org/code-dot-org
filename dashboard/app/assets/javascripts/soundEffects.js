@@ -261,7 +261,29 @@ Sound.prototype.newPlayableBufferSource = function(buffer, options) {
   return newSound;
 };
 
+/**
+ * Do an exponential fade from the current gain to a new given value, over the
+ * given number of seconds.
+ * @param {number} gain - desired final gain value
+ * @param {number} durationSeconds
+ */
 Sound.prototype.fadeToGain = function (gain, durationSeconds) {
+  if (this.gainNode) {
+    this.fadeToGainWebAudio_(gain, durationSeconds);
+  } else if (this.audioElement) {
+    this.fadeToGainHtml5Audio_(gain, durationSeconds);
+  }
+};
+
+/**
+ * Do an exponential fade from the current gain to a new given value, over the
+ * given number of seconds.
+ * Using Web Audio (preferred, but not supported in IE)
+ * @param {number} gain - desired final gain value
+ * @param {number} durationSeconds
+ * @private
+ */
+Sound.prototype.fadeToGainWebAudio_ = function (gain, durationSeconds) {
   if (!this.gainNode) {
     return;
   }
@@ -274,8 +296,48 @@ Sound.prototype.fadeToGain = function (gain, durationSeconds) {
   var currTime = this.audioContext.currentTime;
   this.gainNode.gain.setValueAtTime(this.gainNode.gain.value, currTime);
   this.gainNode.gain.exponentialRampToValueAtTime(gain, currTime + durationSeconds);
+};
 
-  // TODO (bbuchanan): Support fallback player
+/**
+ * Do an exponential fade from the current gain to a new given value, over the
+ * given number of seconds.
+ * Using HTML5 Audio (fallback player)
+ * @param {number} gain - desired final gain value
+ * @param {number} durationSeconds
+ * @private
+ */
+Sound.prototype.fadeToGainHtml5Audio_ = function (gain, durationSeconds) {
+  if (!this.audioElement) {
+    return;
+  }
+
+  var startVolume = this.audioElement.volume || 1;
+  var finalVolume = Math.max(0, Math.min(1, gain));
+  var deltaVolume = finalVolume - startVolume;
+  var durationMillis = durationSeconds * 1000;
+  var t0 = new Date().getTime();
+  var fadeInterval = setInterval(function () {
+    var t = new Date().getTime() - t0;
+
+    // Base condition - after duration has elapsed, snap volume to final and
+    // clear interval
+    if (t >= durationMillis) {
+      this.audioElement.volume = finalVolume;
+      clearInterval(fadeInterval);
+      return;
+    }
+
+    // TODO: Probably ought to use ease out quad if delta is positive,
+    // TODO: so that cross-fades automatically work as expected.
+    // Ease in quad - the ear hears this as a "linear" fade
+    // y = c * (t/d)^2 + b
+    //   b: initial value
+    //   c: final delta
+    //   d: duration
+    //   t: time
+    var newVolume = deltaVolume * Math.pow(t / durationMillis, 2) + startVolume;
+    this.audioElement.volume = Math.max(0, Math.min(1, newVolume));
+  }.bind(this), 100);
 };
 
 function isMobile() {
@@ -344,7 +406,15 @@ Sound.prototype.preload = function () {
       audioElement.pause();
     }
     this.audioElement = audioElement;
-    this.onSoundLoaded();
+
+    // Fire onLoad as soon as enough of the sound is loaded to play it
+    // all the way through.
+    var loadEventName = 'canplaythrough';
+    var eventListener = function () {
+      this.onSoundLoaded();
+      audioElement.removeEventListener(loadEventName, eventListener);
+    }.bind(this);
+    audioElement.addEventListener(loadEventName, eventListener);
   }
 };
 
