@@ -16,7 +16,7 @@ module.exports = React.createClass({
 
     $(React.findDOMNode(this.refs.uploader)).fileupload({
       dataType: 'json',
-      url: '/v3/assets/' + props.channelId,
+      url: '/v3/assets/' + props.channelId + '/',
       // prevent fileupload from replacing the input DOM element, which
       // React does not like
       replaceFileInput: false,
