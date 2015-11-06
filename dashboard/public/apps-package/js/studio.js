@@ -431,7 +431,7 @@ var drawMap = function () {
   // Create cloud elements.
   var cloudGroup = document.createElementNS(SVG_NS, 'g');
   cloudGroup.setAttribute('id', 'cloudLayer');
-  for (i = 0; i < constants.NUM_CLOUDS; i++) {
+  for (i = 0; i < constants.MAX_NUM_CLOUDS; i++) {
     var cloud = document.createElementNS(SVG_NS, 'image');
     cloud.setAttribute('id', 'cloud' + i);
     cloudGroup.appendChild(cloud);
@@ -1667,6 +1667,8 @@ Studio.init = function(config) {
   Studio.tickIntervalId = null;
   Studio.tiles = [];
   Studio.tilesDrawn = false;
+
+  Studio.cloudStep = 0;
 
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -3336,34 +3338,39 @@ Studio.animateGoals = function() {
   }
 };
 
+
 /**
- * Load clouds for the current background if it features them.
+ * Load clouds for the current background if it features them, or hide
+ * them if they shouldn't currently be shown.
  */
 Studio.loadClouds = function() {
+  var cloud, i;
   var showClouds = Studio.background && skin[Studio.background].clouds;
 
-  var width, height;
-  width = height = 300;
-
-  for (var i = 0; i < constants.NUM_CLOUDS; i++) {
-    // Start with clouds hidden.
-    var cloud = document.getElementById('cloud' + i);
-    cloud.setAttribute('x', -width);
-    cloud.setAttribute('y', -height);
-
-    // If we aren't showing clouds for this background, do nothing more.
-    if (!showClouds) {
-      continue;
+  if (!showClouds) {
+    // Hide the clouds offscreen.
+    for (i = 0; i < constants.MAX_NUM_CLOUDS; i++) {
+      cloud = document.getElementById('cloud' + i);
+      cloud.setAttribute('x', -constants.CLOUD_SIZE);
+      cloud.setAttribute('y', -constants.CLOUD_SIZE);
     }
+  } else {
+    // Set up the right clouds.
+    for (i = 0; i < skin[Studio.background].clouds.length; i++) {
+      cloud = document.getElementById('cloud' + i);
+      cloud.setAttribute('width', constants.CLOUD_SIZE);
+      cloud.setAttribute('height', constants.CLOUD_SIZE);
+      cloud.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        skin[Studio.background].clouds[i]);
+      cloud.setAttribute('opacity', constants.CLOUD_OPACITY);
 
-    // Clouds are showing, so set up the right ones for this background.
-    cloud.setAttribute('width', width);
-    cloud.setAttribute('height', height);
-    cloud.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      skin[Studio.background].clouds[i]);
-    cloud.setAttribute('opacity', 0.7);
+      var location = Studio.getCloudLocation(i);
+      cloud.setAttribute('x', location.x);
+      cloud.setAttribute('y', location.y);
+    }
   }
 };
+
 
 /**
  * Animate clouds if the current background features them.
@@ -3374,19 +3381,51 @@ Studio.animateClouds = function() {
     return;
   }
 
-  for (var i = 0; i < constants.NUM_CLOUDS; i++) {
+  Studio.cloudStep++;
+
+  for (var i = 0; i < skin[Studio.background].clouds.length; i++) {
+    var location = Studio.getCloudLocation(i);
     var cloud = document.getElementById('cloud' + i);
-
-    var intervals = [ 50, 60 ];   // how many milliseconds to move a pixel
-    var distance = 700;           // how many pixels a cloud covers
-
-    var xOffset = new Date().getTime() / intervals[i] % distance;
-    var x = i === 0 ? xOffset - 100 : 400 - xOffset;
-    var y = i === 0 ? x - 200 : x + 200;
-
-    cloud.setAttribute('x', x);
-    cloud.setAttribute('y', y);
+    cloud.setAttribute('x', location.x);
+    cloud.setAttribute('y', location.y);
   }
+};
+
+
+/** Gets the current location of a specified cloud.
+ * @param {number} cloudIndex
+ * @returns {Object} location
+ * @returns {number} location.x
+ * @returns {number} location.y
+ */
+Studio.getCloudLocation = function(cloudIndex) {
+  // How many milliseconds to move one pixel.  Higher values mean slower clouds,
+  // and making them different causes the clouds to animate out of sync.
+  var intervals = [ 50, 60 ];
+
+  // How many pixels a cloud moves before it loops.  This value is big enough to
+  // make a cloud move entirely aross the game area, looping when completely
+  // out of view.
+  var distance = Studio.MAZE_WIDTH + constants.CLOUD_SIZE;
+
+  var totalTime = Studio.cloudStep * 30;
+  var xOffset = totalTime / intervals[cloudIndex] % distance;
+
+  var x, y;
+
+  if (cloudIndex === 0) {
+    // The first cloud animates from top-left to bottom-right, in the upper-right
+    // half of the screen.
+    x = xOffset - Studio.MAZE_WIDTH/4;
+    y = x - Studio.MAZE_HEIGHT/2;
+  } else {
+    // The second cloud animates from bottom-right to top-left, in the lower-left
+    // half of the screen.
+    x = Studio.MAZE_WIDTH - xOffset;
+    y = x + Studio.MAZE_HEIGHT/2;
+  }
+
+  return { x: x, y: y };
 };
 
 
@@ -15202,8 +15241,14 @@ exports.SHAKE_DEFAULT_DURATION = 1000;
 exports.SHAKE_DEFAULT_CYCLES = 6;
 exports.SHAKE_DEFAULT_DISTANCE = 5;
 
-// How many clouds to display.
-exports.NUM_CLOUDS = 2;
+// Maximum number of clouds that can be displayed.
+exports.MAX_NUM_CLOUDS = 2;
+
+// Width & height of a cloud.
+exports.CLOUD_SIZE = 300;
+
+// The opacity of a cloud.
+exports.CLOUD_OPACITY = 0.7;
 
 // How many milliseconds to throttle between playing sounds.
 exports.SOUND_THROTTLE_TIME = 200;
