@@ -500,6 +500,11 @@ StudioApp.prototype.getCode = function () {
   }
 };
 
+/**
+ * Reset the puzzle back to its initial state.
+ * Search aliases: "Start Over", startOver
+ * @param {Object} config - same config object passed to studioApp.init().
+ */
 StudioApp.prototype.handleClearPuzzle = function (config) {
   if (this.isUsingBlockly()) {
     if (Blockly.functionEditor) {
@@ -516,6 +521,12 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
       resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
     }
+    // TODO (bbuchanan): This getValue() call is a workaround for a Droplet bug,
+    // See https://github.com/droplet-editor/droplet/issues/137
+    // Calling getValue() updates the cached ace editor value, which can be
+    // out-of-date in droplet and cause an incorrect early-out.
+    // Remove this line once that bug is fixed and our Droplet lib is updated.
+    this.editor.getValue();
     this.editor.setValue(resetValue);
   }
   if (config.afterClearPuzzle) {

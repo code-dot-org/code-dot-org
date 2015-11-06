@@ -365,13 +365,13 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_whenGetCharacter.VALUES =
-      [[msg.whenGetCharacterPIG(),    'pig'],
-       [msg.whenGetCharacterMAN(),    'man'],
-       [msg.whenGetCharacterROO(),    'roo'],
-       [msg.whenGetCharacterBIRD(),   'bird'],
-       [msg.whenGetCharacterSPIDER(), 'spider'],
-       [msg.whenGetCharacterMOUSE(),  'mouse'],
-       [msg.whenGetCharacterPILOT(),  'pilot']];
+      [[msg.whenGetCharacterPufferPig(),    'pufferpig'],
+       [msg.whenGetCharacterStormtrooper(), 'stormtrooper'],
+       [msg.whenGetCharacterTauntaun(),     'tauntaun'],
+       [msg.whenGetCharacterMynock(),       'mynock'],
+       [msg.whenGetCharacterProbot(),       'probot'],
+       [msg.whenGetCharacterMouseDroid(),   'mousedroid'],
+       [msg.whenGetCharacterRebelPilot(),   'rebelpilot']];
 
   generator.studio_whenGetCharacter = generator.studio_eventHandlerPrologue;
 
@@ -1286,6 +1286,32 @@ exports.install = function(blockly, blockInstallOptions) {
     return 'Studio.showCoordinates(\'block_id_' + this.id + '\');\n';
   };
 
+  blockly.Blocks.studio_setDroidSpeed = {
+    // Block for setting droid speed
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      dropdown.setValue(this.VALUES[2][1]); // default to normal
+      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setDroidSpeedTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_setDroidSpeed.VALUES =
+      [[msg.setDroidSpeedRandom(), 'random'],
+       [msg.setDroidSpeedSlow(), 'slow'],
+       [msg.setDroidSpeedNormal(), 'normal'],
+       [msg.setDroidSpeedFast(), 'fast']];
+
+  generator.studio_setDroidSpeed = function () {
+    return 'Studio.setDroidSpeed(\'block_id_' + this.id + '\', "' +
+      this.getTitleValue('VALUE') + '");\n';
+  };
+
   blockly.Blocks.studio_setSpriteSpeed = {
     // Block for setting sprite speed
     helpUrl: '',
@@ -1507,7 +1533,8 @@ exports.install = function(blockly, blockInstallOptions) {
 
       var dropdown = new blockly.FieldDropdown(skin.mapChoices);
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
-      dropdown.setValue('"' + skin.defaultWallMap + '"');
+      // default to first item after random
+      dropdown.setValue(skin.mapChoices[1][1]);
       
       this.setInputsInline(true);
       this.setPreviousStatement(true);
