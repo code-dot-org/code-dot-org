@@ -76,8 +76,8 @@ module.exports = {
         // add a completion on timeout since this is a freeplay level
         // provide time for image to load
         testUtils.runOnAppTick(Applab, 400, function () {
-          assert(document.getElementById('result1').textContent, "true");
-          assert(document.getElementById('result1').textContent, "false");
+          assert.equal(document.getElementById('result1').textContent, "true");
+          assert.equal(document.getElementById('result2').textContent, "false");
           Applab.onPuzzleComplete();
         });
       },
@@ -110,8 +110,8 @@ module.exports = {
         // add a completion on timeout since this is a freeplay level
         // provide time for image to load
         testUtils.runOnAppTick(Applab, 400, function () {
-          assert(document.getElementById('result1').textContent, "true");
-          assert(document.getElementById('result1').textContent, "false");
+          assert.equal(document.getElementById('result1').textContent, "true");
+          assert.equal(document.getElementById('result2').textContent, "false");
           Applab.onPuzzleComplete();
         });
       },
