@@ -10,6 +10,10 @@ exports.random = function (values) {
   return values[key];
 };
 
+exports.endGame = function(id, value) {
+  Studio.queueCmd(id, 'endGame', {'value': value});
+};
+
 exports.setBackground = function (id, value) {
   Studio.queueCmd(id, 'setBackground', {'value': value});
 };

@@ -172,8 +172,7 @@ class ScriptLevelsController < ApplicationController
     view_options(
       full_width: true,
       small_footer: @game.uses_small_footer? || enable_scrolling?,
-      has_i18n: @game.has_i18n?,
-      post_milestone: Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true)
+      has_i18n: @game.has_i18n?
     )
 
     level_view_options(
