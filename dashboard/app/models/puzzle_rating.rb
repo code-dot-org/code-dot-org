@@ -36,7 +36,7 @@ class PuzzleRating < ActiveRecord::Base
     end
   end
 
-  # If PuzzleRating is disabled, no one can rate.
+  # If PuzzleRating is disabled, no one can rate
   # If the user is not logged in, they can always rate
   # If the user is logged in, they can only rate if
   #   they haven't rated before
