@@ -376,8 +376,14 @@ exports.SHAKE_DEFAULT_DURATION = 1000;
 exports.SHAKE_DEFAULT_CYCLES = 6;
 exports.SHAKE_DEFAULT_DISTANCE = 5;
 
-// How many clouds to display.
-exports.NUM_CLOUDS = 2;
+// Maximum number of clouds that can be displayed.
+exports.MAX_NUM_CLOUDS = 2;
+
+// Width & height of a cloud.
+exports.CLOUD_SIZE = 300;
+
+// The opacity of a cloud.
+exports.CLOUD_OPACITY = 0.7;
 
 // How many milliseconds to throttle between playing sounds.
 exports.SOUND_THROTTLE_TIME = 200;

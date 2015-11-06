@@ -151,7 +151,6 @@ var AUTO_HANDLER_MAP = {
       (Studio.protagonistSpriteIndex || 0) +
       '-wall',
   whenGetAllCharacters: 'whenGetAllItems',
-  whenTouchAllCharacters: 'whenGetAllItems',
   whenTouchGoal: 'whenTouchGoal',
   whenTouchAllGoals: 'whenTouchAllGoals',
   whenScore1000: 'whenScore1000',
@@ -431,7 +430,7 @@ var drawMap = function () {
   // Create cloud elements.
   var cloudGroup = document.createElementNS(SVG_NS, 'g');
   cloudGroup.setAttribute('id', 'cloudLayer');
-  for (i = 0; i < constants.NUM_CLOUDS; i++) {
+  for (i = 0; i < constants.MAX_NUM_CLOUDS; i++) {
     var cloud = document.createElementNS(SVG_NS, 'image');
     cloud.setAttribute('id', 'cloud' + i);
     cloudGroup.appendChild(cloud);
@@ -1668,6 +1667,8 @@ Studio.init = function(config) {
   Studio.tiles = [];
   Studio.tilesDrawn = false;
 
+  Studio.cloudStep = 0;
+
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -1834,8 +1835,8 @@ Studio.init = function(config) {
         'whenSpriteCollided-' +
         (Studio.protagonistSpriteIndex || 0) + '-' + skin.AutohandlerTouchItems[prop];
   }
-  for (prop in skin.AutohandlerTouchAllItems) {
-    AUTO_HANDLER_MAP[prop] = 'whenGetAll-' + skin.AutohandlerTouchAllItems[prop];
+  for (prop in skin.AutohandlerGetAllItems) {
+    AUTO_HANDLER_MAP[prop] = 'whenGetAll-' + skin.AutohandlerGetAllItems[prop];
   }
   for (prop in level.autohandlerOverrides) {
     AUTO_HANDLER_MAP[prop] = level.autohandlerOverrides[prop];
@@ -3336,34 +3337,39 @@ Studio.animateGoals = function() {
   }
 };
 
+
 /**
- * Load clouds for the current background if it features them.
+ * Load clouds for the current background if it features them, or hide
+ * them if they shouldn't currently be shown.
  */
 Studio.loadClouds = function() {
+  var cloud, i;
   var showClouds = Studio.background && skin[Studio.background].clouds;
 
-  var width, height;
-  width = height = 300;
-
-  for (var i = 0; i < constants.NUM_CLOUDS; i++) {
-    // Start with clouds hidden.
-    var cloud = document.getElementById('cloud' + i);
-    cloud.setAttribute('x', -width);
-    cloud.setAttribute('y', -height);
-
-    // If we aren't showing clouds for this background, do nothing more.
-    if (!showClouds) {
-      continue;
+  if (!showClouds) {
+    // Hide the clouds offscreen.
+    for (i = 0; i < constants.MAX_NUM_CLOUDS; i++) {
+      cloud = document.getElementById('cloud' + i);
+      cloud.setAttribute('x', -constants.CLOUD_SIZE);
+      cloud.setAttribute('y', -constants.CLOUD_SIZE);
     }
+  } else {
+    // Set up the right clouds.
+    for (i = 0; i < skin[Studio.background].clouds.length; i++) {
+      cloud = document.getElementById('cloud' + i);
+      cloud.setAttribute('width', constants.CLOUD_SIZE);
+      cloud.setAttribute('height', constants.CLOUD_SIZE);
+      cloud.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        skin[Studio.background].clouds[i]);
+      cloud.setAttribute('opacity', constants.CLOUD_OPACITY);
 
-    // Clouds are showing, so set up the right ones for this background.
-    cloud.setAttribute('width', width);
-    cloud.setAttribute('height', height);
-    cloud.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      skin[Studio.background].clouds[i]);
-    cloud.setAttribute('opacity', 0.7);
+      var location = Studio.getCloudLocation(i);
+      cloud.setAttribute('x', location.x);
+      cloud.setAttribute('y', location.y);
+    }
   }
 };
+
 
 /**
  * Animate clouds if the current background features them.
@@ -3374,19 +3380,51 @@ Studio.animateClouds = function() {
     return;
   }
 
-  for (var i = 0; i < constants.NUM_CLOUDS; i++) {
+  Studio.cloudStep++;
+
+  for (var i = 0; i < skin[Studio.background].clouds.length; i++) {
+    var location = Studio.getCloudLocation(i);
     var cloud = document.getElementById('cloud' + i);
-
-    var intervals = [ 50, 60 ];   // how many milliseconds to move a pixel
-    var distance = 700;           // how many pixels a cloud covers
-
-    var xOffset = new Date().getTime() / intervals[i] % distance;
-    var x = i === 0 ? xOffset - 100 : 400 - xOffset;
-    var y = i === 0 ? x - 200 : x + 200;
-
-    cloud.setAttribute('x', x);
-    cloud.setAttribute('y', y);
+    cloud.setAttribute('x', location.x);
+    cloud.setAttribute('y', location.y);
   }
+};
+
+
+/** Gets the current location of a specified cloud.
+ * @param {number} cloudIndex
+ * @returns {Object} location
+ * @returns {number} location.x
+ * @returns {number} location.y
+ */
+Studio.getCloudLocation = function(cloudIndex) {
+  // How many milliseconds to move one pixel.  Higher values mean slower clouds,
+  // and making them different causes the clouds to animate out of sync.
+  var intervals = [ 50, 60 ];
+
+  // How many pixels a cloud moves before it loops.  This value is big enough to
+  // make a cloud move entirely aross the game area, looping when completely
+  // out of view.
+  var distance = Studio.MAZE_WIDTH + constants.CLOUD_SIZE;
+
+  var totalTime = Studio.cloudStep * 30;
+  var xOffset = totalTime / intervals[cloudIndex] % distance;
+
+  var x, y;
+
+  if (cloudIndex === 0) {
+    // The first cloud animates from top-left to bottom-right, in the upper-right
+    // half of the screen.
+    x = xOffset - Studio.MAZE_WIDTH/4;
+    y = x - Studio.MAZE_HEIGHT/2;
+  } else {
+    // The second cloud animates from bottom-right to top-left, in the lower-left
+    // half of the screen.
+    x = Studio.MAZE_WIDTH - xOffset;
+    y = x + Studio.MAZE_HEIGHT/2;
+  }
+
+  return { x: x, y: y };
 };
 
 
@@ -6078,14 +6116,7 @@ function loadHoc2015(skin, assetUrl) {
     whenGetRebelPilot: 'rebelpilot',
   };
 
-  skin.AutohandlerTouchAllItems = {
-    whenTouchAllPufferPigs: 'pufferpig',
-    whenTouchAllStormtroopers: 'stormtrooper',
-    whenTouchAllTauntauns: 'tauntaun',
-    whenTouchAllMynocks: 'mynock',
-    whenTouchAllProbots: 'probot',
-    whenTouchAllMouseDroids: 'mousedroid',
-    whenTouchAllRebelPilots: 'rebelpilot',
+  skin.AutohandlerGetAllItems = {
     whenGetAllPufferPigs: 'pufferpig',
     whenGetAllStormtroopers: 'stormtrooper',
     whenGetAllTauntauns: 'tauntaun',
@@ -6201,7 +6232,6 @@ function loadHoc2015(skin, assetUrl) {
   // No failure avatar for this skin.
   skin.failureAvatar = null;
 
-  // TODO: Create actual item choices
   skin.pufferpig = skin.assetUrl('walk_pufferpig.png');
   skin.stormtrooper = skin.assetUrl('walk_stormtrooper.png');
   skin.tauntaun = skin.assetUrl('walk_tauntaun.png');
@@ -6420,7 +6450,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.AutohandlerTouchItems = {
   };
 
-  skin.AutohandlerTouchAllItems = {
+  skin.AutohandlerGetAllItems = {
   };
 
   skin.specialItemProperties = {
@@ -7013,19 +7043,11 @@ var moveNSEW = blockOfType('studio_moveNorth') +
   blockOfType('studio_moveSouth') +
   blockOfType('studio_moveWest');
 
-function whenMoveBlocks(yOffset) {
-  return '<block type="studio_whenLeft" deletable="false" x="20" y="' + (20 + yOffset).toString() + '"> \
-   <next><block type="studio_moveWest"></block> \
-   </next></block> \
- <block type="studio_whenRight" deletable="false" x="20" y="'+ (150 + yOffset).toString() +'"> \
-   <next><block type="studio_moveEast"></block> \
-   </next></block> \
- <block type="studio_whenUp" deletable="false" x="20" y="' + (280 + yOffset).toString() + '"> \
-   <next><block type="studio_moveNorth"></block> \
-   </next></block> \
- <block type="studio_whenDown" deletable="false" x="20" y="' + (410 + yOffset).toString() + '"> \
-   <next><block type="studio_moveSouth"></block> \
-   </next></block>';
+function whenArrowBlocks(yOffset, yDelta) {
+  return '<block type="studio_whenUp" deletable="false" x="20" y="' + (yOffset).toString() + '"></block> \
+    <block type="studio_whenDown" deletable="false" x="20" y="'+ (yDelta + yOffset).toString() +'"></block> \
+    <block type="studio_whenLeft" deletable="false" x="20" y="' + (2 * yDelta + yOffset).toString() + '"></block> \
+    <block type="studio_whenRight" deletable="false" x="20" y="' + (3 * yDelta + yOffset).toString() + '"></block>';
 }
 
 function foreverUpAndDownBlocks(yPosition) {
@@ -9060,11 +9082,11 @@ levels.js_hoc2015_score =
   paramRestrictions: {
     playSound: {
       'random': true,
-      'r2-d2sound1': true,
-      'r2-d2sound2': true,
-      'r2-d2sound3': true,
-      'r2-d2sound4': true,
-      'r2-d2sound5': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'R2-D2sound5': true,
     }
   },
   'sortDrawOrder': true,
@@ -9972,6 +9994,67 @@ levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
 
 levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_setBackground"><title name="VALUE">"endor"</title> \
+        <next> \
+         <block type="studio_setMap"><title name="VALUE">"circle"</title> \
+          <next> \
+           <block type="studio_setSprite"><title name="VALUE">"r2-d2"</title> \
+            <next> \
+             <block type="studio_setDroidSpeed"><title name="VALUE">normal</title> \
+              <next> \
+               <block type="studio_playSound"><title name="SOUND">R2-D2sound5</title></block> \
+              </next> \
+             </block> \
+            </next> \
+           </block> \
+          </next> \
+         </block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>' +
+      whenArrowBlocks(200, 80),
+  toolbox: tb(
+    createCategory(msg.catActions(),
+                    hocMoveNSEW +
+                    blockOfType('studio_setSprite') +
+                    blockOfType('studio_setBackground') +
+                    blockOfType('studio_setDroidSpeed') +
+                    blockOfType('studio_setMap') +
+                    blockOfType('studio_playSound') +
+                    blockOfType('studio_addCharacter') +
+                    blockOfType('studio_setItemSpeed') +
+                    blockOfType('studio_addPoints') +
+                    blockOfType('studio_removePoints') +
+                    blockOfType('studio_endGame')) +
+//    'whenGetStormtrooper': { 'category': 'Events' },
+//    'whenGetRebelPilot': { 'category': 'Events' },
+//    'whenGetPufferPig': { 'category': 'Events' },
+//    'whenGetMynock': { 'category': 'Events' },
+//    'whenGetMouseDroid': { 'category': 'Events' },
+//    'whenGetTauntaun': { 'category': 'Events' },
+//    'whenGetProbot': { 'category': 'Events' },
+//    'whenGetCharacter': { 'category': 'Events' },
+//
+//    'whenGetAllStormtroopers': { 'category': 'Events' },
+//    'whenGetAllRebelPilots': { 'category': 'Events' },
+//    'whenGetAllPufferPigs': { 'category': 'Events' },
+//    'whenGetAllMynocks': { 'category': 'Events' },
+//    'whenGetAllMouseDroids': { 'category': 'Events' },
+//    'whenGetAllTauntauns': { 'category': 'Events' },
+//    'whenGetAllProbots': { 'category': 'Events' },
+//    'whenGetAllCharacters': { 'category': 'Events' }
+    createCategory(msg.catEvents(),
+                    blockOfType('when_run') +
+                    blockOfType('studio_whenUp') +
+                    blockOfType('studio_whenDown') +
+                    blockOfType('studio_whenLeft') +
+                    blockOfType('studio_whenRight') +
+                    blockOfType('studio_whenTouchObstacle'))),
+
 });
 
 
@@ -10058,7 +10141,6 @@ module.exports.blocks = [
   {func: 'whenTouchTauntaun', block: 'function whenTouchTauntaun() {}', expansion: 'function whenTouchTauntaun() {\n  __;\n}', category: '' },
   {func: 'whenTouchProbot', block: 'function whenTouchProbot() {}', expansion: 'function whenTouchProbot() {\n  __;\n}', category: '' },
 
-  {func: 'whenTouchAllCharacters', block: 'function whenTouchAllCharacters() {}', expansion: 'function whenTouchAllCharacters() {\n  __;\n}', category: '' },
   {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
 
   {func: 'whenGetAllStormtroopers', block: 'function whenGetAllStormtroopers() {}', expansion: 'function whenGetAllStormtroopers() {\n  __;\n}', category: '' },
@@ -10068,14 +10150,6 @@ module.exports.blocks = [
   {func: 'whenGetAllMouseDroids', block: 'function whenGetAllMouseDroids() {}', expansion: 'function whenGetAllMouseDroids() {\n  __;\n}', category: '' },
   {func: 'whenGetAllTauntauns', block: 'function whenGetAllTauntauns() {}', expansion: 'function whenGetAllTauntauns() {\n  __;\n}', category: '' },
   {func: 'whenGetAllProbots', block: 'function whenGetAllProbots() {}', expansion: 'function whenGetAllProbots() {\n  __;\n}', category: '' },
-
-  {func: 'whenTouchAllStormtroopers', block: 'function whenTouchAllStormtroopers() {}', expansion: 'function whenTouchAllStormtroopers() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllRebelPilots', block: 'function whenTouchAllRebelPilots() {}', expansion: 'function whenTouchAllRebelPilots() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllPufferPigs', block: 'function whenTouchAllPufferPigs() {}', expansion: 'function whenTouchAllPufferPigs() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllMynocks', block: 'function whenTouchAllMynocks() {}', expansion: 'function whenTouchAllMynocks() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllMouseDroids', block: 'function whenTouchAllMouseDroids() {}', expansion: 'function whenTouchAllMouseDroids() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllTauntauns', block: 'function whenTouchAllTauntauns() {}', expansion: 'function whenTouchAllTauntauns() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllProbots', block: 'function whenTouchAllProbots() {}', expansion: 'function whenTouchAllProbots() {\n  __;\n}', category: '' },
 
   // Functions hidden from autocomplete - not used in hoc2015:
   {func: 'setSprite', parent: api, category: '', params: ['0', '"R2-D2"'], dropdown: { 1: [ '"random"', '"R2-D2"', '"C-3PO"' ] } },
@@ -10741,7 +10815,7 @@ exports.install = function(blockly, blockInstallOptions) {
         .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'CLASS');
 
       var dropdown = new blockly.FieldDropdown(this.VALUES);
-      dropdown.setValue(this.VALUES[2][1]); // default to slow
+      dropdown.setValue(this.VALUES[1][1]); // default to slow
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
 
       this.setInputsInline(true);
@@ -10753,11 +10827,9 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.studio_setItemSpeed.VALUES =
       [[msg.setSpriteSpeedRandom(), RANDOM_VALUE],
-       [msg.setSpriteSpeedVerySlow(), 'Studio.SpriteSpeed.VERY_SLOW'],
-       [msg.setSpriteSpeedSlow(), 'Studio.SpriteSpeed.SLOW'],
-       [msg.setSpriteSpeedNormal(), 'Studio.SpriteSpeed.NORMAL'],
-       [msg.setSpriteSpeedFast(), 'Studio.SpriteSpeed.FAST'],
-       [msg.setSpriteSpeedVeryFast(), 'Studio.SpriteSpeed.VERY_FAST']];
+       [msg.setSpriteSpeedSlow(), 'Studio.SpriteSpeed.VERY_SLOW'],
+       [msg.setSpriteSpeedNormal(), 'Studio.SpriteSpeed.SLOW'],
+       [msg.setSpriteSpeedFast(), 'Studio.SpriteSpeed.FAST']];
 
   generator.studio_setItemSpeed = function () {
     return generateSetterCode({
@@ -12150,6 +12222,30 @@ exports.install = function(blockly, blockInstallOptions) {
         '\', (' + valueParam + ' * 1000));\n';
   };
 
+  blockly.Blocks.studio_endGame = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      dropdown.setValue(this.VALUES[0][1]); // default to win
+      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.endGameTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_endGame.VALUES =
+    [[msg.endGameWin(), 'win'],
+     [msg.endGameLose(), 'lose']];
+
+  generator.studio_endGame = function() {
+    // Generate JavaScript for ending the game.
+    return 'Studio.endGame(\'block_id_' + this.id + '\',\'' +
+      this.getTitleValue('VALUE') + '\');\n';
+  };
+
   //
   // Install functional start blocks
   //
@@ -13061,6 +13157,10 @@ exports.random = function (values) {
   return values[key];
 };
 
+exports.endGame = function(id, value) {
+  Studio.queueCmd(id, 'endGame', {'value': value});
+};
+
 exports.setBackground = function (id, value) {
   Studio.queueCmd(id, 'setBackground', {'value': value});
 };
@@ -13617,9 +13717,10 @@ MusicController.prototype.fadeOut = function (durationSeconds) {
   }
 
   // Stop the audio after the fade.
+  // Add a small margin due to poor fade granularity on fallback player.
   setTimeout(function () {
     this.stop();
-  }.bind(this), 1000 * durationSeconds);
+  }.bind(this), 1000 * durationSeconds + 100);
 };
 
 /**
@@ -15202,8 +15303,14 @@ exports.SHAKE_DEFAULT_DURATION = 1000;
 exports.SHAKE_DEFAULT_CYCLES = 6;
 exports.SHAKE_DEFAULT_DISTANCE = 5;
 
-// How many clouds to display.
-exports.NUM_CLOUDS = 2;
+// Maximum number of clouds that can be displayed.
+exports.MAX_NUM_CLOUDS = 2;
+
+// Width & height of a cloud.
+exports.CLOUD_SIZE = 300;
+
+// The opacity of a cloud.
+exports.CLOUD_OPACITY = 0.7;
 
 // How many milliseconds to throttle between playing sounds.
 exports.SOUND_THROTTLE_TIME = 200;
