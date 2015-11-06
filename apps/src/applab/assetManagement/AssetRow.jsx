@@ -1,5 +1,5 @@
 var assetsApi = require('../../clientApi').assets;
-var AssetThumbnail = require('./AssetThumbnail');
+var AssetThumbnail = require('./AssetThumbnail.jsx');
 
 /**
  * A single row in the AssetManager, describing one asset.
