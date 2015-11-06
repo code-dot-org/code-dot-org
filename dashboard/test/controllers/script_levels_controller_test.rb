@@ -672,6 +672,34 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal last_attempt_data, assigns(:last_attempt)
   end
 
+  test 'loads applab if you are a teacher viewing your student and they have a channel id' do
+    sign_in @teacher
+
+    level = create :applab
+    script_level = create :script_level, level: level
+    ChannelToken.create!(level: level, user: @student) do |ct|
+      ct.channel = 'test_channel_id'
+    end
+
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @student.id, section_id: @section.id
+
+    assert_select '#codeApp'
+    assert_select '#notStarted', 0
+
+  end
+
+  test 'does not load applab if you are a teacher viewing your student and they do not have a channel id' do
+    sign_in @teacher
+
+    level = create :applab
+    script_level = create :script_level, level: level
+
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @student.id, section_id: @section.id
+
+    assert_select '#notStarted'
+    assert_select '#codeApp', 0
+  end
+
   test 'shows expanded teacher panel when student is chosen' do
     sign_in @teacher
 
