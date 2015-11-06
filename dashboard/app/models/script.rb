@@ -150,14 +150,14 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def self.cache_find_script_level(level_id)
+  def self.cache_find_script_level(script_level_id)
     # The script level cache will typically already have the requested
     # level, except when we are in levelbuilder mode or new levels have been
     # added to the database after the cache was constructed (as some tests do).
-    script_level = script_level_cache[level_id]
+    script_level = script_level_cache[script_level_id]
     if script_level.nil?
-      script_level = ScriptLevel.find(level_id)
-      @@script_level_cache[level_id] = script_level
+      script_level = ScriptLevel.find(script_level_id)
+      @@script_level_cache[script_level_id] = script_level
     end
     script_level
   end
