@@ -401,7 +401,9 @@ var drawMap = function () {
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
       spriteFinishMarker.setAttribute('width', spritesheetWidth);
       spriteFinishMarker.setAttribute('height', spritesheetHeight);
-      spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
+      if (!skin.disableClipRectOnGoals) {
+        spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
+      }
       svg.appendChild(spriteFinishMarker);
     }
   }
