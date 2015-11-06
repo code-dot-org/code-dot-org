@@ -150,5 +150,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     script_level2 = ScriptLevel.cache_find(Script.course1_script.script_levels.last.id)
     assert_equal(Script.course1_script.script_levels.last, script_level2)
+
+    # Make sure that we can also locate a newly created level.
+    script_level3 = create(:script_level)
+    assert_equal(script_level3, ScriptLevel.cache_find(script_level3.id))
   end
+
 end
