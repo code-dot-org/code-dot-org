@@ -209,7 +209,7 @@ class User < ActiveRecord::Base
   has_many :trophies, through: :user_trophies, source: :trophy
 
   has_many :followers
-  has_many :followeds, -> {order 'id'}, class_name: 'Follower', foreign_key: 'student_user_id'
+  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
 
   has_many :students, through: :followers, source: :student_user
   has_many :teachers, through: :followeds, source: :user
