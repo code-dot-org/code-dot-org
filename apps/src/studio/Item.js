@@ -301,6 +301,12 @@ Item.prototype.removeElement = function() {
   Studio.trackedBehavior.removedItemCount++;
 };
 
+/**
+ * Stop our animations
+ */
+Item.prototype.stopAnimations = function() {
+  this.animation_.stopAnimator();
+};
 
 /**
  * Returns true if the item is currently fading away.

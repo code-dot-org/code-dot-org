@@ -15,6 +15,8 @@ social:
 
 # Resurse profesori
 
+<b> Pentru resurse traduse, postere, materiale video, suport cursuri si alte intrebari despre eveniment va rugam sa contactati echipa Hour of Code Romania la adresa de email: HOC@adfaber.org.</b>
+
 Mai jos, găsiți resursele necesare pentru a-i învăța programare și a preda tehnologia computerelor elevilor, dincolo de evenimentul Hour of Code. Există o întreagă comunitate în România, care poate interacționa și care poate face programarea distractivă și ușoară! 
 
 ## Organizați un eveniment Hour of Code pentru elevii sau studenții dumneavoastră 

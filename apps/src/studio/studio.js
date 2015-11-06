@@ -131,7 +131,6 @@ var AUTO_HANDLER_MAP = {
       (Studio.protagonistSpriteIndex || 0) +
       '-wall',
   whenGetAllCharacters: 'whenGetAllItems',
-  whenTouchAllCharacters: 'whenGetAllItems',
   whenTouchGoal: 'whenTouchGoal',
   whenTouchAllGoals: 'whenTouchAllGoals',
   whenScore1000: 'whenScore1000',
@@ -411,7 +410,7 @@ var drawMap = function () {
   // Create cloud elements.
   var cloudGroup = document.createElementNS(SVG_NS, 'g');
   cloudGroup.setAttribute('id', 'cloudLayer');
-  for (i = 0; i < constants.NUM_CLOUDS; i++) {
+  for (i = 0; i < constants.MAX_NUM_CLOUDS; i++) {
     var cloud = document.createElementNS(SVG_NS, 'image');
     cloud.setAttribute('id', 'cloud' + i);
     cloudGroup.appendChild(cloud);
@@ -1346,6 +1345,12 @@ function checkForCollisions() {
     }
     for (j = 0; j < skin.ItemClassNames.length; j++) {
       executeCollision(i, skin.ItemClassNames[j]);
+      if (level.removeItemsWhenActorCollides) {
+        Studio.executeQueue('whenGetAllCharacterClass-' + skin.ItemClassNames[j]);
+      }
+    }
+    if (level.removeItemsWhenActorCollides) {
+      Studio.executeQueue('whenGetAllCharacters');
     }
   }
 }
@@ -1648,6 +1653,8 @@ Studio.init = function(config) {
   Studio.tiles = [];
   Studio.tilesDrawn = false;
 
+  Studio.cloudStep = 0;
+
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -1814,8 +1821,8 @@ Studio.init = function(config) {
         'whenSpriteCollided-' +
         (Studio.protagonistSpriteIndex || 0) + '-' + skin.AutohandlerTouchItems[prop];
   }
-  for (prop in skin.AutohandlerTouchAllItems) {
-    AUTO_HANDLER_MAP[prop] = 'whenGetAll-' + skin.AutohandlerTouchAllItems[prop];
+  for (prop in skin.AutohandlerGetAllItems) {
+    AUTO_HANDLER_MAP[prop] = 'whenGetAll-' + skin.AutohandlerGetAllItems[prop];
   }
   for (prop in level.autohandlerOverrides) {
     AUTO_HANDLER_MAP[prop] = level.autohandlerOverrides[prop];
@@ -1906,6 +1913,15 @@ function resetItemOrProjectileList (list) {
 }
 
 /**
+ * Freeze a list of Items or Projectiles by telling them to stop animating.
+ */
+function freezeItemOrProjectileList (list) {
+  for (var i = 0; i < list.length; i++) {
+    list[i].stopAnimations();
+  }
+}
+
+/**
  * Clear the event handlers and stop the onTick timer.
  */
 Studio.clearEventHandlersKillTickLoop = function() {
@@ -1931,9 +1947,9 @@ Studio.clearEventHandlersKillTickLoop = function() {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
     }
   }
-  // Reset the projectiles and items (they include animation timers)
-  resetItemOrProjectileList(Studio.projectiles);
-  resetItemOrProjectileList(Studio.items);
+  // Freeze the projectiles and items (stop the animation timers)
+  freezeItemOrProjectileList(Studio.projectiles);
+  freezeItemOrProjectileList(Studio.items);
 };
 
 
@@ -1949,7 +1965,7 @@ function getDefaultBackgroundName() {
 }
 
 function getDefaultMapName() {
-  return level.wallMapCollisions ? (level.wallMap || skin.defaultWallMap) : undefined;
+  return level.wallMapCollisions ? level.wallMap : undefined;
 }
 
 /**
@@ -1960,6 +1976,9 @@ Studio.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
   Studio.gameState = Studio.GameStates.WAITING;
+
+  resetItemOrProjectileList(Studio.projectiles);
+  resetItemOrProjectileList(Studio.items);
 
   var svg = document.getElementById('svgStudio');
 
@@ -2584,12 +2603,20 @@ Studio.execute = function() {
                      'whenSpriteCollided-' +
                        (Studio.protagonistSpriteIndex || 0) +
                        '-any_item');
+    registerHandlers(handlers,
+                     'studio_whenGetAllCharacters',
+                     'whenGetAllItems');
+    registerHandlersWithTitleParam(handlers,
+                                   'studio_whenGetAllCharacterClass',
+                                   'whenGetAll',
+                                   'VALUE',
+                                   skin.ItemClassNames);
     registerHandlersWithTitleParam(handlers,
                                    'studio_whenGetCharacter',
                                    'whenSpriteCollided-' +
                                      (Studio.protagonistSpriteIndex || 0),
                                    'VALUE',
-                                   skin.ItemClassNames);
+                                   ['any_item'].concat(skin.ItemClassNames));
     registerHandlers(handlers, 'studio_whenTouchGoal', 'whenTouchGoal');
     if (level.wallMapCollisions) {
       registerHandlers(handlers,
@@ -3304,34 +3331,39 @@ Studio.animateGoals = function() {
   }
 };
 
+
 /**
- * Load clouds for the current background if it features them.
+ * Load clouds for the current background if it features them, or hide
+ * them if they shouldn't currently be shown.
  */
 Studio.loadClouds = function() {
+  var cloud, i;
   var showClouds = Studio.background && skin[Studio.background].clouds;
 
-  var width, height;
-  width = height = 300;
-
-  for (var i = 0; i < constants.NUM_CLOUDS; i++) {
-    // Start with clouds hidden.
-    var cloud = document.getElementById('cloud' + i);
-    cloud.setAttribute('x', -width);
-    cloud.setAttribute('y', -height);
-
-    // If we aren't showing clouds for this background, do nothing more.
-    if (!showClouds) {
-      continue;
+  if (!showClouds) {
+    // Hide the clouds offscreen.
+    for (i = 0; i < constants.MAX_NUM_CLOUDS; i++) {
+      cloud = document.getElementById('cloud' + i);
+      cloud.setAttribute('x', -constants.CLOUD_SIZE);
+      cloud.setAttribute('y', -constants.CLOUD_SIZE);
     }
+  } else {
+    // Set up the right clouds.
+    for (i = 0; i < skin[Studio.background].clouds.length; i++) {
+      cloud = document.getElementById('cloud' + i);
+      cloud.setAttribute('width', constants.CLOUD_SIZE);
+      cloud.setAttribute('height', constants.CLOUD_SIZE);
+      cloud.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        skin[Studio.background].clouds[i]);
+      cloud.setAttribute('opacity', constants.CLOUD_OPACITY);
 
-    // Clouds are showing, so set up the right ones for this background.
-    cloud.setAttribute('width', width);
-    cloud.setAttribute('height', height);
-    cloud.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      skin[Studio.background].clouds[i]);
-    cloud.setAttribute('opacity', 0.7);
+      var location = Studio.getCloudLocation(i);
+      cloud.setAttribute('x', location.x);
+      cloud.setAttribute('y', location.y);
+    }
   }
 };
+
 
 /**
  * Animate clouds if the current background features them.
@@ -3342,19 +3374,51 @@ Studio.animateClouds = function() {
     return;
   }
 
-  for (var i = 0; i < constants.NUM_CLOUDS; i++) {
+  Studio.cloudStep++;
+
+  for (var i = 0; i < skin[Studio.background].clouds.length; i++) {
+    var location = Studio.getCloudLocation(i);
     var cloud = document.getElementById('cloud' + i);
-
-    var intervals = [ 50, 60 ];   // how many milliseconds to move a pixel
-    var distance = 700;           // how many pixels a cloud covers
-
-    var xOffset = new Date().getTime() / intervals[i] % distance;
-    var x = i === 0 ? xOffset - 100 : 400 - xOffset;
-    var y = i === 0 ? x - 200 : x + 200;
-
-    cloud.setAttribute('x', x);
-    cloud.setAttribute('y', y);
+    cloud.setAttribute('x', location.x);
+    cloud.setAttribute('y', location.y);
   }
+};
+
+
+/** Gets the current location of a specified cloud.
+ * @param {number} cloudIndex
+ * @returns {Object} location
+ * @returns {number} location.x
+ * @returns {number} location.y
+ */
+Studio.getCloudLocation = function(cloudIndex) {
+  // How many milliseconds to move one pixel.  Higher values mean slower clouds,
+  // and making them different causes the clouds to animate out of sync.
+  var intervals = [ 50, 60 ];
+
+  // How many pixels a cloud moves before it loops.  This value is big enough to
+  // make a cloud move entirely aross the game area, looping when completely
+  // out of view.
+  var distance = Studio.MAZE_WIDTH + constants.CLOUD_SIZE;
+
+  var totalTime = Studio.cloudStep * 30;
+  var xOffset = totalTime / intervals[cloudIndex] % distance;
+
+  var x, y;
+
+  if (cloudIndex === 0) {
+    // The first cloud animates from top-left to bottom-right, in the upper-right
+    // half of the screen.
+    x = xOffset - Studio.MAZE_WIDTH/4;
+    y = x - Studio.MAZE_HEIGHT/2;
+  } else {
+    // The second cloud animates from bottom-right to top-left, in the lower-left
+    // half of the screen.
+    x = Studio.MAZE_WIDTH - xOffset;
+    y = x + Studio.MAZE_HEIGHT/2;
+  }
+
+  return { x: x, y: y };
 };
 
 
@@ -3954,6 +4018,7 @@ Studio.setDroidSpeed = function (opts) {
   }
 
   opts.value = speedNumericVal;
+  opts.spriteIndex = Studio.protaganistSpriteIndex || 0;
   Studio.setSpriteSpeed(opts);
 };
 

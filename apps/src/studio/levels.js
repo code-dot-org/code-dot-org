@@ -153,19 +153,11 @@ var moveNSEW = blockOfType('studio_moveNorth') +
   blockOfType('studio_moveSouth') +
   blockOfType('studio_moveWest');
 
-function whenMoveBlocks(yOffset) {
-  return '<block type="studio_whenLeft" deletable="false" x="20" y="' + (20 + yOffset).toString() + '"> \
-   <next><block type="studio_moveWest"></block> \
-   </next></block> \
- <block type="studio_whenRight" deletable="false" x="20" y="'+ (150 + yOffset).toString() +'"> \
-   <next><block type="studio_moveEast"></block> \
-   </next></block> \
- <block type="studio_whenUp" deletable="false" x="20" y="' + (280 + yOffset).toString() + '"> \
-   <next><block type="studio_moveNorth"></block> \
-   </next></block> \
- <block type="studio_whenDown" deletable="false" x="20" y="' + (410 + yOffset).toString() + '"> \
-   <next><block type="studio_moveSouth"></block> \
-   </next></block>';
+function whenArrowBlocks(yOffset, yDelta) {
+  return '<block type="studio_whenUp" deletable="false" x="20" y="' + (yOffset).toString() + '"></block> \
+    <block type="studio_whenDown" deletable="false" x="20" y="'+ (yDelta + yOffset).toString() +'"></block> \
+    <block type="studio_whenLeft" deletable="false" x="20" y="' + (2 * yDelta + yOffset).toString() + '"></block> \
+    <block type="studio_whenRight" deletable="false" x="20" y="' + (3 * yDelta + yOffset).toString() + '"></block>';
 }
 
 function foreverUpAndDownBlocks(yPosition) {
@@ -1835,7 +1827,7 @@ levels.js_hoc2015_move_diagonal = {
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x20],
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x00]],
   'embed': 'false',
-  'instructions': '"Watch out for the Thug!"',
+  'instructions': '"Watch out for the Bandit!"',
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -2200,11 +2192,10 @@ levels.js_hoc2015_score =
   paramRestrictions: {
     playSound: {
       'random': true,
-      'r2-d2sound1': true,
-      'r2-d2sound2': true,
-      'r2-d2sound3': true,
-      'r2-d2sound4': true,
-      'r2-d2sound5': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true
     }
   },
   'sortDrawOrder': true,
@@ -2308,7 +2299,15 @@ levels.js_hoc2015_win_lose = {
     'whenGetMynock': null,
   },
   'startBlocks': [].join('\n'),
-
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -2326,8 +2325,8 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
     [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
-  'instructions': '"Watch out for the Stormtrooper."',
-  'instructions2': 'Add 100 points when R2-D2 gets the Rebel Pilot.  Remove 100 points when he gets a Stormtrooper.  Now, avoid the Stormtrooper and get all the Rebel Pilots!',
+  'instructions': '"Watch out for the Stormtroopers."',
+  'instructions2': 'Add 100 points when R2-D2 gets the Rebel Pilot.  Remove 100 points when he gets a Stormtrooper.  Now, avoid the Stormtroopers and get all the Rebel Pilots!',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2387,6 +2386,17 @@ levels.js_hoc2015_add_characters = {
     '  addPoints(1000);',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'PufferPigSound1': true,
+      'PufferPigSound2': true
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -2460,6 +2470,18 @@ levels.js_hoc2015_chain_characters = {
     '',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -2520,29 +2542,41 @@ levels.js_hoc2015_chain_characters_2 = {
     'playSound': null,
 
     'whenGetTauntaun': null,
-    'whenGetMouseDroid': null
+    'whenGetMouseDroid': null,
+    'whenGetMynock': null
   },
   'startBlocks': [
     'addCharacter("Tauntaun");',
     'addCharacter("Tauntaun");',
-    '',
     'function whenGetTauntaun() {',
     '  playSound("TauntaunSound4");',
     '  addPoints(50);',
     '  addCharacter("Mynock");',
     '  addCharacter("Mynock");',
     '}',
-    '',
-    'function whenGetMynock() {',
-    '  playSound("MynockSound1");',
-    '',
-    '}',
     'function whenGetMouseDroid() {',
     '  playSound("MouseDroidSound2");',
     '  addPoints(100);',
-    '  ',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'TauntaunSound1': true,
+      'TauntaunSound2': true,
+      'TauntaunSound3': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true,
+      'MynockSound1': true,
+      'MynockSound2': true,
+      'MynockSound3': true,
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -2553,7 +2587,7 @@ levels.js_hoc2015_chain_characters_2 = {
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
   'instructions': '"It\'s up to you, R2-D2!"',
-  'instructions2': 'When you get a Tauntaun, two mynocks appear. Can you make two Mouse Droids appear when you get a Mynock? Then, get them all.',
+  'instructions2': 'When you get a Tauntaun, two Mynocks appear. Can you make two Mouse Droids appear when you get a Mynock? Then, get them all.',
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
@@ -2566,7 +2600,7 @@ levels.js_hoc2015_chain_characters_2 = {
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwoWhenBird',
-      'element_id': '.droplet-gutter-line:nth-of-type(12)',
+      'element_id': '#droplet_palette_block_whenGetMynock',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content' : {
@@ -2575,7 +2609,7 @@ levels.js_hoc2015_chain_characters_2 = {
         'event': 'mouseup touchend',
         'position': {
           'my': 'top left',
-          'at': 'center right',
+          'at': 'bottom center',
           'adjust': {
             'x': 40,
             'y': 10
@@ -2617,6 +2651,34 @@ levels.js_hoc2015_change_setting = {
     '  ',
     '}',
     ''].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'C-3POsound1': true,
+      'C-3POsound2': true,
+      'C-3POsound3': true,
+      'C-3POsound4': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'PufferPigSound1': true,
+      'PufferPigSound2': true,
+      'PufferPigSound3': true,
+      'TauntaunSound1': true,
+      'TauntaunSound2': true,
+      'TauntaunSound3': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true,
+      'MynockSound1': true,
+      'MynockSound2': true,
+      'MynockSound3': true,
+      'ProbotSound1': true,
+      'ProbotSound2': true,
+      'ProbotSound3': true,
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -2759,16 +2821,16 @@ levels.js_hoc2015_event_free = {
     'setDroidSpeed("normal");',
     'playSound("R2-D2sound5");',
     'function whenUp() {',
-    '  ',
+    '  goUp();',
     '}',
     'function whenDown() {',
-    '  ',
+    '  goDown();',
     '}',
     'function whenLeft() {',
-    '  ',
+    '  goLeft();',
     '}',
     'function whenRight() {',
-    '  ',
+    '  goRight();',
     '}',
     ''].join('\n'),
   'sortDrawOrder': true,
@@ -2927,9 +2989,9 @@ levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
     tb('<block type="studio_playSound"></block> \
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">RebelPilot</title></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">Stormtrooper</title></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">Mynock</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">rebelpilot</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">stormtrooper</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">mynock</title></block>'),
   requiredBlocks: [
     // TODO: addPoints, removePoints, whenGetPilot, whenGetMan
   ],
@@ -2942,13 +3004,13 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
       <next> \
        <block type="studio_playSound"><title name="SOUND">r2-d2sound1</title> \
         <next> \
-         <block type="studio_addCharacter"><title name="VALUE">"PufferPig"</title></block> \
+         <block type="studio_addCharacter"><title name="VALUE">"pufferpig"</title></block> \
         </next> \
        </block> \
       </next> \
      </block> \
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
-      <title name="VALUE">PufferPig</title> \
+      <title name="VALUE">pufferpig</title> \
       <next> \
        <block type="studio_playSound"><title name="SOUND">pufferpigsound1</title> \
         <next> \
@@ -2958,11 +3020,11 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
       </next> \
      </block>',
   toolbox:
-    tb('<block type="studio_addCharacter"><title name="VALUE">"PufferPig"</title></block> \
+    tb('<block type="studio_addCharacter"><title name="VALUE">"pufferpig"</title></block> \
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
         <block type="studio_playSound"></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">PufferPig</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">pufferpig</title></block>'),
   requiredBlocks: [
     // TODO: addCharacter
   ],
@@ -2973,7 +3035,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
-       <block type="studio_addCharacter"><title name="VALUE">"MouseDroid"</title> \
+       <block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title> \
         <next> \
          <block type="studio_playSound"><title name="SOUND">r2-d2sound3</title></block> \
         </next> \
@@ -2981,7 +3043,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
       </next> \
      </block> \
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
-      <title name="VALUE">MouseDroid</title> \
+      <title name="VALUE">mousedroid</title> \
       <next> \
        <block type="studio_playSound"><title name="SOUND">mousedroidsound2</title> \
         <next> \
@@ -2991,11 +3053,11 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
       </next> \
      </block>',
   toolbox:
-    tb('<block type="studio_addCharacter"><title name="VALUE">"MouseDroid"</title></block> \
+    tb('<block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
         <block type="studio_playSound"></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">MouseDroid</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">mousedroid</title></block>'),
   requiredBlocks: [
     // TODO: addCharacter, addPoints
   ],
@@ -3003,12 +3065,160 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
 
 levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_addCharacter"><title name="VALUE">"tauntaun"</title> \
+        <next> \
+         <block type="studio_addCharacter"><title name="VALUE">"tauntaun"</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="130"> \
+      <title name="VALUE">tauntaun</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">TauntaunSound4</title> \
+        <next> \
+         <block type="studio_addPoints"><title name="VALUE">50</title> \
+          <next> \
+           <block type="studio_addCharacter"><title name="VALUE">"mynock"</title> \
+            <next> \
+             <block type="studio_addCharacter"><title name="VALUE">"mynock"</title></block> \
+            </next> \
+           </block> \
+          </next> \
+         </block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="300"> \
+      <title name="VALUE">mynock</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">TauntaunSound4</title></block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="460"> \
+      <title name="VALUE">mousedroid</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">MouseDroidSound2</title> \
+        <next> \
+         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>',
+  toolbox:
+    tb('<block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_playSound"></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">tauntaun</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">mousedroid</title></block>'),
+  requiredBlocks: [
+    // TODO: addCharacter (check for mouse param?), addPoints
+  ],
 });
 
 levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_addCharacter"><title name="VALUE">"rebelpilot"</title> \
+        <next> \
+         <block type="studio_addCharacter"><title name="VALUE">"rebelpilot"</title> \
+          <next> \
+           <block type="studio_addCharacter"><title name="VALUE">"rebelpilot"</title> \
+            <next> \
+             <block type="studio_playSound"><title name="SOUND">R2-D2sound4</title> \
+              <next> \
+               <block type="studio_setSprite"><title name="VALUE">"r2-d2"</title></block> \
+              </next> \
+             </block> \
+            </next> \
+           </block> \
+          </next> \
+         </block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="300"> \
+      <title name="VALUE">rebelpilot</title> \
+      <next> \
+       <block type="studio_addPoints"><title name="VALUE">400</title> \
+        <next> \
+         <block type="studio_setBackground"><title name="VALUE">random</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>',
+  // TODO: create setDroid block to improve the readability of the block?
+  // TODO: skin override of playSound dropdown (with paramsList filtering & random)
+  toolbox:
+    tb('<block type="studio_setSprite"></block> \
+        <block type="studio_setBackground"></block> \
+        <block type="studio_setDroidSpeed"></block> \
+        <block type="studio_setMap"></block> \
+        <block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_playSound"></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">rebelpilot</title></block>'),
+  requiredBlocks: [
+    // TODO: setMap, setDroidSpeed
+  ],
 });
 
 levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_setBackground"><title name="VALUE">"endor"</title> \
+        <next> \
+         <block type="studio_setMap"><title name="VALUE">"circle"</title> \
+          <next> \
+           <block type="studio_setSprite"><title name="VALUE">"r2-d2"</title> \
+            <next> \
+             <block type="studio_setDroidSpeed"><title name="VALUE">normal</title> \
+              <next> \
+               <block type="studio_playSound"><title name="SOUND">R2-D2sound5</title></block> \
+              </next> \
+             </block> \
+            </next> \
+           </block> \
+          </next> \
+         </block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>' +
+      whenArrowBlocks(200, 80),
+  toolbox: tb(
+    createCategory(msg.catActions(),
+                    hocMoveNSEW +
+                    blockOfType('studio_setSprite') +
+                    blockOfType('studio_setBackground') +
+                    blockOfType('studio_setDroidSpeed') +
+                    blockOfType('studio_setMap') +
+                    blockOfType('studio_playSound') +
+                    blockOfType('studio_addCharacter') +
+                    blockOfType('studio_setItemSpeed') +
+                    blockOfType('studio_addPoints') +
+                    blockOfType('studio_removePoints') +
+                    blockOfType('studio_endGame')) +
+    createCategory(msg.catEvents(),
+                    blockOfType('when_run') +
+                    blockOfType('studio_whenUp') +
+                    blockOfType('studio_whenDown') +
+                    blockOfType('studio_whenLeft') +
+                    blockOfType('studio_whenRight') +
+                    blockOfType('studio_whenGetCharacter') +
+                    blockOfType('studio_whenGetAllCharacters') +
+                    blockOfType('studio_whenGetAllCharacterClass') +
+                    blockOfType('studio_whenTouchObstacle'))),
+
 });
