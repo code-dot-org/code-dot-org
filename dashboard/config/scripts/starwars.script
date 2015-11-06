@@ -1,7 +1,6 @@
-title 'Hour of Code 2015'
-description_short "Use Play Lab to create a story or game."
-description "Use Play Lab to create a story or game."
-wrapup_video 'hoc2015_preview_conclusion'
+title 'Star Wars: Building a Galaxy with Code.'
+description_short "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+description "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
 hidden 'true'
 admin_required 'false'  # This will be enforced via an alternate mechanism soon.
 
@@ -30,4 +29,5 @@ level 'blockly:StudioEC:js_hoc2015_chain_characters'
 level 'blockly:StudioEC:js_hoc2015_chain_characters_2'
 level 'blockly:StudioEC:js_hoc2015_change_setting'
 
+video_key_for_next_level 'hoc2015_preview_conclusion'
 level 'blockly:StudioEC:js_hoc2015_event_free'
