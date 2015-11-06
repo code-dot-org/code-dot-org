@@ -365,7 +365,8 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_whenGetCharacter.VALUES =
-      [[msg.whenGetCharacterPufferPig(),    'pufferpig'],
+      [[msg.whenGetCharacterAnyItem(),      'any_item'],
+       [msg.whenGetCharacterPufferPig(),    'pufferpig'],
        [msg.whenGetCharacterStormtrooper(), 'stormtrooper'],
        [msg.whenGetCharacterTauntaun(),     'tauntaun'],
        [msg.whenGetCharacterMynock(),       'mynock'],
@@ -374,6 +375,47 @@ exports.install = function(blockly, blockInstallOptions) {
        [msg.whenGetCharacterRebelPilot(),   'rebelpilot']];
 
   generator.studio_whenGetCharacter = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenGetAllCharacters = {
+    // Block to handle event when the primary sprite gets all characters.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.whenGetAllCharacters());
+      this.setPreviousStatement(false);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenGetAllCharactersTooltip());
+    }
+  };
+
+  generator.studio_whenGetAllCharacters = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenGetAllCharacterClass = {
+    // Block to handle event when the primary sprite gets all characters of a class.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      this.setPreviousStatement(false);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenGetAllCharacterClassTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_whenGetAllCharacterClass.VALUES =
+      [[msg.whenGetAllCharacterPufferPig(),    'pufferpig'],
+       [msg.whenGetAllCharacterStormtrooper(), 'stormtrooper'],
+       [msg.whenGetAllCharacterTauntaun(),     'tauntaun'],
+       [msg.whenGetAllCharacterMynock(),       'mynock'],
+       [msg.whenGetAllCharacterProbot(),       'probot'],
+       [msg.whenGetAllCharacterMouseDroid(),   'mousedroid'],
+       [msg.whenGetAllCharacterRebelPilot(),   'rebelpilot']];
+
+  generator.studio_whenGetAllCharacterClass = generator.studio_eventHandlerPrologue;
 
   blockly.Blocks.studio_whenSpriteCollided = {
     // Block to handle event when sprite collides with another sprite.
