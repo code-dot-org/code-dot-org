@@ -183,12 +183,12 @@ class FilesApi < Sinatra::Base
     put_file('sources', encrypted_channel_id, filename, body)
   end
 
-  # POST /v3/assets/<channel-id>
+  # POST /v3/assets/<channel-id>/
   #
   # Upload a new file. We use this method so that IE9 can still upload by
   # posting to an iframe.
   #
-  post %r{/v3/assets/([^/]+)$} do |encrypted_channel_id|
+  post %r{/v3/assets/([^/]+)/$} do |encrypted_channel_id|
     dont_cache
     # though this is JSON data, we're making the POST request via iframe
     # form submission. IE9 will try to download the response if we have

@@ -389,7 +389,7 @@ class AssetsTest < Minitest::Test
 
   def post(assets, channel_id, uploaded_file)
     body = { files: [uploaded_file] }
-    assets.post("/v3/assets/#{channel_id}", body, 'CONTENT_TYPE' => 'multipart/form-data').body
+    assets.post("/v3/assets/#{channel_id}/", body, 'CONTENT_TYPE' => 'multipart/form-data').body
   end
 
   def patch_abuse(assets, channel_id, abuse_score)
