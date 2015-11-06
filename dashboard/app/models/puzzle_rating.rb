@@ -32,12 +32,13 @@ class PuzzleRating < ActiveRecord::Base
     Gatekeeper.allows('puzzle_rating', default: true)
   end
 
-  # If PuzzleRating is disabled, no one can rate
+  # If PuzzleRating is disabled, no one can rate.
   # If the user is not logged in, they can always rate
   # If the user is logged in, they can only rate if
   #   they haven't rated before
   def PuzzleRating.can_rate?(script, level, user)
-    return false unless enabled?
+    return false unless enabled? &&
+        Gatekeeper.allows('puzzle_rating_for_script', where: { script_name: script.name }, default: true)
     return true unless user
     !PuzzleRating.exists?(script: script, level: level, user: user)
   end
