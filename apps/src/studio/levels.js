@@ -2542,27 +2542,21 @@ levels.js_hoc2015_chain_characters_2 = {
     'playSound': null,
 
     'whenGetTauntaun': null,
-    'whenGetMouseDroid': null
+    'whenGetMouseDroid': null,
+    'whenGetMynock': null
   },
   'startBlocks': [
     'addCharacter("Tauntaun");',
     'addCharacter("Tauntaun");',
-    '',
     'function whenGetTauntaun() {',
     '  playSound("TauntaunSound4");',
     '  addPoints(50);',
     '  addCharacter("Mynock");',
     '  addCharacter("Mynock");',
     '}',
-    '',
-    'function whenGetMynock() {',
-    '  playSound("MynockSound1");',
-    '',
-    '}',
     'function whenGetMouseDroid() {',
     '  playSound("MouseDroidSound2");',
     '  addPoints(100);',
-    '  ',
     '}',
     ].join('\n'),
   paramRestrictions: {
@@ -2606,7 +2600,7 @@ levels.js_hoc2015_chain_characters_2 = {
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwoWhenBird',
-      'element_id': '.droplet-gutter-line:nth-of-type(12)',
+      'element_id': '#droplet_palette_block_whenGetMynock',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content' : {
@@ -2615,7 +2609,7 @@ levels.js_hoc2015_chain_characters_2 = {
         'event': 'mouseup touchend',
         'position': {
           'my': 'top left',
-          'at': 'center right',
+          'at': 'bottom center',
           'adjust': {
             'x': 40,
             'y': 10
@@ -2827,16 +2821,16 @@ levels.js_hoc2015_event_free = {
     'setDroidSpeed("normal");',
     'playSound("R2-D2sound5");',
     'function whenUp() {',
-    '  ',
+    '  goUp();',
     '}',
     'function whenDown() {',
-    '  ',
+    '  goDown();',
     '}',
     'function whenLeft() {',
-    '  ',
+    '  goLeft();',
     '}',
     'function whenRight() {',
-    '  ',
+    '  goRight();',
     '}',
     ''].join('\n'),
   'sortDrawOrder': true,
