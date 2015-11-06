@@ -143,4 +143,12 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert !script.stages[3].script_levels.first.end_of_stage?
     assert !script.stages[3].script_levels[1].end_of_stage?
   end
+
+  test 'cached_find' do
+    level = ScriptLevel.cache_find(Script.twenty_hour_script.levels[0].id)
+    assert_equal(Script.twenty_hour_script.levels[0], level)
+
+    level2 = ScriptLevel.cache_find(Script.course1_script.levels.last.id)
+    assert_equal(Script.course1_script.levels.last, level2)
+  end
 end
