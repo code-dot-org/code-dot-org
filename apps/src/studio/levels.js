@@ -3210,29 +3210,15 @@ levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
                     blockOfType('studio_addPoints') +
                     blockOfType('studio_removePoints') +
                     blockOfType('studio_endGame')) +
-//    'whenGetStormtrooper': { 'category': 'Events' },
-//    'whenGetRebelPilot': { 'category': 'Events' },
-//    'whenGetPufferPig': { 'category': 'Events' },
-//    'whenGetMynock': { 'category': 'Events' },
-//    'whenGetMouseDroid': { 'category': 'Events' },
-//    'whenGetTauntaun': { 'category': 'Events' },
-//    'whenGetProbot': { 'category': 'Events' },
-//    'whenGetCharacter': { 'category': 'Events' },
-//
-//    'whenGetAllStormtroopers': { 'category': 'Events' },
-//    'whenGetAllRebelPilots': { 'category': 'Events' },
-//    'whenGetAllPufferPigs': { 'category': 'Events' },
-//    'whenGetAllMynocks': { 'category': 'Events' },
-//    'whenGetAllMouseDroids': { 'category': 'Events' },
-//    'whenGetAllTauntauns': { 'category': 'Events' },
-//    'whenGetAllProbots': { 'category': 'Events' },
-//    'whenGetAllCharacters': { 'category': 'Events' }
     createCategory(msg.catEvents(),
                     blockOfType('when_run') +
                     blockOfType('studio_whenUp') +
                     blockOfType('studio_whenDown') +
                     blockOfType('studio_whenLeft') +
                     blockOfType('studio_whenRight') +
+                    blockOfType('studio_whenGetCharacter') +
+                    blockOfType('studio_whenGetAllCharacters') +
+                    blockOfType('studio_whenGetAllCharacterClass') +
                     blockOfType('studio_whenTouchObstacle'))),
 
 });
