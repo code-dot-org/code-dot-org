@@ -3,7 +3,7 @@
   %div.header_level_container
     .header_text{class: ('small_font_on_tablet' if small_text)}
     .progress_container
-    .header_finished_link{class: ('small_font_on_tablet' if small_text)}
+    .header_finished_link{style: 'display: none;', class: ('small_font_on_tablet' if small_text)}
     %span.header_trophy_link{style: 'display: none;'}
       .header_text= t(:trophies)
       .header_status_bar.current_trophies
