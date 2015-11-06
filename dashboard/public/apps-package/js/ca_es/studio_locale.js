@@ -658,7 +658,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "calloutMoveRightRunButton":function(d){return "Add a second moveRight command to your code and then click here to run it"},
 "calloutShowCodeToggle":function(d){return "Click here to switch between block and text mode"},
 "calloutShowPlaceGoUpHere":function(d){return "Place goUp command here to move up"},
-"calloutShowPlaySound":function(d){return "It's your game, so you choose the sounds now. Try the dropdown to pick a different sound"},
+"calloutShowPlaySound":function(d){return "It's your game, so you choose the sounds now. Try the dropdown to pick a different sound."},
 "calloutInstructions":function(d){return "Don't know what to do? Click the instructions to see them again"},
 "calloutPlaceTwo":function(d){return "Can you make two Mouse Droids appear when you get one Mouse Droid?"},
 "calloutPlaceTwoWhenBird":function(d){return "Can you make two Mouse Droids appear when you get a Mynock?"},
@@ -785,6 +785,6 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedChainCharactersTimeout":function(d){return "You need to get 20 Mouse Droids. They move fast. Try pressing and holding the keys on your keyboard (or screen) to chase them."},
 "failedChainCharactersScore":function(d){return "You got the Mouse Droids, but you don't have enough points to move to the next level. Make sure you add 100 points to your score every time you get a Mouse Droid."},
 "failedChainCharactersItems":function(d){return "You used the addPoints command, but not in the right place.  Can you make it so that the command is only called when you get the Mouse Droids?"},
-"failedChainCharacters2Timeout":function(d){return "You need to get eight Mouse Droids. Can you make two (or more) of them appear every time you get a Tauntaun?"},
+"failedChainCharacters2Timeout":function(d){return "You need to get eight Mouse Droids. Can you make two (or more) of them appear every time you get a Mynock?"},
 "failedChangeSettingTimeout":function(d){return "Get three Rebel Pilots to move on."},
 "failedChangeSettingSettings":function(d){return "Make the level your own. To pass this level, you need to change the map and set your speed."}};
