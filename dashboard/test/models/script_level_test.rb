@@ -145,10 +145,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'cached_find' do
-    level = ScriptLevel.cache_find(Script.twenty_hour_script.levels[0].id)
-    assert_equal(Script.twenty_hour_script.levels[0], level)
+    script_level = ScriptLevel.cache_find(Script.twenty_hour_script.script_levels[0].id)
+    assert_equal(Script.twenty_hour_script.script_levels[0], script_level)
 
-    level2 = ScriptLevel.cache_find(Script.course1_script.levels.last.id)
-    assert_equal(Script.course1_script.levels.last, level2)
+    script_level2 = ScriptLevel.cache_find(Script.course1_script.script_levels.last.id)
+    assert_equal(Script.course1_script.script_levels.last, script_level2)
   end
 end
