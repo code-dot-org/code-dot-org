@@ -1,0 +1,34 @@
+requires_hoc_secret:
+- rule:
+  where:
+    script_name: starwars
+  value: true
+- rule:
+  where:
+    script_name: edit-code
+  value: true
+puzzle_rating:
+- rule:
+  where:
+    script_name: starwars
+  value: false
+postMilestone:
+- rule:
+  where:
+    script_name: starwars
+  value: false
+public_caching_for_script:
+- rule:
+  where:
+    script_name: starwars
+  value: true
+tracking_pixel_enabled:
+- rule:
+  where:
+    script_name: starwars
+  value: false
+hint_view_request:
+- rule:
+  where:
+    script_name: starwars
+  value: false
