@@ -153,19 +153,11 @@ var moveNSEW = blockOfType('studio_moveNorth') +
   blockOfType('studio_moveSouth') +
   blockOfType('studio_moveWest');
 
-function whenMoveBlocks(yOffset) {
-  return '<block type="studio_whenLeft" deletable="false" x="20" y="' + (20 + yOffset).toString() + '"> \
-   <next><block type="studio_moveWest"></block> \
-   </next></block> \
- <block type="studio_whenRight" deletable="false" x="20" y="'+ (150 + yOffset).toString() +'"> \
-   <next><block type="studio_moveEast"></block> \
-   </next></block> \
- <block type="studio_whenUp" deletable="false" x="20" y="' + (280 + yOffset).toString() + '"> \
-   <next><block type="studio_moveNorth"></block> \
-   </next></block> \
- <block type="studio_whenDown" deletable="false" x="20" y="' + (410 + yOffset).toString() + '"> \
-   <next><block type="studio_moveSouth"></block> \
-   </next></block>';
+function whenArrowBlocks(yOffset, yDelta) {
+  return '<block type="studio_whenUp" deletable="false" x="20" y="' + (yOffset).toString() + '"></block> \
+    <block type="studio_whenDown" deletable="false" x="20" y="'+ (yDelta + yOffset).toString() +'"></block> \
+    <block type="studio_whenLeft" deletable="false" x="20" y="' + (2 * yDelta + yOffset).toString() + '"></block> \
+    <block type="studio_whenRight" deletable="false" x="20" y="' + (3 * yDelta + yOffset).toString() + '"></block>';
 }
 
 function foreverUpAndDownBlocks(yPosition) {
@@ -2200,11 +2192,10 @@ levels.js_hoc2015_score =
   paramRestrictions: {
     playSound: {
       'random': true,
-      'r2-d2sound1': true,
-      'r2-d2sound2': true,
-      'r2-d2sound3': true,
-      'r2-d2sound4': true,
-      'r2-d2sound5': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true
     }
   },
   'sortDrawOrder': true,
@@ -2308,7 +2299,15 @@ levels.js_hoc2015_win_lose = {
     'whenGetMynock': null,
   },
   'startBlocks': [].join('\n'),
-
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -2326,8 +2325,8 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
     [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
-  'instructions': '"Watch out for the Stormtrooper."',
-  'instructions2': 'Add 100 points when R2-D2 gets the Rebel Pilot.  Remove 100 points when he gets a Stormtrooper.  Now, avoid the Stormtrooper and get all the Rebel Pilots!',
+  'instructions': '"Watch out for the Stormtroopers."',
+  'instructions2': 'Add 100 points when R2-D2 gets the Rebel Pilot.  Remove 100 points when he gets a Stormtrooper.  Now, avoid the Stormtroopers and get all the Rebel Pilots!',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -2387,6 +2386,17 @@ levels.js_hoc2015_add_characters = {
     '  addPoints(1000);',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'PufferPigSound1': true,
+      'PufferPigSound2': true
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -2460,6 +2470,18 @@ levels.js_hoc2015_chain_characters = {
     '',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -2520,29 +2542,41 @@ levels.js_hoc2015_chain_characters_2 = {
     'playSound': null,
 
     'whenGetTauntaun': null,
-    'whenGetMouseDroid': null
+    'whenGetMouseDroid': null,
+    'whenGetMynock': null
   },
   'startBlocks': [
     'addCharacter("Tauntaun");',
     'addCharacter("Tauntaun");',
-    '',
     'function whenGetTauntaun() {',
     '  playSound("TauntaunSound4");',
     '  addPoints(50);',
     '  addCharacter("Mynock");',
     '  addCharacter("Mynock");',
     '}',
-    '',
-    'function whenGetMynock() {',
-    '  playSound("MynockSound1");',
-    '',
-    '}',
     'function whenGetMouseDroid() {',
     '  playSound("MouseDroidSound2");',
     '  addPoints(100);',
-    '  ',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'TauntaunSound1': true,
+      'TauntaunSound2': true,
+      'TauntaunSound3': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true,
+      'MynockSound1': true,
+      'MynockSound2': true,
+      'MynockSound3': true,
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -2566,7 +2600,7 @@ levels.js_hoc2015_chain_characters_2 = {
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwoWhenBird',
-      'element_id': '.droplet-gutter-line:nth-of-type(12)',
+      'element_id': '#droplet_palette_block_whenGetMynock',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content' : {
@@ -2575,7 +2609,7 @@ levels.js_hoc2015_chain_characters_2 = {
         'event': 'mouseup touchend',
         'position': {
           'my': 'top left',
-          'at': 'center right',
+          'at': 'bottom center',
           'adjust': {
             'x': 40,
             'y': 10
@@ -2617,6 +2651,34 @@ levels.js_hoc2015_change_setting = {
     '  ',
     '}',
     ''].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'C-3POsound1': true,
+      'C-3POsound2': true,
+      'C-3POsound3': true,
+      'C-3POsound4': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'PufferPigSound1': true,
+      'PufferPigSound2': true,
+      'PufferPigSound3': true,
+      'TauntaunSound1': true,
+      'TauntaunSound2': true,
+      'TauntaunSound3': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true,
+      'MynockSound1': true,
+      'MynockSound2': true,
+      'MynockSound3': true,
+      'ProbotSound1': true,
+      'ProbotSound2': true,
+      'ProbotSound3': true,
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -2759,16 +2821,16 @@ levels.js_hoc2015_event_free = {
     'setDroidSpeed("normal");',
     'playSound("R2-D2sound5");',
     'function whenUp() {',
-    '  ',
+    '  goUp();',
     '}',
     'function whenDown() {',
-    '  ',
+    '  goDown();',
     '}',
     'function whenLeft() {',
-    '  ',
+    '  goLeft();',
     '}',
     'function whenRight() {',
-    '  ',
+    '  goRight();',
     '}',
     ''].join('\n'),
   'sortDrawOrder': true,
@@ -3112,4 +3174,51 @@ levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
 
 levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_setBackground"><title name="VALUE">"endor"</title> \
+        <next> \
+         <block type="studio_setMap"><title name="VALUE">"circle"</title> \
+          <next> \
+           <block type="studio_setSprite"><title name="VALUE">"r2-d2"</title> \
+            <next> \
+             <block type="studio_setDroidSpeed"><title name="VALUE">normal</title> \
+              <next> \
+               <block type="studio_playSound"><title name="SOUND">R2-D2sound5</title></block> \
+              </next> \
+             </block> \
+            </next> \
+           </block> \
+          </next> \
+         </block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>' +
+      whenArrowBlocks(200, 80),
+  toolbox: tb(
+    createCategory(msg.catActions(),
+                    hocMoveNSEW +
+                    blockOfType('studio_setSprite') +
+                    blockOfType('studio_setBackground') +
+                    blockOfType('studio_setDroidSpeed') +
+                    blockOfType('studio_setMap') +
+                    blockOfType('studio_playSound') +
+                    blockOfType('studio_addCharacter') +
+                    blockOfType('studio_setItemSpeed') +
+                    blockOfType('studio_addPoints') +
+                    blockOfType('studio_removePoints') +
+                    blockOfType('studio_endGame')) +
+    createCategory(msg.catEvents(),
+                    blockOfType('when_run') +
+                    blockOfType('studio_whenUp') +
+                    blockOfType('studio_whenDown') +
+                    blockOfType('studio_whenLeft') +
+                    blockOfType('studio_whenRight') +
+                    blockOfType('studio_whenGetCharacter') +
+                    blockOfType('studio_whenGetAllCharacters') +
+                    blockOfType('studio_whenGetAllCharacterClass') +
+                    blockOfType('studio_whenTouchObstacle'))),
+
 });

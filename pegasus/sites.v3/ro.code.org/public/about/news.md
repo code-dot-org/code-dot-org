@@ -32,7 +32,8 @@ Partenerii internaționali de anul acesta vor oferi premii pentru toți organiza
 
 ADFABER va pune și în acest an la dispoziția organizatorilor materiale traduse în limba româna, mesaje video motivaționale și suport pentru toți organizatorii de evenimente Hour of Code din România.
 
-Oricine poate accesa în mod gratuit platforma online http://ro.code.org și poate parcurge unul sau mai multe tutoriale interactive pentru a afla că programarea se poate învăța și nu e la fel de dificilă precum pare la prima vedere.
+La nivel global, evenimentul Hour of Code este susținut de companii IT de top, precum Amazon, Apple, Dropbox, Facebook, Google, LinkedIn sau Micosoft. Evenimentul Hour of Code a adunat până acum peste 100 de milioane de elevi participanți din întreaga lume. 
+<b>În România, sponsorii care au solidarizat cu ideea proiectului sunt până în acest moment Bitdefender, Gameloft, IBM,Intel, UPC. Ei s-au alăturat organizațiilor, instituțiilor, personalităților publice și vedetelor care susțin că toți copiii ar trebui să aibă șansa să învețe să programeze.</b>
 
 <b>Despre code.org</b>
 <p><a href="http://www.code.org">Code.org</a>, inițiator Hour of Code, este o asociație nonprofit dedicată promovării tehnologiei computerelor în școli, ca și în rândul femeilor, un segment slab reprezentat în acest domeniu de expertiză.</p>
