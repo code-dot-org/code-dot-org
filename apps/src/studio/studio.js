@@ -4297,7 +4297,7 @@ Studio.setSprite = function (opts) {
 
   sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
   spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
-  sprite.value = opts.forceHidden ? 'hidden' : opts.value;
+  sprite.value = opts.forceHidden ? 'hidden' : spriteValue;
   if (spriteValue === 'hidden' || spriteValue === 'visible') {
     return;
   }
