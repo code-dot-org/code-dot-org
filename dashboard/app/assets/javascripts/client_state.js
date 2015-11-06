@@ -37,7 +37,8 @@ var COOKIE_OPTIONS = {expires: dashboard.clientState.EXPIRY_DAYS, path: '/'};
 dashboard.clientState.reset = function() {
   $.removeCookie('progress', {path: '/'});
   $.removeCookie('lines', {path: '/'});
-  $.removeCookie('videosSeen', {path: '/'});
+  localStorage.removeItem('video');
+  localStorage.removeItem('callout');
 };
 
 /**
