@@ -1365,6 +1365,12 @@ function checkForCollisions() {
     }
     for (j = 0; j < skin.ItemClassNames.length; j++) {
       executeCollision(i, skin.ItemClassNames[j]);
+      if (level.removeItemsWhenActorCollides) {
+        Studio.executeQueue('whenGetAllCharacterClass-' + skin.ItemClassNames[j]);
+      }
+    }
+    if (level.removeItemsWhenActorCollides) {
+      Studio.executeQueue('whenGetAllCharacters');
     }
   }
 }
@@ -2617,12 +2623,20 @@ Studio.execute = function() {
                      'whenSpriteCollided-' +
                        (Studio.protagonistSpriteIndex || 0) +
                        '-any_item');
+    registerHandlers(handlers,
+                     'studio_whenGetAllCharacters',
+                     'whenGetAllItems');
+    registerHandlersWithTitleParam(handlers,
+                                   'studio_whenGetAllCharacterClass',
+                                   'whenGetAll',
+                                   'VALUE',
+                                   skin.ItemClassNames);
     registerHandlersWithTitleParam(handlers,
                                    'studio_whenGetCharacter',
                                    'whenSpriteCollided-' +
                                      (Studio.protagonistSpriteIndex || 0),
                                    'VALUE',
-                                   skin.ItemClassNames);
+                                   ['any_item'].concat(skin.ItemClassNames));
     registerHandlers(handlers, 'studio_whenTouchGoal', 'whenTouchGoal');
     if (level.wallMapCollisions) {
       registerHandlers(handlers,
@@ -9085,8 +9099,7 @@ levels.js_hoc2015_score =
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
-      'R2-D2sound4': true,
-      'R2-D2sound5': true,
+      'R2-D2sound4': true
     }
   },
   'sortDrawOrder': true,
@@ -9190,7 +9203,15 @@ levels.js_hoc2015_win_lose = {
     'whenGetMynock': null,
   },
   'startBlocks': [].join('\n'),
-
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -9208,8 +9229,8 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
     [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
-  'instructions': '"Watch out for the Stormtrooper."',
-  'instructions2': 'Add 100 points when R2-D2 gets the Rebel Pilot.  Remove 100 points when he gets a Stormtrooper.  Now, avoid the Stormtrooper and get all the Rebel Pilots!',
+  'instructions': '"Watch out for the Stormtroopers."',
+  'instructions2': 'Add 100 points when R2-D2 gets the Rebel Pilot.  Remove 100 points when he gets a Stormtrooper.  Now, avoid the Stormtroopers and get all the Rebel Pilots!',
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -9269,6 +9290,17 @@ levels.js_hoc2015_add_characters = {
     '  addPoints(1000);',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'PufferPigSound1': true,
+      'PufferPigSound2': true
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -9342,6 +9374,18 @@ levels.js_hoc2015_chain_characters = {
     '',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -9402,29 +9446,41 @@ levels.js_hoc2015_chain_characters_2 = {
     'playSound': null,
 
     'whenGetTauntaun': null,
-    'whenGetMouseDroid': null
+    'whenGetMouseDroid': null,
+    'whenGetMynock': null
   },
   'startBlocks': [
     'addCharacter("Tauntaun");',
     'addCharacter("Tauntaun");',
-    '',
     'function whenGetTauntaun() {',
     '  playSound("TauntaunSound4");',
     '  addPoints(50);',
     '  addCharacter("Mynock");',
     '  addCharacter("Mynock");',
     '}',
-    '',
-    'function whenGetMynock() {',
-    '  playSound("MynockSound1");',
-    '',
-    '}',
     'function whenGetMouseDroid() {',
     '  playSound("MouseDroidSound2");',
     '  addPoints(100);',
-    '  ',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'TauntaunSound1': true,
+      'TauntaunSound2': true,
+      'TauntaunSound3': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true,
+      'MynockSound1': true,
+      'MynockSound2': true,
+      'MynockSound3': true,
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -9448,7 +9504,7 @@ levels.js_hoc2015_chain_characters_2 = {
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwoWhenBird',
-      'element_id': '.droplet-gutter-line:nth-of-type(12)',
+      'element_id': '#droplet_palette_block_whenGetMynock',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content' : {
@@ -9457,7 +9513,7 @@ levels.js_hoc2015_chain_characters_2 = {
         'event': 'mouseup touchend',
         'position': {
           'my': 'top left',
-          'at': 'center right',
+          'at': 'bottom center',
           'adjust': {
             'x': 40,
             'y': 10
@@ -9499,6 +9555,34 @@ levels.js_hoc2015_change_setting = {
     '  ',
     '}',
     ''].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'C-3POsound1': true,
+      'C-3POsound2': true,
+      'C-3POsound3': true,
+      'C-3POsound4': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'PufferPigSound1': true,
+      'PufferPigSound2': true,
+      'PufferPigSound3': true,
+      'TauntaunSound1': true,
+      'TauntaunSound2': true,
+      'TauntaunSound3': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true,
+      'MynockSound1': true,
+      'MynockSound2': true,
+      'MynockSound3': true,
+      'ProbotSound1': true,
+      'ProbotSound2': true,
+      'ProbotSound3': true,
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -9641,16 +9725,16 @@ levels.js_hoc2015_event_free = {
     'setDroidSpeed("normal");',
     'playSound("R2-D2sound5");',
     'function whenUp() {',
-    '  ',
+    '  goUp();',
     '}',
     'function whenDown() {',
-    '  ',
+    '  goDown();',
     '}',
     'function whenLeft() {',
-    '  ',
+    '  goLeft();',
     '}',
     'function whenRight() {',
-    '  ',
+    '  goRight();',
     '}',
     ''].join('\n'),
   'sortDrawOrder': true,
@@ -10030,29 +10114,15 @@ levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
                     blockOfType('studio_addPoints') +
                     blockOfType('studio_removePoints') +
                     blockOfType('studio_endGame')) +
-//    'whenGetStormtrooper': { 'category': 'Events' },
-//    'whenGetRebelPilot': { 'category': 'Events' },
-//    'whenGetPufferPig': { 'category': 'Events' },
-//    'whenGetMynock': { 'category': 'Events' },
-//    'whenGetMouseDroid': { 'category': 'Events' },
-//    'whenGetTauntaun': { 'category': 'Events' },
-//    'whenGetProbot': { 'category': 'Events' },
-//    'whenGetCharacter': { 'category': 'Events' },
-//
-//    'whenGetAllStormtroopers': { 'category': 'Events' },
-//    'whenGetAllRebelPilots': { 'category': 'Events' },
-//    'whenGetAllPufferPigs': { 'category': 'Events' },
-//    'whenGetAllMynocks': { 'category': 'Events' },
-//    'whenGetAllMouseDroids': { 'category': 'Events' },
-//    'whenGetAllTauntauns': { 'category': 'Events' },
-//    'whenGetAllProbots': { 'category': 'Events' },
-//    'whenGetAllCharacters': { 'category': 'Events' }
     createCategory(msg.catEvents(),
                     blockOfType('when_run') +
                     blockOfType('studio_whenUp') +
                     blockOfType('studio_whenDown') +
                     blockOfType('studio_whenLeft') +
                     blockOfType('studio_whenRight') +
+                    blockOfType('studio_whenGetCharacter') +
+                    blockOfType('studio_whenGetAllCharacters') +
+                    blockOfType('studio_whenGetAllCharacterClass') +
                     blockOfType('studio_whenTouchObstacle'))),
 
 });
@@ -10608,7 +10678,8 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_whenGetCharacter.VALUES =
-      [[msg.whenGetCharacterPufferPig(),    'pufferpig'],
+      [[msg.whenGetCharacterAnyItem(),      'any_item'],
+       [msg.whenGetCharacterPufferPig(),    'pufferpig'],
        [msg.whenGetCharacterStormtrooper(), 'stormtrooper'],
        [msg.whenGetCharacterTauntaun(),     'tauntaun'],
        [msg.whenGetCharacterMynock(),       'mynock'],
@@ -10617,6 +10688,47 @@ exports.install = function(blockly, blockInstallOptions) {
        [msg.whenGetCharacterRebelPilot(),   'rebelpilot']];
 
   generator.studio_whenGetCharacter = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenGetAllCharacters = {
+    // Block to handle event when the primary sprite gets all characters.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.whenGetAllCharacters());
+      this.setPreviousStatement(false);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenGetAllCharactersTooltip());
+    }
+  };
+
+  generator.studio_whenGetAllCharacters = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenGetAllCharacterClass = {
+    // Block to handle event when the primary sprite gets all characters of a class.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      this.setPreviousStatement(false);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenGetAllCharacterClassTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_whenGetAllCharacterClass.VALUES =
+      [[msg.whenGetAllCharacterPufferPig(),    'pufferpig'],
+       [msg.whenGetAllCharacterStormtrooper(), 'stormtrooper'],
+       [msg.whenGetAllCharacterTauntaun(),     'tauntaun'],
+       [msg.whenGetAllCharacterMynock(),       'mynock'],
+       [msg.whenGetAllCharacterProbot(),       'probot'],
+       [msg.whenGetAllCharacterMouseDroid(),   'mousedroid'],
+       [msg.whenGetAllCharacterRebelPilot(),   'rebelpilot']];
+
+  generator.studio_whenGetAllCharacterClass = generator.studio_eventHandlerPrologue;
 
   blockly.Blocks.studio_whenSpriteCollided = {
     // Block to handle event when sprite collides with another sprite.
