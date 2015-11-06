@@ -134,7 +134,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def self.cache_find(id)
-     Script.cache_find_script_level(id)
+    Script.cache_find_script_level(id)
   end
 
   def to_param
