@@ -1,0 +1,26 @@
+---
+title: Star Wars
+theme: responsive
+---
+
+%link{:href=>"/css/starwars.css", :rel=>"stylesheet"}
+
+.container_responsive.mobile-pad
+  %div.starwars-header
+    %img.starwars-image{src: "/images/star_wars.jpg", style:"width:100%;"}
+    %div.starwars-cta
+      %div.starwars-title
+        STAR WARS: BUILDING
+        %br
+        A GALAXY WITH CODE
+      %div.starwars-button{style: "margin-right: 20px;"}
+        %div ages 11 - 18+
+        %a{href: "https://studio.code.org/s/starwars"}
+          %button Try now
+      %div.starwars-button
+        %div ages 6 - 11
+        %button.disabled-button{disabled:"disabled"} Coming soon
+
+  %div.starwars-videos{style: "clear: both;"}
+    %h2 Before you get started, watch one of these inspirational videos.
+    =view :inspirational_videos
