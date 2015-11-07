@@ -48,12 +48,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_caching_disabled response.headers['Cache-Control']
   end
 
-  test 'should make script level pages cachable if configured' do
+  test 'should allow public caching for script level pages with default lifetime' do
     Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
 
     # Verify the default max age is used if none is specifically configured.
     get_show_script_level_page(@script_level)
-    assert_caching_enabled response.headers['Cache-Control'], ScriptLevelsController::DEFAULT_PUBLIC_MAX_AGE
+    assert_caching_enabled response.headers['Cache-Control'],
+                           ScriptLevelsController::DEFAULT_PUBLIC_CLIENT_MAX_AGE,
+                           ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE
+  end
+
+  test 'should allow public caching for script level pages with dynamic lifetime' do
+    Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
+    DCDO.set('public_max_age', 3600)
+    DCDO.set('public_proxy_max_age', 7200)
+    get_show_script_level_page(@script_level)
+    assert_caching_enabled response.headers['Cache-Control'], 3600, 7200
   end
 
   test 'should make script level pages uncachable if disabled' do
@@ -85,11 +95,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_cache_control_match expected_directives, cache_control_header
   end
 
-  def assert_caching_enabled(cache_control_header, max_age)
+  def assert_caching_enabled(cache_control_header, max_age, proxy_max_age)
     expected_directives = [
         'public',
         "max-age=#{max_age}",
-        "s-maxage=#{max_age}"]
+        "s-maxage=#{proxy_max_age}"]
     assert_cache_control_match expected_directives, cache_control_header
   end
 
