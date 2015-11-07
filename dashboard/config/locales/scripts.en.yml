@@ -1430,3 +1430,8 @@ en:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+        starwars:
+          title: 'Star Wars: Building a Galaxy with Code.'
+          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          Hour of Code 2015: Hour of Code 2015
