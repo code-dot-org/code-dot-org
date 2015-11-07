@@ -85,6 +85,14 @@
 
     #actions.col-33
       - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
+
+      -# begin temporary
+      #title
+        Star Wars
+        %div{style: "font-size: 18px"}
+          Building a Galaxy with Code
+      -# end temporary
+
       - actions.each_with_index do |entry, index|
         - display = entry[:active_s] == "hide" ? "none" : "block"
         .action{style: "display: #{display}; opacity: 0"}
