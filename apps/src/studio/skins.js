@@ -713,7 +713,8 @@ function loadHoc2015x(skin, assetUrl) {
   skin.goalSpriteHeight = 50;
 
   // How many frames in the animated goal spritesheet.
-  skin.animatedGoalFrames = 16;
+  skin.animatedGoalFrames = 1;
+  skin.disableClipRectOnGoals = true;
 
   // Special effect applied to goal sprites
   skin.goalEffect = 'glow';
