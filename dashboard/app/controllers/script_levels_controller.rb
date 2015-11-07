@@ -5,9 +5,14 @@ class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
 
-  # Default max age to use for script level pages which are configured as
-  # publicly cacheable.  Used if the DCDO.public_max_age is not defined.
-  DEFAULT_PUBLIC_MAX_AGE = 5.minutes
+  # Default s-maxage to use for script level pages which are configured as
+  # publicly cacheable.  Used if the DCDO.public_proxy_max_age is not defined.
+  DEFAULT_PUBLIC_PROXY_MAX_AGE = 3.minutes
+
+  # Default max-age to use for script level pages which are configured as
+  # publicly cacheable. Used if the DCDO.public_max_age is not defined.
+  # This is set to twice the proxy magage because of a bug in CloudFront.
+  DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
 
   def reset
     authorize! :read, ScriptLevel
@@ -70,8 +75,9 @@ class ScriptLevelsController < ApplicationController
   # https://console.aws.amazon.com/support/home?region=us-east-1#/case/?caseId=1540449361&displayId=1540449361&language=en
   def configure_caching(script)
     if script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
-      max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_MAX_AGE)
-      response.headers['Cache-Control'] = "public,max-age=#{max_age * 2},s-maxage=#{max_age}"
+      max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_CLIENT_MAX_AGE)
+      proxy_max_age = DCDO.get('public_proxy_max_age', DEFAULT_PUBLIC_PROXY_MAX_AGE)
+      response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{proxy_max_age}"
     else
       prevent_caching
     end
