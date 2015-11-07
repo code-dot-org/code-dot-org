@@ -19,7 +19,7 @@ Category: UI controls
 
 [short_description]
 
-Execute the *callbackFunction* code when a specific event *type* occurs for the specified UI element *id*.
+Executes the *callbackFunction* code when a specific event *type* occurs for the specified UI element *id*.
 
 [/short_description]
 

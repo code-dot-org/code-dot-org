@@ -13,15 +13,12 @@ social:
   "og:video:type": ""
 ---
 
-# Organisers
-
-<div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.code.org" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2014/09/logo-code-small.png"></a>
-                    </div>
-                  </div><div class="col-sm-3 col span_3">
+# Organizatori
+                    
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.adfaber.org" target="_blank"><img style="max-width: 100%" src="http://adfaber.org/wp-content/uploads/2013/09/adfaber-logo.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.adfaber.org" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/adfaber-logo.png"></a>
                     </div>
+
 
 
 Please visit [HourofCode.com/ro](http://hourofcode.com/ro/ro) for more information.

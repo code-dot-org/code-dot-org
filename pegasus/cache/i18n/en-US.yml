@@ -54,6 +54,7 @@
   thank_you_: "Thank you!"
   congratulations: "Congratulations!"
   congratulations_on_completing_hoc: "Congratulations on completing one Hour of Code"
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code, <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and help students learn an Hour of Code!'
   course_name_accelerated: "Accelerated Course"
   course_name_course1: "Course 1"
   course_name_course2: "Course 2"

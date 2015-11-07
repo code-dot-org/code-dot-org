@@ -1,7 +1,6 @@
-title 'Hour of Code 2015'
-description_short "Use Play Lab to create a story or game."
-description "Use Play Lab to create a story or game."
-wrapup_video 'hoc2015_preview_conclusion'
+title 'Star Wars: Building a Galaxy with Code.'
+description_short "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+description "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
 hidden 'true'
 admin_required 'false'  # This will be enforced via an alternate mechanism soon.
 
@@ -9,9 +8,10 @@ stage 'Hour of Code 2015'
 
 skin 'hoc2015x'
 
+video_key_for_next_level 'starwars_intro'
 level 'blockly:StudioEC:js_hoc2015_move_right'
 level 'blockly:StudioEC:js_hoc2015_move_right_down'
-video_key_for_next_level 'hoc2015_preview_typing'
+video_key_for_next_level 'starwars_typing'
 level 'blockly:StudioEC:js_hoc2015_move_diagonal'
 level 'blockly:StudioEC:js_hoc2015_move_backtrack'
 level 'blockly:StudioEC:js_hoc2015_move_around'
@@ -19,7 +19,7 @@ level 'blockly:StudioEC:js_hoc2015_move_finale'
 
 skin 'hoc2015'
 
-video_key_for_next_level 'hoc2015_preview_blocks'
+video_key_for_next_level 'starwars_events'
 level 'blockly:StudioEC:js_hoc2015_event_two_items'
 level 'blockly:StudioEC:js_hoc2015_event_four_items'
 level 'blockly:StudioEC:js_hoc2015_score'
@@ -30,4 +30,5 @@ level 'blockly:StudioEC:js_hoc2015_chain_characters'
 level 'blockly:StudioEC:js_hoc2015_chain_characters_2'
 level 'blockly:StudioEC:js_hoc2015_change_setting'
 
+video_key_for_next_level 'starwars_congrats'
 level 'blockly:StudioEC:js_hoc2015_event_free'
