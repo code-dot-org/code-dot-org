@@ -21,7 +21,14 @@ Category: UI Controls
 
 Displays the image from the provided URL on the screen.
 
-To use an image in an app in App Lab you have two options:
+[/short_description]
+
+Today's apps are visual, so you need to have a way to display images.
+
+
+Many apps use buttons to allow the user to initiate some app action. An event handler must be created for each type of user interaction with the button using [onEvent()](/applab/docs/onEvent) and the *buttonId*.
+
+ use an image in an app in App Lab you have two options:
 
 #### 1. Find the URL of an image on the web
 <img src="https://images.code.org/547f76e741252ca45201e8c70bf0075d-image-1444494509352.png" style="float:right; width: 200px">
@@ -41,8 +48,6 @@ You can upload images from your computer to App Lab as well.  If you have saved 
 
 * Once its uploaded click "Choose" next to it.  This will insert the name of the file into the URL field.  Because you have uploaded it, it doesn't need to be an HTTP reference.
 
-
-[/short_description]
 
 [/description]
 
@@ -126,7 +131,7 @@ image(id, url);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| id | string | Yes | The id of the image element. |
+| id | string | Yes | The unique identifier for the image. The id is used for referencing the image in event handlers or other UI element modification functions. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |
 | url | string | Yes | The source URL of the image to be displayed on screen. |
 
 [/parameters]
@@ -134,7 +139,7 @@ image(id, url);
 [returns]
 
 ### Returns
-Returns boolean value true.
+No return value. Modifies screen only.
 
 [/returns]
 

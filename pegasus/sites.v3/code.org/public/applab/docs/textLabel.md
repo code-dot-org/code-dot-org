@@ -19,7 +19,7 @@ Category: UI controls
 
 [short_description]
 
-Create a text label on the screen displaying the *text* provided and referenced by the given *labelId* at default location (0,0).
+Creates a text label on the screen displaying the *text* provided and referenced by the given *labelId* at default location (0,0).
 
 [/short_description]
 
