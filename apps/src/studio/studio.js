@@ -2167,6 +2167,13 @@ Studio.resetGoalSprites = function () {
     var finishClipRect = document.getElementById('finishClipRect' + i);
     finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x + offsetX);
     finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
+
+    // Workaround for clip rect failure on Safari:
+    // Haven't identified the cause yet, but touching the clip rect after the
+    // initial render is done resolves the issue.
+    setTimeout(function (clipRect) {
+      clipRect.setAttribute('x', clipRect.getAttribute('x'));
+    }.bind(null, finishClipRect), 100);
   }
 };
 
