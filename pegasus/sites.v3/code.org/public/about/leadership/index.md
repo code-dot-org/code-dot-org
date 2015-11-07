@@ -12,10 +12,6 @@ nav: about_nav
 
 <%= view :about_people, people:DB[:cdo_leaders].where(kind_s:'advisor') %>
 
-### Advisory Board Liaisons
-
-<%= view :about_people, people:DB[:cdo_leaders].where(kind_s:'liason') %>
-
 
 ## Education Advisory Council
 Our Education Advisory Council is a group of educators with decades of experience in teaching Computer Science, across all grade levels - elementary, secondary, or at the university level.

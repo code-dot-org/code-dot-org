@@ -44,6 +44,12 @@ One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 wo
 
 <% end %>
 
+<% if @country == 'ro' %>
+
+Organizatorii evenimentelor Hour of Code în România vor beneficia de un premiu din partea Bitdefender România, constand intr-o solutie de securitate online.
+
+<% end %>
+
 # FAQ
 
 ## Who is eligible to receive the all organizer thank-you gift?
