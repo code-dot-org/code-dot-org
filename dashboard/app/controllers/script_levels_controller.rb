@@ -62,12 +62,16 @@ class ScriptLevelsController < ApplicationController
 
   # Configure http caching for the given script. Caching is disabled unless the
   # Gatekeeper configuration for 'script' specifies that it is publicly
-  # cachable, in which case the max-age and s-max-age headers are set based the
-  # 'public-max-age' DCDO configuration value.
+  # cachable, in which case the max-age and s-maxage headers are set based the
+  # 'public-max-age' DCDO configuration value.  Because of a bug in Amazon Cloudfront,
+  # we actually set max-age to twice the value of s-maxage, to avoid Cloudfront serving
+  # stale content which has to be revalidated by the client. The details of the bug are
+  # described here:
+  # https://console.aws.amazon.com/support/home?region=us-east-1#/case/?caseId=1540449361&displayId=1540449361&language=en
   def configure_caching(script)
     if script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
       max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_MAX_AGE)
-      response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{max_age}"
+      response.headers['Cache-Control'] = "public,max-age=#{max_age * 2},s-maxage=#{max_age}"
     else
       prevent_caching
     end

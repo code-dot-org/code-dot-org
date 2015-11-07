@@ -88,7 +88,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   def assert_caching_enabled(cache_control_header, max_age)
     expected_directives = [
         'public',
-        "max-age=#{max_age}",
+        "max-age=#{max_age * 2}",
         "s-maxage=#{max_age}"]
     assert_cache_control_match expected_directives, cache_control_header
   end
