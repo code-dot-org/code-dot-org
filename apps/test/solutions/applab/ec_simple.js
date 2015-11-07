@@ -26,9 +26,14 @@ module.exports = {
       },
     },
 
+    // Missing coverage of the data category here.
+    // Most data blocks make network calls and modify data records. To get
+    // test coverage of these here, we would probably need to mock portions of that.
+    // We do have UI test coverage of data apis in dataBlocks.feature
+
     // These exercise all of the blocks in Control category
     // It does not validate that they behave correctly, just that we don't end
-    // up with an errors
+    // up with any errors
     {
       description: "Control",
       editCode: true,
@@ -80,12 +85,12 @@ module.exports = {
 
     // These exercise all of the blocks in Control category
     // It does not validate that they behave correctly, just that we don't end
-    // up with an errors
+    // up with any errors
     {
       description: "Variables",
       editCode: true,
       xml:
-      // prompt and promptNum are covered in dropletUtilsTest
+        // prompt and promptNum are covered in dropletUtilsTest
         'var x = 1;\n' +
         'var y;\n' +
         'y = 2;\n' +
@@ -123,7 +128,7 @@ module.exports = {
 
     // These exercise all of the blocks in canvas category
     // It does not validate that they behave correctly, just that we don't end
-    // up with an errors
+    // up with any errors
     {
       description: "Canvas",
       editCode: true,
@@ -170,7 +175,7 @@ module.exports = {
 
     // These exercise all of the blocks in Turtle category
     // It does not validate that they behave correctly, just that we don't end
-    // up with an errors
+    // up with any errors
     {
       description: "Turtle",
       editCode: true,
@@ -217,7 +222,7 @@ module.exports = {
 
     // These exercise all of the blocks in Turtle category
     // It does not validate that they behave correctly, just that we don't end
-    // up with an errors
+    // up with any errors
     {
       description: "Functions",
       editCode: true,

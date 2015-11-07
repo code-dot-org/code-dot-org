@@ -14,7 +14,7 @@ module.exports = {
   tests: [
     // These exercise all of the blocks in UI controls (other than get/setText).
     // It does not validate that they behave correctly, just that we don't end
-    // up with an errors
+    // up with any errors
     {
       description: "UI controls",
       editCode: true,
