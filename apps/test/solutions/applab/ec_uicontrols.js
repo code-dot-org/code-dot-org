@@ -20,10 +20,6 @@ module.exports = {
       editCode: true,
       xml:
           'button("id1", "text");\n' +
-          // These two are currently having issues that appear to be specific
-          // to the test rig. I validated them manually in the browser
-          // 'getXPosition("id1");\n' +
-          // 'getYPosition("id1");\n' +
           'onEvent("id1", "click", function(event) {\n' +
           '  \n' +
           '});\n' +
@@ -31,19 +27,24 @@ module.exports = {
           'textLabel("id3", "text");\n' +
           'dropdown("id4", "option1", "etc");\n' +
           'checkbox("id5", false);\n' +
+          'radioButton("id6", false, "group");\n' +
           'getChecked("id5")\n' +
           'setChecked("id5", true);\n' +
-          'radioButton("id6", false, "group");\n' +
           'image("id7", "https://code.org/images/logo.png");\n' +
-          'setImageURL("id7", "https://code.org/images/logo.png");\n' +
           'getImageURL("id7");\n' +
+          'setImageURL("id7", "https://code.org/images/logo.png");\n' +
           'playSound("https://studio.code.org/blockly/media/skins/studio/1_goal.mp3");\n' +
           'setPosition("id7", 0, 0, 100, 100);\n' +
           'setSize("id7", 100, 100);\n' +
           'showElement("id7");\n' +
           'hideElement("id7");\n' +
           'deleteElement("id7");\n' +
-          'write("text")\n;',
+          'setPosition("id1", 0, 0, 100, 100);\n' +
+          'setSize("id1", 100, 100);\n' +
+          'write("text")\n;' +
+          'setScreen("screen1");' +
+          'getXPosition("id1");\n' +
+          'getYPosition("id1");\n',
 
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
