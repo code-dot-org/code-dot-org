@@ -141,8 +141,11 @@ class Script < ActiveRecord::Base
       script_cache_from_cache || script_cache_from_db
   end
 
-  # Returns a cached map from script level id to id.
+
+  # Returns a cached map from script level id to id, or an empty map if in level_builder mode
+  # which disables caching.
   def self.script_level_cache
+    return nil if Rails.application.config.levelbuilder_mode # cache disabled when building levels
     @@script_level_cache ||= {}.tap do |cache|
       script_cache.values.each do |script|
         cache.merge!(script.script_levels.index_by(&:id))
@@ -150,14 +153,19 @@ class Script < ActiveRecord::Base
     end
   end
 
+  # Find the script level with the given id from the cache, unless the level build mode
+  # is enabled in which case  it is always fetched from the database. If we need to fetch
+  # the script and we're not in level mode (for example because the script was created after
+  # the cache), then an entry for the script is added to the cache.
   def self.cache_find_script_level(script_level_id)
-    # The script level cache will typically already have the requested
-    # level, except when we are in levelbuilder mode or new levels have been
-    # added to the database after the cache was constructed (as some tests do).
-    script_level = script_level_cache[script_level_id]
+    levelbuilder_mode = Rails.application.config.levelbuilder_mode
+    script_level = script_level_cache[script_level_id] unless levelbuilder_mode
+
+    # If the cache missed or we're in levelbuilder mode, fetch the script level from the db.
     if script_level.nil?
       script_level = ScriptLevel.find(script_level_id)
-      @@script_level_cache[script_level_id] = script_level
+      # Cache the script level, unless it wasn't found or we're in levelbuilder mode.
+      @@script_level_cache[script_level_id] = script_level unless !script_level || levelbuilder_mode
     end
     script_level
   end
