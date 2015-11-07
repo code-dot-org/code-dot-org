@@ -93,14 +93,6 @@ max_age: 60
 
   function processResponse(data)
   {
-    //console.log("Processing response: ", data);
-
-    if (!data.started)
-    {
-      //console.log("Response indicates not started.")
-      //window.location = "/learn";
-    }
-
     certificate_processResponse(data);
   }
 
