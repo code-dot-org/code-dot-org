@@ -19,7 +19,7 @@ Category: UI controls
 
 [short_description]
 
-Position an element at an *x,y* screen coordinate, and optionally set a new *width* and *height* for the element.
+Positions an element at an *x,y* screen coordinate, and optionally sets a new *width* and *height* for the element.
 
 [/short_description]
 
