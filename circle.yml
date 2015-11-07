@@ -55,8 +55,7 @@ test:
         - while [ ! -e ~/sauce_is_ready ]; do sleep 1; done
         # Wait for app to be ready
         - curl --retry 10 --retry-delay 2 -v http://localhost:3000
-        - bundle exec ./runner.rb -d localhost-studio.code.org:3000 --parallel 16 --auto_retry --html
-            pwd:
-                dashboard/test/ui
+        - bundle exec ./runner.rb -d localhost-studio.code.org:3000 --parallel 16 --auto_retry --html:
+            pwd: dashboard/test/ui
     post:
         - killall --wait sc  # wait for Sauce Connect to close the tunnel
