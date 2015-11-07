@@ -209,7 +209,7 @@ class User < ActiveRecord::Base
   has_many :trophies, through: :user_trophies, source: :trophy
 
   has_many :followers
-  has_many :followeds, -> {order 'id'}, class_name: 'Follower', foreign_key: 'student_user_id'
+  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
 
   has_many :students, through: :followers, source: :student_user
   has_many :teachers, through: :followeds, source: :user
@@ -224,7 +224,7 @@ class User < ActiveRecord::Base
   before_create :generate_secret_words
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
-  has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, id asc"}
+  has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
   has_many :scripts, -> {where hidden: false}, through: :user_scripts, source: :script
 
   validates :name, presence: true
