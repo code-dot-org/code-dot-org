@@ -10,7 +10,6 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     sign_in teacher
 
-    @request.headers['Accept'] = 'application/json'
     post :update, id: user_level.id, user_level: {best_result: Activity::FREE_PLAY_RESULT}
     assert_response :success
 
@@ -27,7 +26,6 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     sign_in student
 
-    @request.headers['Accept'] = 'application/json'
     post :update, id: user_level.id, user_level: {best_result: Activity::FREE_PLAY_RESULT}
     assert_response :success
 
@@ -45,7 +43,6 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     sign_in teacher
 
-    @request.headers['Accept'] = 'application/json'
     post :update, id: user_level.id, user_level: {best_result: Activity::FREE_PLAY_RESULT}
     assert_response :forbidden
 

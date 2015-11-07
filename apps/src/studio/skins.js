@@ -327,7 +327,7 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.hideIconInClearPuzzle = true;
 
-  skin.defaultBackground = 'forest';
+  skin.defaultBackground = 'endor';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
@@ -336,59 +336,51 @@ function loadHoc2015(skin, assetUrl) {
   skin.ProjectileClassNames = [
   ];
 
-  // TODO: proper item class names
   skin.ItemClassNames = [
-    'pig',
-    'man',
-    'roo',
-    'bird',
-    'spider',
-    'mouse',
-    'pilot'
+    'pufferpig',
+    'stormtrooper',
+    'tauntaun',
+    'mynock',
+    'probot',
+    'mousedroid',
+    'rebelpilot'
   ];
 
   skin.AutohandlerTouchItems = {
-    whenTouchPig: 'pig',
-    whenTouchMan: 'man',
-    whenTouchRoo: 'roo',
-    whenTouchBird: 'bird',
-    whenTouchSpider: 'spider',
-    whenTouchMouse: 'mouse',
-    whenTouchPilot: 'pilot',
-    whenGetPig: 'pig',
-    whenGetMan: 'man',
-    whenGetRoo: 'roo',
-    whenGetBird: 'bird',
-    whenGetSpider: 'spider',
-    whenGetMouse: 'mouse',
-    whenGetPilot: 'pilot',
+    whenTouchPufferPig: 'pufferpig',
+    whenTouchStormtrooper: 'stormtrooper',
+    whenTouchTauntaun: 'tauntaun',
+    whenTouchMynock: 'mynock',
+    whenTouchProbot: 'probot',
+    whenTouchMouseDroid: 'mousedroid',
+    whenTouchRebelPilot: 'rebelpilot',
+    whenGetPufferPig: 'pufferpig',
+    whenGetStormtrooper: 'stormtrooper',
+    whenGetTauntaun: 'tauntaun',
+    whenGetMynock: 'mynock',
+    whenGetProbot: 'probot',
+    whenGetMouseDroid: 'mousedroid',
+    whenGetRebelPilot: 'rebelpilot',
   };
 
-  skin.AutohandlerTouchAllItems = {
-    whenTouchAllPigs: 'pig',
-    whenTouchAllMen: 'man',
-    whenTouchAllRoos: 'roo',
-    whenTouchAllBirds: 'bird',
-    whenTouchAllSpiders: 'spider',
-    whenTouchAllMice: 'mouse',
-    whenTouchAllPilots: 'pilot',
-    whenGetAllPigs: 'pig',
-    whenGetAllMen: 'man',
-    whenGetAllRoos: 'roo',
-    whenGetAllBirds: 'bird',
-    whenGetAllSpiders: 'spider',
-    whenGetAllMice: 'mouse',
-    whenGetAllPilots: 'pilot',
+  skin.AutohandlerGetAllItems = {
+    whenGetAllPufferPigs: 'pufferpig',
+    whenGetAllStormtroopers: 'stormtrooper',
+    whenGetAllTauntauns: 'tauntaun',
+    whenGetAllMynocks: 'mynock',
+    whenGetAllProbots: 'probot',
+    whenGetAllMouseDroids: 'mousedroid',
+    whenGetAllRebelPilots: 'rebelpilot',
   };
 
   skin.specialItemProperties = {
-    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
-    'man':    { frames: 12, width: 100, height: 100, scale: 1.1, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
-    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'bird':   { frames:  8, width: 100, height: 100, scale: 0.9, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.5, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'pufferpig':       { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
+    'stormtrooper':    { frames: 12, width: 100, height: 100, scale: 1.1, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
+    'tauntaun':        { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'mynock':          { frames:  8, width: 100, height: 100, scale: 0.9, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'probot':          { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'mousedroid':      { frames:  1, width: 100, height: 100, scale: 0.5, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'rebelpilot':      { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -450,30 +442,30 @@ function loadHoc2015(skin, assetUrl) {
   skin.gridSpriteRenderOffsetX = -30;
   skin.gridSpriteRenderOffsetY = -40;
 
-  skin.avatarList = ['bot1', 'bot2'];
+  skin.avatarList = ['r2-d2', 'c-3po'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: name == 'bot1' ? 14 : 16,
+        normal: name == 'r2-d2' ? 14 : 16,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: name == 'bot1' ? 14 : 8
+        walk: name == 'r2-d2' ? 14 : 8
       },
       timePerFrame: 100
     };
   });
 
-  skin.bot1.movementAudio = [
-    { begin: 'bot1_move1_start', loop: 'bot1_move1_loop', end: 'bot1_move1_end', volume: 2.2 },
-    { begin: 'bot1_move2_start', loop: 'bot1_move2_loop', end: 'bot1_move2_end', volume: 2.2 },
-    { begin: 'bot1_move3_start', loop: 'bot1_move3_loop', end: 'bot1_move3_end', volume: 2.2 }
+  skin['r2-d2'].movementAudio = [
+    { begin: 'r2-d2_move1_start', loop: 'r2-d2_move1_loop', end: 'r2-d2_move1_end', volume: 2.2 },
+    { begin: 'r2-d2_move2_start', loop: 'r2-d2_move2_loop', end: 'r2-d2_move2_end', volume: 2.2 },
+    { begin: 'r2-d2_move3_start', loop: 'r2-d2_move3_loop', end: 'r2-d2_move3_end', volume: 2.2 }
   ];
-  skin.bot2.movementAudio = [
-    { loop: 'bot2_move_loop', end: 'bot2_move_end', volume: 0.8 }
+  skin['c-3po'].movementAudio = [
+    { loop: 'c-3po_move_loop', end: 'c-3po_move_end', volume: 0.8 }
   ];
 
   skin.preventProjectileLoop = function (className) {
@@ -481,45 +473,44 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   skin.preventItemLoop = function (className) {
-    return className === 'item_character1';
+    return className === '';
   };
 
   // No failure avatar for this skin.
   skin.failureAvatar = null;
 
-  // TODO: Create actual item choices
-  skin.pig = skin.assetUrl('walk_item1.png');
-  skin.man = skin.assetUrl('walk_item2.png');
-  skin.roo = skin.assetUrl('walk_item3.png');
-  skin.bird = skin.assetUrl('walk_item4.png');
-  skin.spider = skin.assetUrl('walk_item5.png');
-  skin.mouse = skin.assetUrl('walk_item6.png');
-  skin.pilot = skin.assetUrl('walk_item7.png');
+  skin.pufferpig = skin.assetUrl('walk_pufferpig.png');
+  skin.stormtrooper = skin.assetUrl('walk_stormtrooper.png');
+  skin.tauntaun = skin.assetUrl('walk_tauntaun.png');
+  skin.mynock = skin.assetUrl('walk_mynock.png');
+  skin.probot = skin.assetUrl('walk_probot.png');
+  skin.mousedroid = skin.assetUrl('walk_mousedroid.png');
+  skin.rebelpilot = skin.assetUrl('walk_rebelpilot.png');
 
-  skin.forest = {
-    background: skin.assetUrl('background_background1.jpg'),
-    tiles: skin.assetUrl('tiles_background1.png'),
-    jumboTiles: skin.assetUrl('jumbotiles_background1.png'),
+  skin.endor = {
+    background: skin.assetUrl('background_endor.jpg'),
+    tiles: skin.assetUrl('tiles_endor.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_endor.png'),
     jumboTilesAddOffset: -5,
     jumboTilesSize: 60,
     jumboTilesRows: 4,
     jumboTilesCols: 4,
     clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
   };
-  skin.snow = {
-    background: skin.assetUrl('background_background2.jpg'),
-    tiles: skin.assetUrl('tiles_background2.png'),
-    jumboTiles: skin.assetUrl('jumbotiles_background2.png'),
+  skin.hoth = {
+    background: skin.assetUrl('background_hoth.jpg'),
+    tiles: skin.assetUrl('tiles_hoth.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_hoth.png'),
     jumboTilesAddOffset: -5,
     jumboTilesSize: 60,
     jumboTilesRows: 4,
     jumboTilesCols: 4,
     clouds: [skin.assetUrl('cloud_dark.png'), skin.assetUrl('cloud_dark2.png')]
   };
-  skin.ship = {
-    background: skin.assetUrl('background_background3.jpg'),
-    tiles: skin.assetUrl('tiles_background3.png'),
-    jumboTiles: skin.assetUrl('jumbotiles_background3.png'),
+  skin.starship = {
+    background: skin.assetUrl('background_starship.jpg'),
+    tiles: skin.assetUrl('tiles_starship.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_starship.png'),
     jumboTilesAddOffset: -5,
     jumboTilesSize: 60,
     jumboTilesRows: 4,
@@ -532,12 +523,12 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
 
-  // Since we don't have jumbo tiles for our "snow" background, in the case
+  // Since we don't have jumbo tiles for our "Hoth" background, in the case
   // of the two maps that use jumbo pieces ("circle" and "horizontal") we
   // return a special version of the map that just uses regular tile pieces.
 
   skin.getMap = function(background, map) {
-    if (background == "snow" && (map == "circle" || map == "horizontal")) {
+    if (background == "hoth" && (map == "circle" || map == "horizontal")) {
       return map + "_nonjumbo";
     }
     else {
@@ -617,15 +608,15 @@ function loadHoc2015(skin, assetUrl) {
 
   // Sounds.
   skin.sounds = [
-    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
-    'character1sound5', 'character1sound6', 'character1sound7', 'character1sound8',
-    'character1sound9',
-    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
-    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
-    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
-    'item4sound1', 'item4sound2', 'item4sound3',
-    'item5sound1', 'item5sound2', 'item5sound3',
-    'item6sound1', 'item6sound2', 'item6sound3',
+    'R2-D2sound1', 'R2-D2sound2', 'R2-D2sound3', 'R2-D2sound4',
+    'R2-D2sound5', 'R2-D2sound6', 'R2-D2sound7', 'R2-D2sound8',
+    'R2-D2sound9',
+    'C-3POsound1', 'C-3POsound2', 'C-3POsound3', 'C-3POsound4',
+    'PufferPigSound1', 'PufferPigSound2', 'PufferPigSound3', 'PufferPigSound4',
+    'TauntaunSound1', 'TauntaunSound2', 'TauntaunSound3', 'TauntaunSound4',
+    'MynockSound1', 'MynockSound2', 'MynockSound3',
+    'ProbotSound1', 'ProbotSound2', 'ProbotSound3',
+    'MouseDroidSound1', 'MouseDroidSound2', 'MouseDroidSound3',
     'alert1', 'alert2', 'alert3', 'alert4',
     'applause'
   ];
@@ -650,38 +641,38 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    [msg.setBackgroundForest(), '"forest"'],
-    [msg.setBackgroundSnow(), '"snow"'],
-    [msg.setBackgroundShip(), '"ship"']
+    [msg.setBackgroundEndor(), '"endor"'],
+    [msg.setBackgroundHoth(), '"hoth"'],
+    [msg.setBackgroundStarship(), '"starship"']
     ];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
-    [skin.forest.background, '"forest"'],
-    [skin.snow.background, '"snow"'],
-    [skin.ship.background, '"ship"'],
+    [skin.endor.background, '"endor"'],
+    [skin.hoth.background, '"hoth"'],
+    [skin.starship.background, '"starship"'],
     [skin.randomPurpleIcon, RANDOM_VALUE],
     ];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
     [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteBot1(), '"bot1"'],
-    [msg.setSpriteBot2(), '"bot2"']];
+    [msg.setSpriteR2D2(), '"r2-d2"'],
+    [msg.setSpriteC3PO(), '"c-3po"']];
 
   skin.projectileChoices = [];
 
   // NOTE: item names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
-    [msg.itemMan(), '"man"'],
-    [msg.itemPilot(), '"pilot"'],
-    [msg.itemPig(), '"pig"'],
-    [msg.itemBird(), '"bird"'],
-    [msg.itemMouse(), '"mouse"'],
-    [msg.itemRoo(), '"roo"'],
-    [msg.itemSpider(), '"spider"'],
+    [msg.itemStormtrooper(), '"stormtrooper"'],
+    [msg.itemRebelPilot(), '"rebelpilot"'],
+    [msg.itemPufferPig(), '"pufferpig"'],
+    [msg.itemMynock(), '"mynock"'],
+    [msg.itemMouseDroid(), '"mousedroid"'],
+    [msg.itemTauntaun(), '"tauntaun"'],
+    [msg.itemProbot(), '"probot"'],
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
@@ -706,7 +697,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.AutohandlerTouchItems = {
   };
 
-  skin.AutohandlerTouchAllItems = {
+  skin.AutohandlerGetAllItems = {
   };
 
   skin.specialItemProperties = {
@@ -722,7 +713,8 @@ function loadHoc2015x(skin, assetUrl) {
   skin.goalSpriteHeight = 50;
 
   // How many frames in the animated goal spritesheet.
-  skin.animatedGoalFrames = 16;
+  skin.animatedGoalFrames = 1;
+  skin.disableClipRectOnGoals = true;
 
   // Special effect applied to goal sprites
   skin.goalEffect = 'glow';
@@ -773,7 +765,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.gridSpriteRenderOffsetX = -20;
   skin.gridSpriteRenderOffsetY = -40;
 
-  skin.avatarList = ['bot1'];
+  skin.avatarList = ['bb-8'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
@@ -789,7 +781,7 @@ function loadHoc2015x(skin, assetUrl) {
       timePerFrame: 100
     };
   });
-  skin.bot1.movementAudio = [
+  skin['bb-8'].movementAudio = [
     { begin: 'move1' },
     { begin: 'move2' },
     { begin: 'move3' },
@@ -801,7 +793,7 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.preventItemLoop = function (className) {
-    return className === 'item_character1';
+    return className === '';
   };
 
   skin.hazard = skin.assetUrl('hazard_idle.png');
@@ -844,7 +836,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
     [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteBot1(), '"bot1"']];
+    [msg.setSpriteBB8(), '"BB-8"']];
 
   skin.projectileChoices = [];
 

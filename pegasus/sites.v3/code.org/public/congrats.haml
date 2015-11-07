@@ -44,6 +44,7 @@ max_age: 60
         =TextRender.safe_markdown company['additional_actions_copy_t']
       -else
         =view :company_profile_additional_actions
+      = I18n.t :congratulations_volunteer
   -else
     %h1=I18n.t :congratulations_on_completing_hoc
 
@@ -134,7 +135,6 @@ max_age: 60
     else
     {
       certificate_disable();
-      voting_disable();
     }
   });
 
