@@ -11,7 +11,7 @@ class ScriptLevelsController < ApplicationController
 
   # Default max-age to use for script level pages which are configured as
   # publicly cacheable. Used if the DCDO.public_max_age is not defined.
-  # This is set to twice the proxy magage because of a bug in CloudFront.
+  # This is set to twice the proxy max-age because of a bug in CloudFront.
   DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
 
   def reset
