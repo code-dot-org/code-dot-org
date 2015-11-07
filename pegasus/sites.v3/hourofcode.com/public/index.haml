@@ -221,7 +221,7 @@ social:
 
   function cycleImage()
   {
-    var nextImage = (currentImage + 1) % 6;
+    var nextImage = (currentImage + 1) % 5;
     $("#fullwidth" + currentImage).fadeTo(2000, 0);
     $("#fullwidth" + nextImage ).fadeTo(2000, videoStarted ? 0.3 : 1);
     currentImage = nextImage;
