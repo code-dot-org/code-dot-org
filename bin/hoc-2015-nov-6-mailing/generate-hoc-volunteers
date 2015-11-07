@@ -8,4 +8,3 @@ EOS
 volunteers = query_subscribed_contacts(q: volunteer_query)
 puts "#{volunteers.count} hoc-volunteers"
 export_contacts_to_csv volunteers, "hoc-volunteers.csv"
-
