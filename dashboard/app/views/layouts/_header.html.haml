@@ -34,6 +34,10 @@
               - else
                 = link_to(image_tag('codeorg-studio-logo.png'), '/')
             %span.project_info
+              -# Very temporary beta notice
+              - if @script && @script.name == "starwars"
+                .beta-notice
+                  = t('beta')
           .header_middle
             - if script_level
               = render partial: 'shared/header_progress'
