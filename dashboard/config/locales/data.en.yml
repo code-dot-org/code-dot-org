@@ -497,6 +497,10 @@ en:
         'hoc2015_preview_blocks' : 'Make your own game blocks'
         'hoc2015_preview_typing' : 'Make your own game typing'
         'hoc2015_preview_conclusion' : 'Make your own game conclusion'
+        'starwars_intro' : 'Introduction'
+        'starwars_typing' : 'JavaScript'
+        'starwars_events' : 'Events'
+        'starwars_congrats' : 'Congratulations'
     callout:
       text:
         # Keyed by #{callout.localization_key}

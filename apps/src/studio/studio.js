@@ -395,7 +395,8 @@ var drawMap = function () {
       finishClipRect.setAttribute('width', spriteWidth);
       finishClipRect.setAttribute('height', spriteHeight);
       finishClipPath.appendChild(finishClipRect);
-      svg.appendChild(finishClipPath);
+      // Safari workaround: Clip paths work better when descendant of an SVGGElement.
+      spriteLayer.appendChild(finishClipPath);
 
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
