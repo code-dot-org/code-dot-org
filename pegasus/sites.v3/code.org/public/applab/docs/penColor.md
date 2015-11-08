@@ -24,7 +24,14 @@ Sets the color of the pen used by the turtle for drawing lines and dots.
 
 [/short_description]
 
-Let the artist in you come out by utilizing the wide range of colors that the turtle can draw with. The *color* parameter must be a string enclosed in quotes, and can be the name of the color, the hex value of the color, or the rgb value of the color. The default pen color is black and the pen is by default in the down (drawing) position.
+Let the artist in you come out by utilizing the wide range of colors that the turtle can draw with. The *color* parameter must be a string enclosed in quotes, and can take one of four forms.  It can be:
+
+ * the name of the color
+ * the hex value of the color (preceded by a #)
+ * the rgb value of the color
+ * the rgba value of the color (last value specifies the alpha channel for transparency) 
+ 
+The default pen color is black and the pen is by default in the down (drawing) position.
 
 [/description]
 
@@ -55,7 +62,7 @@ moveForward(50);
 turnRight();
 
 // Sets the color using the hex value of a color in a string.
-penColor("7fff00");
+penColor("#7fff00");
 moveForward(50);
 turnRight();
 
