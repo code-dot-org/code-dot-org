@@ -2659,7 +2659,7 @@ Studio.execute = function() {
                                      'SPRITE2');
   }
 
-  studioApp.playAudio('start');
+  Studio.playSound({ soundName: 'start' });
 
   studioApp.reset(false);
 
@@ -2727,9 +2727,9 @@ Studio.onPuzzleComplete = function() {
   }
 
   if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
-    studioApp.playAudio('win');
+    Studio.playSound({ soundName: 'win' });
   } else {
-    studioApp.playAudio('failure');
+    Studio.playSound({ soundName: 'failure' });
   }
 
   var program;
@@ -3734,7 +3734,14 @@ Studio.playSound = function (opts) {
     throw new RangeError("Incorrect parameter: " + opts.soundName);
   }
 
-  Studio.throttledPlaySound(soundVal, { volume: 1.0 });
+  var skinSoundMetadata = utils.valueOr(skin.soundMetadata, []);
+  var playbackOptions = $.extend({
+    volume: 1.0
+  }, _.find(skinSoundMetadata, function (metadata) {
+    return metadata.name.toLowerCase().trim() === soundVal;
+  }));
+
+  Studio.throttledPlaySound(soundVal, playbackOptions);
   Studio.playSoundCount++;
 };
 
@@ -5204,7 +5211,7 @@ Studio.allGoalsVisited = function() {
       // overridden by the skin)
       if (playSound &&
           (finishedGoals !== Studio.spriteGoals_.length || skin.playFinalGoalSound)) {
-        studioApp.playAudio('flag');
+        Studio.playSound({ soundName: 'flag' });
       }
 
       if (skin.goalSuccess) {
@@ -6235,7 +6242,7 @@ function loadHoc2015(skin, assetUrl) {
     { begin: 'r2-d2_move3_start', loop: 'r2-d2_move3_loop', end: 'r2-d2_move3_end', volume: 2.2 }
   ];
   skin['c-3po'].movementAudio = [
-    { loop: 'c-3po_move_loop', end: 'c-3po_move_end', volume: 0.8 }
+    { loop: 'c-3po_move_loop', end: 'c-3po_move_end', volume: 0.6 }
   ];
 
   skin.preventProjectileLoop = function (className) {
@@ -6389,6 +6396,48 @@ function loadHoc2015(skin, assetUrl) {
     'MouseDroidSound1', 'MouseDroidSound2', 'MouseDroidSound3',
     'alert1', 'alert2', 'alert3', 'alert4',
     'applause'
+  ];
+
+  skin.soundMetadata = [
+    {name: 'start', volume: 0.2},
+    {name: 'win', volume: 0.2},
+    {name: 'failure', volume: 0.2},
+    {name: 'flag', volume: 0.2},
+    {name: 'R2-D2sound1', volume: 0.2},
+    {name: 'R2-D2sound2', volume: 0.2},
+    {name: 'R2-D2sound3', volume: 0.2},
+    {name: 'R2-D2sound4', volume: 0.2},
+    {name: 'R2-D2sound5', volume: 0.2},
+    {name: 'R2-D2sound6', volume: 0.2},
+    {name: 'R2-D2sound7', volume: 0.2},
+    {name: 'R2-D2sound8', volume: 0.2},
+    {name: 'R2-D2sound9', volume: 0.2},
+    {name: 'C-3POsound1', volume: 0.2},
+    {name: 'C-3POsound2', volume: 0.2},
+    {name: 'C-3POsound3', volume: 0.2},
+    {name: 'C-3POsound4', volume: 0.2},
+    {name: 'PufferPigSound1', volume: 0.2},
+    {name: 'PufferPigSound2', volume: 0.2},
+    {name: 'PufferPigSound3', volume: 0.2},
+    {name: 'PufferPigSound4', volume: 0.2},
+    {name: 'TauntaunSound1', volume: 0.2},
+    {name: 'TauntaunSound2', volume: 0.2},
+    {name: 'TauntaunSound3', volume: 0.2},
+    {name: 'TauntaunSound4', volume: 0.2},
+    {name: 'MynockSound1', volume: 0.2},
+    {name: 'MynockSound2', volume: 0.2},
+    {name: 'MynockSound3', volume: 0.2},
+    {name: 'ProbotSound1', volume: 0.2},
+    {name: 'ProbotSound2', volume: 0.2},
+    {name: 'ProbotSound3', volume: 0.2},
+    {name: 'MouseDroidSound1', volume: 0.2},
+    {name: 'MouseDroidSound2', volume: 0.2},
+    {name: 'MouseDroidSound3', volume: 0.2},
+    {name: 'alert1', volume: 0.2},
+    {name: 'alert2', volume: 0.2},
+    {name: 'alert3', volume: 0.2},
+    {name: 'alert4', volume: 0.2},
+    {name: 'applause', volume: 0.2}
   ];
 
   skin.musicMetadata = HOC2015_MUSIC_METADATA;
@@ -6552,10 +6601,10 @@ function loadHoc2015x(skin, assetUrl) {
     };
   });
   skin['bb-8'].movementAudio = [
-    { begin: 'move1' },
-    { begin: 'move2' },
-    { begin: 'move3' },
-    { begin: 'move4' }
+    { begin: 'move1', volume: 0.3 },
+    { begin: 'move2', volume: 0.3 },
+    { begin: 'move3', volume: 0.3 },
+    { begin: 'move4', volume: 0.3 }
   ];
 
   skin.preventProjectileLoop = function (className) {
@@ -6622,21 +6671,21 @@ function loadHoc2015x(skin, assetUrl) {
  * @const {MusicTrackDefinition[]}
  */
 var HOC2015_MUSIC_METADATA = [
-  { name: 'song1' },
-  { name: 'song2' },
-  { name: 'song3' },
-  { name: 'song4', volume: 0.85 },
-  { name: 'song5' },
-  { name: 'song6' },
-  { name: 'song7' },
-  { name: 'song8', volume: 0.85 },
-  { name: 'song9', volume: 0.85 },
-  { name: 'song10' },
-  { name: 'song11', volume: 0.85 },
-  { name: 'song12', volume: 0.85 },
-  { name: 'song13' },
-  { name: 'song14' },
-  { name: 'song15' }
+  { name: 'song1', volume: 0.5 },
+  { name: 'song2', volume: 0.5 },
+  { name: 'song3', volume: 0.5 },
+  { name: 'song4', volume: 0.4 },
+  { name: 'song5', volume: 0.4 },
+  { name: 'song6', volume: 0.5 },
+  { name: 'song7', volume: 0.4 },
+  { name: 'song8', volume: 0.4 },
+  { name: 'song9', volume: 0.4 },
+  { name: 'song10', volume: 0.5 },
+  { name: 'song11', volume: 0.45 },
+  { name: 'song12', volume: 0.4 },
+  { name: 'song13', volume: 0.4 },
+  { name: 'song14', volume: 0.5 },
+  { name: 'song15', volume: 0.55 }
 ];
 
 function loadStudio(skin, assetUrl) {
