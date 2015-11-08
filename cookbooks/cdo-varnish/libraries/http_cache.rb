@@ -91,6 +91,11 @@ class HttpCache
             cookies: 'none',
           },
           {
+              path: "/s/starwars/stage/1/puzzle/*",
+              headers: LANGUAGE_HEADER,
+              cookies: 'none',
+          },
+          {
             path: '/api/*',
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
