@@ -465,7 +465,7 @@ function loadHoc2015(skin, assetUrl) {
     { begin: 'r2-d2_move3_start', loop: 'r2-d2_move3_loop', end: 'r2-d2_move3_end', volume: 2.2 }
   ];
   skin['c-3po'].movementAudio = [
-    { loop: 'c-3po_move_loop', end: 'c-3po_move_end', volume: 0.8 }
+    { loop: 'c-3po_move_loop', end: 'c-3po_move_end', volume: 0.6 }
   ];
 
   skin.preventProjectileLoop = function (className) {
@@ -782,10 +782,10 @@ function loadHoc2015x(skin, assetUrl) {
     };
   });
   skin['bb-8'].movementAudio = [
-    { begin: 'move1' },
-    { begin: 'move2' },
-    { begin: 'move3' },
-    { begin: 'move4' }
+    { begin: 'move1', volume: 0.3 },
+    { begin: 'move2', volume: 0.3 },
+    { begin: 'move3', volume: 0.3 },
+    { begin: 'move4', volume: 0.3 }
   ];
 
   skin.preventProjectileLoop = function (className) {
