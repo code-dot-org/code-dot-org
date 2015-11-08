@@ -1,7 +1,23 @@
 :javascript
-  function trackSocialEvent(social_platform)
-  {
-    trackEvent(social_platform, "share", "/certificate");
+  // Triggers the registration of a Google Analytics "share_hoc_certificate" event.
+  // Args:
+  //   social_platform: The social platform the HOC certificate is being shared on. 
+  function trackSocialEvent(social_platform) {
+    // Determine the tutorial being shared via the document referrer.
+    if (!document.referrer) {
+      tutorial = "none";
+    } else if (document.referrer.indexOf("hoc") != -1) {
+      tutorial = "angrybirds";
+    } else if (document.referrer.indexOf("flappy") != -1) {
+      tutorial = "flappy";
+    } else if (document.referrer.indexOf("frozen") != -1) {
+      tutorial = "frozen";
+    } else if (document.referrer.indexOf("starwars") != -1) {
+      tutorial = "starwars";
+    } else {
+      tutorial = "unknown";
+    }
+    trackEvent(social_platform, "share_hoc_certificate", tutorial);
   }
 
 #congrats-share-buttons
