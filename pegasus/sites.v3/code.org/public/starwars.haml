@@ -3,24 +3,64 @@ title: Star Wars
 theme: responsive
 ---
 
-%link{:href=>"/css/starwars.css", :rel=>"stylesheet"}
+%div{style: "clear:both"}
 
-.container_responsive.mobile-pad
-  %div.starwars-header
-    %img.starwars-image{src: "/images/star_wars.jpg", style:"width:100%;"}
-    %div.starwars-cta
-      %div.starwars-title
-        STAR WARS: BUILDING
-        %br
-        A GALAXY WITH CODE
-      %div.starwars-button{style: "margin-right: 20px;"}
-        %div ages 11 - 18+
-        %a{href: "https://studio.code.org/s/starwars"}
-          %button Try now
-      %div.starwars-button
-        %div ages 6 - 11
-        %button.disabled-button{disabled:"disabled"} Coming soon
+-tutorials = Tutorials.new(:tutorials)
 
-  %div.starwars-videos{style: "clear: both;"}
-    %h2 Before you get started, watch one of these inspirational videos.
-    =view :inspirational_videos
+%h2 &nbsp;
+
+#carousel-starwars
+  = view :learn_carousel_frozen, :tag=>'starwars', :tutorials=>tutorials, :id=>'collection-starwars', :second_panel_image=>'/images/fit-520/starwars_carousel_background.jpg'
+
+%div.starwars-videos{style: "clear: both;"}
+  %h2 Before you get started, watch one of these inspirational videos
+  =view :inspirational_videos
+
+%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+:javascript
+
+  // enable swipe on links by removing 'a' from excludedElements.
+  $.fn.swipe.defaults.excludedElements = "label, button, input, select, textarea, .noSwipe";
+
+  $(document).ready(function() {
+    createCarousels();
+  });
+
+  function createCarousels()
+  {
+    // Look for carousels and loop through them.
+    $.each($('.course-carousel'), function() {
+      // Get the ID of the carousel.
+      var id = '#' + $(this).attr('id');
+
+      // Define the carousel using the ID.
+      $(id + ' .slides').carouFredSel({
+        auto  : false,
+        responsive : true,
+        prev  : id + ' .slide-prev',
+        next  : id + ' .slide-next',
+        pagination : '#pagination-' + $(this).attr('id'),
+        swipe : {
+          onTouch : true,
+          onMouse : false
+        },
+        items :  {
+          visible : 1,
+          height: "variable"
+        },
+        onCreate: function() {
+          var match = id + " .slide.clear"
+          $(match).show();
+          $(id).fadeTo(500, 1.0);
+        }
+      });
+    });
+  }
+
+  $(window).load(function(){
+    $(window).trigger('resize');
+  })
+
+= view 'add_commas.js'
+%script{:src=>'/js/learn-metrics.js'}
