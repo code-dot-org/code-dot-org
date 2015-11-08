@@ -6,7 +6,7 @@ requires_hoc_secret:
 - rule:
   where:
     script_name: edit-code
-  value: true
+  value: false
 puzzle_rating:
 - rule:
   where:
