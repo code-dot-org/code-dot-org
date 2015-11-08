@@ -496,6 +496,8 @@ en:
       body: "View a gallery of app and artist images created by our users"
     frozen:
       title: "Frozen"
+    starwars:
+      title: "Star Wars"
     infinity:
       title: "Infinity Play Lab"
       body: "Use Play Lab to create a story or game starring Disney Infinity characters."
