@@ -4,10 +4,15 @@ require 'sass/plugin/rack'
 require 'dynamic_config/dcdo'
 
 class SharedResources < Sinatra::Base
-  DEFAULT_STATIC_PROXY_MAX_AGE = 18000
-  DEFAULT_STATIC_MAX_AGE = DEFAULT_STATIC_PROXY_MAX_AGE * 2
 
   use Sass::Plugin::Rack
+
+  # Use dynamic config for max_age settings, with the provided default as fallback.
+  def self.set_max_age(type, default)
+    set "#{type}_max_age", Proc.new { [:development, :staging].include?(rack_env) ? 0 : DCDO.get("pegasus_#{type}_max_age", default) }
+  end
+
+  ONE_HOUR = 3600
 
   configure do
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
@@ -16,6 +21,10 @@ class SharedResources < Sinatra::Base
 
     set :image_extnames, ['.png','.jpeg','.jpg','.gif']
     set :javascript_extnames, ['.js']
+    set_max_age :image, ONE_HOUR * 10
+    set_max_age :image_proxy, ONE_HOUR * 5
+    set_max_age :static, ONE_HOUR * 10
+    set_max_age :static_proxy, ONE_HOUR * 5
   end
 
   before do
@@ -25,25 +34,17 @@ class SharedResources < Sinatra::Base
   end
 
   helpers do
-    def image_max_age
-      [:development, :staging].include?(rack_env) ? 0 : DCDO.get('pegasus_image_max_age', DEFAULT_STATIC_MAX_AGE)
-    end
-
-    def image_proxy_max_age
-      [:development, :staging].include?(rack_env) ? 0 : DCDO.get('pegasus_image_proxy_max_age', DEFAULT_STATIC_PROXY_MAX_AGE)
-    end
-
-    def static_max_age
-      [:development, :staging].include?(rack_env) ? 0 : DCDO.get('pegasus_static_max_age', DEFAULT_STATIC_MAX_AGE)
-    end
-
-    def static_proxy_max_age
-      [:development, :staging].include?(rack_env) ? 0 : DCDO.get('pegasus_static_proxy_max_age', DEFAULT_STATIC_PROXY_MAX_AGE)
-    end
-
     def cache_for(seconds, proxy_seconds=nil)
       proxy_seconds ||= seconds / 2
       cache_control(:public, :must_revalidate, max_age: seconds, s_maxage: proxy_seconds)
+    end
+
+    # Sets caching headers based on the document type,
+    # based on the :x_max_age and :x_proxy_max_age Sinatra settings.
+    def cache(type)
+      max_age = settings.method("#{type}_max_age").call
+      proxy_max_age = settings.method("#{type}_proxy_max_age").call
+      cache_for(max_age, proxy_max_age)
     end
   end
 
@@ -56,7 +57,7 @@ class SharedResources < Sinatra::Base
     end
 
     content_type :css
-    cache_for static_max_age, static_proxy_max_age
+    cache :static
     send_file(path)
   end
 
@@ -69,14 +70,14 @@ class SharedResources < Sinatra::Base
 
     if File.file?(path)
       content_type extname[1..-1].to_sym
-      cache_for static_max_age, static_proxy_max_age
+      cache :static
       send_file(path)
     end
 
     erb_path = "#{path}.erb"
     if File.file?(erb_path)
       content_type extname[1..-1].to_sym
-      cache_for static_max_age, static_proxy_max_age
+      cache :static
       return ERB.new(IO.read(erb_path)).result
     end
 
@@ -121,7 +122,7 @@ class SharedResources < Sinatra::Base
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
       content_type image_format.to_sym
-      cache_for image_max_age, image_proxy_max_age
+      cache :image
       send_file(path)
     else
       image = Magick::Image.read(path).first
@@ -170,7 +171,7 @@ class SharedResources < Sinatra::Base
     image.format = image_format
 
     content_type image_format.to_sym
-    cache_for image_max_age, image_proxy_max_age
+    cache :image
     image.to_blob
   end
 
