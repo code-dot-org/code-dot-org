@@ -2,8 +2,13 @@ def dont_cache
   cache_control(:private, :must_revalidate, max_age: 0)
 end
 
+def cache_for(seconds, proxy_seconds=nil)
+  proxy_seconds ||= seconds / 2
+  cache_control(:public, :must_revalidate, max_age: seconds, s_maxage: proxy_seconds)
+end
+
 def cache_one_hour
-  cache_control(:public, max_age: 3600)
+  cache_for 3600
 end
 
 def no_content()
