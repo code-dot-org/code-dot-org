@@ -23,7 +23,7 @@ Positions an element at an *x,y* screen coordinate, and optionally sets a new *w
 
 [/short_description]
 
-Your app sometimes needs to move, and possibly resize, the UI elements on a screen. All UI elements (button(), textInput(), textLabel(), dropDown(), checkBox(), radioButton(), image()), can be moved and resized. It is usually easier to place UI elements in their initial positions, with initial sizes, using Design mode in App Lab.
+Your app sometimes needs to move, and possibly resize, the UI elements on a screen. All UI elements (button(), textInput(), textLabel(), dropDown(), checkBox(), radioButton(), image()), can be moved and resized. It is usually easier to place UI elements in their initial positions, with initial sizes, using Design mode in App Lab. In Design mode you can also specify font size, font color and background color for UI elements.
 
 [/description]
 
@@ -51,7 +51,7 @@ ____________________________________________________
 image("id", "gingerbread-man-running.jpg");
 onEvent("id", "mouseover", function(event){
   var newSize=randomNumber(50,100);
-  setPosition("id", randomNumber(0,320), randomNumber(0,320), newSize, newSize);
+  setPosition("id", randomNumber(0,320), randomNumber(0,450), newSize, newSize);
 });
 ```
 
