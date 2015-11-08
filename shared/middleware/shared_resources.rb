@@ -98,6 +98,7 @@ class SharedResources < Sinatra::Base
       path = resolve_image File.join(dirname, basename)
     end
     pass unless path # No match at any resolution.
+    last_modified(File.mtime(path))
 
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
