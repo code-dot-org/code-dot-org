@@ -12,6 +12,7 @@ require 'net/scp'
 require 'io/console'
 require 'json'
 require 'set'
+require 'thread'
 
 # A map from a supported environment to the corresponding Chef role to use for
 # that environment.
@@ -23,6 +24,9 @@ ROLE_MAP = {
 # Wait no longer than 10 minutes for instance creation. Typically this takes a
 # couple minutes.
 MAX_WAIT_TIME = 600
+
+# Define a mutext to keep output blocks from different threads from getting too jumped.
+OUTPUT_MUTEX = Mutex.new
 
 class InstanceProvisioningInfo
   attr_accessor :name, :zone, :result, :public_dns, :private_dns
@@ -273,9 +277,12 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
   instance_provisioning_info.private_dns = private_dns_name
   instance_provisioning_info.public_dns = public_dns_name
 
-  print "\nCreated instance #{instance_id} with name #{instance_provisioning_info.name}\n"
-  print "Private dns name: #{private_dns_name}\n\n"
-  puts "Writing new configuration file\n"
+
+  OUTPUT_MUTEX.synchronize {
+    print "\nCreated instance #{instance_id} with name #{instance_provisioning_info.name}\n"
+    print "Private dns name: #{private_dns_name}\n\n"
+    puts "Writing new configuration file\n"
+  }
 
   file_suffix = rand(100000000)
 
@@ -316,10 +323,12 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
     print ssh_cmd + "\n"
     precompile_result = `#{ssh_cmd}`
     if $?.success?
-      print "\n--------------------------------------------------------\n"
-      print "Dashboard listening at: http://#{public_dns_name}:8080\n"
-      print "Pegasus listening at:   http://#{public_dns_name}:8081\n"
-      print "To ssh to server:       ssh gateway.code.org -t ssh #{private_dns_name}\n"
+      OUTPUT_MUTEX.synchronize {
+        print "\n--------------------------------------------------------\n"
+        print "Dashboard listening at: http://#{public_dns_name}:8080\n"
+        print "Pegasus listening at:   http://#{public_dns_name}:8081\n"
+        print "To ssh to server:       ssh gateway.code.org -t ssh #{private_dns_name}\n"
+      }
     else
       print "Error precompiling assets\n"
       print precompile_result + "\n"
