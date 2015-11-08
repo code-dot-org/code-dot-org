@@ -2,7 +2,7 @@ requires_hoc_secret:
 - rule:
   where:
     script_name: starwars
-  value: true
+  value: false
 - rule:
   where:
     script_name: edit-code
