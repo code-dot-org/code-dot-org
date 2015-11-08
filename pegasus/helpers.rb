@@ -18,6 +18,11 @@ def dont_cache()
   cache_control(:private, :must_revalidate, max_age: 0)
 end
 
+def cache_for(seconds, proxy_seconds=nil)
+  proxy_seconds ||= seconds / 2
+  cache_control(:public, :must_revalidate, max_age: seconds, s_maxage: proxy_seconds)
+end
+
 def canonical_hostname(domain)
   CDO.canonical_hostname(domain)
 end
