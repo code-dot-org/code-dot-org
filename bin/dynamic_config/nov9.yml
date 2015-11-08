@@ -32,3 +32,8 @@ hint_view_request:
   where:
     script_name: starwars
   value: false
+hoc_activity_writes_disabled:
+- rule:
+  where:
+    script_name: starwars
+  value: true
