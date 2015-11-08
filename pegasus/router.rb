@@ -33,10 +33,6 @@ def http_vary_add_type(vary,type)
   types.push(type).join(',')
 end
 
-def document_max_age
-  rack_env?(:staging) ? 0 : DCDO.get('pegasus_document_max_age', 3600)
-end
-
 class Documents < Sinatra::Base
 
   def self.get_head_or_post(url,&block)
@@ -68,6 +64,13 @@ class Documents < Sinatra::Base
   use Rack::CdoDeflater
   use Rack::UpgradeInsecureRequests
 
+  # Use dynamic config for max_age settings, with the provided default as fallback.
+  def self.set_max_age(type, default)
+    set "#{type}_max_age", Proc.new { rack_env?(:staging) ? 0 : DCDO.get("pegasus_#{type}_max_age", default) }
+  end
+
+  ONE_HOUR = 3600
+
   configure do
     dir = pegasus_dir('sites.v3')
     set :launched_at, Time.now
@@ -75,8 +78,12 @@ class Documents < Sinatra::Base
     set :views, dir
     set :image_extnames, ['.png','.jpeg','.jpg','.gif']
     set :exclude_extnames, ['.collate']
-    set :image_max_age, rack_env?(:staging) ? 0 : 36000
-    set :static_max_age, rack_env?(:staging) ? 0 : 36000
+    set_max_age :document, ONE_HOUR * 4
+    set_max_age :document_proxy, ONE_HOUR * 2
+    set_max_age :image, ONE_HOUR * 10
+    set_max_age :image_proxy, ONE_HOUR * 5
+    set_max_age :static, ONE_HOUR * 10
+    set_max_age :static_proxy, ONE_HOUR * 5
     set :read_only, CDO.read_only
     set :not_found_extnames, ['.not_found','.404']
     set :redirect_extnames, ['.redirect','.moved','.found','.301','.302']
@@ -148,7 +155,7 @@ class Documents < Sinatra::Base
   get %r{^/lang/([^/]+)/?(.*)?$} do
     lang, path = params[:captures]
     pass unless DB[:cdo_languages].first(code_s: lang)
-    cache_control :private, :must_revalidate, max_age: 0
+    dont_cache
     response.set_cookie('language_', {value: lang, domain: ".#{request.site}", path: '/', expires: Time.now + (365*24*3600)})
     redirect "/#{path}"
   end
@@ -167,7 +174,7 @@ class Documents < Sinatra::Base
   # Static files
   get '*' do |uri|
     pass unless path = resolve_static('public', uri)
-    cache_control :public, :must_revalidate, max_age: settings.static_max_age
+    cache :static
     send_file(path)
   end
 
@@ -179,7 +186,7 @@ class Documents < Sinatra::Base
       IO.read(i)
     end.join("\n\n")
     last_modified(css_last_modified) if css_last_modified > Time.at(0)
-    cache_control :public, :must_revalidate, max_age: settings.static_max_age
+    cache :static
     css
   end
 
@@ -229,7 +236,7 @@ class Documents < Sinatra::Base
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
       content_type image_format.to_sym
-      cache_control :public, :must_revalidate, max_age: settings.image_max_age
+      cache :image
       send_file(path)
     else
       image = Magick::Image.read(path).first
@@ -278,7 +285,7 @@ class Documents < Sinatra::Base
     image.format = image_format
 
     content_type image_format.to_sym
-    cache_control :public, :must_revalidate, max_age: settings.image_max_age
+    cache :image
     image.to_blob
   end
 
@@ -368,9 +375,9 @@ class Documents < Sinatra::Base
       end
 
       if @header['max_age']
-        cache_control :public, :must_revalidate, max_age: @header['max_age']
+        cache_for @header['max_age']
       else
-        cache_control :public, :must_revalidate, max_age: document_max_age
+        cache :document
       end
 
       response.headers['X-Pegasus-Version'] = '3'
@@ -487,7 +494,7 @@ class Documents < Sinatra::Base
         end
         pass unless File.file?(cache_file)
 
-        cache_control :public, :must_revalidate, max_age: settings.static_max_age
+        cache :static
         send_file(cache_file)
       when '.md', '.txt'
         preprocessed = erb body, locals: locals
