@@ -5,62 +5,38 @@ theme: responsive
 
 %div{style: "clear:both"}
 
--tutorials = Tutorials.new(:tutorials)
+%h2 Star Wars: Building a Galaxy with Code
 
-%h2.desktop-feature &nbsp;
+.col-50{style: "position:relative; height:230px; padding:5px"}
+  %div{:style => "position:absolute; background-color: #437174; color:white; padding:20px; border-radius:5px; background-image: url(/images/fit-520/starwars_carousel_background.jpg); background-size: cover"}
+    %h1{:style => "margin-top:0px; margin-bottom:10px; color: white; "} JavaScript
+    %div{style: "height:100px"}
+      %p
+        Try
+        %span{style: "font-family: 'Gotham 7r', sans-serif;"}
+          Star Wars: Building a Galaxy with Code
+        using drag-drop blocks and JavaScript.
+      %p{style: "font-size: 12px"}
+        English only | Modern browsers | Ages 11+
+    %a{:href => CDO.studio_url('/s/starwars/reset'), :target=>'_blank'}
+      %button{:style => "font-size:18px; height:40px"}> Try now
 
-#carousel-starwars
-  = view :learn_carousel_special, :tag=>'starwars', :tutorials=>tutorials, :id=>'collection-starwars', :second_panel_image=>'/images/fit-520/starwars_carousel_background.jpg'
+.col-50{style: "position:relative; height:230px; padding:5px"}
+  %div{:style => "position:absolute; background-color:#70523c; color:white;  padding:20px; border-radius:5px; background-image: url(/images/fit-520/starwars_carousel_background.jpg); background-size: cover"}
+    %h1{:style => "margin-top:0px; margin-bottom:10px; color: white; "} Blocks
+    %div{style: "height:100px"}
+      %p
+        Try
+        %span{style: "font-family: 'Gotham 7r', sans-serif;"}
+          Star Wars: Building a Galaxy with Code
+        using drag-drop blocks.
+      %p{style: "font-size: 12px"}
+        Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+    %a{:href => '#'}
+      %button.disabled{disabled:"disabled", style: "font-size:18px; height:40px; background-color: #c6cacd; border-color: #c6cacd"} Coming soon
+
+%div{style: "clear:both"}
 
 %div.starwars-videos{style: "clear: both;"}
   %h2 Before you get started, watch one of these inspirational videos
   =view :inspirational_videos
-
-%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
-%script{:src=>'/js/jquery.touchSwipe.min.js'}
-:javascript
-
-  // enable swipe on links by removing 'a' from excludedElements.
-  $.fn.swipe.defaults.excludedElements = "label, button, input, select, textarea, .noSwipe";
-
-  $(document).ready(function() {
-    createCarousels();
-  });
-
-  function createCarousels()
-  {
-    // Look for carousels and loop through them.
-    $.each($('.course-carousel'), function() {
-      // Get the ID of the carousel.
-      var id = '#' + $(this).attr('id');
-
-      // Define the carousel using the ID.
-      $(id + ' .slides').carouFredSel({
-        auto  : false,
-        responsive : true,
-        prev  : id + ' .slide-prev',
-        next  : id + ' .slide-next',
-        pagination : '#pagination-' + $(this).attr('id'),
-        swipe : {
-          onTouch : true,
-          onMouse : false
-        },
-        items :  {
-          visible : 1,
-          height: "variable"
-        },
-        onCreate: function() {
-          var match = id + " .slide.clear"
-          $(match).show();
-          $(id).fadeTo(500, 1.0);
-        }
-      });
-    });
-  }
-
-  $(window).load(function(){
-    $(window).trigger('resize');
-  })
-
-= view 'add_commas.js'
-%script{:src=>'/js/learn-metrics.js'}
