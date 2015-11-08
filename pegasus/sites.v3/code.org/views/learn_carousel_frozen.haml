@@ -42,8 +42,22 @@
                   .slide-teachers-notes-link{style: "font-weight: 500; font-size: 12px; margin-top: 20px; padding-right: 0px;"}<
                     %a{:href=>tutorial[:teachers_notes], :target=>'blank'}<
                       = I18n.t(:teachers_notes_hoc)
-                %a{:href=>url, :target=>'_blank'}<
+
+                -# temporarily added for hoc2015
+                %div{style: "margin-top: 10px"}
+                  %span{style: "padding-top: 10px"}
+                    Ages 11-18+ &nbsp; &nbsp;
+                    %a{:href=>url, :target=>'_blank'}
+                      %button Try now
+                %div{style: "margin-top: 10px"}
+                  %span{style: "padding-top: 10px"}
+                    Ages 6-11 &nbsp; &nbsp;
+                    %button.disabled{disabled:"disabled", style: "background-color: #c6cacd; border-color: #c6cacd"} Coming soon
+
+                -# temporarily commented out for hoc2015
+                -#%a{:href=>url, :target=>'_blank'}<
                   .btn-carousel-slide=I18n.t(:go)
+
             -count += 1
 
         %a.slide-prev{:href=>'#'}<
