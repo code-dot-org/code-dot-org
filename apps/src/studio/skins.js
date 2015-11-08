@@ -621,6 +621,48 @@ function loadHoc2015(skin, assetUrl) {
     'applause'
   ];
 
+  skin.soundMetadata = [
+    {name: 'start', volume: 0.2},
+    {name: 'win', volume: 0.2},
+    {name: 'failure', volume: 0.2},
+    {name: 'flag', volume: 0.2},
+    {name: 'R2-D2sound1', volume: 0.2},
+    {name: 'R2-D2sound2', volume: 0.2},
+    {name: 'R2-D2sound3', volume: 0.2},
+    {name: 'R2-D2sound4', volume: 0.2},
+    {name: 'R2-D2sound5', volume: 0.2},
+    {name: 'R2-D2sound6', volume: 0.2},
+    {name: 'R2-D2sound7', volume: 0.2},
+    {name: 'R2-D2sound8', volume: 0.2},
+    {name: 'R2-D2sound9', volume: 0.2},
+    {name: 'C-3POsound1', volume: 0.2},
+    {name: 'C-3POsound2', volume: 0.2},
+    {name: 'C-3POsound3', volume: 0.2},
+    {name: 'C-3POsound4', volume: 0.2},
+    {name: 'PufferPigSound1', volume: 0.2},
+    {name: 'PufferPigSound2', volume: 0.2},
+    {name: 'PufferPigSound3', volume: 0.2},
+    {name: 'PufferPigSound4', volume: 0.2},
+    {name: 'TauntaunSound1', volume: 0.2},
+    {name: 'TauntaunSound2', volume: 0.2},
+    {name: 'TauntaunSound3', volume: 0.2},
+    {name: 'TauntaunSound4', volume: 0.2},
+    {name: 'MynockSound1', volume: 0.2},
+    {name: 'MynockSound2', volume: 0.2},
+    {name: 'MynockSound3', volume: 0.2},
+    {name: 'ProbotSound1', volume: 0.2},
+    {name: 'ProbotSound2', volume: 0.2},
+    {name: 'ProbotSound3', volume: 0.2},
+    {name: 'MouseDroidSound1', volume: 0.2},
+    {name: 'MouseDroidSound2', volume: 0.2},
+    {name: 'MouseDroidSound3', volume: 0.2},
+    {name: 'alert1', volume: 0.2},
+    {name: 'alert2', volume: 0.2},
+    {name: 'alert3', volume: 0.2},
+    {name: 'alert4', volume: 0.2},
+    {name: 'applause', volume: 0.2}
+  ];
+
   skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
   // Normally the sound isn't played for the final goal, but this forces it
