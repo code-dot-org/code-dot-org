@@ -1,5 +1,4 @@
 id_s!,type_s,text1_s,param1_s,param2_s,param3_s,param4_s,watermark_s,image_t,site_s,active_s,language_supported_s
-hero_girlpower,widehero,,50% 40%,student,bottom,,,/images/homepage/girl2.jpg,both,show,all
 hero_starwars,widehero,,15% 30%,celeba,bottom,,,/images/homepage/starwars.jpg,both,show,all
 hero_stat_loc,widehero,homepage_hero_text_stat_loc,50% 40%,stat,bottom,,,/images/homepage/girl2.jpg,both,nah,all
 hero_stat_students,widehero,homepage_hero_text_stat_students,50% 30%,stat,bottom,,,/images/homepage/girl6.jpg,both,nah,all
@@ -25,8 +24,8 @@ action_hoc_title_i18n,action,homepage_slot_text_link_hoc,hoc_title,,,,,,code.org
 action_num_served_i18n,action,homepage_slot_text_link_hocserved,num_served,,,,,,code.org,show,not en
 action_hoc_buttons_i18n,action,cded_sign_up,hoc_buttons,cded_try_it,https://hourofcode.com,/learn,,,code.org,show,not en
 action_codevideo,action,homepage_action_text_codevideo,video,2DxWIxec6yo,,,,,code.org,nah,all
-action_girlvideo,action,homepage_action_text_girlvideo,video,73RzrDKFnCU,,,,,code.org,show,en
-action_girlvideo_i18n,action,homepage_action_text_teachervideo,video,73RzrDKFnCU,,,,,code.org,show,not en
+action_girlvideo,action,homepage_action_text_girlvideo,video,BvRvluhfzf0,,,,,code.org,show,en
+action_girlvideo_i18n,action,homepage_action_text_teachervideo,video,BvRvluhfzf0,,,,,code.org,show,not en
 action_teachervideo,action,homepage_action_text_teachervideo,video,rH7AjDMz_dc,,,,,csedweek.org,show,all
 action_volunteers,action,homepage_action_text_volunteers,volunteers,,,,,,code.org,show,en
 action_learn,action,homepage_action_text_learn,learn,,,,,,both,show,all
