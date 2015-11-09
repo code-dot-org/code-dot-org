@@ -3402,8 +3402,8 @@ Studio.animateClouds = function() {
   for (var i = 0; i < skin[Studio.background].clouds.length; i++) {
     var location = Studio.getCloudLocation(i);
     var cloud = document.getElementById('cloud' + i);
-    cloud.setAttribute('x', location.x);
-    cloud.setAttribute('y', location.y);
+    cloud.setAttribute('x', Math.round(location.x));
+    cloud.setAttribute('y', Math.round(location.y));
   }
 };
 
