@@ -661,7 +661,6 @@ applabCommands.drawImageURL = function (opts) {
 
   var jsInterpreter = Applab.JSInterpreter;
   var callback = function (success) {
-    // TODO - pass params?
     if (opts.callback) {
       queueCallback(jsInterpreter, opts.callback, [success]);
     }
