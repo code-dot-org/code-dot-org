@@ -10,6 +10,7 @@
 
 require 'yaml'
 require 'oj'
+require 'set'
 
 module DCDOLoader
   # Validates that setting has the right format
@@ -17,7 +18,7 @@ module DCDOLoader
   # @param value [Object]
   def self.validate_setting(key, value)
     raise ArgumentError, "keys must be a string" unless key.is_a? String
-    if value.is_a?(Array) && value[0].is_a?(Hash) && value[0].key?("rule")
+    if value.is_a?(Array) && value[0].is_a?(Hash) && Set.new(value[0].keys) == Set.new(['where', 'value'])
       raise "Did you accidentally apply a gatekeeper config to dcdo?"
     end
     Oj.dump(value, :mode => :strict)
