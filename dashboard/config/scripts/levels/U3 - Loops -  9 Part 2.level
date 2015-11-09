@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-11-04T19:25:26.000Z",
+  "created_at": "2015-11-05T20:03:17.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -51,12 +51,12 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
+    "markdown_instructions": "# Boolean Operators in While Loops Part 2\r\n\r\nWe just saw that you can create more complex boolean expressions for our while loops just like our for loops. Lets try something a little more complex. \r\n\r\nRight now this code rolls two dice as long as either one of them is less than 3.   Modify the condition so that both dice have to be greater than 3 for the loop to stop.\r\n\r\n# Do This\r\n\r\n* **Change the boolean expression** for the while loop so that it will roll until both dice are greater than 3. **Hint:** A NOT( `!`) operator might be helpful for this one.",
+    "start_blocks": "var die1 = -1 \r\nvar die2 = -1\r\nwhile( die1 <= 3 && die2 <= 3){ \r\n  die1 = randomNumber(1,6);\r\n  die2 = randomNumber(1,6);\r\n  write(\"rolled a \"+die1+\" and a \"+die2);\r\n}\r\nwrite(\"Done.\");",
     "encrypted_examples": [
 
     ],
-    "markdown_instructions": "# Boolean Operators in While Loops\r\n\r\nWe can create compound boolean expressions to control our *while* loops just like our *if* statements. Let's try using boolean operators in our while loop condition.\r\n\r\n# Do This\r\n\r\n* Right now this code rolls two dice as long as either one of them is less than 3.  **Modify the condition so that it keeps rolling as long as both are less than 3.**\r\n\r\n* **HINT:** To say that both dice are less than 3 the boolean expression must say: if die1 less-than-or-equal-to 3 AND die2 less-than-or-equal to 3...\r\n",
-    "start_blocks": "var die1 = -1 \r\nvar die2 = -1\r\nwhile( die1 <= 3 && die2 <= 3){ \r\n  die1 = randomNumber(1,6);\r\n  die2 = randomNumber(1,6);\r\n  write(\"rolled a \"+die1+\" and a \"+die2);\r\n}\r\nwrite(\"Done.\");",
-    "instructions": " Modify the condition so that it keeps rolling as long as both are less than 3. (Click to see full instructions)"
+    "instructions": "Change the boolean expression for the while loop so that it will roll until both dice are greater than 3. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

@@ -16,7 +16,8 @@
         ]
       },
       "declareNoAssign_x": null,
-      "assign_x": null
+      "assign_x": null,
+      "write": null
     },
     "edit_code": true,
     "embed": "false",
@@ -45,10 +46,12 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "encrypted_examples": [
 
-    ]
+    ],
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

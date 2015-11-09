@@ -1,32 +1,38 @@
-<Maze>
+<Karel>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2015-10-30T22:33:20.000Z",
+  "created_at": "2015-11-05T21:00:30.000Z",
   "level_num": "custom",
-  "user_id": 63,
+  "user_id": 1,
   "properties": {
-    "skin": "scrat",
-    "maze": "[[0,1,1,1,1,1,1,1],[0,1,4,0,0,4,4,1],[1,1,1,3,1,1,0,1],[1,1,0,0,4,1,0,1],[1,1,0,0,4,1,1,1],[1,1,1,1,1,1,4,1],[1,0,0,1,0,0,0,1],[1,1,1,1,1,1,1,2]]",
+    "skin": "bee",
+    "maze": "[[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,2,1,1],[1,1,1,1,1,1,1,1]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,-16,-14,-12,-10,-8,0,0],[0,-14,-12,-10,-8,-6,0,0],[0,-12,-10,-8,-6,-4,0,0],[0,-10,-8,-6,-4,-2,0,0],[0,-8,-6,-4,-2,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
-    "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
-    "disable_param_editing": "true",
-    "disable_variable_editing": "false",
-    "use_modal_function_editor": "false",
+    "skip_instructions_popup": "true",
+    "disable_param_editing": "false",
+    "disable_variable_editing": "true",
+    "start_direction": "0",
+    "step_mode": "1",
+    "nectar_goal": "0",
+    "flower_type": "redWithNectar",
+    "ideal": "25",
+    "instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!",
+    "use_modal_function_editor": "true",
     "use_contract_editor": "false",
+    "honey_goal": "200",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
-    "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "start_direction": "0",
-    "step_mode": "1",
-    "ideal": "10",
-    "step_speed": "2",
-    "instructions": "No rules. No clues. Just the challenge!",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "fast_get_nectar_animation": "true",
+    "step_speed": "1",
     "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!",
     "maze_data": null
   }
@@ -34,7 +40,8 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
+        <block type="when_run" deletable="false" movable="false">
+  </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -49,6 +56,8 @@
           <block type="maze_turn">
             <title name="DIR">turnRight</title>
           </block>
+          <block type="maze_nectar"/>
+          <block type="maze_honey"/>
         </category>
         <category name="Loops">
           <block type="controls_repeat_ext" inline="true">
@@ -62,28 +71,28 @@
             <title name="VAR">counter</title>
             <value name="FROM">
               <block type="math_number">
-                <title name="NUM">3</title>
+                <title name="NUM">1</title>
               </block>
             </value>
             <value name="TO">
               <block type="math_number">
-                <title name="NUM">30</title>
+                <title name="NUM">10</title>
               </block>
             </value>
             <value name="BY">
               <block type="math_number">
-                <title name="NUM">10</title>
+                <title name="NUM">1</title>
               </block>
             </value>
           </block>
           <block type="variables_get">
             <title name="VAR">counter</title>
           </block>
+          <block type="variables_get">
+            <title name="VAR">counter2</title>
+          </block>
         </category>
         <category name="Logic">
-          <block type="maze_if">
-            <title name="DIR">isPathLeft</title>
-          </block>
           <block type="controls_if" inline="false">
             <mutation else="1"/>
             <value name="IF0">
@@ -102,11 +111,11 @@
               </block>
             </value>
           </block>
+          <block type="bee_ifFlower" id="Flower">
+            <title name="LOC">atFlower</title>
+          </block>
         </category>
         <category name="Math">
-          <block type="math_number">
-            <title name="NUM">0</title>
-          </block>
           <block type="math_arithmetic" inline="true">
             <title name="OP">ADD</title>
             <value name="A">
@@ -120,9 +129,21 @@
               </block>
             </value>
           </block>
+          <block type="math_number">
+            <title name="NUM">0</title>
+          </block>
         </category>
-        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Variables">
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">counter2</title>
+          </block>
+        </category>
+        <category name="Functions">
+  </category>
       </xml>
     </toolbox_blocks>
   </blocks>
-</Maze>
+</Karel>

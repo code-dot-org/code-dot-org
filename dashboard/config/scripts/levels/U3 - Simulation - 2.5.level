@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-11-04T20:02:30.000Z",
+  "created_at": "2015-11-06T05:33:18.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -115,13 +115,13 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
+    "instructions": "Run your simulation to get the full 10,000 flips! How long did it take? (Click to see full instructions)",
+    "markdown_instructions": "# 10,000 Heads!\r\n\r\nYou're ready to increase the number of heads your simulation is looking for and **test your first hypothesis**. Before we move up to the full 10,000 heads, however, we're going to perform a quick check of our program logic.  When you make changes to your program **it is possible that some portion of your programming logic will stop working as you expected**. In order to feel more confident about your model you will **first change the number of heads you are looking for to a number that we can still visually verify (7 heads)**. If our code still works after making changes then we should confident that it should work at 10,000. We will remove the intermediate output and run the full simulation!\r\n\r\n# Do This\r\n\r\n* **Increase the number of heads you are looking for to 7** and **visually confirm** that the code is still working as you expect.\r\n* If everything seems to be working, **comment out the write command that displays the results of each flip.** Make sure that the total count of flips still prints though!\r\n* **Run your simulation and find out how long it takes to get to 10,000 heads**. Then run it a few more times. What patterns are you noticing? Record your results and move on.",
+    "slider_speed": "1",
+    "project_template_level_name": "U3 - Simulation - Template",
     "encrypted_examples": [
 
-    ],
-    "instructions": "Keep track of how many heads (1s) your program generates and print the results to the screen. (Click to see full instructions)",
-    "markdown_instructions": "# Counting Heads\r\n\r\nLet's say that a **1 is a heads**. If want our simulation to run until we reach a certain number of heads then **we will need a way to count the number of heads that have been flipped**. In order to do this you will need to add a variable that acts **as a counter**. Initialize it to 0, and every time you flip a heads (1) **increment your counter by 1**. At the end of your program you should write the value to the screen.\r\n\r\n# Do This\r\n\r\n* Add a variable that **counts the number of heads (1s)** and write its value to the screen after each flip.\r\n* Run your program severals times **and validate that the number of heads recorded is correct** by visually checking the flips you've printed to the screen.\r\n* **Hint:** you will likely need to store your current coin flip in a variable to complete this challenge.\r\n\r\n![](https://images.code.org/0d99569cd223c63e2166d610d09fd525-image-1446859813702.gif)",
-    "slider_speed": "1",
-    "project_template_level_name": "U3 - Simulation - Template"
+    ]
   }
 }]]></config>
   <blocks/>

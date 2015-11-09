@@ -50,7 +50,7 @@
           <block type="maze_turn">
             <title name="DIR">turnRight</title>
           </block>
-          <block type="maze_nectar"/>
+          <block type="maze_honey"/>
         </category>
         <category name="Loops">
           <block type="controls_repeat_ext" inline="true">
