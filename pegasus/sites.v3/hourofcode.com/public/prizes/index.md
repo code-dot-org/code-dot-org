@@ -64,7 +64,7 @@ In honor of Hour of Code tutorial "Star Wars: Building a Galaxy with Code," 100 
 <p style="clear:both; height: 0px;">&nbsp;</p>
 
 ## 100 classrooms will win a set of programmable robots by Sphero
-100 participating classrooms in the United States or Canada will win a set of Sphero 2.0 robots (each set includes four) that students can program. Sign up your Hour of Code event to qualify. [Learn more about Sphero education]((http://sphero.com/education). 
+100 participating classrooms in the United States or Canada will win a set of Sphero 2.0 robots (each set includes four) that students can program. Sign up your Hour of Code event to qualify. [Learn more about Sphero education](http://sphero.com/education). 
 
 <img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-300x160/sphero-robot.png"/>
 

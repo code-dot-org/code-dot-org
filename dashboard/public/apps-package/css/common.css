@@ -166,7 +166,8 @@ button.arrow:disabled {
 #soft-buttons {
   display: inline-block;
   vertical-align: top;
-  margin-left: -5px; }
+  margin-left: -5px;
+  -webkit-touch-callout: none; }
   #soft-buttons.soft-buttons-none {
     display: none; }
 

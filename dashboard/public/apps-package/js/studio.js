@@ -8671,7 +8671,7 @@ levels.js_hoc2015_move_right = {
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000]],
 
-  'instructions': '"We need that scrap metal. BB-8, can you get it?"',
+  instructions: msg.hoc2015_move_right_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutFailureTick': 100,
   'timeoutAfterWhenRun': true,
@@ -8736,7 +8736,7 @@ levels.js_hoc2015_move_right_down = {
      [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
-  'instructions': '"We need more scrap metal. Can you get all the metal in this area?"',
+  instructions: msg.hoc2015_move_right_down_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -8784,7 +8784,7 @@ levels.js_hoc2015_move_diagonal = {
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x20],
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x00]],
   'embed': 'false',
-  'instructions': '"Watch out for the Bandit!"',
+  instructions: msg.hoc2015_move_diagonal_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -8855,7 +8855,7 @@ levels.js_hoc2015_move_backtrack = {
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
-  'instructions': '"Go quickly, BB-8."',
+  instructions: msg.hoc2015_move_backtrack_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -8903,7 +8903,7 @@ levels.js_hoc2015_move_around = {
      [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000020, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
   'embed': 'false',
-  'instructions': '"It\'s up to you, BB-8!"',
+  instructions: msg.hoc2015_move_around_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -8952,7 +8952,7 @@ levels.js_hoc2015_move_finale = {
      [0x00, 0x1010000, 0x1010000, 0x0000020, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
      [0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000]],
   'embed': 'false',
-  'instructions': '"We need 4 more pieces of metal. Can you find them?"',
+  instructions: msg.hoc2015_move_finale_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -9008,8 +9008,8 @@ levels.js_hoc2015_event_two_items = {
     [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00]],
   'pinWorkspaceToBottom': 'true',
   'embed': 'false',
-  'instructions': '"R2-D2, I need you to get a critical message to the Rebel Pilots."',
-  'instructions2': 'Make R2-D2 move when you use the arrow keys.',
+  instructions: msg.hoc2015_event_two_items_instructions(),
+  instructions2: msg.hoc2015_event_two_items_instructions2(),
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
   'goalOverride': {
@@ -9107,8 +9107,8 @@ levels.js_hoc2015_event_four_items = {
     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
     [0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00]],
   'embed': 'false',
-  'instructions': '"Get to all of the Rebel Pilots as quickly as you can."',
-  'instructions2': 'Move in all directions.',
+  instructions: msg.hoc2015_event_four_items_instructions(),
+  instructions2: msg.hoc2015_event_four_items_instructions2(),
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'goalOverride': {
@@ -9172,8 +9172,8 @@ levels.js_hoc2015_score =
     [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 1,  0, 0, 0, 0]],
-  'instructions': '"Reach the Rebel Pilots!"',
-  'instructions2': "Let's add points. Add 100 points when R2-D2 gets each Rebel Pilot.",
+  instructions: msg.hoc2015_score_instructions(),
+  instructions2: msg.hoc2015_score_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
@@ -9282,8 +9282,8 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
     [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
-  'instructions': '"Watch out for the Stormtroopers."',
-  'instructions2': 'Add 100 points when R2-D2 gets the Rebel Pilot.  Remove 100 points when he gets a Stormtrooper.  Now, avoid the Stormtroopers and get all the Rebel Pilots!',
+  instructions: msg.hoc2015_win_lose_instructions(),
+  instructions2: msg.hoc2015_win_lose_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -9371,8 +9371,8 @@ levels.js_hoc2015_add_characters = {
     [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 0,  0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"I\'m seeing signs of increased activity on this planet."',
-  'instructions2': 'Add three Puffer Pigs to the planet. Then, go get them.',
+  instructions: msg.hoc2015_add_characters_instructions(),
+  instructions2: msg.hoc2015_add_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -9448,8 +9448,8 @@ levels.js_hoc2015_chain_characters = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"They\'re multiplying!"',
-  'instructions2': 'Can you make two Mouse Droids appear every time R2-D2 gets one Mouse Droid?  Get 20 Mouse Droids and score 2000 points.',
+  instructions: msg.hoc2015_chain_characters_instructions(),
+  instructions2: msg.hoc2015_chain_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
@@ -9543,8 +9543,8 @@ levels.js_hoc2015_chain_characters_2 = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"It\'s up to you, R2-D2!"',
-  'instructions2': 'When you get a Tauntaun, two Mynocks appear. Can you make two Mouse Droids appear when you get a Mynock? Then, get them all.',
+  instructions: msg.hoc2015_chain_characters2_instructions(),
+  instructions2: msg.hoc2015_chain_characters2_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
@@ -9645,8 +9645,8 @@ levels.js_hoc2015_change_setting = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"Time to visit another planet."',
-  'instructions2': 'Use the new commands to change the map and speed.  Then, get the Rebel Pilots.',
+  instructions: msg.hoc2015_change_setting_instructions(),
+  instructions2: msg.hoc2015_change_setting_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -9680,15 +9680,10 @@ levels.js_hoc2015_change_setting = {
   ]
 };
 
-var js_hoc2015_event_free_character_instructions = '"You\'re on your own now, R2-D2."';
-var js_hoc2015_event_free_ooc_instructions = "You have all the tools you need " +
-    "now to create your own level. Feel free to explore and play with all " +
-    "the different Commands and Events. When you're done, press the Finish " +
-    "button to continue.";
 var js_hoc2015_event_free_markdown = [
-  '<span class="character-text">' + js_hoc2015_event_free_character_instructions + '</span>',
+  '<span class="character-text">' + msg.hoc2015_event_free_instructions() + '</span>',
   '',
-  '<span class="instructions2">' + js_hoc2015_event_free_ooc_instructions + '</span>',
+  '<span class="instructions2">' + msg.hoc2015_event_free_instructions2() + '</span>',
   '',
   '<details class="hoc2015">',
   '<summary>Example project ideas</summary>',
@@ -9800,8 +9795,8 @@ levels.js_hoc2015_event_free = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': js_hoc2015_event_free_character_instructions,
-  'instructions2': js_hoc2015_event_free_ooc_instructions,
+  'instructions': msg.hoc2015_event_free_instructions(),
+  'instructions2': msg.hoc2015_event_free_instructions2(),
   'markdownInstructions': js_hoc2015_event_free_markdown,
   'markdownInstructionsWithClassicMargins': true,
   'callouts': [
@@ -10132,6 +10127,8 @@ levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
 
 levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
   editCode: false,
+  markdownInstructions: null,
+  markdownInstructionsWithClassicMargins: false,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \

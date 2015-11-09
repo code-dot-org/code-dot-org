@@ -10,6 +10,7 @@ nav: pd2_nav
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
+- [I'm attending Counsleor/Administrator PD](#counselor-admin)
 
 <a id="csp"></a>
 ## Computer Science Principles
@@ -32,15 +33,15 @@ Quarter 4: Saturday, March 12, 2016
 Breakfast and lunch will be served.
 
 
-**September 26th Location**
+**December 5th Location**
 
 
 North Point High School
 <br/>
-Room 325<br/>
+Room 2322<br/>
 2500 Davis Rd<br/> Waldorf, MD 20603
 
-Free parking is available in front of the building, and also in the lot near the track.
+Free parking is available in front of the building, and  in the lot near the track.
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -147,7 +148,7 @@ Breakfast and lunch will be served.
 **Location**
 
 North Point High School<br/>
-Room 325<br/>
+Room 2322<br/>
 2500 Davis Road<br/> 
 Waldorf, MD 20603
 
@@ -181,10 +182,11 @@ Code.org has designed these computer science professional development (PD) progr
 Thursday, November 12, 2015 <br/>
 11:00am - 3:00pm
 
+
 **Location**
 
 Charles County Public Schools Central Office<br/>
-Room 325<br/>
+Staff Development Room<br/>
 5980 Radio Station Rd.<br/>
 La Plata MD 20646<br/>
 
@@ -204,7 +206,7 @@ Thursday, November 12, 2015 <br/>
 **Location**
 
 Charles County Public Schools Central Office<br/>
-Room 325<br/>
+Staff Development Room<br/>
 5980 Radio Station Rd.<br/>
 La Plata MD 20646<br/>
 

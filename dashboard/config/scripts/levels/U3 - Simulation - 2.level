@@ -114,12 +114,9 @@
     "beginner_mode": "true",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "true",
-    "encrypted_examples": [
-
-    ],
-    "instructions": "Keep track of how many heads (1s) your program generates and print the results to the screen.",
-    "markdown_instructions": "# Counting Heads\r\n\r\nWe're now going to start adding data collection functionality to our simulation. To begin with we want to calculate some simple piece of information about our coins. We're going to assume that a **1 is a heads** and so to begin we'll **count how many heads we've flipped**.\r\n\r\n# Do This\r\n\r\n* Add functionality to your app that allows it to **count the number of heads (1s)** and write it to the screen at the end of your program.\r\n* Run your program severals times **and validate that the number of heads recorded is correct**\r\n* **Hint:** you will likely need to use a few variables and an if-statement to complete this challenge.\r\n\r\n![](https://images.code.org/df78ce590341e3954ae4f5e6616bd79c-image-1446743438762.gif)",
+    "debugger_disabled": "false",
+    "instructions": "Keep track of how many heads (1s) your program generates and print the results to the screen. (Click to see full instructions)",
+    "markdown_instructions": "# Counting Heads\r\n\r\nLet's say that a **1 is a heads**. If want our simulation to run until we reach a certain number of heads then **we will need a way to count the number of heads that have been flipped**. In order to do this you will need to add a variable that acts **as a counter**. Initialize it to 0, and every time you flip a heads (1) **increment your counter by 1**. At the end of your program you should write the value to the screen.\r\n\r\n# Do This\r\n\r\n* Add a variable that **counts the number of heads (1s)** and write its value to the screen after each flip.\r\n* Run your program severals times **and validate that the number of heads recorded is correct** by visually checking the flips you've printed to the screen.\r\n* **Hint:** you will likely need to store your current coin flip in a variable to complete this challenge.\r\n\r\n![](https://images.code.org/0d99569cd223c63e2166d610d09fd525-image-1446859813702.gif)",
     "slider_speed": "1",
     "project_template_level_name": "U3 - Simulation - Template"
   }
