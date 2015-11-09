@@ -45,9 +45,6 @@
   border-color: #c6cacd;
 }
 
-.sw-tutorial-description {
-}
-
 .sw-tutorial-info {
   height: 100px;
 }
@@ -67,10 +64,10 @@
     width: 50%;
     float: left;
     height: 220px;
-	  padding: 5px;
+    padding: 5px;
     padding-top: 10px;
     position: static;
-	}
+  }
 
   .tutorial-box {
     background-image: url(/images/fit-520/starwars_carousel_background.jpg);
