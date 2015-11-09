@@ -66,7 +66,7 @@ class Documents < Sinatra::Base
 
   # Use dynamic config for max_age settings, with the provided default as fallback.
   def self.set_max_age(type, default)
-    set "#{type}_max_age", Proc.new { rack_env?(:staging) ? 0 : DCDO.get("pegasus_#{type}_max_age", default) }
+    set "#{type}_max_age", Proc.new { DCDO.get("pegasus_#{type}_max_age", rack_env?(:staging) ? 60 : default) }
   end
 
   ONE_HOUR = 3600
@@ -108,7 +108,8 @@ class Documents < Sinatra::Base
                  '/teacher-dashboard/sections',
                  '/teacher-dashboard/signin_cards',
                  '/teacher-dashboard/student',
-                 '/language_test']
+                 '/language_test',
+                 '/starwars']
     set :vary, { 'X-Varnish-Accept-Language'=>vary_uris, 'Cookie'=>vary_uris }
   end
 
