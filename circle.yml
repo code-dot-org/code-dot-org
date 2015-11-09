@@ -57,5 +57,5 @@ test:
         - while [ ! -e ~/sauce_is_ready ]; do sleep 1; done
         # Wait for app to be ready
         - curl --retry 10 --retry-delay 2 -v http://localhost:3000
-        - bundle exec ./runner.rb --dashboard localhost.studio.code.org:3000 --auto_retry --html:
+        - bundle exec ./runner.rb --dashboard localhost.studio.code.org:3000 -c ChromeLatestWin7 --auto_retry --html:
             pwd: dashboard/test/ui
