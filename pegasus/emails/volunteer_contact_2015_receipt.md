@@ -2,12 +2,13 @@
 <%
 def format_email_address(email, name='')
   name = "\"#{name.gsub('"', '\"').gsub("'","\\'")}\"" if name =~ /[;,\"\'\(\)]/
+  email = email.gsub(/'/, )
   "#{name} <#{email}>".strip
 end
 %>
-to: '<%= format_email_address(volunteer_email_s, volunteer_name_s) %>'
+to: <%= format_email_address(volunteer_email_s, volunteer_name_s).inspect %>
 from: 'Tanya Parker (Code.org) <tanya_parker@code.org>'
-reply-to: '<%= format_email_address(email_s, name_s) %>'
+reply-to: <%= format_email_address(email_s, name_s).inspect %>
 subject: "A teacher is requesting your help for the Hour of Code"
 ---
 
@@ -25,13 +26,13 @@ Hi <%= volunteer_name_s %>,
   <li> Skype into the classroom to say a few words of inspiration to the kids
 <% end %>
 <% if type_task_mentor_b %>
-  <li> be a mentor to help prepare him/her for coding with his/her students 
+  <li> be a mentor to help prepare him/her for coding with his/her students
 <% end %>
 </ul>
 
-We won't release your email directly to a teacher, so s/he's waiting for you to write back. 
+We won't release your email directly to a teacher, so s/he's waiting for you to write back.
 
-Most schools still don’t teach computer science. Most students don’t know that it’s about solving big problems and connecting us all closer together. This is your chance to inspire at least one young person in your area. If you are available to volunteer with this teacher, **please contact the teacher directly at [<%= email_s %>](<%= "mailto:" + email_s %>)**. 
+Most schools still don’t teach computer science. Most students don’t know that it’s about solving big problems and connecting us all closer together. This is your chance to inspire at least one young person in your area. If you are available to volunteer with this teacher, **please contact the teacher directly at [<%= email_s %>](<%= "mailto:" + email_s %>)**.
 
 Tanya Parker<br>
 Product Manager, Code.org
