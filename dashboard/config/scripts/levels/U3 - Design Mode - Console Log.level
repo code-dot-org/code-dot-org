@@ -54,7 +54,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Updating IDs and Debugging with Console Log\r\n\r\nIn the last level you tested out the new command: `console.log()`.  In this level we have a couple buttons with event handlers and `console.log` statements, but they are switched around!\r\n\r\nWe should have given the buttons better ID names so we could tell the difference based on the ID. **Can you update the ID names and `console.log()` messages to match the correct button? **\r\n\r\n# Do This\r\n\r\n* **Change the IDs** of the buttons in Design Mode to more descriptive names.\r\n\r\n* Switch to Code Mode and notice that the **ID pulldowns have been updated with the new IDs**.\r\n\r\n* **Update the `console.log()` messages** to match the buttons.\r\n",
+    "markdown_instructions": "# Updating IDs and Debugging with Console Log\r\n\r\nIn the last level you tested out the new command: `console.log()`.  In this level we have a couple buttons with event handlers and `console.log` statements, but they are switched around!\r\n\r\nWe should have given the buttons better ID names so we could tell the difference based on the ID. **Can you update the ID names and `console.log()` messages to match the correct button? **\r\n\r\n# Do This\r\n\r\n* **Change the IDs** of the buttons in Design Mode to more descriptive names.\r\n\r\n* Switch to Code Mode and notice that the **ID pulldowns have been updated to include the new IDs**. (You still need to select the correct ID from the pulldown menu.)\r\n\r\n* **Update the `console.log()` messages** to match the buttons.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -85,9 +85,8 @@
     "slider_speed": "1.0",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
-    "encrypted_examples": [
-
-    ]
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-11-04T19:30:39.000Z",
+  "created_at": "2015-11-05T20:10:20.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -51,9 +51,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Update the code to count up by 3 instead of 1. (Click to see full instructions)",
-    "markdown_instructions": "# Counting by More Than 1\r\n\r\nSometimes you want to count up by something other than 1. In that case we do need to use the form of `count = count + 1` where we can change 1 to be any number we want to count up by. The `++` and `--` operators only work for counting by one.\r\n\r\nLets try counting by 3. \r\n\r\n\r\n# Do This\r\n\r\n* **Starter Code: ** The program right now will count from 1 to 30.\r\n\r\n* **Update the code to count up by 3 instead of 1.** So it will say 3,6,9,12,15...",
-    "start_blocks": "var count = 0;\r\nwhile( count != 30){ \r\n  count = count+1;\r\n  console.log(count); \r\n}"
+    "markdown_instructions": "# Boolean Operators in While Loops Part 2\r\n\r\nWe just saw that you can create more complex boolean expressions for our while loops just like our for loops. Lets try something a little more complex. \r\n\r\n# English and logic can be tricky\r\nOften you think about looping in terms of a condition that should make it stop, rather than the condition that should make the loop continue.  But a condition to make the loop stop is the *logical inverse* of the condition to make it go, and trying to invert that logic can lead to tricky situations when writing code, but you'll get it.\r\n\r\nLet's try one!\r\n\r\n# Do This\r\n\r\nThe given code rolls two dice while either one of them is less than 3.  Try to convert this statement about when the loop should stop into a condition for a while loop....\r\n\r\n\"Modify the boolean expression in the code so that **both dice have to be greater than 3 for the loop to *stop***\"\r\n\r\n* **Try it out and experiment** - change the condition and run the program several times.  You should never see both dice have a value greater than 3 displayed.\r\n\r\n **Hint:** A NOT( `!`) operator might be helpful for this one.",
+    "start_blocks": "var die1 = -1 \r\nvar die2 = -1\r\nwhile( die1 <= 3 && die2 <= 3){ \r\n  die1 = randomNumber(1,6);\r\n  die2 = randomNumber(1,6);\r\n  write(\"rolled a \"+die1+\" and a \"+die2);\r\n}\r\nwrite(\"Done.\");",
+    "instructions": "Change the boolean expression for the while loop so that it will roll until both dice are greater than 3. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

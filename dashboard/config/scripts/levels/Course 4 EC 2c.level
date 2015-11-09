@@ -1,27 +1,27 @@
 <Karel>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2015-11-01T02:36:27.000Z",
+  "created_at": "2015-11-05T21:00:30.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
     "skin": "bee",
-    "maze": "[[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,2,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1]]",
-    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,2,0,4,0,0],[0,0,1,0,3,0,0,0],[0,0,0,2,3,0,0,0],[0,0,0,0,3,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,2,1,1],[1,1,1,1,1,1,1,1]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,-16,-14,-12,-10,-8,0,0],[0,-14,-12,-10,-8,-6,0,0],[0,-12,-10,-8,-6,-4,0,0],[0,-10,-8,-6,-4,-2,0,0],[0,-8,-6,-4,-2,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "disable_param_editing": "false",
     "disable_variable_editing": "true",
-    "start_direction": "2",
+    "start_direction": "0",
     "step_mode": "1",
-    "nectar_goal": "22",
+    "nectar_goal": "0",
     "flower_type": "redWithNectar",
-    "ideal": "20",
+    "ideal": "25",
     "instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "honey_goal": "0",
+    "honey_goal": "200",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -31,7 +31,8 @@
     "disable_examples": "false",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "fast_get_nectar_animation": "false",
+    "fast_get_nectar_animation": "true",
+    "step_speed": "1",
     "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!"
   }
 }]]></config>
@@ -86,6 +87,9 @@
           <block type="variables_get">
             <title name="VAR">counter</title>
           </block>
+          <block type="variables_get">
+            <title name="VAR">counter2</title>
+          </block>
         </category>
         <category name="Logic">
           <block type="controls_if" inline="false">
@@ -111,12 +115,32 @@
           </block>
         </category>
         <category name="Math">
+          <block type="math_arithmetic" inline="true">
+            <title name="OP">ADD</title>
+            <value name="A">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
           <block type="math_number">
             <title name="NUM">0</title>
           </block>
         </category>
-        <category name="Functions" custom="PROCEDURE"/>
-        <category name="Variables" custom="VARIABLE">
+        <category name="Variables">
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">counter2</title>
+          </block>
+        </category>
+        <category name="Functions">
   </category>
       </xml>
     </toolbox_blocks>
