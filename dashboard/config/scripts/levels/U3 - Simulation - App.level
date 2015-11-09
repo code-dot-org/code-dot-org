@@ -111,10 +111,17 @@
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
-    "beginner_mode": "false",
+    "beginner_mode": "true",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "# More Flips\r\n\r\nIf your code is working well for 10 flips then we should be reasonably confident that it will continue working for more. You will now want to **run your full simulation on 10,000 flips**.\r\n\r\nPrior to this we have been printing our output after every flip. This is a useful form of **debugging** but we will not want our programs to print 10,000 different coins flips. **We only want the final output**.\r\n\r\n# Do This\r\n\r\n* **Change your program to flip 20 coins** and visually verify that the values calculated are accurate\r\n* **Comment out** the lines of code that print each coin flip and the current streak count. You can use `//` to comment out a line of code.\r\n* **Change your program to flip 10,000 coins, predict what the longest streak will be, and run your program**.\r\n* Rerun it a few times. **Does the answer stay fairly consistent? Are you surprised by the result?**",
+    "instructions": "Change your code to run the full simulation with 10,000 coins. What was your longest streak of heads? (Click to see full instructions)",
+    "slider_speed": "1",
+    "project_template_level_name": "U3 - Simulation - Template"
   }
 }]]></config>
   <blocks/>
