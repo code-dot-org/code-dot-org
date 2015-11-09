@@ -108,7 +108,8 @@ class Documents < Sinatra::Base
                  '/teacher-dashboard/sections',
                  '/teacher-dashboard/signin_cards',
                  '/teacher-dashboard/student',
-                 '/language_test']
+                 '/language_test',
+                 '/starwars']
     set :vary, { 'X-Varnish-Accept-Language'=>vary_uris, 'Cookie'=>vary_uris }
   end
 
