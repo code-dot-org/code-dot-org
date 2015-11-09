@@ -395,7 +395,8 @@ var drawMap = function () {
       finishClipRect.setAttribute('width', spriteWidth);
       finishClipRect.setAttribute('height', spriteHeight);
       finishClipPath.appendChild(finishClipRect);
-      svg.appendChild(finishClipPath);
+      // Safari workaround: Clip paths work better when descendant of an SVGGElement.
+      spriteLayer.appendChild(finishClipPath);
 
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
@@ -2638,7 +2639,7 @@ Studio.execute = function() {
                                      'SPRITE2');
   }
 
-  studioApp.playAudio('start');
+  Studio.playSound({ soundName: 'start' });
 
   studioApp.reset(false);
 
@@ -2706,9 +2707,9 @@ Studio.onPuzzleComplete = function() {
   }
 
   if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
-    studioApp.playAudio('win');
+    Studio.playSound({ soundName: 'win' });
   } else {
-    studioApp.playAudio('failure');
+    Studio.playSound({ soundName: 'failure' });
   }
 
   var program;
@@ -3713,7 +3714,14 @@ Studio.playSound = function (opts) {
     throw new RangeError("Incorrect parameter: " + opts.soundName);
   }
 
-  Studio.throttledPlaySound(soundVal, { volume: 1.0 });
+  var skinSoundMetadata = utils.valueOr(skin.soundMetadata, []);
+  var playbackOptions = $.extend({
+    volume: 1.0
+  }, _.find(skinSoundMetadata, function (metadata) {
+    return metadata.name.toLowerCase().trim() === soundVal;
+  }));
+
+  Studio.throttledPlaySound(soundVal, playbackOptions);
   Studio.playSoundCount++;
 };
 
@@ -5183,7 +5191,7 @@ Studio.allGoalsVisited = function() {
       // overridden by the skin)
       if (playSound &&
           (finishedGoals !== Studio.spriteGoals_.length || skin.playFinalGoalSound)) {
-        studioApp.playAudio('flag');
+        Studio.playSound({ soundName: 'flag' });
       }
 
       if (skin.goalSuccess) {
