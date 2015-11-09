@@ -288,7 +288,7 @@ var projects = module.exports = {
         this.sourceHandler.setInitialLevelSource(current.levelSource);
         this.showMinimalProjectHeader();
       }
-    } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
+    } else if (appOptions.isLegacyShare && this.getCurrentApp()) {
       current = {
         name: 'Untitled Project'
       };
@@ -316,6 +316,8 @@ var projects = module.exports = {
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
+        } else if (appOptions.skinId === 'hoc2015' || appOptions.skinId === 'infinity') {
+          return null;
         }
         return 'playlab';
     }
