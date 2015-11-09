@@ -1,5 +1,6 @@
 name 'U3L14 - Message - basic mechanics of variables'
 title 'title'
+css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
@@ -12,7 +13,7 @@ We are going to take the **next two lessons** to learn about how to work with va
 * **Moving memory around**
  Get your hands dirty with some of the basic mechanics and properties of working with variables.
 
-* **Basic mechanices**
+* **Basic mechanics**
  To keep things simple we're going to on some bare-bones examples so you get the basic ideas behind creating and using memory through variables.  We'll primarily just be displaying text in the console rather than enhancing an app for now.
 
 * **Establishing a good 'mental model' for working with variables**

@@ -52,12 +52,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Debug Console: Variable Values\r\n\r\nUp until now if we wanted to find out the value of a variable at somepoint in the execution of a program we used `console.log`. That is still going to be a great strategy but its always good to have other options too! \r\n\r\nWe can also check the value of a variable by typing in the Debug Console. If you type the name of a variable in the console and hit enter it will print the value of the variable for you. \r\n\r\n# Do This\r\n\r\n* **Run the program.**\r\n\r\n* Use console to **check the ending value of num**. You can do this by typing num in the Debug Console and hitting enter!\r\n\r\n<img src=\"https://images.code.org/d29b1e0625815974d4ac508a052be352-image-1446747932724.gif\" style=\"width: 350px\">",
+    "markdown_instructions": "# Debug Console: Variable Values\r\n\r\nUp until now if we wanted to find out the value of a variable at some point in the execution of a program we've used `console.log`. That is still going to be a great strategy but **the Debug Console can do even more for us!**\r\n\r\n**Check this out:** We can check the value of a varibale in real time (as our program executes) by typing its name into the prompt within the Debug Console and hitting \"enter\". **This is another powerful tool for debugging your programs.** \r\n\r\n![](https://images.code.org/7e7ff7aa041814cfcd69a1c9a028c439-image-1446826780896.gif)\r\n\r\n# Do This\r\n\r\n* **Run the program.**\r\n\r\n* Use the Debug Console to **check the ending value of num**. You can do this by typing num in the Debug Console and hitting enter!",
     "start_blocks": "var num = randomNumber(1,6);\r\nwrite(\"Number is \"+num);\r\nwhile(num != 6){\r\n  write(\"Nope. Not 6. Roll again.\");\r\n  num = randomNumber(1,6);\r\n  write(\"New number is: \"+num);\r\n}\r\nwrite(\"Done.\");",
-    "instructions": "Use the debugging tools to trace out the execution of the while loop by checking the value of num as you step through the program. (Click to see full instructions)",
-    "encrypted_examples": [
-
-    ]
+    "instructions": "Use console to check the ending value of num. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

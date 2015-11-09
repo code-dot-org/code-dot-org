@@ -160,6 +160,25 @@ exports.drawImage = function (imageId, x, y, width, height) {
                            'height': height });
 };
 
+exports.drawImageURL = function (url, x, y, width, height, callback) {
+  if (y === undefined && width === undefined && height === undefined &&
+      callback === undefined) {
+    // everything after x is undefined. assume the two param version (in which
+    // callback might still be undefined)
+    callback = x;
+    x = undefined;
+  }
+  return Applab.executeCmd(null,
+                          'drawImageURL',
+                          {'url': url,
+                           'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height,
+                           'callback': callback});
+};
+
+
 exports.getImageData = function (x, y, width, height) {
   return Applab.executeCmd(null,
                           'getImageData',

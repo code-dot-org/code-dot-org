@@ -261,6 +261,10 @@ describe('generateDropletModeOptions', function () {
           "dropdown": {},
           "title": "drawImage"
         },
+        "drawImageURL": {
+          "color": "#F78183",
+          "title": "drawImageURL"
+        },
         "getImageData": {
           "value": true,
           "color": "#F78183",
