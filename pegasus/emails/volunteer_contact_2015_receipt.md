@@ -2,7 +2,6 @@
 <%
 def format_email_address(email, name='')
   name = "\"#{name.gsub('"', '\"').gsub("'","\\'")}\"" if name =~ /[;,\"\'\(\)]/
-  email = email.gsub(/'/, )
   "#{name} <#{email}>".strip
 end
 %>
