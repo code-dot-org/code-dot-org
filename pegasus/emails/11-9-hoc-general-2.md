@@ -1,6 +1,6 @@
 ---
 from: 'Hadi Partovi <hadi_partovi@code.org>'
-subject: Hour of Code with Star Wars
+subject: Make your own Star Wars game for the Hour of Code
 ---
 
 ## An Hour of Code with Star Wars!
