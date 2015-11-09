@@ -6,7 +6,7 @@ def format_email_address(email, name='')
 end
 %>
 to: '<%= format_email_address(volunteer_email_s, volunteer_name_s) %>'
-from: '"Tanya Parker (Code.org)" <tanya_parker@code.org>'
+from: 'Tanya Parker (Code.org) <tanya_parker@code.org>'
 reply-to: '<%= format_email_address(email_s, name_s) %>'
 subject: "A teacher is requesting your help for the Hour of Code"
 ---

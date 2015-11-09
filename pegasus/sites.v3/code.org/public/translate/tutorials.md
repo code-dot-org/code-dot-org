@@ -29,6 +29,9 @@ Right now, we're focused on translating the instructions of our courses. Search 
 * [Course 3](https://studio.code.org/s/course3) - search for "4-5"
 * [Course 4](https://studio.code.org/s/course4) - search for "Course 4"
 
+The new Star Wars tutorial will be posted for translation very soon. Check back this Friday.
+
+
 ## Where can I find context for translations?
 If you have more time, complete the project in the following prioritized order.
 
@@ -64,6 +67,8 @@ If you have more time, complete the project in the following prioritized order.
 1. blockly-mooc/turtle.json - for artist levels 
 1. blockly-mooc/studio.json - for play lab levels 
 1. blockly-mooc/flappy.json
+
+And, Star Wars will be coming soon for translation.
 
 <br/>
 **Computer Science Fundamentals courses**
