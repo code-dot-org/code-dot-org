@@ -18,7 +18,7 @@
     "nectar_goal": "22",
     "flower_type": "redWithNectar",
     "ideal": "20",
-    "instructions": "Challenge: Now there's honey to deal with too! Rewrite your function to use both the number of honey units and the number of nectar units.  How would you use those numbers to decide what you should do?",
+    "instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "honey_goal": "0",
@@ -31,7 +31,8 @@
     "disable_examples": "false",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "fast_get_nectar_animation": "false"
+    "fast_get_nectar_animation": "false",
+    "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!"
   }
 }]]></config>
   <blocks>
