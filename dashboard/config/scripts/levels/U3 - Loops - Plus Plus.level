@@ -53,10 +53,7 @@
     "debugger_disabled": "false",
     "instructions": "Change the code to use count++ instead of count = count + 1.  (Click to see full instructions)",
     "markdown_instructions": "# ++ Operator\r\n\r\nAs programmers we are always looking for more concise ways to write code. It is so common to add 1 to a variable such as in `count = count + 1` that there is actually a shorthand for it. \r\n\r\n# Introducing the ++ operator\r\n\r\nYou can write `count++` to add 1 to count.  `count++` does the exact same thing as `count = count+1`! \r\n\r\nIn fact the computer turns `count++` into `count = count + 1` behind the scenes -- it really is just a convenient shorthand.\r\n\r\nNote: This is more of a programmer style choice so if you want to write your code using count = count + 1 instead there is nothing wrong with that!\r\n\r\n# Do This\r\n\r\n* Change the code to use `count++` instead of `count = count + 1`.  \r\n\r\n** Misconception alert:** You don't need to write `count = count++ ` the computer is doing the assignment for you.",
-    "start_blocks": "var count = 0;\r\nwhile( count < 4){ \r\n  console.log(\"Hi\"); \r\n  count = count+1;\r\n}",
-    "encrypted_examples": [
-
-    ]
+    "start_blocks": "var count = 0;\r\nwhile( count < 4){ \r\n  console.log(\"Hi\"); \r\n  count = count+1;\r\n}"
   }
 }]]></config>
   <blocks/>

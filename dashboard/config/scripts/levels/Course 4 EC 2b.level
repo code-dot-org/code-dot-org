@@ -33,7 +33,6 @@
     "examples_required": "false",
     "fast_get_nectar_animation": "true",
     "step_speed": "1",
-    "maze_data": null,
     "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!"
   }
 }]]></config>

@@ -44,9 +44,6 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "instructions": "Using only the variables provided, assignment (=) and arithmetic (+ - * /) re-assign the values to make the console.log statement display the correct value(s).  (Click to see full instructions)",
-    "encrypted_examples": [
-
-    ],
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false"
   }

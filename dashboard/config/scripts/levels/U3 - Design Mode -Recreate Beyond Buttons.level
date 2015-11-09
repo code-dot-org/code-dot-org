@@ -156,9 +156,6 @@
     "project_template_level_name": "U3 - Design Mode 1",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
-    "encrypted_examples": [
-
-    ],
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false"
   }
