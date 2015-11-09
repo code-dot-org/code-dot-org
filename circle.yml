@@ -46,8 +46,9 @@ test:
         - ./test.sh:
             pwd:
                 cookbooks
-        - cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY --readyfile ~/sauce_is_ready:
+        - bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY --readyfile ~/sauce_is_ready:
             background: true
+            pwd: sc-*-linux
         - bin/dashboard-server:
             background: true
         # Wait for tunnel to be ready
