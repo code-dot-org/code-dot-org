@@ -44,6 +44,29 @@ class ImageLibTest < ActiveSupport::TestCase
            'Images with different sizes and pixels should not match'
   end
 
+  def test_to_png_for_png
+    original_png = File.read('test/fixtures/artist_image_1.png', binmode: true)
+
+    assert_equal original_png, ImageLib::to_png(original_png)
+  end
+
+  def test_to_png_for_jpg
+    original_jpg = File.read('test/fixtures/playlab_image.jpg', binmode: true)
+
+    png = ImageLib::to_png(original_jpg)
+
+    tmp_path = '/tmp/image.png'
+    File.open(tmp_path, 'wb') do |file|
+      file.write png
+    end
+
+    assert_equal 'PNG', MiniMagick::Image.read(png).info(:format)
+
+    assert_not_equal original_jpg, png
+    assert images_equal?(MiniMagick::Image.read(original_jpg), MiniMagick::Image.read(png))
+  end
+
+
   private
 
   # Return true if image1 and image2 are identical as determined by

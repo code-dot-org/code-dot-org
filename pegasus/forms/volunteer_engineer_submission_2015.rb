@@ -5,7 +5,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   UNSUBSCRIBE_2016 = "until2016"
   UNSUBSCRIBE_FOREVER = "forever"
   DEFAULT_DISTANCE = 24 # kilometers
-  DEFAULT_NUM_VOLUNTEERS = 25
+  DEFAULT_NUM_VOLUNTEERS = 10
 
   def self.normalize(data)
     result = {}

@@ -48,12 +48,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_caching_disabled response.headers['Cache-Control']
   end
 
-  test 'should make script level pages cachable if configured' do
+  test 'should allow public caching for script level pages with default lifetime' do
     Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
 
     # Verify the default max age is used if none is specifically configured.
     get_show_script_level_page(@script_level)
-    assert_caching_enabled response.headers['Cache-Control'], ScriptLevelsController::DEFAULT_PUBLIC_MAX_AGE
+    assert_caching_enabled response.headers['Cache-Control'],
+                           ScriptLevelsController::DEFAULT_PUBLIC_CLIENT_MAX_AGE,
+                           ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE
+  end
+
+  test 'should allow public caching for script level pages with dynamic lifetime' do
+    Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
+    DCDO.set('public_max_age', 3600)
+    DCDO.set('public_proxy_max_age', 7200)
+    get_show_script_level_page(@script_level)
+    assert_caching_enabled response.headers['Cache-Control'], 3600, 7200
   end
 
   test 'should make script level pages uncachable if disabled' do
@@ -85,11 +95,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_cache_control_match expected_directives, cache_control_header
   end
 
-  def assert_caching_enabled(cache_control_header, max_age)
+  def assert_caching_enabled(cache_control_header, max_age, proxy_max_age)
     expected_directives = [
         'public',
         "max-age=#{max_age}",
-        "s-maxage=#{max_age}"]
+        "s-maxage=#{proxy_max_age}"]
     assert_cache_control_match expected_directives, cache_control_header
   end
 
@@ -543,9 +553,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal('//test.code.org/api/hour/finish/frozen', script_completion_redirect(Script.find_by_name(Script::FROZEN_NAME)))
   end
 
-  test 'post script redirect is hoc2015 endpoint' do
+  test 'post script redirect is starwars endpoint' do
     self.stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/hoc2015', script_completion_redirect(Script.find_by_name(Script::HOC2015_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/starwars', script_completion_redirect(Script.find_by_name(Script::STARWARS_NAME)))
   end
 
   test 'end of HoC for logged in user works' do
@@ -670,6 +680,34 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position, user_id: @student.id, section_id: @section.id
 
     assert_equal last_attempt_data, assigns(:last_attempt)
+  end
+
+  test 'loads applab if you are a teacher viewing your student and they have a channel id' do
+    sign_in @teacher
+
+    level = create :applab
+    script_level = create :script_level, level: level
+    ChannelToken.create!(level: level, user: @student) do |ct|
+      ct.channel = 'test_channel_id'
+    end
+
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @student.id, section_id: @section.id
+
+    assert_select '#codeApp'
+    assert_select '#notStarted', 0
+
+  end
+
+  test 'does not load applab if you are a teacher viewing your student and they do not have a channel id' do
+    sign_in @teacher
+
+    level = create :applab
+    script_level = create :script_level, level: level
+
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @student.id, section_id: @section.id
+
+    assert_select '#notStarted'
+    assert_select '#codeApp', 0
   end
 
   test 'shows expanded teacher panel when student is chosen' do

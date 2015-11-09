@@ -1,5 +1,5 @@
 ---
-from: '"Hadi Partovi (Code.org)" <hadi_partovi@code.org>'
+from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
 subject: Volunteer Submission Received
 ---
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>

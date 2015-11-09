@@ -1,0 +1,67 @@
+---
+title: Star Wars
+theme: responsive
+social:
+  "twitter:card": photo
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://code.org/starwars"
+  "twitter:image:src" : "https://code.org/images/star-wars-announcement.jpg"
+  "twitter:title": "Star Wars: Building a Galaxy with Code"
+  "twitter:description": "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  "og:title": "Star Wars: Building a Galaxy with Code"
+  "og:description": "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  "og:image" : "https://code.org/images/star-wars-announcement.jpg"
+  "og:image:width": "1020"
+  "og:image:height": "573"
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+
+%div{style: "clear:both"}
+
+%h2 Star Wars: Building a Galaxy with Code
+
+%div{style: "width:100%; padding-left:5px"}
+  %img{style: "width:100%; border-radius:5px", src:"/images/starwars_wide.jpg"}
+%br/
+%br/
+
+.col-50{style: "position:relative; height:230px; padding:5px"}
+  %div{:style => "background-color: #437174; color:white; padding:20px; border-radius:5px; background-image: url(/images/fit-520/starwars_carousel_background.jpg); background-size: cover"}
+    %h1{:style => "margin-top:0px; margin-bottom:10px; color: white; "} JavaScript
+    %div{style: "height:100px"}
+      %p
+        Try
+        %span{style: "font-family: 'Gotham 7r', sans-serif;"}
+          Star Wars: Building a Galaxy with Code
+        using drag-drop blocks and JavaScript.
+      %p{style: "font-size: 12px"}
+        English only | Modern browsers | Ages 11+
+    %a{:href => CDO.studio_url('/s/starwars/reset'), :target=>'_blank'}
+      %button{:style => "font-size:18px; height:40px"}> Try now
+
+.col-50{style: "position:relative; height:230px; padding:5px"}
+  %div{:style => "background-color:#70523c; color:white;  padding:20px; border-radius:5px; background-image: url(/images/fit-520/starwars_carousel_background.jpg); background-size: cover"}
+    %h1{:style => "margin-top:0px; margin-bottom:10px; color: white; "} Blocks
+    %div{style: "height:100px"}
+      %p
+        Try
+        %span{style: "font-family: 'Gotham 7r', sans-serif;"}
+          Star Wars: Building a Galaxy with Code
+        using drag-drop blocks.
+      %p{style: "font-size: 12px"}
+        Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+    %a{:href => '#'}
+      %button.disabled{disabled:"disabled", style: "font-size:18px; height:40px; background-color: #c6cacd; border-color: #c6cacd"} Coming soon
+
+%div{style: "clear:both"}
+
+%div.starwars-videos{style: "clear: both;"}
+  %h2 Before you get started, watch one of these inspirational videos
+  =view :inspirational_videos
+
+Speak another language?
+%a{href: "/translate"}
+  Help us translate
