@@ -5,6 +5,7 @@ var ChartApi = require('./ChartApi');
 var RGBColor = require('./rgbcolor.js');
 var codegen = require('../codegen');
 var keyEvent = require('./keyEvent');
+var utils = require('../utils');
 
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
@@ -609,6 +610,10 @@ applabCommands.clearCanvas = function (opts) {
   return false;
 };
 
+/**
+ * Semi-deprecated. We still support this API, but no longer expose it in the
+ * toolbox. Replaced by drawImageURL
+ */
 applabCommands.drawImage = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // PARAMNAME: drawImage: imageId vs. id
@@ -636,6 +641,68 @@ applabCommands.drawImage = function (opts) {
     return true;
   }
   return false;
+};
+
+/**
+ * We support a couple different version of this API
+ * drawImageURL(url, [callback])
+ * drawImaegURL(url, x, y, width, height, [calback])
+ */
+applabCommands.drawImageURL = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+
+  apiValidateActiveCanvas(opts, 'drawImageURL');
+  apiValidateType(opts, 'drawImageURL', 'url', opts.url, 'string');
+  apiValidateType(opts, 'drawImageURL', 'x', opts.x, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'y', opts.y, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'width', opts.width, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'height', opts.height, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'callback', opts.callback, 'function', OPTIONAL);
+
+  var jsInterpreter = Applab.JSInterpreter;
+  var callback = function (success) {
+    if (opts.callback) {
+      queueCallback(jsInterpreter, opts.callback, [success]);
+    }
+  };
+
+  var image = new Image();
+  image.src = Applab.maybeAddAssetPathPrefix(opts.url);
+  image.onload = function () {
+    var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+    if (!ctx) {
+      return;
+    }
+    var x = utils.valueOr(opts.x, 0);
+    var y = utils.valueOr(opts.y, 0);
+
+    // if given a width/height use that
+    var renderWidth = utils.valueOr(opts.width, image.width);
+    var renderHeight = utils.valueOr(opts.height, image.height);
+
+    // if undefined, extra width/height from image and potentially resize to
+    // fit
+    if (opts.width === undefined || opts.height === undefined) {
+      var aspectRatio = image.width / image.height;
+      if (aspectRatio > 1) {
+        renderWidth = Math.min(Applab.activeCanvas.width, image.width);
+        renderHeight = renderWidth * aspectRatio;
+      } else {
+        renderHeight = Math.min(Applab.activeCanvas.height, image.height);
+        renderWidth = renderHeight / aspectRatio;
+      }
+    }
+
+    ctx.save();
+    ctx.setTransform(renderWidth / image.width, 0, 0, renderHeight / image.height, opts.x, opts.y);
+    ctx.drawImage(image, 0, 0);
+    ctx.restore();
+
+    callback(true);
+  };
+  image.onerror = function () {
+    callback(false);
+  };
 };
 
 applabCommands.getImageData = function (opts) {
@@ -1576,14 +1643,15 @@ function stopLoadingSpinnerFor(elementId) {
  * AND the interpreter is still the active interpreter for Applab.
  * @param {JSInterpreter} jsInterpreter
  * @param {function} callback
+ * @param {Object[]} args
  */
-var queueCallback = function (jsInterpreter, callback) {
+var queueCallback = function (jsInterpreter, callback, args) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active, so we don't queue callbacks for slow async events
   // from past executions of the app.
   // (We use a different interpreter instance for every run.)
   if (callback && jsInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(callback);
+    Applab.JSInterpreter.queueEvent(callback, args);
   }
 };
 
