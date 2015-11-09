@@ -29,23 +29,26 @@ database:
       - bundle exec rake db:schema:load:
           pwd:
               dashboard
+      - bundle exec rake db:seed:all:
+          pwd:
+              dashboard
 test:
     override:
-        - bundle exec rake test:
-            pwd:
-                pegasus
-        - bundle exec rake test:
-            pwd:
-                shared
-        - for i in 1 2; do grunt test && break; done:
-            pwd:
-                apps
-        - bundle exec rake konacha:run:
-            pwd:
-                dashboard
-        - ./test.sh:
-            pwd:
-                cookbooks
+        # - bundle exec rake test:
+        #     pwd:
+        #         pegasus
+        # - bundle exec rake test:
+        #     pwd:
+        #         shared
+        # - for i in 1 2; do grunt test && break; done:
+        #     pwd:
+        #         apps
+        # - bundle exec rake konacha:run:
+        #     pwd:
+        #         dashboard
+        # - ./test.sh:
+        #     pwd:
+        #         cookbooks
         - cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY --readyfile ~/sauce_is_ready:
             background: true
         - bin/dashboard-server:
