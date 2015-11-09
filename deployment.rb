@@ -92,6 +92,7 @@ def load_configuration()
     'dynamo_tables_index'         => "channel_id-table_name-index",
     'use_dynamo_properties'       => false,
     'dynamo_properties_table'     => "#{rack_env}_properties",
+    'activity_queue'            => "#{rack_env}-activity#{hostname if rack_env == :development}",
     'lint'                        => rack_env == :adhoc || rack_env == :staging || rack_env == :development,
     'assets_s3_bucket'            => 'cdo-v3-assets',
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",

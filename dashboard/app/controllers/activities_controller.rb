@@ -128,14 +128,25 @@ class ActivitiesController < ApplicationController
 
     current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
 
-    @activity = Activity.create!(user: current_user,
-                                 level: @level,
-                                 action: solved, # TODO I think we don't actually use this. (maybe in a report?)
-                                 test_result: test_result,
-                                 attempt: params[:attempt].to_i,
-                                 lines: lines,
-                                 time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
-                                 level_source_id: @level_source.try(:id))
+    now = Time.now
+    activity = {
+      user_id: current_user.try(:id),
+      level_id: @level.id,
+      action: solved, # TODO I think we don't actually use this. (maybe in a report?)
+      test_result: test_result,
+      attempt: params[:attempt].to_i,
+      lines: lines,
+      time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
+      level_source_id: @level_source.try(:id),
+      created_at: now,
+      updated_at: now
+    }
+
+    if Gatekeeper.allows("async-activity-creates")
+      ActivityCreateJob.perform_async activity
+    else
+      Activity.create!(activity)
+    end
 
     if @script_level
       @new_level_completed = current_user.track_level_progress(@script_level, test_result)
