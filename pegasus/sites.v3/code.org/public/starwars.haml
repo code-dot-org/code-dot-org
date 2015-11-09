@@ -19,42 +19,36 @@ social:
   "og:video:type": ""
 ---
 
+%link{href: "/css/starwars.css", rel: "stylesheet"}
+
 %div{style: "clear:both"}
 
-%h2 Star Wars: Building a Galaxy with Code
+%div.starwars-container
+  %div.img-container
+    %img.starwars-img{src:"/images/sw_landingpage.jpg"}
+  %h1.starwars-heading Building a Galaxy with Code
 
-%div{style: "width:100%; padding-left:5px"}
-  %img{style: "width:100%; border-radius:5px", src:"/images/starwars_wide.jpg"}
-%br/
-%br/
+  .col-25.starwars-tutorial{style: "right: 20px;"}
+    %div.tutorial-box
+      %h2.sw-h2 JavaScript
+      %div.sw-tutorial-info
+        %p.sw-tutorial-description
+          Use drag-drop blocks and JavaScript.
+        %p.sw-tutorial-specs
+          English only | Modern browsers | Ages 11+
+      %a{:href => CDO.studio_url('/s/starwars/reset'), :target=>'_self'}
+        %button.sw-try-button Try now
 
-.col-50{style: "position:relative; height:230px; padding:5px"}
-  %div{:style => "background-color: #437174; color:white; padding:20px; border-radius:5px; background-image: url(/images/fit-520/starwars_carousel_background.jpg); background-size: cover"}
-    %h1{:style => "margin-top:0px; margin-bottom:10px; color: white; "} JavaScript
-    %div{style: "height:100px"}
-      %p
-        Try
-        %span{style: "font-family: 'Gotham 7r', sans-serif;"}
-          Star Wars: Building a Galaxy with Code
-        using drag-drop blocks and JavaScript.
-      %p{style: "font-size: 12px"}
-        English only | Modern browsers | Ages 11+
-    %a{:href => CDO.studio_url('/s/starwars/reset'), :target=>'_blank'}
-      %button{:style => "font-size:18px; height:40px"}> Try now
-
-.col-50{style: "position:relative; height:230px; padding:5px"}
-  %div{:style => "background-color:#70523c; color:white;  padding:20px; border-radius:5px; background-image: url(/images/fit-520/starwars_carousel_background.jpg); background-size: cover"}
-    %h1{:style => "margin-top:0px; margin-bottom:10px; color: white; "} Blocks
-    %div{style: "height:100px"}
-      %p
-        Try
-        %span{style: "font-family: 'Gotham 7r', sans-serif;"}
-          Star Wars: Building a Galaxy with Code
-        using drag-drop blocks.
-      %p{style: "font-size: 12px"}
-        Many languages | Modern browsers, smartphones, tablets | Ages 6-10
-    %a{:href => '#'}
-      %button.disabled{disabled:"disabled", style: "font-size:18px; height:40px; background-color: #c6cacd; border-color: #c6cacd"} Coming soon
+  .col-25.starwars-tutorial{style: "right: 270px;"}
+    %div.tutorial-box
+      %h2.sw-h2 Blocks
+      %div.sw-tutorial-info
+        %p.sw-tutorial-description
+          Use drag-drop blocks.
+        %p.sw-tutorial-specs
+          Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+      %a{:href => '#'}
+        %button.disabled.sw-disabled{disabled:"disabled"} Coming soon
 
 %div{style: "clear:both"}
 
