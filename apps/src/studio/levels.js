@@ -2589,11 +2589,11 @@ levels.js_hoc2015_chain_characters_2 = {
   ],
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwoWhenBird',
+      'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwoWhenMynock',
       'element_id': '#droplet_palette_block_whenGetMynock',
       'qtip_config': {
         'content' : {
-          'text': msg.calloutPlaceTwoWhenBird(),
+          'text': msg.calloutPlaceTwoWhenMynock(),
         },
         'position': {
           'my': 'top left',
@@ -3200,11 +3200,11 @@ levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  
   ],
   callouts: [
     {
-      id: 'playlab:hoc2015_blockly_13:calloutPlaceTwoWhenBird',
+      id: 'playlab:hoc2015_blockly_13:calloutPlaceTwoWhenMynock',
       element_id: '[block-id="7"]',
       qtip_config: {
         content: {
-          text: msg.calloutPlaceTwoWhenBird(),
+          text: msg.calloutPlaceTwoWhenMynock(),
         },
         position: {
           my: 'top left',
