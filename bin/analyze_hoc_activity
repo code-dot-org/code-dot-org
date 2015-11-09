@@ -151,6 +151,24 @@ def main()
     day += 1
   end
 
+  # Compute the number of hoc events (the grand total and broken down by company and country).
+  hoc_country_totals = {}
+  hoc_company_totals = {}
+  unique_hoc_events = DB[:forms].where(kind: 'HocSignup2015').group(:email, :name).select(:name, :email, :processed_data, :data)
+  total_hoc_count = DB[:forms].where(kind: 'HocSignup2015').group(:email, :name).select(:email, :name).count
+
+  unique_hoc_events.each do |row|
+    data = JSON.parse(row[:data])
+    data['hoc_company_s'] = 'Other' if data['hoc_company_s'].nil_or_empty?
+    add_count_to_hash hoc_company_totals, data['hoc_company_s'], 1
+
+    unless row[:processed_data].nil?
+      processed_data = JSON.parse(row[:processed_data])
+      processed_data['location_country_code_s'] = 'Other' if processed_data['location_country_code_s'].nil_or_empty?
+      add_count_to_hash hoc_country_totals, processed_data['location_country_code_s'], 1
+    end
+  end
+
   Properties.set :hoc_metrics, {
     started: total_started,
     finished: total_finished,
@@ -158,6 +176,9 @@ def main()
     cities: total_cities,
     states: total_states,
     countries: total_countries,
+    total_hoc_count: total_hoc_count,
+    hoc_country_totals: hoc_country_totals,
+    hoc_company_totals: hoc_company_totals,
   }
 
   #HipChat.log 'Calculating lines of code...' if rack_env?(:production)

@@ -11,7 +11,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ikaw ba ay isang CS teacher? Tingnan ang ibang mga resource
     para sa CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>ay nakasubok na ng</h3><h2>Hour of Code</h2>
+  n_have_learned_an_hoc: "<h1>#</h1><h3>ay nakasubok na ng</h3><h2>Hour of Code</h2>"
   anybody_can_learn: Lahat ay puwedeng matuto.
   learn_now: Matuto Ngayon
   petition_message: Ang bawat estudyante sa bawat paaralan ay dapat may pagkakataon
@@ -36,7 +36,7 @@
   hoc2014_everyone: Lahat
   hoc2014_support: Suportahan ito &#x25BE;
   hoc2014_whatishoc: Ano ba ang Hour of Code?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
@@ -64,7 +64,7 @@
     Matuto ng repeat-loops, if-then statements, at basic na mga algorithm.
   all_ages: Lahat ng edad
   beginner: Baguhan
-  n_participants: '# na mga kalahok'
+  n_participants: "# na mga kalahok"
   go: Pumunta
   thank_you_: Maraming salamat!
   congratulations: Maligayang pagbati!
@@ -114,7 +114,7 @@
   beyond_an_hour: Higit pa sa isang Hour of Code
   get_started: Panimula
   i_agree: Ako ay sumasang-ayon
-  participant_select: '- Pumili -'
+  participant_select: "- Pumili -"
   participant_student: Estudyante
   participant_parent: Magulang
   participant_educator: Tagapagturo
@@ -150,11 +150,11 @@
     koponan!
   help_recruit: Tumulong sa pag regruit ng marami pang mga coder!
   lines_of_code: HIGIT SA <b># LINES OF CODE</b> NAKASULAT AYON SA PETSA.
-  lines_of_code_alt: <b>#</b> MGA LINYA NG CODE NA ISINULAT NG MGA ESTUDYANTE
+  lines_of_code_alt: "<b>#</b> MGA LINYA NG CODE NA ISINULAT NG MGA ESTUDYANTE"
   who_has_done_hoc: 'Sino na ang nakasubok ng #HourOfCode? @codeorg'
   hoc_leaderboards: Ang mga Leaderboard ng Hour of Code
-  students_and_lines: '%{students} na mga estudyante ang natapos ang Hour of Code
-    at nakapagsulat ng %{lines} linya ng code.'
+  students_and_lines: "%{students} na mga estudyante ang natapos ang Hour of Code
+    at nakapagsulat ng %{lines} linya ng code."
   start_hoc: Umpisahan ang Hour of Code ngayon
   contact_form_topic_press: Press/media (interview o speaking engagement)
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
@@ -224,7 +224,7 @@
     engaged, involved and participating.&rdquo;
     Adam, teacher
   homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
+  homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Ang Hour of Code
   homepage_slot_text_frozen: Frozen kasama sina Anna at Elsa
@@ -251,7 +251,7 @@
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Subukan ang Hour of Code
   homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Mga mag-aaral
   homepage_slot_text_blurb_students: Galugarin ang lahat ng aming mga tutorial
@@ -314,9 +314,9 @@
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+    have signed up."
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
@@ -371,7 +371,9 @@
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: Ipasa
-  volunteer_engineer_submission_thankyou: Thank you for submitting your information.
+  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
+    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
+    more here.</a>
   volunteer_engineer_submission_commitment_uncertain: Walang kasiguraduhan
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 oras kada linggo
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 oras kada linggo
@@ -633,8 +635,9 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: <b>September 30, 2015</b> - The Hour of Code 2015 is coming!
-    Join classrooms worldwide for the largest learning event in history.
+  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+    every participating organizer will receive a gift card to Amazon.com or Microsoft's
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
   code_hoc_coming: Ang Hour of Code ay andito na - Disyembre 08-14!
   code_sign_up: Mag-sign up upang lumahok sa CS Edukasyon Week
   learn_more: Dagdagan ang Kaalaman
@@ -1306,3 +1309,38 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Itago ang babalang ito
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: "# served"
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Sign up
+  homepage_action_text_try_it: Try it
+  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_girlvideo: Inspire a girl
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_gradelevel: Ages 6+
+  starwars_platformtext: Modern browsers + tablets
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
+  starwars_longdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.

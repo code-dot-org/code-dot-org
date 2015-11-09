@@ -152,7 +152,8 @@ class RegistrationsControllerTest < ActionController::TestCase
 
       sign_in student
 
-      post :update, user: {age: 9}
+      post :update, format: :js, user: {age: 9}
+      assert_response :no_content
 
       assert_equal Date.today - 9.years, assigns(:user).birthday
     end
@@ -167,7 +168,8 @@ class RegistrationsControllerTest < ActionController::TestCase
 
       sign_in student
 
-      post :update, user: {age: {"Pr" => nil}}
+      post :update, format: :js, user: {age: {"Pr" => nil}}
+      assert_response :no_content
 
       # did not change
       assert_equal '1981-03-24', assigns(:user).birthday.to_s

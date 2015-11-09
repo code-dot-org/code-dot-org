@@ -8,7 +8,7 @@ nav: pd2_nav
 
 ## Computer Science Principles
 
-Montgomery County teachers enrolled in the Computer Science Principles program will attend PD in New York City, NY. Please visit the [NYC CSP](/educate/pd/15-16/nyc#csp) page for all  workshop details
+Montgomery County teachers enrolled in the Computer Science Principles program will be part of the New York CSP cohort. Please visit the [NYC CSP](/educate/pd/15-16/nyc#csp) page for all  workshop details.
 
 ## Exploring Computer Science
 

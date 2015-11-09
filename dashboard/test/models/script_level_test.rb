@@ -106,12 +106,20 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script = create(:script, name: 's1')
     first_stage = create(:stage, script: script, position: 1)
     script_level_first = create(:script_level, script: script, stage: first_stage, position: 1, chapter: 1)
-    unplugged_stage = create(:stage, script: script, position: 1)
+
+    unplugged_stage = create(:stage, script: script, position: 2)
     create(:script_level, level: create(:unplugged), script: script, stage: unplugged_stage, position: 1, chapter: 2)
     create(:script_level, level: create(:match), script: script, stage: unplugged_stage, position: 2, chapter: 3)
     create(:script_level, level: create(:match), script: script, stage: unplugged_stage, position: 3, chapter: 4)
-    plugged_stage = create(:stage, script: script, position: 2)
+
+    plugged_stage = create(:stage, script: script, position: 3)
     script_level_after = create(:script_level, script: script, stage: plugged_stage, position: 1, chapter: 5)
+
+    # make sure everything is in the order we want it to be
+    script.reload
+    assert_equal [first_stage, unplugged_stage, plugged_stage], script.stages
+    assert_equal script_level_first, script.script_levels.first
+    assert_equal script_level_after, script.script_levels.last
 
     assert_equal script_level_after, script_level_first.next_progression_level
   end
@@ -135,4 +143,17 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert !script.stages[3].script_levels.first.end_of_stage?
     assert !script.stages[3].script_levels[1].end_of_stage?
   end
+
+  test 'cached_find' do
+    script_level = ScriptLevel.cache_find(Script.twenty_hour_script.script_levels[0].id)
+    assert_equal(Script.twenty_hour_script.script_levels[0], script_level)
+
+    script_level2 = ScriptLevel.cache_find(Script.course1_script.script_levels.last.id)
+    assert_equal(Script.course1_script.script_levels.last, script_level2)
+
+    # Make sure that we can also locate a newly created level.
+    script_level3 = create(:script_level)
+    assert_equal(script_level3, ScriptLevel.cache_find(script_level3.id))
+  end
+
 end

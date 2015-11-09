@@ -77,7 +77,7 @@ levels.custom = {
     "setStrokeWidth": null,
     "setStrokeColor": null,
     "setFillColor": null,
-    "drawImage": null,
+    "drawImageURL": null,
     "getImageData": null,
     "putImageData": null,
     "clearCanvas": null,

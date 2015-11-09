@@ -151,7 +151,6 @@ var AUTO_HANDLER_MAP = {
       (Studio.protagonistSpriteIndex || 0) +
       '-wall',
   whenGetAllCharacters: 'whenGetAllItems',
-  whenTouchAllCharacters: 'whenGetAllItems',
   whenTouchGoal: 'whenTouchGoal',
   whenTouchAllGoals: 'whenTouchAllGoals',
   whenScore1000: 'whenScore1000',
@@ -416,13 +415,16 @@ var drawMap = function () {
       finishClipRect.setAttribute('width', spriteWidth);
       finishClipRect.setAttribute('height', spriteHeight);
       finishClipPath.appendChild(finishClipRect);
-      svg.appendChild(finishClipPath);
+      // Safari workaround: Clip paths work better when descendant of an SVGGElement.
+      spriteLayer.appendChild(finishClipPath);
 
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
       spriteFinishMarker.setAttribute('width', spritesheetWidth);
       spriteFinishMarker.setAttribute('height', spritesheetHeight);
-      spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
+      if (!skin.disableClipRectOnGoals) {
+        spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
+      }
       svg.appendChild(spriteFinishMarker);
     }
   }
@@ -431,7 +433,7 @@ var drawMap = function () {
   // Create cloud elements.
   var cloudGroup = document.createElementNS(SVG_NS, 'g');
   cloudGroup.setAttribute('id', 'cloudLayer');
-  for (i = 0; i < constants.NUM_CLOUDS; i++) {
+  for (i = 0; i < constants.MAX_NUM_CLOUDS; i++) {
     var cloud = document.createElementNS(SVG_NS, 'image');
     cloud.setAttribute('id', 'cloud' + i);
     cloudGroup.appendChild(cloud);
@@ -1196,12 +1198,27 @@ function handleActorCollisionsWithCollidableList (
         // Make the projectile/item disappear automatically if this parameter
         // is set:
         if (autoDisappear) {
-          if (list.length === 1 && list === Studio.items) {
+          if (list === Studio.items) {
             // NOTE: we do this only for the Item list (not projectiles)
 
             // NOTE: if items are allowed to move outOfBounds(), this may never
             // be called because the last item may not be removed here.
-            callHandler('whenGetAllItems');
+
+            if (list.length === 1) {
+              callHandler('whenGetAllItems');
+            }
+
+            var className = collidable.className;
+            var itemCount = 0;
+            for (var j = 0; j < list.length; j++) {
+              if (className === list[j].className) {
+                itemCount++;
+              }
+            }
+
+            if (itemCount === 1) {
+              callHandler('whenGetAll-' + className);
+            }
           }
 
           if (collidable.beginRemoveElement) {
@@ -1351,6 +1368,12 @@ function checkForCollisions() {
     }
     for (j = 0; j < skin.ItemClassNames.length; j++) {
       executeCollision(i, skin.ItemClassNames[j]);
+      if (level.removeItemsWhenActorCollides) {
+        Studio.executeQueue('whenGetAllCharacterClass-' + skin.ItemClassNames[j]);
+      }
+    }
+    if (level.removeItemsWhenActorCollides) {
+      Studio.executeQueue('whenGetAllCharacters');
     }
   }
 }
@@ -1653,6 +1676,8 @@ Studio.init = function(config) {
   Studio.tiles = [];
   Studio.tilesDrawn = false;
 
+  Studio.cloudStep = 0;
+
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -1744,6 +1769,7 @@ Studio.init = function(config) {
 
     skin.soundFiles = {};
     soundFileNames.forEach(function (sound) {
+      sound = sound.toLowerCase();
       skin.soundFiles[sound] = [skin.assetUrl(sound + '.mp3'), skin.assetUrl(sound + '.ogg')];
       studioApp.loadAudio(skin.soundFiles[sound], sound);
     });
@@ -1818,8 +1844,8 @@ Studio.init = function(config) {
         'whenSpriteCollided-' +
         (Studio.protagonistSpriteIndex || 0) + '-' + skin.AutohandlerTouchItems[prop];
   }
-  for (prop in skin.AutohandlerTouchAllItems) {
-    AUTO_HANDLER_MAP[prop] = 'whenGetAll-' + skin.AutohandlerTouchAllItems[prop];
+  for (prop in skin.AutohandlerGetAllItems) {
+    AUTO_HANDLER_MAP[prop] = 'whenGetAll-' + skin.AutohandlerGetAllItems[prop];
   }
   for (prop in level.autohandlerOverrides) {
     AUTO_HANDLER_MAP[prop] = level.autohandlerOverrides[prop];
@@ -1910,6 +1936,15 @@ function resetItemOrProjectileList (list) {
 }
 
 /**
+ * Freeze a list of Items or Projectiles by telling them to stop animating.
+ */
+function freezeItemOrProjectileList (list) {
+  for (var i = 0; i < list.length; i++) {
+    list[i].stopAnimations();
+  }
+}
+
+/**
  * Clear the event handlers and stop the onTick timer.
  */
 Studio.clearEventHandlersKillTickLoop = function() {
@@ -1935,9 +1970,9 @@ Studio.clearEventHandlersKillTickLoop = function() {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
     }
   }
-  // Reset the projectiles and items (they include animation timers)
-  resetItemOrProjectileList(Studio.projectiles);
-  resetItemOrProjectileList(Studio.items);
+  // Freeze the projectiles and items (stop the animation timers)
+  freezeItemOrProjectileList(Studio.projectiles);
+  freezeItemOrProjectileList(Studio.items);
 };
 
 
@@ -1953,7 +1988,7 @@ function getDefaultBackgroundName() {
 }
 
 function getDefaultMapName() {
-  return level.wallMapCollisions ? (level.wallMap || skin.defaultWallMap) : undefined;
+  return level.wallMapCollisions ? level.wallMap : undefined;
 }
 
 /**
@@ -1964,6 +1999,9 @@ Studio.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
   Studio.gameState = Studio.GameStates.WAITING;
+
+  resetItemOrProjectileList(Studio.projectiles);
+  resetItemOrProjectileList(Studio.items);
 
   var svg = document.getElementById('svgStudio');
 
@@ -2029,8 +2067,8 @@ Studio.reset = function(first) {
     removedItemCount: 0,
     touchedHazardCount: 0,
     setActivityRecord: null,
-    hasSetBot: false,
-    hasSetBotSpeed: false,
+    hasSetDroid: false,
+    hasSetDroidSpeed: false,
     hasSetBackground: false,
     hasSetMap: false,
     hasAddedItem: false,
@@ -2588,12 +2626,20 @@ Studio.execute = function() {
                      'whenSpriteCollided-' +
                        (Studio.protagonistSpriteIndex || 0) +
                        '-any_item');
+    registerHandlers(handlers,
+                     'studio_whenGetAllCharacters',
+                     'whenGetAllItems');
+    registerHandlersWithTitleParam(handlers,
+                                   'studio_whenGetAllCharacterClass',
+                                   'whenGetAll',
+                                   'VALUE',
+                                   skin.ItemClassNames);
     registerHandlersWithTitleParam(handlers,
                                    'studio_whenGetCharacter',
                                    'whenSpriteCollided-' +
                                      (Studio.protagonistSpriteIndex || 0),
                                    'VALUE',
-                                   skin.ItemClassNames);
+                                   ['any_item'].concat(skin.ItemClassNames));
     registerHandlers(handlers, 'studio_whenTouchGoal', 'whenTouchGoal');
     if (level.wallMapCollisions) {
       registerHandlers(handlers,
@@ -2613,7 +2659,7 @@ Studio.execute = function() {
                                      'SPRITE2');
   }
 
-  studioApp.playAudio('start');
+  Studio.playSound({ soundName: 'start' });
 
   studioApp.reset(false);
 
@@ -2681,9 +2727,9 @@ Studio.onPuzzleComplete = function() {
   }
 
   if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
-    studioApp.playAudio('win');
+    Studio.playSound({ soundName: 'win' });
   } else {
-    studioApp.playAudio('failure');
+    Studio.playSound({ soundName: 'failure' });
   }
 
   var program;
@@ -2719,7 +2765,7 @@ Studio.onPuzzleComplete = function() {
   if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') {
     sendReport();
   } else {
-    document.getElementById('svgStudio').toDataURL("image/png", {
+    document.getElementById('svgStudio').toDataURL("image/jpeg", {
       callback: function(pngDataUrl) {
         Studio.feedbackImage = pngDataUrl;
         Studio.encodedFeedbackImage = encodeURIComponent(Studio.feedbackImage.split(',')[1]);
@@ -3308,34 +3354,39 @@ Studio.animateGoals = function() {
   }
 };
 
+
 /**
- * Load clouds for the current background if it features them.
+ * Load clouds for the current background if it features them, or hide
+ * them if they shouldn't currently be shown.
  */
 Studio.loadClouds = function() {
+  var cloud, i;
   var showClouds = Studio.background && skin[Studio.background].clouds;
 
-  var width, height;
-  width = height = 300;
-
-  for (var i = 0; i < constants.NUM_CLOUDS; i++) {
-    // Start with clouds hidden.
-    var cloud = document.getElementById('cloud' + i);
-    cloud.setAttribute('x', -width);
-    cloud.setAttribute('y', -height);
-
-    // If we aren't showing clouds for this background, do nothing more.
-    if (!showClouds) {
-      continue;
+  if (!showClouds) {
+    // Hide the clouds offscreen.
+    for (i = 0; i < constants.MAX_NUM_CLOUDS; i++) {
+      cloud = document.getElementById('cloud' + i);
+      cloud.setAttribute('x', -constants.CLOUD_SIZE);
+      cloud.setAttribute('y', -constants.CLOUD_SIZE);
     }
+  } else {
+    // Set up the right clouds.
+    for (i = 0; i < skin[Studio.background].clouds.length; i++) {
+      cloud = document.getElementById('cloud' + i);
+      cloud.setAttribute('width', constants.CLOUD_SIZE);
+      cloud.setAttribute('height', constants.CLOUD_SIZE);
+      cloud.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        skin[Studio.background].clouds[i]);
+      cloud.setAttribute('opacity', constants.CLOUD_OPACITY);
 
-    // Clouds are showing, so set up the right ones for this background.
-    cloud.setAttribute('width', width);
-    cloud.setAttribute('height', height);
-    cloud.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      skin[Studio.background].clouds[i]);
-    cloud.setAttribute('opacity', 0.7);
+      var location = Studio.getCloudLocation(i);
+      cloud.setAttribute('x', location.x);
+      cloud.setAttribute('y', location.y);
+    }
   }
 };
+
 
 /**
  * Animate clouds if the current background features them.
@@ -3346,19 +3397,51 @@ Studio.animateClouds = function() {
     return;
   }
 
-  for (var i = 0; i < constants.NUM_CLOUDS; i++) {
+  Studio.cloudStep++;
+
+  for (var i = 0; i < skin[Studio.background].clouds.length; i++) {
+    var location = Studio.getCloudLocation(i);
     var cloud = document.getElementById('cloud' + i);
-
-    var intervals = [ 50, 60 ];   // how many milliseconds to move a pixel
-    var distance = 700;           // how many pixels a cloud covers
-
-    var xOffset = new Date().getTime() / intervals[i] % distance;
-    var x = i === 0 ? xOffset - 100 : 400 - xOffset;
-    var y = i === 0 ? x - 200 : x + 200;
-
-    cloud.setAttribute('x', x);
-    cloud.setAttribute('y', y);
+    cloud.setAttribute('x', location.x);
+    cloud.setAttribute('y', location.y);
   }
+};
+
+
+/** Gets the current location of a specified cloud.
+ * @param {number} cloudIndex
+ * @returns {Object} location
+ * @returns {number} location.x
+ * @returns {number} location.y
+ */
+Studio.getCloudLocation = function(cloudIndex) {
+  // How many milliseconds to move one pixel.  Higher values mean slower clouds,
+  // and making them different causes the clouds to animate out of sync.
+  var intervals = [ 50, 60 ];
+
+  // How many pixels a cloud moves before it loops.  This value is big enough to
+  // make a cloud move entirely aross the game area, looping when completely
+  // out of view.
+  var distance = Studio.MAZE_WIDTH + constants.CLOUD_SIZE;
+
+  var totalTime = Studio.cloudStep * 30;
+  var xOffset = totalTime / intervals[cloudIndex] % distance;
+
+  var x, y;
+
+  if (cloudIndex === 0) {
+    // The first cloud animates from top-left to bottom-right, in the upper-right
+    // half of the screen.
+    x = xOffset - Studio.MAZE_WIDTH/4;
+    y = x - Studio.MAZE_HEIGHT/2;
+  } else {
+    // The second cloud animates from bottom-right to top-left, in the lower-left
+    // half of the screen.
+    x = Studio.MAZE_WIDTH - xOffset;
+    y = x + Studio.MAZE_HEIGHT/2;
+  }
+
+  return { x: x, y: y };
 };
 
 
@@ -3502,10 +3585,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setSpriteSpeed(cmd.opts);
       break;
-    case 'setBotSpeed':
+    case 'setDroidSpeed':
       studioApp.highlight(cmd.id);
-      Studio.setBotSpeed(cmd.opts);
-      Studio.trackedBehavior.hasSetBotSpeed = true;
+      Studio.setDroidSpeed(cmd.opts);
+      Studio.trackedBehavior.hasSetDroidSpeed = true;
       break;
     case 'setSpriteSize':
       studioApp.highlight(cmd.id);
@@ -3644,14 +3727,21 @@ Studio.playSound = function (opts) {
   if (soundVal === constants.RANDOM_VALUE) {
     // Get all non-random values and choose one at random:
     var allValues = paramLists.getPlaySoundValues(false);
-    soundVal = allValues[Math.floor(Math.random() * allValues.length)];
+    soundVal = allValues[Math.floor(Math.random() * allValues.length)].toLowerCase();
   }
 
   if (!skin.soundFiles[soundVal]) {
     throw new RangeError("Incorrect parameter: " + opts.soundName);
   }
 
-  Studio.throttledPlaySound(soundVal, { volume: 1.0 });
+  var skinSoundMetadata = utils.valueOr(skin.soundMetadata, []);
+  var playbackOptions = $.extend({
+    volume: 1.0
+  }, _.find(skinSoundMetadata, function (metadata) {
+    return metadata.name.toLowerCase().trim() === soundVal;
+  }));
+
+  Studio.throttledPlaySound(soundVal, playbackOptions);
   Studio.playSoundCount++;
 };
 
@@ -3934,13 +4024,13 @@ Studio.setSpriteSpeed = function (opts) {
   Studio.sprite[opts.spriteIndex].speed = speed;
 };
 
-var BOT_SPEEDS = {
+var DROID_SPEEDS = {
   slow: constants.SpriteSpeed.SLOW,
   normal: constants.SpriteSpeed.NORMAL,
   fast: constants.SpriteSpeed.VERY_FAST
 };
 
-Studio.setBotSpeed = function (opts) {
+Studio.setDroidSpeed = function (opts) {
 
   if (typeof opts.value !== 'string') {
     throw new TypeError("Incorrect parameter: " + opts.value);
@@ -3949,15 +4039,16 @@ Studio.setBotSpeed = function (opts) {
   var speedValue = opts.value.toLowerCase().trim();
 
   if (speedValue === constants.RANDOM_VALUE) {
-    speedValue = utils.randomKey(BOT_SPEEDS);
+    speedValue = utils.randomKey(DROID_SPEEDS);
   }
 
-  var speedNumericVal = BOT_SPEEDS[speedValue];
+  var speedNumericVal = DROID_SPEEDS[speedValue];
   if (typeof speedNumericVal === 'undefined') {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
 
   opts.value = speedNumericVal;
+  opts.spriteIndex = Studio.protaganistSpriteIndex || 0;
   Studio.setSpriteSpeed(opts);
 };
 
@@ -4236,7 +4327,7 @@ Studio.setSprite = function (opts) {
 
   sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
   spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
-  sprite.value = opts.forceHidden ? 'hidden' : opts.value;
+  sprite.value = opts.forceHidden ? 'hidden' : spriteValue;
   if (spriteValue === 'hidden' || spriteValue === 'visible') {
     return;
   }
@@ -5120,7 +5211,7 @@ Studio.allGoalsVisited = function() {
       // overridden by the skin)
       if (playSound &&
           (finishedGoals !== Studio.spriteGoals_.length || skin.playFinalGoalSound)) {
-        studioApp.playAudio('flag');
+        Studio.playSound({ soundName: 'flag' });
       }
 
       if (skin.goalSuccess) {
@@ -5189,7 +5280,7 @@ Studio.conditionSatisfied = function(required) {
       return false;
     }
 
-    if (valueName === 'setBotSpeed' && tracked.hasSetBotSpeed !== value) {
+    if (valueName === 'setDroidSpeed' && tracked.hasSetDroidSpeed !== value) {
       return false;
     }
   }
@@ -5626,6 +5717,13 @@ Projectile.prototype.createElement = function (parentElement) {
 };
 
 /**
+ * Stop our animations
+ */
+Projectile.prototype.stopAnimations = function() {
+  this.animation_.stopAnimator();
+};
+
+/**
  * Remove our element/clipPath/animator
  */
 Projectile.prototype.removeElement = function () {
@@ -6006,7 +6104,7 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.hideIconInClearPuzzle = true;
 
-  skin.defaultBackground = 'forest';
+  skin.defaultBackground = 'endor';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
@@ -6015,59 +6113,51 @@ function loadHoc2015(skin, assetUrl) {
   skin.ProjectileClassNames = [
   ];
 
-  // TODO: proper item class names
   skin.ItemClassNames = [
-    'pig',
-    'man',
-    'roo',
-    'bird',
-    'spider',
-    'mouse',
-    'pilot'
+    'pufferpig',
+    'stormtrooper',
+    'tauntaun',
+    'mynock',
+    'probot',
+    'mousedroid',
+    'rebelpilot'
   ];
 
   skin.AutohandlerTouchItems = {
-    whenTouchPig: 'pig',
-    whenTouchMan: 'man',
-    whenTouchRoo: 'roo',
-    whenTouchBird: 'bird',
-    whenTouchSpider: 'spider',
-    whenTouchMouse: 'mouse',
-    whenTouchPilot: 'pilot',
-    whenGetPig: 'pig',
-    whenGetMan: 'man',
-    whenGetRoo: 'roo',
-    whenGetBird: 'bird',
-    whenGetSpider: 'spider',
-    whenGetMouse: 'mouse',
-    whenGetPilot: 'pilot',
+    whenTouchPufferPig: 'pufferpig',
+    whenTouchStormtrooper: 'stormtrooper',
+    whenTouchTauntaun: 'tauntaun',
+    whenTouchMynock: 'mynock',
+    whenTouchProbot: 'probot',
+    whenTouchMouseDroid: 'mousedroid',
+    whenTouchRebelPilot: 'rebelpilot',
+    whenGetPufferPig: 'pufferpig',
+    whenGetStormtrooper: 'stormtrooper',
+    whenGetTauntaun: 'tauntaun',
+    whenGetMynock: 'mynock',
+    whenGetProbot: 'probot',
+    whenGetMouseDroid: 'mousedroid',
+    whenGetRebelPilot: 'rebelpilot',
   };
 
-  skin.AutohandlerTouchAllItems = {
-    whenTouchAllPigs: 'pig',
-    whenTouchAllMen: 'man',
-    whenTouchAllRoos: 'roo',
-    whenTouchAllBirds: 'bird',
-    whenTouchAllSpiders: 'spider',
-    whenTouchAllMice: 'mouse',
-    whenTouchAllPilots: 'pilot',
-    whenGetAllPigs: 'pig',
-    whenGetAllMen: 'man',
-    whenGetAllRoos: 'roo',
-    whenGetAllBirds: 'bird',
-    whenGetAllSpiders: 'spider',
-    whenGetAllMice: 'mouse',
-    whenGetAllPilots: 'pilot',
+  skin.AutohandlerGetAllItems = {
+    whenGetAllPufferPigs: 'pufferpig',
+    whenGetAllStormtroopers: 'stormtrooper',
+    whenGetAllTauntauns: 'tauntaun',
+    whenGetAllMynocks: 'mynock',
+    whenGetAllProbots: 'probot',
+    whenGetAllMouseDroids: 'mousedroid',
+    whenGetAllRebelPilots: 'rebelpilot',
   };
 
   skin.specialItemProperties = {
-    'pig':    { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
-    'man':    { frames: 12, width: 100, height: 100, scale: 1.1, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
-    'roo':    { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'bird':   { frames:  8, width: 100, height: 100, scale: 0.9, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
-    'spider': { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'mouse':  { frames:  1, width: 100, height: 100, scale: 0.5, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
-    'pilot':  { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'pufferpig':       { frames: 12, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true },
+    'stormtrooper':    { frames: 12, width: 100, height: 100, scale: 1.1, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.VERY_SLOW, spritesCounterclockwise: true  },
+    'tauntaun':        { frames: 15, width: 100, height: 100, scale: 1.6, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'mynock':          { frames:  8, width: 100, height: 100, scale: 0.9, renderOffset: { x: 0, y: -25}, activity: 'roam',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
+    'probot':          { frames: 12, width: 100, height: 100, scale: 1.2, renderOffset: { x: 0, y: -25}, activity: 'chase', speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'mousedroid':      { frames:  1, width: 100, height: 100, scale: 0.5, renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.LITTLE_SLOW, spritesCounterclockwise: true },
+    'rebelpilot':      { frames: 13, width: 100, height: 100, scale: 1,   renderOffset: { x: 0, y: -25}, activity: 'flee',  speed: constants.SpriteSpeed.SLOW, spritesCounterclockwise: true },
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -6129,30 +6219,30 @@ function loadHoc2015(skin, assetUrl) {
   skin.gridSpriteRenderOffsetX = -30;
   skin.gridSpriteRenderOffsetY = -40;
 
-  skin.avatarList = ['bot1', 'bot2'];
+  skin.avatarList = ['r2-d2', 'c-3po'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: name == 'bot1' ? 14 : 16,
+        normal: name == 'r2-d2' ? 14 : 16,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: name == 'bot1' ? 14 : 8
+        walk: name == 'r2-d2' ? 14 : 8
       },
       timePerFrame: 100
     };
   });
 
-  skin.bot1.movementAudio = [
-    { begin: 'bot1_move1_start', loop: 'bot1_move1_loop', end: 'bot1_move1_end', volume: 2.2 },
-    { begin: 'bot1_move2_start', loop: 'bot1_move2_loop', end: 'bot1_move2_end', volume: 2.2 },
-    { begin: 'bot1_move3_start', loop: 'bot1_move3_loop', end: 'bot1_move3_end', volume: 2.2 }
+  skin['r2-d2'].movementAudio = [
+    { begin: 'r2-d2_move1_start', loop: 'r2-d2_move1_loop', end: 'r2-d2_move1_end', volume: 2.2 },
+    { begin: 'r2-d2_move2_start', loop: 'r2-d2_move2_loop', end: 'r2-d2_move2_end', volume: 2.2 },
+    { begin: 'r2-d2_move3_start', loop: 'r2-d2_move3_loop', end: 'r2-d2_move3_end', volume: 2.2 }
   ];
-  skin.bot2.movementAudio = [
-    { loop: 'bot2_move_loop', end: 'bot2_move_end', volume: 0.8 }
+  skin['c-3po'].movementAudio = [
+    { loop: 'c-3po_move_loop', end: 'c-3po_move_end', volume: 0.6 }
   ];
 
   skin.preventProjectileLoop = function (className) {
@@ -6160,45 +6250,44 @@ function loadHoc2015(skin, assetUrl) {
   };
 
   skin.preventItemLoop = function (className) {
-    return className === 'item_character1';
+    return className === '';
   };
 
   // No failure avatar for this skin.
   skin.failureAvatar = null;
 
-  // TODO: Create actual item choices
-  skin.pig = skin.assetUrl('walk_item1.png');
-  skin.man = skin.assetUrl('walk_item2.png');
-  skin.roo = skin.assetUrl('walk_item3.png');
-  skin.bird = skin.assetUrl('walk_item4.png');
-  skin.spider = skin.assetUrl('walk_item5.png');
-  skin.mouse = skin.assetUrl('walk_item6.png');
-  skin.pilot = skin.assetUrl('walk_item7.png');
+  skin.pufferpig = skin.assetUrl('walk_pufferpig.png');
+  skin.stormtrooper = skin.assetUrl('walk_stormtrooper.png');
+  skin.tauntaun = skin.assetUrl('walk_tauntaun.png');
+  skin.mynock = skin.assetUrl('walk_mynock.png');
+  skin.probot = skin.assetUrl('walk_probot.png');
+  skin.mousedroid = skin.assetUrl('walk_mousedroid.png');
+  skin.rebelpilot = skin.assetUrl('walk_rebelpilot.png');
 
-  skin.forest = {
-    background: skin.assetUrl('background_background1.jpg'),
-    tiles: skin.assetUrl('tiles_background1.png'),
-    jumboTiles: skin.assetUrl('jumbotiles_background1.png'),
+  skin.endor = {
+    background: skin.assetUrl('background_endor.jpg'),
+    tiles: skin.assetUrl('tiles_endor.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_endor.png'),
     jumboTilesAddOffset: -5,
     jumboTilesSize: 60,
     jumboTilesRows: 4,
     jumboTilesCols: 4,
     clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
   };
-  skin.snow = {
-    background: skin.assetUrl('background_background2.jpg'),
-    tiles: skin.assetUrl('tiles_background2.png'),
-    jumboTiles: skin.assetUrl('jumbotiles_background2.png'),
+  skin.hoth = {
+    background: skin.assetUrl('background_hoth.jpg'),
+    tiles: skin.assetUrl('tiles_hoth.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_hoth.png'),
     jumboTilesAddOffset: -5,
     jumboTilesSize: 60,
     jumboTilesRows: 4,
     jumboTilesCols: 4,
     clouds: [skin.assetUrl('cloud_dark.png'), skin.assetUrl('cloud_dark2.png')]
   };
-  skin.ship = {
-    background: skin.assetUrl('background_background3.jpg'),
-    tiles: skin.assetUrl('tiles_background3.png'),
-    jumboTiles: skin.assetUrl('jumbotiles_background3.png'),
+  skin.starship = {
+    background: skin.assetUrl('background_starship.jpg'),
+    tiles: skin.assetUrl('tiles_starship.png'),
+    jumboTiles: skin.assetUrl('jumbotiles_starship.png'),
     jumboTilesAddOffset: -5,
     jumboTilesSize: 60,
     jumboTilesRows: 4,
@@ -6211,12 +6300,12 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.enlargeWallTiles = { minCol: 0, maxCol: 3, minRow: 3, maxRow: 5 };
 
-  // Since we don't have jumbo tiles for our "snow" background, in the case
+  // Since we don't have jumbo tiles for our "Hoth" background, in the case
   // of the two maps that use jumbo pieces ("circle" and "horizontal") we
   // return a special version of the map that just uses regular tile pieces.
 
   skin.getMap = function(background, map) {
-    if (background == "snow" && (map == "circle" || map == "horizontal")) {
+    if (background == "hoth" && (map == "circle" || map == "horizontal")) {
       return map + "_nonjumbo";
     }
     else {
@@ -6296,17 +6385,59 @@ function loadHoc2015(skin, assetUrl) {
 
   // Sounds.
   skin.sounds = [
-    'character1sound1', 'character1sound2', 'character1sound3', 'character1sound4',
-    'character1sound5', 'character1sound6', 'character1sound7', 'character1sound8',
-    'character1sound9',
-    'character2sound1', 'character2sound2', 'character2sound3', 'character2sound4',
-    'item1sound1', 'item1sound2', 'item1sound3', 'item1sound4',
-    'item3sound1', 'item3sound2', 'item3sound3', 'item3sound4',
-    'item4sound1', 'item4sound2', 'item4sound3',
-    'item5sound1', 'item5sound2', 'item5sound3',
-    'item6sound1', 'item6sound2', 'item6sound3',
+    'R2-D2sound1', 'R2-D2sound2', 'R2-D2sound3', 'R2-D2sound4',
+    'R2-D2sound5', 'R2-D2sound6', 'R2-D2sound7', 'R2-D2sound8',
+    'R2-D2sound9',
+    'C-3POsound1', 'C-3POsound2', 'C-3POsound3', 'C-3POsound4',
+    'PufferPigSound1', 'PufferPigSound2', 'PufferPigSound3', 'PufferPigSound4',
+    'TauntaunSound1', 'TauntaunSound2', 'TauntaunSound3', 'TauntaunSound4',
+    'MynockSound1', 'MynockSound2', 'MynockSound3',
+    'ProbotSound1', 'ProbotSound2', 'ProbotSound3',
+    'MouseDroidSound1', 'MouseDroidSound2', 'MouseDroidSound3',
     'alert1', 'alert2', 'alert3', 'alert4',
     'applause'
+  ];
+
+  skin.soundMetadata = [
+    {name: 'start', volume: 0.2},
+    {name: 'win', volume: 0.2},
+    {name: 'failure', volume: 0.2},
+    {name: 'flag', volume: 0.2},
+    {name: 'R2-D2sound1', volume: 0.2},
+    {name: 'R2-D2sound2', volume: 0.2},
+    {name: 'R2-D2sound3', volume: 0.2},
+    {name: 'R2-D2sound4', volume: 0.2},
+    {name: 'R2-D2sound5', volume: 0.2},
+    {name: 'R2-D2sound6', volume: 0.2},
+    {name: 'R2-D2sound7', volume: 0.2},
+    {name: 'R2-D2sound8', volume: 0.2},
+    {name: 'R2-D2sound9', volume: 0.2},
+    {name: 'C-3POsound1', volume: 0.2},
+    {name: 'C-3POsound2', volume: 0.2},
+    {name: 'C-3POsound3', volume: 0.2},
+    {name: 'C-3POsound4', volume: 0.2},
+    {name: 'PufferPigSound1', volume: 0.2},
+    {name: 'PufferPigSound2', volume: 0.2},
+    {name: 'PufferPigSound3', volume: 0.2},
+    {name: 'PufferPigSound4', volume: 0.2},
+    {name: 'TauntaunSound1', volume: 0.2},
+    {name: 'TauntaunSound2', volume: 0.2},
+    {name: 'TauntaunSound3', volume: 0.2},
+    {name: 'TauntaunSound4', volume: 0.2},
+    {name: 'MynockSound1', volume: 0.2},
+    {name: 'MynockSound2', volume: 0.2},
+    {name: 'MynockSound3', volume: 0.2},
+    {name: 'ProbotSound1', volume: 0.2},
+    {name: 'ProbotSound2', volume: 0.2},
+    {name: 'ProbotSound3', volume: 0.2},
+    {name: 'MouseDroidSound1', volume: 0.2},
+    {name: 'MouseDroidSound2', volume: 0.2},
+    {name: 'MouseDroidSound3', volume: 0.2},
+    {name: 'alert1', volume: 0.2},
+    {name: 'alert2', volume: 0.2},
+    {name: 'alert3', volume: 0.2},
+    {name: 'alert4', volume: 0.2},
+    {name: 'applause', volume: 0.2}
   ];
 
   skin.musicMetadata = HOC2015_MUSIC_METADATA;
@@ -6329,38 +6460,38 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    [msg.setBackgroundForest(), '"forest"'],
-    [msg.setBackgroundSnow(), '"snow"'],
-    [msg.setBackgroundShip(), '"ship"']
+    [msg.setBackgroundEndor(), '"endor"'],
+    [msg.setBackgroundHoth(), '"hoth"'],
+    [msg.setBackgroundStarship(), '"starship"']
     ];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
-    [skin.forest.background, '"forest"'],
-    [skin.snow.background, '"snow"'],
-    [skin.ship.background, '"ship"'],
+    [skin.endor.background, '"endor"'],
+    [skin.hoth.background, '"hoth"'],
+    [skin.starship.background, '"starship"'],
     [skin.randomPurpleIcon, RANDOM_VALUE],
     ];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
     [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteBot1(), '"bot1"'],
-    [msg.setSpriteBot2(), '"bot2"']];
+    [msg.setSpriteR2D2(), '"r2-d2"'],
+    [msg.setSpriteC3PO(), '"c-3po"']];
 
   skin.projectileChoices = [];
 
   // NOTE: item names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
   skin.itemChoices = [
-    [msg.itemMan(), '"man"'],
-    [msg.itemPilot(), '"pilot"'],
-    [msg.itemPig(), '"pig"'],
-    [msg.itemBird(), '"bird"'],
-    [msg.itemMouse(), '"mouse"'],
-    [msg.itemRoo(), '"roo"'],
-    [msg.itemSpider(), '"spider"'],
+    [msg.itemStormtrooper(), '"stormtrooper"'],
+    [msg.itemRebelPilot(), '"rebelpilot"'],
+    [msg.itemPufferPig(), '"pufferpig"'],
+    [msg.itemMynock(), '"mynock"'],
+    [msg.itemMouseDroid(), '"mousedroid"'],
+    [msg.itemTauntaun(), '"tauntaun"'],
+    [msg.itemProbot(), '"probot"'],
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
@@ -6385,7 +6516,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.AutohandlerTouchItems = {
   };
 
-  skin.AutohandlerTouchAllItems = {
+  skin.AutohandlerGetAllItems = {
   };
 
   skin.specialItemProperties = {
@@ -6401,7 +6532,8 @@ function loadHoc2015x(skin, assetUrl) {
   skin.goalSpriteHeight = 50;
 
   // How many frames in the animated goal spritesheet.
-  skin.animatedGoalFrames = 16;
+  skin.animatedGoalFrames = 1;
+  skin.disableClipRectOnGoals = true;
 
   // Special effect applied to goal sprites
   skin.goalEffect = 'glow';
@@ -6452,7 +6584,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.gridSpriteRenderOffsetX = -20;
   skin.gridSpriteRenderOffsetY = -40;
 
-  skin.avatarList = ['bot1'];
+  skin.avatarList = ['bb-8'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
@@ -6468,11 +6600,11 @@ function loadHoc2015x(skin, assetUrl) {
       timePerFrame: 100
     };
   });
-  skin.bot1.movementAudio = [
-    { begin: 'move1' },
-    { begin: 'move2' },
-    { begin: 'move3' },
-    { begin: 'move4' }
+  skin['bb-8'].movementAudio = [
+    { begin: 'move1', volume: 0.3 },
+    { begin: 'move2', volume: 0.3 },
+    { begin: 'move3', volume: 0.3 },
+    { begin: 'move4', volume: 0.3 }
   ];
 
   skin.preventProjectileLoop = function (className) {
@@ -6480,7 +6612,7 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.preventItemLoop = function (className) {
-    return className === 'item_character1';
+    return className === '';
   };
 
   skin.hazard = skin.assetUrl('hazard_idle.png');
@@ -6523,7 +6655,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
     [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteBot1(), '"bot1"']];
+    [msg.setSpriteBB8(), '"BB-8"']];
 
   skin.projectileChoices = [];
 
@@ -6539,21 +6671,21 @@ function loadHoc2015x(skin, assetUrl) {
  * @const {MusicTrackDefinition[]}
  */
 var HOC2015_MUSIC_METADATA = [
-  { name: 'song1' },
-  { name: 'song2' },
-  { name: 'song3' },
-  { name: 'song4', volume: 0.85 },
-  { name: 'song5' },
-  { name: 'song6' },
-  { name: 'song7' },
-  { name: 'song8', volume: 0.85 },
-  { name: 'song9', volume: 0.85 },
-  { name: 'song10' },
-  { name: 'song11', volume: 0.85 },
-  { name: 'song12', volume: 0.85 },
-  { name: 'song13' },
-  { name: 'song14' },
-  { name: 'song15' }
+  { name: 'song1', volume: 0.5 },
+  { name: 'song2', volume: 0.5 },
+  { name: 'song3', volume: 0.5 },
+  { name: 'song4', volume: 0.4 },
+  { name: 'song5', volume: 0.4 },
+  { name: 'song6', volume: 0.5 },
+  { name: 'song7', volume: 0.4 },
+  { name: 'song8', volume: 0.4 },
+  { name: 'song9', volume: 0.4 },
+  { name: 'song10', volume: 0.5 },
+  { name: 'song11', volume: 0.45 },
+  { name: 'song12', volume: 0.4 },
+  { name: 'song13', volume: 0.4 },
+  { name: 'song14', volume: 0.5 },
+  { name: 'song15', volume: 0.55 }
 ];
 
 function loadStudio(skin, assetUrl) {
@@ -6978,19 +7110,11 @@ var moveNSEW = blockOfType('studio_moveNorth') +
   blockOfType('studio_moveSouth') +
   blockOfType('studio_moveWest');
 
-function whenMoveBlocks(yOffset) {
-  return '<block type="studio_whenLeft" deletable="false" x="20" y="' + (20 + yOffset).toString() + '"> \
-   <next><block type="studio_moveWest"></block> \
-   </next></block> \
- <block type="studio_whenRight" deletable="false" x="20" y="'+ (150 + yOffset).toString() +'"> \
-   <next><block type="studio_moveEast"></block> \
-   </next></block> \
- <block type="studio_whenUp" deletable="false" x="20" y="' + (280 + yOffset).toString() + '"> \
-   <next><block type="studio_moveNorth"></block> \
-   </next></block> \
- <block type="studio_whenDown" deletable="false" x="20" y="' + (410 + yOffset).toString() + '"> \
-   <next><block type="studio_moveSouth"></block> \
-   </next></block>';
+function whenArrowBlocks(yOffset, yDelta) {
+  return '<block type="studio_whenUp" deletable="false" x="20" y="' + (yOffset).toString() + '"></block> \
+    <block type="studio_whenDown" deletable="false" x="20" y="'+ (yDelta + yOffset).toString() +'"></block> \
+    <block type="studio_whenLeft" deletable="false" x="20" y="' + (2 * yDelta + yOffset).toString() + '"></block> \
+    <block type="studio_whenRight" deletable="false" x="20" y="' + (3 * yDelta + yOffset).toString() + '"></block>';
 }
 
 function foreverUpAndDownBlocks(yPosition) {
@@ -8547,7 +8671,7 @@ levels.js_hoc2015_move_right = {
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0100000],
      [0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x0000000]],
 
-  'instructions': '"We need that scrap metal. BOTX, can you get it?"',
+  instructions: msg.hoc2015_move_right_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutFailureTick': 100,
   'timeoutAfterWhenRun': true,
@@ -8612,7 +8736,7 @@ levels.js_hoc2015_move_right_down = {
      [0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000, 0x00],
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
-  'instructions': '"We need more scrap metal. Can you get all the metal in this area?"',
+  instructions: msg.hoc2015_move_right_down_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -8660,7 +8784,7 @@ levels.js_hoc2015_move_diagonal = {
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x20],
      [0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000, 0x00]],
   'embed': 'false',
-  'instructions': '"Watch out for the GUY!"',
+  instructions: msg.hoc2015_move_diagonal_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -8731,7 +8855,7 @@ levels.js_hoc2015_move_backtrack = {
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
      [0x00, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]],
-  'instructions': '"Go quickly, BOTX."',
+  instructions: msg.hoc2015_move_backtrack_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -8779,7 +8903,7 @@ levels.js_hoc2015_move_around = {
      [0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00],
      [0x0000000, 0x0000020, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00]],
   'embed': 'false',
-  'instructions': '"It\'s up to you, BOTX!"',
+  instructions: msg.hoc2015_move_around_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -8828,7 +8952,7 @@ levels.js_hoc2015_move_finale = {
      [0x00, 0x1010000, 0x1010000, 0x0000020, 0x0000000, 0x0000000, 0x1020000, 0x1020000],
      [0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000]],
   'embed': 'false',
-  'instructions': '"We need 4 more pieces of metal. Can you find them?"',
+  instructions: msg.hoc2015_move_finale_instructions(),
   'ticksBeforeFaceSouth': 9,
   'timeoutAfterWhenRun': true,
   'goalOverride': {
@@ -8849,7 +8973,7 @@ levels.js_hoc2015_move_finale = {
 
 levels.js_hoc2015_event_two_items = {
   'editCode': true,
-  'background': 'snow',
+  'background': 'hoth',
   'music': [ 'song7' ],
   'wallMap': 'blank',
   'softButtons': ['downButton', 'upButton'],
@@ -8884,8 +9008,8 @@ levels.js_hoc2015_event_two_items = {
     [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00]],
   'pinWorkspaceToBottom': 'true',
   'embed': 'false',
-  'instructions': '"BOT1, I need you to get a critical message to the GOALs."',
-  'instructions2': 'Make BOT1 move when you use the arrow keys.',
+  instructions: msg.hoc2015_event_two_items_instructions(),
+  instructions2: msg.hoc2015_event_two_items_instructions2(),
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
   'goalOverride': {
@@ -8945,7 +9069,7 @@ levels.js_hoc2015_event_two_items = {
 
 levels.js_hoc2015_event_four_items = {
   'editCode': true,
-  'background': 'snow',
+  'background': 'hoth',
   'music': [ 'song8' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
@@ -8983,8 +9107,8 @@ levels.js_hoc2015_event_four_items = {
     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
     [0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00]],
   'embed': 'false',
-  'instructions': '"Get to all the GOALs as quickly as you can."',
-  'instructions2': 'Move in all directions.',
+  instructions: msg.hoc2015_event_four_items_instructions(),
+  instructions2: msg.hoc2015_event_four_items_instructions2(),
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
   'goalOverride': {
@@ -9002,34 +9126,33 @@ levels.js_hoc2015_event_four_items = {
 
 levels.js_hoc2015_score =
 {
-  'avatarList': ['bot1'],
+  'avatarList': ['R2-D2'],
   'editCode': true,
-  'background': 'snow',
+  'background': 'hoth',
   'music': [ 'song9' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'autohandlerOverrides': {
-    'whenGetPilot': 'whenTouchGoal'
+    'whenGetRebelPilot': 'whenTouchGoal'
   },
   'codeFunctions': {
     'playSound': null,
     'addPoints': { params: ["100"] },
 
-    'whenGetPilot': null
+    'whenGetRebelPilot': null
   },
   'startBlocks': [
-    'function whenGetPilot() {',
-    '  playSound("character1sound1");',
+    'function whenGetRebelPilot() {',
+    '  playSound("R2-D2sound1");',
     '}',
     ].join('\n'),
   paramRestrictions: {
     playSound: {
-      random: true,
-      character1sound1: true,
-      character1sound2: true,
-      character1sound3: true,
-      character1sound4: true,
-      character1sound5: true,
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true
     }
   },
   'sortDrawOrder': true,
@@ -9049,8 +9172,8 @@ levels.js_hoc2015_score =
     [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 1,  0, 0, 0, 0]],
-  'instructions': '"Reach the GOALs!"',
-  'instructions2': "Let's add points. Add 100 points when BOT1 gets each pilot.",
+  instructions: msg.hoc2015_score_instructions(),
+  instructions2: msg.hoc2015_score_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 600, // 20 seconds
   'showTimeoutRect': true,
@@ -9120,7 +9243,7 @@ levels.js_hoc2015_score =
 
 levels.js_hoc2015_win_lose = {
   'editCode': true,
-  'background': 'forest',
+  'background': 'endor',
   'music': [ 'song10' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
@@ -9128,12 +9251,20 @@ levels.js_hoc2015_win_lose = {
     'playSound': null,
     'addPoints': { params: ["100"] },
     'removePoints': { params: ["100"] },
-    'whenGetPilot': null,
-    'whenGetMan': null,
-    'whenGetBird': null,
+    'whenGetRebelPilot': null,
+    'whenGetStormtrooper': null,
+    'whenGetMynock': null,
   },
   'startBlocks': [].join('\n'),
-
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -9151,8 +9282,8 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
     [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]],
   'embed': 'false',
-  'instructions': '"Watch out for the MAN."',
-  'instructions2': 'Add 100 points when BOT1 gets the pilot.  Remove 100 points when he gets a MAN.  Now, avoid the MEN and get all the pilots!',
+  instructions: msg.hoc2015_win_lose_instructions(),
+  instructions2: msg.hoc2015_win_lose_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -9191,27 +9322,38 @@ levels.js_hoc2015_win_lose = {
 
 levels.js_hoc2015_add_characters = {
   'editCode': true,
-  'background': 'forest',
+  'background': 'endor',
   'music': [ 'song11' ],
   'wallMap': 'circle',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': { params: ['"pig"'] },
+    'addCharacter': { params: ['"PufferPig"'] },
     'addPoints': { params: ["1000"] },
     'removePoints': { params: ["1000"] },
     'playSound': null,
 
-    'whenGetPig': null,
+    'whenGetPufferPig': null,
   },
   'startBlocks': [
-    'playSound("character1sound1");',
-    'addCharacter("pig");',
+    'playSound("R2-D2sound1");',
+    'addCharacter("PufferPig");',
     '',
-    'function whenGetPig() {',
-    '  playSound("item1sound1");',
+    'function whenGetPufferPig() {',
+    '  playSound("PufferPigSound1");',
     '  addPoints(1000);',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'PufferPigSound1': true,
+      'PufferPigSound2': true
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -9229,8 +9371,8 @@ levels.js_hoc2015_add_characters = {
     [0, 0, 0, 0,  0, 0, 0, 0],
     [0, 0, 0, 0,  0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"I\'m seeing signs of increased activity on this planet."',
-  'instructions2': 'Add 3 PIGs to the planet. Then, go get them.',
+  instructions: msg.hoc2015_add_characters_instructions(),
+  instructions2: msg.hoc2015_add_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -9263,28 +9405,40 @@ levels.js_hoc2015_add_characters = {
 
 levels.js_hoc2015_chain_characters = {
   'editCode': true,
-  'background': 'ship',
+  'background': 'starship',
   'music': [ 'song12' ],
   'wallMap': 'grid',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': { params: ['"mouse"'] },
+    'addCharacter': { params: ['"MouseDroid"'] },
     'playSound': null,
     'addPoints': null,
     'removePoints': null,
 
-    'whenGetMouse': null,
+    'whenGetMouseDroid': null,
   },
   'startBlocks': [
-    'addCharacter("mouse");',
-    'playSound("character1sound3");',
+    'addCharacter("MouseDroid");',
+    'playSound("R2-D2sound3");',
     '',
-    'function whenGetMouse() {',
-    '  playSound("item6sound2");',
+    'function whenGetMouseDroid() {',
+    '  playSound("MouseDroidSound2");',
     '  addPoints(100);',
     '',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -9294,8 +9448,8 @@ levels.js_hoc2015_chain_characters = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"They\'re multiplying!"',
-  'instructions2': 'Can you make two MOUSEs appear every time BOT1 gets one MOUSE?  Get 20 MOUSEs and score 2000 points.',
+  instructions: msg.hoc2015_chain_characters_instructions(),
+  instructions2: msg.hoc2015_chain_characters_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
@@ -9334,40 +9488,52 @@ levels.js_hoc2015_chain_characters = {
 
 levels.js_hoc2015_chain_characters_2 = {
   'editCode': true,
-  'background': 'ship',
+  'background': 'starship',
   'music': [ 'song13' ],
   'wallMap': 'horizontal',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'addCharacter': { params: ['"mouse"'] },
+    'addCharacter': { params: ['"MouseDroid"'] },
     'addPoints': null,
     'removePoints': null,
     'playSound': null,
 
-    'whenGetRoo': null,
-    'whenGetMouse': null
+    'whenGetTauntaun': null,
+    'whenGetMouseDroid': null,
+    'whenGetMynock': null
   },
   'startBlocks': [
-    'addCharacter("roo");',
-    'addCharacter("roo");',
-    '',
-    'function whenGetRoo() {',
-    '  playSound("item3sound4");',
+    'addCharacter("Tauntaun");',
+    'addCharacter("Tauntaun");',
+    'function whenGetTauntaun() {',
+    '  playSound("TauntaunSound4");',
     '  addPoints(50);',
-    '  addCharacter("bird");',
-    '  addCharacter("bird");',
+    '  addCharacter("Mynock");',
+    '  addCharacter("Mynock");',
     '}',
-    '',
-    'function whenGetBird() {',
-    '  playSound("item4sound1");',
-    '',
-    '}',
-    'function whenGetMouse() {',
-    '  playSound("item6sound2");',
+    'function whenGetMouseDroid() {',
+    '  playSound("MouseDroidSound2");',
     '  addPoints(100);',
-    '  ',
     '}',
     ].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'TauntaunSound1': true,
+      'TauntaunSound2': true,
+      'TauntaunSound3': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true,
+      'MynockSound1': true,
+      'MynockSound2': true,
+      'MynockSound3': true,
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -9377,8 +9543,8 @@ levels.js_hoc2015_chain_characters_2 = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"It\'s up to you, BOT1!"',
-  'instructions2': 'When you get a ROO, two BIRDs appear. Can you make two MICE appear when you get a BIRD? Then, get them all.',
+  instructions: msg.hoc2015_chain_characters2_instructions(),
+  instructions2: msg.hoc2015_chain_characters2_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 1350, // 45 seconds
   'showTimeoutRect': true,
@@ -9391,7 +9557,7 @@ levels.js_hoc2015_chain_characters_2 = {
   'callouts': [
     {
       'id': 'playlab:js_hoc2015_chain_characters_2:calloutPlaceTwoWhenBird',
-      'element_id': '.droplet-gutter-line:nth-of-type(12)',
+      'element_id': '#droplet_palette_block_whenGetMynock',
       'hide_target_selector': '.droplet-drag-cover',
       'qtip_config': {
         'content' : {
@@ -9400,7 +9566,7 @@ levels.js_hoc2015_chain_characters_2 = {
         'event': 'mouseup touchend',
         'position': {
           'my': 'top left',
-          'at': 'center right',
+          'at': 'bottom center',
           'adjust': {
             'x': 40,
             'y': 10
@@ -9413,35 +9579,63 @@ levels.js_hoc2015_chain_characters_2 = {
 
 levels.js_hoc2015_change_setting = {
   'editCode': true,
-  'background': 'ship',
+  'background': 'starship',
   'music': [ 'song14' ],
   'wallMap': 'blobs',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'setBot': null,
+    'setDroid': null,
     'setBackground': null,
-    'setBotSpeed': null,
+    'setDroidSpeed': null,
     'setMap': null,
     'playSound': null,
     'addCharacter': null,
     'addPoints': null,
     'removePoints': null,
 
-    'whenGetPilot': null,
+    'whenGetRebelPilot': null,
   },
   'startBlocks': [
-    'addCharacter("pilot");',
-    'addCharacter("pilot");',
-    'addCharacter("pilot");',
-    'playSound("character1sound4");',
-    'setBot("bot1");',
+    'addCharacter("RebelPilot");',
+    'addCharacter("RebelPilot");',
+    'addCharacter("RebelPilot");',
+    'playSound("R2-D2sound4");',
+    'setDroid("R2-D2");',
     '',
-    'function whenGetPilot() {',
+    'function whenGetRebelPilot() {',
     '  addPoints(400);',
     '  setBackground("random");',
     '  ',
     '}',
     ''].join('\n'),
+  paramRestrictions: {
+    playSound: {
+      'random': true,
+      'C-3POsound1': true,
+      'C-3POsound2': true,
+      'C-3POsound3': true,
+      'C-3POsound4': true,
+      'R2-D2sound1': true,
+      'R2-D2sound2': true,
+      'R2-D2sound3': true,
+      'R2-D2sound4': true,
+      'PufferPigSound1': true,
+      'PufferPigSound2': true,
+      'PufferPigSound3': true,
+      'TauntaunSound1': true,
+      'TauntaunSound2': true,
+      'TauntaunSound3': true,
+      'MouseDroidSound1': true,
+      'MouseDroidSound2': true,
+      'MouseDroidSound3': true,
+      'MynockSound1': true,
+      'MynockSound2': true,
+      'MynockSound3': true,
+      'ProbotSound1': true,
+      'ProbotSound2': true,
+      'ProbotSound3': true,
+    }
+  },
   'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
@@ -9451,8 +9645,8 @@ levels.js_hoc2015_change_setting = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 16, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': '"Time to visit another planet."',
-  'instructions2': 'Use the new commands to change the background, map, BOT, and speed.  Then, get the pilots.',
+  instructions: msg.hoc2015_change_setting_instructions(),
+  instructions2: msg.hoc2015_change_setting_instructions2(),
   'autoArrowSteer': true,
   'timeoutFailureTick': 900, // 30 seconds
   'showTimeoutRect': true,
@@ -9473,7 +9667,7 @@ levels.js_hoc2015_change_setting = {
   ],
   'progressConditions' : [
     // Collected all the items and set the right properties?  Success.
-    { required: { 'setMap': true, 'setBotSpeed': true, 'collectedItemsAtOrAbove': 3 },
+    { required: { 'setMap': true, 'setDroidSpeed': true, 'collectedItemsAtOrAbove': 3 },
       result: { success: true, message: msg.successGenericCharacter() } },
     // Special message for timing out when not enough items collected.
     { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
@@ -9481,40 +9675,35 @@ levels.js_hoc2015_change_setting = {
     // If all items are collected, but either property not set?  Failure.
     { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 },
       result: { success: false, message: msg.failedChangeSettingSettings() } },
-    { required: { 'setBotSpeed': false, 'collectedItemsAtOrAbove': 3 },
+    { required: { 'setDroidSpeed': false, 'collectedItemsAtOrAbove': 3 },
       result: { success: false, message: msg.failedChangeSettingSettings() } }
   ]
 };
 
-var js_hoc2015_event_free_character_instructions = '"You\'re on your own now, BOT1."';
-var js_hoc2015_event_free_ooc_instructions = "You have all the tools you need " +
-    "now to create your own level. Feel free to explore and play with all " +
-    "the different Commands and Events. When you're done, press the Finish " +
-    "button to continue.";
 var js_hoc2015_event_free_markdown = [
-  '<span class="character-text">' + js_hoc2015_event_free_character_instructions + '</span>',
+  '<span class="character-text">' + msg.hoc2015_event_free_instructions() + '</span>',
   '',
-  '<span class="instructions2">' + js_hoc2015_event_free_ooc_instructions + '</span>',
+  '<span class="instructions2">' + msg.hoc2015_event_free_instructions2() + '</span>',
   '',
   '<details class="hoc2015">',
   '<summary>Example project ideas</summary>',
   '<p>**Example 1**',
-  '<br />Add 5 random characters in the scene, and play a different sound each time BOT1 collides with one of them.</p>',
+  '<br />Add five random characters in the scene, and play a different sound each time R2-D2 collides with one of them.</p>',
   '',
   '<p>**Example 2**',
-  '<br />Add 10 MANs to chase BOT2. See if you can outrun them by running at high speed.</p>',
+  '<br />Add ten Stormtroopers to chase C-3PO. See if you can outrun them by running at high speed.</p>',
   '',
   '<p>**Example 3**',
-  '<br />Add 5 PIGs that are running away from BOT1. Make him scream each time he catches one.</p>',
+  '<br />Add five Puffer Pigs that are running away from R2-D2. Make him scream each time he catches one.</p>',
   '',
   '</details>',
   '<details class="hoc2015">',
   '<summary>Extra credit project ideas</summary>',
   '',
   '<p>**Example 1**',
-  '<br />Add a MOUSE and a MAN. Every time BOT1 catches a MOUSE, score some ' +
-      'points and then add another MOUSE and another MAN.  End the game if a ' +
-      'MAN catches BOT1.</p>',
+  '<br />Add a Mouse Droid and a Stormtrooper. Every time R2-D2 catches a Mouse Droid, score some ' +
+      'points and then add another Mouse Droid and another Stormtrooper.  End the game if a ' +
+      'Stormtrooper catches R2-D2.</p>',
   '',
   '</details>',
   '<details class="hoc2015">',
@@ -9530,14 +9719,14 @@ var js_hoc2015_event_free_markdown = [
 levels.js_hoc2015_event_free = {
   'editCode': true,
   'freePlay': true,
-  'background': 'forest',
+  'background': 'endor',
   'music': [ 'song15' ],
   'wallMap': 'blank',
   'softButtons': ['leftButton', 'rightButton', 'downButton', 'upButton'],
   'codeFunctions': {
-    'setBot': { 'category': 'Commands' },
+    'setDroid': { 'category': 'Commands' },
     'setBackground': { 'category': 'Commands' },
-    'setBotSpeed': { 'category': 'Commands' },
+    'setDroidSpeed': { 'category': 'Commands' },
     'setMap': { 'category': 'Commands' },
     'playSound': { 'category': 'Commands' },
     'addCharacter': { 'category': 'Commands' },
@@ -9559,41 +9748,41 @@ levels.js_hoc2015_event_free = {
     'whenDown': { 'category': 'Events' },
 
     'whenTouchObstacle': { 'category': 'Events' },
-    'whenGetMan': { 'category': 'Events' },
-    'whenGetPilot': { 'category': 'Events' },
-    'whenGetPig': { 'category': 'Events' },
-    'whenGetBird': { 'category': 'Events' },
-    'whenGetMouse': { 'category': 'Events' },
-    'whenGetRoo': { 'category': 'Events' },
-    'whenGetSpider': { 'category': 'Events' },
+    'whenGetStormtrooper': { 'category': 'Events' },
+    'whenGetRebelPilot': { 'category': 'Events' },
+    'whenGetPufferPig': { 'category': 'Events' },
+    'whenGetMynock': { 'category': 'Events' },
+    'whenGetMouseDroid': { 'category': 'Events' },
+    'whenGetTauntaun': { 'category': 'Events' },
+    'whenGetProbot': { 'category': 'Events' },
     'whenGetCharacter': { 'category': 'Events' },
 
-    'whenGetAllMen': { 'category': 'Events' },
-    'whenGetAllPilots': { 'category': 'Events' },
-    'whenGetAllPigs': { 'category': 'Events' },
-    'whenGetAllBirds': { 'category': 'Events' },
-    'whenGetAllMice': { 'category': 'Events' },
-    'whenGetAllRoos': { 'category': 'Events' },
-    'whenGetAllSpiders': { 'category': 'Events' },
+    'whenGetAllStormtroopers': { 'category': 'Events' },
+    'whenGetAllRebelPilots': { 'category': 'Events' },
+    'whenGetAllPufferPigs': { 'category': 'Events' },
+    'whenGetAllMynocks': { 'category': 'Events' },
+    'whenGetAllMouseDroids': { 'category': 'Events' },
+    'whenGetAllTauntauns': { 'category': 'Events' },
+    'whenGetAllProbots': { 'category': 'Events' },
     'whenGetAllCharacters': { 'category': 'Events' }
   },
   'startBlocks': [
-    'setBackground("forest");',
+    'setBackground("Endor");',
     'setMap("circle");',
-    'setBot("bot1");',
-    'setBotSpeed("normal");',
-    'playSound("character1sound5");',
+    'setDroid("R2-D2");',
+    'setDroidSpeed("normal");',
+    'playSound("R2-D2sound5");',
     'function whenUp() {',
-    '  ',
+    '  goUp();',
     '}',
     'function whenDown() {',
-    '  ',
+    '  goDown();',
     '}',
     'function whenLeft() {',
-    '  ',
+    '  goLeft();',
     '}',
     'function whenRight() {',
-    '  ',
+    '  goRight();',
     '}',
     ''].join('\n'),
   'sortDrawOrder': true,
@@ -9606,8 +9795,8 @@ levels.js_hoc2015_event_free = {
   'floatingScore': true,
   'map': [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0,16,0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]],
   'embed': 'false',
-  'instructions': js_hoc2015_event_free_character_instructions,
-  'instructions2': js_hoc2015_event_free_ooc_instructions,
+  'instructions': msg.hoc2015_event_free_instructions(),
+  'instructions2': msg.hoc2015_event_free_instructions2(),
   'markdownInstructions': js_hoc2015_event_free_markdown,
   'markdownInstructionsWithClassicMargins': true,
   'callouts': [
@@ -9644,7 +9833,8 @@ levels.js_hoc2015_event_free = {
     reinfFeedbackMsg: msg.hoc2015_reinfFeedbackMsg,
     sharingText: msg.hoc2015_shareGame
   },
-  disablePrinting: true
+  disablePrinting: true,
+  disableSaveToGallery: true
 };
 
 levels.hoc2015_blockly_1 = utils.extend(levels.js_hoc2015_move_right,  {
@@ -9735,7 +9925,7 @@ levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   editCode: false,
   startBlocks:
     '<block type="studio_whenTouchGoal" deletable="false"> \
-      <next><block type="studio_playSound"><title name="SOUND">character1sound1</title></block> \
+      <next><block type="studio_playSound"><title name="SOUND">r2-d2sound1</title></block> \
       </next></block>',
   toolbox:
     tb('<block type="studio_playSound"></block> \
@@ -9752,9 +9942,9 @@ levels.hoc2015_blockly_10 = utils.extend(levels.js_hoc2015_win_lose,  {
     tb('<block type="studio_playSound"></block> \
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">pilot</title></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">man</title></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">bird</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">rebelpilot</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">stormtrooper</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">mynock</title></block>'),
   requiredBlocks: [
     // TODO: addPoints, removePoints, whenGetPilot, whenGetMan
   ],
@@ -9765,17 +9955,17 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">character1sound1</title> \
+       <block type="studio_playSound"><title name="SOUND">r2-d2sound1</title> \
         <next> \
-         <block type="studio_addCharacter"><title name="VALUE">"pig"</title></block> \
+         <block type="studio_addCharacter"><title name="VALUE">"pufferpig"</title></block> \
         </next> \
        </block> \
       </next> \
      </block> \
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
-      <title name="VALUE">pig</title> \
+      <title name="VALUE">pufferpig</title> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">item1sound1</title> \
+       <block type="studio_playSound"><title name="SOUND">pufferpigsound1</title> \
         <next> \
          <block type="studio_addPoints"><title name="VALUE">1000</title></block> \
         </next> \
@@ -9783,11 +9973,11 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
       </next> \
      </block>',
   toolbox:
-    tb('<block type="studio_addCharacter"><title name="VALUE">"pig"</title></block> \
+    tb('<block type="studio_addCharacter"><title name="VALUE">"pufferpig"</title></block> \
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
         <block type="studio_playSound"></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">pig</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">pufferpig</title></block>'),
   requiredBlocks: [
     // TODO: addCharacter
   ],
@@ -9798,17 +9988,17 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
-       <block type="studio_addCharacter"><title name="VALUE">"mouse"</title> \
+       <block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title> \
         <next> \
-         <block type="studio_playSound"><title name="SOUND">character1sound3</title></block> \
+         <block type="studio_playSound"><title name="SOUND">r2-d2sound3</title></block> \
         </next> \
        </block> \
       </next> \
      </block> \
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
-      <title name="VALUE">mouse</title> \
+      <title name="VALUE">mousedroid</title> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">item6sound2</title> \
+       <block type="studio_playSound"><title name="SOUND">mousedroidsound2</title> \
         <next> \
          <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         </next> \
@@ -9816,11 +10006,11 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
       </next> \
      </block>',
   toolbox:
-    tb('<block type="studio_addCharacter"><title name="VALUE">"mouse"</title></block> \
+    tb('<block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
         <block type="studio_playSound"></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">mouse</title></block>'),
+        <block type="studio_whenGetCharacter"><title name="VALUE">mousedroid</title></block>'),
   requiredBlocks: [
     // TODO: addCharacter, addPoints
   ],
@@ -9828,14 +10018,164 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
 
 levels.hoc2015_blockly_13 = utils.extend(levels.js_hoc2015_chain_characters_2,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_addCharacter"><title name="VALUE">"tauntaun"</title> \
+        <next> \
+         <block type="studio_addCharacter"><title name="VALUE">"tauntaun"</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="130"> \
+      <title name="VALUE">tauntaun</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">TauntaunSound4</title> \
+        <next> \
+         <block type="studio_addPoints"><title name="VALUE">50</title> \
+          <next> \
+           <block type="studio_addCharacter"><title name="VALUE">"mynock"</title> \
+            <next> \
+             <block type="studio_addCharacter"><title name="VALUE">"mynock"</title></block> \
+            </next> \
+           </block> \
+          </next> \
+         </block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="300"> \
+      <title name="VALUE">mynock</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">TauntaunSound4</title></block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="460"> \
+      <title name="VALUE">mousedroid</title> \
+      <next> \
+       <block type="studio_playSound"><title name="SOUND">MouseDroidSound2</title> \
+        <next> \
+         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>',
+  toolbox:
+    tb('<block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_playSound"></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">tauntaun</title></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">mousedroid</title></block>'),
+  requiredBlocks: [
+    // TODO: addCharacter (check for mouse param?), addPoints
+  ],
 });
 
 levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
   editCode: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_addCharacter"><title name="VALUE">"rebelpilot"</title> \
+        <next> \
+         <block type="studio_addCharacter"><title name="VALUE">"rebelpilot"</title> \
+          <next> \
+           <block type="studio_addCharacter"><title name="VALUE">"rebelpilot"</title> \
+            <next> \
+             <block type="studio_playSound"><title name="SOUND">R2-D2sound4</title> \
+              <next> \
+               <block type="studio_setSprite"><title name="VALUE">"r2-d2"</title></block> \
+              </next> \
+             </block> \
+            </next> \
+           </block> \
+          </next> \
+         </block> \
+        </next> \
+       </block> \
+      </next> \
+     </block> \
+     <block type="studio_whenGetCharacter" deletable="false" x="20" y="300"> \
+      <title name="VALUE">rebelpilot</title> \
+      <next> \
+       <block type="studio_addPoints"><title name="VALUE">400</title> \
+        <next> \
+         <block type="studio_setBackground"><title name="VALUE">random</title></block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>',
+  // TODO: create setDroid block to improve the readability of the block?
+  // TODO: skin override of playSound dropdown (with paramsList filtering & random)
+  toolbox:
+    tb('<block type="studio_setSprite"></block> \
+        <block type="studio_setBackground"></block> \
+        <block type="studio_setDroidSpeed"></block> \
+        <block type="studio_setMap"></block> \
+        <block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
+        <block type="studio_addPoints"><title name="VALUE">100</title></block> \
+        <block type="studio_removePoints"><title name="VALUE">100</title></block> \
+        <block type="studio_playSound"></block> \
+        <block type="studio_whenGetCharacter"><title name="VALUE">rebelpilot</title></block>'),
+  requiredBlocks: [
+    // TODO: setMap, setDroidSpeed
+  ],
 });
 
 levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
   editCode: false,
+  markdownInstructions: null,
+  markdownInstructionsWithClassicMargins: false,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"> \
+      <next> \
+       <block type="studio_setBackground"><title name="VALUE">"endor"</title> \
+        <next> \
+         <block type="studio_setMap"><title name="VALUE">"circle"</title> \
+          <next> \
+           <block type="studio_setSprite"><title name="VALUE">"r2-d2"</title> \
+            <next> \
+             <block type="studio_setDroidSpeed"><title name="VALUE">normal</title> \
+              <next> \
+               <block type="studio_playSound"><title name="SOUND">R2-D2sound5</title></block> \
+              </next> \
+             </block> \
+            </next> \
+           </block> \
+          </next> \
+         </block> \
+        </next> \
+       </block> \
+      </next> \
+     </block>' +
+      whenArrowBlocks(200, 80),
+  toolbox: tb(
+    createCategory(msg.catActions(),
+                    hocMoveNSEW +
+                    blockOfType('studio_setSprite') +
+                    blockOfType('studio_setBackground') +
+                    blockOfType('studio_setDroidSpeed') +
+                    blockOfType('studio_setMap') +
+                    blockOfType('studio_playSound') +
+                    blockOfType('studio_addCharacter') +
+                    blockOfType('studio_setItemSpeed') +
+                    blockOfType('studio_addPoints') +
+                    blockOfType('studio_removePoints') +
+                    blockOfType('studio_endGame')) +
+    createCategory(msg.catEvents(),
+                    blockOfType('when_run') +
+                    blockOfType('studio_whenUp') +
+                    blockOfType('studio_whenDown') +
+                    blockOfType('studio_whenLeft') +
+                    blockOfType('studio_whenRight') +
+                    blockOfType('studio_whenGetCharacter') +
+                    blockOfType('studio_whenGetAllCharacters') +
+                    blockOfType('studio_whenGetAllCharacterClass') +
+                    blockOfType('studio_whenTouchObstacle'))),
+
 });
 
 
@@ -9866,9 +10206,9 @@ var api = require('./apiJavascript.js');
 var paramLists = require('./paramLists.js');
 
 module.exports.blocks = [
-  {func: 'setBot', parent: api, category: '', params: ['"bot1"'], dropdown: { 0: [ '"random"', '"bot1"', '"bot2"' ] } },
-  {func: 'setBotSpeed', parent: api, category: '', params: ['"fast"'], dropdown: { 0: [ '"random"', '"slow"', '"normal"', '"fast"' ] } },
-  {func: 'setBackground', parent: api, category: '', params: ['"snow"'], dropdown: { 0: [ '"random"', '"forest"', '"snow"', '"ship"' ] } },
+  {func: 'setDroid', parent: api, category: '', params: ['"R2-D2"'], dropdown: { 0: [ '"random"', '"R2-D2"', '"C-3PO"' ] } },
+  {func: 'setDroidSpeed', parent: api, category: '', params: ['"fast"'], dropdown: { 0: [ '"random"', '"slow"', '"normal"', '"fast"' ] } },
+  {func: 'setBackground', parent: api, category: '', params: ['"Hoth"'], dropdown: { 0: [ '"random"', '"Endor"', '"Hoth"', '"Starship"' ] } },
   {func: 'setMap', parent: api, category: '', params: ['"blank"'], dropdown: { 0: [ '"random"', '"blank"', '"circle"', '"horizontal"', '"grid"', '"blobs"'] } },
   {func: 'moveRight', parent: api, category: '', },
   {func: 'moveLeft', parent: api, category: '', },
@@ -9878,20 +10218,20 @@ module.exports.blocks = [
   {func: 'goLeft', parent: api, category: '', },
   {func: 'goUp', parent: api, category: '', },
   {func: 'goDown', parent: api, category: '', },
-  {func: 'playSound', parent: api, category: '', params: ['"character1sound1"'], dropdown: { 0: paramLists.playSoundDropdown } },
+  {func: 'playSound', parent: api, category: '', params: ['"R2-D2sound1"'], dropdown: { 0: paramLists.playSoundDropdown } },
 
   {func: 'endGame', parent: api, category: '', params: ['"win"'], dropdown: { 0: ['"win"', '"lose"' ] } },
   {func: 'addPoints', parent: api, category: '', params: ["100"] },
   {func: 'removePoints', parent: api, category: '', params: ["100"] },
   {func: 'changeScore', parent: api, category: '', params: ["1"] },
-  {func: 'addCharacter', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
-  {func: 'setToChase', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
-  {func: 'setToFlee', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
-  {func: 'setToRoam', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
-  {func: 'setToStop', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
-  {func: 'moveFast', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
-  {func: 'moveNormal', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
-  {func: 'moveSlow', parent: api, category: '', params: ['"pig"'], dropdown: { 0: [ '"random"', '"man"', '"pilot"', '"pig"', '"bird"', '"mouse"', '"roo"', '"spider"' ] } },
+  {func: 'addCharacter', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
+  {func: 'setToChase', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
+  {func: 'setToFlee', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
+  {func: 'setToRoam', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
+  {func: 'setToStop', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
+  {func: 'moveFast', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
+  {func: 'moveNormal', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
+  {func: 'moveSlow', parent: api, category: '', params: ['"PufferPig"'], dropdown: { 0: [ '"random"', '"Stormtrooper"', '"RebelPilot"', '"PufferPig"', '"Mynock"', '"MouseDroid"', '"Tauntaun"', '"Probot"' ] } },
 
   {func: 'whenTouchGoal', block: 'function whenTouchGoal() {}', expansion: 'function whenTouchGoal() {\n  __;\n}', category: '' },
   {func: 'whenTouchAllGoals', block: 'function whenTouchAllGoals() {}', expansion: 'function whenTouchAllGoals() {\n  __;\n}', category: '' },
@@ -9906,43 +10246,34 @@ module.exports.blocks = [
   {func: 'whenGetCharacter', block: 'function whenGetCharacter() {}', expansion: 'function whenGetCharacter() {\n  __;\n}', category: '' },
   {func: 'whenTouchCharacter', block: 'function whenTouchCharacter() {}', expansion: 'function whenTouchCharacter() {\n  __;\n}', category: '' },
 
-  {func: 'whenGetMan', block: 'function whenGetMan() {}', expansion: 'function whenGetMan() {\n  __;\n}', category: '' },
-  {func: 'whenGetPilot', block: 'function whenGetPilot() {}', expansion: 'function whenGetPilot() {\n  __;\n}', category: '' },
-  {func: 'whenGetPig', block: 'function whenGetPig() {}', expansion: 'function whenGetPig() {\n  __;\n}', category: '' },
-  {func: 'whenGetBird', block: 'function whenGetBird() {}', expansion: 'function whenGetBird() {\n  __;\n}', category: '' },
-  {func: 'whenGetMouse', block: 'function whenGetMouse() {}', expansion: 'function whenGetMouse() {\n  __;\n}', category: '' },
-  {func: 'whenGetRoo', block: 'function whenGetRoo() {}', expansion: 'function whenGetRoo() {\n  __;\n}', category: '' },
-  {func: 'whenGetSpider', block: 'function whenGetSpider() {}', expansion: 'function whenGetSpider() {\n  __;\n}', category: '' },
+  {func: 'whenGetStormtrooper', block: 'function whenGetStormtrooper() {}', expansion: 'function whenGetStormtrooper() {\n  __;\n}', category: '' },
+  {func: 'whenGetRebelPilot', block: 'function whenGetRebelPilot() {}', expansion: 'function whenGetRebelPilot() {\n  __;\n}', category: '' },
+  {func: 'whenGetPufferPig', block: 'function whenGetPufferPig() {}', expansion: 'function whenGetPufferPig() {\n  __;\n}', category: '' },
+  {func: 'whenGetMynock', block: 'function whenGetMynock() {}', expansion: 'function whenGetMynock() {\n  __;\n}', category: '' },
+  {func: 'whenGetMouseDroid', block: 'function whenGetMouseDroid() {}', expansion: 'function whenGetMouseDroid() {\n  __;\n}', category: '' },
+  {func: 'whenGetTauntaun', block: 'function whenGetTauntaun() {}', expansion: 'function whenGetTauntaun() {\n  __;\n}', category: '' },
+  {func: 'whenGetProbot', block: 'function whenGetProbot() {}', expansion: 'function whenGetProbot() {\n  __;\n}', category: '' },
 
-  {func: 'whenTouchMan', block: 'function whenTouchMan() {}', expansion: 'function whenTouchMan() {\n  __;\n}', category: '' },
-  {func: 'whenTouchPilot', block: 'function whenTouchPilot() {}', expansion: 'function whenTouchPilot() {\n  __;\n}', category: '' },
-  {func: 'whenTouchPig', block: 'function whenTouchPig() {}', expansion: 'function whenTouchPig() {\n  __;\n}', category: '' },
-  {func: 'whenTouchBird', block: 'function whenTouchBird() {}', expansion: 'function whenTouchBird() {\n  __;\n}', category: '' },
-  {func: 'whenTouchMouse', block: 'function whenTouchMouse() {}', expansion: 'function whenTouchMouse() {\n  __;\n}', category: '' },
-  {func: 'whenTouchRoo', block: 'function whenTouchRoo() {}', expansion: 'function whenTouchRoo() {\n  __;\n}', category: '' },
-  {func: 'whenTouchSpider', block: 'function whenTouchSpider() {}', expansion: 'function whenTouchSpider() {\n  __;\n}', category: '' },
+  {func: 'whenTouchStormtrooper', block: 'function whenTouchStormtrooper() {}', expansion: 'function whenTouchStormtrooper() {\n  __;\n}', category: '' },
+  {func: 'whenTouchRebelPilot', block: 'function whenTouchRebelPilot() {}', expansion: 'function whenTouchRebelPilot() {\n  __;\n}', category: '' },
+  {func: 'whenTouchPufferPig', block: 'function whenTouchPufferPig() {}', expansion: 'function whenTouchPufferPig() {\n  __;\n}', category: '' },
+  {func: 'whenTouchMynock', block: 'function whenTouchMynock() {}', expansion: 'function whenTouchMynock() {\n  __;\n}', category: '' },
+  {func: 'whenTouchMouseDroid', block: 'function whenTouchMouseDroid() {}', expansion: 'function whenTouchMouseDroid() {\n  __;\n}', category: '' },
+  {func: 'whenTouchTauntaun', block: 'function whenTouchTauntaun() {}', expansion: 'function whenTouchTauntaun() {\n  __;\n}', category: '' },
+  {func: 'whenTouchProbot', block: 'function whenTouchProbot() {}', expansion: 'function whenTouchProbot() {\n  __;\n}', category: '' },
 
-  {func: 'whenTouchAllCharacters', block: 'function whenTouchAllCharacters() {}', expansion: 'function whenTouchAllCharacters() {\n  __;\n}', category: '' },
   {func: 'whenGetAllCharacters', block: 'function whenGetAllCharacters() {}', expansion: 'function whenGetAllCharacters() {\n  __;\n}', category: '' },
 
-  {func: 'whenGetAllMen', block: 'function whenGetAllMen() {}', expansion: 'function whenGetAllMen() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllPilots', block: 'function whenGetAllPilots() {}', expansion: 'function whenGetAllPilots() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllPigs', block: 'function whenGetAllPigs() {}', expansion: 'function whenGetAllPigs() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllBirds', block: 'function whenGetAllBirds() {}', expansion: 'function whenGetAllBirds() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllMice', block: 'function whenGetAllMice() {}', expansion: 'function whenGetAllMice() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllRoos', block: 'function whenGetAllRoos() {}', expansion: 'function whenGetAllRoos() {\n  __;\n}', category: '' },
-  {func: 'whenGetAllSpiders', block: 'function whenGetAllSpiders() {}', expansion: 'function whenGetAllSpiders() {\n  __;\n}', category: '' },
-
-  {func: 'whenTouchAllMen', block: 'function whenTouchAllMen() {}', expansion: 'function whenTouchAllMen() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllPilots', block: 'function whenTouchAllPilots() {}', expansion: 'function whenTouchAllPilots() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllPigs', block: 'function whenTouchAllPigs() {}', expansion: 'function whenTouchAllPigs() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllBirds', block: 'function whenTouchAllBirds() {}', expansion: 'function whenTouchAllBirds() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllMice', block: 'function whenTouchAllMice() {}', expansion: 'function whenTouchAllMice() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllRoos', block: 'function whenTouchAllRoos() {}', expansion: 'function whenTouchAllRoos() {\n  __;\n}', category: '' },
-  {func: 'whenTouchAllSpiders', block: 'function whenTouchAllSpiders() {}', expansion: 'function whenTouchAllSpiders() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllStormtroopers', block: 'function whenGetAllStormtroopers() {}', expansion: 'function whenGetAllStormtroopers() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllRebelPilots', block: 'function whenGetAllRebelPilots() {}', expansion: 'function whenGetAllRebelPilots() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllPufferPigs', block: 'function whenGetAllPufferPigs() {}', expansion: 'function whenGetAllPufferPigs() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllMynocks', block: 'function whenGetAllMynocks() {}', expansion: 'function whenGetAllMynocks() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllMouseDroids', block: 'function whenGetAllMouseDroids() {}', expansion: 'function whenGetAllMouseDroids() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllTauntauns', block: 'function whenGetAllTauntauns() {}', expansion: 'function whenGetAllTauntauns() {\n  __;\n}', category: '' },
+  {func: 'whenGetAllProbots', block: 'function whenGetAllProbots() {}', expansion: 'function whenGetAllProbots() {\n  __;\n}', category: '' },
 
   // Functions hidden from autocomplete - not used in hoc2015:
-  {func: 'setSprite', parent: api, category: '', params: ['0', '"bot1"'], dropdown: { 1: [ '"random"', '"bot1"', '"bot2"' ] } },
+  {func: 'setSprite', parent: api, category: '', params: ['0', '"R2-D2"'], dropdown: { 1: [ '"random"', '"R2-D2"', '"C-3PO"' ] } },
   {func: 'setSpritePosition', parent: api, category: '', params: ["0", "7"], noAutocomplete: true },
   {func: 'setSpriteSpeed', parent: api, category: '', params: ["0", "8"], noAutocomplete: true },
   {func: 'setSpriteEmotion', parent: api, category: '', params: ["0", "1"], noAutocomplete: true },
@@ -10398,15 +10729,57 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_whenGetCharacter.VALUES =
-      [[msg.whenGetCharacterPIG(),    'pig'],
-       [msg.whenGetCharacterMAN(),    'man'],
-       [msg.whenGetCharacterROO(),    'roo'],
-       [msg.whenGetCharacterBIRD(),   'bird'],
-       [msg.whenGetCharacterSPIDER(), 'spider'],
-       [msg.whenGetCharacterMOUSE(),  'mouse'],
-       [msg.whenGetCharacterPILOT(),  'pilot']];
+      [[msg.whenGetCharacterAnyItem(),      'any_item'],
+       [msg.whenGetCharacterPufferPig(),    'pufferpig'],
+       [msg.whenGetCharacterStormtrooper(), 'stormtrooper'],
+       [msg.whenGetCharacterTauntaun(),     'tauntaun'],
+       [msg.whenGetCharacterMynock(),       'mynock'],
+       [msg.whenGetCharacterProbot(),       'probot'],
+       [msg.whenGetCharacterMouseDroid(),   'mousedroid'],
+       [msg.whenGetCharacterRebelPilot(),   'rebelpilot']];
 
   generator.studio_whenGetCharacter = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenGetAllCharacters = {
+    // Block to handle event when the primary sprite gets all characters.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.whenGetAllCharacters());
+      this.setPreviousStatement(false);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenGetAllCharactersTooltip());
+    }
+  };
+
+  generator.studio_whenGetAllCharacters = generator.studio_eventHandlerPrologue;
+
+  blockly.Blocks.studio_whenGetAllCharacterClass = {
+    // Block to handle event when the primary sprite gets all characters of a class.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      this.setPreviousStatement(false);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenGetAllCharacterClassTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_whenGetAllCharacterClass.VALUES =
+      [[msg.whenGetAllCharacterPufferPig(),    'pufferpig'],
+       [msg.whenGetAllCharacterStormtrooper(), 'stormtrooper'],
+       [msg.whenGetAllCharacterTauntaun(),     'tauntaun'],
+       [msg.whenGetAllCharacterMynock(),       'mynock'],
+       [msg.whenGetAllCharacterProbot(),       'probot'],
+       [msg.whenGetAllCharacterMouseDroid(),   'mousedroid'],
+       [msg.whenGetAllCharacterRebelPilot(),   'rebelpilot']];
+
+  generator.studio_whenGetAllCharacterClass = generator.studio_eventHandlerPrologue;
 
   blockly.Blocks.studio_whenSpriteCollided = {
     // Block to handle event when sprite collides with another sprite.
@@ -10605,7 +10978,7 @@ exports.install = function(blockly, blockInstallOptions) {
         .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'CLASS');
 
       var dropdown = new blockly.FieldDropdown(this.VALUES);
-      dropdown.setValue(this.VALUES[2][1]); // default to slow
+      dropdown.setValue(this.VALUES[1][1]); // default to slow
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
 
       this.setInputsInline(true);
@@ -10617,11 +10990,9 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.studio_setItemSpeed.VALUES =
       [[msg.setSpriteSpeedRandom(), RANDOM_VALUE],
-       [msg.setSpriteSpeedVerySlow(), 'Studio.SpriteSpeed.VERY_SLOW'],
-       [msg.setSpriteSpeedSlow(), 'Studio.SpriteSpeed.SLOW'],
-       [msg.setSpriteSpeedNormal(), 'Studio.SpriteSpeed.NORMAL'],
-       [msg.setSpriteSpeedFast(), 'Studio.SpriteSpeed.FAST'],
-       [msg.setSpriteSpeedVeryFast(), 'Studio.SpriteSpeed.VERY_FAST']];
+       [msg.setSpriteSpeedSlow(), 'Studio.SpriteSpeed.VERY_SLOW'],
+       [msg.setSpriteSpeedNormal(), 'Studio.SpriteSpeed.SLOW'],
+       [msg.setSpriteSpeedFast(), 'Studio.SpriteSpeed.FAST']];
 
   generator.studio_setItemSpeed = function () {
     return generateSetterCode({
@@ -11319,6 +11690,32 @@ exports.install = function(blockly, blockInstallOptions) {
     return 'Studio.showCoordinates(\'block_id_' + this.id + '\');\n';
   };
 
+  blockly.Blocks.studio_setDroidSpeed = {
+    // Block for setting droid speed
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      dropdown.setValue(this.VALUES[2][1]); // default to normal
+      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setDroidSpeedTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_setDroidSpeed.VALUES =
+      [[msg.setDroidSpeedRandom(), 'random'],
+       [msg.setDroidSpeedSlow(), 'slow'],
+       [msg.setDroidSpeedNormal(), 'normal'],
+       [msg.setDroidSpeedFast(), 'fast']];
+
+  generator.studio_setDroidSpeed = function () {
+    return 'Studio.setDroidSpeed(\'block_id_' + this.id + '\', "' +
+      this.getTitleValue('VALUE') + '");\n';
+  };
+
   blockly.Blocks.studio_setSpriteSpeed = {
     // Block for setting sprite speed
     helpUrl: '',
@@ -11540,7 +11937,8 @@ exports.install = function(blockly, blockInstallOptions) {
 
       var dropdown = new blockly.FieldDropdown(skin.mapChoices);
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
-      dropdown.setValue('"' + skin.defaultWallMap + '"');
+      // default to first item after random
+      dropdown.setValue(skin.mapChoices[1][1]);
       
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -11985,6 +12383,30 @@ exports.install = function(blockly, blockInstallOptions) {
         Blockly.JavaScript.ORDER_NONE) || '0';
     return 'Studio.wait(\'block_id_' + this.id +
         '\', (' + valueParam + ' * 1000));\n';
+  };
+
+  blockly.Blocks.studio_endGame = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      dropdown.setValue(this.VALUES[0][1]); // default to win
+      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.endGameTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_endGame.VALUES =
+    [[msg.endGameWin(), 'win'],
+     [msg.endGameLose(), 'lose']];
+
+  generator.studio_endGame = function() {
+    // Generate JavaScript for ending the game.
+    return 'Studio.endGame(\'block_id_' + this.id + '\',\'' +
+      this.getTitleValue('VALUE') + '\');\n';
   };
 
   //
@@ -12683,19 +13105,18 @@ exports.setSpriteSpeed = function (spriteIndex, value) {
   });
 };
 
-// setBot and setBotSpeed are wrappers to setSprite and
-// setSpriteSpeed that always pass 0 for the spriteIndex (used by hoc2015)
+// setDroid is a wrapper to setSprite that always passes 0 for the spriteIndex
+// (used by hoc2015)
 
-exports.setBot = function (value) {
+exports.setDroid = function (value) {
   Studio.queueCmd(null, 'setSprite', {
     'spriteIndex': 0,
     'value': value
   });
 };
 
-exports.setBotSpeed = function (value) {
-  Studio.queueCmd(null, 'setBotSpeed', {
-    'spriteIndex': 0,
+exports.setDroidSpeed = function (value) {
+  Studio.queueCmd(null, 'setDroidSpeed', {
     'value': value
   });
 };
@@ -12899,6 +13320,10 @@ exports.random = function (values) {
   return values[key];
 };
 
+exports.endGame = function(id, value) {
+  Studio.queueCmd(id, 'endGame', {'value': value});
+};
+
 exports.setBackground = function (id, value) {
   Studio.queueCmd(id, 'setBackground', {'value': value});
 };
@@ -12942,6 +13367,22 @@ exports.setSpriteEmotion = function (id, spriteIndex, value) {
 exports.setSpriteSpeed = function (id, spriteIndex, value) {
   Studio.queueCmd(id, 'setSpriteSpeed', {
     'spriteIndex': spriteIndex,
+    'value': value
+  });
+};
+
+// setDroid is a wrapper to setSprite that always passes 0 for the spriteIndex
+// (used by hoc2015)
+
+exports.setDroid = function (id, value) {
+  Studio.queueCmd(id, 'setSprite', {
+    'spriteIndex': 0,
+    'value': value
+  });
+};
+
+exports.setDroidSpeed = function (id, value) {
+  Studio.queueCmd(id, 'setDroidSpeed', {
     'value': value
   });
 };
@@ -13439,9 +13880,10 @@ MusicController.prototype.fadeOut = function (durationSeconds) {
   }
 
   // Stop the audio after the fade.
+  // Add a small margin due to poor fade granularity on fallback player.
   setTimeout(function () {
     this.stop();
-  }.bind(this), 1000 * durationSeconds);
+  }.bind(this), 1000 * durationSeconds + 100);
 };
 
 /**
@@ -13780,6 +14222,12 @@ Item.prototype.removeElement = function() {
   Studio.trackedBehavior.removedItemCount++;
 };
 
+/**
+ * Stop our animations
+ */
+Item.prototype.stopAnimations = function() {
+  this.animation_.stopAnimator();
+};
 
 /**
  * Returns true if the item is currently fading away.
@@ -14560,6 +15008,13 @@ StudioAnimation.prototype.removeElement = function() {
     this.clipPath_ = null;
   }
 
+  this.stopAnimator();
+};
+
+/**
+ * Stop the animator (used when we freeze in onPuzzleComplete)
+ */
+StudioAnimation.prototype.stopAnimator = function() {
   if (this.animator_) {
     window.clearInterval(this.animator_);
     this.animator_ = null;
@@ -15011,8 +15466,14 @@ exports.SHAKE_DEFAULT_DURATION = 1000;
 exports.SHAKE_DEFAULT_CYCLES = 6;
 exports.SHAKE_DEFAULT_DISTANCE = 5;
 
-// How many clouds to display.
-exports.NUM_CLOUDS = 2;
+// Maximum number of clouds that can be displayed.
+exports.MAX_NUM_CLOUDS = 2;
+
+// Width & height of a cloud.
+exports.CLOUD_SIZE = 300;
+
+// The opacity of a cloud.
+exports.CLOUD_OPACITY = 0.7;
 
 // How many milliseconds to throttle between playing sounds.
 exports.SOUND_THROTTLE_TIME = 200;
@@ -15400,10 +15861,6 @@ var uniqueId = 0;
  * Wrapping the filters this way also provides an easy place to dynamically
  * manipulate their properties, generating filter animation.
  *
- * TODO: SVG filters are not supported in IE9.  This class should do a feature
- *       check and convert itself into a no-op if we detect that filters are
- *       not supported.
- *
  * @constructor
  * @param {!SVGSVGElement} svg - Every filter must belong to a single SVG
  *        root element, because it gets defined inside that SVG's defs tag.
@@ -15448,10 +15905,15 @@ ImageFilter.prototype.applyTo = function (svgElement) {
  * @param {SVGElement} svgElement
  */
 ImageFilter.prototype.removeFrom = function (svgElement) {
-  if (svgElement.getAttribute('filter') === 'url("#' + this.id_ + '")') {
+  // Different browsers clean the filter attribute differently
+  // This matches
+  //   url(#filter-id)
+  //   url("#filter-id")
+  var regex = new RegExp("url\\([\"']?#" + this.id_ + "[\"']?\\)", 'i');
+  if (regex.test(svgElement.getAttribute('filter'))) {
     svgElement.removeAttribute('filter');
+    this.applyCount_--;
   }
-  this.applyCount_--;
   if (this.applyCount_ === 0) {
     this.removeFromDom_();
   }
@@ -15550,6 +16012,16 @@ ImageFilter.prototype.getDefsNode_ = function () {
  * @private
  */
 ImageFilter.prototype.checkBrowserSupport_ = function () {
+  // Disable filter effects in Safari right now, since they seem to take a
+  // long time to render and often cause issues.
+  // Chrome also contains 'Safari' in its user agent string, so check for
+  // 'Safari' but not 'Chrome'
+  // See http://stackoverflow.com/a/7768006/5000129
+  if (navigator.userAgent.indexOf('Safari') !== -1 &&
+      navigator.userAgent.indexOf('Chrome') === -1) {
+    return false;
+  }
+
   // Check suggested by http://stackoverflow.com/a/9771153/5000129
   return typeof window.SVGFEColorMatrixElement !== 'undefined' &&
       SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_SATURATE === 2;
