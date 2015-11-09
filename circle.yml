@@ -29,7 +29,7 @@ database:
       - bundle exec rake db:schema:load:
           pwd:
               dashboard
-      - bundle exec rake db:seed:all:
+      - bundle exec rake seed:all:
           pwd:
               dashboard
 test:
