@@ -3340,8 +3340,6 @@ Studio.animateGoals = function() {
  * them if they shouldn't currently be shown.
  */
 Studio.loadClouds = function() {
-  return;
-/*
   var cloud, i;
   var showClouds = Studio.background && skin[Studio.background].clouds;
 
@@ -3366,7 +3364,7 @@ Studio.loadClouds = function() {
       cloud.setAttribute('x', location.x);
       cloud.setAttribute('y', location.y);
     }
-  }*/
+  }
 };
 
 
@@ -3374,8 +3372,6 @@ Studio.loadClouds = function() {
  * Animate clouds if the current background features them.
  */
 Studio.animateClouds = function() {
-  return;
-/*
   var showClouds = Studio.background && skin[Studio.background].clouds;
   if (!showClouds) {
     return;
@@ -3388,7 +3384,7 @@ Studio.animateClouds = function() {
     var cloud = document.getElementById('cloud' + i);
     cloud.setAttribute('x', location.x);
     cloud.setAttribute('y', location.y);
-  }*/
+  }
 };
 
 
