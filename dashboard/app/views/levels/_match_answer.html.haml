@@ -1,0 +1,14 @@
+/ Show the correct answer to authorized teachers
+- if current_user.try(:authorized_teacher?)
+  #markdown.teacher
+    %h3= t('teacher.answer')
+    .content
+      .column
+        %ul#questions
+          - data['questions'].each do |question|
+            %li{style: "height: #{height}px"}!= match_t(question['text'])
+      .column#answerdest
+        %ul#answers
+          - data['answers'].each do |answer|
+            %li.answer.answerlist{style: "height: #{height}px"}!= match_t(answer['text'])
+      .clear
