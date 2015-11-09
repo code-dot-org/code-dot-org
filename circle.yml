@@ -11,7 +11,7 @@ dependencies:
     - sudo apt-get install libicu-dev
     - bundle install
     - rake install:pegasus
-    - "printf \"assets_s3_directory: assets_circle/$RANDOM\nsources_s3_directory: sources_circle/$RANDOM\n\" > locals.yml"
+    - "printf \"assets_s3_directory: assets_circle/$RANDOM\nsources_s3_directory: sources_circle/$RANDOM\nsaucelabs_username: '$SAUCE_USERNAME'\nsaucelabs_authkey: '$SAUCE_ACCESS_KEY'\n\" > locals.yml"
     - npm install:
         pwd:
             apps
