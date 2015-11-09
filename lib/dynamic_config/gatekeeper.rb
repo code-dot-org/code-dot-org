@@ -110,7 +110,7 @@ class GatekeeperBase
     @datastore_cache.all.each do |feature, rules|
       gatekeeper[feature] = feature_details = []
       rules.each do |conditions, value|
-        rule = {"rule" => nil}
+        rule = {}
 
         conditions = JSON.load(conditions)
         if !conditions.empty?

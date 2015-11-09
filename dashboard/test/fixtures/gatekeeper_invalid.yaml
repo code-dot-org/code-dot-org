@@ -1,11 +1,10 @@
 milestone:
-  - rule:
-  - rule:
-    where:
+  - where:
+      script_id: 40
+  - where:
       script_id: 38
     value: true
 
 feature2:
-  - rule:
-    value: true
+  - value: true
 

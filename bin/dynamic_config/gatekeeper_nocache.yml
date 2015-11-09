@@ -1,14 +1,10 @@
 public_caching_for_script:
-  - rule:
-    where:
+  - where:
       script_name: starwars
     value: false
-  - rule:
-    value: false
+  - value: false
 postMilestone:
-  - rule:
-    where:
+  - where:
       script_name: starwars
     value: true
-  - rule:
-    value: true
+  - value: true
