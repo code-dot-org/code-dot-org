@@ -53,9 +53,6 @@
     "debugger_disabled": "false",
     "markdown_instructions": "# Boolean Operators in While Loops Part 2\r\n\r\nWe just saw that you can create more complex boolean expressions for our while loops just like our for loops. Lets try something a little more complex. \r\n\r\nRight now this code rolls two dice as long as either one of them is less than 3.   Modify the condition so that both dice have to be greater than 3 for the loop to stop.\r\n\r\n# Do This\r\n\r\n* **Change the boolean expression** for the while loop so that it will roll until both dice are greater than 3. **Hint:** A NOT( `!`) operator might be helpful for this one.",
     "start_blocks": "var die1 = -1 \r\nvar die2 = -1\r\nwhile( die1 <= 3 && die2 <= 3){ \r\n  die1 = randomNumber(1,6);\r\n  die2 = randomNumber(1,6);\r\n  write(\"rolled a \"+die1+\" and a \"+die2);\r\n}\r\nwrite(\"Done.\");",
-    "encrypted_examples": [
-
-    ],
     "instructions": "Change the boolean expression for the while loop so that it will roll until both dice are greater than 3. (Click to see full instructions)"
   }
 }]]></config>

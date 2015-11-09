@@ -47,9 +47,6 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "start_blocks": "var secretNumber = 6;\r\nvar userGuess = promptNum(\"Enter a number from 1 to 10\");\r\n\r\nif(secretNumber == userGuess){\r\n\r\n}",
-    "encrypted_examples": [
-
-    ],
     "lock_zero_param_functions": "false"
   }
 }]]></config>
