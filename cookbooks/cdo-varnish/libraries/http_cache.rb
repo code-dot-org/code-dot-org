@@ -88,12 +88,12 @@ class HttpCache
           {
             path: "/s/hoc2015/stage/1/puzzle/*",
             headers: LANGUAGE_HEADER,
-            cookies: 'none',
+            cookies: LANGUAGE_COOKIE
           },
           {
-              path: "/s/starwars/stage/1/puzzle/*",
-              headers: LANGUAGE_HEADER,
-              cookies: 'none',
+            path: "/s/starwars/stage/1/puzzle/*",
+            headers: LANGUAGE_HEADER,
+            cookies: LANGUAGE_COOKIE
           },
           {
             path: '/api/*',
