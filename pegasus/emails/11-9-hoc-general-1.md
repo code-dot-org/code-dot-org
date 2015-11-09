@@ -9,7 +9,7 @@ subject: Hour of Code with Star Wars
 
 Code.org has a brand new tutorial for the Hour of Code 2015, in partnership with Disney and Lucasfilm — featuring *Star Wars*: The Force Awakens. Work with Rey to guide the new droid BB-8 through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.
 
-### Try the early preview now of [*Star Wars*: Building a Galaxy with Code](https://code.org/starwars)
+### Try an early preview of [*Star Wars*: Building a Galaxy with Code](https://code.org/starwars)
 
 <% if international == 'false' %>
 Students will learn to write JavaScript to power their games. For younger learners, a tablet-friendly, drag-and-drop version will be available in the next few weeks. You can also check out [other options for all ages](https://code.org/learn). And stay tuned… more tutorials are coming soon.
