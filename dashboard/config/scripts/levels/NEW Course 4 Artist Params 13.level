@@ -186,7 +186,7 @@
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="parameters_get">
-              <title name="VAR">sides</title>
+              <title name="VAR">???</title>
             </block>
           </value>
         </block>

@@ -43,15 +43,9 @@ Quarter 4: Saturday, March 12, 2016
 Breakfast and lunch will be served.
 
 
-**September 26th Location**
+**December 5th Location**
 
-NOVA Southeastern University<br/>
-3301 College Ave<br/>
-Carl Desantis Building <br/>
-Room 1047<br/>
-Fort Lauderdale, FL 33314
-
-Free parking is available near the building with your [parking pass](/files/broward-9-26-parking-pass-nsu.pdf). You can also find a campus map [here.](/files/nova-main-campus-map.pdf)
+TBD
 
 
 **What to bring to Phase 3 quarterly sessions:**
@@ -95,7 +89,7 @@ Semester 2: Saturday, February 6, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served.
 
-**September 19th Location**
+**February 6th Location**
 
 NOVA Southeastern University<br/>
 3301 College Ave<br/>
@@ -145,7 +139,7 @@ Semester 2: Saturday, February 6, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served.
 
-**September 19th Location**
+**February 6th Location**
 
 NOVA Southeastern University<br/>
 3301 College Ave<br/>
@@ -204,7 +198,7 @@ Quarter 4: Saturday, April 23, 2016
 Breakfast and lunch will be served.
 
 
-**September 19th Location**
+**December 5th Location**
 
 NOVA Southeastern University<br/>
 3301 College Ave<br/>
@@ -228,6 +222,61 @@ Water
 
 
 [**Back to the top**](#top)
+
+<a id="counselor-admin"></a>
+
+
+## Counselors & Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching.
+
+### Counselors##
+
+**Save the date**
+
+Friday, November 20, 2015 <br/>
+12:00pm - 3:00pm
+
+
+**Location**
+
+Piper High School<br/>
+Main Building Auditorium<br/>
+8000 NW 44th Street<br/>
+Sunrise, Florida  33351
+
+Free parking is available in the school parking lot.
+
+**What to bring**
+
+Snacks
+<br/>
+Water
+
+### Administrators##
+
+**Save the date**
+
+Friday, November 20, 2015 <br/>
+8:30am - 10:30am
+
+**Location**
+
+Piper High School<br/>
+Main Building Auditorium<br/>
+8000 NW 44th Street<br/>
+Sunrise, Florida  33351
+
+Free parking is available in the school parking lot.
+
+**What to bring**
+
+Snacks
+<br/>
+Water
+
+[**Back to the top**](#top)
+
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

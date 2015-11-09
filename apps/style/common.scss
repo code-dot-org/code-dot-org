@@ -247,6 +247,7 @@ button.arrow:disabled {
   display: inline-block;
   vertical-align: top;
   margin-left: -5px;
+  -webkit-touch-callout: none;
   &.soft-buttons-none {
     display: none;
   }
