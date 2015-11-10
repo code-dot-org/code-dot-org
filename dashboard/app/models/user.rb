@@ -550,7 +550,7 @@ SQL
 
   def generate_username
     return if name.blank?
-    self.username = UserHelpers.generate_username(User, name)
+    self.username = UserHelpers.generate_username(User.with_deleted, name)
   end
 
   def short_name
