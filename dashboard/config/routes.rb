@@ -189,7 +189,7 @@ Dashboard::Application.routes.draw do
   get '/admin/progress', to: 'reports#admin_progress', as: 'admin_progress'
   get '/admin/concepts', to: 'reports#admin_concepts', as: 'admin_concepts'
 
-  # internal search tools 
+  # internal search tools
   get 'admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
   get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
