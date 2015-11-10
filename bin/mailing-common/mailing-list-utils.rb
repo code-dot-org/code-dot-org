@@ -131,6 +131,7 @@ def include_indiegogo_donors(results)
   # 2375305,1128,13570533,Order Placed,2015-09-30 10:29:27 -0700,FirstGiving,Visible,Olivier Greoli,olivier@greoli.be,$80,Code.org Hat + Laptop Sticker,Olivier Greoli,Rue des ChÃ¢lets 4,,GrivegnÃ©e,,"=""4030""",Belgium
 
   include_csv(results,
+    file: 'indiegogo.csv',
     email: 'Email',
     name: 'Name',
     country_code: 'Shipping Country',
