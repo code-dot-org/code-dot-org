@@ -87,12 +87,10 @@ window.apps = {
         appOptions.level.aniGifURL);
 
         if (hasVideo) {
-          showVideoDialog(appOptions.autoplayVideo);
           if (hasInstructions) {
-            $('.video-modal').on('hidden.bs.modal', function() {
-              showInstructions();
-            });
+            appOptions.autoplayVideo.onClose = showInstructions;
           }
+          showVideoDialog(appOptions.autoplayVideo);
         } else if (hasInstructions) {
           showInstructions();
         }
