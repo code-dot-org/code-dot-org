@@ -139,7 +139,7 @@
 
     ],
     "embed": "false",
-    "markdown_instructions": "# Buttons and Keys\r\n\r\nOften we want the user of the app to be able to do the same thing multiple ways, for example to be able to click and button or hit a key on the keyboard (a keyboard shortcut) to do the same thing.  We've already got the code working for the button.  Add an event handler to detect the up arrow being pressed, and then copy/paste the code from the button event handler into the keydown event handler.  Make sure it works.\r\n\r\n# Do This\r\n\r\nbutton to play sound, or key press.  Update variable and text label to indicate number of times the sound has been played.",
+    "markdown_instructions": "# Buttons and Keys\r\n\r\nOften we want the user of the app to be able to do the same thing multiple ways, for example to be able to click a button or hit a key on the keyboard (a keyboard shortcut).  We've already got the code working for the buttons.  Add an event handler to detect the up and down arrow being pressed, and then copy/paste the code from the button event handler into the appropraite conditional statement keydown event handler. \r\n\r\n# Do This\r\n\r\n* Add conditional statements to check for when the up and down arrows are pressed.\r\n\r\n* Copy the code for the up button into the up arrow if statement.\r\n\r\n* Copy the code for the down button into the down arrow if statement.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -169,7 +169,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "project_template_level_name": "U3 - Keys - Template"
+    "project_template_level_name": "U3 - Keys - Template",
+    "instructions": "Have the program respond the same way for both up and down arrows as it does to the up and down buttons. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>
