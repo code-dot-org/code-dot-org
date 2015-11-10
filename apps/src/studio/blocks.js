@@ -1673,19 +1673,26 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSprite = {
       helpUrl: '',
       init: function() {
-        this.VALUES = skin.spriteChoices;
-        var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
-        // default to first item after random/hidden
-        dropdown.setValue(skin.spriteChoices[2][1]);
-
+        // shallow copy array:
+        this.VALUES = [].concat(skin.spriteChoices);
         this.setHSV(312, 0.32, 0.62);
         if (spriteCount > 1) {
           this.appendDummyInput()
             .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
         } else {
-          this.appendDummyInput()
-            .appendTitle(msg.setSprite());
+          // Modify the dropdownValues array to contain combined text
+          // (blockly renders this better than two adjacent text blocks)
+          var prefix = skin.setSpritePrefix + ' ';
+          for (var i = 0; i < this.VALUES.length; i++) {
+            // shallow copy this array within the larger array, then modify
+            // the string to be displayed to include the prefix:
+            this.VALUES[i] = [].concat(skin.spriteChoices[i]);
+            this.VALUES[i][0] = prefix + this.VALUES[i][0];
+          }
         }
+        var dropdown = new blockly.FieldDropdown(this.VALUES);
+        // default to first item after random/hidden
+        dropdown.setValue(skin.spriteChoices[2][1]);
         this.appendDummyInput()
           .appendTitle(dropdown, 'VALUE');
         this.setInputsInline(true);
