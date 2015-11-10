@@ -1682,6 +1682,11 @@ Studio.init = function(config) {
   skin = config.skin;
   level = config.level;
 
+  // Allow any studioMsg string to be re-mapped on a per-level basis:
+  for (var prop in level.msgStringOverrides) {
+    studioMsg[prop] = studioMsg[level.msgStringOverrides[prop]];
+  }
+
   // Initialize paramLists with skin and level data:
   paramLists.initWithSkinAndLevel(skin, level);
 
@@ -1839,7 +1844,7 @@ Studio.init = function(config) {
   config.dropletConfig = dropletConfig;
   config.dropIntoAceAtLineStart = true;
   config.unusedConfig = [];
-  for (var prop in skin.AutohandlerTouchItems) {
+  for (prop in skin.AutohandlerTouchItems) {
     AUTO_HANDLER_MAP[prop] =
         'whenSpriteCollided-' +
         (Studio.protagonistSpriteIndex || 0) + '-' + skin.AutohandlerTouchItems[prop];
@@ -6516,10 +6521,12 @@ function loadHoc2015(skin, assetUrl) {
     ];
 
   skin.spriteChoices = [
-    [msg.setSpriteHidden(), HIDDEN_VALUE],
-    [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteR2D2(), '"r2-d2"'],
-    [msg.setSpriteC3PO(), '"c-3po"']];
+    [msg.setDroidHidden(), HIDDEN_VALUE],
+    [msg.setDroidRandom(), RANDOM_VALUE],
+    [msg.setDroidR2D2(), '"r2-d2"'],
+    [msg.setDroidC3PO(), '"c-3po"']];
+
+  skin.setSpritePrefix = msg.setDroid();
 
   skin.projectileChoices = [];
 
@@ -6700,9 +6707,11 @@ function loadHoc2015x(skin, assetUrl) {
     ];
 
   skin.spriteChoices = [
-    [msg.setSpriteHidden(), HIDDEN_VALUE],
-    [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteBB8(), '"BB-8"']];
+    [msg.setDroidHidden(), HIDDEN_VALUE],
+    [msg.setDroidRandom(), RANDOM_VALUE],
+    [msg.setDroidBB8(), '"bb-8"']];
+
+  skin.setSpritePrefix = msg.setDroid();
 
   skin.projectileChoices = [];
 
@@ -6999,6 +7008,8 @@ exports.load = function(assetUrl, id) {
   skin.dropdownThumbnailWidth = 50;
   skin.dropdownThumbnailHeight = 50;
   skin.preloadAssets = true;
+
+  skin.setSpritePrefix = msg.setSprite();
 
   skin.activityChoices = [
     [msg.setActivityRandom(), RANDOM_VALUE],
@@ -10020,6 +10031,9 @@ levels.hoc2015_blockly_8 = utils.extend(levels.js_hoc2015_event_four_items,  {
 
 levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   editCode: false,
+  msgStringOverrides: {
+    whenTouchGoal: 'whenGetCharacterRebelPilot'
+  },
   startBlocks:
     '<block type="studio_whenTouchGoal" deletable="false"> \
       <next><block type="studio_playSound"><title name="SOUND">R2-D2sound1</title></block> \
@@ -12196,19 +12210,26 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSprite = {
       helpUrl: '',
       init: function() {
-        this.VALUES = skin.spriteChoices;
-        var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
-        // default to first item after random/hidden
-        dropdown.setValue(skin.spriteChoices[2][1]);
-
+        // shallow copy array:
+        this.VALUES = [].concat(skin.spriteChoices);
         this.setHSV(312, 0.32, 0.62);
         if (spriteCount > 1) {
           this.appendDummyInput()
             .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
         } else {
-          this.appendDummyInput()
-            .appendTitle(msg.setSprite());
+          // Modify the dropdownValues array to contain combined text
+          // (blockly renders this better than two adjacent text blocks)
+          var prefix = skin.setSpritePrefix + ' ';
+          for (var i = 0; i < this.VALUES.length; i++) {
+            // shallow copy this array within the larger array, then modify
+            // the string to be displayed to include the prefix:
+            this.VALUES[i] = [].concat(skin.spriteChoices[i]);
+            this.VALUES[i][0] = prefix + this.VALUES[i][0];
+          }
         }
+        var dropdown = new blockly.FieldDropdown(this.VALUES);
+        // default to first item after random/hidden
+        dropdown.setValue(skin.spriteChoices[2][1]);
         this.appendDummyInput()
           .appendTitle(dropdown, 'VALUE');
         this.setInputsInline(true);
