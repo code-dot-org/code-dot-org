@@ -1758,7 +1758,7 @@ Studio.init = function(config) {
     Studio.musicController.preload();
   };
 
-  if (!studioApp.cdoSounds.audioUnlocked_) {
+  if (!studioApp.cdoSounds.isAudioUnlocked()) {
     var removeEvent = dom.addClickTouchEvent(document, function () {
       studioApp.cdoSounds.unlockAudio();
       removeEvent();
@@ -1767,7 +1767,7 @@ Studio.init = function(config) {
 
   // Play music when the instructions are shown
   var playOnce = function () {
-    if (studioApp.cdoSounds.audioUnlocked_) {
+    if (studioApp.cdoSounds.isAudioUnlocked()) {
       Studio.musicController.play();
       document.removeEventListener('instructionsShown', playOnce);
       document.removeEventListener('instructionsHidden', playOnce);
