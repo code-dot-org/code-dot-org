@@ -182,6 +182,12 @@ img.video_thumbnail {
   color: $header_text;
   a:link {color:$header_text;}
   a:visited {color:$header_text;}
+
+  .small_font_on_tablet {
+    @media screen and (max-width: 1024px) {
+      font-size: 13px;
+    }
+  }
 }
 
 .header.hide_on_mobile,
@@ -1498,7 +1504,7 @@ a.download-video {
     background-color: white;
     border-color: $lighter_cyan;
   }
-  .answer:hover {
+  .answer.ui-draggable:hover {
     border-color: $light_green;
     cursor: move;
   }
@@ -1552,12 +1558,15 @@ a.download-video {
 }
 
 .external,
-.text-match {
+.text-match,
+.multi,
+.match {
   #markdown.teacher {
     max-width: 800px;
     border: 5px solid $cyan;
     background-color: $lightest_cyan;
     border-radius: 5px;
+    margin: 10px auto;
     .content {
       padding: 10px;
     }
@@ -1572,12 +1581,14 @@ a.download-video {
   }
 }
 
-.text-match #markdown.teacher {
-  margin: 10px 0;
+.multi #markdown.teacher {
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.external #markdown.teacher {
-  margin: 10px auto;
+.text-match #markdown.teacher {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 #current-script-levels, #all-levels {
@@ -1800,7 +1811,7 @@ $modal-no-icon-gap: 22px;
     font-size: 18px;
     color: $charcoal;
   }
-  
+
   .aniGif {
     display: block;
     margin: 0px auto 6px;

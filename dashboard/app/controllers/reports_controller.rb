@@ -56,6 +56,30 @@ SQL
     render 'usage', formats: [:html]
   end
 
+  def funometer
+    authorize! :read, :reports
+
+    # Compute the global funometer percentage.
+    all_ratings = PuzzleRating.all
+    positive_ratings = all_ratings.where(rating: 1)
+    @global_percentage = 100.0 * positive_ratings.count / all_ratings.count
+
+    # Generate the funometer percentages, by day, for the last month.
+    percentages_by_day = all_ratings.select('100.0 * SUM(rating) / COUNT(rating)').where('created_at > ?', Time.now.prev_month).group('DATE(created_at)').order('DATE(created_at)').pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating)')
+
+    # Compute funometer percentages by script.
+    @script_headers = ['Script ID', 'Percentage', 'Count']
+    @script_ratings = all_ratings.select(:script_id, 'SUM(100.0 * rating) / COUNT(rating) AS ratio', 'COUNT(rating) AS cnt').group(:script_id).order('SUM(100.0 * rating) / COUNT(rating)').pluck(:script_id, 'SUM(100.0 * rating) / COUNT(rating)', 'COUNT(rating)')
+
+    # Compute funometer percentages by level.
+    @level_headers = ['Script ID', 'Level ID', 'Percentage', 'Count']
+    level_ratings = all_ratings.select(:script_id, :level_id, 'SUM(100.0 * rating) / COUNT(rating) AS ratio', 'COUNT(rating) AS cnt').group(:script_id, :level_id)
+    @favorite_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) desc').limit(25).pluck(:script_id, :level_id, 'SUM(100.0 * rating) / COUNT(rating)', 'COUNT(rating)')
+    @hated_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) asc').limit(25).pluck(:script_id, :level_id, 'SUM(100.0 * rating) / COUNT(rating)', 'COUNT(rating)')
+
+    render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+  end
+
   def search_for_teachers
     authorize! :read, :reports
 

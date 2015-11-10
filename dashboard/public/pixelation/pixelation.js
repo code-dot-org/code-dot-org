@@ -59,7 +59,7 @@ function customizeStyles() {
     $('.hide_on_v2').hide();
     $('#height, #width').prop('readonly', true);
   }
-  if (options.hex === "true" || options.hex === true) {
+  if (isHexLevel()) {
     $('input[name="binHex"][value="hex"]').prop('checked', true);
   }
   if (options.instructions) {
@@ -80,7 +80,14 @@ function initProjects() {
         options.projectData = levelSource;
       },
       getLevelSource: function () {
-        return pixel_data.value.replace(/[ \n]/g, "");
+        // Store the source in whichever format the level specifies.
+        if (isHexSelected()) {
+          var hexCode = pixel_data.value.replace(/[^0-9A-F]/gi, "");
+          return isHexLevel() ? hexCode : hexToBinPvt(hexCode);
+        } else {
+          var binCode = pixel_data.value.replace(/[^01]/gi, "");
+          return isHexLevel() ? binToHexPvt(binCode) : binCode;
+        }
       }
     };
     dashboard.project.load().then(function() {
@@ -107,8 +114,12 @@ function pixelationDisplay() {
   formatBitDisplay();
 }
 
-function isHex() {
+function isHexSelected() {
   return "hex" == document.querySelector('input[name="binHex"]:checked').value;
+}
+
+function isHexLevel() {
+  return options.hex === true || options.hex === 'true';
 }
 
 function drawGraph(ctx, exportImage, updateControls) {
@@ -117,7 +128,7 @@ function drawGraph(ctx, exportImage, updateControls) {
   ctx.fillRect(0, 0, MAX_SIZE, MAX_SIZE);
 
   var binCode = "";
-  var hexMode = isHex();
+  var hexMode = isHexSelected();
 
   // Save the cursor position before doing any manipulation of the textarea.
   var cursorPosition = pixel_data.selectionStart;
@@ -256,7 +267,7 @@ function formatBits(bitString, chunkSize, chunksPerLine) {
 
   if (options.version != '1') {
     // First break out first 2 bytes (width, height).
-    if (isHex()) {
+    if (isHexSelected()) {
       formattedBits += justBits.substr(0, 2) + "\n";
       formattedBits += justBits.substr(2, 2) + "\n";
       if (options.version == '3') {
@@ -279,7 +290,7 @@ function formatBits(bitString, chunkSize, chunksPerLine) {
     }
   }
 
-  if (isHex()) {
+  if (isHexSelected()) {
     if (chunkSize % 4 !== 0) {
       // If in hex mode can't break stuff up that's not multiple of 4 bits.
       formattedBits += justBits;
@@ -476,7 +487,7 @@ function updateBinaryDataToMatchSliders() {
 
   var justBits = pixel_data.value.replace(/[ \n]/g, "");
 
-  if (isHex()) {
+  if (isHexSelected()) {
     justBits = hexToBinPvt(justBits);
   }
 
@@ -491,7 +502,7 @@ function updateBinaryDataToMatchSliders() {
       newBits += justBits.substring(16);
     }
   }
-  if (isHex()) {
+  if (isHexSelected()) {
     newBits = binToHexPvt(newBits);
   }
 

@@ -16,6 +16,7 @@
 #  index_hint_view_requests_on_script_id_and_level_id  (script_id,level_id)
 #  index_hint_view_requests_on_user_id                 (user_id)
 #
+require 'dynamic_config/gatekeeper'
 
 class HintViewRequest < ActiveRecord::Base
   belongs_to :user
@@ -27,7 +28,7 @@ class HintViewRequest < ActiveRecord::Base
   validates :level, :presence => true
 
   def HintViewRequest.enabled?
-    true
+    Gatekeeper.allows('hint_view_request', default: true)
   end
 
   # Returns an array of serializable hashes representing all of a given

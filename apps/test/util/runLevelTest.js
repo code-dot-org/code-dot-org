@@ -33,6 +33,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
 
   // Validate successful solution.
   var validateResult = function (report) {
+    assert(testData.expected, 'Have expectations');
     assert(Object.keys(testData.expected).length > 0, 'No expected keys specified');
     Object.keys(testData.expected).forEach(function (key) {
       if (report[key] !== testData.expected[key]) {

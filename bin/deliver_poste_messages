@@ -104,8 +104,13 @@ class Deliverer
 
   def initialize(params)
     @params = params.dup
-    @smtp = smtp_connect unless rack_env?(:development)
+    @smtp = reset_connection
     @templates = {}
+  end
+
+  def reset_connection
+    @smtp.finish if @smtp
+    @smtp = smtp_connect unless rack_env?(:development)
   end
 
   def send(delivery)
@@ -277,6 +282,7 @@ def main()
         deliverer.send delivery
       rescue Net::SMTPSyntaxError, Net::SMTPFatalError => e
         puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        deliverer.reset_connection
         sent_at = 0
       rescue AbortEmailError => e
         puts "Abandoning delivery of #{delivery[:id]} because '#{e.message.to_s.strip}'"

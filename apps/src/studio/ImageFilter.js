@@ -29,10 +29,6 @@ var uniqueId = 0;
  * Wrapping the filters this way also provides an easy place to dynamically
  * manipulate their properties, generating filter animation.
  *
- * TODO: SVG filters are not supported in IE9.  This class should do a feature
- *       check and convert itself into a no-op if we detect that filters are
- *       not supported.
- *
  * @constructor
  * @param {!SVGSVGElement} svg - Every filter must belong to a single SVG
  *        root element, because it gets defined inside that SVG's defs tag.
@@ -184,6 +180,16 @@ ImageFilter.prototype.getDefsNode_ = function () {
  * @private
  */
 ImageFilter.prototype.checkBrowserSupport_ = function () {
+  // Disable filter effects in Safari right now, since they seem to take a
+  // long time to render and often cause issues.
+  // Chrome also contains 'Safari' in its user agent string, so check for
+  // 'Safari' but not 'Chrome'
+  // See http://stackoverflow.com/a/7768006/5000129
+  if (navigator.userAgent.indexOf('Safari') !== -1 &&
+      navigator.userAgent.indexOf('Chrome') === -1) {
+    return false;
+  }
+
   // Check suggested by http://stackoverflow.com/a/9771153/5000129
   return typeof window.SVGFEColorMatrixElement !== 'undefined' &&
       SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_SATURATE === 2;

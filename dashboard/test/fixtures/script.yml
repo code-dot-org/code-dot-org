@@ -53,9 +53,9 @@ hourofcode:
   user_id:
   login_required: false
   properties: '{}'
-hoc2015:
+starwars:
   id: 62
-  name: hoc2015
+  name: starwars
   created_at: 2015-10-16 22:39:24.000000000 Z
   updated_at: 2015-10-16 22:39:24.000000000 Z
   wrapup_video_id: 137

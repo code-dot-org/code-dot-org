@@ -23,15 +23,21 @@ function createVideo(options) {
 //   key - an uid.
 //   name - a string.
 //   redirect - the redirect page after the video is dismissed.
+//   onClose - actions to take after closing the video dialog, or immediately
+//             if the video isn't shown.
 function showVideoDialog(options, forceShowVideo) {
   if (forceShowVideo === undefined) {
     forceShowVideo = false;
   }
 
+  if (options.onClose === undefined) {
+    options.onClose = function () {};
+  }
+
   if (dashboard.clientState.hasSeenVideo(options.key) && forceShowVideo === false) {
     // Anything we were going to do when the video closed, we ought to do
     // right now.
-    // TODO: What else are we missing here?
+    options.onClose();
     if (options.redirect) {
       window.location.href = options.redirect;
     }
@@ -60,6 +66,7 @@ function showVideoDialog(options, forceShowVideo) {
   $div.addClass('video-modal');
 
   $('.video-modal').on("remove", function () {
+    options.onClose();
     dashboard.clientState.recordVideoSeen(options.key);
   });
 

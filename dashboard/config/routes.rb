@@ -144,7 +144,7 @@ Dashboard::Application.routes.draw do
     get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
 
     # /s/xxx/stage/yyy/puzzle/zzz
-    resources :stages, only: [:show], path: "/stage", format: false do
+    resources :stages, only: [], path: "/stage", format: false do
       resources :script_levels, only: [:show], path: "/puzzle", format: false
     end
   end
@@ -178,6 +178,7 @@ Dashboard::Application.routes.draw do
   # one-off internal reports
   get '/admin/brook/csppd', to: 'reports#csp_pd_responses', as: 'csp_pd_responses'
 
+  get '/admin/funometer', to: 'reports#funometer', as: 'funometer'
   get '/admin/pd_progress(/:script)', to: 'reports#pd_progress', as: 'pd_progress'
   get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'reports#level_completions', as: 'level_completions'
   get 'admin/search_for_teachers', to: 'reports#search_for_teachers', as: 'search_for_teachers'

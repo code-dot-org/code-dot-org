@@ -39,7 +39,7 @@ class AssetsTest < Minitest::Test
     assert_fileinfo_equal(actual_sound_info, file_infos[1])
 
     get(@assets, channel_id, image_filename)
-    assert_equal 'public, max-age=3600', @assets.last_response['Cache-Control']
+    assert_equal 'public, max-age=3600, s-maxage=1800', @assets.last_response['Cache-Control']
 
     delete(@assets, channel_id, image_filename)
     assert @assets.last_response.successful?

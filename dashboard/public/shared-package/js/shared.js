@@ -378,12 +378,10 @@ window.apps = {
         appOptions.level.aniGifURL);
 
         if (hasVideo) {
-          showVideoDialog(appOptions.autoplayVideo);
           if (hasInstructions) {
-            $('.video-modal').on('hidden.bs.modal', function() {
-              showInstructions();
-            });
+            appOptions.autoplayVideo.onClose = showInstructions;
           }
+          showVideoDialog(appOptions.autoplayVideo);
         } else if (hasInstructions) {
           showInstructions();
         }
@@ -773,7 +771,7 @@ var projects = module.exports = {
         this.sourceHandler.setInitialLevelSource(current.levelSource);
         this.showMinimalProjectHeader();
       }
-    } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
+    } else if (appOptions.isLegacyShare && this.getStandaloneApp()) {
       current = {
         name: 'Untitled Project'
       };
@@ -788,7 +786,7 @@ var projects = module.exports = {
   projectChanged: function() {
     hasProjectChanged = true;
   },
-  getCurrentApp: function () {
+  getStandaloneApp: function () {
     switch (appOptions.app) {
       case 'applab':
         return 'applab';
@@ -801,12 +799,14 @@ var projects = module.exports = {
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
+        } else if (appOptions.skinId === 'hoc2015' || appOptions.skinId === 'infinity') {
+          return null;
         }
         return 'playlab';
     }
   },
   appToProjectUrl: function () {
-    return '/projects/' + projects.getCurrentApp();
+    return '/projects/' + projects.getStandaloneApp();
   },
   /**
    * Explicitly clear the HTML, circumventing safety measures which prevent it from

@@ -19,7 +19,7 @@ Category: Functions
 
 [short_description]
 
-Give a name to a set of actions you want the computer to perform, and optionally return a value.
+Gives a name to a set of actions you want the computer to perform, and optionally return a value.
 
 [/short_description]
 

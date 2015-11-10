@@ -70,7 +70,7 @@ levels.simple = {
 levels.custom = {
   'freePlay': true,
   'editCode': true,
-  'sliderSpeed': 0.95,
+  'sliderSpeed': 1,
   'appWidth': 320,
   'appHeight': 480,
 
@@ -117,7 +117,7 @@ levels.custom = {
     "setStrokeWidth": null,
     "setStrokeColor": null,
     "setFillColor": null,
-    "drawImage": null,
+    "drawImageURL": null,
     "getImageData": null,
     "putImageData": null,
     "clearCanvas": null,
@@ -2539,7 +2539,9 @@ module.exports.blocks = [
   {func: 'setStrokeWidth', parent: api, category: 'Canvas', paletteParams: ['width'], params: ["3"] },
   {func: 'setStrokeColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"red"'], dropdown: { 0: [ '"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"' ] } },
   {func: 'setFillColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"yellow"'], dropdown: { 0: [ '"yellow"', '"rgb(255,255,0)"', '"rgba(255,255,0,0.5)"', '"#FFFF00"' ] } },
-  {func: 'drawImage', parent: api, category: 'Canvas', paletteParams: ['id','x','y'], params: ['"id"', "0", "0"], dropdown: { 0: function () { return Applab.getIdDropdown("img"); } } },
+  // drawImage has been deprecated in favor of drawImageURL
+  {func: 'drawImage', parent: api, category: 'Canvas', paletteParams: ['id','x','y'], params: ['"id"', "0", "0"], dropdown: { 0: function () { return Applab.getIdDropdown("img"); } }, noAutocomplete: true },
+  {func: 'drawImageURL', parent: api, category: 'Canvas', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'] },
   {func: 'getImageData', parent: api, category: 'Canvas', paletteParams: ['x','y','width','height'], params: ["0", "0", DEFAULT_WIDTH, DEFAULT_HEIGHT], type: 'value' },
   {func: 'putImageData', parent: api, category: 'Canvas', paletteParams: ['imgData','x','y'], params: ["imgData", "0", "0"] },
   {func: 'clearCanvas', parent: api, category: 'Canvas', },
@@ -4073,6 +4075,7 @@ var ChartApi = require('./ChartApi');
 var RGBColor = require('./rgbcolor.js');
 var codegen = require('../codegen');
 var keyEvent = require('./keyEvent');
+var utils = require('../utils');
 
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
@@ -4677,6 +4680,10 @@ applabCommands.clearCanvas = function (opts) {
   return false;
 };
 
+/**
+ * Semi-deprecated. We still support this API, but no longer expose it in the
+ * toolbox. Replaced by drawImageURL
+ */
 applabCommands.drawImage = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // PARAMNAME: drawImage: imageId vs. id
@@ -4704,6 +4711,68 @@ applabCommands.drawImage = function (opts) {
     return true;
   }
   return false;
+};
+
+/**
+ * We support a couple different version of this API
+ * drawImageURL(url, [callback])
+ * drawImaegURL(url, x, y, width, height, [calback])
+ */
+applabCommands.drawImageURL = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+
+  apiValidateActiveCanvas(opts, 'drawImageURL');
+  apiValidateType(opts, 'drawImageURL', 'url', opts.url, 'string');
+  apiValidateType(opts, 'drawImageURL', 'x', opts.x, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'y', opts.y, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'width', opts.width, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'height', opts.height, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'callback', opts.callback, 'function', OPTIONAL);
+
+  var jsInterpreter = Applab.JSInterpreter;
+  var callback = function (success) {
+    if (opts.callback) {
+      queueCallback(jsInterpreter, opts.callback, [success]);
+    }
+  };
+
+  var image = new Image();
+  image.src = Applab.maybeAddAssetPathPrefix(opts.url);
+  image.onload = function () {
+    var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+    if (!ctx) {
+      return;
+    }
+    var x = utils.valueOr(opts.x, 0);
+    var y = utils.valueOr(opts.y, 0);
+
+    // if given a width/height use that
+    var renderWidth = utils.valueOr(opts.width, image.width);
+    var renderHeight = utils.valueOr(opts.height, image.height);
+
+    // if undefined, extra width/height from image and potentially resize to
+    // fit
+    if (opts.width === undefined || opts.height === undefined) {
+      var aspectRatio = image.width / image.height;
+      if (aspectRatio > 1) {
+        renderWidth = Math.min(Applab.activeCanvas.width, image.width);
+        renderHeight = renderWidth * aspectRatio;
+      } else {
+        renderHeight = Math.min(Applab.activeCanvas.height, image.height);
+        renderWidth = renderHeight / aspectRatio;
+      }
+    }
+
+    ctx.save();
+    ctx.setTransform(renderWidth / image.width, 0, 0, renderHeight / image.height, opts.x, opts.y);
+    ctx.drawImage(image, 0, 0);
+    ctx.restore();
+
+    callback(true);
+  };
+  image.onerror = function () {
+    callback(false);
+  };
 };
 
 applabCommands.getImageData = function (opts) {
@@ -5151,8 +5220,8 @@ applabCommands.getXPosition = function (opts) {
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     var x = div.offsetLeft;
-    while (div !== divApplab) {
-      // TODO (brent) using offsetParent may be ill advised:
+    while (div && div !== divApplab) {
+      // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent
       // This property will return null on Webkit if the element is hidden
       // (the style.display of this element or any ancestor is "none") or if the
       // style.position of the element itself is set to "fixed".
@@ -5160,7 +5229,9 @@ applabCommands.getXPosition = function (opts) {
       // style.position of the element itself is set to "fixed".
       // (Having display:none does not affect this browser.)
       div = div.offsetParent;
-      x += div.offsetLeft;
+      if (div) {
+        x += div.offsetLeft;
+      }
     }
     return x;
   }
@@ -5174,9 +5245,11 @@ applabCommands.getYPosition = function (opts) {
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     var y = div.offsetTop;
-    while (div !== divApplab) {
+    while (div && div !== divApplab) {
       div = div.offsetParent;
-      y += div.offsetTop;
+      if (div) {
+        y += div.offsetTop;
+      }
     }
     return y;
   }
@@ -5644,14 +5717,15 @@ function stopLoadingSpinnerFor(elementId) {
  * AND the interpreter is still the active interpreter for Applab.
  * @param {JSInterpreter} jsInterpreter
  * @param {function} callback
+ * @param {Object[]} args
  */
-var queueCallback = function (jsInterpreter, callback) {
+var queueCallback = function (jsInterpreter, callback, args) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active, so we don't queue callbacks for slow async events
   // from past executions of the app.
   // (We use a different interpreter instance for every run.)
   if (callback && jsInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(callback);
+    Applab.JSInterpreter.queueEvent(callback, args);
   }
 };
 
@@ -5666,7 +5740,7 @@ var getCurrentLineNumber = function (jsInterpreter) {
 };
 
 
-},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../sharedJsxStyles":"/home/ubuntu/staging/apps/build/js/sharedJsxStyles.js","../timeoutList":"/home/ubuntu/staging/apps/build/js/timeoutList.js","./ChangeEventHandler":"/home/ubuntu/staging/apps/build/js/applab/ChangeEventHandler.js","./ChartApi":"/home/ubuntu/staging/apps/build/js/applab/ChartApi.js","./appStorage":"/home/ubuntu/staging/apps/build/js/applab/appStorage.js","./applabTurtle":"/home/ubuntu/staging/apps/build/js/applab/applabTurtle.js","./errorHandler":"/home/ubuntu/staging/apps/build/js/applab/errorHandler.js","./keyEvent":"/home/ubuntu/staging/apps/build/js/applab/keyEvent.js","./rgbcolor.js":"/home/ubuntu/staging/apps/build/js/applab/rgbcolor.js"}],"/home/ubuntu/staging/apps/build/js/applab/rgbcolor.js":[function(require,module,exports){
+},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../sharedJsxStyles":"/home/ubuntu/staging/apps/build/js/sharedJsxStyles.js","../timeoutList":"/home/ubuntu/staging/apps/build/js/timeoutList.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./ChangeEventHandler":"/home/ubuntu/staging/apps/build/js/applab/ChangeEventHandler.js","./ChartApi":"/home/ubuntu/staging/apps/build/js/applab/ChartApi.js","./appStorage":"/home/ubuntu/staging/apps/build/js/applab/appStorage.js","./applabTurtle":"/home/ubuntu/staging/apps/build/js/applab/applabTurtle.js","./errorHandler":"/home/ubuntu/staging/apps/build/js/applab/errorHandler.js","./keyEvent":"/home/ubuntu/staging/apps/build/js/applab/keyEvent.js","./rgbcolor.js":"/home/ubuntu/staging/apps/build/js/applab/rgbcolor.js"}],"/home/ubuntu/staging/apps/build/js/applab/rgbcolor.js":[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -6825,6 +6899,25 @@ exports.drawImage = function (imageId, x, y, width, height) {
                            'width': width,
                            'height': height });
 };
+
+exports.drawImageURL = function (url, x, y, width, height, callback) {
+  if (y === undefined && width === undefined && height === undefined &&
+      callback === undefined) {
+    // everything after x is undefined. assume the two param version (in which
+    // callback might still be undefined)
+    callback = x;
+    x = undefined;
+  }
+  return Applab.executeCmd(null,
+                          'drawImageURL',
+                          {'url': url,
+                           'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height,
+                           'callback': callback});
+};
+
 
 exports.getImageData = function (x, y, width, height) {
   return Applab.executeCmd(null,

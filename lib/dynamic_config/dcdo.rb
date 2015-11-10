@@ -54,10 +54,13 @@ class DCDOBase
   # Factory method for creating DCDOBase objects
   # @returns [DCDOBase]
   def self.create
+    env = rack_env.to_s
+    env = Rails.env.to_s if defined? Rails
+
     cache_expiration = 5
-    if rack_env?(:test)
+    if env == 'test'
       adapter = MemoryAdapter.new
-    elsif rack_env?(:production)
+    elsif env == 'production'
       cache_expiration = 30
       adapter = DynamoDBAdapter.new CDO.dcdo_table_name
     else

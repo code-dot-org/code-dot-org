@@ -8,12 +8,10 @@ class UserLevelsController < ApplicationController
   # PATCH/PUT /user_levels/1
   # PATCH/PUT /user_levels/1.json
   def update
-    respond_to do |format|
-      if @user_level.update(user_level_params)
-        format.json { head :no_content }
-      else
-        format.json { render json: @user_level.errors, status: :unprocessable_entity }
-      end
+    if @user_level.update(user_level_params)
+      head :no_content
+    else
+      render json: @user_level.errors, status: :unprocessable_entity
     end
   end
 

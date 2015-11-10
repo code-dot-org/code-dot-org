@@ -40,17 +40,17 @@ Quarter 4: Saturday, March 5, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**October 3rd Location**
+**November 21st Location**
 
 Gonzaga University<br/>
-PACCAR 007<br/>
+PACCAR 107<br/>
 502 E. Boone Avenue<br/>
 Spokane WA 99258
 
 Free parking is located on level 3 and 4 of the BARC parking garage on Hamilton and Boone Ave. See a campus map [here](/files/GU-campus-fall-2015-16.pdf).
 <br/>
 <br/>
-_Agendas_ for our frist Phase 3 Part A in-person workshop can be found [here](/files/CSPFirstQuarterWorkshop-teachers.pdf). 
+_Agendas_ for our frist Phase 3 in-person workshop can be found [here](/files/CSPFirstQuarterWorkshop-teachers.pdf). 
 
 
 

@@ -185,9 +185,10 @@ MusicController.prototype.fadeOut = function (durationSeconds) {
   }
 
   // Stop the audio after the fade.
+  // Add a small margin due to poor fade granularity on fallback player.
   setTimeout(function () {
     this.stop();
-  }.bind(this), 1000 * durationSeconds);
+  }.bind(this), 1000 * durationSeconds + 100);
 };
 
 /**

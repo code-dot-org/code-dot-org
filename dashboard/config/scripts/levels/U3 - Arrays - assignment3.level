@@ -1,0 +1,53 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-11-10T17:09:50.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "write": null,
+      "console.log": null,
+      "declareAssign_x_array_1_4": {
+        "block": "var list = [1,2,3];"
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "true",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "instructions": "Use indexes to change the values in this array from 1 to 0. (Click to see full instructions)",
+    "markdown_instructions": "# Moving Information in Arrays\r\n\r\nTo move information from one location in an array to another we need to **both reference and assign values** from the array, as in the example below.\r\n\r\n![](https://images.code.org/4d904ef5ab72946be87f614e845b94c8-image-1447175735869.15.08 AM.png)\r\n\r\nThis example sets the value at index 2 of myArray to the value stored at index 8 of myArray. **After this command runs both indexes of the array will contain the same value.**\r\n\r\n\r\nThe program you're about to see creates and initializes an array that contains 3 values. We'll use this array to **practice moving values from one location in an array to another**.\r\n\r\n![](https://images.code.org/cf82f4d14fe3a7230293876f73b41205-image-1447177641012.47.12 AM.png)\r\n\r\n# Do This\r\n\r\n* **Using only indexes and the assignment operator** switch the first two values in this array.\r\n\t* All commands should be of the form `simpleArray[i] = simplyArray[j];`\r\n* **Write the array to the screen** to confirm you have swapped the first two values\r\n\r\n![](https://images.code.org/edd80e8e00b2a46f64b61f200ffcb7f0-image-1447178118561.55.00 AM.png)",
+    "start_blocks": "var simpleArray = [1,0,0];\r\n\r\n//Place your assignment commands here\r\n\r\n\r\nwrite(simpleArray);",
+    "slider_speed": "1"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

@@ -156,9 +156,9 @@
     "slider_speed": "1.0",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "JlXGp6bTBvKm7NMaEQmnK1PcvCqbQoubcDogX9JuRn242tfQsGAxE44+2Mqn\nTRNn\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

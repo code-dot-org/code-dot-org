@@ -12,7 +12,7 @@ module.exports = {
   tests: [
     // These exercise all of the blocks in Turtle category
     // It does not validate that they behave correctly, just that we don't end
-    // up with an errors
+    // up with any errors
     {
       description: "Math blocks",
       editCode: true,
