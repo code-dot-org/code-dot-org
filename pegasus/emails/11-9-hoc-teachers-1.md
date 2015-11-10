@@ -28,6 +28,7 @@ There are 75,000 Hour of Code events signed up worldwide. Help your students joi
 <% else %>
 #### Prizes for every educator
 There are 77,000 Hour of Code events signed up worldwide. Help your students join in on this record-breaking event! Every organizer will receive a gift card to Amazon, iTunes or Windows Store. [**Join in**](https://hourofcode.com).
+<% end %>
 
 I couldn’t be more excited to share [*Star Wars*: Building a Galaxy with Code](https://code.org/starwars) with you today. Code your own game, share it, and tell us what you think. 
 

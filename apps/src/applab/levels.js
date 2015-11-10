@@ -30,7 +30,7 @@ levels.simple = {
 levels.custom = {
   'freePlay': true,
   'editCode': true,
-  'sliderSpeed': 0.95,
+  'sliderSpeed': 1,
   'appWidth': 320,
   'appHeight': 480,
 
