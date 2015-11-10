@@ -5,7 +5,7 @@ question 'Triggers once, the instant the mouse hovers over the button'
 answer 'mouseover'
 question 'Triggers when the mouse button is clicked once'
 answer 'click'
-question 'Triggers when th mouse button is released'
+question 'Triggers when the mouse button is released'
 answer 'mouseup'
 question 'Triggers when the mouse button is pressed'
 answer 'mousedown'
@@ -14,12 +14,4 @@ markdown <<MARKDOWN
 # Mouse Events
 
 Match the mouse events you just used with their descriptions. Feel free to go back if you need to check on some.
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-* Triggers whenever the mouse moves. Answer: mousemove
-* Triggers once, the instant the mouse hovers over the button. Answer: mouseover
-* Triggers when the mouse button is clicked once. Answer: click
-* Triggers when th mouse button is released. Answer: mouseup
-* Triggers when the mouse button is pressed. Answer: mousedown
 MARKDOWN

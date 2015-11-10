@@ -6,9 +6,3 @@ wrong 'Yes, the button, with its ID, must appear in the code AFTER the event han
 wrong 'No, JavaScript is flexible; the button and its event handler can appear in any order in the code.'
 right 'Yes, the button, with its ID, must appear in the code BEFORE the event handler.'
 wrong 'Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.'
-
-teacher_markdown <<MARKDOWN
-Correct answer: 
-
-Yes, the button, with its ID, must appear in the code BEFORE the event handler.
-MARKDOWN

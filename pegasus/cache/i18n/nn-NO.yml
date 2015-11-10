@@ -10,7 +10,7 @@
     din</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Er du en lærar i IT? Sjå andre CSEdWeek-ressursar</a>'
-  n_have_learned_an_hoc: <h1>Prøv en</h1><h2>Time med Kode</h2><h3># served</h3>
+  n_have_learned_an_hoc: "<h1>Prøv en</h1><h2>Time med Kode</h2><h3># served</h3>"
   anybody_can_learn: Alle kan læra.
   learn_now: Lær no
   petition_message: Alle elevar på alle skular burde få høve til å lære koding
@@ -35,7 +35,7 @@
   hoc2014_everyone: Alle
   hoc2014_support: Støtt det &#x25BE;
   hoc2014_whatishoc: Kva er kodetimen?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
@@ -61,7 +61,7 @@
     hvis-så-setninger og grunnleggande algoritmer.
   all_ages: Alle aldrar
   beginner: Nybegynner
-  n_participants: '# deltakarar'
+  n_participants: "# deltakarar"
   go: Set i gong
   thank_you_: Takk!
   congratulations: Gratulerer!
@@ -108,7 +108,7 @@
   beyond_an_hour: Etter Kodetimen
   get_started: Start
   i_agree: Eg er einig
-  participant_select: '- Vel -'
+  participant_select: "- Vel -"
   participant_student: Elev
   participant_parent: Forelder
   participant_educator: Lærar
@@ -129,7 +129,7 @@
   learn_next_level: Fortsett til neste nivå
   learn_online: Prøv andre kurs på nettet
   learn_classes: Finn lokale kodeklubbar
-  hoc_is_here: '#Kodetimen er her - sjekk den ut! @kidsakoder'
+  hoc_is_here: "#Kodetimen er her - sjekk den ut! @kidsakoder"
   just_did_hoc: 'Eg har gjennomført #kodetimen - prøv du også! @kidsakoder'
   twitter_teach_cs: Kvifor lærar ikkje fleire skuler informatikk? Vi kan fikse dette.
     http://youtu.be/nKIu9yen5nc. Besøk http://code.org/ for å lære meir.
@@ -143,11 +143,11 @@
   help_recruit_coders: Hjelp oss med å finne fleire kodarar til laget ditt!
   help_recruit: Hjelp oss med å rekruttere fleire kodarar!
   lines_of_code: OVER <b># KODELINER</b> SKRIVE HITTIL.
-  lines_of_code_alt: <b>#</b> KODELINER SKRIVE AV ELEVAR
+  lines_of_code_alt: "<b>#</b> KODELINER SKRIVE AV ELEVAR"
   who_has_done_hoc: 'Hvem har fullført #kodetimen? #HourOfCode? @codeorg'
   hoc_leaderboards: Resultatliste for Kodetimen
-  students_and_lines: '%{students} elevar har gjort Kodentimen og skreiv %{lines}
-    kodeliner.'
+  students_and_lines: "%{students} elevar har gjort Kodentimen og skreiv %{lines}
+    kodeliner."
   start_hoc: Start  Kodetimen no
   contact_form_topic_press: Media (Intervju eller talar)
   stats_nina: '"Hver eneste dag gav de samme resultatene&mdash; 100% engasjement."
@@ -180,8 +180,8 @@
     Barack Obama'
   homepage_hero_text_sheryl: '"Våre barn - inkludert våre jenter - trenger å lære
     informatikk." Sheryl, COO i Facebook'
-  homepage_hero_text_satya: «Informatikk kan åpne for de beste mulighetene i verden.»
-    Satya, CEO i Microsoft
+  homepage_hero_text_satya: "«Informatikk kan åpne for de beste mulighetene i verden.»
+    Satya, CEO i Microsoft"
   homepage_hero_text_bosh: '"Hvis du kan programmere, kan du velge og vrake retningen
     til ditt eget liv." Chris Bosh'
   homepage_hero_text_student1: |
@@ -208,8 +208,8 @@
     innovasjon - \nalt som er viktig i enhver karriere.\"\nFloresa, lærer\n"
   homepage_hero_text_teacher2: "\"Dette programmet har fått 100 % av elevene \nengasjert,
     involvert og delaktige.\"\nAdam, lærer\n"
-  homepage_hero_text_stat_loc: '#loc linjer med kode skrevet av elever'
-  homepage_hero_text_stat_students: '#student_count studentkontoer på koden Studio'
+  homepage_hero_text_stat_loc: "#loc linjer med kode skrevet av elever"
+  homepage_hero_text_stat_students: "#student_count studentkontoer på koden Studio"
   homepage_hero_text_stat_served: 'Time kode: #served servert'
   homepage_slot_text_hoc: Kodetimen
   homepage_slot_text_frozen: Frost med Anna og Elsa
@@ -236,7 +236,7 @@
   homepage_slot_text_blurb_hoc: Alle kan lære. Start i dag
   homepage_slot_text_link_hoc: Prøv Kodetimen
   homepage_slot_text_link_host: Bli vertskap for Kodetimen
-  homepage_slot_text_link_hocserved: '# servert'
+  homepage_slot_text_link_hocserved: "# servert"
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Elevar
   homepage_slot_text_blurb_students: Utforsk alle våre opplæringsprogrammer
@@ -298,9 +298,9 @@
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+    have signed up."
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
@@ -355,7 +355,9 @@
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: Send
-  volunteer_engineer_submission_thankyou: Thank you for submitting your information.
+  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
+    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
+    more here.</a>
   volunteer_engineer_submission_commitment_uncertain: Usikker
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 time per veke
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 timar per veke
@@ -404,7 +406,7 @@
   dashboard_landing_available_title: Tilgjengelege kurs
   dashboard_landing_available_courses: Her er kursa som er tilgjengelege for deg og
     dine elevar.
-  dashboard_landing_more_tutorials: Ønsker du å se flere opplæringsprogrammer?
+  dashboard_landing_more_tutorials: "Ønsker du å se flere opplæringsprogrammer?"
   dashboard_landing_more_tutorials_desc: Det finnes flere opplæringsprogrammer <a
     href="/learn/beyond">tilbudt av partnerne våre.</a> Lær å programmere med roboter,
     lage nettsider, lage din egen applikasjon eller utforske andre språk som C++,
@@ -428,7 +430,7 @@
     programmering i midtskolematematikk og -vitenskap - som et verktøy for å lære
     matemtikk- og vitenskapskonsepter. For å melde deg på de profesjonelle utviklingsverkstedene,
     søk om <a href="/educate/districts">distriktsdekkende partnerskap</a> med Code.org.
-  dashboard_high_courses: Årslange høyskolekurs
+  dashboard_high_courses: "Årslange høyskolekurs"
   dashboard_high_courses_desc: Høyskoleprogrammet vårt hjelper skoledistrikter med
     å tilby helårige datavitenskapskurs ved å sette eksisterende pedagogisk ansatte
     i gang med å tilby dette fagområdet. For å melde deg på de profesjonelle utviklingsverkstedene,
@@ -607,8 +609,9 @@
   dashboard_faq_k5: K-5 Ofte stilte spørsmål
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: <b>September 30, 2015</b> - The Hour of Code 2015 is coming!
-    Join classrooms worldwide for the largest learning event in history.
+  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+    every participating organizer will receive a gift card to Amazon.com or Microsoft's
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
   code_hoc_coming: Kodetimen er her - 8.- 14. desember!
   code_sign_up: Registrer deg for å delta i Kodeveka (CS Education Week)
   learn_more: Lær meir
@@ -880,12 +883,12 @@
     enkel programmering, for dei på 4 år og oppover, på iOS eller Android (eller nettleser).
     Lær å sette kommandoar i rett rekkefylgje, identifiserer mønster, bruke prosedyrer
     og nytte løkker!
-  codehs_longdescription: Å gi kommandoar til ei datamaskin, som er det programmering
+  codehs_longdescription: "Å gi kommandoar til ei datamaskin, som er det programmering
     handlar om, er akkurat som å gi kommandoar til ein hund. Lær å kode med hunden
     Karel&mdash; ein artig, tilgjengelig og visuell introduksjon til programmering
     som lærer elevane grunnleggjande begreper som kommandoar og funksjonar på nybegynnernivå.
     Opplæringa er retta mot elever, men lærarar kan registrere seg for tilgang til
-    lærarverktøy og spore framgangen til elevane!
+    lærarverktøy og spore framgangen til elevane!"
   codecademy_longdescription: Codecademy er ein interaktiv, elevstyrt introduksjon
     til grunnleggjande datavitskap med JavaScript som blir brukt av millionar av elevar
     over heile verda. Vi har utarbeida ein problemfri Kodetime-opplevelse med tilhørande
@@ -1295,3 +1298,38 @@
     <a href='%{it_requirements_url}'> Klikk her</a> for å lære hvordan du aktiverer
     HTTPS for Code.org.
   compatibility_https_hide_this_warning: Skjul denne advarselen
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: "# served"
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Sign up
+  homepage_action_text_try_it: Try it
+  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_girlvideo: Inspire a girl
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_gradelevel: Ages 6+
+  starwars_platformtext: Modern browsers + tablets
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
+  starwars_longdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.

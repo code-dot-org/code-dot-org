@@ -1377,6 +1377,8 @@ en:
         duino:
           Experimenting with Arduino stuff: Experimenting with Arduino stuff
           Basic Circuits: Basic Circuits
+          description: Testing some tools for teaching with Arduinos
+          Blinky Lights: Blinky Lights
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
@@ -1435,3 +1437,8 @@ en:
           description_short: Create a story or make a game with Gumball Play Lab!
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
+        starwars:
+          title: 'Star Wars: Building a Galaxy with Code'
+          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          Hour of Code 2015: Hour of Code 2015

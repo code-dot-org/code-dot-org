@@ -39,6 +39,12 @@ Google<br/>
 340 Main St.<br/>
 Los Angeles, CA 90291
 
+The parking garage is located underground.  Please pull under the binoculars in front of the building on Main Street (yes we are the "binocular building"), push the button on the keypad to the left in front of the gate, and let Reception/Security know you are here to meet with Jen Barth for Code.org event.  They will buzz you in.
+
+Drive to the valet on level B (located 2nd floor down) and they will guide you to open parking spots in the structure or valet your car for you.  Take the elevator to the first floor and check-in with reception.  Jen Barth from Google will greet you there.  
+
+Please feel free to call Jen's cell if you have any trouble getting here. 646-489-7459.
+
 
 **What to bring to Phase 3 quarterly sessions:**
 

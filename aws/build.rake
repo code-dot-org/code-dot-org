@@ -287,14 +287,13 @@ task build: [:chef_update] do
   end
 end
 
-# Update the front-end instances, in parallel, but not all at once. When the infrastructure is
-# properly scaled we should be able to upgrade 20% of the front-ends at a time. Right now we're
-# over-subscribed (have more resources than we need) so we're restarting 50% of the front-ends.
+# Update the front-end instances, in parallel, updating up to 20% of the
+# instances at any one time.
 task :deploy do
   with_hipchat_logging("deploy frontends") do
     if CDO.daemon && CDO.app_servers.any?
       Dir.chdir(deploy_dir) do
-        thread_count = 2
+        thread_count = (CDO.app_servers.keys.length * 0.20).ceil
         threaded_each CDO.app_servers.keys, thread_count do |name|
           upgrade_frontend name, CDO.app_servers[name]
         end
@@ -365,7 +364,7 @@ task :dashboard_browserstack_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '110', '--auto_retry', '--html'
+      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '85', '--auto_retry', '--html'
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         HipChat.log message

@@ -21,7 +21,7 @@ Dashboard::Application.configure do
 
   # Serve static resources - these will be cached by Varnish (or a CDN)
   config.serve_static_files = true
-  config.static_cache_control = "public, max-age=86400"
+  config.static_cache_control = "public, max-age=86400, s-maxage=43200"
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier

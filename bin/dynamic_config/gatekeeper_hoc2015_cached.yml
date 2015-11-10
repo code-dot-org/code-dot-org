@@ -1,14 +1,14 @@
 public_caching_for_script:
   - rule:
     where:
-      script_name: hoc2015
+      script_name: starwars
     value: true
   - rule:
     value: false
 postMilestone:
   - rule:
     where:
-      script_name: hoc2015
+      script_name: starwars
     value: false
   - rule:
     value: true

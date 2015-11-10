@@ -44,6 +44,7 @@ max_age: 60
         =TextRender.safe_markdown company['additional_actions_copy_t']
       -else
         =view :company_profile_additional_actions
+      = I18n.t :congratulations_volunteer
   -else
     %h1=I18n.t :congratulations_on_completing_hoc
 
@@ -93,14 +94,6 @@ max_age: 60
 
   function processResponse(data)
   {
-    //console.log("Processing response: ", data);
-
-    if (!data.started)
-    {
-      //console.log("Response indicates not started.")
-      //window.location = "/learn";
-    }
-
     certificate_processResponse(data);
   }
 
@@ -113,8 +106,15 @@ max_age: 60
       $("#share-twitter").hide(); $("#follow-twitter").css('display', 'inline-block');
     });
 
-    // checking for "studio" won't work on local instances as domain is 0.0.0.0:3000
-    if (!((document.referrer.indexOf("studio") != -1 || document.referrer.indexOf("learn") != -1) && document.referrer.indexOf("frozen") == -1)) {
+    // Only show the Frozen "Print your Ice Art" section if we came from a
+    // page with "Frozen" in the URL
+    // TODO: This is a _terrible_ way to check which certificate we want
+    //       to show!  In particular, it means the certificate page cannot
+    //       be accurately bookmarked.
+    //       In the future, any tutorial-specific changes to the certificate
+    //       should depend on a URL slug or param, not on referrer!
+    var referredByFrozen = document.referrer.indexOf("frozen") != -1;
+    if (referredByFrozen) {
       $('#print_option').show();
     }
 
@@ -134,7 +134,6 @@ max_age: 60
     else
     {
       certificate_disable();
-      voting_disable();
     }
   });
 

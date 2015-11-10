@@ -10,6 +10,10 @@ exports.random = function (values) {
   return values[key];
 };
 
+exports.endGame = function(id, value) {
+  Studio.queueCmd(id, 'endGame', {'value': value});
+};
+
 exports.setBackground = function (id, value) {
   Studio.queueCmd(id, 'setBackground', {'value': value});
 };
@@ -53,6 +57,22 @@ exports.setSpriteEmotion = function (id, spriteIndex, value) {
 exports.setSpriteSpeed = function (id, spriteIndex, value) {
   Studio.queueCmd(id, 'setSpriteSpeed', {
     'spriteIndex': spriteIndex,
+    'value': value
+  });
+};
+
+// setDroid is a wrapper to setSprite that always passes 0 for the spriteIndex
+// (used by hoc2015)
+
+exports.setDroid = function (id, value) {
+  Studio.queueCmd(id, 'setSprite', {
+    'spriteIndex': 0,
+    'value': value
+  });
+};
+
+exports.setDroidSpeed = function (id, value) {
+  Studio.queueCmd(id, 'setDroidSpeed', {
     'value': value
   });
 };

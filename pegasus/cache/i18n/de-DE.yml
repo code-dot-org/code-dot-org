@@ -11,7 +11,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Bist du Informatiklehrer? Hier findest du weiteres Material
     zur Informatikwoche</a>'
-  n_have_learned_an_hoc: <h1>Probiere eine</h1><h2>Hour of Code</h2><h3># </h3>
+  n_have_learned_an_hoc: "<h1>Probiere eine</h1><h2>Hour of Code</h2><h3># </h3>"
   anybody_can_learn: Jeder kann es lernen.
   learn_now: Jetzt lernen
   petition_message: Jeder Schüler in jeder Schule sollte die Möglichkeit haben, Informatik
@@ -37,7 +37,7 @@
   hoc2014_everyone: jeder
   hoc2014_support: Unterstütze es &#x25BE;
   hoc2014_whatishoc: Was ist die Hour of Code?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
@@ -64,7 +64,7 @@
     Wenn-Sonst-Befehle und einfache Programmabläufe.
   all_ages: Alle Altersgruppen
   beginner: Anfänger
-  n_participants: '# Teilnehmer'
+  n_participants: "# Teilnehmer"
   go: Start
   thank_you_: Vielen Dank!
   congratulations: Herzlichen Glückwunsch!
@@ -113,7 +113,7 @@
   beyond_an_hour: Nach der Hour of Code
   get_started: Start
   i_agree: Ich stimme zu
-  participant_select: '- Auswählen -'
+  participant_select: "- Auswählen -"
   participant_student: Schüler
   participant_parent: Elternteil
   participant_educator: Lehrer
@@ -148,12 +148,12 @@
   boy: Junge
   help_recruit_coders: Hilf uns weitere Programmierer/-innen für dein Team zu gewinnen!
   help_recruit: Hilf uns weitere Programmierer zu rekrutieren!
-  lines_of_code: ÜBER <b># ZEILEN CODE</b> GESCHRIEBEN BIS JETZT.
-  lines_of_code_alt: <b>#</b> CODEZEILEN, VON SCHÜLERN GESCHRIEBEN
+  lines_of_code: "ÜBER <b># ZEILEN CODE</b> GESCHRIEBEN BIS JETZT."
+  lines_of_code_alt: "<b>#</b> CODEZEILEN, VON SCHÜLERN GESCHRIEBEN"
   who_has_done_hoc: 'Wer hat die #HourOfCode geschafft? @codeorg'
   hoc_leaderboards: Die Hour of Code-Ranglisten
-  students_and_lines: '%{students} Schüler haben die Hour of Code ggeschafft und %{lines}
-    Zeilen Code geschrieben.'
+  students_and_lines: "%{students} Schüler haben die Hour of Code ggeschafft und %{lines}
+    Zeilen Code geschrieben."
   start_hoc: Starte die Hour of Code jetzt
   contact_form_topic_press: Presse/Medien (Interview oder Sprecherauftrag)
   stats_nina: '"Jeder einzelne Tag ergab die gleichen Resultate&mdash; 100% Engagement."
@@ -180,8 +180,8 @@
   studiobar_shop_body: Breche Stereotypen. Trage unser Logo mit Stolz.
   homepage_hero_text_malala: "&ldquo; Ich fordere Mädchen in jedem Land auf, an einer
     Hour of Code teilzunehmen &rdquo; \n Malala, Friedensnobelpreisträgerin\n"
-  homepage_hero_text_susan: '&ldquo; Wenn man Technologien verändern kann, kann man
-    auch die Welt verändern. &rdquo; Susan, CEO von YouTube'
+  homepage_hero_text_susan: "&ldquo; Wenn man Technologien verändern kann, kann man
+    auch die Welt verändern. &rdquo; Susan, CEO von YouTube"
   homepage_hero_text_fistbump: |
     &ldquo;Spiele nicht einfach mit deinem Handy, programmiere es.&rdquo;
     Präsident Barack Obama
@@ -212,8 +212,8 @@
   homepage_hero_text_teacher2: |
     &ldquo;Dieses Projekt hat 100% meiner Schüler gefesselt, einbezogen und teilhaben lassen.&rdquo;
     Adam, Lehrer
-  homepage_hero_text_stat_loc: '#loc geschriebene Zeilen, von Schülern'
-  homepage_hero_text_stat_students: '#student_count Schüler-Accounts bei Code Studio'
+  homepage_hero_text_stat_loc: "#loc geschriebene Zeilen, von Schülern"
+  homepage_hero_text_stat_students: "#student_count Schüler-Accounts bei Code Studio"
   homepage_hero_text_stat_served: 'The Hour of Code: #served mal genutzt'
   homepage_slot_text_hoc: Die "Hour of Code"
   homepage_slot_text_frozen: Die Eiskönigin mit Anna und Elsa
@@ -240,7 +240,7 @@
   homepage_slot_text_blurb_hoc: Jeder kann lernen. Fange heute an
   homepage_slot_text_link_hoc: Probiere "The Hour of Code" aus
   homepage_slot_text_link_host: Organisiere eine Hour of Code
-  homepage_slot_text_link_hocserved: '# bedient'
+  homepage_slot_text_link_hocserved: "# bedient"
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Schüler
   homepage_slot_text_blurb_students: Entdecke all unsere Tutorials
@@ -305,9 +305,9 @@
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+    have signed up."
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
@@ -362,7 +362,9 @@
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: Absenden
-  volunteer_engineer_submission_thankyou: Thank you for submitting your information.
+  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
+    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
+    more here.</a>
   volunteer_engineer_submission_commitment_uncertain: Unsicher
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 Stunde pro Woche
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 Stunden pro Woche
@@ -447,9 +449,9 @@
     für die Einführung in die Informatik, im Bereich Modellierung und Simulation,
     zu entwickeln.
   dashboard_course_ecs: Die Informatik erkunden
-  dashboard_course_ecs_desc: '''Die Informatik erkunden'' ist ein ganzjähriger Kurs
+  dashboard_course_ecs_desc: "'Die Informatik erkunden' ist ein ganzjähriger Kurs
     und besteht aus 6 Einheiten: Computer-Mensch-Interaktion, Problembewältigung,
-    Web Design, Programmieren, Datenverarbeitung und -analyse sowie Robotik.'
+    Web Design, Programmieren, Datenverarbeitung und -analyse sowie Robotik."
   dashboard_course_csp: AP® Informatikleitsätze
   dashboard_course_csp_desc: Code.org hat einen gründlichen, motivierenden und zugänglichen
     Kurs erstellt, welche die Grundlagen der Informatik erforscht.
@@ -569,7 +571,7 @@
   dashboard_course4: 'Kurs 4 (beta): '
   dashboard_curriculum: Lehrplan
   dashboard_curriculum_overview: Grundschullehrplan-Übersicht
-  dashboard_overview: Übersicht
+  dashboard_overview: "Übersicht"
   dashboard_sequence: Sequenz
   dashboard_framework: Rahmen
   dashboard_standards: Standards
@@ -622,8 +624,9 @@
   dashboard_faq_k5: Häufig gestellte Fragen zur Grundschule
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: <b>September 30, 2015</b> - The Hour of Code 2015 is coming!
-    Join classrooms worldwide for the largest learning event in history.
+  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+    every participating organizer will receive a gift card to Amazon.com or Microsoft's
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
   code_sign_up: Melde dich an, um an der Woche der Informatik teilzunehmen
   learn_more: Erfahre mehr
@@ -1323,3 +1326,38 @@
     auf HTTPS. Danach kannst Du nicht mehr per HTTP auf Code.org zugreifen. <a href='%{it_requirements_url}'>
     Klicke hier</a> um zu sehen, wie man HTTPS für Code.org aktiviert.
   compatibility_https_hide_this_warning: Diese Warnung ausblenden
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: "# served"
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Sign up
+  homepage_action_text_try_it: Try it
+  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_girlvideo: Inspire a girl
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_gradelevel: Ages 6+
+  starwars_platformtext: Modern browsers + tablets
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
+  starwars_longdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.

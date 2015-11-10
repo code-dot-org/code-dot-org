@@ -42,7 +42,7 @@ class Script < ActiveRecord::Base
   TWENTY_FOURTEEN_NAME = 'events'
   JIGSAW_NAME = 'jigsaw'
   HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
-  HOC2015_NAME = 'hoc2015' # name of the 2015 hour of code script
+  STARWARS_NAME = 'starwars'
   FROZEN_NAME = 'frozen'
   PLAYLAB_NAME = 'playlab'
   INFINITY_NAME = 'infinity'
@@ -61,6 +61,10 @@ class Script < ActiveRecord::Base
 
   def Script.hoc_2014_script
     Script.get_from_cache(Script::HOC_NAME)
+  end
+
+  def Script.starwars_script
+    Script.get_from_cache(Script::STARWARS_NAME)
   end
 
   def Script.frozen_script
@@ -141,6 +145,35 @@ class Script < ActiveRecord::Base
       script_cache_from_cache || script_cache_from_db
   end
 
+
+  # Returns a cached map from script level id to id, or an empty map if in level_builder mode
+  # which disables caching.
+  def self.script_level_cache
+    return nil if Rails.application.config.levelbuilder_mode # cache disabled when building levels
+    @@script_level_cache ||= {}.tap do |cache|
+      script_cache.values.each do |script|
+        cache.merge!(script.script_levels.index_by(&:id))
+      end
+    end
+  end
+
+  # Find the script level with the given id from the cache, unless the level build mode
+  # is enabled in which case  it is always fetched from the database. If we need to fetch
+  # the script and we're not in level mode (for example because the script was created after
+  # the cache), then an entry for the script is added to the cache.
+  def self.cache_find_script_level(script_level_id)
+    levelbuilder_mode = Rails.application.config.levelbuilder_mode
+    script_level = script_level_cache[script_level_id] unless levelbuilder_mode
+
+    # If the cache missed or we're in levelbuilder mode, fetch the script level from the db.
+    if script_level.nil?
+      script_level = ScriptLevel.find(script_level_id)
+      # Cache the script level, unless it wasn't found or we're in levelbuilder mode.
+      @@script_level_cache[script_level_id] = script_level unless !script_level || levelbuilder_mode
+    end
+    script_level
+  end
+
   def cached
     self.class.get_from_cache(id)
   end
@@ -175,7 +208,7 @@ class Script < ActiveRecord::Base
 
   def hoc?
     # Note that now multiple scripts can be an 'hour of code' script.
-    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME, HOC2015_NAME].include? self.name
+    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME, STARWARS_NAME].include? self.name
   end
 
   def flappy?
@@ -218,7 +251,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'course4' || name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3' || name == 'hoc2015'
+    name == 'course4' || name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3' || name == 'starwars'
   end
 
   def is_k1?

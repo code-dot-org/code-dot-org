@@ -1,0 +1,8 @@
+- if @script && (@script.name == Script::STARWARS_NAME || @script.name == Script::EDIT_CODE_NAME) && Gatekeeper.allows('requires_hoc_secret', where: {script_name: @script.name})
+  :javascript
+    //<![CDATA[
+    if (CryptoJS.MD5(localStorage.getItem('hoc_secret')).toString() !=
+        '#{Digest::MD5.hexdigest(DCDO.get("hoc_secret", nil))}') {
+      document.location = '/';
+    }
+    //]]>

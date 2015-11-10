@@ -161,7 +161,7 @@
     "droplet_tooltips_disabled": "true",
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "true"
   }
 }]]></config>
   <blocks/>

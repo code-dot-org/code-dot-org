@@ -1,4 +1,5 @@
 require 'digest/sha1'
+require 'dynamic_config/gatekeeper'
 
 module LevelsHelper
   include ApplicationHelper
@@ -138,6 +139,9 @@ module LevelsHelper
     view_options(is_external_project_level: true) if @level.is_a? Pixelation
 
     view_options(is_channel_backed: true) if @level.channel_backed?
+
+    post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
+    view_options(post_milestone: post_milestone)
 
     if @level.is_a? Blockly
       @app_options = blockly_options

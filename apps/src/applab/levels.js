@@ -30,7 +30,7 @@ levels.simple = {
 levels.custom = {
   'freePlay': true,
   'editCode': true,
-  'sliderSpeed': 0.95,
+  'sliderSpeed': 1,
   'appWidth': 320,
   'appHeight': 480,
 
@@ -77,7 +77,7 @@ levels.custom = {
     "setStrokeWidth": null,
     "setStrokeColor": null,
     "setFillColor": null,
-    "drawImage": null,
+    "drawImageURL": null,
     "getImageData": null,
     "putImageData": null,
     "clearCanvas": null,
