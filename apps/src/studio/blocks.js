@@ -15,6 +15,7 @@ var codegen = require('../codegen');
 var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
+var paramLists = require('./paramLists');
 
 var Direction = constants.Direction;
 var Position = constants.Position;
@@ -1159,10 +1160,10 @@ exports.install = function(blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendTitle(commonMsg.play())
           .appendTitle(new blockly.FieldImage(skin.soundIcon))
-          .appendTitle(new blockly.FieldDropdown(this.K1_SOUNDS, onSoundSelected), 'SOUND');
+          .appendTitle(new blockly.FieldDropdown(this.soundChoices(), onSoundSelected), 'SOUND');
       } else {
         this.appendDummyInput()
-          .appendTitle(new blockly.FieldDropdown(this.SOUNDS, onSoundSelected), 'SOUND');
+          .appendTitle(new blockly.FieldDropdown(this.soundChoices(), onSoundSelected), 'SOUND');
       }
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -1170,33 +1171,18 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.studio_playSound.K1_SOUNDS =
-      [[msg.soundHit(), 'hit'],
-       [msg.soundWood(), 'wood'],
-       [msg.soundRetro(), 'retro'],
-       [msg.soundSlap(), 'slap'],
-       [msg.soundRubber(), 'rubber'],
-       [msg.soundCrunch(), 'crunch'],
-       [msg.soundWinPoint(), 'winpoint'],
-       [msg.soundWinPoint2(), 'winpoint2'],
-       [msg.soundLosePoint(), 'losepoint'],
-       [msg.soundLosePoint2(), 'losepoint2'],
-       [msg.soundGoal1(), 'goal1'],
-       [msg.soundGoal2(), 'goal2']];
-
-  blockly.Blocks.studio_playSound.SOUNDS =
-      [[msg.playSoundHit(), 'hit'],
-       [msg.playSoundWood(), 'wood'],
-       [msg.playSoundRetro(), 'retro'],
-       [msg.playSoundSlap(), 'slap'],
-       [msg.playSoundRubber(), 'rubber'],
-       [msg.playSoundCrunch(), 'crunch'],
-       [msg.playSoundWinPoint(), 'winpoint'],
-       [msg.playSoundWinPoint2(), 'winpoint2'],
-       [msg.playSoundLosePoint(), 'losepoint'],
-       [msg.playSoundLosePoint2(), 'losepoint2'],
-       [msg.playSoundGoal1(), 'goal1'],
-       [msg.playSoundGoal2(), 'goal2']];
+  blockly.Blocks.studio_playSound.soundChoices = function () {
+    var fullChoices = isK1 ? skin.soundChoicesK1 : skin.soundChoices;
+    var permittedValues = paramLists.getPlaySoundValues(true);
+    return fullChoices.filter(function (choice) {
+      for (var i = 0; i < permittedValues.length; i++) {
+        if (choice[1] === permittedValues[i]) {
+          return true;
+        }
+      }
+      return false;
+    });
+  };
 
   generator.studio_playSound = function() {
     // Generate JavaScript for playing a sound.
