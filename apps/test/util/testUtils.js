@@ -161,6 +161,10 @@ exports.debugMode = function () {
  * @param {number} top Vertical offset from top left of visualization to drop at
  */
 exports.dragToVisualization = function (type, left, top) {
+  // this delta of 40 is a bit of a mystery, but I think it has to do with our
+  // tests not having CSS applied to them.
+  left = left + 40;
+
   // drag a new element in
   var element = $("[data-element-type='" + type + "']");
   var screenOffset = element.offset();
