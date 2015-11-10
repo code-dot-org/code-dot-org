@@ -145,5 +145,19 @@ module.exports = {
     element.appendChild(option2);
 
     return element;
+  },
+
+  onDeserialize: function (element) {
+    // Don't interfere with clicks in design mode, where the dropdown already doesn't open.
+    if ($('#divApplab').find(element)) {
+      $(element).on('mousedown', function(e) {
+        if (!Applab.isRunning()) {
+          // Disable dropdown menu unless running
+          e.preventDefault();
+          this.blur();
+          window.focus();
+        }
+      });
+    }
   }
 };
