@@ -204,4 +204,8 @@ module ApplicationHelper
     return true if @script.nil?
     Gatekeeper.allows('tracking_pixel_enabled', where: { script_name: @script.name }, default: true)
   end
+
+  def page_mode
+    PageMode.get(request)
+  end
 end
