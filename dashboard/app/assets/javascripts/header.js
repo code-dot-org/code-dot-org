@@ -238,7 +238,7 @@ function shareProject() {
         submitButton.click(function() {
           var phone = $("#project-share #phone");
           var params = jQuery.param({
-            type: dashboard.project.getCurrentApp(),
+            type: dashboard.project.getStandaloneApp(),
             channel_id: dashboard.project.getCurrentId(),
             phone: phone.val()
           });
