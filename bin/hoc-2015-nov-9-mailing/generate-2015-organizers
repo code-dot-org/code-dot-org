@@ -6,5 +6,5 @@ kind_s:HocSignup2015
 EOS
 
 results = query_subscribed_contacts(q: query)
-puts "#{results.count} hoc-volunteers"
+puts "#{results.count} 2015-organizers"
 export_contacts_to_csv results, "2015-organizers.csv"
