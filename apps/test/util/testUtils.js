@@ -161,28 +161,36 @@ exports.debugMode = function () {
  * @param {number} top Vertical offset from top left of visualization to drop at
  */
 exports.dragToVisualization = function (type, left, top) {
-  // this delta of 40 is a bit of a mystery, but I think it has to do with our
-  // tests not having CSS applied to them.
-  left = left + 40;
-
   // drag a new element in
   var element = $("[data-element-type='" + type + "']");
+
   var screenOffset = element.offset();
   var mousedown = $.Event("mousedown", {
     which: 1,
     pageX: screenOffset.left,
     pageY: screenOffset.top
   });
+  element.trigger(mousedown);
+
   var drag = $.Event("mousemove", {
     pageX: $("#visualization").offset().left + left,
     pageY: $("#visualization").offset().top + top
   });
-  var mouseup = $.Event('mouseup', {
-    pageX: $("#visualization").offset().left + left,
+  $(document).trigger(drag);
+
+  // when we start our drag, it positions the dragged element to be centered
+  // on our cursor. adjust the target drop location accordingly
+  var halfWidth = $('.draggingParent').width() / 2;
+  var drag2 = $.Event("mousemove", {
+    pageX: $("#visualization").offset().left + left + halfWidth,
     pageY: $("#visualization").offset().top + top
   });
-  element.trigger(mousedown);
-  $(document).trigger(drag);
+  $(document).trigger(drag2);
+
+  var mouseup = $.Event('mouseup', {
+    pageX: $("#visualization").offset().left + left + halfWidth,
+    pageY: $("#visualization").offset().top + top
+  });
   $(document).trigger(mouseup);
 };
 
