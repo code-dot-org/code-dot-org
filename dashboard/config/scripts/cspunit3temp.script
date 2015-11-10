@@ -56,9 +56,18 @@ assessment 'U3L30 Assessment3'
 assessment 'U3L30 Free Response Wrap Up'
 
 #25
-stage 'Arrays_ Photo Album'
+stage 'Key Events with Image Scroller'
 level 'U3L31 Student Lesson Introduction'
 assessment 'U3L31 Free Response Getting Started'
+level 'U3 - Keys - Demo App'
+level 'U3 - Keys - Add Image URLs'
+level 'U3L25 - drag out key event'
+level 'U3 - Keys - Key Up and Down'
+level 'U3L25 - play sound when up key'
+level 'U3 - Keys - Multiple Keys'
+level 'U3 - Keys - Buttons and Keys'
+level 'U3 - Keys - Functions'
+level 'U3 - Keys - Final Image Scroller'
 assessment 'U3L31 Assessment1'
 assessment 'U3L31 Assessment2'
 assessment 'U3L31 Assessment3'
@@ -77,3 +86,7 @@ assessment 'U3L33 Free Response Getting Started'
 stage 'Arrays and Loops_ Hidden Images'
 level 'U3L34 Student Lesson Introduction'
 assessment 'U3L34 Free Response Getting Started'
+
+
+# Not Using
+stage 'Arrays_ Photo Album'
