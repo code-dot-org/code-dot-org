@@ -79,7 +79,8 @@ function Sounds() {
  * @returns {boolean}
  */
 Sounds.prototype.isAudioUnlocked = function () {
-  return this.audioUnlocked_;
+  // Audio unlock doesn't make sense for the fallback player as used here.
+  return this.audioUnlocked_ || !this.audioContext;
 };
 
 /**
