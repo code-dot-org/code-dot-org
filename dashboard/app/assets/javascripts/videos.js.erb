@@ -37,7 +37,6 @@ function showVideoDialog(options, forceShowVideo) {
   if (dashboard.clientState.hasSeenVideo(options.key) && forceShowVideo === false) {
     // Anything we were going to do when the video closed, we ought to do
     // right now.
-    // TODO: What else are we missing here?
     options.onClose();
     if (options.redirect) {
       window.location.href = options.redirect;
