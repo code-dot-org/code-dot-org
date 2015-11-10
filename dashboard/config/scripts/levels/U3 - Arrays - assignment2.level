@@ -1,0 +1,56 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-11-10T19:16:55.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "write": null,
+      "console.log": null,
+      "declareAssign_x_array_1_4": {
+        "block": "var list = [1,2,3];"
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "true",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "instructions": "Use indexes to change the values in this array from 1 to 0. (Click to see full instructions)",
+    "markdown_instructions": "# Array Values: Arithmetic\r\n\r\nYou can reference locations in arrays in arithmetic expressions, just like you might a variable.\r\n\r\n\r\nThe program you're about to see creates and initializes an array with the high temperature for each of 5 days. We'll use this array to **practice performing arithmetic with array values**.\r\n\r\n![](https://images.code.org/80677c8594ad8d7be1ad756d9714e6fd-image-1447183286656.20.58 PM.png)\r\n\r\n# Do This\r\n\r\n* **Using only indexes and the assignment operator** switch the first two values in this array.\r\n\t* All commands should be of the form `simpleArray[i] = simplyArray[j];`\r\n* **Write the array to the screen** to confirm you have swapped the first two values\r\n\r\n![](https://images.code.org/edd80e8e00b2a46f64b61f200ffcb7f0-image-1447178118561.55.00 AM.png)\r\n\r\n",
+    "start_blocks": "var temperatures = [55, 61, 63, 68, 63];\r\n\r\n// Calculate the average temperature by adding these values and dividing by 5",
+    "slider_speed": "1",
+    "encrypted_examples": [
+
+    ]
+  }
+}]]></config>
+  <blocks/>
+</Applab>
