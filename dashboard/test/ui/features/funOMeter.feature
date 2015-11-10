@@ -1,5 +1,3 @@
-@no_mobile
-@no_ie
 Feature: Fun-O-Meter
 
 Background:
@@ -30,7 +28,10 @@ Scenario: Rate a Puzzle
   Then element "#puzzleRatingButtons" is visible
 
   When I press "like"
-  And I press "continue-button"
+
+  Then element "#like" has class "enabled"
+
+  When I press "continue-button"
 
   Then I get redirected to "/s/allthethings/stage/2/puzzle/4" via "none"
 

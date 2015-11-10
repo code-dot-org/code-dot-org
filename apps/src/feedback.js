@@ -82,6 +82,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var showingSharing = options.showingSharing && !hadShareFailure;
 
   var canContinue = this.canContinueToNextLevel(options.feedbackType);
+  var onContinue = options.onContinue;
   var displayShowCode = this.studioApp_.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
   var sharingDiv = (canContinue && showingSharing) ? this.createSharingDiv(options) : null;
@@ -162,9 +163,37 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var previousLevelButton = feedback.querySelector('#back-button');
   var continueButton = feedback.querySelector('#continue-button');
 
+  var showPuzzleRating = continueButton && options.response && options.response.puzzle_rating_url;
+  if (showPuzzleRating) {
+    feedback.appendChild(this.buildPuzzleRatingButtons_());
+
+    // If we're showing the puzzle rating interface (aka the
+    // Fun-O-Meter), then we want to wrap our default onContinue handler
+    // with one that first submits the student's rating if they gave one
+    // before calling onContinue
+    onContinue = function () {
+      var selectedRating = feedback.querySelector('.puzzle-rating-btn.enabled');
+      if (options.response && options.response.puzzle_rating_url && selectedRating) {
+        $.ajax({
+          url: options.response.puzzle_rating_url,
+          type: 'POST',
+          data: {
+            script_id: options.response.script_id,
+            level_id: options.response.level_id,
+            level_source_id: options.response.level_source_id,
+            rating: selectedRating.getAttribute('data-value')
+          },
+          complete: options.onContinue
+        });
+      } else {
+        options.onContinue();
+      }
+    };
+  }
+
   var onlyContinue = continueButton && !againButton && !previousLevelButton;
 
-  var onHidden = onlyContinue ? options.onContinue : null;
+  var onHidden = onlyContinue ? onContinue : null;
   var icon;
   if (!options.hideIcon) {
     icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
@@ -275,31 +304,12 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   }
 
   if (continueButton) {
-
-    if (options.response && options.response.puzzle_rating_url) {
-      feedback.appendChild(this.buildPuzzleRatingButtons_());
-    }
-
     dom.addClickTouchEvent(continueButton, function () {
       feedbackDialog.hide();
 
-      // Submit Puzzle Rating
-      var selectedRating = feedback.querySelector('.puzzle-rating-btn.enabled');
-      if (options.response && options.response.puzzle_rating_url && selectedRating) {
-        $.ajax({
-          url: options.response.puzzle_rating_url,
-          type: 'POST',
-          data: {
-            script_id: options.response.script_id,
-            level_id: options.response.level_id,
-            level_source_id: options.response.level_source_id,
-            rating: selectedRating.getAttribute('data-value')
-          },
-        });
-      }
       // onContinue will fire already if there was only a continue button
       if (!onlyContinue) {
-        options.onContinue();
+        onContinue();
       }
     });
   }
