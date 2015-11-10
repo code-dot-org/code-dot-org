@@ -334,29 +334,6 @@ class ReportsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  test "should lookup_section" do
-    post :lookup_section, {:section_code => @teacher_section.code}
-    assert_select '#section_owner', 'Owner: ' + @teacher.email
-  end
-
-  test "should lookup_section error if not found" do
-    post :lookup_section, {:section_code => 'ZZZZ'}
-    assert_response :success
-    assert_select '.container .alert-danger', 'Section code not found'
-  end
-
-  test "should not lookup_section if not admin" do
-    sign_in @not_admin
-    post :lookup_section, {:section_code => @teacher_section.code}
-    assert_response :forbidden
-  end
-
-  test "should not lookup_section if not signed in" do
-    sign_out @admin
-    post :lookup_section, {:section_code => @teacher_section.code}
-    assert_redirected_to_sign_in
-  end
-
   # 'report-stage-1' instead of 'report-stage-1: Report Stage 1'
   test "should render single stage name for custom script" do
     # first script has 1 stage, second script has 2 stages
