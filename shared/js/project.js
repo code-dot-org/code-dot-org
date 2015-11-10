@@ -288,7 +288,7 @@ var projects = module.exports = {
         this.sourceHandler.setInitialLevelSource(current.levelSource);
         this.showMinimalProjectHeader();
       }
-    } else if (appOptions.isLegacyShare && this.getCurrentApp()) {
+    } else if (appOptions.isLegacyShare && this.getStandaloneApp()) {
       current = {
         name: 'Untitled Project'
       };
@@ -303,7 +303,7 @@ var projects = module.exports = {
   projectChanged: function() {
     hasProjectChanged = true;
   },
-  getCurrentApp: function () {
+  getStandaloneApp: function () {
     switch (appOptions.app) {
       case 'applab':
         return 'applab';
@@ -323,7 +323,7 @@ var projects = module.exports = {
     }
   },
   appToProjectUrl: function () {
-    return '/projects/' + projects.getCurrentApp();
+    return '/projects/' + projects.getStandaloneApp();
   },
   /**
    * Explicitly clear the HTML, circumventing safety measures which prevent it from
