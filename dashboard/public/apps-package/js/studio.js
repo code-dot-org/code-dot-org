@@ -6398,6 +6398,47 @@ function loadHoc2015(skin, assetUrl) {
     'applause'
   ];
 
+  skin.soundChoices = [
+    [msg.playSoundRandom(), RANDOM_VALUE],
+    [msg.playSoundR2D2Sound1(), 'R2-D2sound1'],
+    [msg.playSoundR2D2Sound2(), 'R2-D2sound2'],
+    [msg.playSoundR2D2Sound3(), 'R2-D2sound3'],
+    [msg.playSoundR2D2Sound4(), 'R2-D2sound4'],
+    [msg.playSoundR2D2Sound5(), 'R2-D2sound5'],
+    [msg.playSoundR2D2Sound6(), 'R2-D2sound6'],
+    [msg.playSoundR2D2Sound7(), 'R2-D2sound7'],
+    [msg.playSoundR2D2Sound8(), 'R2-D2sound8'],
+    [msg.playSoundR2D2Sound9(), 'R2-D2sound9'],
+    [msg.playSoundC3POSound1(), 'C3-POsound1'],
+    [msg.playSoundC3POSound2(), 'C3-POsound2'],
+    [msg.playSoundC3POSound3(), 'C3-POsound3'],
+    [msg.playSoundC3POSound4(), 'C3-POsound4'],
+    [msg.playSoundPufferPigSound1(), 'PufferPigSound1'],
+    [msg.playSoundPufferPigSound2(), 'PufferPigSound2'],
+    [msg.playSoundPufferPigSound3(), 'PufferPigSound3'],
+    [msg.playSoundPufferPigSound4(), 'PufferPigSound4'],
+    [msg.playSoundTauntaunSound1(), 'TauntaunSound1'],
+    [msg.playSoundTauntaunSound2(), 'TauntaunSound2'],
+    [msg.playSoundTauntaunSound3(), 'TauntaunSound3'],
+    [msg.playSoundTauntaunSound4(), 'TauntaunSound4'],
+    [msg.playSoundMynockSound1(), 'MynockSound1'],
+    [msg.playSoundMynockSound2(), 'MynockSound2'],
+    [msg.playSoundMynockSound3(), 'MynockSound3'],
+    [msg.playSoundProbotSound1(), 'ProbotSound1'],
+    [msg.playSoundProbotSound2(), 'ProbotSound2'],
+    [msg.playSoundProbotSound3(), 'ProbotSound3'],
+    [msg.playSoundMouseDroidSound1(), 'MouseDroidSound1'],
+    [msg.playSoundMouseDroidSound2(), 'MouseDroidSound2'],
+    [msg.playSoundMouseDroidSound3(), 'MouseDroidSound3'],
+    [msg.playSoundAlert1(), 'alert1'],
+    [msg.playSoundAlert2(), 'alert2'],
+    [msg.playSoundAlert3(), 'alert3'],
+    [msg.playSoundAlert4(), 'alert4'],
+    [msg.playSoundApplause(), 'applause']];
+
+  skin.soundChoicesK1 = [
+  ];
+
   skin.soundMetadata = [
     {name: 'start', volume: 0.2},
     {name: 'win', volume: 0.2},
@@ -6631,6 +6672,12 @@ function loadHoc2015x(skin, assetUrl) {
 
   // Sounds.
   skin.sounds = [ 'move1', 'move2', 'move3', 'move4' ];
+
+  skin.soundChoices = [
+    ];
+
+  skin.soundChoicesK1 = [
+  ];
 
   skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
@@ -6914,6 +6961,36 @@ exports.load = function(assetUrl, id) {
     'rubber', 'crunch', 'goal1', 'goal2', 'wood', 'retro', 'slap', 'hit',
     'winpoint', 'winpoint2', 'losepoint', 'losepoint2'
   ];
+
+  skin.soundChoices = [
+    [msg.playSoundRandom(), RANDOM_VALUE],
+    [msg.playSoundHit(), 'hit'],
+    [msg.playSoundWood(), 'wood'],
+    [msg.playSoundRetro(), 'retro'],
+    [msg.playSoundSlap(), 'slap'],
+    [msg.playSoundRubber(), 'rubber'],
+    [msg.playSoundCrunch(), 'crunch'],
+    [msg.playSoundWinPoint(), 'winpoint'],
+    [msg.playSoundWinPoint2(), 'winpoint2'],
+    [msg.playSoundLosePoint(), 'losepoint'],
+    [msg.playSoundLosePoint2(), 'losepoint2'],
+    [msg.playSoundGoal1(), 'goal1'],
+    [msg.playSoundGoal2(), 'goal2']];
+
+  skin.soundChoicesK1 = [
+    [msg.soundRandom(), RANDOM_VALUE],
+    [msg.soundHit(), 'hit'],
+    [msg.soundWood(), 'wood'],
+    [msg.soundRetro(), 'retro'],
+    [msg.soundSlap(), 'slap'],
+    [msg.soundRubber(), 'rubber'],
+    [msg.soundCrunch(), 'crunch'],
+    [msg.soundWinPoint(), 'winpoint'],
+    [msg.soundWinPoint2(), 'winpoint2'],
+    [msg.soundLosePoint(), 'losepoint'],
+    [msg.soundLosePoint2(), 'losepoint2'],
+    [msg.soundGoal1(), 'goal1'],
+    [msg.soundGoal2(), 'goal2']];
 
   // Settings
   skin.background = skin.assetUrl('background.png');
@@ -9516,6 +9593,7 @@ levels.js_hoc2015_chain_characters_2 = {
       'TauntaunSound1': true,
       'TauntaunSound2': true,
       'TauntaunSound3': true,
+      'TauntaunSound4': true,
       'MouseDroidSound1': true,
       'MouseDroidSound2': true,
       'MouseDroidSound3': true,
@@ -9944,7 +10022,7 @@ levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   editCode: false,
   startBlocks:
     '<block type="studio_whenTouchGoal" deletable="false"> \
-      <next><block type="studio_playSound"><title name="SOUND">r2-d2sound1</title></block> \
+      <next><block type="studio_playSound"><title name="SOUND">R2-D2sound1</title></block> \
       </next></block>',
   toolbox:
     tb('<block type="studio_playSound"></block> \
@@ -10003,7 +10081,7 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">r2-d2sound1</title> \
+       <block type="studio_playSound"><title name="SOUND">R2-D2sound1</title> \
         <next> \
          <block type="studio_addCharacter"><title name="VALUE">"pufferpig"</title></block> \
         </next> \
@@ -10013,7 +10091,7 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
       <title name="VALUE">pufferpig</title> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">pufferpigsound1</title> \
+       <block type="studio_playSound"><title name="SOUND">PufferPigSound1</title> \
         <next> \
          <block type="studio_addPoints"><title name="VALUE">1000</title></block> \
         </next> \
@@ -10058,7 +10136,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
       <next> \
        <block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title> \
         <next> \
-         <block type="studio_playSound"><title name="SOUND">r2-d2sound3</title></block> \
+         <block type="studio_playSound"><title name="SOUND">R2-D2sound3</title></block> \
         </next> \
        </block> \
       </next> \
@@ -10066,7 +10144,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
       <title name="VALUE">mousedroid</title> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">mousedroidsound2</title> \
+       <block type="studio_playSound"><title name="SOUND">MouseDroidSound2</title> \
         <next> \
          <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         </next> \
@@ -10421,39 +10499,7 @@ module.exports.autocompleteFunctionsWithParens = true;
 module.exports.showParamDropdowns = true;
 
 
-},{"./apiJavascript.js":"/home/ubuntu/staging/apps/build/js/studio/apiJavascript.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./paramLists.js":"/home/ubuntu/staging/apps/build/js/studio/paramLists.js"}],"/home/ubuntu/staging/apps/build/js/studio/paramLists.js":[function(require,module,exports){
-var skin, level;
-
-exports.initWithSkinAndLevel = function (skinData, levelData) {
-  skin = skinData;
-  level = levelData;
-};
-
-exports.getPlaySoundValues = function (withRandom) {
-  var names;
-  if (withRandom) {
-    names = ['random'];
-  } else {
-    names = [];
-  }
-  names = names.concat(skin.sounds);
-  var restrictions = level.paramRestrictions && level.paramRestrictions.playSound;
-  if (restrictions) {
-    names = names.filter(function(name) {
-      return restrictions[name];
-    });
-  }
-  return names;
-};
-
-exports.playSoundDropdown = function () {
-  return exports.getPlaySoundValues(true).map(function (sound) {
-    return '"' + sound + '"';
-  });
-};
-
-
-},{}],"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs":[function(require,module,exports){
+},{"./apiJavascript.js":"/home/ubuntu/staging/apps/build/js/studio/apiJavascript.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./paramLists.js":"/home/ubuntu/staging/apps/build/js/studio/paramLists.js"}],"/home/ubuntu/staging/apps/build/js/studio/controls.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -10492,6 +10538,7 @@ var codegen = require('../codegen');
 var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
+var paramLists = require('./paramLists');
 
 var Direction = constants.Direction;
 var Position = constants.Position;
@@ -11636,10 +11683,10 @@ exports.install = function(blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendTitle(commonMsg.play())
           .appendTitle(new blockly.FieldImage(skin.soundIcon))
-          .appendTitle(new blockly.FieldDropdown(this.K1_SOUNDS, onSoundSelected), 'SOUND');
+          .appendTitle(new blockly.FieldDropdown(this.soundChoices(), onSoundSelected), 'SOUND');
       } else {
         this.appendDummyInput()
-          .appendTitle(new blockly.FieldDropdown(this.SOUNDS, onSoundSelected), 'SOUND');
+          .appendTitle(new blockly.FieldDropdown(this.soundChoices(), onSoundSelected), 'SOUND');
       }
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -11647,33 +11694,18 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.studio_playSound.K1_SOUNDS =
-      [[msg.soundHit(), 'hit'],
-       [msg.soundWood(), 'wood'],
-       [msg.soundRetro(), 'retro'],
-       [msg.soundSlap(), 'slap'],
-       [msg.soundRubber(), 'rubber'],
-       [msg.soundCrunch(), 'crunch'],
-       [msg.soundWinPoint(), 'winpoint'],
-       [msg.soundWinPoint2(), 'winpoint2'],
-       [msg.soundLosePoint(), 'losepoint'],
-       [msg.soundLosePoint2(), 'losepoint2'],
-       [msg.soundGoal1(), 'goal1'],
-       [msg.soundGoal2(), 'goal2']];
-
-  blockly.Blocks.studio_playSound.SOUNDS =
-      [[msg.playSoundHit(), 'hit'],
-       [msg.playSoundWood(), 'wood'],
-       [msg.playSoundRetro(), 'retro'],
-       [msg.playSoundSlap(), 'slap'],
-       [msg.playSoundRubber(), 'rubber'],
-       [msg.playSoundCrunch(), 'crunch'],
-       [msg.playSoundWinPoint(), 'winpoint'],
-       [msg.playSoundWinPoint2(), 'winpoint2'],
-       [msg.playSoundLosePoint(), 'losepoint'],
-       [msg.playSoundLosePoint2(), 'losepoint2'],
-       [msg.playSoundGoal1(), 'goal1'],
-       [msg.playSoundGoal2(), 'goal2']];
+  blockly.Blocks.studio_playSound.soundChoices = function () {
+    var fullChoices = isK1 ? skin.soundChoicesK1 : skin.soundChoices;
+    var permittedValues = paramLists.getPlaySoundValues(true);
+    return fullChoices.filter(function (choice) {
+      for (var i = 0; i < permittedValues.length; i++) {
+        if (choice[1] === permittedValues[i]) {
+          return true;
+        }
+      }
+      return false;
+    });
+  };
 
   generator.studio_playSound = function() {
     // Generate JavaScript for playing a sound.
@@ -12843,7 +12875,39 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
 }
 
 
-},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../sharedFunctionalBlocks":"/home/ubuntu/staging/apps/build/js/sharedFunctionalBlocks.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js"}],"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js":[function(require,module,exports){
+},{"../StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","../codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../sharedFunctionalBlocks":"/home/ubuntu/staging/apps/build/js/sharedFunctionalBlocks.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js","./constants":"/home/ubuntu/staging/apps/build/js/studio/constants.js","./locale":"/home/ubuntu/staging/apps/build/js/studio/locale.js","./paramLists":"/home/ubuntu/staging/apps/build/js/studio/paramLists.js"}],"/home/ubuntu/staging/apps/build/js/studio/paramLists.js":[function(require,module,exports){
+var skin, level;
+
+exports.initWithSkinAndLevel = function (skinData, levelData) {
+  skin = skinData;
+  level = levelData;
+};
+
+exports.getPlaySoundValues = function (withRandom) {
+  var names;
+  if (withRandom) {
+    names = ['random'];
+  } else {
+    names = [];
+  }
+  names = names.concat(skin.sounds);
+  var restrictions = level.paramRestrictions && level.paramRestrictions.playSound;
+  if (restrictions) {
+    names = names.filter(function(name) {
+      return restrictions[name];
+    });
+  }
+  return names;
+};
+
+exports.playSoundDropdown = function () {
+  return exports.getPlaySoundValues(true).map(function (sound) {
+    return '"' + sound + '"';
+  });
+};
+
+
+},{}],"/home/ubuntu/staging/apps/build/js/studio/bigGameLogic.js":[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
