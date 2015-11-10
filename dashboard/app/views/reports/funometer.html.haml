@@ -13,50 +13,47 @@
 
 %br
 
-= content_for :body_script do
-  %h2
-    Script Ratings
+%h2
+  Script Ratings
 
-  %table
+%table
+  %tr
+    - @script_headers.each do |header|
+      %th
+        %span= header
+  - @script_ratings.each do |script|
     %tr
-      - @script_headers.each do |header|
-        %th
-          %span= header
-    - @script_ratings.each do |script|
-      %tr
-        - script.each do |field|
-          %td
-            %span= field
+      - script.each do |field|
+        %td
+          %span= field
 
-= content_for :body_favorite_levels do
-  %h2
-    Favorite Levels
+%h2
+  Favorite Levels
 
-  %table
+%table
+  %tr
+    - @level_headers.each do |header|
+      %th
+        %span= header
+  - @favorite_level_ratings.each do |level|
     %tr
-      - @level_headers.each do |header|
-        %th
-          %span= header
-    - @favorite_level_ratings.each do |level|
-      %tr
-        - level.each do |field|
-          %td
-            %span= field
+      - level.each do |field|
+        %td
+          %span= field
 
-= content_for :body_hated_levels do
-  %h2
-    Hated Levels
+%h2
+  Hated Levels
 
-  %table
+%table
+  %tr
+    - @level_headers.each do |header|
+      %th
+        %span= header
+  - @hated_level_ratings.each do |level|
     %tr
-      - @level_headers.each do |header|
-        %th
-          %span= header
-    - @hated_level_ratings.each do |level|
-      %tr
-        - level.each do |field|
-          %td
-            %span= field
+      - level.each do |field|
+        %td
+          %span= field
 
 - content_for :body_scripts do
   :javascript
