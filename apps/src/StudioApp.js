@@ -873,6 +873,12 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
       this.editor.aceEditor.focus();
     }
+
+    // Fire a custom event on the document so that other code can respond
+    // to instructions being closed.
+    var event = document.createEvent('Event');
+    event.initEvent('instructionsHidden', true, true);
+    document.dispatchEvent(event);
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
