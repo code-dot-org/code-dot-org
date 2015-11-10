@@ -1093,6 +1093,10 @@ en:
         duino battery led: duino battery led
       duino button led:
         duino button led: duino button led
+      duino multi leds:
+        duino multi leds: duino multi leds
+      duino pov:
+        duino pov: duino pov
       equity Intro:
         Introduction to Equity PD: Introduction to Equity PD
       equity activity:
