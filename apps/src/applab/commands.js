@@ -1150,8 +1150,8 @@ applabCommands.getXPosition = function (opts) {
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     var x = div.offsetLeft;
-    while (div !== divApplab) {
-      // TODO (brent) using offsetParent may be ill advised:
+    while (div && div !== divApplab) {
+      // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent
       // This property will return null on Webkit if the element is hidden
       // (the style.display of this element or any ancestor is "none") or if the
       // style.position of the element itself is set to "fixed".
@@ -1159,7 +1159,9 @@ applabCommands.getXPosition = function (opts) {
       // style.position of the element itself is set to "fixed".
       // (Having display:none does not affect this browser.)
       div = div.offsetParent;
-      x += div.offsetLeft;
+      if (div) {
+        x += div.offsetLeft;
+      }
     }
     return x;
   }
@@ -1173,9 +1175,11 @@ applabCommands.getYPosition = function (opts) {
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     var y = div.offsetTop;
-    while (div !== divApplab) {
+    while (div && div !== divApplab) {
       div = div.offsetParent;
-      y += div.offsetTop;
+      if (div) {
+        y += div.offsetTop;
+      }
     }
     return y;
   }
