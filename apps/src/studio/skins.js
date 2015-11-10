@@ -739,10 +739,12 @@ function loadHoc2015(skin, assetUrl) {
     ];
 
   skin.spriteChoices = [
-    [msg.setSpriteHidden(), HIDDEN_VALUE],
-    [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteR2D2(), '"r2-d2"'],
-    [msg.setSpriteC3PO(), '"c-3po"']];
+    [msg.setDroidHidden(), HIDDEN_VALUE],
+    [msg.setDroidRandom(), RANDOM_VALUE],
+    [msg.setDroidR2D2(), '"r2-d2"'],
+    [msg.setDroidC3PO(), '"c-3po"']];
+
+  skin.setSpritePrefix = msg.setDroid();
 
   skin.projectileChoices = [];
 
@@ -923,9 +925,11 @@ function loadHoc2015x(skin, assetUrl) {
     ];
 
   skin.spriteChoices = [
-    [msg.setSpriteHidden(), HIDDEN_VALUE],
-    [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteBB8(), '"BB-8"']];
+    [msg.setDroidHidden(), HIDDEN_VALUE],
+    [msg.setDroidRandom(), RANDOM_VALUE],
+    [msg.setDroidBB8(), '"bb-8"']];
+
+  skin.setSpritePrefix = msg.setDroid();
 
   skin.projectileChoices = [];
 
@@ -1222,6 +1226,8 @@ exports.load = function(assetUrl, id) {
   skin.dropdownThumbnailWidth = 50;
   skin.dropdownThumbnailHeight = 50;
   skin.preloadAssets = true;
+
+  skin.setSpritePrefix = msg.setSprite();
 
   skin.activityChoices = [
     [msg.setActivityRandom(), RANDOM_VALUE],
