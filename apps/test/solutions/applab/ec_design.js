@@ -72,10 +72,6 @@ function resizeElement(element, xAmount, yAmount) {
     x: resizer.offset().left + resizer.width(),
     y: resizer.offset().top + resizer.height()
   };
-  var mid = {
-    x: start.x + xAmount,
-    y: start.y + yAmount
-  };
   var end = {
     x: start.x + xAmount,
     y: start.y + yAmount
@@ -84,7 +80,7 @@ function resizeElement(element, xAmount, yAmount) {
   // need to mouseover so that it sets up some internal state property
   var mouseover = testUtils.createMouseEvent('mouseover', start.x, start.y);
   var mousedown = testUtils.createMouseEvent('mousedown', start.x, start.y);
-  var drag = testUtils.createMouseEvent('mousemove', mid.x, mid.y);
+  var drag = testUtils.createMouseEvent('mousemove', end.x, end.y);
   var mouseup = testUtils.createMouseEvent('mouseup', end.x, end.y);
 
   resizer[0].dispatchEvent(mouseover);
