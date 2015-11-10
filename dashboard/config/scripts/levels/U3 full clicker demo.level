@@ -39,7 +39,6 @@
       "setStrokeWidth": null,
       "setStrokeColor": null,
       "setFillColor": null,
-      "drawImage": null,
       "getImageData": null,
       "putImageData": null,
       "clearCanvas": null,
@@ -130,7 +129,8 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "drawImageURL": null
     },
     "edit_code": true,
     "encrypted_examples": "pUlknB1X1g0LDk9ciFEBZ5DgmsOqCvkEF9NlPhCcP3yLr1O0cM52Mn3VACDw\nbZUM\n",
