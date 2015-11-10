@@ -87,9 +87,12 @@ Sounds.prototype.isAudioUnlocked = function () {
  * Mobile browsers disable audio until a sound is triggered by user interaction.
  * This method tries to play a brief silent clip to test whether audio is
  * unlocked, and/or trigger an unlock if called inside a user interaction.
+ *
+ * Special thanks to this article for the general approach:
+ * https://paulbakaus.com/tutorials/html5/web-audio-on-ios/
  */
 Sounds.prototype.unlockAudio = function () {
-  if (this.audioUnlocked_ || !this.audioContext) {
+  if (this.isAudioUnlocked()) {
     return;
   }
 
