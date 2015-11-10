@@ -6591,6 +6591,12 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
       this.editor.aceEditor.focus();
     }
+
+    // Fire a custom event on the document so that other code can respond
+    // to instructions being closed.
+    var event = document.createEvent('Event');
+    event.initEvent('instructionsHidden', true, true);
+    document.dispatchEvent(event);
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
@@ -32354,34 +32360,59 @@ exports.getTouchEventName = function(eventName) {
 };
 
 var addEvent = function(element, eventName, handler) {
-  element.addEventListener(eventName, handler, false);
+  // Scope bound event map to this addEvent call - we only provide for unbinding
+  // what we bind right here.
+  var boundEvents = {};
 
+  var bindEvent = function (type, eventName, handler) {
+    element.addEventListener(eventName, handler, false);
+    boundEvents[type] = { name: eventName, handler: handler };
+  };
+
+  var unbindEvent = function (type) {
+    var eventInfo = boundEvents[type];
+    if (eventInfo) {
+      element.removeEventListener(eventInfo.name, eventInfo.handler);
+      delete boundEvents[type];
+    }
+  };
+
+  // Add click handler
+  bindEvent('click', eventName, handler);
+
+  // Optionally add touch handler
   var touchEvent = exports.getTouchEventName(eventName);
   if (touchEvent) {
-    element.addEventListener(touchEvent, function(e) {
+    bindEvent('touch', touchEvent, function(e) {
       // Stop mouse events and suppress default event handler to prevent
       // unintentional double-clicking
       e.preventDefault();
-      element.removeEventListener(eventName, handler);
+      unbindEvent('click');
       handler.call(this, e);
-    }, false);
+    });
   }
+
+  // Return function that unbinds all handlers
+  return function () {
+    unbindEvent('click');
+    unbindEvent('touch');
+  };
 };
 
 exports.addMouseDownTouchEvent = function(element, handler) {
-  addEvent(element, 'mousedown', handler);
+  return addEvent(element, 'mousedown', handler);
 };
 
 exports.addMouseUpTouchEvent = function(element, handler) {
-  addEvent(element, 'mouseup', handler);
+  return addEvent(element, 'mouseup', handler);
 };
 
 exports.addMouseMoveTouchEvent = function(element, handler) {
-  addEvent(element, 'mousemove', handler);
+  return addEvent(element, 'mousemove', handler);
 };
 
 exports.addClickTouchEvent = function(element, handler) {
-  addEvent(element, 'click', handler);
+  return addEvent(element, 'click', handler);
 };
 
 // A map from standard touch events to various aliases.
