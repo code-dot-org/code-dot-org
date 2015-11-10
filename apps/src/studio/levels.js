@@ -2986,6 +2986,9 @@ levels.hoc2015_blockly_8 = utils.extend(levels.js_hoc2015_event_four_items,  {
 
 levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   editCode: false,
+  msgStringOverrides: {
+    whenTouchGoal: 'whenGetCharacterRebelPilot'
+  },
   startBlocks:
     '<block type="studio_whenTouchGoal" deletable="false"> \
       <next><block type="studio_playSound"><title name="SOUND">R2-D2sound1</title></block> \
