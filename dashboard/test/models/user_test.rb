@@ -830,6 +830,14 @@ class UserTest < ActiveSupport::TestCase
     assert_equal nil, User.normalize_gender(nil)
   end
 
+  test 'can create user with same name as deleted user' do
+    deleted_user = create(:user, name: 'Same Name')
+    deleted_user.destroy
+
+    create(:user, name: 'Same Name')
+  end
+
+
   test 'generate username' do
     def create_user_with_username(username)
       user = create(:user)

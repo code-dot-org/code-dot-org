@@ -1922,10 +1922,6 @@ en:
         Assessment 2 - Matching: Assessment 2 - Matching
         Rules or an algorithm for finding an approximate solution: Rules or an algorithm for finding an approximate solution
         Trying every possible solution to a problem to find the answer<br><br><br>: Trying every possible solution to a problem to find the answer<br><br><br>
-      U2L18 FR why is asymmetric encryption useful:
-        Asymmetric Encryption - Assessment 1: Asymmetric Encryption - Assessment 1
-        ? In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why **asymmetric** encryption is useful
-        : In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why **asymmetric** encryption is useful
       U2L18 Match terms to cups and beans analogy:
         A sealed cup of beans that Alice puts on the table: A sealed cup of beans that Alice puts on the table
         Alice dumping the beans out of the cup and counting off her original number: Alice dumping the beans out of the cup and counting off her original number
@@ -1975,9 +1971,9 @@ en:
         trigger: trigger
       U3L14 - Matching Events to Description:
         Triggers once, the instant the mouse hovers over the button: Triggers once, the instant the mouse hovers over the button
-        Triggers when th mouse button is released: Triggers when th mouse button is released
         Triggers when the mouse button is clicked once: Triggers when the mouse button is clicked once
         Triggers when the mouse button is pressed: Triggers when the mouse button is pressed
+        Triggers when the mouse button is released: Triggers when the mouse button is released
         Triggers whenever the mouse moves: Triggers whenever the mouse moves
         click: click
         mousedown: mousedown

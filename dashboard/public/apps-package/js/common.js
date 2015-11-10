@@ -33534,8 +33534,15 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
 
       // A set of keywords we don't want to autocomplete
       var excludedKeywords = [
+        'arguments',
         'ArrayBuffer',
         'Collator',
+        'decodeURI',
+        'decodeURIComponent',
+        'document',
+        'encodeURI',
+        'encodeURIComponent',
+        'eval',
         'EvalError',
         'Float32Array',
         'Float64Array',
@@ -33544,19 +33551,28 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
         'Int32Array',
         'Int8Array',
         'Iterator',
+        'isInfinite',
+        'isNaN',
+        'JSON',
+        'Math',
         'NumberFormat',
         'Object',
+        'parseFloat',
+        'parseInt',
+        'prototype',
         'QName',
         'RangeError',
         'ReferenceError',
         'StopIteration',
         'SyntaxError',
+        'this',
         'TypeError',
         'Uint16Array',
         'Uint32Array',
         'Uint8Array',
         'Uint8ClampedArra',
-        'URIError'
+        'URIError',
+        'window'
       ];
 
       // Manually create our highlight rules so that we can modify it

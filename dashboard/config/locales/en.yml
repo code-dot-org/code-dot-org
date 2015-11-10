@@ -267,6 +267,8 @@ en:
       prize_us_only: '(U.S. students only)'
       prizes_link: 'more info'
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Your teacher:'
       other: 'Your teachers:'
