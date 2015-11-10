@@ -98,10 +98,6 @@ function dragElement(element, xAmount, yAmount) {
     x: $element.offset().left + 5,
     y: $element.offset().top + 5
   };
-  var mid = {
-    x: start.x + xAmount / 2,
-    y: start.y + yAmount / 2
-  };
   var end = {
     x: start.x + xAmount,
     y: start.y + yAmount
@@ -109,7 +105,7 @@ function dragElement(element, xAmount, yAmount) {
 
   // need to mouseover so that it sets up some internal state property
   var mousedown = testUtils.createMouseEvent('mousedown', start.x, start.y);
-  var drag = testUtils.createMouseEvent('mousemove', mid.x, mid.y);
+  var drag = testUtils.createMouseEvent('mousemove', end.x, end.y);
   var mouseup = testUtils.createMouseEvent('mouseup', end.x, end.y);
 
   element.dispatchEvent(mousedown);
@@ -283,12 +279,12 @@ module.exports = {
         assertPropertyRowValue(5, 'y position (px)', 20, assert);
 
         dragElement(document.getElementById('design_button1'), 20, 0);
-        assertPropertyRowValue(4, 'x position (px)', 20, assert);
+        assertPropertyRowValue(4, 'x position (px)', 30, assert);
         assertPropertyRowValue(5, 'y position (px)', 20, assert);
 
         dragElement(document.getElementById('design_button1'), 0, 20);
-        assertPropertyRowValue(4, 'x position (px)', 20, assert);
-        assertPropertyRowValue(5, 'y position (px)', 30, assert);
+        assertPropertyRowValue(4, 'x position (px)', 30, assert);
+        assertPropertyRowValue(5, 'y position (px)', 40, assert);
 
         Applab.onPuzzleComplete();
       },
