@@ -61,6 +61,10 @@ var isHidden = function (selector) {
   return rootEl.is(':visible') && element.hasClass('design-mode-hidden');
 };
 
+/**
+ * Mouseover the bottom right of the element, than click and drag the resizer
+ * by xAmount/yAmount to make the element bigger.
+ */
 function resizeElement(element, xAmount, yAmount) {
   var resizer = $(element).parent().find('.ui-icon-gripsmall-diagonal-se');
 
@@ -69,8 +73,8 @@ function resizeElement(element, xAmount, yAmount) {
     y: resizer.offset().top + resizer.height()
   };
   var mid = {
-    x: start.x + xAmount / 2,
-    y: start.y + yAmount / 2
+    x: start.x + xAmount,
+    y: start.y + yAmount
   };
   var end = {
     x: start.x + xAmount,
@@ -89,6 +93,9 @@ function resizeElement(element, xAmount, yAmount) {
   resizer[0].dispatchEvent(mouseup);
 }
 
+/**
+ * Click and drag the element by xAmount/yAmount to move it.
+ */
 function dragElement(element, xAmount, yAmount) {
   var $element = $(element);
   var start = {
@@ -130,6 +137,7 @@ module.exports = {
         testUtils.dragToVisualization('BUTTON', 10, 20);
 
         assertPropertyRowValue(0, 'id', 'button1', assert);
+        assertPropertyRowValue(4, 'x position (px)', 10, assert);
 
         // take advantage of the fact that we expose the filesystem via
         // localhost:8001
@@ -249,15 +257,13 @@ module.exports = {
         assertPropertyRowValue(4, 'x position (px)', 10, assert);
         assertPropertyRowValue(5, 'y position (px)', 20, assert);
 
-        // resize button. even tho we drag by 20px, it's at scale 0.5, so we
-        // only resize by 10
         resizeElement(document.getElementById('design_button1'), 20, 0);
-        assertPropertyRowValue(2, 'width (px)', 90, assert);
+        assertPropertyRowValue(2, 'width (px)', 100, assert);
         assertPropertyRowValue(3, 'height (px)', 30, assert);
 
         resizeElement(document.getElementById('design_button1'), 0, 20);
-        assertPropertyRowValue(2, 'width (px)', 90, assert);
-        assertPropertyRowValue(3, 'height (px)', 40, assert);
+        assertPropertyRowValue(2, 'width (px)', 100, assert);
+        assertPropertyRowValue(3, 'height (px)', 50, assert);
 
         Applab.onPuzzleComplete();
       },
@@ -280,15 +286,13 @@ module.exports = {
         assertPropertyRowValue(4, 'x position (px)', 10, assert);
         assertPropertyRowValue(5, 'y position (px)', 20, assert);
 
-        // resize button. even tho we drag by 20px, it's at scale 0.5, so we
-        // only end up with a delta of 10
         dragElement(document.getElementById('design_button1'), 20, 0);
         assertPropertyRowValue(4, 'x position (px)', 20, assert);
         assertPropertyRowValue(5, 'y position (px)', 20, assert);
 
-        // resizeElement(document.getElementById('design_button1'), 0, 20);
-        // assertPropertyRowValue(2, 'width (px)', 90, assert);
-        // assertPropertyRowValue(3, 'height (px)', 40, assert);
+        dragElement(document.getElementById('design_button1'), 0, 20);
+        assertPropertyRowValue(4, 'x position (px)', 20, assert);
+        assertPropertyRowValue(5, 'y position (px)', 30, assert);
 
         Applab.onPuzzleComplete();
       },
