@@ -42,6 +42,7 @@ class Applab < Blockly
     data_properties
     hide_view_data_button
     debugger_disabled
+    hide_source
   )
 
   # List of possible skins, the first is used as a default.
