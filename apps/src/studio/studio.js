@@ -1759,7 +1759,9 @@ Studio.init = function(config) {
   };
 
   if (!studioApp.cdoSounds.isAudioUnlocked()) {
-    var removeEvent = dom.addClickTouchEvent(document, function () {
+    // Would use addClickTouchEvent, but iOS9 does not let you unlock audio
+    // on touchstart, only on touchend.
+    var removeEvent = dom.addMouseUpTouchEvent(document, function () {
       studioApp.cdoSounds.unlockAudio();
       removeEvent();
     });
