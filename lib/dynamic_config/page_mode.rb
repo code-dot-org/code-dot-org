@@ -1,9 +1,9 @@
-# A class for returning a "page mode" use by views to decided how to render
+# A class for returning a "page mode" use by views to decide how to render
 # a request.
 #
-# This class currently returns a simple global page mode defined by a DCDO variable.
-# In the future we will support more complicated page mode policies (e.g. A-B testing
-# of different modes with session stickiness).
+# This class currently returns a simple global page mode defined by a DCDO
+# variable. In the future we will support more complicated page mode policies
+# (e.g. A-B testing of different modes with session stickiness).
 class PageModeBase
   # The default page mode to use for all requests if no page mode has
   # been explicitly set.
