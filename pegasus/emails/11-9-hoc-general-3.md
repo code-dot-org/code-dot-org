@@ -1,6 +1,6 @@
 ---
 from: 'Hadi Partovi <hadi_partovi@code.org>'
-subject: Star Wars: Building a Galaxy With Code
+subject: "Star Wars: Building a Galaxy With Code"
 ---
 
 ## An Hour of Code with Star Wars!
