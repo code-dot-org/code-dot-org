@@ -135,9 +135,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "true",
     "start_blocks": "var faveThings = [];\r\nappendItem(faveThings, \"http://pix.iemoji.com/images/emoji/apple/8.3/256/red-apple.png\");\r\nappendItem(faveThings, \"https://s-media-cache-ak0.pinimg.com/236x/33/f2/8e/33f28e047b789808fdd865305db65358.jpg\");\r\nappendItem(faveThings, \"http://enviropureottawa.com/enviropurehome/blog/wp-content/uploads/2012/02/lime-Wedge-Enviropure.jpg\");\r\nappendItem(faveThings, \"http://www.sportsmemorabilia.com/files/CMS/image/Chicago%20Maroons.jpg\");\r\nappendItem(faveThings, \"http://rowhousenest.com/wp-content/uploads/2011/07/teal-doors.jpg\");\r\n\r\nvar currentImage = 0;\r\n\r\nupdateImage();\r\n\r\nonEvent(\"lastButton\", \"click\", function() {\r\n  prev();\r\n});\r\n\r\nonEvent(\"nextButton\", \"click\", function() {\r\n  next();\r\n});\r\n\r\nfunction prev(){\r\n  currentImage--;\r\n  if(currentImage < 0){\r\n    currentImage = faveThings.length-1;\r\n  }\r\n  updateImage();\r\n}\r\n\r\nfunction next(){\r\n  currentImage++;\r\n  if(currentImage>=faveThings.length){\r\n    currentImage=0;\r\n  }\r\n  updateImage();\r\n}\r\n\r\nonEvent(\"addButton\", \"click\", function() {\r\n  insertItem(faveThings, currentImage, getText(\"urlInput\"));\r\n  setText(\"myImage\",faveThings[currentImage] );\r\n  updateImage();\r\n});\r\n\r\nfunction updateImage(){\r\n  setImageURL(\"myImage\",faveThings[currentImage]);\r\n  setText(\"currentIndexLabel\", (currentImage+1)+\" of \"+faveThings.length);\r\n}\r\n\r\nonEvent(\"screen1\", \"keydown\", function(event) {\r\n  console.log(\"Key: \" + event.key);\r\n  if(event.key==\"Right\"){\r\n    next();\r\n  }\r\n  else if(event.key==\"Left\"){\r\n    prev();\r\n  }\r\n});",
     "is_k1": "false",

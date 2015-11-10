@@ -135,9 +135,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "# Buttons and Keys\r\n\r\nOften we want the user of the app to be able to do the same thing multiple ways, for example to be able to click a button or hit a key on the keyboard (a keyboard shortcut).  We've already got the code working for the buttons.  Add an event handler to detect the up and down arrow being pressed, and then copy/paste the code from the button event handler into the appropraite conditional statement keydown event handler. \r\n\r\n# Do This\r\n\r\n* Add conditional statements to check for when the up and down arrows are pressed.\r\n\r\n* Copy the code for the up button into the up arrow if statement.\r\n\r\n* Copy the code for the down button into the down arrow if statement.",
     "is_k1": "false",
