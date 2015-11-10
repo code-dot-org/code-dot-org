@@ -1758,12 +1758,24 @@ Studio.init = function(config) {
     Studio.musicController.preload();
   };
 
+  if (!studioApp.cdoSounds.audioUnlocked_) {
+    var musicUnlock = function () {
+      studioApp.cdoSounds.unlockAudio();
+      // TODO: Unhook handler after unlock attempt.
+    };
+    dom.addClickTouchEvent(document, musicUnlock);
+  }
+
   // Play music when the instructions are shown
-  var onInstructionsShown = function () {
-    Studio.musicController.play();
-    document.removeEventListener('instructionsShown', onInstructionsShown);
+  var playOnce = function () {
+    if (studioApp.cdoSounds.audioUnlocked_) {
+      Studio.musicController.play();
+      document.removeEventListener('instructionsShown', playOnce);
+      document.removeEventListener('instructionsHidden', playOnce);
+    }
   };
-  document.addEventListener('instructionsShown', onInstructionsShown);
+  document.addEventListener('instructionsShown', playOnce);
+  document.addEventListener('instructionsHidden', playOnce);
 
   config.afterInject = function() {
     // Connect up arrow button event handlers
