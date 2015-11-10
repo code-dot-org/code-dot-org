@@ -74,11 +74,9 @@ def send_message(template, item)
     Poste2.ensure_recipient(item['email'], name: item['name'].to_s, ip_address: IP_ADDRESS)
   end
 
-  begin
-    Poste2.send_message template, recipient, item.to_hash.except('email', 'name')
-  rescue => e
-    puts "Couldn't send to '#{item['email']}': #{e.message}"
-  end
+  Poste2.send_message template, recipient, item.to_hash.except('email', 'name')
+rescue => e
+  puts "Couldn't send to '#{item['email']}': #{e.message}"
 end
 
 USAGE = <<EOS
