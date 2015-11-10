@@ -1,5 +1,6 @@
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
+require 'dynamic_config/page_mode'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
