@@ -621,6 +621,47 @@ function loadHoc2015(skin, assetUrl) {
     'applause'
   ];
 
+  skin.soundChoices = [
+    [msg.playSoundRandom(), RANDOM_VALUE],
+    [msg.playSoundR2D2Sound1(), 'R2-D2sound1'],
+    [msg.playSoundR2D2Sound2(), 'R2-D2sound2'],
+    [msg.playSoundR2D2Sound3(), 'R2-D2sound3'],
+    [msg.playSoundR2D2Sound4(), 'R2-D2sound4'],
+    [msg.playSoundR2D2Sound5(), 'R2-D2sound5'],
+    [msg.playSoundR2D2Sound6(), 'R2-D2sound6'],
+    [msg.playSoundR2D2Sound7(), 'R2-D2sound7'],
+    [msg.playSoundR2D2Sound8(), 'R2-D2sound8'],
+    [msg.playSoundR2D2Sound9(), 'R2-D2sound9'],
+    [msg.playSoundC3POSound1(), 'C3-POsound1'],
+    [msg.playSoundC3POSound2(), 'C3-POsound2'],
+    [msg.playSoundC3POSound3(), 'C3-POsound3'],
+    [msg.playSoundC3POSound4(), 'C3-POsound4'],
+    [msg.playSoundPufferPigSound1(), 'PufferPigSound1'],
+    [msg.playSoundPufferPigSound2(), 'PufferPigSound2'],
+    [msg.playSoundPufferPigSound3(), 'PufferPigSound3'],
+    [msg.playSoundPufferPigSound4(), 'PufferPigSound4'],
+    [msg.playSoundTauntaunSound1(), 'TauntaunSound1'],
+    [msg.playSoundTauntaunSound2(), 'TauntaunSound2'],
+    [msg.playSoundTauntaunSound3(), 'TauntaunSound3'],
+    [msg.playSoundTauntaunSound4(), 'TauntaunSound4'],
+    [msg.playSoundMynockSound1(), 'MynockSound1'],
+    [msg.playSoundMynockSound2(), 'MynockSound2'],
+    [msg.playSoundMynockSound3(), 'MynockSound3'],
+    [msg.playSoundProbotSound1(), 'ProbotSound1'],
+    [msg.playSoundProbotSound2(), 'ProbotSound2'],
+    [msg.playSoundProbotSound3(), 'ProbotSound3'],
+    [msg.playSoundMouseDroidSound1(), 'MouseDroidSound1'],
+    [msg.playSoundMouseDroidSound2(), 'MouseDroidSound2'],
+    [msg.playSoundMouseDroidSound3(), 'MouseDroidSound3'],
+    [msg.playSoundAlert1(), 'alert1'],
+    [msg.playSoundAlert2(), 'alert2'],
+    [msg.playSoundAlert3(), 'alert3'],
+    [msg.playSoundAlert4(), 'alert4'],
+    [msg.playSoundApplause(), 'applause']];
+
+  skin.soundChoicesK1 = [
+  ];
+
   skin.soundMetadata = [
     {name: 'start', volume: 0.2},
     {name: 'win', volume: 0.2},
@@ -854,6 +895,12 @@ function loadHoc2015x(skin, assetUrl) {
 
   // Sounds.
   skin.sounds = [ 'move1', 'move2', 'move3', 'move4' ];
+
+  skin.soundChoices = [
+    ];
+
+  skin.soundChoicesK1 = [
+  ];
 
   skin.musicMetadata = HOC2015_MUSIC_METADATA;
 
@@ -1137,6 +1184,36 @@ exports.load = function(assetUrl, id) {
     'rubber', 'crunch', 'goal1', 'goal2', 'wood', 'retro', 'slap', 'hit',
     'winpoint', 'winpoint2', 'losepoint', 'losepoint2'
   ];
+
+  skin.soundChoices = [
+    [msg.playSoundRandom(), RANDOM_VALUE],
+    [msg.playSoundHit(), 'hit'],
+    [msg.playSoundWood(), 'wood'],
+    [msg.playSoundRetro(), 'retro'],
+    [msg.playSoundSlap(), 'slap'],
+    [msg.playSoundRubber(), 'rubber'],
+    [msg.playSoundCrunch(), 'crunch'],
+    [msg.playSoundWinPoint(), 'winpoint'],
+    [msg.playSoundWinPoint2(), 'winpoint2'],
+    [msg.playSoundLosePoint(), 'losepoint'],
+    [msg.playSoundLosePoint2(), 'losepoint2'],
+    [msg.playSoundGoal1(), 'goal1'],
+    [msg.playSoundGoal2(), 'goal2']];
+
+  skin.soundChoicesK1 = [
+    [msg.soundRandom(), RANDOM_VALUE],
+    [msg.soundHit(), 'hit'],
+    [msg.soundWood(), 'wood'],
+    [msg.soundRetro(), 'retro'],
+    [msg.soundSlap(), 'slap'],
+    [msg.soundRubber(), 'rubber'],
+    [msg.soundCrunch(), 'crunch'],
+    [msg.soundWinPoint(), 'winpoint'],
+    [msg.soundWinPoint2(), 'winpoint2'],
+    [msg.soundLosePoint(), 'losepoint'],
+    [msg.soundLosePoint2(), 'losepoint2'],
+    [msg.soundGoal1(), 'goal1'],
+    [msg.soundGoal2(), 'goal2']];
 
   // Settings
   skin.background = skin.assetUrl('background.png');
