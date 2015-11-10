@@ -2559,6 +2559,7 @@ levels.js_hoc2015_chain_characters_2 = {
       'TauntaunSound1': true,
       'TauntaunSound2': true,
       'TauntaunSound3': true,
+      'TauntaunSound4': true,
       'MouseDroidSound1': true,
       'MouseDroidSound2': true,
       'MouseDroidSound3': true,
@@ -2987,7 +2988,7 @@ levels.hoc2015_blockly_9 = utils.extend(levels.js_hoc2015_score,  {
   editCode: false,
   startBlocks:
     '<block type="studio_whenTouchGoal" deletable="false"> \
-      <next><block type="studio_playSound"><title name="SOUND">r2-d2sound1</title></block> \
+      <next><block type="studio_playSound"><title name="SOUND">R2-D2sound1</title></block> \
       </next></block>',
   toolbox:
     tb('<block type="studio_playSound"></block> \
@@ -3046,7 +3047,7 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">r2-d2sound1</title> \
+       <block type="studio_playSound"><title name="SOUND">R2-D2sound1</title> \
         <next> \
          <block type="studio_addCharacter"><title name="VALUE">"pufferpig"</title></block> \
         </next> \
@@ -3056,7 +3057,7 @@ levels.hoc2015_blockly_11 = utils.extend(levels.js_hoc2015_add_characters,  {
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
       <title name="VALUE">pufferpig</title> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">pufferpigsound1</title> \
+       <block type="studio_playSound"><title name="SOUND">PufferPigSound1</title> \
         <next> \
          <block type="studio_addPoints"><title name="VALUE">1000</title></block> \
         </next> \
@@ -3101,7 +3102,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
       <next> \
        <block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title> \
         <next> \
-         <block type="studio_playSound"><title name="SOUND">r2-d2sound3</title></block> \
+         <block type="studio_playSound"><title name="SOUND">R2-D2sound3</title></block> \
         </next> \
        </block> \
       </next> \
@@ -3109,7 +3110,7 @@ levels.hoc2015_blockly_12 = utils.extend(levels.js_hoc2015_chain_characters,  {
      <block type="studio_whenGetCharacter" deletable="false" x="20" y="200"> \
       <title name="VALUE">mousedroid</title> \
       <next> \
-       <block type="studio_playSound"><title name="SOUND">mousedroidsound2</title> \
+       <block type="studio_playSound"><title name="SOUND">MouseDroidSound2</title> \
         <next> \
          <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         </next> \
