@@ -1,5 +1,5 @@
 #!/bin/sh
 
-./send-to-mailing-list 11-9-hoc-general-1.md hoc-2015-nov-9-mailing/test-params-all.csv
-./send-to-mailing-list 11-9-hoc-general-2.md hoc-2015-nov-9-mailing/test-params-all.csv
-./send-to-mailing-list 11-9-hoc-general-3.md hoc-2015-nov-9-mailing/test-params-all.csv
+./send-to-mailing-list 11-9-hoc-general-1 mailing-common/test-params-all.csv
+./send-to-mailing-list 11-9-hoc-general-2 mailing-common/test-params-all.csv
+./send-to-mailing-list 11-9-hoc-general-3 mailing-common/test-params-all.csv
