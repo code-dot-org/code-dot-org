@@ -123,6 +123,7 @@ max_age: 60
     $('input[type=email], textarea').placeholder();
 
     cookieValue = getURLParameter("i");
+    courseNameValue = getURLParameter("s");
 
     if (cookieValue != "null")
     {
@@ -131,8 +132,10 @@ max_age: 60
         dataType: "json"
       }).done(processResponse);
     }
-    else
+    else if (courseNameValue != "null")
     {
+      certificate_processAnonymous();
+    } else {
       certificate_disable();
     }
   });

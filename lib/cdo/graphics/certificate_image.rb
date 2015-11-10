@@ -28,7 +28,7 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
   name = name.gsub(/@/,'\@')
   name = ' ' if name.empty?
 
-  if course == '20hours' || course == 'hoc' || course == '20-hour' || course == 'hourofcode'
+  if course == '20hours' || course == 'hoc' || course == '20-hour' || course == 'hourofcode' || course == 'starwars'
     # only need to fill in name
     image_file = (course == '20hours' || course == '20-hour') ? '20hours_certificate.jpg' : 'hour_of_code_certificate.jpg'
     vertical_offset = course == '20hours' || course == '20-hour' ? -115 : -110
