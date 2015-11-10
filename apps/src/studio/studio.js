@@ -1759,11 +1759,10 @@ Studio.init = function(config) {
   };
 
   if (!studioApp.cdoSounds.audioUnlocked_) {
-    var musicUnlock = function () {
+    var removeEvent = dom.addClickTouchEvent(document, function () {
       studioApp.cdoSounds.unlockAudio();
-      // TODO: Unhook handler after unlock attempt.
-    };
-    dom.addClickTouchEvent(document, musicUnlock);
+      removeEvent();
+    });
   }
 
   // Play music when the instructions are shown
