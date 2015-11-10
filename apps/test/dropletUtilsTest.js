@@ -258,7 +258,7 @@ describe('generateDropletModeOptions', function () {
         },
         // This block was deprecated, and now gets the color of our advance category
         "drawImage": {
-          "color": "#19C3E1",
+          "color": "#F78183",
           "dropdown": {},
           "title": "drawImage"
         },
