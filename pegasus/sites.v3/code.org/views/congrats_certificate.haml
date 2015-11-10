@@ -22,6 +22,11 @@
     }
   }
 
+  function certificate_processAnonymous() {
+    $("#certificate_form").show();
+    $("#certificate_thanks").hide();
+  }
+
   function certificate_disable()
   {
     $("#certificate_form").hide();
@@ -45,15 +50,18 @@
 
     showEmailError(false);
 
-    $('#session').attr('value', cookieValue)
+    if (cookieValue != "null") {
+      $('#session').attr('value', cookieValue)
 
-    $.ajax({
-      url: "/api/hour/certificate",
-      type: "post",
-      dataType: "json",
-      data: $('#request-certificate-form').serialize()
-    }).done(certificate_processResponse).fail(processError);
-
+      $.ajax({
+        url: "/api/hour/certificate",
+        type: "post",
+        dataType: "json",
+        data: $('#request-certificate-form').serialize()
+      }).done(certificate_processResponse).fail(processError);
+    } else {
+      personalizeAnonymousCertificate();
+    }
     return false;
   }
 
@@ -61,6 +69,17 @@
   {
     $('#hoc-certificate-small a').attr('href', '/printcertificate/' + session);
     $('#hoc-certificate-small img').attr('src', '/api/hour/certificate/' + session + '-890.jpg');
+  }
+
+  function personalizeAnonymousCertificate() {
+    var courseName = atob(getURLParameter('s'));
+
+    var certificateData = btoa(JSON.stringify({name: $("#request-certificate-form #name").val(), course: courseName}))
+    $('#hoc-certificate-small a').attr('href', '/v2/hoc/certificate/' + certificateData + '.jpg');
+    $('#hoc-certificate-small img').attr('src', '/v2/hoc/certificate/' + certificateData + '.jpg');
+
+    $("#certificate_form").hide();
+    $("#certificate_thanks").show();
   }
 
 #certificate_body{:style=>"margin-top: 30px; margin-bottom: 30px;"}
