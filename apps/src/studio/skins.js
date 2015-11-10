@@ -927,7 +927,7 @@ function loadHoc2015x(skin, assetUrl) {
   skin.spriteChoices = [
     [msg.setDroidHidden(), HIDDEN_VALUE],
     [msg.setDroidRandom(), RANDOM_VALUE],
-    [msg.setDroidBB8(), '"BB-8"']];
+    [msg.setDroidBB8(), '"bb-8"']];
 
   skin.setSpritePrefix = msg.setDroid();
 
