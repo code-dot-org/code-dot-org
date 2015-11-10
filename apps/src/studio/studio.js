@@ -1758,7 +1758,7 @@ Studio.init = function(config) {
     Studio.musicController.preload();
   };
 
-  if (!studioApp.cdoSounds.isAudioUnlocked()) {
+  if (studioApp.cdoSounds && !studioApp.cdoSounds.isAudioUnlocked()) {
     // Would use addClickTouchEvent, but iOS9 does not let you unlock audio
     // on touchstart, only on touchend.
     var removeEvent = dom.addMouseUpTouchEvent(document, function () {
@@ -1769,7 +1769,7 @@ Studio.init = function(config) {
 
   // Play music when the instructions are shown
   var playOnce = function () {
-    if (studioApp.cdoSounds.isAudioUnlocked()) {
+    if (studioApp.cdoSounds && studioApp.cdoSounds.isAudioUnlocked()) {
       Studio.musicController.play();
       document.removeEventListener('instructionsShown', playOnce);
       document.removeEventListener('instructionsHidden', playOnce);
